@@ -1,0 +1,41 @@
+{
+  "name": "cookie_critic_toy",
+  "card": {
+    "description": "Customers at one bakery tasted cookies with different mix-ins and toppings, and said if they liked each one.",
+    "source": "Made for the Sprite Lab 2 app examples.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Suggest cookies that customers at this bakery will like.",
+      "potentialMisuses": "It shows what one bakery's customers liked. People in other places may like different cookies."
+    }
+  },
+  "defaultLabelColumn": "Verdict",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Chocolate Chips",
+      "description": "Whether the cookie has chocolate chips: yes or no."
+    },
+    {
+      "type": "categorical",
+      "id": "Raisins",
+      "description": "Whether the cookie has raisins: yes or no."
+    },
+    {
+      "type": "categorical",
+      "id": "Frosting",
+      "description": "Whether the cookie has frosting on top: yes or no."
+    },
+    {
+      "type": "categorical",
+      "id": "Sprinkles",
+      "description": "Whether the cookie has sprinkles on top: yes or no."
+    },
+    {
+      "type": "categorical",
+      "id": "Verdict",
+      "description": "Whether the customer liked the cookie: Like or Dislike."
+    }
+  ]
+}

@@ -99,8 +99,10 @@ export function refreshTraitFields(): void {
       block.inputList.forEach(input =>
         input.fieldRow.forEach(field => {
           if (field instanceof PersistentDropdown) {
-            field.getOptions(false);
-            field.setValue(field.getValue());
+            // An empty value was the no-model placeholder; take the first
+            // real option now that there is one.
+            const options = field.getOptions(false);
+            field.setValue(field.getValue() || options[0][1]);
             field.forceRerender();
           }
         })

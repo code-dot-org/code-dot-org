@@ -1,0 +1,36 @@
+{
+  "name": "recycling_sorter_toy",
+  "card": {
+    "description": "Household items and where one city's sorting guide says each one goes. Most items follow their material, but some do not.",
+    "source": "Made for the Sprite Lab 2 app examples.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Learn how items are sorted for recycling, compost, and trash.",
+      "potentialMisuses": "Every city has its own rules. This data follows one made-up city, so it can be wrong where you live."
+    }
+  },
+  "defaultLabelColumn": "Where It Goes",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Material",
+      "description": "What the item is made of: plastic, paper, metal, glass, or food."
+    },
+    {
+      "type": "categorical",
+      "id": "Condition",
+      "description": "Whether the item is clean or dirty with food or grease."
+    },
+    {
+      "type": "categorical",
+      "id": "Flexible",
+      "description": "Whether the item bends like a bag or wrapper: no or yes."
+    },
+    {
+      "type": "categorical",
+      "id": "Where It Goes",
+      "description": "Where the item belongs: Recycle, Compost, or Trash."
+    }
+  ]
+}

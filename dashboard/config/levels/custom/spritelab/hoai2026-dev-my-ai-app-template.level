@@ -22,7 +22,7 @@
     "encrypted": "false",
         "level_mode": {
       "kind": "freeplay",
-      "adlibs": "plants"
+      "adlibs": "model"
     },
     "start_sources": {
       "animations": {
@@ -73,7 +73,7 @@
                                 "type": "text",
                                 "id": "text-3",
                                 "fields": {
-                                  "TEXT": "Plant Doctor"
+                                  "TEXT": "My AI App"
                                 }
                               }
                             },
@@ -101,7 +101,7 @@
                                     "type": "text",
                                     "id": "text-6",
                                     "fields": {
-                                      "TEXT": "Find out if your plant is healthy, and what to do next."
+                                      "TEXT": "Tell people what your app does."
                                     }
                                   }
                                 },
@@ -121,7 +121,7 @@
                                   "id": "makeButton-10",
                                   "fields": {
                                     "COLOR": "green",
-                                    "LABEL": "Camera Roll"
+                                    "LABEL": "Gallery"
                                   },
                                   "inputs": {
                                     "LOCATION": {
@@ -147,7 +147,7 @@
                   "type": "spritelab2_whenButtonClicked",
                   "id": "whenButtonClicked-13",
                   "fields": {
-                    "LABEL": "Camera Roll"
+                    "LABEL": "Gallery"
                   },
                   "x": 20,
                   "y": 300,
@@ -156,7 +156,7 @@
                       "type": "spritelab2_goToScene",
                       "id": "goToScene-12",
                       "fields": {
-                        "SCENE": "camera"
+                        "SCENE": "gallery"
                       }
                     }
                   }
@@ -236,7 +236,7 @@
                                     "type": "text",
                                     "id": "text-19",
                                     "fields": {
-                                      "TEXT": "This app uses an AI model trained on plant data. The model looks at leaf spots, leaf color, drooping and soil moisture, and predicts if a plant is healthy or sick. It can be wrong, so check with a person who knows plants."
+                                      "TEXT": "This app uses an AI model trained on data. The model looks at the features of each picture and makes a prediction. It can be wrong, so check with a person."
                                     }
                                   }
                                 },
@@ -301,8 +301,8 @@
           }
         },
         {
-          "id": "camera",
-          "name": "Camera Roll",
+          "id": "gallery",
+          "name": "Gallery",
           "source": {
             "blocks": {
               "languageVersion": 0,
@@ -343,7 +343,7 @@
                                 "type": "text",
                                 "id": "text-29",
                                 "fields": {
-                                  "TEXT": "Camera Roll"
+                                  "TEXT": "Gallery"
                                 }
                               }
                             },
@@ -371,7 +371,7 @@
                                     "type": "text",
                                     "id": "text-32",
                                     "fields": {
-                                      "TEXT": "Click a plant."
+                                      "TEXT": "Click a picture."
                                     }
                                   }
                                 },
@@ -437,7 +437,7 @@
         },
         {
           "id": "detail",
-          "name": "Plant Detail",
+          "name": "Details",
           "source": {
             "blocks": {
               "languageVersion": 0,
@@ -515,7 +515,7 @@
                                   "id": "makeButton-48",
                                   "fields": {
                                     "COLOR": "green",
-                                    "LABEL": "Help Me!"
+                                    "LABEL": "Check It!"
                                   },
                                   "inputs": {
                                     "LOCATION": {
@@ -571,7 +571,7 @@
                       "type": "spritelab2_goToScene",
                       "id": "goToScene-52",
                       "fields": {
-                        "SCENE": "camera"
+                        "SCENE": "gallery"
                       }
                     }
                   }

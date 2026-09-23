@@ -20,19 +20,19 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "project_template_level_name": "hoai2026-dev-my-ai-app-template",
     "level_mode": {
       "kind": "freeplay",
-      "adlibs": "plants"
+      "adlibs": "model"
     },
     "pinned_scene": {
       "id": "home",
       "name": "Home"
     },
-    "long_instructions": "# Plant Doctor: the Home screen\nApps follow **procedures**: a fixed list of steps that is the same every time. Clicking **Camera Roll** always opens the Camera Roll.\n\n**Do this:** add an **About This App** button. When it is clicked, go to the **About This App** scene.",
+    "long_instructions": "# Your app: the Home screen\nApps follow **procedures**: a fixed list of steps that is the same every time. Clicking **Gallery** always opens the Gallery.\n\n1. Change the title to the name of your app. Change the text under it to say what your app does.\n2. Add an **About This App** button. When it is clicked, go to the **About This App** scene.",
     "guide_steps": [
       {
-        "text": "**Procedures.** Clicking **Camera Roll** always does the same steps. **Do this:** add an **About This App** button, and a **when button clicked** block with the same words that goes to the About scene. Play to test it.",
+        "text": "**Make it yours.** Change the title and the text to fit your app. Then add an **About This App** button, and a **when button clicked** block with the same words that goes to the About scene. Clicking a button always does the same steps: that is a **procedure**.",
         "showContinue": true
       }
     ],
@@ -99,6 +99,13 @@
                     }
                   }
                 }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "text",
+              "fields": {
+                "TEXT": ""
               }
             }
           ]

@@ -621,6 +621,175 @@
         ]
       },
       "variantCount": 1
+    },
+    "sprite-recycling": {
+      "template": "One household item {Material}, {Flexible}, {Condition}",
+      "features": [
+        "Material",
+        "Flexible",
+        "Condition"
+      ],
+      "options": {
+        "Material": [
+          {
+            "id": "plastic",
+            "text": "made of clear plastic"
+          },
+          {
+            "id": "paper",
+            "text": "made of brown paper or cardboard"
+          },
+          {
+            "id": "metal",
+            "text": "made of shiny metal"
+          },
+          {
+            "id": "glass",
+            "text": "made of green glass"
+          },
+          {
+            "id": "food",
+            "text": "that is a leftover food scrap, like a banana peel"
+          }
+        ],
+        "Flexible": [
+          {
+            "id": "no",
+            "text": "stiff, like a bottle, can, jar or box"
+          },
+          {
+            "id": "yes",
+            "text": "soft and bendable, like a bag or wrapper"
+          }
+        ],
+        "Condition": [
+          {
+            "id": "clean",
+            "text": "clean and rinsed"
+          },
+          {
+            "id": "dirty",
+            "text": "smeared with grease and old food"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "sprite-cookies": {
+      "template": "A single round cookie on a plate, {Chocolate Chips}, {Raisins}, {Frosting}, {Sprinkles}",
+      "features": [
+        "Chocolate Chips",
+        "Raisins",
+        "Frosting",
+        "Sprinkles"
+      ],
+      "options": {
+        "Chocolate Chips": [
+          {
+            "id": "yes",
+            "text": "dotted with chocolate chips"
+          },
+          {
+            "id": "no",
+            "text": "with no chocolate chips"
+          }
+        ],
+        "Raisins": [
+          {
+            "id": "yes",
+            "text": "with dark raisins"
+          },
+          {
+            "id": "no",
+            "text": "with no raisins"
+          }
+        ],
+        "Frosting": [
+          {
+            "id": "yes",
+            "text": "spread with pink frosting"
+          },
+          {
+            "id": "no",
+            "text": "with a bare golden top"
+          }
+        ],
+        "Sprinkles": [
+          {
+            "id": "yes",
+            "text": "covered in rainbow sprinkles"
+          },
+          {
+            "id": "no",
+            "text": "with no sprinkles"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "sprite-recess": {
+      "template": "A cartoon weather card sticker showing {Sky}, {Temperature}, {Ground}, and {Wind}",
+      "features": [
+        "Sky",
+        "Temperature",
+        "Ground",
+        "Wind"
+      ],
+      "options": {
+        "Sky": [
+          {
+            "id": "sunny",
+            "text": "a bright yellow sun"
+          },
+          {
+            "id": "cloudy",
+            "text": "gray clouds"
+          },
+          {
+            "id": "rainy",
+            "text": "dark clouds with falling rain"
+          }
+        ],
+        "Temperature": [
+          {
+            "id": "hot",
+            "text": "a red thermometer near the top"
+          },
+          {
+            "id": "mild",
+            "text": "a green thermometer in the middle"
+          },
+          {
+            "id": "cold",
+            "text": "a blue thermometer near the bottom with frost"
+          }
+        ],
+        "Ground": [
+          {
+            "id": "dry",
+            "text": "dry green grass"
+          },
+          {
+            "id": "wet",
+            "text": "puddles on the ground"
+          },
+          {
+            "id": "icy",
+            "text": "shiny ice on the ground"
+          }
+        ],
+        "Wind": [
+          {
+            "id": "calm",
+            "text": "still leaves"
+          },
+          {
+            "id": "windy",
+            "text": "swirling wind lines and blowing leaves"
+          }
+        ]
+      },
+      "variantCount": 1
     }
   }
 }

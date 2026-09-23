@@ -20,16 +20,16 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "project_template_level_name": "hoai2026-dev-my-ai-app-template",
     "level_mode": {
       "kind": "freeplay",
-      "adlibs": "plants"
+      "adlibs": "model"
     },
     "pinned_scene": {
       "id": "detail",
-      "name": "Plant Detail"
+      "name": "Details"
     },
-    "long_instructions": "# Plant Doctor: next steps\nA prediction says **what** is wrong. Next steps say **what to do**. A generative AI can write them, but you decide if its answer is good enough.\n\n1. Inside **predict**, add **ask AI**. Ask for next steps for a houseplant that is the prediction. Show the **AI answer**.\n2. Try at least two different questions. Add a feature to the question, or ask for a shorter answer.\n3. For each answer, decide: **accept** it, **revise** your question, or **reject** it. Why?",
+    "long_instructions": "# Your app: next steps\nA prediction gives an answer. Next steps say **what to do** about it. A generative AI can write them, but you decide if its answer is good enough.\n\n1. Inside **predict**, add **ask AI**. Ask what to do next, using the prediction. Show the **AI answer**.\n2. Try at least two different questions. Add a feature to the question, or ask for a shorter answer.\n3. For each answer, decide: **accept** it, **revise** your question, or **reject** it. Why?",
     "guide_steps": [
       {
         "text": "**Generate.** Inside **predict**, add **ask AI** with a question that uses the prediction, and show the **AI answer**. Change the question at least twice. For each answer, would you **accept**, **revise** or **reject** it? Why?",
@@ -51,7 +51,7 @@
                   "block": {
                     "type": "gamelab_textJoin",
                     "fields": {
-                      "TEXT1": "Give next steps for a houseplant that is "
+                      "TEXT1": "What should I do next if the answer is "
                     },
                     "inputs": {
                       "TEXT2": {
@@ -131,7 +131,6 @@
               "kind": "block",
               "type": "spritelab2_traitOfSprite",
               "fields": {
-                "TRAIT": "SoilMoisture",
                 "ANIMATION_NAME": "\"@chosen\""
               }
             },

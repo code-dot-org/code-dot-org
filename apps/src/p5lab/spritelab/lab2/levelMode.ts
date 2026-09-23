@@ -1,8 +1,13 @@
 // What kind of level this is, and everything that follows from it: the
 // surfaces a student sees, and the image controls they get.
 
-import {ImageAdlibSet} from './ai/images/imageAdlibs';
+import {
+  adlibSetForModel,
+  ImageAdlibSet,
+  MODEL_ADLIBS,
+} from './ai/images/imageAdlibs';
 import {ImageStyle, ImageType} from './ai/images/types';
+import {ModelCard} from './ai/traits/modelCard';
 import {Tab} from './redux/spriteLab2Redux';
 
 export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
@@ -15,8 +20,9 @@ export interface LevelMode {
       is the image_role_defaults level property (imageRoleDefaults.ts), which code
       and world levels use to open their dropdowns on an image by role. */
   imageRole?: string;
-  /** Word combos to offer, in place of the set the kind implies. */
-  adlibs?: ImageAdlibSet;
+  /** Word combos to offer, in place of the set the kind implies. 'model'
+      offers the set that fits the imported model. */
+  adlibs?: ImageAdlibSet | typeof MODEL_ADLIBS;
 }
 
 /** The style every generate form starts on; students can still switch. */
@@ -53,7 +59,19 @@ export function isFreeplayMode(mode: LevelMode | undefined): boolean {
 }
 
 export function adlibSetForMode(
-  mode: LevelMode | undefined
+  mode: LevelMode | undefined,
+  modelCard?: ModelCard
 ): ImageAdlibSet | undefined {
-  return mode ? mode.adlibs ?? ADLIBS[mode.kind] : undefined;
+  if (!mode) {
+    return undefined;
+  }
+  if (mode.adlibs === MODEL_ADLIBS) {
+    // Before a model is chosen there is nothing to bind, so the kind's
+    // ordinary set stands in.
+    return (
+      adlibSetForModel(mode.imageType || 'sprite', modelCard) ??
+      ADLIBS[mode.kind]
+    );
+  }
+  return mode.adlibs ?? ADLIBS[mode.kind];
 }

@@ -1,0 +1,41 @@
+{
+  "name": "recess_check_toy",
+  "card": {
+    "description": "Every kind of school day weather, and where recess happened. The school follows a written policy.",
+    "source": "Made for the Sprite Lab 2 app examples.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Decide if recess should be outside or inside.",
+      "potentialMisuses": "It shows one made-up school's policy. Other schools decide differently."
+    }
+  },
+  "defaultLabelColumn": "Recess",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Sky",
+      "description": "What the sky looks like: sunny, cloudy, or rainy."
+    },
+    {
+      "type": "categorical",
+      "id": "Temperature",
+      "description": "How warm it is: hot, mild, or cold."
+    },
+    {
+      "type": "categorical",
+      "id": "Ground",
+      "description": "How the playground feels: dry, wet, or icy."
+    },
+    {
+      "type": "categorical",
+      "id": "Wind",
+      "description": "Whether it is calm or windy."
+    },
+    {
+      "type": "categorical",
+      "id": "Recess",
+      "description": "Where recess happens: Outside or Inside."
+    }
+  ]
+}

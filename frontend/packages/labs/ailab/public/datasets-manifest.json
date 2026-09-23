@@ -311,6 +311,30 @@
       "isToy": true
     },
     {
+      "id": "cookie_critic_toy",
+      "name": "Cookie Survey",
+      "path": "datasets/cookie_critic_toy.csv",
+      "metadataPath": "datasets/cookie_critic_toy.json",
+      "imagePath": "datasets/cookie_critic_toy.svg",
+      "isToy": true
+    },
+    {
+      "id": "recess_check_toy",
+      "name": "Recess Weather",
+      "path": "datasets/recess_check_toy.csv",
+      "metadataPath": "datasets/recess_check_toy.json",
+      "imagePath": "datasets/recess_check_toy.svg",
+      "isToy": true
+    },
+    {
+      "id": "recycling_sorter_toy",
+      "name": "Recycling Guide",
+      "path": "datasets/recycling_sorter_toy.csv",
+      "metadataPath": "datasets/recycling_sorter_toy.json",
+      "imagePath": "datasets/recycling_sorter_toy.svg",
+      "isToy": true
+    },
+    {
       "id": "shapes_v1_toy",
       "name": "Shapes V1",
       "path": "datasets/shapes_v1_toy.csv",

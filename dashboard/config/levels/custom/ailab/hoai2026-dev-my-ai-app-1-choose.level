@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "game_id": 67,
+  "level_num": "custom",
+  "user_id": 1,
+  "published": true,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\n  \"datasets\": [\n    \"plant_health_toy\",\n    \"recycling_sorter_toy\",\n    \"cookie_critic_toy\",\n    \"recess_check_toy\"\n  ],\n  \"hideSelectLabel\": true\n}",
+    "long_instructions": "# Choose your app\nYou will build an app that uses AI to make a decision. Choose one:\n\n| App | Data set | It decides |\n|---|---|---|\n| **Plant Doctor** | Plant Health | Is this plant healthy or sick? |\n| **Where Does It Go?** | Recycling Guide | Recycle, compost, or trash? |\n| **Cookie Critic** | Cookie Survey | Will customers like this cookie? |\n| **Recess Check** | Recess Weather | Recess outside or inside? |\n\n1. Choose the data set for your app. Read its card: where did the data come from?\n2. Look at each column. Which ones do you think help make the decision?\n3. Add every column except the label as a feature. Train the model and look at the results. Which rows did it get wrong?\n4. Save the model with the name of your app. You will use it in every level after this one.",
+    "reference_links": [
+      "/docs/concepts/ai-lab/selecting-features/",
+      "/docs/concepts/ai-lab/using-data-with-categorical-features/",
+      "/docs/concepts/ai-lab/accuracy-in-ai-lab/"
+    ]
+  }
+}]]></config>
+</Ailab>

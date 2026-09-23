@@ -20,19 +20,19 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "project_template_level_name": "hoai2026-dev-my-ai-app-template",
     "level_mode": {
       "kind": "freeplay",
-      "adlibs": "plants"
+      "adlibs": "model"
     },
     "pinned_scene": {
       "id": "detail",
-      "name": "Plant Detail"
+      "name": "Details"
     },
-    "long_instructions": "# Plant Doctor: use the model\nYour model learned from 54 plants. Now let it decide.\n\n1. Take your rule out of **when Help Me! clicked**. Put in **predict**, and show **This plant is** and the prediction.\n2. Test the same six plants. Compare the model's answers with your rule's answers.\n3. **Combine them.** Some problems are best solved with a rule first. For example: if the soil is dry, show **Water me first!** Otherwise, ask the model.\n\nWhich way worked best: your rules, the model, or both together? Why?",
+    "long_instructions": "# Your app: use the model\nYour model learned from every row of your data. Now let it decide.\n\n1. Take your rule out of **when Check It! clicked**. Put in **predict**, and show the prediction.\n2. Test the same six pictures. Compare the model's answers with your rule's answers.\n3. **Combine them.** Some decisions are best made with a rule first. Put a rule in the **if**, and the model in the **else**.\n\nWhich way worked best for your app: your rules, the model, or both together? Why? Ask a classmate who chose a different app what they found.",
     "guide_steps": [
       {
-        "text": "**Data.** Replace your rule with **predict**, and show the prediction. Compare the model with your rule on the same six plants. Then **combine** them: a rule first, the model in the **else**. Which way works best, and why?",
+        "text": "**Data.** Replace your rule with **predict**, and show the prediction. Compare the model with your rule on the same six pictures. Then **combine** them: a rule first, the model in the **else**. Which way works best for your app, and why?",
         "showContinue": true
       }
     ],
@@ -67,7 +67,7 @@
               "kind": "block",
               "type": "spritelab2_whenButtonClicked",
               "fields": {
-                "LABEL": "Help Me!"
+                "LABEL": "Check It!"
               }
             },
             {
@@ -82,7 +82,7 @@
                   "block": {
                     "type": "gamelab_textJoin",
                     "fields": {
-                      "TEXT1": "This plant is "
+                      "TEXT1": "The answer is "
                     },
                     "inputs": {
                       "TEXT2": {
@@ -130,7 +130,6 @@
                   "block": {
                     "type": "spritelab2_traitOfSprite",
                     "fields": {
-                      "TRAIT": "SoilMoisture",
                       "ANIMATION_NAME": "\"@chosen\""
                     }
                   }
@@ -139,7 +138,7 @@
                   "block": {
                     "type": "text",
                     "fields": {
-                      "TEXT": "dry"
+                      "TEXT": ""
                     }
                   }
                 }
@@ -149,7 +148,6 @@
               "kind": "block",
               "type": "spritelab2_traitOfSprite",
               "fields": {
-                "TRAIT": "SoilMoisture",
                 "ANIMATION_NAME": "\"@chosen\""
               }
             },
@@ -157,7 +155,7 @@
               "kind": "block",
               "type": "text",
               "fields": {
-                "TEXT": "Water me first!"
+                "TEXT": ""
               }
             }
           ]

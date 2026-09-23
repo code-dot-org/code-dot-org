@@ -20,19 +20,19 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "project_template_level_name": "hoai2026-dev-my-ai-app-template",
     "level_mode": {
       "kind": "freeplay",
-      "adlibs": "plants"
+      "adlibs": "model"
     },
     "pinned_scene": {
       "id": "detail",
-      "name": "Plant Detail"
+      "name": "Details"
     },
-    "long_instructions": "# Plant Doctor: write rules\nA **rule** is an if/else decision that a person writes. Look at the plant data from AI Lab. Which feature tells you most about a sick plant?\n\n**Do this:** when **Help Me!** is clicked, use **if / else** to show **Sick** or **Healthy**.\n\nThen test all six plants. Write down the answer your rule gives for each one, and what you think is correct.",
+    "long_instructions": "# Your app: write rules\nA **rule** is an if/else decision that a person writes. Look at your data in AI Lab. Which feature tells you the most about the answer?\n\n**Do this:** when **Check It!** is clicked, use **if / else** on a feature of the chosen picture to show an answer.\n\nThen test all six pictures. Write down the answer your rule gives for each one, and what you think is correct.",
     "guide_steps": [
       {
-        "text": "**Rules.** When **Help Me!** is clicked, use **if / else** on a feature of the chosen plant (the star) to show **Sick** or **Healthy**. Then try all six plants and write down what your rule says. Which ones does it get wrong?",
+        "text": "**Rules.** When **Check It!** is clicked, use **if / else** on a feature of the chosen picture (the star) to show an answer. Then try all six pictures and write down what your rule says. Which ones does it get wrong?",
         "showContinue": true
       }
     ],
@@ -47,7 +47,7 @@
               "kind": "block",
               "type": "spritelab2_whenButtonClicked",
               "fields": {
-                "LABEL": "Help Me!"
+                "LABEL": "Check It!"
               }
             },
             {
@@ -62,7 +62,7 @@
                   "block": {
                     "type": "text",
                     "fields": {
-                      "TEXT": "Sick"
+                      "TEXT": "answer"
                     }
                   }
                 },
@@ -100,7 +100,6 @@
                   "block": {
                     "type": "spritelab2_traitOfSprite",
                     "fields": {
-                      "TRAIT": "LeafSpots",
                       "ANIMATION_NAME": "\"@chosen\""
                     }
                   }
@@ -109,7 +108,7 @@
                   "block": {
                     "type": "text",
                     "fields": {
-                      "TEXT": "many"
+                      "TEXT": ""
                     }
                   }
                 }
@@ -126,7 +125,6 @@
               "kind": "block",
               "type": "spritelab2_traitOfSprite",
               "fields": {
-                "TRAIT": "LeafSpots",
                 "ANIMATION_NAME": "\"@chosen\""
               }
             },
@@ -134,7 +132,7 @@
               "kind": "block",
               "type": "text",
               "fields": {
-                "TEXT": "many"
+                "TEXT": ""
               }
             }
           ]

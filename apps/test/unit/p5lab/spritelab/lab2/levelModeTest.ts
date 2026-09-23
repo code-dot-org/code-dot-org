@@ -1,3 +1,4 @@
+import {readModelCard} from '@cdo/apps/p5lab/spritelab/lab2/ai/traits/modelCard';
 import {
   adlibSetForMode,
   isFreeplayMode,
@@ -39,6 +40,27 @@ describe('adlibSetForMode', () => {
   it('lets a level name its own set instead', () => {
     expect(adlibSetForMode({kind: 'image', adlibs: 'treasure'})).toBe(
       'treasure'
+    );
+  });
+
+  it("follows the imported model's features when asked to", () => {
+    const card = readModelCard('m', {
+      name: 'm',
+      selectedTrainer: 'knnClassify',
+      label: {id: 'Recess'},
+      features: ['Sky', 'Temperature', 'Ground', 'Wind'].map(id => ({
+        id,
+        values: ['a'],
+      })),
+    });
+    expect(adlibSetForMode({kind: 'freeplay', adlibs: 'model'}, card)).toBe(
+      'recess'
+    );
+  });
+
+  it("uses the kind's set until a model is chosen", () => {
+    expect(adlibSetForMode({kind: 'freeplay', adlibs: 'model'})).toBe(
+      'expanded'
     );
   });
 

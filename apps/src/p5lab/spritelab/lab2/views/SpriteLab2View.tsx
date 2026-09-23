@@ -1102,6 +1102,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // usually renders first: it is redrawn with them, and a block placed
   // meanwhile, holding no song, is given the newest.
   const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
+  const modelCard = useAppSelector(state => state.spriteLab2.modelCard);
   useEffect(() => {
     if (musicSeededRef.current) {
       return;
@@ -1598,7 +1599,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedImageType: levelProperties.levelMode?.imageType,
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
-    adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
+    adlibSet:
+      imageAdlibSetParam ||
+      adlibSetForMode(levelProperties.levelMode, modelCard),
     // Freeplay hands back the prompt box and the paint tools; every other
     // level takes its words from the combos.
     adlibOnly:
