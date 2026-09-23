@@ -6,10 +6,15 @@ export const standardRefSchema = z.strictObject({
   shortcode: z.string().min(1),
 });
 
-/** Fully resolved standard content; composed by the server when sending the adaptive pathway the client. */
+/**
+ * A standard as served: the reference plus the description the server
+ * resolved for it. Every resolved field is optional because the server passes
+ * a reference it cannot resolve through unchanged, and one bad reference must
+ * not make the whole pathway unparseable.
+ */
 export const resolvedStandardSchema = standardRefSchema.extend({
-  frameworkName: z.string().min(1),
-  description: z.string().min(1),
+  frameworkName: z.string().min(1).optional(),
+  description: z.string().min(1).optional(),
   categoryShortcode: z.string().optional(),
   categoryDescription: z.string().optional(),
   parentCategoryShortcode: z.string().optional(),

@@ -1,6 +1,5 @@
-// Checks the schemas alone cannot make: checkpoint graph shape, skill
-// references, and whether each project-mode lab step fits the pathway's
-// project.
+// Checks the schemas alone cannot make: skill references, checkpoint graph
+// shape, and whether each project-mode lab step fits the pathway's project.
 
 import {z} from 'zod';
 
@@ -12,19 +11,41 @@ type Pathway = z.infer<typeof pathwaySchema>;
  * Detects and returns any reference problems in a pathway.
  */
 export function referenceProblems(pathway: Pathway): string[] {
+  return [
+    ...skillProblems(pathway),
+    ...checkpointProblems(pathway),
+    ...projectStepProblems(pathway),
+  ];
+}
+
+/**
+ * Detects and returns any problems with skills: map keys must match ids and
+ * checkpoints may only reference skills in the map.
+ */
+function skillProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
   for (const [skillId, skill] of Object.entries(pathway.skills)) {
     if (skill.id !== skillId) {
       problems.push(`skills.${skillId}: id '${skill.id}' does not match key`);
     }
   }
-  problems.push(...checkpointProblems(pathway));
-  problems.push(...projectStepProblems(pathway));
+  for (const checkpoint of pathway.checkpoints) {
+    for (const skillId of checkpoint.skillIds || []) {
+      if (!pathway.skills[skillId]) {
+        problems.push(
+          `checkpoints.${checkpoint.id}.skillIds: unknown skill '${skillId}'`
+        );
+      }
+    }
+  }
   return problems;
 }
 
 /**
- * Detects and returns any problems with the checkpoint graph.
+ * Detects and returns any problems with the checkpoint graph: ids are
+ * unique, `requires` name known checkpoints, at least one checkpoint is a
+ * root, and every checkpoint can eventually unlock, meaning its `requires`
+ * chains all lead back to a root rather than looping.
  */
 function checkpointProblems(pathway: Pathway): string[] {
   const where = 'checkpoints';
@@ -36,41 +57,44 @@ function checkpointProblems(pathway: Pathway): string[] {
   if (!pathway.checkpoints.some(c => !c.requires?.length)) {
     problems.push(`${where}: no root (every checkpoint has requires)`);
   }
+
+  const unknownRequires = new Set<string>();
   for (const checkpoint of pathway.checkpoints) {
     for (const req of checkpoint.requires || []) {
       if (!ids.has(req)) {
+        unknownRequires.add(checkpoint.id);
         problems.push(
           `${where}.${checkpoint.id}.requires: unknown checkpoint '${req}'`
         );
       }
     }
-    for (const skillId of checkpoint.skillIds || []) {
-      if (!pathway.skills[skillId]) {
-        problems.push(
-          `${where}.${checkpoint.id}.skillIds: unknown skill '${skillId}'`
-        );
-      }
-    }
   }
 
-  // Cycle check over the requires graph.
+  // A checkpoint can unlock only if every requires chain beneath it ends at
+  // a root. A cycle anywhere in those chains strands it forever.
   const requiresOf = new Map(
-    pathway.checkpoints.map(c => [
-      c.id,
-      (c.requires || []).filter(r => ids.has(r)),
-    ])
+    pathway.checkpoints.map(c => [c.id, c.requires || []])
   );
-  const state = new Map<string, 'visiting' | 'done'>();
-  const visit = (id: string): boolean => {
-    if (state.get(id) === 'done') return false;
-    if (state.get(id) === 'visiting') return true;
+  const state = new Map<string, 'visiting' | boolean>();
+  const reachesRoot = (id: string): boolean => {
+    const known = state.get(id);
+    if (known === 'visiting') return false;
+    if (known !== undefined) return known;
     state.set(id, 'visiting');
-    const cyclic = (requiresOf.get(id) || []).some(visit);
-    state.set(id, 'done');
-    return cyclic;
+    const requires = requiresOf.get(id);
+    const result =
+      requires !== undefined &&
+      requires.every(r => ids.has(r) && reachesRoot(r));
+    state.set(id, result);
+    return result;
   };
-  if (pathway.checkpoints.some(c => visit(c.id))) {
-    problems.push(`${where}: requires must not form a cycle`);
+  for (const checkpoint of pathway.checkpoints) {
+    if (unknownRequires.has(checkpoint.id)) continue;
+    if (!reachesRoot(checkpoint.id)) {
+      problems.push(
+        `${where}.${checkpoint.id}: can never unlock; its requires never lead back to a root`
+      );
+    }
   }
 
   const stepIds = pathway.checkpoints.flatMap(c => c.steps.map(s => s.id));

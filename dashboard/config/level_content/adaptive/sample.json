@@ -84,7 +84,7 @@
             {
               "id": "familiar-html",
               "type": "multipleChoice",
-              "prompt": "How familiar are you with HTML?",
+              "text": "How familiar are you with HTML?",
               "options": [
                 {
                   "id": "none",
@@ -107,7 +107,7 @@
             {
               "id": "familiar-css",
               "type": "multipleChoice",
-              "prompt": "How familiar are you with CSS?",
+              "text": "How familiar are you with CSS?",
               "options": [
                 {
                   "id": "none",
@@ -130,7 +130,7 @@
             {
               "id": "familiar-js",
               "type": "multipleChoice",
-              "prompt": "How familiar are you with JavaScript?",
+              "text": "How familiar are you with JavaScript?",
               "options": [
                 {
                   "id": "none",
@@ -153,7 +153,7 @@
             {
               "id": "familiar-ai",
               "type": "multipleChoice",
-              "prompt": "How familiar are you with coding with AI?",
+              "text": "How familiar are you with coding with AI?",
               "options": [
                 {
                   "id": "none",
@@ -266,7 +266,7 @@
             {
               "id": "good-prompt",
               "type": "multipleChoice",
-              "prompt": "Which prompt is most likely to get the page you want?",
+              "text": "Which prompt is most likely to get the page you want?",
               "options": [
                 {
                   "id": "nice",
@@ -290,7 +290,7 @@
             {
               "id": "prompt-reflect",
               "type": "freeResponse",
-              "prompt": "In your own words, what makes a good prompt?",
+              "text": "In your own words, what makes a good prompt?",
               "placeholder": "A good prompt..."
             }
           ]
@@ -371,7 +371,7 @@
             {
               "id": "part-header",
               "type": "multipleChoice",
-              "prompt": "What usually goes in the header of a web page?",
+              "text": "What usually goes in the header of a web page?",
               "options": [
                 {
                   "id": "name-nav",
@@ -395,7 +395,7 @@
             {
               "id": "part-footer",
               "type": "multipleChoice",
-              "prompt": "What usually goes in the footer?",
+              "text": "What usually goes in the footer?",
               "options": [
                 {
                   "id": "hero",
@@ -419,7 +419,7 @@
             {
               "id": "part-html",
               "type": "multipleChoice",
-              "prompt": "What does HTML do?",
+              "text": "What does HTML do?",
               "options": [
                 {
                   "id": "structure",

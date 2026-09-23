@@ -1,5 +1,7 @@
 import {z} from 'zod';
 
+import {stepBaseSchema} from './steps/base';
+
 export const questionOptionSchema = z.strictObject({
   id: z.string().min(1),
   label: z.string().min(1),
@@ -11,20 +13,20 @@ export const questionSchema = z.discriminatedUnion('type', [
   z.strictObject({
     id: z.string().min(1),
     type: z.literal('multipleChoice'),
-    prompt: z.string().min(1),
+    text: z.string().min(1),
     options: z.array(questionOptionSchema).min(2),
     multiSelect: z.boolean().optional(),
   }),
   z.strictObject({
     id: z.string().min(1),
     type: z.literal('freeResponse'),
-    prompt: z.string().min(1),
+    text: z.string().min(1),
     placeholder: z.string().optional(),
   }),
   z.strictObject({
     id: z.string().min(1),
     type: z.literal('scale'),
-    prompt: z.string().min(1),
+    text: z.string().min(1),
     scale: z.strictObject({
       min: z.number().int(),
       max: z.number().int(),
@@ -33,3 +35,10 @@ export const questionSchema = z.discriminatedUnion('type', [
     }),
   }),
 ]);
+
+/** A questions step. */
+export const questionsStepSchema = stepBaseSchema.extend({
+  kind: z.literal('questions'),
+  description: z.string().optional(),
+  questions: z.array(questionSchema).min(1),
+});

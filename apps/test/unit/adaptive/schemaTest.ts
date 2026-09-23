@@ -2,6 +2,7 @@ import {z} from 'zod';
 
 import {
   AdaptiveContentError,
+  checkpointsInProgressionOrder,
   parsePathway,
   parsePathwaySource,
   pathwaySchema,
@@ -59,7 +60,7 @@ const served = (): Raw => ({
             {
               id: 'q1',
               type: 'multipleChoice',
-              prompt: 'Pick one',
+              text: 'Pick one',
               options: [
                 {id: 'a', label: 'A', correct: true},
                 {id: 'b', label: 'B'},
@@ -126,6 +127,16 @@ describe('parsePathway', () => {
     raw.checkpoints[0].steps = [];
     expect(problemsOf(raw)).toEqual([
       expect.stringMatching(/^checkpoints\.0\.steps:/),
+    ]);
+  });
+
+  it('accepts a served standard the server could not resolve', () => {
+    const raw = served();
+    raw.skills.prompting.standards = [
+      {framework: 'csta2026', shortcode: 'MS-NOPE'},
+    ];
+    expect(parsePathway(raw).skills.prompting.standards).toEqual([
+      {framework: 'csta2026', shortcode: 'MS-NOPE'},
     ]);
   });
 
@@ -203,16 +214,27 @@ describe('referenceProblems', () => {
     raw.checkpoints[0] = {...raw.checkpoints[0], requires: ['basics']};
     expect(problemsOf(raw)).toEqual([
       'checkpoints: no root (every checkpoint has requires)',
-      'checkpoints: requires must not form a cycle',
+      'checkpoints.intro: can never unlock; its requires never lead back to a root',
+      'checkpoints.basics: can never unlock; its requires never lead back to a root',
+      'checkpoints.style: can never unlock; its requires never lead back to a root',
     ]);
   });
 
-  it('flags a cycle that still has a root', () => {
+  it('flags every checkpoint stranded behind a cycle, even with a root present', () => {
     const raw = served();
     raw.checkpoints[1].requires = ['intro', 'style'];
     raw.checkpoints[2].requires = ['basics'];
     expect(problemsOf(raw)).toEqual([
-      'checkpoints: requires must not form a cycle',
+      'checkpoints.basics: can never unlock; its requires never lead back to a root',
+      'checkpoints.style: can never unlock; its requires never lead back to a root',
+    ]);
+  });
+
+  it('does not double-report a checkpoint whose requires is unknown', () => {
+    const raw = served();
+    raw.checkpoints[2].requires = ['nowhere'];
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.style.requires: unknown checkpoint 'nowhere'",
     ]);
   });
 
@@ -240,10 +262,20 @@ describe('referenceProblems', () => {
 });
 
 describe('standards helpers', () => {
-  it('referencedSkillIds lists skills once, in checkpoint order', () => {
+  it('referencedSkillIds lists skills once, in progression order rather than file order', () => {
     const raw = served();
+    raw.checkpoints[0].skillIds = ['css'];
     raw.checkpoints[2].skillIds = ['css', 'prompting'];
-    expect(referencedSkillIds(parsePathway(raw))).toEqual(['prompting', 'css']);
+    raw.checkpoints.reverse();
+    expect(referencedSkillIds(parsePathway(raw))).toEqual(['css', 'prompting']);
+  });
+
+  it('checkpointsInProgressionOrder puts roots first and keeps ties in file order', () => {
+    const raw = served();
+    raw.checkpoints.reverse();
+    expect(
+      checkpointsInProgressionOrder(parsePathway(raw)).map(c => c.id)
+    ).toEqual(['intro', 'style', 'basics']);
   });
 
   it("pathwayStandards unions the referenced skills' standards without duplicates", () => {
