@@ -44,6 +44,7 @@ class GamelabJr < Gamelab
     pinned_scene
     world_start_pattern
     guide_steps
+    start_sources
   )
 
   def shared_blocks

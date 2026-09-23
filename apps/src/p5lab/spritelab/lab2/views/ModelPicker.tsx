@@ -13,6 +13,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {fetchModelCards} from '../ai/traits/modelApi';
+import {refreshTraitFields} from '../blockly/traitFields';
 import {setAvailableModels, setModelCard} from '../redux/spriteLab2Redux';
 
 import moduleStyles from './trait-editor.module.scss';
@@ -24,6 +25,42 @@ interface ModelPickerProps {
 }
 
 const NONE = '';
+
+/**
+ * Loads the project's stored model on any tab. The picker lives in the
+ * Images tab, and a level that opens on code must still predict and list
+ * the model's features.
+ */
+export function useStoredModelCard(modelId: string | undefined): void {
+  const dispatch = useAppDispatch();
+  const loadedId = useAppSelector(
+    state => state.spriteLab2?.modelCard?.modelId
+  );
+  useEffect(() => {
+    if (!modelId || loadedId === modelId) {
+      return;
+    }
+    let cancelled = false;
+    fetchModelCards()
+      .then(cards => {
+        if (cancelled) {
+          return;
+        }
+        dispatch(setAvailableModels(cards));
+        const card = cards.find(c => c.modelId === modelId);
+        if (card) {
+          dispatch(setModelCard(card));
+          refreshTraitFields();
+        }
+      })
+      .catch(error =>
+        console.warn('SpriteLab2: model list unavailable', error)
+      );
+    return () => {
+      cancelled = true;
+    };
+  }, [modelId, loadedId, dispatch]);
+}
 
 const ModelPicker: React.FunctionComponent<ModelPickerProps> = ({
   modelId,

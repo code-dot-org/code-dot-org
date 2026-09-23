@@ -1,0 +1,73 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "level_mode": {
+      "kind": "freeplay",
+      "adlibs": "plants"
+    },
+    "pinned_scene": {
+      "id": "camera",
+      "name": "Camera Roll"
+    },
+    "long_instructions": "# Plant Doctor: the Camera Roll\n1. In the **Images** tab, choose your **Plant Doctor** model.\n2. Make six plant images with **New image**. Choose each plant's features; the AI draws the picture from them. Make some that look healthy and some that look sick. If a picture does not match its features, draw it again.\n3. In the code, make a grid of all your images. When any image is clicked, go to **Plant Detail**.",
+    "guide_steps": [
+      {
+        "text": "**Plants from data.** In the **Images** tab, choose your **Plant Doctor** model. Then make six plants with **New image**, choosing the features for each one."
+      },
+      {
+        "text": "**Check the pictures:** redraw any that do not show their features. Then, in the code, add **make a grid of all my images**, and **when any image clicked, choose it** that goes to **Plant Detail**. Play and click a plant.",
+        "after": {
+          "spriteImages": 6
+        },
+        "showContinue": true
+      }
+    ],
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "App",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_makeImageGrid"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenImageClicked"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene",
+              "fields": {
+                "SCENE": "detail"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

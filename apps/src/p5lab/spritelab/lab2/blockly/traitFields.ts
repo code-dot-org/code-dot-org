@@ -24,17 +24,42 @@ function importedCard(): ModelCard | undefined {
   return getStore().getState().spriteLab2?.modelCard;
 }
 
-// Label is the feature id the student recognises; value is the stripped key
-// that testData needs, so the generator never has to strip it again.
-function traitMenuOptions(): [string, string][] {
-  const card = importedCard();
-  if (!card || card.fields.length === 0) {
-    return NO_MODEL;
+/**
+ * The options, plus the field's own value when they lack it. A saved block
+ * loads before the model list arrives; without this, Blockly would reject
+ * the saved value and the block would lose it on the next save.
+ */
+export function withCurrentValue(
+  options: [string, string][],
+  value: string | null | undefined
+): [string, string][] {
+  if (!value || options.some(([, v]) => v === value)) {
+    return options;
   }
-  return card.fields.map(field => [field.id, field.key]);
+  const known = options.filter(([, v]) => v !== '');
+  return [...known, [value, value]];
 }
 
-export class TraitNameField extends BlocklyCore.FieldDropdown {
+// Any string is kept (see withCurrentValue); the options catch up once the
+// model loads.
+class PersistentDropdown extends BlocklyCore.FieldDropdown {
+  protected doClassValidation_(newValue?: string): string | null {
+    return typeof newValue === 'string' ? newValue : null;
+  }
+}
+
+// Label is the feature id the student recognises; value is the stripped key
+// that testData needs, so the generator never has to strip it again.
+function traitMenuOptions(this: TraitNameField): [string, string][] {
+  const card = importedCard();
+  const options: [string, string][] =
+    card && card.fields.length
+      ? card.fields.map(field => [field.id, field.key])
+      : NO_MODEL;
+  return withCurrentValue(options, this.getValue());
+}
+
+export class TraitNameField extends PersistentDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
     return new TraitNameField(traitMenuOptions);
   }
@@ -47,18 +72,41 @@ export const FIELD_TRAIT_VALUE_TYPE = 'field_spritelab2_trait_value';
  * continuous feature has no value list, so the field falls back to free
  * entry and the block's generator keeps the number.
  */
-export class TraitValueField extends BlocklyCore.FieldDropdown {
+export class TraitValueField extends PersistentDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
     return new TraitValueField(function (this: TraitValueField) {
       const block = this.getSourceBlock();
       const key = block?.getFieldValue('TRAIT');
       const field = importedCard()?.fields.find(f => f.key === key);
-      if (!field?.values?.length) {
-        return [['—', '']];
-      }
-      return field.values.map(value => [value, value] as [string, string]);
+      const options: [string, string][] = field?.values?.length
+        ? field.values.map(value => [value, value] as [string, string])
+        : [['—', '']];
+      return withCurrentValue(options, this.getValue());
     });
   }
+}
+
+/** Relabel every trait field after the model arrives. */
+export function refreshTraitFields(): void {
+  const workspace: BlocklyCore.WorkspaceSvg | undefined =
+    Blockly.getMainWorkspace?.();
+  if (!workspace) {
+    return;
+  }
+  const flyouts = [workspace.getFlyout(), workspace.getToolbox()?.getFlyout()];
+  [workspace, ...flyouts.map(flyout => flyout?.getWorkspace())].forEach(ws =>
+    ws?.getAllBlocks(false).forEach(block =>
+      block.inputList.forEach(input =>
+        input.fieldRow.forEach(field => {
+          if (field instanceof PersistentDropdown) {
+            field.getOptions(false);
+            field.setValue(field.getValue());
+            field.forceRerender();
+          }
+        })
+      )
+    )
+  );
 }
 
 export function registerTraitFields(): void {

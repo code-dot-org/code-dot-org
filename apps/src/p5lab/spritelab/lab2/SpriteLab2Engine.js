@@ -482,14 +482,18 @@ export default class SpriteLab2Engine extends SpriteLab {
         0
       );
     };
-    // Costume traits and the imported model are read once per run. A student
-    // editing a trait in the Images tab changes the animation list, which
-    // reruns the program, so the snapshot is never stale for long.
+    // Costume traits are read once per run. A student editing a trait in the
+    // Images tab changes the animation list, which reruns the program, so the
+    // snapshot is never stale for long.
     const state = getStore().getState();
     library.animationTraits = traitsByCostumeName(
       this.preloadAnimationsOverride || state.animationList
     );
-    library.modelCard = state.spriteLab2?.modelCard;
+    // Read at call time: the stored model can finish loading after the run
+    // starts, and a model change does not rerun the program.
+    Object.defineProperty(library, 'modelCard', {
+      get: () => getStore().getState().spriteLab2?.modelCard,
+    });
     Object.assign(library.commands, createTraitCommands(library));
     this.installAppCommands_(library);
     return library;

@@ -1,0 +1,146 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "level_mode": {
+      "kind": "freeplay",
+      "adlibs": "plants"
+    },
+    "pinned_scene": {
+      "id": "detail",
+      "name": "Plant Detail"
+    },
+    "long_instructions": "# Plant Doctor: write rules\nA **rule** is an if/else decision that a person writes. Look at the plant data from AI Lab. Which feature tells you most about a sick plant?\n\n**Do this:** when **Help Me!** is clicked, use **if / else** to show **Sick** or **Healthy**.\n\nThen test all six plants. Write down the answer your rule gives for each one, and what you think is correct.",
+    "guide_steps": [
+      {
+        "text": "**Rules.** When **Help Me!** is clicked, use **if / else** on a feature of the chosen plant (the star) to show **Sick** or **Healthy**. Then try all six plants and write down what your rule says. Which ones does it get wrong?",
+        "showContinue": true
+      }
+    ],
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "App",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_whenButtonClicked",
+              "fields": {
+                "LABEL": "Help Me!"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_showText",
+              "fields": {
+                "SIZE": "heading",
+                "NAME": "result"
+              },
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Sick"
+                    }
+                  }
+                },
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":300}"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Rules",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "controls_if",
+              "extraState": {
+                "hasElse": true
+              }
+            },
+            {
+              "kind": "block",
+              "type": "logic_compare",
+              "fields": {
+                "OP": "EQ"
+              },
+              "inputs": {
+                "A": {
+                  "block": {
+                    "type": "spritelab2_traitOfSprite",
+                    "fields": {
+                      "TRAIT": "LeafSpots",
+                      "ANIMATION_NAME": "\"@chosen\""
+                    }
+                  }
+                },
+                "B": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "many"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "logic_operation",
+              "fields": {
+                "OP": "AND"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_traitOfSprite",
+              "fields": {
+                "TRAIT": "LeafSpots",
+                "ANIMATION_NAME": "\"@chosen\""
+              }
+            },
+            {
+              "kind": "block",
+              "type": "text",
+              "fields": {
+                "TEXT": "many"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

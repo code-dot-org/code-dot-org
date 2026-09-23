@@ -1,0 +1,151 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "level_mode": {
+      "kind": "freeplay",
+      "adlibs": "plants"
+    },
+    "pinned_scene": {
+      "id": "detail",
+      "name": "Plant Detail"
+    },
+    "long_instructions": "# Plant Doctor: next steps\nA prediction says **what** is wrong. Next steps say **what to do**. A generative AI can write them, but you decide if its answer is good enough.\n\n1. Inside **predict**, add **ask AI**. Ask for next steps for a houseplant that is the prediction. Show the **AI answer**.\n2. Try at least two different questions. Add a feature to the question, or ask for a shorter answer.\n3. For each answer, decide: **accept** it, **revise** your question, or **reject** it. Why?",
+    "guide_steps": [
+      {
+        "text": "**Generate.** Inside **predict**, add **ask AI** with a question that uses the prediction, and show the **AI answer**. Change the question at least twice. For each answer, would you **accept**, **revise** or **reject** it? Why?",
+        "showContinue": true
+      }
+    ],
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_askAi",
+              "inputs": {
+                "QUESTION": {
+                  "block": {
+                    "type": "gamelab_textJoin",
+                    "fields": {
+                      "TEXT1": "Give next steps for a houseplant that is "
+                    },
+                    "inputs": {
+                      "TEXT2": {
+                        "block": {
+                          "type": "spritelab2_predictionOfSprite",
+                          "fields": {
+                            "ANIMATION_NAME": "\"@chosen\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_aiAnswer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_predictForSprite",
+              "fields": {
+                "ANIMATION_NAME": "\"@chosen\""
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_predictionOfSprite",
+              "fields": {
+                "ANIMATION_NAME": "\"@chosen\""
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "App",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_showText",
+              "fields": {
+                "SIZE": "small",
+                "NAME": "advice"
+              },
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "spritelab2_aiAnswer"
+                  }
+                },
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":355}"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Text",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_textJoin",
+              "fields": {
+                "TEXT1": "in one sentence, "
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_traitOfSprite",
+              "fields": {
+                "TRAIT": "SoilMoisture",
+                "ANIMATION_NAME": "\"@chosen\""
+              }
+            },
+            {
+              "kind": "block",
+              "type": "text",
+              "fields": {
+                "TEXT": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

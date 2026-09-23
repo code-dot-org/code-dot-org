@@ -303,6 +303,14 @@
       "isToy": true
     },
     {
+      "id": "plant_health_toy",
+      "name": "Plant Health",
+      "path": "datasets/plant_health_toy.csv",
+      "metadataPath": "datasets/plant_health_toy.json",
+      "imagePath": "datasets/plant_health_toy.svg",
+      "isToy": true
+    },
+    {
       "id": "shapes_v1_toy",
       "name": "Shapes V1",
       "path": "datasets/shapes_v1_toy.csv",

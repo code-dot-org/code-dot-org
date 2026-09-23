@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "game_id": 67,
+  "level_num": "custom",
+  "user_id": 1,
+  "published": true,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\n  \"datasets\": [\n    \"plant_health_toy\"\n  ],\n  \"hideSelectLabel\": true\n}",
+    "long_instructions": "# Plant Doctor: train the model\nPlant Doctor needs to decide if a plant is **Healthy** or **Sick**. This data set describes 54 houseplants by what you can see.\n\n1. Look at each column. Which ones do you think tell healthy and sick plants apart?\n2. Add **Leaf Spots**, **Leaf Color**, **Drooping** and **Soil Moisture** as features.\n3. Train the model and look at the results. Which plants did it get wrong?\n4. Save the model. Name it **Plant Doctor**. You will use it in your app.",
+    "reference_links": [
+      "/docs/concepts/ai-lab/selecting-features/",
+      "/docs/concepts/ai-lab/using-data-with-categorical-features/",
+      "/docs/concepts/ai-lab/accuracy-in-ai-lab/"
+    ]
+  }
+}]]></config>
+</Ailab>

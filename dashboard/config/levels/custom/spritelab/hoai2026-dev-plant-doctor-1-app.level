@@ -1,0 +1,110 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "level_mode": {
+      "kind": "freeplay",
+      "adlibs": "plants"
+    },
+    "pinned_scene": {
+      "id": "home",
+      "name": "Home"
+    },
+    "long_instructions": "# Plant Doctor: the Home screen\nApps follow **procedures**: a fixed list of steps that is the same every time. Clicking **Camera Roll** always opens the Camera Roll.\n\n**Do this:** add an **About This App** button. When it is clicked, go to the **About This App** scene.",
+    "guide_steps": [
+      {
+        "text": "**Procedures.** Clicking **Camera Roll** always does the same steps. **Do this:** add an **About This App** button, and a **when button clicked** block with the same words that goes to the About scene. Play to test it.",
+        "showContinue": true
+      }
+    ],
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "App",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_makeButton",
+              "fields": {
+                "COLOR": "gray",
+                "LABEL": "About This App"
+              },
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":310}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenButtonClicked",
+              "fields": {
+                "LABEL": "About This App"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene",
+              "fields": {
+                "SCENE": "about"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_showText",
+              "fields": {
+                "SIZE": "body",
+                "NAME": "text1"
+              },
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Hello"
+                    }
+                  }
+                },
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":360}"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

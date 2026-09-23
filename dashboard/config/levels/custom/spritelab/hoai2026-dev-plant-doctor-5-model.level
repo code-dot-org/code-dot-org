@@ -1,0 +1,169 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-plant-doctor-template",
+    "level_mode": {
+      "kind": "freeplay",
+      "adlibs": "plants"
+    },
+    "pinned_scene": {
+      "id": "detail",
+      "name": "Plant Detail"
+    },
+    "long_instructions": "# Plant Doctor: use the model\nYour model learned from 54 plants. Now let it decide.\n\n1. Take your rule out of **when Help Me! clicked**. Put in **predict**, and show **This plant is** and the prediction.\n2. Test the same six plants. Compare the model's answers with your rule's answers.\n3. **Combine them.** Some problems are best solved with a rule first. For example: if the soil is dry, show **Water me first!** Otherwise, ask the model.\n\nWhich way worked best: your rules, the model, or both together? Why?",
+    "guide_steps": [
+      {
+        "text": "**Data.** Replace your rule with **predict**, and show the prediction. Compare the model with your rule on the same six plants. Then **combine** them: a rule first, the model in the **else**. Which way works best, and why?",
+        "showContinue": true
+      }
+    ],
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_predictForSprite",
+              "fields": {
+                "ANIMATION_NAME": "\"@chosen\""
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_predictionOfSprite",
+              "fields": {
+                "ANIMATION_NAME": "\"@chosen\""
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "App",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_whenButtonClicked",
+              "fields": {
+                "LABEL": "Help Me!"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_showText",
+              "fields": {
+                "SIZE": "heading",
+                "NAME": "result"
+              },
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "gamelab_textJoin",
+                    "fields": {
+                      "TEXT1": "This plant is "
+                    },
+                    "inputs": {
+                      "TEXT2": {
+                        "block": {
+                          "type": "spritelab2_predictionOfSprite",
+                          "fields": {
+                            "ANIMATION_NAME": "\"@chosen\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":300}"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Rules",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "controls_if",
+              "extraState": {
+                "hasElse": true
+              }
+            },
+            {
+              "kind": "block",
+              "type": "logic_compare",
+              "fields": {
+                "OP": "EQ"
+              },
+              "inputs": {
+                "A": {
+                  "block": {
+                    "type": "spritelab2_traitOfSprite",
+                    "fields": {
+                      "TRAIT": "SoilMoisture",
+                      "ANIMATION_NAME": "\"@chosen\""
+                    }
+                  }
+                },
+                "B": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "dry"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_traitOfSprite",
+              "fields": {
+                "TRAIT": "SoilMoisture",
+                "ANIMATION_NAME": "\"@chosen\""
+              }
+            },
+            {
+              "kind": "block",
+              "type": "text",
+              "fields": {
+                "TEXT": "Water me first!"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

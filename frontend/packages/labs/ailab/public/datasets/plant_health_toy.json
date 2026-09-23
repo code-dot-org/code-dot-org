@@ -1,0 +1,41 @@
+{
+  "name": "plant_health_toy",
+  "card": {
+    "description": "Houseplants described by what you can see: spots on the leaves, leaf colour, whether the plant droops, and how the soil feels. The goal is to predict whether the plant is healthy or sick.",
+    "source": "Made for the Sprite Lab 2 plant example.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Learn which visible signs tell you a houseplant needs help.",
+      "potentialMisuses": "It is not a real botanical survey. Every combination appears exactly once, so it is tidier than data collected from real plants."
+    }
+  },
+  "defaultLabelColumn": "Plant Health",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Leaf Spots",
+      "description": "Dark spots on the leaves: none, few, or many."
+    },
+    {
+      "type": "categorical",
+      "id": "Leaf Color",
+      "description": "The overall colour of the leaves: green, pale, or yellow."
+    },
+    {
+      "type": "categorical",
+      "id": "Drooping",
+      "description": "Whether the leaves and stems hang down: no or yes."
+    },
+    {
+      "type": "categorical",
+      "id": "Soil Moisture",
+      "description": "How the soil feels to a finger: dry, damp, or wet."
+    },
+    {
+      "type": "categorical",
+      "id": "Plant Health",
+      "description": "Whether the plant is Healthy or Sick."
+    }
+  ]
+}

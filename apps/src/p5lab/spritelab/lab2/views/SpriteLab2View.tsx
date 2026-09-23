@@ -117,6 +117,7 @@ import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
+import {useStoredModelCard} from './ModelPicker';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -1387,6 +1388,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [updateSources]
   );
+  useStoredModelCard(currentSources.aiModelId);
 
   const handleDeleteImage = useCallback(
     (name: string) => {
