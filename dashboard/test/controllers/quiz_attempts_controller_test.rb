@@ -32,7 +32,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal @attempt.id, JSON.parse(response.body)['id']
   end
 
-  test "index returns saved choices without correctness data while in progress" do
+  test "index returns question results in progress without correctness data while in progress" do
     create(
       :quiz_question_response,
       quiz_attempt: @attempt,
@@ -46,7 +46,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_nil body['questionResults']
-    assert_equal [{'quizQuestionId' => @question.id, 'selectedChoiceId' => 'b'}], body['savedChoices']
+    assert_equal [{'quizQuestionId' => @question.id, 'selectedChoiceId' => 'b'}], body['questionResultsInProgress']
   end
 
   test "index is forbidden when viewing another user's attempt without a teacher relationship" do

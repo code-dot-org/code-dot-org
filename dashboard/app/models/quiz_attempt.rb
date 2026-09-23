@@ -66,7 +66,7 @@ class QuizAttempt < ApplicationRecord
   end
 
   # Per-question saved answers while still in progress - nil once submitted.
-  def saved_choices
+  def question_results_in_progress
     return nil if submitted_at.present?
 
     responses = quiz_question_responses

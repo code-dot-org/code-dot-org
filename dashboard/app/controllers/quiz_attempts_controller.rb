@@ -112,10 +112,10 @@ class QuizAttemptsController < ApplicationController
         }
       end,
       # nil once submitted - use questionResults instead.
-      savedChoices: attempt.saved_choices&.map do |choice|
+      questionResultsInProgress: attempt.question_results_in_progress&.map do |question_result|
         {
-          quizQuestionId: choice[:quiz_question_id],
-          selectedChoiceId: choice[:selected_choice_id]
+          quizQuestionId: question_result[:quiz_question_id],
+          selectedChoiceId: question_result[:selected_choice_id]
         }
       end
     }

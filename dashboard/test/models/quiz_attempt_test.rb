@@ -144,12 +144,12 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:correct]
   end
 
-  test "saved_choices is nil once the attempt is submitted" do
+  test "question_results_in_progress is nil once the attempt is submitted" do
     attempt = create(:quiz_attempt, submitted_at: Time.now)
-    assert_nil attempt.saved_choices
+    assert_nil attempt.question_results_in_progress
   end
 
-  test "saved_choices returns the selected choice id per answered question, with no correctness data" do
+  test "question_results_in_progress returns the selected choice id per answered question, with no correctness data" do
     quiz = create(:quiz)
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: quiz, quiz_question: question)
@@ -161,24 +161,24 @@ class QuizAttemptTest < ActiveSupport::TestCase
       response_data: {'selectedChoiceId' => 'b'}
     )
 
-    result = attempt.saved_choices.first
+    result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
     assert_equal 'b', result[:selected_choice_id]
     refute result.key?(:correct)
     refute result.key?(:explanation)
   end
 
-  test "saved_choices omits a response with no selectedChoiceId yet" do
+  test "question_results_in_progress omits a response with no selectedChoiceId yet" do
     quiz = create(:quiz)
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
     create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: {})
 
-    assert_empty attempt.saved_choices
+    assert_empty attempt.question_results_in_progress
   end
 
-  test "saved_choices excludes a response for a question no longer on the quiz" do
+  test "question_results_in_progress excludes a response for a question no longer on the quiz" do
     quiz = create(:quiz)
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: quiz, quiz_question: question)
@@ -192,7 +192,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     QuizQuestionPlacement.find_by!(level: quiz, quiz_question: question).destroy!
 
-    assert_empty attempt.saved_choices
+    assert_empty attempt.question_results_in_progress
   end
 
   test "disconnected (nil) level does not raise on expires_at/expired?/response_deadline_passed?/retakeable?/question_results" do
@@ -226,7 +226,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:correct_choice_id]
   end
 
-  test "disconnected (nil) level does not raise on saved_choices" do
+  test "disconnected (nil) level does not raise on question_results_in_progress" do
     quiz = create(:quiz)
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: quiz, quiz_question: question)
@@ -242,7 +242,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     attempt.reload
 
     assert_nil attempt.level
-    result = attempt.saved_choices.first
+    result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
     assert_equal 'b', result[:selected_choice_id]
   end
