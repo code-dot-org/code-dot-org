@@ -25,7 +25,9 @@ interface QuizQuestionCardProps {
   onRemove: (id: number) => Promise<boolean>;
 }
 
-function toDraft(question: QuizBuilderQuestion): QuizQuestionEditableFields {
+function toEditableFields(
+  question: QuizBuilderQuestion
+): QuizQuestionEditableFields {
   return {
     questionName: question.questionName,
     stem: question.stem,
@@ -46,16 +48,16 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   onUpdate,
   onRemove,
 }) => {
-  const [draft, setDraft] = useState(() => toDraft(question));
+  const [draft, setDraft] = useState(() => toEditableFields(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
-  const isDirty = !isEqual(draft, toDraft(question));
+  const isDirty = !isEqual(draft, toEditableFields(question));
 
   // A save can fork the question into a new id (see
   // useQuizBuilderQuestions#updateQuestion) - resync the draft whenever the
   // identity of the question this card is editing changes.
   useEffect(() => {
-    setDraft(toDraft(question));
+    setDraft(toEditableFields(question));
   }, [question]);
 
   const handleSave = async () => {
@@ -68,7 +70,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   };
 
   const handleDiscard = () => {
-    setDraft(toDraft(question));
+    setDraft(toEditableFields(question));
   };
 
   const handleRemove = async () => {

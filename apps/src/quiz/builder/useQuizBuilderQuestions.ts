@@ -9,11 +9,6 @@ import {
   QuizQuestionEditableFields,
 } from './types';
 
-// A newly created question needs placeholder-but-valid content:
-// MultipleChoiceQuestion rejects a blank stem, fewer than two choices, or
-// a correct_choice_id naming none of them. Replacing these is the job of
-// the per-question editor, which does not exist yet - for now a create
-// just drops a valid stub into the outline.
 const NEW_QUESTION_DEFAULTS = {
   questionName: 'New question',
   stem: 'New question',
