@@ -60,6 +60,19 @@ const NAMED_KEYS: ReadonlyArray<readonly [string, string]> = [
  * action, not about the event: `when ⟨escape⟩ is pressed` opening a menu is
  * ordinary, and it cannot stop the focus being dropped in the same frame.
  */
+/**
+ * How long a key is held before it starts repeating, and how fast it then
+ * goes — the seconds a keyboard's own typematic uses, near enough.
+ *
+ * HERE RATHER THAN IN THE DRIVER, because the browser does not offer its
+ * repeat for anything but text: a `keydown` repeat arrives for a field with
+ * the focus and not for a canvas, and the lab's keys are read as a SET of
+ * what is held (`World.setInput`), which has no repeat in it at all. So the
+ * world counts it, from the frame clock it already keeps.
+ */
+export const KEY_REPEAT_DELAY = 0.4;
+export const KEY_REPEAT_INTERVAL = 0.06;
+
 export const RESERVED_KEYS: ReadonlySet<string> = new Set(['escape']);
 
 const BY_DOM_KEY = new Map(

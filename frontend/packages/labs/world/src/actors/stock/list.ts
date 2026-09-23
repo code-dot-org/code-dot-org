@@ -84,6 +84,13 @@ const MOVEMENT: BlockParam = {
   type: 'vector',
   binds: 'Vector',
 };
+/** What `is scrolled by` hands over: pixels, positive downward. */
+const BY: BlockParam = {
+  id: 'listBy',
+  name: 'by',
+  type: 'number',
+  binds: 'Number',
+};
 const WORD: BlockParam = {
   id: 'listWord',
   name: 'word',
@@ -345,6 +352,10 @@ export const listActor = actorFile(
     defineEvent('is chosen', WORD, 'at', PLACE),
     defineEvent('loses', WORD, 'at', PLACE),
     useTrait('Mouse#CanBeClickedTrait'),
+    // …and the WHEEL, which is a trait of its own: a thing you scroll is not a
+    // thing you click, and a Button electing this would swallow the page's
+    // scroll to no purpose (specs/UI_ACTORS.md).
+    useTrait('Mouse#CanBeScrolledTrait'),
     // …and the drag that scrolls it, which is the whole reason this actor
     // could not exist before (specs/GESTURES_PLAN.md).
     useTrait('Gestures#TakesGesturesTrait'),
@@ -372,6 +383,7 @@ export const listActor = actorFile(
     variables: [
       ROW_VARIABLE,
       asVariable(MOVEMENT),
+      asVariable(BY),
       asVariable(WORD),
       asVariable(PLACE),
     ],
@@ -393,6 +405,17 @@ export const listActor = actorFile(
       },
       // A drag moves the window the other way, which is what makes the
       // content feel stuck to the finger.
+      // The wheel, which is the drag said another way: both are a distance in
+      // pixels, and `scrollTo` clamps either to the ends of the list. The sign
+      // differs because they are opposite idioms — a drag carries the content
+      // with the finger, a wheel pushes it away.
+      {
+        type: 'world_on_Mouse_IsScrolledByEvent',
+        inputs: {ACTOR: me()},
+        next: {
+          block: scrollTo(arithmetic('ADD', scroll(), paramValue(BY))),
+        },
+      },
       {
         type: 'world_on_Gestures_IsDraggedByEvent',
         inputs: {ACTOR: me()},
@@ -435,6 +458,11 @@ export const listActor = actorFile(
       },
       // The arrows move it by one, the page keys by a windowful — the only
       // thing that makes a long list bearable without a pointer.
+      //
+      // TWICE OVER, on the press AND on the repeat. Holding an arrow should
+      // walk the list the way holding it walks a text caret, and a key held
+      // raises `presses` exactly once — so a hat on the press alone moves one
+      // row however long the key is down (specs/UI_ACTORS.md).
       ...(
         [
           ['up arrow', () => num(-1)],
@@ -444,12 +472,16 @@ export const listActor = actorFile(
           ['page up', () => arithmetic('MULTIPLY', rowsShown(), num(-1))],
           ['page down', () => rowsShown()],
         ] as const
-      ).map(([key, by]) => ({
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: key},
-        inputs: {ACTOR: me()},
-        next: {block: either(focused(), step(by()))},
-      })),
+      ).flatMap(([key, by]) =>
+        ['world_on_Input_PressesEvent', 'world_on_Input_RepeatsEvent'].map(
+          hat => ({
+            type: hat,
+            fields: {FILTER0: key},
+            inputs: {ACTOR: me()},
+            next: {block: either(focused(), step(by()))},
+          }),
+        ),
+      ),
     ],
     drawing: {
       width: width(),

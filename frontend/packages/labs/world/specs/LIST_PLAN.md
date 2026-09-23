@@ -1,9 +1,10 @@
 # Plan: the List, and what a gesture lets a control be
 
-STATUS: BUILT, not yet seen in the browser. The first interface actor the finger makes possible
-(specs/GESTURES_PLAN.md), and the one specs/APPS.md calls "the single
-biggest gap in what an app can SHOW". The working record, as the other
-plans are.
+STATUS: BUILT, and since seen in the browser — which found three things,
+recorded below ("Found in the browser, and built after"). The first interface
+actor the finger makes possible (specs/GESTURES_PLAN.md), and the one
+specs/APPS.md calls "the single biggest gap in what an app can SHOW". The
+working record, as the other plans are.
 
 ## What scrolling costs in this engine, and the answer it forces
 
@@ -146,6 +147,42 @@ scrollbar and nobody else is told.
   becomes a stand-in that generates nothing, and the write silently does
   not happen. That is precisely what the Delete key did.
 
+## Found in the browser, and built after
+
+Three things, all of them the same shape: the List was right about what it
+held and wrong about what a hand does to it.
+
+**It drew six rows however tall its box was.** `ROWS` is what the DEFAULT box
+holds, and the window arithmetic used the constant while every other
+measurement in the file already read `height()`. So a taller List scrolled
+through all of its rows and drew six: Notes' list is 320 tall, showed seven,
+and looked as though it had stopped taking new notes — the empty band under
+the last row reading as room to spare. The window comes from the box now, and
+the page keys move by it, which is what the comment beside them already said.
+
+**Holding an arrow moved one row.** A key raises `presses` exactly once
+however long it is down, so a hat on the press alone cannot repeat. The engine
+now counts the delay and the rate from the frame clock it already keeps and
+offers a third edge beside the two (`World.repeatingKeys`), the Input rule
+raises `repeats ⟨key⟩` from it, and the List listens to both — "do it, and
+keep doing it". A jump is untouched, because a jump listens to `presses` and
+hears one. Text Input took the same fix for backspace, delete and the caret
+arrows, and deliberately not for Enter.
+
+**The wheel did nothing.** There was no wheel anywhere in the lab. It arrives
+as a trait of its own — `Can Be Scrolled`, beside `Can Be Clicked` rather than
+on it, because a thing you scroll is not a thing you click and a Button
+electing it would swallow the page's scroll to no purpose. The driver converts
+the browser's three units into PIXELS at the door, as it already translates a
+key's name, and positive is down, so the handler is one addition to an offset
+the List already kept in pixels.
+
+Whether the PAGE keeps its own scroll is the same question as who gets the
+wheel, so one step answers both: the world says what it is using and the
+driver reads it, exactly the bargain `capture the ⟨tab⟩ key` already struck.
+It is a frame behind, which costs a wheel turned in the same instant the
+pointer lands.
+
 ## Not built, and known
 
 - **No demo.** A stock rule must have one and a stock actor need not; the
@@ -157,6 +194,12 @@ scrollbar and nobody else is told.
   wants answering together.
 - **No momentum.** Letting go stops it dead. A flick is already a swipe,
   so the event to carry it exists.
+- **Nothing is drawn as scrolling.** A wheel over a list moves it instantly;
+  there is no easing and no overscroll, so a list already at the end gives no
+  sign that the wheel was turned.
+- **The Text Area does not scroll at all**, by wheel or otherwise: it has no
+  scroll offset to move. It is the other half of the caret work that spec
+  already defers.
 - **Nothing is inserted.** A row can be taken out and one can be added to
   the end; putting one BACK where it was, which is what an undo of a
   removal wants, has no block. Reordering wants the same one.

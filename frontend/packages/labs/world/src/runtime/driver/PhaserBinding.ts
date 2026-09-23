@@ -174,6 +174,15 @@ export type RuntimeErrorReporter = (message: string, stack?: string) => void;
 
 // Keys whose browser default (scrolling the page) we suppress while the game
 // has focus, so arrows/space drive the game instead of the page.
+/**
+ * A wheel notch in PIXELS, whichever unit the browser chose to report.
+ *
+ * `deltaMode` is 0 for pixels, 1 for lines and 2 for pages. The line and page
+ * figures are what browsers themselves use when they turn a wheel into a
+ * scroll, and they are approximations either way — a wheel has no true size.
+ */
+const WHEEL_UNIT: Record<number, number> = {0: 1, 1: 16, 2: 400};
+
 const SCROLL_KEYS = new Set([
   'ArrowUp',
   'ArrowDown',
@@ -217,6 +226,7 @@ export class PhaserBinding {
   // a live set of pressed DOM key names. Attached to the parent — not window — so
   // keys only register while the game is focused, and removed in stop().
   private readonly onKeyDown: (event: KeyboardEvent) => void;
+  private readonly onWheel: (event: WheelEvent) => void;
   private readonly onKeyUp: (event: KeyboardEvent) => void;
   private readonly onBlur: () => void;
   /** Fires when the game's element takes the keyboard — see the constructor. */
@@ -1354,6 +1364,27 @@ export class PhaserBinding {
       viaPointer = false;
     };
     parent.addEventListener('focus', this.onFocus);
+    // THE WHEEL, IN PIXELS, which is the one unit the world is told in.
+    //
+    // A browser reports its wheel in whichever of three units it feels like —
+    // `deltaMode` says pixels, LINES or PAGES, and which you get depends on
+    // the OS, the browser and whether the hand is on a mouse or a trackpad. A
+    // world told "3" without being told of what would scroll three pixels on
+    // one machine and three pages on another, so the conversion happens at the
+    // door, exactly as a key's name does (`core/keys`).
+    //
+    // NOT PREVENTED unless the world takes it: a canvas that swallowed every
+    // wheel would trap the page's own scroll under a game that does not use
+    // one. `preventDefault` is called only when something in the world is
+    // under the pointer and asked for it (`World.wantsWheel`).
+    this.onWheel = (event: WheelEvent) => {
+      const by = event.deltaY * WHEEL_UNIT[event.deltaMode];
+      if (world.wantsWheel()) {
+        event.preventDefault();
+      }
+      world.scrollWheel(by);
+    };
+    parent.addEventListener('wheel', this.onWheel, {passive: false});
     // WHAT THE GAME SAYS ABOUT ITSELF to a reader who arrives by keyboard and
     // is told nothing by a canvas. `application` is honest here — the thing
     // takes the arrows and space, and a screen reader treating it as a
@@ -1576,6 +1607,7 @@ export class PhaserBinding {
     forgive(() => this.parent.removeEventListener('keydown', this.onKeyDown));
     forgive(() => this.parent.removeEventListener('keyup', this.onKeyUp));
     forgive(() => this.parent.removeEventListener('blur', this.onBlur));
+    forgive(() => this.parent.removeEventListener('wheel', this.onWheel));
     // Before the game goes: a track nobody stopped plays under the game that
     // replaces it, which is what "the music kept going after Restart" is.
     forgive(() => this.sound.stop());

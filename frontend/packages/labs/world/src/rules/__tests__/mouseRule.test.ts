@@ -47,9 +47,13 @@ describe('rules/mouse.rule', () => {
     // The subscription, and the reason it exists: only the actors that elected
     // it are walked. Without it the step would raise a click on every actor in
     // the level every frame just to have somebody to raise it for.
+    // Three, and the third is deliberately not a fourth event on the other
+    // two: a thing you SCROLL is not a thing you click. A Button must not move
+    // when the wheel turns over it (specs/UI_ACTORS.md).
     expect(meta.traits.map(trait => trait.name)).toEqual([
       'Takes Mouse Input',
       'Can Be Clicked',
+      'Can Be Scrolled',
     ]);
     const own = meta.events.filter(
       event => event.ownerTraitId === 'Takes_Mouse_Input',
@@ -97,9 +101,12 @@ describe('rules/mouse.rule', () => {
   });
 
   it('senses, before anything decides on what it found', () => {
-    const [step] = meta.steps;
-    expect(meta.steps).toHaveLength(1);
-    expect(step.order).toEqual({kind: 'phase', phase: 'sense'});
+    // Both steps: the buttons, and the wheel beside them. Sensing is reading
+    // what the hand did, and neither decides anything about it.
+    expect(meta.steps).toHaveLength(2);
+    for (const step of meta.steps) {
+      expect(step.order).toEqual({kind: 'phase', phase: 'sense'});
+    }
   });
 
   it('reads the buttons that changed, not the keys', () => {

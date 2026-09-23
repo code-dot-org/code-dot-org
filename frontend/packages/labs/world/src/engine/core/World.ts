@@ -38,7 +38,11 @@ import {
 } from './drawing';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
-import {RESERVED_KEYS} from './keys';
+import {
+  KEY_REPEAT_DELAY,
+  KEY_REPEAT_INTERVAL,
+  RESERVED_KEYS,
+} from './keys';
 import {
   DEFAULT_LAYER_ID,
   layersOfMap,
@@ -2688,6 +2692,32 @@ export class World {
     return this.captured;
   }
 
+  /**
+   * Say whether the game is using the wheel — the same bargain as a key.
+   *
+   * A CANVAS THAT SWALLOWED EVERY WHEEL would trap the page's own scroll under
+   * a game that has nothing to scroll, and one that swallowed none would
+   * scroll the page out from under a list somebody is reading. Neither is a
+   * constant the driver could know, so the world says: the Mouse rule sets
+   * this each frame from whether anything scrollable is under the pointer
+   * (`rules/mouse`), and the driver reads it in its listener.
+   *
+   * A FRAME BEHIND, which is the whole of what it costs. The pointer has to
+   * have arrived over the list before the first notch, and it has — moving
+   * there is frames of pointer events. A wheel turned in the same instant the
+   * pointer lands scrolls the page once.
+   */
+  useWheel(wanted: boolean): void {
+    this.wheelWanted = wanted;
+  }
+
+  /** Whether anything under the pointer asked for the wheel. */
+  wantsWheel(): boolean {
+    return this.wheelWanted;
+  }
+
+  private wheelWanted = false;
+
   /** The game window took the keyboard (the driver calls this on focus). */
   gainedKeyboard(): void {
     this.keyboardArrived = true;
@@ -3203,6 +3233,87 @@ export class World {
   }
 
   /**
+   * Keys that should fire AGAIN this tick because they are being held.
+   *
+   * The third edge, and the one a keyboard has that a set of held keys does
+   * not describe: hold an arrow and it moves once, pauses, then moves over and
+   * over. A list walked with the arrows and a field emptied with backspace
+   * both want it, and neither could ask for it — `is held` is every frame,
+   * which is forty repeats a second, and `presses` is one.
+   *
+   * NOT the rising edge. A key's first fire is its press, which the Input rule
+   * already raises; this is only the repeats after it, so a rule that wants
+   * both listens to both and one that wants a single shot — a jump — is
+   * untouched.
+   *
+   * THE TIMING IS THE ENGINE'S because the frame clock is. Expressing "0.4
+   * seconds, then every 0.06" in the rule language would need a timer per key
+   * held, and the world already knows when each one went down.
+   */
+  repeatingKeys(): string[] {
+    return [...this.repeatingThisTick];
+  }
+
+  /**
+   * How many repeats a key held for `since` seconds has earned by now.
+   *
+   * Counted from the elapsed time rather than accumulated per frame, so a
+   * frame that ran long fires once rather than dropping the repeat, and a
+   * world ticked in big steps does not spray them.
+   */
+  private repeatsDue(since: number): number {
+    const held = this.elapsed - since;
+    if (held < KEY_REPEAT_DELAY) {
+      return 0;
+    }
+    return Math.floor((held - KEY_REPEAT_DELAY) / KEY_REPEAT_INTERVAL) + 1;
+  }
+
+  /** When each held key went down, in world seconds. Cleared on release. */
+  private readonly keyHeldSince = new Map<string, number>();
+
+  /** Repeats already fired for each held key, so none fires twice. */
+  private readonly keyRepeatsFired = new Map<string, number>();
+
+  /** The keys `repeatingKeys` answers with, worked out once per tick. */
+  private repeatingThisTick: ReadonlySet<string> = new Set();
+
+  /**
+   * Work out which held keys repeat this tick.
+   *
+   * ONCE PER TICK, before the steps run, so that `repeatingKeys` is a pure
+   * read: a step may ask twice in a frame, and two different answers would be
+   * a key that repeated for one reader and not the other.
+   *
+   * A key that went down starts its clock; one that went up forgets it, so
+   * releasing and pressing again waits out the delay afresh rather than
+   * carrying on at speed.
+   */
+  private advanceKeyRepeats(): void {
+    const repeating = new Set<string>();
+    for (const key of this.keys) {
+      let since = this.keyHeldSince.get(key);
+      if (since === undefined) {
+        since = this.elapsed;
+        this.keyHeldSince.set(key, since);
+        this.keyRepeatsFired.set(key, 0);
+      }
+      const due = this.repeatsDue(since);
+      if (due > (this.keyRepeatsFired.get(key) ?? 0)) {
+        this.keyRepeatsFired.set(key, due);
+        repeating.add(key);
+      }
+    }
+    for (const key of [...this.keyHeldSince.keys()]) {
+      if (!this.keys.has(key)) {
+        this.keyHeldSince.delete(key);
+        this.keyRepeatsFired.delete(key);
+      }
+    }
+    this.repeatingThisTick = repeating;
+  }
+
+  /**
    * Replace the mouse's state — where it is, and which buttons are held.
    *
    * One call rather than two because they arrive together and are read
@@ -3217,6 +3328,42 @@ export class World {
     this.pointer = new Vector(at.x, at.y);
     this.buttons = new Set(buttons);
   }
+
+  /**
+   * How far the wheel was turned since the last tick, in PIXELS.
+   *
+   * ACCUMULATED, NOT REPLACED, because a wheel is a sequence and not a state:
+   * the driver may see three notches between two frames, and a frame that read
+   * only the last of them would scroll a third as far as the hand moved. The
+   * keys are a set and the pointer is a place — both answer "how is it now" —
+   * and this is the third kind, like what was typed.
+   *
+   * PIXELS, and the driver's job to make them so. A browser reports its wheel
+   * in pixels, lines or pages depending on the machine, the browser and
+   * whether it is a trackpad; none of that reaches here (`PhaserBinding`).
+   *
+   * Positive is DOWN, which is the direction the content moves under a scroll
+   * down, and is what every scrollable thing in the lab adds to its offset.
+   */
+  scrollWheel(by: number): void {
+    this.pendingWheel += by;
+  }
+
+  /** What the wheel turned during THIS tick, in pixels. Zero on a still one. */
+  wheelTurned(): number {
+    return this.wheel;
+  }
+
+  /**
+   * The wheel turned since the last tick, waiting to be read by the next.
+   *
+   * Two fields for the reason the typed queue has two: the driver adds between
+   * frames, and the step that reads it runs inside one. The pending total
+   * becomes the frame's at the top of `tick` and is zeroed there, so a frame
+   * sees exactly what the hand did to it and a still frame sees nothing.
+   */
+  private pendingWheel = 0;
+  private wheel = 0;
 
   /** Whether `button` (a name from `core/pointer`) is currently held. */
   isButtonDown(button: string): boolean {
@@ -3476,6 +3623,13 @@ export class World {
     } else {
       this.keys = this.held;
     }
+    // …and which of the held keys have earned a REPEAT by now, worked out
+    // before the steps so every reader of it agrees (`repeatingKeys`).
+    this.advanceKeyRepeats();
+    // …and what the wheel did between the frames becomes what it did in this
+    // one, for the same reason the typed queue is folded in above.
+    this.wheel = this.pendingWheel;
+    this.pendingWheel = 0;
     try {
       this.scheduler.run(this, delta, this.paused ? whilePaused : undefined);
       // Handlers run here, and a handler is where "remove that coin" comes

@@ -65,8 +65,12 @@ describe('rules/input.rule', () => {
     const own = meta.events.filter(event => event.scope === 'actor');
     // The name is the LABELS of its designed phrasing; the key is a parameter,
     // so the hat reads `when ⟨actor⟩ presses ⟨space⟩`.
+    // `repeats` sits beside `presses` rather than after the lot: the two are
+    // read together — do it, and keep doing it while the key is held — and a
+    // control that wants one press is untouched by the other.
     expect(own.map(event => event.name)).toEqual([
       'presses',
+      'repeats',
       'releases',
       'types',
     ]);
@@ -75,6 +79,7 @@ describe('rules/input.rule', () => {
       {kind: 'param', name: 'pressed key', type: 'enum:Engine#Key'},
     ]);
     expect(own.map(event => event.ownerTraitId)).toEqual([
+      'Takes_Keyboard_Input',
       'Takes_Keyboard_Input',
       'Takes_Keyboard_Input',
       'Takes_Keyboard_Input',

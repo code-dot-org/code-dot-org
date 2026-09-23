@@ -61,6 +61,21 @@ const typed = rule.event([param('character', 'string'), 'is typed']);
 
 const takesInput = rule.trait('Takes Keyboard Input');
 const presses = takesInput.event(['presses', param('pressed key', KEY)]);
+/**
+ * `repeats ⟨down arrow⟩` — held long enough to start firing again.
+ *
+ * NOT A SECOND `presses`. A key's first fire is its press and this is only
+ * what comes after it, so a jump, a shot or a dialog advance is untouched by
+ * holding the key: they listen to `presses` and hear one. Something that
+ * should go on happening — a list walked with the arrows, a field emptied with
+ * backspace — listens to BOTH, which reads as "do it, and keep doing it".
+ *
+ * NO WORLD-LEVEL TWIN, unlike `pressed` beside it. A repeat is a typing idiom
+ * and belongs to whatever has the focus; a control scheme that wants "while
+ * held" already has `is key down` read every frame, which is what walking a
+ * character is. Nobody has asked for the other one.
+ */
+const repeats = takesInput.event(['repeats', param('repeated key', KEY)]);
 const releases = takesInput.event(['releases', param('released key', KEY)]);
 const types = takesInput.event(['types', param('character', 'string')]);
 
@@ -100,6 +115,15 @@ rule.step('keyEvents', 'sense', [
   ),
   forEachKey('PRESSED', key, announce(pressed, presses, 'pressed key')),
   forEachKey('RELEASED', key, announce(released, releases, 'released key')),
+  doc(
+    'And the keys held long enough to fire AGAIN — the world counts the delay and the rate, because it is the one holding the frame clock (`World.repeatingKeys`).',
+  ),
+  forEachKey('REPEATING', key, [
+    forEach(each, {
+      from: audience(),
+      body: [repeats({'repeated key': key.get()}, each.get())],
+    }),
+  ]),
   doc(
     'And what was TYPED, which is not the same list. Shift, a dead key, an IME and a paste all make a character and no key edge; `a` with shift held is the key `a` and the character `A`.',
   ),

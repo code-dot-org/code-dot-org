@@ -14,8 +14,94 @@
 import {describe, expect, it} from 'vitest';
 
 import {WorldBuilder} from '../index';
+import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../core/keys';
 
 const makeWorld = () => new WorldBuilder({id: 'w', name: 'W'}).getWorld();
+
+describe('a key held down', () => {
+  /** Hold `keys` for `seconds`, and count the ticks that said "again". */
+  const holdFor = (seconds: number, step = 1 / 60) => {
+    const world = makeWorld();
+    const fired: number[] = [];
+    let at = 0;
+    for (; at < seconds; at += step) {
+      world.setInput([' ']);
+      world.tick(step);
+      if (world.repeatingKeys().includes(' ')) {
+        fired.push(Number((at + step).toFixed(3)));
+      }
+    }
+    return fired;
+  };
+
+  it('does not repeat before the delay is up', () => {
+    // A tap must be one of whatever it does. `presses` is the first fire and
+    // this is only what comes after it, so nothing at all for the first
+    // four-tenths of a second (`KEY_REPEAT_DELAY`).
+    expect(holdFor(KEY_REPEAT_DELAY - 0.02)).toEqual([]);
+  });
+
+  it('repeats at the interval once the delay is up, not every frame', () => {
+    // A second of holding at sixty frames: about ten repeats, not sixty. The
+    // exact count is quantised by the frame — a 0.06 interval lands every
+    // third or fourth frame — so what is pinned is the rate, not the instant.
+    const fired = holdFor(1);
+    const earned = (1 - KEY_REPEAT_DELAY) / KEY_REPEAT_INTERVAL;
+    expect(fired.length).toBeGreaterThan(earned - 2);
+    expect(fired.length).toBeLessThan(earned + 2);
+    expect(fired[0]).toBeGreaterThanOrEqual(KEY_REPEAT_DELAY);
+  });
+
+  it('fires ONCE for a long frame, and does not then spray', () => {
+    // A dropped frame worth ten repeats is one repeat, not ten: this answers a
+    // SET of keys, so a tick can only say "again" once however long it was.
+    // That is the behaviour worth having — a stutter should not send a list
+    // ten rows down.
+    //
+    // And the count resyncs rather than falling behind: the repeats that long
+    // frame earned are marked as fired, so the frame after it is quiet. The
+    // first tick is the key going DOWN, which starts the clock and fires
+    // nothing, because the press itself is what `presses` already raised.
+    const world = makeWorld();
+    world.setInput([' ']);
+    world.tick(1 / 60);
+    expect(world.repeatingKeys()).toEqual([]);
+
+    world.setInput([' ']);
+    world.tick(KEY_REPEAT_DELAY + KEY_REPEAT_INTERVAL * 10.5);
+    expect(world.repeatingKeys()).toEqual([' ']);
+
+    world.setInput([' ']);
+    world.tick(1 / 60);
+    expect(world.repeatingKeys()).toEqual([]);
+  });
+
+  it('starts the delay again after the key is let go', () => {
+    const world = makeWorld();
+    world.setInput([' ']);
+    world.tick(1 / 60);
+    world.setInput([' ']);
+    world.tick(KEY_REPEAT_DELAY + KEY_REPEAT_INTERVAL);
+    expect(world.repeatingKeys()).toEqual([' ']);
+
+    world.setInput([]);
+    world.tick(1 / 60);
+    world.setInput([' ']);
+    world.tick(1 / 60);
+    world.setInput([' ']);
+    world.tick(KEY_REPEAT_INTERVAL * 2);
+    // Pressed again, so it waits out the delay afresh rather than carrying on
+    // at speed.
+    expect(world.repeatingKeys()).toEqual([]);
+  });
+
+  it('is nothing for a key nobody is holding', () => {
+    const world = makeWorld();
+    world.setInput([]);
+    world.tick(1);
+    expect(world.repeatingKeys()).toEqual([]);
+  });
+});
 
 describe('the World’s keyboard', () => {
   it('reports what is held right now', () => {

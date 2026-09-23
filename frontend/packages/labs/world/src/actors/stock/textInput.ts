@@ -530,6 +530,25 @@ const slidesToShowTheCaret = () => ({
   },
 });
 
+/**
+ * A key hat AND its repeat — one held should go on doing what it does.
+ *
+ * Backspace, delete and the caret arrows are all "again while I hold it"; a
+ * key raises `presses` once however long it is down, so each of them needs the
+ * repeat beside it (`World.repeatingKeys`, specs/UI_ACTORS.md). ENTER is not
+ * here, deliberately: a held enter must submit once.
+ *
+ * The body is a thunk because the two hats are separate JSON — handing both
+ * the same object would alias one block into two places in the file.
+ */
+const onKeyHeld = (key: string, body: () => object) =>
+  ['world_on_Input_PressesEvent', 'world_on_Input_RepeatsEvent'].map(hat => ({
+    type: hat,
+    fields: {FILTER0: key},
+    inputs: {ACTOR: me()},
+    next: {block: body()},
+  }));
+
 export const textInputActor = actorFile(
   'Text Input',
   [
@@ -619,40 +638,30 @@ export const textInputActor = actorFile(
       },
       // …and backspace, which makes no character and so is a KEY. It takes the
       // one BEFORE the bar and moves the bar back over the gap.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'backspace'},
-        inputs: {ACTOR: me()},
-        next: {
-          block: onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
-            setText(
-              'TextProperty',
-              joined([
-                upTo(sum('MINUS', caretAt(), num(1))),
-                from(sum('ADD', caretAt(), num(1))),
-              ]),
-            ),
-            setCaret(sum('MINUS', caretAt(), num(1))),
-            emitChanged(),
-          ]),
-        },
-      },
+      ...onKeyHeld('backspace', () =>
+        onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+          setText(
+            'TextProperty',
+            joined([
+              upTo(sum('MINUS', caretAt(), num(1))),
+              from(sum('ADD', caretAt(), num(1))),
+            ]),
+          ),
+          setCaret(sum('MINUS', caretAt(), num(1))),
+          emitChanged(),
+        ]),
+      ),
       // …and delete, which is the same edit read the other way: it takes the
       // character AFTER the bar and leaves the bar where it is.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'delete'},
-        inputs: {ACTOR: me()},
-        next: {
-          block: onlyIf(both(focused(), compare('LT', caretAt(), length())), [
-            setText(
-              'TextProperty',
-              joined([upTo(caretAt()), from(sum('ADD', caretAt(), num(2)))]),
-            ),
-            emitChanged(),
-          ]),
-        },
-      },
+      ...onKeyHeld('delete', () =>
+        onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+          setText(
+            'TextProperty',
+            joined([upTo(caretAt()), from(sum('ADD', caretAt(), num(2)))]),
+          ),
+          emitChanged(),
+        ]),
+      ),
       // Enter says the answer is finished. It changes nothing: what happens
       // after a form is submitted is the project's, and a field that emptied
       // itself would take the answer away before a handler could read it.
@@ -672,26 +681,16 @@ export const textInputActor = actorFile(
       // The arrows walk the bar. They do not wrap and they do not run off
       // either end: a caret at the start that answered a left arrow by going
       // negative would put every later sum out by one, silently.
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'left arrow'},
-        inputs: {ACTOR: me()},
-        next: {
-          block: onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
-            setCaret(sum('MINUS', caretAt(), num(1))),
-          ]),
-        },
-      },
-      {
-        type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'right arrow'},
-        inputs: {ACTOR: me()},
-        next: {
-          block: onlyIf(both(focused(), compare('LT', caretAt(), length())), [
-            setCaret(sum('ADD', caretAt(), num(1))),
-          ]),
-        },
-      },
+      ...onKeyHeld('left arrow', () =>
+        onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
+          setCaret(sum('MINUS', caretAt(), num(1))),
+        ]),
+      ),
+      ...onKeyHeld('right arrow', () =>
+        onlyIf(both(focused(), compare('LT', caretAt(), length())), [
+          setCaret(sum('ADD', caretAt(), num(1))),
+        ]),
+      ),
     ],
     drawing: {
       width: width(),

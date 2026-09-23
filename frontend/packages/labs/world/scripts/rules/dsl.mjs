@@ -343,6 +343,15 @@ export const captureKey = key => ({
   fields: {KEY: key},
 });
 
+/** `wheel turned` — how far the wheel moved this frame, in pixels. */
+export const wheelTurned = () => ({type: 'world_wheel_turned'});
+
+/** `use the wheel <yes|no>` — whether the page's own scroll is suppressed. */
+export const useWheel = wanted => ({
+  type: 'world_use_wheel',
+  inputs: {VALUE: value(wanted)},
+});
+
 /** `release the <key> key` — hand it back. */
 export const releaseKey = key => ({
   type: 'world_release_key',

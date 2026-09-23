@@ -1,5 +1,6 @@
 import {
   allWithTrait,
+  anyOf,
   both,
   defineRule,
   doc,
@@ -8,7 +9,13 @@ import {
   forEachButton,
   hasTrait,
   moduleFor,
+  not,
   param,
+  useWheel,
+  wheelTurned,
+  when,
+  equals,
+  n,
 } from './dsl.mjs';
 import {under} from './pointing.mjs';
 
@@ -66,6 +73,23 @@ const clicked = clickable.event([
   param('pressed button', BUTTON),
 ]);
 
+/**
+ * …and the wheel, which is a THIRD trait and not a third event on the others.
+ *
+ * A thing you scroll is not a thing you click. A Button is clicked and must
+ * not move when the wheel turns over it; a List is both, and a panel that
+ * scrolls its contents may be neither. Hanging the wheel on `Can Be Clicked`
+ * would have been free — every scrollable thing in the lab happens to be
+ * clickable today — and would have meant a Button that swallowed the page's
+ * scroll the moment anybody added a wheel handler to the rule.
+ *
+ * `by` is in PIXELS and positive is DOWN, which is the direction the content
+ * moves: a list adds it to the offset it already keeps in pixels, so the
+ * handler is one addition and no unit to think about.
+ */
+const scrollable = rule.trait('Can Be Scrolled');
+const scrolled = scrollable.event(['is scrolled by', param('by', 'number')]);
+
 const each = rule.local('each', 'Actor');
 const target = rule.local('target', 'Actor');
 const button = rule.local('button', 'String');
@@ -98,6 +122,44 @@ const clickTargets = () => [
     body: [clicked({'pressed button': button.get()}, target.get())],
   }),
 ];
+
+/**
+ * Whatever the pointer is over that asked for the wheel, and the page's claim.
+ *
+ * TWO THINGS IN ONE STEP because they answer the same question. The wheel goes
+ * to what is under the pointer, and whether the BROWSER should keep its own
+ * scroll is exactly whether anything under the pointer wanted it — so working
+ * one out has already worked out the other.
+ *
+ * SAID EVERY FRAME, not only on a turn: the driver reads it in a listener that
+ * fires before the tick, so the answer has to be standing there ready. A
+ * pointer moving off a list gives the page its scroll back on the next frame.
+ */
+const scrollTargets = () =>
+  filter(target, {
+    where: both(
+      hasTrait(target.get(), rule.traitRef('Can Be Scrolled')),
+      under(target.get()),
+    ),
+  });
+
+rule.step('wheelEvents', 'sense', [
+  doc(
+    'The wheel goes to whatever is under the pointer that asked for it — and whether the PAGE keeps its own scroll is the same question, so both are answered here (`World.useWheel`).',
+  ),
+  useWheel(anyOf(scrollTargets())),
+  when([
+    [
+      not(equals(wheelTurned(), n(0))),
+      [
+        forEach(target, {
+          from: scrollTargets(),
+          body: [scrolled({by: wheelTurned()}, target.get())],
+        }),
+      ],
+    ],
+  ]),
+]);
 
 rule.step('buttonEvents', 'sense', [
   doc(

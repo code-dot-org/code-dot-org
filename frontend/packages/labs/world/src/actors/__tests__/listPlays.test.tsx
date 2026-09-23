@@ -11,6 +11,7 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
 import {RotationProperty, type Actor, type Property} from '../../engine';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
@@ -227,6 +228,23 @@ describe('a List', () => {
         world.tick(1 / 60);
         world.tick(1 / 60);
       },
+      /** Turn the wheel over wherever the pointer is, in pixels. */
+      wheel: (by: number) => {
+        world.scrollWheel(by);
+        world.tick(1 / 60);
+      },
+      /** Whether the game asked the page to leave the wheel alone. */
+      takesWheel: () => world.wantsWheel(),
+      /** Hold `key` down for `seconds`, at sixty frames a second. */
+      hold: (key: string, seconds: number) => {
+        for (let at = 0; at < seconds; at += 1 / 60) {
+          world.setInput([key]);
+          world.tick(1 / 60);
+        }
+        world.setInput([]);
+        world.tick(1 / 60);
+        world.tick(1 / 60);
+      },
     };
   };
 
@@ -241,6 +259,45 @@ describe('a List', () => {
 
     l.point(100, 0, true);
     expect(l.scrolled()).toBe(48);
+  }, 60000);
+
+  it('scrolls with the WHEEL, and not past the end', async () => {
+    // The drag said another way: both are a distance in pixels, and both are
+    // clamped to the ends. Eight rows of 24 in a box of 144 is 48 of overflow.
+    const l = await open();
+    l.point(100, 100, false);
+    expect(l.scrolled()).toBe(0);
+
+    l.wheel(20);
+    expect(l.scrolled()).toBe(20);
+
+    l.wheel(100);
+    expect(l.scrolled()).toBe(48);
+
+    // …and back up, which is the same clamp at the other end.
+    l.wheel(-500);
+    expect(l.scrolled()).toBe(0);
+  }, 60000);
+
+  it('takes the wheel from the page only while the pointer is over it', async () => {
+    // A canvas that swallowed every wheel would trap the page's scroll under a
+    // game with nothing to scroll (`World.useWheel`).
+    const l = await open();
+    l.point(100, 100, false);
+    expect(l.takesWheel()).toBe(true);
+
+    // Well away from the list.
+    l.point(900, 900, false);
+    expect(l.takesWheel()).toBe(false);
+  }, 60000);
+
+  it('does not scroll when the wheel turns somewhere else', async () => {
+    const l = await open();
+    l.point(900, 900, false);
+
+    l.wheel(40);
+
+    expect(l.scrolled()).toBe(0);
   }, 60000);
 
   it('will not scroll above the top', async () => {
@@ -368,6 +425,36 @@ describe('a List', () => {
     l.press('page down');
 
     expect(l.onRow() - from).toBe(13);
+  }, 60000);
+
+  it('keeps walking while the arrow is HELD, not once per press', async () => {
+    // A key held raises `presses` exactly once, so a hat on the press alone
+    // moves one row however long the key is down. Holding an arrow should walk
+    // the list, which is what the keyboard's own repeat does everywhere else
+    // (`World.repeatingKeys`).
+    const l = await open({
+      words: Array.from({length: 30}, (_, at) => `row ${at + 1}`),
+    });
+    l.point(100, 40, true);
+    l.point(100, 40, false);
+    const from = l.onRow();
+
+    // Long enough for the delay and several repeats.
+    l.hold('down arrow', KEY_REPEAT_DELAY + KEY_REPEAT_INTERVAL * 5);
+
+    expect(l.onRow()).toBeGreaterThan(from + 1);
+  }, 60000);
+
+  it('moves one row for a TAP, however the repeat is set', async () => {
+    // The other half, and the one a repeat must not break: a tap is one row.
+    const l = await open();
+    l.point(100, 40, true);
+    l.point(100, 40, false);
+    const from = l.onRow();
+
+    l.press('down arrow');
+
+    expect(l.onRow()).toBe(from + 1);
   }, 60000);
 
   it('loses a row to a sideways swipe, and says which it was', async () => {

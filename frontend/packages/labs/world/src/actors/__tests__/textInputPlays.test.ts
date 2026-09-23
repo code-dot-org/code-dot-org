@@ -15,6 +15,7 @@ import {describe, expect, it} from 'vitest';
 import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor} from '../../engine';
 import {keyName} from '../../engine/core/keys';
+import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -200,6 +201,15 @@ const play = async (measure?: (words: string, size: number) => number) => {
       world.setInput([]);
       world.tick(1 / 60);
     },
+    /** Hold a key for `seconds`, at sixty frames a second. */
+    hold: (domKey: string, seconds: number) => {
+      for (let at = 0; at < seconds; at += 1 / 60) {
+        world.setInput([keyName(domKey)]);
+        world.tick(1 / 60);
+      }
+      world.setInput([]);
+      world.tick(1 / 60);
+    },
   };
 };
 
@@ -286,6 +296,34 @@ describe('a Text Input', () => {
     expect(it_.says(it_.bottom)).toBe('two');
     // …and the first one kept what was put in it.
     expect(it_.says(it_.top)).toBe('hi');
+  });
+
+  it('goes on backspacing while the key is HELD', async () => {
+    // A key raises `presses` once however long it is down, so a field that
+    // only heard the press took one character for a key held all day. Holding
+    // backspace is how anybody clears a field (`World.repeatingKeys`).
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a', 'b', 'c', 'd', 'e', 'f']);
+    expect(it_.says(it_.top)).toBe('abcdef');
+
+    it_.hold('Backspace', KEY_REPEAT_DELAY + KEY_REPEAT_INTERVAL * 4);
+
+    // Several gone, not one — and not all six, which would mean the repeat had
+    // become "every frame".
+    const left = it_.says(it_.top).length;
+    expect(left).toBeLessThan(5);
+    expect(left).toBeGreaterThan(0);
+  });
+
+  it('takes ONE character for a tap, however the repeat is set', async () => {
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a', 'b', 'c']);
+
+    it_.press('Backspace');
+
+    expect(it_.says(it_.top)).toBe('ab');
   });
 
   it('backspaces, which is a key and not a character', async () => {

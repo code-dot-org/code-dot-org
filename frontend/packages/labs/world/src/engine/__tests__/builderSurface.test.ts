@@ -99,6 +99,13 @@ const RUNTIME_ONLY: Record<string, string> = {
     '(specs/CLOCK_PLAN.md)',
   timePart: 'the same: it reads the zone the clock was lent with',
   timeText: 'the same again',
+  wheelTurned:
+    'what the hand did to THIS frame, and a world still being described has ' +
+    'no frames and no hand \u2014 the same reason `now` is here',
+  useWheel:
+    'the Mouse rule sets it every frame from whatever is under the pointer ' +
+    '(`rules/mouse`), so a world\u2019s body saying it once would be ' +
+    'overwritten before anybody could turn a wheel',
   emitNamed:
     'a MAP raises the world\u2019s event by name, and a map is loaded into a ' +
     'world that already exists \u2014 there is no map, and so no raising, ' +

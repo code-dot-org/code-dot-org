@@ -10134,13 +10134,22 @@ const worldIsButtonDown = defineBlock({
 //
 // A loop rather than a list value because the lab has no list type; iterating is
 // the only thing anyone does with these anyway.
-const KEY_EDGES: Array<[string, string]> = [
+const EDGES: Array<[string, string]> = [
   ['newly pressed', 'PRESSED'],
   ['newly released', 'RELEASED'],
+];
+// …and a third, which only a KEY has: one held long enough to start firing
+// again, the way a held letter fills a text field. It is not an edge — the key
+// did not change — but it belongs on the same loop, because what a rule does
+// with it is what it does with a press (`World.repeatingKeys`).
+const KEY_EDGES: Array<[string, string]> = [
+  ...EDGES,
+  ['repeating', 'REPEATING'],
 ];
 const KEY_EDGE_METHODS: Record<string, string> = {
   PRESSED: 'newlyPressedKeys',
   RELEASED: 'newlyReleasedKeys',
+  REPEATING: 'repeatingKeys',
 };
 const worldForEachKey = defineBlock({
   type: 'world_for_each_key',
@@ -10217,7 +10226,7 @@ const worldForEachButton = defineBlock({
   type: 'world_for_each_button',
   message0: 'for each %1 mouse button %2',
   args0: [
-    {type: 'field_dropdown', name: 'EDGE', options: KEY_EDGES},
+    {type: 'field_dropdown', name: 'EDGE', options: EDGES},
     paramFlavour('string').field('VAR'),
   ],
   message1: 'do %1',
@@ -10445,6 +10454,62 @@ const worldIsKeyDown = defineBlock({
  * World refuses it rather than trusting every rule that will ever be written
  * (`World.captureKey`, `core/keys` RESERVED_KEYS).
  */
+/**
+ * `wheel turned` — how far the wheel moved this frame, in pixels.
+ *
+ * ZERO ON A STILL FRAME, so a step may read it every tick and act only when it
+ * is not zero. Pixels because the driver converts at the door: a browser
+ * reports its wheel in pixels, lines or pages depending on the machine, and
+ * none of that reaches the world (`PhaserBinding`).
+ *
+ * NOT IN A DRAWER. The learner-facing vocabulary is the Mouse rule's `is
+ * scrolled ⟨by⟩`, which says which ACTOR was scrolled; this is the primitive
+ * that rule is written with.
+ */
+const worldWheelTurned = defineBlock({
+  type: 'world_wheel_turned',
+  message0: 'wheel turned',
+  output: 'Number',
+  style: 'variable_blocks',
+  tooltip: 'How far the mouse wheel turned this frame, in pixels.',
+  generator: {
+    javascript() {
+      return ['world.wheelTurned()', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+/**
+ * `use the wheel ⟨yes⟩` — tell the browser the game is using it.
+ *
+ * THE SAME BARGAIN AS `capture the ⟨tab⟩ key`. A canvas that swallowed every
+ * wheel would trap the page's scroll under a game with nothing to scroll; one
+ * that swallowed none would scroll the page out from under a list somebody is
+ * reading. Which it is depends on what is under the pointer, so the world says
+ * and the driver reads (`World.useWheel`).
+ *
+ * Not in a drawer either, and for the same reason as the block above.
+ */
+const worldUseWheel = defineBlock({
+  type: 'world_use_wheel',
+  message0: 'use the wheel %1',
+  args0: [{type: 'input_value', name: 'VALUE', check: 'Boolean'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Say whether the game is using the mouse wheel right now, so the page ' +
+    'behind it scrolls when the game is not.',
+  generator: {
+    javascript(block, generator) {
+      const value =
+        generator.valueToCode(block, 'VALUE', Order.NONE) || 'false';
+      return `world.useWheel(${value});\n`;
+    },
+  },
+});
+
 const worldCaptureKey = defineBlock({
   type: 'world_capture_key',
   message0: 'capture the %1 key',
@@ -10936,6 +11001,8 @@ export const DOMAIN_BLOCKS = [
   worldNow,
   worldTimePart,
   worldTimeText,
+  worldWheelTurned,
+  worldUseWheel,
   worldCaptureKey,
   worldReleaseKey,
   worldType,
