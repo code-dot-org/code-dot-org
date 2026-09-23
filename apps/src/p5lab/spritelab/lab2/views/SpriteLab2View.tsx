@@ -1599,6 +1599,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setPlayStartSceneId(
       activeSceneId === defaultPlaySceneId ? null : activeSceneId
     );
+    unlockGameAudioRef.current();
     dispatch(setActiveTab('Play'));
   }, [dispatch, activeSceneId, defaultPlaySceneId]);
 
