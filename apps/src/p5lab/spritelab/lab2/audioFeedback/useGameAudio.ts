@@ -1,5 +1,6 @@
-// The game's audio: two settings, and the voices they switch on. Rebuilt
-// per visit to the Play tab, over one context — browsers limit how many.
+// The game's audio cues for a student who cannot see the screen, behind one
+// setting. Rebuilt per visit to the Play tab, over one context, since
+// browsers limit how many a page may hold.
 
 import {useEffect, useMemo, useState} from 'react';
 
@@ -10,8 +11,7 @@ import {createPlayerObserver, PlayerObserver} from './playerObserver';
 import {createPlayerSounds} from './playerSounds';
 import {createProximityAudio} from './proximityAudio';
 
-const PROXIMITY_SOUND_KEY = 'spritelab2ProximitySound';
-const SOUND_EFFECTS_KEY = 'spritelab2SoundEffects';
+const OBSTACLE_SOUNDS_KEY = 'spritelab2ProximitySound';
 
 const ON_OFF = [
   {value: 'on', text: 'On'},
@@ -69,53 +69,41 @@ export default function useGameAudio(
   engineRef: React.RefObject<AudioEngine | null>,
   {hasPlatformer, playing}: GameAudioOptions
 ) {
-  // Noise to anyone who can see the hazard coming, so off by default.
-  const [proximitySound, proximitySetting] = useStoredToggle(
-    PROXIMITY_SOUND_KEY,
+  // Off by default: the cues are for a student who cannot see the screen,
+  // and are noise to one who can.
+  const [obstacleSounds, obstacleSoundsSetting] = useStoredToggle(
+    OBSTACLE_SOUNDS_KEY,
     'Obstacle sounds',
     'off'
-  );
-  // Short, and what a platformer should sound like, so on by default.
-  const [soundEffects, soundEffectsSetting] = useStoredToggle(
-    SOUND_EFFECTS_KEY,
-    'Sound effects',
-    'on'
   );
 
   useEffect(() => {
     const engine = engineRef.current;
-    const wanted = proximitySound || soundEffects;
-    if (!engine || !hasPlatformer || !playing || !wanted) {
+    if (!engine || !hasPlatformer || !playing || !obstacleSounds) {
       return;
     }
     const context = audioContext();
     if (!context) {
       return;
     }
-    const proximity = proximitySound ? createProximityAudio(context) : null;
-    const height = soundEffects ? createHeightTone(context) : null;
+    const proximity = createProximityAudio(context);
+    const height = createHeightTone(context);
     const sounds = createPlayerSounds(context);
     engine.setPlayerObserver(
       createPlayerObserver({
-        // Hitting something is an obstacle; footsteps are ordinary sound.
-        onSound: event => {
-          if (event === 'blocked' ? proximitySound : soundEffects) {
-            sounds.play(event);
-          }
-        },
-        // Absent when nothing listens, so the observer skips the work.
-        onHeight: height?.update,
-        onProximity: proximity?.update,
+        onSound: sounds.play,
+        onHeight: height.update,
+        onProximity: proximity.update,
       })
     );
     return () => {
       engine.setPlayerObserver(null);
-      proximity?.stop();
-      height?.stop();
+      proximity.stop();
+      height.stop();
       sounds.stop();
       context.close().catch(() => undefined);
     };
-  }, [engineRef, hasPlatformer, playing, proximitySound, soundEffects]);
+  }, [engineRef, hasPlatformer, playing, obstacleSounds]);
 
-  return hasPlatformer ? [soundEffectsSetting, proximitySetting] : [];
+  return hasPlatformer ? [obstacleSoundsSetting] : [];
 }
