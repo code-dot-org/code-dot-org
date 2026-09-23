@@ -151,8 +151,8 @@ const InterventionBox: FC<InterventionBoxProps> = ({
               <p className={styles.subtext}>
                 {focusTopic ? (
                   <>
-                    {'Based on your reflection, we’ll start with '}
-                    <strong>{focusTopic}</strong>
+                    {"Based on your reflection, we'll start with "}
+                    <strong>{focusTopic.replace(/\.$/, '')}</strong>
                     {'. You can work any way you like from here.'}
                   </>
                 ) : (

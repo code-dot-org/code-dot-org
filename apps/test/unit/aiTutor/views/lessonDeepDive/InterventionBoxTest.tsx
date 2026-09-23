@@ -47,7 +47,10 @@ const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
 const LESSON_ID = 42;
 const LESSON_NAME = 'Variables';
 
-function renderInterventionBox(onNext: jest.Mock = jest.fn()) {
+function renderInterventionBox(
+  onNext: jest.Mock = jest.fn(),
+  focusTopic?: string
+) {
   render(
     <InterventionBox
       lessonId={LESSON_ID}
@@ -58,6 +61,7 @@ function renderInterventionBox(onNext: jest.Mock = jest.fn()) {
       objectives={[]}
       jsonVideos={[]}
       reflectionData={null}
+      focusTopic={focusTopic}
       onNext={onNext}
     />
   );
@@ -131,6 +135,36 @@ describe('InterventionBox', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Challenge'}));
 
     expect(screen.getByText('challenge content')).toBeInTheDocument();
+  });
+
+  it('shows personalised subtext when focusTopic is provided', () => {
+    renderInterventionBox(jest.fn(), 'variables and scope');
+    // The <p> wraps all three inline nodes; its combined text content covers
+    // both the prefix and the suffix.
+    const subtext = screen.getByText(/Based on your reflection/i);
+    expect(subtext).toHaveTextContent(
+      "Based on your reflection, we'll start with variables and scope. You can work any way you like from here."
+    );
+    // The topic itself is wrapped in <strong>.
+    expect(screen.getByText('variables and scope').tagName.toLowerCase()).toBe(
+      'strong'
+    );
+  });
+
+  it('strips a trailing period from focusTopic in the subtext', () => {
+    renderInterventionBox(jest.fn(), 'loops.');
+    // The <strong> element must not carry the trailing period.
+    expect(screen.getByText('loops').tagName.toLowerCase()).toBe('strong');
+  });
+
+  it('shows fallback subtext when focusTopic is not provided', () => {
+    renderInterventionBox();
+    expect(
+      screen.getByText('You can work any way you like from here.')
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText(/Based on your reflection/)
+    ).not.toBeInTheDocument();
   });
 
   it('reports a navigation event when moving between modalities to Challenge', () => {
