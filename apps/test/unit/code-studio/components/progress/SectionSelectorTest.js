@@ -162,11 +162,6 @@ describe('SectionSelector', () => {
     });
   });
 
-  // Regression test for TEACHING-322. On the teacher dashboard the route's
-  // :sectionId drives the selected section, and TeacherNavigationBar dispatches
-  // selectSection to match it. A selector that dispatched instead of navigating
-  // got reverted by that effect, so the dropdown snapped back to the old
-  // section while the query param showed the new one.
   describe('inside the teacher dashboard router', () => {
     const UNIT_OVERVIEW_PATH = '/sections/:sectionId/unit/:unitName?';
 
