@@ -399,6 +399,56 @@ describe('Health Bar', () => {
   });
 });
 
+describe('where a stock actor’s blocks sit', () => {
+  // A LAYOUT THAT OVERLAPS IS REARRANGED, and every rearrangement used to be
+  // saved: the project went dirty, every file was copied, the world recompiled
+  // and RESTARTED — for a tidy-up nobody asked for. The editor ignores an
+  // automatic move now (`blockly/editorEvents`), so this is no longer a
+  // performance question; it is still the difference between a file that opens
+  // readable and one that shuffles itself while you look at it.
+  //
+  // The handlers used to start at y=180, which is a guess about how tall a
+  // `define actor` stack is. True of a small actor; the Text Area's definition
+  // carries a whole `define drawing` and is far taller, so its first handler
+  // began INSIDE the definition.
+
+  /** Every top-level block's corner, as the file stores it. */
+  const corners = (contents: string) =>
+    (
+      JSON.parse(contents) as {
+        blocks?: {blocks?: Array<{type?: string; x?: number; y?: number}>};
+      }
+    ).blocks?.blocks ?? [];
+
+  it('puts the definition and the handlers in different columns', () => {
+    for (const actor of STOCK_ACTORS) {
+      const top = corners(actor.contents);
+      const root = top.find(one => one.type === 'world_actor');
+      const handlers = top.filter(one => one.type !== 'world_actor');
+      if (!root || handlers.length === 0) {
+        continue;
+      }
+      for (const handler of handlers) {
+        expect(
+          (handler.x ?? 0) > (root.x ?? 0),
+          `${actor.id}: a handler shares the definition's column`,
+        ).toBe(true);
+      }
+    }
+  });
+
+  it('never puts two top blocks in the same place', () => {
+    for (const actor of STOCK_ACTORS) {
+      const seen = new Set<string>();
+      for (const one of corners(actor.contents)) {
+        const at = `${one.x ?? 0},${one.y ?? 0}`;
+        expect(seen.has(at), `${actor.id}: two blocks at ${at}`).toBe(false);
+        seen.add(at);
+      }
+    }
+  });
+});
+
 describe('Button', () => {
   it('IS a Label, said in a row, and elects one more trait', () => {
     // The demonstration that an interface actor is an actor: the click, the

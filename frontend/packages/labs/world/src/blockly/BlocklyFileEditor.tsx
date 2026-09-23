@@ -62,6 +62,7 @@ import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
+import {movedItself} from './editorEvents';
 import {refreshBlockDesigns} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
@@ -1202,6 +1203,7 @@ export const BlocklyFileEditor = ({
       // declares. The session is written when it closes, above.
       if (
         event.isUiEvent ||
+        movedItself(event) ||
         signatureBubbleOpen.current ||
         isTypingDeclaration(event, workspace)
       ) {

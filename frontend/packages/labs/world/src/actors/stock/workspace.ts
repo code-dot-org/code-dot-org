@@ -13,6 +13,19 @@ import {pascal, STARTS_EMPTY} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {MAIN_WORLD_PATH} from '../../mainWorld';
 
+/**
+ * Where a stock actor's handlers sit: a column to the right of its definition,
+ * and how far apart they are down it.
+ *
+ * GENEROUS ON PURPOSE. Both are guesses — a block's real height is the
+ * renderer's to know and no file can ask — so they are picked to be too big
+ * rather than nearly right: blocks that do not overlap are never tidied, and a
+ * gap that is too wide costs a reader one scroll where one that is too narrow
+ * costs them the layout being rearranged under them.
+ */
+const HANDLER_COLUMN = 560;
+const HANDLER_GAP = 220;
+
 /** Chain statement blocks, first at the top. */
 export const chain = (blocks: object[]): object =>
   blocks.reduceRight((next, block) => ({...block, next: {block: next}}));
@@ -338,12 +351,26 @@ export const actorFile = (
                 }
               : {}),
           },
-          // The handlers, laid out down the left: the reading order of a file
-          // is what a learner opening it meets first.
+          // The handlers, in a COLUMN OF THEIR OWN beside the definition.
+          //
+          // They used to start at y=180 under it, which is a guess about how
+          // tall a `define actor` stack is — true of a small actor and wildly
+          // wrong for one with a big `define drawing`, where the first handler
+          // began INSIDE the definition and the rest overlapped each other at
+          // 120 apart. Blockly tidies what overlaps, every tidy is a
+          // `BLOCK_MOVE`, and a move used to be saved: opening the Text Area
+          // rewrote it, dirtied the project and RESTARTED the running world,
+          // for a layout nobody asked for (`BlocklyFileEditor.movedItself`).
+          //
+          // A second column cannot be wrong later. The definition may grow to
+          // any height without reaching the handlers, and the handlers keep
+          // their reading order down the page — which is what a learner
+          // opening the file meets first, and the reason they were in one
+          // column to begin with.
           ...(extras.handlers ?? []).map((handler, index) => ({
             ...handler,
-            x: 20,
-            y: 180 + index * 120,
+            x: HANDLER_COLUMN,
+            y: 20 + index * HANDLER_GAP,
           })),
         ],
       },
