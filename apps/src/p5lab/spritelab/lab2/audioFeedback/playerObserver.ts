@@ -70,7 +70,11 @@ export function createPlayerObserver(
       // The first frame has no previous position, so nothing was requested.
       const requested = first ? 0 : requestedX - previousX;
       // Positive is away from the ground, whichever way gravity points.
-      const up = weightless ? 0 : -Math.sign(gravity);
+      // Weightless there is no ground: it is the way the keys asked to go,
+      // so a refused move up or down both count as a bump.
+      const up = weightless
+        ? Math.sign(requestedY - previousY)
+        : -Math.sign(gravity);
       // Faces the key rather than the ground gained, so turning into a wall
       // faces it, and keeps facing while still, so a warning holds on a pause.
       facing = nextFacing(facing, isMoving(moved) ? moved : requested);

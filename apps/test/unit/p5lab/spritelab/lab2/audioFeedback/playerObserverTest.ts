@@ -87,6 +87,26 @@ describe('SpriteLab2 playerObserver', () => {
     expect(sounds).toEqual(['blocked']);
   });
 
+  it.each([
+    {way: 'up', requestedY: 195},
+    {way: 'down', requestedY: 205},
+  ])('sounds a bump for a refused weightless move $way', ({requestedY}) => {
+    const {observer, sounds} = setup(['onSound']);
+    const sprite = makeSprite(100, 200);
+    observer.observe(frame(sprite, {gravity: 0}));
+    observer.observe(frame(sprite, {gravity: 0, requestedY}));
+    expect(sounds).toEqual(['blocked']);
+  });
+
+  it('is quiet for a weightless move that went where it asked', () => {
+    const {observer, sounds} = setup(['onSound']);
+    observer.observe(frame(makeSprite(100, 200), {gravity: 0}));
+    observer.observe(
+      frame(makeSprite(100, 195), {gravity: 0, requestedY: 195})
+    );
+    expect(sounds).toEqual([]);
+  });
+
   it('measures height from the feet, and airborne off the ground', () => {
     const {observer, heights} = setup(['onHeight']);
     observer.observe(frame(makeSprite(100, FLOOR_Y)));
