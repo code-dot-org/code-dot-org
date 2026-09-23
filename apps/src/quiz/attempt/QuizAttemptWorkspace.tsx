@@ -12,6 +12,8 @@ import styles from './quiz-attempt-workspace.module.scss';
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
+  // Levelbuilders may leave displayName blank - falls back to this.
+  levelName: string;
   // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
   quizQuestions: QuizQuestionSummary[];
@@ -26,6 +28,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   QuizAttemptWorkspaceProps
 > = ({
   levelId,
+  levelName,
   unitId,
   quizQuestions,
   allowMultipleAttempts,
@@ -54,6 +57,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
     useState<Record<number, string>>({});
+  // Retake goes back through the intro screen rather than starting a new
+  // attempt immediately.
+  const [isRetakeIntroOpen, setIsRetakeIntroOpen] = useState(false);
   // One chained promise per question, so a rapid second pick waits for the
   // first write to settle instead of racing it, and finishAttempt can wait
   // for all of them before the server locks the attempt.
@@ -63,15 +69,27 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   const questionsRef = useRef<HTMLDivElement>(null);
   const submittedRef = useRef<HTMLDivElement>(null);
+  const introRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setCurrentPageNumber(1);
     setSelectedChoicesByQuestionId({});
+    setIsRetakeIntroOpen(false);
     pendingWritesByQuestionIdRef.current = {};
   }, [attempt?.id]);
 
   const isAttemptInProgress =
     !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
+  const isIntroOpen =
+    toBool(showIntroScreen) &&
+    (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
+
+  // Retake unmounts the focused button, so hand focus to the intro heading.
+  useEffect(() => {
+    if (isRetakeIntroOpen) {
+      introRef.current?.querySelector<HTMLElement>('h2')?.focus();
+    }
+  }, [isRetakeIntroOpen]);
 
   // Focus on the new page's heading when navigating to a new page.
   useEffect(() => {
@@ -102,6 +120,14 @@ const QuizAttemptWorkspace: React.FunctionComponent<
       await finishAttempt();
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
+    }
+  };
+
+  const handleRetake = () => {
+    if (showIntroScreen) {
+      setIsRetakeIntroOpen(true);
+    } else {
+      handleBeginAttempt();
     }
   };
 
@@ -170,10 +196,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           <Typography variant="body2">
             Quiz attempts are not allowed on a standalone level.
           </Typography>
-        ) : !attempt && showIntroScreen ? (
-          <div className={styles.questions}>
+        ) : isIntroOpen ? (
+          <div className={styles.questions} ref={introRef}>
             <QuizIntroCard
-              title={displayName ?? ''}
+              title={displayName || levelName}
               introText={customIntroText}
               questionCount={quizQuestions.length}
               timeLimitMinutes={timeLimitMinutes}
@@ -202,7 +228,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                 color="primary"
                 size="medium"
                 type="button"
-                onClick={handleBeginAttempt}
+                onClick={handleRetake}
               >
                 Retake Quiz
               </MuiButton>

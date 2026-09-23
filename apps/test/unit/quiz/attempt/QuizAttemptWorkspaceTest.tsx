@@ -65,19 +65,26 @@ function renderWorkspace({
   // kicks in for undefined, so this lets callers opt out of the default.
   unitId = 7,
   allowMultipleAttempts,
+  displayName = 'Unit 3 Assessment',
+  showIntroScreen,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
   unitId?: number | null;
   allowMultipleAttempts?: boolean;
+  displayName?: string;
+  showIntroScreen?: boolean;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
     <QuizAttemptWorkspace
       levelId={42}
+      levelName="quiz-level-name"
       unitId={unitId ?? undefined}
       quizQuestions={quizQuestions}
       allowMultipleAttempts={allowMultipleAttempts}
+      displayName={displayName}
+      showIntroScreen={showIntroScreen}
     />
   );
 }
@@ -105,6 +112,62 @@ describe('QuizAttemptWorkspace', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
 
+    expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it('shows the intro screen instead of Begin Quiz when the quiz has one', () => {
+    const beginAttempt = jest.fn();
+    renderWorkspace({
+      hookState: {attempt: null, beginAttempt},
+      showIntroScreen: true,
+    });
+
+    expect(
+      screen.getByRole('heading', {name: 'Unit 3 Assessment', level: 2})
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Begin Quiz'})
+    ).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
+    expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it("titles the intro screen with the level's name when displayName is blank", () => {
+    renderWorkspace({
+      hookState: {attempt: null},
+      showIntroScreen: true,
+      displayName: '',
+    });
+
+    expect(
+      screen.getByRole('heading', {name: 'quiz-level-name', level: 2})
+    ).toBeInTheDocument();
+  });
+
+  it('routes Retake through the intro screen when the quiz has one', () => {
+    const beginAttempt = jest.fn();
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          canRetake: true,
+        },
+        beginAttempt,
+      },
+      showIntroScreen: true,
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: 'Retake Quiz'}));
+
+    expect(beginAttempt).not.toHaveBeenCalled();
+    const heading = screen.getByRole('heading', {
+      name: 'Unit 3 Assessment',
+      level: 2,
+    });
+    expect(heading).toHaveFocus();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 

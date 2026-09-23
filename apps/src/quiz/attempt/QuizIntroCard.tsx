@@ -46,7 +46,13 @@ const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
       title={title}
       description={
         introText && (
-          <SafeMarkdown markdown={introText} className={styles.introText} />
+          <Typography
+            variant="body2"
+            component="div"
+            className={styles.introText}
+          >
+            <SafeMarkdown markdown={introText} />
+          </Typography>
         )
       }
       footer={
