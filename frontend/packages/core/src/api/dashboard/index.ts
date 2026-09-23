@@ -47,6 +47,6 @@ export type {
   CreatePasswordParams,
   UpdateUserTypeParams,
   DeleteUserParams,
-  ParentEmailOptIn,
+  EmailOptIn,
   UpdateParentEmailParams,
 } from './users/users.types';
