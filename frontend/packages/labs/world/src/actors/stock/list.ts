@@ -313,11 +313,41 @@ const removeBody = () =>
     ],
   );
 
-/** Move the highlight by `by` rows, and bring it into view. */
-const step = (by: object) => [
+const MOVED_BY: BlockParam = {
+  id: 'listMovedBy',
+  name: 'rows',
+  type: 'number',
+  binds: 'Number',
+};
+
+/** `⟨rows⟩` — how far `move the highlight by` was asked to move. */
+const movedBy = () => paramValue(MOVED_BY);
+
+/** `move the highlight by ⟨n⟩` — the call, which is what the eight hats say. */
+const moveHighlight = (by: object) => ({
+  type: `world_do_${OWN}_MoveTheHighlightByAction`,
+  inputs: {VALUE: by, ACTOR: me()},
+});
+
+/**
+ * `move the highlight by ⟨rows⟩` — and bring it into view.
+ *
+ * A BLOCK OF ITS OWN BECAUSE IT IS SAID EIGHT TIMES, and for a reason a reader
+ * should not have to see: four keys — the two arrows and the two page keys —
+ * each need a hat on the PRESS and another on the REPEAT, because a key held
+ * raises `presses` exactly once (`World.repeatingKeys`). One body, two hats,
+ * four times over, and the body carries the clamp and the reveal.
+ *
+ * The distance is the parameter, which is what makes the eight call sites one
+ * line each: a row for the arrows, a windowful for the page keys.
+ *
+ * PRIVATE: a file with no list in it can mean nothing by it
+ * (`extensions/blockVisibility`).
+ */
+const moveBody = () => [
   set(
     'HighlightedProperty',
-    clamp(arithmetic('ADD', highlighted(), by), num(1), count()),
+    clamp(arithmetic('ADD', highlighted(), movedBy()), num(1), count()),
   ),
   reveal(highlighted),
 ];
@@ -376,6 +406,14 @@ export const listActor = actorFile(
     // of five times inside the body.
     defineBlock({
       private: true,
+      say: ['move the highlight by', MOVED_BY],
+      description:
+        'Move which row is highlighted, keeping it inside the list and ' +
+        'bringing the window to it.',
+      body: moveBody(),
+    }),
+    defineBlock({
+      private: true,
       say: ['take out row', TAKEN],
       description:
         'Take a row out of this list, if the project allows it and there is ' +
@@ -423,6 +461,7 @@ export const listActor = actorFile(
       asVariable(MOVEMENT),
       asVariable(BY),
       asVariable(TAKEN),
+      asVariable(MOVED_BY),
       asVariable(WORD),
       asVariable(PLACE),
     ],
@@ -517,7 +556,7 @@ export const listActor = actorFile(
             type: hat,
             fields: {FILTER0: key},
             inputs: {ACTOR: me()},
-            next: {block: either(focused(), step(by()))},
+            next: {block: either(focused(), [moveHighlight(by())])},
           }),
         ),
       ),
