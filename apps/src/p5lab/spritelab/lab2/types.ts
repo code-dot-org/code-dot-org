@@ -2,6 +2,7 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {AddBlock} from './addBlocks';
 import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
@@ -140,6 +141,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;
+  /** Blocks added to the pinned scene when the student arrives and the
+      scene has none of that type (addBlocks.ts), in Blockly's block
+      state form: an event to fill in, a placeholder shadow on its `next`. */
+  addBlocks?: AddBlock[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

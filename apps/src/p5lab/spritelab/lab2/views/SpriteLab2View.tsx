@@ -1,4 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -39,6 +40,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {addMissingBlocks} from '../addBlocks';
 import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
@@ -1453,6 +1455,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     loadCode(source);
+    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
+    // The level's added blocks join the pinned scene once it is on screen, so
+    // they can sit below what the workspace has rendered.
+    if (activeScene.id === pinnedSceneId && levelProperties.addBlocks) {
+      addMissingBlocks(workspace, levelProperties.addBlocks);
+    }
     runLocalScene(activeScene);
   }, [
     animationsSeeded,
@@ -1464,6 +1472,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
+    pinnedSceneId,
+    levelProperties.addBlocks,
   ]);
 
   const handleSelectScene = useCallback(

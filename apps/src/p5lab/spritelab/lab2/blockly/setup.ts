@@ -12,6 +12,11 @@ import {
   SceneDropdown,
 } from './blockDefinitions/goToScene';
 import {
+  PLACEHOLDER_MUTATOR,
+  PLACEHOLDER_OUTLINE_EXTENSION,
+  placeholderMutator,
+} from './blockDefinitions/placeholder';
+import {
   FIELD_SOUND_DROPDOWN_TYPE,
   SoundDropdown,
 } from './blockDefinitions/playSound';
@@ -36,6 +41,7 @@ import {
   FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
   MusicProjectDropdown,
 } from './musicProjectDropdown';
+import {placeholderOutline} from './placeholderRendering';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -80,6 +86,14 @@ function installLabBlocks(): void {
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  BlocklyCore.Extensions.register(
+    PLACEHOLDER_OUTLINE_EXTENSION,
+    placeholderOutline
+  );
+  BlocklyCore.Extensions.registerMutator(
+    PLACEHOLDER_MUTATOR,
+    placeholderMutator
+  );
   for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {
