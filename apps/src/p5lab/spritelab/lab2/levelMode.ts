@@ -2,7 +2,7 @@
 // surfaces a student sees, and the image controls they get.
 
 import {ImageAdlibSet} from './ai/images/imageAdlibs';
-import {ImageStyle, ImageType} from './ai/images/types';
+import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
 export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
@@ -11,6 +11,13 @@ export interface LevelMode {
   kind: LevelModeKind;
   /** The kind of image the level is about. */
   imageType?: ImageType;
+  /** For a sprite: a character, which can be animated, or an object, which
+      is one still picture with its own words. Character when unset. */
+  imageSubject?: ImageSubject;
+  /** Recorded on every image this level makes. The other end of the link
+      is the image_role_defaults level property (imageRoleDefaults.ts), which code
+      and world levels use to open their dropdowns on an image by role. */
+  imageRole?: string;
   /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
 }

@@ -1219,7 +1219,7 @@ class LevelTest < ActiveSupport::TestCase
     unit = create(:script)
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
-      "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
+      "All types", "Adaptive", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
       "Craft", "CurriculumReference", "Dancelab", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",

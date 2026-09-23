@@ -24,6 +24,9 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
@@ -31,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**.  Then add **when [ ] touches [ ]**, pick your player and your second character, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."
+        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**, picking your second character.  Click **Play** and watch them go."
       },
       {
-        "text": "**Your world has company.** Continue when you're ready.",
+        "text": "**They're on the move.** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Set them walking\nUse **sprite [them] begins [patrolling left and right on blocks]**, then decide what happens when your player meets them: a friendly hello, or back to the start.",
+    "long_instructions": "# Set them walking\nUse **sprite [them] begins [patrolling left and right on blocks]**, picking your second character.  Click **Play** and watch them go.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -60,40 +63,6 @@
               }
             }
           }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_checkTouching",
-          "inputs": {
-            "SPRITE1": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "SPRITE2": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_spriteSay",
-          "fields": {
-            "SPEECH": "Hello!"
-          },
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_restartScene"
         }
       ]
     }

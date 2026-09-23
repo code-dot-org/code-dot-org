@@ -24,14 +24,55 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
     "pinned_scene": {
       "id": "story-scene",
       "name": "Story",
       "type": "story"
     },
+    "add_blocks": [
+      {
+        "type": "gamelab_atTime",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 3
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Click my friend!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
     "guide_steps": [
       {
-        "text": "**Say something else, a moment later.** Drag out **at [3] seconds** and put a **say** block inside it. Press **Play** and your character speaks right on cue."
+        "text": "**Say something else, a moment later.** Drag a **say** block into the dotted spot inside **at [3] seconds**. Press **Play** and your character speaks right on cue."
       },
       {
         "text": "**Perfect timing!** Watch your story unfold, then continue when you're ready.",

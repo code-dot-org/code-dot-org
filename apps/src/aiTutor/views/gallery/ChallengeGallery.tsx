@@ -1,5 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
@@ -128,6 +129,14 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
       cancelled = true;
     };
   }, [sectionId]);
+
+  if (
+    !experiments.isEnabledAllowingQueryString(
+      experiments.LESSON_TUTOR_CHALLENGE
+    )
+  ) {
+    return null;
+  }
 
   // Folds a response's new reaction tallies into the listing held from the
   // initial fetch, so a reaction made on the project page shows on that

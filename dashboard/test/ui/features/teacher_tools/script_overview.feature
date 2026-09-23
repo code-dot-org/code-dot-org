@@ -21,10 +21,10 @@ Feature: Unit overview page
 
     # Verify progress as teacher viewing themself and student on script overview page
     When I sign in as "Teacher_Sally"
-    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/29/levels/4?level_name=2-3 Artist 1 new"
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/2"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
     And I wait until element "#uitest-view-as-student-selector" is visible
-    Then I verify progress for lesson 29 level 4 in detail view is "perfect"
+    Then I verify progress for lesson 3 level 2 in detail view is "perfect"
     Then I select the "Sally" option in dropdown "uitest-view-as-student-selector"
     And I wait until element "td:contains(Maze)" is visible
     # verify name format in summary view
@@ -36,7 +36,7 @@ Feature: Unit overview page
     And I wait to see ".uitest-summary-progress-table"
 
     # Make sure we only see student progress, not teacher progress.
-    Then I verify progress for lesson 29 level 4 is "not_tried"
+    Then I verify progress for lesson 3 level 2 is "not_tried"
 
   Scenario: Unit overview contents
     Given I create a student named "Jean"

@@ -52,6 +52,22 @@ describe('patternCells', () => {
     });
   });
 
+  it('takes the sprite carrying the role when one is named', () => {
+    const list = animations([
+      ['k2', 'secondCharacter', []],
+      ['k1', 'firstCharacter', []],
+    ]);
+    list.propsByKey.k2.role = 'friend';
+    expect(patternCells(list, 'friend').S).toEqual({
+      image: 'secondCharacter',
+      kind: 'sprite',
+    });
+    expect(patternCells(list, 'treasure').S).toEqual({
+      image: 'firstCharacter',
+      kind: 'sprite',
+    });
+  });
+
   it('offers only the characters it has images for', () => {
     expect(patternCells(animations([['k1', 'hero', []]]))).toEqual({
       S: {image: 'hero', kind: 'sprite'},

@@ -1,5 +1,9 @@
 export type DataRow = Record<string, string | number>;
 
+export type TrainerFamily = 'knn' | 'decisionTree';
+
+export type Hyperparameters = {k: number} | {maxDepth: number};
+
 export interface Mode {
   datasets?: string[];
   hideSelectLabel?: boolean;
@@ -152,7 +156,7 @@ export interface ModelDataToSave {
   features: ModelCardColumn[];
   summaryStat: {type: string; stat: string};
   trainedModel: object | null;
-  kValue: number | null;
+  hyperparameters: Hyperparameters | null;
 }
 
 export type SaveTrainedModel = (

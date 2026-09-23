@@ -40,6 +40,8 @@ class GamelabJr < Gamelab
     enable_big_playspace
     uses_lab2
     level_mode
+    image_role_defaults
+    add_blocks
     pinned_scene
     world_start_pattern
     guide_steps
