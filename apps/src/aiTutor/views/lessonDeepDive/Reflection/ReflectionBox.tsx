@@ -1,5 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useRef, useState} from 'react';
+
+const ANIM_MS = 220;
 
 import {
   saveUserLessonObjectiveReflection,
@@ -26,6 +27,21 @@ interface ReflectionBoxProps {
   initialValues?: ReflectionData | null;
 }
 
+type AnimPhase =
+  | 'idle'
+  | 'exitingLeft'
+  | 'exitingRight'
+  | 'enteringFromRight'
+  | 'enteringFromLeft';
+
+const ANIM_CLASS: Record<AnimPhase, string> = {
+  idle: '',
+  exitingLeft: styles.exitLeft,
+  exitingRight: styles.exitRight,
+  enteringFromRight: styles.enterFromRight,
+  enteringFromLeft: styles.enterFromLeft,
+};
+
 const ReflectionBox: FC<ReflectionBoxProps> = ({
   unitLabel,
   lessonId,
@@ -41,11 +57,31 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
   const [struggle, setStruggle] = useState(initialValues?.struggle ?? '');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const totalSteps = objectives.length + 1; // objectives + free response
+  const [displayStep, setDisplayStep] = useState(0);
+  const [animPhase, setAnimPhase] = useState<AnimPhase>('idle');
+  const pendingStepRef = useRef(0);
+
   const handleSelectionChange = useCallback(
     (objectiveId: string, value: ReflectionValue) => {
       setObjectiveReflections(prev => ({...prev, [objectiveId]: value}));
     },
     []
+  );
+
+  const navigateTo = useCallback(
+    (nextStep: number) => {
+      if (animPhase !== 'idle') return;
+      pendingStepRef.current = nextStep;
+      const goingForward = nextStep > displayStep;
+      setAnimPhase(goingForward ? 'exitingLeft' : 'exitingRight');
+      setTimeout(() => {
+        setDisplayStep(pendingStepRef.current);
+        setAnimPhase(goingForward ? 'enteringFromRight' : 'enteringFromLeft');
+        setTimeout(() => setAnimPhase('idle'), ANIM_MS);
+      }, ANIM_MS);
+    },
+    [animPhase, displayStep]
   );
 
   const handleSubmit = useCallback(async () => {
@@ -119,38 +155,93 @@ const ReflectionBox: FC<ReflectionBoxProps> = ({
     onNext,
   ]);
 
+  const isObjectiveStep = displayStep < objectives.length;
+  const currentObjective = isObjectiveStep ? objectives[displayStep] : null;
+  const currentRating = currentObjective
+    ? objectiveReflections[currentObjective.id] ?? null
+    : null;
+  const canAdvance = !isObjectiveStep || currentRating !== null;
+  const isLastStep = displayStep === totalSteps - 1;
+  const isFirstStep = displayStep === 0;
+
+  const overlineText = unitLabel
+    ? `${unitLabel} Reflection`.toUpperCase()
+    : 'Reflection'.toUpperCase();
+
+  const subheadingText = isObjectiveStep
+    ? 'Rate your understanding of each objective.'
+    : 'Anything else you want to add?';
+
   return (
-    <div className={styles.container}>
-      <p className={styles.sectionLabel}>{unitLabel}</p>
-      <h2 className={styles.reflectionHeading}>How did it go?</h2>
-      <p className={styles.reflectionSubheading}>
-        Rate each objective honestly. This shapes what we focus on first.
-      </p>
-      <div className={styles.objectivesList}>
-        {objectives.map(objective => (
-          <LessonObjectiveReflection
-            key={objective.id}
-            objective={objective}
-            selected={objectiveReflections[objective.id] ?? null}
-            onSelectionChange={handleSelectionChange}
-          />
-        ))}
+    <div className={styles.card}>
+      <p className={styles.overline}>{overlineText}</p>
+      <div className={styles.instructions}>
+        <h2 className={styles.heading}>How did it go?</h2>
+        <p className={styles.subheading}>{subheadingText}</p>
       </div>
-      <LessonReflection
-        success={success}
-        struggle={struggle}
-        onSuccessChange={setSuccess}
-        onStruggleChange={setStruggle}
-      />
-      <button
-        type="button"
-        className={styles.submitButton}
-        disabled={isSubmitting}
-        onClick={handleSubmit}
+      <div className={styles.content}>
+        <div className={styles.pollWrapper}>
+          <div className={`${styles.pollCard} ${ANIM_CLASS[animPhase]}`}>
+            {isObjectiveStep && currentObjective ? (
+              <LessonObjectiveReflection
+                key={currentObjective.id}
+                objective={currentObjective}
+                selected={objectiveReflections[currentObjective.id] ?? null}
+                onSelectionChange={handleSelectionChange}
+              />
+            ) : (
+              <LessonReflection
+                success={success}
+                struggle={struggle}
+                onSuccessChange={setSuccess}
+                onStruggleChange={setStruggle}
+              />
+            )}
+          </div>
+        </div>
+        <div className={styles.carouselTracker} aria-hidden="true">
+          {Array.from({length: totalSteps}, (_, i) => (
+            <div
+              key={i}
+              className={`${styles.dot} ${
+                i === displayStep ? styles.dotActive : ''
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+      <div
+        className={`${styles.footer} ${isFirstStep ? styles.footerEnd : ''}`}
       >
-        Start practicing
-        <FontAwesomeV6Icon iconName="arrow-right" />
-      </button>
+        {!isFirstStep && (
+          <button
+            type="button"
+            className={styles.backButton}
+            onClick={() => navigateTo(displayStep - 1)}
+          >
+            Back
+          </button>
+        )}
+        {isLastStep ? (
+          <button
+            type="button"
+            className={styles.doneButton}
+            disabled={isSubmitting}
+            onClick={handleSubmit}
+          >
+            Done
+          </button>
+        ) : (
+          <button
+            type="button"
+            className={styles.nextButton}
+            disabled={!canAdvance}
+            onClick={() => navigateTo(displayStep + 1)}
+          >
+            Next
+          </button>
+        )}
+      </div>
     </div>
   );
 };

@@ -15,35 +15,33 @@ const LessonReflection: FC<LessonReflectionProps> = ({
   onSuccessChange,
   onStruggleChange,
 }) => (
-  <div className={styles.anythingElse}>
-    <p className={styles.anythingElseLabel}>Anything else?</p>
-    <div className={styles.textAreaGroup}>
-      <div>
-        <p className={styles.textAreaLabel}>
-          A moment I felt successful today...
-        </p>
-        <textarea
-          id="reflection-success"
-          className={styles.textArea}
-          placeholder="Optional"
-          value={success}
-          onChange={e => onSuccessChange(e.target.value)}
-        />
-      </div>
-      <div>
-        <p className={styles.textAreaLabel}>
-          Something I&apos;m still confused about or working on...
-        </p>
-        <textarea
-          id="reflection-struggle"
-          className={styles.textArea}
-          placeholder="Optional"
-          value={struggle}
-          onChange={e => onStruggleChange(e.target.value)}
-        />
-      </div>
+  <>
+    <p className={styles.optionalLabel}>Optional</p>
+    <div className={styles.freeResponseItem}>
+      <p className={styles.questionLabel}>
+        A moment I felt successful today...
+      </p>
+      <textarea
+        id="reflection-success"
+        className={styles.textArea}
+        placeholder="Write something"
+        value={success}
+        onChange={e => onSuccessChange(e.target.value)}
+      />
     </div>
-  </div>
+    <div className={styles.freeResponseItem}>
+      <p className={styles.questionLabel}>
+        Something I&apos;m still confused about or working on...
+      </p>
+      <textarea
+        id="reflection-struggle"
+        className={styles.textArea}
+        placeholder="Write something"
+        value={struggle}
+        onChange={e => onStruggleChange(e.target.value)}
+      />
+    </div>
+  </>
 );
 
 export default LessonReflection;

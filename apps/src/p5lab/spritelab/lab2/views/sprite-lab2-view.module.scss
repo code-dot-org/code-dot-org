@@ -54,6 +54,14 @@ $tab-item-height: 34px;
   // The tabs are distinct destinations, not a continuous strip: separate them
   // enough to be told apart at a glance.
   gap: 10px;
+  // Tab labels and controls, not text to copy. code-studio.css sets
+  // `p, pre, span` back to selectable, so the labels are named too.
+  user-select: none;
+
+  span,
+  p {
+    user-select: none;
+  }
 }
 
 .tab {
@@ -117,8 +125,6 @@ $tab-segment-height: $tab-item-height - 2px;
   align-items: center;
   box-sizing: border-box;
   height: $tab-item-height;
-  // Clips the square-cornered segments to the group's radius.
-  overflow: hidden;
   // The arrow, not the I-beam `auto` gives over the scene name's text.
   cursor: default;
   border: 1px solid var(--borders-neutral-strong);
@@ -135,6 +141,12 @@ $tab-segment-height: $tab-item-height - 2px;
     &:first-child {
       border-left: none;
     }
+
+    // The group can't clip (its dropdown menu hangs below it), so the last
+    // segment rounds its own corner to match the group's.
+    &:last-child {
+      border-radius: 0 3px 0 0;
+    }
   }
 
   .tabActive {
@@ -145,10 +157,10 @@ $tab-segment-height: $tab-item-height - 2px;
     }
   }
 
-  .sceneSelect,
-  .sceneName {
-    border-left: none;
-    border-radius: 0;
+  // The trigger is the group's first segment; the group's own radius shows
+  // through where the segment is transparent, so the segment has none.
+  .sceneDropdown {
+    height: $tab-segment-height;
   }
 }
 
@@ -157,7 +169,11 @@ $tab-segment-height: $tab-item-height - 2px;
   cursor: pointer;
 }
 
-// Action buttons beside the Play tab (shown only while playing), not tabs.
+// The Scenes gallery is open: the picker takes the selected tab's underline.
+.tabGroupActive .sceneDropdown {
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+}
+
 // The song a playing game is using, sized to sit among the tab controls.
 .musicBar {
   display: flex;
@@ -180,70 +196,6 @@ $tab-segment-height: $tab-item-height - 2px;
   white-space: nowrap;
 }
 
-.startOver {
-  height: $tab-item-height;
-  padding: 0 12px;
-  // The tab bar's gap spaces these; cancel the legacy global button margin.
-  margin: 0;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-
-  &:hover {
-    background: var(--background-neutral-primary);
-  }
-}
-
-.sceneSelect {
-  height: $tab-segment-height;
-  max-width: 160px;
-  margin: 0;
-  // Native (appearance: auto) selects paint their own UA box when disabled,
-  // which reads as a stray grey pill. Take over rendering entirely: no
-  // appearance, our own chevron.
-  appearance: none;
-  padding: 0 26px 0 10px;
-  border: none;
-  border-left: 1px solid var(--borders-neutral-primary);
-  border-radius: 0 4px 0 0;
-  background: transparent
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/></svg>")
-    no-repeat right 9px center;
-  color: var(--text-neutral-primary);
-  // Match the tab buttons.
-  font-size: 14px;
-  cursor: pointer;
-
-  // Unusable off the scene tabs, but not dimmed: it reads as one of the
-  // group's labels, and those stay bright when their tab isn't the active one.
-  &:disabled {
-    // Disabled controls swallow clicks entirely; let them fall through so
-    // clicking the dropdown area activates the Code tab.
-    pointer-events: none;
-    // Chrome re-applies a UA background-color and dims the text on :disabled.
-    background-color: transparent;
-    color: var(--text-neutral-primary);
-    opacity: 1;
-  }
-}
-
-// Pinned-scene levels show the scene's name where the picker would be: the
-// select's geometry without the chevron or the affordances.
-.sceneName {
-  display: inline-flex;
-  align-items: center;
-  height: $tab-segment-height;
-  max-width: 160px;
-  padding: 0 10px;
-  overflow: hidden;
-  border-left: 1px solid var(--borders-neutral-primary);
-  color: var(--text-neutral-primary);
-  font-size: 14px;
-  white-space: nowrap;
-}
 
 .tabContent {
   position: relative;
@@ -360,6 +312,295 @@ $tab-segment-height: $tab-item-height - 2px;
   transition: height 0.25s ease;
 }
 
+// The scene dropdown, styled as the first segment of the tab group: no box
+// of its own, one divider on its right. The design-system trigger is an
+// MUI text button; its own hover/focus styling stays.
+.sceneDropdown {
+  user-select: none;
+
+  span,
+  p {
+    user-select: none;
+  }
+
+  // Higher specificity than the dropdown's own black/gray container rules.
+  .tabGroup & > button.sceneTrigger,
+  > button.sceneTrigger {
+    height: 100%;
+    min-width: 0;
+    max-width: 200px;
+    margin: 0;
+    padding: 0 10px;
+    gap: 8px;
+    border: none;
+    border-right: 1px solid var(--borders-neutral-primary);
+    border-radius: 3px 0 0 0;
+    color: var(--text-neutral-primary);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+
+    // Unusable off the scene tabs, but not dimmed: it reads as one of the
+    // group's labels, and those stay bright when their tab isn't the active
+    // one. MUI already drops pointer-events, so the click reaches the group
+    // and opens the Code tab.
+    &:disabled {
+      color: var(--text-neutral-primary);
+    }
+  }
+}
+
+.sceneTriggerName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Square, like the stage. Sized for the menu; `small` fits the tab bar.
+.sceneThumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background: var(--background-neutral-tertiary);
+  color: var(--text-neutral-secondary);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sceneThumbSmall {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  font-size: 11px;
+}
+
+.sceneMenu {
+  margin: 0;
+  padding: 4px 0;
+  user-select: none;
+  min-width: 200px;
+  max-height: 60vh;
+  overflow-y: auto;
+
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+.sceneMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+  }
+}
+
+.sceneMenuItemActive {
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover {
+    background: var(--background-brand-teal-primary);
+  }
+
+  .sceneThumb {
+    color: var(--text-neutral-white-fixed);
+    background: rgb(255 255 255 / 25%);
+  }
+}
+
+.sceneMenuName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Stands where a thumbnail would, so the labels line up.
+.sceneMenuIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.sceneMenuDivider {
+  height: 1px;
+  margin: 4px 0;
+  background: var(--borders-neutral-primary);
+}
+
+// --- Scenes gallery (the Images tab's card idiom) ---
+
+// A dim card groups a scene's picture and controls. Cards in a row stretch
+// to one height, and the footer pins to the bottom.
+.sceneCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 152px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--background-neutral-secondary);
+}
+
+// Square, like the stage; the tile is a button that opens the scene.
+.sceneTile {
+  @include tile.image-tile(128px);
+
+  position: relative;
+  border-radius: 4px;
+  color: var(--text-neutral-secondary);
+  font-size: 28px;
+}
+
+.sceneTilePicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sceneCardActive .sceneTile {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+}
+
+// Where Play begins: a small label inset from the picture's top-left corner.
+.sceneStartBadge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+// The name with its pencil, or the field with save and cancel; one height
+// either way so the card does not jump.
+.sceneNameRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 28px;
+}
+
+// The chip's size, so the name reads the same here as in the bar.
+.sceneName {
+  min-width: 0;
+  padding: 0 2px;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Smaller than MUI's small, to sit beside 14px text rather than over it.
+.sceneNameIconButton {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.sceneNameField {
+  min-width: 0;
+  flex: 1 1 auto;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+// Delete, or its confirmation, pinned to the card's bottom.
+.sceneCardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.sceneDeleteQuestion {
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  text-align: center;
+}
+
+.sceneDeleteChoices {
+  display: flex;
+  gap: 6px;
+}
+
+// Fills its card, so the row of cards reads as one height.
+.newSceneCard {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 128px;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text-neutral-primary);
+  font-size: 28px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--borders-neutral-strong);
+  }
+}
+
 // The new-scene dialog: name above the type choice.
 .newSceneFields {
   display: flex;
@@ -463,6 +704,13 @@ $tab-segment-height: $tab-item-height - 2px;
   margin-top: 10px;
 }
 
+// Room for the corner icon on its right; the collapsed panel is otherwise
+// only as wide as its button.
+.guideCollapsedText {
+  margin: 0 28px 0 0;
+  white-space: nowrap;
+}
+
 // The persistent playspace overlay: spans the tab content area; lets clicks
 // through to the content beneath (e.g. the Blockly workspace) except over the
 // box itself.
@@ -493,6 +741,38 @@ $tab-segment-height: $tab-item-height - 2px;
   &:focus-visible {
     outline: 2px solid var(--borders-neutral-primary);
     outline-offset: 2px;
+  }
+}
+
+// Restart buttons in the play area's top-right corner, clear of the game
+// wherever the canvas lands. The overlay ignores pointer events; these
+// buttons accept them.
+.playControls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.playControl {
+  height: $tab-item-height;
+  padding: 0 12px;
+  // Cancel the legacy global button margin; the column's gap spaces these.
+  margin: 0;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.92;
+
+  &:hover {
+    opacity: 1;
   }
 }
 
