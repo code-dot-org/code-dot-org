@@ -2,21 +2,13 @@ import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {LabProps} from '@cdo/apps/lab2/types';
+import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
-import useQuizAttemptView from '@cdo/apps/quiz/attempt/useQuizAttemptView';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
-
-let mockScriptId: number | null = 7;
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
-  useAppSelector: (selector: (state: unknown) => unknown) =>
-    selector({progress: {scriptId: mockScriptId}}),
-}));
 
 const ATTEMPT: QuizAttemptData = {
   id: 1,
@@ -66,49 +58,40 @@ function question(
   };
 }
 
-function Harness(props: LabProps) {
-  const {workspaceContent} = useQuizAttemptView(props);
-  return <>{workspaceContent}</>;
-}
-
-function renderView({
+function renderWorkspace({
   hookState = {},
   quizQuestions = [],
-  scriptId = 7,
+  unitId = 7,
   allowMultipleAttempts,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
-  scriptId?: number | null;
+  unitId?: number | undefined;
   allowMultipleAttempts?: boolean;
 } = {}) {
-  mockScriptId = scriptId;
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
-    <Harness
-      levelProperties={
-        {
-          id: 42,
-          quizQuestions,
-          allowMultipleAttempts,
-        } as unknown as LabProps['levelProperties']
-      }
+    <QuizAttemptWorkspace
+      levelId={42}
+      unitId={unitId}
+      quizQuestions={quizQuestions}
+      allowMultipleAttempts={allowMultipleAttempts}
     />
   );
 }
 
-describe('useQuizAttemptView', () => {
+describe('QuizAttemptWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
   });
 
   it('shows a loading message while the initial check is in flight', () => {
-    renderView({hookState: {isLoading: true}});
+    renderWorkspace({hookState: {isLoading: true}});
     expect(screen.getByText('Loading…')).toBeInTheDocument();
   });
 
   it('shows a standalone-level message when there is no unit', () => {
-    renderView({scriptId: null});
+    renderWorkspace({unitId: undefined});
     expect(
       screen.getByText('Quiz attempts are not allowed on a standalone level.')
     ).toBeInTheDocument();
@@ -116,7 +99,7 @@ describe('useQuizAttemptView', () => {
 
   it('shows a Begin Quiz button when there is no attempt yet, and starts one on click', () => {
     const beginAttempt = jest.fn();
-    renderView({hookState: {attempt: null, beginAttempt}});
+    renderWorkspace({hookState: {attempt: null, beginAttempt}});
 
     fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
 
@@ -125,7 +108,7 @@ describe('useQuizAttemptView', () => {
 
   it('shows the score and a Retake button once submitted and retakeable', () => {
     const beginAttempt = jest.fn();
-    renderView({
+    renderWorkspace({
       hookState: {
         attempt: {
           ...ATTEMPT,
@@ -144,7 +127,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('moves focus to the Retake button once submitted, since the footer button is gone', () => {
-    renderView({
+    renderWorkspace({
       hookState: {
         attempt: {
           ...ATTEMPT,
@@ -158,7 +141,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('moves focus to the result message when submitted with no Retake button', () => {
-    renderView({
+    renderWorkspace({
       hookState: {
         attempt: {
           ...ATTEMPT,
@@ -172,7 +155,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('does not show a Retake button when the attempt cannot be retaken', () => {
-    renderView({
+    renderWorkspace({
       hookState: {
         attempt: {
           ...ATTEMPT,
@@ -188,7 +171,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('renders only the questions on the current page', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [
         question({id: 1, stem: 'Page 1 question', page: 1}),
@@ -201,7 +184,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('navigates by page position, not raw page value, when pages are non-contiguous', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [
         question({id: 1, stem: 'Page 1 question', page: 1}),
@@ -217,7 +200,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('omits the question label for a single-question quiz', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [question()],
     });
@@ -226,7 +209,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('labels each question with its position for a multi-question quiz', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [question({id: 1, page: 1}), question({id: 2, page: 1})],
     });
@@ -237,7 +220,7 @@ describe('useQuizAttemptView', () => {
 
   it('submits the chosen answer when a choice is selected', async () => {
     const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT, submitQuestionResponse},
       quizQuestions: [question({id: 5})],
     });
@@ -256,7 +239,7 @@ describe('useQuizAttemptView', () => {
 
   it('advances to the next page instead of finishing when not on the last page', () => {
     const finishAttempt = jest.fn();
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT, finishAttempt},
       quizQuestions: [
         question({id: 1, stem: 'Page 1 question', page: 1}),
@@ -271,7 +254,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('moves focus to the new page heading after Next, since nothing else indicates a page change', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [
         question({id: 1, stem: 'Page 1 question', page: 1}),
@@ -287,7 +270,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('moves focus to the first question heading once the attempt begins', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [question({id: 1, stem: 'Page 1 question', page: 1})],
     });
@@ -299,7 +282,7 @@ describe('useQuizAttemptView', () => {
 
   it('finishes the attempt when the last-page button is clicked', async () => {
     const finishAttempt = jest.fn().mockResolvedValue(undefined);
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT, finishAttempt},
       quizQuestions: [question({id: 1, page: 1})],
     });
@@ -310,7 +293,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('labels the last-page button Submit when the quiz allows only one attempt', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [question({id: 1, page: 1})],
       allowMultipleAttempts: false,
@@ -320,7 +303,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('labels the last-page button Finish when the quiz allows multiple attempts', () => {
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [question({id: 1, page: 1})],
       allowMultipleAttempts: true,
@@ -335,7 +318,7 @@ describe('useQuizAttemptView', () => {
       .fn()
       .mockReturnValueOnce(firstWrite.promise)
       .mockResolvedValueOnce(undefined);
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT, submitQuestionResponse},
       quizQuestions: [question({id: 5})],
     });
@@ -364,7 +347,7 @@ describe('useQuizAttemptView', () => {
     const submitQuestionResponse = jest
       .fn()
       .mockRejectedValue(new Error('network down'));
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT, submitQuestionResponse},
       quizQuestions: [question({id: 5})],
     });
@@ -384,7 +367,7 @@ describe('useQuizAttemptView', () => {
       .fn()
       .mockReturnValueOnce(firstWrite.promise)
       .mockResolvedValueOnce(undefined);
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT, submitQuestionResponse},
       quizQuestions: [question({id: 5})],
     });
@@ -406,7 +389,7 @@ describe('useQuizAttemptView', () => {
       .fn()
       .mockReturnValue(pendingWrite.promise);
     const finishAttempt = jest.fn().mockResolvedValue(undefined);
-    renderView({
+    renderWorkspace({
       hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
       quizQuestions: [question({id: 5})],
     });
@@ -423,7 +406,7 @@ describe('useQuizAttemptView', () => {
   });
 
   it('does not render the footer outside of an in-progress attempt', () => {
-    renderView({hookState: {attempt: null}});
+    renderWorkspace({hookState: {attempt: null}});
     expect(
       screen.queryByRole('button', {name: /Next|Submit|Finish/})
     ).not.toBeInTheDocument();
