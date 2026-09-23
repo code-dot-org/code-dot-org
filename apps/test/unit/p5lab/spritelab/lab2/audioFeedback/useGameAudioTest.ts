@@ -12,7 +12,7 @@ interface Engine {
   setPlayerObserver(observer: PlayerObserver | null): void;
 }
 
-function setup({playing = true, hasPlatformer = true} = {}) {
+function setup({playing = true, hasPlatformScene = true} = {}) {
   const engine: Engine = {
     observer: null,
     setPlayerObserver(observer) {
@@ -21,7 +21,7 @@ function setup({playing = true, hasPlatformer = true} = {}) {
   };
   const view = renderHook(
     ({play}: {play: boolean}) =>
-      useGameAudio({current: engine}, {hasPlatformer, playing: play}),
+      useGameAudio({current: engine}, {hasPlatformScene, playing: play}),
     {initialProps: {play: playing}}
   );
   const setting = () => view.result.current[0];
@@ -90,7 +90,7 @@ describe('SpriteLab2 useGameAudio', () => {
 
   it('offers nothing on a level with no platformer to hear', () => {
     localStorage.setItem(CUES, 'on');
-    const {engine, view} = setup({hasPlatformer: false});
+    const {engine, view} = setup({hasPlatformScene: false});
     expect(view.result.current).toEqual([]);
     expect(engine.observer).toBeNull();
   });

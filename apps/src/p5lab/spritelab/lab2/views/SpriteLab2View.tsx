@@ -80,7 +80,6 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
-import {usesPlatformPhysics} from '../platformPhysics';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -898,6 +897,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeWorldRef = useRef<World | undefined>(undefined);
   const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
   const activeSceneIdRef = useRef<string | undefined>(undefined);
+  // The scene the engine is running, set wherever a run starts: Play from
+  // the active scene, and each go-to-scene jump after it.
+  const [playingSceneType, setPlayingSceneType] = useState<
+    SceneType | undefined
+  >(undefined);
   useEffect(() => {
     activeWorldRef.current = worldFor(activeScene);
     activeSceneTypeRef.current = activeScene?.type;
@@ -927,6 +931,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeSceneIdRef.current) {
       requestThumbnail(activeSceneIdRef.current);
     }
+    setPlayingSceneType(activeSceneTypeRef.current);
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
   }, [dispatch, getCode, requestThumbnail]);
 
@@ -971,6 +976,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       });
       dispatch(setIsRunning(true));
       requestThumbnail(scene.id);
+      setPlayingSceneType(scene.type);
       engine.runProgram(program, referencedImages, scene.type);
     },
     [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
@@ -1082,6 +1088,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
+      setPlayingSceneType(scene.type);
       engine.runProgram(program, referencedImages, scene.type);
     },
     [dispatch, compileExternalScene]
@@ -1630,9 +1637,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [playspaceMode]);
 
-  const hasPlatformer = usesPlatformPhysics(levelProperties.helperLibraries);
+  const hasPlatformScene = useMemo(
+    () => scenes.some(scene => scene.type === 'platform'),
+    [scenes]
+  );
   const audioSettings = useGameAudio(engineRef, {
-    hasPlatformer,
+    hasPlatformScene,
     // A hidden document has already stopped the engine feeding it.
     playing: engineReady && playspaceMode === 'play' && !documentHidden,
   });
@@ -1807,7 +1817,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           Code tab's corner preview and the Play tab's centered view. */}
           <Playspace
             boxRef={playspaceRef}
-            hasPlatformer={hasPlatformer}
+            platformScene={playingSceneType === 'platform'}
             mode={playspaceMode}
             controls={
               <PlayControls

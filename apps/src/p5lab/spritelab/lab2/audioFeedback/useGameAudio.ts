@@ -59,7 +59,8 @@ function audioContext(): AudioContext | null {
 }
 
 interface GameAudioOptions {
-  hasPlatformer: boolean;
+  /** Some scene in the project is a platformer, so the setting is offered. */
+  hasPlatformScene: boolean;
   /** On the Play tab, running, and on screen. */
   playing: boolean;
 }
@@ -67,7 +68,7 @@ interface GameAudioOptions {
 /** The settings-panel entries, or none where the level makes no sound. */
 export default function useGameAudio(
   engineRef: React.RefObject<AudioEngine | null>,
-  {hasPlatformer, playing}: GameAudioOptions
+  {hasPlatformScene, playing}: GameAudioOptions
 ) {
   // Off by default: the cues are for a student who cannot see the screen,
   // and are noise to one who can.
@@ -79,7 +80,7 @@ export default function useGameAudio(
 
   useEffect(() => {
     const engine = engineRef.current;
-    if (!engine || !hasPlatformer || !playing || !obstacleSounds) {
+    if (!engine || !hasPlatformScene || !playing || !obstacleSounds) {
       return;
     }
     const context = audioContext();
@@ -103,7 +104,7 @@ export default function useGameAudio(
       sounds.stop();
       context.close().catch(() => undefined);
     };
-  }, [engineRef, hasPlatformer, playing, obstacleSounds]);
+  }, [engineRef, hasPlatformScene, playing, obstacleSounds]);
 
-  return hasPlatformer ? [obstacleSoundsSetting] : [];
+  return hasPlatformScene ? [obstacleSoundsSetting] : [];
 }
