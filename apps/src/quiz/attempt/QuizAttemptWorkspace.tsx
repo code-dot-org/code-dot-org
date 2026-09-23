@@ -1,10 +1,11 @@
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {QuizQuestionSummary} from '../types';
+import {QuizQuestionSummary, toBool} from '../types';
 
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
+import QuizIntroCard from './QuizIntroCard';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
@@ -15,11 +16,24 @@ export interface QuizAttemptWorkspaceProps {
   unitId: number | undefined;
   quizQuestions: QuizQuestionSummary[];
   allowMultipleAttempts?: boolean;
+  displayName?: string;
+  customIntroText?: string;
+  timeLimitMinutes?: number;
+  showIntroScreen?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
   QuizAttemptWorkspaceProps
-> = ({levelId, unitId, quizQuestions, allowMultipleAttempts}) => {
+> = ({
+  levelId,
+  unitId,
+  quizQuestions,
+  allowMultipleAttempts,
+  displayName,
+  customIntroText,
+  timeLimitMinutes,
+  showIntroScreen,
+}) => {
   const {
     attempt,
     isLoading,
@@ -156,6 +170,17 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           <Typography variant="body2">
             Quiz attempts are not allowed on a standalone level.
           </Typography>
+        ) : !attempt && showIntroScreen ? (
+          <div className={styles.questions}>
+            <QuizIntroCard
+              title={displayName ?? ''}
+              introText={customIntroText}
+              questionCount={quizQuestions.length}
+              timeLimitMinutes={timeLimitMinutes}
+              allowMultipleAttempts={toBool(allowMultipleAttempts)}
+              onBegin={handleBeginAttempt}
+            />
+          </div>
         ) : !attempt ? (
           <MuiButton
             variant="contained"

@@ -16,6 +16,12 @@
   padding: 24px;
 }
 
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -28,4 +34,13 @@
 
 .label {
   color: var(--text-neutral-tertiary);
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-neutral-primary);
 }
