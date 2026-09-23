@@ -13,7 +13,10 @@ import {movedItself} from '../editorEvents';
 
 /** A move event carrying `reason`, which is all this reads. */
 const moved = (reason?: string[]) =>
-  ({type: Blockly.Events.BLOCK_MOVE, reason}) as Blockly.Events.Abstract;
+  ({
+    type: Blockly.Events.BLOCK_MOVE,
+    reason,
+  }) as unknown as Blockly.Events.Abstract;
 
 describe('a move the editor made', () => {
   it('is a bump, a snap or a tidy', () => {
@@ -50,7 +53,10 @@ describe('a move the editor made', () => {
       Blockly.Events.BLOCK_DELETE,
     ]) {
       expect(
-        movedItself({type, reason: ['bump']} as Blockly.Events.Abstract),
+        movedItself({
+          type,
+          reason: ['bump'],
+        } as unknown as Blockly.Events.Abstract),
       ).toBe(false);
     }
   });

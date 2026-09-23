@@ -77,6 +77,7 @@ import {
   alongY,
   chain,
   corner,
+  defineBlock,
   defineEvent,
   defineProperty,
   drawParagraph,
@@ -282,7 +283,31 @@ const scrollTo = (to: object) => ({
  * After every caret move and every edit, because both can take the caret off
  * the screen — typing a line at the bottom is the ordinary way to do it.
  */
-const reveal = () => [
+/**
+ * `keep the caret in view` — the same work, said once and called eight times.
+ *
+ * THE BIGGEST THING IN THIS FILE, and it was written out at every site that
+ * moves the caret: six key hats, the insert, and the click. Each copy carries
+ * the whole of the arithmetic below — which line the caret is on, how far
+ * along it, how tall a line is, how much room the box has — and each copy is
+ * about a hundred and fifty blocks. A reader opening the file met the same
+ * sums eight times and the workspace was three and a half times the size of
+ * the Text Input's.
+ *
+ * A `define block` is what this lab already has for that: a named thing a kind
+ * does, with its body behind a pencil on a surface of its own, so the file
+ * shows the NAME at each of the eight sites and the sums once
+ * (`ownProperties.designedBlock`). It is the first stock actor to use one.
+ */
+const KEEP_IN_VIEW = 'keep the caret in view';
+
+/** `keep the caret in view` — the call, which is what the handlers say. */
+const keepInView = () => ({
+  type: 'world_do_ActorsTextArea_KeepTheCaretInViewAction',
+  inputs: {ACTOR: me()},
+});
+
+const revealBody = () => [
   scrollTo(
     clamp(
       scroll(),
@@ -321,7 +346,7 @@ const insert = (what: object) => [
     joined([before(), what, from(sum('ADD', caretAt(), num(1)))]),
   ),
   setCaret(sum('ADD', caretAt(), num(1))),
-  ...reveal(),
+  keepInView(),
   emitChanged(),
 ];
 
@@ -344,7 +369,7 @@ const lineAbove = () => {
         clamp(column(), num(0), sum('MINUS', aboveEnd(), aboveStart())),
       ),
     ),
-    ...reveal(),
+    keepInView(),
   ]);
 };
 /**
@@ -371,7 +396,7 @@ const lineBelow = () => {
   });
   return onlyIf(both(focused(), compare('GT', breakAhead(), num(0))), [
     setCaret(sum('ADD', belowStart(), clamp(column(), num(0), belowLength()))),
-    ...reveal(),
+    keepInView(),
   ]);
 };
 
@@ -486,7 +511,7 @@ const placesTheCaret = () => [
       },
     },
   },
-  ...reveal(),
+  keepInView(),
 ];
 
 const blinking = () => ({
@@ -528,6 +553,14 @@ export const textAreaActor = actorFile(
   'Text Area',
   [
     actsLike('actors/label'),
+    // What every key hat and the click do after moving the bar, said once.
+    defineBlock({
+      say: [KEEP_IN_VIEW],
+      description:
+        'Move the window over the words so the line the bar is on is ' +
+        'showing, and so is the bar along it.',
+      body: revealBody(),
+    }),
     useTrait('Input#TakesKeyboardInputTrait'),
     useTrait('Mouse#CanBeClickedTrait'),
     // …and the wheel, now that there is something to scroll.
@@ -610,7 +643,7 @@ export const textAreaActor = actorFile(
             ]),
           ),
           setCaret(sum('MINUS', caretAt(), num(1))),
-          ...reveal(),
+          keepInView(),
           emitChanged(),
         ]),
       ),
@@ -624,7 +657,7 @@ export const textAreaActor = actorFile(
           // The caret has not moved, but the words below it have — a delete
           // that joins two lines makes the paragraph shorter, and a window
           // parked at the old bottom would be past the new one.
-          ...reveal(),
+          keepInView(),
           emitChanged(),
         ]),
       ),
@@ -632,14 +665,14 @@ export const textAreaActor = actorFile(
         'left arrow',
         onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
           setCaret(sum('MINUS', caretAt(), num(1))),
-          ...reveal(),
+          keepInView(),
         ]),
       ),
       key(
         'right arrow',
         onlyIf(both(focused(), compare('LT', caretAt(), length())), [
           setCaret(sum('ADD', caretAt(), num(1))),
-          ...reveal(),
+          keepInView(),
         ]),
       ),
       key('up arrow', lineAbove()),
