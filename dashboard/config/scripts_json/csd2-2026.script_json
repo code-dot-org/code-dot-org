@@ -21,6 +21,7 @@
       "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,

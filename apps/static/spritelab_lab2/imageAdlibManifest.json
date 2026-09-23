@@ -458,7 +458,7 @@
       },
       "variantCount": 1
     },
-    "sprite-treasure": {
+    "object-treasure": {
       "template": "A {look} {treasure}",
       "options": {
         "look": [
@@ -511,6 +511,176 @@
           {
             "id": "crown",
             "text": "crown"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "object-simple": {
+      "template": "A {look} {thing}",
+      "options": {
+        "look": [
+          {
+            "id": "shiny",
+            "text": "shiny"
+          },
+          {
+            "id": "tiny",
+            "text": "tiny"
+          },
+          {
+            "id": "giant",
+            "text": "giant"
+          },
+          {
+            "id": "glowing",
+            "text": "glowing"
+          },
+          {
+            "id": "ancient",
+            "text": "ancient"
+          },
+          {
+            "id": "wooden",
+            "text": "wooden"
+          }
+        ],
+        "thing": [
+          {
+            "id": "key",
+            "text": "key"
+          },
+          {
+            "id": "potion",
+            "text": "potion"
+          },
+          {
+            "id": "book",
+            "text": "book"
+          },
+          {
+            "id": "lantern",
+            "text": "lantern"
+          },
+          {
+            "id": "crown",
+            "text": "crown"
+          },
+          {
+            "id": "chest",
+            "text": "chest"
+          },
+          {
+            "id": "star",
+            "text": "star"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "object-expanded": {
+      "template": "A {look} {thing} with {detail}",
+      "options": {
+        "look": [
+          {
+            "id": "shiny",
+            "text": "shiny"
+          },
+          {
+            "id": "tiny",
+            "text": "tiny"
+          },
+          {
+            "id": "giant",
+            "text": "giant"
+          },
+          {
+            "id": "glowing",
+            "text": "glowing"
+          },
+          {
+            "id": "ancient",
+            "text": "ancient"
+          },
+          {
+            "id": "wooden",
+            "text": "wooden"
+          },
+          {
+            "id": "crystal",
+            "text": "crystal"
+          },
+          {
+            "id": "rusty",
+            "text": "rusty"
+          }
+        ],
+        "thing": [
+          {
+            "id": "key",
+            "text": "key"
+          },
+          {
+            "id": "potion",
+            "text": "potion"
+          },
+          {
+            "id": "book",
+            "text": "book"
+          },
+          {
+            "id": "lantern",
+            "text": "lantern"
+          },
+          {
+            "id": "crown",
+            "text": "crown"
+          },
+          {
+            "id": "chest",
+            "text": "chest"
+          },
+          {
+            "id": "star",
+            "text": "star"
+          },
+          {
+            "id": "gem",
+            "text": "gem"
+          },
+          {
+            "id": "coin",
+            "text": "coin"
+          },
+          {
+            "id": "sword",
+            "text": "sword"
+          }
+        ],
+        "detail": [
+          {
+            "id": "a-glow",
+            "text": "a glow"
+          },
+          {
+            "id": "tiny-sparkles",
+            "text": "tiny sparkles"
+          },
+          {
+            "id": "carved-patterns",
+            "text": "carved patterns"
+          },
+          {
+            "id": "a-ribbon",
+            "text": "a ribbon"
+          },
+          {
+            "id": "moss",
+            "text": "moss"
+          },
+          {
+            "id": "a-crack",
+            "text": "a crack"
           }
         ]
       },

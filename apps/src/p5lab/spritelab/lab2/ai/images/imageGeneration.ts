@@ -119,7 +119,7 @@ async function normalizeIfPixelArt(
 export type GenerateImageOptions = Partial<
   Pick<
     ImageGenerationMetadata,
-    'imageType' | 'style' | 'seed' | 'temperature' | 'pixelGrid'
+    'imageType' | 'subject' | 'style' | 'seed' | 'temperature' | 'pixelGrid'
   >
 > & {
   /**
@@ -312,6 +312,7 @@ export async function generateImage(
   const generation: ImageGenerationMetadata = {
     prompt,
     imageType,
+    ...(options.subject && {subject: options.subject}),
     style,
     seed,
     ...(options.temperature !== undefined && {
