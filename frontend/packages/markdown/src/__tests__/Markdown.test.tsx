@@ -27,32 +27,6 @@ import {
   visualCodeBlock,
   vocabularyDefinition,
 } from '../extensions';
-import {translateHtml} from '../localization';
-
-/*
- * Make the core localization plugin look loaded, with a translate that
- * uppercases text nodes (preserving structure). Returns the list of HTML
- * fragments the translator was handed, so tests can assert what was concealed.
- */
-const activateLocalization = (): string[] => {
-  const seen: string[] = [];
-  vi.spyOn(localization, 'isLocalizeJS').mockReturnValue(true);
-  vi.spyOn(localization, 'translate').mockImplementation(input => {
-    if (input && typeof input === 'object' && 'childNodes' in input) {
-      const element = input as unknown as HTMLElement;
-      seen.push(element.innerHTML);
-      const walk = (node: Node) => {
-        if (node.nodeType === 3) {
-          node.textContent = (node.textContent ?? '').toUpperCase();
-        }
-        node.childNodes.forEach(walk);
-      };
-      walk(element);
-    }
-    return input;
-  });
-  return seen;
-};
 
 const render = (markdown: string, extensions?: MarkdownExtension[]) =>
   renderToStaticMarkup(<Markdown content={markdown} extensions={extensions} />);
@@ -1034,103 +1008,20 @@ describe('Markdown', () => {
   describe('localization', () => {
     afterEach(() => vi.restoreAllMocks());
 
-    it('uses the runtime data-isolate path when LocalizeJS is not loaded', () => {
-      // core reports inactive in the test environment
+    it('marks paragraphs data-isolate and never data-notranslate', () => {
       const html = render('hello world');
       expect(html).toContain('data-isolate="true"');
       expect(html).not.toContain('data-notranslate');
     });
 
-    it('translateHtml is a no-op while inactive', () => {
-      expect(translateHtml('<b>hi</b>')).toBe('<b>hi</b>');
-    });
-
-    it('translates text and marks the paragraph data-notranslate when active', () => {
-      activateLocalization();
-      const html = render('hello world');
-      expect(html).toContain('HELLO WORLD');
-      expect(html).toContain('data-notranslate="true"');
-      expect(html).not.toContain('data-isolate');
-    });
-
-    it('translates a tight list item', () => {
-      // Only the inserted paragraph makes the item a block rehypeLocalize
-      // recognizes; without it the item text is never handed to the translator.
-      activateLocalization();
-      const html = render('- an item');
-      expect(html).toContain('AN ITEM');
-    });
-
-    it('hides a non-phrasing element from the translator and restores it', () => {
-      // rehypeLocalize stashes anything outside its inline allowlist behind a
-      // <code> placeholder the translator ignores, then restores it verbatim.
-      const widget: MarkdownExtension = {
-        name: 'widget',
-        sanitizeSchema: {tagNames: ['widget']},
-      };
-      const seen = activateLocalization();
-      const html = render('Press <widget></widget> now', [widget]);
-      // the translator never saw the stashed element...
-      expect(seen.join('')).not.toContain('<widget');
-      // ...just a <code> placeholder (which the translator leaves untouched)
-      expect(seen.join('')).toMatch(/<code[^>]*data-localize-token/);
-      // ...but the output preserves the original
-      expect(html).toContain('<widget');
-    });
-
-    it('renames <code> for translation and restores it', () => {
-      const seen = activateLocalization();
-      const html = render('run `print` please');
-      expect(seen.join('')).not.toContain('<code');
-      expect(seen.join('')).toContain('data-localize-rename');
-      expect(html).toContain('<code');
-    });
-
-    it('preserves inline formatting through translation', () => {
-      activateLocalization();
-      const html = render('a **bold** and [link](https://code.org)');
-      expect(html).toContain('<strong');
-      expect(html).toContain('href="https://code.org"');
-    });
-
-    /*
-     * rehypeLocalize round-trips each block through a live DOM (innerHTML) inside
-     * the translator. Sanitization runs first, so the HTML the translator ever
-     * sees is already stripped of dangerous attributes — nothing unsafe is
-     * materialized in the DOM ahead of the sanitizer.
-     */
-    it('hands the translator only sanitized markup', () => {
-      const seen = activateLocalization();
-      render('<a href="javascript:alert(1)" onclick="steal()">x</a> and text');
-      const handed = seen.join('');
-      // the block did reach the translator (guards against a vacuous pass)...
-      expect(handed).toContain('and text');
-      // ...but stripped of the dangerous href/handler
-      expect(handed).not.toContain('javascript:');
-      expect(handed).not.toContain('onclick');
-      expect(handed).not.toContain('steal');
-    });
-
-    /*
-     * The translator's output is reparsed and spliced back into the tree, so a
-     * hostile translation string must not smuggle in live markup. The second
-     * sanitize pass (after localization) catches it.
-     */
-    it('sanitizes markup injected by the translator', () => {
+    it('leaves translation to the page even when LocalizeJS is loaded', () => {
       vi.spyOn(localization, 'isLocalizeJS').mockReturnValue(true);
-      vi.spyOn(localization, 'translate').mockImplementation(input => {
-        if (input && typeof input === 'object' && 'innerHTML' in input) {
-          const element = input as unknown as HTMLElement;
-          // An <iframe> is a sink rehype-react would render but the allowlist
-          // (without the embeds extension) forbids — so it proves the post-
-          // localization sanitize pass ran, independent of React's own scrubbing.
-          element.innerHTML += '<iframe src="https://evil.example"></iframe>';
-        }
-        return input;
-      });
-      const html = render('hello');
-      expect(html).not.toContain('<iframe');
-      expect(html).not.toContain('evil.example');
+      const translate = vi.spyOn(localization, 'translate');
+      const html = render('hello world');
+      expect(translate).not.toHaveBeenCalled();
+      expect(html).toContain('hello world');
+      expect(html).toContain('data-isolate="true"');
+      expect(html).not.toContain('data-notranslate');
     });
   });
 });
