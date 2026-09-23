@@ -294,7 +294,7 @@ export const dropdownActor = actorFile(
     // FIRST, so everything below overrides it: the size, the anchor, the
     // choices and the face this paints.
     actsLike('actors/label'),
-    defineProperty('words', 'choices', ''),
+    defineProperty('words', 'choices'),
     defineProperty('boolean', 'open', 'false'),
     defineProperty('number', 'highlighted', '1'),
     defineEvent('chosen'),

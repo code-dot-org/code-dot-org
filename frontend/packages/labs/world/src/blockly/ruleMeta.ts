@@ -533,6 +533,24 @@ const numberOf = (value: unknown): number => {
  * shape `world_vector`'s own field saves) and a point arrives as two numbers in
  * `DEFAULT` and `DEFAULT_Y`.
  */
+/**
+ * The property types that start EMPTY whatever is written down.
+ *
+ * An actor property and every list property: `propertyDefault` below answers
+ * `[]` for them however the file is spelled, so there is nothing a default
+ * could say. The block does not offer a default field for these
+ * (`DEFAULT_SHAPES`), and a file that writes one anyway is writing a field the
+ * block does not have — which Blockly reports as "Ignoring non-existant field
+ * DEFAULT" and then discards.
+ */
+export const STARTS_EMPTY: ReadonlySet<string> = new Set([
+  'actor',
+  'actors',
+  'numbers',
+  'words',
+  'vectors',
+]);
+
 export const propertyDefault = (
   type: PropertyType,
   value: unknown,

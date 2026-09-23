@@ -9,7 +9,7 @@
 // reads, and the first thing they read is that a Label is an actor that elects
 // one trait and draws one thing (specs/UI_ACTORS.md).
 
-import {pascal} from '../../blockly/ruleMeta';
+import {pascal, STARTS_EMPTY} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {MAIN_WORLD_PATH} from '../../mainWorld';
 
@@ -150,7 +150,7 @@ export const playAnimation = (id: string) => ({
 export const defineProperty = (
   type: string,
   name: string,
-  value: string,
+  value?: string,
   opts: {readonly?: boolean} = {},
 ) => ({
   type: 'world_rule_property',
@@ -158,7 +158,12 @@ export const defineProperty = (
     TYPE: type,
     ACCESS: opts.readonly ? 'readonly' : 'writable',
     NAME: name,
-    DEFAULT: value,
+    // NOT FOR A TYPE THAT STARTS EMPTY. The block offers no default field for
+    // those, so a file that writes one is writing a field the block does not
+    // have: Blockly says "Ignoring non-existant field DEFAULT" and drops it
+    // (`ruleMeta.STARTS_EMPTY`). The List and the Dropdown both did, and the
+    // warning is what made a real bug beside it hard to read.
+    ...(value === undefined || STARTS_EMPTY.has(type) ? {} : {DEFAULT: value}),
   },
 });
 

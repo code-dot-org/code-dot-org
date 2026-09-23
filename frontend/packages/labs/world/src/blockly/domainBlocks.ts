@@ -212,6 +212,7 @@ import {
   designedName,
   inHand,
   propertyDefault,
+  STARTS_EMPTY,
   pascal,
   PROPERTY_TYPES,
   slug,
@@ -8170,12 +8171,12 @@ const DEFAULT_SHAPES: Readonly<Record<string, DefaultShape>> = {
   boolean: 'boolean',
   // Nothing to say. An actor property and every list property start empty —
   // that is what `propertyDefault` answers for them whatever is written down —
-  // so the block does not ask, and does not save an answer either.
-  actor: 'none',
-  actors: 'none',
-  numbers: 'none',
-  words: 'none',
-  vectors: 'none',
+  // so the block does not ask, and does not save an answer either. From the
+  // one list of them, so that what writes a default and what offers a field
+  // for one cannot disagree (`ruleMeta.STARTS_EMPTY`).
+  ...Object.fromEntries(
+    [...STARTS_EMPTY].map(type => [type, 'none' as DefaultShape]),
+  ),
 };
 
 /** `text` is a box to type into: a number, a word, anything single. */

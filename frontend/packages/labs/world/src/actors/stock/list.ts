@@ -323,7 +323,7 @@ export const listActor = actorFile(
     // FIRST, so everything below overrides it: the size, the anchor and the
     // colours this paints with.
     actsLike('actors/label'),
-    defineProperty('words', 'items', ''),
+    defineProperty('words', 'items'),
     defineProperty('number', 'scroll', '0'),
     defineProperty('number', 'highlighted', '1'),
     // Whether a row may be taken out. FALSE unless a project says otherwise:
