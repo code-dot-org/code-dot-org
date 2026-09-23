@@ -897,8 +897,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeWorldRef = useRef<World | undefined>(undefined);
   const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
   const activeSceneIdRef = useRef<string | undefined>(undefined);
-  // The scene the engine is running, set wherever a run starts: Play from
-  // the active scene, and each go-to-scene jump after it.
+  // The type of the scene the engine is running, set wherever a run starts:
+  // the live preview, Play's start scene, and each go-to-scene jump.
   const [playingSceneType, setPlayingSceneType] = useState<
     SceneType | undefined
   >(undefined);

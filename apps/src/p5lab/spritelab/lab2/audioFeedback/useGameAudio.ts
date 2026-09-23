@@ -67,7 +67,7 @@ interface GameAudioOptions {
 }
 
 export interface GameAudio {
-  /** The settings-panel entries, or none where the level makes no sound. */
+  /** The settings-panel entries, or none when no scene is a platformer. */
   settings: ReturnType<typeof useStoredToggle>[1][];
   /** Call from the click or key that opens Play: browsers let a context
       start only inside a user gesture, and the run's effect is outside it. */

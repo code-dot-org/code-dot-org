@@ -159,7 +159,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
-    // Set by the view (useGameAudio); null when nothing listens.
+    // null while no audio is listening.
     this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
@@ -548,8 +548,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
-    // zGameDev names no real library; it only turns on the engine's platform
-    // physics.
+    // zGameDev is the level's opt-in to the engine's platform physics
+    // (platformPhysics.ts); no library loads for it.
     this.usesPlatformPhysics_ = usesPlatformPhysics(helperLibraries);
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
@@ -1064,7 +1064,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.observePlayer_(players, walls, view);
   }
 
-  /** The audio's observer of the player, or null (useGameAudio). */
+  /** The audio's observer of the player, or null. */
   setPlayerObserver(observer) {
     this.playerObserver_?.forget();
     this.playerObserver_ = observer;
