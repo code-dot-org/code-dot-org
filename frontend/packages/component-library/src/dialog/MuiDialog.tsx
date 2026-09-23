@@ -56,10 +56,9 @@ export interface MuiDialogProps extends MuiCustomDialogProps {
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: Dialog on MUI `Dialog`.
- * The standard confirmation dialog: centered heading and description, one or
- * two action buttons, an optional icon badge or image, and a close X. Built on
- * MuiCustomDialog with MUI DialogTitle, DialogContent and DialogActions.
+ * Design System: Dialog on MUI `Dialog`, built on MuiCustomDialog.
+ * Same props as the legacy Dialog; the alertdialog role and h2 title are the
+ * hooks UI tests depend on.
  */
 const MuiDialog: React.FunctionComponent<MuiDialogProps> = ({
   title,

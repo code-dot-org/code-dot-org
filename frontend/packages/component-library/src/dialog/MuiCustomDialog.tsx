@@ -56,11 +56,7 @@ export interface MuiCustomDialogProps extends HTMLAttributes<HTMLDivElement> {
  * ###  Status: ```Ready for dev```
  *
  * Design System: CustomDialog on MUI `Dialog`.
- * A bare modal panel with a close X: the `MuiDialog` theme entry paints the
- * surface and backdrop, MUI's Modal supplies the focus trap, scroll lock and
- * Escape handling. Mounted means open; consumers render it conditionally, the
- * way they render the legacy CustomDialog. Every other HTML attribute lands on
- * the panel, so `role`, `aria-*`, `id` and `style` overrides keep working.
+ * Mounted means open, as with the legacy CustomDialog; there is no `open` prop.
  */
 const MuiCustomDialog: React.FunctionComponent<MuiCustomDialogProps> = ({
   mode = 'light',
