@@ -5,6 +5,11 @@ import React, {FC, useRef, useState} from 'react';
 import VideoChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoChallenge';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {
+  recordedAudioBlob,
+  recordedVideoBlob,
+} from '../../../../util/stubVideoCanvas';
+
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {post: jest.fn(), put: jest.fn()},
@@ -17,52 +22,11 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
   getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
 }));
 
-// Referenced from inside jest.mock() below, so named with the "mock" prefix
-// babel-plugin-jest-hoist requires for out-of-scope variables.
-const mockRecordedVideoBlob = new Blob(['video-bytes'], {type: 'video/webm'});
-const mockRecordedAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
-
-// VideoCanvas relies on MediaRecorder, getUserMedia and a Konva canvas,
-// unavailable in jsdom. The stub honors the real component's
-// caller-controlled contract: it reacts to the `isRecording` prop instead of
-// owning any buttons itself. Flipping `isRecording` back to false (a "stop",
-// caller-driven) fires the same side effects as the real recorder's onstop
-// handler.
-jest.mock('@code-dot-org/lesson-deep-dive', () => {
-  const React = require('react');
-  return {
-    ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-    VideoCanvas: (props: {
-      isRecording: boolean;
-      onRecordingChange: (hasRecording: boolean) => void;
-      setRecordedBlob: (blob: Blob | null) => void;
-      setRecordedAudioBlob: (blob: Blob | null) => void;
-      disabled?: boolean;
-    }) => {
-      const {
-        isRecording,
-        onRecordingChange,
-        setRecordedBlob,
-        setRecordedAudioBlob,
-      } = props;
-      const wasRecording = React.useRef(isRecording);
-      React.useEffect(() => {
-        if (wasRecording.current && !isRecording) {
-          setRecordedBlob(mockRecordedVideoBlob);
-          setRecordedAudioBlob(mockRecordedAudioBlob);
-          onRecordingChange(true);
-        }
-        wasRecording.current = isRecording;
-      }, [
-        isRecording,
-        onRecordingChange,
-        setRecordedBlob,
-        setRecordedAudioBlob,
-      ]);
-      return null;
-    },
-  };
-});
+// See the stub for what it reproduces of the real canvas, and why.
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  VideoCanvas: jest.requireActual('../../../../util/stubVideoCanvas').default,
+}));
 
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
@@ -88,17 +52,19 @@ const fakeChallenge = {
 };
 
 // Helper: simulate the full record → stop sequence, same as clicking
-// ChallengeBox's bottom-bar record button twice.
-const recordVideo = () => {
+// ChallengeBox's bottom-bar record button twice, and wait for the blob the
+// stubbed recorder hands over a tick later.
+const recordVideo = async () => {
   fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
   fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+  await act(async () => {});
 };
 
 // The record button and "Submit" live in ChallengeBox's bars rather than in
 // VideoChallenge. This harness plays that role: it owns isRecording /
-// hasRecording, renders the record toggle exactly as ChallengeBox's bottom
-// bar does, holds the submit ref, and reflects the reported submittability
-// on a stand-in "Submit" button.
+// hasRecording, renders the record button exactly as ChallengeBox's bottom
+// bar does for a video challenge, holds the submit ref, and reflects the
+// reported submittability on a stand-in "Submit" button.
 const VideoHarness: FC<{
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({submitCallback}) => {
@@ -107,6 +73,7 @@ const VideoHarness: FC<{
   const [canSubmit, setCanSubmit] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [hasRecording, setHasRecording] = useState(false);
+  const isVideoPreview = hasRecording && !isRecording;
   return (
     <>
       <VideoChallenge
@@ -124,11 +91,16 @@ const VideoHarness: FC<{
         submitRef={submitRef}
         resetRef={resetRef}
       />
-      <button type="button" onClick={() => setIsRecording(!isRecording)}>
+      <button
+        type="button"
+        onClick={() =>
+          isVideoPreview ? setHasRecording(false) : setIsRecording(!isRecording)
+        }
+      >
         {isRecording
           ? 'Stop Recording'
-          : hasRecording
-          ? 'Record Again'
+          : isVideoPreview
+          ? 'Edit and Record Again'
           : 'Start Recording'}
       </button>
       <button
@@ -150,22 +122,94 @@ describe('VideoChallenge', () => {
     mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
   });
 
-  it('disables submit until a video is recorded', () => {
+  it('disables submit until a video is recorded', async () => {
     render(<VideoHarness submitCallback={jest.fn()} />);
 
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
 
-    recordVideo();
+    await recordVideo();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
-  it('disables submit while recording is in progress', () => {
+  it('disables submit while recording is in progress', async () => {
     render(<VideoHarness submitCallback={jest.fn()} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
 
     fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+    await act(async () => {});
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+  });
+
+  it('cycles the canvas through edit, recording and preview', async () => {
+    render(<VideoHarness submitCallback={jest.fn()} />);
+
+    expect(screen.getByText('canvas mode: edit')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
+    expect(screen.getByText('canvas mode: recording')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+    await act(async () => {});
+    expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Edit and Record Again'})
+    );
+    expect(screen.getByText('canvas mode: edit')).toBeInTheDocument();
+  });
+
+  it('keeps the take while the recorder is still handing over its blob', async () => {
+    render(<VideoHarness submitCallback={jest.fn()} />);
+
+    fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+
+    // Caller-side state already reads "edit" (see stub), but the canvas
+    // stays on the take until the blob arrives rather than discarding it.
+    expect(screen.getByText('canvas mode: recording')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Start Recording'})
+    ).toBeInTheDocument();
+
+    await act(async () => {});
+
+    expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Edit and Record Again'})
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+  });
+
+  it('discards the recorded take when returning to edit', async () => {
+    render(<VideoHarness submitCallback={jest.fn()} />);
+
+    await recordVideo();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Edit and Record Again'})
+    );
+
+    // Nothing left to submit, and the button offers a fresh take rather than
+    // resuming the discarded one.
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+    expect(
+      screen.getByRole('button', {name: 'Start Recording'})
+    ).toBeInTheDocument();
+  });
+
+  it('records a second take after returning to edit', async () => {
+    render(<VideoHarness submitCallback={jest.fn()} />);
+
+    await recordVideo();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Edit and Record Again'})
+    );
+    await recordVideo();
+
+    expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
@@ -176,12 +220,12 @@ describe('VideoChallenge', () => {
 
     render(<VideoHarness submitCallback={submitCallback} />);
 
-    recordVideo();
+    await recordVideo();
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
-    expect(mockTranscribeAudio).toHaveBeenCalledWith(mockRecordedAudioBlob);
+    expect(mockTranscribeAudio).toHaveBeenCalledWith(recordedAudioBlob);
     expect(post).toHaveBeenCalledWith(
       '/challenge_responses',
       JSON.stringify({
@@ -195,7 +239,7 @@ describe('VideoChallenge', () => {
     );
     expect(put).toHaveBeenCalledWith(
       '/challenge_response_assets/9/upload',
-      mockRecordedVideoBlob,
+      recordedVideoBlob,
       true,
       {'Content-Type': 'video/webm'}
     );
@@ -218,7 +262,7 @@ describe('VideoChallenge', () => {
 
     render(<VideoHarness submitCallback={jest.fn()} />);
 
-    recordVideo();
+    await recordVideo();
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 
     await waitFor(() =>
@@ -240,7 +284,7 @@ describe('VideoChallenge', () => {
 
     render(<VideoHarness submitCallback={submitCallback} />);
 
-    recordVideo();
+    await recordVideo();
     // act() lets the async submit settle and the submittability report
     // propagate to the stand-in top bar before we assert.
     await act(async () => {
