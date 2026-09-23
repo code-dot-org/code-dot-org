@@ -279,6 +279,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
     Policies::Lti.stubs(:supported_message_type?).returns(true)
+    DCDO.set('sign_in_attribution_enabled', true)
   end
 
   def create_jwt(payload)

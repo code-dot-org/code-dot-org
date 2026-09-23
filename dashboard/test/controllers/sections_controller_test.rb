@@ -36,6 +36,7 @@ class SectionsControllerTest < ActionController::TestCase
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
 
     @request.host = CDO.dashboard_hostname
+    DCDO.set('sign_in_attribution_enabled', true)
   end
 
   test "do not show login screen for invalid section code" do

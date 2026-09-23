@@ -25,6 +25,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       user_type: 'student'
     }
     ActionController::TestRequest.any_instance.stubs(:country_code)
+    DCDO.set('sign_in_attribution_enabled', true)
   end
 
   test "update: returns bad_request if user param is nil" do

@@ -26,6 +26,7 @@ class FollowersControllerTest < ActionController::TestCase
     @admin = create(:admin)
 
     @request.host = CDO.dashboard_hostname
+    DCDO.set('sign_in_attribution_enabled', true)
   end
 
   test "student in picture section should be redirected to picture login when joining section" do

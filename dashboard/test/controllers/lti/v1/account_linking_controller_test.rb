@@ -6,6 +6,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     @admin = create(:admin)
     @lti_integration = create(:lti_integration)
     DCDO.stubs(:get)
+    DCDO.stubs(:get).with('sign_in_attribution_enabled', false).returns(true)
   end
 
   test 'links an LTI login to an existing account' do
