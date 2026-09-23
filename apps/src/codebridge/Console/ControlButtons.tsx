@@ -40,16 +40,16 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
-    state => state.lab2Project.projectSources?.source,
+    state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const hasPredictResponse = useAppSelector(
-    state => !!state.predictLevel.response,
+    state => !!state.predictLevel.response
   );
   const hasLoadedEnvironment = useAppSelector(
-    state => state.lab2System.loadedCodeEnvironment,
+    state => state.lab2System.loadedCodeEnvironment
   );
   const codeEnvironmentError = useAppSelector(
-    state => state.lab2System.codeEnvironmentError,
+    state => state.lab2System.codeEnvironmentError
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
@@ -60,7 +60,7 @@ const ControlButtons: React.FunctionComponent = () => {
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
   const miniApp = useAppSelector(
-    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name,
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
 
   const resetStatus = useCallback(() => {
@@ -100,7 +100,7 @@ const ControlButtons: React.FunctionComponent = () => {
         interaction: UserLevelInteractions.click_run,
       });
       onRun(/*runTests*/ false, dispatch, source).finally(
-        clearIsRunningWhenOutputEnds,
+        clearIsRunningWhenOutputEnds
       );
       dispatch(setHasRun(true));
       logLevelActivity();
@@ -108,7 +108,7 @@ const ControlButtons: React.FunctionComponent = () => {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
         ?.writeConsoleMessage(
-          getSystemMessage(codebridgeI18n.handleRunError(), appName),
+          getSystemMessage(codebridgeI18n.handleRunError(), appName)
         );
     }
   };
@@ -121,7 +121,7 @@ const ControlButtons: React.FunctionComponent = () => {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
         ?.writeConsoleMessage(
-          getSystemMessage(codebridgeI18n.handleStopError(), appName),
+          getSystemMessage(codebridgeI18n.handleStopError(), appName)
         );
       dispatch(setIsRunning(false));
     }
