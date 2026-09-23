@@ -40,6 +40,13 @@ const WIRE_SETTINGS = {
   dependent_students_count: 0,
   age_options: [{value: '4', text: '4'}],
   us_state_options: [{value: 'WA', text: 'Washington'}],
+  integrations: {
+    can_manage_linked_accounts: true,
+    is_google_classroom_student: false,
+    is_clever_student: false,
+    personal_account_linking_enabled: true,
+    lms_name: null,
+  },
 };
 
 describe('createUsersApi.getSettings', () => {

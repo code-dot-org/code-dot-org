@@ -30,6 +30,13 @@ const BASE: UserSettings = {
   dependentStudentsCount: 0,
   ageOptions: [],
   usStateOptions: [],
+  integrations: {
+    canManageLinkedAccounts: true,
+    isGoogleClassroomStudent: false,
+    isCleverStudent: false,
+    personalAccountLinkingEnabled: true,
+    lmsName: null,
+  },
 };
 
 function renderSection(overrides: Partial<UserSettings>) {

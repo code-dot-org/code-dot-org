@@ -50,7 +50,7 @@ export type EducatorRoleOption = NonNullable<
 
 export type SchoolInfoSummary = NonNullable<UserSettings['schoolInfo']>;
 
-export type IntegrationsSettings = NonNullable<UserSettings['integrations']>;
+export type IntegrationsSettings = UserSettings['integrations'];
 
 export interface UpdateProfileParams {
   givenName?: string;

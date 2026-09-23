@@ -177,8 +177,7 @@ const SchoolInfoSchema = z
     country: s.country,
   }));
 
-// Present only while the Integrations tab's flag is on. lti_roster_sync_enabled
-// is absent where legacy hides the setting.
+// lti_roster_sync_enabled is absent where legacy hides the setting.
 const IntegrationsSchema = z
   .object({
     can_manage_linked_accounts: z.boolean(),
@@ -233,7 +232,7 @@ export const UserSettingsResponseSchema = z
     educator_role: z.string().nullable().optional(),
     educator_role_options: z.array(EducatorRoleOptionSchema).optional(),
     school_info: SchoolInfoSchema.nullable().optional(),
-    integrations: IntegrationsSchema.optional(),
+    integrations: IntegrationsSchema,
   })
   .transform(r => ({
     userType: r.user_type,
@@ -267,5 +266,5 @@ export const UserSettingsResponseSchema = z
       educatorRoleOptions: r.educator_role_options,
     }),
     ...(r.school_info !== undefined && {schoolInfo: r.school_info}),
-    ...(r.integrations !== undefined && {integrations: r.integrations}),
+    integrations: r.integrations,
   }));
