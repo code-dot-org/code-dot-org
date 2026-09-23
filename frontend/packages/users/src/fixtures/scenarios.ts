@@ -92,7 +92,7 @@ const teacher: UsersScenario = {
     should_see_add_password_form: false,
     should_see_edit_email_link: true,
     authentication_options: [
-      {credential_type: 'email', email: 'ada@example.com'},
+      {id: 101, credential_type: 'email', email: 'ada@example.com'},
     ],
     can_change_user_type: true,
     can_delete_own_account: true,
@@ -180,7 +180,7 @@ const ssoTeacher: UsersScenario = {
     should_see_add_password_form: true,
     should_see_edit_email_link: true,
     authentication_options: [
-      {credential_type: 'google_oauth2', email: 'grace@example.com'},
+      {id: 301, credential_type: 'google_oauth2', email: 'grace@example.com'},
     ],
     can_change_user_type: true,
     can_delete_own_account: true,
@@ -231,7 +231,9 @@ const ssoStudent: UsersScenario = {
     should_see_add_password_form: false,
     // Oauth-only students don't see edit-email (no stored cleartext address).
     should_see_edit_email_link: false,
-    authentication_options: [{credential_type: 'google_oauth2', email: null}],
+    authentication_options: [
+      {id: 401, credential_type: 'google_oauth2', email: null},
+    ],
     can_change_user_type: false,
     can_delete_own_account: true,
     age: 13,
@@ -355,6 +357,7 @@ const longStrings: UsersScenario = {
     should_see_edit_email_link: true,
     authentication_options: [
       {
+        id: 1001,
         credential_type: 'email',
         email:
           'maximiliana.wolfeschlegelsteinhausenbergerdorff.the.magnificent@an-extremely-long-subdomain.example.org',
