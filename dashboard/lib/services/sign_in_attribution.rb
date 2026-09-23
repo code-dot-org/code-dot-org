@@ -78,6 +78,11 @@ module Services::SignInAttribution
     CDO.rack_env?(:test)
   end
 
+  # True when Warden's test helpers are loaded. Named instead of inline so it can be stubbed in tests.
+  def self.warden_test_harness?
+    Warden.respond_to?(:on_next_request)
+  end
+
   private_class_method def self.from_warden_strategy(user, request)
     return nil unless request.env[WARDEN_EVENT_KEY] == :authentication
 
@@ -88,8 +93,8 @@ module Services::SignInAttribution
     when Devise::Strategies::DatabaseAuthenticatable
       [SignIn::CREDENTIAL, email_authentication_option_id(user, strategy)]
     when nil
-      # Warden's login_as test helper claims :authentication without running a strategy; the application never does.
-      [nil, nil] if Warden.respond_to?(:on_next_request)
+      # Warden's `login_as` test helper claims `:authentication` without running a strategy; our application never does.
+      [nil, nil] if warden_test_harness?
     end
   end
 

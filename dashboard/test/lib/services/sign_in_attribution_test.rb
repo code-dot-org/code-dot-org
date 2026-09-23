@@ -108,6 +108,34 @@ class Services::SignInAttributionTest < ActiveSupport::TestCase
     assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
   end
 
+  # The two tests below cover both sides of one logical branch in `from_warden_strategy`. It is the branch that decides
+  # whether an `:authentication` event with no winning strategy is a Warden `login_as artifact` or a real sign-in path
+  # nobody has accounted for, and it turns on ambient process state rather than on anything in the request: Warden's
+  # test helpers are loaded here and absent in production, so `warden_test_harness?` is always true under test and
+  # always false in production. A similar logic issue caused the LTI login outage of 2026-03-12.
+  #
+  # Left inline, `Warden.respond_to?(:on_next_request)` would put the production side of this branch beyond the reach of
+  # any test -- the same gap. `warden_test_harness?` exists as a method so that it can be stubbed, and the second test
+  # stubs it to run the half that production actually takes.
+
+  # Pins the premise the next test rests on. Were a change to how Warden's test helpers load to make this false, that
+  # test would start passing for the wrong reason instead of failing here.
+  test 'the warden test harness probe is true while the test helpers are loaded' do
+    assert Services::SignInAttribution.warden_test_harness?
+  end
+
+  # The half that only production runs: with no harness loaded, this shape is a sign-in path nobody taught the resolver
+  # about, and must be reported rather than written off as a login_as artifact.
+  test 'an authentication with no strategy is unattributed outside the test harness' do
+    Services::SignInAttribution.stubs(:warden_test_harness?).returns(false)
+    @request.env['warden'] = stub(winning_strategy: nil)
+    @request.env[Services::SignInAttribution::WARDEN_EVENT_KEY] = :authentication
+
+    assert_raises(Services::SignInAttribution::UnattributedSignIn) do
+      Services::SignInAttribution.resolve(@user, @request)
+    end
+  end
+
   test 'a sign-in nothing accounts for raises where failures get seen' do
     error = assert_raises(Services::SignInAttribution::UnattributedSignIn) do
       Services::SignInAttribution.resolve(@user, @request)
