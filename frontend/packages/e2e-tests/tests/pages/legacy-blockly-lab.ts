@@ -56,10 +56,11 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   readonly congratsMessage: Locator;
 
   /**
-   * All SVGs inside the game visualization. Different labs use different ids
-   * (#svgMaze, #svgStudio + #visualizationOverlay), and the maze SVG
-   * overflows #visualization by ~1.5px (400x400 viewBox in a 300px box
-   * with overflow:visible), so masking the parent misses the edge.
+   * All SVGs and canvases inside the game visualization. Different labs use
+   * different ids (#svgMaze, #svgStudio + #visualizationOverlay for Blockly;
+   * a Phaser canvas for Craft), and the maze SVG overflows #visualization by
+   * ~1.5px (400x400 viewBox in a 300px box with overflow:visible), so
+   * masking the parent misses the edge.
    */
   readonly visualization: Locator;
 
@@ -95,7 +96,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       '.uitest-topInstructions-inline-feedback',
     );
     this.congratsMessage = page.locator('.congrats');
-    this.visualization = page.locator('#visualization svg');
+    this.visualization = page.locator('#visualization :is(svg, canvas)');
     this.continueButton = page.locator('#continue-button');
     this.embeddedInstructionBlocks = page.locator(
       '.readonly-block-space-container',

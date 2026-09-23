@@ -463,6 +463,13 @@ $tab-segment-height: $tab-item-height - 2px;
   margin-top: 10px;
 }
 
+// Room for the corner icon on its right; the collapsed panel is otherwise
+// only as wide as its button.
+.guideCollapsedText {
+  margin: 0 28px 0 0;
+  white-space: nowrap;
+}
+
 // The persistent playspace overlay: spans the tab content area; lets clicks
 // through to the content beneath (e.g. the Blockly workspace) except over the
 // box itself.

@@ -203,6 +203,14 @@ module.exports = {
             message:
               'DSCO Button is deprecated. Use MUI Button from @mui/material instead. Codemod available: cd frontend/packages/component-library && yarn codemod:buttons <path>',
           },
+          {
+            // The path still exports keyboardOnlyTooltipProps and the
+            // TooltipProps type, so restrict the components by name.
+            name: '@code-dot-org/component-library/tooltip',
+            importNames: ['WithTooltip', 'LegacyTooltip', 'TooltipOverlay'],
+            message:
+              'DSCO tooltips are deprecated. Import Tooltip from @mui/material; CdoTheme styles it. See frontend/packages/component-library/src/tooltip/README.md',
+          },
         ],
         patterns: [
           {

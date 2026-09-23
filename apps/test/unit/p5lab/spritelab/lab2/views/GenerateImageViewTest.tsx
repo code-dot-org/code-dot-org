@@ -46,7 +46,17 @@ describe('GenerateImageView character-set offer', () => {
   });
 
   it("locks a new sprite to the level's subject", () => {
+    // The student form drops a locked type group; the advanced form keeps
+    // it, so the locked subject shows there.
+    const {unmount} = renderView({
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+      lockedImageSubject: 'object',
+    });
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+    unmount();
     renderView({
+      advanced: true,
       create: {isNameTaken: () => false},
       lockedImageType: 'sprite',
       lockedImageSubject: 'object',
@@ -85,5 +95,33 @@ describe('GenerateImageView character-set offer', () => {
     expect(
       screen.queryByLabelText(SET_CHECKBOX_ADVANCED)
     ).not.toBeInTheDocument();
+  });
+});
+
+describe('GenerateImageView type choice', () => {
+  it('offers the type for a new image', () => {
+    renderView({create: {isNameTaken: () => false}});
+    expect(screen.getByRole('radio', {name: 'Character'})).toBeInTheDocument();
+  });
+
+  it('drops the group when the level locks the type, in the student form', () => {
+    renderView({
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+    });
+    expect(
+      screen.queryByRole('radio', {name: 'Character'})
+    ).not.toBeInTheDocument();
+    // The style choice stays.
+    expect(screen.getByRole('radio', {name: 'Pixel art'})).toBeInTheDocument();
+  });
+
+  it('keeps the locked group visible, disabled, in the advanced form', () => {
+    renderView({
+      advanced: true,
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+    });
+    expect(screen.getByRole('radio', {name: 'Character'})).toBeDisabled();
   });
 });

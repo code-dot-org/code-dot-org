@@ -542,32 +542,36 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             )}
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
-                  level can lock the choice for new images too. */}
-              <fieldset
-                className={moduleStyles.radioGroup}
-                disabled={generating || !!existing || !!lockedImageType}
-              >
-                <legend>Type</legend>
-                {IMAGE_KINDS.map(kind => (
-                  <RadioButton
-                    key={kind.value}
-                    name="generation-type"
-                    value={kind.value}
-                    label={imageKindLabel(kind.imageType, kind.subject)}
-                    size="s"
-                    checked={
-                      imageType === kind.imageType &&
-                      (kind.subject === undefined || subject === kind.subject)
-                    }
-                    onChange={() => {
-                      setImageType(kind.imageType);
-                      if (kind.subject) {
-                        setSubject(kind.subject);
+                  level can lock the choice for new images too; the student
+                  form drops a locked group, which would only push Generate
+                  down. */}
+              {!(lockedImageType && !advanced) && (
+                <fieldset
+                  className={moduleStyles.radioGroup}
+                  disabled={generating || !!existing || !!lockedImageType}
+                >
+                  <legend>Type</legend>
+                  {IMAGE_KINDS.map(kind => (
+                    <RadioButton
+                      key={kind.value}
+                      name="generation-type"
+                      value={kind.value}
+                      label={imageKindLabel(kind.imageType, kind.subject)}
+                      size="s"
+                      checked={
+                        imageType === kind.imageType &&
+                        (kind.subject === undefined || subject === kind.subject)
                       }
-                    }}
-                  />
-                ))}
-              </fieldset>
+                      onChange={() => {
+                        setImageType(kind.imageType);
+                        if (kind.subject) {
+                          setSubject(kind.subject);
+                        }
+                      }}
+                    />
+                  ))}
+                </fieldset>
+              )}
               <fieldset
                 className={moduleStyles.radioGroup}
                 disabled={generating}
