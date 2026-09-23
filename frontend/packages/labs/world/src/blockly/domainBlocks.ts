@@ -31,7 +31,6 @@ import {
   type Toolbox,
   type ToolboxCategory,
 } from '@code-dot-org/blockly';
-import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 import fieldColourPlugin from '@code-dot-org/blockly/fields/fieldColour';
 
 import {
@@ -126,7 +125,8 @@ import {
   eventValuesToolboxExtension,
   registerEventFlyout,
 } from './extensions/eventActorToolbox';
-import {glyphIcon} from './extensions/glyphIcon';
+import {blockVisibilityExtension} from './extensions/blockVisibility';
+import {visibilityEye} from './fields/visibilityEye';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
 import {lessonButtonExtension} from './extensions/lessonButton';
 import {mapImportFieldExtension} from './extensions/mapImportField';
@@ -8099,16 +8099,6 @@ const SET_PREVIEW_ROW = 'SET_PREVIEW_ROW';
 const GET_PREVIEW_FIELD = 'GET_PREVIEW';
 const SET_PREVIEW_FIELD = 'SET_PREVIEW';
 
-// FontAwesome f06e / f070: `eye` and `eye-slash`, in the free package as well
-// as the pro one (see `glyphIcon`). The eye means VISIBLE here — whether the
-// setter drawn beside it is a block anyone outside this file is offered — which
-// is why the button that opens a file stopped being an eye and became
-// `arrow-up-right-from-square` (`extensions/openSourceButton`). Two eyes a few
-// blocks apart meaning "look at this file" and "this is visible" would be one
-// picture for two ideas.
-const EYE = '';
-const EYE_SLASH = '';
-
 /**
  * What the block is a property OF, read from where it sits.
  *
@@ -8409,39 +8399,16 @@ const propertyDesignerExtension = defineExtension(PROPERTY_DESIGNER_EXTENSION, {
     };
     const svg = block as unknown as BlockSvg;
 
-    // The eye, made once. `FieldButton` is serializable by default and that
-    // is wanted here — unlike every other button in this lab, this one holds
-    // a value the file has to remember.
-    const icon = glyphIcon(EYE);
-    const eye = new FieldButton({
-      value: WRITABLE,
-      onClick: () =>
-        eye.setValue(eye.getValue() === READONLY ? WRITABLE : READONLY),
-      icon,
-      // The VALUE is `writable` / `readonly`, and the button draws neither: the
-      // eye is the whole of what it says. Without this the field paints the
-      // word beside the glyph, because `FieldButton` skips its text only when
-      // there is none — and every other button in this lab has none.
-      transformText: () => '',
-      // Read-only workspaces show what a property is; the click is refused by
-      // `setValue` on a block that cannot be edited, and the state still
-      // reads correctly.
-      allowReadOnlyClick: false,
-    });
+    // The eye, made once. Shared with `define block`, which asks the same
+    // question about the same kind of declaration (`fields/visibilityEye`).
+    const eye = visibilityEye(WRITABLE, READONLY);
 
     block.rebuildDesign_ = () => {
       // The editor first, so what is read below is read from the right field.
       shapeDefaultField(block, String(block.getFieldValue('TYPE') ?? ''));
       const property = propertyOn(block);
       const readonly = block.getFieldValue(PROPERTY_ACCESS_FIELD) === READONLY;
-      // The glyph is measured, not just drawn (`FieldButton.updateSize_`), so
-      // a swapped one has to ask for its size again — and only when it did
-      // swap, or every keystroke in the name box re-renders it for nothing.
-      const glyph = readonly ? EYE_SLASH : EYE;
-      if (icon.textContent !== glyph) {
-        icon.textContent = glyph;
-        eye.forceRerender();
-      }
+      eye.sync();
       const get = block.getField(
         GET_PREVIEW_FIELD,
       ) as FieldPropertyPreview | null;
@@ -8462,9 +8429,9 @@ const propertyDesignerExtension = defineExtension(PROPERTY_DESIGNER_EXTENSION, {
       .appendField(getPreview, GET_PREVIEW_FIELD);
     block
       .appendDummyInput(SET_PREVIEW_ROW)
-      .appendField(eye, PROPERTY_ACCESS_FIELD)
+      .appendField(eye.field, PROPERTY_ACCESS_FIELD)
       .appendField(setPreview, SET_PREVIEW_FIELD);
-    eye.setTooltip(
+    eye.field.setTooltip(
       'Whether the "set" block below is offered anywhere else. Turn it off ' +
         'for a value the file declaring it works out for itself — a learner ' +
         'given a setter for one of those writes a value the next tick ' +
@@ -8844,6 +8811,8 @@ const worldRuleBlock = defineBlock({
     actorBlockReportsExtension,
     bodyButtonExtension,
     bodySurfaceExtension,
+    // …and the eye, which says whether anybody else is offered this block.
+    blockVisibilityExtension,
   ],
   style: 'setup_blocks',
   tooltip:
@@ -12415,7 +12384,14 @@ export function buildDomainPalette(
       const block = defineActionBlock(action);
       ownBlocks.push(block);
       types.push(block.type);
-      away.push(block.type);
+      // …and OTHER files are offered it only if the eye is open. An actor's
+      // own work — "keep the caret in view", called from eight handlers of
+      // its own — is an implementation, and a block nobody outside can mean
+      // anything by is a block nobody outside should be shown
+      // (`extensions/blockVisibility`).
+      if (action.shared !== false) {
+        away.push(block.type);
+      }
     }
     // …and the things that HAPPEN to it: the hat that hears one and the block
     // that raises it, from the same two factories a rule's events go through.

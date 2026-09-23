@@ -50,6 +50,7 @@ import {
   type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
+import {BLOCK_ACCESS_FIELD, PRIVATE} from './extensions/blockVisibility';
 
 /** A block as it appears in a serialized workspace. */
 interface ActorBlock {
@@ -421,6 +422,11 @@ function designedBlock(
       .map(part => ({name: part.name, type: part.type})),
     parts,
     description: field(block, 'DESCRIPTION') || undefined,
+    // The eye: shut, and only this file's own drawer offers the block. Absent
+    // reads as SHARED, which is every block written before the eye existed
+    // and what a reader expects of one that says nothing
+    // (`extensions/blockVisibility`).
+    shared: field(block, BLOCK_ACCESS_FIELD) !== PRIVATE,
     // An actor's, so the call site takes an actor socket and the body is
     // handed one — the same scope a trait's action has.
     scope: 'actor',

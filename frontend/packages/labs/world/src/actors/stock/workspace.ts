@@ -235,10 +235,22 @@ export const defineBlock = (spec: {
   say: ReadonlyArray<string | BlockParam>;
   /** The sentence somebody reads on hovering it months later. */
   description: string;
+  /**
+   * Shut the eye: this kind's own work, offered in no other file's toolbox.
+   *
+   * `keep the caret in view` means nothing outside the file that knows what a
+   * caret is, and a block a reader cannot mean anything by is one they should
+   * not be shown (`extensions/blockVisibility`).
+   */
+  private?: boolean;
   body: object[];
 }) => ({
   type: 'world_rule_block',
-  fields: {RETURNS: 'none', DESCRIPTION: spec.description},
+  fields: {
+    RETURNS: 'none',
+    DESCRIPTION: spec.description,
+    ACCESS: spec.private ? 'private' : 'shared',
+  },
   extraState: {
     parts: spec.say.map(part =>
       typeof part === 'string'

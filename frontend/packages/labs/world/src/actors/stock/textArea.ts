@@ -555,6 +555,9 @@ export const textAreaActor = actorFile(
     actsLike('actors/label'),
     // What every key hat and the click do after moving the bar, said once.
     defineBlock({
+      // THIS KIND'S OWN WORK, in nobody else's toolbox. A file that does not
+      // know what a caret is can mean nothing by it.
+      private: true,
       say: [KEEP_IN_VIEW],
       description:
         'Move the window over the words so the line the bar is on is ' +

@@ -167,6 +167,16 @@ export interface ActionMeta {
   readonly parts?: readonly MemberPart[];
   /** The author's one-line explanation — the call-site block's tooltip. */
   readonly description?: string;
+  /**
+   * Whether files OTHER than the declaring one are offered this block.
+   *
+   * The eye on `define block`, and absent means shared — which is every block
+   * written before the eye existed, and the answer a reader expects of one
+   * that says nothing (`extensions/blockVisibility`). A shut eye is an
+   * actor's own work: `keep the caret in view` means nothing outside the file
+   * that knows what a caret is.
+   */
+  readonly shared?: boolean;
   readonly scope: MemberScope;
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
