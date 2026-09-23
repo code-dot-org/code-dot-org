@@ -82,7 +82,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isFileSupported = isFileTypeSupported(fileName, supportedFileTypes);
   // If the parent tells us to, we are in read-only mode, or the file type is unsupported, disable the add button.
-  const addButtonDisabled = inReadOnly || !isFileSupported || disableActions;
+  // Also disable if we recently added the file, as we show the add button as a check mark temporarily.
+  const addButtonDisabled =
+    inReadOnly || !isFileSupported || disableActions || isRecentlyAdded;
   const addButtonTooltipText = useMemo(() => {
     if (!isFileSupported) {
       return 'File type not supported in this project';
@@ -287,7 +289,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
               onClick={handleAdd}
               type="button"
               aria-label={addButtonTooltipText}
-              disabled={addButtonDisabled || isRecentlyAdded}
+              disabled={addButtonDisabled}
             >
               <FontAwesomeV6Icon
                 iconName={isRecentlyAdded ? 'check' : 'plus'}
