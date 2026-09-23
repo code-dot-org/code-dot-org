@@ -15,7 +15,7 @@ import {createPlayerObserver, PlayerObserver} from './playerObserver';
 import {createPlayerSounds} from './playerSounds';
 import {createProximityAudio} from './proximityAudio';
 
-const OBSTACLE_SOUNDS_KEY = 'spritelab2ProximitySound';
+const NAVIGATION_SOUNDS_KEY = 'spritelab2ProximitySound';
 
 const ON_OFF = [
   {value: 'on', text: 'On'},
@@ -83,8 +83,8 @@ export default function useGameAudio(
 ): GameAudio {
   // Off by default: the cues are for a student who cannot see the screen,
   // and are noise to one who can.
-  const [obstacleSounds, storedSetting] = useStoredToggle(
-    OBSTACLE_SOUNDS_KEY,
+  const [navigationSounds, storedSetting] = useStoredToggle(
+    NAVIGATION_SOUNDS_KEY,
     'Obstacle sounds',
     'off'
   );
@@ -96,7 +96,7 @@ export default function useGameAudio(
       wake(contextRef.current);
     }
   };
-  const wanted = hasPlatformScene && obstacleSounds;
+  const wanted = hasPlatformScene && navigationSounds;
   const wantedRef = useRef(wanted);
   wantedRef.current = wanted;
   const unlock = useCallback(() => {
@@ -121,7 +121,7 @@ export default function useGameAudio(
 
   useEffect(() => {
     const engine = engineRef.current;
-    if (!engine || !hasPlatformScene || !playing || !obstacleSounds) {
+    if (!engine || !hasPlatformScene || !playing || !navigationSounds) {
       return;
     }
     const context = (contextRef.current ||= audioContext());
@@ -146,7 +146,7 @@ export default function useGameAudio(
       sounds.stop();
       context.suspend().catch(() => undefined);
     };
-  }, [engineRef, hasPlatformScene, playing, obstacleSounds]);
+  }, [engineRef, hasPlatformScene, playing, navigationSounds]);
 
   // The context lives as long as the setting is on.
   useEffect(() => {
