@@ -13,7 +13,9 @@
   align-items: center;
   // Shrinks below the legacy 39.375rem on narrow viewports or at high zoom so
   // the action buttons stay reachable (body scroll is locked). 4rem is MUI's
-  // 32px paper margin on each side.
+  // 32px paper margin on each side. border-box so the padding counts toward
+  // that width in hosts without Bootstrap's global reset (Storybook, studio).
+  box-sizing: border-box;
   min-width: min(39.375rem, calc(100vw - 4rem));
   max-width: 50rem;
   padding: 2.25rem 3.5rem 2.5rem;
