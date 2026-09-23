@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-11 16:53:57 UTC",
+    "serialized_at": "2026-09-22 21:03:14 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -704,6 +704,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "308a6025-8c68-476a-9a12-21f5c68d64b3",
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
+      }
+    },
+    {
+      "key": "3fc26492-0beb-4d0d-86c0-b44754ede43e",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e",
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev"
@@ -2303,6 +2315,17 @@
       "seeding_key": {
         "activity_section.key": "cf3afaa4-2a50-4dbd-b47d-c8b3701cce49",
         "lesson_activity.key": "308a6025-8c68-476a-9a12-21f5c68d64b3"
+      }
+    },
+    {
+      "key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363",
+        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e"
       }
     },
     {
@@ -4390,6 +4413,28 @@
     },
     {
       "chapter": 29,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4411,7 +4456,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4433,7 +4478,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4455,7 +4500,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4477,7 +4522,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4499,7 +4544,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4521,7 +4566,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4543,7 +4588,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4565,7 +4610,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4587,7 +4632,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4609,7 +4654,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4631,7 +4676,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4698,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4675,7 +4720,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4697,7 +4742,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4719,7 +4764,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4741,7 +4786,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4763,7 +4808,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4785,7 +4830,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4807,7 +4852,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4829,7 +4874,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4851,7 +4896,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4873,7 +4918,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4895,7 +4940,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4917,7 +4962,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5274,6 +5319,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
         "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson7-exploring-sensors",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363"
       }
     },
     {
