@@ -1,5 +1,6 @@
 import {act, renderHook} from '@testing-library/react-hooks';
 
+import {PlayerObserver} from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/playerObserver';
 import useGameAudio from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/useGameAudio';
 
 import {FakeVoice, installFakeAudioContext} from './fakeAudioContext';
@@ -8,16 +9,16 @@ const EFFECTS = 'spritelab2SoundEffects';
 const OBSTACLES = 'spritelab2ProximitySound';
 
 interface Engine {
-  onPlayerSound: ((event: 'step' | 'blocked') => void) | null;
-  onPlayerHeight: (() => void) | null;
-  onPlayerProximity: (() => void) | null;
+  observer: PlayerObserver | null;
+  setPlayerObserver(observer: PlayerObserver | null): void;
 }
 
 function setup({playing = true, hasPlatformer = true} = {}) {
   const engine: Engine = {
-    onPlayerSound: null,
-    onPlayerHeight: null,
-    onPlayerProximity: null,
+    observer: null,
+    setPlayerObserver(observer) {
+      this.observer = observer;
+    },
   };
   const view = renderHook(
     ({play}: {play: boolean}) =>
@@ -60,21 +61,21 @@ describe('SpriteLab2 useGameAudio', () => {
 
   it('wires the engine only while the game is being played', () => {
     const {engine, view} = setup({playing: false});
-    expect(engine.onPlayerSound).toBeNull();
+    expect(engine.observer).toBeNull();
     view.rerender({play: true});
-    expect(engine.onPlayerSound).not.toBeNull();
-    expect(engine.onPlayerHeight).not.toBeNull();
+    expect(engine.observer?.listeners.onSound).toBeDefined();
+    expect(engine.observer?.listeners.onHeight).toBeDefined();
   });
 
-  it('leaves proximity unwired so the engine can skip measuring it', () => {
+  it('leaves proximity unwired so the observer can skip measuring it', () => {
     const {engine} = setup();
-    expect(engine.onPlayerProximity).toBeNull();
-    expect(engine.onPlayerHeight).not.toBeNull();
+    expect(engine.observer?.listeners.onProximity).toBeUndefined();
+    expect(engine.observer?.listeners.onHeight).toBeDefined();
   });
 
   it('wires proximity once its setting is on', () => {
     localStorage.setItem(OBSTACLES, 'on');
-    expect(setup().engine.onPlayerProximity).not.toBeNull();
+    expect(setup().engine.observer?.listeners.onProximity).toBeDefined();
   });
 
   // Both blips arrive on one callback, so which setting lets each through
@@ -92,32 +93,29 @@ describe('SpriteLab2 useGameAudio', () => {
     );
     const {engine} = setup();
     const held = voices.length;
-    engine.onPlayerSound!(silent as 'step');
+    const onSound = engine.observer!.listeners.onSound!;
+    onSound(silent as 'step');
     expect(voices).toHaveLength(held);
-    engine.onPlayerSound!(heard as 'step');
+    onSound(heard as 'step');
     expect(voices).toHaveLength(held + 1);
   });
 
   it('unwires the engine when the game is left', () => {
     const {engine, view} = setup();
     view.rerender({play: false});
-    expect(engine.onPlayerSound).toBeNull();
-    expect(engine.onPlayerHeight).toBeNull();
-    expect(engine.onPlayerProximity).toBeNull();
+    expect(engine.observer).toBeNull();
   });
 
   it('unwires the engine on unmount', () => {
     const {engine, view} = setup();
     view.unmount();
-    expect(engine.onPlayerSound).toBeNull();
-    expect(engine.onPlayerHeight).toBeNull();
+    expect(engine.observer).toBeNull();
   });
 
   it('offers nothing on a level with no platformer to hear', () => {
     const {engine, view} = setup({hasPlatformer: false});
     expect(view.result.current).toEqual([]);
-    expect(engine.onPlayerSound).toBeNull();
-    expect(engine.onPlayerHeight).toBeNull();
+    expect(engine.observer).toBeNull();
   });
 
   it('survives a browser that refuses another audio context', () => {
@@ -125,14 +123,12 @@ describe('SpriteLab2 useGameAudio', () => {
       throw new Error('no more contexts');
     };
     const {engine} = setup();
-    expect(engine.onPlayerSound).toBeNull();
+    expect(engine.observer).toBeNull();
   });
 
   it('builds nothing when both switches are off', () => {
     localStorage.setItem(EFFECTS, 'off');
     const {engine} = setup();
-    expect(engine.onPlayerSound).toBeNull();
-    expect(engine.onPlayerHeight).toBeNull();
-    expect(engine.onPlayerProximity).toBeNull();
+    expect(engine.observer).toBeNull();
   });
 });

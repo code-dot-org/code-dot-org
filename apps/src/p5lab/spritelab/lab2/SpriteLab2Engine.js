@@ -12,10 +12,6 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {
-  initialMovementEventState,
-  movementEvents,
-} from './audioFeedback/movementEvents';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   backgroundFrame,
@@ -42,8 +38,6 @@ import {
 } from './imageTrim';
 import {
   CONTACT_EPSILON,
-  distanceToEdgeAhead,
-  distanceToWallAhead,
   hasSupportAhead,
   isAtEdge,
   isSupported,
@@ -165,11 +159,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
-    // Set by the view (useGameAudio).
-    this.onPlayerHeight = null;
-    this.onPlayerProximity = null;
-    this.onPlayerSound = null;
-    this.forgetPlayer_();
+    // Set by the view (useGameAudio); null when nothing listens.
+    this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -1070,81 +1061,35 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.observePlayer_(players, walls, view);
   }
 
-  // Facing resets too: a player who comes back has no history to face.
+  /** The audio's observer of the player, or null (useGameAudio). */
+  setPlayerObserver(observer) {
+    this.playerObserver_?.forget();
+    this.playerObserver_ = observer;
+  }
+
   forgetPlayer_() {
-    // Held voices first: with no player to describe they would otherwise
-    // hang wherever the last one left them.
-    this.onPlayerHeight?.({above: 0, airborne: false});
-    this.onPlayerProximity?.({wall: Infinity, edge: Infinity});
-    this.observedX_ = null;
-    this.observedY_ = null;
-    this.observedFacing_ = 'right';
-    this.movementEvents_ = initialMovementEventState();
+    this.playerObserver_?.forget();
   }
 
   // First player only: the controls drive the whole group as one.
   observePlayer_(players, walls, view) {
-    if (
-      (!this.onPlayerHeight &&
-        !this.onPlayerProximity &&
-        !this.onPlayerSound) ||
-      !players.length
-    ) {
-      if (this.observedX_ !== null) {
-        this.forgetPlayer_();
-      }
+    const observer = this.playerObserver_;
+    if (!observer) {
+      return;
+    }
+    if (!players.length) {
+      observer.forget();
       return;
     }
     const {sprite, x: requestedX, y: requestedY} = players[0];
-    const gravity = this.platformGravity_;
-    // Weightless is steering: no footing to lose, no edge to fall from.
-    const weightless = gravity === 0;
-    const grounded = weightless || isSupported(sprite, walls, view, gravity);
-    const first = this.observedX_ === null;
-    const previousX = first ? sprite.position.x : this.observedX_;
-    const previousY = first ? sprite.position.y : this.observedY_;
-    this.observedX_ = sprite.position.x;
-    this.observedY_ = sprite.position.y;
-    const moved = sprite.position.x - previousX;
-    const requested = first ? 0 : requestedX - previousX;
-    // Positive is away from the ground, whichever way gravity points.
-    const up = weightless ? 0 : -Math.sign(gravity);
-    // Follows the key, not the ground won, so turning into a wall faces
-    // it; kept while standing still, so a warning doesn't drop on a pause.
-    this.observedFacing_ = nextFacing(
-      this.observedFacing_,
-      isMoving(moved) ? moved : requested
-    );
-    const direction = this.observedFacing_ === 'left' ? -1 : 1;
-    if (this.onPlayerSound) {
-      movementEvents(this.movementEvents_, {
-        moved,
-        requested,
-        movedUp: (sprite.position.y - previousY) * up,
-        requestedUp: first ? 0 : (requestedY - previousY) * up,
-        grounded,
-      }).forEach(event => this.onPlayerSound(event));
-    }
-    if (this.onPlayerHeight) {
-      // From the feet, not the centre: standing on the floor is 0 however
-      // tall the costume, so two players on a row sound the same note.
-      const feet = sprite.position.y + (sprite.height * sprite.scale) / 2;
-      this.onPlayerHeight({
-        above: (view.height - feet) / view.height,
-        airborne: !grounded,
-      });
-    }
-    // Only when something listens: this is the frame's costliest work.
-    if (this.onPlayerProximity) {
-      this.onPlayerProximity({
-        wall: distanceToWallAhead(sprite, direction, walls, view, gravity),
-        // Mid-jump, the drop ahead is what you are aiming over.
-        edge:
-          grounded && !weightless
-            ? distanceToEdgeAhead(sprite, direction, walls, view, gravity)
-            : Infinity,
-      });
-    }
+    observer.observe({
+      sprite,
+      requestedX,
+      requestedY,
+      gravity: this.platformGravity_,
+      walls,
+      view,
+    });
   }
 
   // The walls, gathered once per frame — the footing commands ask several

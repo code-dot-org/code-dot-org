@@ -5,9 +5,10 @@ import {useEffect, useMemo, useState} from 'react';
 
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-import {createHeightTone, PlayerHeight} from './heightTone';
-import {createPlayerSounds, PlayerSoundEvent} from './playerSounds';
-import {createProximityAudio, ProximityDistances} from './proximityAudio';
+import {createHeightTone} from './heightTone';
+import {createPlayerObserver, PlayerObserver} from './playerObserver';
+import {createPlayerSounds} from './playerSounds';
+import {createProximityAudio} from './proximityAudio';
 
 const PROXIMITY_SOUND_KEY = 'spritelab2ProximitySound';
 const SOUND_EFFECTS_KEY = 'spritelab2SoundEffects';
@@ -18,9 +19,7 @@ const ON_OFF = [
 ];
 
 interface AudioEngine {
-  onPlayerSound: ((event: PlayerSoundEvent) => void) | null;
-  onPlayerHeight: ((height: PlayerHeight) => void) | null;
-  onPlayerProximity: ((distances: ProximityDistances) => void) | null;
+  setPlayerObserver(observer: PlayerObserver | null): void;
 }
 
 function useStoredToggle(key: string, label: string, fallback: 'on' | 'off') {
@@ -96,19 +95,21 @@ export default function useGameAudio(
     const proximity = proximitySound ? createProximityAudio(context) : null;
     const height = soundEffects ? createHeightTone(context) : null;
     const sounds = createPlayerSounds(context);
-    // Hitting something is an obstacle; footsteps are ordinary sound.
-    engine.onPlayerSound = event => {
-      if (event === 'blocked' ? proximitySound : soundEffects) {
-        sounds.play(event);
-      }
-    };
-    // Null when nothing listens, so the engine can skip the work.
-    engine.onPlayerHeight = height ? height.update : null;
-    engine.onPlayerProximity = proximity ? proximity.update : null;
+    engine.setPlayerObserver(
+      createPlayerObserver({
+        // Hitting something is an obstacle; footsteps are ordinary sound.
+        onSound: event => {
+          if (event === 'blocked' ? proximitySound : soundEffects) {
+            sounds.play(event);
+          }
+        },
+        // Absent when nothing listens, so the observer skips the work.
+        onHeight: height?.update,
+        onProximity: proximity?.update,
+      })
+    );
     return () => {
-      engine.onPlayerSound = null;
-      engine.onPlayerHeight = null;
-      engine.onPlayerProximity = null;
+      engine.setPlayerObserver(null);
       proximity?.stop();
       height?.stop();
       sounds.stop();
