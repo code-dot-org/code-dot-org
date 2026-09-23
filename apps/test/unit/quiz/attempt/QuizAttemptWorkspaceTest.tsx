@@ -36,7 +36,9 @@ const BASE_HOOK_STATE = {
   attempt: undefined as QuizAttemptData | null | undefined,
   isLoading: false,
   error: null as string | null,
-  beginAttempt: jest.fn(),
+  // Resolved, not just jest.fn(), since a no-intro-screen render below
+  // calls this itself via the auto-begin effect.
+  beginAttempt: jest.fn().mockResolvedValue(undefined),
   submitQuestionResponse: jest.fn(),
   finishAttempt: jest.fn(),
 };
@@ -106,13 +108,14 @@ describe('QuizAttemptWorkspace', () => {
     ).toBeInTheDocument();
   });
 
-  it('shows a Begin Quiz button when there is no attempt yet, and starts one on click', () => {
-    const beginAttempt = jest.fn();
+  it('starts the attempt automatically when there is no intro screen', () => {
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
     renderWorkspace({hookState: {attempt: null, beginAttempt}});
 
-    fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
-
     expect(beginAttempt).toHaveBeenCalledTimes(1);
+    expect(
+      screen.queryByRole('button', {name: 'Begin Quiz'})
+    ).not.toBeInTheDocument();
   });
 
   it('shows the intro screen instead of Begin Quiz when the quiz has one', () => {

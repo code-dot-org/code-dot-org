@@ -3,6 +3,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {QuizQuestionSummary, toBool} from '../types';
 
+import AttemptCard from './AttemptCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
 import QuizIntroCard from './QuizIntroCard';
@@ -131,6 +132,16 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
+  // A quiz with no intro screen has no click-through step - start the
+  // attempt automatically once the initial check finds there isn't one yet.
+  useEffect(() => {
+    if (!isLoading && !!unitId && attempt === null && !showIntroScreen) {
+      beginAttempt().catch(() => {
+        // Already recorded as a user-facing error in useQuizAttempt.
+      });
+    }
+  }, [isLoading, unitId, attempt, showIntroScreen, beginAttempt]);
+
   const handleSelectChoice = (questionId: number, choiceId: string) => {
     const previousChoiceId = selectedChoicesByQuestionId[questionId];
     setSelectedChoicesByQuestionId(prev => ({...prev, [questionId]: choiceId}));
@@ -208,15 +219,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             />
           </div>
         ) : !attempt ? (
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            type="button"
-            onClick={handleBeginAttempt}
-          >
-            Begin Quiz
-          </MuiButton>
+          // No intro screen to click through - the effect above starts the
+          // attempt automatically.
+          <Typography variant="body2">Loading…</Typography>
         ) : attempt.submittedAt ? (
           <div ref={submittedRef}>
             <Typography variant="body2" tabIndex={-1}>
@@ -236,6 +241,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>
+            {currentPageNumber === 1 && !showIntroScreen && (
+              <AttemptCard title={displayName || levelName} />
+            )}
             {quizQuestions
               .filter(
                 question => question.page === pageNumbers[currentPageNumber - 1]
