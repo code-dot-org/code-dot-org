@@ -54,7 +54,7 @@ function audioContext(): AudioContext | null {
   try {
     return new Context();
   } catch {
-    // Chrome refuses one often enough to warrant Sounds.js's own guard.
+    // Chrome caps the contexts a page may hold; Sounds.js guards the same way.
     return null;
   }
 }
@@ -146,7 +146,7 @@ export default function useGameAudio(
     };
   }, [engineRef, hasPlatformScene, playing, obstacleSounds]);
 
-  // A context the gesture made but no run used.
+  // Closes a context the gesture made that no run used.
   useEffect(
     () => () => {
       contextRef.current?.close().catch(() => undefined);

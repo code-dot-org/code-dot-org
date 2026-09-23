@@ -1,5 +1,6 @@
 // Records what the voices ask of Web Audio, to test them without a sound
-// card. Each makes its oscillator then its gain, so a gain pairs backwards.
+// card. Each voice makes its oscillator then its gain, so createGain attaches
+// to the most recent oscillator.
 
 export interface FakeVoice {
   type: string;

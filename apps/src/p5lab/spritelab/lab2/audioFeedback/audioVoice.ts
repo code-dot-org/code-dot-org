@@ -3,8 +3,8 @@ export interface Voice {
   gain: GainNode;
 }
 
-// Browsers stay silent until the user has clicked something, and Safari
-// parks a context at 'interrupted' after a call takes the audio away.
+// Browsers keep a context suspended until a user gesture, and Safari leaves
+// one 'interrupted' after a phone call or another app takes the audio.
 export function wake(context: AudioContext): void {
   if (context.state !== 'running' && context.state !== 'closed') {
     context.resume().catch(() => undefined);

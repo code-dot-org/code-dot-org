@@ -23,7 +23,7 @@ import {ProximityDistances} from './proximityAudio';
 /** What the engine knows about the player after this frame's physics. */
 export interface ObservedFrame {
   sprite: PhysicsSprite;
-  /** Where the keys asked the player to be, before the walls had their say. */
+  /** Where the keys asked the player to be, before collisions were resolved. */
   requestedX: number;
   requestedY: number;
   gravity: number;
@@ -59,7 +59,8 @@ export function createPlayerObserver(
     listeners,
 
     observe({sprite, requestedX, requestedY, gravity, walls, view}) {
-      // Weightless, the player steers: nothing to stand on or fall from.
+      // With no gravity the player steers freely: there is no ground to stand
+      // on or fall from.
       const weightless = gravity === 0;
       const grounded = weightless || isSupported(sprite, walls, view, gravity);
       const first = previous === null;
@@ -69,14 +70,15 @@ export function createPlayerObserver(
       const moved = sprite.position.x - previousX;
       // The first frame has no previous position, so nothing was requested.
       const requested = first ? 0 : requestedX - previousX;
-      // Positive is away from the ground, whichever way gravity points.
-      // Weightless there is no ground: it is the way the keys asked to go,
-      // so a refused move up or down both count as a bump.
+      // Positive is away from the ground, whichever way gravity points. With
+      // no gravity it is the direction the keys asked for, so a refused move
+      // up or down is a bump either way.
       const up = weightless
         ? Math.sign(requestedY - previousY)
         : -Math.sign(gravity);
-      // Faces the key rather than the ground gained, so turning into a wall
-      // faces it, and keeps facing while still, so a warning holds on a pause.
+      // Facing follows the key when a move was refused, so a player pressed
+      // against a wall faces it, and holds while still, so the warning tone
+      // holds too.
       facing = nextFacing(facing, isMoving(moved) ? moved : requested);
       const direction = facing === 'left' ? -1 : 1;
 
@@ -101,7 +103,7 @@ export function createPlayerObserver(
       if (listeners.onProximity) {
         listeners.onProximity({
           wall: distanceToWallAhead(sprite, direction, walls, view, gravity),
-          // Mid-jump the drop ahead is being cleared, not approached.
+          // In the air the drop ahead is being jumped over, not approached.
           edge:
             grounded && !weightless
               ? distanceToEdgeAhead(sprite, direction, walls, view, gravity)

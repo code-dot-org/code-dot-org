@@ -20,7 +20,8 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
-// Read when focus reaches the game. The play-by-play is all sound.
+// Read by a screen reader when focus reaches the game, which otherwise
+// reports itself only in sound.
 const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
 
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale

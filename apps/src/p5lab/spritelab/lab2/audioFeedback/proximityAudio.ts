@@ -1,12 +1,12 @@
 // A steady tone per hazard, growing louder as the player nears it. Both
-// hold their pitch, because a sliding note means height (heightTone.ts).
+// hold their pitch; a sliding pitch is heightTone's signal for height.
 
 import {endVoice, startVoice, Voice, wake} from './audioVoice';
 
 // How far off a hazard starts to be heard, in pixels: about two tiles.
 export const PROXIMITY_RANGE = 100;
 
-// A fifth apart, which stays clearest when both sound at once.
+// A musical fifth apart, so the two stay distinct when heard together.
 const WALL_HZ = 200;
 const EDGE_HZ = 300;
 
@@ -27,12 +27,13 @@ export interface ProximityAudio {
   stop(): void;
 }
 
-/** Loudness, 0 (too far) to 1 (touching). Squared: open ground is quiet. */
+/** Loudness, 0 (too far) to 1 (touching). Squared, so it stays quiet until
+    the hazard is close. */
 export function proximityLevel(
   distance: number,
   range: number = PROXIMITY_RANGE
 ): number {
-  // Negated, so Infinity and NaN land here too.
+  // Written this way so Infinity and NaN also return 0.
   if (!(distance < range)) {
     return 0;
   }

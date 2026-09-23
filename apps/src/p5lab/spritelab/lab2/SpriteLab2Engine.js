@@ -321,7 +321,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
-    // A fresh run is a fresh player, not a stride across the map.
+    // A new run starts the player's history over, so the spawn is not heard
+    // as a move.
     this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
@@ -547,7 +548,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
-    // The name loads no library; the physics are engine-owned.
+    // zGameDev names no real library; it only turns on the engine's platform
+    // physics.
     this.usesPlatformPhysics_ = usesPlatformPhysics(helperLibraries);
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
@@ -1057,7 +1059,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
-    // The one point holding both what was asked for and what was allowed.
+    // Both the requested and the resolved positions are known here, so this
+    // is where the observer is fed.
     this.observePlayer_(players, walls, view);
   }
 
@@ -1071,7 +1074,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.playerObserver_?.forget();
   }
 
-  // First player only: the controls drive the whole group as one.
+  // Only the first player is observed; the controls move every player alike.
   observePlayer_(players, walls, view) {
     const observer = this.playerObserver_;
     if (!observer) {

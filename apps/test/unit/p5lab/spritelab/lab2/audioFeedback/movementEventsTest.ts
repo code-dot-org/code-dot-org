@@ -28,7 +28,7 @@ describe('SpriteLab2 movementEvents', () => {
     frames.map(f => movementEvents(state, f));
 
   it('is silent on the first frame of a run', () => {
-    // A spawn is a position, not a stride.
+    // Appearing somewhere is not a move.
     expect(run(STILL)).toEqual([[]]);
   });
 
@@ -93,8 +93,8 @@ describe('SpriteLab2 movementEvents', () => {
   });
 
   it('reports a step the wall only stopped partway', () => {
-    // Release the key and no later frame catches it, so it lands here —
-    // and the two px that did happen still earn their step.
+    // No later frame would show the refusal, so it is reported now. The two
+    // px that did happen still count toward a step.
     expect(run(frame({moved: 2, requested: 4}))).toEqual([['step', 'blocked']]);
   });
 
