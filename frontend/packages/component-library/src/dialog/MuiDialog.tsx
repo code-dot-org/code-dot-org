@@ -80,7 +80,11 @@ const MuiDialog: React.FunctionComponent<MuiDialogProps> = ({
       mode={mode}
       className={classNames(moduleStyles.dialog, className)}
       aria-label={ariaLabel}
-      aria-labelledby={ariaLabel ? ariaLabelledBy : (ariaLabelledBy ?? titleId)}
+      // The h2 names the dialog only when it has text; pointing at an empty
+      // heading would silence MuiCustomDialog's missing-name warning.
+      aria-labelledby={
+        ariaLabelledBy ?? (!ariaLabel && title ? titleId : undefined)
+      }
       {...customDialogProps}
     >
       <div className={moduleStyles.dialogTextSection}>

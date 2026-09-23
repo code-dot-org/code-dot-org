@@ -7,8 +7,8 @@
 // to the panel border and grows it. MUI Paper is a scrolling flex column, which
 // contains that margin and lays out consumers' children as flex items, and
 // caps itself at the viewport minus 64px where the legacy panel has no cap.
-// muiDialog.module.scss puts flex back for the standard dialog; it loads after
-// this sheet because MuiDialog imports MuiCustomDialog before its own styles.
+// muiDialog.module.scss puts flex back for the standard dialog with a
+// three-class selector, so load order does not matter.
 .customDialog:global(.MuiDialog-paper) {
   position: relative;
   display: block;

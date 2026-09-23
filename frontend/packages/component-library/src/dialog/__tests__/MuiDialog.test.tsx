@@ -57,6 +57,16 @@ describe('Design System - MuiDialog', () => {
     expect(dialog).not.toHaveAttribute('aria-labelledby');
   });
 
+  it('does not point aria-labelledby at an empty title, and warns', () => {
+    renderDialog({title: undefined});
+
+    const dialog = screen.getByRole('alertdialog');
+    expect(dialog).not.toHaveAttribute('aria-labelledby');
+    expect(console.warn).toHaveBeenCalledWith(
+      expect.stringContaining('aria-label or aria-labelledby'),
+    );
+  });
+
   it('renders the primary and secondary buttons, secondary first', () => {
     renderDialog();
 

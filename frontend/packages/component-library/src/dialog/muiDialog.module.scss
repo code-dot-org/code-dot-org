@@ -4,9 +4,10 @@
 // the host page injects after this sheet. `.MuiDialog-paper` is the stable MUI
 // class on the panel, the same element `.dialog` lands on.
 
-// Same specificity as muiCustomDialog.module.scss's `display: block` on the
-// panel; this sheet wins by loading later (see the note there).
-.dialog:global(.MuiDialog-paper) {
+// Three classes: this must outrank muiCustomDialog.module.scss's two-class
+// `display: block` on the same panel whatever order the sheets load in.
+// `.MuiPaper-root` is the other stable MUI class on that element.
+.dialog:global(.MuiDialog-paper.MuiPaper-root) {
   display: flex;
   flex-direction: column;
   align-items: center;
