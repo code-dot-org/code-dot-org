@@ -2042,6 +2042,7 @@ __metadata:
     react-dom: "catalog:"
     react-konva: "npm:18"
     react-redux: "catalog:"
+    react-router-dom: "npm:^6.26.0"
     sass: "catalog:"
     stylelint: "catalog:"
     typescript: "catalog:"
@@ -5974,6 +5975,13 @@ __metadata:
   peerDependencies:
     release-it: ^18.0.0
   checksum: 10c0/94acca963bccbb1c89a8be3e7972000dad0a23ac9a86193d9df8f13abd951277859d4f22f74cb2909138de2c5853efb3e700ec40682e4a610a4811af0b340775
+  languageName: node
+  linkType: hard
+
+"@remix-run/router@npm:1.23.4":
+  version: 1.23.4
+  resolution: "@remix-run/router@npm:1.23.4"
+  checksum: 10c0/ef17eb2a606c125f09c55683585099725421af1c11f1c1d1c3841fe4eea3f99eb56b26ecbb17429a173c704ecae336c37e0d74855faa9330667433ef4f419436
   languageName: node
   linkType: hard
 
@@ -19912,6 +19920,30 @@ __metadata:
   version: 0.18.0
   resolution: "react-refresh@npm:0.18.0"
   checksum: 10c0/34a262f7fd803433a534f50deb27a148112a81adcae440c7d1cbae7ef14d21ea8f2b3d783e858cb7698968183b77755a38b4d4b5b1d79b4f4689c2f6d358fff2
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^6.26.0":
+  version: 6.30.6
+  resolution: "react-router-dom@npm:6.30.6"
+  dependencies:
+    "@remix-run/router": "npm:1.23.4"
+    react-router: "npm:6.30.6"
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 10c0/57dbb2ae4ac787f78c4d10b764c1c5223635378033e33dda4e0a4417144ae847fb43dc98008075951826258287c27c67729ca713c90957cf2ecf9055561bdc2e
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.30.6":
+  version: 6.30.6
+  resolution: "react-router@npm:6.30.6"
+  dependencies:
+    "@remix-run/router": "npm:1.23.4"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 10c0/d101388d92a44e159ef30dd2402a7f7b6aace8f837bb42aed1f8a6b3a4eff769d1822bf69382f0acb85a790628dac081c22bedb2bca12707e0e5e91427010fc3
   languageName: node
   linkType: hard
 
