@@ -116,7 +116,7 @@ import {isPointerClick} from './blurAfterPointerClick';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
-import GenerateSpriteLab from './GenerateSpriteLab';
+import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -501,6 +501,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         initialSources.animations ?? {orderedKeys: [], propsByKey: {}}
       ),
     [initialSources]
+  );
+  // The guide's rendered size: the Play tab lays the game out around it.
+  // Reports repeat the same size through an animation; an equal one keeps
+  // the old object so nothing below re-renders.
+  const [guideSize, setGuideSize] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
+  const handleGuideLayout = useCallback(
+    (size: {width: number; height: number}) =>
+      setGuideSize(prev =>
+        prev && prev.width === size.width && prev.height === size.height
+          ? prev
+          : size
+      ),
+    []
   );
   const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
@@ -1754,6 +1770,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <Playspace
             boxRef={playspaceRef}
             mode={playspaceMode}
+            guideSize={levelProperties.levelMode ? guideSize : null}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
             loading={externalLoading}
@@ -1762,11 +1779,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           />
 
           {/* Floating guide, when the level asks for it; it follows the
-          student across every tab. */}
+          student across every tab, narrowing on Play to leave the game more
+          space. */}
           {!!levelProperties.levelMode && (
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
+              width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
+              onLayout={handleGuideLayout}
               instructions={guide.text}
+              collapsedText={guide.collapsedText}
               showContinue={guide.showContinue}
               levelProperties={levelProperties}
             />
