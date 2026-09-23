@@ -1,7 +1,7 @@
 # A named allowlist, deliberately narrower than the legacy account-edit
 # payload. NEVER serialize: oauth/refresh tokens, authentication_id,
-# auth-option ids, hashed_email, encrypted_password, secret words/pictures,
-# failed_attempts, locked_at, IPs, or admin flags. Field visibility (student
+# hashed_email, encrypted_password, secret words/pictures, failed_attempts,
+# locked_at, IPs, or admin flags. Field visibility (student
 # email masking, edit-affordance gating) is computed server-side, not the client.
 class User::SettingsSerializer
   def initialize(user, country_code:)
@@ -42,15 +42,18 @@ class User::SettingsSerializer
       age_options: age_options,
       us_state_options: us_state_options,
       **educator_profile,
+      **integrations,
     }
   end
 
   private attr_reader :user
 
-  # Provider type and email only — never the per-option id or hashed_email.
+  # The id names the option to disconnect, which only finds the current user's
+  # own options; never the hashed_email.
   private def serialized_authentication_options
     user.authentication_options.map do |option|
       {
+        id: option.id,
         credential_type: option.credential_type,
         email: option.email.presence,
       }
@@ -80,6 +83,38 @@ class User::SettingsSerializer
       educator_role_options: educator_role_options,
       school_info: school_info,
     }
+  end
+
+  private def integrations
+    return {} unless DCDO.get('settings-integrations-tab', false)
+
+    {
+      integrations: {
+        can_manage_linked_accounts: user.migrated? && !Policies::Lti.restricted_user?(user),
+        is_google_classroom_student: user.google_classroom_student?,
+        is_clever_student: user.clever_student?,
+        personal_account_linking_enabled: Policies::ChildAccount.personal_account_linking_enabled?(
+          user, request_in_usa: Policies::User.in_usa?(@country_code)
+        ),
+        lms_name: Queries::Lti.get_lms_name_from_user(user),
+        **lti_roster_sync,
+      },
+    }
+  end
+
+  # Present only where legacy shows the setting: LTI teachers, outside the
+  # Global Edition regions whose config hides LtiRosterSyncSettings.
+  private def lti_roster_sync
+    return {} unless user.teacher? && Policies::Lti.lti?(user) && lti_roster_sync_shown_in_region?
+
+    {lti_roster_sync_enabled: user.lti_roster_sync_enabled == true}
+  end
+
+  private def lti_roster_sync_shown_in_region?
+    pages = Cdo::GlobalEdition.region_config(Cdo::GlobalEdition.current_region, :pages) || []
+    pages.none? do |page|
+      page[:path] == '/users/edit' && page.dig(:components, :LtiRosterSyncSettings) == false
+    end
   end
 
   # From the canonical Rails source; :label becomes :text to match the other
