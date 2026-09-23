@@ -37,6 +37,8 @@ import {requestStyleImport} from '../styles/styleImport';
  * than a menu (`actors/ActorPickerDialog`).
  */
 export const ACTORS_FOLDER = 'actors';
+/** …and the world's, which holds exactly one file (specs/MAP_EVENTS_PLAN.md). */
+export const WORLDS_FOLDER = 'worlds';
 
 /**
  * The sprites' folder, named for the same reason: its button opens the picture
@@ -113,10 +115,18 @@ export interface FolderMenu {
  */
 export const FOLDER_MENUS: readonly FolderMenu[] = [
   {
-    folder: 'worlds',
-    label: 'Worlds',
+    // ONE WORLD PER PROJECT, so this button opens it rather than listing a
+    // folder. A world is a whole PROGRAM — nothing composes them, and the
+    // compiler has one entry — so levels, screens and dialogs are maps and
+    // there is never a second world to choose between
+    // (specs/MAP_EVENTS_PLAN.md).
+    //
+    // `makes` is empty for the same reason. "New world" offered a second
+    // program in the same folder, which nothing would have run.
+    folder: WORLDS_FOLDER,
+    label: 'World',
     icon: 'planet-ringed',
-    makes: [{label: 'New world', extension: 'world', placeholder: 'My World'}],
+    makes: [],
   },
   {
     folder: SPRITES_FOLDER,

@@ -84,7 +84,9 @@ it('renders the World Lab shell from the default project', async () => {
   expect(tab.title).toBe('main.world');
   // …and the way around the project is the folder menus, one button per
   // folder, in the tab bar (`files/FileMenus`).
-  expect(screen.getByRole('button', {name: 'Worlds'})).toBeTruthy();
+  // Singular, and the one button that is not a menu: there is one world per
+  // project, so it opens (specs/MAP_EVENTS_PLAN.md).
+  expect(screen.getByRole('button', {name: 'World'})).toBeTruthy();
   expect(screen.getByRole('button', {name: 'Actors'})).toBeTruthy();
   // …and there is no file tree, nor a way to bring one back: the menus are the
   // way around a World project, and a tree beside them could rename a FILE,

@@ -30,8 +30,20 @@ const SOURCE: MultiFileSource = {
     f2: {id: 'f2', name: 'actors', parentId: '0', open: true},
     f3: {id: 'f3', name: 'sprites', parentId: '0', open: true},
     f4: {id: 'f4', name: 'backgrounds', parentId: '0', open: true},
+    // …and the world, which holds exactly one file and whose button opens it
+    // rather than listing it (specs/MAP_EVENTS_PLAN.md).
+    f5: {id: 'f5', name: 'worlds', parentId: '0', open: true},
   },
   files: {
+    w: {
+      id: 'w',
+      name: 'main.world',
+      language: 'world',
+      contents: JSON.stringify({
+        blocks: {blocks: [{type: 'world_world', fields: {NAME: 'My World'}}]},
+      }),
+      folderId: 'f5',
+    },
     a: {
       id: 'a',
       name: 'gravity.rule',
@@ -241,7 +253,9 @@ beforeEach(() => {
 
 /** Every folder button, in the order the tab bar puts them. */
 const FOLDERS = [
-  'Worlds',
+  // Singular, and the only button that is not a menu: there is one world per
+  // project, so it OPENS (specs/MAP_EVENTS_PLAN.md).
+  'World',
   'Sprites',
   'Backgrounds',
   'Actors',
@@ -710,12 +724,17 @@ describe('the file menus', () => {
     expect(screen.getByRole('button', {name: 'Upload'})).toBeTruthy();
   });
 
-  it('does not offer an upload where one would mean nothing', () => {
-    // A world is authored, not brought in — there is no file on anybody's
-    // machine that is one.
-    openMenu('Worlds');
+  it('opens the world rather than asking which one', () => {
+    // A world is a whole PROGRAM. Nothing composes them and the compiler has
+    // one entry, so levels, screens and dialogs are maps and there is never a
+    // second world to choose between — a menu of one row was a question with
+    // one answer (specs/MAP_EVENTS_PLAN.md).
+    render(<FileMenus />);
+    fireEvent.click(screen.getByRole('button', {name: 'World'}));
 
-    expect(screen.queryByText('Upload…')).toBeNull();
+    expect(activateFile).toHaveBeenCalledWith('w');
+    // …and no menu came up behind it.
+    expect(screen.queryByText('Import…')).toBeNull();
   });
 
   it('still makes nothing where making one from nothing means nothing', () => {

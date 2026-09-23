@@ -97,6 +97,7 @@ import {
   BACKGROUNDS_FOLDER,
   FOLDER_MENUS,
   SPRITES_FOLDER,
+  WORLDS_FOLDER,
   type FolderMenu,
   type Makeable,
 } from './folderMenus';
@@ -1137,6 +1138,22 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
             tooltipDirection="onBottom"
             theme={theme}
             onClick={() => {
+              // THE WORLD OPENS; it does not offer a list. There is one per
+              // project — a world is a whole program, nothing composes them,
+              // and the compiler has one entry — so a menu of one row asking
+              // which world you meant was a question with one answer
+              // (specs/MAP_EVENTS_PLAN.md).
+              //
+              // Falls through to the menu if a project somehow holds two, so
+              // that the button is never a dead end: opening the first and
+              // hiding the second would be worse than saying there are two.
+              if (menu.folder === WORLDS_FOLDER) {
+                const worlds = filesIn(WORLDS_FOLDER);
+                if (worlds.length === 1) {
+                  ops.activateFile(worlds[0].file.id);
+                  return;
+                }
+              }
               if (menu.folder === ACTORS_FOLDER) {
                 setPicking(true);
                 return;
