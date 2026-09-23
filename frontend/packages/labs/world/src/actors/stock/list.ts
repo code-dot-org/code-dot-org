@@ -39,6 +39,7 @@ import {
   type BlockParam,
   chain,
   corner,
+  defineBlock,
   defineEvent,
   defineProperty,
   fill,
@@ -255,26 +256,52 @@ const choose = (n: () => object) =>
   ]);
 
 /**
- * Take row `n` out, if a project allows it and there is such a row.
+ * `take out row ⟨n⟩` — a row removed, if a project allows it and it exists.
  *
- * The word is read BEFORE the row goes, which is the whole of why it is a
- * `let` and not two reads: `item ⟨n⟩ of` after the removal answers with
- * whatever moved up into its place.
+ * The word is read BEFORE the row goes, which is the whole of why the emit
+ * comes first: `item ⟨n⟩ of` after the removal answers with whatever moved up
+ * into its place.
+ *
+ * A BLOCK OF ITS OWN, and the row is its PARAMETER, which is the point. Three
+ * sites take a row out — a swipe either way, and Delete — and each wrote the
+ * body out in full; worse, the body names the row five times, so each swipe
+ * expanded `which row is the pointer over` five times over. As a parameter it
+ * is worked out once at the call site and read as a name inside, and the file
+ * says `take out row ⟨…⟩` where it used to carry two hundred blocks.
+ *
+ * PRIVATE: a file that does not hold a list can mean nothing by it
+ * (`extensions/blockVisibility`).
  */
-const remove = (n: () => object) =>
+const TAKEN: BlockParam = {
+  id: 'listTaken',
+  name: 'row',
+  type: 'number',
+  binds: 'Number',
+};
+
+/** `⟨row⟩` — which row `take out row` was called about. */
+const taken = () => paramValue(TAKEN);
+
+/** `take out row ⟨n⟩` — the call, which is what the three sites say. */
+const takeOutRow = (n: object) => ({
+  type: `world_do_${OWN}_TakeOutRowAction`,
+  inputs: {VALUE: n, ACTOR: me()},
+});
+
+const removeBody = () =>
   either(
     both(
       canRemove(),
-      both(compare('GTE', n(), num(1)), compare('LTE', n(), count())),
+      both(compare('GTE', taken(), num(1)), compare('LTE', taken(), count())),
     ),
     [
       {
         type: `world_emit_${OWN}_LosesAtEvent`,
-        inputs: {ACTOR: me(), WORD: item(n()), PLACE: n()},
+        inputs: {ACTOR: me(), WORD: item(taken()), PLACE: taken()},
       },
       {
         type: `world_cut_${OWN}_ItemsProperty`,
-        inputs: {ACTOR: me(), PLACE: n()},
+        inputs: {ACTOR: me(), PLACE: taken()},
       },
       // The highlight cannot point past the end, and the window cannot sit
       // below a list that just got shorter.
@@ -344,6 +371,17 @@ export const listActor = actorFile(
     // colours this paints with.
     actsLike('actors/label'),
     defineProperty('words', 'items'),
+    // What a swipe and Delete both do, said once. Its row is a PARAMETER, so
+    // `which row is the pointer over` is worked out at the call site instead
+    // of five times inside the body.
+    defineBlock({
+      private: true,
+      say: ['take out row', TAKEN],
+      description:
+        'Take a row out of this list, if the project allows it and there is ' +
+        'such a row — saying which word went, before it goes.',
+      body: [removeBody()],
+    }),
     defineProperty('number', 'scroll', '0'),
     defineProperty('number', 'highlighted', '1'),
     // Whether a row may be taken out. FALSE unless a project says otherwise:
@@ -384,6 +422,7 @@ export const listActor = actorFile(
       ROW_VARIABLE,
       asVariable(MOVEMENT),
       asVariable(BY),
+      asVariable(TAKEN),
       asVariable(WORD),
       asVariable(PLACE),
     ],
@@ -440,14 +479,14 @@ export const listActor = actorFile(
         type: 'world_on_Gestures_IsSwipedEvent',
         fields: {FILTER0: way},
         inputs: {ACTOR: me()},
-        next: {block: remove(rowUnderPointer)},
+        next: {block: takeOutRow(rowUnderPointer())},
       })),
       // …and Delete does it from the keyboard, on the highlighted row.
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'delete'},
         inputs: {ACTOR: me()},
-        next: {block: either(focused(), [remove(highlighted)])},
+        next: {block: either(focused(), [takeOutRow(highlighted())])},
       },
       // Enter chooses whatever the highlight is on.
       {
