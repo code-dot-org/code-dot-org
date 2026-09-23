@@ -8213,6 +8213,46 @@ const BOOLEAN_OPTIONS: Array<[string, string]> = [
   ['false', 'false'],
 ];
 
+/**
+ * A boolean property's default: `true` or `false`, from anything at all.
+ *
+ * A DROPDOWN IS THE ONE STRICT READER of this value and the strictness bought
+ * nothing. Blockly checks a value against the options BEFORE any validator of
+ * ours runs, so a stored `FALSE` — or an empty default, which is every
+ * property that never stated one — was refused with "Cannot set the
+ * dropdown's value to an unavailable option" and the field kept whatever it
+ * already had. The console said so; the file did not, and the next save wrote
+ * the field's value back. Notes' `saved` defaults TRUE and would have been
+ * quietly written down as false.
+ *
+ * Everything downstream is already this lenient: `ruleMeta.propertyDefault`
+ * lowercases and calls anything but `true` false, which is what makes the
+ * runtime right while the editor complained. So this asks THAT, rather than
+ * deciding again.
+ */
+class BooleanDefaultField extends FieldDropdownClass {
+  // Both of Blockly's overloads, restated: collapsing them to one changes the
+  // field's value type and `appendField` stops accepting it.
+  protected override doClassValidation_(
+    newValue: string,
+  ): string | null | undefined;
+  protected override doClassValidation_(newValue?: string): string | null;
+  protected override doClassValidation_(newValue?: string): string | null {
+    return truthOf(newValue);
+  }
+}
+
+/**
+ * What the RUNTIME makes of a stored boolean default, said as a field value.
+ *
+ * Through `propertyDefault` rather than beside it, so the two cannot drift:
+ * the bug this fixes was the editor and the runtime disagreeing about one
+ * string, and a second implementation of the same rule is how that happens
+ * again.
+ */
+const truthOf = (value: unknown): 'true' | 'false' =>
+  propertyDefault('boolean', value) ? 'true' : 'false';
+
 /** The vector field's class, for the one place that builds one by hand. */
 const VectorField = fieldVectorPlugin.field as new (
   value: VectorValue,
@@ -8319,13 +8359,11 @@ function shapeDefaultField(block: Block, type: string): void {
   } else if (wanted === 'color') {
     row.appendField(new ColorField(text), DEFAULT_FIELD);
   } else if (wanted === 'boolean') {
-    // A validator rather than an order: a dropdown given a value it does not
-    // offer falls back to its FIRST option, so a default of `` — which every
-    // reader has always taken as false — would come back true. This says so.
-    const truth = new FieldDropdownClass(BOOLEAN_OPTIONS, value =>
-      String(value) === 'true' ? 'true' : 'false',
-    );
-    truth.setValue(text === 'true' ? 'true' : 'false');
+    // Lenient about what it is GIVEN, for the reasons on the class: a value
+    // the options do not hold would otherwise be refused and the field left
+    // showing something the file does not say.
+    const truth = new BooleanDefaultField(BOOLEAN_OPTIONS);
+    truth.setValue(truthOf(text));
     row.appendField(truth, DEFAULT_FIELD);
   } else if (wanted === 'vector') {
     row.appendField(new VectorField(point), DEFAULT_FIELD);

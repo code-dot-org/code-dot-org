@@ -49,6 +49,17 @@ const COUNT = {
   fields: {TYPE: 'number', ACCESS: 'writable', NAME: 'score', DEFAULT: '0'},
 };
 
+/** `define boolean ⟨ready⟩ with default ⟨…⟩`, however the file spells it. */
+const truth = (stored: string) => ({
+  type: 'world_rule_property',
+  fields: {
+    TYPE: 'boolean',
+    ACCESS: 'writable',
+    NAME: 'ready',
+    DEFAULT: stored,
+  },
+});
+
 /** The `define world` block, out of the palette, with its generator. */
 const worldBlock = () =>
   buildDomainPalette([]).blocks.find(
@@ -74,6 +85,31 @@ describe('a `.world` file’s own properties', () => {
       default: 0,
       scope: 'world',
     });
+  });
+
+  it('read a boolean default the way the FIELD that edits it does', () => {
+    // THE ONE STRING THE EDITOR AND THE RUNTIME DISAGREED ABOUT. A boolean's
+    // default is edited by a dropdown offering `true` and `false`, and Blockly
+    // checks a stored value against a dropdown's options before any validator
+    // runs — so a file saying `TRUE` was refused with "Cannot set the
+    // dropdown's value to an unavailable option", the field kept what it had,
+    // and the next save wrote that down instead. Notes' `saved` defaults true
+    // and would have been quietly written as false (`BooleanDefaultField`).
+    //
+    // The parse was never strict, which is why it only ever showed up as
+    // console noise. This pins the reading both ends now share.
+    for (const stored of ['true', 'TRUE', ' True ']) {
+      expect(
+        parseWorldOwnMeta('worlds/main', worldFile([truth(stored)]))!
+          .properties[0],
+      ).toMatchObject({id: 'ready', default: true});
+    }
+    for (const stored of ['false', 'FALSE', '', 'nonsense']) {
+      expect(
+        parseWorldOwnMeta('worlds/main', worldFile([truth(stored)]))!
+          .properties[0],
+      ).toMatchObject({id: 'ready', default: false});
+    }
   });
 
   it('are nobody else’s: an actor parse finds none in a world', () => {

@@ -421,7 +421,7 @@ const MAIN_WORLD = JSON.stringify(
                   TYPE: 'boolean',
                   ACCESS: 'writable',
                   NAME: 'saved',
-                  DEFAULT: 'TRUE',
+                  DEFAULT: 'true',
                 },
               },
               // …and whether there was anything to come back to. False on a
@@ -433,7 +433,7 @@ const MAIN_WORLD = JSON.stringify(
                   TYPE: 'boolean',
                   ACCESS: 'writable',
                   NAME: 'remembered',
-                  DEFAULT: 'FALSE',
+                  DEFAULT: 'false',
                 },
               },
               // …AND WHAT THE WRITE SCREEN SAYS BACK. Both events are the
