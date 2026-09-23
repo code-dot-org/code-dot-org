@@ -392,6 +392,42 @@ export const actorFile = (
     2,
   );
 
+/**
+ * `⟨a⟩ + ⟨b⟩ + ⟨c⟩` — words joined in the order they are read.
+ *
+ * THE ADAPTER IS THE CHAIN, not a conversion. A line of text is built by
+ * hanging the rest of it off a block's `ADD` socket, and only a few blocks
+ * have one: a text literal, a new line, and `as text`. So a COMPUTED piece —
+ * a substring, say — has to go through `as text` in order to carry what comes
+ * after it. That is what every part but the last is wrapped for.
+ *
+ * THE LAST PART IS NOT WRAPPED, because it carries nothing: it plugs straight
+ * into the socket above it. `as text` means "say this value as words", and one
+ * put on something already words says the words needed turning into words —
+ * the same mistake `domainBlocks.worldAsText` already warns about, and one
+ * that shows: a splice of two substrings drew three blocks where it needed
+ * two, with a pair of quotes round the end of every line.
+ *
+ * SO EVERY PART MUST ALREADY BE WORDS. A number or a choice is wrapped by the
+ * caller, which is where that decision belongs: `"n = " + 1 + 2` is "n = 12"
+ * and `1 + 2 + " left"` is "3 left", the same three links meaning two
+ * different things.
+ *
+ * One part joins nothing and is returned as it is.
+ */
+export const joined = (parts: object[]): object => {
+  let chained = parts[parts.length - 1];
+  for (let at = parts.length - 2; at >= 0; at -= 1) {
+    chained = {
+      block: {
+        type: 'world_as_text',
+        inputs: {VALUE: parts[at], ADD: chained},
+      },
+    };
+  }
+  return chained;
+};
+
 /** `set fill ⟨color⟩`. */
 export const fill = (color: object) => ({
   type: 'world_pen_fill',

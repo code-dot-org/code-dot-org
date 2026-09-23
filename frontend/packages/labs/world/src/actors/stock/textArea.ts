@@ -82,6 +82,7 @@ import {
   defineProperty,
   drawParagraph,
   fill,
+  joined,
   me,
   noOutline,
   num,
@@ -141,19 +142,6 @@ const compare = (op: 'LT' | 'LTE' | 'GT', a: object, b: object) => ({
 const clamp = (value: object, low: object, high: object) => ({
   block: {type: 'math_constrain', inputs: {VALUE: value, LOW: low, HIGH: high}},
 });
-/** Several strings joined left to right (`textInput.joined`). */
-const joined = (parts: object[]): object => {
-  let chained: object | undefined;
-  for (let at = parts.length - 1; at >= 0; at -= 1) {
-    chained = {
-      block: {
-        type: 'world_as_text',
-        inputs: {VALUE: parts[at], ...(chained ? {ADD: chained} : {})},
-      },
-    };
-  }
-  return chained as object;
-};
 const literal = (text: string) => ({
   block: {type: 'text', fields: {TEXT: text}},
 });

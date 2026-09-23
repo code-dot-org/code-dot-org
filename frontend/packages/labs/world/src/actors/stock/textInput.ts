@@ -78,6 +78,7 @@ import {
   defineProperty,
   drawParagraph,
   fill,
+  joined,
   me,
   noOutline,
   num,
@@ -128,27 +129,6 @@ const onlyIf = (test: object, body: object[]) => ({
 const both = (a: object, b: object) => ({
   block: {type: 'logic_operation', fields: {OP: 'AND'}, inputs: {A: a, B: b}},
 });
-
-/**
- * Several strings, joined left to right.
- *
- * `as text` on the FIRST link, and it is not the redundant kind: a chain's
- * first block has to carry a socket, and `“ ⟨…⟩ ”` is the only string block
- * that does — `text` has a field where its words go. Every link after it plugs
- * into the one before (`domainBlocks.worldAsText`).
- */
-const joined = (parts: object[]): object => {
-  let chained: object | undefined;
-  for (let at = parts.length - 1; at >= 0; at -= 1) {
-    chained = {
-      block: {
-        type: 'world_as_text',
-        inputs: {VALUE: parts[at], ...(chained ? {ADD: chained} : {})},
-      },
-    };
-  }
-  return chained as object;
-};
 
 /** `⟨text⟩ of this actor`, which is what a field holds. */
 const held = () => textOf('TextProperty');
