@@ -1,8 +1,7 @@
-import Konva from 'konva';
-import {
-  type Dispatch,
-  type FC,
-  type SetStateAction,
+import React, {
+  Dispatch,
+  FC,
+  SetStateAction,
   useCallback,
   useEffect,
   useRef,
@@ -15,6 +14,12 @@ import styles from './video-canvas.module.scss';
 // 'edit': live stage, recorder stopped — where decorations get placed before
 // a take, and where a take is discarded to place more.
 export type VideoCanvasMode = 'edit' | 'recording' | 'preview';
+
+// Node types come through react-konva: konva itself is ESM-only, which this
+// CommonJS-compiled package cannot import.
+type StageNode = React.ElementRef<typeof Stage>;
+type LayerNode = React.ElementRef<typeof Layer>;
+type ImageNode = React.ElementRef<typeof KonvaImage>;
 
 const RING_RADIUS = 26;
 const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
@@ -34,8 +39,8 @@ const CountdownRing: FC<CountdownRingProps> = ({
     timeRemaining <= 5
       ? '#ff4444'
       : timeRemaining <= 10
-        ? '#ffd600'
-        : '#ffffff';
+      ? '#ffd600'
+      : '#ffffff';
 
   return (
     <div
@@ -92,7 +97,7 @@ function getCoverCrop(
   sourceWidth: number,
   sourceHeight: number,
   targetWidth: number,
-  targetHeight: number,
+  targetHeight: number
 ) {
   const sourceRatio = sourceWidth / sourceHeight;
   const targetRatio = targetWidth / targetHeight;
@@ -141,12 +146,12 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   // reruns when the Layer mounts — it unmounts while the take plays back and
   // remounts on the way to 'edit', since it lives in the same conditional
   // branch as that playback view, and a plain ref wouldn't trigger that.
-  const [layerNode, setLayerNode] = useState<Konva.Layer | null>(null);
+  const [layerNode, setLayerNode] = useState<LayerNode | null>(null);
 
   const wrapperRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const stageRef = useRef<Konva.Stage>(null);
-  const imageNodeRef = useRef<Konva.Image>(null);
+  const stageRef = useRef<StageNode>(null);
+  const imageNodeRef = useRef<ImageNode>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const canvasStreamRef = useRef<MediaStream | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
@@ -174,7 +179,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     if (!navigator.mediaDevices?.getUserMedia) {
       setError(
         'Camera recording is not available on this page. ' +
-          'Try opening the page over HTTPS.',
+          'Try opening the page over HTTPS.'
       );
       return;
     }
@@ -191,7 +196,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     } catch {
       setError(
         'Camera or microphone access was denied. ' +
-          'Please allow access in your browser settings and try again.',
+          'Please allow access in your browser settings and try again.'
       );
     }
   }, [attachStream]);
@@ -209,8 +214,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     return () => {
       streamRef.current?.getTracks().forEach(t => t.stop());
     };
-    // run once on mount; startStream is stable
-  }, []);
+  }, [startStream]);
 
   // Track the wrapper's rendered size so the stage — and thus the recorded
   // output — matches it exactly, at whatever size the surrounding layout
@@ -236,25 +240,25 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     if (!layerNode || !videoEl || !imageNode) return;
     if (!stageSize.width || !stageSize.height) return;
 
-    const anim = new Konva.Animation(() => {
+    let frame = requestAnimationFrame(function draw() {
       const {videoWidth, videoHeight} = videoEl;
-      if (!videoWidth || !videoHeight) return;
-      imageNode.setAttrs({
-        image: videoEl,
-        width: stageSize.width,
-        height: stageSize.height,
-        crop: getCoverCrop(
-          videoWidth,
-          videoHeight,
-          stageSize.width,
-          stageSize.height,
-        ),
-      });
-    }, layerNode);
-    anim.start();
-    return () => {
-      anim.stop();
-    };
+      if (videoWidth && videoHeight) {
+        imageNode.setAttrs({
+          image: videoEl,
+          width: stageSize.width,
+          height: stageSize.height,
+          crop: getCoverCrop(
+            videoWidth,
+            videoHeight,
+            stageSize.width,
+            stageSize.height
+          ),
+        });
+        layerNode.draw();
+      }
+      frame = requestAnimationFrame(draw);
+    });
+    return () => cancelAnimationFrame(frame);
   }, [layerNode, stageSize]);
 
   useEffect(() => {

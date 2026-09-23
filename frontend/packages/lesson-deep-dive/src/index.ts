@@ -8,8 +8,6 @@ export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';
 export {default as ValidatedLevelsBox} from './StudentLessonStats/ValidatedLevelsBox';
-export {default as VideoCanvas} from './ChallengeActivities/VideoCanvas';
-export type {VideoCanvasMode} from './ChallengeActivities/VideoCanvas';
 export {default as VideoRecorder} from './ChallengeActivities/VideoRecorder';
 export {default as VocabularyFlashcards} from './ReviewModalities/VocabularyFlashcards';
 export type {VocabularyItem} from './ReviewModalities/VocabularyFlashcards';

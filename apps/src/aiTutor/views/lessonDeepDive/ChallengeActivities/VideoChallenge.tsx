@@ -1,4 +1,3 @@
-import {VideoCanvas, VideoCanvasMode} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -13,6 +12,7 @@ import {
 } from '../types';
 
 import {requestEvaluation} from './requestEvaluation';
+import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
 

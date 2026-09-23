@@ -1,5 +1,5 @@
-// Stand-in for lesson-deep-dive's VideoCanvas, which needs MediaRecorder,
-// getUserMedia and a Konva canvas — none available under jsdom.
+// Stand-in for aiTutor's VideoCanvas, which needs MediaRecorder, getUserMedia
+// and a Konva canvas — none available under jsdom.
 //
 // Mirrors the real component's two states (`mode`, requested by the caller;
 // `currentMode`, what the recorder is doing) and their timing: a stop reaches
@@ -7,10 +7,10 @@
 // already reads 'edit' (the caller's isRecording flipped, hasRecording
 // hasn't yet) while `currentMode` still shows 'recording'.
 //
-//   jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-//     ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-//     VideoCanvas: jest.requireActual('<path>/stubVideoCanvas').default,
-//   }));
+//   jest.mock(
+//     '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoCanvas',
+//     () => jest.requireActual('<path>/stubVideoCanvas')
+//   );
 
 import React, {FC, useEffect, useRef, useState} from 'react';
 
