@@ -8,11 +8,13 @@ import styles from './quiz-question-card.module.scss';
 interface QuestionTabProps {
   draft: QuizQuestionEditableFields;
   onChange: (draft: QuizQuestionEditableFields) => void;
+  disabled?: boolean;
 }
 
 const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
   draft,
   onChange,
+  disabled,
 }) => (
   <div className={styles.tabContent}>
     <TextField
@@ -21,6 +23,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
       size="m"
       value={draft.questionName}
       onChange={e => onChange({...draft, questionName: e.target.value})}
+      disabled={disabled}
     />
     <TextField
       name="stem"
@@ -28,6 +31,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
       size="m"
       value={draft.stem}
       onChange={e => onChange({...draft, stem: e.target.value})}
+      disabled={disabled}
     />
   </div>
 );

@@ -133,12 +133,24 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
               {
                 value: 'question',
                 text: 'Question',
-                tabContent: <QuestionTab draft={draft} onChange={setDraft} />,
+                tabContent: (
+                  <QuestionTab
+                    draft={draft}
+                    onChange={setDraft}
+                    disabled={isSaving}
+                  />
+                ),
               },
               {
                 value: 'answers',
                 text: 'Answers',
-                tabContent: <AnswersTab draft={draft} onChange={setDraft} />,
+                tabContent: (
+                  <AnswersTab
+                    draft={draft}
+                    onChange={setDraft}
+                    disabled={isSaving}
+                  />
+                ),
               },
               {
                 value: 'usage',

@@ -106,6 +106,28 @@ describe('QuizQuestionCard', () => {
     expect(screen.getByRole('button', {name: 'Discard changes'})).toBeEnabled();
   });
 
+  it('disables editable fields while a save is in flight', async () => {
+    let resolveUpdate: (id: number) => void = () => {};
+    const onUpdate = jest.fn(
+      () =>
+        new Promise<number>(resolve => {
+          resolveUpdate = resolve;
+        })
+    );
+    renderCard({isExpanded: true, onUpdate});
+
+    fireEvent.change(screen.getByLabelText('Internal name'), {
+      target: {value: 'Something else'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+
+    expect(screen.getByLabelText('Internal name')).toBeDisabled();
+
+    await act(async () => {
+      resolveUpdate(7);
+    });
+  });
+
   it('discards edits back to the saved question', () => {
     renderCard({isExpanded: true});
 

@@ -12,6 +12,7 @@ import styles from './quiz-question-card.module.scss';
 interface AnswersTabProps {
   draft: QuizQuestionEditableFields;
   onChange: (draft: QuizQuestionEditableFields) => void;
+  disabled?: boolean;
 }
 
 // MultipleChoiceQuestion#validate_choices rejects fewer than 2 choices.
@@ -32,6 +33,7 @@ function nextChoiceId(existingIds: string[]): string {
 const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   draft,
   onChange,
+  disabled,
 }) => {
   const updateChoiceText = (id: string, text: string) => {
     onChange({
@@ -70,6 +72,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
                 className={styles.optionText}
                 value={choice.text}
                 onChange={e => updateChoiceText(choice.id, e.target.value)}
+                disabled={disabled}
               />
               <IconButton
                 aria-label="Mark as correct answer"
@@ -79,6 +82,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
                   [styles.correctToggleSelected]: isCorrect,
                 })}
                 type="button"
+                disabled={disabled}
                 onClick={() => onChange({...draft, correctChoiceId: choice.id})}
               >
                 <FontAwesomeV6Icon iconName="check" />
@@ -88,7 +92,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
                 size="small"
                 color="error"
                 type="button"
-                disabled={draft.choices.length <= MIN_CHOICES}
+                disabled={disabled || draft.choices.length <= MIN_CHOICES}
                 onClick={() => removeChoice(choice.id)}
               >
                 <FontAwesomeV6Icon iconName="trash" />
@@ -103,6 +107,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
         color="secondary"
         size="small"
         type="button"
+        disabled={disabled}
         onClick={addChoice}
         startIcon={<FontAwesomeV6Icon iconName="plus" />}
       >
@@ -116,6 +121,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
           rows={4}
           value={draft.explanation ?? ''}
           onChange={e => onChange({...draft, explanation: e.target.value})}
+          disabled={disabled}
         />
       </FormFieldWrapper>
     </div>
