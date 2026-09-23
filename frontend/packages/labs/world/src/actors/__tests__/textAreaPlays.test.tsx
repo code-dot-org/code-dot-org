@@ -84,6 +84,7 @@ describe('a Text Area', () => {
     const caret = modules['actors/textArea'].CaretProperty as Property<number>;
     const scroll = modules['actors/textArea']
       .ScrollProperty as Property<number>;
+    const slide = modules['actors/textArea'].SlideProperty as Property<number>;
     const settle = () => {
       world.tick(1 / 60);
       world.tick(1 / 60);
@@ -122,6 +123,7 @@ describe('a Text Area', () => {
         settle();
       },
       scrolled: () => area.get(scroll),
+      slid: () => area.get(slide),
       /** Turn the wheel over it, in pixels. */
       wheel: (by: number) => {
         world.setPointer({x: 100, y: 100}, []);
@@ -245,6 +247,75 @@ describe('a Text Area', () => {
       a.type('X');
 
       expect(a.says()).toBe('ABCDEF\nGHIXJKL\nMNOPQR');
+    });
+  });
+
+  describe('the window ACROSS the words', () => {
+    // The Text Input answers this with a per-frame step and three cases — off
+    // the left, off the right, and slack when a line gets shorter. The clamp
+    // is all three at once, which is the same trick the vertical uses.
+    const SIZE = 12;
+    const CHAR = SIZE / 2;
+    // The box is 160 wide with 8 of inset either side: 144 of room, which is
+    // twenty-four characters at six pixels each.
+    const FITS = 24;
+
+    it('stays put while the line fits', async () => {
+      const a = await open(sixPerCharacter);
+      a.click();
+      a.type('SHORT');
+
+      expect(a.slid()).toBe(0);
+    });
+
+    it('slides so the caret stays in the box on a long line', async () => {
+      const a = await open(sixPerCharacter);
+      a.click();
+      a.type('X'.repeat(FITS + 10));
+
+      // The caret is at the end, so the words have come left by however much
+      // the line overruns the room.
+      expect(a.slid()).toBe((FITS + 10) * CHAR - 144);
+    });
+
+    it('comes back when the caret walks to the start of the line', async () => {
+      const a = await open(sixPerCharacter);
+      a.click();
+      a.type('X'.repeat(FITS + 10));
+      expect(a.slid()).toBeGreaterThan(0);
+
+      for (let at = 0; at < FITS + 10; at++) {
+        a.tap('left arrow');
+      }
+
+      expect(a.slid()).toBe(0);
+    });
+
+    it('comes back when the line is SHORTENED under it', async () => {
+      // The case the Text Input needed a third branch for: a field that only
+      // ever pushed left stayed scrolled after its text was deleted.
+      const a = await open(sixPerCharacter);
+      a.click();
+      a.type('X'.repeat(FITS + 10));
+      expect(a.slid()).toBeGreaterThan(0);
+
+      for (let at = 0; at < FITS + 10; at++) {
+        a.tap('backspace');
+      }
+
+      expect(a.slid()).toBe(0);
+    });
+
+    it('is per LINE, so moving to a short line brings the words back', async () => {
+      // Each line slides on its own: the bar is what has to be in view, and a
+      // long line above does not push a short one sideways.
+      const a = await open(sixPerCharacter);
+      a.click();
+      a.type('X'.repeat(FITS + 10));
+      a.tap('enter');
+      a.type('AB');
+
+      expect(a.slid()).toBe(0);
     });
   });
 

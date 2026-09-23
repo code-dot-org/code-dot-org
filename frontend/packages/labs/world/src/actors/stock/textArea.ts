@@ -41,20 +41,32 @@
 // The scan then walks that line and stops at its end, which is what keeps a
 // click off the right of a short line from running onto the next one.
 //
-// THE WORDS DO SCROLL, which they did not. A paragraph taller than the box was
-// simply cut off: everything below the fold was typed into a place nobody
-// could see. The window is a scroll offset in pixels, the paragraph and the
-// bar are both drawn less it, and the texture's own bounds do the clipping —
-// a drawing is rasterised at the actor's size, so nothing else had to be
-// worked out (specs/DRAWING.md).
+// THE WORDS DO SCROLL, BOTH WAYS, which they did not. A paragraph taller than
+// the box was simply cut off and a line longer than it ran off the edge:
+// either way, what you were typing was in a place nobody could see. The window
+// is two offsets in pixels — `scroll` down the paragraph and `slide` across
+// the line — the words and the bar are drawn less both, and the texture's own
+// bounds do the clipping, because a drawing is rasterised at the actor's size
+// (specs/DRAWING.md).
+//
+// TWO NAMES RATHER THAN A VECTOR, because they answer different questions: one
+// is a place in the paragraph, the other a place in ONE line, and a line
+// scrolls on its own — walking to a short line brings the words back however
+// far the line above ran on.
 //
 // AND IT FOLLOWS THE CARET, which is the part that makes it usable: after
-// every move and every edit the window is clamped between the scroll that
-// puts the caret's line at the foot of the box and the scroll that puts it at
-// the head. A line already in view sits between the two and nothing moves; a
-// line below snaps to the first and becomes the bottom-most, one above snaps
-// to the second and becomes the top-most. One clamp rather than two tests,
-// which is the List's trick for the same job (`actors/list`, `reveal`).
+// every move and every edit the window is clamped between the offset that puts
+// the caret at the far edge of the box and the one that puts it at the near
+// edge. A caret already in view sits between the two and nothing moves; one
+// past an edge snaps to the nearer bound and lands against that edge. One
+// clamp rather than two tests, which is the List's trick for the same job
+// (`actors/list`, `reveal`).
+//
+// The ACROSS clamp is the Text Input's three cases in one. That actor tests
+// for the caret being off the left, off the right, and for slack at the right
+// when a line has been shortened; the clamp answers all three, because a
+// shorter line means a smaller caret offset, which brings the upper bound —
+// and the words — back with it.
 
 import {labelHalf, labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS_TIGHT} from './look';
@@ -241,6 +253,17 @@ const overflow = () =>
 const scroll = () => ({
   block: {type: `world_get_${OWN}_ScrollProperty`, inputs: {ACTOR: me()}},
 });
+/** How much room there is ACROSS: the box, less the padding at each end. */
+const across = () => sum('MINUS', width(), num(PAD * 2));
+/** How far the bar is along its line, which is what has to stay in view. */
+const caretAcross = () => widthOf(linePrefix());
+const slid = () => ({
+  block: {type: `world_get_${OWN}_SlideProperty`, inputs: {ACTOR: me()}},
+});
+const slideTo = (to: object) => ({
+  type: `world_set_${OWN}_SlideProperty`,
+  inputs: {ACTOR: me(), VALUE: to},
+});
 const scrollTo = (to: object) => ({
   type: `world_set_${OWN}_ScrollProperty`,
   inputs: {ACTOR: me(), VALUE: clamp(to, num(0), overflow())},
@@ -259,14 +282,32 @@ const scrollTo = (to: object) => ({
  * After every caret move and every edit, because both can take the caret off
  * the screen — typing a line at the bottom is the ordinary way to do it.
  */
-const reveal = () =>
+const reveal = () => [
   scrollTo(
     clamp(
       scroll(),
       sum('MINUS', sum('ADD', lineTop(line()), step()), inside()),
       lineTop(line()),
     ),
-  );
+  ),
+  // …AND THE SAME CLAMP ACROSS. The Text Input answers this with a per-frame
+  // step and three cases — off the left, off the right, and slack at the
+  // right when a line has got shorter — and the clamp is all three at once:
+  // move to a short line and the upper bound comes down with the caret, which
+  // pulls the words back without a case of its own.
+  //
+  // The low bound is clamped to zero rather than allowed negative, which is
+  // the only asymmetry with the vertical: there is nothing to the left of the
+  // first character, where there IS something above the first line once the
+  // window has moved.
+  slideTo(
+    clamp(
+      slid(),
+      clamp(sum('MINUS', caretAcross(), across()), num(0), caretAcross()),
+      caretAcross(),
+    ),
+  ),
+];
 
 const takeFocus = () => ({
   type: 'world_do_TabNavigation_TakeTheFocusAction',
@@ -280,7 +321,7 @@ const insert = (what: object) => [
     joined([before(), what, from(sum('ADD', caretAt(), num(1)))]),
   ),
   setCaret(sum('ADD', caretAt(), num(1))),
-  reveal(),
+  ...reveal(),
   emitChanged(),
 ];
 
@@ -303,7 +344,7 @@ const lineAbove = () => {
         clamp(column(), num(0), sum('MINUS', aboveEnd(), aboveStart())),
       ),
     ),
-    reveal(),
+    ...reveal(),
   ]);
 };
 /**
@@ -330,7 +371,7 @@ const lineBelow = () => {
   });
   return onlyIf(both(focused(), compare('GT', breakAhead(), num(0))), [
     setCaret(sum('ADD', belowStart(), clamp(column(), num(0), belowLength()))),
-    reveal(),
+    ...reveal(),
   ]);
 };
 
@@ -445,7 +486,7 @@ const placesTheCaret = () => [
       },
     },
   },
-  reveal(),
+  ...reveal(),
 ];
 
 const blinking = () => ({
@@ -499,6 +540,12 @@ export const textAreaActor = actorFile(
     // a distance, and rounding one to whole lines makes a slow drag do
     // nothing and a fast one jump.
     defineProperty('number', 'scroll', '0'),
+    // …and how far ACROSS them, which is the Text Input's `scroll` by another
+    // name: a line longer than the box has to slide to keep the bar in view.
+    // Called `slide` because `scroll` is taken by the other axis, and a
+    // control with `scroll` and `scroll x` reads as though one of them were a
+    // vector that is not.
+    defineProperty('number', 'slide', '0'),
     defineEvent('changed'),
     {
       type: 'world_set_Boxed_WidthProperty',
@@ -563,7 +610,7 @@ export const textAreaActor = actorFile(
             ]),
           ),
           setCaret(sum('MINUS', caretAt(), num(1))),
-          reveal(),
+          ...reveal(),
           emitChanged(),
         ]),
       ),
@@ -577,7 +624,7 @@ export const textAreaActor = actorFile(
           // The caret has not moved, but the words below it have — a delete
           // that joins two lines makes the paragraph shorter, and a window
           // parked at the old bottom would be past the new one.
-          reveal(),
+          ...reveal(),
           emitChanged(),
         ]),
       ),
@@ -585,14 +632,14 @@ export const textAreaActor = actorFile(
         'left arrow',
         onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
           setCaret(sum('MINUS', caretAt(), num(1))),
-          reveal(),
+          ...reveal(),
         ]),
       ),
       key(
         'right arrow',
         onlyIf(both(focused(), compare('LT', caretAt(), length())), [
           setCaret(sum('ADD', caretAt(), num(1))),
-          reveal(),
+          ...reveal(),
         ]),
       ),
       key('up arrow', lineAbove()),
@@ -624,11 +671,15 @@ export const textAreaActor = actorFile(
         // rasterised at the actor's own size, so what is laid above the top
         // or below the bottom is clipped by the texture and nothing else has
         // to be worked out (specs/DRAWING.md).
-        drawParagraph(num(PAD), sum('MINUS', num(PAD), scroll()), 0),
+        drawParagraph(
+          sum('MINUS', num(PAD), slid()),
+          sum('MINUS', num(PAD), scroll()),
+          0,
+        ),
         // The bar, on the caret's line and after its prefix, blinking.
         onlyIf(blinking(), [
           rectangle(
-            sum('ADD', num(PAD), widthOf(linePrefix())),
+            sum('MINUS', sum('ADD', num(PAD), caretAcross()), slid()),
             sum('MINUS', sum('ADD', num(PAD), lineTop(line())), scroll()),
             num(CARET_WIDTH),
             atSize(),

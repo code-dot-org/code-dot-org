@@ -112,14 +112,17 @@ describe('every stock actor', () => {
       // is the `Has a Box` trait's, which every interface kind elects
       // (specs/BOXES_PLAN.md).
       image: ['stretches'],
-      // A text area's caret, and how far DOWN the words the box is looking —
-      // which is the Text Input's `scroll` turned through ninety degrees: one
-      // slides a single line sideways to keep the caret in the box, this
-      // slides a paragraph upward to keep the caret's LINE in it. Both are
-      // facts about one box over some words, so a rule for them would be a
-      // rule for two kinds of actor. Its lines themselves are newlines in the
-      // words and are nobody's property.
-      textArea: ['caret', 'scroll'],
+      // A text area's caret, and where its box is looking — DOWN the
+      // paragraph and ACROSS the line. Two names rather than a vector because
+      // they answer different questions: one is a place in the paragraph and
+      // the other a place in ONE line, and a line slides on its own, so
+      // walking to a short line brings the words back however far the line
+      // above ran on. `slide` is the Text Input's `scroll` under another name,
+      // renamed here only because `scroll` is taken by the other axis. All of
+      // them are facts about one box over some words, so a rule for them would
+      // be a rule for two kinds of actor; the lines themselves are newlines in
+      // the words and are nobody's property.
+      textArea: ['caret', 'scroll', 'slide'],
       // …and what a bar IS: how far along it is, and the two colors it is
       // drawn in. These were `Progress`, a rule with three properties and no
       // behavior; the bars that are not this one act like it and get them
