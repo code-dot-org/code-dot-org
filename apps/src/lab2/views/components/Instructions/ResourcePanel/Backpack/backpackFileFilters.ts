@@ -1,53 +1,72 @@
 import {IconDropdownOption} from '@code-dot-org/component-library/dropdown/iconDropdown';
 
-import {
-  SUPPORTED_AUDIO_EXTENSIONS,
-  SUPPORTED_IMAGE_EXTENSIONS,
-} from '@cdo/apps/lab2/constants';
+import {AudioExtension, ImageExtension} from '@cdo/apps/lab2/constants';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 const BRAND_ICON_CLASS = 'fa-brands';
 
-export const ALL_FILES_CATEGORY_ID = 'all';
+export const ALL_FILES_ID = 'all';
 
-export type FileCategoryId =
-  | 'images'
-  | 'audio'
+export type FileExtension =
+  | ImageExtension
+  | AudioExtension
   | 'html'
   | 'css'
-  | 'javascript'
-  | 'python'
-  | 'data'
-  | 'text'
+  | 'js'
+  | 'py'
+  | 'csv'
+  | 'json'
+  | 'txt'
+  | 'md'
   | 'other';
 
-interface FileCategory {
-  id: FileCategoryId;
+interface FileTypeConfig {
+  id: FileExtension;
   label: string;
   icon: IconDropdownOption['icon'];
   extensions: string[];
 }
 
+export type PopulatedFileTypes = {config: FileTypeConfig; count: number}[];
+
 // Order here is the order categories appear in the filter menu and in a file-type sort.
 // The last entry has no extensions and catches everything the others miss.
-const FILE_CATEGORIES: FileCategory[] = [
+const FILE_TYPES: FileTypeConfig[] = [
   {
-    id: 'images',
-    label: 'Images',
+    id: 'jpeg',
+    label: 'JPEG',
     icon: {iconName: 'file-image', iconStyle: 'solid'},
-    extensions: SUPPORTED_IMAGE_EXTENSIONS,
+    extensions: ['jpeg', 'jpg'],
   },
   {
-    id: 'audio',
-    label: 'Audio',
+    id: 'png',
+    label: 'PNG',
+    icon: {iconName: 'file-image', iconStyle: 'solid'},
+    extensions: ['png'],
+  },
+  {
+    id: 'gif',
+    label: 'GIF',
+    icon: {iconName: 'file-image', iconStyle: 'solid'},
+    extensions: ['gif'],
+  },
+  {
+    id: 'webp',
+    label: 'WebP',
+    icon: {iconName: 'file-image', iconStyle: 'solid'},
+    extensions: ['webp'],
+  },
+  {
+    id: 'wav',
+    label: 'WAV',
     icon: {iconName: 'file-music', iconStyle: 'solid'},
-    extensions: SUPPORTED_AUDIO_EXTENSIONS,
+    extensions: ['wav'],
   },
   {
     id: 'html',
     label: 'HTML',
     icon: {iconName: 'file-code', iconStyle: 'solid'},
-    extensions: ['html', 'htm'],
+    extensions: ['html'],
   },
   {
     id: 'css',
@@ -56,13 +75,13 @@ const FILE_CATEGORIES: FileCategory[] = [
     extensions: ['css'],
   },
   {
-    id: 'javascript',
+    id: 'js',
     label: 'JavaScript',
     icon: {iconName: 'js', iconStyle: 'regular', className: BRAND_ICON_CLASS},
     extensions: ['js'],
   },
   {
-    id: 'python',
+    id: 'py',
     label: 'Python',
     icon: {
       iconName: 'python',
@@ -72,16 +91,28 @@ const FILE_CATEGORIES: FileCategory[] = [
     extensions: ['py'],
   },
   {
-    id: 'data',
-    label: 'Data',
+    id: 'csv',
+    label: 'CSV',
     icon: {iconName: 'file-spreadsheet', iconStyle: 'solid'},
-    extensions: ['csv', 'json'],
+    extensions: ['csv'],
   },
   {
-    id: 'text',
-    label: 'Text',
+    id: 'json',
+    label: 'JSON',
+    icon: {iconName: 'file-code', iconStyle: 'solid'},
+    extensions: ['json'],
+  },
+  {
+    id: 'txt',
+    label: 'TXT',
     icon: {iconName: 'file-lines', iconStyle: 'solid'},
-    extensions: ['txt', 'md'],
+    extensions: ['txt'],
+  },
+  {
+    id: 'md',
+    label: 'Markdown',
+    icon: {iconName: 'file-lines', iconStyle: 'solid'},
+    extensions: ['md'],
   },
   {
     id: 'other',
@@ -91,30 +122,88 @@ const FILE_CATEGORIES: FileCategory[] = [
   },
 ];
 
-const OTHER_CATEGORY = FILE_CATEGORIES[FILE_CATEGORIES.length - 1];
+const OTHER_CATEGORY = FILE_TYPES[FILE_TYPES.length - 1];
 
-export function getFileCategory(fileName: string): FileCategory {
+function getFileTypeConfig(fileName: string): FileTypeConfig {
   const fileExtension = getFileExtension(fileName);
   if (!fileExtension) {
     return OTHER_CATEGORY;
   }
   return (
-    FILE_CATEGORIES.find(category =>
-      category.extensions.includes(fileExtension)
-    ) || OTHER_CATEGORY
+    FILE_TYPES.find(category => category.extensions.includes(fileExtension)) ||
+    OTHER_CATEGORY
   );
 }
 
-/** Categories holding at least one of the given files, in menu order, with their counts. */
-export function getPopulatedCategories(fileNames: string[]) {
-  const countsById = new Map<FileCategoryId, number>();
-  fileNames.forEach(fileName => {
-    const {id} = getFileCategory(fileName);
-    countsById.set(id, (countsById.get(id) || 0) + 1);
-  });
-  return FILE_CATEGORIES.filter(category => countsById.has(category.id)).map(
-    category => ({...category, count: countsById.get(category.id) as number})
+export function findConfigForFile(
+  fileName: string,
+  populatedFileTypeConfigs: PopulatedFileTypes
+): FileTypeConfig {
+  const fileExtension = getFileExtension(fileName);
+  if (!fileExtension) {
+    return OTHER_CATEGORY;
+  }
+  const foundConfig = populatedFileTypeConfigs.find(({config}) =>
+    config.extensions.includes(fileExtension)
   );
+  return foundConfig ? foundConfig.config : OTHER_CATEGORY;
+}
+
+/**
+ * Returns an array of populated file type configurations, including counts for each type.
+ * Unsupported file types are folded into the "Other" category.
+ */
+export function getPopulatedFileTypeConfigs(
+  fileNames: string[],
+  supportedExtensions: string[]
+): PopulatedFileTypes {
+  const countsByExtension = new Map<string, number>();
+  let otherCount = 0;
+  fileNames.forEach(fileName => {
+    const extension = getFileExtension(fileName);
+    if (getFileTypeConfig(fileName).extensions.includes(extension)) {
+      countsByExtension.set(
+        extension,
+        (countsByExtension.get(extension) || 0) + 1
+      );
+    } else {
+      // This file has an unknown/non-existent file extension, which will be counted under "Other".
+      otherCount += 1;
+    }
+  });
+
+  const populatedFileTypes: PopulatedFileTypes = [];
+  const otherExtensions: string[] = [];
+  FILE_TYPES.forEach(fileType => {
+    const includedExtensions: string[] = [];
+    let supportedCount = 0;
+    fileType.extensions.forEach(extension => {
+      const count = countsByExtension.get(extension);
+      if (!count) {
+        return;
+      }
+      if (supportedExtensions.includes(extension)) {
+        includedExtensions.push(extension);
+        supportedCount += count;
+      } else {
+        otherExtensions.push(extension);
+        otherCount += count;
+      }
+    });
+    if (includedExtensions.length > 0) {
+      populatedFileTypes.push({
+        config: {...fileType, extensions: includedExtensions},
+        count: supportedCount,
+      });
+    }
+  });
+  if (otherCount > 0) {
+    populatedFileTypes.push({
+      config: {...OTHER_CATEGORY, extensions: otherExtensions},
+      count: otherCount,
+    });
+  }
+  return populatedFileTypes;
 }
 
 export type BackpackSortOrder = 'name-asc' | 'name-desc' | 'file-type';
@@ -135,8 +224,8 @@ export function sortBackpackFiles<FileType extends {fileName: string}>(
       // File type sorting: first by category, then by extension, then by name A-Z.
       return sorted.sort((first, second) => {
         const categoryDifference =
-          FILE_CATEGORIES.indexOf(getFileCategory(first.fileName)) -
-          FILE_CATEGORIES.indexOf(getFileCategory(second.fileName));
+          FILE_TYPES.indexOf(getFileTypeConfig(first.fileName)) -
+          FILE_TYPES.indexOf(getFileTypeConfig(second.fileName));
         const extensionDifference = getFileExtension(
           first.fileName
         ).localeCompare(getFileExtension(second.fileName));
