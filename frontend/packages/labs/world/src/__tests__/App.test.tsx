@@ -1,4 +1,4 @@
-import {act, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import {expect, it, vi} from 'vitest';
 
 import {
@@ -57,7 +57,7 @@ vi.mock('@code-dot-org/codebridge', async () => {
   return {...actual, InfoPanel: () => <div>instructions</div>};
 });
 
-it('renders the World Lab shell from the default project', async () => {
+const renderLab = () =>
   render(
     <RootStateProvider>
       {/*
@@ -73,6 +73,8 @@ it('renders the World Lab shell from the default project', async () => {
     </RootStateProvider>,
   );
 
+it('renders the World Lab shell from the default project', async () => {
+  renderLab();
   // Flush the setCurrentLevelId effect so level properties resolve and the
   // default project renders.
   await act(async () => {});
@@ -99,4 +101,21 @@ it('renders the World Lab shell from the default project', async () => {
   expect(screen.getByText('Preview')).toBeTruthy();
   // No sandbox is configured under jsdom, so the preview says so.
   expect(screen.getByText(/no sandbox origin is configured/i)).toBeTruthy();
+});
+
+it('opens the JavaScript panel when asked, and not before', async () => {
+  // The panel is what a World project does not otherwise show: the file is
+  // blocks, and the program it becomes is made on the way to the compiler
+  // (`debug/CodePanel`). Off until asked for — a learner authoring in blocks
+  // is not owed a pane they did not open.
+  renderLab();
+  await act(async () => {});
+
+  expect(
+    screen.queryByRole('region', {name: 'Generated JavaScript'}),
+  ).toBeNull();
+  fireEvent.click(screen.getByRole('button', {name: 'JavaScript'}));
+  expect(
+    screen.getByRole('region', {name: 'Generated JavaScript'}),
+  ).toBeTruthy();
 });

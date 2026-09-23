@@ -1,6 +1,8 @@
+import {Button} from '@mui/material';
 import {useEffect, useMemo, useRef, useState, type CSSProperties} from 'react';
 
 import {activateFile, InfoPanel, Workspace} from '@code-dot-org/codebridge';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {
@@ -19,6 +21,7 @@ import {pointAt} from '../callouts/pointAt';
 import {setRevealer} from '../callouts/reveal';
 import {fileToReveal} from '../callouts/revealFile';
 import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
+import {CodePanel} from '../debug/CodePanel';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {FileMenus} from '../files/FileMenus';
 import {showsFileBrowser, type WorldLevelProperties} from '../levelData';
@@ -108,6 +111,11 @@ const WorldLayout = () => {
   );
   const [previewWidth, setPreviewWidth] = useState(PREVIEW.initial);
   const [viewMode, setViewMode] = useState<ViewModeType>(ViewMode.SPLIT);
+  // Whether the JavaScript the open file compiles to is on screen
+  // (`debug/CodePanel`). Off by default: a learner authoring in blocks is not
+  // owed a second pane they did not ask for, and the ones who want it are
+  // asking a question ("what does this mean?") that a button answers.
+  const [showGeneratedCode, setShowGeneratedCode] = useState(false);
 
   // The base ResourcePanel collapses to its icon strip; when it does, the
   // instructions resize seam has nothing to size, so hide it.
@@ -183,6 +191,29 @@ const WorldLayout = () => {
           id="world-workspace"
           className={styles.workspacePanel}
           headerContent={<WorkspaceHeader />}
+          rightHeaderContent={
+            // NOT IN PREVIEW-ONLY VIEW, where there is no editor pane for the
+            // panel to open in: a button that visibly does nothing is worse
+            // than no button.
+            //
+            // "JavaScript" and not "Show Code": the segmented buttons beside
+            // this one already call the blocks editor "Code", and a lab with
+            // two controls using that word for two different panes is a lab
+            // nobody can be told about.
+            showEditor ? (
+              <Button
+                variant="text"
+                size="extraSmall"
+                startIcon={
+                  <FontAwesomeV6Icon iconName="file-code" iconStyle="solid" />
+                }
+                aria-pressed={showGeneratedCode}
+                onClick={() => setShowGeneratedCode(shown => !shown)}
+              >
+                JavaScript
+              </Button>
+            ) : undefined
+          }
           leftHeaderContent={
             <SegmentedButtons
               size="xs"
@@ -238,6 +269,11 @@ const WorldLayout = () => {
                     tabBarStart={<FileMenus menus={browsable} />}
                   />
                 </div>
+                {/* What the open file compiles to, when it is asked for.
+                    Above the console: this belongs to the file in the editor
+                    and the console belongs to the running game, so they read
+                    outwards in that order. */}
+                {showGeneratedCode && <CodePanel />}
                 {/* Code-only view: the console falls back to under the editor. */}
                 {!showPreview && <ConsolePanel />}
               </div>
