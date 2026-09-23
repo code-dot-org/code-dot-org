@@ -85,13 +85,13 @@ describe('ChallengePicker', () => {
     ).toBeInTheDocument();
   });
 
-  it('shows no challenge cards before a modality is selected', () => {
+  it('shows no challenge card before a modality is selected', () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
     renderPicker();
     expect(screen.queryByText('Your Challenge')).not.toBeInTheDocument();
   });
 
-  it('shows only whiteboard challenges after selecting the whiteboard modality', async () => {
+  it('shows the first matching challenge after selecting a modality', async () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
     renderPicker();
 
@@ -102,14 +102,17 @@ describe('ChallengePicker', () => {
     await waitFor(() =>
       expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
     );
-    expect(screen.getByText(fakeChallenges[2].question)).toBeInTheDocument();
-    // Video challenge must not appear.
+    // Only the first whiteboard challenge visible; the second is not yet shown.
+    expect(
+      screen.queryByText(fakeChallenges[2].question)
+    ).not.toBeInTheDocument();
+    // Video challenge never appears.
     expect(
       screen.queryByText(fakeChallenges[1].question)
     ).not.toBeInTheDocument();
   });
 
-  it('shows only video challenges after selecting the video modality', async () => {
+  it('shows only the matching video challenge after selecting the video modality', async () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
     renderPicker();
 
@@ -126,7 +129,43 @@ describe('ChallengePicker', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('re-filters when the modality selection changes', async () => {
+  it('shows prev/next buttons when multiple challenges match the selected modality', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
+    expect(
+      screen.getByRole('button', {name: 'Previous challenge'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Next challenge'})
+    ).toBeInTheDocument();
+  });
+
+  it('hides prev/next buttons when only one challenge matches the selected modality', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
+
+    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
+
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[1].question)).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByRole('button', {name: 'Previous challenge'})
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Next challenge'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('advances to the next challenge when Next is clicked', async () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
     renderPicker();
 
@@ -137,18 +176,74 @@ describe('ChallengePicker', () => {
       expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
     );
 
-    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
-    await waitFor(() =>
-      expect(screen.getByText(fakeChallenges[1].question)).toBeInTheDocument()
-    );
+    fireEvent.click(screen.getByRole('button', {name: 'Next challenge'}));
+
+    expect(screen.getByText(fakeChallenges[2].question)).toBeInTheDocument();
     expect(
       screen.queryByText(fakeChallenges[0].question)
     ).not.toBeInTheDocument();
   });
 
+  it('wraps from the last challenge back to the first on Next', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Next challenge'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Next challenge'}));
+
+    expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument();
+  });
+
+  it('goes back to the previous challenge when Prev is clicked', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Next challenge'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Previous challenge'}));
+
+    expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument();
+  });
+
+  it('resets to the first challenge when switching modalities', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Next challenge'}));
+    expect(screen.getByText(fakeChallenges[2].question)).toBeInTheDocument();
+
+    // Switch to video and back — index should reset.
+    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[1].question)).toBeInTheDocument()
+    );
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+    expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument();
+  });
+
   it('shows an empty state when no challenges match the selected modality', async () => {
-    const videoOnly: Challenge[] = [fakeChallenges[1]];
-    fetchJson.mockResolvedValue({value: videoOnly});
+    fetchJson.mockResolvedValue({value: [fakeChallenges[1]]});
     renderPicker();
 
     fireEvent.click(
@@ -177,7 +272,7 @@ describe('ChallengePicker', () => {
     );
   });
 
-  it('calls the callback with the challenge and selected modality when Start challenge is clicked', async () => {
+  it('calls the callback with the current challenge and modality when Start challenge is clicked', async () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
     const callback = renderPicker();
 
@@ -188,13 +283,25 @@ describe('ChallengePicker', () => {
       expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
     );
 
-    // Two whiteboard challenges → two Start challenge buttons. Click the first.
-    const startButtons = screen.getAllByRole('button', {
-      name: 'Start challenge',
-    });
-    fireEvent.click(startButtons[0]);
+    fireEvent.click(screen.getByRole('button', {name: 'Start challenge'}));
 
     expect(callback).toHaveBeenCalledWith(fakeChallenges[0], 'whiteboard');
+  });
+
+  it('calls the callback with the navigated-to challenge when Start challenge is clicked after advancing', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    const callback = renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Next challenge'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Start challenge'}));
+
+    expect(callback).toHaveBeenCalledWith(fakeChallenges[2], 'whiteboard');
   });
 
   it('renders the "I want to review instead" link', () => {

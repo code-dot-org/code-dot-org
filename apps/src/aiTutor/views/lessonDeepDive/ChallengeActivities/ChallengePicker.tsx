@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useCallback, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -30,7 +30,13 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [loadFailed, setLoadFailed] = useState(false);
   const [modality, setModality] = useState<Modality | null>(null);
+  const [challengeIndex, setChallengeIndex] = useState(0);
   const navigate = useNavigate();
+
+  const handleModalityChange = useCallback((next: Modality) => {
+    setModality(next);
+    setChallengeIndex(0);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -60,6 +66,17 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
   const filtered = modality
     ? challenges.filter(c => c.default_modality === modality)
     : [];
+  const currentChallenge = filtered[challengeIndex] ?? null;
+  const hasMultiple = filtered.length > 1;
+
+  const goPrev = useCallback(
+    () => setChallengeIndex(i => (i - 1 + filtered.length) % filtered.length),
+    [filtered.length]
+  );
+  const goNext = useCallback(
+    () => setChallengeIndex(i => (i + 1) % filtered.length),
+    [filtered.length]
+  );
 
   return (
     <div className={styles.container}>
@@ -80,7 +97,7 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
                   className={`${styles.modalityCard} ${
                     isActive ? styles.modalityCardActive : ''
                   }`}
-                  onClick={() => setModality(m.id)}
+                  onClick={() => handleModalityChange(m.id)}
                 >
                   <span
                     className={`${styles.modalityIcon} ${
@@ -103,33 +120,51 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
         </div>
 
         {modality && (
-          <div className={styles.challengeList}>
-            {loadFailed || filtered.length === 0 ? (
+          <div className={styles.challengeCarousel}>
+            {hasMultiple && (
+              <button
+                type="button"
+                className={styles.carouselButton}
+                onClick={goPrev}
+                aria-label="Previous challenge"
+              >
+                <FontAwesomeV6Icon iconName="angle-left" />
+              </button>
+            )}
+            {loadFailed || !currentChallenge ? (
               <p className={styles.emptyState}>
                 No challenges available for this mode.
               </p>
             ) : (
-              filtered.map(challenge => (
-                <div key={challenge.id} className={styles.challengeCard}>
-                  <div className={styles.challengeCardText}>
-                    <p className={styles.challengeCardOverline}>
-                      Your Challenge
-                    </p>
-                    <p className={styles.challengeCardBody}>
-                      {challenge.question}
-                    </p>
-                  </div>
-                  <div className={styles.challengeCardCta}>
-                    <button
-                      type="button"
-                      className={styles.startButton}
-                      onClick={() => challengeSetCallback(challenge, modality)}
-                    >
-                      Start challenge
-                    </button>
-                  </div>
+              <div className={styles.challengeCard}>
+                <div className={styles.challengeCardText}>
+                  <p className={styles.challengeCardOverline}>Your Challenge</p>
+                  <p className={styles.challengeCardBody}>
+                    {currentChallenge.question}
+                  </p>
                 </div>
-              ))
+                <div className={styles.challengeCardCta}>
+                  <button
+                    type="button"
+                    className={styles.startButton}
+                    onClick={() =>
+                      challengeSetCallback(currentChallenge, modality)
+                    }
+                  >
+                    Start challenge
+                  </button>
+                </div>
+              </div>
+            )}
+            {hasMultiple && (
+              <button
+                type="button"
+                className={styles.carouselButton}
+                onClick={goNext}
+                aria-label="Next challenge"
+              >
+                <FontAwesomeV6Icon iconName="angle-right" />
+              </button>
             )}
           </div>
         )}

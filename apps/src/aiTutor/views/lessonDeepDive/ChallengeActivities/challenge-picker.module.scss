@@ -110,16 +110,43 @@
   color: #1f1976;
 }
 
-// ── Challenge cards ────────────────────────────────────────────────────────
+// ── Challenge carousel ─────────────────────────────────────────────────────
 
-.challengeList {
+.challengeCarousel {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 8px;
   width: 100%;
 }
 
+.carouselButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid #4b5258;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(255 255 255 / 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #2b1e9f;
+    outline-offset: 2px;
+  }
+}
+
+// ── Challenge card ─────────────────────────────────────────────────────────
+
 .challengeCard {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
