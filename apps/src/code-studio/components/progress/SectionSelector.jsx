@@ -31,11 +31,8 @@ export const NO_SELECTED_SECTION_VALUE = '';
 
 const sharedPropTypes = {
   className: PropTypes.string,
-  // If false, the first option is "Select Section"
   requireSelection: PropTypes.bool,
-  // If true, we'll show even if we don't have any lockable or hidden lessons
   alwaysShow: PropTypes.bool,
-  // If true, changing sections results in us hitting the server
   reloadOnChange: PropTypes.bool,
 
   // redux provided
@@ -124,8 +121,6 @@ function RoutedSectionSelector(props) {
     [pathname]
   );
 
-  // Dashboard routes without a :sectionId, such as the teacher homepage, still
-  // carry the section in the query param.
   if (!routePattern || !params.sectionId) {
     return <QueryParamSectionSelector {...props} />;
   }
@@ -151,10 +146,8 @@ function RoutedSectionSelector(props) {
 RoutedSectionSelector.propTypes = sharedPropTypes;
 
 function SectionSelector(props) {
-  // Stable across a component's life: nothing moves in or out of a Router.
   const inRouterContext = useInRouterContext();
 
-  // No need to show section selector unless we have at least one section,
   if (props.sections.length === 0) {
     return null;
   }
