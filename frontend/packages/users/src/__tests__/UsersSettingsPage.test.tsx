@@ -83,7 +83,7 @@ describe('UsersSettingsPage', () => {
     ]);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
     expect(tabs[1]).not.toHaveAttribute('aria-disabled');
-    expect(tabs[2]).toHaveAttribute('aria-disabled', 'true');
+    expect(tabs[2]).not.toHaveAttribute('aria-disabled');
 
     for (const name of [
       'My Information',
@@ -790,5 +790,28 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
       within(tablist).getByRole('tab', {name: 'Account Details'}),
     ).toHaveAttribute('aria-selected', 'true');
     expect(currentTab()).toBe('account-details');
+  });
+
+  it('disables Integrations when there are no linked accounts to manage', async () => {
+    renderPage('unmigrated-teacher');
+    const tablist = await screen.findByRole('tablist');
+
+    expect(
+      within(tablist).getByRole('tab', {name: 'Integrations'}),
+    ).toHaveAttribute('aria-disabled', 'true');
+  });
+
+  it('shows linked accounts on the Integrations tab', async () => {
+    renderPage('multi-sso-teacher', {tab: 'integrations'});
+
+    expect(
+      await screen.findByRole('heading', {
+        level: 2,
+        name: 'Manage linked accounts',
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByRole('heading', {level: 4, name: 'ClassLink'}),
+    ).toHaveLength(2);
   });
 });

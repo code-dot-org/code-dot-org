@@ -58,6 +58,20 @@ describe('UsersSettingsPage — accessibility', () => {
     },
   );
 
+  it.each([
+    'multi-sso-teacher',
+    'lti-teacher',
+    'lti-only-teacher',
+    'rostered-student',
+    'cap-locked-student',
+    'minimal',
+  ])('has no axe violations on the Integrations tab (%s)', async tag => {
+    renderPage(tag, 'integrations');
+    await screen.findByRole('tabpanel');
+    await screen.findAllByRole('heading', {level: 2});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
   it('has no axe violations with the update-school dialog open', async () => {
     renderPage('teacher-no-school', 'educator-profile');
     await screen.findByRole('heading', {level: 2, name: 'Role'});
