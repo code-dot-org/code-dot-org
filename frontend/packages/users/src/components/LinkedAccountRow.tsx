@@ -26,7 +26,7 @@ export default function LinkedAccountRow({
   status: ReactNode;
   learnMoreUrl?: string;
   connected?: boolean;
-  action?: ReactNode;
+  action: ReactNode;
 }) {
   const provider = linkedAccountProvider(credentialType);
 

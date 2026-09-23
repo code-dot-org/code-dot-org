@@ -34,6 +34,20 @@ test('the Integrations tab is disabled with nothing to manage', async ({
   await expect(page.getByRole('tab', {name: 'Integrations'})).toBeDisabled();
 });
 
+test('a disconnect blocked for want of another login says why', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'lti-only-teacher');
+  await page.getByRole('tab', {name: 'Integrations'}).click();
+  await page.getByRole('button', {name: /manage canvas/i}).click();
+
+  const disconnect = page.getByRole('button', {name: 'Unlink account'});
+  await expect(disconnect).toBeDisabled();
+  await expect(disconnect).toHaveAccessibleDescription(
+    /add a password or another linked account/,
+  );
+});
+
 test('Save button submits on Enter when focused', async ({page}) => {
   await gotoLoaded(page);
   await page.getByLabel(/Display name/).fill('Grace');

@@ -1,4 +1,4 @@
-import {render, screen, within} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
 import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
@@ -129,24 +129,6 @@ describe('LinkedAccounts', () => {
     ).toBeNull();
   });
 
-  it('names an LMS login by its platform', () => {
-    renderSection(
-      {
-        authenticationOptions: [
-          {id: 3, credentialType: 'lti_v1', email: 'ada@lms.example.com'},
-        ],
-      },
-      {lmsName: 'canvas_cloud'},
-    );
-
-    expect(
-      within(group('My integrations')).getByRole('heading', {
-        level: 4,
-        name: 'Canvas',
-      }),
-    ).toBeInTheDocument();
-  });
-
   it('connects a provider by posting its OAuth form with the CSRF token', () => {
     renderSection();
 
@@ -157,6 +139,46 @@ describe('LinkedAccounts', () => {
       '/users/auth/microsoft_v2_auth?action=connect',
     );
     expect(form).toHaveFormValues({authenticity_token: 'test-csrf-token'});
+  });
+
+  it('manages a linked login in a dialog that posts its disconnect form', () => {
+    renderSection();
+
+    fireEvent.click(button(/manage google/i));
+
+    const dialog = screen.getByRole('dialog', {name: 'Manage Google'});
+    const form = within(dialog)
+      .getByRole('button', {name: 'Disconnect account'})
+      .closest('form')!;
+    expect(form).toHaveAttribute('action', '/users/auth/2/disconnect');
+  });
+
+  it('blocks disconnecting the last login of an account without a password', () => {
+    renderSection({
+      hasPassword: false,
+      authenticationOptions: [
+        {id: 2, credentialType: 'google_oauth2', email: 'ada@example.com'},
+      ],
+    });
+
+    fireEvent.click(button(/manage google/i));
+
+    const disconnect = button(/disconnect account/i);
+    expect(disconnect).toBeDisabled();
+    expect(disconnect).toHaveAccessibleDescription(
+      'To make sure you can still sign in to your account, please add a password or another linked account first.',
+    );
+  });
+
+  it('blocks disconnecting Google for a student in a Google Classroom section', () => {
+    renderSection({userType: 'student'}, {isGoogleClassroomStudent: true});
+    fireEvent.click(button(/manage google/i));
+
+    const disconnect = button(/disconnect account/i);
+    expect(disconnect).toBeDisabled();
+    expect(disconnect).toHaveAccessibleDescription(
+      'You cannot disconnect from this linked account because it is tied to one of your sections.',
+    );
   });
 
   it('locks personal logins until a parent grants permission', () => {
@@ -206,5 +228,24 @@ describe('LinkedAccounts', () => {
     expect(
       screen.queryByRole('link', {name: /learn more about microsoft/i}),
     ).toBeNull();
+  });
+
+  it('names an LMS login by its platform and warns before unlinking it', () => {
+    renderSection(
+      {
+        authenticationOptions: [
+          {id: 1, credentialType: 'email', email: 'ada@example.com'},
+          {id: 3, credentialType: 'lti_v1', email: 'ada@lms.example.com'},
+        ],
+      },
+      {lmsName: 'canvas_cloud'},
+    );
+
+    fireEvent.click(button(/manage canvas/i));
+
+    expect(
+      screen.getByRole('alertdialog', {name: 'Manage Canvas'}),
+    ).toBeInTheDocument();
+    expect(button(/unlink account/i)).toBeEnabled();
   });
 });

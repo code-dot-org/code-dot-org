@@ -10,7 +10,10 @@ role, educators only), and **Integrations** (linked accounts). The email
 opt-in lives in the Update email dialog, as in legacy.
 
 Integrations stays disabled for an account with nothing to manage, such as one
-not yet migrated to multiple logins, as the placeholder was.
+not yet migrated to multiple logins, as the placeholder was. Connecting and
+disconnecting a linked account are native form POSTs to the legacy OAuth and
+disconnect routes, and land on the legacy `/users/edit` page with its flash
+message, as unlinking an LMS login does.
 
 Each tab is its own form: one `FormProvider`, one `SaveBar`, one PATCH. School
 information is a modal flow instead, because it needs a zip search and a
