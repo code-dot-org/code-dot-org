@@ -86,18 +86,44 @@ describe('SpriteLab2 useGameAudio', () => {
     expect(voices).toHaveLength(held + 2);
   });
 
-  it('unwires the engine when the game is left', () => {
+  it('unwires the engine and suspends the context when the game is left', () => {
     localStorage.setItem(CUES, 'on');
+    const {context} = installFakeAudioContext();
     const {engine, view} = setup();
     view.rerender({play: false});
     expect(engine.observer).toBeNull();
+    expect(context.state).toBe('suspended');
+    expect(context.closed).toBe(0);
   });
 
-  it('unwires the engine on unmount', () => {
+  it('resumes the same context when the game is played again', () => {
     localStorage.setItem(CUES, 'on');
+    const {context} = installFakeAudioContext();
+    const count = countContexts();
+    const {engine, view} = setup();
+    view.rerender({play: false});
+    view.rerender({play: true});
+    expect(count.built).toBe(1);
+    expect(context.state).toBe('running');
+    expect(engine.observer).not.toBeNull();
+  });
+
+  it('closes the context when the setting is turned off', () => {
+    localStorage.setItem(CUES, 'on');
+    const {context} = installFakeAudioContext();
+    const {engine, setting} = setup();
+    act(() => setting().onChange('off'));
+    expect(engine.observer).toBeNull();
+    expect(context.closed).toBe(1);
+  });
+
+  it('unwires the engine and closes the context on unmount', () => {
+    localStorage.setItem(CUES, 'on');
+    const {context} = installFakeAudioContext();
     const {engine, view} = setup();
     view.unmount();
     expect(engine.observer).toBeNull();
+    expect(context.closed).toBe(1);
   });
 
   it('offers nothing on a level with no platformer to hear', () => {

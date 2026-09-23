@@ -28,12 +28,23 @@ export function fakeAudioContext() {
     sampleRate: 44100,
     destination: {} as AudioDestinationNode,
     resumed: 0,
+    suspended: 0,
+    closed: 0,
     resume() {
       context.resumed++;
       context.state = 'running';
       return Promise.resolve();
     },
-    close: () => Promise.resolve(),
+    suspend() {
+      context.suspended++;
+      context.state = 'suspended';
+      return Promise.resolve();
+    },
+    close() {
+      context.closed++;
+      context.state = 'closed';
+      return Promise.resolve();
+    },
     createOscillator() {
       const voice: FakeVoice = {
         type: '',

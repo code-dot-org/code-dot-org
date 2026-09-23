@@ -1,6 +1,9 @@
 // The game's audio cues for a student who cannot see the screen, behind one
-// setting. Rebuilt per visit to the Play tab, over one context, since
-// browsers limit how many a page may hold.
+// setting. One audio context lasts while the setting is on: made or woken in
+// a user gesture, suspended while nothing plays, closed when the setting
+// turns off or the view unmounts. Browsers limit how many a page may hold,
+// and Safari lets a context resume without a gesture only once it has
+// started inside one.
 
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -86,7 +89,6 @@ export default function useGameAudio(
     'off'
   );
 
-  // One context, made or woken in the gesture, then used by the run.
   const contextRef = useRef<AudioContext | null>(null);
   const startContext = () => {
     contextRef.current ||= audioContext();
@@ -126,6 +128,7 @@ export default function useGameAudio(
     if (!context) {
       return;
     }
+    wake(context);
     const proximity = createProximityAudio(context);
     const height = createHeightTone(context);
     const sounds = createPlayerSounds(context);
@@ -141,19 +144,20 @@ export default function useGameAudio(
       proximity.stop();
       height.stop();
       sounds.stop();
-      context.close().catch(() => undefined);
-      contextRef.current = null;
+      context.suspend().catch(() => undefined);
     };
   }, [engineRef, hasPlatformScene, playing, obstacleSounds]);
 
-  // Closes a context the gesture made that no run used.
-  useEffect(
-    () => () => {
+  // The context lives as long as the setting is on.
+  useEffect(() => {
+    if (!wanted) {
+      return;
+    }
+    return () => {
       contextRef.current?.close().catch(() => undefined);
       contextRef.current = null;
-    },
-    []
-  );
+    };
+  }, [wanted]);
 
   return {settings: hasPlatformScene ? [setting] : [], unlock};
 }
