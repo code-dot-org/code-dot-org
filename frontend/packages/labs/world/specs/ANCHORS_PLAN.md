@@ -1,7 +1,9 @@
 # Plan: anchoring a placement (APPS.md, missing thing 2)
 
-STATUS: BUILT, not yet seen in the browser. The thing specs/UI_ACTORS.md deferred on purpose and
-named a trigger for. The working record, as the other plans are.
+STATUS: BUILT, and since seen in the browser — which found one thing, recorded
+below ("Found in the browser: once was not enough"). The thing
+specs/UI_ACTORS.md deferred on purpose and named a trigger for. The working
+record, as the other plans are.
 
 ## The trigger, and that it has been pulled
 
@@ -100,6 +102,30 @@ arrangement says where things sit.
   pass, so a parent is known and a child can be skipped; before the
   script, so a map's own blocks see final positions rather than the ones
   it was drawn with.
+
+## Found in the browser: once was not enough
+
+Anchors were measured at LOAD and never again, and a world's main map is
+loaded between its prologue and its rows so that a row can name what the map
+placed (specs/MAP_BEFORE_ROWS_PLAN.md). So `set view size` in a world's body
+runs AFTER the load: every anchored placement had been fitted to the DEFAULT
+320x320 window and was never fitted to the one the world asked for.
+
+Notes showed it. NEW NOTE is anchored to the bottom of a 320x576 map, was
+placed against the default window at y=264, and stayed there when the body
+made the window 576 tall — which is the middle of it. The header was fine,
+because `top` shifts nothing when the top is the top.
+
+`World.setViewSize` now places them again (`World.reanchor`), from the
+position the MAP gave them rather than from where the last fitting put them —
+measuring twice from an already-shifted position would shift twice. **One that
+has been MOVED is left where it was put**, which is the rule the cameras in
+the same method already followed: a placement a program has dragged somewhere
+is somewhere for a reason.
+
+Every test of this had called `setViewSize` before `loadMap`, which is the
+order nothing actually runs in. Two now do it the other way round
+(`engine/mapScript.test`), and `appPlays` pins the button itself.
 
 ## Not built, and known
 

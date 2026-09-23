@@ -2244,7 +2244,72 @@ export class World {
         camera.position = middle;
       }
     }
+    this.reanchor();
   }
+
+  /**
+   * Place every anchored placement again, against the window as it is now.
+   *
+   * ANCHORS WERE MEASURED ONCE, AT LOAD, and a world's main map is loaded
+   * between its prologue and its rows so that a row can name what the map
+   * placed (specs/MAP_BEFORE_ROWS_PLAN.md). So `set view size` in a world's
+   * body runs AFTER the load: the placements had already been fitted to the
+   * default window and were never fitted again. Notes met it — NEW NOTE is
+   * anchored to the bottom of a 320x576 map, was placed against the default
+   * 320x320 window at y=264, and stayed there when the body made the window
+   * 576 tall, which is the middle of it.
+   *
+   * ONE THAT HAS BEEN MOVED IS LEFT WHERE IT WAS PUT, which is the rule the
+   * cameras above already follow through a resize. A placement a program has
+   * dragged somewhere is somewhere for a reason, and shifting it back would
+   * undo the program.
+   *
+   * Only the placements in a space the WORLD's window sizes. A Viewport's
+   * space is sized by the Viewport (`viewSizeOf`), and nothing here changed
+   * that.
+   */
+  private reanchor(): void {
+    const property = this.positionalProperty(SPATIAL.position);
+    if (!property) {
+      return;
+    }
+    const view = this.viewSize();
+    for (const actor of this.actorList) {
+      const hold = this.anchorHolds.get(actor);
+      if (!hold || hold.space.owner || actor.parent()) {
+        continue;
+      }
+      const at = actor.get(property) as Vector;
+      if (at.x !== hold.put.x || at.y !== hold.put.y) {
+        continue; // moved since; it is where it was put on purpose
+      }
+      const put = anchored(hold.at, hold.anchor, hold.drawn, view);
+      actor.set(property, put);
+      hold.put = put;
+    }
+  }
+
+  /**
+   * What it would take to place an anchored placement again.
+   *
+   * A WeakMap rather than a list to prune: a dialog loads and unloads over and
+   * over, and a strong reference to every placement one ever made would be a
+   * leak that grew with the session. What is iterated is the world's own actor
+   * list, which is already the set of actors that exist.
+   */
+  private readonly anchorHolds = new WeakMap<
+    Actor,
+    {
+      readonly space: Space;
+      readonly anchor: Anchor;
+      /** Where the MAP put it — what the offset is measured from. */
+      readonly at: Vector;
+      /** The map's drawn size, which the offset is measured against. */
+      readonly drawn: Vector;
+      /** Where this last put it; a position that differs was set elsewhere. */
+      put: Vector;
+    }
+  >();
 
   /**
    * Say how big the world is, in TILES.
@@ -2327,7 +2392,12 @@ export class World {
       if (actor.parent()) {
         continue;
       }
-      actor.set(property, anchored(actor.get(property), anchor, drawn, view));
+      const at = actor.get(property) as Vector;
+      const put = anchored(at, anchor, drawn, view);
+      actor.set(property, put);
+      // Kept, so that a window resized afterwards can measure again from the
+      // MAP's position rather than from this one (`reanchor`).
+      this.anchorHolds.set(actor, {space, anchor, at, drawn, put});
     }
   }
 

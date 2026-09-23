@@ -10,6 +10,7 @@ import {describe, expect, it} from 'vitest';
 import {ActorBuilder} from '../builders/ActorBuilder';
 import {RuleBuilder} from '../builders/RuleBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
+import {Vector} from '../core/Vector';
 import type {MapLoad, WorldMap} from '../core/World';
 import {PositionProperty} from '../rules/spatial';
 
@@ -224,6 +225,41 @@ describe('an anchored placement', () => {
     world.loadMap(cornered('bottom right') as never);
 
     expect(placed(world)).toMatchObject({x: 300, y: 300});
+  });
+
+  it('follows a window RESIZED after the map loaded', () => {
+    // THE ORDER A WORLD ACTUALLY RUNS IN, and the one every test above has
+    // backwards. A world's main map is loaded between its prologue and its
+    // rows, so that a row can name what the map placed
+    // (specs/MAP_BEFORE_ROWS_PLAN.md) — which means `set view size` in the
+    // world's body runs AFTER the load, and the anchors were measured against
+    // the default window and never measured again.
+    //
+    // Notes met it: NEW NOTE is anchored to the bottom of a 320x576 map, was
+    // placed against the default 320x320 window at y=264, and stayed there
+    // when the body made the window 576 tall — which is the middle of it.
+    const world = makeWorld();
+    world.loadMap(cornered('bottom right') as never);
+    expect(placed(world)).toMatchObject({x: 300, y: 300});
+
+    world.setViewSize(20, 10);
+
+    expect(placed(world)).toMatchObject({x: 620, y: 300});
+  });
+
+  it('is left where a block PUT it, when the window then changes', () => {
+    // The same rule the cameras follow through a resize: one still where it
+    // was declared follows the window, one that has been moved is left alone.
+    // Re-anchoring a thing a program has since dragged somewhere would undo
+    // the program.
+    const world = makeWorld();
+    world.loadMap(cornered('bottom right') as never);
+    const card = [...world.actors].find(one => one.id === 'card')!;
+    card.set(PositionProperty, new Vector(10, 10));
+
+    world.setViewSize(20, 10);
+
+    expect(placed(world)).toMatchObject({x: 10, y: 10});
   });
 
   it('ignores an anchor it does not know', () => {

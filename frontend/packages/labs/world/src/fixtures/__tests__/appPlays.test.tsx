@@ -11,6 +11,7 @@ import {describe, expect, it} from 'vitest';
 import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor, World} from '../../engine';
 import {NO_CLOCK} from '../../engine/core/clock';
+import {PositionProperty} from '../../engine/rules/spatial';
 import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
@@ -97,6 +98,26 @@ describe('Notes, the app', () => {
     expect(named('Notes')).toBeTruthy();
     expect(list()).toBeTruthy();
     expect(listed()).toEqual([]);
+  });
+
+  it('holds NEW NOTE at the foot of the window, not in the middle of it', async () => {
+    // THE WINDOW IS SIZED BY THE WORLD'S BODY, which runs AFTER the main map
+    // is loaded (specs/MAP_BEFORE_ROWS_PLAN.md). So the anchors were measured
+    // against the default 320x320 window and never measured again: the button
+    // sat at y=264, which is the middle of the 576-tall window the body then
+    // asked for (`World.reanchor`).
+    const {world, named} = await play();
+    const view = world.viewSize();
+    expect(view).toMatchObject({x: 320, y: 576});
+
+    // Where the map drew it: 56 up from the bottom of a 576-tall map. The
+    // window is that shape, so the anchor should have moved it nowhere.
+    expect(named('New')!.get(PositionProperty)).toMatchObject({x: 160, y: 520});
+    // …and the header is still its own distance from the top.
+    expect(named('Header')!.get(PositionProperty)).toMatchObject({
+      x: 160,
+      y: 48,
+    });
   });
 
   it('goes to the form, and brings a keyboard with it', async () => {
