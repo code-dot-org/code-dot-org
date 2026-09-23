@@ -87,7 +87,8 @@
           "type": "spritelab2_restartScene"
         }
       ]
-    }
+    },
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>
