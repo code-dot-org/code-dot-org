@@ -100,6 +100,7 @@ export default defineConfig(({command}) => ({
       'react',
       'react-dom',
       'react-redux',
+      'react-router-dom',
       '@mui/material',
       '@emotion/react',
       '@emotion/styled',

@@ -60,6 +60,7 @@
     "react-dom": "catalog:",
     "react-konva": "18",
     "react-redux": "catalog:",
+    "react-router-dom": "^6.26.0",
     "sass": "catalog:",
     "stylelint": "catalog:",
     "typescript": "catalog:",
