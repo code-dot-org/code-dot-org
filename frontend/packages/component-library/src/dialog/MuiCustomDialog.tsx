@@ -4,6 +4,7 @@ import {HTMLAttributes, ReactNode, useCallback, useEffect, useRef} from 'react';
 
 import {useTheme} from '@/common/contexts';
 import type {Theme as DataThemeMode} from '@/common/contexts';
+import useBodyScrollLock from '@/common/hooks/useBodyScrollLock';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './muiCustomDialog.module.scss';
@@ -77,6 +78,10 @@ const MuiCustomDialog: React.FunctionComponent<MuiCustomDialogProps> = ({
 }) => {
   const paperRef = useRef<HTMLDivElement>(null);
   const {theme: contextTheme} = useTheme(true);
+  // One reference-counted lock shared with the legacy dialogs, so a legacy and
+  // an MUI dialog open at once release the body only when both are gone. MUI's
+  // own ModalManager is turned off below for the same reason.
+  useBodyScrollLock(true);
 
   useEffect(() => {
     const hasDescriptionId = paperRef.current?.querySelector(
@@ -121,6 +126,7 @@ const MuiCustomDialog: React.FunctionComponent<MuiCustomDialogProps> = ({
       open
       onClose={onClose && handleClose}
       disableEscapeKeyDown={!onClose}
+      disableScrollLock
       sx={zIndex === undefined ? undefined : {zIndex}}
       slotProps={{
         transition: {onEntered: focusFirstControl},

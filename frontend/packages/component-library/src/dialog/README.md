@@ -43,8 +43,11 @@ The surface comes from the `MuiDialog` entry in
 `--borders-neutral-primary` hairline, no radius or shadow, on a
 `--neutral-black-alpha-90` backdrop at z-index 1040, with no open or close
 transition and no breakpoint cap on the width. That override is **global**: a
-bare `Dialog` from `@mui/material` gets the same surface. `MuiDialog` adds the
-0.5rem radius, the drop shadow and the standard layout on top.
+bare `Dialog` from `@mui/material` gets the same surface. Today that is one
+component, `FormDialog` in `frontend/packages/users` (the account-settings
+modals), which moves from MUI's white elevated paper to this flat panel the
+next time that package rebuilds. `MuiDialog` adds the 0.5rem radius, the drop
+shadow and the standard layout on top.
 
 Both dialogs are open while mounted; there is no `open` prop. Render them
 conditionally, as every consumer does today. `Dialog` and `CustomDialog` from

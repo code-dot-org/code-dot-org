@@ -10,7 +10,7 @@ import {vi} from 'vitest';
 import {ThemeProvider as DscoThemeProvider, useTheme} from '@/common/contexts';
 import CdoTheme from '@/themes/code.org';
 
-import {MuiCustomDialog, MuiCustomDialogProps} from './../index';
+import {CustomDialog, MuiCustomDialog, MuiCustomDialogProps} from './../index';
 
 describe('Design System - MuiCustomDialog', () => {
   const defaultProps: MuiCustomDialogProps = {
@@ -121,6 +121,22 @@ describe('Design System - MuiCustomDialog', () => {
     expect(document.body.style.overflow).toBe('hidden');
 
     unmount();
+    expect(document.body.style.overflow).not.toBe('hidden');
+  });
+
+  it('shares the scroll lock with a legacy dialog closed out of order', () => {
+    const legacy = render(
+      <CustomDialog aria-label="Legacy" onClose={vi.fn()}>
+        <p id="dsco-dialog-description">Legacy</p>
+      </CustomDialog>,
+    );
+    const mui = renderDialog();
+    expect(document.body.style.overflow).toBe('hidden');
+
+    legacy.unmount();
+    expect(document.body.style.overflow).toBe('hidden');
+
+    mui.unmount();
     expect(document.body.style.overflow).not.toBe('hidden');
   });
 
