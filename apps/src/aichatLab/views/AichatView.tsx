@@ -324,49 +324,45 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     return null;
   }, [currentUserId]);
 
-  const backpackProps: BackpackProps | undefined = useMemo(() => {
-    if (levelAichatSettings?.multimodalEnabled) {
-      return {
-        addFileTooltipText: 'Add to chat',
-        addFileHandler: async params => {
-          const {fileName, getFile, notifySuccess, notifyError} = params;
-          const file = await getFile();
-          chatWorkspaceRef.current?.addFiles([file], status => {
-            if (status === 'uploaded') {
-              notifySuccess(
-                'new',
-                `${fileName} has been added to your chat message.`
-              );
-            } else if (status === 'imageFileFlagged') {
-              notifyError(
-                `${fileName} has been flagged by our content moderation policy and has not been added to your chat message.`
-              );
-            } else if (status === 'sizeLimitExceeded') {
-              notifyError(
-                `${fileName} exceeds the maximum file size limit and has not been added to your chat message. Please try a smaller file.`
-              );
-            } else {
-              notifyError(
-                `There was an error uploading ${fileName}. Please try again.`
-              );
-            }
-          });
-        },
-        validateFileName: (fileName: string) => ({
-          newFileName: fileName,
-          isSupportFileName: false,
-        }),
-        // no-ops since we're using the addFileHandler.
-        saveFileToProject: () => {},
-        createNewProjectFile: () => {},
-        findIdForFileName: () => undefined,
-        supportedFileTypes: getAllowedFileExtensions(
-          modelParameters.selectedModelId
-        ),
-      };
-    } else {
-      return undefined;
-    }
+  const backpackProps: BackpackProps = useMemo(() => {
+    return {
+      addFileTooltipText: 'Add to chat',
+      addFileHandler: async params => {
+        const {fileName, getFile, notifySuccess, notifyError} = params;
+        const file = await getFile();
+        chatWorkspaceRef.current?.addFiles([file], status => {
+          if (status === 'uploaded') {
+            notifySuccess(
+              'new',
+              `${fileName} has been added to your chat message.`
+            );
+          } else if (status === 'imageFileFlagged') {
+            notifyError(
+              `${fileName} has been flagged by our content moderation policy and has not been added to your chat message.`
+            );
+          } else if (status === 'sizeLimitExceeded') {
+            notifyError(
+              `${fileName} exceeds the maximum file size limit and has not been added to your chat message. Please try a smaller file.`
+            );
+          } else {
+            notifyError(
+              `There was an error uploading ${fileName}. Please try again.`
+            );
+          }
+        });
+      },
+      validateFileName: (fileName: string) => ({
+        newFileName: fileName,
+        isSupportFileName: false,
+      }),
+      // no-ops since we're using the addFileHandler.
+      saveFileToProject: () => {},
+      createNewProjectFile: () => {},
+      findIdForFileName: () => undefined,
+      supportedFileTypes: levelAichatSettings?.multimodalEnabled
+        ? getAllowedFileExtensions(modelParameters.selectedModelId)
+        : [],
+    };
   }, [modelParameters.selectedModelId, levelAichatSettings?.multimodalEnabled]);
 
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
