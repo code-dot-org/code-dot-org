@@ -4,8 +4,7 @@ import React from 'react';
 import styles from './attempt-card.module.scss';
 
 export interface AttemptCardProps {
-  // Omit for a quiz with only one question.
-  questionLabel?: string;
+  label?: string;
   title: string;
   // The type-specific answer area (choices, free response, etc).
   children: React.ReactNode;
@@ -13,16 +12,16 @@ export interface AttemptCardProps {
 
 // Shared card shell every question type renders through.
 const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
-  questionLabel,
+  label,
   title,
   children,
 }) => (
   <div className={styles.card}>
     <div className={styles.content}>
       <div className={styles.header}>
-        {questionLabel && (
-          <Typography variant="overline2" className={styles.questionLabel}>
-            {questionLabel}
+        {label && (
+          <Typography variant="overline2" className={styles.label}>
+            {label}
           </Typography>
         )}
         {/* Lets a page-change handler focus this heading programmatically. */}
@@ -30,7 +29,7 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
           {title}
         </Typography>
       </div>
-      <div className={styles.questionBody}>{children}</div>
+      <div className={styles.body}>{children}</div>
     </div>
   </div>
 );
