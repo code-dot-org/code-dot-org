@@ -14,7 +14,7 @@ const COMMON_WIRE = {
   should_see_add_password_form: false,
   should_see_edit_email_link: true,
   authentication_options: [
-    {credential_type: 'email', email: 'ada@example.com'},
+    {id: 1, credential_type: 'email', email: 'ada@example.com'},
   ],
   can_change_user_type: true,
   can_delete_own_account: true,
@@ -154,5 +154,55 @@ describe('UserSettingsResponseSchema educator profile keys', () => {
     expect(() =>
       UserSettingsResponseSchema.parse({...TEACHER_WIRE, educator_role: 7}),
     ).toThrow();
+  });
+});
+
+describe('UserSettingsResponseSchema integrations', () => {
+  const INTEGRATIONS_WIRE = {
+    can_manage_linked_accounts: true,
+    is_google_classroom_student: false,
+    is_clever_student: true,
+    personal_account_linking_enabled: false,
+    lms_name: 'canvas_cloud',
+    lti_roster_sync_enabled: true,
+  };
+
+  it('camelCases the authentication option id', () => {
+    const settings = UserSettingsResponseSchema.parse(TEACHER_WIRE);
+
+    expect(settings.authenticationOptions).toEqual([
+      {id: 1, credentialType: 'email', email: 'ada@example.com'},
+    ]);
+  });
+
+  it('camelCases the integrations block', () => {
+    const settings = UserSettingsResponseSchema.parse({
+      ...TEACHER_WIRE,
+      integrations: INTEGRATIONS_WIRE,
+    });
+
+    expect(settings.integrations).toEqual({
+      canManageLinkedAccounts: true,
+      isGoogleClassroomStudent: false,
+      isCleverStudent: true,
+      personalAccountLinkingEnabled: false,
+      lmsName: 'canvas_cloud',
+      ltiRosterSyncEnabled: true,
+    });
+  });
+
+  it('leaves integrations absent when the payload omits it', () => {
+    const settings = UserSettingsResponseSchema.parse(TEACHER_WIRE);
+
+    expect(settings).not.toHaveProperty('integrations');
+  });
+
+  it('leaves the roster sync setting absent when the payload omits it', () => {
+    const settings = UserSettingsResponseSchema.parse({
+      ...STUDENT_WIRE,
+      integrations: {...INTEGRATIONS_WIRE, lti_roster_sync_enabled: undefined},
+    });
+
+    expect(settings.integrations).not.toHaveProperty('ltiRosterSyncEnabled');
   });
 });
