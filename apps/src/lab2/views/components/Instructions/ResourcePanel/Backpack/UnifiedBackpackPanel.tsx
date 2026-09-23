@@ -65,6 +65,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const workspaceNoun = useAppSelector(state =>
+    state.lab.levelProperties?.isProjectLevel ? 'project' : 'level'
+  );
 
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -375,7 +378,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
                       variant="strong"
                       className={moduleStyles.unsupportedText}
                     >
-                      {`Not supported in this lab (${unsupportedFiles.length})`}
+                      {`Not supported in this ${workspaceNoun} (${unsupportedFiles.length})`}
                     </Typography>
                   </Typography>
                   <FontAwesomeV6Icon
