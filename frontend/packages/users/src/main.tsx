@@ -12,8 +12,8 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {
-  DEFAULT_BRAND,
   getMuiThemeForBrand,
+  resolveBrand,
 } from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {QueryClientProvider} from '@code-dot-org/core/api';
@@ -115,7 +115,7 @@ await bootMocks(scenario);
 // it here, so default to the brand production defaults to. `?brand=` overrides
 // it for a side-by-side against the legacy tokens.
 const brand =
-  new URLSearchParams(window.location.search).get('brand') ?? DEFAULT_BRAND;
+  resolveBrand(new URLSearchParams(window.location.search).get('brand'));
 document.documentElement.dataset.brand = brand;
 
 createRoot(document.getElementById('root')!).render(

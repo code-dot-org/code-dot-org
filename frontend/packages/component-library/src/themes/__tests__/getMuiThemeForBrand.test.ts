@@ -1,7 +1,11 @@
 import CdoTheme from '../code.org';
 import CodeaiTheme from '../codeai';
 import CodeaiAuditTheme from '../codeai-audit';
-import {DEFAULT_BRAND, getMuiThemeForBrand} from '../getMuiThemeForBrand';
+import {
+  DEFAULT_BRAND,
+  getMuiThemeForBrand,
+  resolveBrand,
+} from '../getMuiThemeForBrand';
 
 describe('getMuiThemeForBrand', () => {
   it('returns CodeaiTheme for codeai-next', () => {
@@ -29,4 +33,31 @@ describe('getMuiThemeForBrand', () => {
       getMuiThemeForBrand(undefined),
     );
   });
+});
+
+describe('resolveBrand', () => {
+  it.each(['code', 'codeai', 'codeai-next', 'codeai-audit'])(
+    'passes %s through',
+    brand => {
+      expect(resolveBrand(brand)).toBe(brand);
+    },
+  );
+
+  it.each(['foo', '', null, undefined])(
+    'replaces %s with the default',
+    brand => {
+      expect(resolveBrand(brand)).toBe(DEFAULT_BRAND);
+    },
+  );
+
+  // The CSS tokens match the attribute exactly, so a value this returns must
+  // always be one the theme lookup agrees with.
+  it.each(['foo', '', 'codeai-next', 'code'])(
+    'agrees with getMuiThemeForBrand for %s',
+    brand => {
+      expect(getMuiThemeForBrand(brand)).toBe(
+        getMuiThemeForBrand(resolveBrand(brand)),
+      );
+    },
+  );
 });

@@ -13,8 +13,8 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {
-  DEFAULT_BRAND,
   getMuiThemeForBrand,
+  resolveBrand,
 } from '@code-dot-org/component-library/themes';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
@@ -34,8 +34,10 @@ if (!root) {
 // The attribute must be on <html> before getMuiThemeForBrand runs: the CSS
 // tokens react to [data-brand] whenever it changes, but the MUI theme is
 // chosen once at boot.
-const brand = new URLSearchParams(window.location.search).get('brand');
-document.documentElement.dataset.brand = brand ?? DEFAULT_BRAND;
+const brand = resolveBrand(
+  new URLSearchParams(window.location.search).get('brand')
+);
+document.documentElement.dataset.brand = brand;
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
 createRoot(root).render(
