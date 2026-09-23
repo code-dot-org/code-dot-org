@@ -171,8 +171,6 @@ export const keyboardMap = JSON.stringify(
         ...script(key),
       })),
     ],
-    // No `raises` under it: a key types, and typing is not an event the
-    // project hears about (specs/MAP_EVENTS_PLAN.md).
     blocks: defineMap('On-Screen Keyboard'),
   },
   null,

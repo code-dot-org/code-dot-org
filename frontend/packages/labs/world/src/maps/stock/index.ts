@@ -27,10 +27,11 @@ export interface StockMap {
   /**
    * The world events it raises, which the import declares in the world.
    *
-   * Said here as well as in the map's own `raises` rows, because the rows
-   * carry only the NAME and a declaration needs the signature too. A test
-   * holds the two in step (`stockMaps.test`), the way one holds `actors`
-   * against what the map places.
+   * Said here as well as by the `emit` blocks inside the map, because a
+   * declaration needs the event's SIGNATURE — `a tab is chosen` carries a
+   * value — and an `emit` block does not carry one. Two genuinely different
+   * artifacts, so a test holds them in step (`stockMaps.test`), the way one
+   * holds `actors` against what the map places.
    */
   raises?: readonly RaisedEvent[];
   /** The `.map` JSON, copied verbatim on import. */

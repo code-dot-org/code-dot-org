@@ -50,7 +50,6 @@ import {
   type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
-import {topBlocksOf} from './topBlocks';
 
 /** A block as it appears in a serialized workspace. */
 interface ActorBlock {
@@ -192,58 +191,6 @@ export function parseWorldOwnMeta(
   contents: string,
 ): OwnMeta | undefined {
   return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
-}
-
-/** What a map's `define map` root says about the map. */
-export interface MapManifest {
-  /** What the map calls itself, which used to come from its file's stem. */
-  readonly name: string;
-  /**
-   * The world events it declares it raises, in the order they are written.
-   *
-   * A DECLARATION OF DEPENDENCY, not of vocabulary. The events themselves are
-   * the world's (`parseWorldOwnMeta`); these rows say which of them this map
-   * expects to be able to raise, so that an import can put the declaration in
-   * the world it is imported to and a load can check that it is there
-   * (specs/MAP_EVENTS_PLAN.md).
-   */
-  readonly raises: readonly string[];
-}
-
-/**
- * A map's root, read off the file.
- *
- * Undefined for a `.map` with no workspace or no root in it — which is every
- * map made before `define map` existed, and is not an error: nothing that
- * reads this needs a map to have one, they need to know when it does.
- */
-export function parseMapManifest(contents: string): MapManifest | undefined {
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(contents);
-  } catch {
-    return undefined; // mid-edit / not JSON
-  }
-  const root = (topBlocksOf(parsed) as ActorBlock[]).find(
-    block => block?.type === 'world_map',
-  );
-  if (!root) {
-    return undefined;
-  }
-  const raises: string[] = [];
-  for (const block of chain(root)) {
-    if (block.type !== 'world_map_raises') {
-      continue;
-    }
-    const event = block.fields?.EVENT;
-    // Deduplicated, because two rows naming one event is one dependency said
-    // twice and every reader of this wants the set.
-    if (typeof event === 'string' && event && !raises.includes(event)) {
-      raises.push(event);
-    }
-  }
-  const name = root.fields?.NAME;
-  return {name: typeof name === 'string' ? name : '', raises};
 }
 
 /** The walk both share: a root's chain, and every declaration in it. */

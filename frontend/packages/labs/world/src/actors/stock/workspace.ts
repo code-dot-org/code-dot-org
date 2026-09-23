@@ -588,32 +588,14 @@ export const alongY = () =>
 /**
  * `define map ⟨Pause Menu⟩` — the root a map's workspace opens with.
  *
- * The map's name and, chained under it, one `raises` row per world event the
- * map expects to be able to say. Returns a whole workspace serialization,
- * which is what a `.map`'s `blocks` key holds (specs/MAP_EVENTS_PLAN.md).
+ * Returns a whole workspace serialization, which is what a `.map`'s `blocks`
+ * key holds. What the map RAISES is not said here: it is what the `emit`
+ * blocks in its placements say, and a row restating it was a second place for
+ * one fact (specs/MAP_EVENTS_PLAN.md).
  */
-export const defineMap = (name: string, ...raises: string[]) => ({
+export const defineMap = (name: string) => ({
   blocks: {
-    blocks: [
-      {
-        type: 'world_map',
-        x: 20,
-        y: 20,
-        fields: {NAME: name},
-        ...(raises.length
-          ? {
-              next: {
-                block: chain(
-                  raises.map(event => ({
-                    type: 'world_map_raises',
-                    fields: {EVENT: event},
-                  })),
-                ),
-              },
-            }
-          : {}),
-      },
-    ],
+    blocks: [{type: 'world_map', x: 20, y: 20, fields: {NAME: name}}],
   },
 });
 

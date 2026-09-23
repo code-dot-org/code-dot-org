@@ -1,7 +1,8 @@
 # Plan: a map wires into the world's events rather than minting its own
 
-STATUS: BUILT. All seven steps are in; see "What got built" at the foot for
-what each one turned out to be and the two things it changed on the way.
+STATUS: BUILT, less one part. Six of the seven steps are in. Step 6, the
+load-time check, was built and then taken out along with the `raises` row it
+read — see the two sections at the foot, which correct the rest.
 
 A map may declare events today, and the world hears them. This proposes the
 inversion: the WORLD declares the events, a map says which of them it raises,
@@ -159,6 +160,11 @@ mistake at the moment it matters, and it still lets one map serve two worlds
 that both declare `quit` — which is why the registry is keyed by NAME and not
 by path.
 
+> CORRECTED AFTER BUILDING. There is no load-time check, and there is nothing
+> for one to catch: see "Why there is no load-time check" at the foot. The
+> registry is still keyed by name, for the reason above it — a map cannot
+> import the world that loads it.
+
 Revisit if projects start routinely holding several worlds with genuinely
 different vocabularies. That is a "when somebody hits it" change.
 
@@ -287,8 +293,9 @@ Nobody has asked.
 The seven steps, as they landed, and what each one turned out to be.
 
 **1–3, the declaration and the raise.** `define event` under `define world`,
-`World.defineEvent`/`emitNamed`/`eventNames`/`unheardEventNames`, and the
-preamble that registers one call per declared event. The `emit` generator
+`World.defineEvent` and `World.emitNamed`, and the preamble that registers one
+call per declared event. (`eventNames` and `unheardEventNames` went with the
+`raises` row that was their only reader — see the foot.) The `emit` generator
 short-circuits in a map: a map's `emit` of a world's event compiles to
 `world.emitNamed("quit")` rather than to an import of a module that would be a
 cycle.
@@ -322,17 +329,13 @@ A stock map's `emit` block type is minted from the module the event is DECLARED
 in, which is the project's one world; `mainWorld.ts` is the one constant that
 fixes where that is, and `ENTRY_FILE` derives from it.
 
-**6, the load-time check.** The map's `raises` are carried into the compiled
-`mapData`, and `World.loadMap` compares them against what the world declares.
-Recorded in `unheardEventNames` rather than thrown, as the theme's unresolved
-list is — the map still loads and everything on it still works. Finding it at
-LOAD rather than at the click matters: a raise that goes nowhere is met by the
-learner as "the button does nothing".
+**6, the load-time check.** Built, then taken out, and it turns out there was
+nothing for it to catch — see "Why there is no load-time check" below.
 
 **7, the fixtures.** Notes' world declares `save` and `cancel` and its write
 map raises them; Breakout's declares `quit` and hears it.
 
-### Two things this changed that the plan did not anticipate
+### One thing this changed that the plan did not anticipate
 
 **A test that rebuilt the world after the import threw the declarations away.**
 `dialogsPlay` imported the stock map and then replaced `main.world` with its
@@ -340,17 +343,73 @@ own, which is exactly the failure mode the cost section predicted — the
 declaration lives in a file somebody else owns. The test writes the world
 first and imports over it now, which is also the honest order.
 
-**`world_map_raises` has no lesson.** `world_map` is granted by `place/script`,
-the tile that opens a map's workspace. A `raises` row needs a map script AND a
-world event, and no tile asks for the pair, so it is on the not-taught ledger
-beside the two map hats.
+`world_map` is granted by `place/script`, the tile that opens a map's
+workspace, which is where it belongs.
 
 ### Still open
 
-- **Nothing reports `unheardEventNames`.** It is recorded and askable, at the
-  same level `ResolvedTheme.unresolved` is. A sandbox that said "this map
-  raises `quit` and nothing hears it" would be worth more than either.
-- **A map's `raises` rows are written twice for a stock map** — once in the
-  map's workspace and once on the `StockMap` entry, because the rows carry only
-  a name and a declaration needs the signature. `stockMaps.test` holds the two
-  in step, the way nothing holds `actors` against what a map places.
+- **A stock map's events are written twice** — once as the `emit` blocks in the
+  map, once on the `StockMap` entry the import declares from, because a
+  declaration needs the SIGNATURE and an `emit` block does not carry one. Two
+  genuinely different artifacts, so `stockMaps.test` holds them in step. This
+  is the duplication that is worth keeping; the `raises` row was not.
+
+## Derived, not declared: `raises` taken back out
+
+The `raises` row was a mistake, and the plan above contains the argument that
+should have caught it. Writing down what it bought, once built:
+
+- **The import never read it.** `importStockMap` declares from `StockMap.raises`
+  — the TypeScript shelf entry — because a declaration needs the event's
+  SIGNATURE and a row carries only a name. The rows in the `.map` were read by
+  nothing but the load-time check.
+- **It gated nothing.** `emit ⟨quit⟩` in a placement's script works with or
+  without a row above it. The row could not be wrong in a way that mattered and
+  could not be missing in a way that mattered.
+- **It was a second place to say one thing**, which is the mistake the
+  "Decisions taken before building" section names three previous instances of.
+  A test existed for no purpose but holding the two copies in step.
+
+The plan's own argument against a `uses ⟨actor⟩` row is the argument against
+this one, and it was written four paragraphs after `raises` was decided:
+
+> `emits` exists because an event's declaration is genuinely elsewhere and must
+> be satisfied; a kind's is already named by the placement.
+
+But an event's USE is already named by the `emit` block, exactly as a kind's is
+named by the placement. That the DECLARATION belongs on the world is the rest
+of this plan and is right; it is not a reason for the map to restate which
+declarations it uses.
+
+So the row is gone. `define map` stays and keeps the three things it was worth:
+a map declares its NAME, its hats hang under something, and a rename has
+somewhere to write.
+
+### Why there is no load-time check
+
+Step 6 wanted a map loaded into a world that does not declare what it raises to
+say so at the LOAD rather than at the click. Taking the row out took the check
+with it, and pulling on that found the check had nothing to catch.
+
+A project holds ONE world. A map's `emit` is a BLOCK TYPE, minted from the
+event's declaration, so it exists only because that world declared the event —
+and the preamble registers every event it declares. So the name a raise carries
+is always one the world knows, and `emitNamed` cannot fail to find it.
+
+What happens when the world stops declaring one is better than a check anyway:
+the block type is no longer defined, the map's `emit` comes back as a STAND-IN
+carrying the learner's blocks unharmed, and the editor says so on the block
+itself (`blockly/standInBlocks`). That is a report, in the place the mistake
+was made, rather than a list in a running world that nothing displays.
+
+So `World.unheardEventNames` is gone too — it could not fill, and a reporting
+surface nothing can reach is the same dead weight the `raises` row was. So is
+`World.eventNames`, which existed to fill the `raises` dropdown. `emitNamed`
+still answers false for a name it does not know, which is the emptiest correct
+answer and costs nothing.
+
+The pattern across all four removals is one thing: **something that restates
+what is already written somewhere else cannot be checked, only kept in step.**
+The row restated the `emit` blocks; the check read the row; the two accessors
+served the check and the row's dropdown. Only the `emit` block is load-bearing,
+and it always was.

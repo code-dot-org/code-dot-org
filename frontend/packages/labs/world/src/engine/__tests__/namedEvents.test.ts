@@ -3,11 +3,9 @@
 //
 // A map cannot import the world's module — the world LOADS the map, so the
 // import would be a cycle — so the world REGISTERS what it declares under a
-// name and a map says the word. Three things follow, and this pins them: many
-// maps raising one event is one declaration and one handler, which is the
-// sentence the old design could not say; a name nothing declares raises
-// nothing; and the mismatch is found when the map is LOADED rather than when
-// somebody finally presses the button.
+// name and a map says the word. What this pins is the sentence the old design
+// could not say: many maps raising one event is one declaration and one
+// handler.
 
 import {describe, expect, it} from 'vitest';
 
@@ -32,10 +30,8 @@ const makeWorld = (declaring = true): World => {
   return world;
 };
 
-/** A map that says it raises `quit`, and whose script raises it. */
-const menu = (id: string): WorldMap => ({
-  name: id,
-  raises: ['quit'],
+/** A map whose script raises `quit`. */
+const menu = (): WorldMap => ({
   actors: [{type: 'actors/button', id: 'Quit'}],
   script: world => {
     world.emitNamed('quit');
@@ -48,7 +44,7 @@ describe('a world’s named events', () => {
     const heard: number[] = [];
     world.on(QuitEvent, () => heard.push(1));
 
-    world.loadMap(menu('a'));
+    world.loadMap(menu());
     world.tick(1 / 60);
     expect(heard).toHaveLength(1);
   });
@@ -61,34 +57,16 @@ describe('a world’s named events', () => {
     const heard: string[] = [];
     world.on(QuitEvent, () => heard.push('quit'));
 
-    for (const id of ['pause', 'confirm', 'level']) {
-      world.loadMap(menu(id));
-    }
+    // Three maps, as a pause menu, a confirm and a level's own would be.
+    world.loadMap(menu());
+    world.loadMap(menu());
+    world.loadMap(menu());
     world.tick(1 / 60);
     expect(heard).toEqual(['quit', 'quit', 'quit']);
-    expect(world.unheardEventNames()).toEqual([]);
   });
 
-  it('raise nothing under a name the world does not declare, and say so', () => {
+  it('raise nothing under a name the world does not declare', () => {
     const world = makeWorld(false);
     expect(world.emitNamed('quit')).toBe(false);
-    expect(world.unheardEventNames()).toEqual(['quit']);
-  });
-
-  it('are checked when the map LOADS, before anything is pressed', () => {
-    const world = makeWorld(false);
-    // Nothing has raised anything: the map merely said it would.
-    world.loadMap({name: 'Pause Menu', raises: ['quit'], actors: []});
-    expect(world.unheardEventNames()).toEqual(['quit']);
-  });
-
-  it('say nothing about a map whose raises the world declares', () => {
-    const world = makeWorld();
-    world.loadMap({name: 'Pause Menu', raises: ['quit'], actors: []});
-    expect(world.unheardEventNames()).toEqual([]);
-  });
-
-  it('list what the world declares, for the editor to offer', () => {
-    expect(makeWorld().eventNames()).toEqual(['quit']);
   });
 });

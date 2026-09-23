@@ -19,26 +19,15 @@ import BlocklyGenerator, {
 } from '../BlocklyGenerator';
 import {DOMAIN_BLOCKS} from '../domainBlocks';
 import {NONE_VALUE, setCurrentPlacements} from '../moduleOptions';
-import {parseMapManifest} from '../ownProperties';
 import {projectOwnMetas} from '../projectModules';
 
 /** A workspace holding `tops` as its top blocks. */
 const workspace = (...tops: object[]) => ({blocks: {blocks: tops}});
 
-/** `define map ⟨Menu⟩` with a `raises` row under it, as a map's root. */
-const defineMap = (name: string, ...raises: string[]) => ({
+/** `define map ⟨Menu⟩` — the root a map's workspace opens with. */
+const defineMap = (name: string) => ({
   type: 'world_map',
   fields: {NAME: name},
-  next: {
-    block: raises.reduceRight<object | undefined>(
-      (next, event) => ({
-        type: 'world_map_raises',
-        fields: {EVENT: event},
-        ...(next ? {next: {block: next}} : {}),
-      }),
-      undefined,
-    ),
-  },
 });
 
 /** The project's one world, declaring the event the menu raises. */
@@ -102,7 +91,7 @@ const MENU = JSON.stringify({
       ),
     },
   ],
-  blocks: workspace(defineMap('Menu', 'quit'), {type: 'world_on_map_unloads'}),
+  blocks: workspace(defineMap('Menu'), {type: 'world_on_map_unloads'}),
 });
 
 /**
@@ -128,19 +117,6 @@ const generate = async (
 };
 
 describe('a map’s root', () => {
-  it('is what the map calls itself and what it says it raises', () => {
-    expect(parseMapManifest(MENU)).toEqual({name: 'Menu', raises: ['quit']});
-  });
-
-  it('is undefined for a map with no workspace and no root in one', () => {
-    expect(parseMapManifest('{"type":"map","actors":[]}')).toBeUndefined();
-    expect(
-      parseMapManifest(
-        JSON.stringify({type: 'map', blocks: workspace({type: 'text'})}),
-      ),
-    ).toBeUndefined();
-  });
-
   it('declares nothing the project can import, which a map used to', () => {
     expect(projectOwnMetas({'maps/menu.map': MENU})).toHaveLength(0);
   });

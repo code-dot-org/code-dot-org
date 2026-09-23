@@ -9,10 +9,9 @@
 // file calls itself (`projectModules/authoredName`), what it called itself
 // before a rename, and where to write the new name (`newThing/renamed`). Each
 // walked the first shape only, which is why a `.map` declared no name until
-// `define map` gave it one to declare (specs/MAP_EVENTS_PLAN.md). Two more ask
-// it about a map in particular — what its root says it raises
-// (`ownProperties/parseMapManifest`) and where to put a declaration that
-// satisfies it (`maps/declareEvents`).
+// `define map` gave it one to declare (specs/MAP_EVENTS_PLAN.md). One more asks
+// it about a `.world` in particular: where to write a `define event` an
+// imported map needs (`maps/declareEvents`).
 
 /** As much of a block as naming and walking need. */
 export interface TopBlock {

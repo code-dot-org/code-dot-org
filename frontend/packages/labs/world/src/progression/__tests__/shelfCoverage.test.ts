@@ -90,11 +90,7 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
   ],
   // The two map hats. A map that does something when it loads is a real
   // thing (the pause menu is one) and no lesson reaches it.
-  // The map's two hats, and the `raises` row beside them: a map declaring
-  // which of the WORLD's events it raises needs both a map script and a
-  // world event, and no tile yet asks for the pair
-  // (specs/MAP_EVENTS_PLAN.md).
-  Map: ['world_on_map_loads', 'world_on_map_unloads', 'world_map_raises'],
+  Map: ['world_on_map_loads', 'world_on_map_unloads'],
   // Parenting, and the engine's own transform vocabulary. `is created` is on
   // this list, which is worth noticing: it is where an app restores what it
   // saved (specs/SAVING_PLAN.md).

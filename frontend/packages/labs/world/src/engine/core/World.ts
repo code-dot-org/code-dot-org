@@ -157,20 +157,6 @@ export interface WorldMap {
    * (specs/STYLES_PLAN.md).
    */
   theme?: string;
-  /** What the map calls itself — its `define map` NAME, for a report to cite. */
-  name?: string;
-  /**
-   * The world events this map says it RAISES, from its `raises` rows.
-   *
-   * Carried into the data so that the mismatch is caught when the map is
-   * LOADED rather than when a button is finally clicked: a map dropped into a
-   * world that never declared `quit` is a dialog whose answer goes nowhere,
-   * and waiting for the click to find out means the learner meets it as "the
-   * button does nothing" (specs/MAP_EVENTS_PLAN.md).
-   *
-   * Absent when the map raises nothing, which is most of them.
-   */
-  raises?: readonly string[];
   actors: Array<{
     type: string;
     /** Stable instance id; a random unique one is assigned when omitted. */
@@ -1780,63 +1766,26 @@ export class World {
 
   private readonly namedEvents = new Map<string, GameEvent>();
 
-  /** The events this world declares, by name — what a map may raise. */
-  eventNames(): readonly string[] {
-    return [...this.namedEvents.keys()];
-  }
-
   /**
    * Raise one of the world's events, by name.
    *
-   * A NAME THAT NAMES NOTHING RAISES NOTHING, and says so where somebody can
-   * act on it rather than throwing into a frame. The editor's dropdown is the
-   * ordinary guard; this is the one that catches a map loaded into a world
-   * whose vocabulary it does not fit, which is the case a `define map for
-   * ⟨world⟩` binding would have prevented and which is better caught here —
-   * a map may then serve two worlds that both declare the name.
+   * BY NAME, because a map cannot import the world that loads it: the world
+   * registers what it declares and the map says the word
+   * (specs/MAP_EVENTS_PLAN.md).
+   *
+   * A name that names nothing raises nothing and says so, which is the
+   * emptiest correct answer rather than a guard against anything reachable. A
+   * project has one world, and a map's `emit` is a block type that exists only
+   * because that world declared the event — so the name is always one the
+   * preamble registered. Nothing calls this with a name of its own invention.
    */
   emitNamed(name: string, ...values: readonly unknown[]): boolean {
     const event = this.namedEvents.get(name);
     if (!event) {
-      this.unheardEvents.add(name);
       return false;
     }
     this.events.enqueue(event, undefined, ...values);
     return true;
-  }
-
-  private readonly unheardEvents = new Set<string>();
-
-  /**
-   * What this map says it raises, against what this world declares.
-   *
-   * THE CHECK A `define map for ⟨world⟩` BINDING WOULD HAVE MADE, made at the
-   * moment the two meet instead of at author time — which is the right moment,
-   * because it is the LOAD that pairs them and a map may be loaded by more
-   * than one world (specs/MAP_EVENTS_PLAN.md).
-   *
-   * Recorded, not thrown, in the same list a raise of an unknown name goes in:
-   * the map still loads and everything on it still works, and what is missing
-   * is one `define event` in the world.
-   */
-  private checkRaises(map: WorldMap): void {
-    for (const name of map.raises ?? []) {
-      if (!this.namedEvents.has(name)) {
-        this.unheardEvents.add(name);
-      }
-    }
-  }
-
-  /**
-   * Every name a map tried to raise that this world does not declare.
-   *
-   * Kept rather than thrown, for the reason the theme's unresolved list is
-   * (`core/theme`): a project mid-edit is ordinary, and a sandbox reporting
-   * "this map raises `quit` and nothing hears it" is worth more than a frame
-   * that stopped.
-   */
-  unheardEventNames(): readonly string[] {
-    return [...this.unheardEvents];
   }
 
   /**
@@ -2490,7 +2439,6 @@ export class World {
 
   /** Place a map's actors into `space` — `loadMap`'s body, for any space. */
   private loadInto(space: Space, map: WorldMap, layer?: string): Actor[] {
-    this.checkRaises(map);
     this.growSpaceToFit(space, map);
     const lookup = this.propertyLookup();
     const added: Actor[] = [];

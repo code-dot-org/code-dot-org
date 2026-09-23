@@ -117,9 +117,9 @@ export const pauseMenuMap = JSON.stringify(
         ),
       },
     ],
-    // The map's own workspace: what it is called, and the one world event it
-    // raises.
-    blocks: defineMap('Pause Menu', 'quit'),
+    // The map's own workspace: what it is called. What it RAISES is what the
+    // Quit button's `emit` says, and nothing here restates it.
+    blocks: defineMap('Pause Menu'),
   },
   null,
   2,

@@ -197,7 +197,6 @@ import {
   projectMapPaths,
   NONE_VALUE,
   orNone,
-  worldEventOptions,
   placementOptions,
   placementOptionsExtension,
   ruleModuleOptions,
@@ -1775,11 +1774,10 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   // A map's own hats (specs/MAP_FIRST.md): the body chains below them.
   'world_on_map_loads',
   'world_on_map_unloads',
-  // …and a map's definition root, whose `raises` rows chain below it
-  // (specs/MAP_EVENTS_PLAN.md). Neither generates anything today, so this
-  // changes no output; it is here because the rows are its BODY, and a root
-  // whose body the default `scrub_` appends after it is a bug waiting for the
-  // first row that has something to say.
+  // …and a map's definition root (specs/MAP_EVENTS_PLAN.md). It generates
+  // nothing and has no body today, so this changes no output; it is here
+  // because it is a definition root, and one whose body the default `scrub_`
+  // appends after it is a bug waiting for the first row chained under it.
   'world_map',
 ]);
 
@@ -8001,14 +7999,18 @@ const worldRule = defineBlock({
  * (specs/MAP_EVENTS_PLAN.md).
  *
  * It buys three things. A map can NAME itself, where the name was read off the
- * file stem and every other kind declares its own. Its hats hang under
- * something, so an arrangement reads as one. And it is where `raises` goes —
- * what this map expects of whatever loads it, which is the `requires` shape a
- * rule already uses and what lets an import wire a stock map up.
+ * file stem while every other kind declares its own. Its hats hang under
+ * something, so an arrangement reads as one. And a rename has somewhere to
+ * write the new name.
  *
  * NOT its size, its tile, its modal flag or its theme. Those live in the
  * document and the map editor's panel edits them; moving them here would be a
  * move of where the truth lives, which is a separate question.
+ *
+ * NOT, ANY LONGER, which of the world's events it raises. That was a `raises`
+ * row chained under this, and it was a second place to say what the `emit`
+ * blocks already said — derived off the generated code now
+ * (`BlocklyGenerator.raisedBy`, specs/MAP_EVENTS_PLAN.md).
  */
 const worldMap = defineBlock({
   type: 'world_map',
@@ -8018,35 +8020,8 @@ const worldMap = defineBlock({
   nextStatement: true,
   style: 'setup_blocks',
   tooltip:
-    'Name this map, and say which of the world’s events it raises. What it ' +
-    'places is on the canvas beside this.',
-  generator: noGenerator,
-});
-
-/**
- * `raises ⟨save⟩` — a row under `define map`.
- *
- * A DECLARATION OF DEPENDENCY, not of vocabulary. The world declares its
- * events and this says which of them this map expects to be able to raise, so
- * that a reader knows what the file wants of its host and an importer can put
- * the declaration in the world it is imported to.
- *
- * It generates nothing. What raises the event is the `emit` in a placement's
- * workspace; this is the manifest beside it (specs/MAP_EVENTS_PLAN.md).
- */
-const worldMapRaises = defineBlock({
-  type: 'world_map_raises',
-  message0: 'raises %1',
-  // A DROPDOWN AND NOT A TEXT FIELD. A name that names nothing raises nothing,
-  // quietly, which is the failure this lab keeps meeting; the world's declared
-  // events are the only names that mean anything here.
-  args0: [{type: 'field_dropdown', name: 'EVENT', options: worldEventOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  style: 'setup_blocks',
-  tooltip:
-    'Say that this map raises one of the world’s events, so that whoever ' +
-    'loads it knows to declare it.',
+    'Name this map. What it places is on the canvas beside this, and what it ' +
+    'does is in the hats below.',
   generator: noGenerator,
 });
 
@@ -11123,7 +11098,6 @@ export const DOMAIN_BLOCKS = [
   worldPenStyle,
   worldUseTheme,
   worldMap,
-  worldMapRaises,
   worldDrawRectangle,
   worldDrawCircle,
   worldDrawLine,
@@ -11487,9 +11461,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // workspaces — `ROOT_HOMES` empties the category everywhere else.
     name: 'Map',
     blocks: [
-      // The root a map opens with, and what it says it needs of its host.
+      // The root a map opens with.
       'world_map',
-      'world_map_raises',
       'world_placement',
       'world_unload_this_map',
       'world_on_map_loads',

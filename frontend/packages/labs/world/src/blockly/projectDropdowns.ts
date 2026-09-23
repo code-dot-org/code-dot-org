@@ -25,7 +25,6 @@ import {
   setProjectStyleFiles,
   setProjectStyleNames,
   setProjectEffectParameters,
-  setWorldEventNames,
   setProjectMaps,
   setProjectRuleModules,
   setProjectBackgrounds,
@@ -145,15 +144,6 @@ export function refreshProjectDropdowns(
   setProjectEffectParameters(effectParameters);
   const maps = projectMapActorTypes(files);
   setProjectMaps(maps);
-  // The events the project's world declares, which a map's `raises` row names
-  // (specs/MAP_EVENTS_PLAN.md). From the world's own metas rather than from
-  // every file's: an actor's events are about a subject and a map does not
-  // raise one.
-  setWorldEventNames(
-    projectOwnMetas(files)
-      .filter(meta => meta.modulePath.startsWith('worlds/'))
-      .flatMap(meta => meta.events.map(event => event.name)),
-  );
   // The `use rule` dropdown offers the project's own rule modules (under
   // `rules/`) alongside the built-ins.
   const ruleModules = projectRuleOptions(files);

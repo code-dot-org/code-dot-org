@@ -1,21 +1,24 @@
-// What a stock map says it raises, against what it actually raises and what
-// the import declares (specs/MAP_EVENTS_PLAN.md).
+// What a stock map says it raises, against what it actually raises
+// (specs/MAP_EVENTS_PLAN.md).
 //
 // THE SHIPPED CASE OF THE SILENT NAME FAILURE. A map raises one of the world's
-// events BY NAME, and a name that names nothing raises nothing — quietly. The
-// editor's dropdown is the guard for a learner's own map; this is the guard
-// for the five that ship, because nobody types those names again after they
-// are written and a typo in one would be a button that does nothing in every
-// project that imports it.
+// events BY NAME, and a name that names nothing raises nothing — quietly. For
+// a learner's own map the answer is that there is nothing to get wrong: an
+// `emit` block comes from the world's drawer and carries the name it was
+// declared with. A SHIPPED map is different, because the import has to declare
+// those events in a world it has never seen, and the list it declares from is
+// written by hand.
 //
-// Three lists have to agree, and each is written somewhere different: the
-// `raises` rows in the map's own workspace, the `emit` blocks in its
-// placements' scripts, and the `raises` on the `StockMap` entry that the
-// import declares from (`maps/stock/index`).
+// So two things have to agree and they are written in different places: the
+// `emit` blocks inside the map's JSON, and the `raises` on the `StockMap`
+// entry beside it (`maps/stock/index`). The entry cannot be derived from the
+// blocks — a declaration needs the event's SIGNATURE, and `a tab is chosen`
+// carries a value that no emit block states — so this holds the two in step
+// instead.
 
 import {describe, expect, it} from 'vitest';
 
-import {parseMapManifest} from '../../blockly/ownProperties';
+import {authoredName} from '../../blockly/projectModules';
 import {pascal} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {MAIN_WORLD_PATH} from '../../mainWorld';
@@ -31,22 +34,15 @@ const emitType = (name: string) =>
   `world_emit_${pathSlug(MAIN_WORLD_PATH)}_${pascal(name)}Event`;
 
 describe.each(STOCK_MAPS)('the stock $name map', map => {
-  const manifest = parseMapManifest(map.contents);
-
   it('has a root, which names it what the shelf calls it', () => {
-    expect(manifest).toBeDefined();
-    expect(manifest!.name).toBe(map.name);
+    // Through `authoredName`, which is what the file menus read — a map
+    // declares its name the way every other Blockly file does.
+    expect(authoredName(map.contents)).toBe(map.name);
   });
 
-  it('declares exactly the events the import declares in the world', () => {
-    expect([...manifest!.raises].sort()).toEqual(
-      (map.raises ?? []).map(event => event.name).sort(),
-    );
-  });
-
-  it('raises those and nothing else, out of the world’s module', () => {
+  it('raises exactly what the import declares, out of the world’s module', () => {
     expect(emitted(map.contents).sort()).toEqual(
-      manifest!.raises.map(emitType).sort(),
+      (map.raises ?? []).map(event => emitType(event.name)).sort(),
     );
   });
 });

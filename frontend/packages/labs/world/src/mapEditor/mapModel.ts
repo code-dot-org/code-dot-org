@@ -346,9 +346,9 @@ export interface MapDoc {
    */
   theme?: string;
   /**
-   * The map's own workspace: its `define map` root with the `raises` rows
-   * under it, and the two map hats. Optional because a map written before the
-   * root existed has none (specs/MAP_EVENTS_PLAN.md).
+   * The map's own workspace: its `define map` root, and the two map hats.
+   * Optional because a map written before the root existed has none
+   * (specs/MAP_EVENTS_PLAN.md).
    */
   blocks?: WorkspaceState;
   /** The map's layers, back to front; absent, the one default. */

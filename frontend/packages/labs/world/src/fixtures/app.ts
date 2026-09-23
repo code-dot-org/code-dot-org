@@ -126,10 +126,10 @@ const place = (
 /**
  * The main map's shape: the placements, and no workspace.
  *
- * A `.map` has a workspace of its own — its `define map` root and the `raises`
- * rows under it — and a world's map does not, because the world's workspace IS
- * its workspace (`mapEditor/worldDocument`, `hasMapScript`). So home has
- * nothing to declare and its button goes to the write screen itself.
+ * A `.map` has a workspace of its own, opening with its `define map` root, and
+ * a world's map does not, because the world's workspace IS its workspace
+ * (`mapEditor/worldDocument`, `hasMapScript`). So home has nothing to declare
+ * and its button goes to the write screen itself.
  */
 const mainMap = (actors: object[]) => ({
   type: 'map' as const,
@@ -138,12 +138,7 @@ const mainMap = (actors: object[]) => ({
   actors,
 });
 
-const mapFile = (
-  name: string,
-  actors: object[],
-  raises: readonly string[],
-  modal = false,
-) =>
+const mapFile = (name: string, actors: object[], modal = false) =>
   JSON.stringify(
     {
       type: 'map',
@@ -151,9 +146,9 @@ const mapFile = (
       tile: {width: TILE_SIZE, height: TILE_SIZE},
       ...(modal ? {modal: true} : {}),
       actors,
-      // The map's own workspace: what it is called, and which of the world's
-      // events its placements raise.
-      blocks: defineMap(name, ...raises),
+      // The map's own workspace: what it is called. Which of the world's
+      // events it raises is what its placements' `emit` blocks say.
+      blocks: defineMap(name),
     },
     null,
     2,
@@ -247,7 +242,6 @@ const WRITE_MAP = mapFile(
       own: {Label: {text: 'CANCEL'}, hasABox: {width: 120}},
     }),
   ],
-  ['save', 'cancel'],
   // A SCREEN, not an overlay: while it is up, nothing on home can be clicked,
   // tabbed to or typed at (specs/MODALITY_PLAN.md). The keyboard loaded OVER
   // it is not modal, which is the whole reason the flag is on the map rather

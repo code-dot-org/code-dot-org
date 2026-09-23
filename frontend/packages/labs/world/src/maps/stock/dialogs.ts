@@ -124,7 +124,7 @@ export const confirmMap = mapFile({
       script(emitWorldEvent('no'), unloadThis),
     ),
   ],
-  workspace: defineMap('Are You Sure?', 'yes', 'no'),
+  workspace: defineMap('Are You Sure?'),
 });
 
 // ── Where you are in the app ────────────────────────────────────────────────
@@ -179,7 +179,7 @@ export const tabsMap = mapFile({
       ),
     ),
   ],
-  workspace: defineMap('Tab Bar', 'a tab is chosen'),
+  workspace: defineMap('Tab Bar'),
 });
 
 // ── Something to say, briefly ───────────────────────────────────────────────
@@ -217,5 +217,5 @@ export const messageMap = mapFile({
       script(emitWorldEvent('dismissed'), unloadThis),
     ),
   ],
-  workspace: defineMap('Message', 'dismissed'),
+  workspace: defineMap('Message'),
 });
