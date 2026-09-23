@@ -9,6 +9,8 @@ import React, {
 } from 'react';
 import {Image as KonvaImage, Layer, Stage} from 'react-konva';
 
+import EditToolbar from './EditToolbar';
+
 import styles from './video-canvas.module.scss';
 
 // 'edit': live stage, recorder stopped — where decorations get placed before
@@ -411,6 +413,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
 
   return (
     <div className={styles.container}>
+      {currentMode === 'edit' && <EditToolbar />}
       <div className={styles.previewWrapper} ref={wrapperRef}>
         <video
           key="preview"
