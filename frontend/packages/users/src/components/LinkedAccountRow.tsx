@@ -1,25 +1,17 @@
-import {Box, Typography} from '@mui/material';
+import {Box, Button, Chip, Typography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
-import {useId, type ReactNode} from 'react';
+import type {ReactNode} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Link from '@code-dot-org/component-library/link';
-import Tags from '@code-dot-org/component-library/tags';
+import {SimpleList} from '@code-dot-org/component-library/list';
 
 import {linkedAccountProvider} from '../util/linkedAccountProviders';
 
 import styles from './LinkedAccountRow.module.css';
 
-const CHECK_ICON = {
-  iconName: 'circle-check',
-  iconStyle: 'solid',
-  placement: 'left',
-} as const;
-
 /**
  * One provider card: identity, badges and status on the left; help link,
- * connected chip and the connect/disconnect action on the right. A blocked
- * action states its reason in text, since a disabled button takes no focus.
+ * action and connected status on the right.
  */
 export default function LinkedAccountRow({
   credentialType,
@@ -27,7 +19,6 @@ export default function LinkedAccountRow({
   status,
   learnMoreUrl,
   connected = false,
-  blockedMessage,
   action,
 }: {
   credentialType: string;
@@ -35,10 +26,8 @@ export default function LinkedAccountRow({
   status: ReactNode;
   learnMoreUrl?: string;
   connected?: boolean;
-  blockedMessage?: string;
-  action: (describedById?: string) => ReactNode;
+  action: ReactNode;
 }) {
-  const blockedMessageId = useId();
   const provider = linkedAccountProvider(credentialType);
 
   return (
@@ -55,9 +44,15 @@ export default function LinkedAccountRow({
           <strong>{name}</strong>
         </Typography>
         {provider && (
-          <Tags
+          <SimpleList
             size="s"
-            tagsList={provider.badges.map(label => ({label, icon: CHECK_ICON}))}
+            className={styles.badges}
+            icon={{
+              iconName: 'check-circle',
+              iconStyle: 'solid',
+              className: styles.badgeIcon,
+            }}
+            items={provider.badges.map(label => ({key: label, label}))}
           />
         )}
         <Typography variant="body3" className={styles.status}>
@@ -66,33 +61,36 @@ export default function LinkedAccountRow({
       </div>
       <div className={styles.actions}>
         {learnMoreUrl && (
-          <Link
+          <Button
+            variant="text"
+            color="tertiary"
             href={learnMoreUrl}
-            openInNewTab
-            size="m"
-            className={styles.learnMore}
+            target="_blank"
+            rel="noopener noreferrer"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName="circle-question"
+                iconStyle="solid"
+                aria-hidden
+              />
+            }
           >
-            <FontAwesomeV6Icon iconName="circle-question" aria-hidden />
             Learn more
             <Box component="span" sx={visuallyHidden}>
-              {` about ${name}`}
+              {` about ${name} (opens in a new tab)`}
             </Box>
-          </Link>
+          </Button>
         )}
+        {action}
         {connected && (
-          <Tags size="s" tagsList={[{label: 'Connected', icon: CHECK_ICON}]} />
+          <Chip
+            label="Connected"
+            size="small"
+            icon={<FontAwesomeV6Icon iconName="check" aria-hidden />}
+            className={styles.connected}
+          />
         )}
-        {action(blockedMessage ? blockedMessageId : undefined)}
       </div>
-      {blockedMessage && (
-        <Typography
-          id={blockedMessageId}
-          variant="body3"
-          className={styles.blockedMessage}
-        >
-          {blockedMessage}
-        </Typography>
-      )}
     </li>
   );
 }

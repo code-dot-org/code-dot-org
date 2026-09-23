@@ -811,7 +811,7 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
       }),
     ).toBeInTheDocument();
     expect(
-      screen.getAllByRole('button', {name: /disconnect account classlink/i}),
+      screen.getAllByRole('button', {name: /manage classlink/i}),
     ).toHaveLength(2);
     expect(
       screen.queryByRole('heading', {level: 2, name: 'Settings'}),

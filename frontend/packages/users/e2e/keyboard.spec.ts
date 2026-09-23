@@ -39,10 +39,9 @@ test('a disconnect blocked for want of another login says why', async ({
 }) => {
   await gotoLoaded(page, 'lti-only-teacher');
   await page.getByRole('tab', {name: 'Integrations'}).click();
+  await page.getByRole('button', {name: /manage canvas/i}).click();
 
-  const disconnect = page.getByRole('button', {
-    name: /disconnect account canvas/i,
-  });
+  const disconnect = page.getByRole('button', {name: 'Unlink account'});
   await expect(disconnect).toBeDisabled();
   await expect(disconnect).toHaveAccessibleDescription(
     /add a password or another linked account/,

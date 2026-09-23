@@ -140,12 +140,16 @@ describe('LinkedAccounts', () => {
     expect(form).toHaveFormValues({authenticity_token: 'test-csrf-token'});
   });
 
-  it('disconnects a login by posting its disconnect form', () => {
+  it('manages a linked login in a dialog that posts its disconnect form', () => {
     renderSection();
 
-    const form = button(/disconnect account google/i).closest('form')!;
+    fireEvent.click(button(/manage google/i));
+
+    const dialog = screen.getByRole('dialog', {name: 'Manage Google'});
+    const form = within(dialog)
+      .getByRole('button', {name: 'Disconnect account'})
+      .closest('form')!;
     expect(form).toHaveAttribute('action', '/users/auth/2/disconnect');
-    expect(form).toHaveFormValues({authenticity_token: 'test-csrf-token'});
   });
 
   it('blocks disconnecting the last login of an account without a password', () => {
@@ -156,7 +160,9 @@ describe('LinkedAccounts', () => {
       ],
     });
 
-    const disconnect = button(/disconnect account google/i);
+    fireEvent.click(button(/manage google/i));
+
+    const disconnect = button(/disconnect account/i);
     expect(disconnect).toBeDisabled();
     expect(disconnect).toHaveAccessibleDescription(
       'To make sure you can still sign in to your account, please add a password or another linked account first.',
@@ -165,8 +171,9 @@ describe('LinkedAccounts', () => {
 
   it('blocks disconnecting Google for a student in a Google Classroom section', () => {
     renderSection({userType: 'student'}, {isGoogleClassroomStudent: true});
+    fireEvent.click(button(/manage google/i));
 
-    const disconnect = button(/disconnect account google/i);
+    const disconnect = button(/disconnect account/i);
     expect(disconnect).toBeDisabled();
     expect(disconnect).toHaveAccessibleDescription(
       'You cannot disconnect from this linked account because it is tied to one of your sections.',
@@ -222,7 +229,7 @@ describe('LinkedAccounts', () => {
     ).toBeNull();
   });
 
-  it('names an LMS login by its platform and confirms before unlinking it', () => {
+  it('names an LMS login by its platform and warns before unlinking it', () => {
     renderSection(
       {
         authenticationOptions: [
@@ -233,18 +240,11 @@ describe('LinkedAccounts', () => {
       {lmsName: 'canvas_cloud'},
     );
 
-    expect(
-      screen.getByRole('link', {name: /learn more about canvas/i}),
-    ).toHaveAttribute('href', expect.stringContaining('Canvas'));
-    const disconnect = button(/disconnect account canvas/i);
-    expect(disconnect.closest('form')).toBeNull();
-
-    fireEvent.click(disconnect);
+    fireEvent.click(button(/manage canvas/i));
 
     expect(
-      screen.getByRole('alertdialog', {
-        name: 'Are you sure you want to unlink your account?',
-      }),
+      screen.getByRole('alertdialog', {name: 'Manage Canvas'}),
     ).toBeInTheDocument();
+    expect(button(/unlink account/i)).toBeEnabled();
   });
 });

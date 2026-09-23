@@ -2,6 +2,7 @@ import {Dialog, DialogActions, DialogContent, DialogTitle} from '@mui/material';
 import type {FormEventHandler, ReactNode} from 'react';
 import {tabbable} from 'tabbable';
 
+import AccountLinkForm from './AccountLinkForm';
 import styles from './FormDialog.module.css';
 
 interface FormDialogProps {
@@ -12,7 +13,9 @@ interface FormDialogProps {
   describedById?: string;
   /** Renders the paper as role="alertdialog", for destructive confirmations. */
   alert?: boolean;
-  onSubmit: FormEventHandler<HTMLFormElement>;
+  onSubmit?: FormEventHandler<HTMLFormElement>;
+  /** Submits as a native POST to this URL instead of calling onSubmit. */
+  action?: string;
   actions: ReactNode;
   children: ReactNode;
 }
@@ -29,9 +32,18 @@ export default function FormDialog({
   describedById,
   alert = false,
   onSubmit,
+  action,
   actions,
   children,
 }: FormDialogProps) {
+  const body = (
+    <>
+      <DialogTitle id={titleId}>{title}</DialogTitle>
+      <DialogContent className={styles.content}>{children}</DialogContent>
+      <DialogActions>{actions}</DialogActions>
+    </>
+  );
+
   return (
     <Dialog
       open={open}
@@ -52,11 +64,13 @@ export default function FormDialog({
         },
       }}
     >
-      <form onSubmit={onSubmit} noValidate>
-        <DialogTitle id={titleId}>{title}</DialogTitle>
-        <DialogContent className={styles.content}>{children}</DialogContent>
-        <DialogActions>{actions}</DialogActions>
-      </form>
+      {action ? (
+        <AccountLinkForm action={action}>{body}</AccountLinkForm>
+      ) : (
+        <form onSubmit={onSubmit} noValidate>
+          {body}
+        </form>
+      )}
     </Dialog>
   );
 }

@@ -23,6 +23,17 @@
   min-width: 0;
 }
 
+/* SimpleList stacks its items; the badges sit on one line. */
+.badges.badges {
+  flex-flow: row wrap;
+  gap: 4px 16px;
+}
+
+/* Outranks SimpleList's per-type icon colour (three classes). */
+.badges.badges .badgeIcon.badgeIcon {
+  color: var(--text-success-primary-fixed);
+}
+
 .status {
   overflow-wrap: anywhere;
   color: var(--text-neutral-secondary);
@@ -35,14 +46,13 @@
   gap: 16px;
 }
 
-/* WCAG 2.2 target size (2.5.8): at least 24px tall. */
-.learnMore {
-  gap: 8px;
-  align-items: center;
-  min-height: 24px;
+.connected.connected {
+  background-color: var(--background-success-extra-light);
+  color: var(--text-neutral-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.blockedMessage {
-  flex-basis: 100%;
-  color: var(--text-neutral-secondary);
+.connected.connected :global(.MuiChip-icon) {
+  color: inherit;
 }

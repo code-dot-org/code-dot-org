@@ -12,19 +12,18 @@ import type {
 import {CapLinks} from '@code-dot-org/shared-constants';
 
 import AccountLinkForm from '../components/AccountLinkForm';
+import EmailStatus from '../components/EmailStatus';
 import LinkedAccountRow from '../components/LinkedAccountRow';
-import UnlinkLtiModal from '../components/UnlinkLtiModal';
+import ManageLinkedAccountModal from '../components/ManageLinkedAccountModal';
 import {
   linkedAccountName,
   linkedAccountProvider,
-  lmsPlatform,
 } from '../util/linkedAccountProviders';
 import {
   connectedAccounts,
   disconnectBlockedMessage,
   isConnectLocked,
   lockedConnectMessage,
-  LTI_PROVIDER,
   unconnectedProviders,
 } from '../util/linkedAccounts';
 
@@ -42,25 +41,12 @@ function Group({
 }) {
   return (
     <Box component="section" className={styles.group}>
-      <Typography variant="overline1" component="h3">
+      <Typography variant="overline1" component="h3" className={styles.label}>
         {title}
       </Typography>
       {notice}
       <ul className={styles.list}>{children}</ul>
     </Box>
-  );
-}
-
-// Legacy parity: a login with no stored address reads as encrypted.
-function EmailStatus({email}: {email: string | null}) {
-  if (email) return email;
-  return (
-    <>
-      <span aria-hidden>***encrypted***</span>
-      <Box component="span" sx={visuallyHidden}>
-        Email address encrypted
-      </Box>
-    </>
   );
 }
 
@@ -73,32 +59,8 @@ function ConnectedAccount({
   settings: UserSettings;
   integrations: IntegrationsSettings;
 }) {
-  const [unlinkOpen, setUnlinkOpen] = useState(false);
-  const isLti = option.credentialType === LTI_PROVIDER;
+  const [manageOpen, setManageOpen] = useState(false);
   const name = linkedAccountName(option.credentialType, integrations.lmsName);
-  const blockedMessage = disconnectBlockedMessage(
-    option,
-    settings,
-    integrations,
-  );
-  const learnMoreUrl = isLti
-    ? lmsPlatform(integrations.lmsName)?.learnMoreUrl
-    : linkedAccountProvider(option.credentialType)?.learnMoreUrl;
-
-  const disconnectButton = (describedById?: string, onClick?: () => void) => (
-    <Button
-      type={onClick ? 'button' : 'submit'}
-      variant="outlined"
-      disabled={!!blockedMessage}
-      aria-describedby={describedById}
-      onClick={onClick}
-    >
-      Disconnect account
-      <Box component="span" sx={visuallyHidden}>
-        {` ${name}`}
-      </Box>
-    </Button>
-  );
 
   return (
     <>
@@ -106,27 +68,38 @@ function ConnectedAccount({
         credentialType={option.credentialType}
         name={name}
         status={<EmailStatus email={option.email} />}
-        learnMoreUrl={learnMoreUrl}
         connected
-        blockedMessage={blockedMessage}
-        action={describedById =>
-          isLti ? (
-            disconnectButton(describedById, () => setUnlinkOpen(true))
-          ) : (
-            <AccountLinkForm action={`/users/auth/${option.id}/disconnect`}>
-              {disconnectButton(describedById)}
-            </AccountLinkForm>
-          )
+        action={
+          <Button
+            onClick={() => setManageOpen(true)}
+            variant="text"
+            color="tertiary"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName="gear"
+                iconStyle="solid"
+                aria-hidden
+              />
+            }
+          >
+            Manage
+            <Box component="span" sx={visuallyHidden}>
+              {` ${name}`}
+            </Box>
+          </Button>
         }
       />
-      {isLti && (
-        <UnlinkLtiModal
-          open={unlinkOpen}
-          onClose={() => setUnlinkOpen(false)}
-          lmsName={name}
-          authenticationOptionId={option.id}
-        />
-      )}
+      <ManageLinkedAccountModal
+        open={manageOpen}
+        onClose={() => setManageOpen(false)}
+        option={option}
+        name={name}
+        blockedMessage={disconnectBlockedMessage(
+          option,
+          settings,
+          integrations,
+        )}
+      />
     </>
   );
 }
@@ -148,11 +121,12 @@ function AvailableAccount({
       name={name}
       status="Not connected"
       learnMoreUrl={linkedAccountProvider(provider)?.learnMoreUrl}
-      action={() => (
+      action={
         <AccountLinkForm action={`/users/auth/${provider}?action=connect`}>
           <Button
             type="submit"
             variant="outlined"
+            color="secondary"
             disabled={locked}
             aria-describedby={lockedMessageId}
             startIcon={
@@ -165,7 +139,7 @@ function AvailableAccount({
             </Box>
           </Button>
         </AccountLinkForm>
-      )}
+      }
     />
   );
 }

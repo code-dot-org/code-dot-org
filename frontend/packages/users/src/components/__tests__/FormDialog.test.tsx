@@ -79,4 +79,35 @@ describe('FormDialog', () => {
     expect(screen.queryByText('Test dialog')).toBeNull();
     expect(screen.queryByRole('dialog')).toBeNull();
   });
+
+  it('posts natively with the CSRF token when given an action', () => {
+    const meta = document.createElement('meta');
+    meta.name = 'csrf-token';
+    meta.content = 'test-csrf-token';
+    document.head.append(meta);
+
+    try {
+      render(
+        <FormDialog
+          open
+          onClose={vi.fn()}
+          titleId="dialog-title"
+          title="Test dialog"
+          action="/users/auth/7/disconnect"
+          actions={<button type="submit">Submit</button>}
+        >
+          <p>Body</p>
+        </FormDialog>,
+      );
+
+      const form = screen
+        .getByRole('button', {name: 'Submit'})
+        .closest('form')!;
+      expect(form).toHaveAttribute('method', 'post');
+      expect(form).toHaveAttribute('action', '/users/auth/7/disconnect');
+      expect(form).toHaveFormValues({authenticity_token: 'test-csrf-token'});
+    } finally {
+      meta.remove();
+    }
+  });
 });
