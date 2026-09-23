@@ -1610,6 +1610,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onRenameImage: handleRenameImage,
     onDeleteImage: handleDeleteImage,
     lockedImageType: levelProperties.levelMode?.imageType,
+    lockedImageSubject: levelProperties.levelMode?.imageSubject,
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
     adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),

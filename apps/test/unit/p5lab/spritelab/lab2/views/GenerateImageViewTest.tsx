@@ -31,6 +31,40 @@ describe('GenerateImageView character-set offer', () => {
     expect(screen.getByLabelText(SET_CHECKBOX)).not.toBeChecked();
   });
 
+  it('does not offer a set for an object: a set would give it limbs', () => {
+    renderView({create: {isNameTaken: () => false}});
+    fireEvent.click(screen.getByRole('radio', {name: 'Object'}));
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('radio', {name: 'Character'}));
+    expect(screen.getByLabelText(SET_CHECKBOX)).toBeInTheDocument();
+  });
+
+  it('does not offer a set once a prompt is typed', () => {
+    renderView({create: {isNameTaken: () => false}});
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'a fox'}});
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+  });
+
+  it("locks a new sprite to the level's subject", () => {
+    // The student form drops a locked type group; the advanced form keeps
+    // it, so the locked subject shows there.
+    const {unmount} = renderView({
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+      lockedImageSubject: 'object',
+    });
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+    unmount();
+    renderView({
+      advanced: true,
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+      lockedImageSubject: 'object',
+    });
+    expect(screen.getByRole('radio', {name: 'Object'})).toBeChecked();
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+  });
+
   it('does not offer a set when the type is not sprite', () => {
     renderView({
       create: {isNameTaken: () => false},
@@ -67,7 +101,7 @@ describe('GenerateImageView character-set offer', () => {
 describe('GenerateImageView type choice', () => {
   it('offers the type for a new image', () => {
     renderView({create: {isNameTaken: () => false}});
-    expect(screen.getByRole('radio', {name: 'Sprite'})).toBeInTheDocument();
+    expect(screen.getByRole('radio', {name: 'Character'})).toBeInTheDocument();
   });
 
   it('drops the group when the level locks the type, in the student form', () => {
@@ -76,7 +110,7 @@ describe('GenerateImageView type choice', () => {
       lockedImageType: 'sprite',
     });
     expect(
-      screen.queryByRole('radio', {name: 'Sprite'})
+      screen.queryByRole('radio', {name: 'Character'})
     ).not.toBeInTheDocument();
     // The style choice stays.
     expect(screen.getByRole('radio', {name: 'Pixel art'})).toBeInTheDocument();
@@ -88,6 +122,6 @@ describe('GenerateImageView type choice', () => {
       create: {isNameTaken: () => false},
       lockedImageType: 'sprite',
     });
-    expect(screen.getByRole('radio', {name: 'Sprite'})).toBeDisabled();
+    expect(screen.getByRole('radio', {name: 'Character'})).toBeDisabled();
   });
 });
