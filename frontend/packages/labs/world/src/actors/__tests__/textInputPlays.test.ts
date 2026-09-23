@@ -15,6 +15,7 @@ import {describe, expect, it} from 'vitest';
 import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor} from '../../engine';
 import {keyName} from '../../engine/core/keys';
+import {RotationProperty} from '../../engine';
 import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
@@ -480,6 +481,27 @@ describe('its insertion point', () => {
     it_.type(['X']);
 
     expect(it_.says(it_.top)).toBe('Xabcdef');
+  });
+
+  it('reads the click along its OWN x when it is turned', async () => {
+    // THE FOURTH TIME THIS LAB HAS MADE THIS MISTAKE. `pointer x − middle x`
+    // is the right arithmetic only while the actor is upright; turned, it
+    // measures along the screen's axis and the bar lands somewhere else
+    // entirely. The List and the Dropdown both had it, and `alongX` is what
+    // the two of them arrived at: ask in the ACTOR's frame, where its local
+    // +x is `(cos, sin)` (`actors/stock/workspace`).
+    //
+    // Half a turn makes the cosine negative, so the field's own left is the
+    // screen's right: the same fifteen pixels into the words is fifteen to
+    // the LEFT of the middle on screen.
+    const it_ = await typed('abcdef');
+    it_.top.set(RotationProperty, 180);
+    it_.world.tick(1 / 60);
+
+    it_.clickAt(160 - (WORDS + 15), 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abcXdef');
   });
 
   it('goes to the end when the click is past them', async () => {

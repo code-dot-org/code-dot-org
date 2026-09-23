@@ -1406,6 +1406,26 @@ paragraph taller than its box was simply cut off, so everything below the fold
 was typed into a place nobody could look at. It scrolls now, and the window
 follows the caret — clamped between the scroll that puts the caret's line at
 the foot of the box and the one that puts it at the head, which is the List's
-`reveal` doing the same job for a line instead of a row. That is three
-controls in a row where the defect was invisible to a green suite and obvious
-within a minute of use.
+`reveal` doing the same job for a line instead of a row. Then a click into the
+words, which had gone to the end of everything: the one thing anybody does
+after a typo is click back into it.
+
+That is three controls in a row where the defect was invisible to a green
+suite and obvious within a minute of use.
+
+### The rotation bug, for the fourth and fifth time
+
+`pointer − middle` is the right arithmetic only while an actor is upright.
+Turned, it measures along the screen's axes and every "where did the click
+land" question answers about the wrong place. The List had it, the Dropdown had
+it, and `alongX`/`alongY` were written to answer it once: ask in the ACTOR's
+frame, where its local +x is `(cos, sin)`.
+
+The Text Input had it too, unnoticed, because nobody had turned a field. It is
+fixed, and the Text Area's new click was written with the helpers from the
+start rather than arriving at them a fifth time.
+
+**Every new "where is the pointer relative to this" should use them.** The
+shape of this bug is that it is invisible until somebody rotates the actor,
+which nobody does until a project wants it — by which time the arithmetic has
+been copied somewhere else.

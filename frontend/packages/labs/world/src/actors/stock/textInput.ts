@@ -71,6 +71,7 @@ import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
   actorFile,
   actsLike,
+  alongX,
   chain,
   corner,
   defineEvent,
@@ -328,39 +329,25 @@ const takeFocus = () => ({
   inputs: {ACTOR: me()},
 });
 
-/** `x of ⟨where the pointer is⟩`, in the world's own coordinates. */
-const pointerX = () => ({
-  block: {
-    type: 'world_vector_component',
-    fields: {COMPONENT: 'x'},
-    inputs: {VEC: {block: {type: 'world_mouse_position'}}},
-  },
-});
-
-/** …and `x of ⟨where this actor is⟩`, which is its MIDDLE. */
-const middleX = () => ({
-  block: {
-    type: 'world_get_Space_PositionProperty',
-    fields: {COMPONENT: 'x'},
-    inputs: {ACTOR: me()},
-  },
-});
-
 /**
  * How far into the WORDS the click landed, in pixels.
  *
  * From the pointer to the actor's middle, out to its left edge, past the
  * inset, and then back by however far the words have slid — which is the
  * whole of turning a place on the screen into a place in the line.
+ *
+ * ALONG THE FIELD'S OWN X, not the screen's. This read `pointer x − middle x`,
+ * which is the same arithmetic only while the field is upright: turned, the
+ * bar landed somewhere else entirely, and a field on its side put the caret at
+ * one end wherever you clicked. It is the fourth time this lab has made that
+ * mistake — the List and the Dropdown had it too — and `alongX` is the answer
+ * the other three arrived at: ask the question in the ACTOR's frame, where its
+ * local +x is `(cos, sin)` (`actors/stock/workspace`).
  */
 const clickedAt = () =>
   sum(
     'ADD',
-    sum(
-      'MINUS',
-      sum('ADD', sum('MINUS', pointerX(), middleX()), labelHalf(width())),
-      num(PAD),
-    ),
+    sum('MINUS', sum('ADD', alongX(), labelHalf(width())), num(PAD)),
     scrolled(),
   );
 

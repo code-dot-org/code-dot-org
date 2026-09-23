@@ -6,11 +6,18 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {type Actor, type Property} from '../../engine';
+import {RotationProperty, type Actor, type Property} from '../../engine';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
+
+/** The Text Area's own box and inset, which the clicks below are measured from. */
+const WIDTH = 160;
+const HEIGHT = 96;
+const PAD = 8;
+/** What the painter lays lines at: the text size, times this. */
+const LINE_SPACING = 1.25;
 
 const me = () => ({block: {type: 'world_this_actor'}});
 const number = (value: number) => ({
@@ -54,9 +61,22 @@ const project = (): MultiFileSource => {
   };
 };
 
+/**
+ * A toy measuring tape: half the size per character, exactly.
+ *
+ * A driver lends the World a real one built from the painter's own font
+ * (`runtime/driver/textMetrics`); a test lends it arithmetic, so where a click
+ * puts the bar can be asserted rather than eyeballed.
+ */
+const sixPerCharacter = (words: string, size: number) =>
+  words.length * (size / 2);
+
 describe('a Text Area', () => {
-  const open = async () => {
+  const open = async (measure?: (words: string, size: number) => number) => {
     const {world, modules} = await compileProject(projectFiles(project()));
+    if (measure) {
+      world.useTextMetrics(measure);
+    }
     const area = ([...world.actors] as Actor[]).find(
       actor => actor.type === 'actors/textArea',
     )!;
@@ -78,6 +98,25 @@ describe('a Text Area', () => {
         world.setPointer({x: 100, y: 100}, []);
         settle();
       },
+      /** A click at a point in the world, which is where the bar should land. */
+      clickAt: (x: number, y: number) => {
+        world.setPointer({x, y}, ['left']);
+        settle();
+        world.setPointer({x, y}, []);
+        settle();
+      },
+      turn: (degrees: number) => {
+        area.set(RotationProperty, degrees);
+        settle();
+      },
+      /**
+       * Where the box's words start, in world pixels.
+       *
+       * The actor is placed at (100, 100) and its box is `WIDTH` by `HEIGHT`
+       * with `PAD` of inset, so the first character of the first line begins
+       * here — which is what every click below is measured from.
+       */
+      corner: {left: 100 - WIDTH / 2 + PAD, top: 100 - HEIGHT / 2 + PAD},
       type: (characters: string) => {
         world.addTyped([...characters]);
         settle();
@@ -113,6 +152,101 @@ describe('a Text Area', () => {
       },
     };
   };
+
+  describe('where a click puts the bar', () => {
+    // Twelve-point text measured at half the size per character: six pixels
+    // each, and lines fifteen apart (`LINE_SPACING`). Both are the painter's
+    // own numbers, lent as arithmetic so the pixels can be asserted rather
+    // than eyeballed.
+    const SIZE = 12;
+    const CHAR = SIZE / 2;
+    const STEP = SIZE * LINE_SPACING;
+
+    /** Three lines, and the caret left at the end of the last. */
+    const written = async () => {
+      const a = await open(sixPerCharacter);
+      a.click();
+      a.type('ABCDEF');
+      a.tap('enter');
+      a.type('GHIJKL');
+      a.tap('enter');
+      a.type('MNOPQR');
+      return a;
+    };
+
+    it('goes to the line the click landed on, not to the end', async () => {
+      // The middle line, three characters in. A Text Area that sent every
+      // click to the end would pass every test written before this one.
+      const a = await written();
+
+      a.clickAt(a.corner.left + CHAR * 3, a.corner.top + STEP * 1 + 2);
+      a.type('X');
+
+      expect(a.says()).toBe('ABCDEF\nGHIXJKL\nMNOPQR');
+    });
+
+    it('goes to the first line when the click is on it', async () => {
+      const a = await written();
+
+      a.clickAt(a.corner.left + CHAR * 2, a.corner.top + 2);
+      a.type('X');
+
+      expect(a.says()).toBe('ABXCDEF\nGHIJKL\nMNOPQR');
+    });
+
+    it('rounds to the nearer side of a letter', async () => {
+      // Nine pixels in is past the midpoint of the second character, so the
+      // bar goes after it rather than before.
+      const a = await written();
+
+      a.clickAt(a.corner.left + 9, a.corner.top + 2);
+      a.type('X');
+
+      expect(a.says()).toBe('ABXCDEF\nGHIJKL\nMNOPQR');
+    });
+
+    it('stops at the END of a short line rather than wrapping on', async () => {
+      // Clicking far to the right of a line must not run into the next one —
+      // the scan walks THIS line and no further.
+      const a = await written();
+
+      // Still ON the actor — its box is 160 wide — but well past the six
+      // characters of that line.
+      a.clickAt(a.corner.left + 120, a.corner.top + STEP * 1 + 2);
+      a.type('X');
+
+      expect(a.says()).toBe('ABCDEF\nGHIJKLX\nMNOPQR');
+    });
+
+    it('goes to the LAST line when the click is below them all', async () => {
+      const a = await written();
+
+      // Below the three lines and still inside the box, which is 96 tall.
+      a.clickAt(a.corner.left, a.corner.top + STEP * 5);
+      a.type('X');
+
+      expect(a.says()).toBe('ABCDEF\nGHIJKL\nXMNOPQR');
+    });
+
+    it('reads the click in its OWN frame when it is turned', async () => {
+      // The same mistake the Text Input had, and the List and the Dropdown
+      // before it: `pointer − middle` measures along the SCREEN's axes, and a
+      // turned actor needs its own (`actors/stock/workspace`, `alongY`).
+      //
+      // Half a turn negates both, so the same place in the words is the same
+      // distance the other side of the middle.
+      const a = await written();
+      a.turn(180);
+
+      a.clickAt(
+        200 - (a.corner.left + CHAR * 3),
+        200 - (a.corner.top + STEP * 1 + 2),
+      );
+      a.type('X');
+
+      expect(a.says()).toBe('ABCDEF\nGHIXJKL\nMNOPQR');
+    });
+  });
 
   describe('the window over the words', () => {
     it('starts at the top and stays there while the words fit', async () => {

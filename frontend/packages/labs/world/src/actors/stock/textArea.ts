@@ -27,11 +27,19 @@
 // as far across as the line's prefix measures — the same measuring tape the
 // Text Input borrows (`World.textWidth`).
 //
-// ONE THING THE TEXT INPUT DOES THAT THIS DOES NOT, and why: a click puts the
-// caret at the END, not in the word. Clicking into a line of a paragraph is
-// the Text Input's prefix scan run on one line of several, and which line is a
-// division; it is the next thing to add, and it is not here because a first
-// cut that scans the wrong line is worse than one that goes to the end.
+// A CLICK LANDS WHERE IT LANDED, which it did not: it used to put the caret at
+// the end of everything, so the one thing anybody does after a typo — click
+// back into it — could not be done. It is two questions and the lab already
+// had the hard one. WHICH LINE is arithmetic, the painter's own step divided
+// into the click's y; WHICH LETTER is the Text Input's prefix walk, because a
+// proportional font has no character width to divide by and only measurement
+// answers it.
+//
+// What was genuinely missing is the character a line STARTS at. `find newline`
+// answers first-or-last and not nth, so the caret is stepped down a line at a
+// time — the same "where does the next line begin" the down arrow is made of.
+// The scan then walks that line and stops at its end, which is what keeps a
+// click off the right of a short line from running onto the next one.
 //
 // THE WORDS DO SCROLL, which they did not. A paragraph taller than the box was
 // simply cut off: everything below the fold was typed into a place nobody
@@ -48,11 +56,13 @@
 // to the second and becomes the top-most. One clamp rather than two tests,
 // which is the List's trick for the same job (`actors/list`, `reveal`).
 
-import {labelSizeOf} from './label';
+import {labelHalf, labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
   actorFile,
   actsLike,
+  alongX,
+  alongY,
   chain,
   corner,
   defineEvent,
@@ -104,10 +114,14 @@ const onlyIf = (test: object, body: object[]) => ({
 const both = (a: object, b: object) => ({
   block: {type: 'logic_operation', fields: {OP: 'AND'}, inputs: {A: a, B: b}},
 });
-const sum = (op: 'ADD' | 'MINUS' | 'MULTIPLY', a: object, b: object) => ({
+const sum = (
+  op: 'ADD' | 'MINUS' | 'MULTIPLY' | 'DIVIDE',
+  a: object,
+  b: object,
+) => ({
   block: {type: 'math_arithmetic', fields: {OP: op}, inputs: {A: a, B: b}},
 });
-const compare = (op: 'LT' | 'GT', a: object, b: object) => ({
+const compare = (op: 'LT' | 'LTE' | 'GT', a: object, b: object) => ({
   block: {type: 'logic_compare', fields: {OP: op}, inputs: {A: a, B: b}},
 });
 /** `⟨value⟩` held between `low` and `high`. */
@@ -134,6 +148,10 @@ const NEWLINE = () => literal('\n');
 
 const held = () => textOf('TextProperty');
 const atSize = () => textOf('TextSizeProperty');
+/** `round down ⟨n⟩` — which line a pixel falls on, once divided. */
+const floor = (of: object) => ({
+  block: {type: 'math_round', fields: {OP: 'ROUNDDOWN'}, inputs: {NUM: of}},
+});
 const length = () => ({block: {type: 'text_length', inputs: {VALUE: held()}}});
 const caretAt = () => ({
   block: {type: `world_get_${OWN}_CaretProperty`, inputs: {ACTOR: me()}},
@@ -181,6 +199,9 @@ const column = () => sum('MINUS', caretAt(), lineStart());
 const line = () => newlinesIn(before());
 /** The caret's line up to the caret, which is what the bar is drawn after. */
 const linePrefix = () => from(sum('ADD', lineStart(), num(1)), before());
+/** …and the same with one more character, which the scan compares against. */
+const linePrefixPlusOne = () =>
+  from(sum('ADD', lineStart(), num(1)), upTo(sum('ADD', caretAt(), num(1))));
 const widthOf = (text: object) => ({
   block: {type: 'world_text_width', inputs: {TEXT: text, SIZE: atSize()}},
 });
@@ -299,6 +320,120 @@ const lineBelow = () => {
   ]);
 };
 
+// ── Where a click lands ────────────────────────────────────────────────────
+
+/** Where the caret's line ENDS: the next newline, or the end of the words. */
+const lineEnd = () => {
+  const ahead = () => newlineIn(from(sum('ADD', caretAt(), num(1))), 'FIRST');
+  return {
+    block: {
+      type: 'logic_ternary',
+      inputs: {
+        IF: compare('GT', ahead(), num(0)),
+        THEN: sum('MINUS', sum('ADD', caretAt(), ahead()), num(1)),
+        ELSE: length(),
+      },
+    },
+  };
+};
+
+/** How many characters are left on the caret's line, after the caret. */
+const restOfLine = () => sum('MINUS', lineEnd(), caretAt());
+
+/**
+ * Which LINE the click landed on, counting from zero.
+ *
+ * The y of the click in this actor's own frame, out to its top edge, past the
+ * inset, plus however far the words have scrolled — then divided by the step
+ * the painter lays lines at. Clamped to the lines there are, so a click in the
+ * empty band below the last line goes to the last line rather than past it.
+ */
+const lineClicked = () =>
+  clamp(
+    floor(
+      sum(
+        'DIVIDE',
+        sum(
+          'ADD',
+          sum('MINUS', sum('ADD', alongY(), labelHalf(height())), num(PAD)),
+          scroll(),
+        ),
+        step(),
+      ),
+    ),
+    num(0),
+    sum('MINUS', lines(), num(1)),
+  );
+
+/** How far ACROSS the clicked line the click landed, in pixels. */
+const clickedAcross = () =>
+  sum('MINUS', sum('ADD', alongX(), labelHalf(width())), num(PAD));
+
+/**
+ * Put the bar where the click was: the right line, then the right letter.
+ *
+ * TWO WALKS, because the words are one string with newlines in it and neither
+ * question can be answered by arithmetic alone. Which LINE is arithmetic — the
+ * painter lays them a fixed step apart — but the character that line STARTS at
+ * is not, so the caret is stepped down to it a line at a time, reusing the
+ * same "where does the next line begin" the down arrow is made of.
+ *
+ * Then the column, which is the Text Input's scan unchanged: a proportional
+ * font has no character width to divide by, so which letter a pixel falls on
+ * is a question only measurement answers. It walks the prefixes of THIS line,
+ * stopping at the boundary nearest the click, and never past the line's end —
+ * which is what keeps a click off the right of a short line from wrapping onto
+ * the next one.
+ *
+ * Doubling both sides is how the midpoint is said without a division:
+ * `(w(n) + w(n+1)) / 2 ≤ x` is `w(n) + w(n+1) ≤ 2x`.
+ */
+const placesTheCaret = () => [
+  setCaret(num(0)),
+  {
+    type: 'controls_repeat_ext',
+    inputs: {
+      TIMES: lineClicked(),
+      DO: {
+        block: setCaret(
+          sum(
+            'ADD',
+            caretAt(),
+            newlineIn(from(sum('ADD', caretAt(), num(1))), 'FIRST'),
+          ),
+        ),
+      },
+    },
+  },
+  {
+    type: 'controls_repeat_ext',
+    inputs: {
+      TIMES: restOfLine(),
+      DO: {
+        block: {
+          type: 'controls_if',
+          extraState: {hasElse: true},
+          inputs: {
+            IF0: compare(
+              'LTE',
+              sum('ADD', widthOf(linePrefix()), widthOf(linePrefixPlusOne())),
+              sum('MULTIPLY', num(2), clickedAcross()),
+            ),
+            DO0: {block: setCaret(sum('ADD', caretAt(), num(1)))},
+            ELSE: {
+              block: {
+                type: 'controls_flow_statements',
+                fields: {FLOW: 'BREAK'},
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  reveal(),
+];
+
 const blinking = () => ({
   block: {
     type: 'logic_operation',
@@ -388,7 +523,7 @@ export const textAreaActor = actorFile(
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
         inputs: {ACTOR: me()},
-        next: {block: chain([takeFocus(), setCaret(length()), reveal()])},
+        next: {block: chain([takeFocus(), ...placesTheCaret()])},
       },
       // A character goes in at the bar.
       {
