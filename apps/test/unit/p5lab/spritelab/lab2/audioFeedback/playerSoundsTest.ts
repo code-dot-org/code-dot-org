@@ -1,7 +1,7 @@
 import {
   createPlayerSounds,
   PlayerSoundEvent,
-} from '@cdo/apps/p5lab/spritelab/lab2/playerSounds';
+} from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/playerSounds';
 
 import {fakeAudioContext} from './fakeAudioContext';
 

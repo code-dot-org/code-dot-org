@@ -1,6 +1,7 @@
 // Blips for what happens on the ground; being off it is heightTone's.
 
-import {isMoving} from './characterAnimations';
+import {isMoving} from '../characterAnimations';
+
 import {PlayerSoundEvent} from './playerSounds';
 
 // Pixels walked between footsteps, so the beat follows the player's speed.
@@ -14,7 +15,7 @@ function refused(asked: number, got: number): boolean {
   return Math.abs(asked) - got * Math.sign(asked) > REFUSED_PX;
 }
 
-export interface PlayerFrame {
+export interface MovementFrame {
   moved: number;
   // What the keys asked for; its gap from `moved` is a wall.
   requested: number;
@@ -24,13 +25,13 @@ export interface PlayerFrame {
   grounded: boolean;
 }
 
-export interface PlayerEventState {
+export interface MovementEventState {
   intoWall: boolean;
   intoBlock: boolean;
   stride: number;
 }
 
-export function initialPlayerEventState(): PlayerEventState {
+export function initialMovementEventState(): MovementEventState {
   return {
     intoWall: false,
     intoBlock: false,
@@ -39,9 +40,9 @@ export function initialPlayerEventState(): PlayerEventState {
   };
 }
 
-export function playerEvents(
-  state: PlayerEventState,
-  frame: PlayerFrame
+export function movementEvents(
+  state: MovementEventState,
+  frame: MovementFrame
 ): PlayerSoundEvent[] {
   const events: PlayerSoundEvent[] = [];
 

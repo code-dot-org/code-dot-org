@@ -12,6 +12,10 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {
+  initialMovementEventState,
+  movementEvents,
+} from './audioFeedback/movementEvents';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   backgroundFrame,
@@ -48,7 +52,6 @@ import {
   resolvePlatformPhysics,
   usesPlatformPhysics,
 } from './platformPhysics';
-import {initialPlayerEventState, playerEvents} from './playerEvents';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
@@ -1026,7 +1029,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.observedX_ = null;
     this.observedY_ = null;
     this.observedFacing_ = 'right';
-    this.playerEvents_ = initialPlayerEventState();
+    this.movementEvents_ = initialMovementEventState();
   }
 
   // First player only: the controls drive the whole group as one.
@@ -1064,7 +1067,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
     const direction = this.observedFacing_ === 'left' ? -1 : 1;
     if (this.onPlayerSound) {
-      playerEvents(this.playerEvents_, {
+      movementEvents(this.movementEvents_, {
         moved,
         requested,
         movedUp: (sprite.position.y - previousY) * up,

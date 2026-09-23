@@ -1,6 +1,6 @@
 import {act, renderHook} from '@testing-library/react-hooks';
 
-import useGameAudio from '@cdo/apps/p5lab/spritelab/lab2/useGameAudio';
+import useGameAudio from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/useGameAudio';
 
 import {FakeVoice, installFakeAudioContext} from './fakeAudioContext';
 

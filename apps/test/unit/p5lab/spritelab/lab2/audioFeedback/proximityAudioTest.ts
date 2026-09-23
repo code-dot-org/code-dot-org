@@ -2,7 +2,7 @@ import {
   createProximityAudio,
   PROXIMITY_RANGE,
   proximityLevel,
-} from '@cdo/apps/p5lab/spritelab/lab2/proximityAudio';
+} from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/proximityAudio';
 
 import {fakeAudioContext} from './fakeAudioContext';
 
