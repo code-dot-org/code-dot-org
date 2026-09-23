@@ -97,8 +97,6 @@ anyone reading the wrapper or moving to bare MUI later.
   than synchronously on mount. Tests asserting focus need `waitFor`.
 - **Escape is handled on the dialog**, not on `document`. A `keyDown` fired on
   `document` no longer closes it.
-- **MUI's scroll lock adds `padding-right`** equal to the scrollbar width, so a
-  page's fixed header can shift by that much while a dialog is open.
 - **The panel is a plain block with no height cap**, as the legacy one is: MUI
   Paper's flex column, `overflow-y: auto` and viewport max-height are undone
   in `muiCustomDialog.module.scss`, so tall content overflows the viewport
