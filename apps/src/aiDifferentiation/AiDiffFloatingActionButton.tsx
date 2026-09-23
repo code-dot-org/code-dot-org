@@ -54,6 +54,13 @@ interface AiDiffFloatingActionButtonProps {
    * the rubrics-drawer experiment's Rubrics screen.
    */
   openToNav?: string;
+  /**
+   * Mounts the drawer (and all of its supporting data-fetching/websocket
+   * effects) without rendering the round AI-bot FAB icon itself. Used when
+   * some other UI element (e.g. TeacherPanelHandle's arrow tab) is meant to
+   * be the only visible entry point to the drawer.
+   */
+  hideButton?: boolean;
 }
 
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
@@ -74,6 +81,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
    */
   canDefaultOpen = true,
   openToNav,
+  hideButton = false,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -315,7 +323,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   return (
     <div id="fab-contained">
-      {!chatIsOpen && (
+      {!hideButton && !chatIsOpen && (
         <button
           ref={buttonRef}
           id="ui-floatingActionButton"

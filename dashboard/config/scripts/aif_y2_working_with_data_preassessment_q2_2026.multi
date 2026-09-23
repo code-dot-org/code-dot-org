@@ -5,7 +5,7 @@ wrong 'Data stored in the software Tableau'
 wrong 'Data organized into separate tabs'
 right 'Data organized into rows and columns'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Tabular data refers to...

@@ -63,3 +63,31 @@ describe('GenerateImageView character-set offer', () => {
     ).not.toBeInTheDocument();
   });
 });
+
+describe('GenerateImageView type choice', () => {
+  it('offers the type for a new image', () => {
+    renderView({create: {isNameTaken: () => false}});
+    expect(screen.getByRole('radio', {name: 'Sprite'})).toBeInTheDocument();
+  });
+
+  it('drops the group when the level locks the type, in the student form', () => {
+    renderView({
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+    });
+    expect(
+      screen.queryByRole('radio', {name: 'Sprite'})
+    ).not.toBeInTheDocument();
+    // The style choice stays.
+    expect(screen.getByRole('radio', {name: 'Pixel art'})).toBeInTheDocument();
+  });
+
+  it('keeps the locked group visible, disabled, in the advanced form', () => {
+    renderView({
+      advanced: true,
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+    });
+    expect(screen.getByRole('radio', {name: 'Sprite'})).toBeDisabled();
+  });
+});

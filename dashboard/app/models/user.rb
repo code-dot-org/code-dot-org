@@ -639,7 +639,7 @@ class User < ApplicationRecord
     end
 
     # Code studio admins should not have a password
-    errors.add(:admin, 'cannot have a password') if password.present?
+    errors.add(:admin, 'cannot have a password') if encrypted_password.present? || password.present?
   end
 
   def fix_by_user_type

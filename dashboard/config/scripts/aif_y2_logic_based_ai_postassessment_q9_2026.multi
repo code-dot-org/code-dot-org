@@ -5,7 +5,7 @@ wrong '`for i < 5:`'
 wrong '`for range(5):`'
 right '`for i in range(5):`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of these lines of code will create a loop that repeats five times?

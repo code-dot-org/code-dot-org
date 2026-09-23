@@ -61,6 +61,18 @@ function convertTestValue(featureNumberKey, feature, value) {
   return parseInt(convertedValue);
 }
 
+// A record of training, not a prediction input: KNN.load already restores k.
+export function getHyperparameters(modelData) {
+  if (modelData.hyperparameters) {
+    return modelData.hyperparameters;
+  }
+  // Models saved before hyperparameters were added carry only kValue, and S3 keeps them forever.
+  if (typeof modelData.kValue === 'number') {
+    return {k: modelData.kValue};
+  }
+  return {};
+}
+
 export function predict(modelData) {
   // Determine which algorithm to use.
   if (KNNTrainers.includes(modelData.selectedTrainer)) {
