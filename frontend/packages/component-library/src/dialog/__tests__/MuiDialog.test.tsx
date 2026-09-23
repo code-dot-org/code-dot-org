@@ -152,6 +152,20 @@ describe('Design System - MuiDialog', () => {
     );
   });
 
+  it('uses imageAlt for the image, including an empty decorative alt', () => {
+    const imageUrl = 'https://via.placeholder.com/150';
+    const {rerender} = renderDialog({imageUrl, imageAlt: 'A robot waving'});
+    expect(screen.getByRole('img', {name: 'A robot waving'})).toBeVisible();
+
+    rerender(
+      <ThemeProvider theme={CdoTheme}>
+        <MuiDialog {...defaultProps} imageUrl={imageUrl} imageAlt="" />
+      </ThemeProvider>,
+    );
+    expect(screen.queryByRole('img')).toBeNull();
+    expect(document.querySelector('img')).toHaveAttribute('alt', '');
+  });
+
   it('locks body scroll when rendered', () => {
     renderDialog();
 

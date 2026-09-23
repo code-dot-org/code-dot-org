@@ -39,6 +39,11 @@ export interface MuiDialogProps extends MuiCustomDialogProps {
   icon?: FontAwesomeV6IconProps;
   /** Dialog image url */
   imageUrl?: string;
+  /**
+   * Alt text for the image. Defaults to the legacy literal "Dialog"; pass what
+   * the image shows, or "" when it is decorative.
+   */
+  imageAlt?: string;
 }
 
 /**
@@ -67,6 +72,7 @@ const MuiDialog: React.FunctionComponent<MuiDialogProps> = ({
   customBottomContent,
   icon,
   imageUrl,
+  imageAlt = 'Dialog',
   'aria-label': ariaLabel,
   'aria-labelledby': ariaLabelledBy,
   ...customDialogProps
@@ -88,7 +94,7 @@ const MuiDialog: React.FunctionComponent<MuiDialogProps> = ({
       {...customDialogProps}
     >
       <div className={moduleStyles.dialogTextSection}>
-        {imageUrl && <img src={imageUrl} alt="Dialog" />}
+        {imageUrl && <img src={imageUrl} alt={imageAlt} />}
         <DialogTitle
           id={titleId}
           variant="h2"
