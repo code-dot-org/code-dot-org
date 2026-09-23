@@ -70,15 +70,13 @@ export function createPlayerObserver(
       const moved = sprite.position.x - previousX;
       // The first frame has no previous position, so nothing was requested.
       const requested = first ? 0 : requestedX - previousX;
-      // Positive is away from the ground, whichever way gravity points. With
-      // no gravity it is the direction the keys asked for, so a refused move
-      // up or down is a bump either way.
+      // Positive is away from the ground; with no gravity, the way the keys
+      // asked, so a refused move up or down is a bump either way.
       const up = weightless
         ? Math.sign(requestedY - previousY)
         : -Math.sign(gravity);
-      // Facing follows the key when a move was refused, so a player pressed
-      // against a wall faces it, and holds while still, so the warning tone
-      // holds too.
+      // Follows the key when a move was refused, so a player pressed against
+      // a wall faces it; held while still, so the warning tone holds too.
       facing = nextFacing(facing, isMoving(moved) ? moved : requested);
       const direction = facing === 'left' ? -1 : 1;
 

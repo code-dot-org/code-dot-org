@@ -897,11 +897,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeWorldRef = useRef<World | undefined>(undefined);
   const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
   const activeSceneIdRef = useRef<string | undefined>(undefined);
-  // The type of the scene the engine is running, set wherever a run starts:
-  // the live preview, Play's start scene, and each go-to-scene jump.
-  const [playingSceneType, setPlayingSceneType] = useState<
-    SceneType | undefined
-  >(undefined);
+  // Whether the scene the engine is running is a platformer, asked of the
+  // engine wherever a run starts: the live preview, Play's start scene, and
+  // each go-to-scene jump.
+  const [playingPlatformer, setPlayingPlatformer] = useState(false);
   useEffect(() => {
     activeWorldRef.current = worldFor(activeScene);
     activeSceneTypeRef.current = activeScene?.type;
@@ -931,8 +930,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeSceneIdRef.current) {
       requestThumbnail(activeSceneIdRef.current);
     }
-    setPlayingSceneType(activeSceneTypeRef.current);
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
+    setPlayingPlatformer(engine.isPlatformScene());
   }, [dispatch, getCode, requestThumbnail]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
@@ -976,8 +975,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       });
       dispatch(setIsRunning(true));
       requestThumbnail(scene.id);
-      setPlayingSceneType(scene.type);
       engine.runProgram(program, referencedImages, scene.type);
+      setPlayingPlatformer(engine.isPlatformScene());
     },
     [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
   );
@@ -1088,8 +1087,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
-      setPlayingSceneType(scene.type);
       engine.runProgram(program, referencedImages, scene.type);
+      setPlayingPlatformer(engine.isPlatformScene());
     },
     [dispatch, compileExternalScene]
   );
@@ -1641,10 +1640,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [playspaceMode]);
 
-  const hasPlatformScene = useMemo(
-    () => scenes.some(scene => scene.type === 'platform'),
-    [scenes]
-  );
+  // A typed scene says so up front; a scene made before scene types counts
+  // once the engine runs it as a platformer.
+  const hasPlatformScene =
+    useMemo(() => scenes.some(scene => scene.type === 'platform'), [scenes]) ||
+    playingPlatformer;
   const gameAudio = useGameAudio(engineRef, {
     hasPlatformScene,
     // A hidden document has already stopped the engine feeding it.
@@ -1822,7 +1822,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           Code tab's corner preview and the Play tab's centered view. */}
           <Playspace
             boxRef={playspaceRef}
-            platformScene={playingSceneType === 'platform'}
+            platformScene={playingPlatformer}
             mode={playspaceMode}
             controls={
               <PlayControls

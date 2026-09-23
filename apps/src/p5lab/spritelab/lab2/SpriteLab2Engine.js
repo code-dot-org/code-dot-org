@@ -310,7 +310,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // One cell at the default playfield size. A scene with a world
       // overrides this from the prelude with its own cell size, and the
       // grid blocks size their sprites from their own bitmaps.
-      library.defaultSpriteSize = this.isPlatformScene_()
+      library.defaultSpriteSize = this.isPlatformScene()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; the classic footing command
@@ -597,7 +597,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.referencedImages = referencedImages || null;
   }
 
-  isPlatformScene_() {
+  /** Whether the running scene is a platformer: by its type, or by platform
+      blocks in a scene made before scene types. */
+  isPlatformScene() {
     if (this.sceneType_) {
       return this.sceneType_ === 'platform';
     }
