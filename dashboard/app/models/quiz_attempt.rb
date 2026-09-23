@@ -69,13 +69,7 @@ class QuizAttempt < ApplicationRecord
   def question_results_in_progress
     return nil if submitted_at.present?
 
-    responses = quiz_question_responses
-    if level
-      in_quiz_question_ids = QuizQuestionPlacement.where(level_id: level_id).select(:quiz_question_id)
-      responses = responses.where(quiz_question_id: in_quiz_question_ids)
-    end
-
-    responses.filter_map do |response|
+    quiz_question_responses.in_quiz(level).filter_map do |response|
       selected_choice_id = response.response_data['selectedChoiceId']
       next if selected_choice_id.blank?
       {quiz_question_id: response.quiz_question_id, selected_choice_id: selected_choice_id}
@@ -89,16 +83,7 @@ class QuizAttempt < ApplicationRecord
   def question_results
     return nil if submitted_at.blank?
 
-    responses = quiz_question_responses.includes(:quiz_question)
-    # Only questions still on this quiz count while the quiz exists - mirrors
-    # the same filter used when totaling score/max_score on finalize. After
-    # the quiz is deleted, placements are gone; keep every stored response.
-    if level
-      in_quiz_question_ids = QuizQuestionPlacement.where(level_id: level_id).select(:quiz_question_id)
-      responses = responses.where(quiz_question_id: in_quiz_question_ids)
-    end
-
-    responses.map do |response|
+    quiz_question_responses.in_quiz(level).includes(:quiz_question).map do |response|
       reveal_answer = level&.show_correctness? && level&.reveal_answer_explanation?
       # Pending/manual/ungraded responses have no score yet - report nil rather than false,
       # or an ungraded response would be shown to the student as incorrect.
