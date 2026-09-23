@@ -55,6 +55,8 @@ And(/^I see no difference for "([^"]*)"?( in the current viewport)?( without wai
     fonts_loaded? && header_relaid_out? && (skip_fa_wait || font_awesome_loaded?)
   end
 
+  hide_focus_ring
+
   is_full_page_screenshot = !skip_full_page
   @eyes.check_window(identifier, MATCH_TIMEOUT, is_full_page_screenshot)
 end
@@ -68,6 +70,8 @@ And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, sele
     element.displayed? && fonts_loaded? && header_relaid_out?
   end
 
+  hide_focus_ring
+
   @eyes.check_region(element, tag: identifier, match_timeout: MATCH_TIMEOUT, stitch_content: true)
 end
 
@@ -77,6 +81,23 @@ And(/^The header is finished animating$/) do
   wait_until do
     @browser.execute_script('return $("#header_middle_content").css("opacity") === \'1\'') == true
   end
+end
+
+# "I click selector" clicks with `$(sel)[0].click()`, an untrusted click. Since
+# Chromium 152 (commit 4510657907) a <label> forwards an untrusted click to its
+# control as script focus rather than mouse focus, and script focus matches
+# :focus-visible, so the checkbox or toggle the test just clicked draws its
+# focus ring into the screenshot. Re-focus with focusVisible: false, which
+# Blink honours ahead of that heuristic. The blur first is required: focus()
+# on the already-focused element is a no-op and keeps the old options.
+def hide_focus_ring
+  @browser.execute_script(<<~JS)
+    const el = document.activeElement;
+    if (el && el !== document.body) {
+      el.blur();
+      el.focus({focusVisible: false});
+    }
+  JS
 end
 
 def ensure_eyes_available
