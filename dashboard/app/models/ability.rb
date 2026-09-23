@@ -586,10 +586,11 @@ class Ability
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
 
-      # These checks control access to Javabuilder.
-      # Only verified instructors, and participants or active co-teachers assigned
-      # to a CSA section with a verified primary instructor, can generate a
-      # Javabuilder session token to run Java code.
+      # Three groups should be able to generate a Javabuilder session token to
+      # run Java code, and those groups are:
+      # 1. Verified instructors,
+      # 2. Students assigned to a CSA section with a verified instructor, and
+      # 3. Co-teachers assigned to a CSA section with a verified instructor.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
