@@ -112,8 +112,14 @@ describe('every stock actor', () => {
       // is the `Has a Box` trait's, which every interface kind elects
       // (specs/BOXES_PLAN.md).
       image: ['stretches'],
-      // A text area's caret; its lines are newlines in the words themselves.
-      textArea: ['caret'],
+      // A text area's caret, and how far DOWN the words the box is looking —
+      // which is the Text Input's `scroll` turned through ninety degrees: one
+      // slides a single line sideways to keep the caret in the box, this
+      // slides a paragraph upward to keep the caret's LINE in it. Both are
+      // facts about one box over some words, so a rule for them would be a
+      // rule for two kinds of actor. Its lines themselves are newlines in the
+      // words and are nobody's property.
+      textArea: ['caret', 'scroll'],
       // …and what a bar IS: how far along it is, and the two colors it is
       // drawn in. These were `Progress`, a rule with three properties and no
       // behavior; the bars that are not this one act like it and get them

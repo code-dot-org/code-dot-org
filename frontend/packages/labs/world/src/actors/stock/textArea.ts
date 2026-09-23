@@ -27,17 +27,26 @@
 // as far across as the line's prefix measures — the same measuring tape the
 // Text Input borrows (`World.textWidth`).
 //
-// TWO THINGS THE TEXT INPUT DOES THAT THIS DOES NOT, and why:
+// ONE THING THE TEXT INPUT DOES THAT THIS DOES NOT, and why: a click puts the
+// caret at the END, not in the word. Clicking into a line of a paragraph is
+// the Text Input's prefix scan run on one line of several, and which line is a
+// division; it is the next thing to add, and it is not here because a first
+// cut that scans the wrong line is worse than one that goes to the end.
 //
-//   - a click puts the caret at the END, not in the word. Clicking into a
-//     line of a paragraph is the Text Input's prefix scan run on one line of
-//     several, and which line is a division; it is the next thing to add,
-//     and it is not here because a first cut that scans the wrong line is
-//     worse than one that goes to the end.
-//   - the words do not scroll. A line past the right edge and a paragraph
-//     past the bottom are clipped; making them slide is the Text Input's
-//     three cases in two directions, and waits for an actor tall enough to
-//     need it.
+// THE WORDS DO SCROLL, which they did not. A paragraph taller than the box was
+// simply cut off: everything below the fold was typed into a place nobody
+// could see. The window is a scroll offset in pixels, the paragraph and the
+// bar are both drawn less it, and the texture's own bounds do the clipping —
+// a drawing is rasterised at the actor's size, so nothing else had to be
+// worked out (specs/DRAWING.md).
+//
+// AND IT FOLLOWS THE CARET, which is the part that makes it usable: after
+// every move and every edit the window is clamped between the scroll that
+// puts the caret's line at the foot of the box and the scroll that puts it at
+// the head. A line already in view sits between the two and nothing moves; a
+// line below snaps to the first and becomes the bottom-most, one above snaps
+// to the second and becomes the top-most. One clamp rather than two tests,
+// which is the List's trick for the same job (`actors/list`, `reveal`).
 
 import {labelSizeOf} from './label';
 import {BORDER, LOOK, RADIUS_TIGHT} from './look';
@@ -176,6 +185,54 @@ const widthOf = (text: object) => ({
   block: {type: 'world_text_width', inputs: {TEXT: text, SIZE: atSize()}},
 });
 
+// ── Scrolling, which is one clamp said twice ────────────────────────────────
+
+/** How far apart the painter lays two lines (specs/DRAWING.md). */
+const step = () => sum('MULTIPLY', atSize(), num(LINE_SPACING));
+/** How much room there is for words: the box, less the padding at each end. */
+const inside = () => sum('MINUS', height(), num(PAD * 2));
+/** How many lines the words are, which is the breaks plus the last one. */
+const lines = () => sum('ADD', newlinesIn(held()), num(1));
+/** The top of line `l`, measured from the top of the words. */
+const lineTop = (l: object) => sum('MULTIPLY', l, step());
+/** How far it can scroll before the last line is at the bottom. Never below 0. */
+const overflow = () =>
+  clamp(
+    sum('MINUS', sum('MULTIPLY', lines(), step()), inside()),
+    num(0),
+    sum('MULTIPLY', lines(), step()),
+  );
+
+const scroll = () => ({
+  block: {type: `world_get_${OWN}_ScrollProperty`, inputs: {ACTOR: me()}},
+});
+const scrollTo = (to: object) => ({
+  type: `world_set_${OWN}_ScrollProperty`,
+  inputs: {ACTOR: me(), VALUE: clamp(to, num(0), overflow())},
+});
+
+/**
+ * Bring the caret's line into view, moving as little as possible.
+ *
+ * ONE CLAMP RATHER THAN TWO TESTS, which is the List's trick for the same job
+ * (`actors/list`, `reveal`). The bottom of the clamp is the scroll that puts
+ * the line at the FOOT of the box and the top is the scroll that puts it at
+ * the HEAD, so a line already in view is between them and nothing moves; a
+ * line below the window snaps to the first and becomes the bottom-most, and
+ * one above snaps to the second and becomes the top-most.
+ *
+ * After every caret move and every edit, because both can take the caret off
+ * the screen — typing a line at the bottom is the ordinary way to do it.
+ */
+const reveal = () =>
+  scrollTo(
+    clamp(
+      scroll(),
+      sum('MINUS', sum('ADD', lineTop(line()), step()), inside()),
+      lineTop(line()),
+    ),
+  );
+
 const takeFocus = () => ({
   type: 'world_do_TabNavigation_TakeTheFocusAction',
   inputs: {ACTOR: me()},
@@ -188,6 +245,7 @@ const insert = (what: object) => [
     joined([before(), what, from(sum('ADD', caretAt(), num(1)))]),
   ),
   setCaret(sum('ADD', caretAt(), num(1))),
+  reveal(),
   emitChanged(),
 ];
 
@@ -210,6 +268,7 @@ const lineAbove = () => {
         clamp(column(), num(0), sum('MINUS', aboveEnd(), aboveStart())),
       ),
     ),
+    reveal(),
   ]);
 };
 /**
@@ -236,6 +295,7 @@ const lineBelow = () => {
   });
   return onlyIf(both(focused(), compare('GT', breakAhead(), num(0))), [
     setCaret(sum('ADD', belowStart(), clamp(column(), num(0), belowLength()))),
+    reveal(),
   ]);
 };
 
@@ -280,9 +340,16 @@ export const textAreaActor = actorFile(
     actsLike('actors/label'),
     useTrait('Input#TakesKeyboardInputTrait'),
     useTrait('Mouse#CanBeClickedTrait'),
+    // …and the wheel, now that there is something to scroll.
+    useTrait('Mouse#CanBeScrolledTrait'),
     useTrait('Tab Navigation#CanBeFocusedTrait'),
     showAs('paragraph'),
     defineProperty('number', 'caret', '0'),
+    // How far down the words the box is looking, in pixels. Kept in pixels
+    // and not in lines for the reason the List keeps its in pixels: a drag is
+    // a distance, and rounding one to whole lines makes a slow drag do
+    // nothing and a fast one jump.
+    defineProperty('number', 'scroll', '0'),
     defineEvent('changed'),
     {
       type: 'world_set_Boxed_WidthProperty',
@@ -305,12 +372,23 @@ export const textAreaActor = actorFile(
   ],
   {
     handlers: [
+      // The wheel, which reads the words without moving the bar — the one
+      // way to look further down a paragraph than you are typing in.
+      {
+        type: 'world_on_Mouse_IsScrolledByEvent',
+        inputs: {ACTOR: me()},
+        next: {
+          block: scrollTo(
+            sum('ADD', scroll(), {block: {type: 'world_event_value'}}),
+          ),
+        },
+      },
       // A click chooses this area, and puts the bar at the end.
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
         inputs: {ACTOR: me()},
-        next: {block: chain([takeFocus(), setCaret(length())])},
+        next: {block: chain([takeFocus(), setCaret(length()), reveal()])},
       },
       // A character goes in at the bar.
       {
@@ -336,6 +414,7 @@ export const textAreaActor = actorFile(
             ]),
           ),
           setCaret(sum('MINUS', caretAt(), num(1))),
+          reveal(),
           emitChanged(),
         ]),
       ),
@@ -346,6 +425,10 @@ export const textAreaActor = actorFile(
             'TextProperty',
             joined([before(), from(sum('ADD', caretAt(), num(2)))]),
           ),
+          // The caret has not moved, but the words below it have — a delete
+          // that joins two lines makes the paragraph shorter, and a window
+          // parked at the old bottom would be past the new one.
+          reveal(),
           emitChanged(),
         ]),
       ),
@@ -353,12 +436,14 @@ export const textAreaActor = actorFile(
         'left arrow',
         onlyIf(both(focused(), compare('GT', caretAt(), num(0))), [
           setCaret(sum('MINUS', caretAt(), num(1))),
+          reveal(),
         ]),
       ),
       key(
         'right arrow',
         onlyIf(both(focused(), compare('LT', caretAt(), length())), [
           setCaret(sum('ADD', caretAt(), num(1))),
+          reveal(),
         ]),
       ),
       key('up arrow', lineAbove()),
@@ -385,20 +470,17 @@ export const textAreaActor = actorFile(
         fill(textOf('TextColorProperty')),
         // From the corner, breaking on newlines only: a column of zero is
         // `draw paragraph`'s "do not wrap".
-        drawParagraph(num(PAD), num(PAD), 0),
+        //
+        // LESS THE SCROLL, which is the whole of the scrolling: a drawing is
+        // rasterised at the actor's own size, so what is laid above the top
+        // or below the bottom is clipped by the texture and nothing else has
+        // to be worked out (specs/DRAWING.md).
+        drawParagraph(num(PAD), sum('MINUS', num(PAD), scroll()), 0),
         // The bar, on the caret's line and after its prefix, blinking.
         onlyIf(blinking(), [
           rectangle(
             sum('ADD', num(PAD), widthOf(linePrefix())),
-            sum(
-              'ADD',
-              num(PAD),
-              sum(
-                'MULTIPLY',
-                line(),
-                sum('MULTIPLY', atSize(), num(LINE_SPACING)),
-              ),
-            ),
+            sum('MINUS', sum('ADD', num(PAD), lineTop(line())), scroll()),
             num(CARET_WIDTH),
             atSize(),
           ),

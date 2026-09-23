@@ -62,6 +62,8 @@ describe('a Text Area', () => {
     )!;
     const text = modules['actors/label'].TextProperty as Property<string>;
     const caret = modules['actors/textArea'].CaretProperty as Property<number>;
+    const scroll = modules['actors/textArea']
+      .ScrollProperty as Property<number>;
     const settle = () => {
       world.tick(1 / 60);
       world.tick(1 / 60);
@@ -80,6 +82,27 @@ describe('a Text Area', () => {
         world.addTyped([...characters]);
         settle();
       },
+      scrolled: () => area.get(scroll),
+      /** Turn the wheel over it, in pixels. */
+      wheel: (by: number) => {
+        world.setPointer({x: 100, y: 100}, []);
+        world.tick(1 / 60);
+        world.scrollWheel(by);
+        settle();
+      },
+      /** Type `n` lines, so there is more paragraph than box. */
+      fill: (n: number) => {
+        for (let at = 1; at <= n; at++) {
+          world.addTyped([...`L${at}`]);
+          settle();
+          if (at < n) {
+            world.setInput(['enter']);
+            world.tick(1 / 60);
+            world.setInput([]);
+            settle();
+          }
+        }
+      },
       tap: (key: string) => {
         // The world's own key names: the driver translates the browser's at
         // the door (`engine/core/keys`).
@@ -90,6 +113,83 @@ describe('a Text Area', () => {
       },
     };
   };
+
+  describe('the window over the words', () => {
+    it('starts at the top and stays there while the words fit', async () => {
+      const a = await open();
+      a.click();
+      a.type('ONE');
+      expect(a.scrolled()).toBe(0);
+    });
+
+    it('follows the caret DOWN, making its line the bottom-most', async () => {
+      // Typing off the foot of the box is the ordinary way to lose the caret,
+      // and the window has to come after it (`reveal`).
+      const a = await open();
+      a.click();
+      a.fill(20);
+
+      expect(a.scrolled()).toBeGreaterThan(0);
+    });
+
+    it('follows the caret UP, making its line the top-most', async () => {
+      const a = await open();
+      a.click();
+      a.fill(20);
+      const atBottom = a.scrolled();
+
+      // All the way back up, a line at a time.
+      for (let at = 0; at < 25; at++) {
+        a.tap('up arrow');
+      }
+
+      expect(a.scrolled()).toBeLessThan(atBottom);
+      expect(a.scrolled()).toBe(0);
+    });
+
+    it('does not move for a caret already in view', async () => {
+      const a = await open();
+      a.click();
+      a.fill(20);
+      const before = a.scrolled();
+
+      // One line up is still on the screen, so nothing should shift.
+      a.tap('up arrow');
+
+      expect(a.scrolled()).toBe(before);
+    });
+
+    it('scrolls with the wheel, without moving the bar', async () => {
+      // Looking somewhere other than where you are typing, which is the one
+      // thing the caret's own following cannot give you.
+      const a = await open();
+      a.click();
+      a.fill(20);
+      const wasAt = a.scrolled();
+      const caretWas = a.caret();
+      expect(wasAt).toBeGreaterThan(40);
+
+      a.wheel(-40);
+
+      expect(a.scrolled()).toBe(wasAt - 40);
+      expect(a.caret()).toBe(caretWas);
+    });
+
+    it('will not scroll past either end', async () => {
+      const a = await open();
+      a.click();
+      a.fill(20);
+
+      a.wheel(-5000);
+      expect(a.scrolled()).toBe(0);
+
+      a.wheel(5000);
+      // At the foot: the last line is showing and no further.
+      const atEnd = a.scrolled();
+      a.wheel(5000);
+      expect(a.scrolled()).toBe(atEnd);
+    });
+  });
 
   it('takes typing, and Enter starts a new line', async () => {
     const a = await open();

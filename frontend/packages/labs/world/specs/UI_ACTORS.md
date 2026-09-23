@@ -1400,3 +1400,12 @@ presence of its files.
 Still unplaced: the Health Bar and the Image, both of which read as game
 furniture rather than interface, and both of which want a game fixture rather
 than this one.
+
+And placing the Text Area immediately found what being unseen had hidden: a
+paragraph taller than its box was simply cut off, so everything below the fold
+was typed into a place nobody could look at. It scrolls now, and the window
+follows the caret — clamped between the scroll that puts the caret's line at
+the foot of the box and the one that puts it at the head, which is the List's
+`reveal` doing the same job for a line instead of a row. That is three
+controls in a row where the defect was invisible to a green suite and obvious
+within a minute of use.
