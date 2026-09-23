@@ -583,6 +583,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "hoai2026-dev-spritelab-lab2-patrol-meet"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-spritelab-lab2-patrol-meet"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      },
+      "level_keys": [
+        "hoai2026-dev-spritelab-lab2-patrol-meet"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 23,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "hoai2026-dev-panels-linking"
         ]
       },
@@ -601,9 +625,9 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
-      "activity_section_position": 23,
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 24,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -625,9 +649,9 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
-      "activity_section_position": 24,
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 25,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -649,9 +673,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
-      "activity_section_position": 25,
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 26,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -919,6 +943,18 @@
         "level.key": "hoai2026-dev-spritelab-lab2-patrol",
         "script_level.level_keys": [
           "hoai2026-dev-spritelab-lab2-patrol"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-spritelab-lab2-patrol-meet",
+        "script_level.level_keys": [
+          "hoai2026-dev-spritelab-lab2-patrol-meet"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
