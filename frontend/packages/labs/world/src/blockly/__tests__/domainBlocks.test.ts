@@ -531,6 +531,30 @@ describe('domain block generators', () => {
     expect(code).toContain('traits: [');
   });
 
+  it('world_define_camera says whose it is, and says nothing for the world’s', () => {
+    // A camera belongs to a space: the world's own, or a Viewport's
+    // (specs/SPACE_CAMERAS_PLAN.md). The empty owner is the world, and it emits
+    // exactly what it emitted before the field existed — so every camera written
+    // before a Viewport could own one generates the bytes it always did.
+    const emitted = (owner: string | null) =>
+      generatorFor('world_define_camera')(
+        {
+          id: 'cam1',
+          getFieldValue: (name: string) =>
+            name === 'NAME' ? 'Chase' : name === 'OWNER' ? owner : null,
+          getInputTargetBlock: () => null,
+        } as never,
+        {definitions_: {}, statementToCode: () => ''} as never,
+        {} as never,
+      ) as string;
+
+    expect(emitted('Minimap')).toContain('space: "Minimap"');
+    expect(emitted('')).not.toContain('space:');
+    // A field a saved workspace has never heard of reads as null, and that is
+    // the world's too — the case every project written before this hits.
+    expect(emitted(null)).not.toContain('space:');
+  });
+
   it('world_define_camera says nothing about traits when it has none', () => {
     const code = generatorFor('world_define_camera')(
       {
@@ -565,7 +589,10 @@ describe('domain block generators', () => {
     const code = generatorFor('world_define_camera')(
       {
         id: 'cam1',
-        getFieldValue: () => 'Overview',
+        // Per FIELD, not one answer for all of them: the block carries an
+        // owner as well as a name now, and a mock that says "Overview" to
+        // both declares a camera of a Viewport called Overview.
+        getFieldValue: (name: string) => (name === 'NAME' ? 'Overview' : ''),
         getInputTargetBlock: () => null,
       } as never,
       {statementToCode: () => ''} as never,

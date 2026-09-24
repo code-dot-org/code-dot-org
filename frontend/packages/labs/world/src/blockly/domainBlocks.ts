@@ -109,6 +109,7 @@ import {
   shadowed,
   type SocketState,
 } from './extensions/blockDesigner';
+import {blockVisibilityExtension} from './extensions/blockVisibility';
 import {bodyButtonExtension} from './extensions/bodyButton';
 import {bodySurfaceExtension} from './extensions/bodyOwner';
 import {drawingContextExtension} from './extensions/drawingContext';
@@ -125,8 +126,6 @@ import {
   eventValuesToolboxExtension,
   registerEventFlyout,
 } from './extensions/eventActorToolbox';
-import {blockVisibilityExtension} from './extensions/blockVisibility';
-import {visibilityEye} from './fields/visibilityEye';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
 import {lessonButtonExtension} from './extensions/lessonButton';
 import {mapImportFieldExtension} from './extensions/mapImportField';
@@ -156,6 +155,7 @@ import fieldVectorPlugin, {
   type VectorValue,
 } from './fields/FieldVector';
 import {VARIABLE_NAME_FIELD} from './fields/variableName';
+import {visibilityEye} from './fields/visibilityEye';
 import {ROOT_HOMES, type FileKind} from './fileKind';
 import {
   DEFAULT_PARALLAX,
@@ -199,6 +199,8 @@ import {
   projectMapPaths,
   NONE_VALUE,
   orNone,
+  cameraOwnerOptions,
+  cameraOwnerOptionsExtension,
   placementOptions,
   placementOptionsExtension,
   ruleModuleOptions,
@@ -7786,13 +7788,32 @@ const worldMoveCamera = defineBlock({
  */
 const worldDefineCamera = defineBlock({
   type: 'world_define_camera',
-  message0: 'define camera %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'Camera'}],
+  // …AND WHOSE IT IS. A camera belongs to a space: the world's own, or a
+  // Viewport's, which shows a different scene and so cannot share one
+  // (specs/SPACE_CAMERAS_PLAN.md). Empty is the world, which is what every
+  // camera written before a Viewport could own one says, and what makes this
+  // field cost nothing to add: the generator emits exactly what it emitted
+  // before for it.
+  //
+  // A DROPDOWN AND NOT A SOCKET, though a socket was the first plan. A socket
+  // yields a live actor, and a world's prologue declares its cameras before the
+  // main map has placed any Viewport — so the socket would be empty at the one
+  // moment it is read. It is a live dropdown of the world's Viewport
+  // placements, so a name no placement has cannot be written down.
+  message0: 'define camera %1 of %2',
+  args0: [
+    {type: 'field_input', name: 'NAME', text: 'Camera'},
+    {
+      type: 'field_dropdown',
+      name: 'OWNER',
+      options: cameraOwnerOptions,
+    },
+  ],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [worldContextExtension],
+  extensions: [worldContextExtension, cameraOwnerOptionsExtension],
   style: 'setup_blocks',
   tooltip:
     'A place to look from, and how it behaves. Every world has one already; ' +
@@ -7823,6 +7844,13 @@ const worldDefineCamera = defineBlock({
         `id: ${str(cameraId(block.id))}`,
         `name: ${str(String(block.getFieldValue('NAME') ?? 'Camera'))}`,
       ];
+      // Whose it is, and nothing at all when it is the world's — so a camera
+      // declared before Viewports could own one generates the bytes it always
+      // did (`World.defineCamera` routes on the field's absence).
+      const owner = String(block.getFieldValue('OWNER') ?? '');
+      if (owner) {
+        settings.push(`space: ${str(owner)}`);
+      }
       if (traits.length) {
         settings.push(`traits: [${traits.join(', ')}]`);
       }

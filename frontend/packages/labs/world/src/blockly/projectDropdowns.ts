@@ -30,6 +30,7 @@ import {
   setProjectBackgrounds,
   setProjectSounds,
   setProjectSprites,
+  setViewportPlacements,
 } from './moduleOptions';
 import {OPENABLE_EXTENSIONS, setOpenableModules} from './openModule';
 import {projectAnimationIds} from './projectAnimations';
@@ -48,6 +49,7 @@ import {
   projectSoundOptions,
   projectSpriteOptions,
   projectWorldRules,
+  worldViewportPlacements,
 } from './projectModules';
 import {duplicateRuleNames, registerProjectRules} from './ruleRegistry';
 import {measuredImages, setProjectGrids} from './spriteCells';
@@ -105,6 +107,13 @@ export function refreshProjectDropdowns(
   // else — a game draws what its project holds.
   const sprites = projectSpriteOptions(files, images);
   setProjectSprites(sprites);
+  // Which Viewports a camera may be declared of (`define camera ⟨…⟩ of ⟨…⟩`).
+  // HERE rather than in the editor alone, because this call is what the runtime
+  // makes before the headless generator runs: a dropdown whose stored value the
+  // field does not offer is replaced by the first option the moment it is read,
+  // so a generator that knew no Viewports would rewrite every camera to the
+  // world's on the way to the compiler (specs/SPACE_CAMERAS_PLAN.md).
+  setViewportPlacements(worldViewportPlacements(files));
   // And the backdrops, which are the same images minus the folder that tells
   // them apart — one pool never offers the other's contents.
   const backgrounds = projectBackgroundOptions(files, images);

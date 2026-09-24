@@ -600,8 +600,12 @@ describe('declaring a camera against a space', () => {
     // apart; the NAME is what an author wrote.
     expect(space.cameraNamed('wide')!.id).toBe('win:wide');
     expect(space.cameraNamed('wide')!.space).toBe(space);
-    // …and the world's own list is untouched by it.
-    expect(world.camera('win:wide').id).toBe('main');
+    // …and the world's own list is untouched by it: `wide` is in no world list,
+    // and `World.camera` finds it only by looking through the spaces, which is
+    // what binds `camera` inside a `define camera ⟨…⟩ of ⟨…⟩` mouth.
+    expect(world.cameras.with(ViewportTrait)).toEqual([]);
+    expect(world.camera('wide').id).toBe('win:wide');
+    expect(world.camera('nothing by that name').id).toBe('main');
   });
 
   it('holds a camera declared before its Viewport is placed', () => {

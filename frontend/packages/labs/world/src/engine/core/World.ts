@@ -1532,8 +1532,29 @@ export class World {
   }
 
   camera(id: string = DEFAULT_CAMERA_ID): Camera {
+    const own = this.cameraList.find(camera => camera.id === id);
+    if (own) {
+      return own;
+    }
+    // …THEN EVERY SPACE'S, by the id it was declared under rather than the one
+    // it is held under. A space scopes its cameras' ids with the Viewport that
+    // owns them — `win:wide`, so a list of every camera in the world tells two
+    // `wide`s apart — and the generator does not know that convention and must
+    // not have to: a second place computing the same name is the silent-name
+    // failure this lab keeps meeting (specs/SPACE_CAMERAS_PLAN.md). So the
+    // engine, which owns the convention, resolves it.
+    //
+    // This is what binds `camera` inside `define camera ⟨…⟩ of ⟨…⟩`, so that
+    // `set actor to follow` in its mouth means the camera being defined.
+    for (const space of this.viewportSpaces) {
+      const found = space.cameras.find(
+        camera => camera.id === id || camera.id.endsWith(`:${id}`),
+      );
+      if (found) {
+        return found;
+      }
+    }
     return (
-      this.cameraList.find(camera => camera.id === id) ??
       this.cameraList.find(entry => entry.id === DEFAULT_CAMERA_ID) ??
       this.cameraList[0]
     );

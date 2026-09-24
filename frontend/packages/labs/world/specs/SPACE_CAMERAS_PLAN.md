@@ -1,13 +1,15 @@
 # One kind of camera, in every space
 
-STATUS: BUILDING. Steps 1 to 7 are in — step 6 is where the lab got smaller (a
+STATUS: BUILDING. Steps 1 to 8 are in — a camera can now be declared of a
+Viewport in blocks. Steps 1 to 7 are — step 6 is where the lab got smaller (a
 map says nothing about a camera any more) and step 7 turned out to be a
 correction to this document rather than a change to the engine. Steps 1 to 4 are — a space holds cameras, one collection
 finds them all, each knows its space, one may be declared against a space that
 does not exist yet, and a Viewport says which of its own it shows through. Step
 5 proved a camera trait reaches a space's camera, and step 6 deleted the engine
-branch that used to overwrite it. What remains is authoring: nothing writes a
-space camera's declaration yet (step 8) and nothing lists them (step 9).
+branch that used to overwrite it. What remains is the editor: nothing lists a
+Viewport's cameras yet (step 9), and `actor to follow` cannot name a kind (step
+10), so aiming one still means writing the follow in blocks.
 
 ONE REFINEMENT THE BUILD FORCED, in step 6. `settleSpace` did three jobs, not
 one: it followed what the map named, it positioned the camera from the

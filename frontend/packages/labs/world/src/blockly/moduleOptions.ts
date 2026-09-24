@@ -57,6 +57,8 @@ let projectMaps: Record<string, string[]> = {};
  * rejected by Blockly on load, so the list is set before the blocks are.
  */
 let currentPlacements: string[] = [];
+/** The Viewport placements of the world being edited or generated. */
+let currentViewports: string[] = [];
 // Effect path -> the parameters that effect declares (for the use-effect
 // mutator, which builds one socket row per parameter).
 let projectEffectParams: Record<string, EffectParameter[]> = {};
@@ -205,7 +207,6 @@ export function styleNameOrPlainOptions(): Array<[string, string]> {
   ];
 }
 
-
 /** Replace the effect-file options the EFFECT dropdown offers. */
 export function setProjectEffectFiles(options: Array<[string, string]>): void {
   projectEffectFiles = options;
@@ -224,6 +225,33 @@ export function ruleModuleOptions(): Array<[string, string]> {
 /** Name the placements of the map being edited or generated. */
 export function setCurrentPlacements(ids: readonly string[]): void {
   currentPlacements = [...ids];
+}
+
+/**
+ * Name the Viewport placements a world holds, for `define camera ⟨…⟩ of ⟨…⟩`.
+ *
+ * SET FOR THE GENERATOR AS WELL AS THE EDITOR, which is not optional. A dropdown
+ * whose stored value it does not offer is replaced by the first option the moment
+ * the field is read, so a headless palette that knew no Viewports would rewrite
+ * every camera to the world's on the way to the compiler
+ * (specs/SPACE_CAMERAS_PLAN.md).
+ */
+export function setViewportPlacements(ids: readonly string[]): void {
+  currentViewports = [...ids];
+}
+
+/**
+ * Rows for the owner of a camera: the world first, then its Viewports.
+ *
+ * The world is the EMPTY value, so a camera that says nothing is the world's —
+ * which is every camera declared before a Viewport could own one, and what the
+ * generator omits `space` for.
+ */
+export function cameraOwnerOptions(): Array<[string, string]> {
+  return [
+    [localizeText('the world'), NONE_VALUE],
+    ...currentViewports.map(id => [id, id] as [string, string]),
+  ];
 }
 
 /** Rows for `the ⟨placement⟩`: this map's placements, or a fallback. */
@@ -811,6 +839,11 @@ export const placementOptionsExtension = liveDropdown(
   'world_placement_options',
   'NAME',
   placementOptions,
+);
+export const cameraOwnerOptionsExtension = liveDropdown(
+  'world_camera_owner_options',
+  'OWNER',
+  cameraOwnerOptions,
 );
 export const mapOptionsExtension = liveDropdown(
   'world_map_options',

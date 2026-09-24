@@ -10,6 +10,7 @@ import {
   projectRuleOptions,
   projectWorldOptions,
   projectWorldRules,
+  worldViewportPlacements,
 } from '../projectModules';
 
 const FILES = {
@@ -263,5 +264,80 @@ describe('projectEffectParameters', () => {
     expect(
       projectEffectParameters(files)['effects/odd'].map(p => p.id),
     ).toEqual(['ok']);
+  });
+});
+
+describe('the Viewports a camera may be declared of', () => {
+  // What `define camera ⟨…⟩ of ⟨…⟩` offers. A camera belongs to a space, a space
+  // belongs to a Viewport, and a world's Viewports are the ones its main map
+  // placed (specs/SPACE_CAMERAS_PLAN.md).
+
+  /** A `.world` whose main map places these, and the actor files to match. */
+  const project = (
+    placements: Array<{id: string; type: string}>,
+    kinds: Record<string, string>,
+  ) => ({
+    'worlds/main.world': JSON.stringify({map: {actors: placements}}),
+    ...Object.fromEntries(
+      Object.entries(kinds).map(([path, contents]) => [
+        `${path}.actor`,
+        contents,
+      ]),
+    ),
+  });
+
+  /** An actor file that elects the Viewport trait, and one that does not. */
+  const showsMap = JSON.stringify({
+    blocks: {
+      blocks: [
+        {type: 'world_use_trait', fields: {TRAIT: 'Viewport#ViewportTrait'}},
+      ],
+    },
+  });
+  const plain = JSON.stringify({
+    blocks: {
+      blocks: [{type: 'world_use_trait', fields: {TRAIT: 'Boxed#BoxedTrait'}}],
+    },
+  });
+
+  it('offers the Viewports the main map placed, by the id it gave them', () => {
+    const files = project(
+      [
+        {id: 'Minimap', type: 'actors/viewport'},
+        {id: 'Game', type: 'actors/viewport'},
+      ],
+      {'actors/viewport': showsMap},
+    );
+    expect(worldViewportPlacements(files)).toEqual(['Minimap', 'Game']);
+  });
+
+  it('leaves out a placement whose kind does not show a map', () => {
+    // Offering every placement would let a camera be declared of a Panel, and
+    // the engine would hold that declaration pending forever — silently, which
+    // is the failure this filter exists to prevent.
+    const files = project(
+      [
+        {id: 'Minimap', type: 'actors/viewport'},
+        {id: 'Frame', type: 'actors/panel'},
+      ],
+      {'actors/viewport': showsMap, 'actors/panel': plain},
+    );
+    expect(worldViewportPlacements(files)).toEqual(['Minimap']);
+  });
+
+  it('offers nothing for a project with no world, or no map, or bad JSON', () => {
+    expect(worldViewportPlacements({})).toEqual([]);
+    expect(worldViewportPlacements({'worlds/main.world': '{}'})).toEqual([]);
+    // Mid-edit: a file being typed into is not an error to report here.
+    expect(worldViewportPlacements({'worlds/main.world': '{"map":'})).toEqual(
+      [],
+    );
+  });
+
+  it('offers nothing when the kind that would match is not in the project', () => {
+    // A map naming an actor the project lacks is a placement the world cannot
+    // make; it is certainly not a Viewport a camera can belong to.
+    const files = project([{id: 'Minimap', type: 'actors/viewport'}], {});
+    expect(worldViewportPlacements(files)).toEqual([]);
   });
 });
