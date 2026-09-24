@@ -1,10 +1,9 @@
 // html-to-image inlines every <img> as base64 at its original resolution, so a
-// sketch holding a few camera-roll photos produces tens of megabytes of SVG and
-// Safari fails to render it. We swap each oversized image for one drawn at the
+// sketch with a few photos produces tens of megabytes of SVG and
+// Safari fails to render it. Swap each oversized image for one drawn at the
 // size the export will actually show, and put the originals back afterwards.
 // html-to-image leaves a data-url source alone, so our version is what it embeds.
 
-// A JPEG source has no alpha to preserve, so it re-encodes as JPEG.
 const JPEG_SOURCE_PATTERN = /^data:image\/jpeg|\.jpe?g(\?|$)/i;
 const JPEG_QUALITY = 0.85;
 
@@ -19,8 +18,7 @@ const downscaledDataUrl = (
   if (!boxWidth || !boxHeight || !naturalWidth || !naturalHeight) {
     return undefined;
   }
-  // The node paints the image with object-fit: contain, so the largest useful
-  // size keeps the source aspect ratio. Sizing to the box would stretch it.
+
   const fit = Math.min(boxWidth / naturalWidth, boxHeight / naturalHeight);
   if (fit >= 1) {
     return undefined;

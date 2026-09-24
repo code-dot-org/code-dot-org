@@ -15,8 +15,7 @@ const EXPORT_PADDING_PX = 10;
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
 
-// A failed render rejects with an Event, which has no message and reaches our
-// logs as "[object Event]". Name what failed and how big the sketch was.
+// Friendly log instead of "[object Event]".
 const describeCaptureFailure = (error: unknown, context: object): Error => {
   const reason =
     error instanceof Error
@@ -74,12 +73,11 @@ export const createSketchSnapshotBlob = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  // Supplying this, even empty, stops html-to-image from inlining every font
-  // the page declares. See getSketchFontEmbedCss.
+  // Supplying this stops html-to-image from inlining every font the page declares.
   const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
 
   // html-to-image multiplies the output by the device pixel ratio, which would
-  // take a retina export past the dimension cap above.
+  // take a high-resolution export past the dimension cap.
   const pixelRatio = Math.min(
     Math.max(window.devicePixelRatio || 1, 1),
     MAX_EXPORT_DIMENSION_PX / Math.max(imageWidth, imageHeight)
