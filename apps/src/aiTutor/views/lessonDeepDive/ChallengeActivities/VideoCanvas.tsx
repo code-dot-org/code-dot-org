@@ -150,7 +150,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   // branch as that playback view, and a plain ref wouldn't trigger that.
   const [layerNode, setLayerNode] = useState<LayerNode | null>(null);
 
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [wrapperNode, setWrapperNode] = useState<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const stageRef = useRef<StageNode>(null);
   const imageNodeRef = useRef<ImageNode>(null);
@@ -220,17 +220,19 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
 
   // Track the wrapper's rendered size so the stage — and thus the recorded
   // output — matches it exactly, at whatever size the surrounding layout
-  // gives the 9/16 box.
+  // gives the 9/16 box. The wrapper is a new element each time the live
+  // stage returns from playback, hence the state-backed ref.
   useEffect(() => {
-    const el = wrapperRef.current;
-    if (!el) return;
+    if (!wrapperNode) return;
     const observer = new ResizeObserver(([entry]) => {
       const {width, height} = entry.contentRect;
+      // A wrapper leaving the page reports 0x0; keep the last real size.
+      if (!width || !height) return;
       setStageSize({width: Math.round(width), height: Math.round(height)});
     });
-    observer.observe(el);
+    observer.observe(wrapperNode);
     return () => observer.disconnect();
-  }, []);
+  }, [wrapperNode]);
 
   // Redraws the video's current frame onto the stage every animation frame.
   // Mutating the image node directly (rather than through React state) keeps
@@ -414,7 +416,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   return (
     <div className={styles.container}>
       {currentMode === 'edit' && <EditToolbar />}
-      <div className={styles.previewWrapper} ref={wrapperRef}>
+      <div className={styles.previewWrapper} ref={setWrapperNode}>
         <video
           key="preview"
           ref={videoRef}
