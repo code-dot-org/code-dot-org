@@ -79,7 +79,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
     setSelectedChoicesByQuestionId(selectedChoices);
     setCurrentPageNumber(1);
-    setSelectedChoicesByQuestionId({});
     setIsRetakeIntroOpen(false);
     pendingWritesByQuestionIdRef.current = {};
   }, [attempt?.id, attempt?.questionResultsInProgress]);
