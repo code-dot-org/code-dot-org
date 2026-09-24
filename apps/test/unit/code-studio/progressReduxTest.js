@@ -660,6 +660,7 @@ describe('progressReduxTest', () => {
             scriptLevelId: '101',
             parentLevelId: undefined,
             navigationType: undefined,
+            headerLabel: undefined,
           },
           {
             id: '323',
@@ -689,6 +690,7 @@ describe('progressReduxTest', () => {
             scriptLevelId: '102',
             parentLevelId: undefined,
             navigationType: undefined,
+            headerLabel: undefined,
           },
           {
             id: '322',
@@ -717,6 +719,7 @@ describe('progressReduxTest', () => {
             scriptLevelId: '103',
             parentLevelId: undefined,
             navigationType: undefined,
+            headerLabel: undefined,
             sublevels: [
               {
                 id: '10301',
@@ -808,6 +811,7 @@ describe('progressReduxTest', () => {
             scriptLevelId: '201',
             parentLevelId: undefined,
             navigationType: undefined,
+            headerLabel: undefined,
           },
           {
             id: '339',
@@ -837,6 +841,7 @@ describe('progressReduxTest', () => {
             scriptLevelId: '202',
             parentLevelId: undefined,
             navigationType: undefined,
+            headerLabel: undefined,
           },
           {
             id: '341',
@@ -866,6 +871,7 @@ describe('progressReduxTest', () => {
             scriptLevelId: '203',
             parentLevelId: undefined,
             navigationType: undefined,
+            headerLabel: undefined,
           },
         ],
       ];
