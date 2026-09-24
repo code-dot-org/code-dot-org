@@ -34,12 +34,37 @@ export interface QuizBuilderQuestion extends QuizQuestion {
   page: number | null;
 }
 
+// The fields a per-question editor can change.
+export interface QuizQuestionEditableFields {
+  questionName: string;
+  stem: string;
+  choices: QuizQuestionChoice[];
+  correctChoiceId: string | null;
+  explanation: string | null;
+}
+
 // What useQuizBuilderQuestions exposes.
 export interface QuizBuilderQuestionsState {
   questions: QuizBuilderQuestion[];
   isLoading: boolean;
   isCreating: boolean;
   error: string | null;
-  createQuestion: () => Promise<void>;
+  // The question `error` is about, or null for a load/create failure -
+  // general, not about any existing question. A caller uses this to show
+  // the error on that question's card instead of globally.
+  errorQuestionId: number | null;
+  // Resolves with the created question's id on success, undefined on
+  // failure (with `error` set).
+  createQuestion: () => Promise<number | undefined>;
+  // Resolves with the saved question's id on success (see
+  // useQuizBuilderQuestions for why it may differ from `id`). On
+  // failure, resolves undefined (with `error` set) and leaves
+  // `questions` untouched, so a caller can keep showing the user's
+  // unsaved edits.
+  updateQuestion: (
+    id: number,
+    payload: QuizQuestionEditableFields
+  ) => Promise<number | undefined>;
+  removeQuestion: (id: number) => Promise<boolean>;
   load: () => Promise<void>;
 }

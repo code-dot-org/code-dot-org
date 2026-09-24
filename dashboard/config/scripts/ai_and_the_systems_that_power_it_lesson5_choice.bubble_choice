@@ -4,5 +4,9 @@ description 'Choose one of the clients below based on the career track of your i
 
 sublevels
 level 'ai-and-the-systems-that-power-it-lesson5-amara2'
+level 'ai-and-the-systems-that-power-it-lesson5-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson5-denise'
+level 'ai-and-the-systems-that-power-it-lesson5-marcus'
+level 'ai-and-the-systems-that-power-it-lesson5-layla'
 
 uses_lab2

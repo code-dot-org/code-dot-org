@@ -222,7 +222,7 @@ GEM
     annotaterb (4.20.0)
       activerecord (>= 6.0.0)
       activesupport (>= 6.0.0)
-    ansi (1.5.0)
+    ansi (1.6.0)
     ast (2.4.2)
     async (1.32.1)
       console (~> 1.10)
@@ -636,7 +636,7 @@ GEM
     minitest-rails (7.0.1)
       minitest (~> 5.10)
       railties (~> 7.0.0)
-    minitest-reporters (1.2.0)
+    minitest-reporters (1.6.1)
       ansi
       builder
       minitest (>= 5.0)
@@ -1308,7 +1308,7 @@ DEPENDENCIES
   minitest (~> 5.15)
   minitest-around
   minitest-rails (~> 7.0)
-  minitest-reporters (~> 1.2.0.beta3)
+  minitest-reporters (~> 1.6.1)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
   mocha (= 1.9.0)

@@ -3944,6 +3944,7 @@ __metadata:
     "@reduxjs/toolkit": ^2.8.2
     "@sentry/browser": ^10.51.0
     "@tanstack/react-query": "*"
+    js-cookie: ^3.0.5
     ky: ^1.14.3
     msw: ^2.7.0
     react: ^18.0.0 || ^19.0.0
@@ -4049,7 +4050,6 @@ __metadata:
   resolution: "@code-dot-org/markdown@portal:../frontend/packages/markdown/::locator=blockly-mooc%40workspace%3A."
   dependencies:
     "@code-dot-org/component-library": "workspace:*"
-    "@code-dot-org/core": "workspace:*"
   peerDependencies:
     "@emotion/react": ^11.0.0
     "@emotion/styled": ^11.0.0
@@ -9552,6 +9552,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-reconciler@npm:^0.28.0, @types/react-reconciler@npm:^0.28.2":
+  version: 0.28.9
+  resolution: "@types/react-reconciler@npm:0.28.9"
+  peerDependencies:
+    "@types/react": "*"
+  checksum: 10/2450e3df6169fb887591f2a949ca8f08439ac76c756124feeee7370f1a79b5060ba8e5f612302dc70169433e043da7f617dd7ea3b14a3c2bb39559d66b7a0986
+  languageName: node
+  linkType: hard
+
 "@types/react-redux@npm:^7.1.20":
   version: 7.1.34
   resolution: "@types/react-redux@npm:7.1.34"
@@ -12089,6 +12098,7 @@ __metadata:
     karma-mocha-reporter: "npm:^2.2.5"
     karma-sourcemap-loader: "npm:^0.4.0"
     karma-webpack: "npm:^5.0.0"
+    konva: "npm:^10.5.0"
     lazysizes: "npm:^4.0.0-rc1"
     load-grunt-tasks: "npm:3.5.0"
     loadable-components: "npm:2.2.3"
@@ -12102,6 +12112,7 @@ __metadata:
     merge: "npm:^2.1.1"
     messageformat: "npm:2.3.0"
     mime-types: "npm:^3.0.2"
+    ml-cart: "npm:2.1.1"
     ml-knn: "npm:^3.0.0"
     mocha: "npm:^10.6.0"
     mock-firmata: "npm:0.2.0"
@@ -12139,6 +12150,7 @@ __metadata:
     react-idle-timer: "npm:^4.2.7"
     react-inspector: "npm:2.3.1"
     react-is: "npm:^18.3.1"
+    react-konva: "npm:18"
     react-lazy-load: "npm:~3.0.13"
     react-loading-skeleton: "npm:^3.1.0"
     react-motion: "npm:^0.5.2"
@@ -19761,6 +19773,20 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"is-any-array@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "is-any-array@npm:2.0.1"
+  checksum: 10/a2caaec75abb10ccb7e926aed322df5d2f206ae8645313771282702cf47d626832d9dc3318580e0fddbd04772d899263bebccb12c692e97988017ac549654cd4
+  languageName: node
+  linkType: hard
+
+"is-any-array@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-any-array@npm:3.0.0"
+  checksum: 10/65ca37329ef9b0aa58bde2e5ec8992fdabe91c5ef5fa93125905b627fe7fda6b9d197e74fd3bd5cb330f7b9c927c675878dc2d2bdf62b9d37e4d451ab7d443ca
+  languageName: node
+  linkType: hard
+
 "is-arguments@npm:^1.0.4, is-arguments@npm:^1.1.1":
   version: 1.1.1
   resolution: "is-arguments@npm:1.1.1"
@@ -20644,6 +20670,17 @@ canvg@gabelerner/canvg:
     reflect.getprototypeof: "npm:^1.0.4"
     set-function-name: "npm:^2.0.1"
   checksum: 10/b5013967ad8f28c9ca1be8e159eb10f591b8e46deae87476fe39d668c04374fe9158c815e8b6d2f45885b0a3fd842a8ba13f497ec762b3a0eff49bec278670b1
+  languageName: node
+  linkType: hard
+
+"its-fine@npm:^1.1.1":
+  version: 1.2.5
+  resolution: "its-fine@npm:1.2.5"
+  dependencies:
+    "@types/react-reconciler": "npm:^0.28.0"
+  peerDependencies:
+    react: ">=18.0"
+  checksum: 10/a4f1e3dd5e271e4f78df626cb56279bbddaa5f065d53bb94d266396e1d8d773c8c9ba4ed268c11e15a1879814e7c8ca1601c08759a8d666bdcfee8f4737c54fa
   languageName: node
   linkType: hard
 
@@ -21753,6 +21790,21 @@ canvg@gabelerner/canvg:
   version: 0.27.0
   resolution: "known-css-properties@npm:0.27.0"
   checksum: 10/3bb274e0a902887b57b8faa1444e1137191c199bc52e574b5064853bf741321cbe62c09bed52265b80da79e2b69b7cf6e1af1869570f932093711a3926ea9f7b
+  languageName: node
+  linkType: hard
+
+"konva@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "konva@npm:10.5.0"
+  peerDependencies:
+    canvas: ^3.0.0
+    skia-canvas: ^3.0.0
+  peerDependenciesMeta:
+    canvas:
+      optional: true
+    skia-canvas:
+      optional: true
+  checksum: 10/e522faebda78688f377fac011f6aca4cb741b5b2674fb6d9a33c1515274e237fc025a4d7c4b3a95d44f5c9520b3112b446ceae4d747cb3370a8826c7ef353972
   languageName: node
   linkType: hard
 
@@ -23053,6 +23105,63 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"ml-array-max@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-max@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+  checksum: 10/4e7c1c90311960cc9cec6f8ac3e5e92a3bf1f7e04f2c6c46d3db8cebabbb91c2044270cf91d0e045e6b2f416d617becfa020f337d575117001c177f3d3f947e6
+  languageName: node
+  linkType: hard
+
+"ml-array-mean@npm:^1.1.5":
+  version: 1.1.6
+  resolution: "ml-array-mean@npm:1.1.6"
+  dependencies:
+    ml-array-sum: "npm:^1.1.6"
+  checksum: 10/81999dac8bad3bf2dafb23a9bc71883879b9d55889e48d00b91dd4a2568957a6f5373632ae57324760d1e1d7d29ad45ab4ea7ae32de67ce144d57a21e36dd9c2
+  languageName: node
+  linkType: hard
+
+"ml-array-min@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-min@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+  checksum: 10/0c3bb058cf07f4328eaadc5d61447c30a4c091a981a56710ba7b0675b9a7df82ed480f66d82a8799fcc504f31218218ddc566f8baec85e025fdda91ed5f33aca
+  languageName: node
+  linkType: hard
+
+"ml-array-rescale@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-rescale@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+    ml-array-max: "npm:^2.0.0"
+    ml-array-min: "npm:^2.0.0"
+  checksum: 10/5a0910e3e5d03cd83a615d87f5850264b169f3f1744d563d8c81cc798bf46f5a1a4579d9dc984e28d2148a96a98e9f2993e7880092f2294ba1389eb8cded167b
+  languageName: node
+  linkType: hard
+
+"ml-array-sum@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "ml-array-sum@npm:1.1.6"
+  dependencies:
+    is-any-array: "npm:^2.0.0"
+  checksum: 10/369dbb3681e3f8b0d0facba9fcfc981656dac49a80924859c3ed8f0a5880fb6db2d6e534f8b7b9c3cda59248152e61b27d6419d19c69539de7c3aa6aea3094eb
+  languageName: node
+  linkType: hard
+
+"ml-cart@npm:2.1.1":
+  version: 2.1.1
+  resolution: "ml-cart@npm:2.1.1"
+  dependencies:
+    ml-array-mean: "npm:^1.1.5"
+    ml-matrix: "npm:^6.8.2"
+  checksum: 10/2f7e59a16b30e4142f93bc97c68865d13b8b773a6c538872a460d7d31fe4fe6bddec625f1c390c4e21ca6e453eea07bcb38f7963d6094f7f7166469c525bb648
+  languageName: node
+  linkType: hard
+
 "ml-distance-euclidean@npm:^2.0.0":
   version: 2.0.0
   resolution: "ml-distance-euclidean@npm:2.0.0"
@@ -23066,6 +23175,16 @@ canvg@gabelerner/canvg:
   dependencies:
     ml-distance-euclidean: "npm:^2.0.0"
   checksum: 10/3856779ff4295dddc0f54cc484ea9a3c89d33e79d96af2de4a68e4e1fd09d2473a939f28b9f04033f0d31e0ce2435ec77ebe0a6c67538ff00b6262530811fcf0
+  languageName: node
+  linkType: hard
+
+"ml-matrix@npm:^6.8.2":
+  version: 6.15.0
+  resolution: "ml-matrix@npm:6.15.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+    ml-array-rescale: "npm:^2.0.0"
+  checksum: 10/60a0c43de9858453a0812ea38dbc860160fa4ca6943780c981b841ee1174f30f7f8e03e3288b974042d9b7d66a1bd0ffd793463d2d983593754dc1730c36e928
   languageName: node
   linkType: hard
 
@@ -26132,6 +26251,22 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"react-konva@npm:18":
+  version: 18.2.16
+  resolution: "react-konva@npm:18.2.16"
+  dependencies:
+    "@types/react-reconciler": "npm:^0.28.2"
+    its-fine: "npm:^1.1.1"
+    react-reconciler: "npm:~0.29.0"
+    scheduler: "npm:^0.23.0"
+  peerDependencies:
+    konva: ^8.0.1 || ^7.2.5 || ^9.0.0 || ^10.0.0
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 10/b251811d900b52d925aba47c24ee57dd12d0f8312e452bdcdd00767eb5ced62a757731b1f8b8b57c38435b5b9a360c8dc638add679c287284d091da0a557b418
+  languageName: node
+  linkType: hard
+
 "react-lazy-load@npm:~3.0.13":
   version: 3.0.13
   resolution: "react-lazy-load@npm:3.0.13"
@@ -26297,6 +26432,18 @@ canvg@gabelerner/canvg:
   peerDependencies:
     react: ">=0.14.0"
   checksum: 10/cddc032f5aa02f9d682626f326d1f0517bfaab97dbf6b7816625d9aa4f4cac57a313d604708849985f97c574189902b4ea677024d7185b4774b9f75f1da188a2
+  languageName: node
+  linkType: hard
+
+"react-reconciler@npm:~0.29.0":
+  version: 0.29.2
+  resolution: "react-reconciler@npm:0.29.2"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.2"
+  peerDependencies:
+    react: ^18.3.1
+  checksum: 10/f9ef98a88ec07efaf520ce4508bc4f499cfbec6c929549b4b802a09c2c7cd1b7b893f197ab0505dc03398a991b4f57d7b6572ae53d2699db74496cadde541cfc
   languageName: node
   linkType: hard
 

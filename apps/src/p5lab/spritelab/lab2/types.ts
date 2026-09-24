@@ -2,6 +2,7 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {AddBlock} from './addBlocks';
 import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
@@ -73,6 +74,14 @@ export interface Scene {
   source?: WorkspaceSerialization;
   /** Starter sprite and block placements, spawned ahead of the program. */
   world?: World;
+  /** The scene's first frame as last captured (sceneThumbnails.ts): a
+      project asset, and the fingerprint of the scene it shows. */
+  thumbnail?: SceneThumbnail;
+}
+
+export interface SceneThumbnail {
+  url: string;
+  fingerprint: string;
 }
 
 /** The single ProjectSources.source JSON for a SpriteLab2 project. */
@@ -90,6 +99,9 @@ export interface Sources extends ProjectSources {
  */
 export interface GuideStep {
   text: string;
+  /** A short line the guide keeps when the student collapses it, so the
+      Continue button does not sit there alone. */
+  collapsedText?: string;
   /** Offer the Continue button to the next level while on this step. */
   showContinue?: boolean;
   /**
@@ -137,6 +149,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;
+  /** Blocks added to the pinned scene when the student arrives and the
+      scene has none of that type (addBlocks.ts), in Blockly's block
+      state form: an event to fill in, a placeholder shadow on its `next`. */
+  addBlocks?: AddBlock[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

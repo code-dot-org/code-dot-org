@@ -10,12 +10,12 @@ import {MALFORMED_EMAIL, WRONG_PASSWORD} from '../../fixtures/errorBodies';
 import {GENERIC_ERROR} from '../modalErrors';
 import UpdateEmailModal from '../UpdateEmailModal';
 
-function renderModal(onClose = vi.fn()) {
+function renderModal(onClose = vi.fn(), isTeacher = false) {
   const client = createQueryClient({queries: {retry: false}});
   render(
     <QueryClientProvider client={client}>
       <ToastProvider>
-        <UpdateEmailModal open onClose={onClose} />
+        <UpdateEmailModal open onClose={onClose} isTeacher={isTeacher} />
       </ToastProvider>
     </QueryClientProvider>,
   );
@@ -111,5 +111,78 @@ describe('UpdateEmailModal', () => {
 
     expect(await screen.findByText(GENERIC_ERROR)).toBeInTheDocument();
     expect(onClose).not.toHaveBeenCalled();
+  });
+
+  describe('email opt-in', () => {
+    const fillAndSubmit = () => {
+      fireEvent.change(newEmailField(), {target: {value: 'test@example.com'}});
+      fireEvent.change(currentPasswordField(), {target: {value: 'hunter2'}});
+      fireEvent.click(submitButton());
+    };
+
+    it('should ask a teacher the legacy opt-in question with a privacy link', () => {
+      renderModal(vi.fn(), true);
+      expect(
+        screen.getByRole('radiogroup', {
+          name: 'Can we email you about updates to our courses, local opportunities, or other computer science news?',
+        }),
+      ).toBeInTheDocument();
+      expect(screen.getByRole('radio', {name: 'Yes'})).not.toBeChecked();
+      expect(screen.getByRole('radio', {name: 'No'})).not.toBeChecked();
+      expect(
+        screen.getByRole('link', {name: '(See our privacy policy)'}),
+      ).toHaveAttribute('href', expect.stringContaining('/privacy'));
+    });
+
+    it('should not ask a student', () => {
+      renderModal();
+      expect(screen.queryByRole('radiogroup')).not.toBeInTheDocument();
+    });
+
+    it('should require an answer from a teacher before sending anything', async () => {
+      let requested = false;
+      mockServer.use(
+        http.patch('*/users/email', () => {
+          requested = true;
+          return HttpResponse.json({});
+        }),
+      );
+      const {onClose} = renderModal(vi.fn(), true);
+
+      fillAndSubmit();
+
+      expect(
+        await screen.findByText('This field is required.'),
+      ).toBeInTheDocument();
+      expect(screen.getByRole('radiogroup')).toHaveAccessibleDescription(
+        'This field is required.',
+      );
+      expect(requested).toBe(false);
+      expect(onClose).not.toHaveBeenCalled();
+    });
+
+    it("should send a teacher's answer with the email change", async () => {
+      let body: unknown;
+      mockServer.use(
+        http.patch('*/users/email', async ({request}) => {
+          body = await request.json();
+          return HttpResponse.json({});
+        }),
+      );
+      const {onClose} = renderModal(vi.fn(), true);
+
+      fireEvent.click(screen.getByRole('radio', {name: 'No'}));
+      fillAndSubmit();
+
+      await waitFor(() => expect(onClose).toHaveBeenCalled());
+      expect(body).toEqual({
+        user: {
+          email: 'test@example.com',
+          hashed_email: '55502f40dc8b7c769880b10874abc9d0',
+          current_password: 'hunter2',
+          email_preference_opt_in: 'no',
+        },
+      });
+    });
   });
 });

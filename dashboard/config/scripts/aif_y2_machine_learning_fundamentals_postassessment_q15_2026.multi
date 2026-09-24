@@ -5,7 +5,7 @@ wrong 'Machine learning algorithms are often written in less popular programming
 right 'Machine learning models can learn complex patterns that are hard for people to understand'
 wrong 'Machine learning models require time and energy and can be expensive to train'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Why are machine learning models sometimes not easily interpretable?

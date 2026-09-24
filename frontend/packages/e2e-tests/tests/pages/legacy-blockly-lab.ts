@@ -3,7 +3,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {CalloutsComponent} from '../components/callouts';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
-import {waitUntilStable} from '../shared/stability';
+import {settle, waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
 
@@ -56,12 +56,16 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   readonly congratsMessage: Locator;
 
   /**
-   * All SVGs inside the game visualization. Different labs use different ids
-   * (#svgMaze, #svgStudio + #visualizationOverlay), and the maze SVG
-   * overflows #visualization by ~1.5px (400x400 viewBox in a 300px box
-   * with overflow:visible), so masking the parent misses the edge.
+   * All SVGs and canvases inside the game visualization. Different labs use
+   * different ids (#svgMaze, #svgStudio + #visualizationOverlay for Blockly;
+   * a Phaser canvas for Craft), and the maze SVG overflows #visualization by
+   * ~1.5px (400x400 viewBox in a 300px box with overflow:visible), so
+   * masking the parent misses the edge.
    */
   readonly visualization: Locator;
+
+  /** Text-mode editor caret; Ace blinks it on a timer, so screenshots mask it. */
+  readonly codeEditorCursor: Locator;
 
   /** Continue button on the shared feedback/congrats dialog, rendered for all legacy Blockly labs. */
   readonly continueButton: Locator;
@@ -95,7 +99,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       '.uitest-topInstructions-inline-feedback',
     );
     this.congratsMessage = page.locator('.congrats');
-    this.visualization = page.locator('#visualization svg');
+    this.visualization = page.locator('#visualization :is(svg, canvas)');
+    this.codeEditorCursor = page.locator('.ace_cursor');
     this.continueButton = page.locator('#continue-button');
     this.embeddedInstructionBlocks = page.locator(
       '.readonly-block-space-container',
@@ -290,6 +295,27 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       this.footer.localeDropdown.selectOption({label}),
     ]);
     await this.waitForReady();
+  }
+
+  /** Toggle a droplet lab to text mode and wait out droplet's melt animation. */
+  async showCode(): Promise<void> {
+    await this.showCodeHeader.click();
+    await this.page.waitForFunction(() => {
+      const droplet = window.__TestInterface?.getDroplet();
+      return (
+        droplet?.session.currentlyUsingBlocks === false &&
+        !droplet.currentlyAnimating
+      );
+    });
+    // The toggle re-renders under the pointer when droplet finishes, restarting its hover transition.
+    await settle(this.page);
+    await this.showCodeHeader.evaluate(toggle =>
+      Promise.all(
+        toggle
+          .getAnimations({subtree: true})
+          .map(animation => animation.finished),
+      ).then(() => undefined),
+    );
   }
 
   /**
