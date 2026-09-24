@@ -246,33 +246,12 @@ function makeSplitChunks(appsEntries) {
   const studioRoutesPath = p('generated-scripts/studioRoutes.js');
   const nodeModulesPattern = /[\\/]node_modules[\\/]/;
 
-  /**
-   * True when `module` comes from node_modules. Reads the same file path
-   * that the bundler checks when a cacheGroup `test` is a RegExp, so this
-   * function and a RegExp test select the same modules.
-   */
   const isNodeModulesModule = module => {
     const name = module.nameForCondition();
     return !!name && nodeModulesPattern.test(name);
   };
 
-  /**
-   * True when enough pages share `module` that the module belongs in
-   * the "code-studio-common(-deps)" chunks. Either condition below is
-   * sufficient:
-   *
-   * 1. Two or more CODE_STUDIO_ENTRIES chunks contain the module. All
-   *    of those pages load the shared chunks, so the module downloads
-   *    once instead of once per page.
-   * 2. More chunks contain the module than appsEntries has members, so
-   *    at least one of them must be a CODE_STUDIO_ENTRIES chunk. This
-   *    condition pulls in modules shared between lab pages and
-   *    code-studio pages, and it can never select a module that only
-   *    lab pages need.
-   *
-   * The counts come from the chunk graph before the bundler moves any
-   * modules around, so both cache groups below see the same counts.
-   */
+  // The second arm dedupes common.js without taking lab-only modules.
   const isCodeStudioSharedModule = (module, {chunkGraph}) => {
     let codeStudioCount = 0;
     let totalCount = 0;
@@ -299,46 +278,9 @@ function makeSplitChunks(appsEntries) {
         minChunks: 2,
         chunks: chunk => appsEntryNames.has(chunk.name),
       },
-      // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
-      // "code-studio-common" chunk. Modules from node_modules go
-      // into a second chunk, "code-studio-common-deps". We use two
-      // chunks because CloudFront does not compress files larger
-      // than 10MB, and the single chunk grew past that limit.
-      // Each page must load both files. The bundler starts a page's
-      // code only after every file it split out has loaded, so a
-      // page that loads one file without the other shows no error
-      // and runs no code.
-      //
-      // Each chunk name has exactly one cache group, and the two
-      // tests do not overlap. This structure is required. When two
-      // cache groups produce a chunk with the same name, webpack
-      // gives both groups overlapping lists of modules, and the
-      // build fails with "Cache group conflicts with existing
-      // chunk" when it resolves the overlap.
-      //
-      // With only the first arm of isCodeStudioSharedModule, we end
-      // up with many duplicate modules between the "common" and
-      // "code-studio-common" chunks. The second arm eliminates some
-      // of this duplication by pulling more modules from "common"
-      // into "code-studio-common".
-      //
-      // Its chunk-count threshold provides a guarantee that we don't
-      // unnecessarily move things into "code-studio-common" which are
-      // needed only by appsEntries. This avoids increasing the download
-      // size for code studio pages which include code-studio-common.js
-      // but not common.js.
-      //
-      // There is no converse guarantee that this strategy will eliminate
-      // all duplication between "common" and "code-studio-common".
-      // However, at the time of this writing, bundle analysis indicates
-      // that is currently effective in eliminating any duplication.
-      //
-      // In the future, we want to move toward asynchronous imports, which
-      // allow webpack to manage bundle splitting and sharing behind the
-      // scenes. Once we adopt this approach, the need for predefined
-      // cacheGroups will go away.
-      //
-      // For more information see: https://webpack.js.org/guides/code-splitting/
+      // CloudFront does not compress files over 10MB; one chunk outgrew it.
+      // A page must load both, or its entry code silently never runs.
+      // Groups sharing a chunk name fail with "conflicts with existing chunk".
       'code-studio-common': {
         name: 'code-studio-common',
         minChunks: 2,
