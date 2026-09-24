@@ -1,6 +1,13 @@
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {
+  sendStartedReportIfNotStarted,
+  sendSuccessReport,
+} from '@cdo/apps/code-studio/progressRedux';
+import {AppName} from '@cdo/apps/lab2/types';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
 import {QuizQuestionSummary} from '../types';
 
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
@@ -11,6 +18,7 @@ import styles from './quiz-attempt-workspace.module.scss';
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
+  appName: AppName;
   // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
   quizQuestions: QuizQuestionSummary[];
@@ -19,7 +27,8 @@ export interface QuizAttemptWorkspaceProps {
 
 const QuizAttemptWorkspace: React.FunctionComponent<
   QuizAttemptWorkspaceProps
-> = ({levelId, unitId, quizQuestions, allowMultipleAttempts}) => {
+> = ({levelId, appName, unitId, quizQuestions, allowMultipleAttempts}) => {
+  const dispatch = useAppDispatch();
   const {
     attempt,
     isLoading,
@@ -78,6 +87,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const handleBeginAttempt = async () => {
     try {
       await beginAttempt();
+      dispatch(sendStartedReportIfNotStarted(appName));
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
@@ -86,6 +96,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const handleFinishAttempt = async () => {
     try {
       await finishAttempt();
+      dispatch(sendSuccessReport(appName));
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }

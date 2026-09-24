@@ -2,6 +2,10 @@ import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  sendStartedReportIfNotStarted,
+  sendSuccessReport,
+} from '@cdo/apps/code-studio/progressRedux';
 import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
@@ -9,6 +13,27 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
+
+const mockDispatch = jest.fn();
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  useAppDispatch: () => mockDispatch,
+}));
+
+jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
+  sendSuccessReport: jest.fn(appName => ({
+    type: 'SEND_SUCCESS_REPORT',
+    appName,
+  })),
+  sendStartedReportIfNotStarted: jest.fn(appName => ({
+    type: 'SEND_STARTED_REPORT',
+    appName,
+  })),
+}));
+const mockSendSuccessReport = jest.mocked(sendSuccessReport);
+const mockSendStartedReportIfNotStarted = jest.mocked(
+  sendStartedReportIfNotStarted
+);
 
 const ATTEMPT: QuizAttemptData = {
   id: 1,
@@ -75,6 +100,7 @@ function renderWorkspace({
   return render(
     <QuizAttemptWorkspace
       levelId={42}
+      appName="quiz"
       unitId={unitId ?? undefined}
       quizQuestions={quizQuestions}
       allowMultipleAttempts={allowMultipleAttempts}
@@ -85,6 +111,21 @@ function renderWorkspace({
 describe('QuizAttemptWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
+    // resetAllMocks wipes the implementation set in the module mock above.
+    // The cast stands in for the real thunk action - dispatch is mocked
+    // too, so it's never actually invoked.
+    mockSendSuccessReport.mockImplementation(
+      appName =>
+        ({type: 'SEND_SUCCESS_REPORT', appName} as unknown as ReturnType<
+          typeof sendSuccessReport
+        >)
+    );
+    mockSendStartedReportIfNotStarted.mockImplementation(
+      appName =>
+        ({type: 'SEND_STARTED_REPORT', appName} as unknown as ReturnType<
+          typeof sendStartedReportIfNotStarted
+        >)
+    );
   });
 
   it('shows a loading message while the initial check is in flight', () => {
@@ -106,6 +147,20 @@ describe('QuizAttemptWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
 
     expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it('reports the level as started once the attempt begins, so an unsubmitted attempt still shows progress', async () => {
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({hookState: {attempt: null, beginAttempt}});
+
+    fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
+
+    await waitFor(() =>
+      expect(mockSendStartedReportIfNotStarted).toHaveBeenCalledWith('quiz')
+    );
+    expect(mockDispatch).toHaveBeenCalledWith(
+      mockSendStartedReportIfNotStarted.mock.results[0].value
+    );
   });
 
   it('shows the score and a Retake button once submitted and retakeable', () => {
@@ -292,6 +347,23 @@ describe('QuizAttemptWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
 
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
+  });
+
+  it('reports success so the progress bubble updates once the attempt is submitted', async () => {
+    const finishAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: ATTEMPT, finishAttempt},
+      quizQuestions: [question({id: 1, page: 1})],
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+    await waitFor(() =>
+      expect(mockSendSuccessReport).toHaveBeenCalledWith('quiz')
+    );
+    expect(mockDispatch).toHaveBeenCalledWith(
+      mockSendSuccessReport.mock.results[0].value
+    );
   });
 
   it('labels the last-page button Submit when the quiz allows only one attempt', () => {
