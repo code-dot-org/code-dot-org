@@ -69,15 +69,15 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal @attempt.id, JSON.parse(response.body)['id']
   end
 
-  test "update scores only auto-graded responses for questions on the quiz" do
-    # response_data has to actually grade correct - update re-grades every
-    # response from it, not just backfilling missing ones.
+  test "update re-grades stored responses and only scores questions on the quiz" do
+    # response_data ('b') is correct, but score starts stale at 0 - only
+    # re-grading (not just backfilling missing responses) fixes it to 1.
     create(
       :quiz_question_response,
       quiz_attempt: @attempt,
       quiz_question: @question,
       response_data: {'selectedChoiceId' => 'b'},
-      score: 1,
+      score: 0,
       max_score: 1,
       grading_status: 'auto_graded'
     )
