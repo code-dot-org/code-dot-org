@@ -1,7 +1,8 @@
+import {getContrastRatio} from '@mui/material/styles';
+
 export const TEXT_STYLES = ['Normal', 'Outline', 'Fill', 'Glow'] as const;
 export type TextStyle = (typeof TEXT_STYLES)[number];
 
-// Konva quotes each name in the list, so this reaches ctx.font intact.
 export const TEXT_FONT_FAMILY = 'Geist, sans-serif';
 export const TEXT_FONT_STYLE = 'bold';
 
@@ -38,20 +39,11 @@ export interface TagAttrs {
   cornerRadius?: number;
 }
 
-function relativeLuminance(hex: string): number {
-  const channels = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255);
-  const [r, g, b] = channels.map(c =>
-    c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4
-  );
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-}
-
-// Black or white, whichever has the higher WCAG contrast ratio with `hex`.
-export function contrastColor(hex: string): '#000000' | '#ffffff' {
-  const luminance = relativeLuminance(hex);
-  const againstWhite = 1.05 / (luminance + 0.05);
-  const againstBlack = (luminance + 0.05) / 0.05;
-  return againstBlack > againstWhite ? '#000000' : '#ffffff';
+// Black or white, whichever has the higher WCAG contrast ratio with `color`.
+export function contrastColor(color: string): '#000000' | '#ffffff' {
+  return getContrastRatio(color, '#000000') > getContrastRatio(color, '#ffffff')
+    ? '#000000'
+    : '#ffffff';
 }
 
 export function textStyleAttrs(
