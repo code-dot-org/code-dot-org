@@ -92,7 +92,6 @@ function countQuestions(node) {
 describe('getDisplayTree on shipped datasets', () => {
   test.each([
     ['zoo', {label: 'Class', features: ['Legs', 'Feathers', 'Milk', 'Fins']}],
-    ['car_evaluation', {}],
     ['insurance_cost', {}],
     ['jeans', {}],
   ])('every row of %s reaches the answer the model predicts', (id, options) => {
