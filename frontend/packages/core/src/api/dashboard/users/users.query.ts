@@ -353,20 +353,6 @@ export function useSetSeenTaScores(
   });
 }
 
-export function useVerifyCaptcha(
-  api: ApiClient,
-  options?: Omit<
-    UseMutationOptions<unknown, Error, {recaptchaResponse: string}>,
-    'mutationFn'
-  >,
-) {
-  return useMutation({
-    mutationFn: (params: {recaptchaResponse: string}) =>
-      api.users.verifyCaptcha(params),
-    ...options,
-  });
-}
-
 // --- My Account settings ---
 
 export function useUserSettings(

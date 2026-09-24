@@ -16,14 +16,17 @@ import {
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
+import {bytesToDataURI} from './encoding';
 import {
-  bytesToDataURI,
   GeneratedImageResult,
+  logicalGridFor,
+  pixelBlockFor,
   RawImage,
   rawImageToBlob,
   requestImage,
   styleClause,
 } from './imageGeneration';
+import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
 import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
@@ -94,14 +97,15 @@ function keyClause(key: KeyColor): string {
 export function basePrompt(
   prompt: string,
   style: ImageStyle,
-  key: KeyColor
+  key: KeyColor,
+  pixelBlock: number
 ): string {
   return (
     `${prompt}. Show the whole character standing, facing right: its face ` +
     'and body point toward the right side of the image. Arms hanging ' +
     'relaxed at the sides, hands open and empty. Feet near the bottom of ' +
     'the image, nothing cut off. ' +
-    `${ONLY_THIS_CHARACTER} ${styleClause(style)} ${keyClause(key)}`
+    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(key)}`
   );
 }
 
@@ -115,7 +119,8 @@ export function posePrompt(
   prompt: string,
   frame: PosedFrame,
   style: ImageStyle,
-  key: KeyColor
+  key: KeyColor,
+  pixelBlock: number
 ): string {
   return (
     `The provided image shows this character: ${prompt}. Redraw the same ` +
@@ -123,14 +128,15 @@ export function posePrompt(
     'provided image: the same design, colors, proportions, outfit and art ' +
     'style, facing right, and the character at exactly the same size and ' +
     'position in the frame. ' +
-    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style)}`
+    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style, pixelBlock)}`
   );
 }
 
-// The strip's square cell. Cells at the model's native 1024 would break
-// the 4MB asset bound comfortably kept below; five of these stay a modest
-// PNG while a sprite drawn at playspace sizes (50-300px) loses nothing.
-const STRIP_CELL_PX = 768;
+// The strip's square cell. 512 covers typical on-screen sprite sizes 1:1
+// (a large story-scene sprite on a high-density screen can exceed it and
+// render softer — the accepted tradeoff), and the decoded strip is a third
+// the memory of the previous 768 cells.
+const STRIP_CELL_PX = 512;
 
 // If an unusually detailed strip still encodes too large, redraw it smaller
 // once; past that, let it through and take the upload as it comes.
@@ -212,6 +218,9 @@ async function composeStrip(
   strip.height = cell;
   const ctx = strip.getContext('2d')!;
   ctx.imageSmoothingEnabled = style === 'smooth';
+  // The cell is now half the model's output, so this draw is a real
+  // downscale; default (low) smoothing visibly softens it.
+  ctx.imageSmoothingQuality = 'high';
   rasters.forEach((raster, index) => {
     ctx.drawImage(
       raster.canvas,
@@ -248,6 +257,8 @@ export interface CharacterSetOptions {
   style: ImageStyle;
   temperature?: number;
   seed?: number;
+  /** Logical grid to ask for (pixel style); absent = the sprite default. */
+  pixelGrid?: number;
 }
 
 export interface CharacterSetProgress {
@@ -278,6 +289,7 @@ export async function generateCharacterSet(
   // One seed for the whole set; parallel frames offset it so alike prompts
   // don't collapse into alike drawings.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
+  const pixelBlock = pixelBlockFor('sprite', options.pixelGrid);
   const total = CHARACTER_SET_PICTURE_COUNT;
   const keyFrame = (raw: RawImage) =>
     removeKeyColor(rawImageToBlob(raw), key.rgb, {
@@ -286,9 +298,17 @@ export async function generateCharacterSet(
   const previewURI = async (blob: Blob) =>
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
+  // The prompt judge runs while the base picture draws; its verdict gates
+  // everything after (the posed frames embed the same student text).
+  const promptVerdict = markHandled(checkPromptSafety(prompt));
+  // Judge every generated frame. Each verdict is awaited before that
+  // frame's preview shows, so flagged pixels never reach the progress UI.
+  const judgeFrame = (raw: RawImage): Promise<void> =>
+    markHandled(checkImageSafety(raw));
+
   onProgress?.({done: 0, total, label: 'the character'});
   const base = await requestFrameWithRetry(
-    basePrompt(prompt, options.style, key),
+    basePrompt(prompt, options.style, key, pixelBlock),
     {
       seed,
       temperature: options.temperature,
@@ -296,8 +316,13 @@ export async function generateCharacterSet(
       model: getCharacterSetImageModel(),
     }
   );
+  await promptVerdict;
+  const baseVerdict = judgeFrame(base);
   const baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
   const baseKeyed = await keyFrame(base);
+  // Also gates the posed frames: a flagged base costs one generation, not
+  // five.
+  await baseVerdict;
   let done = 1;
   let preview = await previewURI(baseKeyed);
   onProgress?.({done, total, label: 'the character', preview});
@@ -307,7 +332,7 @@ export async function generateCharacterSet(
   const posed = await Promise.all(
     POSED_FRAMES.map(async (frame, index) => {
       const raw = await requestFrameWithRetry(
-        posePrompt(prompt, frame, options.style, key),
+        posePrompt(prompt, frame, options.style, key, pixelBlock),
         {
           seed: seed + index + 1,
           temperature: options.temperature,
@@ -316,7 +341,9 @@ export async function generateCharacterSet(
           model: getCharacterSetImageModel(),
         }
       );
+      const verdict = judgeFrame(raw);
       const keyed = await keyFrame(raw);
+      await verdict;
       done++;
       preview = await previewURI(keyed);
       // The posed frames finish in no particular order; the label names
@@ -327,6 +354,7 @@ export async function generateCharacterSet(
   );
 
   onProgress?.({done: total, total, label: 'assembling', preview});
+
   // Strip order: the second idle, the base between the ranges that share
   // it, then the walk and jump frames (CHARACTER_STRIP_POSES).
   const stripFrames = [posed[0], baseKeyed, ...posed.slice(1)];
@@ -344,6 +372,9 @@ export async function generateCharacterSet(
     seed,
     ...(options.temperature !== undefined && {
       temperature: options.temperature,
+    }),
+    ...(options.style === 'pixel' && {
+      pixelGrid: logicalGridFor(pixelBlock),
     }),
   };
   const poses: AnimationPoses = CHARACTER_STRIP_POSES;

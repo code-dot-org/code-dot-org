@@ -1,5 +1,8 @@
 import {ProjectFileType} from '@cdo/apps/lab2/types';
-import {filesToMultiFileSource} from '@cdo/apps/levelbuilder/lesson-generator/ai/codebridge';
+import {
+  filesToMultiFileSource,
+  suppliedCodeLines,
+} from '@cdo/apps/levelbuilder/lesson-generator/ai/codebridge';
 
 describe('filesToMultiFileSource', () => {
   const byName = (source: ReturnType<typeof filesToMultiFileSource>) =>
@@ -96,5 +99,21 @@ describe('filesToMultiFileSource', () => {
       undefined
     );
     expect(byName(source)['readme.txt'].active).toBe(true);
+  });
+});
+
+describe('suppliedCodeLines', () => {
+  const ctx = {lessonName: 'l', levelName: 'x', levelDescription: 'd'};
+
+  it('returns no lines when no code was supplied', () => {
+    expect(suppliedCodeLines(ctx)).toEqual([]);
+    expect(suppliedCodeLines({...ctx, suppliedCode: '  '})).toEqual([]);
+  });
+
+  it('frames supplied code with the canonical-treatment contract', () => {
+    const lines = suppliedCodeLines({...ctx, suppliedCode: 'print(1)'});
+    expect(lines[0]).toBe('');
+    expect(lines[lines.length - 1]).toBe('print(1)');
+    expect(lines.join(' ')).toContain('Treat it as canonical');
   });
 });

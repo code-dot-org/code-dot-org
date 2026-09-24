@@ -23,6 +23,61 @@
   width: 850px;
 }
 
+// No modal entrance and no card chrome. The painted panel color (the
+// alternatives ring gap) must match the lab's ground, not the card's.
+.dialogHost .imageLevelPanel {
+  animation: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  --dialog-panel-bg: var(--background-neutral-primary);
+
+  // Two columns: the pane on the left spans both rows; the details and the
+  // footer stack on the right with the footer at the bottom, so Generate
+  // ends level with the image. The body's usual padding and column are
+  // dropped in favor of the grid.
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 16px 20px;
+  padding: 16px;
+
+  .body {
+    display: contents;
+  }
+
+  .detailsPane {
+    grid-column: 2;
+  }
+
+  .footer {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    padding: 0;
+    border-top: none;
+  }
+
+  // The image sits on the stage itself: no frame, and no checkerboard (that
+  // is for the dialog, whose opaque panel would otherwise hide transparency).
+  // The pane sets the row's height, so it follows the screen: 290px is the
+  // header, paddings, footer and the guide pinned below; 512px shows a
+  // 1024px image at full resolution on a 2x display.
+  .imagePane {
+    grid-row: 1 / -1;
+    width: clamp(220px, calc(100vh - 290px), 512px);
+    height: clamp(220px, calc(100vh - 290px), 512px);
+    border: none;
+  }
+
+  .imagePaneChecker {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
 .dialogHost .dialog :focus-visible {
   @include chrome.focus-ring;
 }
@@ -61,9 +116,22 @@
   width: 380px;
   height: 380px;
   flex-shrink: 0;
-  border: 1px solid chrome.$border-subtle;
   border-radius: 6px;
+  // Rounds the image's own corners: it fills the pane to the true edge.
+  overflow: hidden;
   background-color: transparent;
+
+  // The border sits ABOVE the image instead of on the pane box: a real
+  // border shrinks the content box to 378px, and the image then leaves a
+  // 1px ring of the checkerboard showing around itself.
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid chrome.$border-subtle;
+    border-radius: 6px;
+    pointer-events: none;
+  }
 
   img {
     width: 100%;
@@ -252,6 +320,21 @@
 }
 
 // --- Generate view ---
+
+// Hosts the transplanted guide Adlib (it brings its own dark panel and
+// glowing border); the native fieldset disable dims it while typed text
+// has precedence.
+.adlibGroup {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: opacity 0.15s ease;
+
+  &[disabled] {
+    opacity: 0.45;
+  }
+}
 
 .formRow {
   display: flex;

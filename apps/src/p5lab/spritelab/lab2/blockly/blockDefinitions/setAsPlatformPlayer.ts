@@ -1,6 +1,7 @@
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import {noteImageFieldValue} from '../../imageReferences';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
 /**
@@ -18,7 +19,9 @@ const definition: BlockJson = {
 };
 
 const generator: GeneratorFunction = block =>
-  `setAsPlatformPlayer({costume: ${block.getFieldValue('ANIMATION_NAME')}});\n`;
+  `setAsPlatformPlayer({costume: ${noteImageFieldValue(
+    block.getFieldValue('ANIMATION_NAME')
+  )}});\n`;
 
 const helperCode = [
   'function setAsPlatformPlayer(spriteArg) {',

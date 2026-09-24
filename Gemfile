@@ -120,7 +120,7 @@ group :development, :test do
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-rails', '~> 7.0', require: false
-  gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-reporters', '~> 1.6.1'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
@@ -276,7 +276,6 @@ group :development, :staging, :levelbuilder, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rails-accessibility', require: false
-  gem 'scss_lint', require: false
 end
 
 # Reduce volume of production logs

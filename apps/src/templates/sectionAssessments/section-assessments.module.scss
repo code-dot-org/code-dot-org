@@ -1,16 +1,23 @@
-.selectors {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: flex-start;
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: end;
+  margin-bottom: 1.25rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  // A dropdown aligns its label and select to the start, so without this the
+  // select is only as wide as its longest option.
+  > label {
+    align-items: stretch;
+  }
 }
 
-.header {
-  margin-bottom: 0;
-}
-
-.tableContent {
-  margin-top: 10px;
+.downloadButton {
+  justify-self: start;
 }
 
 .download {

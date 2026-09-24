@@ -1,6 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "published": true,
   "game_id": 23,
   "created_at": "2023-03-22T21:50:03.000Z",
   "level_num": "custom",
@@ -50,29 +49,30 @@
     "project_template_level_name": "csc-starquilts-template_2023",
     "name_suffix": "_2023",
     "short_instructions": "Code Row 2 to have your artist draw two more rhombus shapes above Row 1.",
-    "encrypted_examples": [
-
-    ],
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-22T21:50:03.748+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row2_2022\\\"\"],\"cloned_from\":\"csc-starquilts-row2_2022\"},{\"changed_at\":\"2023-04-12 20:12:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:28:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 22:57:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 23:01:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"short_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 01:39:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"slider_speed\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-22T21:50:03.748+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row2_2022\\\"\"],\"cloned_from\":\"csc-starquilts-row2_2022\"},{\"changed_at\":\"2023-04-12 20:12:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-12 20:28:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 22:57:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 23:01:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"short_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 01:39:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"slider_speed\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-16 17:30:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-16 17:31:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false" id="when_run"/>
-        <block type="procedures_callnoreturn">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="[KY;Vaz5QAh[$^=r3+JE">length</variable>
+        </variables>
+        <block type="when_run" id="when_run" deletable="false" movable="false" x="16" y="16"/>
+        <block type="procedures_callnoreturn" x="16" y="59">
           <mutation name="rowTwo"/>
         </block>
-        <block type="procedures_callnoreturn">
+        <block type="procedures_callnoreturn" x="16" y="102">
           <mutation name="findPosition"/>
         </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="rowTwo">rowTwo</field>
+        <block type="procedures_defnoreturn" editable="false" x="31" y="180">
+          <field name="button_procedures_defnoreturn"/>
+          <field name="NAME">rowTwo</field>
           <statement name="STACK">
             <block type="draw_turn_by_constant_dropdown">
               <field name="DIR">turnRight</field>
@@ -82,7 +82,7 @@
                   <field name="DIR">jumpForward</field>
                   <value name="VALUE">
                     <block type="variables_get">
-                      <field name="VAR">length</field>
+                      <field name="VAR" id="[KY;Vaz5QAh[$^=r3+JE">length</field>
                     </block>
                   </value>
                   <next>
@@ -96,9 +96,9 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="rowTwo">rowTwo2</field>
+        <block type="procedures_defnoreturn" editable="false" x="31" y="418">
+          <field name="button_procedures_defnoreturn"/>
+          <field name="NAME">rowTwo2</field>
           <statement name="STACK">
             <block type="draw_turn_by_constant_dropdown">
               <field name="DIR">turnRight</field>
@@ -108,7 +108,7 @@
                   <field name="DIR">jumpForward</field>
                   <value name="VALUE">
                     <block type="variables_get">
-                      <field name="VAR">length</field>
+                      <field name="VAR" id="[KY;Vaz5QAh[$^=r3+JE">length</field>
                     </block>
                   </value>
                   <next>
@@ -122,9 +122,9 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="rowTwo">rowTwo3</field>
+        <block type="procedures_defnoreturn" editable="false" x="31" y="656">
+          <field name="button_procedures_defnoreturn"/>
+          <field name="NAME">rowTwo3</field>
           <statement name="STACK">
             <block type="draw_turn_by_constant_dropdown">
               <field name="DIR">turnRight</field>
@@ -134,7 +134,7 @@
                   <field name="DIR">jumpForward</field>
                   <value name="VALUE">
                     <block type="variables_get">
-                      <field name="VAR">length</field>
+                      <field name="VAR" id="[KY;Vaz5QAh[$^=r3+JE">length</field>
                     </block>
                   </value>
                   <next>
@@ -148,9 +148,9 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="findPosition">findPosition</field>
+        <block type="procedures_defnoreturn" x="31" y="894">
+          <field name="button_procedures_defnoreturn"/>
+          <field name="NAME">findPosition</field>
           <statement name="STACK">
             <block type="draw_turn_by_constant_dropdown">
               <field name="DIR">turnLeft</field>
@@ -160,7 +160,7 @@
                   <field name="DIR">jumpForward</field>
                   <value name="VALUE">
                     <block type="variables_get">
-                      <field name="VAR">length</field>
+                      <field name="VAR" id="[KY;Vaz5QAh[$^=r3+JE">length</field>
                     </block>
                   </value>
                   <next>

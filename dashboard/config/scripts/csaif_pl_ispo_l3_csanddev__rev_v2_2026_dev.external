@@ -3,63 +3,112 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The IPSO Model 
+<h1>The IPSO Model</h1>
 
-The IPSO model describes how a computer system works in four steps:
+<p>The IPSO model describes how a computer system works in four steps:</p>
 
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 20px auto;">
 
-<br>
-
-<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
-
-  
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/ab4f314ff8c8b78849708e3ba67d1812-image-1742231775315.png" alt="typing on a keyboard" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-            <h3><b>Input</b></h3>
-                    <p style = "font-size: 14pt";> The computer receives data (e.g., typing on a keyboard, clicking a mouse, or scanning a barcode).
-
-</p>
-           </div>
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <div style="width: 60px; height: 60px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">I</div>
+    <div style="flex: 1; background-color: #F7F7FB; padding: 15px; border-radius: 10px;">
+      <h3>Input</h3>
+      <p>The computer receives data (e.g., typing on a keyboard, clicking a mouse, or scanning a barcode).</p>
     </div>
+  </div>
 
-   
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/987ec8ea8af830d785dfe304f5e57ee2-image-1742231824649.png" alt="gears" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
-            <h3> <b>Processing</b></h3>
-           <p style = "font-size: 14pt";>The devices takes input data and uses instructions to make decisions or perform actions. 
-</p>
-           </div>
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <div style="width: 60px; height: 60px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">P</div>
+    <div style="flex: 1; background-color: #F7F7FB; padding: 15px; border-radius: 10px;">
+      <h3>Processing</h3>
+      <p>The device takes input data and uses instructions to make decisions or perform actions.</p>
     </div>
+  </div>
 
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/77b40b59dc8e7ddf420a7eb3217164c5-image-1742231897660.png" alt="server and computer storage" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3><b>Storage</b></h3>
-            <p style = "font-size: 14pt";>The data is saved temporarily (RAM) or permanently (hard drive, SSD).
-</p>
-        </div>
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <div style="width: 60px; height: 60px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">S</div>
+    <div style="flex: 1; background-color: #F7F7FB; padding: 15px; border-radius: 10px;">
+      <h3>Storage</h3>
+      <p>The data is saved temporarily (RAM) or permanently (hard drive, SSD).</p>
     </div>
+  </div>
 
-   
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/a0713497a65120875815c5bae5d5755d-image-1742231958711.png" alt="monitor showing output" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3><b>Output</b></h3>
-            <p style = "font-size: 14pt";> The processed data is displayed or used (e.g., shown on a screen, printed, or played as sound).</p>
-        </div>
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <div style="width: 60px; height: 60px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">O</div>
+    <div style="flex: 1; background-color: #F7F7FB; padding: 15px; border-radius: 10px;">
+      <h3>Output</h3>
+      <p>The processed data is displayed or used (e.g., shown on a screen, printed, or played as sound).</p>
     </div>
-
+  </div>
 
 </div>
 
-Together, these steps allow a computer system to take in information, process it, store it, and produce useful results.
+<p>Together, these steps allow a computer system to take in information, process it, store it, and produce useful results.</p>
 
-<img src="https://images.code.org/1cb9b1b8758e284d818deb82bb7d7aad-image-1742232231538.png" alt="diagram showing input processing storage and output" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+<div style="width:100%; overflow-x:auto; margin:24px 0;">
 
-<br>
+  <div role="group" aria-label="Diagram showing input moving to process and then output. The process also sends information to and retrieves information from storage." style="width:620px; margin:0 auto; padding:24px; box-sizing:border-box; background-color:#FFFFFF; border:1px solid #E4E2F8; border-radius:12px; box-shadow:0 2px 7px rgba(0,0,0,0.10); font-family:Arial, Helvetica, sans-serif;">
 
-🔎 **Think About** 
-The next level covers different types of **hardware.** As you click through the panels, *try to classify which part of the IPSO model each part belongs to.*
+ <!-- Input, Process, Output -->
+  <div style="display:flex; align-items:center; justify-content:center; width:100%;">
+
+  <!-- Input -->
+ <div style="width:170px; height:70px; display:flex; align-items:center; justify-content:center; box-sizing:border-box; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:12px; font-size:21px; font-weight:bold;">
+        Input
+   </div>
+
+   <!-- Arrow -->
+   <div aria-hidden="true" style="width:55px; display:flex; align-items:center; justify-content:center;">
+        <div style="width:30px; height:14px; background-color:#FFE3CE; border-top:2px solid #F46B00; border-bottom:2px solid #F46B00; border-left:2px solid #F46B00; box-sizing:border-box;"></div>
+        <div style="width:0; height:0; border-top:13px solid transparent; border-bottom:13px solid transparent; border-left:15px solid #F46B00;"></div>
+      </div>
+     <!-- Process -->
+      <div style="width:170px; height:70px; display:flex; align-items:center; justify-content:center; box-sizing:border-box; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:12px; font-size:21px; font-weight:bold;">
+        Process
+      </div>
+      <!-- Arrow -->
+      <div aria-hidden="true" style="width:55px; display:flex; align-items:center; justify-content:center;">
+        <div style="width:30px; height:14px; background-color:#FFE3CE; border-top:2px solid #F46B00; border-bottom:2px solid #F46B00; border-left:2px solid #F46B00; box-sizing:border-box;"></div>
+        <div style="width:0; height:0; border-top:13px solid transparent; border-bottom:13px solid transparent; border-left:15px solid #F46B00;"></div>
+      </div>
+      <!-- Output -->
+      <div style="width:170px; height:70px; display:flex; align-items:center; justify-content:center; box-sizing:border-box; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:12px; font-size:21px; font-weight:bold;">
+        Output
+      </div>
+
+   </div>
+    <!-- Two-way arrows -->
+    <div aria-hidden="true" style="height:58px; display:flex; align-items:center; justify-content:center; gap:8px; color:#E62378; font-size:38px; font-weight:bold; line-height:1;">
+      <span>↑</span>
+      <span>↓</span>
+    </div>
+
+   <!-- Storage cylinder -->
+  <!-- Storage cylinder -->
+<div style="position:relative; width:180px; height:82px; margin:0 auto;">
+
+  <!-- Cylinder body -->
+  <div style="position:absolute; left:0; top:13px; width:180px; height:53px; box-sizing:border-box; background-color:#D5EFFF; border-left:2px solid #0099F3; border-right:2px solid #0099F3; z-index:1;"></div>
+
+  <!-- Top oval -->
+  <div style="position:absolute; left:0; top:0; width:180px; height:28px; box-sizing:border-box; background-color:#D5EFFF; border:2px solid #0099F3; border-radius:50%; z-index:2;"></div>
+
+  <!-- Bottom front curve -->
+  <div style="position:absolute; left:0; top:51px; width:180px; height:28px; box-sizing:border-box; background-color:#D5EFFF; border-left:2px solid #0099F3; border-right:2px solid #0099F3; border-bottom:2px solid #0099F3; border-radius:0 0 50% 50%; z-index:2;"></div>
+
+  <!-- Storage label -->
+  <div style="position:absolute; left:0; top:32px; width:180px; color:#000000; text-align:center; font-size:21px; font-weight:bold; line-height:1.2; z-index:4;">
+    Storage
+  </div>
+
+</div>
+  </div>
+
+  </div>
+
+</div>
+
+<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p>🔎 <b>Think About:</b> the next level covers different types of hardware. As you click through the panels, try to classify which part of the IPSO model each part belongs to.</p>
+</div>
 MARKDOWN

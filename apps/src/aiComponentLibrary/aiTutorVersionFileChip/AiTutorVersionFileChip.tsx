@@ -1,7 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {getFolderPath} from '@codebridge/utils';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -116,14 +115,7 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
       {/* Preview button - outside role="img" so it remains accessible */}
       {hasPreviewButton && (
         <span className={moduleStyles.previewButtonWrapper}>
-          <WithTooltip
-            tooltipProps={{
-              text: 'Open in preview',
-              size: 's',
-              tooltipId: `${file.name}-preview-tooltip`,
-              direction: 'onTop',
-            }}
-          >
+          <Tooltip title="Open in preview" placement="top">
             <MuiIconButton
               variant="text"
               color="tertiary"
@@ -134,7 +126,7 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
             >
               <FontAwesomeV6Icon iconName="eye" iconStyle="solid" />
             </MuiIconButton>
-          </WithTooltip>
+          </Tooltip>
         </span>
       )}
     </div>

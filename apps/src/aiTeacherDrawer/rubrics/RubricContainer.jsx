@@ -1,4 +1,5 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
@@ -14,6 +15,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import RubricContent from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';

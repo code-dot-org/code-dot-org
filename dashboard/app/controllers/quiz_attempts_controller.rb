@@ -62,7 +62,7 @@ class QuizAttemptsController < ApplicationController
     attempt.with_lock do
       if attempt.submitted_at.nil?
         # Only questions on this quiz count.
-        in_quiz_question_ids = QuizQuestionPlacement.where(level_id: attempt.level_id).pluck(:quiz_question_id)
+        in_quiz_question_ids = attempt.level&.question_ids || []
         answered_ids = attempt.quiz_question_responses.where(quiz_question_id: in_quiz_question_ids).pluck(:quiz_question_id)
         # Materialize skipped responses for unanswered questions.
         QuizQuestion.where(id: in_quiz_question_ids - answered_ids).find_each do |question|
@@ -109,6 +109,13 @@ class QuizAttemptsController < ApplicationController
           correct: result[:correct],
           explanation: result[:explanation],
           correctChoiceId: result[:correct_choice_id]
+        }
+      end,
+      # nil once submitted - use questionResults instead.
+      questionResultsInProgress: attempt.question_results_in_progress&.map do |question_result|
+        {
+          quizQuestionId: question_result[:quiz_question_id],
+          selectedChoiceId: question_result[:selected_choice_id]
         }
       end
     }

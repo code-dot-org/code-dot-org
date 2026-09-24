@@ -5,7 +5,7 @@ right 'Knowing whether a joke is funny or not'
 wrong 'Knowing how to optimize a value with a hill climbing algorithm'
 wrong 'Knowing how to autocomplete text with prefix matching'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is an example of tacit knowledge that a logic-based AI system might struggle to understand?

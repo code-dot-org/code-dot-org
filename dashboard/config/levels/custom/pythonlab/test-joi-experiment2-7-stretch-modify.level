@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:28:08.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "620293ee-e298-42f8-984e-9a708d20f800": {
+          "id": "620293ee-e298-42f8-984e-9a708d20f800",
+          "name": "neighborhood.py",
+          "contents": "_x = 0\n_y = 0\n_direction = 0 # 0: East, 1: North, 2: West, 3: South\n_painted_cells = {}\n\ndef set_paint(level):\n    # This function is called but its specific effect on `paint()` isn't defined here.\n    # We'll just acknowledge it for now.\n    print(f\"DEBUG: Painter received set_paint({level}) command.\")\n\ndef move():\n    global _x, _y\n    if _direction == 0: # East\n        _x += 1\n    elif _direction == 1: # North\n        _y += 1\n    elif _direction == 2: # West\n        _x -= 1\n    elif _direction == 3: # South\n        _y -= 1\n    print(f\"DEBUG: Painter moved to ({_x}, {_y}).\")\n\ndef paint(color):\n    _painted_cells[(_x, _y)] = color\n    print(f\"DEBUG: Painter painted ({_x}, {_y}) {color}.\")\n\ndef turn_left():\n    global _direction\n    _direction = (_direction + 1) % 4\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(f\"DEBUG: Painter turned left. Now facing {directions_map[_direction]}.\")\n\ndef print_final_state():\n    directions_map = {0: \"East\", 1: \"North\", 2: \"West\", 3: \"South\"}\n    print(\"\\n--- Final Painter State ---\")\n    print(f\"Position: ({_x}, {_y})\")\n    print(f\"Direction: {directions_map[_direction]}\")\n    print(f\"Painted cells: {_painted_cells}\")\n    print(\"---------------------------\\n\")\n",
+          "folderId": "0",
+          "active": false
+        },
+        "30e0b315-c49b-49e3-8a61-b450577e2028": {
+          "id": "30e0b315-c49b-49e3-8a61-b450577e2028",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\n# The Painter starts at (0, 0), facing east.\n# Paint a short path for the block party.\nset_paint(6)\n\nmove()\npaint(\"white\")\nmove()\nturn_left()\nmove()\npaint(\"white\")\nturn_left()\nturn_left()\nturn_left() # This turn was previously a bug in a prior level; it is now fixed.\nmove()\npaint(\"white\")\n\n# Print the final state for verification\nprint_final_state()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "620293ee-e298-42f8-984e-9a708d20f800",
+        "30e0b315-c49b-49e3-8a61-b450577e2028"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- review the working `main.py` code to understand the Painter's current path\r\n- modify `main.py` to change the `paint()` color, add an extra painted square, or make the Painter end facing a different direction\r\n- run `main.py` to observe the Painter's new actions\r\n- ensure the program still works correctly after your changes\r\n- update any comments in `main.py` to accurately describe the new code",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMocNZm3U5ayU6DAQegA\ne00sgLIa5j11JEw9xMjWLbArlNk02aldFz22DZiDM1bwqcsUCkHGrSELWVC7\ntmgSRq7Z+ii5/K6aJywCk8FWwyOnArC102ST8obiJ600niqc77s5wM2JFoxF\nqwcoVSPiF2c8Hl0sL9OL29w7YsqzBAR1kSop1Iq2gBRJXzzUlKPk+pLOYEOu\n5Ep9CMVrr8zf/YahfvBhMPCjYNthuP0UO7YQnMb30y1AqfP6dCmqvy+TYZQV\ncpuCIrRWIJRPYBqyqDiHDfe1rrjS+OxGeMxRmvFs+zMUFv1AUMAAuEExFS3P\n/NnDrQClcbhJSab2SOy5mF1hkLkO2EJV3jnjE6iF91cYL1ZtfTXpvE556RbL\nUiYWfIsWfuqzTtBC2MWNpS8R2DouI2OFJAzKLtmgaFzd+EXbA0AnUp/c3D7m\nBOuEVlVNLtS0biy2CtvPLS/4yH69K8iQencdap1A7svjEhuawXdN+pt02B2H\ncqKCDEgjErGjc9FSlxdjK8h4GxUDrRVJGGz2iGKuQDIRlc3e/K+aNjYYC6a3\npdjaeUmOlekte+q5624wBYauiGmSFwI2pph88pLr9NIMmMLMYAkGZeQ0AlU5\nSm9DawDhYaI1OSBrCEm/LtYtZAxLggxw7H/TSAk/lr+aqNNnTFagvf0KWS2p\n9w2XiadpCnuXvE/N0aLrJVAemIgQN6bChEkTfMeLdjSeqDu+VkCQguW4a352\nhAJM3Ix1wHY9nHm6f9/QxkyUrwy12D6GHYJVNxgVohI14nFAEgUvqxjJnP59\nQdMFQZNKDVTT53+YTD5lS5hT/3D9P2PelAjVjl6cUm9kot0XwRVlrscpFIDJ\noDS8keqL3J4KKREJEvgOQbA9l4EDMF7A2d+zMWoj4s5TfMxMoi5JMgAo00bF\ndSQIDoS020hW16cJ1NRtXXui0FwzNRVJWcTY1mYFbCVq69FeAKGaEG6osyx7\nBaQJ0AOTxKXVgyLQQBuTcZrL0DRrmqppNXTuj6iZ+MFCnz2cOoFlgKgAOzsX\niaparq2EjTd+Jz/Bs+NnZiZ5kEgvawacTS1Vl7yy4RNCvn0eStECjF2UPw1m\nbM7Pr1iYCX0iE8xisdHV8vYqVj3h6cc1cuaFAUgtawX10/wp+QZuiyMSSWsS\nVQV21KPXiEwu+Q+TUMt2yBZ25g4Q1lDaBmDtHqZ03u3KfNOIJyMO6meKTEy8\nrOzQiPiaUN7Nma1FH2ZtOB95FHwjEWiYVNB8zvfKr1uAGmO4puDAs6gZKpJm\n/MjJz7EB2M7JVn4n/ElP9hodGKUUDAhmJWEvs6SDMiQDaZDFjU/pNlnqFpDW\na55+S0+wUdUky2PxXlryYW97mr0pPpeccjxAowg6BtkaUQ+OHsG24a1vSdAm\nvPl2v2RPoGiWCdLhbkDffGNCd0gLRKWHiD/9Rxo9H96BX+pF0yPa0NVX94mV\nVseQdcPrqAvRRJgBmFKoNC4UjxSW5fjyH1enHXlQTMUz41SWZpyzXfIc+aCG\n5/WHKMryUkBAWuLDnB3+zrNxGYEgihgS3RZKozVJy/wfCW4cx4GG+yx0liyb\n68m5jysgS6HfaF8UpNusKv0WPJGlsKrTquAezRFZDrGTgWtBKC8KE9kEE/LJ\nBR0afGbnCBBdDlvCucGfXVell2u71vY5G9sCIWqJ3h1rypDyBatKwO2KYd5a\ntiSUjVhErR4If7/O1rVjYmpqTt694MkEr6lLXKDAwaOHJ0GpihgDo8cDbnok\nqsICAKuR0CaohgtVbKb212zcqZwyjQGvd0lXzhy4/ceI5uMokM0fPGUftFeE\nW35C36DaqIR0nWnS2TYauUzOla9tr+lcDvSyDKujfI5S7yf3fBxtz9ef8Zbg\ndqxJPvH6R7bXJM8WdQMQm0lyP3GivWsBjjrkWAs72ebvgwVMGPSjDaPaNYR6\nZboXJkF0JohxYD44ibXb/tT0dJsy68V53TGNBs5amuvfRQ4nELT/o25LS0Zv\nG+7ydeCs0+YsciJb2sijauXMHxQ4GgCODDiIJRGyxmgMaYdp10HQbiG5HCMI\nWODQkL2EvQPVbIjGZFgCnlPD3sREytdCE+vlvkAvy+y1LFKWbVGe455FhjF8\nXhpzxoQe6A9Hoa+X1oV1RNl1hOLrOYT465mGaPV/ViQWT+aPlexXBhCt6I0p\ncGKi8OrI4bUlJXfQU5f86FPuhb+3nuSUxbeUZf9yvC/cdf97vhy0Ruc/+m2u\nBUSRqC7+DnwIvC1t5evih9/Qu3zaxxawfLINuYTK3YCs7t5GLchNdyk6lWmT\n+vVKNCp97DXuLNceUK09/ArvxbTJbaaxGYn4Wc/+KLTEcIwpo3Y7xPseVO0x\nOKmXpkYwCapiqUn/hm9Di6Q3w8CHGVyafmSwhyzC8LsfolkMbNiM+REpvOos\nvGqmZL80dQKvjK8qGfWdJf2BGjcLFzQHrFh2ETAYfABEQ2bD4mQyvHZkYX/l\nJX1x2PEHSOxQq9BMG2h7Ja5ce4D5aok3V1Sbbx23mkhFiMmRJ3xm1NbBH4rQ\nW0jaMX7ekNqwLufZKKrAbnyZ5pn5sp3w+tGhhWyi++UpN1Gj2N0D41rJcs+M\nhqz+NUOrbXQhwbRX1tgvJqvYLbMAPtybYwjQNGBlk9QB/e+S/hVa2Ae6AkU3\njbITK5/FMQvOTVK/3JbzLWP9qZQKPwMEgmH/xDSsHWp32BTJrOwIoXhDkHTr\nGG1gVXI8S/WCbFcx5OG6cJXxLE3PyPEOBnP11ZjTjcz38wGXhi5LqeKihrkk\nsXrZZ9Xa4rgWfAWEcszuA4petNTlX+gH/n4orLsxXVyHLhq92lpUKYvLp56I\nQGPAmG+QfMb5TaP6c75ZB7JVtBHi0IbYmghLRl5CiCTn19URurVkRFj6uF4L\nLR+Kzn72Pn+m5P3zDWs+hmUOP8q6I3xSP1A4nMxcQ5GtGtjnwqyUabO9Elvy\nG5VAaVcUk5RB2TbeG+llGefqu8vgDq8WjE7fgRUdE2KKS2Z7MCM=\n",
+    "generate_outline": "Make another small scenario change: a new color, one extra painted square, or a different final direction. Check: Program still works and comments match the code.",
+    "generate_supplied_code": "from neighborhood import *\r\n\r\n# The Painter starts at (0, 0), facing east.\r\n# Paint a short path for the block party.\r\nset_paint(6)\r\n\r\nmove()\r\npaint(\"white\")\r\nmove()\r\nturn_left()\r\nmove()\r\npaint(\"white\")\r\nturn_left()\r\nturn_left()\r\nturn_left()\r\nmove()\r\npaint(\"white\")"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:28:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:28:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:28:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:28:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

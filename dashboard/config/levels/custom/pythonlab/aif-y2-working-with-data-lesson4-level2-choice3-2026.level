@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-09-07T16:26:04.000Z",
   "level_num": "custom",
   "user_id": 23870,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Has someone guessed your password?**\r\n\r\nOnly rarely does someone forget their password. One sign of a hacker is a large number of incorrect password attempts. Use Python to analyze an account’s login history.\r\n\r\n**☑️ Do This:**\r\n- Count the number of \"Correct\" and \"Incorrect\" password attempts in the \"status\" column of `data.csv`.\r\n- Interpret the data: Is this account safe? Be ready to share your thoughts on the next level.\r\n",
+    "long_instructions": "**Has someone guessed your password?**\r\n\r\nOnly rarely—about 5% of the time—does someone forget their password. One sign of a hacker is a large number of incorrect password attempts. Use Python to analyze an account’s login history.\r\n\r\n**☑️ Do This:**\r\n- Count the number of \"Correct\" and \"Incorrect\" password attempts in the \"status\" column of `data.csv`.\r\n- Interpret the data: Is this account safe? Be ready to share your thoughts on the next level.\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -53,7 +54,6 @@
     "thumbnail_url": "https://images.code.org/2c942eb6172054c84004b96823e43451-hacker.jpg",
     "bubble_choice_description": "Analyze account password logs."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-07 16:35:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:36:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:36:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:39:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:47:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-07 16:35:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:36:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:36:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:39:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:47:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-10 18:38:34 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
 }]]></config>
 </Pythonlab>

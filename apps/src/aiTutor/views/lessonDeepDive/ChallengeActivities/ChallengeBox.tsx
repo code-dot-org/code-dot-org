@@ -2,6 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -32,10 +33,6 @@ interface ChallengeBoxProps {
   lessonId: number;
   challenge: Challenge;
   challengeType: string;
-  challengeSetCallback: (
-    pickedChallenge: Challenge | null,
-    pickedChallengeType: string | null
-  ) => void;
 }
 
 // Terminal evaluation_status values that map to a student-facing error
@@ -51,7 +48,6 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   lessonId,
   challenge,
   challengeType,
-  challengeSetCallback,
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -132,11 +128,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           challengeResponseValidator
         )
           .then(response => {
-            console.log(response);
             return response.value;
           })
           .then(value => {
-            console.log(value);
             const status = value.evaluation_status;
             const outcome =
               status === 'success'
@@ -203,12 +197,8 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
     setChallengeResponse(null);
   };
 
-  // The gallery is a sibling Rails page one segment below the current tutor
-  // page: .../lessons/<n>/tutor -> .../lessons/<n>/tutor/gallery.
-  const handleViewGallery = () => {
-    const base = window.location.pathname.replace(/\/$/, '');
-    window.location.href = `${base}/gallery`;
-  };
+  const navigate = useNavigate();
+  const handleViewGallery = () => navigate('/gallery');
 
   const switchExplanationType = (type: string) => {
     setIsRecording(false);
@@ -417,9 +407,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                   startIcon={
                     <FontAwesomeV6Icon iconStyle="solid" iconName="check" />
                   }
-                  onClick={() => {
-                    challengeSetCallback(null, null);
-                  }}
+                  onClick={() => navigate('/intervention')}
                   disabled={showConfirmation}
                 >
                   I'm done
@@ -440,9 +428,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                       iconName="arrow-left"
                     />
                   }
-                  onClick={() => {
-                    challengeSetCallback(null, null);
-                  }}
+                  onClick={() => navigate('/intervention')}
                 >
                   Choose a different challenge
                 </MuiButton>

@@ -1,4 +1,5 @@
 require 'base64'
+require 'json'
 require 'cdo/rack/request'
 
 # Create a storage id without an associated user id and track it using a cookie.
@@ -216,7 +217,21 @@ end
 
 def create_storage_id_for_user(user_id = nil, anon_user_id: nil)
   # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id:, anon_user_id:)
+  storage_id = user_storage_ids_table.insert(user_id:, anon_user_id:)
+
+  if anon_user_id.nil? && Integer(user_id, exception: false).nil?
+    CDO.log.info JSON.dump(
+      namespace: 'project_storages',
+      event: 'missing_anon_user_id',
+      storage_id:,
+      user_id: user_id.inspect,
+      anon_user_id: defined?(request) ? request.anon_user_id.inspect : 'no_request',
+      statsig_stable_id: defined?(request) ? request.statsig_stable_id.inspect : 'no_request',
+      caller_locations: caller_locations(1, 10).join('; '),
+    )
+  end
+
+  storage_id
 rescue Sequel::UniqueConstraintViolation
   # We lost a race against someone performing the same operation. The row
   # we're looking for should now be in the database.

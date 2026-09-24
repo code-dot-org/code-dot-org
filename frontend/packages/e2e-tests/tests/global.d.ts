@@ -17,6 +17,10 @@ declare global {
     __TestInterface?: {
       arrangeBlockPosition(blocksXml: string, options: object): string;
       loadBlocks(blocksXml: string): void;
+      getDroplet(): {
+        currentlyAnimating: boolean;
+        session: {currentlyUsingBlocks: boolean};
+      };
     };
   }
 }

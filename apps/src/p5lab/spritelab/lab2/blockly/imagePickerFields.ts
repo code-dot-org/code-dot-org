@@ -9,7 +9,10 @@ import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimatio
 import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 
-import {getTrimmedThumbnail} from '../imageTrim';
+import {ImageType} from '../ai/images/types';
+import {noteImageFieldValue} from '../imageReferences';
+import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
+import {getImageThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
@@ -80,9 +83,7 @@ function animationOptions(kind: AnimationKind): [string, string][] {
       return;
     }
     const url =
-      (kind === 'background'
-        ? undefined
-        : getTrimmedThumbnail(animation.name)) ||
+      getImageThumbnail(animation.name) ||
       animation.sourceUrl ||
       animationSourceUrl(key, animation, state.pageConstants?.channelId);
     results.push([url, `"${animation.name}"`]);
@@ -90,16 +91,118 @@ function animationOptions(kind: AnimationKind): [string, string][] {
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
+const IMAGE_TYPE_OF: Record<AnimationKind, ImageType> = {
+  costume: 'sprite',
+  background: 'background',
+  block: 'block',
+};
+
+// Sprite sockets take a "sprite with costume" shadow; the connection check
+// is how a parent's sockets are told apart from its other inputs.
+const SPRITE_CHECK = 'Sprite';
+
+/**
+ * Where a field sits for image_role_defaults: its block, or, on a shadow
+ * filling a sprite socket, the parent block and the socket's position among
+ * the parent's sprite sockets.
+ */
+function slotOf(block: BlocklyCore.Block): ImageSlot {
+  const parentInput =
+    block.outputConnection?.targetConnection?.getParentInput();
+  const parent = block.getParent();
+  if (!parentInput || !parent) {
+    return {blockType: block.type, index: 0};
+  }
+  const sockets = parent.inputList.filter(input =>
+    input.connection?.getCheck()?.includes(SPRITE_CHECK)
+  );
+  return {
+    blockType: parent.type,
+    index: Math.max(0, sockets.indexOf(parentInput)),
+  };
+}
+
+/**
+ * The lab's image dropdown. A fresh field starts on the image the level's
+ * image_role_defaults name for its slot, decided once the field is on its
+ * block; a saved block's own value wins, and a level naming nothing leaves
+ * the newest image, Blockly's first option.
+ */
+export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
+  kind: AnimationKind = 'costume';
+  private valueLoaded = false;
+
+  // A saved value names an image; one the project no longer has (or a
+  // toolbox's placeholder) fails validation and leaves the constructor's
+  // choice, which is no choice at all, so the level default still applies.
+  loadState(state: unknown) {
+    super.loadState(state);
+    const saved =
+      typeof state === 'string' && /<field/.test(state)
+        ? BlocklyCore.utils.xml.textToDom(state).textContent
+        : state;
+    this.valueLoaded = this.getValue() === saved;
+  }
+
+  fromXml(element: Element) {
+    super.fromXml(element);
+    this.valueLoaded = this.getValue() === element.textContent;
+  }
+
+  init() {
+    super.init();
+    if (!this.valueLoaded) {
+      this.applyLevelDefault();
+    }
+  }
+
+  /**
+   * After the image list changed: a value the list lost gives way to the
+   * level default, else the first option; a kept value refreshes its
+   * thumbnail.
+   */
+  followList() {
+    const options = this.getOptions(false);
+    if (options.some(([, value]) => value === this.getValue())) {
+      this.refreshSelectedOption();
+      return;
+    }
+    this.valueLoaded = false;
+    this.setValue(options[0][1]);
+    this.applyLevelDefault();
+    this.forceRerender();
+  }
+
+  private applyLevelDefault() {
+    const block = this.getSourceBlock();
+    if (!block) {
+      return;
+    }
+    const state = getStore().getState();
+    const name = defaultImageName(
+      state.animationList,
+      state.lab?.levelProperties?.imageRoleDefaults,
+      IMAGE_TYPE_OF[this.kind],
+      slotOf(block)
+    );
+    if (name) {
+      this.setValue(`"${name}"`);
+    }
+  }
+}
+
 function animationDropdown(
   kind: AnimationKind,
-  Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown
-): CdoFieldAnimationDropdown {
-  return new Ctor(
+  Ctor: typeof Lab2AnimationDropdown = Lab2AnimationDropdown
+): Lab2AnimationDropdown {
+  const field = new Ctor(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
     MAKE_IMAGE_BUTTONS
   );
+  field.kind = kind;
+  return field;
 }
 
 // The classic costumePicker/backgroundPicker input types, with lab2's empty
@@ -118,40 +221,51 @@ export function animationPicker(kind: AnimationKind) {
         .appendField(animationDropdown(kind), inputConfig.name);
     },
     generateCode(block: BlocklyCore.Block, arg: {name: string}) {
-      return block.getFieldValue(arg.name);
+      // Registers the name for the scene preload's reference set.
+      return noteImageFieldValue(block.getFieldValue(arg.name));
     },
   };
 }
 
 // Registered field types (see setup.ts) so JSON block definitions get the
 // same dropdowns.
-export class CostumeField extends CdoFieldAnimationDropdown {
+export class CostumeField extends Lab2AnimationDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
     return animationDropdown('costume', CostumeField);
   }
 }
 
-export class BlockImageField extends CdoFieldAnimationDropdown {
+export class BlockImageField extends Lab2AnimationDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
     return animationDropdown('block', BlockImageField);
   }
 }
 
 /**
- * Refresh every costume dropdown's thumbnail, so blocks rendered before an
- * image was trimmed pick up the trim.
+ * Refresh every image dropdown against the current list: thumbnails that
+ * landed after a block rendered, and values whose image is gone. The
+ * flyout's blocks too: a flyout-only toolbox builds them at injection,
+ * before any image has loaded.
  */
 export function refreshAnimationDropdownThumbnails(): void {
-  const workspace = Blockly.getMainWorkspace?.();
+  const workspace: BlocklyCore.WorkspaceSvg | undefined =
+    Blockly.getMainWorkspace?.();
   if (!workspace) {
     return;
   }
-  workspace.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
-    block.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        if (field instanceof CdoFieldAnimationDropdown) {
-          field.refreshSelectedOption();
-        }
+  const flyouts = [workspace.getFlyout(), workspace.getToolbox()?.getFlyout()];
+  const workspaces = [
+    workspace,
+    ...flyouts.map(flyout => flyout?.getWorkspace()),
+  ];
+  workspaces.forEach(ws => {
+    ws?.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
+      block.inputList.forEach(input => {
+        input.fieldRow.forEach(field => {
+          if (field instanceof Lab2AnimationDropdown) {
+            field.followList();
+          }
+        });
       });
     });
   });
