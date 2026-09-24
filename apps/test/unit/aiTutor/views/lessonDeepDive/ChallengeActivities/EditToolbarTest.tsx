@@ -90,7 +90,6 @@ describe('EditToolbar', () => {
       color: '#e0529c',
       style: 'Glow',
     });
-    // Cleared for the next caption; color and style carry over.
     expect(input).toHaveValue('');
     expect(screen.getByRole('radio', {name: 'Pink'})).toBeChecked();
     expect(screen.getByRole('radio', {name: 'Glow'})).toBeChecked();

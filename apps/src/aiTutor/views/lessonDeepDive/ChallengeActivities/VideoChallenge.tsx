@@ -19,9 +19,6 @@ import styles from './video-challenge.module.scss';
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  // Owned by ChallengeBox, which drives the record button in the bottom bar
-  // (the same button used to record a whiteboard challenge's audio
-  // explanation). Together the two booleans name the canvas's three states.
   isRecording: boolean;
   setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
   hasRecording: boolean;
@@ -30,9 +27,6 @@ interface VideoChallengeProps {
   lessonId: number;
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
-  // Reports whether the current recording can be submitted, and hands the
-  // top-bar "Submit for feedback" / "Start over" buttons this modality's
-  // submit and reset handlers.
   onSubmittableChange: (canSubmit: boolean) => void;
   submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
   resetRef: React.MutableRefObject<(() => void) | null>;
@@ -148,7 +142,6 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       const aichatClientApi = await getClientApi();
       const text = await aichatClientApi.transcribeAudio(recordedAudioBlob);
       return text;
-      // setTranscribedText(text);
     } catch (error) {
       console.log(error);
       return null;

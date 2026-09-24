@@ -93,15 +93,14 @@ const CORNER_ANCHORS = new Set([
   'bottom-right',
 ]);
 
-// Folds a transformer's scale into the text's own size: a corner drag grows
-// the type with the box, a side drag only rewraps it.
+// Corner drags scale the font with the box; side drags only rewrap
 export function resizeText(
   {width, fontSize}: Pick<CanvasTextItem, 'width' | 'fontSize'>,
   anchor: string | null,
   scale: number
 ): Pick<CanvasTextItem, 'width' | 'fontSize'> {
   if (anchor && CORNER_ANCHORS.has(anchor)) {
-    // One clamped factor for both, so the box keeps its proportions.
+    // One factor for both keeps the box's proportions
     const clamped = Math.max(
       scale,
       MIN_FONT_SIZE / fontSize,

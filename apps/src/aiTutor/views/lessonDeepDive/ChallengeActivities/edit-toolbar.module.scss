@@ -1,6 +1,6 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
-// Out of flow so the stage stays centered, and still, when this goes away.
+// Out of flow so the stage doesn't shift when the toolbar hides
 .editTools {
   position: absolute;
   top: 16px;
@@ -24,7 +24,7 @@
   box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.05);
 }
 
-// The open panel's top sits this far above the toolbar's.
+// Offsets the toolbar below the open panel's top
 .toolbar {
   display: flex;
   flex-direction: column;
@@ -126,8 +126,7 @@
   padding: 4px;
 }
 
-// The radio stays in the accessibility tree and takes keyboard focus; the
-// label around it is what is drawn.
+// Hidden but focusable; the label around it is what's drawn
 .radio {
   position: absolute;
   width: 1px;
@@ -146,7 +145,7 @@
   height: 24px;
   border: 1px solid var(--border-neutral-primary);
   border-radius: 4px;
-  // The swatches are fixed content colors, not themed, so their check is too.
+  // Swatch colors aren't themed, so neither is the check
   color: #fff;
   font-size: 13px;
   cursor: pointer;

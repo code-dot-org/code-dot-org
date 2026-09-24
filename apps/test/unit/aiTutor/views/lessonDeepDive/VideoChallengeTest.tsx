@@ -51,20 +51,14 @@ const fakeChallenge = {
   whiteboard_starter_image_url: null,
 };
 
-// Helper: simulate the full record → stop sequence, same as clicking
-// ChallengeBox's bottom-bar record button twice, and wait for the blob the
-// stubbed recorder hands over a tick later.
+// Clicks record then stop, and waits for the stub's blob
 const recordVideo = async () => {
   fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
   fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
   await act(async () => {});
 };
 
-// The record button and "Submit" live in ChallengeBox's bars rather than in
-// VideoChallenge. This harness plays that role: it owns isRecording /
-// hasRecording, renders the record button exactly as ChallengeBox's bottom
-// bar does for a video challenge, holds the submit ref, and reflects the
-// reported submittability on a stand-in "Submit" button.
+// Stands in for ChallengeBox, which owns the record and "Submit" buttons
 const VideoHarness: FC<{
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({submitCallback}) => {
@@ -166,8 +160,7 @@ describe('VideoChallenge', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
     fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
 
-    // Caller-side state already reads "edit" (see stub), but the canvas
-    // stays on the take until the blob arrives rather than discarding it.
+    // The caller already reads 'edit', but the take isn't discarded
     expect(screen.getByText('canvas mode: recording')).toBeInTheDocument();
     expect(
       screen.getByRole('button', {name: 'Start Recording'})
@@ -192,8 +185,6 @@ describe('VideoChallenge', () => {
       screen.getByRole('button', {name: 'Edit and Record Again'})
     );
 
-    // Nothing left to submit, and the button offers a fresh take rather than
-    // resuming the discarded one.
     expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
     expect(
       screen.getByRole('button', {name: 'Start Recording'})

@@ -114,7 +114,6 @@ const TextPanel: FC<TextPanelProps> = ({onClose, onAddText}) => {
   const groupName = useId();
   const trimmed = text.trim();
 
-  // Color and style carry over, so a run of captions can share them.
   const handleAdd = () => {
     onAddText({text: trimmed, color, style: textStyle});
     setText('');

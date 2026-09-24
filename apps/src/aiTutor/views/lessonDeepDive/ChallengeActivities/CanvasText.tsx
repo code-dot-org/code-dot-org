@@ -36,10 +36,8 @@ const CanvasText: FC<CanvasTextProps> = ({
     item.fontSize
   );
 
-  // The transformer scales the whole Label. Fold that scale back into the
-  // text's width and font size right away, so the type reflows instead of
-  // stretching, and redraw the handles: a transformer cannot see changes
-  // made inside a group.
+  // Convert the transformer's scale into width and font size so text reflows
+  // instead of stretching. forceUpdate: it can't see changes inside a group.
   const handleTransform = () => {
     const label = labelRef.current;
     const transformer = transformerRef.current;
