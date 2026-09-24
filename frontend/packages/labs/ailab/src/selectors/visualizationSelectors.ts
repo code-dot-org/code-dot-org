@@ -252,13 +252,13 @@ export const getDisplayTree = createSelector(
     featureNumberKey: Record<string, Record<string, number>>,
     labelColumn: string | undefined,
   ): DisplayTreeNode | undefined => {
-    if (!trainedModel || !labelColumn || trainerFamily !== 'decisionTree') {
+    if (!trainedModel || !labelColumn) {
       return undefined;
     }
-    // The round trip turns ml-matrix distributions into plain arrays.
-    const model = JSON.parse(
-      JSON.stringify(trainedModel.toJSON()),
-    ) as SerializedTree;
-    return buildDisplayTree(model, {features, featureNumberKey, labelColumn});
+    return buildDisplayTree(trainedModel.toJSON() as SerializedTree, {
+      features,
+      featureNumberKey,
+      labelColumn,
+    });
   },
 );

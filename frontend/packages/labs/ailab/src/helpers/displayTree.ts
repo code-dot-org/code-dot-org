@@ -25,13 +25,15 @@ export interface DisplayTreeAnswer {
 
 export type DisplayTreeNode = DisplayTreeQuestion | DisplayTreeAnswer;
 
-// A leaf that ml-cart stopped splitting keeps `splitColumn` and `splitValue`.
+// A saved model holds a nested array; a live model holds an ml-matrix row vector; 
+type ClassDistribution = number[][] | {getRow(row: number): number[]};
+
 interface SerializedTreeNode {
   splitColumn?: number;
   splitValue?: number;
   left?: SerializedTreeNode;
   right?: SerializedTreeNode;
-  distribution?: number[][] | number;
+  distribution?: ClassDistribution | number;
 }
 
 export interface SerializedTree {
@@ -40,19 +42,18 @@ export interface SerializedTree {
 }
 
 export interface DisplayTreeContext {
-  // In the column order of the training examples.
   features: string[];
   featureNumberKey: Record<string, Record<string, number>>;
   labelColumn: string;
 }
 
+// The `name` in ml-cart's toJSON().
 const TREE_MODEL_NAMES = ['DTClassifier', 'DTRegression'];
 
-export function isTreeModel(model: SerializedTree): boolean {
+function isTreeModel(model: SerializedTree): boolean {
   return TREE_MODEL_NAMES.includes(model.name ?? '') && !!model.root;
 }
 
-// `model` is `toJSON()` after a JSON round trip, the form a saved model takes.
 export function buildDisplayTree(
   model: SerializedTree,
   context: DisplayTreeContext,
@@ -70,12 +71,12 @@ export function buildDisplayTree(
   return buildNode(model.root!, context, valuesByColumn);
 }
 
-// `valuesByColumn` holds the categorical values a row can still have here.
 function buildNode(
   node: SerializedTreeNode,
   context: DisplayTreeContext,
   valuesByColumn: Record<string, string[]>,
 ): DisplayTreeNode {
+  // ml-cart can leave split fields on a leaf, so only missing children denote a leaf
   if (!node.left || !node.right) {
     return {type: 'answer', prediction: getPrediction(node, context)};
   }
@@ -140,9 +141,14 @@ function getPrediction(
     return distribution;
   }
 
-  // The row is as long as the highest class code in this leaf, plus one.
-  const probabilities = distribution?.[0] ?? [];
-  // ml-cart predicts the first class with the highest probability.
+  if (!distribution) {
+    throw new Error('Decision tree leaf has no class distribution');
+  }
+
+  const probabilities = Array.isArray(distribution)
+    ? distribution[0]
+    : distribution.getRow(0);
+  // Strict >, so a tie goes to the first class, as ml-cart's predict does
   let best = 0;
   probabilities.forEach((probability, index) => {
     if (probability > probabilities[best]) {
