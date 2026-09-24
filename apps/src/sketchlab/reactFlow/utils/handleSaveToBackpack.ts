@@ -148,6 +148,8 @@ export const handleSaveToBackpack = async (
     return;
   }
 
+  // The progress toast above never expires on its own, so every path from here
+  // has to end in a toast that replaces it.
   const newFileName = extractUserInput(dialogResults) + '.png';
   if (unifiedApi) {
     notifySaving(notify, newFileName);

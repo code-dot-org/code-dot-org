@@ -52,8 +52,8 @@ const saveBlobFileMock = (succeeds: boolean) =>
       filename: string,
       blob: Blob,
       onError: (error?: Error) => void,
-      onSuccess: () => void,
-    ) => (succeeds ? onSuccess() : onError(new Error('upload failed'))),
+      onSuccess: () => void
+    ) => (succeeds ? onSuccess() : onError(new Error('upload failed')))
   );
 
 describe('handleSaveToBackpack', () => {
@@ -69,7 +69,7 @@ describe('handleSaveToBackpack', () => {
       backpackApi as unknown as BackpackClientApi,
       dialogControl as never,
       backpackFileList,
-      notify,
+      notify
     );
   }
 
@@ -93,7 +93,7 @@ describe('handleSaveToBackpack', () => {
 
     expect(mockProjectManager.flushSave).toHaveBeenCalled();
     expect(showDialog).toHaveBeenCalledWith(
-      expect.objectContaining({type: DialogType.GenericPrompt}),
+      expect.objectContaining({type: DialogType.GenericPrompt})
     );
     expect(backpackApi.saveBlobFile).toHaveBeenCalled();
   });
@@ -154,7 +154,7 @@ describe('handleSaveToBackpack', () => {
 
     expect(notify).toHaveBeenCalledWith(
       'danger',
-      expect.stringContaining('save'),
+      expect.stringContaining('save')
     );
     expect(showDialog).not.toHaveBeenCalled();
     expect(backpackApi.saveBlobFile).not.toHaveBeenCalled();
@@ -172,7 +172,7 @@ describe('handleSaveToBackpack', () => {
 
     expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
       EVENTS.SAVE_TO_BACKPACK_REPLACE,
-      {fileType: 'png'},
+      {fileType: 'png'}
     );
   });
 
@@ -189,7 +189,7 @@ describe('handleSaveToBackpack', () => {
         unifiedApi as unknown as UnifiedBackpackClientApi,
         dialogControl as never,
         [],
-        notify,
+        notify
       );
     }
 
@@ -208,7 +208,7 @@ describe('handleSaveToBackpack', () => {
       expect(unifiedApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.SAVE_TO_BACKPACK_NEW,
-        {fileType: 'png'},
+        {fileType: 'png'}
       );
     });
 
@@ -239,7 +239,7 @@ describe('handleSaveToBackpack', () => {
       // The progress toast has no auto-hide, so a rejection that reached the
       // caller would leave it on screen for good.
       mockCreateSketchSnapshotBlob.mockRejectedValue(
-        new Error('tainted canvas'),
+        new Error('tainted canvas')
       );
 
       await runUnifiedSave();
@@ -253,7 +253,7 @@ describe('handleSaveToBackpack', () => {
       ]);
       expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
         'Sketch snapshot error',
-        expect.any(Error),
+        expect.any(Error)
       );
     });
 
@@ -285,11 +285,11 @@ describe('handleSaveToBackpack', () => {
       });
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.SAVE_TO_BACKPACK_REPLACE,
-        {fileType: 'png'},
+        {fileType: 'png'}
       );
       expect(unifiedApi.deleteFromLegacyBackpacks).toHaveBeenCalledWith(
         'sketch.png',
-        {aichat: ['sketch.png']},
+        {aichat: ['sketch.png']}
       );
     });
 
@@ -301,7 +301,7 @@ describe('handleSaveToBackpack', () => {
 
       expect(notify).toHaveBeenCalledWith(
         'danger',
-        expect.stringContaining('sketch.png'),
+        expect.stringContaining('sketch.png')
       );
       expect(unifiedApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
     });
@@ -309,7 +309,7 @@ describe('handleSaveToBackpack', () => {
     it('keeps the save and reports the failure when clearing the old copy fails', async () => {
       unifiedApi.getFileLists.mockResolvedValue({aichat: ['sketch.png']});
       unifiedApi.deleteFromLegacyBackpacks.mockRejectedValue(
-        new Error('delete failed'),
+        new Error('delete failed')
       );
 
       await runUnifiedSave();
@@ -317,11 +317,11 @@ describe('handleSaveToBackpack', () => {
       expect(unifiedApi.saveBlobFile).toHaveBeenCalled();
       expect(notify).toHaveBeenCalledWith(
         'danger',
-        expect.stringContaining("couldn't remove the old copy"),
+        expect.stringContaining("couldn't remove the old copy")
       );
       expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
         'Backpack duplicate delete error',
-        expect.any(Error),
+        expect.any(Error)
       );
     });
 
@@ -332,7 +332,7 @@ describe('handleSaveToBackpack', () => {
 
       expect(notify).toHaveBeenCalledWith(
         'danger',
-        expect.stringContaining("Couldn't read your Backpack"),
+        expect.stringContaining("Couldn't read your Backpack")
       );
       expect(showDialog).not.toHaveBeenCalled();
       expect(unifiedApi.saveBlobFile).not.toHaveBeenCalled();

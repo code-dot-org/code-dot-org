@@ -62,7 +62,7 @@ jest.mock(
         </button>
       </div>
     ),
-  }),
+  })
 );
 
 describe('UnifiedBackpackPanel', () => {
@@ -94,7 +94,7 @@ describe('UnifiedBackpackPanel', () => {
             withSaveButton ? {text: SAVE_BUTTON_TEXT, onClick} : undefined
           }
         />
-      </Provider>,
+      </Provider>
     );
   };
 
@@ -127,7 +127,7 @@ describe('UnifiedBackpackPanel', () => {
 
     expect(onClick).toHaveBeenCalledWith(
       ['tree.png', 'house.png'],
-      expect.any(Function),
+      expect.any(Function)
     );
   });
 
@@ -166,7 +166,7 @@ describe('UnifiedBackpackPanel', () => {
     await screen.findByText('tree.png');
     // Adding to the project says nothing about what the backpack holds.
     await user.click(
-      screen.getByRole('button', {name: 'add tree.png to project'}),
+      screen.getByRole('button', {name: 'add tree.png to project'})
     );
     expect(screen.getByText('tree.png')).toBeInTheDocument();
 
@@ -184,7 +184,7 @@ describe('UnifiedBackpackPanel', () => {
     renderPanel();
 
     await waitFor(() =>
-      expect(screen.getAllByText('tree.png')).toHaveLength(2),
+      expect(screen.getAllByText('tree.png')).toHaveLength(2)
     );
 
     const listener = mockBackpackApi.addEventListener.mock.calls.at(-1)?.[0];
@@ -236,7 +236,7 @@ describe('UnifiedBackpackPanel', () => {
       () =>
         new Promise<void>(resolve => {
           finishSave = resolve;
-        }),
+        })
     );
     renderPanel();
 
