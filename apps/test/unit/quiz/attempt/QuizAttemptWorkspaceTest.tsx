@@ -111,9 +111,7 @@ function renderWorkspace({
 describe('QuizAttemptWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
-    // resetAllMocks wipes the implementation set in the module mock above.
-    // The cast stands in for the real thunk action - dispatch is mocked
-    // too, so it's never actually invoked.
+    // Restore inert thunk substitutes because resetAllMocks removes module mock implementations.
     mockSendSuccessReport.mockImplementation(
       appName =>
         ({type: 'SEND_SUCCESS_REPORT', appName} as unknown as ReturnType<
