@@ -30884,3 +30884,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        aid-demo:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+          lesson_groups: {}
+          name: aid-demo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

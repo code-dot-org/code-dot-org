@@ -7609,3 +7609,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        aid-demo:
+          title: aid-demo
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

@@ -1,0 +1,24 @@
+{
+  "name": "aid-demo",
+  "script_names": [
+    "aid-demo"
+  ],
+  "original_script_names": [
+    "aid-demo"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "aid-demo",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

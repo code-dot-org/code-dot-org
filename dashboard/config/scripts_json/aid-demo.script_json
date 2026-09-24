@@ -1,0 +1,354 @@
+{
+  "script": {
+    "name": "aid-demo",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-09-24 13:52:30 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "aid-demo"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "aid-demo"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Lesson 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "007e1669-8c4f-43b6-b876-47bba637e979",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "007e1669-8c4f-43b6-b876-47bba637e979",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545",
+        "lesson_activity.key": "007e1669-8c4f-43b6-b876-47bba637e979"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-1-choose"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      },
+      "level_keys": [
+        "hoai2026-dev-my-ai-app-1-choose"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-2-home"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      },
+      "level_keys": [
+        "hoai2026-dev-my-ai-app-2-home"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-3-gallery"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      },
+      "level_keys": [
+        "hoai2026-dev-my-ai-app-3-gallery"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-4-rules"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      },
+      "level_keys": [
+        "hoai2026-dev-my-ai-app-4-rules"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-5-model"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      },
+      "level_keys": [
+        "hoai2026-dev-my-ai-app-5-model"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-6-advice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      },
+      "level_keys": [
+        "hoai2026-dev-my-ai-app-6-advice"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-7-freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      },
+      "level_keys": [
+        "hoai2026-dev-my-ai-app-7-freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-my-ai-app-1-choose",
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-1-choose"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-my-ai-app-2-home",
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-2-home"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-my-ai-app-3-gallery",
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-3-gallery"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-my-ai-app-4-rules",
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-4-rules"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-my-ai-app-5-model",
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-5-model"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-my-ai-app-6-advice",
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-6-advice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2026-dev-my-ai-app-7-freeplay",
+        "script_level.level_keys": [
+          "hoai2026-dev-my-ai-app-7-freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aid-demo",
+        "activity_section.key": "fe69c58f-9d29-459c-b7f8-42b3d9ee4545"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
