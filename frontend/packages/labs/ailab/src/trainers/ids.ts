@@ -30,7 +30,6 @@ const idsByFamily: Record<
   },
 };
 
-// The trainer class and the saved model's id both come from here, so they cannot disagree.
 export function getTrainerFamily(state: RootState): TrainerFamily {
   const family = state.mode?.trainer;
   return typeof family === 'string' && Object.hasOwn(idsByFamily, family)

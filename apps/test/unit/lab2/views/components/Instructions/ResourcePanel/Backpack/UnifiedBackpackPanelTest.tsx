@@ -72,10 +72,12 @@ describe('UnifiedBackpackPanel', () => {
   const renderPanel = ({
     withSaveButton = true,
     viewingOldVersion = false,
+    isProjectLevel = false,
   } = {}) => {
     registerReducers({
       currentUser: () => ({userId: 1}),
       lab2Project: () => ({viewingOldVersion}),
+      lab: () => ({levelProperties: {isProjectLevel}}),
     });
     store = getStore();
     return render(
@@ -250,5 +252,19 @@ describe('UnifiedBackpackPanel', () => {
 
     await screen.findByText('Your Backpack is empty');
     expect(screen.queryByRole('button', {name: SAVE_BUTTON_TEXT})).toBeNull();
+  });
+
+  it('calls the workspace a level on an ordinary level', async () => {
+    mockBackpackApi.getFileLists.mockResolvedValue({universal: ['notes.txt']});
+    renderPanel();
+
+    await screen.findByText('Not supported in this level (1)');
+  });
+
+  it('calls the workspace a project on a standalone project level', async () => {
+    mockBackpackApi.getFileLists.mockResolvedValue({universal: ['notes.txt']});
+    renderPanel({isProjectLevel: true});
+
+    await screen.findByText('Not supported in this project (1)');
   });
 });
