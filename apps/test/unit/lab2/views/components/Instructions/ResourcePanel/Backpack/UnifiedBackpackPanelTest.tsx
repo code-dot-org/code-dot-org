@@ -139,13 +139,17 @@ describe('UnifiedBackpackPanel', () => {
     await user.click(saveButton());
 
     const notify = onClick.mock.calls[0][1];
-    notify('info', 'Saving sketch.png to your Backpack...');
+    notify('gray', 'Saving sketch.png to your Backpack...');
     notify('success', 'sketch.png saved to your Backpack.');
 
     expect(mockShowToast.mock.calls).toEqual([
       [
         'Saving sketch.png to your Backpack...',
-        {type: 'info', autoHideDuration: null},
+        {
+          type: 'gray',
+          autoHideDuration: null,
+          icon: {iconName: 'spinner', animationType: 'spin'},
+        },
       ],
       [
         'sketch.png saved to your Backpack.',
