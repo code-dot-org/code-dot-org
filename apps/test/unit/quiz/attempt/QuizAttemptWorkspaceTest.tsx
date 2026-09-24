@@ -4,7 +4,7 @@ import React from 'react';
 
 import {
   sendStartedReportIfNotStarted,
-  sendSuccessReport,
+  sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
@@ -21,8 +21,9 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 }));
 
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
-  sendSuccessReport: jest.fn(appName => ({
-    type: 'SEND_SUCCESS_REPORT',
+  sendSuccessReportForLevel: jest.fn((levelId, appName) => ({
+    type: 'SEND_SUCCESS_REPORT_FOR_LEVEL',
+    levelId,
     appName,
   })),
   sendStartedReportIfNotStarted: jest.fn(appName => ({
@@ -30,7 +31,7 @@ jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
     appName,
   })),
 }));
-const mockSendSuccessReport = jest.mocked(sendSuccessReport);
+const mockSendSuccessReportForLevel = jest.mocked(sendSuccessReportForLevel);
 const mockSendStartedReportIfNotStarted = jest.mocked(
   sendStartedReportIfNotStarted
 );
@@ -121,11 +122,13 @@ describe('QuizAttemptWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
     // Restore inert thunk substitutes because resetAllMocks removes module mock implementations.
-    mockSendSuccessReport.mockImplementation(
-      appName =>
-        ({type: 'SEND_SUCCESS_REPORT', appName} as unknown as ReturnType<
-          typeof sendSuccessReport
-        >)
+    mockSendSuccessReportForLevel.mockImplementation(
+      (levelId, appName) =>
+        ({
+          type: 'SEND_SUCCESS_REPORT_FOR_LEVEL',
+          levelId,
+          appName,
+        } as unknown as ReturnType<typeof sendSuccessReportForLevel>)
     );
     mockSendStartedReportIfNotStarted.mockImplementation(
       appName =>
@@ -231,9 +234,12 @@ describe('QuizAttemptWorkspace', () => {
 
   it('reports the level as started once the attempt begins, so an unsubmitted attempt still shows progress', async () => {
     const beginAttempt = jest.fn().mockResolvedValue(undefined);
-    renderWorkspace({hookState: {attempt: null, beginAttempt}});
+    renderWorkspace({
+      hookState: {attempt: null, beginAttempt},
+      showIntroScreen: true,
+    });
 
-    fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
 
     await waitFor(() =>
       expect(mockSendStartedReportIfNotStarted).toHaveBeenCalledWith('quiz')
@@ -431,7 +437,7 @@ describe('QuizAttemptWorkspace', () => {
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
   });
 
-  it('reports success so the progress bubble updates once the attempt is submitted', async () => {
+  it('reports success for this level once the attempt is submitted, so the progress bubble updates even if the student has since navigated on', async () => {
     const finishAttempt = jest.fn().mockResolvedValue(undefined);
     renderWorkspace({
       hookState: {attempt: ATTEMPT, finishAttempt},
@@ -441,10 +447,10 @@ describe('QuizAttemptWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
 
     await waitFor(() =>
-      expect(mockSendSuccessReport).toHaveBeenCalledWith('quiz')
+      expect(mockSendSuccessReportForLevel).toHaveBeenCalledWith('42', 'quiz')
     );
     expect(mockDispatch).toHaveBeenCalledWith(
-      mockSendSuccessReport.mock.results[0].value
+      mockSendSuccessReportForLevel.mock.results[0].value
     );
   });
 
