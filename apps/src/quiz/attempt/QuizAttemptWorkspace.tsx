@@ -1,25 +1,43 @@
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {QuizQuestionSummary} from '../types';
+import {QuizQuestionSummary, toBool} from '../types';
 
+import AttemptCard from './AttemptCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
+import QuizIntroCard from './QuizIntroCard';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
+  // Levelbuilders may leave displayName blank - falls back to this.
+  levelName: string;
   // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
   quizQuestions: QuizQuestionSummary[];
   allowMultipleAttempts?: boolean;
+  displayName?: string;
+  customIntroText?: string;
+  timeLimitMinutes?: number;
+  showIntroScreen?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
   QuizAttemptWorkspaceProps
-> = ({levelId, unitId, quizQuestions, allowMultipleAttempts}) => {
+> = ({
+  levelId,
+  levelName,
+  unitId,
+  quizQuestions,
+  allowMultipleAttempts,
+  displayName,
+  customIntroText,
+  timeLimitMinutes,
+  showIntroScreen,
+}) => {
   const {
     attempt,
     isLoading,
@@ -40,6 +58,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
     useState<Record<number, string>>({});
+  // Retake goes back through the intro screen rather than starting a new
+  // attempt immediately.
+  const [isRetakeIntroOpen, setIsRetakeIntroOpen] = useState(false);
   // One chained promise per question, so a rapid second pick waits for the
   // first write to settle instead of racing it, and finishAttempt can wait
   // for all of them before the server locks the attempt.
@@ -49,6 +70,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   const questionsRef = useRef<HTMLDivElement>(null);
   const submittedRef = useRef<HTMLDivElement>(null);
+  const introRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const selectedChoices: Record<number, string> = {};
@@ -57,11 +79,24 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
     setSelectedChoicesByQuestionId(selectedChoices);
     setCurrentPageNumber(1);
+    setSelectedChoicesByQuestionId({});
+    setIsRetakeIntroOpen(false);
     pendingWritesByQuestionIdRef.current = {};
   }, [attempt?.id, attempt?.questionResultsInProgress]);
 
   const isAttemptInProgress =
     !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
+  const isIntroOpen =
+    toBool(showIntroScreen) &&
+    (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
+
+  // Covers both the very first intro screen and Retake reopening it - either
+  // way, the button that led here is gone, so hand focus to the heading.
+  useEffect(() => {
+    if (isIntroOpen) {
+      introRef.current?.querySelector<HTMLElement>('h2')?.focus();
+    }
+  }, [isIntroOpen]);
 
   // Focus on the new page's heading when navigating to a new page.
   useEffect(() => {
@@ -94,6 +129,24 @@ const QuizAttemptWorkspace: React.FunctionComponent<
       // Already recorded as a user-facing error in useQuizAttempt.
     }
   };
+
+  const handleRetake = () => {
+    if (showIntroScreen) {
+      setIsRetakeIntroOpen(true);
+    } else {
+      handleBeginAttempt();
+    }
+  };
+
+  // A quiz with no intro screen has no click-through step - start the
+  // attempt automatically once the initial check finds there isn't one yet.
+  useEffect(() => {
+    if (!isLoading && !!unitId && attempt === null && !showIntroScreen) {
+      beginAttempt().catch(() => {
+        // Already recorded as a user-facing error in useQuizAttempt.
+      });
+    }
+  }, [isLoading, unitId, attempt, showIntroScreen, beginAttempt]);
 
   const handleSelectChoice = (questionId: number, choiceId: string) => {
     const previousChoiceId = selectedChoicesByQuestionId[questionId];
@@ -160,16 +213,33 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           <Typography variant="body2">
             Quiz attempts are not allowed on a standalone level.
           </Typography>
+        ) : isIntroOpen ? (
+          <div className={styles.questions} ref={introRef}>
+            <QuizIntroCard
+              title={displayName || levelName}
+              introText={customIntroText}
+              questionCount={quizQuestions.length}
+              timeLimitMinutes={timeLimitMinutes}
+              allowMultipleAttempts={toBool(allowMultipleAttempts)}
+              onBegin={handleBeginAttempt}
+            />
+          </div>
         ) : !attempt ? (
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            type="button"
-            onClick={handleBeginAttempt}
-          >
-            Begin Quiz
-          </MuiButton>
+          // No intro screen to click through - the effect begins the attempt automatically.
+          // This button is only shown if the initial check failed.
+          error ? (
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              type="button"
+              onClick={handleBeginAttempt}
+            >
+              Begin Quiz
+            </MuiButton>
+          ) : (
+            <Typography variant="body2">Loading…</Typography>
+          )
         ) : attempt.submittedAt ? (
           <div ref={submittedRef}>
             <Typography variant="body2" tabIndex={-1}>
@@ -181,7 +251,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                 color="primary"
                 size="medium"
                 type="button"
-                onClick={handleBeginAttempt}
+                onClick={handleRetake}
               >
                 Retake Quiz
               </MuiButton>
@@ -189,6 +259,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>
+            {currentPageNumber === 1 && !showIntroScreen && (
+              <AttemptCard title={displayName || levelName} />
+            )}
             {quizQuestions
               .filter(
                 question => question.page === pageNumbers[currentPageNumber - 1]
