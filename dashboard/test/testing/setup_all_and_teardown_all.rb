@@ -30,11 +30,13 @@ module ActiveSupport
       module ClassMethods
         def run(reporter, options = {})
           @reporter = reporter
+          Mocha::Mockery.setup # enable stubbing in setup_all blocks
           @instance = run_callbacks :setup_all
           # @time is set by `time_it`, and needs to be removed before the instance is reused.
           @instance.remove_instance_variable :@time
           super
           run_callbacks :teardown_all
+          Mocha::Mockery.teardown
         end
 
         # Return a singleton instance for running individual tests,

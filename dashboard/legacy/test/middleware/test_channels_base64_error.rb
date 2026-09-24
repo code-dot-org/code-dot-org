@@ -1,5 +1,5 @@
 require_relative 'middleware_test_helper'
-require 'mocha/mini_test'
+require 'mocha/minitest'
 require_relative '../../middleware/channels_api'
 
 CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze

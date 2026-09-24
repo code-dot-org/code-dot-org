@@ -622,7 +622,6 @@ GEM
     marcel (1.0.4)
     memoist (0.16.2)
     memory_profiler (1.0.1)
-    metaclass (0.0.4)
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -643,8 +642,7 @@ GEM
       ruby-progressbar
     minitest-spec-context (0.0.5)
     minitest-stub-const (0.6)
-    mocha (1.2.1)
-      metaclass (~> 0.0.1)
+    mocha (1.16.1)
     msgpack (1.7.0)
     multi_json (1.15.0)
     multi_test (0.1.2)
@@ -1311,7 +1309,7 @@ DEPENDENCIES
   minitest-reporters (~> 1.6.1)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
-  mocha (~> 1.2.1)
+  mocha (< 2.0)
   mutex_m
   mysql2 (>= 0.4.1)
   nakayoshi_fork

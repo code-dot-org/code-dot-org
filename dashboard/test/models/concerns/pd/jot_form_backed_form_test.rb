@@ -197,7 +197,7 @@ module Pd
     test 'fill_placeholders syncs each placeholder' do
       skip 'test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)'
       mock_placeholders = Array.new(2) do
-        mock {|mock_placeholder| mock_placeholder.expects(:sync_from_jotform)}
+        mock(sync_from_jotform: nil)
       end
 
       DummyForm.expects(:placeholders).returns(
@@ -216,7 +216,7 @@ module Pd
       failed_submission_ids = Array.new(2) {get_submission_id}
 
       mock_placeholders = [
-        mock {|_mock_successful_placeholder| expects(:sync_from_jotform)},
+        mock(sync_from_jotform: nil),
         mock do |_first_mock_failed_placeholder|
           expects(:sync_from_jotform).raises('Test error 1').twice
           expects(:submission_id).returns(failed_submission_ids[0])
@@ -229,7 +229,7 @@ module Pd
           expects(:form_id).returns(form_id)
           expects(:force_sync_questions).never
         end,
-        mock {|_mock_successful_placeholder| expects(:sync_from_jotform)}
+        mock(sync_from_jotform: nil)
       ]
 
       DummyForm.expects(:placeholders).returns(
@@ -386,7 +386,7 @@ module Pd
       }
 
       DummyForm.stubs(:sync_batch_size).returns(5)
-      mock_questions = mock {expects(:last_submission_id).returns(nil).at_least_once}
+      mock_questions = mock(last_submission_id: nil)
       DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(mock_questions)
 
       # 3 batches (batch limit == 5)
@@ -425,7 +425,7 @@ module Pd
       skip 'test is incompatible with MySQL binary logging (when Global Transaction IDentifiers - GTID - are enabled)'
       form_id = get_form_id
 
-      mock_questions = mock {expects(:last_submission_id).returns(nil).at_least_once}
+      mock_questions = mock(last_submission_id: nil)
 
       DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(mock_questions)
       mock_questions.expects(:update!).at_least_once
@@ -490,7 +490,7 @@ module Pd
       form_id = get_form_id
       DummyForm.stubs(:sync_batch_size).returns(2)
       DummyForm.expects(:get_questions).with(form_id, force_sync: true).returns(
-        mock {expects(:last_submission_id).returns(nil).at_least_once}
+        mock(last_submission_id: nil)
       )
 
       mock_submissions = Array.new(2) do |i|

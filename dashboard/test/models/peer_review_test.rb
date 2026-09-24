@@ -34,7 +34,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   setup do
     @script.reload
-    PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(:deliver_now))
+    PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(deliver_now: nil))
   end
 
   test 'submitting a peer reviewed level should create PeerReview objects, one escalated, one not' do
@@ -481,7 +481,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'status change triggers review email' do
     peer_review = create(:peer_review)
-    PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(:deliver_now)).twice
+    PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(deliver_now: nil)).twice
 
     peer_review.update!(status: :accepted)
     peer_review.update!(status: :rejected)
