@@ -13,7 +13,6 @@ import {
 } from '../helpers/displayTreeLayout';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
-import I18n from '../i18n';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
 // SVG text does not wrap. Sibling branch labels stay apart at this length.
@@ -54,28 +53,19 @@ const DecisionTree = () => {
 
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
-      const key =
-        branch.kind === 'lessThan'
-          ? 'decisionTreeLessThan'
-          : 'decisionTreeAtLeast';
-      return I18n.t(key, {value: formatNumber(branch.threshold)}) ?? '';
+      const sign = branch.kind === 'lessThan' ? '<' : '≥';
+      return `${sign} ${formatNumber(branch.threshold)}`;
     }
     const values = branch.values.map(valueText);
     if (values.length < 2) {
       return values.join('');
     }
-    return (
-      I18n.t('decisionTreeValueList', {
-        values: values.slice(0, -1).join(', '),
-        lastValue: values[values.length - 1],
-      }) ?? values.join(', ')
-    );
+    return `${values.slice(0, -1).join(', ')} or ${values[values.length - 1]}`;
   };
 
   const nodeText = (node: DisplayTreeNode): string => {
     if (node.type === 'question') {
-      const column = getLocalizedColumnName(datasetId, node.column);
-      return I18n.t('decisionTreeQuestion', {column}) ?? column;
+      return `${getLocalizedColumnName(datasetId, node.column)}?`;
     }
     return typeof node.prediction === 'number'
       ? formatNumber(node.prediction)
@@ -84,9 +74,7 @@ const DecisionTree = () => {
 
   const describe = (node: DisplayTreeNode, id: string): ReactNode =>
     node.type === 'answer' ? (
-      <li key={id}>
-        {I18n.t('decisionTreeAnswer', {prediction: nodeText(node)})}
-      </li>
+      <li key={id}>The model predicts {nodeText(node)}.</li>
     ) : (
       <li key={id}>
         {nodeText(node)}
@@ -104,7 +92,7 @@ const DecisionTree = () => {
   return (
     <div id="uitest-decision-tree" style={styles.decisionTree}>
       <div style={{...styles.decisionTreeHeader, ...styles.bold}}>
-        {I18n.t('decisionTreeHeader')}
+        Your model's decision tree
       </div>
       <div style={styles.decisionTreeScroll}>
         <svg
