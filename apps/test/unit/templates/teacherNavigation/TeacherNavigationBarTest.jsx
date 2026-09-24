@@ -10,6 +10,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import {setChatIsOpen} from '@cdo/apps/aiTeacherDrawer/redux';
 import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
@@ -140,6 +141,11 @@ describe('TeacherNavigationBar', () => {
       currentUser,
       aiDiffChat: aiDiffChatReducer,
     });
+    // The redux store persists across tests in this file (no restoreRedux
+    // call), and now that the FAB always mounts (regardless of the ai diff
+    // preference), an earlier test's drawer-open state would otherwise leak
+    // into this render.
+    store.dispatch(setChatIsOpen(false));
     store.dispatch(setSections(serverSections, true, [12, 13, 14, 11]));
     store.dispatch(
       setInitialData({
@@ -379,10 +385,17 @@ describe('TeacherNavigationBar', () => {
     ).toBeNull();
   });
 
-  test('does not render AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+  test('still renders AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+    // Prevents the FAB from auto-opening on what it thinks is the user's
+    // first session, same as the 'renders AiDiffFloatingActionButton
+    // component' test below — otherwise the drawer opens immediately and
+    // hides the closed-state round button this test is asserting on.
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     // mock experiment is enabled
     experiments.isEnabled = jest.fn(() => true);
-    // mock user preference disabled
+    // mock user preference disabled: the FAB should render regardless, since
+    // the preference only trims content within the drawer (see AiDiffDrawer)
+    // rather than preventing it from mounting.
     renderDefault(
       13,
       `/teacher_dashboard/sections/13/unit/csd3-2022`,
@@ -391,8 +404,10 @@ describe('TeacherNavigationBar', () => {
     );
 
     expect(
-      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
-    ).toBeNull();
+      await screen.findByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      })
+    ).toBeVisible();
   });
 
   test('renders AiDiffFloatingActionButton component', async () => {

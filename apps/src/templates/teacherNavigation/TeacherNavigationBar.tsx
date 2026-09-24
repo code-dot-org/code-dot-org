@@ -52,10 +52,6 @@ const TeacherNavigationBar: React.FC<{
     state => state.teacherSections.isLoadingSectionData
   );
 
-  const aiDifferentiationEnabled = useAppSelector(
-    state => state.currentUser.aiDifferentiationEnabled
-  );
-
   const teacherAiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
@@ -322,13 +318,12 @@ const TeacherNavigationBar: React.FC<{
         />
         {navbarComponents.map(component => component)}
       </div>
-      {aiDifferentiationEnabled &&
-        experiments.isEnabled('ai-differentiation') && (
-          <AiDiffFloatingActionButton
-            context={aiContext()}
-            scriptName={selectedSection?.courseVersionName}
-          />
-        )}
+      {experiments.isEnabled('ai-differentiation') && (
+        <AiDiffFloatingActionButton
+          context={aiContext()}
+          scriptName={selectedSection?.courseVersionName}
+        />
+      )}
     </nav>
   );
 };
