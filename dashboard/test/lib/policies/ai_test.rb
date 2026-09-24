@@ -150,6 +150,30 @@ class Policies::AiTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.ai_differentiation_eligible?' do
+    let(:ai_differentiation_eligible?) {Policies::Ai.ai_differentiation_eligible?(user)}
+
+    it 'returns false when there is no user' do
+      _(Policies::Ai.ai_differentiation_eligible?(nil)).must_equal false
+    end
+
+    context 'when the user is a student' do
+      let(:user) {build_stubbed(:user, user_type: 'student')}
+
+      it 'returns false' do
+        _(ai_differentiation_eligible?).must_equal false
+      end
+    end
+
+    context 'when the user is a teacher who has disabled the ai diff chat preference' do
+      let(:user) {build_stubbed(:user, user_type: 'teacher', ai_differentiation_toggled_off: true)}
+
+      it 'still returns true, since eligibility does not depend on the chat preference' do
+        _(ai_differentiation_eligible?).must_equal true
+      end
+    end
+  end
+
   describe '.ai_differentiation_enabled_for_unit?' do
     let(:ai_differentiation_enabled_for_unit?) {Policies::Ai.ai_differentiation_enabled_for_unit?(unit_input)}
 
