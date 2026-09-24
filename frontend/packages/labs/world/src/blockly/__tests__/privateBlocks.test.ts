@@ -14,8 +14,8 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {parseActorOwnMeta} from '../ownProperties';
 import {buildDomainPalette} from '../domainBlocks';
+import {parseActorOwnMeta} from '../ownProperties';
 
 /** An `.actor` file declaring one block, with the eye as given. */
 const actorFile = (access?: string) =>

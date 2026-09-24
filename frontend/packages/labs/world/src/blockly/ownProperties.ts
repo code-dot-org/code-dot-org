@@ -38,6 +38,7 @@ import type {PropertyType} from '../engine/core/types';
 
 import type {ParamType} from './enums';
 import type {SocketState} from './extensions/blockDesigner';
+import {BLOCK_ACCESS_FIELD, PRIVATE} from './extensions/blockVisibility';
 import {
   designedName,
   propertyDefault,
@@ -50,7 +51,6 @@ import {
   type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
-import {BLOCK_ACCESS_FIELD, PRIVATE} from './extensions/blockVisibility';
 
 /** A block as it appears in a serialized workspace. */
 interface ActorBlock {
