@@ -71,6 +71,14 @@ the screen. The working record, as before.
   elects; a space's camera has no block to elect anything on. The engine
   itself follows `camera.follows` and clamps to the space's bounds, which
   is what the rules do for the world's camera, without the traits.
+
+  _This is a shortcut, and specs/SPACE_CAMERAS_PLAN.md is the plan to remove
+  it._ The clamp here is `Camera Confined`'s step written a second time, and
+  the cost of the shortcut is that a Viewport's camera cannot ease, cannot
+  have a deadzone, cannot have a look offset and cannot be aimed by a block.
+  `camera.follows` on the map is a workaround for a reference that had
+  nowhere else to live, not a design.
+
 - **A space's actors keep their layer** (the world's layers, by id), and the
   space container orders them by layer depth then draw order; backgrounds
   and layers of a space's own are step 4's.
