@@ -207,28 +207,6 @@ class HeaderMiddle extends React.Component {
     };
   }
 
-  // The current level's header label, from the lesson's level summaries.
-  static headerLabelFor(lessonData, currentLevelId) {
-    const level = lessonData?.levels?.find(l =>
-      (l.ids || [l.id]).includes(currentLevelId)
-    );
-    return level?.headerLabel || '';
-  }
-
-  // Where the current level sits among the levels sharing its header label:
-  // its 1-based position and their count. Null when the label covers one level.
-  static subPathProgressFor(levels) {
-    const current = levels?.find(l => l.isCurrentLevel);
-    if (!current?.headerLabel) {
-      return null;
-    }
-    const path = levels.filter(l => l.headerLabel === current.headerLabel);
-    if (path.length < 2) {
-      return null;
-    }
-    return {position: path.indexOf(current) + 1, total: path.length};
-  }
-
   render() {
     const {
       scriptNameData,
@@ -340,11 +318,7 @@ class HeaderMiddle extends React.Component {
               {showBanner ? (
                 <HeaderBanner
                   imageUrl={scriptData.headerBannerImage}
-                  label={HeaderMiddle.headerLabelFor(
-                    lessonData,
-                    currentLevelId
-                  )}
-                  progress={HeaderMiddle.subPathProgressFor(levels)}
+                  levels={levels}
                   width={widths.progress - lessonProgressExtraWidth}
                   setDesiredWidth={width => {
                     this.setDesiredWidth('lessonProgress', width);

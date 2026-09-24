@@ -4,35 +4,54 @@ import React from 'react';
 import HeaderBanner from '@cdo/apps/code-studio/components/header/HeaderBanner';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
-describe('HeaderBanner', () => {
-  it('shows the level label', () => {
-    render(<HeaderBanner imageUrl="/logo.png" label="Story" width={200} />);
-    expect(screen.getByText('Story')).toBeTruthy();
-  });
+// The lesson's levels as getCurrentLevels gives them, with one current.
+const levelsWithCurrent = currentId =>
+  [
+    {id: '1', headerLabel: 'Getting started', status: 'perfect'},
+    {id: '2', headerLabel: 'Story', status: 'passed'},
+    {id: '3', headerLabel: 'Story', status: 'attempted'},
+    {id: '4', headerLabel: 'Story', status: 'not_tried'},
+    {id: '5', status: 'not_tried'},
+  ].map(level => ({...level, isCurrentLevel: level.id === currentId}));
 
-  it("draws a bar filled to the current level's place in the sub-path", () => {
+describe('HeaderBanner', () => {
+  it('shows the current level label and its place in the sub-path', () => {
     render(
       <HeaderBanner
-        label="Story"
+        imageUrl="/logo.png"
+        levels={levelsWithCurrent('3')}
         width={300}
-        progress={{position: 1, total: 4}}
       />
     );
+    expect(screen.getByText('Story')).toBeTruthy();
     const bar = screen.getByRole('progressbar');
-    expect(bar.getAttribute('aria-valuetext')).toBe('Level 1 of 4');
-    expect(bar.firstChild.style.width).toBe('25%');
+    expect(bar.getAttribute('aria-valuetext')).toBe('Level 2 of 3');
+    expect(bar.firstChild.style.width).toBe(`${(100 * 2) / 3}%`);
   });
 
-  it('draws no bar without progress', () => {
-    render(<HeaderBanner label="Story" width={300} />);
+  it('draws no bar when the label covers one level', () => {
+    render(<HeaderBanner levels={levelsWithCurrent('1')} width={300} />);
+    expect(screen.getByText('Getting started')).toBeTruthy();
     expect(screen.queryByRole('progressbar')).toBeNull();
+  });
+
+  it('shows nothing but the logo for a level without a label', () => {
+    render(
+      <HeaderBanner
+        imageUrl="/logo.png"
+        levels={levelsWithCurrent('5')}
+        width={300}
+      />
+    );
+    expect(screen.queryByRole('progressbar')).toBeNull();
+    expect(document.querySelector('#header_banner').textContent).toBe('');
   });
 
   it('reports its natural width', () => {
     const setDesiredWidth = jest.fn();
     render(
       <HeaderBanner
-        label="Story"
+        levels={levelsWithCurrent('2')}
         width={200}
         setDesiredWidth={setDesiredWidth}
       />
@@ -41,49 +60,24 @@ describe('HeaderBanner', () => {
   });
 });
 
-describe('HeaderMiddle.headerLabelFor', () => {
-  const lessonData = {
-    levels: [
-      {id: '1', ids: ['1'], headerLabel: 'Getting started'},
-      {id: '2', ids: ['2', '3']},
-      {id: '4', ids: ['4'], headerLabel: 'Story'},
-    ],
-  };
-
-  it('finds the label of the current level, by any of its ids', () => {
-    expect(HeaderMiddle.headerLabelFor(lessonData, '1')).toBe(
-      'Getting started'
-    );
-    expect(HeaderMiddle.headerLabelFor(lessonData, '4')).toBe('Story');
-  });
-
-  it('is empty for a level without one', () => {
-    expect(HeaderMiddle.headerLabelFor(lessonData, '3')).toBe('');
-    expect(HeaderMiddle.headerLabelFor(undefined, '3')).toBe('');
-  });
-});
-
-describe('HeaderMiddle.subPathProgressFor', () => {
-  const levelsWithCurrent = currentId =>
-    [
-      {id: '1', headerLabel: 'Getting started', status: 'perfect'},
-      {id: '2', headerLabel: 'Story', status: 'passed'},
-      {id: '3', headerLabel: 'Story', status: 'attempted'},
-      {id: '4', headerLabel: 'Story', status: 'not_tried'},
-      {id: '5', status: 'not_tried'},
-    ].map(level => ({...level, isCurrentLevel: level.id === currentId}));
-
+describe('HeaderBanner.subPathFor', () => {
   it('places the current level among those sharing its label', () => {
-    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('3'))).toEqual({
+    expect(HeaderBanner.subPathFor(levelsWithCurrent('3'))).toEqual({
+      label: 'Story',
       position: 2,
       total: 3,
     });
   });
 
-  it('is null when the label covers one level, or the level has none', () => {
-    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('1'))).toBeNull();
-    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('5'))).toBeNull();
-    expect(HeaderMiddle.subPathProgressFor(undefined)).toBeNull();
+  it('gives only the label when it covers one level', () => {
+    expect(HeaderBanner.subPathFor(levelsWithCurrent('1'))).toEqual({
+      label: 'Getting started',
+    });
+  });
+
+  it('is null for a level without a label, or with no levels', () => {
+    expect(HeaderBanner.subPathFor(levelsWithCurrent('5'))).toBeNull();
+    expect(HeaderBanner.subPathFor(undefined)).toBeNull();
   });
 });
 

@@ -26,16 +26,29 @@ const FILL_TRANSITION = window.matchMedia?.('(prefers-reduced-motion: reduce)')
 export default class HeaderBanner extends React.Component {
   static propTypes = {
     imageUrl: PropTypes.string,
-    label: PropTypes.string,
-    /** The current level's place among those under the label, 1-based, and
-        their count; absent for a lone level. */
-    progress: PropTypes.shape({
-      position: PropTypes.number.isRequired,
-      total: PropTypes.number.isRequired,
-    }),
+    /** The lesson's levels with progress, as getCurrentLevels gives them. */
+    levels: PropTypes.array,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
   };
+
+  // Where the current level sits among the levels sharing its header label:
+  // the label, its 1-based position and their count. Position and total are
+  // absent when the label covers one level; all three when it has no label.
+  static subPathFor(levels) {
+    const current = levels?.find(l => l.isCurrentLevel);
+    if (!current?.headerLabel) {
+      return null;
+    }
+    const path = levels.filter(l => l.headerLabel === current.headerLabel);
+    return path.length > 1
+      ? {
+          label: current.headerLabel,
+          position: path.indexOf(current) + 1,
+          total: path.length,
+        }
+      : {label: current.headerLabel};
+  }
 
   componentDidMount() {
     this.setDesiredWidth();
@@ -60,7 +73,10 @@ export default class HeaderBanner extends React.Component {
   }
 
   render() {
-    const {imageUrl, label, progress, width} = this.props;
+    const {imageUrl, levels, width} = this.props;
+    const subPath = HeaderBanner.subPathFor(levels);
+    const label = subPath?.label;
+    const progress = subPath?.total ? subPath : null;
     return (
       <div id="header_banner" style={{width, overflow: 'hidden'}}>
         <div ref="inner" style={styles.banner}>
