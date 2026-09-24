@@ -93,7 +93,9 @@ function renderWorkspace({
 
 describe('QuizAttemptWorkspace', () => {
   beforeEach(() => {
-    jest.resetAllMocks();
+    // clear, not reset: beginAttempt's resolved implementation has to
+    // survive, since a no-intro render calls it from the auto-begin effect.
+    jest.clearAllMocks();
   });
 
   it('shows a loading message while the initial check is in flight', () => {
@@ -337,14 +339,16 @@ describe('QuizAttemptWorkspace', () => {
     ).toHaveFocus();
   });
 
-  it('moves focus to the first question heading once the attempt begins', () => {
+  it('moves focus to the quiz title once the attempt begins without an intro screen', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [question({id: 1, stem: 'Page 1 question', page: 1})],
     });
 
+    // Page 1 without an intro leads with the quiz title, so that heading
+    // is the first one focus can land on.
     expect(
-      screen.getByRole('heading', {name: 'Page 1 question'})
+      screen.getByRole('heading', {name: 'Unit 3 Assessment'})
     ).toHaveFocus();
   });
 
@@ -474,7 +478,12 @@ describe('QuizAttemptWorkspace', () => {
   });
 
   it('does not render the footer outside of an in-progress attempt', () => {
-    renderWorkspace({hookState: {attempt: null}});
+    renderWorkspace({
+      hookState: {
+        attempt: null,
+        beginAttempt: jest.fn().mockResolvedValue(undefined),
+      },
+    });
     expect(
       screen.queryByRole('button', {name: /Next|Submit|Finish/})
     ).not.toBeInTheDocument();
