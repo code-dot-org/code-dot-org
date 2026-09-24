@@ -28,16 +28,31 @@ So a Viewport's camera cannot ease, cannot have a deadzone, cannot have a look
 offset, and cannot be aimed by a block. It can only do the one thing the engine
 hard-codes.
 
-## The mistake underneath it
+## The mistake underneath it: a map does not own logic
 
-`camera.follows` lives on the MAP, and the reason given for that is circular:
-the value is a placement id, and placement ids are local to a map, so the
-reference has to live in the map that owns them. But it is an id BECAUSE it was
-put on the map. `Camera Follow` has no such problem — `actor to follow` holds
-an actor, not a name, and an actor reference cannot dangle the way a name can.
+The duplication above is the symptom. The cause is that `camera.follows` is on
+the MAP at all, and the lab has already settled that question in a neighbouring
+domain.
 
-The real obstacle was never the reference. It was that nothing elected traits
-on a space's camera, so the engine did the work itself.
+specs/MAP_EVENTS_PLAN.md inverted events for three reasons, and the first is
+this one exactly: "A hundred level maps mint a hundred different `complete`
+events. This is the one that matters, and it is not about tidiness." Its
+conclusion generalises past events — a map is "a thing that USES a vocabulary
+declared elsewhere", which places kinds it did not declare and raises events it
+did not mint. A map is data. It does not own the program's logic.
+
+A camera is logic. Where the view looks, how hard it chases, how far it leads
+and what it refuses to leave are decisions about how the game is PLAYED, and a
+hundred level maps should no more each configure a camera than they should each
+declare a `complete`. Today they must: `camera.follows` is a per-map field, so a
+hundred-level game is a hundred places to say "follow the player", and changing
+that decision is a hundred edits.
+
+The reason given for putting it there was circular besides. The value is a
+placement id, and placement ids are local to a map, so the reference had to live
+in the map that owned them — but it is an id BECAUSE it was put on the map.
+`Camera Follow` never had the problem: `actor to follow` holds an actor, and an
+actor reference cannot dangle the way a name can.
 
 ## What is already true
 
@@ -68,14 +83,23 @@ Most of this is subtraction, because the pieces exist:
 
 ## The shape of the answer
 
-- **A world is the root Viewport.** Not a new idea to implement so much as one
-  to stop contradicting: the root is a space with a camera, a Viewport is a
-  space with a camera, and the only difference is that one has an owning actor.
-- **One camera per space, of one kind, found by one collection.** Every camera
-  step runs for every space's camera.
+- **A VIEWPORT decides the camera, and the world is the main Viewport.** The
+  root is a space with cameras and a Viewport is a space with cameras; what is
+  unusual about the world is only that it owns its cameras directly, with no
+  placement standing for it. Say it once in the world and every level it loads
+  is framed that way.
+- **A map has no camera.** It is data: it says where things are, and nothing
+  about how the view behaves. This is the field that comes out.
+- **Cameras are not shared between spaces**, and cannot be. A position belongs
+  to a space — "the only thing between two spaces is nothing at all"
+  (`engine/core/Space`) — so a camera's position means nothing in a space it is
+  not in. A Viewport shows a different scene, so it has its own.
+- **A space may hold SEVERAL cameras**, as the world's `cameraList` already
+  does, with one of them taking the view. A Viewport that wants two framings —
+  a wide shot and a chase — says so where it is placed.
 - **Traits are how a camera gains behaviour, everywhere.** Follow, ease,
-  deadzone and confine reach a Viewport by being elected, not by being
-  reimplemented.
+  deadzone and confine reach a Viewport's camera by being elected on it, not by
+  being reimplemented for it.
 - **A camera that elects nothing looks at the top left of what it shows**, in
   every space alike.
 
@@ -99,69 +123,95 @@ not built and waiting on "the engine's cameras having any". Top left costs
 nothing and fit drags zoom in with it, so fit waits for zoom and is a
 one-property change when zoom lands.
 
-## The open question: how a Viewport's camera gains a trait
+## Where a Viewport's cameras are authored
 
-This is the part the plan proposes rather than settles, because both answers
-work and they say different things about what a camera is.
+WANTING MORE THAN ONE CAMERA PER VIEWPORT SETTLES THIS, and it settles it
+against the cheap answer. Electing the camera traits on the Viewport actor
+itself would have needed no new machinery — a placement already shows a field
+per property of every trait its kind elects — but an actor holds each trait once
+(`has` is a set over traits), so a Viewport could have exactly one framing. Two
+cameras on one Viewport cannot be expressed that way at all.
 
-**Elect on the Viewport.** The camera traits become electable on an actor with
-`Shows a Map`, and the subject their steps act on is that Viewport's space's
-camera. The Enhance row and the placement inspector then work with no new
-machinery at all: a placement shows a field per property of every trait its
-kind elects, so `actor to follow` and `look offset` appear in the inspector the
-day the traits are electable. Cheapest by a wide margin. What it costs is
-honesty about ownership — `actor to follow` reads as a property of the
-Viewport, which is a thing that shows a map, not a thing that looks at one.
+So a camera stays the thing it already is: an object with its own trait set and
+its own property values, owned by a space. What is new is that a Viewport's are
+authored and listed somewhere, and that something says which one takes the view.
 
-**Give `define camera` an owner.** A camera is declared as it is today and says
-which space it is for, so a Viewport's camera is as first-class as the world's
-and `setActiveCamera` could mean something per space. Truer, and more work:
-`define camera` is a world-level block, cameras are held in `cameraList` keyed
-by id alone, and a second camera in a space raises "which one is active here",
-which nothing asks today.
+**The editor surface is the map editor, beside the layers.** A map's layers are
+already a strip of them with add, remove, reorder and select, and an inspector
+for the selected one (`mapEditor/LayerPanel`, `LayerInspector`,
+specs/LAYERS_PLAN.md). Cameras are the same shape of thing — a short list
+belonging to what is being edited, each with properties — so they get the same
+treatment:
 
-**Recommendation: elect on the Viewport**, and say in the block's own
-documentation that the trait is about the view the Viewport shows. The truer
-answer is the one to reach for when a space wants two cameras, and nothing
-wants that yet.
+- On a world's main map, the strip lists the WORLD's cameras.
+- With a Viewport placement selected, it lists that Viewport's.
+- On a level `.map`, there is no strip, because a map has no cameras. That
+  absence is the plan's point made visible.
+
+A camera's inspector is then the Enhance row and a field per property of every
+trait it elects, which is what a placement's inspector already does for an
+actor's traits. `look offset` and `actor to follow` need no bespoke UI.
+
+**Which camera takes the view** is the one thing left open. The world has
+`setActiveCamera(id)`, keyed on id alone and world-wide; per space it wants
+either a Viewport property ("shows through") or a block that names both
+(`take the view of ⟨the Minimap⟩ through ⟨wide⟩`). The property is the smaller
+change and fits the inspector; the block is what a game switching cameras
+mid-play would want. Not settled here — it is the one piece that has no
+precedent to copy, and one camera per space works until somebody adds a second.
 
 ## Order of work
 
-1. **Engine: the collection.** `CameraCollection` walks the root's cameras and
-   every `viewportSpaces[].camera`. Nothing elects anything yet, so no camera
-   step finds a new subject and the suite should not move. Tests: the collection
+1. **Engine: a space holds cameras, and one collection finds them all.**
+   `Space.camera` becomes a list, and `CameraCollection` walks the root's
+   cameras and every space's. Nothing elects anything yet, so no camera step
+   finds a new subject and the suite should not move. Tests: the collection
    answers with a Viewport's camera; `with(trait)` still filters.
 2. **Engine: the queries the steps ask.** `Camera Confined` clamps against the
    map and `take the view` moves the camera; both must answer for the camera's
    own space — the space's bounds, and the Viewport's window rather than the
    world's view. The same treatment `mapSize(actor)` and `mousePosition(actor)`
    already got in specs/VIEWPORT_PLAN.md step 2.
-3. **Rules: elect on the Viewport.** The four camera traits become electable on
-   `Shows a Map`, with the space's camera as their subject. No rule source
-   changes shape; what changes is what may hold the traits. Tests per trait,
-   through a Viewport.
-4. **Delete the duplicate.** `settleSpace`'s follow-and-clamp branch,
+3. **A camera belongs to a space, and is declared against one.** `defineCamera`
+   takes the space it is for, defaulting to the root, so the world's cameras are
+   declared exactly as they are today and a Viewport's are declared at all for
+   the first time. Tests: two cameras in two spaces keep their own traits and
+   their own positions.
+4. **Rules: the traits reach a space's camera.** The four camera traits run for
+   every camera the collection offers. No rule source changes shape — `Follows`
+   already holds an actor and aims a goal — so this is step 1 and 2 paying off.
+   Tests per trait, through a Viewport.
+5. **Delete what the map owned.** `settleSpace`'s follow-and-clamp branch,
    `Space.follows`, `MapDoc.camera`, `withCameraFollows`, the inspector's
-   "Camera follows" field and the tests of each. A Viewport with no camera
-   traits then looks at the top left of what it holds, which is step 5.
-5. **The default.** Every camera with no traits looks at the top left of its
+   "Camera follows" field and the tests of each. A level `.map` then says
+   nothing about cameras, which is the plan's point.
+6. **The default.** Every camera with no traits looks at the top left of its
    space. One change in the engine, and a look at `jetpack` and `meteors` in the
    browser.
-6. **`actor to follow` by kind.** A property type the inspector can offer as a
+7. **Editor: the camera strip.** The world's cameras on a main map, a
+   Viewport's with that placement selected, none on a level `.map` — built the
+   way the layer strip is, with an inspector that is the Enhance row and a field
+   per trait property (`mapEditor/LayerPanel`, `LayerInspector`).
+8. **`actor to follow` by kind.** A property type the inspector can offer as a
    dropdown of the project's actor kinds, so a Viewport's camera can be aimed at
    something inside a map it does not yet hold. Runtime semantics are already
    there; this is a type, a generator case and an inspector field.
-7. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
-   if the inspector's fields move again, and SCROLLING_PLAN on what a camera
-   with no traits now means for a scroll view.
+9. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
+   if the inspector's fields move again, MAP_EVENTS_PLAN's principle extended to
+   cameras, and SCROLLING_PLAN on what a camera with no traits now means for a
+   scroll view.
 
-Steps 1 and 2 are invisible; 3 is where it starts working; 4 is where the lab
-gets smaller. Each its own commit.
+Steps 1 to 3 are invisible; 4 is where it starts working; 5 is where the lab
+gets smaller; 7 is where an author can reach it without writing blocks. Each its
+own commit.
 
 ## What this does not do
 
-- **It does not give a space two cameras**, or `setActiveCamera` a meaning per
-  space. One camera per space, as today.
+- **It does not settle which camera takes the view** when a space has several.
+  A space may HOLD several from step 1; choosing between them wants either a
+  Viewport property or a block that names both, and that is the one piece with
+  no precedent to copy (see "Where a Viewport's cameras are authored"). One
+  camera per space works until somebody adds a second.
 - **It does not add zoom**, so "fit the map to the view" is still out of reach
   and the default is top left.
 - **It does not answer a Viewport inside a loaded map.** Nothing forbids it and

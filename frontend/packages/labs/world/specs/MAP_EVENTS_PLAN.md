@@ -68,6 +68,12 @@ A map is then to events what it already is to actors: a thing that USES a
 vocabulary declared elsewhere, and states its dependency so an importer can
 satisfy it.
 
+The argument generalises past events, and specs/SPACE_CAMERAS_PLAN.md applies it
+to the next field that does not belong on a map: `camera.follows`. Where the view
+looks is logic, a hundred level maps should no more each configure a camera than
+they should each mint a `complete`, and a Viewport — the world being the main one
+— is what decides.
+
 ### A map cannot import a world, so the world registers and the map names
 
 The world loads the map, so a map's module importing the world's is a cycle —
