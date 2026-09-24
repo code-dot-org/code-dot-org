@@ -10,19 +10,20 @@ const IMAGE_SIZE = 32;
 
 /**
  * A unit's logo, the current level's header label and, under the label, a
- * bar of progress through the levels sharing it, in the header slot that
- * otherwise holds the progress bubbles. The two lines sit where the unit
- * name and its saved-at line sit on the left. Reports its natural width to
- * the header the way LessonProgress does, so the header's width budget
- * applies unchanged.
+ * bar showing where the level sits among those sharing it, in the header
+ * slot that otherwise holds the progress bubbles. The two lines sit where
+ * the unit name and its saved-at line sit on the left. Reports its natural
+ * width to the header the way LessonProgress does, so the header's width
+ * budget applies unchanged.
  */
 export default class HeaderBanner extends React.Component {
   static propTypes = {
     imageUrl: PropTypes.string,
     label: PropTypes.string,
-    /** Levels completed and in total under the label; absent for a lone level. */
+    /** The current level's place among those under the label, 1-based, and
+        their count; absent for a lone level. */
     progress: PropTypes.shape({
-      completed: PropTypes.number.isRequired,
+      position: PropTypes.number.isRequired,
       total: PropTypes.number.isRequired,
     }),
     width: PropTypes.number,
@@ -67,15 +68,13 @@ export default class HeaderBanner extends React.Component {
                     role="progressbar"
                     aria-valuemin={0}
                     aria-valuemax={progress.total}
-                    aria-valuenow={progress.completed}
-                    aria-valuetext={`${progress.completed} of ${progress.total} complete`}
+                    aria-valuenow={progress.position}
+                    aria-valuetext={`Level ${progress.position} of ${progress.total}`}
                   >
                     <div
                       style={{
                         ...styles.fill,
-                        width: `${
-                          (100 * progress.completed) / progress.total
-                        }%`,
+                        width: `${(100 * progress.position) / progress.total}%`,
                       }}
                     />
                   </div>

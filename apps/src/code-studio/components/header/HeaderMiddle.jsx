@@ -5,7 +5,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {isLevelStatusCompleted} from '@cdo/apps/templates/progress/progressHelpers';
 
 import LessonProgress from '../progress/LessonProgress';
 
@@ -216,8 +215,8 @@ class HeaderMiddle extends React.Component {
     return level?.headerLabel || '';
   }
 
-  // Progress through the levels that share the current level's header label,
-  // as completed and total counts. Null when the label covers one level.
+  // Where the current level sits among the levels sharing its header label:
+  // its 1-based position and their count. Null when the label covers one level.
   static subPathProgressFor(levels) {
     const current = levels?.find(l => l.isCurrentLevel);
     if (!current?.headerLabel) {
@@ -227,10 +226,7 @@ class HeaderMiddle extends React.Component {
     if (path.length < 2) {
       return null;
     }
-    return {
-      completed: path.filter(l => isLevelStatusCompleted(l.status)).length,
-      total: path.length,
-    };
+    return {position: path.indexOf(current) + 1, total: path.length};
   }
 
   render() {

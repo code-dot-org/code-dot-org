@@ -10,16 +10,16 @@ describe('HeaderBanner', () => {
     expect(screen.getByText('Story')).toBeTruthy();
   });
 
-  it('draws a bar filled to the completed share of the sub-path', () => {
+  it("draws a bar filled to the current level's place in the sub-path", () => {
     render(
       <HeaderBanner
         label="Story"
         width={300}
-        progress={{completed: 1, total: 4}}
+        progress={{position: 1, total: 4}}
       />
     );
     const bar = screen.getByRole('progressbar');
-    expect(bar.getAttribute('aria-valuetext')).toBe('1 of 4 complete');
+    expect(bar.getAttribute('aria-valuetext')).toBe('Level 1 of 4');
     expect(bar.firstChild.style.width).toBe('25%');
   });
 
@@ -73,9 +73,9 @@ describe('HeaderMiddle.subPathProgressFor', () => {
       {id: '5', status: 'not_tried'},
     ].map(level => ({...level, isCurrentLevel: level.id === currentId}));
 
-  it('counts the completed levels among those sharing the current label', () => {
+  it('places the current level among those sharing its label', () => {
     expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('3'))).toEqual({
-      completed: 1,
+      position: 2,
       total: 3,
     });
   });
