@@ -1,6 +1,13 @@
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {
+  sendStartedReportIfNotStarted,
+  sendSuccessReportForLevel,
+} from '@cdo/apps/code-studio/progressRedux';
+import {AppName} from '@cdo/apps/lab2/types';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
 import {QuizQuestionSummary, toBool} from '../types';
 
 import AttemptCard from './AttemptCard';
@@ -13,6 +20,7 @@ import styles from './quiz-attempt-workspace.module.scss';
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
+  appName: AppName;
   // Levelbuilders may leave displayName blank - falls back to this.
   levelName: string;
   // Attempt tracking only applies inside a unit.
@@ -28,6 +36,7 @@ export interface QuizAttemptWorkspaceProps {
 const QuizAttemptWorkspace: React.FunctionComponent<
   QuizAttemptWorkspaceProps
 > = ({
+  appName,
   levelId,
   levelName,
   unitId,
@@ -38,6 +47,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   timeLimitMinutes,
   showIntroScreen,
 }) => {
+  const dispatch = useAppDispatch();
   const {
     attempt,
     isLoading,
@@ -70,6 +80,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   const questionsRef = useRef<HTMLDivElement>(null);
   const submittedRef = useRef<HTMLDivElement>(null);
+  // Quiz views stay mounted across same-lab navigation, so a begin/finish
+  // request can resolve after a different level is already current.
+  // Gate progress reporting on this level instead.
+  const currentLevelKeyRef = useRef(levelId);
+  useEffect(() => {
+    currentLevelKeyRef.current = levelId;
+  }, [levelId]);
   const introRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -110,16 +127,24 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   }, [attempt?.submittedAt]);
 
   const handleBeginAttempt = async () => {
+    const requestLevelId = levelId;
     try {
       await beginAttempt();
+      if (currentLevelKeyRef.current === requestLevelId) {
+        dispatch(sendStartedReportIfNotStarted(appName));
+      }
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
   };
 
   const handleFinishAttempt = async () => {
+    // Targets the level the attempt was for, not whichever quiz is current
+    // by the time this resolves.
+    const requestLevelId = levelId;
     try {
       await finishAttempt();
+      dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName));
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }

@@ -2,6 +2,10 @@ import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  sendStartedReportIfNotStarted,
+  sendSuccessReportForLevel,
+} from '@cdo/apps/code-studio/progressRedux';
 import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
@@ -9,6 +13,28 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
+
+const mockDispatch = jest.fn();
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  useAppDispatch: () => mockDispatch,
+}));
+
+jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
+  sendSuccessReportForLevel: jest.fn((levelId, appName) => ({
+    type: 'SEND_SUCCESS_REPORT_FOR_LEVEL',
+    levelId,
+    appName,
+  })),
+  sendStartedReportIfNotStarted: jest.fn(appName => ({
+    type: 'SEND_STARTED_REPORT',
+    appName,
+  })),
+}));
+const mockSendSuccessReportForLevel = jest.mocked(sendSuccessReportForLevel);
+const mockSendStartedReportIfNotStarted = jest.mocked(
+  sendStartedReportIfNotStarted
+);
 
 const ATTEMPT: QuizAttemptData = {
   id: 1,
@@ -81,6 +107,7 @@ function renderWorkspace({
   return render(
     <QuizAttemptWorkspace
       levelId={42}
+      appName="quiz"
       levelName="quiz-level-name"
       unitId={unitId ?? undefined}
       quizQuestions={quizQuestions}
@@ -93,6 +120,22 @@ function renderWorkspace({
 
 describe('QuizAttemptWorkspace', () => {
   beforeEach(() => {
+    jest.resetAllMocks();
+    // Restore inert thunk substitutes because resetAllMocks removes module mock implementations.
+    mockSendSuccessReportForLevel.mockImplementation(
+      (levelId, appName) =>
+        ({
+          type: 'SEND_SUCCESS_REPORT_FOR_LEVEL',
+          levelId,
+          appName,
+        } as unknown as ReturnType<typeof sendSuccessReportForLevel>)
+    );
+    mockSendStartedReportIfNotStarted.mockImplementation(
+      appName =>
+        ({type: 'SEND_STARTED_REPORT', appName} as unknown as ReturnType<
+          typeof sendStartedReportIfNotStarted
+        >)
+    );
     // clear, not reset: beginAttempt's resolved implementation has to
     // survive, since a no-intro render calls it from the auto-begin effect.
     jest.clearAllMocks();
@@ -187,6 +230,23 @@ describe('QuizAttemptWorkspace', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
     expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it('reports the level as started once the attempt begins, so an unsubmitted attempt still shows progress', async () => {
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: null, beginAttempt},
+      showIntroScreen: true,
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
+
+    await waitFor(() =>
+      expect(mockSendStartedReportIfNotStarted).toHaveBeenCalledWith('quiz')
+    );
+    expect(mockDispatch).toHaveBeenCalledWith(
+      mockSendStartedReportIfNotStarted.mock.results[0].value
+    );
   });
 
   it('shows the score and a Retake button once submitted and retakeable', () => {
@@ -375,6 +435,23 @@ describe('QuizAttemptWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
 
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
+  });
+
+  it('reports success for this level once the attempt is submitted, so the progress bubble updates even if the student has since navigated on', async () => {
+    const finishAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: ATTEMPT, finishAttempt},
+      quizQuestions: [question({id: 1, page: 1})],
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+    await waitFor(() =>
+      expect(mockSendSuccessReportForLevel).toHaveBeenCalledWith('42', 'quiz')
+    );
+    expect(mockDispatch).toHaveBeenCalledWith(
+      mockSendSuccessReportForLevel.mock.results[0].value
+    );
   });
 
   it('labels the last-page button Submit when the quiz allows only one attempt', () => {
