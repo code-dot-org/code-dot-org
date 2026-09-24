@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton, Typography} from '@mui/material';
 import React, {FC, useCallback, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
@@ -81,12 +82,14 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.inner}>
-        <h2 className={styles.heading}>Choose your challenge</h2>
+        <Typography component="h2" className={styles.heading}>
+          Choose your challenge
+        </Typography>
 
         <div className={styles.section}>
-          <p className={styles.sectionLabel}>
+          <Typography className={styles.sectionLabel}>
             How do you want to create today?
-          </p>
+          </Typography>
           <div className={styles.modalityRow}>
             {MODALITIES.map(m => {
               const isActive = modality === m.id;
@@ -122,60 +125,60 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
         {modality && (
           <div className={styles.challengeCarousel}>
             {hasMultiple && (
-              <button
-                type="button"
+              <IconButton
                 className={styles.carouselButton}
                 onClick={goPrev}
                 aria-label="Previous challenge"
               >
                 <FontAwesomeV6Icon iconName="angle-left" />
-              </button>
+              </IconButton>
             )}
             {loadFailed || !currentChallenge ? (
-              <p className={styles.emptyState}>
+              <Typography className={styles.emptyState}>
                 No challenges available for this mode.
-              </p>
+              </Typography>
             ) : (
               <div className={styles.challengeCard}>
                 <div className={styles.challengeCardText}>
-                  <p className={styles.challengeCardOverline}>Your Challenge</p>
-                  <p className={styles.challengeCardBody}>
+                  <Typography className={styles.challengeCardOverline}>
+                    Your Challenge
+                  </Typography>
+                  <Typography className={styles.challengeCardBody}>
                     {currentChallenge.question}
-                  </p>
+                  </Typography>
                 </div>
                 <div className={styles.challengeCardCta}>
-                  <button
-                    type="button"
+                  <MuiButton
+                    variant="contained"
                     className={styles.startButton}
                     onClick={() =>
                       challengeSetCallback(currentChallenge, modality)
                     }
                   >
                     Start challenge
-                  </button>
+                  </MuiButton>
                 </div>
               </div>
             )}
             {hasMultiple && (
-              <button
-                type="button"
+              <IconButton
                 className={styles.carouselButton}
                 onClick={goNext}
                 aria-label="Next challenge"
               >
                 <FontAwesomeV6Icon iconName="angle-right" />
-              </button>
+              </IconButton>
             )}
           </div>
         )}
 
-        <button
-          type="button"
+        <MuiButton
+          variant="text"
           className={styles.reviewLink}
           onClick={() => navigate('/intervention')}
         >
           I want to review instead
-        </button>
+        </MuiButton>
       </div>
     </div>
   );

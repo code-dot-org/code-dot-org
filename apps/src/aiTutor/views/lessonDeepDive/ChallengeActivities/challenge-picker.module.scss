@@ -17,6 +17,31 @@
   width: 600px;
   max-width: 100%;
   padding: 40px 0;
+
+  // MuiButton variant="text" — nested for specificity over MUI root class
+  .reviewLink {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #f1f2f4;
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+    text-transform: none;
+
+    &:hover {
+      background: none;
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #2b1e9f;
+      outline-offset: 2px;
+    }
+  }
 }
 
 // ── Heading ────────────────────────────────────────────────────────────────
@@ -117,29 +142,27 @@
   align-items: center;
   gap: 8px;
   width: 100%;
-}
 
-.carouselButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  background: transparent;
-  border: 1px solid #4b5258;
-  border-radius: 999px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
+  // MUI IconButton — nested for specificity over MUI root class
+  .carouselButton {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid #4b5258;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0;
 
-  &:hover {
-    background: rgb(255 255 255 / 0.1);
-  }
+    &:hover {
+      background: rgb(255 255 255 / 0.1);
+    }
 
-  &:focus-visible {
-    outline: 2px solid #2b1e9f;
-    outline-offset: 2px;
+    &:focus-visible {
+      outline: 2px solid #2b1e9f;
+      outline-offset: 2px;
+    }
   }
 }
 
@@ -184,31 +207,28 @@
 .challengeCardCta {
   display: flex;
   justify-content: center;
-}
 
-.startButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  padding: 8px 14px;
-  background: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  color: #121212;
-  cursor: pointer;
-  white-space: nowrap;
+  // MUI Button variant="contained" — nested for specificity over MUI root class
+  .startButton {
+    height: 40px;
+    padding: 8px 14px;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #121212;
+    white-space: nowrap;
+    text-transform: none;
 
-  &:hover {
-    background: #e8e8e8;
-  }
+    &:hover {
+      background: #e8e8e8;
+    }
 
-  &:focus-visible {
-    outline: 2px solid #2b1e9f;
-    outline-offset: 2px;
+    &:focus-visible {
+      outline: 2px solid #2b1e9f;
+      outline-offset: 2px;
+    }
   }
 }
 
@@ -221,25 +241,4 @@
   color: #9ea5ad;
   text-align: center;
   margin: 0;
-}
-
-// ── Footer link ─────────────────────────────────────────────────────────────
-
-.reviewLink {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  color: #f1f2f4;
-  text-decoration: underline;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-
-  &:focus-visible {
-    outline: 2px solid #2b1e9f;
-    outline-offset: 2px;
-  }
 }
