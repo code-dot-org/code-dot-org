@@ -1,7 +1,8 @@
 # One kind of camera, in every space
 
-STATUS: BUILDING. Steps 1 to 6 are in — and step 6 is where the lab got smaller.
-A map says nothing about a camera any more. Steps 1 to 4 are — a space holds cameras, one collection
+STATUS: BUILDING. Steps 1 to 7 are in — step 6 is where the lab got smaller (a
+map says nothing about a camera any more) and step 7 turned out to be a
+correction to this document rather than a change to the engine. Steps 1 to 4 are — a space holds cameras, one collection
 finds them all, each knows its space, one may be declared against a space that
 does not exist yet, and a Viewport says which of its own it shows through. Step
 5 proved a camera trait reaches a space's camera, and step 6 deleted the engine
@@ -130,17 +131,22 @@ Most of this is subtraction, because the pieces exist:
 
 ## The default, and why top left
 
-Today a camera rests at the middle of its view: the root's `main` camera is
-made at `view/2`, and a Viewport's at the middle of its window. A camera that
-elects nothing therefore shows the middle of the first screenful, which is the
-right shape for a level a player walks around and the wrong one for a map you
-are looking AT — the same distinction `ViewportScrollProperty` already draws
-between a camera's middle and a scroll offset (specs/SCROLLING_PLAN.md).
+**CORRECTED IN BUILDING, step 7: it was already top left, and this section had
+it wrong.** A camera rests at the middle of its view — the root's `main` at
+`view/2`, a Viewport's at the middle of its window — and a camera's position IS
+the middle of the view, so one resting half a view in frames the first screenful
+from the corner. Measured: a camera-less world shows from (0, 0), before and
+after `set size of view`, which sweeps a camera still standing where it was
+declared so the framing survives a resize.
 
-Top left is the default this proposes, uniformly. It is a visible change for
-every project with no camera of its own, and the fixtures that deliberately
-have none are the check: `fixtures/jetpack` ("there is no camera in this
-project at all") and `fixtures/meteors`.
+The draft read that as "shows the middle of the first screenful" and proposed
+changing it. There was nothing to change. What the step turned into was four
+assertions, because the behaviour was right and nothing said so — which is how a
+plan came to argue with it.
+
+So: **top left, uniformly, and already true.** No visible change, and the look at
+`fixtures/jetpack` and `fixtures/meteors` the draft asked for is unnecessary —
+nothing moved.
 
 **Fitting the map to the view is NOT proposed here**, though it is the other
 sensible default, because it needs zoom — which specs/VIEWPORT_PLAN.md lists as
@@ -251,8 +257,9 @@ point at which it has earned itself, and the next one should build it instead.
    "Camera follows" field and the tests of each. A level `.map` then says
    nothing about cameras, which is the plan's point.
 7. **The default.** Every camera with no traits looks at the top left of its
-   space. One change in the engine, and a look at `jetpack` and `meteors` in the
-   browser.
+   space — WHICH IT ALREADY DID. No engine change; four assertions instead, and
+   a correction to the section above, which had described the existing behaviour
+   wrongly and proposed changing it to itself.
 8. **Blocks: `define camera ⟨wide⟩ of ⟨the Minimap⟩`.** The engine takes a
    space's name from step 3 and nothing writes one yet. The owner is a socket
    rather than a dropdown for the reason a Viewport's `map` is a value: the

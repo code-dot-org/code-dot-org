@@ -819,3 +819,56 @@ describe('what the engine does to a camera a trait has aimed', () => {
     );
   });
 });
+
+describe('what a camera that elects nothing looks at', () => {
+  // THE TOP LEFT OF WHAT IT SHOWS, in every space alike — and it already did.
+  // specs/SPACE_CAMERAS_PLAN.md proposed changing the default to this and was
+  // describing the existing behaviour by mistake: a camera's position is the
+  // MIDDLE of the view, so one resting half a view in frames the first
+  // screenful from the corner. Nothing asserted it, which is how the plan came
+  // to argue with it, so these are the assertions.
+
+  /** Where the top-left corner of the view sits, given a camera and a window. */
+  const shows = (at: Vector, view: Vector) =>
+    new Vector(at.x - view.x / 2, at.y - view.y / 2);
+
+  it('is the corner of the world, for the world’s own camera', () => {
+    const world = makeWorld();
+    expect(shows(world.activeCamera().position, world.viewSize())).toEqual(
+      new Vector(0, 0),
+    );
+  });
+
+  it('stays the corner when the world says how wide it is', () => {
+    // `set size of view` sweeps a camera that is still where it was declared,
+    // so the framing survives a resize rather than jumping a quarter of a level.
+    const world = makeWorld();
+    world.setViewSize(26, 16);
+    expect(shows(world.activeCamera().position, world.viewSize())).toEqual(
+      new Vector(0, 0),
+    );
+  });
+
+  it('is the corner of the space, for a Viewport’s camera', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    expect(shows(camera.position, world.viewSize(camera))).toEqual(
+      new Vector(0, 0),
+    );
+  });
+
+  it('is still the corner after a tick, which is what settles a space', () => {
+    // A scroll of nothing is the corner, and that is what the engine writes when
+    // a camera elects nothing (specs/SPACE_CAMERAS_PLAN.md step 6).
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+    world.tick(0);
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    expect(shows(camera.position, world.viewSize(camera))).toEqual(
+      new Vector(0, 0),
+    );
+  });
+});
