@@ -749,6 +749,7 @@ describe('progressReduxTest', () => {
                 path: 's/course3/lessons/1/levels/3/sublevel/1',
                 parentLevelId: '322',
                 navigationType: 'next_level',
+                headerLabel: undefined,
               },
               {
                 id: '10302',
@@ -778,6 +779,7 @@ describe('progressReduxTest', () => {
                 path: 's/course3/lessons/1/levels/3/sublevel/2',
                 parentLevelId: '322',
                 navigationType: 'parent',
+                headerLabel: undefined,
               },
             ],
           },
