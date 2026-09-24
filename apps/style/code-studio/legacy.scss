@@ -1442,6 +1442,10 @@ $default-modal-width: 640px;
       padding-right: 5px;
     }
   }
+  // On the wrapper, .header_text's overflow only clips the save-error badge.
+  .project_name_wrapper.header_text {
+    overflow: visible;
+  }
   .project_name_wrapper .header_text {
     float: left;
     clear: left;

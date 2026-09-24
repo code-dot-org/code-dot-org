@@ -5,7 +5,7 @@ wrong 'To store large amounts of data for later retrieval'
 right 'To make accurate predictions based on inputs'
 wrong 'To present raw data in more practical forms for a user to interpret'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is the purpose of a machine learning model?

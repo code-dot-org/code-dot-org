@@ -42,10 +42,8 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
       <WithConditionalTooltip
         showTooltip={shouldShowTooltip}
         tooltipProps={{
-          text: tooltipMessage || '',
-          direction: 'onTop',
-          tooltipId: 'continue-button-tooltip',
-          size: 'xs',
+          title: tooltipMessage || '',
+          id: 'continue-button-tooltip',
         }}
       >
         <MuiButton

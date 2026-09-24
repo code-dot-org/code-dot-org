@@ -54,9 +54,11 @@ Dashboard::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  # See stack traces around SQL queries in the log. Off by default because it
-  # slows things down.
-  ActiveRecordQueryTrace.enabled = false
+  # See stack traces around SQL queries in the log. Off by default (the gem's
+  # own default) because it slows things down. The gem lives in the
+  # development/test Gemfile group, which the cdo-rails image excludes, so an
+  # unconditional reference raises NameError on the k8s test tier.
+  # ActiveRecordQueryTrace.enabled = true if defined?(ActiveRecordQueryTrace)
 
   # Explicitly set legacy test-order behavior in Rails 4.2.
   # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases

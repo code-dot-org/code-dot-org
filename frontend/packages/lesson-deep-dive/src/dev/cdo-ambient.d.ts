@@ -4,15 +4,16 @@
 //
 // STUB — no business logic. Keep the surface to what src/dev/ actually uses.
 
-declare module '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer' {
+declare module '@cdo/apps/aiTutor/views/TutorApp' {
   import type {FC} from 'react';
 
   import type {RailsLessonDeepDiveData} from './fixtures';
 
-  const LessonDeepDiveContainer: FC<{
-    lessonDeepDiveData: RailsLessonDeepDiveData;
+  const TutorApp: FC<{
+    lessonDeepDiveData: RailsLessonDeepDiveData | null;
+    tutorGalleryData: null;
   }>;
-  export default LessonDeepDiveContainer;
+  export default TutorApp;
 }
 
 declare module '@cdo/apps/util/createReactRoot' {
@@ -23,4 +24,13 @@ declare module '@cdo/apps/util/createReactRoot' {
     container: Element | string,
     options?: {legacyReactDomRender?: boolean},
   ): void;
+}
+
+declare module '@cdo/apps/aiTutor/views/gallery/ChallengeGallery' {
+  import type {FC} from 'react';
+
+  import type {TutorGalleryData} from './galleryFixtures';
+
+  const ChallengeGallery: FC<{tutorGalleryData: TutorGalleryData}>;
+  export default ChallengeGallery;
 }

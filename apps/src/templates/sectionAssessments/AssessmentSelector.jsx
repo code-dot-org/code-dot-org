@@ -4,8 +4,6 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
-import styles from './assessmentSelector.module.scss';
-
 export default class AssessmentSelector extends Component {
   static propTypes = {
     assessmentList: PropTypes.array.isRequired,
@@ -27,12 +25,10 @@ export default class AssessmentSelector extends Component {
         id="assessment-selector"
         name="assessment-selector"
         labelText={i18n.selectAssessment()}
-        isLabelVisible={false}
         selectedValue={assessmentId?.toString()}
         onChange={event => onChange(parseInt(event.target.value))}
         items={dropdownItems}
         size="s"
-        className={styles.assessmentSelector}
         dropdownTextThickness="thin"
         color="gray"
       />

@@ -6,7 +6,12 @@
   its own module is what keeps that from being an import cycle.
 */
 
-import {ClassificationTrainer, RegressionTrainer} from '../constants';
+import {
+  ClassificationTrainer,
+  RegressionTrainer,
+  TreeClassificationTrainer,
+  TreeRegressionTrainer,
+} from '../constants';
 import {isRegression} from '../helpers/columnDetails';
 import type {RootState} from '../redux';
 
@@ -19,10 +24,20 @@ const idsByFamily: Record<
   {classify: TrainerId; regress: TrainerId}
 > = {
   knn: {classify: ClassificationTrainer, regress: RegressionTrainer},
+  decisionTree: {
+    classify: TreeClassificationTrainer,
+    regress: TreeRegressionTrainer,
+  },
 };
 
-// Reads no level configuration yet, so every level gets the default family.
+export function getTrainerFamily(state: RootState): TrainerFamily {
+  const family = state.mode?.trainer;
+  return typeof family === 'string' && Object.hasOwn(idsByFamily, family)
+    ? family
+    : DEFAULT_TRAINER_FAMILY;
+}
+
 export function getTrainerId(state: RootState): TrainerId {
-  const ids = idsByFamily[DEFAULT_TRAINER_FAMILY];
+  const ids = idsByFamily[getTrainerFamily(state)];
   return isRegression(state) ? ids.regress : ids.classify;
 }

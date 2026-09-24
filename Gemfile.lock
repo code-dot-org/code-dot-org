@@ -222,7 +222,7 @@ GEM
     annotaterb (4.20.0)
       activerecord (>= 6.0.0)
       activesupport (>= 6.0.0)
-    ansi (1.5.0)
+    ansi (1.6.0)
     ast (2.4.2)
     async (1.32.1)
       console (~> 1.10)
@@ -230,8 +230,6 @@ GEM
       timers (~> 4.1)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
-    autoprefixer-rails (10.4.21.0)
-      execjs (~> 2)
     aws-eventstream (1.4.0)
     aws-google (0.2.4)
       aws-sdk-core (~> 3.211)
@@ -335,9 +333,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
     brakeman (4.5.0)
     builder (3.2.4)
     camertron-eprun (1.1.1)
@@ -424,7 +419,6 @@ GEM
     erubi (1.12.0)
     ethon (0.15.0)
       ffi (>= 1.15.0)
-    execjs (2.7.0)
     exifr (1.2.5)
     eyes_core (6.10.1)
       eyes_universal (= 4.59.1)
@@ -635,7 +629,7 @@ GEM
     minitest-rails (7.0.1)
       minitest (~> 5.10)
       railties (~> 7.0.0)
-    minitest-reporters (1.2.0)
+    minitest-reporters (1.6.1)
       ansi
       builder
       minitest (>= 5.0)
@@ -1243,7 +1237,6 @@ DEPENDENCIES
   benchmark-ips
   better_errors (>= 2.7.0)
   bootsnap (>= 1.14.0)
-  bootstrap-sass (~> 3.4.1)
   brakeman
   cancancan (~> 3.5.0)
   cdo_contentful!
@@ -1307,7 +1300,7 @@ DEPENDENCIES
   minitest (~> 5.15)
   minitest-around
   minitest-rails (~> 7.0)
-  minitest-reporters (~> 1.2.0.beta3)
+  minitest-reporters (~> 1.6.1)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
   mocha (~> 2.2.0)
