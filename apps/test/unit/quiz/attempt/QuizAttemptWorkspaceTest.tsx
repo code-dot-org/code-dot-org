@@ -294,6 +294,23 @@ describe('QuizAttemptWorkspace', () => {
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
   });
 
+  it('sends the currently selected choices when finishing', async () => {
+    const finishAttempt = jest.fn().mockResolvedValue(undefined);
+    const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+      quizQuestions: [question({id: 5, page: 1})],
+    });
+
+    fireEvent.click(screen.getByRole('radio', {name: /8/}));
+    await waitFor(() => expect(submitQuestionResponse).toHaveBeenCalled());
+    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+    await waitFor(() =>
+      expect(finishAttempt).toHaveBeenCalledWith({5: {selectedChoiceId: 'b'}})
+    );
+  });
+
   it('labels the last-page button Submit when the quiz allows only one attempt', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT},

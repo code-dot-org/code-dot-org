@@ -58,19 +58,24 @@ class QuizAttemptsController < ApplicationController
     attempt = QuizAttempt.find(params[:id])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
 
+    # The client's current answer for each question it's answered - this
+    # wins over what was autosaved.
+    submitted_responses = params[:responses].is_a?(ActionController::Parameters) ? params[:responses].permit!.to_h : {}
+
     # Locks the same quiz_attempts row QuizQuestionResponsesController#create locks.
     attempt.with_lock do
       if attempt.submitted_at.nil?
         # Only questions on this quiz count.
         in_quiz_question_ids = attempt.level&.question_ids || []
-        responses_by_question_id = attempt.quiz_question_responses.
+        stored_responses_by_question_id = attempt.quiz_question_responses.
           where(quiz_question_id: in_quiz_question_ids).
           index_by(&:quiz_question_id)
 
         # Re-save every response, not just missing ones - submit is the
         # authoritative grade regardless of any earlier per-question write.
         QuizQuestion.where(id: in_quiz_question_ids).find_each do |question|
-          response_data = responses_by_question_id[question.id]&.response_data || {}
+          response_data = submitted_responses[question.id.to_s] ||
+            stored_responses_by_question_id[question.id]&.response_data || {}
           grade_and_save_response!(attempt, question, response_data)
         end
 

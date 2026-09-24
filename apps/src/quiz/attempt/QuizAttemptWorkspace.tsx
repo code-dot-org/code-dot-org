@@ -84,8 +84,15 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   };
 
   const handleFinishAttempt = async () => {
+    // Send the student's current answers with submit, so grading is based
+    // on what they see on screen rather than whatever autosave last landed.
+    const responsesByQuestionId = Object.fromEntries(
+      Object.entries(selectedChoicesByQuestionId).map(
+        ([questionId, choiceId]) => [questionId, {selectedChoiceId: choiceId}]
+      )
+    );
     try {
-      await finishAttempt();
+      await finishAttempt(responsesByQuestionId);
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }

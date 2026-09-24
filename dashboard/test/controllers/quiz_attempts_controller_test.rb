@@ -69,7 +69,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal @attempt.id, JSON.parse(response.body)['id']
   end
 
-  test "update re-grades stored responses and only scores questions on the quiz" do
+  test "update re-grades stored responses when none are submitted, and only scores questions on the quiz" do
     # response_data ('b') is correct, but score starts stale at 0 - only
     # re-grading (not just backfilling missing responses) fixes it to 1.
     create(
@@ -101,6 +101,51 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 1, body['maxScore']
     assert_equal 1, @attempt.reload.score
     assert_equal 1, @attempt.max_score
+  end
+
+  test "update grades from the submitted responses, overriding whatever was already stored" do
+    # Autosave stored an old, wrong pick - the client's submitted answer is
+    # what the student actually sees on screen, so that's what should grade.
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'a'},
+      score: 0,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, params: {id: @attempt.id, responses: {@question.id => {selectedChoiceId: 'b'}}}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: @question.id)
+    assert_equal 'b', response.response_data['selectedChoiceId']
+  end
+
+  test "update falls back to stored data for a question missing from the submitted responses" do
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    # responses is present but doesn't mention @question - shouldn't erase it.
+    put :update, params: {id: @attempt.id, responses: {}}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
   end
 
   test "create redirects to sign in when not signed in" do
