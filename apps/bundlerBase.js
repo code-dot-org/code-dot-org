@@ -251,7 +251,6 @@ function makeSplitChunks(appsEntries) {
     return !!name && nodeModulesPattern.test(name);
   };
 
-  // The second arm dedupes common.js without taking lab-only modules.
   const isCodeStudioSharedModule = (module, {chunkGraph}) => {
     let codeStudioCount = 0;
     let totalCount = 0;
@@ -278,7 +277,10 @@ function makeSplitChunks(appsEntries) {
         minChunks: 2,
         chunks: chunk => appsEntryNames.has(chunk.name),
       },
-      // CloudFront does not compress files over 10MB; one chunk outgrew it.
+      // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
+      // "code-studio-common" chunk.
+      // node_modules code goes to code-studio-common-deps instead, because
+      // CloudFront does not compress files over 10MB.
       // A page must load both, or its entry code silently never runs.
       // Groups sharing a chunk name fail with "conflicts with existing chunk".
       'code-studio-common': {
@@ -290,6 +292,29 @@ function makeSplitChunks(appsEntries) {
           isCodeStudioSharedModule(module, context),
         priority: 10,
       },
+      // With just the cacheGroups listed above, we end up with many
+      // duplicate modules between the "common" and "code-studio-common"
+      // chunks. This cache group eliminates some of this duplication
+      // by pulling more modules from "common" into "code-studio-common".
+      //
+      // The use of minChunks provides a guarantee that we don't
+      // unnecessarily move things into "code-studio-common" which are
+      // needed only by appsEntries. This avoids increasing the download
+      // size for code studio pages which include code-studio-common.js
+      // but not common.js.
+      //
+      // There is no converse guarantee that this strategy will eliminate
+      // all duplication between "common" and "code-studio-common".
+      // However, at the time of this writing, bundle analysis indicates
+      // that is currently effective in eliminating any duplication.
+      //
+      // In the future, we want to move toward asynchronous imports, which
+      // allow webpack to manage bundle splitting and sharing behind the
+      // scenes. Once we adopt this approach, the need for predefined
+      // cacheGroups will go away.
+      //
+      // For more information see: https://webpack.js.org/guides/code-splitting/
+      // isCodeStudioSharedModule's second arm now carries that rule.
       'code-studio-common-deps': {
         name: 'code-studio-common-deps',
         minChunks: 2,
