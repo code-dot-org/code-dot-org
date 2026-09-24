@@ -120,6 +120,19 @@ describe('QuizAttemptWorkspace', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('shows a Begin Quiz button to retry when the initial check itself failed', () => {
+    // attempt stays undefined (not null) when the check fails, so the
+    // auto-begin effect never fires - this button is the only way out.
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {error: 'Something went wrong.', beginAttempt},
+    });
+
+    expect(screen.queryByText('Loading…')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
+    expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
   it('shows the intro screen instead of Begin Quiz when the quiz has one', () => {
     const beginAttempt = jest.fn();
     renderWorkspace({

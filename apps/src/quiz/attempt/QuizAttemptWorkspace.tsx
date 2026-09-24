@@ -220,9 +220,21 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             />
           </div>
         ) : !attempt ? (
-          // No intro screen to click through - the effect above starts the
-          // attempt automatically.
-          <Typography variant="body2">Loading…</Typography>
+          // No intro screen to click through - the effect begins the attempt automatically.
+          // This button is only shown if the initial check failed.
+          error ? (
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              type="button"
+              onClick={handleBeginAttempt}
+            >
+              Begin Quiz
+            </MuiButton>
+          ) : (
+            <Typography variant="body2">Loading…</Typography>
+          )
         ) : attempt.submittedAt ? (
           <div ref={submittedRef}>
             <Typography variant="body2" tabIndex={-1}>
