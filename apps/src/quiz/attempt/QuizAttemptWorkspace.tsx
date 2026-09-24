@@ -85,12 +85,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     toBool(showIntroScreen) &&
     (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
 
-  // Retake unmounts the focused button, so hand focus to the intro heading.
+  // Covers both the very first intro screen and Retake reopening it - either
+  // way, the button that led here is gone, so hand focus to the heading.
   useEffect(() => {
-    if (isRetakeIntroOpen) {
+    if (isIntroOpen) {
       introRef.current?.querySelector<HTMLElement>('h2')?.focus();
     }
-  }, [isRetakeIntroOpen]);
+  }, [isIntroOpen]);
 
   // Focus on the new page's heading when navigating to a new page.
   useEffect(() => {
