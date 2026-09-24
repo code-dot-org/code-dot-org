@@ -24,6 +24,7 @@ import {
   generateCharacterSet,
 } from '../ai/images/characterSet';
 import {
+  adlibForModel,
   ImageAdlibSet,
   imageAdlibFor,
   imageAdlibId,
@@ -243,8 +244,14 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
 
   // Adlib prompt combos (student form): a sentence with word choices, an
   // alternative to typing. Typed text wins while present.
-  const adlib =
-    adlibSet && !advanced ? imageAdlibFor(imageType, adlibSet) : undefined;
+  // Memoized: a new adlib object rerolls the choices below.
+  const adlib = useMemo(
+    () =>
+      adlibSet && !advanced
+        ? adlibForModel(imageAdlibFor(imageType, adlibSet), modelCard)
+        : undefined,
+    [adlibSet, advanced, imageType, modelCard]
+  );
   const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>({});
   const [adlibText, setAdlibText] = useState('');
   const handleAdlibText = useCallback((text: string) => setAdlibText(text), []);

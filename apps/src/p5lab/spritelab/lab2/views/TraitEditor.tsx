@@ -4,7 +4,11 @@ import React, {useState} from 'react';
 import {setAnimationTraits} from '@cdo/apps/p5lab/redux/animationList';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ImageAdlibSet, imageAdlibFor} from '../ai/images/imageAdlibs';
+import {
+  adlibForModel,
+  ImageAdlibSet,
+  imageAdlibFor,
+} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   generateImage,
@@ -65,7 +69,7 @@ const TraitEditor: React.FunctionComponent<TraitEditorProps> = ({
   }
 
   const adlib = adlibSet
-    ? imageAdlibFor(imageType || 'sprite', adlibSet)
+    ? adlibForModel(imageAdlibFor(imageType || 'sprite', adlibSet), modelCard)
     : undefined;
   const {choices, missing} = choicesFromTraits(adlib, modelCard, {
     costumeTraits: traits,

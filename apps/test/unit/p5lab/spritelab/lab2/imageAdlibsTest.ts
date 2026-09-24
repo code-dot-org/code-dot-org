@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 import {
+  adlibForModel,
   adlibSetForModel,
   imageAdlibFor,
   imageAdlibId,
@@ -97,6 +98,24 @@ describe('feature-bound adlib sets', () => {
     expect(adlibSetForModel('sprite', cardFor(datasetId))).toBe(set);
   });
 
+  it('chooses the set for a model trained on only some columns', () => {
+    const card = cardFor('cookie_critic_toy');
+    card!.fields = card!.fields.filter(f =>
+      ['Chocolate Chips', 'Frosting'].includes(f.id)
+    );
+    expect(adlibSetForModel('sprite', card)).toBe('cookies');
+  });
+
+  it.each(BOUND_SETS)('%s ends in its blanks', set => {
+    const {template, features} = imageAdlibFor('sprite', set)!;
+    const tail = template.slice(template.indexOf('{'));
+    const rest = features.reduce(
+      (text, feature) => text.replace(`{${feature}}`, ''),
+      tail
+    );
+    expect(rest).toMatch(/^(,|and|\s)*$/);
+  });
+
   it('chooses nothing for a model no set fits, or no model', () => {
     const card = readModelCard('x', {
       name: 'x',
@@ -106,5 +125,47 @@ describe('feature-bound adlib sets', () => {
     });
     expect(adlibSetForModel('sprite', card)).toBeUndefined();
     expect(adlibSetForModel('sprite', undefined)).toBeUndefined();
+  });
+});
+
+describe('adlibForModel', () => {
+  const cookies = imageAdlibFor('sprite', 'cookies');
+
+  function cardWith(ids: string[]) {
+    const card = cardFor('cookie_critic_toy');
+    card!.fields = card!.fields.filter(f => ids.includes(f.id));
+    return card;
+  }
+
+  it('drops the blanks for features the model lacks', () => {
+    const adlib = adlibForModel(
+      cookies,
+      cardWith(['Chocolate Chips', 'Frosting'])
+    )!;
+    expect(adlib.template).toBe(
+      'A single round cookie on a plate, {Chocolate Chips} and {Frosting}'
+    );
+    expect(adlib.features).toEqual(['Chocolate Chips', 'Frosting']);
+    expect(Object.keys(adlib.options).sort()).toEqual([
+      'Chocolate Chips',
+      'Frosting',
+    ]);
+  });
+
+  it('lists three blanks with a final "and"', () => {
+    expect(
+      adlibForModel(cookies, cardWith(['Raisins', 'Frosting', 'Sprinkles']))!
+        .template
+    ).toBe(
+      'A single round cookie on a plate, {Raisins}, {Frosting}, and {Sprinkles}'
+    );
+  });
+
+  it('returns the same adlib when the model has every feature, or none', () => {
+    expect(adlibForModel(cookies, cardFor('cookie_critic_toy'))).toBe(cookies);
+    expect(adlibForModel(cookies, cardWith([]))).toBe(cookies);
+    expect(adlibForModel(cookies, undefined)).toBe(cookies);
+    const simple = imageAdlibFor('sprite', 'simple');
+    expect(adlibForModel(simple, cardWith(['Raisins']))).toBe(simple);
   });
 });
