@@ -42,12 +42,7 @@ export default class LabMetricsReporter {
   public logError(errorMessage: string, error?: Error, details?: object) {
     const message = {
       errorMessage,
-      // Safari's stack omits the message that V8's starts with, so an error
-      // reported from Safari arrives with no description of what went wrong.
-      error:
-        error?.stack && !error.stack.includes(error.message)
-          ? `${error.message}\n${error.stack}`
-          : error?.stack || error?.message,
+      error: error?.stack || error?.message,
       details,
     };
     MetricsReporter.logError(this.decorateMessage(message));

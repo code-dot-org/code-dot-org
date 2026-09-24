@@ -9,7 +9,6 @@ import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
 import {getExportStyleProperties} from './getExportStyleProperties';
 import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
-import {sanitizeTextForExport} from './sanitizeTextForExport';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
@@ -90,7 +89,6 @@ export const createSketchSnapshotBlob = async (
     viewport,
     scale * pixelRatio
   );
-  const restoreText = sanitizeTextForExport(viewport);
   let blob: Blob | null;
   try {
     blob = await toBlob(viewport, {
@@ -116,7 +114,6 @@ export const createSketchSnapshotBlob = async (
     });
   } finally {
     restoreImageSources();
-    restoreText();
   }
 
   if (!blob) {
