@@ -30,15 +30,20 @@ const unquote = (value: string) => value.trim().replace(/^["']|["']$/g, '');
 const toWeightNumber = (token: string): number =>
   WEIGHT_KEYWORDS.get(token) ?? Number(token);
 
-// A @font-face declares either one weight ("500") or a variable range
-// ("100 900"); an absent declaration means normal.
-const coversWeight = (declared: string, weight: number): boolean => {
-  const bounds = (declared.trim() || 'normal').split(/\s+/).map(toWeightNumber);
+// Whether the rule's font file provides the weight in use. The declaration is
+// one weight ("500"), a variable range ("100 900"), or absent, meaning normal.
+const ruleSupportsWeight = (
+  rule: CSSFontFaceRule,
+  usedWeight: number
+): boolean => {
+  const declared =
+    rule.style.getPropertyValue('font-weight').trim() || 'normal';
+  const bounds = declared.split(/\s+/).map(toWeightNumber);
   if (bounds.some(Number.isNaN)) {
     return false;
   }
   const [low, high = low] = bounds;
-  return weight >= low && weight <= high;
+  return usedWeight >= low && usedWeight <= high;
 };
 
 const normalizeStyle = (declared: string): string => {
@@ -98,7 +103,7 @@ const ruleMatchesFace = (rule: CSSFontFaceRule, face: UsedFontFace): boolean =>
   unquote(rule.style.getPropertyValue('font-family')).toLowerCase() ===
     face.family &&
   normalizeStyle(rule.style.getPropertyValue('font-style')) === face.style &&
-  coversWeight(rule.style.getPropertyValue('font-weight'), face.weight);
+  ruleSupportsWeight(rule, face.weight);
 
 const blobToDataUrl = (blob: Blob): Promise<string> =>
   new Promise((resolve, reject) => {
