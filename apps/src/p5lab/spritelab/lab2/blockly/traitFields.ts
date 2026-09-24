@@ -50,7 +50,7 @@ class PersistentDropdown extends BlocklyCore.FieldDropdown {
 
 // Label is the feature id the student recognises; value is the stripped key
 // that testData needs, so the generator never has to strip it again.
-function traitMenuOptions(this: TraitNameField): [string, string][] {
+function traitMenuOptions(this: BlocklyCore.FieldDropdown): [string, string][] {
   const card = importedCard();
   const options: [string, string][] =
     card && card.fields.length
@@ -74,7 +74,7 @@ export const FIELD_TRAIT_VALUE_TYPE = 'field_spritelab2_trait_value';
  */
 export class TraitValueField extends PersistentDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
-    return new TraitValueField(function (this: TraitValueField) {
+    return new TraitValueField(function (this: BlocklyCore.FieldDropdown) {
       const block = this.getSourceBlock();
       const key = block?.getFieldValue('TRAIT');
       const field = importedCard()?.fields.find(f => f.key === key);
