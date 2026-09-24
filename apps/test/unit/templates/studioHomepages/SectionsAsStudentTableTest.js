@@ -100,8 +100,9 @@ describe('SectionsAsStudentTable', () => {
     expect(wrapper.containsMatchingElement(<td>Google Classroom</td>));
     expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).toBe(false);
     expect(wrapper.containsMatchingElement(<td>Clever</td>));
-    expect(wrapper.containsMatchingElement(<td>ClassLink</td>));
     expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).toBe(false);
+    expect(wrapper.containsMatchingElement(<td>ClassLink</td>));
+    expect(wrapper.containsMatchingElement(<td>OrThisAsWell</td>)).toBe(false);
   });
 
   it('does not show a unit link for a single-unit course', () => {
