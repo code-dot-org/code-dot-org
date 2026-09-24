@@ -3,7 +3,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {
   sendStartedReportIfNotStarted,
-  sendSuccessReport,
+  sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import {AppName} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -139,12 +139,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   };
 
   const handleFinishAttempt = async () => {
+    // Targets the level the attempt was for, not whichever quiz is current
+    // by the time this resolves.
     const requestLevelId = levelId;
     try {
       await finishAttempt();
-      if (currentLevelKeyRef.current === requestLevelId) {
-        dispatch(sendSuccessReport(appName));
-      }
+      dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName));
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
