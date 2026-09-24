@@ -464,6 +464,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
       {!isLast &&
         !isStoryScreen &&
+        currentScreenId !== 'reflection' &&
         currentScreenId !== 'intervention' &&
         currentScreenId !== 'pre-skills-check' &&
         currentScreenId !== 'skills-check' && (

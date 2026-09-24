@@ -20,11 +20,12 @@ import '@code-dot-org/component-library-styles/brandOverrides.css';
 import {CssBaseline, GlobalStyles, ThemeProvider} from '@mui/material';
 import {StrictMode, type ComponentProps} from 'react';
 import {Provider} from 'react-redux';
+import {BrowserRouter} from 'react-router-dom';
 
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
-import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
+import TutorApp from '@cdo/apps/aiTutor/views/TutorApp';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {LESSON_DEEP_DIVE_DATA} from './fixtures';
@@ -85,7 +86,12 @@ async function boot(): Promise<void> {
         <CssBaseline />
         {pageFrame}
         <Provider store={createDevStore()}>
-          <LessonDeepDiveContainer lessonDeepDiveData={LESSON_DEEP_DIVE_DATA} />
+          <BrowserRouter>
+            <TutorApp
+              lessonDeepDiveData={LESSON_DEEP_DIVE_DATA}
+              tutorGalleryData={null}
+            />
+          </BrowserRouter>
         </Provider>
       </ThemeProvider>
     </StrictMode>,

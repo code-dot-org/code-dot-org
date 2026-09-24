@@ -4050,7 +4050,6 @@ __metadata:
   resolution: "@code-dot-org/markdown@portal:../frontend/packages/markdown/::locator=blockly-mooc%40workspace%3A."
   dependencies:
     "@code-dot-org/component-library": "workspace:*"
-    "@code-dot-org/core": "workspace:*"
   peerDependencies:
     "@emotion/react": ^11.0.0
     "@emotion/styled": ^11.0.0
@@ -9553,6 +9552,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-reconciler@npm:^0.28.0, @types/react-reconciler@npm:^0.28.2":
+  version: 0.28.9
+  resolution: "@types/react-reconciler@npm:0.28.9"
+  peerDependencies:
+    "@types/react": "*"
+  checksum: 10/2450e3df6169fb887591f2a949ca8f08439ac76c756124feeee7370f1a79b5060ba8e5f612302dc70169433e043da7f617dd7ea3b14a3c2bb39559d66b7a0986
+  languageName: node
+  linkType: hard
+
 "@types/react-redux@npm:^7.1.20":
   version: 7.1.34
   resolution: "@types/react-redux@npm:7.1.34"
@@ -12090,6 +12098,7 @@ __metadata:
     karma-mocha-reporter: "npm:^2.2.5"
     karma-sourcemap-loader: "npm:^0.4.0"
     karma-webpack: "npm:^5.0.0"
+    konva: "npm:^10.5.0"
     lazysizes: "npm:^4.0.0-rc1"
     load-grunt-tasks: "npm:3.5.0"
     loadable-components: "npm:2.2.3"
@@ -12141,6 +12150,7 @@ __metadata:
     react-idle-timer: "npm:^4.2.7"
     react-inspector: "npm:2.3.1"
     react-is: "npm:^18.3.1"
+    react-konva: "npm:18"
     react-lazy-load: "npm:~3.0.13"
     react-loading-skeleton: "npm:^3.1.0"
     react-motion: "npm:^0.5.2"
@@ -20663,6 +20673,17 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"its-fine@npm:^1.1.1":
+  version: 1.2.5
+  resolution: "its-fine@npm:1.2.5"
+  dependencies:
+    "@types/react-reconciler": "npm:^0.28.0"
+  peerDependencies:
+    react: ">=18.0"
+  checksum: 10/a4f1e3dd5e271e4f78df626cb56279bbddaa5f065d53bb94d266396e1d8d773c8c9ba4ed268c11e15a1879814e7c8ca1601c08759a8d666bdcfee8f4737c54fa
+  languageName: node
+  linkType: hard
+
 "jackspeak@npm:^2.3.5":
   version: 2.3.6
   resolution: "jackspeak@npm:2.3.6"
@@ -21769,6 +21790,21 @@ canvg@gabelerner/canvg:
   version: 0.27.0
   resolution: "known-css-properties@npm:0.27.0"
   checksum: 10/3bb274e0a902887b57b8faa1444e1137191c199bc52e574b5064853bf741321cbe62c09bed52265b80da79e2b69b7cf6e1af1869570f932093711a3926ea9f7b
+  languageName: node
+  linkType: hard
+
+"konva@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "konva@npm:10.5.0"
+  peerDependencies:
+    canvas: ^3.0.0
+    skia-canvas: ^3.0.0
+  peerDependenciesMeta:
+    canvas:
+      optional: true
+    skia-canvas:
+      optional: true
+  checksum: 10/e522faebda78688f377fac011f6aca4cb741b5b2674fb6d9a33c1515274e237fc025a4d7c4b3a95d44f5c9520b3112b446ceae4d747cb3370a8826c7ef353972
   languageName: node
   linkType: hard
 
@@ -26215,6 +26251,22 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"react-konva@npm:18":
+  version: 18.2.16
+  resolution: "react-konva@npm:18.2.16"
+  dependencies:
+    "@types/react-reconciler": "npm:^0.28.2"
+    its-fine: "npm:^1.1.1"
+    react-reconciler: "npm:~0.29.0"
+    scheduler: "npm:^0.23.0"
+  peerDependencies:
+    konva: ^8.0.1 || ^7.2.5 || ^9.0.0 || ^10.0.0
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 10/b251811d900b52d925aba47c24ee57dd12d0f8312e452bdcdd00767eb5ced62a757731b1f8b8b57c38435b5b9a360c8dc638add679c287284d091da0a557b418
+  languageName: node
+  linkType: hard
+
 "react-lazy-load@npm:~3.0.13":
   version: 3.0.13
   resolution: "react-lazy-load@npm:3.0.13"
@@ -26380,6 +26432,18 @@ canvg@gabelerner/canvg:
   peerDependencies:
     react: ">=0.14.0"
   checksum: 10/cddc032f5aa02f9d682626f326d1f0517bfaab97dbf6b7816625d9aa4f4cac57a313d604708849985f97c574189902b4ea677024d7185b4774b9f75f1da188a2
+  languageName: node
+  linkType: hard
+
+"react-reconciler@npm:~0.29.0":
+  version: 0.29.2
+  resolution: "react-reconciler@npm:0.29.2"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.2"
+  peerDependencies:
+    react: ^18.3.1
+  checksum: 10/f9ef98a88ec07efaf520ce4508bc4f499cfbec6c929549b4b802a09c2c7cd1b7b893f197ab0505dc03398a991b4f57d7b6572ae53d2699db74496cadde541cfc
   languageName: node
   linkType: hard
 
