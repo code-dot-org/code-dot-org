@@ -9,6 +9,7 @@ import {
 import aiAnswer from './aiAnswer';
 import askAi from './askAi';
 import chosenSprite from './chosenSprite';
+import featuresOfSprite from './featuresOfSprite';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makeButton from './makeButton';
@@ -68,6 +69,7 @@ const labBlockDefinitions: {
   traitOfSprite,
   predictForSprite,
   predictionOfSprite,
+  featuresOfSprite,
   showText,
   makeButton,
   whenButtonClicked,

@@ -190,18 +190,57 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_featuresOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_askAi",
               "inputs": {
                 "QUESTION": {
                   "block": {
-                    "type": "gamelab_textJoin",
-                    "fields": {
-                      "TEXT1": "What should I do next if the answer is "
+                    "type": "text_join_simple",
+                    "extraState": {
+                      "itemCount": 4
                     },
                     "inputs": {
-                      "TEXT2": {
+                      "ADD0": {
+                        "block": {
+                          "type": "text",
+                          "fields": {
+                            "TEXT": "What should I do next? The answer is "
+                          }
+                        }
+                      },
+                      "ADD1": {
                         "block": {
                           "type": "spritelab2_predictionOfSprite",
+                          "inputs": {
+                            "SPRITE": {
+                              "block": {
+                                "type": "spritelab2_chosenSprite"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "ADD2": {
+                        "block": {
+                          "type": "text",
+                          "fields": {
+                            "TEXT": ". Its features: "
+                          }
+                        }
+                      },
+                      "ADD3": {
+                        "block": {
+                          "type": "spritelab2_featuresOfSprite",
                           "inputs": {
                             "SPRITE": {
                               "block": {
@@ -356,6 +395,13 @@
               "type": "gamelab_textJoin",
               "fields": {
                 "TEXT1": "The answer is "
+              }
+            },
+            {
+              "kind": "block",
+              "type": "text_join_simple",
+              "extraState": {
+                "itemCount": 2
               }
             }
           ]

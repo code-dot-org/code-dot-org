@@ -11,7 +11,12 @@
 import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 
 import {isTrainerSupported, ModelCard} from './modelCard';
-import {buildTestData, TraitValue, TraitValues} from './traitStore';
+import {
+  buildTestData,
+  resolveTrait,
+  TraitValue,
+  TraitValues,
+} from './traitStore';
 
 /** A p5.play sprite, in the parts this file touches. */
 interface TraitSprite {
@@ -62,6 +67,28 @@ export function createTraitCommands(library: TraitLibrary) {
         return own;
       }
       return costumeTraitsFor(library, sprite)?.[key] ?? '';
+    },
+
+    /**
+     * The sprite's feature values as one sentence, for a question to a
+     * generative model: "Leaf Spots is many, Soil Moisture is wet". Names
+     * come from the imported model; unset features are left out.
+     */
+    featuresOfSprite(spriteArg: unknown): string {
+      const sprite = library.getSpriteArray(spriteArg)[0];
+      const card = library.modelCard;
+      if (!sprite || !card) {
+        return '';
+      }
+      const source = {
+        spriteTraits: sprite.traits,
+        costumeTraits: costumeTraitsFor(library, sprite),
+      };
+      return card.fields
+        .map(field => [field.id, resolveTrait(source, field.key)] as const)
+        .filter(([, value]) => value !== undefined)
+        .map(([name, value]) => `${name} is ${value}`)
+        .join(', ');
     },
 
     predictionOfSprite(spriteArg: unknown): string {

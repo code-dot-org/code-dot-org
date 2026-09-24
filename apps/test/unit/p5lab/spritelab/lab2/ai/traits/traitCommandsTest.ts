@@ -162,3 +162,31 @@ describe('predictForSprite', () => {
     expect(s.prediction).toBe('Prediction failed');
   });
 });
+
+describe('featuresOfSprite', () => {
+  it('names each set feature with its value, sprite values first', () => {
+    const a = {...sprite(), traits: {Soilfeel: 'wet'}};
+    const {commands} = makeLibrary([a], {
+      costumeTraits: {basil: {Leafspots: 'many', Soilfeel: 'dry'}},
+    });
+    expect(commands.featuresOfSprite({costume: 'basil'})).toBe(
+      'Leaf spots is many, Soil feel is wet'
+    );
+  });
+
+  it('leaves out features the sprite does not have', () => {
+    const {commands} = makeLibrary([sprite()], {
+      costumeTraits: {basil: {Leafspots: 'few'}},
+    });
+    expect(commands.featuresOfSprite({costume: 'basil'})).toBe(
+      'Leaf spots is few'
+    );
+  });
+
+  it('is empty with no model or no sprite', () => {
+    expect(
+      makeLibrary([sprite()], {card: undefined}).commands.featuresOfSprite({})
+    ).toBe('');
+    expect(makeLibrary([]).commands.featuresOfSprite({})).toBe('');
+  });
+});

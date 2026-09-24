@@ -29,10 +29,10 @@
       "id": "detail",
       "name": "Details"
     },
-    "long_instructions": "# Your app: next steps\nA prediction gives an answer. Next steps say **what to do** about it. A generative AI can write them, but you decide if its answer is good enough.\n\n1. Inside **predict**, add **ask AI**. Ask what to do next, using the prediction. Show the **AI answer**.\n2. Try at least two different questions. Add a feature to the question, or ask for a shorter answer.\n3. For each answer, decide: **accept** it, **revise** your question, or **reject** it. Why?",
+    "long_instructions": "# Your app: next steps\nA prediction gives an answer. Next steps say **what to do** about it. A generative AI can write them, but you decide if its answer is good enough.\n\n1. Inside **predict**, add **ask AI**. Ask what to do next, using the prediction and the **features of** the chosen sprite. Show the **AI answer**.\n2. Try at least two different questions. Take the features out and see what changes, or ask for a shorter answer.\n3. For each answer, decide: **accept** it, **revise** your question, or **reject** it. Why?",
     "guide_steps": [
       {
-        "text": "**Generate.** Inside **predict**, add **ask AI** with a question that uses the prediction, and show the **AI answer**. Change the question at least twice. For each answer, would you **accept**, **revise** or **reject** it? Why?",
+        "text": "**Generate.** Inside **predict**, add **ask AI** with a question that uses the prediction and the **features of** the chosen sprite, and show the **AI answer**. Change the question at least twice. For each answer, would you **accept**, **revise** or **reject** it? Why?",
         "showContinue": true
       }
     ],
@@ -49,14 +49,42 @@
               "inputs": {
                 "QUESTION": {
                   "block": {
-                    "type": "gamelab_textJoin",
-                    "fields": {
-                      "TEXT1": "What should I do next if the answer is "
+                    "type": "text_join_simple",
+                    "extraState": {
+                      "itemCount": 4
                     },
                     "inputs": {
-                      "TEXT2": {
+                      "ADD0": {
+                        "block": {
+                          "type": "text",
+                          "fields": {
+                            "TEXT": "What should I do next? The answer is "
+                          }
+                        }
+                      },
+                      "ADD1": {
                         "block": {
                           "type": "spritelab2_predictionOfSprite",
+                          "inputs": {
+                            "SPRITE": {
+                              "block": {
+                                "type": "spritelab2_chosenSprite"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "ADD2": {
+                        "block": {
+                          "type": "text",
+                          "fields": {
+                            "TEXT": ". Its features: "
+                          }
+                        }
+                      },
+                      "ADD3": {
+                        "block": {
+                          "type": "spritelab2_featuresOfSprite",
                           "inputs": {
                             "SPRITE": {
                               "block": {
@@ -74,6 +102,17 @@
             {
               "kind": "block",
               "type": "spritelab2_aiAnswer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_featuresOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -137,6 +176,13 @@
               "type": "gamelab_textJoin",
               "fields": {
                 "TEXT1": "in one sentence, "
+              }
+            },
+            {
+              "kind": "block",
+              "type": "text_join_simple",
+              "extraState": {
+                "itemCount": 2
               }
             },
             {

@@ -7,6 +7,7 @@ import {
 import {AI_ANSWER_BLOCK_TYPE} from '../blockDefinitions/aiAnswer';
 import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
 import {CHOSEN_SPRITE_BLOCK_TYPE} from '../blockDefinitions/chosenSprite';
+import {FEATURES_OF_BLOCK_TYPE} from '../blockDefinitions/featuresOfSprite';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {MAKE_BUTTON_BLOCK_TYPE} from '../blockDefinitions/makeButton';
@@ -52,6 +53,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     TRAIT_OF_BLOCK_TYPE,
     PREDICT_BLOCK_TYPE,
     PREDICTION_OF_BLOCK_TYPE,
+    FEATURES_OF_BLOCK_TYPE,
     ASK_AI_BLOCK_TYPE,
     AI_ANSWER_BLOCK_TYPE,
   ],
