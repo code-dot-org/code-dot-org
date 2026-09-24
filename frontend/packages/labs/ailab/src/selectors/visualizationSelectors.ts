@@ -7,7 +7,6 @@ import {
 } from '../helpers/columnDetails';
 import {
   buildDisplayTree,
-  isTreeModel,
   type DisplayTreeNode,
   type SerializedTree,
 } from '../helpers/displayTree';
@@ -19,6 +18,7 @@ import {
   getColumnsByDataType,
   getDatasetId,
 } from '../selectors';
+import {getTrainerFamily} from '../trainers/ids';
 import type {
   Coordinate,
   ScatterPlotData,
@@ -240,26 +240,25 @@ export const getUniqueOptionsLabelColumn = createSelector(
 export const getDisplayTree = createSelector(
   [
     (state: RootState) => state.trainedModel,
+    getTrainerFamily,
     (state: RootState) => state.selectedFeatures,
     (state: RootState) => state.featureNumberKey,
     getLabelColumn,
   ],
   (
     trainedModel,
+    trainerFamily,
     features: string[],
     featureNumberKey: Record<string, Record<string, number>>,
     labelColumn: string | undefined,
   ): DisplayTreeNode | undefined => {
-    if (!trainedModel || !labelColumn) {
-      return undefined;
-    }
-    const json = trainedModel.toJSON() as SerializedTree;
-    // Check first: a KNN model's JSON holds its whole training set.
-    if (!isTreeModel(json)) {
+    if (!trainedModel || !labelColumn || trainerFamily !== 'decisionTree') {
       return undefined;
     }
     // The round trip turns ml-matrix distributions into plain arrays.
-    const model = JSON.parse(JSON.stringify(json)) as SerializedTree;
+    const model = JSON.parse(
+      JSON.stringify(trainedModel.toJSON()),
+    ) as SerializedTree;
     return buildDisplayTree(model, {features, featureNumberKey, labelColumn});
   },
 );

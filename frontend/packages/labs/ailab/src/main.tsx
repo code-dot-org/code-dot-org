@@ -1,21 +1,11 @@
 import queryString from 'query-string';
 
-import type {ModelDataToSave, SaveResponse, TrainerFamily} from './types';
+import type {ModelDataToSave, Mode, SaveResponse} from './types';
 
 import {initAll, instructionsDismissed} from './index';
 
-interface SampleMode {
-  datasets?: string[];
-  hideSelectLabel?: boolean;
-  hideSave?: boolean;
-  requireAccuracy?: number;
-  hideInstructionsOverlay?: boolean;
-  randomizeTestData?: boolean;
-  trainer?: TrainerFamily;
-}
-
 // A list of sample modes.  Should match the dropdown in index.html.
-const sampleModes: Record<string, SampleMode> = {
+const sampleModes: Record<string, Mode> = {
   minimal: {
     datasets: ['tacos_toy'],
     hideSelectLabel: true,

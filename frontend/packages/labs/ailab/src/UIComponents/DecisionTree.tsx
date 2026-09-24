@@ -1,5 +1,11 @@
 /* React component to draw the trained decision tree. */
-import {type ReactNode, useMemo} from 'react';
+import {
+  type ReactNode,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {colors, styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -15,18 +21,29 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
-// SVG text does not wrap. Sibling branch labels stay apart at this length.
+// SVG text does not wrap.
 const NODE_TEXT_MAX_LENGTH = 20;
 const BRANCH_TEXT_MAX_LENGTH = 22;
 const BRANCH_LABEL_HEIGHT = 18;
+const BRANCH_LABEL_PADDING = 12;
+// Sibling pills are one column apart; this keeps a gap between them.
+const BRANCH_LABEL_MAX_WIDTH = TREE_NODE_WIDTH;
 const BRANCH_LABEL_CHAR_WIDTH = 7;
 
 function truncate(text: string, maxLength: number): string {
-  return text.length > maxLength ? `${text.slice(0, maxLength - 1)}…` : text;
+  const characters = Array.from(text);
+  return characters.length > maxLength
+    ? `${characters.slice(0, maxLength - 1).join('')}…`
+    : text;
 }
 
 function formatNumber(value: number): string {
   return String(Number(value.toFixed(2)));
+}
+
+// Rounding a threshold can put a row on the wrong side of it.
+function formatThreshold(value: number): string {
+  return String(Number(value.toPrecision(12)));
 }
 
 function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
@@ -35,6 +52,55 @@ function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   const endX = child.x + TREE_NODE_WIDTH / 2;
   return `M ${startX} ${startY} V ${startY + TREE_ROW_GAP / 2} H ${endX} V ${child.y}`;
 }
+
+interface BranchLabelProps {
+  text: string;
+  centerX: number;
+  centerY: number;
+}
+
+const BranchLabel = ({text, centerX, centerY}: BranchLabelProps) => {
+  const shown = truncate(text, BRANCH_TEXT_MAX_LENGTH);
+  const textRef = useRef<SVGTextElement>(null);
+  const [measuredWidth, setMeasuredWidth] = useState<number>();
+
+  useLayoutEffect(() => {
+    setMeasuredWidth(textRef.current?.getComputedTextLength?.());
+  }, [shown]);
+
+  const textWidth =
+    measuredWidth ?? Array.from(shown).length * BRANCH_LABEL_CHAR_WIDTH;
+  const maxTextWidth = BRANCH_LABEL_MAX_WIDTH - BRANCH_LABEL_PADDING;
+  const squeeze = measuredWidth !== undefined && textWidth > maxTextWidth;
+  const width = Math.min(textWidth, maxTextWidth) + BRANCH_LABEL_PADDING;
+
+  return (
+    <g>
+      <title>{text}</title>
+      <rect
+        x={centerX - width / 2}
+        y={centerY - BRANCH_LABEL_HEIGHT / 2}
+        width={width}
+        height={BRANCH_LABEL_HEIGHT}
+        rx={BRANCH_LABEL_HEIGHT / 2}
+        fill="white"
+        stroke="grey"
+      />
+      <text
+        ref={textRef}
+        x={centerX}
+        y={centerY}
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontSize={12}
+        textLength={squeeze ? maxTextWidth : undefined}
+        lengthAdjust={squeeze ? 'spacingAndGlyphs' : undefined}
+      >
+        {shown}
+      </text>
+    </g>
+  );
+};
 
 const DecisionTree = () => {
   const tree = useAppSelector(getDisplayTree);
@@ -54,7 +120,7 @@ const DecisionTree = () => {
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
       const sign = branch.kind === 'lessThan' ? '<' : '≥';
-      return `${sign} ${formatNumber(branch.threshold)}`;
+      return `${sign} ${formatThreshold(branch.threshold)}`;
     }
     const values = branch.values.map(valueText);
     if (values.length < 2) {
@@ -78,11 +144,13 @@ const DecisionTree = () => {
     ) : (
       <li key={id}>
         {nodeText(node)}
-        <ul>
+        <ul style={styles.decisionTreeList}>
           {node.branches.map((branch, index) => (
             <li key={`${id}.${index}`}>
               {branchText(branch)}
-              <ul>{describe(branch.child, `${id}.${index}`)}</ul>
+              <ul style={styles.decisionTreeList}>
+                {describe(branch.child, `${id}.${index}`)}
+              </ul>
             </li>
           ))}
         </ul>
@@ -117,33 +185,13 @@ const DecisionTree = () => {
             if (!placed.branch) {
               return null;
             }
-            const text = branchText(placed.branch);
-            const shown = truncate(text, BRANCH_TEXT_MAX_LENGTH);
-            const centerX = placed.x + TREE_NODE_WIDTH / 2;
-            const centerY = placed.y - TREE_ROW_GAP / 4;
-            const width = shown.length * BRANCH_LABEL_CHAR_WIDTH + 12;
             return (
-              <g key={`branch-${placed.id}`}>
-                <title>{text}</title>
-                <rect
-                  x={centerX - width / 2}
-                  y={centerY - BRANCH_LABEL_HEIGHT / 2}
-                  width={width}
-                  height={BRANCH_LABEL_HEIGHT}
-                  rx={BRANCH_LABEL_HEIGHT / 2}
-                  fill="white"
-                  stroke="grey"
-                />
-                <text
-                  x={centerX}
-                  y={centerY}
-                  textAnchor="middle"
-                  dominantBaseline="central"
-                  fontSize={12}
-                >
-                  {shown}
-                </text>
-              </g>
+              <BranchLabel
+                key={`branch-${placed.id}`}
+                text={branchText(placed.branch)}
+                centerX={placed.x + TREE_NODE_WIDTH / 2}
+                centerY={placed.y - TREE_ROW_GAP / 4}
+              />
             );
           })}
           {layout.nodes.map(placed => {
@@ -168,7 +216,6 @@ const DecisionTree = () => {
                   textAnchor="middle"
                   dominantBaseline="central"
                   fontSize={13}
-                  fill={isAnswer ? 'white' : 'black'}
                 >
                   {truncate(text, NODE_TEXT_MAX_LENGTH)}
                 </text>
@@ -177,7 +224,10 @@ const DecisionTree = () => {
           })}
         </svg>
       </div>
-      <ul style={styles.visuallyHidden}>{describe(tree, '0')}</ul>
+      <details>
+        <summary>Show the tree as a list</summary>
+        <ul style={styles.decisionTreeList}>{describe(tree, '0')}</ul>
+      </details>
     </div>
   );
 };
