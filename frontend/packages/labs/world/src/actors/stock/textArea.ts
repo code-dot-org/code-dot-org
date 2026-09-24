@@ -456,6 +456,23 @@ const clickedAcross = () =>
  * Doubling both sides is how the midpoint is said without a division:
  * `(w(n) + w(n+1)) / 2 ≤ x` is `w(n) + w(n+1) ≤ 2x`.
  */
+const PLACE_THE_BAR = 'put the bar where the pointer is';
+
+/** `put the bar where the pointer is` — the call, which is what the click says. */
+const placeTheBar = () => ({
+  type: 'world_do_ActorsTextArea_PutTheBarWhereThePointerIsAction',
+  inputs: {ACTOR: me()},
+});
+
+/**
+ * NO PARAMETERS, and that is worth saying because the obvious guess is two.
+ *
+ * The click's position is not carried into this: `alongX` and `alongY` are built
+ * on `where the mouse is`, which any block may ask at any time, so the body asks
+ * it itself. A `define block`'s surface is its own and the event value does not
+ * reach it (`take out row` on the List takes its row as a parameter for exactly
+ * that reason) — but here there is nothing to pass.
+ */
 const placesTheCaret = () => [
   setCaret(num(0)),
   {
@@ -552,6 +569,24 @@ export const textAreaActor = actorFile(
         'showing, and so is the bar along it.',
       body: revealBody(),
     }),
+    // …and where a click puts the bar, which was the click handler itself.
+    //
+    // A RELOCATION AND NOT A SAVING, unlike every other block extracted here.
+    // The two walks are one copy of themselves and the pointer is read once
+    // each, so the file is no smaller for this. What changes is what a reader
+    // meets: `is clicked with` was a hundred and eighty-two blocks — a fifth of
+    // the actor, and five times its next-largest handler — for an event that
+    // does two things, and it now says the two things. The walks are a click
+    // away, in the definition beside the others, rather than in the way of
+    // anyone reading what a click DOES.
+    defineBlock({
+      private: true,
+      say: [PLACE_THE_BAR],
+      description:
+        'Put the bar where the pointer is: the line it landed on, then the ' +
+        'letter along that line, and then bring it into view.',
+      body: placesTheCaret(),
+    }),
     useTrait('Input#TakesKeyboardInputTrait'),
     useTrait('Mouse#CanBeClickedTrait'),
     // …and the wheel, now that there is something to scroll.
@@ -608,7 +643,7 @@ export const textAreaActor = actorFile(
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
         inputs: {ACTOR: me()},
-        next: {block: chain([takeFocus(), ...placesTheCaret()])},
+        next: {block: chain([takeFocus(), placeTheBar()])},
       },
       // A character goes in at the bar.
       {

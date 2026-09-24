@@ -243,17 +243,54 @@ const reveal = (n: () => object) =>
     ),
   );
 
-/** Take row `n` as the choice, if there is such a row, and say so. */
-const choose = (n: () => object) =>
-  either(both(compare('GTE', n(), num(1)), compare('LTE', n(), count())), [
-    set('HighlightedProperty', n()),
-    {
-      // NAMED BY ITS LABELS JOINED, which is "is chosen at" and not "is
-      // chosen": a carried value is not part of the name (`designedName`).
-      type: `world_emit_${OWN}_IsChosenAtEvent`,
-      inputs: {ACTOR: me(), WORD: item(n()), PLACE: n()},
-    },
-  ]);
+/**
+ * `choose row ⟨n⟩` — row `n` taken as the choice, if there is such a row.
+ *
+ * A BLOCK OF ITS OWN, and the row is its PARAMETER, for the reason `take out
+ * row` is one: the body names the row THREE times — to check it is in range, to
+ * set the highlight, and to say which word was chosen — so a call site that
+ * passed an expression expanded that expression three times. One of the two
+ * sites passes `which row is the pointer over`, which is forty blocks of
+ * arithmetic about the box's height and how far it has scrolled, and the click
+ * handler carried it in triplicate: a hundred and seventy-nine blocks for an
+ * event that does two things.
+ *
+ * As a parameter it is worked out once where the call is made and read as a
+ * name inside. The click says `choose row ⟨which row is the pointer over⟩` and
+ * Enter says `choose row ⟨highlighted⟩`, which is also what each of them means.
+ *
+ * PRIVATE: what a list does with a row of its own is nobody else's block
+ * (`extensions/blockVisibility`).
+ */
+const CHOSEN: BlockParam = {
+  id: 'listChosen',
+  name: 'row',
+  type: 'number',
+  binds: 'Number',
+};
+
+/** `⟨row⟩` — which row `choose row` was called about. */
+const chosen = () => paramValue(CHOSEN);
+
+/** `choose row ⟨n⟩` — the call, which is what the two sites say. */
+const chooseRow = (n: object) => ({
+  type: `world_do_${OWN}_ChooseRowAction`,
+  inputs: {VALUE: n, ACTOR: me()},
+});
+
+const chooseBody = () =>
+  either(
+    both(compare('GTE', chosen(), num(1)), compare('LTE', chosen(), count())),
+    [
+      set('HighlightedProperty', chosen()),
+      {
+        // NAMED BY ITS LABELS JOINED, which is "is chosen at" and not "is
+        // chosen": a carried value is not part of the name (`designedName`).
+        type: `world_emit_${OWN}_IsChosenAtEvent`,
+        inputs: {ACTOR: me(), WORD: item(chosen()), PLACE: chosen()},
+      },
+    ],
+  );
 
 /**
  * `take out row ⟨n⟩` — a row removed, if a project allows it and it exists.
@@ -420,6 +457,14 @@ export const listActor = actorFile(
         'such a row — saying which word went, before it goes.',
       body: [removeBody()],
     }),
+    defineBlock({
+      private: true,
+      say: ['choose row', CHOSEN],
+      description:
+        'Take a row as the choice, if there is such a row — highlighting it ' +
+        'and saying which word was chosen.',
+      body: [chooseBody()],
+    }),
     defineProperty('number', 'scroll', '0'),
     defineProperty('number', 'highlighted', '1'),
     // Whether a row may be taken out. FALSE unless a project says otherwise:
@@ -461,6 +506,7 @@ export const listActor = actorFile(
       asVariable(MOVEMENT),
       asVariable(BY),
       asVariable(TAKEN),
+      asVariable(CHOSEN),
       asVariable(MOVED_BY),
       asVariable(WORD),
       asVariable(PLACE),
@@ -477,7 +523,7 @@ export const listActor = actorFile(
               type: 'world_do_TabNavigation_TakeTheFocusAction',
               inputs: {ACTOR: me()},
             },
-            choose(rowUnderPointer),
+            chooseRow(rowUnderPointer()),
           ]),
         },
       },
@@ -532,7 +578,7 @@ export const listActor = actorFile(
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'enter'},
         inputs: {ACTOR: me()},
-        next: {block: either(focused(), [choose(highlighted)])},
+        next: {block: either(focused(), [chooseRow(highlighted())])},
       },
       // The arrows move it by one, the page keys by a windowful — the only
       // thing that makes a long list bearable without a pointer.
