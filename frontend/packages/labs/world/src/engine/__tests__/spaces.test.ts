@@ -483,3 +483,53 @@ describe('the cameras a world has', () => {
     expect(world.cameras.with(ViewportTrait)).toEqual([]);
   });
 });
+
+describe('what a camera step is told about its space', () => {
+  // A CAMERA STEP RUNS WITH ITS CAMERA IN HAND — `world.enter(camera)`, from
+  // the loop a camera-scoped trait step generates — and what the world is asked
+  // without a subject is answered for the space the thing in hand is in. So a
+  // camera that does not know its space is a camera whose `Confined to the Map`
+  // would clamp against the wrong map (specs/SPACE_CAMERAS_PLAN.md).
+
+  it('answers with the space’s bounds, not the world’s', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+
+    const space = world.viewportSpaceOf(win)!;
+    const camera = space.camera!;
+    // The level is 20 by 10 tiles of 32 — the space grew to fit it — where the
+    // root is still the default window.
+    expect(world.mapBounds(camera)).toEqual(new Vector(640, 320));
+    expect(world.mapBounds()).toEqual(new Vector(320, 320));
+  });
+
+  it('answers with the Viewport’s window, not the world’s view', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    // The Window kind is 100 by 80; the world's view is the default.
+    expect(world.viewSize(camera)).toEqual(new Vector(100, 80));
+    expect(world.viewSize(camera)).not.toEqual(world.viewSize());
+  });
+
+  it('leaves the world’s own cameras looking at the root', () => {
+    // They name no space, and `spaceOf` answers with the root for anything that
+    // names none — so the world's cameras behave exactly as they always have.
+    const world = makeWorld();
+    placeWindow(world);
+    const own = world.camera('main');
+    expect(own.space).toBeUndefined();
+    expect(world.mapBounds(own)).toEqual(world.mapBounds());
+    expect(world.viewSize(own)).toEqual(world.viewSize());
+  });
+
+  it('gives a space’s camera the world a camera body reads', () => {
+    // `const world = camera.world` is what a generated camera body binds. A
+    // space's camera never had one set, so the first body to run on one would
+    // have read undefined.
+    const world = makeWorld();
+    const win = placeWindow(world);
+    expect(world.viewportSpaceOf(win)!.camera!.world).toBe(world);
+  });
+});

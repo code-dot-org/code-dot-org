@@ -1365,23 +1365,35 @@ export class World {
     // its size is known, since the space is as big as the window at first.
     if (actor.has(ViewportTrait) && !this.viewportSpaceOf(actor)) {
       const view = this.viewSizeOf(actor);
-      this.viewportSpaces.push(
-        new Space(
-          `${ROOT_SPACE_ID}/${actor.id}`,
-          actor,
-          new Vector(view.x, view.y),
-          // The space's MAIN camera, which every space has and which cannot be
-          // taken away — the world's `main` one level down
-          // (specs/SPACE_CAMERAS_PLAN.md). A Viewport that wants a second says
-          // so; this is the one it shows through until it does.
-          [
-            makeCamera({
-              id: `${actor.id}:${DEFAULT_CAMERA_ID}`,
-              position: new Vector(view.x / 2, view.y / 2),
-            }),
-          ],
-        ),
+      const space = new Space(
+        `${ROOT_SPACE_ID}/${actor.id}`,
+        actor,
+        new Vector(view.x, view.y),
+        // The space's MAIN camera, which every space has and which cannot be
+        // taken away — the world's `main` one level down
+        // (specs/SPACE_CAMERAS_PLAN.md). A Viewport that wants a second says
+        // so; this is the one it shows through until it does.
+        [
+          makeCamera({
+            id: `${actor.id}:${DEFAULT_CAMERA_ID}`,
+            position: new Vector(view.x / 2, view.y / 2),
+          }),
+        ],
       );
+      // …and each of them is told which space it looks at, which is what makes
+      // `map size` and `view size` answer about THIS space inside a camera step
+      // (`Camera.space`).
+      //
+      // THE WORLD TOO, which a space's camera never had. `defineCamera` sets it
+      // for the world's own, and nothing set it here — so a camera-scoped body
+      // invoked on a Viewport's camera would have read `const world =
+      // camera.world` as undefined. Nothing had ever invoked one, because no
+      // step could reach it (specs/SPACE_CAMERAS_PLAN.md).
+      for (const camera of space.cameras) {
+        camera.space = space;
+        camera.world = this;
+      }
+      this.viewportSpaces.push(space);
     }
     // …and the actor hears that it exists, which is the one event every actor
     // gets without electing anything (`rules/spatial`). Queued like the rest,

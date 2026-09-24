@@ -28,6 +28,7 @@
 // — so the distinction is carried in the model and is invisible until zoom
 // arrives. Adding it here later changes no authoring.
 
+import type {Space} from './Space';
 import {SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
 import {Traited} from './Traited';
@@ -111,6 +112,23 @@ export class Camera {
    * camera.world`, exactly as an actor's binds it from the actor.
    */
   world: World | undefined;
+
+  /**
+   * The space this camera looks at, for a space that owns cameras of its own.
+   *
+   * `undefined` for the world's, which look at the root — `World.spaceOf`
+   * answers with the root space for anything that names none, so the world's
+   * cameras need say nothing and behave as they always have.
+   *
+   * WHY A CAMERA NEEDS TO KNOW. A camera step runs with its camera in hand
+   * (`world.enter(camera)`, from the loop a camera-scoped trait step
+   * generates), and what the world is asked without a subject — the map's size,
+   * the size of the view — is answered for the space the thing in hand is in.
+   * So `Camera Confined to the Map` asks `map size` and gets the space's bounds
+   * and the Viewport's window rather than the world's, and confining a
+   * Viewport's camera means what it says (specs/SPACE_CAMERAS_PLAN.md).
+   */
+  space: Space | undefined;
 
   readonly id: string;
   readonly name: string;
