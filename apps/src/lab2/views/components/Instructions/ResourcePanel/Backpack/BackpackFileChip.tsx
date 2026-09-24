@@ -187,7 +187,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         error => {
           if (showToast) {
             showToast(
-              `Couldn't delete ${fileName} from your Backpack. Please try again.`,
+              `Failed to delete ${fileName} from your Backpack. Please try again.`,
               toastOptionsFor('danger')
             );
           } else {
