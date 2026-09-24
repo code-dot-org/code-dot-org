@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-22 21:03:14 UTC",
+    "serialized_at": "2026-09-23 18:18:55 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2329,6 +2329,17 @@
       }
     },
     {
+      "key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd",
+      "position": 2,
+      "properties": {
+        "progression_name": "New Choice Progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd",
+        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e"
+      }
+    },
+    {
       "key": "9350b3c4-3755-4631-8dfa-735299328d0c",
       "position": 1,
       "properties": {
@@ -4435,6 +4446,28 @@
     },
     {
       "chapter": 30,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Choice Progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson7-choice"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson7-choice"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4456,7 +4489,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4478,7 +4511,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4500,7 +4533,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4522,7 +4555,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4544,7 +4577,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4566,7 +4599,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4588,7 +4621,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4610,7 +4643,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4632,7 +4665,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4654,7 +4687,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4676,7 +4709,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4698,7 +4731,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4720,7 +4753,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4742,7 +4775,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4764,7 +4797,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4786,7 +4819,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4808,7 +4841,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4830,7 +4863,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4852,7 +4885,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4874,7 +4907,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4896,7 +4929,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4918,7 +4951,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4940,7 +4973,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4962,7 +4995,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5331,6 +5364,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
         "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson7-choice",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson7-choice"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd"
       }
     },
     {
@@ -5705,7 +5750,7 @@
     },
     {
       "name": "[KEY] Data in Computer Systems",
-      "url": "https://docs.google.com/document/d/1l8RsLtZiGyc6UBTo7dJLSC1Q-KAAvP8pBadkr-bjgHs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1H1ISXJFkimTkKpeYxpViD7fIGJHwvBKdCRnuQjY5dLc",
       "key": "_key_data_in_computer_systems",
       "properties": {
         "audience": "Verified Teacher",
@@ -5982,12 +6027,13 @@
     },
     {
       "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/document/d/1N5MLLZqaET2sU4kiJ2Reyhd-lcVeIblGIJ8dGs3SlHc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1OYpFSjx-4Jfc0xfzxt6p0Pl3mfQYHyw4a3q27AgSb3k",
       "key": "data_in_computer_systems",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -6273,12 +6319,13 @@
     },
     {
       "name": "Station Activity Cards",
-      "url": "https://docs.google.com/presentation/d/1WLBS55qlZkzYKsg7ulYoBptdw3eaKitvKOVrYT8LOXE/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1BnOIV6y8G3eQzGZIO5qnKf9oxLmz6tVNnJhVpyEUcMM",
       "key": "station_activity_cards",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6287,7 +6334,7 @@
     },
     {
       "name": "Sustainable Systems Project",
-      "url": "https://docs.google.com/presentation/d/12wyuza4y1dtipfaZ1C7NroXnY4sMzy-kVdiKK8C_GoY/edit",
+      "url": "https://docs.google.com/presentation/d/1sxXWV9LcotK9ImXJT6iayJylvXiiyOw2ZvqBMi5AfkA/",
       "key": "sustainable_systems_project",
       "properties": {
         "audience": "Verified Teacher",
