@@ -10,6 +10,27 @@ describe('HeaderBanner', () => {
     expect(screen.getByText('Story')).toBeTruthy();
   });
 
+  it('draws a segment per step and says how many are complete', () => {
+    render(
+      <HeaderBanner
+        label="Story"
+        width={300}
+        steps={[
+          {completed: true, current: false},
+          {completed: false, current: true},
+          {completed: false, current: false},
+        ]}
+      />
+    );
+    const steps = screen.getByRole('img', {name: '1 of 3 complete'});
+    expect(steps.children).toHaveLength(3);
+  });
+
+  it('draws no segments without steps', () => {
+    render(<HeaderBanner label="Story" width={300} />);
+    expect(screen.queryByRole('img')).toBeNull();
+  });
+
   it('reports its natural width', () => {
     const setDesiredWidth = jest.fn();
     render(
@@ -42,6 +63,30 @@ describe('HeaderMiddle.headerLabelFor', () => {
   it('is empty for a level without one', () => {
     expect(HeaderMiddle.headerLabelFor(lessonData, '3')).toBe('');
     expect(HeaderMiddle.headerLabelFor(undefined, '3')).toBe('');
+  });
+});
+
+describe('HeaderMiddle.subPathProgressFor', () => {
+  const levels = [
+    {id: '1', ids: ['1'], headerLabel: 'Getting started', status: 'perfect'},
+    {id: '2', ids: ['2'], headerLabel: 'Story', status: 'passed'},
+    {id: '3', ids: ['3'], headerLabel: 'Story', status: 'attempted'},
+    {id: '4', ids: ['4'], headerLabel: 'Story', status: 'not_tried'},
+    {id: '5', ids: ['5'], status: 'not_tried'},
+  ];
+
+  it('lists the levels sharing the current label, marking done and current', () => {
+    expect(HeaderMiddle.subPathProgressFor(levels, '3')).toEqual([
+      {completed: true, current: false},
+      {completed: false, current: true},
+      {completed: false, current: false},
+    ]);
+  });
+
+  it('is null when the label covers one level, or the level has none', () => {
+    expect(HeaderMiddle.subPathProgressFor(levels, '1')).toBeNull();
+    expect(HeaderMiddle.subPathProgressFor(levels, '5')).toBeNull();
+    expect(HeaderMiddle.subPathProgressFor(undefined, '5')).toBeNull();
   });
 });
 

@@ -9,15 +9,22 @@ import remeasureOnFontsReady from './remeasureOnFontsReady';
 const IMAGE_SIZE = 32;
 
 /**
- * A unit's logo and the current level's header label, in the header slot
- * that otherwise holds the progress bubbles. Reports its natural width to
- * the header the way LessonProgress does, so the header's width budget
- * applies unchanged.
+ * A unit's logo, the current level's header label and a segment per level
+ * of the label's sub-path, in the header slot that otherwise holds the
+ * progress bubbles. Reports its natural width to the header the way
+ * LessonProgress does, so the header's width budget applies unchanged.
  */
 export default class HeaderBanner extends React.Component {
   static propTypes = {
     imageUrl: PropTypes.string,
     label: PropTypes.string,
+    /** One per level sharing the label, in order; absent for a lone level. */
+    steps: PropTypes.arrayOf(
+      PropTypes.shape({
+        completed: PropTypes.bool.isRequired,
+        current: PropTypes.bool.isRequired,
+      })
+    ),
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
   };
@@ -45,12 +52,31 @@ export default class HeaderBanner extends React.Component {
   }
 
   render() {
-    const {imageUrl, label, width} = this.props;
+    const {imageUrl, label, steps, width} = this.props;
+    const completed = steps?.filter(step => step.completed).length;
     return (
       <div id="header_banner" style={{width, overflow: 'hidden'}}>
         <div ref="inner" style={styles.banner}>
           {imageUrl && <img src={imageUrl} alt="" style={styles.image} />}
           {label && <span style={styles.label}>{label}</span>}
+          {steps && (
+            <span
+              style={styles.steps}
+              role="img"
+              aria-label={`${completed} of ${steps.length} complete`}
+            >
+              {steps.map((step, i) => (
+                <span
+                  key={i}
+                  style={{
+                    ...styles.step,
+                    ...(step.completed && styles.completedStep),
+                    ...(step.current && styles.currentStep),
+                  }}
+                />
+              ))}
+            </span>
+          )}
         </div>
       </div>
     );
@@ -83,5 +109,28 @@ const styles = {
     lineHeight: '50px',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
+  },
+  steps: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 3,
+    marginLeft: 12,
+    flex: 'none',
+  },
+  step: {
+    width: 10,
+    height: 6,
+    borderRadius: 3,
+    boxSizing: 'border-box',
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+  },
+  completedStep: {
+    backgroundColor: color.white,
+  },
+  // The current level is hollow: a ring, filled or not, so it stands out
+  // whether or not it is already complete.
+  currentStep: {
+    backgroundColor: 'transparent',
+    border: `2px solid ${color.white}`,
   },
 };

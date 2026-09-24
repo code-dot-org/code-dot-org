@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {isLevelStatusCompleted} from '@cdo/apps/templates/progress/progressHelpers';
+
 import LessonProgress from '../progress/LessonProgress';
 
 import HeaderBanner from './HeaderBanner';
@@ -25,6 +28,7 @@ class HeaderMiddle extends React.Component {
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
+    levels: PropTypes.array,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     isRtl: PropTypes.bool,
@@ -212,9 +216,34 @@ class HeaderMiddle extends React.Component {
     return level?.headerLabel || '';
   }
 
+  // Progress through the levels that share the current level's header label:
+  // one entry per level, in lesson order, with whether it is completed and
+  // whether it is the current one. Null when the label covers one level.
+  static subPathProgressFor(levels, currentLevelId) {
+    const current = levels?.find(l =>
+      (l.ids || [l.id]).includes(currentLevelId)
+    );
+    if (!current?.headerLabel) {
+      return null;
+    }
+    const steps = levels
+      .filter(l => l.headerLabel === current.headerLabel)
+      .map(l => ({
+        completed: isLevelStatusCompleted(l.status),
+        current: l === current,
+      }));
+    return steps.length > 1 ? steps : null;
+  }
+
   render() {
-    const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
-      this.props;
+    const {
+      scriptNameData,
+      lessonData,
+      scriptData,
+      currentLevelId,
+      levels,
+      isRtl,
+    } = this.props;
 
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink
@@ -321,6 +350,10 @@ class HeaderMiddle extends React.Component {
                     lessonData,
                     currentLevelId
                   )}
+                  steps={HeaderMiddle.subPathProgressFor(
+                    levels,
+                    currentLevelId
+                  )}
                   width={widths.progress - lessonProgressExtraWidth}
                   setDesiredWidth={width => {
                     this.setDesiredWidth('lessonProgress', width);
@@ -407,4 +440,5 @@ export default connect(state => ({
   appLoadStarted: state.header.appLoadStarted,
   appLoaded: state.header.appLoaded,
   currentLevelId: state.progress.currentLevelId,
+  levels: getCurrentLevels(state),
 }))(HeaderMiddle);
