@@ -337,7 +337,7 @@ describe('a gated first lesson', () => {
     expect(offered.size).toBeLessThan(24);
   });
 
-  it('and eleven of what it offers are a FOUNDATION rule’s own blocks', () => {
+  it('and thirteen of what it offers are a FOUNDATION rule’s own blocks', () => {
     // Which is where the number above actually comes from, and is worth
     // asserting rather than leaving as a surprise. A rule's own property
     // blocks are never gated — that is deliberate, and it is what lets a
@@ -346,15 +346,22 @@ describe('a gated first lesson', () => {
     // setters are in play in every lesson, including the one whose detail
     // pane says it unlocks the Actor drawer.
     //
-    // Nine before this and eleven after: `Has a Style` is the fourth
-    // foundation trait and it costs two (specs/STYLES_PLAN.md). Nobody chose
-    // that and nothing is broken by it; the day it matters, the fix is to
-    // gate a foundation rule's blocks with the trait that elects them, which
-    // is a curriculum decision rather than a styling one.
+    // Nine, then eleven, then thirteen. `Has a Style` is the fourth foundation
+    // trait and cost two (specs/STYLES_PLAN.md); a Viewport's `shows through`
+    // is the second pair, and it costs two the same way
+    // (specs/SPACE_CAMERAS_PLAN.md). Nobody chose either and nothing is broken
+    // by them; the day it matters, the fix is to gate a foundation rule's
+    // blocks with the trait that elects them, which is a curriculum decision
+    // rather than a styling or a camera one.
+    //
+    // THE NUMBER DRIFTING TWICE IS THE ARGUMENT FOR THAT FIX. Each property a
+    // foundation rule gains is two more blocks in the first lesson, and the
+    // test above — the one that says the lesson is small enough to read — is
+    // the one that will fail eventually.
     const foundation = [...offeredAt('origin/first-world')].filter(type =>
       /^world_(get|set)_(Boxed|Styled|Viewport)_/.test(type),
     );
-    expect(foundation).toHaveLength(11);
+    expect(foundation).toHaveLength(13);
   });
 
   it('is not so small the lesson cannot be done', () => {

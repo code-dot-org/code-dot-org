@@ -1,9 +1,10 @@
 # One kind of camera, in every space
 
-STATUS: BUILDING. Steps 1 to 3 are in — a space holds cameras, one collection
-finds them all, each knows its space, and one may be declared against a space
-that does not exist yet. Nothing is visible yet: no camera trait is electable on
-a Viewport until step 5, so no camera step runs for one of these cameras. specs/VIEWPORT_PLAN.md left one
+STATUS: BUILDING. Steps 1 to 4 are in — a space holds cameras, one collection
+finds them all, each knows its space, one may be declared against a space that
+does not exist yet, and a Viewport says which of its own it shows through.
+Nothing is visible yet: no camera trait is electable on a Viewport until step 5,
+so no camera step runs for one of these cameras. specs/VIEWPORT_PLAN.md left one
 question open with a single line — "the Viewport's camera is the engine's, not
 the camera rules'" — and this is what answering it would take. The line was
 honest about being a shortcut; what follows is the cost of the shortcut and the
@@ -287,6 +288,13 @@ own commit.
 - `shelfCoverage` will want a tile granting whatever new block step 6 mints, as
   it did for `is data` (specs/RECORDS_PLAN.md). A block nobody can reach is the
   failure that ledger exists for.
+- Every property a FOUNDATION rule gains is two more blocks in the first lesson,
+  ungated, because a rule's own property blocks never are. `shows through` took
+  the count from eleven to thirteen and `toolboxShelf` said so. That is the
+  second drift — `Has a Style` was the first — and the fix both have deferred is
+  to gate a foundation rule's blocks with the trait that elects them. The test
+  that will eventually force it is the one asserting a first lesson is small
+  enough to read.
 - A fixture that places a Viewport and follows something through it, since
   nothing today aims a Viewport's camera at all. `fixtures/interfaceKit` is the
   phone shape; a Viewport showing a level that follows its player is the

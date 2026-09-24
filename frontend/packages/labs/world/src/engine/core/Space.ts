@@ -10,7 +10,7 @@
 // point is asked of the point's space, and finds nothing in another.
 
 import type {Actor} from './Actor';
-import type {Camera} from './Camera';
+import {DEFAULT_CAMERA_ID, type Camera} from './Camera';
 import type {Layer} from './Layer';
 import type {Vector} from './Vector';
 import type {MapLoad} from './World';
@@ -41,14 +41,33 @@ export class Space {
   readonly cameras: Camera[];
 
   /**
+   * Which of this space's cameras the view is taken through, by name.
+   *
+   * Kept in step with the owning Viewport's `shows through` property once a
+   * tick (`World.settleSpaces`), which is where the same sync notices a change
+   * to the map it holds. Here rather than read from the property directly
+   * because a space has no way to ask one: properties belong to rules, and a
+   * space is core.
+   */
+  activeCameraName: string = DEFAULT_CAMERA_ID;
+
+  /**
    * The camera the space is currently seen through, if it has any.
    *
-   * The space's main camera until something says otherwise. `undefined` for the
-   * root, whose view is taken through the world's active camera as it always
-   * was.
+   * The one `activeCameraName` names, or the space's main camera — which is the
+   * first, always exists and cannot be taken away. `undefined` for the root,
+   * whose view is taken through the world's active camera as it always was.
+   *
+   * A name no camera has falls back rather than answering nothing, for the
+   * reason `World.camera` does the same with an unknown id: the name arrives
+   * from a field or from generated code, and a view through nothing is not a
+   * better answer than a view through the default.
    */
   get camera(): Camera | undefined {
-    return this.cameras[0];
+    return (
+      this.cameras.find(camera => camera.name === this.activeCameraName) ??
+      this.cameras[0]
+    );
   }
 
   /**

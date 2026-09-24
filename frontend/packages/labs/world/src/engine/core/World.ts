@@ -9,6 +9,7 @@ import {
   ViewportContentProperty,
   ViewportMapProperty,
   ViewportScrollProperty,
+  ViewportShowsThroughProperty,
   ViewportTrait,
 } from '../rules/viewport';
 
@@ -2154,8 +2155,30 @@ export class World {
   private settleSpaces(): void {
     for (const space of this.viewportSpaces) {
       this.showHeldMap(space);
+      this.showsThrough(space);
       this.settleSpace(space);
     }
+  }
+
+  /**
+   * Keep the space's active camera in step with what its Viewport says.
+   *
+   * Beside `showHeldMap`, and for the same reason it is there: a Viewport's
+   * properties are how a project talks to its space, and a change to one is
+   * noticed once a tick rather than hooked on the write. So cutting to another
+   * camera is an ordinary `set` — `set shows through of ⟨the Minimap⟩ to
+   * ⟨"chase"⟩` — with nothing to invent and nothing to remember to call.
+   *
+   * Empty is the space's main camera, which is what a Viewport that has never
+   * heard of cameras says (`ViewportShowsThroughProperty`).
+   */
+  private showsThrough(space: Space): void {
+    const owner = space.owner;
+    if (!owner?.has(ViewportTrait)) {
+      return;
+    }
+    const named = String(owner.get(ViewportShowsThroughProperty) ?? '');
+    space.activeCameraName = named || DEFAULT_CAMERA_ID;
   }
 
   /**

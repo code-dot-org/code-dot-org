@@ -20,6 +20,7 @@ export const VIEWPORT = {
   map: 'map',
   scroll: 'scroll',
   content: 'content',
+  showsThrough: 'showsThrough',
 } as const;
 
 const rule = new RuleBuilder({
@@ -76,6 +77,33 @@ export const ViewportContentProperty = ViewportTrait.addProperty(
   'vector',
   {x: 0, y: 0},
   {name: 'content', readonly: true},
+);
+
+/**
+ * Which of this Viewport's cameras the view is taken through, by name.
+ *
+ * EMPTY IS ITS MAIN CAMERA, which every space has and which cannot be taken
+ * away — so a Viewport that says nothing shows through the camera it was made
+ * with, and every Viewport written before cameras could be declared on one
+ * reads exactly as it did (specs/SPACE_CAMERAS_PLAN.md).
+ *
+ * A PROPERTY rather than a block of its own, because a Viewport is a placement:
+ * a property gives it a field in the inspector and a `set` block for free, so
+ * cutting to a chase camera for the boss and back to the wide shot afterwards is
+ * an ordinary `set` with nothing invented for it. The world has
+ * `setActiveCamera` instead, for want of a placement to hang a field on, and
+ * that is the whole of what makes the world the odd one out.
+ *
+ * A name no camera of this Viewport has is its main one rather than a black
+ * screen — the same answer `World.camera` gives for an unknown id, and for the
+ * same reason: the name comes from generated code or a field, and a world with
+ * no view is not a better answer than a world looking through its default.
+ */
+export const ViewportShowsThroughProperty = ViewportTrait.addProperty(
+  VIEWPORT.showsThrough,
+  'string',
+  '',
+  {name: 'shows through'},
 );
 
 export const ViewportRule = rule.build();

@@ -20,7 +20,11 @@ import {
   PositionProperty,
   ScaleProperty,
 } from '../rules/spatial';
-import {ViewportMapProperty, ViewportTrait} from '../rules/viewport';
+import {
+  ViewportMapProperty,
+  ViewportShowsThroughProperty,
+  ViewportTrait,
+} from '../rules/viewport';
 
 const Ping = new RuleBuilder({id: 'pinger', name: 'Pinger'}).addEvent('ping');
 const Coin = new ActorBuilder({id: 'coin', name: 'Coin'}).set(
@@ -608,5 +612,63 @@ describe('declaring a camera against a space', () => {
     world.defineCamera({id: 'wide'});
     expect(world.camera('wide').id).toBe('wide');
     expect(world.camera('wide').space).toBeUndefined();
+  });
+});
+
+describe('which camera a Viewport shows through', () => {
+  // A PROPERTY, because a Viewport is a placement: a field in the inspector and
+  // a `set` block come with it, so cutting to another camera is an ordinary set
+  // (specs/SPACE_CAMERAS_PLAN.md). The world has `setActiveCamera` instead, for
+  // want of a placement to hang a field on.
+
+  it('is its main camera when it says nothing', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    const space = world.viewportSpaceOf(win)!;
+    expect(win.get(ViewportShowsThroughProperty)).toBe('');
+    expect(space.camera).toBe(space.cameraNamed('main'));
+  });
+
+  it('cuts to another camera on the next tick, and back', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.defineCamera({id: 'chase', space: 'win'});
+    const space = world.viewportSpaceOf(win)!;
+
+    win.set(ViewportShowsThroughProperty, 'chase');
+    world.tick(0);
+    expect(space.camera).toBe(space.cameraNamed('chase'));
+
+    // …and back, which is the whole point of it being a value rather than
+    // structure: switching moves a transform and rebuilds nothing.
+    win.set(ViewportShowsThroughProperty, '');
+    world.tick(0);
+    expect(space.camera).toBe(space.cameraNamed('main'));
+  });
+
+  it('shows through its main camera for a name no camera has', () => {
+    // The name arrives from a field or from generated code, so an unknown one is
+    // the default rather than a black screen — the answer `World.camera` already
+    // gives for an unknown id.
+    const world = makeWorld();
+    const win = placeWindow(world);
+    const space = world.viewportSpaceOf(win)!;
+
+    win.set(ViewportShowsThroughProperty, 'nothing by that name');
+    world.tick(0);
+    expect(space.camera).toBe(space.cameraNamed('main'));
+  });
+
+  it('keeps two Viewports’ choices apart', () => {
+    const world = makeWorld();
+    const one = placeWindow(world);
+    const two = world.addActor(Window.instantiate('win2', 'actors/window'));
+    world.defineCamera({id: 'chase', space: 'win'});
+    world.defineCamera({id: 'chase', space: 'win2'});
+
+    one.set(ViewportShowsThroughProperty, 'chase');
+    world.tick(0);
+    expect(world.viewportSpaceOf(one)!.camera!.id).toBe('win:chase');
+    expect(world.viewportSpaceOf(two)!.camera!.id).toBe('win2:main');
   });
 });
