@@ -23,11 +23,19 @@ const resolvedStandard = {
 type Raw = z.input<typeof pathwaySchema>;
 type Step = Raw['checkpoints'][number]['steps'][number];
 
+// A one-file Web Lab MultiFileSource.
+const startSources = (contents: string) => ({
+  folders: {},
+  files: {
+    index: {id: 'index', name: 'index.html', contents, folderId: ''},
+  },
+});
+
 const panels = (id: string): Step => ({
   id,
   title: id,
   kind: 'panels',
-  panels: [{caption: 'Hello'}],
+  panels: [{key: `${id}-1`, imageUrl: 'hello.png', text: 'Hello'}],
 });
 
 const served = (): Raw => ({
@@ -89,7 +97,7 @@ const served = (): Raw => ({
           title: 'Practice',
           kind: 'lab',
           sourceMode: 'practice',
-          lab: {type: 'weblab2', starterFiles: {'index.html': '<p>hi</p>'}},
+          lab: {type: 'weblab2', startSources: startSources('<p>hi</p>')},
           instructions: 'Try it.',
         },
       ],
@@ -252,10 +260,10 @@ describe('referenceProblems', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
     if (build.kind !== 'lab') throw new Error('fixture changed');
-    build.lab = {type: 'weblab2', starterFiles: {'a.html': ''}};
+    build.lab = {type: 'weblab2', startSources: startSources('')};
     expect(problemsOf(raw)).toEqual([
       expect.stringMatching(
-        /^checkpoints\.basics\.steps\.build: project step cannot declare starterFiles/
+        /^checkpoints\.basics\.steps\.build: project step cannot declare startSources/
       ),
     ]);
   });
