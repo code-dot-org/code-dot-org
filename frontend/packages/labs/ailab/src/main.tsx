@@ -1,6 +1,6 @@
 import queryString from 'query-string';
 
-import type {ModelDataToSave, SaveResponse} from './types';
+import type {ModelDataToSave, SaveResponse, TrainerFamily} from './types';
 
 import {initAll, instructionsDismissed} from './index';
 
@@ -11,6 +11,7 @@ interface SampleMode {
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
   randomizeTestData?: boolean;
+  trainer?: TrainerFamily;
 }
 
 // A list of sample modes.  Should match the dropdown in index.html.
@@ -54,6 +55,11 @@ const sampleModes: Record<string, SampleMode> = {
 
   zoo: {
     datasets: ['zoo'],
+  },
+
+  'zoo-decision-tree': {
+    datasets: ['zoo'],
+    trainer: 'decisionTree',
   },
 
   'final-project': {
