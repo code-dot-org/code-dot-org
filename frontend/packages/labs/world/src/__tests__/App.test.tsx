@@ -103,19 +103,37 @@ it('renders the World Lab shell from the default project', async () => {
   expect(screen.getByText(/no sandbox origin is configured/i)).toBeTruthy();
 });
 
-it('opens the JavaScript panel when asked, and not before', async () => {
-  // The panel is what a World project does not otherwise show: the file is
-  // blocks, and the program it becomes is made on the way to the compiler
-  // (`debug/CodePanel`). Off until asked for — a learner authoring in blocks
-  // is not owed a pane they did not open.
+it('swaps the editor for the JavaScript it makes, and back', async () => {
+  // What a World project does not otherwise show: the file is blocks, and the
+  // program it becomes is made on the way to the compiler. It takes the
+  // editor's place rather than opening beside it, which is the shape the lab
+  // already uses for a `define block`'s body — the pane is the same pane and
+  // what changed is what is in it (`debug/orShowCode`).
   renderLab();
   await act(async () => {});
 
+  // The default project opens on `main.world`, whose (stubbed) editor is up.
+  expect(screen.getByText('world editor')).toBeTruthy();
   expect(
     screen.queryByRole('region', {name: 'Generated JavaScript'}),
   ).toBeNull();
+
   fireEvent.click(screen.getByRole('button', {name: 'JavaScript'}));
   expect(
     screen.getByRole('region', {name: 'Generated JavaScript'}),
   ).toBeTruthy();
+  // …in the editor's PLACE, which is the whole of what changed from a panel
+  // below it.
+  expect(screen.queryByText('world editor')).toBeNull();
+  // …and the file tabs are still there, which is why the swap is around each
+  // editor rather than around Codebridge's whole workspace: a reader can move
+  // between files without leaving the code first.
+  expect(screen.getByRole('tab', {name: 'Platform World'})).toBeTruthy();
+
+  // The view's own way out, beside the button that opened it.
+  fireEvent.click(screen.getByRole('button', {name: 'Back'}));
+  expect(screen.getByText('world editor')).toBeTruthy();
+  expect(
+    screen.queryByRole('region', {name: 'Generated JavaScript'}),
+  ).toBeNull();
 });

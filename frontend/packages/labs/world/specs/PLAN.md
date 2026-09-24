@@ -229,19 +229,31 @@ Adapted from `HTMLPreview.tsx`. Responsibilities:
   hidden. This is _not_ a full-width bar under both panes (web-lab's shape);
   World's console tracks whichever pane is showing the running game. A richer
   web-lab-style debug panel (network, etc.) is later work.
-- **A JavaScript box in the editor pane** (`debug/CodePanel`), off until a
-  "JavaScript" button in the workspace header asks for it. It shows the module
-  the OPEN FILE compiles to — a World project is authored in blocks and runs as
-  JavaScript, and the second half is otherwise seen by nothing but the compiler
-  and the AI Tutor. It reads the sources rather than the workspace, because with
-  a body surface open the workspace holds one member and not the file
+- **A JavaScript view IN THE EDITOR'S PLACE** (`debug/GeneratedCodeView`), off
+  until a "JavaScript" button in the workspace header asks for it, and dismissed
+  by its own "Back" or by the button again. It shows the module the OPEN FILE
+  compiles to — a World project is authored in blocks and runs as JavaScript,
+  and the second half is otherwise seen by nothing but the compiler and the AI
+  Tutor. It reads the sources rather than a workspace, because with a body
+  surface open the workspace holds one member and not the file
   (`blockly/bodySurfaces`), and it reports a file that will not generate against
-  that file rather than as the whole project failing to compile. Placement:
-  above the console, since it belongs to the file in the editor and the console
-  belongs to the running game; absent in preview-only view, which has no editor
-  pane. Syntax highlighting is later work — it wants a read-only CodeMirror,
-  which wants `@codemirror/view` and the light/dark theme plumbing that goes
-  with it; the box is monospace text, as the console is.
+  that file rather than as the whole project failing to compile.
+
+  Placement: it takes the pane, which is the shape a `define block`'s body
+  already uses — the pane is the same pane and what changed is what is in it.
+  The swap is around each Blockly editor (`config.editorComponents` via
+  `debug/orShowCode`) and not around Codebridge's `Workspace`, so the file tabs
+  and the folder menus stay and a reader can move between files without leaving
+  the code first. The button is absent in preview-only view, which has no editor
+  pane to swap. The editor unmounts while the code is up — the same cost as
+  switching files, and the alternative is a hidden Blockly workspace measuring
+  itself at zero.
+
+  Two things are later work: syntax highlighting, which wants a read-only
+  CodeMirror and so `@codemirror/view` plus the light/dark theme plumbing (the
+  view is monospace text, as the console is); and showing blocks and code at
+  once, which the pane swap gives up and which would want the generator to
+  record block-id-to-line spans.
 
 ### 5.3 The direct backend (`runtime/driverManager.ts`)
 

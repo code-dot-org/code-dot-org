@@ -9,6 +9,7 @@ import {followImages} from './appearance/sheetCompanions';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
 import {label} from './blockly/label';
 import {authoredName} from './blockly/projectModules';
+import {orShowCode} from './debug/orShowCode';
 import {EffectFileEditor} from './effect/EffectFileEditor';
 import {FILE_ICONS} from './fileIcons';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
@@ -118,12 +119,17 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     // A `.png` is bytes, not text: the image editor reads and writes them
     // through the file's `url` (imageEditor/ImageFileEditor).
     png: ImageFileEditor,
-    rule: BlocklyFileEditor,
-    actor: BlocklyFileEditor,
+    // The four kinds that are authored in blocks and RUN as JavaScript are the
+    // four that can show it in place of themselves (`debug/orShowCode`). Here
+    // rather than inside each editor because it is one decision about all of
+    // them, and because an editor that had to know about it would be an editor
+    // that could get it wrong.
+    rule: orShowCode(BlocklyFileEditor),
+    actor: orShowCode(BlocklyFileEditor),
     // A world opens on its main map, with its workspace one switch away
     // (specs/MAP_FIRST.md, "The editor's modes").
-    world: WorldEditor,
-    map: MapEditor,
+    world: orShowCode(WorldEditor),
+    map: orShowCode(MapEditor),
     anim: AnimationEditor,
     effect: EffectFileEditor,
     // A theme: values, and what each control is made of (specs/STYLES_PLAN.md).
