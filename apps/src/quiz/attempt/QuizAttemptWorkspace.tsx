@@ -51,10 +51,14 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const submittedRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const selectedChoices: Record<number, string> = {};
+    for (const result of attempt?.questionResultsInProgress ?? []) {
+      selectedChoices[result.quizQuestionId] = result.selectedChoiceId;
+    }
+    setSelectedChoicesByQuestionId(selectedChoices);
     setCurrentPageNumber(1);
-    setSelectedChoicesByQuestionId({});
     pendingWritesByQuestionIdRef.current = {};
-  }, [attempt?.id]);
+  }, [attempt?.id, attempt?.questionResultsInProgress]);
 
   const isAttemptInProgress =
     !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
