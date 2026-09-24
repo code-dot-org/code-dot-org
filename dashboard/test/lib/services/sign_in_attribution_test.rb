@@ -128,7 +128,7 @@ class Services::SignInAttributionTest < ActiveSupport::TestCase
     Services::SignInAttribution.extract!(@request, args)
 
     assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
-    assert_nil @request.env[Services::SignInAttribution::EVENT_TYPE_KEY]
+    assert_equal SignIn::CREDENTIAL, @request.env[Services::SignInAttribution::EVENT_TYPE_KEY]
   end
 
   # A config backend having a bad day must not take logins with it.

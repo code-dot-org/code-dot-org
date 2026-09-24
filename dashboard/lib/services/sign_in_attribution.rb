@@ -53,6 +53,10 @@ module Services::SignInAttribution
     guard([nil, nil]) do
       next [nil, nil] unless request.respond_to?(:env)
 
+      # Toggle attribution dynamically: the sign_ins row is still written, just with the two attribution columns left
+      # NULL.
+      next [nil, nil] unless DCDO.get('sign_in_attribution_enabled', false)
+
       declared = request.env[EVENT_TYPE_KEY]
       next [declared, request.env[AUTHENTICATION_OPTION_ID_KEY]] if declared
 
@@ -92,10 +96,6 @@ module Services::SignInAttribution
   end
 
   private_class_method def self.guard(fallback = nil)
-    # Toggle attribution dynamically. The sign_ins entry is still logged, just without the event_type, and
-    # authentication_option_id attribution columns populated.
-    return fallback unless DCDO.get('sign_in_attribution_enabled', false)
-
     yield
   rescue StandardError => exception
     raise if raise_attribution_errors? # Only raise in test environments.
