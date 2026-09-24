@@ -67,6 +67,39 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_showText",
+              "fields": {
+                "SIZE": "small",
+                "NAME": "features"
+              },
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "spritelab2_featuresOfSprite",
+                    "fields": {
+                      "FORMAT": "list"
+                    },
+                    "inputs": {
+                      "SPRITE": {
+                        "block": {
+                          "type": "spritelab2_chosenSprite"
+                        }
+                      }
+                    }
+                  }
+                },
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":290,\"y\":140}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_makeButton",
               "fields": {
                 "COLOR": "green",
@@ -241,6 +274,9 @@
                       "ADD3": {
                         "block": {
                           "type": "spritelab2_featuresOfSprite",
+                          "fields": {
+                            "FORMAT": "sentence"
+                          },
                           "inputs": {
                             "SPRITE": {
                               "block": {

@@ -85,6 +85,9 @@
                       "ADD3": {
                         "block": {
                           "type": "spritelab2_featuresOfSprite",
+                          "fields": {
+                            "FORMAT": "sentence"
+                          },
                           "inputs": {
                             "SPRITE": {
                               "block": {

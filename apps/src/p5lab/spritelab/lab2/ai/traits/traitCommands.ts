@@ -70,11 +70,12 @@ export function createTraitCommands(library: TraitLibrary) {
     },
 
     /**
-     * The sprite's feature values as one sentence, for a question to a
-     * generative model: "Leaf Spots is many, Soil Moisture is wet". Names
-     * come from the imported model; unset features are left out.
+     * The sprite's feature values in words. A sentence suits a question to a
+     * generative model ("Leaf Spots is many, Soil Moisture is wet"); a list
+     * puts one "name: value" per line, for showing on the screen. Names come
+     * from the imported model; unset features are left out.
      */
-    featuresOfSprite(spriteArg: unknown): string {
+    featuresOfSprite(spriteArg: unknown, format?: string): string {
       const sprite = library.getSpriteArray(spriteArg)[0];
       const card = library.modelCard;
       if (!sprite || !card) {
@@ -87,8 +88,10 @@ export function createTraitCommands(library: TraitLibrary) {
       return card.fields
         .map(field => [field.id, resolveTrait(source, field.key)] as const)
         .filter(([, value]) => value !== undefined)
-        .map(([name, value]) => `${name} is ${value}`)
-        .join(', ');
+        .map(([name, value]) =>
+          format === 'list' ? `${name}: ${value}` : `${name} is ${value}`
+        )
+        .join(format === 'list' ? '\n' : ', ');
     },
 
     predictionOfSprite(spriteArg: unknown): string {

@@ -190,3 +190,14 @@ describe('featuresOfSprite', () => {
     expect(makeLibrary([]).commands.featuresOfSprite({})).toBe('');
   });
 });
+
+describe('featuresOfSprite as a list', () => {
+  it('puts one feature on each line', () => {
+    const {commands} = makeLibrary([sprite()], {
+      costumeTraits: {basil: {Leafspots: 'many', Soilfeel: 'dry'}},
+    });
+    expect(commands.featuresOfSprite({costume: 'basil'}, 'list')).toBe(
+      'Leaf spots: many\nSoil feel: dry'
+    );
+  });
+});

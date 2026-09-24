@@ -457,7 +457,7 @@
               "blocks": [
                 {
                   "type": "spritelab2_whenRun",
-                  "id": "whenRun-51",
+                  "id": "whenRun-55",
                   "x": 20,
                   "y": 20,
                   "deletable": false,
@@ -487,7 +487,7 @@
                                 "type": "gamelab_location_picker",
                                 "id": "picker-42",
                                 "fields": {
-                                  "LOCATION": "{\"x\":200,\"y\":140}"
+                                  "LOCATION": "{\"x\":110,\"y\":140}"
                                 }
                               }
                             }
@@ -518,19 +518,36 @@
                               },
                               "next": {
                                 "block": {
-                                  "type": "spritelab2_makeButton",
-                                  "id": "makeButton-48",
+                                  "type": "spritelab2_showText",
+                                  "id": "showText-50",
                                   "fields": {
-                                    "COLOR": "green",
-                                    "LABEL": "Check It!"
+                                    "SIZE": "small",
+                                    "NAME": "features"
                                   },
                                   "inputs": {
+                                    "TEXT": {
+                                      "block": {
+                                        "type": "spritelab2_featuresOfSprite",
+                                        "id": "featuresOfSprite-48",
+                                        "fields": {
+                                          "FORMAT": "list"
+                                        },
+                                        "inputs": {
+                                          "SPRITE": {
+                                            "block": {
+                                              "type": "spritelab2_chosenSprite",
+                                              "id": "chosenSprite-47"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
                                     "LOCATION": {
                                       "block": {
                                         "type": "gamelab_location_picker",
-                                        "id": "picker-47",
+                                        "id": "picker-49",
                                         "fields": {
-                                          "LOCATION": "{\"x\":200,\"y\":250}"
+                                          "LOCATION": "{\"x\":290,\"y\":140}"
                                         }
                                       }
                                     }
@@ -538,18 +555,39 @@
                                   "next": {
                                     "block": {
                                       "type": "spritelab2_makeButton",
-                                      "id": "makeButton-50",
+                                      "id": "makeButton-52",
                                       "fields": {
-                                        "COLOR": "gray",
-                                        "LABEL": "Back"
+                                        "COLOR": "green",
+                                        "LABEL": "Check It!"
                                       },
                                       "inputs": {
                                         "LOCATION": {
                                           "block": {
                                             "type": "gamelab_location_picker",
-                                            "id": "picker-49",
+                                            "id": "picker-51",
                                             "fields": {
-                                              "LOCATION": "{\"x\":60,\"y\":40}"
+                                              "LOCATION": "{\"x\":200,\"y\":250}"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "spritelab2_makeButton",
+                                          "id": "makeButton-54",
+                                          "fields": {
+                                            "COLOR": "gray",
+                                            "LABEL": "Back"
+                                          },
+                                          "inputs": {
+                                            "LOCATION": {
+                                              "block": {
+                                                "type": "gamelab_location_picker",
+                                                "id": "picker-53",
+                                                "fields": {
+                                                  "LOCATION": "{\"x\":60,\"y\":40}"
+                                                }
+                                              }
                                             }
                                           }
                                         }
@@ -567,7 +605,7 @@
                 },
                 {
                   "type": "spritelab2_whenButtonClicked",
-                  "id": "whenButtonClicked-53",
+                  "id": "whenButtonClicked-57",
                   "fields": {
                     "LABEL": "Back"
                   },
@@ -576,7 +614,7 @@
                   "next": {
                     "block": {
                       "type": "spritelab2_goToScene",
-                      "id": "goToScene-52",
+                      "id": "goToScene-56",
                       "fields": {
                         "SCENE": "gallery"
                       }
