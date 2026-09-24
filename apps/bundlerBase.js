@@ -281,7 +281,8 @@ function makeSplitChunks(appsEntries) {
       // "code-studio-common" chunk.
       // node_modules code goes to code-studio-common-deps instead, because
       // CloudFront does not compress files over 10MB.
-      // A page must load both, or its entry code silently never runs.
+      // A page that loads code-studio-common.js must also load
+      // code-studio-common-deps.js, or its entry code silently never runs.
       // Groups sharing a chunk name fail with "conflicts with existing chunk".
       'code-studio-common': {
         name: 'code-studio-common',
