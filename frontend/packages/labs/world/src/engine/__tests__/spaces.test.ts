@@ -420,3 +420,66 @@ describe('a map’s layers', () => {
     ]);
   });
 });
+
+describe('the cameras a world has', () => {
+  // A CAMERA RULE FINDS ITS SUBJECTS THROUGH `world.cameras`, and a Viewport's
+  // camera was never in it: the collection wrapped the world's own list alone,
+  // so following a subject had to be written a second time in the engine
+  // (specs/SPACE_CAMERAS_PLAN.md). These are the claims that make the second
+  // copy removable.
+
+  it('includes a Viewport’s, which the collection could not see', () => {
+    const world = makeWorld();
+    expect([...world.cameras]).toHaveLength(1);
+
+    placeWindow(world);
+    const cameras = [...world.cameras];
+    expect(cameras).toHaveLength(2);
+    // The world's own first, then each space's — the order the collection
+    // walks, so a world reading its cameras finds the familiar one first.
+    expect(cameras[0].id).toBe('main');
+    expect(cameras[1].id).toBe('win:main');
+  });
+
+  it('answers about the Viewports there are NOW, not when it was built', () => {
+    // The collection is made once, in the constructor, and Viewports are placed
+    // as a world runs. It holds a function for that reason.
+    const world = makeWorld();
+    const before = [...world.cameras].length;
+    placeWindow(world);
+    expect([...world.cameras].length).toBe(before + 1);
+  });
+
+  it('gives every space a main camera that is its own', () => {
+    // A camera's position belongs to a space and means nothing in another, so a
+    // Viewport showing a different scene cannot share the world's. Its main
+    // camera starts at the middle of its own window, not of the world's view.
+    const world = makeWorld();
+    const win = placeWindow(world);
+    const space = world.viewportSpaceOf(win)!;
+    expect(space.cameras).toHaveLength(1);
+    expect(space.camera).toBe(space.cameras[0]);
+    expect(space.camera!.position).toEqual(new Vector(50, 40));
+    expect(world.camera('main').position).not.toEqual(space.camera!.position);
+  });
+
+  it('leaves the root space’s cameras to the world', () => {
+    // The root has none of its own: the world owns them directly, having no
+    // placement to own them for it. `space.camera` is undefined there, and the
+    // view is taken through the world's active camera as it always was.
+    const world = makeWorld();
+    const root = world.spaceOf(undefined);
+    expect(root.cameras).toEqual([]);
+    expect(root.camera).toBeUndefined();
+    expect(world.activeCamera().id).toBe('main');
+  });
+
+  it('filters by trait across every space at once', () => {
+    // What a camera rule actually calls. Nothing elects a camera trait on a
+    // Viewport yet, so this asks the question the way a rule does and expects
+    // the world's answer to be unchanged — the guard that step one is invisible.
+    const world = makeWorld();
+    placeWindow(world);
+    expect(world.cameras.with(ViewportTrait)).toEqual([]);
+  });
+});

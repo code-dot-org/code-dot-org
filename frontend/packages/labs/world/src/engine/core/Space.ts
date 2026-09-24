@@ -25,10 +25,31 @@ export class Space {
   /** How big the space is — the largest map loaded into it. */
   bounds: Vector;
   /**
-   * The camera the space is seen through. None for the root, whose view is
-   * taken through the world's active camera as it always was.
+   * The cameras this space may be seen through, its main one first.
+   *
+   * EMPTY FOR THE ROOT, whose cameras are the world's own `cameraList` — the
+   * world owns them directly, having no placement to own them for it
+   * (specs/SPACE_CAMERAS_PLAN.md). A Viewport's are here because a camera's
+   * position belongs to a space and means nothing in another, so a Viewport
+   * showing a different scene cannot share the world's.
+   *
+   * A LIST because a Viewport may want more than one framing — a wide shot and
+   * a chase — exactly as the world may. Which of them the view is taken
+   * through is the Viewport's own business to say; until it does, it is the
+   * first, which is the space's `main`.
    */
-  readonly camera: Camera | undefined;
+  readonly cameras: Camera[];
+
+  /**
+   * The camera the space is currently seen through, if it has any.
+   *
+   * The space's main camera until something says otherwise. `undefined` for the
+   * root, whose view is taken through the world's active camera as it always
+   * was.
+   */
+  get camera(): Camera | undefined {
+    return this.cameras[0];
+  }
   /** The loads this space holds, oldest first — `unload` takes them back. */
   readonly loads: MapLoad[] = [];
   /** The actor the space's camera keeps in the middle, if a map named one. */
@@ -50,11 +71,11 @@ export class Space {
     id: string,
     owner: Actor | undefined,
     bounds: Vector,
-    camera: Camera | undefined,
+    cameras: Camera[] = [],
   ) {
     this.id = id;
     this.owner = owner;
     this.bounds = bounds;
-    this.camera = camera;
+    this.cameras = cameras;
   }
 }

@@ -38,11 +38,7 @@ import {
 } from './drawing';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
-import {
-  KEY_REPEAT_DELAY,
-  KEY_REPEAT_INTERVAL,
-  RESERVED_KEYS,
-} from './keys';
+import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL, RESERVED_KEYS} from './keys';
 import {
   DEFAULT_LAYER_ID,
   layersOfMap,
@@ -610,18 +606,41 @@ const coerce = <T>(property: Property<T>, value: unknown): T => {
  */
 class CameraCollection {
   private readonly list: Camera[];
+  private readonly spaces: () => readonly Space[];
 
-  constructor(list: Camera[]) {
+  /**
+   * `list` is the world's own cameras — the root space's. `spaces` answers with
+   * the Viewport spaces, whose cameras are theirs (`Space.cameras`).
+   *
+   * BOTH, because a camera rule finds its subjects through here and a
+   * Viewport's camera was never offered to one: the collection wrapped the
+   * world's list alone, so following a subject had to be written a second time
+   * in the engine (specs/SPACE_CAMERAS_PLAN.md).
+   *
+   * A function rather than the array, because Viewports are placed as a world
+   * runs and a collection built once would answer about the spaces there were.
+   */
+  constructor(list: Camera[], spaces: () => readonly Space[]) {
     this.list = list;
+    this.spaces = spaces;
+  }
+
+  /** Every camera in the world, the root's first and then each space's. */
+  private all(): Camera[] {
+    const found = [...this.list];
+    for (const space of this.spaces()) {
+      found.push(...space.cameras);
+    }
+    return found;
   }
 
   /** Every camera with a trait — a copy, so a body may add one while walking. */
   with(trait: Parameters<Camera['has']>[0]): Camera[] {
-    return this.list.filter(camera => camera.has(trait));
+    return this.all().filter(camera => camera.has(trait));
   }
 
   [Symbol.iterator](): Iterator<Camera> {
-    return this.list[Symbol.iterator]();
+    return this.all()[Symbol.iterator]();
   }
 }
 
@@ -787,7 +806,9 @@ export class World {
     ROOT_SPACE_ID,
     undefined,
     new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT),
-    undefined,
+    // No cameras of its own: the root's are the world's `cameraList`, which it
+    // owns directly for want of a placement to own them for it
+    // (specs/SPACE_CAMERAS_PLAN.md).
   );
   private readonly viewportSpaces: Space[] = [];
 
@@ -1045,7 +1066,10 @@ export class World {
     );
     // Every world has the default camera; the rest are declared into it.
     this.cameraList = [makeCamera({id: DEFAULT_CAMERA_ID})];
-    this.cameraCollection = new CameraCollection(this.cameraList);
+    this.cameraCollection = new CameraCollection(
+      this.cameraList,
+      () => this.viewportSpaces,
+    );
     for (const camera of this.cameraList) {
       camera.world = this;
     }
@@ -1346,10 +1370,16 @@ export class World {
           `${ROOT_SPACE_ID}/${actor.id}`,
           actor,
           new Vector(view.x, view.y),
-          makeCamera({
-            id: `${actor.id}:camera`,
-            position: new Vector(view.x / 2, view.y / 2),
-          }),
+          // The space's MAIN camera, which every space has and which cannot be
+          // taken away — the world's `main` one level down
+          // (specs/SPACE_CAMERAS_PLAN.md). A Viewport that wants a second says
+          // so; this is the one it shows through until it does.
+          [
+            makeCamera({
+              id: `${actor.id}:${DEFAULT_CAMERA_ID}`,
+              position: new Vector(view.x / 2, view.y / 2),
+            }),
+          ],
         ),
       );
     }
@@ -3177,7 +3207,10 @@ export class World {
     // while painting — so the style cannot be read off the pen and has to be
     // handed in. Which is the same style the drawing names a line later, and
     // resolved through the same cascade (`styleFor`).
-    return this.measure(words, at, style?.weight === 'bold' ? 'bold' : undefined) || 0;
+    return (
+      this.measure(words, at, style?.weight === 'bold' ? 'bold' : undefined) ||
+      0
+    );
   }
 
   /**
