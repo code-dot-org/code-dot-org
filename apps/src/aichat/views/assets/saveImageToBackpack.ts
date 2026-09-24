@@ -74,6 +74,8 @@ export const saveImageToBackpack = async ({
     notifySaving(notify, targetName);
   }
 
+  // The progress toast above never expires on its own, so every path from here has
+  // to end in a toast that replaces it.
   try {
     await new Promise<void>((resolve, reject) => {
       backpackApi

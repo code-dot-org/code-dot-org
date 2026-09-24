@@ -148,13 +148,13 @@ export const handleSaveToBackpack = async (
     return;
   }
 
-  // The progress toast above never expires on its own, so every path from here
-  // has to end in a toast that replaces it.
   const newFileName = extractUserInput(dialogResults) + '.png';
   if (unifiedApi) {
     notifySaving(notify, newFileName);
   }
 
+  // The progress toast above never expires on its own, so every path from here
+  // has to end in a toast that replaces it.
   const saveErrorMessage = backpackSaveError(newFileName);
 
   let snapshot: {blob?: Blob; error?: string};
