@@ -216,7 +216,7 @@ describe('handleSaveToBackpack', () => {
       await runUnifiedSave();
 
       expect(notify.mock.calls).toEqual([
-        ['info', 'Saving sketch.png to your Backpack...'],
+        ['gray', 'Saving sketch.png to your Backpack...'],
         ['success', 'sketch.png saved to your Backpack.'],
       ]);
     });
@@ -227,10 +227,10 @@ describe('handleSaveToBackpack', () => {
       await runUnifiedSave();
 
       expect(notify.mock.calls).toEqual([
-        ['info', 'Saving sketch.png to your Backpack...'],
+        ['gray', 'Saving sketch.png to your Backpack...'],
         [
           'danger',
-          'Error saving sketch.png to your Backpack. Please try again',
+          "Couldn't save sketch.png to your Backpack. Please try again.",
         ],
       ]);
     });
@@ -245,10 +245,10 @@ describe('handleSaveToBackpack', () => {
       await runUnifiedSave();
 
       expect(notify.mock.calls).toEqual([
-        ['info', 'Saving sketch.png to your Backpack...'],
+        ['gray', 'Saving sketch.png to your Backpack...'],
         [
           'danger',
-          'Error saving sketch.png to your Backpack. Please try again',
+          "Couldn't save sketch.png to your Backpack. Please try again.",
         ],
       ]);
       expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
@@ -265,10 +265,10 @@ describe('handleSaveToBackpack', () => {
       await runUnifiedSave();
 
       expect(notify.mock.calls).toEqual([
-        ['info', 'Saving sketch.png to your Backpack...'],
+        ['gray', 'Saving sketch.png to your Backpack...'],
         [
           'danger',
-          'Error saving sketch.png to your Backpack. Please try again',
+          "Couldn't save sketch.png to your Backpack. Please try again.",
         ],
       ]);
       expect(unifiedApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
@@ -317,7 +317,7 @@ describe('handleSaveToBackpack', () => {
       expect(unifiedApi.saveBlobFile).toHaveBeenCalled();
       expect(notify).toHaveBeenCalledWith(
         'danger',
-        expect.stringContaining("couldn't delete your old file")
+        expect.stringContaining("couldn't remove the old copy")
       );
       expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
         'Backpack duplicate delete error',
@@ -332,7 +332,7 @@ describe('handleSaveToBackpack', () => {
 
       expect(notify).toHaveBeenCalledWith(
         'danger',
-        expect.stringContaining('Could not read your Backpack')
+        expect.stringContaining("Couldn't read your Backpack")
       );
       expect(showDialog).not.toHaveBeenCalled();
       expect(unifiedApi.saveBlobFile).not.toHaveBeenCalled();
