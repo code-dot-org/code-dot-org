@@ -4,11 +4,18 @@ import React, {
   SetStateAction,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
-import {Image as KonvaImage, Layer, Stage} from 'react-konva';
+import {Image as KonvaImage, Layer, Stage, Transformer} from 'react-konva';
 
+import CanvasText, {TransformerNode} from './CanvasText';
+import {
+  CanvasTextItem,
+  NewCanvasText,
+  TEXT_FONT_STYLE,
+} from './canvasTextUtils';
 import EditToolbar from './EditToolbar';
 
 import styles from './video-canvas.module.scss';
@@ -19,9 +26,17 @@ export type VideoCanvasMode = 'edit' | 'recording' | 'preview';
 
 // Node types come through react-konva: konva itself is ESM-only, which this
 // CommonJS-compiled package cannot import.
-type StageNode = React.ElementRef<typeof Stage>;
 type LayerNode = React.ElementRef<typeof Layer>;
 type ImageNode = React.ElementRef<typeof KonvaImage>;
+
+const TEXT_ANCHORS = [
+  'top-left',
+  'top-right',
+  'bottom-left',
+  'bottom-right',
+  'middle-left',
+  'middle-right',
+];
 
 const RING_RADIUS = 26;
 const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
@@ -149,10 +164,15 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   // remounts on the way to 'edit', since it lives in the same conditional
   // branch as that playback view, and a plain ref wouldn't trigger that.
   const [layerNode, setLayerNode] = useState<LayerNode | null>(null);
+  // Kept in React state, not only in Konva: the stage unmounts while a take
+  // plays back, and the texts must come back for the next one.
+  const [texts, setTexts] = useState<CanvasTextItem[]>([]);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const textIdRef = useRef(0);
+  const transformerRef = useRef<TransformerNode>(null);
 
   const [wrapperNode, setWrapperNode] = useState<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const stageRef = useRef<StageNode>(null);
   const imageNodeRef = useRef<ImageNode>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const canvasStreamRef = useRef<MediaStream | null>(null);
@@ -312,11 +332,11 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   ]);
 
   const startRecording = useCallback(() => {
-    // The Layer this canvas belongs to is non-listening (see below), so it
-    // never grows a second, invisible hit-graph canvas — this query always
-    // finds the one canvas actually being drawn to.
-    const sceneCanvas = stageRef.current?.container().querySelector('canvas');
+    // Only the content layer is recorded; the transformer's handles are
+    // drawn on a layer of their own, a separate canvas.
+    const sceneCanvas = layerNode?.getNativeCanvasElement();
     if (!streamRef.current || !sceneCanvas) return;
+    setSelectedId(null);
     chunksRef.current = [];
     audioChunksRef.current = [];
     setTimeRemaining(timeLimitSeconds);
@@ -367,12 +387,66 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
       setTimeRemaining(prev => (prev > 0 ? prev - 1 : 0));
     }, 1000);
   }, [
+    layerNode,
     timeLimitSeconds,
     setRecordedBlob,
     setRecordedAudioBlob,
     onRecordingChange,
     onIsRecordingChange,
   ]);
+
+  const addText = useCallback(
+    async ({text, color, style}: NewCanvasText) => {
+      // Konva measures text when it is created, and the browser fetches a
+      // font weight only on first use; without this the first box is sized
+      // with fallback metrics.
+      try {
+        await document.fonts?.load(`${TEXT_FONT_STYLE} 48px Geist`);
+      } catch (error) {
+        console.error(error);
+        // Draw with the fallback font rather than not at all.
+      }
+      const id = `text-${++textIdRef.current}`;
+      setTexts(prev => [
+        ...prev,
+        {
+          id,
+          text,
+          color,
+          style,
+          x: stageSize.width * 0.1,
+          y: stageSize.height * 0.4,
+          width: stageSize.width * 0.8,
+          fontSize: Math.round(stageSize.width * 0.12),
+        },
+      ]);
+      setSelectedId(id);
+    },
+    [stageSize]
+  );
+
+  const deleteSelected = useCallback(() => {
+    setTexts(prev => prev.filter(item => item.id !== selectedId));
+    setSelectedId(null);
+  }, [selectedId]);
+
+  const updateText = useCallback(
+    (id: string, changes: Partial<CanvasTextItem>) =>
+      setTexts(prev =>
+        prev.map(item => (item.id === id ? {...item, ...changes} : item))
+      ),
+    []
+  );
+
+  // The transformer lives on another layer and cannot see changes inside
+  // the Label it holds, so it is re-pointed and refreshed on every change.
+  useLayoutEffect(() => {
+    const transformer = transformerRef.current;
+    if (!transformer) return;
+    const node = selectedId ? layerNode?.findOne(`#${selectedId}`) : undefined;
+    transformer.nodes(node ? [node] : []);
+    transformer.forceUpdate();
+  }, [selectedId, texts, layerNode]);
 
   // 'edit', not !== 'recording': avoids reacting to the countdown's own stop.
   useEffect(() => {
@@ -415,7 +489,13 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
 
   return (
     <div className={styles.container}>
-      {currentMode === 'edit' && <EditToolbar />}
+      {currentMode === 'edit' && (
+        <EditToolbar
+          onAddText={addText}
+          canDelete={selectedId !== null}
+          onDelete={deleteSelected}
+        />
+      )}
       <div className={styles.previewWrapper} ref={setWrapperNode}>
         <video
           key="preview"
@@ -427,15 +507,41 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
         />
         {stageSize.width > 0 && stageSize.height > 0 && (
           <Stage
-            ref={stageRef}
             width={stageSize.width}
             height={stageSize.height}
+            onMouseDown={e => {
+              if (e.target === e.target.getStage()) setSelectedId(null);
+            }}
+            onTouchStart={e => {
+              if (e.target === e.target.getStage()) setSelectedId(null);
+            }}
           >
-            {/* listening=false: nothing on this layer is draggable yet, and
-                it keeps this the container's only canvas (see startRecording
-                above, which captures whichever canvas it finds there). */}
-            <Layer ref={setLayerNode} listening={false}>
-              <KonvaImage ref={imageNodeRef} image={undefined} />
+            <Layer ref={setLayerNode} listening={currentMode === 'edit'}>
+              {/* Not listening, so a press on the video lands on the stage
+                  and deselects. */}
+              <KonvaImage
+                ref={imageNodeRef}
+                image={undefined}
+                listening={false}
+              />
+              {texts.map(item => (
+                <CanvasText
+                  key={item.id}
+                  item={item}
+                  editable={currentMode === 'edit'}
+                  transformerRef={transformerRef}
+                  onSelect={() => setSelectedId(item.id)}
+                  onChange={changes => updateText(item.id, changes)}
+                />
+              ))}
+            </Layer>
+            <Layer>
+              <Transformer
+                ref={transformerRef}
+                enabledAnchors={TEXT_ANCHORS}
+                rotateEnabled={false}
+                flipEnabled={false}
+              />
             </Layer>
           </Stage>
         )}
