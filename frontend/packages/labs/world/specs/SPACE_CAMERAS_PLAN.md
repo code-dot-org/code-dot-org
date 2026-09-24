@@ -261,10 +261,29 @@ point at which it has earned itself, and the next one should build it instead.
    a correction to the section above, which had described the existing behaviour
    wrongly and proposed changing it to itself.
 8. **Blocks: `define camera ⟨wide⟩ of ⟨the Minimap⟩`.** The engine takes a
-   space's name from step 3 and nothing writes one yet. The owner is a socket
-   rather than a dropdown for the reason a Viewport's `map` is a value: the
-   Viewport is an actor, and naming one by id in a block is the reference this
-   lab keeps getting bitten by.
+   space's name from step 3 and nothing writes one yet.
+
+   **CORRECTED, before building: the owner is a NAME, not a socket.** The draft
+   said a socket, "for the reason a Viewport's `map` is a value", and that does
+   not work. A socket yields a live actor, and the whole point of step 3 is that
+   a world's prologue declares cameras BEFORE the map places its Viewports —
+   so the socket would evaluate to nothing exactly when it is needed. The two
+   blocks that could fill it do not reach either: `the ⟨placement⟩` is a map
+   script's block and generates `placed[…]`, which a `.world` has no binding
+   for, and `any ⟨Viewport⟩` names a KIND, so two Minimaps of one kind are
+   indistinguishable.
+
+   So it is a dropdown of the world's Viewport placements, and the bite the
+   draft was worried about is answered the way this lab already answers it: a
+   LIVE dropdown, sourced from the project rather than typed, so a name no
+   placement has cannot be written in the first place (`moduleOptions`,
+   `placementOptions` and its extension are the shape; they are scoped to a map
+   script's own map today and this wants the world's main map filtered to
+   Viewports).
+
+   Not small: an options source, a live-dropdown extension, the generator case,
+   the toolbox category and a tile in `shelfCoverage` for the block it mints.
+
 9. **Editor: the camera strip.** The world's cameras on a main map, a
    Viewport's with that placement selected, none on a level `.map` — built the
    way the layer strip is, with an inspector that is the Enhance row and a field
