@@ -114,8 +114,9 @@ await bootMocks(scenario);
 // In studio, Rails puts data-brand on <html> and the app reads it; nothing sets
 // it here, so default to the brand production defaults to. `?brand=` overrides
 // it for a side-by-side against the legacy tokens.
-const brand =
-  resolveBrand(new URLSearchParams(window.location.search).get('brand'));
+const brand = resolveBrand(
+  new URLSearchParams(window.location.search).get('brand'),
+);
 document.documentElement.dataset.brand = brand;
 
 createRoot(document.getElementById('root')!).render(

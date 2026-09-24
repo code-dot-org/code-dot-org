@@ -115,7 +115,7 @@ const cssLayerOrder = (
 
 // frontend_studio/index.html.haml stamps data-brand; the Vite dev shell does not.
 document.documentElement.dataset.brand = resolveBrand(
-  document.documentElement.dataset.brand
+  document.documentElement.dataset.brand,
 );
 
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);

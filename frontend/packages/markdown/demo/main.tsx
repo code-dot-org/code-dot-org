@@ -35,7 +35,7 @@ if (!root) {
 // tokens react to [data-brand] whenever it changes, but the MUI theme is
 // chosen once at boot.
 const brand = resolveBrand(
-  new URLSearchParams(window.location.search).get('brand')
+  new URLSearchParams(window.location.search).get('brand'),
 );
 document.documentElement.dataset.brand = brand;
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
