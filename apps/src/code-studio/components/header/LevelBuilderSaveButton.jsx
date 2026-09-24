@@ -19,6 +19,7 @@ class LevelBuilderSaveButton extends React.Component {
     setProjectUpdatedSaved: PropTypes.func.isRequired,
     overrideHeaderText: PropTypes.string,
     overrideOnSaveUrl: PropTypes.string,
+    onChangedWidth: PropTypes.func,
   };
 
   onSave = () => {
@@ -42,7 +43,7 @@ class LevelBuilderSaveButton extends React.Component {
           <div className="project_name header_text">
             {this.props.overrideHeaderText || 'Levelbuilder: edit start code'}
           </div>
-          <ProjectUpdatedAt />
+          <ProjectUpdatedAt onContentUpdated={this.props.onChangedWidth} />
         </div>
         <div className="project_remix header_button" onClick={this.onSave}>
           Save
