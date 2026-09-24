@@ -1,0 +1,367 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-23T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-my-ai-app-template",
+    "level_mode": {
+      "kind": "freeplay",
+      "adlibs": "model"
+    },
+    "long_instructions": "# Your app: free play\nHere is your whole app. Use the scene list to look at the code for each screen: **Home**, **About This App**, **Gallery** and **Details**.\n\nPlay from **Home** and try it the way a user would. What would you change to make it better for them?",
+    "guide_steps": [
+      {
+        "text": "**Your whole app.** Every scene is here. Choose a scene to see its code, then play from **Home**. What would make your app better for the people who use it?",
+        "showContinue": true
+      }
+    ],
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "App",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_showText",
+              "fields": {
+                "SIZE": "body",
+                "NAME": "text1"
+              },
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Hello"
+                    }
+                  }
+                },
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":200}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeButton",
+              "fields": {
+                "COLOR": "green",
+                "LABEL": "Button"
+              },
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":300}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenButtonClicked",
+              "fields": {
+                "LABEL": "Button"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeImageGrid"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenImageClicked"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeChosenSprite",
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":140}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_chosenSprite"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_spriteCalled"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setBackground",
+              "inputs": {
+                "COLOR": {
+                  "block": {
+                    "type": "colour_picker",
+                    "fields": {
+                      "COLOUR": "#e8f5e9"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_predictForSprite",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_predictionOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_traitOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setTraitOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_askAi",
+              "inputs": {
+                "QUESTION": {
+                  "block": {
+                    "type": "gamelab_textJoin",
+                    "fields": {
+                      "TEXT1": "What should I do next if the answer is "
+                    },
+                    "inputs": {
+                      "TEXT2": {
+                        "block": {
+                          "type": "spritelab2_predictionOfSprite",
+                          "inputs": {
+                            "SPRITE": {
+                              "block": {
+                                "type": "spritelab2_chosenSprite"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_aiAnswer"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Rules",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "controls_if",
+              "extraState": {
+                "hasElse": true
+              }
+            },
+            {
+              "kind": "block",
+              "type": "logic_compare",
+              "fields": {
+                "OP": "EQ"
+              },
+              "inputs": {
+                "A": {
+                  "block": {
+                    "type": "spritelab2_traitOfSprite",
+                    "inputs": {
+                      "SPRITE": {
+                        "block": {
+                          "type": "spritelab2_chosenSprite"
+                        }
+                      }
+                    }
+                  }
+                },
+                "B": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "logic_operation",
+              "fields": {
+                "OP": "AND"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "logic_negate"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Sprite Actions",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_makeNewSpriteAnon",
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":200}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setProp",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "VAL": {
+                  "block": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 100
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_destroy",
+              "inputs": {
+                "THIS": {
+                  "block": {
+                    "type": "spritelab2_spriteCalled"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSay",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Text",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "text",
+              "fields": {
+                "TEXT": ""
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_textJoin",
+              "fields": {
+                "TEXT1": "The answer is "
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>
