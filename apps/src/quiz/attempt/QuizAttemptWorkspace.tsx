@@ -58,6 +58,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   const questionsRef = useRef<HTMLDivElement>(null);
   const submittedRef = useRef<HTMLDivElement>(null);
+  // Quiz views stay mounted across same-lab navigation, so a begin/finish
+  // request can resolve after a different level is already current.
+  // Gate progress reporting on this level instead.
+  const currentLevelKeyRef = useRef(levelId);
+  useEffect(() => {
+    currentLevelKeyRef.current = levelId;
+  }, [levelId]);
 
   useEffect(() => {
     setCurrentPageNumber(1);
@@ -85,18 +92,24 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   }, [attempt?.submittedAt]);
 
   const handleBeginAttempt = async () => {
+    const requestLevelId = levelId;
     try {
       await beginAttempt();
-      dispatch(sendStartedReportIfNotStarted(appName));
+      if (currentLevelKeyRef.current === requestLevelId) {
+        dispatch(sendStartedReportIfNotStarted(appName));
+      }
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
   };
 
   const handleFinishAttempt = async () => {
+    const requestLevelId = levelId;
     try {
       await finishAttempt();
-      dispatch(sendSuccessReport(appName));
+      if (currentLevelKeyRef.current === requestLevelId) {
+        dispatch(sendSuccessReport(appName));
+      }
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
