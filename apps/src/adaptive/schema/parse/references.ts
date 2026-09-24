@@ -107,7 +107,7 @@ function checkpointProblems(pathway: Pathway): string[] {
 /**
  * Detects and returns any problems with project-mode lab steps.
  * All project-mode lab steps edit the pathway's single project, so they must
- * use the project's lab and cannot declare starter files; practice steps are
+ * use the project's lab and cannot declare start sources; practice steps are
  * self-contained and may use any lab.
  */
 function projectStepProblems(pathway: Pathway): string[] {
@@ -122,9 +122,9 @@ function projectStepProblems(pathway: Pathway): string[] {
           `${where}: project step uses '${step.lab.type}' but the pathway's project is '${projectLab}'`
         );
       }
-      if (step.lab.starterFiles) {
+      if (step.lab.startSources) {
         problems.push(
-          `${where}: project step cannot declare starterFiles; the project already has sources`
+          `${where}: project step cannot declare startSources; the project already has sources`
         );
       }
     }
