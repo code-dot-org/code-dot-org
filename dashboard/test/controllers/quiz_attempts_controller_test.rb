@@ -70,10 +70,13 @@ class QuizAttemptsControllerTest < ActionController::TestCase
   end
 
   test "update scores only auto-graded responses for questions on the quiz" do
+    # response_data has to actually grade correct - update re-grades every
+    # response from it, not just backfilling missing ones.
     create(
       :quiz_question_response,
       quiz_attempt: @attempt,
       quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'},
       score: 1,
       max_score: 1,
       grading_status: 'auto_graded'

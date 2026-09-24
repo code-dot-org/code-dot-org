@@ -63,10 +63,15 @@ class QuizAttemptsController < ApplicationController
       if attempt.submitted_at.nil?
         # Only questions on this quiz count.
         in_quiz_question_ids = attempt.level&.question_ids || []
-        answered_ids = attempt.quiz_question_responses.where(quiz_question_id: in_quiz_question_ids).pluck(:quiz_question_id)
-        # Materialize skipped responses for unanswered questions.
-        QuizQuestion.where(id: in_quiz_question_ids - answered_ids).find_each do |question|
-          grade_and_save_response!(attempt, question, {})
+        responses_by_question_id = attempt.quiz_question_responses.
+          where(quiz_question_id: in_quiz_question_ids).
+          index_by(&:quiz_question_id)
+
+        # Re-save every response, not just missing ones - submit is the
+        # authoritative grade regardless of any earlier per-question write.
+        QuizQuestion.where(id: in_quiz_question_ids).find_each do |question|
+          response_data = responses_by_question_id[question.id]&.response_data || {}
+          grade_and_save_response!(attempt, question, response_data)
         end
 
         auto_graded = attempt.quiz_question_responses.
