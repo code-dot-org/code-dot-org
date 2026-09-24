@@ -17,7 +17,6 @@ const SCENARIOS = [
   {id: 'vocabulary-definitions', name: 'Vocabulary definitions'},
   {id: 'clickable-text', name: 'Clickable text'},
   {id: 'expandable-images', name: 'Expandable images'},
-  {id: 'localized', name: 'Localized (simulated)'},
 ] as const;
 
 test.describe('@visual markdown scenarios', () => {

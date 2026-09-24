@@ -149,6 +149,45 @@ describe('createUsersApi mutations target the right routes', () => {
     );
   });
 
+  it('updateEmail sends the email opt-in answer when given', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateEmail({
+      newEmail: 'a@b.co',
+      hashedEmail: 'h',
+      currentPassword: 'pw',
+      emailOptIn: 'no',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: {
+          user: {
+            email: 'a@b.co',
+            hashed_email: 'h',
+            current_password: 'pw',
+            email_preference_opt_in: 'no',
+          },
+        },
+      }),
+    );
+  });
+
+  it('updateEmail omits the email opt-in when unanswered', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateEmail({
+      newEmail: 'a@b.co',
+      hashedEmail: 'h',
+      currentPassword: 'pw',
+      emailOptIn: '',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: {
+          user: {email: 'a@b.co', hashed_email: 'h', current_password: 'pw'},
+        },
+      }),
+    );
+  });
+
   it('updateParentEmail PATCHes /users/parent_email with the change source', async () => {
     const {api, request} = fakeTransport();
     await api.updateParentEmail({parentEmail: 'p@e.com', optIn: 'yes'});

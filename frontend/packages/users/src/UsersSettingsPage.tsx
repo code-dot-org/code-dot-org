@@ -18,7 +18,7 @@ import styles from './UsersSettingsPage.module.css';
 const ACCOUNT_DETAILS_TAB = 'account-details';
 const EDUCATOR_PROFILE_TAB = 'educator-profile';
 
-// The placeholder tabs ship disabled rather than hidden, for legacy parity.
+// The Integrations placeholder ships disabled rather than hidden, for legacy parity.
 const TAB_META = [
   {value: ACCOUNT_DETAILS_TAB, text: 'Account Details'},
   {
@@ -26,7 +26,6 @@ const TAB_META = [
     text: 'Educator Profile',
     educatorOnly: true,
   },
-  {value: 'communications', text: 'Communications', disabled: true},
   {value: 'integrations', text: 'Integrations', disabled: true},
 ];
 

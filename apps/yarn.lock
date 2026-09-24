@@ -4050,7 +4050,6 @@ __metadata:
   resolution: "@code-dot-org/markdown@portal:../frontend/packages/markdown/::locator=blockly-mooc%40workspace%3A."
   dependencies:
     "@code-dot-org/component-library": "workspace:*"
-    "@code-dot-org/core": "workspace:*"
   peerDependencies:
     "@emotion/react": ^11.0.0
     "@emotion/styled": ^11.0.0
