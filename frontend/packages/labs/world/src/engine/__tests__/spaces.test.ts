@@ -533,3 +533,80 @@ describe('what a camera step is told about its space', () => {
     expect(world.viewportSpaceOf(win)!.camera!.world).toBe(world);
   });
 });
+
+describe('declaring a camera against a space', () => {
+  // A world declares cameras; a Viewport's space could not have any beyond the
+  // main one it is made with. `define camera ⟨wide⟩ of ⟨the Minimap⟩` is what
+  // this is the engine half of (specs/SPACE_CAMERAS_PLAN.md).
+
+  it('puts a camera in the space that was named', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.defineCamera({id: 'wide', space: 'win'});
+
+    const space = world.viewportSpaceOf(win)!;
+    expect(space.cameras.map(camera => camera.name)).toEqual(['main', 'wide']);
+    // The id carries the space so a list of every camera tells two `wide`s
+    // apart; the NAME is what an author wrote.
+    expect(space.cameraNamed('wide')!.id).toBe('win:wide');
+    expect(space.cameraNamed('wide')!.space).toBe(space);
+    // …and the world's own list is untouched by it.
+    expect(world.camera('win:wide').id).toBe('main');
+  });
+
+  it('holds a camera declared before its Viewport is placed', () => {
+    // The order a world actually runs in: the body's prologue declares, and the
+    // main map places the Viewport afterwards
+    // (specs/MAP_BEFORE_ROWS_PLAN.md). Refusing here would refuse silently.
+    const world = makeWorld();
+    world.defineCamera({id: 'wide', space: 'win'});
+    expect([...world.cameras]).toHaveLength(1);
+
+    const win = placeWindow(world);
+    expect(
+      world.viewportSpaceOf(win)!.cameras.map(camera => camera.name),
+    ).toEqual(['main', 'wide']);
+  });
+
+  it('declares the same camera twice as once, so a reload cannot stack them', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.defineCamera({id: 'wide', space: 'win'});
+    world.defineCamera({id: 'wide', space: 'win'});
+    expect(world.viewportSpaceOf(win)!.cameras).toHaveLength(2);
+  });
+
+  it('keeps two spaces’ cameras apart, positions and all', () => {
+    const world = makeWorld();
+    const one = placeWindow(world);
+    const two = world.addActor(Window.instantiate('win2', 'actors/window'));
+    world.defineCamera({id: 'wide', space: 'win'});
+    world.defineCamera({id: 'wide', space: 'win2'});
+
+    const a = world.viewportSpaceOf(one)!.cameraNamed('wide')!;
+    const b = world.viewportSpaceOf(two)!.cameraNamed('wide')!;
+    expect(a).not.toBe(b);
+    expect([a.id, b.id]).toEqual(['win:wide', 'win2:wide']);
+
+    a.position = new Vector(7, 7);
+    expect(b.position).toEqual(new Vector(50, 40));
+  });
+
+  it('starts a space’s camera in the middle of that space’s window', () => {
+    // As the space's main camera does, and for the reason the world's rest in
+    // the middle of the world's view.
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.defineCamera({id: 'wide', space: 'win'});
+    expect(world.viewportSpaceOf(win)!.cameraNamed('wide')!.position).toEqual(
+      new Vector(50, 40),
+    );
+  });
+
+  it('still declares a world’s own camera exactly as before', () => {
+    const world = makeWorld();
+    world.defineCamera({id: 'wide'});
+    expect(world.camera('wide').id).toBe('wide');
+    expect(world.camera('wide').space).toBeUndefined();
+  });
+});

@@ -50,6 +50,18 @@ export class Space {
   get camera(): Camera | undefined {
     return this.cameras[0];
   }
+
+  /**
+   * One of this space's cameras by the name it was declared under.
+   *
+   * BY NAME AND NOT BY ID, because a space's camera ids carry the space —
+   * `win:wide`, so that two Viewports may each have a `wide` and a list of
+   * every camera in the world still tells them apart. What an author writes,
+   * and what the Viewport's own property holds, is the bare name.
+   */
+  cameraNamed(name: string): Camera | undefined {
+    return this.cameras.find(camera => camera.name === name);
+  }
   /** The loads this space holds, oldest first — `unload` takes them back. */
   readonly loads: MapLoad[] = [];
   /** The actor the space's camera keeps in the middle, if a map named one. */

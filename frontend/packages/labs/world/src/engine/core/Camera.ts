@@ -62,6 +62,18 @@ export interface CameraInit {
   id: string;
   name?: string;
   /**
+   * The space this camera looks at, by the id of the Viewport that owns it.
+   *
+   * Absent means the world's own — the root space — which is every camera
+   * declared before spaces had cameras of their own, and every camera a world
+   * declares today (specs/SPACE_CAMERAS_PLAN.md).
+   *
+   * A NAME, not the space: a camera may be declared before the Viewport that
+   * owns it has been placed, since a world's body runs before the map that
+   * places one. `World.defineCamera` holds such a camera until the space exists.
+   */
+  space?: string;
+  /**
    * The point it shows at the MIDDLE of the view, in world pixels; defaults to
    * the middle of the world's own rectangle.
    */

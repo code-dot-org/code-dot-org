@@ -1369,31 +1369,19 @@ export class World {
         `${ROOT_SPACE_ID}/${actor.id}`,
         actor,
         new Vector(view.x, view.y),
-        // The space's MAIN camera, which every space has and which cannot be
-        // taken away — the world's `main` one level down
-        // (specs/SPACE_CAMERAS_PLAN.md). A Viewport that wants a second says
-        // so; this is the one it shows through until it does.
-        [
-          makeCamera({
-            id: `${actor.id}:${DEFAULT_CAMERA_ID}`,
-            position: new Vector(view.x / 2, view.y / 2),
-          }),
-        ],
       );
-      // …and each of them is told which space it looks at, which is what makes
-      // `map size` and `view size` answer about THIS space inside a camera step
-      // (`Camera.space`).
-      //
-      // THE WORLD TOO, which a space's camera never had. `defineCamera` sets it
-      // for the world's own, and nothing set it here — so a camera-scoped body
-      // invoked on a Viewport's camera would have read `const world =
-      // camera.world` as undefined. Nothing had ever invoked one, because no
-      // step could reach it (specs/SPACE_CAMERAS_PLAN.md).
-      for (const camera of space.cameras) {
-        camera.space = space;
-        camera.world = this;
-      }
       this.viewportSpaces.push(space);
+      // THE SPACE'S MAIN CAMERA, which every space has and which cannot be
+      // taken away — the world's `main` one level down
+      // (specs/SPACE_CAMERAS_PLAN.md). Through the same door every other camera
+      // a space gets comes through, so the id is scoped and the two
+      // back-references are set in one place rather than two.
+      this.addCameraTo(space, {id: DEFAULT_CAMERA_ID});
+      // …and any camera declared for this Viewport BEFORE it was placed, which
+      // is every one a world's prologue declares (`pendingSpaceCameras`).
+      for (const held of this.pendingSpaceCameras.get(actor.id) ?? []) {
+        this.addCameraTo(space, held);
+      }
     }
     // …and the actor hears that it exists, which is the one event every actor
     // gets without electing anything (`rules/spatial`). Queued like the rest,
@@ -1444,6 +1432,12 @@ export class World {
    * duplicates.
    */
   defineCamera(init: CameraInit): this {
+    // A SPACE'S, if it says which. The world's own are the root's and go in the
+    // list they always went in (specs/SPACE_CAMERAS_PLAN.md).
+    if (init.space !== undefined) {
+      this.defineSpaceCamera(init.space, init);
+      return this;
+    }
     if (!this.cameraList.some(camera => camera.id === init.id)) {
       // A camera with no position of its own rests in the middle of THIS
       // world's view. `Camera` defaults to the middle of the standard one,
@@ -1460,6 +1454,61 @@ export class World {
       this.cameraList.push(camera);
     }
     return this;
+  }
+
+  /**
+   * Cameras declared for a space that does not exist yet, by the space's name.
+   *
+   * A WORLD'S BODY RUNS BEFORE THE MAP THAT PLACES ITS VIEWPORTS. The main map
+   * is loaded between the prologue and the rows (specs/MAP_BEFORE_ROWS_PLAN.md),
+   * and a Viewport's space is made when the Viewport is placed — so `define
+   * camera ⟨wide⟩ of ⟨the Minimap⟩` in a prologue names a space that is minutes
+   * of engine time away from existing. Holding it is the only honest answer: the
+   * alternative is to refuse, silently, the declaration a reader can see.
+   *
+   * Drained when the space is made, and kept afterwards so a reload finds them
+   * again — `defineSpaceCamera` refuses a name the space already has, which is
+   * what stops a second pass stacking duplicates.
+   */
+  private readonly pendingSpaceCameras = new Map<string, CameraInit[]>();
+
+  /**
+   * Add a camera to a space, or hold it until the space exists.
+   *
+   * The id carries the space and the name does not: `win:wide` is the id, `wide`
+   * the name, so two Viewports may each have a `wide` and a list of every camera
+   * in the world still tells them apart (`Space.cameraNamed`).
+   */
+  private defineSpaceCamera(owner: string, init: CameraInit): void {
+    const space = this.viewportSpaces.find(one => one.owner?.id === owner);
+    if (!space) {
+      const held = this.pendingSpaceCameras.get(owner) ?? [];
+      if (!held.some(one => one.id === init.id)) {
+        held.push(init);
+      }
+      this.pendingSpaceCameras.set(owner, held);
+      return;
+    }
+    this.addCameraTo(space, init);
+  }
+
+  /** Put one declared camera into a space, unless it already has that name. */
+  private addCameraTo(space: Space, init: CameraInit): void {
+    if (space.cameraNamed(init.name ?? init.id)) {
+      return;
+    }
+    const view = space.owner ? this.viewSizeOf(space.owner) : this.view;
+    const camera = makeCamera({
+      ...init,
+      id: `${space.owner?.id ?? space.id}:${init.id}`,
+      name: init.name ?? init.id,
+      // The middle of the space's OWN window, as its main camera starts, and
+      // for the same reason the world's rest in the middle of the world's view.
+      position: init.position ?? new Vector(view.x / 2, view.y / 2),
+    });
+    camera.space = space;
+    camera.world = this;
+    space.cameras.push(camera);
   }
 
   /**

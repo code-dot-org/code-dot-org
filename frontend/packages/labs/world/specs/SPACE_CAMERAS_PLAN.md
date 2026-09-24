@@ -1,6 +1,9 @@
 # One kind of camera, in every space
 
-STATUS: PROPOSED. Nothing here is built. specs/VIEWPORT_PLAN.md left one
+STATUS: BUILDING. Steps 1 to 3 are in — a space holds cameras, one collection
+finds them all, each knows its space, and one may be declared against a space
+that does not exist yet. Nothing is visible yet: no camera trait is electable on
+a Viewport until step 5, so no camera step runs for one of these cameras. specs/VIEWPORT_PLAN.md left one
 question open with a single line — "the Viewport's camera is the engine's, not
 the camera rules'" — and this is what answering it would take. The line was
 honest about being a shortcut; what follows is the cost of the shortcut and the
@@ -90,6 +93,14 @@ Most of this is subtraction, because the pieces exist:
   is framed that way.
 - **A map has no camera.** It is data: it says where things are, and nothing
   about how the view behaves. This is the field that comes out.
+
+  A VIEWPORT PLACED ON A MAP IS NOT AN EXCEPTION, though it looks like one: its
+  cameras are stored with the placement, so a map can end up carrying camera
+  data. The distinction that matters is which way the camera points. A map
+  saying how the view onto ITSELF behaves is a level dictating play, and that is
+  what comes out; a Viewport is the viewer and not the viewed, and what it holds
+  is about the scene it shows, not about the map it sits on.
+
 - **Cameras are not shared between spaces**, and cannot be. A position belongs
   to a space — "the only thing between two spaces is nothing at all"
   (`engine/core/Space`) — so a camera's position means nothing in a space it is
@@ -228,21 +239,26 @@ point at which it has earned itself, and the next one should build it instead.
 7. **The default.** Every camera with no traits looks at the top left of its
    space. One change in the engine, and a look at `jetpack` and `meteors` in the
    browser.
-8. **Editor: the camera strip.** The world's cameras on a main map, a
+8. **Blocks: `define camera ⟨wide⟩ of ⟨the Minimap⟩`.** The engine takes a
+   space's name from step 3 and nothing writes one yet. The owner is a socket
+   rather than a dropdown for the reason a Viewport's `map` is a value: the
+   Viewport is an actor, and naming one by id in a block is the reference this
+   lab keeps getting bitten by.
+9. **Editor: the camera strip.** The world's cameras on a main map, a
    Viewport's with that placement selected, none on a level `.map` — built the
    way the layer strip is, with an inspector that is the Enhance row and a field
    per trait property (`mapEditor/LayerPanel`, `LayerInspector`).
-9. **`actor to follow` by kind.** A property type the inspector can offer as a
-   dropdown of the project's actor kinds, so a Viewport's camera can be aimed at
-   something inside a map it does not yet hold. Runtime semantics are already
-   there; this is a type, a generator case and an inspector field.
-10. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
+10. **`actor to follow` by kind.** A property type the inspector can offer as a
+    dropdown of the project's actor kinds, so a Viewport's camera can be aimed at
+    something inside a map it does not yet hold. Runtime semantics are already
+    there; this is a type, a generator case and an inspector field.
+11. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
     if the inspector's fields move again, MAP_EVENTS_PLAN's principle extended to
     cameras, and SCROLLING_PLAN on what a camera with no traits now means for a
     scroll view.
 
 Steps 1 to 4 are invisible; 5 is where it starts working; 6 is where the lab
-gets smaller; 8 is where an author can reach it without writing blocks. Each its
+gets smaller; 9 is where an author can reach it without writing blocks. Each its
 own commit.
 
 ## What this does not do
