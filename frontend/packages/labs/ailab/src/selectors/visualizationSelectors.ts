@@ -5,6 +5,12 @@ import {
   getUniqueOptions,
   getLocalizedColumnName,
 } from '../helpers/columnDetails';
+import {
+  buildDisplayTree,
+  isTreeModel,
+  type DisplayTreeNode,
+  type SerializedTree,
+} from '../helpers/displayTree';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -228,5 +234,32 @@ export const getUniqueOptionsLabelColumn = createSelector(
   [getLabelColumn, getData],
   (labelColumn: string | undefined, data: DataRow[]): string[] => {
     return getUniqueOptions(data, labelColumn!).map(String).sort();
+  },
+);
+
+export const getDisplayTree = createSelector(
+  [
+    (state: RootState) => state.trainedModel,
+    (state: RootState) => state.selectedFeatures,
+    (state: RootState) => state.featureNumberKey,
+    getLabelColumn,
+  ],
+  (
+    trainedModel,
+    features: string[],
+    featureNumberKey: Record<string, Record<string, number>>,
+    labelColumn: string | undefined,
+  ): DisplayTreeNode | undefined => {
+    if (!trainedModel || !labelColumn) {
+      return undefined;
+    }
+    const json = trainedModel.toJSON() as SerializedTree;
+    // Check first: a KNN model's JSON holds its whole training set.
+    if (!isTreeModel(json)) {
+      return undefined;
+    }
+    // The round trip turns ml-matrix distributions into plain arrays.
+    const model = JSON.parse(JSON.stringify(json)) as SerializedTree;
+    return buildDisplayTree(model, {features, featureNumberKey, labelColumn});
   },
 );

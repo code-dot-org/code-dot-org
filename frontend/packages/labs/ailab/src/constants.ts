@@ -964,4 +964,28 @@ export const styles = {
   navigationButtonsContainer: {
     position: 'relative',
   },
+
+  decisionTree: {
+    clear: 'both',
+    paddingTop: 20,
+  },
+
+  decisionTreeHeader: {
+    fontSize: 14,
+    marginBottom: 8,
+  },
+
+  decisionTreeScroll: {
+    overflowX: 'auto',
+    paddingBottom: 10,
+  },
+
+  visuallyHidden: {
+    position: 'absolute',
+    width: 1,
+    height: 1,
+    overflow: 'hidden',
+    clip: 'rect(0 0 0 0)',
+    whiteSpace: 'nowrap',
+  },
 } as const;
