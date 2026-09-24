@@ -1,12 +1,12 @@
 {
-  "key": "teaching-ai-foundations",
-  "display_name": "Teaching AI Foundations (’25-’26 Version)",
+  "key": "teaching-ai-foundations-year1",
+  "display_name": "Teaching AI Foundations ('26-27 Version)",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Professional Learning",
   "marketing_initiative": "AIF",
   "grade_levels": "9,10,11,12",
-  "header": null,
+  "header": "self_paced",
   "image": "https://images.code.org/1d0e4201899cf59d6eaf995f5d71428d-csaif-cover-new.avif",
   "cs_topic": "artificial_intelligence,cybersecurity,data,hardware,internet,web_design,programming",
   "school_subject": null,
@@ -15,9 +15,9 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_key": "teaching-ai-foundations",
+  "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
-    "AI Foundations"
+
   ]
 }
