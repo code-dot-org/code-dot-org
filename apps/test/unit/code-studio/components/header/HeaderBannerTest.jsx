@@ -10,25 +10,22 @@ describe('HeaderBanner', () => {
     expect(screen.getByText('Story')).toBeTruthy();
   });
 
-  it('draws a segment per step and says how many are complete', () => {
+  it('draws a bar filled to the completed share of the sub-path', () => {
     render(
       <HeaderBanner
         label="Story"
         width={300}
-        steps={[
-          {completed: true, current: false},
-          {completed: false, current: true},
-          {completed: false, current: false},
-        ]}
+        progress={{completed: 1, total: 4}}
       />
     );
-    const steps = screen.getByRole('img', {name: '1 of 3 complete'});
-    expect(steps.children).toHaveLength(3);
+    const bar = screen.getByRole('progressbar');
+    expect(bar.getAttribute('aria-valuetext')).toBe('1 of 4 complete');
+    expect(bar.firstChild.style.width).toBe('25%');
   });
 
-  it('draws no segments without steps', () => {
+  it('draws no bar without progress', () => {
     render(<HeaderBanner label="Story" width={300} />);
-    expect(screen.queryByRole('img')).toBeNull();
+    expect(screen.queryByRole('progressbar')).toBeNull();
   });
 
   it('reports its natural width', () => {
@@ -76,12 +73,11 @@ describe('HeaderMiddle.subPathProgressFor', () => {
       {id: '5', status: 'not_tried'},
     ].map(level => ({...level, isCurrentLevel: level.id === currentId}));
 
-  it('lists the levels sharing the current label, marking done and current', () => {
-    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('3'))).toEqual([
-      {completed: true, current: false},
-      {completed: false, current: true},
-      {completed: false, current: false},
-    ]);
+  it('counts the completed levels among those sharing the current label', () => {
+    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('3'))).toEqual({
+      completed: 1,
+      total: 3,
+    });
   });
 
   it('is null when the label covers one level, or the level has none', () => {

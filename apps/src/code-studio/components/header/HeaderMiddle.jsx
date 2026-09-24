@@ -216,21 +216,21 @@ class HeaderMiddle extends React.Component {
     return level?.headerLabel || '';
   }
 
-  // Progress through the levels that share the current level's header label:
-  // one entry per level, in lesson order, with whether it is completed and
-  // whether it is the current one. Null when the label covers one level.
+  // Progress through the levels that share the current level's header label,
+  // as completed and total counts. Null when the label covers one level.
   static subPathProgressFor(levels) {
     const current = levels?.find(l => l.isCurrentLevel);
     if (!current?.headerLabel) {
       return null;
     }
-    const steps = levels
-      .filter(l => l.headerLabel === current.headerLabel)
-      .map(l => ({
-        completed: isLevelStatusCompleted(l.status),
-        current: l === current,
-      }));
-    return steps.length > 1 ? steps : null;
+    const path = levels.filter(l => l.headerLabel === current.headerLabel);
+    if (path.length < 2) {
+      return null;
+    }
+    return {
+      completed: path.filter(l => isLevelStatusCompleted(l.status)).length,
+      total: path.length,
+    };
   }
 
   render() {
@@ -348,7 +348,7 @@ class HeaderMiddle extends React.Component {
                     lessonData,
                     currentLevelId
                   )}
-                  steps={HeaderMiddle.subPathProgressFor(levels)}
+                  progress={HeaderMiddle.subPathProgressFor(levels)}
                   width={widths.progress - lessonProgressExtraWidth}
                   setDesiredWidth={width => {
                     this.setDesiredWidth('lessonProgress', width);

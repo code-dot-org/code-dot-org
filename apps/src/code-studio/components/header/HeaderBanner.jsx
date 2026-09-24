@@ -9,22 +9,22 @@ import remeasureOnFontsReady from './remeasureOnFontsReady';
 const IMAGE_SIZE = 32;
 
 /**
- * A unit's logo, the current level's header label and a segment per level
- * of the label's sub-path, in the header slot that otherwise holds the
- * progress bubbles. Reports its natural width to the header the way
- * LessonProgress does, so the header's width budget applies unchanged.
+ * A unit's logo, the current level's header label and, under the label, a
+ * bar of progress through the levels sharing it, in the header slot that
+ * otherwise holds the progress bubbles. The two lines sit where the unit
+ * name and its saved-at line sit on the left. Reports its natural width to
+ * the header the way LessonProgress does, so the header's width budget
+ * applies unchanged.
  */
 export default class HeaderBanner extends React.Component {
   static propTypes = {
     imageUrl: PropTypes.string,
     label: PropTypes.string,
-    /** One per level sharing the label, in order; absent for a lone level. */
-    steps: PropTypes.arrayOf(
-      PropTypes.shape({
-        completed: PropTypes.bool.isRequired,
-        current: PropTypes.bool.isRequired,
-      })
-    ),
+    /** Levels completed and in total under the label; absent for a lone level. */
+    progress: PropTypes.shape({
+      completed: PropTypes.number.isRequired,
+      total: PropTypes.number.isRequired,
+    }),
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
   };
@@ -52,30 +52,36 @@ export default class HeaderBanner extends React.Component {
   }
 
   render() {
-    const {imageUrl, label, steps, width} = this.props;
-    const completed = steps?.filter(step => step.completed).length;
+    const {imageUrl, label, progress, width} = this.props;
     return (
       <div id="header_banner" style={{width, overflow: 'hidden'}}>
         <div ref="inner" style={styles.banner}>
           {imageUrl && <img src={imageUrl} alt="" style={styles.image} />}
-          {label && <span style={styles.label}>{label}</span>}
-          {steps && (
-            <span
-              style={styles.steps}
-              role="img"
-              aria-label={`${completed} of ${steps.length} complete`}
-            >
-              {steps.map((step, i) => (
-                <span
-                  key={i}
-                  style={{
-                    ...styles.step,
-                    ...(step.completed && styles.completedStep),
-                    ...(step.current && styles.currentStep),
-                  }}
-                />
-              ))}
-            </span>
+          {label && (
+            <div style={styles.text}>
+              <span style={styles.label}>{label}</span>
+              {progress && (
+                <div style={styles.barRow}>
+                  <div
+                    style={styles.track}
+                    role="progressbar"
+                    aria-valuemin={0}
+                    aria-valuemax={progress.total}
+                    aria-valuenow={progress.completed}
+                    aria-valuetext={`${progress.completed} of ${progress.total} complete`}
+                  >
+                    <div
+                      style={{
+                        ...styles.fill,
+                        width: `${
+                          (100 * progress.completed) / progress.total
+                        }%`,
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
           )}
         </div>
       </div>
@@ -102,35 +108,36 @@ const styles = {
     flex: 'none',
     objectFit: 'cover',
   },
-  label: {
+  // The unit name on the left is a 16px line over a 14px saved-at line; the
+  // label and the bar take the same two lines.
+  text: {
     marginLeft: 12,
+    display: 'flex',
+    flexDirection: 'column',
+    minWidth: 80,
+  },
+  label: {
     color: color.white,
     fontSize: 16,
-    lineHeight: '50px',
+    lineHeight: '24px',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
-  steps: {
-    display: 'inline-flex',
+  barRow: {
+    height: 14,
+    display: 'flex',
     alignItems: 'center',
-    gap: 3,
-    marginLeft: 12,
-    flex: 'none',
   },
-  step: {
-    width: 10,
+  track: {
+    width: '100%',
     height: 6,
     borderRadius: 3,
-    boxSizing: 'border-box',
+    overflow: 'hidden',
     backgroundColor: 'rgba(255, 255, 255, 0.3)',
   },
-  completedStep: {
+  fill: {
+    height: '100%',
+    borderRadius: 3,
     backgroundColor: color.white,
-  },
-  // The current level is hollow: a ring, filled or not, so it stands out
-  // whether or not it is already complete.
-  currentStep: {
-    backgroundColor: 'transparent',
-    border: `2px solid ${color.white}`,
   },
 };
