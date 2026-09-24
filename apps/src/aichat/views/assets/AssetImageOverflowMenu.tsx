@@ -86,16 +86,14 @@ const AssetImageOverflowMenu: React.FC<AssetImageOverflowMenuProps> = ({
   const dispatch = useAppDispatch();
 
   const backpackApi = useMemo(() => {
-    if (
-      experiments.isEnabledAllowingQueryString(experiments.UNIFIED_BACKPACK)
-    ) {
-      // The backpack api redirects signed-out users to sign-in, so we only offer the
-      // save when we have a user.
-      return currentUserId
-        ? Lab2Registry.getInstance().getUnifiedBackpackApi()
-        : undefined;
+    if (experiments.isEnabledAllowingQueryString(experiments.LEGACY_BACKPACK)) {
+      return legacyBackpackApi;
     }
-    return legacyBackpackApi;
+    // The backpack api redirects signed-out users to sign-in, so we only offer the
+    // save when we have a user.
+    return currentUserId
+      ? Lab2Registry.getInstance().getUnifiedBackpackApi()
+      : undefined;
   }, [currentUserId, legacyBackpackApi]);
 
   const ext = extFromFilename(filename) || extFromUrl(url) || DEFAULT_EXT;

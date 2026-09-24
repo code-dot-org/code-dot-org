@@ -45,8 +45,7 @@ interface UnifiedBackpackPanelProps extends BackpackProps {
 }
 
 /**
- * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack file the
- * user has as one list.
+ * Backpack panel. It shows every backpack file the user has as one list.
  */
 const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   validateFileName,
