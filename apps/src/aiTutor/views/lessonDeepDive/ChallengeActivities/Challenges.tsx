@@ -1,7 +1,6 @@
+import {Challenge} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback} from 'react';
 import {useNavigate} from 'react-router-dom';
-
-import {Challenge} from '../types';
 
 import ChallengePicker from './ChallengePicker';
 

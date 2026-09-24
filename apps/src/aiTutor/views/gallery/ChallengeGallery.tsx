@@ -1,18 +1,19 @@
+import {
+  ChallengeResponse,
+  challengeResponseListValidator,
+  GallerySort,
+  Reaction,
+  TutorGalleryData,
+  unitCountsValidator,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {
-  ChallengeResponse,
-  Reaction,
-  challengeResponseListValidator,
-} from '../lessonDeepDive/types';
-
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
 import ProjectView from './ProjectView';
-import {GallerySort, TutorGalleryData, unitCountsValidator} from './types';
 
 import styles from './challenge-gallery.module.scss';
 

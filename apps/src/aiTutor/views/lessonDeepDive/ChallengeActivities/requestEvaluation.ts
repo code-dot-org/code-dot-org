@@ -1,6 +1,6 @@
-import HttpClient from '@cdo/apps/util/HttpClient';
+import {EvaluationStatus} from '@code-dot-org/lesson-deep-dive';
 
-import {EvaluationStatus} from '../types';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 /**
  * Kicks off asynchronous AI evaluation of a submitted challenge response.

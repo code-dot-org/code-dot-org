@@ -1,6 +1,6 @@
-import HttpClient from '@cdo/apps/util/HttpClient';
+import {parseReactions, Reaction} from '@code-dot-org/lesson-deep-dive';
 
-import {Reaction, parseReactions} from '../lessonDeepDive/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 // Adds/removes the signed-in viewer's emoji reaction on a challenge response.
 // Both endpoints return the response's full, updated reaction tallies —
