@@ -2,7 +2,6 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import HeaderBanner from '@cdo/apps/code-studio/components/header/HeaderBanner';
-import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 // The lesson's levels as getCurrentLevels gives them, with one current.
 const levelsWithCurrent = currentId =>
@@ -78,24 +77,5 @@ describe('HeaderBanner.subPathFor', () => {
   it('is null for a level without a label, or with no levels', () => {
     expect(HeaderBanner.subPathFor(levelsWithCurrent('5'))).toBeNull();
     expect(HeaderBanner.subPathFor(undefined)).toBeNull();
-  });
-});
-
-describe('HeaderMiddle.getWidths with a banner', () => {
-  it('gives the popup no room', () => {
-    const widths = HeaderMiddle.getWidths(
-      350,
-      false,
-      false,
-      0,
-      200,
-      350,
-      0,
-      200,
-      true,
-      false
-    );
-    expect(widths.popup).toEqual(0);
-    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
   });
 });

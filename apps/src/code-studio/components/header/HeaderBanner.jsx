@@ -135,7 +135,7 @@ const styles = {
   // The unit name on the left is a 16px line over a 14px saved-at line; the
   // label and the bar take the same two lines.
   text: {
-    marginLeft: 12,
+    marginInlineStart: 12,
     display: 'flex',
     flexDirection: 'column',
     minWidth: 80,
