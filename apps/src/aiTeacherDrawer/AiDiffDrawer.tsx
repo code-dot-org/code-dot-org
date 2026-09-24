@@ -61,6 +61,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       return false;
     }
   }, []);
+  const showRubrics = useMemo(() => {
+    if (!experiments.isEnabled('rubrics-drawer')) return false;
+    return !!document.querySelector('script[data-rubricdata]');
+  }, []);
   const [showChatList, setShowChatList] = useState(false);
   const {personalizationData} = useTeachingProfileData();
   const dispatch = useAppDispatch();
@@ -195,6 +199,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           unreadNotificationCount={unreadNotificationCount}
           showLearn={showLearn}
           showTeacherPanel={showTeacherPanel}
+          showRubrics={showRubrics}
         />
       </div>
     </Drawer>
