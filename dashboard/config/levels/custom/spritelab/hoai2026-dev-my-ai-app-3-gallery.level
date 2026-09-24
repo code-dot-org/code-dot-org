@@ -29,13 +29,13 @@
       "id": "gallery",
       "name": "Gallery"
     },
-    "long_instructions": "# Your app: the Gallery\n1. In the **Images** tab, choose the model you saved.\n2. Make six images with **New image**. Choose the features for each one; the AI draws the picture from them. Make examples with different answers. If a picture does not match its features, draw it again.\n3. In the code, make a grid of all your images. When any image is clicked, go to **Details**.",
+    "long_instructions": "# Your app: the Gallery\n1. In the **Images** tab, choose the model you saved.\n2. Make six images with **New image**. Choose the features for each one; the AI draws the picture from them. Make examples with different answers. If a picture does not match its features, draw it again.\n3. In the code, make a grid of all your images. When any sprite is clicked, go to **Details**.",
     "guide_steps": [
       {
         "text": "**Pictures from data.** In the **Images** tab, choose the model you saved. Then make six pictures with **New image**, choosing the features for each one."
       },
       {
-        "text": "**Check the pictures:** redraw any that do not show their features. Then, in the code, add **make a grid of all my images**, and **when any image clicked, choose it** that goes to **Details**. Play and click a picture.",
+        "text": "**Check the pictures:** redraw any that do not show their features. Then, in the code, add **make a grid of all my images**, and **when any sprite clicked, choose it** that goes to **Details**. Play and click a picture.",
         "after": {
           "spriteImages": 6
         },

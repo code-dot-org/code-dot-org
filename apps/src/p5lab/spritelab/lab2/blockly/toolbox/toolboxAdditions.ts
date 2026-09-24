@@ -71,6 +71,18 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
   ],
 ]);
 
+// Lab blocks whose SPRITE socket starts holding a costume, as the DB pool's
+// sprite blocks do.
+const SPRITE_SOCKET_BLOCKS = [
+  SET_TRAIT_BLOCK_TYPE,
+  TRAIT_OF_BLOCK_TYPE,
+  PREDICT_BLOCK_TYPE,
+  PREDICTION_OF_BLOCK_TYPE,
+];
+const SPRITE_SOCKET_DEFAULT = {
+  inputs: {SPRITE: {shadow: {type: 'gamelab_allSpritesWithAnimation'}}},
+};
+
 // Lab-injected toolbox categories, inserted at the top of every level's
 // toolbox. The levelbuilder owns whatever they author: a category with this
 // name is used as written, an EMPTY one suppresses the category, and the
@@ -191,7 +203,12 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
   // anything else starts bare (fields initialize to their own defaults).
   const makeBlock = (type: string): BlockInfo => {
     const grid = GRID_FIELD_DEFAULTS.get(type);
-    return {kind: 'block', type, ...(grid ? {fields: {GRID: grid}} : {})};
+    return {
+      kind: 'block',
+      type,
+      ...(grid ? {fields: {GRID: grid}} : {}),
+      ...(SPRITE_SOCKET_BLOCKS.includes(type) ? SPRITE_SOCKET_DEFAULT : {}),
+    };
   };
   // Prefer cloning a curated entry from elsewhere in the toolbox — it keeps
   // the level's shadows and defaults.

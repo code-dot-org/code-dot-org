@@ -3,8 +3,6 @@ import {Order} from 'blockly/javascript';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
-import {noteImageFieldValue} from '../../imageReferences';
-import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 import {FIELD_TRAIT_NAME_TYPE} from '../traitFields';
 
 export const TRAIT_OF_BLOCK_TYPE = 'spritelab2_traitOfSprite';
@@ -16,17 +14,17 @@ const definition: BlockJson = {
   message0: '%1 of %2',
   args0: [
     {type: FIELD_TRAIT_NAME_TYPE, name: 'TRAIT'},
-    {type: FIELD_COSTUME_TYPE, name: 'ANIMATION_NAME'},
+    {type: 'input_value', name: 'SPRITE', check: 'Sprite'},
   ],
   inputsInline: true,
   output: 'String',
   style: BlockStyles.LAB_BLOCKS,
 };
 
-const generator: GeneratorFunction = block => [
-  `traitOfSprite({costume: ${noteImageFieldValue(
-    block.getFieldValue('ANIMATION_NAME')
-  )}}, ${JSON.stringify(block.getFieldValue('TRAIT'))})`,
+const generator: GeneratorFunction = (block, generatorInstance) => [
+  `traitOfSprite(${
+    generatorInstance.valueToCode(block, 'SPRITE', Order.COMMA) || 'null'
+  }, ${JSON.stringify(block.getFieldValue('TRAIT'))})`,
   Order.FUNCTION_CALL,
 ];
 

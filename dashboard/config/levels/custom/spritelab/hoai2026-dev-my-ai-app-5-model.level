@@ -46,15 +46,23 @@
             {
               "kind": "block",
               "type": "spritelab2_predictForSprite",
-              "fields": {
-                "ANIMATION_NAME": "\"@chosen\""
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
               }
             },
             {
               "kind": "block",
               "type": "spritelab2_predictionOfSprite",
-              "fields": {
-                "ANIMATION_NAME": "\"@chosen\""
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
               }
             }
           ]
@@ -88,8 +96,12 @@
                       "TEXT2": {
                         "block": {
                           "type": "spritelab2_predictionOfSprite",
-                          "fields": {
-                            "ANIMATION_NAME": "\"@chosen\""
+                          "inputs": {
+                            "SPRITE": {
+                              "block": {
+                                "type": "spritelab2_chosenSprite"
+                              }
+                            }
                           }
                         }
                       }
@@ -129,8 +141,12 @@
                 "A": {
                   "block": {
                     "type": "spritelab2_traitOfSprite",
-                    "fields": {
-                      "ANIMATION_NAME": "\"@chosen\""
+                    "inputs": {
+                      "SPRITE": {
+                        "block": {
+                          "type": "spritelab2_chosenSprite"
+                        }
+                      }
                     }
                   }
                 },
@@ -147,8 +163,12 @@
             {
               "kind": "block",
               "type": "spritelab2_traitOfSprite",
-              "fields": {
-                "ANIMATION_NAME": "\"@chosen\""
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
               }
             },
             {

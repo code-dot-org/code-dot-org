@@ -20,7 +20,7 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "level_mode": {
+        "level_mode": {
       "kind": "freeplay",
       "adlibs": "model"
     },
@@ -479,11 +479,8 @@
                       },
                       "next": {
                         "block": {
-                          "type": "gamelab_makeNewSpriteAnon",
-                          "id": "makeNewSpriteAnon-43",
-                          "fields": {
-                            "ANIMATION_NAME": "\"@chosen\""
-                          },
+                          "type": "spritelab2_makeChosenSprite",
+                          "id": "makeChosenSprite-43",
                           "inputs": {
                             "LOCATION": {
                               "block": {
@@ -505,11 +502,8 @@
                               "inputs": {
                                 "SPRITE": {
                                   "block": {
-                                    "type": "gamelab_allSpritesWithAnimation",
-                                    "id": "allSpritesWithAnimation-44",
-                                    "fields": {
-                                      "ANIMATION": "\"@chosen\""
-                                    }
+                                    "type": "spritelab2_chosenSprite",
+                                    "id": "chosenSprite-44"
                                   }
                                 },
                                 "VAL": {

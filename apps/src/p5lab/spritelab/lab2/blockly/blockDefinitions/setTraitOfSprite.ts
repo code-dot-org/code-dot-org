@@ -1,8 +1,8 @@
+import {Order} from 'blockly/javascript';
+
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
-import {noteImageFieldValue} from '../../imageReferences';
-import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 import {FIELD_TRAIT_NAME_TYPE, FIELD_TRAIT_VALUE_TYPE} from '../traitFields';
 
 export const SET_TRAIT_BLOCK_TYPE = 'spritelab2_setTraitOfSprite';
@@ -17,7 +17,7 @@ const definition: BlockJson = {
   message0: 'set %1 of %2 to %3',
   args0: [
     {type: FIELD_TRAIT_NAME_TYPE, name: 'TRAIT'},
-    {type: FIELD_COSTUME_TYPE, name: 'ANIMATION_NAME'},
+    {type: 'input_value', name: 'SPRITE', check: 'Sprite'},
     {type: FIELD_TRAIT_VALUE_TYPE, name: 'VALUE'},
   ],
   inputsInline: true,
@@ -26,10 +26,10 @@ const definition: BlockJson = {
   style: BlockStyles.LAB_BLOCKS,
 };
 
-const generator: GeneratorFunction = block =>
-  `setTraitOfSprite({costume: ${noteImageFieldValue(
-    block.getFieldValue('ANIMATION_NAME')
-  )}}, ${JSON.stringify(block.getFieldValue('TRAIT'))}, ${JSON.stringify(
+const generator: GeneratorFunction = (block, generatorInstance) =>
+  `setTraitOfSprite(${
+    generatorInstance.valueToCode(block, 'SPRITE', Order.COMMA) || 'null'
+  }, ${JSON.stringify(block.getFieldValue('TRAIT'))}, ${JSON.stringify(
     block.getFieldValue('VALUE')
   )});\n`;
 

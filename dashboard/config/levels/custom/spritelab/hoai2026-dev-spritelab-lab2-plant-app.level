@@ -116,19 +116,47 @@
           "contents": [
             {
               "kind": "block",
-              "type": "spritelab2_predictForSprite"
+              "type": "spritelab2_predictForSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "spritelab2_predictionOfSprite"
+              "type": "spritelab2_predictionOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "spritelab2_traitOfSprite"
+              "type": "spritelab2_traitOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "spritelab2_setTraitOfSprite"
+              "type": "spritelab2_setTraitOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -616,11 +644,8 @@
                       },
                       "next": {
                         "block": {
-                          "type": "gamelab_makeNewSpriteAnon",
+                          "type": "spritelab2_makeChosenSprite",
                           "id": "makeNewSpriteAnon-37",
-                          "fields": {
-                            "ANIMATION_NAME": "\"@chosen\""
-                          },
                           "inputs": {
                             "LOCATION": {
                               "block": {
@@ -642,11 +667,8 @@
                               "inputs": {
                                 "SPRITE": {
                                   "block": {
-                                    "type": "gamelab_allSpritesWithAnimation",
-                                    "id": "allSpritesWithAnimation-38",
-                                    "fields": {
-                                      "ANIMATION": "\"@chosen\""
-                                    }
+                                    "type": "spritelab2_chosenSprite",
+                                    "id": "allSpritesWithAnimation-38"
                                   }
                                 },
                                 "VAL": {
@@ -748,9 +770,6 @@
                         "block": {
                           "type": "spritelab2_predictForSprite",
                           "id": "predict-49",
-                          "fields": {
-                            "ANIMATION_NAME": "\"@chosen\""
-                          },
                           "inputs": {
                             "DO": {
                               "block": {
@@ -773,8 +792,13 @@
                                           "block": {
                                             "type": "spritelab2_predictionOfSprite",
                                             "id": "predictionOfSprite-50",
-                                            "fields": {
-                                              "ANIMATION_NAME": "\"@chosen\""
+                                            "inputs": {
+                                              "SPRITE": {
+                                                "block": {
+                                                  "type": "spritelab2_chosenSprite",
+                                                  "id": "predictionOfSprite-50-chosen"
+                                                }
+                                              }
                                             }
                                           }
                                         }
@@ -808,8 +832,13 @@
                                               "block": {
                                                 "type": "spritelab2_predictionOfSprite",
                                                 "id": "predictionOfSprite-55",
-                                                "fields": {
-                                                  "ANIMATION_NAME": "\"@chosen\""
+                                                "inputs": {
+                                                  "SPRITE": {
+                                                    "block": {
+                                                      "type": "spritelab2_chosenSprite",
+                                                      "id": "predictionOfSprite-55-chosen"
+                                                    }
+                                                  }
                                                 }
                                               }
                                             }
@@ -846,6 +875,12 @@
                                     }
                                   }
                                 }
+                              }
+                            },
+                            "SPRITE": {
+                              "block": {
+                                "type": "spritelab2_chosenSprite",
+                                "id": "predict-49-chosen"
                               }
                             }
                           }

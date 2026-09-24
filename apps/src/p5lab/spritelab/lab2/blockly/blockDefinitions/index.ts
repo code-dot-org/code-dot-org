@@ -8,9 +8,11 @@ import {
 
 import aiAnswer from './aiAnswer';
 import askAi from './askAi';
+import chosenSprite from './chosenSprite';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makeButton from './makeButton';
+import makeChosenSprite from './makeChosenSprite';
 import makeImageGrid from './makeImageGrid';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
@@ -70,6 +72,8 @@ const labBlockDefinitions: {
   makeButton,
   whenButtonClicked,
   whenImageClicked,
+  chosenSprite,
+  makeChosenSprite,
   makeImageGrid,
   spriteCalled,
   askAi,

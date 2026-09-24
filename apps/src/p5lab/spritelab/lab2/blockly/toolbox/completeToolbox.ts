@@ -6,9 +6,11 @@ import {
 
 import {AI_ANSWER_BLOCK_TYPE} from '../blockDefinitions/aiAnswer';
 import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
+import {CHOSEN_SPRITE_BLOCK_TYPE} from '../blockDefinitions/chosenSprite';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {MAKE_BUTTON_BLOCK_TYPE} from '../blockDefinitions/makeButton';
+import {MAKE_CHOSEN_SPRITE_BLOCK_TYPE} from '../blockDefinitions/makeChosenSprite';
 import {MAKE_IMAGE_GRID_BLOCK_TYPE} from '../blockDefinitions/makeImageGrid';
 import {PREDICT_BLOCK_TYPE} from '../blockDefinitions/predictForSprite';
 import {PREDICTION_OF_BLOCK_TYPE} from '../blockDefinitions/predictionOfSprite';
@@ -59,6 +61,8 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     WHEN_BUTTON_CLICKED_BLOCK_TYPE,
     MAKE_IMAGE_GRID_BLOCK_TYPE,
     WHEN_IMAGE_CLICKED_BLOCK_TYPE,
+    CHOSEN_SPRITE_BLOCK_TYPE,
+    MAKE_CHOSEN_SPRITE_BLOCK_TYPE,
     SPRITE_CALLED_BLOCK_TYPE,
   ],
 };

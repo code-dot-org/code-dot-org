@@ -51,19 +51,47 @@
           "contents": [
             {
               "kind": "block",
-              "type": "spritelab2_setTraitOfSprite"
+              "type": "spritelab2_setTraitOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "spritelab2_traitOfSprite"
+              "type": "spritelab2_traitOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "spritelab2_predictForSprite"
+              "type": "spritelab2_predictForSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "spritelab2_predictionOfSprite"
+              "type": "spritelab2_predictionOfSprite",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             }
           ]
         },

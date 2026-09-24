@@ -32,7 +32,7 @@
     "long_instructions": "# Your app: write rules\nA **rule** is an if/else decision that a person writes. Look at your data in AI Lab. Which feature tells you the most about the answer?\n\n**Do this:** when **Check It!** is clicked, use **if / else** on a feature of the chosen picture to show an answer.\n\nThen test all six pictures. Write down the answer your rule gives for each one, and what you think is correct.",
     "guide_steps": [
       {
-        "text": "**Rules.** When **Check It!** is clicked, use **if / else** on a feature of the chosen picture (the star) to show an answer. Then try all six pictures and write down what your rule says. Which ones does it get wrong?",
+        "text": "**Rules.** When **Check It!** is clicked, use **if / else** on a feature of **the chosen sprite** to show an answer. Then try all six pictures and write down what your rule says. Which ones does it get wrong?",
         "showContinue": true
       }
     ],
@@ -99,8 +99,12 @@
                 "A": {
                   "block": {
                     "type": "spritelab2_traitOfSprite",
-                    "fields": {
-                      "ANIMATION_NAME": "\"@chosen\""
+                    "inputs": {
+                      "SPRITE": {
+                        "block": {
+                          "type": "spritelab2_chosenSprite"
+                        }
+                      }
                     }
                   }
                 },
@@ -123,9 +127,17 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_chosenSprite"
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_traitOfSprite",
-              "fields": {
-                "ANIMATION_NAME": "\"@chosen\""
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_chosenSprite"
+                  }
+                }
               }
             },
             {
