@@ -7,6 +7,7 @@ import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 import {computeExportDimensions} from './computeExportDimensions';
 import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
+import {getExportStyleProperties} from './getExportStyleProperties';
 import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
 import {sanitizeTextForExport} from './sanitizeTextForExport';
 
@@ -95,6 +96,7 @@ export const createSketchSnapshotBlob = async (
     blob = await toBlob(viewport, {
       backgroundColor,
       fontEmbedCSS,
+      includeStyleProperties: getExportStyleProperties(),
       pixelRatio,
       width: imageWidth,
       height: imageHeight,
