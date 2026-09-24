@@ -18,6 +18,7 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {isSpriteLab2Sources} from '../migrateSources';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
@@ -84,12 +85,28 @@ const SpriteLab2Container: React.FunctionComponent<
     }
   }, [loadError, dispatch]);
 
-  if (!currentSources) {
+  // Another lab's sources cannot load here. An editable project restarts
+  // from the level's own (the old ones stay in version history); a
+  // read-only one is shown as the level starts, and nothing is saved.
+  const foreign = !!currentSources && !isSpriteLab2Sources(currentSources);
+  const {startOver, isEditable} = restOutputs;
+  useEffect(() => {
+    if (foreign && isEditable) {
+      startOver();
+    }
+  }, [foreign, isEditable, startOver]);
+
+  if (!currentSources || (foreign && isEditable)) {
     return <Loading isLoading={true} />;
   }
+  const sources = foreign
+    ? ((levelProperties.templateSources ||
+        levelProperties.startSources ||
+        defaultSources) as Sources)
+    : currentSources;
   return (
     <SpriteLab2View
-      currentSources={currentSources}
+      currentSources={sources}
       levelProperties={levelProperties}
       channelId={channel?.id}
       sourcesReinitializedCount={sourcesReinitializedCount}

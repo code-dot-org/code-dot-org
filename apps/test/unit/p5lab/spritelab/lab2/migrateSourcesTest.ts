@@ -1,4 +1,5 @@
 import {
+  isSpriteLab2Sources,
   migrateAnimationList,
   migrateBlockTypes,
   migrateScenes,
@@ -88,5 +89,27 @@ describe('migrateAnimationList', () => {
     ];
     expect(migrateScenes(scenes as never)).toBe(true);
     expect(scenes[0].source.blocks.blocks[0].type).toBe('spritelab2_whenRun');
+  });
+});
+
+describe('isSpriteLab2Sources', () => {
+  it("accepts this lab's sources, new or saved", () => {
+    expect(isSpriteLab2Sources({})).toBe(true);
+    expect(
+      isSpriteLab2Sources({
+        animations: {orderedKeys: [], propsByKey: {}},
+        scenes: [],
+      })
+    ).toBe(true);
+  });
+
+  it('rejects App Lab sources, which carry a design', () => {
+    expect(
+      isSpriteLab2Sources({source: 'var data = {};', html: '<div></div>'})
+    ).toBe(false);
+  });
+
+  it('rejects an animation list this lab did not write', () => {
+    expect(isSpriteLab2Sources({animations: {}})).toBe(false);
   });
 });

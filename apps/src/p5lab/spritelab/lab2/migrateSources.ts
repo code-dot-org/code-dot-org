@@ -62,3 +62,20 @@ export function migrateAnimationList(
   }
   return changed;
 }
+
+/**
+ * False for sources another lab saved under this channel: App Lab's carry a
+ * design `html`, and an animation list without `orderedKeys` is not one
+ * this lab wrote. Seen when a local database reset reissues a project id
+ * whose stored sources belong to an older project.
+ */
+export function isSpriteLab2Sources(sources: object): boolean {
+  if ('html' in sources) {
+    return false;
+  }
+  const animations = (sources as {animations?: unknown}).animations;
+  return (
+    animations === undefined ||
+    Array.isArray((animations as {orderedKeys?: unknown})?.orderedKeys)
+  );
+}
