@@ -51,9 +51,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     state => state.currentUser.aiDifferentiationEnabled
   );
   const showChats = aiDifferentiationEnabled !== false;
-  const [activeNav, setActiveNav] = useState(
-    showChats ? 'Chats' : 'Prepare'
-  );
+  const [activeNav, setActiveNav] = useState(showChats ? 'Chats' : 'Prepare');
   const showLearn = experiments.isEnabled('sidebar-prepare');
   const showTeacherPanel = useMemo(() => {
     if (!experiments.isEnabled('ta-teacher-panel')) return false;
