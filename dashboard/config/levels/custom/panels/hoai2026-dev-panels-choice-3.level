@@ -36,7 +36,8 @@
         "nextUrl": "/s/hoai2026-dev/lessons/1/levels/26"
       }
     ],
-    "use_links": "true"
+    "use_links": "true",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </Panels>

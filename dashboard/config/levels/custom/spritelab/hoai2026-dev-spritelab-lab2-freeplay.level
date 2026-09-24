@@ -217,7 +217,8 @@
           ]
         }
       ]
-    }
+    },
+    "header_label": "Free play"
   }
 }]]></config>
 </GamelabJr>

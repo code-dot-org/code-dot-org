@@ -53,7 +53,8 @@
           "type": "gamelab_setBackgroundImageAs"
         }
       ]
-    }
+    },
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

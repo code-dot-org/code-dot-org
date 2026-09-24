@@ -38,7 +38,8 @@
         }
       }
     ],
-    "long_instructions": "# Make a character\nCreate the hero of your story. Pick the words that describe them and press **Generate**."
+    "long_instructions": "# Make a character\nCreate the hero of your story. Pick the words that describe them and press **Generate**.",
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

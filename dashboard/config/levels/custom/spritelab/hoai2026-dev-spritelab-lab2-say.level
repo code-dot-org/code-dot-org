@@ -70,7 +70,8 @@
           }
         }
       ]
-    }
+    },
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

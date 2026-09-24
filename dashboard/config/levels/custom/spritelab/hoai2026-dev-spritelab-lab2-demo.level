@@ -47,7 +47,8 @@
         "showContinue": true
       }
     ],
-    "long_instructions": "# A ready-made world\nWe laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top."
+    "long_instructions": "# A ready-made world\nWe laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

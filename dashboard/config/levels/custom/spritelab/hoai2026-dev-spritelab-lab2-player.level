@@ -65,7 +65,8 @@
           "type": "spritelab2_setAsPlatformPlayer"
         }
       ]
-    }
+    },
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

@@ -38,7 +38,8 @@
         }
       }
     ],
-    "long_instructions": "# Make another character\nEvery story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**."
+    "long_instructions": "# Make another character\nEvery story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**.",
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

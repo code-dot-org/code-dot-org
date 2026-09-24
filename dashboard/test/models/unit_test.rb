@@ -701,6 +701,8 @@ class UnitTest < ActiveSupport::TestCase
       age_13_required: false,
       show_sign_in_callout: false,
       hasUnnumberedLessons: false,
+      headerBanner: false,
+      headerBannerImage: nil,
       course_name: unit_group.name,
       course_id: unit_group.id,
       unit_position: unit_group_unit.position,

@@ -38,7 +38,8 @@
         }
       }
     ],
-    "long_instructions": "# Make a platform block\nPlatformers are built from blocks. Pick a material for a square tile the player can stand on and press **Generate**."
+    "long_instructions": "# Make a platform block\nPlatformers are built from blocks. Pick a material for a square tile the player can stand on and press **Generate**.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>
