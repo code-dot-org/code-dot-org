@@ -8,6 +8,13 @@ import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 const IMAGE_SIZE = 32;
 
+// Lab2 moves between a lesson's levels without a page load, so the bar is
+// still mounted when the level changes and can slide to its new fill.
+const FILL_TRANSITION = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+  .matches
+  ? undefined
+  : 'width 400ms ease-out';
+
 /**
  * A unit's logo, the current level's header label and, under the label, a
  * bar showing where the level sits among those sharing it, in the header
@@ -59,7 +66,9 @@ export default class HeaderBanner extends React.Component {
         <div ref="inner" style={styles.banner}>
           {imageUrl && <img src={imageUrl} alt="" style={styles.image} />}
           {label && (
-            <div style={styles.text}>
+            // Keyed on the label so a new part starts at its own fill rather
+            // than sliding from the last part's.
+            <div key={label} style={styles.text}>
               <span style={styles.label}>{label}</span>
               {progress && (
                 <div style={styles.barRow}>
@@ -138,5 +147,6 @@ const styles = {
     height: '100%',
     borderRadius: 3,
     backgroundColor: color.white,
+    transition: FILL_TRANSITION,
   },
 };
