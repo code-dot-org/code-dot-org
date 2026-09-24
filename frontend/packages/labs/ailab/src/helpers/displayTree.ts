@@ -25,13 +25,16 @@ export interface DisplayTreeAnswer {
 
 export type DisplayTreeNode = DisplayTreeQuestion | DisplayTreeAnswer;
 
+// A live model holds an ml-matrix row vector; a saved one, a nested array.
+type ClassDistribution = number[][] | {getRow(row: number): number[]};
+
 // A leaf that ml-cart stopped splitting keeps `splitColumn` and `splitValue`.
 interface SerializedTreeNode {
   splitColumn?: number;
   splitValue?: number;
   left?: SerializedTreeNode;
   right?: SerializedTreeNode;
-  distribution?: number[][] | number;
+  distribution?: ClassDistribution | number;
 }
 
 export interface SerializedTree {
@@ -48,11 +51,11 @@ export interface DisplayTreeContext {
 
 const TREE_MODEL_NAMES = ['DTClassifier', 'DTRegression'];
 
-export function isTreeModel(model: SerializedTree): boolean {
+function isTreeModel(model: SerializedTree): boolean {
   return TREE_MODEL_NAMES.includes(model.name ?? '') && !!model.root;
 }
 
-// `model` is `toJSON()` after a JSON round trip, the form a saved model takes.
+// `model` is `toJSON()`, from a live model or a saved one.
 export function buildDisplayTree(
   model: SerializedTree,
   context: DisplayTreeContext,
@@ -140,8 +143,14 @@ function getPrediction(
     return distribution;
   }
 
+  if (!distribution) {
+    throw new Error('Decision tree leaf has no class distribution');
+  }
+
   // The row is as long as the highest class code in this leaf, plus one.
-  const probabilities = distribution?.[0] ?? [];
+  const probabilities = Array.isArray(distribution)
+    ? distribution[0]
+    : distribution.getRow(0);
   // ml-cart predicts the first class with the highest probability.
   let best = 0;
   probabilities.forEach((probability, index) => {
