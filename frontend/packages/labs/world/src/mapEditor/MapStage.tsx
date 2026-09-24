@@ -30,7 +30,6 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
-
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
@@ -72,7 +71,6 @@ import {
   parentIdOf,
   removeLayer,
   renamePlacementReferences,
-  withCameraFollows,
   withoutPlacement,
   withLayer,
   withPlacementAnchor,
@@ -2547,9 +2545,6 @@ export const MapStage = ({
       )}
       {!selectedActor && !(inspectingLayer && inspectedLayer) && !world && (
         <MapInspector
-          follows={map.camera?.follows}
-          placements={map.actors.map(actor => actor.id)}
-          onFollow={id => commit(withCameraFollows(mapRef.current, id))}
           modal={map.modal === true}
           // `undefined` and not `false` for the off state: every map written
           // before modality existed says nothing, and writing `false` into all

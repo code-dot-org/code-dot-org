@@ -697,35 +697,21 @@ describe('the world, with nothing selected', () => {
 });
 
 describe('a level, with nothing selected', () => {
-  const select = (view: {container: HTMLElement}) =>
-    view.container.querySelector(
-      'select[name="map-camera-follows"]',
-    ) as HTMLSelectElement;
-
-  it('offers its placements for the camera to follow, and writes the choice', () => {
-    const {written, ...view} = mount(doc());
+  it('says nothing about a camera, because a map does not decide that', () => {
+    // The field was "Camera follows", a dropdown of this map's placements. It is
+    // gone: a map is data and where the view looks is logic, so a Viewport
+    // decides — the world being the main Viewport — and its camera elects
+    // `Follows` as the world's always has (specs/SPACE_CAMERAS_PLAN.md).
+    //
+    // A level in a hundred-level game should not have to configure a camera,
+    // which is the argument that took a map's own events off it too
+    // (specs/MAP_EVENTS_PLAN.md).
+    const view = mount(doc());
     expect(view.getByTestId('map-inspector')).toBeInTheDocument();
-    expect([...select(view).options].map(option => option.value)).toEqual([
-      '',
-      'a',
-      'b',
-    ]);
-
-    fireEvent.change(select(view), {target: {value: 'b'}});
-    expect(written().camera).toEqual({follows: 'b'});
-
-    // Following nothing is said by saying nothing.
-    fireEvent.change(select(view), {target: {value: ''}});
-    expect(written()).not.toHaveProperty('camera');
-  });
-
-  it('follows nothing once what it followed is deleted', () => {
-    const map = {...doc(), camera: {follows: 'a'}};
-    const {canvas, written} = mount(map);
-    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
-    fireEvent.keyDown(canvas, {key: 'Delete'});
-    expect(written().actors.map(actor => actor.id)).toEqual(['b']);
-    expect(written()).not.toHaveProperty('camera');
+    expect(
+      view.container.querySelector('select[name="map-camera-follows"]'),
+    ).toBeNull();
+    expect(view.queryByLabelText('Camera follows')).toBeNull();
   });
 
   it('marks the map as a screen, and unmarks it back to absent', () => {

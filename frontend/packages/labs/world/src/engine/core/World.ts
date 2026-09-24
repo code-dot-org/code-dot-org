@@ -210,7 +210,7 @@ export interface WorldMap {
    * is the level's property"). Read when the map is loaded into a Viewport;
    * the world's own camera is the camera rules' to steer.
    */
-  camera?: {follows?: string};
+
   /**
    * What the map DOES, run once per load — see {@link MapLoad}.
    *
@@ -2071,7 +2071,7 @@ export class World {
    * Replace what `viewport` holds with `map` — by value, or by the path a
    * property holds. What it held is unloaded first, so a Viewport shows one
    * map at a time; the space's bounds start over at the map's size, and its
-   * camera at the middle, on what the map's `camera.follows` names.
+   * camera at the middle of the window it is seen through.
    */
   loadMapInto(
     viewport: Actor,
@@ -2102,12 +2102,6 @@ export class World {
     space.bounds = new Vector(view.x, view.y);
     space.camera!.position = new Vector(view.x / 2, view.y / 2);
     const added = this.loadInto(space, held, layer);
-    const follows = held.camera?.follows;
-    space.follows = follows
-      ? added.find(
-          actor => actor.id === follows || actor.id.startsWith(`${follows}#`),
-        )
-      : undefined;
     this.settleSpace(space);
     return added;
   }
@@ -2144,7 +2138,6 @@ export class World {
     for (const load of space.loads.splice(0)) {
       load.unload();
     }
-    space.follows = undefined;
   }
 
   /**
@@ -2200,6 +2193,28 @@ export class World {
     this.loadMapInto(owner, path);
   }
 
+  /**
+   * Put a space's camera where the Viewport scrolled it, and say where it is.
+   *
+   * WHAT THIS NO LONGER DOES is follow an actor. The map's `camera.follows` is
+   * gone, and with it the second implementation of following: where the view
+   * looks is logic, a map is data, and a hundred level maps should no more each
+   * configure a camera than each mint a `complete`
+   * (specs/SPACE_CAMERAS_PLAN.md, specs/MAP_EVENTS_PLAN.md). A Viewport's
+   * camera follows by electing `Follows`, as the world's always has.
+   *
+   * A CAMERA THAT ELECTS ANYTHING IS THE RULES' TO AIM, and this leaves it
+   * alone — otherwise the camera steps would aim it during the frame and this
+   * would overwrite them at the end of it, which is exactly what the branch
+   * above did. A camera that elects NOTHING is still the Viewport's to scroll,
+   * because a scroll view is the Viewport deciding about the scene it shows and
+   * not a map deciding about itself (specs/SCROLLING_PLAN.md).
+   *
+   * Confinement goes the same way: the scroll path clamps, because `scroll`
+   * promises a reading of where it actually stopped, and a camera with traits is
+   * confined by `Confined to the Map` or by nothing at all — which is how the
+   * world's cameras have always behaved.
+   */
   private settleSpace(space: Space): void {
     const camera = space.camera;
     if (!camera || !space.owner) {
@@ -2207,31 +2222,25 @@ export class World {
     }
     const owner = space.owner;
     const view = this.viewSizeOf(owner);
-    const position = this.positionalProperty(SPATIAL.position);
-    let at = camera.position;
-    if (space.follows && space.follows.world === this && position) {
-      at = space.follows.get(position);
-    } else if (owner.has(ViewportTrait)) {
-      // NOTHING TO FOLLOW, so what the project SCROLLED to is where it looks.
-      // A scroll is measured from the top left of the content and a camera
-      // from its middle, so the two differ by half a window
-      // (specs/SCROLLING_PLAN.md).
+    if (!camera.traits().length && owner.has(ViewportTrait)) {
+      // A scroll is measured from the top left of the content and a camera from
+      // its middle, so the two differ by half a window.
       const scrolled = owner.get(ViewportScrollProperty) as VectorLike;
-      at = new Vector(scrolled.x + view.x / 2, scrolled.y + view.y / 2);
+      const at = new Vector(scrolled.x + view.x / 2, scrolled.y + view.y / 2);
+      // Inside the bounds, or at the middle of an axis the view is wider than.
+      const clamp = (value: number, half: number, size: number) =>
+        size <= half * 2
+          ? size / 2
+          : Math.min(Math.max(value, half), size - half);
+      camera.position = new Vector(
+        clamp(at.x, view.x / 2, space.bounds.x),
+        clamp(at.y, view.y / 2, space.bounds.y),
+      );
     }
-    // Inside the bounds, or at the middle of an axis the view is wider than.
-    const clamp = (value: number, half: number, size: number) =>
-      size <= half * 2
-        ? size / 2
-        : Math.min(Math.max(value, half), size - half);
-    camera.position = new Vector(
-      clamp(at.x, view.x / 2, space.bounds.x),
-      clamp(at.y, view.y / 2, space.bounds.y),
-    );
-    // …and the answer written back, so what a project reads is where it
-    // actually stopped rather than what it asked for. A scrollbar drawn from
-    // an unclamped number runs off its track, and "am I at the bottom" would
-    // never be true for anybody who dragged past it.
+    // …and where it ended up written back, whoever moved it, so what a project
+    // reads is where it actually is rather than what it asked for. A scrollbar
+    // drawn from an unclamped number runs off its track, and "am I at the
+    // bottom" would never be true for anybody who dragged past it.
     if (owner.has(ViewportTrait)) {
       const settled = new Vector(
         camera.position.x - view.x / 2,

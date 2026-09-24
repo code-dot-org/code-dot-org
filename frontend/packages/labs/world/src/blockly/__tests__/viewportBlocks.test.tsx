@@ -79,7 +79,6 @@ const LEVEL = JSON.stringify({
       properties: {positional: {position: {x: 320, y: 160}}},
     },
   ],
-  camera: {follows: 'b'},
 });
 const COIN = JSON.stringify({
   blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Coin'}}]},
@@ -164,7 +163,10 @@ describe('a placed Viewport', () => {
       [...world.actors].slice(1).every(actor => actor.space === space),
     ).toBe(true);
     expect(space.bounds).toEqual({x: 640, y: 320});
-    expect(space.camera!.position).toEqual({x: 320, y: 160});
+    // The middle of the window it is seen through. A map no longer says what to
+    // follow — a Viewport's camera elects `Follows`, as the world's always has
+    // (specs/SPACE_CAMERAS_PLAN.md).
+    expect(space.camera!.position).toEqual({x: 50, y: 40});
     expect(world.spaceSnapshot()[0]).toMatchObject({
       owner: 'Game',
       view: {x: 100, y: 80},

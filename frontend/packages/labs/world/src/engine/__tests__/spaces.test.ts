@@ -22,6 +22,7 @@ import {
 } from '../rules/spatial';
 import {
   ViewportMapProperty,
+  ViewportScrollProperty,
   ViewportShowsThroughProperty,
   ViewportTrait,
 } from '../rules/viewport';
@@ -74,7 +75,7 @@ const makeWorld = () => {
   return world;
 };
 
-/** Three coins across a 20-by-10-tile level, following the middle one. */
+/** Three coins across a 20-by-10-tile level. */
 const LEVEL: WorldMap = {
   size: {width: 20, height: 10},
   tile: {width: 32, height: 32},
@@ -95,7 +96,6 @@ const LEVEL: WorldMap = {
       properties: {positional: {position: {x: 600, y: 300}}},
     },
   ],
-  camera: {follows: 'b'},
 };
 
 const placeWindow = (world: World) =>
@@ -132,7 +132,7 @@ describe('an actor is in one space', () => {
 });
 
 describe('loading into a Viewport', () => {
-  it('places the map in the Viewport’s space, sized and followed', () => {
+  it('places the map in the Viewport’s space, sized', () => {
     const world = makeWorld();
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160));
@@ -147,27 +147,35 @@ describe('loading into a Viewport', () => {
     expect(space.bounds).toEqual(new Vector(640, 320));
     expect(world.mapBounds(added[0])).toEqual(new Vector(640, 320));
     expect(world.mapBounds()).toEqual(new Vector(320, 320));
-    // On the coin it follows, which is inside the level, so unclamped.
-    expect(space.camera!.position).toEqual(new Vector(320, 160));
+    // AND NOT FOLLOWING ANYTHING, which a map no longer says. Its camera is at
+    // the middle of its own window, where a load puts it and where the
+    // Viewport's `scroll` of zero keeps it (specs/SPACE_CAMERAS_PLAN.md).
+    expect(space.camera!.position).toEqual(new Vector(50, 40));
     expect(world.viewSize(added[0])).toEqual(new Vector(100, 80));
   });
 
-  it('keeps the camera inside the map as what it follows moves', () => {
+  it('keeps the camera inside the map as the Viewport scrolls it', () => {
+    // WHAT THIS USED TO SAY was that the camera followed the actor a map named,
+    // and that the engine clamped it. The following is gone — it is `Follows`
+    // on a camera now, elected like anything else — and the clamping stays,
+    // because a scroll view's `scroll` promises a reading of where it actually
+    // stopped (specs/SCROLLING_PLAN.md).
     const world = makeWorld();
     const window = placeWindow(world);
-    const [, middle] = world.loadMapInto(window, LEVEL);
+    world.loadMapInto(window, LEVEL);
+    const space = world.viewportSpaceOf(window)!;
 
-    middle.set(PositionProperty, new Vector(10, 10));
+    window.set(ViewportScrollProperty, new Vector(0, 0));
     world.tick(0);
-    expect(world.viewportSpaceOf(window)!.camera!.position).toEqual(
-      new Vector(50, 40),
-    );
+    expect(space.camera!.position).toEqual(new Vector(50, 40));
 
-    middle.set(PositionProperty, new Vector(900, 900));
+    // Past the end on both axes: a 640 by 320 level seen through 100 by 80
+    // stops half a window from each far edge.
+    window.set(ViewportScrollProperty, new Vector(900, 900));
     world.tick(0);
-    expect(world.viewportSpaceOf(window)!.camera!.position).toEqual(
-      new Vector(590, 280),
-    );
+    expect(space.camera!.position).toEqual(new Vector(590, 280));
+    // …and the clamped answer is what the project reads back.
+    expect(window.get(ViewportScrollProperty)).toEqual(new Vector(540, 240));
   });
 
   it('replaces what the Viewport held, and can be emptied', () => {
@@ -306,7 +314,12 @@ describe('the mouse, through a Viewport', () => {
     const world = makeWorld();
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
-    const [a] = world.loadMapInto(window, LEVEL); // camera on b: (320, 160)
+    const [a] = world.loadMapInto(window, LEVEL);
+    // The space's camera is where a load leaves it: the middle of its own
+    // window, since a map no longer says what to follow and nothing has
+    // scrolled it (specs/SPACE_CAMERAS_PLAN.md).
+    window.set(ViewportScrollProperty, new Vector(270, 120));
+    world.tick(0);
     world.setPointer({x: 160, y: 130}, []); // 10 in from the corner
 
     expect(world.mousePosition()).toEqual(new Vector(160, 130));
@@ -349,7 +362,9 @@ describe('what the driver is told', () => {
       {
         id: 'main/win',
         owner: 'win',
-        camera: {x: 320, y: 160},
+        // The middle of the window: a load leaves the camera there, and a map
+        // no longer says to follow anything (specs/SPACE_CAMERAS_PLAN.md).
+        camera: {x: 50, y: 40},
         view: {x: 100, y: 80},
         bounds: {x: 640, y: 320},
         // A map that names no layers has the one every world has.
@@ -762,5 +777,45 @@ describe('a camera trait, on a space’s camera', () => {
     world.tick(0);
     expect([...aimed.keys()].sort()).toEqual(['corner', 'win:corner']);
     expect(aimed.get('corner')!.map).not.toEqual(aimed.get('win:corner')!.map);
+  });
+});
+
+describe('what the engine does to a camera a trait has aimed', () => {
+  it('leaves where the trait put it', () => {
+    // THE CLAIM STEP 6 IS FOR. The trait aims the camera in the `aim` phase; the
+    // engine's own follow-and-clamp runs at the end of the tick and writes the
+    // camera position from the map's `camera.follows` or the Viewport's scroll.
+    // Two things writing one value, and the later one wins — so a Viewport's
+    // camera cannot be aimed by a rule while that branch exists
+    // (specs/SPACE_CAMERAS_PLAN.md).
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    win.set(ViewportShowsThroughProperty, 'corner');
+
+    world.tick(0);
+    const camera = world.viewportSpaceOf(win)!.cameraNamed('corner')!;
+    // EXACTLY WHERE THE STEP PUT IT, and not clamped. This trait does not elect
+    // `Confined to the Map`, so nothing confines it — which is how the world's
+    // cameras have always behaved, and is the difference between the engine
+    // helping and the engine overruling.
+    expect(camera.position).toEqual(new Vector(0, 0));
+  });
+
+  it('still scrolls a camera that elects nothing, and clamps that', () => {
+    // The other half of the same rule. A camera with no traits is the
+    // Viewport's to scroll, because a scroll view is the Viewport deciding
+    // about the scene it shows — and `scroll` promises a reading of where it
+    // actually stopped, so that path clamps (specs/SCROLLING_PLAN.md).
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+
+    win.set(ViewportScrollProperty, new Vector(900, 900));
+    world.tick(0);
+    expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
+      new Vector(590, 280),
+    );
   });
 });

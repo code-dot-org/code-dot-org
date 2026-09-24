@@ -24,7 +24,6 @@ import {
   withPlacementLayer,
   withSlot,
   renamePlacementReferences,
-  withCameraFollows,
   withoutPlacement,
   MAX_MAP_TILES,
   MIN_MAP_TILES,
@@ -646,46 +645,39 @@ describe('a map’s layers', () => {
   });
 });
 
-describe('what a map’s camera follows', () => {
-  const held = (camera?: MapDoc['camera']): MapDoc =>
-    parseMap(
+describe('what a map says about a camera', () => {
+  // NOTHING, AND THAT IS THE CLAIM. A map is data: it says where things are and
+  // nothing about how the view onto it behaves. `camera.follows` was a per-map
+  // field, so a hundred-level game was a hundred places to say "follow the
+  // player" — the same argument that took a map's own events off it
+  // (specs/SPACE_CAMERAS_PLAN.md, specs/MAP_EVENTS_PLAN.md).
+  //
+  // A Viewport decides instead, and the world is the main Viewport: its camera
+  // elects `Follows` as the world's always has.
+
+  it('drops a camera a file still carries, rather than keeping it', () => {
+    // A project saved while the field existed is not an error to refuse; it is a
+    // file with a key nothing reads. The parse leaves it behind.
+    const held = parseMap(
+      doc({
+        actors: [{id: 'Hero', type: 'actors/hero'}],
+        camera: {follows: 'Hero'},
+      } as Parameters<typeof doc>[0]),
+    );
+    expect(held).not.toHaveProperty('camera');
+  });
+
+  it('takes a placement out without asking what any camera followed', () => {
+    const held = parseMap(
       doc({
         actors: [
           {id: 'Hero', type: 'actors/hero'},
           {id: 'Coin', type: 'actors/coin'},
         ],
-        ...(camera ? {camera} : {}),
       }),
     );
-
-  it('is kept by a parse, and absent when the file says nothing usable', () => {
-    expect(held({follows: 'Hero'}).camera).toEqual({follows: 'Hero'});
-    expect(held()).not.toHaveProperty('camera');
-    expect(held({follows: ''})).not.toHaveProperty('camera');
-    expect(held({})).not.toHaveProperty('camera');
-  });
-
-  it('is set by id and cleared by nothing', () => {
-    const set = withCameraFollows(held(), 'Coin');
-    expect(set.camera).toEqual({follows: 'Coin'});
-    expect(withCameraFollows(set, undefined)).toEqual(held());
-  });
-
-  it('is renamed with the placement it names', () => {
-    const map = held({follows: 'Hero'});
-    expect(renamePlacementReferences(map, 'Hero', 'Player').camera).toEqual({
-      follows: 'Player',
-    });
-    expect(renamePlacementReferences(map, 'Coin', 'Gem').camera).toEqual({
-      follows: 'Hero',
-    });
-  });
-
-  it('is cleared when the placement it names is removed, and only then', () => {
-    const map = held({follows: 'Hero'});
-    expect(withoutPlacement(map, 'Coin').camera).toEqual({follows: 'Hero'});
-    const gone = withoutPlacement(map, 'Hero');
-    expect(gone).not.toHaveProperty('camera');
-    expect(gone.actors.map(actor => actor.id)).toEqual(['Coin']);
+    expect(withoutPlacement(held, 'Hero').actors.map(one => one.id)).toEqual([
+      'Coin',
+    ]);
   });
 });

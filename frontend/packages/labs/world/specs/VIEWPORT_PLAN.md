@@ -15,9 +15,12 @@ the screen. The working record, as before.
 - **The Viewport**, a stock actor (`actors/viewport`) that acts like a Panel
   in shape — a width and a height, a drawing — and carries one property that
   matters: the map it holds, by path. The engine gives each one a space
-  when it is placed, loads its map into that space the first time it runs,
-  points the space's camera at what the map's `camera.follows` names, and
-  keeps the camera inside the map's bounds.
+  when it is placed, loads its map into that space the first time it runs, and
+  scrolls the space's camera by the Viewport's own `scroll`. It USED TO point
+  that camera at what the map's `camera.follows` named and clamp it into the
+  map's bounds; both are gone with the field, and a Viewport's camera now
+  follows and confines by electing the traits that do
+  (specs/SPACE_CAMERAS_PLAN.md).
 - **Loading into a space.** `load map ⟨map⟩ into ⟨viewport⟩` replaces what a
   viewport holds; `unload ⟨viewport⟩` empties it. The load handle a map's
   script gets is the same `MapLoad` step 1 built; a viewport remembers its
@@ -72,8 +75,8 @@ the screen. The working record, as before.
   itself follows `camera.follows` and clamps to the space's bounds, which
   is what the rules do for the world's camera, without the traits.
 
-  _This is a shortcut, and specs/SPACE_CAMERAS_PLAN.md is the plan to remove
-  it._ The clamp here is `Camera Confined`'s step written a second time, and
+  _This was a shortcut, and specs/SPACE_CAMERAS_PLAN.md removed it: the branch
+  described above is gone as of that plan's step 6._ The clamp here is `Camera Confined`'s step written a second time, and
   the cost of the shortcut is that a Viewport's camera cannot ease, cannot
   have a deadzone, cannot have a look offset and cannot be aimed by a block.
   `camera.follows` on the map is a workaround for a reference that had
@@ -167,8 +170,9 @@ the screen. The working record, as before.
 - Mirroring: a Viewport showing another Viewport's contents through its
   own camera.
 - Zoom, which waits on the engine's cameras having any.
-- (Built since, in step 5: the editor's way to set a map's
-  `camera.follows`, in a level's inspector with nothing selected.)
+- (Built in step 5 and DELETED since: the editor's way to set a map's
+  `camera.follows`. A map does not decide where the view looks
+  — specs/SPACE_CAMERAS_PLAN.md.)
 - A Viewport's own layers and backgrounds (step 4); until then the main
   map's backdrop shows through a Viewport, over the Viewport's own face.
 - (Settled since, in step 5: `clear world` is deleted; the world's follow
@@ -181,8 +185,8 @@ the screen. The working record, as before.
 
 Place a Viewport on a world's main map, set its map to a level, and run:
 the level should draw inside the box with the rest of the screen still,
-clicks inside it should reach the level's actors and not the main map's,
-the space's camera should follow what the level's `camera.follows` names
-and stop at the level's edges, and `unload ⟨the Game⟩` should empty the
-box. In the editor, the held level should show dimmed inside the box and
+clicks inside it should reach the level's actors and not the main map's, the
+space's camera should sit at the middle of the box and move with its `scroll`,
+and `unload ⟨the Game⟩` should empty the box. (Following and stopping at the
+level's edges are a camera's traits now, not the engine's doing.) In the editor, the held level should show dimmed inside the box and
 move with it.

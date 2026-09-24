@@ -83,8 +83,6 @@ export class Space {
   }
   /** The loads this space holds, oldest first — `unload` takes them back. */
   readonly loads: MapLoad[] = [];
-  /** The actor the space's camera keeps in the middle, if a map named one. */
-  follows: Actor | undefined;
   /**
    * The space's own layers, back to front, from the map loaded into it
    * (specs/LAYERS_PLAN.md). Empty for the root, whose layers are the

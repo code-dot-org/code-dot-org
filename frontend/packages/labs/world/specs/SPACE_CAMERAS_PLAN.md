@@ -1,10 +1,23 @@
 # One kind of camera, in every space
 
-STATUS: BUILDING. Steps 1 to 4 are in — a space holds cameras, one collection
+STATUS: BUILDING. Steps 1 to 6 are in — and step 6 is where the lab got smaller.
+A map says nothing about a camera any more. Steps 1 to 4 are — a space holds cameras, one collection
 finds them all, each knows its space, one may be declared against a space that
-does not exist yet, and a Viewport says which of its own it shows through.
-Nothing is visible yet: no camera trait is electable on a Viewport until step 5,
-so no camera step runs for one of these cameras. specs/VIEWPORT_PLAN.md left one
+does not exist yet, and a Viewport says which of its own it shows through. Step
+5 proved a camera trait reaches a space's camera, and step 6 deleted the engine
+branch that used to overwrite it. What remains is authoring: nothing writes a
+space camera's declaration yet (step 8) and nothing lists them (step 9).
+
+ONE REFINEMENT THE BUILD FORCED, in step 6. `settleSpace` did three jobs, not
+one: it followed what the map named, it positioned the camera from the
+Viewport's `scroll`, and it clamped. Only the first was the duplicate. The
+scroll stays — a scroll view is the Viewport deciding about the scene it shows,
+and `ViewportScrollProperty` promises a reading of where it actually stopped, so
+that path still clamps. What decides between them is whether the camera elects
+anything: a camera with traits is the rules' to aim and the engine leaves it
+alone, a camera with none is the Viewport's to scroll. Which also means a
+trait-aimed camera is confined by `Confined to the Map` or by nothing at all,
+exactly as the world's cameras have always been. specs/VIEWPORT_PLAN.md left one
 question open with a single line — "the Viewport's camera is the engine's, not
 the camera rules'" — and this is what answering it would take. The line was
 honest about being a shortcut; what follows is the cost of the shortcut and the
