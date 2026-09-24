@@ -8,40 +8,16 @@
 
 import './nodeShims';
 
-// Studio serves Geist and Noto Sans from application.css @font-face; these are
-// the same families, packaged.
-import '@code-dot-org/fonts/brands/code.org/index.css';
-import '@code-dot-org/component-library-styles/fontVariables.css';
-import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
-import '@code-dot-org/component-library-styles/primitiveColors.css';
-import '@code-dot-org/component-library-styles/colors.css';
-import '@code-dot-org/component-library-styles/brandOverrides.css';
-
-import {CssBaseline, GlobalStyles, ThemeProvider} from '@mui/material';
 import {StrictMode, type ComponentProps} from 'react';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
-import {injectFontAwesome} from '@code-dot-org/fonts';
-
 import TutorApp from '@cdo/apps/aiTutor/views/TutorApp';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
+import {DevPageChrome} from './devPageChrome';
 import {LESSON_DEEP_DIVE_DATA} from './fixtures';
 import {registerLessonDeepDiveMocks} from './mocks';
-
-// The feature is height: calc(100vh - 50px), sizing itself to sit under
-// Studio's 50px header. Reserve that band rather than letting the feature
-// float in it, so its own arithmetic comes out right here too; paint it the
-// colour of .container in lesson-deep-dive-container.module.scss so the strip
-// does not read as a gap.
-//
-// Through GlobalStyles because CssBaseline writes body styles at render time
-// and beats a plain stylesheet.
-const pageFrame = (
-  <GlobalStyles styles={{body: {background: '#292f36', paddingTop: '50px'}}} />
-);
 
 type ProviderStore = ComponentProps<typeof Provider>['store'];
 
@@ -67,10 +43,6 @@ function createDevStore(): ProviderStore {
   } as unknown as ProviderStore;
 }
 
-// Studio's page chrome links the Font Awesome Pro sheets; without them the
-// FontAwesomeV6Icon <i> elements collapse to zero width and shift layout.
-injectFontAwesome();
-
 async function boot(): Promise<void> {
   // Without the worker, requests go through the Vite proxy to a local Rails
   // dashboard. VITE_API_MODE=msw serves the fixtures instead.
@@ -82,9 +54,7 @@ async function boot(): Promise<void> {
 
   createReactRoot(
     <StrictMode>
-      <ThemeProvider theme={getMuiThemeForBrand('codeai-next')}>
-        <CssBaseline />
-        {pageFrame}
+      <DevPageChrome>
         <Provider store={createDevStore()}>
           <BrowserRouter>
             <TutorApp
@@ -93,7 +63,7 @@ async function boot(): Promise<void> {
             />
           </BrowserRouter>
         </Provider>
-      </ThemeProvider>
+      </DevPageChrome>
     </StrictMode>,
     document.getElementById('lesson-deep-dive-container')!,
   );
