@@ -26,7 +26,11 @@ would be dead, and so would the field.
 So the stack is not a ranking, it is a stack with one line drawn across it:
 
 - **A map says whether it covers what is under it.** `WorldMap.modal`, written
-  in the `.map` file and ticked in the map editor ("Covers what is under it").
+  in the `.map` file and ticked in the map editor's inspector with nothing
+  selected ("Covers what is under it") — beside the theme, since both are facts
+  about the map that are not about where things are. A world's main map is not
+  offered it: that map shows the world's inspector instead, and nothing can ever
+  be under it.
   A screen says yes. A HUD, a keyboard, a toast say no.
 - **Input stops at the TOPMOST modal load.** Everything placed by that load or
   by anything above it can be reached; everything below cannot

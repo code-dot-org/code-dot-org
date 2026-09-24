@@ -43,7 +43,6 @@ import {
   projectImagePaths,
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
-import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {
   drawsItself,
@@ -606,61 +605,16 @@ export const MapEditor = ({
         </label>
         <span className={styles.sizeUnit}>tiles</span>
         {/*
-          A SCREEN COVERS WHAT IS UNDER IT. This is the one fact about a map
-          that is not about where things are: a dialog loaded over a game
-          takes the clicks, the tabbing and the typing, and a HUD does not
-          (specs/MODALITY_PLAN.md). It is on the MAP rather than on the block
-          that loads it because a dialog is a dialog wherever it is put on.
+          WHAT IS NOT HERE: whether the map covers what is under it, and what it
+          is painted out of. Both were, beside the sizes — and neither is about
+          where things are, which is what this strip is for. They are properties
+          of the map, so they are in the inspector with nothing selected, where a
+          reader already looks for properties (`MapInspector`, `ThemeField`).
+
+          The width and the height stay. They are the frame you are drawing
+          inside rather than a property of the finished thing, and they are
+          adjusted while looking at the canvas.
         */}
-        <label className={styles.sizeField}>
-          <input
-            type="checkbox"
-            name="map-modal"
-            checked={map.modal === true}
-            disabled={isReadOnly}
-            onChange={event =>
-              commit({...map, modal: event.target.checked || undefined})
-            }
-          />
-          <span className={styles.sizeLabel}>Covers what is under it</span>
-        </label>
-        {/*
-          …AND WHAT IT IS PAINTED OUT OF, which is the other fact about a map
-          that is not about where things are. A drawing names a class and
-          never a file; this says which file, for everything the map places.
-          Empty takes the world's (specs/STYLES_PLAN.md).
-        */}
-        <label className={styles.sizeField}>
-          <span className={styles.sizeLabel}>Theme</span>
-          <select
-            name="map-theme"
-            className={styles.mapTheme}
-            value={map.theme ?? ''}
-            disabled={isReadOnly}
-            onChange={event =>
-              event.target.value === IMPORT_STYLE_VALUE
-                ? void requestStyleImport().then(
-                    path => path && commit({...map, theme: path}),
-                  )
-                : commit({...map, theme: event.target.value || undefined})
-            }
-          >
-            <option value="">(the world’s)</option>
-            {themeOptions.map(([label, path]) => (
-              <option key={path} value={path}>
-                {label}
-              </option>
-            ))}
-            {/*
-              …AND A WAY IN, which this did not have. A project starts with no
-              themes, so the list above starts EMPTY — and a menu whose only
-              row is "the world's" is a dead end that says nothing about where
-              a theme comes from. The same `(import…)` row the `use theme`
-              block offers, on the same seam (`styles/styleImport`).
-            */}
-            <option value={IMPORT_STYLE_VALUE}>(import…)</option>
-          </select>
-        </label>
         {actorOptions.map(([name, path]) => (
           <button
             key={path}

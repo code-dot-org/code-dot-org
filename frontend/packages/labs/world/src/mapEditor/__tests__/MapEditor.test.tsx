@@ -240,20 +240,17 @@ describe('MapEditor size controls', () => {
     expect(screen.getByTestId('stage')).toHaveAttribute('data-size', '20x4');
   });
 
-  it('marks a map as a screen, and unmarks it back to absent', () => {
-    // A dialog covers what is under it and a HUD does not, which is a fact
-    // about the MAP (specs/MODALITY_PLAN.md). Unticking writes `undefined`
-    // rather than `false`, so a map that is not a screen reads exactly as
-    // every map written before the flag existed.
-    const onChange = open();
-    const box = screen.getByLabelText('Covers what is under it');
-    expect(box).not.toBeChecked();
-
-    fireEvent.click(box);
-    expect(written(onChange).modal).toBe(true);
-
-    fireEvent.click(screen.getByLabelText('Covers what is under it'));
-    expect(written(onChange).modal).toBeUndefined();
+  it('keeps only the frame in the strip, not the map’s properties', () => {
+    // "Covers what is under it" and "Theme" were here, beside the sizes. Both
+    // are properties of the map rather than the frame it is drawn inside, so
+    // they moved to the inspector with nothing selected, where a reader looks
+    // for properties — and the modal one is then absent on a world's main map
+    // for free, since that shows the world instead (`MapStage`, `MapInspector`).
+    open();
+    expect(screen.getByLabelText('Width')).toBeInTheDocument();
+    expect(screen.getByLabelText('Height')).toBeInTheDocument();
+    expect(screen.queryByLabelText('Covers what is under it')).toBeNull();
+    expect(screen.queryByLabelText('Theme')).toBeNull();
   });
 
   it('leaves the map alone while a field is empty', () => {

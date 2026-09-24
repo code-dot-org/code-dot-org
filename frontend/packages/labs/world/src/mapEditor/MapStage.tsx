@@ -30,12 +30,12 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
-import fields from '../formFields.module.css';
 
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
 import {STYLED} from '../engine/rules/styled';
+import fields from '../formFields.module.css';
 import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
@@ -236,8 +236,15 @@ export interface MapStageProps {
   /**
    * The world this map is the main map of, shown in the inspector with
    * nothing selected (`WorldInspector`); absent for a `.map`.
+   *
+   * Without the theme, which the stage supplies itself: it is a property of the
+   * MAP this stage is showing, written the way every other map-level change is,
+   * so a caller has nothing to say about it.
    */
-  world?: Omit<WorldInspectorProps, 'isReadOnly'>;
+  world?: Omit<
+    WorldInspectorProps,
+    'isReadOnly' | 'theme' | 'themeOptions' | 'onTheme'
+  >;
   /**
    * The project's maps as `[name, path]`, for a Viewport's `map` property
    * (specs/VIEWPORT_PLAN.md) — the one string the inspector offers a list
@@ -2530,6 +2537,11 @@ export const MapStage = ({
           // World view, a version restored — is what the fields show.
           key={JSON.stringify(world.header)}
           {...world}
+          // …and the theme, which is the map's and not the world header's, so
+          // it is written the way every other map-level change is.
+          theme={map.theme}
+          themeOptions={themeOptions}
+          onTheme={path => commit({...mapRef.current, theme: path})}
           isReadOnly={isReadOnly}
         />
       )}
@@ -2538,6 +2550,17 @@ export const MapStage = ({
           follows={map.camera?.follows}
           placements={map.actors.map(actor => actor.id)}
           onFollow={id => commit(withCameraFollows(mapRef.current, id))}
+          modal={map.modal === true}
+          // `undefined` and not `false` for the off state: every map written
+          // before modality existed says nothing, and writing `false` into all
+          // of them would be a diff per map for no change in meaning
+          // (specs/MODALITY_PLAN.md).
+          onModal={modal =>
+            commit({...mapRef.current, modal: modal || undefined})
+          }
+          theme={map.theme}
+          themeOptions={themeOptions}
+          onTheme={path => commit({...mapRef.current, theme: path})}
           isReadOnly={isReadOnly}
         />
       )}

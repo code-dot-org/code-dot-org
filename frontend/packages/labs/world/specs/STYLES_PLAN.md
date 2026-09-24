@@ -434,7 +434,7 @@ Each level has a home that already exists:
 | Level | Where it is set                                        | Precedent                                        |
 | ----- | ------------------------------------------------------ | ------------------------------------------------ |
 | World | `use theme ⟨styles/modern⟩` under `define world`       | built above                                      |
-| Map   | `theme` on the map document, a field in the map editor | `MapDoc.modal`, a map-level flag with a tick box |
+| Map   | `theme` on the map document, a field in the map editor's inspector with nothing selected | `MapDoc.modal`, a map-level flag with a tick box beside it |
 | Actor | `theme` on the `Has a Style` trait, in the inspector   | `Has a Box`, elected by the same nine kinds      |
 
 Resolution is the actor's own, else the theme of the map that PLACED it, else

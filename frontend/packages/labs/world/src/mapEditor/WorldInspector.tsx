@@ -14,6 +14,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 
 import styles from './mapEditor.module.css';
+import {ThemeField} from './ThemeField';
 import type {WorldHeader, WorldProperty} from './worldProperties';
 
 export interface WorldInspectorProps {
@@ -26,6 +27,20 @@ export interface WorldInspectorProps {
    * rule's (specs/WORLD_RULE_FIELDS_PLAN.md).
    */
   onSetDefault: (property: WorldProperty, value: string) => void;
+  /**
+   * What the world's main map is painted out of; absent takes the world's own.
+   *
+   * On the MAP and not on the world header, which is why it is its own pair of
+   * props rather than another `WorldProperty`: it is written to the map
+   * document beside the placements (`mapEditor/MapStage`). What is NOT here is
+   * "covers what is under it" — a main map lives inside the `.world` file, so
+   * `load map` cannot name it and nothing can ever be under it
+   * (specs/MODALITY_PLAN.md).
+   */
+  theme: string | undefined;
+  /** The project's themes, as `[label, path]`. */
+  themeOptions: ReadonlyArray<readonly [string, string]>;
+  onTheme: (path: string | undefined) => void;
   isReadOnly: boolean;
 }
 
@@ -39,6 +54,9 @@ export const WorldInspector = ({
   header,
   onRename,
   onSetDefault,
+  theme,
+  themeOptions,
+  onTheme,
   isReadOnly,
 }: WorldInspectorProps) => {
   // What is being typed, committed on blur or Enter as a placement's fields
@@ -139,6 +157,12 @@ export const WorldInspector = ({
           })}
         </div>
       )}
+      <ThemeField
+        value={theme}
+        options={themeOptions}
+        onChange={onTheme}
+        isReadOnly={isReadOnly}
+      />
     </div>
   );
 };

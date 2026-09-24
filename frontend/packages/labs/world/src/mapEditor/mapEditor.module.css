@@ -548,8 +548,3 @@
   opacity: 0.6;
 }
 
-/* The map's own theme, beside its size and its modal flag — the three facts
-   about a map that are not about where things are (specs/STYLES_PLAN.md). */
-.mapTheme {
-  max-width: 10rem;
-}

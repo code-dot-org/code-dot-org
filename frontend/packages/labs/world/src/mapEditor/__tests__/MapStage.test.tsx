@@ -728,6 +728,74 @@ describe('a level, with nothing selected', () => {
     expect(written()).not.toHaveProperty('camera');
   });
 
+  it('marks the map as a screen, and unmarks it back to absent', () => {
+    // A dialog covers what is under it and a HUD does not, which is a fact
+    // about the MAP (specs/MODALITY_PLAN.md). Unticking writes `undefined`
+    // rather than `false`, so a map that is not a screen reads exactly as every
+    // map written before the flag existed.
+    const {written, ...view} = mount(doc());
+    const box = view.getByLabelText('Covers what is under it');
+    expect(box).not.toBeChecked();
+
+    fireEvent.click(box);
+    expect(written().modal).toBe(true);
+
+    fireEvent.click(view.getByLabelText('Covers what is under it'));
+    expect(written().modal).toBeUndefined();
+    // …and the claim that is about the FILE rather than the object: `undefined`
+    // is a key in memory and nothing at all once serialized, which is why
+    // unticking leaves no trace rather than writing `false` into every map.
+    expect(JSON.stringify(written())).not.toContain('modal');
+  });
+
+  it('never offers that on a world’s main map, which has nothing under it', () => {
+    // A main map lives inside the `.world` file, so `load map` cannot name it
+    // and nothing can ever be loaded over it — the flag could only ever be a
+    // field nothing reads. It is absent by being in the MAP inspector: a main
+    // map shows the world's instead.
+    const main = mount(doc(), {
+      world: {
+        header: {name: 'W', properties: []},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+      },
+    });
+    expect(main.getByTestId('world-inspector')).toBeInTheDocument();
+    expect(main.queryByLabelText('Covers what is under it')).toBeNull();
+  });
+
+  it('offers the theme on a level and on a world’s main map alike', () => {
+    // Unlike the flag above: a world HAS a theme, and its main map is where it
+    // is said. The field is one component in both inspectors, because it is one
+    // question (`mapEditor/ThemeField`).
+    const options = [['Neon', 'styles/neon'] as const];
+    const {written, ...view} = mount(doc(), {themeOptions: options});
+    const theme = () =>
+      view.container.querySelector(
+        'select[name="map-theme"]',
+      ) as HTMLSelectElement;
+    expect([...theme().options].map(option => option.text)).toEqual([
+      '(the world’s)',
+      'Neon',
+      '(import…)',
+    ]);
+
+    fireEvent.change(theme(), {target: {value: 'styles/neon'}});
+    expect(written().theme).toBe('styles/neon');
+
+    const main = mount(doc(), {
+      themeOptions: options,
+      world: {
+        header: {name: 'W', properties: []},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+      },
+    });
+    expect(
+      main.container.querySelector('select[name="map-theme"]'),
+    ).not.toBeNull();
+  });
+
   it('gives way to a placement, and to the world on a main map', () => {
     const map = doc();
     const {canvas, ...view} = mount(map);
