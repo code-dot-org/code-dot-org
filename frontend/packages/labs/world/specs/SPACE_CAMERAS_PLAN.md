@@ -152,13 +152,47 @@ A camera's inspector is then the Enhance row and a field per property of every
 trait it elects, which is what a placement's inspector already does for an
 actor's traits. `look offset` and `actor to follow` need no bespoke UI.
 
-**Which camera takes the view** is the one thing left open. The world has
-`setActiveCamera(id)`, keyed on id alone and world-wide; per space it wants
-either a Viewport property ("shows through") or a block that names both
-(`take the view of ⟨the Minimap⟩ through ⟨wide⟩`). The property is the smaller
-change and fits the inspector; the block is what a game switching cameras
-mid-play would want. Not settled here — it is the one piece that has no
-precedent to copy, and one camera per space works until somebody adds a second.
+## Which camera takes the view
+
+**Every space has a `main` camera that always exists, and the Viewport carries a
+property saying which of its cameras is in use, defaulting to that one.**
+
+The world is already built this way and the lab already spells `main` three
+times over: `DEFAULT_CAMERA_ID`, `ROOT_SPACE_ID` and `DEFAULT_LAYER` are the
+same word, and a `World` is constructed with `cameraList = [makeCamera({id:
+'main'})]` and `activeCameraId = DEFAULT_CAMERA_ID`. A space's main camera is
+that, one level down: made with the space, never removable, and SYNTHESISED
+rather than stored — which is how `mapLayers` already treats the default layer,
+splicing `{id: 'main'}` in when a document does not mention it. A map that says
+nothing about cameras therefore has one, and a project written before any of
+this reads exactly as it did.
+
+So the mechanism is `Space.activeCameraId`, and what differs between the world
+and a Viewport is only the SURFACE it is set through:
+
+- **A Viewport gets a property**, because a Viewport is a placement and a
+  placement's properties are fields in an inspector and blocks for free. Setting
+  it mid-play — a chase camera for the boss, the wide shot afterwards — is then
+  an ordinary `set` with no new block to invent.
+- **The world keeps `setActiveCamera`**, because it has no placement to hang a
+  field on. This is the sense in which the world is the odd one out: not a
+  different mechanism, a different way in.
+
+**The property's choices are SIBLING knowledge**, and that makes it the third
+dropdown of its kind rather than a new idea. A theme's choices are the project's
+`.style` files; an `actor` property's are "the map's own placements, which is the
+one thing the sandbox cannot supply" (`mapEditor/MapStage`). A camera property's
+are this Viewport's own cameras, authored in the strip beside the field — so it
+patterns with `actor`, not with theme.
+
+That is worth recording rather than glossing: the inspector now special-cases a
+dropdown for the second time, and `MapStage` already says what the third should
+trigger — "an enum property type is what would replace it the day a second
+property wants one". The choices here are per-placement rather than
+statically declared, so a plain enum type would not cover it; what would is a
+notion of "a reference to a sibling of the thing being inspected", which `actor`
+is an instance of already. **Not proposed here**, but three special cases is the
+point at which it has earned itself, and the next one should build it instead.
 
 ## Order of work
 
@@ -175,43 +209,48 @@ precedent to copy, and one camera per space works until somebody adds a second.
 3. **A camera belongs to a space, and is declared against one.** `defineCamera`
    takes the space it is for, defaulting to the root, so the world's cameras are
    declared exactly as they are today and a Viewport's are declared at all for
-   the first time. Tests: two cameras in two spaces keep their own traits and
-   their own positions.
-4. **Rules: the traits reach a space's camera.** The four camera traits run for
+   the first time. Every space is made with a `main` camera, synthesised as the
+   default layer is. Tests: two cameras in two spaces keep their own traits and
+   their own positions; a space with nothing said about cameras has `main`.
+4. **The Viewport says which camera it shows through.** `Space.activeCameraId`,
+   defaulting to `main`, exposed as a Viewport property so a field and a `set`
+   block come for free. Tests: the default is `main`; switching mid-play changes
+   which camera the view is taken through; a name no camera has falls back to
+   `main` rather than showing nothing.
+5. **Rules: the traits reach a space's camera.** The four camera traits run for
    every camera the collection offers. No rule source changes shape — `Follows`
    already holds an actor and aims a goal — so this is step 1 and 2 paying off.
    Tests per trait, through a Viewport.
-5. **Delete what the map owned.** `settleSpace`'s follow-and-clamp branch,
+6. **Delete what the map owned.** `settleSpace`'s follow-and-clamp branch,
    `Space.follows`, `MapDoc.camera`, `withCameraFollows`, the inspector's
    "Camera follows" field and the tests of each. A level `.map` then says
    nothing about cameras, which is the plan's point.
-6. **The default.** Every camera with no traits looks at the top left of its
+7. **The default.** Every camera with no traits looks at the top left of its
    space. One change in the engine, and a look at `jetpack` and `meteors` in the
    browser.
-7. **Editor: the camera strip.** The world's cameras on a main map, a
+8. **Editor: the camera strip.** The world's cameras on a main map, a
    Viewport's with that placement selected, none on a level `.map` — built the
    way the layer strip is, with an inspector that is the Enhance row and a field
    per trait property (`mapEditor/LayerPanel`, `LayerInspector`).
-8. **`actor to follow` by kind.** A property type the inspector can offer as a
+9. **`actor to follow` by kind.** A property type the inspector can offer as a
    dropdown of the project's actor kinds, so a Viewport's camera can be aimed at
    something inside a map it does not yet hold. Runtime semantics are already
    there; this is a type, a generator case and an inspector field.
-9. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
-   if the inspector's fields move again, MAP_EVENTS_PLAN's principle extended to
-   cameras, and SCROLLING_PLAN on what a camera with no traits now means for a
-   scroll view.
+10. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
+    if the inspector's fields move again, MAP_EVENTS_PLAN's principle extended to
+    cameras, and SCROLLING_PLAN on what a camera with no traits now means for a
+    scroll view.
 
-Steps 1 to 3 are invisible; 4 is where it starts working; 5 is where the lab
-gets smaller; 7 is where an author can reach it without writing blocks. Each its
+Steps 1 to 4 are invisible; 5 is where it starts working; 6 is where the lab
+gets smaller; 8 is where an author can reach it without writing blocks. Each its
 own commit.
 
 ## What this does not do
 
-- **It does not settle which camera takes the view** when a space has several.
-  A space may HOLD several from step 1; choosing between them wants either a
-  Viewport property or a block that names both, and that is the one piece with
-  no precedent to copy (see "Where a Viewport's cameras are authored"). One
-  camera per space works until somebody adds a second.
+- **It does not build the "reference to a sibling" property type** that the
+  camera selector is the third instance of. It special-cases a dropdown as the
+  theme and the actor reference already do, and says where the abstraction is
+  owed (see "Which camera takes the view").
 - **It does not add zoom**, so "fit the map to the view" is still out of reach
   and the default is top left.
 - **It does not answer a Viewport inside a loaded map.** Nothing forbids it and
@@ -235,4 +274,10 @@ own commit.
 - A fixture that places a Viewport and follows something through it, since
   nothing today aims a Viewport's camera at all. `fixtures/interfaceKit` is the
   phone shape; a Viewport showing a level that follows its player is the
-  demonstration this plan is for.
+  demonstration this plan is for, and two cameras switched between is what proves
+  the property.
+- `projectWeight` will notice a `main` camera that is SYNTHESISED rather than
+  stored only if something stores it. It must not: a map that says nothing about
+  cameras has to keep saying nothing, or every map in every project grows a
+  camera entry for no change in meaning — the same discipline
+  `modal: undefined` keeps (specs/MODALITY_PLAN.md).
