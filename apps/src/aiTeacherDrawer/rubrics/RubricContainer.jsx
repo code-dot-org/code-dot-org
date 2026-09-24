@@ -133,24 +133,6 @@ function RubricContainer({
     trySetSessionStorage(rubricPositionY, positionY);
   }, [positionY]);
 
-  const onStopHandler = (event, dragElement) => {
-    setPositionX(dragElement.x);
-    setPositionY(dragElement.y);
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_END, {
-      ...(reportingData || {}),
-      window_x_end: dragElement.x,
-      window_y_end: dragElement.y,
-    });
-  };
-
-  const onStartHandler = (event, dragElement) => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_START, {
-      ...(reportingData || {}),
-      window_x_start: dragElement.x,
-      window_y_start: dragElement.y,
-    });
-  };
-
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
