@@ -65,9 +65,10 @@ module RakeUtils
   # Alternate version of RakeUtils.rake which always streams $stdout to the shell
   # during execution.
   def self.rake_stream_output(*args, env: {}, &block)
+    env = env.symbolize_keys
+    env[:RAILS_ENV] ||= rack_env
+    env[:RACK_ENV] ||= rack_env
     system_stream_output(
-      "RAILS_ENV=#{rack_env}",
-      "RACK_ENV=#{rack_env}",
       *env.map {|k, v| "#{k}=#{Shellwords.escape(v.to_s)}"},
       'bundle', 'exec', 'rake', *args,
       &block
