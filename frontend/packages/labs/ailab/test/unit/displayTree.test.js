@@ -1,9 +1,3 @@
-/*
-  A display tree is correct when every row follows it to the answer the model
-  gives for that row. ml-cart picks the splits, so the dataset tests check that
-  property and do not record tree shapes. The hand-built trees cover the cases
-  ml-cart only produces by chance.
-*/
 import fs from 'fs';
 import path from 'path';
 
@@ -60,7 +54,7 @@ function load(id, {label, features, mode = {trainer: 'decisionTree'}} = {}) {
   ).forEach(column => store.dispatch(addSelectedFeature(column)));
 
   train.init(store);
-  train.onClickTrain(store);
+  train.onClickTrain();
   return store.getState();
 }
 
@@ -105,6 +99,7 @@ afterAll(() => {
   I18n.reset();
 });
 
+// ml-cart picks the splits, so these check each row's route, not tree shapes.
 describe('getDisplayTree on shipped datasets', () => {
   test.each([
     ['zoo', {label: 'Class', features: ['Legs', 'Feathers', 'Milk', 'Fins']}],
@@ -131,6 +126,7 @@ describe('getDisplayTree on shipped datasets', () => {
   });
 });
 
+// Hand-built trees cover cases ml-cart produces only by chance.
 describe('buildDisplayTree', () => {
   const legsContext = {
     features: ['Legs'],
@@ -201,6 +197,12 @@ describe('buildDisplayTree', () => {
     );
 
     expect(tree.prediction).toBe('Fish');
+  });
+
+  test('a leaf with no distribution throws, as ml-cart does', () => {
+    expect(() =>
+      buildDisplayTree({name: 'DTClassifier', root: {}}, legsContext),
+    ).toThrow();
   });
 
   test('a numerical feature splits at a threshold', () => {
