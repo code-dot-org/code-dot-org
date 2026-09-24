@@ -286,22 +286,58 @@ point at which it has earned itself, and the next one should build it instead.
    Not small: an options source, a live-dropdown extension, the generator case,
    the toolbox category and a tile in `shelfCoverage` for the block it mints.
 
-9. **Editor: the camera strip.** The world's cameras on a main map, a
-   Viewport's with that placement selected, none on a level `.map` — built the
-   way the layer strip is, with an inspector that is the Enhance row and a field
-   per trait property (`mapEditor/LayerPanel`, `LayerInspector`).
+9. **Editor: the camera strip.** THREE STEPS, not one, and priced here because
+   the draft under-read it. Step 8 put camera declarations in the world's
+   BLOCKS, so a strip is a block-editing surface and not a document-editing one
+   — the shape to copy for the reading and writing is `mapEditor/worldProperties`,
+   which already reads `define world`'s rows and rewrites their fields in the
+   JSON without opening a workspace, and the shape to copy for the UI is
+   `LayerPanel` / `LayerInspector`.
+
+   - **9a. Read and show.** A `worldCameras` reader over the world file's
+     `define camera` rows — name, owner, id, traits — and a strip that lists
+     them: the world's on a main map, a Viewport's with that placement selected,
+     none on a level `.map`, which is the plan's point made visible. Mirrors
+     `readWorldHeader` closely; the smallest useful piece, and useful alone
+     because nothing today says what cameras a project has.
+   - **9b. Add, remove, rename.** Renaming is a field rewrite, which
+     `worldProperties` already does. Adding and removing are NOT: they splice a
+     row into a chain and unlink one, and no writer in that module changes
+     structure. This is the new surgery.
+   - **9c. The inspector's traits.** "The Enhance row and a field per trait
+     property" is doing a lot of work in one sentence: the Enhance machinery
+     (`actors/enhance`) is keyed to actor KINDS, and a camera is not one. This is
+     the piece to design rather than estimate.
+
 10. **`actor to follow` by kind.** A property type the inspector can offer as a
     dropdown of the project's actor kinds, so a Viewport's camera can be aimed at
-    something inside a map it does not yet hold. Runtime semantics are already
-    there; this is a type, a generator case and an inspector field.
+    something inside a map it does not yet hold.
+
+    **AND THE QUESTION IT RAISES, found by reading `Camera Follow` for this.**
+    That rule aims at `position of ⟨actor to follow⟩` and asks nothing about
+    which space the actor or the camera is in. A world camera following a root
+    actor is right by construction; a VIEWPORT's camera following `any ⟨Coin⟩`
+    picks the first Coin anywhere in the world, and if that Coin is in the root
+    the camera tracks coordinates that mean nothing in its own space. Nobody has
+    hit it because until step 5 a space's camera could not follow at all.
+
+    Naming a kind makes it easy to hit, so it has to be answered first: either
+    `actor to follow` prefers the camera's own space, or the query blocks that
+    feed it do, or the rule refuses a target from elsewhere and says so. Not
+    settled here.
+
 11. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
     if the inspector's fields move again, MAP_EVENTS_PLAN's principle extended to
     cameras, and SCROLLING_PLAN on what a camera with no traits now means for a
     scroll view.
 
 Steps 1 to 4 are invisible; 5 is where it starts working; 6 is where the lab
-gets smaller; 9 is where an author can reach it without writing blocks. Each its
-own commit.
+gets smaller; 8 is where an author can reach it AT ALL, in blocks; 9 is where
+they can reach it without writing any. Each its own commit.
+
+**8 is a usable stopping point**, and worth naming as one: a camera can be
+declared of a Viewport, given traits, and aimed, entirely in blocks. What 9 buys
+is not capability but reach, and it is a larger piece than 1 to 8 together.
 
 ## What this does not do
 
@@ -336,6 +372,9 @@ own commit.
   to gate a foundation rule's blocks with the trait that elects them. The test
   that will eventually force it is the one asserting a first lesson is small
   enough to read.
+- An answer to the cross-space question in step 10 BEFORE a fixture follows
+  anything through a Viewport, or the fixture will enshrine whichever behaviour
+  happens to fall out.
 - A fixture that places a Viewport and follows something through it, since
   nothing today aims a Viewport's camera at all. `fixtures/interfaceKit` is the
   phone shape; a Viewport showing a level that follows its player is the
