@@ -27,6 +27,35 @@ import {
 } from '../rules/viewport';
 
 const Ping = new RuleBuilder({id: 'pinger', name: 'Pinger'}).addEvent('ping');
+
+/**
+ * A camera rule, in miniature: one trait and one step that aims the camera.
+ *
+ * The real ones are stock `.rule` files compiled from `scripts/rules/camera*`,
+ * and what is being checked here is not their arithmetic but whether a
+ * camera-scoped step reaches a SPACE's camera at all — so the step is the
+ * smallest thing that shows it ran, and it asks the world the two questions
+ * `Camera Confined to the Map` asks (specs/SPACE_CAMERAS_PLAN.md).
+ */
+const Aiming = new RuleBuilder({id: 'aiming', name: 'Aiming'});
+const AimsAtTheCorner = Aiming.addTrait({
+  id: 'aimsAtTheCorner',
+  name: 'Aims at the Corner',
+});
+/** Where each camera the step ran for was told about, by camera id. */
+const aimed = new Map<string, {map: Vector; view: Vector}>();
+Aiming.addStepIn('aim at the corner', 'aim', world => {
+  for (const camera of world.cameras.with(AimsAtTheCorner)) {
+    world.withActor(camera, () => {
+      // No argument, exactly as a generated camera body asks: what the world is
+      // asked without a subject is answered for the space the thing in hand is
+      // in.
+      aimed.set(camera.id, {map: world.mapBounds(), view: world.viewSize()});
+      camera.position = new Vector(0, 0);
+    });
+  }
+});
+const AimingRule = Aiming.build();
 const Coin = new ActorBuilder({id: 'coin', name: 'Coin'}).set(
   IntrinsicSizeProperty,
   new Vector(16, 16),
@@ -37,7 +66,9 @@ const Window = new ActorBuilder({id: 'window', name: 'Window'})
   .set(IntrinsicSizeProperty, new Vector(100, 80));
 
 const makeWorld = () => {
-  const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+  const world = new WorldBuilder({id: 'w', name: 'W'})
+    .useRules([AimingRule])
+    .instantiate();
   world.define('actors/coin', Coin);
   world.define('actors/window', Window);
   return world;
@@ -670,5 +701,66 @@ describe('which camera a Viewport shows through', () => {
     world.tick(0);
     expect(world.viewportSpaceOf(one)!.camera!.id).toBe('win:chase');
     expect(world.viewportSpaceOf(two)!.camera!.id).toBe('win2:main');
+  });
+});
+
+describe('a camera trait, on a space’s camera', () => {
+  // WHERE THE PLAN STOPS BEING INVISIBLE. A camera rule's step walks
+  // `world.cameras.with(trait)`, and a Viewport's camera is in that collection
+  // now — so following, easing, leading and confining reach a Viewport's camera
+  // by being elected rather than by being written a second time in the engine
+  // (specs/SPACE_CAMERAS_PLAN.md).
+
+  it('runs for a camera a space owns, not only the world’s', () => {
+    const world = makeWorld();
+    placeWindow(world);
+    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    aimed.clear();
+
+    world.tick(0);
+    expect([...aimed.keys()]).toEqual(['win:corner']);
+  });
+
+  it('asks the world about ITS space while it runs', () => {
+    // The whole of why a camera knows its space. A step that asks `map size`
+    // with no subject gets the space's bounds and the Viewport's window, which
+    // is what `Confined to the Map` needs to mean something here.
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    aimed.clear();
+
+    world.tick(0);
+    expect(aimed.get('win:corner')).toEqual({
+      map: new Vector(640, 320),
+      view: new Vector(100, 80),
+    });
+  });
+
+  it('leaves the world’s own cameras asking about the world', () => {
+    const world = makeWorld();
+    placeWindow(world);
+    world.defineCamera({id: 'corner', traits: [AimsAtTheCorner]});
+    aimed.clear();
+
+    world.tick(0);
+    expect(aimed.get('corner')).toEqual({
+      map: new Vector(320, 320),
+      view: world.viewSize(),
+    });
+  });
+
+  it('runs for both at once, each about its own space', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+    world.defineCamera({id: 'corner', traits: [AimsAtTheCorner]});
+    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    aimed.clear();
+
+    world.tick(0);
+    expect([...aimed.keys()].sort()).toEqual(['corner', 'win:corner']);
+    expect(aimed.get('corner')!.map).not.toEqual(aimed.get('win:corner')!.map);
   });
 });
