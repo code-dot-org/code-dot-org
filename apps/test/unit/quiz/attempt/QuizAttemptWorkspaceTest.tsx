@@ -361,6 +361,41 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
   });
 
+  it('restores in-progress answers and leaves questions missing from the map blank', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          questionResultsInProgress: [
+            {quizQuestionId: 1, selectedChoiceId: 'b'},
+          ],
+        },
+      },
+      quizQuestions: [
+        question({
+          id: 1,
+          stem: 'First',
+          choices: [
+            {id: 'a', text: 'five'},
+            {id: 'b', text: 'eight'},
+          ],
+        }),
+        question({
+          id: 2,
+          stem: 'Second',
+          choices: [
+            {id: 'a', text: 'left'},
+            {id: 'b', text: 'right'},
+          ],
+        }),
+      ],
+    });
+
+    expect(screen.getByRole('radio', {name: /eight/})).toBeChecked();
+    expect(screen.getByRole('radio', {name: /left/})).not.toBeChecked();
+    expect(screen.getByRole('radio', {name: /right/})).not.toBeChecked();
+  });
+
   it('submits the chosen answer when a choice is selected', async () => {
     const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
     renderWorkspace({
