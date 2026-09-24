@@ -314,7 +314,7 @@ function makeSplitChunks(appsEntries) {
       // cacheGroups will go away.
       //
       // For more information see: https://webpack.js.org/guides/code-splitting/
-      // isCodeStudioSharedModule's second arm now carries that rule.
+      // isCodeStudioSharedModule now does this job for both cache groups.
       'code-studio-common-deps': {
         name: 'code-studio-common-deps',
         minChunks: 2,
