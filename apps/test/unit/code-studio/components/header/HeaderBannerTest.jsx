@@ -67,16 +67,17 @@ describe('HeaderMiddle.headerLabelFor', () => {
 });
 
 describe('HeaderMiddle.subPathProgressFor', () => {
-  const levels = [
-    {id: '1', ids: ['1'], headerLabel: 'Getting started', status: 'perfect'},
-    {id: '2', ids: ['2'], headerLabel: 'Story', status: 'passed'},
-    {id: '3', ids: ['3'], headerLabel: 'Story', status: 'attempted'},
-    {id: '4', ids: ['4'], headerLabel: 'Story', status: 'not_tried'},
-    {id: '5', ids: ['5'], status: 'not_tried'},
-  ];
+  const levelsWithCurrent = currentId =>
+    [
+      {id: '1', headerLabel: 'Getting started', status: 'perfect'},
+      {id: '2', headerLabel: 'Story', status: 'passed'},
+      {id: '3', headerLabel: 'Story', status: 'attempted'},
+      {id: '4', headerLabel: 'Story', status: 'not_tried'},
+      {id: '5', status: 'not_tried'},
+    ].map(level => ({...level, isCurrentLevel: level.id === currentId}));
 
   it('lists the levels sharing the current label, marking done and current', () => {
-    expect(HeaderMiddle.subPathProgressFor(levels, '3')).toEqual([
+    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('3'))).toEqual([
       {completed: true, current: false},
       {completed: false, current: true},
       {completed: false, current: false},
@@ -84,9 +85,9 @@ describe('HeaderMiddle.subPathProgressFor', () => {
   });
 
   it('is null when the label covers one level, or the level has none', () => {
-    expect(HeaderMiddle.subPathProgressFor(levels, '1')).toBeNull();
-    expect(HeaderMiddle.subPathProgressFor(levels, '5')).toBeNull();
-    expect(HeaderMiddle.subPathProgressFor(undefined, '5')).toBeNull();
+    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('1'))).toBeNull();
+    expect(HeaderMiddle.subPathProgressFor(levelsWithCurrent('5'))).toBeNull();
+    expect(HeaderMiddle.subPathProgressFor(undefined)).toBeNull();
   });
 });
 
