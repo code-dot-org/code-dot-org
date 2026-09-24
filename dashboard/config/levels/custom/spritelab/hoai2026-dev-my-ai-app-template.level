@@ -20,11 +20,24 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-        "level_mode": {
+    "level_mode": {
       "kind": "freeplay",
       "adlibs": "model"
     },
     "start_sources": {
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
       "animations": {
         "orderedKeys": [],
         "propsByKey": {}

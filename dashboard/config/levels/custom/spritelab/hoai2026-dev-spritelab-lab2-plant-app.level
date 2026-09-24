@@ -237,6 +237,19 @@
       ]
     },
     "start_sources": {
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
       "animations": {
         "orderedKeys": [],
         "propsByKey": {}
