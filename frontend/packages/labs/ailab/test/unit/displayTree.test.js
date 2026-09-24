@@ -6,7 +6,6 @@ import {parseCSV} from '../../src/csvReaderWrapper';
 import {buildDisplayTree} from '../../src/helpers/displayTree';
 import {getKeyByValue} from '../../src/helpers/utils';
 import {convertValueForTraining} from '../../src/helpers/valueConversion';
-import I18n from '../../src/i18n';
 import {
   addSelectedFeature,
   resetState,
@@ -22,8 +21,7 @@ import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
 import {store} from '../../src/store';
 import train from '../../src/train';
 
-// vitest runs with the package root as cwd; see vitest.config.ts.
-const DIR = path.join(process.cwd(), 'public', 'datasets');
+const DIR = path.join(__dirname, '../../public/datasets');
 
 function load(id, {label, features, mode = {trainer: 'decisionTree'}} = {}) {
   const csv = fs.readFileSync(path.join(DIR, `${id}.csv`), 'utf8');
@@ -91,15 +89,6 @@ function countQuestions(node) {
     : 1 + node.branches.reduce((sum, b) => sum + countQuestions(b.child), 0);
 }
 
-beforeAll(() => {
-  I18n.initI18n();
-});
-
-afterAll(() => {
-  I18n.reset();
-});
-
-// ml-cart picks the splits, so these check each row's route, not tree shapes.
 describe('getDisplayTree on shipped datasets', () => {
   test.each([
     ['zoo', {label: 'Class', features: ['Legs', 'Feathers', 'Milk', 'Fins']}],
@@ -111,7 +100,6 @@ describe('getDisplayTree on shipped datasets', () => {
     const tree = getDisplayTree(state);
 
     expect(tree).toBeDefined();
-    // A tree of one answer would pass the check below without testing it.
     expect(countQuestions(tree)).toBeGreaterThan(0);
     expect(state.data.map(row => route(tree, row))).toEqual(
       modelPredictions(state),
