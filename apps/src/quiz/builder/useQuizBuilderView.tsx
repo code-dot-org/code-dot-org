@@ -4,6 +4,7 @@ import {LabProps} from '@cdo/apps/lab2/types';
 
 import {QuizLevelProperties, QuizViewContent, toBool} from '../types';
 
+import QuizBuilderWorkspace from './QuizBuilderWorkspace';
 import QuizConfigurationPanel, {
   QuizConfigurationData,
 } from './QuizConfigurationPanel';
@@ -40,6 +41,11 @@ export default function useQuizBuilderView({
         },
       ],
     },
-    workspaceContent: <div>Quiz builder workspace placeholder</div>,
+    workspaceContent: (
+      <QuizBuilderWorkspace
+        levelId={levelId}
+        quizTitle={quizConfig.displayName || levelProperties.name}
+      />
+    ),
   };
 }

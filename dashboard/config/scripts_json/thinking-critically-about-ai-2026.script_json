@@ -14,6 +14,16 @@
           "visibility": "Teacher-only",
           "dismissible": true,
           "buttonText": "Let's go!"
+        },
+        {
+          "key": "4faa7518-e834-4b9e-a607-bce90349b444",
+          "notice": "Notice for Educators Outside the United States",
+          "details": "Unit 1: Thinking Critically About AI is currently only available to schools in the 50 U.S. states (excluding U.S. territories). Teachers outside the U.S. can continue to use all other units in this course.",
+          "link": "",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": ""
         }
       ],
       "content_area": "curriculum_6_8",
@@ -34,7 +44,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-31 18:40:07 UTC",
+    "serialized_at": "2026-09-23 22:29:42 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -78,6 +88,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }
@@ -289,6 +311,21 @@
       "seeding_key": {
         "lesson.key": "Post-Assessment",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "End of Unit Survey",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }
@@ -735,6 +772,18 @@
         "lesson_activity.key": "8d7b4f90-afb5-44a9-ab68-db869df6fe43",
         "lesson.key": "Post-Assessment",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "4daed3d6-5a62-49b5-b8bb-810f44054665",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4daed3d6-5a62-49b5-b8bb-810f44054665",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }
@@ -2645,6 +2694,17 @@
         "activity_section.key": "3fa85ff2-e351-4740-b683-33cd94f35d13",
         "lesson_activity.key": "8d7b4f90-afb5-44a9-ab68-db869df6fe43"
       }
+    },
+    {
+      "key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa",
+        "lesson_activity.key": "4daed3d6-5a62-49b5-b8bb-810f44054665"
+      }
     }
   ],
   "script_levels": [
@@ -3439,6 +3499,28 @@
       "level_keys": [
         "thinking-critically-about-ai-postassessment_2026-pilot_2026"
       ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_aid1survey_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa"
+      },
+      "level_keys": [
+        "student-eou-survey_aid1survey_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3873,12 +3955,24 @@
         "script.name": "thinking-critically-about-ai-2026",
         "activity_section.key": "3fa85ff2-e351-4740-b683-33cd94f35d13"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_aid1survey_2026",
+        "script_level.level_keys": [
+          "student-eou-survey_aid1survey_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa"
+      }
     }
   ],
   "resources": [
     {
       "name": "[KEY] Privacy and Safety Exploration",
-      "url": "https://docs.google.com/document/d/1lOTafQHD31Nd1MrUHxSJv_zGhtXywQmHCyjGC_ks08c/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1lOTafQHD31Nd1MrUHxSJv_zGhtXywQmHCyjGC_ks08c/template/preview",
       "key": "_key_privacy_safety_exploration",
       "properties": {
         "audience": "Verified Teacher",
@@ -3892,7 +3986,7 @@
     },
     {
       "name": "Project Launch",
-      "url": "https://docs.google.com/presentation/d/1Nuz1y_eevYdhf-pGpKbU8D3BpbKljwXVFs8RAKkKfak/",
+      "url": "https://docs.google.com/presentation/d/1Nuz1y_eevYdhf-pGpKbU8D3BpbKljwXVFs8RAKkKfak/template/preview",
       "key": "a_deeper_look_into_ai",
       "properties": {
         "audience": "Teacher",
@@ -3906,7 +4000,7 @@
     },
     {
       "name": "AI Audit Field Notes",
-      "url": "https://docs.google.com/document/d/1Yed_Nk6lsemPAdG5VYfLE90vDs6FTLF7yALovoX9twE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Yed_Nk6lsemPAdG5VYfLE90vDs6FTLF7yALovoX9twE/template/preview",
       "key": "ai_audit_field_notes",
       "properties": {
         "audience": "Student",
@@ -3920,7 +4014,7 @@
     },
     {
       "name": "AI or Nah?",
-      "url": "https://docs.google.com/document/d/1HcYRUZBRas6UC-9JL8hpJHjJRZvDiJ2gIaOhLwNpTYs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1HcYRUZBRas6UC-9JL8hpJHjJRZvDiJ2gIaOhLwNpTYs/template/preview",
       "key": "ai_or_nah_",
       "properties": {
         "audience": "Teacher",
@@ -3935,7 +4029,7 @@
     },
     {
       "name": "Secret Patterns",
-      "url": "https://docs.google.com/document/d/1O7YAVm6wdTJT70tvCinBXNGBgBeWBoolHFSop2TPWas/",
+      "url": "https://docs.google.com/document/d/1O7YAVm6wdTJT70tvCinBXNGBgBeWBoolHFSop2TPWas/template/preview",
       "key": "ai_under_the_hood",
       "properties": {
         "audience": "Teacher",
@@ -3960,6 +4054,17 @@
       }
     },
     {
+      "name": "All Standards",
+      "url": "/courses/ai-discoveries-2026/units/1/standards",
+      "key": "all_standards_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_9"
+      }
+    },
+    {
       "name": "All Vocabulary",
       "url": "/courses/ai-discoveries-2026/units/1/vocab",
       "key": "all_vocabulary_9",
@@ -3972,7 +4077,7 @@
     },
     {
       "name": "AI Privacy and Safety",
-      "url": "https://docs.google.com/presentation/d/1zYUA2aP_f61KfQ13H-9VE6e5F-o33iY9xxsOWwNEWh0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1zYUA2aP_f61KfQ13H-9VE6e5F-o33iY9xxsOWwNEWh0/template/preview",
       "key": "defending_your_data",
       "properties": {
         "audience": "Teacher",
@@ -3986,7 +4091,7 @@
     },
     {
       "name": "Verifying AI Output",
-      "url": "https://docs.google.com/presentation/d/1tDxezohxtuXP1a4upWhltoEAlLunG7vK0tvfv096DL4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1tDxezohxtuXP1a4upWhltoEAlLunG7vK0tvfv096DL4/template/preview",
       "key": "exploring_data_in_ai",
       "properties": {
         "audience": "Teacher",
@@ -4000,7 +4105,7 @@
     },
     {
       "name": "Generate and Judge Project Guide",
-      "url": "https://docs.google.com/document/d/1DlPA8XSLKFaWIeBzc8nC5q0V-e0wC2B2xsCyXFMlKQw/",
+      "url": "https://docs.google.com/document/d/1DlPA8XSLKFaWIeBzc8nC5q0V-e0wC2B2xsCyXFMlKQw/template/preview",
       "key": "generate_judge_project_guide",
       "properties": {
         "audience": "Student",
@@ -4014,7 +4119,7 @@
     },
     {
       "name": "Creating a Chatbot",
-      "url": "https://docs.google.com/presentation/d/14M0jHJT75FFLgxkN5OfjjuJBKbC88XJj7LegmCoEM_o/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/14M0jHJT75FFLgxkN5OfjjuJBKbC88XJj7LegmCoEM_o/template/preview",
       "key": "guidelines_for_working_with_ai",
       "properties": {
         "audience": "Teacher",
@@ -4028,7 +4133,7 @@
     },
     {
       "name": "Prompting AI",
-      "url": "https://docs.google.com/presentation/d/1ZgnvDbjQmMbdptWSePmjgjHTUxZV_ACB9PkEkkYTERE/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ZgnvDbjQmMbdptWSePmjgjHTUxZV_ACB9PkEkkYTERE/template/preview",
       "key": "investigating_ai_tools",
       "properties": {
         "audience": "Teacher",
@@ -4042,7 +4147,7 @@
     },
     {
       "name": "Privacy and Safety Exploration",
-      "url": "https://docs.google.com/document/d/1LIw4YHQI0oTthaV0WMDd3pu_yw1fG5Xt2g8XCpulaWY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1LIw4YHQI0oTthaV0WMDd3pu_yw1fG5Xt2g8XCpulaWY/template/preview",
       "key": "privacy_safety_exploration",
       "properties": {
         "audience": "Student",
@@ -4071,7 +4176,7 @@
     },
     {
       "name": "AI-Assisted Creation",
-      "url": "https://docs.google.com/presentation/d/1FV-sEObVfIAIztAKyechAhccJf9S1rQIVakXGZO2xGA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1FV-sEObVfIAIztAKyechAhccJf9S1rQIVakXGZO2xGA/template/preview",
       "key": "responsible_co-creation",
       "properties": {
         "audience": "Teacher",
@@ -4099,7 +4204,7 @@
     },
     {
       "name": "The Final Verdict",
-      "url": "https://docs.google.com/presentation/d/1JWenlxutiy8vxmKhdRNQXEL1SmJybHP8Owg-4Iex8HY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1JWenlxutiy8vxmKhdRNQXEL1SmJybHP8Owg-4Iex8HY/template/preview",
       "key": "the_final_verdict",
       "properties": {
         "audience": "Teacher",
@@ -4113,7 +4218,7 @@
     },
     {
       "name": "The Final Verdict",
-      "url": "https://docs.google.com/document/d/1Zp2z-P9xbxAUahjnADlCgHkIf_7POKsxJC8zXc8bW8A/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1Zp2z-P9xbxAUahjnADlCgHkIf_7POKsxJC8zXc8bW8A/template/preview",
       "key": "the_final_verdict_1",
       "properties": {
         "audience": "Student",
@@ -4128,7 +4233,7 @@
     },
     {
       "name": "AI-Generated Images",
-      "url": "https://docs.google.com/presentation/d/11EqTbt7dw_ZmvvAoI8yLjBowwvdBMR52AYRMjy0xvrY/edit?slide=id.slide_1771873440677_7#slide=id.slide_1771873440677_7",
+      "url": "https://docs.google.com/presentation/d/11EqTbt7dw_ZmvvAoI8yLjBowwvdBMR52AYRMjy0xvrY/edit?slide=id.slide_1771873440677_7#slide=id.slide_1771873440677_7/template/preview",
       "key": "truth_and_credibility",
       "properties": {
         "audience": "Teacher",
@@ -4260,6 +4365,12 @@
     {
       "seeding_key": {
         "resource.key": "all_resources_9",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
         "script.name": "thinking-critically-about-ai-2026"
       }
     },
@@ -4617,7 +4728,272 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-42"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Investigating AI Tools",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: A Deeper Look Into AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Responsible Co-Creation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Responsible Co-Creation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Responsible Co-Creation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Guidelines for Working with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Guidelines for Working with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Guidelines for Working with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-42"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Defending Your Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Defending Your Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Defending Your Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Refining Our Product",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Refining Our Product",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Refining Our Product",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

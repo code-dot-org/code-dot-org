@@ -1,0 +1,2490 @@
+{
+  "script": {
+    "name": "scottsdale-levelbuilder-exploration",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "has_unnumbered_lessons": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-09-16 22:34:00 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "scottsdale-levelbuilder-exploration"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Level Builder AI Tools"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "WIDGETS!"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Amanda",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "generate_outline": "This first lesson introduces coding as the practice of giving precise instructions. Teachers will run, read, predict, and modify short Python programs so they leave with an early success and a useful model for teaching beginners."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Aryanna",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Emily",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Erik",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "generate_outline": "Lesson 1: Who Decides?\nGuiding question: How can I use AI effectively?\nLesson at a glance\nSegment: Warm Up, Time: 5 minutes, Focus: Compare two AI-generated music streaming homepages., Code Studio levels: None listed\nSegment: Create with AI, Time: 20 minutes, Focus: Brainstorm, build, generate an image, and restyle a website., Code Studio levels: 1–4\nSegment: Website Gallery Walk, Time: 15 minutes, Focus: Identify repeated patterns and discuss how AI fills in missing details., Code Studio levels: 5\nSegment: Wrap Up, Time: 5 minutes, Focus: Explain which decisions students made and which AI made., Code Studio levels: None listed\nThe two middle segments make up the 35-minute activity block.\nOverview\nStudents explore how AI generates responses by recognizing patterns and predicting likely outcomes. They experiment with text and images to craft effective prompts using AI Chat levels. By the end, they understand how AI processes information and how to use strategic prompting for better results.\nThe source overview also describes a “Yes, and…” game to simulate AI's response-building process. The detailed teaching guide does not include directions for that game; it follows the website activity below.\nLearning objectives\nStudents will be able to:\n- Analyze patterns in AI-generated responses to explain how input prompts influence outputs.\n- Experiment with different prompts to observe how AI's responses change.\n- Explain that AI models use probability and statistics to generate responses.\n- Refine AI-generated outputs by iterating on prompts and recognizing patterns in responses."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Joi - Experiment 1",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "generate_outline": "One-sentence idea: Students invent and build a calculator for anything they care about — snowboard sizing, recipe scaling, daily water intake, savings goals, game stats — that takes user input, computes a result, and explains it clearly.\n\nStructure:\n\n- Day 1 — Predict / Run / Investigate on a shared seed program, with the mod widget + handout embedded as the conceptual anchor between Run and Investigate.  \n- Day 2 — Modify / Make: two required mods as the bridge, then the open build.\n\nThe seed program models the five-step scaffold students use in Make, so by the time they build their own calculator they have already dissected the exact structure they're expected to produce. The mod widget returns twice: on Day 1 to explain the split, and on Day 2 inside Modify to support dollars-and-cents formatting."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Katie",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "generate_outline": "Lesson 4: \nLesson Focus: Initial exploration and evidence gathering focused on text generation and Large Language Models (LLMs).\nLearning Objectives\nBy the end of this lesson, students will be able to:\nExplain how AI writes by guessing the next word using patterns\nUse AI carefully by asking clear questions, giving helpful details, setting rules, and checking its answers.\nUse AI to explore new ideas by asking it to write from different points of view or change a text's style\nLesson Outline\n1. Warm-Up: \"Human Autocomplete\" (Unplugged Concept)\nObjective: Introduce LLM concepts, connect to pattern recognition, and establish AI vocabulary.\nThe Activity: Write a partial sentence on the board: \"The tired student sat down on the...\"\nStudent Engagement: Have students shout out the most logical next word. Write these options down and have the class vote on the most likely word.\nThe \"Why\" (AI Technicality Learning): Explain that Large Language Models (chatbots) do exactly this at lightning speed. They don't inherently understand what a \"student\" or a \"chair\" is; instead, they have scanned billions of sentences to calculate the statistical probability of which word comes next.\nConnecting to Pattern Recognition: Try different sentences. Use some that are easy to autocomplete (high consensus) and some that require highly specific knowledge (low consensus). Discuss how this mirrors how LLMs rely on patterns in training data to generate responses, connecting back to earlier concepts of data and pattern recognition.\n2. Guided Practice: Intro to Algorithmic Thinking (Level 1)\nObjective: Make step-by-step improvements to prompts and evaluate the outcomes.\nCo-Creation: Have students collaborate with the AI using different personas (e.g., Campaign Manager, Coach/Wife, Social Media Content Creator).\nScaling Prompts: Guide students to create step-by-step improvements to their text prompts by adding specific details:\nStep 1: Start with a simple 3-word prompt.\nStep 2: Expand the prompt to 10 words.\nStep 3: Expand the prompt to 20 words.\nDiscussion: Ask the class, \"How can we find the 'sweet spot' between being too general and too specific when asking the AI to generate text?\"\n3. Tool Scaffolding (Levels 2 & 3)\nObjective: Teach necessary technical skills for workflow and organization.\nLevel 2 (The Backpack): Demonstrate and have students practice saving their most effective or interesting chats into their \"Backpack.\"\nLevel 3 (Sketch Lab): Teach students how to import those saved chats from the Backpack directly into \"Sketch Lab\" for further editing and use.\n4. Independent Practice: Text Transfers & Open Exploration (Level 4)\nObjective: Allow for more open-ended exploration around text generation and audience adaptation.\nThe Task: Students choose one of their previous explorations and perform a \"text transfer\" to see how the AI adapts content based on new constraints.\nExploration Options:\nUse the AI to summarize a text (e.g., asking for a TL;DR or a formal summary).\nAsk the AI to explain a concept to radically different audience types (e.g., explain it to peers, explain it to a child, explain it to a dinosaur).\nUse descriptive writing to paint a picture of a scenario.\nDeclare Your Own Idea: Allow students an open-ended opportunity to craft their own text generation prompt.\nSynthesize learning and add to project template - students add evidence gathered from their explorations today.\n5. Wrap-Up & Evidence Gathering\nReflection: Ask students to share 1 example of what works or 1 example of what doesn't work when using AI for communication and writing.\nClosing Connection: Reinforce that AI is a tool whose value depends heavily on context, purpose, and human judgment. Reinforce the Co-Pilot metaphor"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Joi - Experiment 2",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "generate_outline": "Intro to Programming Day 1 and 2 Outline A two-day PRIMM progression for Neighborhood and Painter programs  One-sentence idea: Students encounter several short, working Python programs that control a Painter on a grid, then use predict, run, investigate, modify, and make routines to understand sequential programming before designing their own working path or pixel-art program.  Structure - Day 1 - Predict / Run / Investigate / Modify: Students work with a shared Neighborhood seed program. They predict what the Painter will do, run the program, debrief their noticing, trace commands statement by statement, add comments, and modify/debug short programs. - Day 2 - Make: Students sketch a design on a grid, label movement/turn/paint decisions, build the program in Python, then trace and test until the result matches the plan.  The seed program models the same command set students will use in Make: set_paint(), move(), turn_left(), and paint(). The instructional focus is not syntax memorization; it is controlling a computer one instruction at a time and using tracing to reason about a program.  Day 1 - Predict · Run · Investigate · Modify Warm Up Purpose: Connect natural language to programming language. Discuss: List two to three differences between a natural language and a programming language. Why do those differences need to exist? Lesson Objectives By the end of this lesson, students will be able to: Trace a sequential program to predict what it does. Write and modify code to complete a specific task. Explain what a comment is and how it affects a program. Question of the Day How do you control what a computer does, one instruction at a time? Day 1 Wrap Up Today, students learned about: Tracing a sequential program to predict what it does. Writing and modifying code to complete a specific task. What a comment is and how it affects a program. Question of the Day How do you control what a computer does, one instruction at a time? Glows, Grows, Want-to-Knows What was awesome about writing your code? What is one action you can take to improve your code? What questions do you have about today? Day 2 - Make Warm Up Purpose: Frame programming as translating an idea into a precise sequence. Discuss: Pixel artists do a lot with only a few squares. Look at the pixel-art paintings. What clues helped you figure them out? What details did the artist keep? What details did they leave out? Lesson Objectives By the end of this lesson, students will be able to: Sketch a program design using move, turn, and paint commands. Write a sequential program that implements a planned design. Trace and test a program, debugging until output matches intended results. Question of the Day How do I turn my idea into a program that actually works? Day 2 Wrap Up Today, students learned about: Sketching a program design using move, turn, and paint commands. Writing a sequential program that implements a planned design. Tracing and testing a program, debugging until output matches intended results. Question of the Day How do I turn my idea into a program that actually works? Glows, Grows, Want-to-Knows What was awesome about writing your code? What is one action you can take to improve your code? What questions do you still have about today?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Amanda2",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "generate_outline": "Teachers learn how Python programs can interact with users. They use input() to ask questions, store responses in variables, and include those responses in personalized messages. Through prediction, modification, and debugging activities, teachers practice following the order in which a program runs.\n\nBy the end of the lesson, teachers can create a simple interactive program that asks a question and responds using the information entered by the user."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Katie2",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "generate_outline": "safety / privacy\nExplore how AI can find patterns in public data and ways to ensure safe AI usage\tSafety and Privacy  Explorations\tWarm Up: From L7 - Z Tech \nActivity 1: Unplugged version of the labeling public/private/sensitive data, anonymize the data\nActivity 2: Web Lab Hot Spot Mini Lessons\nUse existing 2 mini lessons\nAdd a tip to Sketch Lab project\nWrap Up: Have I accidentally included any private or sensitive information in AI Chats before?"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Amanda",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Aryanna",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Emily",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Erik",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Joi",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Katie",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "504321f4-35d0-4fc6-9a00-801ebab4f489",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "504321f4-35d0-4fc6-9a00-801ebab4f489",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "5f3c1226-9b1a-4437-80cf-9816c62f2b0c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f3c1226-9b1a-4437-80cf-9816c62f2b0c",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "c066cc12-41db-4191-9c8b-8b1a218e2ec6",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c066cc12-41db-4191-9c8b-8b1a218e2ec6",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "f83a3fba-8ee9-4908-97e3-ff8f188cb87c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f83a3fba-8ee9-4908-97e3-ff8f188cb87c",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "bbe2ac3d-6e35-4827-92b9-5c60dddf68b3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbe2ac3d-6e35-4827-92b9-5c60dddf68b3",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "c8b7e43c-f722-449f-9c57-3853893f3c2a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8b7e43c-f722-449f-9c57-3853893f3c2a",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "aeed55c6-9d21-4439-afde-d1dc7d502370",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aeed55c6-9d21-4439-afde-d1dc7d502370",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "e9f6e410-df64-4b21-b667-d558d4b5eeae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e9f6e410-df64-4b21-b667-d558d4b5eeae",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "b26e19ea-00d6-4bfd-86f9-1c4186c0c9d1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b26e19ea-00d6-4bfd-86f9-1c4186c0c9d1",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "ebded14e-95e5-4fa6-88fe-416e498b7210",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ebded14e-95e5-4fa6-88fe-416e498b7210",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    },
+    {
+      "key": "a59c23c9-3645-474b-8fd5-0bcd7e771ec5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a59c23c9-3645-474b-8fd5-0bcd7e771ec5",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530",
+        "lesson_activity.key": "504321f4-35d0-4fc6-9a00-801ebab4f489"
+      }
+    },
+    {
+      "key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b",
+        "lesson_activity.key": "5f3c1226-9b1a-4437-80cf-9816c62f2b0c"
+      }
+    },
+    {
+      "key": "2f72fbc6-9647-4036-a493-23af3b98e12b",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b",
+        "lesson_activity.key": "c066cc12-41db-4191-9c8b-8b1a218e2ec6"
+      }
+    },
+    {
+      "key": "56c4f353-ab71-4214-a8d1-67473518067d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d",
+        "lesson_activity.key": "f83a3fba-8ee9-4908-97e3-ff8f188cb87c"
+      }
+    },
+    {
+      "key": "fd91acf6-1414-492d-a606-655ca07b4d2d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d",
+        "lesson_activity.key": "bbe2ac3d-6e35-4827-92b9-5c60dddf68b3"
+      }
+    },
+    {
+      "key": "5fc1099f-190f-4b66-ae88-d53e212c1324",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324",
+        "lesson_activity.key": "c8b7e43c-f722-449f-9c57-3853893f3c2a"
+      }
+    },
+    {
+      "key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc",
+        "lesson_activity.key": "aeed55c6-9d21-4439-afde-d1dc7d502370"
+      }
+    },
+    {
+      "key": "d9701589-a9a8-4f83-9127-aa96225d4104",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104",
+        "lesson_activity.key": "e9f6e410-df64-4b21-b667-d558d4b5eeae"
+      }
+    },
+    {
+      "key": "95b90987-595f-420b-ae98-62f13b8fdd9e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "95b90987-595f-420b-ae98-62f13b8fdd9e",
+        "lesson_activity.key": "b26e19ea-00d6-4bfd-86f9-1c4186c0c9d1"
+      }
+    },
+    {
+      "key": "1b2395af-dcd5-466a-9930-a5d7230e7289",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1b2395af-dcd5-466a-9930-a5d7230e7289",
+        "lesson_activity.key": "ebded14e-95e5-4fa6-88fe-416e498b7210"
+      }
+    },
+    {
+      "key": "93f273da-f530-4417-8466-6ba20bb5510a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a",
+        "lesson_activity.key": "a59c23c9-3645-474b-8fd5-0bcd7e771ec5"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda-intro-precise-instructions"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      },
+      "level_keys": [
+        "amanda-intro-precise-instructions"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda-run-first-program"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      },
+      "level_keys": [
+        "amanda-run-first-program"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda-using-print-function"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      },
+      "level_keys": [
+        "amanda-using-print-function"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda-storing-information-variables"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      },
+      "level_keys": [
+        "amanda-storing-information-variables"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda-predict-program-output"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      },
+      "level_keys": [
+        "amanda-predict-program-output"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda-modify-explain-code"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      },
+      "level_keys": [
+        "amanda-modify-explain-code"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda-reflection-coding-journey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      },
+      "level_keys": [
+        "amanda-reflection-coding-journey"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "selfpaced-datamakesai-intro"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      },
+      "level_keys": [
+        "selfpaced-datamakesai-intro"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "selfpaced-datamakesai-matching"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      },
+      "level_keys": [
+        "selfpaced-datamakesai-matching"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "selfpaced-datamakesai-manual"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      },
+      "level_keys": [
+        "selfpaced-datamakesai-manual"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "1 selfpaced-datamakesai-gamelab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      },
+      "level_keys": [
+        "1 selfpaced-datamakesai-gamelab"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "1 selfpaced-datamakesai-ailab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      },
+      "level_keys": [
+        "1 selfpaced-datamakesai-ailab"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "scottsdale-erik-1-brainstorm-website-ideas"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      },
+      "level_keys": [
+        "scottsdale-erik-1-brainstorm-website-ideas"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "scottsdale-erik-2-create-and-revise-page"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      },
+      "level_keys": [
+        "scottsdale-erik-2-create-and-revise-page"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "scottsdale-erik-3-generate-image"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      },
+      "level_keys": [
+        "scottsdale-erik-3-generate-image"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "scottsdale-erik-4-add-image-and-restyle"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      },
+      "level_keys": [
+        "scottsdale-erik-4-add-image-and-restyle"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "scottsdale-erik-5-pattern-recognition"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      },
+      "level_keys": [
+        "scottsdale-erik-5-pattern-recognition"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment1-1-predict"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      },
+      "level_keys": [
+        "test-joi-experiment1-1-predict"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment1-2-run"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      },
+      "level_keys": [
+        "test-joi-experiment1-2-run"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment1-3-investigate"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      },
+      "level_keys": [
+        "test-joi-experiment1-3-investigate"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment1-4-modify"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      },
+      "level_keys": [
+        "test-joi-experiment1-4-modify"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment1-5-make"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      },
+      "level_keys": [
+        "test-joi-experiment1-5-make"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-human-autocomplete1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-human-autocomplete1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-prompt-refinement1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-prompt-refinement1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-the-backpack1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-the-backpack1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-sketchlab-integration"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-sketchlab-integration"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-text-exploration-choice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-text-exploration-choice"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-ai-communication-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-ai-communication-reflection"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-closing-connection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-closing-connection"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-human-autocomplete"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-human-autocomplete"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-prompt-refinement"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-prompt-refinement"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner-the-backpack"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      },
+      "level_keys": [
+        "roadrunner-the-backpack"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-19-level-1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-19-level-1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-19-level-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-19-level-2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-3-guided-modify"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-3-guided-modify"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-4-scenario-change"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-4-scenario-change"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-5-debugging"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-5-debugging"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-6-check-for-understanding"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-6-check-for-understanding"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-7-stretch-modify"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-7-stretch-modify"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-joi-experiment2-20-level-1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      },
+      "level_keys": [
+        "test-joi-experiment2-20-level-1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda2-intro-interactive-programs"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      },
+      "level_keys": [
+        "amanda2-intro-interactive-programs"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda2-getting-input"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      },
+      "level_keys": [
+        "amanda2-getting-input"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda2-program-flow-check"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      },
+      "level_keys": [
+        "amanda2-program-flow-check"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda2-personalized-messages"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      },
+      "level_keys": [
+        "amanda2-personalized-messages"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda2-debugging-input"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      },
+      "level_keys": [
+        "amanda2-debugging-input"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "amanda2-design-classroom-tool"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      },
+      "level_keys": [
+        "amanda2-design-classroom-tool"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner2-intro"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      },
+      "level_keys": [
+        "roadrunner2-intro"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner2-data-id"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      },
+      "level_keys": [
+        "roadrunner2-data-id"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner2-web-privacy"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      },
+      "level_keys": [
+        "roadrunner2-web-privacy"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "roadrunner2-chat-safety"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      },
+      "level_keys": [
+        "roadrunner2-chat-safety"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "weblab-widget-amanda-az-rubric"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "95b90987-595f-420b-ae98-62f13b8fdd9e"
+      },
+      "level_keys": [
+        "weblab-widget-amanda-az-rubric"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "az-plwidget1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "1b2395af-dcd5-466a-9930-a5d7230e7289"
+      },
+      "level_keys": [
+        "az-plwidget1"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "az-plwidget2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "1b2395af-dcd5-466a-9930-a5d7230e7289"
+      },
+      "level_keys": [
+        "az-plwidget2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "az-plwidget3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "1b2395af-dcd5-466a-9930-a5d7230e7289"
+      },
+      "level_keys": [
+        "az-plwidget3"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson4-computer-sim"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson4-computer-sim"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson2-weblab-1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson2-weblab-1"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson3-online-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson3-online-choice"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson5-amara2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson5-amara2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "amanda-intro-precise-instructions",
+        "script_level.level_keys": [
+          "amanda-intro-precise-instructions"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda-run-first-program",
+        "script_level.level_keys": [
+          "amanda-run-first-program"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda-using-print-function",
+        "script_level.level_keys": [
+          "amanda-using-print-function"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda-storing-information-variables",
+        "script_level.level_keys": [
+          "amanda-storing-information-variables"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda-predict-program-output",
+        "script_level.level_keys": [
+          "amanda-predict-program-output"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda-modify-explain-code",
+        "script_level.level_keys": [
+          "amanda-modify-explain-code"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda-reflection-coding-journey",
+        "script_level.level_keys": [
+          "amanda-reflection-coding-journey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "6e75aa27-ecee-4d37-97cc-5ed5ec9a4530"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "selfpaced-datamakesai-intro",
+        "script_level.level_keys": [
+          "selfpaced-datamakesai-intro"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "selfpaced-datamakesai-matching",
+        "script_level.level_keys": [
+          "selfpaced-datamakesai-matching"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "selfpaced-datamakesai-manual",
+        "script_level.level_keys": [
+          "selfpaced-datamakesai-manual"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "1 selfpaced-datamakesai-gamelab",
+        "script_level.level_keys": [
+          "1 selfpaced-datamakesai-gamelab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "1 selfpaced-datamakesai-ailab",
+        "script_level.level_keys": [
+          "1 selfpaced-datamakesai-ailab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5dccb72c-112b-48ca-b72b-1dc1d8f50e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "scottsdale-erik-1-brainstorm-website-ideas",
+        "script_level.level_keys": [
+          "scottsdale-erik-1-brainstorm-website-ideas"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "scottsdale-erik-2-create-and-revise-page",
+        "script_level.level_keys": [
+          "scottsdale-erik-2-create-and-revise-page"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "scottsdale-erik-3-generate-image",
+        "script_level.level_keys": [
+          "scottsdale-erik-3-generate-image"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "scottsdale-erik-4-add-image-and-restyle",
+        "script_level.level_keys": [
+          "scottsdale-erik-4-add-image-and-restyle"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "scottsdale-erik-5-pattern-recognition",
+        "script_level.level_keys": [
+          "scottsdale-erik-5-pattern-recognition"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "2f72fbc6-9647-4036-a493-23af3b98e12b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment1-1-predict",
+        "script_level.level_keys": [
+          "test-joi-experiment1-1-predict"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment1-2-run",
+        "script_level.level_keys": [
+          "test-joi-experiment1-2-run"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment1-3-investigate",
+        "script_level.level_keys": [
+          "test-joi-experiment1-3-investigate"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment1-4-modify",
+        "script_level.level_keys": [
+          "test-joi-experiment1-4-modify"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment1-5-make",
+        "script_level.level_keys": [
+          "test-joi-experiment1-5-make"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "56c4f353-ab71-4214-a8d1-67473518067d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-human-autocomplete1",
+        "script_level.level_keys": [
+          "roadrunner-human-autocomplete1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-prompt-refinement1",
+        "script_level.level_keys": [
+          "roadrunner-prompt-refinement1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-the-backpack1",
+        "script_level.level_keys": [
+          "roadrunner-the-backpack1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-sketchlab-integration",
+        "script_level.level_keys": [
+          "roadrunner-sketchlab-integration"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-text-exploration-choice",
+        "script_level.level_keys": [
+          "roadrunner-text-exploration-choice"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-ai-communication-reflection",
+        "script_level.level_keys": [
+          "roadrunner-ai-communication-reflection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-closing-connection",
+        "script_level.level_keys": [
+          "roadrunner-closing-connection"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-human-autocomplete",
+        "script_level.level_keys": [
+          "roadrunner-human-autocomplete"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-prompt-refinement",
+        "script_level.level_keys": [
+          "roadrunner-prompt-refinement"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner-the-backpack",
+        "script_level.level_keys": [
+          "roadrunner-the-backpack"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "fd91acf6-1414-492d-a606-655ca07b4d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-19-level-1",
+        "script_level.level_keys": [
+          "test-joi-experiment2-19-level-1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-19-level-2",
+        "script_level.level_keys": [
+          "test-joi-experiment2-19-level-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-3-guided-modify",
+        "script_level.level_keys": [
+          "test-joi-experiment2-3-guided-modify"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-4-scenario-change",
+        "script_level.level_keys": [
+          "test-joi-experiment2-4-scenario-change"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-5-debugging",
+        "script_level.level_keys": [
+          "test-joi-experiment2-5-debugging"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-6-check-for-understanding",
+        "script_level.level_keys": [
+          "test-joi-experiment2-6-check-for-understanding"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-7-stretch-modify",
+        "script_level.level_keys": [
+          "test-joi-experiment2-7-stretch-modify"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-joi-experiment2-20-level-1",
+        "script_level.level_keys": [
+          "test-joi-experiment2-20-level-1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "5fc1099f-190f-4b66-ae88-d53e212c1324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda2-intro-interactive-programs",
+        "script_level.level_keys": [
+          "amanda2-intro-interactive-programs"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda2-getting-input",
+        "script_level.level_keys": [
+          "amanda2-getting-input"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda2-program-flow-check",
+        "script_level.level_keys": [
+          "amanda2-program-flow-check"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda2-personalized-messages",
+        "script_level.level_keys": [
+          "amanda2-personalized-messages"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda2-debugging-input",
+        "script_level.level_keys": [
+          "amanda2-debugging-input"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "amanda2-design-classroom-tool",
+        "script_level.level_keys": [
+          "amanda2-design-classroom-tool"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "ba41872b-c6ca-4b09-afb5-3079d08a81bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner2-intro",
+        "script_level.level_keys": [
+          "roadrunner2-intro"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner2-data-id",
+        "script_level.level_keys": [
+          "roadrunner2-data-id"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner2-web-privacy",
+        "script_level.level_keys": [
+          "roadrunner2-web-privacy"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "roadrunner2-chat-safety",
+        "script_level.level_keys": [
+          "roadrunner2-chat-safety"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "d9701589-a9a8-4f83-9127-aa96225d4104"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "weblab-widget-amanda-az-rubric",
+        "script_level.level_keys": [
+          "weblab-widget-amanda-az-rubric"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "95b90987-595f-420b-ae98-62f13b8fdd9e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "az-plwidget1",
+        "script_level.level_keys": [
+          "az-plwidget1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "1b2395af-dcd5-466a-9930-a5d7230e7289"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "az-plwidget2",
+        "script_level.level_keys": [
+          "az-plwidget2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "1b2395af-dcd5-466a-9930-a5d7230e7289"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "az-plwidget3",
+        "script_level.level_keys": [
+          "az-plwidget3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "1b2395af-dcd5-466a-9930-a5d7230e7289"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson4-computer-sim",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson4-computer-sim"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson2-weblab-1",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson2-weblab-1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson3-online-choice",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson3-online-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson5-amara2",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson5-amara2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "scottsdale-levelbuilder-exploration",
+        "activity_section.key": "93f273da-f530-4417-8466-6ba20bb5510a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

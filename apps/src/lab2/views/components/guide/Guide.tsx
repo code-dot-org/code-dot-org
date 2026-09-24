@@ -4,19 +4,29 @@ import React from 'react';
 
 import styles from './Guide.module.scss';
 
+/** The guide's distances from its container's right and bottom edges
+    (.guide in Guide.module.scss), for siblings that lay out around it. */
+export const GUIDE_RIGHT_OFFSET_PX = 32;
+export const GUIDE_BOTTOM_OFFSET_PX = 20;
+
 interface GuideProps {
   id?: string;
   children: React.ReactNode;
-  width?: 'normal' | 'narrow' | 'very-narrow';
+  /** A named share of the container, or a fixed width in px. A change
+      animates (the panel transitions its width). */
+  width?: 'normal' | 'narrow' | 'very-narrow' | number;
   position?: 'normal' | 'bottom';
   modal?: 'full' | 'gap';
   cornerIcon?: 'minimize' | 'maximize';
+  /** Shrink-wrap whatever is left showing, e.g. a single button. */
+  collapsed?: boolean;
   onCornerIconClick?: () => void;
+  /** The floating panel itself, for a caller that measures it. */
+  panelRef?: React.Ref<HTMLDivElement>;
 }
 
-// The Guide is a floating container for instructional content.  It is larger
-// and more prominent than our more traditional instructions.  It's named
-// for the Guide used for instructions in AI for Oceans.
+// A floating container for instructional content, larger and more prominent
+// than our traditional instructions.  Named for the Guide in AI for Oceans.
 const Guide: React.FunctionComponent<GuideProps> = ({
   id,
   children,
@@ -24,7 +34,9 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   position,
   modal,
   cornerIcon,
+  collapsed,
   onCornerIconClick,
+  panelRef,
 }) => {
   return (
     <div
@@ -36,9 +48,15 @@ const Guide: React.FunctionComponent<GuideProps> = ({
     >
       <div
         id={id}
+        ref={panelRef}
+        // A collapsed panel is only as wide as its buttons, so the fixed
+        // width applies only while it is open.
+        style={typeof width === 'number' && !collapsed ? {width} : undefined}
         className={classNames(
           styles.guide,
-          width === 'very-narrow'
+          typeof width === 'number'
+            ? undefined
+            : width === 'very-narrow'
             ? styles.guideVeryNarrowWidth
             : width === 'narrow'
             ? styles.guideNarrowWidth
@@ -46,7 +64,8 @@ const Guide: React.FunctionComponent<GuideProps> = ({
           position === 'bottom'
             ? styles.guideBottomPosition
             : styles.guideNormalPosition,
-          modal === 'gap' && styles.guideGap
+          modal === 'gap' && styles.guideGap,
+          collapsed && styles.guideCollapsed
         )}
       >
         {children}

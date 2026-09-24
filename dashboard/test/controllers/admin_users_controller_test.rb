@@ -286,7 +286,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   test 'user_progress returns progress' do
-    user = @not_admin
+    user = create(:student)
     script1 = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
     script2 = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
 
@@ -294,14 +294,14 @@ class AdminUsersControllerTest < ActionController::TestCase
     UserScript.create!(user: user, script: script2)
 
     sign_in @admin
-    post :user_progress_form, params: {user_identifier: @not_admin.id.to_s}
+    post :user_progress_form, params: {user_identifier: user.id.to_s}
 
     # page has 2 tables:
     # table 1 - user information (1 row)
     # table 2 - script progress (2 rows)
     assert_select "table", 2
-    assert_select "table:nth-of-type(1) tbody tr", 1
-    assert_select "table:nth-of-type(2) tbody tr", 2
+    assert_select "#user-info-table tbody tr", 1
+    assert_select "#user-scripts-table tbody tr", 2
   end
 
   test "delete_progress_form returns error if not admin" do
@@ -613,6 +613,47 @@ class AdminUsersControllerTest < ActionController::TestCase
     post :delete_progress, params: {user_id: @project_owner.id, script_id: @script.id, reason: 'Testing'}
     assert_equal 0, CodeReview.where(user_id: @project_owner.id, script_id: @script.id).count
     assert_equal 0, CodeReviewComment.where(code_review_id: review1.id).count
+  end
+
+  test "mass_progress_reset returns error if not admin" do
+    sign_in @not_admin
+    CDO.log.expects(:warn).never
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: [@user.id]}
+    assert_response :forbidden
+  end
+
+  test "mass_progress_reset deletes progress for every student/unit pair" do
+    sign_in @admin
+
+    other_script = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
+    other_student = create(:student)
+
+    UserLevel.create!(user: @user, script: @script, level: @level1, best_result: 100)
+    UserLevel.create!(user: other_student, script: @script, level: @level1, best_result: 100)
+    UserLevel.create!(user: @user, script: other_script, level: other_script.script_levels.first.level, best_result: 100)
+
+    log_payload = {
+      event: 'mass_progress_reset', namespace: 'admin', request_id: request.request_id,
+      authenticated_user_id: @admin.id, affected_user_id: 0,
+      unit_ids: [@script.id, other_script.id], student_ids: [@user.id, other_student.id]
+    }
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id, other_script.id], student_ids: [@user.id, other_student.id]}
+
+    assert_response :success
+    assert_equal({success: true}, JSON.parse(response.body).symbolize_keys)
+    assert_equal 0, UserLevel.where(user_id: [@user.id, other_student.id], script_id: [@script.id, other_script.id]).count
+  end
+
+  test "mass_progress_reset requires non-empty unit_ids and student_ids" do
+    sign_in @admin
+
+    post :mass_progress_reset, params: {unit_ids: [], student_ids: [@user.id]}
+    assert_response :bad_request
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: ['not-a-number']}
+    assert_response :bad_request
   end
 
   generate_admin_only_tests_for :user_projects_form

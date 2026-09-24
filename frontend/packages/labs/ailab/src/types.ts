@@ -1,9 +1,12 @@
-import type KNN from 'ml-knn';
-
 export type DataRow = Record<string, string | number>;
+
+export type TrainerFamily = 'knn' | 'decisionTree';
+
+export type Hyperparameters = {k: number} | {maxDepth: number};
 
 export interface Mode {
   datasets?: string[];
+  trainer?: TrainerFamily;
   hideSelectLabel?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
@@ -88,10 +91,10 @@ export interface Metadata {
   fields?: MetadataField[];
 }
 
-export interface KNNTrainedModelDetails {
-  model: KNN;
-  predictedLabels: (number | string)[];
-  kValue: number;
+/* What the lab needs from a trained model, whichever algorithm made it. */
+export interface TrainedModel {
+  predict(rows: number[][]): (number | string)[];
+  toJSON(): object;
 }
 
 export interface TrainedModelDetails {
@@ -154,7 +157,7 @@ export interface ModelDataToSave {
   features: ModelCardColumn[];
   summaryStat: {type: string; stat: string};
   trainedModel: object | null;
-  kValue: number | null;
+  hyperparameters: Hyperparameters | null;
 }
 
 export type SaveTrainedModel = (

@@ -1,6 +1,6 @@
 // MUI module augmentations for CDO custom variants.
 // TypeScript module augmentation does not cross package boundaries, so this
-// mirrors frontend/packages/component-library/types/mui.d.ts.
+// mirrors frontend/packages/component-library/src/themes/code.org/muiAugmentation.ts.
 // Keep in sync when component-library adds or removes custom variants.
 
 declare module '@mui/material/styles' {

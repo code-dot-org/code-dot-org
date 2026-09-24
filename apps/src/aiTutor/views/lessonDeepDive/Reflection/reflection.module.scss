@@ -1,204 +1,335 @@
-$teal: #00818f;
-$purple: hsl(271deg 58% 65%);
+$anim-duration: 220ms;
 
-// ── ReflectionBox ─────────────────────────────────────────────────────────────
+// ── Card shell ──────────────────────────────────────────────────────────────
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  color: #fff;
-  max-width: 460px;
-}
-
-.sectionLabel {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255 255 255 / 0.5);
-  margin: 0 0 12px;
-}
-
-.reflectionHeading {
-  font-family: var(--font-family-main) !important;
-  font-size: clamp(2rem, 7vw, 3rem) !important;
-  font-weight: 800 !important;
-  color: #fff !important;
-  line-height: 1.1 !important;
-  margin: 0 0 6px !important;
-}
-
-.reflectionSubheading {
-  font-size: 0.95rem;
-  color: rgba(255 255 255 / 0.65);
-  margin: 0 0 24px;
-  max-width: 420px;
-}
-
-.objectivesList {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.objectiveCard {
-  background: #424d59;
-  border: 1px solid #69788a;
-  border-radius: 4px;
+.card {
+  background: linear-gradient(to bottom, #4238c4, #e4e2f8);
+  border-radius: 12px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  box-sizing: border-box;
-}
-
-.objectiveDescription {
-  font-size: 1rem;
-  color: #f0f2f5;
-  margin: 0;
-  line-height: 1.48;
-}
-
-// Segmented button row — buttons share collapsed borders
-.ratingButtons {
-  display: flex;
-  width: 100%;
-}
-
-.ratingButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  max-width: 380px;
   flex: 1;
-  padding: 8px 12px;
-  border: 1px solid #a1aebb;
-  background: #292f36;
+  min-height: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
   color: #fff;
-  font-size: 1rem;
+}
+
+.overline {
+  font-size: 14px;
   font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.heading {
+  font-family: var(--font-family-heading) !important;
+  font-size: 38px !important;
+  font-weight: 700 !important;
+  line-height: 40px !important;
+  letter-spacing: -0.38px !important;
+  color: #fff !important;
+  margin: 0 !important;
+}
+
+.subheading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #fff;
+  margin: 0;
+}
+
+// ── Content area (poll card + dots) ─────────────────────────────────────────
+
+.content {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 0;
+  min-height: 1px;
+}
+
+.pollWrapper {
+  overflow: hidden;
+}
+
+.pollCard {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+// ── Objective reflection content (rendered inside pollCard) ─────────────────
+
+.objectiveText {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1d1590;
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+.ratingOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f2f4;
+  color: #121212;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
   cursor: pointer;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
   white-space: nowrap;
-  // Collapse adjacent borders
-  margin-right: -1px;
-  border-radius: 0;
-  transition: background-color 0.12s ease, border-color 0.12s ease;
+  transition: background-color 0.12s ease, color 0.12s ease;
 
-  &:first-child {
-    border-radius: 4px 0 0 4px;
-  }
-
-  &:last-child {
-    border-radius: 0 4px 4px 0;
-    margin-right: 0;
-  }
-
-  &:hover:not(.ratingButtonActive) {
-    background: rgba(255 255 255 / 0.08);
+  &:hover:not(.ratingOptionActive) {
+    background: #e4e5e8;
   }
 
   &:focus-visible {
-    outline: 2px solid $teal;
+    outline: 2px solid #2b1e9f;
     outline-offset: 2px;
-    z-index: 1;
     position: relative;
+    z-index: 1;
   }
 }
 
-.ratingButtonActive {
-  background: $teal;
-  border-color: $teal;
-  color: #fff;
-  // Lift above neighbours so its border paints over theirs
-  position: relative;
-  z-index: 1;
+.ratingOptionActive {
+  background: #2b1e9f;
+  color: #d8ffdc;
 }
 
-// ── "Anything else?" section ──────────────────────────────────────────────────
+// ── Free response content (rendered inside pollCard) ─────────────────────────
 
-.anythingElse {
-  margin-bottom: 24px;
-}
-
-.anythingElseLabel {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.optionalLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: rgba(255 255 255 / 0.5);
-  margin: 0 0 16px;
+  color: #596069;
+  margin: 0;
+  text-align: center;
 }
 
-.textAreaGroup {
+.freeResponseItem {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 }
 
-.textAreaLabel {
-  font-size: 0.95rem;
-  color: rgba(255 255 255 / 0.85);
-  font-weight: 500;
-  margin: 0 0 6px;
+.questionLabel {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1d1590;
+  margin: 0;
 }
 
 .textArea {
   width: 100%;
   box-sizing: border-box;
-  background: rgba(255 255 255 / 0.05);
-  border: 1px solid rgba(255 255 255 / 0.15);
-  border-radius: 8px;
-  color: #fff;
-  font-size: 0.9rem;
-  padding: 10px 12px;
-  resize: vertical;
-  min-height: 72px;
+  background: #fff;
+  border: 1px solid #9ea5ad;
+  border-radius: 6px;
+  color: #121212;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 5px 12px;
+  min-height: 76px;
   font-family: inherit;
-  transition: border-color 0.15s ease;
+  resize: vertical;
 
   &::placeholder {
-    color: rgba(255 255 255 / 0.3);
+    color: #9ea5ad;
   }
 
   &:focus {
     outline: none;
-    border-color: $teal;
+    border-color: #2b1e9f;
+    box-shadow: 0 0 0 1px #2b1e9f;
   }
 }
 
-// ── Submit button ─────────────────────────────────────────────────────────────
+// ── Carousel dots ─────────────────────────────────────────────────────────────
 
-.submitButton {
-  display: inline-flex;
-  width: 250px;
-  padding: 10px 16px;
-  justify-content: center;
+.carouselTracker {
+  display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 25px;
-  background: var(--background-brand-purple-primary, #9657c7);
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 999px;
+  background: rgb(18 18 18 / 0.3);
+  flex-shrink: 0;
+  transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+.dotActive {
+  width: 16px;
+  background: #2b1e9f;
+}
+
+// ── Footer navigation ─────────────────────────────────────────────────────────
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.footerEnd {
+  justify-content: flex-end;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
   border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 1rem;
+  padding: 5px 12px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 14px;
   font-weight: 600;
+  color: #121212;
   cursor: pointer;
-  transition: background-color 0.12s ease;
+  min-width: 32px;
 
-  &:hover:not(:disabled) {
-    background: var(--background-brand-purple-hover, #7d42ad);
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: default;
+  &:hover {
+    opacity: 0.7;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--background-brand-purple-focus, #a374d6);
+    outline: 2px solid #2b1e9f;
     outline-offset: 2px;
   }
+}
+
+.nextButton,
+.doneButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  border: none;
+  padding: 5px 12px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  min-width: 32px;
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  &:hover:not(:disabled) {
+    background: #2d2d2d;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #2b1e9f;
+    outline-offset: 2px;
+  }
+}
+
+// ── Slide animations ──────────────────────────────────────────────────────────
+
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.exitLeft {
+  animation: slide-out-left $anim-duration ease-out forwards;
+}
+
+.enterFromRight {
+  animation: slide-in-from-right $anim-duration ease-out forwards;
+}
+
+.exitRight {
+  animation: slide-out-right $anim-duration ease-out forwards;
+}
+
+.enterFromLeft {
+  animation: slide-in-from-left $anim-duration ease-out forwards;
 }

@@ -30,3 +30,14 @@ export const getGlobalEditionRegion = () =>
 export const currentGlobalConfiguration: () => RegionConfiguration = () =>
   Regions[getGlobalEditionRegion() as keyof typeof Regions] ||
   Regions[GlobalEditionDefaultRegion];
+
+/**
+ * Strips the Global Edition region prefix (`/br/...`, `/in/hi/...`) so a page
+ * has one path regardless of region.
+ */
+export const stripGlobalEditionPrefix = (pathname: string): string => {
+  const region = getGlobalEditionRegion();
+  return region
+    ? pathname.replace(new RegExp(`^/${region}(?:/[a-z]{2})?(?=/|$)`), '')
+    : pathname;
+};

@@ -14,11 +14,17 @@ import {
 describe('openSaveToBackpackPrompt', () => {
   let dialogMock: Pick<DialogControlInterface, 'showDialog'>,
     projectFile: ProjectFile,
-    analyticsMock: jest.Mock;
+    analyticsMock: jest.Mock,
+    toastMock: jest.Mock;
+
+  // A failure toast, ignoring the in-progress and success ones around it.
+  const errorToasts = () =>
+    toastMock.mock.calls.filter(([, options]) => options?.type === 'danger');
 
   beforeEach(() => {
     dialogMock = getDialogConfirmationMock('confirm');
     analyticsMock = jest.fn();
+    toastMock = jest.fn();
     projectFile = {
       name: 'project_file.py',
       contents: 'This is project_file.py.',
@@ -32,6 +38,7 @@ describe('openSaveToBackpackPrompt', () => {
       dialogControl: dialogMock,
       backpackApi,
       file: projectFile,
+      showToast: toastMock,
       sendLab2AnalyticsEvent: analyticsMock,
     });
 
@@ -90,6 +97,19 @@ describe('openSaveToBackpackPrompt', () => {
         expect.any(Function),
         expect.any(Function)
       );
+    });
+
+    it('should report a failed save in a dialog, not a toast', async () => {
+      (mockBackpackApi.saveFile as jest.Mock).mockImplementation(
+        async (filename, contents, onError) => onError(new Error('save boom'))
+      );
+
+      await runSaveToBackpackPrompt(mockBackpackApi);
+
+      expect(dialogMock.showDialog).toHaveBeenCalledWith(
+        expect.objectContaining({type: DialogType.GenericAlert})
+      );
+      expect(toastMock).not.toHaveBeenCalled();
     });
 
     it('should not delete anything, since the per-lab api replaces in place', async () => {
@@ -206,7 +226,13 @@ describe('openSaveToBackpackPrompt', () => {
         EVENTS.SAVE_TO_BACKPACK_REPLACE,
         {fileType: 'py'}
       );
-      expect(dialogMock.showDialog).toHaveBeenCalledWith(
+      expect(errorToasts()).toEqual([
+        [
+          "Saved project_file.py, but couldn't remove the old copy. You can delete it from your Backpack.",
+          expect.objectContaining({type: 'danger', autoHideDuration: 8000}),
+        ],
+      ]);
+      expect(dialogMock.showDialog).not.toHaveBeenCalledWith(
         expect.objectContaining({type: DialogType.GenericAlert})
       );
     });
@@ -224,12 +250,18 @@ describe('openSaveToBackpackPrompt', () => {
 
       expect(mockApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
       expect(analyticsMock).not.toHaveBeenCalled();
-      expect(dialogMock.showDialog).toHaveBeenCalledWith(
+      expect(errorToasts()).toEqual([
+        [
+          "Couldn't save project_file.py to your Backpack. Please try again.",
+          expect.objectContaining({type: 'danger', autoHideDuration: 8000}),
+        ],
+      ]);
+      expect(dialogMock.showDialog).not.toHaveBeenCalledWith(
         expect.objectContaining({type: DialogType.GenericAlert})
       );
     });
 
-    it('should alert and not save when the file lists cannot be fetched', async () => {
+    it('should toast and not save when the file lists cannot be fetched', async () => {
       const mockApi = getUnifiedBackpackAPIMock();
       (mockApi.getFileLists as jest.Mock).mockRejectedValue(
         new Error('list boom')
@@ -238,10 +270,31 @@ describe('openSaveToBackpackPrompt', () => {
       await runSaveToBackpackPrompt(mockApi);
 
       expect(mockApi.saveFile).not.toHaveBeenCalled();
-      expect(dialogMock.showDialog).toHaveBeenCalledTimes(1);
-      expect(dialogMock.showDialog).toHaveBeenCalledWith(
-        expect.objectContaining({type: DialogType.GenericAlert})
-      );
+      // Never got as far as the confirmation dialog.
+      expect(dialogMock.showDialog).not.toHaveBeenCalled();
+      expect(errorToasts()).toEqual([
+        [
+          "Couldn't save project_file.py to your Backpack. Please try again.",
+          expect.objectContaining({type: 'danger', autoHideDuration: 8000}),
+        ],
+      ]);
+    });
+
+    it('should toast progress then success around a save', async () => {
+      const mockApi = getUnifiedBackpackAPIMock();
+
+      await runSaveToBackpackPrompt(mockApi);
+
+      expect(toastMock.mock.calls).toEqual([
+        [
+          'Saving project_file.py to your Backpack...',
+          expect.objectContaining({type: 'gray', autoHideDuration: null}),
+        ],
+        [
+          'project_file.py saved to your Backpack.',
+          expect.objectContaining({type: 'success', autoHideDuration: 4000}),
+        ],
+      ]);
     });
 
     it('should not save or delete when canceled', async () => {

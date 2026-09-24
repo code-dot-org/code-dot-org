@@ -1,3 +1,4 @@
+import {Tooltip, TooltipProps as MuiTooltipProps} from '@mui/material';
 import classNames from 'classnames';
 import {
   useCallback,
@@ -10,9 +11,10 @@ import {
 import CloseButton from '@/closeButton';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {TooltipProps, WithTooltip} from '@/tooltip';
 
 import moduleStyles from './tabs.module.scss';
+
+export type TabTooltipProps = Omit<MuiTooltipProps, 'children'>;
 
 export interface TabModel {
   /** Unique value of the tab */
@@ -26,7 +28,7 @@ export interface TabModel {
   /** Whether button should be icon only */
   isIconOnly?: boolean;
   /** Tab tooltip props */
-  tooltip?: TooltipProps;
+  tooltip?: TabTooltipProps;
   /** Tab icon */
   icon?: FontAwesomeV6IconProps;
   /** Tab size (e.g. Used for closableButton) */
@@ -102,7 +104,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   isClosable = false,
   onClose = () => {},
 }) => {
-  const [overflowTooltip, setOverflowTooltip] = useState<TooltipProps>();
+  const [overflowTooltip, setOverflowTooltip] = useState<TabTooltipProps>();
   const tabTextRef = useRef<HTMLSpanElement | null>(null);
   const handleClick = useCallback(() => {
     if (!disabled) {
@@ -163,9 +165,9 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         text
       ) {
         setOverflowTooltip({
-          tooltipId: `${tabButtonId}-overflow-tooltip`,
-          text: text,
-          direction: 'onBottom',
+          id: `${tabButtonId}-overflow-tooltip`,
+          title: text,
+          placement: 'bottom',
         });
       } else {
         setOverflowTooltip(undefined);
@@ -176,9 +178,9 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   return (
     <li role="presentation">
       {preferredTooltip ? (
-        <WithTooltip tooltipProps={preferredTooltip}>
+        <Tooltip placement="top" {...preferredTooltip}>
           {buttonElement}
-        </WithTooltip>
+        </Tooltip>
       ) : (
         buttonElement
       )}

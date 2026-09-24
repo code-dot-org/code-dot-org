@@ -9,8 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-10 19:11:33 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-09-22 20:47:39 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -83,7 +83,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, students play *Candidate*—a game that guides them, first-hand, through the process of data analysis. As they compete to run for student government on the most popular policy, students learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
-        "preparation": "- Read the *Candidate* Supplemental Teacher Guide.\n- Print one copy of the *Candidate* Persona Card sheets for every 32 students, then cut the cards apart and shuffle them. It’s okay if you have more cards than students—but every student should have one card.\n- Print one double-sided copy of the *Candidate* Activity Guide for each student.",
+        "preparation": "- Read the *Candidate* Supplemental Teacher Guide.\n- Print one copy of the *Candidate* Persona Card sheets for every 32 students, then cut the cards apart and shuffle them. It’s okay if you have more cards than students—but every student should have one card.\n- Print one double-sided copy of the *Candidate* Activity Guide for each student.\n- Print copies of the Working WIth Data Unit Guide (one for each student).",
         "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, you'll play *Candidate*—a game that guides you, first-hand, through the process of data analysis. As you compete to run for student government on the most popular policy, you'll learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
         "unplugged": true
       },
@@ -245,9 +245,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**Where does data come from?**\n\nIn this lesson, students investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. Students first evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of their own.",
+        "overview": "**How do our data collection choices affect the data we get?**\n\nIn this lesson, students investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. Students first evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of their own.",
         "preparation": "- Print copies of the Sampling Strategies Activity Guide (one for each pair of students). ",
-        "student_overview": "**Where does data come from?**\n\nIn this lesson, you'll investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. You'll evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of your own."
+        "student_overview": "**How do our data collection choices affect the data we get?**\n\nIn this lesson, you'll investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. You'll evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of your own."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -1385,7 +1385,7 @@
       "key": "9275d034-d63f-45f5-b536-2d3ebef407c6",
       "position": 2,
       "properties": {
-        "description": "Organizing data into rows and columns can make it easier to access and understand information.",
+        "description": "Data is easier to work with when it’s structured in some organized way. One way to structure data is to organize it into rows and columns that can make it easier to access and understand information.",
         "remarks": true
       },
       "seeding_key": {
@@ -2370,7 +2370,7 @@
       "key": "1d05c314-1ce5-4d1c-be51-529e59692c84",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Levels 1-2.\n- Level 1: Students explore a dataset and write down questions they want to answer from the data.\n- Level 2: Students start writing Python code to analyze the data and print the results of their analysis. It’s okay if students don’t finish their analysis today: they can continue the project on Day 2 of the lesson.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students begin their data analysis, help them brainstorm questions and write Python code to answer them.\n- Some students have trouble coming up with relevant questions. You can point them towards the question patterns that were surfaced in the warm up as a starting point for writing questions. You can also encourage students to look at particular columns of data in the spreadsheet and consider what information might be contained in the data for that column. For students who are feeling more comfortable, encourage them to think about the relationship between data in different columns.\n- Students might struggle with the open-endedness of the Python programming in Level 2. Students are given some starter code that opens a CSV file, but students are responsible for determining what programming constructs they need to answer the questions that they are interested in. Help students come up with the programming constructs they might need to answer questions: for example, students will likely need to write a loop that iterates over the CSV file. Students will likely need to use dictionary syntax to access particular values in each row. Students might need to cast values to int and float. Students might also use functions like min, max, or statistics module functions to analyze data too.\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Levels 1-2.\n- Level 1: Students explore a dataset and write down questions they want to answer from the data.\n- Level 2: Students start writing Python code to analyze the data and print the results of their analysis. It’s okay if students don’t finish their analysis today: they can continue the project on Day 2 of the lesson.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students begin their data analysis, help them brainstorm questions and write Python code to answer them.\n- Some students have trouble coming up with relevant questions. You can point them towards the question patterns that were surfaced in the warm up as a starting point for writing questions. You can also encourage students to look at particular columns of data in the spreadsheet and consider what information might be contained in the data for that column. For students who are feeling more comfortable, encourage them to think about the relationship between data in different columns.\n- Students might struggle with the open-endedness of the Python programming in Level 2. Students are given some starter code that opens a CSV file, but students are responsible for determining what programming constructs they need to answer the questions that they are interested in. Help students come up with the programming constructs they might need to answer questions: for example, students will likely need to write a loop that iterates over the CSV file. Students will likely need to use dictionary syntax to access particular values in each row. Students might need to cast values to int and float. Students might also use functions like min, max, or statistics module functions to analyze data too.\n- Encourage students to work one question at a time, testing their program as they go. After writing code to address each question, encourage students to run the code and verify that the results look reasonable by comparing the results to the data in the CSV file.\n"
       },
       "seeding_key": {
         "activity_section.key": "1d05c314-1ce5-4d1c-be51-529e59692c84",
@@ -3356,7 +3356,7 @@
       "key": "dd1adc66-76ee-4d18-9fe0-e794bebbcaf9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to sampling strategies and ask them to evaluate the strategies to determine whether they would result in biased or representative data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students about the difference between biased and representative data, and invite students to think about how to collect data in such a way that the collected dataset will be representative.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to sampling strategies and ask them to evaluate the strategies to determine whether they would result in biased or representative data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students about the difference between biased and representative data: in Unit 2, students learned that representative data accurately represents the real-world situations in which the data will be used, whereas biased data does not. invite students to think about how to collect data in such a way that the collected dataset will be representative.\n",
         "duration": "15",
         "name": "Exploring Sampling Strategies"
       },
@@ -5650,6 +5650,19 @@
       }
     },
     {
+      "name": "[KEY] Working With Data Unit Guide",
+      "url": "https://docs.google.com/document/d/10srCMrl5JQKpMLeL3BismUW2jsTeuLAhQDJGKTvE2KQ/edit?usp=sharing",
+      "key": "_key_working_with_data_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_working_with_data_unit_guide"
+      }
+    },
+    {
       "name": "American Time Use Survey",
       "url": "https://drive.google.com/file/d/1joH9GwitVgBl57G4RKOa_Cy0oIJWQEvn/view?usp=sharing",
       "key": "american_time_use_survey",
@@ -5813,6 +5826,20 @@
       }
     },
     {
+      "name": "Customizing Plots",
+      "url": "https://www.youtube.com/watch?v=U_33q2m6IY4",
+      "key": "customizing_plots",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "customizing_plots"
+      }
+    },
+    {
       "name": "Data Journalism",
       "url": "https://docs.google.com/document/d/1q34pZ8TiOE-QteIBO-fL4Fe_eXEo-sQyVw_gfwNPkZ8/edit?usp=sharing",
       "key": "data_journalism",
@@ -5909,7 +5936,7 @@
       }
     },
     {
-      "name": "matplotlib Documentatin",
+      "name": "matplotlib Documentation",
       "url": "https://docs.google.com/document/d/1fCLA7koa4gnc_CgM5dtWizylK8edbny6oFVjwe3O4-Q/edit?usp=sharing",
       "key": "matplotlib_documentatin",
       "properties": {
@@ -5934,6 +5961,20 @@
       },
       "seeding_key": {
         "resource.key": "matplotlib_documentation"
+      }
+    },
+    {
+      "name": "Plotting Data",
+      "url": "https://www.youtube.com/watch?v=8QFlikCoBPw",
+      "key": "plotting_data",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "plotting_data"
       }
     },
     {
@@ -6058,9 +6099,28 @@
       "seeding_key": {
         "resource.key": "working_with_data_files"
       }
+    },
+    {
+      "name": "Working With Data Unit Guide",
+      "url": "https://docs.google.com/document/d/1Ln3vMtm657eKFNr11YFJ40wHauKtJObj3RRPyO-k2sQ/edit?usp=sharing",
+      "key": "working_with_data_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_data_unit_guide"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_working_with_data_unit_guide"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -6089,6 +6149,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "what_is_data_analysis_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "working_with_data_unit_guide"
       }
     },
     {
@@ -6226,7 +6292,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "plotting_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "visualizing_data_part_1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "customizing_plots"
       }
     },
     {

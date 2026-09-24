@@ -1,7 +1,4 @@
-import {
-  WithTooltip,
-  WithTooltipHandle,
-} from '@code-dot-org/component-library/tooltip';
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -113,45 +110,41 @@ const WorldRow = React.memo<WorldRowProps>(
 );
 WorldRow.displayName = 'WorldRow';
 
-// WithTooltip preconfigured for the palette: a small bubble below the item,
-// so the next item to the right stays readable while it shows.
+// Bubble goes below the item so the next item to the right stays readable.
 const PaletteTooltip: React.FunctionComponent<{
   tooltipId: string;
   text: string;
-  children: React.ReactNode;
+  children: React.ReactElement;
 }> = ({tooltipId, text, children}) => {
-  const handleRef = useRef<WithTooltipHandle>(null);
+  const [open, setOpen] = useState(false);
 
-  // A window that loses focus never gets the mouseleave, so a hover
-  // bubble would stay up until the next hover — hide it on window blur.
-  // Skip when the trigger itself is focused: that bubble hides when the
-  // trigger blurs, and hiding it here would block its next focus-show.
+  // A window that loses focus never gets the mouseleave, so the bubble stays
+  // up. Skip a focused trigger: closing here would block its next focus-show.
   useEffect(() => {
     const hide = () => {
       const trigger = document.activeElement;
       if (trigger?.getAttribute('aria-describedby') === tooltipId) {
         return;
       }
-      handleRef.current?.hideTooltip();
+      setOpen(false);
     };
     window.addEventListener('blur', hide);
     return () => window.removeEventListener('blur', hide);
   }, [tooltipId]);
 
   return (
-    <WithTooltip
-      ref={handleRef}
-      tooltipProps={{
-        tooltipId,
-        text,
-        size: 's',
-        direction: 'onBottom',
-      }}
-      hideDelayMs={10}
-      hideOnFirstLeave={true}
+    <Tooltip
+      id={tooltipId}
+      title={text}
+      placement="bottom"
+      open={open}
+      onOpen={() => setOpen(true)}
+      onClose={() => setOpen(false)}
+      leaveDelay={10}
+      disableInteractive
     >
       {children}
-    </WithTooltip>
+    </Tooltip>
   );
 };
 

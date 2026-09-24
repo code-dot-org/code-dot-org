@@ -13,18 +13,18 @@ async function gotoLoaded(page: Page, scenario = 'teacher') {
 const expectFocusInside = (dialog: Locator) =>
   expect(dialog.locator(':focus')).toHaveCount(1);
 
-test('the live tab is keyboard-focusable; placeholder tabs are disabled', async ({
+test('the live tabs are keyboard-focusable; the placeholder tab is disabled', async ({
   page,
 }) => {
   await gotoLoaded(page);
 
   const tabs = page.getByRole('tab');
-  await expect(tabs).toHaveCount(4);
+  await expect(tabs).toHaveCount(3);
 
   await tabs.first().focus();
   await expect(tabs.first()).toBeFocused();
 
-  await expect(tabs.nth(1)).toBeDisabled();
+  await expect(tabs.nth(1)).toBeEnabled();
   await expect(tabs.last()).toBeDisabled();
 });
 

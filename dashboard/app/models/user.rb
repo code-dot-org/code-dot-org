@@ -639,7 +639,7 @@ class User < ApplicationRecord
     end
 
     # Code studio admins should not have a password
-    errors.add(:admin, 'cannot have a password') if password.present?
+    errors.add(:admin, 'cannot have a password') if encrypted_password.present? || password.present?
   end
 
   def fix_by_user_type
@@ -1550,13 +1550,22 @@ class User < ApplicationRecord
     raise "User id required" unless user_id
     raise "Script id required" unless script_id
 
-    user_storage_id = storage_id_for_user_id(user_id)
+    delete_progress_for_units(user_ids: [user_id], unit_ids: [script_id])
+  end
 
-    paranoid_destroy_all_with_retry(UserScript.where(user_id: user_id, script_id: script_id))
-    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_id, script_id: script_id))
-    paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: user_storage_id, script_id: script_id)) unless user_storage_id.nil?
-    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
-    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+  # Batched version of delete_progress_for_unit: deletes progress for every
+  # (user, unit) pair in one pass instead of one query round-trip per pair.
+  def self.delete_progress_for_units(user_ids:, unit_ids:)
+    raise "User ids required" if Array(user_ids).empty?
+    raise "Unit ids required" if Array(unit_ids).empty?
+
+    storage_ids = get_storage_ids_by_user_ids(user_ids).values
+
+    paranoid_destroy_all_with_retry(UserScript.where(user_id: user_ids, script_id: unit_ids))
+    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_ids, script_id: unit_ids))
+    paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: storage_ids, script_id: unit_ids)) if storage_ids.present?
+    TeacherFeedback.where(student_id: user_ids, script_id: unit_ids).destroy_all
+    CodeReview.where(user_id: user_ids, script_id: unit_ids).destroy_all
   end
 
   # If two records collide on a unique index that includes deleted_at

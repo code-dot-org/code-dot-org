@@ -4071,24 +4071,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can grant admin role when in development environment' do
-    with_rack_env(:development) do
-      email = 'katherinejohnson@code.org'
-      migrated_teacher = create(:teacher, email: email)
+    set_env(:development)
+    email = 'katherinejohnson@code.org'
+    migrated_teacher = create(:teacher, email: email)
 
-      assert migrated_teacher.update(admin: true)
+    assert migrated_teacher.update(admin: true)
 
-      assert migrated_teacher.reload.admin?
-    end
+    assert migrated_teacher.reload.admin?
   end
 
   test 'can grant admin role when in adhoc environment' do
-    with_rack_env(:adhoc) do
-      email = 'dorothyvaughan@code.org'
-      migrated_teacher = create(:teacher, email: email)
-      assert migrated_teacher.update(admin: true)
+    set_env(:adhoc)
+    email = 'dorothyvaughan@code.org'
+    migrated_teacher = create(:teacher, email: email)
+    assert migrated_teacher.update(admin: true)
 
-      assert migrated_teacher.reload.admin?
-    end
+    assert migrated_teacher.reload.admin?
   end
 
   test 'display_captcha returns false for new user with uninitialized section attempts hash' do
@@ -4394,6 +4392,54 @@ class UserTest < ActiveSupport::TestCase
     student.update!(us_state: new_us_state)
 
     assert_equal new_us_state, student.reload.us_state
+  end
+
+  describe '.delete_progress_for_units' do
+    let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 1)}
+    let(:other_script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 1)}
+    let(:level) {script.script_levels.first.level}
+    let(:other_level) {other_script.script_levels.first.level}
+    let(:student) {create(:student)}
+    let(:other_student) {create(:student)}
+
+    it 'deletes user_levels, user_scripts, teacher_feedback, and code_reviews for every user/unit pair' do
+      UserLevel.create!(user: student, script: script, level: level, best_result: 100)
+      UserLevel.create!(user: other_student, script: script, level: level, best_result: 100)
+      UserLevel.create!(user: student, script: other_script, level: other_level, best_result: 100)
+      UserScript.create!(user: student, script: script)
+      UserScript.create!(user: other_student, script: other_script)
+
+      teacher = create(:teacher)
+      TeacherFeedback.create!(teacher: teacher, student: student, script: script, level: level)
+      review = create(:code_review, user_id: student.id, script_id: script.id, level_id: level.id)
+
+      User.delete_progress_for_units(user_ids: [student.id, other_student.id], unit_ids: [script.id, other_script.id])
+
+      assert_equal 0, UserLevel.where(user_id: [student.id, other_student.id], script_id: [script.id, other_script.id]).count
+      assert_equal 0, UserScript.where(user_id: [student.id, other_student.id], script_id: [script.id, other_script.id]).count
+      assert_equal 0, TeacherFeedback.where(student_id: student.id, script_id: script.id).count
+      assert_equal 0, CodeReview.where(id: review.id).count
+    end
+
+    it 'leaves progress for units/students not included in the given lists' do
+      UserLevel.create!(user: student, script: other_script, level: other_level, best_result: 100)
+
+      User.delete_progress_for_units(user_ids: [student.id], unit_ids: [script.id])
+
+      assert_equal 1, UserLevel.where(user_id: student.id, script_id: other_script.id).count
+    end
+
+    it 'raises if user_ids is empty' do
+      assert_raises do
+        User.delete_progress_for_units(user_ids: [], unit_ids: [script.id])
+      end
+    end
+
+    it 'raises if unit_ids is empty' do
+      assert_raises do
+        User.delete_progress_for_units(user_ids: [student.id], unit_ids: [])
+      end
+    end
   end
 
   describe 'Access to AI Chat Lab' do

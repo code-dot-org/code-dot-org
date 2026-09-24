@@ -376,6 +376,8 @@ namespace :test do
         [
           'apps/**/*',
           'dashboard/config/libraries/*.interpreted.js',
+          # Adaptive content is validated by apps/test/unit/adaptive/contentFilesTest.ts.
+          'dashboard/config/level_content/**/*',
           'shared/css/**/*',
           'frontend/**/*',
           'lib/cdo/shared_constants/**/*',

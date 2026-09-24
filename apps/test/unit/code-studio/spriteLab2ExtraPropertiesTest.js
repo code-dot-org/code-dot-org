@@ -8,16 +8,13 @@ import {
 describe('camelize', () => {
   it('matches the server camelization for every editable key', () => {
     const expected = {
-      guide_mode: 'guideMode',
       guide_steps: 'guideSteps',
       hide_custom_blocks: 'hideCustomBlocks',
-      images_advanced: 'imagesAdvanced',
-      locked_image_type: 'lockedImageType',
-      pinned_scene_id: 'pinnedSceneId',
-      pinned_scene_name: 'pinnedSceneName',
-      show_world_tab: 'showWorldTab',
-      visible_tabs: 'visibleTabs',
-      world_grid_size: 'worldGridSize',
+      image_role_defaults: 'imageRoleDefaults',
+      level_mode: 'levelMode',
+      pinned_scene: 'pinnedScene',
+      add_blocks: 'addBlocks',
+      world_start_pattern: 'worldStartPattern',
     };
     expect(Object.keys(expected).sort()).toEqual(
       [...RAW_EDITABLE_PROPERTIES].sort()
