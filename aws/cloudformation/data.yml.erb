@@ -439,7 +439,7 @@ Resources:
               - Name: suffix
                 Value: .gz
 <% if stack_name == 'DATA-production' -%>
-  # These groups collect logs across environments and must outlive individual application stacks.
+  # These CloudWatch Log Groups collect syslog from EC2 Instances in multiple Stack, and are organized by environment type.
   AdhocSyslog:
     Type: AWS::Logs::LogGroup
     DeletionPolicy: Retain
