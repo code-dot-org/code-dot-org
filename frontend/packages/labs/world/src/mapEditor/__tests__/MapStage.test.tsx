@@ -787,6 +787,31 @@ describe('the world, with nothing selected', () => {
     );
   });
 
+  it('shows an angle as the block’s dial, with the ring behind a click', () => {
+    const onSetDefault = vi.fn();
+    const heading = {name: 'heading', type: 'angle', value: '45'};
+    const view = mount(doc(), {
+      world: {
+        header: {...header, properties: [heading]},
+        onRename: vi.fn(),
+        onSetDefault,
+      },
+    });
+    const dial = view.container.querySelector(
+      'button[name="world-heading"]',
+    ) as HTMLButtonElement;
+    expect(dial).toHaveAttribute('aria-label', 'Heading: 45 degrees');
+    expect(dial.querySelector('svg text')).toHaveTextContent('45°');
+
+    fireEvent.click(dial);
+    const box = screen.getByRole('textbox', {
+      name: 'angle in degrees',
+    }) as HTMLInputElement;
+    expect(box.value).toBe('45');
+    fireEvent.change(box, {target: {value: '270'}});
+    expect(onSetDefault).toHaveBeenCalledWith(heading, '270');
+  });
+
   it('shows a point as two number fields, as a placement’s position is', () => {
     const onSetDefault = vi.fn();
     const spawn = {name: 'spawn', type: 'point', value: '3,4'};
@@ -1477,6 +1502,47 @@ describe('the map’s layers', () => {
       );
     expect(sprites).toHaveLength(2);
     expect(sprites.every(({index}) => index > backdrop)).toBe(true);
+  });
+});
+
+describe('a placement’s angle', () => {
+  /** A kind with a heading, as the sandbox would introspect one. */
+  const HEADED_SCHEMA = {
+    'actors/coin': [
+      {
+        name: 'Faces',
+        props: [
+          {
+            ownerId: 'faces',
+            propId: 'heading',
+            name: 'heading',
+            type: 'angle',
+            default: 90,
+          },
+        ],
+      },
+    ],
+  } as never;
+
+  it('is the block’s dial, and a turn of it is stored as a number', () => {
+    // An angle came through the sandbox's schema as its own type and fell
+    // to the plain text field, which stored what was typed as a string.
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: HEADED_SCHEMA});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'}); // select a
+    const dial = document.querySelector(
+      'button[name="prop-faces.heading"]',
+    ) as HTMLButtonElement;
+    expect(dial).toHaveAttribute('aria-label', 'Heading: 90 degrees');
+
+    fireEvent.click(dial);
+    const box = screen.getByRole('textbox', {
+      name: 'angle in degrees',
+    }) as HTMLInputElement;
+    fireEvent.change(box, {target: {value: '180'}});
+    expect(
+      written().actors.find(one => one.id === 'a')?.properties?.faces,
+    ).toEqual({heading: 180});
   });
 });
 

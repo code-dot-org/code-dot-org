@@ -549,10 +549,10 @@
 }
 
 
-/* A vector property: the block face's direction dial as the control, and
-   the arrow grid in a popover behind it (`VectorInput`). The wrapper is the
-   same one a text field's label comes from, so the label sits where every
-   other row's does. */
+/* A vector or angle property: the block face's direction dial as the
+   control, and the block field's own editor in a popover behind it
+   (`DialInput`). The wrapper is the same one a text field's label comes
+   from, so the label sits where every other row's does. */
 .inspectorVector {
   width: 100%;
 }

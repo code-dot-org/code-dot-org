@@ -14,6 +14,7 @@ import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 
+import {AngleInput} from './AngleInput';
 import styles from './mapEditor.module.css';
 import {ThemeField} from './ThemeField';
 import {VectorInput} from './VectorInput';
@@ -174,6 +175,24 @@ export const WorldInspector = ({
         />
       );
     }
+    if (property.type === 'angle') {
+      // …and the block's ring of common angles, for the same reason.
+      const held = Number(values[key]);
+      return (
+        <AngleInput
+          key={key}
+          name={`world-${key}`}
+          label={label}
+          value={Number.isFinite(held) ? held : 0}
+          disabled={isReadOnly}
+          onChange={degrees => {
+            const text = String(degrees);
+            setValues(held => ({...held, [key]: text}));
+            onSetDefault(property, text);
+          }}
+        />
+      );
+    }
     if (property.type === 'point') {
       const held = parseVectorText(values[key] ?? '') ?? {x: 0, y: 0};
       return (
@@ -218,11 +237,7 @@ export const WorldInspector = ({
         key={key}
         name={`world-${key}`}
         label={label}
-        inputType={
-          property.type === 'number' || property.type === 'angle'
-            ? 'number'
-            : 'text'
-        }
+        inputType={property.type === 'number' ? 'number' : 'text'}
         size="s"
         value={values[key] ?? ''}
         disabled={isReadOnly || !EDITABLE.has(property.type)}

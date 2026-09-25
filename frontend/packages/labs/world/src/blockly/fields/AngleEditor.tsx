@@ -92,7 +92,19 @@ export const normalizeAngle = (degrees: number): number => {
   return ((Math.round(degrees) % 360) + 360) % 360;
 };
 
-export function AngleEditor({value, onChange}: ReactFieldEditorProps<number>) {
+/** How the angle reads on the block: the word beside the dial. */
+export const angleLabel = (value: number): string =>
+  `${normalizeAngle(value)}°`;
+
+/**
+ * Takes only the value and the change, of all a field editor is handed, so the
+ * map editor can show the same ring for an angle with no field behind it
+ * (`mapEditor/AngleInput`).
+ */
+export function AngleEditor({
+  value,
+  onChange,
+}: Pick<ReactFieldEditorProps<number>, 'value' | 'onChange'>) {
   const svgRef = useRef<SVGSVGElement>(null);
   const boxRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);

@@ -532,8 +532,9 @@ map's window shows the same on empty selection, minus the laws: a level has
 a camera, layers and a background of its own.
 
 BUILT for the name and the properties (`mapEditor/WorldInspector`): a
-number, angle, string or boolean is a field, a point is two, and a vector
-is the block's own dial with the arrow grid behind it (`VectorInput`); an
+number, string or boolean is a field, a point is two, and a vector or an
+angle is the block's own dial with the block field's editor behind it —
+the arrow grid, the ring of common angles (`DialInput`); an
 edit rewrites the row's DEFAULT in the file without opening the blocks
 (`worldProperties`). Colours and lists are shown and not edited. A RULE's
 world-scoped properties are

@@ -9,7 +9,12 @@ import type {ReactFieldPreviewContext} from '@code-dot-org/blockly';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import {dialWidth, renderDial} from './dialPreview';
-import {DEFAULT_VECTOR, VectorEditor, type VectorValue} from './VectorEditor';
+import {
+  DEFAULT_VECTOR,
+  VectorEditor,
+  vectorLabel as magnitude,
+  type VectorValue,
+} from './VectorEditor';
 
 export {DEFAULT_VECTOR, type VectorValue} from './VectorEditor';
 
@@ -19,10 +24,6 @@ export const FIELD_VECTOR_NAME = 'field_vector';
 // The block face shows a direction dial (a circle with an arrow pointing the way
 // the vector points) next to its magnitude, rather than the raw x/y. The dial
 // itself is `dialPreview`, shared with the angle field.
-
-/** The vector's length, rounded for display. */
-const magnitude = (value: VectorValue): string =>
-  String(Math.round(Math.hypot(value.x, value.y) * 10) / 10);
 
 /** Draw the direction dial + magnitude on the block. */
 const renderVectorPreview = ({

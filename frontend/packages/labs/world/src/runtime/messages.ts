@@ -273,6 +273,8 @@ export interface PropertySchema {
    */
   type:
     | 'number'
+    /** Degrees, clockwise from east; a number the inspector shows as a dial. */
+    | 'angle'
     | 'boolean'
     | 'string'
     | 'color'

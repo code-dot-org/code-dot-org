@@ -17,14 +17,16 @@ import {createReactField} from '@code-dot-org/blockly';
 import type {ReactFieldPreviewContext} from '@code-dot-org/blockly';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
-import {AngleEditor, DEFAULT_ANGLE, normalizeAngle} from './AngleEditor';
+import {
+  AngleEditor,
+  angleLabel as degrees,
+  DEFAULT_ANGLE,
+  normalizeAngle,
+} from './AngleEditor';
 import {dialWidth, renderDial} from './dialPreview';
 
 /** The field type name (the `type` a block arg resolves to). */
 export const FIELD_ANGLE_NAME = 'field_angle';
-
-/** How the angle reads on the block. */
-const degrees = (value: number): string => `${normalizeAngle(value)}°`;
 
 const renderAnglePreview = ({
   value,

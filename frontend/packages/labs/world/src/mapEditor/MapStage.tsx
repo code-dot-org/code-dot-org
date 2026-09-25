@@ -40,6 +40,7 @@ import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
+import {AngleInput} from './AngleInput';
 import {CameraPanel} from './CameraPanel';
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
@@ -841,7 +842,7 @@ export const MapStage = ({
     if (!selectedActor) {
       return;
     }
-    if (prop.type === 'number') {
+    if (prop.type === 'number' || prop.type === 'angle') {
       const n = Number(value);
       if (value.trim() === '' || !Number.isFinite(n)) {
         return;
@@ -1386,6 +1387,24 @@ export const MapStage = ({
             />
           ))}
         </div>
+      );
+    }
+    if (prop.type === 'angle') {
+      // The block's own dial and ring: a direction is chosen, not typed. A
+      // turn of the dial is a change and a commit in one, like a checkbox.
+      const held = Number(draft[fieldKey(prop)]);
+      return (
+        <AngleInput
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          label={capitalize(prop.name)}
+          value={Number.isFinite(held) ? held : 0}
+          disabled={isReadOnly}
+          onChange={degrees => {
+            editScalar(prop, String(degrees));
+            commitEdit();
+          }}
+        />
       );
     }
     return (

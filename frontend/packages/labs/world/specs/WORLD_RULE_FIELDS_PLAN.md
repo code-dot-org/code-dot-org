@@ -110,7 +110,11 @@ the rule's, and a world that wants another says so with a `set` row under
   vector is the block face's direction dial, and a click on it opens the
   block field's own arrow grid in a popover (`mapEditor/VectorInput`, over
   `blockly/fields/dialPreview` and `VectorEditor`) — so a vector looks and
-  edits the same in a program and on the map. Either is carried through
+  edits the same in a program and on the map. An angle is the same dial
+  with the ring of common angles behind it (`AngleInput`), in the world's
+  inspector and in a placement's, where an angle had been falling through
+  the sandbox's schema to a plain text field and being stored as text.
+  Either vector or point is carried through
   `WorldProperty.value` as `"x,y"` (`worldProperties.vectorText`), which
   keeps the rule's-own-value-removes-the-row bargain working as text.
   A rule's vector goes into its `set` row as a `world_vector` literal; the

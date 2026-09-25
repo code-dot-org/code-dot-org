@@ -14,6 +14,10 @@ export interface VectorValue {
 
 export const DEFAULT_VECTOR: VectorValue = {x: 0, y: 0};
 
+/** The vector's length, rounded: the word beside the dial on a block face. */
+export const vectorLabel = (value: VectorValue): string =>
+  String(Math.round(Math.hypot(value.x, value.y) * 10) / 10);
+
 // The grid is a square of `SIZE` px with the origin at its center and `DIV`
 // divisions each way; it spans [-range, range] per axis, where `range` zooms.
 // `+y` is down, matching the engine (gravity's direction is `(0, 1)` = down)
