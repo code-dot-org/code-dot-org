@@ -51,8 +51,17 @@
 # the base image back as a reference. These cost five requests each and are
 # off by default; see --produce-animations.
 #
+# Sprites and blocks are asked for a transparent background (OpenAI's
+# background: 'transparent') rather than the flat key color the lab erases
+# after a Gemini generation; see --no-transparent. Backgrounds fill their
+# frame and are always opaque.
+#
 # The OpenAI image API takes no seed, so a cached image records none and
 # cannot be replayed by seed as a live one can.
+
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+require 'cdo/aws/s3'
 
 require 'base64'
 require 'benchmark'
@@ -86,6 +95,7 @@ options = {
   model: MODEL,
   produce_animations: false,
   produce_singles: true,
+  transparent: true,
   production: false,
   quality: QUALITY,
   styles: [],
@@ -156,6 +166,12 @@ OptionParser.new do |opts|
           'Skips producing animated character sets.'
          ) do |produce_animations|
            options[:produce_animations] = produce_animations
+         end
+
+  opts.on('--no-transparent',
+          'Asks sprites and blocks for the lab\'s key-color background instead of a transparent one.'
+         ) do |transparent|
+           options[:transparent] = transparent
          end
 
   opts.on('-a', '--adlib ADLIB',
@@ -266,7 +282,7 @@ if options[:list_adlibs]
   jobs.group_by {|job| job['adlibId']}.each do |adlib_id, adlib_jobs|
     job = adlib_jobs.first
     images = adlib_jobs.sum {|j| j['frames'].length} * variants
-    puts " - #{adlib_id}: #{job['slots'].join(' x ')} #{adlib_jobs.length * variants} jobs, #{images} images"
+    puts " - #{adlib_id}: #{job['slots'].join(' x ')}, #{adlib_jobs.length * variants} jobs, #{images} images"
   end
   puts
   puts "Total: #{jobs.length * variants} jobs, #{jobs.sum {|j| j['frames'].length} * variants} images"
@@ -301,16 +317,28 @@ def metadata_path(object)
   File.join(object_directory(object), "#{object_stem(object)}.json")
 end
 
-def request_image(options, frame, reference_path)
+def transparent?(options, job)
+  options[:transparent] && job['transparent']
+end
+
+def frame_prompt(options, job, frame)
+  transparent?(options, job) ? frame['transparentPrompt'] : frame['prompt']
+end
+
+def request_image(options, job, frame, reference_path)
   api_key = CDO.openai_student_learning_api_key
   headers = {'Authorization' => "Bearer #{api_key}"}
   params = {
     model: options[:model],
-    prompt: frame['prompt'],
+    prompt: frame_prompt(options, job, frame),
     size: SIZE,
     n: 1,
     quality: options[:quality],
   }.compact
+  if transparent?(options, job)
+    params[:background] = 'transparent'
+    params[:output_format] = 'png'
+  end
 
   attempts = 0
   begin
@@ -354,7 +382,9 @@ def metadata_for(options, object, generated)
     style: job['style'],
     pixelGrid: job['pixelGrid'],
     animated: job['animated'],
-    keyColor: job['keyColor'],
+    transparent: transparent?(options, job),
+    keyColor: transparent?(options, job) ? nil : job['keyColor'],
+    bodyPlan: job['bodyPlan'],
     variant: object[:variant],
     provider: 'openai',
     model: options[:model],
@@ -365,7 +395,7 @@ def metadata_for(options, object, generated)
       {
         pose: frame['pose'],
         file: File.basename(frame_path(object, frame)),
-        prompt: frame['prompt'],
+        prompt: frame_prompt(options, job, frame),
         reference: frame['reference'],
       }
     end,
@@ -380,11 +410,6 @@ average = {
   count: 0,
 }
 failures = []
-
-puts
-puts "Loading configuration..."
-require_relative '../../../../deployment'
-require 'cdo/aws/s3'
 
 if options[:just_upload]
   puts "Note: Not generating. Just using the content in the '#{OUTPUT_DIRECTORY}' directory."
@@ -407,7 +432,11 @@ else
     paths = frames.map {|frame| File.join(output_path, frame_path(object, frame))}
     json_path = File.join(output_path, metadata_path(object))
 
-    next true if paths.all? {|path| File.exist?(path)}
+    # Images made with the other background setting are regenerated.
+    recorded = File.exist?(json_path) ? JSON.parse(File.read(json_path)) : {}
+    stale = recorded['generated'] && !!recorded['transparent'] != !!transparent?(options, job)
+
+    next true if !stale && paths.all? {|path| File.exist?(path)}
 
     FileUtils.mkdir_p File.dirname(json_path)
 
@@ -419,7 +448,7 @@ else
     begin
       Benchmark.measure do
         frames.zip(paths).each do |frame, path|
-          next if File.exist?(path)
+          next if !stale && File.exist?(path)
 
           reference_path = nil
           if frame['reference']
@@ -427,7 +456,7 @@ else
             reference_path = File.join(output_path, frame_path(object, reference))
           end
 
-          File.binwrite(path, request_image(options, frame, reference_path))
+          File.binwrite(path, request_image(options, job, frame, reference_path))
         end
         File.write(json_path, JSON.pretty_generate(metadata_for(options, object, true)))
       end.real
@@ -472,11 +501,17 @@ unless options[:just_save_prompt]
     image_paths = frames.map {|frame| frame_path(object, frame)}
 
     # A job uploads whole or not at all: a set missing a pose is useless.
+    # Validated against how the images were made, per the metadata file.
+    metadata = File.exist?(json_path) ? JSON.parse(File.read(json_path)) : nil
     errors = image_paths.filter_map do |path|
-      error = validate_image(File.join(output_path, path))
+      error = validate_image(
+        File.join(output_path, path),
+        image_type: object[:job]['imageType'],
+        transparent: metadata&.dig('transparent')
+      )
       "#{path}: #{error}" if error
     end
-    errors << "#{metadata_path(object)}: missing" unless File.exist?(json_path)
+    errors << "#{metadata_path(object)}: missing" unless metadata
     if errors.any?
       puts "Not uploading: #{metadata_path(object)}\n        Error: #{errors.join('; ')}"
       next

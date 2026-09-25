@@ -75,4 +75,24 @@ describe('SpriteLab2 characterSet', () => {
     expect(posedFrames('bird')[1].pose).toContain('wings');
     expect(posedFrames()).toBe(posedFrames('upright'));
   });
+
+  it('asks for transparency instead of a key color when given none', () => {
+    const base = basePrompt(
+      'a knight',
+      'smooth',
+      null,
+      pixelBlockFor('sprite')
+    );
+    const pose = posePrompt(
+      'a knight',
+      posedFrames()[1],
+      'smooth',
+      null,
+      pixelBlockFor('sprite')
+    );
+    for (const text of [base, pose]) {
+      expect(text).toContain('fully transparent');
+      expect(text).not.toContain(key.name);
+    }
+  });
 });

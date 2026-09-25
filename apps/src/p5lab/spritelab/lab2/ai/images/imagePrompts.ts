@@ -57,8 +57,9 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
 const SPRITE_PROMPT_CLAUSE =
   'Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.';
 
-// A still character faces the way an animated one does (characterSetPrompts.ts),
-// so a story's right-lane mirror turns it toward the others.
+// A still character faces the way an animated one does
+// (characterSetPrompts.ts), so a story's right-lane mirror turns it toward
+// the others.
 const CHARACTER_FACING_CLAUSE = 'The character faces to the right.';
 
 // On every prompt the lab sends, the character set's own included: the
@@ -78,13 +79,29 @@ const BACKGROUND_PROMPT_CLAUSE =
 // the game's meaning, "a block of gold" comes back as a picture of a gold
 // cube. Name no separate object ("block", "tile", "cube") — the model draws
 // it inside the square — describe the ground's face instead.
-const BLOCK_PROMPT_CLAUSE =
-  'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
+const BLOCK_GROUND_CLAUSE =
+  'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly.';
+const BLOCK_PROMPT_CLAUSE = `${BLOCK_GROUND_CLAUSE} Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.`;
 
-/** What a prompt depends on; GenerateImageOptions is a superset. */
+// For a model that can emit an alpha channel (OpenAI's background:
+// 'transparent'), in place of the key color the lab erases afterwards.
+// A background fills its frame, so it has none.
+const TRANSPARENT_CLAUSES: {[type in ImageType]?: string} = {
+  sprite:
+    'Draw only the subject on a fully transparent background. Do not include any scenery, ground, sky, shadow, or other background elements.',
+  block: `${BLOCK_GROUND_CLAUSE} Leave everything around that square fully transparent. No background scene.`,
+};
+
+export function canBeTransparent(imageType: ImageType): boolean {
+  return imageType in TRANSPARENT_CLAUSES;
+}
+
+/** What a prompt depends on; GenerateImageOptions is a superset of all
+    but transparent, which asks for an alpha background instead of a key
+    color where the type allows one. */
 export type PromptOptions = Partial<
   Pick<ImageGenerationMetadata, 'imageType' | 'subject' | 'style' | 'pixelGrid'>
->;
+> & {transparent?: boolean};
 
 /**
  * The prompt as sent: the student's words as a sentence, then the style,
@@ -100,13 +117,16 @@ export function fullPromptFor(
   // punctuation a prompt may already end with.
   const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
   let fullPrompt = `${sentence} ${styleClause(style, pixelBlock)}`;
+  const transparentClause = options.transparent
+    ? TRANSPARENT_CLAUSES[imageType]
+    : undefined;
   if (imageType === 'sprite') {
     if (options.subject === 'character') {
       fullPrompt = `${fullPrompt} ${CHARACTER_FACING_CLAUSE}`;
     }
-    fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
+    fullPrompt = `${fullPrompt} ${transparentClause ?? SPRITE_PROMPT_CLAUSE}`;
   } else if (imageType === 'block') {
-    fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
+    fullPrompt = `${fullPrompt} ${transparentClause ?? BLOCK_PROMPT_CLAUSE}`;
   } else if (imageType === 'background') {
     fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
   }

@@ -117,8 +117,16 @@ export const CHARACTER_SET_PICTURE_COUNT = 1 + POSED_FRAMES.upright.length;
 const ONLY_THIS_CHARACTER =
   'Only this one character, alone: no other creatures, people, pets, objects or companions, and nothing added that is not part of the character itself.';
 
-/** The one flat colour every frame is drawn on, keyed out afterwards. */
-function keyClause(key: KeyColor): string {
+// For a model that can emit an alpha channel, in place of a key colour.
+const TRANSPARENT_CLAUSE =
+  'Use a fully transparent background — no scenery, no ground, and no shadow under the character. Only the character.';
+
+/** The one flat colour every frame is drawn on, keyed out afterwards; null
+    asks for a transparent background instead. */
+function keyClause(key: KeyColor | null): string {
+  if (!key) {
+    return TRANSPARENT_CLAUSE;
+  }
   return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}. The character itself must contain no ${key.name} or anything close to it anywhere — not on clothes, hat, hair, skin or accessories; choose other colors for those.`;
 }
 
@@ -129,7 +137,7 @@ function keyClause(key: KeyColor): string {
 export function basePrompt(
   prompt: string,
   style: ImageStyle,
-  key: KeyColor,
+  key: KeyColor | null,
   pixelBlock: number,
   bodyPlan: BodyPlan = 'upright'
 ): string {
@@ -158,7 +166,7 @@ export function posePrompt(
   prompt: string,
   frame: PosedFrame,
   style: ImageStyle,
-  key: KeyColor,
+  key: KeyColor | null,
   pixelBlock: number
 ): string {
   return (
