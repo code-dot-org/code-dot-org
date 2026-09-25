@@ -6,6 +6,7 @@ export type Hyperparameters = {k: number} | {maxDepth: number};
 
 export interface Mode {
   datasets?: string[];
+  trainer?: TrainerFamily;
   hideSelectLabel?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;

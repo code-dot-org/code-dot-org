@@ -1,19 +1,133 @@
 {
-  "formatVersion": 1,
+  "formatVersion": 4,
   "id": "sample",
-  "title": "Adaptive Sample",
-  "objective": "Placeholder content that exercises the Adaptive level type end to end.",
-  "steps": [
+  "title": "Build a website with AI",
+  "objective": "Build a personal website with an AI build partner. Learn to prompt with structure, understand what makes up a web page, then take those skills into a project of your own.",
+  "project": {
+    "lab": {"type": "weblab2"},
+    "description": "A one-page website about something you care about: a team, your art, a cause, a business idea. You will build it up piece by piece as you unlock new checkpoints."
+  },
+  "skills": {
+    "prompting": {
+      "id": "prompting",
+      "title": "Prompting",
+      "description": "Write structural, specific prompts that direct an AI precisely: naming sections, layout, and placement instead of vague wishes.",
+      "standards": [
+        {"framework": "csta2026", "shortcode": "MS-ALG-PS-05"},
+        {"framework": "csta2026", "shortcode": "MS-PRO-RD-18"}
+      ]
+    },
+    "webStructure": {
+      "id": "webStructure",
+      "title": "Web Page Structure",
+      "description": "Know the parts of a web page, what HTML does, and how header, main content, and footer fit together.",
+      "standards": [
+        {"framework": "csta2026", "shortcode": "MS-PRO-PD-13"}
+      ]
+    }
+  },
+  "checkpoints": [
     {
-      "id": "intro",
-      "kind": "panels",
-      "title": "Welcome",
-      "panels": [
+      "id": "introduction",
+      "title": "Introduction",
+      "description": "Welcome to the world of web development with prompting. See what you will be able to build.",
+      "steps": [
         {
-          "caption": "This content is a placeholder. The player replaces this view in a later change."
+          "id": "intro-welcome",
+          "title": "Welcome",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "intro-welcome-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Welcome to the world of web development with prompting."
+            },
+            {
+              "key": "intro-welcome-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this pathway you will build a website of your own, with an AI build partner that writes code from your instructions."
+            }
+          ]
+        },
+        {
+          "id": "intro-questions",
+          "title": "Quick questions",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": "intro-placeholder",
+              "type": "freeResponse",
+              "text": "Placeholder until question steps render."
+            }
+          ]
         }
-      ],
-      "next": "end"
+      ]
+    },
+    {
+      "id": "prompting-basics",
+      "title": "Basics of Prompting",
+      "description": "Learn what a prompt is and how to describe the page you want.",
+      "skillIds": ["prompting"],
+      "requires": ["introduction"],
+      "steps": [
+        {
+          "id": "prompting-what",
+          "title": "What is prompting?",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "prompting-what-1",
+              "imageUrl": "https://images.code.org/9087eaeb311e3acadc4ad2d9ef9f7fe7-Panel 3.png",
+              "text": "A prompt is an instruction you give to an AI. For a website, it describes what you want on the page."
+            },
+            {
+              "key": "prompting-what-2",
+              "imageUrl": "https://images.code.org/47779ab3126d65bb2c139c52e173d2d3-Panel 4.png",
+              "text": "Specific instructions get specific pages. \"A header with my name and a paragraph about my favorite hobby\" tells the AI exactly what to build."
+            }
+          ]
+        },
+        {
+          "id": "prompting-try",
+          "title": "Try a prompt",
+          "kind": "lab",
+          "lab": {"type": "weblab2"},
+          "instructions": "Write a prompt that asks for a heading with your name and one paragraph about something you like."
+        }
+      ]
+    },
+    {
+      "id": "web-structure",
+      "title": "Structure of a Webpage",
+      "description": "Learn the main parts of a web page and what HTML does.",
+      "skillIds": ["webStructure"],
+      "requires": ["introduction"],
+      "steps": [
+        {
+          "id": "structure-parts",
+          "title": "The parts of a webpage",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "structure-parts-1",
+              "imageUrl": "https://images.code.org/9087eaeb311e3acadc4ad2d9ef9f7fe7-Panel 3.png",
+              "text": "Most web pages share the same skeleton: a header at the top, main content in the middle, and a footer at the bottom."
+            },
+            {
+              "key": "structure-parts-2",
+              "imageUrl": "https://images.code.org/47779ab3126d65bb2c139c52e173d2d3-Panel 4.png",
+              "text": "HTML describes what is on the page and how it is organized. Elements like `<header>`, `<main>`, and `<footer>` name its parts."
+            }
+          ]
+        },
+        {
+          "id": "structure-build",
+          "title": "Add a header and footer",
+          "kind": "lab",
+          "lab": {"type": "weblab2"},
+          "instructions": "Ask for a header with your site's name and a footer with a way to contact you."
+        }
+      ]
     }
   ]
 }

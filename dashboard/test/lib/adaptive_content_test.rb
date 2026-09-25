@@ -35,6 +35,45 @@ class AdaptiveContentTest < ActiveSupport::TestCase
     assert_nil AdaptiveContent.load('../alpha')
   end
 
+  test "load resolves each skill's standards, passing unknown ones through" do
+    framework = create(:framework, shortcode: 'fw', name: 'Fake Framework')
+    create(:standard, framework: framework, shortcode: 'FW-1', description: 'Do the thing')
+    write_content('standardized', {
+                    'skills' => {
+                      'prompting' => {
+                        'id' => 'prompting',
+                        'standards' => [{'framework' => 'fw', 'shortcode' => 'FW-1'}, {'framework' => 'fw', 'shortcode' => 'NOPE'}],
+                      },
+                      'plain' => {'id' => 'plain'},
+                    },
+                  }
+)
+
+    loaded = AdaptiveContent.load('standardized')
+
+    assert_equal(
+      [
+        {'framework' => 'fw', 'shortcode' => 'FW-1', 'frameworkName' => 'Fake Framework', 'description' => 'Do the thing'},
+        {'framework' => 'fw', 'shortcode' => 'NOPE'},
+      ],
+      loaded['skills']['prompting']['standards']
+    )
+    assert_equal({'id' => 'plain'}, loaded['skills']['plain'])
+  end
+
+  test "load leaves the cached parse untouched when resolving standards" do
+    create(:standard, framework: create(:framework, shortcode: 'fw'), shortcode: 'FW-1')
+    write_content('cached', {'skills' => {'s' => {'id' => 's', 'standards' => [{'framework' => 'fw', 'shortcode' => 'FW-1'}]}}})
+
+    AdaptiveContent.load('cached')
+    assert AdaptiveContent.load('cached')['skills']['s']['standards'].first.key?('frameworkName')
+    refute AdaptiveContent.send(:read, AdaptiveContent.path('cached'))['skills']['s']['standards'].first.key?('frameworkName')
+  end
+
+  test "load of a pathway without skills is returned as written" do
+    assert_equal({'title' => 'Alpha'}, AdaptiveContent.load('alpha'))
+  end
+
   test "load parses and caches until the file's mtime changes" do
     assert_equal 'Alpha', AdaptiveContent.load('alpha')['title']
 

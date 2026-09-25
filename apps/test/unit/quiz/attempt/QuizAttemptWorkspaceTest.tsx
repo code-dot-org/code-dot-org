@@ -2,6 +2,10 @@ import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  sendStartedReportIfNotStarted,
+  sendSuccessReportForLevel,
+} from '@cdo/apps/code-studio/progressRedux';
 import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
@@ -9,6 +13,28 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
+
+const mockDispatch = jest.fn();
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  useAppDispatch: () => mockDispatch,
+}));
+
+jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
+  sendSuccessReportForLevel: jest.fn((levelId, appName) => ({
+    type: 'SEND_SUCCESS_REPORT_FOR_LEVEL',
+    levelId,
+    appName,
+  })),
+  sendStartedReportIfNotStarted: jest.fn(appName => ({
+    type: 'SEND_STARTED_REPORT',
+    appName,
+  })),
+}));
+const mockSendSuccessReportForLevel = jest.mocked(sendSuccessReportForLevel);
+const mockSendStartedReportIfNotStarted = jest.mocked(
+  sendStartedReportIfNotStarted
+);
 
 const ATTEMPT: QuizAttemptData = {
   id: 1,
@@ -36,7 +62,9 @@ const BASE_HOOK_STATE = {
   attempt: undefined as QuizAttemptData | null | undefined,
   isLoading: false,
   error: null as string | null,
-  beginAttempt: jest.fn(),
+  // Resolved, not just jest.fn(), since a no-intro-screen render below
+  // calls this itself via the auto-begin effect.
+  beginAttempt: jest.fn().mockResolvedValue(undefined),
   submitQuestionResponse: jest.fn(),
   finishAttempt: jest.fn(),
 };
@@ -65,19 +93,27 @@ function renderWorkspace({
   // kicks in for undefined, so this lets callers opt out of the default.
   unitId = 7,
   allowMultipleAttempts,
+  displayName = 'Unit 3 Assessment',
+  showIntroScreen,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
   unitId?: number | null;
   allowMultipleAttempts?: boolean;
+  displayName?: string;
+  showIntroScreen?: boolean;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
     <QuizAttemptWorkspace
       levelId={42}
+      appName="quiz"
+      levelName="quiz-level-name"
       unitId={unitId ?? undefined}
       quizQuestions={quizQuestions}
       allowMultipleAttempts={allowMultipleAttempts}
+      displayName={displayName}
+      showIntroScreen={showIntroScreen}
     />
   );
 }
@@ -85,6 +121,24 @@ function renderWorkspace({
 describe('QuizAttemptWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
+    // Restore inert thunk substitutes because resetAllMocks removes module mock implementations.
+    mockSendSuccessReportForLevel.mockImplementation(
+      (levelId, appName) =>
+        ({
+          type: 'SEND_SUCCESS_REPORT_FOR_LEVEL',
+          levelId,
+          appName,
+        } as unknown as ReturnType<typeof sendSuccessReportForLevel>)
+    );
+    mockSendStartedReportIfNotStarted.mockImplementation(
+      appName =>
+        ({type: 'SEND_STARTED_REPORT', appName} as unknown as ReturnType<
+          typeof sendStartedReportIfNotStarted
+        >)
+    );
+    // clear, not reset: beginAttempt's resolved implementation has to
+    // survive, since a no-intro render calls it from the auto-begin effect.
+    jest.clearAllMocks();
   });
 
   it('shows a loading message while the initial check is in flight', () => {
@@ -99,13 +153,100 @@ describe('QuizAttemptWorkspace', () => {
     ).toBeInTheDocument();
   });
 
-  it('shows a Begin Quiz button when there is no attempt yet, and starts one on click', () => {
-    const beginAttempt = jest.fn();
+  it('starts the attempt automatically when there is no intro screen', () => {
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
     renderWorkspace({hookState: {attempt: null, beginAttempt}});
 
-    fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
-
     expect(beginAttempt).toHaveBeenCalledTimes(1);
+    expect(
+      screen.queryByRole('button', {name: 'Begin Quiz'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows a Begin Quiz button to retry when the initial check itself failed', () => {
+    // attempt stays undefined (not null) when the check fails, so the
+    // auto-begin effect never fires - this button is the only way out.
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {error: 'Something went wrong.', beginAttempt},
+    });
+
+    expect(screen.queryByText('Loading…')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
+    expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it('shows the intro screen instead of Begin Quiz when the quiz has one', () => {
+    const beginAttempt = jest.fn();
+    renderWorkspace({
+      hookState: {attempt: null, beginAttempt},
+      showIntroScreen: true,
+    });
+
+    expect(
+      screen.getByRole('heading', {name: 'Unit 3 Assessment', level: 2})
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Begin Quiz'})
+    ).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
+    expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it("titles the intro screen with the level's name when displayName is blank", () => {
+    renderWorkspace({
+      hookState: {attempt: null},
+      showIntroScreen: true,
+      displayName: '',
+    });
+
+    expect(
+      screen.getByRole('heading', {name: 'quiz-level-name', level: 2})
+    ).toBeInTheDocument();
+  });
+
+  it('routes Retake through the intro screen when the quiz has one', () => {
+    const beginAttempt = jest.fn();
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          canRetake: true,
+        },
+        beginAttempt,
+      },
+      showIntroScreen: true,
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: 'Retake Quiz'}));
+
+    expect(beginAttempt).not.toHaveBeenCalled();
+    const heading = screen.getByRole('heading', {
+      name: 'Unit 3 Assessment',
+      level: 2,
+    });
+    expect(heading).toHaveFocus();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
+    expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it('reports the level as started once the attempt begins, so an unsubmitted attempt still shows progress', async () => {
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: null, beginAttempt},
+      showIntroScreen: true,
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
+
+    await waitFor(() =>
+      expect(mockSendStartedReportIfNotStarted).toHaveBeenCalledWith('quiz')
+    );
+    expect(mockDispatch).toHaveBeenCalledWith(
+      mockSendStartedReportIfNotStarted.mock.results[0].value
+    );
   });
 
   it('shows the score and a Retake button once submitted and retakeable', () => {
@@ -220,6 +361,41 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
   });
 
+  it('restores in-progress answers and leaves questions missing from the map blank', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          questionResultsInProgress: [
+            {quizQuestionId: 1, selectedChoiceId: 'b'},
+          ],
+        },
+      },
+      quizQuestions: [
+        question({
+          id: 1,
+          stem: 'First',
+          choices: [
+            {id: 'a', text: 'five'},
+            {id: 'b', text: 'eight'},
+          ],
+        }),
+        question({
+          id: 2,
+          stem: 'Second',
+          choices: [
+            {id: 'a', text: 'left'},
+            {id: 'b', text: 'right'},
+          ],
+        }),
+      ],
+    });
+
+    expect(screen.getByRole('radio', {name: /eight/})).toBeChecked();
+    expect(screen.getByRole('radio', {name: /left/})).not.toBeChecked();
+    expect(screen.getByRole('radio', {name: /right/})).not.toBeChecked();
+  });
+
   it('submits the chosen answer when a choice is selected', async () => {
     const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
     renderWorkspace({
@@ -271,14 +447,16 @@ describe('QuizAttemptWorkspace', () => {
     ).toHaveFocus();
   });
 
-  it('moves focus to the first question heading once the attempt begins', () => {
+  it('moves focus to the quiz title once the attempt begins without an intro screen', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [question({id: 1, stem: 'Page 1 question', page: 1})],
     });
 
+    // Page 1 without an intro leads with the quiz title, so that heading
+    // is the first one focus can land on.
     expect(
-      screen.getByRole('heading', {name: 'Page 1 question'})
+      screen.getByRole('heading', {name: 'Unit 3 Assessment'})
     ).toHaveFocus();
   });
 
@@ -292,6 +470,23 @@ describe('QuizAttemptWorkspace', () => {
     fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
 
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
+  });
+
+  it('reports success for this level once the attempt is submitted, so the progress bubble updates even if the student has since navigated on', async () => {
+    const finishAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: ATTEMPT, finishAttempt},
+      quizQuestions: [question({id: 1, page: 1})],
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+    await waitFor(() =>
+      expect(mockSendSuccessReportForLevel).toHaveBeenCalledWith('42', 'quiz')
+    );
+    expect(mockDispatch).toHaveBeenCalledWith(
+      mockSendSuccessReportForLevel.mock.results[0].value
+    );
   });
 
   it('labels the last-page button Submit when the quiz allows only one attempt', () => {
@@ -408,7 +603,12 @@ describe('QuizAttemptWorkspace', () => {
   });
 
   it('does not render the footer outside of an in-progress attempt', () => {
-    renderWorkspace({hookState: {attempt: null}});
+    renderWorkspace({
+      hookState: {
+        attempt: null,
+        beginAttempt: jest.fn().mockResolvedValue(undefined),
+      },
+    });
     expect(
       screen.queryByRole('button', {name: /Next|Submit|Finish/})
     ).not.toBeInTheDocument();
