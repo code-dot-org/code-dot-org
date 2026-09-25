@@ -22,9 +22,6 @@
       # in source code. We set the value of the Secret manually in production.
       hash[:db_endpoint_writer] = 'PLACEHOLDER'
       hash[:db_endpoint_writer_port] = '3306'
-      # We haven't yet provisioned the Writer and Reader Proxy Endpoints in production.
-      hash[:db_endpoint_proxy_writer] = 'PLACEHOLDER'
-      hash[:db_endpoint_proxy_reader] = 'PLACEHOLDER'
     end
     if !database
       hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
