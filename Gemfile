@@ -110,7 +110,7 @@ group :development, :test do
 
   gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
-  gem 'mocha', '~> 1.2.1', require: false
+  gem 'mocha', '1.9.0', require: false
   gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
@@ -191,9 +191,6 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
 gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
-# Target the same version of Bootstrap as we use in Javascript while we work on
-# moving all assets into the JS pipeline.
-gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'

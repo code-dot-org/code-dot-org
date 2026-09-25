@@ -1361,6 +1361,10 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.deprecated
   end
 
+  def sunsetting?
+    get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting
+  end
+
   def stable?
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
   end
@@ -1857,7 +1861,7 @@ class Unit < ApplicationRecord
       id: id,
       course_id: unit_group_unit&.course_id,
       key: name,
-      name: launched? ? localized_title : localized_title + " *",
+      name: (launched? || sunsetting?) ? localized_title : localized_title + " *",
       position: unit_group_unit&.position,
       description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
       is_feedback_enabled: teacher_feedback_enabled?

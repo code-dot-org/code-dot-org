@@ -30,7 +30,10 @@ interface ServerPromotion {
   is_external?: boolean;
 }
 
-const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
+const serverPromotionConverter = (
+  serverPromotion: ServerPromotion,
+  index: number
+) => ({
   id: serverPromotion.id,
   announcementType: serverPromotion.announcement_type,
   backgroundColor: serverPromotion.background_color,
@@ -42,6 +45,7 @@ const serverPromotionConverter = (serverPromotion: ServerPromotion) => ({
   isClosable: serverPromotion.is_closable,
   partnerLogo: serverPromotion.partner_logo || null,
   isExternal: serverPromotion.is_external || false,
+  position: index + 1,
 });
 
 const TEACHER_PROMOTION_LOCAL_STORAGE_KEY = 'teacherPromotionClosed';

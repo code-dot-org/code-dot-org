@@ -22,7 +22,7 @@ const CHOICE_LETTERS = 'ABCDEFGHIJ';
 const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
 > = ({question, questionLabel, selectedChoiceId, onSelectChoice}) => (
-  <AttemptCard questionLabel={questionLabel} title={question.stem}>
+  <AttemptCard label={questionLabel} title={question.stem}>
     <div
       className={styles.choices}
       role="radiogroup"

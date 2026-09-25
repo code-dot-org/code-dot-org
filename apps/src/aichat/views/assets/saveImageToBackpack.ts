@@ -6,7 +6,12 @@ import {
   isUnifiedApi,
   SaveToBackpackApi,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
-import {toastOptionsFor} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
+import {
+  backpackSaveError,
+  notifySaved,
+  notifySaving,
+  notifyWithToast,
+} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 
 interface SaveImageToBackpackParams {
   backpackApi: SaveToBackpackApi;
@@ -31,6 +36,7 @@ export const saveImageToBackpack = async ({
   onLegacyError,
 }: SaveImageToBackpackParams) => {
   const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
+  const notify = notifyWithToast(showToast);
 
   // The unified backpack reports failures as toasts; the legacy backpack keeps
   // its notification in the chat.
@@ -40,7 +46,7 @@ export const saveImageToBackpack = async ({
     error?: Error
   ) => {
     if (unifiedApi) {
-      showToast(toastMessage, toastOptionsFor('danger'));
+      notify('danger', toastMessage);
     } else {
       onLegacyError();
     }
@@ -56,7 +62,7 @@ export const saveImageToBackpack = async ({
       : await backpackApi.getFileList();
   } catch (error) {
     reportError(
-      `Couldn't save ${fileName} to your Backpack. Please try again.`,
+      backpackSaveError(fileName),
       'Backpack file list fetch error',
       error as Error
     );
@@ -65,10 +71,7 @@ export const saveImageToBackpack = async ({
 
   const targetName = uniqueFileName(fileName, existingFileNames, '-');
   if (unifiedApi) {
-    showToast(
-      `Saving ${targetName} to your Backpack...`,
-      toastOptionsFor('info')
-    );
+    notifySaving(notify, targetName);
   }
 
   // The progress toast above never expires on its own, so every path from here has
@@ -90,7 +93,7 @@ export const saveImageToBackpack = async ({
     });
   } catch (error) {
     reportError(
-      `Couldn't save ${targetName} to your Backpack. Please try again.`,
+      backpackSaveError(targetName),
       'Save to backpack error',
       error as Error
     );
@@ -98,9 +101,6 @@ export const saveImageToBackpack = async ({
   }
 
   if (unifiedApi) {
-    showToast(
-      `${targetName} saved to your Backpack.`,
-      toastOptionsFor('success')
-    );
+    notifySaved(notify, targetName);
   }
 };
