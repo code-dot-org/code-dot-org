@@ -8,7 +8,7 @@
 
 import {Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
-import {useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
@@ -70,7 +70,7 @@ export const WorldInspector = ({
   isReadOnly,
 }: WorldInspectorProps) => {
   // What is being typed, committed on blur or Enter as a placement's fields
-  // are; the parent re-keys this on a change from outside.
+  // are.
   const [name, setName] = useState(header.name);
   // Keyed by the SETTER where there is one: two rules may each have a
   // property called `strength`, and the world's own may too.
@@ -78,6 +78,34 @@ export const WorldInspector = ({
   const [values, setValues] = useState<Record<string, string>>(() =>
     Object.fromEntries(header.properties.map(p => [keyOf(p), p.value])),
   );
+  // A change from outside — the World view, a version restored — is what
+  // the fields show. Followed by diffing the header rather than by
+  // remounting on it, so the rule groups and a vector's popover stay open
+  // across a commit: a drag on the grid commits on every move. Only what
+  // CHANGED is re-seeded, so a field being typed into beside it keeps its
+  // draft; a value this inspector just wrote comes back equal and is left
+  // alone too.
+  const seen = useRef(header);
+  useEffect(() => {
+    const before = seen.current;
+    seen.current = header;
+    if (before === header) {
+      return;
+    }
+    if (before.name !== header.name) {
+      setName(header.name);
+    }
+    const was = Object.fromEntries(
+      before.properties.map(p => [keyOf(p), p.value]),
+    );
+    const changed = header.properties.filter(p => was[keyOf(p)] !== p.value);
+    if (changed.length) {
+      setValues(held => ({
+        ...held,
+        ...Object.fromEntries(changed.map(p => [keyOf(p), p.value])),
+      }));
+    }
+  }, [header]);
   const blurOnEnter = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       (event.target as HTMLInputElement).blur();

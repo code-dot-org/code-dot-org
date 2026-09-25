@@ -2562,9 +2562,10 @@ export const MapStage = ({
       )}
       {!selectedActor && !(inspectingLayer && inspectedLayer) && world && (
         <WorldInspector
-          // Re-keyed on what the file says, so a change from outside — the
-          // World view, a version restored — is what the fields show.
-          key={JSON.stringify(world.header)}
+          // NOT re-keyed on the header, though that is the obvious way to
+          // make a change from outside show: a remount closes the rule
+          // groups and the vector popover, and a drag on the grid commits
+          // on every move. The inspector follows the header itself.
           {...world}
           // …and the theme, which is the map's and not the world header's, so
           // it is written the way every other map-level change is.

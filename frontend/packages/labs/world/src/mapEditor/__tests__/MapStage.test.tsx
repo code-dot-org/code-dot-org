@@ -182,22 +182,27 @@ const pointer = (
     }),
   );
 
+/** The stage's props with the defaults filled, for a `render` or a `rerender`. */
+const stageProps = (
+  map: MapDoc,
+  more: Partial<Parameters<typeof MapStage>[0]> = {},
+  onDocChange = vi.fn(),
+): Parameters<typeof MapStage>[0] => ({
+  doc: map,
+  onDocChange,
+  placing: null,
+  thumbnails: {},
+  schemas: {},
+  isReadOnly: false,
+  ...more,
+});
+
 const mount = (
   map: MapDoc,
   more: Partial<Parameters<typeof MapStage>[0]> = {},
 ) => {
   const onDocChange = vi.fn();
-  const view = render(
-    <MapStage
-      doc={map}
-      onDocChange={onDocChange}
-      placing={null}
-      thumbnails={{}}
-      schemas={{}}
-      isReadOnly={false}
-      {...more}
-    />,
-  );
+  const view = render(<MapStage {...stageProps(map, more, onDocChange)} />);
   const canvas = view.container.querySelector('canvas')!;
   /** The inspector's id field, or null when nothing is selected. */
   const selectedId = () =>
@@ -736,6 +741,50 @@ describe('the world, with nothing selected', () => {
     expect(x.value).toBe('0');
     fireEvent.change(x, {target: {value: '3'}});
     expect(onSetDefault).toHaveBeenCalledWith(direction, '3,1');
+  });
+
+  it('keeps the grid open across the commits a drag makes', () => {
+    // A commit rewrites the file, and the header the stage hands down
+    // changes; the inspector must follow it without remounting, or the
+    // popover and the rule group close under the pointer.
+    const onSetDefault = vi.fn();
+    const direction = {
+      name: 'direction of gravity',
+      type: 'vector',
+      value: '0,1',
+      setter: 'world_set_Gravity_DirectionOfGravityProperty',
+      rule: 'Gravity',
+    };
+    const world = (value: string) => ({
+      header: {...header, properties: [{...direction, value}]},
+      onRename: vi.fn(),
+      onSetDefault,
+    });
+    const map = doc();
+    const view = mount(map, {world: world('0,1')});
+    const dial = () =>
+      view.container.querySelector(
+        'button[name="world-world_set_Gravity_DirectionOfGravityProperty"]',
+      ) as HTMLButtonElement;
+    const group = dial().closest('details') as HTMLDetailsElement;
+    group.open = true;
+    fireEvent.click(dial());
+    fireEvent.change(screen.getByLabelText('x'), {target: {value: '3'}});
+    expect(onSetDefault).toHaveBeenCalledWith(direction, '3,1');
+
+    // What the parent does next: hand down the header the file now says.
+    view.rerender(<MapStage {...stageProps(map, {world: world('3,1')})} />);
+    expect(dial().closest('details')).toBe(group);
+    expect(group.open).toBe(true);
+    expect(dial()).toHaveAttribute('aria-expanded', 'true');
+    expect((screen.getByLabelText('x') as HTMLInputElement).value).toBe('3');
+
+    // …and a change from outside, which the fields must show all the same.
+    view.rerender(<MapStage {...stageProps(map, {world: world('-1,0')})} />);
+    expect(dial()).toHaveAttribute(
+      'aria-label',
+      'Direction of gravity: x -1, y 0',
+    );
   });
 
   it('shows a point as two number fields, as a placement’s position is', () => {
