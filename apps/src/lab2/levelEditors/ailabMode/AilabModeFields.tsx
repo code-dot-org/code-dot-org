@@ -78,7 +78,11 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   // One radio name across both groups, so they form a single selection.
   const renderDatasetGroup = (legend: string, group: AilabDataset[]) => (
     <fieldset className={moduleStyles.datasetGroup}>
-      <legend className={moduleStyles.label}>{legend}</legend>
+      <legend className={moduleStyles.legend}>
+        <Typography variant="body3" component="span">
+          <Typography variant="strong">{legend}</Typography>
+        </Typography>
+      </legend>
       <div className={moduleStyles.datasetList}>
         {group.map(dataset => (
           <RadioButton

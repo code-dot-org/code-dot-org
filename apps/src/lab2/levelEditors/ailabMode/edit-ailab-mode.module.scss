@@ -25,6 +25,14 @@
   margin-bottom: 8px;
 }
 
+.legend {
+  margin-bottom: 4px;
+}
+
+.datasetGroup + .datasetGroup {
+  margin-top: 16px;
+}
+
 .datasetList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
