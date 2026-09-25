@@ -1,6 +1,6 @@
-import {useLayoutEffect, useMemo, useRef, useState} from 'react';
+import {useMemo} from 'react';
 
-import {colors, styles} from '../constants';
+import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
 import {
@@ -14,20 +14,6 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
-const NODE_TEXT_MAX_LENGTH = 20;
-const BRANCH_TEXT_MAX_LENGTH = 22;
-const BRANCH_LABEL_HEIGHT = 18;
-const BRANCH_LABEL_PADDING = 12;
-const BRANCH_LABEL_MAX_WIDTH = TREE_NODE_WIDTH;
-const BRANCH_LABEL_CHAR_WIDTH = 7;
-
-function truncate(text: string, maxLength: number): string {
-  const characters = Array.from(text);
-  return characters.length > maxLength
-    ? `${characters.slice(0, maxLength - 1).join('')}…`
-    : text;
-}
-
 function formatNumber(value: number): string {
   return String(Number(value.toFixed(2)));
 }
@@ -38,55 +24,6 @@ function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   const endX = child.x + TREE_NODE_WIDTH / 2;
   return `M ${startX} ${startY} V ${startY + TREE_ROW_GAP / 2} H ${endX} V ${child.y}`;
 }
-
-interface BranchLabelProps {
-  text: string;
-  centerX: number;
-  centerY: number;
-}
-
-const BranchLabel = ({text, centerX, centerY}: BranchLabelProps) => {
-  const shown = truncate(text, BRANCH_TEXT_MAX_LENGTH);
-  const textRef = useRef<SVGTextElement>(null);
-  const [measuredWidth, setMeasuredWidth] = useState<number>();
-
-  useLayoutEffect(() => {
-    setMeasuredWidth(textRef.current?.getComputedTextLength?.());
-  }, [shown]);
-
-  const textWidth =
-    measuredWidth ?? Array.from(shown).length * BRANCH_LABEL_CHAR_WIDTH;
-  const maxTextWidth = BRANCH_LABEL_MAX_WIDTH - BRANCH_LABEL_PADDING;
-  const squeeze = measuredWidth !== undefined && textWidth > maxTextWidth;
-  const width = Math.min(textWidth, maxTextWidth) + BRANCH_LABEL_PADDING;
-
-  return (
-    <g>
-      <title>{text}</title>
-      <rect
-        x={centerX - width / 2}
-        y={centerY - BRANCH_LABEL_HEIGHT / 2}
-        width={width}
-        height={BRANCH_LABEL_HEIGHT}
-        rx={BRANCH_LABEL_HEIGHT / 2}
-        fill="white"
-        stroke="grey"
-      />
-      <text
-        ref={textRef}
-        x={centerX}
-        y={centerY}
-        textAnchor="middle"
-        dominantBaseline="central"
-        fontSize={12}
-        textLength={squeeze ? maxTextWidth : undefined}
-        lengthAdjust={squeeze ? 'spacingAndGlyphs' : undefined}
-      >
-        {shown}
-      </text>
-    </g>
-  );
-};
 
 const DecisionTree = () => {
   const tree = useAppSelector(getDisplayTree);
@@ -131,67 +68,74 @@ const DecisionTree = () => {
         Your model's decision tree
       </div>
       <div style={styles.decisionTreeScroll}>
-        <svg
-          width={layout.width}
-          height={layout.height}
+        <div
           role="img"
           aria-label="Diagram of your model's decision tree"
-          style={{display: 'block'}}
+          style={{
+            ...styles.decisionTreeCanvas,
+            width: layout.width,
+            height: layout.height,
+          }}
         >
-          {layout.nodes.map(
-            placed =>
-              placed.parent && (
-                <path
-                  key={`edge-${placed.id}`}
-                  d={edgePath(placed.parent, placed)}
-                  fill="none"
-                  stroke="grey"
-                  strokeWidth={1.5}
-                />
-              ),
-          )}
+          <svg
+            width={layout.width}
+            height={layout.height}
+            aria-hidden="true"
+            style={styles.decisionTreeEdges}
+          >
+            {layout.nodes.map(
+              placed =>
+                placed.parent && (
+                  <path
+                    key={placed.id}
+                    d={edgePath(placed.parent, placed)}
+                    fill="none"
+                    stroke="grey"
+                    strokeWidth={1.5}
+                  />
+                ),
+            )}
+          </svg>
           {layout.nodes.map(placed => {
-            if (!placed.branch) {
-              return null;
-            }
-            return (
-              <BranchLabel
-                key={`branch-${placed.id}`}
-                text={branchText(placed.branch)}
-                centerX={placed.x + TREE_NODE_WIDTH / 2}
-                centerY={placed.y - TREE_ROW_GAP / 4}
-              />
-            );
-          })}
-          {layout.nodes.map(placed => {
-            const isAnswer = placed.node.type === 'answer';
             const text = nodeText(placed.node);
+            const branch = placed.branch && branchText(placed.branch);
             return (
-              <g key={`node-${placed.id}`}>
-                <title>{text}</title>
-                <rect
-                  x={placed.x}
-                  y={placed.y}
-                  width={TREE_NODE_WIDTH}
-                  height={TREE_NODE_HEIGHT}
-                  rx={6}
-                  fill={isAnswer ? colors.label : 'white'}
-                  stroke={isAnswer ? colors.label : colors.feature}
-                  strokeWidth={2}
-                />
-                <text
-                  x={placed.x + TREE_NODE_WIDTH / 2}
-                  y={placed.y + TREE_NODE_HEIGHT / 2}
-                  textAnchor="middle"
-                  dominantBaseline="central"
-                  fontSize={13}
+              <div
+                key={placed.id}
+                style={{
+                  position: 'absolute',
+                  left: placed.x,
+                  top: placed.y,
+                  width: TREE_NODE_WIDTH,
+                  height: TREE_NODE_HEIGHT,
+                }}
+              >
+                {branch && (
+                  <div
+                    title={branch}
+                    style={{
+                      ...styles.decisionTreeBranch,
+                      top: -TREE_ROW_GAP / 4,
+                    }}
+                  >
+                    {branch}
+                  </div>
+                )}
+                <div
+                  title={text}
+                  style={{
+                    ...styles.decisionTreeNode,
+                    ...(placed.node.type === 'answer'
+                      ? styles.decisionTreeAnswer
+                      : styles.decisionTreeQuestion),
+                  }}
                 >
-                  {truncate(text, NODE_TEXT_MAX_LENGTH)}
-                </text>
-              </g>
+                  <span style={styles.decisionTreeNodeText}>{text}</span>
+                </div>
+              </div>
             );
           })}
-        </svg>
+        </div>
       </div>
     </div>
   );
