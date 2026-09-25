@@ -1,0 +1,204 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// Out of flow so the stage stays centered, and still, when this goes away.
+.editTools {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: normal;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+}
+
+%surface {
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.05);
+}
+
+// The open panel's top sits this far above the toolbar's.
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.toolGroup {
+  @extend %surface;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px;
+}
+
+.selectedTool,
+.selectedTool:hover {
+  background-color: var(--background-selected-primary);
+  color: var(--text-selected-primary);
+}
+
+.panel {
+  @extend %surface;
+  display: flex;
+  flex-direction: column;
+  width: 216px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.panelHeader {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  padding: 6px 8px 6px 10px;
+  background-color: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.panelTitle {
+  margin: 0;
+  color: var(--text-neutral-tertiary);
+  text-transform: uppercase;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.sectionLabel {
+  padding: 0;
+  color: var(--text-neutral-primary);
+}
+
+.textInput {
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  padding: 2px 8px;
+  resize: none;
+  font: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm);
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+
+  &:focus-visible {
+    @include mixins.focus-styles;
+  }
+}
+
+%options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.options {
+  @extend %options;
+}
+
+.swatches {
+  @extend %options;
+  padding: 4px;
+}
+
+// The radio stays in the accessibility tree and takes keyboard focus; the
+// label around it is what is drawn.
+.radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.swatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: 4px;
+  // The swatches are fixed content colors, not themed, so their check is too.
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+
+  &:has(.radio:checked) {
+    box-shadow:
+      0 0 0 1px var(--background-neutral-primary),
+      0 0 0 3px var(--neutral-gray-50);
+  }
+
+  &:has(.radio:focus-visible) {
+    @include mixins.focus-styles;
+  }
+}
+
+.lightSwatch {
+  color: #121212;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 24px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-round);
+  cursor: pointer;
+
+  &:has(.radio:checked) {
+    color: var(--text-selected-primary);
+    background-color: var(--background-selected-primary);
+    border-color: var(--background-selected-primary);
+  }
+
+  &:has(.radio:focus-visible) {
+    @include mixins.focus-styles;
+  }
+}
+
+.stickerSlots {
+  @extend %options;
+  padding: 4px;
+}
+
+.stickerSlot {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+}

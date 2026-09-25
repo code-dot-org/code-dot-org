@@ -23,10 +23,10 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
 }));
 
 // See the stub for what it reproduces of the real canvas, and why.
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  VideoCanvas: jest.requireActual('../../../../util/stubVideoCanvas').default,
-}));
+jest.mock(
+  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoCanvas',
+  () => jest.requireActual('../../../../util/stubVideoCanvas')
+);
 
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
