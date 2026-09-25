@@ -1509,6 +1509,27 @@ export class World {
   setActiveCamera(id: string): this {
     if (this.cameraList.some(camera => camera.id === id)) {
       this.activeCameraId = id;
+      return this;
+    }
+    // …OR A VIEWPORT'S, found by the id it was declared under as `camera()`
+    // finds it. `look through camera ⟨…⟩` generates this call whichever
+    // camera the block names, and a Viewport's camera lives in the Viewport's
+    // space rather than the world's list — so it was refused here, silently,
+    // and a box that was told to look through its chase camera kept looking
+    // through its main one (specs/SPACE_CAMERAS_PLAN.md).
+    //
+    // Written to the Viewport's `shows through` and not only to the space,
+    // because the space reads that property back every tick (`showsThrough`):
+    // set only the space and the next tick would undo it.
+    for (const space of this.viewportSpaces) {
+      const found = space.cameras.find(
+        camera => camera.id === id || camera.id.endsWith(`:${id}`),
+      );
+      if (found && space.owner?.has(ViewportTrait)) {
+        space.owner.set(ViewportShowsThroughProperty, found.name);
+        space.activeCameraName = found.name;
+        return this;
+      }
     }
     return this;
   }

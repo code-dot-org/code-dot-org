@@ -747,6 +747,31 @@ describe('which camera a Viewport shows through', () => {
     expect(space.camera).toBe(space.cameraNamed('main'));
   });
 
+  it('is what `look through camera` sets, for a Viewport’s camera too', () => {
+    // The block generates `world.setActiveCamera(id)`, which used to search
+    // the world's own list alone and refuse a Viewport's camera in silence —
+    // so a box told to look through its chase camera kept looking through
+    // its main one. Found by the declared id, as `camera()` finds it, and
+    // written to `shows through` so the tick does not undo it.
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.defineCamera({id: 'chase', viewport: win});
+    const space = world.viewportSpaceOf(win)!;
+
+    world.setActiveCamera('chase');
+    expect(space.camera).toBe(space.cameraNamed('chase'));
+    expect(win.get(ViewportShowsThroughProperty)).toBe('chase');
+    world.tick(0);
+    expect(space.camera).toBe(space.cameraNamed('chase'));
+    // …and the world's own view is untouched by it.
+    expect(world.activeCamera().id).toBe('main');
+
+    // An id nothing has still leaves every view where it was.
+    world.setActiveCamera('nothing by that name');
+    expect(space.camera).toBe(space.cameraNamed('chase'));
+    expect(world.activeCamera().id).toBe('main');
+  });
+
   it('keeps two Viewports’ choices apart', () => {
     const world = makeWorld();
     const one = placeWindow(world);
