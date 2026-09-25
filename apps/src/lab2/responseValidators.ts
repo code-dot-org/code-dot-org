@@ -1,8 +1,8 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 
 import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
-import Lab2Registry from './Lab2Registry';
 import {
+  AppName,
   BlocklySource,
   LevelPropertiesMap,
   MultiFileSource,
@@ -69,22 +69,23 @@ const DefaultSourceResponseValidator: ResponseValidator<
   return sourceValidatorHelper(response, () => {});
 };
 
-export const SourceResponseValidator: ResponseValidator<
-  ProjectSources
-> = response => {
-  const appName = Lab2Registry.getInstance().getAppName();
+/**
+ * The sources validator for a lab. The lab is a parameter rather than the
+ * page's current lab because a page can load another level's project, and
+ * the sources must match that level's lab.
+ */
+export function sourceResponseValidatorFor(
+  appName: AppName | null | undefined
+): ResponseValidator<ProjectSources> {
   if (appName === 'pythonlab' || appName === 'weblab2') {
-    return CodebridgeSourceResponseValidator(response);
-  } else if (appName !== null && BLOCKLY_LABS.includes(appName)) {
-    // Blockly labs
-    return BlocklySourceResponseValidator(response);
-  } else if (appName !== null && LABS_WITH_JSON_SOURCES.includes(appName)) {
-    return JsonSourceResponseValidator(response);
-  } else {
-    // Everything else uses the default validator
-    return DefaultSourceResponseValidator(response);
+    return CodebridgeSourceResponseValidator;
+  } else if (appName && BLOCKLY_LABS.includes(appName)) {
+    return BlocklySourceResponseValidator;
+  } else if (appName && LABS_WITH_JSON_SOURCES.includes(appName)) {
+    return JsonSourceResponseValidator;
   }
-};
+  return DefaultSourceResponseValidator;
+}
 
 export const LevelPropertiesMapValidator: ResponseValidator<
   LevelPropertiesMap
