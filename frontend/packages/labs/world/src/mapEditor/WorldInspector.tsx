@@ -10,6 +10,7 @@ import {Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
 import {useState} from 'react';
 
+import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 
@@ -88,6 +89,59 @@ export const WorldInspector = ({
     }
   };
 
+  // The world's own properties, and each rule's under the rule's name: the
+  // same shape a placement's inspector gives its traits, and for the same
+  // reason. Two rules may both have a `strength`, and the group is what tells
+  // them apart, so the field itself need not (specs/WORLD_RULE_FIELDS_PLAN.md).
+  const own = header.properties.filter(property => !property.rule);
+  const byRule = new Map<string, WorldProperty[]>();
+  for (const property of header.properties) {
+    if (property.rule) {
+      byRule.set(property.rule, [
+        ...(byRule.get(property.rule) ?? []),
+        property,
+      ]);
+    }
+  }
+  const rules = [...byRule];
+  const renderField = (property: WorldProperty) => {
+    const key = keyOf(property);
+    const label = capitalize(property.name);
+    return property.type === 'boolean' ? (
+      <Checkbox
+        key={key}
+        name={`world-${key}`}
+        label={label}
+        checked={values[key] === 'true'}
+        disabled={isReadOnly}
+        onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          const next = event.target.checked ? 'true' : 'false';
+          setValues(held => ({...held, [key]: next}));
+          onSetDefault(property, next);
+        }}
+      />
+    ) : (
+      <TextField
+        key={key}
+        name={`world-${key}`}
+        label={label}
+        inputType={
+          property.type === 'number' || property.type === 'angle'
+            ? 'number'
+            : 'text'
+        }
+        size="s"
+        value={values[key] ?? ''}
+        disabled={isReadOnly || !EDITABLE.has(property.type)}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          setValues(held => ({...held, [key]: event.target.value}))
+        }
+        onBlur={() => commitValue(property)}
+        onKeyDown={blurOnEnter}
+      />
+    );
+  };
+
   return (
     <div
       className={styles.inspector}
@@ -111,51 +165,22 @@ export const WorldInspector = ({
         onBlur={commitName}
         onKeyDown={blurOnEnter}
       />
-      {header.properties.length > 0 && (
-        <div className={styles.inspectorGroup}>
-          {header.properties.map(property => {
-            const key = keyOf(property);
-            // A rule's says whose it is: two rules may both have a
-            // `strength`, and "Gravity" is the only thing telling them
-            // apart (specs/WORLD_RULE_FIELDS_PLAN.md).
-            const label = property.rule
-              ? `${capitalize(property.name)} (${property.rule})`
-              : capitalize(property.name);
-            return property.type === 'boolean' ? (
-              <Checkbox
-                key={key}
-                name={`world-${key}`}
-                label={label}
-                checked={values[key] === 'true'}
-                disabled={isReadOnly}
-                onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                  const next = event.target.checked ? 'true' : 'false';
-                  setValues(held => ({...held, [key]: next}));
-                  onSetDefault(property, next);
-                }}
-              />
-            ) : (
-              <TextField
-                key={key}
-                name={`world-${key}`}
-                label={label}
-                inputType={
-                  property.type === 'number' || property.type === 'angle'
-                    ? 'number'
-                    : 'text'
-                }
-                size="s"
-                value={values[key] ?? ''}
-                disabled={isReadOnly || !EDITABLE.has(property.type)}
-                onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                  setValues(held => ({...held, [key]: event.target.value}))
-                }
-                onBlur={() => commitValue(property)}
-                onKeyDown={blurOnEnter}
-              />
-            );
-          })}
-        </div>
+      {own.length > 0 && (
+        <div className={styles.inspectorGroup}>{own.map(renderField)}</div>
+      )}
+      {rules.length > 0 && (
+        <Accordion
+          className={styles.inspectorAccordion}
+          items={rules.map(([rule, properties]) => ({
+            id: rule,
+            label: rule,
+            content: (
+              <div className={styles.inspectorGroup}>
+                {properties.map(renderField)}
+              </div>
+            ),
+          }))}
+        />
       )}
       <ThemeField
         value={theme}

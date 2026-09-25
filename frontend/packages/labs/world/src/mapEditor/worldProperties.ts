@@ -23,7 +23,7 @@ export interface WorldProperty {
    * which carry their starting value as a DEFAULT field instead.
    */
   setter?: string;
-  /** Which rule it came from, for the words beside it. */
+  /** Which rule it came from, which is the group the inspector lists it under. */
   rule?: string;
 }
 

@@ -535,8 +535,9 @@ BUILT for the name and the properties (`mapEditor/WorldInspector`): a
 number, angle, string or boolean is a field, and an edit rewrites the row's
 DEFAULT in the file without opening the blocks (`worldProperties`). The
 other types are shown and not edited. A RULE's world-scoped properties are
-listed under the world's own, each saying which rule it came from, and
-written as a `set` row (specs/WORLD_RULE_FIELDS_PLAN.md). The camera and
+listed under the world's own, grouped under the rule's name as a
+placement's traits are, and written as a `set` row
+(specs/WORLD_RULE_FIELDS_PLAN.md). The camera and
 the layers arrive with steps 3 and 4.
 
 ## Against the current shape

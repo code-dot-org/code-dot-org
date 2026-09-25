@@ -6574,8 +6574,9 @@ already in it.
 3. Delete \`define number counted\` — nothing needs it now.
 4. Set the **target score** to 5. It is Scoring's number rather than yours,
    so it has a field of its own: on the **Map** tab with nothing selected,
-   [the world's properties](#clickable=world.properties) list it as
-   **Target score (Scoring)**. Then add the handler **when the target is
+   [the world's properties](#clickable=world.properties) hold it under
+   **Scoring**, as **Target score**. Then add the handler **when the target
+   is
    reached**, with **print ⟨get score⟩** in it.
 5. Click six times. One line, saying 5: the click that was enough, and nothing
    about the sixth.

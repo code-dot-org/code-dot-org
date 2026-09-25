@@ -660,8 +660,9 @@ describe('the world, with nothing selected', () => {
     expect(view.queryByTestId('world-inspector')).toBeNull();
   });
 
-  it('lists a rule’s world properties too, saying whose they are', () => {
-    // The world's own first, then the rules' (specs/WORLD_RULE_FIELDS_PLAN.md).
+  it('lists a rule’s world properties too, grouped under the rule', () => {
+    // The world's own first, loose, then each rule's under its name, as a
+    // placement's traits are (specs/WORLD_RULE_FIELDS_PLAN.md).
     const onSetDefault = vi.fn();
     const target = {
       name: 'target score',
@@ -683,7 +684,17 @@ describe('the world, with nothing selected', () => {
       'input[name="world-world_set_Scoring_TargetScoreProperty"]',
     ) as HTMLInputElement;
     expect(field.value).toBe('30');
-    expect(view.getByText(/Target score \(Scoring\)/)).toBeInTheDocument();
+    // The group says whose it is; the field itself does not.
+    const group = field.closest('details') as HTMLElement;
+    expect(group.querySelector('summary')).toHaveTextContent('Scoring');
+    expect(view.getByText('Target score')).toBeInTheDocument();
+    expect(view.queryByText(/\(Scoring\)/)).toBeNull();
+    // The world's own are outside any group.
+    expect(
+      view.container
+        .querySelector('input[name="world-score"]')
+        ?.closest('details'),
+    ).toBeNull();
 
     fireEvent.change(field, {target: {value: '45'}});
     fireEvent.blur(field);

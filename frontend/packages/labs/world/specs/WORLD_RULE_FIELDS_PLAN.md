@@ -22,7 +22,8 @@ the rule's, and a world that wants another says so with a `set` row under
 
 - **The world's window lists a rule's world properties too**, under the
   world's own: the amount of gravity, the biggest reach, the grip
-  strength, the target score. Each says which rule it came from.
+  strength, the target score. Each rule's are a collapsible group under
+  the rule's name, as a placement's traits are in its inspector.
 - **A field writes the `set` row.** Typing a value rewrites the row's
   literal, or adds the row when there is none; typing the rule's own
   default back REMOVES the row, so a world's file says only what differs
@@ -81,7 +82,9 @@ the rule's, and a world that wants another says so with a `set` row under
 - **A property is keyed by its setter, not its name.** Two rules may each
   have a `strength`, and the world's own properties may too. The field's
   name attribute and the inspector's draft state are keyed by the block
-  type, and the label says which rule it came from.
+  type, and the group says which rule it came from. (The label said so
+  at first, in parentheses; the groups replaced that in Sep 2026, since a
+  heading that groups the fields says it once instead of on every row.)
 - **Setting a value back to the rule's own takes the row away.** A world's
   file then says only what differs from the rules it holds, which is the
   same bargain a placement makes (`withPlacementLayer`, and the default
@@ -108,9 +111,10 @@ the rule's, and a world that wants another says so with a `set` row under
 ## What to look at in the browser
 
 Open the starter's world on the Map tab with nothing selected: under the
-world's own properties there should be **Amount of gravity (Gravity)**,
-**Grip strength (Solid Bodies)**, **Score (Scoring)** and **Target score
-(Scoring)**, and the last should read 30, which is what the starter's block
+world's own properties there should be three collapsed groups, **Gravity**,
+**Solid Bodies** and **Scoring**; opening them should show **Amount of
+gravity**, **Grip strength**, and **Score** with **Target score**, and the
+last should read 30, which is what the starter's block
 sets. Typing 45 there should change that block; typing 9 into the amount of
 gravity should add a row and typing 9 again — the rule's own value — should
 take it away. `memory/score` step four should point at the list.
