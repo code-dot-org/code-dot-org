@@ -42,7 +42,8 @@ const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
   },
   {
     key: 'hideInstructionsOverlay',
-    label: 'Do not pop up instructions the first time each step is shown',
+    label:
+      'Do not pop up instructions the first time each step is shown (Only applies for legacy levels).',
   },
   {
     key: 'randomizeTestData',
