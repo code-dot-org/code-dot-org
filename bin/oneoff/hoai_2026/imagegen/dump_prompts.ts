@@ -4,35 +4,39 @@
 //
 // Only pure modules may be imported from apps/ (no @cdo aliases, no DOM).
 
-import manifest from '../../../../apps/static/spritelab_lab2/imageAdlibManifest.json';
+import manifest from "../../../../apps/static/spritelab_lab2/imageAdlibManifest.json";
 import {
   basePrompt,
   posedFrames,
   posePrompt,
-} from '../../../../apps/src/p5lab/spritelab/lab2/ai/images/characterSetPrompts';
+} from "../../../../apps/src/p5lab/spritelab/lab2/ai/images/characterSetPrompts";
 import {
+  canBeTransparent,
   fullPromptFor,
   logicalGridFor,
   pixelBlockFor,
-} from '../../../../apps/src/p5lab/spritelab/lab2/ai/images/imagePrompts';
-import {chooseKeyColor} from '../../../../apps/src/p5lab/spritelab/lab2/ai/images/keyColor';
+} from "../../../../apps/src/p5lab/spritelab/lab2/ai/images/imagePrompts";
+import { chooseKeyColor } from "../../../../apps/src/p5lab/spritelab/lab2/ai/images/keyColor";
 import {
   BODY_PLANS,
   BodyPlan,
   ImageStyle,
   ImageSubject,
   ImageType,
-} from '../../../../apps/src/p5lab/spritelab/lab2/ai/images/types';
+} from "../../../../apps/src/p5lab/spritelab/lab2/ai/images/types";
 
-type Option = {id: string; text: string; bodyPlan?: string};
-type Adlib = {template: string; options: {[slot: string]: Option[]}};
+type Option = { id: string; text: string; bodyPlan?: string };
+type Adlib = { template: string; options: { [slot: string]: Option[] } };
 
-const STYLES: ImageStyle[] = ['pixel', 'smooth'];
+const STYLES: ImageStyle[] = ["pixel", "smooth"];
 
 interface Frame {
   /** null for a single image; the strip pose for a set's frame. */
   pose: string | null;
+  /** What the lab sends: a key-color background it erases afterwards. */
   prompt: string;
+  /** The same, asking for an alpha background; null for a background. */
+  transparentPrompt: string | null;
   /** The pose whose image this frame's request sends as a reference. */
   reference: string | null;
 }
@@ -43,13 +47,13 @@ function kindOf(adlibId: string): {
   subject: ImageSubject | null;
   set: string;
 } {
-  const [kind, set] = adlibId.split('-');
-  if (kind === 'object') {
-    return {imageType: 'sprite', subject: 'object', set};
+  const [kind, set] = adlibId.split("-");
+  if (kind === "object") {
+    return { imageType: "sprite", subject: "object", set };
   }
   return {
     imageType: kind as ImageType,
-    subject: kind === 'sprite' ? 'character' : null,
+    subject: kind === "sprite" ? "character" : null,
     set,
   };
 }
@@ -71,23 +75,23 @@ function* product(lists: Option[][]): Generator<Option[]> {
 function fill(template: string, slots: string[], combo: Option[]): string {
   return slots.reduce(
     (text, slot, i) => text.replace(`{${slot}}`, combo[i].text),
-    template
+    template,
   );
 }
 
 // Mirrors bodyPlanFor() in imageAdlibs.ts: the creature choice's plan, if
 // it names a known one, else upright.
 function bodyPlanOf(slots: string[], combo: Option[]): BodyPlan {
-  const plan = combo[slots.indexOf('creature')]?.bodyPlan;
-  return BODY_PLANS.includes(plan as BodyPlan) ? (plan as BodyPlan) : 'upright';
+  const plan = combo[slots.indexOf("creature")]?.bodyPlan;
+  return BODY_PLANS.includes(plan as BodyPlan) ? (plan as BodyPlan) : "upright";
 }
 
-const adlibs = (manifest as {adlibs: {[id: string]: Adlib}}).adlibs;
+const adlibs = (manifest as { adlibs: { [id: string]: Adlib } }).adlibs;
 
 for (const [adlibId, adlib] of Object.entries(adlibs)) {
-  const {imageType, subject, set} = kindOf(adlibId);
+  const { imageType, subject, set } = kindOf(adlibId);
   const slots = Object.keys(adlib.options);
-  for (const combo of product(slots.map(slot => adlib.options[slot]))) {
+  for (const combo of product(slots.map((slot) => adlib.options[slot]))) {
     const prompt = fill(adlib.template, slots, combo);
     for (const style of STYLES) {
       const record = {
@@ -96,19 +100,21 @@ for (const [adlibId, adlib] of Object.entries(adlibs)) {
         imageType,
         subject,
         slots,
-        choiceIds: combo.map(option => option.id),
+        choiceIds: combo.map((option) => option.id),
         prompt,
         style,
+        transparent: canBeTransparent(imageType),
       };
       const pixelBlock = pixelBlockFor(imageType);
+      // As GenerateImageView builds them: a subject only on a sprite.
+      const promptOptions = { imageType, ...(subject && { subject }), style };
       const single: Frame[] = [
         {
           pose: null,
-          prompt: fullPromptFor(prompt, {
-            imageType,
-            ...(subject && {subject}),
-            style,
-          }),
+          prompt: fullPromptFor(prompt, promptOptions),
+          transparentPrompt: canBeTransparent(imageType)
+            ? fullPromptFor(prompt, { ...promptOptions, transparent: true })
+            : null,
           reference: null,
         },
       ];
@@ -116,39 +122,47 @@ for (const [adlibId, adlib] of Object.entries(adlibs)) {
         JSON.stringify({
           ...record,
           animated: false,
-          pixelGrid: style === 'pixel' ? logicalGridFor(pixelBlock) : null,
+          pixelGrid: style === "pixel" ? logicalGridFor(pixelBlock) : null,
           frames: single,
-        })
+        }),
       );
 
-      if (subject !== 'character') {
+      if (subject !== "character") {
         continue;
       }
       // generateCharacterSet() always asks for the sprite default grid.
-      const setBlock = pixelBlockFor('sprite');
+      const setBlock = pixelBlockFor("sprite");
       const key = chooseKeyColor(prompt);
       const bodyPlan = bodyPlanOf(slots, combo);
       const frames: Frame[] = [
         {
-          pose: 'base',
+          pose: "base",
           prompt: basePrompt(prompt, style, key, setBlock, bodyPlan),
+          transparentPrompt: basePrompt(
+            prompt,
+            style,
+            null,
+            setBlock,
+            bodyPlan,
+          ),
           reference: null,
         },
-        ...posedFrames(bodyPlan).map(frame => ({
+        ...posedFrames(bodyPlan).map((frame) => ({
           pose: frame.label,
           prompt: posePrompt(prompt, frame, style, key, setBlock),
-          reference: 'base',
+          transparentPrompt: posePrompt(prompt, frame, style, null, setBlock),
+          reference: "base",
         })),
       ];
       console.log(
         JSON.stringify({
           ...record,
           animated: true,
-          pixelGrid: style === 'pixel' ? logicalGridFor(setBlock) : null,
+          pixelGrid: style === "pixel" ? logicalGridFor(setBlock) : null,
           keyColor: key.hex,
           bodyPlan,
           frames,
-        })
+        }),
       );
     }
   }
