@@ -11,11 +11,6 @@ on:
         required: true
         type: string
         description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
-      playwright-projects:
-        required: false
-        type: string
-        default: '--project=chromium'
-        description: 'Playwright --project flags selecting browser projects. Defaults to Chromium, matching the legacy Drone Chrome-only lane; DTT overrides with the full engine matrix.'
 
 jobs:
   # Sharded so wall time stays flat as specs are added.
@@ -66,12 +61,9 @@ jobs:
           HOME: /root
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        # Browser projects are caller-controlled: Chromium by default (PR lane),
-        # full engine matrix on DTT. See the playwright-projects input.
-        #
         # A shard's own HTML report covers only its slice, so each writes a blob
         # instead and the report job below merges them into one.
-        run: yarn test:ui ${{ inputs.playwright-projects }} --shard=$(( ${{ strategy.job-index }} + 1 ))/${{ strategy.job-total }} --reporter=blob,list
+        run: yarn test:ui --project=chromium --shard=$(( ${{ strategy.job-index }} + 1 ))/${{ strategy.job-total }} --reporter=blob,list
         working-directory: ./frontend/packages/e2e-tests
 
       # Uploaded whether the shard passed or failed: the merged report needs every
