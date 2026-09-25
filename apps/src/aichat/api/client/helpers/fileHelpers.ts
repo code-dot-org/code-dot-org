@@ -36,7 +36,28 @@ function convertMediaTypeToExtension(
 }
 
 /**
+ * Raised when an asset referenced by a chat message cannot be read back.
+ */
+export class AssetFetchError extends Error {
+  constructor(
+    readonly asset: ChatAsset,
+    readonly assetUrl: string,
+    readonly status?: number
+  ) {
+    super(
+      `Unable to read chat asset "${asset.filename}"` +
+        (status === undefined ? ' (empty response body)' : ` (HTTP ${status})`)
+    );
+    this.name = 'AssetFetchError';
+  }
+}
+
+/**
  * Converts a ChatAsset to a FilePart by downloading the asset binary data.
+ *
+ * Throws {@link AssetFetchError} rather than returning a FilePart with empty
+ * data. An empty inline file is rejected by the model with a 400, which would
+ * otherwise repeat on every request that replays this message.
  */
 export async function assetToFilePart(
   asset: ChatAsset,
@@ -44,7 +65,13 @@ export async function assetToFilePart(
 ): Promise<FilePart> {
   const assetUrl = buildAssetUrl(asset);
   const response = await fetch(assetUrl);
+  if (!response.ok) {
+    throw new AssetFetchError(asset, assetUrl, response.status);
+  }
   const arrayBuffer = await response.arrayBuffer();
+  if (arrayBuffer.byteLength === 0) {
+    throw new AssetFetchError(asset, assetUrl);
+  }
   const base64 = Buffer.from(arrayBuffer).toString('base64');
   const extension = asset.filename.toLowerCase().split('.').pop() || '';
 
