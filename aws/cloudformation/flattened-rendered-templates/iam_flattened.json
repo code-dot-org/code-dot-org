@@ -1,0 +1,1580 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "IAM layer including global/shared roles and access permissions for Code.org infrastructure. Note: Admin permissions are required to manage some admin-only resources in this stack.",
+  "Outputs": {
+    "DevPermissions": {
+      "Description": "Developer Permissions",
+      "Export": {
+        "Name": "${AWS::StackName}-DevPermissions"
+      },
+      "Value": "DevPermissions"
+    },
+    "FirehoseLambdaRoleARN": {
+      "Description": "Firehose Lambda Role ARN",
+      "Export": {
+        "Name": "${AWS::StackName}-FirehoseLambdaRoleARN"
+      },
+      "Value": "FirehoseLambdaRole.Arn"
+    },
+    "SagemakerModelExecutionRoleARN": {
+      "Description": "Execution Role for GenAI Sagemaker Models",
+      "Export": {
+        "Name": "${AWS::StackName}-SagemakerExecutionRoleARN"
+      },
+      "Value": "SagemakerModelExecutionRole.Arn"
+    },
+    "SessionPermissions": {
+      "Description": "Session Permissions",
+      "Export": {
+        "Name": "${AWS::StackName}-SessionPermissions"
+      },
+      "Value": "SessionPermissions"
+    }
+  },
+  "Parameters": {
+    "BillingGoogleIDs": {
+      "Default": "/IAM/GoogleBillingIDs",
+      "Description": "SSM Parameter with a list of Google ID's for users granted Billing access.",
+      "Type": "AWS::SSM::Parameter::Value<List<String>>"
+    },
+    "ContributorGoogleIDs": {
+      "Default": "/IAM/GoogleContributorIDs",
+      "Description": "SSM Parameter with a list of Google ID's for users granted Contributor access.",
+      "Type": "AWS::SSM::Parameter::Value<List<String>>"
+    },
+    "DeveloperGoogleIDs": {
+      "Default": "/IAM/GoogleDeveloperIDs",
+      "Description": "SSM Parameter with a list of Google ID's for users granted Developer access.",
+      "Type": "AWS::SSM::Parameter::Value<List<String>>"
+    }
+  },
+  "Resources": {
+    "AthenaCloudwatchLogsQueryPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "AthenaCloudwatchLogsQueryPolicy",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "athena:GetQueryExecution",
+                "athena:StartQueryExecution"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:athena:${AWS::Region}:${AWS::AccountId}:workgroup/primary"
+            },
+            {
+              "Action": [
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:PutObject"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}",
+                "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}/*"
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "BedrockKnowledgeBaseInvocationPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "BedrockKnowledgeBaseInvocationPolicy",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:Retrieve",
+                "bedrock:RetrieveAndGenerate"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*"
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "BillingReadOnlyRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "BillingGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "Billing_ReadOnly",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "BillingRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "BillingGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Description": "Google-federated AWS Role for finance, granting limited access to the Billing console.",
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess"
+        ],
+        "Path": "/admin/",
+        "RoleName": "Billing"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "CloudFormationAdmin": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "cloudformation.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AdministratorAccess"
+        ],
+        "Path": "/admin/",
+        "RoleName": "CloudFormationAdmin"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "CloudFormationService": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "cloudformation.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "DevPermissions"
+        ],
+        "Path": "/admin/",
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "secretsmanager:*",
+                  "Effect": "Allow",
+                  "Resource": "*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "SecretPermissions"
+          },
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "iam:AddRoleToInstanceProfile",
+                    "iam:CreateInstanceProfile",
+                    "iam:DeleteInstanceProfile",
+                    "iam:RemoveRoleFromInstanceProfile"
+                  ],
+                  "Effect": "Allow",
+                  "NotResource": "arn:aws:iam::${AWS::AccountId}:instance-profile/admin/*"
+                },
+                {
+                  "Action": [
+                    "iam:AttachRolePolicy",
+                    "iam:CreateRole",
+                    "iam:DeleteRolePolicy",
+                    "iam:DetachRolePolicy",
+                    "iam:PutRolePermissionsBoundary",
+                    "iam:PutRolePolicy"
+                  ],
+                  "Condition": {
+                    "StringEquals": {
+                      "iam:PermissionsBoundary": "DevPermissions"
+                    }
+                  },
+                  "Effect": "Allow",
+                  "NotResource": "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+                },
+                {
+                  "Action": [
+                    "iam:CreatePolicy",
+                    "iam:CreatePolicyVersion",
+                    "iam:DeletePolicy",
+                    "iam:DeletePolicyVersion"
+                  ],
+                  "Effect": "Allow",
+                  "NotResource": "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+                },
+                {
+                  "Action": [
+                    "iam:DeleteRole",
+                    "iam:UpdateAssumeRolePolicy"
+                  ],
+                  "Effect": "Allow",
+                  "NotResource": "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "RolePermissionsBoundary"
+          }
+        ],
+        "RoleName": "CloudFormationService"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "CloudformationPassRolePolicy": {
+      "Properties": {
+        "ManagedPolicyName": "CloudformationPassRolePolicy",
+        "Path": "/admin/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "iam:PassRole",
+              "Condition": {
+                "StringEquals": {
+                  "iam:PassedToService": "cloudformation.amazonaws.com"
+                }
+              },
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "cloudformation:CreateChangeSet",
+                "cloudformation:CreateStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:UpdateStack"
+              ],
+              "Condition": {
+                "StringNotEquals": {
+                  "cloudformation:RoleARN": "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                }
+              },
+              "Effect": "Deny",
+              "NotResource": "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "CloudfrontLoggerRole": {
+      "Properties": {
+        "AWSServiceName": "logger.cloudfront.amazonaws.com"
+      },
+      "Type": "AWS::IAM::ServiceLinkedRole"
+    },
+    "CloudwatchDashboardViewerPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "CloudwatchDashboardViewerPolicy",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "cloudwatch:GetDashboard",
+                "cloudwatch:GetMetricData",
+                "cloudwatch:ListDashboards"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "ContributorS3Policy": {
+      "Properties": {
+        "ManagedPolicyName": "ContributorS3Policy",
+        "Path": "/engineering/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:DeleteObjectTagging",
+                "s3:DeleteObjectVersion",
+                "s3:DeleteObjectVersionTagging",
+                "s3:GetObject",
+                "s3:GetObjectAcl",
+                "s3:GetObjectTagging",
+                "s3:GetObjectTorrent",
+                "s3:GetObjectVersion",
+                "s3:GetObjectVersionAcl",
+                "s3:GetObjectVersionForReplication",
+                "s3:GetObjectVersionTagging",
+                "s3:GetObjectVersionTorrent",
+                "s3:PutObject",
+                "s3:PutObjectTagging",
+                "s3:PutObjectVersionTagging",
+                "s3:RestoreObject"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-ai/teaching_assistant/*",
+                "arn:aws:s3:::cdo-v3-animations/animations_development/*",
+                "arn:aws:s3:::cdo-v3-assets/assets_development/*",
+                "arn:aws:s3:::cdo-v3-files/files_development/*",
+                "arn:aws:s3:::cdo-v3-sources/sources_development/*"
+              ],
+              "Sid": "AllowNeededS3ActionsInCertainBucketFolders"
+            },
+            {
+              "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::*"
+              ],
+              "Sid": "AllowUserToSeeBucketList"
+            },
+            {
+              "Action": [
+                "s3:GetObject",
+                "s3:GetObjectAcl",
+                "s3:GetObjectTagging",
+                "s3:GetObjectVersion",
+                "s3:GetObjectVersionAcl",
+                "s3:GetObjectVersionTagging"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-animation-library/*",
+                "arn:aws:s3:::cdo-sound-library/*"
+              ],
+              "Sid": "AllowReadOnlyToLibraryBuckets"
+            },
+            {
+              "Action": [
+                "s3:ListBucket",
+                "s3:ListBucketVersions"
+              ],
+              "Condition": {
+                "StringLike": {
+                  "s3:prefix": [
+                    "",
+                    "animations_development/*",
+                    "assets_development/*",
+                    "files_development/*",
+                    "sources_development/*",
+                    "teaching_assistant/*"
+                  ]
+                }
+              },
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-ai",
+                "arn:aws:s3:::cdo-v3-animations",
+                "arn:aws:s3:::cdo-v3-assets",
+                "arn:aws:s3:::cdo-v3-files",
+                "arn:aws:s3:::cdo-v3-sources"
+              ],
+              "Sid": "AllowListingCertainBucketsObjects"
+            },
+            {
+              "Action": [
+                "s3:ListBucket",
+                "s3:ListBucketVersions"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-animation-library",
+                "arn:aws:s3:::cdo-sound-library"
+              ],
+              "Sid": "AllowListingToLibraryBuckets"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "ContributorSecretsPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "ContributorSecretsPolicy",
+        "Path": "/engineering/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "secretsmanager:GetSecretValue",
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/firebase_secret-ngO5yy",
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF"
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "CurriculumBuilderDCDO": {
+      "Properties": {
+        "ManagedPolicyName": "CurriculumBuilderDCDO",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:GetItem"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "DataAnalystDmsReadOnlyPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "DataAnalystDmsReadOnlyPolicy",
+        "Path": "/dataanalyst/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dms:DescribeAccountAttributes",
+                "dms:DescribeApplicableIndividualAssessments",
+                "dms:DescribeCertificates",
+                "dms:DescribeConnections",
+                "dms:DescribeEndpointSettings",
+                "dms:DescribeEndpointTypes",
+                "dms:DescribeEndpoints",
+                "dms:DescribeEventCategories",
+                "dms:DescribeEventSubscriptions",
+                "dms:DescribeEvents",
+                "dms:DescribeOrderableReplicationInstances",
+                "dms:DescribeRefreshSchemasStatus",
+                "dms:DescribeReplicationInstanceTaskLogs",
+                "dms:DescribeReplicationInstances",
+                "dms:DescribeReplicationSubnetGroups",
+                "dms:DescribeReplicationTaskAssessmentResults",
+                "dms:DescribeReplicationTaskAssessmentRuns",
+                "dms:DescribeReplicationTaskIndividualAssessments",
+                "dms:DescribeReplicationTasks",
+                "dms:DescribeSchemas",
+                "dms:DescribeTableStatistics",
+                "dms:ListTagsForResource",
+                "dms:TestConnection"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "DataAnalystPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "DataAnalystPolicy",
+        "Path": "/dataanalyst/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "cloudwatch:GetMetricData",
+                "s3:ListAllMyBuckets"
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+              "Sid": "DataAnalystTools"
+            },
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-census",
+                "arn:aws:s3:::cdo-census/*",
+                "arn:aws:s3:::cdo-data-sharing-internal",
+                "arn:aws:s3:::cdo-data-sharing-internal/*",
+                "arn:aws:s3:::cdo-nces",
+                "arn:aws:s3:::cdo-nces/*"
+              ],
+              "Sid": "DataAnalystS3ImportExportBucket"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "DataAnalystRedshiftPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "DataAnalystRedshiftPolicy",
+        "Path": "/dataanalyst/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "events:ListRules",
+                "redshift:DescribeClusterDbRevisions",
+                "redshift:DescribeClusterSnapshots",
+                "redshift:DescribeClusterSubnetGroups",
+                "redshift:DescribeEvents",
+                "redshift:DescribeReservedNodes",
+                "redshift:DescribeUsageLimits",
+                "redshift:ViewQueriesFromConsole",
+                "redshift:ViewQueriesInConsole"
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+              "Sid": "DataAnalystTools"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "DataAnalystRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "DataAnalystDmsReadOnlyPolicy",
+          "DataAnalystPolicy",
+          "DataAnalystRedshiftPolicy",
+          "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor",
+          "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess"
+        ],
+        "Path": "/dataanalyst/",
+        "RoleName": "DataAnalyst",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "DataAnalyticsFullAccessRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "DataAnalystDmsReadOnlyPolicy",
+          "DataAnalystPolicy",
+          "DataAnalystRedshiftPolicy",
+          "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor",
+          "arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "DataAnalytics_FullAccess",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "DevPermissions": {
+      "Properties": {
+        "ManagedPolicyName": "DevPermissions",
+        "Path": "/admin/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "iam:PassRole",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "secretsmanager:GetSecretValue",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "cloudformation:CreateChangeSet",
+                "cloudformation:CreateStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:UpdateStack"
+              ],
+              "Condition": {
+                "StringNotEquals": {
+                  "cloudformation:RoleARN": "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                }
+              },
+              "Effect": "Deny",
+              "NotResource": "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
+            },
+            {
+              "Action": [
+                "iam:GenerateCredentialReport",
+                "iam:GenerateServiceLastAccessedDetails",
+                "iam:Get*",
+                "iam:List*",
+                "iam:SimulateCustomPolicy",
+                "iam:SimulatePrincipalPolicy"
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+              "Sid": "IAMReadOnlyAccess"
+            },
+            {
+              "Effect": "Allow",
+              "NotAction": [
+                "iam:*",
+                "organizations:*",
+                "secretsmanager:*"
+              ],
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "Developer": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "DeveloperGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "DevPermissions"
+        ],
+        "Path": "/admin/",
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ]
+            },
+            "PolicyName": "DenyAdminLogs"
+          },
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "secretsmanager:*",
+                  "Effect": "Allow",
+                  "Resource": "*"
+                },
+                {
+                  "Action": [
+                    "secretsmanager:DeleteSecret",
+                    "secretsmanager:GetSecretValue"
+                  ],
+                  "Effect": "Deny",
+                  "NotResource": "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/*"
+                }
+              ]
+            },
+            "PolicyName": "SecretsAccess"
+          },
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "cloudformation:CreateStack",
+                    "cloudformation:DeleteStack",
+                    "cloudformation:ExecuteChangeSet",
+                    "cloudformation:UpdateStack"
+                  ],
+                  "Condition": {
+                    "ForAnyValue:StringEquals": {
+                      "aws:TagKeys": "environment"
+                    },
+                    "ForAnyValue:StringNotEquals": {
+                      "aws:ResourceTag/environment": [
+                        "adhoc",
+                        "development"
+                      ]
+                    }
+                  },
+                  "Effect": "Deny",
+                  "Resource": "*"
+                }
+              ]
+            },
+            "PolicyName": "ProtectedStacks"
+          }
+        ],
+        "RoleName": "Developer",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "EcsTaskExecutionRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+        ],
+        "Path": "/",
+        "RoleName": "ecsTaskExecutionRole"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "EngineerSecretsPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "EngineerSecretsPolicy",
+        "Path": "/engineering/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "secretsmanager:GetSecretValue",
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*",
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*"
+              ]
+            },
+            {
+              "Action": [
+                "secretsmanager:DeleteSecret",
+                "secretsmanager:GetSecretValue"
+              ],
+              "Effect": "Deny",
+              "Resource": [
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*",
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:levelbuilder/cdo/*",
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:production/cdo/*",
+                "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:test/cdo/*"
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "EngineeringContributorRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "ContributorGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "ContributorS3Policy",
+          "ContributorSecretsPolicy",
+          "arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "Engineering_Contributor",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "EngineeringFullAccessRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "DeveloperGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "CloudformationPassRolePolicy",
+          "EngineerSecretsPolicy",
+          "arn:aws:iam::aws:policy/IAMReadOnlyAccess",
+          "arn:aws:iam::aws:policy/PowerUserAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "Engineering_FullAccess",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "EngineeringMusicLabContributorRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "MusicLabS3ReadWritePolicy"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "Engineering_MusicLabContributor",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "EngineeringReadOnlyRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "DeveloperGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "AthenaCloudwatchLogsQueryPolicy",
+          "EngineerSecretsPolicy",
+          "arn:aws:iam::aws:policy/ReadOnlyAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "Engineering_ReadOnly",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "FirehoseLambdaRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "sts:AssumeRole"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        ],
+        "Path": "/",
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "firehose:DescribeDeliveryStream",
+                    "firehose:PutRecord",
+                    "firehose:PutRecordBatch"
+                  ],
+                  "Effect": "Allow",
+                  "Resource": [
+                    "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
+                  ]
+                }
+              ]
+            },
+            "PolicyName": "root"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "GoogleBillingIDs": {
+      "Properties": {
+        "Description": "List of Google IDs of people being granted billing access.",
+        "Name": "/IAM/GoogleBillingIDs",
+        "Type": "StringList",
+        "Value": "initial,value"
+      },
+      "Type": "AWS::SSM::Parameter"
+    },
+    "GoogleContributorIDs": {
+      "Properties": {
+        "Description": "List of Google IDs of people being granted contributor access.",
+        "Name": "/IAM/GoogleContributorIDs",
+        "Type": "StringList",
+        "Value": "initial,value"
+      },
+      "Type": "AWS::SSM::Parameter"
+    },
+    "LambdaReplicatorRole": {
+      "Properties": {
+        "AWSServiceName": "replicator.lambda.amazonaws.com"
+      },
+      "Type": "AWS::IAM::ServiceLinkedRole"
+    },
+    "MarketingReadOnlyRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "AthenaCloudwatchLogsQueryPolicy",
+          "arn:aws:iam::aws:policy/ReadOnlyAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "Marketing_ReadOnly",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "MusicLabS3ReadWritePolicy": {
+      "Properties": {
+        "ManagedPolicyName": "MusicLabS3ReadWritePolicy",
+        "Path": "/engineering/",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:DeleteObjectVersion",
+                "s3:GetObject",
+                "s3:GetObjectAcl",
+                "s3:GetObjectVersion",
+                "s3:GetObjectVersionAcl",
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:PutObjectVersionAcl"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-curriculum/media/musiclab/*"
+              ]
+            },
+            {
+              "Action": [
+                "s3:GetBucketAcl",
+                "s3:GetBucketLocation",
+                "s3:GetBucketPolicyStatus",
+                "s3:GetBucketPublicAccessBlock",
+                "s3:ListAccessPoints",
+                "s3:ListBucket"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-curriculum"
+              ]
+            },
+            {
+              "Action": [
+                "s3:ListAllMyBuckets"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "NoS3ForYouPolicy": {
+      "Properties": {
+        "ManagedPolicyName": "NoS3ForYouPolicy",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Deny",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "ProductGoogleIDs": {
+      "Properties": {
+        "Description": "List of Google IDs of people being granted product access.",
+        "Name": "/IAM/ProductGoogleIDs",
+        "Type": "StringList",
+        "Value": "initial,value"
+      },
+      "Type": "AWS::SSM::Parameter"
+    },
+    "ProductManagerFullAccessRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "ProductGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "BedrockKnowledgeBaseInvocationPolicy",
+          "CloudwatchDashboardViewerPolicy",
+          "arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "ProductManager_FullAccess",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "SagemakerModelExecutionRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "sagemaker.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess"
+        ],
+        "RoleName": "SagemakerModelExecutionRole"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "SessionPermissions": {
+      "Properties": {
+        "Description": "Allows opening Session Manager sessions and writing to the audit log.",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "logs:DescribeLogGroups",
+              "Effect": "Allow",
+              "Resource": "*",
+              "Sid": "DescribeLogs"
+            },
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:DescribeLogStreams",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/auditlogs:log-stream:*",
+              "Sid": "PublishAuditEvents"
+            },
+            {
+              "Action": [
+                "ssm:UpdateInstanceInformation",
+                "ssmmessages:CreateControlChannel",
+                "ssmmessages:CreateDataChannel",
+                "ssmmessages:OpenControlChannel",
+                "ssmmessages:OpenDataChannel"
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+              "Sid": "AllowSession"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "TempS3LessEngineerRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRoleWithSAML",
+              "Condition": {
+                "StringEquals": {
+                  "SAML:aud": "https://signin.aws.amazon.com/saml"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"
+              }
+            },
+            {
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "ForAnyValue:StringEquals": {
+                  "accounts.google.com:sub": "DeveloperGoogleIDs"
+                },
+                "StringEquals": {
+                  "accounts.google.com:aud": "{{resolve:secretsmanager:admin/google_client_id}}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "accounts.google.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          "NoS3ForYouPolicy",
+          "arn:aws:iam::aws:policy/IAMReadOnlyAccess",
+          "arn:aws:iam::aws:policy/PowerUserAccess"
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "logs:*",
+                  "Effect": "Deny",
+                  "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DenyAdminLogs"
+          }
+        ],
+        "RoleName": "Temp_S3less_Engineer",
+        "Tags": [
+          {
+            "Key": "sqlworkbench-team",
+            "Value": "codedotorg"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    }
+  }
+}
