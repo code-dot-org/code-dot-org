@@ -183,9 +183,6 @@ class StorageIdTest < Minitest::Test
     project_id = 456
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: nil)
 
-    # Create mock constants without defining classes
-    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
-
     # Stub Projects.table.where(...)
     projects_table = mock
     Projects.stubs(:table).returns(projects_table)
@@ -222,9 +219,6 @@ class StorageIdTest < Minitest::Test
     uuid = SecureRandom.uuid
 
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
-
-    # Create mock constants without defining classes
-    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
 
     # Stub Projects.table.where(...)
     projects_table = mock

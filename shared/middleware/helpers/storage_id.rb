@@ -2,6 +2,10 @@ require 'base64'
 require 'json'
 require 'cdo/rack/request'
 
+# rubocop:disable CustomCops/DashboardRequires
+require_relative '../../../dashboard/legacy/middleware/helpers/projects'
+# rubocop:enable CustomCops/DashboardRequires
+
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
   storage_id = create_storage_id_for_user(anon_user_id: request.anon_user_id)
