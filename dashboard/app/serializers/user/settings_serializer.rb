@@ -48,8 +48,6 @@ class User::SettingsSerializer
 
   private attr_reader :user
 
-  # The id names the option to disconnect, which only finds the current user's
-  # own options; never the hashed_email.
   private def serialized_authentication_options
     user.authentication_options.map do |option|
       {
@@ -98,8 +96,6 @@ class User::SettingsSerializer
     }
   end
 
-  # Present only where legacy shows the setting: LTI teachers, outside the
-  # Global Edition regions whose config hides LtiRosterSyncSettings.
   private def lti_roster_sync
     return {} unless user.teacher? && Policies::Lti.lti?(user) && lti_roster_sync_shown_in_region?
 

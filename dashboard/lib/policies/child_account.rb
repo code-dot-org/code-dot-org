@@ -141,8 +141,6 @@ class Policies::ChildAccount
     ComplianceState.permission_granted?(user)
   end
 
-  # Whether the account settings page offers to link a personal login. A student
-  # with no stored country is judged by the request's location instead.
   def self.personal_account_linking_enabled?(user, request_in_usa:)
     return false if user.student? && request_in_usa && user.country_code.nil?
 
