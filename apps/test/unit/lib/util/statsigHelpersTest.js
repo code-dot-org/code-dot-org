@@ -105,18 +105,23 @@ describe('StatsigReporter', () => {
       expect(removeCookieStub).not.to.have.been.called;
     });
 
-    it('removes the cookie when performance cookies are not allowed', () => {
+    it('removes stored IDs when performance cookies are not allowed', () => {
       isDevelopmentEnvironmentStub = stub(
         utils,
         'isDevelopmentEnvironment'
       ).returns(false);
       window.OnetrustActiveGroups = '';
+      localStorage.setItem(
+        StatsigStableIdKey.toUpperCase(),
+        window.crypto.randomUUID()
+      );
 
       expect(findOrCreateStableId()).to.be.undefined;
       expect(removeCookieStub).to.have.been.calledWith(StatsigStableIdKey, {
         path: '/',
         domain: '.code.org',
       });
+      expect(localStorage.getItem(StatsigStableIdKey.toUpperCase())).to.be.null;
       expect(getCookieStub).not.to.have.been.called;
       expect(setCookieStub).not.to.have.been.called;
     });

@@ -48,6 +48,11 @@ export function findOrCreateStableId() {
     // Ensure any existing cookie is removed to satisfy OneTrust
     // (must pass same attributes used when setting the cookie)
     cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
+
+    // Remove the legacy localStorage value written by earlier Studio versions.
+    // See: https://github.com/code-dot-org/code-dot-org/pull/69708
+    localStorage.removeItem(STABLE_ID_KEY.toUpperCase());
+
     // Return undefined to let Statsig set it's own stableID
     return undefined;
   }
