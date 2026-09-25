@@ -104,14 +104,21 @@ module Cdo
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
       @statsig_stable_id ||= begin
-        # This cookie is used by the Statsig SDK for both JS and Ruby.
-        cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+        storage_key = SharedConstants::STATSIG_STABLE_ID_KEY
 
-        if cookies_stable_id.is_a?(String) && !cookies_stable_id.empty?
-          session[SharedConstants::STATSIG_STABLE_ID_KEY] = cookies_stable_id
-        end
+        stable_id =
+          # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
+          if cookies[storage_key] && !cookies[storage_key].empty?
+            cookies[storage_key]
+          elsif session[storage_key] && !session[storage_key].empty?
+            session[storage_key]
+          else
+            Cdo::AnonUserId.generate
+          end
 
-        session[SharedConstants::STATSIG_STABLE_ID_KEY] ||= Cdo::AnonUserId.generate
+        session[storage_key] = stable_id unless session[storage_key] == stable_id
+
+        session[storage_key]
       end
     end
 

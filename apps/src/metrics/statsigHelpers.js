@@ -5,12 +5,11 @@ import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
 import {getEnvironment, isProductionEnvironment, createUuid} from '../utils';
 
 const STABLE_ID_KEY = StatsigStableIdKey;
-const LOCAL_STORAGE_KEY = STABLE_ID_KEY.toUpperCase();
 const COOKIE_OPTIONS = {
   path: '/',
   domain: '.code.org',
   sameSite: 'Lax',
-  secure: true,
+  expires: 365,
 };
 
 // Performance cookies (C0002). You can see what categories are enabled in OneTrust
@@ -29,28 +28,24 @@ export function getUserType() {
 }
 
 export function findOrCreateStableId() {
-  const cookieId = cookies.get(STABLE_ID_KEY);
-  const localStorageId = localStorage.getItem(LOCAL_STORAGE_KEY);
-  let stableId;
+  let stableId = document.querySelector('script[data-statsig-stable-id]')
+    ?.dataset?.statsigStableId;
 
-  if (cookieId) {
-    // Prefer the cookie value if it exists
-    stableId = cookieId;
-  } else if (localStorageId) {
-    stableId = localStorageId;
-  } else {
-    stableId = createUuid();
-  }
+  if (stableId) {
+    return stableId;
+  } else if (consentAllowsStatsigCookie()) {
+    stableId = cookies.get(STABLE_ID_KEY);
 
-  if (consentAllowsStatsigCookie()) {
-    cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
-    localStorage.setItem(LOCAL_STORAGE_KEY, stableId);
+    if (!stableId) {
+      stableId = createUuid();
+      cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
+    }
+
     return stableId;
   } else {
     // Ensure any existing cookie is removed to satisfy OneTrust
     // (must pass same attributes used when setting the cookie)
     cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
-    localStorage.removeItem(LOCAL_STORAGE_KEY);
     // Return undefined to let Statsig set it's own stableID
     return undefined;
   }

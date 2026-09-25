@@ -218,6 +218,26 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'Statsig stable ID' do
+    it 'sets response cookie and renders same ID' do
+      sign_in create(:student)
+      get '/home'
+
+      stable_id = response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+      _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+
+      assert_select 'script[data-statsig-stable-id]' do |elements|
+        _(elements.first['data-statsig-stable-id']).must_equal stable_id
+      end
+
+      cookie_header = response.headers['Set-Cookie'].split("\n").find do |header|
+        header.start_with?("#{SharedConstants::STATSIG_STABLE_ID_KEY}=")
+      end
+      _(cookie_header).must_match(/domain=/i)
+      _(cookie_header).must_match(/expires=/i)
+    end
+  end
+
   describe 'exception handling' do
     it 'gracefully handles UnsafeRedirectErrors' do
       Rails.logger.expects(:warn).once

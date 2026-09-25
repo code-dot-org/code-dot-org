@@ -448,7 +448,16 @@ class ApplicationController < ActionController::Base
   end
 
   protected def initialize_statsig_stable_id
-    request.statsig_stable_id
+    statsig_stable_id = request.statsig_stable_id
+
+    unless cookies[SharedConstants::STATSIG_STABLE_ID_KEY] == statsig_stable_id
+      cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = {
+        value: statsig_stable_id,
+        domain: request.shared_cookie_domain,
+        path: '/',
+        expires: 1.year.from_now,
+      }
+    end
   end
 
   private def pairing_still_enabled

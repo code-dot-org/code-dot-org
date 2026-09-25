@@ -60,26 +60,37 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
   describe 'request#statsig_stable_id' do
     subject(:request_statsig_stable_id) {request.statsig_stable_id}
 
-    it 'persists through Rails, legacy API, sign-in, and sign-out requests' do
+    before do
+      host! 'studio.code.org'
+    end
+
+    it 'persists through sign-in and rotates after sign-out' do
       get '/'
-      _request_statsig_stable_id.must_match Cdo::AnonUserId::FORMAT
-      _(session[:statsig_stable_id]).must_equal request_statsig_stable_id
+      initial_stable_id = request_statsig_stable_id
+      _(initial_stable_id).must_match Cdo::AnonUserId::FORMAT
+      _(cookies[:statsig_stable_id]).must_equal initial_stable_id
+      _(session[:statsig_stable_id]).must_equal initial_stable_id
 
       get '/v3/channels'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      _(request.statsig_stable_id).must_equal initial_stable_id
 
       sign_in create(:user)
 
       get '/'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      _(request.statsig_stable_id).must_equal initial_stable_id
 
       get '/v3/channels'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      _(request.statsig_stable_id).must_equal initial_stable_id
 
       get '/users/sign_out'
-      _(request.statsig_stable_id).wont_equal request_statsig_stable_id
-      _(request.statsig_stable_id).must_match Cdo::AnonUserId::FORMAT
-      _(session[:statsig_stable_id]).must_equal request.statsig_stable_id
+      assert_empty cookies[:statsig_stable_id]
+
+      get '/'
+      rotated_stable_id = request.statsig_stable_id
+      _(rotated_stable_id).must_match Cdo::AnonUserId::FORMAT
+      _(rotated_stable_id).wont_equal initial_stable_id
+      _(cookies[:statsig_stable_id]).must_equal rotated_stable_id
+      _(session[:statsig_stable_id]).must_equal rotated_stable_id
     end
 
     context 'with Statsig cookie' do
