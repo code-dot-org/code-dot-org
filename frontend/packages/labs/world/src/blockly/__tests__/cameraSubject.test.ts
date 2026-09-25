@@ -40,6 +40,23 @@ const within = (...types: string[]): never => {
   return wrap(blocks[0]);
 };
 
+/** The fake block, in a file whose root is `root` — a world's or an actor's. */
+const inFile = (block: never, root: string): never =>
+  ({
+    ...(block as object),
+    workspace: {getTopBlocks: () => [{type: root}]},
+  }) as never;
+
+/** The fake block in a FLYOUT, over a file whose root is `root`. */
+const inFlyoutOf = (block: never, root: string): never =>
+  ({
+    ...(block as object),
+    workspace: {
+      isFlyout: true,
+      targetWorkspace: {getTopBlocks: () => [{type: root}]},
+    },
+  }) as never;
+
 describe('the subject a block is about', () => {
   it('is the actor on its own', () => {
     expect(subjectShadow(within('world_get_Space_PositionProperty'))).toBe(
@@ -148,8 +165,24 @@ describe('a block that names a trait', () => {
       naming('Camera Follow#FollowsTrait', 'world_add_trait'),
     ).toBeDefined();
     expect(
-      subjectShadow(naming('Camera Follow#FollowsTrait', 'world_add_trait')),
+      subjectShadow(
+        inFile(
+          naming('Camera Follow#FollowsTrait', 'world_add_trait'),
+          'world_world',
+        ),
+      ),
     ).toBe('world_camera');
+    // …and the actor itself in an actor's file, where the only kind offered a
+    // camera trait is one that shows a map and owns its camera's traits
+    // (specs/SPACE_CAMERAS_PLAN.md, "simplifying").
+    expect(
+      subjectShadow(
+        inFile(
+          naming('Camera Follow#FollowsTrait', 'world_add_trait'),
+          'world_actor',
+        ),
+      ),
+    ).toBe('world_this_actor');
   });
 
   it('still asks for the actor when the trait is an actor’s', () => {
@@ -179,9 +212,45 @@ describe('a member a camera elects', () => {
   it('is about the main camera in a world file', () => {
     // `define camera` is for the SECOND camera, so the common case is a world
     // adjusting the one every world already has.
-    expect(cameraShadow(within('world_set_CameraFollow_TargetProperty'))).toBe(
-      'world_camera',
-    );
+    expect(
+      cameraShadow(
+        inFile(within('world_set_CameraFollow_TargetProperty'), 'world_world'),
+      ),
+    ).toBe('world_camera');
+  });
+
+  it('is about the actor itself in an actor’s or a placement’s file', () => {
+    // A Viewport's camera traits are its own, so `set actor to follow of
+    // ⟨this actor⟩` in its `on create` is the whole of how a minimap follows
+    // the Pilot. Seeded with the world's main camera, the row read as a
+    // sentence about the wrong camera and did nothing — and the first person
+    // to write it had to know to drop `this actor` over the shadow.
+    expect(
+      cameraShadow(
+        inFile(within('world_set_CameraFollow_TargetProperty'), 'world_actor'),
+      ),
+    ).toBe('world_this_actor');
+  });
+
+  it('looks through the flyout to the file the block will land in', () => {
+    // A block in the palette belongs to the flyout's workspace, which defines
+    // nothing; the question is about the file behind it.
+    expect(
+      cameraShadow(
+        inFlyoutOf(
+          within('world_set_CameraFollow_TargetProperty'),
+          'world_world',
+        ),
+      ),
+    ).toBe('world_camera');
+    expect(
+      cameraShadow(
+        inFlyoutOf(
+          within('world_set_CameraFollow_TargetProperty'),
+          'world_actor',
+        ),
+      ),
+    ).toBe('world_this_actor');
   });
 
   it('is about the camera being defined, inside one', () => {

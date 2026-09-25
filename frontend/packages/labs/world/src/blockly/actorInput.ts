@@ -103,21 +103,50 @@ export const subjectShadow = (block: Block): string => {
   // identifier `camera`, which a world body does not bind.
   const named = block.getFieldValue?.('TRAIT');
   if (named && subjectOfTraitValue(String(named)) === 'camera') {
-    return 'world_camera';
+    return cameraOutside(block);
   }
   return 'world_this_actor';
 };
 
 /**
+ * Whose a camera member is, outside a `define camera` body.
+ *
+ * IN A WORLD FILE, the main camera: `define camera` is for the second camera a
+ * world wants, so the common case is a world adjusting the one every world
+ * already has, and `this camera` there generates an identifier nothing binds.
+ *
+ * ANYWHERE ELSE — an actor file, a placement's script — the actor. The only
+ * kind offered a camera member there is one that shows a map, whose camera
+ * traits are its own (specs/SPACE_CAMERAS_PLAN.md, "simplifying"): `set actor
+ * to follow of ⟨this actor⟩` in a Viewport's `on create` is the whole of how a
+ * minimap follows the Pilot. Seeded with the world's main camera instead, the
+ * block read as a sentence about the wrong camera and did nothing — and the
+ * first person to write that row had to know to drop `this actor` over it.
+ */
+const cameraOutside = (block: Block): string =>
+  definesWorld(fileWorkspaceOf(block)) ? 'world_camera' : 'world_this_actor';
+
+/**
+ * The workspace a block's FILE is in: a block in the flyout belongs to the
+ * flyout's workspace, and the question "is this a world file" is about the
+ * one it will land in — the same look-through `seedShadow` makes.
+ */
+const fileWorkspaceOf = (block: Block): WorkspaceSvg | undefined => {
+  const workspace = block.workspace as WorkspaceSvg | undefined;
+  return (
+    (workspace?.isFlyout ? workspace.targetWorkspace : workspace) ?? undefined
+  );
+};
+
+/**
  * The subject for a member a CAMERA elects — `set look offset of ⟨…⟩`.
  *
- * Inside `define camera`, the camera being defined. Outside it, the main
- * camera: `define camera` is for the SECOND camera a world wants, so the
- * common case is a world file adjusting the one every world already has, and
- * `this camera` there generates an identifier nothing binds.
+ * Inside `define camera`, the camera being defined. Outside it, whatever
+ * `cameraOutside` says: the world's main camera in a world file, the actor
+ * itself in an actor's or a placement's.
  */
 export const cameraShadow = (block: Block): string =>
-  inCameraBody(block) ? 'world_this_camera' : 'world_camera';
+  inCameraBody(block) ? 'world_this_camera' : cameraOutside(block);
 
 /**
  * Replace the shadow when the block's surroundings change its subject.
