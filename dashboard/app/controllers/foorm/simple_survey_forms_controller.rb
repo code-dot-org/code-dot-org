@@ -82,7 +82,7 @@ module Foorm
           formQuestions: form_questions,
           formName: form_data[:form_name],
           formVersion: form_data[:form_version] || 0,
-          surveyData: params[:survey_data] || form_data.survey_data,
+          surveyData: sanitize_survey_data(params[:survey_data]) || form_data.survey_data,
           submitApi: FOORM_SIMPLE_SURVEY_SUBMIT_API,
           submitParams: key_params
         }.to_json
@@ -134,7 +134,7 @@ module Foorm
           formQuestions: form_questions,
           formName: form_data[:form_name],
           formVersion: form_data[:form_version] || 0,
-          surveyData: params[:survey_data] || form_data.survey_data,
+          surveyData: sanitize_survey_data(params[:survey_data]) || form_data.survey_data,
           submitApi: FOORM_SIMPLE_SURVEY_SUBMIT_API,
           submitParams: key_params
         }.to_json
@@ -176,6 +176,14 @@ module Foorm
       end
 
       survey_data
+    end
+
+    # Sanitize survey_data URL params to prevent XSS by stripping HTML tags from values.
+    # Returns nil if params are blank (callers fall back to DB-stored survey data).
+    private def sanitize_survey_data(survey_data_params)
+      return nil if survey_data_params.blank?
+
+      survey_data_params.transform_values {|value| helpers.strip_tags(value.to_s)}
     end
   end
 end
