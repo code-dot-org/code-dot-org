@@ -133,7 +133,7 @@ class Ailab < Level
     end
     parsed_mode = {} unless parsed_mode.is_a?(Hash)
 
-    # The Lab 2 AI Lab has no dataset picker, so it must be given exactly one.
+    # The Lab 2 AI Lab currently requires exactly 1 dataset.
     datasets = parsed_mode['datasets']
     unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
       errors.add(:mode, 'must select exactly one dataset.')
