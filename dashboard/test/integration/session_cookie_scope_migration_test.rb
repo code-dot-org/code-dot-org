@@ -17,7 +17,7 @@ class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
   end
 
   test 'reads the newer session when the stale cookie is sent first' do
-    get '/reset_session'
+    get '/'
     session_id = session.id.to_s
     assert session_id.present?, 'precondition: the request should establish a session'
 
@@ -30,7 +30,7 @@ class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
   # Ensure the last (newest) cookie wins. The test above would also pass for an implementation
   # that reads the FIRST cookie and falls back to the second only when the first is invalid.
   test 'reads the last cookie even when the earlier one is the valid session' do
-    get '/reset_session'
+    get '/'
     valid_session_id = session.id.to_s
 
     get '/', headers: cookie_header_with_sessions(valid_session_id, BOGUS)

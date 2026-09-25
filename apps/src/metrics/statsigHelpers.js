@@ -35,14 +35,8 @@ export function getUserType() {
 
 export function findOrCreateStableId() {
   if (consentAllowsStatsigCookie()) {
-    const serverStableId = document.querySelector(
-      'script[data-statsig-stable-id]'
-    )?.dataset?.statsigStableId;
-    const stableId =
-      serverStableId || cookies.get(STABLE_ID_KEY) || createUuid();
-
+    const stableId = cookies.get(STABLE_ID_KEY) || createUuid();
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
-
     return stableId;
   } else {
     // Ensure any existing cookie is removed to satisfy OneTrust

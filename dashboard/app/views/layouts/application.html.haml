@@ -40,10 +40,6 @@
     %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
     -# auth key needed for statsig analytics
     %script{data: {'statsig-api-client-key-session-replay': CDO.safe_statsig_api_client_key_session_replay}}
-    -# A public cache could serve a request-specific stable ID to other visitors.
-    -# @see CachedUnitHelper#disable_session_for_cached_pages
-    - unless request.session_options[:skip]
-      %script{data: {'statsig-stable-id': request.statsig_stable_id}}
     -# for statsig to recognized managed test server
     %script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
     -# user id and type for analytics logging- may not work for cached pages

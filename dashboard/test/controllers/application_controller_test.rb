@@ -219,16 +219,39 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   end
 
   describe 'Statsig stable ID' do
-    it 'stores the ID in the session and renders it without setting a cookie' do
-      sign_in create(:student)
-      get '/home'
+    it 'stores the ID in the session without consent' do
+      get '/'
 
       stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
       _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
       _(response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]).must_be_nil
+    end
 
-      assert_select 'script[data-statsig-stable-id]' do |elements|
-        _(elements.first['data-statsig-stable-id']).must_equal stable_id
+    context 'with performance cookie consent revoked' do
+      before do
+        cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A0'
+      end
+
+      it 'does not expose the stable ID to the browser' do
+        get '/'
+
+        stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+        _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+        _(response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]).must_be_nil
+      end
+    end
+
+    context 'with performance cookie consent' do
+      before do
+        cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A1'
+      end
+
+      it 'stores the same ID in the session and cookie' do
+        get '/'
+
+        stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+        _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+        _(response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]).must_equal stable_id
       end
     end
   end

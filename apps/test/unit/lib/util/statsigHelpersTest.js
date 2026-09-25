@@ -17,7 +17,6 @@ describe('StatsigReporter', () => {
     let isDevelopmentEnvironmentStub;
     let removeCookieStub;
     let setCookieStub;
-    let stableIdElement;
 
     beforeAll(() => {
       if (!nativeRandomUUID) {
@@ -46,7 +45,6 @@ describe('StatsigReporter', () => {
       isDevelopmentEnvironmentStub?.restore();
       removeCookieStub.restore();
       setCookieStub.restore();
-      stableIdElement?.remove();
       localStorage.clear();
       delete window.OnetrustActiveGroups;
     });
@@ -65,18 +63,7 @@ describe('StatsigReporter', () => {
       });
     }
 
-    it('prefers the stable ID rendered by the server', () => {
-      const stableId = window.crypto.randomUUID();
-      stableIdElement = document.createElement('script');
-      stableIdElement.dataset.statsigStableId = stableId;
-      document.head.appendChild(stableIdElement);
-
-      expect(findOrCreateStableId()).to.equal(stableId);
-      expect(getCookieStub).not.to.have.been.called;
-      expectCookieSet(stableId);
-    });
-
-    it('uses the existing cookie when the server ID is unavailable', () => {
+    it('uses the existing cookie', () => {
       const stableId = window.crypto.randomUUID();
       getCookieStub.returns(stableId);
 

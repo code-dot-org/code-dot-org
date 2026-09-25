@@ -133,9 +133,22 @@ class RequestTest
       session = {SharedConstants::STATSIG_STABLE_ID_KEY => SecureRandom.uuid}
       request = MockRequest.new(session)
       request.stubs(:cookies).returns(SharedConstants::STATSIG_STABLE_ID_KEY => cookie_id)
+      request.stubs(:onetrust_performance_cookies_allowed?).returns(true)
 
       assert_equal cookie_id, request.statsig_stable_id
       assert_equal cookie_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
+    end
+
+    def test_statsig_stable_id_ignores_cookie_without_performance_consent
+      cookie_id = SecureRandom.uuid
+      session_id = SecureRandom.uuid
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => session_id}
+      request = MockRequest.new(session)
+      request.stubs(:cookies).returns(SharedConstants::STATSIG_STABLE_ID_KEY => cookie_id)
+      request.stubs(:onetrust_performance_cookies_allowed?).returns(false)
+
+      assert_equal session_id, request.statsig_stable_id
+      assert_equal session_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
     end
 
     def test_statsig_stable_id_uses_session_for_blank_cookie
