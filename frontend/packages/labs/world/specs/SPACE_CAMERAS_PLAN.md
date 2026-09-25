@@ -355,10 +355,15 @@ for ⟨actor⟩`, a socket.**
     surprise in how values work; the answer is an EVENT for the moment the
     map lands (step 12).
 
-11. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
-    if the inspector's fields move again, MAP_EVENTS_PLAN's principle extended to
-    cameras, and SCROLLING_PLAN on what a camera with no traits now means for a
-    scroll view.
+11. **Specs. DONE.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's
+    table, MAP_EVENTS_PLAN's principle extended to cameras, and SCROLLING_PLAN on
+    what a camera with no traits now means for a scroll view — which is that it
+    is the Viewport's to scroll, and one with traits is the rules' to aim.
+
+    What this plan sidestepped by giving each Viewport its own space — one
+    space, several cameras — is reopened by specs/MIRRORING_PLAN.md, a Viewport
+    onto the world's own scene, which is where the second person to build a
+    Viewport went next.
 
 12. **An event for when a Viewport's map lands.** The other half of step 10's
     finding. `set actor to follow` in a Viewport's `on create` runs before the

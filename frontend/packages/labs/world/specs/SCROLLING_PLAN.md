@@ -16,9 +16,15 @@ So anything that clips OTHER ACTORS is a camera, and the thing in this lab
 with a camera of its own is the Viewport. That is not a compromise: a Viewport
 is already a window onto a space, the engine already grows that space to the
 size of the map loaded into it (`growSpaceToFit`), and `settleSpace` already
-clamps its camera into those bounds every tick, for a level's camera. A
-scrolling container is those three facts plus a way to say where it is
-scrolled to.
+clamps its camera into those bounds every tick — for a camera that elects no
+traits, which is what a scroll view's is. A scrolling container is those three
+facts plus a way to say where it is scrolled to.
+
+_Since specs/SPACE_CAMERAS_PLAN.md:_ a Viewport's camera elects traits like the
+world's, and a camera that elects any is the RULES' to aim — `settleSpace`
+leaves it alone, and `Confined to the Map` is what clamps it, or nothing does.
+The scroll path is the other case, unchanged: a camera that elects nothing is
+the Viewport's to scroll, and that path still clamps and still writes back.
 
 ## `scroll` is not the camera
 
@@ -40,7 +46,10 @@ to remember to clamp, because the thing that already clamped the camera now
 owns the number.
 
 A Viewport that FOLLOWS an actor ignores `scroll` — following is what a level
-does, scrolling is what a page does, and an actor cannot be doing both.
+does, scrolling is what a page does, and an actor cannot be doing both. That
+used to be a fact about the map's `camera.follows`; it is a fact about the
+camera's traits now, and the line between the two is exactly "does this camera
+elect anything" (specs/SPACE_CAMERAS_PLAN.md, step 6).
 
 ## The actor
 
