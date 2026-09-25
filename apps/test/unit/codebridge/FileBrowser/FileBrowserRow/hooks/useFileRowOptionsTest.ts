@@ -192,13 +192,16 @@ describe('useFileRowOptions', () => {
   });
 
   describe('save to backpack option', () => {
-    it('hides save to backpack when there is no per-lab backpack', () => {
+    it('hides save to backpack under the legacy experiment when there is no per-lab backpack', () => {
+      mockIsExperimentEnabled.mockReturnValue(true);
+
       expect(visibleLabelsFor()).not.toContain(
         codebridgeI18n.saveToBackpackTitle()
       );
     });
 
-    it('shows save to backpack when the per-lab backpack is available', () => {
+    it('shows save to backpack under the legacy experiment when the per-lab backpack is available', () => {
+      mockIsExperimentEnabled.mockReturnValue(true);
       mockUseBackpackAPIContext.mockReturnValue({
         primaryApi: {} as BackpackClientApi,
       });
@@ -208,16 +211,13 @@ describe('useFileRowOptions', () => {
       );
     });
 
-    it('shows save to backpack under the experiment even with no per-lab backpack', () => {
-      mockIsExperimentEnabled.mockReturnValue(true);
-
+    it('shows save to backpack even with no per-lab backpack', () => {
       expect(visibleLabelsFor()).toContain(
         codebridgeI18n.saveToBackpackTitle()
       );
     });
 
-    it('hides save to backpack under the experiment when signed out', () => {
-      mockIsExperimentEnabled.mockReturnValue(true);
+    it('hides save to backpack when signed out', () => {
       mockState.currentUser.userId = undefined;
 
       expect(visibleLabelsFor()).not.toContain(
