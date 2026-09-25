@@ -123,6 +123,18 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_equal expected_unit_info, unit_names.sort
   end
 
+  test 'get courses with participant progress includes sunsetting courses, which can no longer be assigned' do
+    sunsetting_unit = create(:script, name: 'sunsetting-unit22')
+    sunsetting_course = create(:single_unit_course, :with_course_offering, unit: sunsetting_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting, version_year: '1991', family_name: 'family-62')
+    refute sunsetting_course.course_assignable?(@teacher)
+
+    courses_with_progress = CourseVersion.courses_for_unit_selector([sunsetting_unit.id], @teacher)
+
+    # No trailing ' *': the course is still live for the sections already on it.
+    assert_equal [sunsetting_course.localized_title], courses_with_progress.pluck(:display_name)
+    assert_equal [sunsetting_unit.localized_title], courses_with_progress.pluck(:units).flatten.pluck(:name)
+  end
+
   test "course version associations" do
     course_version = create(:course_version)
     assert_instance_of UnitGroup, course_version.content_root
