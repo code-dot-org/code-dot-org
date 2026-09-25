@@ -83,7 +83,10 @@ def ensure_eyes_available
   return if @eyes
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
-  @eyes.log_handler = Logger.new('../../log/eyes.log')
+  # Disables Eyes SDK logging by default.
+  @eyes.log_handler = Logger.new('../../log/eyes.log') if DCDO.get('eyes_logging', false)
+  # Disable Eyes Universal Core logging by default, which logs to `/tmp/applitools-log/`.
+  eyes.configuration.show_logs = DCDO.get('eyes_logging', false)
 end
 
 # There are several fonts we sometimes load associated with Font Awesome, but Font Awesome 6 at the "solid" weight (900) is our default,
