@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-04 20:13:48 UTC",
+    "serialized_at": "2026-09-23 13:53:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -14428,12 +14428,709 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "CSD U2L11-L6_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L12-L7_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L13-L7_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L17-L6_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L18-L7_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L2-L7_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L3-L9_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L6-L10_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L8-L8_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "level_name": "CSD U2L9-L8_2025-v2",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "0c359bac-b9ff-4751-8f84-b97aa3262f58",
+      "position": 1,
+      "learning_goal": "Creating a digital artifact, linking within a multi-page site ",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "0c359bac-b9ff-4751-8f84-b97aa3262f58",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "10448ab2-7322-49b2-80dd-2c7d6478efbf",
+      "position": 1,
+      "learning_goal": "Create a stylesheet and link to the sheet in the HTML. The stylesheet includes a rule that changes the paragraph element of a webpage.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "10448ab2-7322-49b2-80dd-2c7d6478efbf",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "4ab5cbdf-5105-4d7b-b96a-c350532affe4",
+      "position": 1,
+      "learning_goal": "Create a `div` container and a ruleset for the container that uses Flexbox properties.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4ab5cbdf-5105-4d7b-b96a-c350532affe4",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "604f15ca-4668-4b26-8a67-9b384758f46f",
+      "position": 1,
+      "learning_goal": "Structure content on a web page using HTML (Add an image to a web page). Accurately attribute others when using their work.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "604f15ca-4668-4b26-8a67-9b384758f46f",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "781e5977-3c62-42c7-b6f0-ea4a48cf965c",
+      "position": 1,
+      "learning_goal": "Use correct HTML syntax to create text paragraphs",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "781e5977-3c62-42c7-b6f0-ea4a48cf965c",
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "81cc4975-fee1-4de7-8956-4a25909fd229",
+      "position": 1,
+      "learning_goal": "Correct application and understanding of `order`, `align-self`, and `flex-grow` properties are demonstrated.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "81cc4975-fee1-4de7-8956-4a25909fd229",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "b73dc739-9393-4020-96c1-0e5c93ab79da",
+      "position": 1,
+      "learning_goal": "Create classes that can be referenced and affected as a group.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "b73dc739-9393-4020-96c1-0e5c93ab79da",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "c66ce98a-46f7-48d7-8a3d-433ec70c1ba7",
+      "position": 1,
+      "learning_goal": "Adding all four pseudo-class states for the anchor tag.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "c66ce98a-46f7-48d7-8a3d-433ec70c1ba7",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "e57868ee-0107-4c4f-9e31-b02a20f56b12",
+      "position": 1,
+      "learning_goal": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images. Understand the need for precision when using computer languages and use appropriate syntax. ",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e57868ee-0107-4c4f-9e31-b02a20f56b12",
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "key": "f445c173-a623-4dd0-b2f9-0815681320c0",
+      "position": 1,
+      "learning_goal": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "f445c173-a623-4dd0-b2f9-0815681320c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "No new page was created and there are no links ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "0c359bac-b9ff-4751-8f84-b97aa3262f58",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "There is an `<a>` tag, but syntax errors or problems with the page name may prevent it from working ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "0c359bac-b9ff-4751-8f84-b97aa3262f58",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "There is at least one one working link from one HTML page to another ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "0c359bac-b9ff-4751-8f84-b97aa3262f58",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "A new page has been created and given a unique and descriptive name ending in “.html”. There is a link from the index.html page to the new page and from the new page back to index.html",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "0c359bac-b9ff-4751-8f84-b97aa3262f58",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There is no special rule-set for paragraphs or the color or size properties are not used in the rule-set. There is no code to link the stylesheet to the web page.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "10448ab2-7322-49b2-80dd-2c7d6478efbf",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The paragraphs have a special rule-set in the stylesheet, and the color or size property is used, but there are enough errors that the text does not change color or size. There is HTML code that attempts to link the stylesheet to the web page.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "10448ab2-7322-49b2-80dd-2c7d6478efbf",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The stylesheet link is placed correctly in the HTML code. The paragraphs are a new color or size.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "10448ab2-7322-49b2-80dd-2c7d6478efbf",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The stylesheet link is placed correctly in the <head> of the HTML code. The paragraphs are a new color and size, and there are no errors or inconsistencies in the HTML or CSS code.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "10448ab2-7322-49b2-80dd-2c7d6478efbf",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no rule sets in the stylesheet for the `div` container, or the rule sets do not have the necessary Flexbox properties to style the images as shown in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4ab5cbdf-5105-4d7b-b96a-c350532affe4",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Added a `div` container but did not use a class attribute in the `div` tag. Added a rule for the div in the CSS but did not use all needed Flexbox properties resulting in a page that does not necessarily match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4ab5cbdf-5105-4d7b-b96a-c350532affe4",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Added a `div` container with a class attribute around the images in the HTML. Added a rule for the class attribute in the CSS. Used Flexbox properties but the result does not necessarily match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4ab5cbdf-5105-4d7b-b96a-c350532affe4",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Added a `div` container with a class attribute around the images in the HTML. Added a rule for the class attribute in the CSS. Used correct Flexbox properties to match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4ab5cbdf-5105-4d7b-b96a-c350532affe4",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The `img` tag is not used or no source address is given for the image.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "604f15ca-4668-4b26-8a67-9b384758f46f",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly. The image may not be available for legal use on the web page.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "604f15ca-4668-4b26-8a67-9b384758f46f",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The image displays properly and is being used according to its copyright license description.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "604f15ca-4668-4b26-8a67-9b384758f46f",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The image displays properly and an `alt` attribute gives a reasonable text description of the image. No unnecessary code is included in the`img` tag. There is accurate attribution and the image is named appropriately.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "604f15ca-4668-4b26-8a67-9b384758f46f",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no paragraph tags in the text.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "781e5977-3c62-42c7-b6f0-ea4a48cf965c",
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "781e5977-3c62-42c7-b6f0-ea4a48cf965c",
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least some text has been separated out into a paragraph through proper use of paragraph tags. The resulting webpage partially matches the preview in the level instructions",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "781e5977-3c62-42c7-b6f0-ea4a48cf965c",
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All texts is contained within paragraph tags. The resulting webpage matches the preview in the level instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "781e5977-3c62-42c7-b6f0-ea4a48cf965c",
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no `order`, `align-self`, or `flex-grow` properties added for child paragraphs or images in order to match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "81cc4975-fee1-4de7-8956-4a25909fd229",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Added either `order`, `align-self`, or `flex-grow` properties to child paragraphs and/or images, but not all of the needed properties to match the image in the instructions. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "81cc4975-fee1-4de7-8956-4a25909fd229",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Added `order`, `align-self`, and `flex-grow` properties to child paragraphs and images but the result does not exactly match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "81cc4975-fee1-4de7-8956-4a25909fd229",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Added an `order` property to child paragraphs and images to match the layout of the image in the instructions. Added an `align-self` property to paragraphs to match the image in the instructions. Added a `flex-grow` property to paragraph(s) to match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "81cc4975-fee1-4de7-8956-4a25909fd229",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No class or rule sets are created, or no website elements are put in the class.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b73dc739-9393-4020-96c1-0e5c93ab79da",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b73dc739-9393-4020-96c1-0e5c93ab79da",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "A class and rule-set are created and most elements in the chosen haiku section of the website is affected by this class, but there may be a few minor errors for some parts of text, or there may be fewer than three rules in the rule-set.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b73dc739-9393-4020-96c1-0e5c93ab79da",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The class and rule-set are created correctly, all elements of the of the chosen haiku are included, and there are at least three rules in the rule-set",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b73dc739-9393-4020-96c1-0e5c93ab79da",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Does not add any of the four pseudo-class states for the anchor tag. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c66ce98a-46f7-48d7-8a3d-433ec70c1ba7",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Adds two of the four pseudo-class states for the anchor tag with the specific styles in the directions in the CSS file.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c66ce98a-46f7-48d7-8a3d-433ec70c1ba7",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Adds all four pseudo-class states for the anchor tag with the specific styles in the directions for each state. One or two of the states are in the wrong order resulting in those styles not affecting the link.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c66ce98a-46f7-48d7-8a3d-433ec70c1ba7",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Adds all four pseudo-class states for the anchor tag with the specific styles in the directions for each state. States added to the CSS file in the correct order.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c66ce98a-46f7-48d7-8a3d-433ec70c1ba7",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Little or no content is contained in tags.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e57868ee-0107-4c4f-9e31-b02a20f56b12",
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Most content is contained in tags. At least one heading tag is used.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e57868ee-0107-4c4f-9e31-b02a20f56b12",
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "All content is contained in tags, uses paragraph, heading tags, and a list in a reasonable way.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e57868ee-0107-4c4f-9e31-b02a20f56b12",
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All content is contained in tags, uses paragraph tags, multiple sized headings, and at least one list in a logically consistent way. Comments are used to define sections of code.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e57868ee-0107-4c4f-9e31-b02a20f56b12",
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f445c173-a623-4dd0-b2f9-0815681320c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f445c173-a623-4dd0-b2f9-0815681320c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f445c173-a623-4dd0-b2f9-0815681320c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The background, images, and text have all been styled as described in the instructions. There are no syntax errors or extra code (that does not function) in the stylesheet.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f445c173-a623-4dd0-b2f9-0815681320c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2026"
+      }
+    }
   ]
 }

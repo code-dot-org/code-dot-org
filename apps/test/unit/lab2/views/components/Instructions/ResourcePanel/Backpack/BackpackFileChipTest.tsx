@@ -6,8 +6,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import progress from '@cdo/apps/code-studio/progressRedux';
-import lab from '@cdo/apps/lab2/lab2Redux';
+import lab, {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import lab2System from '@cdo/apps/lab2/redux/systemRedux';
+import {Channel} from '@cdo/apps/lab2/types';
 import BackpackFileChip from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/BackpackFileChip';
 import {
   getStore,
@@ -18,6 +20,18 @@ import {
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 const FILE_NAME = 'sunset.png';
+
+// Owning the channel keeps the workspace out of read-only mode, which would
+// otherwise disable the add button for its own reasons.
+const ownedChannel: Channel = {
+  id: '1',
+  name: '1',
+  isOwner: true,
+  projectType: 'weblab2',
+  publishedAt: null,
+  createdAt: '',
+  updatedAt: '',
+};
 
 // The chip opens a confirmation dialog before deleting; answer it with `result`.
 const dialogControlMock = {showDialog: jest.fn()};
@@ -33,7 +47,8 @@ describe('BackpackFileChip', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({lab, lab2Project, progress});
+    registerReducers({lab, lab2Project, lab2System, progress});
+    getStore().dispatch(setChannel(ownedChannel));
     showToast = jest.fn();
     addAlert = jest.fn();
     dialogControlMock.showDialog.mockResolvedValue({type: 'confirm'});
@@ -130,10 +145,20 @@ describe('BackpackFileChip', () => {
     expect(showToast).not.toHaveBeenCalled();
   });
 
-  it('shows the Added confirmation in place of the add button', () => {
+  it('offers an enabled add button when the file is not recently added', () => {
+    renderChip();
+
+    const addButton = screen.getByRole('button', {name: 'Add to project'});
+    expect(addButton).toBeEnabled();
+    expect(addButton.querySelector('.fa-plus')).toBeInTheDocument();
+  });
+
+  it('uses a check icon and disables the add button when the file has been recently added', () => {
     renderChip({isRecentlyAdded: true});
 
-    expect(screen.getByText('Added')).toBeInTheDocument();
+    const addButton = screen.getByRole('button', {name: 'New file!'});
+    expect(addButton).toBeDisabled();
+    expect(addButton.querySelector('.fa-check')).toBeInTheDocument();
     expect(
       screen.queryByRole('button', {name: 'Add to project'})
     ).not.toBeInTheDocument();

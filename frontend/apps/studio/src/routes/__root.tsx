@@ -22,7 +22,10 @@ import {
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
+import {
+  getMuiThemeForBrand,
+  resolveBrand,
+} from '@code-dot-org/component-library/themes';
 import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
@@ -108,6 +111,11 @@ const responsiveFloorStyles = (
 // the order; MUI's styles land in `mui`, below any unlayered rules.
 const cssLayerOrder = (
   <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
+);
+
+// frontend_studio/index.html.haml stamps data-brand; the Vite dev shell does not.
+document.documentElement.dataset.brand = resolveBrand(
+  document.documentElement.dataset.brand,
 );
 
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);

@@ -1,0 +1,46 @@
+.editable {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.editButton {
+  flex: none;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-secondary);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 150ms;
+
+  &:hover {
+    background: var(--background-neutral-secondary);
+  }
+}
+
+.editable:hover .editButton,
+.editButton:focus-visible {
+  opacity: 1;
+}
+
+.editInput {
+  width: 100%;
+  padding: 6px 8px;
+  border: 2px solid var(--background-brand-purple-primary);
+  border-radius: 8px;
+  color: inherit;
+  font: inherit;
+}
+
+.editTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.textArea {
+  min-height: 72px;
+  resize: vertical;
+}

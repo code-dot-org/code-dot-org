@@ -1,6 +1,8 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import TeacherPromo, {
   TeacherPromoInfo,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherPromo';
@@ -19,12 +21,21 @@ describe('TeacherPromo', () => {
     isClosable: true,
     partnerLogo: '/partner_logo.png',
     isExternal: false,
+    position: 1,
   };
 
   const onCloseMock = jest.fn();
+  let sendEventSpy: jest.SpyInstance;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
+  });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    jest.restoreAllMocks();
   });
 
   it('renders the promotion title and description', () => {
@@ -39,6 +50,18 @@ describe('TeacherPromo', () => {
       'href',
       '/promo1'
     );
+  });
+
+  it('tracks when the promotion link is clicked', () => {
+    render(<TeacherPromo {...mockPromo} onClose={onCloseMock} />);
+
+    fireEvent.click(screen.getByRole('link', {name: 'Learn More'}));
+
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.PROMOTION_CLICKED, {
+      contentfulEntryID: mockPromo.id,
+      announcementType: mockPromo.announcementType,
+      position: mockPromo.position,
+    });
   });
 
   it('renders the promotion image if provided', () => {
@@ -56,6 +79,18 @@ describe('TeacherPromo', () => {
   it('renders the close button if the promotion is closable', () => {
     render(<TeacherPromo {...mockPromo} onClose={onCloseMock} />);
     screen.getByLabelText('Close');
+  });
+
+  it('tracks when the promotion is dismissed', () => {
+    render(<TeacherPromo {...mockPromo} onClose={onCloseMock} />);
+
+    fireEvent.click(screen.getByLabelText('Close'));
+
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.PROMOTION_DISMISSED, {
+      contentfulEntryID: mockPromo.id,
+      announcementType: mockPromo.announcementType,
+      position: mockPromo.position,
+    });
   });
 
   it('does not render the close button if the promotion is not closable', () => {
