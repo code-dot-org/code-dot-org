@@ -3,10 +3,12 @@
  * A source is the code of a project.
  */
 
-import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
+import HttpClient, {
+  GetResponse,
+  ResponseValidator,
+} from '@cdo/apps/util/HttpClient';
 
 import {SOURCE_FILE} from '../constants';
-import {SourceResponseValidator} from '../responseValidators';
 import {ProjectSources, ProjectVersion, SaveSourceOptions} from '../types';
 
 const {stringifyQueryParams} = require('@cdo/apps/utils');
@@ -16,13 +18,14 @@ const rootUrl = (channelId: string) =>
 
 export async function get(
   channelId: string,
+  validator: ResponseValidator<ProjectSources>,
   versionId?: string
 ): Promise<GetResponse<ProjectSources>> {
   let url = rootUrl(channelId);
   if (versionId) {
     url += `?version=${versionId}`;
   }
-  return HttpClient.fetchJson<ProjectSources>(url, {}, SourceResponseValidator);
+  return HttpClient.fetchJson<ProjectSources>(url, {}, validator);
 }
 
 export async function update(
