@@ -153,6 +153,26 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
+  it('accepts a decimal accuracy and limits the input natively', () => {
+    const savedMode = renderEditor(null);
+    const accuracy = screen.getByRole('spinbutton', {
+      name: /Required accuracy/,
+    });
+    expect(accuracy).toHaveAttribute('min', '0');
+    expect(accuracy).toHaveAttribute('max', '100');
+    expect(accuracy).toHaveAttribute('step', 'any');
+
+    fireEvent.change(accuracy, {target: {value: '99.5'}});
+    expect(accuracy).toBeValid();
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      requireAccuracy: 99.5,
+    });
+
+    fireEvent.change(accuracy, {target: {value: '150'}});
+    expect(accuracy).toBeInvalid();
+  });
+
   it('saves k-nearest neighbors when no trainer is set', () => {
     const savedMode = renderEditor('{"datasets": ["zoo"]}');
     expect(screen.getByRole('combobox', {name: 'Trainer'})).toHaveValue('knn');

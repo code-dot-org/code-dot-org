@@ -10,6 +10,8 @@ import {
   DEFAULT_TRAINER,
   getSelectedDataset,
   isValidAccuracy,
+  MAX_ACCURACY,
+  MIN_ACCURACY,
   ModeObject,
   setModeValue,
 } from './ailabMode';
@@ -78,6 +80,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
             key={dataset.id}
             name="ailab_mode_dataset"
             value={dataset.id}
+            required
             label={`${dataset.name} (${dataset.id})`}
             checked={selectedDataset === dataset.id}
             onChange={() =>
@@ -160,6 +163,10 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           label="Required accuracy (%)"
           name="ailab_mode_require_accuracy"
           inputType="number"
+          // Native limits make the browser refuse to submit an out-of-range value.
+          min={MIN_ACCURACY}
+          max={MAX_ACCURACY}
+          step="any"
           value={accuracyText}
           onChange={handleAccuracyChange}
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."

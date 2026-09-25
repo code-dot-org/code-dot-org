@@ -23,8 +23,8 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
 export const DEFAULT_TRAINER = 'knn';
 
-const MIN_ACCURACY = 0;
-const MAX_ACCURACY = 100;
+export const MIN_ACCURACY = 0;
+export const MAX_ACCURACY = 100;
 
 // Returns null when the string is not a JSON object.
 export function parseMode(
