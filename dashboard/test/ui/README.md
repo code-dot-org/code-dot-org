@@ -20,15 +20,17 @@ Review all supported tags in [ci.rake](https://github.com/code-dot-org/code-dot-
 
 ### DTT (CD) Tests
 
-The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches three suites in parallel against two providers:
+The UI tests run as part of our deployment during the Deploy To Test (DTT) via `rake test:ui_all`, which dispatches five suites in parallel:
 
 | Suite | Provider | Browsers |
 |-------|----------|----------|
 | Chrome + Firefox UI | AWS Device Farm | `Windows Chrome`, `Windows Firefox` (`browsers_device_farm.json`) |
 | Safari + iPad + iPhone UI | SauceLabs | `macOS Safari`, `iPad Safari`, `iPhone Safari` (`browsers_device_farm.json`) |
 | Eyes | SauceLabs | `Windows Chrome` (Applitools visual diff, `@eyes`) |
+| Playwright | test machine | `chromium`, `firefox`, `webkit` (functional) |
+| Playwright Eyes | test machine | `chromium` (visual diffs) |
 
-Each suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3.
+Each Cucumber suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3. Playwright reports are uploaded to S3 and linked from Slack.
 
 ## Concurrency limits
 
