@@ -8,6 +8,7 @@ import {
 
 const mockWindowLocation = {
   href: '',
+  hostname: 'studio.code.org',
   reload: jest.fn(),
 };
 Object.defineProperty(window, 'location', {
