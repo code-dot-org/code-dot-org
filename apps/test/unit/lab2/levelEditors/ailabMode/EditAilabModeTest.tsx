@@ -1,4 +1,4 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {act, render, screen, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -10,9 +10,18 @@ const DATASETS = [
   {id: 'pizza_toy', name: 'Pizza Toppings', isToy: true},
 ];
 
-function renderEditor(initialMode: string | null) {
+function renderEditor(
+  initialMode: string | null,
+  initialUsesLab2 = true,
+  subscribeToUsesLab2?: (onChange: (usesLab2: boolean) => void) => () => void
+) {
   const {container} = render(
-    <EditAilabMode initialMode={initialMode} datasets={DATASETS} />
+    <EditAilabMode
+      initialMode={initialMode}
+      datasets={DATASETS}
+      initialUsesLab2={initialUsesLab2}
+      subscribeToUsesLab2={subscribeToUsesLab2}
+    />
   );
   // The submitted value lives in a hidden input, which has no accessible role.
   return () =>
@@ -20,7 +29,67 @@ function renderEditor(initialMode: string | null) {
     (container.querySelector('[name="level[mode]"]') as HTMLInputElement).value;
 }
 
+function fakeLab2Checkbox() {
+  let listener: ((usesLab2: boolean) => void) | undefined;
+  return {
+    subscribe: (onChange: (usesLab2: boolean) => void) => {
+      listener = onChange;
+      return () => (listener = undefined);
+    },
+    set: (usesLab2: boolean) => act(() => listener?.(usesLab2)),
+  };
+}
+
 describe('EditAilabMode', () => {
+  it('shows the JSON text area when Lab 2 is off', () => {
+    const savedMode = renderEditor('{"hideSave": true}', false);
+    expect(screen.queryByRole('checkbox')).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(/not a valid JSON object/)
+    ).not.toBeInTheDocument();
+
+    fireEvent.change(screen.getByRole('textbox', {name: 'Mode JSON'}), {
+      target: {value: '{"hideSave": false}'},
+    });
+    expect(savedMode()).toBe('{"hideSave": false}');
+  });
+
+  it('switches editors when Lab 2 is toggled, carrying edits across', () => {
+    const lab2 = fakeLab2Checkbox();
+    const savedMode = renderEditor('{"hideSave": true}', false, lab2.subscribe);
+
+    lab2.set(true);
+    fireEvent.click(screen.getByRole('checkbox', {name: 'Zoo Animals (zoo)'}));
+
+    lab2.set(false);
+    expect(
+      JSON.parse(
+        (
+          screen.getByRole('textbox', {
+            name: 'Mode JSON',
+          }) as HTMLTextAreaElement
+        ).value
+      )
+    ).toEqual({hideSave: true, datasets: ['zoo']});
+
+    lab2.set(true);
+    expect(
+      screen.getByRole('checkbox', {name: 'Zoo Animals (zoo)'})
+    ).toBeChecked();
+    expect(JSON.parse(savedMode())).toEqual({
+      hideSave: true,
+      datasets: ['zoo'],
+    });
+  });
+
+  it('lists hideInstructionsOverlay as a key Lab 2 does not use', () => {
+    renderEditor('{"hideInstructionsOverlay": true}');
+    expect(
+      screen.queryByRole('checkbox', {name: /instructions/})
+    ).not.toBeInTheDocument();
+    expect(screen.getByText(/hideInstructionsOverlay/)).toBeInTheDocument();
+  });
+
   it('submits the original string unchanged until a field is edited', () => {
     const original = '{ "hideSave":true }\n  ';
     const savedMode = renderEditor(original);
@@ -119,6 +188,7 @@ describe('EditAilabMode', () => {
     const original = "{'datasets': ['zoo']}";
     const savedMode = renderEditor(original);
     expect(screen.queryByRole('checkbox')).not.toBeInTheDocument();
+    expect(screen.getByText(/not a valid JSON object/)).toBeInTheDocument();
     expect(savedMode()).toBe(original);
   });
 });

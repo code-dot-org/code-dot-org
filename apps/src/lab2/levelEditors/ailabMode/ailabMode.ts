@@ -1,15 +1,15 @@
 /*
-  Reading and writing the AI Lab level "mode" JSON string one key at a time.
-  Keys and values this editor does not understand are carried through
+  Reading and writing the Lab 2 AI Lab level "mode" JSON string one key at a
+  time. Keys and values this editor does not understand are carried through
   untouched, so saving never drops something a level already has.
 */
 
 export type ModeObject = Record<string, unknown>;
 
+// hideInstructionsOverlay is absent: Lab 2 never shows the overlay.
 export type BooleanModeKey =
   | 'hideSelectLabel'
   | 'hideSave'
-  | 'hideInstructionsOverlay'
   | 'randomizeTestData'
   | 'hideColumnClicking';
 
@@ -17,7 +17,6 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
   'hideSave',
   'hideColumnClicking',
-  'hideInstructionsOverlay',
   'randomizeTestData',
 ];
 
