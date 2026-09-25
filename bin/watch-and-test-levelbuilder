@@ -4,6 +4,7 @@ require 'cdo/only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../tools/hooks/hooks_utils'
+require 'cdo/content_push'
 require 'time'
 
 REPO_DIR = File.expand_path('../../', __FILE__).freeze
@@ -51,5 +52,6 @@ system "echo #{Time.now} > #{LEVELBUILDER_CI_LAST_RUN_FILENAME}" if test_result
 puts "Ran tests, result was #{test_result}"
 
 if test_result
-  puts `./bin/content-push -n "Levelbuilder autocommits" -f`
+  success = ContentPush.commit_and_push('Levelbuilder autocommits')
+  puts "Content push result: #{success ? 'success' : 'failure'}"
 end
