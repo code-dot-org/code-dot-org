@@ -28,14 +28,14 @@ const QUESTION: QuizBuilderQuestion = {
 function renderCard(
   props: Partial<React.ComponentProps<typeof QuizQuestionCard>> = {}
 ) {
-  const onUpdate = jest.fn().mockResolvedValue(QUESTION.id);
+  const onSave = jest.fn().mockResolvedValue(QUESTION.id);
   const onRemove = jest.fn().mockResolvedValue(true);
   const Wrapper = () => {
     const [isExpanded, setIsExpanded] = useState(props.isExpanded ?? false);
     return (
       <QuizQuestionCard
         question={QUESTION}
-        onUpdate={onUpdate}
+        onSave={onSave}
         onRemove={onRemove}
         {...props}
         isExpanded={isExpanded}
@@ -44,7 +44,7 @@ function renderCard(
     );
   };
   const utils = render(<Wrapper />);
-  return {...utils, onUpdate, onRemove};
+  return {...utils, onSave, onRemove};
 }
 
 describe('QuizQuestionCard', () => {
@@ -74,7 +74,7 @@ describe('QuizQuestionCard', () => {
   });
 
   it('saves the edited draft and collapses on success', async () => {
-    const {onUpdate} = renderCard({isExpanded: true});
+    const {onSave} = renderCard({isExpanded: true});
 
     fireEvent.change(screen.getByLabelText('Internal name'), {
       target: {value: 'Renamed question'},
@@ -83,7 +83,7 @@ describe('QuizQuestionCard', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Save'}));
     });
 
-    expect(onUpdate).toHaveBeenCalledWith(
+    expect(onSave).toHaveBeenCalledWith(
       7,
       expect.objectContaining({questionName: 'Renamed question'})
     );
@@ -107,14 +107,14 @@ describe('QuizQuestionCard', () => {
   });
 
   it('disables editable fields while a save is in flight', async () => {
-    let resolveUpdate: (id: number) => void = () => {};
-    const onUpdate = jest.fn(
+    let resolveSave: (id: number) => void = () => {};
+    const onSave = jest.fn(
       () =>
         new Promise<number>(resolve => {
-          resolveUpdate = resolve;
+          resolveSave = resolve;
         })
     );
-    renderCard({isExpanded: true, onUpdate});
+    renderCard({isExpanded: true, onSave});
 
     fireEvent.change(screen.getByLabelText('Internal name'), {
       target: {value: 'Something else'},
@@ -124,7 +124,7 @@ describe('QuizQuestionCard', () => {
     expect(screen.getByLabelText('Internal name')).toBeDisabled();
 
     await act(async () => {
-      resolveUpdate(7);
+      resolveSave(7);
     });
   });
 
@@ -163,5 +163,21 @@ describe('QuizQuestionCard', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Remove from quiz'}));
     });
     expect(onRemove).toHaveBeenCalledWith(7);
+  });
+
+  describe('a pending (not yet saved) question', () => {
+    const PENDING_QUESTION: QuizBuilderQuestion = {...QUESTION, id: -1};
+
+    it('enables Save immediately, with nothing edited', () => {
+      renderCard({question: PENDING_QUESTION, isExpanded: true});
+
+      expect(screen.getByRole('button', {name: 'Save'})).toBeEnabled();
+    });
+
+    it('shows the unsaved-changes badge immediately, with nothing edited', () => {
+      renderCard({question: PENDING_QUESTION, isExpanded: true});
+
+      expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
+    });
   });
 });

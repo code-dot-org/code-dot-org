@@ -1,9 +1,10 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
+  isPendingQuestionId,
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
   QuizQuestionEditableFields,
@@ -27,8 +28,11 @@ export default function useQuizBuilderQuestions(
 ): QuizBuilderQuestionsState {
   const [questions, setQuestions] = useState<QuizBuilderQuestion[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isCreating, setIsCreating] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Ids handed to locally-created, not-yet-saved questions - see
+  // isPendingQuestionId. Decrementing keeps them distinct from each other
+  // and from any real (positive) server id.
+  const nextPendingId = useRef(-1);
   // null for load/create, which can't fail because of anything about an
   // existing question - a caller uses this to tell a general error (show
   // it once, globally) from one that belongs on a specific question's card.
@@ -55,47 +59,52 @@ export default function useQuizBuilderQuestions(
     load();
   }, [load]);
 
-  const createQuestion = useCallback(async () => {
-    setIsCreating(true);
-    setError(null);
-    setErrorQuestionId(null);
-    try {
-      const response = await HttpClient.post(
-        `/levels/${levelId}/quiz_question_placements`,
-        JSON.stringify(NEW_QUESTION_DEFAULTS),
-        true,
-        {'Content-Type': 'application/json'}
-      );
-      const created: QuizBuilderQuestion = await response.json();
-      setQuestions(prev => [...prev, created]);
-      return created.id;
-    } catch (e) {
-      setError(await networkErrorMessage(e));
-      return undefined;
-    } finally {
-      setIsCreating(false);
-    }
-  }, [levelId]);
+  const addPendingQuestion = useCallback(() => {
+    const id = nextPendingId.current--;
+    setQuestions(prev => [
+      ...prev,
+      {
+        id,
+        type: 'MultipleChoiceQuestion',
+        ...NEW_QUESTION_DEFAULTS,
+        explanation: null,
+        standards: [],
+        attachedToOtherQuizzes: false,
+        usedInPublishedUnit: false,
+        page: 1,
+      },
+    ]);
+    return id;
+  }, []);
 
   // Resolves with the saved question's id, which may differ from the one
-  // passed in - QuizQuestionsController#update forks a question that's
-  // used in a published unit rather than editing it in place.
-  const updateQuestion = useCallback(
+  // passed in: a pending question (see isPendingQuestionId) is created
+  // server-side on its first save, and QuizQuestionsController#update
+  // forks a question that's used in a published unit rather than editing
+  // it in place.
+  const saveQuestion = useCallback(
     async (id: number, payload: QuizQuestionEditableFields) => {
       setError(null);
       setErrorQuestionId(null);
       try {
-        const response = await HttpClient.put(
-          `/quiz_questions/${id}?quizLevelId=${levelId}`,
-          JSON.stringify(payload),
-          true,
-          {'Content-Type': 'application/json'}
-        );
-        const updated: QuizBuilderQuestion = await response.json();
+        const response = isPendingQuestionId(id)
+          ? await HttpClient.post(
+              `/levels/${levelId}/quiz_question_placements`,
+              JSON.stringify({...payload, page: 1}),
+              true,
+              {'Content-Type': 'application/json'}
+            )
+          : await HttpClient.put(
+              `/quiz_questions/${id}?quizLevelId=${levelId}`,
+              JSON.stringify(payload),
+              true,
+              {'Content-Type': 'application/json'}
+            );
+        const saved: QuizBuilderQuestion = await response.json();
         setQuestions(prev =>
-          prev.map(question => (question.id === id ? updated : question))
+          prev.map(question => (question.id === id ? saved : question))
         );
-        return updated.id;
+        return saved.id;
       } catch (e) {
         setError(await networkErrorMessage(e));
         setErrorQuestionId(id);
@@ -105,11 +114,16 @@ export default function useQuizBuilderQuestions(
     [levelId]
   );
 
-  // Detaches the question from this quiz. The endpoint itself decides
-  // whether to also hard-delete the underlying question - it stays in the
-  // bank (and on any other quiz) if something else still references it.
+  // A pending question only exists locally, so removing one is just a
+  // local drop. Otherwise, detaches the question from this quiz - the
+  // endpoint itself decides whether to also hard-delete it, which it
+  // leaves alone if something else still references it.
   const removeQuestion = useCallback(
     async (id: number) => {
+      if (isPendingQuestionId(id)) {
+        setQuestions(prev => prev.filter(question => question.id !== id));
+        return true;
+      }
       setError(null);
       setErrorQuestionId(null);
       try {
@@ -131,11 +145,10 @@ export default function useQuizBuilderQuestions(
   return {
     questions,
     isLoading,
-    isCreating,
     error,
     errorQuestionId,
-    createQuestion,
-    updateQuestion,
+    addPendingQuestion,
+    saveQuestion,
     removeQuestion,
     load,
   };

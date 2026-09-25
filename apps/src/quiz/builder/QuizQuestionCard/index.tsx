@@ -5,7 +5,11 @@ import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import isEqual from 'lodash/isEqual';
 import React, {useEffect, useState} from 'react';
 
-import {QuizBuilderQuestion, QuizQuestionEditableFields} from '../types';
+import {
+  isPendingQuestionId,
+  QuizBuilderQuestion,
+  QuizQuestionEditableFields,
+} from '../types';
 
 import AnswersTab from './AnswersTab';
 import QuestionTab from './QuestionTab';
@@ -18,7 +22,7 @@ interface QuizQuestionCardProps {
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
   error?: string | null;
-  onUpdate: (
+  onSave: (
     id: number,
     payload: QuizQuestionEditableFields
   ) => Promise<number | undefined>;
@@ -45,16 +49,21 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   isExpanded,
   onExpandedChange,
   error,
-  onUpdate,
+  onSave,
   onRemove,
 }) => {
   const [draft, setDraft] = useState(() => toEditableFields(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
-  const isDirty = !isEqual(draft, toEditableFields(question));
+  // A pending question (see isPendingQuestionId) doesn't exist on the
+  // server yet, so it counts as dirty even untouched - otherwise Save
+  // would start out disabled with nothing to enable it.
+  const isDirty =
+    isPendingQuestionId(question.id) ||
+    !isEqual(draft, toEditableFields(question));
 
   // A save can fork the question into a new id (see
-  // useQuizBuilderQuestions#updateQuestion) - resync the draft whenever the
+  // useQuizBuilderQuestions#saveQuestion) - resync the draft whenever the
   // identity of the question this card is editing changes.
   useEffect(() => {
     setDraft(toEditableFields(question));
@@ -62,7 +71,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
 
   const handleSave = async () => {
     setIsSaving(true);
-    const updatedId = await onUpdate(question.id, draft);
+    const updatedId = await onSave(question.id, draft);
     setIsSaving(false);
     if (updatedId !== undefined) {
       onExpandedChange(false);

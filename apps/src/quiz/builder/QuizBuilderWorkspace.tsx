@@ -21,11 +21,10 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const {
     questions,
     isLoading,
-    isCreating,
     error,
     errorQuestionId,
-    createQuestion,
-    updateQuestion,
+    addPendingQuestion,
+    saveQuestion,
     removeQuestion,
   } = useQuizBuilderQuestions(levelId);
   // Only one card is expanded at a time - opening one collapses whichever
@@ -33,11 +32,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   // into editing.
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
-  const handleCreate = async () => {
-    const id = await createQuestion();
-    if (id !== undefined) {
-      setExpandedId(id);
-    }
+  const handleCreate = () => {
+    setExpandedId(addPendingQuestion());
   };
 
   let outline: React.ReactNode;
@@ -59,7 +55,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                 setExpandedId(expanded ? question.id : null)
               }
               error={question.id === errorQuestionId ? error : null}
-              onUpdate={updateQuestion}
+              onSave={saveQuestion}
               onRemove={removeQuestion}
             />
           </li>
@@ -94,8 +90,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           variant="contained"
           color="primary"
           type="button"
-          loading={isCreating}
-          disabled={isLoading || isCreating}
+          disabled={isLoading}
           onClick={handleCreate}
         >
           + Create question
