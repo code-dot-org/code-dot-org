@@ -1,0 +1,32 @@
+.playButton {
+  /* WCAG 2.2 SC 2.5.8 wants a 24x24 CSS px target. The button carries no
+     padding (it is an inline affordance, not a standalone control), so the
+     minimum is set here rather than left to the glyph's own size. */
+  min-block-size: 24px;
+  min-inline-size: 24px;
+  bottom: 0.5rem;
+  color: var(--text-primary-gray);
+  inset-inline-end: 0.5rem;
+  opacity: 35%;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+.playButtonHigherPosition {
+  bottom: 58px;
+}
+
+.playButtonPlaying,
+.playButton:hover {
+  opacity: 100%;
+}
+
+.icon {
+  /* Fixed-width, centered glyph (FontAwesome fa-fw style) so the button width
+     stays consistent between the volume and stop icons, whose glyphs differ in
+     width. */
+  display: inline-block;
+  font-size: 0.9375rem;
+  text-align: center;
+  width: 1.25em;
+}

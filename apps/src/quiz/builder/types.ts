@@ -49,6 +49,10 @@ export interface QuizBuilderQuestionsState {
   isLoading: boolean;
   isCreating: boolean;
   error: string | null;
+  // The question `error` is about, or null for a load/create failure -
+  // general, not about any existing question. A caller uses this to show
+  // the error on that question's card instead of globally.
+  errorQuestionId: number | null;
   // Resolves with the created question's id on success, undefined on
   // failure (with `error` set).
   createQuestion: () => Promise<number | undefined>;

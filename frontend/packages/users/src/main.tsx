@@ -11,7 +11,10 @@ import {CssBaseline, ThemeProvider} from '@mui/material';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
+import {
+  getMuiThemeForBrand,
+  resolveBrand,
+} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {QueryClientProvider} from '@code-dot-org/core/api';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
@@ -111,8 +114,9 @@ await bootMocks(scenario);
 // In studio, Rails puts data-brand on <html> and the app reads it; nothing sets
 // it here, so default to the brand production defaults to. `?brand=` overrides
 // it for a side-by-side against the legacy tokens.
-const brand =
-  new URLSearchParams(window.location.search).get('brand') ?? 'codeai-next';
+const brand = resolveBrand(
+  new URLSearchParams(window.location.search).get('brand'),
+);
 document.documentElement.dataset.brand = brand;
 
 createRoot(document.getElementById('root')!).render(

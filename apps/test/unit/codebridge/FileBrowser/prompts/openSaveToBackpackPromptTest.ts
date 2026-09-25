@@ -288,7 +288,7 @@ describe('openSaveToBackpackPrompt', () => {
       expect(toastMock.mock.calls).toEqual([
         [
           'Saving project_file.py to your Backpack...',
-          expect.objectContaining({type: 'info', autoHideDuration: null}),
+          expect.objectContaining({type: 'gray', autoHideDuration: null}),
         ],
         [
           'project_file.py saved to your Backpack.',

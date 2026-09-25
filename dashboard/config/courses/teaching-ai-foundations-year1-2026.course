@@ -1,0 +1,51 @@
+{
+  "name": "teaching-ai-foundations-year1-2026",
+  "script_names": [
+    "self-paced-pl-intro-to-teaching-exploring-ai-computing-2026",
+    "self-paced-pl-teaching-problem-solving-with-ai-2026",
+    "self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026",
+    "self-paced-pl-teaching-fabric-of-the-internet-2026",
+    "self-paced-pl-teaching-ai-powered-threats-and-defenses-2026",
+    "self-paced-pl-teaching-insights-from-data-and-ai-2026",
+    "self-paced-pl-intro-to-designing-and-building-with-ai-2026",
+    "self-paced-pl-teaching-ai-generated-design-2026",
+    "self-paced-pl-teaching-ai-algorithmic-decisions-2026",
+    "self-paced-pl-teaching-data-driven-systems-2026",
+    "self-paced-pl-teaching-iterating-with-ai-2026",
+    "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+    "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026"
+  ],
+  "unit_prefixes": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "0",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-ai-foundations-year1",
+    "numbered_units": "custom",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -253,11 +253,11 @@ test.describe('Looking at a few things with Applitools Eyes', () => {
       mask: [starWars.visualization],
     });
 
-    await starWars.showCodeHeader.click();
+    await starWars.showCode();
 
     await waitForVisualStability(page);
     await visualCheck('star-wars-rtl-text-mode', {
-      mask: [starWars.visualization],
+      mask: [starWars.visualization, starWars.codeEditorCursor],
     });
   });
 });

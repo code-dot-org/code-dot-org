@@ -1,0 +1,847 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-09-25T01:59:12.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "3175c1b4-9c2f-42f8-b0af-00f42b6f0be1",
+            "type": "group",
+            "position": {
+              "x": -87.89426701190513,
+              "y": -93.30463634879982
+            },
+            "width": 967,
+            "height": 119,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 967,
+              "height": 119
+            },
+            "dragging": false
+          },
+          {
+            "id": "6a2baa16-14e4-4c12-aee9-88896e5a0e36",
+            "type": "group",
+            "position": {
+              "x": 1403.5165316421771,
+              "y": 93.74492302493076
+            },
+            "width": 808.4598439388578,
+            "height": 613.8824260078338,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 808,
+              "height": 614
+            }
+          },
+          {
+            "id": "4db09bb8-da0e-4053-a1e9-52a5ed6865a3",
+            "type": "group",
+            "position": {
+              "x": 911.7850158164227,
+              "y": 93.74492302493087
+            },
+            "width": 426.576314040086,
+            "height": 613.882426007834,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 427,
+              "height": 614
+            }
+          },
+          {
+            "id": "08d4ccb7-b638-43de-8570-a7c25be97aec",
+            "type": "group",
+            "position": {
+              "x": 415.07749791614765,
+              "y": 92.28622322380585
+            },
+            "width": 426.5763140400861,
+            "height": 613.882426007834,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 427,
+              "height": 614
+            }
+          },
+          {
+            "id": "09c20571-fdab-4d50-ace5-293c842f5078",
+            "type": "group",
+            "position": {
+              "x": -84.57844099195117,
+              "y": 92.30179738207653
+            },
+            "width": 426.5763140400861,
+            "height": 613.6625598818706,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 427,
+              "height": 614
+            }
+          },
+          {
+            "id": "aaddbc44-603a-4b15-ab0f-2b17fb701f68",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#8f8f8f",
+              "backgroundColor": "#e9f4ff"
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 406.5763140400861,
+            "height": 593.6625598818706,
+            "measured": {
+              "width": 407,
+              "height": 594
+            },
+            "dragging": false,
+            "parentId": "09c20571-fdab-4d50-ace5-293c842f5078",
+            "expandParent": true
+          },
+          {
+            "id": "8a786890-1fa5-4b88-8495-813a238ef3f8",
+            "type": "text",
+            "data": {
+              "text": "Inputs",
+              "strokeColor": "transparent",
+              "fontSize": 40,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 25.05200946125347,
+              "y": 29.303732634192926
+            },
+            "width": 160,
+            "height": 40,
+            "measured": {
+              "width": 160,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "09c20571-fdab-4d50-ace5-293c842f5078",
+            "expandParent": true
+          },
+          {
+            "id": "615465fe-2607-41ac-8b6a-62772d31d733",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#8f8f8f",
+              "backgroundColor": "#e9f6ed"
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 406.5763140400861,
+            "height": 593.8824260078339,
+            "measured": {
+              "width": 407,
+              "height": 594
+            },
+            "dragging": false,
+            "parentId": "08d4ccb7-b638-43de-8570-a7c25be97aec",
+            "expandParent": true
+          },
+          {
+            "id": "dcc581fd-8a00-45c0-b0e8-dab2812b87a8",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#8f8f8f",
+              "backgroundColor": "#f3e8ff"
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 406.5763140400861,
+            "height": 593.8824260078339,
+            "measured": {
+              "width": 407,
+              "height": 594
+            },
+            "dragging": false,
+            "parentId": "4db09bb8-da0e-4053-a1e9-52a5ed6865a3",
+            "expandParent": true
+          },
+          {
+            "id": "9b80b66c-a459-471c-b84a-01164828b08e",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#8f8f8f",
+              "backgroundColor": "#fff8ef"
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 788.4598439388578,
+            "height": 593.8824260078339,
+            "measured": {
+              "width": 788,
+              "height": 594
+            },
+            "dragging": false,
+            "parentId": "6a2baa16-14e4-4c12-aee9-88896e5a0e36",
+            "expandParent": true
+          },
+          {
+            "id": "a1c49ed4-2684-4eb6-a2ce-1038dbebc82e",
+            "type": "text",
+            "data": {
+              "text": "Storage",
+              "strokeColor": "transparent",
+              "fontSize": 40,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 26.051036214740634,
+              "y": 29.178754425476484
+            },
+            "width": 181.0166077551512,
+            "height": 40,
+            "measured": {
+              "width": 181,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "08d4ccb7-b638-43de-8570-a7c25be97aec",
+            "expandParent": true
+          },
+          {
+            "id": "229ebae6-89ed-46fb-927b-6293d6945f19",
+            "type": "text",
+            "data": {
+              "text": "Processing",
+              "strokeColor": "transparent",
+              "fontSize": 40,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 21.78885877655864,
+              "y": 26.669361377503833
+            },
+            "width": 240.90699131994643,
+            "height": 40,
+            "measured": {
+              "width": 241,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "4db09bb8-da0e-4053-a1e9-52a5ed6865a3",
+            "expandParent": true
+          },
+          {
+            "id": "9ea360e8-e570-4912-9994-ea3441316617",
+            "type": "text",
+            "data": {
+              "text": "Output",
+              "strokeColor": "transparent",
+              "fontSize": 40,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 24.397487136670406,
+              "y": 26.271549454782246
+            },
+            "width": 240.90699131994643,
+            "height": 40,
+            "measured": {
+              "width": 241,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6a2baa16-14e4-4c12-aee9-88896e5a0e36",
+            "expandParent": true
+          },
+          {
+            "id": "eb760e2e-93ff-4fb5-87d2-d6151a0d43c1",
+            "type": "text",
+            "data": {
+              "text": "What the app takes in",
+              "strokeColor": "transparent",
+              "textAlign": "left",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 28.95728044594972,
+              "y": 77.53726152403485
+            },
+            "width": 243.35703705615316,
+            "height": 40,
+            "measured": {
+              "width": 243,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "09c20571-fdab-4d50-ace5-293c842f5078",
+            "expandParent": true
+          },
+          {
+            "id": "0d22facb-f4a6-4eae-a3a1-1c59fa5e1bc3",
+            "type": "text",
+            "data": {
+              "text": "What the app saves",
+              "strokeColor": "transparent",
+              "textAlign": "left",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 29.248781638652872,
+              "y": 74.27864020683941
+            },
+            "width": 243.35703705615316,
+            "height": 40,
+            "measured": {
+              "width": 243,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "08d4ccb7-b638-43de-8570-a7c25be97aec",
+            "expandParent": true
+          },
+          {
+            "id": "b68168f2-361b-4bd4-849f-ed1574e6cbdb",
+            "type": "text",
+            "data": {
+              "text": "What the app does",
+              "strokeColor": "transparent",
+              "textAlign": "left",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 26.358976435224577,
+              "y": 74.8437834905375
+            },
+            "width": 243.35703705615316,
+            "height": 40,
+            "measured": {
+              "width": 243,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "4db09bb8-da0e-4053-a1e9-52a5ed6865a3",
+            "expandParent": true
+          },
+          {
+            "id": "43ed50d0-88d2-48a1-8c9a-53f30e57edf9",
+            "type": "text",
+            "data": {
+              "text": "What the app produces",
+              "strokeColor": "transparent",
+              "textAlign": "left",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 26.421330221493918,
+              "y": 70.79609732089133
+            },
+            "width": 287.54954816615856,
+            "height": 40,
+            "measured": {
+              "width": 288,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6a2baa16-14e4-4c12-aee9-88896e5a0e36",
+            "expandParent": true
+          },
+          {
+            "id": "930d0aaa-7757-4655-ac34-be8bea62f436",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f5faff",
+              "strokeColor": "#c4c4c4"
+            },
+            "position": {
+              "x": 33.7641499201046,
+              "y": 130.79173946546382
+            },
+            "width": 355.8087016420886,
+            "height": 447.72460915258796,
+            "measured": {
+              "width": 356,
+              "height": 448
+            },
+            "dragging": false,
+            "parentId": "09c20571-fdab-4d50-ace5-293c842f5078",
+            "expandParent": true
+          },
+          {
+            "id": "44e28272-a84e-4b3c-9d27-bc503cd00e76",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fafafa",
+              "strokeColor": "#c4c4c4"
+            },
+            "position": {
+              "x": 35.0324655160253,
+              "y": 128.71221682908947
+            },
+            "width": 355.8087016420886,
+            "height": 447.72460915258796,
+            "measured": {
+              "width": 356,
+              "height": 448
+            },
+            "dragging": false,
+            "parentId": "08d4ccb7-b638-43de-8570-a7c25be97aec",
+            "expandParent": true
+          },
+          {
+            "id": "77b8284c-0bea-4b6d-9d1b-9db93b1b1270",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f9f7ff",
+              "strokeColor": "#c4c4c4"
+            },
+            "position": {
+              "x": 36.69926494850938,
+              "y": 129.4984463853192
+            },
+            "width": 355.8087016420886,
+            "height": 447.72460915258796,
+            "measured": {
+              "width": 356,
+              "height": 448
+            },
+            "dragging": false,
+            "parentId": "4db09bb8-da0e-4053-a1e9-52a5ed6865a3",
+            "expandParent": true
+          },
+          {
+            "id": "effc1cd5-e57f-47fc-bf6e-2f4be490f319",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f7f7f7",
+              "strokeColor": "#c4c4c4"
+            },
+            "position": {
+              "x": 34.36234902609499,
+              "y": 127.2535170279645
+            },
+            "width": 355.8087016420886,
+            "height": 447.72460915258796,
+            "measured": {
+              "width": 356,
+              "height": 448
+            },
+            "dragging": false,
+            "parentId": "6a2baa16-14e4-4c12-aee9-88896e5a0e36",
+            "expandParent": true
+          },
+          {
+            "id": "30cad81a-2f72-415a-b8cb-a546c0fb1d9f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#f7f7f7",
+              "strokeColor": "#c4c4c4"
+            },
+            "position": {
+              "x": 418.245269133761,
+              "y": 125.00858767060976
+            },
+            "width": 355.8087016420886,
+            "height": 447.72460915258796,
+            "measured": {
+              "width": 356,
+              "height": 448
+            },
+            "dragging": false,
+            "parentId": "6a2baa16-14e4-4c12-aee9-88896e5a0e36",
+            "expandParent": true
+          },
+          {
+            "id": "3c7a99da-6580-4b25-a526-5d21ef42853c",
+            "type": "text",
+            "data": {
+              "text": "Sending a text",
+              "strokeColor": "transparent",
+              "fontSize": 60,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 10,
+              "y": 10
+            },
+            "width": 461.05748848255416,
+            "height": 40,
+            "measured": {
+              "width": 461,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "3175c1b4-9c2f-42f8-b0af-00f42b6f0be1",
+            "expandParent": true
+          },
+          {
+            "id": "f15dff1f-45a1-4a3c-9d0e-325e5c290ff0",
+            "type": "text",
+            "data": {
+              "text": "Scenario: Sending a text and seeing \"Delivered\"",
+              "strokeColor": "transparent",
+              "fontSize": 35,
+              "textAlign": "left",
+              "fontColor": "#979595"
+            },
+            "position": {
+              "x": 10.093271253637681,
+              "y": 69.27618870583913
+            },
+            "width": 954.6412919400625,
+            "height": 40,
+            "measured": {
+              "width": 955,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "3175c1b4-9c2f-42f8-b0af-00f42b6f0be1",
+            "expandParent": true
+          },
+          {
+            "id": "93b702cf-ee3f-41dd-b90e-009e4a567e9f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#b3b3b3",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": -85.20067328552273,
+              "y": 794.920880373423
+            },
+            "width": 2288.5028984341384,
+            "height": 413.25240074617534,
+            "measured": {
+              "width": 2289,
+              "height": 413
+            },
+            "dragging": false
+          },
+          {
+            "id": "e5ced72a-4932-4389-80e1-e2b59cf5c5b0",
+            "type": "text",
+            "data": {
+              "text": "Drag cards into the ISPO zones. Fill in the blank cards for any miss action.",
+              "strokeColor": "transparent",
+              "fontSize": 40,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -71.28726153598018,
+              "y": 805.202388751649
+            },
+            "width": 1536.6148391621857,
+            "height": 84.07365242614264,
+            "measured": {
+              "width": 1537,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "720bad65-4d6c-4ea7-a4e3-c675f79f40a5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The app checks for an internet connection.",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -41.225147076817194,
+              "y": 906.9369747113051
+            },
+            "width": 372.7103357194436,
+            "height": 120,
+            "measured": {
+              "width": 373,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "0848df41-d226-45fb-a8ce-0a5c01937fab",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The phone adds the time the message was sent.",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -42.36754872976212,
+              "y": 1050.6724444756128
+            },
+            "width": 374.16537789410984,
+            "height": 120,
+            "measured": {
+              "width": 374,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "00da5377-2a0c-4cb0-ae21-e1fbfb199669",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User types \"On my way!\" \nand tap Send.",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 429.6555739708026,
+              "y": 908.8712594668012
+            },
+            "width": 368.22279792538393,
+            "height": 120,
+            "measured": {
+              "width": 368,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4de1082a-cc3a-44ce-b46e-8ef5f414bb78",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "A \"Delivered\" checkmark appears.",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 429.6555739708026,
+              "y": 1052.6149264620349
+            },
+            "width": 368.22279792538393,
+            "height": 120,
+            "measured": {
+              "width": 368,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "74fb16d7-e09a-45cd-8b11-b05e7693cc97",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "The message is saved in the users conversation.",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 900.8996757333622,
+              "y": 907.7741288720991
+            },
+            "width": 390.8899178778463,
+            "height": 120,
+            "measured": {
+              "width": 391,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "83815ad6-4838-4a01-bea9-4885952644c8",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Fill in the card: What does the app save or remember?",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "strokeColor": "#adadad",
+              "fontColor": "#adadad"
+            },
+            "position": {
+              "x": 900.8996757333621,
+              "y": 1052.3810074719986
+            },
+            "width": 393.9904111800315,
+            "height": 120,
+            "measured": {
+              "width": 394,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d1273ae5-8e85-4e57-9298-6f6c88fde9cb",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Fill in the card: What does the app do with the information?",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "strokeColor": "#b6adae",
+              "fontColor": "#adadad"
+            },
+            "position": {
+              "x": 1390.4470045498645,
+              "y": 909.702918216591
+            },
+            "width": 427.68692208928974,
+            "height": 120,
+            "measured": {
+              "width": 428,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "ba655543-2859-4e0a-a850-d3759da116b2",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Fill in the card: What happens that the user never sees?",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "strokeColor": "#b6adae",
+              "fontColor": "#adadad"
+            },
+            "position": {
+              "x": 1387.5386071146756,
+              "y": 1052.214392540844
+            },
+            "width": 427.68692208928974,
+            "height": 120,
+            "measured": {
+              "width": 428,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "5954007e-afd8-4b40-b486-f879295e0bab",
+            "type": "text",
+            "data": {
+              "text": "Visible",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 1437.632093710154,
+              "y": 230.49695654567364
+            },
+            "width": 353.0148604576989,
+            "height": 40,
+            "measured": {
+              "width": 353,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "9a55e429-8d12-4ae9-953c-c3446712fe2a",
+            "type": "text",
+            "data": {
+              "text": "Hidden",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "fontColor": "#9d1010"
+            },
+            "position": {
+              "x": 1823.3627079848184,
+              "y": 231.1345464958137
+            },
+            "width": 353.0148604576989,
+            "height": 40,
+            "measured": {
+              "width": 353,
+              "height": 40
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 147.0125241516783,
+          "y": 109.23039040158528,
+          "zoom": 0.3948093746288266
+        }
+      }
+    },
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "0c87142d-4b61-435d-a3f2-27cceae969e3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/csp_unit1_lesson3_sketchlab3_dev_27_28/uuid/4d969d94-973c-4849-8479-0868e9d0cf18.png",
+              "altText": ""
+            },
+            "position": {
+              "x": -200.10667302037302,
+              "y": -30.450352316240526
+            },
+            "width": 1370.1068746138121,
+            "height": 676.1729242544021,
+            "measured": {
+              "width": 1370,
+              "height": 676
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 241.24658915887397,
+          "y": 72.43949701617751,
+          "zoom": 0.6558563269490421
+        }
+      }
+    },
+    "long_instructions": "## **Sending a Text**\r\n\r\n1. Sort the starter cards into the ISPO stages.\r\n\r\n2. Blank cards are optional. Use them if you want to add a missing step, like something the app saves, processes, or does behind the scenes.\r\n\r\n3. **Stuck?** Ask: What happens before the “Delivered” checkmark appears? What might the app remember later?\r\n",
+    "display_name": "Sending a Text",
+    "bubble_choice_description": "Trace what happens when a message is sent and marked Delivered.",
+    "thumbnail_url": "https://images.code.org/e5f0dd517345e52e11bd999e0b17aae1-choice-realistic-sending-text.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-25T01:59:11.993+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson3_sketchlab2_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson3_sketchlab2_dev_27_28\"},{\"changed_at\":\"2026-09-25 01:59:18 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-25 02:36:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-25 03:26:21 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-25 03:28:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-25 03:28:19 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-25 03:51:16 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Sketchlab>

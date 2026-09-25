@@ -1,0 +1,33 @@
+// Styles more than one adaptive view uses.
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.muted {
+  color: var(--text-neutral-secondary);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--background-neutral-primary);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 6%);
+}
+
+.plainList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
