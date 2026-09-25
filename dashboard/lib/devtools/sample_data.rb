@@ -1,5 +1,7 @@
 class SampleData
-  include FactoryBot::Syntax::Methods
+  # SampleData.seed uses class methods (self.*), so FactoryBot helpers must be
+  # available as class methods as well.
+  extend FactoryBot::Syntax::Methods
 
   SAMPLE_TEACHER_EMAIL = 'testteacher@code.org'.freeze
   SAMPLE_TEACHER_PASSWORD = '00secret'.freeze

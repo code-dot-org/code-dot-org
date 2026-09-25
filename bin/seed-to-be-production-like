@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+#
+# Seed BugCrowd/adhoc with security-program data:
+#   - Full production seed data
+#   - SampleData and MegaSection fixtures
+#   - Mock student/teacher/verified-teacher accounts used by pen testing
+#
+# Run from repo root (or from bin/). Uses dashboard/ and RACK_ENV=adhoc.
+# Can take a long time (seed:all is heavy). Continues on per-task failure.
+#
+# See: dashboard/lib/tasks/seed.rake (seed:security_program)
+#
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+DASHBOARD_DIR="$REPO_ROOT/dashboard"
+
+if [[ ! -d "$DASHBOARD_DIR" ]]; then
+  echo "Dashboard dir not found: $DASHBOARD_DIR" >&2
+  exit 1
+fi
+
+export RACK_ENV=adhoc
+
+run_seed() {
+  local task="$1"
+  local label="${2:-$task}"
+  if (cd "$DASHBOARD_DIR" && bundle exec rake "$task"); then
+    echo "[OK] $label"
+    return 0
+  else
+    echo "[FAIL] $label" >&2
+    return 1
+  fi
+}
+
+echo "Seeding security-program data on adhoc (RACK_ENV=adhoc, dashboard=$DASHBOARD_DIR)"
+echo ""
+
+FAILED=0
+
+run_seed "seed:security_program" "seed:security_program (full + security extras)" || FAILED=$((FAILED + 1))
+
+echo ""
+if [[ $FAILED -eq 0 ]]; then
+  echo "All seed tasks completed successfully."
+else
+  echo "$FAILED task(s) failed. See [FAIL] lines above."
+  exit 1
+fi
