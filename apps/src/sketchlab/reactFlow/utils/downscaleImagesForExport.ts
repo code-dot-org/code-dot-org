@@ -15,7 +15,15 @@ const downscaledDataUrl = (
   const boxWidth = image.offsetWidth * outputScale;
   const boxHeight = image.offsetHeight * outputScale;
   const {naturalWidth, naturalHeight} = image;
-  if (!boxWidth || !boxHeight || !naturalWidth || !naturalHeight) {
+  // Only load images that are complete and have non-zero layout and natural sizes.
+  // If we return undefined, html-to-image will fall back to fetching the full file.
+  if (
+    !image.complete ||
+    !boxWidth ||
+    !boxHeight ||
+    !naturalWidth ||
+    !naturalHeight
+  ) {
     return undefined;
   }
 

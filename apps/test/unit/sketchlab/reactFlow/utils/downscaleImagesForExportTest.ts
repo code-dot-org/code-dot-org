@@ -5,19 +5,27 @@ interface ImageDimensions {
   layoutHeight: number;
   naturalWidth: number;
   naturalHeight: number;
+  complete?: boolean;
 }
 
-// jsdom lays nothing out and loads nothing, so both the layout size and the
-// decoded size have to be declared.
+// jsdom lays nothing out and loads nothing, so the layout size, the decoded
+// size and the load state all have to be declared.
 const addImage = (src: string, dimensions: ImageDimensions) => {
   const image = document.createElement('img');
   image.src = src;
-  const {layoutWidth, layoutHeight, naturalWidth, naturalHeight} = dimensions;
+  const {
+    layoutWidth,
+    layoutHeight,
+    naturalWidth,
+    naturalHeight,
+    complete = true,
+  } = dimensions;
   Object.defineProperties(image, {
     offsetWidth: {value: layoutWidth},
     offsetHeight: {value: layoutHeight},
     naturalWidth: {value: naturalWidth},
     naturalHeight: {value: naturalHeight},
+    complete: {value: complete},
   });
   document.body.appendChild(image);
   return image;
@@ -103,6 +111,15 @@ describe('downscaleImagesForExport', () => {
       naturalWidth: 0,
       naturalHeight: 0,
     });
+
+    downscaleImagesForExport(document.body, 1);
+
+    expect(image.src).toContain(source);
+  });
+
+  it('leaves an image whose size is known but pixels are still loading alone', () => {
+    const source = '/v3/assets/channel/downloading.png';
+    const image = addImage(source, {...PHOTO, complete: false});
 
     downscaleImagesForExport(document.body, 1);
 
