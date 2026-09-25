@@ -21,10 +21,10 @@ import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
 import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
 import {
-  CHARACTER_SET_PICTURE_COUNT,
   CharacterSetProgress,
   generateCharacterSet,
 } from '../ai/images/characterSet';
+import {CHARACTER_SET_PICTURE_COUNT} from '../ai/images/characterSetPrompts';
 import {
   ImageAdlibSet,
   bodyPlanFor,

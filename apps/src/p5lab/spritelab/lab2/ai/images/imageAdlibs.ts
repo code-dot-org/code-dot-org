@@ -46,7 +46,7 @@ export function imageAdlibFor(
 }
 
 // A creature option's bodyPlan in the manifest names the stance the
-// character-set prompts are written for (characterSet.ts); a creature
+// character-set prompts are written for (characterSetPrompts.ts); a creature
 // without one, and any typed prompt, is drawn upright.
 const CREATURE_BODY_PLANS = new Map<string, BodyPlan>();
 Object.values(adlibs).forEach(adlib => {

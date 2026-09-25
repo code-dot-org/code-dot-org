@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+
+# This script just ensures that the generated images are square PNGs.
+#
+# You can specify --delete to actually delete the invalid files.
+
+require 'optparse'
+require_relative 'constants'
+require_relative 'image_validation'
+
+# Parse options
+options = {
+  delete: false,
+  filter: '',
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    Validates the generated images produced by the `generate_images` script.
+
+    Options:
+  BANNER
+
+  opts.on('--delete',
+          'Deletes any invalid files. Afterward, run the generate_images script to re-generate them.'
+         ) do |delete|
+           options[:delete] = delete
+         end
+
+  opts.on('-f', '--filter FILTER',
+          'Filters out only adlibs with the given string within their id.',
+         ) do |filter|
+           options[:filter] = filter
+         end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+good = 0
+count = 0
+output_path = File.join(File.dirname(__FILE__), OUTPUT_DIRECTORY)
+Dir.glob(File.join(output_path, '**', '*.png')) do |path|
+  name = path.delete_prefix("#{output_path}/")
+  next unless name.split('/').first.include?(options[:filter])
+
+  error = validate_image path
+
+  # Print result if error
+  if error
+    puts "#{name}: #{error}"
+    if options[:delete]
+      puts "Deleting #{path}"
+      File.delete(path)
+    end
+  else
+    good += 1
+  end
+
+  count += 1
+end
+
+puts "Passed: #{good}/#{count}"
+puts
+puts "Done."
