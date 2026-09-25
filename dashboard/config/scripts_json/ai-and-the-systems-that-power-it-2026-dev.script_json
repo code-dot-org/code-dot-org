@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-23 18:18:55 UTC",
+    "serialized_at": "2026-09-24 23:25:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -671,7 +671,7 @@
       "key": "f4862d9c-8f9f-4e16-915e-1cc8e22ddd42",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -685,7 +685,7 @@
       "key": "4dada319-0093-4926-810a-7572bec347c7",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -704,18 +704,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "308a6025-8c68-476a-9a12-21f5c68d64b3",
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
-      }
-    },
-    {
-      "key": "3fc26492-0beb-4d0d-86c0-b44754ede43e",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e",
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev"
@@ -2236,7 +2224,7 @@
       "key": "abf72d18-0e0c-473b-9cb7-e8b05befa371",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a blank piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of vehicles or pedestrians on the street\n- Audio Data - noise level, types of sounds (car horns, rain, footsteps, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature, rain intensity\n- Text Data - Street signs, billboards, shop names, or license plate numbers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Actions being performed (chopping, stirring, plating)\n- Audio Data - Type of sounds (alarms for timers, equipment hums, verbal orders)\n- Location Data - Movements of staff (areas of the kitchen frequently occupied, paths taken between stations)\n- Environmental Data - Kitchen temperature\n- Biometric Data - Stress indicators (heart rate, hurried movements)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different 10 second scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Number and types of trees, plants, or rocks visible\n- Audio Data - Birdsong frequency and species identification\n- Location Data - Pathways and trails mapped within the scene\n- Environmental Data - Air quality\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n* **Whip Around:** Ask a question with a short response, then go around the room quickly, having each student share one thought, idea, or answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, in the rainy city scenario, they might suggest that the number of vehicles on the street might help city planners identify peak traffic times and design better traffic flow solutions. In the restaurant kitchen scenario, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. In the nature scenario, the temperature or air quality could be tracked over time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n* **Whip Around:** Ask a question with a short response, then go around the room quickly, having each student share one thought, idea, or answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of workers or plates on the counter\n- Audio Data - noise level, types of sounds (voices, dishes, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "abf72d18-0e0c-473b-9cb7-e8b05befa371",
@@ -2247,7 +2235,7 @@
       "key": "32920dc9-3e98-4703-aefc-a47f64e126d8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each group a copy of the Data in Computer Systems activity guide.  \n\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video  \"Intro to Sensors\" (0:17 - 1:22)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:** *What might be an example of a sensor in an everyday object that you are familiar with? What data might it collect?*\n* **Think, Pair, Share:** Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that sensors detect or measure physical properties. Student examples will vary, but some sample responses include the auto-dimming feature of their cell phone screen (light sensor), the way that lights are turned on when you walk into a room (motion sensor), or even when your car tells you that you are almost out of gas (fuel sensor).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point students to the first page in their activity guides. They will use the AI Chat in order to explore several sensors. For each, they should put the sensor name, the data type, a description of what the sensor does, and where it might be used in a computer system or device.\n\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each group a copy of the Data in Computer Systems activity guide.  \n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 and point students to the first page in their activity guide. Students use the app to explore each of the sensors, and what data it collects, and how that data is represented. Students complete the first table of the activity guide by filling in the Type column and the Description of Data Produced column.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "32920dc9-3e98-4703-aefc-a47f64e126d8",
@@ -2258,8 +2246,7 @@
       "key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system.",
-        "progression_name": "Sensors and AI Chatbot"
+        "progression_name": "Exploring Sensors"
       },
       "seeding_key": {
         "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0",
@@ -2270,13 +2257,7 @@
       "key": "ebb79cf2-41a6-4734-be2e-c2d72cebd081",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students lay out the first page of their activity guides on their desks or tables.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 5 minutes, gathering information about sensors that their classmates explored. They should record their findings in the Unit Guide. Note: students should not feel obligated to complete the entire chart; they can always revisit and fill in additional information later. \n\n\n",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Unit Guide can be collected and used to formatively assess the lesson objectives:\n- Describe various types of data \n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which sensor and object produced useful information? Which sensor and object did not produce useful information?*\n* **Popcorn Share:** Ask a question and have students respond one at a time, “popping” in when they have something to share. Continue until a variety of ideas are heard.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for student's ability to correctly identify useful and not useful pairs of sensors and objects in the scene.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 7, Level 2. Students choose a career that interests them each with a unique problem that sensors could be used to solve:\n- Veterinarian: Goats on a farm are getting sick use the Temperature, Position, and Heart Rate sensors\n- Athletic Trainer: Players are cramping near the end of Saturday practice. Use the Heart Rate, Weight, and Position sensors.\n- Agriculture Farmer: Crops in part of a sweet potato field are being destroyed. Use the Sound, Camera, and Weight sensors.\n- Visualization Supervisor:  A digital stunt landing looks too light and floaty. Use the Weight (force plate) and Camera sensors.\n- Pharmacist: A fridge storing insulin gets too warm. Use the Temperature and Camera sensors.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ebb79cf2-41a6-4734-be2e-c2d72cebd081",
@@ -2284,10 +2265,21 @@
       }
     },
     {
-      "key": "89c5c861-1e06-4bac-9415-9ca4ef372185",
+      "key": "6cb750ed-a941-4227-b7f5-3128f6388a06",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the *Empathize with the User* section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the **Define the Data** section of the activity guide. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response in the **Ideate a Solution** section later.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the **Investigate with AI section** of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the Ideate a Solution section of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response.",
+        "progression_name": "Sensors in Careers"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06",
+        "lesson_activity.key": "4dada319-0093-4926-810a-7572bec347c7"
+      }
+    },
+    {
+      "key": "89c5c861-1e06-4bac-9415-9ca4ef372185",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students go to station based on the career they chose in Level 2. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the Data Stations section of their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Use the Stations Teacher Resource to help guide students through investigating the data. Students may suggest the first solution they find for example, the veterinarian: give medicine to the goats with fever, but by using all the data should find a more comprehensive solution.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2304,39 +2296,17 @@
       "key": "cf3afaa4-2a50-4dbd-b47d-c8b3701cce49",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Think of a problem that data could solve relating to an activity or hobby that interests you. What data and sensor might be useful to help solve the problem?\n- **Think-Write-Share:** Give students 30 seconds to think and another 30 seconds to write a response in their Activity Guide. Have them quickly share their thoughts with a partner or a small group.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for student's ability to tie three main components together: sensor type, data collected, and how it solves a problem.\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson."
+            "markdown": "Student responses to the Wrap Up Question in the Activity Guide can be used to assess how well students grasped the concepts of selecting a sensor to record data to solve a problem and which concepts might need further review."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "cf3afaa4-2a50-4dbd-b47d-c8b3701cce49",
         "lesson_activity.key": "308a6025-8c68-476a-9a12-21f5c68d64b3"
-      }
-    },
-    {
-      "key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363",
-      "position": 1,
-      "properties": {
-        "progression_name": "New Progression"
-      },
-      "seeding_key": {
-        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363",
-        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e"
-      }
-    },
-    {
-      "key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd",
-      "position": 2,
-      "properties": {
-        "progression_name": "New Choice Progression"
-      },
-      "seeding_key": {
-        "activity_section.key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd",
-        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e"
       }
     },
     {
@@ -4362,73 +4332,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sensors and AI Chatbot"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level1_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      },
-      "level_keys": [
-        "computer-systems-lesson7-level1_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Sensors and AI Chatbot"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level2_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      },
-      "level_keys": [
-        "computer-systems-lesson7-level2_v3_2026-dev"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": true,
-      "properties": {
-        "progression": "Sensors and AI Chatbot"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level3_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      },
-      "level_keys": [
-        "computer-systems-lesson7-level3_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "New Progression"
+        "progression": "Exploring Sensors"
       },
       "bonus": false,
       "seeding_key": {
@@ -4438,19 +4342,19 @@
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363"
+        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
       },
       "level_keys": [
         "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
       ]
     },
     {
-      "chapter": 30,
-      "position": 5,
+      "chapter": 27,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "New Choice Progression"
+        "progression": "Sensors in Careers"
       },
       "bonus": false,
       "seeding_key": {
@@ -4460,14 +4364,36 @@
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd"
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
       },
       "level_keys": [
         "ai-and-the-systems-that-power-it-lesson7-choice"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Sensors in Careers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson7-level3_v2_2026-dev"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
+      },
+      "level_keys": [
+        "computer-systems-lesson7-level3_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4489,7 +4415,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4511,7 +4437,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4533,7 +4459,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4555,7 +4481,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4577,7 +4503,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4599,7 +4525,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4621,7 +4547,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4643,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4665,7 +4591,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4687,7 +4613,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4709,7 +4635,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4731,7 +4657,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4753,7 +4679,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4775,7 +4701,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4797,7 +4723,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4819,7 +4745,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4841,7 +4767,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4863,7 +4789,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4885,7 +4811,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4907,7 +4833,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4929,7 +4855,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4951,7 +4877,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4973,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4995,7 +4921,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5320,42 +5246,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson7-level1_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level1_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson7-level2_v3_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level2_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson7-level3_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level3_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-and-the-systems-that-power-it-lesson7-exploring-sensors",
         "script_level.level_keys": [
           "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
@@ -5363,7 +5253,7 @@
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363"
+        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
       }
     },
     {
@@ -5375,7 +5265,19 @@
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "60cea0a9-ec01-4ff9-ac81-1e3ffc9e78dd"
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson7-level3_v2_2026-dev",
+        "script_level.level_keys": [
+          "computer-systems-lesson7-level3_v2_2026-dev"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
       }
     },
     {
@@ -5681,17 +5583,17 @@
   ],
   "resources": [
     {
-      "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Dato9dFitzLp4ba51-oy8mAov2HxxqJH9873QlPmUvQ/edit?usp=sharing",
-      "key": "_exemplar_sustainable_systems_project_planning_guide",
+      "name": "7- Data in Computer Systems ",
+      "url": "https://docs.google.com/presentation/d/17hNLHaUAxxLAqIfVFl6h7EbZ7ZLEC_eJ3XLv3-7gzuA/",
+      "key": "7-_data_in_computer_systems",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Exemplar"
+        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
+        "resource.key": "7-_data_in_computer_systems"
       }
     },
     {
@@ -6041,20 +5943,6 @@
       }
     },
     {
-      "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/presentation/d/1bEYain6SyhFHCdeCo6Q_rCw7Ap9yfP6daH36NI-OKyw/edit?usp=sharing",
-      "key": "data_in_computer_systems_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "data_in_computer_systems_1"
-      }
-    },
-    {
       "name": "Guess Who? Device Edition",
       "url": "https://docs.google.com/document/d/1xBBgLEpe3hKKvKMzy45iWkz613d_-UMYi2FftXf8IbU/",
       "key": "guess_who_device_edition",
@@ -6347,9 +6235,9 @@
       }
     },
     {
-      "name": "Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1-bJOm3T_O1e4wljgCmbJFhvnDCoEHeZEV4TgLfHVDrw/edit?usp=sharing",
-      "key": "sustainable_systems_project_planning_guide",
+      "name": "Sustainable Systems Project Activity Guide",
+      "url": "https://docs.google.com/document/d/1XZXgViZ5PZZW1fG8-9srcvg4hiBjk07khpmP8oGfUb0/",
+      "key": "sustainable_systems_project_activity_guide",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
@@ -6357,7 +6245,7 @@
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "sustainable_systems_project_planning_guide"
+        "resource.key": "sustainable_systems_project_activity_guide"
       }
     },
     {
@@ -6371,20 +6259,6 @@
       },
       "seeding_key": {
         "resource.key": "system_diagram_checklist"
-      }
-    },
-    {
-      "name": "System Diagram Template",
-      "url": "https://docs.google.com/presentation/d/1jqzWp8BPkmBwLc-xw3zDUdecHC11J5B98nfqAE0h66A/edit?usp=sharing",
-      "key": "system_diagram_template",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "system_diagram_template"
       }
     },
     {
@@ -6660,12 +6534,6 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 13: Sustainable Systems Project",
         "resource.key": "_exemplar_system_diagram_template"
       }
     },
@@ -6678,19 +6546,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "sustainable_systems_project_planning_guide"
+        "resource.key": "sustainable_systems_project_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "resource.key": "system_diagram_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "system_diagram_template"
       }
     },
     {
@@ -6870,7 +6732,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
+        "resource.key": "7-_data_in_computer_systems"
       }
     },
     {
@@ -6882,19 +6744,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Data in Computer Systems",
         "resource.key": "data_in_computer_systems"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "data_in_computer_systems_1"
       }
     },
     {
