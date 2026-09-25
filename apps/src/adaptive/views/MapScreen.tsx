@@ -8,10 +8,8 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {Channel} from '@cdo/apps/lab2/types';
-
 import {CheckpointStatusMap} from '../progress';
-import {ProjectEdits} from '../project';
+import {usePathwayProject} from '../project/usePathwayProject';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
@@ -29,26 +27,27 @@ const THEME_ITEMS = [
 interface MapScreenProps {
   pathway: Pathway;
   statusMap: CheckpointStatusMap;
-  project: Channel;
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
-  onEditProject: (edits: ProjectEdits) => void;
+  onWorkOnProject: () => void;
   onReset: () => void;
 }
 
 const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   pathway,
   statusMap,
-  project,
   focusId,
   onFocus,
   onStart,
-  onEditProject,
+  onWorkOnProject,
   onReset,
 }) => {
   const {theme, setTheme} = useTheme();
+  // The project manager lives only while the map shows, so it never races a
+  // step's manager on the same channel.
+  const projectState = usePathwayProject(pathway);
   const focused = focusId && pathway.checkpoints.find(c => c.id === focusId);
 
   // A click on the map background while zoomed returns to the full map.
@@ -103,7 +102,11 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             onSelectCheckpoint={onFocus}
           />
         ) : (
-          <ProjectCard project={project} onEditProject={onEditProject} />
+          <ProjectCard
+            pathway={pathway}
+            {...projectState}
+            onWorkOnProject={onWorkOnProject}
+          />
         )}
         <div className={styles.sideFooter}>
           <SimpleDropdown

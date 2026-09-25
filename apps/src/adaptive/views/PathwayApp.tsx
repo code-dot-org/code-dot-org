@@ -1,11 +1,10 @@
-// Chooses which screen to show, the checkpoint map or one checkpoint's
-// steps, and owns the progress they share.
+// Chooses which screen to show: the checkpoint map, one checkpoint's steps,
+// or the project on its own. Owns the progress they share.
 
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import {useProgress} from '../progress';
-import {useProject} from '../project';
-import {Pathway} from '../types';
+import {Checkpoint, Pathway} from '../types';
 
 import MapScreen from './MapScreen';
 import StepPlayer from './steps/StepPlayer';
@@ -14,21 +13,59 @@ import styles from './shared.module.scss';
 
 type View =
   | {kind: 'map'; focusId?: string}
-  | {kind: 'step'; checkpointId: string};
+  | {kind: 'step'; checkpointId: string}
+  | {kind: 'project'};
 
 interface PathwayAppProps {
   pathway: Pathway;
 }
 
+/**
+ * The project as a one-step checkpoint, so the player can open it. The
+ * template level is playable and its channel is the project itself; the
+ * pathway's project brief stands in for the level's own instructions.
+ */
+function projectCheckpoint(pathway: Pathway): Checkpoint {
+  return {
+    id: 'project',
+    title: 'My Project',
+    description: pathway.project.description,
+    steps: [
+      {
+        id: 'project',
+        title: 'Work on my Project',
+        kind: 'level',
+        level: pathway.project.templateLevel,
+        project: true,
+        instructions: pathway.project.description,
+        levelProperties: pathway.project.levelProperties,
+      },
+    ],
+  };
+}
+
 const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({pathway}) => {
   const {statusMap, markStarted, markComplete, reset} = useProgress(pathway);
-  const {project, editProject, reset: resetProject} = useProject(pathway);
   const [view, setView] = useState<View>({kind: 'map'});
-  const checkpointById = (id: string) =>
-    pathway.checkpoints.find(c => c.id === id);
+  const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
 
   const checkpoint =
-    view.kind === 'step' ? checkpointById(view.checkpointId) : undefined;
+    view.kind === 'step'
+      ? pathway.checkpoints.find(c => c.id === view.checkpointId)
+      : undefined;
+
+  if (view.kind === 'project') {
+    return (
+      <div className={styles.app}>
+        <StepPlayer
+          checkpoint={project}
+          finishLabel="Back to map"
+          onExit={() => setView({kind: 'map'})}
+          onFinish={() => setView({kind: 'map'})}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.app}>
@@ -45,17 +82,15 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({pathway}) => {
         <MapScreen
           pathway={pathway}
           statusMap={statusMap}
-          project={project}
           focusId={view.kind === 'map' ? view.focusId : undefined}
           onFocus={focusId => setView({kind: 'map', focusId})}
           onStart={id => {
             markStarted(id);
             setView({kind: 'step', checkpointId: id});
           }}
-          onEditProject={editProject}
+          onWorkOnProject={() => setView({kind: 'project'})}
           onReset={() => {
             reset();
-            resetProject();
             setView({kind: 'map'});
           }}
         />
