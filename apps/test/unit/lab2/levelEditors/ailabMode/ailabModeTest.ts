@@ -1,10 +1,12 @@
 import {
+  getDatasetProblem,
+  getModeSaveError,
+  getSelectedDataset,
   getUnknownKeys,
   isValidModeValue,
   parseMode,
   serializeMode,
   setModeValue,
-  toggleDataset,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
 describe('ailabMode', () => {
@@ -50,7 +52,6 @@ describe('ailabMode', () => {
 
   describe('isValidModeValue', () => {
     it('accepts valid values', () => {
-      expect(isValidModeValue('datasets', ['zoo'])).toBe(true);
       expect(isValidModeValue('trainer', 'decisionTree')).toBe(true);
       expect(isValidModeValue('requireAccuracy', 80)).toBe(true);
       expect(isValidModeValue('hideSave', false)).toBe(true);
@@ -58,7 +59,6 @@ describe('ailabMode', () => {
     });
 
     it('rejects invalid values', () => {
-      expect(isValidModeValue('datasets', 'zoo')).toBe(false);
       expect(isValidModeValue('trainer', 'svm')).toBe(false);
       expect(isValidModeValue('requireAccuracy', '80')).toBe(false);
       expect(isValidModeValue('requireAccuracy', 101)).toBe(false);
@@ -72,23 +72,51 @@ describe('ailabMode', () => {
     ).toEqual(['hideModelCard', 'id']);
   });
 
-  describe('toggleDataset', () => {
-    it('adds and removes a dataset, keeping unrecognized IDs', () => {
-      const added = toggleDataset({datasets: ['nope']}, 'zoo', true);
-      expect(added.datasets).toEqual(['nope', 'zoo']);
-      expect(toggleDataset(added, 'zoo', false).datasets).toEqual(['nope']);
+  describe('dataset selection', () => {
+    const KNOWN = ['zoo', 'heart'];
+
+    it('selects a single known dataset', () => {
+      expect(getSelectedDataset({datasets: ['zoo']}, KNOWN)).toBe('zoo');
+      expect(getDatasetProblem({datasets: ['zoo']}, KNOWN)).toBeNull();
     });
 
-    it('removes the key when the last dataset is removed', () => {
-      expect(toggleDataset({datasets: ['zoo'], a: 1}, 'zoo', false)).toEqual({
-        a: 1,
-      });
+    it('reports a missing dataset', () => {
+      expect(getSelectedDataset({}, KNOWN)).toBeUndefined();
+      expect(getDatasetProblem({}, KNOWN)).toMatch(/Choose a dataset/);
     });
 
-    it('replaces an invalid datasets value', () => {
-      expect(toggleDataset({datasets: 'zoo'}, 'heart', true).datasets).toEqual([
-        'heart',
-      ]);
+    it('reports several datasets', () => {
+      expect(getDatasetProblem({datasets: ['zoo', 'heart']}, KNOWN)).toMatch(
+        /several datasets \(zoo, heart\)/
+      );
+    });
+
+    it('reports an unknown or malformed value', () => {
+      expect(getDatasetProblem({datasets: ['nope']}, KNOWN)).toMatch(
+        /not a known dataset/
+      );
+      expect(getDatasetProblem({datasets: []}, KNOWN)).toMatch(
+        /not a known dataset/
+      );
+      expect(getDatasetProblem({datasets: 'zoo'}, KNOWN)).toMatch(
+        /not a known dataset/
+      );
+    });
+  });
+
+  describe('getModeSaveError', () => {
+    it('allows a mode with one known dataset', () => {
+      expect(getModeSaveError('{"datasets": ["zoo"]}', ['zoo'])).toBeNull();
+    });
+
+    it('blocks a mode without a dataset', () => {
+      expect(getModeSaveError('', ['zoo'])).toMatch(/Choose a dataset/);
+    });
+
+    it('blocks a mode that is not a JSON object', () => {
+      expect(getModeSaveError("{'datasets': ['zoo']}", ['zoo'])).toMatch(
+        /valid JSON object/
+      );
     });
   });
 });

@@ -76,11 +76,6 @@ export function isValidModeValue(key: string, value: unknown): boolean {
   if (value === undefined) {
     return true;
   }
-  if (key === 'datasets') {
-    return (
-      Array.isArray(value) && value.every(item => typeof item === 'string')
-    );
-  }
   if (key === 'trainer') {
     return typeof value === 'string' && TRAINER_FAMILIES.includes(value);
   }
@@ -102,16 +97,48 @@ export function isValidAccuracy(value: unknown): boolean {
   );
 }
 
-// Adds or removes one dataset, keeping any IDs the editor does not recognize.
-export function toggleDataset(
+export function getSelectedDataset(
   mode: ModeObject,
-  datasetId: string,
-  selected: boolean
-): ModeObject {
-  const current = isValidModeValue('datasets', mode.datasets)
-    ? (mode.datasets as string[] | undefined) ?? []
-    : [];
-  const withoutDataset = current.filter(id => id !== datasetId);
-  const datasets = selected ? [...withoutDataset, datasetId] : withoutDataset;
-  return setModeValue(mode, 'datasets', datasets.length ? datasets : undefined);
+  knownDatasetIds: string[]
+): string | undefined {
+  const datasets = mode.datasets;
+  return Array.isArray(datasets) &&
+    datasets.length === 1 &&
+    knownDatasetIds.includes(datasets[0])
+    ? datasets[0]
+    : undefined;
+}
+
+// Returns why the mode does not name exactly one known dataset, or null if it does.
+export function getDatasetProblem(
+  mode: ModeObject,
+  knownDatasetIds: string[]
+): string | null {
+  if (getSelectedDataset(mode, knownDatasetIds)) {
+    return null;
+  }
+  const datasets = mode.datasets;
+  if (datasets === undefined) {
+    return 'Choose a dataset. The level cannot be saved without one.';
+  }
+  if (Array.isArray(datasets) && datasets.length > 1) {
+    return `This level lists several datasets (${datasets.join(
+      ', '
+    )}). Choose one; the others will be removed.`;
+  }
+  return `The saved value ${JSON.stringify(
+    datasets
+  )} is not a known dataset. Choose a dataset.`;
+}
+
+// Returns why a Lab 2 level cannot be saved with this mode, or null if it can.
+export function getModeSaveError(
+  rawMode: string,
+  knownDatasetIds: string[]
+): string | null {
+  const mode = parseMode(rawMode);
+  if (!mode) {
+    return 'Mode must be a valid JSON object.';
+  }
+  return getDatasetProblem(mode, knownDatasetIds);
 }

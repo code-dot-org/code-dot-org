@@ -1,17 +1,19 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import {
   BooleanModeKey,
+  getDatasetProblem,
+  getSelectedDataset,
   getUnknownKeys,
   isValidAccuracy,
   isValidModeValue,
   ModeObject,
   setModeValue,
-  toggleDataset,
 } from './ailabMode';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
@@ -69,28 +71,24 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       </Typography>
     );
 
-  const selectedDatasetIds = isValidModeValue('datasets', mode.datasets)
-    ? (mode.datasets as string[] | undefined) ?? []
-    : [];
   const knownDatasetIds = datasets.map(dataset => dataset.id);
-  const unrecognizedDatasetIds = selectedDatasetIds.filter(
-    id => !knownDatasetIds.includes(id)
-  );
-  // AI Lab offers upload only when the datasets key is absent; [] hides it.
-  const csvUploadLocked = selectedDatasetIds.length > 0;
+  const selectedDataset = getSelectedDataset(mode, knownDatasetIds);
+  const datasetProblem = getDatasetProblem(mode, knownDatasetIds);
 
+  // One radio name across both groups, so they form a single selection.
   const renderDatasetGroup = (legend: string, group: AilabDataset[]) => (
     <fieldset className={moduleStyles.datasetGroup}>
       <legend className={moduleStyles.label}>{legend}</legend>
       <div className={moduleStyles.datasetList}>
         {group.map(dataset => (
-          <Checkbox
+          <RadioButton
             key={dataset.id}
-            name={`ailab_mode_dataset_${dataset.id}`}
+            name="ailab_mode_dataset"
+            value={dataset.id}
             label={`${dataset.name} (${dataset.id})`}
-            checked={selectedDatasetIds.includes(dataset.id)}
-            onChange={e =>
-              onChange(toggleDataset(mode, dataset.id, e.target.checked))
+            checked={selectedDataset === dataset.id}
+            onChange={() =>
+              onChange(setModeValue(mode, 'datasets', [dataset.id]))
             }
             size="s"
           />
@@ -135,18 +133,14 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     <div>
       <div className={moduleStyles.fieldArea}>
         <Typography variant="body2" className={moduleStyles.label}>
-          Datasets
+          Dataset (required)
         </Typography>
         <Typography variant="body4" className={moduleStyles.descriptionText}>
-          None selected: students choose from all regular datasets. One
-          selected: it loads right away and dataset selection is skipped. Two or
-          more: students choose among them.
+          Students start with this dataset loaded.
         </Typography>
-        {invalidValueNote('datasets')}
-        {unrecognizedDatasetIds.length > 0 && (
+        {datasetProblem && (
           <Typography variant="body4" className={moduleStyles.warningText}>
-            Unrecognized dataset IDs, kept as-is:{' '}
-            {unrecognizedDatasetIds.join(', ')}
+            {datasetProblem}
           </Typography>
         )}
         {renderDatasetGroup(
@@ -154,25 +148,8 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           datasets.filter(dataset => !dataset.isToy)
         )}
         {renderDatasetGroup(
-          'Toy datasets (only offered when selected here)',
+          'Toy datasets',
           datasets.filter(dataset => dataset.isToy)
-        )}
-        <Checkbox
-          name="ailab_mode_allow_csv_upload"
-          label="Allow students to upload their own CSV"
-          checked={!mode.datasets}
-          disabled={csvUploadLocked}
-          onChange={e =>
-            onChange(
-              setModeValue(mode, 'datasets', e.target.checked ? undefined : [])
-            )
-          }
-          size="s"
-        />
-        {csvUploadLocked && (
-          <Typography variant="body4" className={moduleStyles.descriptionText}>
-            Upload is only available when no datasets are selected.
-          </Typography>
         )}
       </div>
 

@@ -43,7 +43,7 @@ function fakeLab2Checkbox() {
 describe('EditAilabMode', () => {
   it('shows the JSON text area when Lab 2 is off', () => {
     const savedMode = renderEditor('{"hideSave": true}', false);
-    expect(screen.queryByRole('checkbox')).not.toBeInTheDocument();
+    expect(screen.queryByRole('radio')).not.toBeInTheDocument();
     expect(
       screen.queryByText(/not a valid JSON object/)
     ).not.toBeInTheDocument();
@@ -59,7 +59,7 @@ describe('EditAilabMode', () => {
     const savedMode = renderEditor('{"hideSave": true}', false, lab2.subscribe);
 
     lab2.set(true);
-    fireEvent.click(screen.getByRole('checkbox', {name: 'Zoo Animals (zoo)'}));
+    fireEvent.click(screen.getByRole('radio', {name: 'Zoo Animals (zoo)'}));
 
     lab2.set(false);
     expect(
@@ -74,7 +74,7 @@ describe('EditAilabMode', () => {
 
     lab2.set(true);
     expect(
-      screen.getByRole('checkbox', {name: 'Zoo Animals (zoo)'})
+      screen.getByRole('radio', {name: 'Zoo Animals (zoo)'})
     ).toBeChecked();
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,
@@ -101,7 +101,7 @@ describe('EditAilabMode', () => {
       '{"datasets": ["zoo"], "trainer": "decisionTree", "requireAccuracy": 80, "hideSave": true}'
     );
     expect(
-      screen.getByRole('checkbox', {name: 'Zoo Animals (zoo)'})
+      screen.getByRole('radio', {name: 'Zoo Animals (zoo)'})
     ).toBeChecked();
     expect(screen.getByRole('combobox', {name: 'Trainer'})).toHaveValue(
       'decisionTree'
@@ -120,7 +120,7 @@ describe('EditAilabMode', () => {
     );
     expect(screen.getByText(/hideModelCard/)).toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole('checkbox', {name: 'Zoo Animals (zoo)'}));
+    fireEvent.click(screen.getByRole('radio', {name: 'Zoo Animals (zoo)'}));
 
     expect(JSON.parse(savedMode())).toEqual({
       hideModelCard: true,
@@ -161,33 +161,31 @@ describe('EditAilabMode', () => {
     });
   });
 
-  it('hides CSV upload with an empty datasets list', () => {
-    const savedMode = renderEditor('{"hideSave": true}');
-    const upload = screen.getByRole('checkbox', {
-      name: 'Allow students to upload their own CSV',
-    });
-    expect(upload).toBeChecked();
-
-    fireEvent.click(upload);
-    expect(JSON.parse(savedMode())).toEqual({hideSave: true, datasets: []});
-
-    fireEvent.click(upload);
-    expect(JSON.parse(savedMode())).toEqual({hideSave: true});
+  it('requires a dataset when none is set', () => {
+    renderEditor('{"hideSave": true}');
+    expect(screen.getByText(/Choose a dataset/)).toBeInTheDocument();
+    screen
+      .getAllByRole('radio')
+      .forEach(radio => expect(radio).not.toBeChecked());
   });
 
-  it('disables the CSV upload option when datasets are selected', () => {
-    renderEditor('{"datasets": ["zoo"]}');
-    const upload = screen.getByRole('checkbox', {
-      name: 'Allow students to upload their own CSV',
-    });
-    expect(upload).not.toBeChecked();
-    expect(upload).toBeDisabled();
+  it('replaces several datasets with the one chosen', () => {
+    const savedMode = renderEditor('{"datasets": ["zoo", "heart"]}');
+    expect(screen.getByText(/several datasets/)).toBeInTheDocument();
+
+    fireEvent.click(
+      screen.getByRole('radio', {name: 'Pizza Toppings (pizza_toy)'})
+    );
+
+    expect(JSON.parse(savedMode())).toEqual({datasets: ['pizza_toy']});
+    expect(screen.queryByText(/several datasets/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Choose a dataset/)).not.toBeInTheDocument();
   });
 
   it('falls back to a raw text area for a mode that is not a JSON object', () => {
     const original = "{'datasets': ['zoo']}";
     const savedMode = renderEditor(original);
-    expect(screen.queryByRole('checkbox')).not.toBeInTheDocument();
+    expect(screen.queryByRole('radio')).not.toBeInTheDocument();
     expect(screen.getByText(/not a valid JSON object/)).toBeInTheDocument();
     expect(savedMode()).toBe(original);
   });
