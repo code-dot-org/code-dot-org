@@ -35,7 +35,6 @@ export const asyncLoadSelectedSection = async (
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
-  getStore().dispatch(loadSectionStudentData(sectionId));
 
   const response = fetch(`/dashboardapi/section/${sectionId}`, {
     method: 'GET',
@@ -47,7 +46,7 @@ export const asyncLoadSelectedSection = async (
 
   return response
     .then(r => r.json())
-    .then(setSelectedSectionData)
+    .then(sectionData => setSelectedSectionData(sectionData, sectionId))
     .then(() => getStore().dispatch(finishLoadingSectionData()))
     .catch(error => {
       analyticsReporter.sendEvent(EVENTS.SECTION_LOAD_FAILURE, {
@@ -57,8 +56,11 @@ export const asyncLoadSelectedSection = async (
     });
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const setSelectedSectionData = (sectionData: any) => {
+export const setSelectedSectionData = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  sectionData: any,
+  sectionId?: string
+) => {
   getStore().dispatch(
     setStudentsForCurrentSection(sectionData.id, sectionData.students)
   );
@@ -78,4 +80,8 @@ export const setSelectedSectionData = (sectionData: any) => {
   getStore().dispatch(setRosterProviderName(sectionData.login_type_name));
 
   getStore().dispatch(updateSelectedSection(sectionData));
+
+  if (sectionId) {
+    getStore().dispatch(loadSectionStudentData(sectionId));
+  }
 };
