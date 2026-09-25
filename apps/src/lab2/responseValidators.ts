@@ -71,8 +71,8 @@ const DefaultSourceResponseValidator: ResponseValidator<
 
 /**
  * The sources validator for a lab. The lab is a parameter rather than the
- * page's current lab because a page can load another level's project, as
- * the adaptive pathway does, and the sources must match that level's lab.
+ * page's current lab because a page can load another level's project, and
+ * the sources must match that level's lab.
  */
 export function sourceResponseValidatorFor(
   appName: AppName | null | undefined
