@@ -29,6 +29,19 @@ jest.mock(
   })
 );
 
+jest.mock('@cdo/apps/aichat/api/client', () => ({
+  __esModule: true,
+  getClientApi: jest.fn(async () => ({
+    transcribeAudio: jest.fn(async () => 'a transcript'),
+  })),
+}));
+
+// See the stub for what it reproduces of the real canvas, and why.
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  VideoCanvas: jest.requireActual('../../../../util/stubVideoCanvas').default,
+}));
+
 // React Flow does not render in jsdom; the whiteboard canvas is stubbed out.
 // The stub's button reports one node through updateSources, simulating the
 // student drawing (which enables the submit button).
@@ -114,6 +127,32 @@ const submitWhiteboardChallenge = async () => {
   fireEvent.click(screen.getByRole('button', {name: 'Text'}));
   fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
   fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+};
+
+// Renders a video challenge and waits for its question to appear. Video
+// challenges have no explanation modality to choose: the record button is in
+// the bottom bar from the start.
+const renderVideoChallenge = async () => {
+  render(
+    <ChallengeBox
+      lessonId={42}
+      challenge={{...fakeChallenge, default_modality: 'video'}}
+      challengeType={ChallengeTypes.VIDEO}
+    />
+  );
+  await waitFor(() =>
+    expect(
+      screen.getByText('Draw a flowchart of the algorithm.')
+    ).toBeInTheDocument()
+  );
+};
+
+// Records a take and waits for the blob the stubbed canvas hands over a tick
+// later, the same two clicks a student makes.
+const recordVideo = async () => {
+  fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
+  fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+  await act(async () => {});
 };
 
 // Advances fake timers by `ms` and flushes the resulting state updates,
@@ -435,5 +474,73 @@ describe('ChallengeBox', () => {
     expect(
       screen.getByRole('button', {name: 'Start Recording'})
     ).toBeInTheDocument();
+  });
+
+  // A video take can be edited before the next one is recorded — stickers
+  // and text go onto the canvas first — so the button walks the student
+  // through three states rather than re-recording on one click.
+  describe('video challenges', () => {
+    it('offers recording straight away, with nothing yet to submit', async () => {
+      await renderVideoChallenge();
+
+      expect(
+        screen.getByRole('button', {name: 'Start Recording'})
+      ).toBeInTheDocument();
+      // No explanation modality to pick: those belong to whiteboard.
+      expect(
+        screen.queryByRole('button', {name: 'Audio'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Text'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Submit'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('walks the button from start, to stop, to editing the take', async () => {
+      await renderVideoChallenge();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
+      expect(
+        screen.getByRole('button', {name: 'Stop Recording'})
+      ).toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
+      await act(async () => {});
+      expect(
+        screen.getByRole('button', {name: 'Edit and Record Again'})
+      ).toBeInTheDocument();
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    });
+
+    it('returns to the live canvas, take discarded, on Edit and Record Again', async () => {
+      await renderVideoChallenge();
+      await recordVideo();
+
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Edit and Record Again'})
+      );
+
+      expect(
+        screen.getByRole('button', {name: 'Start Recording'})
+      ).toBeInTheDocument();
+      expect(screen.getByText('canvas mode: edit')).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Submit'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('records a second take after editing', async () => {
+      await renderVideoChallenge();
+      await recordVideo();
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Edit and Record Again'})
+      );
+      await recordVideo();
+
+      expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    });
   });
 });

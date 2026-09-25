@@ -85,6 +85,19 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   const isRecordable =
     challengeType === ChallengeTypes.VIDEO ||
     explanationType === ExplanationTypes.AUDIO;
+  // Watching back a video take. Discarding it returns to the live canvas,
+  // where the student can change what gets composited into the next one; an
+  // audio take has nothing to edit, so it re-records in a single click.
+  const isVideoPreview =
+    challengeType === ChallengeTypes.VIDEO && hasRecording && !isRecording;
+
+  const handleRecordClick = () => {
+    if (isVideoPreview) {
+      setHasRecording(false);
+    } else {
+      setIsRecording(!isRecording);
+    }
+  };
 
   // Both challenge modalities report submission through this callback; the
   // confirmation dialog is shared here rather than duplicated per modality.
@@ -559,10 +572,12 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     }
                     variant="contained"
                     disabled={showConfirmation}
-                    onClick={() => setIsRecording(!isRecording)}
+                    onClick={handleRecordClick}
                   >
                     {isRecording
                       ? 'Stop Recording'
+                      : isVideoPreview
+                      ? 'Edit and Record Again'
                       : hasRecording
                       ? 'Record Again'
                       : 'Start Recording'}
