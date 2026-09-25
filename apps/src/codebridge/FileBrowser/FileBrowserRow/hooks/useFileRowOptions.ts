@@ -93,14 +93,12 @@ export const useFileRowOptions = (
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const backpackApi = useMemo(() => {
-    if (
-      experiments.isEnabledAllowingQueryString(experiments.UNIFIED_BACKPACK)
-    ) {
-      return currentUserId
-        ? Lab2Registry.getInstance().getUnifiedBackpackApi()
-        : undefined;
+    if (experiments.isEnabledAllowingQueryString(experiments.LEGACY_BACKPACK)) {
+      return legacyBackpackApi;
     }
-    return legacyBackpackApi;
+    return currentUserId
+      ? Lab2Registry.getInstance().getUnifiedBackpackApi()
+      : undefined;
   }, [currentUserId, legacyBackpackApi]);
 
   const {
