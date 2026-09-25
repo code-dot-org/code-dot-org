@@ -523,7 +523,11 @@ describe('domain block generators', () => {
         getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : null),
         getInputTargetBlock: () => use('Gravity#AffectedByGravityTrait'),
       } as never,
-      {definitions_: {}, statementToCode: () => ''} as never,
+      {
+        definitions_: {},
+        statementToCode: () => '',
+        valueToCode: () => '',
+      } as never,
       {} as never,
     ) as string;
 
@@ -533,26 +537,29 @@ describe('domain block generators', () => {
 
   it('world_define_camera says whose it is, and says nothing for the world’s', () => {
     // A camera belongs to a space: the world's own, or a Viewport's
-    // (specs/SPACE_CAMERAS_PLAN.md). The empty owner is the world, and it emits
-    // exactly what it emitted before the field existed — so every camera written
-    // before a Viewport could own one generates the bytes it always did.
-    const emitted = (owner: string | null) =>
+    // (specs/SPACE_CAMERAS_PLAN.md). An EMPTY socket is the world's, and emits
+    // exactly what it emitted before the socket existed — so every camera
+    // written before a Viewport could own one generates the bytes it always did.
+    //
+    // Through `one`, because an actor-typed socket holds a value and a value may
+    // be a list, and a camera belongs to one space.
+    const emitted = (owner: string) =>
       generatorFor('world_define_camera')(
         {
           id: 'cam1',
-          getFieldValue: (name: string) =>
-            name === 'NAME' ? 'Chase' : name === 'OWNER' ? owner : null,
+          getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : ''),
           getInputTargetBlock: () => null,
         } as never,
-        {definitions_: {}, statementToCode: () => ''} as never,
+        {
+          definitions_: {},
+          statementToCode: () => '',
+          valueToCode: () => owner,
+        } as never,
         {} as never,
       ) as string;
 
-    expect(emitted('Minimap')).toContain('space: "Minimap"');
-    expect(emitted('')).not.toContain('space:');
-    // A field a saved workspace has never heard of reads as null, and that is
-    // the world's too — the case every project written before this hits.
-    expect(emitted(null)).not.toContain('space:');
+    expect(emitted('actor')).toContain('viewport: WorldLab.one(actor)');
+    expect(emitted('')).not.toContain('viewport:');
   });
 
   it('world_define_camera says nothing about traits when it has none', () => {
@@ -562,7 +569,11 @@ describe('domain block generators', () => {
         getFieldValue: (name: string) => (name === 'NAME' ? 'Chase' : null),
         getInputTargetBlock: () => null,
       } as never,
-      {definitions_: {}, statementToCode: () => ''} as never,
+      {
+        definitions_: {},
+        statementToCode: () => '',
+        valueToCode: () => '',
+      } as never,
       {} as never,
     ) as string;
 
@@ -595,7 +606,7 @@ describe('domain block generators', () => {
         getFieldValue: (name: string) => (name === 'NAME' ? 'Overview' : ''),
         getInputTargetBlock: () => null,
       } as never,
-      {statementToCode: () => ''} as never,
+      {statementToCode: () => '', valueToCode: () => ''} as never,
       {} as never,
     ) as string;
 
@@ -622,6 +633,7 @@ describe('domain block generators', () => {
         definitions_: {},
         statementToCode: () =>
           'camera.set(WorldLab.ActorToFollowProperty, world.actors.ofType("actors/player"));\n',
+        valueToCode: () => '',
       } as never,
       {} as never,
     ) as string;

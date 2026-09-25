@@ -28,6 +28,7 @@
 // — so the distinction is carried in the model and is invisible until zoom
 // arrives. Adding it here later changes no authoring.
 
+import type {Actor} from './Actor';
 import type {Space} from './Space';
 import {SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
@@ -62,17 +63,25 @@ export interface CameraInit {
   id: string;
   name?: string;
   /**
-   * The space this camera looks at, by the id of the Viewport that owns it.
+   * The Viewport whose space this camera looks at, or that Viewport's id.
    *
    * Absent means the world's own — the root space — which is every camera
-   * declared before spaces had cameras of their own, and every camera a world
-   * declares today (specs/SPACE_CAMERAS_PLAN.md).
+   * declared before spaces had cameras of their own
+   * (specs/SPACE_CAMERAS_PLAN.md).
    *
-   * A NAME, not the space: a camera may be declared before the Viewport that
-   * owns it has been placed, since a world's body runs before the map that
-   * places one. `World.defineCamera` holds such a camera until the space exists.
+   * THE ACTOR IS WHAT THE BLOCK PASSES, because `define camera ⟨…⟩ for ⟨…⟩`
+   * belongs in the Viewport's own `on create`, where the Viewport exists and
+   * `this actor` is it. An id is accepted beside it for a caller that has one —
+   * the engine's own tests, and any code holding a name rather than a thing —
+   * and both are resolved when the call is made: nothing waits for a Viewport
+   * that is not there, because the place to declare a camera is the handler that
+   * fires when its space is made.
+   *
+   * NOT CALLED `space`, though it decides one, because {@link Camera.space} is
+   * the Space itself. One name for the thing asked for and another for the thing
+   * resolved beats one name meaning both.
    */
-  space?: string;
+  viewport?: string | Actor;
   /**
    * The point it shows at the MIDDLE of the view, in world pixels; defaults to
    * the middle of the world's own rectangle.

@@ -592,7 +592,7 @@ describe('declaring a camera against a space', () => {
   it('puts a camera in the space that was named', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    world.defineCamera({id: 'wide', space: 'win'});
+    world.defineCamera({id: 'wide', viewport: 'win'});
 
     const space = world.viewportSpaceOf(win)!;
     expect(space.cameras.map(camera => camera.name)).toEqual(['main', 'wide']);
@@ -608,15 +608,31 @@ describe('declaring a camera against a space', () => {
     expect(world.camera('nothing by that name').id).toBe('main');
   });
 
-  it('holds a camera declared before its Viewport is placed', () => {
-    // The order a world actually runs in: the body's prologue declares, and the
-    // main map places the Viewport afterwards
-    // (specs/MAP_BEFORE_ROWS_PLAN.md). Refusing here would refuse silently.
+  it('refuses a camera for something that is not a Viewport, loudly', () => {
+    // AN EARLIER VERSION HELD IT, forever and in silence, so that a world's
+    // prologue could declare a camera before the main map placed its Viewports.
+    // The place to declare a Viewport's camera is that Viewport's own `on
+    // create`, where it exists and `this actor` is it — so there is nothing to
+    // wait for, and a name that resolves to no Viewport is a mistake to say out
+    // loud (specs/SPACE_CAMERAS_PLAN.md).
     const world = makeWorld();
-    world.defineCamera({id: 'wide', space: 'win'});
+    expect(() => world.defineCamera({id: 'wide', viewport: 'win'})).toThrow(
+      /not a Viewport/,
+    );
+    // …and by ACTOR too, which is what the block passes.
+    const coin = world.addActor(Coin.instantiate('c1', 'actors/coin'));
+    expect(() => world.defineCamera({id: 'wide', viewport: coin})).toThrow(
+      /not a Viewport/,
+    );
     expect([...world.cameras]).toHaveLength(1);
+  });
 
+  it('takes the Viewport itself, which is what `this actor` gives it', () => {
+    // The shape the block generates: `define camera ⟨wide⟩ for ⟨this actor⟩` in
+    // a Viewport placement's `on create`.
+    const world = makeWorld();
     const win = placeWindow(world);
+    world.defineCamera({id: 'wide', viewport: win});
     expect(
       world.viewportSpaceOf(win)!.cameras.map(camera => camera.name),
     ).toEqual(['main', 'wide']);
@@ -625,8 +641,8 @@ describe('declaring a camera against a space', () => {
   it('declares the same camera twice as once, so a reload cannot stack them', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    world.defineCamera({id: 'wide', space: 'win'});
-    world.defineCamera({id: 'wide', space: 'win'});
+    world.defineCamera({id: 'wide', viewport: 'win'});
+    world.defineCamera({id: 'wide', viewport: 'win'});
     expect(world.viewportSpaceOf(win)!.cameras).toHaveLength(2);
   });
 
@@ -634,8 +650,8 @@ describe('declaring a camera against a space', () => {
     const world = makeWorld();
     const one = placeWindow(world);
     const two = world.addActor(Window.instantiate('win2', 'actors/window'));
-    world.defineCamera({id: 'wide', space: 'win'});
-    world.defineCamera({id: 'wide', space: 'win2'});
+    world.defineCamera({id: 'wide', viewport: 'win'});
+    world.defineCamera({id: 'wide', viewport: 'win2'});
 
     const a = world.viewportSpaceOf(one)!.cameraNamed('wide')!;
     const b = world.viewportSpaceOf(two)!.cameraNamed('wide')!;
@@ -651,7 +667,7 @@ describe('declaring a camera against a space', () => {
     // the middle of the world's view.
     const world = makeWorld();
     const win = placeWindow(world);
-    world.defineCamera({id: 'wide', space: 'win'});
+    world.defineCamera({id: 'wide', viewport: 'win'});
     expect(world.viewportSpaceOf(win)!.cameraNamed('wide')!.position).toEqual(
       new Vector(50, 40),
     );
@@ -682,7 +698,7 @@ describe('which camera a Viewport shows through', () => {
   it('cuts to another camera on the next tick, and back', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    world.defineCamera({id: 'chase', space: 'win'});
+    world.defineCamera({id: 'chase', viewport: 'win'});
     const space = world.viewportSpaceOf(win)!;
 
     win.set(ViewportShowsThroughProperty, 'chase');
@@ -713,8 +729,8 @@ describe('which camera a Viewport shows through', () => {
     const world = makeWorld();
     const one = placeWindow(world);
     const two = world.addActor(Window.instantiate('win2', 'actors/window'));
-    world.defineCamera({id: 'chase', space: 'win'});
-    world.defineCamera({id: 'chase', space: 'win2'});
+    world.defineCamera({id: 'chase', viewport: 'win'});
+    world.defineCamera({id: 'chase', viewport: 'win2'});
 
     one.set(ViewportShowsThroughProperty, 'chase');
     world.tick(0);
@@ -733,7 +749,11 @@ describe('a camera trait, on a space’s camera', () => {
   it('runs for a camera a space owns, not only the world’s', () => {
     const world = makeWorld();
     placeWindow(world);
-    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    world.defineCamera({
+      id: 'corner',
+      viewport: 'win',
+      traits: [AimsAtTheCorner],
+    });
     aimed.clear();
 
     world.tick(0);
@@ -747,7 +767,11 @@ describe('a camera trait, on a space’s camera', () => {
     const world = makeWorld();
     const win = placeWindow(world);
     world.loadMapInto(win, LEVEL);
-    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    world.defineCamera({
+      id: 'corner',
+      viewport: 'win',
+      traits: [AimsAtTheCorner],
+    });
     aimed.clear();
 
     world.tick(0);
@@ -775,7 +799,11 @@ describe('a camera trait, on a space’s camera', () => {
     const win = placeWindow(world);
     world.loadMapInto(win, LEVEL);
     world.defineCamera({id: 'corner', traits: [AimsAtTheCorner]});
-    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    world.defineCamera({
+      id: 'corner',
+      viewport: 'win',
+      traits: [AimsAtTheCorner],
+    });
     aimed.clear();
 
     world.tick(0);
@@ -795,7 +823,11 @@ describe('what the engine does to a camera a trait has aimed', () => {
     const world = makeWorld();
     const win = placeWindow(world);
     world.loadMapInto(win, LEVEL);
-    world.defineCamera({id: 'corner', space: 'win', traits: [AimsAtTheCorner]});
+    world.defineCamera({
+      id: 'corner',
+      viewport: 'win',
+      traits: [AimsAtTheCorner],
+    });
     win.set(ViewportShowsThroughProperty, 'corner');
 
     world.tick(0);

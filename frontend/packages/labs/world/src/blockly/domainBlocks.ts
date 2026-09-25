@@ -199,8 +199,6 @@ import {
   projectMapPaths,
   NONE_VALUE,
   orNone,
-  cameraOwnerOptions,
-  cameraOwnerOptionsExtension,
   placementOptions,
   placementOptionsExtension,
   ruleModuleOptions,
@@ -7790,30 +7788,37 @@ const worldDefineCamera = defineBlock({
   type: 'world_define_camera',
   // …AND WHOSE IT IS. A camera belongs to a space: the world's own, or a
   // Viewport's, which shows a different scene and so cannot share one
-  // (specs/SPACE_CAMERAS_PLAN.md). Empty is the world, which is what every
-  // camera written before a Viewport could own one says, and what makes this
-  // field cost nothing to add: the generator emits exactly what it emitted
-  // before for it.
+  // (specs/SPACE_CAMERAS_PLAN.md). An EMPTY socket is the world's, which is what
+  // every camera written before a Viewport could own one says — so this costs
+  // nothing to add, because the generator emits exactly what it emitted before
+  // for an empty one.
   //
-  // A DROPDOWN AND NOT A SOCKET, though a socket was the first plan. A socket
-  // yields a live actor, and a world's prologue declares its cameras before the
-  // main map has placed any Viewport — so the socket would be empty at the one
-  // moment it is read. It is a live dropdown of the world's Viewport
-  // placements, so a name no placement has cannot be written down.
-  message0: 'define camera %1 of %2',
+  // A SOCKET AND NOT A DROPDOWN, which is a reversal: a dropdown of placement
+  // names came first, on the grounds that a world's prologue declares its
+  // cameras before the main map has placed any Viewport, so a live actor would
+  // be empty at the one moment it is read. That is true of the PROLOGUE and the
+  // wrong place to declare one. In a Viewport placement's `on create` the
+  // Viewport certainly exists, `world` is bound (`extensions/worldContext`
+  // admits any `world_on_…` hat), and `this actor` IS the Viewport.
+  //
+  // The socket is also the more correct of the two. A dropdown holds an authored
+  // placement id, and a map loaded twice suffixes those — so a name matches the
+  // first copy and silently misses the second. `this actor` names the instance
+  // that is actually there.
+  message0: 'define camera %1 for %2',
   args0: [
     {type: 'field_input', name: 'NAME', text: 'Camera'},
     {
-      type: 'field_dropdown',
+      type: 'input_value',
       name: 'OWNER',
-      options: cameraOwnerOptions,
+      check: 'Actor',
     },
   ],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [worldContextExtension, cameraOwnerOptionsExtension],
+  extensions: [worldContextExtension],
   style: 'setup_blocks',
   tooltip:
     'A place to look from, and how it behaves. Every world has one already; ' +
@@ -7844,12 +7849,17 @@ const worldDefineCamera = defineBlock({
         `id: ${str(cameraId(block.id))}`,
         `name: ${str(String(block.getFieldValue('NAME') ?? 'Camera'))}`,
       ];
-      // Whose it is, and nothing at all when it is the world's — so a camera
-      // declared before Viewports could own one generates the bytes it always
-      // did (`World.defineCamera` routes on the field's absence).
-      const owner = String(block.getFieldValue('OWNER') ?? '');
+      // Whose it is, and nothing at all when the socket is empty — so a camera
+      // of the world generates the bytes it always did (`World.defineCamera`
+      // routes on `space` being absent).
+      //
+      // Through `one`, because an actor-typed socket holds a VALUE and a value
+      // may be a list: `any ⟨Minimap⟩` is every Minimap there is, and a camera
+      // belongs to one space. The same reading `actor to follow` takes of its
+      // own actor-typed property.
+      const owner = generator.valueToCode(block, 'OWNER', Order.NONE);
       if (owner) {
-        settings.push(`space: ${str(owner)}`);
+        settings.push(`viewport: WorldLab.one(${owner})`);
       }
       if (traits.length) {
         settings.push(`traits: [${traits.join(', ')}]`);

@@ -1,7 +1,7 @@
 # One kind of camera, in every space
 
-STATUS: BUILDING. Steps 1 to 8 are in — a camera can now be declared of a
-Viewport in blocks. Steps 1 to 7 are — step 6 is where the lab got smaller (a
+STATUS: BUILDING. Steps 1 to 8 are in — a camera can now be declared FOR a
+Viewport in blocks, in that Viewport's own `on create`. Steps 1 to 7 are — step 6 is where the lab got smaller (a
 map says nothing about a camera any more) and step 7 turned out to be a
 correction to this document rather than a change to the engine. Steps 1 to 4 are — a space holds cameras, one collection
 finds them all, each knows its space, one may be declared against a space that
@@ -240,11 +240,16 @@ point at which it has earned itself, and the next one should build it instead.
    world's view. The same treatment `mapSize(actor)` and `mousePosition(actor)`
    already got in specs/VIEWPORT_PLAN.md step 2.
 3. **A camera belongs to a space, and is declared against one.** `defineCamera`
-   takes the space it is for, defaulting to the root, so the world's cameras are
-   declared exactly as they are today and a Viewport's are declared at all for
-   the first time. Every space is made with a `main` camera, synthesised as the
-   default layer is. Tests: two cameras in two spaces keep their own traits and
-   their own positions; a space with nothing said about cameras has `main`.
+   takes the Viewport it is for — the actor, or its id — defaulting to the root,
+   so the world's cameras are declared exactly as they are today and a
+   Viewport's are declared at all for the first time. Every space is made with a
+   `main` camera, synthesised as the default layer is. Tests: two cameras in two
+   spaces keep their own traits and their own positions; a space with nothing
+   said about cameras has `main`.
+
+   (This step first HELD a declaration whose Viewport was not there yet. Step 8
+   removed the need — see it — and the engine refuses one instead.)
+
 4. **The Viewport says which camera it shows through.** `Space.activeCameraId`,
    defaulting to `main`, exposed as a Viewport property so a field and a `set`
    block come for free. Tests: the default is `main`; switching mid-play changes
@@ -265,26 +270,32 @@ point at which it has earned itself, and the next one should build it instead.
 8. **Blocks: `define camera ⟨wide⟩ of ⟨the Minimap⟩`.** The engine takes a
    space's name from step 3 and nothing writes one yet.
 
-   **CORRECTED, before building: the owner is a NAME, not a socket.** The draft
-   said a socket, "for the reason a Viewport's `map` is a value", and that does
-   not work. A socket yields a live actor, and the whole point of step 3 is that
-   a world's prologue declares cameras BEFORE the map places its Viewports —
-   so the socket would evaluate to nothing exactly when it is needed. The two
-   blocks that could fill it do not reach either: `the ⟨placement⟩` is a map
-   script's block and generates `placed[…]`, which a `.world` has no binding
-   for, and `any ⟨Viewport⟩` names a KIND, so two Minimaps of one kind are
-   indistinguishable.
+   **BUILT TWICE, and the second is the one that stands: `define camera ⟨name⟩
+for ⟨actor⟩`, a socket.**
 
-   So it is a dropdown of the world's Viewport placements, and the bite the
-   draft was worried about is answered the way this lab already answers it: a
-   LIVE dropdown, sourced from the project rather than typed, so a name no
-   placement has cannot be written in the first place (`moduleOptions`,
-   `placementOptions` and its extension are the shape; they are scoped to a map
-   script's own map today and this wants the world's main map filtered to
-   Viewports).
+   The draft said a socket; the first build replaced it with a live dropdown of
+   the world's Viewport placements, on the grounds that a world's prologue
+   declares cameras BEFORE the map places its Viewports, so a live actor would be
+   empty at the one moment it is read. That is true of the prologue and the wrong
+   conclusion: the prologue is not where a Viewport's camera belongs. In the
+   Viewport placement's own `on create` the Viewport exists, `world` is bound
+   (`extensions/worldContext` admits any `world_on_…` hat) and `this actor` IS
+   the Viewport. The block is already offered in a placement script's toolbox —
+   `ROOT_HOMES` does not restrict it — so nothing had to be opened for it.
 
-   Not small: an options source, a live-dropdown extension, the generator case,
-   the toolbox category and a tile in `shelfCoverage` for the block it mints.
+   The socket is also the more correct of the two, which the dropdown build
+   missed. A dropdown holds an AUTHORED placement id, and a map loaded twice
+   suffixes those, so a name matches the first copy and silently misses the
+   second. `this actor` names the instance that is there.
+
+   Two things went with the dropdown. `pendingSpaceCameras` from step 3 is
+   deleted: nothing declares a camera for a space that does not exist, because
+   the declaration lives in the handler that fires when the space is made. And
+   the "only Viewport kinds are offered" filter is gone, so the protection it
+   gave moved into the engine, which now THROWS for an owner that is not a
+   Viewport — as `loadMapInto` does, and covering a hole the dropdown had anyway
+   (a Viewport deleted after the fact left a name held pending forever, in
+   silence).
 
 9. **Editor: the camera strip.** THREE STEPS, not one, and priced here because
    the draft under-read it. Step 8 put camera declarations in the world's

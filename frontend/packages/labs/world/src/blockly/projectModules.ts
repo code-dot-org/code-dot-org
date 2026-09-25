@@ -272,17 +272,6 @@ export function projectEffectParameters(
  * the map's extension-less path. The `world_load_map` block reads this to emit
  * an import + `world.define` for each actor a map places, then `world.loadMap`.
  */
-/**
- * The trait a Viewport elects, as an actor file spells it.
- *
- * Read out of the file as text rather than resolved, because what is wanted is
- * "does this kind show a map" and the answer is a `use trait` row's field value.
- * `engine/rules/viewport` owns the two halves of the name; a change there that
- * did not change this would offer a camera no Viewports, which the tests in
- * `projectModules.test` are what catch.
- */
-const VIEWPORT_TRAIT_REF = 'Viewport#ViewportTrait';
-
 export function projectMapActorTypes(
   files: Record<string, string>,
 ): Record<string, string[]> {
@@ -528,63 +517,4 @@ export function projectBackgroundOptions(
   return [...new Set(names)]
     .sort((a, b) => a.localeCompare(b))
     .map(name => [imageLabel(name), name] as [string, string]);
-}
-
-/**
- * The Viewport placements of a world's main map, by the id the map gives them.
- *
- * What `define camera ⟨…⟩ of ⟨…⟩` offers. A camera belongs to a space, a space
- * belongs to a Viewport, and the Viewports a world has are the ones its main map
- * placed — so this is the list, and it is the editor's to know: the sandbox
- * introspects actor KINDS and which of them a map holds is a file's business
- * (specs/SPACE_CAMERAS_PLAN.md).
- *
- * FILTERED TO VIEWPORTS, and that filter is why this is not two lines. A
- * placement names an actor module; whether that kind is a Viewport is written in
- * the actor's own file, as a `use trait` of the Viewport trait. Offering every
- * placement instead would let a camera be declared of a Panel, which the engine
- * would hold pending forever — silently, which is the failure mode this lab
- * keeps meeting.
- */
-export function worldViewportPlacements(
-  files: Record<string, string>,
-): string[] {
-  // THE world, singular: a project has one (`layout/WorldLayout`, and the World
-  // menu opens rather than lists). So this needs no path told to it, which is
-  // what lets one call in `refreshProjectDropdowns` serve the editor, the
-  // runtime and the headless generator alike.
-  const world = Object.entries(files).find(([path]) =>
-    path.endsWith('.world'),
-  )?.[1];
-  if (!world) {
-    return [];
-  }
-  /** Which actor modules elect the Viewport trait. */
-  const showsMap = new Set<string>();
-  for (const [path, contents] of Object.entries(files)) {
-    if (path.endsWith('.actor') && contents.includes(VIEWPORT_TRAIT_REF)) {
-      showsMap.add(path.replace(/\.actor$/, ''));
-    }
-  }
-  try {
-    const actors = (
-      JSON.parse(world) as {
-        map?: {actors?: Array<{id?: unknown; type?: unknown}>};
-      }
-    ).map?.actors;
-    if (!Array.isArray(actors)) {
-      return [];
-    }
-    return actors
-      .filter(
-        actor =>
-          typeof actor?.id === 'string' &&
-          typeof actor?.type === 'string' &&
-          showsMap.has(actor.type),
-      )
-      .map(actor => String(actor.id));
-  } catch {
-    // Not valid JSON yet (mid-edit); offer nothing rather than guess.
-    return [];
-  }
 }

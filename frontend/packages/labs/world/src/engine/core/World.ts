@@ -1378,11 +1378,6 @@ export class World {
       // a space gets comes through, so the id is scoped and the two
       // back-references are set in one place rather than two.
       this.addCameraTo(space, {id: DEFAULT_CAMERA_ID});
-      // …and any camera declared for this Viewport BEFORE it was placed, which
-      // is every one a world's prologue declares (`pendingSpaceCameras`).
-      for (const held of this.pendingSpaceCameras.get(actor.id) ?? []) {
-        this.addCameraTo(space, held);
-      }
     }
     // …and the actor hears that it exists, which is the one event every actor
     // gets without electing anything (`rules/spatial`). Queued like the rest,
@@ -1435,8 +1430,8 @@ export class World {
   defineCamera(init: CameraInit): this {
     // A SPACE'S, if it says which. The world's own are the root's and go in the
     // list they always went in (specs/SPACE_CAMERAS_PLAN.md).
-    if (init.space !== undefined) {
-      this.defineSpaceCamera(init.space, init);
+    if (init.viewport !== undefined) {
+      this.defineSpaceCamera(init.viewport, init);
       return this;
     }
     if (!this.cameraList.some(camera => camera.id === init.id)) {
@@ -1458,37 +1453,30 @@ export class World {
   }
 
   /**
-   * Cameras declared for a space that does not exist yet, by the space's name.
-   *
-   * A WORLD'S BODY RUNS BEFORE THE MAP THAT PLACES ITS VIEWPORTS. The main map
-   * is loaded between the prologue and the rows (specs/MAP_BEFORE_ROWS_PLAN.md),
-   * and a Viewport's space is made when the Viewport is placed — so `define
-   * camera ⟨wide⟩ of ⟨the Minimap⟩` in a prologue names a space that is minutes
-   * of engine time away from existing. Holding it is the only honest answer: the
-   * alternative is to refuse, silently, the declaration a reader can see.
-   *
-   * Drained when the space is made, and kept afterwards so a reload finds them
-   * again — `defineSpaceCamera` refuses a name the space already has, which is
-   * what stops a second pass stacking duplicates.
-   */
-  private readonly pendingSpaceCameras = new Map<string, CameraInit[]>();
-
-  /**
-   * Add a camera to a space, or hold it until the space exists.
+   * Add a camera to the space a Viewport owns.
    *
    * The id carries the space and the name does not: `win:wide` is the id, `wide`
    * the name, so two Viewports may each have a `wide` and a list of every camera
    * in the world still tells them apart (`Space.cameraNamed`).
+   *
+   * THROWS FOR ANYTHING THAT IS NOT A VIEWPORT, as `loadMapInto` does and for
+   * the same reason: a camera declared of a Panel can never look at anything,
+   * and holding the declaration in silence — which an earlier version of this
+   * did, forever — is the failure this lab keeps meeting. The place to declare a
+   * Viewport's camera is that Viewport's own `on create`, where it exists
+   * (specs/SPACE_CAMERAS_PLAN.md).
    */
-  private defineSpaceCamera(owner: string, init: CameraInit): void {
-    const space = this.viewportSpaces.find(one => one.owner?.id === owner);
+  private defineSpaceCamera(owner: string | Actor, init: CameraInit): void {
+    const space =
+      typeof owner === 'string'
+        ? this.viewportSpaces.find(one => one.owner?.id === owner)
+        : this.viewportSpaceOf(owner);
     if (!space) {
-      const held = this.pendingSpaceCameras.get(owner) ?? [];
-      if (!held.some(one => one.id === init.id)) {
-        held.push(init);
-      }
-      this.pendingSpaceCameras.set(owner, held);
-      return;
+      const named = typeof owner === 'string' ? owner : owner?.id;
+      throw new Error(
+        `world-lab: a camera cannot be defined for “${named}”, which is not ` +
+          `a Viewport in this world`,
+      );
     }
     this.addCameraTo(space, init);
   }
