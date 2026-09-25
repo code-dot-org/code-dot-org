@@ -33,6 +33,8 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     create(:single_unit_course, unit: unit, name: 'jigsaw-session-cookie-test', published_state: 'stable')
     get "/courses/#{unit.name}/units/1/lessons/1"
     assert_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+    assert_select 'script[data-statsig-stable-id]', count: 0
   end
 
   test 'session cookie not set in publicly cached level page' do
@@ -43,9 +45,11 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     get '/courses/music-jam-2024/units/1/lessons/1/levels/1'
     assert_response :success
     assert_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+    assert_select 'script[data-statsig-stable-id]', count: 0
   end
 
-  test 'session cookie is set in on non-cached level page' do
+  test 'session and Statsig cookies are set on non-cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
     unit = create(:unit, :with_levels, name: 'music-jam-2024')
     create(:single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable')
@@ -55,6 +59,12 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       env: {'rack-cache.allow_reload' => true}
     assert_response :success
     refute_nil cookies['_learn_session_test']
+
+    stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+    _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+    assert_select 'script[data-statsig-stable-id]' do |elements|
+      _(elements.first['data-statsig-stable-id']).must_equal stable_id
+    end
   end
 
   describe 'request#statsig_stable_id' do
