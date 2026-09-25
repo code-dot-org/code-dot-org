@@ -9,11 +9,14 @@ import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
 import {getExportStyleProperties} from './getExportStyleProperties';
 import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
+import {inlineSvgStylesForExport} from './inlineSvgStylesForExport';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
+// iOS Safari draws nothing on a canvas bigger than this.
+const MAX_EXPORT_CANVAS_PIXELS = 16_777_216;
 
 // Friendly log instead of "[object Event]".
 const describeCaptureFailure = (error: unknown, context: object): Error => {
@@ -76,17 +79,18 @@ export const createSketchSnapshotBlob = async (
   // Supplying this stops html-to-image from inlining every font the page declares.
   const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
 
-  // html-to-image multiplies the output by the device pixel ratio, which would
-  // take a high-resolution export past the dimension cap.
+  // html-to-image multiplies the output by the device pixel ratio. Keep that
+  // detail, but not past a canvas iOS Safari will refuse to draw.
   const pixelRatio = Math.min(
     Math.max(window.devicePixelRatio || 1, 1),
-    MAX_EXPORT_DIMENSION_PX / Math.max(imageWidth, imageHeight)
+    Math.sqrt(MAX_EXPORT_CANVAS_PIXELS / (imageWidth * imageHeight))
   );
 
   const restoreImageSources = downscaleImagesForExport(
     viewport,
     scale * pixelRatio
   );
+  const restoreSvgStyles = inlineSvgStylesForExport(viewport);
   let blob: Blob | null;
   try {
     blob = await toBlob(viewport, {
@@ -112,6 +116,7 @@ export const createSketchSnapshotBlob = async (
     });
   } finally {
     restoreImageSources();
+    restoreSvgStyles();
   }
 
   if (!blob) {
