@@ -305,6 +305,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     selectedModelId: aiTutorModelId,
     isPredictLevel: !!isPredictLevel,
     hasSubmittedPredictResponse,
+    aiTutorDependency: levelProperties.aiTutorDependency,
   });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
