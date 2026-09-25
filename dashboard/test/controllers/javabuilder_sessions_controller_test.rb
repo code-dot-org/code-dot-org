@@ -200,6 +200,22 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'co-teacher of authorized teacher in csa section can get access token' do
+    teacher = create(:authorized_teacher)
+    csa_script = create(:csa_script, :in_single_unit_course)
+    section = create(:section, user: teacher, script: csa_script)
+    co_teacher = create(:teacher)
+    create(:section_instructor, section: section, instructor: co_teacher, status: :active)
+
+    sign_in(co_teacher)
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+
+    assert_response :success
+    token = JSON.parse(@response.body)['token']
+    decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
+    assert_equal teacher.id.to_s, decoded_token[0]['verified_teachers']
+  end
+
   test 'student of non-authorized teacher cannot get access token' do
     teacher = create(:teacher)
     section = create(:section, user: teacher, login_type: 'word')
