@@ -696,6 +696,68 @@ describe('the world, with nothing selected', () => {
   });
 });
 
+describe('the camera strip', () => {
+  // What cameras the thing being edited has declared, read from its blocks
+  // (specs/SPACE_CAMERAS_PLAN.md, step 9a). Only offered when a script can be
+  // opened, since opening it is the one thing the strip does.
+  const chase = {
+    blocks: {
+      languageVersion: 0,
+      blocks: [
+        {
+          type: 'world_on_Space_CreatedEvent',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            DO: {
+              block: {
+                type: 'world_define_camera',
+                id: 'cam1',
+                fields: {NAME: 'Chase'},
+                inputs: {OWNER: {block: {type: 'world_this_actor'}}},
+              },
+            },
+          },
+        },
+      ],
+    },
+  };
+
+  it('lists the world’s cameras on a main map with nothing selected', () => {
+    const view = mount(doc(), {
+      onEditScript: vi.fn(),
+      world: {
+        header: {name: 'W', properties: []},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+      },
+      worldCameras: [
+        {id: 'c1', name: 'Wide', traits: ['Camera Follow#Follows']},
+      ],
+    });
+    expect(view.getByTestId('camera-panel')).toBeInTheDocument();
+    expect(view.getByText('Wide')).toBeInTheDocument();
+    expect(view.getByText(/Follows/)).toBeInTheDocument();
+  });
+
+  it('lists a placement’s own, read from its script, when it is selected', () => {
+    const map = doc();
+    map.actors[0] = {...map.actors[0], blocks: chase as never};
+    const onEditScript = vi.fn();
+    const {canvas, ...view} = mount(map, {onEditScript});
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(view.getByText('Chase')).toBeInTheDocument();
+
+    fireEvent.click(view.getByRole('button', {name: 'Open script'}));
+    expect(onEditScript).toHaveBeenCalledWith('a');
+  });
+
+  it('shows nothing on a level map with nothing selected, which has none', () => {
+    const view = mount(doc(), {onEditScript: vi.fn()});
+    expect(view.queryByTestId('camera-panel')).toBeNull();
+  });
+});
+
 describe('a level, with nothing selected', () => {
   it('says nothing about a camera, because a map does not decide that', () => {
     // The field was "Camera follows", a dropdown of this map's placements. It is

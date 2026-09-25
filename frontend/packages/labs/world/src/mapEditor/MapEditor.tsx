@@ -62,6 +62,7 @@ import {
 import {MapStage} from './MapStage';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {WithheldNote} from './WithheldNote';
+import {worldCameras} from './worldCameras';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
 import type {WorldProperty} from './worldProperties';
 import {worldRuleProperties} from './worldRuleProperties';
@@ -467,6 +468,12 @@ export const MapEditor = ({
     () => document.world?.read(fileText, ruleProperties),
     [document, fileText, ruleProperties],
   );
+  // The world's own cameras, for the strip — from the file, which the stage
+  // never sees (`worldCameras`). Absent for a `.map`, which has none.
+  const worldCameraList = useMemo(
+    () => (document.world ? worldCameras(fileText) : []),
+    [document.world, fileText],
+  );
   const worldInspector =
     document.world && worldHeader
       ? {
@@ -724,6 +731,7 @@ export const MapEditor = ({
         onOpenKind={openKind}
         mapScriptLabel={document.hasMapScript ? 'Map script' : 'World'}
         world={worldInspector}
+        worldCameras={worldCameraList}
         mapChoices={mapChoices}
         heldMaps={heldMaps}
         backgroundChoices={backgroundChoices}

@@ -305,12 +305,15 @@ for ⟨actor⟩`, a socket.**
    JSON without opening a workspace, and the shape to copy for the UI is
    `LayerPanel` / `LayerInspector`.
 
-   - **9a. Read and show.** A `worldCameras` reader over the world file's
-     `define camera` rows — name, owner, id, traits — and a strip that lists
-     them: the world's on a main map, a Viewport's with that placement selected,
-     none on a level `.map`, which is the plan's point made visible. Mirrors
-     `readWorldHeader` closely; the smallest useful piece, and useful alone
-     because nothing today says what cameras a project has.
+   - **9a. Read and show. BUILT.** `mapEditor/worldCameras` reads every
+     `define camera` in a workspace — the world's are those with an empty owner
+     socket, a placement's are those `for ⟨this actor⟩` in its script — and
+     `CameraPanel` lists them beside the layers: the world's on a main map with
+     nothing selected, a placement's with one selected, nothing on a level
+     `.map`. Name and traits, and one button: Script, which opens where they
+     are declared. That is the whole of what a read-only strip can honestly
+     offer, and it says so where the list is empty rather than reading as "no
+     view", since every space has a main camera regardless.
    - **9b. Add, remove, rename.** Renaming is a field rewrite, which
      `worldProperties` already does. Adding and removing are NOT: they splice a
      row into a chain and unlink one, and no writer in that module changes

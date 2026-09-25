@@ -40,6 +40,7 @@ import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
+import {CameraPanel} from './CameraPanel';
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
 import styles from './mapEditor.module.css';
@@ -108,6 +109,7 @@ import {
   type Remembered,
 } from './stageGeometry';
 import {WithheldNote} from './WithheldNote';
+import {placementCameras, type DeclaredCamera} from './worldCameras';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 
 /** What the stage can blit: a decoded thumbnail, or a canvas painted here. */
@@ -244,6 +246,12 @@ export interface MapStageProps {
     'isReadOnly' | 'theme' | 'themeOptions' | 'onTheme'
   >;
   /**
+   * The cameras the world's own workspace declares, for the camera strip on a
+   * main map with nothing selected. Read by the editor, which has the file's
+   * text; the stage knows nothing of files (`worldCameras`).
+   */
+  worldCameras?: readonly DeclaredCamera[];
+  /**
    * The project's maps as `[name, path]`, for a Viewport's `map` property
    * (specs/VIEWPORT_PLAN.md) — the one string the inspector offers a list
    * for that the sandbox cannot supply, since which maps a project holds is
@@ -290,6 +298,7 @@ export const MapStage = ({
   onDocChange,
   onDocPreview,
   onEditScript,
+  worldCameras = [],
   withheld,
   kinds,
   onEnhanceKind,
@@ -2497,6 +2506,28 @@ export const MapStage = ({
           }}
           onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
           isReadOnly={isReadOnly}
+        />
+      )}
+      {/* The cameras of whatever is being edited: the world's on a main map
+          with nothing selected, a placement's when one is — and nothing on a
+          level `.map` with nothing selected, since a map has none
+          (specs/SPACE_CAMERAS_PLAN.md). Only when a script can be opened,
+          because opening it is the one thing the strip offers. */}
+      {/* …and not at all while scripts are withheld from this lesson: a list
+          whose one button opens a script nobody may open is a list that says
+          less than nothing. */}
+      {onEditScript && !locked('map-scripts') && selectedActor && (
+        <CameraPanel
+          cameras={placementCameras(selectedActor.blocks)}
+          owner={selectedActor.id}
+          onOpen={() => onEditScript(selectedActor.id)}
+        />
+      )}
+      {onEditScript && !locked('map-scripts') && !selectedActor && world && (
+        <CameraPanel
+          cameras={worldCameras}
+          owner="the world"
+          onOpen={() => onEditScript(undefined)}
         />
       )}
       <RecordPanel
