@@ -85,9 +85,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   const isRecordable =
     challengeType === ChallengeTypes.VIDEO ||
     explanationType === ExplanationTypes.AUDIO;
-  // Watching back a video take. Discarding it returns to the live canvas,
-  // where the student can change what gets composited into the next one; an
-  // audio take has nothing to edit, so it re-records in a single click.
+  // Video previews return to edit first; audio re-records in one click
   const isVideoPreview =
     challengeType === ChallengeTypes.VIDEO && hasRecording && !isRecording;
 

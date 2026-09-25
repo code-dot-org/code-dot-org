@@ -1,16 +1,6 @@
-// Stand-in for aiTutor's VideoCanvas, which needs MediaRecorder, getUserMedia
-// and a Konva canvas — none available under jsdom.
-//
-// Mirrors the real component's two states (`mode`, requested by the caller;
-// `currentMode`, what the recorder is doing) and their timing: a stop reaches
-// 'preview' only once the blob arrives, a tick later. In between, `mode`
-// already reads 'edit' (the caller's isRecording flipped, hasRecording
-// hasn't yet) while `currentMode` still shows 'recording'.
-//
-//   jest.mock(
-//     '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoCanvas',
-//     () => jest.requireActual('<path>/stubVideoCanvas')
-//   );
+// Stand-in for VideoCanvas, which needs MediaRecorder, getUserMedia and a
+// canvas, none available in jsdom. Like the real recorder, a stop delivers
+// its blob a tick later, and only then enters 'preview'.
 
 import React, {FC, useEffect, useRef, useState} from 'react';
 
@@ -37,8 +27,7 @@ const StubVideoCanvas: FC<StubVideoCanvasProps> = ({
   disabled = false,
 }) => {
   const [currentMode, setCurrentMode] = useState('edit');
-  // Stands in for MediaRecorder.state, which the real component reads to
-  // settle the repeated stop requests the window above invites.
+  // Stands in for MediaRecorder.state, which ignores repeated stops
   const stopping = useRef(false);
 
   useEffect(() => {
@@ -53,7 +42,7 @@ const StubVideoCanvas: FC<StubVideoCanvasProps> = ({
       stopping.current = true;
       Promise.resolve().then(() => {
         stopping.current = false;
-        // 'preview' last, matching the real onstop's ordering.
+        // 'preview' last, as in the real onstop
         setRecordedBlob(recordedVideoBlob);
         setRecordedAudioBlob(recordedAudioBlob);
         onRecordingChange(true);
@@ -74,8 +63,7 @@ const StubVideoCanvas: FC<StubVideoCanvasProps> = ({
     setRecordedAudioBlob,
   ]);
 
-  // Rendered as text so tests can see which surface the canvas is showing:
-  // the live stage, or the recorded take playing back.
+  // Rendered as text so tests can assert on it
   return <div>{`canvas mode: ${currentMode}`}</div>;
 };
 

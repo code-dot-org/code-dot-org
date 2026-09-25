@@ -4,24 +4,37 @@ import React, {
   SetStateAction,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
-import {Image as KonvaImage, Layer, Stage} from 'react-konva';
+import {Image as KonvaImage, Layer, Stage, Transformer} from 'react-konva';
 
+import CanvasText, {TransformerNode} from './CanvasText';
+import {
+  CanvasTextItem,
+  NewCanvasText,
+  TEXT_FONT_STYLE,
+} from './canvasTextUtils';
 import EditToolbar from './EditToolbar';
 
 import styles from './video-canvas.module.scss';
 
 // 'edit': live stage, recorder stopped — where decorations get placed before
-// a take, and where a take is discarded to place more.
+// a take
 export type VideoCanvasMode = 'edit' | 'recording' | 'preview';
 
-// Node types come through react-konva: konva itself is ESM-only, which this
-// CommonJS-compiled package cannot import.
-type StageNode = React.ElementRef<typeof Stage>;
 type LayerNode = React.ElementRef<typeof Layer>;
 type ImageNode = React.ElementRef<typeof KonvaImage>;
+
+const TEXT_ANCHORS = [
+  'top-left',
+  'top-right',
+  'bottom-left',
+  'bottom-right',
+  'middle-left',
+  'middle-right',
+];
 
 const RING_RADIUS = 26;
 const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
@@ -92,9 +105,7 @@ function pickAudioMimeType(): string {
     : 'audio/webm';
 }
 
-// Crop rect (in source-video pixel space) that fills a targetWidth x
-// targetHeight box without distorting the image — CSS's object-fit: cover,
-// which Konva.Image has no equivalent for on its own.
+// Crop video stream to fit canvas ratio
 function getCoverCrop(
   sourceWidth: number,
   sourceHeight: number,
@@ -112,13 +123,10 @@ function getCoverCrop(
 }
 
 interface VideoCanvasProps {
-  // Requested by the caller, driven from a button it owns rather than one
-  // here. Only edit -> recording, recording -> preview and preview -> edit
-  // have any effect.
+  // Requested mode change: edit -> recording -> preview -> edit
   mode: VideoCanvasMode;
   onRecordingChange: (hasRecording: boolean) => void;
-  // Called when the recording stops on its own (countdown expiry), so the
-  // caller can bring the state backing `mode` in sync.
+  // Callback when the recording times out
   onIsRecordingChange?: (isRecording: boolean) => void;
   recordedBlob: Blob | null;
   setRecordedBlob: Dispatch<SetStateAction<Blob | null>>;
@@ -138,21 +146,23 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   timeLimitSeconds = 30,
   disabled = false,
 }) => {
-  // Actual mode, set by effects when `mode` changes; can briefly lag it.
+  // Actual mode, set by start/stop recording effects
   const [currentMode, setCurrentMode] = useState<VideoCanvasMode>('edit');
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
   const [stageSize, setStageSize] = useState({width: 0, height: 0});
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  // A state-backed ref (rather than useRef) so the animation effect below
-  // reruns when the Layer mounts — it unmounts while the take plays back and
-  // remounts on the way to 'edit', since it lives in the same conditional
-  // branch as that playback view, and a plain ref wouldn't trigger that.
+  // A Layer ref state so the video stream animation reruns when the Layer
+  // remounts on the way to 'edit', unmounts while the take plays back
   const [layerNode, setLayerNode] = useState<LayerNode | null>(null);
+  // the stage unmounts during preview, and the texts are added back when returning to edit mode
+  const [texts, setTexts] = useState<CanvasTextItem[]>([]);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const textIdRef = useRef(0);
+  const transformerRef = useRef<TransformerNode>(null);
 
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [wrapperNode, setWrapperNode] = useState<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const stageRef = useRef<StageNode>(null);
   const imageNodeRef = useRef<ImageNode>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const canvasStreamRef = useRef<MediaStream | null>(null);
@@ -203,8 +213,6 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     }
   }, [attachStream]);
 
-  // The live <video> unmounts while the recorded take plays back, so it needs
-  // the stream again on the way back to the stage.
   useEffect(() => {
     if (currentMode !== 'preview') {
       attachStream();
@@ -222,20 +230,18 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   // output — matches it exactly, at whatever size the surrounding layout
   // gives the 9/16 box.
   useEffect(() => {
-    const el = wrapperRef.current;
-    if (!el) return;
+    if (!wrapperNode) return;
     const observer = new ResizeObserver(([entry]) => {
       const {width, height} = entry.contentRect;
+      // A wrapper leaving the page reports 0x0; keep the last real size.
+      if (!width || !height) return;
       setStageSize({width: Math.round(width), height: Math.round(height)});
     });
-    observer.observe(el);
+    observer.observe(wrapperNode);
     return () => observer.disconnect();
-  }, []);
+  }, [wrapperNode]);
 
   // Redraws the video's current frame onto the stage every animation frame.
-  // Mutating the image node directly (rather than through React state) keeps
-  // this off the render path — re-rendering React 30-60 times a second to
-  // update one node would be wasted work.
   useEffect(() => {
     const videoEl = videoRef.current;
     const imageNode = imageNodeRef.current;
@@ -273,17 +279,13 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     return () => URL.revokeObjectURL(url);
   }, [recordedBlob]);
 
-  // 'preview' is entered in onstop once the blob exists, not here — the
-  // caller can't name a take it hasn't heard about yet. The effect below may
-  // call this more than once meanwhile; the guard settles it.
+  // current mode is set to 'preview' in onstop once the blob exists
   const stopRecording = useCallback(() => {
     if (recorderRef.current?.state !== 'recording') return;
     clearTimer();
     recorderRef.current.stop();
     audioRecorderRef.current?.stop();
     canvasStreamRef.current?.getTracks().forEach(t => t.stop());
-    // Frees the camera for the duration of the playback; `returnToEdit` asks
-    // for it again.
     streamRef.current?.getTracks().forEach(t => t.stop());
   }, []);
 
@@ -293,7 +295,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     }
   }, [timeRemaining, currentMode, stopRecording]);
 
-  // Discards the take: what's on the canvas no longer matches it.
+  // Discards the take
   const returnToEdit = useCallback(async () => {
     setRecordedBlob(null);
     setRecordedAudioBlob(null);
@@ -310,11 +312,11 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   ]);
 
   const startRecording = useCallback(() => {
-    // The Layer this canvas belongs to is non-listening (see below), so it
-    // never grows a second, invisible hit-graph canvas — this query always
-    // finds the one canvas actually being drawn to.
-    const sceneCanvas = stageRef.current?.container().querySelector('canvas');
+    // Only the content layer is recorded; the transformer's handles are
+    // drawn on a separate layer
+    const sceneCanvas = layerNode?.getNativeCanvasElement();
     if (!streamRef.current || !sceneCanvas) return;
+    setSelectedId(null);
     chunksRef.current = [];
     audioChunksRef.current = [];
     setTimeRemaining(timeLimitSeconds);
@@ -332,8 +334,6 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     };
     recorder.onstop = () => {
       const blob = new Blob(chunksRef.current, {type: 'video/webm'});
-      // Order matters: 'preview' must land after the caller can see a take
-      // exists, or 'preview' + a caller still asking 'edit' reads as discard.
       setRecordedBlob(blob);
       onRecordingChange(true);
       onIsRecordingChange?.(false);
@@ -365,6 +365,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
       setTimeRemaining(prev => (prev > 0 ? prev - 1 : 0));
     }, 1000);
   }, [
+    layerNode,
     timeLimitSeconds,
     setRecordedBlob,
     setRecordedAudioBlob,
@@ -372,7 +373,56 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     onIsRecordingChange,
   ]);
 
-  // 'edit', not !== 'recording': avoids reacting to the countdown's own stop.
+  const addText = useCallback(
+    async ({text, color, style}: NewCanvasText) => {
+      try {
+        await document.fonts?.load(`${TEXT_FONT_STYLE} 48px Geist`);
+      } catch (error) {
+        console.error(error);
+        // Draw with the fallback font rather than not at all.
+      }
+      const id = `text-${++textIdRef.current}`;
+      setTexts(prev => [
+        ...prev,
+        {
+          id,
+          text,
+          color,
+          style,
+          x: stageSize.width * 0.1,
+          y: stageSize.height * 0.4,
+          width: stageSize.width * 0.8,
+          fontSize: Math.round(stageSize.width * 0.12),
+        },
+      ]);
+      setSelectedId(id);
+    },
+    [stageSize]
+  );
+
+  const deleteSelected = useCallback(() => {
+    setTexts(prev => prev.filter(item => item.id !== selectedId));
+    setSelectedId(null);
+  }, [selectedId]);
+
+  const updateText = useCallback(
+    (id: string, changes: Partial<CanvasTextItem>) =>
+      setTexts(prev =>
+        prev.map(item => (item.id === id ? {...item, ...changes} : item))
+      ),
+    []
+  );
+
+  // The transformer lives on another layer and cannot see changes inside
+  // the Label it holds, so it is re-pointed and refreshed on every change.
+  useLayoutEffect(() => {
+    const transformer = transformerRef.current;
+    if (!transformer) return;
+    const node = selectedId ? layerNode?.findOne(`#${selectedId}`) : undefined;
+    transformer.nodes(node ? [node] : []);
+    transformer.forceUpdate();
+  }, [selectedId, texts, layerNode]);
+
   useEffect(() => {
     if (disabled) return;
     if (mode === 'recording' && currentMode === 'edit') {
@@ -413,8 +463,14 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
 
   return (
     <div className={styles.container}>
-      {currentMode === 'edit' && <EditToolbar />}
-      <div className={styles.previewWrapper} ref={wrapperRef}>
+      {currentMode === 'edit' && (
+        <EditToolbar
+          onAddText={addText}
+          canDelete={selectedId !== null}
+          onDelete={deleteSelected}
+        />
+      )}
+      <div className={styles.previewWrapper} ref={setWrapperNode}>
         <video
           key="preview"
           ref={videoRef}
@@ -425,15 +481,41 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
         />
         {stageSize.width > 0 && stageSize.height > 0 && (
           <Stage
-            ref={stageRef}
             width={stageSize.width}
             height={stageSize.height}
+            onMouseDown={e => {
+              if (e.target === e.target.getStage()) setSelectedId(null);
+            }}
+            onTouchStart={e => {
+              if (e.target === e.target.getStage()) setSelectedId(null);
+            }}
           >
-            {/* listening=false: nothing on this layer is draggable yet, and
-                it keeps this the container's only canvas (see startRecording
-                above, which captures whichever canvas it finds there). */}
-            <Layer ref={setLayerNode} listening={false}>
-              <KonvaImage ref={imageNodeRef} image={undefined} />
+            <Layer ref={setLayerNode} listening={currentMode === 'edit'}>
+              {/* Not listening, so a press on the video lands on the stage
+                  and deselects. */}
+              <KonvaImage
+                ref={imageNodeRef}
+                image={undefined}
+                listening={false}
+              />
+              {texts.map(item => (
+                <CanvasText
+                  key={item.id}
+                  item={item}
+                  editable={currentMode === 'edit'}
+                  transformerRef={transformerRef}
+                  onSelect={() => setSelectedId(item.id)}
+                  onChange={changes => updateText(item.id, changes)}
+                />
+              ))}
+            </Layer>
+            <Layer>
+              <Transformer
+                ref={transformerRef}
+                enabledAnchors={TEXT_ANCHORS}
+                rotateEnabled={false}
+                flipEnabled={false}
+              />
             </Layer>
           </Stage>
         )}

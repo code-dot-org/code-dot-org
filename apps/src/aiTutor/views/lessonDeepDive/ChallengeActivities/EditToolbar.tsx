@@ -2,6 +2,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import React, {FC, ReactNode, Ref, useId, useRef, useState} from 'react';
 
+import {NewCanvasText, TEXT_STYLES, TextStyle} from './canvasTextUtils';
+
 import styles from './edit-toolbar.module.scss';
 
 type PanelName = 'text' | 'stickers';
@@ -21,9 +23,6 @@ const TEXT_COLORS = [
   {name: 'Black', value: '#000000'},
   {name: 'White', value: '#ffffff', light: true},
 ];
-
-const TEXT_STYLES = ['Normal', 'Outline', 'Fill', 'Glow'] as const;
-type TextStyle = (typeof TEXT_STYLES)[number];
 
 const STICKER_SECTIONS = [
   {title: 'Retro', slots: 8},
@@ -102,12 +101,23 @@ const Panel: FC<PanelProps> = ({title, onClose, children}) => {
   );
 };
 
-const TextPanel: FC<{onClose: () => void}> = ({onClose}) => {
+interface TextPanelProps {
+  onClose: () => void;
+  onAddText: (text: NewCanvasText) => void;
+}
+
+const TextPanel: FC<TextPanelProps> = ({onClose, onAddText}) => {
   const [text, setText] = useState('');
   const [color, setColor] = useState('#ffffff');
   const [textStyle, setTextStyle] = useState<TextStyle>('Normal');
   const inputId = useId();
   const groupName = useId();
+  const trimmed = text.trim();
+
+  const handleAdd = () => {
+    onAddText({text: trimmed, color, style: textStyle});
+    setText('');
+  };
 
   return (
     <Panel title="Text" onClose={onClose}>
@@ -185,7 +195,8 @@ const TextPanel: FC<{onClose: () => void}> = ({onClose}) => {
           color="primary"
           size="small"
           fullWidth
-          disabled
+          disabled={!trimmed}
+          onClick={handleAdd}
         >
           Add to video
         </Button>
@@ -211,7 +222,17 @@ const StickersPanel: FC<{onClose: () => void}> = ({onClose}) => (
   </Panel>
 );
 
-const EditToolbar: FC = () => {
+interface EditToolbarProps {
+  onAddText: (text: NewCanvasText) => void;
+  canDelete: boolean;
+  onDelete: () => void;
+}
+
+const EditToolbar: FC<EditToolbarProps> = ({
+  onAddText,
+  canDelete,
+  onDelete,
+}) => {
   const [openPanel, setOpenPanel] = useState<PanelName | null>(null);
   const textButtonRef = useRef<HTMLButtonElement>(null);
   const stickersButtonRef = useRef<HTMLButtonElement>(null);
@@ -248,10 +269,17 @@ const EditToolbar: FC = () => {
         <div className={styles.toolGroup}>
           <ToolButton label="Rotate left" iconName="rotate-left" disabled />
           <ToolButton label="Rotate right" iconName="rotate-right" disabled />
-          <ToolButton label="Delete" iconName="trash" disabled />
+          <ToolButton
+            label="Delete"
+            iconName="trash"
+            disabled={!canDelete}
+            onClick={onDelete}
+          />
         </div>
       </div>
-      {openPanel === 'text' && <TextPanel onClose={close} />}
+      {openPanel === 'text' && (
+        <TextPanel onClose={close} onAddText={onAddText} />
+      )}
       {openPanel === 'stickers' && <StickersPanel onClose={close} />}
     </div>
   );

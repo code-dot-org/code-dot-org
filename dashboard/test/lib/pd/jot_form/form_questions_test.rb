@@ -205,9 +205,8 @@ module Pd
         # and then the array of Questions are passed to the FormQuestions constructor
         mock_constructed_questions = Array.new(5) {mock}
         5.times do |i|
-          mock_question_class = mock do |c|
-            c.expects(:new).with({type: "fake type #{i}"}).returns(mock_constructed_questions[i])
-          end
+          mock_question_class = mock
+          mock_question_class.expects(:new).with({type: "fake type #{i}"}).returns(mock_constructed_questions[i])
 
           Translation.expects(:get_question_class_for).with("fake type #{i}").returns(mock_question_class)
         end
