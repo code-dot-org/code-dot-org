@@ -28,6 +28,7 @@ import {
   generateBubbleChoiceThumbnail,
   renderBubbleChoiceDsl,
 } from './ai/bubbleChoice';
+import {type ExternalGeneration, generateExternalLevel} from './ai/external';
 import {generateFreeResponseLevel} from './ai/freeResponse';
 import {ImportedPlan} from './ai/importPlan';
 import {generateLessonOutline} from './ai/outline';
@@ -47,12 +48,22 @@ import ImportPlanningDoc from './components/ImportPlanningDoc';
 import LevelCard from './components/LevelCard';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
-import {buildInitialState, newLevelSpec} from './helpers/buildInitialState';
+import {
+  buildInitialState,
+  existingRefsByLevelName,
+  newLevelSpec,
+} from './helpers/buildInitialState';
 import {
   generatorInputsChanged,
   saveGeneratorPrompts,
 } from './helpers/generatorPrompts';
 import {levelContextFor} from './helpers/levelContext';
+import {
+  existingLevelName,
+  levelNameFor,
+  prefixedName,
+  sublevelNameFor,
+} from './helpers/levelName';
 import {
   formatPrecedingLevels,
   PriorEntry,
@@ -73,12 +84,15 @@ import {
   updateStartSources,
 } from './levelApi';
 import {
+  DSL_LAB_TYPES,
   ExistingLessonData,
+  ExistingLevelRef,
   GenerationSummary,
   LAB_LABELS,
   LabType,
   LevelSpec,
   ProgressUpdate,
+  SerializedActivity,
   SUPPORTED_LAB_TYPES,
 } from './types';
 
@@ -125,6 +139,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [summary, setSummary] = useState<GenerationSummary | null>(null);
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
+  // The lesson tree as last saved; the prop is only the page-load snapshot.
+  const [activities, setActivities] = useState<SerializedActivity[]>(
+    lesson.activities || []
+  );
   const [isOutlining, setIsOutlining] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
@@ -268,11 +286,6 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     }
     return null;
   }, [prefix, levelSpecs]);
-
-  const fullName = useCallback(
-    (id: string) => (prefix ? `${prefix}-${id}` : id),
-    [prefix]
-  );
 
   const appendLog = useCallback((line: string) => {
     setProgressLog(log => [...log, line]);
@@ -478,7 +491,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     }
 
     for (const groupId of groupsToGenerate) {
-      const templateName = fullName(`template-${groupId}`);
+      const templateName = prefixedName(prefix, `template-${groupId}`);
       // Feed the prompt every member of the group so the template
       // scaffolds for all of them, not just the ones being regenerated
       // this run.
@@ -487,7 +500,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           s => s.labType === 'weblab2' && s.templateGroup?.trim() === groupId
         )
         .map(s => ({
-          name: fullName(s.id.trim()),
+          name: levelNameFor(s, prefix),
           description: s.description.trim(),
           suppliedCode: s.suppliedCode?.trim() || undefined,
         }));
@@ -527,7 +540,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
-      const levelName = fullName(spec.id.trim());
+      const levelName = levelNameFor(spec, prefix);
       const setStage = (phase: ProgressUpdate['phase'], detail?: string) => {
         setProgress({
           levelIndex: i,
@@ -591,11 +604,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         };
         const levelCtx = levelContextFor(spec, levelName, levelCtxBase);
 
-        // DSL-defined labs (multi / match / bubbleChoice) must plan
-        // their content before createOrFindLevel so we can pass
-        // dsl_text on POST; other labs go the create-then-save path.
+        // DSL-defined labs plan before createOrFindLevel so dsl_text can
+        // go on the POST; other labs create first, then save content.
         let multiResult: MultiGeneration | undefined;
         let matchResult: MatchGeneration | undefined;
+        let externalResult: ExternalGeneration | undefined;
         let bubbleChoicePlan: BubbleChoiceGeneration | undefined;
         const bubbleChoiceSublevelLevels: {
           spec: LevelSpec;
@@ -613,6 +626,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           appendLog(`Planning content for "${levelName}"…`);
           matchResult = await generateMatchLevel(levelCtx);
           dslText = matchResult.dslText;
+        } else if (shouldGenerate && spec.labType === 'external') {
+          setStage('planning');
+          appendLog(`Planning content for "${levelName}"…`);
+          externalResult = await generateExternalLevel(levelCtx);
+          dslText = externalResult.dslText;
         } else if (shouldGenerate && spec.labType === 'bubbleChoice') {
           const sublevels = spec.sublevels ?? [];
           setStage('planning');
@@ -620,7 +638,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             `Planning ${sublevels.length} sublevel(s) for "${levelName}"…`
           );
           for (const sub of sublevels) {
-            const subName = fullName(`${spec.id.trim()}-${sub.id.trim()}`);
+            const subName = sublevelNameFor(sub, levelName);
             const subLevel = await createOrFindLevel(sub.labType, subName);
             const subCtx = levelContextFor(sub, subName, levelCtxBase);
             await generateSublevelContent(sub, subCtx, subLevel.id, appendLog);
@@ -670,34 +688,20 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             : `Skipping content generation for "${levelName}" (Generate is unchecked).`
         );
         const level = await createOrFindLevel(spec.labType, levelName, dslText);
-        if (level.reused && shouldGenerate && !isExisting) {
-          appendLog(
-            `Level "${levelName}" already exists — reusing and overwriting its content.`
-          );
-          // For DSL types we PATCHed nothing on create (the existing
-          // record kept its old dsl_text). Re-write with the fresh DSL.
-          if (multiResult) {
-            await updateLevelProperty(
-              level.id,
-              'dsl_text',
-              multiResult.dslText
+        if (level.reused && shouldGenerate) {
+          if (!isExisting) {
+            appendLog(
+              `Level "${levelName}" already exists — reusing and overwriting its content.`
             );
-          } else if (matchResult) {
-            await updateLevelProperty(
-              level.id,
-              'dsl_text',
-              matchResult.dslText
-            );
-          } else if (bubbleChoicePlan && dslText) {
+          }
+          // A found level kept its old dsl_text; the create POST never ran.
+          if (dslText) {
             await updateLevelProperty(level.id, 'dsl_text', dslText);
           }
         }
 
         if (shouldGenerate) {
-          // Multi/Match ran the planning stage above (before create);
-          // the others run it here. Either way the stage label lines up
-          // with where the AI work actually happens.
-          if (spec.labType !== 'multi' && spec.labType !== 'match') {
+          if (!DSL_LAB_TYPES.includes(spec.labType)) {
             setStage('planning');
             appendLog(`Planning content for "${levelName}"…`);
           }
@@ -906,6 +910,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               );
             }
             generatedOutput = {match: matchResult};
+          } else if (spec.labType === 'external' && externalResult) {
+            // The page itself is the DSL; nothing left to save.
+            generatedOutput = {external: externalResult};
           } else if (spec.labType === 'freeResponse') {
             const result = await generateFreeResponseLevel(levelCtx);
             setStage('saving-properties');
@@ -1052,6 +1059,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       }
     }
 
+    let savedRefs: Map<string, ExistingLevelRef> | undefined;
     if (placements.length > 0) {
       try {
         setProgress({
@@ -1061,19 +1069,18 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           phase: 'attaching',
         });
         appendLog(`Saving lesson with ${placements.length} level(s)…`);
-        const newActivities = rebuildActivities(
-          lesson.activities || [],
-          placements
-        );
+        const newActivities = rebuildActivities(activities, placements);
         // Persist the outline + target-project channel id so reopening
         // /generate restores them. Sending '' for either clears the
         // previously-saved value.
-        await saveLessonActivities(
+        const saved = await saveLessonActivities(
           lesson.id,
           newActivities,
           outline.trim(),
           projectChannelId.trim()
         );
+        setActivities(saved);
+        savedRefs = existingRefsByLevelName(saved);
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -1098,7 +1105,23 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         specs.map(s => {
           const desc = succeededDescriptions.get(s.key);
           if (desc === undefined) return s;
-          return {...s, lastGeneratedDescription: desc, generate: false};
+          const name = levelNameFor(s, prefix);
+          const existing = s.existing ?? savedRefs?.get(name);
+          return {
+            ...s,
+            lastGeneratedDescription: desc,
+            generate: false,
+            ...(existing ? {existing} : {}),
+            ...(s.sublevels
+              ? {
+                  sublevels: s.sublevels.map(sl => ({
+                    ...sl,
+                    existingName:
+                      existingLevelName(sl) ?? sublevelNameFor(sl, name),
+                  })),
+                }
+              : {}),
+          };
         })
       );
     }
@@ -1113,10 +1136,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setIsGenerating(false);
     setProgress(null);
   }, [
+    prefix,
+    activities,
     validationError,
     lesson,
     levelSpecs,
-    fullName,
     appendLog,
     outline,
     setLevelSpecs,
@@ -1193,7 +1217,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             spec={spec}
             index={index}
             total={levelSpecs.length}
-            previewName={fullName(spec.id || '<id>')}
+            previewName={
+              spec.id.trim()
+                ? levelNameFor(spec, prefix)
+                : prefixedName(prefix, '<id>')
+            }
             disabled={isGenerating}
             labOptions={LAB_OPTIONS}
             onChange={updateSpec}

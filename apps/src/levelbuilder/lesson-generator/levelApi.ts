@@ -49,6 +49,12 @@ export async function createOrFindLevel(
       if (/name has already been taken/i.test(body)) {
         const racy = await findLevelByName(type, name);
         if (racy) return {...racy, reused: true};
+        // Level names are unique across types; a same-type match would
+        // have been found above.
+        throw new Error(
+          `A level named "${name}" already exists with a different lab type. ` +
+            "Change this card's ID, or delete that level first."
+        );
       }
       throw new Error(`Failed to create level "${name}": 406 ${body}`);
     }
@@ -199,7 +205,7 @@ export async function saveLessonActivities(
   activities: SerializedActivity[],
   generateOutline?: string,
   generateProjectChannelId?: string
-): Promise<void> {
+): Promise<SerializedActivity[]> {
   const body: Record<string, string> = {
     activities: JSON.stringify(activities),
   };
@@ -212,10 +218,17 @@ export async function saveLessonActivities(
     // it stick.
     body.generate_project_channel_id = generateProjectChannelId;
   }
-  await HttpClient.put(`/lessons/${lessonId}`, JSON.stringify(body), true, {
-    'Content-Type': 'application/json;charset=UTF-8',
-    Accept: 'application/json',
-  });
+  const response = await HttpClient.put(
+    `/lessons/${lessonId}`,
+    JSON.stringify(body),
+    true,
+    {
+      'Content-Type': 'application/json;charset=UTF-8',
+      Accept: 'application/json',
+    }
+  );
+  const saved = (await response.json()) as {activities?: SerializedActivity[]};
+  return saved.activities ?? [];
 }
 
 // The lab2 sources `get` helper under a clearer name. The page uses the
