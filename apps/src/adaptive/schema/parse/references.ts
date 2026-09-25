@@ -1,5 +1,6 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, and whether each project-mode lab step fits the pathway's project.
+// shape, and whether each level step's `project` flag agrees with the level
+// the server resolved for it.
 
 import {z} from 'zod';
 
@@ -14,8 +15,37 @@ export function referenceProblems(pathway: Pathway): string[] {
   return [
     ...skillProblems(pathway),
     ...checkpointProblems(pathway),
-    ...projectStepProblems(pathway),
+    ...levelStepProblems(pathway),
   ];
+}
+
+/**
+ * Detects level steps whose `project` flag disagrees with their level: a
+ * project step's level must share the pathway's project template, and a
+ * sandbox step's must not. Steps whose level did not resolve are skipped.
+ */
+function levelStepProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const template = pathway.project.templateLevel;
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'level' || !step.levelProperties) continue;
+      const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
+      const sharesProject =
+        step.level === template ||
+        step.levelProperties.projectTemplateLevelName === template;
+      if (step.project && !sharesProject) {
+        problems.push(
+          `${where}: marked project but level '${step.level}' does not use template '${template}'`
+        );
+      } else if (!step.project && sharesProject) {
+        problems.push(
+          `${where}: level '${step.level}' uses the project template but the step is not marked project`
+        );
+      }
+    }
+  }
+  return problems;
 }
 
 /**
@@ -100,34 +130,6 @@ function checkpointProblems(pathway: Pathway): string[] {
   const stepIds = pathway.checkpoints.flatMap(c => c.steps.map(s => s.id));
   if (new Set(stepIds).size !== stepIds.length) {
     problems.push(`${where}: step ids must be unique across checkpoints`);
-  }
-  return problems;
-}
-
-/**
- * Detects and returns any problems with project-mode lab steps.
- * All project-mode lab steps edit the pathway's single project, so they must
- * use the project's lab and cannot declare start sources; practice steps are
- * self-contained and may use any lab.
- */
-function projectStepProblems(pathway: Pathway): string[] {
-  const problems: string[] = [];
-  const projectLab = pathway.project.lab.type;
-  for (const checkpoint of pathway.checkpoints) {
-    for (const step of checkpoint.steps) {
-      if (step.kind !== 'lab' || step.sourceMode !== 'project') continue;
-      const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
-      if (step.lab.type !== projectLab) {
-        problems.push(
-          `${where}: project step uses '${step.lab.type}' but the pathway's project is '${projectLab}'`
-        );
-      }
-      if (step.lab.startSources) {
-        problems.push(
-          `${where}: project step cannot declare startSources; the project already has sources`
-        );
-      }
-    }
   }
   return problems;
 }

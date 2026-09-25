@@ -59,7 +59,10 @@ class Adaptive < Level
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties = super
-    properties[:pathway] = content
+    pathway = content
+    properties[:pathway] = pathway && with_level_properties(pathway) do |level|
+      level.summarize_for_lab2_properties(script, nil, current_user)
+    end
     properties
   end
 
@@ -68,5 +71,41 @@ class Adaptive < Level
     return if adaptive_id.blank?
     return if AdaptiveContent.exist?(adaptive_id)
     errors.add(:adaptive_id, "has no content file under #{AdaptiveContent.content_dir}")
+  end
+
+  # A copy of `pathway` with each referenced level's properties, as returned
+  # by the block, inlined under `levelProperties`: the project's template
+  # level and every `level` step. Names with no level pass through unresolved
+  # for the client to report. The cached pathway is not touched.
+  private def with_level_properties(pathway)
+    names = [pathway.dig('project', 'templateLevel'), *level_steps(pathway).map {|step| step['level']}]
+    levels = Level.where(name: names.compact.uniq).index_by(&:name)
+    resolve = lambda do |object, key|
+      level = levels[object[key]]
+      level ? object.merge('levelProperties' => yield(level)) : object
+    end
+
+    resolved = pathway.dup
+    resolved['project'] = resolve.call(pathway['project'], 'templateLevel') if pathway['project'].is_a?(Hash)
+    if pathway['checkpoints'].is_a?(Array)
+      resolved['checkpoints'] = pathway['checkpoints'].map do |checkpoint|
+        next checkpoint unless checkpoint.is_a?(Hash) && checkpoint['steps'].is_a?(Array)
+        checkpoint.merge('steps' => checkpoint['steps'].map {|step| level_step?(step) ? resolve.call(step, 'level') : step})
+      end
+    end
+    resolved
+  end
+
+  private def level_steps(pathway)
+    checkpoints = pathway['checkpoints']
+    return [] unless checkpoints.is_a?(Array)
+    checkpoints.flat_map do |checkpoint|
+      steps = checkpoint.is_a?(Hash) ? checkpoint['steps'] : nil
+      steps.is_a?(Array) ? steps.select {|step| level_step?(step)} : []
+    end
+  end
+
+  private def level_step?(step)
+    step.is_a?(Hash) && step['kind'] == 'level' && step['level'].is_a?(String)
   end
 end

@@ -13,12 +13,15 @@ const STUB_TIMESTAMP = new Date(0).toISOString();
 export const projectDescription = (project: Channel): string =>
   project.labConfig?.adaptive?.description ?? '';
 
-/** A not-yet-created project for the pathway's lab. */
+/**
+ * A not-yet-created project for the pathway's template lab. The lab is the
+ * template level's; until the server resolves it, the pathway's own stands in.
+ */
 const placeholderProject = (pathway: Pathway): Channel => ({
   id: '',
   name: 'My Website',
   isOwner: true,
-  projectType: pathway.project.lab.type,
+  projectType: pathway.project.levelProperties?.appName ?? 'adaptive',
   publishedAt: null,
   createdAt: STUB_TIMESTAMP,
   updatedAt: STUB_TIMESTAMP,
