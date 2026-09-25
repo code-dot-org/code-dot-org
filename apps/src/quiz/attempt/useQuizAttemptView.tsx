@@ -12,6 +12,7 @@ export default function useQuizAttemptView({
 }: LabProps): QuizViewContent {
   const {
     id: levelId,
+    appName,
     name: levelName,
     quizQuestions = [],
     allowMultipleAttempts,
@@ -28,6 +29,7 @@ export default function useQuizAttemptView({
     workspaceContent: (
       <QuizAttemptWorkspace
         levelId={levelId}
+        appName={appName}
         levelName={levelName}
         unitId={unitId}
         quizQuestions={quizQuestions}
