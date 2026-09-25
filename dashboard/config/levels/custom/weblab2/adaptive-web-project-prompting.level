@@ -1,0 +1,14 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-24T21:28:26.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-web-template",
+    "hide_share_and_remix": true,
+    "initial_view_mode": "split",
+    "long_instructions": "This is your project. Prompt the AI to put your site's name in the header and a sentence about your site in the main section.\n\nBe specific about where each thing goes."
+  },
+  "published": true
+}]]></config>
+</Weblab2>
