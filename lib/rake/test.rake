@@ -140,8 +140,9 @@ namespace :test do
     raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional)
   end
 
-  # A visual diff never stops a build; a person approves each new image in
-  # Applitools. Drone exports the Applitools variables (.drone.yml). The DTT
+  # A visual diff stops only the DTT. Drone run failures are suppressed until we
+  # can develop a PR-level visual diff strategy.
+  # Drone exports the Applitools variables (.drone.yml). The DTT
   # daemon has the key Cucumber's Eyes suite uses (eyes_steps.rb) and derives
   # the rest; on that machine a missing key is a configuration error.
   timed_task_with_logging playwright_eyes: :playwright_install do
@@ -152,7 +153,8 @@ namespace :test do
       next
     end
     secrets = env.empty? ? {} : {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
-    run_playwright_suite(:eyes, env: env, env_secrets: secrets)
+    passed = run_playwright_suite(:eyes, env: env, env_secrets: secrets)
+    raise 'Playwright Eyes e2e tests failed' if CDO.test_system? && !passed
   end
 
   # Run the deploy-time UI suites in parallel. If one suite raises, allow the
@@ -592,7 +594,7 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   docker/ci/**/*
 )
 
-PLAYWRIGHT_SUITES = {functional: 'Playwright', eyes: 'Playwright Eyes'}.freeze
+PLAYWRIGHT_SUITES = {functional: '🎭 Playwright', eyes: '🎭👁️ Playwright Eyes'}.freeze
 
 # The suites test:ui_all dispatches, and the names its rollup gives them.
 UI_SUITES = {
@@ -669,12 +671,13 @@ def run_playwright_suite(suite, env: {}, env_secrets: {})
   summary = playwright_results_summary(File.join(e2e_dir, "test-results#{suffix}", 'results.json'))
 
   pass_fail_line = playwright_pass_fail_summary(summary, duration)
-  qualifier = suite == :eyes ? ' (non-blocking)' : ''
+  blocking = suite == :functional || CDO.test_system?
+  qualifier = blocking ? '' : ' (non-blocking)'
   # Yellow: the suite failed and the build did not.
   glyph, color =
     if passed
       ['✅', 'green']
-    elsif suite == :eyes
+    elsif !blocking
       ['🟡', 'yellow']
     else
       ['❌', 'red']
