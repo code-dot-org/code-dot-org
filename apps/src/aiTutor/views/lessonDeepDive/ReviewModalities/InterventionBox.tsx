@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
+import {Button as MuiButton, IconButton, Typography} from '@mui/material';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
@@ -147,8 +148,10 @@ const InterventionBox: FC<InterventionBoxProps> = ({
         {!selected && (
           <div className={styles.prompt}>
             <div className={styles.promptInner}>
-              <h2 className={styles.heading}>Let&apos;s get to work</h2>
-              <p className={styles.subtext}>
+              <Typography component="h2" className={styles.heading}>
+                Let&apos;s get to work
+              </Typography>
+              <Typography className={styles.subtext}>
                 {focusTopic ? (
                   <>
                     {"Based on your reflection, we'll start with "}
@@ -158,7 +161,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 ) : (
                   'You can work any way you like from here.'
                 )}
-              </p>
+              </Typography>
               <div className={styles.choiceGrid}>
                 {GRID_CARDS.map(card => (
                   <button
@@ -178,13 +181,13 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 ))}
               </div>
               {challengeEnabled && (
-                <button
-                  type="button"
+                <MuiButton
+                  variant="text"
                   className={styles.challengeLink}
                   onClick={() => handleCardSelect('challenge')}
                 >
                   {CHALLENGE_CARD.label}
-                </button>
+                </MuiButton>
               )}
             </div>
           </div>
@@ -216,14 +219,13 @@ const InterventionBox: FC<InterventionBoxProps> = ({
 
       {selected && (
         <nav className={styles.bottomNav} aria-label="Practice options">
-          <button
-            type="button"
+          <IconButton
             className={styles.navMenuButton}
             onClick={() => setSelected(null)}
             aria-label="Practice menu"
           >
             <FontAwesomeV6Icon iconName="grid-2" />
-          </button>
+          </IconButton>
           <div className={styles.navDivider} />
           {navCards.map(card => {
             const isActive = selected === card.id;
@@ -247,14 +249,14 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           })}
           <div className={styles.navDivider} />
           <div className={styles.doneWrapper}>
-            <button
-              type="button"
+            <MuiButton
+              variant="outlined"
               className={styles.doneButton}
               onClick={onNext}
             >
               Done
               <FontAwesomeV6Icon iconName="arrow-right" />
-            </button>
+            </MuiButton>
           </div>
         </nav>
       )}

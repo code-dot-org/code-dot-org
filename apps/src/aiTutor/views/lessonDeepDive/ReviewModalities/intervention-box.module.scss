@@ -33,24 +33,46 @@ $nav-bg: #292f36;
   gap: 16px;
   width: 600px;
   max-width: 100%;
-}
 
-.heading {
-  font-family: var(--font-family-heading);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 52px;
-  letter-spacing: -0.48px;
-  color: #6fcaff;
-  margin: 0;
-}
+  .heading {
+    font-family: var(--font-family-heading);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.48px;
+    color: #6fcaff;
+    margin: 0;
+  }
 
-.subtext {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-  color: #fff;
-  margin: 0;
+  .subtext {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #fff;
+    margin: 0;
+  }
+
+  .challengeLink {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #f1f2f4;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+    transition: color 0.12s ease;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #6fcaff;
+      outline-offset: 2px;
+    }
+  }
 }
 
 .choiceGrid {
@@ -103,29 +125,6 @@ $nav-bg: #292f36;
   white-space: nowrap;
 }
 
-.challengeLink {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  color: #f1f2f4;
-  text-decoration: underline;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-
-  &:hover {
-    color: #fff;
-  }
-
-  &:focus-visible {
-    outline: 2px solid #6fcaff;
-    outline-offset: 2px;
-  }
-}
-
 // ── Bottom nav (modality selected) ───────────────────────────────────────────
 
 .bottomNav {
@@ -137,30 +136,25 @@ $nav-bg: #292f36;
   background: $nav-bg;
   border-top: 1px solid $border;
   padding: 0 24px;
-}
 
-.navMenuButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  flex-shrink: 0;
-  padding: 8px 4px;
-  border: none;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  color: #a374d6;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: color 0.12s ease;
+  .navMenuButton {
+    width: 72px;
+    flex-shrink: 0;
+    padding: 8px 4px;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    color: #a374d6;
+    font-size: 1.25rem;
+    transition: color 0.12s ease;
 
-  &:hover {
-    color: #fff;
-  }
+    &:hover {
+      color: #fff;
+    }
 
-  &:focus-visible {
-    outline: 2px solid #a374d6;
-    outline-offset: -2px;
+    &:focus-visible {
+      outline: 2px solid #a374d6;
+      outline-offset: -2px;
+    }
   }
 }
 
@@ -216,29 +210,26 @@ $nav-bg: #292f36;
   justify-content: center;
   padding: 0 20px;
   flex-shrink: 0;
-}
 
-.doneButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 12px;
-  border: 1px solid #a1aebb;
-  border-radius: 4px;
-  background: transparent;
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 600;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background-color 0.12s ease;
+  .doneButton {
+    gap: 8px;
+    padding: 5px 12px;
+    border: 1px solid #a1aebb;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: none;
+    transition: background-color 0.12s ease;
 
-  &:hover {
-    background: rgb(255 255 255 / 0.08);
-  }
+    &:hover {
+      background: rgb(255 255 255 / 0.08);
+    }
 
-  &:focus-visible {
-    outline: 2px solid #a374d6;
-    outline-offset: 2px;
+    &:focus-visible {
+      outline: 2px solid #a374d6;
+      outline-offset: 2px;
+    }
   }
 }
