@@ -24,7 +24,7 @@ class CoursesController < ApplicationController
       first_cv = co.course_versions.first
       ug = first_cv.content_root
       @versioned_course_families << cf unless first_cv.key == 'unversioned'
-      @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
+      @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience, existing_version_keys: co.course_versions.pluck(:key)}]
     end
 
     @course_families_course_types = @course_families_course_types.to_h
