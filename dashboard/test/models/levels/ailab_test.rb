@@ -55,6 +55,21 @@ class AilabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'lab2 level accepts a required accuracy from 0 to 100' do
+    [0, 70, 99.5, 100].each do |accuracy|
+      level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], requireAccuracy: accuracy}.to_json)
+      assert level.valid?, "expected requireAccuracy #{accuracy.inspect} to be valid: #{level.errors.full_messages.join(', ')}"
+    end
+  end
+
+  test 'lab2 level rejects a required accuracy outside 0 to 100' do
+    [-5, 150, '70', true, nil].each do |accuracy|
+      level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], requireAccuracy: accuracy}.to_json)
+      refute level.valid?, "expected requireAccuracy #{accuracy.inspect} to be invalid"
+      assert_equal ['must have a required accuracy from 0 to 100.'], level.errors[:mode]
+    end
+  end
+
   test 'legacy level does not require a dataset' do
     [nil, 'false'].each do |uses_lab2|
       level = build(:ailab, uses_lab2: uses_lab2, mode: '{"hideSave": true}')
