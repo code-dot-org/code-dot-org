@@ -2,6 +2,7 @@ import {createGoogleGenerativeAI} from '@ai-sdk/google';
 
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
+import {ASSUMED_BLOCK, MODEL_OUTPUT_PX} from './imagePrompts';
 import {ImageType} from './types';
 
 // The API key is injected server-side by the aiGateway proxy.
@@ -33,7 +34,8 @@ export function getCharacterSetImageModel() {
 export type ImageSize = '512' | '1K' | '2K' | '4K';
 
 // Single sprites and backgrounds: the size the rest of this pipeline assumes
-// (MODEL_OUTPUT_PX below); larger costs more and would only be scaled down.
+// (MODEL_OUTPUT_PX in imagePrompts.ts); larger costs more and would only be
+// scaled down.
 export const SINGLE_IMAGE_SIZE: ImageSize = '1K';
 
 // Character-set frames store at a 512px cell (characterSet.ts), but asking
@@ -50,21 +52,8 @@ export function imageProviderOptions(imageSize: ImageSize) {
   };
 }
 
-// Image-model output policy, kept beside the model id so a model swap forces
-// these into view. The image model emits roughly MODEL_OUTPUT_PX-square
-// images; the pixel-art prompt asks for ASSUMED_BLOCK-px blocks, and grid
-// detection falls back to the same value — what we ask for and what we
-// assume can't drift apart.
-export const MODEL_OUTPUT_PX = 1024;
-// Sprites and blocks are 32 pixels square: pixels large enough to read as
-// pixel art and to draw on by hand. Backgrounds hold a whole scene, so their
-// grid is finer, 128 square; finer still would reach the grid detector's
-// smallest cell of 4px.
-export const ASSUMED_BLOCK: Record<ImageType, number> = {
-  sprite: 32,
-  block: 32,
-  background: 8,
-};
+// Image-model output policy, defined with the prompts that assume it.
+export {ASSUMED_BLOCK, MODEL_OUTPUT_PX};
 
 // Stored ceilings for smooth-style images: generation downscales the model's
 // 1K output once at save, and the blank paint canvas opens at the same size

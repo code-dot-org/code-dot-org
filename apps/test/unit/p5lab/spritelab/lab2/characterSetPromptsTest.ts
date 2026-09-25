@@ -3,8 +3,8 @@ import {
   basePrompt,
   posePrompt,
   posedFrames,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
-import {pixelBlockFor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSetPrompts';
+import {pixelBlockFor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imagePrompts';
 import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 
 const key = KEY_COLORS.magenta;

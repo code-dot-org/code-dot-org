@@ -1,11 +1,13 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import {
-  fullPromptFor,
   generateImage,
-  pixelBlockFor,
   requestImage,
-  styleClause,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {
+  fullPromptFor,
+  pixelBlockFor,
+  styleClause,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imagePrompts';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),
