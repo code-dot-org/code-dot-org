@@ -70,7 +70,7 @@ describe('EditAilabMode', () => {
           }) as HTMLTextAreaElement
         ).value
       )
-    ).toEqual({hideSave: true, datasets: ['zoo']});
+    ).toEqual({hideSave: true, trainer: 'knn', datasets: ['zoo']});
 
     lab2.set(true);
     expect(
@@ -78,6 +78,7 @@ describe('EditAilabMode', () => {
     ).toBeChecked();
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,
+      trainer: 'knn',
       datasets: ['zoo'],
     });
   });
@@ -91,7 +92,7 @@ describe('EditAilabMode', () => {
   });
 
   it('submits the original string unchanged until a field is edited', () => {
-    const original = '{ "hideSave":true }\n  ';
+    const original = '{ "hideSave":true, "trainer":"knn" }\n  ';
     const savedMode = renderEditor(original);
     expect(savedMode()).toBe(original);
   });
@@ -141,7 +142,21 @@ describe('EditAilabMode', () => {
         target: {value: ''},
       }
     );
-    expect(savedMode()).toBe('');
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+  });
+
+  it('saves k-nearest neighbors when no trainer is set', () => {
+    const savedMode = renderEditor('{"datasets": ["zoo"]}');
+    expect(screen.getByRole('combobox', {name: 'Trainer'})).toHaveValue('knn');
+    expect(JSON.parse(savedMode())).toEqual({
+      datasets: ['zoo'],
+      trainer: 'knn',
+    });
+  });
+
+  it('does not add a trainer when Lab 2 is off', () => {
+    const savedMode = renderEditor('{"datasets": ["zoo"]}', false);
+    expect(savedMode()).toBe('{"datasets": ["zoo"]}');
   });
 
   it('sets the trainer and the required accuracy', () => {
@@ -177,7 +192,10 @@ describe('EditAilabMode', () => {
       screen.getByRole('radio', {name: 'Pizza Toppings (pizza_toy)'})
     );
 
-    expect(JSON.parse(savedMode())).toEqual({datasets: ['pizza_toy']});
+    expect(JSON.parse(savedMode())).toEqual({
+      datasets: ['pizza_toy'],
+      trainer: 'knn',
+    });
     expect(screen.queryByText(/several datasets/)).not.toBeInTheDocument();
     expect(screen.queryByText(/Choose a dataset/)).not.toBeInTheDocument();
   });

@@ -1,10 +1,17 @@
 import {Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {parseMode, serializeMode} from './ailabMode';
+import {parseMode, serializeMode, withDefaultTrainer} from './ailabMode';
 import AilabModeFields, {AilabDataset} from './AilabModeFields';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
+
+function addDefaultTrainer(rawMode: string): string {
+  const mode = parseMode(rawMode);
+  return mode && mode.trainer === undefined
+    ? serializeMode(withDefaultTrainer(mode))
+    : rawMode;
+}
 
 interface EditAilabModeProps {
   initialMode: string | null;
@@ -20,21 +27,27 @@ const EditAilabMode: React.FunctionComponent<EditAilabModeProps> = ({
   initialUsesLab2,
   subscribeToUsesLab2,
 }) => {
-  // Left untouched until a field changes, so an unedited level saves byte-for-byte.
-  const [rawMode, setRawMode] = useState(initialMode ?? '');
-  const [usesLab2, setUsesLab2] = useState(initialUsesLab2);
   // Decided only when Lab 2 is toggled, so typing valid JSON does not swap out the text area.
   const [showFields, setShowFields] = useState(
     () => initialUsesLab2 && parseMode(initialMode) !== null
   );
+  // Rewritten only by a field edit or by adding the default trainer; otherwise saved byte-for-byte.
+  const [rawMode, setRawMode] = useState(() =>
+    showFields ? addDefaultTrainer(initialMode ?? '') : initialMode ?? ''
+  );
+  const [usesLab2, setUsesLab2] = useState(initialUsesLab2);
   const rawModeRef = useRef(rawMode);
   rawModeRef.current = rawMode;
 
   useEffect(
     () =>
       subscribeToUsesLab2?.(checked => {
+        const canShowFields = checked && parseMode(rawModeRef.current) !== null;
         setUsesLab2(checked);
-        setShowFields(checked && parseMode(rawModeRef.current) !== null);
+        setShowFields(canShowFields);
+        if (canShowFields) {
+          setRawMode(addDefaultTrainer(rawModeRef.current));
+        }
       }),
     [subscribeToUsesLab2]
   );

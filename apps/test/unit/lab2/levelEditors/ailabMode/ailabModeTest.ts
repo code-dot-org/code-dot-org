@@ -6,6 +6,7 @@ import {
   parseMode,
   serializeMode,
   setModeValue,
+  withDefaultTrainer,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
 describe('ailabMode', () => {
@@ -100,6 +101,22 @@ describe('ailabMode', () => {
       expect(getDatasetProblem({datasets: 'zoo'}, KNOWN)).toMatch(
         /not a known dataset/
       );
+    });
+  });
+
+  describe('withDefaultTrainer', () => {
+    it('adds k-nearest neighbors when no trainer is set', () => {
+      expect(withDefaultTrainer({hideSave: true})).toEqual({
+        hideSave: true,
+        trainer: 'knn',
+      });
+    });
+
+    it('keeps an existing trainer, valid or not', () => {
+      expect(withDefaultTrainer({trainer: 'decisionTree'}).trainer).toBe(
+        'decisionTree'
+      );
+      expect(withDefaultTrainer({trainer: 'svm'}).trainer).toBe('svm');
     });
   });
 });

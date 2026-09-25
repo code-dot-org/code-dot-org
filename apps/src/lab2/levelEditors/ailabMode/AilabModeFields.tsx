@@ -7,6 +7,7 @@ import React, {useState} from 'react';
 
 import {
   BooleanModeKey,
+  DEFAULT_TRAINER,
   getDatasetProblem,
   getSelectedDataset,
   getUnknownKeys,
@@ -47,9 +48,7 @@ const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
   },
 ];
 
-const DEFAULT_TRAINER = '';
 const TRAINER_ITEMS = [
-  {value: DEFAULT_TRAINER, text: 'Default (k-nearest neighbors)'},
   {value: 'knn', text: 'k-nearest neighbors'},
   {value: 'decisionTree', text: 'Decision tree'},
 ];
@@ -167,13 +166,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           items={trainerItems}
           selectedValue={selectedTrainer}
           onChange={e =>
-            onChange(
-              setModeValue(
-                mode,
-                'trainer',
-                e.target.value === DEFAULT_TRAINER ? undefined : e.target.value
-              )
-            )
+            onChange(setModeValue(mode, 'trainer', e.target.value))
           }
           size="s"
         />

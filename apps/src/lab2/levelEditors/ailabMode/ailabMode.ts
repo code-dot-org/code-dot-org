@@ -28,6 +28,7 @@ export const KNOWN_MODE_KEYS = [
 ];
 
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
+export const DEFAULT_TRAINER = 'knn';
 
 const MIN_ACCURACY = 0;
 const MAX_ACCURACY = 100;
@@ -129,4 +130,11 @@ export function getDatasetProblem(
   return `The saved value ${JSON.stringify(
     datasets
   )} is not a known dataset. Choose a dataset.`;
+}
+
+// Names the default trainer explicitly, so a saved Lab 2 level always records one.
+export function withDefaultTrainer(mode: ModeObject): ModeObject {
+  return mode.trainer === undefined
+    ? setModeValue(mode, 'trainer', DEFAULT_TRAINER)
+    : mode;
 }
