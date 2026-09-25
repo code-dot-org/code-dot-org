@@ -129,9 +129,6 @@ const submitWhiteboardChallenge = async () => {
   fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 };
 
-// Renders a video challenge and waits for its question to appear. Video
-// challenges have no explanation modality to choose: the record button is in
-// the bottom bar from the start.
 const renderVideoChallenge = async () => {
   render(
     <ChallengeBox
@@ -147,8 +144,7 @@ const renderVideoChallenge = async () => {
   );
 };
 
-// Records a take and waits for the blob the stubbed canvas hands over a tick
-// later, the same two clicks a student makes.
+// Clicks record then stop, and waits for the stub's blob
 const recordVideo = async () => {
   fireEvent.click(screen.getByRole('button', {name: 'Start Recording'}));
   fireEvent.click(screen.getByRole('button', {name: 'Stop Recording'}));
@@ -476,9 +472,7 @@ describe('ChallengeBox', () => {
     ).toBeInTheDocument();
   });
 
-  // A video take can be edited before the next one is recorded — stickers
-  // and text go onto the canvas first — so the button walks the student
-  // through three states rather than re-recording on one click.
+  // Edit, record, preview, and back to edit
   describe('video challenges', () => {
     it('offers recording straight away, with nothing yet to submit', async () => {
       await renderVideoChallenge();
