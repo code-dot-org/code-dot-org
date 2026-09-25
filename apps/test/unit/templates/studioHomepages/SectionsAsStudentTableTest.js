@@ -52,7 +52,7 @@ describe('SectionsAsStudentTable', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={false} />
     );
-    expect(wrapper.find('.test-row')).toHaveLength(4);
+    expect(wrapper.find('.test-row')).toHaveLength(5);
     expect(wrapper.containsMatchingElement(<div>Current unit:</div>));
     joinedSections.forEach(section => {
       expect(
@@ -101,6 +101,8 @@ describe('SectionsAsStudentTable', () => {
     expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).toBe(false);
     expect(wrapper.containsMatchingElement(<td>Clever</td>));
     expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).toBe(false);
+    expect(wrapper.containsMatchingElement(<td>ClassLink</td>));
+    expect(wrapper.containsMatchingElement(<td>OrThisAsWell</td>)).toBe(false);
   });
 
   it('does not show a unit link for a single-unit course', () => {
