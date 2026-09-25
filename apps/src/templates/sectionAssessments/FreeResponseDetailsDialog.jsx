@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -21,7 +21,7 @@ class FreeResponseDetailsDialog extends Component {
     if (!isDialogOpen) return null;
 
     return (
-      <Dialog
+      <MuiDialog
         title={i18n.questionText()}
         customContent={
           <div id="dsco-dialog-description">

@@ -37,7 +37,9 @@
 }
 
 // Section avatar editor
-.editorDialog {
+// Two classes: the panel is MUI Paper, and the wrapper's own two-class panel
+// rule (display: block) would win over one.
+.editorDialog:global(.MuiDialog-paper) {
   display: flex;
   flex-direction: column;
   align-items: center;

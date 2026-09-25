@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
@@ -48,7 +48,7 @@ export default function RemoveCoteacherDialog({
 
   return (
     !!coteacherToRemove && (
-      <Dialog
+      <MuiDialog
         className={styles.removeDialog}
         title={i18n.coteacherRemoveDialogHeader({
           email: coteacherToRemove.instructorEmail,

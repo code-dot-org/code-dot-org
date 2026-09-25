@@ -1,4 +1,4 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
@@ -388,7 +388,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     return (
       <>
         {showTranscriptDialog && audioSummaryTranscript && (
-          <Dialog
+          <MuiDialog
             title={i18n.audioTranscript()}
             primaryButtonProps={{
               children: i18n.closeDialog(),

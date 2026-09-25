@@ -1,4 +1,4 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Tooltip} from '@mui/material';
 import classNames from 'classnames';
@@ -139,7 +139,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
         </Typography>
       </div>
       {shouldShowDialog && (
-        <Dialog
+        <MuiDialog
           title={i18n.noSectionDialogHeader({classroom: classroomType})}
           description={i18n.noSectionDialogBody({classroom: classroomType})}
           primaryButtonProps={{

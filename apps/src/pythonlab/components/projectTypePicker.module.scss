@@ -5,7 +5,9 @@
   max-width: 600px;
 }
 
-.pickerDialog {
+// Two classes: the panel is MUI Paper, whose emotion rule and the wrapper's
+// own two-class panel rule would otherwise win.
+.pickerDialog:global(.MuiDialog-paper) {
   padding: 24px 32px;
   border-radius: 4px;
 }

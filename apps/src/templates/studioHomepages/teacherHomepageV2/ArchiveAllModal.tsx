@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -69,7 +69,7 @@ export const ArchiveAllModal: React.FC<ArchiveAllModalProps> = ({onClose}) => {
   );
 
   return (
-    <Dialog
+    <MuiDialog
       {...(isConfirmed ? doneArchiving : areYouSureProps)}
       onClose={onClose}
     />

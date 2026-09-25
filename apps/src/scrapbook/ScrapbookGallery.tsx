@@ -1,4 +1,4 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   closestCenter,
@@ -154,7 +154,7 @@ export default function ScrapbookGallery({userName}: Props) {
         </DndContext>
       )}
       {pendingDelete && (
-        <Dialog
+        <MuiDialog
           title="Delete this entry?"
           description="This will permanently delete your reflection and any captured screenshots."
           onClose={deleting ? undefined : () => setPendingDelete(null)}

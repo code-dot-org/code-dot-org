@@ -189,7 +189,9 @@
   }
 }
 
-.transcriptDialog {
+// Two classes: the panel is MUI Paper, and MuiDialog's own two-class layout
+// rules (panel max-width and padding, text section gap) would win over one.
+.transcriptDialog:global(.MuiDialog-paper) {
   max-width: 736px;
   gap: 1rem;
   padding: 1.5rem 2rem;

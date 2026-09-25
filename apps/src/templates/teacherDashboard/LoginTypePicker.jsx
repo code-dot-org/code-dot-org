@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -136,11 +136,11 @@ class LoginTypePicker extends Component {
           />
         )}
         {this.state.isLearnMoreOpen && (
-          <Dialog
+          <MuiDialog
             title={i18n.addStudentsToSectionPermissionHeader()}
             description={i18n.addStudentsToSectionPermissionExplanation()}
             primaryButtonProps={{
-              text: i18n.ok(),
+              children: i18n.ok(),
               onClick: () => this.setState({isLearnMoreOpen: false}),
             }}
             onClose={() => this.setState({isLearnMoreOpen: false})}

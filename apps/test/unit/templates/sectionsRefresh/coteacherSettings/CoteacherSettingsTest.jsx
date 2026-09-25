@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -144,11 +144,11 @@ describe('CoteacherSettings', () => {
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     expect(wrapper.find('RemoveCoteacherDialog').length).to.equal(1);
-    const dscoDialog = dialog.find(Dialog);
-    expect(dscoDialog).to.have.lengthOf(1);
-    expect(dscoDialog.props().primaryButtonProps).to.exist;
-    expect(dscoDialog.props().secondaryButtonProps).to.exist;
-    expect(dscoDialog.props().title).to.contain('Remove coelophysis@code.org');
+    const muiDialog = dialog.find(MuiDialog);
+    expect(muiDialog).to.have.lengthOf(1);
+    expect(muiDialog.props().primaryButtonProps).to.exist;
+    expect(muiDialog.props().secondaryButtonProps).to.exist;
+    expect(muiDialog.props().title).to.contain('Remove coelophysis@code.org');
   });
   it('cancel remove does nothing', () => {
     let coteachersToAdd = ['coelophysis@code.org'];
@@ -179,7 +179,7 @@ describe('CoteacherSettings', () => {
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
-      .find(Dialog)
+      .find(MuiDialog)
       .props()
       .secondaryButtonProps.onClick({preventDefault: () => {}});
 
@@ -217,7 +217,7 @@ describe('CoteacherSettings', () => {
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
-      .find(Dialog)
+      .find(MuiDialog)
       .props()
       .primaryButtonProps.onClick({preventDefault: () => {}});
 
@@ -257,7 +257,7 @@ describe('CoteacherSettings', () => {
     dialog = wrapper.find('RemoveCoteacherDialog').dive();
 
     dialog
-      .find(Dialog)
+      .find(MuiDialog)
       .props()
       .primaryButtonProps.onClick({preventDefault: () => {}});
 

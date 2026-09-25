@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
@@ -30,7 +30,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
   );
 
   return (
-    <CustomDialog
+    <MuiCustomDialog
       aria-label="Section avatar edit dialog"
       className={styles.editorDialog}
       title={i18n.editAvatar()}
@@ -109,7 +109,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
           {i18n.selectAvatar()}
         </MuiButton>
       </div>
-    </CustomDialog>
+    </MuiCustomDialog>
   );
 };
 

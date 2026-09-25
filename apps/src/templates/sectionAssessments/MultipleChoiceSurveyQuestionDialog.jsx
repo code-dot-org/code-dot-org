@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -51,7 +51,7 @@ class MultipleChoiceSurveyQuestionDialog extends Component {
     if (!isDialogOpen) return null;
 
     return (
-      <Dialog
+      <MuiDialog
         title={i18n.questionDetails()}
         customContent={this.renderContent()}
         onClose={closeDialog}
