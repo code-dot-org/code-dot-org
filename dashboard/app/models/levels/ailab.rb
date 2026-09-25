@@ -35,6 +35,14 @@ class Ailab < Level
     uses_lab2
   )
 
+  DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'datasets-manifest.json')
+
+  validate :validate_lab2_dataset
+
+  def self.dataset_ids
+    @dataset_ids ||= JSON.parse(File.read(DATASETS_MANIFEST_PATH))['datasets'].pluck('id')
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -111,5 +119,25 @@ class Ailab < Level
       mode
       dynamic_instructions
     ).map {|x| x.camelize(:lower)}
+  end
+
+  # The Lab 2 AI Lab has no dataset picker, so it must be given exactly one.
+  private def validate_lab2_dataset
+    return unless JSONValue.value(uses_lab2) == true
+
+    parsed_mode = begin
+      JSON.parse(mode.presence || '{}')
+    rescue JSON::ParserError
+      nil
+    end
+    unless parsed_mode.is_a?(Hash)
+      errors.add(:mode, 'must be a valid JSON object.')
+      return
+    end
+
+    datasets = parsed_mode['datasets']
+    unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
+      errors.add(:mode, 'must select exactly one dataset.')
+    end
   end
 end

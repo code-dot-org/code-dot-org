@@ -1,6 +1,5 @@
 import {
   getDatasetProblem,
-  getModeSaveError,
   getSelectedDataset,
   getUnknownKeys,
   isValidModeValue,
@@ -100,22 +99,6 @@ describe('ailabMode', () => {
       );
       expect(getDatasetProblem({datasets: 'zoo'}, KNOWN)).toMatch(
         /not a known dataset/
-      );
-    });
-  });
-
-  describe('getModeSaveError', () => {
-    it('allows a mode with one known dataset', () => {
-      expect(getModeSaveError('{"datasets": ["zoo"]}', ['zoo'])).toBeNull();
-    });
-
-    it('blocks a mode without a dataset', () => {
-      expect(getModeSaveError('', ['zoo'])).toMatch(/Choose a dataset/);
-    });
-
-    it('blocks a mode that is not a JSON object', () => {
-      expect(getModeSaveError("{'datasets': ['zoo']}", ['zoo'])).toMatch(
-        /valid JSON object/
       );
     });
   });

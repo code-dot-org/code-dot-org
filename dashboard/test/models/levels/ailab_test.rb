@@ -41,4 +41,37 @@ class AilabTest < ActiveSupport::TestCase
     # The option keys are camelized for the frontend
     assert_equal options['dynamicInstructions'], JSON.dump(translated_dynamic_instructions)
   end
+
+  test 'lab2 level is valid with exactly one known dataset' do
+    level = build(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"], "hideSave": true}')
+    assert level.valid?, level.errors.full_messages.join(', ')
+  end
+
+  test 'lab2 level requires exactly one known dataset' do
+    ['', '{"hideSave": true}', '{"datasets": []}', '{"datasets": ["zoo", "heart"]}', '{"datasets": ["nope"]}', '{"datasets": "zoo"}'].each do |mode|
+      level = build(:ailab, uses_lab2: 'true', mode: mode)
+      refute level.valid?, "expected mode #{mode.inspect} to be invalid"
+      assert_includes level.errors[:mode], 'must select exactly one dataset.'
+    end
+  end
+
+  test 'lab2 level requires the mode to be a JSON object' do
+    ["{'datasets': ['zoo']}", '["zoo"]'].each do |mode|
+      level = build(:ailab, uses_lab2: 'true', mode: mode)
+      refute level.valid?
+      assert_includes level.errors[:mode], 'must be a valid JSON object.'
+    end
+  end
+
+  test 'legacy level does not require a dataset' do
+    [nil, 'false'].each do |uses_lab2|
+      level = build(:ailab, uses_lab2: uses_lab2, mode: '{"hideSave": true}')
+      assert level.valid?, level.errors.full_messages.join(', ')
+    end
+  end
+
+  test 'dataset_ids reads the ailab package manifest' do
+    assert_includes Ailab.dataset_ids, 'zoo'
+    assert_includes Ailab.dataset_ids, 'shapes_v1_toy'
+  end
 end

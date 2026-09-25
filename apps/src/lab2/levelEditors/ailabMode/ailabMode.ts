@@ -130,15 +130,3 @@ export function getDatasetProblem(
     datasets
   )} is not a known dataset. Choose a dataset.`;
 }
-
-// Returns why a Lab 2 level cannot be saved with this mode, or null if it can.
-export function getModeSaveError(
-  rawMode: string,
-  knownDatasetIds: string[]
-): string | null {
-  const mode = parseMode(rawMode);
-  if (!mode) {
-    return 'Mode must be a valid JSON object.';
-  }
-  return getDatasetProblem(mode, knownDatasetIds);
-}
