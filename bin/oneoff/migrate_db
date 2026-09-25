@@ -30,6 +30,40 @@ def run(cmd)
   IO.popen(cmd) {|output| output.each {|line| puts line.chomp}}
 end
 
+# Executes MySQL command via CLI. Uses shell instead of Ruby MySQL client because:
+# - Runs in Chef/knife context where full Code.org deployment environment may not be loaded
+# - Can't use MysqlConsoleHelper (requires CDO constants that aren't available)
+# - RDS-specific command (`CALL mysql.rds_reset_external_master()`) could use Sequel, but would require loading deployment environment
+# Execution environment: Console servers, engineer workstations (single user, manual execution during planned maintenance windows)
+# Temp file risk: Low - single user environment, not susceptible to temp directory sniffing. This script is run manually from console servers (not web-serving servers), so same-user enumeration risk does not apply.
+def run_mysql_secure(db_uri, mysql_command_template)
+  db = URI.parse(db_uri)
+  require 'tempfile'
+  require 'fileutils'
+
+  if db.password
+    # SECURITY: Using --password= on command line exposes passwords in process lists (ps aux).
+    # MySQL warns: "Using a password on the command line interface can be insecure."
+    # This script runs manually (not in CI), so passwords would only appear in process lists, not build logs.
+    # Using --defaults-extra-file with a temporary file (mode 600) is the secure approach.
+    option_file = Tempfile.new(['mysql', '.cnf'])
+    # Set restrictive permissions BEFORE writing password (owner read/write only)
+    FileUtils.chmod(0o600, option_file.path)
+    option_file.write("[client]\n")
+    option_file.write("password=#{db.password}\n")
+    option_file.close
+    # Insert --defaults-extra-file right after 'mysql' in the command
+    cmd = mysql_command_template.sub(/mysql /, "mysql --defaults-extra-file=#{option_file.path} ")
+    begin
+      run(cmd)
+    ensure
+      option_file.unlink
+    end
+  else
+    run(mysql_command_template)
+  end
+end
+
 # Use the `pdsh` utility and `ls_frontend_servers` script to 'fan out' a command via ssh to all front-ends.
 def fanout(cmd)
   puts "Running #{cmd}..."
@@ -58,7 +92,7 @@ def main
 
   # 3. Promote the new DB instance to master.
   puts "Promoting new DB instance to master..."
-  run "echo 'CALL mysql.rds_reset_external_master();' | mysql -u'#{writer.user}' -p'#{writer.password}' -h '#{writer.host}'"
+  run_mysql_secure(writer.to_s, "echo 'CALL mysql.rds_reset_external_master();' | mysql -u'#{writer.user}' -h '#{writer.host}'")
 
   # 4. Start applications on all frontends. [live-site downtime ends]
   fanout 'sudo chef-client'
