@@ -170,6 +170,12 @@ $level-cell-width: 53;
     }
   }
 
+  .reviewExtensionActivitiesButton {
+    margin-inline-start: 8px;
+    height: 32px;
+    white-space: nowrap;
+  }
+
   // CSV download button
   .downloadCsvDropdown, .moreOptionsDropdownButton {
     display: flex;
