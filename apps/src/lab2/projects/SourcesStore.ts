@@ -3,7 +3,9 @@
  */
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
+import {sourceResponseValidatorFor} from '../responseValidators';
 import {
+  AppName,
   ProjectSources,
   ProjectType,
   SaveSourceOptions,
@@ -20,8 +22,19 @@ export class SourcesStore {
   private firstSaveTime: string | null = null;
   private lastNewVersionTime: number | null = null;
 
+  /**
+   * @param appName The lab whose sources this store holds, which decides how
+   * loaded sources are validated. This is the level's lab, not the page's:
+   * a page can load another level's project.
+   */
+  constructor(private readonly appName: AppName) {}
+
   async load(channelId: string, versionId?: string) {
-    const {response, value} = await sourcesApi.get(channelId, versionId);
+    const {response, value} = await sourcesApi.get(
+      channelId,
+      sourceResponseValidatorFor(this.appName),
+      versionId
+    );
 
     if (response.ok && !versionId) {
       // Only store the current version id if we are loading the latest version.
