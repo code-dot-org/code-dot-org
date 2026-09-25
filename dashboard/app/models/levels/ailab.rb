@@ -130,12 +130,7 @@ class Ailab < Level
     rescue JSON::ParserError
       nil
     end
-    unless parsed_mode.is_a?(Hash)
-      errors.add(:mode, 'must be a valid JSON object.')
-      return
-    end
-
-    datasets = parsed_mode['datasets']
+    datasets = parsed_mode.is_a?(Hash) ? parsed_mode['datasets'] : nil
     unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
       errors.add(:mode, 'must select exactly one dataset.')
     end

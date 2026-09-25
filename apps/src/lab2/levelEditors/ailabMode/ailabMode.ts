@@ -1,7 +1,7 @@
 /*
-  Reading and writing the Lab 2 AI Lab level "mode" JSON string one key at a
-  time. Keys and values this editor does not understand are carried through
-  untouched, so saving never drops something a level already has.
+  Reading and writing the Lab 2 AI Lab level "mode" JSON string. The editor
+  keeps only the keys and values Lab 2 AI Lab understands; anything else is
+  dropped when the level is next saved.
 */
 
 export type ModeObject = Record<string, unknown>;
@@ -20,20 +20,13 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'randomizeTestData',
 ];
 
-export const KNOWN_MODE_KEYS = [
-  'datasets',
-  'trainer',
-  'requireAccuracy',
-  ...BOOLEAN_MODE_KEYS,
-];
-
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
 export const DEFAULT_TRAINER = 'knn';
 
 const MIN_ACCURACY = 0;
 const MAX_ACCURACY = 100;
 
-// Returns null when the string is not a JSON object and so cannot be edited by key.
+// Returns null when the string is not a JSON object.
 export function parseMode(
   rawMode: string | null | undefined
 ): ModeObject | null {
@@ -69,13 +62,26 @@ export function setModeValue(
   return newMode;
 }
 
-export function getUnknownKeys(mode: ModeObject): string[] {
-  return Object.keys(mode).filter(key => !KNOWN_MODE_KEYS.includes(key));
+export function isValidAccuracy(value: unknown): boolean {
+  return (
+    typeof value === 'number' &&
+    Number.isFinite(value) &&
+    value >= MIN_ACCURACY &&
+    value <= MAX_ACCURACY
+  );
 }
 
-export function isValidModeValue(key: string, value: unknown): boolean {
-  if (value === undefined) {
-    return true;
+function isValidModeValue(
+  key: string,
+  value: unknown,
+  knownDatasetIds: string[]
+): boolean {
+  if (key === 'datasets') {
+    return (
+      Array.isArray(value) &&
+      value.length === 1 &&
+      knownDatasetIds.includes(value[0])
+    );
   }
   if (key === 'trainer') {
     return typeof value === 'string' && TRAINER_FAMILIES.includes(value);
@@ -89,47 +95,25 @@ export function isValidModeValue(key: string, value: unknown): boolean {
   return false;
 }
 
-export function isValidAccuracy(value: unknown): boolean {
-  return (
-    typeof value === 'number' &&
-    Number.isFinite(value) &&
-    value >= MIN_ACCURACY &&
-    value <= MAX_ACCURACY
-  );
-}
-
-export function getSelectedDataset(
+// Drops unknown keys and invalid values, returning a description of each one dropped.
+export function cleanMode(
   mode: ModeObject,
   knownDatasetIds: string[]
-): string | undefined {
-  const datasets = mode.datasets;
-  return Array.isArray(datasets) &&
-    datasets.length === 1 &&
-    knownDatasetIds.includes(datasets[0])
-    ? datasets[0]
-    : undefined;
+): {mode: ModeObject; removed: string[]} {
+  const cleaned: ModeObject = {};
+  const removed: string[] = [];
+  Object.entries(mode).forEach(([key, value]) => {
+    if (isValidModeValue(key, value, knownDatasetIds)) {
+      cleaned[key] = value;
+    } else {
+      removed.push(`${key}: ${JSON.stringify(value)}`);
+    }
+  });
+  return {mode: cleaned, removed};
 }
 
-// Returns why the mode does not name exactly one known dataset, or null if it does.
-export function getDatasetProblem(
-  mode: ModeObject,
-  knownDatasetIds: string[]
-): string | null {
-  if (getSelectedDataset(mode, knownDatasetIds)) {
-    return null;
-  }
-  const datasets = mode.datasets;
-  if (datasets === undefined) {
-    return 'Choose a dataset. The level cannot be saved without one.';
-  }
-  if (Array.isArray(datasets) && datasets.length > 1) {
-    return `This level lists several datasets (${datasets.join(
-      ', '
-    )}). Choose one; the others will be removed.`;
-  }
-  return `The saved value ${JSON.stringify(
-    datasets
-  )} is not a known dataset. Choose a dataset.`;
+export function getSelectedDataset(mode: ModeObject): string | undefined {
+  return Array.isArray(mode.datasets) ? mode.datasets[0] : undefined;
 }
 
 // Names the default trainer explicitly, so a saved Lab 2 level always records one.

@@ -1,13 +1,13 @@
 import {
-  getDatasetProblem,
+  cleanMode,
   getSelectedDataset,
-  getUnknownKeys,
-  isValidModeValue,
   parseMode,
   serializeMode,
   setModeValue,
   withDefaultTrainer,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
+
+const KNOWN = ['zoo', 'heart'];
 
 describe('ailabMode', () => {
   describe('parseMode', () => {
@@ -50,58 +50,53 @@ describe('ailabMode', () => {
     });
   });
 
-  describe('isValidModeValue', () => {
-    it('accepts valid values', () => {
-      expect(isValidModeValue('trainer', 'decisionTree')).toBe(true);
-      expect(isValidModeValue('requireAccuracy', 80)).toBe(true);
-      expect(isValidModeValue('hideSave', false)).toBe(true);
-      expect(isValidModeValue('hideSave', undefined)).toBe(true);
+  describe('cleanMode', () => {
+    it('keeps valid values in their original order', () => {
+      const mode = {
+        trainer: 'decisionTree',
+        datasets: ['zoo'],
+        requireAccuracy: 80,
+        hideSave: false,
+      };
+      expect(cleanMode(mode, KNOWN)).toEqual({mode, removed: []});
     });
 
-    it('rejects invalid values', () => {
-      expect(isValidModeValue('trainer', 'svm')).toBe(false);
-      expect(isValidModeValue('requireAccuracy', '80')).toBe(false);
-      expect(isValidModeValue('requireAccuracy', 101)).toBe(false);
-      expect(isValidModeValue('hideSave', 'true')).toBe(false);
+    it('drops unknown keys and invalid values', () => {
+      const {mode, removed} = cleanMode(
+        {
+          hideSave: true,
+          hideModelCard: true,
+          hideInstructionsOverlay: true,
+          trainer: 'svm',
+          requireAccuracy: '80',
+          hideSelectLabel: 'yes',
+        },
+        KNOWN
+      );
+      expect(mode).toEqual({hideSave: true});
+      expect(removed).toEqual([
+        'hideModelCard: true',
+        'hideInstructionsOverlay: true',
+        'trainer: "svm"',
+        'requireAccuracy: "80"',
+        'hideSelectLabel: "yes"',
+      ]);
+    });
+
+    it('drops datasets unless it is exactly one known ID', () => {
+      [[], ['zoo', 'heart'], ['nope'], 'zoo'].forEach(datasets => {
+        expect(cleanMode({datasets}, KNOWN).mode).toEqual({});
+      });
+    });
+
+    it('drops an out-of-range accuracy', () => {
+      expect(cleanMode({requireAccuracy: 101}, KNOWN).mode).toEqual({});
     });
   });
 
-  it('getUnknownKeys lists keys AI Lab does not read', () => {
-    expect(
-      getUnknownKeys({hideSave: true, hideModelCard: true, id: 3})
-    ).toEqual(['hideModelCard', 'id']);
-  });
-
-  describe('dataset selection', () => {
-    const KNOWN = ['zoo', 'heart'];
-
-    it('selects a single known dataset', () => {
-      expect(getSelectedDataset({datasets: ['zoo']}, KNOWN)).toBe('zoo');
-      expect(getDatasetProblem({datasets: ['zoo']}, KNOWN)).toBeNull();
-    });
-
-    it('reports a missing dataset', () => {
-      expect(getSelectedDataset({}, KNOWN)).toBeUndefined();
-      expect(getDatasetProblem({}, KNOWN)).toMatch(/Choose a dataset/);
-    });
-
-    it('reports several datasets', () => {
-      expect(getDatasetProblem({datasets: ['zoo', 'heart']}, KNOWN)).toMatch(
-        /several datasets \(zoo, heart\)/
-      );
-    });
-
-    it('reports an unknown or malformed value', () => {
-      expect(getDatasetProblem({datasets: ['nope']}, KNOWN)).toMatch(
-        /not a known dataset/
-      );
-      expect(getDatasetProblem({datasets: []}, KNOWN)).toMatch(
-        /not a known dataset/
-      );
-      expect(getDatasetProblem({datasets: 'zoo'}, KNOWN)).toMatch(
-        /not a known dataset/
-      );
-    });
+  it('getSelectedDataset returns the one dataset', () => {
+    expect(getSelectedDataset({datasets: ['zoo']})).toBe('zoo');
+    expect(getSelectedDataset({})).toBeUndefined();
   });
 
   describe('withDefaultTrainer', () => {
@@ -112,11 +107,10 @@ describe('ailabMode', () => {
       });
     });
 
-    it('keeps an existing trainer, valid or not', () => {
+    it('keeps an existing trainer', () => {
       expect(withDefaultTrainer({trainer: 'decisionTree'}).trainer).toBe(
         'decisionTree'
       );
-      expect(withDefaultTrainer({trainer: 'svm'}).trainer).toBe('svm');
     });
   });
 });

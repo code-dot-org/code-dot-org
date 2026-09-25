@@ -41,12 +41,11 @@ function fakeLab2Checkbox() {
 }
 
 describe('EditAilabMode', () => {
-  it('shows the JSON text area when Lab 2 is off', () => {
-    const savedMode = renderEditor('{"hideSave": true}', false);
+  it('shows the JSON text area unchanged when Lab 2 is off', () => {
+    const original = '{"hideSave": "yes", "hideModelCard": true}';
+    const savedMode = renderEditor(original, false);
     expect(screen.queryByRole('radio')).not.toBeInTheDocument();
-    expect(
-      screen.queryByText(/not a valid JSON object/)
-    ).not.toBeInTheDocument();
+    expect(savedMode()).toBe(original);
 
     fireEvent.change(screen.getByRole('textbox', {name: 'Mode JSON'}), {
       target: {value: '{"hideSave": false}'},
@@ -83,20 +82,6 @@ describe('EditAilabMode', () => {
     });
   });
 
-  it('lists hideInstructionsOverlay as a key Lab 2 does not use', () => {
-    renderEditor('{"hideInstructionsOverlay": true}');
-    expect(
-      screen.queryByRole('checkbox', {name: /instructions/})
-    ).not.toBeInTheDocument();
-    expect(screen.getByText(/hideInstructionsOverlay/)).toBeInTheDocument();
-  });
-
-  it('submits the original string unchanged until a field is edited', () => {
-    const original = '{ "hideSave":true, "trainer":"knn" }\n  ';
-    const savedMode = renderEditor(original);
-    expect(savedMode()).toBe(original);
-  });
-
   it('shows known values in the fields', () => {
     renderEditor(
       '{"datasets": ["zoo"], "trainer": "decisionTree", "requireAccuracy": 80, "hideSave": true}'
@@ -113,22 +98,31 @@ describe('EditAilabMode', () => {
     expect(
       screen.getByRole('checkbox', {name: 'Hide the save model step'})
     ).toBeChecked();
+    expect(screen.queryByText(/will be removed/)).not.toBeInTheDocument();
   });
 
-  it('keeps unknown keys and invalid values when another field changes', () => {
+  it('drops unknown keys and invalid values, and lists them', () => {
     const savedMode = renderEditor(
-      '{"hideModelCard": true, "trainer": "svm", "hideSave": "yes"}'
+      '{"hideModelCard": true, "hideInstructionsOverlay": true, "trainer": "svm", "hideSave": "yes", "datasets": ["zoo", "heart"], "requireAccuracy": 50}'
     );
-    expect(screen.getByText(/hideModelCard/)).toBeInTheDocument();
-
-    fireEvent.click(screen.getByRole('radio', {name: 'Zoo Animals (zoo)'}));
-
+    expect(screen.getByText(/will be removed/)).toHaveTextContent(
+      'hideModelCard: true; hideInstructionsOverlay: true; trainer: "svm"; hideSave: "yes"; datasets: ["zoo","heart"]'
+    );
+    expect(
+      screen.queryByRole('checkbox', {name: /instructions/})
+    ).not.toBeInTheDocument();
     expect(JSON.parse(savedMode())).toEqual({
-      hideModelCard: true,
-      trainer: 'svm',
-      hideSave: 'yes',
-      datasets: ['zoo'],
+      requireAccuracy: 50,
+      trainer: 'knn',
     });
+  });
+
+  it('replaces a mode that is not valid JSON', () => {
+    const savedMode = renderEditor("{'datasets': ['zoo']}");
+    expect(screen.getByText(/will be removed/)).toHaveTextContent(
+      'not valid JSON'
+    );
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
   it('removes a key when its field is cleared', () => {
@@ -145,6 +139,20 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
+  it('does not save an out-of-range accuracy', () => {
+    const savedMode = renderEditor('{"requireAccuracy": 70}');
+    fireEvent.change(
+      screen.getByRole('spinbutton', {name: /Required accuracy/}),
+      {
+        target: {value: '150'},
+      }
+    );
+    expect(
+      screen.getByText('Enter a number from 0 to 100.')
+    ).toBeInTheDocument();
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+  });
+
   it('saves k-nearest neighbors when no trainer is set', () => {
     const savedMode = renderEditor('{"datasets": ["zoo"]}');
     expect(screen.getByRole('combobox', {name: 'Trainer'})).toHaveValue('knn');
@@ -152,11 +160,6 @@ describe('EditAilabMode', () => {
       datasets: ['zoo'],
       trainer: 'knn',
     });
-  });
-
-  it('does not add a trainer when Lab 2 is off', () => {
-    const savedMode = renderEditor('{"datasets": ["zoo"]}', false);
-    expect(savedMode()).toBe('{"datasets": ["zoo"]}');
   });
 
   it('sets the trainer and the required accuracy', () => {
@@ -176,35 +179,22 @@ describe('EditAilabMode', () => {
     });
   });
 
-  it('requires a dataset when none is set', () => {
-    renderEditor('{"hideSave": true}');
+  it('requires a dataset until one is chosen', () => {
+    const savedMode = renderEditor('{"hideSave": true}');
     expect(screen.getByText(/Choose a dataset/)).toBeInTheDocument();
     screen
       .getAllByRole('radio')
       .forEach(radio => expect(radio).not.toBeChecked());
-  });
-
-  it('replaces several datasets with the one chosen', () => {
-    const savedMode = renderEditor('{"datasets": ["zoo", "heart"]}');
-    expect(screen.getByText(/several datasets/)).toBeInTheDocument();
 
     fireEvent.click(
       screen.getByRole('radio', {name: 'Pizza Toppings (pizza_toy)'})
     );
 
     expect(JSON.parse(savedMode())).toEqual({
-      datasets: ['pizza_toy'],
+      hideSave: true,
       trainer: 'knn',
+      datasets: ['pizza_toy'],
     });
-    expect(screen.queryByText(/several datasets/)).not.toBeInTheDocument();
     expect(screen.queryByText(/Choose a dataset/)).not.toBeInTheDocument();
-  });
-
-  it('falls back to a raw text area for a mode that is not a JSON object', () => {
-    const original = "{'datasets': ['zoo']}";
-    const savedMode = renderEditor(original);
-    expect(screen.queryByRole('radio')).not.toBeInTheDocument();
-    expect(screen.getByText(/not a valid JSON object/)).toBeInTheDocument();
-    expect(savedMode()).toBe(original);
   });
 });

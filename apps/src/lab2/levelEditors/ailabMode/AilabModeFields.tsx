@@ -8,11 +8,8 @@ import React, {useState} from 'react';
 import {
   BooleanModeKey,
   DEFAULT_TRAINER,
-  getDatasetProblem,
   getSelectedDataset,
-  getUnknownKeys,
   isValidAccuracy,
-  isValidModeValue,
   ModeObject,
   setModeValue,
 } from './ailabMode';
@@ -28,6 +25,8 @@ export interface AilabDataset {
 interface AilabModeFieldsProps {
   mode: ModeObject;
   datasets: AilabDataset[];
+  // Saved values that were not valid and are dropped from the mode.
+  removed: string[];
   onChange: (mode: ModeObject) => void;
 }
 
@@ -56,23 +55,14 @@ const TRAINER_ITEMS = [
 const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   mode,
   datasets,
+  removed,
   onChange,
 }) => {
   const [accuracyText, setAccuracyText] = useState(() =>
     isValidAccuracy(mode.requireAccuracy) ? String(mode.requireAccuracy) : ''
   );
 
-  const invalidValueNote = (key: string) =>
-    isValidModeValue(key, mode[key]) ? null : (
-      <Typography variant="body4" className={moduleStyles.warningText}>
-        The saved value {JSON.stringify(mode[key])} is not valid here. It is
-        kept as-is until you change this field.
-      </Typography>
-    );
-
-  const knownDatasetIds = datasets.map(dataset => dataset.id);
-  const selectedDataset = getSelectedDataset(mode, knownDatasetIds);
-  const datasetProblem = getDatasetProblem(mode, knownDatasetIds);
+  const selectedDataset = getSelectedDataset(mode);
 
   // One radio name across both groups, so they form a single selection.
   const renderDatasetGroup = (legend: string, group: AilabDataset[]) => (
@@ -100,28 +90,18 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     </fieldset>
   );
 
-  const trainerIsValid = isValidModeValue('trainer', mode.trainer);
-  const trainerItems = trainerIsValid
-    ? TRAINER_ITEMS
-    : [
-        ...TRAINER_ITEMS,
-        {
-          value: JSON.stringify(mode.trainer),
-          text: `Unrecognized: ${JSON.stringify(mode.trainer)} (kept as-is)`,
-        },
-      ];
-  const selectedTrainer = trainerIsValid
-    ? (mode.trainer as string | undefined) ?? DEFAULT_TRAINER
-    : JSON.stringify(mode.trainer);
+  const selectedTrainer =
+    (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
 
   const handleAccuracyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const text = e.target.value;
+    const accuracy = Number(text);
     setAccuracyText(text);
     onChange(
       setModeValue(
         mode,
         'requireAccuracy',
-        text.trim() === '' ? undefined : Number(text)
+        text.trim() !== '' && isValidAccuracy(accuracy) ? accuracy : undefined
       )
     );
   };
@@ -130,10 +110,14 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       ? 'Enter a number from 0 to 100.'
       : undefined;
 
-  const unknownKeys = getUnknownKeys(mode);
-
   return (
     <div>
+      {removed.length > 0 && (
+        <Typography variant="body4" className={moduleStyles.warningText}>
+          These saved values are not valid for Lab 2 AI Lab and will be removed
+          when you save: {removed.join('; ')}
+        </Typography>
+      )}
       <div className={moduleStyles.fieldArea}>
         <Typography variant="body2" className={moduleStyles.label}>
           Dataset (required)
@@ -141,9 +125,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         <Typography variant="body4" className={moduleStyles.descriptionText}>
           Students start with this dataset loaded.
         </Typography>
-        {datasetProblem && (
+        {!selectedDataset && (
           <Typography variant="body4" className={moduleStyles.warningText}>
-            {datasetProblem}
+            Choose a dataset. The level cannot be saved without one.
           </Typography>
         )}
         {renderDatasetGroup(
@@ -163,7 +147,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         <SimpleDropdown
           labelText="Trainer"
           name="ailab_mode_trainer"
-          items={trainerItems}
+          items={TRAINER_ITEMS}
           selectedValue={selectedTrainer}
           onChange={e =>
             onChange(setModeValue(mode, 'trainer', e.target.value))
@@ -182,7 +166,6 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           errorMessage={accuracyError}
           size="s"
         />
-        {invalidValueNote('requireAccuracy')}
       </div>
 
       <div className={moduleStyles.fieldArea}>
@@ -199,17 +182,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
               }
               size="s"
             />
-            {invalidValueNote(key)}
           </div>
         ))}
       </div>
-
-      {unknownKeys.length > 0 && (
-        <Typography variant="body4" className={moduleStyles.descriptionText}>
-          Other keys, not used by Lab 2 AI Lab, kept as-is:{' '}
-          {unknownKeys.join(', ')}
-        </Typography>
-      )}
     </div>
   );
 };
