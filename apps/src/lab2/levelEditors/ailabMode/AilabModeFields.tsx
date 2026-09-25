@@ -157,6 +157,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         )}
       </div>
 
+      <Typography variant="body2" className={moduleStyles.label}>
+        Other Mode Configurations
+      </Typography>
       <div className={moduleStyles.fieldArea}>
         <SimpleDropdown
           labelText="Trainer"
@@ -175,7 +178,6 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           size="s"
         />
       </div>
-
       <div className={moduleStyles.fieldArea}>
         <TextField
           label="Required accuracy (%)"
@@ -192,7 +194,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
       <div className={moduleStyles.fieldArea}>
         {BOOLEAN_FIELDS.map(({key, label}) => (
-          <div key={key}>
+          <div key={key} className={moduleStyles.booleanField}>
             <Checkbox
               name={`ailab_mode_${key}`}
               label={label}
