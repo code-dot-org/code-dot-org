@@ -1,4 +1,3 @@
-/* Positions for drawing a display tree top-down, one column per answer. */
 import type {DisplayTreeBranch, DisplayTreeNode} from './displayTree';
 
 export const TREE_NODE_WIDTH = 160;
@@ -8,14 +7,12 @@ export const TREE_COLUMN_GAP = 16;
 export const TREE_ROW_GAP = 64;
 
 export interface PlacedTreeNode {
-  // Unique within one tree, e.g. "0.1.0"; for React keys.
   id: string;
   node: DisplayTreeNode;
   // Top-left corner.
   x: number;
   y: number;
   parent?: PlacedTreeNode;
-  // The branch of `parent` that leads here.
   branch?: DisplayTreeBranch;
 }
 

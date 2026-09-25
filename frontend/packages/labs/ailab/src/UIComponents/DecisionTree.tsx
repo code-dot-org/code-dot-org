@@ -1,4 +1,3 @@
-/* React component to draw the trained decision tree. */
 import {
   type ReactNode,
   useLayoutEffect,
@@ -21,12 +20,10 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
-// SVG text does not wrap.
 const NODE_TEXT_MAX_LENGTH = 20;
 const BRANCH_TEXT_MAX_LENGTH = 22;
 const BRANCH_LABEL_HEIGHT = 18;
 const BRANCH_LABEL_PADDING = 12;
-// Sibling pills are one column apart; this keeps a gap between them.
 const BRANCH_LABEL_MAX_WIDTH = TREE_NODE_WIDTH;
 const BRANCH_LABEL_CHAR_WIDTH = 7;
 
@@ -115,7 +112,7 @@ const DecisionTree = () => {
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
       const sign = branch.kind === 'lessThan' ? '<' : '≥';
-      // Unrounded: any rounding can put a row on the wrong side of it.
+      // Unrounded: any rounding can put a row on the wrong side of the threshold
       return `${sign} ${branch.threshold}`;
     }
     const values = branch.values.map(valueText);
