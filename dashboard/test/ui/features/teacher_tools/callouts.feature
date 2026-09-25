@@ -68,4 +68,4 @@ Feature: Callouts
     And I wait for the lab page to fully load
     And I dismiss the login reminder
     When I press "show-code-header"
-    Then "[class*=customDialogOverlay]" should be in front of "#qtip-0"
+    Then ".MuiDialog-root" should be in front of "#qtip-0"

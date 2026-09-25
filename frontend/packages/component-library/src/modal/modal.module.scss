@@ -1,6 +1,11 @@
-// Common Modal styles
-.modal {
-  position: relative;
+// The panel is MUI Paper: its surface comes from the MuiDialog theme entry and
+// its block layout from muiCustomDialog.module.scss. This sheet puts the flex
+// layout, radius and shadow back. Rules carry two classes so they outrank
+// MUI's single-class emotion rules, which the host page injects after this
+// sheet, and the equal-specificity `display: block` in
+// muiCustomDialog.module.scss, which loads first because Modal.tsx imports
+// MuiCustomDialog before this sheet.
+.modal:global(.MuiDialog-paper) {
   display: flex;
   min-width: 600px;
   max-width: 800px;
@@ -8,8 +13,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  background-color: var(--background-neutral-primary);
-  border: 1px solid var(--borders-neutral-primary);
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
   overflow: auto;
@@ -109,10 +112,4 @@
   align-items: flex-start;
   gap: 0.5rem;
   align-self: stretch;
-}
-
-.modalCloseButton {
-  position: absolute;
-  inset-block-start: 8px;
-  inset-inline-end: 8px;
 }
