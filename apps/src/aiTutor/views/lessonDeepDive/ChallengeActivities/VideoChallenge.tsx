@@ -1,4 +1,3 @@
-import {VideoCanvas} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -13,15 +12,16 @@ import {
 } from '../types';
 
 import {requestEvaluation} from './requestEvaluation';
+import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
 
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  // Owned by ChallengeBox, which drives the "Start Recording" / "Stop
-  // Recording" button in the bottom bar (the same button used to record a
-  // whiteboard challenge's audio explanation).
+  // Owned by ChallengeBox, which drives the record button in the bottom bar
+  // (the same button used to record a whiteboard challenge's audio
+  // explanation). Together the two booleans name the canvas's three states.
   isRecording: boolean;
   setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
   hasRecording: boolean;
@@ -61,6 +61,11 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   // Bumped to remount the recorder with a clean slate on "Start over".
   const [resetKey, setResetKey] = useState(0);
   const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
+  const mode: VideoCanvasMode = isRecording
+    ? 'recording'
+    : hasRecording
+    ? 'preview'
+    : 'edit';
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
 
   // Initialize the ChatEventLogger with the current context, whenever it updates.
@@ -181,7 +186,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     <div className={styles.videoContainer}>
       <VideoCanvas
         key={resetKey}
-        isRecording={isRecording}
+        mode={mode}
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}

@@ -1,8 +1,7 @@
-import Konva from 'konva';
-import {
-  type Dispatch,
-  type FC,
-  type SetStateAction,
+import React, {
+  Dispatch,
+  FC,
+  SetStateAction,
   useCallback,
   useEffect,
   useRef,
@@ -10,9 +9,19 @@ import {
 } from 'react';
 import {Image as KonvaImage, Layer, Stage} from 'react-konva';
 
+import EditToolbar from './EditToolbar';
+
 import styles from './video-canvas.module.scss';
 
-type RecordingState = 'idle' | 'recording' | 'recorded';
+// 'edit': live stage, recorder stopped — where decorations get placed before
+// a take, and where a take is discarded to place more.
+export type VideoCanvasMode = 'edit' | 'recording' | 'preview';
+
+// Node types come through react-konva: konva itself is ESM-only, which this
+// CommonJS-compiled package cannot import.
+type StageNode = React.ElementRef<typeof Stage>;
+type LayerNode = React.ElementRef<typeof Layer>;
+type ImageNode = React.ElementRef<typeof KonvaImage>;
 
 const RING_RADIUS = 26;
 const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
@@ -32,8 +41,8 @@ const CountdownRing: FC<CountdownRingProps> = ({
     timeRemaining <= 5
       ? '#ff4444'
       : timeRemaining <= 10
-        ? '#ffd600'
-        : '#ffffff';
+      ? '#ffd600'
+      : '#ffffff';
 
   return (
     <div
@@ -90,7 +99,7 @@ function getCoverCrop(
   sourceWidth: number,
   sourceHeight: number,
   targetWidth: number,
-  targetHeight: number,
+  targetHeight: number
 ) {
   const sourceRatio = sourceWidth / sourceHeight;
   const targetRatio = targetWidth / targetHeight;
@@ -103,12 +112,13 @@ function getCoverCrop(
 }
 
 interface VideoCanvasProps {
-  // Caller-controlled: flip this to start/stop the recording (e.g. from a
-  // button in a parent component) rather than clicking a button here.
-  isRecording: boolean;
+  // Requested by the caller, driven from a button it owns rather than one
+  // here. Only edit -> recording, recording -> preview and preview -> edit
+  // have any effect.
+  mode: VideoCanvasMode;
   onRecordingChange: (hasRecording: boolean) => void;
   // Called when the recording stops on its own (countdown expiry), so the
-  // caller can bring its `isRecording` state back in sync.
+  // caller can bring the state backing `mode` in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
   recordedBlob: Blob | null;
   setRecordedBlob: Dispatch<SetStateAction<Blob | null>>;
@@ -119,7 +129,7 @@ interface VideoCanvasProps {
 }
 
 const VideoCanvas: FC<VideoCanvasProps> = ({
-  isRecording,
+  mode,
   onRecordingChange,
   onIsRecordingChange,
   recordedBlob,
@@ -128,21 +138,22 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   timeLimitSeconds = 30,
   disabled = false,
 }) => {
-  const [recordingState, setRecordingState] = useState<RecordingState>('idle');
+  // Actual mode, set by effects when `mode` changes; can briefly lag it.
+  const [currentMode, setCurrentMode] = useState<VideoCanvasMode>('edit');
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
   const [stageSize, setStageSize] = useState({width: 0, height: 0});
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   // A state-backed ref (rather than useRef) so the animation effect below
-  // reruns when the Layer mounts — it unmounts/remounts across a re-record,
-  // since it lives in the same conditional branch as the recorded-playback
-  // view, and a plain ref wouldn't trigger that.
-  const [layerNode, setLayerNode] = useState<Konva.Layer | null>(null);
+  // reruns when the Layer mounts — it unmounts while the take plays back and
+  // remounts on the way to 'edit', since it lives in the same conditional
+  // branch as that playback view, and a plain ref wouldn't trigger that.
+  const [layerNode, setLayerNode] = useState<LayerNode | null>(null);
 
   const wrapperRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const stageRef = useRef<Konva.Stage>(null);
-  const imageNodeRef = useRef<Konva.Image>(null);
+  const stageRef = useRef<StageNode>(null);
+  const imageNodeRef = useRef<ImageNode>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const canvasStreamRef = useRef<MediaStream | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
@@ -158,11 +169,19 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     }
   };
 
+  // getUserMedia can resolve while the playback branch is still rendered, so
+  // the handoff is done both there and whenever the live branch mounts.
+  const attachStream = useCallback(() => {
+    if (videoRef.current && streamRef.current) {
+      videoRef.current.srcObject = streamRef.current;
+    }
+  }, []);
+
   const startStream = useCallback(async () => {
     if (!navigator.mediaDevices?.getUserMedia) {
       setError(
         'Camera recording is not available on this page. ' +
-          'Try opening the page over HTTPS.',
+          'Try opening the page over HTTPS.'
       );
       return;
     }
@@ -174,25 +193,30 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
         audio: true,
       });
       streamRef.current = stream;
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-      }
+      attachStream();
       setError(null);
     } catch {
       setError(
         'Camera or microphone access was denied. ' +
-          'Please allow access in your browser settings and try again.',
+          'Please allow access in your browser settings and try again.'
       );
     }
-  }, []);
+  }, [attachStream]);
+
+  // The live <video> unmounts while the recorded take plays back, so it needs
+  // the stream again on the way back to the stage.
+  useEffect(() => {
+    if (currentMode !== 'preview') {
+      attachStream();
+    }
+  }, [currentMode, attachStream]);
 
   useEffect(() => {
     startStream();
     return () => {
       streamRef.current?.getTracks().forEach(t => t.stop());
     };
-    // run once on mount; startStream is stable
-  }, []);
+  }, [startStream]);
 
   // Track the wrapper's rendered size so the stage — and thus the recorded
   // output — matches it exactly, at whatever size the surrounding layout
@@ -218,25 +242,25 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     if (!layerNode || !videoEl || !imageNode) return;
     if (!stageSize.width || !stageSize.height) return;
 
-    const anim = new Konva.Animation(() => {
+    let frame = requestAnimationFrame(function draw() {
       const {videoWidth, videoHeight} = videoEl;
-      if (!videoWidth || !videoHeight) return;
-      imageNode.setAttrs({
-        image: videoEl,
-        width: stageSize.width,
-        height: stageSize.height,
-        crop: getCoverCrop(
-          videoWidth,
-          videoHeight,
-          stageSize.width,
-          stageSize.height,
-        ),
-      });
-    }, layerNode);
-    anim.start();
-    return () => {
-      anim.stop();
-    };
+      if (videoWidth && videoHeight) {
+        imageNode.setAttrs({
+          image: videoEl,
+          width: stageSize.width,
+          height: stageSize.height,
+          crop: getCoverCrop(
+            videoWidth,
+            videoHeight,
+            stageSize.width,
+            stageSize.height
+          ),
+        });
+        layerNode.draw();
+      }
+      frame = requestAnimationFrame(draw);
+    });
+    return () => cancelAnimationFrame(frame);
   }, [layerNode, stageSize]);
 
   useEffect(() => {
@@ -249,37 +273,43 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     return () => URL.revokeObjectURL(url);
   }, [recordedBlob]);
 
+  // 'preview' is entered in onstop once the blob exists, not here — the
+  // caller can't name a take it hasn't heard about yet. The effect below may
+  // call this more than once meanwhile; the guard settles it.
   const stopRecording = useCallback(() => {
+    if (recorderRef.current?.state !== 'recording') return;
     clearTimer();
-    recorderRef.current?.stop();
+    recorderRef.current.stop();
     audioRecorderRef.current?.stop();
     canvasStreamRef.current?.getTracks().forEach(t => t.stop());
+    // Frees the camera for the duration of the playback; `returnToEdit` asks
+    // for it again.
     streamRef.current?.getTracks().forEach(t => t.stop());
-    setRecordingState('recorded');
   }, []);
 
-  // Auto-stop when the countdown expires.
   useEffect(() => {
-    if (recordingState === 'recording' && timeRemaining === 0) {
+    if (currentMode === 'recording' && timeRemaining === 0) {
       stopRecording();
     }
-  }, [timeRemaining, recordingState, stopRecording]);
+  }, [timeRemaining, currentMode, stopRecording]);
 
-  const startRecording = useCallback(async () => {
-    // Re-recording over a previous take: that stream's tracks were stopped
-    // when the previous recording finished, so get a fresh one first.
-    // Clearing recordedBlob (rather than setting recordingState) is what
-    // switches back to the preview render so the stage and <video
-    // ref={videoRef}> are mounted in time to receive it — recordingState
-    // itself stays 'recorded' until the new recorder actually starts, since
-    // changing it here would re-trigger the isRecording effect below mid-await
-    // and race a second startRecording() against this one's stale stream.
-    if (recordingState === 'recorded') {
-      setRecordedBlob(null);
-      setRecordedAudioBlob(null);
-      onRecordingChange(false);
-      await startStream();
-    }
+  // Discards the take: what's on the canvas no longer matches it.
+  const returnToEdit = useCallback(async () => {
+    setRecordedBlob(null);
+    setRecordedAudioBlob(null);
+    onRecordingChange(false);
+    setTimeRemaining(timeLimitSeconds);
+    setCurrentMode('edit');
+    await startStream();
+  }, [
+    setRecordedBlob,
+    setRecordedAudioBlob,
+    onRecordingChange,
+    timeLimitSeconds,
+    startStream,
+  ]);
+
+  const startRecording = useCallback(() => {
     // The Layer this canvas belongs to is non-listening (see below), so it
     // never grows a second, invisible hit-graph canvas — this query always
     // finds the one canvas actually being drawn to.
@@ -302,9 +332,12 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     };
     recorder.onstop = () => {
       const blob = new Blob(chunksRef.current, {type: 'video/webm'});
+      // Order matters: 'preview' must land after the caller can see a take
+      // exists, or 'preview' + a caller still asking 'edit' reads as discard.
       setRecordedBlob(blob);
       onRecordingChange(true);
       onIsRecordingChange?.(false);
+      setCurrentMode('preview');
     };
     recorderRef.current = recorder;
 
@@ -326,14 +359,12 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
 
     recorder.start();
     audioRecorder.start();
-    setRecordingState('recording');
+    setCurrentMode('recording');
 
     timerRef.current = setInterval(() => {
       setTimeRemaining(prev => (prev > 0 ? prev - 1 : 0));
     }, 1000);
   }, [
-    recordingState,
-    startStream,
     timeLimitSeconds,
     setRecordedBlob,
     setRecordedAudioBlob,
@@ -341,23 +372,30 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     onIsRecordingChange,
   ]);
 
-  // Start or stop in response to the caller flipping `isRecording`, rather
-  // than from a button owned by this component. Flipping it back on while
-  // `recordingState` is 'recorded' re-records over the previous take.
+  // 'edit', not !== 'recording': avoids reacting to the countdown's own stop.
   useEffect(() => {
     if (disabled) return;
-    if (isRecording && recordingState !== 'recording') {
+    if (mode === 'recording' && currentMode === 'edit') {
       startRecording();
-    } else if (!isRecording && recordingState === 'recording') {
+    } else if (mode !== 'recording' && currentMode === 'recording') {
       stopRecording();
+    } else if (mode === 'edit' && currentMode === 'preview') {
+      returnToEdit();
     }
-  }, [isRecording, recordingState, disabled, startRecording, stopRecording]);
+  }, [
+    mode,
+    currentMode,
+    disabled,
+    startRecording,
+    stopRecording,
+    returnToEdit,
+  ]);
 
   if (error) {
     return <p className={styles.error}>{error}</p>;
   }
 
-  if (recordingState === 'recorded' && previewUrl) {
+  if (currentMode === 'preview' && previewUrl) {
     return (
       <div className={styles.container}>
         <div className={styles.previewWrapper}>
@@ -375,6 +413,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
 
   return (
     <div className={styles.container}>
+      {currentMode === 'edit' && <EditToolbar />}
       <div className={styles.previewWrapper} ref={wrapperRef}>
         <video
           key="preview"
@@ -398,7 +437,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
             </Layer>
           </Stage>
         )}
-        {recordingState === 'recording' && (
+        {currentMode === 'recording' && (
           <CountdownRing
             timeRemaining={timeRemaining}
             timeLimitSeconds={timeLimitSeconds}
