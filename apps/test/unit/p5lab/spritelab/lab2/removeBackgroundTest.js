@@ -28,6 +28,20 @@ describe('SpriteLab2 keyOutBackground', () => {
     expect(alpha(data, 2)).toBe(255);
   });
 
+  it('leaves an image that is already transparent at the corner alone', () => {
+    // transparent black | black outline | red(subject)
+    const data = rgba([
+      [0, 0, 0],
+      [0, 0, 0],
+      [255, 0, 0],
+    ]);
+    data[3] = 0;
+    keyOutBackground(data, 3, 1, {soft: true});
+    expect(alpha(data, 0)).toBe(0);
+    expect(alpha(data, 1)).toBe(255);
+    expect(alpha(data, 2)).toBe(255);
+  });
+
   it('sharp matte produces only binary alpha (no partial edge pixels)', () => {
     // A near-green edge pixel is either fully cut or fully kept, never partial.
     const data = rgba([GREEN, [0, 200, 0], [255, 0, 0]]);

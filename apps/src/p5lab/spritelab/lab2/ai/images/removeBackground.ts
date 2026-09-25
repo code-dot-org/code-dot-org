@@ -85,6 +85,11 @@ export function keyOutBackground(
   height: number,
   {soft = false, lowThreshold = 30, highThreshold = 90}: MatteOptions = {}
 ): void {
+  // Already keyed (e.g. a model that emits alpha): a transparent pixel's RGB
+  // is usually black, and keying on it would eat dark outlines at the edge.
+  if (data[3] === 0) {
+    return;
+  }
   const refR = data[0];
   const refG = data[1];
   const refB = data[2];
