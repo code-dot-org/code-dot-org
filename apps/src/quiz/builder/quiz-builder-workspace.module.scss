@@ -25,6 +25,9 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-md);
 }
 
 .pageHeader {
