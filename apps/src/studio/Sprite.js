@@ -120,6 +120,7 @@ export default class Sprite extends Item {
       Object.assign({}, options, {
         spriteSheet: new StudioSpriteSheet(options),
         animationFrameDuration: this.getAnimationFrameDuration(),
+        disableAnimations: options.disableAnimations || false, // Toggle to disable animations
       })
     );
   }
@@ -190,6 +191,7 @@ export default class Sprite extends Item {
       Object.assign({}, options, {
         spriteSheet: new StudioSpriteSheet(options),
         animationFrameDuration: this.getAnimationFrameDuration(),
+        disableAnimations: options.disableAnimations || false, // Toggle to disable animations
       })
     );
 
