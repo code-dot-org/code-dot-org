@@ -112,6 +112,11 @@ export interface ActorTemplate {
    */
   readonly ownSteps?: readonly ActorStep[];
   /**
+   * Camera traits the kind elected, which go to its Viewport's main camera
+   * rather than to the actor (`ActorBuilder.useCameraTraits`).
+   */
+  readonly cameraTraits?: readonly Trait[];
+  /**
    * How this KIND draws itself — see `ActorBuilder.defineDrawing`. Optional for
    * the same structural reason `ownSteps` is.
    */
@@ -810,6 +815,11 @@ export class World {
     // (specs/SPACE_CAMERAS_PLAN.md).
   );
   private readonly viewportSpaces: Space[] = [];
+  /**
+   * The camera traits each kind elected, by type, for the main camera of the
+   * space a Viewport of that kind gets (`ActorBuilder.useCameraTraits`).
+   */
+  private readonly kindCameraTraits = new Map<string, readonly Trait[]>();
 
   /**
    * The actor IN HAND: the subject whose handler is running, the actor a
@@ -1260,6 +1270,9 @@ export class World {
     if (template.ownDrawing && !this.kindDrawings.has(type)) {
       this.kindDrawings.set(type, template.ownDrawing);
     }
+    if (template.cameraTraits?.length && !this.kindCameraTraits.has(type)) {
+      this.kindCameraTraits.set(type, template.cameraTraits);
+    }
     const steps = template.ownSteps ?? [];
     if (!steps.length || this.kindsWithSteps.has(type)) {
       return;
@@ -1375,7 +1388,14 @@ export class World {
       // (specs/SPACE_CAMERAS_PLAN.md). Through the same door every other camera
       // a space gets comes through, so the id is scoped and the two
       // back-references are set in one place rather than two.
-      this.addCameraTo(space, {id: DEFAULT_CAMERA_ID});
+      // …WITH THE CAMERA TRAITS THE KIND ELECTED, so a Viewport that `Follows`
+      // follows through the camera it already has, with nothing declared
+      // (specs/SPACE_CAMERAS_PLAN.md, "simplifying"). Their property values
+      // are the actor's, copied over each tick (`settleSpaces`).
+      this.addCameraTo(space, {
+        id: DEFAULT_CAMERA_ID,
+        traits: [...this.cameraTraitsOf(actor.type)],
+      });
     }
     // …and the actor hears that it exists, which is the one event every actor
     // gets without electing anything (`rules/spatial`). Queued like the rest,
@@ -2207,6 +2227,46 @@ export class World {
       this.showsThrough(space);
       this.settleSpace(space);
     }
+  }
+
+  /**
+   * Copy a Viewport's camera-trait property values onto its main camera.
+   *
+   * The values live on the ACTOR — that is what makes `actor to follow` a
+   * field in the placement inspector and a `set` on the Viewport — and the
+   * camera rules read them off the camera. One direction, once a tick and
+   * BEFORE the steps run (`tick`), for the traits the kind elected directly: a
+   * dependency's properties (`Aimed`'s goal) are the camera's own working state
+   * and copying the actor's stale copy over them would undo the aim every
+   * frame.
+   */
+  private lendCameraProperties(space: Space): void {
+    const owner = space.owner;
+    const main = space.cameras[0];
+    if (!owner || !main) {
+      return;
+    }
+    for (const trait of this.cameraTraitsOf(owner.type)) {
+      for (const property of Object.values(trait.properties)) {
+        main.set(property, owner.get(property));
+      }
+    }
+  }
+
+  /**
+   * The camera traits a kind elected.
+   *
+   * From what `useActorKind` recorded, else from the template `define`
+   * registered under the type: `addActor` given an INSTANCE rather than a
+   * template goes straight to `place` and records nothing about its kind,
+   * and a Viewport placed that way still has a camera to give the traits to.
+   */
+  private cameraTraitsOf(type: string): readonly Trait[] {
+    return (
+      this.kindCameraTraits.get(type) ??
+      this.types.get(type)?.cameraTraits ??
+      []
+    );
   }
 
   /**
@@ -3998,6 +4058,12 @@ export class World {
     this.wheel = this.pendingWheel;
     this.pendingWheel = 0;
     try {
+      // A Viewport's camera-trait values go to its camera BEFORE the steps
+      // run, so a target set on the Viewport this frame is what its camera
+      // aims at this frame (`lendCameraProperties`).
+      for (const space of this.viewportSpaces) {
+        this.lendCameraProperties(space);
+      }
       this.scheduler.run(this, delta, this.paused ? whilePaused : undefined);
       // Handlers run here, and a handler is where "remove that coin" comes
       // from — so the sweep below is after them, not before.

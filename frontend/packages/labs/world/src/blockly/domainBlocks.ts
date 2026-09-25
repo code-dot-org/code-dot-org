@@ -250,6 +250,7 @@ import {
   traitOptions,
   traitOptionsExtension,
   traitSubjectFor,
+  traitSubjectOfValue,
 } from './traitOptions';
 import {
   DEFINE_TWEEN,
@@ -642,6 +643,15 @@ const worldUseTrait = defineBlock({
       // (extensions/missingRule, ruleRegistry.refResolves).
       if (!refResolves(ref)) {
         return '';
+      }
+      // A CAMERA TRAIT ON A KIND THAT SHOWS A MAP goes to the Viewport's own
+      // main camera, so a Viewport can follow something without declaring a
+      // second camera and looking through it (specs/SPACE_CAMERAS_PLAN.md,
+      // "simplifying"). The palette offers such a trait only there; a saved
+      // file may still hold one elsewhere, and the engine gives a kind with no
+      // space nothing to forward it to.
+      if (traitSubjectOfValue(trait) === 'camera') {
+        return `actor.useCameraTraits([${refCode(ref, generator)}]);\n`;
       }
       return `actor.useTraits([${refCode(ref, generator)}]);\n`;
     },

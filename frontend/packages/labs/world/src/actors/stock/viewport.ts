@@ -50,6 +50,13 @@ export const viewportActor = actorFile(
   [
     actsLike('actors/label'),
     useTrait('Viewport#ViewportTrait'),
+    // …AND A CAMERA THAT CAN FOLLOW AND STAY IN THE MAP, with nothing declared.
+    // Camera traits on a kind that shows a map go to its own main camera
+    // (specs/SPACE_CAMERAS_PLAN.md, "simplifying"). `Follows` with no target
+    // does nothing, so a Viewport told nothing is the Viewport it was; one
+    // given an `actor to follow` — a field in its inspector — follows it.
+    useTrait('Camera Follow#FollowsTrait'),
+    useTrait('Camera Confined#ConfinedToTheMapTrait'),
     showAs('viewport'),
     sized('Width', WIDTH),
     sized('Height', HEIGHT),

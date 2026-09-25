@@ -29,6 +29,7 @@ import {
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {forgetImageSizes, setProjectGrids} from '../spriteCells';
+import {setProjectRuleMeta, setProjectRules} from '../traitOptions';
 import {shadowFor, shadowsFor, VALUE_SHADOW_EXTENSION} from '../valueShadow';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
@@ -296,6 +297,47 @@ describe('domain block generators', () => {
     // offer nothing electable, since the two traits every actor already has
     // are no longer in the dropdown (blockly/foundation).
     expect(emit('world_use_trait', {TRAIT: ''})).toBe('');
+  });
+
+  it('world_use_trait gives a CAMERA trait to a kind’s own camera', () => {
+    // A camera trait elected under `define actor` — which the palette offers
+    // only to a kind that shows a map — goes to the Viewport's main camera,
+    // so a Viewport can follow something without declaring a second camera
+    // (specs/SPACE_CAMERAS_PLAN.md, "simplifying"). A different builder call,
+    // decided by the trait's own subject in the rules in play.
+    const CHASE_RULE = parseRuleMeta(
+      'rules/chase',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {type: 'world_rule', fields: {NAME: 'Chasing'}},
+            {
+              type: 'world_rule_trait',
+              fields: {NAME: 'Chases', SUBJECT: 'camera'},
+            },
+          ],
+        },
+      }),
+    )!;
+    registerProjectRules([PROJECT_RULE, CHASE_RULE]);
+    setProjectRuleMeta([CHASE_RULE]);
+    setProjectRules(['rules/chase']);
+    try {
+      const defs: Record<string, string> = {};
+      const code = generatorFor('world_use_trait')(
+        {getFieldValue: () => 'Chasing#ChasesTrait'} as never,
+        {definitions_: defs} as never,
+        {} as never,
+      );
+      expect(code).toBe('actor.useCameraTraits([Chasing_ChasesTrait]);\n');
+      expect(defs['named:rules/chase:ChasesTrait']).toBe(
+        'import {ChasesTrait as Chasing_ChasesTrait} from "rules/chase";',
+      );
+    } finally {
+      registerProjectRules([PROJECT_RULE]);
+      setProjectRuleMeta([]);
+      setProjectRules([]);
+    }
   });
 
   it('world_use_trait imports a project trait from the rule it names', () => {

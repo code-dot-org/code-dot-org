@@ -125,6 +125,11 @@ export function traitSubjectFor(field?: {
 function traitSiteFor(field?: {getSourceBlock(): unknown}): {
   subject: 'actor' | 'camera';
   electing: boolean;
+  /**
+   * Under a `define actor` that `Shows a Map`, whose camera traits go to the
+   * Viewport's own main camera (specs/SPACE_CAMERAS_PLAN.md, "simplifying").
+   */
+  viewport?: boolean;
 } {
   const block = field?.getSourceBlock() as
     | {
@@ -149,7 +154,7 @@ function traitSiteFor(field?: {getSourceBlock(): unknown}): {
       return {subject: 'camera', electing: true};
     }
     if (parent.type === 'world_actor') {
-      return {subject: 'actor', electing: true};
+      return {subject: 'actor', electing: true, viewport: showsAMap(parent)};
     }
     if (parent.type === 'world_rule_trait') {
       return {
@@ -298,11 +303,65 @@ function traitOptionsFor(
  * Under `define trait` they stay, because there the block declares a
  * dependency rather than electing anything — see `traitSiteFor`.
  */
+/** The trait a Viewport elects, as a `use trait` row spells it. */
+const SHOWS_A_MAP = 'Viewport#ViewportTrait';
+
+/**
+ * Whether a `define actor` elects `Shows a Map` — read off its rows, since
+ * that is where it is said.
+ *
+ * A kind that shows a map has a camera of its own, so the camera traits make
+ * sense on it: they go to that camera rather than to the actor, and a Viewport
+ * can follow something without declaring a second camera to do it. Any other
+ * kind has no camera to give them to, and offering them would put "Follows" on
+ * a Label, which is the silence this dropdown exists to prevent.
+ */
+const showsAMap = (root: {
+  getNextBlock?(): unknown;
+  getFieldValue?(n: string): string;
+}): boolean => {
+  for (
+    let row = root.getNextBlock?.() as typeof root & {type?: string};
+    row;
+    row = row.getNextBlock?.() as typeof row
+  ) {
+    if (
+      row.type === 'world_use_trait' &&
+      row.getFieldValue?.('TRAIT') === SHOWS_A_MAP
+    ) {
+      return true;
+    }
+  }
+  return false;
+};
+
+/**
+ * Which kind of thing takes the trait a `use trait` value names — an actor,
+ * or a camera — from the rules in play. Undefined for a value nothing declares.
+ *
+ * What the generator asks under `define actor`: a camera trait elected there
+ * is the Viewport's main camera's, and compiles to a different call.
+ */
+export function traitSubjectOfValue(
+  value: string,
+): 'actor' | 'camera' | undefined {
+  for (const rule of rulesInPlay(projectRuleRefs)) {
+    for (const trait of rule.traits) {
+      if (trait.ref.exportName && memberValue(trait.ref) === value) {
+        return trait.subject ?? 'actor';
+      }
+    }
+  }
+  return undefined;
+}
+
 export function traitOptions(
   field?: Blockly.FieldDropdown,
 ): Array<[string, string]> {
   const site = traitSiteFor(field);
-  const offered = traitOptionsFor(site.subject, field);
+  const offered = site.viewport
+    ? traitOptionsFor(undefined, field)
+    : traitOptionsFor(site.subject, field);
   return withHeld(
     field,
     orNone(

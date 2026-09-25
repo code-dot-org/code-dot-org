@@ -17,6 +17,7 @@ import {
   setProjectRules,
   traitOptions,
   traitSubjectFor,
+  traitSubjectOfValue,
 } from '../traitOptions';
 
 /**
@@ -192,6 +193,52 @@ describe('which traits each dropdown offers', () => {
         ),
       ),
     ).toEqual(['Watched']);
+  });
+
+  it('offers a kind that SHOWS A MAP the camera traits too', () => {
+    // A Viewport has a camera of its own, and a camera trait elected on the
+    // kind goes to it — so a Viewport can follow something without declaring
+    // a second camera (specs/SPACE_CAMERAS_PLAN.md, "simplifying"). Read off
+    // the `define actor`'s own rows, since that is where `Shows a Map` is said.
+    const row = (trait: string, next: unknown = null) => ({
+      type: 'world_use_trait',
+      getFieldValue: (name: string) => (name === 'TRAIT' ? trait : null),
+      getNextBlock: () => next,
+    });
+    const viewportKind = {
+      type: 'world_actor',
+      getParent: () => null,
+      getFieldValue: () => null,
+      getNextBlock: () =>
+        row('Viewport#ViewportTrait', row('Boxed#BoxedTrait')),
+    };
+    const under = (kind: unknown) =>
+      ({
+        getSourceBlock: () => ({
+          type: 'world_use_trait',
+          getParent: () => kind,
+        }),
+      }) as unknown as Blockly.FieldDropdown;
+    expect(names(traitOptions(under(viewportKind)))).toEqual([
+      'Follows',
+      'Watched',
+    ]);
+
+    // …and a kind that shows no map is offered no camera trait, as before: a
+    // Label given `Follows` would give it to no camera at all.
+    const plainKind = {
+      ...viewportKind,
+      getNextBlock: () => row('Boxed#BoxedTrait'),
+    };
+    expect(names(traitOptions(under(plainKind)))).toEqual(['Watched']);
+  });
+
+  it('says which kind of thing a `use trait` value names', () => {
+    // What the generator asks under `define actor`: a camera trait elected
+    // there compiles to `useCameraTraits`, an actor's to `useTraits`.
+    expect(traitSubjectOfValue('Camera Follow#FollowsTrait')).toBe('camera');
+    expect(traitSubjectOfValue('Camera Follow#WatchedTrait')).toBe('actor');
+    expect(traitSubjectOfValue('Nobody#NothingTrait')).toBeUndefined();
   });
 
   it('offers `has trait` every trait, wherever it sits', () => {

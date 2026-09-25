@@ -496,6 +496,26 @@ export const BREAKOUT_SUPPORT_FILES: ProjectSpec['files'] = {
     contents: referenceToStock('input'),
     folderId: 'rules',
   },
+  // The Viewport's own: a camera that follows and stays in the map, and the
+  // Camera rule both build on (specs/SPACE_CAMERAS_PLAN.md, "simplifying").
+  cameraRuleFile: {
+    name: 'camera.rule',
+    language: 'rule',
+    contents: referenceToStock('camera'),
+    folderId: 'rules',
+  },
+  cameraFollowRuleFile: {
+    name: 'cameraFollow.rule',
+    language: 'rule',
+    contents: referenceToStock('cameraFollow'),
+    folderId: 'rules',
+  },
+  cameraConfinedRuleFile: {
+    name: 'cameraConfined.rule',
+    language: 'rule',
+    contents: referenceToStock('cameraConfined'),
+    folderId: 'rules',
+  },
   arrowsRuleFile: {
     name: 'arrows.rule',
     language: 'rule',

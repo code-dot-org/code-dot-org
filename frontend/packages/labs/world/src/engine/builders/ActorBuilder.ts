@@ -109,6 +109,30 @@ export class ActorBuilder {
   }
 
   /**
+   * Elect camera traits, for a kind that shows a map: they go to the
+   * Viewport's own main camera (specs/SPACE_CAMERAS_PLAN.md, "simplifying").
+   *
+   * The actor HOLDS them too, so it has their property slots — `actor to
+   * follow` is then a field in the placement inspector and a `set` on the
+   * Viewport — and the world copies those values onto the camera each tick
+   * (`World.settleSpaces`). What generates this is a `use trait` naming a
+   * camera trait under `define actor`, which the palette offers only to a kind
+   * that `Shows a Map`.
+   */
+  useCameraTraits(traits: Trait[]): this {
+    this.traits = [...this.traits, ...traits];
+    this.cameraTraitList = [...this.cameraTraitList, ...traits];
+    return this;
+  }
+
+  private cameraTraitList: Trait[] = [];
+
+  /** The camera traits this kind elected, for its Viewport's main camera. */
+  get cameraTraits(): readonly Trait[] {
+    return this.cameraTraitList;
+  }
+
+  /**
    * Named to match `Actor.addTrait` / `Actor.removeTrait`, and for the reason
    * `addEffect` gives: ONE Blockly block serves a template body and an event
    * handler, both bind the identifier `actor`, and the block emits
@@ -163,6 +187,9 @@ export class ActorBuilder {
    */
   actsLike(other: ActorBuilder): this {
     this.traits = [...this.traits, ...other.traits];
+    // …its camera traits with them, or a kind acting like a Viewport would
+    // hold `Follows` and give it to no camera.
+    this.cameraTraitList = [...this.cameraTraitList, ...other.cameraTraits];
     // …and whether it is a record. A kind acting like a data kind is one too;
     // saying `is data` itself is the other way to become one.
     this.data = this.data || other.data;

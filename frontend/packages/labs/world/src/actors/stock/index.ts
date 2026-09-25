@@ -250,9 +250,10 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Viewport',
     description:
       'A window onto a map of its own. Set its map and the level shows inside it, with a camera of its own; what is around the window stays put — a level inside its interface.',
-    // Shows a Map is the engine's own, in play everywhere (`rules/viewport`),
-    // so nothing to bring but the Label it reads its box through.
-    requires: [],
+    // Shows a Map is the engine's own, in play everywhere (`rules/viewport`).
+    // What it brings is a camera that follows and stays in the map, so that a
+    // Viewport can be aimed from its inspector with nothing declared.
+    requires: ['Camera Follow', 'Camera Confined'],
     actors: ['label'],
     contents: viewportActor,
   },

@@ -69,11 +69,15 @@ Aiming.addStepIn('follow a coin', 'aim', world => {
     world.withActor(camera, () => {
       const found = [...inThisSpace(world, world.actors.ofType('actors/coin'))];
       if (found.length) {
-        camera.position = one(found).get(PositionProperty) as Vector;
+        const at = one(found).get(PositionProperty) as Vector;
+        const offset = Number(camera.get(Offset) ?? 0);
+        camera.position = new Vector(at.x + offset, at.y);
       }
     });
   }
 });
+/** …and one with a property, to watch it lent from the Viewport to its camera. */
+const Offset = FollowsACoin.addProperty('followsCoinOffset', 'number', 0);
 const AimingRule = Aiming.build();
 const Coin = new ActorBuilder({id: 'coin', name: 'Coin'}).set(
   IntrinsicSizeProperty,
@@ -1318,5 +1322,55 @@ describe('a Viewport onto another Viewport’s scene', () => {
     expect(world.viewportSpaceOf(minimap)!.mirrorOf).toBe(
       world.viewportSpaceOf(game),
     );
+  });
+});
+
+describe('a Viewport that elects a camera trait', () => {
+  // THE SIMPLE CASE MADE SIMPLE. A Viewport wants to follow something, and the
+  // way to say so was: declare a camera for it, give that camera the trait,
+  // set the trait's property on it, and look through it. Four blocks, two of
+  // them ceremony. A kind that shows a map may elect the camera trait itself;
+  // it goes to the space's main camera, and the property is the Viewport's —
+  // a field in its inspector (specs/SPACE_CAMERAS_PLAN.md, "simplifying").
+  const Follower = new ActorBuilder({id: 'follower', name: 'Follower'})
+    .useTraits([ViewportTrait])
+    .useCameraTraits([FollowsACoin])
+    .set(IntrinsicSizeProperty, new Vector(100, 80));
+  const built = () => {
+    const world = makeWorld();
+    world.define('actors/follower', Follower);
+    const win = world.addActor(Follower.instantiate('f1', 'actors/follower'));
+    world.loadMapInto(win, LEVEL);
+    return {world, win};
+  };
+
+  it('gives the trait to its main camera, and the camera follows', () => {
+    const {world, win} = built();
+    const space = world.viewportSpaceOf(win)!;
+    expect(space.cameras.map(camera => camera.name)).toEqual(['main']);
+    expect(space.camera!.has(FollowsACoin)).toBe(true);
+
+    world.tick(0);
+    const held = [...world.actors].find(actor => actor.id === 'a')!;
+    expect(space.camera!.position).toEqual(held.get(PositionProperty));
+  });
+
+  it('lends the trait’s properties from the Viewport to the camera each tick', () => {
+    // Set on the ACTOR, which is what the inspector writes and what
+    // `set … of ⟨this actor⟩` does; read by the rule off the camera.
+    const {world, win} = built();
+    win.set(Offset, 7);
+    world.tick(0);
+    const held = [...world.actors].find(actor => actor.id === 'a')!;
+    const at = held.get(PositionProperty) as Vector;
+    expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
+      new Vector(at.x + 7, at.y),
+    );
+  });
+
+  it('holds the trait itself too, so the property has a slot', () => {
+    const {win} = built();
+    expect(win.has(FollowsACoin)).toBe(true);
+    expect(win.get(Offset)).toBe(0);
   });
 });

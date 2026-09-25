@@ -185,6 +185,44 @@ A camera's inspector is then the Enhance row and a field per property of every
 trait it elects, which is what a placement's inspector already does for an
 actor's traits. `look offset` and `actor to follow` need no bespoke UI.
 
+## Simplifying: a Viewport elects camera traits itself
+
+BUILT, after the first person to aim a Viewport's camera in the browser needed
+four blocks to do it — `define camera ⟨…⟩ for ⟨this actor⟩`, `use trait
+⟨Follows⟩` in its mouth, `set actor to follow` on it, and `look through camera`
+after it — and two of the four were ceremony. Every space already has a `main`
+camera; the ceremony existed only because nothing but a `define camera` could
+give a camera a trait.
+
+**A kind that `Shows a Map` may elect camera traits, and they go to its own
+main camera.** The palette offers the camera traits to a `use trait` under a
+`define actor` whose rows elect `Viewport#ViewportTrait` (`traitOptions`,
+read off the rows since that is where it is said), and nowhere else — a Label
+given `Follows` would give it to no camera. Such a row generates
+`actor.useCameraTraits([…])` rather than `useTraits` (`traitSubjectOfValue`
+decides, from the trait's own subject in the rules in play). The engine gives
+the kind's camera traits to the space's main camera when the Viewport is
+placed, and the actor HOLDS them too, so their properties have slots on it:
+`actor to follow` is then a field in the placement inspector — an actor
+reference, with pick-on-canvas — and a `set … of ⟨this actor⟩` in blocks. The
+values are copied from the Viewport to its camera once a tick, before the
+steps run, so a target set this frame is aimed at this frame; only the traits
+the kind elected directly, since a dependency's properties (`Aimed`'s goal)
+are the camera's own working state.
+
+**The stock Viewport elects `Follows` and `Confined to the Map`.** `Follows`
+with no target does nothing — its step is guarded on there being one — so a
+Viewport told nothing is the Viewport it was, and one given an `actor to
+follow` in its inspector follows it with no blocks at all. `define camera ⟨…⟩
+for ⟨…⟩` stays for a second framing, which is what it was always for.
+
+**What this does not reach.** The inspector's actor picker offers this map's
+placements, so a box holding its own copy of a level cannot pick the Pilot
+inside it — that wants `actor to follow` by kind (step 10) or the `set` under
+`shows a map`. A mirror, whose scene is the map the box sits on, needs nothing
+more. And traits are elected per KIND: every stock Viewport can follow; which
+one follows what is per placement.
+
 ## Which camera takes the view
 
 **Every space has a `main` camera that always exists, and the Viewport carries a
