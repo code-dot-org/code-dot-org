@@ -1,10 +1,4 @@
-import {
-  type ReactNode,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import {useLayoutEffect, useMemo, useRef, useState} from 'react';
 
 import {colors, styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -131,25 +125,6 @@ const DecisionTree = () => {
       : valueText(node.prediction);
   };
 
-  const describe = (node: DisplayTreeNode, id: string): ReactNode =>
-    node.type === 'answer' ? (
-      <li key={id}>The model predicts {nodeText(node)}.</li>
-    ) : (
-      <li key={id}>
-        {nodeText(node)}
-        <ul style={styles.decisionTreeList}>
-          {node.branches.map((branch, index) => (
-            <li key={`${id}.${index}`}>
-              {branchText(branch)}
-              <ul style={styles.decisionTreeList}>
-                {describe(branch.child, `${id}.${index}`)}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </li>
-    );
-
   return (
     <div id="uitest-decision-tree" style={styles.decisionTree}>
       <div style={{...styles.decisionTreeHeader, ...styles.bold}}>
@@ -159,7 +134,8 @@ const DecisionTree = () => {
         <svg
           width={layout.width}
           height={layout.height}
-          aria-hidden="true"
+          role="img"
+          aria-label="Diagram of your model's decision tree"
           style={{display: 'block'}}
         >
           {layout.nodes.map(
@@ -217,10 +193,6 @@ const DecisionTree = () => {
           })}
         </svg>
       </div>
-      <details>
-        <summary>Show the tree as a list</summary>
-        <ul style={styles.decisionTreeList}>{describe(tree, '0')}</ul>
-      </details>
     </div>
   );
 };

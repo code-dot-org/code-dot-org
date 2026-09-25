@@ -979,8 +979,4 @@ export const styles = {
     overflowX: 'auto',
     paddingBottom: 10,
   },
-
-  decisionTreeList: {
-    paddingLeft: 16,
-  },
 } as const;
