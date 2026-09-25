@@ -1,9 +1,15 @@
 #!/usr/bin/env ruby
 
-# This script just ensures that the generated images are square PNGs.
+# This script just ensures that the generated images are square PNGs, with
+# transparent backgrounds where their metadata file says they were asked for
+# one.
 #
 # You can specify --delete to actually delete the invalid files.
 
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+
+require 'json'
 require 'optparse'
 require_relative 'constants'
 require_relative 'image_validation'
@@ -43,24 +49,31 @@ end.parse!
 good = 0
 count = 0
 output_path = File.join(File.dirname(__FILE__), OUTPUT_DIRECTORY)
-Dir.glob(File.join(output_path, '**', '*.png')) do |path|
-  name = path.delete_prefix("#{output_path}/")
-  next unless name.split('/').first.include?(options[:filter])
+Dir.glob(File.join(output_path, '**', '*.json')) do |json_path|
+  directory = File.dirname(json_path)
+  next unless directory.delete_prefix("#{output_path}/").split('/').first.include?(options[:filter])
 
-  error = validate_image path
+  metadata = JSON.parse(File.read(json_path))
+  metadata['frames'].each do |frame|
+    path = File.join(directory, frame['file'])
+    next unless File.exist?(path)
 
-  # Print result if error
-  if error
-    puts "#{name}: #{error}"
-    if options[:delete]
-      puts "Deleting #{path}"
-      File.delete(path)
+    error = validate_image(path, image_type: metadata['imageType'], transparent: metadata['transparent'])
+    name = path.delete_prefix("#{output_path}/")
+
+    # Print result if error
+    if error
+      puts "#{name}: #{error}"
+      if options[:delete]
+        puts "Deleting #{path}"
+        File.delete(path)
+      end
+    else
+      good += 1
     end
-  else
-    good += 1
-  end
 
-  count += 1
+    count += 1
+  end
 end
 
 puts "Passed: #{good}/#{count}"

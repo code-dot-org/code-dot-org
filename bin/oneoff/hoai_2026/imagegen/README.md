@@ -37,10 +37,28 @@ in `apps/src/p5lab/spritelab/lab2/ai/images/`) and prints one job per line.
 A job is one image, or, for a character sprite, one animated set: a base
 image, then four poses (idling, walking, jumping, landing) that each send
 the base image back as a reference, just as the lab's "Generate animation"
-does. A set costs five requests.
+does. A set costs five requests. The stance and poses follow the creature
+choice's `bodyPlan` in the manifest (upright, quadruped or bird; upright
+when absent), as the lab's do.
 
 Those modules must stay free of `@cdo/...` imports and browser APIs, or
 `dump_prompts.ts` stops working.
+
+## Transparency
+
+The lab generates with Gemini, which cannot emit an alpha channel, so its
+prompts ask sprites and blocks for a flat key color that the lab erases
+afterwards. OpenAI's image models can return a transparent background
+directly (`background: "transparent"`), so by default this script sends
+sprites, objects, blocks and animated sets that parameter, with prompts
+asking for a transparent background in place of the key color. Each job
+line from `dump_prompts.ts` carries both versions of each prompt
+(`prompt` and `transparentPrompt`). Backgrounds fill their frame and are
+always opaque.
+
+`--no-transparent` sends the lab's key-color prompts instead. A job made
+with the other setting, per its metadata file, is regenerated rather than
+skipped.
 
 ## Usage
 
@@ -109,7 +127,8 @@ contain dots:
 ```
 
 For example, `sprite-simple/pixel/brave.robot.00.png`. The `.json` file
-records the prompts, model, and frame files. The OpenAI image API takes no
+records the prompts sent, the model, whether the images are transparent,
+and the frame files. The OpenAI image API takes no
 seed, so none is recorded, and a cached image cannot be replayed by seed as
 a live one can.
 
@@ -136,7 +155,10 @@ If you only want to upload certain files:
 ### Validating
 
 You can run the `validate_images` script to check that every image in
-`image_output` is a square PNG. The same check runs before uploading.
+`image_output` is a square PNG and, where its metadata file says it was
+made transparent, has an alpha channel. A transparent sprite must also have
+four transparent corners; a block may fill its frame, so it is not held to
+that. The same check runs before uploading.
 
 To automatically delete the offending files, specify the `--delete` flag.
 After doing this, the `generate_images` script can be invoked another time
