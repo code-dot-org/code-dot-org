@@ -343,6 +343,10 @@ class UnitGroup < ApplicationRecord
     [Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
+  def sunsetting?
+    published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting
+  end
+
   def summarize(user = nil, for_edit: false, locale_code: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       {

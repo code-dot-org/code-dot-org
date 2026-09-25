@@ -1,0 +1,72 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.playerBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 40px;
+  padding: 4px 12px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+}
+
+.playerBarTitle {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--borders-neutral-primary);
+}
+
+.dotDone {
+  background: var(--background-brand-purple-primary);
+}
+
+.dotCurrent {
+  background: var(--background-brand-purple-primary);
+  box-shadow: 0 0 0 3px var(--background-brand-purple-light);
+}
+
+.playerBody {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.stepFallback {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px;
+  text-align: center;
+}
+
+// PanelsView positions itself against the nearest positioned ancestor.
+.panelsHost {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}

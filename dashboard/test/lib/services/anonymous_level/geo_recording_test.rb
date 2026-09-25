@@ -20,7 +20,6 @@ class Services::AnonymousLevel::GeoRecordingTest < ActiveSupport::TestCase
   let(:geo_scope) {AnonymousLevel::Geo.where(anon_user_id:)}
 
   before do
-    DCDO.set('anonymous_level_tracking_enabled', true)
     Geocoder.stubs(:find).with(ip_address).returns(geocoder_result)
   end
 
@@ -121,20 +120,6 @@ class Services::AnonymousLevel::GeoRecordingTest < ActiveSupport::TestCase
         _(geo.state).must_be_nil
         _(geo.city).must_be_nil
         _(geo.postal_code).must_be_nil
-      end
-    end
-
-    context 'when anonymous level tracking is disabled' do
-      before do
-        DCDO.set('anonymous_level_tracking_enabled', false)
-        Geocoder.expects(:find).never
-      end
-
-      it 'does not record geo' do
-        result = nil
-
-        _ {result = record_geo}.wont_change -> {geo_scope.count}
-        _(result).must_be_nil
       end
     end
   end

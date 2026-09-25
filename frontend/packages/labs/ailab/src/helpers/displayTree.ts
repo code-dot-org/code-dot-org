@@ -25,7 +25,7 @@ export interface DisplayTreeAnswer {
 
 export type DisplayTreeNode = DisplayTreeQuestion | DisplayTreeAnswer;
 
-// A saved model holds a nested array; a live model holds an ml-matrix row vector; 
+// A saved model holds a nested array; a live model holds an ml-matrix row vector
 type ClassDistribution = number[][] | {getRow(row: number): number[]};
 
 interface SerializedTreeNode {
@@ -85,6 +85,7 @@ function buildNode(
   const threshold = node.splitValue!;
   const key = context.featureNumberKey[column];
 
+  // featureNumberKey holds only categorical columns, so this one is numerical.
   if (!key) {
     return {
       type: 'question',

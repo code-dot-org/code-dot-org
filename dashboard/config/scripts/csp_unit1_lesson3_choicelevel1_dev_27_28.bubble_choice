@@ -1,0 +1,11 @@
+name 'csp_unit1_lesson3_choicelevel1_dev_27_28'
+display_name 'Choose an Information Journey'
+description 'Pick one everyday app scenario. Then sort the cards into Input, Storage, Processing, and Output.'
+
+sublevels
+level 'csp_unit1_lesson3_sketchlab2_dev_27_28'
+level 'csp_unit1_lesson3_sketchlab3_dev_27_28'
+level 'csp_unit1_lesson3_sketchlab4_dev_27_28'
+level 'csp_unit1_lesson3_sketchlab5_dev_27_28'
+
+uses_lab2

@@ -15,7 +15,14 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
-import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
+import {
+  BACKPACK_READ_ERROR,
+  backpackDuplicateDeleteError,
+  BackpackNotify,
+  backpackSaveError,
+  notifySaved,
+  notifySaving,
+} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
@@ -99,7 +106,7 @@ export const handleSaveToBackpack = async (
       ? await backpackApi.getFileLists()
       : {[backpackApi.appType]: backpackFileList};
   } catch (error) {
-    notify('danger', 'Could not read your Backpack. Please try again.');
+    notify('danger', BACKPACK_READ_ERROR);
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Backpack file list fetch error', error as Error);
@@ -143,13 +150,13 @@ export const handleSaveToBackpack = async (
 
   const newFileName = extractUserInput(dialogResults) + '.png';
   if (unifiedApi) {
-    notify('info', `Saving ${newFileName} to your Backpack...`);
+    notifySaving(notify, newFileName);
   }
-
-  const saveErrorMessage = `Error saving ${newFileName} to your Backpack. Please try again`;
 
   // The progress toast above never expires on its own, so every path from here
   // has to end in a toast that replaces it.
+  const saveErrorMessage = backpackSaveError(newFileName);
+
   let snapshot: {blob?: Blob; error?: string};
   try {
     snapshot = await createSketchSnapshotBlob(reactFlow);
@@ -184,7 +191,7 @@ export const handleSaveToBackpack = async (
       },
       () => {
         if (unifiedApi) {
-          notify('success', `${newFileName} saved to your Backpack.`);
+          notifySaved(notify, newFileName);
         }
         sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
         resolve(true);
@@ -207,10 +214,7 @@ export const handleSaveToBackpack = async (
   try {
     await unifiedApi.deleteFromLegacyBackpacks(newFileName, filenamesByAppType);
   } catch (error) {
-    notify(
-      'danger',
-      "We saved your sketch, but couldn't delete your old file. You can retry the delete in the Backpack."
-    );
+    notify('danger', backpackDuplicateDeleteError(newFileName));
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Backpack duplicate delete error', error as Error);

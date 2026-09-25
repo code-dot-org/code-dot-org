@@ -12,8 +12,14 @@ export default function useQuizAttemptView({
 }: LabProps): QuizViewContent {
   const {
     id: levelId,
+    appName,
+    name: levelName,
     quizQuestions = [],
     allowMultipleAttempts,
+    displayName,
+    customIntroText,
+    timeLimitMinutes,
+    showIntroScreen,
   } = levelProperties as QuizLevelProperties;
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
@@ -23,9 +29,15 @@ export default function useQuizAttemptView({
     workspaceContent: (
       <QuizAttemptWorkspace
         levelId={levelId}
+        appName={appName}
+        levelName={levelName}
         unitId={unitId}
         quizQuestions={quizQuestions}
         allowMultipleAttempts={allowMultipleAttempts}
+        displayName={displayName}
+        customIntroText={customIntroText}
+        timeLimitMinutes={timeLimitMinutes}
+        showIntroScreen={showIntroScreen}
       />
     ),
   };

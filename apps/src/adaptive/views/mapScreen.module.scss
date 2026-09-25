@@ -1,0 +1,62 @@
+.mapScreen {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.mapArea {
+  position: relative;
+  flex: 1;
+  // No scrolling: the map is sized to fit, and a scrollbar appearing while
+  // zooming would shift the board.
+  overflow: hidden;
+  padding: 24px 24px 48px;
+}
+
+.mapBack {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+}
+
+.mapHeader {
+  max-width: 760px;
+  margin: 0 auto 8px;
+  transition: opacity 300ms;
+}
+
+// Hidden while a checkpoint is focused, but still laid out so the board
+// does not jump.
+.mapHeaderHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  gap: 16px;
+  width: 400px;
+  padding: 24px;
+  overflow-y: auto;
+  // Reserve the scrollbar's column so the card does not shift when it grows
+  // tall enough to scroll.
+  scrollbar-gutter: stable;
+  border-left: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+}
+
+.sideFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.resetButton {
+  flex: none;
+  white-space: nowrap;
+}

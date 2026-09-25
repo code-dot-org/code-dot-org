@@ -1,0 +1,24 @@
+.introText {
+  color: var(--text-neutral-primary);
+
+  p {
+    margin: 0;
+  }
+}
+
+.metadata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-neutral-tertiary);
+}
+
+.metadataItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
