@@ -3618,31 +3618,105 @@ export class World {
    * actors are on.
    */
   mousePosition(actor?: Actor | Camera): Vector {
-    const space = this.spaceOf(actor ?? this.inHand.at(-1));
+    const subject = actor ?? this.inHand.at(-1);
+    // A CAMERA A VIEWPORT OWNS is asked through that Viewport's window and
+    // itself, whichever space it looks at. For a box holding a level that is
+    // what the branch below would do anyway; for a mirror it is the only
+    // reading that makes sense, since the mirror's camera looks at the root
+    // and the root's own branch would answer through the world's camera
+    // (specs/MIRRORING_PLAN.md).
+    if (subject instanceof Camera && subject.window) {
+      return this.throughWindow(subject.window, subject);
+    }
+    const space = this.spaceOf(subject);
     if (!space.owner || !space.camera) {
-      const camera = this.activeCamera();
-      const view = this.viewSize(camera);
-      return new Vector(
-        camera.position.x - view.x / 2 + this.pointer.x,
-        camera.position.y - view.y / 2 + this.pointer.y,
-      );
+      // THE ROOT, which two cameras may now be looking at: the world's, over
+      // the whole view, and any mirror's, over its own rectangle. A pointer
+      // inside a mirror's rectangle is a pointer on the world THROUGH that
+      // mirror, so a root actor under it — which is what hit-testing asks,
+      // one candidate at a time in hand — is found by the mirror's camera and
+      // not by the world's. The topmost mirror wins where two overlap, which is
+      // the last placed, as the driver draws them.
+      const mirror = this.mirrorUnderPointer();
+      if (mirror) {
+        return this.throughWindow(mirror.owner!, mirror.camera!);
+      }
+      return this.rootPointer();
     }
     // Through the Viewport: where the pointer is in the Viewport's own
     // space, less the Viewport's top-left corner, is where it is inside the
     // window; the space's camera says which point of the space is there.
-    const owner = space.owner;
+    return this.throughWindow(space.owner, space.camera);
+  }
+
+  /**
+   * Where the pointer is in the scene `camera` looks at, seen through the
+   * rectangle of `viewport`.
+   *
+   * The Viewport branch of `mousePosition`, named, since a mirror and a box
+   * holding a level both want it and differ only in which camera.
+   */
+  private throughWindow(viewport: Actor, camera: Camera): Vector {
     const position = this.positionalProperty(SPATIAL.position);
-    const at = position ? owner.get(position) : new Vector(0, 0);
-    const view = this.viewSizeOf(owner);
-    const outer = this.mousePosition(owner);
+    const at = position ? viewport.get(position) : new Vector(0, 0);
+    const view = this.viewSizeOf(viewport);
+    // WHERE THE POINTER IS IN THE VIEWPORT'S OWN SPACE — and for a Viewport
+    // placed in the root, that is through the world's camera and never through
+    // a mirror, or a mirror under the pointer would be asked for its own
+    // corner through itself, without end. A Viewport inside another's space is
+    // asked the ordinary way.
+    const outer = this.spaceOf(viewport).owner
+      ? this.mousePosition(viewport)
+      : this.rootPointer();
     const inside = new Vector(
       outer.x - (at.x - view.x / 2),
       outer.y - (at.y - view.y / 2),
     );
     return new Vector(
-      space.camera.position.x - view.x / 2 + inside.x,
-      space.camera.position.y - view.y / 2 + inside.y,
+      camera.position.x - view.x / 2 + inside.x,
+      camera.position.y - view.y / 2 + inside.y,
     );
+  }
+
+  /**
+   * The topmost mirror whose rectangle the pointer is inside, if any.
+   *
+   * Measured in the root, through the world's own camera — a mirror is a
+   * placement in the root like any other. Only a MIRROR: a box holding a
+   * level of its own has actors of its own, and a root actor is never under
+   * it in the sense that matters here.
+   */
+  /** Where the pointer is in the root, through the world's own camera. */
+  private rootPointer(): Vector {
+    const camera = this.activeCamera();
+    const view = this.viewSize(camera);
+    return new Vector(
+      camera.position.x - view.x / 2 + this.pointer.x,
+      camera.position.y - view.y / 2 + this.pointer.y,
+    );
+  }
+
+  private mirrorUnderPointer(): Space | undefined {
+    const position = this.positionalProperty(SPATIAL.position);
+    if (!position) {
+      return undefined;
+    }
+    const pointer = this.rootPointer();
+    for (let index = this.viewportSpaces.length - 1; index >= 0; index -= 1) {
+      const space = this.viewportSpaces[index];
+      if (!space.mirrors || !space.owner || !space.camera) {
+        continue;
+      }
+      const at = space.owner.get(position) as Vector;
+      const box = this.viewSizeOf(space.owner);
+      if (
+        Math.abs(pointer.x - at.x) <= box.x / 2 &&
+        Math.abs(pointer.y - at.y) <= box.y / 2
+      ) {
+        return space;
+      }
+    }
+    return undefined;
   }
 
   /**

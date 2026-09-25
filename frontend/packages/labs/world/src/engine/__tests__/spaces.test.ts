@@ -1148,3 +1148,66 @@ describe('a Viewport onto the world’s own scene', () => {
     expect([...world.actors]).toHaveLength(5);
   });
 });
+
+describe('the mouse, through a mirror', () => {
+  // Two cameras look at the root now: the world's over the whole view, and a
+  // mirror's over its own rectangle. A pointer inside that rectangle is a
+  // pointer on the world THROUGH the mirror, which is what hit-testing asks
+  // one candidate at a time (specs/MIRRORING_PLAN.md, step 3).
+  const mirrored = () => {
+    const world = makeWorld();
+    const coin = world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    const win = placeWindow(world);
+    win.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
+    win.set(ViewportMapProperty, VIEWPORT.theWorld);
+    world.tick(0);
+    // The mirror looks somewhere the world's camera does not.
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    camera.position = new Vector(500, 300);
+    return {world, coin, win, camera};
+  };
+
+  it('maps a root actor’s pointer through the mirror when it is over the box', () => {
+    const {world, coin} = mirrored();
+    world.setPointer({x: 160, y: 130}, []); // 10 in from the box's corner
+    // Camera at (500,300) over a 100x80 window shows (450..550, 260..340).
+    expect(world.mousePosition(coin)).toEqual(new Vector(460, 270));
+    expect(world.withActor(coin, () => world.mousePosition())).toEqual(
+      new Vector(460, 270),
+    );
+  });
+
+  it('maps it through the world’s camera when it is not', () => {
+    const {world, coin} = mirrored();
+    world.setPointer({x: 20, y: 20}, []);
+    expect(world.mousePosition(coin)).toEqual(new Vector(20, 20));
+  });
+
+  it('asks a mirror’s own camera through its window, wherever the pointer is', () => {
+    const {world, camera} = mirrored();
+    world.setPointer({x: 20, y: 20}, []); // outside the box
+    // (20,20) is 130 left and 100 up of the box's corner (150,120).
+    expect(world.mousePosition(camera)).toEqual(new Vector(320, 160));
+  });
+
+  it('prefers the topmost mirror where two overlap', () => {
+    const {world, coin} = mirrored();
+    const above = world.addActor(Window.instantiate('win2', 'actors/window'));
+    above.set(PositionProperty, new Vector(200, 160));
+    above.set(ViewportMapProperty, VIEWPORT.theWorld);
+    world.tick(0);
+    world.viewportSpaceOf(above)!.camera!.position = new Vector(900, 900);
+    world.setPointer({x: 160, y: 130}, []);
+    expect(world.mousePosition(coin)).toEqual(new Vector(860, 870));
+  });
+
+  it('leaves a box holding a level as it was', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    win.set(PositionProperty, new Vector(200, 160));
+    const [a] = world.loadMapInto(win, LEVEL);
+    world.setPointer({x: 160, y: 130}, []);
+    // Its camera at the middle of its window, (50,40): the corner is (0,0).
+    expect(world.mousePosition(a)).toEqual(new Vector(10, 10));
+  });
+});
