@@ -5,12 +5,12 @@ import {
   PosedFrame,
   posedFrames,
   posePrompt,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSetPrompts';
+import {GenerateImageOptions} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {
   fullPromptFor,
-  GenerateImageOptions,
   pixelBlockFor,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imagePrompts';
 import {chooseKeyColor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 import {
   BodyPlan,
