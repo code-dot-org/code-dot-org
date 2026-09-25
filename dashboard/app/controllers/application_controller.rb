@@ -25,8 +25,6 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  before_action :initialize_statsig_stable_id
-
   before_action :persist_brand_params
 
   around_action :with_global_current_user
@@ -445,10 +443,6 @@ class ApplicationController < ActionController::Base
     ].include?(request.path)
 
     redirect_to lti_v1_account_linking_landing_path
-  end
-
-  protected def initialize_statsig_stable_id
-    request.statsig_stable_id
   end
 
   private def pairing_still_enabled
