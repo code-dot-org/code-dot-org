@@ -383,6 +383,7 @@ describe('what the driver is told', () => {
         // A box holding a level of its own, not a mirror of any scene
         // (specs/MIRRORING_PLAN.md).
         mirrors: undefined,
+        mirrorsRoot: false,
         // The middle of the window: a load leaves the camera there, and a map
         // no longer says to follow anything (specs/SPACE_CAMERAS_PLAN.md).
         camera: {x: 50, y: 40},
@@ -1138,11 +1139,19 @@ describe('a Viewport onto the world’s own scene', () => {
     expect([...world.actors].map(actor => actor.id)).toEqual(['rc', 'win']);
   });
 
-  it('tells the driver which scene, by its space’s id', () => {
+  it('tells the driver which scene, by its space’s id, and no layers', () => {
+    // No layers of its own: what it shows is the target's scene through the
+    // target's containers, and a second set of backdrops inside the box would
+    // be drawn over the first.
     const world = makeWorld();
     const win = mirror(world);
     expect(world.spaceSnapshot()).toEqual([
-      expect.objectContaining({owner: win.id, mirrors: 'main'}),
+      expect.objectContaining({
+        owner: win.id,
+        mirrors: 'main',
+        mirrorsRoot: true,
+        layers: [],
+      }),
     ]);
   });
 

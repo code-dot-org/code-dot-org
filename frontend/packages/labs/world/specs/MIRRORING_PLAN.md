@@ -1,9 +1,11 @@
 # A Viewport onto the world's own scene
 
-STATUS: BUILDING. Step 1 is in — a Viewport whose `map` says `world` is bound
-to the root: no copy, its cameras look at the root, its bounds follow the
-root's, and the driver is told `mirrors`. Nothing is visible yet: the driver
-still draws a mirror as an empty box until step 4. specs/VIEWPORT_PLAN.md lists
+STATUS: BUILDING. Steps 1 to 4 are in — a Viewport declares what it mirrors
+with `mirrors the world` or `mirrors`, is bound to that scene with no copy of
+its own, routes the pointer through its camera, and the driver draws the scene
+it mirrors into its box. What is left is the editor's dimmed preview (step 5),
+zoom, and layer masking — a mirror that hides the HUD, which is what makes a
+minimap a minimap and is its own step. specs/VIEWPORT_PLAN.md lists
 "mirroring" as not built; this is what it would take, written after a Viewport
 was given cameras of its own (specs/SPACE_CAMERAS_PLAN.md) and after the first
 person to build one asked for it: a minimap, a second shot of the same level,
@@ -135,8 +137,24 @@ camera draws is the root scene and nothing else.
    through the world's camera and never through a mirror, or a mirror under
    the pointer would be asked for its corner through itself, without end —
    which the first version did.
-4. **Driver.** A host without a container; the inverted `ignore` lists;
-   fake-scene test.
+4. **Driver. BUILT.** Not a host without a container — a host WITH one, kept
+   empty, so the host stays one shape and the removal path stays one path —
+   and the ignore lists inverted at creation: a mirror of the root does not
+   ignore the world's layer containers and ignores every box's container, its
+   own included; a mirror of a box ignores the world's containers and every
+   box's but the target's, and the target's camera does not ignore the mirror
+   back. `band` hands root objects only the main and `over` bits, so a root
+   mirror's camera sees all of them for free. Phaser keeps ignores as bits on
+   the objects and offers no un-ignore, so a box whose `mirrors` changes is
+   taken down and made again — which the removal path already knew how to do.
+
+   Two things the engine tells the driver for it: which space a box mirrors,
+   by id, and whether that is the ROOT — a flag rather than the root's id
+   compared against a constant, because a root id spelled on both sides of the
+   snapshot is the silent-name failure this lab keeps meeting. And a mirror
+   reports no layers of its own, or the driver would build a second set of
+   backdrops inside the box over the scene it shows.
+
 5. **Editor.** Nothing for the properties — `mirrors the world` is a checkbox
    and `mirrors` a placement reference, both of which the inspector already
    draws — but the held-map preview should draw the mirrored scene dimmed

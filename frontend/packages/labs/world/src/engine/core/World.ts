@@ -2379,6 +2379,8 @@ export class World {
     id: string;
     owner: string;
     mirrors: string | undefined;
+    /** Whether `mirrors` is the root, which is no space host of the driver's. */
+    mirrorsRoot: boolean;
     camera: {x: number; y: number};
     view: {x: number; y: number};
     bounds: {x: number; y: number};
@@ -2404,10 +2406,15 @@ export class World {
           // the root's, or another Viewport's — which the driver draws through
           // that space's display list (specs/MIRRORING_PLAN.md).
           mirrors: space.mirrorOf?.id,
+          mirrorsRoot: space.mirrorOf === this.rootSpace,
           camera: {x: space.camera.position.x, y: space.camera.position.y},
           view: {x: view.x, y: view.y},
           bounds: {x: space.bounds.x, y: space.bounds.y},
-          layers: space.layers.map(layer => ({
+          // A mirror has no layers of its own to draw: what it shows is the
+          // target's scene, layers and all, through the target's containers.
+          // Reporting the target's here would have the driver build a second
+          // set of backdrops inside the box (specs/MIRRORING_PLAN.md).
+          layers: (space.mirrorOf ? [] : space.layers).map(layer => ({
             id: layer.id,
             parallax: {x: layer.parallax.x, y: layer.parallax.y},
             fit: layer.fit,

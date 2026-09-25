@@ -314,6 +314,8 @@ vi.mock('../effects', () => ({
 import {PhaserBinding} from '../PhaserBinding';
 
 const WINDOW = {id: 'win'};
+/** A second Viewport, which mirrors something rather than holding a map. */
+const MINI = {id: 'mini'};
 const COIN = {id: 'a'};
 /** Root actors either side of the Viewport in the draw order. */
 const FLOOR = {id: 'floor'};
@@ -345,7 +347,17 @@ const slot = (sprite?: string) => ({
  * A world with one Viewport at (160,160), 100 by 80, showing a coin on the
  * map's `main` layer in front of a half-speed `sky` with a backdrop.
  */
-const world = (held: {spaces: boolean; around?: boolean; carried?: boolean}) =>
+const world = (held: {
+  spaces: boolean;
+  around?: boolean;
+  carried?: boolean;
+  /**
+   * A second Viewport at (60,60) that MIRRORS the root or the first box
+   * (specs/MIRRORING_PLAN.md). A function, so a test can change its mind
+   * between frames and watch the host be made again.
+   */
+  mirror?: () => 'main' | 'main/win' | undefined;
+}) =>
   ({
     useTextMetrics: () => {},
     setInput: () => {},
@@ -375,6 +387,7 @@ const world = (held: {spaces: boolean; around?: boolean; carried?: boolean}) =>
     renderSnapshot: () => [
       ...(held.around ? [state(FLOOR, 10, 10)] : []),
       state(WINDOW, 160, 160),
+      ...(held.mirror ? [state(MINI, 60, 60)] : []),
       ...(held.spaces
         ? [state(COIN, 48, 48, {space: 'main/win', layer: 1})]
         : []),
@@ -414,6 +427,20 @@ const world = (held: {spaces: boolean; around?: boolean; carried?: boolean}) =>
                 },
               ],
             },
+            ...(held.mirror
+              ? [
+                  {
+                    id: 'main/mini',
+                    owner: 'mini',
+                    mirrors: held.mirror(),
+                    mirrorsRoot: held.mirror() === 'main',
+                    camera: {x: 50, y: 40},
+                    view: {x: 100, y: 80},
+                    bounds: {x: 320, y: 320},
+                    layers: [],
+                  },
+                ]
+              : []),
           ]
         : [],
   }) as never;
@@ -597,5 +624,86 @@ describe('what the root holds around a Viewport', () => {
 
     expect(rootChildren().map(child => child.filter)).toEqual([0, 0, 0]);
     expect(drawOrder.map(camera => camera.id)).toEqual([MAIN_ID]);
+  });
+});
+
+describe('drawing a mirror', () => {
+  // A box that shows some other scene rather than one of its own
+  // (specs/MIRRORING_PLAN.md, step 4). Its camera draws the scene it mirrors;
+  // its own container stays empty and nobody draws it. What decides is the
+  // ignore lists, set at creation, which is all Phaser offers.
+  beforeEach(() => {
+    nodes = [];
+    cameras = [];
+    mainIgnored = [];
+    drawOrder = [];
+    document.body.innerHTML = '';
+    HTMLCanvasElement.prototype.getContext = (() => ({
+      getExtension: () => ({loseContext: () => {}}),
+    })) as never;
+  });
+
+  /** The two hosts' cameras, as the binding makes them: a camera, then an over. */
+  const boxCamera = () => cameras[0];
+  const mirrorCamera = () => cameras[2];
+  /** Each host's own container, in the order the main camera was told to skip them. */
+  const boxInner = () => mainIgnored[0];
+  const mirrorInner = () => mainIgnored[1];
+  /** The world's layer container: at the root, and nobody's `inner`. */
+  const worldLayer = () =>
+    nodes.find(
+      n =>
+        n.kind === 'container' &&
+        n.depth === 0 &&
+        n.parent === null &&
+        !mainIgnored.includes(n),
+    )!;
+
+  it('of the root draws the world’s layers, and no box’s container', () => {
+    new PhaserBinding(world({spaces: true, mirror: () => 'main'}), pane());
+    runFrame();
+
+    expect(cameras).toHaveLength(4);
+    // The world's layer is drawn — the one thing a box of its own never draws.
+    expect(mirrorCamera().ignored).not.toContain(worldLayer());
+    expect(boxCamera().ignored).toContain(worldLayer());
+    // …and no container of any space, its own included.
+    expect(mirrorCamera().ignored).toContain(boxInner());
+    expect(mirrorCamera().ignored).toContain(mirrorInner());
+    // The main camera skips the mirror's container as it skips every box's.
+    expect(mainIgnored).toContain(mirrorInner());
+    // Placed like any box: at (60,60), 100 by 80, looking through its camera.
+    expect(mirrorCamera().viewport).toEqual([10 * 3, 20 * 3, 100 * 3, 80 * 3]);
+    expect(mirrorCamera().center).toEqual([50, 40]);
+  });
+
+  it('of a box draws that box’s container, and nothing else', () => {
+    new PhaserBinding(world({spaces: true, mirror: () => 'main/win'}), pane());
+    runFrame();
+
+    expect(mirrorCamera().ignored).not.toContain(boxInner());
+    expect(mirrorCamera().ignored).toContain(worldLayer());
+    expect(mirrorCamera().ignored).toContain(mirrorInner());
+    // …and the box does not draw the mirror's container back.
+    expect(boxCamera().ignored).toContain(mirrorInner());
+  });
+
+  it('is made again when what it mirrors changes', () => {
+    // The ignore lists are bits on the objects with no un-ignore, so a mirror
+    // that changes its mind is taken down and made afresh.
+    let target: 'main' | 'main/win' | undefined = 'main';
+    new PhaserBinding(world({spaces: true, mirror: () => target}), pane());
+    runFrame();
+    const first = mirrorCamera();
+    expect(first.ignored).not.toContain(worldLayer());
+
+    target = 'main/win';
+    runFrame();
+    expect(first.removed).toBe(true);
+    const second = cameras.find(
+      camera => camera !== first && !camera.removed && camera.center[0] === 50,
+    )!;
+    expect(second.ignored).toContain(worldLayer());
+    expect(second.ignored).not.toContain(boxInner());
   });
 });

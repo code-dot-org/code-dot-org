@@ -317,6 +317,14 @@ export class PhaserBinding {
          */
         over: Phaser.Cameras.Scene2D.Camera;
         /**
+         * The space this box MIRRORS, by id, or undefined for a box with a
+         * scene of its own (specs/MIRRORING_PLAN.md). A mirror's `camera`
+         * draws the target's display list rather than `inner`, which stays
+         * empty; the ignore lists are set at creation from this, so a change
+         * to it takes the host down to be made again.
+         */
+        mirrors: string | undefined;
+        /**
          * The space's own layers, back to front (specs/LAYERS_PLAN.md): a
          * container each inside `inner`, and the two slots' images by layer
          * index, as the world's are kept.
@@ -1091,31 +1099,67 @@ export class PhaserBinding {
         // lands where the Viewport is in the draw order.
         owners.add(owner.actor);
         let host = spaceHosts.get(space.id);
+        // A box that now mirrors something else — or has stopped — has ignore
+        // lists that say otherwise. Phaser keeps those as bits on the objects
+        // and offers no un-ignore, so the host is taken down and made again.
+        if (host && host.mirrors !== space.mirrors) {
+          scene.cameras.remove(host.camera);
+          scene.cameras.remove(host.over);
+          host.inner.destroy();
+          spaceHosts.delete(space.id);
+          host = undefined;
+        }
         if (!host) {
           const inner = scene.add.container(0, 0);
           const camera = scene.cameras.add(0, 0, 1, 1);
           camera.setZoom(RENDER_SCALE);
           const over = scene.cameras.add(0, 0, 1, 1);
-          // What each camera draws: the main one and the `over` ones the
-          // layers and no space, a space's its own container and nothing
-          // else — not the layers, not another space.
+          // WHICH SCENE THE BOX'S CAMERA DRAWS. A box with a scene of its own
+          // draws its own container and nothing else — not the layers, not
+          // another space. A MIRROR draws the scene it mirrors instead
+          // (specs/MIRRORING_PLAN.md): the world's layers for a mirror of the
+          // root, or the target's container for a mirror of another box —
+          // and its own container, which stays empty, is nobody's to draw.
+          // `band` leaves a mirror's camera out of the bits it hands root
+          // objects, so a root mirror sees every one of them, including what
+          // sits in front of some other Viewport.
+          //
+          // The main and `over` cameras never draw a space's container, a
+          // mirror's included.
+          // Told by the engine rather than compared against its root id: the
+          // driver reads the engine as types only — `world-lab` is the
+          // sandbox's bundle, not a module this can import a value from — and
+          // a root id spelled twice is the silent-name failure this lab keeps
+          // meeting.
+          const mirrorsRoot = space.mirrorsRoot;
           scene.cameras.main.ignore(inner);
           over.ignore(inner);
-          for (const container of containers) {
-            if (container) {
-              camera.ignore(container);
+          if (!mirrorsRoot) {
+            for (const container of containers) {
+              if (container) {
+                camera.ignore(container);
+              }
             }
           }
-          for (const other of spaceHosts.values()) {
-            camera.ignore(other.inner);
+          camera.ignore(inner);
+          for (const [otherId, other] of spaceHosts) {
+            // A mirror of `other` draws `other`'s container; anything else
+            // does not. And `other` draws THIS container only if it mirrors
+            // this space, which a box made later can find already waiting.
+            if (space.mirrors !== otherId) {
+              camera.ignore(other.inner);
+            }
             over.ignore(other.inner);
-            other.camera.ignore(inner);
+            if (other.mirrors !== space.id) {
+              other.camera.ignore(inner);
+            }
             other.over.ignore(inner);
           }
           host = {
             inner,
             camera,
             over,
+            mirrors: space.mirrors,
             layers: [],
             backdrops: [],
             foregrounds: [],
