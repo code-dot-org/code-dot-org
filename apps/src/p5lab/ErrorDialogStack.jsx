@@ -1,5 +1,5 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
@@ -48,7 +48,7 @@ class ErrorDialogStack extends React.Component {
 
     if (error.error_type === 'anim_load') {
       return (
-        <Dialog
+        <MuiDialog
           title={error.message}
           customContent={
             <div style={{textAlign: 'center'}}>
@@ -86,7 +86,7 @@ class ErrorDialogStack extends React.Component {
     }
 
     return (
-      <Dialog
+      <MuiDialog
         title="Error"
         customContent={
           <Typography

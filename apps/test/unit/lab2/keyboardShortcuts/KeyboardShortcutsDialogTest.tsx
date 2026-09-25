@@ -35,7 +35,7 @@ describe('KeyboardShortcutsDialog', () => {
     render(<KeyboardShortcutsDialog appName="sketchlab" />);
     fireEvent.keyDown(document.body, {key: '/'});
 
-    fireEvent.keyDown(document.body, {key: 'Escape'});
+    fireEvent.keyDown(screen.getByRole('dialog'), {key: 'Escape'});
 
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });

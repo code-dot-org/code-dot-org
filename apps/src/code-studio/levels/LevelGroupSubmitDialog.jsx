@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -19,7 +19,7 @@ import i18n from '@cdo/locale';
  * the remaining LegacyDialog callers.
  */
 const LevelGroupSubmitDialog = ({id, title, body, onConfirm, onCancel}) => (
-  <Dialog
+  <MuiDialog
     id={id}
     title={title}
     description={body}

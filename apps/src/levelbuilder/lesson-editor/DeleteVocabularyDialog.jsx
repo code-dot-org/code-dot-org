@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -37,7 +37,7 @@ class DeleteVocabularyDialog extends Component {
     const {handleDeleteVocabularyDialogClose, vocabularyForDeletion} =
       this.props;
     return (
-      <Dialog
+      <MuiDialog
         title="Delete Vocabulary"
         description={`Are you sure you want to permanently delete vocabulary "${vocabularyForDeletion.word}"?`}
         onClose={() => handleDeleteVocabularyDialogClose()}

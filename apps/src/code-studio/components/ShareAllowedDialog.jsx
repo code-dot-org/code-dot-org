@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
@@ -254,7 +254,7 @@ class ShareAllowedDialog extends React.Component {
       <>
         {this.sharingDisallowedWhileSignedIn() &&
           this.state.showSharingDisallowedDialog && (
-            <Dialog
+            <MuiDialog
               title={
                 this.sharingDisabled()
                   ? i18n.sharingDisabledTitle()

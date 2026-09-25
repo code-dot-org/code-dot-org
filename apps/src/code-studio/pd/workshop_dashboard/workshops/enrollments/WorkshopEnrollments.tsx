@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {
@@ -386,7 +386,7 @@ export const WorkshopEnrollments: FC = () => {
         />
       </Card>
       {activeDialog === 'remove' && (
-        <Dialog
+        <MuiDialog
           id="remove-enrollments-dialog"
           onClose={() => {
             setActiveDialog(null);
@@ -456,7 +456,7 @@ export const WorkshopEnrollments: FC = () => {
         />
       )}
       {activeDialog === 'move' && (
-        <Dialog
+        <MuiDialog
           id="move-enrollments-dialog"
           onClose={() => {
             setActiveDialog(null);

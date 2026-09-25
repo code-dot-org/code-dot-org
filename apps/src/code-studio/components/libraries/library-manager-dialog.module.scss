@@ -1,4 +1,6 @@
-.dialog {
+// The panel is MUI Paper. Two classes: the wrapper undoes Paper's height cap
+// and scrolling with a two-class rule, and this sheet loads after it.
+.dialog:global(.MuiDialog-paper) {
   padding: 20px 24px;
   max-height: 85vh;
   overflow-y: auto;

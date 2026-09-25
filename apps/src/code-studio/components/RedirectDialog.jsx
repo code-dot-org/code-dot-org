@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -21,7 +21,7 @@ const RedirectDialog = ({
   };
 
   return (
-    <Dialog
+    <MuiDialog
       title={i18n.notInRightPlace()}
       description={details}
       onClose={handleClose}

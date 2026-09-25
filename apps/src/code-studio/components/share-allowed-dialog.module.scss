@@ -1,4 +1,8 @@
-.modal {
+// Modal is moving to MUI Paper. The two-class form outranks the Modal sheet's
+// own two-class min- and max-width and the theme's emotion height cap; the
+// bare class still covers the legacy Modal until that move lands.
+.modal,
+.modal:global(.MuiDialog-paper) {
   min-width: unset;
   width: 520px;
   max-width: 520px;

@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import React, {
   FC,
@@ -277,7 +277,7 @@ export const WorkshopForm: FC<WorkshopFormProps> = ({config}) => {
   return (
     <form id="workshop-form-template" className={styles.container}>
       {showDetailChangeEmailDialog && (
-        <Dialog
+        <MuiDialog
           title="Workshop Detail Change"
           description="You're making an important update to your workshop, would you like your enrollees to be notified via email?"
           mode="light"

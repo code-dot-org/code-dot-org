@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   Card,
@@ -114,7 +114,7 @@ export const ScoreCard: FC<ScoreCardProps> = ({
         </Box>
       </Card>
       {showBreakdown && breakdown && (
-        <CustomDialog
+        <MuiCustomDialog
           aria-labelledby="response-breakdown"
           className={commonStyles.customDialog}
           onClose={() => setShowBreakdown(false)}
@@ -167,7 +167,7 @@ export const ScoreCard: FC<ScoreCardProps> = ({
           >
             {'Return to dashboard'}
           </MuiButton>
-        </CustomDialog>
+        </MuiCustomDialog>
       )}
     </>
   );

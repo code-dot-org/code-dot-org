@@ -1,4 +1,6 @@
-.dialog {
+// The panel is MUI Paper. Two classes so the flex layout outranks the wrapper's
+// `display: block` and the radius and shadow outrank the theme's emotion rule.
+.dialog:global(.MuiDialog-paper) {
   display: flex;
   flex-direction: column;
   align-items: center;

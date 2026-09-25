@@ -1,5 +1,5 @@
 /** @file controls below a dialog to delete animations */
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -30,7 +30,7 @@ export default class DeleteAnimationDialog extends React.Component {
         break;
     }
     return (
-      <Dialog
+      <MuiDialog
         title={i18n.deleteAsset({assetType})}
         description={i18n.deleteAssetConfirm({assetType})}
         onClose={this.props.onCancel}

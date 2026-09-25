@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -19,7 +19,7 @@ export class ConfirmEnableMakerDialog extends Component {
 
   render() {
     return (
-      <CustomDialog
+      <MuiCustomDialog
         aria-label={msg.enableMakerDialogTitle()}
         onClose={this.props.handleCancel}
         className={styles.dialog}
@@ -67,7 +67,7 @@ export class ConfirmEnableMakerDialog extends Component {
             {msg.dialogCancel()}
           </MuiButton>
         </div>
-      </CustomDialog>
+      </MuiCustomDialog>
     );
   }
 }

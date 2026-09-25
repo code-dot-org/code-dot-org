@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import {Button as MuiButton, Typography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
 import _ from 'lodash';
@@ -231,7 +231,7 @@ class LibraryCreationDialog extends React.Component {
     }
 
     return (
-      <CustomDialog
+      <MuiCustomDialog
         style={styles.dialog}
         onClose={this.handleClose}
         closeLabel={i18n.closeDialog()}
@@ -253,7 +253,7 @@ class LibraryCreationDialog extends React.Component {
             {bodyContent}
           </div>
         </PadAndCenter>
-      </CustomDialog>
+      </MuiCustomDialog>
     );
   }
 }

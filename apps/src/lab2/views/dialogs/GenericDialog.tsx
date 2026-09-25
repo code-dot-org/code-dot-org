@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton} from '@mui/material';
@@ -136,7 +136,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
     getButtonCallback,
   });
 
-  const DialogComponent = useModal ? Modal : Dialog;
+  const DialogComponent = useModal ? Modal : MuiDialog;
   const isDestructive = buttons?.confirm?.destructive;
 
   return (

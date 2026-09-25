@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import React, {useCallback, useState} from 'react';
@@ -41,7 +41,7 @@ const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
   }, [name, type, onCreate, onClose]);
 
   return (
-    <Dialog
+    <MuiDialog
       title="New scene"
       onClose={onClose}
       customContent={

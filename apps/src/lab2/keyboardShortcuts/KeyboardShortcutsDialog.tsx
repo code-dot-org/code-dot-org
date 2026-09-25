@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
@@ -56,7 +56,7 @@ const KeyboardShortcutsDialog: React.FC<KeyboardShortcutsDialogProps> = ({
   }
 
   return (
-    <CustomDialog
+    <MuiCustomDialog
       onClose={() => setIsOpen(false)}
       closeLabel="Close keyboard shortcuts"
       aria-label="Keyboard shortcuts"
@@ -77,7 +77,7 @@ const KeyboardShortcutsDialog: React.FC<KeyboardShortcutsDialogProps> = ({
           <KeyboardShortcuts shortcuts={shortcuts} />
         </div>
       </div>
-    </CustomDialog>
+    </MuiCustomDialog>
   );
 };
 
