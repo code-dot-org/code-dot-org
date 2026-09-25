@@ -1,0 +1,30 @@
+name: Component-Library-Tag-Design
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, synchronize]
+    paths:
+      - 'frontend/packages/component-library-styles/**'
+      - 'frontend/packages/component-library/**'
+      - 'frontend/packages/fonts/**'
+
+jobs:
+  request:
+    name: Request review from design team on opened Component Library PRs
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+
+    steps:
+      - name: Request Review
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.DEPENDABOT_REVIEWER_GH_TOKEN }}
+          script: |
+            await github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              team_reviewers: ['component-library-design-reviewers'],
+            });
+
+
