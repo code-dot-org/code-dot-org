@@ -154,9 +154,9 @@ const InterventionBox: FC<InterventionBoxProps> = ({
               <Typography className={styles.subtext}>
                 {focusTopic ? (
                   <>
-                    {"Based on your reflection, we'll start with "}
+                    {`Based on your reflection, we'll start with "`}
                     <strong>{focusTopic.replace(/\.$/, '')}</strong>
-                    {'. You can work any way you like from here.'}
+                    {'". You can work any way you like from here.'}
                   </>
                 ) : (
                   'You can work any way you like from here.'

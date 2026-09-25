@@ -143,7 +143,7 @@ describe('InterventionBox', () => {
     // both the prefix and the suffix.
     const subtext = screen.getByText(/Based on your reflection/i);
     expect(subtext).toHaveTextContent(
-      "Based on your reflection, we'll start with variables and scope. You can work any way you like from here."
+      'Based on your reflection, we\'ll start with "variables and scope". You can work any way you like from here.'
     );
     // The topic itself is wrapped in <strong>.
     expect(screen.getByText('variables and scope').tagName.toLowerCase()).toBe(
