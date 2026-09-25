@@ -28,12 +28,24 @@ camera is given its Viewport's rectangle and pointed at the space's own camera
 
 ## The shape of the answer
 
-**A Viewport may show the world instead of a map.** Its `map` names the world
-— "(the world)" in the dropdown, `worlds/main` as the value — and
-`showHeldMap`, seeing a world rather than a map, loads nothing and binds the
-Viewport to the ROOT space instead of a space of its own. Its cameras are then
-cameras in the root space, and the Viewport shows the root scene through the
-one it elects.
+**A Viewport may show another scene instead of a map of its own.** Two
+properties say which — BUILT THIS WAY, replacing the word in `map` the first
+build used, since `map` means "which map I hold" and the world is not one:
+
+- **`mirrors the world`**, a boolean. The Viewport is bound to the ROOT space.
+- **`mirrors`**, another Viewport. The Viewport is bound to THAT one's space.
+  Not only the world, because the app progression puts the game itself in a
+  box on a menu screen, so a minimap of that game mirrors the box. A mirror of
+  a mirror shows what the end of the chain shows; a chain that comes back to
+  itself shows nothing, which is the honest answer to a question with none.
+  Takes precedence over the boolean when both are set.
+
+While either is set the Viewport loads nothing and `map` is what it would show
+if it stopped. Its cameras look at the target space and are seen through its
+own window, and it shows the target's scene through the one it elects. Two
+properties rather than one string because the world is not an actor; a string
+that meant either would be the third sibling-reference dropdown in the
+inspector, which is the point at which that abstraction should be built.
 
 Nothing changes about what a Viewport is otherwise. It is still a placement
 with a rectangle, still anchored, still covered by a modal screen above it,
@@ -105,21 +117,29 @@ camera draws is the root scene and nothing else.
 
 ## Order of work
 
-1. **Engine: a Viewport bound to the root. BUILT.** `showHeldMap` recognises
-   `VIEWPORT.theWorld` — a word, since the engine does not know the world's
-   module path and must not have to — and binds rather than loads; a level
-   given afterwards unbinds; unload leaves the root alone; the bounds follow
-   the root's each tick. Tests: a mirror holds no copy and sees the root's
-   actors through its camera; measures the map by the root and the view by its
-   own window; a level in a box still gets a copy.
+1. **Engine: a Viewport bound to another scene. BUILT, twice.** First with a
+   word in `map`; now with the property pair above, and generalised: the
+   target is the root or another Viewport's space, resolved through a chain
+   with a cycle guard, and `mirrorUnderPointer` catches pointers for whichever
+   scene a mirror shows. Tests: a mirror holds no copy and sees the target's
+   actors through its camera; measures the map by the target and the view by
+   its own window; a level in a box still gets a copy; a minimap of a boxed
+   game sees the box's scene and routes clicks into it; a chain resolves and a
+   cycle shows nothing.
 2. **Engine: a mirror's cameras.** FOLDED INTO 1 — nothing moved, see "Its
    cameras stay its own" above.
-3. **Engine: the pointer through the right camera.** `mousePosition` keys on
-   the Viewport under the pointer. Tests: a click in a mirror lands where its
-   camera says, not where the world's does.
+3. **Engine: the pointer through the right camera. BUILT.** `mousePosition`
+   asks which mirror OF THE SUBJECT'S SCENE is under the pointer, topmost
+   first, and maps through it; a camera a Viewport owns is asked through its
+   own window whichever scene it looks at; a box's own corner is measured
+   through the world's camera and never through a mirror, or a mirror under
+   the pointer would be asked for its corner through itself, without end —
+   which the first version did.
 4. **Driver.** A host without a container; the inverted `ignore` lists;
    fake-scene test.
-5. **Editor.** "(the world)" in the Viewport's map dropdown, and the held-map
-   preview drawing the main map dimmed inside the box.
+5. **Editor.** Nothing for the properties — `mirrors the world` is a checkbox
+   and `mirrors` a placement reference, both of which the inspector already
+   draws — but the held-map preview should draw the mirrored scene dimmed
+   inside the box, as it draws a held level.
 6. **Specs**, and the browser: a minimap on the Jetpack level, following the
    Pilot at the same scale, until zoom lands.

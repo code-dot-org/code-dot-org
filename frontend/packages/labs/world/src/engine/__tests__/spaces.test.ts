@@ -21,8 +21,9 @@ import {
   ScaleProperty,
 } from '../rules/spatial';
 import {
-  VIEWPORT,
   ViewportMapProperty,
+  ViewportMirrorsProperty,
+  ViewportMirrorsTheWorldProperty,
   ViewportScrollProperty,
   ViewportShowsMapEvent,
   ViewportShowsThroughProperty,
@@ -379,9 +380,9 @@ describe('what the driver is told', () => {
       {
         id: 'main/win',
         owner: 'win',
-        // A box holding a level of its own, not a mirror of the world
+        // A box holding a level of its own, not a mirror of any scene
         // (specs/MIRRORING_PLAN.md).
-        mirrors: false,
+        mirrors: undefined,
         // The middle of the window: a load leaves the camera there, and a map
         // no longer says to follow anything (specs/SPACE_CAMERAS_PLAN.md).
         camera: {x: 50, y: 40},
@@ -1057,7 +1058,7 @@ describe('a Viewport onto the world’s own scene', () => {
   // there is (specs/MIRRORING_PLAN.md, step 1).
   const mirror = (world: ReturnType<typeof makeWorld>) => {
     const win = placeWindow(world);
-    win.set(ViewportMapProperty, VIEWPORT.theWorld);
+    win.set(ViewportMirrorsTheWorldProperty, true);
     world.tick(0);
     return win;
   };
@@ -1097,13 +1098,19 @@ describe('a Viewport onto the world’s own scene', () => {
     expect(world.viewportSpaceOf(win)!.bounds).toEqual(world.mapBounds());
   });
 
-  it('stops mirroring when given a map of its own, and can go back', () => {
+  it('stops mirroring when told to, and shows the map it names', () => {
     const world = makeWorld();
     world.defineMap('maps/level1', LEVEL);
     const win = mirror(world);
     const space = world.viewportSpaceOf(win)!;
 
+    // The map is what it WOULD show; while it mirrors, it does not.
     win.set(ViewportMapProperty, 'maps/level1');
+    world.tick(0);
+    expect(space.mirrors).toBe(true);
+    expect([...world.actors].map(actor => actor.id)).toEqual(['win']);
+
+    win.set(ViewportMirrorsTheWorldProperty, false);
     world.tick(0);
     expect(space.mirrors).toBe(false);
     expect(space.camera!.space).toBe(space);
@@ -1114,7 +1121,7 @@ describe('a Viewport onto the world’s own scene', () => {
       'c',
     ]);
 
-    win.set(ViewportMapProperty, VIEWPORT.theWorld);
+    win.set(ViewportMirrorsTheWorldProperty, true);
     world.tick(0);
     expect(space.mirrors).toBe(true);
     expect(space.camera!.space).toBe(world.spaceOf(undefined));
@@ -1131,11 +1138,11 @@ describe('a Viewport onto the world’s own scene', () => {
     expect([...world.actors].map(actor => actor.id)).toEqual(['rc', 'win']);
   });
 
-  it('tells the driver so', () => {
+  it('tells the driver which scene, by its space’s id', () => {
     const world = makeWorld();
     const win = mirror(world);
     expect(world.spaceSnapshot()).toEqual([
-      expect.objectContaining({owner: win.id, mirrors: true}),
+      expect.objectContaining({owner: win.id, mirrors: 'main'}),
     ]);
   });
 
@@ -1159,7 +1166,7 @@ describe('the mouse, through a mirror', () => {
     const coin = world.addActor(Coin.instantiate('rc', 'actors/coin'));
     const win = placeWindow(world);
     win.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
-    win.set(ViewportMapProperty, VIEWPORT.theWorld);
+    win.set(ViewportMirrorsTheWorldProperty, true);
     world.tick(0);
     // The mirror looks somewhere the world's camera does not.
     const camera = world.viewportSpaceOf(win)!.camera!;
@@ -1194,7 +1201,7 @@ describe('the mouse, through a mirror', () => {
     const {world, coin} = mirrored();
     const above = world.addActor(Window.instantiate('win2', 'actors/window'));
     above.set(PositionProperty, new Vector(200, 160));
-    above.set(ViewportMapProperty, VIEWPORT.theWorld);
+    above.set(ViewportMirrorsTheWorldProperty, true);
     world.tick(0);
     world.viewportSpaceOf(above)!.camera!.position = new Vector(900, 900);
     world.setPointer({x: 160, y: 130}, []);
@@ -1209,5 +1216,73 @@ describe('the mouse, through a mirror', () => {
     world.setPointer({x: 160, y: 130}, []);
     // Its camera at the middle of its window, (50,40): the corner is (0,0).
     expect(world.mousePosition(a)).toEqual(new Vector(10, 10));
+  });
+});
+
+describe('a Viewport onto another Viewport’s scene', () => {
+  // WHY NOT ONLY THE WORLD: the app progression puts the game itself in a box
+  // on a menu screen, so a minimap of that game has to mirror the box, not
+  // the world, whose root holds the menu (specs/MIRRORING_PLAN.md).
+  const boxed = () => {
+    const world = makeWorld();
+    world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    const game = placeWindow(world);
+    const [held] = world.loadMapInto(game, LEVEL);
+    const minimap = world.addActor(Window.instantiate('mini', 'actors/window'));
+    minimap.set(ViewportMirrorsProperty, [game]);
+    world.tick(0);
+    return {world, game, held, minimap};
+  };
+
+  it('shows the box’s scene: its space, its actors, its bounds', () => {
+    const {world, game, held, minimap} = boxed();
+    const mine = world.viewportSpaceOf(minimap)!;
+    const theirs = world.viewportSpaceOf(game)!;
+    expect(mine.mirrorOf).toBe(theirs);
+    expect(mine.bounds).toEqual(theirs.bounds);
+    expect(
+      world.withActor(mine.camera!, () => [
+        ...inThisSpace(world, world.actors.ofType('actors/coin')),
+      ])[0],
+    ).toBe(held);
+    expect(world.spaceSnapshot()).toEqual([
+      expect.objectContaining({owner: 'win', mirrors: undefined}),
+      expect.objectContaining({owner: 'mini', mirrors: theirs.id}),
+    ]);
+  });
+
+  it('routes a pointer over the minimap into the box’s scene', () => {
+    const {world, held, minimap} = boxed();
+    minimap.set(PositionProperty, new Vector(200, 160)); // corner (150,120)
+    world.viewportSpaceOf(minimap)!.camera!.position = new Vector(500, 300);
+    world.setPointer({x: 160, y: 130}, []);
+    expect(world.mousePosition(held)).toEqual(new Vector(460, 270));
+  });
+
+  it('follows a chain to its end, and shows nothing for a cycle', () => {
+    const {world, game, minimap} = boxed();
+    const third = world.addActor(Window.instantiate('third', 'actors/window'));
+    third.set(ViewportMirrorsProperty, [minimap]);
+    world.tick(0);
+    expect(world.viewportSpaceOf(third)!.mirrorOf).toBe(
+      world.viewportSpaceOf(game),
+    );
+
+    // A cycle: the game now mirrors the third, which mirrors the minimap,
+    // which mirrors the game. None of them shows anything.
+    game.set(ViewportMirrorsProperty, [third]);
+    world.tick(0);
+    for (const each of [game, minimap, third]) {
+      expect(world.viewportSpaceOf(each)!.mirrors).toBe(false);
+    }
+  });
+
+  it('prefers the Viewport it names over the world when both are set', () => {
+    const {world, game, minimap} = boxed();
+    minimap.set(ViewportMirrorsTheWorldProperty, true);
+    world.tick(0);
+    expect(world.viewportSpaceOf(minimap)!.mirrorOf).toBe(
+      world.viewportSpaceOf(game),
+    );
   });
 });

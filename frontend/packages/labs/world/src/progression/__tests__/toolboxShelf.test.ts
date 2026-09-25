@@ -348,12 +348,20 @@ describe('a gated first lesson', () => {
   // reach (`shelfCoverage`). That is curriculum, and not a change to make from
   // the tail of a camera event; the number is raised by one here and the
   // decision is recorded (specs/SPACE_CAMERAS_PLAN.md, step 12).
+  //
+  // TWENTY-EIGHT, three commits later. `mirrors the world` and `mirrors` on
+  // the Viewport (specs/MIRRORING_PLAN.md) are two more properties on a
+  // foundation rule, which is four more ungated blocks, which is the whole
+  // mechanism this test was written to defend now more than half swallowed by
+  // one rule nobody has taught. The number is raised again and the note is
+  // not softened: the first lesson's screen says it unlocks the Actor drawer
+  // and shows eighteen blocks that are not that.
   it('is small enough to read', () => {
     const offered = offeredAt('origin/first-world');
-    expect(offered.size).toBeLessThan(25);
+    expect(offered.size).toBeLessThan(29);
   });
 
-  it('and thirteen of what it offers are a FOUNDATION rule’s own blocks', () => {
+  it('and seventeen of what it offers are a FOUNDATION rule’s own blocks', () => {
     // Which is where the number above actually comes from, and is worth
     // asserting rather than leaving as a surprise. A rule's own property
     // blocks are never gated — that is deliberate, and it is what lets a
@@ -362,13 +370,14 @@ describe('a gated first lesson', () => {
     // setters are in play in every lesson, including the one whose detail
     // pane says it unlocks the Actor drawer.
     //
-    // Nine, then eleven, then thirteen. `Has a Style` is the fourth foundation
-    // trait and cost two (specs/STYLES_PLAN.md); a Viewport's `shows through`
-    // is the second pair, and it costs two the same way
-    // (specs/SPACE_CAMERAS_PLAN.md). Nobody chose either and nothing is broken
-    // by them; the day it matters, the fix is to gate a foundation rule's
-    // blocks with the trait that elects them, which is a curriculum decision
-    // rather than a styling or a camera one.
+    // Nine, then eleven, then thirteen, then seventeen. `Has a Style` is the
+    // fourth foundation trait and cost two (specs/STYLES_PLAN.md); a Viewport's
+    // `shows through` cost two the same way (specs/SPACE_CAMERAS_PLAN.md); its
+    // `mirrors the world` and `mirrors` cost four (specs/MIRRORING_PLAN.md).
+    // Nobody chose any of them and nothing is broken by them; the day it
+    // matters, the fix is to gate a foundation rule's blocks with the trait
+    // that elects them, which is a curriculum decision rather than a styling,
+    // a camera or a mirroring one.
     //
     // THE NUMBER DRIFTING TWICE IS THE ARGUMENT FOR THAT FIX. Each property a
     // foundation rule gains is two more blocks in the first lesson, and the
@@ -377,7 +386,7 @@ describe('a gated first lesson', () => {
     const foundation = [...offeredAt('origin/first-world')].filter(type =>
       /^world_(get|set)_(Boxed|Styled|Viewport)_/.test(type),
     );
-    expect(foundation).toHaveLength(13);
+    expect(foundation).toHaveLength(17);
   });
 
   it('is not so small the lesson cannot be done', () => {

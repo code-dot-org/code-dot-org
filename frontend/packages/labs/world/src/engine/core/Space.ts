@@ -82,16 +82,22 @@ export class Space {
     return this.cameras.find(camera => camera.name === name);
   }
   /**
-   * Whether this Viewport shows the ROOT'S scene rather than a map of its own
+   * The space this Viewport SHOWS instead of one of its own — the root, or
+   * another Viewport's — or undefined for a Viewport with a scene of its own
    * (specs/MIRRORING_PLAN.md).
    *
-   * A mirror holds no loads and grows nothing: its bounds are the root's,
-   * kept in step each tick, and its cameras look at the root — `Camera.space`
-   * is the root space for each of them, so `in this space`, `map size` and
-   * everything else asked with one in hand answers about the one game there
-   * is. What stays the mirror's own is its cameras and its window.
+   * A mirror holds no loads and grows nothing: its bounds are its target's,
+   * kept in step each tick, and its cameras look at the target — `Camera.space`
+   * is the target for each of them, so `in this space`, `map size` and
+   * everything else asked with one in hand answers about the scene it shows.
+   * What stays the mirror's own is its cameras and its window.
    */
-  mirrors = false;
+  mirrorOf: Space | undefined;
+
+  /** Whether this Viewport shows some other space's scene. */
+  get mirrors(): boolean {
+    return this.mirrorOf !== undefined;
+  }
 
   /** The loads this space holds, oldest first — `unload` takes them back. */
   readonly loads: MapLoad[] = [];

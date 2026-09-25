@@ -6,9 +6,10 @@
 
 import {STYLED} from '../rules/styled';
 import {
-  VIEWPORT,
   ViewportContentProperty,
   ViewportMapProperty,
+  ViewportMirrorsProperty,
+  ViewportMirrorsTheWorldProperty,
   ViewportScrollProperty,
   ViewportShowsMapEvent,
   ViewportShowsThroughProperty,
@@ -1492,7 +1493,7 @@ export class World {
       // for the same reason the world's rest in the middle of the world's view.
       position: init.position ?? new Vector(view.x / 2, view.y / 2),
     });
-    camera.space = space.mirrors ? this.rootSpace : space;
+    camera.space = space.mirrorOf ?? space;
     camera.window = space.owner;
     camera.world = this;
     space.cameras.push(camera);
@@ -2179,8 +2180,8 @@ export class World {
       this.showHeldMap(space);
       // A mirror's bounds are the root's, which a `load map` may have grown
       // since (`growSpaceToFit`).
-      if (space.mirrors) {
-        space.bounds = this.rootSpace.bounds;
+      if (space.mirrorOf) {
+        space.bounds = space.mirrorOf.bounds;
       }
       this.showsThrough(space);
       this.settleSpace(space);
@@ -2219,13 +2220,24 @@ export class World {
     if (!owner || !owner.has(ViewportTrait)) {
       return;
     }
-    const path = String(owner.get(ViewportMapProperty) ?? '');
-    if (path === (space.shown ?? '')) {
+    // A MIRROR FIRST, and a mirror shows no map: `mirrors` and `mirrors the
+    // world` say which scene this box shows instead of one of its own, and
+    // while either does, `map` is what it would show if it stopped
+    // (specs/MIRRORING_PLAN.md).
+    const target = this.mirrorTargetOf(owner);
+    if (target) {
+      if (space.mirrorOf !== target) {
+        this.mirrorInto(space, target);
+      }
       return;
     }
-    if (path === VIEWPORT.theWorld) {
-      this.mirrorWorldIn(space);
-      this.nowShows(owner, space, path);
+    if (space.mirrors) {
+      this.stopMirroring(space);
+      // …and the map it names is shown again from scratch, as if just set.
+      space.shown = undefined;
+    }
+    const path = String(owner.get(ViewportMapProperty) ?? '');
+    if (path === (space.shown ?? '')) {
       return;
     }
     space.shown = path;
@@ -2233,19 +2245,54 @@ export class World {
   }
 
   /**
-   * Bind a Viewport to the root's scene (specs/MIRRORING_PLAN.md).
+   * The space a Viewport says it shows instead of its own, if it says one.
+   *
+   * `mirrors` — another Viewport — before `mirrors the world`, on the grounds
+   * that the more specific thing was said on purpose. A mirror of a mirror
+   * shows what the END of the chain shows, and a chain that comes back to
+   * itself shows nothing: a Viewport cannot show a scene whose definition is
+   * "whatever this Viewport shows". Nothing rather than the root, because the
+   * root is an answer and this question has none.
+   */
+  private mirrorTargetOf(viewport: Actor): Space | undefined {
+    const seen = new Set<Actor>();
+    let at: Actor | undefined = viewport;
+    while (at && !seen.has(at)) {
+      seen.add(at);
+      if (!at.has(ViewportTrait)) {
+        return undefined;
+      }
+      const named: Actor | undefined = (
+        at.get(ViewportMirrorsProperty) as readonly Actor[]
+      )[0];
+      if (named) {
+        at = named;
+        continue;
+      }
+      if (at.get(ViewportMirrorsTheWorldProperty) === true) {
+        return this.rootSpace;
+      }
+      // The end of the chain: a Viewport with a scene of its own — its own
+      // space, unless it is the one asked about, which mirrors nothing.
+      return at === viewport ? undefined : this.viewportSpaceOf(at);
+    }
+    return undefined;
+  }
+
+  /**
+   * Bind a Viewport to another scene (specs/MIRRORING_PLAN.md).
    *
    * What it held goes, since a Viewport shows one thing at a time; its
-   * cameras are pointed at the root, so a query with one in hand answers about
-   * the one game there is; and its bounds become the root's, kept in step each
-   * tick, so a camera confined to the map is confined to the world's.
+   * cameras are pointed at the target, so a query with one in hand answers
+   * about the scene it shows; and its bounds become the target's, kept in step
+   * each tick, so a camera confined to the map is confined to the target's.
    */
-  private mirrorWorldIn(space: Space): void {
+  private mirrorInto(space: Space, target: Space): void {
     this.unloadSpace(space);
-    space.mirrors = true;
-    space.bounds = this.rootSpace.bounds;
+    space.mirrorOf = target;
+    space.bounds = target.bounds;
     for (const camera of space.cameras) {
-      camera.space = this.rootSpace;
+      camera.space = target;
     }
   }
 
@@ -2254,7 +2301,7 @@ export class World {
     if (!space.mirrors) {
       return;
     }
-    space.mirrors = false;
+    space.mirrorOf = undefined;
     for (const camera of space.cameras) {
       camera.space = space;
     }
@@ -2331,7 +2378,7 @@ export class World {
   spaceSnapshot(): ReadonlyArray<{
     id: string;
     owner: string;
-    mirrors: boolean;
+    mirrors: string | undefined;
     camera: {x: number; y: number};
     view: {x: number; y: number};
     bounds: {x: number; y: number};
@@ -2353,10 +2400,10 @@ export class World {
         {
           id: space.id,
           owner: space.owner.id,
-          // Whether the box shows the root's scene rather than a scene of its
-          // own — which the driver draws through the world's display list
-          // (specs/MIRRORING_PLAN.md).
-          mirrors: space.mirrors,
+          // The space whose scene the box shows instead of its own, by id —
+          // the root's, or another Viewport's — which the driver draws through
+          // that space's display list (specs/MIRRORING_PLAN.md).
+          mirrors: space.mirrorOf?.id,
           camera: {x: space.camera.position.x, y: space.camera.position.y},
           view: {x: view.x, y: view.y},
           bounds: {x: space.bounds.x, y: space.bounds.y},
@@ -3629,18 +3676,18 @@ export class World {
       return this.throughWindow(subject.window, subject);
     }
     const space = this.spaceOf(subject);
+    // A SCENE TWO CAMERAS MAY BE LOOKING AT: its own — the world's over the
+    // whole view, or a box's over its rectangle — and any mirror's, over the
+    // mirror's rectangle. A pointer inside a mirror's rectangle is a pointer
+    // on that scene THROUGH the mirror, so an actor under it — which is what
+    // hit-testing asks, one candidate at a time in hand — is found by the
+    // mirror's camera and not by the scene's own. The topmost mirror wins
+    // where two overlap, which is the last placed, as the driver draws them.
+    const mirror = this.mirrorUnderPointer(space);
+    if (mirror) {
+      return this.throughWindow(mirror.owner!, mirror.camera!);
+    }
     if (!space.owner || !space.camera) {
-      // THE ROOT, which two cameras may now be looking at: the world's, over
-      // the whole view, and any mirror's, over its own rectangle. A pointer
-      // inside a mirror's rectangle is a pointer on the world THROUGH that
-      // mirror, so a root actor under it — which is what hit-testing asks,
-      // one candidate at a time in hand — is found by the mirror's camera and
-      // not by the world's. The topmost mirror wins where two overlap, which is
-      // the last placed, as the driver draws them.
-      const mirror = this.mirrorUnderPointer();
-      if (mirror) {
-        return this.throughWindow(mirror.owner!, mirror.camera!);
-      }
       return this.rootPointer();
     }
     // Through the Viewport: where the pointer is in the Viewport's own
@@ -3678,14 +3725,6 @@ export class World {
     );
   }
 
-  /**
-   * The topmost mirror whose rectangle the pointer is inside, if any.
-   *
-   * Measured in the root, through the world's own camera — a mirror is a
-   * placement in the root like any other. Only a MIRROR: a box holding a
-   * level of its own has actors of its own, and a root actor is never under
-   * it in the sense that matters here.
-   */
   /** Where the pointer is in the root, through the world's own camera. */
   private rootPointer(): Vector {
     const camera = this.activeCamera();
@@ -3696,7 +3735,16 @@ export class World {
     );
   }
 
-  private mirrorUnderPointer(): Space | undefined {
+  /**
+   * The topmost mirror OF `target` whose rectangle the pointer is inside.
+   *
+   * Measured in the root, through the world's own camera — a mirror is a
+   * placement in the root like any other (one inside another Viewport's space
+   * is nobody's case yet). Only a mirror, and only of this scene: a box
+   * holding a level of its own has actors of its own, and an actor elsewhere
+   * is never under it in the sense that matters here.
+   */
+  private mirrorUnderPointer(target: Space): Space | undefined {
     const position = this.positionalProperty(SPATIAL.position);
     if (!position) {
       return undefined;
@@ -3704,7 +3752,7 @@ export class World {
     const pointer = this.rootPointer();
     for (let index = this.viewportSpaces.length - 1; index >= 0; index -= 1) {
       const space = this.viewportSpaces[index];
-      if (!space.mirrors || !space.owner || !space.camera) {
+      if (space.mirrorOf !== target || !space.owner || !space.camera) {
         continue;
       }
       const at = space.owner.get(position) as Vector;
