@@ -1,0 +1,44 @@
+.fieldArea {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+// Duplicated class names to ensure precedence over MUI.
+.descriptionText.descriptionText {
+  display: block;
+  color: var(--text-neutral-tertiary);
+  margin-bottom: 8px;
+}
+
+.warningText.warningText {
+  display: block;
+  color: var(--text-error-primary);
+  margin-bottom: 8px;
+}
+
+.datasetGroup {
+  margin-bottom: 8px;
+}
+
+.booleanField + .booleanField {
+  margin-top: 8px;
+}
+
+.legend {
+  margin-bottom: 4px;
+}
+
+.datasetGroup + .datasetGroup {
+  margin-top: 16px;
+}
+
+.datasetList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 16px;
+}
