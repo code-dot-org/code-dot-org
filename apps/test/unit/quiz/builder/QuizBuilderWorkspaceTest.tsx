@@ -91,7 +91,9 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    expect(screen.getByText('2 questions')).toBeInTheDocument();
+    // Once for the workspace-wide total, once for the page 1 header - both
+    // questions default to page 1.
+    expect(screen.getAllByText('2 questions')).toHaveLength(2);
     expect(
       screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
@@ -116,17 +118,50 @@ describe('QuizBuilderWorkspace', () => {
     });
     renderWorkspace({questions: [question()], createQuestion});
 
-    fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Create question'}));
     await screen.findByRole('tab', {name: 'Question'});
   });
 
-  it('calls createQuestion when the create button is clicked', () => {
+  it('creates a page 1 question from the empty state', () => {
     const createQuestion = jest.fn();
     renderWorkspace({createQuestion});
 
     fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
 
-    expect(createQuestion).toHaveBeenCalledTimes(1);
+    expect(createQuestion).toHaveBeenCalledWith(1);
+  });
+
+  it("creates a question on the page whose row's button was clicked", () => {
+    const createQuestion = jest.fn();
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+      createQuestion,
+    });
+
+    const createButtons = screen.getAllByRole('button', {
+      name: 'Create question',
+    });
+    expect(createButtons).toHaveLength(2);
+
+    fireEvent.click(createButtons[1]);
+    expect(createQuestion).toHaveBeenCalledWith(2);
+  });
+
+  it('adds a page one past the last existing page', () => {
+    const createQuestion = jest.fn();
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 3, questionName: 'MVC frameworks'}),
+      ],
+      createQuestion,
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: '+ Add page'}));
+    expect(createQuestion).toHaveBeenCalledWith(4);
   });
 
   it('disables the create button while a create is in flight', () => {
@@ -134,6 +169,14 @@ describe('QuizBuilderWorkspace', () => {
     expect(
       screen.getByRole('button', {name: '+ Create question'})
     ).toBeDisabled();
+  });
+
+  it('disables the per-page create and add-page buttons while a create is in flight', () => {
+    renderWorkspace({questions: [question()], isCreating: true});
+    expect(
+      screen.getByRole('button', {name: 'Create question'})
+    ).toBeDisabled();
+    expect(screen.getByRole('button', {name: '+ Add page'})).toBeDisabled();
   });
 
   it('renders a server error', () => {
@@ -182,6 +225,29 @@ describe('QuizBuilderWorkspace', () => {
 
     fireEvent.click(screen.getAllByRole('button', {name: 'Edit question'})[1]);
     expect(screen.queryByRole('alert')).toBeNull();
+  });
+
+  it('groups questions under their page, in ascending page order', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, questionName: 'Page two question', page: 2}),
+        question({id: 2, questionName: 'Page one question', page: 1}),
+      ],
+    });
+
+    const pageLabels = screen.getAllByText(/^Page \d$/);
+    expect(pageLabels.map(label => label.textContent)).toEqual([
+      'Page 1',
+      'Page 2',
+    ]);
+  });
+
+  it('treats a null page the same as page 1', () => {
+    renderWorkspace({
+      questions: [question({id: 1, page: null})],
+    });
+
+    expect(screen.getByText('Page 1')).toBeInTheDocument();
   });
 
   it('collapses the previously expanded question when another is opened', () => {

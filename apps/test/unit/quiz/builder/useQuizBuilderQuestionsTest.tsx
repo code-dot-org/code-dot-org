@@ -59,7 +59,7 @@ describe('useQuizBuilderQuestions', () => {
     await waitForNextUpdate();
 
     await act(async () => {
-      await result.current.createQuestion();
+      await result.current.createQuestion(1);
     });
 
     expect(postSpy).toHaveBeenCalledWith(
@@ -72,11 +72,29 @@ describe('useQuizBuilderQuestions', () => {
           {id: '1', text: 'Option B'},
         ],
         correctChoiceId: '0',
+        page: 1,
       }),
       true,
       {'Content-Type': 'application/json'}
     );
     expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
+  });
+
+  it('posts the given page number', async () => {
+    const created = {...QUESTION, id: 99, page: 2};
+    postSpy.mockResolvedValue({json: async () => created} as Response);
+
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    await act(async () => {
+      await result.current.createQuestion(2);
+    });
+
+    const [, body] = postSpy.mock.calls[0];
+    expect(JSON.parse(body as string)).toMatchObject({page: 2});
   });
 
   it('resolves with the created question id', async () => {
@@ -90,7 +108,7 @@ describe('useQuizBuilderQuestions', () => {
 
     let createdId: number | undefined;
     await act(async () => {
-      createdId = await result.current.createQuestion();
+      createdId = await result.current.createQuestion(1);
     });
 
     expect(createdId).toBe(99);
@@ -109,7 +127,7 @@ describe('useQuizBuilderQuestions', () => {
     await waitForNextUpdate();
 
     await act(async () => {
-      await result.current.createQuestion();
+      await result.current.createQuestion(1);
     });
 
     expect(result.current.error).toBe('a specific reason');

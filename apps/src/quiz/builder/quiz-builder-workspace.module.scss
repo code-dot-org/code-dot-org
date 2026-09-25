@@ -15,6 +15,29 @@
   gap: 4px;
 }
 
+.pages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-neutral-tertiary);
+}
+
+.pageLabel {
+  color: var(--text-neutral-secondary);
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -25,5 +48,9 @@
 }
 
 .createButton {
+  align-self: flex-start;
+}
+
+.addPageButton {
   align-self: flex-start;
 }
