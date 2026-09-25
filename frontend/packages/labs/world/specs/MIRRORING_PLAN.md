@@ -1,6 +1,9 @@
 # A Viewport onto the world's own scene
 
-STATUS: PROPOSED. Nothing here is built. specs/VIEWPORT_PLAN.md lists
+STATUS: BUILDING. Step 1 is in — a Viewport whose `map` says `world` is bound
+to the root: no copy, its cameras look at the root, its bounds follow the
+root's, and the driver is told `mirrors`. Nothing is visible yet: the driver
+still draws a mirror as an empty box until step 4. specs/VIEWPORT_PLAN.md lists
 "mirroring" as not built; this is what it would take, written after a Viewport
 was given cameras of its own (specs/SPACE_CAMERAS_PLAN.md) and after the first
 person to build one asked for it: a minimap, a second shot of the same level,
@@ -44,12 +47,23 @@ its rectangle.
   the root for it. The two cases want a name — `mirrors: true` on the
   Viewport's binding — so that `unloadViewport` unloads nothing (there is
   nothing of its own to unload) and `growSpaceToFit` grows nothing.
-- **Its cameras are root cameras.** `defineCamera({viewport})` for a mirror
-  adds to the world's own `cameraList`, scoped by the Viewport's id as a space
-  camera is now (`win:wide`), so the world's `main` and a mirror's `wide` are
-  both in the one list the camera rules walk. `Space.cameraNamed` and the
-  `shows through` property work unchanged; what a mirror shows through is
-  read from its own binding rather than from a space it does not have.
+- **Its cameras stay its own, and look at the root.** BUILT THIS WAY rather
+  than as first written. The draft moved a mirror's cameras into the world's
+  `cameraList`; what was built keeps the Viewport's own `Space` object, flagged
+  `mirrors`, with its cameras in that space's list as before — and sets each
+  camera's `space` to the ROOT. `CameraCollection` already walks every space's
+  cameras, so the camera rules reach them unchanged; `cameraNamed` and `shows
+through` are untouched; and every query with a mirror's camera in hand
+  (`in this space`, `map size`) answers about the root because `spaceOf` reads
+  `Camera.space`. Less machinery moved, and the `mirrors` flag is one place to
+  ask rather than a property of where the cameras happen to be listed.
+
+  ONE THING THIS SPLIT: `Camera.window`. A mirror's camera looks at the root but
+  is seen through the Viewport's rectangle, so `view size` with it in hand
+  must measure the box and not the world's view — which `Confined to the Map`
+  depends on. A camera now knows its window as well as its space; for a box
+  with a level of its own the two agree.
+
 - **`mousePosition` keys on the Viewport, not on the space.** Today a click
   inside a Viewport is mapped through "the space's camera". Two cameras will
   now share the root space, so the mapping has to ask WHICH Viewport the
@@ -91,13 +105,15 @@ camera draws is the root scene and nothing else.
 
 ## Order of work
 
-1. **Engine: a Viewport bound to the root.** `showHeldMap` recognises the
-   world's path; `viewportSpaceOf` answers the root; unload and grow are
-   no-ops for it. Tests: a mirror sees the root's actors; a level in a box
-   still gets a copy.
-2. **Engine: a mirror's cameras in the world's list.** `defineCamera` for a
-   mirror goes to `cameraList`, scoped; `shows through` resolves against it.
-   Tests: the world's `main` and a mirror's `wide` coexist and are told apart.
+1. **Engine: a Viewport bound to the root. BUILT.** `showHeldMap` recognises
+   `VIEWPORT.theWorld` — a word, since the engine does not know the world's
+   module path and must not have to — and binds rather than loads; a level
+   given afterwards unbinds; unload leaves the root alone; the bounds follow
+   the root's each tick. Tests: a mirror holds no copy and sees the root's
+   actors through its camera; measures the map by the root and the view by its
+   own window; a level in a box still gets a copy.
+2. **Engine: a mirror's cameras.** FOLDED INTO 1 — nothing moved, see "Its
+   cameras stay its own" above.
 3. **Engine: the pointer through the right camera.** `mousePosition` keys on
    the Viewport under the pointer. Tests: a click in a mirror lands where its
    camera says, not where the world's does.

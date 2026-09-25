@@ -151,6 +151,18 @@ export class Camera {
    */
   space: Space | undefined;
 
+  /**
+   * The Viewport whose rectangle this camera draws into, for a camera a
+   * Viewport owns.
+   *
+   * Distinct from {@link space} once a Viewport can mirror the world
+   * (specs/MIRRORING_PLAN.md): a mirror's camera looks at the ROOT — so actor
+   * queries with it in hand answer about the root — but is seen through the
+   * Viewport's window, which is what `view size` and `Confined to the Map` have
+   * to measure by. For a Viewport with a space of its own the two agree.
+   */
+  window: Actor | undefined;
+
   readonly id: string;
   readonly name: string;
   /** Mutable: moving the camera is the whole point of having one. */

@@ -28,6 +28,13 @@ export const VIEWPORT = {
   content: 'content',
   showsThrough: 'showsThrough',
   showsMap: 'showsMap',
+  /**
+   * What `map` holds when the Viewport shows the WORLD'S OWN SCENE rather than
+   * a map of its own (specs/MIRRORING_PLAN.md). A word and not a path, because
+   * the engine does not know the world's module path and must not have to: a
+   * mirror is a Viewport bound to the root space, whatever the world is called.
+   */
+  theWorld: 'world',
 } as const;
 
 const rule = new RuleBuilder({

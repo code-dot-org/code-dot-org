@@ -21,6 +21,7 @@ import {
   ScaleProperty,
 } from '../rules/spatial';
 import {
+  VIEWPORT,
   ViewportMapProperty,
   ViewportScrollProperty,
   ViewportShowsMapEvent,
@@ -378,6 +379,9 @@ describe('what the driver is told', () => {
       {
         id: 'main/win',
         owner: 'win',
+        // A box holding a level of its own, not a mirror of the world
+        // (specs/MIRRORING_PLAN.md).
+        mirrors: false,
         // The middle of the window: a load leaves the camera there, and a map
         // no longer says to follow anything (specs/SPACE_CAMERAS_PLAN.md).
         camera: {x: 50, y: 40},
@@ -1044,5 +1048,103 @@ describe('when a Viewport shows a map', () => {
     expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
       held.get(PositionProperty),
     );
+  });
+});
+
+describe('a Viewport onto the world’s own scene', () => {
+  // A MIRROR: the Viewport's `map` names the world, and it is bound to the
+  // root space rather than loading a copy — so a minimap shows the one game
+  // there is (specs/MIRRORING_PLAN.md, step 1).
+  const mirror = (world: ReturnType<typeof makeWorld>) => {
+    const win = placeWindow(world);
+    win.set(ViewportMapProperty, VIEWPORT.theWorld);
+    world.tick(0);
+    return win;
+  };
+
+  it('holds no copy, and sees the root’s actors through its camera', () => {
+    const world = makeWorld();
+    const rootCoin = world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    const win = mirror(world);
+    const space = world.viewportSpaceOf(win)!;
+
+    expect(space.mirrors).toBe(true);
+    expect(space.loads).toEqual([]);
+    expect([...world.actors].map(actor => actor.id)).toEqual(['rc', 'win']);
+    // With its camera in hand, "this space" is the root.
+    expect(
+      world.withActor(space.camera!, () => [
+        ...inThisSpace(world, world.actors.ofType('actors/coin')),
+      ]),
+    ).toEqual([rootCoin]);
+  });
+
+  it('measures the map by the root and the view by its own window', () => {
+    const world = makeWorld();
+    world.setViewSize(26, 16);
+    const win = mirror(world);
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    expect(world.mapBounds(camera)).toEqual(world.mapBounds());
+    expect(world.viewSize(camera)).toEqual(new Vector(100, 80));
+    expect(world.viewSize(camera)).not.toEqual(world.viewSize());
+  });
+
+  it('keeps its bounds the root’s as the root grows', () => {
+    const world = makeWorld();
+    const win = mirror(world);
+    world.loadMap(LEVEL);
+    world.tick(0);
+    expect(world.viewportSpaceOf(win)!.bounds).toEqual(world.mapBounds());
+  });
+
+  it('stops mirroring when given a map of its own, and can go back', () => {
+    const world = makeWorld();
+    world.defineMap('maps/level1', LEVEL);
+    const win = mirror(world);
+    const space = world.viewportSpaceOf(win)!;
+
+    win.set(ViewportMapProperty, 'maps/level1');
+    world.tick(0);
+    expect(space.mirrors).toBe(false);
+    expect(space.camera!.space).toBe(space);
+    expect([...world.actors].map(actor => actor.id)).toEqual([
+      'win',
+      'a',
+      'b',
+      'c',
+    ]);
+
+    win.set(ViewportMapProperty, VIEWPORT.theWorld);
+    world.tick(0);
+    expect(space.mirrors).toBe(true);
+    expect(space.camera!.space).toBe(world.spaceOf(undefined));
+    // The copy went with the level.
+    expect([...world.actors].map(actor => actor.id)).toEqual(['win']);
+  });
+
+  it('leaves the root alone when unloaded', () => {
+    const world = makeWorld();
+    world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    const win = mirror(world);
+    world.unloadViewport(win);
+    expect(world.viewportSpaceOf(win)!.mirrors).toBe(false);
+    expect([...world.actors].map(actor => actor.id)).toEqual(['rc', 'win']);
+  });
+
+  it('tells the driver so', () => {
+    const world = makeWorld();
+    const win = mirror(world);
+    expect(world.spaceSnapshot()).toEqual([
+      expect.objectContaining({owner: win.id, mirrors: true}),
+    ]);
+  });
+
+  it('is still a box for a level, which still gets a copy', () => {
+    const world = makeWorld();
+    world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    const win = placeWindow(world);
+    world.loadMapInto(win, LEVEL);
+    expect(world.viewportSpaceOf(win)!.mirrors).toBe(false);
+    expect([...world.actors]).toHaveLength(5);
   });
 });

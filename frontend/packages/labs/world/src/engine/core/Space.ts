@@ -81,6 +81,18 @@ export class Space {
   cameraNamed(name: string): Camera | undefined {
     return this.cameras.find(camera => camera.name === name);
   }
+  /**
+   * Whether this Viewport shows the ROOT'S scene rather than a map of its own
+   * (specs/MIRRORING_PLAN.md).
+   *
+   * A mirror holds no loads and grows nothing: its bounds are the root's,
+   * kept in step each tick, and its cameras look at the root — `Camera.space`
+   * is the root space for each of them, so `in this space`, `map size` and
+   * everything else asked with one in hand answers about the one game there
+   * is. What stays the mirror's own is its cameras and its window.
+   */
+  mirrors = false;
+
   /** The loads this space holds, oldest first — `unload` takes them back. */
   readonly loads: MapLoad[] = [];
   /**
