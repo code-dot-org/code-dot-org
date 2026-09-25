@@ -23,6 +23,7 @@ import {
 import {
   ViewportMapProperty,
   ViewportScrollProperty,
+  ViewportShowsMapEvent,
   ViewportShowsThroughProperty,
   ViewportTrait,
 } from '../rules/viewport';
@@ -965,5 +966,83 @@ describe('following, from a camera in a Viewport', () => {
 
     world.tick(0);
     expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(before);
+  });
+});
+
+describe('when a Viewport shows a map', () => {
+  // THE MOMENT ITS CAMERA CAN BE AIMED. `set actor to follow` in `on create`
+  // runs before the map has loaded and stores a snapshot, so it freezes to the
+  // root's Pilots or to nobody. This is the hat for the moment the map lands
+  // (specs/SPACE_CAMERAS_PLAN.md, step 12).
+
+  it('is raised for a load by value, once the actors are there', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    const heard: Array<{value: unknown; coins: number}> = [];
+    win.on(ViewportShowsMapEvent, (w, actor, value) => {
+      const camera = w.viewportSpaceOf(actor)!.camera!;
+      heard.push({
+        value,
+        // Asked with the Viewport's camera in hand, as a camera step would: the
+        // map's actors are in its space by the time this runs.
+        coins: w.withActor(
+          camera,
+          () => [...inThisSpace(w, w.actors.ofType('actors/coin'))].length,
+        ),
+      });
+    });
+
+    world.loadMapInto(win, LEVEL);
+    expect(heard).toEqual([]);
+    world.tick(0);
+    expect(heard).toEqual([{value: '', coins: 3}]);
+  });
+
+  it('is raised for a load by path, carrying the path', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.defineMap('maps/level1', LEVEL);
+    const values: unknown[] = [];
+    win.on(ViewportShowsMapEvent, (_w, _actor, value) => values.push(value));
+
+    win.set(ViewportMapProperty, 'maps/level1');
+    world.tick(0);
+    world.tick(0);
+    expect(values).toEqual(['maps/level1']);
+  });
+
+  it('is not raised for an unload, nor for a path that names no map', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    const values: unknown[] = [];
+    win.on(ViewportShowsMapEvent, (_w, _actor, value) => values.push(value));
+
+    world.loadMapInto(win, LEVEL);
+    world.tick(0);
+    world.unloadViewport(win);
+    world.tick(0);
+    world.loadMapInto(win, 'maps/missing');
+    world.tick(0);
+    expect(values).toEqual(['']);
+  });
+
+  it('lets a handler aim the camera at what the map brought', () => {
+    // The Jetpack setup: the same level in the main world and in a Viewport,
+    // and the Viewport told to follow a coin. In `on create` the snapshot is
+    // the root's coin; here it is the Viewport's own.
+    const world = makeWorld();
+    const rootCoin = world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    rootCoin.set(PositionProperty, new Vector(11, 12));
+    const win = placeWindow(world);
+    world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
+    win.set(ViewportShowsThroughProperty, 'chase');
+    win.on(ViewportShowsMapEvent, () => undefined);
+
+    world.loadMapInto(win, LEVEL);
+    world.tick(0);
+    const held = [...world.actors].find(actor => actor.id === 'a')!;
+    expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
+      held.get(PositionProperty),
+    );
   });
 });

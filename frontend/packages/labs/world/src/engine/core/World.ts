@@ -9,6 +9,7 @@ import {
   ViewportContentProperty,
   ViewportMapProperty,
   ViewportScrollProperty,
+  ViewportShowsMapEvent,
   ViewportShowsThroughProperty,
   ViewportTrait,
 } from '../rules/viewport';
@@ -2112,6 +2113,17 @@ export class World {
     space.camera!.position = new Vector(view.x / 2, view.y / 2);
     const added = this.loadInto(space, held, layer);
     this.settleSpace(space);
+    // …and the Viewport hears that its map has landed, with the path as the
+    // value when there is one. AFTER the load and queued, so a handler that
+    // aims the Viewport's camera finds the map's actors already there — which
+    // an `on create` handler does not (`ViewportShowsMapEvent`).
+    if (viewport.has(ViewportTrait)) {
+      this.emit(
+        ViewportShowsMapEvent,
+        viewport,
+        typeof map === 'string' ? map : (space.shown ?? ''),
+      );
+    }
     return added;
   }
 

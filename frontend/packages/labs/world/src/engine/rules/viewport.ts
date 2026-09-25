@@ -27,6 +27,7 @@ export const VIEWPORT = {
   scroll: 'scroll',
   content: 'content',
   showsThrough: 'showsThrough',
+  showsMap: 'showsMap',
 } as const;
 
 const rule = new RuleBuilder({
@@ -111,5 +112,26 @@ export const ViewportShowsThroughProperty = ViewportTrait.addProperty(
   '',
   {name: 'shows through'},
 );
+
+/**
+ * `when ⟨this Viewport⟩ shows a map` — raised once the map has landed, with the
+ * map's path as the event value.
+ *
+ * THE MOMENT A VIEWPORT'S CAMERA CAN BE AIMED. `set actor to follow` in a
+ * Viewport's `on create` runs before its map has loaded, and `any ⟨Pilot⟩` is a
+ * snapshot at the moment of the set, so it freezes to the root's Pilots or to
+ * nobody. Making the stored value lazy was rejected as a surprise in how values
+ * work; this is the other answer, the same moment `showHeldMap` and
+ * `loadMapInto` already know (specs/SPACE_CAMERAS_PLAN.md, step 12).
+ *
+ * Raised for a load by path and a load by value alike, after the map's actors
+ * exist in the space, and queued like every event — so a handler runs on the
+ * tick the map landed, with the actors there to find. Not raised for an unload,
+ * and not raised when the path names no map: a Viewport showing nothing has not
+ * been shown a map.
+ */
+export const ViewportShowsMapEvent = rule.addEvent(VIEWPORT.showsMap, {
+  name: 'shows a map',
+});
 
 export const ViewportRule = rule.build();

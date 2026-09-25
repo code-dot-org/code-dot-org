@@ -364,8 +364,26 @@ for ⟨actor⟩`, a socket.**
     shown — the same moment `showHeldMap` already knows — is where that `set`
     belongs. Either that, or a kind's `is created` heard by OTHER actors, which
     would let the Viewport's script say "when any Pilot is created, follow it";
-    both were proposed and neither is built. The plan deferred this event before
-    as "worth having on its own merits"; it is now needed.
+    both were proposed. BUILT as the first: `when ⟨this Viewport⟩ shows a map`,
+    raised by `loadMapInto` after the map's actors exist in the space, for a
+    load by path and by value alike, with the path as the event value. Queued
+    like every event, so the handler runs on the tick the map landed and a
+    `set actor to follow` there snapshots the Viewport's own Pilot. The kind's
+    `is created` heard by other actors is still not built; it would be the
+    general answer and this is the specific one.
+
+    **AND A DECISION IT FORCED.** The hat is the twenty-fourth block in a gated
+    first lesson whose detail pane says it unlocks the Actor drawer, and
+    fourteen of the twenty-four are a foundation rule's own — eight the
+    Viewport's. `toolboxShelf.generatedElsewhere` exempts every rule's
+    generated blocks from gating except Space's and Appearance's, the pair that
+    were built in when it was written; Viewport, Boxed and Styled are built in
+    the same way and were never added. Extending the exemption to every
+    `BUILTIN_RULES` entry is one line and the right line — and it makes those
+    blocks earned, so a tile has to grant each of them or `shelfCoverage` will
+    say nobody can reach it. Which tile teaches `set width`, and which a
+    Viewport's map, is curriculum. Left for that decision, with the threshold
+    raised by one and the reason written where the number is.
 
 Steps 1 to 4 are invisible; 5 is where it starts working; 6 is where the lab
 gets smaller; 8 is where an author can reach it AT ALL, in blocks; 9 is where
