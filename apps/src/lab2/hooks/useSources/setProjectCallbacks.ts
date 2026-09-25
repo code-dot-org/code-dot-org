@@ -7,11 +7,13 @@ import {
 import {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {setProjectTooLarge} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {Channel} from '@cdo/apps/lab2/types';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 export default function setProjectCallbacks(
   projectManager: ProjectManager,
-  dispatch: AppDispatch
+  dispatch: AppDispatch,
+  onChannelSaved: (channel: Channel) => void
 ) {
   projectManager.addSaveStartListener(() =>
     dispatch(setProjectUpdatedSaving())
@@ -19,6 +21,7 @@ export default function setProjectCallbacks(
   projectManager.addSaveSuccessListener(channel => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
     dispatch(setChannel(channel));
+    onChannelSaved(channel);
     // If we had a successful save, we know the project is not too large.
     dispatch(setProjectTooLarge(false));
   });
@@ -26,6 +29,7 @@ export default function setProjectCallbacks(
     if (channel) {
       dispatch(setProjectUpdatedAt(channel.updatedAt));
       dispatch(setChannel(channel));
+      onChannelSaved(channel);
     } else {
       dispatch(setProjectUpdatedSaved());
     }
