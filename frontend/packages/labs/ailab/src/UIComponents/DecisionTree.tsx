@@ -41,11 +41,6 @@ function formatNumber(value: number): string {
   return String(Number(value.toFixed(2)));
 }
 
-// Rounding a threshold can put a row on the wrong side of it.
-function formatThreshold(value: number): string {
-  return String(Number(value.toPrecision(12)));
-}
-
 function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   const startX = parent.x + TREE_NODE_WIDTH / 2;
   const startY = parent.y + TREE_NODE_HEIGHT;
@@ -120,7 +115,8 @@ const DecisionTree = () => {
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
       const sign = branch.kind === 'lessThan' ? '<' : '≥';
-      return `${sign} ${formatThreshold(branch.threshold)}`;
+      // Unrounded: any rounding can put a row on the wrong side of it.
+      return `${sign} ${branch.threshold}`;
     }
     const values = branch.values.map(valueText);
     if (values.length < 2) {

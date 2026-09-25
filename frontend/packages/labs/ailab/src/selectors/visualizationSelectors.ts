@@ -252,7 +252,7 @@ export const getDisplayTree = createSelector(
     featureNumberKey: Record<string, Record<string, number>>,
     labelColumn: string | undefined,
   ): DisplayTreeNode | undefined => {
-    if (!trainedModel || !labelColumn) {
+    if (!trainedModel || !labelColumn || trainerFamily !== 'decisionTree') {
       return undefined;
     }
     return buildDisplayTree(trainedModel.toJSON() as SerializedTree, {
