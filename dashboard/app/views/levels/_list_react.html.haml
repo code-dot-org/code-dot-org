@@ -1,0 +1,10 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levelbuilder.js')}
+  %script{src: webpack_asset_path('js/levels/_list_react.js')}
+
+%h1 Levels
+
+#levels-list-container
+
+- content_for :body_scripts do
+  %meta{name: 'csrf-token', content: form_authenticity_token}
