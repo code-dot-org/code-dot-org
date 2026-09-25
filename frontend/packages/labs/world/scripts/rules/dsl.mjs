@@ -163,6 +163,12 @@ export const anyOf = list => ({
   inputs: {LIST: value(list)},
 });
 
+/** `<list> in this space` — only those in the space of the thing in hand. */
+export const inThisSpace = list => ({
+  type: 'world_in_this_space',
+  inputs: {SOURCE: value(list)},
+});
+
 /** `how many actors in <list>`. */
 export const countOf = list => ({
   type: 'world_count_actors',

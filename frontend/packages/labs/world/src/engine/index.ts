@@ -44,6 +44,7 @@ export {
   extreme,
   filtered,
   firstOf,
+  inThisSpace,
   firstWhere,
   isSameActor,
   LazyActors,

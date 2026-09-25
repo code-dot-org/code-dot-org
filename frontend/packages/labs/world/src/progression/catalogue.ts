@@ -3144,6 +3144,9 @@ export const TILES: readonly Tile[] = [
       // one back out.
       {kind: 'block', type: 'world_count_actors'},
       {kind: 'block', type: 'world_first_actor'},
+      // …and narrowing a crowd to the space in hand, which is what a camera
+      // follows and what is actually near (specs/SPACE_CAMERAS_PLAN.md).
+      {kind: 'block', type: 'world_in_this_space'},
       // `repeat ⟨n⟩ times`, which is the loop this lesson is: `memory/many`
       // walks a list that exists, and this makes a hundred that do not. A
       // GRANT rather than an offer, for the reason `story/reveal` grants

@@ -253,6 +253,17 @@ describe('the module a camera rule generates', () => {
   });
 });
 
+describe('Camera Follow — only what is in its own space', () => {
+  it('reads its target through `in this space`, the guard included', () => {
+    // A Viewport's camera set to follow `any ⟨Pilot⟩` took the Pilot in the
+    // root and tracked a place that means nothing where it looks. Every read of
+    // the target is narrowed now — the guard and both axes — so a camera with
+    // nothing of its own to follow stays put (specs/SPACE_CAMERAS_PLAN.md).
+    const reads = cameraFollowRule.split('"world_in_this_space"').length - 1;
+    expect(reads).toBe(3);
+  });
+});
+
 describe('Camera Ease — shaping the goal, not setting it', () => {
   it('runs in the moment between aiming and confining', () => {
     expect(ease().steps).toEqual([

@@ -594,6 +594,18 @@ describe('domain block generators', () => {
     expect(code).toBe('world.setActiveCamera("main");\n');
   });
 
+  it('world_in_this_space narrows a source to the space in hand', () => {
+    // `any ⟨Pilot⟩` is every Pilot in every space; this is the ones where the
+    // thing in hand is (specs/SPACE_CAMERAS_PLAN.md). The world's own actors
+    // when nothing is plugged in, as `first actor in` reads its source.
+    const code = generatorFor('world_in_this_space')(
+      {getInputTargetBlock: () => null} as never,
+      {valueToCode: () => ''} as never,
+      {} as never,
+    ) as [string, number];
+    expect(code[0]).toBe('WorldLab.inThisSpace(world, world.actors)');
+  });
+
   it('world_define_camera declares one by its own block id', () => {
     // By block id, like a layer and a world's own actors — renaming the camera
     // then breaks nothing that names it.

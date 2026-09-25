@@ -17,11 +17,15 @@ import {
   filtered,
   firstOf,
   firstWhere,
+  inThisSpace,
   one,
   ordered,
   pushed,
   taken,
 } from '..';
+import {Vector} from '../core/Vector';
+import {IntrinsicSizeProperty} from '../rules/spatial';
+import {ViewportTrait} from '../rules/viewport';
 
 const world = () => new WorldBuilder({id: 'w', name: 'W'}).instantiate();
 const actor = (id: string, type?: string) =>
@@ -373,5 +377,60 @@ describe('firstOf', () => {
     );
 
     expect(tested).toEqual(['a']);
+  });
+});
+
+describe('`⟨…⟩ in this space`', () => {
+  // The spatial complement `any ⟨Kind⟩` never had: every actor of a kind is in
+  // every space, and a camera in a Viewport that followed the first of them
+  // followed the one in the root (specs/SPACE_CAMERAS_PLAN.md).
+  const Window = new ActorBuilder({id: 'window', name: 'Window'})
+    .useTraits([ViewportTrait])
+    .set(IntrinsicSizeProperty, new Vector(100, 80));
+  const Coin = new ActorBuilder({id: 'coin', name: 'Coin'});
+  const build = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+    world.define('actors/coin', Coin);
+    world.define('actors/window', Window);
+    const rootCoin = world.addActor(Coin.instantiate('root', 'actors/coin'));
+    const win = world.addActor(Window.instantiate('win', 'actors/window'));
+    const [held] = world.loadMapInto(win, {
+      actors: [{type: 'actors/coin', id: 'held'}],
+    });
+    return {world, rootCoin, win, held};
+  };
+  const coins = (world: ReturnType<typeof build>['world']) =>
+    world.actors.ofType('actors/coin');
+
+  it('keeps the actors in the space of the thing in hand, and no others', () => {
+    const {world, rootCoin, win, held} = build();
+    // Nothing in hand is the root.
+    expect([...inThisSpace(world, coins(world))]).toEqual([rootCoin]);
+    // A Viewport's camera in hand is the Viewport's space.
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    expect(
+      world.withActor(camera, () => [...inThisSpace(world, coins(world))]),
+    ).toEqual([held]);
+  });
+
+  it('reads the space BEFORE the walk, not per candidate', () => {
+    // `filtered` puts each candidate in hand while its test runs. A test that
+    // asked which space is in hand INSIDE would see the candidate's own and
+    // accept everything — which is the bug this pins.
+    const {world, win} = build();
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    const kept = world.withActor(camera, () => [
+      ...inThisSpace(world, coins(world)),
+    ]);
+    expect(kept.map(actor => actor.id)).toEqual(['held']);
+  });
+
+  it('is empty, not the first anyway, when nothing is in this space', () => {
+    const {world, win} = build();
+    world.unloadViewport(win);
+    const camera = world.viewportSpaceOf(win)!.camera!;
+    expect(
+      world.withActor(camera, () => [...inThisSpace(world, coins(world))]),
+    ).toEqual([]);
   });
 });

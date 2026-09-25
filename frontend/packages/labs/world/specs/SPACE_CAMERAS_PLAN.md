@@ -332,15 +332,40 @@ for ⟨actor⟩`, a socket.**
     the camera tracks coordinates that mean nothing in its own space. Nobody has
     hit it because until step 5 a space's camera could not follow at all.
 
-    Naming a kind makes it easy to hit, so it has to be answered first: either
-    `actor to follow` prefers the camera's own space, or the query blocks that
-    feed it do, or the rule refuses a target from elsewhere and says so. Not
-    settled here.
+    **ANSWERED AND BUILT, ahead of the step it was a prerequisite for.** The
+    engine already drew the right line: `actorsNear`, `mapSize` and `the mouse`
+    answer for the space of the thing in hand, and `any ⟨Kind⟩` does not — a HUD
+    counting coins wants all of them. Following is spatial, so the narrowing
+    went with the follow: a block `⟨actors⟩ in this space` (the engine's
+    `inThisSpace`, reading the space BEFORE the walk, since `filtered` puts each
+    candidate in hand during its test), and `Camera Follow` reads every one of
+    its target reads through it, the guard included. A camera with nothing of
+    its own to follow stays where it is. It fixed a case that was already wrong:
+    a WORLD camera following a Player who happened to be inside a Viewport
+    aimed at that Player's space-local coordinates as if they were the root's.
+
+    What it does NOT fix is timing. `any ⟨Pilot⟩` is a SNAPSHOT at the moment of
+    the `set` — `world.actors.ofType(…)`, an array — despite its tooltip
+    promising "the ones placed later". Set in a Viewport's `on create`, before
+    the Viewport's map has loaded, it freezes to the root's Pilots or to
+    nothing. Making the stored value lazy was considered and rejected as a
+    surprise in how values work; the answer is an EVENT for the moment the
+    map lands (step 12).
 
 11. **Specs.** This file's status, VIEWPORT_PLAN's open line, STYLES_PLAN's table
     if the inspector's fields move again, MAP_EVENTS_PLAN's principle extended to
     cameras, and SCROLLING_PLAN on what a camera with no traits now means for a
     scroll view.
+
+12. **An event for when a Viewport's map lands.** The other half of step 10's
+    finding. `set actor to follow` in a Viewport's `on create` runs before the
+    Viewport's map has loaded, and the value it stores is a snapshot, so the
+    camera follows the root's Pilot or nobody. A hat for the moment the map is
+    shown — the same moment `showHeldMap` already knows — is where that `set`
+    belongs. Either that, or a kind's `is created` heard by OTHER actors, which
+    would let the Viewport's script say "when any Pilot is created, follow it";
+    both were proposed and neither is built. The plan deferred this event before
+    as "worth having on its own merits"; it is now needed.
 
 Steps 1 to 4 are invisible; 5 is where it starts working; 6 is where the lab
 gets smaller; 8 is where an author can reach it AT ALL, in blocks; 9 is where

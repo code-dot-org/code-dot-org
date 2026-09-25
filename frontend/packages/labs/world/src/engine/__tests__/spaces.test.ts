@@ -12,7 +12,7 @@ import {describe, expect, it} from 'vitest';
 import {ActorBuilder} from '../builders/ActorBuilder';
 import {RuleBuilder} from '../builders/RuleBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
-import {each, filtered} from '../core/actorValue';
+import {each, filtered, inThisSpace, one} from '../core/actorValue';
 import {Vector} from '../core/Vector';
 import type {World, WorldMap} from '../core/World';
 import {
@@ -53,6 +53,21 @@ Aiming.addStepIn('aim at the corner', 'aim', world => {
       // in.
       aimed.set(camera.id, {map: world.mapBounds(), view: world.viewSize()});
       camera.position = new Vector(0, 0);
+    });
+  }
+});
+/** `Follows` in miniature: aim at the first coin IN THIS SPACE, else stay. */
+const FollowsACoin = Aiming.addTrait({
+  id: 'followsACoin',
+  name: 'Follows a Coin',
+});
+Aiming.addStepIn('follow a coin', 'aim', world => {
+  for (const camera of world.cameras.with(FollowsACoin)) {
+    world.withActor(camera, () => {
+      const found = [...inThisSpace(world, world.actors.ofType('actors/coin'))];
+      if (found.length) {
+        camera.position = one(found).get(PositionProperty) as Vector;
+      }
     });
   }
 });
@@ -906,5 +921,49 @@ describe('what a camera that elects nothing looks at', () => {
     expect(shows(camera.position, world.viewSize(camera))).toEqual(
       new Vector(0, 0),
     );
+  });
+});
+
+describe('following, from a camera in a Viewport', () => {
+  // The scenario that found the gap: the same level loaded in the main world
+  // AND in a Viewport, and the Viewport's camera told to follow `any ⟨Pilot⟩`.
+  // Every Pilot is in every space, and the first is the root's
+  // (specs/SPACE_CAMERAS_PLAN.md).
+
+  it('follows the coin in ITS space, while the world’s camera follows the root’s', () => {
+    const world = makeWorld();
+    const rootCoin = world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    rootCoin.set(PositionProperty, new Vector(11, 12));
+    const win = placeWindow(world);
+    const [held] = world.loadMapInto(win, {
+      actors: [
+        {
+          type: 'actors/coin',
+          id: 'hc',
+          properties: {positional: {position: {x: 300, y: 200}}},
+        },
+      ],
+    });
+    world.defineCamera({id: 'chase', traits: [FollowsACoin]});
+    world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
+    win.set(ViewportShowsThroughProperty, 'chase');
+
+    world.tick(0);
+    expect(world.camera('chase').position).toEqual(new Vector(11, 12));
+    expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
+      held.get(PositionProperty),
+    );
+  });
+
+  it('stays where it is when nothing of the kind is in its space', () => {
+    const world = makeWorld();
+    world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    const win = placeWindow(world);
+    world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
+    win.set(ViewportShowsThroughProperty, 'chase');
+    const before = world.viewportSpaceOf(win)!.camera!.position;
+
+    world.tick(0);
+    expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(before);
   });
 });

@@ -6036,6 +6036,45 @@ const worldFirstActor = defineBlock({
     },
   },
 });
+/**
+ * `⟨actors⟩ in this space` — the ones in the space of whatever is in hand.
+ *
+ * The spatial complement `any ⟨Kind⟩` never had. A kind query is every actor
+ * of the kind in every space, which is right for a HUD counting coins and
+ * wrong for anything that is about WHERE — and following is about where. A
+ * Viewport's camera set to follow `any ⟨Pilot⟩` took the Pilot in the root and
+ * tracked coordinates that mean nothing in its own space
+ * (specs/SPACE_CAMERAS_PLAN.md). `Camera Follow` reads its target through this.
+ *
+ * "This space" is the space of the thing in hand — the camera, in a camera
+ * step; the actor, in a handler — which is the same reading `map size` and
+ * `the mouse` give without a subject.
+ */
+const worldInThisSpace = defineBlock({
+  type: 'world_in_this_space',
+  message0: '%1 in this space',
+  args0: [{type: 'input_value', name: 'SOURCE', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Only the actors that are in the same space as this one — the same map, ' +
+    'not one shown in a Viewport. What a camera should follow, and what is ' +
+    'actually nearby.',
+  generator: {
+    javascript(block, generator) {
+      return [
+        `WorldLab.inThisSpace(world, ${actorSource(block, generator)})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_in_this_space', [
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+]);
+
 registerValueShadows('world_first_actor', [
   {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
 ]);
@@ -11177,6 +11216,7 @@ export const DOMAIN_BLOCKS = [
   worldNearPlaceOfKind,
   worldNearPlaceWithTrait,
   worldFirstActor,
+  worldInThisSpace,
   worldAnyActor,
   worldSameActor,
   worldActorsWithTrait,
@@ -11352,6 +11392,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_ordered_actors',
       'world_take_actors',
       'world_first_actor',
+      'world_in_this_space',
       'world_any_actor',
       'world_same_actor',
       'world_extreme_actor',

@@ -17,6 +17,7 @@
 // code that routes through here (blockly/domainBlocks).
 
 import type {Actor} from './Actor';
+import type {World} from './World';
 
 /**
  * A list that is walked rather than built (specs/ACTOR_LISTS.md).
@@ -330,6 +331,27 @@ export function firstOf(value: ActorSource): readonly Actor[] {
     return [actor];
   }
   return [];
+}
+
+/**
+ * The actors a value holds that are in the space of the thing in hand —
+ * `⟨…⟩ in this space`.
+ *
+ * FOLLOWING IS SPATIAL, and `any ⟨Pilot⟩` is not: it is every Pilot there is,
+ * in every space. A Viewport's camera that followed the first of them followed
+ * the one in the ROOT, and tracked coordinates that mean nothing in its own
+ * space (specs/SPACE_CAMERAS_PLAN.md). This is the narrowing `actorsNear`,
+ * `mapSize` and `mousePosition` already do — the world is asked without a
+ * subject and answers for the space of the thing in hand — offered as a list
+ * operation so a rule can say it.
+ *
+ * THE SPACE IS READ FIRST, before the walk. `filtered` puts each candidate in
+ * hand while its test runs, so a test that asked `spaceOf(inHand)` inside would
+ * see the candidate's own space and accept everything.
+ */
+export function inThisSpace(world: World, value: ActorSource): LazyActors {
+  const space = world.spaceOf(world.actorInHand());
+  return filtered(value, actor => actor.space === space);
 }
 
 /**

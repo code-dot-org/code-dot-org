@@ -46,6 +46,9 @@ const MANY_BY_TYPE = new Set([
   'world_take_actors',
   'world_actors_with_trait',
   'world_first_actor',
+  // …and a list narrowed to the space in hand, which is still a list
+  // (specs/SPACE_CAMERAS_PLAN.md).
+  'world_in_this_space',
   'world_extreme_actor',
 ]);
 

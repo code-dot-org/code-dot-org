@@ -5,6 +5,7 @@ import {
   anyOf,
   defineRule,
   doc,
+  inThisSpace,
   moduleFor,
   thisCamera,
   when,
@@ -68,16 +69,22 @@ const look = follows.point('look offset', {x: 0, y: 0});
 
 follows.step('aim at the actor', 'aim', [
   doc(
-    'Where the camera WANTS to be: the actor it follows, plus whatever `look` offset the project set — ahead of a runner, or above a jumper.\n\nThis only sets the goal. What actually happens to the view is the rest of the camera pipeline: a deadzone may ignore it, easing may approach it slowly, and being confined to the map may refuse part of it.',
+    'Where the camera WANTS to be: the actor it follows, plus whatever `look` offset the project set — ahead of a runner, or above a jumper.\n\nOnly an actor IN THIS CAMERA’S SPACE counts. `any Pilot` is every Pilot in the world, and a camera in a Viewport following one in the main map would track a place that means nothing where it is looking; with none in its own space it stays where it is.\n\nThis only sets the goal. What actually happens to the view is the rest of the camera pipeline: a deadzone may ignore it, easing may approach it slowly, and being confined to the map may refuse part of it.',
   ),
   when([
     [
-      anyOf(target.of(thisCamera())),
+      anyOf(inThisSpace(target.of(thisCamera()))),
       [
         goal.set(
           thisCamera(),
-          add(position.x(target.of(thisCamera())), look.x(thisCamera())),
-          add(position.y(target.of(thisCamera())), look.y(thisCamera())),
+          add(
+            position.x(inThisSpace(target.of(thisCamera()))),
+            look.x(thisCamera()),
+          ),
+          add(
+            position.y(inThisSpace(target.of(thisCamera()))),
+            look.y(thisCamera()),
+          ),
         ),
       ],
     ],
