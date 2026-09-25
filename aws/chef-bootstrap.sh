@@ -12,6 +12,7 @@ set -o errexit
 # -n [node_name]
 # -r [run_list]
 # -v [chef_version]
+# -l [chef_license_key]
 # -e [environment]
 # -z: Use local-mode Chef client.
 #
@@ -30,7 +31,7 @@ NODE_NAME=$(hostname)
 S3_BUCKET=cdo-dist
 
 # Parse options
-while getopts ":b:n:r:v:e:z" opt; do
+while getopts ":b:n:r:v:e:l:z" opt; do
   case "${opt}" in
     e)
       ENVIRONMENT=${OPTARG}
@@ -46,6 +47,9 @@ while getopts ":b:n:r:v:e:z" opt; do
       ;;
     v)
       CHEF_VERSION=${OPTARG}
+      ;;
+    l)
+      CHEF_LICENSE_KEY=${OPTARG}
       ;;
     z)
       LOCAL_MODE=1
@@ -66,7 +70,7 @@ CHEF_REPO_PATH=/var/chef
 CHEF_DEBUG_LOG=/var/log/chef-bootstrap-debug.log
 # Ensure correct version of Chef is installed.
 if [ "$(${CHEF_CLIENT} -v)" != "Chef: ${CHEF_VERSION}" ]; then
-  curl -L https://omnitruck.chef.io/install.sh | bash -s -- -v ${CHEF_VERSION}
+  curl -fL "https://chefdownload-commercial.chef.io/install.sh?license_id=${CHEF_LICENSE_KEY}" | bash -s -- -v ${CHEF_VERSION}
 else
   echo "Chef ${CHEF_VERSION} is installed."
 fi

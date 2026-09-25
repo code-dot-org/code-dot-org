@@ -88,6 +88,9 @@ DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 # This AWS Secret is only provisioned for adhocs, which use it to authenticate read operations (clone/fetch/pull) from GitHub.
 GITHUB_TOKEN=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
 
+# Chef requires a license key to download Chef Infra Client.
+CHEF_LICENSE_KEY=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/chef_license_key" --version-stage AWSCURRENT | jq -r ".SecretString")
+
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname $FIRST_BOOT)
@@ -153,7 +156,7 @@ cat <<JSON > $FIRST_BOOT
 JSON
 
 # Bootstrap Chef configuration: Install Chef, run chef-client with empty run-list to create node with first-boot config.
-OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENVIRONMENT -v $CHEF_VERSION"
+OPTIONS="<%=cookbooks_path ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '' -e $ENVIRONMENT -v $CHEF_VERSION -l $CHEF_LICENSE_KEY"
 sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s -- $OPTIONS"
 
 # Ensure Chef Client is using an up to date TLS/SSL root certificate store (that we periodically fetch from a trusted

@@ -1,4 +1,36 @@
-import {LevelPropertiesMapValidator} from '@cdo/apps/lab2/responseValidators';
+import {
+  LevelPropertiesMapValidator,
+  sourceResponseValidatorFor,
+} from '@cdo/apps/lab2/responseValidators';
+
+describe('sourceResponseValidatorFor', () => {
+  const multiFile = {source: {folders: {}, files: {}}};
+  const stringified = {source: JSON.stringify({blocks: {}})};
+
+  it('rejects a stringified source for a Codebridge lab', () => {
+    expect(() => sourceResponseValidatorFor('weblab2')(stringified)).toThrow(
+      'Codebridge sources must be a JSON object'
+    );
+    expect(sourceResponseValidatorFor('pythonlab')(multiFile)).toBe(multiFile);
+  });
+
+  it('accepts a stringified source with blocks for a Blockly lab', () => {
+    expect(sourceResponseValidatorFor('music')(stringified)).toBe(stringified);
+    expect(() =>
+      sourceResponseValidatorFor('music')({source: JSON.stringify({})})
+    ).toThrow('Missing required field: blocks');
+  });
+
+  it('checks only that a source exists for other labs and for no lab', () => {
+    expect(sourceResponseValidatorFor('adaptive')(stringified)).toBe(
+      stringified
+    );
+    expect(sourceResponseValidatorFor(null)(multiFile)).toBe(multiFile);
+    expect(() => sourceResponseValidatorFor(undefined)({})).toThrow(
+      'Missing required field: source'
+    );
+  });
+});
 
 describe('LevelPropertiesMapValidator', () => {
   it('throws an error if the response is an array', () => {
