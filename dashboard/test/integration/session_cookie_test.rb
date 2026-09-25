@@ -49,7 +49,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     assert_select 'script[data-statsig-stable-id]', count: 0
   end
 
-  test 'session and Statsig cookies are set on non-cached level page' do
+  test 'session cookie is set and Statsig stable ID is rendered on non-cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
     unit = create(:unit, :with_levels, name: 'music-jam-2024')
     create(:single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable')
@@ -59,11 +59,12 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       env: {'rack-cache.allow_reload' => true}
     assert_response :success
     refute_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
 
-    stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
-    _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
     assert_select 'script[data-statsig-stable-id]' do |elements|
-      _(elements.first['data-statsig-stable-id']).must_equal stable_id
+      stable_id = elements.first['data-statsig-stable-id']
+      _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+      _(session[SharedConstants::STATSIG_STABLE_ID_KEY]).must_equal stable_id
     end
   end
 
@@ -78,7 +79,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       get '/'
       initial_stable_id = request_statsig_stable_id
       _(initial_stable_id).must_match Cdo::AnonUserId::FORMAT
-      _(cookies[:statsig_stable_id]).must_equal initial_stable_id
+      _(cookies[:statsig_stable_id]).must_be_nil
       _(session[:statsig_stable_id]).must_equal initial_stable_id
 
       get '/v3/channels'
@@ -93,13 +94,13 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       _(request.statsig_stable_id).must_equal initial_stable_id
 
       get '/users/sign_out'
-      assert_empty cookies[:statsig_stable_id]
+      _(cookies[:statsig_stable_id]).must_be_empty
 
       get '/'
       rotated_stable_id = request.statsig_stable_id
       _(rotated_stable_id).must_match Cdo::AnonUserId::FORMAT
       _(rotated_stable_id).wont_equal initial_stable_id
-      _(cookies[:statsig_stable_id]).must_equal rotated_stable_id
+      _(cookies[:statsig_stable_id]).must_be_empty
       _(session[:statsig_stable_id]).must_equal rotated_stable_id
     end
 

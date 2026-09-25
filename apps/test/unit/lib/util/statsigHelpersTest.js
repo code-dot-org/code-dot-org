@@ -14,6 +14,7 @@ describe('StatsigReporter', () => {
   describe('findOrCreateStableId', () => {
     const nativeRandomUUID = window.crypto.randomUUID;
     let getCookieStub;
+    let isDevelopmentEnvironmentStub;
     let removeCookieStub;
     let setCookieStub;
     let stableIdElement;
@@ -42,12 +43,27 @@ describe('StatsigReporter', () => {
 
     afterEach(() => {
       getCookieStub.restore();
+      isDevelopmentEnvironmentStub?.restore();
       removeCookieStub.restore();
       setCookieStub.restore();
       stableIdElement?.remove();
       localStorage.clear();
       delete window.OnetrustActiveGroups;
     });
+
+    function expectCookieSet(stableId) {
+      expect(setCookieStub).to.have.been.calledWith(
+        StatsigStableIdKey,
+        stableId
+      );
+      expect(setCookieStub.firstCall.args[2]).to.deep.equal({
+        path: '/',
+        domain: '.code.org',
+        sameSite: 'Lax',
+        secure: false,
+        expires: 365,
+      });
+    }
 
     it('prefers the stable ID rendered by the server', () => {
       const stableId = window.crypto.randomUUID();
@@ -57,7 +73,7 @@ describe('StatsigReporter', () => {
 
       expect(findOrCreateStableId()).to.equal(stableId);
       expect(getCookieStub).not.to.have.been.called;
-      expect(setCookieStub).not.to.have.been.called;
+      expectCookieSet(stableId);
     });
 
     it('uses the existing cookie when the server ID is unavailable', () => {
@@ -65,7 +81,7 @@ describe('StatsigReporter', () => {
       getCookieStub.returns(stableId);
 
       expect(findOrCreateStableId()).to.equal(stableId);
-      expect(setCookieStub).not.to.have.been.called;
+      expectCookieSet(stableId);
     });
 
     it('creates a cookie without restoring an ID from local storage', () => {
@@ -76,18 +92,24 @@ describe('StatsigReporter', () => {
       const stableId = findOrCreateStableId();
 
       expect(stableId).not.to.equal(formerStableId);
-      expect(setCookieStub).to.have.been.calledWith(
-        StatsigStableIdKey,
-        stableId
-      );
-      expect(setCookieStub.firstCall.args[2]).to.include({
-        domain: '.code.org',
-        expires: 365,
-        path: '/',
-      });
+      expectCookieSet(stableId);
+    });
+
+    it('creates a cookie without consent in development', () => {
+      window.OnetrustActiveGroups = '';
+
+      const stableId = findOrCreateStableId();
+
+      expect(stableId).not.to.be.undefined;
+      expectCookieSet(stableId);
+      expect(removeCookieStub).not.to.have.been.called;
     });
 
     it('removes the cookie when performance cookies are not allowed', () => {
+      isDevelopmentEnvironmentStub = stub(
+        utils,
+        'isDevelopmentEnvironment'
+      ).returns(false);
       window.OnetrustActiveGroups = '';
 
       expect(findOrCreateStableId()).to.be.undefined;

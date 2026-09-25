@@ -132,13 +132,15 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal anon_user_id, sign_in.anon_user_id
   end
 
-  test 'signing in user does not store a blank stable ID' do
+  test 'signing in user replaces and stores a blank stable ID' do
     session[:statsig_stable_id] = ''
     user = create(:user)
 
     create_session_for_user(user)
 
-    assert_nil SignIn.find_by!(user_id: user.id).anon_user_id
+    anon_user_id = SignIn.find_by!(user_id: user.id).anon_user_id
+    assert Cdo::AnonUserId.valid?(anon_user_id)
+    assert_equal session[:statsig_stable_id], anon_user_id
   end
 
   test 'failed signin does not create SignIn' do

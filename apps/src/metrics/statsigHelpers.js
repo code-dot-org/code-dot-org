@@ -2,13 +2,19 @@ import cookies from 'js-cookie';
 
 import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
 
-import {getEnvironment, isProductionEnvironment, createUuid} from '../utils';
+import {
+  getEnvironment,
+  isDevelopmentEnvironment,
+  isProductionEnvironment,
+  createUuid,
+} from '../utils';
 
 const STABLE_ID_KEY = StatsigStableIdKey;
 const COOKIE_OPTIONS = {
   path: '/',
   domain: '.code.org',
   sameSite: 'Lax',
+  secure: !isDevelopmentEnvironment(),
   expires: 365,
 };
 
@@ -28,18 +34,14 @@ export function getUserType() {
 }
 
 export function findOrCreateStableId() {
-  let stableId = document.querySelector('script[data-statsig-stable-id]')
-    ?.dataset?.statsigStableId;
+  if (consentAllowsStatsigCookie()) {
+    const serverStableId = document.querySelector(
+      'script[data-statsig-stable-id]'
+    )?.dataset?.statsigStableId;
+    const stableId =
+      serverStableId || cookies.get(STABLE_ID_KEY) || createUuid();
 
-  if (stableId) {
-    return stableId;
-  } else if (consentAllowsStatsigCookie()) {
-    stableId = cookies.get(STABLE_ID_KEY);
-
-    if (!stableId) {
-      stableId = createUuid();
-      cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
-    }
+    cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
 
     return stableId;
   } else {
@@ -52,6 +54,8 @@ export function findOrCreateStableId() {
 }
 
 function consentAllowsStatsigCookie() {
+  if (isDevelopmentEnvironment()) return true;
+
   const groups = getOnetrustGroups();
   return ONETRUST_ALLOWED_CATEGORIES.some(id => groups.has(id));
 }

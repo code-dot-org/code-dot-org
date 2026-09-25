@@ -448,19 +448,7 @@ class ApplicationController < ActionController::Base
   end
 
   protected def initialize_statsig_stable_id
-    # A public cache could serve a request-specific stable ID to other visitors.
-    return if request.session_options[:skip]
-
-    @statsig_stable_id = request.statsig_stable_id
-
-    unless cookies[SharedConstants::STATSIG_STABLE_ID_KEY] == @statsig_stable_id
-      cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = {
-        value: @statsig_stable_id,
-        domain: request.shared_cookie_domain,
-        path: '/',
-        expires: 1.year.from_now,
-      }
-    end
+    request.statsig_stable_id
   end
 
   private def pairing_still_enabled
