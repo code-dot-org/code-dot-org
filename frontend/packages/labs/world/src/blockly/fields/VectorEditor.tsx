@@ -48,11 +48,15 @@ const fitRange = (value: VectorValue): number => {
  * or dragging points an arrow from the origin to the chosen grid point and sets
  * the field's x/y. Zoom buttons reach larger values; the x/y text fields set
  * exact ones.
+ *
+ * Takes only the value and the change, of all a field editor is handed, so the
+ * map editor can show the same grid for a vector with no field behind it
+ * (`mapEditor/VectorInput`).
  */
 export function VectorEditor({
   value,
   onChange,
-}: ReactFieldEditorProps<VectorValue>) {
+}: Pick<ReactFieldEditorProps<VectorValue>, 'value' | 'onChange'>) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [dragging, setDragging] = useState(false);
   const [range, setRange] = useState(() => fitRange(value));

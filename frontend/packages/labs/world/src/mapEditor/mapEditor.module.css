@@ -548,3 +548,33 @@
   opacity: 0.6;
 }
 
+
+/* A vector property: the block face's direction dial as the control, and
+   the arrow grid in a popover behind it (`VectorInput`). The wrapper is the
+   same one a text field's label comes from, so the label sits where every
+   other row's does. */
+.inspectorVector {
+  width: 100%;
+}
+
+.inspectorDial {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.inspectorDial:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* The popover's surface is the lab's, as the block's dropdown is
+   (`FieldVector.dropdownStyle`), rather than MUI's paper. */
+.inspectorDialPopover {
+  padding: 8px;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+}

@@ -15,7 +15,7 @@
 // this pane — the same functions the stage uses, so a test and the stage
 // cannot disagree about where anything is.
 
-import {act, fireEvent, render} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import {
   afterAll,
   beforeAll,
@@ -699,6 +699,63 @@ describe('the world, with nothing selected', () => {
     fireEvent.change(field, {target: {value: '45'}});
     fireEvent.blur(field);
     expect(onSetDefault).toHaveBeenCalledWith(target, '45');
+  });
+
+  it('shows a vector as the block’s dial, with the grid behind a click', () => {
+    // The dial the block face draws and the grid the block field opens
+    // (`VectorInput`); a change on the grid is written at once.
+    const onSetDefault = vi.fn();
+    const direction = {
+      name: 'direction of gravity',
+      type: 'vector',
+      value: '0,1',
+      setter: 'world_set_Gravity_DirectionOfGravityProperty',
+      rule: 'Gravity',
+    };
+    const view = mount(doc(), {
+      world: {
+        header: {...header, properties: [direction]},
+        onRename: vi.fn(),
+        onSetDefault,
+      },
+    });
+    const dial = view.container.querySelector(
+      'button[name="world-world_set_Gravity_DirectionOfGravityProperty"]',
+    ) as HTMLButtonElement;
+    expect(dial).toHaveAttribute(
+      'aria-label',
+      'Direction of gravity: x 0, y 1',
+    );
+    expect(dial.querySelector('svg text')).toHaveTextContent('1');
+    expect(dial).toHaveAttribute('aria-expanded', 'false');
+
+    fireEvent.click(dial);
+    expect(dial).toHaveAttribute('aria-expanded', 'true');
+    // The grid's own exact fields, in the popover.
+    const x = screen.getByLabelText('x') as HTMLInputElement;
+    expect(x.value).toBe('0');
+    fireEvent.change(x, {target: {value: '3'}});
+    expect(onSetDefault).toHaveBeenCalledWith(direction, '3,1');
+  });
+
+  it('shows a point as two number fields, as a placement’s position is', () => {
+    const onSetDefault = vi.fn();
+    const spawn = {name: 'spawn', type: 'point', value: '3,4'};
+    const view = mount(doc(), {
+      world: {
+        header: {...header, properties: [spawn]},
+        onRename: vi.fn(),
+        onSetDefault,
+      },
+    });
+    const y = view.container.querySelector(
+      'input[name="world-spawn-y"]',
+    ) as HTMLInputElement;
+    expect(y.value).toBe('4');
+    expect(view.getByText('Spawn X')).toBeInTheDocument();
+    fireEvent.change(y, {target: {value: '7'}});
+    fireEvent.blur(y);
+    expect(onSetDefault).toHaveBeenCalledWith(spawn, '3,7');
   });
 
   it('is absent for a map that is no world', () => {

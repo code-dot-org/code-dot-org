@@ -66,6 +66,24 @@ describe('the starter’s world, through the window', () => {
     expect(named(world, 'amount of gravity')).toMatchObject({value: '9'});
   });
 
+  it('shows a vector as two numbers and a comma, and writes one back', () => {
+    // Gravity's direction is `{x: 0, y: 1}` in the rule; `String` of that
+    // is "[object Object]", which is what the window showed once.
+    const direction = named(world, 'direction of gravity')!;
+    expect(direction).toMatchObject({
+      type: 'vector',
+      rule: 'Gravity',
+      value: '0,1',
+    });
+    const turned = writeWorldRuleValue(
+      world,
+      offered.find(each => each.setter === direction.setter)!,
+      '0,-1',
+    );
+    expect(named(turned, 'direction of gravity')!.value).toBe('0,-1');
+    expect(turned).toContain('"type": "world_vector"');
+  });
+
   it('shows the world’s own properties first, then the rules’', () => {
     const {properties} = header(world);
     const first = properties.findIndex(property => property.setter);

@@ -16,7 +16,13 @@ import TextField from '@code-dot-org/component-library/textField';
 
 import styles from './mapEditor.module.css';
 import {ThemeField} from './ThemeField';
-import type {WorldHeader, WorldProperty} from './worldProperties';
+import {VectorInput} from './VectorInput';
+import {
+  parseVectorText,
+  vectorText,
+  type WorldHeader,
+  type WorldProperty,
+} from './worldProperties';
 
 export interface WorldInspectorProps {
   header: WorldHeader;
@@ -50,6 +56,9 @@ const capitalize = (text: string) =>
 
 /** The kinds of value a field can hold; the rest are read as they are. */
 const EDITABLE = new Set(['number', 'angle', 'string', 'boolean']);
+
+/** The two axes of a point, each its own field. */
+const AXES = ['x', 'y'] as const;
 
 export const WorldInspector = ({
   header,
@@ -104,9 +113,65 @@ export const WorldInspector = ({
     }
   }
   const rules = [...byRule];
+  // A point's two axes are drafted apart, as a placement's are, and go back
+  // together as the one text its row is read from (`vectorText`).
+  const commitAxis = (property: WorldProperty, axis: 'x' | 'y') => {
+    const key = keyOf(property);
+    const held = parseVectorText(values[key] ?? '') ?? {x: 0, y: 0};
+    const typed = Number(values[`${key}.${axis}`]);
+    if (!Number.isFinite(typed) || typed === held[axis]) {
+      return;
+    }
+    const next = vectorText({...held, [axis]: typed});
+    setValues(held => ({...held, [key]: next}));
+    onSetDefault(property, next);
+  };
   const renderField = (property: WorldProperty) => {
     const key = keyOf(property);
     const label = capitalize(property.name);
+    if (property.type === 'vector') {
+      // The block's own dial and grid: a direction is chosen, not typed.
+      return (
+        <VectorInput
+          key={key}
+          name={`world-${key}`}
+          label={label}
+          value={parseVectorText(values[key] ?? '') ?? {x: 0, y: 0}}
+          disabled={isReadOnly}
+          onChange={next => {
+            const text = vectorText(next);
+            setValues(held => ({...held, [key]: text}));
+            onSetDefault(property, text);
+          }}
+        />
+      );
+    }
+    if (property.type === 'point') {
+      const held = parseVectorText(values[key] ?? '') ?? {x: 0, y: 0};
+      return (
+        <div key={key} className={styles.inspectorGrid}>
+          {AXES.map(axis => (
+            <TextField
+              key={axis}
+              name={`world-${key}-${axis}`}
+              label={`${label} ${axis.toUpperCase()}`}
+              inputType="number"
+              size="s"
+              value={values[`${key}.${axis}`] ?? String(held[axis])}
+              disabled={isReadOnly}
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                setValues(held => ({
+                  ...held,
+                  [`${key}.${axis}`]: event.target.value,
+                }))
+              }
+              onBlur={() => commitAxis(property, axis)}
+              onKeyDown={blurOnEnter}
+            />
+          ))}
+        </div>
+      );
+    }
     return property.type === 'boolean' ? (
       <Checkbox
         key={key}

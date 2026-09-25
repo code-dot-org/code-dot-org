@@ -13,7 +13,7 @@
 import {projectRuleMetas} from '../blockly/projectModules';
 import {memberLocalName} from '../blockly/ruleRegistry';
 
-import type {WorldRuleProperty} from './worldProperties';
+import {vectorText, type WorldRuleProperty} from './worldProperties';
 
 /**
  * What the world's window offers besides the world's own properties.
@@ -22,6 +22,23 @@ import type {WorldRuleProperty} from './worldProperties';
  * and the target, and a starting value for it means nothing; the rules say
  * which of their properties are theirs to compute.
  */
+/**
+ * A rule's own value as the text the window compares against. A vector's is
+ * an object, `{x, y}`, and comes out as `"x,y"` the way the reader spells a
+ * row's (`worldProperties.vectorText`); the rest are what `String` makes of
+ * them.
+ */
+const defaultText = (value: unknown): string => {
+  if (value === undefined || value === null) {
+    return '';
+  }
+  if (typeof value === 'object' && 'x' in value && 'y' in value) {
+    const held = value as {x: unknown; y: unknown};
+    return vectorText({x: Number(held.x), y: Number(held.y)});
+  }
+  return String(value);
+};
+
 export function worldRuleProperties(
   files: Record<string, string>,
 ): WorldRuleProperty[] {
@@ -33,10 +50,7 @@ export function worldRuleProperties(
         name: property.name,
         type: property.type,
         rule: rule.name,
-        default:
-          property.default === undefined || property.default === null
-            ? ''
-            : String(property.default),
+        default: defaultText(property.default),
       })),
   );
 }

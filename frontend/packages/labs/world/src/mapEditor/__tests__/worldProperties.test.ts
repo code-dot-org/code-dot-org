@@ -201,6 +201,118 @@ describe('a rule’s world property', () => {
     const before = world();
     expect(writeWorldRuleValue(before, TARGET, 'lots')).toBe(before);
     const VECTOR = {...TARGET, type: 'vector'};
-    expect(writeWorldRuleValue(before, VECTOR, '1,2')).toBe(before);
+    expect(writeWorldRuleValue(before, VECTOR, 'sideways')).toBe(before);
+    const COLOR = {...TARGET, type: 'color'};
+    expect(writeWorldRuleValue(before, COLOR, '#ff0000')).toBe(before);
+  });
+
+  describe('a vector', () => {
+    // Gravity's direction: the rule's own is straight down.
+    const DIRECTION = {
+      setter: 'world_set_Gravity_DirectionOfGravityProperty',
+      name: 'direction of gravity',
+      type: 'vector',
+      rule: 'Gravity',
+      default: '0,1',
+    };
+    const pointing = (x: number, y: number) => ({
+      type: DIRECTION.setter,
+      inputs: {
+        VALUE: {shadow: {type: 'world_vector', fields: {VECTOR: {x, y}}}},
+      },
+    });
+    const direction = (contents: string) =>
+      readWorldHeader(contents, [DIRECTION])!.properties.find(
+        property => property.setter === DIRECTION.setter,
+      );
+
+    it('is read off a `world_vector` literal as two numbers and a comma', () => {
+      expect(direction(world([pointing(1, 0)]))!.value).toBe('1,0');
+      expect(direction(world())!.value).toBe('0,1');
+    });
+
+    it('is written as a `world_vector` literal, and the rule’s own takes the row away', () => {
+      const written = writeWorldRuleValue(world(), DIRECTION, '-1,0');
+      const row = JSON.parse(written).blocks.blocks[0].next.block;
+      expect(row.type).toBe(DIRECTION.setter);
+      expect(row.inputs.VALUE.shadow).toEqual({
+        type: 'world_vector',
+        fields: {VECTOR: {x: -1, y: 0}},
+      });
+      expect(direction(written)!.value).toBe('-1,0');
+      const back = writeWorldRuleValue(written, DIRECTION, '0,1');
+      expect(JSON.parse(back).blocks.blocks[0].next).toBeUndefined();
+    });
+  });
+});
+
+describe('the world’s own vectors and points', () => {
+  // A `define vector` row keeps both axes in one field, as the block's
+  // arrow-grid field saves them; a `define point` keeps two numbers.
+  const WORLD = JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_world',
+          fields: {NAME: 'Windy'},
+          next: {
+            block: {
+              type: 'world_rule_property',
+              fields: {TYPE: 'vector', NAME: 'wind', DEFAULT: {x: 2, y: 0}},
+              next: {
+                block: {
+                  type: 'world_rule_property',
+                  fields: {
+                    TYPE: 'point',
+                    NAME: 'spawn',
+                    DEFAULT: 3,
+                    DEFAULT_Y: 4,
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+  const named = (contents: string, name: string) =>
+    readWorldHeader(contents)!.properties.find(each => each.name === name);
+  const rowNamed = (contents: string, name: string) => {
+    let at = JSON.parse(contents).blocks.blocks[0].next?.block;
+    while (at && at.fields.NAME !== name) {
+      at = at.next?.block;
+    }
+    return at;
+  };
+
+  it('are read as two numbers and a comma, whichever shape the row keeps', () => {
+    expect(named(WORLD, 'wind')).toEqual({
+      name: 'wind',
+      type: 'vector',
+      value: '2,0',
+    });
+    expect(named(WORLD, 'spawn')).toEqual({
+      name: 'spawn',
+      type: 'point',
+      value: '3,4',
+    });
+  });
+
+  it('are written back in the row’s own shape', () => {
+    const wind = writeWorldPropertyDefault(WORLD, 'wind', '0,-5');
+    expect(rowNamed(wind, 'wind').fields.DEFAULT).toEqual({x: 0, y: -5});
+    expect(named(wind, 'wind')!.value).toBe('0,-5');
+    const spawn = writeWorldPropertyDefault(WORLD, 'spawn', '10,20');
+    expect(rowNamed(spawn, 'spawn').fields).toMatchObject({
+      DEFAULT: 10,
+      DEFAULT_Y: 20,
+    });
+    expect(named(spawn, 'spawn')!.value).toBe('10,20');
+  });
+
+  it('leave the file alone for text that is not two numbers', () => {
+    expect(writeWorldPropertyDefault(WORLD, 'wind', 'north')).toBe(WORLD);
+    expect(writeWorldPropertyDefault(WORLD, 'spawn', '1,2,3')).toBe(WORLD);
   });
 });

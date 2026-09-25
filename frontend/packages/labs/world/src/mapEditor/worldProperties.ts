@@ -15,7 +15,11 @@ export interface WorldProperty {
   name: string;
   /** The row's TYPE: `number`, `boolean`, `string`, `vector`, … */
   type: string;
-  /** The row's DEFAULT as stored — a string, whatever the type. */
+  /**
+   * The row's DEFAULT as stored — a string, whatever the type. A vector or a
+   * point is two numbers with a comma between, `"0,1"` (`vectorText`), so a
+   * value can be compared to a rule's own as text like every other.
+   */
   value: string;
   /**
    * The block that sets it, for a RULE's world-scoped property —
@@ -84,6 +88,53 @@ function* rows(root: Block): Generator<Block> {
 const asText = (value: unknown): string =>
   value === undefined || value === null ? '' : String(value);
 
+/** A vector or point, as the text a `WorldProperty` carries it in. */
+export const vectorText = (value: {x: number; y: number}): string =>
+  `${value.x},${value.y}`;
+
+/** The vector `vectorText` wrote, or nothing for text that is not one. */
+export const parseVectorText = (
+  text: string,
+): {x: number; y: number} | undefined => {
+  const parts = text.split(',');
+  if (parts.length !== 2) {
+    return undefined;
+  }
+  const [x, y] = parts.map(part => Number(part.trim()));
+  return Number.isFinite(x) && Number.isFinite(y) ? {x, y} : undefined;
+};
+
+// A number where one is stored, whatever it was stored as.
+const asNumber = (value: unknown): number => {
+  const held = Number(value ?? 0);
+  return Number.isFinite(held) ? held : 0;
+};
+
+// The vector a `world_vector` literal or a `define vector` row holds: one
+// field with both axes in it, `{x, y}`.
+const asVectorText = (value: unknown): string => {
+  const held = (value ?? {}) as {x?: unknown; y?: unknown};
+  return vectorText({x: asNumber(held.x), y: asNumber(held.y)});
+};
+
+/**
+ * A row's DEFAULT as text. A vector's is one field holding both axes; a
+ * point's is two fields, `DEFAULT` and `DEFAULT_Y` — the shapes the
+ * `define property` block gives them (`domainBlocks.shapeDefaultField`).
+ */
+const defaultText = (row: Block, type: string): string => {
+  if (type === 'vector') {
+    return asVectorText(row.fields?.DEFAULT);
+  }
+  if (type === 'point') {
+    return vectorText({
+      x: asNumber(row.fields?.DEFAULT),
+      y: asNumber(row.fields?.DEFAULT_Y),
+    });
+  }
+  return asText(row.fields?.DEFAULT);
+};
+
 /**
  * The literal a `set` row holds, as text — or nothing when the row's value
  * is anything but a literal, which is a world saying something a field
@@ -105,6 +156,9 @@ const literalOf = (row: Block): string | undefined => {
   if (held.type === 'logic_boolean') {
     return asText(fields.BOOL).toUpperCase() === 'TRUE' ? 'true' : 'false';
   }
+  if (held.type === 'world_vector') {
+    return 'VECTOR' in fields ? asVectorText(fields.VECTOR) : undefined;
+  }
   return undefined;
 };
 
@@ -125,6 +179,10 @@ const literalBlock = (type: string, value: string): Block | undefined => {
       fields: {BOOL: value === 'true' ? 'TRUE' : 'FALSE'},
     };
   }
+  if (type === 'vector') {
+    const held = parseVectorText(value);
+    return held ? {type: 'world_vector', fields: {VECTOR: held}} : undefined;
+  }
   return undefined;
 };
 
@@ -144,11 +202,8 @@ export function readWorldHeader(
     }
     const name = asText(row.fields?.NAME).trim();
     if (name) {
-      properties.push({
-        name,
-        type: asText(row.fields?.TYPE) || 'number',
-        value: asText(row.fields?.DEFAULT),
-      });
+      const type = asText(row.fields?.TYPE) || 'number';
+      properties.push({name, type, value: defaultText(row, type)});
     }
   }
   // …and the world-scoped properties of the rules the project holds, each
@@ -181,7 +236,9 @@ export function writeWorldName(contents: string, name: string): string {
 /**
  * The file with one property's DEFAULT replaced, or as it was when no row
  * declares `property`. A number is stored as the digits typed; the engine
- * reads the type from the row (`propertyDefault`).
+ * reads the type from the row (`propertyDefault`). A vector or point is
+ * stored in the shape its row keeps it in (`defaultText`), and text that is
+ * not one leaves the file as it was.
  */
 export function writeWorldPropertyDefault(
   contents: string,
@@ -194,6 +251,18 @@ export function writeWorldPropertyDefault(
         row.type === 'world_rule_property' &&
         asText(row.fields?.NAME).trim() === property
       ) {
+        const type = asText(row.fields?.TYPE);
+        if (type === 'vector' || type === 'point') {
+          const held = parseVectorText(value);
+          if (!held) {
+            return false;
+          }
+          row.fields =
+            type === 'vector'
+              ? {...row.fields, DEFAULT: held}
+              : {...row.fields, DEFAULT: held.x, DEFAULT_Y: held.y};
+          return true;
+        }
         row.fields = {...row.fields, DEFAULT: value};
         return true;
       }

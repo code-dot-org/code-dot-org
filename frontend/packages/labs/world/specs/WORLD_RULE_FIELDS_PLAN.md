@@ -44,7 +44,7 @@ the rule's, and a world that wants another says so with a `set` row under
   already on the meta.
 - **The types a field may edit are the ones it already edits** — number,
   angle, string, boolean. A vector or a colour is shown and not edited, as
-  the world's own are.
+  the world's own are. (Vectors and points joined them in Sep 2026, below.)
 - **A `set` row a learner wrote by hand is what the field shows**, and
   editing the field rewrites that row rather than adding a second.
   Two rows setting one property is a thing a world may say, and the last
@@ -102,9 +102,22 @@ the rule's, and a world that wants another says so with a `set` row under
   written to its first row. The last row is what the engine obeys, so a
   world like that shows a value it does not use. Nothing writes two, and a
   learner who does has said something the field cannot say.
-- Vectors and colours are shown and not edited, as the world's own are: the
-  direction of gravity is a vector, and it is the one world-scoped property
-  a learner might reasonably want and cannot have here.
+- Colours are shown and not edited, as the world's own are. Vectors and
+  points WERE, and the direction of gravity was the one world-scoped
+  property a learner might reasonably want and could not have; both are
+  edited now, each the way the `define property` block edits its default.
+  A point is two number fields, X and Y, as a placement's position is. A
+  vector is the block face's direction dial, and a click on it opens the
+  block field's own arrow grid in a popover (`mapEditor/VectorInput`, over
+  `blockly/fields/dialPreview` and `VectorEditor`) — so a vector looks and
+  edits the same in a program and on the map. Either is carried through
+  `WorldProperty.value` as `"x,y"` (`worldProperties.vectorText`), which
+  keeps the rule's-own-value-removes-the-row bargain working as text.
+  A rule's vector goes into its `set` row as a `world_vector` literal; the
+  world's own goes into the row's DEFAULT in the shape the block keeps it,
+  one `{x, y}` for a vector and `DEFAULT`/`DEFAULT_Y` for a point. Still
+  out: a POINT of a rule's on a set row, whose socket takes a
+  `world_vector_of` rather than a literal; no stock rule declares one.
 - The camera and the layers that MAP_FIRST.md lists beside the world's
   properties are still the Layers panel's and nobody's.
 
@@ -112,7 +125,8 @@ the rule's, and a world that wants another says so with a `set` row under
 
 Open the starter's world on the Map tab with nothing selected: under the
 world's own properties there should be three collapsed groups, **Gravity**,
-**Solid Bodies** and **Scoring**; opening them should show **Amount of
+**Solid Bodies** and **Scoring**; opening them should show **Direction of
+gravity** as a dial pointing down with `1` beside it, **Amount of
 gravity**, **Grip strength**, and **Score** with **Target score**, and the
 last should read 30, which is what the starter's block
 sets. Typing 45 there should change that block; typing 9 into the amount of
