@@ -7,9 +7,14 @@
 # trusts -- have nothing to recover, so they say what they are by passing event_type: to
 # sign_in (see config/initializers/sign_in_attribution.rb).
 #
-# A sign-in this cannot account for is recorded with a NULL event_type, meaning "not
-# determined" -- the same thing every row written before the column existed means.
+# Anything left over is reported rather than silently stored as NULL: a sign-in path
+# nobody taught this module about should surface as an alert, not as a gap in the data
+# noticed six months later.
 module Services::SignInAttribution
+  # Nothing in the request accounted for a sign-in. Raised so that the one rescue in
+  # resolve decides what happens to it, the same as any other failure there.
+  class UnattributedSignIn < RuntimeError; end
+
   EVENT_TYPE_KEY = 'cdo.sign_in.event_type'.freeze
   AUTHENTICATION_OPTION_ID_KEY = 'cdo.sign_in.authentication_option_id'.freeze
   WARDEN_EVENT_KEY = 'cdo.sign_in.warden_event'.freeze
@@ -62,7 +67,8 @@ module Services::SignInAttribution
       declared = request.env[EVENT_TYPE_KEY]
       next [declared, request.env[AUTHENTICATION_OPTION_ID_KEY]] if declared
 
-      from_warden_strategy(user, request) || from_omniauth(request) || [nil, nil]
+      from_warden_strategy(user, request) || from_omniauth(request) ||
+        raise(UnattributedSignIn, "Sign-in recorded with no attribution: #{request.path}")
     end
   end
 
@@ -70,6 +76,11 @@ module Services::SignInAttribution
   # managed test server all run as `:test`. Production never raises.
   def self.raise_attribution_errors?
     CDO.rack_env?(:test)
+  end
+
+  # True when Warden's test helpers are loaded. Named instead of inline so it can be stubbed in tests.
+  def self.warden_test_harness?
+    Warden.respond_to?(:on_next_request)
   end
 
   private_class_method def self.from_warden_strategy(user, request)
@@ -81,6 +92,9 @@ module Services::SignInAttribution
       [SignIn::REMEMBERED, nil]
     when Devise::Strategies::DatabaseAuthenticatable
       [SignIn::CREDENTIAL, email_authentication_option_id(user, strategy)]
+    when nil
+      # Warden's `login_as` test helper claims `:authentication` without running a strategy; our application never does.
+      [nil, nil] if warden_test_harness?
     end
   end
 
