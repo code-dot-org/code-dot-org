@@ -4,7 +4,6 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
-require 'cdo/github'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
@@ -156,33 +155,9 @@ namespace :test do
     run_playwright_suite(:eyes, env: env, env_secrets: secrets)
   end
 
-  # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
-  # browser execution off the daemon and onto horizontally scalable runners. The
-  # GHA run hits the same test-studio; only the execution substrate differs.
-  # Fire-and-forget: GitHub schedules and runs it, the daemon's job ends here.
-  # Non-blocking — a dispatch error warns but never raises (matches :playwright_ui).
-  timed_task_with_logging :dispatch_gha_dtt do
-    GitHub.dispatch_workflow(workflow_id: 'dtt.yml', ref: 'test')
-    ChatClient.log 'Dispatched <b>dtt.yml</b> Playwright e2e run on GitHub Actions (ref: test).'
-  rescue StandardError => exception
-    ChatClient.log "Could not dispatch dtt.yml Playwright run (non-blocking): #{exception.message}", color: 'red'
-  end
-
   # Run the deploy-time UI suites in parallel. If one suite raises, allow the
   # others to complete, then make sure this task raises.
-  #
-  # The GHA run is dispatched first because from the ensure block its ~18
-  # minutes straddled the next deploy's Puma restart, which is where its 502s
-  # in late-scheduled firefox and webkit came from.
   timed_task_with_logging :ui_all do
-    # Rescued out here too: TimedTaskWithLogging logs its start event before
-    # entering its own rescue, and that must not cost us the suites.
-    begin
-      Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
-    rescue StandardError => exception
-      ChatClient.log "Could not dispatch the GHA Playwright run (non-blocking): #{exception.message}", color: 'red'
-    end
-
     # map returns each suite's exception in order, so the rollup needs no state
     # shared across the threads.
     exceptions = Parallel.map(UI_SUITES.keys, in_threads: UI_SUITES.size) do |target|
