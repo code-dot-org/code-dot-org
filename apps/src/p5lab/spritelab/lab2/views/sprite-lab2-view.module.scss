@@ -1,4 +1,5 @@
 @use './imageTile' as tile;
+@use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '../quiet-button.scss' as buttons;
 
 .labRow {
@@ -898,6 +899,11 @@ $tab-segment-height: $tab-item-height - 2px;
   to {
     transform: rotate(360deg);
   }
+}
+
+// Visually hidden: the playspace's how-to-play text.
+.srOnly {
+  @include chrome.sr-only;
 }
 
 // The lab's own ground, which the dance generator also sits on: black in

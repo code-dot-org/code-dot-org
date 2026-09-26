@@ -46,6 +46,7 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import useGameAudio from '../audioFeedback/useGameAudio';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
@@ -896,6 +897,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeWorldRef = useRef<World | undefined>(undefined);
   const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
   const activeSceneIdRef = useRef<string | undefined>(undefined);
+  // Whether the scene the engine is running is a platformer, asked of the
+  // engine wherever a run starts: the live preview, Play's start scene, and
+  // each go-to-scene jump.
+  const [playingPlatformer, setPlayingPlatformer] = useState(false);
   useEffect(() => {
     activeWorldRef.current = worldFor(activeScene);
     activeSceneTypeRef.current = activeScene?.type;
@@ -926,6 +931,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       requestThumbnail(activeSceneIdRef.current);
     }
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
+    setPlayingPlatformer(engine.isPlatformScene());
   }, [dispatch, getCode, requestThumbnail]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
@@ -970,6 +976,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       requestThumbnail(scene.id);
       engine.runProgram(program, referencedImages, scene.type);
+      setPlayingPlatformer(engine.isPlatformScene());
     },
     [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
   );
@@ -1081,6 +1088,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       };
       dispatch(setIsRunning(true));
       engine.runProgram(program, referencedImages, scene.type);
+      setPlayingPlatformer(engine.isPlatformScene());
     },
     [dispatch, compileExternalScene]
   );
@@ -1516,11 +1524,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getScenes,
   });
 
+  // Entering Play by keyboard leaves focus on the tab button, where
+  // swallowOnControls eats every game key and the game can't be played.
+  const focusPlayspaceRef = useRef(false);
+  // Set once the audio hook below exists; the handler is defined first.
+  const unlockGameAudioRef = useRef<() => void>(() => undefined);
   const handleTabChange = useCallback(
-    (tab: Tab) => {
+    (tab: Tab, event: React.MouseEvent<HTMLElement>) => {
       // Entering Play from the tab button starts from the beginning.
       if (tab === 'Play') {
         setPlayStartSceneId(null);
+        focusPlayspaceRef.current = !isPointerClick(event);
+        // Inside the gesture, where browsers let an audio context start.
+        unlockGameAudioRef.current();
       }
       dispatch(setActiveTab(tab));
     },
@@ -1583,6 +1599,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setPlayStartSceneId(
       activeSceneId === defaultPlaySceneId ? null : activeSceneId
     );
+    unlockGameAudioRef.current();
     dispatch(setActiveTab('Play'));
   }, [dispatch, activeSceneId, defaultPlaySceneId]);
 
@@ -1615,6 +1632,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // engineReady: a level that STARTS on a hidden tab (an images-only
     // level) must pause the engine as soon as it exists.
   }, [playspaceMode, documentHidden, engineReady]);
+
+  // Once the playspace is focusable, which is the render after this one.
+  useEffect(() => {
+    if (playspaceMode === 'play' && focusPlayspaceRef.current) {
+      focusPlayspaceRef.current = false;
+      playspaceRef.current?.focus({preventScroll: true});
+    }
+  }, [playspaceMode]);
+
+  // A typed scene says so up front; a scene made before scene types counts
+  // once the engine runs it as a platformer.
+  const hasPlatformScene =
+    useMemo(() => scenes.some(scene => scene.type === 'platform'), [scenes]) ||
+    playingPlatformer;
+  const gameAudio = useGameAudio(engineRef, {
+    hasPlatformScene,
+    // A hidden document has already stopped the engine feeding it.
+    playing: engineReady && playspaceMode === 'play' && !documentHidden,
+  });
+  unlockGameAudioRef.current = gameAudio.unlock;
 
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
@@ -1659,7 +1696,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
-        settings={[...blocklySettings, themeSetting]}
+        settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
         className={classNames(
           !levelProperties.levelMode && moduleStyles.instructionsArea,
           !!levelProperties.levelMode && moduleStyles.resourceSidebar
@@ -1786,6 +1823,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           Code tab's corner preview and the Play tab's centered view. */}
           <Playspace
             boxRef={playspaceRef}
+            platformScene={playingPlatformer}
             mode={playspaceMode}
             controls={
               <PlayControls
