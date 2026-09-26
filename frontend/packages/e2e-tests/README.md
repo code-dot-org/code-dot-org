@@ -18,8 +18,10 @@ From `frontend/`:
 ## functional and eyes
 
 - **functional** — every test without the `@visual` tag. A failure stops the build.
-- **eyes** — the `@visual` tests, checked in Applitools. A failure stops nothing,
-  because a person must approve each new image.
+- **eyes** — visual differences are checked with a third-party provider,
+  Applitools. During a DTT, the test will fail if a mismatch is detected against
+  the visual baseline. For drone, differences are advisory only until we can
+  develop a PR-level visual diff strategy.
 
 ## Where these tests run
 
