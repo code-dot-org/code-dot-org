@@ -34,7 +34,7 @@ The build context is the repo root, and the Dockerfile is selected with `-f`.
 first and name it:
 
 ```
-docker build -t cdo-build:test docker/build/
+docker build -f docker/build/Dockerfile -t cdo-build:test .
 docker build -f docker/deps/Dockerfile \
   --build-arg BUILD_IMAGE=cdo-build:test \
   -t cdo-deps:test .
@@ -108,6 +108,7 @@ pyproject.toml
 uv.lock
 docker/build/Dockerfile
 docker/deps/Dockerfile
+docker/scripts/install-node.sh
 ```
 
 The key is `bundle-<sha256>` over the concatenated *contents* of those files in
@@ -140,7 +141,7 @@ out why a keyed tag did not resolve — reproduce it in a shell:
 ```
 key="bundle-$(cat .ruby-version Gemfile Gemfile.lock .python-version \
   pyproject.toml uv.lock docker/build/Dockerfile docker/deps/Dockerfile \
-  | sha256sum | cut -d' ' -f1)"
+  docker/scripts/install-node.sh | sha256sum | cut -d' ' -f1)"
 echo "$key"
 ```
 
