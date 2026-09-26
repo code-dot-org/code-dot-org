@@ -15,33 +15,20 @@ interface NamedNowPlaying extends NowPlaying {
 }
 
 /**
- * The game's background music: plays only while `playing`, and stops when
- * that ends or the lab unmounts. Any song a block names may play — a saved
- * project's music works for whoever can view it, not only its author — and
- * one that will not load clears quietly.
+ * The game's background music. The caller starts a song with playMusic and
+ * ends it with stopMusic (the hook also stops on unmount); when to allow
+ * either is the caller's decision. Any song a block names may play — a
+ * saved project's music works for whoever can view it, not only its
+ * author — and one that will not load clears quietly.
  */
-export default function useSceneMusic(
-  playing: boolean,
-  songs: MusicProjectOption[]
-) {
+export default function useSceneMusic(songs: MusicProjectOption[]) {
   const musicRef = useRef<SceneMusic | null>(null);
   const [nowPlaying, setNowPlaying] = useState<NowPlaying | null>(null);
-  // Read through a ref so the callback identity stays stable.
-  const playingRef = useRef(playing);
-  useEffect(() => {
-    playingRef.current = playing;
-  }, [playing]);
 
-  useEffect(() => {
-    if (!playing) {
-      musicRef.current?.stop();
-      setNowPlaying(null);
-    }
-  }, [playing]);
   useEffect(() => () => musicRef.current?.stop(), []);
 
   const playMusic = useCallback((channel: string) => {
-    if (!playingRef.current || !channel) {
+    if (!channel) {
       return;
     }
     const music = (musicRef.current ||= new SceneMusic());
@@ -67,6 +54,11 @@ export default function useSceneMusic(
       });
   }, []);
 
+  const stopMusic = useCallback(() => {
+    musicRef.current?.stop();
+    setNowPlaying(null);
+  }, []);
+
   // A placeholder's label is not a name; a playing song the list cannot
   // name is simply "Music".
   let named: NamedNowPlaying | null = null;
@@ -75,5 +67,5 @@ export default function useSceneMusic(
     const name = listed && !listed.unavailable ? listed.name : null;
     named = {...nowPlaying, title: name || 'Music'};
   }
-  return {nowPlaying: named, playMusic};
+  return {nowPlaying: named, playMusic, stopMusic};
 }
