@@ -1120,7 +1120,7 @@ Dashboard::Application.routes.draw do
 
     # Mutating actions kept out of the GET wildcard below: a GET would skip
     # CSRF verification.
-    api_post_only_methods = [:import_classlink_classroom]
+    api_post_only_methods = [:import_classlink_classroom, :mass_progress_reset]
     api_methods -= api_post_only_methods
 
     namespace :dashboardapi, module: :api do
