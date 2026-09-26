@@ -34,7 +34,8 @@ export interface Panel {
   fadeInOverPrevious?: boolean;
 }
 
-// Clickable box inside a panel that jumps to the panel with matching key.
+// Clickable box inside a panel that jumps to the panel with matching key,
+// or, with `url`, leaves the level for that address.
 // x, y, width are percentages of the containing panel; (x, y) is the center.
 export interface PanelLink {
   text: string;
@@ -42,6 +43,8 @@ export interface PanelLink {
   y: number;
   width?: number;
   targetKey: string;
+  // Records no progress: a link is a choice, not a completion.
+  url?: string;
 }
 
 export const DEFAULT_PANEL_LINK_WIDTH = 40;

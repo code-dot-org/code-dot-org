@@ -22,9 +22,9 @@ interface EditPanelsLinksProps {
 }
 
 // Editor for a single panel's `links` array. Renders one row per link
-// (text, x/y/width sliders, target-panel dropdown, delete) and an Add Link
-// button. Targets exclude the current panel; Add Link is disabled when no
-// other panels exist to link to.
+// (text, x/y/width sliders, target-panel dropdown, URL, delete) and an Add
+// Link button. Targets exclude the current panel; a link with a URL leaves
+// the level instead, so a single-panel level can still have links.
 const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
   panel,
   allPanels,
@@ -40,13 +40,11 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
   };
 
   const addLink = () => {
-    const firstOtherKey = otherPanels[0]?.key;
-    if (!firstOtherKey) return;
     const newLink: PanelLink = {
       text: '',
       x: DEFAULT_PANEL_LINK_X,
       y: DEFAULT_PANEL_LINK_Y,
-      targetKey: firstOtherKey,
+      targetKey: otherPanels[0]?.key ?? '',
     };
     updatePanel({...panel, links: [...links, newLink]});
   };
@@ -114,19 +112,33 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
               }
             />
           </label>
-          <SimpleDropdown
-            labelText="Target panel"
-            name={`link-target-${linkIndex}`}
-            size="s"
-            selectedValue={link.targetKey}
-            onChange={e =>
-              updateLink(linkIndex, {...link, targetKey: e.target.value})
-            }
-            items={otherPanels.map(p => ({
-              value: p.key,
-              text: `Panel ${allPanels.indexOf(p) + 1}`,
-            }))}
-          />
+          {otherPanels.length > 0 && (
+            <SimpleDropdown
+              labelText="Target panel"
+              name={`link-target-${linkIndex}`}
+              size="s"
+              selectedValue={link.targetKey}
+              onChange={e =>
+                updateLink(linkIndex, {...link, targetKey: e.target.value})
+              }
+              items={otherPanels.map(p => ({
+                value: p.key,
+                text: `Panel ${allPanels.indexOf(p) + 1}`,
+              }))}
+            />
+          )}
+          <label>
+            URL (leaves the level; overrides the target panel)
+            <input
+              value={link.url ?? ''}
+              onChange={e =>
+                updateLink(linkIndex, {
+                  ...link,
+                  url: e.target.value || undefined,
+                })
+              }
+            />
+          </label>
           <button
             type="button"
             className={moduleStyles.deleteButton}
@@ -143,7 +155,6 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
         text="Add Link"
         color="gray"
         icon="plus"
-        disabled={otherPanels.length === 0}
       />
     </div>
   );
