@@ -127,6 +127,14 @@ practice from quiz outcomes, the fan-page hub suggests a mini lesson
 from the experience slider and AI rating.  An AI-backed resolver can
 later replace the rule matching without any UI change.
 
+### Questions and student inputs
+
+Questions steps render through `QuestionFlow.tsx`: one question at a
+time — free response, multiple choice (single or check-all), or a slider
+scale.  Key-validated questions gate on the correct option with retries;
+branch options complete the step through the resolver; hub options show
+a check mark once their target has been visited.
+
 Every answer, graded or not, is recorded as an `AnswerRecord`
 (`studentInputs.ts`) in a per-(lesson, user) map at
 `dashboard/tmp/ai_lessons/inputs/<lessonId>/<userId>.json`.  Records
