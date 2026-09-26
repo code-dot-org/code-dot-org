@@ -20,6 +20,8 @@
       "require": "./dist/index.cjs"
     }
   },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build",
     "lint": "eslint .",
