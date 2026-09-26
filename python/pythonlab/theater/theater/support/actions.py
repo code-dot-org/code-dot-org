@@ -35,6 +35,7 @@ class ClearScene:
 @dataclass
 class PlaySound:
   samples: np.ndarray  # normalized float samples in [-1.0, 1.0]
+  filename: Optional[str] = None
   type: SceneActionType = SceneActionType.PLAY_SOUND
 
 

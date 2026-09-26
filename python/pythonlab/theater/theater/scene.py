@@ -147,9 +147,11 @@ class Scene:
     """Play a list of normalized samples, or a WAV file by name."""
     if isinstance(sound, str):
       samples = read_samples_from_file(sound)
+      filename = sound
     else:
       samples = as_samples(sound)
-    self._actions.append(actions.PlaySound(samples))
+      filename = None
+    self._actions.append(actions.PlaySound(samples, filename))
 
   def play_note(self, note, seconds, instrument=Instrument.PIANO):
     """Play one instrument note, cut to the given duration.

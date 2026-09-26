@@ -26,9 +26,12 @@ class Image:
   """
 
   def __init__(self, *args):
+    self._filename = None
     if len(args) == 1 and isinstance(args[0], str):
+      self._filename = args[0]
       self._pil = _load_and_fit(args[0])
     elif len(args) == 1 and isinstance(args[0], Image):
+      self._filename = args[0]._filename
       self._pil = args[0]._pil.copy()
     elif len(args) == 1 and isinstance(args[0], PILImage.Image):
       self._pil = args[0].convert("RGBA")
@@ -44,6 +47,9 @@ class Image:
 
   def get_height(self):
     return self._pil.height
+
+  def get_filename(self):
+    return self._filename
 
   def get_pixel(self, x, y):
     r, g, b, _a = self._pil.getpixel((int(round(x)), int(round(y))))
