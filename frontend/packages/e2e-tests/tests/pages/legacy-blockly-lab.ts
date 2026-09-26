@@ -192,6 +192,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       // first click can land before the dialog's onClick (closeOverlay) is
       // bound and silently no-op, leaving the overlay up; re-clicking once the
       // handler is attached clears it.
+      // A click during the panel's resize can leave the panel scrolled.
+      await waitUntilStable(this.instructionsPanel);
       await expect(async () => {
         if (await dialogOk.isVisible()) {
           await dialogOk.click();
@@ -200,6 +202,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         }
         await expect(overlay).toBeHidden({timeout: 2_000});
       }).toPass({timeout: LAB_LOAD_TIMEOUT_MS});
+      // InstructionsCSF resizes the pane on a 300ms debounce after OK closes the overlay.
+      await waitUntilStable(this.page.locator('#scroll-container'), 400);
     }
     await this.header.waitForFadeIn();
   }
