@@ -31,6 +31,13 @@ const STUDENT: UserSettings = {
   dependentStudentsCount: 0,
   ageOptions: [],
   usStateOptions: [],
+  integrations: {
+    canManageLinkedAccounts: true,
+    isGoogleClassroomStudent: false,
+    isCleverStudent: false,
+    personalAccountLinkingEnabled: true,
+    lmsName: null,
+  },
 };
 
 const DEPENDENT_TEACHER: UserSettings = {

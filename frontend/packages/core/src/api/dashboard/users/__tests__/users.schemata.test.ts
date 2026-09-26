@@ -2,6 +2,15 @@ import {describe, expect, it} from 'vitest';
 
 import {UserSettingsResponseSchema} from '../users.schemata';
 
+const INTEGRATIONS_WIRE = {
+  can_manage_linked_accounts: true,
+  is_google_classroom_student: false,
+  is_clever_student: true,
+  personal_account_linking_enabled: false,
+  lms_name: 'canvas_cloud',
+  lti_roster_sync_enabled: true,
+};
+
 const COMMON_WIRE = {
   given_name: 'Ada',
   family_name: 'Lovelace',
@@ -14,7 +23,7 @@ const COMMON_WIRE = {
   should_see_add_password_form: false,
   should_see_edit_email_link: true,
   authentication_options: [
-    {credential_type: 'email', email: 'ada@example.com'},
+    {id: 1, credential_type: 'email', email: 'ada@example.com'},
   ],
   can_change_user_type: true,
   can_delete_own_account: true,
@@ -26,6 +35,7 @@ const COMMON_WIRE = {
   dependent_students_count: 0,
   age_options: [{value: '4', text: '4'}],
   us_state_options: [{value: 'WA', text: 'Washington'}],
+  integrations: INTEGRATIONS_WIRE,
 };
 
 const TEACHER_WIRE = {
@@ -154,5 +164,46 @@ describe('UserSettingsResponseSchema educator profile keys', () => {
     expect(() =>
       UserSettingsResponseSchema.parse({...TEACHER_WIRE, educator_role: 7}),
     ).toThrow();
+  });
+});
+
+describe('UserSettingsResponseSchema integrations', () => {
+  it('camelCases the authentication option id', () => {
+    const settings = UserSettingsResponseSchema.parse(TEACHER_WIRE);
+
+    expect(settings.authenticationOptions).toEqual([
+      {id: 1, credentialType: 'email', email: 'ada@example.com'},
+    ]);
+  });
+
+  it('camelCases the integrations block', () => {
+    const settings = UserSettingsResponseSchema.parse(TEACHER_WIRE);
+
+    expect(settings.integrations).toEqual({
+      canManageLinkedAccounts: true,
+      isGoogleClassroomStudent: false,
+      isCleverStudent: true,
+      personalAccountLinkingEnabled: false,
+      lmsName: 'canvas_cloud',
+      ltiRosterSyncEnabled: true,
+    });
+  });
+
+  it('rejects a payload without the integrations block', () => {
+    expect(() =>
+      UserSettingsResponseSchema.parse({
+        ...TEACHER_WIRE,
+        integrations: undefined,
+      }),
+    ).toThrow();
+  });
+
+  it('leaves the roster sync setting absent when the payload omits it', () => {
+    const settings = UserSettingsResponseSchema.parse({
+      ...STUDENT_WIRE,
+      integrations: {...INTEGRATIONS_WIRE, lti_roster_sync_enabled: undefined},
+    });
+
+    expect(settings.integrations).not.toHaveProperty('ltiRosterSyncEnabled');
   });
 });
