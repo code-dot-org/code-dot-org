@@ -89,9 +89,8 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
 /**
  * The Resolution row's text. Pixel art leads with its logical size — the
  * grid the 1px brush paints on, which is the resolution we treat the image
- * as — with the stored size in parentheses; the parenthetical goes away if
- * pixel art is ever stored at its logical size (which needs the engine to
- * upscale with hard edges).
+ * as. Assets stored before pixel art was kept at its logical size carry an
+ * upscale, shown in parentheses.
  */
 export function resolutionLabel(
   resolution: {x: number; y: number},
@@ -111,6 +110,8 @@ export interface AlternativeImage {
   id: string;
   thumb: string;
   selected: boolean;
+  /** Pixel art: the tile upscales the thumb with hard edges. */
+  pixelGridSize?: number;
 }
 
 /**
@@ -412,7 +413,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                         aria-pressed={alt.selected}
                         onClick={() => onSelectAlternative?.(alt.id)}
                       >
-                        <img src={alt.thumb} alt="" />
+                        <img
+                          src={alt.thumb}
+                          alt=""
+                          className={classNames(
+                            alt.pixelGridSize && moduleStyles.pixelArt
+                          )}
+                        />
                       </button>
                     ))}
                   </div>

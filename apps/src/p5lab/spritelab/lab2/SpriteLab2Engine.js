@@ -851,7 +851,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(scoped, animationNames(animationList))
+        await trimAnimationListImages(scoped, animationNames(animationList), {
+          forEngine: true,
+        })
       ),
       {multiFrame: true}
     );
@@ -892,7 +894,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(single, animationNames(list))
+        await trimAnimationListImages(single, animationNames(list), {
+          forEngine: true,
+        })
       ),
       {multiFrame: true}
     );

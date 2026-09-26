@@ -481,6 +481,11 @@
 
 .alternativeThumb {
   @include tile.image-tile(72px);
+
+  // A pixel-art alternative stored at its logical size upscales to the tile.
+  img.pixelArt {
+    image-rendering: pixelated;
+  }
 }
 
 .alternativeSelected {
