@@ -1,0 +1,76 @@
+// The panel is MUI Paper; its surface (background, border, no radius or shadow)
+// and the backdrop come from the MuiDialog theme entry. This file is the panel's
+// layout and the close X. Rules carry two classes so they outrank MUI's
+// single-class emotion rules, which the host page injects after this sheet.
+
+// The legacy panel is a plain block, so a child's leading margin collapses up
+// to the panel border and grows it. MUI Paper is a scrolling flex column, which
+// contains that margin and lays out consumers' children as flex items, and
+// caps itself at the viewport minus 64px where the legacy panel has no cap.
+// muiDialog.module.scss puts flex back for the standard dialog with a
+// three-class selector, so load order does not matter.
+.customDialog:global(.MuiDialog-paper) {
+  position: relative;
+  display: block;
+  max-height: none;
+  overflow: visible;
+}
+
+// Geometry and colors of the legacy CloseButton at size "l".
+.customDialog .customDialogCloseButton {
+  position: absolute;
+  inset-block-start: 8px;
+  inset-inline-end: 8px;
+  // min-* too: the IconButton theme's medium size sets min-width/min-height
+  // 2.5rem, which would beat width/height alone.
+  width: 1.5625rem;
+  height: 1.5625rem;
+  min-width: 1.5625rem;
+  min-height: 1.5625rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  transition: color 0.2s ease-in-out;
+
+  i {
+    width: 1.5625rem;
+    font-size: 1.25rem;
+    line-height: 125%;
+  }
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}
+
+.customDialog .customDialogCloseButtonOnLight {
+  color: var(--text-neutral-quaternary);
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  &:active {
+    color: var(--text-neutral-quaternary);
+  }
+}
+
+.customDialog .customDialogCloseButtonOnDark {
+  color: var(--text-neutral-placeholder);
+
+  &:hover {
+    color: var(--text-neutral-quaternary);
+  }
+
+  &:active {
+    color: var(--text-neutral-placeholder);
+  }
+}

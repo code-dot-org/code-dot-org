@@ -31,10 +31,14 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
  *  * (see ./__tests__/CustomDialog.test.tsx)
  *  * (?) passes accessibility checks;
  *
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```Deprecated```
  *
  * Design System: CustomDialog Component.
  * Renders CustomDialog with content passed through props.
+ *
+ * @deprecated Use `MuiCustomDialog` from
+ * `@code-dot-org/component-library/dialog`, which takes the same props on top
+ * of MUI `Dialog`. See ./README.md.
  */
 
 const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({

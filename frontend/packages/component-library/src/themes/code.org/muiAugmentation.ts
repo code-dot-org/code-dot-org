@@ -1,14 +1,16 @@
 /**
  * Design-system MUI module augmentations: Button, IconButton, and
  * Breadcrumbs custom sizes, colors, and variants; anchor attrs on
- * ButtonOwnProps; Typography variants matching the design-system type scale;
- * and the MuiFooter custom component slot declarations.
+ * ButtonOwnProps; `data-theme` on the Tooltip and Dialog paper slots;
+ * Typography variants matching the design-system type scale; and the
+ * MuiFooter custom component slot declarations.
  */
 
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
 import '@mui/material/Tooltip';
+import '@mui/material/Dialog';
 
 import type {CSSInterpolation, Theme} from '@mui/material/styles';
 
@@ -72,6 +74,14 @@ declare module '@mui/material/Breadcrumbs' {
 // pass the theme to its slot explicitly. See styleOverrides/tooltip.ts.
 declare module '@mui/material/Tooltip' {
   interface TooltipTooltipSlotPropsOverrides {
+    'data-theme'?: DataThemeMode;
+  }
+}
+
+// Dialog Paper portals out of any surrounding `data-theme` subtree as well;
+// src/dialog forwards the theme to the paper slot. See styleOverrides/dialog.ts.
+declare module '@mui/material/Dialog' {
+  interface DialogPaperSlotPropsOverrides {
     'data-theme'?: DataThemeMode;
   }
 }
