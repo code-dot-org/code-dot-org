@@ -897,6 +897,10 @@ Dashboard::Application.routes.draw do
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+    # Unlinked teacher tool: builds the roster CSV that
+    # /admin/mass-delete-student-progress consumes.
+    get '/export_student_data', to: 'export_student_data#show'
+
     get '/experiments', to: 'experiments#index'
 
     # The set/disable experiment routes are state-mutating GETs, kept only so
