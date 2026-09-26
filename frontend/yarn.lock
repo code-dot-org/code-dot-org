@@ -2279,7 +2279,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/shared-constants@workspace:packages/shared-constants":
+"@code-dot-org/shared-constants@workspace:*, @code-dot-org/shared-constants@workspace:packages/shared-constants":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/shared-constants@workspace:packages/shared-constants"
   dependencies:
@@ -2358,6 +2358,7 @@ __metadata:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/shared-constants": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"

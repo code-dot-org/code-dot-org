@@ -1,4 +1,5 @@
-import {Chip, Typography} from '@mui/material';
+import {Box, Button, Chip, Typography} from '@mui/material';
+import {visuallyHidden} from '@mui/utils';
 import type {ReactNode} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -9,19 +10,21 @@ import {linkedAccountProvider} from '../util/linkedAccountProviders';
 import styles from './LinkedAccountRow.module.css';
 
 /**
- * One provider card: identity, badges and status on the left; action and
- * connected status on the right.
+ * One provider card: identity, badges and status on the left; help link,
+ * action and connected status on the right.
  */
 export default function LinkedAccountRow({
   credentialType,
   name,
   status,
+  learnMoreUrl,
   connected = false,
   action,
 }: {
   credentialType: string;
   name: string;
   status: ReactNode;
+  learnMoreUrl?: string;
   connected?: boolean;
   action?: ReactNode;
 }) {
@@ -57,6 +60,27 @@ export default function LinkedAccountRow({
         </Typography>
       </div>
       <div className={styles.actions}>
+        {learnMoreUrl && (
+          <Button
+            variant="text"
+            color="tertiary"
+            href={learnMoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName="circle-question"
+                iconStyle="solid"
+                aria-hidden
+              />
+            }
+          >
+            Learn more
+            <Box component="span" sx={visuallyHidden}>
+              {` about ${name} (opens in a new tab)`}
+            </Box>
+          </Button>
+        )}
         {action}
         {connected && (
           <Chip

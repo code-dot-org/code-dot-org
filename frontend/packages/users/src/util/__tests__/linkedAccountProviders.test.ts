@@ -14,6 +14,18 @@ describe('linkedAccountProvider', () => {
     ]);
   });
 
+  it('links Clever to its help article', () => {
+    expect(linkedAccountProvider('clever')?.learnMoreUrl).toMatch(
+      /support\.code\.org.*Clever/,
+    );
+  });
+
+  it('has no help article for Microsoft', () => {
+    expect(linkedAccountProvider('microsoft_v2_auth')?.learnMoreUrl).toBe(
+      undefined,
+    );
+  });
+
   it('returns nothing for a provider the page does not list', () => {
     expect(linkedAccountProvider('twitter')).toBeUndefined();
   });
@@ -36,8 +48,8 @@ describe('linkedAccountName', () => {
 });
 
 describe('lmsPlatform', () => {
-  it('names Schoology', () => {
-    expect(lmsPlatform('schoology')?.name).toBe('Schoology');
+  it('links Schoology to its help article', () => {
+    expect(lmsPlatform('schoology')?.learnMoreUrl).toMatch(/Schoology/);
   });
 
   it('returns nothing without an LMS', () => {
