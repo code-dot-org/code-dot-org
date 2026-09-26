@@ -244,6 +244,27 @@ function makeSplitChunks(appsEntries) {
     ...Object.keys(SHARED_ENTRIES),
   ]);
   const studioRoutesPath = p('generated-scripts/studioRoutes.js');
+  const nodeModulesPattern = /[\\/]node_modules[\\/]/;
+
+  const isNodeModulesModule = module => {
+    const name = module.nameForCondition();
+    return !!name && nodeModulesPattern.test(name);
+  };
+
+  const isCodeStudioSharedModule = (module, {chunkGraph}) => {
+    let codeStudioCount = 0;
+    let totalCount = 0;
+    for (const chunk of chunkGraph.getModuleChunksIterable(module)) {
+      if (codeStudioNames.has(chunk.name)) {
+        codeStudioCount++;
+        totalCount++;
+      } else if (appsEntryNames.has(chunk.name)) {
+        totalCount++;
+      }
+    }
+    return codeStudioCount >= 2 || totalCount >= appsEntryNames.size + 1;
+  };
+
   return {
     // Override the default limit of 3 concurrent downloads on page load,
     // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
@@ -258,10 +279,18 @@ function makeSplitChunks(appsEntries) {
       },
       // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
       // "code-studio-common" chunk.
+      // node_modules code goes to code-studio-common-deps instead, because
+      // CloudFront does not compress files over 10MB.
+      // A page that loads code-studio-common.js must also load
+      // code-studio-common-deps.js, or its entry code silently never runs.
+      // Groups sharing a chunk name fail with "conflicts with existing chunk".
       'code-studio-common': {
         name: 'code-studio-common',
         minChunks: 2,
-        chunks: chunk => codeStudioNames.has(chunk.name),
+        chunks: chunk => codeStudioAndApps.has(chunk.name),
+        test: (module, context) =>
+          !isNodeModulesModule(module) &&
+          isCodeStudioSharedModule(module, context),
         priority: 10,
       },
       // With just the cacheGroups listed above, we end up with many
@@ -286,11 +315,15 @@ function makeSplitChunks(appsEntries) {
       // cacheGroups will go away.
       //
       // For more information see: https://webpack.js.org/guides/code-splitting/
-      'code-studio-multi': {
-        name: 'code-studio-common',
-        minChunks: appsEntryNames.size + 1,
+      // isCodeStudioSharedModule now does this job for both cache groups.
+      'code-studio-common-deps': {
+        name: 'code-studio-common-deps',
+        minChunks: 2,
         chunks: chunk => codeStudioAndApps.has(chunk.name),
-        priority: 20,
+        test: (module, context) =>
+          isNodeModulesModule(module) &&
+          isCodeStudioSharedModule(module, context),
+        priority: 11,
       },
       vendors: {
         name: 'vendors',
