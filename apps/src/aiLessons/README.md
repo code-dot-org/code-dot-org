@@ -215,6 +215,18 @@ Beyond answers, the system records HOW students work:
 - `starterPrompt` / `aiPrompting` are Web Lab 2 only; Music steps
   ignore them.
 
+Two hand-authored exemplar lessons live in `dashboard/config/ai_lessons/`
+and are the fixtures development validates against:
+
+- `musical-artist-webpage.json` — project-based HTML/CSS lesson with
+  skill-practice segments, project checkpoints, and a branching check-in.
+- `adaptive-fan-page.json` — AI-partnership lesson (9-12) with a
+  diagnostic, student prompting, a hub of mini lessons, a debugging
+  sidequest, and a project checklist.
+
+They're validated (JSON shape, unique ids, resolvable branch targets) by
+`apps/test/unit/aiLessons/lessonFormatTest.ts`.
+
 ## Current functionality
 
 ### Authoring (`/ai_lessons/new`, `/ai_lessons/:id/edit`)
@@ -307,6 +319,42 @@ GET    /ai_lessons/:id/inputs                     # this user's question answers
 PUT    /ai_lessons/:id/inputs                     # write this user's answers
 ```
 
+## Future ideas (where this could go)
+
+1. **Fully adaptive progression.** Checkpoints are created on the fly
+   based on how the student has been doing in earlier ones. The
+   curriculum author specifies the learning objective and a few
+   "tentpoles" (a sample project, key concepts to cover) and the AI
+   fills in the intermediate checkpoints as the student moves through
+   the lesson. The tutor would have an extra capability — generate the
+   next checkpoint — alongside its current evaluation role.
+
+2. **Fall back to fully static.** Levelbuilders can still author every
+   checkpoint in detail so a lesson can run end-to-end as a deterministic
+   experience, no AI in the loop at runtime. The same data model
+   (checkpoints, success criteria) supports both — the difference is
+   whether the AI is allowed to write/edit/judge or whether it stays
+   out of the way.
+
+3. **Mode toggle (static ↔ guided ↔ adaptive).** Either the levelbuilder
+   or the teacher picks the experience for a given class. Same lesson
+   plan, three different runtime modes:
+   - *Static*: instructions and pass/fail are pre-authored, no LLM at
+     runtime.
+   - *Guided* (current prototype): authoring is AI-assisted, runtime is
+     AI-tutored, but the checkpoint structure is fixed at save time.
+   - *Adaptive*: checkpoints are generated on the fly within the
+     tentpoles.
+
+4. **Folding into the broader curriculum model.** What does the AI
+   Lesson concept look like inside a unit or course? Should AI Lessons
+   become a flavour of `Lesson`, or a separate model that participates
+   in `Unit`/`Script` membership some other way? When a lesson sits
+   inside a bigger grouping, how do we feed unit-level context (prior
+   concepts, vocabulary, programming environment chosen for the unit)
+   to the generator and the tutor? Open questions; out of scope for
+   the prototype.
+
 ## Parking lot / caveats / known limits
 
 ### Cleanup wanted
@@ -333,6 +381,14 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
   `sourceMode: 'sandbox'` for a clean slate) and the runtime honours
   all three, but only via hand-edited JSON — the editor doesn't expose
   them yet.
+- **Organise into subdirectories.** Likely shape:
+  - `apps/src/aiLessons/author/` — author page, lesson generator,
+    image generator
+  - `apps/src/aiLessons/student/` — student page, tutor, progress
+  - `apps/src/aiLessons/teacher/` — progress roll-up
+  - `apps/src/aiLessons/lab/` — EmbeddedLab + ProjectManager shim
+  - `apps/src/aiLessons/shared/` — types, api client, capabilities
+
 ### Hackathon-y caveats
 
 - **Filesystem storage.** All persistence is local JSON under
@@ -352,6 +408,7 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
 - **No CSRF on the image GET / sources GET / progress GET.** Reads are
   all unauthenticated within the user's session; writes use Rails CSRF
   via `HttpClient.put(..., true, ...)`.
+- **No tests.** None at all. Anywhere.
 - **Old lessons may have a stale shape.** v1 (checkpoints) JSONs are
   migrated to steps on every load but never rewritten on disk; they
   round-trip through the editor as v2 the next time they're saved.
