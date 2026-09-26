@@ -17,6 +17,22 @@ import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
 
+function addPrivatePropertyNames(object, propertyNames) {
+  let current = object;
+  while (
+    current &&
+    current !== Object.prototype &&
+    current !== Function.prototype
+  ) {
+    for (const propertyName of Object.getOwnPropertyNames(current)) {
+      if (propertyName.startsWith('_')) {
+        propertyNames.add(propertyName);
+      }
+    }
+    current = Object.getPrototypeOf(current);
+  }
+}
+
 /**
  * An instantiable P5Wrapper class that wraps p5 and p5play and patches it in
  * specific places to enable GameLab functionality
@@ -433,7 +449,7 @@ P5Wrapper.prototype.getCustomMarshalGlobalProperties = function () {
 };
 
 P5Wrapper.prototype.getCustomMarshalBlockedProperties = function () {
-  return [
+  const blockedProperties = new Set([
     '_curElement',
     '_elements',
     '_userNode',
@@ -462,7 +478,16 @@ P5Wrapper.prototype.getCustomMarshalBlockedProperties = function () {
     'valueOf',
     'watch',
     'writeFile',
-  ];
+  ]);
+
+  addPrivatePropertyNames(this.p5, blockedProperties);
+  this.getCustomMarshalObjectList().forEach(({instance}) => {
+    if (instance && instance.prototype) {
+      addPrivatePropertyNames(instance.prototype, blockedProperties);
+    }
+  });
+
+  return Array.from(blockedProperties);
 };
 
 P5Wrapper.prototype.getCustomMarshalObjectList = function () {
