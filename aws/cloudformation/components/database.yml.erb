@@ -307,6 +307,7 @@
       DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretWriter
+      # KEEP THESE PERMISSIONS IN SYNC with Cdo::SqlUserProvisioner in `lib/cdo/sql_user_provisioner.rb`
       Privileges:
         - SELECT
         - INSERT
@@ -342,6 +343,7 @@
       DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
+      # KEEP THESE PERMISSIONS IN SYNC with Cdo::SqlUserProvisioner in `lib/cdo/sql_user_provisioner.rb`
       Privileges: ['SELECT']
 <% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
   ZeroETLIntegration:
