@@ -99,6 +99,9 @@ export async function dataURIToBlob(uri) {
 /**
  * Given an input of a supported type, converts it to an HTMLImageElement.
  *
+ * A Blob input's object URL is revoked once the image loads: the element
+ * draws fine (the bitmap is decoded), but its src can't be fetched again.
+ *
  * @param {Blob|HTMLImageElement|ImageURI} input
  * @returns {Promise<HTMLImageElement>}
  */
@@ -112,7 +115,7 @@ export async function toImage(input) {
 
   if (input instanceof Blob) {
     src = URL.createObjectURL(input);
-    cleanup = () => URL.revokeObjectURL(input);
+    cleanup = () => URL.revokeObjectURL(src);
   } else if (typeof input === 'string') {
     src = input;
   } else {
@@ -183,7 +186,12 @@ export async function toImageData(input) {
  */
 export function downloadBlobAsPng(blob, filename = 'image.png') {
   const download = document.createElement('a');
-  download.href = URL.createObjectURL(blob);
+  const url = URL.createObjectURL(blob);
+  download.href = url;
   download.download = filename;
   download.click();
+  // Deliberately never revoked: an anchor download dereferences the URL at
+  // a time the page can't observe (on iOS it waits on the user's download
+  // prompt), so there is no safe revocation point. The cost is one blob
+  // kept per user-initiated download.
 }
