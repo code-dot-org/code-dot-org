@@ -1,4 +1,5 @@
-import {Typography} from '@mui/material';
+import {Markdown} from '@code-dot-org/markdown';
+import {Tooltip, Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
@@ -118,6 +119,41 @@ describe('LessonOverview', () => {
     currentLocaleStub.restore();
   });
 
+  it('resolves purpose vocabulary against the lesson definitions', () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      purpose: 'a [v digital_footprint/csd/2021] reference',
+      vocabularyDefinitions: {
+        'digital_footprint/csd/2021': {
+          word: 'digital footprint',
+          definition: 'The collected information about an individual.',
+        },
+      },
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+
+    // The server ships the reference unsubstituted; the extension resolves it.
+    const purpose = wrapper.find(Markdown).at(1);
+    expect(purpose.props().content).to.contain(
+      '[v digital_footprint/csd/2021]'
+    );
+
+    const vocabulary = purpose
+      .props()
+      .extensions.find(extension => extension.name === 'vocabularyDefinition');
+    // The term renders as a design-system tooltip trigger carrying the
+    // definition; the tooltip itself only mounts on hover or focus.
+    const Vocab = vocabulary.components.vocab;
+    const rendered = shallow(<Vocab>digital_footprint/csd/2021</Vocab>);
+    expect(rendered.type()).to.equal(Tooltip);
+    expect(rendered.props().title).to.equal(
+      'The collected information about an individual.'
+    );
+    expect(rendered.text()).to.equal('digital footprint');
+  });
+
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
@@ -129,28 +165,40 @@ describe('LessonOverview', () => {
     expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
-    const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
-    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
-      'Lesson Overview'
-    );
-    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
-      'The purpose of the lesson is for people to learn'
-    );
-    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain(
-      'Assessment Opportunities Details'
-    );
-    expect(enhancedSafeMarkdowns.at(3).props().markdown).to.contain('- One');
+    // Everything on this page renders through the new markdown component now.
+    // Matched by content rather than position, so adding a field or reordering
+    // the page does not rewrite the assertions.
+    const contents = wrapper.find(Markdown).map(m => m.props().content);
+    const rendersMarkdown = expected =>
+      contents.some(content => content.includes(expected));
 
-    const inlineMarkdowns = wrapper.find('InlineMarkdown');
+    expect(rendersMarkdown('Lesson Overview'), 'overview').to.be.true;
+    expect(
+      rendersMarkdown('The purpose of the lesson is for people to learn'),
+      'purpose'
+    ).to.be.true;
+    expect(
+      rendersMarkdown('Assessment Opportunities Details'),
+      'assessment opportunities'
+    ).to.be.true;
+    expect(rendersMarkdown('- One'), 'preparation').to.be.true;
+    expect(rendersMarkdown('what students will learn'), 'objective').to.be.true;
+    expect(
+      rendersMarkdown('**Algorithm** - A list of steps to finish a task.'),
+      'vocabulary'
+    ).to.be.true;
 
-    // The first contains the objective
-    expect(inlineMarkdowns.at(0).props().markdown).to.contain(
-      'what students will learn'
-    );
-    // The second contains the vocabulary
-    expect(inlineMarkdowns.at(1).props().markdown).to.contain(
-      '**Algorithm** - A list of steps to finish a task.'
-    );
+    // The legacy renderers are gone from this page.
+    expect(wrapper.find('EnhancedSafeMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('InlineMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
+
+    // The one-liners that sit inside a sentence or a list item render inline.
+    const inlineContents = wrapper
+      .find(Markdown)
+      .filterWhere(m => m.props().inline)
+      .map(m => m.props().content);
+    expect(inlineContents).to.have.lengthOf(3);
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);
 

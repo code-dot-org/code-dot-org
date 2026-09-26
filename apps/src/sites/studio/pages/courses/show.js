@@ -29,7 +29,6 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
-import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(showCourseOverview);
@@ -113,7 +112,6 @@ function showCourseOverview() {
       legacyReactDomRender: true,
     }
   );
-  tooltipifyVocabulary();
   displayDifferentiationChat(scriptData);
 }
 

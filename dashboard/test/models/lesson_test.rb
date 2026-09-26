@@ -438,16 +438,101 @@ class LessonTest < ActiveSupport::TestCase
       purpose: 'example purpose'
     )
 
+    # Every lesson plan field resolves its own vocabulary now; only the
+    # resource links are substituted here.
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.overview)
+      with(lesson.overview, resolve_vocab: false)
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.purpose)
+      with(lesson.purpose, resolve_vocab: false)
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.preparation)
+      with(lesson.preparation, resolve_vocab: false)
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.assessment_opportunities)
+      with(lesson.assessment_opportunities, resolve_vocab: false)
 
     lesson.summarize_for_lesson_show(create(:user), false)
+  end
+
+  test 'lesson show summary includes definitions for the vocabulary its client-resolved fields reference' do
+    course_version = create(:course_version, course_offering: create(:course_offering, key: 'test-course'), key: '1999')
+    create(
+      :vocabulary,
+      key: 'first_vocab',
+      word: "First Vocabulary",
+      definition: "The first of the vocabulary entries.",
+      course_version: course_version
+    )
+    create(
+      :vocabulary,
+      key: 'second_vocab',
+      word: "Second Vocabulary",
+      definition: "The second of the vocabulary entries.",
+      course_version: course_version
+    )
+    create(
+      :vocabulary,
+      key: 'third_vocab',
+      word: "Third Vocabulary",
+      definition: "The third of the vocabulary entries.",
+      course_version: course_version
+    )
+    # One reference per source, so each is proven independently.
+    lesson = create(
+      :lesson,
+      lesson_group: create(:lesson_group),
+      purpose: "a [v second_vocab/test-course/1999] reference",
+      preparation: "and a [v third_vocab/test-course/1999] one"
+    )
+    lesson_activity = create(:lesson_activity, lesson: lesson)
+    create(
+      :vocabulary,
+      key: 'fourth_vocab',
+      word: "Fourth Vocabulary",
+      definition: "The fourth of the vocabulary entries.",
+      course_version: course_version
+    )
+    create(
+      :activity_section,
+      lesson_activity: lesson_activity,
+      description: "a [v first_vocab/test-course/1999] reference and an unresolvable [v missing_vocab/test-course/1999] one",
+      tips: [{"type" => "teachingTip", "markdown" => "and a [v fourth_vocab/test-course/1999] one"}]
+    )
+
+    summary = lesson.reload.summarize_for_lesson_show(create(:user), false)
+
+    expected = {
+      'second_vocab/test-course/1999' => {word: "Second Vocabulary", definition: "The second of the vocabulary entries."},
+      'third_vocab/test-course/1999' => {word: "Third Vocabulary", definition: "The third of the vocabulary entries."},
+      'first_vocab/test-course/1999' => {word: "First Vocabulary", definition: "The first of the vocabulary entries."},
+      'fourth_vocab/test-course/1999' => {word: "Fourth Vocabulary", definition: "The fourth of the vocabulary entries."},
+    }
+    assert_equal expected, summary[:vocabularyDefinitions]
+    # Both fields ship their references for the client to resolve.
+    assert_equal "a [v second_vocab/test-course/1999] reference", summary[:purpose]
+    assert_equal "and a [v third_vocab/test-course/1999] one", summary[:preparation]
+  end
+
+  test 'rollup summary ships the definitions for its client-resolved fields' do
+    course_version = create(:course_version, course_offering: create(:course_offering, key: 'test-course'), key: '1999')
+    create(
+      :vocabulary,
+      key: 'first_vocab',
+      word: "First Vocabulary",
+      definition: "The first of the vocabulary entries.",
+      course_version: course_version
+    )
+    lesson = create(
+      :lesson,
+      lesson_group: create(:lesson_group),
+      preparation: "print the [v first_vocab/test-course/1999] handout"
+    )
+
+    summary = lesson.reload.summarize_for_rollup(create(:user))
+
+    assert_equal "print the [v first_vocab/test-course/1999] handout", summary[:preparation]
+    expected = {
+      'first_vocab/test-course/1999' => {word: "First Vocabulary", definition: "The first of the vocabulary entries."},
+    }
+    assert_equal expected, summary[:vocabularyDefinitions]
   end
 
   test 'lesson show summary retrieves translations' do

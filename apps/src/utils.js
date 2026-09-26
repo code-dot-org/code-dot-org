@@ -1,5 +1,4 @@
 import Immutable from 'immutable';
-import $ from 'jquery';
 import md5 from 'md5';
 import RGBColor from 'rgbcolor';
 
@@ -864,12 +863,6 @@ export function hashString(str) {
  * MarkdownPreprocessor
  * @see https://getbootstrap.com/2.3.2/javascript.html#tooltips
  */
-export function tooltipifyVocabulary() {
-  $('.vocab').each(function () {
-    $(this).tooltip({placement: 'bottom'});
-  });
-}
-
 export function isBlank(str) {
   return !!(!str || str.trim() === '');
 }
