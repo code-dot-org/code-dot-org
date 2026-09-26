@@ -97,6 +97,35 @@ module Cdo
       env[:splat_path_info]
     end
 
+    def onetrust_consent_data
+      @onetrust_consent_data ||= begin
+        Rack::Utils.parse_query(cookies['OptanonConsent'])
+      rescue ArgumentError
+        {}
+      end
+    end
+
+    # Gets the active OneTrust consent group IDs.
+    #
+    # @return [Set<String>] active OneTrust consent group IDs
+    def onetrust_active_groups
+      @onetrust_active_groups ||= onetrust_consent_data.
+        fetch('groups', '').
+        to_s.
+        split(',').
+        filter_map {_1.end_with?(':1') && _1.delete_suffix(':1')}.
+        to_set
+    end
+
+    # Checks whether the OneTrust Performance Cookies category (C0002) is active.
+    #
+    # @note This consent category controls whether Statsig cookies may be set.
+    # @return [Boolean] true if Performance Cookies consent is active, false otherwise
+    def onetrust_performance_cookies_allowed?
+      return true if CDO.rack_env?(:development)
+      onetrust_active_groups.include?('C0002')
+    end
+
     # Statsig stable ID for use of anonymous (signed-out) user tracking.
     #
     # @see apps/src/metrics/statsigHelpers.js
@@ -104,14 +133,21 @@ module Cdo
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
       @statsig_stable_id ||= begin
-        # This cookie is used by the Statsig SDK for both JS and Ruby.
-        cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+        storage_key = SharedConstants::STATSIG_STABLE_ID_KEY
 
-        if cookies_stable_id.is_a?(String) && !cookies_stable_id.empty?
-          session[SharedConstants::STATSIG_STABLE_ID_KEY] = cookies_stable_id
-        end
+        stable_id =
+          # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
+          if cookies[storage_key] && !cookies[storage_key].empty? && onetrust_performance_cookies_allowed?
+            cookies[storage_key]
+          elsif session[storage_key] && !session[storage_key].empty?
+            session[storage_key]
+          else
+            Cdo::AnonUserId.generate
+          end
 
-        session[SharedConstants::STATSIG_STABLE_ID_KEY] ||= Cdo::AnonUserId.generate
+        session[storage_key] = stable_id unless session[storage_key] == stable_id
+
+        session[storage_key]
       end
     end
 

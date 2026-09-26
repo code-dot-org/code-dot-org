@@ -1,11 +1,119 @@
+import cookies from 'js-cookie';
 import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {formatUserId} from '@cdo/apps/metrics/statsigHelpers';
+import {
+  findOrCreateStableId,
+  formatUserId,
+} from '@cdo/apps/metrics/statsigHelpers';
 import * as utils from '@cdo/apps/utils';
+import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('StatsigReporter', () => {
+  describe('findOrCreateStableId', () => {
+    const nativeRandomUUID = window.crypto.randomUUID;
+    let getCookieStub;
+    let isDevelopmentEnvironmentStub;
+    let removeCookieStub;
+    let setCookieStub;
+
+    beforeAll(() => {
+      if (!nativeRandomUUID) {
+        Object.defineProperty(window.crypto, 'randomUUID', {
+          configurable: true,
+          value: utils.createUuid,
+        });
+      }
+    });
+
+    afterAll(() => {
+      if (!nativeRandomUUID) {
+        delete window.crypto.randomUUID;
+      }
+    });
+
+    beforeEach(() => {
+      window.OnetrustActiveGroups = 'C0002';
+      getCookieStub = stub(cookies, 'get');
+      removeCookieStub = stub(cookies, 'remove');
+      setCookieStub = stub(cookies, 'set');
+    });
+
+    afterEach(() => {
+      getCookieStub.restore();
+      isDevelopmentEnvironmentStub?.restore();
+      removeCookieStub.restore();
+      setCookieStub.restore();
+      localStorage.clear();
+      delete window.OnetrustActiveGroups;
+    });
+
+    function expectCookieSet(stableId) {
+      expect(setCookieStub).to.have.been.calledWith(
+        StatsigStableIdKey,
+        stableId
+      );
+      expect(setCookieStub.firstCall.args[2]).to.deep.equal({
+        path: '/',
+        domain: '.code.org',
+        sameSite: 'Lax',
+        secure: false,
+        expires: 365,
+      });
+    }
+
+    it('uses the existing cookie', () => {
+      const stableId = window.crypto.randomUUID();
+      getCookieStub.returns(stableId);
+
+      expect(findOrCreateStableId()).to.equal(stableId);
+      expectCookieSet(stableId);
+    });
+
+    it('creates a cookie without restoring an ID from local storage', () => {
+      const formerStableId = window.crypto.randomUUID();
+      localStorage.setItem(StatsigStableIdKey.toUpperCase(), formerStableId);
+      localStorage.setItem('STATSIG_LOCAL_STORAGE_STABLE_ID', formerStableId);
+
+      const stableId = findOrCreateStableId();
+
+      expect(stableId).not.to.equal(formerStableId);
+      expectCookieSet(stableId);
+    });
+
+    it('creates a cookie without consent in development', () => {
+      window.OnetrustActiveGroups = '';
+
+      const stableId = findOrCreateStableId();
+
+      expect(stableId).not.to.be.undefined;
+      expectCookieSet(stableId);
+      expect(removeCookieStub).not.to.have.been.called;
+    });
+
+    it('removes stored IDs when performance cookies are not allowed', () => {
+      isDevelopmentEnvironmentStub = stub(
+        utils,
+        'isDevelopmentEnvironment'
+      ).returns(false);
+      window.OnetrustActiveGroups = '';
+      localStorage.setItem(
+        StatsigStableIdKey.toUpperCase(),
+        window.crypto.randomUUID()
+      );
+
+      expect(findOrCreateStableId()).to.be.undefined;
+      expect(removeCookieStub).to.have.been.calledWith(StatsigStableIdKey, {
+        path: '/',
+        domain: '.code.org',
+      });
+      expect(localStorage.getItem(StatsigStableIdKey.toUpperCase())).to.be.null;
+      expect(getCookieStub).not.to.have.been.called;
+      expect(setCookieStub).not.to.have.been.called;
+    });
+  });
+
   describe('formatUserId', () => {
     it('prepends environment in test', () => {
       stub(utils, 'getEnvironment').returns('test');
