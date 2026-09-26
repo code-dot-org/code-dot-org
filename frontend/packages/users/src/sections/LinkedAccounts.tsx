@@ -1,6 +1,6 @@
 import {Box, Button, Typography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
-import {useId, type ReactNode} from 'react';
+import {useId, useState, type ReactNode} from 'react';
 
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -14,12 +14,14 @@ import {CapLinks} from '@code-dot-org/shared-constants';
 import AccountLinkForm from '../components/AccountLinkForm';
 import EmailStatus from '../components/EmailStatus';
 import LinkedAccountRow from '../components/LinkedAccountRow';
+import ManageLinkedAccountModal from '../components/ManageLinkedAccountModal';
 import {
   linkedAccountName,
   linkedAccountProvider,
 } from '../util/linkedAccountProviders';
 import {
   connectedAccounts,
+  disconnectBlockedMessage,
   isConnectLocked,
   lockedConnectMessage,
   unconnectedProviders,
@@ -50,18 +52,55 @@ function Group({
 
 function ConnectedAccount({
   option,
+  settings,
   integrations,
 }: {
   option: AuthenticationOptionSummary;
+  settings: UserSettings;
   integrations: IntegrationsSettings;
 }) {
+  const [manageOpen, setManageOpen] = useState(false);
+  const name = linkedAccountName(option.credentialType, integrations.lmsName);
+
   return (
-    <LinkedAccountRow
-      credentialType={option.credentialType}
-      name={linkedAccountName(option.credentialType, integrations.lmsName)}
-      status={<EmailStatus email={option.email} />}
-      connected
-    />
+    <>
+      <LinkedAccountRow
+        credentialType={option.credentialType}
+        name={name}
+        status={<EmailStatus email={option.email} />}
+        connected
+        action={
+          <Button
+            onClick={() => setManageOpen(true)}
+            variant="text"
+            color="tertiary"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName="gear"
+                iconStyle="solid"
+                aria-hidden
+              />
+            }
+          >
+            Manage
+            <Box component="span" sx={visuallyHidden}>
+              {` ${name}`}
+            </Box>
+          </Button>
+        }
+      />
+      <ManageLinkedAccountModal
+        open={manageOpen}
+        onClose={() => setManageOpen(false)}
+        option={option}
+        name={name}
+        blockedMessage={disconnectBlockedMessage(
+          option,
+          settings,
+          integrations,
+        )}
+      />
+    </>
   );
 }
 
@@ -130,6 +169,7 @@ export default function LinkedAccounts({
             <ConnectedAccount
               key={option.id}
               option={option}
+              settings={settings}
               integrations={integrations}
             />
           ))}

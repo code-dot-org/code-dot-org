@@ -72,6 +72,19 @@ describe('UsersSettingsPage — accessibility', () => {
     expect(await auditBody()).toHaveNoViolations();
   });
 
+  it.each([
+    ['multi-sso-teacher', /manage google/i, 'dialog'],
+    ['lti-only-teacher', /manage canvas/i, 'alertdialog'],
+  ] as const)(
+    'has no axe violations with the manage dialog open (%s)',
+    async (tag, trigger, role) => {
+      renderPage(tag, 'integrations');
+      fireEvent.click(await screen.findByRole('button', {name: trigger}));
+      await screen.findByRole(role);
+      expect(await auditBody()).toHaveNoViolations();
+    },
+  );
+
   it('has no axe violations with the update-school dialog open', async () => {
     renderPage('teacher-no-school', 'educator-profile');
     await screen.findByRole('heading', {level: 2, name: 'Role'});

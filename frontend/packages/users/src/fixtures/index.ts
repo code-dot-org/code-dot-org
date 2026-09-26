@@ -347,6 +347,26 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
         return json(null, 204);
       },
     },
+    // Unlinks an LMS login; Rails 404s an id the user doesn't own.
+    {
+      method: 'post',
+      path: '*/lti/v1/account_linking/unlink',
+      respond: async ctx => {
+        const body = await readJson(ctx);
+        const id = isRecord(body) ? body.authentication_option_id : undefined;
+        const settings = readSettings(ctx, scenario);
+        if (!settings.authentication_options.some(option => option.id === id)) {
+          return json(null, 404);
+        }
+        ctx.store.write('settings', {
+          ...settings,
+          authentication_options: settings.authentication_options.filter(
+            option => option.id !== id,
+          ),
+        });
+        return json(null, 200);
+      },
+    },
     // Sign out other sessions; this one stays signed in.
     {
       method: 'delete',
