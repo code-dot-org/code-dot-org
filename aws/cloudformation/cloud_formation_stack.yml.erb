@@ -38,7 +38,7 @@ Parameters:
     Description: Route 53 Hosted Zone ID for the codeaiprojects base domain name.
   InstanceType:
     Type: String
-    Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
+    Default: <%=rack_env?(:production) ? 'm8i.8xlarge' : 't3.2xlarge'%>
   Branch:
     Type: String
     Default: <%=branch%>
