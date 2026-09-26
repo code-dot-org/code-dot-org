@@ -9,7 +9,11 @@ import z from 'zod/v3';
 import {generateText} from '@cdo/apps/aiGateway';
 import {
   authoringRulesLines,
+  LESSON_CONTEXT_FOR_LEVEL,
+  lessonContextLines,
   LevelContext,
+  precedingLevelsLines,
+  unitContextLines,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
@@ -128,35 +132,14 @@ export async function generateAilabLevel(
     'Available datasets (id: display name):',
     datasetList,
     ...authoringRulesLines(ctx),
-    ...(ctx.unitOutline
-      ? [
-          '',
-          `Unit context — this level sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Use it for broad continuity (audience/grade, recurring themes, tone, arc)`,
-          'but build only the specific level described below:',
-          ctx.unitOutline,
-        ]
-      : []),
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context (this level is one piece of a larger lesson — keep',
-          'continuity with prior steps, but only build the specific level',
-          'described below):',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.precedingLevels
-      ? [
-          '',
-          'Preceding levels in this lesson, in order. Use them for continuity',
-          '— same dataset across levels, escalating accuracy requirements,',
-          'reusing a worked example — but do NOT restate them; only build',
-          'the level described last:',
-          ctx.precedingLevels,
-        ]
-      : []),
+    ...unitContextLines(ctx),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_FOR_LEVEL),
+    ...precedingLevelsLines(ctx, [
+      'Preceding levels in this lesson, in order. Use them for continuity',
+      '— same dataset across levels, escalating accuracy requirements,',
+      'reusing a worked example — but do NOT restate them; only build',
+      'the level described last:',
+    ]),
     '',
     `Description: ${ctx.levelDescription}`,
   ].join('\n');
