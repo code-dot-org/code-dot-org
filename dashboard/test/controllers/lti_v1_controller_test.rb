@@ -279,6 +279,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
     Policies::Lti.stubs(:supported_message_type?).returns(true)
+    DCDO.set('sign_in_attribution_enabled', true)
   end
 
   def create_jwt(payload)
@@ -602,6 +603,22 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert deployment
     assert deployment.name
     assert_equal deployment, @integration.lti_deployments.first
+  end
+
+  # An LTI launch authenticates against the JWT, not a Warden strategy and not an
+  # OmniAuth callback, so nothing about it is derivable -- the controller has to say so.
+  test 'auth - attributes the sign_in to the lti credential' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    user = create_preexisting_user(payload)
+
+    assert_creates(SignIn) do
+      post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    end
+
+    sign_in = SignIn.where(user_id: user.id).order(:id).last
+    assert_equal SignIn::CREDENTIAL, sign_in.event_type
+    assert_equal user.authentication_options.reload.find(&:lti?).id, sign_in.authentication_option_id
   end
 
   test 'auth - given an existing deployment_id in our system, do not create a new LtiDeployment' do
