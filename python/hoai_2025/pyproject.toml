@@ -1,0 +1,29 @@
+[project]
+name = 'hoai-2025'
+version = '0.1.0'
+description = 'hour of ai 2025 support code'
+authors = [
+    { name = 'Code.org Python Devs', email = 'python-devs@code.org' }
+]
+requires-python = '>=3.12'
+dependencies = [
+  'boto3 >=1',
+  'numpy >=2',
+  'openai >=1',
+  "pandas>=2.3.3",
+  "pillow>=12.0.0",
+  "python-slugify>=8.0.4",
+  "tqdm>=4.67.1",
+]
+
+[dependency-groups]
+dev = [
+  'pytest >=8',
+]
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
