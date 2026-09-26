@@ -395,14 +395,20 @@ Resources:
           Principal: {AWS: !ImportValue S3LogsRole}
         - Sid: ELBAccessLogsWrite
           Effect: Allow
-          Principal: {AWS: "arn:aws:iam::127311923021:root"}
+          Principal: {Service: logdelivery.elasticloadbalancing.amazonaws.com}
           Action: 's3:PutObject'
           Resource: !Sub "arn:aws:s3:::${LogsBucket}/AWSLogs/${AWS::AccountId}/*"
+          Condition:
+            StringEquals:
+              "aws:SourceAccount": !Ref "AWS::AccountId"
         - Sid: AWSCloudTrailAclCheck
           Effect: Allow
           Principal: {Service: cloudtrail.amazonaws.com}
           Action: 's3:GetBucketAcl'
           Resource: !Sub "arn:aws:s3:::${LogsBucket}"
+          Condition:
+            StringEquals:
+              "aws:SourceAccount": !Ref "AWS::AccountId"
         - Sid: AWSCloudTrailWrite
           Effect: Allow
           Principal: {Service: cloudtrail.amazonaws.com}
@@ -411,6 +417,7 @@ Resources:
           Condition:
             StringEquals:
               "s3:x-amz-acl": bucket-owner-full-control
+              "aws:SourceAccount": !Ref "AWS::AccountId"
   S3PartitionCloudFrontLogPermission:
     Type: AWS::Lambda::Permission
     Properties:
