@@ -39,6 +39,31 @@ class Services::SignInAttributionTest < ActiveSupport::TestCase
     assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
   end
 
+  test 'an omniauth callback is attributed to the credential its auth hash names' do
+    option = create(:authentication_option, user: @user, credential_type: AuthenticationOption::GOOGLE)
+    @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(
+      provider: option.credential_type,
+      uid: option.authentication_id
+    )
+
+    assert_equal [SignIn::CREDENTIAL, option.id], Services::SignInAttribution.resolve(@user, @request)
+  end
+
+  test 'an omniauth callback for an unknown credential is still a credential sign-in' do
+    @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(
+      provider: AuthenticationOption::GOOGLE,
+      uid: 'belongs-to-nobody'
+    )
+
+    assert_equal [SignIn::CREDENTIAL, nil], Services::SignInAttribution.resolve(@user, @request)
+  end
+
+  test 'a remember-me cookie is not a credential the user presented' do
+    stub_winning_strategy Devise::Strategies::Rememberable.new(@request.env)
+
+    assert_equal [SignIn::REMEMBERED, nil], Services::SignInAttribution.resolve(@user, @request)
+  end
+
   test 'a password sign-in resolves the email credential it was checked against' do
     strategy = Devise::Strategies::DatabaseAuthenticatable.new(@request.env)
     strategy.authentication_hash = {hashed_email: @user.primary_contact_info.hashed_email}
@@ -67,8 +92,8 @@ class Services::SignInAttributionTest < ActiveSupport::TestCase
     assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
   end
 
-  # Every sign-in this does not yet account for -- OmniAuth, LTI, section codes,
-  # registration -- records a NULL event_type rather than a wrong one.
+  # Every sign-in this does not yet account for -- LTI, section codes, registration --
+  # records a NULL event_type rather than a wrong one.
   test 'a sign-in it cannot account for is left undetermined' do
     assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
   end
