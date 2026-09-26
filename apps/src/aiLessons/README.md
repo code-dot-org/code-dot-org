@@ -150,6 +150,12 @@ recorded answers).  One code path, two triggers:
   *their* starter site.  The result is persisted through our sources
   API, then the lab mounts on it like any saved source.  Authored
   `starterFiles` (e.g. a sandbox with planted bugs) win over generation.
+- **Student prompting**: steps with `aiPrompting: 'presets' | 'free'`
+  show BuildPartnerPanel in the tutor sidebar.  A build saves the new
+  source and remounts the lab on it (an epoch in the EmbeddedLab key);
+  Undo restores the stashed pre-build source the same way.  Every
+  student prompt is recorded to the inputs store.
+
 Deliberately, none of this touches lab2's AI-version redux state
 (`setAiTutorVersionFiles` et al.) — that machinery is coupled to real
 channels, `/project_commits`, and the aichat pipeline.  The trade: no
@@ -160,6 +166,18 @@ Sources are per-user and per-**scope**: the lab type for the shared
 lesson project, or `sandbox-<segmentOrStepId>` for `sourceMode:
 'sandbox'` steps, so skill practice never dirties the student's project
 and a multi-step segment shares one throwaway workspace.
+
+### Project checklist
+
+A lesson-level `checklist` renders as an always-visible panel in the
+tutor sidebar on project-mode lab steps (`stepShowsChecklist`: lab
+kind, not sandboxed — skill practice and questions surfaces skip it).
+The tutor's system prompt carries the items with their current state
+and standing orders; every work evaluation returns per-item verdicts
+through the structured output, which check items off live.  Verdicts
+persist in the progress snapshot (riding every progress event), and
+the teacher roll-up shows "checklist n/m" per lesson.  Read-only for
+the student — the tutor is the only thing that checks a box.
 
 ### Observations
 
@@ -247,6 +265,24 @@ GET    /ai_lessons/:id/inputs                     # this user's question answers
 PUT    /ai_lessons/:id/inputs                     # write this user's answers
 ```
 
+## Parking lot / caveats / known limits
+
+### Cleanup wanted
+
+- **Lab integration is messy.** `EmbeddedLab.tsx` is the seam between
+  AI Lessons and Lab2. It synthesises `levelProperties`, injects a
+  custom `ProjectManager` into `Lab2Registry`, wraps in `DialogManager`,
+  passes `hideResourcePanel` (an `ExtraLabProps` field defined in
+  `lab2/types.ts`) down to the lab view, and threads
+  `lessonId`/`labType` through everywhere. `MusicLabView` and
+  `InfoPanel` (weblab2) read the `hideResourcePanel` prop and drop the
+  ResourcePanel column when it's true. Worth reviewing whether the
+  abstraction belongs in lab2 itself or whether there's a cleaner
+  extension point.
+- **Fix weblab2 resizing.** The Web Lab 2 view doesn't always re-measure
+  its inner panels when its container changes size — switching
+  checkpoints or resizing the window can leave the editor or preview
+  pinned to a stale width.
 ### Hackathon-y caveats
 
 - **Filesystem storage.** All persistence is local JSON under
