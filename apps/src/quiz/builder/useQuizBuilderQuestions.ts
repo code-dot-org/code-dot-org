@@ -55,27 +55,30 @@ export default function useQuizBuilderQuestions(
     load();
   }, [load]);
 
-  const createQuestion = useCallback(async () => {
-    setIsCreating(true);
-    setError(null);
-    setErrorQuestionId(null);
-    try {
-      const response = await HttpClient.post(
-        `/levels/${levelId}/quiz_question_placements`,
-        JSON.stringify(NEW_QUESTION_DEFAULTS),
-        true,
-        {'Content-Type': 'application/json'}
-      );
-      const created: QuizBuilderQuestion = await response.json();
-      setQuestions(prev => [...prev, created]);
-      return created.id;
-    } catch (e) {
-      setError(await networkErrorMessage(e));
-      return undefined;
-    } finally {
-      setIsCreating(false);
-    }
-  }, [levelId]);
+  const createQuestion = useCallback(
+    async (page: number) => {
+      setIsCreating(true);
+      setError(null);
+      setErrorQuestionId(null);
+      try {
+        const response = await HttpClient.post(
+          `/levels/${levelId}/quiz_question_placements`,
+          JSON.stringify({...NEW_QUESTION_DEFAULTS, page}),
+          true,
+          {'Content-Type': 'application/json'}
+        );
+        const created: QuizBuilderQuestion = await response.json();
+        setQuestions(prev => [...prev, created]);
+        return created.id;
+      } catch (e) {
+        setError(await networkErrorMessage(e));
+        return undefined;
+      } finally {
+        setIsCreating(false);
+      }
+    },
+    [levelId]
+  );
 
   // Resolves with the saved question's id, which may differ from the one
   // passed in - QuizQuestionsController#update forks a question that's

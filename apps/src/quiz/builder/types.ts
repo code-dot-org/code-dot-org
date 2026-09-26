@@ -53,9 +53,9 @@ export interface QuizBuilderQuestionsState {
   // general, not about any existing question. A caller uses this to show
   // the error on that question's card instead of globally.
   errorQuestionId: number | null;
-  // Resolves with the created question's id on success, undefined on
-  // failure (with `error` set).
-  createQuestion: () => Promise<number | undefined>;
+  // Creates a question on the given page. Resolves with the created
+  // question's id on success, undefined on failure (with `error` set).
+  createQuestion: (page: number) => Promise<number | undefined>;
   // Resolves with the saved question's id on success (see
   // useQuizBuilderQuestions for why it may differ from `id`). On
   // failure, resolves undefined (with `error` set) and leaves

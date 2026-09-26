@@ -1,10 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
-import {IconButton, Button} from '@mui/material';
+import {IconButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import AddItemButton from '../AddItemButton';
 import {QuizQuestionEditableFields} from '../types';
 
 import styles from './quiz-question-card.module.scss';
@@ -101,18 +102,11 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
           );
         })}
       </div>
-      <Button
-        className={styles.addOption}
-        variant="outlined"
-        color="secondary"
-        size="small"
-        type="button"
-        disabled={disabled}
+      <AddItemButton
+        label="Add option"
         onClick={addChoice}
-        startIcon={<FontAwesomeV6Icon iconName="plus" />}
-      >
-        Add option
-      </Button>
+        disabled={disabled}
+      />
 
       <FormFieldWrapper label="Answer explanation (optional)">
         <textarea
