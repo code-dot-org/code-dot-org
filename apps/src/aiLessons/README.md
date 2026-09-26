@@ -127,6 +127,18 @@ practice from quiz outcomes, the fan-page hub suggests a mini lesson
 from the experience slider and AI rating.  An AI-backed resolver can
 later replace the rule matching without any UI change.
 
+Every answer, graded or not, is recorded as an `AnswerRecord`
+(`studentInputs.ts`) in a per-(lesson, user) map at
+`dashboard/tmp/ai_lessons/inputs/<lessonId>/<userId>.json`.  Records
+denormalize the question prompt and carry outcome + attempt counts, so
+they're self-describing for every consumer: QuestionFlow prefill, the
+tutor's STUDENT CONTEXT prompt section (personalization — the tutor
+knows the student's project, interests, and confidence), and later the
+starter-code generator and adaptive resolver.
+
+**Runtime support is intentionally behind the format** (walking-skeleton
+rule: every step kind renders, unsupported mechanics degrade politely):
+
 ### The AI build partner and student sources
 
 `buildPartner.ts` turns a prompt into a complete Web Lab 2 project
@@ -143,6 +155,11 @@ Deliberately, none of this touches lab2's AI-version redux state
 channels, `/project_commits`, and the aichat pipeline.  The trade: no
 in-editor per-file diff affordances, and a build/undo resets editor UI
 state (open file, cursor) via the remount.
+
+Sources are per-user and per-**scope**: the lab type for the shared
+lesson project, or `sandbox-<segmentOrStepId>` for `sourceMode:
+'sandbox'` steps, so skill practice never dirties the student's project
+and a multi-step segment shares one throwaway workspace.
 
 ### Observations
 
@@ -188,6 +205,13 @@ Beyond answers, the system records HOW students work:
   panel illustrations are generated in parallel via the Gemini image
   model (`panelImageGenerator.ts`) and uploaded to
   `dashboard/tmp/ai_lessons/images/<id>/`.
+### Progress + teacher view
+
+- Every Run and every checkpoint completion appends to a per-(lesson,
+  user) JSON file at
+  `dashboard/tmp/ai_lessons/progress/<lessonId>/<userId>.json` and
+  refreshes a 2-3 sentence LLM-generated teacher summary
+  (`studentProgress.ts`).
 ### Routes (Rails)
 
 Every in-app page path serves the same SPA shell (`AiLessonsController#app`).
