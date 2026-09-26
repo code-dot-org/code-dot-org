@@ -49,7 +49,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: elijah-tmp-cache.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -164,7 +164,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: elijah-tmp-cache.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -305,6 +305,25 @@ services:
       MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
+  - name: bin/drone/shell
+    image: curlimages/curl
+    commands:
+      - set +x
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+
+        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
+
   - name: clone
     image: bitnamilegacy/git
     environment:
@@ -316,7 +335,7 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
@@ -328,19 +347,22 @@ steps:
       CI_JOB: 'prepare_cacheable_build'
     commands:
       - sudo chown -R ci:ci .
-      - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
+      - EXIT_CODE=0
+      - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh || EXIT_CODE=$?
       # Generate baseline file count for validation
       - touch .cached-staging-build-file-count
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
+      - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
+      - exit $EXIT_CODE
 
-  - name: cache-staging-ci-build
+  - name: elijah-tmp-cache
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: elijah-tmp-cache.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -355,10 +377,11 @@ volumes:
 
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "levelbuilder"
   event:
-    - push
+    - pull_request
 
 ---
 kind: signature
