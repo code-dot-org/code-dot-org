@@ -114,6 +114,9 @@ the rule's, and a world that wants another says so with a `set` row under
   with the ring of common angles behind it (`AngleInput`), in the world's
   inspector and in a placement's, where an angle had been falling through
   the sandbox's schema to a plain text field and being stored as text.
+  A placement's vector is the dial and grid too (a Viewport's `scroll`);
+  its points — position, scale — stay two fields, since a place is typed
+  and a direction is pointed.
   Either vector or point is carried through
   `WorldProperty.value` as `"x,y"` (`worldProperties.vectorText`), which
   keeps the rule's-own-value-removes-the-row bargain working as text.

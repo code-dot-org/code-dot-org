@@ -1524,6 +1524,50 @@ describe('a placement’s angle', () => {
     ],
   } as never;
 
+  it('shows a vector as the dial too, and a point as two fields', () => {
+    // A Viewport's scroll is a direction and a distance; a position is a
+    // place, typed rather than pointed.
+    const schemas = {
+      'actors/coin': [
+        {
+          name: 'Viewport',
+          props: [
+            {
+              ownerId: 'viewport',
+              propId: 'scroll',
+              name: 'scroll',
+              type: 'vector',
+              default: {x: 0, y: 0},
+            },
+            {
+              ownerId: 'positional',
+              propId: 'position',
+              name: 'position',
+              type: 'point',
+              default: {x: 0, y: 0},
+            },
+          ],
+        },
+      ],
+    } as never;
+    const {canvas, written} = mount(doc(), {schemas});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'}); // select a
+    expect(
+      document.querySelector('input[name="prop-positional.position.x"]'),
+    ).not.toBeNull();
+    const dial = document.querySelector(
+      'button[name="prop-viewport.scroll"]',
+    ) as HTMLButtonElement;
+    expect(dial).toHaveAttribute('aria-label', 'Scroll: x 0, y 0');
+
+    fireEvent.click(dial);
+    fireEvent.change(screen.getByLabelText('y'), {target: {value: '40'}});
+    expect(
+      written().actors.find(one => one.id === 'a')?.properties?.viewport,
+    ).toEqual({scroll: {x: 0, y: 40}});
+    expect(dial).toHaveAttribute('aria-label', 'Scroll: x 0, y 40');
+  });
+
   it('is the block’s dial, and a turn of it is stored as a number', () => {
     // An angle came through the sandbox's schema as its own type and fell
     // to the plain text field, which stored what was typed as a string.

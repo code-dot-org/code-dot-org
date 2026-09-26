@@ -109,6 +109,7 @@ import {
   rememberedPicture,
   type Remembered,
 } from './stageGeometry';
+import {VectorInput} from './VectorInput';
 import {WithheldNote} from './WithheldNote';
 import {placementCameras, type DeclaredCamera} from './worldCameras';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
@@ -1349,7 +1350,35 @@ export const MapStage = ({
         </div>
       );
     }
-    if (prop.type === 'vector' || prop.type === 'point') {
+    if (prop.type === 'vector') {
+      // The block's own dial and arrow grid, as the world's inspector shows
+      // one (`VectorInput`). A POINT stays two fields: a place is typed, a
+      // direction is pointed. A move on the grid is a change and a commit in
+      // one, like a checkbox, and the axis drafts follow it.
+      const held = asVec(valueOf(actor, prop)) ?? {
+        x: 0,
+        y: 0,
+      };
+      return (
+        <VectorInput
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          label={capitalize(prop.name)}
+          value={held}
+          disabled={isReadOnly}
+          onChange={next => {
+            setDraft(d => ({
+              ...d,
+              [fieldKey(prop, 'x')]: String(next.x),
+              [fieldKey(prop, 'y')]: String(next.y),
+            }));
+            setProperty(actor.id, prop.ownerId, prop.propId, next);
+            commitEdit();
+          }}
+        />
+      );
+    }
+    if (prop.type === 'point') {
       // A child's position is stored in its parent's frame; the place it
       // lands on the canvas is worth seeing beside it.
       const carried =
