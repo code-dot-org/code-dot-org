@@ -138,12 +138,12 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
 
       before {sign_in user}
 
-      it 'exposes only credential_type and email, never id or hashed_email' do
+      it 'exposes only id, credential_type and email, never hashed_email' do
         get_settings
 
         option = body['authentication_options'].find {|o| o['credential_type'] == AuthenticationOption::GOOGLE}
         _(option).wont_be_nil
-        _(option.keys.sort).must_equal %w[credential_type email].sort
+        _(option.keys.sort).must_equal %w[credential_type email id].sort
       end
 
       it 'leaks no tokens, credential ids, password hashes, or secret words' do
