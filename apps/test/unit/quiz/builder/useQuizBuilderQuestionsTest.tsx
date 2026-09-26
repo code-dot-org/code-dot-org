@@ -49,73 +49,48 @@ describe('useQuizBuilderQuestions', () => {
     expect(result.current.questions).toEqual([QUESTION]);
   });
 
-  it('posts placeholder question params and appends the created question', async () => {
-    const created = {...QUESTION, id: 99, questionName: 'New question'};
-    postSpy.mockResolvedValue({json: async () => created} as Response);
-
+  it('adds a placeholder question locally, with no network call', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
-    await act(async () => {
-      await result.current.createQuestion();
+    let id: number | undefined;
+    act(() => {
+      id = result.current.addPendingQuestion();
     });
 
-    expect(postSpy).toHaveBeenCalledWith(
-      '/levels/42/quiz_question_placements',
-      JSON.stringify({
-        questionName: 'New question',
-        stem: 'New question',
-        choices: [
-          {id: '0', text: 'Option A'},
-          {id: '1', text: 'Option B'},
-        ],
-        correctChoiceId: '0',
-      }),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-    expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
+    expect(postSpy).not.toHaveBeenCalled();
+    expect(result.current.questions.map(q => q.id)).toEqual([7, id]);
+    expect(result.current.questions[1]).toMatchObject({
+      questionName: 'New question',
+      stem: 'New question',
+      choices: [
+        {id: '0', text: 'Option A'},
+        {id: '1', text: 'Option B'},
+      ],
+      correctChoiceId: '0',
+    });
   });
 
-  it('resolves with the created question id', async () => {
-    const created = {...QUESTION, id: 99};
-    postSpy.mockResolvedValue({json: async () => created} as Response);
-
+  it('returns a negative id, distinct from any real server id', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizBuilderQuestions(42)
     );
     await waitForNextUpdate();
 
-    let createdId: number | undefined;
-    await act(async () => {
-      createdId = await result.current.createQuestion();
+    let firstId: number | undefined;
+    let secondId: number | undefined;
+    act(() => {
+      firstId = result.current.addPendingQuestion();
+    });
+    act(() => {
+      secondId = result.current.addPendingQuestion();
     });
 
-    expect(createdId).toBe(99);
-  });
-
-  it('surfaces the server error message when a create fails', async () => {
-    postSpy.mockRejectedValue(
-      new NetworkError('400 Bad Request', {
-        json: async () => ({error: 'a specific reason'}),
-      } as Response)
-    );
-
-    const {result, waitForNextUpdate} = renderHook(() =>
-      useQuizBuilderQuestions(42)
-    );
-    await waitForNextUpdate();
-
-    await act(async () => {
-      await result.current.createQuestion();
-    });
-
-    expect(result.current.error).toBe('a specific reason');
-    expect(result.current.questions.map(q => q.id)).toEqual([7]);
-    // A create can't fail because of anything about an existing question.
-    expect(result.current.errorQuestionId).toBeNull();
+    expect(firstId).toBeLessThan(0);
+    expect(secondId).toBeLessThan(0);
+    expect(secondId).not.toBe(firstId);
   });
 
   it('reports a generic error when the load fails', async () => {
@@ -132,7 +107,7 @@ describe('useQuizBuilderQuestions', () => {
     expect(result.current.errorQuestionId).toBeNull();
   });
 
-  describe('updateQuestion', () => {
+  describe('saveQuestion', () => {
     const PAYLOAD = {
       questionName: 'Updated question',
       stem: 'What is 2 + 3?',
@@ -152,7 +127,7 @@ describe('useQuizBuilderQuestions', () => {
 
       let updatedId;
       await act(async () => {
-        updatedId = await result.current.updateQuestion(7, PAYLOAD);
+        updatedId = await result.current.saveQuestion(7, PAYLOAD);
       });
 
       expect(putSpy).toHaveBeenCalledWith(
@@ -176,7 +151,7 @@ describe('useQuizBuilderQuestions', () => {
 
       let updatedId;
       await act(async () => {
-        updatedId = await result.current.updateQuestion(7, PAYLOAD);
+        updatedId = await result.current.saveQuestion(7, PAYLOAD);
       });
 
       expect(updatedId).toBe(123);
@@ -197,7 +172,7 @@ describe('useQuizBuilderQuestions', () => {
 
       let updatedId;
       await act(async () => {
-        updatedId = await result.current.updateQuestion(7, PAYLOAD);
+        updatedId = await result.current.saveQuestion(7, PAYLOAD);
       });
 
       expect(updatedId).toBeUndefined();
@@ -205,9 +180,60 @@ describe('useQuizBuilderQuestions', () => {
       expect(result.current.questions).toEqual([QUESTION]);
       expect(result.current.errorQuestionId).toBe(7);
     });
+
+    it("POSTs a pending question's first save instead of PUTing it", async () => {
+      const {result, waitForNextUpdate} = renderHook(() =>
+        useQuizBuilderQuestions(42)
+      );
+      await waitForNextUpdate();
+
+      let pendingId: number | undefined;
+      act(() => {
+        pendingId = result.current.addPendingQuestion();
+      });
+
+      const created = {...QUESTION, ...PAYLOAD, id: 99};
+      postSpy.mockResolvedValue({json: async () => created} as Response);
+
+      let updatedId;
+      await act(async () => {
+        updatedId = await result.current.saveQuestion(pendingId!, PAYLOAD);
+      });
+
+      expect(putSpy).not.toHaveBeenCalled();
+      expect(postSpy).toHaveBeenCalledWith(
+        '/levels/42/quiz_question_placements',
+        JSON.stringify({...PAYLOAD, page: 1}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      expect(updatedId).toBe(99);
+      expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
+    });
   });
 
   describe('removeQuestion', () => {
+    it('drops a pending question locally, with no network call', async () => {
+      const {result, waitForNextUpdate} = renderHook(() =>
+        useQuizBuilderQuestions(42)
+      );
+      await waitForNextUpdate();
+
+      let pendingId: number | undefined;
+      act(() => {
+        pendingId = result.current.addPendingQuestion();
+      });
+
+      let succeeded = false;
+      await act(async () => {
+        succeeded = await result.current.removeQuestion(pendingId!);
+      });
+
+      expect(deleteSpy).not.toHaveBeenCalled();
+      expect(succeeded).toBe(true);
+      expect(result.current.questions.map(q => q.id)).toEqual([7]);
+    });
+
     it('DELETEs the placement and drops the question from state on success', async () => {
       deleteSpy.mockResolvedValue({
         json: async () => ({destroyed: true}),
