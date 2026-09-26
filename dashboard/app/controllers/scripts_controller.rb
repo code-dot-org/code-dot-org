@@ -41,8 +41,9 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course&.id)}
-        most_recent_section = current_user.sections_instructed.select {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course.id)}.last
+      visible_sections_for_unit = current_user&.sections_instructed&.select {|s| !s.hidden && (s.script_id == @script.id || s.unit_group&.id == @course&.id)} || []
+      if current_user&.user_type == "teacher" && visible_sections_for_unit.any?
+        most_recent_section = visible_sections_for_unit.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
         if section_id
