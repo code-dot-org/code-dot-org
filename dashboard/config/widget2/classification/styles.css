@@ -1,0 +1,137 @@
+@import url("components/feature-row.css");
+@import url("components/verdict-display.css");
+
+:root {
+    --gray-0: #fdfdfd;
+    --gray-50: #f9f9f9;
+    --gray-100: #f4f4f4;
+    --gray-150: #eeeeee;
+    --gray-200: #e5e5e5;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --gray-600: #525252;
+    --gray-700: #404040;
+    --gray-800: #262626;
+    --gray-900: #171717;
+    --gray-950: #0a0a0a;
+    --purple-0: rgb(245, 244, 253);
+    --purple-100: rgb(234, 232, 251);
+    --purple-200: rgb(214, 210, 246);
+    --purple-300: rgb(192, 188, 240);
+    --purple-400: rgb(169, 163, 232);
+    --purple-500: rgb(105, 98, 210);
+    --purple-600: rgb(82, 75, 184);
+    --purple-700: rgb(59, 53, 153);
+    --purple-800: rgb(41, 35, 126);
+    --purple-900: rgb(30, 25, 113);
+    --mint-0: rgb(244, 252, 247);
+    --mint-100: rgb(230, 247, 237);
+    --mint-200: rgb(211, 240, 211);
+    --mint-300: rgb(184, 228, 196);
+    --mint-400: rgb(141, 207, 170);
+    --mint-500: rgb(91, 175, 138);
+    --mint-600: rgb(56, 140, 110);
+    --mint-700: rgb(34, 107, 86);
+    --mint-800: rgb(21, 74, 60);
+    --mint-900: rgb(12, 46, 38);
+}
+
+body {
+    align-items: center;
+    background-color: var(--gray-50);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: "Geist", sans-serif;
+    justify-content: center;
+    margin: 0;
+    gap: 2em;
+    min-height: 100vh;
+    padding: 1.5em 1em;
+    color: var(--purple-900);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+header {
+    color: var(--purple-900);
+    font-family: "Space Grotesk", monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 1em;
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+section {
+    background-color: var(--gray-0);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+}
+
+.block-label {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--purple-700);
+    font-family: "Space Grotesk", monospace;
+    font-weight: 600;
+}
+
+.arrow {
+    align-self: center;
+    color: var(--purple-300);
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    max-width: 22em;
+    width: 100%;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.prediction-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    max-width: 16em;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before {
+        transition: none !important;
+    }
+}

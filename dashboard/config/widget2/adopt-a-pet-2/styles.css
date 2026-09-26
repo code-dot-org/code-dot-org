@@ -1,0 +1,343 @@
+/* styles.css — LEVEL 1 (Bad UX only)
+   Goal: frustrating due to VISUAL/UI issues only (no missing info, no logic tricks)
+
+   Intentional friction:
+   - Tiny text + tight line spacing
+   - Low contrast metadata + weak hierarchy
+   - Dense cards with minimal spacing
+   - Buttons tiny + too close together
+   - Bottom nav overlaps content slightly + low contrast
+*/
+
+/* ================= */
+/* Bad UX Theme Defaults */
+/* ================= */
+:root{
+  --bg:#f6f6f6;
+  --text:#cfcfcf;
+  --muted:#d7d7d7;
+  --border:#efefef;
+  --card:#f7f7f7;
+
+  --btn-bg:#e9e9e9;
+  --btn-text:#d8d8d8;
+  --btn-border:#ededed;
+
+  --base:12px;
+  --lh:1.05;
+
+  --gap:2px;              /* minimal spacing between cards */
+  --card-pad:6px;         /* cramped padding */
+  --card-text:10px;       /* very small baseline */
+  --card-lh:1.05;         /* tight lines */
+
+  --nav-font:9px;
+  --nav-icon:16px;
+  --nav-height:34px;      /* small nav */
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  background:#fff;
+}
+
+/* ======================= */
+/* APP WRAPPER (Bad UX scoped) */
+/* ======================= */
+.app{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Times New Roman", Times, serif;
+  font-size:var(--base);
+  line-height:var(--lh);
+  min-height:100vh;
+}
+
+/* =============== */
+/* Header (cramped) */
+/* =============== */
+.app header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:6px 6px 2px 6px;
+  border-bottom:1px solid var(--border);
+  background:transparent;
+}
+
+.app .brand{
+  display:flex;
+  align-items:center;
+}
+
+.app header img{
+  width:28px;
+  height:28px;
+}
+
+.app header span{
+  font-size:12px;
+  font-weight:400;
+  margin-left:4px;
+}
+
+.app header a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:10px;
+}
+
+/* ===== */
+/* Hero  */
+/* ===== */
+.app section{
+  padding:8px;
+}
+
+.app section img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--border);
+}
+
+/* Make hero text hard to read on top of the image */
+.app .hero{
+  position:relative;
+  padding:0;
+}
+
+.app .hero img{
+  height:280px;
+  object-fit:cover;
+  filter:contrast(0.9) brightness(1.05);
+}
+
+.app .hero .hero-copy{
+  position:absolute;
+  top:18px;
+  left:10px;
+  max-width:280px;
+  padding:6px 8px;
+  background:rgba(255,255,255,0.25);
+  border:1px solid rgba(255,255,255,0.25);
+}
+
+.app .hero h1{
+  margin:6px 0 4px 0;
+  font-size:16px;
+  font-weight:400;
+}
+
+.app .hero p{
+  margin:0;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* ========= */
+/* Pet Grid  */
+/* ========= */
+.app main{
+  padding:8px;
+
+  /* Intentionally NOT enough padding for the fixed nav:
+     nav overlaps content slightly (visual-only friction). */
+  padding-bottom:22px;
+
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:var(--gap);
+}
+
+.app article{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:var(--card-pad);
+}
+
+/* Dense, slightly overwhelming photos */
+.app article img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border:1px solid var(--border);
+}
+
+/* Weak / inconsistent hierarchy */
+.app article h3{
+  margin:6px 0 2px 0;
+  font-size: calc(var(--card-text) + 2px);
+  font-weight:400;
+}
+
+/* Random bolding to break consistency (intentional) */
+.app article:nth-child(2) h3,
+.app article:nth-child(6) .meta .value,
+.app article:nth-child(7) .meta .label{
+  font-weight:700;
+}
+
+.app .meta,
+.app .desc{
+  margin:0 0 4px 0;
+  font-size:var(--card-text);
+  line-height:var(--card-lh);
+  color:var(--muted);
+}
+
+/* Make labels and values feel equally “flat” (hard to scan) */
+.app .meta .label{
+  color:var(--muted);
+  font-weight:400;
+}
+.app .meta .value{
+  color:var(--muted);
+  font-weight:400;
+}
+
+/* Dense description blocks — unbroken and hard to scan */
+.app .desc{
+  margin-top:2px;
+}
+
+/* Actions: tiny, close together */
+.app .actions{
+  display:flex;
+  align-items:flex-start;
+  gap:2px; /* too close */
+  margin-top:2px;
+}
+
+/* DETAILS control styled to be annoying */
+.app details{
+  border:1px solid var(--btn-border);
+  background:var(--btn-bg);
+  color:var(--btn-text);
+  padding:1px 2px;  /* tiny tap target */
+  font-size:10px;
+  line-height:1.0;
+  width:auto;
+}
+
+.app summary{
+  cursor:pointer;
+  list-style:none; /* removes marker in some browsers */
+  padding:2px 3px; /* tiny */
+}
+.app summary::-webkit-details-marker{ display:none; }
+
+/* Details content: still low contrast and dense */
+.app .details-body{
+  padding:2px 3px;
+  border-top:1px solid var(--btn-border);
+}
+
+.app .details-body p{
+  margin:0 0 4px 0;
+  font-size:10px;
+  line-height:1.05;
+  color:var(--muted);
+}
+
+/* Adopt button intentionally tiny */
+.app button.adopt{
+  border:1px solid var(--btn-border);
+  background:var(--btn-bg);
+  color:var(--btn-text);
+  font-size:10px;
+  padding:2px 3px; /* tiny */
+  cursor:pointer;
+}
+
+.app button.adopt:active{
+  transform:translateY(1px);
+}
+
+/* ======= */
+/* Footer  */
+/* ======= */
+.app footer{
+  padding:10px 8px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* ======================= */
+/* NAV (bottom-fixed, small, low contrast, overlaps) */
+/* ======================= */
+.app nav{
+  height:var(--nav-height);
+  background:rgba(242,242,242,0.65);  /* low contrast */
+  border-top:1px solid var(--border);
+
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+
+  padding:0 2px;
+
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:10;
+}
+
+.app nav a{
+  width:46px; /* small tap target */
+  text-align:center;
+  text-decoration:none;
+  color:var(--text);
+  font-size:var(--nav-font);
+  line-height:1.0;
+}
+
+.app nav img{
+  width:var(--nav-icon);
+  height:var(--nav-icon);
+  display:block;
+  margin:0 auto 1px auto;
+  opacity:0.55;
+}
+
+/* ======================= */
+/* Responsive: still frustrating but not “broken” */
+/* ======================= */
+@media (max-width: 900px){
+  .app main{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px){
+  .app main{
+    grid-template-columns:1fr; /* still long scroll, but readable enough to complete */
+  }
+}
+
+/* ======================= */
+/* Toast (basic styling)   */
+/* ======================= */
+
+#toast {
+  position: fixed;
+  bottom: 60px; /* above bottom nav */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  font-size: 12px;
+  
+  border-radius: 4px;
+  z-index: 999;
+}
+
+button.adopt:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

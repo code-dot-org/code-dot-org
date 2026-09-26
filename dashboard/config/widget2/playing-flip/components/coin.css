@@ -1,0 +1,119 @@
+/* The coin — a flat, two-tone disc that flips on its X axis. */
+
+.coin-stage {
+    perspective: 900px;
+    display: grid;
+    place-items: center;
+    width: 11rem;
+    height: 11rem;
+}
+
+/* Vertical hop, kept separate from .coin so it doesn't fight the spin. */
+.coin-toss {
+    transform-style: preserve-3d;
+}
+
+.coin-stage.is-flipping .coin-toss {
+    animation: coin-toss var(--coin-flip-duration, 1200ms)
+        cubic-bezier(0.33, 0, 0.35, 1);
+}
+
+@keyframes coin-toss {
+    0% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateY(-2.75rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Scored-flip emphasis: a quick swell, snapping out and easing back. */
+.coin-stage.is-celebrating {
+    animation: coin-pop 0.5s;
+}
+
+@keyframes coin-pop {
+    0% {
+        animation-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1);
+        transform: scale(1);
+    }
+    38% {
+        animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+        transform: scale(1.14);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.coin {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform var(--coin-flip-duration, 1200ms)
+        cubic-bezier(0.22, 0.72, 0.25, 1);
+}
+
+.coin__face {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    background-color: var(--purple-500);
+    /* Flat outer rim — a solid ring, no bevel. */
+    box-shadow: inset 0 0 0 0.6rem var(--purple-700);
+}
+
+.coin__face--heads {
+    transform: translateZ(0.3rem);
+}
+
+.coin__face--tails {
+    transform: rotateX(180deg) translateZ(0.3rem);
+}
+
+/* Engraved inner circle, drawn as a plain outline. */
+.coin__face::before {
+    content: "";
+    position: absolute;
+    inset: 1.1rem;
+    border-radius: 50%;
+    border: 0.15rem solid var(--purple-400);
+}
+
+/* Sits between the faces so the coin reads as solid when it turns edge-on. */
+.coin__edge {
+    position: absolute;
+    inset: 0.1rem;
+    border-radius: 50%;
+    background-color: var(--purple-800);
+}
+
+.coin__value {
+    position: relative; /* above the inner-circle pseudo-element */
+    z-index: 1;
+    font-family: "Space Grotesk", monospace;
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: var(--purple-0);
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .coin {
+        transition: none !important;
+    }
+
+    .coin-stage.is-flipping .coin-toss,
+    .coin-stage.is-celebrating {
+        animation: none !important;
+    }
+}
