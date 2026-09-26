@@ -1280,6 +1280,15 @@ p.evidenceLevelHeaderText {
   flex-direction: column;
   gap: 28px;
   padding: 1rem;
+  background: var(--background-neutral-primary);
+  overflow-x: hidden;
+
+  // The floating panel this is copied from fixed this to a 440px scrolling
+  // pane (with matching side/bottom borders and a drop shadow) so the
+  // header/tabs/footer around it stayed pinned. Inside the AI TA drawer
+  // (see RubricsScreen.tsx) there's no floating chrome to match and no
+  // independent pane to pin against - the drawer's own wrapper scrolls the
+  // whole screen, so this just sizes to its content instead.
   border-right: 0.125rem solid var(--borders-neutral-solid);
   border-left: 0.125rem solid var(--borders-neutral-solid);
   background: var(--background-neutral-primary);

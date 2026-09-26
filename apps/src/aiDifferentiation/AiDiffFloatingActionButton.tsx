@@ -319,6 +319,21 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     updateUnreadNotificationCount();
   };
 
+  // Unlike handleClick, always closes rather than toggling/re-opening to
+  // openToNav — used by the drawer's own close (X) button, which must be
+  // able to close the drawer even when this FAB is configured with
+  // openToNav (where handleClick would otherwise just re-open it).
+  const closeDrawer = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_CLOSED, {
+      aiDiffChatContext: context,
+      scriptName,
+    });
+    trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    dispatch(setChatIsOpen(false));
+    trySetSessionStorage(SESSION_STORAGE_KEY, false.toString());
+    updateUnreadNotificationCount();
+  };
+
   const brand = document.documentElement.dataset.brand;
 
   return (
@@ -398,7 +413,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       <React.Suspense fallback={<div />}>
         <LazyAiDiffDrawer
           context={context}
-          closeTutor={handleClick}
+          closeTutor={closeDrawer}
           curriculumCourses={curriculumCourses || ([] as string[])}
           scriptName={scriptName}
           unreadNotificationCount={

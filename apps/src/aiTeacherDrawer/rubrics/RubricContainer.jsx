@@ -1,9 +1,7 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
-import Draggable from 'react-draggable';
 import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -15,7 +13,6 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import RubricContent from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';
@@ -47,7 +44,6 @@ function RubricContainer({
   onLevelForEvaluation,
   reportingData,
   open,
-  closeRubric,
   sectionId,
   loadAllTeacherEvaluationData,
   loadAiEvalStatusForAll,
@@ -137,24 +133,6 @@ function RubricContainer({
     trySetSessionStorage(rubricPositionY, positionY);
   }, [positionY]);
 
-  const onStopHandler = (event, dragElement) => {
-    setPositionX(dragElement.x);
-    setPositionY(dragElement.y);
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_END, {
-      ...(reportingData || {}),
-      window_x_end: dragElement.x,
-      window_y_end: dragElement.y,
-    });
-  };
-
-  const onStartHandler = (event, dragElement) => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_WINDOW_MOVE_START, {
-      ...(reportingData || {}),
-      window_x_start: dragElement.x,
-      window_y_start: dragElement.y,
-    });
-  };
-
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
@@ -193,14 +171,6 @@ function RubricContainer({
   useEffect(() => {
     getTourStatus();
   }, [getTourStatus]);
-
-  const tourRestartHandler = () => {
-    tourRestarted.current = true;
-    updateTourStatus(true);
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_RESTARTED, {
-      ...(reportingData || {}),
-    });
-  };
 
   const onTourStart = stepIndex => {
     tourStep.current = stepIndex;
@@ -261,160 +231,95 @@ function RubricContainer({
     }
   };
 
-  const headerLeft = React.useMemo(
-    () =>
-      teacherHasEnabledAi ? (
-        <>
-          <img
-            src={aiBotOutlineIcon}
-            className={style.aiBotOutlineIcon}
-            alt={i18n.rubricAiHeaderText()}
-          />
-          <Typography variant="label2">{i18n.rubricAiHeaderText()}</Typography>
-        </>
-      ) : (
-        <Typography variant="label2">{i18n.rubric()}</Typography>
-      ),
-    [teacherHasEnabledAi]
-  );
-
   return (
-    // Dragging (and the session-storage-persisted x/y offset it reads on
-    // mount) is a floating-panel concept that doesn't apply once this
-    // renders in-flow inside the AI TA drawer, so it's pinned at the
-    // origin and disabled here rather than left to inherit a stale
-    // offset from wherever the floating panel was last dragged to.
-    <Draggable
-      defaultPosition={{x: 0, y: 0}}
-      onStart={onStartHandler}
-      onStop={onStopHandler}
-      handle=".ai-rubric-handle"
-      disabled
+    <div
+      // eslint-disable-next-line react/forbid-dom-props
+      data-testid="draggable-test-id"
+      id="draggable-id"
+      className={style.rubricContainer}
+      style={open ? null : {display: 'none'}}
     >
-      <div
-        // eslint-disable-next-line react/forbid-dom-props
-        data-testid="draggable-test-id"
-        id="draggable-id"
-        className={style.rubricContainer}
-        style={open ? null : {display: 'none'}}
-      >
-        <Steps
-          enabled={canProvideFeedback && productTour && teacherHasEnabledAi}
-          initialStep={INITIAL_STEP}
-          steps={STEPS}
-          onStart={onTourStart}
-          onExit={onTourExit}
-          onChange={onStepChange}
-          onBeforeChange={onBeforeStepChange}
-          onComplete={onTourComplete}
-          options={{
-            scrollToElement: false,
-            exitOnOverlayClick: false,
-            hidePrev: true,
-            nextLabel: i18n.rubricTourNextButtonText(),
-            prevLabel: i18n.back(),
-            doneLabel: i18n.done(),
-            showBullets: false,
-            showStepNumbers: true,
-          }}
+      <Steps
+        enabled={canProvideFeedback && productTour && teacherHasEnabledAi}
+        initialStep={INITIAL_STEP}
+        steps={STEPS}
+        onStart={onTourStart}
+        onExit={onTourExit}
+        onChange={onStepChange}
+        onBeforeChange={onBeforeStepChange}
+        onComplete={onTourComplete}
+        options={{
+          scrollToElement: false,
+          exitOnOverlayClick: false,
+          hidePrev: true,
+          nextLabel: i18n.rubricTourNextButtonText(),
+          prevLabel: i18n.back(),
+          doneLabel: i18n.done(),
+          showBullets: false,
+          showStepNumbers: true,
+        }}
+      />
+      <RubricTabButtons
+        tabSelectCallback={tabSelectCallback}
+        selectedTab={selectedTab}
+        showSettings={showSettings}
+        canProvideFeedback={canProvideFeedback}
+        teacherHasEnabledAi={teacherHasEnabledAi}
+        studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+        refreshAiEvaluations={fetchAiEvaluations}
+        rubric={rubric}
+        studentName={studentLevelInfo && studentLevelInfo.name}
+      />
+      <RubricContent
+        productTour={productTour}
+        rubric={
+          canProvideFeedback && productTour && teacherHasEnabledAi
+            ? DUMMY_PROPS['rubricDummy']
+            : rubric
+        }
+        open={open}
+        studentLevelInfo={
+          canProvideFeedback && productTour && teacherHasEnabledAi
+            ? DUMMY_PROPS['studentLevelInfoDummy']
+            : studentLevelInfo
+        }
+        teacherHasEnabledAi={teacherHasEnabledAi}
+        canProvideFeedback={canProvideFeedback}
+        onLevelForEvaluation={onLevelForEvaluation}
+        reportingData={reportingData}
+        visible={selectedTab === TAB_NAMES.RUBRIC}
+        aiEvaluations={
+          canProvideFeedback && productTour && teacherHasEnabledAi
+            ? DUMMY_PROPS['aiEvaluationsDummy']
+            : aiEvaluations
+        }
+        feedbackAdded={feedbackAdded}
+        setFeedbackAdded={setFeedbackAdded}
+        sectionId={sectionId}
+        reloadOnStudentChange={reloadOnStudentChange}
+      />
+      {showSettings && (
+        <RubricSettings
+          visible={selectedTab === TAB_NAMES.SETTINGS}
+          refreshAiEvaluations={fetchAiEvaluations}
+          rubric={rubric}
+          sectionId={sectionId}
+          tabSelectCallback={tabSelectCallback}
+          reportingData={reportingData}
+          teacherHasEnabledAi={teacherHasEnabledAi}
         />
-        <div
-          className={classnames(style.rubricHeaderRedesign, 'ai-rubric-handle')}
-          // eslint-disable-next-line react/forbid-dom-props
-          data-testid="ai-rubric-handle-test-id"
-        >
-          <div className={style.rubricHeaderLeftSide}>{headerLeft}</div>
-          <div className={style.rubricHeaderRightSide}>
-            {canProvideFeedback && teacherHasEnabledAi && (
-              <MuiIconButton
-                id="ui-restart-product-tour"
-                aria-label="restart product tour"
-                type="button"
-                variant="text"
-                color="white"
-                onClick={tourRestartHandler}
-                className={classnames(style.buttonStyle, style.closeButton)}
-              >
-                <FontAwesomeV6Icon iconName="circle-question" />
-              </MuiIconButton>
-            )}
-            <MuiIconButton
-              type="button"
-              variant="text"
-              color="white"
-              aria-label={i18n.closeDialog()}
-              onClick={closeRubric}
-              className={classnames(style.buttonStyle, style.closeButton)}
-            >
-              <FontAwesomeV6Icon iconName="xmark" />
-            </MuiIconButton>
-          </div>
-        </div>
-
-        <div id="tour-fab-bg" className={style.fabBackground}>
-          <RubricTabButtons
-            tabSelectCallback={tabSelectCallback}
-            selectedTab={selectedTab}
-            showSettings={showSettings}
-            canProvideFeedback={canProvideFeedback}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-            refreshAiEvaluations={fetchAiEvaluations}
-            rubric={rubric}
-            studentName={studentLevelInfo && studentLevelInfo.name}
-          />
-          <RubricContent
-            productTour={productTour}
-            rubric={
-              canProvideFeedback && productTour && teacherHasEnabledAi
-                ? DUMMY_PROPS['rubricDummy']
-                : rubric
-            }
-            open={open}
-            studentLevelInfo={
-              canProvideFeedback && productTour && teacherHasEnabledAi
-                ? DUMMY_PROPS['studentLevelInfoDummy']
-                : studentLevelInfo
-            }
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            onLevelForEvaluation={onLevelForEvaluation}
-            reportingData={reportingData}
-            visible={selectedTab === TAB_NAMES.RUBRIC}
-            aiEvaluations={
-              canProvideFeedback && productTour && teacherHasEnabledAi
-                ? DUMMY_PROPS['aiEvaluationsDummy']
-                : aiEvaluations
-            }
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-            sectionId={sectionId}
-            reloadOnStudentChange={reloadOnStudentChange}
-          />
-          {showSettings && (
-            <RubricSettings
-              visible={selectedTab === TAB_NAMES.SETTINGS}
-              refreshAiEvaluations={fetchAiEvaluations}
-              rubric={rubric}
-              sectionId={sectionId}
-              tabSelectCallback={tabSelectCallback}
-              reportingData={reportingData}
-              teacherHasEnabledAi={teacherHasEnabledAi}
-            />
-          )}
-        </div>
-        {canProvideFeedback && (
-          <RubricSubmitFooter
-            open={open}
-            rubric={rubric}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-          />
-        )}
-      </div>
-    </Draggable>
+      )}
+      {canProvideFeedback && (
+        <RubricSubmitFooter
+          open={open}
+          rubric={rubric}
+          reportingData={reportingData}
+          studentLevelInfo={studentLevelInfo}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+        />
+      )}
+    </div>
   );
 }
 
@@ -424,7 +329,6 @@ RubricContainer.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
   onLevelForEvaluation: PropTypes.bool,
-  closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,
   reloadOnStudentChange: PropTypes.bool,
