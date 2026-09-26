@@ -1,11 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, IconButton, Typography} from '@mui/material';
 import React, {FC, useCallback, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
-
-import {Challenge, challengeValidator} from '../types';
 
 import styles from './challenge-picker.module.scss';
 

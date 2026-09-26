@@ -1,8 +1,8 @@
+import {TutorGalleryData} from '@code-dot-org/lesson-deep-dive';
 import React, {FC} from 'react';
 import {Navigate, Route, Routes} from 'react-router-dom';
 
 import ChallengeGallery from './gallery/ChallengeGallery';
-import {TutorGalleryData} from './gallery/types';
 import ChallengeRoute from './lessonDeepDive/ChallengeActivities/ChallengeRoute';
 import LessonDeepDiveContainer from './lessonDeepDive/LessonDeepDiveContainer';
 import {LessonDeepDiveData} from './lessonDeepDive/types';

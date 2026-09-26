@@ -1,12 +1,12 @@
-import {ResponseValidator} from '../../../util/HttpClient';
 import {
   ChallengeResponse,
   challengeResponseValidator,
-} from '../lessonDeepDive/types';
+  ResponseValidator,
+} from '../types';
 
 // Reactions ride embedded in each ChallengeResponse; re-exported so gallery
 // modules can import the type from './types'.
-export type {Reaction} from '../lessonDeepDive/types';
+export type {Reaction} from '../types';
 
 // Bootstrap data embedded by LessonsController#tutor_gallery.
 export type GalleryUnit = {
