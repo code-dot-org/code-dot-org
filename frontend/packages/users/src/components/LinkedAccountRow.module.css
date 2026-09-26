@@ -1,0 +1,58 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: var(--shape-sm);
+}
+
+.icon {
+  flex: none;
+  width: 40px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.identity {
+  display: flex;
+  flex: 1 1 200px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* SimpleList stacks its items; the badges sit on one line. */
+.badges.badges {
+  flex-flow: row wrap;
+  gap: 4px 16px;
+}
+
+/* Outranks SimpleList's per-type icon colour (three classes). */
+.badges.badges .badgeIcon.badgeIcon {
+  color: var(--text-success-primary-fixed);
+}
+
+.status {
+  overflow-wrap: anywhere;
+  color: var(--text-neutral-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.connected.connected {
+  background-color: var(--background-success-extra-light);
+  color: var(--text-neutral-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.connected.connected :global(.MuiChip-icon) {
+  color: inherit;
+}

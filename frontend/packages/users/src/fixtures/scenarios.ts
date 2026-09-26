@@ -31,6 +31,13 @@ export const USERS_SCENARIO_TAGS = [
   'teacher-no-dependents',
   'sso-teacher-dependents',
   'teacher-no-school',
+  'multi-sso-teacher',
+  'lti-teacher',
+  'lti-only-teacher',
+  'restricted-lti-teacher',
+  'rostered-student',
+  'cap-locked-student',
+  'unmigrated-teacher',
 ] as const;
 
 export type UsersScenarioTag = (typeof USERS_SCENARIO_TAGS)[number];
@@ -438,6 +445,116 @@ const teacherNoSchool: UsersScenario = {
   description: 'Educator with no school and no role — empty state of both.',
 };
 
+const multiSsoTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 15},
+  settings: {
+    ...teacher.settings,
+    authentication_options: [
+      {id: 1501, credential_type: 'email', email: 'ada@example.com'},
+      {id: 1502, credential_type: 'google_oauth2', email: 'ada@example.com'},
+      {
+        id: 1503,
+        credential_type: 'microsoft_v2_auth',
+        email: 'ada@example.org',
+      },
+      {id: 1504, credential_type: 'classlink', email: 'ada@example.net'},
+      {id: 1505, credential_type: 'classlink', email: 'ada.v2@example.net'},
+    ],
+  },
+  description:
+    'Educator with Google, Microsoft and two ClassLink logins — every row disconnectable.',
+};
+
+const ltiIntegrations = {
+  ...integrations,
+  lms_name: 'canvas_cloud',
+  lti_roster_sync_enabled: true,
+};
+
+const ltiTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 16, is_lti: true},
+  settings: {
+    ...teacher.settings,
+    authentication_options: [
+      {id: 1601, credential_type: 'email', email: 'ada@example.com'},
+      {id: 1602, credential_type: 'lti_v1', email: 'ada@lms.example.com'},
+    ],
+    integrations: ltiIntegrations,
+  },
+  description:
+    'Canvas educator with a password — can unlink Canvas; roster sync on.',
+};
+
+const ltiOnlyTeacher: UsersScenario = {
+  ...ssoTeacher,
+  currentUser: {...ssoTeacher.currentUser, id: 17, is_lti: true},
+  settings: {
+    ...ssoTeacher.settings,
+    authentication_options: [
+      {id: 1701, credential_type: 'lti_v1', email: 'grace@lms.example.com'},
+    ],
+    integrations: {...ltiIntegrations, lti_roster_sync_enabled: false},
+  },
+  description:
+    'Canvas-only educator — unlinking would lock them out; roster sync off.',
+};
+
+const restrictedLtiTeacher: UsersScenario = {
+  ...ltiTeacher,
+  currentUser: {...ltiTeacher.currentUser, id: 18},
+  settings: {
+    ...ltiTeacher.settings,
+    integrations: {...ltiIntegrations, can_manage_linked_accounts: false},
+  },
+  description:
+    'Educator in a restricted LMS deployment — roster sync only, no linked accounts.',
+};
+
+const rosteredStudent: UsersScenario = {
+  ...ssoStudent,
+  currentUser: {...ssoStudent.currentUser, id: 19},
+  settings: {
+    ...ssoStudent.settings,
+    authentication_options: [
+      {id: 1901, credential_type: 'google_oauth2', email: null},
+      {id: 1902, credential_type: 'clever', email: null},
+    ],
+    integrations: {
+      ...integrations,
+      is_google_classroom_student: true,
+      is_clever_student: true,
+    },
+  },
+  description:
+    'Student in Google Classroom and Clever sections — neither can be disconnected.',
+};
+
+const capLockedStudent: UsersScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 20, age: 10, under_13: true},
+  settings: {
+    ...student.settings,
+    age: 10,
+    us_state: 'CO',
+    integrations: {...integrations, personal_account_linking_enabled: false},
+  },
+  description:
+    'Under-13 student awaiting parental permission — personal logins locked.',
+};
+
+const unmigratedTeacher: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 21},
+  settings: {
+    ...teacher.settings,
+    integrations: {...integrations, can_manage_linked_accounts: false},
+  },
+  description:
+    'Educator not yet migrated to multiple logins — nothing to manage, tab disabled.',
+};
+
 export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   teacher,
   student,
@@ -453,4 +570,11 @@ export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   'teacher-no-dependents': teacherNoDependents,
   'sso-teacher-dependents': ssoTeacherDependents,
   'teacher-no-school': teacherNoSchool,
+  'multi-sso-teacher': multiSsoTeacher,
+  'lti-teacher': ltiTeacher,
+  'lti-only-teacher': ltiOnlyTeacher,
+  'restricted-lti-teacher': restrictedLtiTeacher,
+  'rostered-student': rosteredStudent,
+  'cap-locked-student': capLockedStudent,
+  'unmigrated-teacher': unmigratedTeacher,
 };

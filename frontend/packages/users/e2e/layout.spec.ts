@@ -77,3 +77,25 @@ test('long names and addresses do not scroll the page sideways (long-strings)', 
     );
   }
 });
+
+test('integration rows reflow without scrolling the page sideways', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'multi-sso-teacher');
+  await page.getByRole('tab', {name: 'Integrations'}).click();
+
+  for (const width of [1280, 320]) {
+    await page.setViewportSize({width, height: 900});
+    await expect
+      .poll(
+        () =>
+          page.evaluate(
+            () =>
+              document.documentElement.scrollWidth -
+              document.documentElement.clientWidth,
+          ),
+        {message: `horizontal overflow at ${width}px`},
+      )
+      .toBeLessThanOrEqual(1);
+  }
+});

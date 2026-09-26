@@ -13,12 +13,13 @@ import {
 
 import EducatorProfileForm from './components/EducatorProfileForm';
 import UsersDetailsForm from './components/UsersDetailsForm';
+import LinkedAccounts from './sections/LinkedAccounts';
 import styles from './UsersSettingsPage.module.css';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 const EDUCATOR_PROFILE_TAB = 'educator-profile';
+const INTEGRATIONS_TAB = 'integrations';
 
-// The Integrations placeholder ships disabled rather than hidden, for legacy parity.
 const TAB_META = [
   {value: ACCOUNT_DETAILS_TAB, text: 'Account Details'},
   {
@@ -26,7 +27,7 @@ const TAB_META = [
     text: 'Educator Profile',
     educatorOnly: true,
   },
-  {value: 'integrations', text: 'Integrations', disabled: true},
+  {value: INTEGRATIONS_TAB, text: 'Integrations'},
 ];
 
 const NO_OP = () => {};
@@ -54,7 +55,16 @@ export default function UsersSettingsPage({
   const settings = useUserSettings(DashboardApiClient);
 
   const isStudent = settings.data?.userType === 'student';
-  const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent));
+  // Disabled rather than hidden when it has nothing to show (e.g. a
+  // restricted LMS student), as the placeholder was.
+  const integrationsDisabled =
+    !settings.data?.integrations.canManageLinkedAccounts;
+  const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent)).map(
+    t => ({
+      ...t,
+      disabled: t.value === INTEGRATIONS_TAB && integrationsDisabled,
+    }),
+  );
 
   const activeTab =
     tab && visibleTabs.some(t => t.value === tab && !t.disabled)
@@ -119,6 +129,12 @@ export default function UsersSettingsPage({
         <FormProvider initialValues={{educator_role: data.educatorRole ?? ''}}>
           <EducatorProfileForm settings={data} />
         </FormProvider>
+      );
+    }
+
+    if (value === INTEGRATIONS_TAB) {
+      return (
+        <LinkedAccounts settings={data} integrations={data.integrations} />
       );
     }
 

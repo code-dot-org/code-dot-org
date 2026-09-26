@@ -1,0 +1,24 @@
+/* Doubled to outrank MUI Typography's own margin reset. */
+.intro.intro {
+  margin-bottom: 24px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.label {
+  color: var(--text-neutral-quaternary);
+}
