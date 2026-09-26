@@ -231,6 +231,12 @@ Beyond answers, the system records HOW students work:
   panel illustrations are generated in parallel via the Gemini image
   model (`panelImageGenerator.ts`) and uploaded to
   `dashboard/tmp/ai_lessons/images/<id>/`.
+- Editor is a single-card carousel: one checkpoint at a time, prev/next
+  navigation, with a sub-carousel for slides inside panels checkpoints.
+- Per-section tooltips explain Title / Description / Success criteria.
+- DSCO `SimpleDropdown` for the lab type picker; design-system color
+  tokens for the editor styling.
+
 ### Student player (`/ai_lessons/:id`)
 
 - Persistent AI Tutor chat on the left, the real Lab2 React view
@@ -318,6 +324,11 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
   its inner panels when its container changes size — switching
   checkpoints or resizing the window can leave the editor or preview
   pinned to a stale width.
+- **Starter authoring UI.** Starter code exists in the format
+  (`starterFiles` for literal files, `starterPrompt` for generation,
+  `sourceMode: 'sandbox'` for a clean slate) and the runtime honours
+  all three, but only via hand-edited JSON — the editor doesn't expose
+  them yet.
 ### Hackathon-y caveats
 
 - **Filesystem storage.** All persistence is local JSON under
