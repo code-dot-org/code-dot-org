@@ -127,15 +127,67 @@ practice from quiz outcomes, the fan-page hub suggests a mini lesson
 from the experience slider and AI rating.  An AI-backed resolver can
 later replace the rule matching without any UI change.
 
+### The AI build partner and student sources
+
+`buildPartner.ts` turns a prompt into a complete Web Lab 2 project
+(whole files via structured output, personalised with the student's
+recorded answers).  One code path, two triggers:
+
+- **Starter generation**: a lab step's authored `starterPrompt` runs
+  once per student on first arrival — the interview answers become
+  *their* starter site.  The result is persisted through our sources
+  API, then the lab mounts on it like any saved source.  Authored
+  `starterFiles` (e.g. a sandbox with planted bugs) win over generation.
+Deliberately, none of this touches lab2's AI-version redux state
+(`setAiTutorVersionFiles` et al.) — that machinery is coupled to real
+channels, `/project_commits`, and the aichat pipeline.  The trade: no
+in-editor per-file diff affordances, and a build/undo resets editor UI
+state (open file, cursor) via the remount.
+
+### Observations
+
+Beyond answers, the system records HOW students work:
+
+- **Build resolutions**: every build-partner prompt's AnswerRecord
+  carries the files it changed and is re-recorded as 'kept' or 'undone'
+  when the student resolves it.  The tutor's context shows these
+  ("AI build undone"), and a build on a checklist step triggers an
+  immediate tutor evaluation of the generated files — no waiting for
+  the lab remount.
+- **Tutor-judged free responses**: `validation: 'tutor'` questions now
+  gate like key-validated ones, with `judgeFreeResponse` (an LLM call
+  against the authored success criteria) as the key and its feedback as
+  the retry hint.  A judge failure accepts rather than stranding the
+  student.
+- **Step rubrics**: a lab step with an authored `rubric` gets a process
+  observation on completion — one LLM call over the step's prompts,
+  graded answers, and final work, producing a teacher-facing summary
+  plus a 0-4 effectiveness score.  Stored on the progress snapshot
+  (`saveSnapshotExtras` — no event, no summary regeneration), shown in
+  the teacher roll-up, and fed to the tutor's OBSERVATIONS context.
+  The fix-it sidequest carries the exemplar rubric.
+
+**Runtime support still behind the format:**
+
+- `starterPrompt` / `aiPrompting` are Web Lab 2 only; Music steps
+  ignore them.
+
 ## Current functionality
 
 ### Authoring (`/ai_lessons/new`, `/ai_lessons/:id/edit`)
 
+- Single-textarea prompt → `generateLessonFromPrompt` calls Gemini 2.5
+  Pro through the AI Gateway with a zod-constrained schema and returns
+  a full LessonPlan in one shot.
 - Lab capability context is injected into the generator prompt so the
   model can only reference blocks/APIs that the real labs actually
   support. See `labCapabilities.ts` — music block list is derived from
   the live `toolboxBlocks` + SIMPLE2 mode map; Web Lab 2 CSP allowlists
   come from `sharedConstants.ts`.
+- After generation, the lesson is auto-saved (so we have an id), then
+  panel illustrations are generated in parallel via the Gemini image
+  model (`panelImageGenerator.ts`) and uploaded to
+  `dashboard/tmp/ai_lessons/images/<id>/`.
 ### Routes (Rails)
 
 Every in-app page path serves the same SPA shell (`AiLessonsController#app`).
@@ -189,6 +241,11 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
 - **Old lessons may have a stale shape.** v1 (checkpoints) JSONs are
   migrated to steps on every load but never rewritten on disk; they
   round-trip through the editor as v2 the next time they're saved.
+- **The generator and editor lag the format.** `lessonGenerator` emits
+  only lab/panels steps, and the editor shows questions steps read-only.
+  Both catch up in the authoring-tools phase; until then the exemplars
+  are edited as JSON.
+
 ## How to run
 
 With dashboard + apps running (see the repo's main `SETUP.md`), open
