@@ -813,5 +813,39 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
     expect(
       screen.getAllByRole('button', {name: /manage classlink/i}),
     ).toHaveLength(2);
+    expect(
+      screen.queryByRole('heading', {level: 2, name: 'Settings'}),
+    ).toBeNull();
+  });
+
+  it('shows only roster sync to a teacher in a restricted LMS deployment', async () => {
+    renderPage('restricted-lti-teacher', {tab: 'integrations'});
+
+    expect(
+      await screen.findByRole('heading', {level: 2, name: 'Settings'}),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', {level: 2, name: 'Manage linked accounts'}),
+    ).toBeNull();
+  });
+
+  it('saves the roster sync setting through the save bar', async () => {
+    renderPage('lti-teacher', {tab: 'integrations'});
+
+    const toggle = await screen.findByRole('checkbox', {
+      name: 'Sync LMS rosters',
+    });
+    expect(toggle).toBeChecked();
+    fireEvent.click(toggle);
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Changes saved.'),
+    );
+    await waitFor(() =>
+      expect(
+        screen.getByRole('checkbox', {name: 'Sync LMS rosters'}),
+      ).not.toBeChecked(),
+    );
   });
 });

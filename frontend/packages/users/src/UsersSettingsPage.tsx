@@ -12,8 +12,8 @@ import {
 } from '@code-dot-org/core/api';
 
 import EducatorProfileForm from './components/EducatorProfileForm';
+import IntegrationsForm from './components/IntegrationsForm';
 import UsersDetailsForm from './components/UsersDetailsForm';
-import LinkedAccounts from './sections/LinkedAccounts';
 import styles from './UsersSettingsPage.module.css';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
@@ -55,10 +55,12 @@ export default function UsersSettingsPage({
   const settings = useUserSettings(DashboardApiClient);
 
   const isStudent = settings.data?.userType === 'student';
+  const integrations = settings.data?.integrations;
   // Disabled rather than hidden when it has nothing to show (e.g. a
   // restricted LMS student), as the placeholder was.
   const integrationsDisabled =
-    !settings.data?.integrations.canManageLinkedAccounts;
+    !integrations?.canManageLinkedAccounts &&
+    integrations?.ltiRosterSyncEnabled === undefined;
   const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent)).map(
     t => ({
       ...t,
@@ -134,7 +136,15 @@ export default function UsersSettingsPage({
 
     if (value === INTEGRATIONS_TAB) {
       return (
-        <LinkedAccounts settings={data} integrations={data.integrations} />
+        <FormProvider
+          initialValues={{
+            lti_roster_sync_enabled: String(
+              data.integrations.ltiRosterSyncEnabled ?? false,
+            ),
+          }}
+        >
+          <IntegrationsForm settings={data} integrations={data.integrations} />
+        </FormProvider>
       );
     }
 

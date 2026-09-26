@@ -259,9 +259,14 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
         const age = asStringOrNumber(user.age);
         const usState = asNullableString(user.us_state);
         const educatorRole = asString(user.educator_role);
+        const ltiRosterSyncEnabled =
+          typeof user.lti_roster_sync_enabled === 'boolean'
+            ? user.lti_roster_sync_enabled
+            : undefined;
 
+        const current = readSettings(ctx, scenario);
         const settings: UsersSettingsSeed = {
-          ...readSettings(ctx, scenario),
+          ...current,
           ...(givenName !== undefined && {given_name: givenName}),
           ...(familyName !== undefined && {family_name: familyName}),
           ...(displayName !== undefined && {display_name: displayName}),
@@ -270,13 +275,21 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
           ...(usState !== undefined && {us_state: usState}),
           ...(educatorRole !== undefined && {educator_role: educatorRole}),
           ...(typeof user.password === 'string' && {has_password: true}),
+          ...(ltiRosterSyncEnabled !== undefined &&
+            current.integrations && {
+              integrations: {
+                ...current.integrations,
+                lti_roster_sync_enabled: ltiRosterSyncEnabled,
+              },
+            }),
         };
         ctx.store.write('settings', settings);
 
         if (displayName !== undefined) {
-          const current = ctx.store.read('currentUser') ?? scenario.currentUser;
+          const currentUser =
+            ctx.store.read('currentUser') ?? scenario.currentUser;
           ctx.store.write('currentUser', {
-            ...current,
+            ...currentUser,
             display_name: displayName,
           });
         }

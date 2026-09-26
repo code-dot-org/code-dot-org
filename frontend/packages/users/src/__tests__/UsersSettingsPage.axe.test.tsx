@@ -62,6 +62,7 @@ describe('UsersSettingsPage — accessibility', () => {
     'multi-sso-teacher',
     'lti-teacher',
     'lti-only-teacher',
+    'restricted-lti-teacher',
     'rostered-student',
     'cap-locked-student',
     'minimal',
