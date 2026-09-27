@@ -411,6 +411,14 @@
 // Wears .radioGroup's bordered look; this only fits the slider, which the
 // design system fixes at 300px (its track and input already stretch to
 // their container).
+.styleSample {
+  width: 32px;
+  height: 32px;
+  margin-inline-start: 8px;
+  vertical-align: middle;
+  flex: none;
+}
+
 .temperatureGroup > div {
   width: 100%;
   min-width: 0;

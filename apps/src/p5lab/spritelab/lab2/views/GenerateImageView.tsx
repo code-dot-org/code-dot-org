@@ -16,6 +16,8 @@ import aiBot3 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-3.png';
 import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
 import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
+import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
+import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
 import {
   CHARACTER_SET_PICTURE_COUNT,
@@ -593,7 +595,17 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                     size="s"
                     checked={style === s}
                     onChange={() => setStyle(s)}
-                  />
+                  >
+                    {/* The same star in each style: what the words mean. */}
+                    <img
+                      src={s === 'pixel' ? pixelSample : smoothSample}
+                      alt=""
+                      className={classNames(
+                        moduleStyles.styleSample,
+                        s === 'pixel' && moduleStyles.pixelArt
+                      )}
+                    />
+                  </RadioButton>
                 ))}
               </fieldset>
               {/* Internal knob: ask the model for a coarser grid than the
