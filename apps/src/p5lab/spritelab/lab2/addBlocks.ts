@@ -1,13 +1,32 @@
 // Blocks a level adds to the pinned scene's workspace when the student
-// arrives, so an event the level teaches is already there to fill in.
+// arrives, so an event the level teaches is already there to fill in; and
+// placeholders it hangs on stacks that are already there.
 
 import * as BlocklyCore from 'blockly/core';
 
 export type AddBlock = BlocklyCore.serialization.blocks.State;
 
-// Below the existing stacks, with room for a couple more blocks under them
-// before the added block begins.
-const ROOM_BELOW_PX = 96;
+/**
+ * A shadow hung on the end of a stack already in the workspace: the
+ * level's placeholder for the block a student adds under when-run, or
+ * under an event an earlier level had them build.
+ */
+export interface AttachShadow {
+  /** The type of the stack's top block. */
+  attachTo: string;
+  shadow: BlocklyCore.serialization.blocks.State;
+}
+
+export type AddBlockEntry = AddBlock | AttachShadow;
+
+export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
+  return 'attachTo' in entry;
+}
+
+// Below the existing stacks, with room for three more blocks under them
+// before the added block begins: the blocks later levels have the student
+// add under when-run.
+const ROOM_BELOW_PX = 144;
 
 /** The blocks whose type no block in the workspace already has. */
 export function missingBlocks(
@@ -34,15 +53,56 @@ export function placeBelow(stacks: {x: number; y: number; height: number}[]): {
   };
 }
 
+/** The connection under a stack's last block, if it is free: no block on
+    it and no shadow recorded for it. A shadow stays recorded while a real
+    block covers it, so a filled placeholder is not hung twice. */
+export function freeStackEnd(
+  top: BlocklyCore.Block
+): BlocklyCore.Connection | null {
+  let last = top;
+  for (let next = last.getNextBlock(); next; next = last.getNextBlock()) {
+    last = next;
+  }
+  const connection = last.nextConnection;
+  if (!connection || connection.targetBlock() || connection.getShadowState()) {
+    return null;
+  }
+  return connection;
+}
+
+/**
+ * Hang the shadow on the end of the first stack whose top block has the
+ * type. Returns whether it was hung: a missing stack, or a stack whose end
+ * is taken, hangs nothing.
+ */
+export function attachShadow(
+  workspace: BlocklyCore.Workspace,
+  entry: AttachShadow
+): boolean {
+  const top = workspace
+    .getTopBlocks(false)
+    .find(block => block.type === entry.attachTo);
+  const connection = top && freeStackEnd(top);
+  if (!connection) {
+    return false;
+  }
+  connection.setShadowState(entry.shadow);
+  return true;
+}
+
 /**
  * Add the level's blocks the workspace lacks, each placed below
- * everything already there. Returns how many were added. Fires ordinary
- * create events, so the workspace saves and re-runs as after an edit.
+ * everything already there, and hang its shadows on the stacks named for
+ * them. Returns how many were added. Fires ordinary create events, so
+ * the workspace saves and re-runs as after an edit.
  */
 export function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
-  blocks: AddBlock[]
+  entries: AddBlockEntry[]
 ): number {
+  const blocks = entries.filter(
+    (entry): entry is AddBlock => !isAttachShadow(entry)
+  );
   const missing = missingBlocks(
     workspace.getAllBlocks(false).map(block => block.type),
     blocks
@@ -63,6 +123,17 @@ export function addMissingBlocks(
       // A block the pool cannot build (a misnamed input, a missing type) is
       // a level-authoring slip; the level must still open.
       console.warn(`add_blocks entry ${entry.type} not added:`, e);
+    }
+  }
+  for (const entry of entries) {
+    if (isAttachShadow(entry)) {
+      try {
+        if (attachShadow(workspace, entry)) {
+          added++;
+        }
+      } catch (e) {
+        console.warn(`add_blocks shadow for ${entry.attachTo} not hung:`, e);
+      }
     }
   }
   return added;

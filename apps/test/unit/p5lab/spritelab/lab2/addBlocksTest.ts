@@ -1,7 +1,25 @@
 import {
+  freeStackEnd,
+  isAttachShadow,
   missingBlocks,
   placeBelow,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
+
+// A stack of block-likes: each knows the next and its own bottom connection.
+function stack(...ends: ({target?: boolean; shadow?: boolean} | null)[]) {
+  const blocks = ends.map(end => ({
+    nextConnection: end && {
+      targetBlock: () => (end.target ? {} : null),
+      getShadowState: () => (end.shadow ? {type: 'x'} : null),
+    },
+    getNextBlock: (): unknown => null,
+  }));
+  blocks.forEach((block, i) => {
+    block.getNextBlock = () => blocks[i + 1] ?? null;
+  });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return blocks[0] as any;
+}
 
 const AT_TIME = {type: 'gamelab_atTime'};
 const CLICKED = {type: 'gamelab_spriteClicked'};
@@ -28,5 +46,25 @@ describe('addBlocks', () => {
 
   it('starts at the origin in an empty workspace', () => {
     expect(placeBelow([])).toEqual({x: 0, y: 0});
+  });
+
+  it('tells a shadow to hang from a block to add', () => {
+    expect(
+      isAttachShadow({attachTo: 'spritelab2_whenRun', shadow: AT_TIME})
+    ).toBe(true);
+    expect(isAttachShadow(AT_TIME)).toBe(false);
+  });
+
+  it("finds the free connection under a stack's last block", () => {
+    const top = stack({}, {}, {});
+    expect(freeStackEnd(top)).toBe(
+      top.getNextBlock().getNextBlock().nextConnection
+    );
+  });
+
+  it('hangs nothing on an end that has a block, a shadow, or no connection', () => {
+    expect(freeStackEnd(stack({}, {target: true}))).toBeNull();
+    expect(freeStackEnd(stack({shadow: true}))).toBeNull();
+    expect(freeStackEnd(stack(null))).toBeNull();
   });
 });
