@@ -28,17 +28,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make a character.** Create the hero of your story. Pick the words that describe them and press **Generate**."
+        "text": "**Make a character.** Create the main character of your story. Pick the words that describe them and press **Generate**."
       },
       {
-        "text": "**There's your hero!** Continue when you're ready.",
+        "text": "**There's your main character!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "spriteImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a character\nCreate the hero of your story. Pick the words that describe them and press **Generate**."
+    "long_instructions": "# Make a character\nCreate the main character of your story. Pick the words that describe them and press **Generate**."
   }
 }]]></config>
 </GamelabJr>

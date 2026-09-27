@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your new character on the right.** Use **make new sprite** with position **right** - they'll turn to face your hero. Then add **when clicked** with a **say** block inside, so clicking them makes them speak. Press **Play** and try it."
+        "text": "**Add your new character on the right.** Use **make new sprite** with position **right** - they'll turn to face your main character. Then add **when clicked** with a **say** block inside, so clicking them makes them speak. Press **Play** and try it."
       },
       {
         "text": "**It's interactive!** Click your new character to hear from them, then continue when you're ready.",
