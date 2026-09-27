@@ -45,29 +45,40 @@ export function paletteItemsPerColumn(height: number): number {
   );
 }
 
-/**
- * The grid cell under a viewport point, or null off the grid. `rect` is the
- * grid element's bounding box; its 1px border is inside it.
- */
+/** The grid element's box in viewport pixels; `border` is inside it. */
+export interface GridBox {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+  border: number;
+}
+
+/** The side of one cell inside the box. */
+export function cellSide(box: GridBox, sceneSize: number): number {
+  return (box.width - 2 * box.border) / sceneSize;
+}
+
+/** The grid cell under a viewport point, or null off the grid. */
 export function cellAtPoint(
-  rect: {left: number; top: number; width: number; height: number},
+  box: GridBox,
   sceneSize: number,
   x: number,
   y: number
 ): {row: number; col: number} | null {
   if (
-    x < rect.left ||
-    y < rect.top ||
-    x >= rect.left + rect.width ||
-    y >= rect.top + rect.height
+    x < box.left ||
+    y < box.top ||
+    x >= box.left + box.width ||
+    y >= box.top + box.height
   ) {
     return null;
   }
-  const cell = (rect.width - 2) / sceneSize;
+  const cell = cellSide(box, sceneSize);
   const clamp = (n: number) => Math.min(Math.max(n, 0), sceneSize - 1);
   return {
-    row: clamp(Math.floor((y - rect.top - 1) / cell)),
-    col: clamp(Math.floor((x - rect.left - 1) / cell)),
+    row: clamp(Math.floor((y - box.top - box.border) / cell)),
+    col: clamp(Math.floor((x - box.left - box.border) / cell)),
   };
 }
 
@@ -158,9 +169,17 @@ WorldRow.displayName = 'WorldRow';
 const PaletteTooltip: React.FunctionComponent<{
   tooltipId: string;
   text: string;
+  // Closes the bubble and keeps it closed (a drag from the item, which
+  // captures the pointer, so no leave event would close it).
+  suppress?: boolean;
   children: React.ReactElement;
-}> = ({tooltipId, text, children}) => {
+}> = ({tooltipId, text, suppress = false, children}) => {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (suppress) {
+      setOpen(false);
+    }
+  }, [suppress]);
 
   // A window that loses focus never gets the mouseleave, so the bubble stays
   // up. Skip a focused trigger: closing here would block its next focus-show.
@@ -181,7 +200,7 @@ const PaletteTooltip: React.FunctionComponent<{
       id={tooltipId}
       title={text}
       placement="right"
-      open={open}
+      open={open && !suppress}
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
       leaveDelay={10}
@@ -541,11 +560,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const shortcutFor = (index: number) =>
     index < SHORTCUT_COUNT ? `${index + 1}` : undefined;
 
-  // Shrink the grid to the room beside the palette (see worldGridArea):
-  // full size when it fits, floored so cells stay paintable. The same
-  // height sets the palette's rows; its columns follow from that in JS,
-  // because a CSS auto-fill grid sizes its width before it knows its
-  // height and comes out a column too wide.
+  // Shrink the grid to the room beside the palette: full size when it fits,
+  // floored so cells stay paintable. The same height sets the palette's
+  // rows; CSS auto-fill would size the palette's width before its height
+  // and come out a column too wide.
   const gridAreaRef = useRef<HTMLDivElement | null>(null);
   const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
   const [areaHeight, setAreaHeight] = useState(0);
@@ -581,11 +599,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       paletteColumns * PALETTE_ITEM_PX + (paletteColumns - 1) * PALETTE_GAP_PX,
   } as React.CSSProperties;
 
-  // Dragging an item from the palette onto a cell. The press captures the
-  // pointer, so the moves and the release arrive at the pressed item
-  // wherever the pointer goes; a ghost follows it and snaps to the cell it
-  // would land on. A drop also chooses the item, so taps paint it next; the
-  // release's click is then only a focus move, not a second narration.
+  // Dragging an item from the palette onto a cell. The moves and the
+  // release are read on window, whichever element the pointer is over. The
+  // grid's box is read once, when the press becomes a drag.
   const gridRef = useRef<HTMLDivElement | null>(null);
   const ghostRef = useRef<HTMLImageElement | null>(null);
   const dragRef = useRef<{
@@ -593,81 +609,123 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     pointerId: number;
     startX: number;
     startY: number;
-    moved: boolean;
+    /** Set once the press has travelled far enough to be a drag. */
+    grid: GridBox | null;
+    stop: () => void;
   } | null>(null);
   const [dragging, setDragging] = useState<PaletteItem | null>(null);
+  // A drop chooses the item itself; the release's click must not narrate a
+  // second choice. A touch drag ends with no click, so the press clears it.
   const clickAfterDrop = useRef(false);
-  const dropTarget = (x: number, y: number) => {
-    const rect = gridRef.current?.getBoundingClientRect();
-    return rect ? cellAtPoint(rect, sceneSize, x, y) : null;
+  const gridBox = (): GridBox | null => {
+    const grid = gridRef.current;
+    if (!grid) {
+      return null;
+    }
+    const rect = grid.getBoundingClientRect();
+    return {
+      left: rect.left,
+      top: rect.top,
+      width: rect.width,
+      height: rect.height,
+      border: grid.clientLeft,
+    };
   };
-  const moveGhost = (x: number, y: number) => {
+  const moveGhost = (grid: GridBox, x: number, y: number) => {
     const ghost = ghostRef.current;
-    const rect = gridRef.current?.getBoundingClientRect();
-    if (!ghost || !rect) {
+    if (!ghost) {
       return;
     }
-    const target = cellAtPoint(rect, sceneSize, x, y);
+    const side = cellSide(grid, sceneSize);
+    const target = cellAtPoint(grid, sceneSize, x, y);
     const left = target
-      ? rect.left + 1 + target.col * cellPixels
-      : x - cellPixels / 2;
+      ? grid.left + grid.border + target.col * side
+      : x - side / 2;
     const top = target
-      ? rect.top + 1 + target.row * cellPixels
-      : y - cellPixels / 2;
+      ? grid.top + grid.border + target.row * side
+      : y - side / 2;
     ghost.style.transform = `translate(${left}px, ${top}px)`;
+    ghost.style.width = `${side}px`;
+    ghost.style.height = `${side}px`;
   };
   const endDrag = () => {
+    dragRef.current?.stop();
     dragRef.current = null;
     setDragging(null);
   };
+  useEffect(() => endDrag, []);
   const handlePalettePointerDown = (
     event: React.PointerEvent<HTMLButtonElement>,
     item: PaletteItem
   ) => {
-    if (event.button !== 0) {
+    clickAfterDrop.current = false;
+    if (event.button !== 0 || dragRef.current) {
       return;
     }
-    dragRef.current = {
-      item,
-      pointerId: event.pointerId,
-      startX: event.clientX,
-      startY: event.clientY,
-      moved: false,
-    };
-    event.currentTarget.setPointerCapture?.(event.pointerId);
-  };
-  const handlePalettePointerMove = (event: React.PointerEvent) => {
-    const drag = dragRef.current;
-    if (!drag || event.pointerId !== drag.pointerId) {
-      return;
-    }
-    if (!drag.moved) {
-      const distance = Math.hypot(
-        event.clientX - drag.startX,
-        event.clientY - drag.startY
-      );
-      if (distance < DRAG_START_PX) {
+    const {pointerId} = event;
+    const onMove = (e: PointerEvent) => {
+      const drag = dragRef.current;
+      if (!drag || e.pointerId !== drag.pointerId) {
         return;
       }
-      drag.moved = true;
-      setDragging(drag.item);
-    }
-    moveGhost(event.clientX, event.clientY);
-  };
-  const handlePalettePointerUp = (event: React.PointerEvent) => {
-    const drag = dragRef.current;
-    if (!drag || event.pointerId !== drag.pointerId) {
-      return;
-    }
-    const target = drag.moved && dropTarget(event.clientX, event.clientY);
-    endDrag();
-    if (target) {
+      if (!drag.grid) {
+        const distance = Math.hypot(
+          e.clientX - drag.startX,
+          e.clientY - drag.startY
+        );
+        if (distance < DRAG_START_PX) {
+          return;
+        }
+        drag.grid = gridBox();
+        if (!drag.grid) {
+          endDrag();
+          return;
+        }
+        setDragging(drag.item);
+      }
+      moveGhost(drag.grid, e.clientX, e.clientY);
+    };
+    const onUp = (e: PointerEvent) => {
+      const drag = dragRef.current;
+      if (!drag || e.pointerId !== drag.pointerId) {
+        return;
+      }
+      const target =
+        drag.grid && cellAtPoint(drag.grid, sceneSize, e.clientX, e.clientY);
+      endDrag();
+      if (!target) {
+        return;
+      }
       const cell = {image: drag.item.image, kind: drag.item.kind};
-      onPaintCell(target.row, target.col, cell);
       onSelect(cell);
-      announce(`${drag.item.image} placed.`);
       clickAfterDrop.current = true;
-    }
+      if (grid[target.row]?.[target.col]?.image === cell.image) {
+        announce(`${cell.image} is already there.`);
+        return;
+      }
+      onPaintCell(target.row, target.col, cell);
+      announce(`${cell.image} placed.`);
+    };
+    const onCancel = (e: PointerEvent) => {
+      if (e.pointerId === dragRef.current?.pointerId) {
+        endDrag();
+      }
+    };
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
+    window.addEventListener('pointercancel', onCancel);
+    dragRef.current = {
+      item,
+      pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      grid: null,
+      stop: () => {
+        window.removeEventListener('pointermove', onMove);
+        window.removeEventListener('pointerup', onUp);
+        window.removeEventListener('pointercancel', onCancel);
+      },
+    };
   };
   return (
     <div
@@ -688,6 +746,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           <PaletteTooltip
             key={item.image}
             tooltipId={`world-palette-${index}`}
+            suppress={dragging?.image === item.image}
             text={
               shortcutFor(index)
                 ? `${item.image}, ${item.kind} (${shortcutFor(index)})`
@@ -717,9 +776,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                 choose(selections[index]);
               }}
               onPointerDown={event => handlePalettePointerDown(event, item)}
-              onPointerMove={handlePalettePointerMove}
-              onPointerUp={handlePalettePointerUp}
-              onPointerCancel={endDrag}
             >
               <span className={moduleStyles.srOnly}>
                 {item.image}, {item.kind}
@@ -762,52 +818,51 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         to keep painting. Delete clears the cell. Number keys 1 to 9 choose an
         item; 0 chooses Erase.
       </p>
-      <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
+      <div className={moduleStyles.worldGridColumn}>
         {!palette.length && (
           <p className={moduleStyles.worldEmpty}>
             Create some images on the Images tab first.
           </p>
         )}
-        <div
-          ref={gridRef}
-          role="grid"
-          aria-label="World"
-          aria-describedby="world-grid-help"
-          // Focus lives on the cursor cell (roving tabindex).
-          tabIndex={-1}
-          className={moduleStyles.worldGrid}
-          style={{'--world-cell': `${cellPixels}px`} as React.CSSProperties}
-          onKeyDown={handleGridKeyDown}
-          onKeyUp={handleGridKeyUp}
-        >
-          {Array.from({length: sceneSize}, (_, row) => (
-            <WorldRow
-              key={row}
-              row={row}
-              sceneSize={sceneSize}
-              cells={grid[row]}
-              thumbsByImage={thumbsByImage}
-              cursorCol={row === cursorRow ? cursorCol : -1}
-              registerCell={registerCell}
-              onCellPointerDown={handleCellPointerDown}
-              onCellPointerEnter={handleCellPointerEnter}
-              onCellClick={handleCellClick}
-            />
-          ))}
+        <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
+          <div
+            ref={gridRef}
+            role="grid"
+            aria-label="World"
+            aria-describedby="world-grid-help"
+            // Focus lives on the cursor cell (roving tabindex).
+            tabIndex={-1}
+            className={moduleStyles.worldGrid}
+            style={{'--world-cell': `${cellPixels}px`} as React.CSSProperties}
+            onKeyDown={handleGridKeyDown}
+            onKeyUp={handleGridKeyUp}
+          >
+            {Array.from({length: sceneSize}, (_, row) => (
+              <WorldRow
+                key={row}
+                row={row}
+                sceneSize={sceneSize}
+                cells={grid[row]}
+                thumbsByImage={thumbsByImage}
+                cursorCol={row === cursorRow ? cursorCol : -1}
+                registerCell={registerCell}
+                onCellPointerDown={handleCellPointerDown}
+                onCellPointerEnter={handleCellPointerEnter}
+                onCellClick={handleCellClick}
+              />
+            ))}
+          </div>
         </div>
       </div>
-      {/* Always mounted, so the first move of a drag has it to place. */}
+      {/* Always mounted, so the first move of a drag has it to place; sized
+          and placed by moveGhost. */}
       <img
         ref={ghostRef}
         src={dragging?.thumb}
         alt=""
         aria-hidden
         className={moduleStyles.worldDragGhost}
-        style={{
-          display: dragging ? 'block' : 'none',
-          width: cellPixels,
-          height: cellPixels,
-        }}
+        style={{display: dragging ? 'block' : 'none'}}
       />
       <div aria-live="polite" className={moduleStyles.srOnly}>
         {announced}

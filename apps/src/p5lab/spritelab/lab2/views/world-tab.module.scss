@@ -14,8 +14,16 @@
   color: var(--text-neutral-primary);
 }
 
-// The room beside the palette for the grid, measured so the editor shrinks
-// to fit small windows (down to a floor; past that the tab scrolls).
+.worldGridColumn {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+// The room for the grid, measured so the editor shrinks to fit small
+// windows (down to a floor; past that the tab scrolls).
 .worldGridArea {
   flex: 1 1 auto;
   min-width: 0;
@@ -24,7 +32,7 @@
 
 // A column of items down the left of the grid, wrapping into further
 // columns when the window is too short for one. Item size, gap, rows and
-// width are set inline (WorldTab).
+// width are set inline.
 .worldPalette {
   display: grid;
   flex: none;
@@ -72,8 +80,8 @@
 }
 
 // The dragged item's picture, following the pointer at cell size and
-// snapping onto the cell it would land on. Placed with a transform from
-// the viewport origin (moveGhost).
+// snapping onto the cell it would land on; placed by a transform from the
+// viewport origin.
 .worldDragGhost {
   position: fixed;
   top: 0;

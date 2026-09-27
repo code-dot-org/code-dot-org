@@ -3,6 +3,7 @@ import React from 'react';
 
 import WorldTab, {
   cellAtPoint,
+  cellSide,
   paletteItemsPerColumn,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/WorldTab';
 
@@ -21,16 +22,11 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 
 // The grid's box, for turning pointer positions into cells: 10 cells of 50px
 // inside a 1px border at (100, 100).
-const GRID_RECT = {left: 100, top: 100, width: 502, height: 502};
+const GRID_RECT = {left: 100, top: 100, width: 502, height: 502, border: 1};
 
 beforeAll(() => {
-  // jsdom has no ResizeObserver; the tab measures its room with one.
-  (global as unknown as {ResizeObserver: unknown}).ResizeObserver = class {
-    observe() {}
-    disconnect() {}
-  };
-  // Nor PointerEvent: without it fireEvent's pointer events carry no
-  // button or coordinates.
+  // jsdom has no PointerEvent: without it fireEvent's pointer events carry
+  // no button or coordinates.
   (window as unknown as {PointerEvent: unknown}).PointerEvent = class extends (
     MouseEvent
   ) {
@@ -42,15 +38,21 @@ beforeAll(() => {
   };
 });
 
-function renderTab(onPaintCell = jest.fn(), onSelect = jest.fn()) {
+function renderTab(
+  onPaintCell = jest.fn(),
+  onSelect = jest.fn(),
+  world?: React.ComponentProps<typeof WorldTab>['world']
+) {
   const utils = render(
     <WorldTab
       sceneSize={10}
+      world={world}
       onPaintCell={onPaintCell}
       selected={null}
       onSelect={onSelect}
     />
   );
+  // jsdom lays nothing out: the grid's box is given, with no border.
   const grid = screen.getByRole('grid');
   jest.spyOn(grid, 'getBoundingClientRect').mockReturnValue({
     ...GRID_RECT,
@@ -64,6 +66,11 @@ function renderTab(onPaintCell = jest.fn(), onSelect = jest.fn()) {
 }
 
 describe('cellAtPoint', () => {
+  it('sizes a cell from the box less its border', () => {
+    expect(cellSide(GRID_RECT, 10)).toBe(50);
+    expect(cellSide({...GRID_RECT, width: 500, border: 0}, 10)).toBe(50);
+  });
+
   it('maps a point inside the border to its cell, and outside to null', () => {
     expect(cellAtPoint(GRID_RECT, 10, 101, 101)).toEqual({row: 0, col: 0});
     expect(
@@ -132,6 +139,24 @@ describe('WorldTab palette', () => {
     fireEvent.pointerMove(stone, {pointerId: 1, clientX: 22, clientY: 23});
     fireEvent.pointerUp(stone, {pointerId: 1, clientX: 300, clientY: 300});
     expect(onPaintCell).not.toHaveBeenCalled();
+  });
+
+  it('drops nothing on a cell that already holds the item, and says so', () => {
+    const {onPaintCell, onSelect} = renderTab(jest.fn(), jest.fn(), {
+      grid: [[{image: 'Stone', kind: 'block'}]],
+    });
+    const stone = screen.getByRole('radio', {name: /Stone, block/});
+    fireEvent.pointerDown(stone, {
+      pointerId: 1,
+      button: 0,
+      clientX: 20,
+      clientY: 20,
+    });
+    fireEvent.pointerMove(stone, {pointerId: 1, clientX: 60, clientY: 60});
+    fireEvent.pointerUp(stone, {pointerId: 1, clientX: 110, clientY: 110});
+    expect(onPaintCell).not.toHaveBeenCalled();
+    expect(onSelect).toHaveBeenCalledWith({image: 'Stone', kind: 'block'});
+    expect(screen.getByText('Stone is already there.')).toBeTruthy();
   });
 
   it('drops nothing when released off the grid', () => {
