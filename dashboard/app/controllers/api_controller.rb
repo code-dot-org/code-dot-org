@@ -399,6 +399,28 @@ class ApiController < ApplicationController
     render json: student_progress.unshift(teacher_progress)
   end
 
+  # POST /dashboardapi/mass_progress_reset
+  # Deletes progress for every (student, unit) pair in the given lists. Only
+  # allowed for students who are currently in one of the signed-in teacher's
+  # sections.
+  def mass_progress_reset
+    return head :forbidden unless current_user
+
+    unit_ids = parse_id_list(params[:unit_ids])
+    student_ids = parse_id_list(params[:student_ids])
+
+    if unit_ids.blank? || student_ids.blank?
+      return render json: {error: 'unit_ids and student_ids must be non-empty arrays of integer ids'}, status: :bad_request
+    end
+
+    authorized_student_ids = current_user.students.where(id: student_ids).distinct.pluck(:id)
+    return head :forbidden unless authorized_student_ids.sort == student_ids.uniq.sort
+
+    User.delete_progress_for_units(user_ids: authorized_student_ids, unit_ids: unit_ids)
+
+    render json: {success: true}
+  end
+
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
@@ -835,5 +857,9 @@ class ApiController < ApplicationController
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     Unit.get_from_cache(script_id) if script_id
+  end
+
+  private def parse_id_list(param)
+    Array(param).map {|id| Integer(id, exception: false)}.compact
   end
 end
