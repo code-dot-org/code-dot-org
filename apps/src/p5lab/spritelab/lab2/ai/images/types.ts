@@ -66,4 +66,7 @@ export interface ImageGenerationMetadata {
   pixelGrid?: number;
   /** True when the image was made by modifying its previous version. */
   editedPrevious?: boolean;
+  /** The stance a character set's prompts were written for; absent on one
+      picture, and on sets made before plans existed (upright). */
+  bodyPlan?: BodyPlan;
 }

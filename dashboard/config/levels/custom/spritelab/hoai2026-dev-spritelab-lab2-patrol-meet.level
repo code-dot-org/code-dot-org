@@ -91,6 +91,7 @@
     "add_blocks": [
       {
         "type": "gamelab_checkTouching",
+        "data": "patrol-touch",
         "fields": {
           "CONDITION": "\"when\""
         },

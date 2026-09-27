@@ -448,6 +448,7 @@ export async function generateCharacterSet(
     ...(options.style === 'pixel' && {
       pixelGrid: logicalGridFor(pixelBlock),
     }),
+    ...(options.bodyPlan && {bodyPlan: options.bodyPlan}),
   };
   const poses: AnimationPoses = CHARACTER_STRIP_POSES;
   return {

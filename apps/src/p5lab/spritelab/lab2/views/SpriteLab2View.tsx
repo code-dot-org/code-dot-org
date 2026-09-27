@@ -1634,9 +1634,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
     adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
-    // Every level takes its words from the combos; the typed prompt box is
-    // for internal testing, behind ?image-free-text=true. Freeplay hands back
-    // the paint tools.
+    // Every level takes its words from the combos; the typed prompt box
+    // shows only behind ?image-free-text=true. Freeplay hands back the
+    // paint tools.
     adlibOnly: !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),

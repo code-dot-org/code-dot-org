@@ -5,37 +5,60 @@ import {
   placeBelow,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 
-// A stack of block-likes: each knows the next and its own bottom connection.
-function stack(
-  ...ends: ({target?: boolean; shadow?: boolean; isShadow?: boolean} | null)[]
-) {
-  const blocks = ends.map(end => ({
+const placeholder = (like: string) => ({
+  type: 'spritelab2_placeholder',
+  extraState: {like: {type: like}},
+});
+const SAY = placeholder('gamelab_spriteSay');
+const GO_TO_SCENE = placeholder('spritelab2_goToScene');
+
+// A stack of block-likes, top first. Each entry is a block's bottom
+// connection: `shadow` is the placeholder recorded there, `next` whether a
+// block hangs from it (the following entry, a shadow block when `isShadow`).
+// null is a block with no bottom connection.
+type End = {
+  shadow?: ReturnType<typeof placeholder>;
+  next?: boolean;
+  isShadow?: boolean;
+} | null;
+function stack(...ends: End[]) {
+  const blocks = ends.map((end, i) => ({
     isShadow: () => !!end?.isShadow,
     nextConnection: end && {
-      targetBlock: () => (end.target ? {} : null),
-      getShadowState: () => (end.shadow ? {type: 'x'} : null),
+      targetBlock: (): unknown =>
+        end.next ? blocks[i + 1] ?? {isShadow: () => false} : null,
+      getShadowState: () => end.shadow ?? null,
     },
-    getNextBlock: (): unknown => null,
   }));
-  blocks.forEach((block, i) => {
-    block.getNextBlock = () => blocks[i + 1] ?? null;
-  });
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return blocks[0] as any;
 }
 
 const AT_TIME = {type: 'gamelab_atTime'};
 const CLICKED = {type: 'gamelab_spriteClicked'};
+const TOUCH_TREASURE = {type: 'gamelab_checkTouching', data: 'treasure'};
+const TOUCH_PATROL = {type: 'gamelab_checkTouching', data: 'patrol'};
 
 describe('addBlocks', () => {
   it('keeps only the blocks whose type the workspace lacks', () => {
     expect(
       missingBlocks(
-        ['spritelab2_whenRun', 'gamelab_atTime'],
+        [{type: 'spritelab2_whenRun'}, {type: 'gamelab_atTime'}],
         [AT_TIME, CLICKED]
       )
     ).toEqual([CLICKED]);
     expect(missingBlocks([], [AT_TIME])).toEqual([AT_TIME]);
+  });
+
+  it('tells two entries of one type apart by their data', () => {
+    const present = [{type: 'gamelab_checkTouching', data: 'treasure'}];
+    expect(missingBlocks(present, [TOUCH_TREASURE, TOUCH_PATROL])).toEqual([
+      TOUCH_PATROL,
+    ]);
+    // A block without data stands for any entry of its type.
+    expect(
+      missingBlocks([{type: 'gamelab_checkTouching'}], [TOUCH_PATROL])
+    ).toEqual([]);
   });
 
   it('places a block under the lowest stack, at the leftmost x, with room', () => {
@@ -59,20 +82,39 @@ describe('addBlocks', () => {
   });
 
   it("finds the free connection under a stack's last block", () => {
-    const top = stack({}, {}, {});
-    expect(freeStackEnd(top)).toBe(
-      top.getNextBlock().getNextBlock().nextConnection
+    const top = stack({next: true}, {next: true}, {});
+    const last = top.nextConnection.targetBlock().nextConnection.targetBlock();
+    expect(freeStackEnd(top, SAY)).toBe(last.nextConnection);
+  });
+
+  it('hangs nothing under a stack with no bottom connection', () => {
+    expect(freeStackEnd(stack(null), SAY)).toBeNull();
+    expect(freeStackEnd(stack({next: true}, null), SAY)).toBeNull();
+  });
+
+  it('hangs nothing under a placeholder still waiting to be filled', () => {
+    expect(
+      freeStackEnd(stack({shadow: SAY, next: true}, {isShadow: true}), SAY)
+    ).toBeNull();
+    expect(
+      freeStackEnd(
+        stack({shadow: SAY, next: true}, {isShadow: true}),
+        GO_TO_SCENE
+      )
+    ).toBeNull();
+  });
+
+  it('hangs its placeholder once: a filled one is not hung again below', () => {
+    // when run -> say (the student's block over the say placeholder).
+    const filled = stack({shadow: SAY, next: true}, {});
+    expect(freeStackEnd(filled, SAY)).toBeNull();
+  });
+
+  it('hangs a different placeholder under a filled one', () => {
+    // when clicked -> say (filled) gets go to scene under the say.
+    const filled = stack({shadow: SAY, next: true}, {});
+    expect(freeStackEnd(filled, GO_TO_SCENE)).toBe(
+      filled.nextConnection.targetBlock().nextConnection
     );
-  });
-
-  it('hangs nothing on an end that has a block, a shadow, or no connection', () => {
-    expect(freeStackEnd(stack({}, {target: true}))).toBeNull();
-    expect(freeStackEnd(stack({shadow: true}))).toBeNull();
-    expect(freeStackEnd(stack(null))).toBeNull();
-  });
-
-  it('stops at a placeholder already hanging on the stack', () => {
-    // The shadow is the last block the walk sees; nothing hangs under it.
-    expect(freeStackEnd(stack({}, {isShadow: true}))).toBeNull();
   });
 });

@@ -208,7 +208,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
-  const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
+  // Not seeded where the combo is the only prompt: typed text would hide it.
+  const [prompt, setPrompt] = useState(
+    adlibOnly && adlibSet && !advanced ? '' : existing?.generation?.prompt || ''
+  );
   const [name, setName] = useState(create?.initial?.name || '');
   const initialImageType =
     existing?.imageType ||

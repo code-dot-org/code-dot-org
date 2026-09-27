@@ -55,12 +55,12 @@ export function chooseStartPattern(
     return pattern as string[];
   }
   const layouts = pattern as string[][];
-  return layouts[channelId ? hashString(channelId) % layouts.length : 0];
+  return layouts[channelId ? fnv1a(channelId) % layouts.length : 0];
 }
 
 // FNV-1a over the string's UTF-16 units: small, spread, and the same in
 // every browser.
-function hashString(text: string): number {
+function fnv1a(text: string): number {
   let hash = 0x811c9dc5;
   for (let i = 0; i < text.length; i++) {
     hash = Math.imul(hash ^ text.charCodeAt(i), 0x01000193) >>> 0;

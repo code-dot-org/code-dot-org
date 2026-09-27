@@ -4,6 +4,11 @@
 
 import * as BlocklyCore from 'blockly/core';
 
+/**
+ * A block to add. Its `data`, when set, tells it apart from another entry
+ * of the same type in one scene: the block carries it, and presence is
+ * checked against it.
+ */
 export type AddBlock = BlocklyCore.serialization.blocks.State;
 
 /**
@@ -28,13 +33,22 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
 // add under when-run.
 const ROOM_BELOW_PX = 144;
 
-/** The blocks whose type no block in the workspace already has. */
+/** The blocks the workspace lacks: none of the type, or none of the type
+    carrying the entry's data. A block without data (added before entries
+    carried any) stands for every entry of its type. */
 export function missingBlocks(
-  presentTypes: Iterable<string>,
+  present: Iterable<{type: string; data?: string | null}>,
   blocks: AddBlock[]
 ): AddBlock[] {
-  const present = new Set(presentTypes);
-  return blocks.filter(block => !present.has(block.type));
+  const presentBlocks = Array.from(present);
+  return blocks.filter(
+    block =>
+      !presentBlocks.some(
+        p =>
+          p.type === block.type &&
+          (!block.data || !p.data || p.data === block.data)
+      )
+  );
 }
 
 /** Where the next added block begins: under the lowest stack's bottom
@@ -53,46 +67,66 @@ export function placeBelow(stacks: {x: number; y: number; height: number}[]): {
   };
 }
 
-/** The connection under a stack's last real block, if it is free: no
-    block on it and no shadow recorded for it. A shadow at the end is a
-    placeholder already hung there, and getNextBlock returns shadows too,
-    so the walk stops at one. A shadow stays recorded while a real block
-    covers it, so a filled placeholder is not hung twice either. */
-export function freeStackEnd(
-  top: BlocklyCore.Block
-): BlocklyCore.Connection | null {
-  let last = top;
-  for (let next = last.getNextBlock(); next; next = last.getNextBlock()) {
-    if (next.isShadow()) {
-      return null;
-    }
-    last = next;
-  }
-  const connection = last.nextConnection;
-  if (!connection || connection.targetBlock() || connection.getShadowState()) {
-    return null;
-  }
-  return connection;
+type Shadow = BlocklyCore.serialization.blocks.State;
+
+// Placeholders are told apart by the block they stand in for.
+function likeType(shadow: Shadow | null | undefined): string | undefined {
+  const like = (shadow?.extraState as {like?: {type?: string}} | undefined)
+    ?.like;
+  return like?.type;
+}
+
+function samePlaceholder(a: Shadow | null | undefined, b: Shadow): boolean {
+  return !!a && a.type === b.type && likeType(a) === likeType(b);
 }
 
 /**
- * Hang the shadow on the end of the first stack whose top block has the
- * type. Returns whether it was hung: a missing stack, or a stack whose end
- * is taken, hangs nothing.
+ * The connection under a stack's last real block, if `shadow` can hang
+ * there: no block on it and no shadow recorded for it. A connection stays
+ * recorded with its shadow while a real block covers it, so a stack that
+ * already had this placeholder hung, filled in or not, gets it nowhere
+ * else; a stack ending in some other placeholder, still empty, has no free
+ * end under it.
+ */
+export function freeStackEnd(
+  top: BlocklyCore.Block,
+  shadow: Shadow
+): BlocklyCore.Connection | null {
+  for (let block: BlocklyCore.Block = top; ; ) {
+    const connection = block.nextConnection;
+    if (!connection || samePlaceholder(connection.getShadowState(), shadow)) {
+      return null;
+    }
+    const next = connection.targetBlock();
+    if (!next) {
+      return connection.getShadowState() ? null : connection;
+    }
+    if (next.isShadow()) {
+      return null;
+    }
+    block = next;
+  }
+}
+
+/**
+ * Hang the shadow on the end of a stack whose top block has the type: the
+ * first such stack with a free end. Returns whether it was hung.
  */
 export function attachShadow(
   workspace: BlocklyCore.Workspace,
   entry: AttachShadow
 ): boolean {
-  const top = workspace
-    .getTopBlocks(false)
-    .find(block => block.type === entry.attachTo);
-  const connection = top && freeStackEnd(top);
-  if (!connection) {
-    return false;
+  for (const top of workspace.getTopBlocks(false)) {
+    if (top.type !== entry.attachTo) {
+      continue;
+    }
+    const connection = freeStackEnd(top, entry.shadow);
+    if (connection) {
+      connection.setShadowState(entry.shadow);
+      return true;
+    }
   }
-  connection.setShadowState(entry.shadow);
-  return true;
+  return false;
 }
 
 /**
@@ -108,10 +142,7 @@ export function addMissingBlocks(
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachShadow(entry)
   );
-  const missing = missingBlocks(
-    workspace.getAllBlocks(false).map(block => block.type),
-    blocks
-  );
+  const missing = missingBlocks(workspace.getAllBlocks(false), blocks);
   let added = 0;
   for (const entry of missing) {
     const stacks = workspace.getTopBlocks(false).map(top => {
