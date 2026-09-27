@@ -272,8 +272,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
   }, [levelProperties.levelMode, worldTabParamEnabled]);
   const worldTabEnabled = tabs.includes('World');
-  // Play is entered from the bar under the playspace; the Play tab in the
-  // header is kept for a trial of the two placements.
+  // Play is entered from the bar under the playspace; the header's Play tab
+  // stays behind a URL parameter in case it comes back.
   const playTabParamEnabled = useMemo(
     () => queryParams('play-tab') === 'true',
     []
@@ -1563,7 +1563,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // Restart the whole game from the first scene.
-
   const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
     runScene(defaultPlaySceneId);
@@ -1627,25 +1626,28 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab]);
   // Stop returns to the editing tab Play was entered from, or the level's
   // first one; a level that is only Play has no Stop.
-  const lastEditTabRef = useRef<Tab | null>(null);
+  const [lastEditTab, setLastEditTab] = useState<Tab | null>(null);
   useEffect(() => {
     if (activeTab === 'Code' || activeTab === 'World') {
-      lastEditTabRef.current = activeTab;
+      setLastEditTab(activeTab);
     }
   }, [activeTab]);
-  const lastEditTab = lastEditTabRef.current;
   const stopTab =
     lastEditTab && tabs.includes(lastEditTab)
       ? lastEditTab
       : tabs.find(tab => tab === 'Code' || tab === 'World');
+  // The Play button that replaces Stop keeps a keyboard user's focus; a
+  // pointer click blurs, as every play control does.
   const handleStopClick = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
       if (stopTab) {
-        handOffControlFocus(event);
+        if (isPointerClick(event)) {
+          event.currentTarget.blur();
+        }
         dispatch(setActiveTab(stopTab));
       }
     },
-    [dispatch, stopTab, handOffControlFocus]
+    [dispatch, stopTab]
   );
 
   // World and Code are the scene-editing tabs: they share the corner

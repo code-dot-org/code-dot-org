@@ -744,10 +744,9 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-// The Play/Stop and arrow bar, placed under the playspace box by the same
-// transform math (Playspace). The overlay ignores pointer events; the bar
-// accepts them. touch-action: none so a finger on an arrow starts the key
-// at once instead of waiting to rule out a scroll or a double tap.
+// The Play/Stop and arrow bar under the playspace box. Only its buttons
+// take pointer events: the bar spans the box's width, and over the corner
+// preview that strip would otherwise sit on the Blockly workspace.
 .playBar {
   position: absolute;
   top: 0;
@@ -756,10 +755,11 @@ $tab-segment-height: $tab-item-height - 2px;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  pointer-events: auto;
-  touch-action: none;
-  user-select: none;
-  -webkit-touch-callout: none;
+  pointer-events: none;
+
+  button {
+    pointer-events: auto;
+  }
 }
 
 .arrowKeys {
@@ -768,7 +768,8 @@ $tab-segment-height: $tab-item-height - 2px;
   gap: 8px;
 }
 
-// A held key must not grow a selection or a callout under a long press.
+// A held key acts on the touch itself: no scroll or double-tap wait, and
+// no selection or callout under a long press.
 .holdKey {
   touch-action: none;
   user-select: none;

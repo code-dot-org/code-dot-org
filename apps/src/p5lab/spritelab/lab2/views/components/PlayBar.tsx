@@ -17,10 +17,15 @@ interface HoldKeyProps {
   children?: React.ReactNode;
 }
 
+// How long an activation with no press of its own (assistive technology's
+// click) holds the key: long enough for the game's per-frame key polling.
+const TAP_MS = 100;
+
 /**
  * A button that holds a game key down for as long as it is pressed: from
- * pointer down to pointer up, or from Enter/Space down to up. The key is
- * released if the button goes away while held (Stop, or the set changing).
+ * pointer down to pointer up, or from Enter/Space down to up. A click with
+ * neither (assistive technology) taps the key. The key is released if the
+ * button goes away while held (Stop, or the set changing).
  */
 const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   gameKey,
@@ -29,7 +34,11 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   children,
 }) => {
   const held = useRef(false);
+  // Set by a pointer or key press, so the click that follows one is not
+  // taken for an assistive-technology activation.
+  const pressed = useRef(false);
   const press = useCallback(() => {
+    pressed.current = true;
     if (!held.current) {
       held.current = true;
       dispatchGameKey('keydown', gameKey);
@@ -45,14 +54,18 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
 
   const handlers = {
     // Act on the press itself, not the click that follows the release.
-    // Cancelling the pointer default also keeps focus off the button, where
-    // Space (a game key) would activate it on every press.
     onPointerDown: (e: React.PointerEvent<HTMLElement>) => {
       e.preventDefault();
       e.currentTarget.setPointerCapture?.(e.pointerId);
       press();
     },
-    onPointerUp: release,
+    // Focus must not stay on the button, where Space (a game key) would
+    // activate it on every press; cancelling pointerdown does not keep it
+    // off in every browser.
+    onPointerUp: (e: React.PointerEvent<HTMLElement>) => {
+      release();
+      e.currentTarget.blur();
+    },
     onPointerCancel: release,
     onLostPointerCapture: release,
     onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
@@ -66,6 +79,15 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
         e.preventDefault();
         release();
       }
+    },
+    onClick: () => {
+      if (pressed.current) {
+        pressed.current = false;
+        return;
+      }
+      press();
+      pressed.current = false;
+      window.setTimeout(release, TAP_MS);
     },
     onBlur: release,
   };

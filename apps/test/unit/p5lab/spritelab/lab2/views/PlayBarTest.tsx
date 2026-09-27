@@ -67,6 +67,30 @@ describe('PlayBar', () => {
     keys.stop();
   });
 
+  it('taps the key for a click with no press of its own', () => {
+    jest.useFakeTimers();
+    const keys = keyEvents();
+    render(<PlayBar playing arrows="steer" onPlay={jest.fn()} />);
+    const left = screen.getByRole('button', {name: 'Left'});
+    fireEvent.click(left);
+    expect(keys.seen).toEqual(['keydown:37']);
+    jest.advanceTimersByTime(200);
+    expect(keys.seen).toEqual(['keydown:37', 'keyup:37']);
+    // The click after a real press adds nothing.
+    fireEvent.pointerDown(left);
+    fireEvent.pointerUp(left);
+    fireEvent.click(left);
+    jest.advanceTimersByTime(200);
+    expect(keys.seen).toEqual([
+      'keydown:37',
+      'keyup:37',
+      'keydown:37',
+      'keyup:37',
+    ]);
+    keys.stop();
+    jest.useRealTimers();
+  });
+
   it('holds the key from Enter down to up, and releases when it goes away', () => {
     const keys = keyEvents();
     const {rerender} = render(
