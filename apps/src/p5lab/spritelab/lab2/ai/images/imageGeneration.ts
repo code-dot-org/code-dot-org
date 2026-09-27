@@ -64,6 +64,10 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
 const SPRITE_PROMPT_CLAUSE =
   'Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.';
 
+// A still character faces the way an animated one does (characterSet.ts),
+// so a story's right-lane mirror turns it toward the others.
+const CHARACTER_FACING_CLAUSE = 'The character faces to the right.';
+
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
 // decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
@@ -260,6 +264,33 @@ async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
 }
 
 /**
+ * The prompt as sent: the student's words as a sentence, then the style,
+ * then the clauses for the kind of image.
+ */
+export function fullPromptFor(
+  prompt: string,
+  options: GenerateImageOptions = {}
+): string {
+  const {imageType = 'sprite', style = 'smooth'} = options;
+  const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
+  // Read the prompt as a sentence before the clauses, without doubling the
+  // punctuation a prompt may already end with.
+  const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
+  let fullPrompt = `${sentence} ${styleClause(style, pixelBlock)}`;
+  if (imageType === 'sprite') {
+    if (options.subject === 'character') {
+      fullPrompt = `${fullPrompt} ${CHARACTER_FACING_CLAUSE}`;
+    }
+    fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
+  } else if (imageType === 'block') {
+    fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
+  } else if (imageType === 'background') {
+    fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
+  }
+  return fullPrompt;
+}
+
+/**
  * Generate an image from a text prompt. Sprites and blocks get a flat key
  * color the model picks to contrast with the subject, flood-filled to
  * transparency.
@@ -273,17 +304,7 @@ export async function generateImage(
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  // Read the prompt as a sentence before the clauses, without doubling the
-  // punctuation a prompt may already end with.
-  const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
-  let fullPrompt = `${sentence} ${styleClause(style, pixelBlock)}`;
-  if (imageType === 'sprite') {
-    fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
-  } else if (imageType === 'block') {
-    fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
-  } else if (imageType === 'background') {
-    fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
-  }
+  const fullPrompt = fullPromptFor(prompt, options);
 
   // The prompt judge and the image model run concurrently — generation is
   // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks

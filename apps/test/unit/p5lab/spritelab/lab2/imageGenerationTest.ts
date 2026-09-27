@@ -1,5 +1,6 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import {
+  fullPromptFor,
   generateImage,
   pixelBlockFor,
   requestImage,
@@ -138,6 +139,20 @@ describe('generateImage', () => {
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;
     expect(typeof content).toBe('string');
     expect(content).toContain('a beach');
+  });
+
+  it('asks a character to face right, and an object nothing of the kind', () => {
+    const character = fullPromptFor('a knight', {
+      imageType: 'sprite',
+      subject: 'character',
+    });
+    expect(character).toContain('faces to the right');
+    const object = fullPromptFor('a chest', {
+      imageType: 'sprite',
+      subject: 'object',
+    });
+    expect(object).not.toContain('faces to the right');
+    expect(object).toContain('plain solid background');
   });
 
   it('asks backgrounds to fill the whole image (no painted frame)', async () => {
