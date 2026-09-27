@@ -67,13 +67,17 @@ const SPRITE_PROMPT_CLAUSE =
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
 // decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
+// The place is empty for the same reason: the student's characters are
+// placed on top, and a background with its own people is a crowd.
 const BACKGROUND_PROMPT_CLAUSE =
-  'The scene itself fills the entire image, reaching all four edges. Do not frame the picture: no border and no margin, and nothing along the edges that is not part of the scene.';
+  'The place is deserted: scenery only, with nobody in it, no people, characters, creatures or figures of any kind. The scene itself fills the entire image, reaching all four edges. Do not frame the picture: no border and no margin, and nothing along the edges that is not part of the scene.';
 
-// Name no drawable object here ("block", "tile") — the model adds it to the
-// picture. Describe only the square-and-margin layout.
+// The square is ground in a platform game, and the prompt says so: without
+// the game's meaning, "a block of gold" comes back as a picture of a gold
+// cube. Name no separate object ("block", "tile", "cube") — the model draws
+// it inside the square — describe the ground's face instead.
 const BLOCK_PROMPT_CLAUSE =
-  'Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
+  'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
 
 /**
  * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
