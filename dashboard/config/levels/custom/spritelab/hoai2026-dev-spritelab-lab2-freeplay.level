@@ -56,6 +56,10 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_playSound"
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_playMusic"
             },
             {
@@ -133,6 +137,10 @@
             {
               "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playSound"
             },
             {
               "kind": "block",
