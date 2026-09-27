@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -26,6 +27,49 @@ const EMPTY_GRID = createEmptyWorld().grid;
 // tab; 0 picks Erase.
 const SHORTCUT_COUNT = 9;
 const ERASE_SHORTCUT = '0';
+
+// A palette press that travels this far is a drag onto the grid, not a tap.
+const DRAG_START_PX = 6;
+
+// Palette items and the gap between them; the stylesheet reads these as
+// custom properties. The palette is one column down the grid's left,
+// wrapping into more columns when the window is too short for one.
+const PALETTE_ITEM_PX = 64;
+const PALETTE_GAP_PX = 8;
+
+/** Items per palette column for the room available, at least one. */
+export function paletteItemsPerColumn(height: number): number {
+  return Math.max(
+    1,
+    Math.floor((height + PALETTE_GAP_PX) / (PALETTE_ITEM_PX + PALETTE_GAP_PX))
+  );
+}
+
+/**
+ * The grid cell under a viewport point, or null off the grid. `rect` is the
+ * grid element's bounding box; its 1px border is inside it.
+ */
+export function cellAtPoint(
+  rect: {left: number; top: number; width: number; height: number},
+  sceneSize: number,
+  x: number,
+  y: number
+): {row: number; col: number} | null {
+  if (
+    x < rect.left ||
+    y < rect.top ||
+    x >= rect.left + rect.width ||
+    y >= rect.top + rect.height
+  ) {
+    return null;
+  }
+  const cell = (rect.width - 2) / sceneSize;
+  const clamp = (n: number) => Math.min(Math.max(n, 0), sceneSize - 1);
+  return {
+    row: clamp(Math.floor((y - rect.top - 1) / cell)),
+    col: clamp(Math.floor((x - rect.left - 1) / cell)),
+  };
+}
 
 // Arrow key -> cursor step, as [rows, columns].
 const ARROW_STEPS: Record<string, [number, number] | undefined> = {
@@ -110,7 +154,7 @@ const WorldRow = React.memo<WorldRowProps>(
 );
 WorldRow.displayName = 'WorldRow';
 
-// Bubble goes below the item so the next item to the right stays readable.
+// Bubble goes beside the item so the items below it stay readable.
 const PaletteTooltip: React.FunctionComponent<{
   tooltipId: string;
   text: string;
@@ -136,7 +180,7 @@ const PaletteTooltip: React.FunctionComponent<{
     <Tooltip
       id={tooltipId}
       title={text}
-      placement="bottom"
+      placement="right"
       open={open}
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
@@ -172,6 +216,9 @@ interface WorldTabProps {
  * The World tab (experiment): paint starter sprites and blocks onto the
  * scene's grid from the project's images, instead of placing them with
  * code. The scene spawns the world's top-left corner when it runs.
+ *
+ * Pointer model: tap an item, then tap or drag-paint cells; or drag an item
+ * from the palette straight onto a cell.
  *
  * Keyboard model: the palette and the grid are one tab stop each. In the
  * palette, arrow keys move and choose (radio-style); in the grid, arrow
@@ -452,9 +499,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     []
   );
 
-  // Radio-style palette: one tab stop, arrows move AND choose. Up and Down
-  // step by the measured items-per-row, so a wrapped palette walks as the
-  // grid it looks like.
+  // Radio-style palette: one tab stop, arrows move AND choose. The palette
+  // fills columns top to bottom, so Left and Right step by a column and a
+  // wrapped palette walks as the grid it looks like.
   const paletteRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const focusAndChoose = (index: number) => {
     const clamped = Math.min(Math.max(index, 0), selections.length - 1);
@@ -474,31 +521,16 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     );
     const current =
       focusedIndex >= 0 ? focusedIndex : Math.max(selectedIndex, 0);
-    const items = paletteRefs.current;
-    let perRow = count;
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      // Items before the first line wrap share the first item's top.
-      // Viewport coordinates, because each item sits inside its own tooltip
-      // wrapper and offsets within it are meaningless.
-      const topOf = (el: HTMLButtonElement | null) =>
-        el ? Math.round(el.getBoundingClientRect().top) : 0;
-      const firstTop = topOf(items[0]);
-      for (let i = 1; i < count; i++) {
-        if (items[i] && topOf(items[i]) !== firstTop) {
-          perRow = i;
-          break;
-        }
-      }
-    }
+    const perColumn = paletteRows;
     let next = -1;
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowDown') {
       next = (current + 1) % count;
-    } else if (event.key === 'ArrowLeft') {
+    } else if (event.key === 'ArrowUp') {
       next = (current - 1 + count) % count;
-    } else if (event.key === 'ArrowDown' && current + perRow < count) {
-      next = current + perRow;
-    } else if (event.key === 'ArrowUp' && current - perRow >= 0) {
-      next = current - perRow;
+    } else if (event.key === 'ArrowRight' && current + perColumn < count) {
+      next = current + perColumn;
+    } else if (event.key === 'ArrowLeft' && current - perColumn >= 0) {
+      next = current - perColumn;
     }
     if (next >= 0) {
       event.preventDefault();
@@ -509,10 +541,14 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const shortcutFor = (index: number) =>
     index < SHORTCUT_COUNT ? `${index + 1}` : undefined;
 
-  // Shrink the grid to the vertical room left after the palette (see
-  // worldGridArea): full size when it fits, floored so cells stay paintable.
+  // Shrink the grid to the room beside the palette (see worldGridArea):
+  // full size when it fits, floored so cells stay paintable. The same
+  // height sets the palette's rows; its columns follow from that in JS,
+  // because a CSS auto-fill grid sizes its width before it knows its
+  // height and comes out a column too wide.
   const gridAreaRef = useRef<HTMLDivElement | null>(null);
   const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
+  const [areaHeight, setAreaHeight] = useState(0);
   useEffect(() => {
     const area = gridAreaRef.current;
     if (!area) {
@@ -520,14 +556,119 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     }
     const observer = new ResizeObserver(() => {
       setGridPixels(
-        Math.max(MIN_GRID_PIXELS, Math.min(GRID_PIXELS, area.clientHeight))
+        Math.max(
+          MIN_GRID_PIXELS,
+          Math.min(GRID_PIXELS, area.clientHeight, area.clientWidth)
+        )
       );
+      setAreaHeight(area.clientHeight);
     });
     observer.observe(area);
     return () => observer.disconnect();
   }, []);
 
   const cellPixels = gridPixels / sceneSize;
+  // Unmeasured, the palette is one column.
+  const paletteRows = areaHeight
+    ? Math.min(paletteItemsPerColumn(areaHeight), selections.length)
+    : selections.length;
+  const paletteColumns = Math.ceil(selections.length / paletteRows);
+  const paletteStyle = {
+    '--palette-item': `${PALETTE_ITEM_PX}px`,
+    '--palette-gap': `${PALETTE_GAP_PX}px`,
+    gridTemplateRows: `repeat(${paletteRows}, ${PALETTE_ITEM_PX}px)`,
+    width:
+      paletteColumns * PALETTE_ITEM_PX + (paletteColumns - 1) * PALETTE_GAP_PX,
+  } as React.CSSProperties;
+
+  // Dragging an item from the palette onto a cell. The press captures the
+  // pointer, so the moves and the release arrive at the pressed item
+  // wherever the pointer goes; a ghost follows it and snaps to the cell it
+  // would land on. A drop also chooses the item, so taps paint it next; the
+  // release's click is then only a focus move, not a second narration.
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const ghostRef = useRef<HTMLImageElement | null>(null);
+  const dragRef = useRef<{
+    item: PaletteItem;
+    pointerId: number;
+    startX: number;
+    startY: number;
+    moved: boolean;
+  } | null>(null);
+  const [dragging, setDragging] = useState<PaletteItem | null>(null);
+  const clickAfterDrop = useRef(false);
+  const dropTarget = (x: number, y: number) => {
+    const rect = gridRef.current?.getBoundingClientRect();
+    return rect ? cellAtPoint(rect, sceneSize, x, y) : null;
+  };
+  const moveGhost = (x: number, y: number) => {
+    const ghost = ghostRef.current;
+    const rect = gridRef.current?.getBoundingClientRect();
+    if (!ghost || !rect) {
+      return;
+    }
+    const target = cellAtPoint(rect, sceneSize, x, y);
+    const left = target
+      ? rect.left + 1 + target.col * cellPixels
+      : x - cellPixels / 2;
+    const top = target
+      ? rect.top + 1 + target.row * cellPixels
+      : y - cellPixels / 2;
+    ghost.style.transform = `translate(${left}px, ${top}px)`;
+  };
+  const endDrag = () => {
+    dragRef.current = null;
+    setDragging(null);
+  };
+  const handlePalettePointerDown = (
+    event: React.PointerEvent<HTMLButtonElement>,
+    item: PaletteItem
+  ) => {
+    if (event.button !== 0) {
+      return;
+    }
+    dragRef.current = {
+      item,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      moved: false,
+    };
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+  };
+  const handlePalettePointerMove = (event: React.PointerEvent) => {
+    const drag = dragRef.current;
+    if (!drag || event.pointerId !== drag.pointerId) {
+      return;
+    }
+    if (!drag.moved) {
+      const distance = Math.hypot(
+        event.clientX - drag.startX,
+        event.clientY - drag.startY
+      );
+      if (distance < DRAG_START_PX) {
+        return;
+      }
+      drag.moved = true;
+      setDragging(drag.item);
+    }
+    moveGhost(event.clientX, event.clientY);
+  };
+  const handlePalettePointerUp = (event: React.PointerEvent) => {
+    const drag = dragRef.current;
+    if (!drag || event.pointerId !== drag.pointerId) {
+      return;
+    }
+    const target = drag.moved && dropTarget(event.clientX, event.clientY);
+    endDrag();
+    if (target) {
+      const cell = {image: drag.item.image, kind: drag.item.kind};
+      onPaintCell(target.row, target.col, cell);
+      onSelect(cell);
+      announce(`${drag.item.image} placed.`);
+      clickAfterDrop.current = true;
+    }
+  };
   return (
     <div
       className={moduleStyles.worldTab}
@@ -540,6 +681,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         // a programmatic target.
         tabIndex={-1}
         className={moduleStyles.worldPalette}
+        style={paletteStyle}
         onKeyDown={handlePaletteKeyDown}
       >
         {palette.map((item, index) => (
@@ -568,13 +710,21 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
               // the selection and must not part from focus.
               onClick={event => {
                 event.currentTarget.focus();
+                if (clickAfterDrop.current) {
+                  clickAfterDrop.current = false;
+                  return;
+                }
                 choose(selections[index]);
               }}
+              onPointerDown={event => handlePalettePointerDown(event, item)}
+              onPointerMove={handlePalettePointerMove}
+              onPointerUp={handlePalettePointerUp}
+              onPointerCancel={endDrag}
             >
               <span className={moduleStyles.srOnly}>
                 {item.image}, {item.kind}
               </span>
-              {item.thumb && <img src={item.thumb} alt="" />}
+              {item.thumb && <img src={item.thumb} alt="" draggable={false} />}
             </button>
           </PaletteTooltip>
         ))}
@@ -601,14 +751,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
               choose('erase');
             }}
           >
+            <FontAwesomeV6Icon iconName="eraser" />
             Erase
           </button>
         </PaletteTooltip>
-        {!palette.length && (
-          <span className={moduleStyles.worldEmpty}>
-            Create some images on the Images tab first.
-          </span>
-        )}
       </div>
       <p id="world-grid-help" className={moduleStyles.srOnly}>
         Arrow keys move around the grid. Enter or Space places the chosen item,
@@ -617,7 +763,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         item; 0 chooses Erase.
       </p>
       <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
+        {!palette.length && (
+          <p className={moduleStyles.worldEmpty}>
+            Create some images on the Images tab first.
+          </p>
+        )}
         <div
+          ref={gridRef}
           role="grid"
           aria-label="World"
           aria-describedby="world-grid-help"
@@ -644,6 +796,19 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           ))}
         </div>
       </div>
+      {/* Always mounted, so the first move of a drag has it to place. */}
+      <img
+        ref={ghostRef}
+        src={dragging?.thumb}
+        alt=""
+        aria-hidden
+        className={moduleStyles.worldDragGhost}
+        style={{
+          display: dragging ? 'block' : 'none',
+          width: cellPixels,
+          height: cellPixels,
+        }}
+      />
       <div aria-live="polite" className={moduleStyles.srOnly}>
         {announced}
       </div>
