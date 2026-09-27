@@ -495,6 +495,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Premade world, when the level authors one.
   useWorldStartPattern({
     pattern: levelProperties.worldStartPattern,
+    channelId,
     pinnedSceneId,
     enabled: animationsSeeded,
     animations: animationList,

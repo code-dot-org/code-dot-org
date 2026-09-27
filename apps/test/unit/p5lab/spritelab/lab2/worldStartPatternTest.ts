@@ -5,6 +5,7 @@ import {
   WorldCell,
 } from '@cdo/apps/p5lab/spritelab/lab2/world';
 import {
+  chooseStartPattern,
   paintPattern,
   patternCells,
 } from '@cdo/apps/p5lab/spritelab/lab2/worldStartPattern';
@@ -128,5 +129,39 @@ describe('paintPattern', () => {
     const rows = painted.grid.filter(cells => cells.some(Boolean)).length;
     expect(rows).toBe(10);
     expect(painted.grid[0].filter(Boolean)).toHaveLength(10);
+  });
+});
+
+describe('chooseStartPattern', () => {
+  const one = ['..S.', 'BBBB'];
+  const layouts = [
+    ['A...', 'BBBB'],
+    ['.B..', 'BBBB'],
+    ['..C.', 'BBBB'],
+  ];
+
+  it('passes a single pattern through', () => {
+    expect(chooseStartPattern(one, 'abc')).toBe(one);
+    expect(chooseStartPattern(undefined, 'abc')).toBeUndefined();
+    expect(chooseStartPattern([], 'abc')).toBeUndefined();
+  });
+
+  it('picks one layout by the channel, the same one every time', () => {
+    const picked = chooseStartPattern(layouts, 'channel-one');
+    expect(layouts).toContain(picked);
+    expect(chooseStartPattern(layouts, 'channel-one')).toBe(picked);
+  });
+
+  it('spreads channels over the layouts', () => {
+    const picks = new Set(
+      Array.from({length: 40}, (_, i) =>
+        chooseStartPattern(layouts, `channel-${i}`)
+      )
+    );
+    expect(picks.size).toBe(layouts.length);
+  });
+
+  it('takes the first layout with no channel', () => {
+    expect(chooseStartPattern(layouts, undefined)).toBe(layouts[0]);
   });
 });

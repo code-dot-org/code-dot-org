@@ -38,6 +38,37 @@ export function patternCells(
 }
 
 /**
+ * The layout a project gets from a level's world_start_pattern: the one
+ * pattern given, or one of several chosen by the project's channel id, so
+ * a class sees different worlds and one student sees the same world on
+ * every level that seeds it. No channel (a levelbuilder preview) takes the
+ * first.
+ */
+export function chooseStartPattern(
+  pattern: string[] | string[][] | undefined,
+  channelId: string | undefined
+): string[] | undefined {
+  if (!pattern?.length) {
+    return undefined;
+  }
+  if (!Array.isArray(pattern[0])) {
+    return pattern as string[];
+  }
+  const layouts = pattern as string[][];
+  return layouts[channelId ? hashString(channelId) % layouts.length : 0];
+}
+
+// FNV-1a over the string's UTF-16 units: small, spread, and the same in
+// every browser.
+function hashString(text: string): number {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) {
+    hash = Math.imul(hash ^ text.charCodeAt(i), 0x01000193) >>> 0;
+  }
+  return hash;
+}
+
+/**
  * The scene's world with the pattern painted in, or null when it would change
  * nothing. Each kind seeds only while the world holds none of it, and only
  * into empty cells, so a student's own placements always win. Rows anchor to
@@ -76,14 +107,16 @@ export function paintPattern(
 /** Seeds the pattern whenever the image list changes. A trigger keyed on
     Start Over itself would fire with the pre-reset list. */
 export function useWorldStartPattern({
-  pattern,
+  pattern: patternOrLayouts,
+  channelId,
   pinnedSceneId,
   enabled,
   animations,
   spriteRole,
   updateSources,
 }: {
-  pattern: string[] | undefined;
+  pattern: string[] | string[][] | undefined;
+  channelId: string | undefined;
   pinnedSceneId: string | undefined;
   enabled: boolean;
   animations: RuntimeAnimationList;
@@ -91,7 +124,8 @@ export function useWorldStartPattern({
   updateSources: (updater: (prev: Sources) => Sources) => void;
 }): void {
   useEffect(() => {
-    if (!pattern?.length || !pinnedSceneId || !enabled) {
+    const pattern = chooseStartPattern(patternOrLayouts, channelId);
+    if (!pattern || !pinnedSceneId || !enabled) {
       return;
     }
     const cellFor = patternCells(animations, spriteRole);
@@ -109,5 +143,13 @@ export function useWorldStartPattern({
       next[index] = {...scenes[index], world};
       return {...prev, scenes: next};
     });
-  }, [pattern, pinnedSceneId, enabled, animations, spriteRole, updateSources]);
+  }, [
+    patternOrLayouts,
+    channelId,
+    pinnedSceneId,
+    enabled,
+    animations,
+    spriteRole,
+    updateSources,
+  ]);
 }

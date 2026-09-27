@@ -145,7 +145,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       anchored to the floor. 'B' cells take the block image the student made
       most recently, 'S' the image_role_defaults sprite, else their first
       character. */
-  worldStartPattern?: string[];
+  /** Rows of a premade world (worldStartPattern.ts), or several such
+      layouts, one of which the project draws by its channel id. */
+  worldStartPattern?: string[] | string[][];
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;
