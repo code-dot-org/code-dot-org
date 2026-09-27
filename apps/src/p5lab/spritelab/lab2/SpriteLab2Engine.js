@@ -74,6 +74,28 @@ const CANVAS_DENSITY_FACTOR = 2;
 // How long a restart quiets further restarts: long enough to see the scene
 // run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
+// A block-triggered scene jump waits this long before it starts, so a say
+// block on the same event is seen before the scene changes.
+const SCENE_JUMP_DELAY_MS = 750;
+// How much a platform scene dims its background, so the blocks and the
+// player read against it.
+const PLATFORM_BACKGROUND_DIM = 0.25;
+
+/**
+ * A copy of a p5.Image with a translucent black fill over it, sized to
+ * `size` when given. One canvas fill on the copy, so dimming costs nothing
+ * per frame and the shared preloaded image is never touched.
+ */
+function dimmedCopy(image, size) {
+  const copy = image.get();
+  if (size && (copy.width !== size || copy.height !== size)) {
+    copy.resize(size, size);
+  }
+  const context = copy.drawingContext;
+  context.fillStyle = `rgba(0, 0, 0, ${PLATFORM_BACKGROUND_DIM})`;
+  context.fillRect(0, 0, copy.width, copy.height);
+  return copy;
+}
 
 // Markers in a scene's compiled program that make it a platformer: the
 // platform composites and player setup from the toolbox, or the world
@@ -158,6 +180,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
+    // A block-triggered jump waiting out SCENE_JUMP_DELAY_MS; a fresh run
+    // cancels it.
+    this.jumpDelayTimer_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -234,12 +259,19 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    // A fresh library is a fresh run: a jump the old one was waiting to make
+    // must not land in it.
+    this.clearSceneJumpDelay_();
+    const engine = this;
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
     // classic's ~400px library art: resize once to the canvas's physical
     // resolution instead of CoreLibrary's logical 400. A frame (from the
     // zoomed platform draw loop) draws into that rectangle instead, straight
     // from the stored resolution — a zoomed-in view needs the extra pixels a
-    // one-time downsize would destroy.
+    // one-time downsize would destroy. A platform scene draws a dimmed copy
+    // in both cases; the copies are cached on the shared image, which is
+    // never mutated itself (a resize in place changed it for every other
+    // consumer).
     library.drawBackground = function (frame) {
       if (typeof this.background === 'string') {
         this.p5.background(this.background);
@@ -249,26 +281,31 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (typeof this.background !== 'object') {
         return;
       }
+      const dim = engine.isPlatformScene_();
       if (frame) {
-        this.p5.image(
-          this.background,
-          frame.x,
-          frame.y,
-          frame.size,
-          frame.size
-        );
+        let full = this.background;
+        if (dim) {
+          if (!this.background._dimmedFull) {
+            this.background._dimmedFull = dimmedCopy(this.background);
+          }
+          full = this.background._dimmedFull;
+        }
+        this.p5.image(full, frame.x, frame.y, frame.size, frame.size);
         return;
       }
+      // The unzoomed draw stays a same-size copy, which machines without GPU
+      // acceleration need to stay cheap.
       const size = APP_WIDTH * (this.p5._pixelDensity || 1);
-      let buffer = this.background._displayBuffer;
+      const key = dim ? '_displayBufferDimmed' : '_displayBuffer';
+      let buffer = this.background[key];
       if (!buffer || buffer.width !== size || buffer.height !== size) {
-        // A copy sized to the canvas backing: the shared preloaded image is
-        // never mutated (a resize in place changed it for every other
-        // consumer), and the unzoomed draw stays a same-size copy, which
-        // machines without GPU acceleration need to stay cheap.
-        buffer = this.background.get();
-        buffer.resize(size, size);
-        this.background._displayBuffer = buffer;
+        if (dim) {
+          buffer = dimmedCopy(this.background, size);
+        } else {
+          buffer = this.background.get();
+          buffer.resize(size, size);
+        }
+        this.background[key] = buffer;
       }
       this.p5.image(buffer, 0, 0, APP_WIDTH, APP_HEIGHT);
     };
@@ -276,7 +313,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // dynamically at runtime) decodes on demand: the sprite changes costume
     // when the decode lands, instead of p5.play throwing on the missing
     // label.
-    const engine = this;
     const baseSetAnimation = library.commands.setAnimation;
     library.commands.setAnimation = function (spriteArg, animation) {
       if (engine.p5Wrapper.preloadedSprites?.[animation]) {
@@ -355,8 +391,14 @@ export default class SpriteLab2Engine extends SpriteLab {
         location: {x, y: STORY_LANE_Y},
         scale: STORY_LANE_SPRITE_SIZE,
       });
+      // The right lane faces the others. A still picture is mirrored here;
+      // an animated character starts its poses facing left instead
+      // (updateCharacterAnimations_ sets the mirror every frame).
       if (position === 'right' && id !== undefined) {
-        library.getSpriteArray({id}).forEach(sprite => sprite.mirrorX(-1));
+        library.getSpriteArray({id}).forEach(sprite => {
+          sprite.mirrorX(-1);
+          sprite.startFacing = 'left';
+        });
       }
       return id;
     };
@@ -455,38 +497,57 @@ export default class SpriteLab2Engine extends SpriteLab {
       return setAnimation.call(this, spriteArg, animation);
     };
     library.commands.goToScene = sceneId => {
-      if (!this.onGoToScene || !this.beginSceneJump_()) {
-        return;
-      }
       const id = String(sceneId);
-      // Defer a tick: jumping tears down the interpreter this command runs in.
-      setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
+      this.delaySceneJump_(() => this.onGoToScene && this.onGoToScene(id));
     };
-    // Through the jump gate, for its cover and fade. The quiet window is
-    // what keeps a condition that still holds on the next frame from
-    // restarting at frame rate.
+    // The quiet window is what keeps a condition that still holds on the
+    // next frame from restarting at frame rate.
     library.commands.restartScene = () => {
       const now = Date.now();
       if (now - this.lastRestartAt_ < RESTART_QUIET_MS) {
         return;
       }
-      if (!this.onRestartScene || !this.beginSceneJump_()) {
-        return;
+      if (
+        this.delaySceneJump_(() => this.onRestartScene && this.onRestartScene())
+      ) {
+        this.lastRestartAt_ = now;
       }
-      this.lastRestartAt_ = now;
-      setTimeout(() => this.onRestartScene && this.onRestartScene(), 0);
     };
     library.commands.goToExternalScene = sceneKey => {
-      if (!this.onGoToExternalScene || !this.beginSceneJump_()) {
-        return;
-      }
       const key = String(sceneKey);
-      setTimeout(
-        () => this.onGoToExternalScene && this.onGoToExternalScene(key),
-        0
+      this.delaySceneJump_(
+        () => this.onGoToExternalScene && this.onGoToExternalScene(key)
       );
     };
     return library;
+  }
+
+  /**
+   * Start a block-triggered jump after SCENE_JUMP_DELAY_MS: the scene keeps
+   * running meanwhile, then freezes through the jump gate (for the view's
+   * cover and fade) and `jump` runs on the next tick, since jumping tears
+   * down the interpreter the block ran in. One jump at a time: a trigger
+   * that fires again during the wait, or while a jump is in flight, is
+   * ignored. Returns whether this call scheduled the jump.
+   */
+  delaySceneJump_(jump) {
+    if (this.jumpDelayTimer_ || this.sceneJumpInFlight_) {
+      return false;
+    }
+    this.jumpDelayTimer_ = setTimeout(() => {
+      this.jumpDelayTimer_ = null;
+      if (this.beginSceneJump_()) {
+        setTimeout(jump, 0);
+      }
+    }, SCENE_JUMP_DELAY_MS);
+    return true;
+  }
+
+  clearSceneJumpDelay_() {
+    if (this.jumpDelayTimer_) {
+      clearTimeout(this.jumpDelayTimer_);
+      this.jumpDelayTimer_ = null;
+    }
   }
 
   /**
@@ -745,6 +806,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   destroy() {
     this.reset();
     this.stopTickTimer();
+    this.clearSceneJumpDelay_();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
     this.frameCaptureArmed_ = false;
@@ -1158,7 +1220,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.characterState ||
         (sprite.characterState = {
           x: sprite.position.x,
-          facing: 'right',
+          facing: sprite.startFacing || 'right',
           key: null,
           tick: 0,
           moving: false,
