@@ -38,7 +38,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Make your treasure worth finding.** Add **when [ ] touches [ ]**, picking your character and your treasure from the dropdowns, and put a **say** block inside it.  Then click **Play** and go and get it."
+        "text": "**Make your treasure worth finding.** A **when [ ] touches [ ]** event is waiting in your workspace, set to your character and your treasure. Drag a **say** block onto the dotted outline under it. Then click **Play** and go and get it."
       },
       {
         "text": "**Your treasure says something when you reach it.** Continue when you're ready.",
@@ -48,7 +48,7 @@
         }
       }
     ],
-    "long_instructions": "# Make your treasure worth finding\nAdd **when [ ] touches [ ]**, picking your character and your treasure, and put a **say** block inside it.",
+    "long_instructions": "# Make your treasure worth finding\nDrag a **say** block onto the dotted outline under **when [ ] touches [ ]**, so your treasure says something when you reach it.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -83,7 +83,47 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_checkTouching",
+        "fields": {
+          "CONDITION": "\"when\""
+        },
+        "inputs": {
+          "SPRITE1": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          },
+          "SPRITE2": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Treasure!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

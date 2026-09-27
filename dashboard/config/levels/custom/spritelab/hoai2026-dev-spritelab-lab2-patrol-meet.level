@@ -38,7 +38,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Go and meet them.** Add **when [ ] touches [ ]** and pick your player and your second character.  Then decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."
+        "text": "**Go and meet them.** A **when [ ] touches [ ]** event is waiting in your workspace, set to your player and your second character. Decide what happens: drag a **say** block onto the dotted outline for a friendly hello, or **restart scene** to send your player back to the start. Click **Play** and go and meet them."
       },
       {
         "text": "**Your world has company.** Continue when you're ready.",
@@ -87,7 +87,47 @@
           "type": "spritelab2_restartScene"
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_checkTouching",
+        "fields": {
+          "CONDITION": "\"when\""
+        },
+        "inputs": {
+          "SPRITE1": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          },
+          "SPRITE2": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Hello!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

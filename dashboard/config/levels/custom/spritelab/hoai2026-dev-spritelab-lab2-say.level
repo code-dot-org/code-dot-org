@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your character.** Use **make new sprite** to put your character on the **left** of the scene, then snap on a **say** block so they say something. Your changes run live in the preview. When it feels right, click **Play**."
+        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline under **when run** to put your character on the **left** of the scene, then snap on a **say** block so they say something. Your changes run live in the preview. When it feels right, click **Play**."
       },
       {
         "text": "**They're alive!** Watch your character speak, then continue when you're ready.",
@@ -70,7 +70,23 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_makeSpriteAtPosition",
+              "fields": {
+                "POSITION": "left"
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>
