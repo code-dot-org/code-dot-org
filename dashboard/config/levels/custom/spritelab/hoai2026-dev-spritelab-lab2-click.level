@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your new character on the right.** Use **make new sprite** with position **right** - they'll turn to face your main character. Then add **when clicked** with a **say** block inside, so clicking them makes them speak. Press **Play** and try it."
+        "text": "**Make them talk.** A **when clicked** event is waiting in your workspace, set to your new character. Drag a **say** block onto the dotted outline under it. Then press **Play** and click your new character."
       },
       {
         "text": "**It's interactive!** Click your new character to hear from them, then continue when you're ready.",
@@ -44,17 +44,10 @@
         }
       }
     ],
-    "long_instructions": "# Click to talk\nAdd your new character on the **right** of the scene. Then add **when clicked** with a **say** block inside, so clicking them makes them speak.",
+    "long_instructions": "# Click to talk\nDrag a **say** block onto the dotted outline under **when clicked**, so clicking your new character makes them speak.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition",
-          "fields": {
-            "POSITION": "right"
-          }
-        },
         {
           "kind": "block",
           "type": "gamelab_spriteClicked",
@@ -81,7 +74,42 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_spriteClicked",
+        "fields": {
+          "CONDITION": "\"when\""
+        },
+        "inputs": {
+          "SPRITE": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "You clicked me!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>
