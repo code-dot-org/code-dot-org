@@ -169,8 +169,8 @@ WorldRow.displayName = 'WorldRow';
 const PaletteTooltip: React.FunctionComponent<{
   tooltipId: string;
   text: string;
-  // Closes the bubble and keeps it closed (a drag from the item, which
-  // captures the pointer, so no leave event would close it).
+  // Closes the bubble and keeps it closed: during a drag from the item it
+  // would hang over the grid the item is heading for.
   suppress?: boolean;
   children: React.ReactElement;
 }> = ({tooltipId, text, suppress = false, children}) => {
