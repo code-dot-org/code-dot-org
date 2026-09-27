@@ -2,6 +2,7 @@ import {
   CHARACTER_SET_PICTURE_COUNT,
   basePrompt,
   posePrompt,
+  posedFrames,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {pixelBlockFor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
@@ -48,5 +49,28 @@ describe('SpriteLab2 characterSet', () => {
         32
       )
     ).toContain('32x32 pixel grid');
+  });
+
+  it('draws an animal on four legs when the body plan says so', () => {
+    const upright = basePrompt('A grumpy cat', 'smooth', key, 1);
+    const animal = basePrompt('A grumpy cat', 'smooth', key, 1, 'quadruped');
+    expect(upright).toContain('Arms hanging relaxed');
+    expect(animal).toContain('all four legs');
+    expect(animal).toContain('no arms or hands');
+    expect(animal).not.toContain('Arms hanging relaxed');
+  });
+
+  it('poses every body plan through the same four frames', () => {
+    for (const plan of ['upright', 'quadruped', 'bird'] as const) {
+      expect(posedFrames(plan).map(f => f.label)).toEqual([
+        'idling',
+        'walking',
+        'jumping',
+        'landing',
+      ]);
+    }
+    expect(posedFrames('quadruped')[1].pose).toContain('four legs');
+    expect(posedFrames('bird')[1].pose).toContain('wings');
+    expect(posedFrames()).toBe(posedFrames('upright'));
   });
 });

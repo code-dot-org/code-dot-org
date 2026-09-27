@@ -15,6 +15,12 @@ export type ImageSubject = (typeof IMAGE_SUBJECTS)[number];
 // shaded illustration. See removeBackground's MatteOptions.
 export type ImageStyle = 'smooth' | 'pixel';
 
+// How a character's body is built, which decides its stance in the base
+// picture and the poses drawn from it: a person-like figure, an animal on
+// four legs, or a bird on two. The adlib creature words each name one.
+export const BODY_PLANS = ['upright', 'quadruped', 'bird'] as const;
+export type BodyPlan = (typeof BODY_PLANS)[number];
+
 // Display names, shared so the image dialog's summary and generate views use
 // the same words.
 export const IMAGE_TYPE_LABELS: Record<ImageType, string> = {

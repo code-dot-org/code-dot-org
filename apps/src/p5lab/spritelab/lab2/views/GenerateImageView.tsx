@@ -24,6 +24,7 @@ import {
 } from '../ai/images/characterSet';
 import {
   ImageAdlibSet,
+  bodyPlanFor,
   imageAdlibFor,
   imageAdlibId,
 } from '../ai/images/imageAdlibs';
@@ -362,6 +363,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             style,
             temperature: options.temperature,
             pixelGrid: options.pixelGrid,
+            // The combo's creature word says how the character is built; a
+            // typed prompt is drawn upright.
+            bodyPlan: usingAdlib
+              ? bodyPlanFor(adlibChoices.creature)
+              : undefined,
           },
           p => {
             if (epoch === progressEpochRef.current) {
@@ -398,6 +404,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   }, [
     promptText,
     usingAdlib,
+    adlibChoices.creature,
     adlibSet,
     imageType,
     subject,

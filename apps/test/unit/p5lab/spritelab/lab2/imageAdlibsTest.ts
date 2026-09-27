@@ -1,4 +1,5 @@
 import {
+  bodyPlanFor,
   imageAdlibFor,
   imageAdlibId,
   ImageAdlibSet,
@@ -62,5 +63,13 @@ describe('imageAdlibs manifest', () => {
       expect(imageAdlibFor('sprite', set, 'object')).toBeDefined();
     });
     expect(imageAdlibFor('sprite', 'treasure', 'object')).toBeDefined();
+  });
+
+  it('gives the animal creatures their body plan and everyone else upright', () => {
+    expect(bodyPlanFor('cat')).toBe('quadruped');
+    expect(bodyPlanFor('dragon')).toBe('quadruped');
+    expect(bodyPlanFor('penguin')).toBe('bird');
+    expect(bodyPlanFor('wizard')).toBe('upright');
+    expect(bodyPlanFor(undefined)).toBe('upright');
   });
 });
