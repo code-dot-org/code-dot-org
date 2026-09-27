@@ -6,8 +6,11 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 
 // A stack of block-likes: each knows the next and its own bottom connection.
-function stack(...ends: ({target?: boolean; shadow?: boolean} | null)[]) {
+function stack(
+  ...ends: ({target?: boolean; shadow?: boolean; isShadow?: boolean} | null)[]
+) {
   const blocks = ends.map(end => ({
+    isShadow: () => !!end?.isShadow,
     nextConnection: end && {
       targetBlock: () => (end.target ? {} : null),
       getShadowState: () => (end.shadow ? {type: 'x'} : null),
@@ -66,5 +69,10 @@ describe('addBlocks', () => {
     expect(freeStackEnd(stack({}, {target: true}))).toBeNull();
     expect(freeStackEnd(stack({shadow: true}))).toBeNull();
     expect(freeStackEnd(stack(null))).toBeNull();
+  });
+
+  it('stops at a placeholder already hanging on the stack', () => {
+    // The shadow is the last block the walk sees; nothing hangs under it.
+    expect(freeStackEnd(stack({}, {isShadow: true}))).toBeNull();
   });
 });

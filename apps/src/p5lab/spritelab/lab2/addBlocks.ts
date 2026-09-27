@@ -53,14 +53,19 @@ export function placeBelow(stacks: {x: number; y: number; height: number}[]): {
   };
 }
 
-/** The connection under a stack's last block, if it is free: no block on
-    it and no shadow recorded for it. A shadow stays recorded while a real
-    block covers it, so a filled placeholder is not hung twice. */
+/** The connection under a stack's last real block, if it is free: no
+    block on it and no shadow recorded for it. A shadow at the end is a
+    placeholder already hung there, and getNextBlock returns shadows too,
+    so the walk stops at one. A shadow stays recorded while a real block
+    covers it, so a filled placeholder is not hung twice either. */
 export function freeStackEnd(
   top: BlocklyCore.Block
 ): BlocklyCore.Connection | null {
   let last = top;
   for (let next = last.getNextBlock(); next; next = last.getNextBlock()) {
+    if (next.isShadow()) {
+      return null;
+    }
     last = next;
   }
   const connection = last.nextConnection;
