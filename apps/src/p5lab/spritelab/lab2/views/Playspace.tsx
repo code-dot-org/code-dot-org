@@ -33,6 +33,9 @@ const PREVIEW_SCALE = 0.64;
 // The preview's full horizontal footprint, for siblings that must keep their
 // content clear of it (it floats over the active tab's top-right corner).
 export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
+// The play bar under the box: a row of medium buttons (40px) and its gap.
+const BAR_GAP = 12;
+export const BAR_ROOM = 40 + BAR_GAP;
 
 interface Size {
   w: number;
@@ -60,13 +63,16 @@ function centeredIn(area: Size): Placement {
  * its bottom-right: centered in the whole overlay when that clears the
  * guide, else beside the guide or above it, whichever leaves the box
  * bigger (beside on a landscape window, above on a portrait one). It
- * shrinks rather than sliding under the guide.
+ * shrinks rather than sliding under the guide. `reserveBelow` is room kept
+ * under the box (the play bar), so it is the box plus bar that is centered
+ * and kept clear of the guide.
  */
 export function playPlacement(
   size: Size,
-  guideSize?: {width: number; height: number} | null
+  guideSize?: {width: number; height: number} | null,
+  reserveBelow = 0
 ): Placement {
-  const whole = centeredIn(size);
+  const whole = centeredIn({w: size.w, h: size.h - reserveBelow});
   if (!guideSize) {
     return whole;
   }
@@ -74,12 +80,18 @@ export function playPlacement(
   const guideTop = size.h - guideSize.height - GUIDE_BOTTOM_OFFSET_PX;
   const clearsGuide =
     whole.x + CANVAS * whole.scale <= guideLeft - MARGIN ||
-    whole.y + CANVAS * whole.scale <= guideTop - MARGIN;
+    whole.y + CANVAS * whole.scale + reserveBelow <= guideTop - MARGIN;
   if (clearsGuide) {
     return whole;
   }
-  const beside = centeredIn({w: guideLeft - MARGIN, h: size.h});
-  const above = centeredIn({w: size.w, h: guideTop - MARGIN});
+  const beside = centeredIn({
+    w: guideLeft - MARGIN,
+    h: size.h - reserveBelow,
+  });
+  const above = centeredIn({
+    w: size.w,
+    h: guideTop - MARGIN - reserveBelow,
+  });
   return above.scale > beside.scale ? above : beside;
 }
 
@@ -105,6 +117,9 @@ interface PlayspaceProps {
   // Shown in the play area's top-right corner while playing (the restart
   // buttons). Outside the box, so they keep their size whatever its scale.
   controls?: React.ReactNode;
+  // Shown under the box in both visible modes (Play, or Stop and the arrow
+  // keys); the box is placed to leave it room.
+  playBar?: React.ReactNode;
   // The floating guide's footprint, pinned to the overlay's bottom-right
   // (playPlacement).
   guideSize?: {width: number; height: number} | null;
@@ -124,6 +139,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   loading = false,
   boxRef,
   controls,
+  playBar,
   guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
@@ -280,18 +296,29 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  let transform: string;
+  let placement: Placement;
   if (mode === 'play') {
-    const {x, y, scale} = playPlacement(size, guideSize);
-    transform = `translate(${x}px, ${y}px) scale(${scale})`;
+    placement = playPlacement(size, guideSize, playBar ? BAR_ROOM : 0);
   } else {
     // Preview: small box pinned to the top-right corner.
-    const x = Math.max(
-      PREVIEW_MARGIN,
-      size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
-    );
-    transform = `translate(${x}px, ${PREVIEW_MARGIN}px) scale(${PREVIEW_SCALE})`;
+    placement = {
+      scale: PREVIEW_SCALE,
+      x: Math.max(
+        PREVIEW_MARGIN,
+        size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
+      ),
+      y: PREVIEW_MARGIN,
+    };
   }
+  const {x, y, scale} = placement;
+  const transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  const boxSide = CANVAS * scale;
+  // The bar rides along under the box, unscaled, at the box's width.
+  const barTransform = `translate(${x}px, ${y + boxSide + BAR_GAP}px)`;
+  const visible = measured && mode !== 'hidden';
+  const barTransition = animate
+    ? 'transform 0.45s ease, width 0.45s ease, opacity 0.18s ease-in'
+    : 'opacity 0.18s ease-in';
 
   return (
     <div
@@ -317,7 +344,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           transform,
           // Fade in on appearance (first measurement or hidden -> visible);
           // slide only between the two visible placements.
-          opacity: measured && mode !== 'hidden' ? 1 : 0,
+          opacity: visible ? 1 : 0,
           // Hairline seam so a white game canvas reads against a white page
           // in light mode — corner preview only; it fades out with the slide
           // to Play. A shadow, not a border, so the 400x400 geometry the
@@ -402,6 +429,19 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       </div>
       {mode === 'play' && controls && (
         <div className={moduleStyles.playControls}>{controls}</div>
+      )}
+      {playBar && (
+        <div
+          className={moduleStyles.playBar}
+          style={{
+            transform: barTransform,
+            width: boxSide,
+            opacity: visible ? 1 : 0,
+            transition: barTransition,
+          }}
+        >
+          {playBar}
+        </div>
       )}
     </div>
   );

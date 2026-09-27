@@ -744,6 +744,37 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// The Play/Stop and arrow bar, placed under the playspace box by the same
+// transform math (Playspace). The overlay ignores pointer events; the bar
+// accepts them. touch-action: none so a finger on an arrow starts the key
+// at once instead of waiting to rule out a scroll or a double tap.
+.playBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.arrowKeys {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// A held key must not grow a selection or a callout under a long press.
+.holdKey {
+  touch-action: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
 // Restart buttons in the play area's top-right corner, clear of the game
 // wherever the canvas lands. The overlay ignores pointer events; these
 // buttons accept them.

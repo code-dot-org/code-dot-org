@@ -116,11 +116,13 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {isPointerClick} from './blurAfterPointerClick';
+import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
+import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
@@ -270,6 +272,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
   }, [levelProperties.levelMode, worldTabParamEnabled]);
   const worldTabEnabled = tabs.includes('World');
+  // Play is entered from the bar under the playspace; the Play tab in the
+  // header is kept for a trial of the two placements.
+  const playTabParamEnabled = useMemo(
+    () => queryParams('play-tab') === 'true',
+    []
+  );
+  const visibleTabs = useMemo(
+    () => (playTabParamEnabled ? tabs : tabs.filter(tab => tab !== 'Play')),
+    [tabs, playTabParamEnabled]
+  );
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
   // dropping a placement (see resizeWorld) — the project's world is shared
@@ -1217,6 +1229,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // scene). Clicking a preview sets it to the previewed scene; entering Play
   // from the tab button or "Restart game" clears it.
   const [playStartSceneId, setPlayStartSceneId] = useState<string | null>(null);
+  // The arrow buttons the running scene wants; the engine reports it on
+  // every run and on each set-gravity block.
+  const [arrowSet, setArrowSet] = useState<ArrowSet>('steer');
 
   // p5 listens for keys on window, so a game reading arrows/space would eat
   // them while the student edits blocks. Give the game the keyboard only in
@@ -1316,6 +1331,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onPlayMusic = playMusic;
+    engine.onControlsChange = (state: ControlsState) =>
+      setArrowSet(arrowSetFor(state));
   }, [
     engineReady,
     playMusic,
@@ -1527,15 +1544,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
-  // Restart the whole game from the first scene.
-  // Restarting must not leave focus parked on the clicked button, where
+  // A play control must not leave focus parked on the clicked button, where
   // Space — also a game key — would re-activate it on every press. Keyboard
   // activations hand focus to the playspace; pointer activations blur to
   // the page instead — a silent focus on the playspace would still grow a
   // ring at the player's first keypress, because the browser promotes the
   // focused element to :focus-visible on keyboard use.
   const playspaceRef = useRef<HTMLDivElement>(null);
-  const handOffRestartFocus = useCallback(
+  const handOffControlFocus = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
       if (isPointerClick(event)) {
         event.currentTarget.blur();
@@ -1545,6 +1561,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     []
   );
+
+  // Restart the whole game from the first scene.
 
   const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
@@ -1570,11 +1588,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // fade itself — restarting should look the same however it was asked for.
   const handleRestartClick = useCallback(
     (event: React.MouseEvent<HTMLElement>, restart: () => void) => {
-      handOffRestartFocus(event);
+      handOffControlFocus(event);
       setFadeTrigger(trigger => trigger + 1);
       restart();
     },
-    [handOffRestartFocus]
+    [handOffControlFocus]
   );
 
   // Clicking the live preview opens Play on the scene being previewed.
@@ -1585,6 +1603,50 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
     dispatch(setActiveTab('Play'));
   }, [dispatch, activeSceneId, defaultPlaySceneId]);
+
+  // The Play button plays the previewed scene too. A keyboard activation
+  // wants focus on the playspace, which is only focusable once Play has
+  // rendered, so the hand-off waits for the tab (below).
+  const focusPlayspaceOnPlayRef = useRef(false);
+  const handlePlayClick = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (isPointerClick(event)) {
+        event.currentTarget.blur();
+      } else {
+        focusPlayspaceOnPlayRef.current = true;
+      }
+      handlePreviewClick();
+    },
+    [handlePreviewClick]
+  );
+  useEffect(() => {
+    if (activeTab === 'Play' && focusPlayspaceOnPlayRef.current) {
+      focusPlayspaceOnPlayRef.current = false;
+      playspaceRef.current?.focus({preventScroll: true});
+    }
+  }, [activeTab]);
+  // Stop returns to the editing tab Play was entered from, or the level's
+  // first one; a level that is only Play has no Stop.
+  const lastEditTabRef = useRef<Tab | null>(null);
+  useEffect(() => {
+    if (activeTab === 'Code' || activeTab === 'World') {
+      lastEditTabRef.current = activeTab;
+    }
+  }, [activeTab]);
+  const lastEditTab = lastEditTabRef.current;
+  const stopTab =
+    lastEditTab && tabs.includes(lastEditTab)
+      ? lastEditTab
+      : tabs.find(tab => tab === 'Code' || tab === 'World');
+  const handleStopClick = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (stopTab) {
+        handOffControlFocus(event);
+        dispatch(setActiveTab(stopTab));
+      }
+    },
+    [dispatch, stopTab, handOffControlFocus]
+  );
 
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
@@ -1683,7 +1745,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           activeTab={activeTab}
           onTabChange={handleTabChange}
           enabledTabs={enabledTabs}
-          visibleTabs={tabs}
+          visibleTabs={visibleTabs}
           onClickStartOver={
             isEditable ? () => setShowStartOver(true) : undefined
           }
@@ -1799,6 +1861,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onRestartScene={event =>
                   handleRestartClick(event, handleRestartScene)
                 }
+              />
+            }
+            playBar={
+              <PlayBar
+                playing={activeTab === 'Play'}
+                arrows={arrowSet}
+                onPlay={handlePlayClick}
+                onStop={stopTab ? handleStopClick : undefined}
               />
             }
             guideSize={levelProperties.levelMode ? guideSize : null}
