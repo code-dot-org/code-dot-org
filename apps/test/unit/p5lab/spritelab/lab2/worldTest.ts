@@ -137,6 +137,14 @@ describe('world', () => {
     expect(paintWorldCell(second, 0, 0, null).grid[0][0]).toBeNull();
   });
 
+  it('keeps the identity of every row a paint does not touch', () => {
+    const first = paintWorldCell(undefined, 0, 0, {image: 'a', kind: 'block'});
+    const second = paintWorldCell(first, 1, 1, {image: 'b', kind: 'sprite'});
+    expect(second.grid[0]).toBe(first.grid[0]);
+    expect(second.grid[1]).not.toBe(first.grid[1]);
+    expect(second.grid[2]).toBe(first.grid[2]);
+  });
+
   it('paints over a gridless world saved by an older experiment', () => {
     const legacy = {} as Parameters<typeof paintWorldCell>[0];
     const world = paintWorldCell(legacy, 2, 3, {image: 'a', kind: 'block'});
