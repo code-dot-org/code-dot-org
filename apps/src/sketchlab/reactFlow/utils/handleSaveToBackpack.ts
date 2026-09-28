@@ -5,10 +5,6 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ShareFailure, ShareFailureType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
-  isUnifiedApi,
-  SaveToBackpackApi,
-} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
-import {
   DialogControlInterface,
   DialogType,
   extractUserInput,
@@ -24,6 +20,7 @@ import {
   notifySaving,
 } from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
 
@@ -63,9 +60,8 @@ export const getShareFailureMessage = (shareFailure: ShareFailure) => {
 
 export const handleSaveToBackpack = async (
   reactFlow: ReactFlowInstance | null,
-  backpackApi: SaveToBackpackApi | undefined,
+  backpackApi: UnifiedBackpackClientApi | undefined,
   dialogControl: DialogControlInterface,
-  backpackFileList: string[],
   notify: BackpackNotify
 ) => {
   if (!reactFlow || !backpackApi) {
@@ -96,15 +92,10 @@ export const handleSaveToBackpack = async (
     return;
   }
 
-  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
-
-  // The unified backpack writes to the universal backpack, so a name taken in any
-  // backpack collides. The legacy path reuses the list the panel already loaded.
+  // Writes go to the universal backpack, so a name taken in any backpack collides.
   let filenamesByAppType: FilenamesByAppType;
   try {
-    filenamesByAppType = isUnifiedApi(backpackApi)
-      ? await backpackApi.getFileLists()
-      : {[backpackApi.appType]: backpackFileList};
+    filenamesByAppType = await backpackApi.getFileLists();
   } catch (error) {
     notify('danger', BACKPACK_READ_ERROR);
     Lab2Registry.getInstance()
@@ -149,9 +140,7 @@ export const handleSaveToBackpack = async (
   }
 
   const newFileName = extractUserInput(dialogResults) + '.png';
-  if (unifiedApi) {
-    notifySaving(notify, newFileName);
-  }
+  notifySaving(notify, newFileName);
 
   // The progress toast above never expires on its own, so every path from here
   // has to end in a toast that replaces it.
@@ -190,9 +179,7 @@ export const handleSaveToBackpack = async (
         resolve(false);
       },
       () => {
-        if (unifiedApi) {
-          notifySaved(notify, newFileName);
-        }
+        notifySaved(notify, newFileName);
         sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
         resolve(true);
       }
@@ -205,14 +192,17 @@ export const handleSaveToBackpack = async (
     return false;
   });
 
-  if (!unifiedApi || !saved || !isDuplicateFileName) {
+  if (!saved || !isDuplicateFileName) {
     return;
   }
 
   // Writes go to the universal backpack, so a name replaced in a legacy backpack is
   // still there. Deleting it after the save keeps a failed save non-destructive.
   try {
-    await unifiedApi.deleteFromLegacyBackpacks(newFileName, filenamesByAppType);
+    await backpackApi.deleteFromLegacyBackpacks(
+      newFileName,
+      filenamesByAppType
+    );
   } catch (error) {
     notify('danger', backpackDuplicateDeleteError(newFileName));
     Lab2Registry.getInstance()

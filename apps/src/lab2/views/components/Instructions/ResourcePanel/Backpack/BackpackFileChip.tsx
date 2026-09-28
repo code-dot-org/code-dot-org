@@ -33,8 +33,7 @@ interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
-  // Unified panel only
-  showToast?: ShowToast;
+  showToast: ShowToast;
   isRecentlyAdded?: boolean;
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
@@ -194,17 +193,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       backpackApi.deleteFiles(
         [fileName],
         error => {
-          if (showToast) {
-            showToast(
-              `Couldn't delete ${fileName} from your Backpack. Please try again.`,
-              toastOptionsFor('danger')
-            );
-          } else {
-            addAlert(
-              'danger',
-              `Failed to delete ${fileName} from your Backpack.`
-            );
-          }
+          showToast(
+            `Couldn't delete ${fileName} from your Backpack. Please try again.`,
+            toastOptionsFor('danger')
+          );
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Backpack file delete error', error);
@@ -212,7 +204,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         },
         () => {
           // TODO: log to statsig
-          showToast?.(
+          showToast(
             `${fileName} deleted from your Backpack.`,
             toastOptionsFor('success')
           );
