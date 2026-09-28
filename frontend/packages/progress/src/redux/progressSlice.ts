@@ -18,6 +18,9 @@ import type {currentUserSlice} from '@code-dot-org/users/redux';
 
 type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
 type RootState = StateFor<Store>;
+/** The store the progress thunks and ProgressContainer are typed against. */
+export type ProgressStore = Store;
+export type ProgressRootState = RootState;
 type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
 type AsyncProgressThunkAction = ThunkAction<
   Promise<void>,
@@ -28,6 +31,7 @@ type AsyncProgressThunkAction = ThunkAction<
 type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
 import {milestoneTimer} from '../MilestoneTimer';
+import {getInitialValidationState} from '../ProgressManager';
 import {
   BubbleChoiceNavigationTypes,
   PUZZLE_PAGE_NONE,
@@ -52,6 +56,7 @@ import type {
   UnitProgress,
   UnitProgressDefinition,
   UserProgressResponse,
+  ValidationState,
   ViewType,
 } from '../types';
 
@@ -307,6 +312,9 @@ const initialState: ProgressState = {
   usingDbProgress: false,
   currentPageNumber: PUZZLE_PAGE_NONE,
   unitHasUnnumberedLessons: false,
+  // The current level's validation, as ProgressManager reports it. Instruction
+  // panels and continueOrFinishLesson read it.
+  validationState: getInitialValidationState(),
 };
 
 const _progressSlice = createSlice({
@@ -343,6 +351,10 @@ const _progressSlice = createSlice({
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
+    },
+    setValidationState(state, action: PayloadAction<ValidationState>) {
+      // A copy: ProgressManager keeps mutating the object it reported.
+      state.validationState = {...action.payload};
     },
     setCurrentLevelId(state, action: PayloadAction<number>) {
       state.currentLevelId = action.payload;
@@ -1088,6 +1100,7 @@ export const queryUserProgress =
 
 export const {
   initProgress,
+  setValidationState,
   setCurrentLevelId,
   setStandaloneProjectType,
   setScriptProgress,

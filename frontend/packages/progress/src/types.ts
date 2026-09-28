@@ -117,6 +117,7 @@ export interface ProgressState {
   unitHasUnnumberedLessons: boolean;
   changeFocusAreaPath?: string;
   unitCompleted?: boolean;
+  validationState: ValidationState;
 }
 
 export interface InitProgressPayload {
@@ -192,7 +193,8 @@ export abstract class Validator {
   abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
-  abstract clear(): void;
+  // isChangingLevels is false when the user re-runs code on the same level.
+  abstract clear(isChangingLevels?: boolean): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
   didPassExemplarValidation(): boolean {
     return false;

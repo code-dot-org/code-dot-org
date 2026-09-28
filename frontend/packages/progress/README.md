@@ -22,8 +22,6 @@ are addressed (details and citations in docs/port.md):
   time spent.
 - In-page navigation does not check whether both levels are Lab2, ask for
   confirmation, or notify the lab of the level change.
-- `Validator.clear` lost its `isChangingLevels` argument, so the test-result
-  validators used by Python Lab and Codebridge cannot be built on it yet.
 
 Legacy (non-Lab2) labs report progress through
 `apps/src/code-studio/reporting.js`. This package shares their result
@@ -37,6 +35,8 @@ whether it should is an open design decision (docs/port.md, section 4).
 | Export                                                                                                         | Kind            | Purpose                                                                              |
 | -------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------ |
 | `ProgressManager`                                                                                              | Class           | Runs a lab's `Validator` over the level's validations; reports through a callback    |
+| `ProgressContainer`, `useProgressManager`, `ProgressManagerContext`                                            | Component, hook | Owns a lab's `ProgressManager`, mirrors it into the slice, reports success           |
+| `TestResultValidator`, `ValidationTracker`, `TestResultConditionTypes`                                         | Classes         | Validation by levelbuilder-written tests, for Python Lab and Codebridge              |
 | `ConditionsChecker`                                                                                            | Class           | Accumulates satisfied conditions for a validator                                     |
 | `milestoneTimer`, `MilestoneTimer`                                                                             | Instance, class | Time on the level since the last milestone, less idle time; sent with each post      |
 | `getInitialValidationState`                                                                                    | Function        | An empty `ValidationState`                                                           |
@@ -49,8 +49,8 @@ whether it should is an open design decision (docs/port.md, section 4).
 | Export                                                                                                                                                                                               | Kind      | Purpose                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------- |
 | `progressSlice` (default)                                                                                                                                                                            | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux` |
-| `initProgress`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                                          | Actions   |                                                            |
-| `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`                                                                   | Thunks    | Request through `DashboardApiClient`                       |
+| `initProgress`, `setValidationState`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                    | Actions   |                                                            |
+| `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`, `continueOrFinishLesson`                                         | Thunks    | Request through `DashboardApiClient`                       |
 | `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath` | Selectors | Take the root state                                        |
 | `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                       | Helpers   | Pure                                                       |
 
@@ -70,25 +70,43 @@ export const {useAppDispatch, useAppSelector} = storeHooks<typeof store>();
 Feed `initProgress` from core's parsed `Lesson`s. Ids are numbers after the
 zod transform; the slice does not accept raw script JSON.
 
-Run validation for a level:
+Run validation for a level. The host wraps the lab in a
+`ProgressContainer`, which puts the manager's state in the slice as
+`validationState` and reports success on a script level:
+
+```tsx
+import {ProgressContainer} from '@code-dot-org/progress';
+
+<ProgressContainer
+  appType={levelProperties.appName}
+  levelId={levelProperties.id}
+  validations={levelProperties.validations}
+  exemplarSettings={levelProperties.exemplarSettings}
+>
+  <MyLab />
+</ProgressContainer>;
+```
+
+The lab hands the manager its validator and updates it after each run:
 
 ```ts
-import {ProgressManager, Validator} from '@code-dot-org/progress';
+import {useProgressManager} from '@code-dot-org/progress';
 
-const manager = new ProgressManager(() => setState(manager.getCurrentState()));
-manager.setValidator(new MyValidator());
-manager.onLevelChange(
-  appOptions,
-  levelProperties.validations,
-  levelProperties.exemplarSettings,
-);
+const progressManager = useProgressManager();
+useEffect(() => progressManager?.setValidator(validator), [progressManager]);
 // after each run of user code:
-manager.updateProgress();
+progressManager?.updateProgress();
 ```
 
 `MyValidator` extends `Validator` and decides what the level's condition
 names mean; `ConditionsChecker` is one way to accumulate them. The apps
-`MusicValidator` and `DanceValidator` are the reference implementations.
+`MusicValidator` and `DanceValidator` are the reference implementations. A
+lab that validates with levelbuilder-written tests uses
+`TestResultValidator` over its own `ValidationTracker` instead.
+
+The Continue button dispatches
+`continueOrFinishLesson(levelProperties, {showFinishDialog})`, which records
+success where Continue owns it and moves to the next level or finishes.
 
 Time spent on a level is measured by `milestoneTimer` and sent with every
 milestone post. The thunks reset it after a successful post and after an

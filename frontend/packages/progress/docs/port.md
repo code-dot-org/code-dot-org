@@ -211,29 +211,48 @@ overview package is an open scoping decision.
 
 ### 3.6 Validation API changes
 
-- `Validator.clear()` and `resetValidation()` lost the `isChangingLevels`
-  argument (#68218). Apps' `ValidationTracker` uses it to keep test names and
-  mark results `PENDING` on a re-run, but discard them on a level change.
-  `TestResultValidator` and `ValidationTracker` were not ported, so the
-  upper-grade labs (Python Lab, Codebridge) that validate with
-  levelbuilder-written tests cannot be built on the package until the argument
-  returns. `PASSED_ALL_TESTS_VALIDATION` was ported and has no consumer
-  without them.
-- `ProgressManager.onLevelChange` gained a leading `appOptions` parameter in
-  place of the apps global `getAppOptionsEditingExemplar()`. Reasonable, but
-  it breaks every apps `ProgressContainer` call, and only `isEditingExemplar`
-  is read. A narrower `{isEditingExemplar?: boolean}` would decouple it from
-  core's full `AppOptions`.
+- Fixed. `Validator.clear()` and `resetValidation()` lost the
+  `isChangingLevels` argument (#68218). Apps' `ValidationTracker` uses it to
+  keep test names and mark results `PENDING` on a re-run, but discard them on
+  a level change. Both methods take it again, optional, and `onLevelChange`
+  passes `true`. `ValidationTracker` and `TestResultValidator` are ported,
+  which is what Python Lab and Codebridge validate with, and
+  `PASSED_ALL_TESTS_VALIDATION` now has its consumer.
+- Partly fixed. `ProgressManager.onLevelChange` gained a leading `appOptions`
+  parameter in place of the apps global `getAppOptionsEditingExemplar()`. It
+  now takes only `Pick<AppOptions, 'isEditingExemplar'>`, the one field it
+  reads, so a host can pass `{isEditingExemplar}`. The signature still
+  differs from apps, which matters only to code ported from there.
 - `ConditionsChecker`'s logging flag moved from the
   `?log-validator-condition-changes` query parameter to a constructor
   argument. The host must read the query string and pass it through if that
   debugging aid is to survive.
-- `ProgressContainer` (mounts the manager, mirrors its state into redux, sends
-  the success report) and `continueOrFinishLesson` (the Continue button's
-  decision: send success when unvalidated and not submittable, predict or
-  bubble-choice, then next level or finish URL) were not ported. Both depend
-  on `lab2Redux` (`validationState`, `overrideValidations`,
-  `levelProperties`), which has no equivalent in `labs/base` yet.
+- Fixed. `ProgressContainer` (mounts the manager, mirrors its state into
+  redux, sends the success report) and `continueOrFinishLesson` (the
+  Continue button's decision: send success when unvalidated and not
+  submittable, predict or bubble-choice, then next level or finish URL) were
+  not ported. Both depended on `lab2Redux` (`validationState`,
+  `overrideValidations`, `levelProperties`), which has no equivalent under
+  `frontend/`. Both are ported, with these differences:
+  - `validationState` lives in the progress slice, with a
+    `setValidationState` action. `labs/base` was the other candidate. It has
+    no redux, and the state is progress logic that the continue thunk and
+    the success report read, so it stays with them.
+  - `ProgressContainer` takes the level's `validations`, `exemplarSettings`,
+    `levelId`, `isEditingExemplar` and the start-mode `overrideValidations`
+    as props. Apps read them from `lab2Redux` and the lab2 level-properties
+    context. The progress package does not depend on `labs/base`; a host
+    passes what `useLevelProperties()` gives it.
+  - Apps built the manager with a callback that closed over the first
+    render's `appType` and level type, so later changes never reached the
+    success report. The container rebinds the callback through a new
+    `ProgressManager.setOnProgressChange` whenever they change.
+  - `continueOrFinishLesson(levelProperties, {showFinishDialog})` takes the
+    level properties it reads, since there is no lab slice to read them
+    from. The finish dialog was apps' `shareLab2Project`; it is a host
+    callback now, and without one a finish URL is followed directly.
+    Navigation to the next level is still the package's
+    `navigateToNextLevel`, with the limits in 3.4.
 
 ### 3.7 Type-level divergences
 
@@ -374,10 +393,9 @@ branch and the README says so until it is made.
    `summarize_user_progress`, and give `isVerifiedInstructor` and
    `lockableAuthorized` a typed place in that response even before a slice
    consumes them.
-4. Restore `clear(isChangingLevels)` and port `ValidationTracker`,
+4. Done. Restore `clear(isChangingLevels)` and port `ValidationTracker`,
    `TestResultValidator`, `ProgressContainer` and `continueOrFinishLesson`.
-   The last two need a `validationState` home; the natural one is
-   `labs/base`, which already owns the host and lab boundary.
+   `validationState` went to the progress slice; see 3.6.
 5. Replace the apps-singleton couplings in navigation with host hooks
    (`canNavigateInPage`, `confirmNavigation`, `onLevelChange`) supplied at
    store or container construction.
