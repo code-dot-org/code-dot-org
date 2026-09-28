@@ -1,8 +1,10 @@
 import {
   bodyPlanFor,
+  IMAGE_ADLIB_SETS,
   imageAdlibFor,
   imageAdlibId,
   ImageAdlibSet,
+  isImageAdlibSet,
   manifestBodyPlans,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageAdlibs';
 import {
@@ -13,6 +15,17 @@ import {
 const SETS: ImageAdlibSet[] = ['simple', 'expanded'];
 
 describe('imageAdlibs manifest', () => {
+  it('names its sets from its keys', () => {
+    expect([...IMAGE_ADLIB_SETS].sort()).toEqual([
+      'expanded',
+      'simple',
+      'treasure',
+    ]);
+    expect(isImageAdlibSet('treasure')).toBe(true);
+    expect(isImageAdlibSet('halloween')).toBe(false);
+    expect(isImageAdlibSet(undefined)).toBe(false);
+  });
+
   it('carries a combo for every image type in both sets', () => {
     IMAGE_TYPES.forEach(imageType => {
       SETS.forEach(set => {

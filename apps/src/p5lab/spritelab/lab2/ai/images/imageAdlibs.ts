@@ -11,17 +11,20 @@ import manifest from '@cdo/static/spritelab_lab2/imageAdlibManifest.json';
 
 import {BODY_PLANS, BodyPlan, ImageSubject, ImageType} from './types';
 
-/** Which combo set a level offers; expanded is the freeplay set, treasure
-    the collectible-flavored object set for the treasure level. */
-export const IMAGE_ADLIB_SETS = ['simple', 'expanded', 'treasure'] as const;
+const adlibs = (manifest as {adlibs: AdlibsType}).adlibs;
 
-export type ImageAdlibSet = (typeof IMAGE_ADLIB_SETS)[number];
+/** Which combo set a level offers, the part of a manifest key after the
+    image kind: simple, expanded (free play), treasure (the treasure level's
+    object words), and whatever the manifest adds. */
+export type ImageAdlibSet = string;
+
+export const IMAGE_ADLIB_SETS: readonly ImageAdlibSet[] = [
+  ...new Set(Object.keys(adlibs).map(key => key.replace(/^[^-]+-/, ''))),
+];
 
 export function isImageAdlibSet(value: unknown): value is ImageAdlibSet {
-  return IMAGE_ADLIB_SETS.includes(value as ImageAdlibSet);
+  return typeof value === 'string' && IMAGE_ADLIB_SETS.includes(value);
 }
-
-const adlibs = (manifest as {adlibs: AdlibsType}).adlibs;
 
 /** The manifest key for a combo: an object sprite has its own words. */
 export function imageAdlibId(
