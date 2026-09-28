@@ -13,17 +13,15 @@ divergence from `apps/` and the proposed order of work, is in
 
 ## Status
 
-Experimental. Builds, typechecks and lints. Only `queryUserProgress` is
-tested, and nothing consumes the package yet.
+Experimental. Builds, typechecks, lints and passes its tests; nothing
+consumes it yet.
 Known to be broken or incomplete, so no host should depend on it before these
 are addressed (details and citations in docs/port.md):
 
 - Milestone posts omit `timeSinceLastMilestone` and `course_id`, so time spent
-  and course attribution are not recorded, and `unitProgress` is not updated
-  after a post.
-- `nextLevelId` mis-indexes unplugged levels and lacks bubble-choice
-  navigation; `setWindowTitle` matches an id against a position;
-  `navigateToLevelId` pushes the absolute `url` instead of `path`.
+  and course attribution are not recorded.
+- In-page navigation does not check whether both levels are Lab2, ask for
+  confirmation, or notify the lab of the level change.
 - `Validator.clear` lost its `isChangingLevels` argument, so the test-result
   validators used by Python Lab and Codebridge cannot be built on it yet.
 - Both requests are hand-rolled `fetch` rather than `DashboardApiClient`.
@@ -48,13 +46,13 @@ whether it should is an open design decision (docs/port.md, section 4).
 
 `@code-dot-org/progress/redux`:
 
-| Export                                                                                                                                                             | Kind      | Purpose                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ---------------------------------------------------------- |
-| `progressSlice` (default)                                                                                                                                          | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux` |
-| `initProgress`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                        | Actions   |                                                            |
-| `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`                                 | Thunks    | Talk to `/api/user_progress` and `/milestone`              |
-| `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath` | Selectors | Take the root state                                        |
-| `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`     | Helpers   | Pure                                                       |
+| Export                                                                                                                                                                                               | Kind      | Purpose                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------- |
+| `progressSlice` (default)                                                                                                                                                                            | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux` |
+| `initProgress`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                                          | Actions   |                                                            |
+| `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`                                                                   | Thunks    | Talk to `/api/user_progress` and `/milestone`              |
+| `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath` | Selectors | Take the root state                                        |
+| `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                       | Helpers   | Pure                                                       |
 
 ## Usage
 
