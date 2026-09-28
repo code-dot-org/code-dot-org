@@ -27,6 +27,7 @@ type AsyncProgressThunkAction = ThunkAction<
 type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
 import {
+  BubbleChoiceNavigationTypes,
   PUZZLE_PAGE_NONE,
   LevelStatuses,
   ProgressLevelTypes,
@@ -268,8 +269,7 @@ export function processedLessons(lessons: Lesson[], isPlc: boolean) {
       lessonNumber = numLessonsWithLessonPlan;
     }
     return {
-      ...lesson,
-      hidden: false,
+      ..._.omit(lesson, 'hidden'),
       lessonNumber,
     };
   });
@@ -376,6 +376,21 @@ const _progressSlice = createSlice({
         );
       });
       state.levelResults = newLevelResults;
+    },
+    mergeUnitProgress(
+      state,
+      action: PayloadAction<{levelId: number; result: TestResult}>,
+    ) {
+      const {levelId, result} = action.payload;
+      const existing = state.unitProgress[levelId];
+      const merged = existing
+        ? mergeActivityResult(existing.result, result)
+        : result;
+      state.unitProgress[levelId] = {
+        ...(existing || levelProgressFromStatus(LevelStatuses.NotTried)),
+        result: merged,
+        status: activityCssClass(merged),
+      };
     },
     overwriteResults(state, action: PayloadAction<LevelResults>) {
       state.levelResults = action.payload;
@@ -567,11 +582,14 @@ function sendReportHelper(
       // Update the progress store by merging in this
       // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
+      dispatch(mergeUnitProgress({levelId, result}));
       // If the level is the sublevel of a bubble level,
       // also update the status of the parent level.
       const currentLevel = getCurrentLevel(getState());
       if (currentLevel?.parentLevelId) {
-        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+        const parentId = currentLevel.parentLevelId;
+        dispatch(mergeResults({[parentId]: result}));
+        dispatch(mergeUnitProgress({levelId: parentId, result}));
       }
     }
   });
@@ -589,11 +607,35 @@ export const getProgressLevelType: (
 };
 
 /**
- * Get the next level ID in the progression if it exists.
- * Returns undefined if not currently in a script level or
- * currently on the last level.
+ * Get the parent level of the current level, if the current level is a
+ * bubble choice sublevel.
  */
-export const nextLevelId: (state: RootState) => number | undefined = state => {
+export const getParentLevel: (
+  state: RootState,
+) => NumberedLevel | undefined = state => {
+  const currentLevel = getCurrentLevel(state);
+  if (currentLevel?.parentLevelId) {
+    return levelById(
+      state.progress,
+      state.progress.currentLessonId,
+      currentLevel.parentLevelId,
+    );
+  }
+};
+
+/**
+ * Get the next level in the progression, if it exists.
+ *
+ * A bubble choice sublevel's navigationType decides where it goes: the level
+ * after its parent (next_level), the matching sublevel of that level
+ * (next_sublevel), or back to its parent (parent, the default).
+ *
+ * Returns undefined if not currently in a script level or currently on the
+ * last level.
+ */
+export const getNextLevel: (
+  state: RootState,
+) => NumberedLevel | undefined = state => {
   if (getProgressLevelType(state) !== ProgressLevelTypes.ScriptLevel) {
     return;
   }
@@ -603,18 +645,47 @@ export const nextLevelId: (state: RootState) => number | undefined = state => {
     state.progress.currentLessonId,
   );
   const currentLevel = getCurrentLevel(state);
-  // If we are on a sublevel, navigate back to the parent level.
-  if (currentLevel?.parentLevelId) {
-    return currentLevel.parentLevelId;
-  }
-  const currentLevelIndex = (currentLevel?.levelNumber || 0) - 1;
-  if (currentLevelIndex === levels.length - 1) {
+  if (!currentLevel) {
     return;
   }
 
-  const nextLevel = levels[currentLevelIndex + 1];
-  return nextLevel.id;
+  const parentLevel = currentLevel.parentLevelId
+    ? getParentLevel(state)
+    : undefined;
+
+  // A sublevel navigates from its parent's position in the lesson.
+  const navigationLevelIndex = levels.findIndex(
+    level => level.id === (parentLevel ? parentLevel.id : currentLevel.id),
+  );
+  const isLastLevel = navigationLevelIndex === levels.length - 1;
+  const nextLevel = isLastLevel ? undefined : levels[navigationLevelIndex + 1];
+
+  const navigationType = (currentLevel as {navigationType?: string})
+    .navigationType;
+  if (
+    !parentLevel ||
+    navigationType === BubbleChoiceNavigationTypes.NextLevel
+  ) {
+    return nextLevel;
+  }
+
+  if (navigationType === BubbleChoiceNavigationTypes.NextSublevel) {
+    const sublevelIndex = (parentLevel.sublevels || []).findIndex(
+      sublevel => sublevel.id === currentLevel.id,
+    );
+    return nextLevel?.sublevels?.[sublevelIndex] || nextLevel;
+  }
+
+  return parentLevel;
 };
+
+/**
+ * Get the next level ID in the progression if it exists.
+ * Returns undefined if not currently in a script level or
+ * currently on the last level.
+ */
+export const nextLevelId: (state: RootState) => number | undefined = state =>
+  getNextLevel(state)?.id;
 
 // Navigate to the next level in the progression, if it exists.
 export function navigateToNextLevel(): ProgressThunkAction {
@@ -800,18 +871,17 @@ export const setWindowTitle: (
   const lesson = progressStoreState.lessons?.find(
     lesson => lesson.id === progressStoreState.currentLessonId,
   );
-  const numLessons = lesson?.levels?.length || 0;
-  const lessonName = lesson?.title || 'Lesson';
+  if (!lesson) {
+    return;
+  }
   const lessonIndex =
-    (lesson?.levels || []).findIndex(
-      lessonLevel => lessonLevel.position === newLevelId,
-    ) + 1;
+    lesson.levels.findIndex(level => level.activeId === newLevelId) + 1;
   const scriptDisplayName = progressStoreState.scriptDisplayName;
 
   document.title =
-    numLessons > 1
-      ? `${lessonName} #${lessonIndex} | ${scriptDisplayName} - Code.org`
-      : `${lessonName} #${lessonIndex} - Code.org`;
+    lesson.numScriptLessons > 1
+      ? `${lesson.name} #${lessonIndex} | ${scriptDisplayName} - CodeAI`
+      : `${lesson.name} #${lessonIndex} - CodeAI`;
 };
 
 // Handles a user navigation to a new level, by pushing this new level's URL
@@ -843,7 +913,7 @@ export function navigateToLevelId(levelId: number): ProgressThunkAction {
     if (state.currentLevelId === levelId) {
       return;
     }
-    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
+    updateBrowserForLevelNavigation(state, newLevel.path, levelId);
     dispatch(setCurrentLevelId(levelId));
   };
 }
@@ -1016,6 +1086,7 @@ export const {
   clearResults,
   useDbProgress,
   mergeResults,
+  mergeUnitProgress,
   overwriteResults,
   mergePeerReviewProgress,
   updateFocusArea,

@@ -24,8 +24,9 @@ It depends on `@code-dot-org/core` for the lesson and level types (`Lesson`,
 submit thunk reads. The companion commit 638086b58d9 adds that users slice.
 
 Build state: `yarn typecheck`, `yarn lint`, `yarn build` and `yarn test`
-pass. The only tests cover `queryUserProgress`. On this branch there is no
-consumer: nothing under `frontend/`
+pass. Tests cover `queryUserProgress`, the reducers, level navigation and
+milestone reporting; the overview selectors and the validators are untested.
+On this branch there is no consumer: nothing under `frontend/`
 imports `@code-dot-org/progress`. A stale `labs/codebridge/dist` left over
 from another branch references it, which is the intended first consumer.
 
@@ -72,9 +73,8 @@ throughout. Section 3 lists them.
 
 ### 3.1 Defects introduced by the port
 
-These fail at runtime. Items 1 and 2 are fixed, with tests in
-`src/redux/__tests__/queryUserProgress.test.ts`; they are kept here as a
-record of the port.
+These failed at runtime. All six are fixed, with tests under
+`src/redux/__tests__/`; they are kept here as a record of the port.
 
 1. **Fixed. `queryUserProgress` could not make its request.** `userProgressFromServer`
    calls `fetch('/api/user_progress/…', {body: …})` with no method. A GET with
@@ -96,33 +96,50 @@ record of the port.
    a non-2xx response, a network failure or a missing `scriptName`. Apps
    threw that last one synchronously; it now arrives as a rejection.
 
-3. **Bubble state does not update after a milestone.** `sendReportHelper`
+3. **Fixed. Bubble state did not update after a milestone.** `sendReportHelper`
    dispatches `mergeResults` only. Apps also dispatches `mergeUnitProgress`
    (#70881, "fix for progress not updating", Feb 2026). `levelWithProgress`
    prefers `unitProgress` over `levelResults` for any level the server already
    had an entry for, so a level that was attempted before the page loaded
    never shows a later pass. The bug #70881 fixed is present again.
-4. **`setWindowTitle` computes the wrong level index.** It matches
+
+   The fix restores the `mergeUnitProgress` reducer and dispatches it for the
+   level and, for a sublevel, its parent. An existing entry keeps its other
+   fields; the result merges by `mergeActivityResult`.
+
+4. **Fixed. `setWindowTitle` computed the wrong level index.** It matches
    `lessonLevel.position === newLevelId`, an id against a position. Apps
    matches `activeId`. It also reads `lesson.title` and `lesson.levels.length`
    where apps reads `lesson.name` and `num_script_lessons` (the number of
    lessons in the unit, which decides whether the unit name is shown), and it
    still says "Code.org" where apps has said "CodeAI" since #72991.
-5. **`nextLevelId` indexes by `levelNumber`.** `levelNumber` is
-   `title || position`, which is `undefined` for unplugged levels; the index
-   becomes -1 and the function returns the first level. Apps replaced this
+
+   The fix matches apps: `activeId`, `name`, `numScriptLessons` and "CodeAI".
+
+5. **Fixed. `nextLevelId` indexed by `levelNumber`.** `levelNumber` is
+   `title || position`, which is 1-based, so on an ordinary level the
+   function returned the current level itself. It is `undefined` for
+   unplugged levels, and with no current level at all, so there the index
+   became -1 and the function returned the first level. Apps replaced this
    with `getNextLevel` (#74900, Aug 2026), which finds the current level by id
    and honours bubble-choice `navigationType` (`next_level`, `next_sublevel`,
    parent). The port always returns the parent for a sublevel.
-6. **`navigateToLevelId` pushes `newLevel.url`.** Apps has pushed `path`
+
+   The fix ports `getParentLevel` and `getNextLevel`, adds
+   `BubbleChoiceNavigationTypes` to the constants, and derives `nextLevelId`
+   from `getNextLevel`.
+
+6. **Fixed. `navigateToLevelId` pushed `newLevel.url`.** Apps has pushed `path`
    since #57547 (2024). `url` is the absolute studio URL from
    `build_script_level_url`; `pushState` accepts it on the same origin and
-   throws `SecurityError` on any other, which is the dev-proxy case.
+   throws `SecurityError` on any other, which is the dev-proxy case. It now
+   pushes `path`.
 
 ### 3.2 Behaviour dropped from the milestone path
 
 `sendReportHelper` posts `{app, result, testResult, program?, submitted?}` and
-nothing else. Apps `sendReportForLevel` also sends, or does:
+nothing else. Apps `sendReportForLevel` also sends, or does, the following.
+The `mergeUnitProgress` dispatch it also makes is restored; see 3.1 item 3.
 
 - `timeSinceLastMilestone` from `Lab2ProgressTimer` (elapsed time minus idle
   time), which the server stores as `UserLevel#time_spent`
@@ -168,15 +185,14 @@ itself, rather than silent removal.
 
 ### 3.5 Selectors not ported
 
-`progressReduxSelectors.js` was folded in only partly. Missing:
-`getNextLevel`, `getParentLevel`, `levelsByLesson`, `groupedLessons`,
+`progressReduxSelectors.js` was folded in only partly. `getNextLevel` and
+`getParentLevel` have since been ported. Missing: `levelsByLesson`, `groupedLessons`,
 `progressionsFromLevels`, `lessons`, `hasLockableLessons`, `hasGroups`,
 `getCurrentLesson`, `getLessonCount`, `levelCount`, `isPerfect`,
 `lessonExtrasUrl`, `lessonTutorPath`, `hasLessonPlan`, and the peer-review
 lesson and level synthesis. Most serve the unit overview and the progress
 table rather than the level page. Whether they belong here or in a future
-overview package is an open scoping decision. Either way, the level-page ones
-(`getNextLevel`, `getParentLevel`) are needed to fix 3.1 item 5.
+overview package is an open scoping decision.
 
 ### 3.6 Validation API changes
 
@@ -229,6 +245,14 @@ overview package is an open scoping decision. Either way, the level-page ones
   whose inactive ids include the current level is now marked current.
   Probably the intended behaviour; it is untested, and apps still has the
   typo.
+- `processedLessons` set `hidden: false` where apps strips the field. Fixed:
+  it omits `hidden`, as apps does.
+- `progressSlice` is annotated `Slice<ProgressState>`, which widens its name
+  to `string`. `MockStore` keys state by slice name, so the derived
+  `RootState` is `{[x: string]: ProgressState}` rather than
+  `{progress: ProgressState}`: `state.progress` type-checks, and so does any
+  other key. Dropping the annotation needs a check that the inferred slice
+  type still emits a portable declaration.
 
 ### 3.8 Conventions
 
@@ -247,7 +271,13 @@ overview package is an open scoping decision. Either way, the level-page ones
 - `README.md` was the teacher-dashboard README pasted verbatim (replaced
   alongside this document). `src/README.md` is
   `apps/src/lab2/progress/README.md` verbatim, apps-only pointers included.
-- Few tests. Only the `userProgressFromServer` block has been ported. Apps has
+- Partial tests. Ported from apps: the `userProgressFromServer`, reducer,
+  `getParentLevel`, `nextLevelId`, `getNextLevel`, `levelsForLessonId` and
+  `processedLessons` blocks. Apps' three `setViewType` cases all dispatched
+  `Instructor` although two are named for students; the port dispatches
+  `Participant` there. Not yet ported: the peer-review, `levelsByLesson`,
+  `groupedLessons` and `progressionsFromLevels` blocks, which test selectors
+  the package lacks. Apps has
   `progressReduxTest.js` (2074 lines: reducers, selectors,
   `userProgressFromServer`, peer reviews, bubble-choice navigation),
   `activityUtilsTest.js`, `progressHelpersTest.js` and
@@ -305,12 +335,9 @@ branch and the README says so until it is made.
 
 ## 6. Proposed order of work
 
-1. Fix 3.1 items 1 through 6 and port the apps tests that pin them. Items 1
-   and 2 and the `userProgressFromServer` tests are done. Still to port are
-   the tests for `nextLevelId`, `getNextLevel`, `levelsForLessonId` and the
-   reducers.
-2. Restore the milestone fields (`timeSinceLastMilestone`, `course_id`) and
-   `mergeUnitProgress`. Timer ownership needs a decision: a module singleton
+1. Done. Fix 3.1 items 1 through 6 and port the apps tests that pin them.
+2. Restore the milestone fields (`timeSinceLastMilestone`, `course_id`).
+   `mergeUnitProgress` is already restored. Timer ownership needs a decision: a module singleton
    as in apps, or state on the slice.
 3. Move both requests onto `DashboardApiClient`: extend
    `activities.reportMilestone` with the Lab2 fields, add
