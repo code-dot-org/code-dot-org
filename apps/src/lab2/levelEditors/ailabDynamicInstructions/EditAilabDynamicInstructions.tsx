@@ -127,7 +127,8 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
       />
       <Typography variant="body4" className={moduleStyles.descriptionText}>
         Markdown shown in the instructions panel as students work. Leave a field
-        blank to show the default text, which appears greyed out.
+        blank to show the default text (the grayed out text if no text is
+        provided here).
       </Typography>
       {state.removed.length > 0 && (
         <Typography variant="body4" className={moduleStyles.warningText}>
