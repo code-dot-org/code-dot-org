@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline under **when run** to put your character on the **left** of the scene, then snap on a **say** block so they say something. Your changes run live in the preview. When it feels right, click **Play**."
+        "text": "**Make them talk.** Drag a **say** block onto the dotted outline under **make new sprite**, so your character says something. Your changes run live in the preview. When it feels right, click **Play**."
       },
       {
         "text": "**They're alive!** Watch your character speak, then continue when you're ready.",
@@ -44,17 +44,10 @@
         }
       }
     ],
-    "long_instructions": "# Add your character\nUse **make new sprite** to put your character on the left of the scene, then snap on a **say** block so they say something.",
+    "long_instructions": "# Make them talk\nDrag a **say** block onto the dotted outline under **make new sprite**, so your character says something.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition",
-          "fields": {
-            "POSITION": "left"
-          }
-        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
@@ -78,9 +71,16 @@
           "type": "spritelab2_placeholder",
           "extraState": {
             "like": {
-              "type": "spritelab2_makeSpriteAtPosition",
+              "type": "gamelab_spriteSay",
               "fields": {
-                "POSITION": "left"
+                "SPEECH": "Hello!"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
               }
             }
           }
