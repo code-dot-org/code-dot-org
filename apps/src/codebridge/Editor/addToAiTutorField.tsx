@@ -24,7 +24,8 @@ import moduleStyles from './styles/editor.module.scss';
  */
 export const getAddToAiTutorField = (
   filename: string,
-  dispatch: AppDispatch
+  dispatch: AppDispatch,
+  selectAiTutorTab?: () => void
 ) => {
   const getAddToAiTutorTooltips = (state: EditorState) => {
     return state.selection.ranges
@@ -66,6 +67,7 @@ export const getAddToAiTutorField = (
               }),
             })
           );
+          selectAiTutorTab?.();
         };
         return {
           pos: endingLine.from,

@@ -49,6 +49,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     onAssetUploaded,
     onAssetRemoved,
     aiTutorInitialWelcomeMessage,
+    registerAiTutorTabSelector,
   } = useCodebridgeContext();
 
   const dispatch = useAppDispatch();
@@ -178,6 +179,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         onAssetUploaded={onAssetUploaded}
         onAssetRemoved={onAssetRemoved}
         initialWelcomeMessage={aiTutorInitialWelcomeMessage}
+        onRegisterAiTutorTabSelector={registerAiTutorTabSelector}
       />
     </div>
   );

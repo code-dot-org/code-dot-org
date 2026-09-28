@@ -83,6 +83,7 @@ export const useFileRowOptions = (
     aiTutorDisabled,
     allowMultipleValidationFiles,
     enableUserAddedSelectionContext,
+    selectAiTutorTab,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -192,6 +193,7 @@ export const useFileRowOptions = (
               })
             );
           }
+          selectAiTutorTab?.();
         },
       },
       {
@@ -231,6 +233,7 @@ export const useFileRowOptions = (
       projectFolders,
       aiTutorDisabled,
       enableUserAddedSelectionContext,
+      selectAiTutorTab,
     ]
   );
 

@@ -12,7 +12,7 @@ import {
   LayoutProps,
 } from '@codebridge/types';
 import classNames from 'classnames';
-import React, {useEffect, useMemo} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
@@ -87,6 +87,17 @@ export const Codebridge = React.memo(
     allowMultipleValidationFiles,
     enableUserAddedSelectionContext = false,
   }: CodebridgeProps) => {
+    const aiTutorTabSelectorRef = useRef<(() => void) | undefined>(undefined);
+    const selectAiTutorTab = useCallback(
+      () => aiTutorTabSelectorRef.current?.(),
+      []
+    );
+    const registerAiTutorTabSelector = useCallback(
+      (selector: (() => void) | undefined) => {
+        aiTutorTabSelectorRef.current = selector;
+      },
+      []
+    );
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -246,6 +257,8 @@ export const Codebridge = React.memo(
           aiTutorInitialWelcomeMessage,
           allowMultipleValidationFiles,
           enableUserAddedSelectionContext,
+          selectAiTutorTab,
+          registerAiTutorTabSelector,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

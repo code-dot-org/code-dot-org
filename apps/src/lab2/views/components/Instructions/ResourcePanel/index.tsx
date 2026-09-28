@@ -191,6 +191,7 @@ type ResourcePanelProps = InstructionsProps & {
   extraTabs?: ExtraTab[];
   // Callback that reports whether any tab ended up available.
   onHasTabsChange?: (hasTabs: boolean) => void;
+  onRegisterAiTutorTabSelector?: (selector: (() => void) | undefined) => void;
 };
 
 /**
@@ -222,6 +223,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
+  onRegisterAiTutorTabSelector,
   extraTabs,
   hideAllNavigation = false,
   onHasTabsChange,
@@ -623,12 +625,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [setShowExtraLinksButton]);
 
   const onClickTab = useCallback(
-    (tab: string, event: React.MouseEvent<HTMLElement>) => {
+    (tab: string, event?: React.MouseEvent<HTMLElement>) => {
       // Enter or space leaves the button focus-visible; a mouse click does not.
       // A no-op activation would never reach the effect that clears this.
       selectedTabWithKeyboard.current =
         (tab !== currentTab || !!isStandaloneCollapsed) &&
-        event.currentTarget.matches(':focus-visible');
+        !!event?.currentTarget.matches(':focus-visible');
       if (currentTab && currentTab !== tab) {
         sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
           resourcePanelTabClickedTo: tab,
@@ -648,6 +650,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     },
     [currentTab, dispatch, isStandaloneCollapsed, aiTutorDotSeenKey]
   );
+
+  useEffect(() => {
+    onRegisterAiTutorTabSelector?.(() => onClickTab(Tabs.AiTutor));
+    return () => onRegisterAiTutorTabSelector?.(undefined);
+  }, [onClickTab, onRegisterAiTutorTabSelector]);
 
   const onClickSettingsButton = useCallback(() => {
     // For standalone projects, we need to handle the resource panel collapsing and expanding in conjunction

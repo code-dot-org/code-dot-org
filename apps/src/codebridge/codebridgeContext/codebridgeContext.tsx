@@ -43,6 +43,8 @@ export type CodebridgeContextType = {
   aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
   enableUserAddedSelectionContext?: boolean;
+  selectAiTutorTab?: () => void;
+  registerAiTutorTabSelector?: (selector: (() => void) | undefined) => void;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(
