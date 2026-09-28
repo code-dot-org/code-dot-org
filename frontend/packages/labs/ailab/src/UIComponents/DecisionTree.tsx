@@ -14,6 +14,8 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
+const orList = new Intl.ListFormat('en', {type: 'disjunction'});
+
 function formatNumber(value: number): string {
   return String(Number(value.toFixed(2)));
 }
@@ -43,14 +45,9 @@ const DecisionTree = () => {
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
       const sign = branch.kind === 'lessThan' ? '<' : '≥';
-      // Unrounded: any rounding can put a row on the wrong side of the threshold
       return `${sign} ${branch.threshold}`;
     }
-    const values = branch.values.map(valueText);
-    if (values.length < 2) {
-      return values.join('');
-    }
-    return `${values.slice(0, -1).join(', ')} or ${values[values.length - 1]}`;
+    return orList.format(branch.values.map(valueText));
   };
 
   const nodeText = (node: DisplayTreeNode): string => {
