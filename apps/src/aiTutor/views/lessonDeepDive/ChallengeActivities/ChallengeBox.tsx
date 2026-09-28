@@ -1,4 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Challenge,
+  ChallengeResponse,
+  ChallengeResponseDetail,
+  challengeResponseValidator,
+  EvaluationStatus,
+  ExplanationTypes,
+} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
@@ -9,14 +17,6 @@ import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
 
 import ProjectDetailsCard from '../../gallery/ProjectDetailsCard';
-import {ChallengeResponseDetail} from '../../gallery/types';
-import {
-  Challenge,
-  ChallengeResponse,
-  challengeResponseValidator,
-  EvaluationStatus,
-  ExplanationTypes,
-} from '../types';
 
 import VideoChallenge from './VideoChallenge';
 import WhiteboardChallenge from './WhiteboardChallenge';
@@ -85,6 +85,17 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   const isRecordable =
     challengeType === ChallengeTypes.VIDEO ||
     explanationType === ExplanationTypes.AUDIO;
+  // Video previews return to edit first; audio re-records in one click
+  const isVideoPreview =
+    challengeType === ChallengeTypes.VIDEO && hasRecording && !isRecording;
+
+  const handleRecordClick = () => {
+    if (isVideoPreview) {
+      setHasRecording(false);
+    } else {
+      setIsRecording(!isRecording);
+    }
+  };
 
   // Both challenge modalities report submission through this callback; the
   // confirmation dialog is shared here rather than duplicated per modality.
@@ -559,10 +570,12 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     }
                     variant="contained"
                     disabled={showConfirmation}
-                    onClick={() => setIsRecording(!isRecording)}
+                    onClick={handleRecordClick}
                   >
                     {isRecording
                       ? 'Stop Recording'
+                      : isVideoPreview
+                      ? 'Edit and Record Again'
                       : hasRecording
                       ? 'Record Again'
                       : 'Start Recording'}

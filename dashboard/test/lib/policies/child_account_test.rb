@@ -419,6 +419,67 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.personal_account_linking_enabled?' do
+    let(:personal_account_linking_enabled?) do
+      Policies::ChildAccount.personal_account_linking_enabled?(user, request_in_usa: request_in_usa)
+    end
+
+    let(:user) {build_stubbed(:student, country_code: 'US')}
+    let(:request_in_usa) {true}
+    let(:can_link_new_personal_account?) {true}
+    let(:partially_locked_out?) {false}
+
+    before do
+      Policies::ChildAccount.stubs(:can_link_new_personal_account?).with(user).returns(can_link_new_personal_account?)
+      Policies::ChildAccount.stubs(:partially_locked_out?).with(user).returns(partially_locked_out?)
+    end
+
+    it 'returns true if the user can link and is not partially locked out' do
+      _(personal_account_linking_enabled?).must_equal true
+    end
+
+    context 'when the user cannot link a new personal account' do
+      let(:can_link_new_personal_account?) {false}
+
+      it 'returns false' do
+        _(personal_account_linking_enabled?).must_equal false
+      end
+    end
+
+    context 'when the user is partially locked out' do
+      let(:partially_locked_out?) {true}
+
+      it 'returns false' do
+        _(personal_account_linking_enabled?).must_equal false
+      end
+    end
+
+    context 'when a student with no stored country requests from the US' do
+      let(:user) {build_stubbed(:student, country_code: nil)}
+
+      it 'returns false' do
+        _(personal_account_linking_enabled?).must_equal false
+      end
+    end
+
+    context 'when a student with no stored country requests from outside the US' do
+      let(:user) {build_stubbed(:student, country_code: nil)}
+      let(:request_in_usa) {false}
+
+      it 'returns true' do
+        _(personal_account_linking_enabled?).must_equal true
+      end
+    end
+
+    context 'when a teacher with no stored country requests from the US' do
+      let(:user) {build_stubbed(:teacher, country_code: nil)}
+
+      it 'returns true' do
+        _(personal_account_linking_enabled?).must_equal true
+      end
+    end
+  end
+
   describe '.parent_permission_required?' do
     let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user, future: future)}
 
