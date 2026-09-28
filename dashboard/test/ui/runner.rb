@@ -520,8 +520,8 @@ end
 # cross-page navigation row at the top of each status page. Each entry's
 # :filename must equal the value status_page_filename returns when that
 # page is being generated, so the active entry can be rendered unlinked.
-# These three are the Selenium suites rake test:ui_all dispatches; Playwright,
-# the fourth, is appended in status_pages_navigation.
+# These three are the Selenium suites rake test:ui_all dispatches; the two
+# Playwright suites are appended in status_pages_navigation.
 STATUS_PAGES_NAVIGATION = [
   {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
   {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
@@ -539,10 +539,13 @@ def status_pages_navigation
     )
   end
   # Appended here, not baked into the frozen constant, so that loading this file
-  # runs no S3 code. Playwright publishes its own report, so this entry carries
-  # a url and no :filename; the key is stable and always serves the latest run.
-  playwright_url = Cdo::PlaywrightReport.index_url
-  pages << {display_name: 'Playwright (latest run)', url: playwright_url} if playwright_url
+  # runs no S3 code. Playwright publishes its own reports, so these entries carry
+  # a url and no :filename; the keys are stable and always serve the latest run.
+  # The report names match run_playwright_suite in lib/rake/test.rake.
+  {'Playwright (latest run)' => 'playwright', 'Playwright Eyes (latest run)' => 'playwright-eyes'}.each do |display_name, name|
+    url = Cdo::PlaywrightReport.index_url(name: name)
+    pages << {display_name: display_name, url: url} if url
+  end
   pages
 end
 

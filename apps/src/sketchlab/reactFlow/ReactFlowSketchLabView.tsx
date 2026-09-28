@@ -128,14 +128,12 @@ function ReactFlowSketchLabViewInner({
   );
 
   const saveBackpackApi = useMemo(() => {
-    if (
-      experiments.isEnabledAllowingQueryString(experiments.UNIFIED_BACKPACK)
-    ) {
-      return currentUserId
-        ? Lab2Registry.getInstance().getUnifiedBackpackApi()
-        : undefined;
+    if (experiments.isEnabledAllowingQueryString(experiments.LEGACY_BACKPACK)) {
+      return backpackContext?.primaryApi;
     }
-    return backpackContext?.primaryApi;
+    return currentUserId
+      ? Lab2Registry.getInstance().getUnifiedBackpackApi()
+      : undefined;
   }, [currentUserId, backpackContext]);
 
   // Remount the canvas to re-read sources, same pattern as Excalidraw's

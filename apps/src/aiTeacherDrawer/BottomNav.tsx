@@ -14,6 +14,7 @@ interface BottomNavProps {
   activeLabel: string;
   onNavChange: (label: string) => void;
   unreadNotificationCount?: number;
+  showChats?: boolean;
   showLearn?: boolean;
   showTeacherPanel?: boolean;
 }
@@ -22,12 +23,13 @@ const BottomNav: React.FC<BottomNavProps> = ({
   activeLabel,
   onNavChange,
   unreadNotificationCount = 0,
+  showChats = true,
   showLearn = false,
   showTeacherPanel = false,
 }) => {
   const navItems: NavItem[] = [
     // {label: 'Home', iconName: 'house'},
-    {label: 'Chats', iconName: 'comment'},
+    ...(showChats ? [{label: 'Chats', iconName: 'comment'}] : []),
     ...(showLearn ? [{label: 'Prepare', iconName: 'folder-check'}] : []),
     {label: 'Alerts', iconName: 'bell'},
     ...(showTeacherPanel ? [{label: 'Roster', iconName: 'users'}] : []),

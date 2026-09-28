@@ -6,7 +6,7 @@ import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {fetchThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import {SuggestedLesson} from './SectionPodcastCard';
@@ -34,6 +34,9 @@ const LessonSummaryScreen: React.FC<LessonSummaryScreenProps> = ({
   onNavigateToChats,
 }) => {
   const dispatch = useAppDispatch();
+  const aiDifferentiationEnabled = useAppSelector(
+    state => state.currentUser.aiDifferentiationEnabled
+  );
   const [summary, setSummary] = useState<LessonSummaryInfo | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -73,7 +76,8 @@ const LessonSummaryScreen: React.FC<LessonSummaryScreenProps> = ({
     onNavigateToChats?.();
   };
 
-  const showFooter = !isLoading && !hasError && !!summary;
+  const showFooter =
+    !isLoading && !hasError && !!summary && aiDifferentiationEnabled !== false;
 
   return (
     <div className={styles.container}>

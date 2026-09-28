@@ -308,8 +308,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
-  const unifiedBackpackEnabled = experiments.isEnabledAllowingQueryString(
-    experiments.UNIFIED_BACKPACK
+  const legacyBackpackEnabled = experiments.isEnabledAllowingQueryString(
+    experiments.LEGACY_BACKPACK
   );
   useResourcePanelTours({
     levelProperties,
@@ -428,9 +428,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
-      const BackpackPanelComponent = unifiedBackpackEnabled
-        ? UnifiedBackpackPanel
-        : BackpackPanel;
+      const BackpackPanelComponent = legacyBackpackEnabled
+        ? BackpackPanel
+        : UnifiedBackpackPanel;
       tabMap[Tabs.Backpack] = (
         <BackpackPanelComponent
           {...backpackProps}
@@ -511,7 +511,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     backpackProps,
     setBackpackTabAsActive,
     backpackRefreshKey,
-    unifiedBackpackEnabled,
+    legacyBackpackEnabled,
     hasInstructions,
   ]);
 
