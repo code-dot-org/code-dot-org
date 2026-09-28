@@ -157,9 +157,13 @@ class CertificateImage
     path = dashboard_dir('public', 'blockly', 'media', 'certificates', template_file)
     if prefilled_title_course?(course)
       # only need to fill in student name
-      vertical_offset = course == '20-hour' ? -125 : -120
-      style = template_file == 'hour_of_ai_certificate.png' ? {font: 'Helvetica bold', color: 'rgb(31, 25, 118)'} : {}
-      image = create_certificate_image2(path, name, y: vertical_offset, **style)
+      style =
+        if template_file == 'hour_of_ai_certificate.png'
+          {y: -109, font: 'Helvetica bold', color: 'rgb(31, 25, 118)'}
+        else
+          {y: course == '20-hour' ? -125 : -120}
+        end
+      image = create_certificate_image2(path, name, **style)
     else
       unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
       image = Magick::Image.read(path).first
