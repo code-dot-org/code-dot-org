@@ -18,6 +18,25 @@
   max-width: 100%;
   padding: 40px 0;
 
+  // Nested for specificity over MUI Typography defaults
+  .heading {
+    font-family: var(--font-family-heading);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.48px;
+    color: var(--sentiment-information-30);
+    margin: 0;
+  }
+
+  .sectionLabel {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--text-neutral-primary);
+    margin: 0;
+  }
+
   // MuiButton variant="text" — nested for specificity over MUI root class
   .reviewLink {
     background: none;
@@ -44,18 +63,6 @@
   }
 }
 
-// ── Heading ────────────────────────────────────────────────────────────────
-
-.heading {
-  font-family: var(--font-family-heading);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 52px;
-  letter-spacing: -0.48px;
-  color: var(--sentiment-information-30);
-  margin: 0;
-}
-
 // ── Section ────────────────────────────────────────────────────────────────
 
 .section {
@@ -63,14 +70,6 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
-}
-
-.sectionLabel {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-  color: var(--text-neutral-primary);
-  margin: 0;
 }
 
 // ── Modality picker ────────────────────────────────────────────────────────
