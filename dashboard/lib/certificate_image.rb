@@ -21,8 +21,8 @@ class CertificateImage
   def self.create_certificate_image2(image_path, name, params = {})
     # Load the certificate template
     background = Magick::Image.read(image_path).first
-    font = "Times bold"
-    color = "#575757"
+    font = params[:font] || "Times bold"
+    color = params[:color] || "#575757"
     pointsize = 68
     x_offset = params[:x] || 0
     y_offset = params[:y] || 0
@@ -158,7 +158,8 @@ class CertificateImage
     if prefilled_title_course?(course)
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120
-      image = create_certificate_image2(path, name, y: vertical_offset)
+      style = template_file == 'hour_of_ai_certificate.png' ? {font: 'Helvetica bold', color: 'rgb(31, 25, 118)'} : {}
+      image = create_certificate_image2(path, name, y: vertical_offset, **style)
     else
       unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
       image = Magick::Image.read(path).first
