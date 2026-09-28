@@ -143,11 +143,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   };
 
   const handleFinishAttempt = async () => {
+    // Send the student's current answers with submit, so grading is based
+    // on what they see on screen rather than whatever autosave last landed.
+    const responsesByQuestionId = Object.fromEntries(
+      Object.entries(selectedChoicesByQuestionId).map(
+        ([questionId, choiceId]) => [questionId, {selectedChoiceId: choiceId}]
+      )
+    );
     // Targets the level the attempt was for, not whichever quiz is current
     // by the time this resolves.
     const requestLevelId = levelId;
     try {
-      await finishAttempt();
+      await finishAttempt(responsesByQuestionId);
       dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName));
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.

@@ -8220,6 +8220,35 @@ columns:
   - *35
   - *54
   - *176
+  user_log_tokens:
+  - *9
+  - *18
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: destination
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: period
+    sql_type_metadata: *2
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: uuid
+    sql_type_metadata: *97
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *12
+  - *13
   user_ml_models:
   - *9
   - *10
@@ -9518,6 +9547,7 @@ primary_keys:
   user_lesson_reflections: id
   user_level_interactions: id
   user_levels: id
+  user_log_tokens: id
   user_ml_models: id
   user_module_task_assignments: id
   user_permissions: id
@@ -9769,6 +9799,7 @@ data_sources:
   user_lesson_reflections: true
   user_level_interactions: true
   user_levels: true
+  user_log_tokens: true
   user_ml_models: true
   user_module_task_assignments: true
   user_permissions: true
@@ -16405,6 +16436,35 @@ indexes:
     type: 
     using: :btree
     comment: 
+  user_log_tokens:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_log_tokens
+    name: index_user_log_tokens_on_user_destination_period
+    unique: true
+    columns:
+    - user_id
+    - destination
+    - period
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_log_tokens
+    name: index_user_log_tokens_on_uuid
+    unique: true
+    columns:
+    - uuid
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_ml_models:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_ml_models
@@ -16888,7 +16948,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260904165528
+version: 20260921151250
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

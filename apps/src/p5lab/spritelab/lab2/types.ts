@@ -159,4 +159,6 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   addBlocks?: AddBlockEntry[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
+  /** Runtime libraries the level opts into (see usesPlatformPhysics). */
+  helperLibraries?: string[];
 }
