@@ -120,18 +120,17 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.hasEditedSinceLastVersionSave
   );
 
-  // Ex: "Jun 5, 3:30:00 PM"
+  // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
       month: 'short',
       day: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
-      second: 'numeric',
     });
   }, [locale]);
 
-  // Ex: "Jun 5, 2022, 3:30:00 PM"
+  // Ex: "Jun 5, 2022, 3:30 PM"
   const dateFormatterWithYear = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
       month: 'short',
@@ -139,7 +138,6 @@ const VersionHistoryPanel: React.FunctionComponent<
       year: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
-      second: 'numeric',
     });
   }, [locale]);
 

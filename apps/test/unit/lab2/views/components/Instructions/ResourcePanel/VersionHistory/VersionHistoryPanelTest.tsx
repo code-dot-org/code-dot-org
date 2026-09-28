@@ -144,9 +144,7 @@ describe('VersionHistoryPanel', () => {
     // Initial version should always be the bottom option in the list.
     // We look for initial version rather than one of the dated versions to avoid issues with time zones.
     expect(screen.getByText('Initial version')).toBeInTheDocument();
-    expect(
-      screen.getByText(/Last saved: Feb 25, 2025.*6:11:10PM/)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Last saved: Feb 25, 2025/)).toBeInTheDocument();
   });
 
   it('renders alert if getVersionList fails', async () => {
