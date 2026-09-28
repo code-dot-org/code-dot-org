@@ -2275,6 +2275,7 @@ __metadata:
     eslint: "catalog:"
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
+    jsdom: "catalog:"
     lodash: "npm:^4.17.21"
     prettier: "catalog:"
     react: "catalog:"

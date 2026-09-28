@@ -242,3 +242,24 @@ export interface MilestoneReport extends OptionalMilestoneData {
 
 export type ProgressLevelType =
   (typeof ProgressLevelTypes)[keyof typeof ProgressLevelTypes];
+
+/**
+ * The body of GET /api/user_progress/:script. A signed-out user gets only
+ * `signedIn: false`.
+ */
+export interface UserProgressResponse {
+  signedIn?: boolean;
+  teacherViewingStudent?: boolean;
+  disableSocialShare?: boolean;
+  lockableAuthorized?: boolean;
+  isTeacher?: boolean;
+  isInstructor?: boolean;
+  isVerifiedInstructor?: boolean;
+  deeperLearningCourse?: boolean;
+  focusAreaLessonIds?: number[];
+  changeFocusAreaPath?: string;
+  completed?: boolean;
+  progress?: {[levelId: number]: UnitProgressDefinition};
+  peerReviewsPerformed?: PeerReviewLevelInfo[];
+  current_lesson?: number;
+}

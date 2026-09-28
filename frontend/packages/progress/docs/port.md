@@ -23,8 +23,9 @@ It depends on `@code-dot-org/core` for the lesson and level types (`Lesson`,
 `@code-dot-org/users/redux` as a type only, for the `currentUser` slice the
 submit thunk reads. The companion commit 638086b58d9 adds that users slice.
 
-Build state: `yarn typecheck`, `yarn lint` and `yarn build` pass. The package
-has no tests and, on this branch, no consumer: nothing under `frontend/`
+Build state: `yarn typecheck`, `yarn lint`, `yarn build` and `yarn test`
+pass. The only tests cover `queryUserProgress`. On this branch there is no
+consumer: nothing under `frontend/`
 imports `@code-dot-org/progress`. A stale `labs/codebridge/dist` left over
 from another branch references it, which is the intended first consumer.
 
@@ -71,15 +72,17 @@ throughout. Section 3 lists them.
 
 ### 3.1 Defects introduced by the port
 
-These fail at runtime.
+These fail at runtime. Items 1 and 2 are fixed, with tests in
+`src/redux/__tests__/queryUserProgress.test.ts`; they are kept here as a
+record of the port.
 
-1. **`queryUserProgress` cannot make its request.** `userProgressFromServer`
+1. **Fixed. `queryUserProgress` could not make its request.** `userProgressFromServer`
    calls `fetch('/api/user_progress/…', {body: …})` with no method. A GET with
    a body is rejected by the fetch spec before any network traffic
    (`TypeError: Request with GET/HEAD method cannot have body`, reproduced
    under Node 22). Apps sends `user_id` as a query parameter. The route is
    `get '/api/user_progress/:script'`; there is no POST.
-2. **The same promise never settles in the common case.** `resolve()` runs
+2. **Fixed. The same promise never settled in the common case.** `resolve()` runs
    only when the response carries `completed: true`; every other response
    leaves the promise pending. Failure calls `reject()` with no value, and an
    exception inside the async IIFE becomes an unhandled rejection rather than
@@ -87,6 +90,12 @@ These fail at runtime.
    resolved with the response body; the apps test `userProgressFromServer`
    asserts on that body, and the legacy caller `progress.js#queryUserProgress`
    reads `data.signedIn` from it.
+
+   The fix sends a plain GET with `user_id` in the query string and resolves
+   with the body, typed `UserProgressResponse`. It rejects with an `Error` on
+   a non-2xx response, a network failure or a missing `scriptName`. Apps
+   threw that last one synchronously; it now arrives as a rejection.
+
 3. **Bubble state does not update after a milestone.** `sendReportHelper`
    dispatches `mergeResults` only. Apps also dispatches `mergeUnitProgress`
    (#70881, "fix for progress not updating", Feb 2026). `levelWithProgress`
@@ -207,9 +216,10 @@ overview package is an open scoping decision. Either way, the level-page ones
   must narrow it, or core must gain the schema.
 - `setScriptProgress` accepts `{[levelId]: UnitProgress}` (parsed, camelCase)
   but the reducer runs `processServerStudentProgress`, which expects the wire
-  shape `UnitProgressDefinition`. Inherited from apps; still wrong.
-- `queryUserProgress` is typed `ProgressThunkAction` (void) but callers need
-  the promise.
+  shape `UnitProgressDefinition`. Inherited from apps. Fixed: the payload is
+  now typed `UnitProgressDefinition`.
+- `queryUserProgress` was typed `ProgressThunkAction` (void) although callers
+  need the promise. Fixed: it returns `Promise<UserProgressResponse>`.
 - `ViewTypes` and `ReviewStates` lack `as const`, so `ViewType` widens to
   `string`.
 - `NumberedLevelFields.lastTimestamp?: string` against
@@ -237,7 +247,8 @@ overview package is an open scoping decision. Either way, the level-page ones
 - `README.md` was the teacher-dashboard README pasted verbatim (replaced
   alongside this document). `src/README.md` is
   `apps/src/lab2/progress/README.md` verbatim, apps-only pointers included.
-- No tests. Apps has `progressReduxTest.js` (2074 lines: reducers, selectors,
+- Few tests. Only the `userProgressFromServer` block has been ported. Apps has
+  `progressReduxTest.js` (2074 lines: reducers, selectors,
   `userProgressFromServer`, peer reviews, bubble-choice navigation),
   `activityUtilsTest.js`, `progressHelpersTest.js` and
   `TestResultValidatorTest.ts`. All are portable to vitest and would have
@@ -294,9 +305,10 @@ branch and the README says so until it is made.
 
 ## 6. Proposed order of work
 
-1. Fix 3.1 items 1 through 6 and port the apps tests that pin them
-   (`userProgressFromServer`, `nextLevelId`, `getNextLevel`,
-   `levelsForLessonId`, the reducer tests).
+1. Fix 3.1 items 1 through 6 and port the apps tests that pin them. Items 1
+   and 2 and the `userProgressFromServer` tests are done. Still to port are
+   the tests for `nextLevelId`, `getNextLevel`, `levelsForLessonId` and the
+   reducers.
 2. Restore the milestone fields (`timeSinceLastMilestone`, `course_id`) and
    `mergeUnitProgress`. Timer ownership needs a decision: a module singleton
    as in apps, or state on the slice.
