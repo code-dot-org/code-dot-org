@@ -4,6 +4,8 @@
 
 import * as BlocklyCore from 'blockly/core';
 
+import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
+
 /** A block to add. Its `data`, when set, tells it apart from another entry
     of the same type in one scene. */
 export type AddBlock = BlocklyCore.serialization.blocks.State;
@@ -25,10 +27,10 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
   return 'attachTo' in entry;
 }
 
-// Below the existing stacks, with room for three more blocks under them
-// before the added block begins: the blocks later levels have the student
-// add under when-run.
-const ROOM_BELOW_PX = 144;
+// Room under the when-run stack for the three or so blocks later levels
+// have the student add there; every other stack keeps only a gap.
+const ROOM_BELOW_WHEN_RUN_PX = 144;
+const STACK_GAP_PX = 24;
 
 /** The blocks the workspace lacks. A block without data (added before
     entries carried any) stands for every entry of its type. */
@@ -47,19 +49,22 @@ export function missingBlocks(
   );
 }
 
-/** Where the next added block begins: under the lowest stack's bottom
-    edge, at the leftmost stack's x. An empty workspace starts at the
-    origin. */
-export function placeBelow(stacks: {x: number; y: number; height: number}[]): {
-  x: number;
-  y: number;
-} {
+/** Where the next added block begins: below every stack and the room
+    kept under it, at the leftmost stack's x. An empty workspace starts at
+    the origin. */
+export function placeBelow(
+  stacks: {x: number; y: number; height: number; grows?: boolean}[]
+): {x: number; y: number} {
   if (stacks.length === 0) {
     return {x: 0, y: 0};
   }
   return {
     x: Math.min(...stacks.map(s => s.x)),
-    y: Math.max(...stacks.map(s => s.y + s.height)) + ROOM_BELOW_PX,
+    y: Math.max(
+      ...stacks.map(
+        s => s.y + s.height + (s.grows ? ROOM_BELOW_WHEN_RUN_PX : STACK_GAP_PX)
+      )
+    ),
   };
 }
 
@@ -141,7 +146,12 @@ export function addMissingBlocks(
   for (const entry of missing) {
     const stacks = workspace.getTopBlocks(false).map(top => {
       const {x, y} = top.getRelativeToSurfaceXY();
-      return {x, y, height: top.getHeightWidth().height};
+      return {
+        x,
+        y,
+        height: top.getHeightWidth().height,
+        grows: top.type === WHEN_RUN_BLOCK_TYPE,
+      };
     });
     const {x, y} = placeBelow(stacks);
     try {
