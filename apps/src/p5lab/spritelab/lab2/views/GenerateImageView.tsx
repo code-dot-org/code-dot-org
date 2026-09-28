@@ -238,17 +238,18 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     const scale = recorded && defaultPixelGrid(initialImageType) / recorded;
     return scale && PIXEL_SCALES.includes(scale) ? scale : 1;
   });
+  // A whole character — idling, walking, jumping — instead of one picture.
+  // On for a new image; for an existing one, whatever it already is, so
+  // regenerating keeps a character a character and a still a still.
+  const startsAsSet = existing ? !!sheet : true;
   // Calm when the set checkbox starts checked (posed frames must agree
   // with the base), as checking it by hand also sets.
   const [temperatureLevel, setTemperatureLevel] = useState(
-    sheet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
+    startsAsSet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
-  // A whole character — idling, walking, jumping — instead of one picture.
-  // Pre-checked when the image already is one: regenerating a character
-  // should keep it a character unless the student unchecks it.
-  const [characterSet, setCharacterSet] = useState(!!sheet);
+  const [characterSet, setCharacterSet] = useState(startsAsSet);
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   // Counts generate runs; progress callbacks from older runs are dropped.
   const progressEpochRef = useRef(0);
