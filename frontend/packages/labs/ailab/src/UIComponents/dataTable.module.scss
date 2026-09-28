@@ -1,22 +1,26 @@
-// Token names follow the AI Lab 2 Figma; state/selected has no CSS token yet.
 .table {
-  --selected-header-fill: var(--background-state-selected-primary, #2b1e9f);
-  --selected-header-fill-hover: var(
-    --background-state-selected-strong,
-    #1f1976
+  // Half-opacity fills, so a chosen column reads lighter than its row-hover.
+  --body-cell-hover: color-mix(
+    in srgb,
+    var(--background-neutral-secondary) 50%,
+    transparent
   );
-  --selected-header-text: var(--text-state-selected-primary, #d8ffdc);
-
-  // The -light fills at 50% opacity, so a chosen column reads lighter than its row-hover.
-  --body-cell-hover: #f1f2f480;
-  --feature-cell-fill: #d5efff80;
-  --label-cell-fill: #fbdae880;
+  --feature-cell-fill: color-mix(
+    in srgb,
+    var(--background-info-light) 50%,
+    transparent
+  );
+  --label-cell-fill: color-mix(
+    in srgb,
+    var(--background-accent-pink-light) 50%,
+    transparent
+  );
 
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   white-space: nowrap;
-  font-family: var(--font-family-main, inherit);
+  font-family: var(--font-family-main);
   font-size: 12px;
   line-height: 18px;
   text-align: left;
@@ -46,58 +50,58 @@
   z-index: 1;
   border-top-width: 1px;
   font-weight: 600;
-  color: var(--text-neutral-tertiary, #4b5258);
-  background-color: var(--background-neutral-secondary, #f1f2f4);
-  border-color: var(--border-neutral-primary, #d3d6da);
+  color: var(--text-neutral-tertiary);
+  background-color: var(--background-neutral-secondary);
+  border-color: var(--border-neutral-primary);
 
   &.clickable:hover,
   &.clickable:active {
-    color: var(--text-neutral-primary, #121212);
+    color: var(--text-neutral-primary);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--border-brand-primary, #4c42cf);
+    outline: 2px solid var(--border-brand-primary);
     outline-offset: -2px;
   }
 }
 
 .headerLabel {
-  color: var(--text-neutral-primary, #121212);
-  background-color: var(--background-accent-pink-mid, #f07fb0);
-  border-color: var(--border-accent-pink-primary, #e11970);
+  color: var(--text-neutral-primary);
+  background-color: var(--background-accent-pink-mid);
+  border-color: var(--border-accent-pink-primary);
 
   &.clickable:hover,
   &.clickable:active {
-    color: var(--text-neutral-secondary, #363b40);
+    color: var(--text-neutral-secondary);
   }
 }
 
 .headerFeature {
-  color: var(--text-neutral-primary, #121212);
-  background-color: var(--background-info-mid, #6fcaff);
-  border-color: var(--border-info-primary, #0099f3);
+  color: var(--text-neutral-primary);
+  background-color: var(--background-info-mid);
+  border-color: var(--border-info-primary);
 
   &.clickable:hover,
   &.clickable:active {
-    color: var(--text-neutral-secondary, #363b40);
+    color: var(--text-neutral-secondary);
   }
 }
 
 // Applies whether or not the column is also the label or a feature.
 .headerSelected {
-  color: var(--selected-header-text);
-  background-color: var(--selected-header-fill);
-  border-color: var(--selected-header-fill);
+  color: var(--text-selected-primary);
+  background-color: var(--background-selected-primary);
+  border-color: var(--border-selected-primary);
 
   &.clickable:hover,
   &.clickable:active {
-    color: var(--selected-header-text);
-    background-color: var(--selected-header-fill-hover);
-    border-color: var(--selected-header-fill-hover);
+    color: var(--text-selected-primary);
+    background-color: var(--background-selected-strong);
+    border-color: var(--border-selected-strong);
   }
 
   &:focus-visible {
-    outline: 1px solid var(--selected-header-text);
+    outline: 1px solid var(--border-selected-primary-inverse);
     outline-offset: -1px;
   }
 }
@@ -106,9 +110,9 @@
   min-width: 32px;
   font-weight: 600;
   text-align: center;
-  color: var(--text-neutral-tertiary, #4b5258);
-  background-color: var(--background-neutral-secondary, #f1f2f4);
-  border-color: var(--border-neutral-primary, #d3d6da);
+  color: var(--text-neutral-tertiary);
+  background-color: var(--background-neutral-secondary);
+  border-color: var(--border-neutral-primary);
 }
 
 .indexHeader {
@@ -119,19 +123,19 @@
 }
 
 .bodyCell {
-  color: var(--text-neutral-primary, #121212);
-  background-color: var(--background-neutral-primary, #fff);
-  border-color: var(--border-neutral-primary, #d3d6da);
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  border-color: var(--border-neutral-primary);
 }
 
 .bodyCellLabel {
   background-color: var(--label-cell-fill);
-  border-color: var(--border-accent-pink-light, #f3c3d8);
+  border-color: var(--border-accent-pink-light);
 }
 
 .bodyCellFeature {
   background-color: var(--feature-cell-fill);
-  border-color: var(--border-info-light, #b8e5ff);
+  border-color: var(--border-info-light);
 }
 
 .bodyCellHidden {
@@ -140,7 +144,7 @@
 
 .row:hover {
   .indexCell {
-    color: var(--text-neutral-primary, #121212);
+    color: var(--text-neutral-primary);
   }
 
   .bodyCell {
@@ -148,10 +152,10 @@
   }
 
   .bodyCellLabel {
-    background-color: var(--background-accent-pink-light, #fbdae8);
+    background-color: var(--background-accent-pink-light);
   }
 
   .bodyCellFeature {
-    background-color: var(--background-info-light, #d5efff);
+    background-color: var(--background-info-light);
   }
 }
