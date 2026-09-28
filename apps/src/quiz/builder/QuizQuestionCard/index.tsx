@@ -55,6 +55,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   const [draft, setDraft] = useState(() => toEditableFields(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
+  const isBusy = isSaving || isRemoving;
   // A pending question (see isPendingQuestionId) doesn't exist on the
   // server yet, so it counts as dirty even untouched - otherwise Save
   // would start out disabled with nothing to enable it.
@@ -146,7 +147,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                   <QuestionTab
                     draft={draft}
                     onChange={setDraft}
-                    disabled={isSaving}
+                    disabled={isBusy}
                   />
                 ),
               },
@@ -157,7 +158,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                   <AnswersTab
                     draft={draft}
                     onChange={setDraft}
-                    disabled={isSaving}
+                    disabled={isBusy}
                   />
                 ),
               },
@@ -185,7 +186,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
               color="error"
               size="extraSmall"
               type="button"
-              disabled={isRemoving}
+              disabled={isBusy}
               loading={isRemoving}
               onClick={handleRemove}
             >
@@ -197,7 +198,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                 color="secondary"
                 size="extraSmall"
                 type="button"
-                disabled={isSaving || !isDirty}
+                disabled={isBusy || !isDirty}
                 onClick={handleDiscard}
               >
                 Discard changes
@@ -207,7 +208,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                 color="primary"
                 size="extraSmall"
                 type="button"
-                disabled={!isDirty}
+                disabled={isBusy || !isDirty}
                 loading={isSaving}
                 onClick={handleSave}
                 startIcon={

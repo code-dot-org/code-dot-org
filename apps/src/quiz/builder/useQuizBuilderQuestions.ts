@@ -22,7 +22,7 @@ const NEW_QUESTION_DEFAULTS = {
 
 // A hook for managing a quiz's questions.
 // Provides the current state of the quiz's questions, including loading and error states.
-// Also returns functions to create, update, and remove a quiz's questions.
+// Also returns functions to add new questions, and save and remove existing ones.
 export default function useQuizBuilderQuestions(
   levelId: number
 ): QuizBuilderQuestionsState {
