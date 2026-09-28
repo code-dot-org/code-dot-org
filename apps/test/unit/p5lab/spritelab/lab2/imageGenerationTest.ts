@@ -155,6 +155,12 @@ describe('generateImage', () => {
     expect(object).toContain('plain solid background');
   });
 
+  it('asks every kind of image for no writing', () => {
+    for (const imageType of ['sprite', 'block', 'background'] as const) {
+      expect(fullPromptFor('a thing', {imageType})).toContain('No writing');
+    }
+  });
+
   it('asks backgrounds to fill the whole image (no painted frame)', async () => {
     await generateImage('a beach', OPTIONS);
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;

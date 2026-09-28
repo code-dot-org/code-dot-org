@@ -20,6 +20,7 @@ import {bytesToDataURI} from './encoding';
 import {
   GeneratedImageResult,
   logicalGridFor,
+  NO_WRITING_CLAUSE,
   pixelBlockFor,
   RawImage,
   rawImageToBlob,
@@ -170,7 +171,10 @@ export function basePrompt(
   return (
     `${prompt}. Show the whole character standing, facing right: its face ` +
     `and body point toward the right side of the image. ${STANCE[bodyPlan]} ` +
-    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(key)}`
+    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(
+      key
+    )} ` +
+    NO_WRITING_CLAUSE
   );
 }
 
@@ -198,7 +202,11 @@ export function posePrompt(
     'provided image: the same design, colors, proportions, outfit and art ' +
     'style, facing right, and the character at exactly the same size and ' +
     'position in the frame. ' +
-    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style, pixelBlock)}`
+    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(
+      style,
+      pixelBlock
+    )} ` +
+    NO_WRITING_CLAUSE
   );
 }
 

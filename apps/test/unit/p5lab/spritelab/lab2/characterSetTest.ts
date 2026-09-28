@@ -20,6 +20,7 @@ describe('SpriteLab2 characterSet', () => {
     expect(text).toContain('facing right');
     expect(text).toContain(key.name);
     expect(text).toContain(key.hex);
+    expect(text).toContain('No writing');
   });
 
   it('a pose prompt holds the character to its size and position', () => {
@@ -34,6 +35,7 @@ describe('SpriteLab2 characterSet', () => {
     expect(text).toContain('halfway through a walking stride');
     expect(text).toContain('same size and position');
     expect(text).toContain(key.name);
+    expect(text).toContain('No writing');
   });
 
   it('passes a chosen pixel block into both frame prompts', () => {

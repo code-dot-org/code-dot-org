@@ -68,6 +68,11 @@ const SPRITE_PROMPT_CLAUSE =
 // so a story's right-lane mirror turns it toward the others.
 const CHARACTER_FACING_CLAUSE = 'The character faces to the right.';
 
+// On every prompt the lab sends, the character set's own included: the
+// model puts captions on backgrounds and labels on things.
+export const NO_WRITING_CLAUSE =
+  'No writing anywhere in the image: no letters, words, numbers, signs or logos.';
+
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
 // decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
@@ -287,7 +292,7 @@ export function fullPromptFor(
   } else if (imageType === 'background') {
     fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
   }
-  return fullPrompt;
+  return `${fullPrompt} ${NO_WRITING_CLAUSE}`;
 }
 
 /**
