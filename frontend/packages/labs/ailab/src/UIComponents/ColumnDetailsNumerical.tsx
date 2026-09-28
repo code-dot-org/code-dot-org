@@ -4,7 +4,6 @@ import I18n from '../i18n';
 import {getNumericalColumnDetails} from '../selectors/currentColumnSelectors';
 
 import shared from '../shared.module.scss';
-import styles from './columnDetailsNumerical.module.scss';
 
 const ColumnDetailsNumerical = () => {
   const columnDetails = useAppSelector(getNumericalColumnDetails);
@@ -20,7 +19,7 @@ const ColumnDetailsNumerical = () => {
         </p>
       )}
       {containsOnlyNumbers && extrema && (
-        <div className={styles.extrema}>
+        <div className={shared.contents}>
           {I18n.t('columnDetailsMinimumValue')} {extrema.min}
           <br />
           {I18n.t('columnDetailsMaximumValue')} {extrema.max}

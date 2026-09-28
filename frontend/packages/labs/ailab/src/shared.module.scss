@@ -56,6 +56,12 @@
   margin-bottom: 11px;
 }
 
+.contents {
+  border-radius: 0;
+  background-color: var(--ailab-background);
+  padding: 15px;
+}
+
 .tableParent {
   overflow-y: auto;
   overflow-wrap: break-word;
@@ -98,6 +104,12 @@
   width: 30%;
   overflow: hidden;
   padding-top: 40px;
+}
+
+.sceneBot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 .bot {

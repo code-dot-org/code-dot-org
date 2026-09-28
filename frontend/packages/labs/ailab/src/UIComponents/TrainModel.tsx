@@ -151,7 +151,7 @@ const TrainModel = () => {
         )}
       </div>
 
-      <div className={styles.botContainer}>
+      <div className={`${shared.sceneBot} ${styles.botContainer}`}>
         <div className={`ailab-image-hover ${shared.bot}`}>
           <img
             src={imageUrl('ai-bot/ai-bot-head.png')}

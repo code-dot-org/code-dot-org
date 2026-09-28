@@ -116,7 +116,7 @@ const Predict = () => {
         </button>
       </div>
       {predictedLabel && (
-        <div className={styles.botResult}>
+        <div className={`${shared.contents} ${styles.botResult}`}>
           <div className={styles.botColumn}>
             <img
               className={`ailab-image-hover ${styles.bot}`}
