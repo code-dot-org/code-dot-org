@@ -22,7 +22,11 @@ interface UseQuizAttemptState {
     quizQuestionId: number,
     responseData: Record<string, unknown>
   ) => Promise<void>;
-  finishAttempt: () => Promise<QuizAttemptData>;
+  // responsesByQuestionId is the student's current answer for every
+  // question they've answered.
+  finishAttempt: (
+    responsesByQuestionId: Record<number, Record<string, unknown>>
+  ) => Promise<QuizAttemptData>;
 }
 
 export default function useQuizAttempt({
@@ -125,32 +129,35 @@ export default function useQuizAttempt({
     [attempt]
   );
 
-  const finishAttempt = useCallback(async () => {
-    if (!attempt) {
-      throw new Error('No attempt to finalize.');
-    }
-    const requestKey = `${levelId}:${unitId}`;
-    setError(null);
-    try {
-      const response = await HttpClient.put(
-        `/quiz_attempts/${attempt.id}`,
-        JSON.stringify({}),
-        true,
-        {'Content-Type': 'application/json'}
-      );
-      const data: QuizAttemptData = await response.json();
-      // Same race as beginAttempt - see currentAttemptKeyRef above.
-      if (currentAttemptKeyRef.current === requestKey) {
-        setAttempt(data);
+  const finishAttempt = useCallback(
+    async (responsesByQuestionId: Record<number, Record<string, unknown>>) => {
+      if (!attempt) {
+        throw new Error('No attempt to finalize.');
       }
-      return data;
-    } catch (putError) {
-      if (currentAttemptKeyRef.current === requestKey) {
-        setError(await networkErrorMessage(putError));
+      const requestKey = `${levelId}:${unitId}`;
+      setError(null);
+      try {
+        const response = await HttpClient.put(
+          `/quiz_attempts/${attempt.id}`,
+          JSON.stringify({responses: responsesByQuestionId}),
+          true,
+          {'Content-Type': 'application/json'}
+        );
+        const data: QuizAttemptData = await response.json();
+        // Same race as beginAttempt - see currentAttemptKeyRef above.
+        if (currentAttemptKeyRef.current === requestKey) {
+          setAttempt(data);
+        }
+        return data;
+      } catch (putError) {
+        if (currentAttemptKeyRef.current === requestKey) {
+          setError(await networkErrorMessage(putError));
+        }
+        throw putError;
       }
-      throw putError;
-    }
-  }, [attempt, levelId, unitId]);
+    },
+    [attempt, levelId, unitId]
+  );
 
   return {
     attempt,
