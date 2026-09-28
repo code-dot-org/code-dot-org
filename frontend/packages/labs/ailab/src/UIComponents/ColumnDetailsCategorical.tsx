@@ -1,11 +1,13 @@
 /* React component to handle showing details of categorical columns. */
 import {Bar} from 'react-chartjs-2';
 
-import {colors, styles} from '../constants';
+import {colors} from '../constants';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getCategoricalColumnDetails} from '../selectors/currentColumnSelectors';
+
+import shared from '../shared.module.scss';
 
 const chartOptions = {
   scales: {
@@ -49,8 +51,8 @@ const ColumnDetailsCategorical = () => {
 
   return (
     <div>
-      <div style={styles.bold}>{I18n.t('columnDetailsInformation')}</div>
-      <div style={styles.barChart}>
+      <div className={shared.bold}>{I18n.t('columnDetailsInformation')}</div>
+      <div style={{marginTop: 10, marginBottom: 10}}>
         {labels.length <= maxLabelsInHistogram && (
           <Bar data={barData} width={100} height={150} options={chartOptions} />
         )}

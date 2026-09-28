@@ -87,11 +87,6 @@ export const styles = {
     textAlign: 'right',
   },
 
-  footerText: {
-    fontSize: 13,
-    marginTop: 12,
-  },
-
   panel: {
     padding: 10,
     backgroundColor: 'white',
@@ -125,39 +120,6 @@ export const styles = {
     boxShadow: '-5px 5px 10px rgba(0, 0, 0, 0.5)',
   },
 
-  scrollableContents: {
-    overflow: 'hidden',
-  },
-
-  scrollableContentsTinted: {
-    overflow: 'hidden',
-    borderRadius: 0,
-    backgroundColor: colors.background,
-    padding: 10,
-  },
-
-  scrollingContents: {
-    overflow: 'auto',
-    height: '100%',
-    boxSizing: 'border-box',
-    overflowWrap: 'break-word',
-  },
-
-  contents: {
-    borderRadius: 0,
-    backgroundColor: colors.background,
-    padding: 15,
-  },
-
-  contentsCsvButton: {
-    borderRadius: 0,
-    backgroundColor: colors.background,
-    padding: 15,
-    marginTop: 20,
-    paddingTop: 25,
-    paddingBottom: 25,
-  },
-
   contentsPredictBot: {
     borderRadius: 0,
     backgroundColor: colors.background,
@@ -167,74 +129,6 @@ export const styles = {
 
   rightPanel: {
     fontSize: 14,
-  },
-
-  selectDatasetItem: {
-    width: 'calc(33.33% - 4px)',
-    padding: 10,
-    float: 'left',
-    boxSizing: 'border-box',
-    border: 'solid 4px #f2f2f2',
-    borderRadius: 0,
-    cursor: 'pointer',
-    backgroundColor: 'white',
-    margin: 2,
-    position: 'relative',
-  },
-
-  selectDatasetItemHighlighted: {
-    border: 'solid 4px rgba(85, 217, 255, 0.6)',
-  },
-
-  selectDatasetItemSelected: {
-    border: 'solid 4px rgb(85, 217, 255)',
-  },
-
-  selectDatasetItemContainer: {
-    width: '100%',
-    // This assumes that all dataset images have a 1.5 aspect ratio, e.g. 720x480.
-    paddingTop: 'calc(100% / 1.5)',
-  },
-
-  selectDatasetImage: {
-    display: 'block',
-    width: 'calc(100% - 20px)',
-    position: 'absolute',
-    top: 10,
-  },
-
-  selectDatasetText: {
-    fontSize: 14,
-    marginTop: 5,
-    marginRight: 20,
-    position: 'absolute',
-    bottom: 23,
-    left: 20,
-    color: 'white',
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    padding: '3px 5px',
-    borderRadius: 3,
-  },
-
-  uploadCsvButton: {
-    fontSize: 14,
-    margin: 0,
-    border: 'none',
-    cursor: 'pointer',
-    borderRadius: 5,
-    backgroundColor: colors.teal,
-    color: 'white',
-    padding: '10px 20px',
-    display: 'inline-block',
-  },
-
-  csvInput: {
-    display: 'none',
-    cursor: 'pointer',
-  },
-
-  invalidDataMessageContainer: {
-    margin: 20,
   },
 
   displayTable: {
@@ -265,137 +159,10 @@ export const styles = {
     borderColor: 'white',
   },
 
-  dataDisplayHeader: {
-    paddingLeft: 20,
-    textAlign: 'right',
-    position: 'sticky',
-    top: 0,
-    backgroundColor: 'white',
-    color: '#4d575f',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: 'white',
-    padding: 7,
-    fontSize: 14,
-  },
-
-  dataDisplayHeaderClickable: {
-    cursor: 'pointer',
-  },
-
-  dataDisplayHeaderLabel: {
-    backgroundColor: labelColor,
-    color: 'white',
-  },
-  dataDisplayHeaderFeature: {
-    backgroundColor: featureColor,
-    color: 'white',
-  },
-
-  dataDisplayCellHidden: {
-    opacity: 0,
-  },
-
-  dataDisplayCell: {
-    padding: 3,
-    paddingLeft: 20,
-    textAlign: 'right',
-    fontSize: 12,
-    color: '#4d575f',
-    backgroundColor: colors.background,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: 'white',
-  },
-  dataDisplayCellHighlighted: {
-    backgroundColor: '#d6f2fa',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: '#d6f2fa',
-    cursor: 'pointer',
-  },
-  dataDisplayCellHighlightedLabel: {
-    backgroundColor: '#f1caca',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: '#f1caca',
-    cursor: 'pointer',
-  },
-  dataDisplayCellSelected: {
-    backgroundColor: '#94e3fa',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: '#94e3fa',
-  },
-  dataDisplayCellSelectedLabel: {
-    backgroundColor: '#f39f9f',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: '#f39f9f',
-  },
-
   tableCell: {
     paddingLeft: 20,
     textAlign: 'right',
     fontSize: 12,
-  },
-
-  barChart: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-
-  scatterPlot: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-
-  crossTabTable: {
-    marginTop: 10,
-    marginBottom: 20,
-  },
-
-  crosssTabHeader: {
-    backgroundColor: 'initial',
-    color: 'initial',
-    border: 'initial',
-    fontSize: 14,
-    padding: 'initial',
-  },
-
-  crossTabLeftColumn: {
-    fontSize: 14,
-    writingMode: 'vertical-rl',
-    whiteSpace: 'nowrap',
-    transform: 'scale(-1)',
-  },
-
-  crossTabTableCell: {
-    paddingLeft: 20,
-    textAlign: 'right',
-    fontSize: 12,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: 'white',
-  },
-
-  crossTabCell0: {
-    backgroundColor: 'rgba(89, 202, 211, 0)',
-  },
-  crossTabCell1: {
-    backgroundColor: 'rgba(89, 202, 211, 0.2)',
-  },
-  crossTabCell2: {
-    backgroundColor: 'rgba(89, 202, 211, 0.4)',
-  },
-  crossTabCell3: {
-    backgroundColor: 'rgba(89, 202, 211, 0.6)',
-  },
-  crossTabCell4: {
-    backgroundColor: 'rgba(89, 202, 211, 0.8)',
-  },
-  crossTabCell5: {
-    backgroundColor: 'rgba(89, 202, 211, 1)',
   },
 
   resultsPanelContainer: {
@@ -514,81 +281,6 @@ export const styles = {
     position: 'absolute',
     top: 10,
     left: 10,
-  },
-
-  statementSmall: {
-    fontSize: 14,
-    paddingBottom: 6,
-  },
-
-  statementLabel: {
-    backgroundColor: labelColor,
-    color: 'white',
-    paddingLeft: 4,
-    paddingRight: 4,
-    paddingTop: 1,
-    paddingBottom: 1,
-    display: 'inline-block',
-    position: 'relative',
-    lineHeight: 1.3,
-  },
-
-  statementFeature: {
-    backgroundColor: featureColor,
-    color: 'white',
-    paddingLeft: 4,
-    paddingRight: 4,
-    paddingTop: 1,
-    paddingBottom: 1,
-    display: 'inline-block',
-    position: 'relative',
-    lineHeight: 1.3,
-  },
-
-  statementDeleteIcon: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    transform: 'translateX(50%) translateY(-50%)',
-    color: 'black',
-    cursor: 'pointer',
-  },
-
-  statementDeleteCircle: {
-    backgroundColor: 'white',
-    borderRadius: '50%',
-    height: 20,
-    width: 20,
-    top: 0,
-    left: 0,
-  },
-
-  statementDeleteX: {
-    fontSize: 20,
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    lineHeight: '20px',
-  },
-
-  selectLabelButton: {
-    backgroundColor: labelColor,
-    color: 'white',
-    padding: 10,
-    cursor: 'pointer',
-    border: 'none',
-    fontSize: 14,
-    marginTop: 10,
-  },
-
-  selectFeaturesButton: {
-    backgroundColor: featureColor,
-    color: 'white',
-    padding: 10,
-    cursor: 'pointer',
-    border: 'none',
-    fontSize: 14,
-    marginTop: 10,
   },
 
   trainModelContainer: {

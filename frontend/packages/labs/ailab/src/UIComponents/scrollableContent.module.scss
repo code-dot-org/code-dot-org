@@ -1,0 +1,17 @@
+.plain {
+  overflow: hidden;
+}
+
+.tinted {
+  overflow: hidden;
+  border-radius: 0;
+  background-color: var(--ailab-background);
+  padding: 10px;
+}
+
+.scrolling {
+  overflow: auto;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}

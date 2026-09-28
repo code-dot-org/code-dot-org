@@ -1,0 +1,75 @@
+.item {
+  width: calc(33.33% - 4px);
+  padding: 10px;
+  float: left;
+  box-sizing: border-box;
+  border: solid 4px #f2f2f2;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: white;
+  margin: 2px;
+  position: relative;
+}
+
+.highlighted {
+  border: solid 4px rgb(85 217 255 / 0.6);
+}
+
+.selected {
+  border: solid 4px rgb(85 217 255);
+}
+
+.rowStart {
+  clear: both;
+}
+
+.imageFrame {
+  width: 100%;
+  // This assumes that all dataset images have a 1.5 aspect ratio, e.g. 720x480.
+  padding-top: calc(100% / 1.5);
+}
+
+.image {
+  display: block;
+  width: calc(100% - 20px);
+  position: absolute;
+  top: 10px;
+}
+
+.name {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-right: 20px;
+  position: absolute;
+  bottom: 23px;
+  left: 20px;
+  color: white;
+  background-color: rgb(0 0 0 / 0.3);
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+
+.upload {
+  border-radius: 0;
+  background-color: var(--ailab-background);
+  padding: 15px;
+  margin-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.uploadButton {
+  font-size: 14px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--ailab-teal);
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.invalidData {
+  margin: 20px;
+}

@@ -1,0 +1,64 @@
+.header {
+  text-align: right;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  color: #4d575f;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.labelHeader {
+  background-color: var(--ailab-label);
+  color: white;
+}
+
+.featureHeader {
+  background-color: var(--ailab-feature);
+  color: white;
+}
+
+.cell {
+  padding: 3px;
+  padding-left: 20px;
+  text-align: right;
+  font-size: 12px;
+  color: #4d575f;
+  background-color: var(--ailab-background);
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.highlighted {
+  background-color: #d6f2fa;
+  border-color: #d6f2fa;
+  cursor: pointer;
+}
+
+.highlightedLabel {
+  background-color: #f1caca;
+  border-color: #f1caca;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #94e3fa;
+  border-color: #94e3fa;
+}
+
+.selectedLabel {
+  background-color: #f39f9f;
+  border-color: #f39f9f;
+}

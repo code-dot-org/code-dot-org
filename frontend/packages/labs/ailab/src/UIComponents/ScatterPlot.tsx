@@ -1,9 +1,11 @@
 import {Scatter} from 'react-chartjs-2';
 
-import {styles, colors} from '../constants';
+import {colors} from '../constants';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getScatterPlotData} from '../selectors/visualizationSelectors';
+
+import shared from '../shared.module.scss';
 
 const scatterDataBase = {
   labels: ['Scatter'],
@@ -77,8 +79,8 @@ const ScatterPlot = () => {
   return (
     scatterPlotData && (
       <div id="scatter-plot">
-        <div style={styles.bold}>{I18n.t('scatterPlotLabel')}</div>
-        <div style={styles.scatterPlot}>
+        <div className={shared.bold}>{I18n.t('scatterPlotLabel')}</div>
+        <div style={{marginTop: 10, marginBottom: 10}}>
           <Scatter data={scatterDataCombined} options={chartOptionsCombined} />
         </div>
       </div>

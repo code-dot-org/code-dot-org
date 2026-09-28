@@ -35,6 +35,8 @@ import shared from './shared.module.scss';
 const colorVariables = {
   '--ailab-feature': colors.feature,
   '--ailab-label': colors.label,
+  '--ailab-background': colors.background,
+  '--ailab-teal': colors.teal,
 } as CSSProperties;
 
 const navButtonClass = (enabled?: boolean) =>

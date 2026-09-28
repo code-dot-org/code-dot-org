@@ -5,7 +5,6 @@
 */
 import {useCallback} from 'react';
 
-import {styles} from '../constants';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
@@ -13,16 +12,14 @@ import {getCrossTabData} from '../selectors/visualizationSelectors';
 
 import ScrollableContent from './ScrollableContent';
 
+import shared from '../shared.module.scss';
+import styles from './crossTab.module.scss';
+
 const CrossTab = () => {
   const crossTabData = useAppSelector(getCrossTabData);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const getCellStyle = useCallback((percent: number) => {
-    return {
-      ...(styles as Record<string, React.CSSProperties>)[
-        'crossTabCell' + Math.round(percent / 20)
-      ],
-      ...styles.crossTabTableCell,
-    };
+  const getCellClassName = useCallback((percent: number) => {
+    return `${styles.cell} ${styles[`heat${Math.round(percent / 20)}`]}`;
   }, []);
 
   // There are a few criteria that affect how big the table looks.  We'll not
@@ -44,7 +41,9 @@ const CrossTab = () => {
     <div id="cross-tab">
       {crossTabData && !showTable && (
         <div>
-          <div style={styles.bold}>{I18n.t('crossTabRelationshipHeader')}</div>
+          <div className={shared.bold}>
+            {I18n.t('crossTabRelationshipHeader')}
+          </div>
 
           <div>{I18n.t('crossTabTooMuchData')}</div>
           <br />
@@ -53,21 +52,23 @@ const CrossTab = () => {
 
       {showTable && (
         <div>
-          <div style={styles.bold}>{I18n.t('crossTabRelationshipHeader')}</div>
+          <div className={shared.bold}>
+            {I18n.t('crossTabRelationshipHeader')}
+          </div>
           <ScrollableContent>
-            <table style={styles.crossTabTable}>
+            <table className={styles.table}>
               <thead>
                 <tr>
-                  <th style={styles.crosssTabHeader} />
+                  <th className={styles.header} />
                   <th
-                    style={styles.crosssTabHeader}
+                    className={styles.header}
                     colSpan={crossTabData.featureNames.length}
                   >
                     &nbsp;
                   </th>
                   <th
                     colSpan={crossTabData.uniqueLabelValues.length}
-                    style={{...styles.crosssTabHeader, ...styles.bold}}
+                    className={`${styles.header} ${shared.bold}`}
                   >
                     {crossTabData.labelName}
                   </th>
@@ -76,12 +77,7 @@ const CrossTab = () => {
               <tbody>
                 <tr>
                   <td rowSpan={crossTabData.results.length + 1}>
-                    <div
-                      style={{
-                        ...styles.bold,
-                        ...styles.crossTabLeftColumn,
-                      }}
-                    >
+                    <div className={`${shared.bold} ${styles.featureName}`}>
                       {crossTabData.featureNames[0]}
                     </div>
                   </td>
@@ -89,7 +85,7 @@ const CrossTab = () => {
                   {crossTabData.uniqueLabelValues.map(
                     (uniqueLabelValue, index) => {
                       return (
-                        <td key={index} style={styles.tableCell}>
+                        <td key={index} className={shared.tableCell}>
                           {getLocalizedValue(uniqueLabelValue, datasetId)}
                         </td>
                       );
@@ -102,7 +98,7 @@ const CrossTab = () => {
                       {result.featureValues.map(
                         (featureValue, featureIndex) => {
                           return (
-                            <td key={featureIndex} style={styles.tableCell}>
+                            <td key={featureIndex} className={shared.tableCell}>
                               {getLocalizedValue(featureValue, datasetId)}
                             </td>
                           );
@@ -113,7 +109,7 @@ const CrossTab = () => {
                           return (
                             <td
                               key={labelIndex}
-                              style={getCellStyle(
+                              className={getCellClassName(
                                 result.labelPercents?.[uniqueLabelValue] ?? 0,
                               )}
                             >
