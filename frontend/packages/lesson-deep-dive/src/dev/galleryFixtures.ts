@@ -1,23 +1,11 @@
 // Shapes follow Lesson#summarize_for_tutor_gallery and
 // ChallengeResponse#summarize; README.md says how to regenerate them.
 
-export interface GalleryUnit {
-  id: number;
-  name: string;
-  position: number;
-  link: string;
-}
-
-export interface GallerySection {
-  id: number;
-  name: string;
-}
-
-export interface TutorGalleryData {
-  currentUnitId: number;
-  units: GalleryUnit[];
-  sections: GallerySection[];
-}
+import type {
+  EvaluationResult,
+  RubricEntry,
+  TutorGalleryData,
+} from '../gallery/types';
 
 export const TUTOR_GALLERY_DATA: TutorGalleryData = {
   currentUnitId: 1,
@@ -51,18 +39,6 @@ export interface GalleryChallengeResponse {
   is_final: boolean;
   created_at: string;
   assets: GalleryAsset[];
-}
-
-export interface RubricEntry {
-  level: number;
-  description: string;
-}
-
-export interface EvaluationResult {
-  level: number;
-  reasoning: string;
-  evidence: string;
-  student_feedback: string;
 }
 
 export interface Challenge {

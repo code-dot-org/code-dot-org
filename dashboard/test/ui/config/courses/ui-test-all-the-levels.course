@@ -1,0 +1,23 @@
+{
+  "name": "ui-test-all-the-levels",
+  "script_names": [
+    "ui-test-all-the-levels"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-all-the-levels",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

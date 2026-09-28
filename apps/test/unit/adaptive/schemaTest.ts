@@ -6,6 +6,7 @@ import {
   parsePathway,
   parsePathwaySource,
   pathwaySchema,
+  pathwaySourceSchema,
   pathwayStandards,
   referenceProblems,
   referencedSkillIds,
@@ -15,20 +16,22 @@ const resolvedStandard = {
   framework: 'csta2026',
   shortcode: 'MS-ALG-PS-05',
   frameworkName: 'CSTA',
-  description: 'Use an AI tool.',
+  description: 'Do the thing.',
 };
 
 // The served pathway's input type gives tests typed access. Corruptions the
 // type forbids go through Object.assign.
 type Raw = z.input<typeof pathwaySchema>;
+type RawSource = z.input<typeof pathwaySourceSchema>;
 type Step = Raw['checkpoints'][number]['steps'][number];
 
-// A one-file Web Lab MultiFileSource.
-const startSources = (contents: string) => ({
-  folders: {},
-  files: {
-    index: {id: 'index', name: 'index.html', contents, folderId: ''},
-  },
+// What the server inlines for a level it found.
+const levelProperties = (id: number, name: string, template?: string) => ({
+  id,
+  name,
+  appName: 'weblab2' as const,
+  longInstructions: `Instructions for ${name}.`,
+  projectTemplateLevelName: template,
 });
 
 const panels = (id: string): Step => ({
@@ -43,7 +46,11 @@ const served = (): Raw => ({
   id: 'sample',
   title: 'Sample',
   objective: 'Learn things.',
-  project: {lab: {type: 'weblab2'}, description: 'A site.'},
+  project: {
+    templateLevel: 'web-template',
+    description: 'A site.',
+    levelProperties: levelProperties(1, 'web-template'),
+  },
   skills: {
     prompting: {
       id: 'prompting',
@@ -88,17 +95,22 @@ const served = (): Raw => ({
         {
           id: 'build',
           title: 'Build',
-          kind: 'lab',
-          lab: {type: 'weblab2'},
-          instructions: 'Build it.',
+          kind: 'level',
+          level: 'web-project-basics',
+          project: true,
+          levelProperties: levelProperties(
+            2,
+            'web-project-basics',
+            'web-template'
+          ),
         },
         {
           id: 'practice',
           title: 'Practice',
-          kind: 'lab',
-          sourceMode: 'practice',
-          lab: {type: 'weblab2', startSources: startSources('<p>hi</p>')},
+          kind: 'level',
+          level: 'web-sandbox-basics',
           instructions: 'Try it.',
+          levelProperties: levelProperties(3, 'web-sandbox-basics'),
         },
       ],
     },
@@ -113,6 +125,36 @@ const served = (): Raw => ({
   ],
 });
 
+function withoutLevelProperties<T extends {levelProperties?: unknown}>(
+  object: T
+): Omit<T, 'levelProperties'> {
+  const copy = {...object};
+  delete copy.levelProperties;
+  return copy;
+}
+
+// The authored file behind served(): no server-filled fields.
+const source = (): RawSource => {
+  const raw = served();
+  return {
+    ...raw,
+    project: withoutLevelProperties(raw.project),
+    skills: {
+      ...raw.skills,
+      prompting: {
+        ...raw.skills.prompting,
+        standards: [{framework: 'csta2026', shortcode: 'MS-ALG-PS-05'}],
+      },
+    },
+    checkpoints: raw.checkpoints.map(checkpoint => ({
+      ...checkpoint,
+      steps: checkpoint.steps.map(step =>
+        step.kind === 'level' ? withoutLevelProperties(step) : step
+      ),
+    })),
+  };
+};
+
 function problemsOf(raw: unknown): string[] {
   try {
     parsePathway(raw);
@@ -123,11 +165,41 @@ function problemsOf(raw: unknown): string[] {
   }
 }
 
+function sourceProblemsOf(raw: unknown): string[] {
+  try {
+    parsePathwaySource(raw);
+    return [];
+  } catch (e) {
+    if (e instanceof AdaptiveContentError) return e.problems;
+    throw e;
+  }
+}
+
 describe('parsePathway', () => {
-  it('accepts valid content and fills defaults', () => {
+  it('accepts valid content and keeps the inlined level properties', () => {
     const pathway = parsePathway(served());
     const build = pathway.checkpoints[1].steps[0];
-    expect(build.kind === 'lab' && build.sourceMode).toBe('project');
+    expect(build.kind === 'level' && build.levelProperties?.id).toBe(2);
+    expect(pathway.project.levelProperties?.appName).toBe('weblab2');
+  });
+
+  it('accepts a level step the server could not resolve', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    delete build.levelProperties;
+    const parsed = parsePathway(raw).checkpoints[1].steps[0];
+    expect(parsed.kind === 'level' && parsed.levelProperties).toBeUndefined();
+  });
+
+  it('rejects level properties without the keys every lab needs', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    Object.assign(build, {levelProperties: {name: 'x'}});
+    expect(problemsOf(raw)).toEqual([
+      expect.stringMatching(/^checkpoints\.1\.steps\.0\.levelProperties:/),
+    ]);
   });
 
   it('reports the path of a schema violation', () => {
@@ -170,23 +242,21 @@ describe('parsePathway', () => {
 });
 
 describe('parsePathwaySource', () => {
-  it('accepts an authored file with bare standard references', () => {
-    const raw = served();
-    const source = {
-      ...raw,
-      skills: {
-        ...raw.skills,
-        prompting: {
-          ...raw.skills.prompting,
-          standards: [{framework: 'csta2026', shortcode: 'MS-ALG-PS-05'}],
-        },
-      },
-    };
-    expect(() => parsePathwaySource(source)).not.toThrow();
+  it('accepts an authored file with bare standard and level references', () => {
+    expect(() => parsePathwaySource(source())).not.toThrow();
+  });
+
+  it('rejects server-filled fields in an authored file', () => {
+    expect(sourceProblemsOf(served())).toEqual([
+      expect.stringMatching(/^project:/),
+      expect.stringMatching(/^skills\.prompting\.standards\.0:/),
+      expect.stringMatching(/^checkpoints\.1\.steps\.0:/),
+      expect.stringMatching(/^checkpoints\.1\.steps\.1:/),
+    ]);
   });
 
   it('does not check references', () => {
-    const raw = served();
+    const raw = source();
     raw.skills.prompting.standards = undefined;
     raw.checkpoints[1].requires = ['nope'];
     expect(() => parsePathwaySource(raw)).not.toThrow();
@@ -256,16 +326,45 @@ describe('referenceProblems', () => {
     ]);
   });
 
-  it('flags a project-mode step whose lab differs from the project or has starter files', () => {
+  it('flags a project step whose level does not share the template', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
-    if (build.kind !== 'lab') throw new Error('fixture changed');
-    build.lab = {type: 'weblab2', startSources: startSources('')};
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    build.levelProperties = levelProperties(2, 'web-project-basics');
     expect(problemsOf(raw)).toEqual([
-      expect.stringMatching(
-        /^checkpoints\.basics\.steps\.build: project step cannot declare startSources/
-      ),
+      "checkpoints.basics.steps.build: marked project but level 'web-project-basics' does not use template 'web-template'",
     ]);
+  });
+
+  it('flags a sandbox step whose level shares the template', () => {
+    const raw = served();
+    const practice = raw.checkpoints[1].steps[1];
+    if (practice.kind !== 'level') throw new Error('fixture changed');
+    practice.levelProperties = levelProperties(
+      3,
+      'web-sandbox-basics',
+      'web-template'
+    );
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.practice: level 'web-sandbox-basics' uses the project template but the step is not marked project",
+    ]);
+  });
+
+  it('treats the template level itself as sharing the project', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    build.level = 'web-template';
+    build.levelProperties = levelProperties(1, 'web-template');
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('does not check the flag on a level the server could not resolve', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    delete build.levelProperties;
+    expect(problemsOf(raw)).toEqual([]);
   });
 });
 

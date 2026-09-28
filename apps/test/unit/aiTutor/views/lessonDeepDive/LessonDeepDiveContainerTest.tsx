@@ -15,7 +15,6 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   TimeSpentBox: () => <div>time-spent</div>,
   ValidatedLevelsBox: () => <div>validated-levels</div>,
   LessonSummaryCard: () => <div>lesson-summary</div>,
-  PreReviewBox: () => <div>pre-review</div>,
   PreSkillsCheck: () => <div>pre-skills-check</div>,
   TutorSummaryBox: () => <div>tutor-summary</div>,
 }));
@@ -168,7 +167,6 @@ describe('LessonDeepDiveContainer URL param routing', () => {
 
   it.each([
     ['reflection', 'reflection'],
-    ['pre-review', 'pre-review'],
     ['intervention', 'intervention'],
     ['pre-skills-check', 'pre-skills-check'],
     ['skills-check', 'skills-check'],

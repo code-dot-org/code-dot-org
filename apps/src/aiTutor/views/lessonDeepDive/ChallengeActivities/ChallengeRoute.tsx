@@ -1,11 +1,10 @@
+import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {Challenge, challengeValidator} from '../types';
 
 import ChallengeBox from './ChallengeBox';
 
@@ -66,31 +65,6 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
 
   return (
     <div className={styles.container} data-theme="Dark">
-      <div className={styles.topNav}>
-        <span className={styles.tutorWordmark}>Tutor+</span>
-        <button
-          type="button"
-          className={styles.arrowButton}
-          onClick={() => navigate('/intervention')}
-          aria-label="Back to practice"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M7 14l5-5 5 5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
       <div className={styles.box}>
         {loadFailed ? (
           <p>Couldn&apos;t load this challenge. Try refreshing.</p>

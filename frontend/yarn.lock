@@ -1716,10 +1716,13 @@ __metadata:
     react-redux: "npm:^8.1.3"
     redux: "npm:^4.0.5"
     reselect: "npm:^4.0.0"
+    sass: "catalog:"
+    stylelint: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "catalog:"
     vitest: "catalog:"
   peerDependencies:
     react: ^18.3.1 || ^19.0.0
