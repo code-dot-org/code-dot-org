@@ -1525,12 +1525,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     loadCode(source);
-    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    // The level's added blocks join the pinned scene once it is on screen, so
-    // they can sit below what the workspace has rendered.
-    if (activeScene.id === pinnedSceneId && levelProperties.addBlocks) {
-      addMissingBlocks(workspace, levelProperties.addBlocks);
-    }
     runLocalScene(activeScene);
   }, [
     animationsSeeded,
@@ -1542,8 +1536,42 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
-    pinnedSceneId,
+  ]);
+
+  // The level's added blocks join the pinned scene once it is on screen,
+  // after the load above (effects run in order), so they sit below what the
+  // workspace has rendered. Per level, not per load: a level reached in
+  // page shares the scene's code with the last one, and loads nothing.
+  const addedBlocksForRef = useRef('');
+  useEffect(() => {
+    if (
+      !animationsSeeded ||
+      isToolboxMode ||
+      !levelProperties.addBlocks ||
+      activeScene.id !== pinnedSceneId
+    ) {
+      return;
+    }
+    const key = [
+      levelProperties.id,
+      activeScene.id,
+      sourcesReinitializedCount,
+      workspaceVersion,
+    ].join(':');
+    if (addedBlocksForRef.current === key) {
+      return;
+    }
+    addedBlocksForRef.current = key;
+    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
+    addMissingBlocks(workspace, levelProperties.addBlocks);
+  }, [
+    animationsSeeded,
+    levelProperties.id,
     levelProperties.addBlocks,
+    activeScene.id,
+    pinnedSceneId,
+    sourcesReinitializedCount,
+    workspaceVersion,
   ]);
 
   const sceneEditing = useSceneEditing({
