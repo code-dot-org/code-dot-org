@@ -442,3 +442,73 @@ the difference is the broken-image alt text, `"Dialog"` against `''`. With a
 square image routed in, the legacy image stretches to 260×138 and the MUI one
 letterboxes in the same box. At 420px wide the legacy panel stays 630px and
 starts at x = −105; the MUI panel is 420px at x = 0.
+
+## Outcome
+
+Consumers: all 49 moved, none left on the legacy names. That is 48 `/apps`
+files (42 sources, 6 tests) and `Modal.tsx`. After the sweep no file in
+`apps/` or `frontend/` imports `Dialog`, `CustomDialog`, the default export,
+`DialogProps` or `CustomDialogProps` from the entry point, and no file in the
+package imports `@/dialog/Dialog` or `@/dialog/CustomDialog`. The legacy
+sources and exports still ship, `@deprecated`, until the later step deletes
+them. `src/dialog/README.md` keeps its legacy section until then, because
+those names still resolve.
+
+The chunks ran in a different order from the table above. Modal went first,
+on its own. The apps files were then split into two chunks by path order,
+not by the scopes in the table:
+
+| PR  | Scope                                                                                                   | Files |
+| --- | ------------------------------------------------------------------------------------------------------- | ----- |
+| 1   | `Modal.tsx`, `Modal.test.tsx`, `modal.module.scss`, the e2e `legacy-blockly-lab.ts` page object         | 4     |
+| 2   | `code-studio/`, `craft/`, `lab2/`, `levelbuilder/`, `maker/`, `p5lab/`, `pixelEditor/`, and their tests | 25    |
+| 3   | `pythonlab/`, `scrapbook/`, `storage/`, `templates/`, and their tests                                   | 23    |
+
+Codemod: it rewrote 49 files, the 48 `apps/` files and `Modal.tsx`.
+`AddSectionDialogTest`'s `jest.mock` factory gained its `MuiDialog` key from
+transform 5. Twenty-four test files were swept with their sources but
+import nothing from the entry point, so the codemod left them alone and they
+needed no edit. A dry run over all 75 swept script files after the
+sweep reports 75 unmodified and 0 to rewrite, so the tree is at the
+codemod's fixed point.
+
+Hand residue, as predicted plus two items:
+
+- `find('Dialog')` in `AllVocabulariesEditorTest` and `VocabulariesEditorTest`
+  became `find(Dialog)`, the component reference, which the codemod had
+  already renamed to the wrapper. It is not `find('MuiDialog')` as the plan
+  said. The reference survives any display-name change.
+- ConfirmRemoveStudentDialog lost its icon `style: {display: 'flex'}`
+  workaround. GenericDialog's `> i {display: flex}` stays. It is redundant
+  but harmless.
+- Not predicted: `modal.module.scss` gains `:where(.modal) {max-height:
+100%}`. The MUI container centers in a row flex, and a tall `Modal` no
+  longer shrank to the viewport the way the legacy column flex made it.
+  `:where` keeps any consumer `max-height` winning.
+- Not predicted: the e2e page object `legacy-blockly-lab.ts` located the Show
+  Code overlay by `[role="presentation"]`. The MUI container carries that
+  role too, so the locator now matches `.MuiDialog-root`, the element that
+  carries the z-index.
+- `Modal.test.tsx` gained the shared-global tests for the Modal chunk:
+  in-place render, nothing aria-hidden but the backdrop, attributes on the
+  panel, Escape, focus on mount and restore on unmount.
+- No snapshot needed updating. No consumer SCSS needed a specificity fix.
+
+Verify: green. Jest over the 30 listed `apps/` test files passes, 30 suites
+and 331 tests. Vitest over `src/modal` and `src/dialog` passes, 6 files and
+85 tests.
+
+Parity, Storybook: the gate captured the thirteen twins in Light and Dark,
+LTR and RTL. All 52 captures came out at 0 mismatched pixels, against a
+tolerance of 0.005. The measurements recorded under Deviations still hold.
+
+Parity, apps and Modal stories: this run recorded no result for the four
+apps samples or the nine `designsystem-modal--*` stories. Treat them as
+unverified. They must be checked on the local studio before the stacked
+PRs merge, and the Modal PR (sample 4 and the Modal stories) comes first,
+because its blast radius is the widest.
+
+Docs: `MIGRATION_STATUS.md` marks `dialog` as Migrated. The skill lists
+Dialog under "Use MUI" and gives the wrapper's import. `apps/.eslintrc.js`
+bans the five legacy names at `@code-dot-org/component-library/dialog`
+through `importNames`, because the `Mui` names ship at the same path.
