@@ -1,5 +1,11 @@
 import * as BlocklyCore from 'blockly/core';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import {AnyAction} from 'redux';
 
 import {
@@ -38,6 +44,10 @@ export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 const MEDIUM_BUTTON_PX = 40;
 const BAR_GAP = 12;
 export const BAR_ROOM = MEDIUM_BUTTON_PX + BAR_GAP;
+// The box's slide between its two placements, and the fade of a box or
+// bar that appears in place.
+const SLIDE_MS = 450;
+const FADE_MS = 180;
 
 interface Size {
   w: number;
@@ -318,9 +328,20 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // The bar rides along under the box, unscaled, at the box's width.
   const barTransform = `translate(${x}px, ${y + boxSide + BAR_GAP}px)`;
   const visible = measured && mode !== 'hidden';
-  const barTransition = animate
-    ? 'transform 0.45s ease, width 0.45s ease, opacity 0.18s ease-in'
-    : 'opacity 0.18s ease-in';
+  // The bar does not ride the slide: it waits at its destination and
+  // fades in over the slide, whole as the box arrives. Before paint, so
+  // the jump is not seen.
+  const barRef = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    if (animate) {
+      barRef.current?.animate?.([{opacity: 0}, {opacity: 1}], {
+        duration: SLIDE_MS,
+        easing: 'ease',
+      });
+    }
+    // Only a mode change moves the bar; animate is derived for that render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode]);
 
   return (
     <div
@@ -356,8 +377,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
               ? '0 0 0 1px transparent'
               : '0 0 0 1px var(--borders-neutral-primary)',
           transition: animate
-            ? 'transform 0.45s ease, opacity 0.18s ease-in, box-shadow 0.45s ease'
-            : 'opacity 0.18s ease-in',
+            ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in, box-shadow ${SLIDE_MS}ms ease`
+            : `opacity ${FADE_MS}ms ease-in`,
           // Interactive in Play, and while picking a location (so the preview
           // can be clicked even on the Code tab).
           pointerEvents: mode === 'play' || picking ? 'auto' : 'none',
@@ -434,12 +455,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {playBar && (
         <div
+          ref={barRef}
           className={moduleStyles.playBar}
           style={{
             transform: barTransform,
             width: boxSide,
             opacity: visible ? 1 : 0,
-            transition: barTransition,
+            transition: `opacity ${FADE_MS}ms ease-in`,
           }}
         >
           {playBar}
