@@ -210,7 +210,6 @@ export interface AssignmentCourseOffering {
 export interface CourseOffering {
   id: number;
   display_name: string;
-  is_featured: boolean;
   participant_audience: string;
   course_versions: {
     [courseVersionId: number]: CourseVersion;

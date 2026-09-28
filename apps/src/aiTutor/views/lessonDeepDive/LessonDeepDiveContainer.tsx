@@ -1,7 +1,6 @@
 import {
   LessonSummaryCard,
   LevelsAttemptedBox,
-  PreReviewBox,
   PreSkillsCheck,
   TimeSpentBox,
   TutorSummaryBox,
@@ -30,7 +29,6 @@ const BOX_IDS = [
   'validated-levels',
   'lesson-summary',
   'reflection',
-  'pre-review',
   'intervention',
   'pre-skills-check',
   'skills-check',
@@ -228,8 +226,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setReflectionData(data);
   }, []);
 
-  // Returns the description of the first objective the student is struggling
-  // with or still working on, used as the focus topic in PreReviewBox.
+  // Returns the first struggling objective's description, shown as the focus
+  // topic on the intervention screen to personalise the "Let's get to work" heading.
   const getFocusTopic = useCallback(
     (data: ReflectionData | null): string | undefined => {
       if (!data) return undefined;
@@ -362,13 +360,6 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             initialValues={reflectionData}
           />
         );
-      case 'pre-review':
-        return (
-          <PreReviewBox
-            focusTopic={getFocusTopic(reflectionData)}
-            onNext={goToNext}
-          />
-        );
       case 'intervention':
         return (
           <InterventionBox
@@ -380,6 +371,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             objectives={lessonDeepDiveData.objectives}
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
+            focusTopic={getFocusTopic(reflectionData)}
             onNext={goToNext}
           />
         );

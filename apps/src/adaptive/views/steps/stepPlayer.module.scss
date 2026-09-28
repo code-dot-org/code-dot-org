@@ -70,3 +70,28 @@
   min-width: 0;
   min-height: 0;
 }
+
+// Level step
+
+.levelStep {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.levelHost {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.stepFooter {
+  display: flex;
+  flex: none;
+  justify-content: flex-end;
+  padding: 8px 12px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+}
