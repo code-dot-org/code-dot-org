@@ -1,9 +1,11 @@
 # Works out what a sign_ins row represents, at the one place rows are written.
 #
-# Devise's trackable hook sees only the User and the request, so what can be recovered
-# is recovered from the request: Warden records which strategy authenticated. Paths that
-# authenticate a user without a Warden strategy say what they are by passing event_type:
-# to sign_in (see config/initializers/sign_in_attribution.rb).
+# Devise's trackable hook sees only the User and the request, so most of this is
+# recovered from the request: Warden records which strategy authenticated, and an
+# OmniAuth callback leaves its auth hash in the env. Paths that authenticate a user
+# without either -- an LTI launch, a section code, code re-signing in a user it already
+# trusts -- have nothing to recover, so they say what they are by passing event_type: to
+# sign_in (see config/initializers/sign_in_attribution.rb).
 #
 # A sign-in this cannot account for is recorded with a NULL event_type, meaning "not
 # determined" -- the same thing every row written before the column existed means.
@@ -60,7 +62,7 @@ module Services::SignInAttribution
       declared = request.env[EVENT_TYPE_KEY]
       next [declared, request.env[AUTHENTICATION_OPTION_ID_KEY]] if declared
 
-      from_warden_strategy(user, request) || [nil, nil]
+      from_warden_strategy(user, request) || from_omniauth(request) || [nil, nil]
     end
   end
 
@@ -74,9 +76,25 @@ module Services::SignInAttribution
     return nil unless request.env[WARDEN_EVENT_KEY] == :authentication
 
     case (strategy = request.env['warden']&.winning_strategy)
+    when Devise::Strategies::Rememberable
+      # The cookie identifies the user, never the credential that minted it.
+      [SignIn::REMEMBERED, nil]
     when Devise::Strategies::DatabaseAuthenticatable
       [SignIn::CREDENTIAL, email_authentication_option_id(user, strategy)]
     end
+  end
+
+  # Every OmniAuth provider lands here, so adding one needs no change: the callback's
+  # auth hash names the exact credential by provider and external id.
+  private_class_method def self.from_omniauth(request)
+    auth_hash = request.env['omniauth.auth']
+    return nil unless auth_hash
+
+    option = AuthenticationOption.find_by_exact_credential(
+      credential_type: auth_hash.provider.to_s,
+      authentication_id: auth_hash.uid
+    )
+    [SignIn::CREDENTIAL, option&.id]
   end
 
   # The email credential the password was checked against. Devise is configured with
