@@ -261,7 +261,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         ) : !attempt ? (
           // No intro screen to click through - the effect begins the attempt automatically.
-          // This button is only shown if the initial check failed.
+          // This button is only shown if the initial check for an attempt failed.
           didInitialCheckForAttemptFail ? (
             <MuiButton
               variant="contained"

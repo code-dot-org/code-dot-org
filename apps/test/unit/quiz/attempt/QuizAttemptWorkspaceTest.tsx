@@ -141,7 +141,7 @@ describe('QuizAttemptWorkspace', () => {
     jest.clearAllMocks();
   });
 
-  it('shows a loading message while the initial check is in flight', () => {
+  it('shows a loading message while the initial check for an attempt is in flight', () => {
     renderWorkspace({hookState: {isLoading: true}});
     expect(screen.getByText('Loading…')).toBeInTheDocument();
   });
