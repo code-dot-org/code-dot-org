@@ -31,8 +31,9 @@ export const meta = {
 //   - Fewer handoffs: Discover -> Plan -> Execute -> Migrate, with Parity and Verify kept
 //     as independent gate agents (a gate should not grade its own work).
 //
-// Models are chosen by alias so they track the latest release: Discover and the
-// mechanical codemod run use `sonnet`; everything else inherits the session model.
+// Models are chosen by alias so they track the latest release: Discover, the codemod run
+// and the apps captures use `sonnet`; every deciding, coding, gating and git agent uses
+// `opus`. See READ_MODEL / WORK_MODEL below.
 //
 // args: the DSCO component directory name, or an object:
 //   Workflow({name: 'dsco-mui-design-system-migration-planned', args: 'dialog'})
@@ -111,6 +112,12 @@ const PARITY_DIR = `${STORYBOOK}/dist/parity/${component}`
 const BASELINE_DIR = `${PARITY_DIR}/baseline`
 const COMMIT_TRAILER = 'Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>'
 const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-code)'
+// Models are aliases, so each resolves to the current release (opus is Opus 5.5 as of
+// 2026-09-28). Fact-gathering and mechanical steps run on Sonnet; decisions, code, gates
+// and git on Opus. Same policy as dsco-mui-design-system-migration.js, so a comparison of
+// the two scripts measures the shape, not the model.
+const READ_MODEL = 'sonnet'
+const WORK_MODEL = 'opus'
 const componentTitle = component.charAt(0).toUpperCase() + component.slice(1)
 
 // Shared rules for every agent that edits files. Chunk agents run concurrently in ONE
@@ -336,7 +343,7 @@ ${TREE_RULES}
   vs in-place, focus, UI-test selectors, shared globals).
 
 Return the structured result.`,
-  {schema: DISCOVER_SCHEMA, label: 'discover', phase: 'Discover', model: 'sonnet'},
+  {schema: DISCOVER_SCHEMA, label: 'discover', phase: 'Discover', model: READ_MODEL},
 )
 if (!discover) throw new Error('discover agent was skipped; nothing to plan')
 if (!discover.preflight.ok) throw new Error(`Preflight failed:\n- ${discover.preflight.problems.join('\n- ')}`)
@@ -533,7 +540,7 @@ chunks; Docs; Risks; Deviations (empty, Execute fills it). Run prettier on it fr
 (../../node_modules/.bin/prettier --write).
 
 Return the structured plan; planDoc must be ${PLAN_DOC}.`,
-  {schema: PLAN_SCHEMA, label: 'plan', phase: 'Plan'},
+  {schema: PLAN_SCHEMA, label: 'plan', phase: 'Plan', model: WORK_MODEL},
 )
 if (!plan) throw new Error('plan agent was skipped; nothing to execute')
 if (plan.planDoc !== PLAN_DOC) throw new Error(`plan wrote ${plan.planDoc}; expected ${PLAN_DOC}`)
@@ -746,7 +753,7 @@ Do, in order:
    Then yarn build in ${STORYBOOK}. Fix what you broke; report each check's result.
 
 Return the structured result.`,
-  {schema: EXECUTE_SCHEMA, label: 'execute', phase: 'Execute'},
+  {schema: EXECUTE_SCHEMA, label: 'execute', phase: 'Execute', model: WORK_MODEL},
 )
 if (!exec) throw new Error('execute agent was skipped; nothing to gate')
 
@@ -784,7 +791,7 @@ if (!exec.allChecksPass || hasGaps(execGaps())) {
       'left work incomplete',
       `Failing checks: ${JSON.stringify(exec.checks)}\nTwin gaps (every DSCO story id exactly once): ${JSON.stringify(gaps)}\nPlanned twins: ${JSON.stringify(plan.twins)}`,
     ),
-    {schema: EXECUTE_SCHEMA, label: 'execute-repair', phase: 'Execute'},
+    {schema: EXECUTE_SCHEMA, label: 'execute-repair', phase: 'Execute', model: WORK_MODEL},
   )
   if (repaired) exec = repaired
   if (!exec.allChecksPass) throw new Error(`Execute checks still failing: ${JSON.stringify(exec.checks)}`)
@@ -876,7 +883,7 @@ let parityAttempt = 0
 let missingNote = ''
 while (parityAttempt < maxParityAttempts) {
   parityAttempt++
-  parity = await agent(parityPrompt(parityAttempt) + missingNote, {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Execute'})
+  parity = await agent(parityPrompt(parityAttempt) + missingNote, {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL})
   if (!parity) throw new Error('parity agent was skipped')
   const missing = missingRenders(parity.pairs)
   const bad = parity.pairs.filter(p => p.verdict === 'mismatch')
@@ -904,7 +911,7 @@ the override or wrapper, not the story, unless the story fails to reproduce the 
 story's state. Record any new departure from the plan in ${PLAN_DOC}'s Deviations section.
 Re-run yarn test / typecheck / eslint / prettier --check / stylelint / build in ${LIB} and
 yarn build in ${STORYBOOK}. Report every file touched and the checks.`,
-    {schema: EXECUTE_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Execute'},
+    {schema: EXECUTE_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL},
   )
   if (fix) {
     exec.filesTouched = [...new Set([...exec.filesTouched, ...fix.filesTouched])]
@@ -920,7 +927,7 @@ if (!parity.pass) log(`Parity budget exhausted (${parityStatus}); details go int
 if (!exec.allChecksPass) {
   log(`Design-system checks red after parity fixes; one repair pass`)
   const repaired = await agent(repairPrompt('left failing checks after parity fixes', `Failing checks: ${JSON.stringify(exec.checks)}`), {
-    schema: EXECUTE_SCHEMA, label: 'execute-checks-repair', phase: 'Execute',
+    schema: EXECUTE_SCHEMA, label: 'execute-checks-repair', phase: 'Execute', model: WORK_MODEL,
   })
   if (repaired) exec = repaired
   if (!exec.allChecksPass) throw new Error(`Design-system checks still failing: ${JSON.stringify(exec.checks)}`)
@@ -1001,7 +1008,7 @@ ${publish ? `
 
 Report branch, sha, prUrl, screenshotsSha, and leftovers (git status --porcelain paths other
 than the never-stage list).`,
-  {schema: DS_PUBLISH_SCHEMA, label: 'commit-design-system', phase: 'Execute'},
+  {schema: DS_PUBLISH_SCHEMA, label: 'commit-design-system', phase: 'Execute', model: WORK_MODEL},
 )
 if (!dsPublished) throw new Error('design-system commit agent was skipped')
 if (dsPublished.leftovers.length) log(`WARNING: uncommitted after the design-system commit: ${dsPublished.leftovers.join(', ')}`)
@@ -1056,7 +1063,7 @@ Return the structured result.`
 
 const runAppsParity = appsParity && plan.appsParitySample.length > 0
 const appsBefore = runAppsParity
-  ? await agent(appsCapturePrompt('before', `${PARITY_DIR}/apps-before`), {schema: APPS_CAPTURE_SCHEMA, label: 'apps-baseline', phase: 'Migrate'})
+  ? await agent(appsCapturePrompt('before', `${PARITY_DIR}/apps-before`), {schema: APPS_CAPTURE_SCHEMA, label: 'apps-baseline', phase: 'Migrate', model: READ_MODEL})
   : null
 if (runAppsParity) {
   if (!appsBefore || !appsBefore.available) log('Apps parity: no local studio reachable; the sampled page check is skipped')
@@ -1092,7 +1099,7 @@ the codemod did not touch goes in filesUnchanged with its import form; the chunk
 handle it by hand. Do not run tests, typecheck, or prettier.
 
 Return the structured result.`,
-    {schema: CODEMOD_RUN_SCHEMA, label: 'codemod-run', phase: 'Migrate', model: 'sonnet'},
+    {schema: CODEMOD_RUN_SCHEMA, label: 'codemod-run', phase: 'Migrate', model: READ_MODEL},
   )
   if (!codemodRun) throw new Error('codemod run agent was skipped')
   log(`Codemod: ${codemodRun.filesChanged.length} file(s) rewritten, ${codemodRun.filesUnchanged.length} untouched${codemodRun.errors.length ? `, ${codemodRun.errors.length} error(s)` : ''}`)
@@ -1151,7 +1158,7 @@ Lint your files: from apps/, npx eslint <files>; frontend: ../../node_modules/.b
 from the package. Fix what you broke.
 
 Return the structured result.`,
-        {schema: CHUNK_SCHEMA, label: `migrate:${chunk.slug}`, phase: 'Migrate'},
+        {schema: CHUNK_SCHEMA, label: `migrate:${chunk.slug}`, phase: 'Migrate', model: WORK_MODEL},
       ),
     )
   : []
@@ -1256,7 +1263,7 @@ let healTouched = []
 const uiTestOwner = new Map()
 while (true) {
   healAttempt++
-  verify = await agent(verifyPrompt(healAttempt), {schema: VERIFY_SCHEMA, label: `verify-${healAttempt}`, phase: 'Migrate'})
+  verify = await agent(verifyPrompt(healAttempt), {schema: VERIFY_SCHEMA, label: `verify-${healAttempt}`, phase: 'Migrate', model: WORK_MODEL})
   if (!verify) throw new Error('verify agent was skipped')
   log(`Verify ${healAttempt}: ${verify.pass ? 'clean' : verify.failures.length + ' failure(s): ' + verify.failures.map(f => f.check).join(', ')}`)
   healTouched = [...new Set([...healTouched, ...verify.filesTouched])]
@@ -1277,7 +1284,7 @@ PLAN: ${PLAN_DOC}
 Fix the root cause, not the assertion. If the design-system side is at fault, fix it under
 ${LIB}, run yarn build there, and record the departure in ${PLAN_DOC}'s Deviations section.
 Re-run only the checks that failed, then return filesTouched and notes.`,
-    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Migrate'},
+    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Migrate', model: WORK_MODEL},
   )
   if (heal) healTouched = [...new Set([...healTouched, ...heal.filesTouched])]
 }
@@ -1294,7 +1301,7 @@ with pixelmatch from apps/node_modules, writing ${PARITY_DIR}/apps-diff/<basenam
 the ratio and what differs (LOOK at the PNGs with the Read tool) in each capture's notes.
 Tolerance for "same": ${parityTolerance}; note intended deviations from the plan
 ${JSON.stringify(plan.legacyDefectsToFix.map(d => d.fix))} as such.`,
-    {schema: APPS_CAPTURE_SCHEMA, label: 'apps-parity', phase: 'Migrate'},
+    {schema: APPS_CAPTURE_SCHEMA, label: 'apps-parity', phase: 'Migrate', model: READ_MODEL},
   )
   appsParityResult = appsAfter && appsAfter.available ? 'captured' : 'after-capture-failed'
   if (appsAfter) log(`Apps parity: ${appsAfter.captures.filter(c => c.ok).length}/${appsAfter.captures.length} page(s) compared`)
@@ -1428,7 +1435,7 @@ ${publish ? `
 
 Finish on ${lastBranch} with a clean tree (except the never-stage list). Report every branch
 with its sha and file count, every PR URL, and leftovers.`,
-  {schema: FINALIZE_SCHEMA, label: 'finalize', phase: 'Migrate'},
+  {schema: FINALIZE_SCHEMA, label: 'finalize', phase: 'Migrate', model: WORK_MODEL},
 )
 if (!finalized) throw new Error('finalize agent was skipped; branches may be half carved')
 if (finalized.leftovers.length) log(`WARNING: uncommitted leftovers: ${finalized.leftovers.join(', ')}`)

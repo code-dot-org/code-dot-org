@@ -82,6 +82,10 @@ const ESLINT_APPS = 'apps/.eslintrc.js'
 const PARITY_DIR = `${STORYBOOK}/dist/parity/${component}`
 const COMMIT_TRAILER = 'Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>'
 const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-code)'
+// Models are aliases, so each resolves to the current release (opus is Opus 5.5 as of
+// 2026-09-28). Fact-gathering runs on Sonnet; decisions, code, gates and git on Opus.
+const READ_MODEL = 'sonnet'
+const WORK_MODEL = 'opus'
 
 // Shared rules for every agent that edits files. Chunk agents run concurrently in ONE
 // working tree, so anything that moves HEAD or the index would corrupt a sibling's work.
@@ -300,7 +304,7 @@ ${MIGRATION_RULES}
   and the risks listed in the schema.
 
 Return the structured plan.`,
-  {schema: SCOUT_SCHEMA, label: 'scout', phase: 'Scout'},
+  {schema: SCOUT_SCHEMA, label: 'scout', phase: 'Scout', model: READ_MODEL},
 )
 if (!scout) throw new Error('scout agent was skipped; nothing to build on')
 
@@ -506,7 +510,7 @@ Do, in order:
    Then yarn build in ${STORYBOOK}. Fix everything you broke; report each check's result.
 
 Return the structured result.`,
-  {schema: BUILD_SCHEMA, label: 'build', phase: 'Build'},
+  {schema: BUILD_SCHEMA, label: 'build', phase: 'Build', model: WORK_MODEL},
 )
 if (!build) throw new Error('build agent was skipped; nothing to gate or migrate')
 if (!build.allChecksPass) {
@@ -525,7 +529,7 @@ Re-run every check (yarn test / typecheck / lint / build in ${LIB}; yarn build i
 ${STORYBOOK}) and report. filesTouched = the build's list plus anything you changed.
 muiStories, legacyExports and codemodCommand: copy from the build unless you changed them:
 ${JSON.stringify({muiStories: build.muiStories, legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
-    {schema: BUILD_SCHEMA, label: 'build-repair', phase: 'Build'},
+    {schema: BUILD_SCHEMA, label: 'build-repair', phase: 'Build', model: WORK_MODEL},
   )
   if (repaired) build = repaired
   if (!build.allChecksPass) throw new Error(`Build checks still failing: ${JSON.stringify(build.checks)}`)
@@ -560,7 +564,7 @@ Re-run yarn test / typecheck / lint / build in ${LIB} and yarn build in ${STORYB
 filesTouched = the build's list ${JSON.stringify(build.filesTouched)} plus your changes.
 Copy legacyExports and codemodCommand unchanged unless you changed them:
 ${JSON.stringify({legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
-    {schema: BUILD_SCHEMA, label: 'build-twins', phase: 'Build'},
+    {schema: BUILD_SCHEMA, label: 'build-twins', phase: 'Build', model: WORK_MODEL},
   )
   if (twinned) build = twinned
   gaps = twinGaps(build.muiStories)
@@ -666,7 +670,7 @@ let parityAttempt = 0
 let missingNote = ''
 while (parityAttempt < maxParityAttempts) {
   parityAttempt++
-  parity = await agent(parityPrompt(parityAttempt) + missingNote, {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Parity'})
+  parity = await agent(parityPrompt(parityAttempt) + missingNote, {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Parity', model: WORK_MODEL})
   if (!parity) throw new Error('parity agent was skipped')
   const missing = missingRenders(parity.pairs)
   const bad = parity.pairs.filter(p => p.verdict === 'mismatch')
@@ -693,7 +697,7 @@ Look at each listed dsco/mui/diff PNG with the Read tool before changing anythin
 the override or wrapper, not the story, unless the story itself fails to reproduce the
 DSCO story's state. Then re-run yarn test / typecheck / lint / build in ${LIB} and
 yarn build in ${STORYBOOK}. Report every file touched.`,
-    {schema: BUILD_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Parity'},
+    {schema: BUILD_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Parity', model: WORK_MODEL},
   )
   if (fix) {
     build.filesTouched = [...new Set([...build.filesTouched, ...fix.filesTouched])]
@@ -721,7 +725,7 @@ Re-run yarn test / typecheck / lint / build in ${LIB} and yarn build in ${STORYB
 report each. filesTouched = the list above plus anything you changed. Copy muiStories,
 legacyExports and codemodCommand unchanged:
 ${JSON.stringify({muiStories: build.muiStories, legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
-    {schema: BUILD_SCHEMA, label: 'parity-checks-repair', phase: 'Parity'},
+    {schema: BUILD_SCHEMA, label: 'parity-checks-repair', phase: 'Parity', model: WORK_MODEL},
   )
   if (repaired) build = repaired
   if (!build.allChecksPass) throw new Error(`Design-system checks still failing after parity: ${JSON.stringify(build.checks)}`)
@@ -779,7 +783,7 @@ repo root. This is the ONE phase that may use git write commands.
    re-stage, commit again. Do not bypass the hook.
 4. Report branch, sha (git rev-parse HEAD), and leftovers: git status --porcelain paths
    other than the preexisting untracked ones and ${STORYBOOK}/dist.`,
-  {schema: COMMIT_SCHEMA, label: 'commit-design-system', phase: 'Parity'},
+  {schema: COMMIT_SCHEMA, label: 'commit-design-system', phase: 'Parity', model: WORK_MODEL},
 )
 if (!dsCommit) throw new Error('design-system commit agent was skipped')
 if (dsCommit.leftovers.length) log(`WARNING: uncommitted after DS carve: ${dsCommit.leftovers.join(', ')}`)
@@ -852,7 +856,7 @@ Lint your files: from apps/, npx eslint <files>; frontend: yarn lint in the pack
 Fix what you broke.
 
 Return the structured result.`,
-        {schema: CHUNK_SCHEMA, label: `migrate:${chunk.slug}`, phase: 'Migrate'},
+        {schema: CHUNK_SCHEMA, label: `migrate:${chunk.slug}`, phase: 'Migrate', model: WORK_MODEL},
       ),
     )
   : []
@@ -970,7 +974,7 @@ let healTouched = []
 const uiTestOwner = new Map()
 while (true) {
   healAttempt++
-  verify = await agent(verifyPrompt(healAttempt), {schema: VERIFY_SCHEMA, label: `verify-${healAttempt}`, phase: 'Verify'})
+  verify = await agent(verifyPrompt(healAttempt), {schema: VERIFY_SCHEMA, label: `verify-${healAttempt}`, phase: 'Verify', model: WORK_MODEL})
   if (!verify) throw new Error('verify agent was skipped')
   log(`Verify ${healAttempt}: ${verify.pass ? 'clean' : verify.failures.length + ' failure(s): ' + verify.failures.map(f => f.check).join(', ')}`)
   healTouched = [...new Set([...healTouched, ...verify.filesTouched])]
@@ -991,7 +995,7 @@ Fix the root cause, not the assertion: a failing test that pins DSCO DOM gets it
 expectation updated; a failing typecheck gets its types fixed; a lint error gets its
 code fixed. If the design-system side is at fault, fix it under ${LIB} and run yarn
 build there. Re-run only the checks that failed, then return filesTouched and notes.`,
-    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Verify'},
+    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Verify', model: WORK_MODEL},
   )
   if (heal) healTouched = [...new Set([...healTouched, ...heal.filesTouched])]
 }
@@ -1039,7 +1043,7 @@ STATE
 5. Run prettier on the markdown you changed if the package has a prettier script.
 
 Return filesTouched (and notes on anything you could not make truthful).`,
-  {schema: TOUCHED_SCHEMA, label: 'docs', phase: 'Docs'},
+  {schema: TOUCHED_SCHEMA, label: 'docs', phase: 'Docs', model: WORK_MODEL},
 )
 if (!docs) log(`WARNING: docs agent produced nothing; ${STATUS_DOC}, ${SKILL_DOC} and the eslint rule were not updated`)
 const docsTouched = docs ? docs.filesTouched : []
@@ -1193,7 +1197,7 @@ ${publish ? `
 
 Finish on ${lastBranch} with a clean tree (except the never-stage list). Report every
 branch with its sha and file count, every PR URL, and leftovers.`,
-  {schema: PUBLISH_SCHEMA, label: 'publish', phase: 'Publish'},
+  {schema: PUBLISH_SCHEMA, label: 'publish', phase: 'Publish', model: WORK_MODEL},
 )
 if (!published) throw new Error('publish agent was skipped; branches may be half carved')
 if (published.leftovers.length) log(`WARNING: uncommitted leftovers: ${published.leftovers.join(', ')}`)
