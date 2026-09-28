@@ -598,6 +598,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                     size="s"
                     checked={style === s}
                     onChange={() => setStyle(s)}
+                    className={moduleStyles.styleOption}
                   >
                     {/* The same star in each style, ahead of the label so
                         the two rows line up. The label is ours, in the

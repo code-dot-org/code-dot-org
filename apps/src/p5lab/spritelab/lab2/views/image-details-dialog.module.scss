@@ -408,6 +408,16 @@
   --text-neutral-disabled: var(--dialog-text-secondary);
 }
 
+// A Style option is taller than its text, so its radio, swatch and label
+// center on the row; the design system aligns a radio row to the top.
+.styleOption {
+  align-items: center;
+
+  i {
+    margin-top: 0;
+  }
+}
+
 // A Style option's sample: a swatch tile between the radio and the label,
 // the same size on both rows so the labels line up.
 .styleSwatch {
