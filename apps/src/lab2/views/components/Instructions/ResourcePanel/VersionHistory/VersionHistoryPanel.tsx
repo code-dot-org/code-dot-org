@@ -461,6 +461,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       versionId: string,
       label: string,
       isLatest: boolean,
+      lastModified?: string,
       comment?: string,
       className?: string,
       saveButtonLabel?: string
@@ -471,6 +472,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           key={versionId}
           versionId={versionId}
           label={label}
+          lastModified={lastModified}
           comment={comment}
           isLatest={isLatest}
           isSelected={selectedVersion === versionId}
@@ -569,6 +571,9 @@ const VersionHistoryPanel: React.FunctionComponent<
                   version.versionId,
                   parseDate(version.lastModified),
                   version.isLatest,
+                  version.isLatest
+                    ? parseDate(version.lastModified)
+                    : undefined,
                   version.comment,
                   undefined,
                   version.comment
@@ -610,6 +615,9 @@ const VersionHistoryPanel: React.FunctionComponent<
                           version.versionId,
                           parseDate(version.lastModified),
                           version.isLatest,
+                          version.isLatest
+                            ? parseDate(version.lastModified)
+                            : undefined,
                           version.comment,
                           moduleStyles.autoSaveRow,
                           undefined

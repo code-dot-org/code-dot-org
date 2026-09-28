@@ -77,6 +77,11 @@
   padding: 0.5rem 0.75rem;
 }
 
+.lastModified {
+  color: var(--text-neutral-secondary);
+  padding: 0 0.75rem 0.5rem;
+}
+
 .restoreButton i {
   html[dir='rtl'] & {
     transform: scaleX(-1);
