@@ -17,6 +17,46 @@ Transforms `Button` and `LinkButton` components from `@code-dot-org/component-li
 - Updates imports automatically
 - Handles both regular buttons and icon-only buttons
 
+### `dialog-to-mui-dialog.ts`
+
+Moves imports of `Dialog` and `CustomDialog` from
+`@code-dot-org/component-library/dialog` to `MuiDialog` and `MuiCustomDialog`
+from the same entry point. The MUI versions take the same props, so only
+imports and `jest.mock` factories change; local names, JSX and other
+references stay as written. See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
+
+**What it does:**
+
+- `import L from '…/dialog'` becomes `import {MuiDialog as L} from '…/dialog'`
+  (no `as` when `L` is `MuiDialog`), merged into an existing named import
+  from the same source
+- Named `Dialog` / `CustomDialog` become `MuiDialog as L` / `MuiCustomDialog as L`;
+  `DialogProps` / `CustomDialogProps` become `MuiDialogProps as L` /
+  `MuiCustomDialogProps as L`, keeping `import type` and inline `type`
+- Package-internal `@/dialog/CustomDialog` and `@/dialog/Dialog` become
+  `@/dialog/MuiCustomDialog` and `@/dialog/MuiDialog` (`Modal.tsx`)
+- A `jest.mock('…/dialog', factory)` whose factory returns an object literal
+  gains `MuiDialog` / `MuiCustomDialog` keys with the same values as its
+  `default` / `Dialog` / `CustomDialog` keys
+- Idempotent: files without either source, and specifiers already on `Mui`
+  names, are left alone, so it can be re-run as new consumers land
+
+**Reported, not rewritten** (a `REP` line per occurrence):
+
+- Enzyme string selectors such as `find('Dialog')`, which match the display
+  name and must become `find('MuiDialog')`; left alone they match nothing and
+  the assertion passes without testing anything
+- `jest.mock` factories of any other shape, namespace imports, re-exports,
+  and `require()` / `import()` of the entry point
+
+Build the package first (`yarn build`); apps resolves it to `dist/`.
+
+```bash
+cd frontend/packages/component-library
+yarn codemod:dialog --dry --print ../../../apps/src/templates
+yarn codemod:dialog ../../../apps/src/templates ../../../apps/test/unit/templates
+```
+
 ## Usage
 
 ### Prerequisites

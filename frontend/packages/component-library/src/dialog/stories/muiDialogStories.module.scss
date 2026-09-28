@@ -1,0 +1,11 @@
+// Layout boxes the legacy stories set through style; the twins must render the same boxes.
+.contentBox {
+  width: 500px;
+  height: 500px;
+}
+
+.launcherColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
