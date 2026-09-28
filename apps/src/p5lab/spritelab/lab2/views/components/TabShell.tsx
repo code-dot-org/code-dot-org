@@ -18,7 +18,7 @@ const SCENE_TABS: readonly Tab[] = ['World', 'Code'];
 
 interface TabShellProps {
   activeTab: Tab;
-  onTabChange: (tab: Tab) => void;
+  onTabChange: (tab: Tab, event: React.MouseEvent<HTMLElement>) => void;
   // Tabs not yet implemented are disabled in the bar.
   enabledTabs: readonly Tab[];
   // Tabs to show at all. Defaults to every tab.
@@ -26,8 +26,6 @@ interface TabShellProps {
   // Rendered in the tab bar leading the scene-editing tabs (the scene
   // selector).
   sceneTabsExtra?: React.ReactNode;
-  // Rendered immediately after the Play button (the restart controls).
-  playTabExtra?: React.ReactNode;
   // Rendered at the right, before Start Over.
   startOverExtra?: React.ReactNode;
   children: React.ReactNode;
@@ -46,12 +44,11 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   enabledTabs,
   visibleTabs = ALL_TABS,
   sceneTabsExtra,
-  playTabExtra,
   startOverExtra,
   children,
   onClickStartOver,
 }) => {
-  const sceneTabs = useMemo(
+  const sceneTabs = useMemo<readonly Tab[]>(
     () =>
       ALL_TABS.filter(
         tab => SCENE_TABS.includes(tab) && visibleTabs.includes(tab)
@@ -86,7 +83,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
       )}
       onClick={event => {
         blurAfterPointerClick(event);
-        onTabChange(tab);
+        onTabChange(tab, event);
       }}
       // Read by .tab::after, which reserves the selected label's width.
       data-label={tab}
@@ -109,6 +106,9 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                   key={tab}
                   className={classNames(
                     moduleStyles.tabGroup,
+                    // The gallery is the group's own view: no tab lights up,
+                    // so the picker does.
+                    activeTab === 'Scenes' && moduleStyles.tabGroupActive,
                     // Only offer the pointer when a click here would move
                     // the tab; on a scene tab it would do nothing.
                     !sceneTabs.includes(activeTab) &&
@@ -124,7 +124,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                       !sceneTabs.includes(activeTab) &&
                       enabledTabs.includes(groupTarget)
                     ) {
-                      onTabChange(groupTarget);
+                      onTabChange(groupTarget, e);
                     }
                   }}
                 >
@@ -135,15 +135,6 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                     </React.Fragment>
                   ))}
                 </div>
-              );
-            }
-            // The restart controls sit just right of the Play button.
-            if (tab === 'Play' && playTabExtra) {
-              return (
-                <React.Fragment key={tab}>
-                  {renderTab(tab)}
-                  {playTabExtra}
-                </React.Fragment>
               );
             }
             return <React.Fragment key={tab}>{renderTab(tab)}</React.Fragment>;

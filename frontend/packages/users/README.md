@@ -6,8 +6,9 @@ profile, login, school, role, and account actions. Consumed by the Studio app
 
 Two tabs are implemented: **Account Details** (profile, login, parent/guardian
 email, account actions) and **Educator Profile** (school information and
-educator role, educators only). **Communications** and **Integrations** are
-still disabled placeholders, for legacy parity.
+educator role, educators only). **Integrations** is still a disabled
+placeholder, for legacy parity. The email opt-in lives in the Update email
+dialog, as in legacy.
 
 Each tab is its own form: one `FormProvider`, one `SaveBar`, one PATCH. School
 information is a modal flow instead, because it needs a zip search and a

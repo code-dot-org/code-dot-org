@@ -44,6 +44,7 @@ import {
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
+  usesPlatformPhysics,
 } from './platformPhysics';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
@@ -136,6 +137,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
+    // captureFirstFrame() callbacks, called with the canvas as the first
+    // frame of the next run is drawn (see onP5Setup and the draw loops).
+    this.frameCaptureWaiters_ = [];
+    this.frameCaptureArmed_ = false;
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
@@ -154,6 +159,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
+    // null while no audio is listening.
+    this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -303,7 +310,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // One cell at the default playfield size. A scene with a world
       // overrides this from the prelude with its own cell size, and the
       // grid blocks size their sprites from their own bitmaps.
-      library.defaultSpriteSize = this.isPlatformScene_()
+      library.defaultSpriteSize = this.isPlatformScene()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; the classic footing command
@@ -314,6 +321,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    // A new run starts the player's history over, so the spawn is not heard
+    // as a move.
+    this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
     };
@@ -330,6 +340,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
+    // Wraps whichever draw loop the scene uses, so a captured frame is a
+    // finished one: every pass drawn, nothing overdrawn. The platform loop
+    // takes its own picture (at zoom 1) and clears the flag first.
+    const drawLoop = library.commands.executeDrawLoopAndCallbacks;
+    library.commands.executeDrawLoopAndCallbacks = function () {
+      drawLoop.apply(this, arguments);
+      if (engine.frameCaptureArmed_) {
+        engine.frameCaptureArmed_ = false;
+        engine.settleFrameCaptures_(this.p5.canvas);
+      }
+    };
     // Story lanes: placement by name instead of coordinates, sized so two
     // characters share a scene; the right-lane character faces its partner
     // (generated art faces right natively).
@@ -527,9 +548,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
-    // The zGameDev name is only the level's opt-in to platformer physics,
-    // which is engine-owned (platformPhysics.ts); no library loads for it.
-    this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
+    // zGameDev is the level's opt-in to the engine's platform physics
+    // (platformPhysics.ts); no library loads for it.
+    this.usesPlatformPhysics_ = usesPlatformPhysics(helperLibraries);
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
@@ -576,7 +597,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.referencedImages = referencedImages || null;
   }
 
-  isPlatformScene_() {
+  /** Whether the running scene is a platformer: by its type, or by platform
+      blocks in a scene made before scene types. */
+  isPlatformScene() {
     if (this.sceneType_) {
       return this.sceneType_ === 'platform';
     }
@@ -653,6 +676,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
+    // A run has begun: the next frame drawn is its first.
+    this.frameCaptureArmed_ = this.frameCaptureWaiters_.length > 0;
     const p5 = this.p5Wrapper.p5;
     const density = Math.ceil(
       CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
@@ -730,6 +755,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
+    this.frameCaptureArmed_ = false;
+    this.settleFrameCaptures_(null);
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
@@ -919,15 +946,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       engine.physicsResolvedThisFrame_ = true;
       const player = this.getSpriteArray({group: 'players'})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
-      camera.off();
-      this.drawBackground(backgroundFrame(zoom, focus));
-      camera.zoom = zoom;
-      camera.position.x = focus.x;
-      camera.position.y = focus.y;
-      camera.on();
-      p5.drawSprites();
-      this.drawSpeechBubbles();
-      camera.off();
+      if (engine.frameCaptureArmed_) {
+        // The picture shows the whole world: drawn at zoom 1, copied by the
+        // callbacks (synchronously), then painted over by the real frame
+        // below, so nothing of it reaches the screen.
+        engine.frameCaptureArmed_ = false;
+        engine.drawWorld_(this, 1, cameraFocus(1, null));
+        engine.settleFrameCaptures_(p5.canvas);
+      }
+      engine.drawWorld_(this, zoom, focus);
       this.drawVariableBubbles();
       if (!this.isPreviewFrame()) {
         this.foregroundEffects.forEach(effect => effect.func());
@@ -937,6 +964,37 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       this.commands.drawStoryLabText.apply(this);
     };
+  }
+
+  /** Background, sprites and speech bubbles through the camera. */
+  drawWorld_(library, zoom, focus) {
+    const {p5} = library;
+    const {camera} = p5;
+    camera.off();
+    library.drawBackground(backgroundFrame(zoom, focus));
+    camera.zoom = zoom;
+    camera.position.x = focus.x;
+    camera.position.y = focus.y;
+    camera.on();
+    p5.drawSprites();
+    library.drawSpeechBubbles();
+    camera.off();
+  }
+
+  /**
+   * Calls back with the canvas while the first frame of the next run is
+   * being drawn, or with null if the engine is torn down first. The callback
+   * must copy what it wants at once: the canvas is repainted right after.
+   * Every caller waiting on the same run gets the same frame.
+   */
+  captureFirstFrame(onFrame) {
+    this.frameCaptureWaiters_.push(onFrame);
+  }
+
+  settleFrameCaptures_(canvas) {
+    const waiters = this.frameCaptureWaiters_;
+    this.frameCaptureWaiters_ = [];
+    waiters.forEach(onFrame => onFrame(canvas));
   }
 
   // Platformer physics for players and marked sprites (see
@@ -1003,6 +1061,40 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
+    // Both the requested and the resolved positions are known here, so this
+    // is where the observer is fed.
+    this.observePlayer_(players, walls, view);
+  }
+
+  /** The audio's observer of the player, or null. */
+  setPlayerObserver(observer) {
+    this.playerObserver_?.forget();
+    this.playerObserver_ = observer;
+  }
+
+  forgetPlayer_() {
+    this.playerObserver_?.forget();
+  }
+
+  // Only the first player is observed; the controls move every player alike.
+  observePlayer_(players, walls, view) {
+    const observer = this.playerObserver_;
+    if (!observer) {
+      return;
+    }
+    if (!players.length) {
+      observer.forget();
+      return;
+    }
+    const {sprite, x: requestedX, y: requestedY} = players[0];
+    observer.observe({
+      sprite,
+      requestedX,
+      requestedY,
+      gravity: this.platformGravity_,
+      walls,
+      view,
+    });
   }
 
   // The walls, gathered once per frame — the footing commands ask several

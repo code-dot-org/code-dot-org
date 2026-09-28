@@ -34,14 +34,41 @@
 
   --dialog-panel-bg: var(--background-neutral-primary);
 
+  // Two columns: the pane on the left spans both rows; the details and the
+  // footer stack on the right with the footer at the bottom, so Generate
+  // ends level with the image. The body's usual padding and column are
+  // dropped in favor of the grid.
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 16px 20px;
+  padding: 16px;
+
+  .body {
+    display: contents;
+  }
+
+  .detailsPane {
+    grid-column: 2;
+  }
+
   .footer {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    padding: 0;
     border-top: none;
-    padding-top: 0;
   }
 
   // The image sits on the stage itself: no frame, and no checkerboard (that
   // is for the dialog, whose opaque panel would otherwise hide transparency).
+  // The pane sets the row's height, so it follows the screen: 290px is the
+  // header, paddings, footer and the guide pinned below; 512px shows a
+  // 1024px image at full resolution on a 2x display.
   .imagePane {
+    grid-row: 1 / -1;
+    width: clamp(220px, calc(100vh - 290px), 512px);
+    height: clamp(220px, calc(100vh - 290px), 512px);
     border: none;
   }
 

@@ -1,4 +1,8 @@
-import {VideoRecorder} from '@code-dot-org/lesson-deep-dive';
+import {
+  Challenge,
+  ChallengeResponse,
+  challengeResponseValidator,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -6,22 +10,14 @@ import {getClientApi} from '@cdo/apps/aichat/api/client';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  Challenge,
-  ChallengeResponse,
-  challengeResponseValidator,
-} from '../types';
-
 import {requestEvaluation} from './requestEvaluation';
+import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
 
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  // Owned by ChallengeBox, which drives the "Start Recording" / "Stop
-  // Recording" button in the bottom bar (the same button used to record a
-  // whiteboard challenge's audio explanation).
   isRecording: boolean;
   setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
   hasRecording: boolean;
@@ -30,9 +26,6 @@ interface VideoChallengeProps {
   lessonId: number;
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
-  // Reports whether the current recording can be submitted, and hands the
-  // top-bar "Submit for feedback" / "Start over" buttons this modality's
-  // submit and reset handlers.
   onSubmittableChange: (canSubmit: boolean) => void;
   submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
   resetRef: React.MutableRefObject<(() => void) | null>;
@@ -61,6 +54,11 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   // Bumped to remount the recorder with a clean slate on "Start over".
   const [resetKey, setResetKey] = useState(0);
   const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
+  const mode: VideoCanvasMode = isRecording
+    ? 'recording'
+    : hasRecording
+    ? 'preview'
+    : 'edit';
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
 
   // Initialize the ChatEventLogger with the current context, whenever it updates.
@@ -143,7 +141,6 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       const aichatClientApi = await getClientApi();
       const text = await aichatClientApi.transcribeAudio(recordedAudioBlob);
       return text;
-      // setTranscribedText(text);
     } catch (error) {
       console.log(error);
       return null;
@@ -179,9 +176,9 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
 
   return (
     <div className={styles.videoContainer}>
-      <VideoRecorder
+      <VideoCanvas
         key={resetKey}
-        isRecording={isRecording}
+        mode={mode}
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}

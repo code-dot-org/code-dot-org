@@ -40,7 +40,27 @@ describe('imageAdlibs manifest', () => {
     });
   });
 
-  it('names a combo by its type and set', () => {
+  it('names a combo by its type and set, and an object sprite by its own words', () => {
     expect(imageAdlibId('sprite', 'expanded')).toBe('sprite-expanded');
+    expect(imageAdlibId('sprite', 'expanded', 'character')).toBe(
+      'sprite-expanded'
+    );
+    expect(imageAdlibId('sprite', 'expanded', 'object')).toBe(
+      'object-expanded'
+    );
+    expect(imageAdlibId('sprite', 'treasure', 'object')).toBe(
+      'object-treasure'
+    );
+    // Only sprites have subjects.
+    expect(imageAdlibId('background', 'simple', 'object')).toBe(
+      'background-simple'
+    );
+  });
+
+  it('carries object words for both default sets and the treasure set', () => {
+    SETS.forEach(set => {
+      expect(imageAdlibFor('sprite', set, 'object')).toBeDefined();
+    });
+    expect(imageAdlibFor('sprite', 'treasure', 'object')).toBeDefined();
   });
 });

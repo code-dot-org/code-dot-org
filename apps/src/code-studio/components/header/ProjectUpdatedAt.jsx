@@ -74,7 +74,8 @@ class ProjectUpdatedAt extends React.Component {
 const styles = {
   container: {
     display: 'block',
-    width: 160,
+    // A floor, not a cap: in some locales the badge is wider than 160px.
+    minWidth: 160,
     height: 14,
     overflow: 'visible',
   },

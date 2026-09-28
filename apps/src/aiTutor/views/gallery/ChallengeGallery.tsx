@@ -1,17 +1,19 @@
-import React, {FC, useEffect, useState} from 'react';
-
-import HttpClient from '@cdo/apps/util/HttpClient';
-
 import {
   ChallengeResponse,
-  Reaction,
   challengeResponseListValidator,
-} from '../lessonDeepDive/types';
+  GallerySort,
+  Reaction,
+  TutorGalleryData,
+  unitCountsValidator,
+} from '@code-dot-org/lesson-deep-dive';
+import React, {FC, useEffect, useState} from 'react';
+
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
 import ProjectView from './ProjectView';
-import {GallerySort, TutorGalleryData, unitCountsValidator} from './types';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -128,6 +130,14 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
       cancelled = true;
     };
   }, [sectionId]);
+
+  if (
+    !experiments.isEnabledAllowingQueryString(
+      experiments.LESSON_TUTOR_CHALLENGE
+    )
+  ) {
+    return null;
+  }
 
   // Folds a response's new reaction tallies into the listing held from the
   // initial fetch, so a reaction made on the project page shows on that

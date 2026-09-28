@@ -456,6 +456,9 @@ export function createUsersApi(transport: Transport) {
             email: params.newEmail,
             hashed_email: params.hashedEmail,
             current_password: params.currentPassword,
+            ...(params.emailOptIn && {
+              email_preference_opt_in: params.emailOptIn,
+            }),
           },
         },
       });

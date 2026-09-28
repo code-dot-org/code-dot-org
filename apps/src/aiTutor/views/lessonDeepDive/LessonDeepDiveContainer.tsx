@@ -1,7 +1,6 @@
 import {
   LessonSummaryCard,
   LevelsAttemptedBox,
-  PreReviewBox,
   PreSkillsCheck,
   TimeSpentBox,
   TutorSummaryBox,
@@ -9,6 +8,7 @@ import {
   WelcomeBox,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
+import {useNavigate, useParams} from 'react-router-dom';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -29,12 +29,13 @@ const BOX_IDS = [
   'validated-levels',
   'lesson-summary',
   'reflection',
-  'pre-review',
   'intervention',
   'pre-skills-check',
   'skills-check',
   'tutor-summary',
 ] as const;
+
+type BoxId = (typeof BOX_IDS)[number];
 
 // Screens that use the story card layout — they handle their own navigation
 // and progress indicator internally.
@@ -136,7 +137,8 @@ interface LessonDeepDiveContainerProps {
 const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   lessonDeepDiveData,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const {screenId: screenParam} = useParams<{screenId: string}>();
+  const navigate = useNavigate();
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
     null
   );
@@ -151,18 +153,29 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     []
   );
 
+  // Validate the URL param against the known screen list; fall back to
+  // 'welcome' so a stale or hand-typed URL doesn't crash the container.
+  const currentScreenId: BoxId = (BOX_IDS as readonly string[]).includes(
+    screenParam ?? ''
+  )
+    ? (screenParam as BoxId)
+    : 'welcome';
+  const currentIndex = BOX_IDS.indexOf(currentScreenId);
+
   const getGradient = useCallback(
     (slotOffset: number) =>
       GRADIENT_CYCLE[(colorOffset + slotOffset) % GRADIENT_CYCLE.length],
     [colorOffset]
   );
   const goToNext = useCallback(() => {
-    setCurrentIndex(i => Math.min(i + 1, BOX_IDS.length - 1));
-  }, []);
+    const next = BOX_IDS[currentIndex + 1];
+    if (next) navigate(`/${next}`);
+  }, [currentIndex, navigate]);
 
   const goToPrev = useCallback(() => {
-    setCurrentIndex(i => Math.max(i - 1, 0));
-  }, []);
+    const prev = BOX_IDS[currentIndex - 1];
+    if (prev) navigate(`/${prev}`);
+  }, [currentIndex, navigate]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -174,11 +187,14 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   }, [goToNext, goToPrev]);
 
   useEffect(() => {
-    const screenId = BOX_IDS[currentIndex];
-    if (!STORY_SCREENS.has(screenId) || screenId === 'lesson-summary') return;
+    if (
+      !STORY_SCREENS.has(currentScreenId) ||
+      currentScreenId === 'lesson-summary'
+    )
+      return;
     const id = setTimeout(goToNext, STORY_CARD_DURATION_MS);
     return () => clearTimeout(id);
-  }, [currentIndex, goToNext]);
+  }, [currentScreenId, goToNext]);
 
   // Continue advances to the next box. When the student is on the reflection
   // step and hasn't submitted, this is a bypass: kick off podcast generation
@@ -186,7 +202,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   // something to play. Fire and forget — the server enqueues a background job
   // and PodcastsBox retrieves it later.
   const handleContinue = useCallback(() => {
-    if (BOX_IDS[currentIndex] === 'reflection' && !reflectionData) {
+    if (currentScreenId === 'reflection' && !reflectionData) {
       HttpClient.post(
         '/ai_student_podcasts/generate_podcast',
         JSON.stringify({
@@ -199,7 +215,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     }
     goToNext();
   }, [
-    currentIndex,
+    currentScreenId,
     reflectionData,
     lessonDeepDiveData.lessonId,
     lessonDeepDiveData.objectives,
@@ -210,8 +226,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setReflectionData(data);
   }, []);
 
-  // Returns the description of the first objective the student is struggling
-  // with or still working on, used as the focus topic in PreReviewBox.
+  // Returns the first struggling objective's description, shown as the focus
+  // topic on the intervention screen to personalise the "Let's get to work" heading.
   const getFocusTopic = useCallback(
     (data: ReflectionData | null): string | undefined => {
       if (!data) return undefined;
@@ -234,9 +250,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     return null;
   }
 
-  const currentScreenId = BOX_IDS[currentIndex];
   const isStoryScreen = STORY_SCREENS.has(currentScreenId);
-  const isFirst = currentIndex === 0;
   const isLast = currentIndex === BOX_IDS.length - 1;
 
   // 1-indexed slide position within the story sequence.
@@ -345,13 +359,6 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             initialValues={reflectionData}
           />
         );
-      case 'pre-review':
-        return (
-          <PreReviewBox
-            focusTopic={getFocusTopic(reflectionData)}
-            onNext={goToNext}
-          />
-        );
       case 'intervention':
         return (
           <InterventionBox
@@ -363,7 +370,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             objectives={lessonDeepDiveData.objectives}
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
-            onNext={goToNext}
+            focusTopic={getFocusTopic(reflectionData)}
           />
         );
       case 'pre-skills-check':
@@ -391,62 +398,11 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   return (
     <div className={styles.container} data-theme={'Dark'}>
-      {!isStoryScreen && (
-        <div className={styles.progressBar} aria-hidden="true">
-          <div
-            className={styles.progressFill}
-            style={{
-              width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
-            }}
-          />
-        </div>
-      )}
-      <div className={styles.topNav}>
-        <span className={styles.tutorWordmark}>Tutor+</span>
-        <button
-          type="button"
-          className={styles.arrowButton}
-          onClick={goToPrev}
-          aria-label="Previous"
-          aria-hidden={isFirst}
-          style={{visibility: isFirst ? 'hidden' : undefined}}
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M7 14l5-5 5 5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div className={styles.box}>
-        {renderBox()}
-        {!isStoryScreen && (
-          <div className={styles.dotsNav} aria-hidden="true">
-            {BOX_IDS.map((_, i) => (
-              <div
-                key={i}
-                className={`${styles.dot} ${
-                  i === currentIndex ? styles.dotActive : ''
-                }`}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      <div className={styles.box}>{renderBox()}</div>
 
       {!isLast &&
         !isStoryScreen &&
+        currentScreenId !== 'reflection' &&
         currentScreenId !== 'intervention' &&
         currentScreenId !== 'pre-skills-check' &&
         currentScreenId !== 'skills-check' && (

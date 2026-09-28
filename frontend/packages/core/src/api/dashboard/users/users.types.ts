@@ -82,6 +82,8 @@ export interface UpdateEmailParams {
   newEmail: string;
   hashedEmail: string;
   currentPassword: string;
+  /** Teachers only; students are never asked. */
+  emailOptIn?: EmailOptIn;
 }
 
 export interface UpdatePasswordParams {
@@ -106,10 +108,10 @@ export interface DeleteUserParams {
   password?: string;
 }
 
-/** '' means the opt-in question was left unanswered (legacy "update only"). */
-export type ParentEmailOptIn = 'yes' | 'no' | '';
+/** '' means the opt-in question was left unanswered; Rails ignores a blank answer. */
+export type EmailOptIn = 'yes' | 'no' | '';
 
 export interface UpdateParentEmailParams {
   parentEmail: string;
-  optIn: ParentEmailOptIn;
+  optIn: EmailOptIn;
 }

@@ -1,14 +1,20 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 // The full set of tabs for the SpriteLab2 full-screen UI.
-export const ALL_TABS = ['Images', 'World', 'Code', 'Play'] as const;
-export type Tab = (typeof ALL_TABS)[number];
+// In display order: the scene-editing tabs (grouped behind the scene
+// picker), then Images, then Play.
+export const ALL_TABS = ['World', 'Code', 'Images', 'Play'] as const;
+// 'Scenes' is the scene gallery: a full-workspace view reached from the
+// scene picker, with no button of its own in the bar.
+export type Tab = (typeof ALL_TABS)[number] | 'Scenes';
 
 // Redux mirror of the scenes (full data lives in project sources), so the
 // scene selector and the go-to-scene dropdown can read it reactively.
 export interface SceneMetadata {
   id: string;
   name: string;
+  /** A picture of the scene, when it has one (sceneThumbnails.ts). */
+  thumbnail?: string;
 }
 
 // A scene from a section-mate's project, offered by the go-to-external-scene

@@ -36,10 +36,10 @@ import {ImageSafetyError} from '../ai/images/imageSafety';
 import {defaultPixelGrid} from '../ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
-  IMAGE_TYPE_LABELS,
-  IMAGE_TYPES,
+  imageKindLabel,
   ImageGenerationMetadata,
   ImageStyle,
+  ImageSubject,
   ImageType,
 } from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
@@ -90,6 +90,18 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
 // default grid (64/32/16 for a sprite, 128/64/32 for a background).
 const PIXEL_SCALES = [1, 2, 4];
 
+// The Type choice: a sprite is offered as a character or an object.
+const IMAGE_KINDS: {
+  value: string;
+  imageType: ImageType;
+  subject?: ImageSubject;
+}[] = [
+  {value: 'background', imageType: 'background'},
+  {value: 'character', imageType: 'sprite', subject: 'character'},
+  {value: 'object', imageType: 'sprite', subject: 'object'},
+  {value: 'block', imageType: 'block'},
+];
+
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
 
@@ -105,6 +117,8 @@ export interface NewImageDraft {
 export interface ImageFormOptions {
   /** Level-imposed type for new images; the Type choice is locked to it. */
   lockedImageType?: ImageType;
+  /** Level-imposed subject for new sprites. */
+  lockedImageSubject?: ImageSubject;
   /** Offer this tier of adlib prompt combos (student form only). */
   adlibSet?: ImageAdlibSet;
   /** The adlib is the only prompt input: hide the free-text box. */
@@ -178,6 +192,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   thumbPixelated,
   create,
   lockedImageType,
+  lockedImageSubject,
   advanced,
   adlibSet,
   adlibOnly,
@@ -198,6 +213,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     create?.initial?.imageType ||
     'sprite';
   const [imageType, setImageType] = useState<ImageType>(initialImageType);
+  const [subject, setSubject] = useState<ImageSubject>(
+    existing?.generation?.subject || lockedImageSubject || 'character'
+  );
   const [style, setStyle] = useState<ImageStyle>(
     existing?.generation?.style ||
       create?.initial?.style ||
@@ -227,14 +245,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   // Counts generate runs; progress callbacks from older runs are dropped.
   const progressEpochRef = useRef(0);
-  // Sets are drawn from a fresh base, so the offer follows the 'new' source.
-  const canMakeSet = imageType === 'sprite' && source === 'new';
-  const makingSet = canMakeSet && characterSet;
-
   // Adlib prompt combos (student form): a sentence with word choices, an
   // alternative to typing. Typed text wins while present.
   const adlib =
-    adlibSet && !advanced ? imageAdlibFor(imageType, adlibSet) : undefined;
+    adlibSet && !advanced
+      ? imageAdlibFor(imageType, adlibSet, subject)
+      : undefined;
   const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>({});
   const [adlibText, setAdlibText] = useState('');
   const handleAdlibText = useCallback((text: string) => setAdlibText(text), []);
@@ -257,6 +273,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // sentence.
   const usingAdlib = !!adlib && !freeTextEntered;
   const promptText = usingAdlib ? adlibText : prompt.trim();
+  // Sets are for characters drawn from a fresh base and the level's words;
+  // an object, or a typed prompt, gets one picture.
+  // The checkbox stays checked after it is hidden, so the request also
+  // requires that the checkbox is being offered.
+  const canMakeSet =
+    imageType === 'sprite' &&
+    subject === 'character' &&
+    source === 'new' &&
+    !freeTextEntered;
+  const makingSet = canMakeSet && characterSet;
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   // The student form has no name field, so the name never holds it back.
@@ -297,7 +323,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         method: usingAdlib ? 'adlib' : 'freeText',
         imageType,
         ...(usingAdlib && adlibSet
-          ? {adlibId: imageAdlibId(imageType, adlibSet)}
+          ? {adlibId: imageAdlibId(imageType, adlibSet, subject)}
           : {}),
       },
       true
@@ -312,6 +338,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     try {
       const options: GenerateImageOptions = {
         imageType,
+        ...(imageType === 'sprite' && {subject}),
         style,
         temperature: levelToTemperature(temperatureLevel),
       };
@@ -373,6 +400,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     usingAdlib,
     adlibSet,
     imageType,
+    subject,
     style,
     pixelScale,
     temperatureLevel,
@@ -514,24 +542,36 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             )}
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
-                  level can lock the choice for new images too. */}
-              <fieldset
-                className={moduleStyles.radioGroup}
-                disabled={generating || !!existing || !!lockedImageType}
-              >
-                <legend>Type</legend>
-                {IMAGE_TYPES.map(type => (
-                  <RadioButton
-                    key={type}
-                    name="generation-type"
-                    value={type}
-                    label={IMAGE_TYPE_LABELS[type]}
-                    size="s"
-                    checked={imageType === type}
-                    onChange={() => setImageType(type)}
-                  />
-                ))}
-              </fieldset>
+                  level can lock the choice for new images too; the student
+                  form drops a locked group, which would only push Generate
+                  down. */}
+              {!(lockedImageType && !advanced) && (
+                <fieldset
+                  className={moduleStyles.radioGroup}
+                  disabled={generating || !!existing || !!lockedImageType}
+                >
+                  <legend>Type</legend>
+                  {IMAGE_KINDS.map(kind => (
+                    <RadioButton
+                      key={kind.value}
+                      name="generation-type"
+                      value={kind.value}
+                      label={imageKindLabel(kind.imageType, kind.subject)}
+                      size="s"
+                      checked={
+                        imageType === kind.imageType &&
+                        (kind.subject === undefined || subject === kind.subject)
+                      }
+                      onChange={() => {
+                        setImageType(kind.imageType);
+                        if (kind.subject) {
+                          setSubject(kind.subject);
+                        }
+                      }}
+                    />
+                  ))}
+                </fieldset>
+              )}
               <fieldset
                 className={moduleStyles.radioGroup}
                 disabled={generating}

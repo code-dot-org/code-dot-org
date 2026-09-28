@@ -60,6 +60,21 @@ describe('generateImage', () => {
     expect(generation.editedPrevious).toBeUndefined();
   });
 
+  it('records the subject it is given, and nothing when none is', async () => {
+    mockGenerateText.mockResolvedValue({
+      files: [{mediaType: 'image/jpeg', uint8Array: new Uint8Array([1])}],
+    });
+    const plain = await generateImage('a beach', OPTIONS);
+    expect(plain.generation.subject).toBeUndefined();
+    // The form passes a subject for sprites only; generateImage itself
+    // records whatever it is handed.
+    const withSubject = await generateImage('a beach', {
+      ...OPTIONS,
+      subject: 'object',
+    });
+    expect(withSubject.generation.subject).toBe('object');
+  });
+
   it('keeps the last image file: a thinking model sends its drafts first', async () => {
     mockGenerateText.mockResolvedValue({
       files: [

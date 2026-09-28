@@ -407,7 +407,7 @@ module Api::V1::Pd
       sign_in @program_manager
       Pd::Application::TeacherApplicationMailer.expects(:accepted).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
+        returns(mock(:mail, deliver_now: nil))
 
       post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
         status: 'accepted'

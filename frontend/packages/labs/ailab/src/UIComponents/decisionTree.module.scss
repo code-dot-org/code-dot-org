@@ -1,0 +1,87 @@
+.decisionTree {
+  clear: both;
+  padding-top: 20px;
+}
+
+.header {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.scroll {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.canvas {
+  position: relative;
+  color: var(--text-neutral-black-fixed, black);
+}
+
+.edges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+  stroke: var(--neutral-gray-70, grey);
+  stroke-width: 1.5;
+}
+
+.nodeSlot {
+  position: absolute;
+  width: var(--tree-node-width);
+  height: var(--tree-node-height);
+}
+
+.node {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.question {
+  background-color: var(--background-neutral-white-fixed, white);
+  border-color: var(--tree-question-color);
+}
+
+.answer {
+  background-color: var(--tree-answer-color);
+  border-color: var(--tree-answer-color);
+}
+
+.nodeText {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.branch {
+  position: absolute;
+  top: calc(-1 * var(--tree-branch-offset));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 18px;
+  line-height: 16px;
+  padding: 0 6px;
+  border: 1px solid var(--neutral-gray-70, grey);
+  border-radius: 9px;
+  background-color: var(--background-neutral-white-fixed, white);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

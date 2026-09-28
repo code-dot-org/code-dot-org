@@ -178,7 +178,7 @@ function installCategory(blockly) {
       this.setStyle(BlockStyles.LOOP);
       this.setInputsInline(true);
 
-      var customDropdown = CdoFieldDropdown([
+      var customDropdown = new CdoFieldDropdown([
         ['Variables', 'VARIABLE'],
         ['Functions', 'PROCEDURE'],
         ['Behaviors', 'Behavior'],

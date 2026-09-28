@@ -1,3 +1,5 @@
+import {get as getSources} from '@cdo/apps/lab2/projects/sourcesApi';
+import {sourceResponseValidatorFor} from '@cdo/apps/lab2/responseValidators';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {Panel} from '@cdo/apps/panels/types';
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
@@ -216,8 +218,10 @@ export async function saveLessonActivities(
   });
 }
 
-// Re-export the lab2 sources `get` helper under a clearer name. The
-// page uses the response as additional context for the AI, not state
-// it round-trips — formatTargetProject narrows the typed result down
-// to MultiFileSource files.
-export {get as loadProjectSources} from '@cdo/apps/lab2/projects/sourcesApi';
+// The lab2 sources `get` helper under a clearer name. The page uses the
+// response as additional context for the AI, not state it round-trips.
+// The channel may belong to any lab, so only the presence of a source is
+// validated here; formatTargetProject narrows the result down to
+// MultiFileSource files.
+export const loadProjectSources = (channelId: string) =>
+  getSources(channelId, sourceResponseValidatorFor(null));

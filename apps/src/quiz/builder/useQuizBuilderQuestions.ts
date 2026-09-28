@@ -9,11 +9,6 @@ import {
   QuizQuestionEditableFields,
 } from './types';
 
-// A newly created question needs placeholder-but-valid content:
-// MultipleChoiceQuestion rejects a blank stem, fewer than two choices, or
-// a correct_choice_id naming none of them. Replacing these is the job of
-// the per-question editor, which does not exist yet - for now a create
-// just drops a valid stub into the outline.
 const NEW_QUESTION_DEFAULTS = {
   questionName: 'New question',
   stem: 'New question',
@@ -34,10 +29,15 @@ export default function useQuizBuilderQuestions(
   const [isLoading, setIsLoading] = useState(true);
   const [isCreating, setIsCreating] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // null for load/create, which can't fail because of anything about an
+  // existing question - a caller uses this to tell a general error (show
+  // it once, globally) from one that belongs on a specific question's card.
+  const [errorQuestionId, setErrorQuestionId] = useState<number | null>(null);
 
   const load = useCallback(async () => {
     setIsLoading(true);
     setError(null);
+    setErrorQuestionId(null);
     try {
       const response = await HttpClient.get(
         `/levels/${levelId}/quiz_configuration`
@@ -58,6 +58,7 @@ export default function useQuizBuilderQuestions(
   const createQuestion = useCallback(async () => {
     setIsCreating(true);
     setError(null);
+    setErrorQuestionId(null);
     try {
       const response = await HttpClient.post(
         `/levels/${levelId}/quiz_question_placements`,
@@ -82,6 +83,7 @@ export default function useQuizBuilderQuestions(
   const updateQuestion = useCallback(
     async (id: number, payload: QuizQuestionEditableFields) => {
       setError(null);
+      setErrorQuestionId(null);
       try {
         const response = await HttpClient.put(
           `/quiz_questions/${id}?quizLevelId=${levelId}`,
@@ -96,6 +98,7 @@ export default function useQuizBuilderQuestions(
         return updated.id;
       } catch (e) {
         setError(await networkErrorMessage(e));
+        setErrorQuestionId(id);
         return undefined;
       }
     },
@@ -108,6 +111,7 @@ export default function useQuizBuilderQuestions(
   const removeQuestion = useCallback(
     async (id: number) => {
       setError(null);
+      setErrorQuestionId(null);
       try {
         await HttpClient.delete(
           `/levels/${levelId}/quiz_question_placements/${id}`,
@@ -117,6 +121,7 @@ export default function useQuizBuilderQuestions(
         return true;
       } catch (e) {
         setError(await networkErrorMessage(e));
+        setErrorQuestionId(id);
         return false;
       }
     },
@@ -128,6 +133,7 @@ export default function useQuizBuilderQuestions(
     isLoading,
     isCreating,
     error,
+    errorQuestionId,
     createQuestion,
     updateQuestion,
     removeQuestion,
