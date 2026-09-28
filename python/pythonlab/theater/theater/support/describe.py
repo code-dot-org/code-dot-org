@@ -110,7 +110,8 @@ def _transcript(frames, durations):
     blocks.append("\n".join([heading] + lines))
   remaining = len(frames) - len(blocks)
   if remaining:
-    blocks.append(f"and {remaining} more frames.")
+    plural = "frame" if remaining == 1 else "frames"
+    blocks.append(f"and {remaining} more {plural}.")
   return "\n\n".join(blocks)
 
 
@@ -124,6 +125,9 @@ def _frame_lines(frame, onscreen=False):
   for action in frame:
     if action.type is SceneActionType.CLEAR_SCENE:
       lines.append(f"Cleared to {_color_name(action.color)}.")
+      # Drawings recorded earlier in this frame are wiped too; sound is not.
+      for label in _PERSISTENT:
+        groups[label].clear()
       onscreen = False
       continue
     phrase = _phrase(action)

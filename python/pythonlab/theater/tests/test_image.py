@@ -75,3 +75,14 @@ def test_copy_keeps_the_filename(tmp_path):
   path = tmp_path / "cat.png"
   PILImage.new("RGBA", (10, 10)).save(path)
   assert Image(Image(str(path))).get_filename() == str(path)
+
+
+def test_editing_an_image_drops_the_filename(tmp_path):
+  path = tmp_path / "cat.png"
+  PILImage.new("RGBA", (10, 10)).save(path)
+  cleared = Image(str(path))
+  cleared.clear(Color("blue"))
+  assert cleared.get_filename() is None
+  painted = Image(str(path))
+  painted.set_pixel(1, 1, Color("red"))
+  assert painted.get_filename() is None

@@ -63,10 +63,12 @@ class Image:
     existing = self._pil.getpixel((x, y))
     alpha = existing[3] if len(existing) == 4 else 255
     self._pil.putpixel((x, y), (r, g, b, alpha))
+    self._filename = None
 
   def clear(self, color):
     r, g, b = as_color(color).to_rgb_tuple()
     self._pil.paste((r, g, b, 255), (0, 0, self._pil.width, self._pil.height))
+    self._filename = None
 
   def to_pil(self):
     """Return the backing Pillow image (RGBA). Internal use for rendering."""

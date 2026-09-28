@@ -46,9 +46,28 @@ def test_each_frame_is_headed_with_how_long_it_holds():
 def test_only_a_leading_clear_is_folded_into_the_summary():
   scene = Scene()
   scene.clear("red")
+  scene.clear("blue")
+  scene.draw_rectangle(0, 0, 10, 10)
+  assert _transcript(scene) == "Cleared to blue.\nShapes: black rectangle."
+
+
+def test_a_clear_drops_what_the_same_frame_drew_before_it():
+  scene = Scene()
   scene.draw_rectangle(0, 0, 10, 10)
   scene.clear("blue")
-  assert _transcript(scene) == "Cleared to blue.\nShapes: black rectangle."
+  scene.pause(0.25)
+  scene.draw_ellipse(0, 0, 10, 10)
+  assert _transcript(scene) == (
+    "Frame 1 of 2, 0.25 seconds\nCleared to blue.\n\n"
+    "Frame 2 of 2, final\nShapes: black ellipse."
+  )
+
+
+def test_a_clear_keeps_sound_the_same_frame_already_played():
+  scene = Scene()
+  scene.play_note(60, 0.25)
+  scene.clear("blue")
+  assert _transcript(scene) == "Cleared to blue.\nSound: piano C4."
 
 
 def test_a_later_frame_says_added_for_drawing_but_not_for_sound():
@@ -180,6 +199,13 @@ def test_repeated_sounds_put_the_count_after_the_name():
   scene.play_note(60, 0.25)
   scene.play_note(60, 0.25)
   assert _transcript(scene) == "Sound: piano C4 2 times."
+
+
+def test_one_frame_past_the_cutoff_is_singular():
+  scene = Scene()
+  for _ in range(50):
+    scene.pause(0.1)
+  assert _transcript(scene).endswith("and 1 more frame.")
 
 
 def test_a_long_list_of_drawings_is_cut_off():
