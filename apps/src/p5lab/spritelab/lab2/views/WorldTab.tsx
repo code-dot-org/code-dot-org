@@ -162,7 +162,7 @@ interface WorldTabProps {
   sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
-  // The one image the palette offers (level_mode.paletteOnly, placeOne).
+  // The one image the palette offers: a world level's image of its kind.
   only?: string;
   // Placing one thing (level_mode.placeOne): no Erase, the image goes on an
   // empty cell, and choosing another cell moves it there through onMoveCell.

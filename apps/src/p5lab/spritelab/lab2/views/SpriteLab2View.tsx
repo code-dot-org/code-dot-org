@@ -1413,13 +1413,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId, scheduleRun, worldFor]
   );
 
-  // A level about one image (level_mode.paletteOnly, placeOne) offers the
-  // palette only that image.
+  // A world level about one kind of image offers the palette only the
+  // level's image of that kind.
   const placeOne = !!levelProperties.levelMode?.placeOne;
   const paletteOnlyImage =
-    placeOne || levelProperties.levelMode?.paletteOnly
-      ? focusImageName
-      : undefined;
+    levelProperties.levelMode?.kind === 'world' ? focusImageName : undefined;
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) => {
       updateSources(prev => ({
