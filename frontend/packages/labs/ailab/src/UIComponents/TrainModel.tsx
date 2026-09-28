@@ -2,7 +2,7 @@
 import {useState, useEffect, useRef} from 'react';
 
 import {imageUrl} from '../assetPath';
-import {styles, getFadeOpacity} from '../constants';
+import {getFadeOpacity} from '../constants';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getTableData} from '../redux';
@@ -11,6 +11,9 @@ import train from '../train';
 
 import {TrainingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
+
+import shared from '../shared.module.scss';
+import styles from './trainModel.module.scss';
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -119,29 +122,19 @@ const TrainModel = () => {
   return (
     <div
       id="train-model"
+      className={`${shared.panel} ${shared.scene}`}
       style={{
-        ...styles.panel,
-        justifyContent: 'center',
-        backgroundSize: 'cover',
-        backgroundPosition: '50% 50%',
         backgroundImage:
           'url(' + imageUrl('results-background-light.jpg') + ')',
       }}
     >
-      <div style={styles.statementWithBackgroundAbsolute}>
-        {I18n.t('trainModelHeading')}
-      </div>
+      <div className={shared.sceneHeading}>{I18n.t('trainModelHeading')}</div>
 
-      <div
-        style={{
-          ...styles.trainModelDataTable,
-          opacity: tableOpacity,
-        }}
-      >
+      <div className={shared.sceneTable} style={{opacity: tableOpacity}}>
         <DataTable reducedColumns={true} startingRow={startingRow} />
       </div>
 
-      <div style={styles.trainModelContainer}>
+      <div className={styles.animationArea}>
         {showAnimation && (
           <div
             style={{
@@ -158,19 +151,18 @@ const TrainModel = () => {
         )}
       </div>
 
-      <div style={styles.trainModelBotContainer}>
-        <div className="ailab-image-hover" style={styles.trainBot}>
+      <div className={styles.botContainer}>
+        <div className={`ailab-image-hover ${shared.bot}`}>
           <img
             src={imageUrl('ai-bot/ai-bot-head.png')}
-            style={{
-              ...styles.trainBotHead,
-              ...(headOpen && styles.trainBotOpen),
-            }}
+            className={
+              headOpen ? `${shared.botHead} ${styles.headOpen}` : shared.botHead
+            }
             alt={I18n.t('aiBotHeadAltText')}
           />
           <img
             src={imageUrl('ai-bot/ai-bot-body.png')}
-            style={styles.trainBotBody}
+            className={shared.botBody}
             alt={I18n.t('aiBotBodyAltText')}
           />
         </div>

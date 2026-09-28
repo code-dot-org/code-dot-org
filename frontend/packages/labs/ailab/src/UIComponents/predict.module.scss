@@ -1,0 +1,20 @@
+.botResult {
+  border-radius: 0;
+  background-color: var(--ailab-background);
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.botColumn {
+  float: left;
+  width: 20%;
+}
+
+.bot {
+  width: 100%;
+}
+
+.prediction {
+  float: right;
+  width: 75%;
+}

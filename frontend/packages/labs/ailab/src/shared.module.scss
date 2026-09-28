@@ -60,3 +60,48 @@
   text-align: right;
   font-size: 12px;
 }
+
+.scene {
+  justify-content: center;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.sceneHeading {
+  line-height: 38px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.sceneTable {
+  width: 30%;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.bot {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  transform-origin: 25%;
+}
+
+.botHead {
+  transition: transform 500ms;
+  left: 3%;
+  width: 43%;
+  top: 0%;
+  position: absolute;
+  direction: ltr;
+  transform-origin: bottom right;
+}
+
+.botBody {
+  width: 49%;
+  margin-top: 30%;
+  direction: ltr;
+}
