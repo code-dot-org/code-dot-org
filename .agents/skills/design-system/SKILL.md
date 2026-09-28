@@ -28,9 +28,9 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 - Font variables are in `@code-dot-org/component-library-styles/fontVariables.css`.
 
 ## Themes and brands
-- **`CodeaiTheme` is the default theme.** The theme is resolved per page from the `data-brand` attribute on `<html>`, which Rails sets from `Cdo::Brand`. An absent or unrecognized value means `codeai-next`, which is `CodeaiTheme`. `CdoTheme` is the legacy Code.org theme. `Cdo::Brand` stopped serving `code` and `codeai` in #74538, so no page in production reaches it; the values survive only in the JS lookup tables and the Storybook brand toolbar. Assume CodeAI unless you know otherwise.
-- `@code-dot-org/component-library/themes` exports `CdoTheme` (`src/themes/code.org/`), `CodeaiTheme` (`codeai/`) and `CodeaiAuditTheme` (`codeai-audit/`, all pink, for spotting surfaces that bypass the token system). `apps/` does the lookup in `apps/src/util/createReactRoot.tsx`; `frontend/` packages use `src/themes/getMuiThemeForBrand.ts`. The two agree on the default.
-- A shell that reads `data-brand` itself (rather than taking it from Rails) must pass the value through `resolveBrand` before both setting the attribute and picking the theme. The CSS matches the attribute exactly, so an unrecognized value left in place puts the tokens on one brand and the palette on another.
+- **`CodeaiTheme` is the live theme.** `CdoTheme` is the legacy Code.org theme; `CodeaiAuditTheme` is a QA utility — all pink, so surfaces that bypass the token system stand out. Neither is served in production; assume CodeAI unless you know otherwise.
+- The theme follows the `data-brand` attribute Rails sets on `<html>`. `apps/` and `frontend/` each resolve it and agree on the default; see `src/themes/`.
+- A shell that reads `data-brand` itself must pass it through `resolveBrand` before setting the attribute and picking the theme; otherwise an unrecognized value puts the tokens and the palette on different brands.
 - Only `code.org/` holds `styleOverrides/` and `muiAugmentation.ts`. The brand themes come from `createBrandTheme`, which deep-merges those in and changes only the palette — so typography, component overrides and type augmentation are shared by every theme despite living under `code.org/`. An override you add lands in all three; check it in each.
 - Semantic color tokens resolve through **both** `data-brand` and `data-theme` (light/dark). A token that reads correctly in the default pair can fail in another — check every brand and theme the surface can actually reach.
 - The per-brand token files (`brandCodeAiNext.css` and friends) are generated. Edit the canonical source named in the file header and re-run its script; never hand-edit the generated file.
@@ -38,7 +38,7 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 ## Styling
 - Use **SCSS modules** (`.module.scss`) for all component styling. Never use inline styles or global styles.
 - **Color priority**: always use semantic colors (`@code-dot-org/component-library-styles/colors.css`) first, then primitive colors (`primitiveColors.css`) second, then other colors only as last resort.
-- Semantic colors are CSS variables (e.g. `var(--text-neutral-primary)`) defined in `component-library-styles`, not in the MUI themes. `colors.css` holds the **legacy** Code.org set under `[data-theme='Light']` and `[data-theme='Dark']`; the default CodeAI brand takes its values from `colors_codeAi.css`, generated into `brandCodeAiNext.css`. Changing a token for the default brand therefore means editing the CodeAI source, not `colors.css` — some CADS tokens, `--background-brand-primary` among them, exist only there.
+- Semantic colors are CSS variables from `component-library-styles`, not from the MUI themes. Use the semantic names at call sites; to change what one renders, edit the CADS source that generates the live brand rather than the `:root` defaults (see Themes and brands).
 - Radii and spacing come from `shapeAndSpacingVariables.css`; both it and the color files are imported globally by `createReactRoot`.
 - **Never rely on stylesheet load order** for specificity. Always use CSS selector specificity rules.
 - Override component styles via parent element selectors or component-specific class selectors in SCSS modules.
