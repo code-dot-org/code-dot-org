@@ -3,25 +3,20 @@ import {uniqueFileName} from '@codebridge/utils';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
-  isUnifiedApi,
-  SaveToBackpackApi,
-} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
-import {
   backpackSaveError,
   notifySaved,
   notifySaving,
   notifyWithToast,
 } from '@cdo/apps/sharedComponents/backpack/backpackToasts';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 interface SaveImageToBackpackParams {
-  backpackApi: SaveToBackpackApi;
+  backpackApi: UnifiedBackpackClientApi;
   /** Image to copy into the backpack. */
   url: string;
   /** Name to save under, before deduplication. */
   fileName: string;
   showToast: ShowToast;
-  /** Error reporting for the legacy backpack, which does not use toasts. */
-  onLegacyError: () => void;
 }
 
 /**
@@ -33,33 +28,22 @@ export const saveImageToBackpack = async ({
   url,
   fileName,
   showToast,
-  onLegacyError,
 }: SaveImageToBackpackParams) => {
-  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
   const notify = notifyWithToast(showToast);
 
-  // The unified backpack reports failures as toasts; the legacy backpack keeps
-  // its notification in the chat.
   const reportError = (
     toastMessage: string,
     logMessage: string,
     error?: Error
   ) => {
-    if (unifiedApi) {
-      notify('danger', toastMessage);
-    } else {
-      onLegacyError();
-    }
+    notify('danger', toastMessage);
     Lab2Registry.getInstance().getMetricsReporter().logError(logMessage, error);
   };
 
-  // The unified backpack writes to the universal backpack, so a name taken in any
-  // backpack collides.
+  // Writes go to the universal backpack, so a name taken in any backpack collides.
   let existingFileNames: string[];
   try {
-    existingFileNames = isUnifiedApi(backpackApi)
-      ? Object.values(await backpackApi.getFileLists()).flat()
-      : await backpackApi.getFileList();
+    existingFileNames = Object.values(await backpackApi.getFileLists()).flat();
   } catch (error) {
     reportError(
       backpackSaveError(fileName),
@@ -70,9 +54,7 @@ export const saveImageToBackpack = async ({
   }
 
   const targetName = uniqueFileName(fileName, existingFileNames, '-');
-  if (unifiedApi) {
-    notifySaving(notify, targetName);
-  }
+  notifySaving(notify, targetName);
 
   // The progress toast above never expires on its own, so every path from here has
   // to end in a toast that replaces it.
@@ -100,7 +82,5 @@ export const saveImageToBackpack = async ({
     return;
   }
 
-  if (unifiedApi) {
-    notifySaved(notify, targetName);
-  }
+  notifySaved(notify, targetName);
 };

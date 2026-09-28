@@ -2,12 +2,10 @@ import {openSaveToBackpackPrompt} from '@cdo/apps/codebridge/FileBrowser/prompts
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {
   getDialogConfirmationMock,
-  getBackpackAPIMock,
   getUnifiedBackpackAPIMock,
 } from '../../test_utils';
 
@@ -31,9 +29,7 @@ describe('openSaveToBackpackPrompt', () => {
     } as ProjectFile;
   });
 
-  const runSaveToBackpackPrompt = (
-    backpackApi: BackpackClientApi | UnifiedBackpackClientApi
-  ) =>
+  const runSaveToBackpackPrompt = (backpackApi: UnifiedBackpackClientApi) =>
     openSaveToBackpackPrompt({
       dialogControl: dialogMock,
       backpackApi,
@@ -41,85 +37,6 @@ describe('openSaveToBackpackPrompt', () => {
       showToast: toastMock,
       sendLab2AnalyticsEvent: analyticsMock,
     });
-
-  describe('with a per-lab backpack api', () => {
-    let mockBackpackApi: BackpackClientApi;
-
-    beforeEach(() => {
-      mockBackpackApi = getBackpackAPIMock(); // getFileList returns empty list.
-    });
-
-    it('should save a file to the backpack', async () => {
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
-        'project_file.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-    });
-
-    it('should not save a file when canceled', async () => {
-      dialogMock = getDialogConfirmationMock('cancel');
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).not.toHaveBeenCalled();
-    });
-
-    it('should rename file when duplicate exists and rename (neutral) is selected', async () => {
-      mockBackpackApi = getBackpackAPIMock(['project_file.py']); // getFileList returns ['project_file.py'].
-      dialogMock = getDialogConfirmationMock('neutral');
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
-        'project_file_1.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-    });
-
-    it('should replace file when duplicate exists and replace (confirm) is selected', async () => {
-      mockBackpackApi = getBackpackAPIMock(['project_file.py']);
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-      expect(mockBackpackApi.saveFile).toHaveBeenCalledWith(
-        'project_file.py',
-        'This is project_file.py.',
-        expect.any(Function),
-        expect.any(Function)
-      );
-    });
-
-    it('should report a failed save in a dialog, not a toast', async () => {
-      (mockBackpackApi.saveFile as jest.Mock).mockImplementation(
-        async (filename, contents, onError) => onError(new Error('save boom'))
-      );
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(dialogMock.showDialog).toHaveBeenCalledWith(
-        expect.objectContaining({type: DialogType.GenericAlert})
-      );
-      expect(toastMock).not.toHaveBeenCalled();
-    });
-
-    it('should not delete anything, since the per-lab api replaces in place', async () => {
-      mockBackpackApi = getBackpackAPIMock(['project_file.py']);
-
-      await runSaveToBackpackPrompt(mockBackpackApi);
-
-      expect(mockBackpackApi.deleteFiles).not.toHaveBeenCalled();
-    });
-  });
 
   describe('with the unified backpack api', () => {
     it('should save a new file to the universal backpack', async () => {
