@@ -87,7 +87,6 @@ describe('UnifiedBackpackPanel', () => {
           saveFileToProject={jest.fn()}
           createNewProjectFile={jest.fn()}
           findIdForFileName={() => undefined}
-          openPanelCallback={jest.fn()}
           supportedFileTypes={['png']}
           backpackRefreshKey={0}
           saveToBackpackButton={

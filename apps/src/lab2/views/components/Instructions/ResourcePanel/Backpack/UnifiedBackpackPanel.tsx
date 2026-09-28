@@ -37,7 +37,6 @@ const fileKeyFor = (appType: string, fileName: string) =>
   `${appType}/${fileName}`;
 
 interface UnifiedBackpackPanelProps extends BackpackProps {
-  openPanelCallback: () => void;
   backpackRefreshKey: number;
 }
 
