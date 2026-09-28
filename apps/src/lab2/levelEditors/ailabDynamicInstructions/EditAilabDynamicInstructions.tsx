@@ -142,11 +142,19 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
           when you save: {state.removed.join('; ')}
         </Typography>
       )}
-      <Typography variant="h5" className={moduleStyles.sectionHeading}>
+      <Typography
+        component="h2"
+        variant="h5"
+        className={moduleStyles.sectionHeading}
+      >
         Screens
       </Typography>
       {SCREEN_FIELDS.map(renderField)}
-      <Typography variant="h5" className={moduleStyles.sectionHeading}>
+      <Typography
+        component="h2"
+        variant="h5"
+        className={moduleStyles.sectionHeading}
+      >
         Student actions
       </Typography>
       {ACTION_FIELDS.map(renderField)}
