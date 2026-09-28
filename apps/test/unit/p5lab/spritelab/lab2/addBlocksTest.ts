@@ -5,12 +5,18 @@ import {
   placeBelow,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 
-const placeholder = (like: string) => ({
+const placeholder = (like: string, fields?: Record<string, string>) => ({
   type: 'spritelab2_placeholder',
-  extraState: {like: {type: like}},
+  extraState: {like: {type: like, ...(fields && {fields})}},
 });
 const SAY = placeholder('gamelab_spriteSay');
 const GO_TO_SCENE = placeholder('spritelab2_goToScene');
+const SPRITE_LEFT = placeholder('spritelab2_makeSpriteAtPosition', {
+  POSITION: 'left',
+});
+const SPRITE_RIGHT = placeholder('spritelab2_makeSpriteAtPosition', {
+  POSITION: 'right',
+});
 
 // A stack of block-likes, top first. Each entry is a block's bottom
 // connection: `shadow` is the placeholder recorded there, `next` whether a
@@ -108,6 +114,21 @@ describe('addBlocks', () => {
     // when run -> say (the student's block over the say placeholder).
     const filled = stack({shadow: SAY, next: true}, {});
     expect(freeStackEnd(filled, SAY)).toBeNull();
+  });
+
+  it('tells placeholders of one block type apart by their fields', () => {
+    // when run -> make new sprite (left, filled) -> say (filled): the
+    // right-hand sprite's placeholder still hangs at the end.
+    const filled = stack(
+      {shadow: SPRITE_LEFT, next: true},
+      {shadow: SAY, next: true},
+      {}
+    );
+    const end = filled.nextConnection
+      .targetBlock()
+      .nextConnection.targetBlock();
+    expect(freeStackEnd(filled, SPRITE_RIGHT)).toBe(end.nextConnection);
+    expect(freeStackEnd(filled, SPRITE_LEFT)).toBeNull();
   });
 
   it('hangs a different placeholder under a filled one', () => {

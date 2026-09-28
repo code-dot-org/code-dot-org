@@ -65,15 +65,17 @@ export function placeBelow(stacks: {x: number; y: number; height: number}[]): {
 
 type Shadow = BlocklyCore.serialization.blocks.State;
 
-// Placeholders are told apart by the block they stand in for.
-function likeType(shadow: Shadow | null | undefined): string | undefined {
-  const like = (shadow?.extraState as {like?: {type?: string}} | undefined)
-    ?.like;
-  return like?.type;
+// Placeholders are told apart by the block they stand in for, fields
+// included: two levels may each want a make-new-sprite, one left, one right.
+function likeKey(shadow: Shadow | null | undefined): string | undefined {
+  const like = (
+    shadow?.extraState as {like?: {type?: string; fields?: unknown}} | undefined
+  )?.like;
+  return like && JSON.stringify([like.type, like.fields ?? null]);
 }
 
 function samePlaceholder(a: Shadow | null | undefined, b: Shadow): boolean {
-  return !!a && a.type === b.type && likeType(a) === likeType(b);
+  return !!a && a.type === b.type && likeKey(a) === likeKey(b);
 }
 
 /**

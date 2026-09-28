@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your new character on the right.** Use **make new sprite** with position **right** - they'll turn to face your main character. Your changes run live in the preview. Press **Play** to see them together."
+        "text": "**Add your new character on the right.** Drag **make new sprite** with position **right** onto the dotted outline under your code - they'll turn to face your main character. Your changes run live in the preview. Press **Play** to see them together."
       },
       {
         "text": "**Now there are two.** Continue when you're ready.",
@@ -44,7 +44,7 @@
         }
       }
     ],
-    "long_instructions": "# Add your second character\nUse **make new sprite** with position **right** to put your new character on the right of the scene.",
+    "long_instructions": "# Add your second character\nDrag **make new sprite** with position **right** onto the dotted outline under your code to put your new character on the right of the scene.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -56,7 +56,23 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_makeSpriteAtPosition",
+              "fields": {
+                "POSITION": "right"
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>
