@@ -185,8 +185,8 @@ parsed.
 
 - `canChangeLevelInPage`: apps navigates in page only between two Lab2 levels
   and never on a `/summary` page; otherwise it cleans up the project manager
-  and does a full navigation. The port always navigates in page. A host that
-  mixes Lab2 and legacy levels in one lesson will push a URL and set
+  and does a full navigation. The port always navigated in page. A host that
+  mixes Lab2 and legacy levels in one lesson would push a URL and set
   `currentLevelId` for a level it cannot render.
 - The navigation confirmation hook
   (`Lab2Registry#getLevelNavigationConfirmation`, #72140, the AI Tutor
@@ -194,9 +194,38 @@ parsed.
 - `notifyLevelChange` (the `LevelChangeRequested` lifecycle event) and
   `setupNavigationHandler` (browser back and forward).
 
-These are couplings to apps singletons the package cannot import. They need
-an injection point, a host-supplied hook or the host doing the navigation
-itself, rather than silent removal.
+These were couplings to apps singletons the package cannot import. All are
+fixed through host hooks, installed with `configureLevelNavigation` in
+`src/levelNavigation.ts`. It is a module-level registry, like
+`milestoneTimer`, rather than something passed at store construction: core
+builds the one store, with no thunk `extraArgument`, and apps changes its
+confirmation hook while the page runs (the AI Tutor sets and clears it). A
+call replaces only the hooks it names; `undefined` removes one.
+
+| Apps coupling                                 | Hook                | Default                              |
+| --------------------------------------------- | ------------------- | ------------------------------------ |
+| `canChangeLevelInPage`                        | `canNavigateInPage` | `canChangeLevelInPage`, ported as is |
+| `Lab2Registry#getLevelNavigationConfirmation` | `confirmNavigation` | none                                 |
+| `notifyLevelChange`                           | `onLevelChange`     | none                                 |
+| `ProjectManager#cleanUp` before a full reload | `beforeLeavingPage` | none                                 |
+| `navigateToHref(getBubbleUrl(path, …, true))` | `leavePage`         | assigns `window.location.href`       |
+
+The URL for a full navigation comes from `levelPageUrl`, which keeps the
+current query string except `version`, as `getBubbleUrl` did.
+`setupNavigationHandler` is ported as
+`installLevelNavigationHandler(store, initialLevelId)`, which returns an
+uninstaller; apps read the store from its global `getStore()`.
+
+Differences from apps:
+
+- `navigateToLevelId` returns before asking for confirmation when the
+  requested level is the current one. Apps asked first.
+- A level change through the back or forward button restarts
+  `milestoneTimer`, as an in-page change already did. Apps did not, so the
+  time on one level was reported against the next.
+- `navigateToLevelId` and `navigateToNextLevel` return promises that settle
+  once navigation is done, so `continueOrFinishLesson` awaits them. They
+  previously returned before the confirmation was answered.
 
 ### 3.5 Selectors not ported
 
@@ -252,7 +281,7 @@ overview package is an open scoping decision.
     from. The finish dialog was apps' `shareLab2Project`; it is a host
     callback now, and without one a finish URL is followed directly.
     Navigation to the next level is still the package's
-    `navigateToNextLevel`, with the limits in 3.4.
+    `navigateToNextLevel`, which follows the hooks in 3.4.
 
 ### 3.7 Type-level divergences
 
@@ -396,9 +425,9 @@ branch and the README says so until it is made.
 4. Done. Restore `clear(isChangingLevels)` and port `ValidationTracker`,
    `TestResultValidator`, `ProgressContainer` and `continueOrFinishLesson`.
    `validationState` went to the progress slice; see 3.6.
-5. Replace the apps-singleton couplings in navigation with host hooks
-   (`canNavigateInPage`, `confirmNavigation`, `onLevelChange`) supplied at
-   store or container construction.
+5. Done. Replace the apps-singleton couplings in navigation with host hooks.
+   They are a module-level registry rather than store or container
+   arguments; see 3.4.
 6. Add `validations` to core's `LevelPropertiesBaseSchema`, with `Validation`
    and `Condition` schemas, so labs stop narrowing `unknown`.
 7. Decide the scope of the selectors in 3.5 (level page only, or overview

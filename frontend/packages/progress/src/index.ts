@@ -1,6 +1,14 @@
 export {default as ConditionsChecker} from './ConditionsChecker';
 export {MilestoneTimer, milestoneTimer} from './MilestoneTimer';
 export {
+  canChangeLevelInPage,
+  configureLevelNavigation,
+  getLevelNavigationHooks,
+  levelPageUrl,
+  resetLevelNavigation,
+} from './levelNavigation';
+export type {LevelNavigationHooks} from './levelNavigation';
+export {
   default as ProgressContainer,
   ProgressManagerContext,
   useProgressManager,
