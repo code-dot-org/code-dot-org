@@ -509,11 +509,10 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /**
    * Start a block-triggered jump after SCENE_JUMP_DELAY_MS: the scene keeps
-   * running meanwhile, then freezes through the jump gate (for the view's
-   * cover and fade) and the handler `getHandler` returns runs with `args`.
-   * The handler is read when the wait ends, and nothing starts without one.
-   * One jump at a time: a trigger that fires again during the wait, or
-   * while a jump is in flight, is ignored.
+   * running meanwhile, then freezes through the jump gate and the handler
+   * runs. The handler is read when the wait ends; nothing starts without
+   * one. One jump at a time: a trigger during the wait, or while a jump is
+   * in flight, is ignored.
    */
   delaySceneJump_(getHandler, ...args) {
     if (!getHandler() || this.jumpDelayTimer_ || this.sceneJumpInFlight_) {
