@@ -8,6 +8,9 @@ export const lessonShape = PropTypes.shape({
   vocabularies: PropTypes.array.isRequired,
   programmingExpressions: PropTypes.array.isRequired,
   preparation: PropTypes.string,
+  // Definitions for the vocabulary the preparation text references, keyed by
+  // reference. See Lesson#field_vocabulary_definitions.
+  vocabularyDefinitions: PropTypes.object,
   resources: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
 });

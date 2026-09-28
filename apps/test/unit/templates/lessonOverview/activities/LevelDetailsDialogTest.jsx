@@ -1,3 +1,4 @@
+import {Markdown} from '@code-dot-org/markdown';
 import {Typography} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -116,8 +117,7 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    const safeMarkdown = wrapper.find('SafeMarkdown').first();
-    expect(safeMarkdown.props().markdown).to.equal(
+    expect(wrapper.find(Markdown).first().props().content).to.equal(
       'This level is an assessment or survey with multiple questions. To view this level click "See Full Level".'
     );
   });
@@ -132,8 +132,7 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    const safeMarkdown = wrapper.find('SafeMarkdown').first();
-    expect(safeMarkdown.props().markdown).to.equal(
+    expect(wrapper.find(Markdown).first().props().content).to.equal(
       'No preview is available for this level. To view this level click "See Full Level".'
     );
   });
@@ -241,7 +240,7 @@ describe('LevelDetailsDialogTest', () => {
       .instance()
       .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
     expect(wrapper.find('SublevelCard').length).to.equal(0);
-    expect(wrapper.find('SafeMarkdown').first().props().markdown).to.equal(
+    expect(wrapper.find(Markdown).first().props().content).to.equal(
       'Markdown1'
     );
     expect(wrapper.find(Typography).contains('Choice 1')).to.be.true;
@@ -355,13 +354,11 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(wrapper.find('SafeMarkdown').length).to.equal(2);
-    expect(wrapper.find('SafeMarkdown').at(0).props().markdown).equal(
-      'Look at the code below and predict how the headings will be displayed.'
-    );
-    expect(wrapper.find('SafeMarkdown').at(1).props().markdown).equal(
-      'Eggs, Bacon, Waffles'
-    );
+    const contents = wrapper.find(Markdown).map(m => m.props().content);
+    expect(contents).to.deep.equal([
+      'Look at the code below and predict how the headings will be displayed.',
+      'Eggs, Bacon, Waffles',
+    ]);
     expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
     expect(
       wrapper.find('TeacherOnlyMarkdown').first().props().content

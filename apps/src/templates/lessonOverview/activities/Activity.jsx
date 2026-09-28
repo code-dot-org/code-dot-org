@@ -1,5 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
@@ -11,10 +12,13 @@ import styles from '../lesson-plan.module.scss';
 export default class Activity extends Component {
   static propTypes = {
     activity: activityShape,
+    // Both passed through to each section; see ActivitySection.
+    vocabularyDefinitions: PropTypes.object,
+    onExpandImage: PropTypes.func,
   };
 
   render() {
-    const {activity} = this.props;
+    const {activity, vocabularyDefinitions, onExpandImage} = this.props;
 
     return (
       <div>
@@ -38,7 +42,14 @@ export default class Activity extends Component {
           )}
         </Typography>
         {activity.activitySections.map(item => {
-          return <ActivitySection key={item.key} section={item} />;
+          return (
+            <ActivitySection
+              key={item.key}
+              section={item}
+              vocabularyDefinitions={vocabularyDefinitions}
+              onExpandImage={onExpandImage}
+            />
+          );
         })}
       </div>
     );

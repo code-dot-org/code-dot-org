@@ -1,3 +1,4 @@
+import {Markdown} from '@code-dot-org/markdown';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
@@ -99,17 +100,28 @@ describe('StudentLessonOverview', () => {
     // Lesson Name
     expect(wrapper.contains('Lesson One Title')).toBe(true);
 
-    const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
-    expect(enhancedSafeMarkdowns.at(0).props().markdown).toContain(
-      'Lesson Overview'
-    );
+    // Matched by content rather than position, so adding a field or reordering
+    // the page does not rewrite the assertions.
+    const contents = wrapper.find(Markdown).map(m => m.props().content);
+    const rendersMarkdown = expected =>
+      contents.some(content => content.includes(expected));
 
-    const inlineMarkdowns = wrapper.find('InlineMarkdown');
+    expect(rendersMarkdown('Lesson Overview')).toBe(true);
+    expect(
+      rendersMarkdown('**Algorithm** - A list of steps to finish a task.')
+    ).toBe(true);
 
-    // The first contains the vocabulary
-    expect(inlineMarkdowns.at(0).props().markdown).toContain(
-      '**Algorithm** - A list of steps to finish a task.'
-    );
+    // The legacy renderers are gone from this page.
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(0);
+    expect(wrapper.find('InlineMarkdown').length).toBe(0);
+
+    // The vocabulary entry sits in a list item, so it renders inline.
+    expect(
+      wrapper
+        .find(Markdown)
+        .filterWhere(m => m.props().inline)
+        .map(m => m.props().content)
+    ).toEqual(['**Algorithm** - A list of steps to finish a task.']);
   });
 
   it('show print button if there is a pdf', () => {

@@ -26,14 +26,12 @@ import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/uti
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(function () {
   prepareBlocklyForEmbeddingAllEnvironments();
   displayLessonOverview();
   prepareExpandableImageDialog();
-  tooltipifyVocabulary();
   displayDifferentiationChat();
   renderCopyLessonButton();
 });

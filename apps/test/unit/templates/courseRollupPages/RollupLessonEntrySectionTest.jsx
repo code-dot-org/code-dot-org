@@ -1,10 +1,11 @@
+import {Markdown} from '@code-dot-org/markdown';
+import {fireEvent, render} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
 import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
 import i18n from '@cdo/locale';
 
@@ -46,14 +47,36 @@ describe('RollupLessonEntrySection', () => {
       </Provider>
     );
 
-    expect(
-      wrapper.containsMatchingElement(
-        <EnhancedSafeMarkdown
-          markdown={defaultProps.lesson.preparation}
-          expandableImages
+    expect(wrapper.find(Markdown).props().content).toBe(
+      defaultProps.lesson.preparation
+    );
+  });
+
+  it('resolves vocabulary references in the prep text', async () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      preparation: 'Print the [v digital_footprint/csd/2021] handout.',
+      vocabularyDefinitions: {
+        'digital_footprint/csd/2021': {
+          word: 'digital footprint',
+          definition: 'The collected information about an individual.',
+        },
+      },
+    };
+    const {getByText, findByRole} = render(
+      <Provider store={getStore()}>
+        <RollupLessonEntrySection
+          {...defaultProps}
+          lesson={lesson}
+          objectToRollUp={'Prep'}
         />
-      )
-    ).toBe(true);
+      </Provider>
+    );
+
+    fireEvent.mouseOver(getByText('digital footprint'));
+    expect((await findByRole('tooltip')).textContent).toBe(
+      'The collected information about an individual.'
+    );
   });
 
   it('renders no prep message when no prep', () => {

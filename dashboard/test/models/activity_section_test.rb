@@ -49,11 +49,41 @@ class ActivitySectionTest < ActiveSupport::TestCase
     activity_section.summarize_for_lesson_edit
   end
 
-  test 'lesson show summary preprocesses markdown' do
-    activity_section = create(:activity_section)
-    Services::MarkdownPreprocessor.expects(:process!).
-      with(activity_section.description)
-    activity_section.summarize_for_lesson_show(false, create(:user))
+  test 'lesson show summary preprocesses markdown, leaving vocabulary to the client' do
+    course_version = create(:course_version, course_offering: create(:course_offering, key: 'test-course'), key: '1999')
+    create(
+      :vocabulary,
+      key: 'first_vocab',
+      word: "First Vocabulary",
+      definition: "The first of the vocabulary entries.",
+      course_version: course_version
+    )
+    reference = "[v first_vocab/test-course/1999]"
+    activity_section = create(
+      :activity_section,
+      description: "a #{reference} reference",
+      tips: [{"type" => "teachingTip", "markdown" => "a #{reference} reference"}]
+    )
+
+    summary = activity_section.summarize_for_lesson_show(false, create(:user))
+
+    # The lesson plan resolves both itself, from Lesson#vocabulary_definitions.
+    assert_equal "a #{reference} reference", summary[:description]
+    assert_equal "a #{reference} reference", summary[:tips].first["markdown"]
+  end
+
+  test 'client_resolved_markdown covers the description and every tip' do
+    activity_section = create(
+      :activity_section,
+      description: "the description",
+      tips: [
+        {"type" => "teachingTip", "markdown" => "the first tip"},
+        {"type" => "discussionGoal", "markdown" => "the second tip"},
+      ]
+    )
+
+    assert_equal ["the description", "the first tip", "the second tip"],
+      activity_section.client_resolved_markdown
   end
 
   test 'seeding_key' do

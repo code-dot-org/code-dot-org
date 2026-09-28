@@ -1,3 +1,4 @@
+import {Markdown, extensions} from '@code-dot-org/markdown';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
@@ -16,7 +17,6 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
 import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {windowOpen} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -36,6 +36,18 @@ class LevelDetailsDialog extends Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
   };
+
+  // Built once per instance: Markdown rebuilds its processor whenever the
+  // extension list changes identity. The lookup reads current props.
+  markdownExtensions = [
+    // No expandableImages: the syntax appears only in activity section
+    // descriptions, which ActivitySection renders.
+    extensions.lenientHeadings,
+    extensions.lenientLinkDestinations,
+    extensions.visualCodeBlock,
+    extensions.inlineStyles,
+    extensions.details,
+  ];
 
   constructor(props) {
     super(props);
@@ -62,7 +74,10 @@ class LevelDetailsDialog extends Component {
     if (level.type === 'External') {
       return (
         <div className={styles.scrollContainer}>
-          <SafeMarkdown markdown={level.markdown} />
+          <Markdown
+            extensions={this.markdownExtensions}
+            content={level.markdown}
+          />
           {level.videoOptions && (
             <div
               id={'level-details-dialog-video'}
@@ -76,7 +91,10 @@ class LevelDetailsDialog extends Component {
       return (
         <div className={styles.scrollContainer}>
           {level.longInstructions && (
-            <SafeMarkdown markdown={level.longInstructions} />
+            <Markdown
+              extensions={this.markdownExtensions}
+              content={level.longInstructions}
+            />
           )}
           <div
             id={'level-details-dialog-video'}
@@ -87,8 +105,9 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'LevelGroup') {
       return (
-        <SafeMarkdown
-          markdown={i18n.levelGroupDetailsDialogText({
+        <Markdown
+          extensions={this.markdownExtensions}
+          content={i18n.levelGroupDetailsDialogText({
             buttonText: i18n.seeFullLevel(),
           })}
         />
@@ -105,9 +124,14 @@ class LevelDetailsDialog extends Component {
       return (
         <div className={styles.scrollContainer}>
           {level.content.map((content, i) => (
-            <SafeMarkdown key={i} markdown={content} />
+            <Markdown key={i} content={content} />
           ))}
-          {level.questionText && <SafeMarkdown markdown={level.questionText} />}
+          {level.questionText && (
+            <Markdown
+              extensions={this.markdownExtensions}
+              content={level.questionText}
+            />
+          )}
           {this.getTeacherOnlyMarkdownComponent(level)}
         </div>
       );
@@ -143,7 +167,8 @@ class LevelDetailsDialog extends Component {
           hasContainedLevels={false}
           noVisualization={true}
           isMinecraft={false}
-          isBlockly={false}
+          // This is 'true' to ensure that all extensions are available
+          isBlockly={true}
           isRtl={this.props.isRtl}
           longInstructions={
             level.longInstructions ||
@@ -186,11 +211,11 @@ class LevelDetailsDialog extends Component {
       );
     } else {
       return (
-        <SafeMarkdown
-          markdown={i18n.noLevelPreviewAvailable({
+        <Markdown
+          extensions={this.markdownExtensions}
+          content={i18n.noLevelPreviewAvailable({
             buttonText: i18n.seeFullLevel(),
           })}
-          openExternalLinksInNewTab
         />
       );
     }
@@ -288,7 +313,7 @@ class LevelDetailsDialog extends Component {
         fullWidth={!hasVideo}
         style={{...levelSpecificStyling}}
       >
-        <Typography variant="h1" component="h2">
+        <Typography variant="h1" component="h2" sx={{mb: 1}}>
           {level.display_name || scriptLevel.name || level.name}
         </Typography>
         {this.renderBubbleChoiceBubbles()}
