@@ -1,13 +1,10 @@
+import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
 import {render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import ChallengeRoute from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeRoute';
-import {
-  Challenge,
-  challengeValidator,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
