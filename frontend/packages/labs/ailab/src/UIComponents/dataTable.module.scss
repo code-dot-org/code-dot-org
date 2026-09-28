@@ -20,15 +20,16 @@
   border-collapse: separate;
   border-spacing: 0;
   white-space: nowrap;
-  font-family: var(--font-family-main);
-  font-size: 12px;
-  line-height: 18px;
   text-align: left;
 }
 
+// Set on the cells, not inherited from .table: Code Studio's legacy.scss styles every th.
 .header,
 .indexCell,
 .bodyCell {
+  font-family: var(--font-family-main);
+  font-size: 12px;
+  line-height: 18px;
   height: 28px;
   box-sizing: border-box;
   padding: 0 10px;
