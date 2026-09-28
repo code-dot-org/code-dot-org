@@ -34,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make them talk.** Drag a **say** block onto the dotted outline under **make new sprite**, so your character says something. Your changes run live in the preview. When it feels right, click **Play**."
+        "text": "**Make them talk.** Drag a **say** block onto the dotted outline under **make new sprite**. Type what they say. Click **Play**."
       },
       {
-        "text": "**They're alive!** Watch your character speak, then continue when you're ready.",
+        "text": "**They're alive!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Make them talk\nDrag a **say** block onto the dotted outline under **make new sprite**, so your character says something.",
+    "long_instructions": "# Make them talk\nDrag a **say** block onto the dotted outline under **make new sprite** so your character talks.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

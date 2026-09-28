@@ -34,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline under **when run** to put your character on the **left** of the scene. Your changes run live in the preview. Press **Play** to see them there."
+        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline under **when run**. It puts your character on the **left**. Click **Play** to see them."
       },
       {
-        "text": "**There they are.** Continue when you're ready.",
+        "text": "**There they are.** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Add your character\nDrag **make new sprite** onto the dotted outline under **when run** to put your character on the left of the scene.",
+    "long_instructions": "# Add your character\nDrag **make new sprite** onto the dotted outline under **when run** to put your character on the left.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

@@ -93,11 +93,11 @@
     ],
     "guide_steps": [
       {
-        "text": "**A ready-made world.** We laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top - your player lands on blocks and can jump again from them. Continue when you're ready.",
+        "text": "**A ready-made world.** We built some platforms with your block. Run and jump. Can you reach the top? Then click **Continue**.",
         "showContinue": true
       }
     ],
-    "long_instructions": "# A ready-made world\nWe laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top."
+    "long_instructions": "# A ready-made world\nWe built some platforms with your block. Run and jump. Can you reach the top?"
   }
 }]]></config>
 </GamelabJr>

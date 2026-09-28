@@ -219,9 +219,8 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 // The shared dialog's own copy names only the blocks.
 const START_OVER_MESSAGE =
-  "This will remove the blocks you've added and delete all of the images " +
-  "you've made. You can't undo this.";
-const START_OVER_RETURNS_MESSAGE = `${START_OVER_MESSAGE} You'll go back to the first level to make them again.`;
+  "This deletes your blocks and your images. You can't undo it.";
+const START_OVER_RETURNS_MESSAGE = `${START_OVER_MESSAGE} You'll start again from the first level.`;
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;

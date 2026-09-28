@@ -34,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Set the scene.** Drag the **set background** block onto the dotted outline under your code to put your new background behind your story. Then press **Play** and watch the whole story so far."
+        "text": "**Set the scene.** Drag **set background** onto the dotted outline and pick your background. Click **Play** to watch your story."
       },
       {
-        "text": "**That's your story!** Watch it play, then continue when you're ready.",
+        "text": "**That's your story!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Set the scene\nDrag the **set background** block onto the dotted outline under your code to put your new background behind your story. Then press **Play** and watch the whole story so far.",
+    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline and pick your background.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

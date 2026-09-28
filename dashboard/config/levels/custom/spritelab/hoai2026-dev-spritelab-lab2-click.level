@@ -34,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make them talk.** A **when clicked** event is waiting in your workspace, set to your new character. Drag a **say** block onto the dotted outline under it. Then press **Play** and click your new character."
+        "text": "**Click to talk.** The **when clicked** event is ready for your new character. Drag a **say** block onto the dotted outline under it. Click **Play**, then click your character."
       },
       {
-        "text": "**It's interactive!** Click your new character to hear from them, then continue when you're ready.",
+        "text": "**It's interactive!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Click to talk\nDrag a **say** block onto the dotted outline under **when clicked**, so clicking your new character makes them speak.",
+    "long_instructions": "# Click to talk\nDrag a **say** block onto the dotted outline under **when clicked** so your new character talks when clicked.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

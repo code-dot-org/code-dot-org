@@ -34,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Set them walking.** Drag **sprite [them] begins [patrolling left and right on blocks]** onto the dotted outline under your code, picking your second character.  Click **Play** and watch them go."
+        "text": "**Set them walking.** Drag **sprite [ ] begins [patrolling left and right on blocks]** onto the dotted outline and pick your second character. Click **Play**."
       },
       {
-        "text": "**They're on the move.** Continue when you're ready.",
+        "text": "**They're on the move.** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Set them walking\nDrag **sprite [them] begins [patrolling left and right on blocks]** onto the dotted outline under your code, picking your second character.  Click **Play** and watch them go.",
+    "long_instructions": "# Set them walking\nDrag **sprite [ ] begins [patrolling left and right on blocks]** onto the dotted outline and pick your second character. Click **Play**.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

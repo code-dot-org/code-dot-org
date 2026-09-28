@@ -29,17 +29,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Link your scenes.** Your second character already has a **when clicked** event. Drag the new **go to scene** block onto the dotted outline under it, so clicking them jumps to your platformer. Press **Play** to try the jump."
+        "text": "**Link your scenes.** Your second character has a **when clicked** event. Drag **go to scene** onto the dotted outline under it. Click **Play**, then click your character."
       },
       {
-        "text": "**Your scenes are connected!** Try the jump, then continue when you're ready.",
+        "text": "**Your scenes are connected!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Link your scenes\nDrag the new **go to scene** block onto the dotted outline under **when clicked**, so clicking your second character jumps to your platformer.",
+    "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **when clicked** so clicking your second character jumps to your platformer.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

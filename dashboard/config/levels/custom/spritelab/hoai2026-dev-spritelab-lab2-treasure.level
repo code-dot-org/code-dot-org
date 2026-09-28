@@ -38,17 +38,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make your treasure worth finding.** A **when [ ] touches [ ]** event is waiting in your workspace, set to your character and your treasure. Drag a **say** block onto the dotted outline under it. Then click **Play** and go and get it."
+        "text": "**Make the treasure say something.** The **when [ ] touches [ ]** event is ready. Drag a **say** block onto the dotted outline under it. Click **Play** and go get it."
       },
       {
-        "text": "**Your treasure says something when you reach it.** Continue when you're ready.",
+        "text": "**Your treasure talks!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Make your treasure worth finding\nDrag a **say** block onto the dotted outline under **when [ ] touches [ ]**, so your treasure says something when you reach it.",
+    "long_instructions": "# Make the treasure say something\nDrag a **say** block onto the dotted outline under **when [ ] touches [ ]** so the treasure says something when you reach it.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
