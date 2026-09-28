@@ -220,8 +220,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           key={fileKey}
           fileName={fileName}
           backpackApi={client}
-          addAlert={notify}
-          showToast={showToast}
+          notify={notify}
           isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
           validateFileName={validateFileName}
           saveFileToProject={saveFileToProject}
@@ -241,7 +240,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       backpackApi,
       duplicateFileNames,
       notify,
-      showToast,
       recentlyAddedKeys,
       validateFileName,
       saveFileToProject,

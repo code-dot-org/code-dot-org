@@ -29,7 +29,7 @@ const responseWith = (contentType: string, body: string) =>
 describe('fetchAndSaveFile', () => {
   let createNewFile: jest.Mock;
   let saveFile: jest.Mock;
-  let addAlert: jest.Mock;
+  let notify: jest.Mock;
   let put: jest.SpyInstance;
 
   const runImport = (response: Response, fileName: string) =>
@@ -39,7 +39,7 @@ describe('fetchAndSaveFile', () => {
         fetchFileResponse: async () => response,
       } as unknown as BackpackClientApi,
       channelId: CHANNEL_ID,
-      addAlert,
+      notify,
       saveFile,
       createNewFile,
       findIdForFileName: () => 'file-id',
@@ -50,7 +50,7 @@ describe('fetchAndSaveFile', () => {
   beforeEach(() => {
     createNewFile = jest.fn();
     saveFile = jest.fn();
-    addAlert = jest.fn();
+    notify = jest.fn();
     put = jest.spyOn(HttpClient, 'put').mockResolvedValue({} as Response);
   });
 
@@ -70,7 +70,7 @@ describe('fetchAndSaveFile', () => {
       '',
       `/v3/assets/${CHANNEL_ID}/test-uuid.wav`
     );
-    expect(addAlert).toHaveBeenCalledWith('success', expect.any(String));
+    expect(notify).toHaveBeenCalledWith('success', expect.any(String));
   });
 
   it('uploads images as a channel asset', async () => {

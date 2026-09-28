@@ -5,6 +5,7 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -12,7 +13,7 @@ export const handleSaveSupportFile = async (
   dialogControl: DialogControlInterface,
   backpackApi: BackpackClientApi,
   channelId: string,
-  addAlert: (type: 'success' | 'danger', message: string) => void,
+  notify: BackpackNotify,
   saveFile: (fileId: string, contents: string, url?: string) => void,
   createNewFile: (fileName: string, contents: string, url?: string) => void,
   findIdForFileName: (fileName: string) => string | undefined,
@@ -33,7 +34,7 @@ export const handleSaveSupportFile = async (
       successMetric: EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
       channelId,
-      addAlert,
+      notify,
       saveFile,
       createNewFile,
       findIdForFileName,
@@ -47,7 +48,7 @@ export const handleSaveDuplicateFile = async (
   dialogControl: DialogControlInterface,
   backpackApi: BackpackClientApi,
   channelId: string,
-  addAlert: (type: 'success' | 'danger', message: string) => void,
+  notify: BackpackNotify,
   saveFile: (fileId: string, contents: string, url?: string) => void,
   createNewFile: (fileName: string, contents: string, url?: string) => void,
   findIdForFileName: (fileName: string) => string | undefined,
@@ -76,7 +77,7 @@ export const handleSaveDuplicateFile = async (
       successMetric: EVENTS.IMPORT_FROM_BACKPACK_REPLACE,
       backpackApi,
       channelId,
-      addAlert,
+      notify,
       saveFile,
       createNewFile,
       findIdForFileName,
@@ -89,7 +90,7 @@ export const handleSaveDuplicateFile = async (
       successMetric: EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
       channelId,
-      addAlert,
+      notify,
       saveFile,
       createNewFile,
       findIdForFileName,
@@ -102,7 +103,7 @@ export interface FetchAndSaveFileParams {
   successMetric: string;
   backpackApi: BackpackClientApi;
   channelId: string;
-  addAlert: (type: 'success' | 'danger', message: string) => void;
+  notify: BackpackNotify;
   saveFile: (fileId: string, contents: string, url?: string) => void;
   createNewFile: (fileName: string, contents: string, url?: string) => void;
   findIdForFileName: (fileName: string) => string | undefined;
@@ -114,7 +115,7 @@ export const fetchAndSaveFile = async ({
   successMetric,
   backpackApi,
   channelId,
-  addAlert,
+  notify,
   saveFile,
   createNewFile,
   findIdForFileName,
@@ -133,7 +134,7 @@ export const fetchAndSaveFile = async ({
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Backpack file fetch error', responseError);
-    addAlert('danger', errorMessage);
+    notify('danger', errorMessage);
     return;
   }
   let fileContent = '';
@@ -153,7 +154,7 @@ export const fetchAndSaveFile = async ({
       uploadUrl,
       blob,
       errorMessage,
-      addAlert
+      notify
     );
     if (uploadedUrl) {
       url = uploadedUrl;
@@ -172,7 +173,7 @@ export const fetchAndSaveFile = async ({
     fileContent,
     url,
     errorMessage,
-    addAlert,
+    notify,
     successMetric,
     successMessage
   );
@@ -184,7 +185,7 @@ const handleSaveBlobToChannelAssets = async (
   uploadUrl: string,
   blob: Blob,
   errorMessage: string,
-  addAlert: (type: 'success' | 'danger', message: string) => void
+  notify: BackpackNotify
 ): Promise<string | undefined> => {
   try {
     await HttpClient.put(uploadUrl, blob);
@@ -196,7 +197,7 @@ const handleSaveBlobToChannelAssets = async (
         'Backpack could not upload binary file to assets channel',
         error as Error
       );
-    addAlert('danger', errorMessage);
+    notify('danger', errorMessage);
     return undefined;
   }
 };
@@ -211,13 +212,13 @@ const handleSaveFileToProject = async (
   fileContent: string,
   url: string | undefined,
   errorMessage: string,
-  addAlert: (type: 'success' | 'danger', message: string) => void,
+  notify: BackpackNotify,
   successMetric: string,
   successMessage: string
 ) => {
   if (newFileName) {
     createNewFile(newFileName, fileContent, url);
-    addAlert('success', successMessage);
+    notify('success', successMessage);
     sendLab2AnalyticsEvent(successMetric, {
       fileType: newFileName.split('.').pop()?.toLowerCase() || '',
     });
@@ -225,7 +226,7 @@ const handleSaveFileToProject = async (
     const fileId = findIdForFileName(selectedFileName);
     if (fileId) {
       saveFile(fileId, fileContent, url);
-      addAlert('success', successMessage);
+      notify('success', successMessage);
       sendLab2AnalyticsEvent(successMetric, {
         fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
       });
@@ -236,7 +237,7 @@ const handleSaveFileToProject = async (
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError('Backpack could not find file to replace in project');
-      addAlert('danger', errorMessage);
+      notify('danger', errorMessage);
       return;
     }
   }
