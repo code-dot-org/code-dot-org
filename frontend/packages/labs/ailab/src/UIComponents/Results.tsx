@@ -10,8 +10,8 @@ import ResultsDetails from './ResultsDetails';
 import ScrollableContent from './ScrollableContent';
 import {UnconnectedStatement} from './Statement';
 
-import styles from './results.module.scss';
 import shared from '../shared.module.scss';
+import styles from './results.module.scss';
 
 const Results = () => {
   const historicResults = useAppSelector(state => state.historicResults);

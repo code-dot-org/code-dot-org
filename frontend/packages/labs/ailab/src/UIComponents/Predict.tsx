@@ -19,8 +19,8 @@ import train from '../train';
 
 import ScrollableContent from './ScrollableContent';
 
-import styles from './predict.module.scss';
 import shared from '../shared.module.scss';
+import styles from './predict.module.scss';
 
 const Predict = () => {
   const dispatch = useAppDispatch();
