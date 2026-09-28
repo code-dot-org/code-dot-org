@@ -1,9 +1,16 @@
-// Checkpoint progress. Held in component state for now; per-user
-// persistence arrives once the progress shape is more finalized.
+// Checkpoint progress: which checkpoints a student has started and completed,
+// and the status each checkpoint takes from that. Persisted through a
+// ProgressStore so the shape can settle before a server-backed store exists.
 
-import {useCallback, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {Checkpoint, Pathway} from '../types';
+
+import {
+  ProgressKey,
+  ProgressStore,
+  localStorageProgressStore,
+} from './progressStore';
 
 export type CheckpointStatus =
   | 'locked'
@@ -28,28 +35,62 @@ export interface Progress {
 
 export const EMPTY_PROGRESS: Progress = {completed: [], started: []};
 
-export function useProgress(pathway: Pathway) {
-  const [progress, setProgress] = useState<Progress>(EMPTY_PROGRESS);
+export function useProgress(
+  pathway: Pathway,
+  key: ProgressKey,
+  store: ProgressStore = localStorageProgressStore
+) {
+  // Undefined until the stored progress has been read. Nothing is written in
+  // that state, so a slow load cannot be overwritten by an empty default.
+  const [progress, setProgress] = useState<Progress>();
+  // Primitive deps: a caller passing a fresh key object each render must not
+  // re-run the load.
+  const {userId, scriptId, levelId, pathwayId} = key;
+
+  useEffect(() => {
+    let cancelled = false;
+    setProgress(undefined);
+    store.load({userId, scriptId, levelId, pathwayId}).then(loaded => {
+      if (!cancelled) setProgress(loaded ?? EMPTY_PROGRESS);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [store, userId, scriptId, levelId, pathwayId]);
+
+  useEffect(() => {
+    if (progress) store.save({userId, scriptId, levelId, pathwayId}, progress);
+  }, [store, userId, scriptId, levelId, pathwayId, progress]);
+
   const statusMap = useMemo(
-    () => getStatusMap(pathway, progress),
+    () => getStatusMap(pathway, progress ?? EMPTY_PROGRESS),
     [pathway, progress]
   );
 
   const markStarted = useCallback((id: string) => {
     setProgress(p =>
-      p.started.includes(id) ? p : {...p, started: [...p.started, id]}
+      !p || p.started.includes(id) ? p : {...p, started: [...p.started, id]}
     );
   }, []);
 
   const markComplete = useCallback((id: string) => {
     setProgress(p =>
-      p.completed.includes(id) ? p : {...p, completed: [...p.completed, id]}
+      !p || p.completed.includes(id)
+        ? p
+        : {...p, completed: [...p.completed, id]}
     );
   }, []);
 
   const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
 
-  return {progress, statusMap, markStarted, markComplete, reset};
+  return {
+    progress,
+    isLoading: progress === undefined,
+    statusMap,
+    markStarted,
+    markComplete,
+    reset,
+  };
 }
 
 /** A checkpoint unlocks once every checkpoint it requires is complete. */
