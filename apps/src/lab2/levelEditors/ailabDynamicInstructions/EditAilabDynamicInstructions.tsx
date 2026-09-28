@@ -25,18 +25,18 @@ interface EditAilabDynamicInstructionsProps {
 }
 
 interface FieldsState {
-  rawDynamicInstructions: string;
+  jsonDynamicInstructions: string;
   removed: string[];
 }
 
 const TEXT_AREA_ROWS = 3;
 
 // The fields show only what Lab 2 AI Lab reads, so the saved value is cleaned to match.
-function prepareForFields(rawDynamicInstructions: string): FieldsState {
-  const parsed = parseJsonObject(rawDynamicInstructions);
+function prepareForFields(jsonDynamicInstructions: string): FieldsState {
+  const parsed = parseJsonObject(jsonDynamicInstructions);
   const {dynamicInstructions, removed} = cleanDynamicInstructions(parsed ?? {});
   return {
-    rawDynamicInstructions: serializeJsonObject(dynamicInstructions),
+    jsonDynamicInstructions: serializeJsonObject(dynamicInstructions),
     removed: parsed
       ? removed
       : ['the saved dynamic instructions, which are not valid JSON'],
@@ -55,26 +55,29 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
   const [state, setState] = useState<FieldsState>(() =>
     initialUsesLab2
       ? prepareForFields(initialDynamicInstructions ?? '')
-      : {rawDynamicInstructions: initialDynamicInstructions ?? '', removed: []}
+      : {jsonDynamicInstructions: initialDynamicInstructions ?? '', removed: []}
   );
-  const rawRef = useRef(state.rawDynamicInstructions);
-  rawRef.current = state.rawDynamicInstructions;
+  const jsonInstructionsRef = useRef(state.jsonDynamicInstructions);
+  jsonInstructionsRef.current = state.jsonDynamicInstructions;
 
   useEffect(
     () =>
       subscribeToUsesLab2?.(checked => {
         setUsesLab2(checked);
         if (checked) {
-          setState(prepareForFields(rawRef.current));
+          setState(prepareForFields(jsonInstructionsRef.current));
         } else {
-          setState({rawDynamicInstructions: rawRef.current, removed: []});
+          setState({
+            jsonDynamicInstructions: jsonInstructionsRef.current,
+            removed: [],
+          });
         }
       }),
     [subscribeToUsesLab2]
   );
 
-  const setRawDynamicInstructions = (rawDynamicInstructions: string) =>
-    setState(current => ({...current, rawDynamicInstructions}));
+  const setJsonDynamicInstructions = (jsonDynamicInstructions: string) =>
+    setState(current => ({...current, jsonDynamicInstructions}));
 
   if (!usesLab2) {
     return (
@@ -85,15 +88,15 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
           name="level[dynamic_instructions]"
           placeholder="Insert JSON Data"
           rows={10}
-          value={state.rawDynamicInstructions}
-          onChange={e => setRawDynamicInstructions(e.target.value)}
+          value={state.jsonDynamicInstructions}
+          onChange={e => setJsonDynamicInstructions(e.target.value)}
           className={moduleStyles.textArea}
         />
       </label>
     );
   }
 
-  const dynamicInstructions = (parseJsonObject(state.rawDynamicInstructions) ??
+  const dynamicInstructions = (parseJsonObject(state.jsonDynamicInstructions) ??
     {}) as DynamicInstructions;
 
   const renderField = ({key, label}: DynamicInstructionsField) => (
@@ -105,7 +108,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
         rows={TEXT_AREA_ROWS}
         value={dynamicInstructions[key] ?? ''}
         onChange={e =>
-          setRawDynamicInstructions(
+          setJsonDynamicInstructions(
             serializeJsonObject(
               setInstructionsText(dynamicInstructions, key, e.target.value)
             )
@@ -122,7 +125,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
         id="level_dynamic_instructions"
         name="level[dynamic_instructions]"
         type="hidden"
-        value={state.rawDynamicInstructions}
+        value={state.jsonDynamicInstructions}
       />
       <Typography variant="body4" className={moduleStyles.descriptionText}>
         Markdown shown in the instructions panel as students work. Leave a field
