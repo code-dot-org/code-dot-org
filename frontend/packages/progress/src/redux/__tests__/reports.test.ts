@@ -4,6 +4,7 @@ import {configureStore} from '@reduxjs/toolkit';
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {TestResults} from '../../constants';
+import {milestoneTimer} from '../../MilestoneTimer';
 import progressSlice, {
   getCurrentLevels,
   initProgress,
@@ -14,9 +15,9 @@ import progressSlice, {
 } from '../progressSlice';
 import {BUBBLE_CHOICE_LEVEL_ID, initPayload, lessonData} from './fixtures';
 
-function storeOn(currentLevelId: number) {
+function storeOn(currentLevelId: number, courseId?: number) {
   const store = configureStore({reducer: {progress: progressSlice.reducer}});
-  store.dispatch(initProgress(initPayload({currentLevelId})));
+  store.dispatch(initProgress(initPayload({currentLevelId, courseId})));
   store.dispatch(setCurrentLessonId(lessonData[0].id));
   // The thunks are typed against the full app state; this store holds only
   // the part they read.
@@ -28,11 +29,14 @@ function storeOn(currentLevelId: number) {
 let fetchMock: ReturnType<typeof vi.fn>;
 
 beforeEach(() => {
+  vi.useFakeTimers({toFake: ['Date']});
+  milestoneTimer.resetMilestoneTimer();
   fetchMock = vi.fn().mockResolvedValue(new Response('{}', {status: 200}));
   vi.stubGlobal('fetch', fetchMock);
 });
 
 afterEach(() => {
+  vi.useRealTimers();
   vi.unstubAllGlobals();
   vi.restoreAllMocks();
 });
@@ -48,6 +52,49 @@ describe('sendSuccessReport', () => {
       result: true,
       testResult: TestResults.ALL_PASS,
     });
+  });
+
+  it('sends the time since the last milestone, less idle time', async () => {
+    const {dispatch} = storeOn(323);
+    vi.advanceTimersByTime(90_000);
+    milestoneTimer.startIdle();
+    vi.advanceTimersByTime(30_000);
+    milestoneTimer.endIdle();
+    await dispatch(sendSuccessReport('maze'));
+    expect(
+      JSON.parse(fetchMock.mock.calls[0][1].body).timeSinceLastMilestone,
+    ).toBe(90_000);
+  });
+
+  it('restarts the time after a successful post', async () => {
+    const {dispatch} = storeOn(323);
+    vi.advanceTimersByTime(90_000);
+    await dispatch(sendSuccessReport('maze'));
+    vi.advanceTimersByTime(5_000);
+    await dispatch(sendSuccessReport('maze'));
+    expect(
+      JSON.parse(fetchMock.mock.calls[1][1].body).timeSinceLastMilestone,
+    ).toBe(5_000);
+  });
+
+  it('keeps counting after a failed post', async () => {
+    fetchMock.mockResolvedValue(new Response('', {status: 503}));
+    const {dispatch} = storeOn(323);
+    vi.advanceTimersByTime(90_000);
+    await dispatch(sendSuccessReport('maze'));
+    vi.advanceTimersByTime(5_000);
+    await dispatch(sendSuccessReport('maze'));
+    expect(
+      JSON.parse(fetchMock.mock.calls[1][1].body).timeSinceLastMilestone,
+    ).toBe(95_000);
+  });
+
+  it('sends course_id when the unit belongs to a course', async () => {
+    const {dispatch} = storeOn(323, 17);
+    await dispatch(sendSuccessReport('maze'));
+    expect(fetchMock.mock.calls[0][0]).toBe(
+      '/milestone/0/102/323?course_id=17',
+    );
   });
 
   it('updates a level the server already reported (#70881)', async () => {
@@ -112,6 +159,13 @@ describe('navigateToLevelId', () => {
     expect(document.title).toBe(
       'Computational Thinking #3 | Course 3 - CodeAI',
     );
+  });
+
+  it('restarts the milestone time', async () => {
+    const {dispatch} = storeOn(323);
+    vi.advanceTimersByTime(90_000);
+    await dispatch(navigateToLevelId(BUBBLE_CHOICE_LEVEL_ID));
+    expect(milestoneTimer.getTimeSinceLastMilestone()).toBe(0);
   });
 
   it('does nothing for the current level', async () => {

@@ -26,6 +26,7 @@ type AsyncProgressThunkAction = ThunkAction<
 >;
 type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
+import {milestoneTimer} from '../MilestoneTimer';
 import {
   BubbleChoiceNavigationTypes,
   PUZZLE_PAGE_NONE,
@@ -569,9 +570,15 @@ function sendReportHelper(
     result: true,
     testResult: result,
     ...extraData,
+    timeSinceLastMilestone: milestoneTimer.getTimeSinceLastMilestone(),
   };
 
-  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+  // course_id sets UserLevel#unit_group_id on the server.
+  const query = state.courseId
+    ? `?${new URLSearchParams({course_id: String(state.courseId)})}`
+    : '';
+
+  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}${query}`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
@@ -591,6 +598,8 @@ function sendReportHelper(
         dispatch(mergeResults({[parentId]: result}));
         dispatch(mergeUnitProgress({levelId: parentId, result}));
       }
+      // The next milestone's time counts from this one.
+      milestoneTimer.resetMilestoneTimer();
     }
   });
 }
@@ -915,6 +924,7 @@ export function navigateToLevelId(levelId: number): ProgressThunkAction {
     }
     updateBrowserForLevelNavigation(state, newLevel.path, levelId);
     dispatch(setCurrentLevelId(levelId));
+    milestoneTimer.resetMilestoneTimer();
   };
 }
 
