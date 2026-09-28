@@ -23,7 +23,8 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "world",
-      "imageType": "block"
+      "imageType": "block",
+      "paletteOnly": true
     },
     "image_role_defaults": {
       "block": "block"

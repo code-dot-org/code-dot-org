@@ -20,9 +20,11 @@ export interface LevelMode {
   imageRole?: string;
   /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
-  /** A world level that places one thing: the palette offers only the
-      level's default image of its imageType, it goes on an empty cell, and
-      choosing another cell moves it. */
+  /** A world level whose palette offers only the level's default image of
+      its imageType, plus Erase. */
+  paletteOnly?: boolean;
+  /** A world level that places one thing: paletteOnly without Erase, the
+      image goes on an empty cell, and choosing another cell moves it. */
   placeOne?: boolean;
 }
 

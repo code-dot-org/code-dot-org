@@ -1413,11 +1413,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId, scheduleRun, worldFor]
   );
 
-  // A level that places one thing (level_mode.placeOne) offers the palette
-  // only the level's image, and moves it rather than adding.
-  const placeOneImage = levelProperties.levelMode?.placeOne
-    ? focusImageName
-    : undefined;
+  // A level about one image (level_mode.paletteOnly, placeOne) offers the
+  // palette only that image.
+  const placeOne = !!levelProperties.levelMode?.placeOne;
+  const paletteOnlyImage =
+    placeOne || levelProperties.levelMode?.paletteOnly
+      ? focusImageName
+      : undefined;
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) => {
       updateSources(prev => ({
@@ -1848,7 +1850,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 world={activeWorld}
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
-                placeOne={placeOneImage}
+                only={paletteOnlyImage}
+                placeOne={placeOne}
                 onMoveCell={handleMoveWorldCell}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}

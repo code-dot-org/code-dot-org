@@ -162,10 +162,11 @@ interface WorldTabProps {
   sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
-  // The one image this level places (level_mode.placeOne): the palette
-  // offers only it, it goes on an empty cell, and choosing another cell
-  // moves it there through onMoveCell.
-  placeOne?: string;
+  // The one image the palette offers (level_mode.paletteOnly, placeOne).
+  only?: string;
+  // Placing one thing (level_mode.placeOne): no Erase, the image goes on an
+  // empty cell, and choosing another cell moves it there through onMoveCell.
+  placeOne?: boolean;
   onMoveCell?: (row: number, col: number, cell: WorldCell) => void;
   // Palette selection, owned by the view so it survives tab switches (this
   // component unmounts when the tab is hidden).
@@ -188,6 +189,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   world,
   sceneSize,
   onPaintCell,
+  only,
   placeOne,
   onMoveCell,
   selected,
@@ -204,7 +206,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       animationList.orderedKeys
         .map(key => animationList.propsByKey[key])
         .filter(props => !props.categories?.includes(BACKGROUNDS_CATEGORY))
-        .filter(props => !placeOne || props.name === placeOne)
+        .filter(props => !only || props.name === only)
         .map(props => ({
           image: props.name,
           kind: props.categories?.includes(BLOCKS_CATEGORY)
@@ -214,7 +216,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             getImageThumbnail(props.name) || props.dataURI || props.sourceUrl,
         })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [animationList, trimVersion, placeOne]
+    [animationList, trimVersion, only]
   );
   const thumbsByImage = useMemo(
     () => new Map(palette.map(item => [item.image, item.thumb])),
