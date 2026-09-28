@@ -32,8 +32,7 @@ const ERASE_SHORTCUT = '0';
 const DRAG_START_PX = 6;
 
 // Palette items and the gap between them; the stylesheet reads these as
-// custom properties. The palette is one column down the grid's left,
-// wrapping into more columns when the window is too short for one.
+// custom properties.
 const PALETTE_ITEM_PX = 64;
 const PALETTE_GAP_PX = 8;
 
