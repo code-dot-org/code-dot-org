@@ -219,7 +219,7 @@ describe('QuizAttemptWorkspace', () => {
       showIntroScreen: true,
     });
 
-    fireEvent.click(screen.getByRole('button', {name: 'Retake Quiz'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
 
     expect(beginAttempt).not.toHaveBeenCalled();
     const heading = screen.getByRole('heading', {
@@ -249,7 +249,7 @@ describe('QuizAttemptWorkspace', () => {
     );
   });
 
-  it('shows the score and a Retake button once submitted and retakeable', () => {
+  it('shows the results stats and a Try again button once submitted and retakeable', () => {
     const beginAttempt = jest.fn();
     renderWorkspace({
       hookState: {
@@ -264,12 +264,33 @@ describe('QuizAttemptWorkspace', () => {
       },
     });
 
-    expect(screen.getByText('Submitted. Score: 2 / 3')).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', {name: 'Retake Quiz'}));
+    expect(screen.getByText('67%')).toBeInTheDocument();
+    expect(screen.getByText('2 of 3 Correct')).toBeInTheDocument();
+    // Single-attempt default (allowMultipleAttempts unset) - no remaining count to fabricate.
+    expect(screen.getByText('Attempt #1')).toBeInTheDocument();
+    expect(screen.getByText('0 attempts remaining')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
-  it('moves focus to the Retake button once submitted, since the footer button is gone', () => {
+  it('shows an open-ended attempt count when the quiz allows multiple attempts', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          attemptNumber: 2,
+          canRetake: true,
+        },
+      },
+      allowMultipleAttempts: true,
+    });
+
+    expect(screen.getByText('Attempt #2')).toBeInTheDocument();
+    expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
+  });
+
+  it('moves focus to the Try again button once submitted, since the footer button is gone', () => {
     renderWorkspace({
       hookState: {
         attempt: {
@@ -280,24 +301,10 @@ describe('QuizAttemptWorkspace', () => {
       },
     });
 
-    expect(screen.getByRole('button', {name: 'Retake Quiz'})).toHaveFocus();
+    expect(screen.getByRole('button', {name: 'Try again'})).toHaveFocus();
   });
 
-  it('moves focus to the result message when submitted with no Retake button', () => {
-    renderWorkspace({
-      hookState: {
-        attempt: {
-          ...ATTEMPT,
-          submittedAt: '2026-01-01T00:00:00Z',
-          canRetake: false,
-        },
-      },
-    });
-
-    expect(screen.getByText(/Submitted\. Score:/)).toHaveFocus();
-  });
-
-  it('does not show a Retake button when the attempt cannot be retaken', () => {
+  it('moves focus to the title once submitted with no Try again button', () => {
     renderWorkspace({
       hookState: {
         attempt: {
@@ -309,7 +316,23 @@ describe('QuizAttemptWorkspace', () => {
     });
 
     expect(
-      screen.queryByRole('button', {name: 'Retake Quiz'})
+      screen.getByRole('heading', {name: 'Unit 3 Assessment', level: 2})
+    ).toHaveFocus();
+  });
+
+  it('does not show a Try again button when the attempt cannot be retaken', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          canRetake: false,
+        },
+      },
+    });
+
+    expect(
+      screen.queryByRole('button', {name: 'Try again'})
     ).not.toBeInTheDocument();
   });
 

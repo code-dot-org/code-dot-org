@@ -14,6 +14,7 @@ import AttemptCard from './AttemptCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
 import QuizIntroCard from './QuizIntroCard';
+import ResultsCard from './ResultsCard';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
@@ -272,21 +273,16 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             <Typography variant="body2">Loading…</Typography>
           )
         ) : attempt.submittedAt ? (
-          <div ref={submittedRef}>
-            <Typography variant="body2" tabIndex={-1}>
-              Submitted. Score: {attempt.score} / {attempt.maxScore}
-            </Typography>
-            {attempt.canRetake && (
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="medium"
-                type="button"
-                onClick={handleRetake}
-              >
-                Retake Quiz
-              </MuiButton>
-            )}
+          <div className={styles.questions} ref={submittedRef}>
+            <ResultsCard
+              title={displayName || levelName}
+              score={attempt.score}
+              maxScore={attempt.maxScore}
+              attemptNumber={attempt.attemptNumber}
+              allowMultipleAttempts={toBool(allowMultipleAttempts)}
+              canRetake={attempt.canRetake}
+              onTryAgain={handleRetake}
+            />
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>
