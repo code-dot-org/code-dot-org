@@ -4,6 +4,13 @@ module Pd
     HARDCODED_CSP_FACILITATOR = 'Brook Osborne'
     HARDCODED_OTHER_TEACHERCON_FACILITATOR = 'Code.org team'
 
+    # Facilitator names stack upward from just above the template's
+    # "FACILITATOR" label, and must stay below the date line.
+    FACILITATOR_BOTTOM_Y = 332
+    FACILITATOR_STACK_HEIGHT = 120
+    FACILITATOR_MAX_LINE_HEIGHT = 50
+    FACILITATOR_MAX_POINTSIZE = 30
+
     # Given a PD enrollment, renders a workshop completion certificate.
     #
     # @note This method returns a newly-allocated Magick::Image object.
@@ -41,7 +48,7 @@ module Pd
       [
         {
           string: enrollment.try(:full_name) || '',
-          pointsize: 70,
+          pointsize: 60,
           x: 0,
           y: -200,
           width: 1200,
@@ -55,7 +62,7 @@ module Pd
         {
           string: workshop_title,
           y: -30,
-          pointsize: 64,
+          pointsize: 56,
           width: 1600,
           height: 100,
         }
@@ -66,7 +73,7 @@ module Pd
           {
             string: subject,
             y: 55,
-            pointsize: 54,
+            pointsize: 48,
             width: 1600,
             height: 100,
           }
@@ -93,7 +100,7 @@ module Pd
       [
         {
           string: workshop.workshop_date_range_string,
-          y: 190,
+          y: 175,
           pointsize: 30,
           width: 1000,
           height: 50,
@@ -102,14 +109,18 @@ module Pd
     end
 
     private_class_method def self.facilitators(workshop)
-      facilitator_names(workshop).each_with_index.map do |name, i|
+      names = facilitator_names(workshop)
+      line_height = [FACILITATOR_MAX_LINE_HEIGHT, FACILITATOR_STACK_HEIGHT / [names.size - 1, 1].max].min
+      # Rendered glyphs, descenders included, stand about 1.25x the pointsize.
+      pointsize = [FACILITATOR_MAX_POINTSIZE, (line_height * 0.65).floor].min
+      names.each_with_index.map do |name, i|
         {
           string: name,
-          pointsize: 30,
-          y: 316 - (50 * i),
+          pointsize: pointsize,
+          y: FACILITATOR_BOTTOM_Y - (line_height * i),
           x: 211,
           width: 440,
-          height: 50,
+          height: line_height,
         }
       end
     end
