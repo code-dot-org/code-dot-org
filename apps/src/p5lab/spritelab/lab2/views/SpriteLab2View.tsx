@@ -573,6 +573,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // a block; a selection whose image is gone counts as none.
   const focusImageType = levelProperties.levelMode?.imageType;
   const imageRoleDefaults = levelProperties.imageRoleDefaults;
+  // The level's image of its kind: the image_role_defaults role first, else
+  // the newest of the kind (orderedKeys is newest-first: Sprite Lab prepends
+  // new animations).
+  const focusImageName = useMemo(() => {
+    if (!focusImageType || focusImageType === 'background') {
+      return undefined;
+    }
+    const newest = animationList.orderedKeys.find(
+      key =>
+        imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
+        focusImageType
+    );
+    return (
+      defaultImageName(animationList, imageRoleDefaults, focusImageType) ??
+      (newest ? animationList.propsByKey[newest]?.name : undefined)
+    );
+  }, [focusImageType, animationList, imageRoleDefaults]);
   useEffect(() => {
     if (!focusImageType || focusImageType === 'background') {
       return;
@@ -586,23 +603,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (live && paletteChosenByStudent.current) {
       return;
     }
-    // The level's image_role_defaults role first; else the newest of the kind
-    // (orderedKeys is newest-first: Sprite Lab prepends new animations).
-    const newest = animationList.orderedKeys.find(
-      key =>
-        imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
-        focusImageType
-    );
-    const name =
-      defaultImageName(animationList, imageRoleDefaults, focusImageType) ??
-      (newest && animationList.propsByKey[newest]?.name);
     const current =
       worldPaletteSelection === 'erase' ? null : worldPaletteSelection?.image;
-    if ((name ?? null) === (current ?? null)) {
+    if ((focusImageName ?? null) === (current ?? null)) {
       return;
     }
-    setWorldPaletteSelection(name ? {image: name, kind: focusImageType} : null);
-  }, [worldPaletteSelection, focusImageType, animationList, imageRoleDefaults]);
+    setWorldPaletteSelection(
+      focusImageName ? {image: focusImageName, kind: focusImageType} : null
+    );
+  }, [worldPaletteSelection, focusImageType, focusImageName, animationList]);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
@@ -1406,19 +1415,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // A level that places one thing (level_mode.placeOne) offers the palette
-  // its default image of the level's kind, and moves it rather than adding.
-  const placeOneImage = useMemo(
-    () =>
-      levelProperties.levelMode?.placeOne && focusImageType
-        ? defaultImageName(animationList, imageRoleDefaults, focusImageType)
-        : undefined,
-    [
-      levelProperties.levelMode,
-      focusImageType,
-      animationList,
-      imageRoleDefaults,
-    ]
-  );
+  // only the level's image, and moves it rather than adding.
+  const placeOneImage = levelProperties.levelMode?.placeOne
+    ? focusImageName
+    : undefined;
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) => {
       updateSources(prev => ({
