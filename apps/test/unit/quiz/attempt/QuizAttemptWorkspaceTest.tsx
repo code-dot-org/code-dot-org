@@ -163,7 +163,7 @@ describe('QuizAttemptWorkspace', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('shows a Begin Quiz button to retry when the initial check itself failed', () => {
+  it('shows a Begin Quiz button to retry when the initial check for an attempt itself failed', () => {
     // attempt stays undefined (not null) when the check fails, so the
     // auto-begin effect never fires - this button is the only way out.
     const beginAttempt = jest.fn().mockResolvedValue(undefined);
