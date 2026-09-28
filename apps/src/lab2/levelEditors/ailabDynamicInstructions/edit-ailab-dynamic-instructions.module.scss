@@ -1,7 +1,11 @@
 .fieldArea {
   display: block;
   margin-bottom: 16px;
-  max-width: 50%;
+}
+
+.textArea {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .label {

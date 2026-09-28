@@ -1,3 +1,4 @@
+import type {InstructionsKey} from '@code-dot-org/ailab';
 import {Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -11,8 +12,6 @@ import {
   serializeDynamicInstructions,
   setInstructionsText,
 } from './ailabDynamicInstructions';
-
-import type {InstructionsKey} from '@code-dot-org/ailab';
 
 import moduleStyles from './edit-ailab-dynamic-instructions.module.scss';
 
@@ -35,9 +34,7 @@ const TEXT_AREA_ROWS = 3;
 // The fields show only what Lab 2 AI Lab reads, so the saved value is cleaned to match.
 function prepareForFields(rawDynamicInstructions: string): FieldsState {
   const parsed = parseDynamicInstructions(rawDynamicInstructions);
-  const {dynamicInstructions, removed} = cleanDynamicInstructions(
-    parsed ?? {}
-  );
+  const {dynamicInstructions, removed} = cleanDynamicInstructions(parsed ?? {});
   return {
     rawDynamicInstructions: serializeDynamicInstructions(dynamicInstructions),
     removed: parsed
@@ -90,7 +87,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
           rows={10}
           value={state.rawDynamicInstructions}
           onChange={e => setRawDynamicInstructions(e.target.value)}
-          className="input-block-level"
+          className={moduleStyles.textArea}
         />
       </label>
     );
@@ -115,7 +112,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
             )
           )
         }
-        className="input-block-level"
+        className={moduleStyles.textArea}
       />
     </label>
   );
