@@ -21,7 +21,6 @@ type RootState = StateFor<Store>;
 /** The store the progress thunks and ProgressContainer are typed against. */
 export type ProgressStore = Store;
 export type ProgressRootState = RootState;
-type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
 type AsyncProgressThunkAction = ThunkAction<
   Promise<void>,
   RootState,
@@ -30,6 +29,11 @@ type AsyncProgressThunkAction = ThunkAction<
 >;
 type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
+import {
+  canChangeLevelInPage,
+  getLevelNavigationHooks,
+  levelPageUrl,
+} from '../levelNavigation';
 import {milestoneTimer} from '../MilestoneTimer';
 import {getInitialValidationState} from '../ProgressManager';
 import {
@@ -713,13 +717,18 @@ export const nextLevelId: (state: RootState) => number | undefined = state =>
   getNextLevel(state)?.id;
 
 // Navigate to the next level in the progression, if it exists.
-export function navigateToNextLevel(): ProgressThunkAction {
-  return (dispatch, getState) => {
+export function navigateToNextLevel(): ThunkAction<
+  Promise<void>,
+  RootState,
+  undefined,
+  AnyAction
+> {
+  return async (dispatch, getState) => {
     const levelId = nextLevelId(getState());
     if (levelId === undefined) {
       return;
     }
-    dispatch(navigateToLevelId(levelId));
+    await dispatch(navigateToLevelId(levelId));
   };
 }
 
@@ -920,10 +929,12 @@ export const updateBrowserForLevelNavigation: (
   setWindowTitle(progressStoreState, levelId);
 };
 
-// The user has navigated to a new level in the current lesson,
-// so we should update the browser and also set this as the new
-// current level.
-export function navigateToLevelId(levelId: number): ProgressThunkAction {
+// The user has navigated to a new level in the current lesson. Between levels
+// that can share the page, update the browser and set the new current level;
+// otherwise leave the page for the new level.
+export function navigateToLevelId(
+  levelId: number,
+): ThunkAction<Promise<void>, RootState, undefined, AnyAction> {
   return async (dispatch, getState) => {
     const state = getState().progress;
     if (!state.currentLessonId || !state.currentLevelId) {
@@ -933,12 +944,32 @@ export function navigateToLevelId(levelId: number): ProgressThunkAction {
     if (!newLevel) {
       return;
     }
-
-    // If the requested level is the same as the current level, don't do anything.
+    // Apps asked for confirmation before this check, so a click on the
+    // current level could prompt for nothing.
     if (state.currentLevelId === levelId) {
       return;
     }
+
+    const hooks = getLevelNavigationHooks();
+    if (hooks.confirmNavigation && !(await hooks.confirmNavigation())) {
+      return;
+    }
+
+    const currentLevel = getCurrentLevel(getState());
+    const canNavigateInPage = hooks.canNavigateInPage ?? canChangeLevelInPage;
+    if (!canNavigateInPage(currentLevel, newLevel)) {
+      await hooks.beforeLeavingPage?.(currentLevel);
+      const url = levelPageUrl(newLevel.path);
+      if (hooks.leavePage) {
+        hooks.leavePage(url);
+      } else {
+        window.location.href = url;
+      }
+      return;
+    }
+
     updateBrowserForLevelNavigation(state, newLevel.path, levelId);
+    hooks.onLevelChange?.(state.currentLevelId, levelId);
     dispatch(setCurrentLevelId(levelId));
     milestoneTimer.resetMilestoneTimer();
   };

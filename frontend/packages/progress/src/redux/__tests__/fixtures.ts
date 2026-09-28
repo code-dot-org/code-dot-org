@@ -1,5 +1,6 @@
 // The apps progressReduxTest.js course3 fixture, in the shape core's
-// LessonSchema produces: camelCase keys and numeric ids.
+// LessonSchema produces: camelCase keys and numeric ids. Levels are Lab2
+// unless a spec says otherwise, so they can share a page; apps' were not.
 
 import type {Lesson, UnitLevel} from '@code-dot-org/core/api';
 
@@ -16,6 +17,7 @@ interface LevelSpec {
   pageNumber?: number;
   bonus?: boolean;
   sublevels?: SublevelSpec[];
+  usesLab2?: boolean;
 }
 
 interface SublevelSpec {
@@ -44,14 +46,14 @@ export function level(spec: LevelSpec): UnitLevel {
     bonus: spec.bonus ?? false,
     displayAsUnplugged: spec.kind === 'unplugged',
     app: 'maze',
-    usesLab2: false,
+    usesLab2: spec.usesLab2 ?? true,
     isValidated: true,
     pageNumber: spec.pageNumber,
     sublevels: (spec.sublevels || []).map(sublevel => ({
       ...sublevel,
       url: `http://localhost-studio.code.org:3000${path}/sublevel/${sublevel.position}`,
       path: `${path}/sublevel/${sublevel.position}`,
-      usesLab2: false,
+      usesLab2: spec.usesLab2 ?? true,
       icon: null,
       type: 'maze',
     })),

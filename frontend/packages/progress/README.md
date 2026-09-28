@@ -20,8 +20,6 @@ are addressed (details and citations in docs/port.md):
 
 - No host reports idleness to `milestoneTimer` yet, so idle time counts as
   time spent.
-- In-page navigation does not check whether both levels are Lab2, ask for
-  confirmation, or notify the lab of the level change.
 
 Legacy (non-Lab2) labs report progress through
 `apps/src/code-studio/reporting.js`. This package shares their result
@@ -39,6 +37,7 @@ whether it should is an open design decision (docs/port.md, section 4).
 | `TestResultValidator`, `ValidationTracker`, `TestResultConditionTypes`                                         | Classes         | Validation by levelbuilder-written tests, for Python Lab and Codebridge              |
 | `ConditionsChecker`                                                                                            | Class           | Accumulates satisfied conditions for a validator                                     |
 | `milestoneTimer`, `MilestoneTimer`                                                                             | Instance, class | Time on the level since the last milestone, less idle time; sent with each post      |
+| `configureLevelNavigation`, `resetLevelNavigation`, `canChangeLevelInPage`, `levelPageUrl`                     | Functions       | The host's part in moving between levels                                             |
 | `getInitialValidationState`                                                                                    | Function        | An empty `ValidationState`                                                           |
 | `TestResults`, `MINIMUM_PASS_RESULT`, `MINIMUM_OPTIMAL_RESULT`                                                 | Constants       | Numeric result codes, matching `apps/src/constants.js` and Rails `ActivityConstants` |
 | `LevelStatuses`, `ProgressLevelTypes`, `ViewTypes`, `PUZZLE_PAGE_NONE`, `PASSED_ALL_TESTS_VALIDATION`          | Constants       |                                                                                      |
@@ -51,6 +50,7 @@ whether it should is an open design decision (docs/port.md, section 4).
 | `progressSlice` (default)                                                                                                                                                                            | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux` |
 | `initProgress`, `setValidationState`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                    | Actions   |                                                            |
 | `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`, `continueOrFinishLesson`                                         | Thunks    | Request through `DashboardApiClient`                       |
+| `installLevelNavigationHandler`                                                                                                                                                                      | Function  | Follows back and forward between in-page levels            |
 | `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath` | Selectors | Take the root state                                        |
 | `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                       | Helpers   | Pure                                                       |
 
@@ -121,3 +121,24 @@ milestoneTimer.resetMilestoneTimer();
 idleDetector.on('idle', () => milestoneTimer.startIdle());
 idleDetector.on('active', () => milestoneTimer.endIdle());
 ```
+
+Moving between levels asks the host at each step. Two Lab2 levels share the
+page by default; anything else leaves it. Install the hooks the host needs,
+and the back and forward handler:
+
+```ts
+import {
+  configureLevelNavigation,
+  installLevelNavigationHandler,
+} from '@code-dot-org/progress';
+
+configureLevelNavigation({
+  confirmNavigation: () => window.confirm('Leave with unsaved changes?'),
+  onLevelChange: (from, to) => lab.switchLevel(to),
+  beforeLeavingPage: () => projectManager.cleanUp(),
+});
+const uninstall = installLevelNavigationHandler(store, currentLevelId);
+```
+
+A later `configureLevelNavigation` call replaces only the hooks it names;
+pass `undefined` to remove one.

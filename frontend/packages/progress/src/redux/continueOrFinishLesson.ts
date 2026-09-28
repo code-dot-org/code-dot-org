@@ -62,7 +62,7 @@ export function continueOrFinishLesson(
     }
 
     if (nextLevelId(getState()) !== undefined) {
-      dispatch(navigateToNextLevel());
+      await dispatch(navigateToNextLevel());
       return;
     }
 
