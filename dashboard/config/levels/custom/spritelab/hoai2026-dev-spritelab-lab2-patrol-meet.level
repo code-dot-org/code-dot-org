@@ -38,7 +38,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Go and meet them.** The **when [ ] touches [ ]** event is ready for your player and your second character. Drag a **say** block onto the dotted outline for a hello, or **restart scene** to send your player back to the start. Click **Play**."
+        "text": "**Go and meet them.** The **when touches** event is ready for your player and your second character. Drag a **say** block onto the dotted outline for a hello, or **restart scene** to send your player back to the start. Click **Play**."
       },
       {
         "text": "**Your world has company.** Click **Continue**.",
@@ -48,7 +48,7 @@
         }
       }
     ],
-    "long_instructions": "# Go and meet them\nDrag a **say** block onto the dotted outline under **when [ ] touches [ ]** for a hello, or **restart scene** to send your player back to the start.",
+    "long_instructions": "# Go and meet them\nDrag a **say** block onto the dotted outline under **when touches** for a hello, or **restart scene** to send your player back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
