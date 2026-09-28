@@ -19,12 +19,11 @@ Known to be broken or incomplete, so no host should depend on it before these
 are addressed (details and citations in docs/port.md):
 
 - No host reports idleness to `milestoneTimer` yet, so idle time counts as
-  time spent. Network failures on a milestone post are not logged.
+  time spent.
 - In-page navigation does not check whether both levels are Lab2, ask for
   confirmation, or notify the lab of the level change.
 - `Validator.clear` lost its `isChangingLevels` argument, so the test-result
   validators used by Python Lab and Codebridge cannot be built on it yet.
-- Both requests are hand-rolled `fetch` rather than `DashboardApiClient`.
 
 Legacy (non-Lab2) labs report progress through
 `apps/src/code-studio/reporting.js`. This package shares their result
@@ -51,7 +50,7 @@ whether it should is an open design decision (docs/port.md, section 4).
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------- |
 | `progressSlice` (default)                                                                                                                                                                            | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux` |
 | `initProgress`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                                          | Actions   |                                                            |
-| `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`                                                                   | Thunks    | Talk to `/api/user_progress` and `/milestone`              |
+| `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`                                                                   | Thunks    | Request through `DashboardApiClient`                       |
 | `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath` | Selectors | Take the root state                                        |
 | `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                       | Helpers   | Pure                                                       |
 

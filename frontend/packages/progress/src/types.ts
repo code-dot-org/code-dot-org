@@ -24,10 +24,13 @@ export const ReviewStates = {
  * The schema for the unit progress as returned by our backend API.
  */
 export interface UnitProgressDefinition {
-  status: LevelStatus;
+  // Absent for an unattempted level in a lockable lesson, which arrives as
+  // just {locked: true}.
+  status?: LevelStatus;
   last_progress_at?: number;
   locked?: boolean;
-  pages_completed?: TestResult[];
+  // null for an unattempted page.
+  pages_completed?: (TestResult | null)[] | null;
   paired?: boolean;
   result?: TestResult;
   teacher_feedback_commented?: boolean;
@@ -230,15 +233,7 @@ export interface ExemplarSettings {
 
 export interface OptionalMilestoneData {
   program?: string;
-  // Submitted is a boolean, which the server expects as a string.
-  submitted?: string;
-}
-
-export interface MilestoneReport extends OptionalMilestoneData {
-  app: string;
-  result: boolean;
-  testResult: TestResult;
-  timeSinceLastMilestone?: number;
+  submitted?: boolean;
 }
 
 export type ProgressLevelType =
