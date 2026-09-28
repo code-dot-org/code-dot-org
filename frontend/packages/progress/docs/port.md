@@ -137,8 +137,9 @@ These failed at runtime. All six are fixed, with tests under
 
 ### 3.2 Behaviour dropped from the milestone path
 
-`sendReportHelper` posts `{app, result, testResult, program?, submitted?}` and
-nothing else. Apps `sendReportForLevel` also sends, or does, the following.
+As ported, `sendReportHelper` posted `{app, result, testResult, program?,
+submitted?}` and nothing else. Apps `sendReportForLevel` also sends, or does,
+the following.
 The `mergeUnitProgress` dispatch it also makes is restored; see 3.1 item 3.
 
 - Fixed. `timeSinceLastMilestone` from `Lab2ProgressTimer` (elapsed time
@@ -157,8 +158,12 @@ The `mergeUnitProgress` dispatch it also makes is restored; see 3.1 item 3.
 - Fixed. `?course_id=` from `state.courseId`, which the server uses to set
   `UserLevel#unit_group_id` (#67708). Without it, progress recorded through
   the package was not attributed to a course.
-- A `.catch` that logs network failures through the metrics reporter
-  (#73017). The package lets them surface as unhandled rejections.
+- Fixed. A `.catch` that logs network failures through the metrics reporter
+  (#73017). The port let them surface as unhandled rejections. The package
+  now logs them through the observability plugin's `logger.warn`, with the
+  message and `url` apps used. An HTTP error status is not logged, as in
+  apps, where only a failed request reached the `.catch`. Either way the
+  thunk resolves and progress is left unchanged.
 - `sendProgressReport(appType, result)` and `sendStartedReportIfNotStarted`
   (debounced `LEVEL_STARTED`, #72949, used by Sketch Lab).
 - `sendSuccessReportForLevel(levelId, appType)` (#69574, free-play and
@@ -172,7 +177,9 @@ Apps dispatches `setVerified` from `isVerifiedInstructor` and
 `authorizeLockable` from `lockableAuthorized`. Neither slice exists under
 `frontend/`, so the port silently drops both fields. Lockable lessons and
 verified-teacher gating have no home yet; whichever package takes them must
-read these two fields from the same response.
+read these two fields from the same response. Core's
+`UserProgressResponseSchema` now types both, so that package will find them
+parsed.
 
 ### 3.4 Behaviour dropped from navigation
 
@@ -264,12 +271,26 @@ overview package is an open scoping decision.
 
 ### 3.8 Conventions
 
-- Both HTTP calls are hand-rolled `fetch`. `frontend/AGENTS.md` requires
-  `DashboardApiClient`. Core already has `activities.reportMilestone`, which
-  Studio's course route uses, but it sends only `result` and `testResult`;
-  there is no user-progress client at all. The transport adds the CSRF header
-  on non-GET requests and parses JSON. The milestone route is exempt from
-  forgery protection, which is the only reason the bare fetch works.
+- Fixed. Both HTTP calls were hand-rolled `fetch`, where
+  `frontend/AGENTS.md` requires `DashboardApiClient`. They now go through
+  `DashboardApiClient.activities.reportMilestone`, extended with `app`,
+  `program`, `submitted`, `timeSinceLastMilestone` and `courseId`, and a new
+  `DashboardApiClient.progress.getUserProgress`, which parses the response
+  with `UserProgressResponseSchema`. That schema is permissive: every field
+  is optional and unnamed fields pass through. The request wire format is
+  tested in core; the progress tests stub the two methods.
+
+  One wire change follows. Apps and the port sent `result: true` as a JSON
+  boolean. `ActivitiesController#milestone` compares it against the string
+  `'true'`, and a JSON boolean arrives in `params` as a boolean, so the
+  server read every Lab2 post as unsolved. Core sends it as a string, as its
+  client already did for Studio, so a Lab2 post is now solved on the server.
+  Solved matters in one place: with the `postFailedRunMilestone` gatekeeper
+  off, the server refuses unsolved posts with 503 except on a unit's final
+  level, so until now Lab2 progress was dropped under that setting.
+  `submitted` was already sent as a string and is unchanged. This is read
+  from the controller, not observed against a running server.
+
 - `package.json` has `"type": "module"` (conventions: do not add; it breaks
   the `apps/` webpack consumer) and `"version": "0.1.0"` (conventions:
   `0.0.0`). `lodash`, `react-redux` and `@reduxjs/toolkit` sit in
@@ -347,7 +368,7 @@ branch and the README says so until it is made.
 2. Done. Restore the milestone fields (`timeSinceLastMilestone`,
    `course_id`) and `mergeUnitProgress`. The timer is a module singleton, as
    in apps; see 3.2. A host still owes a lab-mount reset and idle reporting.
-3. Move both requests onto `DashboardApiClient`: extend
+3. Done. Move both requests onto `DashboardApiClient`: extend
    `activities.reportMilestone` with the Lab2 fields, add
    `progress.getUserProgress` with a zod schema for
    `summarize_user_progress`, and give `isVerifiedInstructor` and

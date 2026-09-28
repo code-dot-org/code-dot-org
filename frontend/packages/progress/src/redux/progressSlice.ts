@@ -9,7 +9,8 @@ import type {
 import _ from 'lodash';
 
 import type {Lesson, Sublevel, UnitLevel} from '@code-dot-org/core/api';
-import {LevelKinds} from '@code-dot-org/core/api';
+import {ApiError, DashboardApiClient, LevelKinds} from '@code-dot-org/core/api';
+import {logger} from '@code-dot-org/core/plugins/observability';
 import type {StateFor, MockStore} from '@code-dot-org/core/redux';
 // Type-only import of the slice value binding; `typeof` recovers the slice
 // type without a runtime dependency on the users package.
@@ -41,7 +42,6 @@ import type {
   InitProgressPayload,
   LevelResults,
   LevelStatus,
-  MilestoneReport,
   NumberedLevel,
   NumberedSublevel,
   OptionalMilestoneData,
@@ -102,7 +102,9 @@ export const activityCssClass: (result: TestResult) => LevelStatus = result => {
  * Inverse of the above function.
  * Given a status string, returns a result value.
  */
-export const resultFromStatus: (status: LevelStatus) => TestResult = status => {
+export const resultFromStatus: (
+  status: LevelStatus | undefined,
+) => TestResult = status => {
   if (status === LevelStatuses.ReviewAccepted) {
     return TestResults.REVIEW_ACCEPTED_RESULT;
   }
@@ -196,7 +198,7 @@ const getPagesProgress: (
   serverProgress: UnitProgressDefinition,
 ) => UnitProgress[] | undefined = serverProgress => {
   if ((serverProgress.pages_completed?.length || 0) > 1) {
-    return serverProgress.pages_completed?.map((pageResult: TestResult) => {
+    return serverProgress.pages_completed?.map(pageResult => {
       const pageProgress =
         (pageResult && levelProgressFromResult(pageResult)) ||
         levelProgressFromStatus(LevelStatuses.NotTried);
@@ -560,32 +562,22 @@ function sendReportHelper(
     return Promise.resolve();
   }
 
-  // The server does not appear to use the user ID parameter,
-  // so just pass 0, like some other milestone posts do.
-  const userId = 0;
-  extraData = extraData || {};
-
-  const data: MilestoneReport = {
+  const courseId = state.courseId;
+  const request = {
+    // The controller reads identity from the session, never this segment.
+    userId: 0,
+    scriptLevelId,
+    levelId,
     app: appType,
     result: true,
     testResult: result,
     ...extraData,
     timeSinceLastMilestone: milestoneTimer.getTimeSinceLastMilestone(),
+    ...(courseId && {courseId}),
   };
 
-  // course_id sets UserLevel#unit_group_id on the server.
-  const query = state.courseId
-    ? `?${new URLSearchParams({course_id: String(state.courseId)})}`
-    : '';
-
-  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}${query}`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  }).then(response => {
-    if (response.ok && levelId !== null) {
+  return DashboardApiClient.activities.reportMilestone(request).then(
+    () => {
       // Update the progress store by merging in this
       // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
@@ -600,8 +592,20 @@ function sendReportHelper(
       }
       // The next milestone's time counts from this one.
       milestoneTimer.resetMilestoneTimer();
-    }
-  });
+    },
+    (error: unknown) => {
+      // An HTTP error status is the server declining the post (milestones
+      // disabled, a locked lesson); apps does not log those either. Anything
+      // else is the request failing to complete.
+      if (error instanceof ApiError) {
+        return;
+      }
+      logger.warn('Failed to send milestone report', {
+        url: `/milestone/0/${scriptLevelId}/${levelId}`,
+        error: error instanceof Error ? error.message : String(error),
+      });
+    },
+  );
 }
 
 // Thunks
@@ -937,7 +941,7 @@ export const sendSubmitReport = createAsyncThunk<
   }
 >('progress/sendSubmitReport', async (payload, thunkAPI) => {
   const extraPayload = {
-    submitted: payload.submitted.toString(),
+    submitted: payload.submitted,
   };
   const result = payload.submitted
     ? TestResults.SUBMITTED_RESULT
@@ -1007,18 +1011,12 @@ const userProgressFromServer = async (
     dispatch(clearResults());
   }
 
-  const query = userId ? `?${new URLSearchParams({user_id: userId})}` : '';
-  const response = await fetch(
-    `/api/user_progress/${encodeURIComponent(state.scriptName)}${query}`,
-    {headers: {Accept: 'application/json'}},
-  );
-  if (!response.ok) {
-    throw new Error(
-      `Could not load user progress for ${state.scriptName}: HTTP ${response.status}`,
-    );
-  }
-
-  const data: UserProgressResponse = await response.json();
+  // Core's schema types level statuses as strings; the server sends
+  // SharedConstants::LEVEL_STATUS values, which UserProgressResponse names.
+  const data = (await DashboardApiClient.progress.getUserProgress({
+    scriptName: state.scriptName,
+    userId: userId || undefined,
+  })) as UserProgressResponse;
   if (!data || _.isEmpty(data)) {
     return data;
   }

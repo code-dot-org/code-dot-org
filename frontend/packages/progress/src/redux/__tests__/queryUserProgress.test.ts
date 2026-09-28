@@ -2,7 +2,10 @@
 // apps/test/unit/code-studio/progressReduxTest.js. The apps list of expected
 // actions also held verifiedInstructor/SET_VERIFIED and
 // lessonLock/AUTHORIZE_LOCKABLE; neither slice exists under frontend/ yet.
+// The request itself is DashboardApiClient's; its wire format is tested in
+// core.
 
+import {ApiError, DashboardApiClient} from '@code-dot-org/core/api';
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {UserProgressResponse} from '../../types';
@@ -21,15 +24,10 @@ const fullResponse: UserProgressResponse = {
   current_lesson: 1,
 };
 
-let fetchMock: ReturnType<typeof vi.fn>;
+let getUserProgress: ReturnType<typeof vi.spyOn>;
 
-function respond(body: unknown, status = 200) {
-  fetchMock.mockResolvedValue(
-    new Response(JSON.stringify(body), {
-      status,
-      headers: {'Content-Type': 'application/json'},
-    }),
-  );
+function respond(body: UserProgressResponse) {
+  getUserProgress.mockResolvedValue(body);
 }
 
 function run(
@@ -53,32 +51,30 @@ function run(
 }
 
 beforeEach(() => {
-  fetchMock = vi.fn();
-  vi.stubGlobal('fetch', fetchMock);
+  getUserProgress = vi.spyOn(DashboardApiClient.progress, 'getUserProgress');
 });
 
 afterEach(() => {
-  vi.unstubAllGlobals();
+  vi.restoreAllMocks();
 });
 
 describe('queryUserProgress', () => {
-  it('sends a GET with user_id in the query string and no body', async () => {
+  it('asks for the unit, and for the user when there is one', async () => {
     respond({});
     await run('42').promise;
-
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    const [url, init] = fetchMock.mock.calls[0];
-    expect(url).toBe('/api/user_progress/my-script?user_id=42');
-    expect(init?.method ?? 'GET').toBe('GET');
-    expect(init?.body).toBeUndefined();
-    // The real fetch rejects a GET that carries a body.
-    expect(() => new Request(`http://localhost${url}`, init)).not.toThrow();
+    expect(getUserProgress).toHaveBeenCalledWith({
+      scriptName: 'my-script',
+      userId: '42',
+    });
   });
 
-  it('omits user_id when there is none', async () => {
+  it('asks for the signed-in user when there is no user id', async () => {
     respond({});
     await run('').promise;
-    expect(fetchMock.mock.calls[0][0]).toBe('/api/user_progress/my-script');
+    expect(getUserProgress).toHaveBeenCalledWith({
+      scriptName: 'my-script',
+      userId: undefined,
+    });
   });
 
   it('requests user progress and does not set new progress with no data', async () => {
@@ -139,13 +135,18 @@ describe('queryUserProgress', () => {
     expect(actions).toEqual([]);
   });
 
-  it('rejects with an error on a failed response', async () => {
-    respond({}, 403);
-    await expect(run('1').promise).rejects.toThrow(/HTTP 403/);
+  it('rejects with the client error on a failed response', async () => {
+    const error = new ApiError('Request failed', {
+      status: 403,
+      url: '/api/user_progress/my-script',
+      method: 'GET',
+    });
+    getUserProgress.mockRejectedValue(error);
+    await expect(run('1').promise).rejects.toBe(error);
   });
 
   it('rejects when the network fails', async () => {
-    fetchMock.mockRejectedValue(new TypeError('Failed to fetch'));
+    getUserProgress.mockRejectedValue(new TypeError('Failed to fetch'));
     await expect(run('1').promise).rejects.toThrow('Failed to fetch');
   });
 
@@ -153,14 +154,15 @@ describe('queryUserProgress', () => {
     await expect(
       run('1', true, {scriptName: undefined}).promise,
     ).rejects.toThrow(/scriptName must be present/);
-    expect(fetchMock).not.toHaveBeenCalled();
+    expect(getUserProgress).not.toHaveBeenCalled();
   });
 
-  it('parses server progress into unitProgress', async () => {
-    const progress = {7: {status: 'perfect' as const, result: 100 as const}};
-    respond({...fullResponse, progress});
-    const {promise} = run('1');
-    await promise;
+  it('parses server progress into unitProgress, including a bare lock', async () => {
+    const progress = {
+      7: {status: 'perfect' as const, result: 100 as const},
+      8: {locked: true},
+      9: {status: 'attempted' as const, pages_completed: [30 as const, null]},
+    };
     const state = progressSlice.reducer(
       undefined,
       progressSlice.actions.setScriptProgress(progress),
@@ -169,6 +171,14 @@ describe('queryUserProgress', () => {
       status: 'perfect',
       result: 100,
     });
+    expect(state.unitProgress[8]).toMatchObject({
+      status: 'not_tried',
+      locked: true,
+    });
+    expect(state.unitProgress[9].pages?.map(p => p.status)).toEqual([
+      'perfect',
+      'not_tried',
+    ]);
     expect(state.unitProgressHasLoaded).toBe(true);
   });
 });
