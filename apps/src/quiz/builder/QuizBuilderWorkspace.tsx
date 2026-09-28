@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import QuizQuestionCard from './QuizQuestionCard';
+import {isPendingQuestionId} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
 import styles from './quiz-builder-workspace.module.scss';
@@ -31,6 +32,9 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   // was open before it. A create opens the just-created question straight
   // into editing.
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const hasPendingQuestion = questions.some(question =>
+    isPendingQuestionId(question.id)
+  );
 
   const handleCreate = () => {
     setExpandedId(addPendingQuestion());
@@ -85,16 +89,22 @@ const QuizBuilderWorkspace: React.FunctionComponent<
 
         {outline}
 
-        <Button
-          className={styles.createButton}
-          variant="contained"
-          color="primary"
-          type="button"
-          disabled={isLoading}
-          onClick={handleCreate}
-        >
-          + Create question
-        </Button>
+        <div className={styles.createAction}>
+          <Button
+            variant="contained"
+            color="primary"
+            type="button"
+            disabled={isLoading || hasPendingQuestion}
+            onClick={handleCreate}
+          >
+            + Create question
+          </Button>
+          {hasPendingQuestion && (
+            <Typography variant="body3" className={styles.createHint}>
+              Save or remove your new question before creating another.
+            </Typography>
+          )}
+        </div>
       </div>
     </PanelContainer>
   );

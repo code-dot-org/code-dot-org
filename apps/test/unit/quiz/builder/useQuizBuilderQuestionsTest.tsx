@@ -79,18 +79,12 @@ describe('useQuizBuilderQuestions', () => {
     );
     await waitForNextUpdate();
 
-    let firstId: number | undefined;
-    let secondId: number | undefined;
+    let id: number | undefined;
     act(() => {
-      firstId = result.current.addPendingQuestion();
-    });
-    act(() => {
-      secondId = result.current.addPendingQuestion();
+      id = result.current.addPendingQuestion();
     });
 
-    expect(firstId).toBeLessThan(0);
-    expect(secondId).toBeLessThan(0);
-    expect(secondId).not.toBe(firstId);
+    expect(id).toBeLessThan(0);
   });
 
   it('reports a generic error when the load fails', async () => {

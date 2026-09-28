@@ -135,6 +135,31 @@ describe('QuizBuilderWorkspace', () => {
     ).toBeDisabled();
   });
 
+  it('disables the create button while a pending question already exists', () => {
+    renderWorkspace({questions: [question({id: -1})]});
+    expect(
+      screen.getByRole('button', {name: '+ Create question'})
+    ).toBeDisabled();
+  });
+
+  it('explains why the create button is disabled by a pending question', () => {
+    renderWorkspace({questions: [question({id: -1})]});
+    expect(
+      screen.getByText(
+        'Save or remove your new question before creating another.'
+      )
+    ).toBeInTheDocument();
+  });
+
+  it('does not show the pending-question hint otherwise', () => {
+    renderWorkspace({questions: [question()]});
+    expect(
+      screen.queryByText(
+        'Save or remove your new question before creating another.'
+      )
+    ).toBeNull();
+  });
+
   it('renders a server error', () => {
     renderWorkspace({error: 'Something went wrong.'});
     expect(screen.getByRole('alert')).toHaveTextContent(
