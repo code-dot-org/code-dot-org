@@ -42,7 +42,7 @@ const FIELD_LABELS: Record<Lab2Key, string> = {
 };
 
 function isLab2Key(key: string): key is Lab2Key {
-  return key in FIELD_LABELS;
+  return Object.hasOwn(FIELD_LABELS, key);
 }
 
 function toFields(keys: readonly string[]): DynamicInstructionsField[] {
