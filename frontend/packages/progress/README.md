@@ -13,12 +13,11 @@ divergence from `apps/` and the proposed order of work, is in
 
 ## Status
 
-Experimental. Builds, typechecks and lints; has no tests and no consumer yet.
+Experimental. Builds, typechecks and lints. Only `queryUserProgress` is
+tested, and nothing consumes the package yet.
 Known to be broken or incomplete, so no host should depend on it before these
 are addressed (details and citations in docs/port.md):
 
-- `queryUserProgress` sends a GET with a body, which the fetch spec rejects,
-  and its promise never settles in the normal case.
 - Milestone posts omit `timeSinceLastMilestone` and `course_id`, so time spent
   and course attribution are not recorded, and `unitProgress` is not updated
   after a post.
