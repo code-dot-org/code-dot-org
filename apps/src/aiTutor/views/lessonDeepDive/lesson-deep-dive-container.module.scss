@@ -8,8 +8,8 @@ $purple: hsl(271deg 58% 65%);
   height: calc(100vh - #{$header-height});
   width: 100%;
   overflow: hidden;
-  background-color: var(--background-neutral-true-base);
-  color: #fff;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
 }
 
 .box {

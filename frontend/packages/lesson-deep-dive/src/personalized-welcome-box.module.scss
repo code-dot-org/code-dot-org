@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  color: #fff;
+  color: var(--text-neutral-primary);
 }
 
 .overline {
@@ -11,7 +11,7 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #d4dae1;
+  color: var(--text-neutral-quaternary);
   margin: 0 0 16px;
 }
 
@@ -20,24 +20,24 @@
   font-size: clamp(3.5rem, 10vw, 6.25rem);
   font-weight: 800;
   line-height: 1;
-  color: #fff;
+  color: var(--text-neutral-primary);
   margin: 0 0 24px;
 }
 
 .name {
-  color: #a86cd8;
+  color: var(--text-brand-purple-primary-fixed);
 }
 
 .body {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #d4dae1;
+  color: var(--text-neutral-quaternary);
   margin: 0 0 auto;
   max-width: 460px;
 
   strong {
-    color: #fff;
+    color: var(--text-neutral-primary);
     font-weight: 700;
   }
 }
@@ -50,14 +50,14 @@
   padding: 0;
   background: transparent;
   border: none;
-  color: #d4dae1;
+  color: var(--text-neutral-quaternary);
   font-size: 0.875rem;
   font-weight: 400;
   cursor: pointer;
   transition: color 0.15s ease;
 
   &:hover {
-    color: #fff;
+    color: var(--text-neutral-primary);
   }
 
   &:focus-visible {
