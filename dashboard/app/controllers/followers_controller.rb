@@ -54,7 +54,7 @@ class FollowersController < ApplicationController
     else
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save && @section&.add_student(@user)
-          sign_in(:user, @user)
+          sign_in(:user, @user, event_type: SignIn::REGISTRATION, authentication_option: @user.primary_contact_info)
           @user.increment_section_attempts
           # Check for an exiting user, and redirect to course if found
           if is_existing_follower

@@ -26,6 +26,7 @@ class FollowersControllerTest < ActionController::TestCase
     @admin = create(:admin)
 
     @request.host = CDO.dashboard_hostname
+    DCDO.set('sign_in_attribution_enabled', true)
   end
 
   test "student in picture section should be redirected to picture login when joining section" do
@@ -247,6 +248,28 @@ class FollowersControllerTest < ActionController::TestCase
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
     end
+  end
+
+  # Devise's sign_in no-ops for an already-signed-in user, so the row is written only
+  # for the account created by this request.
+  test "student_register records a registration attributed to the new credential" do
+    student_params = {email: 'student-attribution@school.edu',
+                      name: "A name",
+                      password: "apassword",
+                      gender: 'F',
+                      age: '13'}
+
+    assert_creates(SignIn) do
+      post :student_register, params: {
+        section_code: @chris_section.code,
+        user: student_params
+      }
+    end
+
+    user = assigns(:user)
+    sign_in = SignIn.where(user_id: user.id).order(:id).last
+    assert_equal SignIn::REGISTRATION, sign_in.event_type
+    assert_equal user.primary_contact_info.id, sign_in.authentication_option_id
   end
 
   test "student_register with age and hashed email" do
