@@ -77,6 +77,15 @@ const baseCurrentUser: CurrentUserResponseSignedIn = {
   created_at: '2020-01-01T00:00:00Z',
 };
 
+// The Integrations tab's block, as Rails serves it.
+const integrations: UsersSettingsSeed['integrations'] = {
+  can_manage_linked_accounts: true,
+  is_google_classroom_student: false,
+  is_clever_student: false,
+  personal_account_linking_enabled: true,
+  lms_name: null,
+};
+
 const teacher: UsersScenario = {
   currentUser: {...baseCurrentUser},
   settings: {
@@ -92,7 +101,7 @@ const teacher: UsersScenario = {
     should_see_add_password_form: false,
     should_see_edit_email_link: true,
     authentication_options: [
-      {credential_type: 'email', email: 'ada@example.com'},
+      {id: 101, credential_type: 'email', email: 'ada@example.com'},
     ],
     can_change_user_type: true,
     can_delete_own_account: true,
@@ -102,6 +111,7 @@ const teacher: UsersScenario = {
     is_usa: true,
     parent_email: null,
     dependent_students_count: 2,
+    integrations,
     // Teacher-only keys: a student's seed omits them, like the Rails serializer.
     educator_role: 'classroom_teacher',
     school_info: {
@@ -152,6 +162,7 @@ const student: UsersScenario = {
     is_usa: true,
     parent_email: 'parent@example.com',
     dependent_students_count: 0,
+    integrations,
   },
   password: 'currentpass',
   description:
@@ -180,7 +191,7 @@ const ssoTeacher: UsersScenario = {
     should_see_add_password_form: true,
     should_see_edit_email_link: true,
     authentication_options: [
-      {credential_type: 'google_oauth2', email: 'grace@example.com'},
+      {id: 301, credential_type: 'google_oauth2', email: 'grace@example.com'},
     ],
     can_change_user_type: true,
     can_delete_own_account: true,
@@ -190,6 +201,7 @@ const ssoTeacher: UsersScenario = {
     is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
+    integrations,
     educator_role: 'school_admin',
     school_info: {
       school_name: 'Example Middle School',
@@ -231,7 +243,9 @@ const ssoStudent: UsersScenario = {
     should_see_add_password_form: false,
     // Oauth-only students don't see edit-email (no stored cleartext address).
     should_see_edit_email_link: false,
-    authentication_options: [{credential_type: 'google_oauth2', email: null}],
+    authentication_options: [
+      {id: 401, credential_type: 'google_oauth2', email: null},
+    ],
     can_change_user_type: false,
     can_delete_own_account: true,
     age: 13,
@@ -240,6 +254,7 @@ const ssoStudent: UsersScenario = {
     is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
+    integrations,
   },
   description: 'Google-only student: no add-password, no edit-email link.',
 };
@@ -282,6 +297,8 @@ const minimal: UsersScenario = {
     is_usa: false,
     parent_email: null,
     dependent_students_count: 0,
+    // No age or state yet, so linking a personal login stays locked.
+    integrations: {...integrations, personal_account_linking_enabled: false},
   },
   description: 'Word/picture student, everything locked (no edit, no delete).',
 };
@@ -355,6 +372,7 @@ const longStrings: UsersScenario = {
     should_see_edit_email_link: true,
     authentication_options: [
       {
+        id: 1001,
         credential_type: 'email',
         email:
           'maximiliana.wolfeschlegelsteinhausenbergerdorff.the.magnificent@an-extremely-long-subdomain.example.org',
@@ -368,6 +386,7 @@ const longStrings: UsersScenario = {
     is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
+    integrations,
     educator_role: 'other',
     school_info: {
       school_name:
