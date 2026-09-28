@@ -638,7 +638,6 @@ def run_playwright_suite(suite, env: {}, env_secrets: {})
   e2e_dir = frontend_dir('packages', 'e2e-tests')
   script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
 
-  # GitHub Actions sets its own PLAYWRIGHT_PROVIDER and skips this task.
   provider =
     if CDO.test_system?            then 'dtt'
     elsif CI::Utils.running_on_ci? then 'drone'
