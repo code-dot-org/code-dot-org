@@ -14,6 +14,23 @@
   opacity: 0.5;
 }
 
+.columnButton {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.labelButton {
+  background-color: var(--ailab-label);
+}
+
+.featureButton {
+  background-color: var(--ailab-feature);
+}
+
 .panel {
   padding: 10px;
   background-color: white;

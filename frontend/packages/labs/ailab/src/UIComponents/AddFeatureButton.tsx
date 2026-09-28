@@ -3,7 +3,7 @@ import {useAppDispatch} from '../hooks';
 import I18n from '../i18n';
 import {addSelectedFeature} from '../redux';
 
-import styles from './addFeatureButton.module.scss';
+import shared from '../shared.module.scss';
 
 interface AddFeatureButtonProps {
   column?: string;
@@ -22,7 +22,7 @@ const AddFeatureButton = ({column}: AddFeatureButtonProps) => {
       id="uitest-add-feature-button"
       type="button"
       onClick={event => addFeature(event, column!)}
-      className={styles.button}
+      className={`${shared.columnButton} ${shared.featureButton}`}
     >
       {I18n.t('addFeatureButton')}
     </button>

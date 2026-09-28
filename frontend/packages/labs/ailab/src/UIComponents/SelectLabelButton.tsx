@@ -3,7 +3,7 @@ import {useAppDispatch} from '../hooks';
 import I18n from '../i18n';
 import {setLabelColumn} from '../redux';
 
-import styles from './selectLabelButton.module.scss';
+import shared from '../shared.module.scss';
 
 interface SelectLabelButtonProps {
   column?: string;
@@ -22,7 +22,7 @@ const SelectLabelButton = ({column}: SelectLabelButtonProps) => {
       id="uitest-select-label-button"
       type="button"
       onClick={event => setPredictColumn(event, column!)}
-      className={styles.button}
+      className={`${shared.columnButton} ${shared.labelButton}`}
     >
       {I18n.t('selectLabelButton')}
     </button>
