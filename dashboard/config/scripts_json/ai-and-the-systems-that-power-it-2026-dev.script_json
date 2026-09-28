@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-22 21:03:14 UTC",
+    "serialized_at": "2026-09-25 23:36:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -215,9 +215,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do different types of data and sensors help solve real-world problems?**\n\nStudents learn about different types of data (text, audio, visual, location, environmental/biometric) and the hardware components used to collect them. They work in teams to analyze user needs, identify required data types, and determine appropriate sensors for solving real-world problems. The lesson integrates AI chatbots for brainstorming sensor ideas and culminates in a collaborative reflection.",
-        "preparation": "- Plan on how to divide the classroom into six different stations\n- Gather several sticky notes\n- Print copies of the Station Activity Cards\n- Print copies of the Data in Computer Systems activity guide (one for each student)\n- Print copies of the Computer Systems and Devices Unit Guide (one for each student)",
-        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do different types of data and sensors help solve real-world problems?**\n\nYou explore different types of data and the sensors that are used to collect them. Working in a teams, you learn to analyze user needs, identify required data types, and determine appropriate sensors for solving real-world mysteries!"
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do different types of data and sensors help solve real-world problems?**\n\nStudents learn about different types of data (audio, visual, location, environmental, and biometric) and the sensors used to collect them. They choose a profession, determine which sensors fit that professional's problem, and then join classmates with the same profession at a Data Station. There they analyze the sensor data and propose a solution. The lesson ends with a class reflection.\n\n",
+        "preparation": "- Plan on how to divide the classroom into five different stations, each representing one of the spotlight careers for the unit\n- Print copies of the Data Station Cards\n- Print one copy of the Stations Teacher Resource\n- Print copies of the Data in Computer Systems activity guide (one for each student)",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do different types of data and sensors help solve real-world problems?**\n\nYou explore different types of data and the sensors used to collect them. You choose a profession and decide appropriate sensors for solving a real-world mystery. Then you team up with classmates to investigate the data and propose a solution. "
       },
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
@@ -324,9 +324,9 @@
       "relative_position": 13,
       "properties": {
         "assessment": true,
-        "overview": "**How can we design a computer system to solve a real world problem?**\n\nStudents propose and design an AI-infused computer system and demonstrate how it would contribute to achieving one of the United Nations Sustainable Development Goals.",
-        "preparation": "- Print out a digitally distribute a copy of the Project Guide for each student\n- Digitally distribute a copy of the System Diagram template to each group\n- Print out a copy of the System Diagram Checklist for each group",
-        "student_overview": "**How can we design a computer system to solve a real world problem?**\n\nIn this project, you will brainstorm and design an AI-infused computer system that contribute to achieving one of the United Nations Sustainable Development Goals."
+        "overview": "**How can we design a computer system to solve a real world problem?**\n\nStudents propose and design an AI-infused computer system and demonstrate how it would contribute to solving a real-world problem connected to Sustainable Development Goals identified by the United Nations.",
+        "preparation": "- Print out or digitally distribute a copy of the Project Guide for each student.\n- Print out a copy of the System Diagram Checklist & Using AI as a Collaborator handouts for each group.",
+        "student_overview": "**How can we design a computer system to solve a real world problem?**\n\nIn this project, you will brainstorm and design an AI-infused computer system and demonstrate how it would contribute to solving a real-world problem connected to Sustainable Development Goals identified by the United Nations."
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
@@ -671,7 +671,7 @@
       "key": "f4862d9c-8f9f-4e16-915e-1cc8e22ddd42",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -685,7 +685,7 @@
       "key": "4dada319-0093-4926-810a-7572bec347c7",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -704,18 +704,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "308a6025-8c68-476a-9a12-21f5c68d64b3",
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
-      }
-    },
-    {
-      "key": "3fc26492-0beb-4d0d-86c0-b44754ede43e",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e",
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev"
@@ -2236,7 +2224,7 @@
       "key": "abf72d18-0e0c-473b-9cb7-e8b05befa371",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a blank piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of vehicles or pedestrians on the street\n- Audio Data - noise level, types of sounds (car horns, rain, footsteps, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature, rain intensity\n- Text Data - Street signs, billboards, shop names, or license plate numbers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Actions being performed (chopping, stirring, plating)\n- Audio Data - Type of sounds (alarms for timers, equipment hums, verbal orders)\n- Location Data - Movements of staff (areas of the kitchen frequently occupied, paths taken between stations)\n- Environmental Data - Kitchen temperature\n- Biometric Data - Stress indicators (heart rate, hurried movements)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different 10 second scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Number and types of trees, plants, or rocks visible\n- Audio Data - Birdsong frequency and species identification\n- Location Data - Pathways and trails mapped within the scene\n- Environmental Data - Air quality\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n* **Whip Around:** Ask a question with a short response, then go around the room quickly, having each student share one thought, idea, or answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, in the rainy city scenario, they might suggest that the number of vehicles on the street might help city planners identify peak traffic times and design better traffic flow solutions. In the restaurant kitchen scenario, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. In the nature scenario, the temperature or air quality could be tracked over time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n* **Whip Around:** Ask a question with a short response, then go around the room quickly, having each student share one thought, idea, or answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of workers or plates on the counter\n- Audio Data - noise level, types of sounds (voices, dishes, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "abf72d18-0e0c-473b-9cb7-e8b05befa371",
@@ -2247,7 +2235,7 @@
       "key": "32920dc9-3e98-4703-aefc-a47f64e126d8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each group a copy of the Data in Computer Systems activity guide.  \n\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video  \"Intro to Sensors\" (0:17 - 1:22)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:** *What might be an example of a sensor in an everyday object that you are familiar with? What data might it collect?*\n* **Think, Pair, Share:** Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that sensors detect or measure physical properties. Student examples will vary, but some sample responses include the auto-dimming feature of their cell phone screen (light sensor), the way that lights are turned on when you walk into a room (motion sensor), or even when your car tells you that you are almost out of gas (fuel sensor).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point students to the first page in their activity guides. They will use the AI Chat in order to explore several sensors. For each, they should put the sensor name, the data type, a description of what the sensor does, and where it might be used in a computer system or device.\n\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each group a copy of the Data in Computer Systems activity guide.  \n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 and point students to the first page in their activity guide. Students use the app to explore each of the sensors, and what data it collects, and how that data is represented. Students complete the first table of the activity guide by filling in the Type column and the Description of Data Produced column.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "32920dc9-3e98-4703-aefc-a47f64e126d8",
@@ -2258,8 +2246,7 @@
       "key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system.",
-        "progression_name": "Sensors and AI Chatbot"
+        "progression_name": "Exploring Sensors"
       },
       "seeding_key": {
         "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0",
@@ -2270,13 +2257,7 @@
       "key": "ebb79cf2-41a6-4734-be2e-c2d72cebd081",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students lay out the first page of their activity guides on their desks or tables.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 5 minutes, gathering information about sensors that their classmates explored. They should record their findings in the Unit Guide. Note: students should not feel obligated to complete the entire chart; they can always revisit and fill in additional information later. \n\n\n",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Unit Guide can be collected and used to formatively assess the lesson objectives:\n- Describe various types of data \n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which sensor and object produced useful information? Which sensor and object did not produce useful information?*\n* **Popcorn Share:** Ask a question and have students respond one at a time, “popping” in when they have something to share. Continue until a variety of ideas are heard.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for student's ability to correctly identify useful and not useful pairs of sensors and objects in the scene for example: the temperature gives useful data for everything except the sun, the Heart Rate sensor only gives useful data for the dog and the duck.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What type of information did the sensor produce?\n* **Popcorn Share:** Ask a question and have students respond one at a time, “popping” in when they have something to share. Continue until a variety of ideas are heard.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for student's ability to correctly identify the type of data to the sensor for example Position produces Location data represented as numbers for longitude and latitude.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 7, Level 2. Students choose a career that interests them each with a unique problem that sensors could be used to solve:\n- Veterinarian: Goats on a farm are getting sick use the Temperature, Position, and Heart Rate sensors\n- Athletic Trainer: Players are cramping near the end of Saturday practice. Use the Heart Rate, Weight, and Position sensors.\n- Agriculture Farmer: Crops in part of a sweet potato field are being destroyed. Use the Sound, Camera, and Weight sensors.\n- Visualization Supervisor:  A digital stunt landing looks too light and floaty. Use the Weight (force plate) and Camera sensors.\n- Pharmacist: A fridge storing insulin gets too warm. Use the Temperature and Camera sensors.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ebb79cf2-41a6-4734-be2e-c2d72cebd081",
@@ -2284,14 +2265,29 @@
       }
     },
     {
-      "key": "89c5c861-1e06-4bac-9415-9ca4ef372185",
+      "key": "6cb750ed-a941-4227-b7f5-3128f6388a06",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the *Empathize with the User* section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the **Define the Data** section of the activity guide. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response in the **Ideate a Solution** section later.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the **Investigate with AI section** of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the Ideate a Solution section of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response.",
+        "progression_name": "Sensors in Careers"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06",
+        "lesson_activity.key": "4dada319-0093-4926-810a-7572bec347c7"
+      }
+    },
+    {
+      "key": "89c5c861-1e06-4bac-9415-9ca4ef372185",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students go to station based on the career they chose in Level 2. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the Data Stations section of their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Use the Stations Teacher Resource to help guide students through investigating the data. Students may suggest the first solution they find for example, the veterinarian: give medicine to the goats with fever, but by using all the data should find a more comprehensive solution.\n",
         "tips": [
           {
+            "type": "teachingTip",
+            "markdown": "Use the [Data Stations Teacher Guide](https://drive.google.com/file/d/1kAC5C7rNo1MlCc_S68C5Rw1H681LRnd8) Resource to help guide students through investigating the data. Students may suggest the first solution they find for example, the veterinarian: give medicine to the goats with fever, but by using all the data should find a more comprehensive solution."
+          },
+          {
             "type": "assessmentOpportunity",
-            "markdown": "The Data in Computer Systems Activity Guide can be collected and used to formatively assess the lesson objectives:\n- Describe various types of data \n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem"
+            "markdown": "The Data in Computer Systems Activity Guide can be collected and used to formatively assess the lesson objectives:\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem"
           }
         ]
       },
@@ -2304,28 +2300,17 @@
       "key": "cf3afaa4-2a50-4dbd-b47d-c8b3701cce49",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Think of a problem that data could solve relating to an activity or hobby that interests you. What data and sensor might be useful to help solve the problem?\n- **Think-Write-Share:** Give students 30 seconds to think and another 30 seconds to write a response in their Activity Guide. Have them quickly share their thoughts with a partner or a small group.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for student's ability to tie three main components together: sensor type, data collected, and how it solves a problem.\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>**Do This:** Review the lesson objectives.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson."
+            "markdown": "Student responses to the Wrap Up Question in the Activity Guide can be used to assess how well students grasped the concepts of selecting a sensor to record data to solve a problem and which concepts might need further review."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "cf3afaa4-2a50-4dbd-b47d-c8b3701cce49",
         "lesson_activity.key": "308a6025-8c68-476a-9a12-21f5c68d64b3"
-      }
-    },
-    {
-      "key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363",
-      "position": 1,
-      "properties": {
-        "progression_name": "New Progression"
-      },
-      "seeding_key": {
-        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363",
-        "lesson_activity.key": "3fc26492-0beb-4d0d-86c0-b44754ede43e"
       }
     },
     {
@@ -2468,8 +2453,20 @@
       }
     },
     {
-      "key": "0d5c80d7-1876-486e-9c30-c09f041a951f",
+      "key": "41e1cfe8-63da-4bdb-9985-0aa4e8c460b7",
       "position": 4,
+      "properties": {
+        "description": "Let's connect this to something we learned earlier. Every computer system takes in input, keeps it in storage, processes it, and produces output. Today we're zooming in on processing. Processing is where the system actually works with the data: sorting, filtering, aggregating, and validating. You already validated the library data in Level 1. Now let's try the others.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "41e1cfe8-63da-4bdb-9985-0aa4e8c460b7",
+        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
+      }
+    },
+    {
+      "key": "0d5c80d7-1876-486e-9c30-c09f041a951f",
+      "position": 5,
       "properties": {
         "description": "Imagine you’re a librarian who needs to make decisions quickly, like recommending books to visitors or identifying which books are rarely checked out. You can’t rely on manual sorting all the time, especially when dealing with thousands of records. That’s where computer systems and computational tasks come in. Today, we’ll work with a dataset about a library’s book collection and use computational processes to uncover patterns and make data-driven decisions, just like a computer system would. In this activity, you’ll analyze a dataset step by step, just like a computer system processes data. We’ll use a template to break the problem into clear steps. Let’s walk through an example together to get started.",
         "remarks": true
@@ -2481,7 +2478,7 @@
     },
     {
       "key": "5d02bf8d-6890-4987-9571-5573de87fa38",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 2. Walk students through solving the first choice level using the following steps ([here is a demo](https://drive.google.com/file/d/1tkR53BYic9eqtBFS5-Y9AAktrc_2ey-v/view) of how to do this):\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (reference the action bank at the top of their activity guides):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort by descending order (Z-A) of Popularity Score**.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
         "progression_name": "Processing Library Data"
@@ -2493,7 +2490,7 @@
     },
     {
       "key": "bbe8b6bc-1d0d-4cd6-ac68-e8e9783f9551",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**:  Model filling out the Madlib template on chart paper or the board for the first scenario: “The goal is to [show the hottest books to visitors]. The system will [Sort] the [Popularity Score column] by [descending order]. The output is [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
       },
@@ -2504,7 +2501,7 @@
     },
     {
       "key": "1a38e48b-d170-435f-ac6f-2f2a3e2bc15f",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *sort*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *filter*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *aggregate*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *validate*\n\n"
       },
@@ -2515,7 +2512,7 @@
     },
     {
       "key": "e701a85b-a332-40ac-acd0-323f8adaca34",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Now it’s your turn! Work with your partner to complete two additional library data choice levels. For each scenario, follow the steps we just practiced: define the goal, choose the action, identify the relevant data, apply the action, describe the output, and reflect on the insights.",
         "remarks": true
@@ -2527,7 +2524,7 @@
     },
     {
       "key": "6f341cc3-7184-4948-b2d7-4b7fbc89c26a",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete two more library data choice levels in Lesson 8, Level 2. They use their activity guide to write down the steps for two of the choice levels, and fill out the template to summarize their process and results each.\n"
       },
@@ -2538,7 +2535,7 @@
     },
     {
       "key": "a2032752-147c-419d-a7c1-b4628c510352",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
         "tips": [
@@ -2555,7 +2552,7 @@
     },
     {
       "key": "6edb1f45-94ac-455a-a9b5-a3a8bc3ec714",
-      "position": 11,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -2565,7 +2562,7 @@
     },
     {
       "key": "863b20aa-c2f1-40e5-8832-74cfa05b08d8",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. \n- Ask student pairs to share their answers.\n- Highlight and clarify any differences or commonalities in their findings."
       },
@@ -2576,9 +2573,9 @@
     },
     {
       "key": "c9cc480d-6cd2-491e-82a6-52da457eba45",
-      "position": 13,
+      "position": 14,
       "properties": {
-        "description": "Let’s take some time to reflect on what you’ve learned. You’ll answer three free-response questions to compare the benefits and limitations of manual and computational data processing. Think about how the tools and methods we used today improve efficiency, accuracy, and help us handle larger datasets.",
+        "description": "Let’s take some time to reflect on what you’ve learned. You’ll answer two free-response questions to compare the benefits and limitations of manual and computational data processing. Think about how the tools and methods we used today improve efficiency, accuracy, and help us handle larger datasets.",
         "duration": "10",
         "name": "Reflection",
         "remarks": true
@@ -2590,14 +2587,14 @@
     },
     {
       "key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a",
-      "position": 14,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3 to respond to the reflection questions on Levels 3, 4, and 5.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3 to respond to the reflection questions on Levels 3 and 4.",
         "progression_name": "Reflection",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Processing Library Data activity guide can be collected and used to formatively assess the lesson objectives.\n\nThe free response questions in Levels 2, 3, and 4 can be used to formatively assess the lesson objectives."
+            "markdown": "The Processing Library Data activity guide can be collected and used to formatively assess the lesson objectives.\n\nThe free response questions in Levels 3 and 4 can be used to formatively assess the lesson objectives."
           }
         ]
       },
@@ -2610,7 +2607,7 @@
       "key": "527ac923-5aed-4ff1-9d8f-93291995e00d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3420,9 +3417,23 @@
       "key": "f43eb8f8-419c-4ba1-9785-45b2ecdf0f47",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of two or three for the project.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Sustainable Systems project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that you will be starting a three day project today centered around designing a computer system that helps make the world a better place. Introduce the UN Sustainable Development Goals as the specific framework that students will be using to pick a focus for their project.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"UN Sustainable Development Goals\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question To Consider While Watching:** *Which goals are personally relevant or interesting to you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to be making connections to their lives, communities, friends, and family as they talk about which goals are of interest to them.",
-        "duration": "15",
-        "name": "Warm Up",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In your view, what is a major issue or problem that affects our community (group, school, city)?*\n* **Think, Pair, Share**: Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to identify problems or needs in their community. Students can define community as broadly or narrowly as they want– it can be something as focused as a group or organization that they are a part of, a class, or a sports team; or, they might zoom out and look at community as the city, county, or state in which they live.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "f43eb8f8-419c-4ba1-9785-45b2ecdf0f47",
+        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
+      }
+    },
+    {
+      "key": "75f89607-7ca7-494d-82b8-8ad264e85c1a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of two or three for the project.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Sustainable Systems project guide, AI as a Collaborator handout, and System Diagram Checklist handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that you will be starting a three day project today centered around designing a computer system that helps make our community or our world a better place. Introduce the UN Sustainable Development Goals as the specific framework that students will be using to pick a focus for their project.\n\n**Video**: Show the video \"UN Sustainable Development Goals\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which goals might be personally relevant or connect to issues in our community?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to be making connections to their lives, communities, friends, and family as they talk about which goals are of interest to them\n",
+        "duration": "35",
+        "name": "Activity",
+        "progression_name": "Explore Sustainable Development Goal Targets",
         "tips": [
           {
             "type": "teachingTip",
@@ -3435,78 +3446,27 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "f43eb8f8-419c-4ba1-9785-45b2ecdf0f47",
-        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
-      }
-    },
-    {
-      "key": "0c3194f5-989c-4d5f-836e-d209a07cefe7",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0c3194f5-989c-4d5f-836e-d209a07cefe7",
-        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
-      }
-    },
-    {
-      "key": "b7e4798c-63ec-4e3a-998e-e8cebd9af699",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 8-9 and look at the example project on pages 10-11 of the Sustainable Systems project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the example of what a completed system diagram project might look like using the slide with the blown up version of the system diagram. Point out that this example project was done in line with Target 12.5 - “By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse”. Give students time to look over the rubric and the example project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the rubric and example project? What do you wonder about the rubric and example project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements, rubric, and example project."
-      },
-      "seeding_key": {
-        "activity_section.key": "b7e4798c-63ec-4e3a-998e-e8cebd9af699",
-        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
-      }
-    },
-    {
-      "key": "75f89607-7ca7-494d-82b8-8ad264e85c1a",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to look through the different categories of targets and list the ones they are interested in under Explore SDG Targets in their Project Guide. Once they have listed the targets they are individually interested in, have them discuss with their groups and pick one target to focus their project on.",
-        "duration": "25",
-        "name": "Activity",
-        "progression_name": "Explore Sustainable Development Goal Targets"
-      },
-      "seeding_key": {
         "activity_section.key": "75f89607-7ca7-494d-82b8-8ad264e85c1a",
         "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
       }
     },
     {
-      "key": "11ccad3e-34e9-4c7c-9c69-f2ac53e25370",
-      "position": 5,
+      "key": "0e3ff535-15c6-4503-991a-887331cf2ded",
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to write their selected target in the Select an SDG Target section of their Project Guide. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students review the duties for each role on the next slide and ask each pair to choose a role for themselves and their partner before beginning the AI.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to balance the workload. The AI Manager leads the prompting and refinement process, while the Researcher records findings and helps improve prompts. Both partners share responsibility for evaluating and refining chatbot responses."
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to look through the different categories of Sustainable Development Goal (SDG) targets. In their project guide, students should complete the Explore Sustainable Development Goals section, listing issues that are important to them alongside a related SDG target. Once they have listed potential targets, have students discuss with their group and pick one target on which to focus their project.\n\n",
+        "progression_name": "Explore Sustainable Development Goals"
       },
       "seeding_key": {
-        "activity_section.key": "11ccad3e-34e9-4c7c-9c69-f2ac53e25370",
+        "activity_section.key": "0e3ff535-15c6-4503-991a-887331cf2ded",
         "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
       }
     },
     {
-      "key": "8dac3fe2-15b8-4f6d-964e-e85569ee1fe3",
-      "position": 6,
+      "key": "c705a257-bb40-483b-917a-366cb3649dc9",
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the role responsibilities for **Researcher** and **AI Manager** with the students. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that groups have decided who will begin as the AI Manager and who will be the Researcher."
-      },
-      "seeding_key": {
-        "activity_section.key": "8dac3fe2-15b8-4f6d-964e-e85569ee1fe3",
-        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
-      }
-    },
-    {
-      "key": "0a15cdd8-b2cc-42a2-8e64-ef0ee325cc08",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to record this target in their Project Guide under Select an SDG Target.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to research their selected SDG target. Explain that they’ll not only gather information and brainstorm possible solutions, but also practice refining one of their prompts using the Prompt Refinement Tables in their project guide.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some issues in our community that might connect with these sustainable development goals?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The conversation should serve to connect some of the ideas for community issues that students identified in the warm-up with the a corresponding sustainable development goal. This discussion allows students to hear how other groups are connecting issues that are important to them to the SDGs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on page 6 and look at the example project on pages 7-8 of the Sustainable Systems project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the example of what a completed system diagram project might look like using the slide with the blown up version of the system diagram. Point out that this example project was done in line with Target 12.5 - “By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse”. Give students time to look over the rubric and the example project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the rubric and example project? What do you wonder about the rubric and example project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements, rubric, and example project.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to help them learn more about the target they’ve chosen and start to brainstorm potential solutions and project ideas.\n\n\n",
         "progression_name": "Brainstorm Your Project",
         "tips": [
           {
@@ -3516,87 +3476,29 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "0a15cdd8-b2cc-42a2-8e64-ef0ee325cc08",
+        "activity_section.key": "c705a257-bb40-483b-917a-366cb3649dc9",
         "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
       }
     },
     {
-      "key": "6bdffa26-8331-4d33-bd67-2713f4940121",
-      "position": 8,
+      "key": "a1aa13ca-c730-44d3-a803-3002be11e5f3",
+      "position": 5,
       "properties": {
-        "progression_name": "Brainstorm Your Project"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should write a description of the system in the Project Description section of their project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve.\n\n\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "6bdffa26-8331-4d33-bd67-2713f4940121",
-        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
-      }
-    },
-    {
-      "key": "db323971-8366-4afd-bebb-21d2ca78fe86",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should wrote a description of the system in the Project Description section of their project guide.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Discussing project ideas with the group is part of the **Understand** step of the **UMPIRE** strategy. It helps students ensure they have a strong foundation from which to make their plan."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "db323971-8366-4afd-bebb-21d2ca78fe86",
-        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
-      }
-    },
-    {
-      "key": "fafec353-6a6a-42d5-a096-b82bf6f85626",
-      "position": 10,
-      "properties": {
-        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them create user personas for their project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use AI Chat to co-create their first user persona, describing who the user is, what they need, and what challenge the system could help solve.\n\nThen, have them choose a focus area and ask the chatbot what might be missing from their first persona in relation to that focus area.\n\nStudents should then co-create a second persona that reflects the AI’s feedback and record both personas in their project guide.\n",
-        "progression_name": "Understanding Your Users",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Model how to build a persona with AI by showing a short example. Demonstrate how to follow up with a refinement prompt like:\n- What might be missing from this persona if I want to make my system more sustainable?\n\nEncourage students to compare their two personas and notice how the focus area changes the user’s needs or perspective."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fafec353-6a6a-42d5-a096-b82bf6f85626",
-        "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
-      }
-    },
-    {
-      "key": "e033da66-5ee4-488b-8409-a8fca1784563",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Creating this diagram is part of the **Produce** step of the **UMPIRE** strategy. Help students to see this process as something cyclical where they may repeat steps over the course of a project. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e033da66-5ee4-488b-8409-a8fca1784563",
+        "activity_section.key": "a1aa13ca-c730-44d3-a803-3002be11e5f3",
         "lesson_activity.key": "628529f0-0c80-472b-a8e2-f4760d90f60f"
       }
     },
     {
       "key": "7e69f1f1-6da4-409b-83bd-b6276532ee93",
-      "position": 12,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How might a computer system help to solve the problem or issue that you've identified?*\n* **Popcorn Share**: Ask the question and have have one student respond. That student pops to another student with their hand up  until a variety of ideas are heard.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Give students a chance to share about the focus of their project and how what type of computer system that are going to design in order to help solve it.\n",
         "duration": "5",
         "name": "Wrap Up",
-        "progression_name": "Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor and with the class. This sharing is part of the **Inspect** step of the **UMPIRE** strategy. By sharing and hearing from others, students will be set up to iterate on their project the following day. "
-          }
-        ]
+        "progression_name": "Survey"
       },
       "seeding_key": {
         "activity_section.key": "7e69f1f1-6da4-409b-83bd-b6276532ee93",
@@ -3607,14 +3509,9 @@
       "key": "a2b0a239-bb37-41ae-a10d-69ffb9f045e1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Step 3 Data Flow in their project guide with the help of their group.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing ideas with their group members. If groups come up with more than one answer for these, remind them that their system can use multiple types of data to help solve the problem.",
-        "name": "Warm Up",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Working through the Data Flow is part of the **Make a Plan** step of the **UMPIRE** strategy. Hopefully students took some ideas away from the first day of their work on this project they can incorporate into this planning stage."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct student groups to complete the Data Processing portion of their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing ideas with their group members. If groups come up with more than one answer for these, remind them that their system can use multiple types of data to help solve the problem. \n\n",
+        "duration": "5",
+        "name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "a2b0a239-bb37-41ae-a10d-69ffb9f045e1",
@@ -3625,15 +3522,10 @@
       "key": "3963a9f9-6f14-46f6-a19d-23cf24f14b4f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the System Diagram slides template and a System Diagram Checklist.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a problem statement in the Problem Statement section of their project guide. Students should add this to their system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work collaboratively on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that groups are dividing up work and collaborating on the different parts of building this diagram, discussing issues and questions as they arise.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their project guides and handouts from Day One.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to work collaboratively within the Sketch Lab level on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the AI Chat level if they need to produce images that they want to use within their system diagram. These images can be imported into Sketch Lab,\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that groups are dividing up work and collaborating on the different parts of building this diagram, discussing issues and questions as they arise. \n\n",
         "duration": "35",
         "name": "Activity",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Creating the diagram is part of the **Produce** step of the **UMPIRE** strategy. Help students remember that a project that meets the guidelines should be the priority over making the “perfect” project."
-          }
-        ]
+        "progression_name": "Sustainable System Diagram"
       },
       "seeding_key": {
         "activity_section.key": "3963a9f9-6f14-46f6-a19d-23cf24f14b4f",
@@ -3644,7 +3536,7 @@
       "key": "da0de9b6-45db-4857-a187-d30c8cd032c3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the Day 2 Reflection section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 2 Reflection section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. \n",
         "duration": "5",
         "name": "Wrap Up"
       },
@@ -3689,6 +3581,8 @@
       "key": "a0360dfe-a729-41e5-8c63-547591099ffc",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 4. Allow students time to review comments that they received from their peers during the gallery walk and to document one ethical consideration in their project as a result.\n",
+        "progression_name": "Ethical Considerations"
       },
       "seeding_key": {
         "activity_section.key": "a0360dfe-a729-41e5-8c63-547591099ffc",
@@ -3696,45 +3590,12 @@
       }
     },
     {
-      "key": "49687fa9-7e36-4926-9e09-9df6327f0118",
+      "key": "5a2e2542-4007-4880-b3d9-35e0a445b897",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 4. Students use the chatbot to help synthesize this feedback and uncover any areas related to ethics and societal impact they hadn’t already thought of.\n",
-        "progression_name": "Ethics and Impact"
-      },
-      "seeding_key": {
-        "activity_section.key": "49687fa9-7e36-4926-9e09-9df6327f0118",
-        "lesson_activity.key": "3681296e-9a08-4e6e-bd01-9e92b667fc66"
-      }
-    },
-    {
-      "key": "6537b9ea-7c0e-4cf0-8102-837792b3b405",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 5. Students will upload their computer system diagram into the AI Chat in order to receive feedback on how to improve it. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students upload their work and ask for feedback based on the project rubric. \n\nEnsure students record both the chatbot’s feedback and their refinements in their project guide.",
-        "progression_name": "Computer System Diagram Feedback",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups save their Sustainable System diagram into the backpack. This will be used in the subsequent levels in order to gather feedback from AI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Levels 5. This level contains both an AI Chat and a Sketch Lab level. Students will upload their computer system diagram into the AI Chat in order to receive feedback on how to improve it.  Students will use that feedback to complete the AI as a Co-Creator section in Sketch Lab. Students can use their Using AI as a Collaborator handout to assist.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.\n\n",
+        "progression_name": "Using AI as a Co-Creator",
         "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Keep this activity short. Encourage groups to focus on one key improvement rather than trying to revise everything.\nIf time is short after the gallery walk, limit the critique to either the problem statement or the system diagram."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6537b9ea-7c0e-4cf0-8102-837792b3b405",
-        "lesson_activity.key": "3681296e-9a08-4e6e-bd01-9e92b667fc66"
-      }
-    },
-    {
-      "key": "5a2e2542-4007-4880-b3d9-35e0a445b897",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Reflecting at the end of the project is part of the **Explain** step of the **UMPIRE** strategy. It helps students synthesize the experience and walk away with lessons learned. "
-          },
           {
             "type": "assessmentOpportunity",
             "markdown": "Use the Sustainable Systems Project Rubric to assess students."
@@ -3748,7 +3609,7 @@
     },
     {
       "key": "15e6885f-a0eb-4fe8-b2da-8049228f2406",
-      "position": 7,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Click the animated slide to display the discussion prompts.*\n- *What did you learn about yourself as a designer or problem solver during this project?* \n- *What did you learn about designing ethical and sustainable systems?* \n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This wrap-up gives students a chance to reflect on their learning journey — not just their final product. It helps them connect their work to their growth as a designer, thinker, or team member, and reflect on how their understanding of ethical and sustainable design evolved throughout the project.",
         "duration": "5",
@@ -4351,73 +4212,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sensors and AI Chatbot"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level1_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      },
-      "level_keys": [
-        "computer-systems-lesson7-level1_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Sensors and AI Chatbot"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level2_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      },
-      "level_keys": [
-        "computer-systems-lesson7-level2_v3_2026-dev"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": true,
-      "properties": {
-        "progression": "Sensors and AI Chatbot"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson7-level3_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      },
-      "level_keys": [
-        "computer-systems-lesson7-level3_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "New Progression"
+        "progression": "Exploring Sensors"
       },
       "bonus": false,
       "seeding_key": {
@@ -4427,14 +4222,58 @@
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363"
+        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
       },
       "level_keys": [
         "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sensors in Careers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson7-choice"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson7-choice"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Sensors in Careers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson7-level3_v2_2026-dev"
+        ],
+        "lesson.key": "Lesson 7: Data in Computer Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
+      },
+      "level_keys": [
+        "computer-systems-lesson7-level3_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4456,7 +4295,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4478,7 +4317,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4500,31 +4339,9 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "progression": "Reflection"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson8-level4_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a"
-      },
-      "level_keys": [
-        "computer-systems-lesson8-level4_v3_2026-dev"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 5,
-      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "progression": "Reflection"
@@ -4544,7 +4361,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4566,7 +4383,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4588,7 +4405,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4610,7 +4427,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4632,7 +4449,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4654,7 +4471,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4676,7 +4493,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4698,7 +4515,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4720,7 +4537,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4742,7 +4559,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4764,7 +4581,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4786,7 +4603,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4808,12 +4625,12 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore Sustainable Development Goal Targets"
+        "progression": "Explore Sustainable Development Goals"
       },
       "bonus": false,
       "seeding_key": {
@@ -4823,14 +4640,14 @@
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "75f89607-7ca7-494d-82b8-8ad264e85c1a"
+        "activity_section.key": "0e3ff535-15c6-4503-991a-887331cf2ded"
       },
       "level_keys": [
         "computer-systems-lesson13-level1_v2_2026-dev"
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4845,80 +4662,80 @@
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "6bdffa26-8331-4d33-bd67-2713f4940121"
+        "activity_section.key": "c705a257-bb40-483b-917a-366cb3649dc9"
       },
       "level_keys": [
         "computer-systems-lesson13-level2_v2_2026-dev"
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Understanding Your Users"
+        "progression": "Sustainable System Diagram"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson13-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson13-project-choice-1"
         ],
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "fafec353-6a6a-42d5-a096-b82bf6f85626"
+        "activity_section.key": "3963a9f9-6f14-46f6-a19d-23cf24f14b4f"
       },
       "level_keys": [
-        "computer-systems-lesson13-level3_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson13-project-choice-1"
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Ethics and Impact"
+        "progression": "Ethical Considerations"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson13-level4_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson13-project-2"
         ],
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "49687fa9-7e36-4926-9e09-9df6327f0118"
+        "activity_section.key": "a0360dfe-a729-41e5-8c63-547591099ffc"
       },
       "level_keys": [
-        "computer-systems-lesson13-level4_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson13-project-2"
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Computer System Diagram Feedback"
+        "progression": "Using AI as a Co-Creator"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson13-level5_2025-launch_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson13-project-choice-2"
         ],
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "6537b9ea-7c0e-4cf0-8102-837792b3b405"
+        "activity_section.key": "5a2e2542-4007-4880-b3d9-35e0a445b897"
       },
       "level_keys": [
-        "computer-systems-lesson13-level5_2025-launch_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson13-project-choice-2"
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4940,7 +4757,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4962,7 +4779,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5287,9 +5104,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson7-level1_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson7-exploring-sensors",
         "script_level.level_keys": [
-          "computer-systems-lesson7-level1_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
         ],
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
@@ -5299,14 +5116,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson7-level2_v3_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson7-choice",
         "script_level.level_keys": [
-          "computer-systems-lesson7-level2_v3_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson7-choice"
         ],
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
       }
     },
     {
@@ -5318,19 +5135,7 @@
         "lesson.key": "Lesson 7: Data in Computer Systems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0744d7a7-52f6-475c-97b4-bbb9b4ae37c0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-the-systems-that-power-it-lesson7-exploring-sensors",
-        "script_level.level_keys": [
-          "ai-and-the-systems-that-power-it-lesson7-exploring-sensors"
-        ],
-        "lesson.key": "Lesson 7: Data in Computer Systems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "0fa471fe-3a94-4bb5-9fda-f2fb41429363"
+        "activity_section.key": "6cb750ed-a941-4227-b7f5-3128f6388a06"
       }
     },
     {
@@ -5362,18 +5167,6 @@
         "level.key": "computer-systems-lesson8-level3_v3_2026-dev",
         "script_level.level_keys": [
           "computer-systems-lesson8-level3_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson8-level4_v3_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson8-level4_v3_2026-dev"
         ],
         "lesson.key": "Lesson 8: Processing Data in a System",
         "lesson_group.key": "lessonGroup-3",
@@ -5546,7 +5339,7 @@
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "75f89607-7ca7-494d-82b8-8ad264e85c1a"
+        "activity_section.key": "0e3ff535-15c6-4503-991a-887331cf2ded"
       }
     },
     {
@@ -5558,43 +5351,43 @@
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "6bdffa26-8331-4d33-bd67-2713f4940121"
+        "activity_section.key": "c705a257-bb40-483b-917a-366cb3649dc9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson13-level3_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson13-project-choice-1",
         "script_level.level_keys": [
-          "computer-systems-lesson13-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson13-project-choice-1"
         ],
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "fafec353-6a6a-42d5-a096-b82bf6f85626"
+        "activity_section.key": "3963a9f9-6f14-46f6-a19d-23cf24f14b4f"
       }
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson13-level4_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson13-project-2",
         "script_level.level_keys": [
-          "computer-systems-lesson13-level4_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson13-project-2"
         ],
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "49687fa9-7e36-4926-9e09-9df6327f0118"
+        "activity_section.key": "a0360dfe-a729-41e5-8c63-547591099ffc"
       }
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson13-level5_2025-launch_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson13-project-choice-2",
         "script_level.level_keys": [
-          "computer-systems-lesson13-level5_2025-launch_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson13-project-choice-2"
         ],
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "6537b9ea-7c0e-4cf0-8102-837792b3b405"
+        "activity_section.key": "5a2e2542-4007-4880-b3d9-35e0a445b897"
       }
     },
     {
@@ -5636,22 +5429,22 @@
   ],
   "resources": [
     {
-      "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Dato9dFitzLp4ba51-oy8mAov2HxxqJH9873QlPmUvQ/edit?usp=sharing",
-      "key": "_exemplar_sustainable_systems_project_planning_guide",
+      "name": "7- Data in Computer Systems ",
+      "url": "https://docs.google.com/presentation/d/17hNLHaUAxxLAqIfVFl6h7EbZ7ZLEC_eJ3XLv3-7gzuA/",
+      "key": "7-_data_in_computer_systems",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Exemplar"
+        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
+        "resource.key": "7-_data_in_computer_systems"
       }
     },
     {
       "name": "[EXEMPLAR] System Diagram Template",
-      "url": "https://docs.google.com/presentation/d/1JsKxBj1nciCg-_4YSOsI5X9vR0-uIC5YygkLoDtSdTk/edit?usp=sharing",
+      "url": "https://drive.google.com/file/d/1UfxY_5fx_FQSNfIuJZQ-GpyW-fyMQhjM/view?usp=sharing",
       "key": "_exemplar_system_diagram_template",
       "properties": {
         "audience": "Verified Teacher",
@@ -5705,7 +5498,7 @@
     },
     {
       "name": "[KEY] Data in Computer Systems",
-      "url": "https://docs.google.com/document/d/1l8RsLtZiGyc6UBTo7dJLSC1Q-KAAvP8pBadkr-bjgHs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1H1ISXJFkimTkKpeYxpViD7fIGJHwvBKdCRnuQjY5dLc",
       "key": "_key_data_in_computer_systems",
       "properties": {
         "audience": "Verified Teacher",
@@ -5982,12 +5775,13 @@
     },
     {
       "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/document/d/1N5MLLZqaET2sU4kiJ2Reyhd-lcVeIblGIJ8dGs3SlHc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1OYpFSjx-4Jfc0xfzxt6p0Pl3mfQYHyw4a3q27AgSb3k",
       "key": "data_in_computer_systems",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -5995,17 +5789,17 @@
       }
     },
     {
-      "name": "Data in Computer Systems",
-      "url": "https://docs.google.com/presentation/d/1bEYain6SyhFHCdeCo6Q_rCw7Ap9yfP6daH36NI-OKyw/edit?usp=sharing",
-      "key": "data_in_computer_systems_1",
+      "name": "Data Stations Teacher Guide",
+      "url": "https://docs.google.com/document/d/1ttslgzNNXghkbLaeIDUahgWT36niDJwjJXECaqIzJGI",
+      "key": "data_stations_teacher_guide",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "data_in_computer_systems_1"
+        "resource.key": "data_stations_teacher_guide"
       }
     },
     {
@@ -6209,8 +6003,8 @@
     },
     {
       "name": "Processing Data in a System",
-      "url": "https://docs.google.com/presentation/d/18Rtd4tZPWyDWRuvK5_fYzrrq72FaWPTaceS6QA9BokU/edit?usp=sharing",
-      "key": "processing_data_in_a_system",
+      "url": "https://docs.google.com/presentation/d/1GwDtGNHKKRHgZzfKhcDho-H2DYimqOcWsUcSVrLc_QA",
+      "key": "processing_data_in_a_system_1",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -6218,7 +6012,7 @@
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "processing_data_in_a_system"
+        "resource.key": "processing_data_in_a_system_1"
       }
     },
     {
@@ -6273,12 +6067,13 @@
     },
     {
       "name": "Station Activity Cards",
-      "url": "https://docs.google.com/presentation/d/1WLBS55qlZkzYKsg7ulYoBptdw3eaKitvKOVrYT8LOXE/edit?usp=sharing",
+      "url": "https://drive.google.com/file/d/1kAC5C7rNo1MlCc_S68C5Rw1H681LRnd8",
       "key": "station_activity_cards",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6287,7 +6082,7 @@
     },
     {
       "name": "Sustainable Systems Project",
-      "url": "https://docs.google.com/presentation/d/12wyuza4y1dtipfaZ1C7NroXnY4sMzy-kVdiKK8C_GoY/edit",
+      "url": "https://docs.google.com/presentation/d/1sxXWV9LcotK9ImXJT6iayJylvXiiyOw2ZvqBMi5AfkA/",
       "key": "sustainable_systems_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -6300,9 +6095,9 @@
       }
     },
     {
-      "name": "Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1-bJOm3T_O1e4wljgCmbJFhvnDCoEHeZEV4TgLfHVDrw/edit?usp=sharing",
-      "key": "sustainable_systems_project_planning_guide",
+      "name": "Sustainable Systems Project Activity Guide",
+      "url": "https://docs.google.com/document/d/1XZXgViZ5PZZW1fG8-9srcvg4hiBjk07khpmP8oGfUb0/",
+      "key": "sustainable_systems_project_activity_guide",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
@@ -6310,7 +6105,7 @@
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "sustainable_systems_project_planning_guide"
+        "resource.key": "sustainable_systems_project_activity_guide"
       }
     },
     {
@@ -6324,20 +6119,6 @@
       },
       "seeding_key": {
         "resource.key": "system_diagram_checklist"
-      }
-    },
-    {
-      "name": "System Diagram Template",
-      "url": "https://docs.google.com/presentation/d/1jqzWp8BPkmBwLc-xw3zDUdecHC11J5B98nfqAE0h66A/edit?usp=sharing",
-      "key": "system_diagram_template",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "system_diagram_template"
       }
     },
     {
@@ -6459,11 +6240,12 @@
     },
     {
       "name": "Using AI as a Collaborator",
-      "url": "https://docs.google.com/document/d/1OdC2q2I1TnrOdJ3LJH8hRlxG-TAF1l0WoBFSOO8gQE0/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1OdC2q2I1TnrOdJ3LJH8hRlxG-TAF1l0WoBFSOO8gQE0/",
       "key": "using_ai_as_a_collaborator",
       "properties": {
         "audience": "Student",
-        "type": "Resource"
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "using_ai_as_a_collaborator"
@@ -6613,12 +6395,6 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "_exemplar_sustainable_systems_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 13: Sustainable Systems Project",
         "resource.key": "_exemplar_system_diagram_template"
       }
     },
@@ -6631,19 +6407,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "sustainable_systems_project_planning_guide"
+        "resource.key": "sustainable_systems_project_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "resource.key": "system_diagram_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 13: Sustainable Systems Project",
-        "resource.key": "system_diagram_template"
       }
     },
     {
@@ -6823,7 +6593,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
+        "resource.key": "7-_data_in_computer_systems"
       }
     },
     {
@@ -6835,19 +6605,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Data in Computer Systems",
         "resource.key": "data_in_computer_systems"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Data in Computer Systems",
-        "resource.key": "data_in_computer_systems_1"
+        "resource.key": "data_stations_teacher_guide"
       }
     },
     {
@@ -6883,7 +6647,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "processing_data_in_a_system"
+        "resource.key": "processing_data_in_a_system_1"
       }
     },
     {

@@ -1,2 +1,2 @@
 // Lazy-load boundary for the Adaptive view; see panels/index.js.
-export {default as AdaptiveView} from './AdaptiveView';
+export {default as AdaptiveView} from './views/AdaptiveView';

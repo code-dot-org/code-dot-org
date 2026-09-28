@@ -727,6 +727,11 @@ const EVENTS = {
     'Add pair programming partner button clicked',
   PAIRING_STOP_PAIR_PROGRAMMING_BUTTON_CLICKED:
     'Stop pair programming button clicked',
+
+  // Teacher and Permanent promotion events
+  PROMOTION_CLICKED: 'Promotion Clicked',
+  PROMOTION_DISMISSED: 'Promotion Dismissed',
+  PERMANENT_PROMOTION_CLICKED: 'Permanent Promotion Clicked',
 };
 
 const EVENT_GROUP_NAMES = {

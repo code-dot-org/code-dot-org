@@ -24,11 +24,8 @@
 #  index_levels_on_name       (name)
 #  index_levels_on_type       (type)
 #
-# An Adaptive level is the curriculum entry point for one adaptive,
-# skill-based pathway. The level row holds only a content id; the
-# content itself is a JSON file under dashboard/config/level_content/adaptive
-# (see AdaptiveContent), so content edits ship as file changes with no
-# level reseed.
+# Curriculum entry point for one adaptive pathway. Holds only the pathway's ID;
+# the content is a JSON file under dashboard/config/level_content/adaptive.
 class Adaptive < Level
   serialized_attrs %w(
     adaptive_id
@@ -55,16 +52,18 @@ class Adaptive < Level
     true
   end
 
+  # The served pathway for this level, or nil when its file is missing.
   def content
     AdaptiveContent.load(adaptive_id)
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties = super
-    properties[:adaptiveContent] = content
+    properties[:pathway] = content
     properties
   end
 
+  # Only the file's existence is checked; the content is validated in CI.
   private def adaptive_content_exists
     return if adaptive_id.blank?
     return if AdaptiveContent.exist?(adaptive_id)

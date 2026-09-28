@@ -41,7 +41,7 @@ describe('ProjectManager', () => {
   let channelsStore: StubbedInstance<ChannelsStore>;
 
   beforeEach(() => {
-    sourcesStore = stubObject<SourcesStore>(new SourcesStore());
+    sourcesStore = stubObject<SourcesStore>(new SourcesStore('pythonlab'));
     // A fresh Response per call, since a Response body can only be read once.
     sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
     channelsStore = stubObject<ChannelsStore>(new ChannelsStore());

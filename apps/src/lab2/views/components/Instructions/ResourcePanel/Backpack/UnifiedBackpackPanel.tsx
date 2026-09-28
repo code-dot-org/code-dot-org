@@ -7,10 +7,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
-import {
-  BackpackAlertType,
-  toastOptionsFor,
-} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
+import {notifyWithToast} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -45,8 +42,7 @@ interface UnifiedBackpackPanelProps extends BackpackProps {
 }
 
 /**
- * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack file the
- * user has as one list.
+ * Backpack panel. It shows every backpack file the user has as one list.
  */
 const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   validateFileName,
@@ -64,6 +60,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   const showToast = useToast();
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
+  );
+  const workspaceNoun = useAppSelector(state =>
+    state.lab.levelProperties?.isProjectLevel ? 'project' : 'level'
   );
 
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
@@ -189,11 +188,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
   }, [files, populatedFileTypeConfigs, selectedExtension]);
 
-  const notify = useCallback(
-    (type: BackpackAlertType, message: string) =>
-      showToast(message, toastOptionsFor(type)),
-    [showToast]
-  );
+  const notify = useMemo(() => notifyWithToast(showToast), [showToast]);
 
   // Names held by more than one backpack. Those rows have to say which backpack they
   // came from, or they are indistinguishable.
@@ -375,7 +370,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
                       variant="strong"
                       className={moduleStyles.unsupportedText}
                     >
-                      {`Not supported in this lab (${unsupportedFiles.length})`}
+                      {`Not supported in this ${workspaceNoun} (${unsupportedFiles.length})`}
                     </Typography>
                   </Typography>
                   <FontAwesomeV6Icon

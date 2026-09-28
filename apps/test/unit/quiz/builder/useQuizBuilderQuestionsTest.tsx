@@ -114,6 +114,8 @@ describe('useQuizBuilderQuestions', () => {
 
     expect(result.current.error).toBe('a specific reason');
     expect(result.current.questions.map(q => q.id)).toEqual([7]);
+    // A create can't fail because of anything about an existing question.
+    expect(result.current.errorQuestionId).toBeNull();
   });
 
   it('reports a generic error when the load fails', async () => {
@@ -127,6 +129,7 @@ describe('useQuizBuilderQuestions', () => {
     expect(result.current.error).toBe('Something went wrong.');
     expect(result.current.questions).toEqual([]);
     expect(result.current.isLoading).toBe(false);
+    expect(result.current.errorQuestionId).toBeNull();
   });
 
   describe('updateQuestion', () => {
@@ -200,6 +203,7 @@ describe('useQuizBuilderQuestions', () => {
       expect(updatedId).toBeUndefined();
       expect(result.current.error).toBe('stem cannot be blank');
       expect(result.current.questions).toEqual([QUESTION]);
+      expect(result.current.errorQuestionId).toBe(7);
     });
   });
 
@@ -247,6 +251,7 @@ describe('useQuizBuilderQuestions', () => {
       expect(succeeded).toBe(false);
       expect(result.current.error).toBe('not found');
       expect(result.current.questions).toEqual([QUESTION]);
+      expect(result.current.errorQuestionId).toBe(7);
     });
   });
 });

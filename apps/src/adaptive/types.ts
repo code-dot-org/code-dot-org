@@ -1,8 +1,23 @@
+import {z} from 'zod';
+
 import {LevelProperties} from '../lab2/types';
+
+import {
+  checkpointSchema,
+  panelsStepSchema,
+  pathwaySchema,
+  skillSchema,
+  stepSchema,
+} from './schema';
+
+export type Pathway = z.infer<typeof pathwaySchema>;
+export type Checkpoint = z.infer<typeof checkpointSchema>;
+export type Skill = z.infer<typeof skillSchema>;
+export type Step = z.infer<typeof stepSchema>;
+export type PanelsStep = z.infer<typeof panelsStepSchema>;
 
 export interface AdaptiveLevelProperties extends LevelProperties {
   adaptiveId?: string;
-  // Parsed dashboard/config/level_content/adaptive/<adaptiveId>.json; typed
-  // once the content format lands. Static content only, never per-user.
-  adaptiveContent?: unknown;
+  /** Adaptive pathway content. */
+  pathway?: Pathway;
 }

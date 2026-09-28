@@ -44,7 +44,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-22 14:20:42 UTC",
+    "serialized_at": "2026-09-23 22:29:42 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -88,6 +88,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }
@@ -299,6 +311,21 @@
       "seeding_key": {
         "lesson.key": "Post-Assessment",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "End of Unit Survey",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }
@@ -745,6 +772,18 @@
         "lesson_activity.key": "8d7b4f90-afb5-44a9-ab68-db869df6fe43",
         "lesson.key": "Post-Assessment",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "4daed3d6-5a62-49b5-b8bb-810f44054665",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4daed3d6-5a62-49b5-b8bb-810f44054665",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }
@@ -2655,6 +2694,17 @@
         "activity_section.key": "3fa85ff2-e351-4740-b683-33cd94f35d13",
         "lesson_activity.key": "8d7b4f90-afb5-44a9-ab68-db869df6fe43"
       }
+    },
+    {
+      "key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa",
+        "lesson_activity.key": "4daed3d6-5a62-49b5-b8bb-810f44054665"
+      }
     }
   ],
   "script_levels": [
@@ -3449,6 +3499,28 @@
       "level_keys": [
         "thinking-critically-about-ai-postassessment_2026-pilot_2026"
       ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_aid1survey_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa"
+      },
+      "level_keys": [
+        "student-eou-survey_aid1survey_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3882,6 +3954,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "thinking-critically-about-ai-2026",
         "activity_section.key": "3fa85ff2-e351-4740-b683-33cd94f35d13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_aid1survey_2026",
+        "script_level.level_keys": [
+          "student-eou-survey_aid1survey_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "thinking-critically-about-ai-2026",
+        "activity_section.key": "0f5e0af3-28cd-4f7d-852d-b9c1dfcd8ffa"
       }
     }
   ],

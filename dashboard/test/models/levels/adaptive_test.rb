@@ -3,7 +3,13 @@ require 'test_helper'
 class AdaptiveTest < ActiveSupport::TestCase
   setup do
     @dir = Pathname.new(Dir.mktmpdir)
+    @dir.join('skills').mkpath
     @dir.join('sample.json').write({'id' => 'sample', 'title' => 'Sample'}.to_json)
+    @dir.join('needs-skill.json').write({
+      'id' => 'needs-skill',
+      'steps' => [{'id' => 'tree', 'kind' => 'skillTree', 'skills' => [{'skillId' => 'ghost'}]}],
+    }.to_json
+)
     AdaptiveContent.stubs(:content_dir).returns(@dir)
     AdaptiveContent.reset_cache!
   end
@@ -32,7 +38,7 @@ class AdaptiveTest < ActiveSupport::TestCase
 
     assert_equal 'adaptive', properties[:appName]
     assert_equal 'sample', properties['adaptiveId']
-    assert_equal 'Sample', properties[:adaptiveContent]['title']
+    assert_equal 'Sample', properties[:pathway]['title']
   end
 
   test "lab2 properties carry no user-specific keys" do

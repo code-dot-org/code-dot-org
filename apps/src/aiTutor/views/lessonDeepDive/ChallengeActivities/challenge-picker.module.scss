@@ -1,0 +1,244 @@
+// ── Layout ─────────────────────────────────────────────────────────────────
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 600px;
+  max-width: 100%;
+  padding: 40px 0;
+
+  // MuiButton variant="text" — nested for specificity over MUI root class
+  .reviewLink {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #f1f2f4;
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+    text-transform: none;
+
+    &:hover {
+      background: none;
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #2b1e9f;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ── Heading ────────────────────────────────────────────────────────────────
+
+.heading {
+  font-family: var(--font-family-heading);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.48px;
+  color: #6fcaff;
+  margin: 0;
+}
+
+// ── Section ────────────────────────────────────────────────────────────────
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.sectionLabel {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #fff;
+  margin: 0;
+}
+
+// ── Modality picker ────────────────────────────────────────────────────────
+
+.modalityRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.modalityCard {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px 4px;
+  border-radius: 12px;
+  background: #121212;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+
+  &:focus-visible {
+    outline: 2px solid #2b1e9f;
+    outline-offset: 2px;
+  }
+}
+
+.modalityCardActive {
+  background: #d8ffdc;
+  border-color: #d8ffdc;
+}
+
+.modalityIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  color: #928cef;
+  flex-shrink: 0;
+}
+
+.modalityIconActive {
+  color: #1f1976;
+}
+
+.modalityLabel {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.modalityLabelActive {
+  color: #1f1976;
+}
+
+// ── Challenge carousel ─────────────────────────────────────────────────────
+
+.challengeCarousel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  // MUI IconButton — nested for specificity over MUI root class
+  .carouselButton {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid #4b5258;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0;
+
+    &:hover {
+      background: rgb(255 255 255 / 0.1);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #2b1e9f;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ── Challenge card ─────────────────────────────────────────────────────────
+
+.challengeCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: #282b2f;
+  border: 1px solid #4b5258;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.challengeCardText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.challengeCardOverline {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: #6fcaff;
+  margin: 0;
+}
+
+.challengeCardBody {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+  margin: 0;
+}
+
+.challengeCardCta {
+  display: flex;
+  justify-content: center;
+
+  // MUI Button variant="contained" — nested for specificity over MUI root class
+  .startButton {
+    height: 40px;
+    padding: 8px 14px;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #121212;
+    white-space: nowrap;
+    text-transform: none;
+
+    &:hover {
+      background: #e8e8e8;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #2b1e9f;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ── Empty / error states ────────────────────────────────────────────────────
+
+.emptyState {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #9ea5ad;
+  text-align: center;
+  margin: 0;
+}
