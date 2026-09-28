@@ -105,9 +105,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const isIntroOpen =
     toBool(showIntroScreen) &&
     (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
-  // Check for both falsy states - undefined: the initial check for an
-  // attempt itself failed. null: the check succeeded and found none, but
-  // the no-intro auto-begin's own POST then failed.
+  // Also true when attempt is null, not just undefined - a quiz with no
+  // intro screen tries to start the attempt automatically, and that can
+  // fail too.
   const didInitialCheckForAttemptFail = !attempt && !!error;
   const hasNoAttemptYet = attempt === null;
 
@@ -262,7 +262,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         ) : !attempt ? (
           // No intro screen to click through - the effect begins the attempt automatically.
-          // This button is only shown if the initial check for an attempt failed.
           didInitialCheckForAttemptFail ? (
             <MuiButton
               variant="contained"
