@@ -71,7 +71,6 @@
     "add_blocks": [
       {
         "type": "gamelab_checkTouching",
-        "gapAbove": 144,
         "data": "treasure-touch",
         "fields": {
           "CONDITION": "\"when\""

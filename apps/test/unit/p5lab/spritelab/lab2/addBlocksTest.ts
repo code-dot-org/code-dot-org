@@ -1,6 +1,7 @@
 import {
   freeStackEnd,
   isAttachShadow,
+  makeRoomBelow,
   missingBlocks,
   placeBelow,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
@@ -77,8 +78,41 @@ describe('addBlocks', () => {
     expect(at.y).toBeLessThan(300);
   });
 
-  it('leaves the room an entry asks for', () => {
-    expect(placeBelow([{x: 20, y: 20, height: 100}], 144).y).toBe(264);
+  it('moves the stacks below a grown stack down, each clearing the last', () => {
+    const moves: [string, number][] = [];
+    const stack = (name: string, y: number, height: number, x = 20) => ({
+      x,
+      y,
+      width: 200,
+      height,
+      moveBy: (dx: number, dy: number) => moves.push([name, dy]),
+    });
+    // when run grew to 300 tall; the event at 200 and the one at 300
+    // both shift, the second by what the first's shift needs.
+    makeRoomBelow(stack('run', 20, 300), [
+      stack('later', 300, 60),
+      stack('event', 200, 80),
+      stack('aside', 200, 80, 400),
+      stack('above', 0, 10),
+    ]);
+    expect(moves).toEqual([
+      ['event', 144],
+      ['later', 148],
+    ]);
+  });
+
+  it('leaves stacks that already clear the grown one alone', () => {
+    const moves: number[] = [];
+    makeRoomBelow({x: 20, y: 20, width: 200, height: 100, moveBy: () => {}}, [
+      {
+        x: 20,
+        y: 200,
+        width: 200,
+        height: 60,
+        moveBy: (_, dy) => moves.push(dy),
+      },
+    ]);
+    expect(moves).toEqual([]);
   });
 
   it('starts at the origin in an empty workspace', () => {

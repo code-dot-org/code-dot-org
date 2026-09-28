@@ -35,7 +35,6 @@
     "add_blocks": [
       {
         "type": "gamelab_atTime",
-        "gapAbove": 144,
         "fields": {
           "UNIT": "\"seconds\""
         },

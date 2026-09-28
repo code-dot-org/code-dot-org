@@ -4,15 +4,9 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-/**
- * A block to add: Blockly's block state, plus `gapAbove`, how far below
- * the stacks already there it lands, in px. A level sets it to leave room
- * under a stack that later levels grow. Its `data`, when set, tells it
- * apart from another entry of the same type in one scene.
- */
-export type AddBlock = BlocklyCore.serialization.blocks.State & {
-  gapAbove?: number;
-};
+/** A block to add. Its `data`, when set, tells it apart from another entry
+    of the same type in one scene. */
+export type AddBlock = BlocklyCore.serialization.blocks.State;
 
 /**
  * A shadow hung on the end of a stack already in the workspace: the
@@ -31,7 +25,7 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
   return 'attachTo' in entry;
 }
 
-// Under the stacks already there, when the entry asks for no more.
+// Between one stack's bottom and the next stack's top.
 const STACK_GAP_PX = 24;
 
 /** The blocks the workspace lacks. A block without data (added before
@@ -51,19 +45,55 @@ export function missingBlocks(
   );
 }
 
-/** Where the next added block begins: `gapAbove` under the lowest stack,
-    at the leftmost stack's x. An empty workspace starts at the origin. */
-export function placeBelow(
-  stacks: {x: number; y: number; height: number}[],
-  gapAbove = STACK_GAP_PX
-): {x: number; y: number} {
+/** Where the next added block begins: a gap under the lowest stack, at
+    the leftmost stack's x. An empty workspace starts at the origin. */
+export function placeBelow(stacks: {x: number; y: number; height: number}[]): {
+  x: number;
+  y: number;
+} {
   if (stacks.length === 0) {
     return {x: 0, y: 0};
   }
   return {
     x: Math.min(...stacks.map(s => s.x)),
-    y: Math.max(...stacks.map(s => s.y + s.height)) + gapAbove,
+    y: Math.max(...stacks.map(s => s.y + s.height)) + STACK_GAP_PX,
   };
+}
+
+interface StackBox {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  moveBy: (dx: number, dy: number) => void;
+}
+
+/**
+ * Move the stacks below a stack that just grew down until each clears the
+ * one above it by the gap. Only stacks in its column: one a student parked
+ * off to the side is left where it is.
+ */
+export function makeRoomBelow(grown: StackBox, others: StackBox[]): void {
+  const below = others
+    .filter(
+      s =>
+        s.y > grown.y && s.x < grown.x + grown.width && s.x + s.width > grown.x
+    )
+    .sort((a, b) => a.y - b.y);
+  let floor = grown.y + grown.height + STACK_GAP_PX;
+  for (const stack of below) {
+    if (stack.y < floor) {
+      stack.moveBy(0, floor - stack.y);
+      stack.y = floor;
+    }
+    floor = stack.y + stack.height + STACK_GAP_PX;
+  }
+}
+
+function stackBox(block: BlocklyCore.BlockSvg): StackBox {
+  const {x, y} = block.getRelativeToSurfaceXY();
+  const {width, height} = block.getHeightWidth();
+  return {x, y, width, height, moveBy: (dx, dy) => block.moveBy(dx, dy)};
 }
 
 type Shadow = BlocklyCore.serialization.blocks.State;
@@ -107,19 +137,24 @@ export function freeStackEnd(
   }
 }
 
-/** Hang the shadow on the first stack of the type with a free end;
-    returns whether it was hung. */
+/** Hang the shadow on the first stack of the type with a free end, and
+    move the stacks below it out of its way; returns whether it was hung. */
 export function attachShadow(
-  workspace: BlocklyCore.Workspace,
+  workspace: BlocklyCore.WorkspaceSvg,
   entry: AttachShadow
 ): boolean {
-  for (const top of workspace.getTopBlocks(false)) {
+  const tops = workspace.getTopBlocks(false);
+  for (const top of tops) {
     if (top.type !== entry.attachTo) {
       continue;
     }
     const connection = freeStackEnd(top, entry.shadow);
     if (connection) {
       connection.setShadowState(entry.shadow);
+      makeRoomBelow(
+        stackBox(top),
+        tops.filter(other => other !== top).map(stackBox)
+      );
       return true;
     }
   }
@@ -146,10 +181,9 @@ export function addMissingBlocks(
       const {x, y} = top.getRelativeToSurfaceXY();
       return {x, y, height: top.getHeightWidth().height};
     });
-    const {gapAbove, ...state} = entry;
-    const {x, y} = placeBelow(stacks, gapAbove);
+    const {x, y} = placeBelow(stacks);
     try {
-      BlocklyCore.serialization.blocks.append({...state, x, y}, workspace, {
+      BlocklyCore.serialization.blocks.append({...entry, x, y}, workspace, {
         recordUndo: false,
       });
       added++;
