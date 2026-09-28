@@ -1229,8 +1229,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // scene). Clicking a preview sets it to the previewed scene; entering Play
   // from the tab button or "Restart game" clears it.
   const [playStartSceneId, setPlayStartSceneId] = useState<string | null>(null);
-  // The arrow buttons the running scene wants; the engine reports it on
-  // every run and on each set-gravity block.
+  // The arrow buttons the running scene wants, as the engine reports it.
   const [arrowSet, setArrowSet] = useState<ArrowSet>('steer');
 
   // p5 listens for keys on window, so a game reading arrows/space would eat
@@ -1562,7 +1561,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // Restart the whole game from the first scene.
   const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
     runScene(defaultPlaySceneId);

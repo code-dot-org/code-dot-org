@@ -44,8 +44,8 @@ export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 const MEDIUM_BUTTON_PX = 40;
 const BAR_GAP = 12;
 export const BAR_ROOM = MEDIUM_BUTTON_PX + BAR_GAP;
-// The box's slide between its two placements, and the fade of a box or
-// bar appearing in place, or of the bar once the slide is done.
+// The box's slide between its two placements, and the fade of whatever
+// appears in place.
 const SLIDE_MS = 450;
 const FADE_MS = 180;
 
@@ -325,7 +325,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
-  // The bar rides along under the box, unscaled, at the box's width.
+  // Under the box, unscaled, at the box's width.
   const barTransform = `translate(${x}px, ${y + boxSide + BAR_GAP}px)`;
   const visible = measured && mode !== 'hidden';
   // The bar does not ride the slide: it waits, unseen, at its destination
