@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**, picking your second character.  Click **Play** and watch them go."
+        "text": "**Set them walking.** Drag **sprite [them] begins [patrolling left and right on blocks]** onto the dotted outline under your code, picking your second character.  Click **Play** and watch them go."
       },
       {
         "text": "**They're on the move.** Continue when you're ready.",
@@ -44,7 +44,7 @@
         }
       }
     ],
-    "long_instructions": "# Set them walking\nUse **sprite [them] begins [patrolling left and right on blocks]**, picking your second character.  Click **Play** and watch them go.",
+    "long_instructions": "# Set them walking\nDrag **sprite [them] begins [patrolling left and right on blocks]** onto the dotted outline under your code, picking your second character.  Click **Play** and watch them go.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -65,7 +65,32 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "block": {
+                    "type": "spritelab2_patrollingOnBlocks"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>
