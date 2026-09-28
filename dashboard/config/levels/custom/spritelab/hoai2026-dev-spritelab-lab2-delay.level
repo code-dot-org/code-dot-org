@@ -55,7 +55,7 @@
               "like": {
                 "type": "gamelab_spriteSay",
                 "fields": {
-                  "SPEECH": "Click my friend!"
+                  "SPEECH": "Click the other character!"
                 },
                 "inputs": {
                   "SPRITE": {
@@ -104,7 +104,7 @@
           "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Click my friend!"
+            "SPEECH": "Click the other character!"
           },
           "inputs": {
             "SPRITE": {
