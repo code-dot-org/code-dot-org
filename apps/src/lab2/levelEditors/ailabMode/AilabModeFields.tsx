@@ -1,6 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
@@ -49,6 +48,8 @@ const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
   },
 ];
 
+const NO_DATASET = '';
+
 const TRAINER_ITEMS = [
   {value: 'knn', text: 'k-nearest neighbors'},
   {value: 'decisionTree', text: 'Decision tree'},
@@ -66,32 +67,19 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
   const selectedDataset = getSelectedDataset(mode);
 
-  // One radio name across both groups, so they form a single selection.
-  const renderDatasetGroup = (legend: string, group: AilabDataset[]) => (
-    <fieldset className={moduleStyles.datasetGroup}>
-      <legend className={moduleStyles.legend}>
-        <Typography variant="body3" component="span">
-          <Typography variant="strong">{legend}</Typography>
-        </Typography>
-      </legend>
-      <div className={moduleStyles.datasetList}>
-        {group.map(dataset => (
-          <RadioButton
-            key={dataset.id}
-            name="ailab_mode_dataset"
-            value={dataset.id}
-            required
-            label={`${dataset.name} (${dataset.id})`}
-            checked={selectedDataset === dataset.id}
-            onChange={() =>
-              onChange(setModeValue(mode, 'datasets', [dataset.id]))
-            }
-            size="s"
-          />
-        ))}
-      </div>
-    </fieldset>
-  );
+  // A flat list, because a required select only treats a top-level empty option as unchosen.
+  const datasetItems = [
+    ...(selectedDataset
+      ? []
+      : [{value: NO_DATASET, text: 'Choose a dataset', disabled: true}]),
+    ...[
+      ...datasets.filter(dataset => !dataset.isToy),
+      ...datasets.filter(dataset => dataset.isToy),
+    ].map(dataset => ({
+      value: dataset.id,
+      text: `${dataset.name} (${dataset.id})`,
+    })),
+  ];
 
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
@@ -122,25 +110,23 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         </Typography>
       )}
       <div className={moduleStyles.fieldArea}>
-        <Typography variant="body2" className={moduleStyles.label}>
-          Dataset (required)
-        </Typography>
-        <Typography variant="body4" className={moduleStyles.descriptionText}>
-          Students start with this dataset loaded.
-        </Typography>
-        {!selectedDataset && (
-          <Typography variant="body4" className={moduleStyles.warningText}>
-            Choose a dataset. The level cannot be saved without one.
-          </Typography>
-        )}
-        {renderDatasetGroup(
-          'Regular datasets',
-          datasets.filter(dataset => !dataset.isToy)
-        )}
-        {renderDatasetGroup(
-          'Toy datasets',
-          datasets.filter(dataset => dataset.isToy)
-        )}
+        <SimpleDropdown
+          labelText="Dataset (required)"
+          name="ailab_mode_dataset"
+          required
+          items={datasetItems}
+          selectedValue={selectedDataset ?? NO_DATASET}
+          onChange={e =>
+            onChange(setModeValue(mode, 'datasets', [e.target.value]))
+          }
+          helperMessage="Students start with this dataset loaded."
+          errorMessage={
+            selectedDataset
+              ? undefined
+              : 'Choose a dataset. The level cannot be saved without one.'
+          }
+          size="s"
+        />
       </div>
 
       <Typography variant="body2" className={moduleStyles.label}>

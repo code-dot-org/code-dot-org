@@ -40,11 +40,24 @@ function fakeLab2Checkbox() {
   };
 }
 
+const DATASET_REQUIRED =
+  'Choose a dataset. The level cannot be saved without one.';
+
+function datasetDropdown() {
+  return screen.getByRole('combobox', {name: /^Dataset/});
+}
+
+function chooseDataset(datasetId: string) {
+  fireEvent.change(datasetDropdown(), {target: {value: datasetId}});
+}
+
 describe('EditAilabMode', () => {
   it('shows the JSON text area unchanged when Lab 2 is off', () => {
     const original = '{"hideSave": "yes", "hideModelCard": true}';
     const savedMode = renderEditor(original, false);
-    expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('combobox', {name: /^Dataset/})
+    ).not.toBeInTheDocument();
     expect(savedMode()).toBe(original);
 
     fireEvent.change(screen.getByRole('textbox', {name: 'Mode JSON'}), {
@@ -58,7 +71,7 @@ describe('EditAilabMode', () => {
     const savedMode = renderEditor('{"hideSave": true}', false, lab2.subscribe);
 
     lab2.set(true);
-    fireEvent.click(screen.getByRole('radio', {name: 'Zoo Animals (zoo)'}));
+    chooseDataset('zoo');
 
     lab2.set(false);
     expect(
@@ -72,9 +85,7 @@ describe('EditAilabMode', () => {
     ).toEqual({hideSave: true, trainer: 'knn', datasets: ['zoo']});
 
     lab2.set(true);
-    expect(
-      screen.getByRole('radio', {name: 'Zoo Animals (zoo)'})
-    ).toBeChecked();
+    expect(datasetDropdown()).toHaveValue('zoo');
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,
       trainer: 'knn',
@@ -86,9 +97,7 @@ describe('EditAilabMode', () => {
     renderEditor(
       '{"datasets": ["zoo"], "trainer": "decisionTree", "requireAccuracy": 80, "hideSave": true}'
     );
-    expect(
-      screen.getByRole('radio', {name: 'Zoo Animals (zoo)'})
-    ).toBeChecked();
+    expect(datasetDropdown()).toHaveValue('zoo');
     expect(screen.getByRole('combobox', {name: 'Trainer'})).toHaveValue(
       'decisionTree'
     );
@@ -201,20 +210,32 @@ describe('EditAilabMode', () => {
 
   it('requires a dataset until one is chosen', () => {
     const savedMode = renderEditor('{"hideSave": true}');
-    expect(screen.getByText(/Choose a dataset/)).toBeInTheDocument();
-    screen
-      .getAllByRole('radio')
-      .forEach(radio => expect(radio).not.toBeChecked());
+    expect(datasetDropdown()).toHaveValue('');
+    expect(datasetDropdown()).toBeRequired();
+    expect(datasetDropdown()).toBeInvalid();
+    expect(screen.getByText(DATASET_REQUIRED)).toBeInTheDocument();
 
-    fireEvent.click(
-      screen.getByRole('radio', {name: 'Pizza Toppings (pizza_toy)'})
-    );
+    chooseDataset('pizza_toy');
 
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,
       trainer: 'knn',
       datasets: ['pizza_toy'],
     });
-    expect(screen.queryByText(/Choose a dataset/)).not.toBeInTheDocument();
+    expect(datasetDropdown()).toBeValid();
+    expect(screen.queryByText(DATASET_REQUIRED)).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('option', {name: 'Choose a dataset'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('lists regular datasets before toy datasets', () => {
+    renderEditor(null);
+    expect(
+      screen
+        .getAllByRole('option')
+        .filter(option => option.closest('select') === datasetDropdown())
+        .map(option => (option as HTMLOptionElement).value)
+    ).toEqual(['', 'zoo', 'heart', 'pizza_toy']);
   });
 });
