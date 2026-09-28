@@ -1,0 +1,29 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-24T21:28:26.000Z",
+  "level_num": "custom",
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Prompt practice</title>\n  </head>\n  <body>\n    <!-- Ask the AI to add a heading and a paragraph here. -->\n  </body>\n</html>",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "hide_share_and_remix": true,
+    "initial_view_mode": "split",
+    "long_instructions": "Write a prompt that asks the AI for a heading with your name and one paragraph about something you like.\n\nRun the page to see what it built. If it is not what you meant, say what to change."
+  },
+  "published": true
+}]]></config>
+</Weblab2>

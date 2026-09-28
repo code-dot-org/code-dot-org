@@ -1,0 +1,6 @@
+name 'UI Test pre-assessment survey q24'
+question 'Before your current computer science class, had you taken any other computer science classes at school?'
+right 'Yes'
+right 'No'
+
+allow_multiple_attempts true

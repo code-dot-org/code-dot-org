@@ -4,7 +4,7 @@
   "title": "Build a website with AI",
   "objective": "Build a personal website with an AI build partner. Learn to prompt with structure, understand what makes up a web page, then take those skills into a project of your own.",
   "project": {
-    "lab": {"type": "weblab2"},
+    "templateLevel": "adaptive-web-template",
     "description": "A one-page website about something you care about: a team, your art, a cause, a business idea. You will build it up piece by piece as you unlock new checkpoints."
   },
   "skills": {
@@ -88,11 +88,17 @@
           ]
         },
         {
-          "id": "prompting-try",
+          "id": "prompting-sandbox",
           "title": "Try a prompt",
-          "kind": "lab",
-          "lab": {"type": "weblab2"},
-          "instructions": "Write a prompt that asks for a heading with your name and one paragraph about something you like."
+          "kind": "level",
+          "level": "adaptive-web-sandbox-prompting"
+        },
+        {
+          "id": "prompting-project",
+          "title": "Prompt for your project",
+          "kind": "level",
+          "level": "adaptive-web-project-prompting",
+          "project": true
         }
       ]
     },
@@ -123,9 +129,10 @@
         {
           "id": "structure-build",
           "title": "Add a header and footer",
-          "kind": "lab",
-          "lab": {"type": "weblab2"},
-          "instructions": "Ask for a header with your site's name and a footer with a way to contact you."
+          "kind": "level",
+          "level": "adaptive-web-project-prompting",
+          "project": true,
+          "instructions": "Ask for a header with your site's name and a footer with a way to contact you. Point the AI at the `<header>` and `<footer>` elements already on the page."
         }
       ]
     }
