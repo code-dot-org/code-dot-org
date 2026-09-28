@@ -18,8 +18,8 @@ consumes it yet.
 Known to be broken or incomplete, so no host should depend on it before these
 are addressed (details and citations in docs/port.md):
 
-- Milestone posts omit `timeSinceLastMilestone` and `course_id`, so time spent
-  and course attribution are not recorded.
+- No host reports idleness to `milestoneTimer` yet, so idle time counts as
+  time spent. Network failures on a milestone post are not logged.
 - In-page navigation does not check whether both levels are Lab2, ask for
   confirmation, or notify the lab of the level change.
 - `Validator.clear` lost its `isChangingLevels` argument, so the test-result
@@ -35,14 +35,15 @@ whether it should is an open design decision (docs/port.md, section 4).
 
 `@code-dot-org/progress`:
 
-| Export                                                                                                         | Kind      | Purpose                                                                              |
-| -------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------ |
-| `ProgressManager`                                                                                              | Class     | Runs a lab's `Validator` over the level's validations; reports through a callback    |
-| `ConditionsChecker`                                                                                            | Class     | Accumulates satisfied conditions for a validator                                     |
-| `getInitialValidationState`                                                                                    | Function  | An empty `ValidationState`                                                           |
-| `TestResults`, `MINIMUM_PASS_RESULT`, `MINIMUM_OPTIMAL_RESULT`                                                 | Constants | Numeric result codes, matching `apps/src/constants.js` and Rails `ActivityConstants` |
-| `LevelStatuses`, `ProgressLevelTypes`, `ViewTypes`, `PUZZLE_PAGE_NONE`, `PASSED_ALL_TESTS_VALIDATION`          | Constants |                                                                                      |
-| `Validator`, `Validation`, `Condition`, `ValidationState`, `ProgressState`, `UnitProgress`, `NumberedLevel`, … | Types     |                                                                                      |
+| Export                                                                                                         | Kind            | Purpose                                                                              |
+| -------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------ |
+| `ProgressManager`                                                                                              | Class           | Runs a lab's `Validator` over the level's validations; reports through a callback    |
+| `ConditionsChecker`                                                                                            | Class           | Accumulates satisfied conditions for a validator                                     |
+| `milestoneTimer`, `MilestoneTimer`                                                                             | Instance, class | Time on the level since the last milestone, less idle time; sent with each post      |
+| `getInitialValidationState`                                                                                    | Function        | An empty `ValidationState`                                                           |
+| `TestResults`, `MINIMUM_PASS_RESULT`, `MINIMUM_OPTIMAL_RESULT`                                                 | Constants       | Numeric result codes, matching `apps/src/constants.js` and Rails `ActivityConstants` |
+| `LevelStatuses`, `ProgressLevelTypes`, `ViewTypes`, `PUZZLE_PAGE_NONE`, `PASSED_ALL_TESTS_VALIDATION`          | Constants       |                                                                                      |
+| `Validator`, `Validation`, `Condition`, `ValidationState`, `ProgressState`, `UnitProgress`, `NumberedLevel`, … | Types           |                                                                                      |
 
 `@code-dot-org/progress/redux`:
 
@@ -89,3 +90,17 @@ manager.updateProgress();
 `MyValidator` extends `Validator` and decides what the level's condition
 names mean; `ConditionsChecker` is one way to accumulate them. The apps
 `MusicValidator` and `DanceValidator` are the reference implementations.
+
+Time spent on a level is measured by `milestoneTimer` and sent with every
+milestone post. The thunks reset it after a successful post and after an
+in-page level change. The host owns the rest:
+
+```ts
+import {milestoneTimer} from '@code-dot-org/progress';
+
+// when a lab mounts:
+milestoneTimer.resetMilestoneTimer();
+// from the host's idle detector:
+idleDetector.on('idle', () => milestoneTimer.startIdle());
+idleDetector.on('active', () => milestoneTimer.endIdle());
+```

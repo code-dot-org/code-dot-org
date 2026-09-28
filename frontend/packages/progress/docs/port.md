@@ -141,14 +141,22 @@ These failed at runtime. All six are fixed, with tests under
 nothing else. Apps `sendReportForLevel` also sends, or does, the following.
 The `mergeUnitProgress` dispatch it also makes is restored; see 3.1 item 3.
 
-- `timeSinceLastMilestone` from `Lab2ProgressTimer` (elapsed time minus idle
-  time), which the server stores as `UserLevel#time_spent`
+- Fixed. `timeSinceLastMilestone` from `Lab2ProgressTimer` (elapsed time
+  minus idle time), which the server stores as `UserLevel#time_spent`
   (`ActivitiesController#track_progress_for_user`). Without it every Lab2
-  level records zero time. The timer reset on `initProgress` and after each
-  successful post is gone too.
-- `?course_id=` from `state.courseId`, which the server uses to set
-  `UserLevel#unit_group_id` (#67708). Progress recorded through the package is
-  not attributed to a course.
+  level recorded zero time. The package now has `MilestoneTimer`, a port of
+  `Lab2ProgressTimer`, with one module-level instance, `milestoneTimer`. Every
+  post sends its value, and the thunks reset it after a successful post and
+  after an in-page level change. Two duties move to the host. Apps also
+  reset the timer inside the `initProgress` reducer, which reading the clock
+  would make impure, so the host resets it when it mounts a lab instead, as
+  apps' `Lab2IdleTimer` already did. Idle detection was `react-idle-timer`
+  in `Lab2IdleTimer`; no host under `frontend/` reports idleness yet, so
+  until one calls `startIdle` and `endIdle`, idle time counts as time spent.
+  The server caps each value at an hour.
+- Fixed. `?course_id=` from `state.courseId`, which the server uses to set
+  `UserLevel#unit_group_id` (#67708). Without it, progress recorded through
+  the package was not attributed to a course.
 - A `.catch` that logs network failures through the metrics reporter
   (#73017). The package lets them surface as unhandled rejections.
 - `sendProgressReport(appType, result)` and `sendStartedReportIfNotStarted`
@@ -336,9 +344,9 @@ branch and the README says so until it is made.
 ## 6. Proposed order of work
 
 1. Done. Fix 3.1 items 1 through 6 and port the apps tests that pin them.
-2. Restore the milestone fields (`timeSinceLastMilestone`, `course_id`).
-   `mergeUnitProgress` is already restored. Timer ownership needs a decision: a module singleton
-   as in apps, or state on the slice.
+2. Done. Restore the milestone fields (`timeSinceLastMilestone`,
+   `course_id`) and `mergeUnitProgress`. The timer is a module singleton, as
+   in apps; see 3.2. A host still owes a lab-mount reset and idle reporting.
 3. Move both requests onto `DashboardApiClient`: extend
    `activities.reportMilestone` with the Lab2 fields, add
    `progress.getUserProgress` with a zod schema for

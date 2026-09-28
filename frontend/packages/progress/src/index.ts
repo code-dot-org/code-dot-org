@@ -1,4 +1,5 @@
 export {default as ConditionsChecker} from './ConditionsChecker';
+export {MilestoneTimer, milestoneTimer} from './MilestoneTimer';
 export {
   default as ProgressManager,
   getInitialValidationState,

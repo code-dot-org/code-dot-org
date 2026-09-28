@@ -238,6 +238,7 @@ export interface MilestoneReport extends OptionalMilestoneData {
   app: string;
   result: boolean;
   testResult: TestResult;
+  timeSinceLastMilestone?: number;
 }
 
 export type ProgressLevelType =
