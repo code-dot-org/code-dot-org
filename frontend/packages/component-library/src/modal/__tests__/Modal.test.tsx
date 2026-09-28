@@ -85,5 +85,56 @@ describe('Modal Component', () => {
       'aria-describedby',
       'dsco-dialog-description',
     );
+    expect(modal).not.toHaveAttribute('aria-labelledby');
+  });
+
+  it('should render in place on the MUI dialog shell', () => {
+    const {container} = render(<Modal {...defaultProps} />);
+    const modal = screen.getByRole('dialog');
+    expect(container).toContainElement(modal);
+    expect(modal.closest('.MuiDialog-root')).toHaveClass('customDialogOverlay');
+    expect(modal).not.toHaveClass('MuiPaper-root');
+  });
+
+  it('should aria-hide nothing but the backdrop', () => {
+    render(<Modal {...defaultProps} />);
+    const hidden = Array.from(
+      document.querySelectorAll('[aria-hidden="true"]'),
+    );
+    expect(hidden.every(el => el.classList.contains('MuiBackdrop-root'))).toBe(
+      true,
+    );
+  });
+
+  it('should put className and other HTML attributes on the panel', () => {
+    render(
+      <Modal {...defaultProps} className="custom-class" id="custom-modal" />,
+    );
+    const modal = screen.getByRole('dialog');
+    expect(modal).toHaveClass('modal', 'custom-class');
+    expect(modal).toHaveAttribute('id', 'custom-modal');
+  });
+
+  it('should call onClose when the escape key is pressed', () => {
+    const onClose = vi.fn();
+    render(<Modal {...defaultProps} onClose={onClose} />);
+    fireEvent.keyDown(screen.getByRole('button', {name: 'Primary Action'}), {
+      key: 'Escape',
+      code: 'Escape',
+    });
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('should focus the first button on mount and restore focus on unmount', () => {
+    const opener = document.createElement('button');
+    document.body.appendChild(opener);
+    opener.focus();
+    const {unmount} = render(<Modal {...defaultProps} />);
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'Primary Action'}),
+    );
+    unmount();
+    expect(document.activeElement).toBe(opener);
+    opener.remove();
   });
 });

@@ -28,6 +28,11 @@
   }
 }
 
+// MUI centers the panel in a row flex, where the legacy column flex shrank a tall panel to the viewport; :where keeps consumer max-height rules winning.
+:where(.modal) {
+  max-height: 100%;
+}
+
 .modalTitleSection {
   align-self: stretch;
   gap: 1.5rem;
