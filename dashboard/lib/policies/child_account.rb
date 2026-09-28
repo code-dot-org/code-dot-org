@@ -141,6 +141,12 @@ class Policies::ChildAccount
     ComplianceState.permission_granted?(user)
   end
 
+  def self.personal_account_linking_enabled?(user, request_in_usa:)
+    return false if user.student? && request_in_usa && user.country_code.nil?
+
+    can_link_new_personal_account?(user) && !partially_locked_out?(user)
+  end
+
   # Returns true if the user has provided the minimum information we need to decide if their account is affected by our Child Account Policy.
   def self.has_required_information?(user)
     if Policies::User.in_usa?(user.country_code)

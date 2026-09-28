@@ -1,0 +1,47 @@
+name 'UI Test CSP pre-assessment survey'
+title 'Pre-survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'UI Test pre-assessment survey heading1'
+level 'UI Test pre-assessment survey q1'
+level 'UI Test pre-assessment survey q2'
+level 'UI Test pre-assessment survey q3'
+level 'UI Test pre-assessment survey q4'
+level 'UI Test pre-assessment survey q5'
+level 'UI Test pre-assessment survey q6'
+level 'UI Test pre-assessment survey q7'
+level 'UI Test pre-assessment survey q8'
+
+page
+text 'UI Test pre-assessment survey heading2'
+level 'UI Test pre-assessment survey q9'
+level 'UI Test pre-assessment survey q10'
+level 'UI Test pre-assessment survey q11'
+level 'UI Test pre-assessment survey q12'
+level 'UI Test pre-assessment survey q13'
+level 'UI Test pre-assessment survey q14'
+level 'UI Test pre-assessment survey q15'
+level 'UI Test pre-assessment survey q16'
+level 'UI Test pre-assessment survey q17'
+level 'UI Test pre-assessment survey q18'
+level 'UI Test pre-assessment survey q19'
+level 'UI Test pre-assessment survey q20'
+level 'UI Test pre-assessment survey q21'
+level 'UI Test pre-assessment survey q22'
+level 'UI Test pre-assessment survey q23'
+level 'UI Test pre-assessment survey q24A'
+
+
+page
+text 'UI Test pre-assessment survey heading3'
+level 'UI Test pre-assessment survey q24'
+level 'UI Test pre-assessment survey q25A'
+level 'UI Test pre-assessment survey q26'
+level 'UI Test pre-assessment survey q27'
+
+page
+level 'UI Test pre-assessment survey q28'
+level 'UI Test pre-assessment survey q29'
+level 'UI Test pre-assessment survey q30'
