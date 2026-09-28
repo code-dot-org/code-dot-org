@@ -14,6 +14,7 @@ import SectionProgressV2 from '@cdo/apps/templates/sectionProgressV2/SectionProg
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 import {createStore} from './sectionProgressTestHelpers';
 
@@ -24,8 +25,16 @@ const DEFAULT_PROPS = {};
 
 jest.mock('@cdo/apps/templates/sectionProgressV2/sectionProgressLoader');
 
+// Expected gallery URL derived from the test helper's script data:
+// path  = '//localhost-studio.code.org:3000/s/csd3-2020'
+// first lesson relative_position = 0
+const GALLERY_URL =
+  '//localhost-studio.code.org:3000/s/csd3-2020/lessons/0/tutor/gallery';
+
 describe('SectionProgressV2', () => {
   let store;
+  const realIsEnabledAllowingQueryString =
+    experiments.isEnabledAllowingQueryString;
 
   beforeEach(() => {
     stubRedux();
@@ -48,11 +57,22 @@ describe('SectionProgressV2', () => {
         json: () => Promise.resolve({}),
       })
     );
+
+    // jest.resetAllMocks() (called in afterEach) clears the ResizeObserver
+    // mock implementation set in setupJest.js. Re-establish it each test so
+    // components that use ResizeObserver don't throw when fully rendered.
+    global.ResizeObserver = jest.fn().mockImplementation(() => ({
+      observe: jest.fn(),
+      unobserve: jest.fn(),
+      disconnect: jest.fn(),
+    }));
+
+    experiments.isEnabledAllowingQueryString = jest.fn(() => false);
   });
 
   afterEach(() => {
     restoreRedux();
-
+    experiments.isEnabledAllowingQueryString = realIsEnabledAllowingQueryString;
     jest.resetAllMocks();
   });
 
@@ -91,5 +111,29 @@ describe('SectionProgressV2', () => {
     screen.getByText('Students');
 
     expect(screen.getAllByText(/Student [1-9]/).length).toBe(STUDENTS.length);
+  });
+
+  it('shows the gallery link button when lesson-tutor-challenge is enabled', () => {
+    experiments.isEnabledAllowingQueryString = jest.fn(() => true);
+    // scriptId must match the test helper's script id (2) so unitData resolves.
+    store.dispatch(setUnit(2, 99));
+    renderDefault();
+
+    const link = screen.getByRole('link', {
+      name: /Review extension activities/,
+    });
+    expect(link).toHaveAttribute('href', GALLERY_URL);
+  });
+
+  it('hides the gallery link button when lesson-tutor-challenge is disabled', () => {
+    experiments.isEnabledAllowingQueryString = jest.fn(() => false);
+    store.dispatch(setUnit(2, 99));
+    renderDefault();
+
+    expect(
+      screen.queryByRole('link', {
+        name: /Review extension activities/,
+      })
+    ).toBeNull();
   });
 });

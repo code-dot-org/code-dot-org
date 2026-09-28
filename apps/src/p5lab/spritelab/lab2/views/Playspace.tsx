@@ -20,6 +20,10 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
+// Read by a screen reader when focus reaches the game, which otherwise
+// reports itself only in sound.
+const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
+
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale
 // it with a CSS transform to fit either the corner preview or the centered
 // play area.
@@ -102,6 +106,8 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  /** The scene playing now is a platformer, so the controls apply. */
+  platformScene?: boolean;
   // Shown in the play area's top-right corner while playing (the restart
   // buttons). Outside the box, so they keep their size whatever its scale.
   controls?: React.ReactNode;
@@ -123,6 +129,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  platformScene = false,
   controls,
   guideSize,
   getDefaultSpriteSize,
@@ -312,6 +319,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
+        aria-describedby={
+          mode === 'play' && platformScene ? CONTROLS_HELP_ID : undefined
+        }
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
@@ -400,6 +410,16 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           </div>
         )}
       </div>
+      {/* Outside the box: role="application" hides what is inside it from
+          screen readers, so anything to be read must sit beside it. */}
+      {mode === 'play' && platformScene && (
+        <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
+          Left and right arrows move. Space or up arrow jumps. In zero gravity,
+          up and down steer. Navigation sounds can be turned on in Settings:
+          footsteps and bumps, a tone for your height, and tones that grow
+          louder as a wall or an edge comes near.
+        </p>
+      )}
       {mode === 'play' && controls && (
         <div className={moduleStyles.playControls}>{controls}</div>
       )}
