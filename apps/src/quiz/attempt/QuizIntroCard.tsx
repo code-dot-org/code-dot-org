@@ -15,7 +15,14 @@ export interface QuizIntroCardProps {
   // Omit for an untimed quiz.
   timeLimitMinutes?: number;
   allowMultipleAttempts: boolean;
-  onBegin: () => void;
+  onBegin?: () => void;
+  // Set once an attempt is submitted with show correctness set to false.
+  // This reuses the intro card as the "submitted" screen instead of a results card, since
+  // there's nothing to reveal.
+  submittedAt?: string | null;
+  canRetake?: boolean;
+  onTryAgain?: () => void;
+  onNextLevel?: () => void;
 }
 
 const pluralize = (count: number, noun: string) =>
@@ -28,21 +35,39 @@ const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
   timeLimitMinutes,
   allowMultipleAttempts,
   onBegin,
+  submittedAt,
+  canRetake,
+  onTryAgain,
+  onNextLevel,
 }) => {
-  const metadata = [
-    {icon: 'circle-question', text: pluralize(questionCount, 'question')},
-    ...(timeLimitMinutes
-      ? [{icon: 'clock', text: pluralize(timeLimitMinutes, 'minute')}]
-      : []),
-    {
-      icon: 'bullseye-arrow',
-      text: allowMultipleAttempts ? 'Unlimited attempts' : '1 attempt',
-    },
-  ];
+  const metadata = submittedAt
+    ? [
+        {
+          icon: 'circle-check',
+          text: 'Submitted',
+          className: styles.metadataItemSuccess,
+        },
+        {
+          icon: 'bullseye-arrow',
+          text: allowMultipleAttempts
+            ? 'Unlimited attempts'
+            : 'No attempts remaining',
+        },
+      ]
+    : [
+        {icon: 'circle-question', text: pluralize(questionCount, 'question')},
+        ...(timeLimitMinutes
+          ? [{icon: 'clock', text: pluralize(timeLimitMinutes, 'minute')}]
+          : []),
+        {
+          icon: 'bullseye-arrow',
+          text: allowMultipleAttempts ? 'Unlimited attempts' : '1 attempt',
+        },
+      ];
 
   return (
     <AttemptCard
-      label="Before you begin"
+      label={submittedAt ? 'submitted' : 'Before you begin'}
       title={title}
       description={
         introText && (
@@ -58,8 +83,15 @@ const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
       footer={
         <>
           <ul className={styles.metadata}>
-            {metadata.map(({icon, text}) => (
-              <li key={icon} className={styles.metadataItem}>
+            {metadata.map(({icon, text, className}) => (
+              <li
+                key={icon}
+                className={
+                  className
+                    ? `${styles.metadataItem} ${className}`
+                    : styles.metadataItem
+                }
+              >
                 <FontAwesomeV6Icon iconName={icon} />
                 <Typography variant="body3" component="span">
                   {text}
@@ -67,16 +99,42 @@ const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
               </li>
             ))}
           </ul>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="small"
-            type="button"
-            endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
-            onClick={onBegin}
-          >
-            Begin
-          </MuiButton>
+          {submittedAt ? (
+            <div className={styles.actions}>
+              {canRetake && (
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  type="button"
+                  onClick={onTryAgain}
+                >
+                  Try again
+                </MuiButton>
+              )}
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                type="button"
+                endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+                onClick={onNextLevel}
+              >
+                Next level
+              </MuiButton>
+            </div>
+          ) : (
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
+              type="button"
+              endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+              onClick={onBegin}
+            >
+              Begin
+            </MuiButton>
+          )}
         </>
       }
     />

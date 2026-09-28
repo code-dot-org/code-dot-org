@@ -2,6 +2,7 @@ import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
+  navigateToNextLevel,
   sendStartedReportIfNotStarted,
   sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
@@ -32,6 +33,7 @@ export interface QuizAttemptWorkspaceProps {
   customIntroText?: string;
   timeLimitMinutes?: number;
   showIntroScreen?: boolean;
+  showCorrectness?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -47,6 +49,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   customIntroText,
   timeLimitMinutes,
   showIntroScreen,
+  showCorrectness,
 }) => {
   const dispatch = useAppDispatch();
   const {
@@ -170,6 +173,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
+  const handleNextLevel = () => {
+    dispatch(navigateToNextLevel());
+  };
+
   // A quiz with no intro screen has no click-through step - start the
   // attempt automatically once the initial check finds there isn't one yet.
   useEffect(() => {
@@ -274,15 +281,33 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           )
         ) : attempt.submittedAt ? (
           <div className={styles.questions} ref={submittedRef}>
-            <ResultsCard
-              title={displayName || levelName}
-              score={attempt.score}
-              maxScore={attempt.maxScore}
-              attemptNumber={attempt.attemptNumber}
-              allowMultipleAttempts={toBool(allowMultipleAttempts)}
-              canRetake={attempt.canRetake}
-              onTryAgain={handleRetake}
-            />
+            {toBool(showCorrectness) ? (
+              <ResultsCard
+                title={displayName || levelName}
+                score={attempt.score}
+                maxScore={attempt.maxScore}
+                attemptNumber={attempt.attemptNumber}
+                allowMultipleAttempts={toBool(allowMultipleAttempts)}
+                canRetake={attempt.canRetake}
+                onTryAgain={handleRetake}
+                onNextLevel={handleNextLevel}
+              />
+            ) : (
+              // Nothing to reveal without correctness - reuse the intro
+              // shell as a submitted stamp instead of a results card. No
+              // introText - the pre-attempt description doesn't belong here,
+              // whether or not this quiz has an intro screen at all.
+              <QuizIntroCard
+                title={displayName || levelName}
+                questionCount={quizQuestions.length}
+                timeLimitMinutes={timeLimitMinutes}
+                allowMultipleAttempts={toBool(allowMultipleAttempts)}
+                submittedAt={attempt.submittedAt}
+                canRetake={attempt.canRetake}
+                onTryAgain={handleRetake}
+                onNextLevel={handleNextLevel}
+              />
+            )}
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React from 'react';
 
@@ -13,10 +14,12 @@ export interface ResultsCardProps {
   allowMultipleAttempts: boolean;
   canRetake: boolean;
   onTryAgain: () => void;
+  onNextLevel: () => void;
 }
 
-// Shown once an attempt is submitted - score and attempt stats, with a Try
-// again action when the student has another attempt available.
+// Shown once an attempt is submitted if show correctness is true - score and attempt stats.
+// Next level is always available.
+// Try again is a secondary action, only when the student has another attempt.
 const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
   title,
   score,
@@ -25,6 +28,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
   allowMultipleAttempts,
   canRetake,
   onTryAgain,
+  onNextLevel,
 }) => {
   const percentage = maxScore
     ? Math.round(((score ?? 0) / maxScore) * 100)
@@ -67,19 +71,31 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
         </div>
       }
       footer={
-        canRetake && (
-          <div className={styles.tryAgainWrap}>
+        <>
+          {canRetake && (
             <MuiButton
-              variant="contained"
-              color="primary"
+              variant="outlined"
+              color="secondary"
               size="medium"
               type="button"
               onClick={onTryAgain}
             >
               Try again
             </MuiButton>
+          )}
+          <div className={styles.nextLevelWrap}>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              type="button"
+              endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+              onClick={onNextLevel}
+            >
+              Next level
+            </MuiButton>
           </div>
-        )
+        </>
       }
     />
   );

@@ -87,4 +87,59 @@ describe('QuizIntroCard', () => {
 
     expect(onBegin).toHaveBeenCalledTimes(1);
   });
+
+  describe('submitted (no-correctness) variant', () => {
+    it('shows a submitted stamp instead of the question count, under a "submitted" label', () => {
+      renderCard({submittedAt: '2026-09-05T14:14:00Z', canRetake: false});
+
+      expect(screen.getByText('submitted')).toBeInTheDocument();
+      expect(screen.getByText('Submitted')).toBeInTheDocument();
+      expect(screen.queryByText(/question/)).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Begin'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows only Next level when the attempt cannot be retaken', () => {
+      renderCard({submittedAt: '2026-09-05T14:14:00Z', canRetake: false});
+
+      expect(screen.getByText('No attempts remaining')).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Try again'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: /Next level/})
+      ).toBeInTheDocument();
+    });
+
+    it('adds Try again alongside Next level when the attempt can be retaken', () => {
+      renderCard({
+        submittedAt: '2026-09-05T14:14:00Z',
+        canRetake: true,
+        allowMultipleAttempts: true,
+      });
+
+      expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: 'Try again'})
+      ).toBeInTheDocument();
+    });
+
+    it('calls onTryAgain and onNextLevel from their respective buttons', () => {
+      const onTryAgain = jest.fn();
+      const onNextLevel = jest.fn();
+      renderCard({
+        submittedAt: '2026-09-05T14:14:00Z',
+        canRetake: true,
+        onTryAgain,
+        onNextLevel,
+      });
+
+      fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
+      fireEvent.click(screen.getByRole('button', {name: /Next level/}));
+
+      expect(onTryAgain).toHaveBeenCalledTimes(1);
+      expect(onNextLevel).toHaveBeenCalledTimes(1);
+    });
+  });
 });
