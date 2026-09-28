@@ -457,6 +457,7 @@ class ApiController < ApplicationController
       course_name: course_name,
       redirect_unit_url: redirect_unit_url,
       unit_position: unit_position,
+      requires_inaccessible_ai_models: unit.requires_inaccessible_ai_models?(current_user),
     }
 
     if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)

@@ -121,6 +121,34 @@ describe('TeacherNavigationBar', () => {
       unitPosition: 1,
       participantType: 'student',
     },
+    // Assigned a course that cannot be completed without AI chat tools, using
+    // models the teacher's region blocks. Unfixable from AI settings.
+    {
+      id: 17,
+      name: 'Period 6',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      assigned_ai_chat_tools_dependency: 'essential',
+      assigned_required_inaccessible_ai_models: true,
+      ai_chat_access_level: 'enabled',
+    },
+    // Same essential course, but the tools are switched off for the section.
+    // Fixable from AI settings.
+    {
+      id: 18,
+      name: 'Period 7',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      assigned_ai_chat_tools_dependency: 'essential',
+      assigned_required_inaccessible_ai_models: false,
+      ai_chat_access_level: 'disabled',
+    },
   ];
   const serverSections = sections.map(serverSectionFromSection);
 
@@ -367,6 +395,35 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText('Course Content');
 
     expect(screen.queryByText(i18n.aiSettings())).toBeNull();
+  });
+
+  // The sidebar option carrying the error icon tells the teacher where to go
+  // to understand the problem, so which option carries it is the behavior
+  // under test.
+  const errorIconOwner = () => {
+    const icon = document.querySelector('.errorIcon');
+    return icon?.closest('a')?.textContent ?? null;
+  };
+
+  test('flags the Course option when assigned models are unavailable in the region', async () => {
+    renderDefault(17, `/teacher_dashboard/sections/17/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toContain(i18n.course());
+  });
+
+  test('flags AI Settings, not Course, when essential AI tools are switched off', async () => {
+    renderDefault(18, `/teacher_dashboard/sections/18/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toContain(i18n.aiSettings());
+  });
+
+  test('flags nothing when the assigned course has no AI problem', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toBeNull();
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {

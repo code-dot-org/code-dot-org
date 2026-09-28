@@ -379,6 +379,7 @@ class UnitGroup < ApplicationRecord
         course_path: link,
         course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil,
         ai_chat_tools_dependency: ai_chat_tools_dependency,
+        requires_inaccessible_ai_models: requires_inaccessible_ai_models?(user),
       }
     end
   end
@@ -715,8 +716,9 @@ class UnitGroup < ApplicationRecord
     default_units.with_essential_ai_chat_tools.exists?
   end
 
-  def uses_us_only_ai_models?
-    default_units.with_us_only_ai_models.exists?
+  def requires_inaccessible_ai_models?(user)
+    return false unless user&.us_only_aichat_models_disabled?
+    default_units.with_essential_us_only_ai_models.exists?
   end
 
   def ai_chat_tools_dependency

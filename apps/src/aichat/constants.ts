@@ -37,6 +37,8 @@ export const AI_CHAT_LAB_FAQ_LINK =
   'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ';
 export const AI_TUTOR_FAQ_LINK =
   'https://support.code.org/hc/en-us/articles/40542019587213-AI-Tutor-FAQ';
+export const AI_COUNTRY_AVAILABILITY_SUPPORT_LINK =
+  'https://support.code.org/hc/en-us/articles/48956120058637-Are-AI-tools-available-in-all-countries';
 
 export const AI_CHAT_NOT_AUTHORIZED_TEACHER =
   'You must be a verified teacher or sign in via Google, Microsoft, Facebook, or an LMS to use and assign this tool.';
@@ -46,10 +48,11 @@ export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'This AI Chat level is not available in your region.';
 export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =
   'AI Tutor is not available in your region.';
-// Shown in Teacher Dashboard AI Settings when the teacher's region blocks
-// Gemini models. Settings still apply to levels using other models.
-export const US_ONLY_MODELS_TEACHER_SETTINGS =
-  'Some AI models are not available in your region. Levels that use them will be disabled for you and your students.';
+// Shown on the course and unit overview pages when what the page is about
+// cannot be completed without AI models the instructor's region blocks.
+export type UsOnlyModelsSubject = 'course' | 'unit';
+export const usOnlyModelsEssentialMessage = (subject: UsOnlyModelsSubject) =>
+  `This ${subject} requires AI models that are not available in your region. AI chat tools will be disabled in some levels.`;
 
 export const MODEL_PARAMETER_LABELS: {
   [key in keyof ModelParameters]: string;

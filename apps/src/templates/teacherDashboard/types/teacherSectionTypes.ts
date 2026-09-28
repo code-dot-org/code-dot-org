@@ -51,12 +51,7 @@ export interface Section {
   avatar_color?: number | null;
   avatar_emoji?: number | null;
   assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
-  /**
-   * Whether the assigned curriculum uses AI models this section's instructor
-   * cannot reach. Only computed for instructors who have US only models
-   * disabled; false otherwise.
-   */
-  assignedInaccessibleAiModels?: boolean;
+  assignedRequiredInaccessibleAiModels?: boolean;
   aiChatAccessLevel?: AiChatAccessLevel;
 }
 

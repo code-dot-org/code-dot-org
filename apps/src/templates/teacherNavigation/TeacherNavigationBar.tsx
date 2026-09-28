@@ -10,10 +10,7 @@ import {
   useParams,
 } from 'react-router-dom';
 
-import {
-  shouldShowAiChatEssentialAlert,
-  shouldShowUsOnlyModelsAlert,
-} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {shouldShowAiChatEssentialAlert} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -37,6 +34,14 @@ import styles from './teacher-navigation.module.scss';
 
 const sectionDropdownText = (section: Section) =>
   section.demoType ? `${section.name} (demo)` : section.name;
+
+// The three keys the "Course" sidebar option resolves to, depending on
+// whether a course, a unit, or a unit nested in a course is assigned.
+const COURSE_OVERVIEW_PATH_KEYS = [
+  TEACHER_NAVIGATION_PATH_NAMES.courseOverview,
+  TEACHER_NAVIGATION_PATH_NAMES.unitOverview,
+  TEACHER_NAVIGATION_PATH_NAMES.nestedUnitOverview,
+];
 
 const TeacherNavigationBar: React.FC<{
   showAiChatSettings: boolean;
@@ -223,25 +228,25 @@ const TeacherNavigationBar: React.FC<{
 
   const shouldShowErrorIcon = React.useCallback(
     (key: string) => {
-      if (
-        key !== TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings ||
-        !selectedSection
-      ) {
+      if (!selectedSection) {
         return false;
       }
-      const {assignedAiChatToolsDependency, assignedInaccessibleAiModels} =
-        selectedSection;
-      return (
-        shouldShowAiChatEssentialAlert({
-          assignedAiChatToolsDependency,
+      // AI tools switched off by an access level: the teacher fixes that on
+      // the AI settings page.
+      if (key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings) {
+        return shouldShowAiChatEssentialAlert({
+          assignedAiChatToolsDependency:
+            selectedSection.assignedAiChatToolsDependency,
           sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
           teacherAiChatAccessLevel,
-        }) ||
-        shouldShowUsOnlyModelsAlert({
-          assignedAiChatToolsDependency,
-          assignedInaccessibleAiModels,
-        })
-      );
+        });
+      }
+      // Models unavailable in the teacher's region: nothing in AI settings
+      // changes that, so the warning lives with the curriculum instead.
+      if (COURSE_OVERVIEW_PATH_KEYS.includes(key)) {
+        return !!selectedSection.assignedRequiredInaccessibleAiModels;
+      }
+      return false;
     },
     [selectedSection, teacherAiChatAccessLevel]
   );

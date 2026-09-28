@@ -72,6 +72,8 @@ class UnitOverview extends React.Component {
     aiChatToolsDependency: PropTypes.oneOf(
       Object.values(AiChatToolsDependency)
     ),
+    // Whether the unit being viewed needs AI models the teacher's region blocks.
+    unitRequiresInaccessibleAiModels: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -162,6 +164,7 @@ class UnitOverview extends React.Component {
       showAiAssessmentsAnnouncement,
       isOnTeacherDashboard = false,
       aiChatToolsDependency,
+      unitRequiresInaccessibleAiModels,
     } = this.props;
 
     const displayRedirectDialog =
@@ -223,7 +226,12 @@ class UnitOverview extends React.Component {
             />
             {viewAs === ViewType.Instructor &&
               aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-                <RequiresAiChatToolsAlert />
+                <RequiresAiChatToolsAlert
+                  subject="unit"
+                  requiresInaccessibleAiModels={
+                    unitRequiresInaccessibleAiModels
+                  }
+                />
               )}
           </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}

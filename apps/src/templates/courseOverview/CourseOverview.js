@@ -63,6 +63,8 @@ class CourseOverview extends Component {
     participantAudience: PropTypes.string,
     aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
       .isRequired,
+    // Whether this course needs AI models the teacher's region blocks.
+    requiresInaccessibleAiModels: PropTypes.bool,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired,
@@ -145,6 +147,7 @@ class CourseOverview extends Component {
       isSignedIn,
       participantAudience,
       aiChatToolsDependency,
+      requiresInaccessibleAiModels,
       demoType,
     } = this.props;
 
@@ -238,7 +241,10 @@ class CourseOverview extends Component {
         />
         {viewAsTeacher &&
           aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-            <RequiresAiChatToolsAlert />
+            <RequiresAiChatToolsAlert
+              subject="course"
+              requiresInaccessibleAiModels={requiresInaccessibleAiModels}
+            />
           )}
         <SafeMarkdown
           className={styles.description}
