@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import manifest from '@cdo/static/spritelab_lab2/imageAdlibManifest.json';
 
-import {BodyPlan, ImageSubject, ImageType} from './types';
+import {BODY_PLANS, BodyPlan, ImageSubject, ImageType} from './types';
 
 /** Which combo set a level offers; expanded is the freeplay set, treasure
     the collectible-flavored object set for the treasure level. */
@@ -42,16 +42,30 @@ export function imageAdlibFor(
   return adlibs[imageAdlibId(imageType, set, subject)];
 }
 
-// The creature words that are not person-shaped, by the manifest's choice
-// ids. Every other creature, and any typed prompt, is drawn upright.
-export const CREATURE_BODY_PLANS: {[creatureId: string]: BodyPlan} = {
-  cat: 'quadruped',
-  dragon: 'quadruped',
-  dinosaur: 'quadruped',
-  penguin: 'bird',
-};
+// A creature option's bodyPlan in the manifest names the stance the
+// character-set prompts are written for (characterSet.ts); a creature
+// without one, and any typed prompt, is drawn upright.
+const CREATURE_BODY_PLANS = new Map<string, BodyPlan>();
+Object.values(adlibs).forEach(adlib => {
+  (adlib.options.creature ?? []).forEach(option => {
+    const plan = (option as {bodyPlan?: string}).bodyPlan;
+    if (plan && BODY_PLANS.includes(plan as BodyPlan)) {
+      CREATURE_BODY_PLANS.set(option.id, plan as BodyPlan);
+    }
+  });
+});
 
 /** The body plan of a character combo's creature choice. */
 export function bodyPlanFor(creatureId: string | undefined): BodyPlan {
-  return (creatureId && CREATURE_BODY_PLANS[creatureId]) || 'upright';
+  return (creatureId && CREATURE_BODY_PLANS.get(creatureId)) || 'upright';
+}
+
+/** The manifest's bodyPlan values, for the test that they are all known. */
+export function manifestBodyPlans(): string[] {
+  return Object.values(adlibs).flatMap(adlib =>
+    (adlib.options.creature ?? []).flatMap(option => {
+      const plan = (option as {bodyPlan?: string}).bodyPlan;
+      return plan ? [plan] : [];
+    })
+  );
 }

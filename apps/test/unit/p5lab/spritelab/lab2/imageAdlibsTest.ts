@@ -1,11 +1,14 @@
 import {
   bodyPlanFor,
-  CREATURE_BODY_PLANS,
   imageAdlibFor,
   imageAdlibId,
   ImageAdlibSet,
+  manifestBodyPlans,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageAdlibs';
-import {IMAGE_TYPES} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {
+  BODY_PLANS,
+  IMAGE_TYPES,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 
 const SETS: ImageAdlibSet[] = ['simple', 'expanded'];
 
@@ -76,17 +79,11 @@ describe('imageAdlibs manifest', () => {
 });
 
 describe('creature body plans', () => {
-  it('names only creatures the manifest offers', () => {
-    const creatures = new Set(
-      SETS.flatMap(
-        set =>
-          imageAdlibFor('sprite', set, 'character')?.options.creature?.map(
-            option => option.id
-          ) ?? []
-      )
-    );
-    Object.keys(CREATURE_BODY_PLANS).forEach(id => {
-      expect(creatures.has(id)).toBe(true);
+  it('names only plans the prompts are written for', () => {
+    const plans = manifestBodyPlans();
+    expect(plans.length).toBeGreaterThan(0);
+    plans.forEach(plan => {
+      expect(BODY_PLANS).toContain(plan);
     });
   });
 });
