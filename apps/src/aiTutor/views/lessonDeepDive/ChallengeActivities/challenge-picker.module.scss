@@ -18,6 +18,25 @@
   max-width: 100%;
   padding: 40px 0;
 
+  // Nested for specificity over MUI Typography defaults
+  .heading {
+    font-family: var(--font-family-heading);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.48px;
+    color: var(--sentiment-information-30);
+    margin: 0;
+  }
+
+  .sectionLabel {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--text-neutral-primary);
+    margin: 0;
+  }
+
   // MuiButton variant="text" — nested for specificity over MUI root class
   .reviewLink {
     background: none;
@@ -44,18 +63,6 @@
   }
 }
 
-// ── Heading ────────────────────────────────────────────────────────────────
-
-.heading {
-  font-family: var(--font-family-heading);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 52px;
-  letter-spacing: -0.48px;
-  color: #6fcaff;
-  margin: 0;
-}
-
 // ── Section ────────────────────────────────────────────────────────────────
 
 .section {
@@ -63,14 +70,6 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
-}
-
-.sectionLabel {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-  color: #fff;
-  margin: 0;
 }
 
 // ── Modality picker ────────────────────────────────────────────────────────
@@ -93,7 +92,7 @@
   padding: 8px 4px;
   border-radius: 12px;
   background: #121212;
-  border: 1px solid #fff;
+  border: 1px solid var(--borders-neutral-solid);
   cursor: pointer;
   transition: background-color 0.12s ease, border-color 0.12s ease;
 
@@ -127,7 +126,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  color: #fff;
+  color: var(--text-neutral-primary);
   white-space: nowrap;
 }
 
@@ -151,7 +150,7 @@
     background: transparent;
     border: 1px solid #4b5258;
     border-radius: 999px;
-    color: #fff;
+    color: var(--text-neutral-primary);
     font-size: 16px;
     padding: 0;
 
@@ -192,7 +191,7 @@
   line-height: 22px;
   letter-spacing: 0.84px;
   text-transform: uppercase;
-  color: #6fcaff;
+  color: var(--sentiment-information-30);
   margin: 0;
 }
 
@@ -200,7 +199,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #fff;
+  color: var(--text-neutral-primary);
   margin: 0;
 }
 
