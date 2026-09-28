@@ -130,16 +130,20 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
         provided here).
       </Typography>
       {state.removed.length > 0 && (
-        <Typography variant="body4" className={moduleStyles.warningText}>
+        <Typography
+          variant="body4"
+          className={moduleStyles.warningText}
+          role="alert"
+        >
           These saved values are not valid for Lab 2 AI Lab and will be removed
           when you save: {state.removed.join('; ')}
         </Typography>
       )}
-      <Typography variant="body2" className={moduleStyles.sectionHeading}>
+      <Typography variant="h5" className={moduleStyles.sectionHeading}>
         Screens
       </Typography>
       {SCREEN_FIELDS.map(renderField)}
-      <Typography variant="body2" className={moduleStyles.sectionHeading}>
+      <Typography variant="h5" className={moduleStyles.sectionHeading}>
         Student actions
       </Typography>
       {ACTION_FIELDS.map(renderField)}

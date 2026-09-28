@@ -15,19 +15,15 @@
 
 // Duplicated class names to ensure precedence over MUI.
 .sectionHeading.sectionHeading {
-  display: block;
-  font-weight: 600;
   margin-bottom: 8px;
 }
 
 .descriptionText.descriptionText {
-  display: block;
   color: var(--text-neutral-tertiary);
   margin-bottom: 8px;
 }
 
 .warningText.warningText {
-  display: block;
   color: var(--text-error-primary);
   margin-bottom: 8px;
 }
