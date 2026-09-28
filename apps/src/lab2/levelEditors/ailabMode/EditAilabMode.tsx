@@ -2,10 +2,9 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {
   cleanMode,
-  parseMode,
-  serializeMode,
   withDefaultTrainer,
 } from './ailabMode';
+import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
 import AilabModeFields, {AilabDataset} from './AilabModeFields';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
@@ -28,10 +27,10 @@ function prepareForFields(
   rawMode: string,
   knownDatasetIds: string[]
 ): FieldsState {
-  const parsedMode = parseMode(rawMode);
+  const parsedMode = parseJsonObject(rawMode);
   const {mode, removed} = cleanMode(parsedMode ?? {}, knownDatasetIds);
   return {
-    rawMode: serializeMode(withDefaultTrainer(mode)),
+    rawMode: serializeJsonObject(withDefaultTrainer(mode)),
     removed: parsedMode ? removed : ['the saved mode, which is not valid JSON'],
   };
 }
@@ -82,10 +81,10 @@ const EditAilabMode: React.FunctionComponent<EditAilabModeProps> = ({
           value={state.rawMode}
         />
         <AilabModeFields
-          mode={parseMode(state.rawMode) ?? {}}
+          mode={parseJsonObject(state.rawMode) ?? {}}
           datasets={datasets}
           removed={state.removed}
-          onChange={newMode => setRawMode(serializeMode(newMode))}
+          onChange={newMode => setRawMode(serializeJsonObject(newMode))}
         />
       </div>
     );

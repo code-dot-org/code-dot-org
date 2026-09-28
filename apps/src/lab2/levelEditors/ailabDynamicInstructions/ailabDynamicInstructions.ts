@@ -1,5 +1,5 @@
 /*
-  Reading and writing the Lab 2 AI Lab level "dynamic_instructions" JSON
+  Reads and writes the Lab 2 AI Lab level "dynamic_instructions" JSON
   string, which maps an instructions key to the text shown for it. The editor
   keeps only keys Lab 2 AI Lab can show; anything else is dropped when the
   level is next saved.
@@ -10,7 +10,7 @@ import {
   type InstructionsKey,
 } from '@code-dot-org/ailab';
 
-import {parseMode, serializeMode, setModeValue} from '../ailabMode/ailabMode';
+import {setJsonObjectValue} from '../jsonUtils';
 
 export type DynamicInstructions = Partial<Record<InstructionsKey, string>>;
 
@@ -28,7 +28,6 @@ const UNREACHABLE_KEYS = [
 
 type Lab2Key = Exclude<InstructionsKey, (typeof UNREACHABLE_KEYS)[number]>;
 
-// A new key in the ailab package fails typecheck here until it gets a label.
 const FIELD_LABELS: Record<Lab2Key, string> = {
   dataDisplayLabel: 'Choose label screen',
   dataDisplayFeatures: 'Choose features screen',
@@ -58,30 +57,17 @@ export const ACTION_FIELDS = toFields(
   INSTRUCTIONS_KEYS.filter(key => !CONTENT_PANEL_KEYS.includes(key))
 );
 
-// Returns null when the string is not a JSON object.
-export function parseDynamicInstructions(
-  rawDynamicInstructions: string | null | undefined
-): Record<string, unknown> | null {
-  return parseMode(rawDynamicInstructions);
-}
-
-export function serializeDynamicInstructions(
-  dynamicInstructions: DynamicInstructions
-): string {
-  return serializeMode(dynamicInstructions);
-}
-
 // An empty value removes the key, so Lab 2 falls back to the default text.
 export function setInstructionsText(
   dynamicInstructions: DynamicInstructions,
   key: InstructionsKey,
   text: string
 ): DynamicInstructions {
-  return setModeValue(
+  return setJsonObjectValue(
     dynamicInstructions,
     key,
     text.trim() === '' ? undefined : text
-  ) as DynamicInstructions;
+  );
 }
 
 // Drops unknown keys and non-string values, describing each; empty strings mean "use the default" and go silently.

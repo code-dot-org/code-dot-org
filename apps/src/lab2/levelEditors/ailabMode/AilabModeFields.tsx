@@ -12,8 +12,8 @@ import {
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
-  setModeValue,
 } from './ailabMode';
+import {setJsonObjectValue} from '../jsonUtils';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
 
@@ -89,7 +89,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     const accuracy = Number(text);
     setAccuracyText(text);
     onChange(
-      setModeValue(
+      setJsonObjectValue(
         mode,
         'requireAccuracy',
         text.trim() !== '' && isValidAccuracy(accuracy) ? accuracy : undefined
@@ -117,7 +117,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           items={datasetItems}
           selectedValue={selectedDataset ?? NO_DATASET}
           onChange={e =>
-            onChange(setModeValue(mode, 'datasets', [e.target.value]))
+            onChange(setJsonObjectValue(mode, 'datasets', [e.target.value]))
           }
           helperMessage="Students start with this dataset loaded."
           errorMessage={
@@ -139,7 +139,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           items={TRAINER_ITEMS}
           selectedValue={selectedTrainer}
           onChange={e =>
-            onChange(setModeValue(mode, 'trainer', e.target.value))
+            onChange(setJsonObjectValue(mode, 'trainer', e.target.value))
           }
           size="s"
         />
@@ -170,7 +170,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
               checked={mode[key] === true}
               onChange={e =>
                 onChange(
-                  setModeValue(mode, key, e.target.checked ? true : undefined)
+                  setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
                 )
               }
               size="s"

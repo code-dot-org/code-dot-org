@@ -7,11 +7,10 @@ import {
   cleanDynamicInstructions,
   DynamicInstructions,
   DynamicInstructionsField,
-  parseDynamicInstructions,
   SCREEN_FIELDS,
-  serializeDynamicInstructions,
   setInstructionsText,
 } from './ailabDynamicInstructions';
+import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
 
 import moduleStyles from './edit-ailab-dynamic-instructions.module.scss';
 
@@ -33,10 +32,10 @@ const TEXT_AREA_ROWS = 3;
 
 // The fields show only what Lab 2 AI Lab reads, so the saved value is cleaned to match.
 function prepareForFields(rawDynamicInstructions: string): FieldsState {
-  const parsed = parseDynamicInstructions(rawDynamicInstructions);
+  const parsed = parseJsonObject(rawDynamicInstructions);
   const {dynamicInstructions, removed} = cleanDynamicInstructions(parsed ?? {});
   return {
-    rawDynamicInstructions: serializeDynamicInstructions(dynamicInstructions),
+    rawDynamicInstructions: serializeJsonObject(dynamicInstructions),
     removed: parsed
       ? removed
       : ['the saved dynamic instructions, which are not valid JSON'],
@@ -93,7 +92,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
     );
   }
 
-  const dynamicInstructions = (parseDynamicInstructions(
+  const dynamicInstructions = (parseJsonObject(
     state.rawDynamicInstructions
   ) ?? {}) as DynamicInstructions;
 
@@ -107,7 +106,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
         value={dynamicInstructions[key] ?? ''}
         onChange={e =>
           setRawDynamicInstructions(
-            serializeDynamicInstructions(
+            serializeJsonObject(
               setInstructionsText(dynamicInstructions, key, e.target.value)
             )
           )
