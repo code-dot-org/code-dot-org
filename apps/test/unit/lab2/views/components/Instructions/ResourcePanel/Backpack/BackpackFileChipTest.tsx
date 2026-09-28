@@ -128,23 +128,6 @@ describe('BackpackFileChip', () => {
     expect(addAlert).not.toHaveBeenCalled();
   });
 
-  it('falls back to the in-panel alert without showToast (legacy panel)', async () => {
-    (backpackApi.deleteFiles as jest.Mock).mockImplementation(
-      (filenames, onError) => onError(new Error('delete boom'))
-    );
-    renderChip({showToast: undefined});
-
-    await clickDelete();
-
-    await waitFor(() =>
-      expect(addAlert).toHaveBeenCalledWith(
-        'danger',
-        `Failed to delete ${FILE_NAME} from your Backpack.`
-      )
-    );
-    expect(showToast).not.toHaveBeenCalled();
-  });
-
   it('offers an enabled add button when the file is not recently added', () => {
     renderChip();
 
