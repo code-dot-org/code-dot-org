@@ -1,9 +1,9 @@
+import {TutorGalleryData} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter} from 'react-router-dom';
 
-import {TutorGalleryData} from '@cdo/apps/aiTutor/views/gallery/types';
 import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import TutorApp from '@cdo/apps/aiTutor/views/TutorApp';
 

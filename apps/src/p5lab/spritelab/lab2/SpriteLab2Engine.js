@@ -44,6 +44,7 @@ import {
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
+  usesPlatformPhysics,
 } from './platformPhysics';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
@@ -158,6 +159,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
+    // null while no audio is listening.
+    this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -307,7 +310,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // One cell at the default playfield size. A scene with a world
       // overrides this from the prelude with its own cell size, and the
       // grid blocks size their sprites from their own bitmaps.
-      library.defaultSpriteSize = this.isPlatformScene_()
+      library.defaultSpriteSize = this.isPlatformScene()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; the classic footing command
@@ -318,6 +321,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    // A new run starts the player's history over, so the spawn is not heard
+    // as a move.
+    this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
     };
@@ -542,9 +548,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
-    // The zGameDev name is only the level's opt-in to platformer physics,
-    // which is engine-owned (platformPhysics.ts); no library loads for it.
-    this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
+    // zGameDev is the level's opt-in to the engine's platform physics
+    // (platformPhysics.ts); no library loads for it.
+    this.usesPlatformPhysics_ = usesPlatformPhysics(helperLibraries);
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
@@ -591,7 +597,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.referencedImages = referencedImages || null;
   }
 
-  isPlatformScene_() {
+  /** Whether the running scene is a platformer: by its type, or by platform
+      blocks in a scene made before scene types. */
+  isPlatformScene() {
     if (this.sceneType_) {
       return this.sceneType_ === 'platform';
     }
@@ -1053,6 +1061,40 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
+    // Both the requested and the resolved positions are known here, so this
+    // is where the observer is fed.
+    this.observePlayer_(players, walls, view);
+  }
+
+  /** The audio's observer of the player, or null. */
+  setPlayerObserver(observer) {
+    this.playerObserver_?.forget();
+    this.playerObserver_ = observer;
+  }
+
+  forgetPlayer_() {
+    this.playerObserver_?.forget();
+  }
+
+  // Only the first player is observed; the controls move every player alike.
+  observePlayer_(players, walls, view) {
+    const observer = this.playerObserver_;
+    if (!observer) {
+      return;
+    }
+    if (!players.length) {
+      observer.forget();
+      return;
+    }
+    const {sprite, x: requestedX, y: requestedY} = players[0];
+    observer.observe({
+      sprite,
+      requestedX,
+      requestedY,
+      gravity: this.platformGravity_,
+      walls,
+      view,
+    });
   }
 
   // The walls, gathered once per frame — the footing commands ask several

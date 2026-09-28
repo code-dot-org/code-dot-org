@@ -8,8 +8,9 @@ import {z} from 'zod';
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
+import {type TutorGalleryData} from '../gallery/types';
+
 import {DevPageChrome} from './devPageChrome';
-import {type TutorGalleryData} from './galleryFixtures';
 import {registerGalleryMocks} from './galleryMocks';
 
 const TutorGalleryDataSchema = z.object({

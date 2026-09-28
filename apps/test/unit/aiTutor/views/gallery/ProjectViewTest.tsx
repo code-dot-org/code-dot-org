@@ -1,13 +1,13 @@
+import {
+  ChallengeResponse,
+  ChallengeResponseDetail,
+  GalleryUnit,
+} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ProjectView from '@cdo/apps/aiTutor/views/gallery/ProjectView';
-import {
-  ChallengeResponseDetail,
-  GalleryUnit,
-} from '@cdo/apps/aiTutor/views/gallery/types';
-import {ChallengeResponse} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
