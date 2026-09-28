@@ -16,10 +16,9 @@ type Parsed =
   | {pathway?: undefined; problems: string[]};
 
 /**
- * The served pathway, or the reasons it cannot play. The level names its
- * content by `adaptiveId`, the server reads the file of that name, and the
- * file's own `id` must match; a mismatch means the content was moved or
- * renamed underneath the level.
+ * Parses and verifies adaptive content in level properties. Ensures
+ * that an adaptive ID and pathway object both exist, their IDs match,
+ * and that the pathway content parses correctly.
  */
 function parseLevelContent(properties: AdaptiveLevelProperties): Parsed {
   const {adaptiveId, pathway} = properties;
