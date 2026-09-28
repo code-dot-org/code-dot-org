@@ -4,9 +4,9 @@
   keeps only keys Lab 2 AI Lab can show; anything else is dropped when the
   level is next saved.
 */
-import {parseMode, serializeMode, setModeValue} from '../ailabMode/ailabMode';
-
 import type {InstructionsKey} from '@code-dot-org/ailab';
+
+import {parseMode, serializeMode, setModeValue} from '../ailabMode/ailabMode';
 
 export type DynamicInstructions = Partial<Record<InstructionsKey, string>>;
 
