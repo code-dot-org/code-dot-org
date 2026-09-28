@@ -98,14 +98,14 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
             className={styles.typeIcon}
           />
           <Typography variant="strong" component="span">
-            {question.questionName}
+            {draft.questionName}
           </Typography>
           <Typography
             variant="body3"
             component="span"
             className={styles.stemPreview}
           >
-            {question.stem}
+            {draft.stem}
           </Typography>
         </div>
         {isDirty && (
