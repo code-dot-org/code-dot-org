@@ -161,6 +161,16 @@ describe('chooseStartPattern', () => {
     expect(picks.size).toBe(layouts.length);
   });
 
+  it('spreads real channel ids, whose last characters repeat', () => {
+    // Base64 without padding: a 22-character id ends in one of four letters.
+    const ids = Array.from(
+      {length: 40},
+      (_, i) => `${i.toString(36).padStart(21, 'x')}${'AQgw'[i % 4]}`
+    );
+    const picks = new Set(ids.map(id => chooseStartPattern(layouts, id)));
+    expect(picks.size).toBe(layouts.length);
+  });
+
   it('takes the first layout with no channel', () => {
     expect(chooseStartPattern(layouts, undefined)).toBe(layouts[0]);
   });

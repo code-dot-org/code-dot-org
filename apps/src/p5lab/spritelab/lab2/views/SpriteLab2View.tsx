@@ -1391,26 +1391,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId]
   );
 
-  // Persist World-tab placements to the active scene and refresh the
-  // preview, mirroring code edits. Applied cell-by-cell against the saved
-  // sources so rapid paints can't overwrite each other.
-  const handlePaintWorldCell = useCallback(
-    (row: number, col: number, cell: WorldCell | null) => {
+  // Change the active scene's world against the saved sources, so rapid
+  // edits cannot overwrite each other, and refresh the preview. Editing the
+  // resized world is what persists its size.
+  const updateActiveWorld = useCallback(
+    (update: (world: World) => World) => {
       updateSources(prev => ({
         ...prev,
         scenes: getScenes(prev).map(s =>
-          s.id === activeSceneId
-            ? {
-                ...s,
-                // Painting the resized world is what persists its size.
-                world: paintWorldCell(worldFor(s), row, col, cell),
-              }
-            : s
+          s.id === activeSceneId ? {...s, world: update(worldFor(s))} : s
         ),
       }));
       scheduleRun();
     },
     [updateSources, activeSceneId, scheduleRun, worldFor]
+  );
+  const handlePaintWorldCell = useCallback(
+    (row: number, col: number, cell: WorldCell | null) =>
+      updateActiveWorld(world => paintWorldCell(world, row, col, cell)),
+    [updateActiveWorld]
   );
 
   // A world level about one kind of image offers the palette only the
@@ -1419,18 +1418,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const paletteOnlyImage =
     levelProperties.levelMode?.kind === 'world' ? focusImageName : undefined;
   const handleMoveWorldCell = useCallback(
-    (row: number, col: number, cell: WorldCell) => {
-      updateSources(prev => ({
-        ...prev,
-        scenes: getScenes(prev).map(s =>
-          s.id === activeSceneId
-            ? {...s, world: moveWorldCell(worldFor(s), row, col, cell)}
-            : s
-        ),
-      }));
-      scheduleRun();
-    },
-    [updateSources, activeSceneId, scheduleRun, worldFor]
+    (row: number, col: number, cell: WorldCell) =>
+      updateActiveWorld(world => moveWorldCell(world, row, col, cell)),
+    [updateActiveWorld]
   );
 
   // Rename an image and cascade through every reference — blocks in all

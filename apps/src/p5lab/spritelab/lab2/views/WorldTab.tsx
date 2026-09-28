@@ -240,8 +240,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   // Images tab — the reference scrub covers cells and blocks, not this);
   // one the palette no longer offers counts as no selection.
   const effectiveSelected =
-    selected === 'erase' ||
-    (selected && palette.some(item => item.image === selected.image))
+    (selected === 'erase' && !placeOne) ||
+    (selected &&
+      selected !== 'erase' &&
+      palette.some(item => item.image === selected.image))
       ? selected
       : null;
   const selectedIndex =
@@ -404,7 +406,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       paintKeyHeld.current = false;
       // Only a held cell: clearing empty cells would stream false
       // "Removed." announcements on key repeat and restart the preview.
-      if (grid[cursorRow]?.[cursorCol]) {
+      // Placing one thing, only that thing can go.
+      const held = grid[cursorRow]?.[cursorCol];
+      if (held && (!placeOne || held.image === only)) {
         onPaintCell(cursorRow, cursorCol, null);
         announce('Removed.');
       }

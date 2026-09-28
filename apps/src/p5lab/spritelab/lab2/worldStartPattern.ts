@@ -55,9 +55,13 @@ export function chooseStartPattern(
     return pattern as string[];
   }
   const layouts = pattern as string[][];
-  // A channel id is an encrypted string, so any one of its characters is
-  // already evenly spread.
-  const pick = channelId ? channelId.charCodeAt(channelId.length - 1) : 0;
+  // A channel id is an encrypted string, but its last character carries
+  // only a few bits (base64 with the padding stripped), so every character
+  // counts.
+  let pick = 0;
+  for (let i = 0; i < (channelId ?? '').length; i++) {
+    pick += channelId!.charCodeAt(i);
+  }
   return layouts[pick % layouts.length];
 }
 

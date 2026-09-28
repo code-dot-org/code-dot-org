@@ -1,5 +1,6 @@
 import {
   bodyPlanFor,
+  CREATURE_BODY_PLANS,
   imageAdlibFor,
   imageAdlibId,
   ImageAdlibSet,
@@ -71,5 +72,21 @@ describe('imageAdlibs manifest', () => {
     expect(bodyPlanFor('penguin')).toBe('bird');
     expect(bodyPlanFor('wizard')).toBe('upright');
     expect(bodyPlanFor(undefined)).toBe('upright');
+  });
+});
+
+describe('creature body plans', () => {
+  it('names only creatures the manifest offers', () => {
+    const creatures = new Set(
+      SETS.flatMap(
+        set =>
+          imageAdlibFor('sprite', set, 'character')?.options.creature?.map(
+            option => option.id
+          ) ?? []
+      )
+    );
+    Object.keys(CREATURE_BODY_PLANS).forEach(id => {
+      expect(creatures.has(id)).toBe(true);
+    });
   });
 });

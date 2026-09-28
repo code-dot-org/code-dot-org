@@ -209,20 +209,26 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
-  // Not seeded where the combo is the only prompt: typed text would hide it.
-  const [prompt, setPrompt] = useState(
-    adlibOnly && adlibSet && !advanced ? '' : existing?.generation?.prompt || ''
-  );
-  const [name, setName] = useState(create?.initial?.name || '');
   const initialImageType =
     existing?.imageType ||
     lockedImageType ||
     create?.initial?.imageType ||
     'sprite';
-  const [imageType, setImageType] = useState<ImageType>(initialImageType);
-  const [subject, setSubject] = useState<ImageSubject>(
-    existing?.generation?.subject || lockedImageSubject || 'character'
+  const initialSubject =
+    existing?.generation?.subject || lockedImageSubject || 'character';
+  // Not seeded where the combo is the only prompt: typed text would hide it.
+  // The same test as the prompt box's, on the form's opening choices.
+  const combOnlyAtStart =
+    adlibOnly &&
+    !advanced &&
+    !!adlibSet &&
+    !!imageAdlibFor(initialImageType, adlibSet, initialSubject);
+  const [prompt, setPrompt] = useState(
+    combOnlyAtStart ? '' : existing?.generation?.prompt || ''
   );
+  const [name, setName] = useState(create?.initial?.name || '');
+  const [imageType, setImageType] = useState<ImageType>(initialImageType);
+  const [subject, setSubject] = useState<ImageSubject>(initialSubject);
   const [style, setStyle] = useState<ImageStyle>(
     existing?.generation?.style ||
       create?.initial?.style ||
@@ -242,7 +248,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // An existing image keeps its kind when regenerated.
   const startsAsSet = existing ? !!sheet : true;
   // Calm when the set checkbox starts checked (posed frames must agree
-  // with the base), as checking it by hand also sets.
+  // with the base), as checking it by hand also sets. While the calm level
+  // is on trial at the regular one, this changes nothing.
   const [temperatureLevel, setTemperatureLevel] = useState(
     startsAsSet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
   );

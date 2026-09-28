@@ -44,7 +44,7 @@ export function imageAdlibFor(
 
 // The creature words that are not person-shaped, by the manifest's choice
 // ids. Every other creature, and any typed prompt, is drawn upright.
-const CREATURE_BODY_PLANS: {[creatureId: string]: BodyPlan} = {
+export const CREATURE_BODY_PLANS: {[creatureId: string]: BodyPlan} = {
   cat: 'quadruped',
   dragon: 'quadruped',
   dinosaur: 'quadruped',
