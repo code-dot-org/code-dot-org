@@ -48,26 +48,10 @@
         }
       }
     ],
-    "long_instructions": "# Go and meet them\nAdd **when [ ] touches [ ]**, picking your player and your second character, and decide what happens when they meet: a friendly hello, or back to the start.",
+    "long_instructions": "# Go and meet them\nA **when [ ] touches [ ]** event is waiting, set to your player and your second character. Decide what happens when they meet: a friendly hello, or back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "gamelab_checkTouching",
-          "inputs": {
-            "SPRITE1": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "SPRITE2": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",

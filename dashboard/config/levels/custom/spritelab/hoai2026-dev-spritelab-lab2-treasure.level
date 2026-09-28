@@ -54,22 +54,6 @@
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_checkTouching",
-          "inputs": {
-            "SPRITE1": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "SPRITE2": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
             "SPEECH": "Treasure!"

@@ -50,17 +50,6 @@
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
             "SPEECH": "You clicked me!"
