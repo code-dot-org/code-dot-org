@@ -33,9 +33,8 @@ export default function useQuizBuilderQuestions(
   // isPendingQuestionId. Decrementing keeps them distinct from each other
   // and from any real (positive) server id.
   const nextPendingId = useRef(-1);
-  // null for load/create, which can't fail because of anything about an
-  // existing question - a caller uses this to tell a general error (show
-  // it once, globally) from one that belongs on a specific question's card.
+  // A caller uses this to tell a general error (null) from
+  // one that belongs on a specific question's card.
   const [errorQuestionId, setErrorQuestionId] = useState<number | null>(null);
 
   const load = useCallback(async () => {
