@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
+import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -594,20 +595,25 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                     key={s}
                     name="generation-style"
                     value={s}
-                    label={IMAGE_STYLE_LABELS[s]}
                     size="s"
                     checked={style === s}
                     onChange={() => setStyle(s)}
                   >
-                    {/* The same star in each style: what the words mean. */}
-                    <img
-                      src={s === 'pixel' ? pixelSample : smoothSample}
-                      alt=""
-                      className={classNames(
-                        moduleStyles.styleSample,
-                        s === 'pixel' && moduleStyles.pixelArt
-                      )}
-                    />
+                    {/* The same star in each style, ahead of the label so
+                        the two rows line up. The label is ours, in the
+                        radio's own text size, so it can follow the sample. */}
+                    <span className={moduleStyles.styleSwatch}>
+                      <img
+                        src={s === 'pixel' ? pixelSample : smoothSample}
+                        alt=""
+                        className={classNames(
+                          s === 'pixel' && moduleStyles.pixelArt
+                        )}
+                      />
+                    </span>
+                    <MuiTypography variant="body3" component="span">
+                      {IMAGE_STYLE_LABELS[s]}
+                    </MuiTypography>
                   </RadioButton>
                 ))}
               </fieldset>
