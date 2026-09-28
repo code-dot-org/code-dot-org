@@ -1,10 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 
-import {
-  cleanMode,
-  withDefaultTrainer,
-} from './ailabMode';
 import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
+
+import {cleanMode, withDefaultTrainer} from './ailabMode';
 import AilabModeFields, {AilabDataset} from './AilabModeFields';
 
 import moduleStyles from './edit-ailab-mode.module.scss';

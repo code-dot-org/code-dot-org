@@ -4,6 +4,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
+import {setJsonObjectValue} from '../jsonUtils';
+
 import {
   BooleanModeKey,
   DEFAULT_TRAINER,
@@ -13,7 +15,6 @@ import {
   MIN_ACCURACY,
   ModeObject,
 } from './ailabMode';
-import {setJsonObjectValue} from '../jsonUtils';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
 
@@ -170,7 +171,11 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
               checked={mode[key] === true}
               onChange={e =>
                 onChange(
-                  setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
+                  setJsonObjectValue(
+                    mode,
+                    key,
+                    e.target.checked ? true : undefined
+                  )
                 )
               }
               size="s"

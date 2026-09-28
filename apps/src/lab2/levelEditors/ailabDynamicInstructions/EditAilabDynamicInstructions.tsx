@@ -2,6 +2,8 @@ import type {InstructionsKey} from '@code-dot-org/ailab';
 import {Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
+
 import {
   ACTION_FIELDS,
   cleanDynamicInstructions,
@@ -10,7 +12,6 @@ import {
   SCREEN_FIELDS,
   setInstructionsText,
 } from './ailabDynamicInstructions';
-import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
 
 import moduleStyles from './edit-ailab-dynamic-instructions.module.scss';
 
@@ -92,9 +93,8 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
     );
   }
 
-  const dynamicInstructions = (parseJsonObject(
-    state.rawDynamicInstructions
-  ) ?? {}) as DynamicInstructions;
+  const dynamicInstructions = (parseJsonObject(state.rawDynamicInstructions) ??
+    {}) as DynamicInstructions;
 
   const renderField = ({key, label}: DynamicInstructionsField) => (
     <label key={key} className={moduleStyles.fieldArea}>

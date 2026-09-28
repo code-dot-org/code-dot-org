@@ -23,13 +23,10 @@ function renderEditor(
     />
   );
   // The submitted value lives in a hidden input, which has no accessible role.
+  const selector = '[name="level[dynamic_instructions]"]';
   return () =>
-    (
-      // eslint-disable-next-line no-restricted-properties
-      container.querySelector(
-        '[name="level[dynamic_instructions]"]'
-      ) as HTMLInputElement
-    ).value;
+    // eslint-disable-next-line no-restricted-properties
+    (container.querySelector(selector) as HTMLInputElement).value;
 }
 
 function fakeLab2Checkbox() {
@@ -135,6 +132,9 @@ describe('EditAilabDynamicInstructions', () => {
 
     lab2.set(true);
     expect(field('Results screen')).toHaveValue('Done.');
-    expect(JSON.parse(saved())).toEqual({results: 'Done.', trainModel: 'Wait.'});
+    expect(JSON.parse(saved())).toEqual({
+      results: 'Done.',
+      trainModel: 'Wait.',
+    });
   });
 });
