@@ -151,6 +151,9 @@ export function attachShadow(
     const connection = freeStackEnd(top, entry.shadow);
     if (connection) {
       connection.setShadowState(entry.shadow);
+      // Blockly renders on a queue; the stack measures its new height only
+      // once the shadow is drawn.
+      BlocklyCore.renderManagement.triggerQueuedRenders(workspace);
       makeRoomBelow(
         stackBox(top),
         tops.filter(other => other !== top).map(stackBox)
