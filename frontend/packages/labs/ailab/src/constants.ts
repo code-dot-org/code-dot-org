@@ -55,12 +55,6 @@ export const colors = {
 };
 
 export const styles = {
-  app: {
-    userSelect: 'none',
-    height: '100%',
-    fontFamily: '"Gotham 4r", sans-serif',
-  },
-
   bold: {
     fontFamily: '"Gotham 5r", sans-serif',
   },
@@ -74,35 +68,6 @@ export const styles = {
   },
   error: {
     color: '#e51f68',
-  },
-
-  panelContainer: {
-    position: 'relative',
-    float: 'left',
-    width: '70%',
-    height: '100%',
-  },
-
-  panelContainerLeft: {
-    width: '70%',
-  },
-
-  panelContainerRight: {
-    marginLeft: 10,
-    width: 'calc(30% - 10px)',
-  },
-
-  panelContainerFullWidth: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    position: 'relative',
-    float: 'left',
-    width: '100%',
-    height: '100%',
-  },
-
-  bodyContainer: {
-    height: 'calc(100% - 50px)',
-    boxSizing: 'border-box',
   },
 
   largeText: {
@@ -533,35 +498,6 @@ export const styles = {
 
   predictBotRight: {float: 'right', width: '75%'},
 
-  previousButton: {
-    position: 'absolute',
-    left: 0,
-    top: 7,
-    fontSize: 30,
-    cursor: 'pointer',
-    zIndex: 1001,
-  },
-
-  nextButton: {
-    position: 'absolute',
-    right: 0,
-    top: 7,
-    fontSize: 30,
-    cursor: 'pointer',
-    zIndex: 1001,
-  },
-
-  navButton: {
-    backgroundColor: 'rgb(254, 190, 64)',
-    color: 'white',
-    borderRadius: 5,
-    fontSize: 24,
-    border: 'initial',
-    padding: '10px 20px 10px 20px',
-    cursor: 'pointer',
-    margin: 0,
-  },
-
   statement: {
     lineHeight: '38px',
     fontSize: 24,
@@ -794,25 +730,5 @@ export const styles = {
 
   summaryScreenBotImage: {
     width: '100%',
-  },
-
-  modelSaveMessage: {
-    display: 'inline-block',
-    top: 15,
-    zIndex: 1001,
-    right: 'calc(50% - 250px)',
-    textAlign: 'center',
-    position: 'absolute',
-    width: 500,
-  },
-
-  modelSaveResponseDataMessage: {
-    display: 'inline-block',
-    opacity: 0.5,
-    padding: '0 5px',
-  },
-
-  navigationButtonsContainer: {
-    position: 'relative',
   },
 } as const;

@@ -1,0 +1,78 @@
+.app {
+  user-select: none;
+  height: 100%;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+.body {
+  height: calc(100% - 50px);
+  box-sizing: border-box;
+}
+
+.column {
+  position: relative;
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+
+.rightColumn {
+  margin-left: 10px;
+  width: calc(30% - 10px);
+}
+
+.fullWidth {
+  font-family: 'Gotham 4r', sans-serif;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  position: relative;
+}
+
+.previous,
+.next {
+  position: absolute;
+  top: 7px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.previous {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.navButton {
+  background-color: rgb(254 190 64);
+  color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  border: initial;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.saveMessage {
+  display: inline-block;
+  top: 15px;
+  z-index: 1001;
+  right: calc(50% - 250px);
+  text-align: center;
+  position: absolute;
+  width: 500px;
+}
+
+.saveResponseData {
+  display: inline-block;
+  opacity: 0.5;
+  padding: 0 5px;
+}

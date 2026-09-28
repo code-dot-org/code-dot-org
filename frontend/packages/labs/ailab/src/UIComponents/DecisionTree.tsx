@@ -1,6 +1,5 @@
 import {type CSSProperties, useMemo} from 'react';
 
-import {colors, styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
 import {
@@ -14,7 +13,8 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
-import moduleStyles from './decisionTree.module.scss';
+import shared from '../shared.module.scss';
+import styles from './decisionTree.module.scss';
 
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});
 
@@ -22,8 +22,6 @@ const canvasVariables = {
   '--tree-node-width': `${TREE_NODE_WIDTH}px`,
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
   '--tree-branch-offset': `${TREE_ROW_GAP / 4}px`,
-  '--tree-question-color': colors.feature,
-  '--tree-answer-color': colors.label,
 } as CSSProperties;
 
 function formatNumber(value: number): string {
@@ -70,15 +68,15 @@ const DecisionTree = () => {
   };
 
   return (
-    <div id="uitest-decision-tree" className={moduleStyles.decisionTree}>
-      <div className={moduleStyles.header} style={styles.bold}>
+    <div id="uitest-decision-tree" className={styles.decisionTree}>
+      <div className={`${styles.header} ${shared.bold}`}>
         Your model's decision tree
       </div>
-      <div className={moduleStyles.scroll}>
+      <div className={styles.scroll}>
         <div
           role="img"
           aria-label="Diagram of your model's decision tree"
-          className={moduleStyles.canvas}
+          className={styles.canvas}
           style={{
             ...canvasVariables,
             width: layout.width,
@@ -89,7 +87,7 @@ const DecisionTree = () => {
             width={layout.width}
             height={layout.height}
             aria-hidden="true"
-            className={moduleStyles.edges}
+            className={styles.edges}
           >
             {layout.nodes.map(
               placed =>
@@ -102,22 +100,20 @@ const DecisionTree = () => {
             const text = nodeText(placed.node);
             const branch = placed.branch && branchText(placed.branch);
             const kind =
-              placed.node.type === 'answer'
-                ? moduleStyles.answer
-                : moduleStyles.question;
+              placed.node.type === 'answer' ? styles.answer : styles.question;
             return (
               <div
                 key={placed.id}
-                className={moduleStyles.nodeSlot}
+                className={styles.nodeSlot}
                 style={{left: placed.x, top: placed.y}}
               >
                 {branch && (
-                  <div title={branch} className={moduleStyles.branch}>
+                  <div title={branch} className={styles.branch}>
                     {branch}
                   </div>
                 )}
-                <div title={text} className={`${moduleStyles.node} ${kind}`}>
-                  <span className={moduleStyles.nodeText}>{text}</span>
+                <div title={text} className={`${styles.node} ${kind}`}>
+                  <span className={styles.nodeText}>{text}</span>
                 </div>
               </div>
             );
