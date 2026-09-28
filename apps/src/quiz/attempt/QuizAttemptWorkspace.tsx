@@ -105,9 +105,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const isIntroOpen =
     toBool(showIntroScreen) &&
     (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
-  // undefined once the initial existing-attempt check has failed; null once
-  // it has succeeded and found nothing (see useQuizAttempt).
-  const didInitialCheckForAttemptFail = attempt === undefined && !!error;
+  // Check for both falsy states - undefined: the initial check for an
+  // attempt itself failed. null: the check succeeded and found none, but
+  // the no-intro auto-begin's own POST then failed.
+  const didInitialCheckForAttemptFail = !attempt && !!error;
   const hasNoAttemptYet = attempt === null;
 
   // Covers both the very first intro screen and Retake reopening it - either

@@ -176,6 +176,20 @@ describe('QuizAttemptWorkspace', () => {
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
+  it('shows a Begin Quiz button to retry when the no-intro auto-begin itself fails', () => {
+    // attempt is null, not undefined - the initial check succeeded and found
+    // nothing; it's the auto-begin's own POST that failed.
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: null, error: 'Something went wrong.', beginAttempt},
+    });
+
+    expect(screen.queryByText('Loading…')).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Begin Quiz'})
+    ).toBeInTheDocument();
+  });
+
   it('shows the intro screen instead of Begin Quiz when the quiz has one', () => {
     const beginAttempt = jest.fn();
     renderWorkspace({
