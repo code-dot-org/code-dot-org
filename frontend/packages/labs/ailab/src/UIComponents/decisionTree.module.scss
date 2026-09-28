@@ -15,7 +15,7 @@
 
 .canvas {
   position: relative;
-  color: black;
+  color: var(--text-neutral-black-fixed, black);
 }
 
 .edges {
@@ -23,7 +23,7 @@
   top: 0;
   left: 0;
   fill: none;
-  stroke: grey;
+  stroke: var(--neutral-gray-70, grey);
   stroke-width: 1.5;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .question {
-  background-color: white;
+  background-color: var(--background-neutral-white-fixed, white);
   border-color: var(--tree-question-color);
 }
 
@@ -77,9 +77,9 @@
   height: 18px;
   line-height: 16px;
   padding: 0 6px;
-  border: 1px solid grey;
+  border: 1px solid var(--neutral-gray-70, grey);
   border-radius: 9px;
-  background-color: white;
+  background-color: var(--background-neutral-white-fixed, white);
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
