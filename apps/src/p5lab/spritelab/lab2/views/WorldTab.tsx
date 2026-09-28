@@ -201,12 +201,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   // land as the engine preloads; re-render when they do.
   const [trimVersion, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
-  const palette: PaletteItem[] = useMemo(
+  // Every image a cell can hold; the grid draws them all, whatever the
+  // palette offers.
+  const placeable: PaletteItem[] = useMemo(
     () =>
       animationList.orderedKeys
         .map(key => animationList.propsByKey[key])
         .filter(props => !props.categories?.includes(BACKGROUNDS_CATEGORY))
-        .filter(props => !only || props.name === only)
         .map(props => ({
           image: props.name,
           kind: props.categories?.includes(BLOCKS_CATEGORY)
@@ -216,11 +217,15 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             getImageThumbnail(props.name) || props.dataURI || props.sourceUrl,
         })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [animationList, trimVersion, only]
+    [animationList, trimVersion]
+  );
+  const palette = useMemo(
+    () => placeable.filter(item => !only || item.image === only),
+    [placeable, only]
   );
   const thumbsByImage = useMemo(
-    () => new Map(palette.map(item => [item.image, item.thumb])),
-    [palette]
+    () => new Map(placeable.map(item => [item.image, item.thumb])),
+    [placeable]
   );
   // The palette plus Erase, in keyboard order. Placing one thing has no
   // Erase: choosing its cell again removes it.
