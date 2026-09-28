@@ -52,7 +52,7 @@ describe('PlayBar', () => {
       screen
         .getAllByRole('button')
         .map(button => button.getAttribute('aria-label'))
-    ).toEqual(['Left', 'Right', 'Jump']);
+    ).toEqual(['Left', 'Jump', 'Right']);
   });
 
   it('holds the key from pointer down to pointer up', () => {
