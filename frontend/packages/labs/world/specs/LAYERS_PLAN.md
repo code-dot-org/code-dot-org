@@ -18,7 +18,11 @@ map editor. The working record, as before.
   the selected layer. With a layer selected and no placement, the inspector
   is the layer's: its name, its factor, fixed or not, and its two slots,
   with the project's backgrounds offered for each. A placement's inspector
-  gains a Layer dropdown.
+  gains a Layer dropdown. (Since Sep 2026 the strip starts closed behind a
+  Layers button in the stage's toolbar, as the camera list does behind
+  Cameras: both are rarely what a map is opened for, and open they covered
+  the top-left of the map. Whatever is open stacks in one column there. A
+  lesson pointing at `map.layers` opens it — a `mapPanel` reveal.)
 - **The canvas draws them.** Each layer's background, then its placements,
   then its foreground, back to front — a stretched image over the map's
   rectangle, a tiled one repeated across it.

@@ -351,7 +351,9 @@ for ⟨actor⟩`, a socket.**
      `.map`. Name and traits, and one button: Script, which opens where they
      are declared. That is the whole of what a read-only strip can honestly
      offer, and it says so where the list is empty rather than reading as "no
-     view", since every space has a main camera regardless.
+     view", since every space has a main camera regardless. It starts
+     closed behind a Cameras button in the stage's toolbar, which appears
+     only where there would be a list to show.
    - **9b. Add, remove, rename.** Renaming is a field rewrite, which
      `worldProperties` already does. Adding and removing are NOT: they splice a
      row into a chain and unlink one, and no writer in that module changes

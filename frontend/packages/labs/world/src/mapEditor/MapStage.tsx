@@ -630,6 +630,21 @@ export const MapStage = ({
     return () => setRevealer('placement', null);
   }, []);
 
+  // The layers and the cameras are rarely what a map is being opened for, and
+  // each is a column of rows over the top-left of the map, so each starts
+  // hidden behind a toolbar button. A lesson that points at one opens it
+  // (`callouts/places`, `map.layers`).
+  const [panels, setPanels] = useState({layers: false, cameras: false});
+  const togglePanel = (panel: 'layers' | 'cameras') =>
+    setPanels(open => ({...open, [panel]: !open[panel]}));
+  useEffect(() => {
+    setRevealer('mapPanel', ({panel}) => {
+      setPanels(open => ({...open, [panel]: true}));
+      return true;
+    });
+    return () => setRevealer('mapPanel', null);
+  }, []);
+
   /** The selected placement's kind, when it has a file of its own. */
   const selectedKind = selectedActor ? kinds?.[selectedActor.type] : undefined;
   /** The layer whose inspector is open, if the map still has it. */
@@ -2447,6 +2462,27 @@ export const MapStage = ({
     .filter(Boolean)
     .join(' ');
 
+  // Only when a script can be opened, because opening it is the one thing
+  // the camera list offers — and not at all while scripts are withheld from
+  // this lesson: a list whose one button opens a script nobody may open is a
+  // list that says less than nothing.
+  const cameras =
+    !onEditScript || locked('map-scripts')
+      ? undefined
+      : selectedActor
+        ? {
+            list: placementCameras(selectedActor.blocks),
+            owner: selectedActor.id,
+            open: () => onEditScript(selectedActor.id),
+          }
+        : world
+          ? {
+              list: worldCameras,
+              owner: 'the world',
+              open: () => onEditScript(undefined),
+            }
+          : undefined;
+
   return (
     <div className={styles.stage} ref={stageRef}>
       <canvas
@@ -2506,6 +2542,24 @@ export const MapStage = ({
             Icons
           </button>
         )}
+        <button
+          type="button"
+          className={`${styles.resetButton} ${styles.toggleButton}`}
+          aria-pressed={panels.layers}
+          onClick={() => togglePanel('layers')}
+        >
+          Layers
+        </button>
+        {cameras && (
+          <button
+            type="button"
+            className={`${styles.resetButton} ${styles.toggleButton}`}
+            aria-pressed={panels.cameras}
+            onClick={() => togglePanel('cameras')}
+          >
+            Cameras
+          </button>
+        )}
         {onEditScript && (
           <>
             <button
@@ -2523,74 +2577,66 @@ export const MapStage = ({
           </>
         )}
       </div>
-      {locked('map-layers') ? (
-        // The strip's place, kept: a list nobody can use yet is still where
-        // layers will be, and says which lesson brings them.
-        <div className={styles.layers} data-testid="layer-panel-locked">
-          <Typography variant="subtitle2" component="span">
-            Layers
-          </Typography>
-          {note('map-layers', 'strip')}
-        </div>
-      ) : (
-        <LayerPanel
-          layers={layersOf(map)}
-          selected={selectedLayer}
+      <div className={styles.panels}>
+        {panels.layers &&
+          (locked('map-layers') ? (
+            // The strip's place, kept: a list nobody can use yet is still where
+            // layers will be, and says which lesson brings them.
+            <div className={styles.layers} data-testid="layer-panel-locked">
+              <Typography variant="subtitle2" component="span">
+                Layers
+              </Typography>
+              {note('map-layers', 'strip')}
+            </div>
+          ) : (
+            <LayerPanel
+              layers={layersOf(map)}
+              selected={selectedLayer}
+              onSelect={id => {
+                setSelectedLayer(id);
+                setInspectingLayer(true);
+                setSelectedId(null);
+              }}
+              onAdd={() => {
+                const made = addLayer(mapRef.current);
+                commit(made.doc);
+                setSelectedLayer(made.id);
+                setInspectingLayer(true);
+                setSelectedId(null);
+              }}
+              onRemove={id => {
+                commit(removeLayer(mapRef.current, id));
+                setSelectedLayer(DEFAULT_LAYER);
+              }}
+              onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
+              isReadOnly={isReadOnly}
+            />
+          ))}
+        {/* The cameras of whatever is being edited: the world's on a main map
+            with nothing selected, a placement's when one is — and nothing on
+            a level `.map` with nothing selected, since a map has none
+            (specs/SPACE_CAMERAS_PLAN.md). */}
+        {panels.cameras && cameras && (
+          <CameraPanel
+            cameras={cameras.list}
+            owner={cameras.owner}
+            onOpen={cameras.open}
+          />
+        )}
+        <RecordPanel
+          records={records}
+          kinds={recordKinds}
+          selected={selectedId}
           onSelect={id => {
-            setSelectedLayer(id);
-            setInspectingLayer(true);
-            setSelectedId(null);
+            setSelectedId(id);
+            setInspectingLayer(false);
           }}
-          onAdd={() => {
-            const made = addLayer(mapRef.current);
-            commit(made.doc);
-            setSelectedLayer(made.id);
-            setInspectingLayer(true);
-            setSelectedId(null);
-          }}
-          onRemove={id => {
-            commit(removeLayer(mapRef.current, id));
-            setSelectedLayer(DEFAULT_LAYER);
-          }}
-          onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
+          onAdd={addRecord}
+          onRemove={deleteActor}
           isReadOnly={isReadOnly}
+          nameOf={kindName}
         />
-      )}
-      {/* The cameras of whatever is being edited: the world's on a main map
-          with nothing selected, a placement's when one is — and nothing on a
-          level `.map` with nothing selected, since a map has none
-          (specs/SPACE_CAMERAS_PLAN.md). Only when a script can be opened,
-          because opening it is the one thing the strip offers. */}
-      {/* …and not at all while scripts are withheld from this lesson: a list
-          whose one button opens a script nobody may open is a list that says
-          less than nothing. */}
-      {onEditScript && !locked('map-scripts') && selectedActor && (
-        <CameraPanel
-          cameras={placementCameras(selectedActor.blocks)}
-          owner={selectedActor.id}
-          onOpen={() => onEditScript(selectedActor.id)}
-        />
-      )}
-      {onEditScript && !locked('map-scripts') && !selectedActor && world && (
-        <CameraPanel
-          cameras={worldCameras}
-          owner="the world"
-          onOpen={() => onEditScript(undefined)}
-        />
-      )}
-      <RecordPanel
-        records={records}
-        kinds={recordKinds}
-        selected={selectedId}
-        onSelect={id => {
-          setSelectedId(id);
-          setInspectingLayer(false);
-        }}
-        onAdd={addRecord}
-        onRemove={deleteActor}
-        isReadOnly={isReadOnly}
-        nameOf={kindName}
-      />
+      </div>
       {!selectedActor && inspectingLayer && inspectedLayer && (
         <LayerInspector
           // Re-keyed on what the document says, so a change from outside —

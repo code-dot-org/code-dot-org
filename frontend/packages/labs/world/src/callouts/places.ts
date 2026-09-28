@@ -28,6 +28,8 @@ export type Reveal =
   | {kind: 'view'; view: 'map' | 'world'}
   /** A placement selected on the map, of a kind by name or any (`MapStage`). */
   | {kind: 'placement'; named?: string}
+  /** One of the map's panels that start hidden behind a button (`MapStage`). */
+  | {kind: 'mapPanel'; panel: 'layers' | 'cameras'}
   /** A toolbox drawer open, on a block or by name (`BlocklyFileEditor`). */
   | {kind: 'toolbox'; block?: string; drawer?: string};
 
@@ -125,8 +127,10 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
   }),
   'map.layers': () => ({
     mark: 'map.layers',
-    reveals: [onTheMap],
-    says: 'Layers is the list beside the map, front layer at the top.',
+    reveals: [onTheMap, {kind: 'mapPanel', panel: 'layers'}],
+    says:
+      'Layers is the list the Layers button above the map opens, front ' +
+      'layer at the top.',
   }),
   'actor.blocks': actor => ({
     reveals: [{kind: 'file', actor}],

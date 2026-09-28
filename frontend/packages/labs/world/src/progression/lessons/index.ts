@@ -498,7 +498,8 @@ A **backdrop** is that picture. It is not an actor: it has no position, nothing
 can touch it, and no rule can reach it. It is what is behind the game.
 
 A backdrop belongs to a **layer**, and every world has one to start with.
-The [Layers](#clickable=map.layers) list beside the map is where they are.
+The [Layers](#clickable=map.layers) button above the map opens the list of
+them.
 
 ### What you do
 

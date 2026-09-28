@@ -876,6 +876,12 @@ describe('the camera strip', () => {
         {id: 'c1', name: 'Wide', traits: ['Camera Follow#Follows']},
       ],
     });
+    // Behind its toolbar button until asked for.
+    expect(view.queryByTestId('camera-panel')).toBeNull();
+    const toggle = view.getByRole('button', {name: 'Cameras'});
+    expect(toggle).toHaveAttribute('aria-pressed', 'false');
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-pressed', 'true');
     expect(view.getByTestId('camera-panel')).toBeInTheDocument();
     expect(view.getByText('Wide')).toBeInTheDocument();
     expect(view.getByText(/Follows/)).toBeInTheDocument();
@@ -888,6 +894,7 @@ describe('the camera strip', () => {
     const {canvas, ...view} = mount(map, {onEditScript});
     pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    fireEvent.click(view.getByRole('button', {name: 'Cameras'}));
     expect(view.getByText('Chase')).toBeInTheDocument();
 
     fireEvent.click(view.getByRole('button', {name: 'Open script'}));
@@ -897,6 +904,8 @@ describe('the camera strip', () => {
   it('shows nothing on a level map with nothing selected, which has none', () => {
     const view = mount(doc(), {onEditScript: vi.fn()});
     expect(view.queryByTestId('camera-panel')).toBeNull();
+    // …and offers no button for a list that would be empty by definition.
+    expect(view.queryByRole('button', {name: 'Cameras'})).toBeNull();
   });
 });
 
@@ -1066,6 +1075,10 @@ describe('what a gated lab withholds', () => {
   it('shows the layer strip and a placement’s Layer unless withheld', () => {
     const map = layered();
     const {canvas, ...view} = mount(map);
+    // Behind its toolbar button until asked for; the placement's own Layer
+    // field needs no strip open.
+    expect(view.queryByTestId('layer-panel')).toBeNull();
+    fireEvent.click(view.getByRole('button', {name: 'Layers'}));
     expect(view.getByTestId('layer-panel')).toBeInTheDocument();
     select(canvas, map);
     expect(
@@ -1104,6 +1117,7 @@ describe('what a gated lab withholds', () => {
     const {canvas, onDocChange, ...view} = mount(map, {
       withheld: new Set(['map-layers'] as const),
     });
+    fireEvent.click(view.getByRole('button', {name: 'Layers'}));
     expect(view.queryByTestId('layer-panel')).toBeNull();
     expect(view.getByTestId('layer-panel-locked')).toHaveTextContent(
       'LayersNot unlocked yet',
@@ -1226,6 +1240,26 @@ describe('Show me, on the stage', () => {
       reveal({kind: 'placement', named: 'Coin'});
     });
     expect(selectedId()).toBe(chosen);
+  });
+
+  it('opens the layer strip for a lesson that points at it', () => {
+    // `map.layers` in a lesson: the strip starts hidden behind its button,
+    // and "show me" opens it rather than ringing nothing.
+    const view = mount(doc());
+    expect(view.queryByTestId('layer-panel')).toBeNull();
+    let answer: unknown;
+    act(() => {
+      answer = reveal({kind: 'mapPanel', panel: 'layers'});
+    });
+    expect(answer).toBe(true);
+    expect(view.getByTestId('layer-panel')).toHaveAttribute(
+      'data-callout',
+      'map.layers',
+    );
+    expect(view.getByRole('button', {name: 'Layers'})).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
   });
 
   it('says no when the map has nothing by that name', () => {
@@ -1361,6 +1395,13 @@ describe('a Viewport on the map', () => {
 });
 
 describe('the map’s layers', () => {
+  /** Mounted with the strip open, as a learner who wants it would have it. */
+  const mountOpen = (...args: Parameters<typeof mount>) => {
+    const mounted = mount(...args);
+    fireEvent.click(mounted.getByRole('button', {name: 'Layers'}));
+    return mounted;
+  };
+
   /** `a` on the default, `b` on a Sky behind it. */
   const layered = (): MapDoc => {
     const map = doc();
@@ -1370,7 +1411,7 @@ describe('the map’s layers', () => {
   };
 
   it('lists them front first, and adds one in front', () => {
-    const {written, ...view} = mount(layered());
+    const {written, ...view} = mountOpen(layered());
     const rows = () =>
       [
         ...view
@@ -1389,7 +1430,7 @@ describe('the map’s layers', () => {
   });
 
   it('opens a layer’s inspector from its row, and writes what is set', () => {
-    const {written, ...view} = mount(layered(), {
+    const {written, ...view} = mountOpen(layered(), {
       backgroundChoices: ['sky.png', 'hills.png'],
     });
     fireEvent.click(view.getByRole('button', {name: 'Sky'}));
@@ -1421,7 +1462,7 @@ describe('the map’s layers', () => {
   });
 
   it('removes the selected one, and never the default', () => {
-    const {written, ...view} = mount(layered());
+    const {written, ...view} = mountOpen(layered());
     expect(view.getByRole('button', {name: 'Remove'})).toBeDisabled();
 
     fireEvent.click(view.getByRole('button', {name: 'Sky'}));
@@ -1432,7 +1473,7 @@ describe('the map’s layers', () => {
   });
 
   it('moves the selected one forward', () => {
-    const {written, ...view} = mount(layered());
+    const {written, ...view} = mountOpen(layered());
     fireEvent.click(view.getByRole('button', {name: 'Sky'}));
     fireEvent.click(view.getByRole('button', {name: 'Move layer forward'}));
     expect(written().layers!.map(layer => layer.id)).toEqual([
@@ -1443,7 +1484,7 @@ describe('the map’s layers', () => {
 
   it('places a new actor on the selected layer', () => {
     const map = layered();
-    const {canvas, written, ...view} = mount(map, {placing: 'actors/coin'});
+    const {canvas, written, ...view} = mountOpen(map, {placing: 'actors/coin'});
     fireEvent.click(view.getByRole('button', {name: 'Sky'}));
 
     const at = screenPoint(map, {x: 6 * 32 + 5, y: 7 * 32 + 20});
@@ -1454,7 +1495,7 @@ describe('the map’s layers', () => {
 
   it('moves a placement to another layer from its inspector', () => {
     const map = layered();
-    const {canvas, written, ...view} = mount(map);
+    const {canvas, written, ...view} = mountOpen(map);
     pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
 
@@ -1471,7 +1512,7 @@ describe('the map’s layers', () => {
 
   it('offers no layer for a placement on a map with only the default', () => {
     const map = doc();
-    const {canvas, ...view} = mount(map);
+    const {canvas, ...view} = mountOpen(map);
     pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
     expect(

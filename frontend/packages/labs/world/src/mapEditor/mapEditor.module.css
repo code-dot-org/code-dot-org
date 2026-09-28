@@ -461,17 +461,31 @@
   font-weight: 600;
 }
 
-/* The layer strip — top-left, opposite the toolbar, above the inspector. */
-.layers {
+/* The open panels — layers, cameras, records — top-left, opposite the
+   toolbar, above the inspector. One column, so two open at once stack rather
+   than lying on top of each other; the layers and cameras start closed behind
+   their toolbar buttons. Clicks fall through the column's empty space to the
+   map. */
+.panels {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  max-height: 45%;
+  overflow-y: auto;
+  pointer-events: none;
+}
+
+/* One panel in that column: the layer strip, the camera list, the records. */
+.layers {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
   gap: 0.35rem;
   width: 11rem;
-  max-height: 40%;
-  overflow-y: auto;
+  pointer-events: auto;
   padding: 0.5rem;
   border-radius: 6px;
   background: color-mix(
