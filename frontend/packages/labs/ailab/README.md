@@ -127,6 +127,8 @@ The main repo's `apps/` consumes this package as a [`portal:`](https://yarnpkg.c
 
 When `apps/` builds (`yarn build`, or `yarn start` for continuous builds), its `script/build-frontend-dependencies.sh` builds this package's `dist/` first, and the apps Gruntfile copies `dist/assets/` (datasets and images) into `build/package/media/skins/ailab/`. To pick up local changes, rebuild this package (`yarn build`); the next `apps` build will use it.
 
+The built JS imports its own stylesheet (`dist/index.css`), so a consumer's bundler needs a rule for `.css` files. In `apps/`, webpack and rspack load it with style-loader, and Jest maps it to identity-obj-proxy.
+
 ### Verifying the symlink
 
 In the main repo:

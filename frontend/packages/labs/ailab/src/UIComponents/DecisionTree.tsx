@@ -1,6 +1,6 @@
-import {useMemo} from 'react';
+import {type CSSProperties, useMemo} from 'react';
 
-import {styles} from '../constants';
+import {colors, styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
 import {
@@ -14,7 +14,17 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
+import moduleStyles from './decisionTree.module.scss';
+
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});
+
+const canvasVariables = {
+  '--tree-node-width': `${TREE_NODE_WIDTH}px`,
+  '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
+  '--tree-branch-offset': `${TREE_ROW_GAP / 4}px`,
+  '--tree-question-color': colors.feature,
+  '--tree-answer-color': colors.label,
+} as CSSProperties;
 
 function formatNumber(value: number): string {
   return String(Number(value.toFixed(2)));
@@ -60,16 +70,17 @@ const DecisionTree = () => {
   };
 
   return (
-    <div id="uitest-decision-tree" style={styles.decisionTree}>
-      <div style={{...styles.decisionTreeHeader, ...styles.bold}}>
+    <div id="uitest-decision-tree" className={moduleStyles.decisionTree}>
+      <div className={moduleStyles.header} style={styles.bold}>
         Your model's decision tree
       </div>
-      <div style={styles.decisionTreeScroll}>
+      <div className={moduleStyles.scroll}>
         <div
           role="img"
           aria-label="Diagram of your model's decision tree"
+          className={moduleStyles.canvas}
           style={{
-            ...styles.decisionTreeCanvas,
+            ...canvasVariables,
             width: layout.width,
             height: layout.height,
           }}
@@ -78,56 +89,35 @@ const DecisionTree = () => {
             width={layout.width}
             height={layout.height}
             aria-hidden="true"
-            style={styles.decisionTreeEdges}
+            className={moduleStyles.edges}
           >
             {layout.nodes.map(
               placed =>
                 placed.parent && (
-                  <path
-                    key={placed.id}
-                    d={edgePath(placed.parent, placed)}
-                    fill="none"
-                    stroke="grey"
-                    strokeWidth={1.5}
-                  />
+                  <path key={placed.id} d={edgePath(placed.parent, placed)} />
                 ),
             )}
           </svg>
           {layout.nodes.map(placed => {
             const text = nodeText(placed.node);
             const branch = placed.branch && branchText(placed.branch);
+            const kind =
+              placed.node.type === 'answer'
+                ? moduleStyles.answer
+                : moduleStyles.question;
             return (
               <div
                 key={placed.id}
-                style={{
-                  position: 'absolute',
-                  left: placed.x,
-                  top: placed.y,
-                  width: TREE_NODE_WIDTH,
-                  height: TREE_NODE_HEIGHT,
-                }}
+                className={moduleStyles.nodeSlot}
+                style={{left: placed.x, top: placed.y}}
               >
                 {branch && (
-                  <div
-                    title={branch}
-                    style={{
-                      ...styles.decisionTreeBranch,
-                      top: -TREE_ROW_GAP / 4,
-                    }}
-                  >
+                  <div title={branch} className={moduleStyles.branch}>
                     {branch}
                   </div>
                 )}
-                <div
-                  title={text}
-                  style={{
-                    ...styles.decisionTreeNode,
-                    ...(placed.node.type === 'answer'
-                      ? styles.decisionTreeAnswer
-                      : styles.decisionTreeQuestion),
-                  }}
-                >
-                  <span style={styles.decisionTreeNodeText}>{text}</span>
+                <div title={text} className={`${moduleStyles.node} ${kind}`}>
+                  <span className={moduleStyles.nodeText}>{text}</span>
                 </div>
               </div>
             );

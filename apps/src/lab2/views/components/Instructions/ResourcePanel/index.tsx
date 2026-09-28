@@ -48,7 +48,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -59,7 +58,6 @@ import NavigationArea from '../NavigationArea';
 
 import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
-import BackpackPanel from './Backpack/BackpackPanel';
 import type {AddFileHandler} from './Backpack/types';
 import UnifiedBackpackPanel from './Backpack/UnifiedBackpackPanel';
 import {
@@ -110,7 +108,7 @@ export interface BackpackProps {
   findIdForFileName: (fileName: string) => string | undefined;
   saveToBackpackButton?: {
     text: string;
-    onClick: (fileList: string[], notify: BackpackNotify) => Promise<void>;
+    onClick: (notify: BackpackNotify) => Promise<void>;
   };
   supportedFileTypes: string[];
   /** Custom tooltip text to display for the Add File button. */
@@ -308,9 +306,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
-  const legacyBackpackEnabled = experiments.isEnabledAllowingQueryString(
-    experiments.LEGACY_BACKPACK
-  );
   useResourcePanelTours({
     levelProperties,
     isStandaloneCollapsed,
@@ -428,11 +423,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
-      const BackpackPanelComponent = legacyBackpackEnabled
-        ? BackpackPanel
-        : UnifiedBackpackPanel;
       tabMap[Tabs.Backpack] = (
-        <BackpackPanelComponent
+        <UnifiedBackpackPanel
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
@@ -511,7 +503,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     backpackProps,
     setBackpackTabAsActive,
     backpackRefreshKey,
-    legacyBackpackEnabled,
     hasInstructions,
   ]);
 

@@ -32,11 +32,10 @@ const question = (
 const BASE_STATE: QuizBuilderQuestionsState = {
   questions: [],
   isLoading: false,
-  isCreating: false,
   error: null,
   errorQuestionId: null,
-  createQuestion: jest.fn(),
-  updateQuestion: jest.fn(),
+  addPendingQuestion: jest.fn(),
+  saveQuestion: jest.fn(),
   removeQuestion: jest.fn(),
   load: jest.fn(),
 };
@@ -101,39 +100,64 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('MVC frameworks')).toBeInTheDocument();
   });
 
-  it('opens a newly created question directly into editing', async () => {
-    // Mirrors what the real hook does: a create appends a new question to
-    // `questions` and resolves with its id. The mocked hook's return value
-    // has to change too, so the appended question is actually there for
-    // the workspace to expand.
-    const createQuestion = jest.fn().mockImplementation(async () => {
+  it('opens a newly created question directly into editing', () => {
+    // Mirrors what the real hook does: a create appends a new (pending)
+    // question to `questions` and returns its id synchronously. The mocked
+    // hook's return value has to change too, so the appended question is
+    // actually there for the workspace to expand.
+    const addPendingQuestion = jest.fn().mockImplementation(() => {
       mockUseQuizBuilderQuestions.mockReturnValue({
         ...BASE_STATE,
-        questions: [question(), question({id: 2})],
-        createQuestion,
+        questions: [question(), question({id: -1})],
+        addPendingQuestion,
       });
-      return 2;
+      return -1;
     });
-    renderWorkspace({questions: [question()], createQuestion});
+    renderWorkspace({questions: [question()], addPendingQuestion});
 
     fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
-    await screen.findByRole('tab', {name: 'Question'});
+    expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
   });
 
-  it('calls createQuestion when the create button is clicked', () => {
-    const createQuestion = jest.fn();
-    renderWorkspace({createQuestion});
+  it('calls addPendingQuestion when the create button is clicked', () => {
+    const addPendingQuestion = jest.fn();
+    renderWorkspace({addPendingQuestion});
 
     fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
 
-    expect(createQuestion).toHaveBeenCalledTimes(1);
+    expect(addPendingQuestion).toHaveBeenCalledTimes(1);
   });
 
-  it('disables the create button while a create is in flight', () => {
-    renderWorkspace({isCreating: true});
+  it('disables the create button while questions are still loading', () => {
+    renderWorkspace({isLoading: true});
     expect(
       screen.getByRole('button', {name: '+ Create question'})
     ).toBeDisabled();
+  });
+
+  it('disables the create button while a pending question already exists', () => {
+    renderWorkspace({questions: [question({id: -1})]});
+    expect(
+      screen.getByRole('button', {name: '+ Create question'})
+    ).toBeDisabled();
+  });
+
+  it('explains why the create button is disabled by a pending question', () => {
+    renderWorkspace({questions: [question({id: -1})]});
+    expect(
+      screen.getByText(
+        'Save or remove your new question before creating another.'
+      )
+    ).toBeInTheDocument();
+  });
+
+  it('does not show the pending-question hint otherwise', () => {
+    renderWorkspace({questions: [question()]});
+    expect(
+      screen.queryByText(
+        'Save or remove your new question before creating another.'
+      )
+    ).toBeNull();
   });
 
   it('renders a server error', () => {
