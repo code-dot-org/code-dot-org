@@ -5,6 +5,13 @@
 // resolved position, resolves it per axis against the walls, then settles
 // leftover thin overlap.
 
+// The name a level uses to ask for these physics; it loads no library.
+const PLATFORM_LIBRARY = 'zGameDev';
+
+export function usesPlatformPhysics(helperLibraries?: string[]): boolean {
+  return !!helperLibraries?.includes(PLATFORM_LIBRARY);
+}
+
 // Max downward speed (px/frame): a single frame's step must stay small
 // enough that a falling body can't pass a block corner between frames.
 export const TERMINAL_FALL_SPEED = 10;
@@ -402,6 +409,94 @@ function inDownwardTerms<T>(
 function feetLine(sprite: PhysicsSprite): {halfW: number; feet: number} {
   const {halfW, halfH, drop} = playerBody(sprite);
   return {halfW, feet: sprite.position.y + drop + halfH};
+}
+
+/**
+ * Pixels from the leading edge (`direction` 1 right, -1 left) to the nearest
+ * wall that would stop it; 0 against one. Follows the resolver's own rule.
+ */
+export function distanceToWallAhead(
+  sprite: PhysicsSprite,
+  direction: 1 | -1,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): number {
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {imgHalfW, halfW, halfH, drop} = playerBody(s);
+    const bodyY = s.position.y + drop;
+    const lead = s.position.x + direction * halfW;
+    let nearest = Infinity;
+    w.forEach(wall => {
+      const half = wallHalf(wall);
+      // Too little overlap to block: the resolver lets the body past.
+      if (
+        halfH + half - Math.abs(bodyY - wall.position.y) <
+        MIN_SOLID_OVERLAP
+      ) {
+        return;
+      }
+      const face =
+        direction > 0 ? wall.position.x - half : wall.position.x + half;
+      const gap = (face - lead) * direction;
+      if (gap >= 0) {
+        nearest = Math.min(nearest, gap);
+      }
+    });
+    // The screen edges stop the player too, measured on the art.
+    const imgLead = s.position.x + direction * imgHalfW;
+    const side = direction > 0 ? view.width - imgLead : imgLead;
+    return Math.max(0, Math.min(nearest, side));
+  });
+}
+
+/**
+ * Pixels from the leading edge to the end of the ground underfoot; 0 at the
+ * edge, Infinity with none to reach (the screen floor, or already falling).
+ */
+export function distanceToEdgeAhead(
+  sprite: PhysicsSprite,
+  direction: 1 | -1,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): number {
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {halfW, feet} = feetLine(s);
+    // The screen floor runs the whole width: no edge to walk off.
+    if (feet >= view.height - CONTACT_EPSILON) {
+      return Infinity;
+    }
+    const spans = wallsAtFeet(w, feet)
+      .map(wall => {
+        const half = wallHalf(wall);
+        return {min: wall.position.x - half, max: wall.position.x + half};
+      })
+      .sort((a, b) => a.min - b.min);
+    // Further off than half the player's width isn't underfoot at all.
+    let index = spans.findIndex(
+      span =>
+        s.position.x >= span.min - halfW && s.position.x <= span.max + halfW
+    );
+    if (index < 0) {
+      return Infinity;
+    }
+    // A row of touching blocks is one platform; sorted, so pairs suffice.
+    const abuts = (i: number) =>
+      i + 1 < spans.length &&
+      spans[i + 1].min <= spans[i].max + CONTACT_EPSILON;
+    if (direction > 0) {
+      while (abuts(index)) {
+        index++;
+      }
+    } else {
+      while (index > 0 && abuts(index - 1)) {
+        index--;
+      }
+    }
+    const lip = direction > 0 ? spans[index].max : spans[index].min;
+    return Math.max(0, (lip - (s.position.x + direction * halfW)) * direction);
+  });
 }
 
 /**
