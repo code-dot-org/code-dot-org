@@ -143,21 +143,26 @@ export function attachShadow(
   workspace: BlocklyCore.WorkspaceSvg,
   entry: AttachShadow
 ): boolean {
-  const tops = workspace.getTopBlocks(false);
-  for (const top of tops) {
+  for (const top of workspace.getTopBlocks(false)) {
     if (top.type !== entry.attachTo) {
       continue;
     }
     const connection = freeStackEnd(top, entry.shadow);
     if (connection) {
       connection.setShadowState(entry.shadow);
-      // Blockly renders on a queue; the stack measures its new height only
-      // once the shadow is drawn.
-      BlocklyCore.renderManagement.triggerQueuedRenders(workspace);
-      makeRoomBelow(
-        stackBox(top),
-        tops.filter(other => other !== top).map(stackBox)
-      );
+      // The placeholder takes its block's shape in a second render pass, so
+      // the stack's new height is known one tick after the queue drains.
+      BlocklyCore.renderManagement
+        .finishQueuedRenders()
+        .then(() => new Promise(resolve => setTimeout(resolve)))
+        .then(() => {
+          if (!top.isDisposed()) {
+            const others = workspace
+              .getTopBlocks(false)
+              .filter(other => other !== top);
+            makeRoomBelow(stackBox(top), others.map(stackBox));
+          }
+        });
       return true;
     }
   }
