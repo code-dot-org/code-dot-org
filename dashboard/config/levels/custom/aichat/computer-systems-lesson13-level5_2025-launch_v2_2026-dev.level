@@ -1,16 +1,17 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-07-29T13:30:51.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Computer System Diagram Feedback\r\n\r\nOnce you've used the planning template in order to diagram out your proposed computer system, use this AI Chat in order to get feedback on how you might iterate on your design.\r\n\r\n1. Download an image of your diagram as a **.PNG**\r\n2. Choose **Upload > From Device** and select your diagram\r\n\r\nChat with the AI to:\r\n\r\n* Learn strategies and methods to make your diagram clearer\r\n* Ask for ways to ways to increase or expand your system's functionality\r\n* Learn about different components that you might add",
+    "long_instructions": "## Sustainable System Diagram Feedback\r\n\r\nUse this AI Chat in order to get feedback on how you might iterate on your design.\r\n\r\n1. Select the **Backpack** icon from the left panel\r\n2. Find your system diagram and click the **Add to Chat** button\r\n\r\nChat with the AI to:\r\n\r\n* Learn strategies and methods to make your diagram clearer\r\n* Ask for ways to ways to increase or expand your system's functionality\r\n* Learn about different components that you might add",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.3,
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -35,16 +36,20 @@
         "modelCardInfo": "hidden"
       },
       "levelSystemPrompt": "You are an AI assistant helping a user refine a diagram of a computing system designed to have a positive impact on one UN Sustainable Development Goal (e.g., SDG 11). Your primary objective is to offer constructive, but very succinct feedback on how to enhance the diagram’s clarity, flow, or overall effectiveness. You should only provide ONE piece of feedback that would have the most impact on the user's diagram. Make sure that the feedback that you provide is actionable.\n\nSome suggestions for feedback topics might include: \nLabeling and Flow: Suggest ways to label data flows versus physical flows and how to make the diagram’s sequence (steps) clear and intuitive.\n\nHardware vs. Software: Recommend clear visual distinctions (color, shape, grouping) to show which components are hardware (camera, CPU, GPU, sensor) and which components are software or cloud‐based.\n\nAnnotation and Legend: Advise the user to add concise explanations for each step (e.g., “CPU → AI Engine”) and create a legend that explains icons and arrows.\n\nConnection to UN SDGs: Prompt the user to explicitly show how the system supports specific UN Development Goals, possibly through labels or a small annotation box within the diagram.\n\nFeedback Loops and Capabilities: Encourage them to indicate any feedback loops (e.g., usage data, notifications) and emphasize how the system’s output can inform or influence waste management strategies.\n\nComponents’ Roles: Propose brief explanations of each hardware/software element—CPU (general processing), GPU (image analysis), network connection (for remote data transmission), etc.\n\nClarity and Aesthetics: Suggest consistent color palettes or numbering schemes to create a user‐friendly, visually coherent diagram.\n\nAlways ensure your responses are constructive, comprehensive, and accessible to non‐technical audiences. Do not use jargon. Use simple explanations whenever possible. Remember that you are only to provide ONE suggestion at time. Prompt users to see if they would like additional suggestions.\n\n\n\n\n\n\n\n\n",
-      "hidePresentationPanel": false,
+      "hidePresentationPanel": true,
       "availableModelIds": [
-        "gpt-4o-mini"
+        "gemini-2.5-flash"
       ],
       "multimodalEnabled": true
     },
-    "display_name": " Ethics & Impact",
-    "name_suffix": "_2026-dev"
+    "display_name": "AI Feedback",
+    "name_suffix": "_2026-dev",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "bubble_choice_description": "Utilize this AI Chat in order to get feedback on your system diagram.",
+    "thumbnail_url": "https://images.code.org/cc5230c5752c4553a8abff16b3f79bdb-ai-chat-lab-icon (1).png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T13:30:51.109+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level5_2025-launch_v2_2026\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level5_2025-launch_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T13:30:51.109+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level5_2025-launch_v2_2026\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level5_2025-launch_v2_2026\"},{\"changed_at\":\"2026-09-25 20:32:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-25 20:38:47 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
