@@ -67,7 +67,7 @@ describe('addBlocks', () => {
     ).toEqual([]);
   });
 
-  it('places a block below every stack, at the leftmost x', () => {
+  it('places a block a small gap under the lowest stack, at the leftmost x', () => {
     const at = placeBelow([
       {x: 20, y: 20, height: 100},
       {x: 300, y: 60, height: 200},
@@ -77,21 +77,8 @@ describe('addBlocks', () => {
     expect(at.y).toBeLessThan(300);
   });
 
-  it('keeps room under when run, which later levels grow', () => {
-    // when run at the top, an event just under it: the next block clears
-    // the room under when run, not just the event.
-    const at = placeBelow([
-      {x: 20, y: 20, height: 100, grows: true},
-      {x: 20, y: 130, height: 60},
-    ]);
-    expect(at.y).toBeGreaterThanOrEqual(120 + 144);
-    // The event grown past that room: the gap under the event decides.
-    expect(
-      placeBelow([
-        {x: 20, y: 20, height: 100, grows: true},
-        {x: 20, y: 300, height: 60},
-      ]).y
-    ).toBeLessThan(400);
+  it('leaves the room an entry asks for', () => {
+    expect(placeBelow([{x: 20, y: 20, height: 100}], 144).y).toBe(264);
   });
 
   it('starts at the origin in an empty workspace', () => {

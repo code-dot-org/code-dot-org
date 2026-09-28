@@ -4,11 +4,15 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
-
-/** A block to add. Its `data`, when set, tells it apart from another entry
-    of the same type in one scene. */
-export type AddBlock = BlocklyCore.serialization.blocks.State;
+/**
+ * A block to add: Blockly's block state, plus `gapAbove`, how far below
+ * the stacks already there it lands, in px. A level sets it to leave room
+ * under a stack that later levels grow. Its `data`, when set, tells it
+ * apart from another entry of the same type in one scene.
+ */
+export type AddBlock = BlocklyCore.serialization.blocks.State & {
+  gapAbove?: number;
+};
 
 /**
  * A shadow hung on the end of a stack already in the workspace: the
@@ -27,9 +31,7 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
   return 'attachTo' in entry;
 }
 
-// Room under the when-run stack for the three or so blocks later levels
-// have the student add there; every other stack keeps only a gap.
-const ROOM_BELOW_WHEN_RUN_PX = 144;
+// Under the stacks already there, when the entry asks for no more.
 const STACK_GAP_PX = 24;
 
 /** The blocks the workspace lacks. A block without data (added before
@@ -49,22 +51,18 @@ export function missingBlocks(
   );
 }
 
-/** Where the next added block begins: below every stack and the room
-    kept under it, at the leftmost stack's x. An empty workspace starts at
-    the origin. */
+/** Where the next added block begins: `gapAbove` under the lowest stack,
+    at the leftmost stack's x. An empty workspace starts at the origin. */
 export function placeBelow(
-  stacks: {x: number; y: number; height: number; grows?: boolean}[]
+  stacks: {x: number; y: number; height: number}[],
+  gapAbove = STACK_GAP_PX
 ): {x: number; y: number} {
   if (stacks.length === 0) {
     return {x: 0, y: 0};
   }
   return {
     x: Math.min(...stacks.map(s => s.x)),
-    y: Math.max(
-      ...stacks.map(
-        s => s.y + s.height + (s.grows ? ROOM_BELOW_WHEN_RUN_PX : STACK_GAP_PX)
-      )
-    ),
+    y: Math.max(...stacks.map(s => s.y + s.height)) + gapAbove,
   };
 }
 
@@ -146,16 +144,12 @@ export function addMissingBlocks(
   for (const entry of missing) {
     const stacks = workspace.getTopBlocks(false).map(top => {
       const {x, y} = top.getRelativeToSurfaceXY();
-      return {
-        x,
-        y,
-        height: top.getHeightWidth().height,
-        grows: top.type === WHEN_RUN_BLOCK_TYPE,
-      };
+      return {x, y, height: top.getHeightWidth().height};
     });
-    const {x, y} = placeBelow(stacks);
+    const {gapAbove, ...state} = entry;
+    const {x, y} = placeBelow(stacks, gapAbove);
     try {
-      BlocklyCore.serialization.blocks.append({...entry, x, y}, workspace, {
+      BlocklyCore.serialization.blocks.append({...state, x, y}, workspace, {
         recordUndo: false,
       });
       added++;
