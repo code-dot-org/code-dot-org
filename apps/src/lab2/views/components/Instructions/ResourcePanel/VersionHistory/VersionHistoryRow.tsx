@@ -14,6 +14,7 @@ import moduleStyles from './version-history-row.module.scss';
 interface VersionHistoryRowProps {
   versionId: string;
   label: string;
+  lastModified?: string;
   isLatest: boolean;
   isSelected: boolean;
   comment?: string;
@@ -36,6 +37,7 @@ const VersionHistoryRow: React.FunctionComponent<
 > = ({
   versionId,
   label,
+  lastModified,
   isLatest,
   isSelected,
   comment,
@@ -149,6 +151,11 @@ const VersionHistoryRow: React.FunctionComponent<
           )}
         </div>
         {children}
+        {isLatest && lastModified && (
+          <Typography className={moduleStyles.lastModified} variant="body4">
+            Last saved: {lastModified}
+          </Typography>
+        )}
         {comment !== AI_SAVED_COMMENT && // Display comment only if user description is included.
           (aiSavedComment || comment) && (
             <Typography
