@@ -75,10 +75,6 @@ export const styles = {
   error: {
     color: '#e51f68',
   },
-  ready: {
-    color: '#73be73',
-    backgroundColor: 'white',
-  },
 
   panelContainer: {
     position: 'relative',
@@ -117,18 +113,8 @@ export const styles = {
     paddingBottom: 10,
   },
 
-  mediumText: {
-    fontSize: 14,
-    marginBottom: 8,
-  },
-
   regularText: {
     fontSize: 14,
-  },
-
-  smallText: {
-    fontSize: 12,
-    marginBottom: 8,
   },
 
   smallTextRight: {
@@ -214,36 +200,6 @@ export const styles = {
     marginTop: 20,
   },
 
-  panelContentLeft: {
-    float: 'left',
-    width: '80%',
-  },
-
-  validationMessages: {
-    position: 'fixed',
-    bottom: 80,
-    right: 20,
-    width: 'calc(30% - 20px)',
-    padding: 20,
-    backgroundColor: 'rgba(0,0,0,0.8)',
-    borderRadius: 5,
-  },
-
-  validationMessagesLight: {
-    float: 'left',
-    marginLeft: 10,
-    width: 'calc(30% - 20px)',
-    padding: 20,
-    backgroundColor: 'white',
-    borderRadius: 5,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 18,
-    boxSizing: 'border-box',
-    overflow: 'auto',
-    marginTop: 59,
-    position: 'relative',
-  },
-
   rightPanel: {
     fontSize: 14,
   },
@@ -316,11 +272,6 @@ export const styles = {
     margin: 20,
   },
 
-  specifyColumnsItem: {
-    display: 'inline-block',
-    width: '20%',
-  },
-
   displayTable: {
     whiteSpace: 'nowrap',
     borderSpacing: 0,
@@ -365,10 +316,6 @@ export const styles = {
 
   dataDisplayHeaderClickable: {
     cursor: 'pointer',
-  },
-
-  dataDisplayHeaderLabelHidden: {
-    opacity: 0,
   },
 
   dataDisplayHeaderLabel: {
@@ -427,13 +374,6 @@ export const styles = {
     textAlign: 'right',
     fontSize: 12,
   },
-
-  dataDisplayCellLabelSelected: {},
-  dataDisplayCellFeatureSelected: {},
-
-  dataDisplayCellLabelUnselected: {},
-  dataDisplayCellFeatureUnselected: {},
-  dataDisplayCellUnselected: {},
 
   barChart: {
     marginTop: 10,
@@ -565,8 +505,6 @@ export const styles = {
     border: 'none',
   },
 
-  resultsPreviousHeading: {clear: 'both', paddingTop: 18, paddingBottom: 6},
-
   resultsTableFirstHeader: {
     top: 0,
     backgroundColor: 'white',
@@ -629,13 +567,6 @@ export const styles = {
     fontSize: 24,
     marginBottom: 20,
     borderBottom: 'solid 1px black',
-    paddingBottom: 10,
-  },
-
-  statementWithBackground: {
-    lineHeight: '38px',
-    fontSize: 24,
-    marginBottom: 20,
     paddingBottom: 10,
   },
 
@@ -702,14 +633,6 @@ export const styles = {
     top: 0,
     right: 0,
     lineHeight: '20px',
-  },
-
-  selectLabelText: {
-    color: labelColor,
-  },
-
-  selectFeaturesText: {
-    color: featureColor,
   },
 
   selectLabelButton: {
@@ -790,11 +713,6 @@ export const styles = {
     top: '50%',
   },
 
-  generateResultsBotBody: {
-    width: '49%',
-    direction: 'ltr',
-  },
-
   cardRow: {
     marginTop: 11,
     marginBottom: 11,
@@ -804,78 +722,11 @@ export const styles = {
     opacity: 0.5,
   },
 
-  floatLeft: {
-    float: 'left',
-    margin: 20,
-  },
-
-  phraseBuilder: {
-    fontSize: 16,
-  },
-
-  phraseBuilderHeader: {
-    backgroundColor: 'grey',
-    color: 'white',
-    padding: 15,
-  },
-
-  phraseBuilderHeaderSecond: {
-    backgroundColor: 'grey',
-    color: 'white',
-    padding: 15,
-    marginTop: 30,
-  },
-
   popupClose: {
     position: 'absolute',
     top: 10,
     right: 10,
     cursor: 'pointer',
-  },
-
-  phraseBuilderFeatureRemove: {
-    position: 'absolute',
-    top: 10,
-    right: 10,
-    cursor: 'pointer',
-    fontSize: 12,
-  },
-
-  phraseBuilderSelect: {
-    fontSize: 16,
-    marginTop: 10,
-    padding: 6,
-    cursor: 'pointer',
-    height: 43,
-    width: '100%',
-  },
-
-  phraseBuilderLabel: {
-    fontSize: 16,
-    marginTop: 10,
-    paddingTop: 13,
-    paddingLeft: 13,
-    height: 43,
-    backgroundColor: labelColor,
-    color: 'white',
-    boxSizing: 'border-box',
-  },
-
-  phraseBuilderFeature: {
-    fontSize: 16,
-    marginTop: 10,
-    paddingTop: 13,
-    paddingLeft: 13,
-    height: 43,
-    backgroundColor: featureColor,
-    color: 'white',
-    boxSizing: 'border-box',
-    position: 'relative',
-  },
-
-  resultsBot: {
-    position: 'relative',
-    width: '100%',
   },
 
   saveInputsWidth: {
