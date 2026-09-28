@@ -964,4 +964,82 @@ export const styles = {
   navigationButtonsContainer: {
     position: 'relative',
   },
+
+  decisionTree: {
+    clear: 'both',
+    paddingTop: 20,
+  },
+
+  decisionTreeHeader: {
+    fontSize: 14,
+    marginBottom: 8,
+  },
+
+  decisionTreeScroll: {
+    overflowX: 'auto',
+    paddingBottom: 10,
+  },
+
+  decisionTreeCanvas: {
+    position: 'relative',
+    color: 'black',
+  },
+
+  decisionTreeEdges: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+  },
+
+  decisionTreeNode: {
+    boxSizing: 'border-box',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '0 8px',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderRadius: 6,
+    fontSize: 13,
+    lineHeight: 1.2,
+    textAlign: 'center',
+  },
+
+  decisionTreeQuestion: {
+    backgroundColor: 'white',
+    borderColor: colors.feature,
+  },
+
+  decisionTreeAnswer: {
+    backgroundColor: colors.label,
+    borderColor: colors.label,
+  },
+
+  decisionTreeNodeText: {
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: 2,
+    overflow: 'hidden',
+    overflowWrap: 'anywhere',
+  },
+
+  decisionTreeBranch: {
+    position: 'absolute',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    boxSizing: 'border-box',
+    maxWidth: '100%',
+    height: 18,
+    lineHeight: '16px',
+    padding: '0 6px',
+    border: '1px solid grey',
+    borderRadius: 9,
+    backgroundColor: 'white',
+    fontSize: 12,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
 } as const;

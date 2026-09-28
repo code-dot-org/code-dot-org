@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Sustainable Systems Project\r\n\r\nUse this Sketch Lab canvas to design your system. \r\n\r\nUtilize the icons provided, or design your own, in order to bring your vision to life.",
+    "long_instructions": "#Sustainable Systems Project\r\n\r\nUse this Sketch Lab canvas to design your system. \r\n\r\nUtilize the icons provided or design your own using the AI Chat level in order to bring your solution to life.",
     "hide_share_and_remix": "false",
     "require_edit_to_continue": "true",
     "start_sources": {
@@ -1078,8 +1078,11 @@
         }
       }
     },
-    "project_template_level_name": "ai-and-the-systems-that-power-it-lesson13-project-template"
+    "project_template_level_name": "ai-and-the-systems-that-power-it-lesson13-project-template",
+    "display_name": "System Diagram",
+    "bubble_choice_description": "This Sketch Lab level will be used for diagramming your sustainable system.",
+    "thumbnail_url": "https://images.code.org/ff48b5d513eacac884118a1d174e7aef-sketch-lab-icon.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-23T18:58:16.707+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson13-project-template\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson13-project-template\"},{\"changed_at\":\"2026-09-23 18:59:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-23T18:58:16.707+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson13-project-template\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson13-project-template\"},{\"changed_at\":\"2026-09-23 18:59:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-25 14:58:45 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-25 20:01:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

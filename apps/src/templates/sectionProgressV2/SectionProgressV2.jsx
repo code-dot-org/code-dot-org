@@ -1,4 +1,5 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -10,6 +11,7 @@ import {
   getSelectedCourseId,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {resumeLearnHowToEvaluateTour} from '../studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
@@ -103,6 +105,17 @@ function SectionProgressV2({
     setLoadedData,
   ]);
 
+  const galleryUrl = React.useMemo(() => {
+    const lessonPosition = unitData?.lessons?.[0]?.relative_position;
+    if (
+      !unitData?.path ||
+      lessonPosition === null ||
+      lessonPosition === undefined
+    )
+      return null;
+    return `${unitData.path}/lessons/${lessonPosition}/tutor/gallery`;
+  }, [unitData]);
+
   const isViewingValidatedLevel = React.useMemo(() => {
     return unitData?.lessons
       .filter(lesson => expandedLessonIds.includes(lesson.id))
@@ -155,6 +168,26 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          {experiments.isEnabledAllowingQueryString(
+            experiments.LESSON_TUTOR_CHALLENGE
+          ) &&
+            galleryUrl && (
+              <Button
+                href={galleryUrl}
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                startIcon={
+                  <FontAwesomeV6Icon
+                    iconName="gallery-thumbnails"
+                    iconStyle="solid"
+                  />
+                }
+                className={styles.reviewExtensionActivitiesButton}
+              >
+                {i18n.reviewExtensionActivities()}
+              </Button>
+            )}
           <DownloadProgressCsv isLoading={isLoading} />
           <MoreOptionsDropdown />
         </Typography>
