@@ -74,10 +74,11 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
-// Where the slider goes when a character set is asked for: every posed
-// frame must agree with the base, so less wildness. Level 3 is a
-// temperature of 0.6, the setting a good live run used.
-const CHARACTER_SET_TEMPERATURE_LEVEL = 3;
+// Where the slider goes when a character set is asked for. Level 3 (a
+// temperature of 0.6) kept the frames close to the base but left walks
+// moving one leg; the regular level is on trial. Every posed frame must
+// still agree with the base, so drift between frames is what to watch.
+const CHARACTER_SET_TEMPERATURE_LEVEL = TEMPERATURE_LEVEL_DEFAULT;
 
 // The input is the only bound on prompt length: prompts persist verbatim
 // into each image's generation metadata and travel in every request.
