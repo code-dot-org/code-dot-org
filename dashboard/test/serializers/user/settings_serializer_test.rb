@@ -109,4 +109,78 @@ class User::SettingsSerializerTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe 'authentication_options' do
+    let(:user) {create(:teacher)}
+    let(:payload) {User::SettingsSerializer.new(user, country_code: 'US').as_json}
+
+    it 'serializes each option with its id, type and email only' do
+      option = user.authentication_options.first
+      _(payload[:authentication_options]).must_equal [
+        {id: option.id, credential_type: option.credential_type, email: option.email},
+      ]
+    end
+  end
+
+  describe 'integrations' do
+    let(:user) {create(:teacher)}
+    let(:payload) {User::SettingsSerializer.new(user, country_code: 'US').as_json}
+    let(:integrations) {payload[:integrations]}
+
+    it 'serializes the linked-account gates for a migrated teacher' do
+      _(integrations).must_equal(
+        can_manage_linked_accounts: true,
+        is_google_classroom_student: false,
+        is_clever_student: false,
+        personal_account_linking_enabled: true,
+        lms_name: nil,
+      )
+    end
+
+    it 'denies managing linked accounts to a restricted LTI user' do
+      Policies::Lti.stubs(:restricted_user?).with(user).returns(true)
+
+      _(integrations[:can_manage_linked_accounts]).must_equal false
+    end
+
+    it 'judges personal account linking by the request location' do
+      Policies::ChildAccount.expects(:personal_account_linking_enabled?).
+        with(user, request_in_usa: true).returns(false)
+
+      _(integrations[:personal_account_linking_enabled]).must_equal false
+    end
+
+    context 'when the student is in a Google Classroom section' do
+      let(:user) {create(:student)}
+
+      it 'sets is_google_classroom_student' do
+        create(:follower, student_user: user, section: create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM))
+
+        _(integrations[:is_google_classroom_student]).must_equal true
+      end
+    end
+
+    context 'when the teacher signed up through an LMS' do
+      let(:user) {create(:teacher, :with_lti_auth)}
+
+      it 'serializes the LMS name and the roster sync setting' do
+        _(integrations[:lms_name]).must_equal 'canvas_cloud'
+        _(integrations[:lti_roster_sync_enabled]).must_equal true
+      end
+
+      it 'omits the roster sync setting in a region that hides it' do
+        Cdo::GlobalEdition.stubs(:current_region).returns('id')
+
+        _(integrations.keys).wont_include :lti_roster_sync_enabled
+      end
+    end
+
+    context 'when the student signed up through an LMS' do
+      let(:user) {create(:student, :with_lti_auth)}
+
+      it 'omits the roster sync setting' do
+        _(integrations.keys).wont_include :lti_roster_sync_enabled
+      end
+    end
+  end
 end
