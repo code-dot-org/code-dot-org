@@ -4,11 +4,8 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-/**
- * A block to add. Its `data`, when set, tells it apart from another entry
- * of the same type in one scene: the block carries it, and presence is
- * checked against it.
- */
+/** A block to add. Its `data`, when set, tells it apart from another entry
+    of the same type in one scene. */
 export type AddBlock = BlocklyCore.serialization.blocks.State;
 
 /**
@@ -33,9 +30,8 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
 // add under when-run.
 const ROOM_BELOW_PX = 144;
 
-/** The blocks the workspace lacks: none of the type, or none of the type
-    carrying the entry's data. A block without data (added before entries
-    carried any) stands for every entry of its type. */
+/** The blocks the workspace lacks. A block without data (added before
+    entries carried any) stands for every entry of its type. */
 export function missingBlocks(
   present: Iterable<{type: string; data?: string | null}>,
   blocks: AddBlock[]
@@ -82,11 +78,9 @@ function samePlaceholder(a: Shadow | null | undefined, b: Shadow): boolean {
 
 /**
  * The connection under a stack's last real block, if `shadow` can hang
- * there: no block on it and no shadow recorded for it. A connection stays
- * recorded with its shadow while a real block covers it, so a stack that
- * already had this placeholder hung, filled in or not, gets it nowhere
- * else; a stack ending in some other placeholder, still empty, has no free
- * end under it.
+ * there. Blockly keeps a connection's shadow recorded while a real block
+ * covers it, so a stack that already had this placeholder, filled in or
+ * not, gets it nowhere else.
  */
 export function freeStackEnd(
   top: BlocklyCore.Block,
@@ -108,10 +102,8 @@ export function freeStackEnd(
   }
 }
 
-/**
- * Hang the shadow on the end of a stack whose top block has the type: the
- * first such stack with a free end. Returns whether it was hung.
- */
+/** Hang the shadow on the first stack of the type with a free end;
+    returns whether it was hung. */
 export function attachShadow(
   workspace: BlocklyCore.Workspace,
   entry: AttachShadow

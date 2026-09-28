@@ -76,8 +76,8 @@ export const NO_WRITING_CLAUSE =
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
 // decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
-// The place is empty for the same reason: the student's characters are
-// placed on top, and a background with its own people is a crowd.
+// The place is empty because the student's characters go on top; a
+// background with its own people is a crowd.
 const BACKGROUND_PROMPT_CLAUSE =
   'The place is deserted: scenery only, with nobody in it, no people, characters, creatures or figures of any kind. The scene itself fills the entire image, reaching all four edges. Do not frame the picture: no border and no margin, and nothing along the edges that is not part of the scene.';
 

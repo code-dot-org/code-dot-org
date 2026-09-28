@@ -74,10 +74,9 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
-// Where the slider goes when a character set is asked for. Level 3 (a
-// temperature of 0.6) kept the frames close to the base but left walks
-// moving one leg; the regular level is on trial. Every posed frame must
-// still agree with the base, so drift between frames is what to watch.
+// Where the slider goes when a character set is asked for: the regular
+// level, on trial. Every posed frame must agree with the base, so drift
+// between frames is what to watch.
 const CHARACTER_SET_TEMPERATURE_LEVEL = TEMPERATURE_LEVEL_DEFAULT;
 
 // The input is the only bound on prompt length: prompts persist verbatim
@@ -240,8 +239,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     return scale && PIXEL_SCALES.includes(scale) ? scale : 1;
   });
   // A whole character — idling, walking, jumping — instead of one picture.
-  // On for a new image; for an existing one, whatever it already is, so
-  // regenerating keeps a character a character and a still a still.
+  // An existing image keeps its kind when regenerated.
   const startsAsSet = existing ? !!sheet : true;
   // Calm when the set checkbox starts checked (posed frames must agree
   // with the base), as checking it by hand also sets.
