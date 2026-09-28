@@ -86,6 +86,9 @@ const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-c
 // 2026-09-28). Fact-gathering runs on Sonnet; decisions, code, gates and git on Opus.
 const READ_MODEL = 'sonnet'
 const WORK_MODEL = 'opus'
+// Agents that decide, write the wrapper, or diagnose a failure think at xhigh. Gates,
+// chunk residue, mechanical steps and git carving inherit the session effort.
+const DEEP_EFFORT = 'xhigh'
 
 // Shared rules for every agent that edits files. Chunk agents run concurrently in ONE
 // working tree, so anything that moves HEAD or the index would corrupt a sibling's work.
@@ -510,7 +513,7 @@ Do, in order:
    Then yarn build in ${STORYBOOK}. Fix everything you broke; report each check's result.
 
 Return the structured result.`,
-  {schema: BUILD_SCHEMA, label: 'build', phase: 'Build', model: WORK_MODEL},
+  {schema: BUILD_SCHEMA, label: 'build', phase: 'Build', model: WORK_MODEL, effort: DEEP_EFFORT},
 )
 if (!build) throw new Error('build agent was skipped; nothing to gate or migrate')
 if (!build.allChecksPass) {
@@ -529,7 +532,7 @@ Re-run every check (yarn test / typecheck / lint / build in ${LIB}; yarn build i
 ${STORYBOOK}) and report. filesTouched = the build's list plus anything you changed.
 muiStories, legacyExports and codemodCommand: copy from the build unless you changed them:
 ${JSON.stringify({muiStories: build.muiStories, legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
-    {schema: BUILD_SCHEMA, label: 'build-repair', phase: 'Build', model: WORK_MODEL},
+    {schema: BUILD_SCHEMA, label: 'build-repair', phase: 'Build', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (repaired) build = repaired
   if (!build.allChecksPass) throw new Error(`Build checks still failing: ${JSON.stringify(build.checks)}`)
@@ -564,7 +567,7 @@ Re-run yarn test / typecheck / lint / build in ${LIB} and yarn build in ${STORYB
 filesTouched = the build's list ${JSON.stringify(build.filesTouched)} plus your changes.
 Copy legacyExports and codemodCommand unchanged unless you changed them:
 ${JSON.stringify({legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
-    {schema: BUILD_SCHEMA, label: 'build-twins', phase: 'Build', model: WORK_MODEL},
+    {schema: BUILD_SCHEMA, label: 'build-twins', phase: 'Build', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (twinned) build = twinned
   gaps = twinGaps(build.muiStories)
@@ -697,7 +700,7 @@ Look at each listed dsco/mui/diff PNG with the Read tool before changing anythin
 the override or wrapper, not the story, unless the story itself fails to reproduce the
 DSCO story's state. Then re-run yarn test / typecheck / lint / build in ${LIB} and
 yarn build in ${STORYBOOK}. Report every file touched.`,
-    {schema: BUILD_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Parity', model: WORK_MODEL},
+    {schema: BUILD_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Parity', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (fix) {
     build.filesTouched = [...new Set([...build.filesTouched, ...fix.filesTouched])]
@@ -725,7 +728,7 @@ Re-run yarn test / typecheck / lint / build in ${LIB} and yarn build in ${STORYB
 report each. filesTouched = the list above plus anything you changed. Copy muiStories,
 legacyExports and codemodCommand unchanged:
 ${JSON.stringify({muiStories: build.muiStories, legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
-    {schema: BUILD_SCHEMA, label: 'parity-checks-repair', phase: 'Parity', model: WORK_MODEL},
+    {schema: BUILD_SCHEMA, label: 'parity-checks-repair', phase: 'Parity', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (repaired) build = repaired
   if (!build.allChecksPass) throw new Error(`Design-system checks still failing after parity: ${JSON.stringify(build.checks)}`)
@@ -995,7 +998,7 @@ Fix the root cause, not the assertion: a failing test that pins DSCO DOM gets it
 expectation updated; a failing typecheck gets its types fixed; a lint error gets its
 code fixed. If the design-system side is at fault, fix it under ${LIB} and run yarn
 build there. Re-run only the checks that failed, then return filesTouched and notes.`,
-    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Verify', model: WORK_MODEL},
+    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Verify', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (heal) healTouched = [...new Set([...healTouched, ...heal.filesTouched])]
 }

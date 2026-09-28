@@ -118,6 +118,9 @@ const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-c
 // the two scripts measures the shape, not the model.
 const READ_MODEL = 'sonnet'
 const WORK_MODEL = 'opus'
+// Agents that decide, write the wrapper, or diagnose a failure think at xhigh. Gates,
+// chunk residue, mechanical steps and git carving inherit the session effort.
+const DEEP_EFFORT = 'xhigh'
 const componentTitle = component.charAt(0).toUpperCase() + component.slice(1)
 
 // Shared rules for every agent that edits files. Chunk agents run concurrently in ONE
@@ -540,7 +543,7 @@ chunks; Docs; Risks; Deviations (empty, Execute fills it). Run prettier on it fr
 (../../node_modules/.bin/prettier --write).
 
 Return the structured plan; planDoc must be ${PLAN_DOC}.`,
-  {schema: PLAN_SCHEMA, label: 'plan', phase: 'Plan', model: WORK_MODEL},
+  {schema: PLAN_SCHEMA, label: 'plan', phase: 'Plan', model: WORK_MODEL, effort: DEEP_EFFORT},
 )
 if (!plan) throw new Error('plan agent was skipped; nothing to execute')
 if (plan.planDoc !== PLAN_DOC) throw new Error(`plan wrote ${plan.planDoc}; expected ${PLAN_DOC}`)
@@ -753,7 +756,7 @@ Do, in order:
    Then yarn build in ${STORYBOOK}. Fix what you broke; report each check's result.
 
 Return the structured result.`,
-  {schema: EXECUTE_SCHEMA, label: 'execute', phase: 'Execute', model: WORK_MODEL},
+  {schema: EXECUTE_SCHEMA, label: 'execute', phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
 )
 if (!exec) throw new Error('execute agent was skipped; nothing to gate')
 
@@ -791,7 +794,7 @@ if (!exec.allChecksPass || hasGaps(execGaps())) {
       'left work incomplete',
       `Failing checks: ${JSON.stringify(exec.checks)}\nTwin gaps (every DSCO story id exactly once): ${JSON.stringify(gaps)}\nPlanned twins: ${JSON.stringify(plan.twins)}`,
     ),
-    {schema: EXECUTE_SCHEMA, label: 'execute-repair', phase: 'Execute', model: WORK_MODEL},
+    {schema: EXECUTE_SCHEMA, label: 'execute-repair', phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (repaired) exec = repaired
   if (!exec.allChecksPass) throw new Error(`Execute checks still failing: ${JSON.stringify(exec.checks)}`)
@@ -911,7 +914,7 @@ the override or wrapper, not the story, unless the story fails to reproduce the 
 story's state. Record any new departure from the plan in ${PLAN_DOC}'s Deviations section.
 Re-run yarn test / typecheck / eslint / prettier --check / stylelint / build in ${LIB} and
 yarn build in ${STORYBOOK}. Report every file touched and the checks.`,
-    {schema: EXECUTE_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL},
+    {schema: EXECUTE_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (fix) {
     exec.filesTouched = [...new Set([...exec.filesTouched, ...fix.filesTouched])]
@@ -927,7 +930,7 @@ if (!parity.pass) log(`Parity budget exhausted (${parityStatus}); details go int
 if (!exec.allChecksPass) {
   log(`Design-system checks red after parity fixes; one repair pass`)
   const repaired = await agent(repairPrompt('left failing checks after parity fixes', `Failing checks: ${JSON.stringify(exec.checks)}`), {
-    schema: EXECUTE_SCHEMA, label: 'execute-checks-repair', phase: 'Execute', model: WORK_MODEL,
+    schema: EXECUTE_SCHEMA, label: 'execute-checks-repair', phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT,
   })
   if (repaired) exec = repaired
   if (!exec.allChecksPass) throw new Error(`Design-system checks still failing: ${JSON.stringify(exec.checks)}`)
@@ -1284,7 +1287,7 @@ PLAN: ${PLAN_DOC}
 Fix the root cause, not the assertion. If the design-system side is at fault, fix it under
 ${LIB}, run yarn build there, and record the departure in ${PLAN_DOC}'s Deviations section.
 Re-run only the checks that failed, then return filesTouched and notes.`,
-    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Migrate', model: WORK_MODEL},
+    {schema: TOUCHED_SCHEMA, label: `heal-${healAttempt}`, phase: 'Migrate', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (heal) healTouched = [...new Set([...healTouched, ...heal.filesTouched])]
 }
