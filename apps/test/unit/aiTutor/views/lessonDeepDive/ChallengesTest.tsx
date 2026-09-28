@@ -1,10 +1,10 @@
+import {Challenge} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import Challenges from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/Challenges';
-import {Challenge} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 
 // Replaces ChallengePicker with a minimal stub that exposes two buttons:
 // "start" fires the callback with a real challenge, "cancel" fires it with nulls.

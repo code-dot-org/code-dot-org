@@ -2,13 +2,15 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import LessonObjectiveReflection from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/LessonObjectiveReflection';
+import LessonObjectiveReflection, {
+  ReflectionValue,
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/LessonObjectiveReflection';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 const OBJECTIVE = {id: 'obj-1', description: 'Understand loops'};
 
 function renderComponent(
-  selected: string | null = null,
+  selected: ReflectionValue | null = null,
   onSelectionChange = jest.fn()
 ) {
   render(
