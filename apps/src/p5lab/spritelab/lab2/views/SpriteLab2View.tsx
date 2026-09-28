@@ -109,6 +109,7 @@ import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
+  moveWorldCell,
   paintWorldCell,
   resizeWorld,
   sceneGridSize,
@@ -1404,6 +1405,35 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId, scheduleRun, worldFor]
   );
 
+  // A level that places one thing (level_mode.placeOne) offers the palette
+  // its default image of the level's kind, and moves it rather than adding.
+  const placeOneImage = useMemo(
+    () =>
+      levelProperties.levelMode?.placeOne && focusImageType
+        ? defaultImageName(animationList, imageRoleDefaults, focusImageType)
+        : undefined,
+    [
+      levelProperties.levelMode,
+      focusImageType,
+      animationList,
+      imageRoleDefaults,
+    ]
+  );
+  const handleMoveWorldCell = useCallback(
+    (row: number, col: number, cell: WorldCell) => {
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).map(s =>
+          s.id === activeSceneId
+            ? {...s, world: moveWorldCell(worldFor(s), row, col, cell)}
+            : s
+        ),
+      }));
+      scheduleRun();
+    },
+    [updateSources, activeSceneId, scheduleRun, worldFor]
+  );
+
   // Rename an image and cascade through every reference — blocks in all
   // scenes, World grids, and the live workspace — so tidying a name never
   // breaks the project.
@@ -1791,6 +1821,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 world={activeWorld}
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
+                placeOne={placeOneImage}
+                onMoveCell={handleMoveWorldCell}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
               />

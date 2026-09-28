@@ -23,7 +23,8 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "world",
-      "imageType": "sprite"
+      "imageType": "sprite",
+      "placeOne": true
     },
     "image_role_defaults": {
       "sprite": "friend"
@@ -35,7 +36,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Remember your second character?** Give them a platform: place them on top of some blocks."
+        "text": "**Remember your second character?** Give them a platform: click a square on top of some blocks to put them there. Click another square to move them."
       },
       {
         "text": "**They're in your world.** Click **Play** to go and find them, then continue when you're ready.",
@@ -45,7 +46,7 @@
         }
       }
     ],
-    "long_instructions": "# Add your second character\nGive them a platform: place them on top of some blocks."
+    "long_instructions": "# Add your second character\nClick a square on top of some blocks to put them there. Click another square to move them."
   }
 }]]></config>
 </GamelabJr>

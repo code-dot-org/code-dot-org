@@ -162,6 +162,11 @@ interface WorldTabProps {
   sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
+  // The one image this level places (level_mode.placeOne): the palette
+  // offers only it, it goes on an empty cell, and choosing another cell
+  // moves it there through onMoveCell.
+  placeOne?: string;
+  onMoveCell?: (row: number, col: number, cell: WorldCell) => void;
   // Palette selection, owned by the view so it survives tab switches (this
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
@@ -183,6 +188,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   world,
   sceneSize,
   onPaintCell,
+  placeOne,
+  onMoveCell,
   selected,
   onSelect,
 }) => {
@@ -197,6 +204,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       animationList.orderedKeys
         .map(key => animationList.propsByKey[key])
         .filter(props => !props.categories?.includes(BACKGROUNDS_CATEGORY))
+        .filter(props => !placeOne || props.name === placeOne)
         .map(props => ({
           image: props.name,
           kind: props.categories?.includes(BLOCKS_CATEGORY)
@@ -206,19 +214,20 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             getImageThumbnail(props.name) || props.dataURI || props.sourceUrl,
         })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [animationList, trimVersion]
+    [animationList, trimVersion, placeOne]
   );
   const thumbsByImage = useMemo(
     () => new Map(palette.map(item => [item.image, item.thumb])),
     [palette]
   );
-  // The palette plus Erase, in keyboard order.
+  // The palette plus Erase, in keyboard order. Placing one thing has no
+  // Erase: choosing its cell again removes it.
   const selections: PaletteSelection[] = useMemo(
     () => [
       ...palette.map(item => ({image: item.image, kind: item.kind})),
-      'erase' as const,
+      ...(placeOne ? [] : ['erase' as const]),
     ],
-    [palette]
+    [palette, placeOne]
   );
   // A selection can outlive its image (deleted or recategorized on the
   // Images tab — the reference scrub covers cells and blocks, not this);
@@ -259,19 +268,25 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     row: number,
     col: number,
     erase: boolean
-  ): 'placed' | 'removed' | null => {
+  ): 'placed' | 'removed' | 'taken' | null => {
     if (!effectiveSelected) {
       return null;
     }
     const erasing = erase || effectiveSelected === 'erase';
-    onPaintCell(
-      row,
-      col,
-      erasing
-        ? null
-        : {image: effectiveSelected.image, kind: effectiveSelected.kind}
-    );
-    return erasing ? 'removed' : 'placed';
+    if (erasing) {
+      onPaintCell(row, col, null);
+      return 'removed';
+    }
+    const cell = {image: effectiveSelected.image, kind: effectiveSelected.kind};
+    if (placeOne && onMoveCell) {
+      if (grid[row]?.[col]) {
+        return 'taken';
+      }
+      onMoveCell(row, col, cell);
+      return 'placed';
+    }
+    onPaintCell(row, col, cell);
+    return 'placed';
   };
   // A press on a tile already holding the selected item erases instead
   // (click-again-to-remove). The pressed tile decides for the whole drag
@@ -330,7 +345,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       }
       return true;
     }
-    if (event.key === ERASE_SHORTCUT) {
+    if (event.key === ERASE_SHORTCUT && !placeOne) {
       chooseAt(selections.length - 1);
       return true;
     }
@@ -347,6 +362,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       announce(`${effectiveSelected.image} placed.`);
     } else if (did === 'removed') {
       announce('Removed.');
+    } else if (did === 'taken') {
+      announce('That square is taken.');
     }
   };
 
@@ -435,11 +452,12 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       row: number,
       col: number
     ) => {
-      if (event.buttons & 1) {
+      // No drag painting when placing one thing: it would drag along.
+      if (event.buttons & 1 && !placeOne) {
         latest.current.paintCell(row, col, strokeErase.current);
       }
     },
-    []
+    [placeOne]
   );
   // Physical Enter and Space are handled in keydown; a detail-0 click is
   // assistive tech activating the cell without key events.
@@ -578,32 +596,35 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             </button>
           </PaletteTooltip>
         ))}
-        {/* Unconditional: with no images left, Erase is still the only way
-            a pointer user can clear placed cells. */}
-        <PaletteTooltip
-          tooltipId="world-palette-erase"
-          text={`Erase (${ERASE_SHORTCUT})`}
-        >
-          <button
-            ref={el => (paletteRefs.current[palette.length] = el)}
-            type="button"
-            role="radio"
-            aria-checked={effectiveSelected === 'erase'}
-            aria-keyshortcuts={ERASE_SHORTCUT}
-            tabIndex={Math.max(selectedIndex, 0) === palette.length ? 0 : -1}
-            className={classNames(
-              moduleStyles.worldPaletteItem,
-              moduleStyles.worldPaletteErase,
-              effectiveSelected === 'erase' && moduleStyles.worldPaletteSelected
-            )}
-            onClick={event => {
-              event.currentTarget.focus();
-              choose('erase');
-            }}
+        {/* With no images left, Erase is still the only way a pointer user
+            can clear placed cells; only placing one thing does without it. */}
+        {!placeOne && (
+          <PaletteTooltip
+            tooltipId="world-palette-erase"
+            text={`Erase (${ERASE_SHORTCUT})`}
           >
-            Erase
-          </button>
-        </PaletteTooltip>
+            <button
+              ref={el => (paletteRefs.current[palette.length] = el)}
+              type="button"
+              role="radio"
+              aria-checked={effectiveSelected === 'erase'}
+              aria-keyshortcuts={ERASE_SHORTCUT}
+              tabIndex={Math.max(selectedIndex, 0) === palette.length ? 0 : -1}
+              className={classNames(
+                moduleStyles.worldPaletteItem,
+                moduleStyles.worldPaletteErase,
+                effectiveSelected === 'erase' &&
+                  moduleStyles.worldPaletteSelected
+              )}
+              onClick={event => {
+                event.currentTarget.focus();
+                choose('erase');
+              }}
+            >
+              Erase
+            </button>
+          </PaletteTooltip>
+        )}
         {!palette.length && (
           <span className={moduleStyles.worldEmpty}>
             Create some images on the Images tab first.
