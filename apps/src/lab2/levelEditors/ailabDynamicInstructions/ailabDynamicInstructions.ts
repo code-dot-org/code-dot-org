@@ -4,7 +4,11 @@
   keeps only keys Lab 2 AI Lab can show; anything else is dropped when the
   level is next saved.
 */
-import type {InstructionsKey} from '@code-dot-org/ailab';
+import {
+  CONTENT_PANELS,
+  INSTRUCTIONS_KEYS,
+  type InstructionsKey,
+} from '@code-dot-org/ailab';
 
 import {parseMode, serializeMode, setModeValue} from '../ailabMode/ailabMode';
 
@@ -15,31 +19,43 @@ export interface DynamicInstructionsField {
   label: string;
 }
 
-// The choose-dataset keys are absent: Lab 2 levels load their one dataset directly.
-export const SCREEN_FIELDS: DynamicInstructionsField[] = [
-  {key: 'dataDisplayLabel', label: 'Choose label screen'},
-  {key: 'dataDisplayFeatures', label: 'Choose features screen'},
-  {key: 'trainModel', label: 'Train model screen'},
-  {key: 'generateResults', label: 'Test model screen'},
-  {key: 'results', label: 'Results screen'},
-  {key: 'saveModel', label: 'Save model screen'},
-  {key: 'modelSummary', label: 'Model summary screen'},
-];
+// Lab 2 levels load their one dataset directly, so these never show.
+const UNREACHABLE_KEYS = [
+  'selectDataset',
+  'uploadedDataset',
+  'selectedDataset',
+] as const;
 
-export const ACTION_FIELDS: DynamicInstructionsField[] = [
-  {
-    key: 'selectedFeatureNumerical',
-    label: 'After selecting a numerical column',
-  },
-  {
-    key: 'selectedFeatureCategorical',
-    label: 'After selecting a categorical column',
-  },
-  {key: 'resultsDetails', label: 'While viewing result details'},
-];
+type Lab2Key = Exclude<InstructionsKey, (typeof UNREACHABLE_KEYS)[number]>;
 
-const LAB2_KEYS: string[] = [...SCREEN_FIELDS, ...ACTION_FIELDS].map(
-  field => field.key
+// A new key in the ailab package fails typecheck here until it gets a label.
+const FIELD_LABELS: Record<Lab2Key, string> = {
+  dataDisplayLabel: 'Choose label screen',
+  dataDisplayFeatures: 'Choose features screen',
+  trainModel: 'Train model screen',
+  generateResults: 'Test model screen',
+  results: 'Results screen',
+  saveModel: 'Save model screen',
+  modelSummary: 'Model summary screen',
+  selectedFeatureNumerical: 'After selecting a numerical column',
+  selectedFeatureCategorical: 'After selecting a categorical column',
+  resultsDetails: 'While viewing result details',
+};
+
+function isLab2Key(key: string): key is Lab2Key {
+  return key in FIELD_LABELS;
+}
+
+function toFields(keys: readonly string[]): DynamicInstructionsField[] {
+  return keys.filter(isLab2Key).map(key => ({key, label: FIELD_LABELS[key]}));
+}
+
+const CONTENT_PANEL_KEYS: readonly string[] = CONTENT_PANELS;
+
+export const SCREEN_FIELDS = toFields(CONTENT_PANELS);
+
+export const ACTION_FIELDS = toFields(
+  INSTRUCTIONS_KEYS.filter(key => !CONTENT_PANEL_KEYS.includes(key))
 );
 
 // Returns null when the string is not a JSON object.
@@ -78,7 +94,7 @@ export function cleanDynamicInstructions(
     if (typeof value === 'string' && value.trim() === '') {
       return;
     }
-    if (LAB2_KEYS.includes(key) && typeof value === 'string') {
+    if (isLab2Key(key) && typeof value === 'string') {
       cleaned[key] = value;
     } else {
       removed.push(`${key}: ${JSON.stringify(value)}`);
