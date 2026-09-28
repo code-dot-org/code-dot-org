@@ -1,4 +1,5 @@
 /* React component to handle training. */
+import classNames from 'classnames';
 import {useState, useEffect, useRef} from 'react';
 
 import {imageUrl} from '../assetPath';
@@ -152,12 +153,12 @@ const TrainModel = () => {
       </div>
 
       <div className={`${shared.sceneBot} ${styles.botContainer}`}>
-        <div className={`ailab-image-hover ${shared.bot}`}>
+        <div className={`${shared.hoverGrow} ${shared.bot}`}>
           <img
             src={imageUrl('ai-bot/ai-bot-head.png')}
-            className={
-              headOpen ? `${shared.botHead} ${styles.headOpen}` : shared.botHead
-            }
+            className={classNames(shared.botHead, {
+              [styles.headOpen]: headOpen,
+            })}
             alt={I18n.t('aiBotHeadAltText')}
           />
           <img

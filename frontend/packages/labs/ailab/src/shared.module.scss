@@ -10,8 +10,9 @@
   color: #e51f68;
 }
 
-.disabledButton {
-  opacity: 0.5;
+.hoverGrow:hover {
+  transform: scale(1.03, 1.03);
+  transition: 0.1s ease-in-out;
 }
 
 .columnButton {
@@ -57,7 +58,6 @@
 }
 
 .contents {
-  border-radius: 0;
   background-color: var(--ailab-background);
   padding: 15px;
 }

@@ -37,7 +37,7 @@ const ModelCard = () => {
       <div className={styles.bot}>
         <img
           src={imageUrl('ai-bot/ai-bot-border.png')}
-          className={`ailab-image-hover ${styles.botImage}`}
+          className={`${shared.hoverGrow} ${styles.botImage}`}
           alt={I18n.t('aiBotAltText')}
         />
       </div>

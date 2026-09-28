@@ -30,7 +30,6 @@ import SelectDataset from './UIComponents/SelectDataset';
 import TrainModel from './UIComponents/TrainModel';
 
 import styles from './app.module.scss';
-import shared from './shared.module.scss';
 
 const colorVariables = {
   '--ailab-feature': colors.feature,
@@ -38,9 +37,6 @@ const colorVariables = {
   '--ailab-background': colors.background,
   '--ailab-teal': colors.teal,
 } as CSSProperties;
-
-const navButtonClass = (enabled?: boolean) =>
-  enabled ? styles.navButton : `${styles.navButton} ${shared.disabledButton}`;
 
 interface PanelButtonsProps {
   panelButtons: PrevNextButtons;
@@ -121,7 +117,7 @@ const PanelButtons = ({
         <div className={styles.previous}>
           <button
             type="button"
-            className={navButtonClass(panelButtons.prev.enabled)}
+            className={styles.navButton}
             onClick={onClickPrev}
             disabled={!panelButtons.prev.enabled}
           >
@@ -147,7 +143,7 @@ const PanelButtons = ({
           <button
             type="button"
             id="uitest-continue-button"
-            className={navButtonClass(panelButtons.next.enabled)}
+            className={styles.navButton}
             onClick={onClickNext}
             disabled={!panelButtons.next.enabled}
           >
@@ -190,7 +186,9 @@ interface ContainerFullWidthProps {
 }
 
 const ContainerFullWidth = ({children}: ContainerFullWidthProps) => {
-  return <div className={styles.fullWidth}>{children}</div>;
+  return (
+    <div className={`${styles.column} ${styles.fullWidth}`}>{children}</div>
+  );
 };
 
 export interface AppProps {

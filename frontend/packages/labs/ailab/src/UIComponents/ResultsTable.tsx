@@ -1,4 +1,5 @@
 /* React component to handle displaying test data and A.I. Bot's guesses. */
+import classNames from 'classnames';
 import {useCallback} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
@@ -31,9 +32,9 @@ const ResultsTable = ({results}: ResultsTableProps) => {
 
   const getRowCellClassName = useCallback(
     (index: number) => {
-      return index === resultsHighlightRow
-        ? `${shared.tableCell} ${styles.highlighted}`
-        : shared.tableCell;
+      return classNames(shared.tableCell, {
+        [styles.highlighted]: index === resultsHighlightRow,
+      });
     },
     [resultsHighlightRow],
   );

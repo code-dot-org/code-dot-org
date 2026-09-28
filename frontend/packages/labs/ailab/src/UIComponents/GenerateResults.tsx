@@ -167,7 +167,7 @@ const GenerateResults = () => {
         className={shared.sceneBot}
         style={{transform: botContainerTransform}}
       >
-        <div className={`ailab-image-hover ${shared.bot}`}>
+        <div className={`${shared.hoverGrow} ${shared.bot}`}>
           <img
             src={imageUrl('ai-bot/ai-bot-head.png')}
             className={shared.botHead}

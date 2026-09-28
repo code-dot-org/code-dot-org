@@ -108,7 +108,7 @@ const Predict = () => {
       <div>
         <button
           type="button"
-          className={predictAvailable ? undefined : shared.disabledButton}
+          className={styles.button}
           onClick={onClickPredict}
           disabled={!predictAvailable}
         >
@@ -119,7 +119,7 @@ const Predict = () => {
         <div className={`${shared.contents} ${styles.botResult}`}>
           <div className={styles.botColumn}>
             <img
-              className={`ailab-image-hover ${styles.bot}`}
+              className={`${shared.hoverGrow} ${styles.bot}`}
               src={imageUrl('ai-bot/ai-bot-border.png')}
               alt={I18n.t('aiBotAltText')}
             />

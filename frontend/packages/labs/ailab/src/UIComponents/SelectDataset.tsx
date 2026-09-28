@@ -1,4 +1,6 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
+import classNames from 'classnames';
+
 import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
@@ -86,17 +88,13 @@ const SelectDataset = () => {
   return (
     <div id="select-dataset" className={shared.panel}>
       <ScrollableContent tinted={true}>
-        {datasets.map((dataset, index) => {
+        {datasets.map(dataset => {
           return (
             <div
-              className={[
-                styles.item,
-                highlightDataset === dataset.name && styles.highlighted,
-                name === dataset.name && styles.selected,
-                index % 3 === 0 && styles.rowStart,
-              ]
-                .filter(Boolean)
-                .join(' ')}
+              className={classNames(styles.item, {
+                [styles.highlighted]: highlightDataset === dataset.name,
+                [styles.selected]: name === dataset.name,
+              })}
               key={dataset.id}
               onClick={() => handleDatasetClick(dataset.id)}
               onKeyDown={() => handleDatasetClick(dataset.id)}
@@ -109,7 +107,7 @@ const SelectDataset = () => {
                 <img
                   src={assetPath + dataset.imagePath}
                   draggable={false}
-                  className={`uitest-ailab-dataset-image ailab-image-hover ${styles.image}`}
+                  className={`uitest-ailab-dataset-image ${shared.hoverGrow} ${styles.image}`}
                   alt={`Select ${dataset.name} dataset`}
                 />
                 <div className={styles.name}>{dataset.name}</div>
@@ -119,7 +117,7 @@ const SelectDataset = () => {
         })}
       </ScrollableContent>
       {!specifiedDatasets && (
-        <div className={styles.upload}>
+        <div className={`${shared.contents} ${styles.upload}`}>
           <label className={styles.uploadButton}>
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
             {/* Setting value to empty here allows us to receive an

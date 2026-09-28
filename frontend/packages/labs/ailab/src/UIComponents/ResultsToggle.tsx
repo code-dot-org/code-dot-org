@@ -1,6 +1,7 @@
 /* React component to handle toggling between correct/incorrect test results */
 import {faTimes, faCheck} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import classNames from 'classnames';
 
 import {ResultsGrades} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -15,9 +16,7 @@ const ResultsToggle = () => {
   const dispatch = useAppDispatch();
 
   const getTogglePillClassName = (key: string) => {
-    return key === resultsTab
-      ? `${styles.pill} ${styles.selected}`
-      : styles.pill;
+    return classNames(styles.pill, {[styles.selected]: key === resultsTab});
   };
 
   const resultsTabs = [

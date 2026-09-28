@@ -1,4 +1,6 @@
 /* React component to handle displaying imported data. */
+import classNames from 'classnames';
+
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
@@ -49,9 +51,11 @@ const DataTable = ({
       variant = styles.featureHeader;
     }
 
-    const pointer = !reducedColumns && styles.clickable;
-
-    return [styles.header, pointer, variant].filter(Boolean).join(' ');
+    return classNames(
+      styles.header,
+      {[styles.clickable]: !reducedColumns},
+      variant,
+    );
   };
 
   const getColumnCellClassName = (key: string) => {
@@ -73,7 +77,7 @@ const DataTable = ({
       }
     }
 
-    return variant ? `${styles.cell} ${variant}` : styles.cell;
+    return classNames(styles.cell, variant);
   };
 
   const getColumns = () => {

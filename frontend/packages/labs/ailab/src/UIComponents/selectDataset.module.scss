@@ -3,8 +3,7 @@
   padding: 10px;
   float: left;
   box-sizing: border-box;
-  border: solid 4px #f2f2f2;
-  border-radius: 0;
+  border: solid 4px var(--ailab-background);
   cursor: pointer;
   background-color: white;
   margin: 2px;
@@ -19,7 +18,7 @@
   border: solid 4px rgb(85 217 255);
 }
 
-.rowStart {
+.item:nth-child(3n + 1) {
   clear: both;
 }
 
@@ -50,9 +49,6 @@
 }
 
 .upload {
-  border-radius: 0;
-  background-color: var(--ailab-background);
-  padding: 15px;
   margin-top: 20px;
   padding-top: 25px;
   padding-bottom: 25px;
