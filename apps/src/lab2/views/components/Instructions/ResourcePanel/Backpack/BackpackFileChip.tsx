@@ -16,13 +16,13 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import isFileTypeSupported from './isFileTypeSupported';
-import {onClickAddFile} from './onClickAddFile';
 import {
   fetchAndSaveFile,
   handleSaveDuplicateFile,
   handleSaveSupportFile,
-} from './saveToBackpackHelper';
+} from './importFromBackpackHelper';
+import isFileTypeSupported from './isFileTypeSupported';
+import {onClickAddFile} from './onClickAddFile';
 
 import moduleStyles from './backpack-file-chip.module.scss';
 

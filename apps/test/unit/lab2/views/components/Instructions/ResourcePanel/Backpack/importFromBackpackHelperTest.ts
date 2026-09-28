@@ -1,4 +1,4 @@
-import {fetchAndSaveFile} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
+import {fetchAndSaveFile} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/importFromBackpackHelper';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
