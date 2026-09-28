@@ -72,7 +72,7 @@ class ScriptLevel < ApplicationRecord
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
-  validate :ui_test_levels_only_in_ui_test_scripts
+  validate :levels_stay_within_ui_test_partition
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -94,33 +94,38 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  # "UI Test " levels may only be referenced by ui-test-* units, or the
-  # production seed fails with "No level found"; see
-  # dashboard/test/ui/config/README.md. Checked against the serialized
-  # level_keys property because ScriptSeed's import! runs validations before
-  # the HABTM join rows are imported. The levelbuilder attach path
-  # (update_levels) writes those rows without validating, so it applies the
-  # same rule itself through cross_partition_level_names.
-  def ui_test_levels_only_in_ui_test_scripts
-    offending = cross_partition_level_names(level_keys || [])
+  # A unit and the levels it references must be on the same side of the
+  # "UI Test " partition, in both directions: the two trees are seeded
+  # independently, so either kind of crossing leaves the seed that loaded only
+  # one tree with "No level found". See dashboard/test/ui/config/README.md.
+  # Checked against the serialized level_keys property because ScriptSeed's
+  # import! runs validations before the HABTM join rows are imported. The
+  # levelbuilder attach path (update_levels) writes those rows without
+  # validating, so it applies the same rule itself through
+  # cross_partition_level_keys.
+  def levels_stay_within_ui_test_partition
+    offending = cross_partition_level_keys(level_keys || [])
     return if offending.empty?
     errors.add(:script_level, cross_partition_levels_message(offending))
   end
 
-  # Of the given level keys or names, those on the wrong side of the
-  # "UI Test " partition for this script_level's unit. Ignores nil entries.
-  def cross_partition_level_names(level_names)
-    # Select on the names before consulting the unit: the names are in memory,
-    # while ui_test_script? may load the unit, and the validation above runs
-    # for every script_level of every seed.
-    offending = level_names.compact.select {|level_name| Level.ui_test_name?(level_name)}
-    return [] if offending.empty? || ui_test_script?
-    offending
+  # Of the given level keys, those on the wrong side of the "UI Test "
+  # partition for this script_level's unit. Ignores nil entries, and blockly
+  # keys: deprecated blockly levels have no definition file to place in either
+  # tree, and both seeds load them from config/deprecated_levels.
+  def cross_partition_level_keys(keys)
+    keys = keys.compact.reject {|key| key.start_with?('blockly:')}
+    return [] if keys.empty?
+    # Hoisted out of the block because it may load the unit, and this runs for
+    # every script_level of every seed -- which is why ScriptSeed hands each
+    # script_level its unit rather than its id.
+    ui_test_script = ui_test_script?
+    keys.reject {|key| Level.ui_test_name?(key) == ui_test_script}
   end
 
-  def cross_partition_levels_message(offending_level_names)
-    "UI Test levels may only be used in ui-test-* scripts, " \
-      "but \"#{script&.name}\" references: #{offending_level_names.join(', ')}"
+  def cross_partition_levels_message(offending_level_keys)
+    "a unit and its levels must be on the same side of the \"UI Test \" " \
+      "partition, but \"#{script&.name}\" references: #{offending_level_keys.join(', ')}"
   end
 
   def ui_test_script?
@@ -779,8 +784,9 @@ class ScriptLevel < ApplicationRecord
     end
 
     # This path writes the levels HABTM rows without running model
-    # validations, so apply the UI Test partition rule here as well.
-    offending = cross_partition_level_names(levels.map(&:name))
+    # validations, so apply the UI Test partition rule here as well. Keys
+    # rather than names, so that blockly levels are recognized as exempt.
+    offending = cross_partition_level_keys(levels.map(&:key))
     raise cross_partition_levels_message(offending) if offending.any?
 
     # Unit levels containing anonymous levels must be assessments.

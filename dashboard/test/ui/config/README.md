@@ -36,12 +36,11 @@ The two trees are seeded independently, so a reference from one into the other
 is unresolvable wherever only one tree was loaded. Three rules follow, each
 enforced in the models:
 
-- a `UI Test ` level may only be referenced by a `ui-test-` unit. The reverse
-  is allowed: `ui-test-` units may still reference production levels, which is
-  the state of anything not yet migrated.
+- a unit and the levels it references must be on the same side. Deprecated
+  blockly levels are exempt: they have no definition file in either tree, and
+  both seeds load them from `config/deprecated_levels`.
 - a parent level and its children — contained levels, project template levels,
-  LevelGroup and BubbleChoice sublevels — must be on the same side, in both
-  directions.
+  LevelGroup and BubbleChoice sublevels — must be on the same side.
 - a level in use by a unit, or attached to another level as a parent or
   child, may not be renamed across the boundary, since that would move its
   definition file between the trees or split it from its relatives.
