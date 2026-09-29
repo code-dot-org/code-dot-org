@@ -44,7 +44,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
       beforeFooterBorderedRow={
         <div className={styles.statsRow}>
           <div className={styles.stat}>
-            <Typography variant="h2" className={styles.statValue}>
+            <Typography variant="h2" component="p" className={styles.statValue}>
               {percentage === null ? '—' : `${percentage}%`}
             </Typography>
             <div className={styles.statCaption}>
@@ -57,7 +57,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
             </div>
           </div>
           <div className={styles.stat}>
-            <Typography variant="h2" className={styles.statValue}>
+            <Typography variant="h2" component="p" className={styles.statValue}>
               {attemptNumber}
             </Typography>
             <div className={styles.statCaption}>
