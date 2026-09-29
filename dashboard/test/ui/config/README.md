@@ -64,8 +64,6 @@ A unit whose level pages should be publicly cacheable needs an entry in
 ## Adding content
 
 Developers author this content, working locally with `levelbuilder_mode`
-enabled so that saving a level writes its definition file. Curriculum authors
-do not: the levelbuilder environment refuses to save or destroy `UI Test `
-levels (a `Level` validation and destroy guard), and under the proposal will
-not have access to this tree at all. To move an existing unit's levels here,
-see `bin/curriculum/clone_ui_test_levels.rb`.
+enabled. For now, developers must manually give any new course, unit, or level
+objects the name prefixes mentioned earlier, which will trigger the content to
+be written into this tree rather than into dashboard/config.
