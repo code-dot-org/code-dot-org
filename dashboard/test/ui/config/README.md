@@ -54,6 +54,8 @@ environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`. Its
 level tasks (`custom_levels_ui_tests`, `child_dsls_ui_tests`,
 `parent_dsls_ui_tests`) run after the production level tasks, so a
 not-yet-migrated `ui-test-` unit can still resolve production levels.
+Production levels are currently needed in order to back standalone projects in
+the test environment on urls like https://test-studio.code.org/projects/applab/
 
 ## Cached units
 
