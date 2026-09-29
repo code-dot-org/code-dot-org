@@ -226,9 +226,8 @@ interface WorldTabProps {
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
   // The one image the palette offers: a world level's image of its kind.
   only?: string;
-  // Placing one thing (level_mode.placeOne): no Erase, the image goes on an
-  // empty cell, and choosing another cell moves it there through onMoveCell.
-  placeOne?: boolean;
+  // Present when the level places one thing (level_mode.placeOne): no Erase,
+  // the image goes on an empty cell, and choosing another cell moves it there.
   onMoveCell?: (row: number, col: number, cell: WorldCell) => void;
   // Palette selection, owned by the view so it survives tab switches (this
   // component unmounts when the tab is hidden).
@@ -255,11 +254,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   sceneSize,
   onPaintCell,
   only,
-  placeOne,
   onMoveCell,
   selected,
   onSelect,
 }) => {
+  const placeOne = !!onMoveCell;
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails prefer the engine's trimmed image (a sprite sheet's is its
   // first frame; the raw sheet would show every frame side by side). Trims
@@ -337,6 +336,34 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     announce(`${selectionLabel(selection)} chosen.`);
   };
 
+  // Puts an item on a cell under the level's rule; taps and drops share it.
+  const placeCell = (
+    row: number,
+    col: number,
+    cell: WorldCell
+  ): 'placed' | 'taken' => {
+    if (onMoveCell) {
+      if (grid[row]?.[col]) {
+        return 'taken';
+      }
+      onMoveCell(row, col, cell);
+    } else {
+      onPaintCell(row, col, cell);
+    }
+    return 'placed';
+  };
+  const announceResult = (
+    did: 'placed' | 'removed' | 'taken' | null,
+    image: string
+  ) => {
+    if (did === 'placed') {
+      announce(`${image} placed.`);
+    } else if (did === 'removed') {
+      announce('Removed.');
+    } else if (did === 'taken') {
+      announce('That square is taken.');
+    }
+  };
   // Returns what the press did, so the result can be narrated.
   const paintCell = (
     row: number,
@@ -351,16 +378,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       onPaintCell(row, col, null);
       return 'removed';
     }
-    const cell = {image: effectiveSelected.image, kind: effectiveSelected.kind};
-    if (placeOne && onMoveCell) {
-      if (grid[row]?.[col]) {
-        return 'taken';
-      }
-      onMoveCell(row, col, cell);
-      return 'placed';
-    }
-    onPaintCell(row, col, cell);
-    return 'placed';
+    return placeCell(row, col, {
+      image: effectiveSelected.image,
+      kind: effectiveSelected.kind,
+    });
   };
   // A press on a tile already holding the selected item erases instead
   // (click-again-to-remove). The pressed tile decides for the whole drag
@@ -428,17 +449,17 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
 
   const activateCellByKeyboard = (row: number, col: number) => {
     if (!effectiveSelected) {
-      announce('Choose an item first: press 1 to 9, or 0 for Erase.');
+      announce(
+        placeOne
+          ? 'Choose an item first: press 1 to 9.'
+          : 'Choose an item first: press 1 to 9, or 0 for Erase.'
+      );
       return;
     }
-    const did = startStroke(row, col);
-    if (did === 'placed' && effectiveSelected !== 'erase') {
-      announce(`${effectiveSelected.image} placed.`);
-    } else if (did === 'removed') {
-      announce('Removed.');
-    } else if (did === 'taken') {
-      announce('That square is taken.');
-    }
+    announceResult(
+      startStroke(row, col),
+      effectiveSelected === 'erase' ? '' : effectiveSelected.image
+    );
   };
 
   const handleGridKeyDown = (event: React.KeyboardEvent) => {
@@ -461,7 +482,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     if (step) {
       event.preventDefault();
       const {row, col} = moveCursor(step[0], step[1]);
-      if (paintKeyHeld.current && selected) {
+      // No painting along the way when placing one thing: it would drag along.
+      if (paintKeyHeld.current && selected && !placeOne) {
         paintCell(row, col, strokeErase.current);
       }
       return;
@@ -471,9 +493,12 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       paintKeyHeld.current = false;
       // Only a held cell: clearing empty cells would stream false
       // "Removed." announcements on key repeat and restart the preview.
-      // Placing one thing, only that thing can go.
+      // Placing one thing, only what the palette offers can go.
       const held = grid[cursorRow]?.[cursorCol];
-      if (held && (!placeOne || held.image === only)) {
+      if (
+        held &&
+        (!placeOne || palette.some(item => item.image === held.image))
+      ) {
         onPaintCell(cursorRow, cursorCol, null);
         announce('Removed.');
       }
@@ -614,11 +639,17 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   }, []);
 
   const cellPixels = gridPixels / sceneSize;
-  // Unmeasured, the palette is one column.
-  const paletteRows = areaHeight
-    ? Math.min(paletteItemsPerColumn(areaHeight), selections.length)
-    : selections.length;
-  const paletteColumns = Math.ceil(selections.length / paletteRows);
+  // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
+  const paletteRows = Math.max(
+    1,
+    areaHeight
+      ? Math.min(paletteItemsPerColumn(areaHeight), selections.length)
+      : selections.length
+  );
+  const paletteColumns = Math.max(
+    1,
+    Math.ceil(selections.length / paletteRows)
+  );
   const paletteStyle = {
     '--palette-item': `${PALETTE_ITEM_PX}px`,
     '--palette-gap': `${PALETTE_GAP_PX}px`,
@@ -727,21 +758,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       const cell = {image: drag.item.image, kind: drag.item.kind};
       onSelect(cell);
       clickAfterDrop.current = true;
-      const held = grid[target.row]?.[target.col];
-      if (held?.image === cell.image) {
+      if (grid[target.row]?.[target.col]?.image === cell.image) {
         announce(`${cell.image} is already there.`);
         return;
       }
-      if (placeOne && onMoveCell) {
-        if (held) {
-          announce('That square is taken.');
-          return;
-        }
-        onMoveCell(target.row, target.col, cell);
-      } else {
-        onPaintCell(target.row, target.col, cell);
-      }
-      announce(`${cell.image} placed.`);
+      announceResult(placeCell(target.row, target.col, cell), cell.image);
     };
     const onCancel = (e: PointerEvent) => {
       if (e.pointerId === dragRef.current?.pointerId) {
@@ -853,10 +874,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         )}
       </div>
       <p id="world-grid-help" className={moduleStyles.srOnly}>
-        Arrow keys move around the grid. Enter or Space places the chosen item,
-        or removes it if the cell already holds it; hold the key down and move
-        to keep painting. Delete clears the cell. Number keys 1 to 9 choose an
-        item; 0 chooses Erase.
+        {placeOne
+          ? 'Arrow keys move around the grid. Enter or Space puts the chosen item on an empty cell, or moves it there; on its own cell, it removes it. Delete removes it. Number keys 1 to 9 choose an item.'
+          : 'Arrow keys move around the grid. Enter or Space places the chosen item, or removes it if the cell already holds it; hold the key down and move to keep painting. Delete clears the cell. Number keys 1 to 9 choose an item; 0 chooses Erase.'}
       </p>
       <div className={moduleStyles.worldGridColumn}>
         {!palette.length && (

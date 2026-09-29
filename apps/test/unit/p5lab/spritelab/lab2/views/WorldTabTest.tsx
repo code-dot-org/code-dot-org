@@ -38,20 +38,18 @@ beforeAll(() => {
   };
 });
 
-function renderTab(
+function renderTab({
   onPaintCell = jest.fn(),
   onSelect = jest.fn(),
-  world?: React.ComponentProps<typeof WorldTab>['world'],
-  extra: Partial<React.ComponentProps<typeof WorldTab>> = {}
-) {
+  ...props
+}: Partial<React.ComponentProps<typeof WorldTab>> = {}) {
   const utils = render(
     <WorldTab
       sceneSize={10}
-      world={world}
-      onPaintCell={onPaintCell}
       selected={null}
+      {...props}
+      onPaintCell={onPaintCell}
       onSelect={onSelect}
-      {...extra}
     />
   );
   // jsdom lays nothing out: the grid's box is given, with no border.
@@ -144,8 +142,8 @@ describe('WorldTab palette', () => {
   });
 
   it('drops nothing on a cell that already holds the item, and says so', () => {
-    const {onPaintCell, onSelect} = renderTab(jest.fn(), jest.fn(), {
-      grid: [[{image: 'Stone', kind: 'block'}]],
+    const {onPaintCell, onSelect} = renderTab({
+      world: {grid: [[{image: 'Stone', kind: 'block'}]]},
     });
     const stone = screen.getByRole('radio', {name: /Stone, block/});
     fireEvent.pointerDown(stone, {
@@ -159,45 +157,6 @@ describe('WorldTab palette', () => {
     expect(onPaintCell).not.toHaveBeenCalled();
     expect(onSelect).toHaveBeenCalledWith({image: 'Stone', kind: 'block'});
     expect(screen.getByText('Stone is already there.')).toBeTruthy();
-  });
-
-  it('moves the one placeable item on a drop, and refuses a taken cell', () => {
-    const onMoveCell = jest.fn();
-    const {onPaintCell} = renderTab(
-      jest.fn(),
-      jest.fn(),
-      {
-        grid: [
-          [
-            {image: 'Hero', kind: 'sprite'},
-            {image: 'Stone', kind: 'block'},
-          ],
-        ],
-      },
-      {only: 'Hero', placeOne: true, onMoveCell}
-    );
-    const hero = screen.getByRole('radio', {name: /Hero, sprite/});
-    const drop = (clientX: number, clientY: number) => {
-      fireEvent.pointerDown(hero, {
-        pointerId: 1,
-        button: 0,
-        clientX: 20,
-        clientY: 20,
-      });
-      fireEvent.pointerMove(hero, {pointerId: 1, clientX: 60, clientY: 60});
-      fireEvent.pointerUp(hero, {pointerId: 1, clientX, clientY});
-    };
-    // Onto the block: refused.
-    drop(100 + 1 + 50 + 10, 110);
-    expect(onMoveCell).not.toHaveBeenCalled();
-    expect(screen.getByText('That square is taken.')).toBeTruthy();
-    // Onto an empty cell: moved there, never painted.
-    drop(100 + 1 + 50 * 4 + 10, 100 + 1 + 50 * 2 + 10);
-    expect(onMoveCell).toHaveBeenCalledWith(2, 4, {
-      image: 'Hero',
-      kind: 'sprite',
-    });
-    expect(onPaintCell).not.toHaveBeenCalled();
   });
 
   it('drops nothing when released off the grid', () => {
@@ -224,5 +183,76 @@ describe('WorldTab palette', () => {
       key: 'ArrowDown',
     });
     expect(onSelect).toHaveBeenLastCalledWith('erase');
+  });
+
+  describe('placing one thing', () => {
+    const hero = {image: 'Hero', kind: 'sprite' as const};
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const dragHero = (clientX: number, clientY: number) => {
+      const item = screen.getByRole('radio', {name: /Hero, sprite/});
+      fireEvent.pointerDown(item, {
+        pointerId: 1,
+        button: 0,
+        clientX: 20,
+        clientY: 20,
+      });
+      fireEvent.pointerMove(item, {pointerId: 1, clientX: 60, clientY: 60});
+      fireEvent.pointerUp(item, {pointerId: 1, clientX, clientY});
+    };
+
+    it('offers no Erase and moves the item on a drop, refusing a taken cell', () => {
+      const onMoveCell = jest.fn();
+      const {onPaintCell} = renderTab({
+        world: {grid: [[hero, stone]]},
+        only: 'Hero',
+        onMoveCell,
+      });
+      expect(screen.queryByRole('radio', {name: /Erase/})).toBeNull();
+      dragHero(100 + 1 + 50 + 10, 110);
+      expect(onMoveCell).not.toHaveBeenCalled();
+      expect(screen.getByText('That square is taken.')).toBeTruthy();
+      dragHero(100 + 1 + 50 * 4 + 10, 100 + 1 + 50 * 2 + 10);
+      expect(onMoveCell).toHaveBeenCalledWith(2, 4, hero);
+      expect(onPaintCell).not.toHaveBeenCalled();
+    });
+
+    it('places by keyboard once, not along a held arrow stroke', () => {
+      const onMoveCell = jest.fn();
+      const {onPaintCell} = renderTab({
+        world: {grid: [[stone]]},
+        only: 'Hero',
+        onMoveCell,
+        selected: hero,
+      });
+      const cells = screen.getAllByRole('gridcell');
+      fireEvent.keyDown(cells[0], {key: 'Enter'});
+      expect(onMoveCell).not.toHaveBeenCalled();
+      expect(screen.getByText('That square is taken.')).toBeTruthy();
+      fireEvent.keyUp(cells[0], {key: 'Enter'});
+      fireEvent.keyDown(cells[0], {key: 'ArrowRight'});
+      fireEvent.keyDown(cells[1], {key: 'Enter'});
+      expect(onMoveCell).toHaveBeenCalledWith(0, 1, hero);
+      // Enter still held: the arrow moves the cursor and nothing else.
+      fireEvent.keyDown(cells[1], {key: 'ArrowRight'});
+      expect(onMoveCell).toHaveBeenCalledTimes(1);
+      expect(onPaintCell).not.toHaveBeenCalled();
+    });
+
+    it('lets Delete remove any image the palette offers', () => {
+      const {onPaintCell} = renderTab({
+        world: {grid: [[hero]]},
+        onMoveCell: jest.fn(),
+      });
+      fireEvent.keyDown(screen.getAllByRole('gridcell')[0], {key: 'Delete'});
+      expect(onPaintCell).toHaveBeenCalledWith(0, 0, null);
+    });
+
+    it('keeps a one-cell palette shape with nothing to place', () => {
+      const errors = jest.spyOn(console, 'error').mockImplementation(() => {});
+      renderTab({only: 'Nothing', onMoveCell: jest.fn()});
+      expect(screen.queryAllByRole('radio')).toHaveLength(0);
+      expect(errors.mock.calls.flat().join(' ')).not.toMatch(/NaN/);
+      errors.mockRestore();
+    });
   });
 });

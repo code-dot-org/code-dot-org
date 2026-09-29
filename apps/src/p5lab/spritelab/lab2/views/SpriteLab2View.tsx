@@ -1938,8 +1938,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
                 only={paletteOnlyImage}
-                placeOne={placeOne}
-                onMoveCell={handleMoveWorldCell}
+                onMoveCell={placeOne ? handleMoveWorldCell : undefined}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
               />
