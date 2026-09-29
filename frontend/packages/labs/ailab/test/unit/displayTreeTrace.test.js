@@ -1,3 +1,4 @@
+import {getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
 import {traceDisplayTree} from '../../src/helpers/displayTreeTrace';
 import {setTestData} from '../../src/redux';
@@ -44,7 +45,9 @@ describe('traceDisplayTree on shipped datasets', () => {
         expect(state.selectedFeatures).toContain(step.column);
         expect(step.value).toBe(row[step.column]);
         expect(step.nodeId).toBe(path[index]);
-        expect(path[index + 1]).toBe(`${step.nodeId}.${step.branchIndex}`);
+        expect(path[index + 1]).toBe(
+          getChildNodeId(step.nodeId, step.branchIndex),
+        );
       });
     });
   });

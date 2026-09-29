@@ -1,3 +1,5 @@
+$path-ring-width: 3px;
+
 .decisionTree {
   clear: both;
   padding-top: 20px;
@@ -10,7 +12,7 @@
 
 .scroll {
   overflow-x: auto;
-  padding-bottom: 10px;
+  padding: $path-ring-width $path-ring-width 10px;
 }
 
 .canvas {
@@ -28,7 +30,7 @@
 }
 
 .pathEdge {
-  stroke: var(--ailab-teal);
+  stroke: var(--brand-purple-80, #2b1e9f);
   stroke-width: 3;
 }
 
@@ -66,7 +68,7 @@
 
 // A ring, not a wider border, so nodes on the path keep their size.
 .pathNode {
-  box-shadow: 0 0 0 3px var(--ailab-teal);
+  box-shadow: 0 0 0 $path-ring-width var(--brand-purple-80, #2b1e9f);
 }
 
 .nodeText {
