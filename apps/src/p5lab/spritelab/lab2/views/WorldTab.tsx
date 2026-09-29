@@ -390,6 +390,20 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   // (click-again-to-remove). The pressed tile decides for the whole drag
   // stroke, so dragging across painted tiles doesn't toggle them.
   const strokeErase = useRef(false);
+  // A stroke lasts from a press on a cell to the release, so a pointer that
+  // crosses cells for another reason (a drag from the palette) paints nothing.
+  const strokeActive = useRef(false);
+  useEffect(() => {
+    const end = () => (strokeActive.current = false);
+    window.addEventListener('pointerup', end);
+    window.addEventListener('pointercancel', end);
+    window.addEventListener('blur', end);
+    return () => {
+      window.removeEventListener('pointerup', end);
+      window.removeEventListener('pointercancel', end);
+      window.removeEventListener('blur', end);
+    };
+  }, []);
   const startStroke = (row: number, col: number) => {
     strokeErase.current =
       effectiveSelected !== 'erase' &&
@@ -546,6 +560,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       // for Safari and macOS Firefox, which don't focus a pressed button.
       event.currentTarget.focus();
       setCursor({row, col});
+      strokeActive.current = true;
       latest.current.startStroke(row, col);
     },
     []
@@ -557,7 +572,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       col: number
     ) => {
       // No drag painting when placing one thing: it would drag along.
-      if (event.buttons & 1 && !placeOne) {
+      if (strokeActive.current && !placeOne) {
         latest.current.paintCell(row, col, strokeErase.current);
       }
     },

@@ -160,6 +160,33 @@ describe('WorldTab palette', () => {
     expect(screen.getByText('Stone is already there.')).toBeTruthy();
   });
 
+  it('paints along a stroke from a cell, not under a drag from the palette', () => {
+    const stone = {image: 'Stone', kind: 'block' as const};
+    const {onPaintCell} = renderTab({selected: stone});
+    const cells = screen.getAllByRole('gridcell');
+    // A drag from the palette crosses cells with the button down.
+    const item = screen.getByRole('radio', {name: /Stone, block/});
+    fireEvent.pointerDown(item, {
+      pointerId: 1,
+      button: 0,
+      clientX: 20,
+      clientY: 20,
+    });
+    fireEvent.pointerMove(item, {pointerId: 1, clientX: 60, clientY: 60});
+    fireEvent.pointerEnter(cells[3], {pointerId: 1, buttons: 1});
+    expect(onPaintCell).not.toHaveBeenCalled();
+    fireEvent.pointerUp(item, {pointerId: 1, clientX: 60, clientY: 60});
+    // A stroke that began on a cell paints the cells it enters, until the
+    // release.
+    fireEvent.pointerDown(cells[0], {pointerId: 1, button: 0, buttons: 1});
+    fireEvent.pointerEnter(cells[1], {pointerId: 1, buttons: 1});
+    expect(onPaintCell).toHaveBeenCalledTimes(2);
+    expect(onPaintCell).toHaveBeenLastCalledWith(0, 1, stone);
+    fireEvent.pointerUp(window, {pointerId: 1});
+    fireEvent.pointerEnter(cells[2], {pointerId: 1, buttons: 1});
+    expect(onPaintCell).toHaveBeenCalledTimes(2);
+  });
+
   it('drops nothing when released off the grid', () => {
     const {onPaintCell} = renderTab();
     const stone = screen.getByRole('radio', {name: /Stone, block/});
