@@ -10,16 +10,22 @@ Ported from `apps/src/lab2/progress`, `apps/src/code-studio/progressRedux.ts`
 and their helpers. The full compatibility assessment, including every known
 divergence from `apps/` and the proposed order of work, is in
 [docs/port.md](docs/port.md).
+How validation works is in [docs/validation.md](docs/validation.md).
 
 ## Status
 
 Experimental. Builds, typechecks, lints and passes its tests; nothing
-consumes it yet.
-Known to be broken or incomplete, so no host should depend on it before these
-are addressed (details and citations in docs/port.md):
+consumes it yet. It is at parity with the apps code it was cut from, except
+where docs/port.md records a deliberate difference, and for these, which
+wait on a host or on other packages:
 
 - No host reports idleness to `milestoneTimer` yet, so idle time counts as
   time spent.
+- Lesson visibility and locking (`lessonIsVisible`, `lessonIsLockedForUser`,
+  `lessonIsLockedForAllStudents`), and the verified-instructor and
+  lockable-authorized flags from `/api/user_progress`, need the
+  hidden-lesson, lesson-lock and teacher-section slices, which do not exist
+  under `frontend/` yet.
 
 Legacy (non-Lab2) labs report progress through
 `apps/src/code-studio/reporting.js`. This package shares their result
@@ -30,30 +36,31 @@ whether it should is an open design decision (docs/port.md, section 4).
 
 `@code-dot-org/progress`:
 
-| Export                                                                                                         | Kind            | Purpose                                                                              |
-| -------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------ |
-| `ProgressManager`                                                                                              | Class           | Runs a lab's `Validator` over the level's validations; reports through a callback    |
-| `ProgressContainer`, `useProgressManager`, `ProgressManagerContext`                                            | Component, hook | Owns a lab's `ProgressManager`, mirrors it into the slice, reports success           |
-| `TestResultValidator`, `ValidationTracker`, `TestResultConditionTypes`                                         | Classes         | Validation by levelbuilder-written tests, for Python Lab and Codebridge              |
-| `ConditionsChecker`                                                                                            | Class           | Accumulates satisfied conditions for a validator                                     |
-| `milestoneTimer`, `MilestoneTimer`                                                                             | Instance, class | Time on the level since the last milestone, less idle time; sent with each post      |
-| `configureLevelNavigation`, `resetLevelNavigation`, `canChangeLevelInPage`, `levelPageUrl`                     | Functions       | The host's part in moving between levels                                             |
-| `getInitialValidationState`                                                                                    | Function        | An empty `ValidationState`                                                           |
-| `TestResults`, `MINIMUM_PASS_RESULT`, `MINIMUM_OPTIMAL_RESULT`                                                 | Constants       | Numeric result codes, matching `apps/src/constants.js` and Rails `ActivityConstants` |
-| `LevelStatuses`, `ProgressLevelTypes`, `ViewTypes`, `PUZZLE_PAGE_NONE`, `PASSED_ALL_TESTS_VALIDATION`          | Constants       |                                                                                      |
-| `Validator`, `Validation`, `Condition`, `ValidationState`, `ProgressState`, `UnitProgress`, `NumberedLevel`, … | Types           |                                                                                      |
+| Export                                                                                                                                             | Kind            | Purpose                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------ |
+| `ProgressManager`                                                                                                                                  | Class           | Runs a lab's `Validator` over the level's validations; reports through a callback    |
+| `ProgressContainer`, `useProgressManager`, `ProgressManagerContext`                                                                                | Component, hook | Owns a lab's `ProgressManager`, mirrors it into the slice, reports success           |
+| `TestResultValidator`, `ValidationTracker`, `TestResultConditionTypes`                                                                             | Classes         | Validation by levelbuilder-written tests, for Python Lab and Codebridge              |
+| `ConditionsChecker`                                                                                                                                | Class           | Accumulates satisfied conditions for a validator                                     |
+| `milestoneTimer`, `MilestoneTimer`                                                                                                                 | Instance, class | Time on the level since the last milestone, less idle time; sent with each post      |
+| `configureLevelNavigation`, `resetLevelNavigation`, `canChangeLevelInPage`, `levelPageUrl`                                                         | Functions       | The host's part in moving between levels                                             |
+| `getInitialValidationState`                                                                                                                        | Function        | An empty `ValidationState`                                                           |
+| `TestResults`, `MINIMUM_PASS_RESULT`, `MINIMUM_OPTIMAL_RESULT`                                                                                     | Constants       | Numeric result codes, matching `apps/src/constants.js` and Rails `ActivityConstants` |
+| `getIconForLevel`, `lessonProgressForSection`, `processServerSectionProgress`, `isLevelStatusCompleted`, `lessonLocked`, `studentNeedsFeedback`, … | Functions       | Pure helpers for progress bubbles and progress tables                                |
+| `LevelStatuses`, `ProgressLevelTypes`, `ViewTypes`, `PUZZLE_PAGE_NONE`, `PASSED_ALL_TESTS_VALIDATION`                                              | Constants       |                                                                                      |
+| `Validator`, `Validation`, `Condition`, `ValidationState`, `ProgressState`, `UnitProgress`, `NumberedLevel`, …                                     | Types           |                                                                                      |
 
 `@code-dot-org/progress/redux`:
 
-| Export                                                                                                                                                                                                                             | Kind      | Purpose                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------ |
-| `progressSlice` (default)                                                                                                                                                                                                          | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux`                     |
-| `initProgress`, `setValidationState`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                                                  | Actions   |                                                                                |
-| `queryUserProgress`, `sendSuccessReport`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`, `continueOrFinishLesson`                                                                       | Thunks    | Request through `DashboardApiClient`                                           |
-| `installLevelNavigationHandler`                                                                                                                                                                                                    | Function  | Follows back and forward between in-page levels                                |
-| `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath`                               | Selectors | Take the root state                                                            |
-| `groupedLessons`, `levelsByLesson`, `lessons`, `progressionsFromLevels`, `hasGroups`, `hasLockableLessons`, `getCurrentLesson`, `getLessonCount`, `levelCount`, `isPerfect`, `lessonExtrasUrl`, `lessonTutorPath`, `hasLessonPlan` | Selectors | For the unit overview, progress table and lesson header; signatures as in apps |
-| `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                                                     | Helpers   | Pure                                                                           |
+| Export                                                                                                                                                                                                                                           | Kind      | Purpose                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------ |
+| `progressSlice` (default)                                                                                                                                                                                                                        | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux`                     |
+| `initProgress`, `setValidationState`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                                                                | Actions   |                                                                                |
+| `queryUserProgress`, `sendSuccessReport`, `sendSuccessReportForLevel`, `sendProgressReport`, `sendStartedReportIfNotStarted`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`, `continueOrFinishLesson` | Thunks    | Request through `DashboardApiClient`                                           |
+| `installLevelNavigationHandler`                                                                                                                                                                                                                  | Function  | Follows back and forward between in-page levels                                |
+| `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath`                                             | Selectors | Take the root state                                                            |
+| `groupedLessons`, `levelsByLesson`, `lessons`, `progressionsFromLevels`, `hasGroups`, `hasLockableLessons`, `getCurrentLesson`, `getLessonCount`, `levelCount`, `isPerfect`, `lessonExtrasUrl`, `lessonTutorPath`, `hasLessonPlan`               | Selectors | For the unit overview, progress table and lesson header; signatures as in apps |
+| `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                                                                   | Helpers   | Pure                                                                           |
 
 ## Usage
 

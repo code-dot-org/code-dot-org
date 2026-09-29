@@ -138,7 +138,7 @@ export const ProgressLevelTypes = {
 export const ViewTypes = {
   Participant: 'Participant',
   Instructor: 'Instructor',
-};
+} as const;
 
 /**
  * Where a bubble choice sublevel's Continue goes. Mirrors

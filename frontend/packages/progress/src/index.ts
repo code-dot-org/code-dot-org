@@ -24,5 +24,6 @@ export {
   getInitialValidationState,
 } from './ProgressManager';
 export * from './constants';
+export * from './progressHelpers';
 export * from './redux';
 export * from './types';

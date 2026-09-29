@@ -140,6 +140,7 @@ describe('levelsByLesson', () => {
       LevelStatuses.Attempted,
     ]);
     expect(levels[0][2].sublevels?.map(l => l.bubbleText)).toEqual(['a', 'b']);
+    expect(levels[0].map(l => l.isUnplugged)).toEqual([true, false, false]);
   });
 
   it('only numbers non-unplugged levels', () => {
