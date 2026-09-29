@@ -47,3 +47,49 @@ export const UserProgressResponseSchema = z
     current_lesson: z.number().optional(),
   })
   .passthrough();
+
+/**
+ * GET /s/:script/hidden_lessons (ScriptLevelsController#hidden_lesson_ids).
+ * An instructor gets hidden lesson ids by section id; a participant, the ids
+ * hidden for them across their sections.
+ */
+export const HiddenLessonsResponseSchema = z.union([
+  z.array(z.number()),
+  z.record(z.string(), z.array(z.number())),
+]);
+
+/** Enough to find, or create, the student's UserLevel for a lockable lesson. */
+export const UserLevelDataSchema = z.object({
+  user_id: z.number(),
+  level_id: z.number(),
+  script_id: z.number(),
+});
+
+/** One student's lock state in a lockable lesson (Lesson#lockable_state). */
+export const StudentLockStateSchema = z
+  .object({
+    user_level_data: UserLevelDataSchema,
+    name: z.string(),
+    locked: z.boolean(),
+    readonly_answers: z.boolean(),
+    is_demo_student: z.boolean().optional(),
+  })
+  .passthrough();
+
+/**
+ * GET /api/lock_status (ApiController#lockable_state): for each section the
+ * signed-in user instructs, keyed by section id, the lock state of each
+ * student in each lockable lesson, keyed by lesson id. A signed-out user
+ * gets {}.
+ */
+export const LockStatusResponseSchema = z.record(
+  z.string(),
+  z
+    .object({
+      section_id: z.number(),
+      section_name: z.string(),
+      ai_chat_access_level: z.string().optional(),
+      lessons: z.record(z.string(), z.array(StudentLockStateSchema)),
+    })
+    .passthrough(),
+);

@@ -1,13 +1,23 @@
 // Pure helpers over levels, lessons and level progress, for progress bubbles
 // and progress tables. Ported from apps/src/templates/progress/
-// progressHelpers.js. lessonIsVisible, lessonIsLockedForUser and
-// lessonIsLockedForAllStudents are not here: they read the hidden-lesson,
-// lesson-lock and teacher-section slices, which frontend/ does not have yet.
+// progressHelpers.js. Where apps read the selected section from the teacher
+// sections slice, these take the section id.
 
 import _ from 'lodash';
 
-import {LevelStatuses} from './constants';
-import type {LevelStatus, UnitProgress, UnitProgressDefinition} from './types';
+import type {CurrentUserState} from '@code-dot-org/users/redux';
+
+import {LevelStatuses, ViewTypes} from './constants';
+import type {HiddenLessonState} from './redux/hiddenLessonSlice';
+import {isLessonHiddenForSection} from './redux/hiddenLessonSlice';
+import type {LessonLockState} from './redux/lessonLockSlice';
+import {fullyLockedLessonMapping} from './redux/lessonLockSlice';
+import type {
+  LevelStatus,
+  UnitProgress,
+  UnitProgressDefinition,
+  ViewType,
+} from './types';
 import {processServerStudentProgress} from './redux/progressSlice';
 
 interface LevelLike {
@@ -37,6 +47,71 @@ export interface LessonProgressSummary {
 }
 
 export const defaultBubbleIcon = 'desktop';
+
+/**
+ * Whether the lesson shows: hidden lessons show only to an instructor. A
+ * participant passes no section.
+ */
+export function lessonIsVisible(
+  lesson: {id: number},
+  state: {hiddenLesson: HiddenLessonState},
+  sectionId: number | string | null | undefined,
+  viewAs: ViewType,
+): boolean {
+  if (!viewAs) {
+    throw new Error('missing param viewAs in lessonIsVisible');
+  }
+  const isHidden = isLessonHiddenForSection(
+    state.hiddenLesson,
+    sectionId,
+    lesson.id,
+  );
+  return !isHidden || viewAs === ViewTypes.Instructor;
+}
+
+/**
+ * Whether a lockable lesson is locked for this user: always when signed out;
+ * for an instructor unless authorized; for a participant, per its levels.
+ */
+export function lessonIsLockedForUser(
+  lesson: {lockable?: boolean},
+  levels: LevelLike[],
+  state: {
+    currentUser: Pick<CurrentUserState, 'userId'>;
+    lessonLock: Pick<LessonLockState, 'lockableAuthorized'>;
+  },
+  viewAs: ViewType,
+): boolean {
+  if (!lesson.lockable) {
+    return false;
+  }
+  if (!state.currentUser.userId) {
+    return true;
+  }
+  if (viewAs === ViewTypes.Instructor) {
+    return !state.lessonLock.lockableAuthorized;
+  }
+  if (viewAs === ViewTypes.Participant) {
+    return lessonLocked(levels);
+  }
+  return true;
+}
+
+/**
+ * Whether the lesson is locked for every student in the section; false with
+ * no section, as for a participant.
+ */
+export function lessonIsLockedForAllStudents(
+  lessonId: number | string,
+  state: {lessonLock: Pick<LessonLockState, 'lessonsBySectionId'>},
+  sectionId: number | string | null | undefined,
+): boolean {
+  if (!sectionId) {
+    return false;
+  }
+  const section = state.lessonLock.lessonsBySectionId[String(sectionId)];
+  return !!fullyLockedLessonMapping(section)[String(lessonId)];
+}
 
 /**
  * A lockable lesson holds exactly one level group, as its last level, and

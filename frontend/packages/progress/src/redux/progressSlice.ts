@@ -17,7 +17,18 @@ import type {StateFor, MockStore} from '@code-dot-org/core/redux';
 // type without a runtime dependency on the users package.
 import type {currentUserSlice} from '@code-dot-org/users/redux';
 
-type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
+import type hiddenLessonSlice from './hiddenLessonSlice';
+import {authorizeLockable} from './lessonLockSlice';
+import type lessonLockSlice from './lessonLockSlice';
+
+type Store = MockStore<
+  [
+    typeof progressSlice,
+    typeof hiddenLessonSlice,
+    typeof lessonLockSlice,
+    typeof currentUserSlice,
+  ]
+>;
 type RootState = StateFor<Store>;
 /** The store the progress thunks and ProgressContainer are typed against. */
 export type ProgressStore = Store;
@@ -1185,6 +1196,8 @@ const userProgressFromServer = async (
       updateFocusArea(data.changeFocusAreaPath || '', data.focusAreaLessonIds),
     );
   }
+
+  dispatch(authorizeLockable(data.lockableAuthorized));
 
   if (data.completed) {
     dispatch(setScriptCompleted());

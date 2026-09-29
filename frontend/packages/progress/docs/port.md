@@ -177,12 +177,12 @@ The `mergeUnitProgress` dispatch it also makes is restored; see 3.1 item 3.
 ### 3.3 Behaviour dropped from the user-progress path
 
 Apps dispatches `setVerified` from `isVerifiedInstructor` and
-`authorizeLockable` from `lockableAuthorized`. Neither slice exists under
-`frontend/`, so the port silently drops both fields. Lockable lessons and
-verified-teacher gating have no home yet; whichever package takes them must
-read these two fields from the same response. Core's
-`UserProgressResponseSchema` now types both, so that package will find them
-parsed.
+`authorizeLockable` from `lockableAuthorized`. The port dropped both.
+`authorizeLockable` is fixed: the lesson-lock slice is now in this package
+(3.10), and `queryUserProgress` dispatches it where apps did, a signed-out
+response included. `setVerified` is still dropped; the verified-instructor
+flag describes the signed-in user and belongs with the users package. Core's
+`UserProgressResponseSchema` types `isVerifiedInstructor` for it.
 
 ### 3.4 Behaviour dropped from navigation
 
@@ -408,8 +408,10 @@ gained the `lessonTutorPath` the server sends, and its `UnitLevel` the
   `Instructor` although two are named for students; the port dispatches
   `Participant` there. The peer-review, `levelsByLesson`, `groupedLessons`,
   `progressionsFromLevels`, `lessonExtrasUrl` and `isPerfect` blocks followed
-  with the selectors in 3.5, and `activityUtilsTest.js` and the portable
-  blocks of `progressHelpersTest.js` with the helpers in 3.9. Apps has
+  with the selectors in 3.5, `activityUtilsTest.js` and
+  `progressHelpersTest.js` with the helpers in 3.9, and
+  `hiddenLessonReduxTest.js` and `lessonLockReduxTest.js` with the slices in
+  3.10. Apps has
   `progressReduxTest.js` (2074 lines: reducers, selectors,
   `userProgressFromServer`, peer reviews, bubble-choice navigation),
   `activityUtilsTest.js`, `progressHelpersTest.js` and
@@ -427,11 +429,42 @@ helpers are now in `src/progressHelpers.ts`: `lessonLocked`,
 and `processServerSectionProgress`. They serve progress bubbles and the
 teacher progress tables; they live here for the reason the selectors do.
 
-Not ported: `lessonIsVisible`, `lessonIsLockedForUser` and
-`lessonIsLockedForAllStudents`. They read the hidden-lesson, lesson-lock and
-teacher-section slices, none of which exists under `frontend/`; they belong
-with whichever package brings those slices, as do `setVerified` and
-`authorizeLockable` (3.3).
+`lessonIsVisible`, `lessonIsLockedForUser` and
+`lessonIsLockedForAllStudents` followed with the slices in 3.10. Apps read
+the selected section from the teacher-sections slice; these take it as an
+argument, so this package does not depend on sections.
+
+### 3.10 Hidden lessons and lesson locks
+
+Fixed. Apps keeps them in `apps/src/code-studio/hiddenLessonRedux.js` and
+`lessonLockRedux.js`, beside progress rather than in it. They are here now,
+as `hiddenLessonSlice` and `lessonLockSlice` under their apps names
+(`hiddenLesson`, `lessonLock`), with this package owning lesson and level
+structure while teacher-dashboard keeps sections. Their requests go through
+core: `progress.getHiddenLessons`, `toggleHidden`, `getLockStatus` and
+`updateLockStatus`, with schemas for both responses.
+
+Differences from apps:
+
+- Apps stored the lock dialog's lock status, and rewrote it when the
+  teacher-sections slice selected another section, the only thing tying the
+  slice to sections. The port derives it: `getLockDialogStatus(state,
+sectionId)`. `openLockDialog` takes the lesson id alone, and
+  `refetchSectionLockStatus` no arguments.
+- `GET /api/lock_status` ignores the `script_id` apps sent; it returns every
+  section the user instructs. The port sends none. `loadSectionLockStatus`
+  does the first load, which apps' teacher panel did by hand, and resolves
+  with the response, whose section ids and names seed a host's sections.
+- Apps' save checked each student's `user_level_id`, a field neither the
+  server nor the dialog carries, so the check always passed. The port
+  compares `user_level_data.user_id`.
+- As in apps, `lockLesson` saves every student, including those already
+  locked: saves compare against the open dialog, and none is open.
+- Hidden-lesson state is plain objects where apps used Immutable maps. A
+  failed toggle post keeps the local change, as apps did, and is now logged;
+  apps' `window.__TestInterface` hook for Cucumber is gone.
+- `getHiddenLessons` is a host's call. Apps' `progress.js` made it during
+  page setup when the unit has hideable lessons.
 
 ## 4. Level validation for legacy (non-Lab2) labs
 
