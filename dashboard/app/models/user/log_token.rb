@@ -2,6 +2,23 @@
 # Tokens are random rather than derived, so this table is the only way back.
 # Rows must outlive the logs carrying their tokens: with a school-year window
 # and 90-day log retention, that is the current window and the one before it.
+# == Schema Information
+#
+# Table name: user_log_tokens
+#
+#  id          :bigint           not null, primary key
+#  user_id     :integer          not null
+#  destination :string(255)      not null
+#  period      :integer          not null
+#  uuid        :string(36)       not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+# Indexes
+#
+#  index_user_log_tokens_on_user_destination_period  (user_id,destination,period) UNIQUE
+#  index_user_log_tokens_on_uuid                     (uuid) UNIQUE
+#
 require 'cdo/shared_cache'
 
 class User::LogToken < ApplicationRecord
