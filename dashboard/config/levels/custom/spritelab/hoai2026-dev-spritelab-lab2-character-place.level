@@ -1,0 +1,78 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
+    "guide_steps": [
+      {
+        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline under **when run**. It puts your character on the **left**. Click **Play** to see them."
+      },
+      {
+        "text": "**There they are.** Click **Continue**.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
+      }
+    ],
+    "long_instructions": "# Add your character\nDrag **make new sprite** onto the dotted outline under **when run** to put your character on the left.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "spritelab2_makeSpriteAtPosition",
+          "fields": {
+            "POSITION": "left"
+          }
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_makeSpriteAtPosition",
+              "fields": {
+                "POSITION": "left"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}]]></config>
+</GamelabJr>

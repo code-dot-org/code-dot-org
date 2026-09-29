@@ -1,7 +1,7 @@
 import {z} from 'zod';
 
-import {checkpointSchema} from './checkpoint';
-import {projectSchema} from './project';
+import {checkpointSchema, checkpointSourceSchema} from './checkpoint';
+import {projectSchema, projectSourceSchema} from './project';
 import {skillSchema, skillSourceSchema} from './skill';
 
 /**
@@ -15,13 +15,18 @@ export const pathwaySourceSchema = z.strictObject({
   title: z.string().min(1),
   objective: z.string().min(1),
   // Adaptive pathways are built around a single project.
-  project: projectSchema,
+  project: projectSourceSchema,
   // A pathway's standards are its skills' standards; see pathwayStandards().
   skills: z.record(z.string(), skillSourceSchema),
-  checkpoints: z.array(checkpointSchema).min(1),
+  checkpoints: z.array(checkpointSourceSchema).min(1),
 });
 
-/** Resolved pathway schema served by the server, with skill standards resolved. */
+/**
+ * Resolved pathway schema served by the server: skill standards resolved and
+ * each referenced level's properties inlined.
+ */
 export const pathwaySchema = pathwaySourceSchema.extend({
+  project: projectSchema,
   skills: z.record(z.string(), skillSchema),
+  checkpoints: z.array(checkpointSchema).min(1),
 });

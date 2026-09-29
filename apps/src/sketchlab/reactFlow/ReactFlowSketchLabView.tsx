@@ -28,13 +28,10 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
-import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -115,26 +112,14 @@ function ReactFlowSketchLabViewInner({
     closeUploadsDisabledModal,
   } = useModeratedImageUpload({levelName: levelProperties.name});
   // The Backpack API redirects to sign-in for signed-out users, so we only
-  // create an instance when we have a user.
-  const backpackContext = useMemo(
+  // offer the save when we have a user.
+  const saveBackpackApi = useMemo(
     () =>
       currentUserId
-        ? {
-            primaryApi: new BackpackClientApi('sketchlab', null),
-            secondaryApis: {aichat: new BackpackClientApi('aichat', null)},
-          }
-        : null,
+        ? Lab2Registry.getInstance().getUnifiedBackpackApi()
+        : undefined,
     [currentUserId]
   );
-
-  const saveBackpackApi = useMemo(() => {
-    if (experiments.isEnabledAllowingQueryString(experiments.LEGACY_BACKPACK)) {
-      return backpackContext?.primaryApi;
-    }
-    return currentUserId
-      ? Lab2Registry.getInstance().getUnifiedBackpackApi()
-      : undefined;
-  }, [currentUserId, backpackContext]);
 
   // Remount the canvas to re-read sources, same pattern as Excalidraw's
   // key={excalidrawMountKey}.
@@ -220,12 +205,11 @@ function ReactFlowSketchLabViewInner({
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
       saveToBackpackButton: {
-        onClick: (fileList: string[], notify: BackpackNotify) =>
+        onClick: (notify: BackpackNotify) =>
           handleSaveToBackpack(
             reactFlow,
             saveBackpackApi,
             dialogControl,
-            fileList,
             notify
           ),
         text: 'Save Sketch to Backpack',
@@ -302,121 +286,117 @@ function ReactFlowSketchLabViewInner({
   }
 
   return (
-    <BackpackAPIContext.Provider value={backpackContext}>
-      <div className={styles.sketchlabContainer}>
-        <div
-          style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
-          className={classNames(
-            panelClassName,
-            isResourcePanelCollapsed && styles.collapsedPanel
-          )}
-        >
-          <ResourcePanel
-            levelProperties={levelProperties}
-            isRunning={false}
-            hasRun={hasRun}
-            hasEdited={hasAttempted}
-            hideCollapsedTabBorder
-            settings={[themeSetting]}
-            versionHistoryProps={{
-              startSources:
-                (levelProperties?.templateSources as ProjectSources) ||
-                (levelProperties?.startSources as ProjectSources) ||
-                REACT_FLOW_DEFAULT_SOURCES,
-              onLoadVersion,
-            }}
-            backpackProps={backpackProps}
-          />
-        </div>
-        {!isResourcePanelCollapsed && (
-          <ResizeBar
-            isVertical={true}
-            separatorProps={panelSeparatorProps}
-            isDragging={isDragging}
-          />
+    <div className={styles.sketchlabContainer}>
+      <div
+        style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
+        className={classNames(
+          panelClassName,
+          isResourcePanelCollapsed && styles.collapsedPanel
         )}
-        <div
-          style={
-            isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}
+      >
+        <ResourcePanel
+          levelProperties={levelProperties}
+          isRunning={false}
+          hasRun={hasRun}
+          hasEdited={hasAttempted}
+          hideCollapsedTabBorder
+          settings={[themeSetting]}
+          versionHistoryProps={{
+            startSources:
+              (levelProperties?.templateSources as ProjectSources) ||
+              (levelProperties?.startSources as ProjectSources) ||
+              REACT_FLOW_DEFAULT_SOURCES,
+            onLoadVersion,
+          }}
+          backpackProps={backpackProps}
+        />
+      </div>
+      {!isResourcePanelCollapsed && (
+        <ResizeBar
+          isVertical={true}
+          separatorProps={panelSeparatorProps}
+          isDragging={isDragging}
+        />
+      )}
+      <div
+        style={isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}}
+      >
+        <PanelContainer
+          id="workspace"
+          className={panelClassName}
+          headerContent={<WorkspaceHeader.Content />}
+          leftHeaderContent={
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              onClick={onClickDownload}
+              aria-label="Download"
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
+              }
+            >
+              Download
+            </MuiButton>
+          }
+          rightHeaderContent={
+            <>
+              <WorkspaceHeader.TemplateIcon />
+              {!readonlyWorkspace && (
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
+                  onClick={onClickStartOver}
+                  aria-label={commonI18n.startOver()}
+                  type="button"
+                  endIcon={
+                    <FontAwesomeV6Icon
+                      iconStyle="solid"
+                      iconName="arrow-rotate-left"
+                    />
+                  }
+                >
+                  {commonI18n.startOver()}
+                </MuiButton>
+              )}
+            </>
           }
         >
-          <PanelContainer
-            id="workspace"
-            className={panelClassName}
-            headerContent={<WorkspaceHeader.Content />}
-            leftHeaderContent={
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="extraSmall"
-                onClick={onClickDownload}
-                aria-label="Download"
-                type="button"
-                startIcon={
-                  <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
-                }
-              >
-                Download
-              </MuiButton>
-            }
-            rightHeaderContent={
-              <>
-                <WorkspaceHeader.TemplateIcon />
-                {!readonlyWorkspace && (
-                  <MuiButton
-                    variant="outlined"
-                    color="tertiary"
-                    size="extraSmall"
-                    onClick={onClickStartOver}
-                    aria-label={commonI18n.startOver()}
-                    type="button"
-                    endIcon={
-                      <FontAwesomeV6Icon
-                        iconStyle="solid"
-                        iconName="arrow-rotate-left"
-                      />
-                    }
-                  >
-                    {commonI18n.startOver()}
-                  </MuiButton>
-                )}
-              </>
-            }
-          >
-            <WorkspaceAlerts
-              inWorkspaceContainer
-              hasStandaloneProjectLevel={false}
-            />
-            <ReactFlowCanvas
-              key={mountKey}
-              updateSources={updateSources}
-              uploadImage={uploadImage}
-              uploadsDisabled={uploadsDisabled}
-              openUploadsDisabledModal={openUploadsDisabledModal}
-              onNodesDeleted={handleImageNodesDeleted}
-              initialNodes={initialNodes}
-              initialEdges={initialEdges}
-              initialViewport={initialViewport}
-              colorMode={colorMode}
-              readOnly={readonlyWorkspace}
-              pendingImageImport={pendingImageImport}
-              onImageImportConsumed={clearPendingImageImport}
-            />
-            {WorkspaceAlert}
-          </PanelContainer>
-        </div>
-        {flaggedImageData && (
-          <FlaggedImageModal
-            appName="sketchlab"
-            onAccept={handleAcceptFlaggedImage}
-            onCancel={handleCancelFlaggedImage}
+          <WorkspaceAlerts
+            inWorkspaceContainer
+            hasStandaloneProjectLevel={false}
           />
-        )}
-        {showUploadsDisabledModal && (
-          <UploadsDisabledModal onClose={closeUploadsDisabledModal} />
-        )}
+          <ReactFlowCanvas
+            key={mountKey}
+            updateSources={updateSources}
+            uploadImage={uploadImage}
+            uploadsDisabled={uploadsDisabled}
+            openUploadsDisabledModal={openUploadsDisabledModal}
+            onNodesDeleted={handleImageNodesDeleted}
+            initialNodes={initialNodes}
+            initialEdges={initialEdges}
+            initialViewport={initialViewport}
+            colorMode={colorMode}
+            readOnly={readonlyWorkspace}
+            pendingImageImport={pendingImageImport}
+            onImageImportConsumed={clearPendingImageImport}
+          />
+          {WorkspaceAlert}
+        </PanelContainer>
       </div>
-    </BackpackAPIContext.Provider>
+      {flaggedImageData && (
+        <FlaggedImageModal
+          appName="sketchlab"
+          onAccept={handleAcceptFlaggedImage}
+          onCancel={handleCancelFlaggedImage}
+        />
+      )}
+      {showUploadsDisabledModal && (
+        <UploadsDisabledModal onClose={closeUploadsDisabledModal} />
+      )}
+    </div>
   );
 }
 

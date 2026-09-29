@@ -1,13 +1,31 @@
 import {
+  bodyPlanFor,
+  IMAGE_ADLIB_SETS,
   imageAdlibFor,
   imageAdlibId,
   ImageAdlibSet,
+  isImageAdlibSet,
+  manifestBodyPlans,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageAdlibs';
-import {IMAGE_TYPES} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {
+  BODY_PLANS,
+  IMAGE_TYPES,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 
 const SETS: ImageAdlibSet[] = ['simple', 'expanded'];
 
 describe('imageAdlibs manifest', () => {
+  it('names its sets from its keys', () => {
+    expect([...IMAGE_ADLIB_SETS].sort()).toEqual([
+      'expanded',
+      'simple',
+      'treasure',
+    ]);
+    expect(isImageAdlibSet('treasure')).toBe(true);
+    expect(isImageAdlibSet('halloween')).toBe(false);
+    expect(isImageAdlibSet(undefined)).toBe(false);
+  });
+
   it('carries a combo for every image type in both sets', () => {
     IMAGE_TYPES.forEach(imageType => {
       SETS.forEach(set => {
@@ -62,5 +80,23 @@ describe('imageAdlibs manifest', () => {
       expect(imageAdlibFor('sprite', set, 'object')).toBeDefined();
     });
     expect(imageAdlibFor('sprite', 'treasure', 'object')).toBeDefined();
+  });
+
+  it('gives the animal creatures their body plan and everyone else upright', () => {
+    expect(bodyPlanFor('cat')).toBe('quadruped');
+    expect(bodyPlanFor('dragon')).toBe('quadruped');
+    expect(bodyPlanFor('penguin')).toBe('bird');
+    expect(bodyPlanFor('wizard')).toBe('upright');
+    expect(bodyPlanFor(undefined)).toBe('upright');
+  });
+});
+
+describe('creature body plans', () => {
+  it('names only plans the prompts are written for', () => {
+    const plans = manifestBodyPlans();
+    expect(plans.length).toBeGreaterThan(0);
+    plans.forEach(plan => {
+      expect(BODY_PLANS).toContain(plan);
+    });
   });
 });

@@ -26,9 +26,9 @@ function renderView(props: Partial<ViewProps> = {}) {
 }
 
 describe('GenerateImageView character-set offer', () => {
-  it('offers a set for a new sprite, unchecked', () => {
+  it('offers a set for a new sprite, checked', () => {
     renderView({create: {isNameTaken: () => false}});
-    expect(screen.getByLabelText(SET_CHECKBOX)).not.toBeChecked();
+    expect(screen.getByLabelText(SET_CHECKBOX)).toBeChecked();
   });
 
   it('does not offer a set for an object: a set would give it limbs', () => {
@@ -79,6 +79,13 @@ describe('GenerateImageView character-set offer', () => {
       sheet: SHEET,
     });
     expect(screen.getByLabelText(SET_CHECKBOX)).toBeChecked();
+  });
+
+  it('leaves the set unchecked for a still image being regenerated', () => {
+    renderView({
+      existing: {imageType: 'sprite', getDataURI: async () => null},
+    });
+    expect(screen.getByLabelText(SET_CHECKBOX)).not.toBeChecked();
   });
 
   it('withdraws the offer when the base is a previous image, not fresh', () => {

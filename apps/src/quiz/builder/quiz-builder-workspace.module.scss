@@ -24,6 +24,14 @@
   list-style: none;
 }
 
-.createButton {
+.createAction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   align-self: flex-start;
+  gap: 4px;
+}
+
+.createHint {
+  color: var(--text-neutral-tertiary);
 }

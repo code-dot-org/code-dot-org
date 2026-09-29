@@ -112,6 +112,22 @@ export function paintWorldCell(
   return {grid};
 }
 
+/** The world with `cell`'s image in one place: cleared from wherever it
+    was, then painted at (row, col). */
+export function moveWorldCell(
+  world: World | undefined,
+  row: number,
+  col: number,
+  cell: WorldCell
+): World {
+  const grid = (world?.grid ?? createEmptyWorld().grid).map(cells =>
+    cells.some(c => c?.image === cell.image)
+      ? cells.map(c => (c?.image === cell.image ? null : c))
+      : cells
+  );
+  return paintWorldCell({grid}, row, col, cell);
+}
+
 // Interpreted-JS prelude that spawns the world's starter sprites, prepended
 // to the scene's compiled program. Blocks spawn before sprites so sprites
 // draw on top. Placed items are cell-sized: the prelude pins the default
