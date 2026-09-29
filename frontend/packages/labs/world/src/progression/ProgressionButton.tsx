@@ -21,7 +21,6 @@ export const ProgressionButton = () => {
       icon={{iconName: 'map', iconStyle: 'solid'}}
       type="tertiary"
       color="gray"
-      tooltipSize="xs"
       tooltipDirection="onRight"
       buttonSize="s"
       theme={theme}

@@ -53,7 +53,7 @@ function getTranslatedResult(result: ValidationResult) {
 
 const ValidationResults = ({className}: ValidationResultsProps) => {
   const {validationResults} = useAppSelector(
-    state => state.lab.validationState,
+    state => state.progress.validationState,
   );
 
   if (!validationResults) {

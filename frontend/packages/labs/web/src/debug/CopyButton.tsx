@@ -1,8 +1,7 @@
-import {IconButton, Typography} from '@mui/material';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import styles from './detailsBox.module.css';
 
@@ -42,13 +41,10 @@ export const CopyButton = ({label, value}: CopyButtonProps) => {
           Copied!
         </Typography>
       )}
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: `copy-${label}-tooltip`,
-          direction: 'onTop',
-          size: 'xs',
-          text: `Copy ${label}`,
-        }}
+      <Tooltip
+        id={`copy-${label}-tooltip`}
+        title={`Copy ${label}`}
+        placement="top"
       >
         <IconButton
           variant="text"
@@ -60,7 +56,7 @@ export const CopyButton = ({label, value}: CopyButtonProps) => {
         >
           <FontAwesomeV6Icon iconStyle="solid" iconName="copy" />
         </IconButton>
-      </WithTooltip>
+      </Tooltip>
     </div>
   );
 };

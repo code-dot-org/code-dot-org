@@ -1,4 +1,4 @@
-import {IconButton} from '@mui/material';
+import {IconButton, Tooltip} from '@mui/material';
 import {FitAddon} from '@xterm/addon-fit';
 import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
@@ -6,7 +6,6 @@ import {useEffect, useRef, useState} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {PanelContainer} from '@code-dot-org/lab/components';
 import {FontSize} from '@code-dot-org/lab/constants';
 
@@ -200,27 +199,27 @@ const Console = () => {
       headerContent="Console"
       leftHeaderContent={<ControlButtons />}
       rightHeaderContent={
-        <WithTooltip
-          tooltipProps={{
-            text: 'Clear console',
-            size: 'xs',
-            direction: 'onLeft',
-            tooltipId: 'clear-console-tooltip',
-          }}
+        <Tooltip
+          id="clear-console-tooltip"
+          title="Clear console"
+          placement="left"
         >
-          <IconButton
-            aria-label="Clear console"
-            variant="text"
-            color="tertiary"
-            size="extraSmall"
-            disabled={isRunning || !hasConsoleOutput}
-            onClick={() =>
-              CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
-            }
-          >
-            <FontAwesomeV6Icon iconName="eraser" />
-          </IconButton>
-        </WithTooltip>
+          {/* Wrapper span so the tooltip still shows when the button is disabled. */}
+          <span>
+            <IconButton
+              aria-label="Clear console"
+              variant="text"
+              color="tertiary"
+              size="extraSmall"
+              disabled={isRunning || !hasConsoleOutput}
+              onClick={() =>
+                CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
+              }
+            >
+              <FontAwesomeV6Icon iconName="eraser" />
+            </IconButton>
+          </span>
+        </Tooltip>
       }
     >
       <div

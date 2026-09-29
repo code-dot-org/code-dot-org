@@ -1,10 +1,9 @@
-import {IconButton, Typography} from '@mui/material';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 import {useEffect, useMemo, useState, type ChangeEvent} from 'react';
 
 import {IconDropdown} from '@code-dot-org/component-library/dropdown';
 import type {IconDropdownOption} from '@code-dot-org/component-library/dropdown/iconDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import PendingDivider from '../assets/Pending.svg';
 import RequestFailureDivider from '../assets/RequestFailure.svg';
@@ -183,13 +182,10 @@ export const NetworkPanel = () => {
             <Typography variant="strong">Activity</Typography>
           </Typography>
           <div className={styles.networkHeaderButtons}>
-            <WithTooltip
-              tooltipProps={{
-                text: blockToggleLabel,
-                direction: 'onBottom',
-                tooltipId: 'block-network-tooltip',
-                size: 'xs',
-              }}
+            <Tooltip
+              id="block-network-tooltip"
+              title={blockToggleLabel}
+              placement="bottom"
             >
               <IconButton
                 color={blockNetwork ? 'error' : 'tertiary'}
@@ -202,7 +198,7 @@ export const NetworkPanel = () => {
               >
                 <FontAwesomeV6Icon iconName="ban" />
               </IconButton>
-            </WithTooltip>
+            </Tooltip>
             {orderedRequests.length > 0 && (
               <IconDropdown
                 name="sort-order"

@@ -1,10 +1,9 @@
-import {IconButton} from '@mui/material';
+import {IconButton, Tooltip} from '@mui/material';
 import {useState} from 'react';
 
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {PanelContainer} from '@code-dot-org/lab/components';
 
 import {Console} from './Console';
@@ -58,25 +57,21 @@ export const DebugPanel = ({className}: DebugPanelProps) => {
       }
       rightHeaderContent={
         <span className={styles.headerButtons}>
-          <WithTooltip
-            tooltipProps={{
-              text: clearLabel,
-              size: 'xs',
-              direction: 'onLeft',
-              tooltipId: 'clear-debug-tooltip',
-            }}
-          >
-            <IconButton
-              aria-label={clearLabel}
-              variant="outlined"
-              color="tertiary"
-              size="extraSmall"
-              disabled={isEmpty}
-              onClick={isConsole ? clearLogs : clearRequests}
-            >
-              <FontAwesomeV6Icon iconName="eraser" />
-            </IconButton>
-          </WithTooltip>
+          <Tooltip id="clear-debug-tooltip" title={clearLabel} placement="left">
+            {/* Wrapper span so the tooltip still shows when the button is disabled. */}
+            <span>
+              <IconButton
+                aria-label={clearLabel}
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
+                disabled={isEmpty}
+                onClick={isConsole ? clearLogs : clearRequests}
+              >
+                <FontAwesomeV6Icon iconName="eraser" />
+              </IconButton>
+            </span>
+          </Tooltip>
           <CloseButton
             onClick={() => setIsOpen(false)}
             aria-label="Close debug panel"

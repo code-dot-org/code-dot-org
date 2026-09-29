@@ -1,9 +1,8 @@
-import {IconButton} from '@mui/material';
+import {IconButton, Tooltip} from '@mui/material';
 import {useEffect, useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import {PreviewViewMode, type PreviewViewModeType} from './constants';
 import styles from './htmlPreviewHeader.module.css';
@@ -122,26 +121,22 @@ export const HTMLPreviewHeader = ({
       </form>
 
       <span className={styles.actions}>
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: 'stop-preview',
-            direction: 'onBottom',
-            size: 'xs',
-            text: 'Stop preview',
-          }}
-        >
-          <IconButton
-            variant="outlined"
-            color="error"
-            size="extraSmall"
-            disabled={!isStopEnabled}
-            onClick={onStop}
-            aria-label="Stop Preview"
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="circle-stop" iconStyle="solid" />
-          </IconButton>
-        </WithTooltip>
+        <Tooltip id="stop-preview" title="Stop preview" placement="bottom">
+          {/* Wrapper span so the tooltip still shows when the button is disabled. */}
+          <span>
+            <IconButton
+              variant="outlined"
+              color="error"
+              size="extraSmall"
+              disabled={!isStopEnabled}
+              onClick={onStop}
+              aria-label="Stop Preview"
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="circle-stop" iconStyle="solid" />
+            </IconButton>
+          </span>
+        </Tooltip>
 
         <SegmentedButtons
           size="xs"
@@ -162,13 +157,10 @@ export const HTMLPreviewHeader = ({
           ]}
         />
 
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: 'toggle-debug-panel',
-            direction: 'onBottom',
-            size: 'xs',
-            text: isDebugPanelOpen ? 'Close debug panel' : 'Open debug panel',
-          }}
+        <Tooltip
+          id="toggle-debug-panel"
+          title={isDebugPanelOpen ? 'Close debug panel' : 'Open debug panel'}
+          placement="bottom"
         >
           <IconButton
             variant="outlined"
@@ -184,15 +176,12 @@ export const HTMLPreviewHeader = ({
           >
             <FontAwesomeV6Icon iconName="bug" />
           </IconButton>
-        </WithTooltip>
+        </Tooltip>
 
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: 'toggle-inspector',
-            direction: 'onBottom',
-            size: 'xs',
-            text: inspectorEnabled ? 'Stop inspecting' : 'Inspect elements',
-          }}
+        <Tooltip
+          id="toggle-inspector"
+          title={inspectorEnabled ? 'Stop inspecting' : 'Inspect elements'}
+          placement="bottom"
         >
           <IconButton
             variant="outlined"
@@ -208,7 +197,7 @@ export const HTMLPreviewHeader = ({
           >
             <FontAwesomeV6Icon iconName="arrow-pointer" />
           </IconButton>
-        </WithTooltip>
+        </Tooltip>
 
         <IconButton
           variant="text"

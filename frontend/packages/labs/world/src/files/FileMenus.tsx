@@ -1134,7 +1134,6 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
             type="tertiary"
             color="gray"
             buttonSize="xs"
-            tooltipSize="xs"
             tooltipDirection="onBottom"
             theme={theme}
             onClick={() => {

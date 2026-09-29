@@ -1,8 +1,9 @@
+import {Tooltip} from '@mui/material';
 import type {FunctionComponent} from 'react';
 
+import {muiPlacementFor} from '@code-dot-org/component-library/common/helpers';
 import type {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import styles from './projectTemplateWorkspaceIcon.module.scss';
 
@@ -23,23 +24,24 @@ const ProjectTemplateWorkspaceIconV2: FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
 > = ({tooltipPlace}) => {
   return (
-    <WithTooltip
-      tooltipProps={{
-        text: 'This icon means that this level is part of a larger project. Changes will be saved across these levels.',
-        direction: tooltipPlace || 'onBottom',
-        tooltipId: 'project-template-workspace-icon-tooltip',
-        size: 'xs',
-      }}
+    <Tooltip
+      id="project-template-workspace-icon-tooltip"
+      title="This icon means that this level is part of a larger project. Changes will be saved across these levels."
+      placement={muiPlacementFor(tooltipPlace, 'bottom')}
     >
       {/* Wrap the icon in a button so that the tooltip is tabbable. */}
-      <button type="button" className={styles.iconButton}>
+      <button
+        type="button"
+        aria-label="Project template level"
+        className={styles.iconButton}
+      >
         <FontAwesomeV6Icon
           iconFamily={'kit'}
           iconName={'connected-level'}
           className={styles.icon}
         />
       </button>
-    </WithTooltip>
+    </Tooltip>
   );
 };
 

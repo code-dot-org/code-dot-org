@@ -1,14 +1,10 @@
+import {Tooltip, type TooltipProps as MuiTooltipProps} from '@mui/material';
 import {type ReactNode} from 'react';
-
-import {
-  WithTooltip,
-  type TooltipProps,
-} from '@code-dot-org/component-library/tooltip';
 
 interface WithConditionalTooltipProps {
   children: ReactNode;
   tooltipOverlayClassName?: string;
-  tooltipProps: TooltipProps;
+  tooltipProps: Omit<MuiTooltipProps, 'children'>;
   showTooltip: boolean;
   /** Status icon rendered beside the children while the tooltip shows. */
   icon?: ReactNode;
@@ -29,15 +25,13 @@ export const WithConditionalTooltip = ({
   icon,
 }: WithConditionalTooltipProps) =>
   showTooltip ? (
-    <WithTooltip
-      tooltipProps={tooltipProps}
-      tooltipOverlayClassName={tooltipOverlayClassName}
-    >
-      <div>
+    <Tooltip placement="top" {...tooltipProps}>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
+      <div className={tooltipOverlayClassName} tabIndex={0}>
         {children}
         {icon}
       </div>
-    </WithTooltip>
+    </Tooltip>
   ) : (
-    <div>{children}</div>
+    <div className={tooltipOverlayClassName}>{children}</div>
   );

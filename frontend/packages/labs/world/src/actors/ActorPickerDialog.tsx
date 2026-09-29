@@ -155,7 +155,6 @@ export const ActorPickerDialog = ({
                           type="tertiary"
                           color="gray"
                           buttonSize="xs"
-                          tooltipSize="xs"
                           tooltipDirection="onTop"
                           onClick={() => onOptions(actor)}
                         />

@@ -49,10 +49,9 @@ const ControlButtons = () => {
     <WithConditionalTooltip
       showTooltip={!!disabledTooltip}
       tooltipProps={{
-        direction: 'onRight',
-        text: disabledTooltip || '',
-        size: 's',
-        tooltipId: 'code-actions-tooltip',
+        placement: 'right',
+        title: disabledTooltip || '',
+        id: 'code-actions-tooltip',
       }}
       icon={
         <FontAwesomeV6Icon
