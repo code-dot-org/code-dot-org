@@ -56,24 +56,24 @@ styles. `Modal` is built on the legacy `CustomDialog` today.
 
 ### Props
 
-| Prop                            | Component       | Behavior                                                                                        |
-| ------------------------------- | --------------- | ----------------------------------------------------------------------------------------------- |
-| `title`                         | MuiDialog       | `h2` heading; also the panel's `aria-label`                                                     |
-| `description`                   | MuiDialog       | Centered `body2` text with `id="dsco-dialog-description"`                                       |
-| `customContent`                 | MuiDialog       | Rendered after the description, in its own alignment                                            |
-| `customBottomContent`           | MuiDialog       | Rendered after the button row                                                                   |
-| `primaryButtonProps`            | MuiDialog       | Spread on an MUI `Button variant="contained"`                                                   |
-| `secondaryButtonProps`          | MuiDialog       | Spread on an MUI `Button variant="outlined"`; the button renders only when passed               |
-| `mode`                          | both            | MuiDialog: button color, `primary`/`secondary` or `white`. MuiCustomDialog: close button color. |
-| `icon`                          | MuiDialog       | `FontAwesomeV6Icon` badge on the panel's top edge                                               |
-| `imageUrl`, `imageAlt`          | MuiDialog       | Image above the title, scaled to fit; `imageAlt` defaults to `''` (decorative)                  |
-| `onClose`                       | both            | Close button and Escape. Without it neither exists. A backdrop click never closes.              |
-| `closeLabel`                    | both            | Close button `aria-label`, default `'Close dialog'`                                             |
-| `zIndex`                        | both            | Overlay z-index, through `--cdo-dialog-z-index`; default `$zindex-modal-backdrop` (1040)        |
-| `className`, other HTML attrs   | both            | On the panel, the `role="dialog"` (MuiCustomDialog) or `role="alertdialog"` (MuiDialog) element |
-| `aria-label`, `aria-labelledby` | both            | On the panel; pass one of them. `aria-describedby` defaults to `dsco-dialog-description`.       |
-| `role`                          | both            | Panel role; MuiCustomDialog defaults to `dialog`                                                |
-| `children`                      | MuiCustomDialog | Panel content, before the close button                                                          |
+| Prop                            | Component       | Behavior                                                                                                                                     |
+| ------------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`                         | MuiDialog       | `h2` heading; also the panel's `aria-label`                                                                                                  |
+| `description`                   | MuiDialog       | Centered `body2` text with `id="dsco-dialog-description"`                                                                                    |
+| `customContent`                 | MuiDialog       | Rendered after the description, in its own alignment                                                                                         |
+| `customBottomContent`           | MuiDialog       | Rendered after the button row                                                                                                                |
+| `primaryButtonProps`            | MuiDialog       | Spread on an MUI `Button variant="contained"`                                                                                                |
+| `secondaryButtonProps`          | MuiDialog       | Spread on an MUI `Button variant="outlined"`; the button renders only when passed                                                            |
+| `mode`                          | both            | MuiDialog: button color, `primary`/`secondary` or `white`. MuiCustomDialog: close button color.                                              |
+| `icon`                          | MuiDialog       | `FontAwesomeV6Icon` badge on the panel's top edge                                                                                            |
+| `imageUrl`, `imageAlt`          | MuiDialog       | Image above the title, scaled to fit; `imageAlt` defaults to `''` (decorative)                                                               |
+| `onClose`                       | both            | Close button and Escape. Without it neither exists. A backdrop click never closes.                                                           |
+| `closeLabel`                    | both            | Close button `aria-label`, default `'Close dialog'`                                                                                          |
+| `zIndex`                        | both            | Overlay z-index, through `--cdo-dialog-z-index`; default `$zindex-modal-backdrop` (1040). `0` is honored; the legacy `CustomDialog` drops it |
+| `className`, other HTML attrs   | both            | On the panel, the `role="dialog"` (MuiCustomDialog) or `role="alertdialog"` (MuiDialog) element                                              |
+| `aria-label`, `aria-labelledby` | both            | On the panel; pass one of them. `aria-describedby` defaults to `dsco-dialog-description`.                                                    |
+| `role`                          | both            | Panel role; MuiCustomDialog defaults to `dialog`                                                                                             |
+| `children`                      | MuiCustomDialog | Panel content, before the close button                                                                                                       |
 
 `mode` never restyles the panel; the panel follows the surrounding
 `data-theme`. Without a `description`, give the element that describes the
