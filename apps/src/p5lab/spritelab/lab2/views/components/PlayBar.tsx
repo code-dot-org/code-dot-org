@@ -17,14 +17,19 @@ interface HoldKeyProps {
   children?: React.ReactNode;
 }
 
-// How long an activation with no press of its own (assistive technology's
-// click) holds the key: long enough for the game's per-frame key polling.
+// A click with no press of its own (assistive technology) holds the key for
+// TAP_MS and then TAP_FRAMES animation frames, so the game's per-frame key
+// sampling sees it even when frames outlast the timer.
 const TAP_MS = 100;
-// The tap also outlasts this many animation frames. They are the queue the
-// game draws from, so a system too slow for the timer still samples the key
-// before it is released; the timer covers a fast display, where the game
-// skips frames to hold its rate.
 const TAP_FRAMES = 2;
+
+const afterFrames = (count: number, fn: () => void): void => {
+  if (count === 0) {
+    fn();
+  } else {
+    window.requestAnimationFrame(() => afterFrames(count - 1, fn));
+  }
+};
 
 /**
  * A button that holds a game key down for as long as it is pressed: from
@@ -39,11 +44,15 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   children,
 }) => {
   const held = useRef(false);
-  // Set by a pointer or key press, so the click that follows one is not
-  // taken for an assistive-technology activation.
-  const pressed = useRef(false);
+  // Set by a pointer press, whose click follows its release and must not be
+  // taken for an assistive-technology activation. A key press cancels its
+  // click, so it does not set this.
+  const pointerPressed = useRef(false);
+  // Counts presses, so a tap's timed release leaves a key that a later press
+  // holds.
+  const presses = useRef(0);
   const press = useCallback(() => {
-    pressed.current = true;
+    presses.current++;
     if (!held.current) {
       held.current = true;
       dispatchGameKey('keydown', gameKey);
@@ -62,6 +71,7 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
     onPointerDown: (e: React.PointerEvent<HTMLElement>) => {
       e.preventDefault();
       e.currentTarget.setPointerCapture?.(e.pointerId);
+      pointerPressed.current = true;
       press();
     },
     // Focus must not stay on the button, where Space (a game key) would
@@ -71,7 +81,10 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
       release();
       e.currentTarget.blur();
     },
-    onPointerCancel: release,
+    onPointerCancel: () => {
+      pointerPressed.current = false;
+      release();
+    },
     onLostPointerCapture: release,
     onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -86,24 +99,19 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
       }
     },
     onClick: () => {
-      if (pressed.current) {
-        pressed.current = false;
+      if (pointerPressed.current) {
+        pointerPressed.current = false;
         return;
       }
       press();
-      pressed.current = false;
-      let waiting = 2;
-      const done = () => {
-        if (--waiting === 0) {
-          release();
-        }
-      };
-      window.setTimeout(done, TAP_MS);
-      const frame = (left: number) =>
-        left === 0
-          ? done()
-          : window.requestAnimationFrame(() => frame(left - 1));
-      frame(TAP_FRAMES);
+      const tap = presses.current;
+      window.setTimeout(() => {
+        afterFrames(TAP_FRAMES, () => {
+          if (presses.current === tap) {
+            release();
+          }
+        });
+      }, TAP_MS);
     },
     onBlur: release,
   };

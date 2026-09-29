@@ -24,6 +24,14 @@ const keyEvents = () => {
 };
 
 describe('PlayBar', () => {
+  let keys: ReturnType<typeof keyEvents>;
+  beforeEach(() => {
+    keys = keyEvents();
+  });
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('shows only Play when not playing', () => {
     const onPlay = jest.fn();
     render(<PlayBar playing={false} arrows="steer" onPlay={onPlay} />);
@@ -56,7 +64,6 @@ describe('PlayBar', () => {
   });
 
   it('holds the key from pointer down to pointer up', () => {
-    const keys = keyEvents();
     render(<PlayBar playing arrows="jump" onPlay={jest.fn()} />);
     const jump = screen.getByRole('button', {name: 'Jump'});
     fireEvent.pointerDown(jump);
@@ -64,12 +71,10 @@ describe('PlayBar', () => {
     expect(keys.seen).toEqual(['keydown:38']);
     fireEvent.pointerUp(jump);
     expect(keys.seen).toEqual(['keydown:38', 'keyup:38']);
-    keys.stop();
   });
 
   it('taps the key for a click with no press of its own', () => {
     jest.useFakeTimers();
-    const keys = keyEvents();
     render(<PlayBar playing arrows="steer" onPlay={jest.fn()} />);
     const left = screen.getByRole('button', {name: 'Left'});
     fireEvent.click(left);
@@ -87,35 +92,50 @@ describe('PlayBar', () => {
       'keydown:37',
       'keyup:37',
     ]);
-    keys.stop();
-    jest.useRealTimers();
   });
 
-  it('holds a tap until the timer and two frames have both passed', () => {
+  it('holds a tap until the timer and then two frames have passed', () => {
     jest.useFakeTimers();
     const frames: FrameRequestCallback[] = [];
-    const raf = jest
+    jest
       .spyOn(window, 'requestAnimationFrame')
       .mockImplementation(cb => frames.push(cb));
     const runFrame = () => frames.shift()?.(0);
-    const keys = keyEvents();
     render(<PlayBar playing arrows="steer" onPlay={jest.fn()} />);
     const left = screen.getByRole('button', {name: 'Left'});
 
-    // No frame runs: the timer alone does not release.
     fireEvent.click(left);
+    expect(keys.seen).toEqual(['keydown:37']);
+    // Frames are not even asked for until the timer has passed.
+    expect(frames).toHaveLength(0);
     jest.advanceTimersByTime(500);
     expect(keys.seen).toEqual(['keydown:37']);
     runFrame();
     expect(keys.seen).toEqual(['keydown:37']);
     runFrame();
     expect(keys.seen).toEqual(['keydown:37', 'keyup:37']);
+  });
 
-    // Frames run at once: the frames alone do not release.
+  it('lets a press that starts inside a tap keep the key', () => {
+    jest.useFakeTimers();
+    render(<PlayBar playing arrows="steer" onPlay={jest.fn()} />);
+    const left = screen.getByRole('button', {name: 'Left'});
     fireEvent.click(left);
-    runFrame();
-    runFrame();
-    expect(keys.seen).toEqual(['keydown:37', 'keyup:37', 'keydown:37']);
+    jest.advanceTimersByTime(50);
+    fireEvent.pointerDown(left);
+    jest.advanceTimersByTime(500);
+    expect(keys.seen).toEqual(['keydown:37']);
+    fireEvent.pointerUp(left);
+    expect(keys.seen).toEqual(['keydown:37', 'keyup:37']);
+  });
+
+  it('taps after a keyboard press, whose click never comes', () => {
+    jest.useFakeTimers();
+    render(<PlayBar playing arrows="steer" onPlay={jest.fn()} />);
+    const left = screen.getByRole('button', {name: 'Left'});
+    fireEvent.keyDown(left, {key: 'Enter'});
+    fireEvent.keyUp(left, {key: 'Enter'});
+    fireEvent.click(left);
     jest.advanceTimersByTime(200);
     expect(keys.seen).toEqual([
       'keydown:37',
@@ -123,13 +143,9 @@ describe('PlayBar', () => {
       'keydown:37',
       'keyup:37',
     ]);
-    keys.stop();
-    raf.mockRestore();
-    jest.useRealTimers();
   });
 
   it('holds the key from Enter down to up, and releases when it goes away', () => {
-    const keys = keyEvents();
     const {rerender} = render(
       <PlayBar playing arrows="steer" onPlay={jest.fn()} />
     );
@@ -139,6 +155,5 @@ describe('PlayBar', () => {
     // Gravity switched on mid-press: the Down button is gone.
     rerender(<PlayBar playing arrows="jump" onPlay={jest.fn()} />);
     expect(keys.seen).toEqual(['keydown:40', 'keyup:40']);
-    keys.stop();
   });
 });
