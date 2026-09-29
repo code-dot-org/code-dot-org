@@ -4,6 +4,7 @@ import path from 'path';
 
 import {ColumnTypes, TestDataLocations} from '../../src/constants';
 import {parseCSV} from '../../src/csvReaderWrapper';
+import {traceDisplayTree} from '../../src/helpers/displayTreeTrace';
 import {getKeyByValue} from '../../src/helpers/utils';
 import {convertValueForTraining} from '../../src/helpers/valueConversion';
 import {
@@ -17,6 +18,7 @@ import {
   setSelectedCSV,
   setSelectedJSON,
 } from '../../src/redux';
+import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
 import {store} from '../../src/store';
 import train from '../../src/train';
 
@@ -59,17 +61,31 @@ export function trainDataset(
   return store.getState();
 }
 
-// The model's own prediction for every row, as label values.
-export function modelPredictions(state) {
-  const rows = state.data.map(row =>
+// Every row as the numbers the model reads.
+export function modelInputs(state) {
+  return state.data.map(row =>
     state.selectedFeatures.map(feature =>
       convertValueForTraining(state, row[feature], feature),
     ),
   );
+}
+
+// The model's own prediction for every row, as label values.
+export function modelPredictions(state) {
   const labelKey = state.featureNumberKey[state.labelColumn];
   return state.trainedModel
-    .predict(rows)
+    .predict(modelInputs(state))
     .map(prediction =>
       labelKey ? getKeyByValue(labelKey, prediction) : prediction,
     );
+}
+
+// The trace of every row, as a prediction of that row would give.
+export function rowTraces(state) {
+  const tree = getDisplayTree(state);
+  const {root} = state.trainedModel.toJSON();
+  const inputs = modelInputs(state);
+  return state.data.map((row, index) =>
+    traceDisplayTree(tree, root, inputs[index], row),
+  );
 }

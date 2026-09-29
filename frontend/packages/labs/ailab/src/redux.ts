@@ -57,6 +57,8 @@ export interface RootState {
   accuracyCheckPredictedLabels: (number | string)[];
   testData: Record<string, string | number>;
   prediction: number | string | undefined;
+  predictionTestData: Record<string, string | number>;
+  predictionInputs: number[];
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
@@ -102,6 +104,8 @@ export const initialState: RootState = {
   accuracyCheckPredictedLabels: [],
   testData: {},
   prediction: undefined,
+  predictionTestData: {},
+  predictionInputs: [],
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: 'selectDataset',
@@ -247,8 +251,18 @@ const ailabSlice = createSlice({
         return {payload: {feature, value}};
       },
     },
-    setPrediction(state, action: PayloadAction<number | string>) {
-      state.prediction = action.payload;
+    setPrediction: {
+      reducer(
+        state,
+        action: PayloadAction<{prediction: number | string; inputs: number[]}>,
+      ) {
+        state.prediction = action.payload.prediction;
+        state.predictionTestData = {...state.testData};
+        state.predictionInputs = action.payload.inputs;
+      },
+      prepare(prediction: number | string, inputs: number[]) {
+        return {payload: {prediction, inputs}};
+      },
     },
     resetState(state) {
       return {

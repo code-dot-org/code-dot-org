@@ -267,21 +267,25 @@ export const getDisplayTree = createSelector(
   },
 );
 
-// `setTestData` clears the prediction, so the trace matches the values in use.
 export const getPredictionTrace = createSelector(
   [
     getDisplayTree,
-    (state: RootState) => state.testData,
+    (state: RootState) => state.trainedModel,
     (state: RootState) => state.prediction,
+    (state: RootState) => state.predictionInputs,
+    (state: RootState) => state.predictionTestData,
   ],
   (
     tree: DisplayTreeNode | undefined,
-    testData: DataRow,
+    trainedModel,
     prediction: number | string | undefined,
+    inputs: number[],
+    testData: DataRow,
   ): DisplayTreeTrace | undefined => {
-    if (!tree || prediction === undefined) {
+    if (!tree || !trainedModel || prediction === undefined) {
       return undefined;
     }
-    return traceDisplayTree(tree, testData);
+    const {root} = trainedModel.toJSON() as SerializedTree;
+    return traceDisplayTree(tree, root!, inputs, testData);
   },
 );

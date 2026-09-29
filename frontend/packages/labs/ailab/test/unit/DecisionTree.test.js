@@ -2,13 +2,8 @@ import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {Provider} from 'react-redux';
 
-import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
 import I18n from '../../src/i18n';
 import {setTestData} from '../../src/redux';
-import {
-  getDisplayTree,
-  getPredictionTrace,
-} from '../../src/selectors/visualizationSelectors';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 
@@ -68,23 +63,33 @@ describe('DecisionTree', () => {
     );
   });
 
-  it('marks only the nodes and edges on the path of a prediction', () => {
+  it('marks the path from the root to the answer the model predicts', () => {
     store.dispatch(setTestData('legs', '0'));
     train.onClickPredict(store);
     render(store);
 
-    const state = store.getState();
-    const {path} = getPredictionTrace(state);
-    const onPath = layoutDisplayTree(getDisplayTree(state)).nodes.filter(
-      placed => path.includes(placed.id),
-    );
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
+    const edges = [...document.getElementsByTagName('path')];
+    const pathEdges = [
+      ...document.getElementsByClassName(moduleStyles.pathEdge),
+    ];
 
-    expect(marked.map(slotPosition)).toEqual(
-      onPath.map(placed => [placed.x, placed.y]),
-    );
-    expect(document.getElementsByClassName(moduleStyles.pathEdge)).toHaveLength(
-      path.length - 1,
+    expect(marked.length).toBeGreaterThan(1);
+    expect(slotPosition(marked[0])[1]).toBe(0);
+    expect(marked[marked.length - 1].textContent).toBe('snake');
+    expect(pathEdges).toHaveLength(marked.length - 1);
+    expect(edges.slice(-pathEdges.length)).toEqual(pathEdges);
+  });
+
+  it('names the path of a prediction in the diagram label', () => {
+    store.dispatch(setTestData('legs', '0'));
+    train.onClickPredict(store);
+    render(store);
+
+    expect(
+      document.querySelector('[role="img"]').getAttribute('aria-label'),
+    ).toMatch(
+      /^Diagram of your model's decision tree\. The path of your prediction: legs is 0, which is less than [\d.]+\. Answer: snake\.$/,
     );
   });
 });

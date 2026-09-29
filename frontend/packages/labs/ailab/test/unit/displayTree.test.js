@@ -1,9 +1,11 @@
-import {buildDisplayTree} from '../../src/helpers/displayTree';
+import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
 
-import {modelPredictions, trainDataset} from './trainedDataset';
+import {modelPredictions, rowTraces, trainDataset} from './trainedDataset';
 
+// Follows the branch labels alone, as a student reading the tree would.
 function route(node, row) {
+  const path = ['0'];
   while (node.type === 'question') {
     const [left, right] = node.branches;
     const value = row[node.column];
@@ -11,9 +13,10 @@ function route(node, row) {
       left.kind === 'values'
         ? left.values.includes(String(value))
         : parseFloat(value) < left.threshold;
+    path.push(getChildNodeId(path[path.length - 1], goesLeft ? 0 : 1));
     node = goesLeft ? left.child : right.child;
   }
-  return node.prediction;
+  return path;
 }
 
 function countQuestions(node) {
@@ -27,16 +30,23 @@ describe('getDisplayTree on shipped datasets', () => {
     ['zoo', {label: 'Class', features: ['Legs', 'Feathers', 'Milk', 'Fins']}],
     ['insurance_cost', {}],
     ['jeans', {}],
-  ])('every row of %s reaches the answer the model predicts', (id, options) => {
-    const state = trainDataset(id, options);
-    const tree = getDisplayTree(state);
+  ])(
+    'every row of %s follows the labels down the model route to its answer',
+    (id, options) => {
+      const state = trainDataset(id, options);
+      const tree = getDisplayTree(state);
+      const traces = rowTraces(state);
 
-    expect(tree).toBeDefined();
-    expect(countQuestions(tree)).toBeGreaterThan(0);
-    expect(state.data.map(row => route(tree, row))).toEqual(
-      modelPredictions(state),
-    );
-  });
+      expect(tree).toBeDefined();
+      expect(countQuestions(tree)).toBeGreaterThan(0);
+      expect(state.data.map(row => route(tree, row))).toEqual(
+        traces.map(trace => trace.path),
+      );
+      expect(traces.map(trace => trace.prediction)).toEqual(
+        modelPredictions(state),
+      );
+    },
+  );
 
   test('a KNN model has no display tree', () => {
     const state = trainDataset('zoo', {label: 'Class', mode: {}});

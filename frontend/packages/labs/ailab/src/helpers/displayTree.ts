@@ -28,7 +28,7 @@ export type DisplayTreeNode = DisplayTreeQuestion | DisplayTreeAnswer;
 // A saved model holds a nested array; a live model holds an ml-matrix row vector
 type ClassDistribution = number[][] | {getRow(row: number): number[]};
 
-interface SerializedTreeNode {
+export interface SerializedTreeNode {
   splitColumn?: number;
   splitValue?: number;
   left?: SerializedTreeNode;

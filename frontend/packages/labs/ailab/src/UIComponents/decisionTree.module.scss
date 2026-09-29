@@ -1,4 +1,5 @@
 $path-ring-width: 3px;
+$path-color: var(--border-selected-primary, #2b1e9f);
 
 .decisionTree {
   clear: both;
@@ -30,7 +31,7 @@ $path-ring-width: 3px;
 }
 
 .pathEdge {
-  stroke: var(--brand-purple-80, #2b1e9f);
+  stroke: $path-color;
   stroke-width: 3;
 }
 
@@ -66,9 +67,9 @@ $path-ring-width: 3px;
   border-color: var(--ailab-label);
 }
 
-// A ring, not a wider border, so nodes on the path keep their size.
+// An outline, unlike a box-shadow, still shows in forced-colors mode.
 .pathNode {
-  box-shadow: 0 0 0 $path-ring-width var(--brand-purple-80, #2b1e9f);
+  outline: $path-ring-width solid $path-color;
 }
 
 .nodeText {
