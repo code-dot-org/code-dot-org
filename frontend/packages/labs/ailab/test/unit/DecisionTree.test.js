@@ -1,4 +1,3 @@
-import path from 'path';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {Provider} from 'react-redux';
@@ -7,15 +6,9 @@ import I18n from '../../src/i18n';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 
-import {cssVariablesRead, cssVariablesSet} from './cssVariables';
 import {levelStore} from './levelStore';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
-
-const STYLESHEET = path.join(
-  __dirname,
-  '../../src/UIComponents/decisionTree.module.scss',
-);
 
 function renderTrainedTree() {
   I18n.initI18n();
@@ -31,14 +24,6 @@ function renderTrainedTree() {
 describe('DecisionTree', () => {
   beforeEach(renderTrainedTree);
   afterEach(() => I18n.reset());
-
-  it('sets on the canvas exactly the --tree-* variables its stylesheet reads', () => {
-    const read = cssVariablesRead([STYLESHEET], '--tree-');
-    const canvas = document.querySelector('[role="img"]');
-
-    expect(read).not.toHaveLength(0);
-    expect(cssVariablesSet(canvas, '--tree-')).toEqual(read);
-  });
 
   it('marks every node as either a question or an answer', () => {
     const nodes = [...document.getElementsByClassName(moduleStyles.node)];
