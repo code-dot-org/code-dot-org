@@ -40,6 +40,15 @@
   color: var(--text-neutral-tertiary);
 }
 
-.nextLevelWrap {
-  margin-left: auto;
+.submittedStamp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-success-primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

@@ -3,6 +3,7 @@ import {Button as MuiButton, Typography} from '@mui/material';
 import React from 'react';
 
 import AttemptCard from './AttemptCard';
+import {formatSubmittedAt} from './types';
 
 import styles from './results-card.module.scss';
 
@@ -13,6 +14,7 @@ export interface ResultsCardProps {
   attemptNumber: number;
   allowMultipleAttempts: boolean;
   canRetake: boolean;
+  submittedAt: string;
   onTryAgain: () => void;
   onNextLevel: () => void;
 }
@@ -27,6 +29,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
   attemptNumber,
   allowMultipleAttempts,
   canRetake,
+  submittedAt,
   onTryAgain,
   onNextLevel,
 }) => {
@@ -72,18 +75,24 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
       }
       footer={
         <>
-          {canRetake && (
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="medium"
-              type="button"
-              onClick={onTryAgain}
-            >
-              Try again
-            </MuiButton>
-          )}
-          <div className={styles.nextLevelWrap}>
+          <div className={styles.submittedStamp}>
+            <FontAwesomeV6Icon iconName="circle-check" />
+            <Typography variant="body3" component="span">
+              Submitted {formatSubmittedAt(submittedAt)}
+            </Typography>
+          </div>
+          <div className={styles.actions}>
+            {canRetake && (
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="medium"
+                type="button"
+                onClick={onTryAgain}
+              >
+                Try again
+              </MuiButton>
+            )}
             <MuiButton
               variant="contained"
               color="primary"

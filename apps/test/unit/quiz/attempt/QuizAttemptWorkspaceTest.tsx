@@ -290,6 +290,7 @@ describe('QuizAttemptWorkspace', () => {
     expect(
       screen.getByRole('button', {name: /Next level/})
     ).toBeInTheDocument();
+    expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
@@ -373,6 +374,7 @@ describe('QuizAttemptWorkspace', () => {
     expect(
       screen.getByRole('button', {name: /Next level/})
     ).toBeInTheDocument();
+    expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
   });
 
   it('shows the submitted intro shell instead of results when showCorrectness is off', () => {
@@ -390,7 +392,7 @@ describe('QuizAttemptWorkspace', () => {
     });
 
     expect(screen.getByText('submitted')).toBeInTheDocument();
-    expect(screen.getByText('Submitted')).toBeInTheDocument();
+    expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
     // Nothing to reveal without correctness - no score/stats card here.
     expect(screen.queryByText('67%')).not.toBeInTheDocument();
     expect(screen.queryByText('2 of 3 Correct')).not.toBeInTheDocument();

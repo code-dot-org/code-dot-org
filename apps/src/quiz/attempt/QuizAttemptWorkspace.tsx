@@ -289,6 +289,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                 attemptNumber={attempt.attemptNumber}
                 allowMultipleAttempts={toBool(allowMultipleAttempts)}
                 canRetake={attempt.canRetake}
+                submittedAt={attempt.submittedAt}
                 onTryAgain={handleRetake}
                 onNextLevel={handleNextLevel}
               />

@@ -5,6 +5,7 @@ import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import AttemptCard from './AttemptCard';
+import {formatSubmittedAt} from './types';
 
 import styles from './quiz-intro-card.module.scss';
 
@@ -44,7 +45,7 @@ const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
     ? [
         {
           icon: 'circle-check',
-          text: 'Submitted',
+          text: `Submitted ${formatSubmittedAt(submittedAt)}`,
           className: styles.metadataItemSuccess,
         },
         {

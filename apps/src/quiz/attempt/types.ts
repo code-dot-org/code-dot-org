@@ -12,6 +12,16 @@ export interface QuizQuestionInProgressResult {
   selectedChoiceId: string;
 }
 
+// Unlocalized, like the rest of this feature so far.
+export function formatSubmittedAt(isoString: string): string {
+  return new Date(isoString).toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  });
+}
+
 export interface QuizAttemptData {
   id: number;
   attemptNumber: number;
