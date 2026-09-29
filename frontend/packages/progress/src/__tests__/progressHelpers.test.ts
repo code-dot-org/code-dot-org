@@ -1,12 +1,10 @@
-// Ported from the lessonLocked, isLevelAssessment, getIconForLevel,
-// lessonIsAllAssessment and lessonProgressForSection blocks of
-// apps/test/unit/templates/progress/progressHelpersTest.js, plus the helpers
-// apps left untested. The lessonIsVisible and lessonIsLocked* blocks test
-// helpers not ported.
+// Ported from apps/test/unit/templates/progress/progressHelpersTest.js, plus
+// the helpers apps left untested. Where apps put the selected section in the
+// teacherSections state, these pass it.
 
 import {describe, expect, it} from 'vitest';
 
-import {LevelStatuses} from '../constants';
+import {LevelStatuses, ViewTypes} from '../constants';
 import {
   commentLeft,
   getIconForLevel,
@@ -14,12 +12,19 @@ import {
   isLevelStatusCompleted,
   lessonHasLevels,
   lessonIsAllAssessment,
+  lessonIsLockedForAllStudents,
+  lessonIsLockedForUser,
+  lessonIsVisible,
   lessonLocked,
   lessonProgressForSection,
   processServerSectionProgress,
   shouldShowReviewStates,
   studentNeedsFeedback,
 } from '../progressHelpers';
+import hiddenLessonSlice, {
+  updateHiddenLesson,
+} from '../redux/hiddenLessonSlice';
+import type {SectionLessons} from '../redux/lessonLockSlice';
 import {levelProgressFromServer} from '../redux/progressSlice';
 import type {LevelStatus, UnitProgress} from '../types';
 
@@ -293,5 +298,142 @@ describe('processServerSectionProgress', () => {
     });
     expect(parsed[1][7]).toMatchObject({status: 'perfect', result: 100});
     expect(parsed[2][7]).toMatchObject({status: 'not_tried', locked: true});
+  });
+});
+
+describe('lessonIsVisible', () => {
+  const state = {
+    hiddenLesson: hiddenLessonSlice.reducer(
+      undefined,
+      updateHiddenLesson({sectionId: 11, lessonId: 3, hidden: true}),
+    ),
+  };
+  const visible = {id: 2};
+  const hidden = {id: 3};
+
+  it('hides a hidden lesson from a participant only', () => {
+    expect(lessonIsVisible(hidden, state, 11, ViewTypes.Participant)).toBe(
+      false,
+    );
+    expect(lessonIsVisible(hidden, state, 11, ViewTypes.Instructor)).toBe(true);
+  });
+
+  it('shows a lesson that is not hidden', () => {
+    expect(lessonIsVisible(visible, state, 11, ViewTypes.Participant)).toBe(
+      true,
+    );
+    expect(lessonIsVisible(visible, state, 11, ViewTypes.Instructor)).toBe(
+      true,
+    );
+  });
+
+  it('reads the section it is given', () => {
+    expect(lessonIsVisible(hidden, state, 12, ViewTypes.Participant)).toBe(
+      true,
+    );
+  });
+});
+
+describe('lessonIsLockedForUser', () => {
+  const lockable = {lockable: true};
+  const unlockedLevels = fakeLevels(3);
+  const lockedLevels = fakeLevels(3).map((level, index) => ({
+    ...level,
+    isLocked: index === 2,
+  }));
+  const state = {
+    currentUser: {userId: 1},
+    lessonLock: {lockableAuthorized: true},
+  };
+
+  it('returns false for non-lockable lesson', () => {
+    expect(
+      lessonIsLockedForUser(
+        {lockable: false},
+        unlockedLevels,
+        state,
+        ViewTypes.Participant,
+      ),
+    ).toBe(false);
+  });
+
+  it('returns true for lockable lesson for signed out user', () => {
+    expect(
+      lessonIsLockedForUser(
+        lockable,
+        unlockedLevels,
+        {...state, currentUser: {userId: undefined}},
+        ViewTypes.Participant,
+      ),
+    ).toBe(true);
+  });
+
+  it('returns true for lockable lesson for non-verified instructor', () => {
+    expect(
+      lessonIsLockedForUser(
+        lockable,
+        unlockedLevels,
+        {...state, lessonLock: {lockableAuthorized: false}},
+        ViewTypes.Instructor,
+      ),
+    ).toBe(true);
+    expect(
+      lessonIsLockedForUser(
+        lockable,
+        unlockedLevels,
+        state,
+        ViewTypes.Instructor,
+      ),
+    ).toBe(false);
+  });
+
+  it('follows the lesson levels for a participant', () => {
+    expect(
+      lessonIsLockedForUser(
+        lockable,
+        lockedLevels,
+        state,
+        ViewTypes.Participant,
+      ),
+    ).toBe(true);
+    expect(
+      lessonIsLockedForUser(
+        lockable,
+        unlockedLevels,
+        state,
+        ViewTypes.Participant,
+      ),
+    ).toBe(false);
+  });
+});
+
+describe('lessonIsLockedForAllStudents', () => {
+  const lockedLessonId = 1111;
+  const unlockedLessonId = 1000;
+  const state = {
+    lessonLock: {
+      lessonsBySectionId: {
+        11: {
+          [lockedLessonId]: [{locked: true}, {locked: true}],
+          [unlockedLessonId]: [{locked: true}, {locked: false}],
+        } as unknown as SectionLessons,
+      },
+    },
+  };
+
+  it('returns false when we have no selected section', () => {
+    expect(lessonIsLockedForAllStudents(lockedLessonId, state, undefined)).toBe(
+      false,
+    );
+  });
+
+  it('returns false when the selected section has an unlocked student', () => {
+    expect(lessonIsLockedForAllStudents(unlockedLessonId, state, 11)).toBe(
+      false,
+    );
+  });
+
+  it('returns true when the selected section has no unlocked students', () => {
+    expect(lessonIsLockedForAllStudents(lockedLessonId, state, 11)).toBe(true);
   });
 });

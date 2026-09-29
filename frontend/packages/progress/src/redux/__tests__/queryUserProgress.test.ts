@@ -1,7 +1,7 @@
 // Ported from the userProgressFromServer block of
 // apps/test/unit/code-studio/progressReduxTest.js. The apps list of expected
-// actions also held verifiedInstructor/SET_VERIFIED and
-// lessonLock/AUTHORIZE_LOCKABLE; neither slice exists under frontend/ yet.
+// actions also held verifiedInstructor/SET_VERIFIED, whose slice is not
+// under frontend/ yet.
 // The request itself is DashboardApiClient's; its wire format is tested in
 // core.
 
@@ -99,6 +99,7 @@ describe('queryUserProgress', () => {
       'progress/clearResults',
       'progress/setIsSummaryView',
       'progress/updateFocusArea',
+      'lessonLock/authorizeLockable',
       'progress/setScriptCompleted',
       'progress/setScriptProgress',
       'progress/mergeResults',
@@ -115,6 +116,7 @@ describe('queryUserProgress', () => {
       'progress/clearResults',
       'progress/setIsSummaryView',
       'progress/updateFocusArea',
+      'lessonLock/authorizeLockable',
       'progress/setScriptCompleted',
       'progress/setScriptProgress',
       'progress/mergePeerReviewProgress',
@@ -132,7 +134,8 @@ describe('queryUserProgress', () => {
     respond({signedIn: false});
     const {actions, promise} = run('');
     await expect(promise).resolves.toEqual({signedIn: false});
-    expect(actions).toEqual([]);
+    // As in apps, a signed-out user is told lockable lessons are unauthorized.
+    expect(actions).toEqual(['lessonLock/authorizeLockable']);
   });
 
   it('rejects with the client error on a failed response', async () => {

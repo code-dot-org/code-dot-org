@@ -1,10 +1,11 @@
 # @code-dot-org/progress
 
-Level progress for labs and Studio: the Lab2 validation loop
-(`ProgressManager`, `ConditionsChecker`), the `progress` redux slice (unit,
-lesson and level state; server progress parsing; milestone posting; in-page
-level navigation), and the `TestResults` and `LevelStatuses` vocabularies
-shared with Rails.
+Level progress and lesson structure for labs and Studio: the Lab2
+validation loop (`ProgressManager`, `ConditionsChecker`), the `progress`
+redux slice (unit, lesson and level state; server progress parsing;
+milestone posting; in-page level navigation), the `hiddenLesson` and
+`lessonLock` slices (which lessons each section hides and locks), and the
+`TestResults` and `LevelStatuses` vocabularies shared with Rails.
 
 Ported from `apps/src/lab2/progress`, `apps/src/code-studio/progressRedux.ts`
 and their helpers. The full compatibility assessment, including every known
@@ -21,11 +22,8 @@ wait on a host or on other packages:
 
 - No host reports idleness to `milestoneTimer` yet, so idle time counts as
   time spent.
-- Lesson visibility and locking (`lessonIsVisible`, `lessonIsLockedForUser`,
-  `lessonIsLockedForAllStudents`), and the verified-instructor and
-  lockable-authorized flags from `/api/user_progress`, need the
-  hidden-lesson, lesson-lock and teacher-section slices, which do not exist
-  under `frontend/` yet.
+- The verified-instructor flag from `/api/user_progress` is not stored; it
+  belongs with the users package.
 
 Legacy (non-Lab2) labs report progress through
 `apps/src/code-studio/reporting.js`. This package shares their result
@@ -52,15 +50,17 @@ whether it should is an open design decision (docs/port.md, section 4).
 
 `@code-dot-org/progress/redux`:
 
-| Export                                                                                                                                                                                                                                           | Kind      | Purpose                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------ |
-| `progressSlice` (default)                                                                                                                                                                                                                        | Slice     | Inject with `injectSlices` from `@code-dot-org/core/redux`                     |
-| `initProgress`, `setValidationState`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                                                                | Actions   |                                                                                |
-| `queryUserProgress`, `sendSuccessReport`, `sendSuccessReportForLevel`, `sendProgressReport`, `sendStartedReportIfNotStarted`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`, `continueOrFinishLesson` | Thunks    | Request through `DashboardApiClient`                                           |
-| `installLevelNavigationHandler`                                                                                                                                                                                                                  | Function  | Follows back and forward between in-page levels                                |
-| `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath`                                             | Selectors | Take the root state                                                            |
-| `groupedLessons`, `levelsByLesson`, `lessons`, `progressionsFromLevels`, `hasGroups`, `hasLockableLessons`, `getCurrentLesson`, `getLessonCount`, `levelCount`, `isPerfect`, `lessonExtrasUrl`, `lessonTutorPath`, `hasLessonPlan`               | Selectors | For the unit overview, progress table and lesson header; signatures as in apps |
-| `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                                                                   | Helpers   | Pure                                                                           |
+| Export                                                                                                                                                                                                                                           | Kind          | Purpose                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------ |
+| `progressSlice` (default)                                                                                                                                                                                                                        | Slice         | Inject with `injectSlices` from `@code-dot-org/core/redux`                     |
+| `initProgress`, `setValidationState`, `setCurrentLevelId`, `setScriptProgress`, `mergeResults`, …                                                                                                                                                | Actions       |                                                                                |
+| `queryUserProgress`, `sendSuccessReport`, `sendSuccessReportForLevel`, `sendProgressReport`, `sendStartedReportIfNotStarted`, `sendSubmitReport`, `sendPredictLevelReport`, `navigateToLevelId`, `navigateToNextLevel`, `continueOrFinishLesson` | Thunks        | Request through `DashboardApiClient`                                           |
+| `installLevelNavigationHandler`                                                                                                                                                                                                                  | Function      | Follows back and forward between in-page levels                                |
+| `hiddenLessonSlice`, `getHiddenLessons`, `toggleHiddenLesson`, `toggleHiddenScript`, `initializeHiddenScripts`, `isLessonHiddenForSection`                                                                                                       | Slice, thunks | Lessons and units each section hides                                           |
+| `lessonLockSlice`, `loadSectionLockStatus`, `openLockDialog`, `saveLockDialog`, `lockLesson`, `getLockDialogStatus`, `fullyLockedLessonMapping`                                                                                                  | Slice, thunks | Per-student locks on lockable lessons, and the lock dialog                     |
+| `getCurrentLevel`, `getCurrentLevels`, `getCurrentScriptLevelId`, `getParentLevel`, `getNextLevel`, `nextLevelId`, `levelsForLessonId`, `levelById`, `getProgressLevelType`, `getUserAppOptionsPath`                                             | Selectors     | Take the root state                                                            |
+| `groupedLessons`, `levelsByLesson`, `lessons`, `progressionsFromLevels`, `hasGroups`, `hasLockableLessons`, `getCurrentLesson`, `getLessonCount`, `levelCount`, `isPerfect`, `lessonExtrasUrl`, `lessonTutorPath`, `hasLessonPlan`               | Selectors     | For the unit overview, progress table and lesson header; signatures as in apps |
+| `levelProgressFromServer`, `processServerStudentProgress`, `activityCssClass`, `resultFromStatus`, `mergeActivityResult`, `processedLevel`, `processedLessons`                                                                                   | Helpers       | Pure                                                                           |
 
 ## Usage
 
@@ -69,14 +69,29 @@ Compose the store per `packages/core/src/redux/README.md`:
 ```ts
 import {injectSlices, storeHooks} from '@code-dot-org/core/redux';
 import {currentUserSlice} from '@code-dot-org/users/redux';
-import {progressSlice} from '@code-dot-org/progress/redux';
+import {
+  hiddenLessonSlice,
+  lessonLockSlice,
+  progressSlice,
+} from '@code-dot-org/progress/redux';
 
-const store = injectSlices([currentUserSlice, progressSlice]);
+const store = injectSlices([
+  currentUserSlice,
+  progressSlice,
+  hiddenLessonSlice,
+  lessonLockSlice,
+]);
 export const {useAppDispatch, useAppSelector} = storeHooks<typeof store>();
 ```
 
 Feed `initProgress` from core's parsed `Lesson`s. Ids are numbers after the
 zod transform; the slice does not accept raw script JSON.
+
+Hidden lessons and lesson locks are per section. The package does not know
+which section is selected; that is teacher-dashboard's. Pass the section id
+to the selectors that need it (`getLockDialogStatus`, `lessonIsVisible`,
+`lessonIsLockedForAllStudents`); a participant passes none. Load them with
+`getHiddenLessons(scriptName, canHideLessons)` and `loadSectionLockStatus()`.
 
 Run validation for a level. The host wraps the lab in a
 `ProgressContainer`, which puts the manager's state in the slice as
