@@ -93,7 +93,7 @@ describe('QuizIntroCard', () => {
       renderCard({submittedAt: '2026-09-05T14:14:00Z', canRetake: false});
 
       expect(screen.getByText('submitted')).toBeInTheDocument();
-      expect(screen.getByText('Submitted')).toBeInTheDocument();
+      expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
       expect(screen.queryByText(/question/)).not.toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: 'Begin'})
@@ -101,7 +101,11 @@ describe('QuizIntroCard', () => {
     });
 
     it('shows only Next level when the attempt cannot be retaken', () => {
-      renderCard({submittedAt: '2026-09-05T14:14:00Z', canRetake: false});
+      renderCard({
+        submittedAt: '2026-09-05T14:14:00Z',
+        canRetake: false,
+        allowMultipleAttempts: false,
+      });
 
       expect(screen.getByText('No attempts remaining')).toBeInTheDocument();
       expect(
