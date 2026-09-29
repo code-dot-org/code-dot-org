@@ -11,11 +11,11 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
   end
 
   # Validate functionality both in environments which are configured with a
-  # secure session store to emulate production (ie, the DTT) and for those with
+  # secure session store to emulate production (ie, DTT) and for those with
   # a more minimal configuration (ie, CI and dev).
   #
   # We do this instead of stubbing `no_https_store` because its value is
-  # referenced by the session store at startup, and the resulting configuration
+  # referenced by session store at startup, and resulting configuration
   # options are not easily stubbable. See `config/initializers/session_store.rb`
   test 'session cookie not set over insecure HTTP in securely-configured environment' do
     https! false
@@ -84,7 +84,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       cookies['OptanonConsent'] = onetrust_consent_cookie_value
     end
 
-    it 'parses the consent cookie data' do
+    it 'parses consent cookie data' do
       get '/'
       _(request.onetrust_consent_data).must_equal(
         {
@@ -104,7 +104,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       )
     end
 
-    context 'when the consent cookie is absent' do
+    context 'when consent cookie is absent' do
       before do
         cookies.delete('OptanonConsent')
       end
@@ -115,7 +115,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when the consent cookie has invalid percent encoding' do
+    context 'when consent cookie has invalid percent encoding' do
       let(:onetrust_consent_cookie_value) {'groups=%'}
 
       it 'returns empty data' do
@@ -148,7 +148,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when consent data has a non-string groups value' do
+    context 'when consent data has non-string groups value' do
       let(:onetrust_consent_data) {{'groups' => nil}}
 
       it 'returns no active groups' do
@@ -183,90 +183,6 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
       it 'does not allow performance cookies' do
         _(onetrust_request.onetrust_performance_cookies_allowed?).must_equal false
-      end
-    end
-  end
-
-  describe 'request#statsig_stable_id' do
-    subject(:request_statsig_stable_id) {request.statsig_stable_id}
-
-    it 'persists through sign-in and rotates after sign-out' do
-      get '/'
-      initial_stable_id = request_statsig_stable_id
-      _(initial_stable_id).must_match Cdo::AnonUserId::FORMAT
-      _(cookies[:statsig_stable_id]).must_be_nil
-      _(session[:statsig_stable_id]).must_equal initial_stable_id
-
-      get '/v3/channels'
-      _(request.statsig_stable_id).must_equal initial_stable_id
-
-      sign_in create(:user)
-
-      get '/'
-      _(request.statsig_stable_id).must_equal initial_stable_id
-
-      get '/v3/channels'
-      _(request.statsig_stable_id).must_equal initial_stable_id
-
-      get '/users/sign_out'
-      _(cookies[:statsig_stable_id]).must_be_empty
-
-      get '/'
-      rotated_stable_id = request.statsig_stable_id
-      _(rotated_stable_id).must_match Cdo::AnonUserId::FORMAT
-      _(rotated_stable_id).wont_equal initial_stable_id
-      _(cookies[:statsig_stable_id]).must_be_empty
-      _(session[:statsig_stable_id]).must_equal rotated_stable_id
-    end
-
-    context 'with Statsig cookie' do
-      let(:cookies_statsig_stable_id) {SecureRandom.uuid}
-
-      before do
-        cookies[:statsig_stable_id] = cookies_statsig_stable_id
-        cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A1'
-      end
-
-      it 'stores Statsig cookie value in session' do
-        get '/'
-        _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-        _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
-      end
-
-      it 'restores Statsig cookie value after session reset' do
-        get '/reset_session'
-        get '/'
-
-        _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-        _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
-      end
-
-      context 'with conflicting session ID' do
-        let(:previous_session_value) {SecureRandom.uuid}
-
-        before do
-          get '/'
-          session[:statsig_stable_id] = previous_session_value
-        end
-
-        it 'replaces session ID with Statsig cookie value' do
-          get '/'
-          _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-          _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
-        end
-      end
-
-      context 'without performance cookie consent' do
-        before do
-          cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A0'
-        end
-
-        it 'ignores the Statsig cookie' do
-          get '/'
-
-          _(request.statsig_stable_id).wont_equal cookies_statsig_stable_id
-          _(session[:statsig_stable_id]).must_equal request.statsig_stable_id
-        end
       end
     end
   end

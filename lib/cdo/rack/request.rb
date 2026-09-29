@@ -127,27 +127,11 @@ module Cdo
 
     # Statsig stable ID for use of anonymous (signed-out) user tracking.
     #
-    # @see apps/src/metrics/statsigHelpers.js
+    # @see Middleware::StatsigStableId
     #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
-      @statsig_stable_id ||= begin
-        storage_key = SharedConstants::STATSIG_STABLE_ID_KEY
-
-        stable_id =
-          # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
-          if cookies[storage_key] && !cookies[storage_key].empty? && onetrust_performance_cookies_allowed?
-            cookies[storage_key]
-          elsif session[storage_key] && !session[storage_key].empty?
-            session[storage_key]
-          else
-            Cdo::AnonUserId.generate
-          end
-
-        session[storage_key] = stable_id unless session[storage_key] == stable_id
-
-        session[storage_key]
-      end
+      session[SharedConstants::STATSIG_STABLE_ID_KEY]
     end
 
     def anon_user_id

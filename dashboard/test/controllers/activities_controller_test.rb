@@ -941,6 +941,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal false, new_level
 
     sign_out @user
+    session[:statsig_stable_id] = Cdo::AnonUserId.generate
     assert_equal true, new_level
   end
 
