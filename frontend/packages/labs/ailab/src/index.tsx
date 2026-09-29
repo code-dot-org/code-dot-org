@@ -18,6 +18,7 @@ import {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
+  setSelectedName,
   setReserveLocation,
   setInstructionsDismissed,
   setInstructionsEnabled,
@@ -115,6 +116,7 @@ const processMode = (mode: Mode | undefined): void => {
       const item = getDatasets().filter((item: Dataset) => {
         return item.id === mode.datasets![0];
       })[0];
+      store.dispatch(setSelectedName(item.name));
       store.dispatch(setSelectedCSV(assetPath + item.path));
       store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
       // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store

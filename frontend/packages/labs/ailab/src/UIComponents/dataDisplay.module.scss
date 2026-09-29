@@ -1,4 +1,50 @@
-.footer {
-  font-size: 13px;
-  margin-top: 12px;
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--font-family-main);
+  background-color: var(--background-neutral-primary);
+}
+
+// Matches the Train panel header so the two line up.
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 4px 8px 4px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
+.separator {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--background-neutral-quinary);
+}
+
+.rowCount {
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: var(--text-neutral-quaternary);
+}
+
+.tableContainer {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
 }
