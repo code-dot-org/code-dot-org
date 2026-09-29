@@ -10,12 +10,12 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##Welcome!\nIn this activity you will build your own game with the help of AI.\n\nYou will:\n- Create your own pictures with AI\n- Build a story scene\n- Build a platformer scene\n- Link them into one game",
+        "text": "##Welcome!\nYou will build your own game with help from AI.\n\nYou will:\n- Make pictures with AI\n- Build a story scene\n- Build a platformer scene\n- Link them into one game",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-welcome-aa712bff-174d-449a-8b05-e5ab43d04f41"
       },
       {
-        "text": "##One project, many steps\nEverything you make is saved in **one project**. Each level unlocks a new tool:\n- The **Images** tab: make backgrounds, characters, and blocks\n- The **Code** tab: bring your images to life",
+        "text": "##One project, many steps\nEverything you make goes in **one project**. Each level adds a new tool:\n- **Images** tab: make backgrounds, characters, and blocks\n- **Code** tab: bring your images to life",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-welcome-2dee9cc8-b47e-4eee-970b-12389770add4",
         "fadeInOverPrevious": true

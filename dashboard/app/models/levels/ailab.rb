@@ -35,6 +35,16 @@ class Ailab < Level
     uses_lab2
   )
 
+  DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'datasets-manifest.json')
+
+  REQUIRE_ACCURACY_RANGE = (0..100)
+
+  validate :validate_lab2_mode
+
+  def self.dataset_ids
+    @dataset_ids ||= JSON.parse(File.read(DATASETS_MANIFEST_PATH))['datasets'].pluck('id')
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -111,5 +121,29 @@ class Ailab < Level
       mode
       dynamic_instructions
     ).map {|x| x.camelize(:lower)}
+  end
+
+  private def validate_lab2_mode
+    return unless JSONValue.value(uses_lab2) == true
+
+    parsed_mode = begin
+      JSON.parse(mode.presence || '{}')
+    rescue JSON::ParserError
+      nil
+    end
+    parsed_mode = {} unless parsed_mode.is_a?(Hash)
+
+    # The Lab 2 AI Lab currently requires exactly 1 dataset.
+    datasets = parsed_mode['datasets']
+    unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
+      errors.add(:mode, 'must select exactly one dataset.')
+    end
+
+    if parsed_mode.key?('requireAccuracy')
+      accuracy = parsed_mode['requireAccuracy']
+      unless accuracy.is_a?(Numeric) && REQUIRE_ACCURACY_RANGE.cover?(accuracy)
+        errors.add(:mode, 'must have a required accuracy from 0 to 100.')
+      end
+    end
   end
 end
