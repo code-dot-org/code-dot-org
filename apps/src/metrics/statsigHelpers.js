@@ -53,8 +53,6 @@ export function findOrCreateStableId() {
 }
 
 function consentAllowsStatsigCookie() {
-  if (isDevelopmentEnvironment()) return true;
-
   const groups = getOnetrustGroups();
   return ONETRUST_ALLOWED_CATEGORIES.some(id => groups.has(id));
 }

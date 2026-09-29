@@ -160,13 +160,10 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
   describe 'request#onetrust_performance_cookies_allowed?' do
     subject(:onetrust_request) {ActionDispatch::Request.new(Rack::MockRequest.env_for('/'))}
 
-    let(:development_environment) {false}
     let(:onetrust_active_groups) {Set['C0001', 'C0002']}
 
     before do
       allow(onetrust_request).to receive(:onetrust_active_groups).and_return(onetrust_active_groups)
-      allow(CDO).to receive(:rack_env?).and_call_original
-      allow(CDO).to receive(:rack_env?).with(:development).and_return(development_environment)
     end
 
     it 'allows performance cookies when C0002 is active' do
@@ -181,16 +178,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'without consent in development' do
-      let(:development_environment) {true}
-      let(:onetrust_active_groups) {Set.new}
-
-      it 'allows performance cookies' do
-        _(onetrust_request.onetrust_performance_cookies_allowed?).must_equal true
-      end
-    end
-
-    context 'without consent outside development' do
+    context 'without active consent groups' do
       let(:onetrust_active_groups) {Set.new}
 
       it 'does not allow performance cookies' do

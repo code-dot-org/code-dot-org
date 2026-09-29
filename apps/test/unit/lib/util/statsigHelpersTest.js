@@ -14,7 +14,6 @@ describe('StatsigReporter', () => {
   describe('findOrCreateStableId', () => {
     const nativeRandomUUID = window.crypto.randomUUID;
     let getCookieStub;
-    let isDevelopmentEnvironmentStub;
     let removeCookieStub;
     let setCookieStub;
 
@@ -42,7 +41,6 @@ describe('StatsigReporter', () => {
 
     afterEach(() => {
       getCookieStub.restore();
-      isDevelopmentEnvironmentStub?.restore();
       removeCookieStub.restore();
       setCookieStub.restore();
       localStorage.clear();
@@ -82,21 +80,7 @@ describe('StatsigReporter', () => {
       expectCookieSet(stableId);
     });
 
-    it('creates a cookie without consent in development', () => {
-      window.OnetrustActiveGroups = '';
-
-      const stableId = findOrCreateStableId();
-
-      expect(stableId).not.to.be.undefined;
-      expectCookieSet(stableId);
-      expect(removeCookieStub).not.to.have.been.called;
-    });
-
     it('removes stored IDs when performance cookies are not allowed', () => {
-      isDevelopmentEnvironmentStub = stub(
-        utils,
-        'isDevelopmentEnvironment'
-      ).returns(false);
       window.OnetrustActiveGroups = '';
       localStorage.setItem(
         StatsigStableIdKey.toUpperCase(),

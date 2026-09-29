@@ -122,7 +122,6 @@ module Cdo
     # @note This consent category controls whether Statsig cookies may be set.
     # @return [Boolean] true if Performance Cookies consent is active, false otherwise
     def onetrust_performance_cookies_allowed?
-      return true if CDO.rack_env?(:development)
       onetrust_active_groups.include?('C0002')
     end
 
