@@ -17,7 +17,7 @@ audits the PR description alongside the diff.
 
 Identical to `/code-review`:
 
-- **effort** — `low`, `medium`, `high`, `xhigh`, `max`. Defaults to `xhigh`
+- **effort** — `low`, `medium`, `high`, `xhigh`, `max`. Defaults to `high`
   (see Tunables).
 - **target** — PR number or URL, branch name, or path. Defaults to the
   current diff.
@@ -163,14 +163,9 @@ holds.
 
 Fill these in; they are the parts that drift.
 
-- **Usage scenarios that make a finding HIGH.** Observed so far: developer
-  experience, and regressions reaching production. <!-- TODO: confirm the
-  full list — is a broken adhoc, a levelbuilder-only break, or a curriculum
-  authoring break its own scenario? -->
-- **Active workstreams whose latent issues are fair game** (Phase 4, second
-  test). As of 2026-09-08: drone secrets removal, curriculum data
-  partitioning. <!-- TODO: keep dated; drop entries as they land. -->
-- **Default effort.** `xhigh`. <!-- TODO: confirm; `high` may be the better
-  default for a small PR. -->
-- **Finding cap.** `/code-review` at `xhigh` caps at 15. <!-- TODO: state
-  whether the report should carry all of them or cut the LOW tail. -->
+- **Usage scenarios that make a finding HIGH.** Any regression reaching
+  end users in production. Also, any breaks in non-production environments
+  or workflows, including curriculum authoring (levelbuilder), developer
+  experience, adhoc start, or any test environment failures.
+- **Default effort.** `high`.
+- **Finding cap.** `/code-review` at `high` caps at 15.
