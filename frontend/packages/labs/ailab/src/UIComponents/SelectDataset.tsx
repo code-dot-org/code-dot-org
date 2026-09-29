@@ -107,7 +107,11 @@ const SelectDataset = () => {
                 <img
                   src={assetPath + dataset.imagePath}
                   draggable={false}
-                  className={`uitest-ailab-dataset-image ${shared.hoverGrow} ${styles.image}`}
+                  className={classNames(
+                    'uitest-ailab-dataset-image',
+                    shared.hoverGrow,
+                    styles.image,
+                  )}
                   alt={`Select ${dataset.name} dataset`}
                 />
                 <div className={styles.name}>{dataset.name}</div>
@@ -117,7 +121,7 @@ const SelectDataset = () => {
         })}
       </ScrollableContent>
       {!specifiedDatasets && (
-        <div className={`${shared.contents} ${styles.upload}`}>
+        <div className={classNames(shared.contents, styles.upload)}>
           <label className={styles.uploadButton}>
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
             {/* Setting value to empty here allows us to receive an

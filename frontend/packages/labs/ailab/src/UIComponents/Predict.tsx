@@ -1,4 +1,5 @@
 /* React component to handle predicting and displaying predictions. */
+import classNames from 'classnames';
 import type React from 'react';
 
 import {imageUrl} from '../assetPath';
@@ -116,10 +117,10 @@ const Predict = () => {
         </button>
       </div>
       {predictedLabel && (
-        <div className={`${shared.contents} ${styles.botResult}`}>
+        <div className={classNames(shared.contents, styles.botResult)}>
           <div className={styles.botColumn}>
             <img
-              className={`${shared.hoverGrow} ${styles.bot}`}
+              className={classNames(shared.hoverGrow, styles.bot)}
               src={imageUrl('ai-bot/ai-bot-border.png')}
               alt={I18n.t('aiBotAltText')}
             />

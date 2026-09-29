@@ -1,5 +1,6 @@
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import classNames from 'classnames';
 import {type CSSProperties, type ReactNode, useEffect} from 'react';
 
 import {colors} from './constants';
@@ -177,7 +178,9 @@ interface ContainerRightProps {
 
 const ContainerRight = ({children}: ContainerRightProps) => {
   return (
-    <div className={`${styles.column} ${styles.rightColumn}`}>{children}</div>
+    <div className={classNames(styles.column, styles.rightColumn)}>
+      {children}
+    </div>
   );
 };
 
@@ -187,7 +190,9 @@ interface ContainerFullWidthProps {
 
 const ContainerFullWidth = ({children}: ContainerFullWidthProps) => {
   return (
-    <div className={`${styles.column} ${styles.fullWidth}`}>{children}</div>
+    <div className={classNames(styles.column, styles.fullWidth)}>
+      {children}
+    </div>
   );
 };
 

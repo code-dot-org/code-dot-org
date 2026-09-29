@@ -149,7 +149,10 @@ const DataTable = ({
                 return (
                   <td
                     key={columnId}
-                    className={`uitest-data-table-column ${getColumnCellClassName(columnId)}`}
+                    className={classNames(
+                      'uitest-data-table-column',
+                      getColumnCellClassName(columnId),
+                    )}
                     onClick={() => handleSetCurrentColumn(columnId)}
                     onKeyDown={() => handleSetCurrentColumn(columnId)}
                     onMouseEnter={() => handleSetHighlightColumn(columnId)}

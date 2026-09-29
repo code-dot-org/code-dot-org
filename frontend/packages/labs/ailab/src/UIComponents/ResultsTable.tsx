@@ -57,14 +57,14 @@ const ResultsTable = ({results}: ResultsTableProps) => {
             <tr>
               <th
                 colSpan={featureCount}
-                className={`${styles.header} ${styles.groupHeader}`}
+                className={classNames(styles.header, styles.groupHeader)}
               >
                 {I18n.t('resultsTableFeatureHeader')}
               </th>
-              <th className={`${styles.header} ${styles.groupHeader}`}>
+              <th className={classNames(styles.header, styles.groupHeader)}>
                 {I18n.t('resultsTableActualValueHeader')}
               </th>
-              <th className={`${styles.header} ${styles.groupHeader}`}>
+              <th className={classNames(styles.header, styles.groupHeader)}>
                 {I18n.t('resultsTablePredictedValueHeader')}
               </th>
             </tr>
@@ -72,7 +72,11 @@ const ResultsTable = ({results}: ResultsTableProps) => {
               {selectedFeatures.map((feature, index) => {
                 return (
                   <th
-                    className={`${styles.header} ${styles.featureHeader} ${styles.columnHeader}`}
+                    className={classNames(
+                      styles.header,
+                      styles.featureHeader,
+                      styles.columnHeader,
+                    )}
                     key={index}
                   >
                     {getLocalizedColumnName(datasetId, feature)}
@@ -80,12 +84,20 @@ const ResultsTable = ({results}: ResultsTableProps) => {
                 );
               })}
               <th
-                className={`${styles.header} ${styles.labelHeader} ${styles.columnHeader}`}
+                className={classNames(
+                  styles.header,
+                  styles.labelHeader,
+                  styles.columnHeader,
+                )}
               >
                 {getLocalizedColumnName(datasetId, labelColumn)}
               </th>
               <th
-                className={`${styles.header} ${styles.labelHeader} ${styles.columnHeader}`}
+                className={classNames(
+                  styles.header,
+                  styles.labelHeader,
+                  styles.columnHeader,
+                )}
               >
                 {getLocalizedColumnName(datasetId, labelColumn)}
               </th>

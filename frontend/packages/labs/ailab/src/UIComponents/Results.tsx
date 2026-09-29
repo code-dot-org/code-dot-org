@@ -1,4 +1,5 @@
 /* React component to handle displaying accuracy results. */
+import classNames from 'classnames';
 import {useEffect, useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -53,7 +54,7 @@ const Results = () => {
                     selectedFeatures={historicResult.features}
                   />
                 </div>
-                <div className={`${styles.accuracy} ${shared.bold}`}>
+                <div className={classNames(styles.accuracy, shared.bold)}>
                   {historicResult.accuracy}%
                 </div>
                 {index === 0 && (
@@ -71,7 +72,10 @@ const Results = () => {
                 {index === 0 && <DecisionTree />}
                 {index === 0 && historicResults.length > 1 && (
                   <div
-                    className={`${shared.largeText} ${styles.previousResults}`}
+                    className={classNames(
+                      shared.largeText,
+                      styles.previousResults,
+                    )}
                   >
                     <div className={styles.heading}>
                       {I18n.t('resultsPreviousResults')}

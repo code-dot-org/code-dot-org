@@ -1,4 +1,5 @@
 /* React component to handle training. */
+import classNames from 'classnames';
 import {useState, useEffect, useRef, useCallback} from 'react';
 
 import {imageUrl} from '../assetPath';
@@ -121,7 +122,7 @@ const GenerateResults = () => {
   return (
     <div
       id="train-model"
-      className={`${shared.panel} ${shared.scene}`}
+      className={classNames(shared.panel, shared.scene)}
       style={{
         backgroundImage:
           'url(' + imageUrl('results-background-light.jpg') + ')',
@@ -167,7 +168,7 @@ const GenerateResults = () => {
         className={shared.sceneBot}
         style={{transform: botContainerTransform}}
       >
-        <div className={`${shared.hoverGrow} ${shared.bot}`}>
+        <div className={classNames(shared.hoverGrow, shared.bot)}>
           <img
             src={imageUrl('ai-bot/ai-bot-head.png')}
             className={shared.botHead}

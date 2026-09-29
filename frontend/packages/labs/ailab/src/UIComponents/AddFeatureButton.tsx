@@ -1,4 +1,6 @@
 /* React component to handle selecting columns as features. */
+import classNames from 'classnames';
+
 import {useAppDispatch} from '../hooks';
 import I18n from '../i18n';
 import {addSelectedFeature} from '../redux';
@@ -22,7 +24,7 @@ const AddFeatureButton = ({column}: AddFeatureButtonProps) => {
       id="uitest-add-feature-button"
       type="button"
       onClick={event => addFeature(event, column!)}
-      className={`${shared.columnButton} ${shared.featureButton}`}
+      className={classNames(shared.columnButton, shared.featureButton)}
     >
       {I18n.t('addFeatureButton')}
     </button>

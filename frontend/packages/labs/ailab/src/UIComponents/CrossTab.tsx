@@ -3,6 +3,7 @@
   each active combination of features values, and corresponding percentage of
   label values, with a heatmap style applied.
 */
+import classNames from 'classnames';
 import {useCallback} from 'react';
 
 import {getLocalizedValue} from '../helpers/valueDetails';
@@ -19,7 +20,7 @@ const CrossTab = () => {
   const crossTabData = useAppSelector(getCrossTabData);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const getCellClassName = useCallback((percent: number) => {
-    return `${styles.cell} ${styles[`heat${Math.round(percent / 20)}`]}`;
+    return classNames(styles.cell, styles[`heat${Math.round(percent / 20)}`]);
   }, []);
 
   // There are a few criteria that affect how big the table looks.  We'll not
@@ -68,7 +69,7 @@ const CrossTab = () => {
                   </th>
                   <th
                     colSpan={crossTabData.uniqueLabelValues.length}
-                    className={`${styles.header} ${shared.bold}`}
+                    className={classNames(styles.header, shared.bold)}
                   >
                     {crossTabData.labelName}
                   </th>
@@ -77,7 +78,9 @@ const CrossTab = () => {
               <tbody>
                 <tr>
                   <td rowSpan={crossTabData.results.length + 1}>
-                    <div className={`${shared.bold} ${styles.featureName}`}>
+                    <div
+                      className={classNames(shared.bold, styles.featureName)}
+                    >
                       {crossTabData.featureNames[0]}
                     </div>
                   </td>

@@ -123,7 +123,7 @@ const TrainModel = () => {
   return (
     <div
       id="train-model"
-      className={`${shared.panel} ${shared.scene}`}
+      className={classNames(shared.panel, shared.scene)}
       style={{
         backgroundImage:
           'url(' + imageUrl('results-background-light.jpg') + ')',
@@ -152,8 +152,8 @@ const TrainModel = () => {
         )}
       </div>
 
-      <div className={`${shared.sceneBot} ${styles.botContainer}`}>
-        <div className={`${shared.hoverGrow} ${shared.bot}`}>
+      <div className={classNames(shared.sceneBot, styles.botContainer)}>
+        <div className={classNames(shared.hoverGrow, shared.bot)}>
           <img
             src={imageUrl('ai-bot/ai-bot-head.png')}
             className={classNames(shared.botHead, {

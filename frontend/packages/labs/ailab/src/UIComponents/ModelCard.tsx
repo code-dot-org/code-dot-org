@@ -1,4 +1,6 @@
 /* React component to handle displaying the model card. */
+import classNames from 'classnames';
+
 import {imageUrl} from '../assetPath';
 import {getPercentCorrect} from '../helpers/accuracy';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -37,7 +39,7 @@ const ModelCard = () => {
       <div className={styles.bot}>
         <img
           src={imageUrl('ai-bot/ai-bot-border.png')}
-          className={`${shared.hoverGrow} ${styles.botImage}`}
+          className={classNames(shared.hoverGrow, styles.botImage)}
           alt={I18n.t('aiBotAltText')}
         />
       </div>

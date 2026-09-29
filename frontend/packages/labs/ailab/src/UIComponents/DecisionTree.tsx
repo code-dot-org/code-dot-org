@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import {type CSSProperties, useMemo} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -69,7 +70,7 @@ const DecisionTree = () => {
 
   return (
     <div id="uitest-decision-tree" className={styles.decisionTree}>
-      <div className={`${styles.header} ${shared.bold}`}>
+      <div className={classNames(styles.header, shared.bold)}>
         Your model's decision tree
       </div>
       <div className={styles.scroll}>
@@ -112,7 +113,7 @@ const DecisionTree = () => {
                     {branch}
                   </div>
                 )}
-                <div title={text} className={`${styles.node} ${kind}`}>
+                <div title={text} className={classNames(styles.node, kind)}>
                   <span className={styles.nodeText}>{text}</span>
                 </div>
               </div>
