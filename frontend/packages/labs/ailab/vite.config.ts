@@ -120,6 +120,9 @@ export default defineConfig({
           entryFileNames: '[name].cjs',
           preserveModules: false,
           exports: 'named',
+          // Externals like the component library are transpiled ES modules
+          // whose default export lives on `.default`.
+          interop: 'auto',
           dir: 'dist',
         },
       ],
