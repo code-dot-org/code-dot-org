@@ -179,9 +179,10 @@ ${TREE_RULES}
 ─── STEP 1 — Docs ─────────────────────────────────────────────────────────────
   Read ${PLAN_DOC} in full (planDocFound), and the ${component} row of ${STATUS_DOC}
   (statusState). Parse the "Deferred changes" section into rows, in table order. For each
-  row take after from an After column when there is one, else from the prose around the
-  table ("X goes before Y"). movesDom from what the row says MUI would do. reference: a PR
-  or branch the plan names as the reference implementation.
+  row read after and movesDom from the After and Moves DOM columns; when a plan predates
+  them, infer after from the prose around the table ("X goes before Y") and movesDom from
+  what the row says MUI would do. ticket is the bare key from the Ticket column, without
+  any qualifier. reference: a PR or branch the plan names as the reference implementation.
 
 ─── STEP 2 — The tree ─────────────────────────────────────────────────────────
   legacySourceFiles: the deprecated files under ${COMPONENT_DIR} (the export policy in the
@@ -189,7 +190,9 @@ ${TREE_RULES}
   legacyImports: grep apps/src, apps/test, frontend and ${LIB_SRC} (excluding
   ${COMPONENT_DIR}) for imports of a legacy export from
   '@code-dot-org/component-library/${component}' or relative paths into ${COMPONENT_DIR}.
-  eslintBanPresent: ${ESLINT_APPS} has a no-restricted-imports entry for that path.
+  Read each import's specifiers: a MuiX export aliased to a legacy name
+  (import {MuiDialog as Dialog}) is the migrated form the codemod writes, not a legacy
+  import. eslintBanPresent: ${ESLINT_APPS} has a no-restricted-imports entry for that path.
   codemod: under ${CODEMODS_DIR} and ${LIB}/package.json. consumerFiles: every file
   outside ${COMPONENT_DIR} that imports from the component entry point (git grep -l).
   consumerTestFiles: the tests of those files.
