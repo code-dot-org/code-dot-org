@@ -68,8 +68,9 @@ export default function getInitialSources<T extends ProjectSources>(
 }
 
 /**
- * The sources "start over" resets a project to: the level's own, subject to
- * the level edit mode, or `defaultSources` when the level has none.
+ * Returns the sources to be used when clicking "Start Over".
+ * This can be the level's template or start sources (subject to level
+ * edit mode), or defaultSources when the level has none.
  */
 export function getStartOverSources<T extends ProjectSources>(
   levelProperties: LevelProperties,
