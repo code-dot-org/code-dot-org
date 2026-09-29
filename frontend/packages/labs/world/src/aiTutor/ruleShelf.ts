@@ -15,6 +15,7 @@
 // in the section above this one, and listing it twice invites the model to
 // import what it is already using.
 
+import {activeAppBuilder, offersRule} from '../appBuilder';
 import type {RuleMeta} from '../blockly/ruleMeta';
 import {STOCK_RULES} from '../rules/stock';
 
@@ -37,7 +38,12 @@ export const importableRules = (
   held: readonly RuleMeta[],
 ): string | undefined => {
   const have = new Set(held.map(meta => meta.name));
-  const shelf = STOCK_RULES.filter(rule => !have.has(rule.name));
+  // …and in App Builder, only what an app is offered: the tutor should not
+  // send for a rule the library would not show (`appBuilder`).
+  const app = activeAppBuilder();
+  const shelf = STOCK_RULES.filter(
+    rule => !have.has(rule.name) && offersRule(rule.id, app),
+  );
   if (!shelf.length) {
     return undefined;
   }

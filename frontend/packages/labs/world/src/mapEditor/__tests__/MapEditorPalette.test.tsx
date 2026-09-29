@@ -59,6 +59,8 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
     updateSources: vi.fn(),
     sourcesEpoch: 0,
   }),
+  // No level: a game, the default (`appBuilder`).
+  useMaybeLevelProperties: () => undefined,
 }));
 
 // No sandbox: nothing ever answers with a thumbnail, which is also the state

@@ -32,6 +32,7 @@ import {useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {offersRule, useAppBuilder} from '../appBuilder';
 import {LessonLink, unlockLesson} from '../progression/LessonLink';
 import {useMaybeProgression} from '../progression/progressionContext';
 
@@ -84,6 +85,15 @@ export const ImportRuleDialog = ({
   const progression = useMaybeProgression();
   const held = (rule: StockRule) =>
     progression?.holds({kind: 'rule', id: rule.id}) ?? true;
+  // …and, in App Builder, only the rules an app is offered at all. Left out
+  // rather than locked: no lesson grants a game rule to an app (`appBuilder`).
+  const app = useAppBuilder();
+  const groups = stockRuleGroups()
+    .map(group => ({
+      ...group,
+      rules: group.rules.filter(rule => offersRule(rule.id, app)),
+    }))
+    .filter(group => group.rules.length > 0);
 
   return (
     <Dialog
@@ -107,7 +117,7 @@ export const ImportRuleDialog = ({
       customContent={
         <div className={styles.body}>
           <div className={styles.shelf}>
-            {stockRuleGroups().map(({region, rules}) => (
+            {groups.map(({region, rules}) => (
               <section key={region.id}>
                 <Typography variant="overline1" className={styles.region}>
                   {region.name}

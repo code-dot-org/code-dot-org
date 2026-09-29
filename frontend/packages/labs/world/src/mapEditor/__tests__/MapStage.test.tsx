@@ -901,6 +901,29 @@ describe('the camera strip', () => {
     expect(onEditScript).toHaveBeenCalledWith('a');
   });
 
+  it('offers no cameras in App Builder, and no layers either', () => {
+    // Left out rather than withheld: no lesson grants either to an app.
+    const view = mount(doc(), {
+      appBuilder: true,
+      onEditScript: vi.fn(),
+      world: {
+        header: {name: 'W', properties: []},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+      },
+      worldCameras: [{id: 'c1', name: 'Wide', traits: []}],
+    });
+    expect(view.queryByRole('button', {name: 'Cameras'})).toBeNull();
+    expect(view.queryByRole('button', {name: 'Layers'})).toBeNull();
+    // A lesson pointing at the strip finds nothing to open.
+    let answer: unknown;
+    act(() => {
+      answer = reveal({kind: 'mapPanel', panel: 'layers'});
+    });
+    expect(answer).toBe(false);
+    expect(view.queryByTestId('layer-panel')).toBeNull();
+  });
+
   it('shows nothing on a level map with nothing selected, which has none', () => {
     const view = mount(doc(), {onEditScript: vi.fn()});
     expect(view.queryByTestId('camera-panel')).toBeNull();
@@ -1070,6 +1093,15 @@ describe('what a gated lab withholds', () => {
     expect(onEditScript).not.toHaveBeenCalled();
     // The marks are drawn either way, so their toggle still works.
     expect(view.getByRole('button', {name: 'Icons'})).toBeInTheDocument();
+  });
+
+  it('offers a placement no Layer in App Builder', () => {
+    const map = layered();
+    const {canvas, ...view} = mount(map, {appBuilder: true});
+    select(canvas, map);
+    expect(
+      view.container.querySelector('select[name="actor-layer"]'),
+    ).toBeNull();
   });
 
   it('shows the layer strip and a placement’s Layer unless withheld', () => {

@@ -327,6 +327,9 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'Every interface actor on one screen, answering each other — a Label, ' +
       'a field you can type into, a Button, a bar and a Speech Box.',
     source: interfaceKit(buildProject(EMPTY_SPEC).source),
+    // An app, as Notes is: controls on a phone-shaped screen, and nothing
+    // a game wants on offer (`appBuilder`).
+    levelData: {mode: 'app'},
     instructions:
       '## The interface kit\n\nType your name and press the button.\n\n' +
       '- The screen is a MAP. Open `maps/interface.map` and the title, the ' +
@@ -354,6 +357,9 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'keyboard, a list of what you wrote, and it is all still there after a ' +
       'reload.',
     source: notesApp(buildProject(EMPTY_SPEC).source),
+    // App Builder: no game rules or actors on offer, and no layers or
+    // cameras in the map editor (`appBuilder`, specs/APPS.md).
+    levelData: {mode: 'app'},
     instructions:
       '## Notes\n\nWrite something down. Come back tomorrow and it is ' +
       'still there.\n\n' +

@@ -17,6 +17,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 
 import {requestActorCreate} from '../actors/create/actorCreate';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
+import {useAppBuilder} from '../appBuilder';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
@@ -113,6 +114,9 @@ export const MapEditor = ({
   // that grants it, and nothing else changes: a map that has scripts or
   // layers draws and runs as it is.
   const progression = useMaybeProgression();
+  // …and what App Builder leaves out altogether: layers and cameras
+  // (`appBuilder`).
+  const appBuilder = useAppBuilder();
   const withheld = useMemo(
     () =>
       new Set(
@@ -726,6 +730,7 @@ export const MapEditor = ({
           }
         }}
         withheld={withheld}
+        appBuilder={appBuilder}
         kinds={kinds}
         onEnhanceKind={enhanceKind}
         onOpenKind={openKind}

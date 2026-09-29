@@ -52,6 +52,11 @@ export const WorldLevelDataSchema = z.object({
   // learner's finished tiles all agree which one is meant
   // (progression/catalogues, specs/APPS.md).
   catalogue: z.string().optional(),
+  // What is being made: a game, or an app. Default `game`. An app level
+  // leaves out what only a game wants — the game rules and actors, the map's
+  // layers and cameras, and their blocks — without refusing a project that
+  // already has them (`appBuilder`, specs/APPS.md, "App Builder").
+  mode: z.enum(['game', 'app']).optional(),
 });
 
 /**

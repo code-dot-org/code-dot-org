@@ -75,6 +75,7 @@ import {STOCK_ACTORS, stockActorById} from '../actors/stock';
 import {AnimationPickerDialog} from '../animationEditor/AnimationPickerDialog';
 import {parseAnim} from '../animationEditor/animDocument';
 import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
+import {offersActor, useAppBuilder} from '../appBuilder';
 import {BackgroundPickerDialog} from '../appearance/BackgroundPickerDialog';
 import {chooseImageGenerator} from '../appearance/generate/chooseImageGenerator';
 import type {
@@ -903,17 +904,21 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     [creating, filesIn, ops.source],
   );
 
+  // In App Builder, the controls only (`appBuilder`).
+  const app = useAppBuilder();
   const templates = useMemo(
     () =>
       creating
-        ? STOCK_ACTORS.map(actor => ({
-            id: actor.id,
-            name: actor.name,
-            description: actor.description,
-            look: lookOf(actor.contents),
-          }))
+        ? STOCK_ACTORS.filter(actor => offersActor(actor.id, app)).map(
+            actor => ({
+              id: actor.id,
+              name: actor.name,
+              description: actor.description,
+              look: lookOf(actor.contents),
+            }),
+          )
         : [],
-    [creating],
+    [creating, app],
   );
 
   /**

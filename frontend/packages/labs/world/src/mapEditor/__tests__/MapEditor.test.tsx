@@ -163,6 +163,8 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
     updateSources,
     sourcesEpoch: 0,
   }),
+  // No level: a game, the default (`appBuilder`).
+  useMaybeLevelProperties: () => undefined,
 }));
 
 /** The Actor Creator's seam, answered with whatever a test says was made. */

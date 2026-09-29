@@ -22,6 +22,8 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
     replaceSources,
     sourcesEpoch: 0,
   }),
+  // No level: a game, the default (`appBuilder`).
+  useMaybeLevelProperties: () => undefined,
 }));
 
 const {LibraryImports} = await import('../LibraryImports');

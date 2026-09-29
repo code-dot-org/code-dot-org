@@ -15,6 +15,7 @@ import {useAppSelector} from '@code-dot-org/lab/redux';
 import type {Setting} from '@code-dot-org/lab/resourcePanel';
 
 import {useWorldTutor} from '../aiTutor/useWorldTutor';
+import {setActiveAppBuilder} from '../appBuilder';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {CalloutAnnouncer} from '../callouts/CalloutAnnouncer';
 import {pointAt} from '../callouts/pointAt';
@@ -24,7 +25,11 @@ import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {ShowCodeContext} from '../debug/showCode';
 import {FileMenus} from '../files/FileMenus';
-import {showsFileBrowser, type WorldLevelProperties} from '../levelData';
+import {
+  buildsApps,
+  showsFileBrowser,
+  type WorldLevelProperties,
+} from '../levelData';
 import {LibraryImports} from '../library/LibraryImports';
 import {WorldPreview} from '../preview/WorldPreview';
 import {ProgressionButton} from '../progression/ProgressionButton';
@@ -67,6 +72,13 @@ const WorldLayout = () => {
   // A level about one file has nothing to browse (levelData).
   const level = useMaybeLevelProperties<WorldLevelProperties>();
   const browsable = showsFileBrowser(level);
+  // Whether this is App Builder, for the code that is not a component — the
+  // AI tutor's context (`appBuilder`, `activeAppBuilder`).
+  const app = buildsApps(level);
+  useEffect(() => {
+    setActiveAppBuilder(app);
+    return () => setActiveAppBuilder(false);
+  }, [app]);
 
   // …and with nothing to browse, closing a tab can be a one-way door. Every
   // other file is reachable from a block that names it (blockly/openModule),

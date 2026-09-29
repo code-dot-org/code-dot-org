@@ -24,6 +24,7 @@ import {useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {offersActor, useAppBuilder} from '../appBuilder';
 import {LessonLink, unlockLesson} from '../progression/LessonLink';
 import {useMaybeProgression} from '../progression/progressionContext';
 
@@ -74,6 +75,9 @@ export const ImportActorDialog = ({
   // See the same lines in ImportRuleDialog: shown either way, locked until the
   // lesson that grants it is done.
   const progression = useMaybeProgression();
+  // In App Builder, the controls only (`appBuilder`).
+  const app = useAppBuilder();
+  const offered = STOCK_ACTORS.filter(actor => offersActor(actor.id, app));
   const held = (actor: StockActor) =>
     progression?.holds({kind: 'actor', id: actor.id}) ?? true;
 
@@ -95,7 +99,7 @@ export const ImportActorDialog = ({
       customContent={
         <div className={styles.body}>
           <ul className={styles.grid}>
-            {STOCK_ACTORS.map(actor => {
+            {offered.map(actor => {
               const locked = !held(actor);
               const lesson = unlockLesson(progression, {
                 kind: 'actor',

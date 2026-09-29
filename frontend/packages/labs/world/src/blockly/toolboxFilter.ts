@@ -36,6 +36,50 @@ export function withoutCategories(
   );
 }
 
+/**
+ * `toolbox` without the blocks whose types are in `hidden`, and without a
+ * category that held nothing else.
+ *
+ * Types, because a feature's blocks share a drawer with the rest of it: the
+ * camera and layer blocks are in the World drawer, which an app still wants
+ * (`appBuilder.APP_HIDDEN_BLOCKS`). Identity when nothing is hidden.
+ */
+export function withoutBlocks(
+  toolbox: Toolbox,
+  hidden: ReadonlySet<string>,
+): Toolbox {
+  if (hidden.size === 0 || !Array.isArray(toolbox)) {
+    return toolbox;
+  }
+  const typeOf = (item: unknown): string | undefined =>
+    typeof item === 'string'
+      ? item
+      : typeof (item as {type?: unknown})?.type === 'string'
+        ? (item as {type: string}).type
+        : undefined;
+  let changed = false;
+  const kept: ToolboxCategory[] = [];
+  for (const category of toolbox as ToolboxCategory[]) {
+    if (isHeading(category) || !category.blocks) {
+      kept.push(category);
+      continue;
+    }
+    const blocks = category.blocks.filter(item => {
+      const type = typeOf(item);
+      return type === undefined || !hidden.has(type);
+    });
+    if (blocks.length === category.blocks.length) {
+      kept.push(category);
+      continue;
+    }
+    changed = true;
+    if (blocks.some(item => typeOf(item) !== undefined)) {
+      kept.push({...category, blocks});
+    }
+  }
+  return changed ? kept : toolbox;
+}
+
 /** A row that says what the rows under it are, rather than being one. */
 const isHeading = (row: ToolboxCategory): boolean =>
   typeof (row as {kind?: string}).kind === 'string';

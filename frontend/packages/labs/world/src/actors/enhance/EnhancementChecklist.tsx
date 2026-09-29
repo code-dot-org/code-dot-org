@@ -63,6 +63,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {offersEnhancement, useAppBuilder} from '../../appBuilder';
 import {unlockLesson} from '../../progression/LessonLink';
 import {
   useMaybeProgression,
@@ -258,6 +259,8 @@ export const EnhancementChecklist = ({
   // What a gated lab has not got to. Memoized over the draft, since working
   // it out means applying each row (`needsRules`).
   const progression = useMaybeProgression();
+  // In App Builder, only the rows an app is offered (`appBuilder`).
+  const app = useAppBuilder();
   const withheld = useMemo(() => {
     const reasons = new Map<string, string | undefined>();
     return (enhancement: Enhancement): string | undefined => {
@@ -282,7 +285,9 @@ export const EnhancementChecklist = ({
     .map(group => ({
       ...group,
       members: group.members.filter(
-        one => picked.includes(one.id) || onOffer(one, draft, target),
+        one =>
+          picked.includes(one.id) ||
+          (offersEnhancement(one.id, app) && onOffer(one, draft, target)),
       ),
     }))
     .filter(group => group.members.length > 0);

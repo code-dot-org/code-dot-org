@@ -254,6 +254,42 @@ It was priced at "a fixture", and as a piece of work that was right. What it
 was WORTH was not the fixture; it was what assembling the six found, which no
 one of them could have found alone.
 
+## App Builder — BUILT
+
+A level that makes an app says so, `levelData.mode: 'app'`, and the editor
+leaves out what only a game wants. Notes and the Interface Kit are two
+(`fixtures/scenarios`). A
+level and not a project: a curriculum author decides what the editor offers,
+as with `worldView` and `gateShelf`, and an app started from New Project is
+in App Builder only if its level says so.
+
+LEFT OUT, NOT WITHHELD. The progression's gate draws a control disabled
+beside the lesson that grants it; here no lesson grants a game rule to an
+app, and a disabled control beside nothing reads as broken. So the offer
+goes. And only the offer: a project that already holds a game rule, a layer
+or a camera loads, draws and runs, and its blocks still render.
+
+What is offered is a set of ALLOWLISTS (`appBuilder`), so a rule or actor
+added to the library tomorrow stays out of apps until somebody decides:
+
+- **Rules** (the import dialog, and what the AI tutor may send for): Input,
+  Mouse, Gestures, Tab Navigation, Screens, Time, History.
+- **Actors** (the import dialog and the Actor Creator's templates): Label,
+  Button, Toggle, Slider, Dropdown, Text Input, Text Area, Speech Box,
+  List, Progress Bar, Panel, Image, Scroll View. Not the Health Bar or
+  Portrait, which are a game's and a story's; not the Viewport, whose
+  import brings the camera rules; none of the game pieces. A test holds that
+  no offered actor requires a rule outside the rule list.
+- **Enhance**: types out text. Every other row makes a character.
+- **Map editor**: no Layers or Cameras button, no strip, no Layer on a
+  placement; a lesson pointing at the strip is told no.
+- **Toolbox**: the layer, camera and Viewport blocks leave the World drawer
+  (`toolboxFilter.withoutBlocks`).
+
+A name in those lists that matches nothing would fail silently — a rule left
+in, a block left over — so a test holds every one of them to something that
+exists.
+
 ## What the first app found
 
 **A world's body could not start a screen.** `go to screen ⟨maps/home⟩` as the

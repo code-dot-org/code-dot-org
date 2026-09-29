@@ -227,6 +227,13 @@ export interface MapStageProps {
    */
   withheld?: ReadonlySet<Affordance>;
   /**
+   * App Builder (`appBuilder`): no layers and no cameras — no buttons for
+   * them, no strip, no Layer on a placement. LEFT OUT rather than withheld,
+   * since no lesson grants them to an app. A map that has layers still draws
+   * them.
+   */
+  appBuilder?: boolean;
+  /**
    * The kinds that have a file of their own, by type, with the name each
    * declares: what `Enhance ⟨Hero⟩…` and `Open ⟨Hero⟩` say and act on.
    */
@@ -302,6 +309,7 @@ export const MapStage = ({
   onEditScript,
   worldCameras = [],
   withheld,
+  appBuilder = false,
   kinds,
   onEnhanceKind,
   onOpenKind,
@@ -639,11 +647,15 @@ export const MapStage = ({
     setPanels(open => ({...open, [panel]: !open[panel]}));
   useEffect(() => {
     setRevealer('mapPanel', ({panel}) => {
+      // An app has neither panel, so there is nothing to open.
+      if (appBuilder) {
+        return false;
+      }
       setPanels(open => ({...open, [panel]: true}));
       return true;
     });
     return () => setRevealer('mapPanel', null);
-  }, []);
+  }, [appBuilder]);
 
   /** The selected placement's kind, when it has a file of its own. */
   const selectedKind = selectedActor ? kinds?.[selectedActor.type] : undefined;
@@ -2467,7 +2479,7 @@ export const MapStage = ({
   // this lesson: a list whose one button opens a script nobody may open is a
   // list that says less than nothing.
   const cameras =
-    !onEditScript || locked('map-scripts')
+    appBuilder || !onEditScript || locked('map-scripts')
       ? undefined
       : selectedActor
         ? {
@@ -2542,14 +2554,16 @@ export const MapStage = ({
             Icons
           </button>
         )}
-        <button
-          type="button"
-          className={`${styles.resetButton} ${styles.toggleButton}`}
-          aria-pressed={panels.layers}
-          onClick={() => togglePanel('layers')}
-        >
-          Layers
-        </button>
+        {!appBuilder && (
+          <button
+            type="button"
+            className={`${styles.resetButton} ${styles.toggleButton}`}
+            aria-pressed={panels.layers}
+            onClick={() => togglePanel('layers')}
+          >
+            Layers
+          </button>
+        )}
         {cameras && (
           <button
             type="button"
@@ -2578,7 +2592,8 @@ export const MapStage = ({
         )}
       </div>
       <div className={styles.panels}>
-        {panels.layers &&
+        {!appBuilder &&
+          panels.layers &&
           (locked('map-layers') ? (
             // The strip's place, kept: a list nobody can use yet is still where
             // layers will be, and says which lesson brings them.
@@ -2803,7 +2818,7 @@ export const MapStage = ({
               })
             }
           />
-          {!locked('map-layers') && layersOf(map).length > 1 && (
+          {!appBuilder && !locked('map-layers') && layersOf(map).length > 1 && (
             <SimpleDropdown
               name="actor-layer"
               labelText="Layer"

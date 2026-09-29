@@ -25,12 +25,14 @@ import {
   SpritePickerDialog,
   type PickedSprite,
 } from '../animationEditor/SpritePickerDialog';
+import {APP_HIDDEN_BLOCKS} from '../appBuilder';
 import {requestAppearanceImport} from '../appearance/appearanceImport';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {projectSheets} from '../appearance/sheetFile';
 import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
 import {setRevealer, waitFor} from '../callouts/reveal';
 import {
+  buildsApps,
   hiddenToolboxCategories,
   showsRuleSource,
   usesSimpleColors,
@@ -114,7 +116,11 @@ import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
 import {anyOverlap, arrangeTopBlocks} from './tidyLayout';
-import {withoutCategories, withoutEmptyHeadings} from './toolboxFilter';
+import {
+  withoutBlocks,
+  withoutCategories,
+  withoutEmptyHeadings,
+} from './toolboxFilter';
 import {DesignSystemToolboxPlugin} from './toolboxStyle';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -630,6 +636,9 @@ export const BlocklyFileEditor = ({
   // The level may leave categories out of the toolbox. Only the toolbox: the
   // blocks stay defined, so a workspace that already holds one still renders.
   const hiddenCategories = hiddenToolboxCategories(levelProperties);
+  // …and in App Builder, the blocks for what an app is not offered: layers,
+  // cameras, Viewports (`appBuilder`). The same bargain: hidden, still defined.
+  const app = buildsApps(levelProperties);
   // …and, when the level gates the shelf, the toolbox offers only what this
   // learner has unlocked plus what the lesson they are doing teaches
   // (progression/toolboxShelf). Off by default, and identity when off.
@@ -675,10 +684,10 @@ export const BlocklyFileEditor = ({
       rules,
       blockOwners(palette.toolbox, rules),
     );
-    const offered = withoutCategories(palette.toolbox, [
-      ...hiddenCategories,
-      ...narrowed,
-    ]);
+    const offered = withoutBlocks(
+      withoutCategories(palette.toolbox, [...hiddenCategories, ...narrowed]),
+      app ? APP_HIDDEN_BLOCKS : new Set<string>(),
+    );
     const shelved = shelf ? shelvedToolbox(offered, shelf) : offered;
     return {
       blocks: [
@@ -698,6 +707,7 @@ export const BlocklyFileEditor = ({
     ownWorldModule,
     fileKind,
     hiddenCategories,
+    app,
     ownActorProperties,
     shelf,
   ]);

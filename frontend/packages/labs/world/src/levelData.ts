@@ -87,6 +87,13 @@ export function usesSimpleColors(
   return properties?.levelData?.simpleColors === true;
 }
 
+/** Whether this level is App Builder: an app, not a game (`appBuilder`). */
+export function buildsApps(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.mode === 'app';
+}
+
 export function gatesShelf(
   properties: WorldLevelProperties | undefined,
 ): boolean {

@@ -218,6 +218,8 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
     updateSources,
     replaceSources,
   }),
+  // No level: a game, the default (`appBuilder`).
+  useMaybeLevelProperties: () => undefined,
 }));
 
 // The drawing door asks what can draw before it offers itself, and in jsdom
