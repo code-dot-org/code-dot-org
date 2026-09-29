@@ -8,6 +8,7 @@ import {
   ColumnPanelConfig,
   RowPanelConfig,
 } from '@cdo/apps/lab2/views/components/layout/types';
+import {availableContentWidth} from '@cdo/apps/util/taDrawerInset';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -89,7 +90,7 @@ export const useHorizontalLayout = ({
 
   const adjustRightPanelWidth = useCallback(() => {
     const newRightPanelWidth = Math.max(
-      window.innerWidth -
+      availableContentWidth() -
         rawLeftPanelWidth -
         RESIZE_BAR_SIZE_PX -
         (showingRightmostPanel ? rightmostPanelWidth : 0),
@@ -99,7 +100,7 @@ export const useHorizontalLayout = ({
     const newLeftPanelWidth = Math.max(
       Math.min(
         rawLeftPanelWidth,
-        window.innerWidth - newRightPanelWidth - RESIZE_BAR_SIZE_PX
+        availableContentWidth() - newRightPanelWidth - RESIZE_BAR_SIZE_PX
       ),
       leftPanel.minWidth
     );

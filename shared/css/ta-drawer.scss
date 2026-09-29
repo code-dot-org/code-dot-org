@@ -1,0 +1,19 @@
+// The AI teaching-assistant drawer (apps/src/aiTeacherDrawer) occupies a strip
+// along the right edge of the viewport. It publishes the width of that strip as
+// --ta-drawer-width on the root element -- 0px while the drawer is closed --
+// and the timing of its slide as --ta-drawer-transition. Page shells inset
+// themselves by the width so the drawer resizes the page instead of covering
+// it.
+//
+// Content laid out in normal flow needs nothing from here: legacy.scss insets
+// #main_content once, for every page, and animates it alongside the drawer.
+// These variables exist for the shells that position themselves against the
+// viewport instead, which is what makes lab pages a separate case. A lab also
+// computes its panel widths in JavaScript, from availableContentWidth() in
+// apps/src/util/taDrawerInset.ts, and that answers with the width the lab will
+// have once the drawer has finished moving -- so lab shells resize in one step
+// rather than animating, to keep the panels and the shell they sit in the same
+// size throughout.
+
+$ta-drawer-width: var(--ta-drawer-width, 0px);
+$ta-drawer-transition: var(--ta-drawer-transition, 0s);

@@ -9,6 +9,7 @@
 @import "mixins";
 @import "style-constants";
 @import "brand-selectors";
+@import "ta-drawer";
 @import "./legacy/NpsSurveyBlock";
 
 // Bootstrap Variables
@@ -125,12 +126,31 @@ body {
   font-style: normal;
 }
 
+// The drawer is laid out beside the page, not over it: #main_content gives up
+// the width the drawer takes. Shells that anchor to the viewport instead of
+// flowing inside #main_content override this below and inset themselves.
+#main_content {
+  margin-right: $ta-drawer-width;
+  transition: margin-right $ta-drawer-transition;
+}
+
 body.pin_bottom {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: $ta-drawer-width;
   left: 0;
+}
+
+// Legacy labs position #codeApp against the pinned body and Lab2 positions
+// #lab-container against the viewport, so in both the shell -- not
+// #main_content -- is what has to give up the width. Insetting both would
+// move the page twice.
+body.pin_bottom,
+body:has(#lab2-container) {
+  #main_content {
+    margin-right: 0;
+  }
 }
 
 // Brand-aware lab shell background for legacy labs. Excludes Minecraft

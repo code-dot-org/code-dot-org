@@ -1,11 +1,12 @@
 @import "color";
 @import "font";
+@import "ta-drawer";
 
 .teacher-panel {
   position: fixed;
   top: 85px;
   bottom: 20px;
-  right: 0;
+  right: $ta-drawer-width;
   width: 205px;
   transition: right 0.5s;
 
@@ -58,7 +59,7 @@
   }
 
   &.hidden {
-    right: -195px;
+    right: calc(-195px + #{$ta-drawer-width});
     .hide-handle {
       right: 200px;
       display: none;

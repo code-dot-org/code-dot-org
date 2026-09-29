@@ -7,6 +7,7 @@ import {
   fetchThreadMessages,
 } from '@cdo/apps/aiTeacherDrawer/redux';
 import experiments from '@cdo/apps/util/experiments';
+import {setTaDrawerInset} from '@cdo/apps/util/taDrawerInset';
 
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
@@ -98,19 +99,17 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     !hasCompletedAiDifferentiationWelcome && showWelcomeExperience;
   const drawerWidth = isWelcomeView ? DRAWER_WIDTH_WELCOME : DRAWER_WIDTH;
 
-  // Push only #main_content (not the header, which is a sibling) to make room
-  // for the drawer. The transition timing matches MUI Drawer defaults.
+  // Publish the width we take so the page can make room for it. Which element
+  // gives up that width differs by page -- #main_content on most, the lab
+  // shell on levels -- so each reads it for itself rather than being pushed
+  // from here; see apps/src/util/taDrawerInset.ts.
   useEffect(() => {
-    const mainContent = document.getElementById('main_content');
-    if (!mainContent) return;
-    const enterTransition = 'margin-right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms';
-    const leaveTransition =
-      'margin-right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms';
-    mainContent.style.transition = chatIsOpen
-      ? enterTransition
-      : leaveTransition;
-    mainContent.style.marginRight = chatIsOpen ? `${drawerWidth}px` : '0px';
+    setTaDrawerInset(chatIsOpen ? drawerWidth : 0);
   }, [chatIsOpen, drawerWidth]);
+
+  // The drawer unmounts on navigation away from a page that has it, and the
+  // inset is a global; leave the page its full width.
+  useEffect(() => () => setTaDrawerInset(0), []);
 
   const onAlertPromptClick = useCallback(
     (label: string, prompt: string) => {

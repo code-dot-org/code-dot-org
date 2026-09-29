@@ -1,5 +1,6 @@
 @use './components/layout/variables.scss' as variables;
 @import 'color.scss';
+@import 'ta-drawer.scss';
 @import './common.scss';
 
 // We actually fade out the block to reveal the lab underneath.
@@ -48,7 +49,7 @@
   position: fixed;
   top: $top-spacing;
   left: 0;
-  right: 0;
+  right: $ta-drawer-width;
   bottom: 0;
   pointer-events: none;
   opacity: 0;
