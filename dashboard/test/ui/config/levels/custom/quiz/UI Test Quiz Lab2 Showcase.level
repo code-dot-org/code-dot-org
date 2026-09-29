@@ -1,0 +1,13 @@
+<Quiz>
+  <config><![CDATA[{
+  "game_id": 76,
+  "created_at": "2026-09-10T23:14:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-10T23:14:27.810+00:00\",\"changed\":[\"cloned from \\\"Quiz Lab2 Showcase\\\"\"],\"cloned_from\":\"Quiz Lab2 Showcase\"}]"
+}]]></config>
+</Quiz>

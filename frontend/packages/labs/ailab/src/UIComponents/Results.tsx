@@ -6,6 +6,7 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setShowResultsDetails, setResultsPhase} from '../redux';
 
+import DecisionTree from './DecisionTree';
 import ResultsDetails from './ResultsDetails';
 import ScrollableContent from './ScrollableContent';
 import {UnconnectedStatement} from './Statement';
@@ -65,6 +66,7 @@ const Results = () => {
                     </button>
                   </div>
                 )}
+                {index === 0 && <DecisionTree />}
                 {index === 0 && historicResults.length > 1 && (
                   <div
                     style={{

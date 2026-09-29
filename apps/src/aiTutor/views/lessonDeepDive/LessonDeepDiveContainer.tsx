@@ -1,7 +1,6 @@
 import {
   LessonSummaryCard,
   LevelsAttemptedBox,
-  PreReviewBox,
   PreSkillsCheck,
   TimeSpentBox,
   TutorSummaryBox,
@@ -30,7 +29,6 @@ const BOX_IDS = [
   'validated-levels',
   'lesson-summary',
   'reflection',
-  'pre-review',
   'intervention',
   'pre-skills-check',
   'skills-check',
@@ -228,8 +226,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     setReflectionData(data);
   }, []);
 
-  // Returns the description of the first objective the student is struggling
-  // with or still working on, used as the focus topic in PreReviewBox.
+  // Returns the first struggling objective's description, shown as the focus
+  // topic on the intervention screen to personalise the "Let's get to work" heading.
   const getFocusTopic = useCallback(
     (data: ReflectionData | null): string | undefined => {
       if (!data) return undefined;
@@ -253,7 +251,6 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   }
 
   const isStoryScreen = STORY_SCREENS.has(currentScreenId);
-  const isFirst = currentIndex === 0;
   const isLast = currentIndex === BOX_IDS.length - 1;
 
   // 1-indexed slide position within the story sequence.
@@ -362,13 +359,6 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             initialValues={reflectionData}
           />
         );
-      case 'pre-review':
-        return (
-          <PreReviewBox
-            focusTopic={getFocusTopic(reflectionData)}
-            onNext={goToNext}
-          />
-        );
       case 'intervention':
         return (
           <InterventionBox
@@ -380,7 +370,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             objectives={lessonDeepDiveData.objectives}
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
-            onNext={goToNext}
+            focusTopic={getFocusTopic(reflectionData)}
           />
         );
       case 'pre-skills-check':
@@ -408,59 +398,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   return (
     <div className={styles.container} data-theme={'Dark'}>
-      {!isStoryScreen && (
-        <div className={styles.progressBar} aria-hidden="true">
-          <div
-            className={styles.progressFill}
-            style={{
-              width: `${(currentIndex / (BOX_IDS.length - 1)) * 100}%`,
-            }}
-          />
-        </div>
-      )}
-      <div className={styles.topNav}>
-        <span className={styles.tutorWordmark}>Tutor+</span>
-        <button
-          type="button"
-          className={styles.arrowButton}
-          onClick={goToPrev}
-          aria-label="Previous"
-          aria-hidden={isFirst}
-          style={{visibility: isFirst ? 'hidden' : undefined}}
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M7 14l5-5 5 5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div className={styles.box}>
-        {renderBox()}
-        {!isStoryScreen && (
-          <div className={styles.dotsNav} aria-hidden="true">
-            {BOX_IDS.map((_, i) => (
-              <div
-                key={i}
-                className={`${styles.dot} ${
-                  i === currentIndex ? styles.dotActive : ''
-                }`}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      <div className={styles.box}>{renderBox()}</div>
 
       {!isLast &&
         !isStoryScreen &&

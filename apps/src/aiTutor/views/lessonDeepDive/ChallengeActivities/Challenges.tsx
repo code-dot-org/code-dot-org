@@ -6,9 +6,10 @@ import ChallengePicker from './ChallengePicker';
 
 interface ChallengesProps {
   lessonId: number;
+  onReviewInstead?: () => void;
 }
 
-const Challenges: FC<ChallengesProps> = ({lessonId}) => {
+const Challenges: FC<ChallengesProps> = ({lessonId, onReviewInstead}) => {
   const navigate = useNavigate();
 
   const challengeSetCallback = useCallback(
@@ -24,6 +25,7 @@ const Challenges: FC<ChallengesProps> = ({lessonId}) => {
     <ChallengePicker
       lessonId={lessonId}
       challengeSetCallback={challengeSetCallback}
+      onReviewInstead={onReviewInstead}
     />
   );
 };
