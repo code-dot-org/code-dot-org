@@ -1,64 +1,179 @@
-.header {
-  text-align: right;
-  position: sticky;
-  top: 0;
-  background-color: white;
-  color: #4d575f;
+.table {
+  // Half-opacity fills, so a chosen column is lighter than its row hover state.
+  --body-cell-hover: color-mix(
+    in srgb,
+    var(--background-neutral-secondary) 50%,
+    transparent
+  );
+  --feature-cell-fill: color-mix(
+    in srgb,
+    var(--background-info-light) 50%,
+    transparent
+  );
+  --label-cell-fill: color-mix(
+    in srgb,
+    var(--background-accent-pink-light) 50%,
+    transparent
+  );
+
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.header,
+.indexCell,
+.bodyCell {
+  font-family: var(--font-family-main);
+  font-size: 12px;
+  line-height: 18px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 0 10px;
   border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  padding: 7px;
-  font-size: 14px;
+  border-width: 0 0 1px 1px;
+
+  &:last-child {
+    border-right-width: 1px;
+  }
 }
 
 .clickable {
   cursor: pointer;
 }
 
-.labelHeader {
-  background-color: var(--ailab-label);
-  color: white;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-top-width: 1px;
+  font-weight: 600;
+  color: var(--text-neutral-tertiary);
+  background-color: var(--background-neutral-secondary);
+  border-color: var(--border-neutral-primary);
+
+  &.clickable {
+    padding: 0;
+  }
+
+  &.clickable:hover,
+  &.clickable:active {
+    color: var(--text-neutral-primary);
+  }
 }
 
-.featureHeader {
-  background-color: var(--ailab-feature);
-  color: white;
+.headerButton {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  background: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-brand-primary);
+    outline-offset: -2px;
+  }
 }
 
-.cell {
-  padding: 3px;
-  padding-left: 20px;
-  text-align: right;
-  font-size: 12px;
-  color: #4d575f;
-  background-color: var(--ailab-background);
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
+.headerLabel {
+  color: var(--text-neutral-primary);
+  background-color: var(--background-accent-pink-mid);
+  border-color: var(--border-accent-pink-primary);
+
+  &.clickable:hover,
+  &.clickable:active {
+    color: var(--text-neutral-secondary);
+  }
 }
 
-.hidden {
+.headerFeature {
+  color: var(--text-neutral-primary);
+  background-color: var(--background-info-mid);
+  border-color: var(--border-info-primary);
+
+  &.clickable:hover,
+  &.clickable:active {
+    color: var(--text-neutral-secondary);
+  }
+}
+
+// Applies whether or not the column is also the label or a feature.
+.headerSelected {
+  color: var(--text-selected-primary);
+  background-color: var(--background-selected-primary);
+  border-color: var(--border-selected-primary);
+
+  &.clickable:hover,
+  &.clickable:active {
+    color: var(--text-selected-primary);
+    background-color: var(--background-selected-strong);
+    border-color: var(--border-selected-strong);
+  }
+
+  .headerButton:focus-visible {
+    outline: 1px solid var(--border-selected-primary-inverse);
+    outline-offset: -1px;
+  }
+}
+
+.indexCell {
+  min-width: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-neutral-tertiary);
+  background-color: var(--background-neutral-secondary);
+  border-color: var(--border-neutral-primary);
+}
+
+.indexHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-top-width: 1px;
+}
+
+.bodyCell {
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  border-color: var(--border-neutral-primary);
+}
+
+.bodyCellLabel {
+  background-color: var(--label-cell-fill);
+  border-color: var(--border-accent-pink-light);
+}
+
+.bodyCellFeature {
+  background-color: var(--feature-cell-fill);
+  border-color: var(--border-info-light);
+}
+
+.bodyCellHidden {
   opacity: 0;
 }
 
-.highlighted {
-  background-color: #d6f2fa;
-  border-color: #d6f2fa;
-  cursor: pointer;
-}
+.row:hover {
+  .indexCell {
+    color: var(--text-neutral-primary);
+  }
 
-.highlightedLabel {
-  background-color: #f1caca;
-  border-color: #f1caca;
-  cursor: pointer;
-}
+  .bodyCell {
+    background-color: var(--body-cell-hover);
+  }
 
-.selected {
-  background-color: #94e3fa;
-  border-color: #94e3fa;
-}
+  .bodyCellLabel {
+    background-color: var(--background-accent-pink-light);
+  }
 
-.selectedLabel {
-  background-color: #f39f9f;
-  border-color: #f39f9f;
+  .bodyCellFeature {
+    background-color: var(--background-info-light);
+  }
 }
