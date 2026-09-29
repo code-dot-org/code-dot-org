@@ -21,7 +21,7 @@ export interface ValidationResultsProps {
 
 const ValidationTable: FunctionComponent<ValidationResultsProps> = () => {
   const validationResults = useAppSelector(
-    state => state.lab.validationState.validationResults,
+    state => state.progress.validationState.validationResults,
   );
 
   if (!validationResults) {

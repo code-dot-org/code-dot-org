@@ -5,7 +5,11 @@
 import type {ThunkDispatch, UnknownAction} from '@reduxjs/toolkit';
 
 import {aiTutorSlice} from '@code-dot-org/aitutor';
-import {progressSlice} from '@code-dot-org/progress/redux';
+import {
+  hiddenLessonSlice,
+  lessonLockSlice,
+  progressSlice,
+} from '@code-dot-org/progress/redux';
 import {injectSlices, storeHooks} from '@code-dot-org/core/redux';
 import {teacherSectionsSlice} from '@code-dot-org/teacher-dashboard/redux';
 import {currentUserSlice} from '@code-dot-org/users/redux';
@@ -19,10 +23,12 @@ import predictLevelSlice from './predictLevelSlice';
 const store = injectSlices([
   aiTutorSlice,
   currentUserSlice,
+  hiddenLessonSlice,
   labSlice,
   labSystemSlice,
   labProjectSlice,
   labViewSlice,
+  lessonLockSlice,
   predictLevelSlice,
   progressSlice,
   teacherSectionsSlice,

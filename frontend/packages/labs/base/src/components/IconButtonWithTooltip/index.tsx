@@ -1,4 +1,5 @@
-import {memo, useCallback, useRef} from 'react';
+import {Tooltip} from '@mui/material';
+import {memo, useCallback, useState} from 'react';
 import type {FunctionComponent, RefObject} from 'react';
 
 import {
@@ -7,12 +8,14 @@ import {
   type ButtonProps,
   type LinkButtonProps,
 } from '@code-dot-org/component-library/button';
-import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import {
-  type TooltipProps,
-  WithTooltip,
-  type WithTooltipHandle,
-} from '@code-dot-org/component-library/tooltip';
+  type Theme,
+  useTheme,
+} from '@code-dot-org/component-library/common/contexts';
+import {muiPlacementFor} from '@code-dot-org/component-library/common/helpers';
+import type {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
+
+import moduleStyles from './iconButtonWithTooltip.module.scss';
 
 export interface IconButtonWithTooltipProps {
   id: string;
@@ -21,9 +24,8 @@ export interface IconButtonWithTooltipProps {
   type: ButtonProps['type'];
   color: ButtonProps['color'];
   buttonSize?: ButtonProps['size'];
-  tooltipSize: TooltipProps['size'];
-  tooltipDirection: TooltipProps['direction'];
-  hideTooltipTail?: TooltipProps['hideTail'];
+  tooltipDirection?: ComponentPlacementDirection;
+  hideTooltipTail?: boolean;
   disabled?: boolean;
   onClick?: () => void;
   containerRef?: RefObject<HTMLDivElement | null>;
@@ -42,32 +44,33 @@ const IconButtonWithTooltip: FunctionComponent<IconButtonWithTooltipProps> =
       type,
       color,
       buttonSize,
-      tooltipSize,
       tooltipDirection,
       hideTooltipTail,
       disabled = false,
       onClick,
       containerRef,
       className,
-      theme,
+      theme: themeOverride,
       href,
       target = '_blank',
     }) => {
-      const tooltipRef = useRef<WithTooltipHandle>(null);
+      // The bubble portals to <body>, so it cannot inherit data-theme.
+      const {theme: contextTheme} = useTheme(true);
+      const theme = themeOverride ?? contextTheme;
+
+      // Controlled so a click can force the tooltip shut.
+      const [open, setOpen] = useState(false);
 
       const handleClick = useCallback(() => {
-        // Hide the tooltip when button is clicked (keyboard or mouse)
-        tooltipRef.current?.hideTooltip();
+        setOpen(false);
         onClick?.();
-        // Adding this to prevent focus from jumping to the next button
-        // and showing its tooltip when a button is disabled after click.
-        // This moves focus to the container div instead.
+        // Move focus to the container, so it does not land on the next
+        // button, and show that tooltip, when this one disables itself.
         setTimeout(() => {
           containerRef?.current?.focus();
         }, 0);
       }, [onClick, containerRef]);
 
-      // Common props shared between Button and LinkButton.
       const commonButtonProps = {
         id: `${id}-button`,
         ariaLabel: label,
@@ -79,24 +82,36 @@ const IconButtonWithTooltip: FunctionComponent<IconButtonWithTooltipProps> =
         disabled,
       };
 
-      const tooltipProps = {
-        tooltipId: `${id}-tooltip`,
-        text: label,
-        size: tooltipSize,
-        direction: tooltipDirection,
-        hideTail: hideTooltipTail,
-        className,
-        'data-theme': theme,
-      };
+      const button = href ? (
+        <LinkButton {...commonButtonProps} href={href} target={target} />
+      ) : (
+        <Button {...commonButtonProps} onClick={handleClick} />
+      );
 
       return (
-        <WithTooltip ref={tooltipRef} tooltipProps={tooltipProps}>
-          {href ? (
-            <LinkButton {...commonButtonProps} href={href} target={target} />
+        <Tooltip
+          id={`${id}-tooltip`}
+          title={label}
+          placement={muiPlacementFor(tooltipDirection)}
+          arrow={!hideTooltipTail}
+          open={open}
+          onOpen={() => setOpen(true)}
+          onClose={() => setOpen(false)}
+          slotProps={{
+            tooltip: {
+              ...(theme ? {'data-theme': theme} : {}),
+              ...(className ? {className} : {}),
+            },
+          }}
+        >
+          {/* A disabled button fires no pointer events, and LinkButton takes
+              no ref: the tooltip needs a live element to attach to. */}
+          {href || disabled ? (
+            <span className={moduleStyles.anchor}>{button}</span>
           ) : (
-            <Button {...commonButtonProps} onClick={handleClick} />
+            button
           )}
-        </WithTooltip>
+        </Tooltip>
       );
     },
   );
