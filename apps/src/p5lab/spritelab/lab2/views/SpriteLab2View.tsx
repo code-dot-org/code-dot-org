@@ -1937,6 +1937,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 world={activeWorld}
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
+                emptyMessage={
+                  visibleTabs.includes('Images')
+                    ? 'Create some images on the Images tab first.'
+                    : 'Go back and make your image first.'
+                }
                 only={paletteOnlyImage}
                 onMoveCell={placeOne ? handleMoveWorldCell : undefined}
                 selected={worldPaletteSelection}

@@ -224,6 +224,8 @@ interface WorldTabProps {
   sceneSize: number;
   // Cell-level so the owner can apply it atomically against saved sources.
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
+  // Shown with nothing to place; the owner knows where images come from.
+  emptyMessage: string;
   // The one image the palette offers: a world level's image of its kind.
   only?: string;
   // Present when the level places one thing (level_mode.placeOne): no Erase,
@@ -253,6 +255,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   world,
   sceneSize,
   onPaintCell,
+  emptyMessage,
   only,
   onMoveCell,
   selected,
@@ -880,9 +883,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       </p>
       <div className={moduleStyles.worldGridColumn}>
         {!palette.length && (
-          <p className={moduleStyles.worldEmpty}>
-            Create some images on the Images tab first.
-          </p>
+          <p className={moduleStyles.worldEmpty}>{emptyMessage}</p>
         )}
         <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
           <div

@@ -47,6 +47,7 @@ function renderTab({
     <WorldTab
       sceneSize={10}
       selected={null}
+      emptyMessage="Nothing yet."
       {...props}
       onPaintCell={onPaintCell}
       onSelect={onSelect}
@@ -251,6 +252,7 @@ describe('WorldTab palette', () => {
       const errors = jest.spyOn(console, 'error').mockImplementation(() => {});
       renderTab({only: 'Nothing', onMoveCell: jest.fn()});
       expect(screen.queryAllByRole('radio')).toHaveLength(0);
+      expect(screen.getByText('Nothing yet.')).toBeTruthy();
       expect(errors.mock.calls.flat().join(' ')).not.toMatch(/NaN/);
       errors.mockRestore();
     });
