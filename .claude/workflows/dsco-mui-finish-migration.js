@@ -131,7 +131,7 @@ const DISCOVER_SCHEMA = {
   required: [
     'preflight', 'headOnBase', 'branchOwner', 'preexistingUntracked', 'planDocFound', 'statusState',
     'legacySourceFiles', 'legacyExports', 'legacyImports', 'eslintBanPresent', 'codemod', 'rows',
-    'reference', 'consumerTestFiles', 'next', 'notes',
+    'reference', 'consumerFiles', 'consumerTestFiles', 'next', 'notes',
   ],
   properties: {
     preflight: {type: 'array', items: {type: 'string'}, description: 'Blockers found in step 0; [] if none'},
@@ -147,6 +147,7 @@ const DISCOVER_SCHEMA = {
     codemod: {type: 'string', description: 'The component codemod path and its yarn script, or ""'},
     rows: {type: 'array', items: ROW_SCHEMA, description: 'The Deferred changes table, in table order'},
     reference: {type: 'string', description: 'A reference implementation the plan names (PR number, branch), or ""'},
+    consumerFiles: {type: 'array', items: {type: 'string'}, description: 'Every file outside the component directory that imports from its entry point, sources and tests'},
     consumerTestFiles: {type: 'array', items: {type: 'string'}, description: 'apps/ and frontend/ test files of the consumers'},
     next: {
       type: 'object',
@@ -189,8 +190,9 @@ ${TREE_RULES}
   ${COMPONENT_DIR}) for imports of a legacy export from
   '@code-dot-org/component-library/${component}' or relative paths into ${COMPONENT_DIR}.
   eslintBanPresent: ${ESLINT_APPS} has a no-restricted-imports entry for that path.
-  codemod: under ${CODEMODS_DIR} and ${LIB}/package.json. consumerTestFiles: tests of
-  every file that imports from the component entry point.
+  codemod: under ${CODEMODS_DIR} and ${LIB}/package.json. consumerFiles: every file
+  outside ${COMPONENT_DIR} that imports from the component entry point (git grep -l).
+  consumerTestFiles: the tests of those files.
 
 ─── STEP 3 — Next step ────────────────────────────────────────────────────────
   Requested: ${stepArg ? JSON.stringify(stepArg) : 'nothing; pick the next one'}.
@@ -247,8 +249,11 @@ CODEMOD: ${discover.codemod || 'none'}
    (the plain one), rename the MuiX files, tests and stories to match, and record the
    choice.
 3. Consumers: extend the codemod with a transform that rewrites MuiX imports (aliased or
-   not) to the plain names, run it over apps/ and frontend/, and document the transform in
-   ${CODEMODS_DIR}/README.md. Hand-edit only what the transform cannot reach.
+   not) to the plain names, and document it in ${CODEMODS_DIR}/README.md. Run it over
+   exactly these files, with --cpus=4, never over a directory (jscodeshift parses every
+   file under one, which pins every core for many minutes):
+   ${JSON.stringify(discover.consumerFiles)}
+   Hand-edit only what the transform cannot reach.
 4. ${ESLINT_APPS}: remove the no-restricted-imports entry for the component; the names it
    bans no longer exist.
 5. Docs: ${STATUS_DOC} row notes step 4 is done (the state stays as it is while deferred
