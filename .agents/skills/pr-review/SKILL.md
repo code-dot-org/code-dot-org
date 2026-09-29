@@ -88,24 +88,27 @@ For each surviving finding, establish:
 ### Buckets
 
 - **HIGH** — a current problem in a real usage scenario. The scenarios that
-  count are listed under Tunables. A latent issue reaches HIGH only if it is
-  severe *and* likely to surface, or if this PR makes it more likely.
+  count are listed under Tunables. A latent issue reaches HIGH if this PR
+  makes it more likely, or if its consequence outweighs a low probability,
+  such as data loss, a security breach, or a privacy breach.
 - **MEDIUM** — verified and real, but bounded: a narrow scenario, a
-  recoverable failure, or a latent issue that active work will walk into
-  soon.
-- **LOW** — nitpicks, cleanups, and long-standing latent issues this PR
-  neither worsens nor exposes. One line each, grouped. Don't pad the bucket
+  recoverable failure, or a latent issue with a reasonable probability of
+  being triggered.
+- **LOW** — nitpicks, cleanups, and long-standing latent issues that pass
+  none of the tests below. One line each, grouped. Don't pad the bucket
   and don't argue for them.
 
-Long-standing latent issues are the ones most often mis-ranked. Two tests
-separate them:
+Long-standing latent issues are the ones most often mis-ranked. Three
+tests separate them:
 
 - Does this PR make the issue more likely to fire, harder to fix, or newly
   reachable? Then rank it on that, not on its age.
-- Is it in ground an active workstream is already moving? Then it is fair
-  game at MEDIUM or above, because someone is about to stand on it.
+- Is the consequence severe — data loss, a security or privacy breach, or
+  harm on that scale? Then it is eligible for HIGH however unlikely it is.
+- Is there a reasonable probability it gets triggered? Then it is fair game
+  for MEDIUM.
 
-Everything else long-standing goes LOW, however alarming it reads.
+Everything else long-standing goes LOW.
 
 ### Shape
 
@@ -161,7 +164,7 @@ holds.
 
 ## Tunables
 
-Fill these in; they are the parts that drift.
+These are the parts that drift.
 
 - **Usage scenarios that make a finding HIGH.** Any regression reaching
   end users in production. Also, any breaks in non-production environments
