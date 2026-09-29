@@ -13,8 +13,9 @@ most cases: title, description, buttons, and an optional icon or image. Use
 `CustomDialog`, the bare overlay and panel, only when the content needs its
 own layout; `Modal` is built on it.
 
-Both render in place, not in a portal, and keep the DSCO scroll lock, Escape
-handling and focus trap until those move to MUI; see Deferred changes in
+Both render in place, not in a portal. MUI's focus trap holds focus in the
+top dialog and returns it to the opener on close; scroll lock and Escape
+handling stay DSCO until they move to MUI too; see Deferred changes in
 [DIALOG_MIGRATION_TO_MUI.md](DIALOG_MIGRATION_TO_MUI.md).
 
 For props and live examples, see DesignSystem / Dialog in Storybook.

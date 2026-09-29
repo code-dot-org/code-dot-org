@@ -1,5 +1,6 @@
-import {fireEvent, render, screen} from '@testing-library/react';
-import {useState} from 'react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import {useEffect, useRef, useState} from 'react';
 import {vi} from 'vitest';
 
 import {CustomDialog, CustomDialogProps} from './../index';
@@ -10,6 +11,11 @@ const description = (
 
 const getPanel = () => screen.getByRole('dialog');
 const getRoot = () => getPanel().closest('.MuiDialog-root') as HTMLElement;
+const getFocusContainer = (panel: HTMLElement) =>
+  panel.closest('.MuiDialog-container') as HTMLElement;
+// The transition's onEntered, and the first-control focus with it, fires on a zero timeout.
+const settle = () =>
+  act(() => new Promise<void>(resolve => setTimeout(resolve, 10)));
 
 describe('CustomDialog Component', () => {
   const defaultProps: CustomDialogProps = {
@@ -286,7 +292,7 @@ describe('CustomDialog Component', () => {
     expect(screen.getAllByRole('dialog')).toHaveLength(2);
   });
 
-  it('should focus the first focusable element on mount and restore focus on unmount', () => {
+  it('should focus the first focusable element once entered and restore focus on unmount', async () => {
     const Host = () => {
       const [isOpen, setIsOpen] = useState(false);
       return (
@@ -311,8 +317,9 @@ describe('CustomDialog Component', () => {
     opener.focus();
     fireEvent.click(opener);
 
-    expect(document.activeElement).toBe(
-      screen.getByRole('button', {name: 'First'}),
+    expect(document.activeElement).toBe(getFocusContainer(getPanel()));
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: 'First'})).toHaveFocus(),
     );
 
     fireEvent.click(screen.getByLabelText('Close dialog'));
@@ -321,22 +328,94 @@ describe('CustomDialog Component', () => {
     expect(document.activeElement).toBe(opener);
   });
 
-  it('should wrap Tab and Shift+Tab inside the panel', () => {
+  it('should skip disabled controls when choosing the first focusable element', async () => {
     render(
       <CustomDialog {...defaultProps}>
         <p id="dsco-dialog-description">Description</p>
-        <button type="button">First</button>
+        <button type="button" disabled>
+          Disabled
+        </button>
+        <button type="button">Enabled</button>
       </CustomDialog>,
+    );
+
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: 'Enabled'})).toHaveFocus(),
+    );
+  });
+
+  it('should keep focus that a mount effect moved into the panel', async () => {
+    const Host = () => {
+      const inputRef = useRef<HTMLInputElement>(null);
+      useEffect(() => inputRef.current?.focus(), []);
+      return (
+        <CustomDialog {...defaultProps}>
+          <p id="dsco-dialog-description">Description</p>
+          <button type="button">First</button>
+          <input aria-label="Target" ref={inputRef} />
+        </CustomDialog>
+      );
+    };
+    render(<Host />);
+    await settle();
+
+    expect(screen.getByRole('textbox', {name: 'Target'})).toHaveFocus();
+  });
+
+  it('should focus the MUI container when the panel has nothing focusable', async () => {
+    render(
+      <CustomDialog aria-label="Nothing to focus">{description}</CustomDialog>,
+    );
+    await settle();
+
+    expect(document.activeElement).toBe(getFocusContainer(getPanel()));
+    expect(document.activeElement).toHaveAttribute('tabindex', '-1');
+  });
+
+  it('should pull focus back into the dialog when it moves outside', async () => {
+    render(
+      <>
+        <button type="button">Outside</button>
+        <CustomDialog {...defaultProps}>
+          <p id="dsco-dialog-description">Description</p>
+          <button type="button">First</button>
+        </CustomDialog>
+      </>,
+    );
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: 'First'})).toHaveFocus(),
+    );
+
+    screen.getByRole('button', {name: 'Outside'}).focus();
+
+    expect(screen.getByRole('button', {name: 'Outside'})).not.toHaveFocus();
+    expect(document.activeElement).toBe(getFocusContainer(getPanel()));
+  });
+
+  it('should wrap Tab and Shift+Tab inside the panel', async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <button type="button">Before</button>
+        <CustomDialog {...defaultProps}>
+          <p id="dsco-dialog-description">Description</p>
+          <button type="button">First</button>
+        </CustomDialog>
+        <button type="button">After</button>
+      </>,
     );
     const first = screen.getByRole('button', {name: 'First'});
     const last = screen.getByLabelText('Close dialog');
+    await waitFor(() => expect(first).toHaveFocus());
 
-    last.focus();
-    fireEvent.keyDown(document, {key: 'Tab'});
-    expect(document.activeElement).toBe(first);
+    await user.tab();
+    expect(last).toHaveFocus();
 
-    fireEvent.keyDown(document, {key: 'Tab', shiftKey: true});
-    expect(document.activeElement).toBe(last);
+    await user.tab();
+    expect(first).toHaveFocus();
+
+    await user.tab({shift: true});
+    expect(last).toHaveFocus();
   });
 
   describe('with two dialogs open', () => {
@@ -391,6 +470,30 @@ describe('CustomDialog Component', () => {
         expect(document.body.style.overflow).toBe('auto');
       },
     );
+
+    it('should trap focus in the dialog opened last', async () => {
+      render(
+        <>
+          <CustomDialog aria-label="First">
+            <p id="dsco-dialog-description">First</p>
+            <button type="button">In first</button>
+          </CustomDialog>
+          <CustomDialog aria-label="Second">
+            <p id="dsco-dialog-description">Second</p>
+            <button type="button">In second</button>
+          </CustomDialog>
+        </>,
+      );
+      await waitFor(() =>
+        expect(screen.getByRole('button', {name: 'In second'})).toHaveFocus(),
+      );
+
+      screen.getByRole('button', {name: 'In first'}).focus();
+
+      expect(document.activeElement).toBe(
+        getFocusContainer(screen.getByRole('dialog', {name: 'Second'})),
+      );
+    });
 
     it('should call both onClose handlers on Escape', () => {
       const onFirstClose = vi.fn();
