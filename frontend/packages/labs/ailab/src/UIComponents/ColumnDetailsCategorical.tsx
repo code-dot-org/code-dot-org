@@ -52,7 +52,7 @@ const ColumnDetailsCategorical = () => {
   return (
     <div>
       <div className={shared.bold}>{I18n.t('columnDetailsInformation')}</div>
-      <div style={{marginTop: 10, marginBottom: 10}}>
+      <div className={shared.chart}>
         {labels.length <= maxLabelsInHistogram && (
           <Bar data={barData} width={100} height={150} options={chartOptions} />
         )}

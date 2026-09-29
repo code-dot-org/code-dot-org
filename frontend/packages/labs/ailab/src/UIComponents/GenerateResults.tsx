@@ -12,6 +12,7 @@ import {TestingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
 
 import shared from '../shared.module.scss';
+import styles from './generateResults.module.scss';
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -132,7 +133,7 @@ const GenerateResults = () => {
         {I18n.t('generateResultsHeader')}
       </div>
 
-      <div style={{overflow: 'hidden', paddingTop: 20}}>
+      <div className={styles.animationArea}>
         <div className={shared.sceneTable} style={{opacity: tableOpacity}}>
           <DataTable
             useResultsData={true}

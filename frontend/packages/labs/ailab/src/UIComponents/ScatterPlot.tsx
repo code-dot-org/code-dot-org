@@ -80,7 +80,7 @@ const ScatterPlot = () => {
     scatterPlotData && (
       <div id="scatter-plot">
         <div className={shared.bold}>{I18n.t('scatterPlotLabel')}</div>
-        <div style={{marginTop: 10, marginBottom: 10}}>
+        <div className={shared.chart}>
           <Scatter data={scatterDataCombined} options={chartOptionsCombined} />
         </div>
       </div>

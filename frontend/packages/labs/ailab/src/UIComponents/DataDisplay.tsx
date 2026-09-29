@@ -6,6 +6,7 @@ import DataTable from './DataTable';
 import Statement from './Statement';
 
 import shared from '../shared.module.scss';
+import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
   const data = useAppSelector(state => state.data);
@@ -29,7 +30,7 @@ const DataDisplay = () => {
       <div className={shared.tableParent}>
         <DataTable />
       </div>
-      <div style={{fontSize: 13, marginTop: 12}}>{rowCountMessage}</div>
+      <div className={styles.footer}>{rowCountMessage}</div>
     </div>
   );
 };
