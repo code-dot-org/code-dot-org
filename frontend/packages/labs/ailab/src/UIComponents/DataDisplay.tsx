@@ -1,10 +1,12 @@
 /* React component to handle displaying imported data. */
-import {styles} from '../constants';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 
 import DataTable from './DataTable';
 import Statement from './Statement';
+
+import shared from '../shared.module.scss';
+import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
   const data = useAppSelector(state => state.data);
@@ -23,12 +25,12 @@ const DataDisplay = () => {
           rowLimit: rowLimit,
         });
   return (
-    <div id="data-display" style={styles.panel}>
+    <div id="data-display" className={shared.panel}>
       <Statement />
-      <div style={styles.tableParent}>
+      <div className={shared.tableParent}>
         <DataTable />
       </div>
-      <div style={styles.footerText}>{rowCountMessage}</div>
+      <div className={styles.footer}>{rowCountMessage}</div>
     </div>
   );
 };
