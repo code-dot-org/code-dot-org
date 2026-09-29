@@ -499,7 +499,7 @@ const PLAN_SCHEMA = {
       },
     },
     chunkSize: {type: 'number', description: 'Consumer files per PR for this component (25 is the default; smaller for consumers with heavy residue)'},
-    docsPlan: {type: 'array', items: {type: 'string'}, description: 'Each doc change with its phase: deprecation JSDoc, README, status row In Progress (Execute); status Migrated, skill list, eslint rule (Migrate, only when fully migrated)'},
+    docsPlan: {type: 'array', items: {type: 'string'}, description: 'Each doc change with its phase: deprecation JSDoc, README, status row In Progress (Execute); status Migrated, or Migrated, behavior pending when deferredChanges is non-empty, skill list, eslint rule (Migrate, only when fully migrated)'},
     risks: {type: 'string'},
   },
 }
@@ -730,7 +730,9 @@ const executeBrief = `THE PLAN (authoritative; read ${PLAN_DOC} in full first)
   twins:               ${JSON.stringify(plan.twins)}
   legacyDefectsToFix:  ${JSON.stringify(plan.legacyDefectsToFix)}
   sharedGlobals:       ${JSON.stringify(plan.sharedGlobals)}
-  deferredChanges:     ${JSON.stringify(plan.deferredChanges)} (keep these MUI behaviors off)
+  deferredChanges:     ${JSON.stringify(plan.deferredChanges)} (keep these MUI behaviors off;
+                       one comment line where each is kept off, naming the "Deferred changes"
+                       section of ${PLAN_DOC})
   docsPlan:            ${JSON.stringify(plan.docsPlan)}
   componentFiles:      ${JSON.stringify(discover.componentFiles)}
   dscoStories:         ${JSON.stringify(discover.dscoStories)}`
@@ -1337,6 +1339,9 @@ ${JSON.stringify(plan.legacyDefectsToFix.map(d => d.fix))} as such.`,
 // ── Finalize: docs flip, carve, push, PRs ────────────────────────────────────
 const fullyMigrated =
   verify.pass && allSkippedFiles.length === 0 && skippedChunks.length === 0 && verify.remainingLegacyImports.length === 0
+const statusState = !fullyMigrated
+  ? 'In Progress'
+  : plan.deferredChanges.length ? '**Migrated, behavior pending**' : '**Migrated**'
 if (!fullyMigrated && verify.remainingLegacyImports.length) {
   log(`${verify.remainingLegacyImports.length} file(s) still import the legacy ${component}: ${verify.remainingLegacyImports.join(', ')}`)
 }
@@ -1412,9 +1417,11 @@ STATE
   plan doc: ${PLAN_DOC}
 
 ─── 1. Docs that depend on the outcome (edit, do not commit yet) ────────────────
-  ${STATUS_DOC}: set the ${component} row to ${fullyMigrated ? '**Migrated**' : 'In Progress'} with a note in the style of
+  ${STATUS_DOC}: set the ${component} row to ${statusState} with a note in the style of
   the tooltip row: what moved, what remains and why, the codemod, the behavior changes;
-  keep the Internal Dependency Blockers section truthful.
+  keep the Internal Dependency Blockers section truthful.${plan.deferredChanges.length ? `
+  The note also names the deferred behaviors (${plan.deferredChanges.map(d => d.behavior).join(', ')}),
+  links the "Deferred changes" section of ${PLAN_DOC}, and says they are lifecycle step 5.` : ''}
   ${SKILL_DOC}: ${fullyMigrated ? `move ${componentTitle} into the "Use MUI" list with the import to use and out of "Use DSCO".` : `leave ${componentTitle} under "Use DSCO"; consumers remain.`}
   ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' next to the button entry, message naming the replacement${exec.codemodCommand ? ' and the codemod command' : ''}. If any non-legacy export still lives at that path, ban only the legacy names with importNames: ${JSON.stringify(legacyExports)}.` : 'No eslint rule: consumers remain on the legacy component.'}
   ${PLAN_DOC}: append an "Outcome" section: consumers migrated/left, verify result, parity
@@ -1466,6 +1473,22 @@ with its sha and file count, every PR URL, and leftovers.`,
 )
 if (!finalized) throw new Error('finalize agent was skipped; branches may be half carved')
 if (finalized.leftovers.length) log(`WARNING: uncommitted leftovers: ${finalized.leftovers.join(', ')}`)
+// Ticket text for the user to file: steps 4 and 5 happen weeks later, in other PRs, and
+// a status row alone does not get them scheduled.
+const asSentence = t => (/[.!?]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`)
+const ticketTail = `Plan: ${PLAN_DOC}. Status: ${STATUS_DOC}.${jira ? ` Parent: ${jira}.` : ''}`
+const followUpTickets = [
+  {
+    title: `MUI ${componentTitle}: delete the legacy DSCO source`,
+    description: `Lifecycle step 4. After the consumer PRs merge${allSkippedFiles.length ? ` and the consumers left on legacy move (${allSkippedFiles.join(', ')})` : ''}, delete the legacy source and exports (${legacyExports.join(', ') || 'none named'}) per the export policy in the plan.${plan.deferredChanges.length ? ' The deferred-behavior tickets wait on this one.' : ''} ${ticketTail}`,
+  },
+  ...plan.deferredChanges.map(d => ({
+    title: `MUI ${componentTitle}: hand ${d.behavior} to MUI`,
+    description: `Lifecycle step 5, after the legacy source is deleted. Today: ${asSentence(d.legacyToday)} With MUI: ${asSentence(d.muiWouldDo)} UI tests at risk: ${d.uiTestsAtRisk.join('; ') || 'none named'}. Turn the legacy behavior off in the MUI version, delete what stood in for MUI, update those tests, and delete the row from the plan's "Deferred changes" table. A change that moves DOM needs an eyes and test-build run before merge. ${ticketTail}`,
+  })),
+]
+log(`Follow-up tickets to file: ${followUpTickets.map(t => t.title).join(' | ')}`)
+
 log(`Done: ${finalized.branches.length + 1} branch(es)${publish ? `, ${finalized.prs.length + (dsPublished.prUrl ? 1 : 0)} draft PR(s)` : ' (local only)'}; parity ${parityStatus}, verify ${verifyStatus}, apps parity ${appsParityResult}`)
 
 return {
@@ -1485,4 +1508,6 @@ return {
   branches: finalized.branches,
   prs: finalized.prs,
   leftovers: finalized.leftovers,
+  status: statusState.replace(/\*/g, ''),
+  followUpTickets,
 }

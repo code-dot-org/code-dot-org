@@ -4,13 +4,14 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 
 ## Migration States
 
-| State           | Description                                                                                                                          |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **Migrated**    | MUI equivalent exists with style overrides in `src/themes/code.org/styleOverrides/`. DSCO component is deprecated. Use MUI directly. |
-| **In Progress** | MUI style overrides exist, but consumer migration is not yet complete. DSCO component is still active.                               |
-| **MUI-native**  | Component already built on MUI primitives. No separate DSCO implementation to migrate.                                               |
-| **Not Started** | No MUI equivalent yet. Continue using the DSCO component.                                                                            |
-| **N/A**         | No direct MUI equivalent exists or component is utility/infrastructure.                                                              |
+| State                          | Description                                                                                                                                                                                                                                                         |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Migrated**                   | MUI equivalent exists with style overrides in `src/themes/code.org/styleOverrides/`. DSCO component is deprecated. Use MUI directly.                                                                                                                                |
+| **Migrated, behavior pending** | Consumers use the MUI version and the DSCO component is deprecated, but the MUI version still runs legacy behavior (focus, keys, portal, scroll lock) that its migration plan deferred. Use the MUI version. The row links the plan's Deferred changes; see step 5. |
+| **In Progress**                | MUI style overrides exist, but consumer migration is not yet complete. DSCO component is still active.                                                                                                                                                              |
+| **MUI-native**                 | Component already built on MUI primitives. No separate DSCO implementation to migrate.                                                                                                                                                                              |
+| **Not Started**                | No MUI equivalent yet. Continue using the DSCO component.                                                                                                                                                                                                           |
+| **N/A**                        | No direct MUI equivalent exists or component is utility/infrastructure.                                                                                                                                                                                             |
 
 ## Component Migration Status
 
@@ -88,7 +89,7 @@ Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts` an
 
 ## Migration Strategy
 
-Each DSCO component follows a 4-step migration lifecycle:
+Each DSCO component follows this migration lifecycle. Step 5 applies only when the migration plan deferred behavior:
 
 1. **Create MUI style overrides** — Match the DSCO component's visual appearance using MUI theme overrides in `src/themes/code.org/styleOverrides/`. This ensures MUI components look identical to their DSCO counterparts so consumers can swap with no visual regressions.
 
@@ -97,6 +98,8 @@ Each DSCO component follows a 4-step migration lifecycle:
 3. **Inside-out replacement** — Replace DSCO Button/Typography usage _inside_ other DSCO components that haven't been migrated yet. This breaks internal dependency chains so deprecated components aren't kept alive by other DSCO components that still import them.
 
 4. **Delete DSCO source** — Once all consumers (both `/apps` and internal DSCO components) are migrated, remove the DSCO component source code entirely.
+
+5. **Adopt deferred MUI behavior** — After step 4, one PR per row of the Deferred changes table in `src/<component>/<COMPONENT>_MIGRATION_TO_MUI.md`. Each PR hands one legacy behavior to MUI, updates the UI tests the row names, and deletes the row. A PR that moves DOM (a portal) needs an eyes and test-build run before merge. The status becomes **Migrated** when the table is empty.
 
 ## Building New MUI Components
 
