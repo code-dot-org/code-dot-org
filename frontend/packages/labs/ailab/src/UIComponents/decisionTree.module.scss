@@ -69,6 +69,7 @@ $path-color: var(--border-selected-primary, #2b1e9f);
 
 // An outline, unlike a box-shadow, still shows in forced-colors mode.
 .pathNode {
+  border-color: $path-color;
   outline: $path-ring-width solid $path-color;
 }
 
