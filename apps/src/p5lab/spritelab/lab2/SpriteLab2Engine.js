@@ -172,6 +172,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
+    // Set by destroy(): a rerun queued before the view left this engine
+    // behind must not start a program in it.
+    this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
@@ -621,6 +624,9 @@ export default class SpriteLab2Engine extends SpriteLab {
    * p5 per edit flickers and races its own async preload callbacks.
    */
   runProgram(code, referencedImages, sceneType) {
+    if (this.destroyed_) {
+      return;
+    }
     this.sceneType_ = sceneType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
@@ -704,6 +710,9 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   async doRerun_() {
+    if (this.destroyed_) {
+      return;
+    }
     const p5 = this.p5Wrapper.p5;
     if (!p5) {
       this.execute();
@@ -751,6 +760,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   destroy() {
+    this.destroyed_ = true;
     this.reset();
     this.stopTickTimer();
     this.imageWaitCancel_?.();
