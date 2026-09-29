@@ -39,6 +39,9 @@ Resources:
       Description: parameter group for production Redshift cluster
       ParameterGroupFamily: redshift-1.0
       Parameters:
+        # Static; takes effect only after the cluster reboots.
+        - ParameterName: require_ssl
+          ParameterValue: 'true'
         # Required on the target of the Zero-ETL integration from production Aurora.
         - ParameterName: enable_case_sensitive_identifier
           ParameterValue: 'true'
@@ -52,7 +55,7 @@ Resources:
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
-      ClusterParameterGroupName: default.redshift-1.0
+      ClusterParameterGroupName: !Ref TableauParameterGroup
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
       ClusterVersion: 1.0
