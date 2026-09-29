@@ -41,6 +41,12 @@
   color: var(--text-neutral-secondary);
 }
 
+.pageHeaderDot {
+  font-size: 4px;
+  color: var(--background-neutral-quinary);
+  flex-shrink: 0;
+}
+
 .list {
   display: flex;
   flex-direction: column;

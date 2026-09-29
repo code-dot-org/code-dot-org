@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
 import React, {useMemo, useState} from 'react';
 
@@ -87,10 +88,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           return (
             <div key={page} className={styles.page}>
               <div className={styles.pageHeader}>
-                <Typography variant="overline3" className={styles.pageLabel}>
+                <Typography variant="overline2" className={styles.pageLabel}>
                   Page {page}
                 </Typography>
-                <Typography variant="body3" component="span">
+                <FontAwesomeV6Icon
+                  iconName="circle"
+                  iconStyle="solid"
+                  className={styles.pageHeaderDot}
+                />
+                <Typography variant="body4" component="span">
                   {questionCountLabel(pageQuestions.length)}
                 </Typography>
               </div>
@@ -131,8 +137,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           type="button"
           disabled={hasPendingQuestion}
           onClick={() => handleCreate(nextPage)}
+          startIcon={<FontAwesomeV6Icon iconName="plus" />}
         >
-          + Add page
+          <Typography
+            variant="overline2"
+            component="span"
+            className={styles.pageLabel}
+          >
+            Add page
+          </Typography>
         </Button>
       </div>
     );

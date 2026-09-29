@@ -159,7 +159,7 @@ describe('QuizBuilderWorkspace', () => {
       addPendingQuestion,
     });
 
-    fireEvent.click(screen.getByRole('button', {name: '+ Add page'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
     expect(addPendingQuestion).toHaveBeenCalledWith(4);
   });
 
@@ -175,7 +175,7 @@ describe('QuizBuilderWorkspace', () => {
     expect(
       screen.getByRole('button', {name: 'Create question'})
     ).toBeDisabled();
-    expect(screen.getByRole('button', {name: '+ Add page'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
   });
 
   it('explains why the create button is disabled by a pending question', () => {
