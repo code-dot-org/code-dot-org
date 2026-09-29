@@ -3,7 +3,10 @@
 
 import React, {useMemo, useState} from 'react';
 
+import Loading from '@cdo/apps/lab2/views/Loading';
+
 import {useProgress} from '../progress';
+import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
 
 import MapScreen from './MapScreen';
@@ -18,6 +21,7 @@ type View =
 
 interface PathwayAppProps {
   pathway: Pathway;
+  progressKey: ProgressKey;
 }
 
 /**
@@ -44,8 +48,14 @@ function projectCheckpoint(pathway: Pathway): Checkpoint {
   };
 }
 
-const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({pathway}) => {
-  const {statusMap, markStarted, markComplete, reset} = useProgress(pathway);
+const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
+  pathway,
+  progressKey,
+}) => {
+  const {statusMap, isLoading, markStarted, markComplete, reset} = useProgress(
+    pathway,
+    progressKey
+  );
   const [view, setView] = useState<View>({kind: 'map'});
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
 
@@ -53,6 +63,14 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({pathway}) => {
     view.kind === 'step'
       ? pathway.checkpoints.find(c => c.id === view.checkpointId)
       : undefined;
+
+  if (isLoading) {
+    return (
+      <div className={styles.app}>
+        <Loading isLoading />
+      </div>
+    );
+  }
 
   if (view.kind === 'project') {
     return (
