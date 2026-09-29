@@ -21,9 +21,8 @@ module Cdo
       require 'dynamic_config/gatekeeper'
       require 'dynamic_config/dcdo'
 
-      # Default to enabled (true) since this is needed in production and all environments to work around memory leaks.
-      # Can still be disabled via Gatekeeper if needed.
-      if Gatekeeper.allows('enableWebServiceProcessRollingRestart', default: true)
+      # The bugcrowd adhoc runs unattended and must survive worker memory growth without a manual restart.
+      if Gatekeeper.allows('enableWebServiceProcessRollingRestart', default: CDO.stack_name == 'adhoc-bugcrowd')
         require 'puma_worker_killer'
 
         restart_period = DCDO.get('web_service_process_restart_period', 12 * 3600) # default to 12 hours
