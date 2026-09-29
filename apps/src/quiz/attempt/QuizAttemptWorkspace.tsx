@@ -81,6 +81,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const pendingWritesByQuestionIdRef = useRef<Record<number, Promise<unknown>>>(
     {}
   );
+  // The finish-time success report, so Next level can wait for it.
+  const pendingReportRef = useRef<Promise<unknown>>(Promise.resolve());
 
   const questionsRef = useRef<HTMLDivElement>(null);
   const submittedRef = useRef<HTMLDivElement>(null);
@@ -159,7 +161,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     const requestLevelId = levelId;
     try {
       await finishAttempt(responsesByQuestionId);
-      dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName));
+      pendingReportRef.current = Promise.resolve(
+        dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName))
+      );
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
@@ -173,7 +177,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
-  const handleNextLevel = () => {
+  const handleNextLevel = async () => {
+    await pendingReportRef.current;
     dispatch(navigateToNextLevel());
   };
 

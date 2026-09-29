@@ -295,7 +295,7 @@ describe('QuizAttemptWorkspace', () => {
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
-  it('dispatches navigateToNextLevel when Next level is clicked', () => {
+  it('dispatches navigateToNextLevel when Next level is clicked', async () => {
     renderWorkspace({
       hookState: {
         attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
@@ -304,10 +304,68 @@ describe('QuizAttemptWorkspace', () => {
 
     fireEvent.click(screen.getByRole('button', {name: /Next level/}));
 
-    expect(mockNavigateToNextLevel).toHaveBeenCalled();
+    // Waits on the (already-resolved, since nothing was submitted this
+    // render) pending-report promise first.
+    await waitFor(() => expect(mockNavigateToNextLevel).toHaveBeenCalled());
     expect(mockDispatch).toHaveBeenCalledWith(
       mockNavigateToNextLevel.mock.results[0].value
     );
+  });
+
+  it('waits for the finish-time success report to settle before navigating to the next level', async () => {
+    const report = deferred<unknown>();
+    mockDispatch.mockImplementation(action =>
+      action?.type === 'SEND_SUCCESS_REPORT_FOR_LEVEL'
+        ? report.promise
+        : undefined
+    );
+    const finishAttempt = jest
+      .fn()
+      .mockResolvedValue({...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'});
+    mockUseQuizAttempt.mockReturnValue({
+      ...BASE_HOOK_STATE,
+      attempt: ATTEMPT,
+      finishAttempt,
+    });
+    const {rerender} = render(
+      <QuizAttemptWorkspace
+        levelId={42}
+        appName="quiz"
+        levelName="quiz-level-name"
+        unitId={7}
+        quizQuestions={[question({id: 1, page: 1})]}
+        displayName="Unit 3 Assessment"
+        showCorrectness
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+    await waitFor(() =>
+      expect(mockSendSuccessReportForLevel).toHaveBeenCalled()
+    );
+
+    // The real hook would have updated attempt to submitted by now.
+    mockUseQuizAttempt.mockReturnValue({
+      ...BASE_HOOK_STATE,
+      attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
+    });
+    rerender(
+      <QuizAttemptWorkspace
+        levelId={42}
+        appName="quiz"
+        levelName="quiz-level-name"
+        unitId={7}
+        quizQuestions={[question({id: 1, page: 1})]}
+        displayName="Unit 3 Assessment"
+        showCorrectness
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: /Next level/}));
+    expect(mockNavigateToNextLevel).not.toHaveBeenCalled();
+
+    report.resolve(undefined);
+    await waitFor(() => expect(mockNavigateToNextLevel).toHaveBeenCalled());
   });
 
   it('shows an open-ended attempt count when the quiz allows multiple attempts', () => {
