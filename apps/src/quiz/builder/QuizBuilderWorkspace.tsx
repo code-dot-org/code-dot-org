@@ -80,57 +80,60 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     const nextPage = pages[pages.length - 1].page + 1;
     outline = (
       <div className={styles.pages}>
-        {pages.map(({page, questions: pageQuestions}) => (
-          <div key={page} className={styles.page}>
-            <div className={styles.pageHeader}>
-              <Typography variant="overline3" className={styles.pageLabel}>
-                Page {page}
-              </Typography>
-              <Typography variant="body3" component="span">
-                {questionCountLabel(pageQuestions.length)}
-              </Typography>
+        {pages.map(({page, questions: pageQuestions}) => {
+          const pageHasPendingQuestion = pageQuestions.some(question =>
+            isPendingQuestionId(question.id)
+          );
+          return (
+            <div key={page} className={styles.page}>
+              <div className={styles.pageHeader}>
+                <Typography variant="overline3" className={styles.pageLabel}>
+                  Page {page}
+                </Typography>
+                <Typography variant="body3" component="span">
+                  {questionCountLabel(pageQuestions.length)}
+                </Typography>
+              </div>
+              <ol className={styles.list}>
+                {pageQuestions.map(question => (
+                  <li key={question.id}>
+                    <QuizQuestionCard
+                      question={question}
+                      isExpanded={question.id === expandedId}
+                      onExpandedChange={expanded =>
+                        setExpandedId(expanded ? question.id : null)
+                      }
+                      error={question.id === errorQuestionId ? error : null}
+                      onSave={saveQuestion}
+                      onRemove={removeQuestion}
+                    />
+                  </li>
+                ))}
+              </ol>
+              <AddItemButton
+                label="Create question"
+                onClick={() => handleCreate(page)}
+                disabled={hasPendingQuestion}
+              />
+              {pageHasPendingQuestion && (
+                <Typography variant="body3" className={styles.createHint}>
+                  Save or remove your new question before creating another.
+                </Typography>
+              )}
             </div>
-            <ol className={styles.list}>
-              {pageQuestions.map(question => (
-                <li key={question.id}>
-                  <QuizQuestionCard
-                    question={question}
-                    isExpanded={question.id === expandedId}
-                    onExpandedChange={expanded =>
-                      setExpandedId(expanded ? question.id : null)
-                    }
-                    error={question.id === errorQuestionId ? error : null}
-                    onSave={saveQuestion}
-                    onRemove={removeQuestion}
-                  />
-                </li>
-              ))}
-            </ol>
-            <AddItemButton
-              label="Create question"
-              onClick={() => handleCreate(page)}
-              disabled={hasPendingQuestion}
-            />
-          </div>
-        ))}
-        <div className={styles.createAction}>
-          <Button
-            className={styles.addPageButton}
-            variant="text"
-            color="secondary"
-            size="extraSmall"
-            type="button"
-            disabled={hasPendingQuestion}
-            onClick={() => handleCreate(nextPage)}
-          >
-            + Add page
-          </Button>
-          {hasPendingQuestion && (
-            <Typography variant="body3" className={styles.createHint}>
-              Save or remove your new question before creating another.
-            </Typography>
-          )}
-        </div>
+          );
+        })}
+        <Button
+          className={styles.addPageButton}
+          variant="text"
+          color="secondary"
+          size="extraSmall"
+          type="button"
+          disabled={hasPendingQuestion}
+          onClick={() => handleCreate(nextPage)}
+        >
+          + Add page
+        </Button>
       </div>
     );
   }
