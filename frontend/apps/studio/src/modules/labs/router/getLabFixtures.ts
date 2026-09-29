@@ -12,6 +12,7 @@ type LabFixturesLoader = () => Promise<{
 
 const LabFixturesLoaders: Partial<Record<Lab, LabFixturesLoader>> = {
   music: () => import('@code-dot-org/music-lab/mocks'),
+  python: () => import('@code-dot-org/python-lab/mocks'),
 };
 
 /**
