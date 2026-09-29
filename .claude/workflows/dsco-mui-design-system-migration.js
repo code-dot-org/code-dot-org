@@ -481,12 +481,14 @@ const PLAN_SCHEMA = {
       description: 'MUI behaviors this run keeps off so the legacy behavior survives; each is the scope of a later, separate PR. [] if the MUI version already behaves as MUI does.',
       items: {
         type: 'object',
-        required: ['behavior', 'legacyToday', 'muiWouldDo', 'uiTestsAtRisk'],
+        required: ['behavior', 'legacyToday', 'muiWouldDo', 'uiTestsAtRisk', 'after', 'movesDom'],
         properties: {
           behavior: {type: 'string', description: 'e.g. "portal", "focus trap", "Escape"'},
           legacyToday: {type: 'string'},
           muiWouldDo: {type: 'string'},
           uiTestsAtRisk: {type: 'array', items: {type: 'string'}, description: 'uiTestFiles entries (file:line) and consumer selectors the change would break, or []'},
+          after: {type: 'array', items: {type: 'string'}, description: 'behavior values of the rows this one must follow, or []'},
+          movesDom: {type: 'boolean', description: 'true when adopting it moves elements in the DOM or changes rendering, so eyes and the test build must run before its PR merges'},
         },
       },
     },
@@ -557,7 +559,8 @@ Decide, in this order, reading the precedents and MUI's own component docs as ne
    the rest go to deferred changes. Shared globals: for each legacyGlobals entry, the
    manager the MUI version must share (e.g. the legacy useBodyScrollLock hook with MUI's
    own lock disabled). Deferred changes: each MUI behavior turned off to keep the legacy
-   one, with the UI tests and consumer selectors that adopting it would break.
+   one, with the UI tests and consumer selectors that adopting it would break, the rows
+   it must follow (after), and whether adopting it moves DOM or changes rendering.
 6. Apps parity sample: up to 4 consumer pages, distinct surfaces, each with a path on the
    local studio and a recipe (seeded account, clicks by role/name). [] if not worth it.
 7. Chunk size for the consumer PRs, and the docs plan.
@@ -566,7 +569,8 @@ Then write ${PLAN_DOC} with these sections, in this order, terse and exact (read
 ${LIB_SRC}/button/BUTTON_MIGRATION_TO_MUI.md for the register): Summary; Approach and
 exports; Prop map (table); Codemod (transforms, residue, how to run); Parity (tolerance,
 twins, intended deviations); Legacy defects fixed while here; Shared globals; Deferred
-changes (table: behavior, legacy today, MUI would do, UI tests at risk); Consumer chunks;
+changes (table: Behavior, Legacy today, With MUI, UI tests at risk, After, Moves DOM, and
+an empty Ticket column that holds only a ticket key once one is filed); Consumer chunks;
 Docs; Risks; Deviations (empty, Execute fills it). Run prettier on it from ${LIB}
 (../../node_modules/.bin/prettier --write).
 
@@ -1489,7 +1493,7 @@ const followUpTickets = [
   },
   ...plan.deferredChanges.map(d => ({
     title: `MUI ${componentTitle}: hand ${d.behavior} to MUI`,
-    description: `Lifecycle step 5, after the legacy source is deleted. Today: ${asSentence(d.legacyToday)} With MUI: ${asSentence(d.muiWouldDo)} UI tests at risk: ${d.uiTestsAtRisk.join('; ') || 'none named'}. Turn the legacy behavior off in the MUI version, delete what stood in for MUI, update those tests, and delete the row from the plan's "Deferred changes" table. A change that moves DOM needs an eyes and test-build run before merge. ${ticketTail}`,
+    description: `Lifecycle step 5, after the legacy source is deleted${d.after.length ? ` and after ${d.after.join(', ')}` : ''}. Today: ${asSentence(d.legacyToday)} With MUI: ${asSentence(d.muiWouldDo)} UI tests at risk: ${d.uiTestsAtRisk.join('; ') || 'none named'}. Run dsco-mui-finish-migration with this row as its step: it turns the legacy behavior off, deletes what stood in for MUI, updates those tests, and deletes the row.${d.movesDom ? ' This change moves DOM or changes rendering: eyes and the test build must run before merge.' : ''} ${ticketTail}`,
   })),
 ]
 log(`Follow-up tickets to file: ${followUpTickets.map(t => t.title).join(' | ')}`)
