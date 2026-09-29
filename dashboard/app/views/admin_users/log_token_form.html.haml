@@ -44,8 +44,8 @@
 
 = form_tag resolve_log_token_path, method: 'post', enforce_utf8: false do
   %div
-    = label_tag :token, 'Token'
-    = text_field_tag :token, nil, class: 'form-control', placeholder: '3f2a9c14-7b8e-4d21-9a33-c5e1f0b47d92', size: 90
+    = label_tag :log_token, 'Token'
+    = text_field_tag :log_token, nil, class: 'form-control', placeholder: '3f2a9c14-7b8e-4d21-9a33-c5e1f0b47d92', size: 90
   %div{style: 'margin-top: 8px;'}
     = label_tag :reason, 'Reason (required)'
     = text_field_tag :reason, nil, class: 'form-control', placeholder: 'e.g. Zendesk 4821, safety review', size: 60

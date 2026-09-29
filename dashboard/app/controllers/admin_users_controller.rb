@@ -508,14 +508,10 @@ class AdminUsersController < ApplicationController
   end
 
   # GET /admin/log_token
-  # Forward lookup: a user id in, the tokens that user already has out. Never
-  # mints, so an empty result means the user has never reached a destination and
-  # there is nothing to search for.
   def log_token_form
     @input = params[:user_id].to_s.strip
     return if @input.blank?
 
-    # Rejected here rather than issuing a query that cannot match.
     unless @input.match?(/\A[1-9]\d{0,9}\z/)
       @invalid_input = true
       return
@@ -531,12 +527,8 @@ class AdminUsersController < ApplicationController
   end
 
   # POST /admin/log_token/resolve
-  # Reverse lookup: a log token in, the user it identifies out.
-  #
-  # The audit record is written by User::LogToken.resolve itself rather than
-  # here, so it cannot be sidestepped by calling the primitive from a console.
   def resolve_log_token
-    token = params[:token].to_s.strip
+    token = params[:log_token].to_s.strip
     reason = params[:reason].to_s.strip
 
     if token.blank? || reason.blank?
