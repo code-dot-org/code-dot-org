@@ -499,10 +499,10 @@ function getShowColumnClicking(state: RootState): boolean {
 }
 
 export function getColumnClickable(state: RootState, column: string): boolean {
+  // If doing feature selection, the label column is no longer clickable
   return (
     getShowColumnClicking(state) &&
     !(
-      // If doing feature selection, the label column is no longer clickable
       state.currentPanel === 'dataDisplayFeatures' &&
       column === state.labelColumn
     )

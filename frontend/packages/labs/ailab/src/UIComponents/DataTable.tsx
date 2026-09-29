@@ -1,6 +1,4 @@
 /* React component to handle displaying imported data. */
-import type {KeyboardEvent} from 'react';
-
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
@@ -110,16 +108,6 @@ const DataTable = ({
     }
   };
 
-  const handleHeaderKeyDown = (
-    event: KeyboardEvent<HTMLTableCellElement>,
-    columnId: string,
-  ) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleSetCurrentColumn(columnId);
-    }
-  };
-
   if (!data || data.length === 0) {
     return null;
   }
@@ -135,18 +123,25 @@ const DataTable = ({
             />
           )}
           {getColumns().map(columnId => {
+            const columnName = getLocalizedColumnName(datasetId, columnId);
             return (
               <th
                 key={columnId}
+                scope="col"
                 className={getColumnHeaderClassName(columnId)}
-                tabIndex={isClickable(columnId) ? 0 : undefined}
-                aria-selected={
-                  isClickable(columnId) ? columnId === currentColumn : undefined
-                }
-                onClick={() => handleSetCurrentColumn(columnId)}
-                onKeyDown={event => handleHeaderKeyDown(event, columnId)}
               >
-                {getLocalizedColumnName(datasetId, columnId)}
+                {isClickable(columnId) ? (
+                  <button
+                    type="button"
+                    className={moduleStyles.headerButton}
+                    aria-pressed={columnId === currentColumn}
+                    onClick={() => handleSetCurrentColumn(columnId)}
+                  >
+                    {columnName}
+                  </button>
+                ) : (
+                  columnName
+                )}
               </th>
             );
           })}
@@ -167,7 +162,6 @@ const DataTable = ({
                     key={columnId}
                     className={getColumnCellClassName(columnId)}
                     onClick={() => handleSetCurrentColumn(columnId)}
-                    role="gridcell"
                   >
                     {startingRow !== undefined && index <= startingRow ? (
                       <span>&nbsp;</span>
