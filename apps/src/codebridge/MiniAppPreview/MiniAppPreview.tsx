@@ -1,13 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -27,13 +23,6 @@ interface MiniAppPreviewProps {
   showMaximizeButton?: boolean;
   handleScaling?: boolean;
 }
-
-const tooltipProps: TooltipProps = {
-  text: codebridgeI18n.resetPreview(),
-  size: 'xs',
-  direction: 'onLeft',
-  tooltipId: 'reset-preview-tooltip',
-};
 
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   maximizeMiniApp,
@@ -105,7 +94,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
       headerClassName={moduleStyles.previewHeader}
       rightHeaderContent={
         <>
-          <WithTooltip tooltipProps={tooltipProps}>
+          <Tooltip placement="left" title={codebridgeI18n.resetPreview()}>
             <MuiIconButton
               variant="text"
               color="tertiary"
@@ -117,7 +106,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
             >
               <FontAwesomeV6Icon iconStyle="solid" iconName="rotate-left" />
             </MuiIconButton>
-          </WithTooltip>
+          </Tooltip>
           {showMaximizeButton && (
             <MuiIconButton
               variant="text"

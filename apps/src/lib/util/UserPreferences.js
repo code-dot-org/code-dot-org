@@ -201,6 +201,37 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Fetch the user's editor autocomplete choice, or null if they never made one.
+   */
+  async getEditorAutocompleteEnabled() {
+    try {
+      const response = await HttpClient.fetchJson(
+        '/user_preference/editor_settings'
+      );
+      return response.value.editor_settings.autocomplete ?? null;
+    } catch (error) {
+      // 404 means the user has not saved any editor settings yet.
+      if (error?.response?.status !== 404) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching editor autocomplete setting', undefined, {
+            message: error.response,
+          });
+      }
+      return null;
+    }
+  }
+
+  setEditorAutocompleteEnabled(autocompleteEnabled) {
+    return HttpClient.put(
+      '/user_preference',
+      JSON.stringify({editorSettings: {autocomplete: autocompleteEnabled}}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+  }
+
+  /**
    * Fetches all user theme settings (e.g., global, blockly).
    * @param {function} [errorCallback]
    */

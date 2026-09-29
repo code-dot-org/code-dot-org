@@ -215,6 +215,18 @@ describe('BlocklyMarkdown', () => {
       expect(options.rtl).toBe(false);
     });
 
+    it('isolates the paragraph and hides the blocks and workspace from the translator', () => {
+      render(<BlocklyMarkdown content={`Press ${BLOCK_XML} now`} />);
+
+      const [host, xml] = createEmbeddedWorkspace.mock.calls[0];
+      const p = screen.getByText(/Press/);
+      expect(p.tagName).toBe('P');
+      expect(p.getAttribute('data-isolate')).toBe('true');
+      expect(p.hasAttribute('data-notranslate')).toBe(false);
+      expect(xml.getAttribute('data-ignore')).toBe('true');
+      expect(host.getAttribute('data-ignore')).toBe('true');
+    });
+
     it('passes reading direction through to the workspace', () => {
       render(<BlocklyMarkdown content={BLOCK_XML} isRtl />);
 

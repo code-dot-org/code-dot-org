@@ -157,6 +157,7 @@ const FileTab = ({
           {...attributes}
           {...listeners}
           onKeyDown={handleLabelKeyDown}
+          aria-current={isActive || undefined}
         >
           <FontAwesomeV6Icon
             iconName={iconName}

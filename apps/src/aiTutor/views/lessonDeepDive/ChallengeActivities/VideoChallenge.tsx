@@ -1,44 +1,64 @@
-import {VideoRecorder} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
-
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
-import {getClientApi} from '@cdo/apps/aichat/api/client';
-import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
 import {
   Challenge,
   ChallengeResponse,
   challengeResponseValidator,
-} from '../types';
+} from '@code-dot-org/lesson-deep-dive';
+import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
+import {getClientApi} from '@cdo/apps/aichat/api/client';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {requestEvaluation} from './requestEvaluation';
+import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
-// import freeResponseStyles from './free-response.module.scss';
 import styles from './video-challenge.module.scss';
 
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  isRecording: boolean;
+  setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
+  hasRecording: boolean;
+  setHasRecording: React.Dispatch<React.SetStateAction<boolean>>;
   challenge: Challenge | null;
   lessonId: number;
+  setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
+  setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
+  onSubmittableChange: (canSubmit: boolean) => void;
+  submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
+  resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
 const VideoChallenge: FC<VideoChallengeProps> = ({
   submitted,
   submitCallback,
+  isRecording,
+  setIsRecording,
+  hasRecording,
+  setHasRecording,
   lessonId,
   challenge = null,
+  setEvaluationStatus,
+  setChallengeResponseId,
+  onSubmittableChange,
+  submitRef,
+  resetRef,
 }) => {
-  const [hasRecording, setHasRecording] = useState(false);
-  const [isRecording, setIsRecording] = useState(false);
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
-  const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
+  const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
+  const [recordedAudioBlob, setRecordedAudioBlob] = useState<Blob | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const [isUploading, setIsUploading] = useState(false);
+  // Bumped to remount the recorder with a clean slate on "Start over".
+  const [resetKey, setResetKey] = useState(0);
   const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
+  const mode: VideoCanvasMode = isRecording
+    ? 'recording'
+    : hasRecording
+    ? 'preview'
+    : 'edit';
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
 
   // Initialize the ChatEventLogger with the current context, whenever it updates.
@@ -77,7 +97,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   );
 
   const handleSubmit = async () => {
-    if (!recordedUrl) return;
+    if (!recordedBlob) return;
     setIsUploading(true);
     try {
       const text = await transcribeAudio();
@@ -89,17 +109,18 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       if (!assetId) {
         throw new Error('The server did not return a video asset.');
       }
-      const blob = await fetch(recordedUrl).then(r => r.blob());
       await HttpClient.put(
         `/challenge_response_assets/${assetId}/upload`,
-        blob,
+        recordedBlob,
         true, // useAuthenticityToken
         {'Content-Type': 'video/webm'}
       );
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
-      requestEvaluation(challengeResponse.id);
+      const status = await requestEvaluation(challengeResponse.id);
+      setEvaluationStatus(status);
+      setChallengeResponseId(challengeResponse.id);
 
       // Only confirm once the upload actually succeeded; the confirmation
       // dialog in ChallengeBox keys off this.
@@ -112,48 +133,61 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   };
 
   const transcribeAudio = async (timedOut = false) => {
-    if (!recordedAudioUrl) return null;
+    if (!recordedAudioBlob) return null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     try {
-      const audio = await fetch(recordedAudioUrl).then(r => r.blob());
-
       const aichatClientApi = await getClientApi();
-      const text = await aichatClientApi.transcribeAudio(audio);
+      const text = await aichatClientApi.transcribeAudio(recordedAudioBlob);
       return text;
-      // setTranscribedText(text);
     } catch (error) {
       console.log(error);
       return null;
     }
   };
 
+  // Discard the recording (by remounting the recorder) so the student can
+  // record again from scratch.
+  const handleReset = () => {
+    setRecordedBlob(null);
+    setRecordedAudioBlob(null);
+    setHasRecording(false);
+    setIsRecording(false);
+    setResetKey(key => key + 1);
+  };
+
+  // Keep the top bar's "Submit for feedback" enabled state in sync.
+  useEffect(() => {
+    onSubmittableChange(canSubmit);
+  }, [canSubmit, onSubmittableChange]);
+
+  // Register this modality's handlers for the top-bar buttons. Runs every
+  // render so the refs hold the latest closures, and clears them on unmount
+  // (e.g. switching to the whiteboard modality).
+  useEffect(() => {
+    submitRef.current = handleSubmit;
+    resetRef.current = handleReset;
+    return () => {
+      submitRef.current = null;
+      resetRef.current = null;
+    };
+  });
+
   return (
-    <div>
-      <div className={styles.questionText}>
-        {challenge ? challenge.question : 'DUMMY PROBLEM TEXT HERE'}
-      </div>
-      <VideoRecorder
+    <div className={styles.videoContainer}>
+      <VideoCanvas
+        key={resetKey}
+        mode={mode}
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}
-        recordedUrl={recordedUrl}
-        setRecordedUrl={setRecordedUrl}
-        recordedAudioUrl={recordedAudioUrl}
-        setRecordedAudioUrl={setRecordedAudioUrl}
+        recordedBlob={recordedBlob}
+        setRecordedBlob={setRecordedBlob}
+        recordedAudioBlob={recordedAudioBlob}
+        setRecordedAudioBlob={setRecordedAudioBlob}
+        timeLimitSeconds={60}
       />
-      {isUploading && <WaitingAnimation shouldDisplay={isUploading} />}
-      {!submitted && (
-        <button
-          type="button"
-          className={styles.submitButton}
-          disabled={!canSubmit}
-          onClick={handleSubmit}
-        >
-          Submit
-        </button>
-      )}
     </div>
   );
 };

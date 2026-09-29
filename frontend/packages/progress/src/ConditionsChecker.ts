@@ -6,12 +6,27 @@ import _ from 'lodash';
 
 import type {Condition} from './types';
 
+// ?log-validator-condition-changes=true logs every condition as it changes.
+function logChangesFromUrl(): boolean {
+  if (typeof window === 'undefined') {
+    return false;
+  }
+  return (
+    new URLSearchParams(window.location.search).get(
+      'log-validator-condition-changes',
+    ) === 'true'
+  );
+}
+
 class ConditionsChecker {
   private currentSatisfiedConditions: Condition[];
   private conditionNames: string[];
   private readonly logChanges: boolean;
 
-  constructor(conditionNames: string[], logChanges: boolean = false) {
+  constructor(
+    conditionNames: string[],
+    logChanges: boolean = logChangesFromUrl(),
+  ) {
     this.logChanges = logChanges;
     this.currentSatisfiedConditions = [];
     this.conditionNames = conditionNames;

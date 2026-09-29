@@ -1,6 +1,7 @@
 import {
   getGlobalEditionRegion,
   currentGlobalConfiguration,
+  stripGlobalEditionPrefix,
 } from '@cdo/apps/util/globalEdition';
 import {Regions} from '@cdo/generated-scripts/globalRegionConstants';
 import {GlobalEditionDefaultRegion} from '@cdo/generated-scripts/sharedConstants';
@@ -57,6 +58,30 @@ describe('globalEdition', () => {
       setGlobalEditionRegion('fa');
       // Should match config/global_editions/fa.yml
       expect(currentGlobalConfiguration().locales).toEqual(['fa-IR']);
+    });
+  });
+
+  describe('stripGlobalEditionPrefix', () => {
+    it('strips the current region prefix', () => {
+      setGlobalEditionRegion('br');
+      expect(stripGlobalEditionPrefix('/br/courses/csp-2025')).toBe(
+        '/courses/csp-2025'
+      );
+    });
+
+    it('strips the locale segment for multi-locale regions', () => {
+      setGlobalEditionRegion('in');
+      expect(stripGlobalEditionPrefix('/in/hi/courses/csp-2025')).toBe(
+        '/courses/csp-2025'
+      );
+    });
+
+    it('leaves paths without the region prefix unchanged', () => {
+      setGlobalEditionRegion('br');
+      expect(stripGlobalEditionPrefix('/courses/csp-2025')).toBe(
+        '/courses/csp-2025'
+      );
+      expect(stripGlobalEditionPrefix('/brazil/home')).toBe('/brazil/home');
     });
   });
 });

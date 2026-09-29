@@ -14,8 +14,11 @@ export const getInitialValidationState: () => ValidationState = () => ({
   index: 0,
 });
 
+// The one app option ProgressManager reads.
+type ExemplarAppOptions = Pick<AppOptions, 'isEditingExemplar'>;
+
 export default class ProgressManager {
-  private appOptions?: AppOptions;
+  private appOptions?: ExemplarAppOptions;
   private currentValidations?: Validation[];
   private validator?: Validator;
   private onProgressChange: () => void;
@@ -32,14 +35,19 @@ export default class ProgressManager {
    * Resets validation status internally.
    */
   onLevelChange(
-    appOptions: AppOptions,
+    appOptions: ExemplarAppOptions,
     validations?: Validation[],
     exemplarSettings?: ExemplarSettings,
   ) {
     this.appOptions = appOptions;
     this.currentValidations = validations;
     this.exemplarSettings = exemplarSettings;
-    this.resetValidation();
+    this.resetValidation(true);
+  }
+
+  /** Replaces the constructor's callback, e.g. when a host's props change. */
+  setOnProgressChange(onProgressChange: () => void) {
+    this.onProgressChange = onProgressChange;
   }
 
   setValidator(validator: Validator) {
@@ -130,10 +138,10 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  resetValidation() {
+  resetValidation(isChangingLevels: boolean = false) {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
-      this.validator.clear();
+      this.validator.clear(isChangingLevels);
     }
 
     const hasConditions =

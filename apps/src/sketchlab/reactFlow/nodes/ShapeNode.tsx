@@ -170,7 +170,6 @@ function ShapeNode({
   return (
     <div
       className={styles.shapeNode}
-      aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
@@ -211,6 +210,7 @@ function ShapeNode({
           tabIndex={-1}
           role="textbox"
           aria-multiline={true}
+          aria-readonly={!isEditing}
           aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
         >
           {label}

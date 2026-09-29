@@ -1,13 +1,11 @@
-import classNames from 'classnames';
-import React, {FC} from 'react';
-
 import {
   ChallengeResponse,
   ChallengeResponseAsset,
-} from '../lessonDeepDive/types';
+} from '@code-dot-org/lesson-deep-dive';
+import classNames from 'classnames';
+import React, {FC} from 'react';
 
 import ReactionChips from './ReactionChips';
-import {Reaction} from './types';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -16,10 +14,10 @@ export type ProjectVariant = 'video' | 'whiteboard';
 interface ProjectCardProps {
   response: ChallengeResponse;
   variant: ProjectVariant;
-  // The position of the response's unit within the course, for the
-  // "Unit N, Lesson M" label. Null when the unit is unknown.
   unitPosition: number | null;
-  reactions?: Reaction[];
+  // Opens the project's page. The card links to ?project=<id> and lets
+  // this handler do the in-page navigation.
+  onOpen?: () => void;
 }
 
 interface CardTag {
@@ -71,10 +69,21 @@ const ProjectCard: FC<ProjectCardProps> = ({
   response,
   variant,
   unitPosition,
-  reactions = [],
+  onOpen,
 }) => {
+  const projectHref = `?project=${response.id}`;
+  const handleOpen = (event: React.MouseEvent) => {
+    if (!onOpen) {
+      return;
+    }
+    event.preventDefault();
+    onOpen();
+  };
+
   const renderMedia = () => {
     if (variant === 'video') {
+      // The video keeps its inline playback controls, so it is not wrapped
+      // in the project link; the author's name below is the link instead.
       const video = assetWithUrl(response, 'video');
       if (video?.download_url) {
         return (
@@ -91,11 +100,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
       const image = assetWithUrl(response, 'whiteboard_image');
       if (image?.download_url) {
         return (
-          <img
-            className={styles.media}
-            src={image.download_url}
-            alt={`${response.user_name}'s whiteboard project`}
-          />
+          <a href={projectHref} onClick={handleOpen} tabIndex={-1}>
+            <img
+              className={styles.media}
+              src={image.download_url}
+              alt={`${response.user_name}'s whiteboard project`}
+            />
+          </a>
         );
       }
     }
@@ -128,8 +139,20 @@ const ProjectCard: FC<ProjectCardProps> = ({
             ))}
           </div>
         </div>
-        <p className={styles.name}>{response.user_name}</p>
-        <ReactionChips reactions={reactions} />
+        <p className={styles.name}>
+          <a
+            className={styles.nameLink}
+            href={projectHref}
+            onClick={handleOpen}
+          >
+            {response.user_name}
+          </a>
+        </p>
+        <ReactionChips
+          responseId={response.id}
+          reactions={response.reactions}
+          readOnly
+        />
       </div>
     </div>
   );

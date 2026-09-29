@@ -24,16 +24,15 @@ markdown <<MARKDOWN
 <h2>Seeing It in Code</h2>
 
 <p>Here's a conditional statement checking a temperature value from a slider:</p>
-
-<div style="background-color: #2B2745; border-radius: 10px; padding: 16px 20px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.8; margin: 20px 0;">
-if (temperature &gt; 70) {<br>
-&nbsp;&nbsp;message.textContent = "It's warm outside!";<br>
-} else {<br>
-&nbsp;&nbsp;message.textContent = "It's cool outside!";<br>
-}
+<div style="background-color:#171717; color:#F5F5F5; border-radius:10px; padding:18px 22px; font-family:'Courier New', Courier, monospace; font-size:16px; line-height:1.7; overflow-x:auto; white-space:nowrap; box-shadow:0 3px 8px rgba(0,0,0,0.15);">
+  <span style="color:#D987E8;">if</span> (temperature &gt; <span style="color:#F6AD72;">70</span>) {<br>
+  &nbsp;&nbsp;<span style="color:#B680F2;">message</span>.textContent = <span style="color:#F6AD72;">"It's warm outside!"</span>;<br>
+  } <span style="color:#D987E8;">else</span> {<br>
+  &nbsp;&nbsp;<span style="color:#B680F2;">message</span>.textContent = <span style="color:#F6AD72;">"It's cool outside!"</span>;<br>
+  }
 </div>
-
-<p><code>temperature &gt; 70</code> is the Boolean expression, it can only ever evaluate to true or false. The <code>if</code> and <code>else</code> blocks are the conditional statement, the two different actions the program takes depending on which way that expression comes out.</p>
+<br>
+<p><code style="font-size: 14px;">temperature &gt; 70</code> is the Boolean expression, it can only ever evaluate to true or false. The <code  style="font-size: 14px;">if</code> and <code  style="font-size: 14px;">else</code> blocks are the conditional statement, the two different actions the program takes depending on which way that expression comes out.</p>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
 <p><strong>💡 Teacher tip:</strong> when students explore an app like this, they'll typically change the message text, a color, or the condition itself, something like changing 70 to 80. All three are valid ways to interact with a conditional, and noticing which one a student changed tells you something about what they understood: changing the message shows they found the conditional, changing the number shows they understood what it's actually checking.</p>

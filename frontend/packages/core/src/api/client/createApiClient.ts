@@ -9,7 +9,9 @@ import {createCoursesApi} from '../dashboard/courses';
 import {createLevelsApi} from '../dashboard/levels';
 import {createMetricsApi} from '../dashboard/metrics';
 import {createPreferencesApi} from '../dashboard/preferences';
+import {createProgressApi} from '../dashboard/progress';
 import {createProjectsApi} from '../dashboard/projects';
+import {createSchoolsApi} from '../dashboard/schools';
 import {createSectionsApi} from '../dashboard/sections';
 import {createSourcesApi} from '../dashboard/sources';
 import {createUsersApi} from '../dashboard/users';
@@ -25,7 +27,9 @@ export const createApiClient = (transport: Transport) => ({
   levels: createLevelsApi(transport),
   metrics: createMetricsApi(transport),
   preferences: createPreferencesApi(transport),
+  progress: createProgressApi(transport),
   projects: createProjectsApi(transport),
+  schools: createSchoolsApi(transport),
   sections: createSectionsApi(transport),
   sources: createSourcesApi(transport),
   users: createUsersApi(transport),

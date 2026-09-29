@@ -12,8 +12,8 @@ export type SketchLabShapeType =
   | 'diamond';
 
 /**
- * The allthethings level backing these tests: lesson "Sketch Lab" position 54,
- * level "allthethings sketchlab 1", seeded with no start_sources so the canvas
+ * The ui-test-all-the-levels level backing these tests: lesson "Sketch Lab" position 54,
+ * level "UI Test allthethings sketchlab 1", seeded with no start_sources so the canvas
  * is empty on load.
  */
 const SKETCH_LAB_LEVEL: LabLevelUrlParams = {lesson: 54, level: 1};
@@ -92,9 +92,15 @@ export class SketchLab extends LessonLevelPage {
     return this.canvasToolbar.getByRole('button', {name});
   }
 
-  /** A shape node by type. The label part of the aria-label is empty for new nodes. */
+  /**
+   * A shape node by type. The React Flow node wrapper carries the accessible
+   * name (useDisplayElements.ts): the bare shape type while unlabeled, then
+   * "<type> with label <text>", plus a ", locked" suffix when locked.
+   */
   shapeNode(shapeType: SketchLabShapeType): Locator {
-    return this.page.getByLabel(new RegExp(`^${shapeType} shape`));
+    return this.page.locator(
+      `.react-flow__node-shape[aria-label^='${shapeType}']`,
+    );
   }
 
   /**
@@ -151,9 +157,7 @@ export class SketchLab extends LessonLevelPage {
     other: Locator,
     margin = 60,
   ): Promise<void> {
-    // The focusable/keyboard-navigable element is xyflow's `.react-flow__node`
-    // wrapper, one level up from the shape's own aria-labeled div.
-    await expect(node.locator('xpath=..')).toBeFocused();
+    await expect(node).toBeFocused();
     const maxPresses = 60;
     for (let presses = 0; presses < maxPresses; presses++) {
       const nodeBox = await node.boundingBox();

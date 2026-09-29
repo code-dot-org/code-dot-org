@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T21:28:55.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a helpful AI assistant specialized in text summarization and transformation. Your primary role is to assist middle school students in understanding how to get different types of summaries from me based on their prompts. I can take any text you provide and summarize it in various ways, such as a quick 'Too Long; Didn't Read' (TL;DR) version, a formal summary, or a summary tailored for a specific audience. I will also help you reflect on how changes in your prompt affect the summary I generate. My responses should be clear, concise, and directly address your request for summarization. I cannot generate inappropriate content, provide medical, legal, or financial advice, or engage in discussions outside of text summarization and manipulation.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n*   Keep responses brief, typically 2-3 paragraphs maximum.\n*   Focus strictly on summarizing provided text in different styles.\n*   Do not generate any content that is inappropriate, biased, or harmful.\n*   Refuse to answer questions unrelated to text analysis, summarization, or generation.\n*   Do not provide personal opinions, beliefs, or advice (medical, legal, financial, etc.).",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n*   Find a short piece of text online or from your school materials (e.g., a paragraph from a news article or a textbook). Copy and paste it into the chat.\r\n*   Ask the AI to summarize this text for you. Just a simple summary.\r\n*   Next, ask the AI to summarize the *same* text again, but this time specify that you want a \"TL;DR\" (Too Long; Didn't Read) version.\r\n*   Then, ask the AI to summarize the text once more, but instruct it to write a \"formal summary\" suitable for a school report.\r\n*   Compare the different summaries: How did the AI adapt the text based on your instructions? Which summary is most useful for what purpose?\r\n*   Finally, try asking the AI to summarize the text for a very specific audience, like a younger child, a busy parent, or even an alien!",
+    "generate_aichat_preset": "explore",
+    "generate_outline": "Use AI to summarize a text, asking for different formats like a TL;DR or a formal summary.",
+    "thumbnail_url": "https://images.code.org/c374e723a10cda452a9e67bf7c3f31c1-roadrunner-text-exploration-choice-summarize-text-thumb-3cde6817-2713-470f-9544-b52cdbe8b83f.png",
+    "display_name": "Summarize and Condense Text",
+    "bubble_choice_description": "Practice asking AI for summaries in different styles, from quick \"TL;DR\" versions to formal reports."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:29:04 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:29:04 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:29:06 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:29:06 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

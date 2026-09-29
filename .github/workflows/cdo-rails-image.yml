@@ -132,7 +132,7 @@ jobs:
       # than with checkout's lfs: true: locales are the only LFS-tracked path
       # inside the slice, and everything else LFS holds is excluded anyway.
       - name: Fetch the LFS objects the source slice needs
-        run: git lfs pull --include='dashboard/config/locales/**'
+        run: ./docker/rails/ensure-locales.sh
 
       # podman reads ~/.docker/config.json as a credential fallback, so one
       # docker login serves both engines.
@@ -185,7 +185,7 @@ jobs:
       # than with checkout's lfs: true: locales are the only LFS-tracked path
       # inside the slice, and everything else LFS holds is excluded anyway.
       - name: Fetch the LFS objects the source slice needs
-        run: git lfs pull --include='dashboard/config/locales/**'
+        run: ./docker/rails/ensure-locales.sh
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
@@ -241,7 +241,7 @@ jobs:
       # than with checkout's lfs: true: locales are the only LFS-tracked path
       # inside the slice, and everything else LFS holds is excluded anyway.
       - name: Fetch the LFS objects the source slice needs
-        run: git lfs pull --include='dashboard/config/locales/**'
+        run: ./docker/rails/ensure-locales.sh
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
@@ -326,4 +326,3 @@ jobs:
           docker buildx imagetools create "${args[@]}" \
             "$IMAGE:git-${{ github.sha }}-amd64" \
             "$IMAGE:git-${{ github.sha }}-arm64"
-

@@ -16,9 +16,8 @@ Contents on top of cdo-base:
 It runs as the non-root `cdo` user with `BUNDLE_PATH=/usr/local/bundle`
 writable.
 
-Derived from the `build` stage of `k8s/docker/code-dot-org.dockerfile` on
-`feat/docker-thin`, with the same package set, rewritten for the dual-engine
-rules below.
+This is the canonical build toolchain for local containers and deployed image
+publishing. The dual-engine rules below keep Docker and Podman builds equal.
 
 ## Why it is its own image
 
@@ -34,13 +33,12 @@ the warm gem cache, and the builder has to sit below it.
 ## Not published
 
 Unlike cdo-base, this image is not pushed to a registry. It is materialized
-during a build and discarded, so downstream Dockerfiles take it as a build
-argument the way `k8s/docker/code-dot-org.dockerfile` already takes
-`CODE_DOT_ORG_CORE`:
+during a build and discarded, so cdo-deps takes it as the `BUILD_IMAGE` build
+argument:
 
 ```sh
 docker build -t cdo-build:local docker/build/
-docker build --build-arg CDO_BUILD=cdo-build:local ...
+docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=cdo-build:local ...
 ```
 
 The cost of not publishing is that a runner with no layer cache reinstalls

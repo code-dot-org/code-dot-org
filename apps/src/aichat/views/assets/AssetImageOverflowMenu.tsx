@@ -1,14 +1,14 @@
+import {useToast} from '@code-dot-org/component-library/toast';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
-import {uniqueFileName} from '@codebridge/utils';
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
-import {addChatEvent} from '@cdo/apps/aichat/redux';
-import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
-import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {saveImageToBackpack} from './saveImageToBackpack';
 
 import styles from './asset-image-overflow-menu.module.scss';
 
@@ -76,22 +76,18 @@ const AssetImageOverflowMenu: React.FC<AssetImageOverflowMenuProps> = ({
   filename,
   id,
 }) => {
-  const backpackContext = useBackpackAPIContext();
-  const backpackApi = backpackContext?.primaryApi;
-  const dispatch = useAppDispatch();
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const showToast = useToast();
+
+  const backpackApi = useMemo(() => {
+    // The backpack api redirects signed-out users to sign-in, so we only offer the
+    // save when we have a user.
+    return currentUserId
+      ? Lab2Registry.getInstance().getUnifiedBackpackApi()
+      : undefined;
+  }, [currentUserId]);
 
   const ext = extFromFilename(filename) || extFromUrl(url) || DEFAULT_EXT;
-
-  const showBackpackError = useCallback(() => {
-    dispatch(
-      addChatEvent({
-        removeId: getNewRemoveId(),
-        text: "Couldn't save image to your Backpack. Please try again.",
-        notificationType: 'error',
-        timestamp: Date.now(),
-      })
-    );
-  }, [dispatch]);
 
   const onCopy = useCallback(async () => {
     try {
@@ -121,17 +117,14 @@ const AssetImageOverflowMenu: React.FC<AssetImageOverflowMenuProps> = ({
   }, [url, ext]);
 
   const onSaveToBackpack = useCallback(
-    async (backpackApi: BackpackClientApi) => {
-      try {
-        const files = await backpackApi.getFileList();
-        const baseName = `${dateTimeName()}.${ext}`;
-        const targetName = uniqueFileName(baseName, files, '-');
-        await backpackApi.saveCodebridgeFileFromUrl(targetName, url);
-      } catch {
-        showBackpackError();
-      }
-    },
-    [url, ext, showBackpackError]
+    (api: UnifiedBackpackClientApi) =>
+      saveImageToBackpack({
+        backpackApi: api,
+        url,
+        fileName: `${dateTimeName()}.${ext}`,
+        showToast,
+      }),
+    [url, ext, showToast]
   );
 
   return (

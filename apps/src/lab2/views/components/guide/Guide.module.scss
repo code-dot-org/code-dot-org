@@ -57,6 +57,9 @@ $gap-height: 43px;
   line-height: 1.5;
   gap: 16px;
   container-type: inline-size;
+  // A width change (a lab narrowing the guide on one of its tabs) animates
+  // rather than jumps.
+  transition: width 0.45s ease;
 
   &NormalWidth {
     width: 40%;
@@ -69,6 +72,19 @@ $gap-height: 43px;
 
   &NarrowWidth {
     width: 20%;
+  }
+
+  // Collapsed: no content but the controls left showing, so the panel is
+  // only as big as they are. Declared after every width so it wins.
+  &Collapsed {
+    // inline-size containment sizes the box without looking at its contents,
+    // which makes an intrinsic width collapse to the padding; a collapsed
+    // guide has no container queries to serve.
+    container-type: normal;
+    width: max-content;
+    min-width: 0;
+    padding: 28px 12px 12px;
+    gap: 8px;
   }
 
   &NormalPosition {

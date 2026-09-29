@@ -1,0 +1,42 @@
+{
+  "name": "@code-dot-org/shared-constants",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Ruby shared constants (lib/cdo/shared_constants.rb), committed as generated TypeScript, for frontend packages that need them without Ruby.",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/shared-constants/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/shared-constants"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:"
+  }
+}

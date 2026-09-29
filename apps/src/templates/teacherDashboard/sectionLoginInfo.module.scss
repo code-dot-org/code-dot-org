@@ -1,0 +1,6 @@
+// The tag is part of the selector because Typography's emotion class outranks
+// a bare class.
+h2.heading {
+  margin-top: var(--spacing-p-m);
+  margin-bottom: var(--spacing-p-xxs);
+}

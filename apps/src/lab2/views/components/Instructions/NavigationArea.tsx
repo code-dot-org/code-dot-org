@@ -8,6 +8,7 @@ import {
   getLessonCount,
   getNextLevel,
   getParentLevel,
+  levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -93,35 +94,45 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     state => getNextLevel(state)?.id !== undefined
   );
 
+  // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
+  // only has one lesson. It's just 'Finish'!
+  const lessonCount = useAppSelector(state => getLessonCount(state));
+
   // Construct the button text.
   // For when we would go to another level, say 'Continue to Level {x}'
   // For when we would actually just go back to the same level (parent for a sublevel) just say 'Continue'
   // For when we are already at the end of a lesson, say 'Finish Lesson'
   const text = useAppSelector(state => {
-    const currentLevelNumber =
-      getParentLevel(state)?.levelNumber || getCurrentLevel(state)?.levelNumber;
-    const nextLevelNumber = getNextLevel(state)?.levelNumber;
-
-    return hasNextLevel
-      ? // Determine if the next level is not the same as the current level so
-        // as to craft the 'Continue to Level X' button text
-        // Otherise we're going to the parent perhaps, so we just say 'Continue'
-        currentLevelNumber !== nextLevelNumber
-        ? commonI18n.continueToLevel({level: nextLevelNumber})
-        : commonI18n.continue()
-      : lessonCount > 1
-      ? // If there's no level after this one, print 'Finish Lesson' or 'Finish'
-        // depending on if there is another lesson in the unit
-        commonI18n.finishLesson()
-      : commonI18n.finish();
+    // If there's no level after this one, print 'Finish Lesson' or 'Finish'
+    // depending on if there is another lesson in the unit
+    if (!hasNextLevel) {
+      return lessonCount > 1 ? commonI18n.finishLesson() : commonI18n.finish();
+    }
+    const nextLevel = getNextLevel(state);
+    const parentLevel = getParentLevel(state);
+    // Just say 'Continue' if we're going back to the parent.
+    if (parentLevel && nextLevel.id === parentLevel.id) {
+      return commonI18n.continue();
+    }
+    let nextLevelNumber = nextLevel.levelNumber;
+    if (nextLevel.parentLevelId) {
+      const nextLevelParent = levelById(
+        state.progress,
+        state.progress.currentLessonId,
+        nextLevel.parentLevelId
+      );
+      // If the next level parent can't be found for some reason, just 'Continue'.
+      if (!nextLevelParent) {
+        return commonI18n.continue();
+      }
+      nextLevelNumber = nextLevelParent.levelNumber;
+    }
+    return commonI18n.continueToLevel({level: nextLevelNumber});
   });
 
   // This supplies "simpler" text for the 'simple' text variant of the buttons
   const simpleText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
-  // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
-  // only has one lesson. It's just 'Finish'!
-  const lessonCount = useAppSelector(state => getLessonCount(state));
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
   const isAiTutorVersion = useAppSelector(

@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-11T22:37:02.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "## What broke\r\n\r\n> Something almost always breaks the first time. What error did you run into while testing, and what did you change to fix it?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "50",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11T22:37:02.656+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson30_day1-reflection1_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson30_day1-reflection1_27_28\"},{\"changed_at\":\"2026-09-11 22:37:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 22:50:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 22:50:39 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

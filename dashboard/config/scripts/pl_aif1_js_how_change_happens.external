@@ -17,13 +17,13 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/72fa4c8440257c2397bfb9ebf4ed03cf-image-1786127978245.png" alt="A diagram showing a webpage next to its DOM tree. The webpage has a header with a logo and Home, About, Contact links, and a main content area with a heading, Learn about the world of coding, a paragraph of placeholder text, an image, a name input field, and a Submit button. The DOM tree branches from Document into Header and Main Content. Header branches into Title and Navigation. Main Content branches into Heading, Paragraph, Image, and Button." style="max-width: 750px; width: 100%; border-radius: 10px;">
 </div>
 
-
-
-
-
 <h2>Why Page Structure Matters</h2>
 
 <p>The parts of a page aren't just about looks. They help users navigate. Screen readers use the structure of a page to move around it, a heading acts as a landmark telling a user where they are on the page, the same way it would for someone visually scanning down the screen.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Screen reader</b> is software that reads a webpage's content aloud, or converts it to braille, letting someone navigate and understand a page without seeing it.</p>
+</div>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
 <p><strong>💡 Teacher tip:</strong> this is the same idea from Robust in the POUR principles, a page has to work with assistive technology, not just with a mouse. Structure isn't just a coding convention, it's part of what makes a page usable at all.</p>
@@ -31,5 +31,5 @@ markdown <<MARKDOWN
 
 <p>Next, you'll see exactly what happens the moment a user acts on one of these elements, and how that change actually reaches the screen.</p>
 
-![]()
+
 MARKDOWN

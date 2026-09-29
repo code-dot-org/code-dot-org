@@ -1,3 +1,5 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
 div.skeleton {
   display: block;
   width: 250px;
@@ -23,4 +25,15 @@ div .v1SkeletonDropdown {
   padding-left: 5px;
   padding-right: 5px;
   width: 300px;
+}
+
+// Matches SimpleDropdown's own label at size="s" and color="gray"
+// (.dropdownContainer-s .dropdownLabel), so the label rendered beside the
+// loading skeleton is the same height as the one the dropdown renders once
+// the course list arrives.
+.loadingLabel {
+  @include mixins.label-three;
+  display: block;
+  margin-bottom: 0;
+  color: var(--text-neutral-primary);
 }

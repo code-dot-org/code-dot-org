@@ -1,6 +1,4 @@
-import {useEffect, useMemo, useState, type ReactNode} from 'react';
-
-import {localization} from '@code-dot-org/core/plugins/localization';
+import {useMemo, useState, type ReactNode} from 'react';
 
 import {Markdown, extensions} from '../src';
 
@@ -111,62 +109,6 @@ const ExpandableImagesScenario = () => {
   );
 };
 
-/*
- * Localization runs against the core localization plugin, which is inactive
- * unless LocalizeJS is loaded. This patches the singleton to simulate a loaded
- * translator that uppercases text, so you can see translation happen — inline
- * code is renamed for translation and restored.
- * Patching is in an effect (and a 'change' event re-renders), restored on
- * unmount. (@testing-library's render flushes effects, so the visual screenshot
- * captures the translated result deterministically.)
- */
-const LocalizedScenario = () => {
-  useEffect(() => {
-    const patchable = localization as unknown as {
-      isLocalizeJS: () => boolean;
-      translate: (element: unknown) => unknown;
-    };
-    const original = {
-      isLocalizeJS: patchable.isLocalizeJS,
-      translate: patchable.translate,
-    };
-    patchable.isLocalizeJS = () => true;
-    patchable.translate = element => {
-      if (element && typeof element === 'object' && 'childNodes' in element) {
-        const walk = (node: Node) => {
-          if (node.nodeType === 3) {
-            node.textContent = (node.textContent ?? '').toUpperCase();
-          }
-          node.childNodes.forEach(walk);
-        };
-        walk(element as Node);
-      }
-      return element;
-    };
-    localization.emit('change', {
-      locale: localization.locale,
-      rtl: localization.rtl,
-    });
-    return () => {
-      Object.assign(localization, original);
-      localization.emit('change', {
-        locale: localization.locale,
-        rtl: localization.rtl,
-      });
-    };
-  }, []);
-
-  return (
-    <Markdown
-      content={
-        'Press `x` then read the ' +
-        '`print` block. Text is uppercased by the simulated translator; the ' +
-        'inline code elements are preserved.'
-      }
-    />
-  );
-};
-
 export const scenarios: Scenario[] = [
   {
     id: 'basic',
@@ -178,6 +120,8 @@ export const scenarios: Scenario[] = [
           'A paragraph with **bold**, *italic*, `inline code`, and a ' +
           '[link to code.org](https://code.org).\n\n' +
           '- list item one\n- list item two\n\n' +
+          '- a loose item, whose first paragraph\n\n' +
+          '  is followed by a second one\n\n' +
           '| Feature | Supported |\n| ------- | --------- |\n' +
           '| Tables  | yes       |\n| Links   | yes       |\n'
         }
@@ -282,10 +226,5 @@ export const scenarios: Scenario[] = [
     id: 'expandable-images',
     name: 'Expandable images',
     render: () => <ExpandableImagesScenario />,
-  },
-  {
-    id: 'localized',
-    name: 'Localized (simulated)',
-    render: () => <LocalizedScenario />,
   },
 ];

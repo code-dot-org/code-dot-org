@@ -5,7 +5,7 @@ import {
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {smallProject} from './test-files';
 
@@ -53,7 +53,7 @@ export const getDialogAlertMock = (
 export const getDialogConfirmationMock = (
   type: 'confirm' | 'neutral' | 'cancel'
 ): Pick<DialogControlInterface, 'showDialog'> => ({
-  showDialog: () => {
+  showDialog: jest.fn(() => {
     if (type === 'confirm') {
       return Promise.resolve({type: 'confirm'});
     } else if (type === 'neutral') {
@@ -61,7 +61,7 @@ export const getDialogConfirmationMock = (
     } else {
       return Promise.resolve({type: 'cancel'});
     }
-  },
+  }),
 });
 
 type AnalyticsDataType = {event: string};
@@ -114,42 +114,35 @@ export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
   } as unknown as Element);
 };
 
-export const getBackpackAPIMock = (
-  fileList: string[] = [],
-  headerValue: string = 'text/plain'
-): BackpackClientApi => {
+export const getUnifiedBackpackAPIMock = (
+  fileLists: {[appType: string]: string[]} = {}
+): UnifiedBackpackClientApi => {
   return {
+    channelId: 'universal_channel_id',
+    channelIdsByAppType: Object.fromEntries(
+      Object.keys(fileLists).map(appType => [appType, `${appType}_channel_id`])
+    ),
     hasBackpack: jest.fn(() => true),
-    fetchChannelId: jest.fn(callback => callback()),
-    fetchFile: jest.fn((filename, onError, onSuccess) => {
+    fetchChannels: jest.fn(async () => {}),
+    getFileLists: jest.fn(async () => fileLists),
+    getClientForAppType: jest.fn(),
+    fetchFile: jest.fn((appType, filename, onError, onSuccess) => {
       onSuccess(`Mock contents of backpack file ${filename}`);
     }),
-    fetchFileResponse: jest.fn(async (filename: string) => {
-      return Promise.resolve({
-        headers: {
-          get: jest.fn().mockReturnValue(headerValue),
-        },
-        text: async () => {
-          return Promise.resolve(`Mock contents of backpack file ${filename}`);
-        },
-        blob: async () => {
-          return new Blob([`Mock contents of backpack file ${filename}`], {
-            type: headerValue,
-          });
-        },
-      });
-    }),
-    getFileList: jest.fn((onError, onSuccess) => {
-      onSuccess(fileList);
-    }),
-    saveFiles: jest.fn(),
-    saveCodebridgeFile: jest.fn(),
-    deleteFiles: jest.fn(),
-    updateFilesHelper: jest.fn(),
-    saveFilesHelper: jest.fn(),
-    writeSingleFileToBackpack: jest.fn(),
-    deleteFilesHelper: jest.fn(),
-    deleteSingleFileFromBackpack: jest.fn(),
-    onRequestComplete: jest.fn(),
-  } as unknown as BackpackClientApi;
+    fetchFileResponse: jest.fn(),
+    getFileFetchUrl: jest.fn(),
+    saveFile: jest.fn(async (filename, contents, onError, onSuccess) =>
+      onSuccess?.()
+    ),
+    saveFileFromUrl: jest.fn(async (filename, url, onError, onSuccess) =>
+      onSuccess?.()
+    ),
+    saveBlobFile: jest.fn(),
+    deleteFiles: jest.fn(async (appType, filenames, onError, onSuccess) =>
+      onSuccess()
+    ),
+    deleteFromLegacyBackpacks: jest.fn(async () => {}),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+  } as unknown as UnifiedBackpackClientApi;
 };

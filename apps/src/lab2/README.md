@@ -48,6 +48,7 @@ Currently, the following level apps are built for **Lab2**:
 
 - [AI Chat](../aichat/)
 - [BubbleChoice](../bubbleChoice)
+- [Adaptive](../adaptive/)
 - [Music](../music/)
 - [Panels](../panels/)
 - [Python Lab](../pythonlab)

@@ -35,9 +35,25 @@ MAX_GIF_BYTES = 31457280
 # minutes before its last note pays for the whole five minutes.
 MAX_AUDIO_SECONDS = 300
 
+# Text height bounds in pixels.
+MIN_TEXT_HEIGHT = 1
+MAX_TEXT_HEIGHT = 4 * THEATER_HEIGHT
+
+# Ceiling on the bitmap one draw_text call needs, in pixels (32 Mi, one byte
+# each). Pillow renders the whole string into one bitmap and only then clips it
+# to the stage, so the cost follows the text's full extent rather than the part
+# that shows. Estimated as len(text) * height^2, which overstates it, since
+# glyphs are narrower than they are tall.
+MAX_TEXT_PIXELS = 33554432
+
 # Pixel ceiling for a single image, blank or loaded (4096x4096, or 64 MB of
 # RGBA).
 MAX_IMAGE_PIXELS = 16777216
+
+# Largest width or height draw_image() will scale an image to. The scaled copy
+# is built in full before it is pasted, so this bounds that copy at 4000x4000
+# of RGBA, just under MAX_IMAGE_PIXELS.
+MAX_DRAW_IMAGE_SIZE = 4000
 
 # Frame ceiling, counting the closing frame. Pillow holds a palette copy of
 # every frame while encoding, ~160 KB each, so this bounds the worker's heap

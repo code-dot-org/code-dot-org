@@ -38,7 +38,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def decide(fever, cough):\n    if fever:\n        if cough:\n            return \"Visit clinic\"\n        else:\n            return \"Get rest\"\n    else:\n        if cough:\n            return \"Take cough medicine\"\n        else:\n            return \"Hydrate\"\n\n\ndef main():\n    fever = False\n    cough = True\n    decision = decide(fever, cough)\n    print(f\"You might need to: {decision}\")\n\n\nmain()\n",
+          "contents": "def decide(fever, cough):\n  if fever:\n    if cough:\n      return \"Visit clinic\"\n    else:\n      return \"Get rest\"\n  else:\n    if cough:\n      return \"Take cough medicine\"\n    else:\n      return \"Hydrate\"\n\n\ndef main():\n  fever = False\n  cough = True\n  decision = decide(fever, cough)\n  print(f\"You might need to: {decision}\")\n\n\nmain()\n",
           "folderId": "0",
           "active": true
         }
@@ -51,6 +51,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 20:45:06 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:45:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:46:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:45:06 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:45:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:46:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:19:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

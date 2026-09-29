@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-31 16:38:23 UTC",
+    "serialized_at": "2026-08-28 18:54:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -12118,10 +12118,11 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1NIfCsefss-p6bOG13nYRIJWC0i99PguRxcH9uD89MT8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Lh_JRoqR_BKowqRAMLh9v9nTwdoxXJxOlYX6ubx8z0w/",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -14537,6 +14538,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

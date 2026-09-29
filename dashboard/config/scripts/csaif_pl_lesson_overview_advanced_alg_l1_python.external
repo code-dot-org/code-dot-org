@@ -3,33 +3,43 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 4: Advanced Algorithms
- 
-In this lesson, you will explore key programming concepts that help control the flow of a program: while loops, if statements, and nested/two-way selection. This lesson aligns with **Lessons 8-12 of the Foundations of AI Programming** curriculum.
-
-Through interactive coding in Code.org’s Neighborhood IDE, you will learn how to break down problems using flowcharts and implement solutions with structured code.
-
-
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
-
-  <div>
-    <p>By the end of this lesson, you will:</p>
-    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Understand the role of flowcharts in algorithm design.
-</li> <br>
-    <li> Apply conditional logic using if statements and nested/ two-way selection.
-</li><br>
-        <li> Use while loops to execute repeated actions efficiently.
-</li><br>
-<li>Practice coding and debugging through a predict, investigate/modify, practice approach.</li>
-    </ul>
-  </div>
-  <div>
-    <img src="https://images.code.org/92c282f4c7fe4e4d0cbf069ee8dc6ba3-image-1741620695715.png" 
-         alt="Icon of Python logo on a computer" 
-         style="border-radius: 10px; width: 300px; height: auto;">
-  </div>
+<h1>Lesson 4: Advanced Algorithms</h1>
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 8-12</div>
+<p>This module offers a brief overview of the key concepts and teaching strategies in each lesson, it isn't a replacement for reviewing each lesson in full before you teach it. Take your time with the individual lesson plans for a deeper dive.</p>
+<p>This lesson prepares you to teach five curriculum lessons:</p>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 8:</b> Introduction to Loops</p>
+<a href="[LESSON 8 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 8</a>
 </div>
-
-**Suggested time:** 30 minutes 
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 9:</b> Conditional Statements</p>
+<a href="[LESSON 9 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 9</a>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 10:</b> Algorithms IRL</p>
+<a href="[LESSON 10 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 10</a>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 11:</b> Decomposition</p>
+<a href="[LESSON 11 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 11</a>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 12:</b> Two-Way Selection</p>
+<a href="[LESSON 12 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 12</a>
+</div>
+<hr>
+<p><b>By the end of this lesson, you'll:</b></p>
+<p style="margin: 0 0 6px 0;">• Explore how while loops repeat instructions while a condition remains true</p>
+<p style="margin: 0 0 6px 0;">• See how if and if/else statements let a program make decisions between one or two outcomes</p>
+<p style="margin: 0 0 6px 0;">• Practice breaking down problems using flowcharts before implementing them in code</p>
+<p style="margin: 0;">• Preview how algorithms show up in real-world contexts, including where fairness and bias can enter algorithmic decisions</p>
+<p style="margin: 16px 0 0 0;"><i>Suggested time: 25 minutes</i></p>
+<hr>
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 1</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 2</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 3</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 4</div>
+  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Lesson 5</div>
+</div>
 MARKDOWN

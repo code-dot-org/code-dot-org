@@ -10,11 +10,6 @@ export interface Evaluation {
   codeVersion?: string;
 }
 
-export interface UserLevelSkillEvaluation extends Evaluation {
-  type: 'UserLevelSkillEvaluation';
-  skillId: number;
-}
-
 export interface UserLevelEvaluation extends Evaluation {
   type: 'UserLevelEvaluation';
 }

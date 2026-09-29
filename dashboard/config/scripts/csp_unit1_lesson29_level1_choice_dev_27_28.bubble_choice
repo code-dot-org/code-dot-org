@@ -1,0 +1,10 @@
+name 'csp_unit1_lesson29_level1_choice_dev_27_28'
+display_name 'Make: Random Effects'
+description 'level description here'
+
+sublevels
+level 'csp_unit1_lesson29_level1_dev_27_28'
+level 'csp_unit1_lesson29_level2_dev_27_28'
+level 'csp_unit1_lesson29_level3_dev_27_28'
+
+uses_lab2

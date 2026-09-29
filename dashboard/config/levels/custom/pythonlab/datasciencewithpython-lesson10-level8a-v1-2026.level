@@ -1,0 +1,58 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-24T00:31:12.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Hurricane Maria\r\n\r\nAnalyze sea-surface temperatures recorded during Hurricane Maria.\r\n\r\n1. Run the starter code and review the dataset information and statistics.\r\n2. Use `min()`, `max()`, and `sum()` to calculate statistics for `ANALYSED_SST`.\r\n3. Group the data by `DATETIME` and use `agg()` to calculate the total, average, minimum, and maximum temperatures for each date.\r\n4. Discuss the trends or anomalies you notice and form a hypothesis about what may have influenced them.\r\n\r\n:::: details [Need Help?]\r\n\r\nAsk AI Tutor for an example, documentation, or an explanation of the code or output. Use its guidance to complete the work yourself.\r\n\r\n::::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndata = pd.read_csv('Hurricane_Maria.csv')\n\n# Remove placeholder values that do not represent temperatures\ndata = data[data['ANALYSED_SST'] > -100]\n\ndata.info()\nprint(data.describe())\n\n# Add your analysis below",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Hurricane Maria",
+    "bubble_choice_description": "Practice using pandas functions to identify key temperature statistics and uncover initial insights.",
+    "thumbnail_url": "https://images.code.org/6e7efa33cd1b673c12742673565104db-hurricane.png",
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Students practice using the min() and max() functions to identify key temperature extremes in the dataset.\r\n- Students learn how to apply the sum() function to calculate total sea surface temperatures, helping them understand cumulative changes.\r\n- Students reinforce their skills in using the agg() function combined with groupby() to summarize data, providing insights into overall trends.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that only one statistic (e.g., mean) is important, neglecting the significance of other statistics.\r\n  - Tip: Encourage students to consider how each statistic offers a different perspective. For instance, the mean shows overall trends, while min and max highlight extremes.\r\n- Students may have difficulty interpreting how temperature changes relate to the progression of the hurricane.\r\n  - Tip: Guide students to think about how rising or falling temperatures could indicate changes in the hurricane's intensity. Use guiding questions to help them connect the data to real-world events.",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-24T00:31:12.358+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L8a_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L9-L8a_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-24 00:34:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 00:35:45 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 00:35:50 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 00:36:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 00:36:49 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

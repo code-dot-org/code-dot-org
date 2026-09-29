@@ -233,14 +233,8 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
-      trait :with_recent_captcha do
-        last_verified_captcha_at {Time.now.utc}
-      end
       factory :terms_of_service_teacher do
         with_terms_of_service
-      end
-      factory :with_recent_captcha_teacher do
-        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|
@@ -721,6 +715,26 @@ FactoryBot.define do
       end
     end
 
+    trait :with_classlink_authentication_option do
+      after(:create) do |user, evaluator|
+        create(
+          :authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLASSLINK,
+          # v1 id: ClassLink's internal UserId, a plain integer string. Still
+          # issued to districts without OneRoster, so this is a current format.
+          authentication_id: rand(10_000_000..99_999_999).to_s,
+          version: evaluator.auth_option_version,
+          data: {
+            oauth_token: 'some-classlink-token'
+          }.to_json
+        )
+        user.reload
+      end
+    end
+
     trait :with_lti_authentication_option do
       after(:create) do |user|
         create(:lti_authentication_option, user: user)
@@ -1091,6 +1105,17 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :quiz, parent: :level, class: Quiz do
+    game {Game.quiz}
+    level_num {'custom'}
+  end
+
+  factory :adaptive, parent: :level, class: Adaptive do
+    game {Game.adaptive}
+    level_num {'custom'}
+    adaptive_id {'sample'}
+  end
+
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do
@@ -1150,18 +1175,6 @@ FactoryBot.define do
     script
     level
     level_source {create(:level_source, level: level)}
-  end
-
-  factory :skill do
-    sequence(:key) {|n| "skill-#{n}}"}
-    description {"Declares variables with conventional names"}
-    concept {"Variables"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-  end
-
-  factory :levels_skill do
-    association :level
-    association :skill
   end
 
   factory :unit, aliases: [:script] do
@@ -1484,6 +1497,12 @@ FactoryBot.define do
     asset_type {'whiteboard_image'}
   end
 
+  factory :challenge_response_reaction do
+    association :challenge_response
+    association :user, factory: :student
+    emoji {'heart'}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective
@@ -1634,6 +1653,21 @@ FactoryBot.define do
   factory :user_level do
     user {create(:student)}
     level {create(:applab)}
+  end
+
+  factory :anonymous_level_progress, class: 'AnonymousLevel::Progress' do
+    association :script
+    association :level, factory: :applab
+
+    anon_user_id {Cdo::AnonUserId.generate}
+  end
+
+  factory :anonymous_level_geo, class: 'AnonymousLevel::Geo' do
+    anon_user_id {Cdo::AnonUserId.generate}
+    country {Faker::Address.unique.country}
+    state {Faker::Address.unique.state}
+    city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
   end
 
   factory :user_script do
@@ -2336,16 +2370,6 @@ FactoryBot.define do
     student_work_evaluation_summary_id {1}
   end
 
-  factory :user_level_skill_evaluation do
-    association :student, factory: :student
-    association :level
-    association :unit
-    evaluator {"AI"}
-    evaluation {"Great"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-    reasoning {"The student's work demonstrated the skill."}
-  end
-
   factory :user_level_evaluation do
     association :student, factory: :student
     association :level
@@ -2485,5 +2509,50 @@ FactoryBot.define do
     expires_at {1.day.from_now}
     read_at {nil}
     is_dismissed {false}
+  end
+
+  factory :quiz_question do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Question #{n}"}
+    content {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
+  end
+
+  factory :multiple_choice_question, class: MultipleChoiceQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Multiple choice question #{n}"}
+    content do
+      {
+        stem: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],
+        correct_choice_id: 'b'
+      }
+    end
+  end
+
+  factory :quiz_question_standard do
+    quiz_question
+    standard
+  end
+
+  factory :quiz_question_placement do
+    level factory: :quiz
+    quiz_question
+    page {1}
+    sequence(:position)
+  end
+
+  factory :quiz_attempt do
+    user
+    level factory: :quiz
+    unit
+    attempt_number {1}
+    started_at {Time.now}
+  end
+
+  factory :quiz_question_response do
+    quiz_attempt
+    quiz_question
+    response_data {{selected: ['4']}}
+    grading_status {QuizQuestionResponse::GRADING_STATUSES.first}
   end
 end

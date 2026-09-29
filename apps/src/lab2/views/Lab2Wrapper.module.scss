@@ -51,6 +51,17 @@
     z-index: 80;
   }
 
+  // Position the toast container at the top of the lab container.
+  > .labToast {
+    position: absolute;
+    top: 8px;
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
+  }
+
   .blockedProjectUIContainerProjectValidator {
     position: absolute;
     display: flex;

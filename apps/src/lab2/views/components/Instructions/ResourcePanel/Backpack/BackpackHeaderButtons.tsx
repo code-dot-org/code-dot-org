@@ -17,7 +17,6 @@ const BackpackHeaderButtons: React.FC<BackpackHeaderButtonsProps> = ({
       variant="text"
       color="tertiary"
       size="extraSmall"
-      tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
       icon={{iconName: 'refresh', iconStyle: 'solid'}}

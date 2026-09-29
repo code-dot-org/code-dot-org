@@ -1,0 +1,12 @@
+name 'foundations-of-ai-programming-js-lesson10-level3_aif-6b-2026'
+display_name 'Implement Your Feature'
+description 'Choose the same scenario to convert your flowchart to code.'
+
+sublevels
+level 'foundations-of-ai-programming-js-lesson10-level3a_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson10-level3b_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson10-level3c_aif-6b-2026'
+level 'foundations-of-ai-programming-js-lesson10-level3d_aif-6b-2026'
+
+uses_lab2
+navigation_type 'next_level'

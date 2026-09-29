@@ -1,9 +1,9 @@
+import {ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React, {FC, useState} from 'react';
+import React, {FC, useRef, useState} from 'react';
 
 import WhiteboardChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/WhiteboardChallenge';
-import {ExplanationTypes} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -27,35 +27,63 @@ jest.mock(
   })
 );
 
-// React Flow does not render in jsdom. The stub exposes a button that
-// reports one node through updateSources, simulating the student drawing.
+// React Flow does not render in jsdom. The stub exposes a button that reports
+// one node through updateSources (simulating the student drawing), mirrors the
+// real toolbar by rendering an "Add image" button only when uploads are
+// allowed, and renders each seeded image node as an <img> so tests can assert
+// the starter image via its alt text.
 jest.mock('@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas', () => {
   const React = require('react');
   return {
     __esModule: true,
     default: (props: {
       updateSources: (sources: ReactFlowSketchLabSources) => void;
+      allowImageUpload?: boolean;
+      initialNodes: {
+        type: string;
+        data: {src?: string; altText?: string; locked?: boolean};
+      }[];
     }) =>
       React.createElement(
-        'button',
-        {
-          type: 'button',
-          onClick: () =>
-            props.updateSources({
-              source: {nodes: [{id: 'n1'}], edges: []},
-            } as unknown as ReactFlowSketchLabSources),
-        },
-        'Draw something'
+        'div',
+        null,
+        React.createElement(
+          'button',
+          {
+            type: 'button',
+            onClick: () =>
+              props.updateSources({
+                source: {nodes: [{id: 'n1'}], edges: []},
+              } as unknown as ReactFlowSketchLabSources),
+          },
+          'Draw something'
+        ),
+        props.allowImageUpload &&
+          React.createElement('button', {type: 'button'}, 'Add image'),
+        props.initialNodes
+          .filter(node => node.type === 'image')
+          .map((node, index) =>
+            React.createElement('img', {
+              key: index,
+              alt: node.data.altText,
+              src: node.data.src,
+              'data-locked': String(node.data.locked),
+            })
+          )
       ),
   };
 });
+
+// Referenced from inside jest.mock() below, so named with the "mock" prefix
+// babel-plugin-jest-hoist requires for out-of-scope variables.
+const mockRecordedAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
 
 // AudioRecorder relies on MediaRecorder and getUserMedia, unavailable in
 // jsdom. The stub mirrors VideoRecorder's test double: two buttons drive the
 // same callbacks the real recorder's state machine would fire.
 // - "Start Recording" signals recording-in-progress via onIsRecordingChange(true)
 // - "Stop Recording" fires the same sequence as the real onstop handler:
-//   setRecordedUrl, onRecordingChange(true), onIsRecordingChange(false)
+//   setRecordedBlob, onRecordingChange(true), onIsRecordingChange(false)
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/AudioRecorder',
   () => {
@@ -65,7 +93,7 @@ jest.mock(
       default: (props: {
         onRecordingChange: (hasRecording: boolean) => void;
         onIsRecordingChange?: (isRecording: boolean) => void;
-        setRecordedUrl: (url: string | null) => void;
+        setRecordedBlob: (blob: Blob | null) => void;
         disabled?: boolean;
       }) =>
         React.createElement(
@@ -86,7 +114,7 @@ jest.mock(
               type: 'button',
               disabled: props.disabled,
               onClick: () => {
-                props.setRecordedUrl('blob:fake-recording');
+                props.setRecordedBlob(mockRecordedAudioBlob);
                 props.onRecordingChange(true);
                 props.onIsRecordingChange?.(false);
               },
@@ -103,7 +131,6 @@ const put = HttpClient.put as jest.Mock;
 const snapshot = createSketchSnapshotBlob as jest.Mock;
 
 const fakeBlob = new Blob(['png-bytes'], {type: 'image/png'});
-const fakeAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
 const createdResponse = {
   id: 7,
   assets: [{id: 9, asset_type: 'whiteboard_image'}],
@@ -119,28 +146,55 @@ const Harness: FC<{
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
   explanationType: string | null;
   textExplanation?: string;
+  starterImageUrl?: string | null;
+  starterImageAltText?: string | null;
 }> = ({
   challengeId,
   submitted,
   submitCallback,
   explanationType,
   textExplanation = '',
+  starterImageUrl = null,
+  starterImageAltText = null,
 }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [hasRecording, setHasRecording] = useState(false);
+  const [, setEvaluationStatus] = useState('');
+  const [, setChallengeResponseId] = useState(0);
+  // Submit now lives in ChallengeBox's top bar; the harness stands in for it,
+  // holding the submit ref and reflecting submittability on a "Submit" button.
+  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const resetRef = useRef<(() => void) | null>(null);
+  const [canSubmit, setCanSubmit] = useState(false);
   return (
-    <WhiteboardChallenge
-      challengeId={challengeId}
-      submitted={submitted}
-      submitCallback={submitCallback}
-      isRecording={isRecording}
-      setIsRecording={setIsRecording}
-      hasRecording={hasRecording}
-      setHasRecording={setHasRecording}
-      explanationType={explanationType}
-      lessonId={1}
-      textExplanation={textExplanation}
-    />
+    <>
+      <WhiteboardChallenge
+        challengeId={challengeId}
+        starterImageUrl={starterImageUrl}
+        starterImageAltText={starterImageAltText}
+        submitted={submitted}
+        submitCallback={submitCallback}
+        isRecording={isRecording}
+        setIsRecording={setIsRecording}
+        hasRecording={hasRecording}
+        setHasRecording={setHasRecording}
+        explanationType={explanationType}
+        lessonId={1}
+        textExplanation={textExplanation}
+        setEvaluationStatus={setEvaluationStatus}
+        setChallengeResponseId={setChallengeResponseId}
+        onSubmittableChange={setCanSubmit}
+        submitRef={submitRef}
+        resetRef={resetRef}
+      />
+      <button
+        type="button"
+        disabled={!canSubmit}
+        onClick={() => submitRef.current?.()}
+      >
+        Submit
+      </button>
+    </>
   );
 };
 
@@ -161,7 +215,7 @@ describe('WhiteboardChallenge', () => {
     mockTranscribeAudio.mockReset();
     mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
     originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
-    fetchMock = jest.fn().mockResolvedValue({blob: async () => fakeAudioBlob});
+    fetchMock = jest.fn();
     (globalThis as unknown as {fetch?: jest.Mock}).fetch = fetchMock;
   });
 
@@ -175,7 +229,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={jest.fn()}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
@@ -186,13 +241,108 @@ describe('WhiteboardChallenge', () => {
     expect(submitButton).toBeEnabled();
   });
 
+  it('disables submit until an explanation modality has been chosen', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={null}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    // A drawing alone isn't enough; ChallengeBox hasn't set an explanation
+    // modality (audio or text) yet.
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+  });
+
+  it('disables submit in audio mode until there is a recording', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={ExplanationTypes.AUDIO}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+
+    recordAudio();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+  });
+
+  it('hides the image upload tool from the canvas', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={null}
+      />
+    );
+
+    expect(
+      screen.queryByRole('button', {name: 'Add image'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('seeds the canvas with the starter image as a locked node', async () => {
+    // jsdom never fires <img> load events, so stub Image to resolve
+    // measureImage synchronously with a fixed natural size.
+    const originalImage = globalThis.Image;
+    class FakeImage {
+      naturalWidth = 100;
+      naturalHeight = 50;
+      onload: (() => void) | null = null;
+      onerror: (() => void) | null = null;
+      set src(_value: string) {
+        this.onload?.();
+      }
+    }
+    (globalThis as unknown as {Image: unknown}).Image = FakeImage;
+
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      blob: async () => new Blob(['png-bytes'], {type: 'image/png'}),
+    });
+
+    try {
+      render(
+        <Harness
+          challengeId={5}
+          submitted={false}
+          submitCallback={jest.fn()}
+          explanationType={null}
+          starterImageUrl="/challenges/5/starter_image"
+          starterImageAltText="a blank grid"
+        />
+      );
+
+      expect(fetchMock).toHaveBeenCalledWith('/challenges/5/starter_image', {
+        credentials: 'same-origin',
+      });
+
+      const starterImage = await screen.findByAltText('a blank grid');
+      // Locked so the student draws over the prompt, not moves/deletes it.
+      expect(starterImage).toHaveAttribute('data-locked', 'true');
+      // Inlined as a data URL so the submission snapshot captures it.
+      expect(starterImage.getAttribute('src')).toMatch(/^data:/);
+    } finally {
+      globalThis.Image = originalImage;
+    }
+  });
+
   it('disables submit while the challenge is still loading', () => {
     render(
       <Harness
         challengeId={null}
         submitted={false}
         submitCallback={jest.fn()}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
@@ -211,7 +361,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={submitCallback}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation=""
       />
     );
 
@@ -227,7 +378,7 @@ describe('WhiteboardChallenge', () => {
         is_final: true,
         assets: [{asset_type: 'whiteboard_image'}],
         transcript: null,
-        student_text: null,
+        student_text: '',
       }),
       true,
       {'Content-Type': 'application/json'}
@@ -255,7 +406,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={submitCallback}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
@@ -329,8 +481,7 @@ describe('WhiteboardChallenge', () => {
 
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
-    expect(fetchMock).toHaveBeenCalledWith('blob:fake-recording');
-    expect(mockTranscribeAudio).toHaveBeenCalledWith(fakeAudioBlob);
+    expect(mockTranscribeAudio).toHaveBeenCalledWith(mockRecordedAudioBlob);
     expect(post).toHaveBeenCalledWith(
       '/challenge_responses',
       JSON.stringify({

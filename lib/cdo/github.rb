@@ -2,6 +2,7 @@ require 'net/http'
 require 'octokit'
 
 require_relative '../../deployment'
+require 'observability/errors'
 
 # This module serves as a thin wrapper around Octokit, itself a wrapper around
 # the GitHub API.
@@ -369,7 +370,7 @@ module GitHub
   # open PRs against staging, that would leave most of them stuck on a stale
   # DTS status until the next open/close flip.
   private_class_method def self.notify_dts_status_failure(pull, exception)
-    Honeybadger.notify(
+    Observability::Errors.report(
       exception,
       error_message: "Unable to set DTS status for PR ##{pull['number']}: #{exception.message.to_s.strip}"
     )

@@ -1,0 +1,14 @@
+name 'amanda2-program-flow-check'
+title 'TODO: title'
+description ''
+question 'Given a simple Python program using `input()` and `print()`, what is the predicted output when a user provides specific input?'
+right 'The program\'s greeting with the user\'s input.'
+wrong 'Only the prompt message for the input.'
+wrong 'The variable name instead of the user\'s input.'
+wrong 'An error message due to incorrect syntax.'
+
+markdown <<MARKDOWN
+Given a simple Python program using `input()` and `print()`, what is the predicted output when a user provides specific input?
+MARKDOWN
+
+allow_multiple_attempts true

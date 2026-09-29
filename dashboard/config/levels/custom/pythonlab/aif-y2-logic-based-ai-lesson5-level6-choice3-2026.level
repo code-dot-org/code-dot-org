@@ -11,7 +11,7 @@
     "bubble_choice_description": "Build a program that shows users a weather forecast.",
     "thumbnail_url": "https://images.code.org/d4b6ffbe47ceabda92e997d9085a41c9-weather.png",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def get_average_temperature(day1, day2):\n    # TODO 1: Return the average temperature\n    return\n\nsaturday = 60\nsunday = 70\n\nprint(f\"Saturday's temperature will be {saturday} degrees.\")\nprint(f\"Sunday's temperature will be {sunday} degrees.\")\n\n# TODO 2: Call get_average_temperature and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average temperature",
+          "contents": "def get_average_temperature(day1, day2):\n  # TODO 1: Return the average temperature\n  return\n\nsaturday = 60\nsunday = 70\n\nprint(f\"Saturday's temperature will be {saturday} degrees.\")\nprint(f\"Sunday's temperature will be {sunday} degrees.\")\n\n# TODO 2: Call get_average_temperature and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average temperature",
           "folderId": "0",
           "active": true
         }
@@ -35,9 +35,17 @@
       "openFiles": [
         "0"
       ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpJc3GKCccrM6z+\nRU7KcMDiFPV+OWRN0d8iR/nD3mWcCCh66FBx9IQYQW1O4JI022KbGYyGZtXX\n/VvM4aV/IaG2+WUgld/3o+oC20PxNlgGXmqeitzBitwwi2isnj8nUIc/6brd\nWnOiWn3Q7+21pfzM7EBI97YKpEic852822TFb9ZccOJbyG3zo0CWZdyKmX5O\nB3U0kPJDL59AWBl+GtRhNEwm/vrLcfQZBmQXhHYB2GQnNbKwyqQrdg9ou1xp\nbad1ZNnz2ECIxzrgwnVY6qg6NL112yKBH+4pAVmX/mi80CbeSBS+/aLU0cL8\n+u7n6Bp2Gm+FvDCH+SrK0cZx+sB1h02RTSeJ0MOIISLsFCYCN4lWHITvXB08\nRByt1oE4g/8vAkeHtOBbAqNSQ9OGhrvxtdc3KVB2rqc5KvQ/dJ0DtFxZQVlf\nyhxAEUo0eydvg1JoYNwtxr61p22PpLsll5fmLqUqckH5yI0Pjb4Qkz1MRuoR\nJ35fTDlpZR/Ji20XoB4ymrTuhkb5G+YM8+5PRnIu8pBUkKg1yE+fQswuMHCe\nI5K3FzGVyqg1qUQulqjRw6U=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:49:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:49:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:32 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:29 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:10:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:10:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

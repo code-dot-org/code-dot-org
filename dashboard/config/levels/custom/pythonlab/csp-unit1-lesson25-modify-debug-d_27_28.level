@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-09T20:39:31.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "word = \"Python\"\npiece = word[3:3]\nprint(\"The piece is: \" + piece)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "### Modify: Debug\r\n\r\nWhen you run this ode it doesn't cause an error, but the result isn't what is expected. \r\n\r\nFigure out why `piece` is empty and then fix the code so it grabs the letters \"hon\" instead.",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpMRtTBvhN0e6s8\nZD5x5ouCCW2v19A7PnD0lYT/IQn5cGh/b2NxBBlJrgTsllTPXJAws3rMl6QP\n9jCyxCJPR6B9IpcBDZ7RUcrH0wDoKaZn+N3AziEdfQluFfTpYro7XXfnSAoV\njjKUYmaJolFtYYNHza9KJ9k8YwV4TosEQMeEar34U0tcRzmcfA3XW9dbeeN2\nijqgnsVE6BfimA++aso4Z5rvVM2udOvX5M+cybbSPSG4vD8WQVtWdRgNrR9P\nwnTb1CDV8gUAthgR8qvQ4prigQXrM112aPsPr93hd4rQF/mB1qHAfktJpma+\nrJyVSzA=\n",
+    "display_name": "The Empty Result",
+    "bubble_choice_description": "Figure out why this code returns nothing — then fix it.",
+    "thumbnail_url": "https://images.code.org/27315223809b30fdfdcd24845964aedb-puzzle.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-09T20:39:31.623+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson25-modify-debug-c_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson25-modify-debug-c_27_28\"},{\"changed_at\":\"2026-09-09 20:39:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:39:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:40:21 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:40:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:52:38 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:08:35 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:08:42 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:13:16 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:13:33 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -204,6 +204,29 @@ class AppServerHooksTest < Minitest::Test
     Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
   end
 
+  def test_before_worker_boot_clears_the_inherited_preforking_flag
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({})
+    CDO.preforking_parent = true
+
+    Cdo::AppServerHooks.before_worker_boot(host: 'test.example.net', worker_index: 1)
+
+    refute CDO.preforking_parent?
+  ensure
+    CDO.preforking_parent = false
+  end
+
+  def test_preforking_flag_cleared_even_when_the_hook_raises
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns(true)
+    CDO.preforking_parent = true
+
+    assert_raises(NoMethodError) do
+      Cdo::AppServerHooks.before_worker_boot(host: 'test.example.net', worker_index: 1)
+    end
+    refute CDO.preforking_parent?
+  ensure
+    CDO.preforking_parent = false
+  end
+
   private def stub_puma_stats_collector
     puma_collector = mock('puma_collector')
     puma_collector.stubs(:start)

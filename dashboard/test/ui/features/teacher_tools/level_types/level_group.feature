@@ -3,7 +3,7 @@ Feature: Level Group
 
 @as_student
 Scenario: Submit three answers.
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/33/levels/1?noautoplay=true"
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
@@ -19,14 +19,14 @@ Scenario: Submit three answers.
   And I press ".level-group-content:eq(2) .answerbutton[index=0]" using jQuery
 
   And I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  And element ".modal-body" contains text "You cannot edit your assessment after submitting it."
-  And element ".modal-body" contains text "You left some questions incomplete."
+  And I wait to see a dialog titled "Submit your assessment"
+  And element "#levelgroup-submit-incomplete-dialogcontent" contains text "You cannot edit your assessment after submitting it."
+  And element "#levelgroup-submit-incomplete-dialogcontent" contains text "You left some questions incomplete."
 
-  And I press ".modal #ok-button" using jQuery to load a new page
+  And I press "#levelgroup-submit-ok-button" using jQuery to load a new page
 
   # Go back to the page to see that same options are selected.
-  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/33/levels/1?noautoplay=true"
   And element ".level-group-content:eq(0) #checked_2" is visible
   And element ".level-group-content:eq(1) #checked_1" is visible
   And element ".level-group-content:eq(2) #checked_2" is visible
@@ -34,7 +34,7 @@ Scenario: Submit three answers.
 
 Scenario: Match levels within level group
   Given I create a teacher-associated student named "Lilian"
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/33/levels/1?noautoplay=true"
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
@@ -57,10 +57,10 @@ Scenario: Match levels within level group
   # Make sure the answers are saved and loaded
 
   Given I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  And I press ".modal #ok-button" using jQuery to load a new page
+  And I wait to see a dialog titled "Submit your assessment"
+  And I press "#levelgroup-submit-ok-button" using jQuery to load a new page
 
-  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true"
+  When I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/33/levels/1?noautoplay=true"
   And I wait to see ".submitButton"
 
   # Wait for moves reflecting lastAttempt to be made
@@ -77,7 +77,7 @@ Scenario: Match levels within level group
   # Teacher can view answers
 
   When I sign in as "Teacher_Lilian"
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1"
+  And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/33/levels/1"
   And I click selector ".show-handle .fa-chevron-left"
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
@@ -92,7 +92,7 @@ Scenario: Match levels within level group
   And element ".ui-draggable" is not visible
 
 Scenario: Submit all answers, including match levels
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/33/levels/1?noautoplay=true"
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
@@ -123,6 +123,6 @@ Scenario: Submit all answers, including match levels
   And match level 1 contains 0 empty slots
 
   Given I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  And element ".modal-body" contains text "You cannot edit your assessment after submitting it."
-  And element ".modal-body" does not contain text "You left some questions incomplete."
+  And I wait to see a dialog titled "Submit your assessment"
+  And element "#levelgroup-submit-complete-dialogcontent" contains text "You cannot edit your assessment after submitting it."
+  And element "#levelgroup-submit-complete-dialogcontent" does not contain text "You left some questions incomplete."

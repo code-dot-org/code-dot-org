@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-29 22:03:09 UTC",
+    "serialized_at": "2026-09-14 15:10:17 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11860,7 +11860,7 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1sF0iIfzuohzN7nFwCEY01ghicVWtUL-7HKa-lVsIXQo/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1Lh_JRoqR_BKowqRAMLh9v9nTwdoxXJxOlYX6ubx8z0w/",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",

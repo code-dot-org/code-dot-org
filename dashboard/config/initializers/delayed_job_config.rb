@@ -42,7 +42,7 @@ module DelayedJobDestroyDeadlockRetry
       super
     end
   rescue ActiveRecord::Deadlocked => exception
-    Observability::Errors.capture_exception(exception) if defined?(Observability::Errors)
+    Observability::Errors.report(exception)
     raise
   end
 end

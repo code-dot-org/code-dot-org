@@ -1,0 +1,15 @@
+name 'aif-y2-working-with-data-lesson6-level1-choice2-2026'
+title 'Farm'
+display_name 'Farm'
+bubble_choice_description 'Help a farm learn from its crop growth data.'
+thumbnail_url 'https://images.code.org/9c35e37344331a9798fec7f9c47aaef1-farm.png'
+
+markdown <<MARKDOWN
+You are helping a farm learn from its crop growth data.
+
+**☑️ Do This:**
+- Open [this spreadsheet](https://drive.google.com/file/d/1pxe401T-jcso8xTYDsHkdIm9vCbuKg72/view?usp=sharing) containing data for the farm.
+- Look at a few different rows of data in the dataset, exploring each row’s values.
+- In **Step 2** of your Project Planning Guide, write down at least three questions that could be answered by the dataset. Choose questions for which the answers might be useful to the farm!
+
+MARKDOWN

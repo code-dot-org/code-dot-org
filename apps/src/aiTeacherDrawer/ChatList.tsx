@@ -117,9 +117,7 @@ const ChatList: React.FC<ChatListProps> = ({
     return thread.updatedAt >= sevenDaysAgo && thread.updatedAt <= yesterday;
   });
   const past30DaysChats = threads.filter(thread => {
-    return (
-      thread.updatedAt >= thirtyDaysAgo && thread.updatedAt <= sevenDaysAgo
-    );
+    return thread.updatedAt >= thirtyDaysAgo && thread.updatedAt < sevenDaysAgo;
   });
   const oldChats = threads.filter(thread => {
     return thread.updatedAt < thirtyDaysAgo;

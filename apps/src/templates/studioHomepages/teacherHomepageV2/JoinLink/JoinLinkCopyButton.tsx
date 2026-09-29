@@ -1,13 +1,10 @@
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  TooltipOverlay,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
-import {Typography} from '@mui/material';
+import {Typography, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
@@ -43,10 +40,12 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     setShouldShowDialog(true);
   };
 
-  const classroomType =
-    loginType === SectionLoginType.google_classroom
-      ? i18n.loginTypeGoogleClassroom()
-      : i18n.loginTypeClever();
+  let classroomType = i18n.loginTypeClever();
+  if (loginType === SectionLoginType.google_classroom) {
+    classroomType = i18n.loginTypeGoogleClassroom();
+  } else if (loginType === SectionLoginType.classlink) {
+    classroomType = LmsLoginTypeNames.classlink;
+  }
 
   const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
@@ -87,34 +86,31 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     ) : (
       <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
         {!showCopiedMsg && (
-          <TooltipOverlay>
-            <span className={styles.sectionCodeText}>
+          <span className={styles.sectionCodeText}>
+            <Typography variant="overline1" gutterBottom>
+              <span>{i18n.sectionCodeWithColon()}</span>
+            </Typography>
+            <Tooltip
+              title={
+                <>
+                  <FontAwesomeV6Icon iconName="copy" />
+                  {i18n.copySectionCodeTooltip()}
+                </>
+              }
+              placement="left"
+            >
               <Typography variant="overline1" gutterBottom>
-                <span>{i18n.sectionCodeWithColon()}</span>
+                <button
+                  id={'ui-test-section-code-button'}
+                  className={styles.sectionCode}
+                  onClick={handleCopySectionCode}
+                  type="button"
+                >
+                  {sectionCode}
+                </button>
               </Typography>
-              <WithTooltip
-                tooltipProps={{
-                  tooltipId: 'section-code',
-                  role: 'tooltip',
-                  text: i18n.copySectionCodeTooltip(),
-                  direction: 'onLeft',
-                  size: 's',
-                  iconLeft: {iconName: 'copy'},
-                }}
-              >
-                <Typography variant="overline1" gutterBottom>
-                  <button
-                    id={'ui-test-section-code-button'}
-                    className={styles.sectionCode}
-                    onClick={handleCopySectionCode}
-                    type="button"
-                  >
-                    {sectionCode}
-                  </button>
-                </Typography>
-              </WithTooltip>
-            </span>
-          </TooltipOverlay>
+            </Tooltip>
+          </span>
         )}
         {showCopiedMsg && (
           <Typography variant="body3" component="span">

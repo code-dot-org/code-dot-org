@@ -1,7 +1,7 @@
 module.exports = {
   remove: ['devDependencies'],
   replace: {
-    main: 'dist/index.js',
+    main: 'dist/index.cjs',
     module: 'dist/index.mjs',
     types: 'dist/index.d.ts',
     exports: {

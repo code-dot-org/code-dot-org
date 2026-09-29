@@ -63,7 +63,6 @@
  * @property {boolean} hasOpenCodeReview
  * @property {boolean} isViewingOwnProject
  * @property {?string} codeOwnersName
- * @property {?string} recaptchaSiteKey
  */
 
 /**

@@ -7,14 +7,18 @@ export * from './courses';
 export * from './levels';
 export * from './metrics';
 export * from './preferences';
+export * from './progress';
 export * from './projects';
+export * from './schools';
 export * from './sections';
 export * from './sources';
 export {usersKeys} from './users/users.keys';
+export {buildSchoolData} from './users/buildSchoolData';
 export {
   useCurrentUser,
   useUserSettings,
   useUpdateProfile,
+  useUpdateSchoolInfo,
   useUpdateEmail,
   useUpdatePassword,
   useCreatePassword,
@@ -36,12 +40,16 @@ export type {
   UserSettings,
   AuthenticationOptionSummary,
   UserType,
+  EducatorRoleOption,
+  SchoolInfoSummary,
+  SchoolInfoRequest,
   UpdateProfileParams,
+  UpdateSchoolInfoParams,
   UpdateEmailParams,
   UpdatePasswordParams,
   CreatePasswordParams,
   UpdateUserTypeParams,
   DeleteUserParams,
-  ParentEmailOptIn,
+  EmailOptIn,
   UpdateParentEmailParams,
 } from './users/users.types';

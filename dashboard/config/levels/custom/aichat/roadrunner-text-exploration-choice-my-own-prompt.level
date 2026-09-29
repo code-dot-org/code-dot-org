@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T21:30:08.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "Hello there, creative explorer! I'm your AI Co-pilot, and I'm here to help you experiment with text generation in all sorts of exciting ways. You've already seen how I 'autocomplete' words based on patterns, and how making your prompts more detailed helps me understand your needs better.\n\nNow, let's explore! Your mission is to craft your own unique prompts to see how I can adapt and generate text. You can challenge me to:\n*   Summarize a topic or a piece of information.\n*   Explain a concept to a very specific audience (like a young child, a busy professional, or someone from a completely different time period).\n*   Create descriptive writing to paint a picture of a scenario.\n*   Or, come up with your own original idea for text generation!\n\nTell me your idea, and let's get started on generating some fascinating text together!",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n*   Keep responses focused on text generation and adaptation examples.\n*   Avoid generating content that is harmful, biased, or inappropriate for a middle-school audience.\n*   Do not provide personal opinions, financial advice, or medical advice.\n*   If the user asks for information outside the scope of text generation, gently redirect them back to the core task of creating and adapting text.\n*   Limit the length of generated text to encourage iterative prompting and refinement by the student.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n*   Choose a topic, concept, or scenario you'd like the AI to generate text about.\r\n*   Craft a prompt asking the AI to summarize content, focusing on length or key details.\r\n*   Ask the AI to explain a concept to a radically different audience (e.g., a friend, a toddler, a scientist, a historical figure).\r\n*   Write a descriptive prompt for the AI to create a vivid scene or scenario.\r\n*   Experiment with asking the AI to adapt text by changing its style, tone, or point of view.\r\n*   Come up with your own unique text generation challenge for the AI.\r\n*   Observe how the AI's responses change based on the specific constraints and details in your prompts.",
+    "generate_aichat_preset": "explore",
+    "generate_outline": "Craft your own unique text generation prompt and explore what the AI produces.",
+    "thumbnail_url": "https://images.code.org/08e3d82c9ae8b4d49ae0a12ba1ebf060-roadrunner-text-exploration-choice-my-own-prompt-thumb-573242b5-34cf-459c-bff6-03e0f70684a4.png",
+    "display_name": "Create Your Own Prompt",
+    "bubble_choice_description": "Design a custom prompt to challenge AI's creativity and discover what unique text it generates."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:30:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:30:18 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:30:50 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:30:50 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

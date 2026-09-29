@@ -65,8 +65,8 @@ rows.each do |row|
     else
       begin
         User.delete_progress_for_unit(user_id: student_id, script_id: script_id)
-      rescue
-        puts "Error deleting progress for student " + student_id.to_s + " for unit with ID " + script_id.to_s
+      rescue => exception
+        puts "Error deleting progress for student " + student_id.to_s + " for unit with ID " + script_id.to_s + " with error: " + exception.message
       end
     end
   else

@@ -4,27 +4,22 @@ import {
   type ThunkAction,
   type AnyAction,
 } from '@reduxjs/toolkit';
-import type KNN from 'ml-knn';
 
-import {
-  ColumnTypes,
-  RegressionTrainer,
-  ClassificationTrainer,
-  TestDataLocations,
-  ResultsGrades,
-} from './constants';
+import {ColumnTypes, TestDataLocations, ResultsGrades} from './constants';
 import {
   getSummaryStat,
   getResultsDataInDataTableForm,
 } from './helpers/accuracy';
-import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
+import {getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
+import {getTrainerId} from './trainers/ids';
 import type {
   DataRow,
+  Hyperparameters,
   Metadata,
   Mode,
   TrainedModelDetailsSave,
@@ -37,6 +32,7 @@ import type {
   SaveResponse,
   SaveTrainedModel,
   Panel,
+  TrainedModel,
 } from './types';
 
 export interface RootState {
@@ -61,7 +57,7 @@ export interface RootState {
   accuracyCheckPredictedLabels: (number | string)[];
   testData: Record<string, string | number>;
   prediction: number | string | undefined;
-  trainedModel: KNN | undefined;
+  trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
   currentColumn: string | undefined;
@@ -71,7 +67,7 @@ export interface RootState {
   historicResults: HistoricResult[];
   showResultsDetails: boolean;
   resultsHighlightRow: number | undefined;
-  kValue: number | null;
+  hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
@@ -120,7 +116,7 @@ export const initialState: RootState = {
   historicResults: [],
   showResultsDetails: false,
   resultsHighlightRow: undefined,
-  kValue: null,
+  hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
@@ -262,7 +258,7 @@ const ailabSlice = createSlice({
         instructionsEnabled: state.instructionsEnabled,
       };
     },
-    setTrainedModel(state, action: PayloadAction<KNN>) {
+    setTrainedModel(state, action: PayloadAction<TrainedModel>) {
       state.trainedModel = action.payload;
     },
     setTrainedModelDetail: {
@@ -422,8 +418,8 @@ const ailabSlice = createSlice({
       state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
-    setKValue(state, action: PayloadAction<number>) {
-      state.kValue = action.payload;
+    setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
+      state.hyperparameters = action.payload;
     },
     setInstructionsDismissed(state) {
       state.instructionsOverlayActive = false;
@@ -471,7 +467,7 @@ export const {
   setSaveStatus,
   setHistoricResult,
   setShowResultsDetails,
-  setKValue,
+  setHyperparameters,
   setInstructionsDismissed,
   setInstructionsEnabled,
   setResultsTab,
@@ -560,15 +556,13 @@ export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
     datasetDetails: getDatasetDetails(state),
     potentialUses: state.trainedModelDetails.potentialUses,
     potentialMisuses: state.trainedModelDetails.potentialMisuses,
-    selectedTrainer: isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer,
+    selectedTrainer: getTrainerId(state),
     featureNumberKey: state.featureNumberKey,
     label: getColumnDataToSave(state, state.labelColumn!),
     features: getFeaturesToSave(state),
     summaryStat: getSummaryStat(state),
     trainedModel: state.trainedModel ? state.trainedModel.toJSON() : null,
-    kValue: state.kValue,
+    hyperparameters: state.hyperparameters ?? null,
   };
 
   return dataToSave;

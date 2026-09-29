@@ -3,6 +3,7 @@ require 'open-uri'
 require 'json'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
+require 'observability/errors'
 
 module WebPurify
   # WebPurify limits us to 30,000 characters per request and 4 simultaneous requests per API key
@@ -57,7 +58,7 @@ module WebPurify
   # @return [Array<String>, nil] The profanities (if any) or nil (if none).
   def self.find_potential_profanities(text, language_codes = ['en'])
     unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
-      Honeybadger.notify("WebPurify API key is missing or disabled", context: {endpoint: CDO.webpurify_api_endpoint})
+      Observability::Errors.report("WebPurify API key is missing or disabled", context: {endpoint: CDO.webpurify_api_endpoint})
       return nil
     end
     return nil if text.nil?

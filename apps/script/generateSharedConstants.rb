@@ -85,6 +85,7 @@ def main
       LOCALIZE_TO_I18N_LOCALES
       GLOBAL_EDITION_DEFAULT_REGION
       GLOBAL_EDITION_EXCLUDED_PATHS
+      STATSIG_STABLE_ID_KEY
       ARTIST_AUTORUN_OPTIONS
       LEVEL_KIND
       LEVEL_STATUS
@@ -92,6 +93,7 @@ def main
       SECTION_LOGIN_TYPE
       STUDENT_GRADE_LEVELS
       PL_GRADE_VALUE
+      UNIVERSAL_APP_TYPE
       POST_MILESTONE_MODE
       ALWAYS_PUBLISHABLE_PROJECT_TYPES
       ALL_PUBLISHABLE_PROJECT_TYPES
@@ -148,7 +150,13 @@ def main
 
   # please place all generated scripts into #{REPO_DIR}/apps/generated_scripts
   # then import with import { needed } from "@cdo/generated-scripts/generatedFile"
+  # Legacy copy: apps/ still imports @cdo/generated-scripts/sharedConstants.
+  # Drop this write when those imports move to the shared-constants package.
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/generated-scripts/sharedConstants.ts")
+
+  # The committed copy that frontend/ packages use.
+  generate_shared_js_file(shared_content, "#{REPO_DIR}/frontend/packages/shared-constants/src/sharedConstants.ts")
+
   generate_shared_js_file(generate_constants('VOICES'), "#{REPO_DIR}/apps/generated-scripts/sharedVoices.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabGoalBlocks.js")

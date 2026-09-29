@@ -1,0 +1,66 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-07T15:24:26.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "NFL Athletes",
+    "long_instructions": "You’re working with the same data and code as earlier, except this snippet seems to not be working. Follow the instructions and fix the errors. \r\n\r\n**☑️ Do This:**\r\n\r\n- Run the buggy code below and read the error message.\r\n- Update the Python code to address the error.\r\n- Run the code again, you should see a *different* error. Read it carefully.\r\n- Open the CSV file and look for what the error might be. Pay particular attention to the first line.\r\n- Fix the CSV file, then run your code again to confirm it works.\r\n\r\n**💻 Coding Tip**\r\n\r\nIf you need help debugging the error, try asking your AI tutor a question like: “What does this error mean?”",
+    "bubble_choice_description": "Debug issues with a dataset of football players.",
+    "thumbnail_url": "https://images.code.org/8dcd82a573f52ee5db404b42c38a4b40-american-football.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfile = open(\"combine.csv\")\nreader = csv.DictReader(file)\n\nfor row in reader:\n  weight = row[\"weight\"] \n  print(f\"Athlete weighs {weight} lbs.\")    \n  time = row[\"time\"] \n  print(f\"Athlete's dash time is {time} s.\")\n\nfile.close()",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "combine.csv",
+          "contents": "weighttime\n165,4.22\n168,4.38\n176,4.41\n193,4.36\n202,4.44\n205,4.34\n209,4.33\n213,4.61",
+          "folderId": "1",
+          "active": false
+        }
+      },
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "data",
+          "parentId": "0"
+        }
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY7r4Jk0Vk2vpNzp\nT8pQVH6hnQnJvTTncKsH9Rbvqbr7uZA683U8mv5Dc0cSH/+QONzfEPi2grmz\nUV6diILaU6llGfG6aNLJcvZ5T/MdJI6RQ81RkQKa1u0OgTGSIdboJgI2OLCc\nAFwhNsTdipEXGwzTJj0Gf/fbo606sTrDuSVKDQAmdjXTYGDi09FER5vsJTlc\nI2hOyDirPYptjDEDV6zSSPVSIzz+KuO/L8tkCnfO5SrY1ytBPWoFfTz2fsRH\nJwUcoSeYZVuHgLBB+Kt7BhgUN8ztN7Hxtf3ALZ6I5YpU0ARtYXDPXS57aHcs\nh194cZe6iYtX6ExaJM9ZeWouli6q9nmMfuyulKfhvSUwBxbCKjRFvrljtwhh\nRSrFXQyITEbawiVz9IuHW7H6AmP2M6zEUrFhuSoyJmEusjxYptlIG2kkzuMx\nLz8tTEjbEH0uhr62keOxJxCtkZltK61DqWIP8Y9K142kQaG4tD+dUKUu0Pn1\njzpMJmjX7HNw9Tpopw3OQif78UZLu5XafUxoW3mbeqvLyD6y7BD2/Kg3PTY0\nkWYQukalePYH3pN/O01Kln75Bja7jY+ob8wkcn2Hv+Yb7h/COMWAwcg1s7uJ\nuFDg9M9pXqtrl3+jQr01aPiAd2rU5fCAA1zfQzYfzoO69UL2X+W3/CbvXU2e\nxQ9HvwVWf9iwETsc0ZKoeKR4kTCVfn3OysgaD6eXelNzJELH7BQi\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "debug",
+        "hint",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-07 15:25:02 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:25:21 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:25:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,6 +1,6 @@
 @use 'sass:color';
 
-$border: #69788a;
+$border: var(--borders-neutral-primary);
 $green: #66c365;
 $purple: #9657c7;
 
@@ -8,7 +8,9 @@ $purple: #9657c7;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--text-neutral-primary);
 }
 
 // ── Header row ────────────────────────────────────────────────────────────────
@@ -30,15 +32,16 @@ $purple: #9657c7;
 
 .counter {
   font-size: 0.75rem;
-  color: #d4dae1;
+  color: var(--text-neutral-quaternary);
 }
 
 // ── Card stack ────────────────────────────────────────────────────────────────
 
 .cardStack {
+  container-type: inline-size;
   position: relative;
-  width: 100%;
-  max-width: 600px;
+  width: 600px;
+  max-width: 100%;
   height: 295px;
   margin: 0 auto;
   cursor: pointer;
@@ -50,18 +53,18 @@ $purple: #9657c7;
   position: absolute;
   border: 1px solid $border;
   border-radius: 4px;
-  background: #a1aebb;
+  background: var(--borders-neutral-strong);
   box-shadow:
     0 2px 2px rgb(0 0 0 / 0.07),
     0 4px 7px rgb(0 0 0 / 0.07);
 }
 
 .cardBehind2 {
-  inset: 8px -32px 0 -32px;
+  inset: 8px -5.33% 0 -5.33%;
 }
 
 .cardBehind1 {
-  inset: 16px -20px 0 -12px;
+  inset: 16px -3.33% 0 -2%;
 }
 
 // ── Flip card ─────────────────────────────────────────────────────────────────
@@ -114,23 +117,23 @@ $purple: #9657c7;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #292f36;
+  color: var(--text-neutral-black-fixed);
   margin: 0;
 }
 
 .cardWord {
   font-family: var(--font-family-main);
-  font-size: clamp(2rem, 7vw, 3.75rem);
+  font-size: clamp(2rem, 10cqw, 3.75rem);
   font-weight: 600;
   line-height: 1.05;
-  color: #292f36;
+  color: var(--text-neutral-black-fixed);
   margin: 0;
 }
 
 .cardDefinition {
   font-size: 1rem;
   line-height: 1.5;
-  color: #292f36;
+  color: var(--text-neutral-black-fixed);
   margin: 0;
 }
 
@@ -145,9 +148,10 @@ $purple: #9657c7;
 .controls {
   display: flex;
   align-items: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 600px;
+  justify-content: center;
+  gap: 12px;
+  width: 600px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -158,10 +162,10 @@ $purple: #9657c7;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
-  border: 1px solid #a1aebb;
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px;
-  background: #292f36;
-  color: #fff;
+  background: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-primary);
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.12s ease;
@@ -182,15 +186,16 @@ $purple: #9657c7;
 }
 
 .flipButton {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   height: 40px;
+  padding: 0 32px;
   border: none;
   border-radius: 4px;
   background: $purple;
-  color: #fff;
+  color: var(--text-neutral-primary);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;

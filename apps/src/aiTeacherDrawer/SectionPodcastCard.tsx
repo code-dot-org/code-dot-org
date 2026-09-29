@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
@@ -33,6 +34,9 @@ interface SectionPodcastCardProps {
   // undefined = suggested_lessons fetch still in flight
   lesson: SuggestedLesson | null | undefined;
   onSectionClick?: () => void;
+  // true when this section is the one currently in view on a section-specific
+  // page (progress, roster, etc.) elsewhere in dashboard
+  isActiveSection?: boolean;
 }
 
 const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
@@ -41,6 +45,7 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
   avatarEmoji,
   lesson,
   onSectionClick,
+  isActiveSection,
 }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -95,7 +100,16 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
     <>
       <SectionAvatar color={avatarColor} emoji={avatarEmoji} size="xs" />
       <div className={styles.sectionInfo}>
-        <span className={styles.sectionName}>{sectionName}</span>
+        <div className={styles.sectionNameRow}>
+          <span className={styles.sectionName}>{sectionName}</span>
+          {isActiveSection && (
+            <Tags
+              size="s"
+              className={styles.activeTag}
+              tagsList={[{label: 'Active'}]}
+            />
+          )}
+        </div>
         {lesson?.completed_unit ? (
           <span className={styles.lessonName}>
             Your students are finishing this unit! Consider assigning a new one.

@@ -18,7 +18,10 @@ export async function settle(page: Page): Promise<void> {
  * Resolve once the locator's box stops moving. Playwright's built-in 2-frame
  * stability is too brief to outlast a longer scroll/reflow that splits clicks.
  */
-export async function waitUntilStable(locator: Locator): Promise<void> {
+export async function waitUntilStable(
+  locator: Locator,
+  intervalMs = 120,
+): Promise<void> {
   let previous = '';
   await expect(async () => {
     const box = await locator.boundingBox();
@@ -30,7 +33,7 @@ export async function waitUntilStable(locator: Locator): Promise<void> {
     const settled = current !== '' && current === previous;
     previous = current;
     expect(settled, 'element still moving or not laid out').toBe(true);
-  }).toPass({intervals: [120], timeout: 5_000});
+  }).toPass({intervals: [intervalMs], timeout: 5_000});
 }
 
 /** Settle fonts and paint, then optionally await layout stability on a locator. */
@@ -42,26 +45,4 @@ export async function waitForVisualStability(
   if (locator) {
     await waitUntilStable(locator);
   }
-}
-
-/**
- * Wait for the shared header to relayout against the loaded web fonts.
- *
- * Keys on the HeaderMiddle.jsx flags, not on #header_middle_content, which is
- * always present and lands before the relayout starts. Returns at once on a
- * page that never mounts this header. Does not cover the lesson-progress
- * strip; use LessonLevelPage.waitForLessonHeaderRendered() for that.
- */
-export async function waitForHeaderSettled(page: Page): Promise<void> {
-  await expect
-    .poll(() =>
-      page.evaluate(() => {
-        const de = document.documentElement;
-        return (
-          de.dataset.headerPresent !== 'true' ||
-          de.dataset.headerFontsRelaidOut === 'true'
-        );
-      }),
-    )
-    .toBe(true);
 }

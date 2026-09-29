@@ -22,6 +22,7 @@ import type {
   UpdateParentEmailParams,
   UpdatePasswordParams,
   UpdateProfileParams,
+  UpdateSchoolInfoParams,
   UpdateUserTypeParams,
   UserSettings,
 } from './users.types';
@@ -352,20 +353,6 @@ export function useSetSeenTaScores(
   });
 }
 
-export function useVerifyCaptcha(
-  api: ApiClient,
-  options?: Omit<
-    UseMutationOptions<unknown, Error, {recaptchaResponse: string}>,
-    'mutationFn'
-  >,
-) {
-  return useMutation({
-    mutationFn: (params: {recaptchaResponse: string}) =>
-      api.users.verifyCaptcha(params),
-    ...options,
-  });
-}
-
 // --- My Account settings ---
 
 export function useUserSettings(
@@ -403,6 +390,19 @@ export function useUpdateProfile(
 ) {
   return useSettingsMutation(
     params => api.users.updateProfile(params),
+    options,
+  );
+}
+
+export function useUpdateSchoolInfo(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UpdateSchoolInfoParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.updateSchoolInfo(params),
     options,
   );
 }

@@ -5,6 +5,7 @@ require 'honeybadger/ruby'
 require 'base64'
 require 'nokogiri'
 require 'observability/opentelemetry'
+require 'observability/errors'
 
 # Initialize the OpenTelemetry SDK so the tracer below has somewhere to send
 # spans; cron jobs aren't Rack-instrumented, so we open the root span ourselves.
@@ -58,7 +59,7 @@ class DeliverPosteMessagesProcess
         begin
           deliverer.send delivery
         rescue Net::SMTPSyntaxError, Net::SMTPFatalError => exception
-          Honeybadger.notify(
+          Observability::Errors.report(
             exception,
             error_message: "Unable to deliver #{delivery[:id]} because '#{exception.message.to_s.strip}'",
             context: {
@@ -70,7 +71,7 @@ class DeliverPosteMessagesProcess
           deliverer.reset_connection
           sent_at = 0
         rescue Psych::SyntaxError => exception
-          Honeybadger.notify(
+          Observability::Errors.report(
             exception,
             error_message: "Abandoning delivery of #{delivery[:id]} because '#{exception.message.to_s.strip}'",
             context: {
@@ -81,7 +82,7 @@ class DeliverPosteMessagesProcess
           )
           sent_at = 0
         rescue => exception
-          Honeybadger.notify(
+          Observability::Errors.report(
             exception,
             error_message: "Unable to deliver #{delivery[:id]} because '#{exception.message.to_s.strip}'",
             context: {

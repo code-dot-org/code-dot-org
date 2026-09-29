@@ -60,6 +60,20 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       refute_redirect_to lockout_path
     end
 
+    context 'when a Global Edition region is active' do
+      before do
+        cookies[:ge_region] = 'cn'
+        cookies[:language_] = 'zh-CN'
+      end
+
+      it 'allows an unprefixed request to the policy consent API' do
+        post '/policy_compliance/child_account_consent', as: :json
+
+        # Missing parent_email proves the request reached the consent controller.
+        must_respond_with :bad_request
+      end
+    end
+
     it 'allows student change account information' do
       patch users_set_student_information_path
       refute_redirect_to lockout_path

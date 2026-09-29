@@ -239,10 +239,9 @@ class ScriptsController < ApplicationController
           end
         end
       end
-    # nil means "leave the persisted unit outline alone"; sending the param
-    # at all (even '') updates it.
-    unit_outline = params.key?(:generateOutline) ? params[:generateOutline].to_s : nil
-    @script.update_lesson_outlines(lessons, unit_outline)
+    # A prompt key left out of the request keeps its stored value; '' clears it.
+    prompts = Unit::GENERATOR_PROMPTS.keys.select {|key| params.key?(key)}.index_with {|key| params[key].to_s}
+    @script.update_lesson_outlines(lessons, prompts)
     render json: @script.summarize_for_unit_generate
   rescue StandardError => exception
     render status: :unprocessable_entity, json: {message: exception.message}

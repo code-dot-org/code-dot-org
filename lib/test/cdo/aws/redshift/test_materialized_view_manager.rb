@@ -76,7 +76,7 @@ module Cdo
             _(generate_pii_ddl).must_include 'learning_platform_<%=environment_type%>_pii.users'
           end
 
-          it 'uses ERB template variables in the source table path' do
+          it 'uses ERB template variables in the Zero ETL database and schema' do
             _(generate_pii_ddl).must_include '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
           end
 
@@ -99,6 +99,61 @@ module Cdo
             rendered = ERB.new(generate_pii_ddl).result(binding)
             _(rendered).must_include 'learning_platform_production_pii.users'
             _(rendered).must_include 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
+          end
+        end
+
+        describe 'a model whose table is in the Pegasus database' do
+          before do
+            model.stubs(:table_name).returns("#{CDO.pegasus_db_name}.hoc_activity")
+          end
+
+          it 'renders the irregular production schema name' do
+            environment_type = 'production'
+            rendered = ERB.new(described_instance.generate_pii_ddl).result(binding)
+            _(rendered).must_include 'production_learningplatform_mysql_zeroetl.pegasus.hoc_activity'
+            _(rendered).wont_include 'pegasus_production'
+          end
+
+          it 'renders the test schema name' do
+            environment_type = 'test'
+            rendered = ERB.new(described_instance.generate_pii_ddl).result(binding)
+            _(rendered).must_include 'test_learningplatform_mysql_zeroetl.pegasus_test.hoc_activity'
+          end
+
+          it 'fails loudly when rendered for an environment the override does not name' do
+            environment_type = 'levelbuilder'
+            _ {ERB.new(described_instance.generate_pii_ddl).result(binding)}.must_raise KeyError
+          end
+
+          it 'names the view with the bare table name, unqualified' do
+            _(described_instance.view_name).must_equal 'hoc_activity'
+            _(described_instance.generate_pii_ddl).must_include 'learning_platform_<%=environment_type%>_pii.hoc_activity'
+          end
+
+          it 'reports both expected view FQNs without the database qualifier' do
+            _(described_instance.expected_view_fqns('production')).must_equal(
+              ['learning_platform_production_pii.hoc_activity', 'learning_platform_production.hoc_activity']
+            )
+          end
+
+          it 'writes template files named for the bare table name' do
+            Dir.mktmpdir do |dir|
+              described_class.stub_const(:SQL_VIEW_TEMPLATE_DIR, dir) do
+                described_instance.save_ddl_templates
+              end
+              _(Dir.children(dir).sort).must_equal ['hoc_activity.sql.erb', 'hoc_activity_pii.sql.erb']
+            end
+          end
+        end
+
+        describe 'a model in the primary Rails database' do
+          it 'composes the dashboard schema from the environment' do
+            _(described_instance.generate_pii_ddl).must_include 'dashboard_<%=environment_type%>.users'
+          end
+
+          it 'ignores a qualifier that is not a Pegasus database' do
+            model.stubs(:table_name).returns("#{CDO.dashboard_db_name}.users")
+            _(described_instance.generate_pii_ddl).must_include 'dashboard_<%=environment_type%>.users'
           end
         end
 
@@ -869,29 +924,115 @@ module Cdo
             assert_empty result[:statements]
             assert_empty result[:failed]
           end
+        end
 
-          it 'yields :would_refresh with the stale FQNs and submits nothing when dry_run is true' do
-            client.stubs(:execute).returns(
-              [
-                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 100},
-                {'schema' => 'learning_platform_production', 'name' => 'users', 'is_stale' => 't', 'state' => 100}
-              ]
+        describe '.refresh_and_wait' do
+          let(:client) {mock('redshift_client')}
+          let(:activities_model) {stub}
+
+          before do
+            activities_model.extend(FakeClassification)
+            activities_model.stubs(:table_name).returns('activities')
+            activities_model.stubs(:primary_key).returns('id')
+            activities_model.stubs(:columns).returns([id_col, age_col, created_at_col])
+
+            # No SVV_MV_INFO rows, so every view is treated as stale and gets refreshed.
+            client.stubs(:execute).returns([])
+          end
+
+          it 'returns the FQNs that finished under :refreshed' do
+            client.stubs(:execute_async).returns('id-1', 'id-2')
+            client.stubs(:wait_for_statements).returns(
+              {
+                finished: ['learning_platform_production_pii.users', 'learning_platform_production.users'],
+                failed: []
+              }
             )
-            client.expects(:execute_async).never
+
+            result = MaterializedViewManager.refresh_and_wait(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_equal(
+              ['learning_platform_production_pii.users', 'learning_platform_production.users'],
+              result[:refreshed]
+            )
+            assert_empty result[:failures]
+          end
+
+          it 'unions submit-time failures with execution-time failures' do
+            # First submit raises, so `users` fails before any statement exists for it; `activities`
+            # submits and then one of its views fails while executing.
+            call_count = 0
+            client.stubs(:execute_async).with do |_sql|
+              call_count += 1
+              raise Cdo::Aws::Redshift::Client::QueryError, 'submit blew up' if call_count == 1
+              true
+            end.returns('id-2', 'id-3')
+
+            client.stubs(:wait_for_statements).returns(
+              {
+                finished: ['learning_platform_production_pii.activities'],
+                failed: [['learning_platform_production.activities', 'Disk full']]
+              }
+            )
+
+            result = MaterializedViewManager.refresh_and_wait(
+              client: client, environment_type: :production, models: [model, activities_model]
+            )
+
+            assert_equal ['learning_platform_production_pii.activities'], result[:refreshed]
+            # The model table name for the submit failure, the view FQN for the execution failure.
+            assert_equal ['users', 'learning_platform_production.activities'], result[:failures]
+          end
+
+          it 'yields the progress events of both phases to one reporter' do
+            client.stubs(:execute_async).returns('id-1', 'id-2')
+            client.stubs(:wait_for_statements).multiple_yields(
+              [:finished, 'learning_platform_production_pii.users', 12.3],
+              [:failed, 'learning_platform_production.users', 'Disk full']
+            ).returns(
+              {
+                finished: ['learning_platform_production_pii.users'],
+                failed: [['learning_platform_production.users', 'Disk full']]
+              }
+            )
 
             events = []
-            result = MaterializedViewManager.refresh_all_views(
-              client: client, environment_type: :production, models: [model], dry_run: true
-            ) {|event, table, payload| events << [event, table, payload]}
+            MaterializedViewManager.refresh_and_wait(
+              client: client, environment_type: :production, models: [model]
+            ) {|event, name, detail| events << [event, name, detail]}
 
-            would_refresh = events.find {|e| e[0] == :would_refresh}
-            refute_nil would_refresh
-            assert_equal 'users', would_refresh[1]
-            assert_equal 2, would_refresh[2].length
-            assert_includes would_refresh[2], 'learning_platform_production_pii.users'
+            assert_includes events.map(&:first), :submitted
+            assert_includes events, [:finished, 'learning_platform_production_pii.users', 12.3]
+            assert_includes events, [:failed, 'learning_platform_production.users', 'Disk full']
+          end
 
-            assert_empty result[:statements]
-            assert_empty result[:failed]
+          it 'passes the timeout through to the wait' do
+            client.stubs(:execute_async).returns('id-1', 'id-2')
+            captured_timeout = :unset
+            client.stubs(:wait_for_statements).with do |args|
+              captured_timeout = args[:timeout]
+              true
+            end.returns({finished: [], failed: []})
+
+            MaterializedViewManager.refresh_and_wait(
+              client: client, environment_type: :production, models: [model], timeout: 60
+            )
+
+            assert_equal 60, captured_timeout
+          end
+
+          it 'waits even when nothing was submitted, relying on an empty set returning immediately' do
+            client.expects(:execute_async).never
+            client.expects(:wait_for_statements).returns({finished: [], failed: []})
+
+            result = MaterializedViewManager.refresh_and_wait(
+              client: client, environment_type: :production, models: []
+            )
+
+            assert_empty result[:refreshed]
+            assert_empty result[:failures]
           end
         end
 
@@ -1043,16 +1184,29 @@ module Cdo
             FileUtils.remove_entry(tmpdir)
           end
 
-          it 'regenerates the templates even on a dry run (flags the pending change without touching the cluster)' do
+          it 'regenerates the templates so a pending change surfaces as a committable diff' do
             client.stubs(:execute).returns([])
-            client.expects(:batch_execute_async).never
+            client.stubs(:batch_execute_async).returns(['id-1'], ['id-2'])
 
             MaterializedViewManager.provision_all_views(
-              client: client, environment_type: :production, models: [model], dry_run: true
+              client: client, environment_type: :production, models: [model]
             )
 
             assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
             assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
+          end
+
+          it 'plan_provisioning writes no templates and submits nothing' do
+            client.stubs(:execute).returns([])
+            client.expects(:batch_execute_async).never
+
+            plan = MaterializedViewManager.plan_provisioning(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            refute_empty plan[:to_add]
+            refute File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
+            refute File.exist?(File.join(tmpdir, 'users.sql.erb'))
           end
 
           it 'classifies new views as to_add' do
@@ -1164,32 +1318,21 @@ module Cdo
             assert_equal 3, drop_keys.length
           end
 
-          it 'does not submit anything when dry_run is true' do
+          it 'plan_provisioning classifies the work without submitting it' do
             client.stubs(:execute).returns(
               [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
             )
             client.expects(:batch_execute_async).never
 
-            plan = MaterializedViewManager.provision_all_views(
-              client: client, environment_type: :test, models: [model], dry_run: true
+            plan = MaterializedViewManager.plan_provisioning(
+              client: client, environment_type: :test, models: [model]
             )
 
             refute_empty plan[:to_add]
             refute_empty plan[:to_drop]
-            assert_empty plan[:statements]
-          end
-
-          it 'does not yield any events on dry_run' do
-            client.stubs(:execute).returns(
-              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
-            )
-
-            events = []
-            MaterializedViewManager.provision_all_views(
-              client: client, environment_type: :test, models: [model], dry_run: true
-            ) {|event, _, _| events << event}
-
-            assert_empty events
+            # A plan carries no submit-time results; those keys belong to `provision_all_views`.
+            refute plan.key?(:statements)
+            refute plan.key?(:failed)
           end
 
           it 'yields :submitted with table name and submitted FQNs per model' do

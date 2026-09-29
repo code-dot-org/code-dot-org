@@ -21,14 +21,28 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Images",
-      "World",
-      "Play"
+    "use_secondary_finish_button": "true",
+    "level_mode": {
+      "kind": "freeplay"
+    },
+    "image_role_defaults": {
+      "sprite": "hero",
+      "gamelab_addBehaviorSimple": [
+        "friend"
+      ],
+      "gamelab_checkTouching": [
+        "hero",
+        "treasure"
+      ]
+    },
+    "guide_steps": [
+      {
+        "text": "**Free play!** Everything is unlocked. Finish your game, and finish the lesson when you're done.",
+        "collapsedText": "Enjoy free play!",
+        "showContinue": true
+      }
     ],
-    "guide_mode": "instructions",
-    "long_instructions": "# Free play\nEverything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game!",
+    "long_instructions": "# Free play\nEverything is unlocked: all your images, scenes, and blocks. Finish your game!",
     "toolbox_definition": {
       "kind": "categoryToolbox",
       "contents": [
@@ -42,7 +56,35 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_playSound"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playMusic"
+            },
+            {
+              "kind": "block",
               "type": "spritelab2_setAsPlatformPlayer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_thePlayer"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "block": {
+                    "type": "spritelab2_patrollingOnBlocks"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -50,14 +92,11 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_spriteClicked",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
+              "type": "spritelab2_setCameraZoom"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_restartScene"
             },
             {
               "kind": "block",
@@ -71,20 +110,6 @@
                 "SPRITE2": {
                   "shadow": {
                     "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_atTime",
-              "inputs": {
-                "N": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 3
-                    }
                   }
                 }
               }
@@ -115,17 +140,15 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_makeNewSpriteAnon",
-              "inputs": {
-                "LOCATION": {
-                  "block": {
-                    "type": "gamelab_location_picker",
-                    "fields": {
-                      "LOCATION": "{\"x\":200,\"y\":200}"
-                    }
-                  }
-                }
-              }
+              "type": "spritelab2_playSound"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playMusic"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeSpriteAtPosition"
             },
             {
               "kind": "block",
@@ -162,33 +185,6 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_spriteSayTime",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "TEXT1": {
-                  "shadow": {
-                    "type": "text",
-                    "fields": {
-                      "TEXT": "Hello!"
-                    }
-                  }
-                },
-                "NUM": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 4
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
               "type": "gamelab_spriteClicked",
               "inputs": {
                 "SPRITE": {
@@ -211,30 +207,6 @@
                   }
                 }
               }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_addBehaviorSimple",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "BEHAVIOR": {
-                  "shadow": {
-                    "type": "spritelab2_movingLeft"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_movingLeft"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_patrollingLeftRight"
             }
           ]
         },

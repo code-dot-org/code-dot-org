@@ -3,6 +3,7 @@ require 'active_support/core_ext/numeric/bytes'
 require 'cdo/honeybadger'
 require 'cdo/i18n'
 require 'cdo/i18n/plugins/interpolation_l10n'
+require 'observability/errors'
 
 module Cdo
   module I18n
@@ -129,7 +130,7 @@ module Cdo
         # that was removed in the source string and we want to be notified so
         # we can update the translation.
         if result.is_a?(String) && Regexp.union(::I18n.config.interpolation_patterns).match?(result)
-          Honeybadger.notify(
+          Observability::Errors.report(
             error_class: 'Interpolation Pattern present in translation',
             error_message: "String #{result.inspect} has unused interpolation patterns after translation",
             context: {

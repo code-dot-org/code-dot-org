@@ -1,0 +1,14 @@
+name 'test-brendan-html-structure-check'
+title 'TODO: title'
+description ''
+question 'Which HTML tag serves as the root element of an HTML document, containing all other HTML content?'
+wrong '<body>'
+right '<html>'
+wrong '<head>'
+wrong '<title>'
+
+markdown <<MARKDOWN
+Which HTML tag serves as the root element of an HTML document, containing all other HTML content?
+MARKDOWN
+
+allow_multiple_attempts true

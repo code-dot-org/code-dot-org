@@ -1717,6 +1717,8 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
     imageDiv = document.createElement('img');
     imageDiv.className = 'modal-image';
     imageDiv.src = options.icon;
+    imageDiv.alt = '';
+    imageDiv.setAttribute('aria-hidden', 'true');
     modalBody.appendChild(imageDiv);
   } else {
     options.contentDiv.className += ' no-modal-icon';

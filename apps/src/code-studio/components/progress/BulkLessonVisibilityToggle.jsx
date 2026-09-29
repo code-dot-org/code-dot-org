@@ -1,7 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Button as MuiButton} from '@mui/material';
-import _ from 'lodash';
+import {Button as MuiButton, Tooltip} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -24,8 +22,6 @@ function toggleHiddenLessons(unitName, sectionId, lessons, hidden) {
 }
 
 function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
-  const tooltipId = _.uniqueId('bulk-lesson-visibility-tip-');
-
   return (
     <div className={style.container}>
       <MuiButton
@@ -46,13 +42,7 @@ function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
       >
         {i18n.hideAllLessons()}
       </MuiButton>
-      <WithTooltip
-        tooltipProps={{
-          text: i18n.bulkLessonVisibilityToggleTip(),
-          size: 's',
-          tooltipId,
-        }}
-      >
+      <Tooltip placement="top" title={i18n.bulkLessonVisibilityToggleTip()}>
         <button
           type="button"
           aria-label={i18n.bulkLessonVisibilityToggleTip()}
@@ -63,7 +53,7 @@ function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
             className={style.infoTipIcon}
           />
         </button>
-      </WithTooltip>
+      </Tooltip>
     </div>
   );
 }

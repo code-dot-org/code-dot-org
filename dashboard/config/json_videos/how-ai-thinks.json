@@ -1,0 +1,13 @@
+{
+  "key": "how-ai-thinks",
+  "description": "Explains that AI uses probability and math (not understanding) to predict the next word using a Peanut Butter & Jelly example.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/how-ai-thinks.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "37720a96-51be-4114-8c86-cb55f0d9b70a"
+  ]
+}

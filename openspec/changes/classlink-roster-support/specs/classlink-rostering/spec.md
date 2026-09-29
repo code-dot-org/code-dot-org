@@ -1,5 +1,26 @@
 ## ADDED Requirements
 
+### Requirement: ClassLink rostering UI is surfaced only to holders of a v2 auth option
+The teacher-dashboard roster-provider payload SHALL include `classlink` only when the current user holds a ClassLink auth option with `version = 'v2'`. A user without one — whether they hold only a legacy v1 record (unmigrated, or in a district without OneRoster enabled) or no ClassLink credential at all — SHALL see no ClassLink rostering entry point in section setup. This gate is a visibility decision, not an authorization boundary: the rostering endpoints enforce their own checks independently.
+
+The entry point SHALL additionally sit behind a DCDO flag (`classlink-rostering-enabled`, default off): while it is off, the payload omits `classlink` for every user, so the feature can ship dark and be enabled per environment without a deploy. The flag governs reachability, not authorization — the rostering endpoints are unaffected by it and enforce their own checks.
+
+#### Scenario: Teacher with a v2 auth option sees the entry point
+- **WHEN** a teacher holding a v2 ClassLink auth option loads the teacher dashboard and the DCDO flag is on
+- **THEN** `classlink` is included in the roster-provider payload and the ClassLink import entry appears in section setup, gated by the same providers check that gates Clever
+
+#### Scenario: DCDO flag off hides the entry point
+- **WHEN** the `classlink-rostering-enabled` DCDO flag is off (its default)
+- **THEN** the roster-provider payload omits `classlink` even for a v2 auth option holder, so no ClassLink rostering UI is reachable
+
+#### Scenario: Teacher with only a v1 auth option sees no entry point
+- **WHEN** a teacher whose only ClassLink auth option is legacy v1 format loads the teacher dashboard
+- **THEN** `classlink` is absent from the roster-provider payload and no ClassLink rostering UI is shown — correct for both populations the payload cannot distinguish: a non-OneRoster district's teacher (for whom rostering will never be available) and an unmigrated teacher (for whom prompting would be premature)
+
+#### Scenario: Entry point appears after login-time migration
+- **WHEN** a teacher in an OneRoster-enabled district who previously held only a v1 record signs in again, acquiring a v2 auth option through login-time migration
+- **THEN** their next teacher-dashboard load includes `classlink` in the roster-provider payload and the entry point appears, with no other action required
+
 ### Requirement: Teacher can view available ClassLink classes
 A teacher with a v2 ClassLink auth option (`authentication_id = <TenantId>|<SourcedId>`, `version = 'v2'`) SHALL be able to retrieve a list of their One Roster classes to import as sections.
 
@@ -11,9 +32,9 @@ A teacher with a v2 ClassLink auth option (`authentication_id = <TenantId>|<Sour
 - **WHEN** a teacher's `TenantId` does not match any application in the `/applications` response (or the matching application has `enabled != "true"`)
 - **THEN** the system returns an appropriate error and the teacher sees a message indicating ClassLink rostering is unavailable for their district
 
-#### Scenario: Teacher has not yet been migrated
-- **WHEN** a teacher without a v2 ClassLink auth option (legacy v1 record only) attempts to access ClassLink rostering
-- **THEN** the system returns an error prompting the teacher to sign out and sign back in to enable rostering (login-time migration creates their v2 record)
+#### Scenario: Requester has no v2 auth option
+- **WHEN** a request reaches a rostering endpoint from a user without a v2 ClassLink auth option — a direct API call, a page loaded before the user's v2 option existed, or a co-teacher added to a ClassLink section by email invitation triggering the section-row sync
+- **THEN** the system returns an error and no roster data, without relying on the UI gate having hidden the entry point
 
 ### Requirement: Rostering identity is derived server-side
 Because ClassLink rostering uses a central partner credential (not a user-scoped token), the system SHALL derive `TenantId` and teacher `SourcedId` exclusively from the authenticated user's v2 ClassLink auth option. Client-supplied tenant, application, or teacher identifiers SHALL never be used to select the district application or identify the requester.
@@ -82,6 +103,10 @@ A teacher who is an instructor (owner or co-teacher) of a ClassLink section in o
 #### Scenario: Section sync removes a departed student
 - **WHEN** a student is no longer in the class in One Roster
 - **THEN** the system removes the student from the section (destroys the Follower record)
+
+#### Scenario: Class roster contains no students
+- **WHEN** a class is imported or synced and its One Roster response contains no users with `role == "student"`
+- **THEN** the system applies the empty roster like any other — a first import creates the section with no students, and a sync unenrolls every student — because ClassLink is the source of truth, and a sync to zero is recoverable: removal soft-deletes the `Follower` and leaves accounts and progress intact, so a later correct sync restores membership
 
 ### Requirement: District credentials are resolved via cache-aside lookup
 The system SHALL cache the `/applications` lookup result (bearer token and `oneroster_application_id`) per `tenant_id` in the shared cache with a TTL, reading from the cache before calling `/applications`.
@@ -186,9 +211,9 @@ The system SHALL surface a distinct message for each ClassLink rostering failure
 - **WHEN** a One Roster call returns 401 and the re-fetched bearer matches the cached one, indicating a district-side authorization failure rather than token expiry
 - **THEN** the teacher sees "Your district hasn't enabled roster sync for CodeAI." — deliberately the same string as the scenario above, since the two are indistinguishable from the teacher's position and the distinction is preserved in logs for support
 
-#### Scenario: Teacher has not yet been migrated to a v2 auth option
-- **WHEN** a teacher holding only a legacy v1 ClassLink auth option attempts to use rostering
-- **THEN** the teacher sees "Please sign in again from ClassLink to proceed with roster sync."
+#### Scenario: Requester without a v2 auth option reaches an endpoint anyway
+- **WHEN** a rostering request arrives from a user without a v2 ClassLink auth option (the UI gate hides the entry point, but direct calls, stale pages, and email-invited co-teachers syncing a section still reach the endpoints)
+- **THEN** the response carries "Please sign in again from ClassLink to proceed with roster sync." — accurate for the re-login cases, and serviceable for an invited co-teacher, for whom signing in via ClassLink is in fact the path to a linked credential
 
 #### Scenario: ClassLink returns an unexpected status
 - **WHEN** a One Roster call fails with a status the design does not handle specifically, such as a transient 500 or a 429
@@ -197,10 +222,6 @@ The system SHALL surface a distinct message for each ClassLink rostering failure
 #### Scenario: Unexpected failure has no specific message
 - **WHEN** a rostering request fails for any reason without its own copy — a response missing its collection key, a malformed body, or an unhandled client error
 - **THEN** the teacher sees the same "We're having trouble getting roster information from ClassLink. Please try again later." message, so no failure path renders an empty dialog
-
-#### Scenario: Imported class contains no students
-- **WHEN** a class is imported or synced and its roster contains no users with `role == "student"`
-- **THEN** the teacher sees "This section (<section_name>) has no students.", with the section name interpolated
 
 ### Requirement: ClassLink rostering UI matches Clever rostering UX
 The teacher-facing interface for importing and syncing ClassLink sections SHALL match the existing Clever rostering experience, using the same `RosterDialog` and section management components.

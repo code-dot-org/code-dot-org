@@ -36,10 +36,6 @@ namespace :seed do
   CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
-  timed_task_with_logging skills: :environment do
-    Skill.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
-  end
-
   timed_task_with_logging videos: :environment do
     Video.setup(CURRICULUM_CONTENT_DIR)
   end
@@ -74,15 +70,9 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
-  SPECIAL_UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
-  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
-    allthehiddenthings
-    allthelessonplans
-    alltheplcthings
-    alltheselfpacedplthings
-    allthethings
-    allthettsthings
-  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
+
+  # Every unit the UI tests need now lives in the UI test curriculum tree.
+  UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
   # Each year we should update this list and :courses_adhoc
@@ -181,12 +171,10 @@ namespace :seed do
     :environment,
     :check_migrations,
     :games,
-    :skills,
     :deprecated_blockly_levels,
     :child_dsls,
     :custom_levels,
     :parent_dsls,
-    :levels_skills,
     :code_docs,
     :blocks,
     :standards,
@@ -249,18 +237,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses_ui_tests: :environment do
-    # seed those courses that are needed for UI tests
-    %w(
-      allthethingscourse
-      allthelessonplans
-      alltheselfpacedplthings
-      allthettsthings
-      original-allthelessonplans-course
-      original-allthethings-course
-      original-alltheselfpacedplthings-course
-    ).each do |course_name|
-      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
-    end
+    # Every course the UI tests need now lives in the UI test curriculum tree.
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
       UnitGroup.load_from_path(path)
     end
@@ -396,19 +373,6 @@ namespace :seed do
   timed_task_with_logging custom_levels: :environment do
     level_name = ENV.fetch('LEVEL_NAME', nil)
     LevelLoader.load_custom_levels(level_name, CURRICULUM_CONTENT_DIR)
-  end
-
-  timed_task_with_logging levels_skills: :environment do
-    levels_with_skills = Level.where('properties like ?', '%"skill_keys":%').all
-    levels_with_skills.each do |level|
-      JSON.parse(level.skill_keys).each do |skill_key|
-        skill_id = Skill.find_by_key(skill_key).id
-        LevelsSkill.find_or_create_by!(
-          skill_id: skill_id,
-          level_id: level.id
-        )
-      end
-    end
   end
 
   timed_task_with_logging deprecated_blockly_levels: :environment do

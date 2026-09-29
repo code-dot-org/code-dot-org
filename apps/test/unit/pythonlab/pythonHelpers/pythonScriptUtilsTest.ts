@@ -101,11 +101,11 @@ describe('pythonScriptUtils', () => {
     // Records writeFile/mkdir calls against an in-memory model of Pyodide's FS.
     // readdir always throws so createFolderIfNotExists takes the mkdir branch.
     function makeWriteFs() {
-      const writtenFiles: Record<string, string> = {};
+      const writtenFiles: Record<string, string | Uint8Array> = {};
       const madeDirs: string[] = [];
       const pyodide = {
         FS: {
-          writeFile: (path: string, contents: string) => {
+          writeFile: (path: string, contents: string | Uint8Array) => {
             writtenFiles[path] = contents;
           },
           readdir: () => {
@@ -150,6 +150,72 @@ describe('pythonScriptUtils', () => {
       expect(writtenFiles['main.py']).toBe('a');
       expect(writtenFiles['pkg/util.py']).toBe('b');
       expect(madeDirs).toContain('pkg');
+    });
+
+    it('writes a url-backed file from its fetched bytes', () => {
+      // An uploaded image's bytes live in S3, so the source holds no contents
+      // for it. Writing those empty contents left theater's Image() unable to
+      // read the file the student had uploaded.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '1': {id: '1', name: 'main.py', contents: 'a', folderId: '0'},
+          '2': {
+            id: '2',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '0',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, writtenFiles} = makeWriteFs();
+
+      writeSource(source, '0', '', pyodide, {'2': new Uint8Array([1, 2, 3])});
+
+      expect(writtenFiles['dog.jpeg']).toEqual(new Uint8Array([1, 2, 3]));
+    });
+
+    it('leaves out a url-backed file with no fetched bytes', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '1': {
+            id: '1',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '0',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, writtenFiles} = makeWriteFs();
+
+      writeSource(source, '0', '', pyodide, {});
+
+      expect(writtenFiles).toEqual({});
+    });
+
+    it('passes fetched bytes down to nested folders', () => {
+      const source: MultiFileSource = {
+        folders: {
+          '1': {id: '1', name: 'images', parentId: '0'},
+        },
+        files: {
+          '1': {
+            id: '1',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '1',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, writtenFiles} = makeWriteFs();
+
+      writeSource(source, '0', '', pyodide, {'1': new Uint8Array([7])});
+
+      expect(writtenFiles['images/dog.jpeg']).toEqual(new Uint8Array([7]));
     });
   });
 
@@ -217,6 +283,38 @@ describe('pythonScriptUtils', () => {
       expect(unlinked).toContain('/Files/main.py');
       // Original source is cloned, not mutated.
       expect(source.files['1'].contents).toBe('old');
+    });
+
+    it('keeps a url-backed file out of the source but still unlinks it', () => {
+      // Reading an image back as text would replace the file's url with
+      // garbage and save that into the student's project.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '1': {
+            id: '1',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '0',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, unlinked} = makeReadFs(
+        {'dog.jpeg': fileNode(1, 'dog.jpeg')},
+        {'/Files/dog.jpeg': 'binary garbage'}
+      );
+
+      const result = getUpdatedSourceAndDeleteFiles(
+        source,
+        'run-id',
+        pyodide,
+        noop
+      );
+
+      expect(result.files['1'].contents).toBe('');
+      expect(result.files['1'].url).toBe('/v3/assets/channel-id/uuid.jpeg');
+      expect(unlinked).toContain('/Files/dog.jpeg');
     });
 
     it('adds files that appeared in the working directory', () => {

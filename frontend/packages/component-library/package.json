@@ -463,6 +463,7 @@
     "classnames": "catalog:",
     "clean-package": "^2.2.0",
     "esbuild-sass-plugin": "^3.3.1",
+    "eslint": "catalog:",
     "eslint-plugin-storybook": "^10.1.7",
     "glob": "^11.1.0",
     "globals": "catalog:",

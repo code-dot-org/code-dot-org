@@ -1,32 +1,29 @@
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
+import {Tooltip, TooltipProps as MuiTooltipProps} from '@mui/material';
 import React from 'react';
 
 interface WithConditionalTooltipProps {
   children: React.ReactNode;
   tooltipOverlayClassName?: string;
-  tooltipProps: TooltipProps;
+  tooltipProps: Omit<MuiTooltipProps, 'children'>;
   showTooltip: boolean;
 }
 
-// Component that wraps children with a tooltip is showTooltip is true,
-// otherwise it just renders the children wrapped in a div.
-// The wrapper div is what carries the hover handlers, so the tooltip still
-// appears for disabled children, which get no pointer events of their own.
+// The wrapping div carries the hover handlers, so the tooltip still shows
+// for a disabled child.
 const WithConditionalTooltip: React.FunctionComponent<
   WithConditionalTooltipProps
 > = ({children, tooltipOverlayClassName, tooltipProps, showTooltip}) => {
-  return showTooltip ? (
-    <WithTooltip
-      tooltipProps={tooltipProps}
-      tooltipOverlayClassName={tooltipOverlayClassName}
-    >
-      <div>{children}</div>
-    </WithTooltip>
-  ) : (
-    <div>{children}</div>
+  if (!showTooltip) {
+    return <div className={tooltipOverlayClassName}>{children}</div>;
+  }
+
+  return (
+    <Tooltip placement="top" {...tooltipProps}>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
+      <div className={tooltipOverlayClassName} tabIndex={0}>
+        {children}
+      </div>
+    </Tooltip>
   );
 };
 

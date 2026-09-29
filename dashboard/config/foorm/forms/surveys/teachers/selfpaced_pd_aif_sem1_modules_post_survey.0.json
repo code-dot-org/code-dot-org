@@ -48,7 +48,7 @@
         {
           "type": "rating",
           "name": "comfort_supporting_students_learn_aif_programming",
-          "visibleIf": "{module} = 'Foundations of AI Programming'",
+          "visibleIf": "{module} = 'Foundations of AI Programming' or {module} = 'Foundations of AI Programming (Python)' or {module} = 'Foundations of AI Programming (JS)'",
           "title": "After completing this module, I am more comfortable in my ability to support students in designing, analyzing, and debugging programs, including the ethical use of AI tools in their development.",
           "rateCount": 7,
           "rateMax": 7,

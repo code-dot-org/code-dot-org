@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_2_5",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Why might an AI-generated response based on text and image together be more accurate than one based on text alone?",
+  "solution": [
+    {"option": "Images take longer to process, so AI tries harder.", "correct": false},
+    {"option": "The image gives AI additional visual context the text didn't include.", "correct": true},
+    {"option": "AI ignores text prompts once an image is added.", "correct": false},
+    {"option": "Images and text always produce identical responses.", "correct": false}
+  ],
+  "objective_keys": [
+    "970d4574-32a3-41bc-b9fd-70acc72cfa9b"
+  ]
+}

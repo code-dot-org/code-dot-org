@@ -1,7 +1,6 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {memo, useEffect, useRef, useState} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -170,19 +169,14 @@ function getSizeText(size: number) {
 }
 
 const WarningIcon: React.FC<{text: string}> = ({text}) => (
-  <WithTooltip
-    tooltipProps={{
-      text,
-      tooltipId: 'warning-tooltip',
-      direction: 'onTop',
-      size: 'xs',
-    }}
-  >
-    <FontAwesomeV6Icon
-      className={styles.warningIcon}
-      iconName="triangle-exclamation"
-    />
-  </WithTooltip>
+  <Tooltip title={text} placement="top">
+    <span role="img" aria-label={text}>
+      <FontAwesomeV6Icon
+        className={styles.warningIcon}
+        iconName="triangle-exclamation"
+      />
+    </span>
+  </Tooltip>
 );
 
 export default memo(FileIcon);

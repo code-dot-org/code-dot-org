@@ -1,9 +1,9 @@
+import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import AssessmentPanel from '@cdo/apps/aiTutor/views/gallery/AssessmentPanel';
-import {ChallengeResponseDetail} from '@cdo/apps/aiTutor/views/gallery/types';
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,
@@ -19,6 +19,7 @@ const baseDetail: ChallengeResponseDetail = {
   is_final: true,
   created_at: '2026-08-10T12:00:00Z',
   assets: [],
+  reactions: [],
   viewer_role: 'owner',
   question: 'Draw a network.',
   evaluated_at: '2026-08-11T15:30:00Z',

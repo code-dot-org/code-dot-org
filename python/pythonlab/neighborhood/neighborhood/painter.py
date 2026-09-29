@@ -6,6 +6,7 @@ from .support.direction import Direction
 from .support.neighborhood_runtime_exception import NeighborhoodRuntimeException
 from .support.exception_key import ExceptionKey
 from .support.neighborhood_tracker import NeighborhoodTracker
+from .support.color_helpers import to_color_string
 
 class Painter:
   LARGE_GRID_SIZE = 20
@@ -66,17 +67,21 @@ class Painter:
     else:
       raise NeighborhoodRuntimeException(ExceptionKey.INVALID_MOVE)
     
-  def paint(self, color):
+  def paint(self, *color):
     """
     Paint the square the painter is on with the given color.
 
     Args:
-      color (str): The color to paint the square.
+      *color: Either one color string - a CSS color name or a hex value - or
+        three red/green/blue components between 0 and 255.
     """
     if self.has_paint():
-      self.world.grid.get_square(self.x, self.y).set_color(color)
+      color_string = to_color_string(*color)
+      if color_string is None:
+        raise NeighborhoodRuntimeException(ExceptionKey.INVALID_COLOR)
+      self.world.grid.get_square(self.x, self.y).set_color(color_string)
       self.remaining_paint-=1
-      self._send_signal(NeighborhoodSignalKey.PAINT, {'color': color})
+      self._send_signal(NeighborhoodSignalKey.PAINT, {'color': color_string})
     else:
       print("There is no more paint in the painter's bucket.")
 
@@ -344,14 +349,15 @@ def turn_left():
   """
   _get_default_painter().turn_left()
 
-def paint(color):
+def paint(*color):
   """
   Paint the current square with the given color.
 
   Args:
-    color (str): The color to paint the square.
+    *color: Either one color string - a CSS color name or a hex value - or
+      three red/green/blue components between 0 and 255.
   """
-  _get_default_painter().paint(color)
+  _get_default_painter().paint(*color)
 
 def scrape_paint():
   """

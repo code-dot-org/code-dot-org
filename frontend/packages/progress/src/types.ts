@@ -1,6 +1,7 @@
 import type {
+  Condition,
   Lesson,
-  LessonGroupSummary,
+  LessonGroup,
   UnitLevel,
   Sublevel,
 } from '@code-dot-org/core/api';
@@ -18,16 +19,19 @@ export const ReviewStates = {
   completed: 'completed',
   keepWorking: 'keepWorking',
   awaitingReview: 'awaitingReview',
-};
+} as const;
 
 /**
  * The schema for the unit progress as returned by our backend API.
  */
 export interface UnitProgressDefinition {
-  status: LevelStatus;
+  // Absent for an unattempted level in a lockable lesson, which arrives as
+  // just {locked: true}.
+  status?: LevelStatus;
   last_progress_at?: number;
   locked?: boolean;
-  pages_completed?: TestResult[];
+  // null for an unattempted page.
+  pages_completed?: (TestResult | null)[] | null;
   paired?: boolean;
   result?: TestResult;
   teacher_feedback_commented?: boolean;
@@ -58,6 +62,7 @@ export interface NumberedLevelFields {
   bubbleText?: string;
   scriptLevelId?: number;
   parentLevelId?: number;
+  isUnplugged?: boolean;
   // TODO: these are user_progress API return values. replace them with something in core/api
   status?: LevelStatus;
   paired?: boolean;
@@ -66,7 +71,7 @@ export interface NumberedLevelFields {
   teacherFeedbackReviewState?: string;
   teacherFeedbackNew?: boolean;
   teacherFeedbackCommented?: boolean;
-  lastTimestamp?: string;
+  lastTimestamp?: number;
   pages?: UnitProgress[];
 }
 
@@ -83,13 +88,15 @@ export interface ProgressState {
   deeperLearningCourse?: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons?: Lesson[];
-  lessonGroups?: LessonGroupSummary[];
+  lessonGroups?: LessonGroup[];
   scriptId?: number;
   viewAsUserId?: number;
   scriptName?: string;
   scriptDisplayName?: string;
   unitTitle?: string;
   courseId?: number;
+  // The course's name, which Lab2 uses to load teacher-facing rubrics.
+  courseName?: string;
   isLessonExtras: boolean;
   unitProgress: {
     [key: number]: UnitProgress;
@@ -114,6 +121,7 @@ export interface ProgressState {
   unitHasUnnumberedLessons: boolean;
   changeFocusAreaPath?: string;
   unitCompleted?: boolean;
+  validationState: ValidationState;
 }
 
 export interface InitProgressPayload {
@@ -122,7 +130,7 @@ export interface InitProgressPayload {
   deeperLearningCourse: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons: Lesson[];
-  lessonGroups?: LessonGroupSummary[];
+  lessonGroups?: LessonGroup[];
   scriptId?: number;
   scriptName?: string;
   scriptDisplayName?: string;
@@ -131,6 +139,7 @@ export interface InitProgressPayload {
   unitStudentDescription: string;
   unitHasUnnumberedLessons: boolean;
   courseId?: number;
+  courseName?: string;
   courseVersionId?: number;
   isLessonExtras: boolean;
   peerReviewLessonInfo?: PeerReviewLessonInfo;
@@ -166,21 +175,9 @@ export interface PeerReviewLessonInfo {
 
 export type ViewType = (typeof ViewTypes)[keyof typeof ViewTypes];
 
-// A validation condition.
-export interface Condition {
-  name: string;
-  value?: string | number;
-}
-
-// Validation in the level.
-export interface Validation {
-  conditions: Condition[];
-  message: string;
-  callout?: string;
-  next: boolean;
-  key: string;
-  comment?: string;
-}
+// A level's validations and their conditions, as core parses them from the
+// level properties.
+export type {Condition, Validation} from '@code-dot-org/core/api';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
@@ -189,7 +186,8 @@ export abstract class Validator {
   abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
-  abstract clear(): void;
+  // isChangingLevels is false when the user re-runs code on the same level.
+  abstract clear(isChangingLevels?: boolean): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
   didPassExemplarValidation(): boolean {
     return false;
@@ -221,24 +219,35 @@ export type TestStatus =
   | 'EXPECTED_FAILURE'
   | 'UNEXPECTED_SUCCESS';
 
-// Exemplar settings for a level.
-export interface ExemplarSettings {
-  validationEnabled: boolean;
-  validationSuccessMessage: string;
-  validationFailureMessage: string;
-}
+// Exemplar settings for a level, as core parses them; the server omits the
+// messages when none are configured.
+export type {ExemplarSettings} from '@code-dot-org/core/api';
 
 export interface OptionalMilestoneData {
   program?: string;
-  // Submitted is a boolean, which the server expects as a string.
-  submitted?: string;
-}
-
-export interface MilestoneReport extends OptionalMilestoneData {
-  app: string;
-  result: boolean;
-  testResult: TestResult;
+  submitted?: boolean;
 }
 
 export type ProgressLevelType =
   (typeof ProgressLevelTypes)[keyof typeof ProgressLevelTypes];
+
+/**
+ * The body of GET /api/user_progress/:script. A signed-out user gets only
+ * `signedIn: false`.
+ */
+export interface UserProgressResponse {
+  signedIn?: boolean;
+  teacherViewingStudent?: boolean;
+  disableSocialShare?: boolean;
+  lockableAuthorized?: boolean;
+  isTeacher?: boolean;
+  isInstructor?: boolean;
+  isVerifiedInstructor?: boolean;
+  deeperLearningCourse?: boolean;
+  focusAreaLessonIds?: number[];
+  changeFocusAreaPath?: string;
+  completed?: boolean;
+  progress?: {[levelId: number]: UnitProgressDefinition};
+  peerReviewsPerformed?: PeerReviewLevelInfo[];
+  current_lesson?: number;
+}

@@ -168,6 +168,42 @@ class AiStudentSnapshotHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'generate_lesson_insight raises a token-limit-specific message when the prompt exceeds the context window' do
+    AiSystemPrompts::StudentSnapshotPromptHelper.stubs(:get_insight_system_prompt).returns(
+      content: 'compiled insight prompt', prompt_name: nil, prompt_version: nil, variables: {}
+    )
+    fake_response = mock
+    fake_response.stubs(:code).returns(400)
+    fake_response.stubs(:body).returns(
+      {error: {message: "This model's maximum context length is 128000 tokens", type: 'invalid_request_error', code: 'context_length_exceeded'}}.to_json
+    )
+    AiStudentSnapshotHelper::Client.any_instance.stubs(:request_lesson_insight).returns(fake_response)
+
+    Honeybadger.expects(:notify).with do |exception, _opts|
+      exception.message.include?("token limit")
+    end
+
+    assert_raises(StandardError) do
+      AiStudentSnapshotHelper.generate_lesson_insight(@unit.id, @lesson.id, @teacher.id, @student.id, @section.id)
+    end
+  end
+
+  test 'generate_lesson_insight notifies Honeybadger and raises instead of crashing when the AI response body is invalid JSON' do
+    AiSystemPrompts::StudentSnapshotPromptHelper.stubs(:get_insight_system_prompt).returns(
+      content: 'compiled insight prompt', prompt_name: nil, prompt_version: nil, variables: {}
+    )
+    stub_ai_response(:request_lesson_insight, '{"progress": "cut off mid-')
+    LangfuseHelper.stubs(:trace_lesson_insight)
+
+    Honeybadger.expects(:notify).with do |exception, opts|
+      exception.is_a?(StandardError) && opts[:context][:lesson_id] == @lesson.id
+    end
+
+    assert_raises(StandardError) do
+      AiStudentSnapshotHelper.generate_lesson_insight(@unit.id, @lesson.id, @teacher.id, @student.id, @section.id)
+    end
+  end
+
   # ---------------------------------------------------------------------------
   # generate_lesson_feedback
   # ---------------------------------------------------------------------------
@@ -210,6 +246,26 @@ class AiStudentSnapshotHelperTest < ActiveSupport::TestCase
 
     Honeybadger.expects(:notify).with do |exception, opts|
       exception.is_a?(StandardError) && opts[:context][:status] == 500
+    end
+
+    assert_raises(StandardError) do
+      AiStudentSnapshotHelper.generate_lesson_feedback(@unit.id, @lesson.id, @teacher.id, @student.id, @section.id)
+    end
+  end
+
+  test 'generate_lesson_feedback raises a token-limit-specific message when the prompt exceeds the context window' do
+    AiSystemPrompts::StudentSnapshotPromptHelper.stubs(:get_feedback_system_prompt).returns(
+      content: 'compiled feedback prompt', prompt_name: nil, prompt_version: nil, variables: {}
+    )
+    fake_response = mock
+    fake_response.stubs(:code).returns(400)
+    fake_response.stubs(:body).returns(
+      {error: {message: "This model's maximum context length is 128000 tokens", type: 'invalid_request_error', code: 'context_length_exceeded'}}.to_json
+    )
+    AiStudentSnapshotHelper::Client.any_instance.stubs(:request_lesson_feedback).returns(fake_response)
+
+    Honeybadger.expects(:notify).with do |exception, _opts|
+      exception.message.include?("token limit")
     end
 
     assert_raises(StandardError) do

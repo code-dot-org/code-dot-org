@@ -10,7 +10,7 @@ require 'honeybadger/ruby'
 class Pd::RegionalPartnerContactController < ApplicationController
   # GET /pd/regional_partner_contacts/new
   def new
-    Honeybadger.notify(
+    Observability::Errors.report(
       error_class: 'DeprecatedEndpointWarning',
       error_message: <<~MESSAGE,
         Somebody called GET #{request.path}, which was deprecated in February 2020.

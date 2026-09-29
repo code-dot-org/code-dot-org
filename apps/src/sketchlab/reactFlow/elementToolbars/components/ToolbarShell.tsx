@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Paper, Tooltip, Typography} from '@mui/material';
+import {IconButton, Paper, Typography} from '@mui/material';
 import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useLayoutEffect, useRef, useState} from 'react';
 
@@ -12,6 +12,8 @@ import {
   reactFlowEdgeSelector,
   reactFlowNodeSelector,
 } from '@cdo/apps/sketchlab/reactFlow/reactFlowSelectors';
+
+import Tooltip from '../../components/ThemedTooltip';
 
 import styles from './toolbar-shell.module.scss';
 

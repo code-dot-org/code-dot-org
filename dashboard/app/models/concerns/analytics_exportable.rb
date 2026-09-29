@@ -113,7 +113,18 @@ module AnalyticsExportable
   # that should warn-and-skip invalid models rather than abort the run.
   # @return [Set<Class>]
   def self.valid_exported_models
-    exported_models - exportability_errors_by_model.keys
+    invalid_models = exportability_errors_by_model
+    invalid_models.each do |model, reasons|
+      reasons.each {|reason| CDO.log.error "[analytics-export] #{model.name} cannot be exported: #{reason}"}
+    end
+    exported_models - invalid_models.keys
+  end
+
+  # Bare table names of every Model that passes exportability checks, without the `database.`
+  # qualifier. Helps support Rails Models that persist to the Pegasus database.
+  # @return [Array<String>]
+  def self.exported_table_names
+    valid_exported_models.map {|model| model.table_name.to_s.rpartition('.').last}
   end
 
   # @raise [ArgumentError] if any model lacks a primary key or has blob columns.

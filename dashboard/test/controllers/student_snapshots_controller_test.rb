@@ -136,6 +136,44 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal [], response_data['cfu_levels']
   end
 
+  test "cfu_levels endpoint matches real-world CFU progression variants" do
+    matching_progressions = [
+      'Assessment: Check For Understanding: AP Practice',
+      'Check For Understanding - DNS',
+      'Check for your understanding',
+      'Checking for Understanding',
+      'Check for understanding (diff between 3 and 4)',
+      'Chemical Change CFU',
+      'CFU',
+    ]
+
+    matching_levels = matching_progressions.map.with_index do |progression, i|
+      level = create(:level, name: "Matching Level #{i}", type: 'Multi')
+      create(:script_level, script: @unit, lesson: @lesson1, progression: progression, levels: [level])
+      level
+    end
+
+    non_matching_progressions = [
+      'Check In',
+      'Checking for Palindromes',
+      'Understanding AI',
+      'Check Your Work',
+    ]
+
+    non_matching_progressions.each_with_index do |progression, i|
+      level = create(:level, name: "Non-Matching Level #{i}", type: 'Multi')
+      create(:script_level, script: @unit, lesson: @lesson1, progression: progression, levels: [level])
+    end
+
+    get :cfu_levels, params: {lesson_id: @lesson1.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    cfu_ids = response_data['cfu_levels'].map {|l| l['id']}
+
+    assert_equal matching_levels.map(&:id).sort, cfu_ids.sort
+  end
+
   test "cfu_levels endpoint returns empty array when script_level has no progression" do
     regular_level = create(:level, name: 'Regular Level', type: 'Multi')
     create(:script_level, script: @unit, lesson: @lesson1, progression: nil, levels: [regular_level])

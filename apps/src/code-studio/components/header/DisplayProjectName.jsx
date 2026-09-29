@@ -17,6 +17,7 @@ export default class DisplayProjectName extends React.Component {
   static propTypes = {
     beginEdit: PropTypes.func.isRequired,
     projectName: PropTypes.string.isRequired,
+    onChangedWidth: PropTypes.func,
   };
 
   render() {
@@ -26,7 +27,7 @@ export default class DisplayProjectName extends React.Component {
           <div className="project_name header_text">
             {this.props.projectName}
           </div>
-          <ProjectUpdatedAt />
+          <ProjectUpdatedAt onContentUpdated={this.props.onChangedWidth} />
         </div>
         <button
           type="button"

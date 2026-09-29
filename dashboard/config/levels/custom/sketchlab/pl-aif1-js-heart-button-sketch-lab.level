@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-08-11T16:25:54.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to model the scenario.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n\r\n---\r\n\r\n### Heart Button\r\n\r\n- If the user favorites an item, fill the heart with color and add one to the \"favorites\" count.\r\n- If the user un-favorites an item, change the heart to an outline and remove the fill.",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to model the scenario.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n\r\n---\r\n\r\n### Heart Button\r\n\r\n- If the user favorites an item, fill the heart with color and add one to the \"favorites\" count.\r\n- If the user un-favorites an item, change the heart to an outline and remove the fill.\r\n\r\n---\r\n\r\n::: details [**🎒 How to Save to the Backpack**]\r\nStudents should get in the habit of saving their files after each level they build in it. This way, they can easily access the code on future projects. \r\n\r\n- Click the three-dot menu icon next to the `index.html` file name.\r\n- Select \"Save to backpack\" from the drop-down menu.\r\n- Name the file and press save.\r\n\r\n![](https://images.code.org/a5083c7ccc54bfa4ea561fa29adf2902-image-1740077664809.gif)\r\n\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "start_sources": {
       "source": {
         "nodes": [
@@ -1225,9 +1226,10 @@
         }
       }
     },
-    "name_suffix": "_-js-2026"
+    "name_suffix": "_-js-2026",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-11T16:25:54.604+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson10-level2a_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson10-level2a_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-11T16:25:54.604+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson10-level2a_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson10-level2a_2026\"},{\"changed_at\":\"2026-08-28 15:08:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-08-28 15:12:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -7,6 +7,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {UnconnectedRosterDialog as RosterDialog} from '@cdo/apps/templates/teacherDashboard/RosterDialog';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import locale from '@cdo/locale';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -44,6 +45,39 @@ describe('RosterDialog', () => {
       />
     );
     expect(wrapper.html()).contains(locale.authorizeGoogleClassroomsText());
+  });
+
+  it('renders a ClassLink title and the server-sent error message', () => {
+    const wrapper = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[]}
+        loadError={{status: 403, message: 'district message from server'}}
+        rosterProvider={OAuthSectionTypes.classlink}
+      />
+    );
+    const html = wrapper.html();
+    expect(html).contains('Select a ClassLink section');
+    expect(html).contains('district message from server');
+  });
+
+  it('falls back to the generic ClassLink message when the error carries none', () => {
+    const wrapper = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[]}
+        loadError={{status: 502, message: ''}}
+        rosterProvider={OAuthSectionTypes.classlink}
+      />
+    );
+    // Substring avoids the apostrophe, which wrapper.html() HTML-escapes.
+    expect(wrapper.html()).contains(
+      'getting roster information from ClassLink'
+    );
   });
 
   it('sends cancel analytics event when dialog is canceled', () => {
@@ -138,8 +172,51 @@ describe('RosterDialog', () => {
     ).to.have.lengthOf(1);
   });
 
-  it('should dispatch handleImportFailure when the redirect ajax fails', async () => {
+  it('sends completed analytics event with the created section id after import succeeds', async () => {
+    const rosterDialog = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[fakeClassroom]}
+        loadError={null}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+      />
+    );
+    rosterDialog.instance().setState({selectedId: '2'});
+    rosterDialog.instance().redirectToEditSectionPage = jest.fn();
+
+    const getStub = sinon.stub(HttpClient, 'get').resolves({
+      json: () => Promise.resolve({id: 42}),
+    });
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    await rosterDialog.instance().handleRedirect();
+
+    assert(analyticsSpy.calledOnce);
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
+    assert.deepEqual(analyticsSpy.getCall(0).args[1], {
+      oauthSource: OAuthSectionTypes.google_classroom,
+      sectionId: 42,
+    });
+    expect(
+      rosterDialog.instance().redirectToEditSectionPage.mock.calls
+    ).to.deep.equal([[42]]);
+
+    analyticsSpy.restore();
+    getStub.restore();
+  });
+
+  it('should dispatch handleImportFailure when the import request fails', async () => {
     const handleImportFailureMock = jest.fn();
+    const failedResponse = {
+      status: 403,
+      statusText: 'Forbidden',
+      json: () => Promise.resolve({error: 'nope'}),
+    };
+    const getStub = sinon
+      .stub(HttpClient, 'get')
+      .rejects(new NetworkError('403 Forbidden', failedResponse));
 
     const rosterDialog = shallow(
       <RosterDialog
@@ -159,12 +236,22 @@ describe('RosterDialog', () => {
     );
 
     rosterDialog.instance().setState({selectedId: '2'});
+    let rejected = false;
     await rosterDialog
       .instance()
       .handleRedirect()
-      .catch(error => {
-        expect(handleImportFailureMock.mock.calls.length).to.equal(1);
+      .catch(() => {
+        rejected = true;
       });
+
+    expect(rejected).to.equal(true);
+    expect(handleImportFailureMock.mock.calls.length).to.equal(1);
+    expect(handleImportFailureMock.mock.calls[0][0]).to.deep.equal({
+      status: 403,
+      message: 'nope',
+    });
+
+    getStub.restore();
   });
 
   it('displays Clever 404 message when Clever classrooms returns 404', () => {

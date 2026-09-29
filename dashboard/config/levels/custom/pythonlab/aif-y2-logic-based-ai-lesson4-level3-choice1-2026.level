@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-27T23:45:38.000Z",
   "level_num": "custom",
@@ -43,8 +42,10 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqZrpsX4v7Dcn9m\nu8WHSgt30VqhTXtqYAnIVyPHyruWWEFm+7Z54FH2EldQqTZXmE2WdCnWRXtD\nDQ6RpOgbi1Som5NFpjgfbPdUVL/253utiHaLkbvXf1Umekzn9sJSYs0t3ICJ\n7CJA6zcx8UBkky21RvssiM3U+bW3HvjI1PAcUiGNUmkgEUB+Wt8fDPBC8KBS\nb5CA2zK4paHFf/KU/M+22mwYUSHwAUqMJdhOxrFKXA==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-27 23:45:45 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-17 19:24:13 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 19:26:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-27 23:45:45 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-17 19:24:13 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 19:26:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-23 14:31:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

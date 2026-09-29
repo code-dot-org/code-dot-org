@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-11T16:13:39.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Row-Crop Farmer",
+    "bubble_choice_description": "Denise flies a drone to map 400 acres of corn and soybeans",
+    "thumbnail_url": "https://images.code.org/3275ed26b4b35aa8d42ce9fd3c365ed7-denise.jpg",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**Career**: Farmer growing corn and soybeans on 400 acres\n\n**Purpose**: Flying a drone over her fields every week. Software stitches hundreds of photos into one large field map and marks the spots where plants look stressed. Denise wants those maps finished the same afternoon so she can decide where to water and treat before the next morning.",
+        "imageUrl": "https://images.code.org/8dac5edb017d76814c6889c92bc782d4-denise-pane-1.jpg",
+        "key": "undefined-42e502a3-e175-46f1-b693-dc6455a6cdd6"
+      },
+      {
+        "text": "**Budget**: $2,000\n\nCovers the entire system, including the operating system and peripherals.",
+        "imageUrl": "https://images.code.org/35cffb24e4398bd44dc5cd3fec3c427f-denise-pane-2.jpg",
+        "key": "undefined-ff576ae3-1788-4ada-b264-7238ac25cc64"
+      },
+      {
+        "text": "**Important Info**: The stitching software uses every processor core it can find and a lot of memory at once. Each drone flight adds about 20 GB of photos, and Denise keeps a full season of them.\n\n**Preferences**:\n\n* A processor with as many cores as possible\n* At least 32 GB of memory, with open slots to add more later\n* Plenty of fast storage, plus a second drive to back up the season's photos",
+        "imageUrl": "https://images.code.org/57459107ffec7240529fd2e164e647fb-denise-pane-3.jpg",
+        "key": "undefined-035ce7ea-43d7-45a0-8f29-87a9fa949a04",
+        "layout": "text-top-left"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11T16:13:39.716+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson6-joaquin\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson6-joaquin\"},{\"changed_at\":\"2026-09-11 16:15:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 16:34:52 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

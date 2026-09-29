@@ -31,7 +31,7 @@ describe('train functions', () => {
     store.dispatch(addSelectedFeature('rain'));
 
     train.init(store);
-    train.onClickTrain(store);
+    train.onClickTrain();
 
     store.dispatch(setTestData('temperature', 10));
     store.dispatch(setTestData('rain', 1010));
@@ -63,7 +63,7 @@ describe('train functions', () => {
     store.dispatch(addSelectedFeature('texture'));
 
     train.init(store);
-    train.onClickTrain(store);
+    train.onClickTrain();
 
     store.dispatch(setTestData('flavor', 'sweet'));
     store.dispatch(setTestData('texture', 'crunchy'));

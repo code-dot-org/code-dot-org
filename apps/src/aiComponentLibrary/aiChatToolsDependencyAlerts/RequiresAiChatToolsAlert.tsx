@@ -34,7 +34,10 @@ const RequiresAiChatToolsAlert: React.FC = () => {
   return (
     <>
       {aiChatAccessLevel !== AiChatAccessLevels.DISABLED && (
-        <AiChatToolsInfoAlert text="This course requires the use of AI chat tools to complete." />
+        <AiChatToolsInfoAlert
+          className={styles.overviewSpacing}
+          text="This course requires the use of AI chat tools to complete."
+        />
       )}
       {aiChatAccessLevel === AiChatAccessLevels.DISABLED && (
         <NotificationBanner

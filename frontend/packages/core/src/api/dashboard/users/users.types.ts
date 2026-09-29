@@ -44,6 +44,12 @@ export type AuthenticationOptionSummary =
 
 export type UserType = UserSettings['userType'];
 
+export type EducatorRoleOption = NonNullable<
+  UserSettings['educatorRoleOptions']
+>[number];
+
+export type SchoolInfoSummary = NonNullable<UserSettings['schoolInfo']>;
+
 export interface UpdateProfileParams {
   givenName?: string;
   familyName?: string;
@@ -52,12 +58,32 @@ export interface UpdateProfileParams {
   age?: number | string;
   usState?: string;
   gender?: string;
+  /** Set or changed only; the role can never be cleared. */
+  educatorRole?: string;
+}
+
+export interface UpdateSchoolInfoParams {
+  schoolId: string;
+  country: string;
+  schoolName: string;
+  schoolZip: string;
+}
+
+/** Wire (snake_case) school_info_attributes body. */
+export interface SchoolInfoRequest {
+  country?: string;
+  school_name?: string;
+  zip?: string;
+  school_type?: string;
+  school_id?: string;
 }
 
 export interface UpdateEmailParams {
   newEmail: string;
   hashedEmail: string;
   currentPassword: string;
+  /** Teachers only; students are never asked. */
+  emailOptIn?: EmailOptIn;
 }
 
 export interface UpdatePasswordParams {
@@ -82,10 +108,10 @@ export interface DeleteUserParams {
   password?: string;
 }
 
-/** '' means the opt-in question was left unanswered (legacy "update only"). */
-export type ParentEmailOptIn = 'yes' | 'no' | '';
+/** '' means the opt-in question was left unanswered; Rails ignores a blank answer. */
+export type EmailOptIn = 'yes' | 'no' | '';
 
 export interface UpdateParentEmailParams {
   parentEmail: string;
-  optIn: ParentEmailOptIn;
+  optIn: EmailOptIn;
 }

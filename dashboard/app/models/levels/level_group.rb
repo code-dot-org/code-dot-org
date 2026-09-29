@@ -110,7 +110,10 @@ class LevelGroup < DSLDefined
     levels_offset = 0
     return @pages if @pages
     all_levels_and_texts = child_levels.all
-    @pages = properties['levels_and_texts_per_page'].map.with_index do |page_size, page_index|
+    # levels_and_texts_per_page can be empty if the LevelGroup was created with
+    # no pages, or when an encrypted LevelGroup is seeded without the
+    # properties_encryption_key.
+    @pages = (properties['levels_and_texts_per_page'] || []).map.with_index do |page_size, page_index|
       page_number = page_index + 1
       levels_and_texts = all_levels_and_texts[levels_and_texts_offset..(levels_and_texts_offset + page_size - 1)]
       page_object = LevelGroupPage.new(page_number, levels_and_texts_offset, levels_and_texts, levels_offset)

@@ -1,0 +1,46 @@
+name 'pl-aif1-js-fcl-wrap'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Before You Move On</h1>
+
+<p>That moved fast, on purpose. Functions, conditionals, and loops are usually spread across weeks of a traditional coding course. Here, you got the shape of each one in a single lesson. If it felt like a lot, that's not a sign you missed something, it's just genuinely a lot of ground.</p>
+
+<h2>What Actually Matters Here</h2>
+
+<p>The goal of this lesson was never for you to leave able to hand-write a function, a conditional, and a loop from memory. This is an AI-heavy unit, your students will be prompting for this code, not typing it line by line. What matters is that you can recognize the shape of each concept when AI generates it, and know enough to judge whether the output actually does what was asked, the same QA instinct you practiced throughout this lesson.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>If you can look at a piece of AI-generated code and say "that's a function," "that's a conditional," or "that's a loop," and have a rough sense of what each one is doing, you have what you need to teach this lesson well.</p>
+</div>
+
+---
+
+<h2>If You Want More Practice Before Teaching</h2>
+
+<p>If you'd still like more hands-on time with any of these concepts before you're in front of students, the actual curriculum levels are the best place to get it, they're where students practice too, so working through them yourself is real preparation, not just extra reading.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 9:</b> Writing Reusable Functions</p>
+<a href="[LESSON 9 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 9</a>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>Curriculum Lesson 10:</b> Making Decisions with If/Else</p>
+<a href="[LESSON 10 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 10</a>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 11:</b> Loops and Counted Repetition</p>
+<a href="[LESSON 11 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 11</a>
+</div>
+
+<p>And remember, you're not just working from these levels alone. Each curriculum lesson comes with its own <b>teaching notes, answer keys, and unit guide pages</b>, the same resources you've been using throughout this module. If a specific moment in Lesson 9, 10, or 11 feels unclear, the teaching guide for that lesson is often the fastest way to get oriented before you're in front of students.</p>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> you don't need to master these before you teach them. You need to feel steady enough to facilitate while students explore, and confident enough to say "let's figure that out together" when something comes up you didn't expect. That's the actual bar, not fluency.</p>
+</div>
+
+<p>Next, you'll move into the final section of this unit: preparing for the Reactive Logic Project.</p>
+MARKDOWN

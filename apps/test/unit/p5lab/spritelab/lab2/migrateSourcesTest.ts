@@ -1,4 +1,8 @@
-import {migrateAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/migrateSources';
+import {
+  migrateAnimationList,
+  migrateBlockTypes,
+  migrateScenes,
+} from '@cdo/apps/p5lab/spritelab/lab2/migrateSources';
 import {SerializedAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 const listWith = (generation: object | undefined): SerializedAnimationList =>
@@ -51,5 +55,38 @@ describe('migrateAnimationList', () => {
     expect(migrateAnimationList(list)).toBe(false);
     expect(migrateAnimationList(undefined)).toBe(false);
     expect(migrateAnimationList({orderedKeys: [], propsByKey: {}})).toBe(false);
+  });
+
+  it("renames when_run to the lab's own hat, wherever it sits", () => {
+    const source = {
+      blocks: {
+        blocks: [
+          {
+            type: 'when_run',
+            next: {
+              block: {
+                type: 'gamelab_spriteSay',
+                inputs: {SPRITE: {shadow: {type: 'when_run'}}},
+              },
+            },
+          },
+          {type: 'gamelab_spriteClicked'},
+        ],
+      },
+    };
+    expect(migrateBlockTypes(source)).toBe(true);
+    expect(source.blocks.blocks[0].type).toBe('spritelab2_whenRun');
+    expect(source.blocks.blocks[0].next?.block.inputs.SPRITE.shadow.type).toBe(
+      'spritelab2_whenRun'
+    );
+    expect(source.blocks.blocks[1].type).toBe('gamelab_spriteClicked');
+    expect(migrateBlockTypes(source)).toBe(false);
+    expect(migrateBlockTypes(undefined)).toBe(false);
+    const scenes = [
+      {id: 'a', name: 'A', source: {blocks: {blocks: [{type: 'when_run'}]}}},
+      {id: 'b', name: 'B', source: {blocks: {blocks: []}}},
+    ];
+    expect(migrateScenes(scenes as never)).toBe(true);
+    expect(scenes[0].source.blocks.blocks[0].type).toBe('spritelab2_whenRun');
   });
 });

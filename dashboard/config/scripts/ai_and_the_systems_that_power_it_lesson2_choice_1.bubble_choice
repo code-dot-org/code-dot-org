@@ -1,0 +1,9 @@
+name 'ai-and-the-systems-that-power-it-lesson2-choice-1'
+display_name 'Hardware Metaphor'
+description 'Use both Sketch Lab and AI Image Generation to create the perfect metaphor for computer hardware'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson2-sketchlab-1'
+level 'ai-and-the-systems-that-power-it-lesson2-aichat-1'
+
+uses_lab2

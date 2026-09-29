@@ -1,11 +1,12 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Tags from '@code-dot-org/component-library/tags';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {ShowToast} from '@code-dot-org/component-library/toast';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -13,8 +14,10 @@ import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/Resour
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {toastOptionsFor} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import isFileTypeSupported from './isFileTypeSupported';
 import {onClickAddFile} from './onClickAddFile';
 import {
   fetchAndSaveFile,
@@ -24,28 +27,28 @@ import {
 
 import moduleStyles from './backpack-file-chip.module.scss';
 
+export const SHOW_RECENTLY_ADDED_DURATION_MS = 4000;
+
 interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
+  showToast: ShowToast;
   isRecentlyAdded?: boolean;
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
-  isSecondaryBackpack?: boolean;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
+  // Backpack this file came from, used to disambiguate same-named files.
+  appType?: string;
+  // Display name for the Lab this file was saved from, shown when another backpack holds the same name.
+  sourceDisplayName?: string;
 }
-
-const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
 
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   fileName,
   backpackApi,
   addAlert,
+  showToast,
   validateFileName,
   saveFileToProject,
   createNewProjectFile,
@@ -54,12 +57,13 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   supportedFileTypes,
   disableActions,
   setActionInProgress,
-  isSecondaryBackpack,
-  onImageFlagged,
+  appType,
+  sourceDisplayName,
   addFileTooltipText = 'Add to project',
   addFileHandler,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
+  const idSuffix = appType ? `-${appType}` : '';
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -72,12 +76,14 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   );
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
+  const {theme} = useTheme();
   const dialogControl = useDialogControl();
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const isFileSupported =
-    fileExtension && supportedFileTypes.includes(fileExtension);
+  const isFileSupported = isFileTypeSupported(fileName, supportedFileTypes);
   // If the parent tells us to, we are in read-only mode, or the file type is unsupported, disable the add button.
-  const addButtonDisabled = inReadOnly || !isFileSupported || disableActions;
+  // Also disable if we recently added the file, as we show the add button as a check mark temporarily.
+  const addButtonDisabled =
+    inReadOnly || !isFileSupported || disableActions || isRecentlyAdded;
   const addButtonTooltipText = useMemo(() => {
     if (!isFileSupported) {
       return 'File type not supported in this project';
@@ -85,13 +91,21 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       return 'An operation is currently in progress';
     } else if (inReadOnly) {
       return 'Cannot add files in read-only mode';
+    } else if (isRecentlyAdded) {
+      return 'New file!';
     } else {
       return addFileTooltipText;
     }
-  }, [disableActions, inReadOnly, isFileSupported, addFileTooltipText]);
+  }, [
+    isFileSupported,
+    disableActions,
+    inReadOnly,
+    isRecentlyAdded,
+    addFileTooltipText,
+  ]);
 
   const filePreviewUrl = useMemo(() => {
-    if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
+    if (fileExtension && SUPPORTED_IMAGE_EXTENSIONS.includes(fileExtension)) {
       const url = backpackApi.getFileFetchUrl(fileName);
       if (url) {
         return `${url}?cacheBust=${Date.now()}`;
@@ -104,7 +118,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
-  const handleAdd = async (isSecondaryBackpack?: boolean) => {
+  const handleAdd = async () => {
     // Use the addFileHandler if provided; otherwise fall back to default logic.
     if (addFileHandler) {
       onClickAddFile(
@@ -140,9 +154,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         createNewProjectFile,
         findIdForFileName,
         fileName,
-        newFileName,
-        onImageFlagged,
-        isSecondaryBackpack
+        newFileName
       );
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
@@ -156,8 +168,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         findIdForFileName,
         selectedFileName: fileName,
         newFileName: fileName,
-        onImageFlagged,
-        isSecondaryBackpack,
       });
     }
     setActionInProgress(false);
@@ -183,9 +193,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       backpackApi.deleteFiles(
         [fileName],
         error => {
-          addAlert(
-            'danger',
-            `Failed to delete ${fileName} from your Backpack.`
+          showToast(
+            `Couldn't delete ${fileName} from your Backpack. Please try again.`,
+            toastOptionsFor('danger')
           );
           Lab2Registry.getInstance()
             .getMetricsReporter()
@@ -194,6 +204,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         },
         () => {
           // TODO: log to statsig
+          showToast(
+            `${fileName} deleted from your Backpack.`,
+            toastOptionsFor('success')
+          );
           setActionInProgress(false);
           sendLab2AnalyticsEvent(EVENTS.DELETE_FROM_BACKPACK, {
             fileType: fileExtension || '',
@@ -223,60 +237,60 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           />
         </div>
       )}
-      <div className={moduleStyles.fileInfo} title={fileName}>
-        <Typography
-          className={moduleStyles.infoText}
-          variant="body3"
-          gutterBottom
-        >
-          <Typography variant="strong">{fileName}</Typography>
-        </Typography>
-        <Typography
-          className={moduleStyles.infoText}
-          variant="body4"
-          gutterBottom
-        >
-          {fileExtension?.toUpperCase()}
-        </Typography>
+      <div className={moduleStyles.fileInfo}>
+        <div className={moduleStyles.fileNameRow}>
+          <Typography
+            className={moduleStyles.infoText}
+            variant="body3"
+            gutterBottom
+            title={fileName}
+          >
+            <Typography variant="strong">{fileName}</Typography>
+          </Typography>
+          {sourceDisplayName && (
+            <Tooltip
+              title={`Saved from ${sourceDisplayName}`}
+              placement="top"
+              describeChild={false}
+              // We need to apply the theme because the tooltip is in a portal.
+              slotProps={{tooltip: {'data-theme': theme}}}
+            >
+              <button
+                type="button"
+                className={moduleStyles.sourceInfoButton}
+                aria-label={`Saved from ${sourceDisplayName}`}
+              >
+                <FontAwesomeV6Icon
+                  iconName="circle-info"
+                  iconStyle="solid"
+                  className={moduleStyles.sourceInfoIcon}
+                />
+              </button>
+            </Tooltip>
+          )}
+        </div>
       </div>
       <div className={moduleStyles.fileActions}>
-        {isRecentlyAdded ? (
-          <Tags
-            tagsList={[
-              {
-                tooltipId: `${fileName}-recently-added`,
-                label: 'Added',
-                tooltipContent: 'Added',
-                icon: {iconName: 'check', placement: 'left'},
-              },
-            ]}
-            size="s"
-          />
-        ) : (
-          <WithTooltip
-            tooltipProps={{
-              text: addButtonTooltipText,
-              tooltipId: `${fileName}-add-button-tooltip`,
-              direction: 'onTop',
-              size: 'xs',
-            }}
-          >
-            <div>
-              <MuiIconButton
-                variant="outlined"
-                color="tertiary"
-                size="extraSmall"
-                onClick={() => handleAdd(isSecondaryBackpack)}
-                type="button"
-                disabled={addButtonDisabled}
-              >
-                <FontAwesomeV6Icon iconName="plus" />
-              </MuiIconButton>
-            </div>
-          </WithTooltip>
-        )}
+        <Tooltip title={addButtonTooltipText} placement="top">
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
+          <div tabIndex={addButtonDisabled ? 0 : undefined}>
+            <MuiIconButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              onClick={handleAdd}
+              type="button"
+              aria-label={addButtonTooltipText}
+              disabled={addButtonDisabled}
+            >
+              <FontAwesomeV6Icon
+                iconName={isRecentlyAdded ? 'check' : 'plus'}
+              />
+            </MuiIconButton>
+          </div>
+        </Tooltip>
         <ActionDropdown
-          name={`backpack-options-${fileName}`}
+          name={`backpack-options-${fileName}${idSuffix}`}
           options={[
             {
               value: 'delete',
@@ -286,7 +300,11 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
               icon: {iconName: 'trash', iconStyle: 'solid'},
             },
           ]}
-          labelText={`${fileName} options`}
+          labelText={
+            sourceDisplayName
+              ? `${fileName} from ${sourceDisplayName} options`
+              : `${fileName} options`
+          }
           size={'xs'}
           triggerButtonProps={{
             color: 'tertiary',

@@ -147,7 +147,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
-        Honeybadger.notify(
+        Observability::Errors.report(
           error_class: 'User creation required multiple attempts',
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
@@ -170,7 +170,7 @@ class RegistrationsController < Devise::RegistrationsController
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
-          Honeybadger.notify(
+          Observability::Errors.report(
             exception,
             error_message: 'Failed to add user to welcome series',
             context: {
@@ -463,8 +463,7 @@ class RegistrationsController < Devise::RegistrationsController
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
-    @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user)
-    @personal_account_linking_enabled = false if current_user.student? && (@is_usa && current_user.country_code.nil?)
+    @personal_account_linking_enabled = Policies::ChildAccount.personal_account_linking_enabled?(current_user, request_in_usa: @is_usa)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if underage || !Policies::ChildAccount.has_required_information?(current_user)

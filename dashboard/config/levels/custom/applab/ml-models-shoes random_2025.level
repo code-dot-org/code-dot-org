@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:12:14.000Z",
   "level_num": "custom",
@@ -41,7 +42,6 @@
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
     "instructions_important": "false",
-    "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
@@ -71,11 +71,13 @@
     "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan](.././) for more information about how to support students in completing this level.",
     "name_suffix": "_2025",
     "ai_tutor_available": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:12:14.703+00:00\",\"changed\":[\"cloned from \\\"ml-models-shoes random_2024\\\"\"],\"cloned_from\":\"ml-models-shoes random_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:12:14.703+00:00\",\"changed\":[\"cloned from \\\"ml-models-shoes random_2024\\\"\"],\"cloned_from\":\"ml-models-shoes random_2024\"},{\"changed_at\":\"2026-08-26 17:13:48 +0000\",\"changed\":[\"hide_view_data_button\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-26 17:15:34 +0000\",\"changed\":[\"hide_view_data_button\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

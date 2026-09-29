@@ -1,23 +1,38 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import type {
   PayloadAction,
+  Slice,
+  SliceCaseReducers,
   ThunkAction,
   ThunkDispatch,
   AnyAction,
-  Slice,
 } from '@reduxjs/toolkit';
 import _ from 'lodash';
 
 import type {Lesson, Sublevel, UnitLevel} from '@code-dot-org/core/api';
-import {LevelKinds} from '@code-dot-org/core/api';
+import {ApiError, DashboardApiClient, LevelKinds} from '@code-dot-org/core/api';
+import {logger} from '@code-dot-org/core/plugins/observability';
 import type {StateFor, MockStore} from '@code-dot-org/core/redux';
 // Type-only import of the slice value binding; `typeof` recovers the slice
 // type without a runtime dependency on the users package.
 import type {currentUserSlice} from '@code-dot-org/users/redux';
 
-type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
+import type hiddenLessonSlice from './hiddenLessonSlice';
+import {authorizeLockable} from './lessonLockSlice';
+import type lessonLockSlice from './lessonLockSlice';
+
+type Store = MockStore<
+  [
+    typeof progressSlice,
+    typeof hiddenLessonSlice,
+    typeof lessonLockSlice,
+    typeof currentUserSlice,
+  ]
+>;
 type RootState = StateFor<Store>;
-type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
+/** The store the progress thunks and ProgressContainer are typed against. */
+export type ProgressStore = Store;
+export type ProgressRootState = RootState;
 type AsyncProgressThunkAction = ThunkAction<
   Promise<void>,
   RootState,
@@ -27,6 +42,14 @@ type AsyncProgressThunkAction = ThunkAction<
 type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
 import {
+  canChangeLevelInPage,
+  getLevelNavigationHooks,
+  levelPageUrl,
+} from '../levelNavigation';
+import {milestoneTimer} from '../MilestoneTimer';
+import {getInitialValidationState} from '../ProgressManager';
+import {
+  BubbleChoiceNavigationTypes,
   PUZZLE_PAGE_NONE,
   LevelStatuses,
   ProgressLevelTypes,
@@ -39,7 +62,6 @@ import type {
   InitProgressPayload,
   LevelResults,
   LevelStatus,
-  MilestoneReport,
   NumberedLevel,
   NumberedSublevel,
   OptionalMilestoneData,
@@ -49,6 +71,8 @@ import type {
   TestResult,
   UnitProgress,
   UnitProgressDefinition,
+  UserProgressResponse,
+  ValidationState,
   ViewType,
 } from '../types';
 
@@ -99,7 +123,9 @@ export const activityCssClass: (result: TestResult) => LevelStatus = result => {
  * Inverse of the above function.
  * Given a status string, returns a result value.
  */
-export const resultFromStatus: (status: LevelStatus) => TestResult = status => {
+export const resultFromStatus: (
+  status: LevelStatus | undefined,
+) => TestResult = status => {
   if (status === LevelStatuses.ReviewAccepted) {
     return TestResults.REVIEW_ACCEPTED_RESULT;
   }
@@ -155,6 +181,8 @@ export const processedLevel: (
     // Script level ID doesn't apply for sublevels. Set to undefined if we have a parent level.
     scriptLevelId: parentLevelId ? undefined : level.id,
     parentLevelId,
+    // Apps' name for display_as_unplugged; sublevels carry none.
+    isUnplugged: (level as UnitLevel).displayAsUnplugged,
     levelNumber:
       (level as UnitLevel).kind === LevelKinds.Unplugged
         ? undefined
@@ -193,7 +221,7 @@ const getPagesProgress: (
   serverProgress: UnitProgressDefinition,
 ) => UnitProgress[] | undefined = serverProgress => {
   if ((serverProgress.pages_completed?.length || 0) > 1) {
-    return serverProgress.pages_completed?.map((pageResult: TestResult) => {
+    return serverProgress.pages_completed?.map(pageResult => {
       const pageProgress =
         (pageResult && levelProgressFromResult(pageResult)) ||
         levelProgressFromStatus(LevelStatuses.NotTried);
@@ -267,8 +295,7 @@ export function processedLessons(lessons: Lesson[], isPlc: boolean) {
       lessonNumber = numLessonsWithLessonPlan;
     }
     return {
-      ...lesson,
-      hidden: false,
+      ..._.omit(lesson, 'hidden'),
       lessonNumber,
     };
   });
@@ -303,6 +330,9 @@ const initialState: ProgressState = {
   usingDbProgress: false,
   currentPageNumber: PUZZLE_PAGE_NONE,
   unitHasUnnumberedLessons: false,
+  // The current level's validation, as ProgressManager reports it. Instruction
+  // panels and continueOrFinishLesson read it.
+  validationState: getInitialValidationState(),
 };
 
 const _progressSlice = createSlice({
@@ -334,11 +364,16 @@ const _progressSlice = createSlice({
       state.unitStudentDescription = action.payload.unitStudentDescription;
       state.unitHasUnnumberedLessons = action.payload.unitHasUnnumberedLessons;
       state.courseId = action.payload.courseId;
+      state.courseName = action.payload.courseName;
       state.courseVersionId = action.payload.courseVersionId;
       state.currentLessonId = currentLessonId;
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
+    },
+    setValidationState(state, action: PayloadAction<ValidationState>) {
+      // A copy: ProgressManager keeps mutating the object it reported.
+      state.validationState = {...action.payload};
     },
     setCurrentLevelId(state, action: PayloadAction<number>) {
       state.currentLevelId = action.payload;
@@ -349,7 +384,7 @@ const _progressSlice = createSlice({
     setScriptProgress(
       state,
       action: PayloadAction<{
-        [levelId: number]: UnitProgress;
+        [levelId: number]: UnitProgressDefinition;
       }>,
     ) {
       state.unitProgress = processServerStudentProgress(action.payload);
@@ -375,6 +410,21 @@ const _progressSlice = createSlice({
         );
       });
       state.levelResults = newLevelResults;
+    },
+    mergeUnitProgress(
+      state,
+      action: PayloadAction<{levelId: number; result: TestResult}>,
+    ) {
+      const {levelId, result} = action.payload;
+      const existing = state.unitProgress[levelId];
+      const merged = existing
+        ? mergeActivityResult(existing.result, result)
+        : result;
+      state.unitProgress[levelId] = {
+        ...(existing || levelProgressFromStatus(LevelStatuses.NotTried)),
+        result: merged,
+        status: activityCssClass(merged),
+      };
     },
     overwriteResults(state, action: PayloadAction<LevelResults>) {
       state.levelResults = action.payload;
@@ -453,7 +503,14 @@ const _progressSlice = createSlice({
   },
 });
 
-const progressSlice: Slice<ProgressState> = _progressSlice;
+// The literal name matters: MockStore keys state by slice name, and a plain
+// Slice<ProgressState> widens it to string. Left inferred, the type names
+// immer internals and cannot be emitted in a declaration file.
+const progressSlice: Slice<
+  ProgressState,
+  SliceCaseReducers<ProgressState>,
+  'progress'
+> = _progressSlice;
 
 /**
  * Get the script level ID of the current level. If the current level is a sublevel,
@@ -524,8 +581,72 @@ export const levelById: (
 };
 
 /**
- * Helper method to send the milestone report to the backend API.
+ * Posts a milestone for a level of the current lesson and, once the server
+ * takes it, merges the result into the store. A bubble choice sublevel's
+ * result also lands on its parent, as the server records it there too.
  */
+function sendReportForLevel(
+  levelId: number,
+  appType: string,
+  result: TestResult,
+  dispatch: AppDispatch,
+  getState: () => RootState,
+  extraData?: OptionalMilestoneData,
+) {
+  const state = getState().progress;
+  const level = levelById(state, state.currentLessonId, levelId);
+  if (!level) {
+    return Promise.resolve();
+  }
+  const parentLevelId = level.parentLevelId;
+  const scriptLevelId = parentLevelId
+    ? levelById(state, state.currentLessonId, parentLevelId)?.scriptLevelId
+    : level.scriptLevelId;
+  if (!scriptLevelId) {
+    return Promise.resolve();
+  }
+
+  const courseId = state.courseId;
+  const request = {
+    // The controller reads identity from the session, never this segment.
+    userId: 0,
+    scriptLevelId,
+    levelId,
+    app: appType,
+    result: true,
+    testResult: result,
+    ...extraData,
+    timeSinceLastMilestone: milestoneTimer.getTimeSinceLastMilestone(),
+    ...(courseId && {courseId}),
+  };
+
+  return DashboardApiClient.activities.reportMilestone(request).then(
+    () => {
+      dispatch(mergeResults({[levelId]: result}));
+      dispatch(mergeUnitProgress({levelId, result}));
+      if (parentLevelId) {
+        dispatch(mergeResults({[parentLevelId]: result}));
+        dispatch(mergeUnitProgress({levelId: parentLevelId, result}));
+      }
+      // The next milestone's time counts from this one.
+      milestoneTimer.resetMilestoneTimer();
+    },
+    (error: unknown) => {
+      // An HTTP error status is the server declining the post (milestones
+      // disabled, a locked lesson); apps does not log those either. Anything
+      // else is the request failing to complete.
+      if (error instanceof ApiError) {
+        return;
+      }
+      logger.warn('Failed to send milestone report', {
+        url: `/milestone/0/${scriptLevelId}/${levelId}`,
+        error: error instanceof Error ? error.message : String(error),
+      });
+    },
+  );
+}
+
+/** Posts a milestone for the current level. */
 function sendReportHelper(
   appType: string,
   result: TestResult,
@@ -538,42 +659,14 @@ function sendReportHelper(
   if (!state.currentLessonId || !levelId) {
     return Promise.resolve();
   }
-  const scriptLevelId = getCurrentScriptLevelId(getState());
-  if (!scriptLevelId) {
-    return Promise.resolve();
-  }
-
-  // The server does not appear to use the user ID parameter,
-  // so just pass 0, like some other milestone posts do.
-  const userId = 0;
-  extraData = extraData || {};
-
-  const data: MilestoneReport = {
-    app: appType,
-    result: true,
-    testResult: result,
-    ...extraData,
-  };
-
-  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  }).then(response => {
-    if (response.ok && levelId !== null) {
-      // Update the progress store by merging in this
-      // particular result immediately.
-      dispatch(mergeResults({[levelId]: result}));
-      // If the level is the sublevel of a bubble level,
-      // also update the status of the parent level.
-      const currentLevel = getCurrentLevel(getState());
-      if (currentLevel?.parentLevelId) {
-        dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
-      }
-    }
-  });
+  return sendReportForLevel(
+    levelId,
+    appType,
+    result,
+    dispatch,
+    getState,
+    extraData,
+  );
 }
 
 // Thunks
@@ -588,11 +681,35 @@ export const getProgressLevelType: (
 };
 
 /**
- * Get the next level ID in the progression if it exists.
- * Returns undefined if not currently in a script level or
- * currently on the last level.
+ * Get the parent level of the current level, if the current level is a
+ * bubble choice sublevel.
  */
-export const nextLevelId: (state: RootState) => number | undefined = state => {
+export const getParentLevel: (
+  state: RootState,
+) => NumberedLevel | undefined = state => {
+  const currentLevel = getCurrentLevel(state);
+  if (currentLevel?.parentLevelId) {
+    return levelById(
+      state.progress,
+      state.progress.currentLessonId,
+      currentLevel.parentLevelId,
+    );
+  }
+};
+
+/**
+ * Get the next level in the progression, if it exists.
+ *
+ * A bubble choice sublevel's navigationType decides where it goes: the level
+ * after its parent (next_level), the matching sublevel of that level
+ * (next_sublevel), or back to its parent (parent, the default).
+ *
+ * Returns undefined if not currently in a script level or currently on the
+ * last level.
+ */
+export const getNextLevel: (
+  state: RootState,
+) => NumberedLevel | undefined = state => {
   if (getProgressLevelType(state) !== ProgressLevelTypes.ScriptLevel) {
     return;
   }
@@ -602,27 +719,61 @@ export const nextLevelId: (state: RootState) => number | undefined = state => {
     state.progress.currentLessonId,
   );
   const currentLevel = getCurrentLevel(state);
-  // If we are on a sublevel, navigate back to the parent level.
-  if (currentLevel?.parentLevelId) {
-    return currentLevel.parentLevelId;
-  }
-  const currentLevelIndex = (currentLevel?.levelNumber || 0) - 1;
-  if (currentLevelIndex === levels.length - 1) {
+  if (!currentLevel) {
     return;
   }
 
-  const nextLevel = levels[currentLevelIndex + 1];
-  return nextLevel.id;
+  const parentLevel = currentLevel.parentLevelId
+    ? getParentLevel(state)
+    : undefined;
+
+  // A sublevel navigates from its parent's position in the lesson.
+  const navigationLevelIndex = levels.findIndex(
+    level => level.id === (parentLevel ? parentLevel.id : currentLevel.id),
+  );
+  const isLastLevel = navigationLevelIndex === levels.length - 1;
+  const nextLevel = isLastLevel ? undefined : levels[navigationLevelIndex + 1];
+
+  const navigationType = (currentLevel as {navigationType?: string})
+    .navigationType;
+  if (
+    !parentLevel ||
+    navigationType === BubbleChoiceNavigationTypes.NextLevel
+  ) {
+    return nextLevel;
+  }
+
+  if (navigationType === BubbleChoiceNavigationTypes.NextSublevel) {
+    const sublevelIndex = (parentLevel.sublevels || []).findIndex(
+      sublevel => sublevel.id === currentLevel.id,
+    );
+    return nextLevel?.sublevels?.[sublevelIndex] || nextLevel;
+  }
+
+  return parentLevel;
 };
 
+/**
+ * Get the next level ID in the progression if it exists.
+ * Returns undefined if not currently in a script level or
+ * currently on the last level.
+ */
+export const nextLevelId: (state: RootState) => number | undefined = state =>
+  getNextLevel(state)?.id;
+
 // Navigate to the next level in the progression, if it exists.
-export function navigateToNextLevel(): ProgressThunkAction {
-  return (dispatch, getState) => {
+export function navigateToNextLevel(): ThunkAction<
+  Promise<void>,
+  RootState,
+  undefined,
+  AnyAction
+> {
+  return async (dispatch, getState) => {
     const levelId = nextLevelId(getState());
     if (levelId === undefined) {
       return;
     }
-    dispatch(navigateToLevelId(levelId));
+    await dispatch(navigateToLevelId(levelId));
   };
 }
 
@@ -742,14 +893,31 @@ const levelWithProgress: (
   } as NumberedLevel;
 };
 
+/** The progress fields that decide a level's status and current flag. */
+export type LevelProgressState = Pick<
+  RootState['progress'],
+  'unitProgress' | 'levelResults' | 'currentLevelId'
+> & {
+  levelPairing?: {[key: string]: boolean};
+};
+
 /**
  * Get data for a particular lesson
  */
 export const levelsForLessonId: (
   state: RootState['progress'],
   lessonId: number | undefined,
-) => NumberedLevel[] = (state, lessonId) => {
-  const lesson = state.lessons?.find(lesson => lesson.id === lessonId);
+) => NumberedLevel[] = (state, lessonId) =>
+  levelsForLesson(
+    state,
+    state.lessons?.find(lesson => lesson.id === lessonId),
+  );
+
+/** A lesson's levels, with their status and whether each is current. */
+export const levelsForLesson: (
+  state: LevelProgressState,
+  lesson: Lesson | undefined,
+) => NumberedLevel[] = (state, lesson) => {
   return (lesson?.levels || []).map((lessonLevel, i) =>
     levelWithProgress(
       state,
@@ -799,18 +967,17 @@ export const setWindowTitle: (
   const lesson = progressStoreState.lessons?.find(
     lesson => lesson.id === progressStoreState.currentLessonId,
   );
-  const numLessons = lesson?.levels?.length || 0;
-  const lessonName = lesson?.title || 'Lesson';
+  if (!lesson) {
+    return;
+  }
   const lessonIndex =
-    (lesson?.levels || []).findIndex(
-      lessonLevel => lessonLevel.position === newLevelId,
-    ) + 1;
+    lesson.levels.findIndex(level => level.activeId === newLevelId) + 1;
   const scriptDisplayName = progressStoreState.scriptDisplayName;
 
   document.title =
-    numLessons > 1
-      ? `${lessonName} #${lessonIndex} | ${scriptDisplayName} - Code.org`
-      : `${lessonName} #${lessonIndex} - Code.org`;
+    lesson.numScriptLessons > 1
+      ? `${lesson.name} #${lessonIndex} | ${scriptDisplayName} - CodeAI`
+      : `${lesson.name} #${lessonIndex} - CodeAI`;
 };
 
 // Handles a user navigation to a new level, by pushing this new level's URL
@@ -824,10 +991,12 @@ export const updateBrowserForLevelNavigation: (
   setWindowTitle(progressStoreState, levelId);
 };
 
-// The user has navigated to a new level in the current lesson,
-// so we should update the browser and also set this as the new
-// current level.
-export function navigateToLevelId(levelId: number): ProgressThunkAction {
+// The user has navigated to a new level in the current lesson. Between levels
+// that can share the page, update the browser and set the new current level;
+// otherwise leave the page for the new level.
+export function navigateToLevelId(
+  levelId: number,
+): ThunkAction<Promise<void>, RootState, undefined, AnyAction> {
   return async (dispatch, getState) => {
     const state = getState().progress;
     if (!state.currentLessonId || !state.currentLevelId) {
@@ -837,13 +1006,34 @@ export function navigateToLevelId(levelId: number): ProgressThunkAction {
     if (!newLevel) {
       return;
     }
-
-    // If the requested level is the same as the current level, don't do anything.
+    // Apps asked for confirmation before this check, so a click on the
+    // current level could prompt for nothing.
     if (state.currentLevelId === levelId) {
       return;
     }
-    updateBrowserForLevelNavigation(state, newLevel.url, levelId);
+
+    const hooks = getLevelNavigationHooks();
+    if (hooks.confirmNavigation && !(await hooks.confirmNavigation())) {
+      return;
+    }
+
+    const currentLevel = getCurrentLevel(getState());
+    const canNavigateInPage = hooks.canNavigateInPage ?? canChangeLevelInPage;
+    if (!canNavigateInPage(currentLevel, newLevel)) {
+      await hooks.beforeLeavingPage?.(currentLevel);
+      const url = levelPageUrl(newLevel.path);
+      if (hooks.leavePage) {
+        hooks.leavePage(url);
+      } else {
+        window.location.href = url;
+      }
+      return;
+    }
+
+    updateBrowserForLevelNavigation(state, newLevel.path, levelId);
+    hooks.onLevelChange?.(state.currentLevelId, levelId);
     dispatch(setCurrentLevelId(levelId));
+    milestoneTimer.resetMilestoneTimer();
   };
 }
 
@@ -856,7 +1046,7 @@ export const sendSubmitReport = createAsyncThunk<
   }
 >('progress/sendSubmitReport', async (payload, thunkAPI) => {
   const extraPayload = {
-    submitted: payload.submitted.toString(),
+    submitted: payload.submitted,
   };
   const result = payload.submitted
     ? TestResults.SUBMITTED_RESULT
@@ -885,6 +1075,59 @@ export function sendSuccessReport(appType: string): AsyncProgressThunkAction {
   };
 }
 
+/**
+ * Reports a level other than the current one as complete: a free play level
+ * or a bubble choice sublevel finished from elsewhere on the page.
+ */
+export function sendSuccessReportForLevel(
+  levelId: number,
+  appType: string,
+): AsyncProgressThunkAction {
+  return (dispatch, getState) =>
+    sendReportForLevel(
+      levelId,
+      appType,
+      TestResults.ALL_PASS,
+      dispatch,
+      getState,
+    );
+}
+
+/** Reports any result, such as TestResults.LEVEL_STARTED, for the current level. */
+export function sendProgressReport(
+  appType: string,
+  result: TestResult,
+): AsyncProgressThunkAction {
+  return (dispatch, getState) =>
+    sendReportHelper(appType, result, dispatch, getState);
+}
+
+// Leading edge only: the first call in a burst reports; the rest are dropped.
+const debouncedSendStartedReport = _.debounce(
+  (dispatch: AppDispatch, getState: () => RootState, appType: string) => {
+    // A report that landed since the call may already have moved the status.
+    if (getCurrentLevel(getState())?.status === LevelStatuses.NotTried) {
+      dispatch(sendProgressReport(appType, TestResults.LEVEL_STARTED));
+    }
+  },
+  100,
+  {leading: true, trailing: false},
+);
+
+/**
+ * Reports the current level as started, once, if the user has not tried it:
+ * the first edit or run moves its bubble off not-tried.
+ */
+export function sendStartedReportIfNotStarted(
+  appType: string,
+): ThunkAction<void, RootState, undefined, AnyAction> {
+  return (dispatch, getState) => {
+    if (getCurrentLevel(getState())?.status === LevelStatuses.NotTried) {
+      debouncedSendStartedReport(dispatch, getState, appType);
+    }
+  };
+}
+
 export const sendPredictLevelReport = createAsyncThunk<
   void,
   {appType: string; predictResponse: string},
@@ -907,14 +1150,14 @@ export const sendPredictLevelReport = createAsyncThunk<
 
 /**
  * Requests user progress from the server and dispatches other redux actions
- * based on the server's response data.
+ * based on the server's response data. Resolves with the response body.
  */
-const userProgressFromServer = (
+const userProgressFromServer = async (
   state: ProgressState,
   dispatch: AppDispatch,
   userId: string | null = null,
   mergeProgress: boolean,
-) => {
+): Promise<UserProgressResponse> => {
   if (!state.scriptName) {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
     throw new Error(message);
@@ -926,81 +1169,78 @@ const userProgressFromServer = (
     dispatch(clearResults());
   }
 
-  return new Promise<void>((resolve, reject) => {
-    (async () => {
-      const response = await fetch(`/api/user_progress/${state.scriptName}`, {
-        body: JSON.stringify({
-          user_id: userId,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+  // Core's schema types level statuses as strings; the server sends
+  // SharedConstants::LEVEL_STATUS values, which UserProgressResponse names.
+  const data = (await DashboardApiClient.progress.getUserProgress({
+    scriptName: state.scriptName,
+    userId: userId || undefined,
+  })) as UserProgressResponse;
+  if (!data || _.isEmpty(data)) {
+    return data;
+  }
 
-      if (!response.ok) {
-        reject();
-        return;
-      }
+  // We are on an overview page if currentLevelId is undefined.
+  const onOverviewPage = !state.currentLevelId;
+  // Show lesson plan links and other teacher info if instructor and on unit overview page.
+  if (
+    (data.isInstructor || data.teacherViewingStudent) &&
+    !data.deeperLearningCourse &&
+    onOverviewPage
+  ) {
+    // Default to summary view if teacher is viewing their student, otherwise default to detail view.
+    dispatch(setIsSummaryView(!!data.teacherViewingStudent));
+  }
 
-      const data = await response.json();
+  if (data.focusAreaLessonIds) {
+    dispatch(
+      updateFocusArea(data.changeFocusAreaPath || '', data.focusAreaLessonIds),
+    );
+  }
 
-      if (!data || _.isEmpty(data)) {
-        return;
-      }
+  dispatch(authorizeLockable(data.lockableAuthorized));
 
-      // We are on an overview page if currentLevelId is undefined.
-      const onOverviewPage = !state.currentLevelId;
-      // Show lesson plan links and other teacher info if instructor and on unit overview page.
-      if (
-        (data.isInstructor || data.teacherViewingStudent) &&
-        !data.deeperLearningCourse &&
-        onOverviewPage
-      ) {
-        // Default to summary view if teacher is viewing their student, otherwise default to detail view.
-        dispatch(setIsSummaryView(data.teacherViewingStudent));
-      }
+  if (data.completed) {
+    dispatch(setScriptCompleted());
+  }
 
-      if (data.focusAreaLessonIds) {
-        dispatch(
-          updateFocusArea(data.changeFocusAreaPath, data.focusAreaLessonIds),
-        );
-      }
+  // Merge progress from server
+  if (data.progress) {
+    dispatch(setScriptProgress(data.progress));
 
-      if (data.completed) {
-        dispatch(setScriptCompleted());
-        resolve();
-      }
+    if (mergeProgress) {
+      // Note that we set the full progress object above in redux but also set
+      // a map containing just level results. This is the legacy code path and
+      // the goal is to eventually update all code paths to use unitProgress
+      // instead of levelResults.
+      const levelResults: LevelResults = _.mapValues(
+        data.progress,
+        getLevelResult,
+      );
+      dispatch(mergeResults(levelResults));
+    }
 
-      // Merge progress from server
-      if (data.progress) {
-        dispatch(setScriptProgress(data.progress));
+    if (data.peerReviewsPerformed) {
+      dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+    }
 
-        if (mergeProgress) {
-          // Note that we set the full progress object above in redux but also set
-          // a map containing just level results. This is the legacy code path and
-          // the goal is to eventually update all code paths to use unitProgress
-          // instead of levelResults.
-          const levelResults: LevelResults = _.mapValues(
-            data.progress,
-            getLevelResult,
-          ) as unknown as LevelResults;
-          dispatch(mergeResults(levelResults));
-        }
+    if (data.current_lesson) {
+      dispatch(setCurrentLessonId(data.current_lesson));
+    }
+  }
 
-        if (data.peerReviewsPerformed) {
-          dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
-        }
-
-        if (data.current_lesson) {
-          dispatch(setCurrentLessonId(data.current_lesson));
-        }
-      }
-    })();
-  });
+  return data;
 };
 
 export const queryUserProgress =
-  (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
+  (
+    userId: string,
+    mergeProgress: boolean = true,
+  ): ThunkAction<
+    Promise<UserProgressResponse>,
+    RootState,
+    undefined,
+    AnyAction
+  > =>
   (dispatch, getState) => {
     const state = getState().progress;
     return userProgressFromServer(state, dispatch, userId, mergeProgress);
@@ -1008,12 +1248,14 @@ export const queryUserProgress =
 
 export const {
   initProgress,
+  setValidationState,
   setCurrentLevelId,
   setStandaloneProjectType,
   setScriptProgress,
   clearResults,
   useDbProgress,
   mergeResults,
+  mergeUnitProgress,
   overwriteResults,
   mergePeerReviewProgress,
   updateFocusArea,

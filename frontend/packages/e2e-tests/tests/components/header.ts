@@ -120,6 +120,33 @@ export class HeaderComponent {
     await expect(this.user).toBeVisible();
   }
 
+  /** HeaderMiddle.jsx fades #header_middle_content in over 0.4s on mount. */
+  async waitForFadeIn(): Promise<void> {
+    await expect(this.page.locator('#header_middle_content')).toHaveCSS(
+      'opacity',
+      '1',
+    );
+  }
+
+  /**
+   * Relayout against the loaded web fonts; no-op where this header never
+   * mounts. A different signal from waitForFadeIn, and a costlier one — this
+   * polls page.evaluate, so keep it out of hot boot paths.
+   */
+  async waitForSettled(): Promise<void> {
+    await expect
+      .poll(() =>
+        this.page.evaluate(() => {
+          const de = document.documentElement;
+          return (
+            de.dataset.headerPresent !== 'true' ||
+            de.dataset.headerFontsRelaidOut === 'true'
+          );
+        }),
+      )
+      .toBe(true);
+  }
+
   /** Wait until the signed-in user menu (#header_user_menu) is visible. */
   async waitForSignedIn(): Promise<void> {
     await expect(this.userMenu).toBeVisible();

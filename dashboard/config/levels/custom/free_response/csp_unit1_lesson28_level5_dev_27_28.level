@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-01T15:38:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "## Check Your Understanding\r\n\r\nLook at the code below:\r\n\r\n```python\r\nfrom random import randint\r\n\r\nroll = randint(1, 20)\r\nprint(roll)\r\n```\r\n\r\n\r\nA student says, \"This program can only print numbers between 2 and 19 because 1 and 20 are the boundaries.\"\r\n\r\nDo you agree or disagree? Explain your answer using what you know about `randint()`.\r\n",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "200",
+    "encrypted_solution": "HQYIWqXKHiMGUkkM1ve9bTKpf2Os8QnXPewrOn//2QTFvznGZY7sS7ccwIZy\nbeR0qikt6Iu/VdKeJ03DvvPs3iiCyQujQJe/jto3bsKr+sER3Ha1Kk4M+GUb\npogP/hvYEC4DaoKK0PuX9xPSTqfsW8kNmrR5O+G04xoRV9qTckBsaw0B1G1B\nOn1vHwB8jxlb4OmsQZyAJwjS/0srEv9dq9Cq4MM15PJ3Q6lL4gM9yEWn1gfw\nzp4pVDlgD5y9xZXvxm82nBYuJ+7LUW1YfxXyq7yuz1pqQGMHjMkxyxm2Xuyi\nWQxjwB4KjyBkAM8fX5Z6\n",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-01 16:49:34 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:49:55 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

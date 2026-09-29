@@ -119,12 +119,10 @@ describe('ProgressBubble', () => {
     expect(style.borderColor).to.equal('var(--background-success-primary)');
   });
 
-  it('has a green border and light green background for too many blocks level', () => {
+  it('has a mid-green border and background for too many blocks level', () => {
     const style = styleForStatus(LevelStatus.passed);
-    expect(style.backgroundColor).to.equal(
-      'var(--background-success-extra-light)'
-    );
-    expect(style.borderColor).to.equal('var(--background-success-primary)');
+    expect(style.backgroundColor).to.equal('var(--background-success-mid)');
+    expect(style.borderColor).to.equal('var(--background-success-mid)');
   });
 
   it('has a green background for submitted level', () => {

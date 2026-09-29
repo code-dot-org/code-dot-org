@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T20:33:49.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "65a4f94d-ece2-4195-b208-e1665fea4c93": {
+          "id": "65a4f94d-ece2-4195-b208-e1665fea4c93",
+          "name": "main.py",
+          "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\n\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncopon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - copon\ntotal_cents = round(subtotal * 1.18 * 100)\n\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\nprint(\"Whoever picked the shop covers the leftover!\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "65a4f94d-ece2-4195-b208-e1665fea4c93"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Run `main.py` with the inputs from the previous step\r\n- Compare the actual output with your predicted output\r\n- Run `main.py` again, entering 'four' when prompted for the number of drinks\r\n- Run `main.py` a third time, entering 0 when prompted for the number of friends\r\n- In `main.py`, find the line `print(\"Each person pays: $\" + str(per_person / 100))` and remove `str()`\r\n- Run the modified `main.py`\r\n- Observe and understand the different error messages produced by these 'adversarial' inputs",
+    "encrypted_exemplar_sources": "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\n",
+    "generate_outline": "Run the Boba Run Splitter program with the predicted inputs and reconcile differences. Perform adversarial runs with inputs: 'four' for drinks (ValueError), 0 for friends (ZeroDivisionError), and by deleting one `str()` in an output line (TypeError)."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:33:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:33:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:35:03 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:35:03 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -10,6 +10,7 @@
 #  editor_font_size  :json
 #  console_font_size :json
 #  theme             :json
+#  editor_settings   :json
 #
 # Indexes
 #

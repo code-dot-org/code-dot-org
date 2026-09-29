@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T19:47:35.000Z",
   "level_num": "custom",
@@ -29,8 +28,10 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoSZpvSnsCSRuWo\nnmjST0OqxNneG5hO627PwIWQmDj68kfP+qmYFTGdsVr1dWawTNUNERq2UENh\n0hDJ2nqOoun9kA8LypRCcMNihxmsmnW+u0F3SFgqc3id3zdcud/jcla57A4f\nO1e4+ja8VUAtD1qXKtxamjLUWVK3XzXTyij3shp7SwZrzl1AWXADhpsV2oRL\nZPnLiI9ikPTeMugChIjCwQZuKgYgU+K0Of+qyQrKMlHwCWxXb+wcTcdfjUGx\niMLZ3gmtlY9XiH99ie3fT8aAlyNN/yHKZJ1BWvMDGEbkhrpkZUJuitbiqkoo\nEfCqHNOlvveMRJqPyhZIwGmWlJNQrliiePVVzu25SIZ/mCzp55xF3e1cAbD9\nO6aPwebiHbXN6A5vrpf2YZ7nEx92BCbRDv0hQ76x3GiVUlBAPWnM1SfEi2cY\nPtjQVl7x2IiyYVKectK9TmtaB8qMa9yXvIx+EnoY32yyI+5nWtiqcFZMV7/t\noIP+9flTh9SSYWPOgOwwDT7whkIbEO2YFcZHSUUNtATUXa4EHROnOTGD0inJ\nF5BBL9k8Mb9Pjzc64ca23a0=\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 19:53:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 19:53:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:26:27 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

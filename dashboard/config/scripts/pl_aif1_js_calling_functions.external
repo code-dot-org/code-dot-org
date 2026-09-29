@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 <p>Here's the exact same behavior, adding one to a notification count, written both ways.</p>
 
 <div style="margin: 20px 0;">
-  <div style="font-size: 12px; font-weight: 700; color: #4C42CF; margin-bottom: 8px;">NAMED: defined once, called by name</div>
+  <div style="font-size: 16px; font-weight: 700; color: #4C42CF; margin-bottom: 8px;">NAMED: defined once, called by name</div>
   <div style="background-color: #2B2745; border-radius: 8px; padding: 14px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.8;">
 const addNotification = () =&gt; {<br>
 &nbsp;&nbsp;notifications = notifications + 1;<br>
@@ -22,7 +22,7 @@ bellButton.addEventListener("click", addNotification);
 </div>
 
 <div style="margin: 20px 0;">
-  <div style="font-size: 12px; font-weight: 700; color: #ACA8EA; margin-bottom: 8px;">ANONYMOUS: written directly where it's used</div>
+  <div style="font-size: 16px; font-weight: 700; color: #4c42cf; margin-bottom: 8px;">ANONYMOUS: written directly where it's used</div>
   <div style="background-color: #2B2745; border-radius: 8px; padding: 14px 16px; font-family: 'Courier New', monospace; font-size: 14px; color: #E4E2F8; line-height: 1.8;">
 bellButton.addEventListener("click", () =&gt; {<br>
 &nbsp;&nbsp;notifications = notifications + 1;<br>
@@ -30,7 +30,16 @@ bellButton.addEventListener("click", () =&gt; {<br>
   </div>
 </div>
 
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 20px 0;">
+<p>You might recognize this from Lesson 4's event handler example. That was an anonymous function too, you just hadn't learned the term yet.</p>
+</div>
+
 <p>Both do exactly the same thing. The difference is where the code lives. The named version is defined separately, so it can be called again anywhere, like the two buttons sharing <code>addNotification</code> from the panel. The anonymous version is written directly inside the one place it's used, since it's never going to be called from anywhere else, it doesn't need a name to be called by.</p>
+
+
+## What's the benefit?
+
+<p>Two things: less code, since there's no separate name and declaration to write for something used exactly once, and better locality, the logic sits right where it's triggered, so anyone reading the code doesn't have to jump somewhere else in the file to see what a click actually does. That tradeoff only holds up when the behavior really is one-and-done. The moment it needs to run from a second place, it should get a name.</p>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
 <p><strong>💡 Teacher tip:</strong> think about it like this: if someone is anonymous, you can't call their name to get their attention. But if you know someone's name, you can call them anytime you need them. Named functions work the same way, we can call them again later. That distinction is often the fastest way to get this to click for students.</p>

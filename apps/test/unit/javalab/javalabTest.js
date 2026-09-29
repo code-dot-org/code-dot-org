@@ -1,4 +1,5 @@
 import project from '@cdo/apps/code-studio/initApp/project';
+import {ExecutionType} from '@cdo/apps/javalab/constants';
 import Javalab from '@cdo/apps/javalab/Javalab';
 import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
 import {
@@ -79,6 +80,44 @@ describe('Javalab', () => {
       expect(eventStub.returnValue).toBe('');
 
       project.hasOwnerChangedProject.mockRestore();
+    });
+  });
+
+  describe('onRun and onTest', () => {
+    beforeEach(() => {
+      javalab.level = {validation: {}};
+      jest.spyOn(javalab, 'executeJavabuilder').mockImplementation();
+    });
+
+    it('onRun resets the mini app before executing', () => {
+      javalab.miniApp = {reset: jest.fn()};
+
+      javalab.onRun();
+
+      expect(javalab.miniApp.reset).toHaveBeenCalledTimes(1);
+      expect(javalab.executeJavabuilder).toHaveBeenCalledWith(
+        ExecutionType.RUN
+      );
+    });
+
+    it('onTest also resets the mini app before executing', () => {
+      // Regression test: a Test that follows a Run must clear the mini
+      // app's state (e.g. Neighborhood's queued signals), or it can land
+      // on state left over from the Run and never show new results.
+      javalab.miniApp = {reset: jest.fn()};
+
+      javalab.onTest();
+
+      expect(javalab.miniApp.reset).toHaveBeenCalledTimes(1);
+      expect(javalab.executeJavabuilder).toHaveBeenCalledWith(
+        ExecutionType.TEST
+      );
+    });
+
+    it('onTest does not throw when there is no mini app', () => {
+      javalab.miniApp = null;
+
+      expect(() => javalab.onTest()).not.toThrow();
     });
   });
 

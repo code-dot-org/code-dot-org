@@ -323,10 +323,21 @@ module Cdo
     # @example Return an excluded path without a Global Edition prefix
     #   path("fa", "/shared/logo.png") => "/shared/logo.png"
     def self.path(region, path = '', locale: ::I18n.locale.to_s)
-      path = match_path(path)&.try(:[], :main_path) || path
+      path = unprefixed_path(path)
       return path if excluded_path?(path)
 
       "#{path_prefix(region, locale)}#{path}"
+    end
+
+    # Returns the path without the Global Edition prefix.
+    #
+    # @param path [String] The URL path to remove the Global Edition prefix from.
+    # @return [String] The URL path without the Global Edition prefix.
+    #
+    # @example
+    #   unprefixed_path("/in/hi/home") => "/home"
+    def self.unprefixed_path(path)
+      match_path(path)&.try(:[], :main_path) || path
     end
 
     def self.region_change_url(url, region = nil)

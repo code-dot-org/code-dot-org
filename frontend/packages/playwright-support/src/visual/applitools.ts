@@ -25,6 +25,14 @@ const EYES_CONFIG = {
   notifyOnCompletion: true,
 };
 
+/**
+ * When 'false', a visual diff is reported to the Eyes dashboard but does not
+ * fail the test. Temporary gating on the DTT model: PR lanes set this to
+ * 'false' so diffs only fail the post-merge staging run. Unset means true.
+ */
+const SHOULD_REPORT_FAILURE =
+  process.env.APPLITOOLS_SHOULD_REPORT_FAILURE !== 'false';
+
 /** One-per-worker warning when running locally without an API key. */
 let warnedAboutMissingKey = false;
 
@@ -107,11 +115,18 @@ export async function withApplitoolsCheck(
 
   try {
     await use(check);
-    // close(true) throws on diff so a mismatch fails the test loudly.
-    if (testInfo.status === 'passed') {
+    if (testInfo.status !== 'passed') {
+      await eyes.abort();
+    } else if (SHOULD_REPORT_FAILURE) {
+      // close(true) throws on diff so a mismatch fails the test loudly.
       await eyes.close(true);
     } else {
-      await eyes.abort();
+      const results = await eyes.close(false);
+      if (results.status !== 'Passed') {
+        console.warn(
+          `[visual] Eyes diff not enforced: '${testInfo.title}' — ${results.url}`,
+        );
+      }
     }
   } catch (err) {
     await eyes.abort();

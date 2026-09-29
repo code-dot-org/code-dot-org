@@ -1,0 +1,107 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_atTime",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 3
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Click the other character!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "guide_steps": [
+      {
+        "text": "**Say something later.** Drag a **say** block onto the dotted outline under **at [3] seconds**. Click **Play** and wait for it."
+      },
+      {
+        "text": "**Perfect timing!** Click **Continue**.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
+      }
+    ],
+    "long_instructions": "# Say something later\nDrag a **say** block onto the dotted outline under **at [3] seconds**. Your character speaks 3 seconds in.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Click the other character!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

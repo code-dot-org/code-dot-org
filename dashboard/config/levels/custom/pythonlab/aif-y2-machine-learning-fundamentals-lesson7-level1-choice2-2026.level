@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T21:23:13.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Body Weight",
+    "long_instructions": "You’re a health researcher exploring a dataset used to predict body weight based on total calories consumed daily.\r\n\r\n**☑️ Do This:**\r\n\r\nThe code currently prints each value in the `calorie_totals` list. Write another for loop to print each value in the `weights` list.\r\n",
+    "bubble_choice_description": "Work with a dataset used to predict body weight based on calorie consumption.",
+    "thumbnail_url": "https://images.code.org/dace15236cbbef5177885e629bf83801-diet.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "calorie_totals = [2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000]\nweights = [138, 138, 176, 188, 208, 236, 238, 278]\n\nprint(\"Here are the calorie totals in the dataset:\")\nfor calorie_total in calorie_totals:\n  print(calorie_total)\n\n# TODO: Print each value in the weights list",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoN9AEbUbb/F7xe\nU7tbmNCCK3z9qYvn1oxiIkxpb3fvtNn0FZKq8MZy9VLjb2Irk3jWRsnNg3c+\nBwyY1itzNLaKPplOux5R4S2lfbDicIHgI1q54Uxm9vpoky6CtNqhPcyPbD2L\nNnblFLyCIt6hCpmI8Tf9r+n+PHBVv7lKLMJyGrB5NXIi2AZg6md2hS0RULxi\nwsq+u3JeWP1FJs+aXyGwM0u6Z5vx5aQTrqaabVVrPk150X945b+WzvCXfPOp\nIAvgxifGqbXyo/73awPhc4JKtDrOJuwbzHZ9Z3cV/ZcR7T9F9ALqQFvF81Ls\nKdFNVRbR0964qYKEuw+BUFx0LR0GWImWy0bI6mWRdmW36RU1JN+B2sE3SlfP\nBpdyMenUOYhouD7avycbUnX8l+crSk7scmbIBZF007dJiWuFlUuPcnnicJ3b\nEPlwfe7QSsTp3OXLsic1hVhbMV9oLbu1qncp8nHe+ZXMiEyqong+Bl2bLN/y\n5ge3mFYdSrQxmCY+eEx+h+riuhAAePzoKsle0Qi9Au50wF2zkAHOWqab3tbL\nbQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 21:23:19 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:23:29 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

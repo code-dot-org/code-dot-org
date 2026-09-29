@@ -96,6 +96,47 @@ describe('createUsersApi mutations target the right routes', () => {
     );
   });
 
+  it('updateProfile sends educator_role when the role changes', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateProfile({educatorRole: 'classroom_teacher'});
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/dashboardapi/users',
+        body: {user: {educator_role: 'classroom_teacher'}},
+      }),
+    );
+  });
+
+  it('updateSchoolInfo PATCHes /api/v1/user_school_infos with the built school data', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateSchoolInfo({
+      schoolId: '12345678',
+      country: 'US',
+      schoolName: 'Example High School',
+      schoolZip: '98101',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/api/v1/user_school_infos',
+        headers: {Accept: 'application/json'},
+        body: {user: {school_info_attributes: {school_id: '12345678'}}},
+      }),
+    );
+  });
+
+  it('updateSchoolInfo sends no request when the form builds no school data', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateSchoolInfo({
+      schoolId: '',
+      country: 'selectCountry',
+      schoolName: '',
+      schoolZip: '',
+    });
+    expect(request).not.toHaveBeenCalled();
+  });
+
   it('updateEmail PATCHes /users/email', async () => {
     const {api, request} = fakeTransport();
     await api.updateEmail({
@@ -105,6 +146,45 @@ describe('createUsersApi mutations target the right routes', () => {
     });
     expect(request).toHaveBeenCalledWith(
       expect.objectContaining({method: 'PATCH', url: '/users/email'}),
+    );
+  });
+
+  it('updateEmail sends the email opt-in answer when given', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateEmail({
+      newEmail: 'a@b.co',
+      hashedEmail: 'h',
+      currentPassword: 'pw',
+      emailOptIn: 'no',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: {
+          user: {
+            email: 'a@b.co',
+            hashed_email: 'h',
+            current_password: 'pw',
+            email_preference_opt_in: 'no',
+          },
+        },
+      }),
+    );
+  });
+
+  it('updateEmail omits the email opt-in when unanswered', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateEmail({
+      newEmail: 'a@b.co',
+      hashedEmail: 'h',
+      currentPassword: 'pw',
+      emailOptIn: '',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: {
+          user: {email: 'a@b.co', hashed_email: 'h', current_password: 'pw'},
+        },
+      }),
     );
   });
 

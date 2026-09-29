@@ -1,5 +1,7 @@
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
+import type {ExternalFileContents} from '../pythonHelpers/externalFileContents';
+
 // Message types exchanged between pyodideSandboxManager.ts (running on studio.code.org)
 // and pyodideSandboxWorkerManager.ts (running in a hidden iframe on the isolated
 // pyodide-sandbox.preview.<domain> origin, see getPreviewDomain()). Defined here so the
@@ -25,6 +27,8 @@ export interface PyodideSandboxRunMessage {
   python: string;
   source: MultiFileSource;
   validationFile?: ProjectFile;
+  // Bytes of the project's url-backed files.
+  externalFiles?: ExternalFileContents;
 }
 
 export interface PyodideSandboxSendingInputMessage {

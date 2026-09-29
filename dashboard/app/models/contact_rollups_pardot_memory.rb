@@ -24,28 +24,6 @@
 require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemory < ApplicationRecord
-  # All Pardot prospect fields we care about, used to sync
-  # contacts between the production database and Pardot.
-  # db_* are custom fields and sorted alphabetically.
-  # @see https://pi.pardot.com/prospectFieldCustom
-  PARDOT_FIELDS = %w(
-    id
-    email
-    opted_out
-    db_City
-    db_Country
-    db_Form_Roles
-    db_Forms_Submitted
-    db_Has_Teacher_Account
-    db_Hour_of_Code_Organizer
-    db_Opt_In
-    db_Postal_Code
-    db_Professional_Learning_Attended
-    db_Professional_Learning_Enrolled
-    db_Roles
-    db_State
-  ).freeze
-
   self.table_name = 'contact_rollups_pardot_memory'
 
   # Downloads and saves new email-Pardot ID mappings from Pardot.
@@ -71,56 +49,6 @@ class ContactRollupsPardotMemory < ApplicationRecord
         import! batch,
           validate: false,
           on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
-      end
-    end
-  end
-
-  # Downloads and saves prospect data from Pardot.
-  # *Warning:* This method overwrites existing data.
-  #
-  # @param [Integer] last_id retrieves only Pardot ID greater than this value
-  # @param [Integer] limit the maximum number of Pardot prospects to download
-  def self.download_pardot_prospects(last_id = nil, limit = nil)
-    last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
-
-    PardotV2.retrieve_prospects(last_id, PARDOT_FIELDS, limit) do |prospects|
-      current_time = Time.now.utc
-      batch = prospects.map do |item|
-        {
-          email: item['email'],
-          pardot_id: item['id'].to_i,
-          pardot_id_updated_at: current_time,
-          data_synced: item.except('email', 'id'),
-          data_synced_at: current_time
-        }
-      end
-
-      transaction do
-        import! batch,
-          validate: false,
-          on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
-      end
-    end
-  end
-
-  def self.download_deleted_pardot_prospects(last_id = nil, limit = nil)
-    # Find emails that have been deleted in Pardot and mark them as such in our db.
-    # Don't need to download prospect data because Pardot data is derived from our
-    # production data. We have the source of truth to recreate those contacts if needed.
-    PardotV2.retrieve_prospects(last_id, %w(id email), limit, only_deleted: true) do |deleted_prospects|
-      current_time = Time.now.utc
-      batch = deleted_prospects.map do |item|
-        {
-          email: item['email'],
-          data_rejected_at: current_time,
-          data_rejected_reason: PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT
-        }
-      end
-
-      transaction do
-        import! batch,
-          validate: false,
-          on_duplicate_key_update: [:data_rejected_at, :data_rejected_reason]
       end
     end
   end

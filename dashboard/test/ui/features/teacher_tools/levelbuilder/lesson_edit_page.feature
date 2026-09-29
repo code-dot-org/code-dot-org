@@ -57,21 +57,18 @@ Feature: Using the Lesson Edit Page
     And element ".progress-bubble" contains text "1"
     And element ".progress-bubble" does not contain text "2"
 
-    # Open the Add Level dialog, search for an artist level and add the first one
+    # Open the Add Level dialog, search for an artist level and add the first one.
 
     And I press ".uitest-open-add-level-button:first" using jQuery
     And I wait until element "h2" contains text "Add Levels"
     And I wait until element "#add-level-type" is visible
-    # If the next step fails, we should consider replacing "Artist" with any other
-    # level type which does not appear in the initial view, here and below.
-    # And element "td" does not contain text "Artist"
     And I select the "Artist" option in dropdown "add-level-type"
-    And I press keys "Standalone_Artist_1" for element ".uitest-add-level-name-input"
+    And I press keys "UI Test Standalone_Artist_1" for element ".uitest-add-level-name-input"
     And element ".fa-magnifying-glass" is visible
     And I press ".fa-magnifying-glass" using jQuery
-    # We will know the search has completed after the following step, because the
-    # test level does not show up in the initial view.
-    And I wait until element ".uitest-level-dialog-content td" contains text "Standalone_Artist_1"
+    # Wait for the searched level to reach the first row, which should happen
+    # when the search operation is complete.
+    And I wait until element ".uitest-level-dialog-content tbody tr:first" contains text "UI Test Standalone_Artist_1"
     And element ".uitest-level-dialog-content td .fa-plus" is visible
     And I press ".uitest-level-dialog-content td .fa-plus:first" using jQuery
     And I click selector ".save-add-levels-button"
@@ -80,7 +77,7 @@ Feature: Using the Lesson Edit Page
     # Verify lesson editor updated
     Then element ".progress-bubble" contains text "1"
     And element ".progress-bubble" contains text "2"
-    And element ".uitest-level-token-name" contains text "Standalone_Artist_1"
+    And element ".uitest-level-token-name" contains text "UI Test Standalone_Artist_1"
 
     # Verify lesson overview updated
     When I click "button[type='submit']" to load a new page

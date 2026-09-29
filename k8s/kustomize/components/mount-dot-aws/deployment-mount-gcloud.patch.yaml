@@ -8,7 +8,7 @@ spec:
       containers:
         - name: dashboard
           volumeMounts:
-            - mountPath: /home/code-dot-org/.config/gcloud
+            - mountPath: /home/cdo/.config/gcloud
               name: dot-config-gcloud
       volumes:
         - name: dot-config-gcloud

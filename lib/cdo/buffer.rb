@@ -2,6 +2,7 @@ require 'concurrent/scheduled_task'
 require 'concurrent/utility/native_integer'
 require 'honeybadger/ruby'
 require 'monitor'
+require 'observability/errors'
 
 module Cdo
   # Abstract class to handle asynchronous-buffering and periodic-flushing using a thread pool.
@@ -160,7 +161,7 @@ module Cdo
       @last_flush = now
       flush(take_batch.map(&:object))
     rescue => exception
-      Honeybadger.notify(exception)
+      Observability::Errors.report(exception)
     end
 
     # Take a single batch of objects from the buffer.

@@ -1,6 +1,7 @@
 name 'problem-solving-with-ai-lesson6-decision-making-choice'
-display_name 'Reviewing Profiles'
-description 'Pick one of the levels below. Review the six profiles and select two people.'
+display_name 'Decision-Making Roles'
+description 'Choose one of the professions below and review the scenario that is presented'
+navigation_type 'next_sublevel'
 
 sublevels
 level 'problem-solving-with-ai-lesson6-decision-making-choice-a'

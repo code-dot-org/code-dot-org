@@ -1,5 +1,6 @@
 require 'cdo/shared_cache'
 require 'honeybadger/ruby'
+require 'observability/errors'
 
 # A multilayered caching interface intended for use by Cdo::DynamicConfig. Ties
 # together three different components:
@@ -91,7 +92,7 @@ class DatastoreCache
       CDO.shared_cache.write(shared_cache_key, @datastore.all)
     rescue => exception
       retry unless (tries -= 1).zero?
-      Honeybadger.notify(exception)
+      Observability::Errors.report(exception)
     end
   end
 

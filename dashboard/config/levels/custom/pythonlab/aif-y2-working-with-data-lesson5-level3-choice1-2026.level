@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:40:46.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’d like to compare the sprint times between both athletes. The code currently prints the minimum, maximum, and range for each athlete.\r\n\r\n**☑️ Do This:**\r\n- Compute the mean for Athlete 1 using `statistics.mean`, then print the result.\r\n- Compute the standard deviation for Athlete 1 using `statistics.stdev`, then print the result.\r\n- Compute the mean for Athlete 2 using `statistics.mean`, then print the result.\r\n- Compute the standard deviation for Athlete 2 using `statistics.stdev`, then print the result.\r\n\r\n💻 Coding Tip\r\n\r\nYou can use `round` to round your results to a certain number of decimal points. For example, the following code rounds `value` to two decimal points.\r\n\r\n```\r\nvalue = round(value, 2)\r\n```\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\nimport statistics\n\nfile_1 = open(\"athlete_1.csv\")\nreader_1 = csv.DictReader(file_1)\nathlete_1_times = []\nfor row in reader_1:\n    time = float(row[\"sprint_time\"])\n    athlete_1_times.append(time)\nfile_1.close()\n\nfile_2 = open(\"athlete_2.csv\")\nreader_2 = csv.DictReader(file_2)\nathlete_2_times = []\nfor row in reader_2:\n    time = float(row[\"sprint_time\"])\n    athlete_2_times.append(time)\nfile_2.close()\n\nathlete_1_min = min(athlete_1_times)\nathlete_1_max = max(athlete_1_times)\nathlete_1_range = round(athlete_1_max - athlete_1_min, 2)\n\nprint(f\"Athlete 1 min: {athlete_1_min}\")\nprint(f\"Athlete 1 max: {athlete_1_max}\")\nprint(f\"Athlete 1 range: {athlete_1_range}\")\n\n# TODO 1: Compute and print the mean value for Athlete 1\n# TODO 2: Compute and print the standard deviation for Athlete 1\n\nathlete_2_min = min(athlete_2_times)\nathlete_2_max = max(athlete_2_times)\nathlete_2_range = round(athlete_2_max - athlete_2_min, 2)\n\nprint(f\"Athlete 2 min: {athlete_2_min}\")\nprint(f\"Athlete 2 max: {athlete_2_max}\")\nprint(f\"Athlete 2 range: {athlete_2_range}\")\n\n# TODO 3: Compute and print the mean value for Athlete 2\n# TODO 4: Compute and print the standard deviation for Athlete 2",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "athlete_1.csv",
+          "contents": "race,sprint_time\n1,10.6\n2,13.8\n3,11.2\n4,14.1\n5,10.9\n6,13.5\n7,12.7\n8,10.4\n9,14.3\n10,11.6\n11,13.9\n12,10.8\n13,13.2\n14,12.4\n15,14.0",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "athlete_2.csv",
+          "contents": "race,sprint_time\n1,11.2\n2,11.4\n3,11.1\n4,11.3\n5,11.5\n6,11.2\n7,11.4\n8,11.3\n9,11.2\n10,11.5\n11,11.3\n12,11.4\n13,11.2\n14,11.3\n15,11.3",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nxw==\n",
+    "display_name": "Sprinting",
+    "bubble_choice_description": "Compare two sprinters running a 100-meter race.",
+    "thumbnail_url": "https://images.code.org/59c2513811d7622bb7a7623110ada6f9-sprinter.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:42:09 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:43:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:44:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:44:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:56:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

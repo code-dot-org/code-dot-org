@@ -13,12 +13,12 @@
     "long_instructions": "What are the limits of logic-based AI systems?",
     "stay_on_level_after_submit": "false",
     "allow_user_uploads": "false",
-    "submittable": "false",
+    "submittable": "true",
     "peer_reviewable": "false",
     "optional": "false",
     "allow_multiple_attempts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-29 15:53:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-07-29 15:53:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 16:46:31 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -138,4 +138,14 @@ export const ProgressLevelTypes = {
 export const ViewTypes = {
   Participant: 'Participant',
   Instructor: 'Instructor',
-};
+} as const;
+
+/**
+ * Where a bubble choice sublevel's Continue goes. Mirrors
+ * SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES.
+ */
+export const BubbleChoiceNavigationTypes = {
+  Parent: 'parent',
+  NextLevel: 'next_level',
+  NextSublevel: 'next_sublevel',
+} as const;

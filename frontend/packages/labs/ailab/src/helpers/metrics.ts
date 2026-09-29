@@ -2,6 +2,7 @@
   Functions for logging analytics metrics.
 */
 import type {RootState} from '../redux';
+import {getTrainerId} from '../trainers/ids';
 
 import {getPercentCorrect} from './accuracy';
 import {isUserUploadedDataset} from './datasetDetails';
@@ -13,6 +14,8 @@ function getModelMetrics(state: RootState): Record<string, unknown> {
   modelMetrics.features = state.selectedFeatures;
   modelMetrics.label = state.labelColumn;
   modelMetrics.accuracy = getPercentCorrect(state);
+  // The same id the saved model records, so the two can be joined.
+  modelMetrics.trainer = getTrainerId(state);
   return modelMetrics;
 }
 

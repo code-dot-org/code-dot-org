@@ -7,12 +7,16 @@ import AichatContextManager from '../aichat/aichatContextManager';
 
 import {
   CURRENT_SCHEMA_VERSION,
-  GatewayGenerateTextResponseV1Schema,
-  type GatewayGenerateTextResponseV1,
+  CurrentGatewayGenerateTextResponseSchema,
+  type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileToken,
+  turnstileErrorTags,
+  turnstileHeaders,
+} from './turnstile';
 
 export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
@@ -52,9 +56,21 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
   return output;
 };
 
+/**
+ * The SDK result plus the worker's detached signature over `text`. A caller
+ * that persists the response must relay it to dashboard, which verifies it
+ * rather than taking the browser's word for what the model said.
+ */
+export type GatewayGenerateTextResult<
+  TOOLS extends SDKTools,
+  OUTPUT extends SDKOutput
+> = GenerateTextResult<TOOLS, OUTPUT> & {
+  responseSignature?: string;
+};
+
 const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
-  wire: GatewayGenerateTextResponseV1
-): GenerateTextResult<TOOLS, OUTPUT> => {
+  wire: CurrentGatewayGenerateTextResponse
+): GatewayGenerateTextResult<TOOLS, OUTPUT> => {
   return {
     ...wire,
     text: wire.text ?? '',
@@ -68,7 +84,7 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
     response: wire.response
       ? {...wire.response, timestamp: new Date(wire.response.timestamp)}
       : (undefined as unknown as GenerateTextResult<TOOLS, OUTPUT>['response']),
-  } as unknown as GenerateTextResult<TOOLS, OUTPUT>;
+  } as unknown as GatewayGenerateTextResult<TOOLS, OUTPUT>;
 };
 
 /**
@@ -82,7 +98,7 @@ const generateTextThroughGateway = async <
 >(
   options: SDKOptions,
   extraOptions?: ExtraOptions
-): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+): Promise<GatewayGenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const phase = extraOptions?.phase as GatewayPhase | undefined;
   const modelString = getModelString(model);
@@ -91,7 +107,9 @@ const generateTextThroughGateway = async <
   const clientType = AichatContextManager.getContext().clientType;
 
   let schemaErrorReported = false;
-  const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+  const execute = async (): Promise<
+    GatewayGenerateTextResult<TOOLS, OUTPUT>
+  > => {
     try {
       const serializedOutput = await serializeOutputSchema(options.output);
 
@@ -101,10 +119,14 @@ const generateTextThroughGateway = async <
         output: serializedOutput,
       };
 
-      const [token, turnstileToken] = await Promise.all([
-        fetchAccessToken(),
-        fetchTurnstileTokenIfEnabled(),
-      ]);
+      // Serialized, not parallel: the access token response carries the
+      // Turnstile mode that decides whether a challenge is needed at all. The
+      // manager pre-fetches a token after every delivery, so only the first
+      // call of a session waits on a challenge here.
+      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const turnstileToken = await fetchTurnstileToken(
+        turnstileEnforcementMode
+      );
 
       const headers = {
         'Content-Type': 'application/json',
@@ -122,7 +144,7 @@ const generateTextThroughGateway = async <
 
       const rawResponse = await response.json();
       const parseResult =
-        GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
+        CurrentGatewayGenerateTextResponseSchema.safeParse(rawResponse);
       if (!parseResult.success) {
         await reportGatewayError(
           parseResult.error,
@@ -138,7 +160,7 @@ const generateTextThroughGateway = async <
       }
       const wire = parseResult.success
         ? parseResult.data
-        : (rawResponse as GatewayGenerateTextResponseV1);
+        : (rawResponse as CurrentGatewayGenerateTextResponse);
 
       return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
     } catch (error) {
@@ -146,7 +168,8 @@ const generateTextThroughGateway = async <
         await reportGatewayError(
           error,
           'generateTextThroughGateway',
-          modelString
+          modelString,
+          turnstileErrorTags(error)
         );
       }
       throw error;

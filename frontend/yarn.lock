@@ -1761,6 +1761,7 @@ __metadata:
     eslint: "catalog:"
     jsdom: "catalog:"
     messageformat: "npm:^2.3.0"
+    ml-cart: "npm:2.1.1"
     ml-knn: "npm:^3.0.0"
     papaparse: "npm:^5.4.1"
     prettier: "catalog:"
@@ -1771,10 +1772,13 @@ __metadata:
     react-redux: "npm:^8.1.3"
     redux: "npm:^4.0.5"
     reselect: "npm:^4.0.0"
+    sass: "catalog:"
+    stylelint: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "catalog:"
     vitest: "catalog:"
   peerDependencies:
     react: ^18.3.1 || ^19.0.0
@@ -2021,6 +2025,7 @@ __metadata:
     classnames: "catalog:"
     clean-package: "npm:^2.2.0"
     esbuild-sass-plugin: "npm:^3.3.1"
+    eslint: "catalog:"
     eslint-plugin-storybook: "npm:^10.1.7"
     glob: "npm:^11.1.0"
     globals: "catalog:"
@@ -2069,6 +2074,7 @@ __metadata:
     "@tanstack/react-query": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/flat": "npm:^5.0.5"
+    "@types/js-cookie": "npm:^3.0.6"
     "@types/node": "catalog:"
     "@types/tldjs": "npm:^2"
     "@types/uuid": "npm:^10.0.0"
@@ -2078,6 +2084,7 @@ __metadata:
     eslint-plugin-react-refresh: "catalog:"
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
+    js-cookie: "npm:^3.0.5"
     ky: "catalog:"
     mitt: "npm:^3.0.1"
     msw: "catalog:"
@@ -2097,6 +2104,7 @@ __metadata:
     "@reduxjs/toolkit": ^2.8.2
     "@sentry/browser": ^10.51.0
     "@tanstack/react-query": "*"
+    js-cookie: ^3.0.5
     ky: ^1.14.3
     msw: ^2.7.0
     react: ^18.0.0 || ^19.0.0
@@ -2148,6 +2156,7 @@ __metadata:
     "@vitest/coverage-v8": "catalog:"
     axe-playwright: "npm:^2.0.3"
     concurrently: "npm:^9.1.0"
+    eslint: "catalog:"
     globals: "catalog:"
     http-server: "npm:^14.1.1"
     playwright: "catalog:"
@@ -2211,6 +2220,7 @@ __metadata:
     "@fontsource/noto-sans-tc": "npm:^5.1.1"
     "@fontsource/roboto-mono": "npm:^5.2.6"
     "@fontsource/space-grotesk": "npm:^5.3.0"
+    eslint: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"
     sass: "catalog:"
@@ -2330,6 +2340,7 @@ __metadata:
     react: "catalog:"
     react-dom: "catalog:"
     react-redux: "catalog:"
+    react-router-dom: "npm:^6.26.0"
     sass: "catalog:"
     stylelint: "catalog:"
     typescript: "catalog:"
@@ -2389,8 +2400,6 @@ __metadata:
     eslint: "catalog:"
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
-    hast-util-from-html: "npm:^2.0.3"
-    hast-util-to-html: "npm:^9.0.5"
     jsdom: "catalog:"
     playwright: "catalog:"
     prettier: "catalog:"
@@ -2550,13 +2559,16 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/users": "workspace:*"
     "@reduxjs/toolkit": "catalog:"
+    "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
     eslint: "catalog:"
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
+    jsdom: "catalog:"
     lodash: "npm:^4.17.21"
     prettier: "catalog:"
     react: "catalog:"
+    react-dom: "catalog:"
     react-redux: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
@@ -2564,7 +2576,9 @@ __metadata:
     vite-plugin-externalize-deps: "catalog:"
     vitest: "catalog:"
   peerDependencies:
+    "@reduxjs/toolkit": ^2.8.2
     react: ^18.0.0 || ^19.0.0
+    react-redux: ^9.2.0
   languageName: unknown
   linkType: soft
 
@@ -2629,6 +2643,21 @@ __metadata:
   checksum: 10c0/5b265846bf37130a08463f5b184a27306f3a5baa0a766141a29ae7b3800d6e76a50552fd4484f9064e14e9a12c6be1f9dd2c3112e4cb92991fbee9f688b02f94
   languageName: node
   linkType: hard
+
+"@code-dot-org/shared-constants@workspace:packages/shared-constants":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/shared-constants@workspace:packages/shared-constants"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    eslint: "catalog:"
+    prettier: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+  languageName: unknown
+  linkType: soft
 
 "@code-dot-org/studio@workspace:apps/studio":
   version: 0.0.0-use.local
@@ -2748,6 +2777,7 @@ __metadata:
     vite: "catalog:"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "catalog:"
     vitest: "catalog:"
     vitest-axe: "npm:^0.1.0"
     zod: "catalog:"
@@ -6936,6 +6966,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:1.23.4":
+  version: 1.23.4
+  resolution: "@remix-run/router@npm:1.23.4"
+  checksum: 10c0/ef17eb2a606c125f09c55683585099725421af1c11f1c1d1c3841fe4eea3f99eb56b26ecbb17429a173c704ecae336c37e0d74855faa9330667433ef4f419436
+  languageName: node
+  linkType: hard
+
 "@rexxars/react-split-pane@npm:^1.0.0":
   version: 1.0.0
   resolution: "@rexxars/react-split-pane@npm:1.0.0"
@@ -8539,6 +8576,13 @@ __metadata:
   dependencies:
     "@types/istanbul-lib-report": "npm:*"
   checksum: 10c0/1647fd402aced5b6edac87274af14ebd6b3a85447ef9ad11853a70fd92a98d35f81a5d3ea9fcb5dbb5834e800c6e35b64475e33fcae6bfa9acc70d61497c54ee
+  languageName: node
+  linkType: hard
+
+"@types/js-cookie@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@types/js-cookie@npm:3.0.6"
+  checksum: 10c0/173afaf5ea9d86c22395b9d2a00b6adb0006dcfef165d6dcb0395cdc32f5a5dcf9c3c60f97194119963a15849b8f85121e1ae730b03e40bc0c29b84396ba22f9
   languageName: node
   linkType: hard
 
@@ -15742,20 +15786,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hast-util-from-html@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "hast-util-from-html@npm:2.0.3"
-  dependencies:
-    "@types/hast": "npm:^3.0.0"
-    devlop: "npm:^1.1.0"
-    hast-util-from-parse5: "npm:^8.0.0"
-    parse5: "npm:^7.0.0"
-    vfile: "npm:^6.0.0"
-    vfile-message: "npm:^4.0.0"
-  checksum: 10c0/993ef707c1a12474c8d4094fc9706a72826c660a7e308ea54c50ad893353d32e139b7cbc67510c2e82feac572b320e3b05aeb13d0f9c6302d61261f337b46764
-  languageName: node
-  linkType: hard
-
 "hast-util-from-parse5@npm:^8.0.0":
   version: 8.0.3
   resolution: "hast-util-from-parse5@npm:8.0.3"
@@ -16572,6 +16602,20 @@ __metadata:
     is-alphabetical: "npm:^2.0.0"
     is-decimal: "npm:^2.0.0"
   checksum: 10c0/4b35c42b18e40d41378293f82a3ecd9de77049b476f748db5697c297f686e1e05b072a6aaae2d16f54d2a57f85b00cbbe755c75f6d583d1c77d6657bd0feb5a2
+  languageName: node
+  linkType: hard
+
+"is-any-array@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "is-any-array@npm:2.0.1"
+  checksum: 10c0/f9807458a51e63ca1ac27fd6f3a3ace8200f077094e00d9b05b24cfbc9d5594d586d6ecf3416271f26939d5cb93fc52ca869cb5744e77318c3f53ec70b08d61f
+  languageName: node
+  linkType: hard
+
+"is-any-array@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-any-array@npm:3.0.0"
+  checksum: 10c0/dce09df1dd5688053282dd9929052aaba45529f5122a87afe6d66cfe3a96b69dece808f2abb7509614cc36e78db2b744cef0aea1bee6f84e6b7e4b04ccf8747e
   languageName: node
   linkType: hard
 
@@ -17836,6 +17880,13 @@ __metadata:
   version: 0.4.4
   resolution: "jpeg-js@npm:0.4.4"
   checksum: 10c0/4d0d5097f8e55d8bbce6f1dc32ffaf3f43f321f6222e4e6490734fdc6d005322e3bd6fb992c2df7f5b587343b1441a1c333281dc3285bc9116e369fd2a2b43a7
+  languageName: node
+  linkType: hard
+
+"js-cookie@npm:^3.0.5":
+  version: 3.0.8
+  resolution: "js-cookie@npm:3.0.8"
+  checksum: 10c0/421912a4a55535bda32b3059835864e1182c3af5b4516df00a060edc1fa5a53d38bb8d5a91d5d305e396206f4fd11e829f17850aa5aa8164118c04d8ebf1ff5d
   languageName: node
   linkType: hard
 
@@ -19747,6 +19798,63 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ml-array-max@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-max@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+  checksum: 10c0/1d8ab7af4c2b0525e52786a99ecfd025e784170ec264c8482013911b986d8eb0e3cdf7d7a36174e3187189ebd761140133bccfa8033317b3579266282e18f9ca
+  languageName: node
+  linkType: hard
+
+"ml-array-mean@npm:^1.1.5":
+  version: 1.1.6
+  resolution: "ml-array-mean@npm:1.1.6"
+  dependencies:
+    ml-array-sum: "npm:^1.1.6"
+  checksum: 10c0/41ab68308e3472702f775a49c8ab9ee1e678e01cd59dbc59424c0f1017a37df1bb638e702831305f0e6366300eca48353f526773ab8f4d8d142a64d0461f9944
+  languageName: node
+  linkType: hard
+
+"ml-array-min@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-min@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+  checksum: 10c0/651d1a45a846e35daec080cc666ef71be1b9cf15cca5a3a995b4c2edcf4c77d9b473e704d2efe6a71f216fa9f1e44ab47f0aa12b1e7aeb3a0a6f0b4ae86956a0
+  languageName: node
+  linkType: hard
+
+"ml-array-rescale@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ml-array-rescale@npm:2.0.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+    ml-array-max: "npm:^2.0.0"
+    ml-array-min: "npm:^2.0.0"
+  checksum: 10c0/81b1f6befafcdcf2ff8db3b7b60055c1f0ae2e1b69ba216dd5cc184f5437ac89c03a8463dd3cdea4552b53a480a0c6cc40cf1681e9bd2d94e253184ca3539590
+  languageName: node
+  linkType: hard
+
+"ml-array-sum@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "ml-array-sum@npm:1.1.6"
+  dependencies:
+    is-any-array: "npm:^2.0.0"
+  checksum: 10c0/fb3973ce2bfa19ab4f5e657f722494425b57025547657d332bf5bafe3e4e7e4bd1e082dfb970bcc0bfa87efa345b80a20a596dbb204be7b4802b52c35fd6cf77
+  languageName: node
+  linkType: hard
+
+"ml-cart@npm:2.1.1":
+  version: 2.1.1
+  resolution: "ml-cart@npm:2.1.1"
+  dependencies:
+    ml-array-mean: "npm:^1.1.5"
+    ml-matrix: "npm:^6.8.2"
+  checksum: 10c0/5ed8571993cbf9da0035dfbbe04c27b9a30c8ccf5769064e36250111a9992220d137c3491f43f5f0098d691e4c9f1d1f561b3701df59ce8b9cbf90c8f515109a
+  languageName: node
+  linkType: hard
+
 "ml-distance-euclidean@npm:^2.0.0":
   version: 2.0.0
   resolution: "ml-distance-euclidean@npm:2.0.0"
@@ -19760,6 +19868,16 @@ __metadata:
   dependencies:
     ml-distance-euclidean: "npm:^2.0.0"
   checksum: 10c0/bacf9973310bab619f01aae25348bdd5b9ca8b7e0e2e47efae9cb004dd58f05e2055b2b89b3d2bbb6b77f114b962aa652c01dc0228e1e7767d107c6d4aa8580b
+  languageName: node
+  linkType: hard
+
+"ml-matrix@npm:^6.8.2":
+  version: 6.15.0
+  resolution: "ml-matrix@npm:6.15.0"
+  dependencies:
+    is-any-array: "npm:^3.0.0"
+    ml-array-rescale: "npm:^2.0.0"
+  checksum: 10c0/a29633587364043b58052f67ee68b2f47b5277ff73681aee827d20e87ddef5ca9e779cbea8a18acc06c152069cecaedc5db772fb720890091f6344cccaa3443e
   languageName: node
   linkType: hard
 
@@ -22130,6 +22248,30 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10c0/b5f3315bead75e72853f492c0b51ba8fb4fa09a4534d7fc42d6fcd59ca3e047cf213279ffc1e35b337e314ef5a04cb2b12544c85e0078802271731c27c09e5aa
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^6.26.0":
+  version: 6.30.6
+  resolution: "react-router-dom@npm:6.30.6"
+  dependencies:
+    "@remix-run/router": "npm:1.23.4"
+    react-router: "npm:6.30.6"
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 10c0/57dbb2ae4ac787f78c4d10b764c1c5223635378033e33dda4e0a4417144ae847fb43dc98008075951826258287c27c67729ca713c90957cf2ecf9055561bdc2e
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.30.6":
+  version: 6.30.6
+  resolution: "react-router@npm:6.30.6"
+  dependencies:
+    "@remix-run/router": "npm:1.23.4"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 10c0/d101388d92a44e159ef30dd2402a7f7b6aace8f837bb42aed1f8a6b3a4eff769d1822bf69382f0acb85a790628dac081c22bedb2bca12707e0e5e91427010fc3
   languageName: node
   linkType: hard
 

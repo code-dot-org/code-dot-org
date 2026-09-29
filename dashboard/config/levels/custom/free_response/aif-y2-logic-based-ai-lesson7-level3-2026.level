@@ -14,12 +14,12 @@
     "stay_on_level_after_submit": "false",
     "height": "100",
     "allow_user_uploads": "false",
-    "submittable": "false",
+    "submittable": "true",
     "peer_reviewable": "false",
     "optional": "false",
     "allow_multiple_attempts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 15:42:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-07-28 15:42:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-24 16:20:32 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,0 +1,11 @@
+name 'UI Test self-paced-example-level-bubble-choice'
+display_name 'Explore resources in Game Lab'
+description '## Click on the option below to explore resources in Game Lab.
+#### When you are finished you will return to this screen and have the option to either explore a new level or click finish to continue on to the next activity in this professional learning course.'
+
+sublevels
+level 'UI Test self-paced-example-bubble-choice-sublevel'
+
+teacher_markdown <<MARKDOWN
+Teacher only markdown for bubble choice yay!
+MARKDOWN

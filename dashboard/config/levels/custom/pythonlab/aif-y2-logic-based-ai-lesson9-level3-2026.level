@@ -8,7 +8,7 @@
     "encrypted": "false",
     "long_instructions": "You’re a QA engineer testing a program for a smart lightbulb. The lightbulb has a time limit of 30 minutes: the bulb should stay on for 30 minutes and then turn off automatically. The program runs, but there’s a bug.\r\n\r\n**Do This**\r\n\r\n1. Run the program and notice what the program is doing wrong.\r\n2. Read through the code and identify the bug that causes the program to do the wrong thing.\r\n3. Fix the bug and run the program again.\r\n\r\n**💻 Coding Tip**\r\n\r\nWhen a program has an `if` statement inside another `if` statement, the code inside both if statements will only run if both conditions are true. If the code inside the `if` statements is running when you don’t expect it to, check whether either condition is true when it shouldn’t be!\r\n\r\n```python\r\nif condition1:\r\n    if condition2:\r\n        # This code only runs if condition1 and condition2 are both true\r\n```",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -22,7 +22,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "time_limit = 30\nis_on = True\n\nfor minutes in range(60):\n    if is_on:\n        print(f\"💡 Light has been on for {minutes} minutes\")\n\n        if time_limit >= minutes:\n            print(\"Time's up! Turning off light.\")\n            is_on = False\n",
+          "contents": "time_limit = 30\nis_on = True\n\nfor minutes in range(60):\n  if is_on:\n    print(f\"💡 Light has been on for {minutes} minutes\")\n\n    if time_limit >= minutes:\n      print(\"Time's up! Turning off light.\")\n      is_on = False\n",
           "folderId": "0",
           "active": true
         }
@@ -32,9 +32,17 @@
       "openFiles": [
         "0"
       ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp3KKSrjamXrleD\nW+z3PExeGP0z8ZtgUKSmAskWUfsFMLNx5/k4luQyQPO/qKse8VttixNXAuIQ\nYn39C4mL1dY4T5/JSpF7DuiYD5VsDfbKVXxOhhCiK7YAWLN+vOLmsSJKC9AE\nXFRptmywp/6PK5X5ZiUpsplbQV86BoOYiG48O0tlBMuUQrhb/1CDceY8IbUI\nDUEky3Qp1ay5MjmRyveKrKrulcE7rIWtJ0bYodF5g5vlFHZmgn1wYkzA0Ibg\nf56uAtRyrYRbw5qfOkIQtGaM/WBRpVcmOYKHy+ohFehsmu2FvvO9GKgJO5m3\nw8Kcid4Db6o4VIB28bgzLqMpZS9W7andXa/Ja7kqt7IACZhIqCAoFEmC2S1S\nZYWT1+SopjhPyZ3D3YkG91fxKKnC9+DF55oxUcywpPGAkdZKyuVk698R44t7\nyGVAwyeNcdv9CeMxAH9xofBW5S6er4YWDsBejKf6jW2MdJ1KE0NqZLLNsw==\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 03:10:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:10:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:25:48 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:39:41 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:17:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:17:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

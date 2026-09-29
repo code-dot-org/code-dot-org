@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'cdo/honeybadger'
-
 module HocLegacy
   module Tutorials
     CACHE_KEY = 'hoc_legacy:tutorials'
@@ -23,6 +21,7 @@ module HocLegacy
     # validate the tutorial id and then pass it to the congrats page.
     UI_TEST_TUTORIAL_PATHS = {
       'ui-test-artist' => '/s/ui-test-artist/reset',
+      'ui-test-oceans' => '/s/ui-test-oceans/reset',
     }.freeze
 
     # Minimal stand-in for a Contentful::Entry Tutorial, exposing only what the
@@ -92,7 +91,7 @@ module HocLegacy
           with_object({}) do |tutorial, data|
             data[tutorial.tutorial_id] = tutorial
           rescue StandardError => exception
-            Honeybadger.notify(
+            Observability::Errors.report(
               exception,
               error_message: '[Contentful] Invalid Tutorial entry',
               context: {

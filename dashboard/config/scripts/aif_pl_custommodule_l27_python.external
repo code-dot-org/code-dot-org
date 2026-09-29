@@ -3,37 +3,43 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is a Module? 
+<h1>What is a Module?</h1>
+<p>A module is just a <code style="font-size:14px;">.py</code> file that contains Python code.</p>
+<p>You can write your own module, like <code style="font-size:14px;">custom.py</code>, to store your helper functions.</p>
+<p><b>Then you can use them in another file like <code style="font-size:14px;">main.py</code>.</b></p>
+<p>Remember, <code style="font-size:14px;">custom.py</code> is where you define the functions you create, and <code style="font-size:14px;">main.py</code> is where you run your main program and call the functions.</p>
 
-A module is just a `.py` file that contains Python code.
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p>Using multiple modules helps new programmers build clean, organized code and develop good coding habits.</p>
+</div>
 
-You can write your own module, like `custom.py`, to store your helper functions.
-### Then you can use them in another file like `main.py`.
+<h2>Programming with Modules</h2>
+<p>In this example, a function, <code style="font-size:14px;">greet()</code>, is created to print a message, "Hello, World!"</p>
+<p>The function is also called, or used, in the main module. You can see the message printed in the console.</p>
 
-Remember,`custom.py` is where you define the functions you create, and `main.py` is where you run your main program and call the functions. 
+<div style="display: flex; gap: 16px; max-width: 620px; margin: 20px auto; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 240px; border-radius: 10px; overflow: hidden;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 8px 14px;">main.py</div>
+    <div style="background-color:#1C1F2A; color:#FFFFFF; padding:14px 16px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8;">
+      <span style="color:#6FCAFF;">from</span> <span style="color:#F07FB0;">custom</span> <span style="color:#6FCAFF;">import</span> <span style="color:#F07FB0;">greet</span><br>
+      <span style="color:#F07FB0;">greet</span>()
+    </div>
+  </div>
+  <div style="flex: 1; min-width: 240px; border-radius: 10px; overflow: hidden;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 8px 14px;">custom.py</div>
+    <div style="background-color:#1C1F2A; color:#FFFFFF; padding:14px 16px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8;">
+      <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">greet</span>():<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Hello, World!"</span>)
+    </div>
+  </div>
+</div>
 
-> #### Using multiple modules helps new programmers build clean, organized code and develop good coding habits.
+<div style="max-width: 620px; margin: 0 auto 20px auto; border-radius: 10px; overflow: hidden;">
+  <div style="background-color: #ACA8EA; color: #1F1976; font-weight: bold; text-align: center; padding: 8px 14px; font-size: 14px;">Console</div>
+  <div style="background-color:#000000; color:#FFFFFF; padding:16px; font-family:'Courier New',Courier,monospace; font-size:16px; min-height: 40px;">Hello, World!</div>
+</div>
 
-## Programming with Modules
-
-In this example, a function, `greet()`, is created to print a message, "Hello, World"
-
-The function is also called, or used, in the main module. You can see the message printed in the console.
-
-<img src="https://images.code.org/ef822d60b0852e60b250889f148ae656-image-1745429775931.png" alt="image of code using a main and custom module" width="550px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
-
-
-
-
-<div style="clear:both;"></div>
-
----
-
-
-
-
-## Next up!
-Practice using the custom module. 
-
-
+<hr>
+<h2>Next up!</h2>
+<p>Practice using the custom module.</p>
 MARKDOWN

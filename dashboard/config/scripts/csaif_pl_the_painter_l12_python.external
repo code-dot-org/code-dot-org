@@ -9,9 +9,12 @@ markdown <<MARKDOWN
 In the Neighborhood IDE, the object you will work with the **The Painter** object.
 
 Remember, objects have attributes and methods. 
-
-- An **attribute** is a characteristic the object has.
-- A **method** is an action that an object can perform.
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
+<p><b>📖 Attribute:</b> A characteristic the object has.</p>
+</div>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>📖 Method:</b> An action that an object can perform.</p>
+</div>
 
 ## The Painter Object
 
@@ -65,23 +68,23 @@ In simple terms, there are two steps to get starting with objects.
 See what this looks like in code: 
 
 <table border="1" width="100%" cellpadding="10">
-        <tr>
-            <td width="33%">
-                <img src="https://images.code.org/7d0849ab4adda8a45784b7b4fd541339-image-1741277550544.png" alt="painter = Painter()" width="130%">
-            </td>
-            <td width="67%" style="font-size:14pt;">
-            First, <b>instantiate</b> the object by creating a new instance of the <code>Painter</code> class. <br><br> This is done by assigning the <code> Painter()</code> object to a variable.<br> <i>Here, the variable name is <span style="color:red;">painter</span>, but you can use any name.</i> 
-            </td>
-        </tr>
-        <tr>
-            <td width="33%">
-                <img src="https://images.code.org/069ae6b084ee5e4a0a89a6ad174df043-image-1741277578060.png" alt="painter.move()" width="100%">
-            </td>
-            <td width="67%" style="font-size:14pt;">
-                Now that new object has been <b>instantiated</b>, it has access to the methods defined by the <code>Painter</code>class. <br><br> You can use <b>dot notation</b> to call the methods, like <code>painter.move()</code> or <code>painter.turn_left()</code>
-            </td>
-        </tr>
- </table>
+    <tr>
+        <td width="33%">
+            <img src="https://images.code.org/7d0849ab4adda8a45784b7b4fd541339-image-1741277550544.png" alt="painter = Painter()" width="130%">
+        </td>
+        <td width="67%" style="font-size:14pt; padding:18px 22px; line-height:1.6;">
+            First, <b>instantiate</b> the object by creating a new instance of the <code style="font-size:14px;">Painter</code> class.<br><br>This is done by assigning the <code style="font-size:14px;">Painter()</code> object to a variable.<br><i>Here, the variable name is <span style="color:#4C42CF;">painter</span>, but you can use any name.</i>
+        </td>
+    </tr>
+    <tr>
+        <td width="33%">
+            <img src="https://images.code.org/069ae6b084ee5e4a0a89a6ad174df043-image-1741277578060.png" alt="painter.move()" width="100%">
+        </td>
+        <td width="67%" style="font-size:14pt; padding:18px 22px; line-height:1.6;">
+            Now that the new object has been <b>instantiated</b>, it has access to the methods defined by the <code style="font-size:14px;">Painter</code> class.<br><br>You can use <b>dot notation</b> to call the methods, like <code style="font-size:14px;">painter.move()</code> or <code style="font-size:14px;">painter.turn_left()</code>.
+        </td>
+    </tr>
+</table>
 
 ## Let's try! 
 MARKDOWN

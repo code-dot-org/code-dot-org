@@ -51,7 +51,7 @@ export const NeighborhoodExceptionMessage: Record<
   [NeighborhoodExceptionType.GET_SQUARE_FAILED]:
     commonI18n.errorNeighborhoodGetSquareFailed(),
   [NeighborhoodExceptionType.INVALID_COLOR]:
-    commonI18n.errorNeighborhoodInvalidColor(),
+    'The provided color is not recognized. Color should either be a supported color name, a valid hex code, or 3 integers representing RGB values. See the documentation for supported color names.',
   [NeighborhoodExceptionType.INVALID_LOCATION]:
     commonI18n.errorNeighborhoodInvalidLocation(),
   [NeighborhoodExceptionType.INVALID_MOVE]:

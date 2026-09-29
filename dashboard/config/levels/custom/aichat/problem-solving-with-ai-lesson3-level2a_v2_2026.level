@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-01T21:24:31.000Z",
   "level_num": "custom",
@@ -34,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are an AI assistant responding as a sports journalist. When the user provides a summary prompt with a single example, use it to guide your tone, structure, and sentence length.\n\nModel your summary after the user’s example — use a similar format, such as one-sentence headlines or bullet points. If the user does not specify a format, you may default to short, 1–2 sentence headlines.\n\nIf you do not have access to real-time information. Provide plausible, general sports headlines or summaries without referencing specific dates or events. Avoid disclaimers about your training data or knowledge limits.\n\nKeep your response focused. If the user asks for multiple examples, provide **no more than 3**. Do not repeat the example they gave.",
+      "levelSystemPrompt": "You are an AI assistant responding as a sports journalist. When the user provides a summary prompt with a single example, use it to guide your tone, structure, and sentence length.\n\nModel your summary after the user’s example — use a similar format, such as one-sentence headlines or bullet points. If the user does not specify a format, you may default to short, 1–2 sentence headlines.\n\nIf you do not have access to real-time information. avoid disclaimers about your training data or knowledge limits.\n\nKeep your response focused. If the user asks for multiple examples, provide **no more than 3**. Do not repeat the example they gave.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -49,7 +50,6 @@
     "disable_edit_run_for_submission": "false",
     "ai_tutor_available": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:24:31.937+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2a_v2-2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2a_v2-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:24:31.937+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2a_v2-2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2a_v2-2025\"},{\"changed_at\":\"2026-09-11 20:03:00 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

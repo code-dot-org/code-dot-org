@@ -1,0 +1,15 @@
+name 'aif-y2-working-with-data-lesson6-level1-choice4-2026'
+title 'Bike Share Program'
+display_name 'Bike Share Program'
+bubble_choice_description "Help a bike share program learn from its riders' cycling data."
+thumbnail_url 'https://images.code.org/3694c8d4b21e842a1cbdd7325d136347-bicycle.png'
+
+markdown <<MARKDOWN
+You are helping a bike share program learn from its riders' cycling data.
+
+**☑️ Do This:**
+- Open [this spreadsheet](https://drive.google.com/file/d/1_zILrV3J1ahQ_ekIHpSgIluWLfZNM_gj/view?usp=sharing) containing data for the bike share program.
+- Look at a few different rows of data in the dataset, exploring each row’s values.
+- In **Step 2** of your Project Planning Guide, write down at least three questions that could be answered by the dataset. Choose questions for which the answers might be useful to the bike share program!
+
+MARKDOWN

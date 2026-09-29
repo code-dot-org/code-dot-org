@@ -1,11 +1,24 @@
 .markdownContainer {
+  --markdown-block-gap: 0.5rem;
+
   /* Block children fill the container width so text wraps; `flex-start` would
    * size each child to its content, leaving long paragraphs unwrapped and
    * clipped. */
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--markdown-block-gap);
+}
+
+/* A `gap` reaches only the flex container's own children, so blocks stacked
+ * inside a list item -- the two paragraphs of a loose item, or a nested list
+ * after a paragraph -- would sit flush against each other, since the paragraph
+ * component zeroes its margin. Space them by the same amount here.
+ *
+ * As a margin, not a gap: `display: flex` on the item would replace its
+ * `display: list-item` and take the marker with it. */
+.markdownContainer li > * + * {
+  margin-block-start: var(--markdown-block-gap);
 }
 
 /* Keep images within the content width (e.g. the narrow resource panel) instead

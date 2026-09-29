@@ -1,8 +1,11 @@
 // World tab (experiment): paint starter placements onto the scene grid.
 
+@use '../../../../pixelEditor/dialogChrome' as chrome;
+
 .worldTab {
   display: flex;
-  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
   box-sizing: border-box;
   height: 100%;
   padding: 16px;
@@ -11,19 +14,33 @@
   color: var(--text-neutral-primary);
 }
 
-// The vertical room left for the grid, measured so the editor shrinks to
-// fit short windows (down to a floor; past that the tab scrolls).
-.worldGridArea {
+.worldGridColumn {
+  display: flex;
   flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
   min-height: 0;
 }
 
+// The room for the grid, measured so the editor shrinks to fit small
+// windows (down to a floor; past that the tab scrolls).
+.worldGridArea {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+// A column of items down the left of the grid, wrapping into further
+// columns when the window is too short for one. Item size, gap, rows and
+// width are set inline.
 .worldPalette {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 12px;
+  display: grid;
+  flex: none;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--palette-item);
+  gap: var(--palette-gap);
+  align-content: start;
+  min-height: 0;
 }
 
 .worldPaletteItem {
@@ -31,14 +48,18 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 44px;
-  height: 44px;
+  width: var(--palette-item);
+  height: var(--palette-item);
   margin: 0;
-  padding: 2px;
+  padding: 4px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   background: var(--background-neutral-secondary);
   cursor: pointer;
+  // A press may become a drag onto the grid: no scroll or long-press menu.
+  touch-action: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 
   img {
     max-width: 100%;
@@ -46,14 +67,29 @@
     // The legacy global `button > img {opacity: 0.6}` dims thumbnails
     // inside buttons; show them at full strength.
     opacity: 1;
+    // The drag is ours (pointer events); not the browser's image drag.
+    pointer-events: none;
   }
 }
 
 .worldPaletteErase {
-  width: auto;
-  padding: 0 10px;
+  flex-direction: column;
+  gap: 4px;
   color: var(--text-neutral-primary);
-  font-size: 13px;
+  font-size: 12px;
+}
+
+// The dragged item's picture, following the pointer at cell size and
+// snapping onto the cell it would land on; placed by a transform from the
+// viewport origin.
+.worldDragGhost {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  object-fit: contain;
+  opacity: 0.85;
+  pointer-events: none;
 }
 
 .worldPaletteSelected {
@@ -62,20 +98,30 @@
 }
 
 .worldEmpty {
+  margin: 0 0 12px;
   color: var(--text-neutral-secondary);
   font-size: 13px;
 }
 
 .worldGrid {
-  display: grid;
   width: fit-content;
   border: 1px solid var(--borders-neutral-primary);
   // Drag painting: keep touch drags painting instead of scrolling.
   touch-action: none;
 }
 
+// Real row elements (not display: contents), so the grid semantics reach
+// assistive technology intact.
+.worldRow {
+  display: flex;
+}
+
 .worldCell {
   box-sizing: border-box;
+  flex: none;
+  // Sized once on the grid container; cells shrink with the visible extent.
+  width: var(--world-cell);
+  height: var(--world-cell);
   margin: 0;
   padding: 1px;
   border: 1px solid var(--borders-neutral-quaternary, var(--borders-neutral-primary));
@@ -100,17 +146,16 @@
   }
 }
 
-// Beyond the scene's top-left corner (world=large): authorable, not yet run.
-.worldCellOutside {
-  background: var(--background-neutral-secondary);
-
-  img {
-    opacity: 0.55;
-  }
+// The roving tab stops need a ring that reads inside the tight grid.
+.worldCell:focus-visible,
+.worldPaletteItem:focus-visible {
+  z-index: 1;
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: -2px;
 }
 
-.worldHint {
-  margin-top: 10px;
-  color: var(--text-neutral-secondary);
-  font-size: 13px;
+// Visually hidden, read by screen readers (keyboard help and the action
+// narration live region).
+.srOnly {
+  @include chrome.sr-only;
 }

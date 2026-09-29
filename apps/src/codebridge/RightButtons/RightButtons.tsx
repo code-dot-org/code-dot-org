@@ -1,11 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import {
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+  Tooltip,
+} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -21,13 +21,6 @@ interface RightButtonsProps {
   clearOutput?: () => void;
   consoleManager?: ConsoleManager | null;
 }
-
-const tooltipProps: TooltipProps = {
-  text: codebridgeI18n.clearConsole(),
-  size: 'xs',
-  direction: 'onLeft',
-  tooltipId: 'clear-console-tooltip',
-};
 
 const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   clearOutput,
@@ -82,7 +75,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
         </MuiButton>
       )}
       {codebridgeLabsWithConsole.includes(appName) && (
-        <WithTooltip tooltipProps={tooltipProps}>
+        <Tooltip placement="left" title={codebridgeI18n.clearConsole()}>
           <MuiIconButton
             variant="text"
             color="secondary"
@@ -94,7 +87,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           >
             <FontAwesomeV6Icon iconStyle="solid" iconName="eraser" />
           </MuiIconButton>
-        </WithTooltip>
+        </Tooltip>
       )}
     </div>
   );

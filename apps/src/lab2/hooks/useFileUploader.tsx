@@ -1,4 +1,3 @@
-import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -134,13 +133,16 @@ export const useFileUploader = ({
       }
 
       if (!isValidMimeType(file.type, validMimeTypes)) {
-        const extension = mimeToExtension(file.type) || '';
+        const fileType =
+          file.type.split('/').pop()?.toLowerCase() ||
+          file.name.split('.').pop()?.toLowerCase() ||
+          '';
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
           fileName: file.name,
-          fileType: extension,
+          fileType,
         });
         errorCallback(
-          codebridgeI18n.invalidFileType({fileType: extension}),
+          codebridgeI18n.invalidFileType({fileType}),
           callbackArgs.current
         );
         return;

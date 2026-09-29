@@ -28,7 +28,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def is_match(fragment, prediction):\n    # TODO: Check if `prediction` matches `fragment`\n    return True\n\n\ndef main():\n    fragment = input(\"Fragment: \")\n    prediction = input(\"Prediction: \")\n    if is_match(fragment, prediction):\n        print(\"Could be!\")\n    else:\n        print(\"Probably not.\")\n\n\nmain()\n",
+          "contents": "def is_match(fragment, prediction):\n  # TODO: Check if `prediction` matches `fragment`\n  return True\n\n\ndef main():\n  fragment = input(\"Fragment: \")\n  prediction = input(\"Prediction: \")\n  if is_match(fragment, prediction):\n    print(\"Could be!\")\n  else:\n    print(\"Probably not.\")\n\n\nmain()\n",
           "folderId": "0",
           "active": true
         }
@@ -41,6 +41,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 19:50:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 19:50:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 19:50:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 19:50:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:18:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

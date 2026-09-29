@@ -149,11 +149,18 @@ class AdminUsersController < ApplicationController
     set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
-      @user_scripts = UserScript.
-        where(user_id: @target_user.id).
-        order(updated_at: :desc).
-        limit(100).
-        offset(script_offset)
+      if @target_user.teacher?
+        @sections = @target_user.sections_instructed.includes(:students).order(:name)
+        all_student_ids = @sections.flat_map {|s| s.students.map(&:id)}.uniq
+        script_ids = UserScript.where(user_id: all_student_ids).distinct.pluck(:script_id)
+        @all_scripts = Unit.where(id: script_ids).order(:name).sort.uniq
+      else
+        @user_scripts = UserScript.
+          where(user_id: @target_user.id).
+          order(updated_at: :desc).
+          limit(100).
+          offset(script_offset)
+      end
     end
   end
 
@@ -183,6 +190,91 @@ class AdminUsersController < ApplicationController
         distinct.
         order('sections.created_at ASC')
     end
+  end
+
+  def cap_actions_form
+    set_target_student_from_identifier(params[:user_identifier])
+    return unless @target_user
+
+    @permission_request = @target_user.latest_parental_permission_request
+    @us_state_options = User.us_state_dropdown_options
+    @cap_state_policy = Policies::ChildAccount::StatePolicies.state_policy(@target_user)
+    @force_cap_permission_available = @cap_state_policy.present? && @permission_request.nil?
+  end
+
+  def update_cap_state
+    student = cap_actions_student(params[:user_id])
+    unless student
+      redirect_to_cap_actions(params[:user_id], alert: 'Student not found')
+      return
+    end
+
+    new_us_state = params[:us_state]
+    unless User.us_state_dropdown_options.key?(new_us_state)
+      redirect_to_cap_actions(student.id, alert: 'Invalid US state')
+      return
+    end
+
+    previous_us_state = student.us_state
+    User.transaction do
+      student.us_state = new_us_state
+      student.save!(validate: false)
+      Services::ChildAccount.remove_compliance(student)
+    end
+    log_admin_action(
+      'update_cap_us_state',
+      student.id,
+      {previous_us_state: previous_us_state, new_us_state: new_us_state}
+    )
+    redirect_to_cap_actions(student.id, notice: 'US state updated and CAP compliance removed')
+  end
+
+  def grant_cap_permission
+    student = cap_actions_student(params[:user_id])
+    unless student
+      redirect_to_cap_actions(params[:user_id], alert: 'Student not found')
+      return
+    end
+
+    permission_request = student.latest_parental_permission_request
+    unless permission_request
+      redirect_to_cap_actions(student.id, alert: 'No parental permission request exists')
+      return
+    end
+
+    Services::ChildAccount.grant_permission_request!(permission_request)
+    log_admin_action(
+      'grant_cap_permission',
+      student.id,
+      {permission_request_id: permission_request.id}
+    )
+    redirect_to_cap_actions(student.id, notice: 'Parental permission request granted')
+  end
+
+  def force_cap_permission
+    student = cap_actions_student(params[:user_id])
+    unless student
+      redirect_to_cap_actions(params[:user_id], alert: 'Student not found')
+      return
+    end
+
+    if student.latest_parental_permission_request
+      redirect_to_cap_actions(student.id, alert: 'Grant the existing parental permission request instead')
+      return
+    end
+
+    unless Policies::ChildAccount::StatePolicies.state_policy(student)
+      redirect_to_cap_actions(student.id, alert: 'No CAP policy applies to this student')
+      return
+    end
+
+    Services::ChildAccount.update_compliance(
+      student,
+      Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+    )
+    student.save!
+    log_admin_action('force_cap_permission', student.id)
+    redirect_to_cap_actions(student.id, notice: 'CAP permission granted')
   end
 
   # PUT /admin/user_project
@@ -222,6 +314,23 @@ class AdminUsersController < ApplicationController
     log_admin_action("delete_progress", user_id, {script_id: script_id, reason: params[:reason]})
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
+  end
+
+  # POST /admin/mass_progress_reset
+  # Deletes progress for every (student, unit) pair in the given lists.
+  def mass_progress_reset
+    unit_ids = parse_id_list(params[:unit_ids])
+    student_ids = parse_id_list(params[:student_ids])
+
+    if unit_ids.blank? || student_ids.blank?
+      render json: {error: 'unit_ids and student_ids must be non-empty arrays of integer ids'}, status: :bad_request
+      return
+    end
+
+    User.delete_progress_for_units(user_ids: student_ids, unit_ids: unit_ids)
+    log_admin_action('mass_progress_reset', nil, {unit_ids: unit_ids, student_ids: student_ids})
+
+    render json: {success: true}
   end
 
   # get /admin/permissions
@@ -571,6 +680,32 @@ class AdminUsersController < ApplicationController
       @target_user = User.from_identifier(user_identifier)
       flash[:alert] = 'User not found' unless @target_user
     end
+  end
+
+  private def set_target_student_from_identifier(user_identifier)
+    return unless user_identifier
+
+    user = User.from_identifier(user_identifier.strip)
+    if user&.student?
+      @target_user = user
+    else
+      flash[:alert] = 'Student not found'
+    end
+  end
+
+  private def cap_actions_student(user_id)
+    user = User.find_by(id: user_id)
+    user if user&.student?
+  rescue ActiveModel::RangeError
+    nil
+  end
+
+  private def redirect_to_cap_actions(user_identifier, notice: nil, alert: nil)
+    redirect_to cap_actions_form_path(user_identifier: user_identifier), notice: notice, alert: alert
+  end
+
+  private def parse_id_list(param)
+    Array(param).map {|id| Integer(id, exception: false)}.compact
   end
 
   private def log_admin_action(event, affected_user_id = nil, attributes = {})

@@ -1,3 +1,5 @@
+import {EvaluationStatus} from '@code-dot-org/lesson-deep-dive';
+
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 /**
@@ -9,14 +11,18 @@ import HttpClient from '@cdo/apps/util/HttpClient';
  */
 export const requestEvaluation = async (
   challengeResponseId: number
-): Promise<void> => {
+): Promise<string> => {
   try {
-    await HttpClient.post(
+    const response = await HttpClient.post(
       `/challenge_responses/${challengeResponseId}/evaluate`,
       '',
       true // useAuthenticityToken
     );
+    return (await response.ok)
+      ? EvaluationStatus.PENDING
+      : EvaluationStatus.ERROR;
   } catch (error) {
     console.error('Failed to request challenge response evaluation', error);
+    return EvaluationStatus.ERROR;
   }
 };

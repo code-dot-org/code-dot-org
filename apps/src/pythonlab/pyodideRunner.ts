@@ -44,6 +44,9 @@ export async function handleRunClick(
     handleRunEndedUnexpectedly(consoleManager, pythonlabI18n.noCode());
     return;
   }
+  // Set before the run's first write, and left set past the end of the run:
+  // restoring announcements there would talk over the closing summary.
+  consoleManager?.setNarrating(isNeighborhoodLevel() && !runTests);
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
@@ -78,7 +81,10 @@ export async function runPythonCode(
     const isNeighborhoodRun = isNeighborhoodLevel();
     if (isNeighborhoodRun) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+      // Validation sends the painter no signals, so there is nothing to narrate.
+      CodebridgeRegistry.getInstance()
+        .getNeighborhood()
+        ?.onRun(!validationFile);
     }
     if (isTheaterLevel()) {
       CodebridgeRegistry.getInstance().getTheater()?.reset();
@@ -189,13 +195,16 @@ function handleRunEndedUnexpectedly(
   consoleManager: ConsoleManager | null,
   message: string
 ) {
+  // Nothing ran, so the console speaks for itself.
+  consoleManager?.setNarrating(false);
   consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
   if (isNeighborhoodLevel()) {
     // We reset, run, and close the neighborhood to ensure that the neighborhood
     // properly resets the run button back to run (from stop), and to reset the
     // neighborhood to its original state.
     CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    // Nothing ran, so there is nothing to narrate.
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun(false);
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');

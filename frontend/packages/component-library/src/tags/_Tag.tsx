@@ -1,3 +1,4 @@
+import {Tooltip} from '@mui/material';
 import {
   FunctionComponent,
   MouseEvent,
@@ -6,12 +7,12 @@ import {
   HTMLAttributes,
   memo,
   useCallback,
+  ReactElement,
   ReactNode,
 } from 'react';
 
 import CloseButton from '@/closeButton/CloseButton';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {WithTooltip} from '@/tooltip';
 
 import moduleStyles from './tags.module.scss';
 
@@ -74,17 +75,11 @@ const Tag: FunctionComponent<TagProps> = props => {
     type = 'default',
   } = props;
   const tooltipWrapper = useCallback(
-    (children: ReactNode) =>
+    (children: ReactElement) =>
       tooltipContent && tooltipId ? (
-        <WithTooltip
-          tooltipProps={{
-            direction: 'onTop',
-            text: tooltipContent,
-            tooltipId: tooltipId,
-          }}
-        >
+        <Tooltip id={tooltipId} title={tooltipContent} placement="top">
           {children}
-        </WithTooltip>
+        </Tooltip>
       ) : (
         children
       ),
@@ -95,7 +90,6 @@ const Tag: FunctionComponent<TagProps> = props => {
     className: moduleStyles.tag,
     tabIndex: 0,
     'aria-label': ariaLabel,
-    'aria-describedby': tooltipContent && tooltipId ? tooltipId : undefined,
   };
 
   if (type === 'closable') {

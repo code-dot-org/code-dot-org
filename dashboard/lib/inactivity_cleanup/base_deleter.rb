@@ -74,7 +74,7 @@ module InactivityCleanup
           self.num_accounts_deleted += 1
         rescue StandardError => exception
           self.num_errors += 1
-          Honeybadger.notify(exception, context: {user_id: user.id})
+          Observability::Errors.report(exception, context: {user_id: user.id})
           log_message("Error deleting user_id #{user.id}: #{exception.message}")
         ensure
           processed_user_ids << user.id

@@ -6,7 +6,7 @@ class AiStudentPodcastsJob < ApplicationJob
   # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
     request = arguments.first[:request]
-    Honeybadger.notify(
+    Observability::Errors.report(
       "AiStudentPodcastsJob failed with unexpected error: #{exception.message}",
       context: {
         ai_student_podcast_id: request[:student_podcast_data].id

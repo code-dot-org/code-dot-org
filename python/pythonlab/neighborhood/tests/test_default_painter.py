@@ -85,6 +85,8 @@ def test_paint_functions():
   painter.scrape_paint()
   assert painter.is_on_paint() is False
   assert painter.get_color() is None
+  painter.paint(0, 128, 255)
+  assert painter.get_color() == '#0080ff'
 
 def test_bucket_functions():
   # Square 0,0 is a bucket with paint_count = 3.

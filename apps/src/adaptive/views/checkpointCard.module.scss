@@ -1,0 +1,60 @@
+.statusPill {
+  align-self: flex-start;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-secondary);
+}
+
+.pillAvailable {
+  background: var(--background-brand-purple-extra-light);
+  color: var(--text-brand-purple-primary);
+}
+
+.pillInProgress {
+  background: var(--background-warning-extra-light);
+  color: var(--text-warning-primary);
+}
+
+.pillComplete {
+  background: var(--background-success-primary);
+  color: var(--text-neutral-white-fixed);
+}
+
+.requirement {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.requirementIcon {
+  width: 16px;
+  color: var(--text-neutral-secondary);
+  text-align: center;
+}
+
+.requirementDone {
+  color: var(--text-success-primary);
+}
+
+// Doubled selector outranks the site's global button rules.
+.linkButton.linkButton {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-brand-purple-primary);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.linkButton.struck {
+  color: var(--text-neutral-secondary);
+  text-decoration: line-through;
+}
