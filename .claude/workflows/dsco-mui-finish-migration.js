@@ -86,10 +86,13 @@ const UI_TEST_DIRS = 'dashboard/test/ui/features, dashboard/test/ui/step_definit
 const COMMIT_TRAILER = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-code)'
 // Aliases, so each resolves to the current release. Discover gathers facts on Sonnet;
-// code, gates and git run on Opus, and the agents that write or diagnose think at xhigh.
+// code, gates and git run on Opus. Every agent pins its effort, so a run behaves the same
+// whoever starts it: xhigh to write or diagnose, high to discover or gate, medium for git.
 const READ_MODEL = 'sonnet'
 const WORK_MODEL = 'opus'
 const DEEP_EFFORT = 'xhigh'
+const CHECK_EFFORT = 'high'
+const ROUTINE_EFFORT = 'medium'
 const componentTitle = component.charAt(0).toUpperCase() + component.slice(1)
 
 // Same contract as the migration script: agents edit, the Publish agent alone owns git.
@@ -198,7 +201,7 @@ ${TREE_RULES}
   - With no request: delete-legacy if legacySourceFiles is non-empty, else the first
     allowed row, else done when the table is empty.
   kind blocked, with the reason, when the request (or every candidate) is not allowed.`,
-  {schema: DISCOVER_SCHEMA, label: 'discover', phase: 'Discover', model: READ_MODEL},
+  {schema: DISCOVER_SCHEMA, label: 'discover', phase: 'Discover', model: READ_MODEL, effort: CHECK_EFFORT},
 )
 if (!discover) throw new Error('discover agent was skipped')
 if (discover.preflight.length) throw new Error(`Preflight: ${discover.preflight.join('; ')}`)
@@ -341,7 +344,7 @@ let verify = null
 let attempt = 0
 while (true) {
   attempt++
-  verify = await agent(verifyPrompt(attempt), {schema: VERIFY_SCHEMA, label: `verify-${attempt}`, phase: 'Verify', model: WORK_MODEL})
+  verify = await agent(verifyPrompt(attempt), {schema: VERIFY_SCHEMA, label: `verify-${attempt}`, phase: 'Verify', model: WORK_MODEL, effort: CHECK_EFFORT})
   if (!verify) throw new Error('verify agent was skipped')
   touched = [...new Set([...touched, ...verify.filesTouched])]
   log(`Verify ${attempt}: ${verify.pass ? 'clean' : verify.failures.map(f => f.check).join(', ')}`)
@@ -420,7 +423,7 @@ ${publish ? `4. git push -u origin ${branch}; then gh pr create --draft --base $
    ${failingNote ? `A "Failing checks" section: ${failingNote}` : ''}` : '4. publish is off: no push, no gh. prUrl is "".'}
 
 Report the branch, the commit sha, the PR URL and leftovers.`,
-  {schema: PUBLISH_SCHEMA, label: 'publish', phase: 'Publish', model: WORK_MODEL},
+  {schema: PUBLISH_SCHEMA, label: 'publish', phase: 'Publish', model: WORK_MODEL, effort: ROUTINE_EFFORT},
 )
 if (!published) throw new Error('publish agent was skipped; the tree may hold uncommitted work')
 if (published.leftovers.length) log(`WARNING: leftovers: ${published.leftovers.join(', ')}`)
