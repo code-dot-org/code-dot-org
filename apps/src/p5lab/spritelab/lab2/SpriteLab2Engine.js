@@ -256,7 +256,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // must not land in it.
     this.clearSceneJumpDelay_();
     // Fixed for the run: the scene type is set before the run begins.
-    const dimBackground = this.isPlatformScene_();
+    const dimBackground = this.isPlatformScene();
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
     // classic's ~400px library art: resize once to the canvas's physical
     // resolution instead of CoreLibrary's logical 400. A frame (from the
