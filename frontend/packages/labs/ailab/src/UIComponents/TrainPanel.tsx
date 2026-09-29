@@ -159,6 +159,7 @@ const TrainPanel = () => {
                 name="ailab-label"
                 labelText="Predict"
                 isLabelVisible={false}
+                dropdownTextThickness="thin"
                 size="s"
                 className={styles.dropdown}
                 items={labelItems}
@@ -177,6 +178,7 @@ const TrainPanel = () => {
                   name="ailab-features"
                   labelText={featuresSummary}
                   aria-label={`Using, ${featuresSummary}`}
+                  labelType="thin"
                   size="s"
                   className={styles.featuresDropdown}
                   allOptions={featureOptions}

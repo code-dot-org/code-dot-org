@@ -33,8 +33,10 @@
   padding: 8px;
 }
 
+$features-menu-max-height: 240px;
+
+// No overflow clipping here: the features menu has to extend past the card.
 .card {
-  overflow: hidden;
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-md);
@@ -83,11 +85,12 @@
   }
 }
 
-.dropdown {
+// Two classes, to outrank the library's own width and alignment rules.
+.field .dropdown {
   width: 100%;
+  align-items: stretch;
 }
 
-// Two classes, to outrank the library's own width and alignment rules.
 .featuresField .featuresDropdown {
   display: block;
   width: 100%;
@@ -99,6 +102,14 @@
       flex-grow: 1;
       text-align: start;
     }
+  }
+
+  // The menu.
+  > div {
+    width: 100%;
+    box-sizing: border-box;
+    max-height: $features-menu-max-height;
+    overflow-y: auto;
   }
 }
 
