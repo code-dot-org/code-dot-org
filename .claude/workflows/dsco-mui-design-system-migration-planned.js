@@ -147,6 +147,11 @@ const MIGRATION_RULES = `## Migration rules
 - The MUI version reproduces what the DSCO component renders TODAY, within the plan's
   parity tolerance, except for the legacy defects the plan lists as fixed while here.
   Figma is out of scope; a later run reconciles MUI with Figma.
+- Behavior is parity too: DOM placement (portal or in place), initial focus and focus
+  restore, Tab order, key handling, what is aria-hidden, and every id, role and class a
+  Cucumber or Playwright file selects on. Eyes and the test build catch a change there
+  only after merge, far from its cause. When MUI's own behavior is better, keep the legacy
+  one and record the MUI one in the plan's deferred changes; a later PR adopts it.
 - Approach options: pure theme style overrides in ${OVERRIDES_DIR} when every DSCO prop
   maps onto an MUI prop or slot (Tooltip, Button did this); an MUI-native wrapper inside
   ${COMPONENT_DIR} (the way notification-banner is built) when the DSCO component carries
@@ -375,7 +380,7 @@ const PLAN_SCHEMA = {
   required: [
     'planDoc', 'approach', 'exportPolicy', 'muiComponents', 'propMap', 'codemod', 'twins',
     'parityNotes', 'legacyDefectsToFix', 'sharedGlobals', 'appsParitySample', 'chunkSize',
-    'docsPlan', 'risks',
+    'docsPlan', 'risks', 'deferredChanges',
   ],
   properties: {
     planDoc: {type: 'string', description: `Must be ${PLAN_DOC}`},
@@ -466,6 +471,20 @@ const PLAN_SCHEMA = {
         properties: {global: {type: 'string'}, rule: {type: 'string'}},
       },
     },
+    deferredChanges: {
+      type: 'array',
+      description: 'MUI behaviors this run keeps off so the legacy behavior survives; each is the scope of a later, separate PR. [] if the MUI version already behaves as MUI does.',
+      items: {
+        type: 'object',
+        required: ['behavior', 'legacyToday', 'muiWouldDo', 'uiTestsAtRisk'],
+        properties: {
+          behavior: {type: 'string', description: 'e.g. "portal", "focus trap", "Escape"'},
+          legacyToday: {type: 'string'},
+          muiWouldDo: {type: 'string'},
+          uiTestsAtRisk: {type: 'array', items: {type: 'string'}, description: 'uiTestFiles entries (file:line) and consumer selectors the change would break, or []'},
+        },
+      },
+    },
     appsParitySample: {
       type: 'array',
       description: 'Up to 4 consumer pages for a before/after capture against a local studio, chosen for coverage of distinct props or surfaces. [] if none is worth it.',
@@ -529,8 +548,11 @@ Decide, in this order, reading the precedents and MUI's own component docs as ne
 4. Twins: one MUI story per DSCO story with the same state.
 5. Legacy defects to fix while here (from legacyDefects; e.g. a fixed min-width that
    clips at high zoom, literal alt text, missing roles) and which story renders they
-   change. Shared globals: for each legacyGlobals entry, the manager the MUI version must
-   share (e.g. the legacy useBodyScrollLock hook with MUI's own lock disabled).
+   change. A defect qualifies only when no uiTestFiles entry depends on the old behavior;
+   the rest go to deferred changes. Shared globals: for each legacyGlobals entry, the
+   manager the MUI version must share (e.g. the legacy useBodyScrollLock hook with MUI's
+   own lock disabled). Deferred changes: each MUI behavior turned off to keep the legacy
+   one, with the UI tests and consumer selectors that adopting it would break.
 6. Apps parity sample: up to 4 consumer pages, distinct surfaces, each with a path on the
    local studio and a recipe (seeded account, clicks by role/name). [] if not worth it.
 7. Chunk size for the consumer PRs, and the docs plan.
@@ -538,8 +560,9 @@ Decide, in this order, reading the precedents and MUI's own component docs as ne
 Then write ${PLAN_DOC} with these sections, in this order, terse and exact (read
 ${LIB_SRC}/button/BUTTON_MIGRATION_TO_MUI.md for the register): Summary; Approach and
 exports; Prop map (table); Codemod (transforms, residue, how to run); Parity (tolerance,
-twins, intended deviations); Legacy defects fixed while here; Shared globals; Consumer
-chunks; Docs; Risks; Deviations (empty, Execute fills it). Run prettier on it from ${LIB}
+twins, intended deviations); Legacy defects fixed while here; Shared globals; Deferred
+changes (table: behavior, legacy today, MUI would do, UI tests at risk); Consumer chunks;
+Docs; Risks; Deviations (empty, Execute fills it). Run prettier on it from ${LIB}
 (../../node_modules/.bin/prettier --write).
 
 Return the structured plan; planDoc must be ${PLAN_DOC}.`,
@@ -572,7 +595,7 @@ if (planGaps.missing.length || planGaps.unknown.length || planGaps.duplicate.len
 }
 const chunkSize = chunkSizeArg || positiveInt(plan.chunkSize, 25, 'plan.chunkSize')
 const dropped = plan.propMap.filter(p => p.kind === 'drop')
-log(`Plan: ${plan.approach} via ${plan.muiComponents.join(', ')} · codemod ${plan.codemod.required ? 'required' : 'not required'} · ${plan.twins.length} twin(s) · ${plan.legacyDefectsToFix.length} legacy defect(s) to fix · ${plan.appsParitySample.length} apps page(s) sampled · chunks of ${chunkSize}`)
+log(`Plan: ${plan.approach} via ${plan.muiComponents.join(', ')} · codemod ${plan.codemod.required ? 'required' : 'not required'} · ${plan.twins.length} twin(s) · ${plan.legacyDefectsToFix.length} legacy defect(s) to fix · ${plan.deferredChanges.length} deferred · ${plan.appsParitySample.length} apps page(s) sampled · chunks of ${chunkSize}`)
 if (dropped.length) log(`${dropped.length} DSCO prop(s) dropped: ${dropped.map(p => p.dscoProp).join(', ')}`)
 
 if (stopAfterPlan) {
@@ -707,6 +730,7 @@ const executeBrief = `THE PLAN (authoritative; read ${PLAN_DOC} in full first)
   twins:               ${JSON.stringify(plan.twins)}
   legacyDefectsToFix:  ${JSON.stringify(plan.legacyDefectsToFix)}
   sharedGlobals:       ${JSON.stringify(plan.sharedGlobals)}
+  deferredChanges:     ${JSON.stringify(plan.deferredChanges)} (keep these MUI behaviors off)
   docsPlan:            ${JSON.stringify(plan.docsPlan)}
   componentFiles:      ${JSON.stringify(discover.componentFiles)}
   dscoStories:         ${JSON.stringify(discover.dscoStories)}`
@@ -1002,7 +1026,7 @@ ${publish ? `
    Deployment notes and Privacy; end with "${PR_FOOTER}". Summary includes: the approach
    and export policy in two sentences and a link to ${PLAN_DOC} for the rest; the dropped
    props ${JSON.stringify(dropped.map(p => p.dscoProp))}; the legacy defects fixed on purpose
-   ${JSON.stringify(plan.legacyDefectsToFix.map(d => d.defect))}; a Parity section with a table
+   ${JSON.stringify(plan.legacyDefectsToFix.map(d => d.defect))}; ${plan.deferredChanges.length ? `a "Follow-up" section listing the deferred MUI behaviors, one line each with the UI tests at risk, ${JSON.stringify(plan.deferredChanges)}` : 'no Follow-up section (nothing deferred)'}; a Parity section with a table
    Story | Theme | DSCO | MUI (one row per showcase pair, images by the URL form, ratio per
    row), ${mismatches.length ? `an "Open mismatches" list ${JSON.stringify(mismatches.map(m => ({story: m.muiStoryId, theme: m.theme, dir: m.dir, notes: m.notes})))}` : 'a line that every render passed the gate'}${intendedPairs.length ? `, and an "Intended deviations" list ${JSON.stringify(intendedPairs.map(m => ({story: m.muiStoryId, theme: m.theme, notes: m.notes})))}` : ''};
    deviations from the plan ${JSON.stringify(exec.deviations)}; a "Stack" section saying the
