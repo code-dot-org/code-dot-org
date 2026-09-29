@@ -91,6 +91,43 @@ describe('PlayBar', () => {
     jest.useRealTimers();
   });
 
+  it('holds a tap until the timer and two frames have both passed', () => {
+    jest.useFakeTimers();
+    const frames: FrameRequestCallback[] = [];
+    const raf = jest
+      .spyOn(window, 'requestAnimationFrame')
+      .mockImplementation(cb => frames.push(cb));
+    const runFrame = () => frames.shift()?.(0);
+    const keys = keyEvents();
+    render(<PlayBar playing arrows="steer" onPlay={jest.fn()} />);
+    const left = screen.getByRole('button', {name: 'Left'});
+
+    // No frame runs: the timer alone does not release.
+    fireEvent.click(left);
+    jest.advanceTimersByTime(500);
+    expect(keys.seen).toEqual(['keydown:37']);
+    runFrame();
+    expect(keys.seen).toEqual(['keydown:37']);
+    runFrame();
+    expect(keys.seen).toEqual(['keydown:37', 'keyup:37']);
+
+    // Frames run at once: the frames alone do not release.
+    fireEvent.click(left);
+    runFrame();
+    runFrame();
+    expect(keys.seen).toEqual(['keydown:37', 'keyup:37', 'keydown:37']);
+    jest.advanceTimersByTime(200);
+    expect(keys.seen).toEqual([
+      'keydown:37',
+      'keyup:37',
+      'keydown:37',
+      'keyup:37',
+    ]);
+    keys.stop();
+    raf.mockRestore();
+    jest.useRealTimers();
+  });
+
   it('holds the key from Enter down to up, and releases when it goes away', () => {
     const keys = keyEvents();
     const {rerender} = render(

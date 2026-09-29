@@ -20,6 +20,11 @@ interface HoldKeyProps {
 // How long an activation with no press of its own (assistive technology's
 // click) holds the key: long enough for the game's per-frame key polling.
 const TAP_MS = 100;
+// The tap also outlasts this many animation frames. They are the queue the
+// game draws from, so a system too slow for the timer still samples the key
+// before it is released; the timer covers a fast display, where the game
+// skips frames to hold its rate.
+const TAP_FRAMES = 2;
 
 /**
  * A button that holds a game key down for as long as it is pressed: from
@@ -87,7 +92,18 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
       }
       press();
       pressed.current = false;
-      window.setTimeout(release, TAP_MS);
+      let waiting = 2;
+      const done = () => {
+        if (--waiting === 0) {
+          release();
+        }
+      };
+      window.setTimeout(done, TAP_MS);
+      const frame = (left: number) =>
+        left === 0
+          ? done()
+          : window.requestAnimationFrame(() => frame(left - 1));
+      frame(TAP_FRAMES);
     },
     onBlur: release,
   };
