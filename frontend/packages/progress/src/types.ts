@@ -1,4 +1,5 @@
 import type {
+  Condition,
   Lesson,
   LessonGroupSummary,
   UnitLevel,
@@ -170,21 +171,9 @@ export interface PeerReviewLessonInfo {
 
 export type ViewType = (typeof ViewTypes)[keyof typeof ViewTypes];
 
-// A validation condition.
-export interface Condition {
-  name: string;
-  value?: string | number;
-}
-
-// Validation in the level.
-export interface Validation {
-  conditions: Condition[];
-  message: string;
-  callout?: string;
-  next: boolean;
-  key: string;
-  comment?: string;
-}
+// A level's validations and their conditions, as core parses them from the
+// level properties.
+export type {Condition, Validation} from '@code-dot-org/core/api';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.

@@ -2,6 +2,7 @@ import {z} from 'zod';
 import {
   AppOptionsSchema,
   CloneLevelResponseSchema,
+  ConditionSchema,
   DeleteLevelResponseSchema,
   ExemplarSettingsSchema,
   ExtraLinksLevelDataSchema,
@@ -14,6 +15,7 @@ import {
   ScriptLevelPathLinkSchema,
   SectionSummarySchema,
   UserAppOptionsSchema,
+  ValidationSchema,
 } from './levels.schemata';
 
 // The inferred base type
@@ -54,6 +56,8 @@ export type SectionSummary = z.infer<typeof SectionSummarySchema>;
 export type ScriptLevelPathLink = z.infer<typeof ScriptLevelPathLinkSchema>;
 export type UserAppOptions = z.infer<typeof UserAppOptionsSchema>;
 export type ExemplarSettings = z.infer<typeof ExemplarSettingsSchema>;
+export type Condition = z.infer<typeof ConditionSchema>;
+export type Validation = z.infer<typeof ValidationSchema>;
 export type CloneLevelResponse = z.infer<typeof CloneLevelResponseSchema>;
 export type DeleteLevelResponse = z.infer<typeof DeleteLevelResponseSchema>;
 

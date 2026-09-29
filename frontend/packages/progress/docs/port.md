@@ -289,10 +289,26 @@ overview package is an open scoping decision.
   `ProgressManager` imports core's, where they are optional because the
   server omits them. The package's own definition is dead and contradicts the
   one in use.
-- `Validation` and `Condition` have no schema in core.
-  `LevelPropertiesBaseSchema` does not list `validations`; passthrough keeps
-  the raw value, but `useLevelProperties().validations` is `unknown`. A lab
-  must narrow it, or core must gain the schema.
+- Fixed. `Validation` and `Condition` had no schema in core, and
+  `LevelPropertiesBaseSchema` did not list `validations`: passthrough kept
+  the raw value, but `useLevelProperties().validations` was `unknown`. Core
+  now has `ValidationSchema` and `ConditionSchema`, the level properties
+  carry `validations` typed, and the progress package re-exports core's
+  `Validation` and `Condition` instead of declaring its own. Two findings
+  shaped the schema:
+
+  - `key` is optional. `Javalab#get_validations` and
+    `Pythonlab#get_validations` derive one PASSED_ALL_TESTS validation
+    server side, with no key. The port's `Validation` required it.
+  - A condition's `value` is a string, a number or absent, and one Music
+    level file stores `null`, which parses as absent.
+
+  The schema parses the validations of all 1,385 level files in
+  `dashboard/config/levels` that have them, all Music and Dance, and the
+  derived shape. 28 older Music files also hold a
+  `level_data.validations` array; the server does not serve that one as
+  `validations`, so the schema does not see it.
+
 - `setScriptProgress` accepts `{[levelId]: UnitProgress}` (parsed, camelCase)
   but the reducer runs `processServerStudentProgress`, which expects the wire
   shape `UnitProgressDefinition`. Inherited from apps. Fixed: the payload is
@@ -428,8 +444,8 @@ branch and the README says so until it is made.
 5. Done. Replace the apps-singleton couplings in navigation with host hooks.
    They are a module-level registry rather than store or container
    arguments; see 3.4.
-6. Add `validations` to core's `LevelPropertiesBaseSchema`, with `Validation`
-   and `Condition` schemas, so labs stop narrowing `unknown`.
+6. Done. Add `validations` to core's `LevelPropertiesBaseSchema`, with
+   `Validation` and `Condition` schemas, so labs stop narrowing `unknown`.
 7. Decide the scope of the selectors in 3.5 (level page only, or overview
    too) and port accordingly.
 8. Clean the manifest per `docs/conventions/packages.md`, delete the
