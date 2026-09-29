@@ -4,9 +4,8 @@ import classNames from 'classnames';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
-import {getTableData, setCurrentColumn, setHighlightColumn} from '../redux';
+import {getColumnClickable, getTableData, setCurrentColumn} from '../redux';
 
-import shared from '../shared.module.scss';
 import styles from './dataTable.module.scss';
 
 interface DataTableProps {
@@ -35,49 +34,42 @@ const DataTable = ({
   const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const currentColumn = useAppSelector(state => state.currentColumn);
-  const highlightColumn = useAppSelector(state => state.highlightColumn);
-  const currentPanel = useAppSelector(state => state.currentPanel);
+  const clickableColumns = useAppSelector(
+    state =>
+      reducedColumns
+        ? []
+        : Object.keys(data[0] ?? {}).filter(key =>
+            getColumnClickable(state, key),
+          ),
+    deepEqual,
+  );
 
-  const setCurrentColumnProp = (column: string | undefined) =>
-    dispatch(setCurrentColumn(column as string));
-  const setHighlightColumnProp = (column: string | undefined) =>
-    dispatch(setHighlightColumn(column as string));
-  const getColumnHeaderClassName = (key: string) => {
-    let variant;
+  const showRowNumbers = !reducedColumns;
 
-    if (key === labelColumn) {
-      variant = styles.labelHeader;
-    } else if (selectedFeatures.includes(key)) {
-      variant = styles.featureHeader;
-    }
+  const isClickable = (key: string) => clickableColumns.includes(key);
 
-    return classNames(
-      styles.header,
-      {[styles.clickable]: !reducedColumns},
-      variant,
-    );
-  };
+  const getColumnHeaderClassName = (key: string) =>
+    classNames(styles.header, {
+      [styles.headerLabel]: key === labelColumn,
+      [styles.headerFeature]:
+        key !== labelColumn && selectedFeatures.includes(key),
+      [styles.headerSelected]: !reducedColumns && key === currentColumn,
+      [styles.clickable]: isClickable(key),
+    });
 
   const getColumnCellClassName = (key: string) => {
     let variant;
-
-    if (hideLabel && labelColumn === key) {
-      variant = styles.hidden;
-    } else if (key === currentColumn) {
-      if (currentPanel === 'dataDisplayLabel') {
-        variant = styles.selectedLabel;
-      } else {
-        variant = styles.selected;
-      }
-    } else if (key === highlightColumn) {
-      if (currentPanel === 'dataDisplayLabel') {
-        variant = styles.highlightedLabel;
-      } else {
-        variant = styles.highlighted;
-      }
+    if (hideLabel && key === labelColumn) {
+      variant = styles.bodyCellHidden;
+    } else if (key === labelColumn) {
+      variant = styles.bodyCellLabel;
+    } else if (selectedFeatures.includes(key)) {
+      variant = styles.bodyCellFeature;
     }
 
-    return classNames(styles.cell, variant);
+    return classNames('uitest-data-table-column', styles.bodyCell, variant, {
+      [styles.clickable]: isClickable(key),
+    });
   };
 
   const getColumns = () => {
@@ -106,14 +98,8 @@ const DataTable = ({
   };
 
   const handleSetCurrentColumn = (columnId: string) => {
-    if (!reducedColumns) {
-      setCurrentColumnProp(columnId);
-    }
-  };
-
-  const handleSetHighlightColumn = (columnId: string | undefined) => {
-    if (!reducedColumns) {
-      setHighlightColumnProp(columnId);
+    if (isClickable(columnId)) {
+      dispatch(setCurrentColumn(columnId));
     }
   };
 
@@ -122,20 +108,35 @@ const DataTable = ({
   }
 
   return (
-    <table className={shared.displayTable}>
+    <table className={styles.table}>
       <thead>
         <tr>
+          {showRowNumbers && (
+            <th
+              className={classNames(styles.indexCell, styles.indexHeader)}
+              aria-label="Row"
+            />
+          )}
           {getColumns().map(columnId => {
+            const columnName = getLocalizedColumnName(datasetId, columnId);
             return (
               <th
                 key={columnId}
+                scope="col"
                 className={getColumnHeaderClassName(columnId)}
-                onClick={() => handleSetCurrentColumn(columnId)}
-                onKeyDown={() => handleSetCurrentColumn(columnId)}
-                onMouseEnter={() => handleSetHighlightColumn(columnId)}
-                onMouseLeave={() => handleSetHighlightColumn(undefined)}
               >
-                {getLocalizedColumnName(datasetId, columnId)}
+                {isClickable(columnId) ? (
+                  <button
+                    type="button"
+                    className={styles.headerButton}
+                    aria-pressed={columnId === currentColumn}
+                    onClick={() => handleSetCurrentColumn(columnId)}
+                  >
+                    {columnName}
+                  </button>
+                ) : (
+                  columnName
+                )}
               </th>
             );
           })}
@@ -144,20 +145,18 @@ const DataTable = ({
       <tbody>
         {getRows().map((row, index) => {
           return (
-            <tr key={index}>
+            <tr key={index} className={styles.row}>
+              {showRowNumbers && (
+                <th scope="row" className={styles.indexCell}>
+                  {index + 1}
+                </th>
+              )}
               {getColumns().map(columnId => {
                 return (
                   <td
                     key={columnId}
-                    className={classNames(
-                      'uitest-data-table-column',
-                      getColumnCellClassName(columnId),
-                    )}
+                    className={getColumnCellClassName(columnId)}
                     onClick={() => handleSetCurrentColumn(columnId)}
-                    onKeyDown={() => handleSetCurrentColumn(columnId)}
-                    onMouseEnter={() => handleSetHighlightColumn(columnId)}
-                    onMouseLeave={() => handleSetHighlightColumn(undefined)}
-                    role="gridcell"
                   >
                     {startingRow !== undefined && index <= startingRow ? (
                       <span>&nbsp;</span>
