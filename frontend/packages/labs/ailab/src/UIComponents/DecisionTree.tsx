@@ -10,7 +10,6 @@ import {
   TREE_NODE_WIDTH,
   TREE_ROW_GAP,
 } from '../helpers/displayTreeLayout';
-import type {DisplayTreeStep} from '../helpers/displayTreeTrace';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {
@@ -65,35 +64,14 @@ const DecisionTree = () => {
     return orList.format(branch.values.map(valueText));
   };
 
-  const columnText = (column: string): string =>
-    getLocalizedColumnName(datasetId, column);
-
-  const answerText = (prediction: string | number): string =>
-    typeof prediction === 'number'
-      ? formatNumber(prediction)
-      : valueText(prediction);
-
-  const nodeText = (node: DisplayTreeNode): string =>
-    node.type === 'question'
-      ? `${columnText(node.column)}?`
-      : answerText(node.prediction);
-
-  const stepText = ({column, value, branch}: DisplayTreeStep): string => {
-    const answered = `${columnText(column)} is ${valueText(String(value))}`;
-    if (branch.kind === 'values') {
-      return `${answered}.`;
+  const nodeText = (node: DisplayTreeNode): string => {
+    if (node.type === 'question') {
+      return `${getLocalizedColumnName(datasetId, node.column)}?`;
     }
-    const comparison = branch.kind === 'lessThan' ? 'less than' : 'at least';
-    return `${answered}, which is ${comparison} ${branch.threshold}.`;
+    return typeof node.prediction === 'number'
+      ? formatNumber(node.prediction)
+      : valueText(node.prediction);
   };
-
-  const diagramLabel = trace
-    ? [
-        "Diagram of your model's decision tree. The path of your prediction:",
-        ...trace.steps.map(stepText),
-        `Answer: ${answerText(trace.prediction)}.`,
-      ].join(' ')
-    : "Diagram of your model's decision tree";
 
   // Path edges go last so a sibling edge cannot paint over the stub they share.
   const edgeOrder = [...layout.nodes].sort(
@@ -108,7 +86,7 @@ const DecisionTree = () => {
       <div className={styles.scroll}>
         <div
           role="img"
-          aria-label={diagramLabel}
+          aria-label="Diagram of your model's decision tree"
           className={styles.canvas}
           style={{
             ...canvasVariables,

@@ -80,16 +80,4 @@ describe('DecisionTree', () => {
     expect(pathEdges).toHaveLength(marked.length - 1);
     expect(edges.slice(-pathEdges.length)).toEqual(pathEdges);
   });
-
-  it('names the path of a prediction in the diagram label', () => {
-    store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict(store);
-    render(store);
-
-    expect(
-      document.querySelector('[role="img"]').getAttribute('aria-label'),
-    ).toMatch(
-      /^Diagram of your model's decision tree\. The path of your prediction: legs is 0, which is less than [\d.]+\. Answer: snake\.$/,
-    );
-  });
 });
