@@ -17,7 +17,7 @@ const DataDisplay = () => {
   const rowCountText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
   const rowCountMessage =
     rowCount > DATA_TABLE_ROW_LIMIT
-      ? `${rowCountText} (Showing first ${DATA_TABLE_ROW_LIMIT} rows)`
+      ? `${rowCountText} (Showing first ${DATA_TABLE_ROW_LIMIT})`
       : rowCountText;
 
   return (
