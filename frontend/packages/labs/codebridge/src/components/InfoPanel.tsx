@@ -1,0 +1,200 @@
+import {useEffect, type ReactNode} from 'react';
+
+import type {TutorConfig} from '@code-dot-org/aitutor';
+import type {Theme} from '@code-dot-org/component-library/common/contexts';
+import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
+import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
+import {useThemeSetting} from '@code-dot-org/lab/hooks';
+import {labProjectActions} from '@code-dot-org/lab/redux';
+import ResourcePanel, {type Setting} from '@code-dot-org/lab/resourcePanel';
+
+import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
+import {useAppDispatch, useAppSelector} from '../redux/store';
+
+export interface InfoPanelProps {
+  className?: string;
+  /** Link target for the panel's documentation button. */
+  documentationUrl?: string;
+  /**
+   * Themes this lab supports. Two or more adds a theme picker to the settings
+   * menu; one (or none) leaves it out. See the base `useThemeSetting`.
+   */
+  supportedThemes?: Theme[];
+  /**
+   * Whether this lab renders the Codebridge `Console`. False drops the console
+   * font-size setting, which would otherwise change nothing (Web Lab shows its
+   * console in the debug panel, styled by the design system).
+   */
+  hasConsole?: boolean;
+  /**
+   * Extra settings-panel dropdowns a lab contributes (appended after the shared
+   * font-size / theme settings) — e.g. A Lab's Blockly block-color theme, if
+   * needed.
+   */
+  extraSettings?: Setting[];
+  /**
+   * The AI Tutor tab, passed through to the base panel. Omitted, no tab.
+   *
+   * Passed through rather than built here because what the tutor should be told
+   * about a project — and which transport answers it — is the LAB's to say: a
+   * Codebridge project is a file tree, and what counts as "the student's code"
+   * differs between one that runs Python and one that runs a game world.
+   *
+   * A lab must apply the section access-level rule before passing this; see
+   * the prop on the base `ResourcePanel`.
+   */
+  aiTutor?: TutorConfig;
+  /**
+   * Buttons this lab adds to the resource panel's bottom icon strip, passed
+   * straight through to the base panel — the same seam `extraSettings` uses,
+   * and for the same reason: what belongs there is the lab's to know.
+   */
+  extraLinks?: ReactNode;
+  /**
+   * What a clickable in the instructions does: `[label](#clickable=id)` in a
+   * level's markdown is drawn as a button that calls this with the id
+   * (`@code-dot-org/markdown`, `clickableText`). Passed straight through to
+   * the base panel, which already takes it; omitted, a clickable is bold
+   * text. What an id MEANS is the lab's — a place on its screen to point at,
+   * in the one that uses it.
+   */
+  onInstructionsTextClick?: (id: string) => void;
+}
+
+/**
+ * The left-hand instructions / resource panel shared by every Codebridge lab
+ * (legacy `@codebridge/InfoPanel`), built on the base `ResourcePanel` that music
+ * lab uses too. Renders the level's `longInstructions`, version history,
+ * settings, and lesson navigation, reading run state from the base `labSystem`
+ * slice, and publishes what the version panel needs (see below).
+ *
+ * Only mounts inside `CodebridgeLab`, which renders its children once level
+ * properties resolve, so they are present here.
+ */
+export const InfoPanel = ({
+  className,
+  documentationUrl,
+  supportedThemes = ['Light', 'Dark'],
+  hasConsole = true,
+  extraSettings = [],
+  aiTutor,
+  extraLinks,
+  onInstructionsTextClick,
+}: InfoPanelProps) => {
+  const levelProperties = useMaybeLevelProperties();
+  const isRunning = useAppSelector(state => state.labSystem.isRunning);
+  const hasRun = useAppSelector(state => state.labSystem.hasRun);
+
+  // The project as the host loaded it: the baseline an edit is measured
+  // against, and the fallback "Initial version" restores. Not a render-time
+  // snapshot — the lab mounts with its empty default project and the real
+  // sources arrive asynchronously, so the first thing this sees is the default.
+  //
+  // READ FROM THE STORE, not from the `LevelLoadCompleted` event, and that is
+  // the whole of this. `LifecycleNotifier` is a plain fan-out with no replay,
+  // so a component that mounts after `loadLab` has finished never hears the
+  // event at all — and this panel is inside the resource panel, which mounts
+  // late. The listener that used to be here was simply never called: the
+  // baseline stayed undefined, `hasEdited` could never become true, and the
+  // "save a named version" box it gates could never appear.
+  //
+  // Not a demo-host quirk either. It is a race between the load finishing and
+  // this mounting, so on a slow enough network it would resolve the other way
+  // and the box would work — a bug that comes and goes is worse than one that
+  // does not. `onLevelChange` writes this one line before the notification
+  // fires, so the store has the same value with no timing to lose, and repoints
+  // it when the level changes.
+  const {currentSources, previewSources} = useSources<MultiFileSource>();
+  const loadedSources = useAppSelector(state => state.lab.initialSources);
+  // Mirror the current sources into redux, and flag when they differ from the
+  // project as loaded. Both feed the version panel's "save a named version"
+  // flow: base `SaveVersionPanel` reads `labProject.projectSources` (legacy's
+  // source of truth, which nothing else populates here, so it would no-op) and
+  // only renders once `labProject.hasEdited` is true — there is nothing to name
+  // until the student has changed something. This lab keeps sources in the
+  // SourcesContext, so it has to publish both.
+  const dispatch = useAppDispatch();
+  const hasEdited = useAppSelector(state => state.labProject.hasEdited);
+  useEffect(() => {
+    dispatch(
+      labProjectActions.setProjectSource(
+        currentSources as unknown as ProjectSources,
+      ),
+    );
+    // Compare against the loaded baseline rather than the previous value: the
+    // sources arrive asynchronously after mount, and that first arrival is a
+    // load, not an edit.
+    const baseline = loadedSources;
+    if (
+      baseline &&
+      JSON.stringify(currentSources.source) !==
+        JSON.stringify((baseline as unknown as {source: unknown}).source)
+    ) {
+      dispatch(labProjectActions.setHasEdited(true));
+    }
+  }, [dispatch, currentSources, loadedSources]);
+
+  // Codebridge contributes the font-size settings — console font size only for
+  // labs that render its console. Python Lab supports both themes, so it also
+  // opts in to the theme toggle (its editor carries a matching light and dark
+  // theme). Order matches legacy: font sizes, then theme.
+  const codebridgeSettings = useCodebridgeSettings({hasConsole});
+  const themeSetting = useThemeSetting(supportedThemes);
+  const settings = [
+    ...codebridgeSettings,
+    ...(themeSetting ? [themeSetting] : []),
+    ...extraSettings,
+  ];
+
+  if (!levelProperties) {
+    return null;
+  }
+
+  // Prefer the level's own start state (what Start Over resets to) when it has
+  // one; otherwise fall back to the project as first loaded. The fallback is
+  // what makes "Initial version" restore a project-level's actual opening
+  // sources rather than the lab's empty default project.
+  //
+  // NOTE: the level-properties SCHEMA types these as a bare MultiFileSource,
+  // while every reader here wants `ProjectSources` (`{source}`) — `onLoadVersion`
+  // hands whatever this is straight to `previewSources`. Both shapes turn up in
+  // practice, so normalise rather than cast: a bare source previewed as if it
+  // were wrapped leaves the editor with no files and no error.
+  const levelStartSources =
+    levelProperties.templateSources || levelProperties.startSources;
+  const startSources = (levelStartSources
+    ? 'source' in levelStartSources
+      ? levelStartSources
+      : {source: levelStartSources}
+    : (loadedSources ?? currentSources)) as unknown as ProjectSources;
+
+  return (
+    <ResourcePanel
+      className={className}
+      aiTutor={aiTutor}
+      extraLinks={extraLinks}
+      onInstructionsTextClick={onInstructionsTextClick}
+      levelProperties={levelProperties}
+      isRunning={isRunning}
+      hasRun={hasRun}
+      hasEdited={hasEdited}
+      documentationUrl={documentationUrl}
+      settings={settings}
+      // Enables the Version History tab (like music lab). Auto-save groups stay
+      // collapsed by default (`alwaysShowAutoSaves` unset), so the named
+      // versions a student saved are what the list leads with.
+      // `onLoadVersion` is what actually swaps a previewed/restored version into
+      // the editor: this lab's source of truth is the SourcesContext, not redux,
+      // so the panel's sources have to be written back through it. It must use
+      // `previewSources`, never `updateSources` — every version the panel hands
+      // us already exists on the server, and saving it back would overwrite the
+      // project with the version being *viewed* (the read-only flag is dispatched
+      // in the same tick, so it can't be relied on to suppress that save).
+      versionHistoryProps={{
+        startSources,
+        onLoadVersion: sources =>
+          previewSources(sources as unknown as typeof currentSources),
+      }}
+    />
+  );
+};

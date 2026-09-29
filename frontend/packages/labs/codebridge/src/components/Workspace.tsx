@@ -1,0 +1,124 @@
+import {useState} from 'react';
+
+import {ResizeHandle} from '@code-dot-org/lab/components';
+
+import CodeEditor from '../editor/CodeEditor';
+
+import FileBrowser from './FileBrowser';
+import {FileBrowserToggleButton} from './FileBrowserToggleButton';
+import FileTabs from './FileTabs';
+import styles from './workspace.module.css';
+
+const clamp = (value: number, min: number, max: number) =>
+  Math.max(min, Math.min(max, value));
+
+const SIDEBAR = {initial: 220, min: 160, max: 420};
+
+export interface WorkspaceProps {
+  /**
+   * Rendered between the tab strip and the editor — e.g. a lab's own toolbar.
+   * Most labs pass nothing.
+   */
+  children?: React.ReactNode;
+  /**
+   * Leave the file browser out entirely — no sidebar, and no way to bring it
+   * back.
+   *
+   * Different from collapsing it, which is the learner's own choice and is
+   * always reversible from the tab strip. This is a level's choice: an exercise
+   * on one file has nothing to browse, and a file list is then a thing to get
+   * lost in rather than a way around.
+   */
+  hideFileBrowser?: boolean;
+  /**
+   * Rendered in the TAB BAR, before the tabs — a host's own way around its
+   * files.
+   *
+   * World Lab puts one menu button per folder there: its folders are semantic
+   * (a picture is a backdrop because it is in `backgrounds/`), so a tree that
+   * can move a file between them offers a move that means nothing, while a
+   * menu per folder says what each one is for. The tree remains, one toggle
+   * away, for anyone who wants the whole project at once.
+   *
+   * Different from {@link children}, which is a toolbar under the tabs.
+   */
+  tabBarStart?: React.ReactNode;
+  /**
+   * A file whose tab has no close button. See {@link FileTabsProps.pinnedFileId}.
+   *
+   * Pass it with {@link hideFileBrowser}: together they are "this workspace is
+   * about one file, and that file stays". Hiding the browser without it leaves
+   * a one-way door — close the last tab and the editor is empty with no list to
+   * open anything from.
+   */
+  pinnedFileId?: string;
+}
+
+/**
+ * The Codebridge workspace: the file browser beside the tab strip and editor,
+ * with a drag-to-resize divider between them and a collapse toggle that hides
+ * the browser entirely so the editor spans the full width (the re-open button
+ * then sits in the tab strip). Shared by every Codebridge lab — legacy
+ * `@codebridge/Workspace/Workspace`.
+ *
+ * The host supplies the surrounding chrome (a PanelContainer, the console or
+ * preview beneath it, and so on); this owns only the browser/editor split.
+ */
+export const Workspace = ({
+  children,
+  hideFileBrowser,
+  pinnedFileId,
+  tabBarStart,
+}: WorkspaceProps) => {
+  const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR.initial);
+  // Legacy has no draggable file-browser divider, only a collapse toggle; we
+  // keep both — resize when open, collapse to zero width via the button.
+  const [fileBrowserCollapsed, setFileBrowserCollapsed] = useState(false);
+
+  return (
+    <div className={styles.topArea}>
+      {/* Collapsed: the file browser is fully hidden so the editor spans the
+          whole width; the re-open toggle sits in the tab strip. */}
+      {!hideFileBrowser && !fileBrowserCollapsed && (
+        <>
+          <aside className={styles.sidebar} style={{width: sidebarWidth}}>
+            <FileBrowser
+              onToggleCollapse={() => setFileBrowserCollapsed(true)}
+            />
+          </aside>
+          <ResizeHandle
+            axis="x"
+            ariaLabel="Resize file browser"
+            value={sidebarWidth}
+            min={SIDEBAR.min}
+            max={SIDEBAR.max}
+            onDelta={dx =>
+              setSidebarWidth(w => clamp(w + dx, SIDEBAR.min, SIDEBAR.max))
+            }
+            onReset={() => setSidebarWidth(SIDEBAR.initial)}
+          />
+        </>
+      )}
+      <div className={styles.editorPane}>
+        <div className={styles.tabBar}>
+          {!hideFileBrowser && fileBrowserCollapsed && (
+            <span className={styles.reopen}>
+              <FileBrowserToggleButton
+                collapsed
+                onClick={() => setFileBrowserCollapsed(false)}
+              />
+            </span>
+          )}
+          {tabBarStart}
+          <div className={styles.tabsFill}>
+            <FileTabs pinnedFileId={pinnedFileId} />
+          </div>
+        </div>
+        {children}
+        <div className={styles.editor}>
+          <CodeEditor />
+        </div>
+      </div>
+    </div>
+  );
+};

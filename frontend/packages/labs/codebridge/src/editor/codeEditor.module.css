@@ -1,0 +1,20 @@
+.codeEditor {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* CodeMirror manages its own DOM inside this container; make it fill height. */
+.codeEditor :global(.cm-editor) {
+  height: 100%;
+}
+
+/* An uploaded image file, shown in place of the code editor. */
+.uploadedImage {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  padding: 16px;
+  object-fit: contain;
+  image-rendering: pixelated; /* crisp for small sprite art */
+}

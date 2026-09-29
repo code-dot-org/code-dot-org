@@ -1,0 +1,32 @@
+/* Centered image + text shown in a panel that has no content yet (e.g. the
+   editor with no open file). Ported from
+   apps/src/codebridge/components/CodebridgeEmptyState.module.scss. */
+.container {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  background-color: var(--background-neutral-primary);
+}
+
+.image {
+  width: auto;
+  max-height: 8.5rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Prevent the image from getting cut off in Safari. */
+.image img {
+  object-fit: contain;
+}
+
+.textContainer {
+  max-width: 21rem;
+}
