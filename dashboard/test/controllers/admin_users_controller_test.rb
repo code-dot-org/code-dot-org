@@ -1212,7 +1212,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     :resolve_log_token,
     method: :post,
     user: :user,
-    params: {token: SecureRandom.uuid, reason: 'authorization check'},
+    params: {log_token: SecureRandom.uuid, reason: 'authorization check'},
     response: :forbidden
   )
   test_redirect_to_sign_in_for :resolve_log_token, method: :post
@@ -1248,8 +1248,6 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select 'code', text: superseded.uuid
   end
 
-  # A lookup must not create a token: one minted here would be absent from every
-  # log the admin is about to search.
   test 'log_token_form mints nothing for a user with no tokens' do
     sign_in @admin
 
@@ -1295,7 +1293,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
     token = @not_admin.log_token(destination: User::LogToken::SENTRY)
 
-    post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
+    post :resolve_log_token, params: {log_token: token, reason: 'zendesk 4821'}
     assert_response :success
     assert_select 'td', text: @not_admin.id.to_s
   end
@@ -1304,7 +1302,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
     token = @not_admin.log_token(destination: User::LogToken::SENTRY)
 
-    post :resolve_log_token, params: {token: token, reason: ''}
+    post :resolve_log_token, params: {log_token: token, reason: ''}
     assert_response :success
     assert_select 'td', text: @not_admin.id.to_s, count: 0
   end
@@ -1312,12 +1310,10 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'resolve_log_token reports an unreadable token without raising' do
     sign_in @admin
 
-    post :resolve_log_token, params: {token: 'not-a-uuid', reason: 'fishing'}
+    post :resolve_log_token, params: {log_token: 'not-a-uuid', reason: 'fishing'}
     assert_response :success
   end
 
-  # The audit lives in User::LogToken.resolve, so it cannot be bypassed by
-  # reaching the primitive from somewhere other than this controller.
   test 'resolve_log_token audits through the primitive with the acting admin and reason' do
     sign_in @admin
     token = @not_admin.log_token(destination: User::LogToken::SENTRY)
@@ -1327,7 +1323,15 @@ class AdminUsersControllerTest < ActionController::TestCase
         options[:reason] == 'zendesk 4821'
     end.returns({user_id: @not_admin.id, destination: User::LogToken::SENTRY, period: Policies::SchoolYear.starting_year})
 
-    post :resolve_log_token, params: {token: token, reason: 'zendesk 4821'}
+    post :resolve_log_token, params: {log_token: token, reason: 'zendesk 4821'}
+  end
+
+  test 'resolve_log_token filters the submitted token from request logs' do
+    sign_in @admin
+    token = @not_admin.log_token(destination: User::LogToken::SENTRY)
+
+    post :resolve_log_token, params: {log_token: token, reason: 'zendesk 4821'}
+    assert_equal '[FILTERED]', @request.filtered_parameters['log_token']
   end
 
   generate_admin_only_tests_for :lookup_by_email_form

@@ -46,7 +46,6 @@ class User::LogToken < ApplicationRecord
   # must stop being emitted then rather than when the cache entry expires.
   after_destroy {CDO.shared_cache.delete(self.class.send(:cache_key, user_id, destination, period))}
 
-  # Reads without minting, so the admin page can list what a user already has.
   scope :for_user, ->(user_id) {where(user_id: user_id).order(period: :desc, destination: :asc)}
 
   validates :destination, inclusion: {in: DESTINATIONS}
