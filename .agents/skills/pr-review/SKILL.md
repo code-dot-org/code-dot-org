@@ -37,9 +37,9 @@ Identical to `/code-review`:
    in a scratch worktree and say so in the report.
 2. **Don't gate on CI.** Lint, typecheck, and test failures are drone's job,
    not a review finding.
-3. **Label every finding `current` or `latent`.** Whether a change fixes a
-   real problem today or forecloses one later is the first question you will
-   be asked; answer it up front.
+3. **Say which findings are latent.** Whether a change fixes a real
+   problem today or forecloses one later is the first question you will be
+   asked; the probability field (Phase 3) answers it up front.
 4. **Ask.** If the system's intent isn't recoverable from the diff, the
    description, or the linked docs, ask rather than guess. Questions about how
    the system works are welcome and belong in the report.
@@ -67,73 +67,59 @@ thorough and running it twice wastes the budget you need for Phase 3.
 Hold back `--comment` and `--fix` — both act on the raw, unranked list, which
 is the list you are about to re-rank.
 
-## Phase 3 — verify before you rank
+## Phase 3 — verify, then classify
 
-Verify every candidate HIGH finding yourself, in this context, before it
-reaches the report: read the code, run the query, check the CI log, check the
+Verify yourself, in this context, every finding whose severity could be
+CRITICAL or HIGH: read the code, run the query, check the CI log, check the
 branch actually under review. Findings sourced from an agent's summary get
 downgraded or dropped when the mechanism doesn't hold up, and stating a
 blocker that dissolves under one question costs more than omitting it.
 
-For each surviving finding, establish:
+Then classify each surviving finding. This is the only place severity and
+probability are judged; later sections use these values, not fresh
+judgment. `/code-review`'s ranking does not carry over.
 
-- the **scenario** — what has to be true for it to fire
-- the **impact** in that scenario
-- the **severity** of that impact, if it occurs.
-  - CRITICAL for data loss, security breach, privacy breach, or harm on that scale.
-  - HIGH for significant functional impact to end users; anything that will
-    block this PR from shipping (such as a deploy pipeline failure); or any
-    breaks to core workflows in non-production environments such as curriculum
-    authoring, daily deploy, feature development, or adhoc starts.
-  - MEDIUM for any other issues that materially impact end users or core
-    workflows, such as substantial inconvenience or performance degradation.
-    Also any issues related to code quality, readability, maintainability,
-    or technical debt.
-  - LOW for any other issues.
-- **current or latent** -- CURRENT if the issue can happen now based on actions
-  taken by attackers, end users, curriculum authors, translators,
-  engineering workflows (such as the daily deploy), or other internal workflow.
-  LATENT if the issue can only be triggered by a future code or config change
-  made by engineering.
-- **new or existing** — NEW if introduced in this PR, EXISTING if it was already
-  present (including in another pending PR).
-- **age** - For existing issues, approximately how long the issue has existed
- in the repo (e.g. years, months, weeks, days). Or, PENDING if another pending
- branch owns the fix.
-- **probability** assign current issues LOW, MEDIUM, or HIGH probability of
-  failure given current code and config. Assign LATENT if the issue is latent.
-- **priority** — LOW, MEDIUM, or HIGH — the overall priority of addressing this
-  issue, considering severity, probability and impact. Old, existing issues can
-  be assumed to have lower priority. Latent issues have lower priority unless
-  their potential impact is extremely high.
-
+- **scenario** — what has to be true for it to fire.
+- **impact** — what goes wrong in that scenario.
+- **severity** of that impact, if it occurs:
+  - CRITICAL — data loss, security breach, privacy breach, or harm on that
+    scale.
+  - HIGH — significant functional impact on end users; anything that blocks
+    this PR from shipping, such as a deploy pipeline failure; or a break in
+    a core non-production workflow: curriculum authoring (levelbuilder),
+    the daily deploy, feature development and developer experience, adhoc
+    starts, test environments.
+  - MEDIUM — any other material impact on end users or core workflows, such
+    as substantial inconvenience or performance degradation; also code
+    quality, readability, maintainability, and technical debt.
+  - LOW — anything else.
+- **current or latent** — CURRENT if it can happen now through the actions
+  of attackers, end users, curriculum authors, translators, engineering
+  workflows such as the daily deploy, or other internal workflows. LATENT
+  if only a future code or config change by engineering can trigger it.
+- **origin** — NEW if this PR introduces it. WORSENED if it predates this
+  PR but the PR makes it more likely, more severe, or newly reachable.
+  EXISTING otherwise, including an issue introduced by another pending PR.
+- **age** — for EXISTING issues, roughly how long it has been in the repo
+  (days, weeks, months, years), or PENDING if another pending branch owns
+  the fix; name that branch in the finding. Age is evidence for
+  probability: an issue that has sat in production for years without
+  firing is unlikely to fire this week.
+- **probability** — for CURRENT issues, HIGH, MEDIUM, or LOW chance it
+  fires under today's code and config. LATENT for latent issues.
 
 ## Phase 4 — the report
 
 ### Buckets
 
-- **HIGH** — a current problem in a real usage scenario. The scenarios that
-  count are listed under Tunables. A latent issue reaches HIGH if this PR
-  makes it more likely, or if its consequence outweighs a low probability,
-  such as data loss, a security breach, or a privacy breach.
-- **MEDIUM** — verified and real, but bounded: a narrow scenario, a
-  recoverable failure, or a latent issue with a reasonable probability of
-  being triggered.
-- **LOW** — nitpicks, cleanups, and long-standing latent issues that pass
-  none of the tests below. One line each, grouped. Don't pad the bucket
-  and don't argue for them.
+Bucket each finding from its Phase 3 values. Severity sets the starting
+bucket: CRITICAL and HIGH start in HIGH, MEDIUM in MEDIUM, LOW in LOW. Move
+it down one bucket for each of these that holds, stopping at LOW:
 
-Long-standing latent issues are the ones most often mis-ranked. Three
-tests separate them:
+- probability is LOW or LATENT;
+- origin is EXISTING.
 
-- Does this PR make the issue more likely to fire, harder to fix, or newly
-  reachable? Then rank it on that, not on its age.
-- Is the consequence severe — data loss, a security or privacy breach, or
-  harm on that scale? Then it is eligible for HIGH however unlikely it is.
-- Is there a reasonable probability it gets triggered? Then it is fair game
-  for MEDIUM.
-
-Everything else long-standing goes LOW.
+CRITICAL findings stay in HIGH regardless.
 
 ### Shape
 
@@ -150,11 +136,12 @@ Omit the section if there was no prior review.
 
 ## HIGH
 
-**1. <the claim, one line>** — current
+**1. <the claim, one line>**
 
 *Scenario:* what has to happen.
+*Probability:* HIGH | MEDIUM | LOW | LATENT
 *Impact:* what goes wrong when it does.
-*Before merge:* the action, or "none — informational".
+*Severity:* CRITICAL | HIGH | MEDIUM | LOW
 
 ## MEDIUM
 ## LOW
@@ -162,9 +149,13 @@ Omit the section if there was no prior review.
 ## Questions
 ```
 
-Description findings are ranked in the buckets like any other. A body that
-tells the next reviewer not to look at a file the PR changes on the default
-path is a HIGH finding, not a copy edit.
+Every finding carries the same four fields; in LOW, put them on one line.
+Don't pad LOW and don't argue for its items.
+
+Description findings are classified like any other. A body that tells the
+next reviewer not to look at a file the PR changes on the default path is
+severity HIGH: the scenario is this review, the impact is an unreviewed
+change shipping.
 
 When the PR is one step in a stack, or when the caller asks for it, add the
 merge-gating axis alongside the buckets:
@@ -191,9 +182,5 @@ holds.
 
 These are the parts that drift.
 
-- **Usage scenarios that make a finding HIGH.** Any regression reaching
-  end users in production. Also, any breaks in non-production environments
-  or workflows, including curriculum authoring (levelbuilder), developer
-  experience, adhoc start, or any test environment failures.
 - **Default effort.** `high`.
 - **Finding cap.** `/code-review` at `high` caps at 15.
