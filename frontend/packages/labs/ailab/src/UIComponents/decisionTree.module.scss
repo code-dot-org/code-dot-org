@@ -27,6 +27,11 @@
   stroke-width: 1.5;
 }
 
+.pathEdge {
+  stroke: var(--ailab-teal);
+  stroke-width: 3;
+}
+
 .nodeSlot {
   position: absolute;
   width: var(--tree-node-width);
@@ -57,6 +62,11 @@
 .answer {
   background-color: var(--ailab-label);
   border-color: var(--ailab-label);
+}
+
+// A ring, not a wider border, so nodes on the path keep their size.
+.pathNode {
+  box-shadow: 0 0 0 3px var(--ailab-teal);
 }
 
 .nodeText {

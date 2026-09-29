@@ -12,7 +12,10 @@ import {
 } from '../helpers/displayTreeLayout';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
-import {getDisplayTree} from '../selectors/visualizationSelectors';
+import {
+  getDisplayTree,
+  getPredictionTrace,
+} from '../selectors/visualizationSelectors';
 
 import shared from '../shared.module.scss';
 import styles from './decisionTree.module.scss';
@@ -38,11 +41,13 @@ function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
 
 const DecisionTree = () => {
   const tree = useAppSelector(getDisplayTree);
+  const trace = useAppSelector(getPredictionTrace);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
     () => (tree ? layoutDisplayTree(tree) : undefined),
     [tree],
   );
+  const pathIds = useMemo(() => new Set(trace?.path), [trace]);
 
   if (!tree || !layout) {
     return null;
@@ -76,7 +81,11 @@ const DecisionTree = () => {
       <div className={styles.scroll}>
         <div
           role="img"
-          aria-label="Diagram of your model's decision tree"
+          aria-label={
+            trace
+              ? "Diagram of your model's decision tree, with the path of your prediction"
+              : "Diagram of your model's decision tree"
+          }
           className={styles.canvas}
           style={{
             ...canvasVariables,
@@ -93,7 +102,13 @@ const DecisionTree = () => {
             {layout.nodes.map(
               placed =>
                 placed.parent && (
-                  <path key={placed.id} d={edgePath(placed.parent, placed)} />
+                  <path
+                    key={placed.id}
+                    d={edgePath(placed.parent, placed)}
+                    className={classNames({
+                      [styles.pathEdge]: pathIds.has(placed.id),
+                    })}
+                  />
                 ),
             )}
           </svg>
@@ -113,7 +128,12 @@ const DecisionTree = () => {
                     {branch}
                   </div>
                 )}
-                <div title={text} className={classNames(styles.node, kind)}>
+                <div
+                  title={text}
+                  className={classNames(styles.node, kind, {
+                    [styles.pathNode]: pathIds.has(placed.id),
+                  })}
+                >
                   <span className={styles.nodeText}>{text}</span>
                 </div>
               </div>

@@ -47,6 +47,13 @@ export interface DisplayTreeContext {
   labelColumn: string;
 }
 
+// Nodes have no id. Layout and trace build the same id from branch positions.
+export const DISPLAY_TREE_ROOT_ID = '0';
+
+export function getChildNodeId(parentId: string, branchIndex: number): string {
+  return `${parentId}.${branchIndex}`;
+}
+
 // The `name` in ml-cart's toJSON().
 const TREE_MODEL_NAMES = ['DTClassifier', 'DTRegression'];
 

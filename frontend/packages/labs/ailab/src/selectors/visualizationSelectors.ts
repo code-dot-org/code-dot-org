@@ -10,6 +10,10 @@ import {
   type DisplayTreeNode,
   type SerializedTree,
 } from '../helpers/displayTree';
+import {
+  traceDisplayTree,
+  type DisplayTreeTrace,
+} from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -260,5 +264,24 @@ export const getDisplayTree = createSelector(
       featureNumberKey,
       labelColumn,
     });
+  },
+);
+
+// `setTestData` clears the prediction, so the trace matches the values in use.
+export const getPredictionTrace = createSelector(
+  [
+    getDisplayTree,
+    (state: RootState) => state.testData,
+    (state: RootState) => state.prediction,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    testData: DataRow,
+    prediction: number | string | undefined,
+  ): DisplayTreeTrace | undefined => {
+    if (!tree || prediction === undefined) {
+      return undefined;
+    }
+    return traceDisplayTree(tree, testData);
   },
 );

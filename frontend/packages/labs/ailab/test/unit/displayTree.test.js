@@ -1,60 +1,7 @@
-import fs from 'fs';
-import path from 'path';
-
-import {ColumnTypes, TestDataLocations} from '../../src/constants';
-import {parseCSV} from '../../src/csvReaderWrapper';
 import {buildDisplayTree} from '../../src/helpers/displayTree';
-import {getKeyByValue} from '../../src/helpers/utils';
-import {convertValueForTraining} from '../../src/helpers/valueConversion';
-import {
-  addSelectedFeature,
-  resetState,
-  setColumnsByDataType,
-  setImportedMetadata,
-  setLabelColumn,
-  setMode,
-  setReserveLocation,
-  setSelectedCSV,
-  setSelectedJSON,
-} from '../../src/redux';
 import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
-import {store} from '../../src/store';
-import train from '../../src/train';
 
-const DIR = path.join(__dirname, '../../public/datasets');
-
-function load(id, {label, features, mode = {trainer: 'decisionTree'}} = {}) {
-  const csv = fs.readFileSync(path.join(DIR, `${id}.csv`), 'utf8');
-  const metadata = JSON.parse(
-    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8'),
-  );
-
-  store.dispatch(resetState());
-  train.reset();
-  store.dispatch(setMode(mode));
-  store.dispatch(setSelectedCSV(`${id}.csv`));
-  store.dispatch(setSelectedJSON(`${id}.json`));
-  parseCSV(csv, false, false);
-  store.dispatch(setImportedMetadata(metadata));
-  metadata.fields.forEach(field =>
-    store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL),
-    ),
-  );
-  store.dispatch(setReserveLocation(TestDataLocations.END));
-  const labelColumn = label || metadata.defaultLabelColumn;
-  store.dispatch(setLabelColumn(labelColumn));
-  (
-    features ||
-    Object.keys(store.getState().data[0]).filter(
-      column => column !== labelColumn,
-    )
-  ).forEach(column => store.dispatch(addSelectedFeature(column)));
-
-  train.init(store);
-  train.onClickTrain();
-  return store.getState();
-}
+import {modelPredictions, trainDataset} from './trainedDataset';
 
 function route(node, row) {
   while (node.type === 'question') {
@@ -69,20 +16,6 @@ function route(node, row) {
   return node.prediction;
 }
 
-function modelPredictions(state) {
-  const rows = state.data.map(row =>
-    state.selectedFeatures.map(feature =>
-      convertValueForTraining(state, row[feature], feature),
-    ),
-  );
-  const labelKey = state.featureNumberKey[state.labelColumn];
-  return state.trainedModel
-    .predict(rows)
-    .map(prediction =>
-      labelKey ? getKeyByValue(labelKey, prediction) : prediction,
-    );
-}
-
 function countQuestions(node) {
   return node.type === 'answer'
     ? 0
@@ -95,7 +28,7 @@ describe('getDisplayTree on shipped datasets', () => {
     ['insurance_cost', {}],
     ['jeans', {}],
   ])('every row of %s reaches the answer the model predicts', (id, options) => {
-    const state = load(id, options);
+    const state = trainDataset(id, options);
     const tree = getDisplayTree(state);
 
     expect(tree).toBeDefined();
@@ -106,7 +39,7 @@ describe('getDisplayTree on shipped datasets', () => {
   });
 
   test('a KNN model has no display tree', () => {
-    const state = load('zoo', {label: 'Class', mode: {}});
+    const state = trainDataset('zoo', {label: 'Class', mode: {}});
 
     expect(state.trainedModel).toBeDefined();
     expect(getDisplayTree(state)).toBeUndefined();
