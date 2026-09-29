@@ -1,9 +1,34 @@
 import path from 'node:path';
-import type {OutputOptions} from 'rollup';
+import type {OutputOptions, PreRenderedAsset} from 'rollup';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
+
+/**
+ * Emits a `.module.css` asset as plain `{base}.css`, keeping it beside the
+ * chunk that imports it.
+ *
+ * The `.module` suffix has to go: a host bundler re-modularizes anything
+ * matching it (css-loader enables CSS modules by filename, `auto` on by
+ * default), rewriting the already-hashed class names in this file to fresh
+ * ones. The JS still carries the originals, so the stylesheet loads and matches
+ * nothing -- styles silently vanish in the host. component-library strips the
+ * suffix for the same reason.
+ * @param assetInfo Vite config asset info
+ * @returns Asset file name
+ */
+function getAssetFileNames(assetInfo: PreRenderedAsset) {
+  const name = assetInfo.names[0];
+
+  if (/\.module\.(scss|css)$/.test(name)) {
+    const dir = path.dirname(name);
+    const base = path.basename(name).replace(/\.module\.(scss|css)$/, '');
+    return dir === '.' ? `${base}.css` : `${dir}/${base}.css`;
+  }
+
+  return '[name].[ext]';
+}
 
 /**
  * Get Rollup output configuration.
@@ -28,6 +53,7 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
+    assetFileNames: getAssetFileNames,
   };
 }
 

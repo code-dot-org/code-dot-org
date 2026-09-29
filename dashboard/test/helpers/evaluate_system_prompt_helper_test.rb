@@ -19,20 +19,6 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     assert_includes system_prompt, @base_system_prompt_snippet
     assert_includes system_prompt, 'no tests'
     assert_includes system_prompt, @level_instructions
-    refute_includes system_prompt, 'skillEvaluations'
-  end
-
-  test "get_system_prompt for AppLab level with skills" do
-    skill = create(:skill)
-    create(:levels_skill, level: @applab_level, skill: skill)
-    system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
-      @applab_level, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
-    )
-    assert_includes system_prompt, @base_system_prompt_snippet
-    assert_includes system_prompt, 'no tests'
-    assert_includes system_prompt, @level_instructions
-    assert_includes system_prompt, 'skillEvaluations'
-    assert_includes system_prompt, skill.evaluation_criteria
   end
 
   test "get_system_prompt for free response level" do
@@ -43,7 +29,6 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     )
     assert_includes system_prompt, @base_system_prompt_snippet
     assert_includes system_prompt, @level_instructions
-    refute_includes system_prompt, 'skillEvaluations'
   end
 
   test "get_system_prompt includes additional_ai_evaluation_instructions if present" do

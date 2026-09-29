@@ -59,5 +59,5 @@
               %li= link_to course_path(course), course_path(course)
 
 / Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
-- if Policies::Ai.ai_differentiation_enabled?(current_user) && Policies::Ai.ai_differentiation_enabled_for_unit?(@script)
+- if Policies::Ai.ai_differentiation_eligible?(current_user) && Policies::Ai.ai_differentiation_enabled_for_unit?(@script)
   %div#ai-differentiation-fab-mount-point

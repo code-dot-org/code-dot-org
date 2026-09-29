@@ -1,7 +1,6 @@
+import {ShowToast} from '@code-dot-org/component-library/toast';
 import {uniqueFileName} from '@codebridge/utils';
-import React from 'react';
 
-import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
@@ -11,61 +10,50 @@ import {
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {
+  backpackDuplicateDeleteError,
+  backpackSaveError,
+  notifySaved,
+  notifySaving,
+  notifyWithToast,
+} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
 import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
-type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
-
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  backpackApi: SaveToBackpackApi;
+  backpackApi: UnifiedBackpackClientApi;
   file: ProjectFile;
+  showToast: ShowToast;
   sendLab2AnalyticsEvent: (
     eventName: string,
     payload?: Record<string, string>
   ) => void;
 };
 
-// Check if the provided API is a UnifiedBackpackClientApi.
-// We check against the existence of getFileLists so we can use a
-// mocked UnifiedBackpackClientApi in tests.
-const isUnifiedApi = (
-  api: SaveToBackpackApi
-): api is UnifiedBackpackClientApi =>
-  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
-
 export const openSaveToBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   file,
+  showToast,
   sendLab2AnalyticsEvent,
 }: OpenSaveToBackpackPromptArgsType) => {
+  const notify = notifyWithToast(showToast);
+
   const handleError =
-    (title: string, message: string, errorMessage: string) =>
-    (error?: Error) => {
-      const bodyComponent = <BackpackErrorAlertBody message={message} />;
-      dialogControl?.showDialog({
-        type: DialogType.GenericAlert,
-        title,
-        bodyComponent,
-      });
+    (toastMessage: string, errorMessage: string) => (error?: Error) => {
+      notify('danger', toastMessage);
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError(errorMessage, error);
     };
 
-  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
-
   let filenamesByAppType: FilenamesByAppType;
   try {
-    filenamesByAppType = isUnifiedApi(backpackApi)
-      ? await backpackApi.getFileLists()
-      : {[backpackApi.appType]: await backpackApi.getFileList()};
+    filenamesByAppType = await backpackApi.getFileLists();
   } catch (error) {
     handleError(
-      codebridgeI18n.saveToBackpackTitle(),
-      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
+      backpackSaveError(file.name),
       'Backpack file list fetch error'
     )(error as Error);
     return;
@@ -117,15 +105,15 @@ export const openSaveToBackpackPrompt = async ({
     });
 
   const errorCallback = handleError(
-    codebridgeI18n.saveToBackpackTitle(),
-    codebridgeI18n.saveToBackpackError({selectedFileName}) +
-      ' ' +
-      codebridgeI18n.closeWindowTryAgain(),
+    backpackSaveError(selectedFileName),
     'Save to backpack error'
   );
 
+  notifySaving(notify, selectedFileName);
+
   const saved = await new Promise<boolean>(resolve => {
     const onSuccess = () => {
+      notifySaved(notify, selectedFileName);
       successCallback();
       resolve(true);
     };
@@ -143,22 +131,24 @@ export const openSaveToBackpackPrompt = async ({
     } else {
       backpackApi.saveFile(selectedFileName, file.contents, onError, onSuccess);
     }
+  }).catch(error => {
+    errorCallback(error as Error);
+    return false;
   });
 
   const replacedLegacyCopy =
     saved && isDuplicateFileName && selectedFileName === file.name;
-  if (!unifiedApi || !replacedLegacyCopy) {
+  if (!replacedLegacyCopy) {
     return;
   }
 
   // Writes go to the universal backpack, so a name replaced in a legacy backpack is
   // still there. Deleting it after the save keeps a failed save non-destructive.
   try {
-    await unifiedApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
+    await backpackApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
   } catch (error) {
     handleError(
-      codebridgeI18n.saveToBackpackTitle(),
-      "We saved your new file, but couldn't delete your old one. You can retry the delete in the Backpack.",
+      backpackDuplicateDeleteError(selectedFileName),
       'Backpack duplicate delete error'
     )(error as Error);
   }

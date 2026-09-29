@@ -12,8 +12,9 @@ test.describe('Playing multi levels 3', () => {
 
     // original URL omits noautoplay
     await level.gotoLevel({
-      lesson: 9,
-      level: 1,
+      course: 'ui-test-level-i18n',
+      lesson: 1,
+      level: 5,
       lang: 'es-MX',
       noautoplay: false,
     });

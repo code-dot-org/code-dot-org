@@ -63,9 +63,11 @@ dashboardJob:
 activeJobWorker:
   enabled: true
   replicas: 1
+  # Delayed Job priorities: high < 10, low >= 10; both leaves the range unrestricted.
+  priorityMode: both
+  # Custom commands and args are supported only with priorityMode: both.
   command: ["sh", "-c"]
-  args:
-    - cd dashboard && bundle exec bin/delayed_job run
+  args: []
   RAILS_ENV: adhoc
   # Worker tuning; the blank secret overrides the adhoc boot needs live in
   # the shared locals ConfigMap (templates/locals.yml.yaml) so the

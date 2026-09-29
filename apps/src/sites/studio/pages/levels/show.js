@@ -66,7 +66,7 @@ function initPage() {
   }
 
   // AI Differentiation FAB to be shown only if rubric FAB is not.
-  const renderAiDiffButton = () => {
+  const renderAiDiffButton = ({hideButton = false} = {}) => {
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
@@ -92,6 +92,7 @@ function initPage() {
             scriptName={reportingData.unitName}
             canStartOpen={false}
             canDefaultOpen={false}
+            hideButton={hideButton}
           />
         </Provider>,
         aiDiffFabMountPoint,
@@ -149,24 +150,59 @@ function initPage() {
           studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
         });
       }
-      createReactRoot(
-        <Provider store={getStore()}>
-          <RubricFloatingActionButton
-            rubric={rubric}
-            studentLevelInfo={studentLevelInfo}
-            reportingData={reportingData}
-            currentLevelName={config.level_name}
-            aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
-            parentLevelName={parentLevelName}
-            canShowTaScoresAlert={canShowTaScoresAlert}
-            levelType={levelType}
-          />
-        </Provider>,
-        rubricFabMountPoint,
-        {
-          legacyReactDomRender: true,
+      if (experiments.isEnabled('rubrics-drawer')) {
+        // Same trigger position as the rubric FAB below, but it hands off
+        // to the AI TA drawer's Rubrics screen (apps/src/aiTeacherDrawer/
+        // rubrics/) instead of the floating RubricContainer panel.
+        const differentiationContext = {type: AiDiffContext.LEVEL};
+        if (hasScriptData('script[data-aiDiffData]')) {
+          const aiDiffData = getScriptData('aiDiffData');
+          differentiationContext.levelId = aiDiffData.levelId;
+          differentiationContext.unitId = aiDiffData.scriptId;
         }
-      );
+        createReactRoot(
+          <Provider store={getStore()}>
+            <AiDiffFloatingActionButton
+              context={differentiationContext}
+              scriptName={reportingData.unitName}
+              openToNav="Rubrics"
+            />
+          </Provider>,
+          rubricFabMountPoint,
+          {
+            legacyReactDomRender: true,
+          }
+        );
+      } else {
+        createReactRoot(
+          <Provider store={getStore()}>
+            <RubricFloatingActionButton
+              rubric={rubric}
+              studentLevelInfo={studentLevelInfo}
+              reportingData={reportingData}
+              currentLevelName={config.level_name}
+              aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+              parentLevelName={parentLevelName}
+              canShowTaScoresAlert={canShowTaScoresAlert}
+              levelType={levelType}
+            />
+          </Provider>,
+          rubricFabMountPoint,
+          {
+            legacyReactDomRender: true,
+          }
+        );
+        // The branch above doesn't mount the AI TA drawer (it renders the
+        // legacy floating rubric panel instead), so on rubric levels
+        // TeacherPanelHandle's "open the drawer to Roster" click would
+        // otherwise have no drawer to open. Mount one, same as non-rubric
+        // levels, whenever the TA teacher panel experiment is active — but
+        // without its own FAB icon, since the teacher panel handle's arrow
+        // is the only intended entry point on rubric levels.
+        if (experiments.isEnabled('ta-teacher-panel')) {
+          renderAiDiffButton({hideButton: true});
+        }
+      }
     } else {
       renderAiDiffButton();
     }

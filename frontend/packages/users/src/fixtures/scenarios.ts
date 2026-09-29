@@ -30,6 +30,7 @@ export const USERS_SCENARIO_TAGS = [
   'student-can-switch',
   'teacher-no-dependents',
   'sso-teacher-dependents',
+  'teacher-no-school',
 ] as const;
 
 export type UsersScenarioTag = (typeof USERS_SCENARIO_TAGS)[number];
@@ -101,6 +102,15 @@ const teacher: UsersScenario = {
     is_usa: true,
     parent_email: null,
     dependent_students_count: 2,
+    // Teacher-only keys: a student's seed omits them, like the Rails serializer.
+    educator_role: 'classroom_teacher',
+    school_info: {
+      school_name: 'Example Elementary School',
+      school_type: 'public',
+      school_id: '100000000001',
+      school_zip: '98101',
+      country: 'US',
+    },
   },
   password: 'currentpass',
   description: 'Educator with a password + email; can change type and delete.',
@@ -180,6 +190,14 @@ const ssoTeacher: UsersScenario = {
     is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
+    educator_role: 'school_admin',
+    school_info: {
+      school_name: 'Example Middle School',
+      school_type: 'public',
+      school_id: '100000000002',
+      school_zip: '98101',
+      country: 'US',
+    },
   },
   description: 'Google-only educator: no password, shows Create password.',
 };
@@ -350,6 +368,15 @@ const longStrings: UsersScenario = {
     is_usa: true,
     parent_email: null,
     dependent_students_count: 0,
+    educator_role: 'other',
+    school_info: {
+      school_name:
+        'The Wolfeschlegelsteinhausenbergerdorff Regional Consolidated Magnet School for the Advancement of Computer Science',
+      school_type: 'charter',
+      school_id: null,
+      school_zip: '98101',
+      country: 'US',
+    },
   },
   password: 'currentpass',
   description: 'Very long + emoji names — overflow / truncation probe.',
@@ -385,6 +412,13 @@ const ssoTeacherDependents: UsersScenario = {
     'Google-only educator with 2 dependent students — no password, all five acknowledgments.',
 };
 
+const teacherNoSchool: UsersScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 14, educator_role: null},
+  settings: {...teacher.settings, educator_role: null, school_info: null},
+  description: 'Educator with no school and no role — empty state of both.',
+};
+
 export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   teacher,
   student,
@@ -399,4 +433,5 @@ export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   'student-can-switch': studentCanSwitch,
   'teacher-no-dependents': teacherNoDependents,
   'sso-teacher-dependents': ssoTeacherDependents,
+  'teacher-no-school': teacherNoSchool,
 };

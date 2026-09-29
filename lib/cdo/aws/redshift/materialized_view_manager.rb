@@ -43,10 +43,11 @@ module Cdo
       #
       #   PROVISION & REFRESH (class — across a set of models, via the Redshift Data API)
       #     self.generate_all_ddl_templates # Create/Update/Delete Materialized View SQL ERB files for all Models.
+      #     self.plan_provisioning          # read-only: which views provisioning would add/update/drop
       #     self.provision_all_views        # DROP+CREATE+COMMENT changed views; drop orphans (chunked)
-      #     self.refresh_all_views          # REFRESH stale views
+      #     self.refresh_all_views          # REFRESH stale views, without waiting, return Statement IDs
+      #     self.refresh_and_wait           # REFRESH stale views and wait; unions both failure sources
       #     self.redshift_client            # client pinned to MATERIALIZED_VIEW_DATABASE
-      #   (poll submitted statements with Cdo::Aws::Redshift::Client#wait_for_statements.)
       #
       #   MONITOR (class — read-only health)
       #     self.view_status           # one ViewStatusRow per (model, view variant) + orphans
@@ -57,6 +58,12 @@ module Cdo
       # The phases share internals on purpose (the Data API client, the schema/FQN conventions, the
       # SVV_MV_INFO catalog reads, ViewStatusRow), which is why they live in one cohesive class
       # rather than being split apart.
+      #
+      # Every class method takes its `models:` from the caller, which normally supplies
+      # `AnalyticsExportable.valid_exported_models` (that method logs whatever it excludes). Deciding
+      # which models are exportable is application policy and belongs to that concern; taking the set
+      # as an argument is what keeps this class, like the rest of `lib/`, free of any dependency on
+      # the Rails application and unit-testable without loading it.
       class MaterializedViewManager
         # Which `DataClassification` levels reach each Redshift view. The non-PII view
         # carries only data safe for broad analytics access; the PII view carries
@@ -342,47 +349,17 @@ module Cdo
           ERB.new(template).result_with_hash(environment_type: environment_type.to_s)
         end
 
-        # Provisions materialized views in Redshift for a set of models: submits the
-        # DROP+CREATE+COMMENT batch (async) for each model that needs work, and
-        # submits a single consolidated DROP batch (async) for any orphaned views
-        # that no longer correspond to a model in the set. Returns the resulting
-        # statement IDs without waiting — pass `:statements` from the result to
-        # `client.wait_for_statements` (interactive) or hand them off to a follow-up
-        # status check (cron).
-        #
-        # To avoid re-populating large views unnecessarily, each model's rendered
-        # DDL is hashed and compared against the hash stored as the view's Redshift
-        # COMMENT ON COLUMN by a previous run. Views whose DDL has not changed are
-        # reported as `:unchanged` and skipped at submit time. The daily REFRESH
-        # MATERIALIZED VIEW job keeps their contents fresh.
-        #
-        # Yielded progress events (block optional):
-        #   yield(:submitted, table_name, [fqn, ...])      # after async submit for one model
-        #   yield(:skipped, table_name)                    # comment hash matches desired DDL
-        #   yield(:error, table_name, exception)           # submit raised; provisioning continues
-        #   yield(:drop_batch_submitted, [fqn, ...])       # after async submit of the orphan-drop batch
+        # Identify the Materialized Views that needed to be created, updated, deleted, or not changed based on the
+        # current ActiveRecord Models and the MySQL tables they persist to.
         #
         # @param client [Cdo::Aws::Redshift::Client]
-        # @param environment_type [Symbol] :production or :test
-        # @param models [Enumerable<Class>] ActiveRecord model classes to provision
-        # @param dry_run [Boolean] when true, returns the plan without submitting anything
-        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop arrays of FQNs;
-        #   :failed array of table names whose submit raised; and :statements
-        #   `{fqn => statement_id}` map (empty when dry_run is true).
-        def self.provision_all_views(client:, environment_type:, models:, dry_run: false)
-          # Keep the committed `.sql.erb` templates in lockstep with the models on every provision —
-          # including the dry-run/plan path and when the cluster needs no changes — so a classification
-          # or schema change always surfaces as a template diff. This only records the pending change;
-          # the DROP/CREATE below is what rebuilds the views on Redshift.
-          generate_all_ddl_templates(models: models)
-
-          generators = models.map {|model| new(model)}
-
-          # Pre-render every desired view's DDL so we can hash-compare against
-          # existing COMMENT-stored hashes.
+        # @param environment_type [Symbol, String] :production or :test
+        # @param models [Enumerable<Class>] ActiveRecord model classes to plan for
+        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop — sorted arrays of view FQNs
+        def self.plan_provisioning(client:, environment_type:, models:)
           desired_ddls = {}
-          generators.each do |gen|
-            gen.rendered_ddls(environment_type: environment_type).each do |fqn, info|
+          models.each do |model|
+            new(model).rendered_ddls(environment_type: environment_type).each do |fqn, info|
               desired_ddls[fqn] = info[:sql]
             end
           end
@@ -391,24 +368,50 @@ module Cdo
           existing_comments = list_existing_view_comments(client: client, environment_type: environment_type)
           existing_fqns = Set.new(existing_comments.keys)
 
+          # Every unchanged FQN is by construction both desired and existing, so this needs no
+          # further intersection below.
           unchanged_fqns = Set.new(
             desired_ddls.select do |fqn, sql|
               existing_comments[fqn] && existing_comments[fqn] == ddl_hash(sql)
             end.keys
           )
 
-          plan = {
+          {
             to_add: (desired_fqns - existing_fqns).sort,
             to_update: ((desired_fqns & existing_fqns) - unchanged_fqns).sort,
-            unchanged: ((desired_fqns & existing_fqns) & unchanged_fqns).sort,
-            to_drop: (existing_fqns - desired_fqns).sort,
-            failed: [],
-            statements: {}
+            unchanged: unchanged_fqns.sort,
+            to_drop: (existing_fqns - desired_fqns).sort
           }
+        end
 
-          return plan if dry_run
+        # Provisions materialized views in Redshift for a set of models: submits the
+        # DROP+CREATE+COMMENT batch (async) for each model that needs work, and
+        # submits a single consolidated DROP batch (async) for any orphaned views
+        # that no longer correspond to a model in the set. Returns the resulting
+        # statement IDs without waiting — pass `:statements` from the result to
+        # `client.wait_for_statements` (interactive) or hand them off to a follow-up
+        # status check (cron).
+        #
+        # Yielded progress events (block optional):
+        #   yield(:submitted, table_name, [fqn, ...])      # after async submit for one model
+        #   yield(:skipped, table_name)                    # comment hash matches desired DDL
+        #   yield(:error, table_name, exception)           # submit raised; provisioning continues
+        #   yield(:drop_batch_submitted, [fqn, ...])       # after async submit of the orphan-drop batch
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String] :production or :test
+        # @param models [Enumerable<Class>] ActiveRecord model classes to provision
+        # @return [Hash] the `plan_provisioning` keys, plus :failed (table names whose submit raised)
+        #   and :statements (`{fqn => statement_id}`)
+        def self.provision_all_views(client:, environment_type:, models:)
+          # Keep the committed `.sql.erb` templates in lockstep with the models on every provision.
+          generate_all_ddl_templates(models: models)
 
-          generators.each do |gen|
+          plan = plan_provisioning(client: client, environment_type: environment_type, models: models)
+          unchanged_fqns = Set.new(plan[:unchanged])
+          result = plan.merge(failed: [], statements: {})
+
+          models.map {|model| new(model)}.each do |gen|
             table_name = gen.view_name
             gen_fqns = gen.expected_view_fqns(environment_type)
 
@@ -419,10 +422,10 @@ module Cdo
 
             begin
               submitted = gen.create_or_replace_views(client: client, environment_type: environment_type)
-              plan[:statements].merge!(submitted)
+              result[:statements].merge!(submitted)
               yield(:submitted, table_name, submitted.keys) if block_given?
             rescue StandardError => exception
-              plan[:failed] << table_name
+              result[:failed] << table_name
               yield(:error, table_name, exception) if block_given?
             end
           end
@@ -432,15 +435,15 @@ module Cdo
           # are mutually independent and idempotent (`DROP ... IF EXISTS`), so splitting them across
           # independent, unordered batches is safe. `batch_execute_async` returns one statement id per
           # batch.
-          if plan[:to_drop].any?
-            drop_sqls = plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
+          if result[:to_drop].any?
+            drop_sqls = result[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
             client.batch_execute_async(drop_sqls, allow_separate_transactions: true).each_with_index do |statement_id, batch_index|
-              plan[:statements]["__drop_orphans___#{batch_index}"] = statement_id
+              result[:statements]["__drop_orphans___#{batch_index}"] = statement_id
             end
-            yield(:drop_batch_submitted, plan[:to_drop]) if block_given?
+            yield(:drop_batch_submitted, result[:to_drop]) if block_given?
           end
 
-          plan
+          result
         end
 
         # Submits REFRESH MATERIALIZED VIEW asynchronously for every PII and
@@ -454,32 +457,21 @@ module Cdo
         # created, or just not catalog-visible) is treated as stale so it gets
         # refreshed — safer than skipping something we can't see.
         #
-        # Intended caller: end-of-cron hooks such as
-        # `bin/cron/export_mysql_database_to_redshift`, which can submit
-        # REFRESH at the tail of the DMS daily-copy job and either return
-        # immediately or wait for completion before signalling downstream
-        # reports that the warehouse is consistent.
-        #
         # Per-model submit failures (e.g., the view does not yet exist in
         # Redshift because the most recent CREATE failed) are caught and
         # reported via the `:error` event rather than aborting the whole run.
         #
         # Yielded progress events (block optional):
-        #   yield(:would_refresh, table_name, [fqn, ...]) # dry_run only — would submit these FQNs
         #   yield(:submitted, table_name, [fqn, ...])     # async REFRESHes submitted for one model
         #   yield(:skipped, table_name)                   # every view for this model is not stale
         #   yield(:no_views, table_name)                  # model has no MV variants (no columns / all text)
         #   yield(:error, table_name, exception)          # submit raised; refresh_all_views continues
         #
         # @param client [Cdo::Aws::Redshift::Client]
-        # @param environment_type [Symbol] :production or :test
+        # @param environment_type [Symbol, String] :production or :test
         # @param models [Enumerable<Class>] ActiveRecord model classes whose views to refresh
-        # @param dry_run [Boolean] when true, reports what would be refreshed via the
-        #   `:would_refresh` event without submitting anything. `:skipped` and `:no_views`
-        #   are still yielded so callers can render a complete preview.
         # @return [Hash] :statements => {fqn => statement_id}, :failed => [table_name, ...]
-        #   (both empty when dry_run is true).
-        def self.refresh_all_views(client:, environment_type:, models:, dry_run: false)
+        def self.refresh_all_views(client:, environment_type:, models:)
           statements = {}
           failed = []
 
@@ -505,11 +497,6 @@ module Cdo
               next
             end
 
-            if dry_run
-              yield(:would_refresh, table_name, stale_fqns) if block_given?
-              next
-            end
-
             begin
               submitted = gen.refresh_views(client: client, environment_type: environment_type, only: stale_fqns)
               statements.merge!(submitted)
@@ -521,6 +508,43 @@ module Cdo
           end
 
           {statements: statements, failed: failed}
+        end
+
+        # Submits REFRESH for every stale view and waits for the submitted statements to finish.
+        #
+        # A view can fail in two places -- at submit time (reported by `refresh_all_views` in
+        # `:failed`) and during execution (reported by `Client#wait_for_statements` in `:failed`) --
+        # and a caller that checks only one silently reports success for the other. This combines
+        # them into a single `:failures` list so that cannot happen.
+        #
+        # Yields the progress events of both phases, each shaped `(event, name, detail)`:
+        #   yield(:submitted, table_name, [fqn, ...])   # REFRESH submitted for one model
+        #   yield(:skipped,   table_name, nil)          # every view for this model is not stale
+        #   yield(:no_views,  table_name, nil)          # model has no view variants
+        #   yield(:error,     table_name, exception)    # submit raised; other models continue
+        #   yield(:finished,  fqn, duration_seconds)    # REFRESH completed
+        #   yield(:failed,    fqn, message)             # REFRESH ended FAILED or ABORTED
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String] e.g. :production or :test
+        # @param models [Enumerable<Class>] ActiveRecord model classes whose views to refresh
+        # @param timeout [Integer, nil] seconds to wait for the REFRESH statements; nil waits
+        #   indefinitely. The statements keep running on Redshift when the wait is abandoned.
+        # @return [Hash] :refreshed => [fqn, ...] that finished, :failures => [name, ...] that did
+        #   not (model table names for submit failures, view FQNs for execution failures).
+        # @raise [Cdo::Aws::Redshift::Client::QueryError] when `timeout` elapses first.
+        def self.refresh_and_wait(client:, environment_type:, models:, timeout: nil, &reporter)
+          result = refresh_all_views(
+            client: client, environment_type: environment_type, models: models, &reporter
+          )
+          wait_result = client.wait_for_statements(
+            statements: result[:statements], timeout: timeout, &reporter
+          )
+
+          {
+            refreshed: wait_result[:finished],
+            failures: result[:failed] + wait_result[:failed].map(&:first)
+          }
         end
 
         # Returns one `ViewStatusRow` per (model, view variant) plus extra rows

@@ -5,7 +5,7 @@ wrong 'Because they improve accuracy by combining predictions from other models'
 right 'Because they can work with data that might be in different forms'
 wrong 'Because they can be updated more easily as new data arrives'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Why are multimodal machine learning models useful?

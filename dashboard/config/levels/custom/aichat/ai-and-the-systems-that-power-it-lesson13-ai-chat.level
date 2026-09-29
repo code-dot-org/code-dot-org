@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-09-25T14:52:31.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "AI Image Generation",
+    "long_instructions": "#AI Image Generation \r\n\r\nAs you design your system diagram, use this AI Chat to assist with generating icons to  represent unique parts of your sustainable system.\r\n\r\nSave your image(s) into the Backpack to use in Sketch Lab.\r\n\r\n---\r\n\r\n**Image Generation Starters:**\r\n\r\n* \"Can you create an icon to represent a gear?\"\r\n* \"Create an icon to represent a user\"\r\n* \"Generate an icon of a tablet that I can use as a background image.\"\r\n",
+    "bubble_choice_description": "Use this level to assist with generating icons to represent components within your system",
+    "thumbnail_url": "https://images.code.org/8ecea71d58227ce09a817570e5fdf7d6-image-generation-icon.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You will generate an image based on what the user inputs in the following style: \nA single flat vector icon in a \"lineal color\" icon style.\nFlat color fills with no gradients, using a limited palette: sky blue/cyan (#4FB3E8), navy (#1E3A5F), sunny yellow (#FFD23F), lime green (#8CC63F), light gray (#D9DEE3), and a small\naccent of coral pink (#F2637E) only where needed. Add one simple flat highlight or shadow band on the main shape for depth. Minimal detail and simplified geometry, like an icon drawn on a 64x64 grid. Front-facing or slight 3/4 view, centered, filling about 80% of the frame. Plain white background, no border, no frame, no text, no labels.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-25 14:52:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-25 14:54:12 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-25 15:01:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

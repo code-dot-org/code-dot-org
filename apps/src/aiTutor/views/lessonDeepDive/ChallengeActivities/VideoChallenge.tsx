@@ -1,4 +1,8 @@
-import {VideoRecorder} from '@code-dot-org/lesson-deep-dive';
+import {
+  Challenge,
+  ChallengeResponse,
+  challengeResponseValidator,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -6,22 +10,14 @@ import {getClientApi} from '@cdo/apps/aichat/api/client';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  Challenge,
-  ChallengeResponse,
-  challengeResponseValidator,
-} from '../types';
-
 import {requestEvaluation} from './requestEvaluation';
+import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
 
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  // Owned by ChallengeBox, which drives the "Start Recording" / "Stop
-  // Recording" button in the bottom bar (the same button used to record a
-  // whiteboard challenge's audio explanation).
   isRecording: boolean;
   setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
   hasRecording: boolean;
@@ -30,9 +26,6 @@ interface VideoChallengeProps {
   lessonId: number;
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
-  // Reports whether the current recording can be submitted, and hands the
-  // top-bar "Submit for feedback" / "Start over" buttons this modality's
-  // submit and reset handlers.
   onSubmittableChange: (canSubmit: boolean) => void;
   submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
   resetRef: React.MutableRefObject<(() => void) | null>;
@@ -53,14 +46,19 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   submitRef,
   resetRef,
 }) => {
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
-  const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
+  const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
+  const [recordedAudioBlob, setRecordedAudioBlob] = useState<Blob | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const [isUploading, setIsUploading] = useState(false);
   // Bumped to remount the recorder with a clean slate on "Start over".
   const [resetKey, setResetKey] = useState(0);
   const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
+  const mode: VideoCanvasMode = isRecording
+    ? 'recording'
+    : hasRecording
+    ? 'preview'
+    : 'edit';
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
 
   // Initialize the ChatEventLogger with the current context, whenever it updates.
@@ -99,7 +97,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   );
 
   const handleSubmit = async () => {
-    if (!recordedUrl) return;
+    if (!recordedBlob) return;
     setIsUploading(true);
     try {
       const text = await transcribeAudio();
@@ -111,10 +109,9 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       if (!assetId) {
         throw new Error('The server did not return a video asset.');
       }
-      const blob = await fetch(recordedUrl).then(r => r.blob());
       await HttpClient.put(
         `/challenge_response_assets/${assetId}/upload`,
-        blob,
+        recordedBlob,
         true, // useAuthenticityToken
         {'Content-Type': 'video/webm'}
       );
@@ -136,17 +133,14 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   };
 
   const transcribeAudio = async (timedOut = false) => {
-    if (!recordedAudioUrl) return null;
+    if (!recordedAudioBlob) return null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     try {
-      const audio = await fetch(recordedAudioUrl).then(r => r.blob());
-
       const aichatClientApi = await getClientApi();
-      const text = await aichatClientApi.transcribeAudio(audio);
+      const text = await aichatClientApi.transcribeAudio(recordedAudioBlob);
       return text;
-      // setTranscribedText(text);
     } catch (error) {
       console.log(error);
       return null;
@@ -156,8 +150,8 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   // Discard the recording (by remounting the recorder) so the student can
   // record again from scratch.
   const handleReset = () => {
-    setRecordedUrl(null);
-    setRecordedAudioUrl(null);
+    setRecordedBlob(null);
+    setRecordedAudioBlob(null);
     setHasRecording(false);
     setIsRecording(false);
     setResetKey(key => key + 1);
@@ -182,16 +176,17 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
 
   return (
     <div className={styles.videoContainer}>
-      <VideoRecorder
+      <VideoCanvas
         key={resetKey}
-        isRecording={isRecording}
+        mode={mode}
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}
-        recordedUrl={recordedUrl}
-        setRecordedUrl={setRecordedUrl}
-        recordedAudioUrl={recordedAudioUrl}
-        setRecordedAudioUrl={setRecordedAudioUrl}
+        recordedBlob={recordedBlob}
+        setRecordedBlob={setRecordedBlob}
+        recordedAudioBlob={recordedAudioBlob}
+        setRecordedAudioBlob={setRecordedAudioBlob}
+        timeLimitSeconds={60}
       />
     </div>
   );

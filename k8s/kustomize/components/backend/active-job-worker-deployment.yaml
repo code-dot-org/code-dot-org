@@ -35,7 +35,7 @@ spec:
             - sh
             - -c
           args:
-            - cd dashboard && bundle exec bin/delayed_job run
+            - cd dashboard && exec bundle exec bin/delayed_job run
           tty: true
           env:
             - name: RAILS_ENV

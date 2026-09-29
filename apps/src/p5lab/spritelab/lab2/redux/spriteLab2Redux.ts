@@ -1,23 +1,20 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 // The full set of tabs for the SpriteLab2 full-screen UI.
-export const ALL_TABS = ['Images', 'World', 'Code', 'Play'] as const;
-export type Tab = (typeof ALL_TABS)[number];
-
-// AI code-generation lifecycle, modeled on Music's GenerateCode state machine.
-export type AiGenerateState =
-  | 'none'
-  | 'generating'
-  | 'generated'
-  | 'listened'
-  | 'editing'
-  | 'edited';
+// In display order: the scene-editing tabs (grouped behind the scene
+// picker), then Images, then Play.
+export const ALL_TABS = ['World', 'Code', 'Images', 'Play'] as const;
+// 'Scenes' is the scene gallery: a full-workspace view reached from the
+// scene picker, with no button of its own in the bar.
+export type Tab = (typeof ALL_TABS)[number] | 'Scenes';
 
 // Redux mirror of the scenes (full data lives in project sources), so the
 // scene selector and the go-to-scene dropdown can read it reactively.
 export interface SceneMetadata {
   id: string;
   name: string;
+  /** A picture of the scene, when it has one (sceneThumbnails.ts). */
+  thumbnail?: string;
 }
 
 // A scene from a section-mate's project, offered by the go-to-external-scene
@@ -41,7 +38,6 @@ export interface MusicProjectOption {
 export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
-  aiGenerateState: AiGenerateState;
   scenes: SceneMetadata[];
   externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
@@ -50,7 +46,6 @@ export interface SpriteLab2State {
 const initialState: SpriteLab2State = {
   activeTab: 'Code',
   hasRun: false,
-  aiGenerateState: 'none',
   scenes: [],
   externalScenes: [],
   musicProjects: [],
@@ -65,9 +60,6 @@ const spriteLab2Slice = createSlice({
     },
     setHasRun: (state, action: PayloadAction<boolean>) => {
       state.hasRun = action.payload;
-    },
-    setAiGenerateState: (state, action: PayloadAction<AiGenerateState>) => {
-      state.aiGenerateState = action.payload;
     },
     setScenes: (state, action: PayloadAction<SceneMetadata[]>) => {
       state.scenes = action.payload;
@@ -88,7 +80,6 @@ const spriteLab2Slice = createSlice({
 export const {
   setActiveTab,
   setHasRun,
-  setAiGenerateState,
   setScenes,
   setExternalScenes,
   setMusicProjects,

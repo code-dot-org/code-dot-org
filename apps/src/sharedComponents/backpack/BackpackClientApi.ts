@@ -174,7 +174,6 @@ export default class BackpackClientApi {
       if (!this.channelId) {
         throw new Error('Missing channel id for backpack');
       }
-      this.sendUploadStartedEvent(filename);
       const fileResponse = await HttpClient.get(fileUrl);
       if (fileResponse.ok) {
         const responseBlob = await fileResponse.blob();
@@ -186,11 +185,10 @@ export default class BackpackClientApi {
           fileToUpload
         );
         Object.values(this.eventListeners).forEach(listener =>
-          listener(BackpackEvent.FileAdded, filename)
+          listener(BackpackEvent.FileAdded, filename, this.appType)
         );
         onSuccess?.();
       } else {
-        this.sendUploadFailedEvent(filename);
         const error = new Error('Failed to fetch file from url');
         if (onError) {
           onError(error);
@@ -199,7 +197,6 @@ export default class BackpackClientApi {
         throw error;
       }
     } catch (error) {
-      this.sendUploadFailedEvent(filename);
       if (onError) {
         onError(error as Error);
         return;
@@ -219,16 +216,14 @@ export default class BackpackClientApi {
       onError();
       return;
     }
-    this.sendUploadStartedEvent(filename);
     try {
       await HttpClient.put(`${rootUrl(this.channelId)}/${filename}`, contents);
     } catch (error) {
       onError(error as Error);
-      this.sendUploadFailedEvent(filename);
       return;
     }
     Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.FileAdded, filename)
+      listener(BackpackEvent.FileAdded, filename, this.appType)
     );
     onSuccess();
   }
@@ -317,15 +312,11 @@ export default class BackpackClientApi {
     fileContents: string,
     onError: ErrorCallback,
     onSuccess: () => void,
-    retryCount: number,
-    sendUploadStartedEvent: boolean = true
+    retryCount: number
   ) {
     if (!this.channelId) {
       onError();
       return;
-    }
-    if (sendUploadStartedEvent) {
-      this.sendUploadStartedEvent(filename);
     }
     try {
       await HttpClient.put(
@@ -347,8 +338,7 @@ export default class BackpackClientApi {
           fileContents,
           onError,
           onSuccess,
-          retryCount - 1,
-          false /* don't resend upload started event on retry */
+          retryCount - 1
         );
       } else {
         // Record failure and check if all files are done attempting upload/uploading
@@ -442,10 +432,8 @@ export default class BackpackClientApi {
     }
     if (!failedFileList.includes(filename)) {
       Object.values(this.eventListeners).forEach(listener =>
-        listener(requestType, filename)
+        listener(requestType, filename, this.appType)
       );
-    } else if (requestType === BackpackEvent.FileAdded) {
-      this.sendUploadFailedEvent(filename);
     }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
       onSuccess();
@@ -464,17 +452,5 @@ export default class BackpackClientApi {
     if (this.eventListeners[id]) {
       delete this.eventListeners[id];
     }
-  }
-
-  sendUploadStartedEvent(filename: string) {
-    Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.UploadStarted, filename)
-    );
-  }
-
-  sendUploadFailedEvent(filename: string) {
-    Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.UploadFailed, filename)
-    );
   }
 }

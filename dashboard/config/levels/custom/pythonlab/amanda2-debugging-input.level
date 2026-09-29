@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:20:28.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "c63d90fa-e31c-4a4c-b6eb-7bc49d77a26f": {
+          "id": "c63d90fa-e31c-4a4c-b6eb-7bc49d77a26f",
+          "name": "main.py",
+          "contents": "name = input(\"What is your name? \")\nprint(f\"Hello, {name}!\")\n\nfav_subject = input(\"What is your favorite subject? \")\n\n# There's a typo in the variable name below. Can you find it?\nprint(f\"I hear {fav_subjet} is a fun subject!\")\n\nhobby = input(\"What is your favorite hobby? \")\n\n# This message isn't very personalized! Can you make it better?\nprint(\"That sounds like a fun activity!\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "c63d90fa-e31c-4a4c-b6eb-7bc49d77a26f"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- open main.py\r\n- run the program to observe the errors\r\n- identify and correct the misspelled variable causing a NameError\r\n- find the line where a user input variable is not used in the final message\r\n- modify the print statement to include the missing variable for a personalized response\r\n- run the program again to verify all issues are resolved",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMphGPY3i4HEN1orV3Pw\nlrGtz6PO5d9jKWJ6YfYOFZbAPblelzKwVgHHRYxBnhMNko24YB+nZhP/UNLC\n4pxojcT8luMaNWQg9B9Jwm4YbUkhRcNT6xnuXAYEtAPUF8EeZ49lLbPCyzwt\nFZr4wAI/Grf8DdB6YaBZIse8sDeNlZ+JeAj/q+rcfD9Ag1Gwa+C3+v2Z2vOT\nIKibsAOusRqDJjTTKZCldyJ9h++5Ppj0hkI2oVYIZZktdKWe6AxWTiwNwYGG\nPoBBUqek7q7ULFW8p429UITJlj5LCaax60wZ20XnxziAmqk265CaBiSUS5qJ\nG0zjw6jOoRR6QgSu2Whc993x024DDZLViabEoHec7FBcyPu275YXyYJaGt86\nxXurXGgIJRWbjLOpVhlTJhUoIGBoN3OOO1PE0xeoSrSKzvOLd6UHT5/PxYfP\nltSKstS2NB64rhph5PmI2tGG3JUX1F62JdzeiytqjD/VK0Jtrt1nO/gaOHoL\n1bOntF3/7qSQHgBkF+yy8jo9M+1G4kkhZH4bx74zuYm29/LjUfpA/ev+7l4D\nG0QZo+ISzrXZ02yq9x7jYiDgcZHAsB7VQG5AIgLLlzx225tWGG5oxoHhjzfz\np/PbnKGKP2zHEGRLypcr86geTiZkA6Cb6o0j3QhyPZd71Tw2yQtPMm73n65N\ntb9bSYlLRxYMKJYQCJXeZ78LFPjh/Z2zUoxbYUgWQCAyAWwH2n+flcqX9y3+\nK3hjMTLFhRdKf1JfjOCd9+cZJnTmXfnr8Y/ss0TIsMmkNR4/0IdovzEH7RuC\n7Ew7O7lkpgtuPipUxVMi5dLVNx6YtmhaQZAZc5ElHt2A8bGwhm1wK8rx\n",
+    "generate_outline": "Analyze a Python program that intends to be interactive but has errors. Identify and correct bugs related to input() usage, variable assignment, or combining user input into coherent responses."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:20:37 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:20:38 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:21:15 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:21:15 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

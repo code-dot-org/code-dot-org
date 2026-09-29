@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T21:19:45.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "51d3f886-ac5c-46c7-9f9c-6fa0e918cb06": {
+          "id": "51d3f886-ac5c-46c7-9f9c-6fa0e918cb06",
+          "name": "main.py",
+          "contents": "user_name = input(\"What is your name? \")\nprint(f\"Hello, {user_name}! Nice to meet you.\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "51d3f886-ac5c-46c7-9f9c-6fa0e918cb06"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- open main.py\r\n- add a new line of code to ask the user for their favorite subject\r\n- store the subject in a variable\r\n- modify the existing print() statement to include the user's name and favorite subject in a personalized message\r\n- run the program and test it by entering your name and favorite subject",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrLGQVtw8R2PILvshy0\nM0RkJ+OvrFgqJwgAmcuci8i3QIoNoTwuDX+beWntjIU/u0O6JtznGGNgRKPw\nREaGmaT93Hc8v1Pg64EE6dZHmmSbVp2SrCFcwn4CCrHUbyXtiXtQdTxr/5UY\nnwjLxyfmhWbB8n8a33bYZT7U5FVgBe5iVy+23W9oOZhWuGi06INpVacQgZUg\nAF34+WNftWPlIw+pll5AFae6C74zIBuQKlp7ebuNsLvnlQibuBgGvekNjhUw\nDj3d8p07IArmYKhT5MToo1/r3GrjmMF+oiDqnKWwZGwquABnOgsp7S06TKRp\nYm32RjX4x9RmP8jj/5AL+e6Ik1mdFo1rFoqjIscr+7sPiU/jPS7WZzCXJu6l\nfBDgdkgBmwTZisQAzmoeKVIqzQ2QtAPf0oYUrwlykRc0ubxhuEeJUcBl5/aC\nYxesz5sztP9H5WjYiqAp0NX4baSnzMJoQOqA0uSMHsi4NJcR56fVLyrgOyw3\nxydck+d7meuLZWnN/0DlXz650L2waLuTpRLkpHjcBxRghPEd+8Fwk3bAmNgb\nOB15amRNv3+rN5n3iPGG+l+z7NjZNC1RJh0xUTXOql8yReNM/gcfa4WUd80H\nGGoY7lDjqJPyHRBa1e0P3WxpiUx9PkQKMFlbIkkWAAAq8fR5/MwMBzLRA3mP\nAVAYjJwQ+BjTUqCph9K+0RKuDPF9ABJB9bsnvDSLa/Y+COLJtIcaaBMwFG4Q\nHHjweb7AkrtHN+qORzLns8lK0ZFGzHRxVSu6CB7kSZX6XuDIpgMq\n",
+    "generate_outline": "Expand your program to ask multiple questions, such as a user's favorite subject or hobby. Combine these different pieces of user input to create a more detailed and personalized message or story."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:19:49 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:19:50 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:20:26 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:20:27 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

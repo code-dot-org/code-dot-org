@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-09-15T21:28:00.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "After working with the Painter program, you've seen how commands like `move()` and `turn_left()` guide its actions. In your own words, explain why the order of these commands is so important in a sequential program. What happens if you change the order of instructions?",
+    "placeholder": "Explain why command order matters.",
+    "encrypted_solution": "5ezKiz9KhaBPhXtm2DsqcDALG93YRFhGuvttqoNW5qqJs0kt/5yWIBR+j5jc\npKmWxG6cbt7xJVcs6WuarTDbh3FDKjRa59/OG5c2NvP40KICagtUI6ShbaAe\nTloZA+3EsqiB5EQ1+PFwXONbQx0km5w9pCV5Hu0Gsl2LvXnZlVZOvQ1KwAG1\noROtlpiJ2Dp7/DiCPKQWDi01MXcmZkebwpzGer0Bj9uIo1Kcqn0bZGzZtYbk\n8LibSFhlTLSjlAjfRxdr+qT4/jMMeuiqHSpOYzIys9yTcllzaqbIzCxNhFTO\n2g8ji177vZRRVp1B4ZKb+bEmZbiTmp0P8pN4Vr7VoMZlu1vzrtvePJ+Rxyqo\nfuO7TckbhHSg8LgAD2nFDXoq7U6X/Y0VUC8T/1xhAkZcVLkMdXuxHvU8StZt\n/Esj+i75YjYU9O04pRNW2hcX6cMoX37mAzgx52OMjOSmam7dG/z/RiGkW0kf\npePBQn3IyjsjG54E+6UdiOPBw2qkUnO+HVHjk95vUALKtyIGrDn5V6zq8fyw\nmAkx69btN0xHVDOjxtcfgf3gPAg91aVMuAyUrUj0k9HEPaKEoZM/47OHUh+W\n5wWt0HYtwe1EeGVfZ2dp3efFafylgE5wFQu8K0EYhEMpUWMd+W1cP5K8eCOp\n8oMmHdx7UXfM0qKp6nu14A0EAhbBbIwKCYg/6/tbJBUMTgUYCuBUIWyGGXrd\nEoFJSD89bTLBnrFmdohiEs4AiDyOSZZ/WKkt3yGmXbQzYPzbwuTjV89+9c+Q\n6Ihmity61OsEAQ5zCAIeciWRxygJGsWe7nxIB63rJmiO9r3W1IZCi1JiFrZ+\nJZnYUOlLZ5xjscVCPj0ykluzSggMEBefoAKzMccxOp4JjHhLMo0CcjhL4oA9\nuLWfR0kie4rUpqPrmg==\n",
+    "generate_outline": "Respond to the prompt about why order matters in a sequential program. Check: Answer refers to top-to-bottom execution."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:28:05 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:28:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:28:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 21:28:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -34,6 +34,10 @@ export type TurnstileFailureReason =
   // Turnstile does not support this browser. No amount of retrying helps, and
   // under `enforce` this user cannot use the feature at all.
   | 'unsupported'
+  // Skipped on purpose: DevTools breakpoints would pause Turnstile's anonymous
+  // worker, so no challenge is attempted. Kept out of the failure reasons above
+  // because the rollout must not read a developer's open DevTools as breakage.
+  | 'devtools_breakpoints'
   | 'script_load_failed'
   | 'render_threw'
   | 'render_failed'
@@ -75,3 +79,8 @@ export class TurnstileDevToolsError extends Error {
     this.name = 'TurnstileDevToolsError';
   }
 }
+
+// Name-based, not instanceof: the dynamic import of getClientApi() puts a second
+// copy of the class in another webpack chunk, so instanceof is false across it.
+export const isTurnstileDevToolsError = (error: unknown): boolean =>
+  error instanceof Error && error.name === 'TurnstileDevToolsError';

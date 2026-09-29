@@ -90,7 +90,13 @@ class QuizQuestionsController < ApplicationController
         },
         explanation: quiz_question_params[:explanation]
       )
-      target.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
+
+      target.standards =
+        if quiz_question_params.key?(:standards)
+          fetch_quiz_question_standards(quiz_question_params[:standards])
+        else
+          question.standards
+        end
 
       if placement
         placement.quiz_question = target if should_fork

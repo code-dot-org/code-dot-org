@@ -194,6 +194,11 @@ class ActivitiesController < ApplicationController
           time_spent: time_since_last_milestone,
           locale: I18n.locale,
         )
+
+        Services::AnonymousLevel::GeoRecording.call(
+          anon_user_id: request.anon_user_id,
+          ip_address:   request.ip,
+        )
       end
 
       is_sublevel = @script_level.levels.exclude?(@level)

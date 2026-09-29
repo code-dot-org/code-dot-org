@@ -7,11 +7,14 @@ import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
 import makeSpriteAtGrid from './makeSpriteAtGrid';
+import makeSpriteAtPosition from './makeSpriteAtPosition';
 import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import placeholder from './placeholder';
 import playMusic from './playMusic';
+import playSound from './playSound';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
@@ -28,6 +31,7 @@ const labBlockDefinitions: {
 }[] = [
   goToScene,
   playMusic,
+  playSound,
   whenRun,
   goToExternalScene,
   restartScene,
@@ -37,11 +41,13 @@ const labBlockDefinitions: {
   patrollingOnBlocks,
   makePlatformPlayer,
   makeSpriteAtGrid,
+  makeSpriteAtPosition,
   makePlatformBlocks,
   setPlatformGravity,
   setAsPlatformPlayer,
   setCameraZoom,
   thePlayer,
+  placeholder,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

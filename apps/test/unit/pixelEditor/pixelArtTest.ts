@@ -124,6 +124,93 @@ describe('pixelArt', () => {
     expect(detectPixelGrid(gradientRaster())).toBeNull();
   });
 
+  it('refuses a grid that does not explain the color edges', () => {
+    // Near-flat with sparse diagonal outlines: coarse resampling changes
+    // few probed points, but no lattice explains the edges — without the
+    // edge-share gate, a noise pitch wins and normalization would crush
+    // the image.
+    const raster = rasterFrom(512, 512, (x, y) =>
+      (x + y * 2) % 97 < 2 ? PALETTE[1] : PALETTE[0]
+    );
+    expect(detectPixelGrid(raster)).toBeNull();
+    const grid = assumePixelGrid(raster, FALLBACK_BLOCK);
+    expect(grid.sizeX).toBe(FALLBACK_BLOCK);
+    expect(grid.confidence).toBe(0);
+  });
+
+  it('detects a fractional pitch and downsamples on it', () => {
+    // 6.25px: a model's 12.5px grid after the character strip's half
+    // downscale. Integer sizes accumulate the remainder as drift and never
+    // align, so this exercises the fractional fallback.
+    const pitch = 6.25;
+    const raster = rasterFrom(256, 256, (x, y) => {
+      const lx = Math.floor(x / pitch);
+      const ly = Math.floor(y / pitch);
+      return PALETTE[(lx + ly * 2) % 3];
+    });
+    const grid = detectPixelGrid(raster);
+    expect(grid).not.toBeNull();
+    expect(grid!.sizeX).toBeCloseTo(pitch, 1);
+    expect(grid!.sizeY).toBeCloseTo(pitch, 1);
+    expect(grid!.confidence).toBeGreaterThanOrEqual(0.6);
+    const logical = downsampleToGrid(raster, grid!);
+    expect(logical.width).toBe(41); // ceil(256 / 6.25)
+    expect(logical.height).toBe(41);
+    // Cell centers land inside the source blocks, so values round-trip.
+    for (const [cx, cy] of [
+      [5, 7],
+      [20, 20],
+      [33, 12],
+    ]) {
+      const i = (cy * logical.width + cx) * 4;
+      expect([
+        logical.data[i],
+        logical.data[i + 1],
+        logical.data[i + 2],
+      ]).toEqual(PALETTE[(cx + cy * 2) % 3]);
+    }
+  });
+
+  it('reports a fractional pitch, not its half-pitch subharmonic', () => {
+    // Every edge of a 10.3px lattice also lies on a 5.15px lattice, and a
+    // scan stepping too coarsely at larger sizes lands nearer the half than
+    // the truth. Real case: backgrounds painted at ~10.24px (100 logical in
+    // a 1K output) detected as 200x200.
+    const pitch = 10.3;
+    const raster = rasterFrom(512, 512, (x, y) => {
+      const lx = Math.floor(x / pitch);
+      const ly = Math.floor(y / pitch);
+      return PALETTE[(lx + ly * 2) % 3];
+    });
+    const grid = detectPixelGrid(raster);
+    expect(grid).not.toBeNull();
+    expect(grid!.sizeX).toBeCloseTo(pitch, 1);
+    expect(grid!.sizeY).toBeCloseTo(pitch, 1);
+    expect(downsampleToGrid(raster, grid!).width).toBe(50); // ceil(512 / 10.3)
+  });
+
+  it('a sliver of finer detail does not halve the reported pitch', () => {
+    // Art on a 10.3px lattice with ~3% of cells carrying single-cell specks
+    // (dither, sampling noise). The specks make the 5.15px half-lattice
+    // align slightly MORE edge mass, but a grid twice as fine must explain
+    // meaningfully more of the picture to win. Real case: a chunky ~50x50
+    // background reported as 100x100.
+    const pitch = 10.3;
+    const raster = rasterFrom(512, 512, (x, y) => {
+      const lx = Math.floor(x / (pitch / 2));
+      const ly = Math.floor(y / (pitch / 2));
+      // Speck cells at the fine grid, sparse and deterministic.
+      if ((lx * 7 + ly * 13) % 37 === 0) {
+        return PALETTE[2];
+      }
+      return PALETTE[(Math.floor(lx / 2) + Math.floor(ly / 2) * 2) % 2];
+    });
+    const grid = detectPixelGrid(raster);
+    expect(grid).not.toBeNull();
+    expect(grid!.sizeX).toBeCloseTo(pitch, 1);
+    expect(grid!.sizeY).toBeCloseTo(pitch, 1);
+  });
+
   it('downsamples to the logical resolution and round-trips values', () => {
     const logical = samplePattern();
     const raster = blockyRaster(logical, 12);
@@ -166,17 +253,39 @@ describe('pixelArt', () => {
       expect(grid.sizeY).toBe(12);
     });
 
-    it('applies the stronger axis to both when one axis is noisy', () => {
-      // Clean 10px columns, but every row differs (no vertical grid at all):
-      // like model output whose rows drift off-grid.
+    it('accepts a degraded grid the strict detector refuses', () => {
+      // A clean 10px grid salted with scattered single-pixel noise that no
+      // resampling grid reproduces: too damaged for the strict bar, still
+      // clearly a 10px image for normalization.
+      const raster = rasterFrom(120, 120, (x, y) => {
+        if ((x * 31 + y * 17) % 100 < 12) {
+          return PALETTE[2];
+        }
+        return PALETTE[(Math.floor(x / 10) + Math.floor(y / 10) * 2) % 3];
+      });
+      expect(detectPixelGrid(raster)).toBeNull();
+      const grid = assumePixelGrid(raster, FALLBACK_BLOCK);
+      expect(grid.sizeX).toBeCloseTo(10, 0);
+      expect(grid.sizeY).toBeCloseTo(10, 0);
+      expect(grid.confidence).toBeLessThan(1);
+      expect(grid.confidence).toBeGreaterThan(0.75);
+    });
+
+    it('normalizes one-axis structure at that pitch, with low confidence', () => {
+      // Clean 10px columns, rows varying with no short period: model output
+      // whose rows drift off any grid. Normalizing at 10x10 keeps the
+      // columns and smears the rows — better than not normalizing — but the
+      // row damage must show in the confidence.
       const raster = rasterFrom(
         120,
         120,
-        (x, y) => PALETTE[(Math.floor(x / 10) + y * 2) % 3]
+        (x, y) => PALETTE[(Math.floor(x / 10) + ((y * 13) % 7)) % 3]
       );
+      expect(detectPixelGrid(raster)).toBeNull();
       const grid = assumePixelGrid(raster, FALLBACK_BLOCK);
-      expect(grid.sizeX).toBe(10);
-      expect(grid.sizeY).toBe(10);
+      expect(grid.sizeX).toBeCloseTo(10, 0);
+      expect(grid.sizeY).toBeCloseTo(10, 0);
+      expect(grid.confidence).toBeLessThan(0.95);
     });
 
     it('falls back to the caller-supplied block size on gridless images', () => {

@@ -1,0 +1,52 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "world",
+      "imageType": "sprite",
+      "placeOne": true
+    },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "guide_steps": [
+      {
+        "text": "**Bring back your second character.** Click a square on top of some blocks to put them there. Click another square to move them."
+      },
+      {
+        "text": "**They're in your world.** Click **Play** and go find them. Then click **Continue**.",
+        "showContinue": true,
+        "after": {
+          "worldSprites": 3
+        }
+      }
+    ],
+    "long_instructions": "# Bring back your second character\nClick a square on top of some blocks to put them there. Click another square to move them."
+  }
+}]]></config>
+</GamelabJr>

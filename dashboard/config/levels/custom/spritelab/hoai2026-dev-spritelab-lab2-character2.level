@@ -1,0 +1,44 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "image",
+      "imageType": "sprite",
+      "imageRole": "friend"
+    },
+    "guide_steps": [
+      {
+        "text": "**Make another character.** A friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**."
+      },
+      {
+        "text": "**Your new character is ready.** Click **Continue**.",
+        "showContinue": true,
+        "after": {
+          "spriteImages": 1
+        }
+      }
+    ],
+    "long_instructions": "# Make another character\nA friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**."
+  }
+}]]></config>
+</GamelabJr>

@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-15T18:27:54.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "5c33e0ba-fd6b-41f1-b84a-8093358fd407": {
+          "id": "5c33e0ba-fd6b-41f1-b84a-8093358fd407",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width\">\n  <!-- Add your page title here! -->\n</head>\n<body>\n  <!-- Add your heading and paragraphs about your pet fish here! -->\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "5c33e0ba-fd6b-41f1-b84a-8093358fd407"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Open index.html in the editor.\r\n- Add a <title> tag inside the <head> section to name your page.\r\n- Write a main heading about your pet fish using an <h1> tag inside the <body>.\r\n- Add one or more <p> tags below the <h1> tag to describe your pet fish.",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqGjXP1HqMaLooIeKWN\nBIatP9MdZuZxfuZO8Jl7aPNhVBY9PSVK+iexHfh4VRidFx7ETZ/NfImf8AHk\nZyZj5rFmL2hMNTUGscQ/DrpLJXAXOuA7kR2OSL17hVVpX/60fzRP2lweHCeZ\ny14Kmy9yA/Dcl2EJPAenSpsA94asXhkYOeu1tEzOat2u9y4XfweUifsJ1zRk\ntZN4ScWdOUhZPHKiKAJaebN+CLiP4ZrbzK9/Dq6qOOkDODigl64iPh4KRpgm\nic0uhcqx2ZYbl6QF8WZRGSHUX91Ym/uwHug910SON9PHm/yfF1jJ1xW4uZNP\nFLPoGiGqtQ9DoozeQnGHtbEokk/mJHKoE193rS1a/sWC4iPVSf6hIrTP1MH9\nZZC2lPJdTk9QfSqbKAl3ZjM20UaK6qyN6N6ysepZPCORPX51cKS5OXl3JllR\nuoNlcisdyNkMGMFxCmCRddIWb91bnRytdH90Qdel2tLsR9NaTAeLcRdO6khQ\ncbSX8T6zvZZPv8UWtlgPaYrXwP57p5gt17fW6zirAw6nlwscPdkOUmcWsVJ+\nvZEutoHm+0cAstaMmSanZyk9bFG4EVRfUcFaFNsU1k02cPfrsxLto9IMIsPw\nrXrMO7+cPxFiag/Uj2QDUBv8eXx0mL0v0DxH3dQlRzQ4oZjuLfvrfZ7onbWI\nQ5qZjMZDo8BE7uY0LV9X5XpcmncyI1Fi2r/iHZUnRuIzGr6BE8EJy79ZyboT\nE6AlMiP5rLI/jNTlMhYK4p80DcKb3C7skGq0qQ4doYYWHDyg2TLzvweIA0Ho\nBsrsbrStiavu4c2ICAffR4AAonabYLmc0f2Kxdmra4f42v5b/4t3pr6lkZYj\n+2bXSKk+jptqeCMqr5SS7Xy1QZEcBi65nuwkOMnsBwo33lxXEy9rxmmRUP2g\nPCJEdyem2B9PHhqEuz8IgI19cChPTP81bxuxoAgowpbShOeLHaXnVE1Vs2gU\nb2dXs6kQa/6MTtrjLlZ04wfY6xQC8+nPJRGaDSyTsYA3zaPWGIaFX45XX2Z+\n/ZK20sgpF/tmaCnCSPfha/mhfsl2rroB6KKWly1R+pMeKO+zVXYri7pu2v01\nLX3qSxF8dykTUQJTtITCqO+UKOMhhuR8vg==\n",
+    "generate_outline": "Now it's time to build your own web page! You'll create an HTML file, add a <title> tag to name your page, and use <p> and <h1> tags to display information and a heading about your pet fish. You'll make a functional web page showcasing your finned friend."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 18:27:58 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 18:27:58 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 18:28:34 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 18:28:34 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

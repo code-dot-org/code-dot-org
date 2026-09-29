@@ -5,7 +5,7 @@ wrong 'Change the type of the variable `x`'
 wrong 'Change `x` to a more descriptive name'
 wrong 'Put the line that uses `x` in a conditional statement'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 If Python produces the error `NameError: name 'x' is not defined`, which of the following is the most likely fix?

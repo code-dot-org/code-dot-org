@@ -18,6 +18,7 @@ import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import HomeScreen from './HomeScreen';
 import NotificationList from './notifications/NotificationList';
 import PrepareList from './PrepareList';
+import RubricsScreen from './RubricsScreen';
 import TeacherPanelScreen from './TeacherPanelScreen';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
@@ -43,7 +44,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 }) => {
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
-  const [activeNav, setActiveNav] = useState('Chats');
+  // The drawer always mounts regardless of this preference (see
+  // Policies::Ai.ai_differentiation_eligible?) — when a teacher has turned
+  // TA chat off, we instead hide the Chats tab and default elsewhere.
+  const aiDifferentiationEnabled = useAppSelector(
+    state => state.currentUser.aiDifferentiationEnabled
+  );
+  const showChats = aiDifferentiationEnabled !== false;
+  const [activeNav, setActiveNav] = useState(showChats ? 'Chats' : 'Prepare');
   const showLearn = experiments.isEnabled('sidebar-prepare');
   const showTeacherPanel = useMemo(() => {
     if (!experiments.isEnabled('ta-teacher-panel')) return false;
@@ -151,8 +159,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           }}
         />
       );
-    } else if (activeNav === 'Teacher Panel') {
+    } else if (activeNav === 'Roster') {
       content = <TeacherPanelScreen />;
+    } else if (activeNav === 'Rubrics') {
+      content = <RubricsScreen />;
     } else {
       content = (
         <AiDiffWorkSpace
@@ -190,6 +200,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             setShowChatList(label === 'Chats');
           }}
           unreadNotificationCount={unreadNotificationCount}
+          showChats={showChats}
           showLearn={showLearn}
           showTeacherPanel={showTeacherPanel}
         />

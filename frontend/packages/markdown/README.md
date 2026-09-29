@@ -12,20 +12,30 @@ import {Markdown} from '@code-dot-org/markdown';
 <Markdown>{markdownString}</Markdown>
 ```
 
-| Prop         | Type                  | Description                                                        |
-| ------------ | --------------------- | ------------------------------------------------------------------ |
-| `content`    | `string`              | Markdown source. Used instead of `children` when both are present. |
-| `children`   | `string`              | Markdown source as a string child.                                 |
-| `className`  | `string`              | Added to the wrapping `<div>`.                                     |
-| `extensions` | `MarkdownExtension[]` | Behaviors to enable for this render. See below.                    |
+| Prop          | Type                  | Description                                                        |
+| ------------- | --------------------- | ------------------------------------------------------------------ |
+| `content`     | `string`              | Markdown source. Used instead of `children` when both are present. |
+| `children`    | `string`              | Markdown source as a string child.                                 |
+| `className`   | `string`              | Added to the wrapping `<div>`.                                     |
+| `bodyVariant` | `BodyTextSizeVariant` | Type scale for body text (`body1`-`body4`). Defaults to `body2`.   |
+| `inline`      | `boolean`             | Render as phrasing content: one `<span>`, no block wrapper.        |
+| `extensions`  | `MarkdownExtension[]` | Behaviors to enable for this render. See below.                    |
+
+`inline` is for markdown that sits inside a sentence or a list item, where a
+`<div>`/`<p>` would be invalid and the surrounding element already supplies the
+type scale. It maps the paragraph away and disables the block constructs
+(headings, lists, quotes, fences, rules), so a string that happens to start with
+`- ` stays text rather than becoming a `<ul>` inside a `<span>`. Everything else
+-- the link and inline mappings, sanitization, extensions, the localization
+marker -- is unchanged.
 
 Base behavior, always on: GFM (tables, strikethrough, autolinks), the
 design-system mappings (`h1`–`h4`, `strong`, `em`, `a` → `Link`, `p` →
-body-two `Typography`), and the localization wrappers (`data-isolate` on
+`Typography` at `bodyVariant`), and the localization wrappers (`data-isolate` on
 paragraphs, `data-lz-url`/`data-localize` on links). Everything else is opt-in
 via `extensions`.
 
-Because that type scale and those wrappers ride on the paragraph, a list item
+Because the body type scale and those wrappers ride on the paragraph, a list item
 that has none gets one: a tight list (`- one`, no blank line between items) and
 a raw HTML `<li>` both hold their text directly, so
 `rehypeListItemParagraphs` wraps it, leaving them equivalent to a loose item.
@@ -40,7 +50,6 @@ remark-rehype           mdast          → hast        (allowDangerousHtml)
 rehype-raw              reparse raw HTML in the source
 rehypeListItemParagraphs  give every <li> a paragraph
 <extension rehype plugins>             ← transform the HTML TREE
-rehypeLocalize          translate block text         ← when localization is active
 rehype-sanitize         enforce the allowlist        ← SECURITY BOUNDARY
 rehype-react            hast           → React elements (component map)
 ```
@@ -180,17 +189,19 @@ const exts = [
 <Markdown content={md} extensions={exts} />;
 ```
 
-| Extension              | Kind    | Behavior                                                                        | Caveat                                                                                                                                                        |
-| ---------------------- | ------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `callout`              | object  | `<callout variant>` → styled aside                                              | Reference example.                                                                                                                                            |
-| `details`              | object  | `::: details [summary] … :::` → `<details>`/`<summary>` disclosure              | Legacy syntax with flexible spacing; summary and body are markdown. Raw `<details>` HTML also works without it.                                               |
-| `inlineStyles`         | object  | permits `style` + `className` on any element                                    | The sanitizer does not inspect style _contents_; inline styles are an authoring smell. Ported verbatim from legacy.                                           |
-| `clickableText`        | factory | `[label](#clickable=id)` → button calling `onActivate(id)` on click/Enter/Space | Without `onActivate`, renders plain bold.                                                                                                                     |
-| `expandableImages`     | factory | `![alt expandable](url)` → image calling `onExpand(url, alt)` on click          | Without `onExpand`, renders an inline, non-interactive image. `className` styles every generated element.                                                     |
-| `visualCodeBlock`      | object  | `` `text`(#rrggbb) `` → inline code with that background color                  | Color is validated hex, applied by the component (not sanitized CSS). Plain inline code is unaffected.                                                        |
-| `vocabularyDefinition` | factory | `[v term]` → term with its definition in a native title tooltip                 | Resolves via an injected synchronous `lookup` (point it at fetched data); unknown terms fall back to plain text. Replaces Dashboard's server-side resolution. |
-| `externalLinks`        | factory | opens links in a new tab (`target="_blank"` + `rel="noopener noreferrer"`)      | Defaults to all links (legacy `openExternalLinksInNewTab`); pass `isExternal` to scope.                                                                       |
-| `embeds`               | object  | permits `<iframe>` and its attributes                                           | Enable **only** for non-student audiences; the caller owns that gating.                                                                                       |
+| Extension                 | Kind    | Behavior                                                                        | Caveat                                                                                                                                                        |
+| ------------------------- | ------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `callout`                 | object  | `<callout variant>` → styled aside                                              | Reference example.                                                                                                                                            |
+| `details`                 | object  | `::: details [summary] … :::` → `<details>`/`<summary>` disclosure              | Legacy syntax with flexible spacing; summary and body are markdown. Raw `<details>` HTML also works without it.                                               |
+| `inlineStyles`            | object  | permits `style` + `className` on any element                                    | The sanitizer does not inspect style _contents_; inline styles are an authoring smell. Ported verbatim from legacy.                                           |
+| `clickableText`           | factory | `[label](#clickable=id)` → button calling `onActivate(id)` on click/Enter/Space | Without `onActivate`, renders plain bold.                                                                                                                     |
+| `expandableImages`        | factory | `![alt expandable](url)` → image calling `onExpand(url, alt)` on click          | Without `onExpand`, renders an inline, non-interactive image. `className` styles every generated element.                                                     |
+| `lenientHeadings`         | object  | `###Title` (no space after the `#`s) → heading of that depth                    | Legacy leniency; CommonMark requires the space. Code blocks are untouched — it runs on the parsed tree.                                                       |
+| `lenientLinkDestinations` | object  | `![](/my image.png)` → percent-encodes whitespace in link/image destinations    | Legacy leniency; CommonMark ends a destination at the first space. Skips code spans, fences, `<…>` destinations, and destinations containing parentheses.     |
+| `visualCodeBlock`         | object  | `` `text`(#rrggbb) `` → inline code with that background color                  | Color is validated hex, applied by the component (not sanitized CSS). Plain inline code is unaffected.                                                        |
+| `vocabularyDefinition`    | factory | `[v term]` → term with its definition in a native title tooltip                 | Resolves via an injected synchronous `lookup` (point it at fetched data); unknown terms fall back to plain text. Replaces Dashboard's server-side resolution. |
+| `externalLinks`           | factory | opens links in a new tab (`target="_blank"` + `rel="noopener noreferrer"`)      | Defaults to all links (legacy `openExternalLinksInNewTab`); pass `isExternal` to scope.                                                                       |
+| `embeds`                  | object  | permits `<iframe>` and its attributes                                           | Enable **only** for non-student audiences; the caller owns that gating.                                                                                       |
 
 These mirror the allowlist that the legacy `apps/src/templates/SafeMarkdown.jsx`
 applied unconditionally; here each is opt-in and isolated. `clickableText` and
@@ -219,36 +230,13 @@ raw HTML (`<b data-id>`, `<span data-url>`) is accepted too.
 
 ## Localization
 
-Translation is built in and wired directly to the core localization plugin
-(`@code-dot-org/core/plugins/localization`). There is **no host setup** beyond
-having that plugin in play, which apps already do at bootstrap — every
-`Markdown` localizes automatically and re-renders on locale change.
-
-When LocalizeJS is loaded, `rehypeLocalize` translates block text **at build
-time** and marks the paragraph `data-notranslate`. Until then — and on a host
-that never loads LocalizeJS — localization is a no-op with no per-render cost,
-and paragraphs carry `data-isolate` for the runtime translation path.
-
-### Why a plugin, and what it solves
-
-Our translation engine refuses to translate a paragraph that contains
-non-phrasing elements (e.g. an embedded custom-XML widget such as the Blockly
-tags an extension may allowlist), and mishandles `<code>`. `rehypeLocalize`
-works around this on the hast tree, before sanitization:
-
-1. Within each block (default `<p>`), elements the translator can't handle are
-   replaced by a `<code>` placeholder carrying a stash index and stashed
-   verbatim; elements it mishandles (default `<code>`) are renamed to a tag it
-   accepts (default `<span>`). The translator ignores `<code>`, so the
-   placeholder and its index survive untouched — the same blind spot that makes
-   renaming real `<code>` necessary.
-2. The block's inner HTML is serialized and handed to the injected `translate`.
-3. The result is reparsed and the placeholders / renamed tags are restored —
-   the stashed elements come back byte-for-byte.
-
-The stashed and reparsed nodes still pass through sanitization, so the trust
-boundary is unchanged. This replaces the legacy approach of building a detached
-DOM tree from rendered React and walking it back, which was fragile.
+`Markdown` does not translate anything itself. Each paragraph carries
+`data-isolate`, so the on-page translator (LocalizeJS) takes it as one
+translation unit, and each link carries `data-lz-url`/`data-localize` so its URL
+can be localized. An extension whose tags hold content that is not human
+language (e.g. embedded Blockly XML) marks those elements `data-ignore`; the
+translator then leaves them out of the paragraph's string. This depends on
+LocalizeJS running with `allowIgnoredChildrenInIsolate`.
 
 ## Development
 
@@ -263,8 +251,9 @@ there surfaces it in the demo app, rendered in both themes.
 ## Notes
 
 - **Memoization.** The processor is rebuilt when the `extensions` array
-  _identity_ changes, or when localization becomes active. Define the array once
-  (module scope, or `useMemo`); do not pass a fresh literal on every render.
+  _identity_ changes, or when `bodyVariant` or `inline` changes. Define the
+  array once (module scope, or `useMemo`); do not pass a fresh literal on every
+  render.
 - **Trust boundary.** This component is for rendering markdown safely. Do not
   reach around the sanitizer (e.g. by mapping a tag to a component that injects
   `dangerouslySetInnerHTML`); that defeats the one guarantee it provides.

@@ -4,6 +4,7 @@ import path from 'path';
 import {defineConfig, type Plugin} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 const PUBLIC_DIR = path.resolve(__dirname, 'public');
 
@@ -91,6 +92,8 @@ export default defineConfig({
     // react-redux) so the consumer's single instances are used at runtime;
     // bundle everything else (chart.js, ml-knn, papaparse, messageformat, …).
     externalizeDeps({deps: false}),
+    // The built JS imports its own CSS, so apps gets the styles with the module.
+    libInjectCss(),
   ],
   resolve: {
     alias: {

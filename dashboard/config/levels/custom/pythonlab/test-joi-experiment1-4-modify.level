@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T20:35:47.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "0ccc3d84-9215-449b-9b8a-155513b558da": {
+          "id": "0ccc3d84-9215-449b-9b8a-155513b558da",
+          "name": "main.py",
+          "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\n\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncopon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - copon\ntotal_cents = round(subtotal * 1.18 * 100)\n\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\nprint(\"Whoever picked the shop covers the leftover!\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "0ccc3d84-9215-449b-9b8a-155513b558da"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- In `main.py`, add a new input line for the dollar amount of toppings.\r\n- Update the `subtotal` calculation to include the new `toppings` variable.\r\n- After `total_cents` is calculated, add two new lines to calculate `dollars` and `cents` from `total_cents`.\r\n- Add a `print` statement before the \"Each person pays\" line to display the group's total cost in dollars and cents.",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqeDFSgA9ORS3JZeIFp\ndrVWWME7z95i5f1k+Omxmr/MD9fveE0T+5qKSGSmKR0atptqS41FiDQpI/99\ndpqbrxRIt2fG6UxKCwRspEkDVxOfp7Wjte0E1uOASBxdyltElIRnuC0uyFMW\nLBKS2iePR1Y7metzq1pEgNefKt1bP8RodMhV6CIgQApSJsgDUCyW7mRMewaz\n71Bsh05O8Q70WhV6EFOOBs8rr86MZ5cWLFh5hR7zW3fINgKupsYPJ6oyPP4b\nR8ji3u575Lt5f5NrxTnvp8r+mCrhZHOloJrKnhkxHMHxi9VK+i6kRZ14agQz\nEUxUds6iuWoXkM2/dywNKesDGMyWxtxDJ6HFw+1K1a19v445X6dKbBdpmYyu\nN3aPFgFmRMlH71+3j6boSkBIdKQcjOGHuIsy7vKlt9v25PzA0RNE2MLZPggY\nk+qm4DeYGU43r35W8qOjQUa8+gSSk3r8gp1ZXBTDGGUR+8x2DuD+UtsPGN8t\ne6t8+V1gBf/STO/FQlBel9rVmlU5vfJEeV2WH2w2HC8vZ5fn8OWw1LBxL5VQ\nGu9v9gArVeEGzUpWeXF3a/2M8jkImmxOuH28FHLu1ltR+GNJ8oq9o/eIvXBd\n3i1X2y5U2BlNvKg8j5QAqzWnju+8ChXCUT/Bqt+0InsbWRnXO0mZNhgB3Hmu\nAdcHLvn/8Dg8h8BLNBdX9sLN+eD83aZEnJIw3Fo5FJinYhZSIdevfHByUNjf\n/sdcnSHJejj5NvBtgGjTjIbGq/69iZEfoQAF9yU95Gub8I828jpum49KN9lW\nTxUb2a7eb/QY74LI5p9VCO+vkWKEZqa17kezLmj9s9Jmf8qZijD/5pZPJs1M\nTgfWZldj6FASKot5XVD3fRDSQFpyGJ6v3FuoksHLMswaOa8KtRI7iAiYTEJA\nUU7ZsHbKtyHwZFE83quqifEVJGnJkUA49Aky9Bb350zoC4HGY5Z4ara3a49g\n+8JzLxLC/uJ2eLF7OSbe6pMCdYtfpekyebBXr7I30E+zZJOO632Vp4bEyNFw\nJvvofV+JmSpEDbecfIT7m0WIR8vwtYvZnSzOAr0V4mRljHapnGOWZu6BSkwt\npQy4A5O7K5vt1j55xQkvTnK5Wl4Q7e8PdvQ/aYPyXt++ROzkst/pCSMUteEH\nj+sLUhst2V9FI6P5wV3Vu6ZXrnSKQk80cFSHnX6fLMiL4I2oc/SndBz3CT1u\nSrLGF1ZwEWKYavrFwRSbdnKjjN0KiphpJSljMTbiKHb1nmlfaloiYuIZox6y\nTuvqFdoz1y78AcbB8aEQB8WkIMqZz+t7cDwqdQKrSkP3iZm1LH5I8vzRqDM2\nbVFdmhUWS0V/Mx9chzhOYwD+eJl5iRoU63zukDTwCb7d/dJOkNtnV39siF6F\n3t6rj7lQ9yRt5bSmstePio+rb1YvRkZK7CGGXuXfcWvrrMt2CwZHzXWq8cr0\nnBI9PkejaVLsAy65pDpWNBuXMWPSS//opKS9/Nwt57RlasYdCVgQNThj26er\nW342UZYlgtqSP5H5MmA=\n",
+    "generate_outline": "Modify the Boba Run Splitter program: 1) Add a toppings input (dollar amount) that joins the subtotal. 2) Print the group total in dollars and cents before the split line, using `dollars = round(total_cents / 100)` and `cents = total_cents % 100`."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:35:52 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:35:52 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:36:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:36:30 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

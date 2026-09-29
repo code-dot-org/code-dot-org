@@ -45,10 +45,9 @@ import {useRubric} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import experiments from '@cdo/apps/util/experiments';
-import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -59,7 +58,6 @@ import NavigationArea from '../NavigationArea';
 
 import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
-import BackpackPanel from './Backpack/BackpackPanel';
 import type {AddFileHandler} from './Backpack/types';
 import UnifiedBackpackPanel from './Backpack/UnifiedBackpackPanel';
 import {
@@ -110,10 +108,7 @@ export interface BackpackProps {
   findIdForFileName: (fileName: string) => string | undefined;
   saveToBackpackButton?: {
     text: string;
-    onClick: (
-      fileList: string[],
-      errorCallback: (error: string) => void
-    ) => Promise<void>;
+    onClick: (notify: BackpackNotify) => Promise<void>;
   };
   supportedFileTypes: string[];
   /** Custom tooltip text to display for the Add File button. */
@@ -248,7 +243,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasAutoCollapsed = useRef(false);
   const settingsButtonRef = useRef<HTMLDivElement | null>(null);
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
-  const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
+  const visiblePaneRef = useRef<HTMLDivElement | null>(null);
+  const selectedTabWithKeyboard = useRef(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -278,10 +274,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.predictLevel.hasSubmittedResponse
   );
   const dispatch = useAppDispatch();
-  const setBackpackTabAsActive = useCallback(
-    () => setCurrentTab(Tabs.Backpack),
-    []
-  );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
@@ -310,9 +302,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
-  const unifiedBackpackEnabled = experiments.isEnabledAllowingQueryString(
-    experiments.UNIFIED_BACKPACK
-  );
   useResourcePanelTours({
     levelProperties,
     isStandaloneCollapsed,
@@ -430,13 +419,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
-      const BackpackPanelComponent = unifiedBackpackEnabled
-        ? UnifiedBackpackPanel
-        : BackpackPanel;
       tabMap[Tabs.Backpack] = (
-        <BackpackPanelComponent
+        <UnifiedBackpackPanel
           {...backpackProps}
-          openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
         />
       );
@@ -511,9 +496,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isViewingOldVersion,
     currentTab,
     backpackProps,
-    setBackpackTabAsActive,
     backpackRefreshKey,
-    unifiedBackpackEnabled,
     hasInstructions,
   ]);
 
@@ -582,34 +565,36 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
-  // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
+  // Move focus into the pane a keyboard tab selection just revealed, since the
+  // tab buttons sit outside it. AI Tutor focuses its chat input either way.
   useEffect(() => {
-    if (currentTab === Tabs.AiTutor || currentTab === Tabs.VersionHistory) {
-      const panelContent = tabContentRefs.current[currentTab];
-      if (panelContent) {
-        // Use setTimeout to ensure the panel is rendered and visible before focusing.
-        const timeoutId = setTimeout(() => {
-          const focusableElement =
-            currentTab === Tabs.AiTutor
-              ? panelContent.querySelector<HTMLTextAreaElement>(
-                  '#uitest-chat-textarea'
-                )
-              : findFirstFocusableElement(panelContent);
-          // preventScroll: focusing the chat input must not scroll an ancestor
-          // to bring it into view, which momentarily shifts the whole panel up
-          // while the chat is still animating open.
-          if (focusableElement) {
-            focusableElement.focus({preventScroll: true});
-          } else {
-            // If no focusable element exists, make the panel content focusable and focus it
-            panelContent.setAttribute('tabindex', '-1');
-            panelContent.focus({preventScroll: true});
-          }
-        }, 0);
-        return () => clearTimeout(timeoutId);
-      }
+    const selectedWithKeyboard = selectedTabWithKeyboard.current;
+    selectedTabWithKeyboard.current = false;
+    const isAiTutor = currentTab === Tabs.AiTutor;
+    const panelContent = visiblePaneRef.current;
+    if (!panelContent || (!selectedWithKeyboard && !isAiTutor)) {
+      return;
     }
-  }, [currentTab]);
+    // Use setTimeout to ensure the panel is rendered and visible before focusing.
+    const timeoutId = setTimeout(() => {
+      const chatInput = isAiTutor
+        ? panelContent.querySelector<HTMLTextAreaElement>(
+            '#uitest-chat-textarea'
+          )
+        : null;
+      // preventScroll: focusing the chat input must not scroll an ancestor
+      // to bring it into view, which momentarily shifts the whole panel up
+      // while the chat is still animating open.
+      if (chatInput) {
+        chatInput.focus({preventScroll: true});
+      } else {
+        // Focus the pane, not a control inside it, so a reader starts at the top.
+        panelContent.setAttribute('tabindex', '-1');
+        panelContent.focus({preventScroll: true});
+      }
+    }, 0);
+    return () => clearTimeout(timeoutId);
+  }, [currentTab, isStandaloneCollapsed]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
@@ -623,7 +608,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [setShowExtraLinksButton]);
 
   const onClickTab = useCallback(
-    (tab: string) => {
+    (tab: string, event: React.MouseEvent<HTMLElement>) => {
+      // Enter or space leaves the button focus-visible; a mouse click does not.
+      // A no-op activation would never reach the effect that clears this.
+      selectedTabWithKeyboard.current =
+        (tab !== currentTab || !!isStandaloneCollapsed) &&
+        event.currentTarget.matches(':focus-visible');
       if (currentTab && currentTab !== tab) {
         sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
           resourcePanelTabClickedTo: tab,
@@ -675,14 +665,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   ]);
 
   // A tab's content pane: hidden (inert + transparent) unless it's the current
-  // tab. refTab, when given, exposes the pane via tabContentRefs for focus
-  // management. The shared instructions/AI Tutor pane reuses this with its own
+  // tab. The shared instructions/AI Tutor pane reuses this with its own
   // visibility rule, since one instance serves both tabs.
   const renderTabContentPane = (
     key: string,
     content: React.ReactNode,
-    hidden: boolean,
-    refTab?: Tabs
+    hidden: boolean
   ) => (
     <div
       key={key}
@@ -693,9 +681,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       ref={el => {
         if (el) {
           el.inert = hidden;
-        }
-        if (refTab) {
-          tabContentRefs.current[refTab] = el;
+          if (!hidden) {
+            visiblePaneRef.current = el;
+          }
+        } else {
+          // Without this a collapse would leave a removed node here.
+          visiblePaneRef.current = null;
         }
       }}
     >
@@ -791,7 +782,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
                       id={`resource-panel-tab-button-${tab}`}
-                      onClick={() => onClickTab(tab)}
+                      onClick={event => onClickTab(tab, event)}
                       aria-label={getTabInfo(tab).title}
                       type="button"
                       key={tab}
@@ -883,8 +874,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     'instructions-aitutor-shared',
                     availableTabs[Tabs.AiTutor],
                     displayedTab !== Tabs.Instructions &&
-                      displayedTab !== Tabs.AiTutor,
-                    Tabs.AiTutor
+                      displayedTab !== Tabs.AiTutor
                   )}
                 {getTypedKeys(availableTabs).map(tab => {
                   if (
@@ -893,15 +883,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   ) {
                     return null;
                   }
-                  const refTab =
-                    tab === Tabs.AiTutor || tab === Tabs.VersionHistory
-                      ? tab
-                      : undefined;
                   return renderTabContentPane(
                     tab,
                     availableTabs[tab],
-                    tab !== displayedTab,
-                    refTab
+                    tab !== displayedTab
                   );
                 })}
               </div>

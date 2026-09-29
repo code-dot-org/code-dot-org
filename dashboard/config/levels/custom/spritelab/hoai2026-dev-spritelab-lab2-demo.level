@@ -1,0 +1,103 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "play"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "world_start_pattern": [
+      [
+        "..........",
+        "..........",
+        "BB......BB",
+        "..........",
+        "....BB....",
+        "..........",
+        ".BB....BB.",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        ".......BBB",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB.....",
+        ".S........",
+        "BBB.......",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..BB...BB.",
+        "..........",
+        ".BBB..BBB.",
+        "..........",
+        "...BB.BB..",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB..BB.",
+        ".S........",
+        "BBB..BBBBB",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "....BB....",
+        "..........",
+        "..BB..BB..",
+        "..........",
+        "BB......BB",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ]
+    ],
+    "guide_steps": [
+      {
+        "text": "**A ready-made world.** We built some platforms with your block. Run and jump. Can you reach the top? Then click **Continue**.",
+        "showContinue": true
+      }
+    ],
+    "long_instructions": "# A ready-made world\nWe built some platforms with your block. Run and jump. Can you reach the top?"
+  }
+}]]></config>
+</GamelabJr>

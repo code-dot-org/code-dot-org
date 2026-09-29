@@ -1,0 +1,29 @@
+.fieldArea {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.textArea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+// Duplicated class names to ensure precedence over MUI.
+.sectionHeading.sectionHeading {
+  margin-bottom: 8px;
+}
+
+.descriptionText.descriptionText {
+  color: var(--text-neutral-tertiary);
+  margin-bottom: 8px;
+}
+
+.warningText.warningText {
+  color: var(--text-error-primary);
+  margin-bottom: 8px;
+}

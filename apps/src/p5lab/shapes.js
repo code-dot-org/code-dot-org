@@ -81,6 +81,7 @@ const serializedAnimationPropsShape = {
   looping: PropTypes.bool.isRequired,
   frameDelay: PropTypes.number.isRequired,
   version: PropTypes.string,
+  role: PropTypes.string,
   pixelGridSize: PropTypes.number,
   recentColors: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
 };
@@ -134,6 +135,7 @@ function getSerializedAnimationProps(animation) {
     'frameDelay',
     'version',
     'categories',
+    'role',
     'pixelGridSize',
     'recentColors',
     'trimmed',

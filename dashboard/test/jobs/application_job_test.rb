@@ -13,11 +13,12 @@ class ApplicationJobTest < ActiveJob::TestCase
 
   def populate_jobs_table(t, job_class)
     job_class = "job_class: #{job_class}"
+    created_at = t - 1.hour
     job_rows = [
-      {handler: "Failed Job, #{job_class}", run_at: t, created_at: t, updated_at: t, failed_at: t, last_error: 'Failed job error', locked_at: nil, locked_by: nil},
-      {handler: "Running job, #{job_class}", run_at: t, created_at: t, updated_at: t, locked_at: t, locked_by: 'delayed_job.1', failed_at: nil, last_error: nil},
-      {handler: "Waiting to start job, #{job_class}", run_at: t, created_at: t, updated_at: t, failed_at: nil, last_error: nil, locked_at: nil, locked_by: nil},
-      {handler: "Distant future scheduled job, #{job_class}", run_at: t + 1.month, created_at: t, updated_at: t, failed_at: nil, last_error: nil, locked_at: nil, locked_by: nil},
+      {handler: "Failed Job, #{job_class}", run_at: t, created_at: created_at, updated_at: t, failed_at: t, last_error: 'Failed job error', locked_at: nil, locked_by: nil},
+      {handler: "Running job, #{job_class}", run_at: t, created_at: created_at, updated_at: t, locked_at: t, locked_by: 'delayed_job.1', failed_at: nil, last_error: nil},
+      {handler: "Waiting to start job, #{job_class}", run_at: t, created_at: created_at, updated_at: t, failed_at: nil, last_error: nil, locked_at: nil, locked_by: nil},
+      {handler: "Distant future scheduled job, #{job_class}", run_at: t + 1.month, created_at: created_at, updated_at: t, failed_at: nil, last_error: nil, locked_at: nil, locked_by: nil},
     ]
     Delayed::Job.insert_all(job_rows)
   end
@@ -25,7 +26,8 @@ class ApplicationJobTest < ActiveJob::TestCase
   setup do
     Delayed::Job.delete_all
 
-    @t = Time.now.utc + 1.day
+    # The delayed_jobs.run_at column stores whole seconds.
+    @t = Time.now.utc.change(usec: 0) + 1.day
     populate_jobs_table(@t, 'ApplicationJobTest::TestableJob')
     populate_jobs_table(@t, 'Some::OtherJob')
 

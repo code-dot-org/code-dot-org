@@ -21,38 +21,28 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
     "guide_steps": [
       {
-        "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."
+        "text": "**Link your scenes.** Your second character has a **when clicked** event. Drag **go to scene** onto the dotted outline under it. Click **Play**, then click your character."
       },
       {
-        "text": "**Your scenes are connected!** Try jumping between them, then continue when you're ready.",
+        "text": "**Your scenes are connected!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked.",
+    "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **when clicked** so clicking your second character jumps to your platformer.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
         {
           "kind": "block",
           "type": "spritelab2_goToScene",
@@ -61,7 +51,28 @@
           }
         }
       ]
-    }
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
+    "add_blocks": [
+      {
+        "attachTo": "gamelab_spriteClicked",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_goToScene",
+              "fields": {
+                "SCENE": "platform-scene"
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

@@ -89,6 +89,49 @@ The root [`skaffold.yaml`](../skaffold.yaml) deploys the Helm chart. The sibling
 [`k8s/kustomize/skaffold.yaml`](kustomize/skaffold.yaml) exists while Helm and
 Kustomize parity is under evaluation; keep their build graphs equal.
 
+### Select job priorities
+
+Set `activeJobWorker.priorityMode` in the environment's Helm values:
+
+```yaml
+activeJobWorker:
+  priorityMode: low
+```
+
+| Mode | Eligible Delayed Job priorities | Worker flags |
+| --- | --- | --- |
+| `both` (default) | All | None |
+| `high` | Less than 10 | `--max-priority 9` |
+| `low` | 10 or greater | `--min-priority 10` |
+
+Lower numbers run first. The boundary matches `config.yml.erb`: `default`,
+`mailers`, and `mailjet` use 0; `low_priority` uses 10. These filters apply to
+the priority stored on each job, regardless of its queue name. Keep that
+boundary in mind when changing queue priorities.
+
+Changing the mode rolls the Deployment's pods. Running jobs are not reclassified
+or interrupted by the filter. Custom `activeJobWorker.command` and `args` are
+supported only in `both` mode; filtered modes require the generated command.
+
+For Kustomize, add one priority component after the backend component in the
+environment overlay:
+
+```yaml
+components:
+  - ../../components/backend
+  - ../../components/active-job-worker-low
+```
+
+Use `active-job-worker-high` for high priorities. Include neither priority
+component for both; do not include both priority components in one overlay.
+
+During migration, Kubernetes can start with `low` while existing workers
+continue consuming both priorities. To move all low-priority work to Kubernetes,
+the existing workers must also be configured to consume only high priorities.
+
+Run `bundle exec ruby k8s/bin/verify-worker-priorities` to check Helm modes,
+invalid values, and Kustomize command parity without a cluster or database.
+
 ## Non-local clusters
 
 Argo CD and Kargo configuration lives in the

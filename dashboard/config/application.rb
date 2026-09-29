@@ -6,7 +6,6 @@ require 'cdo/geocoder'
 
 Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
-require 'bootstrap-sass'
 require 'cdo/global_edition'
 require 'cdo/hash'
 require 'cdo/i18n'
@@ -161,9 +160,6 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
-      legacy-prerequisites.css
-      legacy-styles.css
-      brand-fonts.css
     )
 
     # Support including code from directories outside of the normal Rails directory
@@ -237,7 +233,7 @@ module Dashboard
     # Rails.cache is a local file system store shared by all Puma worker
     # processes on a given web application server, which persists for the
     # lifetime of the server.
-    config.cache_store = :file_store, Rails.root.join('tmp', 'cache'), {coder: Rails70InitInternalsCoder}
+    config.cache_store = :file_store, Rails.root.join('tmp', 'cache', 'rails'), {coder: Rails70InitInternalsCoder}
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
     config.assets.cache_limit = 1.gigabyte

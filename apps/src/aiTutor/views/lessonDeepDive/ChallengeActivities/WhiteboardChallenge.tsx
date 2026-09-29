@@ -2,6 +2,7 @@ import {
   useTheme,
   ThemeProvider,
 } from '@code-dot-org/component-library/common/contexts';
+import {ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -16,8 +17,6 @@ import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/crea
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {ExplanationTypes} from '../types';
 
 import AudioRecorder from './AudioRecorder';
 import {requestEvaluation} from './requestEvaluation';
@@ -172,7 +171,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   >(starterImageUrl ? null : []);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
+  const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   // Bumped to remount the canvas with an empty drawing on "Start over".
   const [resetKey, setResetKey] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -225,15 +224,13 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   }, [starterImageUrl, starterImageAltText]);
 
   const transcribeAudio = async (timedOut = false) => {
-    if (!recordedUrl) return null;
+    if (!recordedBlob) return null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     try {
-      const audio = await fetch(recordedUrl).then(r => r.blob());
-
       const aichatClientApi = await getClientApi();
-      const text = await aichatClientApi.transcribeAudio(audio);
+      const text = await aichatClientApi.transcribeAudio(recordedBlob);
       return text;
     } catch (error) {
       console.log(error);
@@ -313,7 +310,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
     setResetKey(key => key + 1);
     setSources(DEFAULT_SOURCES);
     setSubmitError(null);
-    setRecordedUrl(null);
+    setRecordedBlob(null);
   };
 
   // Keep the top bar's "Submit for feedback" enabled state in sync.
@@ -356,9 +353,10 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
               isRecording={isRecording}
               onRecordingChange={setHasRecording}
               onIsRecordingChange={setIsRecording}
-              recordedUrl={recordedUrl}
-              setRecordedUrl={setRecordedUrl}
+              recordedBlob={recordedBlob}
+              setRecordedBlob={setRecordedBlob}
               disabled={submitted}
+              timeLimitSeconds={60}
             />
           </div>
         )}
