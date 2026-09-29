@@ -116,10 +116,11 @@ yarn codemod:dialog ../../../apps/src/<path>
 ```
 
 See [codemods/README.md](../../codemods/README.md#dialog-to-mui-dialogts).
-The legacy components are unchanged and keep four defects the MUI versions
+The legacy components are unchanged and keep five defects the MUI versions
 fix: the panel's fixed minimum width overflows narrow viewports, the image
-distorts and never scales down, its alt is the literal `"Dialog"`, and the
-icon badge loses its centering when Font Awesome's `display` rule loads later.
+distorts and never scales down, its alt is the literal `"Dialog"`, the icon
+badge loses its centering when Font Awesome's `display` rule loads later, and
+`zIndex={0}` is dropped, so the overlay falls back to 1040.
 
 For guidelines and live examples, run Storybook locally and open
 DesignSystem / Dialog.
