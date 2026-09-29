@@ -120,9 +120,12 @@ const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-c
 // and git on Opus.
 const READ_MODEL = 'sonnet'
 const WORK_MODEL = 'opus'
-// Agents that decide, write the wrapper, or diagnose a failure think at xhigh. Gates,
-// chunk residue, mechanical steps and git carving inherit the session effort.
+// Every agent pins its effort, so a run costs and behaves the same whoever starts it:
+// xhigh for deciding, writing the wrapper and diagnosing failures; high for discovery,
+// the gates and chunk residue; medium for the codemod run, captures and git steps.
 const DEEP_EFFORT = 'xhigh'
+const CHECK_EFFORT = 'high'
+const ROUTINE_EFFORT = 'medium'
 const componentTitle = component.charAt(0).toUpperCase() + component.slice(1)
 
 // Shared rules for every agent that edits files. Chunk agents run concurrently in ONE
@@ -353,7 +356,7 @@ ${TREE_RULES}
   vs in-place, focus, UI-test selectors, shared globals).
 
 Return the structured result.`,
-  {schema: DISCOVER_SCHEMA, label: 'discover', phase: 'Discover', model: READ_MODEL},
+  {schema: DISCOVER_SCHEMA, label: 'discover', phase: 'Discover', model: READ_MODEL, effort: CHECK_EFFORT},
 )
 if (!discover) throw new Error('discover agent was skipped; nothing to plan')
 if (!discover.preflight.ok) throw new Error(`Preflight failed:\n- ${discover.preflight.problems.join('\n- ')}`)
@@ -914,7 +917,7 @@ let parityAttempt = 0
 let missingNote = ''
 while (parityAttempt < maxParityAttempts) {
   parityAttempt++
-  parity = await agent(parityPrompt(parityAttempt) + missingNote, {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL})
+  parity = await agent(parityPrompt(parityAttempt) + missingNote, {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL, effort: CHECK_EFFORT})
   if (!parity) throw new Error('parity agent was skipped')
   const missing = missingRenders(parity.pairs)
   const bad = parity.pairs.filter(p => p.verdict === 'mismatch')
@@ -1039,7 +1042,7 @@ ${publish ? `
 
 Report branch, sha, prUrl, screenshotsSha, and leftovers (git status --porcelain paths other
 than the never-stage list).`,
-  {schema: DS_PUBLISH_SCHEMA, label: 'commit-design-system', phase: 'Execute', model: WORK_MODEL},
+  {schema: DS_PUBLISH_SCHEMA, label: 'commit-design-system', phase: 'Execute', model: WORK_MODEL, effort: ROUTINE_EFFORT},
 )
 if (!dsPublished) throw new Error('design-system commit agent was skipped')
 if (dsPublished.leftovers.length) log(`WARNING: uncommitted after the design-system commit: ${dsPublished.leftovers.join(', ')}`)
@@ -1094,7 +1097,7 @@ Return the structured result.`
 
 const runAppsParity = appsParity && plan.appsParitySample.length > 0
 const appsBefore = runAppsParity
-  ? await agent(appsCapturePrompt('before', `${PARITY_DIR}/apps-before`), {schema: APPS_CAPTURE_SCHEMA, label: 'apps-baseline', phase: 'Migrate', model: READ_MODEL})
+  ? await agent(appsCapturePrompt('before', `${PARITY_DIR}/apps-before`), {schema: APPS_CAPTURE_SCHEMA, label: 'apps-baseline', phase: 'Migrate', model: READ_MODEL, effort: ROUTINE_EFFORT})
   : null
 if (runAppsParity) {
   if (!appsBefore || !appsBefore.available) log('Apps parity: no local studio reachable; the sampled page check is skipped')
@@ -1130,7 +1133,7 @@ the codemod did not touch goes in filesUnchanged with its import form; the chunk
 handle it by hand. Do not run tests, typecheck, or prettier.
 
 Return the structured result.`,
-    {schema: CODEMOD_RUN_SCHEMA, label: 'codemod-run', phase: 'Migrate', model: READ_MODEL},
+    {schema: CODEMOD_RUN_SCHEMA, label: 'codemod-run', phase: 'Migrate', model: READ_MODEL, effort: ROUTINE_EFFORT},
   )
   if (!codemodRun) throw new Error('codemod run agent was skipped')
   log(`Codemod: ${codemodRun.filesChanged.length} file(s) rewritten, ${codemodRun.filesUnchanged.length} untouched${codemodRun.errors.length ? `, ${codemodRun.errors.length} error(s)` : ''}`)
@@ -1189,7 +1192,7 @@ Lint your files: from apps/, npx eslint <files>; frontend: ../../node_modules/.b
 from the package. Fix what you broke.
 
 Return the structured result.`,
-        {schema: CHUNK_SCHEMA, label: `migrate:${chunk.slug}`, phase: 'Migrate', model: WORK_MODEL},
+        {schema: CHUNK_SCHEMA, label: `migrate:${chunk.slug}`, phase: 'Migrate', model: WORK_MODEL, effort: CHECK_EFFORT},
       ),
     )
   : []
@@ -1294,7 +1297,7 @@ let healTouched = []
 const uiTestOwner = new Map()
 while (true) {
   healAttempt++
-  verify = await agent(verifyPrompt(healAttempt), {schema: VERIFY_SCHEMA, label: `verify-${healAttempt}`, phase: 'Migrate', model: WORK_MODEL})
+  verify = await agent(verifyPrompt(healAttempt), {schema: VERIFY_SCHEMA, label: `verify-${healAttempt}`, phase: 'Migrate', model: WORK_MODEL, effort: CHECK_EFFORT})
   if (!verify) throw new Error('verify agent was skipped')
   log(`Verify ${healAttempt}: ${verify.pass ? 'clean' : verify.failures.length + ' failure(s): ' + verify.failures.map(f => f.check).join(', ')}`)
   healTouched = [...new Set([...healTouched, ...verify.filesTouched])]
@@ -1332,7 +1335,7 @@ with pixelmatch from apps/node_modules, writing ${PARITY_DIR}/apps-diff/<basenam
 the ratio and what differs (LOOK at the PNGs with the Read tool) in each capture's notes.
 Tolerance for "same": ${parityTolerance}; note intended deviations from the plan
 ${JSON.stringify(plan.legacyDefectsToFix.map(d => d.fix))} as such.`,
-    {schema: APPS_CAPTURE_SCHEMA, label: 'apps-parity', phase: 'Migrate', model: READ_MODEL},
+    {schema: APPS_CAPTURE_SCHEMA, label: 'apps-parity', phase: 'Migrate', model: READ_MODEL, effort: ROUTINE_EFFORT},
   )
   appsParityResult = appsAfter && appsAfter.available ? 'captured' : 'after-capture-failed'
   if (appsAfter) log(`Apps parity: ${appsAfter.captures.filter(c => c.ok).length}/${appsAfter.captures.length} page(s) compared`)
@@ -1471,7 +1474,7 @@ ${publish ? `
 
 Finish on ${lastBranch} with a clean tree (except the never-stage list). Report every branch
 with its sha and file count, every PR URL, and leftovers.`,
-  {schema: FINALIZE_SCHEMA, label: 'finalize', phase: 'Migrate', model: WORK_MODEL},
+  {schema: FINALIZE_SCHEMA, label: 'finalize', phase: 'Migrate', model: WORK_MODEL, effort: ROUTINE_EFFORT},
 )
 if (!finalized) throw new Error('finalize agent was skipped; branches may be half carved')
 if (finalized.leftovers.length) log(`WARNING: uncommitted leftovers: ${finalized.leftovers.join(', ')}`)
