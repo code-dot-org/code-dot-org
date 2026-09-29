@@ -15,7 +15,6 @@ const COOKIE_OPTIONS = {
   domain: '.code.org',
   sameSite: 'Lax',
   secure: !isDevelopmentEnvironment(),
-  expires: 365,
 };
 
 // Performance cookies (C0002). You can see what categories are enabled in OneTrust

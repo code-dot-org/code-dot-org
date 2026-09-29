@@ -57,7 +57,6 @@ describe('StatsigReporter', () => {
         domain: '.code.org',
         sameSite: 'Lax',
         secure: false,
-        expires: 365,
       });
     }
 

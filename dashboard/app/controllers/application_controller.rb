@@ -450,6 +450,7 @@ class ApplicationController < ActionController::Base
   protected def initialize_statsig_stable_id
     statsig_stable_id = request.statsig_stable_id
 
+    # Set this before frontend initialization so backend and browser Statsig clients use the same ID.
     # See: /apps/test/unit/lib/util/statsigHelpersTest.js
     if cookies[SharedConstants::STATSIG_STABLE_ID_KEY].blank? && request.onetrust_performance_cookies_allowed?
       cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = {
@@ -458,7 +459,6 @@ class ApplicationController < ActionController::Base
         path: '/',
         same_site: :lax,
         secure: !CDO.rack_env?(:development),
-        expires: 1.year.from_now,
       }
     end
   end

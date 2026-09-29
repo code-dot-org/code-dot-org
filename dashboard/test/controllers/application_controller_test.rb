@@ -246,12 +246,17 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
         cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A1'
       end
 
-      it 'stores the same ID in the session and cookie' do
+      it 'stores the same ID in the session and browser-session cookie' do
         get '/'
 
         stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+        statsig_cookie_header = response.headers['Set-Cookie'].
+          split("\n").
+          find {_1.start_with?("#{SharedConstants::STATSIG_STABLE_ID_KEY}=")}
+
         _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
         _(response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]).must_equal stable_id
+        _(statsig_cookie_header).wont_match(/(?:expires|max-age)=/i)
       end
     end
   end
