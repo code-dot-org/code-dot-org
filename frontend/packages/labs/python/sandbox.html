@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Python sandbox</title>
+  </head>
+  <body>
+    <!--
+      The pyodide sandbox page. Meant to be loaded in a hidden iframe from the
+      Python Lab demo, on a *separate* origin (a different port in dev — see the
+      `dev:isolated` script). It owns nothing but the pyodide worker and relays
+      messages to/from the parent. See src/runtime/sandbox/.
+    -->
+    <script
+      type="module"
+      src="/src/runtime/sandbox/pyodideSandboxWorkerManager.ts"
+    ></script>
+  </body>
+</html>
