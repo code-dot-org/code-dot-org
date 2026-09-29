@@ -2,7 +2,7 @@
 import {Button, Typography} from '@mui/material';
 import {useEffect, useState} from 'react';
 
-import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -39,7 +39,7 @@ const TrainingModal = () => {
   const showResults = () => dispatch(setCurrentPanel('results'));
 
   return (
-    <MuiCustomDialog
+    <CustomDialog
       className={styles.dialog}
       aria-labelledby={TITLE_ID}
       onClose={closeModal}
@@ -85,7 +85,7 @@ const TrainingModal = () => {
           {!isTraining && testingFinished ? 'Continue' : 'Skip'}
         </Button>
       </div>
-    </MuiCustomDialog>
+    </CustomDialog>
   );
 };
 

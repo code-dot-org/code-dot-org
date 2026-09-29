@@ -19,14 +19,18 @@ Transforms `Button` and `LinkButton` components from `@code-dot-org/component-li
 
 ### `dialog-to-mui-dialog.ts`
 
-Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/dialog` to `MuiDialog` and `MuiCustomDialog`. The props are unchanged, so only imports and `jest.mock` factories change. See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
+Moves `MuiDialog` and `MuiCustomDialog` imports from `@code-dot-org/component-library/dialog` to `Dialog` and `CustomDialog`, the names the MUI wrapper ships under now that the DSCO source is deleted. Only imports and `jest.mock` factories change. See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
 
 **What it does:**
 
-- Rewrites default and named imports, including the `*Props` types, keeping local names
-- Adds the `Mui` keys to `jest.mock` factories
+- Rewrites named `Mui` imports, including the `*Props` types, keeping local names
+- Renames the `Mui` keys in `jest.mock` factories
 - Reports Enzyme string selectors and import shapes it cannot rewrite
 - Idempotent; parses `.ts` files with the `ts` parser
+
+Check the diff afterwards: recast can reprint code the transform did not touch
+(`PixelEditorModal.tsx`), and `eslint --fix` in `apps/` joins an import that
+now fits on one line.
 
 Build the package first with `yarn build`, then run it as shown under Usage.
 

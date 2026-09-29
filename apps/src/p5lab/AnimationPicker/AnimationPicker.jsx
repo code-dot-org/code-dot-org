@@ -1,4 +1,4 @@
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
