@@ -286,6 +286,10 @@ added to the library tomorrow stays out of apps until somebody decides:
 - **Toolbox**: the layer, camera and Viewport blocks leave the World drawer
   (`toolboxFilter.withoutBlocks`).
 
+Both app scenarios hold EVERY actor on that list, placed or not, so a
+learner opening one starts with the whole set of controls in the project
+rather than in a library.
+
 A name in those lists that matches nothing would fail silently — a rule left
 in, a block left over — so a test holds every one of them to something that
 exists.

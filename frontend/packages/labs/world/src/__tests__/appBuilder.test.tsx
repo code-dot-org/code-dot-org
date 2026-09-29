@@ -13,6 +13,7 @@ import {LevelPropertiesProvider} from '@code-dot-org/lab/contexts';
 
 import {ENHANCEMENTS} from '../actors/enhance/enhancements';
 import {ImportActorDialog} from '../actors/ImportActorDialog';
+import {importStockActor} from '../actors/importStockActor';
 import {STOCK_ACTORS} from '../actors/stock';
 import {
   APP_ACTORS,
@@ -25,6 +26,7 @@ import {withoutBlocks} from '../blockly/toolboxFilter';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {STOCK_RULES} from '../rules/stock';
+import {projectFiles} from '../runtime/projectFiles';
 
 vi.mock('../progression/BlockPreview', () => ({
   BlockPreview: () => null,
@@ -96,6 +98,26 @@ describe('what App Builder names', () => {
       .sort();
     expect(apps).toEqual(['app', 'interface']);
   });
+});
+
+describe('the app scenarios', () => {
+  // Every control an app is offered is already in the project, placed or
+  // not, so a learner starts with the kit rather than a library.
+  it.each(['app', 'interface'] as const)(
+    '%s holds every actor App Builder offers',
+    tag => {
+      const files = projectFiles(WORLD_SCENARIOS[tag].source);
+      const missing = [...APP_ACTORS].filter(id => {
+        // Where an import into an empty project writes it.
+        const {path} = importStockActor(
+          WORLD_SCENARIOS.empty.source,
+          STOCK_ACTORS.find(actor => actor.id === id)!,
+        );
+        return !(`${path}.actor` in files);
+      });
+      expect(missing).toEqual([]);
+    },
+  );
 });
 
 describe('the rule library in an app', () => {

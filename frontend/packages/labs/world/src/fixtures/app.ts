@@ -48,6 +48,7 @@ import {
   isData,
   me,
 } from '../actors/stock/workspace';
+import {APP_ACTORS} from '../appBuilder';
 import {importStockMap} from '../maps/importStockMap';
 import {stockMapById} from '../maps/stock';
 import {importStockRule} from '../rules/importStockRule';
@@ -564,8 +565,16 @@ const MAIN_WORLD = JSON.stringify(
 
 // ── Assembly ────────────────────────────────────────────────────────────────
 
-/** The actors the two screens place, each walking its own rules. */
-const ACTORS = ['label', 'button', 'panel', 'textInput', 'list'] as const;
+/**
+ * The actors the two screens place, each walking its own rules — and then
+ * every other control an app is offered, so a learner finds the whole kit
+ * already in the project rather than in a library (`appBuilder.APP_ACTORS`).
+ */
+const PLACED = ['label', 'button', 'panel', 'textInput', 'list'];
+const ACTORS = [
+  ...PLACED,
+  ...[...APP_ACTORS].filter(actor => !PLACED.includes(actor)),
+];
 
 /** Notes, built by importing into an empty project. */
 export const notesApp = (empty: MultiFileSource): MultiFileSource => {

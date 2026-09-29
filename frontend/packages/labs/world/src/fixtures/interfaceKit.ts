@@ -50,6 +50,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
+import {APP_ACTORS} from '../appBuilder';
 import {TILE_SIZE} from '../runtime/viewport';
 import {importStockStyle, stockStyleById} from '../styles/importStockStyle';
 
@@ -112,17 +113,15 @@ const SETTINGS_MAP = JSON.stringify(
     size: {width: 9, height: 6},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
     actors: [
-      ...['SOUND', 'MUSIC', 'HINTS', 'SHAKE', 'INVERT'].flatMap(
-        (what, at) => [
-          place('actors/label', `${what} label`, 76, 26 + at * 36, {
-            Label: {text: what},
-          }),
-          place('actors/toggle', what, 214, 26 + at * 36, {
-            Label: {text: ''},
-            hasABox: {width: 64},
-          }),
-        ],
-      ),
+      ...['SOUND', 'MUSIC', 'HINTS', 'SHAKE', 'INVERT'].flatMap((what, at) => [
+        place('actors/label', `${what} label`, 76, 26 + at * 36, {
+          Label: {text: what},
+        }),
+        place('actors/toggle', what, 214, 26 + at * 36, {
+          Label: {text: ''},
+          hasABox: {width: 64},
+        }),
+      ]),
     ],
   },
   null,
@@ -340,6 +339,26 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
   source = importStockActor(source, stockActorById('textInput')!).source;
+  // …and every other control an app is offered, placed or not, so the whole
+  // kit is already in the project (`appBuilder.APP_ACTORS`).
+  const held = new Set([
+    'label',
+    'button',
+    'progressBar',
+    'speechBox',
+    'panel',
+    'toggle',
+    'slider',
+    'dropdown',
+    'textArea',
+    'scrollView',
+    'textInput',
+  ]);
+  for (const actor of APP_ACTORS) {
+    if (!held.has(actor)) {
+      source = importStockActor(source, stockActorById(actor)!).source;
+    }
+  }
   // BOTH THEMES, because the point of the kit is that you can swap one for
   // the other and watch every control follow. The world names Modern; opening
   // the world and picking Classic is the whole demonstration.
