@@ -1141,7 +1141,12 @@ export class PhaserBinding {
               }
             }
           }
-          camera.ignore(inner);
+          // A mirror's own container stays empty and is nobody's to draw; a
+          // box with a scene of its own draws exactly that container, and
+          // ignoring it here left every plain Viewport — a Scroll View — blank.
+          if (space.mirrors) {
+            camera.ignore(inner);
+          }
           for (const [otherId, other] of spaceHosts) {
             // A mirror of `other` draws `other`'s container; anything else
             // does not. And `other` draws THIS container only if it mirrors

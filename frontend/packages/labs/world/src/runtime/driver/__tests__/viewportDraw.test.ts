@@ -501,8 +501,12 @@ describe('drawing a Viewport’s space', () => {
         n !== container,
     )!;
     expect(layer.children.filter(child => child.kind === 'image')).toEqual([]);
-    // The space camera looks past the layers.
+    // The space camera looks past the layers…
     expect(cameras[0].ignored).toContain(layer);
+    // …and draws its own container, which is the whole of what it is for. A
+    // camera that ignored it too drew a blank box (the Interface Kit's Scroll
+    // View, once mirrors arrived).
+    expect(cameras[0].ignored).not.toContain(container);
   });
 
   it('gives the space its map’s layers, each moved for its factor', () => {
@@ -684,8 +688,10 @@ describe('drawing a mirror', () => {
     expect(mirrorCamera().ignored).not.toContain(boxInner());
     expect(mirrorCamera().ignored).toContain(worldLayer());
     expect(mirrorCamera().ignored).toContain(mirrorInner());
-    // …and the box does not draw the mirror's container back.
+    // …and the box does not draw the mirror's container back, but does draw
+    // its own.
     expect(boxCamera().ignored).toContain(mirrorInner());
+    expect(boxCamera().ignored).not.toContain(boxInner());
   });
 
   it('is made again when what it mirrors changes', () => {
