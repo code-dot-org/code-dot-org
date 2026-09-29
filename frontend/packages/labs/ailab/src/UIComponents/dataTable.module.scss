@@ -1,5 +1,5 @@
 .table {
-  // Half-opacity fills, so a chosen column reads lighter than its row-hover.
+  // Half-opacity fills, so a chosen column is lighter than its row hover state.
   --body-cell-hover: color-mix(
     in srgb,
     var(--background-neutral-secondary) 50%,
@@ -23,7 +23,6 @@
   text-align: left;
 }
 
-// Set on the cells, not inherited from .table: Code Studio's legacy.scss styles every th.
 .header,
 .indexCell,
 .bodyCell {
