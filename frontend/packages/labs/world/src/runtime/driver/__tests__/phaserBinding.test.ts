@@ -17,12 +17,15 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 let destroyThrows = false;
 /** Whether the fake game leaves its canvas behind, as a crashed one does. */
 let destroyLeavesCanvas = false;
+/** The config the binding last handed Phaser. */
+let lastConfig: Record<string, unknown> | undefined;
 
 vi.mock('phaser', () => {
   class Game {
     readonly parent: HTMLElement;
     readonly canvas: HTMLCanvasElement;
     constructor(config: {parent: HTMLElement}) {
+      lastConfig = config as never;
       this.parent = config.parent;
       this.canvas = document.createElement('canvas');
       this.parent.appendChild(this.canvas);
@@ -138,6 +141,26 @@ describe('stopping a game', () => {
 // and everything past it is the WORLD's to ask for, one moment at a time,
 // because Tab belongs to the game only while one of its own controls holds the
 // focus (specs/UI_ACTORS.md, `rules/tabNavigation`).
+describe('the page’s clicks', () => {
+  it('are not the game’s', () => {
+    // Phaser's window events listen on `window.top` where they can reach it,
+    // which a same-origin sandbox can: a click in the editor became a click
+    // in the game. The game hears its own canvas and nothing else.
+    document.body.innerHTML = '';
+    HTMLCanvasElement.prototype.getContext = (() => ({
+      getExtension: () => ({loseContext: () => {}}),
+    })) as never;
+    const element = document.createElement('div');
+    document.body.appendChild(element);
+    const binding = new PhaserBinding(world(), element);
+    expect(lastConfig?.input).toMatchObject({
+      keyboard: false,
+      windowEvents: false,
+    });
+    binding.stop();
+  });
+});
+
 describe('the keys the game takes from the browser', () => {
   beforeEach(() => {
     document.body.innerHTML = '';

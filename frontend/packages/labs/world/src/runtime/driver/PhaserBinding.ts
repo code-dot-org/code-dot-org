@@ -1509,7 +1509,20 @@ export class PhaserBinding {
       pixelArt: true,
       // Keyboard comes from the DOM listeners above (all keys); Phaser's own
       // keyboard input is off so it neither double-handles nor preventDefaults.
-      input: {keyboard: false},
+      input: {
+        keyboard: false,
+        // NOT THE PAGE'S CLICKS. With window events on, Phaser listens for
+        // `mousedown`/`mouseup` on `window.top` when it can reach it, to see
+        // a release outside the canvas — and a same-origin sandbox (the pages
+        // build) can reach it, so every click in the EDITOR arrived as a
+        // click in the game, at wherever the editor's coordinates fell on the
+        // canvas. Notes, on a laptop-sized window, had a click on a toolbox
+        // drawer press NEW NOTE and the next few press keys on its keyboard.
+        // Nothing is lost by turning it off: `buttonsDown` reads the pointer,
+        // and Phaser sets the pointer's buttons from every move, so a release
+        // the canvas missed is corrected by the next move over it.
+        windowEvents: false,
+      },
       scale: {
         // FIT sizes the canvas to the CSS-sized `#game` box, so its scale —
         // and thus input mapping — stays correct. The box is given the world's
