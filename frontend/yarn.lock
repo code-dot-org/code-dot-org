@@ -1702,6 +1702,7 @@ __metadata:
     "@vitejs/plugin-react": "catalog:"
     "@vitest/eslint-plugin": "catalog:"
     chart.js: "npm:^2.9.4"
+    classnames: "catalog:"
     eslint: "catalog:"
     jsdom: "catalog:"
     messageformat: "npm:^2.3.0"

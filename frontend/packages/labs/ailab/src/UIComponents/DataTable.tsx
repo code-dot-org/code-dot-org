@@ -1,9 +1,13 @@
 /* React component to handle displaying imported data. */
-import {styles} from '../constants';
+import classNames from 'classnames';
+
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {getTableData, setCurrentColumn, setHighlightColumn} from '../redux';
+
+import shared from '../shared.module.scss';
+import styles from './dataTable.module.scss';
 
 interface DataTableProps {
   reducedColumns?: boolean;
@@ -38,40 +42,42 @@ const DataTable = ({
     dispatch(setCurrentColumn(column as string));
   const setHighlightColumnProp = (column: string | undefined) =>
     dispatch(setHighlightColumn(column as string));
-  const getColumnHeaderStyle = (key: string) => {
-    let style;
+  const getColumnHeaderClassName = (key: string) => {
+    let variant;
 
     if (key === labelColumn) {
-      style = styles.dataDisplayHeaderLabel;
+      variant = styles.labelHeader;
     } else if (selectedFeatures.includes(key)) {
-      style = styles.dataDisplayHeaderFeature;
+      variant = styles.featureHeader;
     }
 
-    const pointerStyle = !reducedColumns && styles.dataDisplayHeaderClickable;
-
-    return {...styles.dataDisplayHeader, ...pointerStyle, ...style};
+    return classNames(
+      styles.header,
+      {[styles.clickable]: !reducedColumns},
+      variant,
+    );
   };
 
-  const getColumnCellStyle = (key: string) => {
-    let style;
+  const getColumnCellClassName = (key: string) => {
+    let variant;
 
     if (hideLabel && labelColumn === key) {
-      style = styles.dataDisplayCellHidden;
+      variant = styles.hidden;
     } else if (key === currentColumn) {
       if (currentPanel === 'dataDisplayLabel') {
-        style = styles.dataDisplayCellSelectedLabel;
+        variant = styles.selectedLabel;
       } else {
-        style = styles.dataDisplayCellSelected;
+        variant = styles.selected;
       }
     } else if (key === highlightColumn) {
       if (currentPanel === 'dataDisplayLabel') {
-        style = styles.dataDisplayCellHighlightedLabel;
+        variant = styles.highlightedLabel;
       } else {
-        style = styles.dataDisplayCellHighlighted;
+        variant = styles.highlighted;
       }
     }
 
-    return {...styles.dataDisplayCell, ...style};
+    return classNames(styles.cell, variant);
   };
 
   const getColumns = () => {
@@ -116,14 +122,14 @@ const DataTable = ({
   }
 
   return (
-    <table style={styles.displayTable}>
+    <table className={shared.displayTable}>
       <thead>
         <tr>
           {getColumns().map(columnId => {
             return (
               <th
                 key={columnId}
-                style={getColumnHeaderStyle(columnId)}
+                className={getColumnHeaderClassName(columnId)}
                 onClick={() => handleSetCurrentColumn(columnId)}
                 onKeyDown={() => handleSetCurrentColumn(columnId)}
                 onMouseEnter={() => handleSetHighlightColumn(columnId)}
@@ -143,8 +149,10 @@ const DataTable = ({
                 return (
                   <td
                     key={columnId}
-                    className="uitest-data-table-column"
-                    style={getColumnCellStyle(columnId)}
+                    className={classNames(
+                      'uitest-data-table-column',
+                      getColumnCellClassName(columnId),
+                    )}
                     onClick={() => handleSetCurrentColumn(columnId)}
                     onKeyDown={() => handleSetCurrentColumn(columnId)}
                     onMouseEnter={() => handleSetHighlightColumn(columnId)}

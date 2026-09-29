@@ -54,6 +54,7 @@
     "@vitejs/plugin-react": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
     "chart.js": "^2.9.4",
+    "classnames": "catalog:",
     "eslint": "catalog:",
     "jsdom": "catalog:",
     "messageformat": "^2.3.0",
