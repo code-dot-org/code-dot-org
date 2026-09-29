@@ -1,5 +1,8 @@
+import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import {createRoot, type Root} from 'react-dom/client';
 import {Provider} from 'react-redux';
+
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
@@ -59,10 +62,14 @@ export const mount = function (options: MountOptions): void {
   // Dispatching early so instructions enabled state is set before processMode().
   store.dispatch(setInstructionsEnabled(!!options.setInstructionsKey));
 
+  // This root is separate from the host page's, so it needs its own MUI theme.
+  const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
   root = createRoot(document.getElementById('root')!);
   root.render(
     <Provider store={store}>
-      <App {...options} />
+      <MuiThemeProvider theme={theme}>
+        <App {...options} />
+      </MuiThemeProvider>
     </Provider>,
   );
 };

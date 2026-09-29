@@ -19,7 +19,6 @@ import type {
   SaveResponseData,
   SaveTrainedModel,
 } from './types';
-import ColumnInspector from './UIComponents/ColumnInspector';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import GenerateResults from './UIComponents/GenerateResults';
@@ -29,6 +28,7 @@ import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
 import TrainModel from './UIComponents/TrainModel';
+import TrainPanel from './UIComponents/TrainPanel';
 
 import styles from './app.module.scss';
 
@@ -256,7 +256,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
           </ContainerLeft>
 
           <ContainerRight>
-            <ColumnInspector />
+            <TrainPanel />
           </ContainerRight>
         </BodyContainer>
       )}

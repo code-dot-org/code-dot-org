@@ -200,6 +200,9 @@ const ailabSlice = createSlice({
     },
     setLabelColumn(state, action: PayloadAction<string>) {
       state.labelColumn = action.payload;
+      state.selectedFeatures = state.selectedFeatures.filter(
+        item => item !== action.payload,
+      );
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.

@@ -84,6 +84,16 @@ describe('ailab reducer', () => {
     });
   });
 
+  describe('setLabelColumn', () => {
+    test('removes the new label from the selected features', () => {
+      let state = reducer(initialState, addSelectedFeature('a'));
+      state = reducer(state, addSelectedFeature('b'));
+      const next = reducer(state, setLabelColumn('a'));
+      expect(next.labelColumn).toBe('a');
+      expect(next.selectedFeatures).toEqual(['b']);
+    });
+  });
+
   describe('setCurrentColumn', () => {
     test('selects, then deselects on a repeated click', () => {
       const selected = reducer(initialState, setCurrentColumn('a'));
