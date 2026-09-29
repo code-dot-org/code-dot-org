@@ -77,9 +77,26 @@ blocker that dissolves under one question costs more than omitting it.
 
 For each surviving finding, establish:
 
-- the **scenario** — what has to be true for it to fire,
-- the **impact** in that scenario,
-- **current or latent**,
+- the **scenario** — what has to be true for it to fire
+- the **impact** in that scenario
+- the **severity** of that impact, if it occurs.
+  - CRITICAL for data loss, security breach, privacy breach, or harm on that scale.
+  - HIGH for significant functional impact to end users; anything that will
+    block this PR from shipping (such as a deploy pipeline failure); or any
+    breaks to core workflows in non-production environments such as curriculum
+    authoring, daily deploy, adhoc starts, or other developer experience.
+  - MEDIUM for any other issues that materially impact end users or core
+    workflows, such as substantial inconvenience or performance degradation.
+  - LOW for any other confirmed issues.
+- **current or latent** -- CURRENT if the issue can happen now based on actions
+  taken by attackers, end users, curriculum authors, translators,
+  engineering workflow (such as the daily deploy), or other internal workflow.
+  LATENT if the issue can only be triggered by a future code or config change
+  made by engineering.
+- **age** - approximately how long the issue has existed in its current form
+  (years, months, weeks, days, or introduced in the current PR)
+- **probability** ZERO, LOW, MEDIUM, or HIGH probability of failure given
+  current code and config. By definition, latent issues have zero probability.
 - **whether this PR makes it more likely**, and
 - **which branch owns the fix**, when the PR is one of a stack.
 
