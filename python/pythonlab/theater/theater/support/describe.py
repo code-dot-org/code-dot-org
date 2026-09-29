@@ -92,12 +92,13 @@ def _summary(actions, background, frame_count, durations):
 def _transcript(frames, durations):
   if len(frames) == 1:
     lines, _ = _frame_lines(frames[0])
-    return "\n".join(lines)
+    # Silence would leave a student who drew only invisible shapes with nothing.
+    return "\n".join(lines) or "Nothing was drawn on the stage."
   blocks = []
   onscreen = False
   for index, frame in enumerate(frames[:_MAX_FRAMES_SHOWN]):
     length = durations[index]
-    held = "final" if length == 0 else _seconds(length / 1000)
+    held = "until the end" if length == 0 else _seconds(length / 1000)
     heading = f"Frame {index + 1} of {len(frames)}, {held}"
     lines, onscreen = _frame_lines(frame, onscreen)
     blocks.append("\n".join([heading] + lines))
@@ -117,7 +118,7 @@ def _frame_lines(frame, onscreen=False):
   lines = []
   for action in frame:
     if action.type is SceneActionType.CLEAR_SCENE:
-      lines.append(f"Cleared to {_color_name(action.color)}.")
+      lines.append(f"Cleared the stage to {_color_name(action.color)}.")
       # Drawings recorded earlier in this frame are wiped too; sound is not.
       for label in _PERSISTENT:
         groups[label].clear()
@@ -153,7 +154,7 @@ def _phrase(action):
     return _painted(action, "shape")
   if kind is SceneActionType.DRAW_IMAGE:
     filename = action.image.get_filename()
-    return os.path.basename(filename) if filename else "one drawn in code"
+    return os.path.basename(filename) if filename else "a picture made in code"
   if kind is SceneActionType.DRAW_TEXT:
     # A Scene paints black until told otherwise, so naming it says nothing.
     color = _color_name(action.color)
@@ -161,11 +162,11 @@ def _phrase(action):
     return quoted if color == "black" else f"{color} {quoted}"
   if kind is SceneActionType.PLAY_NOTE:
     instrument = action.instrument.value.lower()
-    return f"{instrument} {_note_name(action.note)}"
+    return f"{instrument} note {_note_name(action.note)}"
   if kind is SceneActionType.PLAY_SOUND:
     if action.filename:
       return os.path.basename(action.filename)
-    return f"a sound of {_seconds(len(action.samples) / SAMPLE_RATE)}"
+    return f"a sound {_seconds(len(action.samples) / SAMPLE_RATE)} long"
   return None
 
 

@@ -15,6 +15,17 @@ def _summary(scene):
   return describe(scene.get_actions()).summary
 
 
+def test_a_scene_that_draws_nothing_says_so():
+  assert _transcript(Scene()) == "Nothing was drawn on the stage."
+
+
+def test_a_background_alone_leaves_the_stage_empty():
+  scene = Scene()
+  scene.clear("red")
+  assert _summary(scene) == "Still picture, on a red background."
+  assert _transcript(scene) == "Nothing was drawn on the stage."
+
+
 def test_a_scene_with_no_pause_is_summarized_as_a_still_picture():
   scene = Scene()
   scene.draw_rectangle(0, 0, 10, 10)
@@ -40,7 +51,7 @@ def test_each_frame_is_headed_with_how_long_it_holds():
   scene.draw_ellipse(0, 0, 10, 10)
   lines = _transcript(scene).splitlines()
   headings = [line for line in lines if line.startswith("Frame ")]
-  assert headings == ["Frame 1 of 2, 0.25 seconds", "Frame 2 of 2, final"]
+  assert headings == ["Frame 1 of 2, 0.25 seconds", "Frame 2 of 2, until the end"]
 
 
 def test_only_a_leading_clear_is_folded_into_the_summary():
@@ -48,7 +59,7 @@ def test_only_a_leading_clear_is_folded_into_the_summary():
   scene.clear("red")
   scene.clear("blue")
   scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == "Cleared to blue.\nShapes: black rectangle."
+  assert _transcript(scene) == "Cleared the stage to blue.\nShapes: black rectangle."
 
 
 def test_a_clear_drops_what_the_same_frame_drew_before_it():
@@ -58,8 +69,8 @@ def test_a_clear_drops_what_the_same_frame_drew_before_it():
   scene.pause(0.25)
   scene.draw_ellipse(0, 0, 10, 10)
   assert _transcript(scene) == (
-    "Frame 1 of 2, 0.25 seconds\nCleared to blue.\n\n"
-    "Frame 2 of 2, final\nShapes: black ellipse."
+    "Frame 1 of 2, 0.25 seconds\nCleared the stage to blue.\n\n"
+    "Frame 2 of 2, until the end\nShapes: black ellipse."
   )
 
 
@@ -67,7 +78,7 @@ def test_a_clear_keeps_sound_the_same_frame_already_played():
   scene = Scene()
   scene.play_note(60, 0.25)
   scene.clear("blue")
-  assert _transcript(scene) == "Cleared to blue.\nSound: piano C4."
+  assert _transcript(scene) == "Cleared the stage to blue.\nSound: piano note C4."
 
 
 def test_a_later_frame_says_added_for_drawing_but_not_for_sound():
@@ -78,7 +89,7 @@ def test_a_later_frame_says_added_for_drawing_but_not_for_sound():
   scene.play_note(60, 0.25)
   assert _transcript(scene).splitlines()[-2:] == [
     "Added shapes: black ellipse.",
-    "Sound: piano C4.",
+    "Sound: piano note C4.",
   ]
 
 
@@ -101,7 +112,7 @@ def test_drawings_are_grouped_by_kind(tmp_path):
   scene.draw_image(str(path), 0, 0, size=50)
   scene.play_note(60, 0.25)
   assert _transcript(scene) == (
-    'Shapes: red ellipse.\nImages: cat.png.\nText: "Hi".\nSound: piano C4.'
+    'Shapes: red ellipse.\nImages: cat.png.\nText: "Hi".\nSound: piano note C4.'
   )
 
 
@@ -197,7 +208,7 @@ def test_a_line_with_no_color_is_left_out():
   scene = Scene()
   scene.remove_stroke_color()
   scene.draw_line(0, 0, 50, 50)
-  assert _transcript(scene) == ""
+  assert _transcript(scene) == "Nothing was drawn on the stage."
 
 
 def test_a_shape_with_no_fill_and_no_outline_is_left_out():
@@ -205,7 +216,7 @@ def test_a_shape_with_no_fill_and_no_outline_is_left_out():
   scene.remove_fill_color()
   scene.remove_stroke_color()
   scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == ""
+  assert _transcript(scene) == "Nothing was drawn on the stage."
 
 
 def test_a_polygon_reports_its_number_of_sides():
@@ -218,7 +229,7 @@ def test_a_polygon_reports_its_number_of_sides():
 def test_a_note_names_the_instrument_and_pitch():
   scene = Scene()
   scene.play_note(60, 0.25, Instrument.BASS)
-  assert _transcript(scene) == "Sound: bass C4."
+  assert _transcript(scene) == "Sound: bass note C4."
 
 
 def test_a_sound_read_from_a_file_is_named(tmp_path):
@@ -236,13 +247,13 @@ def test_a_sound_read_from_a_file_is_named(tmp_path):
 def test_a_sound_built_from_samples_reports_its_length():
   scene = Scene()
   scene.play_sound([0.1] * SAMPLE_RATE)
-  assert _transcript(scene) == "Sound: a sound of 1 second."
+  assert _transcript(scene) == "Sound: a sound 1 second long."
 
 
 def test_an_image_drawn_in_code_has_no_name():
   scene = Scene()
   scene.draw_image(Image(8, 8), 0, 0, width=10, height=20)
-  assert _transcript(scene) == "Images: one drawn in code."
+  assert _transcript(scene) == "Images: a picture made in code."
 
 
 def test_repeated_shapes_are_counted_rather_than_listed():
@@ -256,7 +267,7 @@ def test_repeated_sounds_put_the_count_after_the_name():
   scene = Scene()
   scene.play_note(60, 0.25)
   scene.play_note(60, 0.25)
-  assert _transcript(scene) == "Sound: piano C4 2 times."
+  assert _transcript(scene) == "Sound: piano note C4 2 times."
 
 
 def test_one_frame_past_the_cutoff_is_singular():
