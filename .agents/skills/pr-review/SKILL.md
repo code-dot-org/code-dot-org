@@ -84,21 +84,29 @@ For each surviving finding, establish:
   - HIGH for significant functional impact to end users; anything that will
     block this PR from shipping (such as a deploy pipeline failure); or any
     breaks to core workflows in non-production environments such as curriculum
-    authoring, daily deploy, adhoc starts, or other developer experience.
+    authoring, daily deploy, feature development, or adhoc starts.
   - MEDIUM for any other issues that materially impact end users or core
     workflows, such as substantial inconvenience or performance degradation.
-  - LOW for any other confirmed issues.
+    Also any issues related to code quality, readability, maintainability,
+    or technical debt.
+  - LOW for any other issues.
 - **current or latent** -- CURRENT if the issue can happen now based on actions
   taken by attackers, end users, curriculum authors, translators,
-  engineering workflow (such as the daily deploy), or other internal workflow.
+  engineering workflows (such as the daily deploy), or other internal workflow.
   LATENT if the issue can only be triggered by a future code or config change
   made by engineering.
-- **age** - NEW if introduced in this PR, or if made worse by it. Otherwise,
-  approximately how long the issue has existed (e.g. years, months, weeks, days).
-  if introduced by another pending PR, indicate that here.
-- **probability** ZERO, LOW, MEDIUM, or HIGH probability of failure given
-  current code and config. By definition, latent issues have zero probability.
-- **which branch owns the fix**, when the PR is one of a stack.
+- **new or existing** — NEW if introduced in this PR, EXISTING if it was already
+  present (including in another pending PR).
+- **age** - For existing issues, approximately how long the issue has existed
+ in the repo (e.g. years, months, weeks, days). Or, PENDING if another pending
+ branch owns the fix.
+- **probability** assign current issues LOW, MEDIUM, or HIGH probability of
+  failure given current code and config. Assign LATENT if the issue is latent.
+- **priority** — LOW, MEDIUM, or HIGH — the overall priority of addressing this
+  issue, considering severity, probability and impact. Old, existing issues can
+  be assumed to have lower priority. Latent issues have lower priority unless
+  their potential impact is extremely high.
+
 
 ## Phase 4 — the report
 
