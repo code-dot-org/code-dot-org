@@ -142,7 +142,10 @@ When the PR is one step in a stack, or when the caller asks for it, add the
 merge-gating axis alongside the buckets:
 
 1. must fix before merge,
-2. mark in code with a TODO, to fix before the new path becomes the default,
+2. track for follow-up, with a deadline: "before the new path becomes the
+   default", "before launch". Where to track it — a code TODO, a Jira
+   ticket, the author's own list — is the team's call; say which fits. No
+   deadline, no follow-up: the item goes to 1 or 3.
 3. fine to leave.
 
 ### `--comment` and `--fix`
