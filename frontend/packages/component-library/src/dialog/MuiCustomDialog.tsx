@@ -98,6 +98,7 @@ const MuiCustomDialog: React.FunctionComponent<MuiCustomDialogProps> = ({
   return (
     <Dialog
       open
+      // Legacy behavior kept on purpose; see Deferred changes in DIALOG_MIGRATION_TO_MUI.md.
       disablePortal
       container={getDetachedContainer}
       disableScrollLock
@@ -107,7 +108,7 @@ const MuiCustomDialog: React.FunctionComponent<MuiCustomDialogProps> = ({
       disableRestoreFocus
       transitionDuration={0}
       className={moduleStyles.customDialogOverlay}
-      sx={zIndex ? {'--cdo-dialog-z-index': zIndex} : undefined}
+      sx={zIndex === undefined ? undefined : {'--cdo-dialog-z-index': zIndex}}
       slots={{paper: DialogPanel}}
       slotProps={{
         paper: {

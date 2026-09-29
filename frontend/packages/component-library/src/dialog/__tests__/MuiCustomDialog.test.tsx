@@ -260,6 +260,14 @@ describe('MuiCustomDialog Component', () => {
     expect(getRoot().style.zIndex).toBe('');
   });
 
+  it('should honor a zIndex of 0', () => {
+    render(<MuiCustomDialog {...defaultProps} zIndex={0} />);
+
+    expect(
+      getComputedStyle(getRoot()).getPropertyValue('--cdo-dialog-z-index'),
+    ).toBe('0');
+  });
+
   it('should aria-hide nothing but the backdrop', () => {
     render(
       <>

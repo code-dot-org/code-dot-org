@@ -256,6 +256,7 @@ after that PR, at the same tolerance.
 | `imageUrl` image fixed at 16.25rem × 8.625rem, no `object-fit`, never scales down  | `width: 16.25rem; max-width: 100%; aspect-ratio: 260 / 138; height: auto; object-fit: contain`                                | `dialog-with-image` |
 | `.dialog` `min-width: 39.375rem` clips narrow viewports and high zoom              | `min-width: min(39.375rem, 100%)`, `max-width: min(50rem, 100%)`; unchanged at 50rem and wider                                | none                |
 | Image alt is the literal, unlocalized `"Dialog"`                                   | New optional `imageAlt` (as on `Modal`); defaults to `''`, which marks the image decorative. `imageUrl` has no apps consumers | `dialog-with-image` |
+| `zIndex={0}` is dropped by a truthiness check, and the overlay falls back to 1040  | The wrapper checks for `undefined`. Legacy `CustomDialog` keeps its check until it is deleted; no consumer passes 0           | none                |
 | `.dialogIcon` loses `display: flex` to Font Awesome's `display` (TODO in the SCSS) | `.dialog > .dialogIcon`, specificity (0,2,0); the inline `display` workaround is no longer needed                             | `dialog-with-icon`  |
 
 Not fixed:
@@ -293,6 +294,23 @@ Tests that pin these (Execute, in `__tests__`):
 - `className`, `id`, `style` and `data-theme` land on the `role="dialog"`
   element.
 - `zIndex` sets `--cdo-dialog-z-index` on the root.
+
+## Deferred changes
+
+The wrapper keeps these legacy behaviors so the migration changes no UI-test
+hook. Each row is one later PR that hands the behavior to MUI, after
+RE-215 deletes the legacy source (lifecycle step 4). RE-216 goes before
+RE-217, and both before RE-219. A PR deletes its row when it lands; the
+status row becomes **Migrated** when the table is empty. PR #75436 (closed)
+implements every row and is the reference.
+
+| Behavior                 | Legacy, kept here                                                                       | With MUI                                                                                            | UI tests at risk                                                                                                                                                                                               | Ticket            |
+| ------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Focus trap               | `useFocusTrap`: first focusable element on open, Tab wraps, focus returns to the opener | `FocusTrap` pulls focus back on any `focusin` outside the dialog, and focuses its container on open | None named. Test dialogs MUI does not track (apps' `BaseDialog`, Bootstrap modals, qtips) opened over an MUI dialog                                                                                            | RE-216            |
+| Escape                   | `useEscapeKeyHandler`: a document listener; Escape closes every open dialog             | Closes only the top dialog, and only with focus inside it                                           | Tests that press Escape with focus outside the dialog                                                                                                                                                          | RE-217            |
+| Scroll lock              | Reference-counted `useBodyScrollLock`; MUI `Menu` and `Popover` take their own lock     | One lock, which also pads `body` by the scrollbar width                                             | Eyes screenshots that show a scrollbar                                                                                                                                                                         | RE-218            |
+| Portal and `aria-hidden` | In place; the detached `container` keeps `ModalManager` from aria-hiding the page       | On `document.body`; the rest of the page is aria-hidden; `data-theme` must be copied onto the panel | `e2e-tests/tests/pages/legacy-blockly-lab.ts:96`, `callouts.spec.ts:118`; `callouts.feature:71` if the overlay class leaves the root; Playwright role queries behind the dialog. Needs eyes and the test build | RE-219            |
+| Panel                    | A plain `div` in the paper slot                                                         | MUI `Paper` with a theme override                                                                   | Consumer class rules that beat emotion today                                                                                                                                                                   | RE-220 (optional) |
 
 ## Consumer chunks
 
@@ -353,10 +371,9 @@ Migrate (only when all 49 consumers are moved):
   and a message naming the codemod.
 - `src/dialog/README.md`: drop the legacy section.
 
-Later, not this run: delete the legacy source, swap the aliases, and remove
-the `disable*` flags and the detached `container` so MUI's managers own the
-dialog. At that point the portal, Escape stacking and initial focus are
-decided afresh.
+Later, not this run: delete the legacy source and swap the aliases
+(RE-215), then remove the `disable*` flags and the detached `container` one
+behavior at a time; see Deferred changes.
 
 ## Risks
 
@@ -445,6 +462,10 @@ starts at x = −105; the MUI panel is 420px at x = 0.
 
 ## Outcome
 
+This section records the whole stack: this PR and the consumer PRs #75564 to
+#75566. On this PR alone no consumer has moved, and the status row reads In
+Progress.
+
 Consumers: all 49 moved, none left on the legacy names. That is 48 `/apps`
 files (42 sources, 6 tests) and `Modal.tsx`. After the sweep no file in
 `apps/` or `frontend/` imports `Dialog`, `CustomDialog`, the default export,
@@ -508,7 +529,8 @@ unverified. They must be checked on the local studio before the stacked
 PRs merge, and the Modal PR (sample 4 and the Modal stories) comes first,
 because its blast radius is the widest.
 
-Docs: `MIGRATION_STATUS.md` marks `dialog` as Migrated. The skill lists
+Docs, on the last consumer PR: `MIGRATION_STATUS.md` marks `dialog` as
+Migrated, behavior pending; until that PR lands the row reads In Progress. The skill lists
 Dialog under "Use MUI" and gives the wrapper's import. `apps/.eslintrc.js`
 bans the five legacy names at `@code-dot-org/component-library/dialog`
 through `importNames`, because the `Mui` names ship at the same path.
