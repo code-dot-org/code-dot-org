@@ -4,7 +4,7 @@ import type {KeyboardEvent} from 'react';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
-import {getTableData, setCurrentColumn} from '../redux';
+import {getColumnClickable, getTableData, setCurrentColumn} from '../redux';
 
 import moduleStyles from './dataTable.module.scss';
 
@@ -34,9 +34,19 @@ const DataTable = ({
   const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const currentColumn = useAppSelector(state => state.currentColumn);
+  const clickableColumns = useAppSelector(
+    state =>
+      reducedColumns
+        ? []
+        : Object.keys(data[0] ?? {}).filter(key =>
+            getColumnClickable(state, key),
+          ),
+    deepEqual,
+  );
 
-  const isClickable = !reducedColumns;
   const showRowNumbers = !reducedColumns;
+
+  const isClickable = (key: string) => clickableColumns.includes(key);
 
   const getColumnHeaderClassName = (key: string) => {
     const classNames = [moduleStyles.header];
@@ -45,10 +55,10 @@ const DataTable = ({
     } else if (selectedFeatures.includes(key)) {
       classNames.push(moduleStyles.headerFeature);
     }
-    if (isClickable && key === currentColumn) {
+    if (!reducedColumns && key === currentColumn) {
       classNames.push(moduleStyles.headerSelected);
     }
-    if (isClickable) {
+    if (isClickable(key)) {
       classNames.push(moduleStyles.clickable);
     }
     return classNames.join(' ');
@@ -63,7 +73,7 @@ const DataTable = ({
     } else if (selectedFeatures.includes(key)) {
       classNames.push(moduleStyles.bodyCellFeature);
     }
-    if (isClickable) {
+    if (isClickable(key)) {
       classNames.push(moduleStyles.clickable);
     }
     return classNames.join(' ');
@@ -95,7 +105,7 @@ const DataTable = ({
   };
 
   const handleSetCurrentColumn = (columnId: string) => {
-    if (isClickable) {
+    if (isClickable(columnId)) {
       dispatch(setCurrentColumn(columnId));
     }
   };
@@ -129,9 +139,9 @@ const DataTable = ({
               <th
                 key={columnId}
                 className={getColumnHeaderClassName(columnId)}
-                tabIndex={isClickable ? 0 : undefined}
+                tabIndex={isClickable(columnId) ? 0 : undefined}
                 aria-selected={
-                  isClickable ? columnId === currentColumn : undefined
+                  isClickable(columnId) ? columnId === currentColumn : undefined
                 }
                 onClick={() => handleSetCurrentColumn(columnId)}
                 onKeyDown={event => handleHeaderKeyDown(event, columnId)}

@@ -321,18 +321,10 @@ const ailabSlice = createSlice({
     },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
+      if (!getColumnClickable(state, currentColumn)) {
         return;
       }
-      if (
-        state.currentPanel === 'dataDisplayFeatures' &&
-        currentColumn === state.labelColumn
-      ) {
-        // If doing feature selection, and the label column is clicked, do
-        // nothing.
-        return;
-      } else if (state.currentColumn === currentColumn) {
+      if (state.currentColumn === currentColumn) {
         // If column is selected, then deselect.
         if (state.currentPanel === 'dataDisplayFeatures') {
           state.instructionsKey = 'dataDisplayFeatures';
@@ -504,6 +496,17 @@ export function getSpecifiedDatasets(state: RootState): string[] | undefined {
 
 function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
+}
+
+export function getColumnClickable(state: RootState, column: string): boolean {
+  return (
+    getShowColumnClicking(state) &&
+    !(
+      // If doing feature selection, the label column is no longer clickable
+      state.currentPanel === 'dataDisplayFeatures' &&
+      column === state.labelColumn
+    )
+  );
 }
 
 export function getPredictAvailable(state: RootState): boolean {
