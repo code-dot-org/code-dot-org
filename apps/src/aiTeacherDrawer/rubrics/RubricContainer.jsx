@@ -51,21 +51,11 @@ function RubricContainer({
 }) {
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
-  const rubricPositionX = 'rubricFABPositionX';
-  const rubricPositionY = 'rubricFABPositionY';
   const rubricId = rubric.id;
 
   const [selectedTab, setSelectedTab] = useState(
     tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
       TAB_NAMES.RUBRIC
-  );
-
-  const [positionX, setPositionX] = useState(
-    parseInt(tryGetSessionStorage(rubricPositionX, 0)) || 0
-  );
-
-  const [positionY, setPositionY] = useState(
-    parseInt(tryGetSessionStorage(rubricPositionY, 0)) || 0
   );
 
   const [aiEvaluations, setAiEvaluations] = useState(null);
@@ -124,14 +114,6 @@ function RubricContainer({
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
   }, [selectedTab]);
-
-  useEffect(() => {
-    trySetSessionStorage(rubricPositionX, positionX);
-  }, [positionX]);
-
-  useEffect(() => {
-    trySetSessionStorage(rubricPositionY, positionY);
-  }, [positionY]);
 
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
