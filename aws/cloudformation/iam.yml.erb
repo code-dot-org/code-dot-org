@@ -993,9 +993,17 @@ roles.each do |name, config| %>
     Properties:
       AWSServiceName: logger.cloudfront.amazonaws.com
 
-  # IAM Role for GitHub Actions in the code-dot-org/code-dot-org repository.
-  # GitHub Actions workflows assume this role via OIDC federation.
-  # Currently scoped for OpenTofu plan/apply on EKS infrastructure.
+  # IAM Role for GitHub Actions in the code-dot-org/code-dot-org and
+  # code-dot-org/infrastructure repositories. Workflows assume this role via OIDC
+  # federation; the trust policy lists the allowed repo/environment pairs.
+  # Scoped for OpenTofu plan/apply on:
+  #   - EKS infrastructure (code-dot-org/code-dot-org)
+  #   - the observability workspace: Managed Grafana, Managed Prometheus, the
+  #     Grafana workspace IAM role and the Sentry secrets
+  #     (code-dot-org/infrastructure, observability/opentofu/environments/prod)
+  # Create/Delete on the Grafana workspace, the Prometheus workspace and the Grafana
+  # IAM role are intentionally NOT granted so CI can never replace them; an apply
+  # that needs a replacement fails and must be run by hand.
   # Note: The GitHub OIDC provider (token.actions.githubusercontent.com) is managed
   # in the infrastructure repo.
   GitHubActionsCodeDotOrgRole:
@@ -1187,6 +1195,82 @@ roles.each do |name, config| %>
                   # - secretsmanager:GetSecretValue
                   - secretsmanager:DescribeSecret
                 Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:*/cdo/*"
+              # The observability OpenTofu workspace reads the Sentry auth tokens and
+              # the Sentry->PagerDuty integration keys. Scoped to those secrets only.
+              - Sid: ObservabilitySentrySecretsRead
+                Effect: Allow
+                Action: secretsmanager:GetSecretValue
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:production/cdo/sentry_*"
+        # Permissions for the observability OpenTofu workspace
+        # (code-dot-org/infrastructure, observability/opentofu/environments/prod).
+        - PolicyName: ObservabilityOpenTofu
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: ManagedGrafanaWorkspace
+                Effect: Allow
+                Action:
+                  # - grafana:CreateWorkspace
+                  # - grafana:DeleteWorkspace
+                  - grafana:DescribeWorkspace
+                  - grafana:DescribeWorkspaceAuthentication
+                  - grafana:DescribeWorkspaceConfiguration
+                  - grafana:UpdateWorkspace
+                  - grafana:UpdateWorkspaceAuthentication
+                  - grafana:UpdateWorkspaceConfiguration
+                  - grafana:ListTagsForResource
+                  - grafana:TagResource
+                  - grafana:UntagResource
+                  # Service account + token the Grafana Tofu provider authenticates
+                  # with. The token is rotated every 25 days, so Create/Delete are
+                  # required for routine applies.
+                  - grafana:CreateWorkspaceServiceAccount
+                  - grafana:DeleteWorkspaceServiceAccount
+                  - grafana:ListWorkspaceServiceAccounts
+                  - grafana:CreateWorkspaceServiceAccountToken
+                  - grafana:DeleteWorkspaceServiceAccountToken
+                  - grafana:ListWorkspaceServiceAccountTokens
+                Resource: !Sub "arn:aws:grafana:${AWS::Region}:${AWS::AccountId}:/workspaces/*"
+              - Sid: ManagedPrometheusWorkspace
+                Effect: Allow
+                Action:
+                  # - aps:CreateWorkspace
+                  # - aps:DeleteWorkspace
+                  - aps:DescribeWorkspace
+                  - aps:UpdateWorkspaceAlias
+                  - aps:ListTagsForResource
+                  - aps:TagResource
+                  - aps:UntagResource
+                Resource: !Sub "arn:aws:aps:${AWS::Region}:${AWS::AccountId}:workspace/*"
+              # The IAM role Managed Grafana assumes to query CloudWatch/Prometheus.
+              - Sid: GrafanaWorkspaceIamRole
+                Effect: Allow
+                Action:
+                  # - iam:CreateRole
+                  # - iam:DeleteRole
+                  # - iam:ListInstanceProfilesForRole
+                  - iam:GetRole
+                  - iam:UpdateRole
+                  - iam:UpdateAssumeRolePolicy
+                  - iam:TagRole
+                  - iam:UntagRole
+                  - iam:ListRoleTags
+                  - iam:ListRolePolicies
+                  - iam:GetRolePolicy
+                  - iam:PutRolePolicy
+                  - iam:DeleteRolePolicy
+                  - iam:ListAttachedRolePolicies
+                  - iam:AttachRolePolicy
+                  - iam:DetachRolePolicy
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/observability-grafana-workspace-role"
+              # Lets the workspace's role_arn be (re)assigned to Managed Grafana.
+              - Sid: PassGrafanaWorkspaceRole
+                Effect: Allow
+                Action: iam:PassRole
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/observability-grafana-workspace-role"
+                Condition:
+                  StringEquals:
+                    iam:PassedToService: grafana.amazonaws.com
 
 Outputs:
   DevPermissions:
