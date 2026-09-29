@@ -1,7 +1,7 @@
 import type {
   Condition,
   Lesson,
-  LessonGroupSummary,
+  LessonGroup,
   UnitLevel,
   Sublevel,
 } from '@code-dot-org/core/api';
@@ -87,7 +87,7 @@ export interface ProgressState {
   deeperLearningCourse?: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons?: Lesson[];
-  lessonGroups?: LessonGroupSummary[];
+  lessonGroups?: LessonGroup[];
   scriptId?: number;
   viewAsUserId?: number;
   scriptName?: string;
@@ -127,7 +127,7 @@ export interface InitProgressPayload {
   deeperLearningCourse: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons: Lesson[];
-  lessonGroups?: LessonGroupSummary[];
+  lessonGroups?: LessonGroup[];
   scriptId?: number;
   scriptName?: string;
   scriptDisplayName?: string;

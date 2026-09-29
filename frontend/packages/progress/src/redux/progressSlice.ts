@@ -848,14 +848,31 @@ const levelWithProgress: (
   } as NumberedLevel;
 };
 
+/** The progress fields that decide a level's status and current flag. */
+export type LevelProgressState = Pick<
+  RootState['progress'],
+  'unitProgress' | 'levelResults' | 'currentLevelId'
+> & {
+  levelPairing?: {[key: string]: boolean};
+};
+
 /**
  * Get data for a particular lesson
  */
 export const levelsForLessonId: (
   state: RootState['progress'],
   lessonId: number | undefined,
-) => NumberedLevel[] = (state, lessonId) => {
-  const lesson = state.lessons?.find(lesson => lesson.id === lessonId);
+) => NumberedLevel[] = (state, lessonId) =>
+  levelsForLesson(
+    state,
+    state.lessons?.find(lesson => lesson.id === lessonId),
+  );
+
+/** A lesson's levels, with their status and whether each is current. */
+export const levelsForLesson: (
+  state: LevelProgressState,
+  lesson: Lesson | undefined,
+) => NumberedLevel[] = (state, lesson) => {
   return (lesson?.levels || []).map((lessonLevel, i) =>
     levelWithProgress(
       state,
