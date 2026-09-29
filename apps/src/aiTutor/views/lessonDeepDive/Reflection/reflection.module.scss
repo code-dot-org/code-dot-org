@@ -16,7 +16,7 @@ $anim-duration: 220ms;
   margin: 0 auto;
   box-sizing: border-box;
   overflow: hidden;
-  color: #fff;
+  color: var(--text-neutral-primary);
 }
 
 .overline {
@@ -25,7 +25,7 @@ $anim-duration: 220ms;
   line-height: 22px;
   letter-spacing: 0.84px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text-neutral-primary);
   margin: 0;
 }
 
@@ -42,7 +42,7 @@ $anim-duration: 220ms;
   font-weight: 700 !important;
   line-height: 40px !important;
   letter-spacing: -0.38px !important;
-  color: #fff !important;
+  color: var(--text-neutral-primary) !important;
   margin: 0 !important;
 }
 
@@ -50,7 +50,7 @@ $anim-duration: 220ms;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  color: #fff;
+  color: var(--text-neutral-primary);
   margin: 0;
 }
 
@@ -253,7 +253,7 @@ $anim-duration: 220ms;
   border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-neutral-primary);
   cursor: pointer;
   min-width: 32px;
 

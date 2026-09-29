@@ -21,11 +21,13 @@ interface ChallengePickerProps {
     pickedChallenge: Challenge | null,
     pickedChallengeType: string | null
   ) => void;
+  onReviewInstead?: () => void;
 }
 
 const ChallengePicker: FC<ChallengePickerProps> = ({
   lessonId,
   challengeSetCallback,
+  onReviewInstead,
 }) => {
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -174,7 +176,9 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
         <MuiButton
           variant="text"
           className={styles.reviewLink}
-          onClick={() => navigate('/intervention')}
+          onClick={() =>
+            onReviewInstead ? onReviewInstead() : navigate('/intervention')
+          }
         >
           I want to review instead
         </MuiButton>

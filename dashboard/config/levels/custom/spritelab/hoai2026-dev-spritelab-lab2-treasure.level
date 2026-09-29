@@ -38,36 +38,20 @@
     },
     "guide_steps": [
       {
-        "text": "**Make your treasure worth finding.** Add **when [ ] touches [ ]**, picking your character and your treasure from the dropdowns, and put a **say** block inside it.  Then click **Play** and go and get it."
+        "text": "**Find the treasure.** The **when touches** event is ready. Drag a **say** block onto the dotted outline under it, so your character says something when they reach it. Click **Play** and go get it."
       },
       {
-        "text": "**Your treasure says something when you reach it.** Continue when you're ready.",
+        "text": "**Treasure found!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Make your treasure worth finding\nAdd **when [ ] touches [ ]**, picking your character and your treasure, and put a **say** block inside it.",
+    "long_instructions": "# Find the treasure\nDrag a **say** block onto the dotted outline under **when touches** so your character says something when they reach the treasure.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "gamelab_checkTouching",
-          "inputs": {
-            "SPRITE1": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "SPRITE2": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
@@ -83,7 +67,48 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_checkTouching",
+        "data": "treasure-touch",
+        "fields": {
+          "CONDITION": "\"when\""
+        },
+        "inputs": {
+          "SPRITE1": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          },
+          "SPRITE2": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Treasure!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

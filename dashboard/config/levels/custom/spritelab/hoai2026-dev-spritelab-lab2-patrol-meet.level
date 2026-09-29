@@ -38,36 +38,20 @@
     },
     "guide_steps": [
       {
-        "text": "**Go and meet them.** Add **when [ ] touches [ ]** and pick your player and your second character.  Then decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."
+        "text": "**Go and meet them.** The **when touches** event is ready for your player and your second character. Drag a **say** block onto the dotted outline for a hello, or **restart scene** to send your player back to the start. Click **Play**."
       },
       {
-        "text": "**Your world has company.** Continue when you're ready.",
+        "text": "**Your world has company.** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Go and meet them\nAdd **when [ ] touches [ ]**, picking your player and your second character, and decide what happens when they meet: a friendly hello, or back to the start.",
+    "long_instructions": "# Go and meet them\nDrag a **say** block onto the dotted outline under **when touches** for a hello, or **restart scene** to send your player back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "gamelab_checkTouching",
-          "inputs": {
-            "SPRITE1": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "SPRITE2": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
@@ -87,7 +71,48 @@
           "type": "spritelab2_restartScene"
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_checkTouching",
+        "data": "patrol-touch",
+        "fields": {
+          "CONDITION": "\"when\""
+        },
+        "inputs": {
+          "SPRITE1": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          },
+          "SPRITE2": {
+            "shadow": {
+              "type": "gamelab_allSpritesWithAnimation"
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Hello!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

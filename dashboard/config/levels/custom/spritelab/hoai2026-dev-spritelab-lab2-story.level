@@ -34,44 +34,39 @@
     },
     "guide_steps": [
       {
-        "text": "**Set the scene.** Use the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far."
+        "text": "**Set the scene.** Drag **set background** onto the dotted outline and pick your background. Click **Play** to watch your story."
       },
       {
-        "text": "**That's your story!** Watch it play, then continue when you're ready.",
+        "text": "**That's your story!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Set the scene\nUse the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far.",
+    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline and pick your background.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
           "type": "gamelab_setBackgroundImageAs"
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_spriteSay",
-          "fields": {
-            "SPEECH": "Hello!"
-          },
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_setBackgroundImageAs"
             }
           }
         }
-      ]
-    }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>
