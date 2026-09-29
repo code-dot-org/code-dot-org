@@ -104,8 +104,11 @@ class QuizAttemptsController < ApplicationController
       id: attempt.id,
       attemptNumber: attempt.attempt_number,
       submittedAt: attempt.submitted_at,
-      score: attempt.score,
-      maxScore: attempt.max_score,
+      # nil when the quiz doesn't show correctness - a hidden score is still
+      # a score, and question_results already withholds correctness the
+      # same way; a deleted quiz (level nil) defaults to hidden too.
+      score: attempt.level&.show_correctness? ? attempt.score : nil,
+      maxScore: attempt.level&.show_correctness? ? attempt.max_score : nil,
       # nil when the quiz has no time limit - see QuizAttempt#expires_at.
       expiresAt: attempt.expires_at,
       # Whether POSTing to #create again would start a new attempt rather
