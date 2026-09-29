@@ -5,7 +5,9 @@ class QuizAttemptsControllerTest < ActionController::TestCase
 
   setup do
     @student = create(:student)
-    @quiz = create(:quiz)
+    # These tests are about grading/re-grading, not the show_correctness gate
+    # itself - see "update omits score and maxScore..." below for that.
+    @quiz = create(:quiz, show_correctness: true)
     @question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: @quiz, quiz_question: @question)
     @attempt = create(:quiz_attempt, user: @student, level: @quiz)
@@ -67,6 +69,19 @@ class QuizAttemptsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal @attempt.id, JSON.parse(response.body)['id']
+  end
+
+  test "index omits score and maxScore for a submitted attempt when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    sign_in @student
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['score']
+    assert_nil body['maxScore']
   end
 
   test "update re-grades stored responses when none are submitted, and only scores questions on the quiz" do
@@ -146,6 +161,33 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     assert_equal 1, body['score']
     assert_equal 1, body['maxScore']
+  end
+
+  test "update omits score and maxScore from the response when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, params: {id: attempt.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['score']
+    assert_nil body['maxScore']
+    # Grading still happens for real - only the response withholds it.
+    assert_equal 1, attempt.reload.score
+    assert_equal 1, attempt.max_score
   end
 
   test "create redirects to sign in when not signed in" do
