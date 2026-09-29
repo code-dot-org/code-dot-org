@@ -157,6 +157,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // Which on-screen controls fit the running scene: fires on every run
+    // and on each set-gravity block, with {platformer, gravity}.
+    this.onControlsChange = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
     // null while no audio is listening.
@@ -324,11 +327,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    this.notifyControlsChange_();
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
+      this.notifyControlsChange_();
     };
     // The view eases toward the target zoom a frame at a time (see the
     // platform draw loop below); a fresh run starts back at 1.
@@ -598,6 +603,15 @@ export default class SpriteLab2Engine extends SpriteLab {
   setCode(code, referencedImages) {
     this.userCode = code || '';
     this.referencedImages = referencedImages || null;
+  }
+
+  notifyControlsChange_() {
+    if (this.onControlsChange) {
+      this.onControlsChange({
+        platformer: this.usesPlatformPhysics_ && this.isPlatformScene(),
+        gravity: this.platformGravity_,
+      });
+    }
   }
 
   /** Whether the running scene is a platformer: by its type, or by platform
