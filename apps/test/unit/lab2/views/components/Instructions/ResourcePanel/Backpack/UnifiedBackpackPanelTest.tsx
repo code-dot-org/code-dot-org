@@ -114,23 +114,6 @@ describe('UnifiedBackpackPanel', () => {
     restoreRedux();
   });
 
-  it('hands the save button every backpack file name', async () => {
-    const user = userEvent.setup();
-    mockBackpackApi.getFileLists.mockResolvedValue({
-      universal: ['tree.png'],
-      sketchlab: ['house.png'],
-    });
-    renderPanel();
-
-    await waitFor(() => expect(saveButton()).toBeEnabled());
-    await user.click(saveButton());
-
-    expect(onClick).toHaveBeenCalledWith(
-      ['tree.png', 'house.png'],
-      expect.any(Function)
-    );
-  });
-
   it('toasts what the save reports back', async () => {
     const user = userEvent.setup();
     renderPanel();
@@ -138,7 +121,7 @@ describe('UnifiedBackpackPanel', () => {
     await waitFor(() => expect(saveButton()).toBeEnabled());
     await user.click(saveButton());
 
-    const notify = onClick.mock.calls[0][1];
+    const notify = onClick.mock.calls[0][0];
     notify('gray', 'Saving sketch.png to your Backpack...');
     notify('success', 'sketch.png saved to your Backpack.');
 

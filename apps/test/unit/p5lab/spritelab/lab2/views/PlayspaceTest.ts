@@ -43,6 +43,17 @@ describe('playPlacement', () => {
     );
   });
 
+  it('leaves the reserved room under the box, and centers box plus room', () => {
+    const p = playPlacement({w: 1000, h: 600}, null, 52);
+    expect(box(p)).toEqual({left: 238, right: 762, top: 12, bottom: 536});
+  });
+
+  it('keeps the reserved room clear of the guide too', () => {
+    const b = box(playPlacement({w: 750, h: 1000}, GUIDE, 52));
+    const guideTop = 1000 - GUIDE.height - 20;
+    expect(b.bottom + 52).toBeLessThanOrEqual(guideTop - 12);
+  });
+
   it('never overlaps the guide, whichever stacking it picks', () => {
     for (const size of [
       {w: 1280, h: 620},

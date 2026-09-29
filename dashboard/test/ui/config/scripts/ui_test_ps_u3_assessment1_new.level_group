@@ -1,0 +1,23 @@
+name 'UI Test PS U3 Assessment1 new'
+editor_experiment ''
+title 'Test Assessment 1'
+submittable 'true'
+
+page
+text 'UI Test csp_unit_assessment_overview' # external instructions
+level 'UI Test PS U3 Q1-1'
+level 'UI Test PS U3 Q1-2'
+level 'UI Test PS U3 Q1-3'
+level 'UI Test PS U3 Q1-4'
+level 'UI Test PS U3 Q1-5'
+
+page
+level 'UI Test PS U3 Q1-6'
+text 'UI Test sample external 1' 
+level 'UI Test PS U3 Q1-7'
+text 'UI Test sample external 2' 
+level 'UI Test ECSPD your goals' 
+
+page
+level 'UI Test PS U3 Q1-8'
+level 'UI Test PS U3 Q1-9'

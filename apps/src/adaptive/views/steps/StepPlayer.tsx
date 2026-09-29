@@ -5,6 +5,7 @@ import React, {useState} from 'react';
 
 import {Checkpoint, Step} from '../../types';
 
+import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
 
 import styles from './stepPlayer.module.scss';
@@ -12,6 +13,8 @@ import shared from '../shared.module.scss';
 
 interface StepPlayerProps {
   checkpoint: Checkpoint;
+  /** Label for the last step's button. */
+  finishLabel?: string;
   onExit: () => void;
   onFinish: () => void;
 }
@@ -19,6 +22,7 @@ interface StepPlayerProps {
 /** Plays a checkpoint's steps in order, then reports the checkpoint finished. */
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
+  finishLabel = 'Complete checkpoint',
   onExit,
   onFinish,
 }) => {
@@ -26,12 +30,22 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   const steps = checkpoint.steps;
   const step = steps[index];
   const last = index === steps.length - 1;
+  const continueLabel = last ? finishLabel : 'Continue';
   const advance = () => (last ? onFinish() : setIndex(index + 1));
 
   const renderStep = (step: Step) => {
     switch (step.kind) {
       case 'panels':
         return <PanelsStep key={step.id} step={step} onComplete={advance} />;
+      case 'level':
+        return (
+          <LevelStep
+            key={step.id}
+            step={step}
+            continueLabel={continueLabel}
+            onComplete={advance}
+          />
+        );
       default:
         // Other step kinds arrive in later changes.
         return (
@@ -40,7 +54,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
               This step type ({step.kind}) is not available yet.
             </MuiTypography>
             <MuiButton variant="contained" onClick={advance}>
-              {last ? 'Complete checkpoint' : 'Continue'}
+              {continueLabel}
             </MuiButton>
           </div>
         );
@@ -61,21 +75,25 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
           </MuiTypography>
           <MuiTypography variant="strong">{step.title}</MuiTypography>
         </div>
-        <div className={styles.dots} aria-hidden>
-          {steps.map((s, i) => (
-            <span
-              key={s.id}
-              className={classNames(
-                styles.dot,
-                i < index && styles.dotDone,
-                i === index && styles.dotCurrent
-              )}
-            />
-          ))}
-        </div>
-        <MuiTypography variant="body4" className={shared.muted}>
-          Step {index + 1} of {steps.length}
-        </MuiTypography>
+        {steps.length > 1 && (
+          <>
+            <div className={styles.dots} aria-hidden>
+              {steps.map((s, i) => (
+                <span
+                  key={s.id}
+                  className={classNames(
+                    styles.dot,
+                    i < index && styles.dotDone,
+                    i === index && styles.dotCurrent
+                  )}
+                />
+              ))}
+            </div>
+            <MuiTypography variant="body4" className={shared.muted}>
+              Step {index + 1} of {steps.length}
+            </MuiTypography>
+          </>
+        )}
       </div>
       <div className={styles.playerBody}>{renderStep(step)}</div>
     </div>

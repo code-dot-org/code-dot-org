@@ -1,8 +1,8 @@
 PUZZLE_SOLUTIONS = {
-  "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1" => %{
+  "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/2/levels/1" => %{
     And I've initialized the workspace with k1 maze blocks
   },
-  "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/2" => %{
+  "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/3/levels/2" => %{
     And I've initialized the workspace with winning artist blocks
   },
   "http://studio.code.org/courses/ui-test-level-swap/units/1/lessons/1/levels/1?level_name=UI Test 2-3 Maze 1" => %{

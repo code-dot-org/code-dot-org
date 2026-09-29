@@ -64,16 +64,29 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
 const SPRITE_PROMPT_CLAUSE =
   'Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.';
 
+// A still character faces the way an animated one does (characterSet.ts),
+// so a story's right-lane mirror turns it toward the others.
+const CHARACTER_FACING_CLAUSE = 'The character faces to the right.';
+
+// On every prompt the lab sends, the character set's own included: the
+// model puts captions on backgrounds and labels on things.
+export const NO_WRITING_CLAUSE =
+  'No writing anywhere in the image: no letters, words, numbers, signs or logos.';
+
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
 // decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
+// The place is empty because the student's characters go on top; a
+// background with its own people is a crowd.
 const BACKGROUND_PROMPT_CLAUSE =
-  'The scene itself fills the entire image, reaching all four edges. Do not frame the picture: no border and no margin, and nothing along the edges that is not part of the scene.';
+  'The place is deserted: scenery only, with nobody in it, no people, characters, creatures or figures of any kind. The scene itself fills the entire image, reaching all four edges. Do not frame the picture: no border and no margin, and nothing along the edges that is not part of the scene.';
 
-// Name no drawable object here ("block", "tile") — the model adds it to the
-// picture. Describe only the square-and-margin layout.
+// The square is ground in a platform game, and the prompt says so: without
+// the game's meaning, "a block of gold" comes back as a picture of a gold
+// cube. Name no separate object ("block", "tile", "cube") — the model draws
+// it inside the square — describe the ground's face instead.
 const BLOCK_PROMPT_CLAUSE =
-  'Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
+  'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
 
 /**
  * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
@@ -256,6 +269,33 @@ async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
 }
 
 /**
+ * The prompt as sent: the student's words as a sentence, then the style,
+ * then the clauses for the kind of image.
+ */
+export function fullPromptFor(
+  prompt: string,
+  options: GenerateImageOptions = {}
+): string {
+  const {imageType = 'sprite', style = 'smooth'} = options;
+  const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
+  // Read the prompt as a sentence before the clauses, without doubling the
+  // punctuation a prompt may already end with.
+  const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
+  let fullPrompt = `${sentence} ${styleClause(style, pixelBlock)}`;
+  if (imageType === 'sprite') {
+    if (options.subject === 'character') {
+      fullPrompt = `${fullPrompt} ${CHARACTER_FACING_CLAUSE}`;
+    }
+    fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
+  } else if (imageType === 'block') {
+    fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
+  } else if (imageType === 'background') {
+    fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
+  }
+  return `${fullPrompt} ${NO_WRITING_CLAUSE}`;
+}
+
+/**
  * Generate an image from a text prompt. Sprites and blocks get a flat key
  * color the model picks to contrast with the subject, flood-filled to
  * transparency.
@@ -269,17 +309,7 @@ export async function generateImage(
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  // Read the prompt as a sentence before the clauses, without doubling the
-  // punctuation a prompt may already end with.
-  const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
-  let fullPrompt = `${sentence} ${styleClause(style, pixelBlock)}`;
-  if (imageType === 'sprite') {
-    fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
-  } else if (imageType === 'block') {
-    fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
-  } else if (imageType === 'background') {
-    fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
-  }
+  const fullPrompt = fullPromptFor(prompt, options);
 
   // The prompt judge and the image model run concurrently — generation is
   // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks

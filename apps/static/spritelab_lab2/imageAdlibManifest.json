@@ -90,11 +90,13 @@
           },
           {
             "id": "dragon",
-            "text": "dragon"
+            "text": "dragon",
+            "bodyPlan": "quadruped"
           },
           {
             "id": "cat",
-            "text": "cat"
+            "text": "cat",
+            "bodyPlan": "quadruped"
           },
           {
             "id": "monster",
@@ -106,7 +108,8 @@
           },
           {
             "id": "penguin",
-            "text": "penguin"
+            "text": "penguin",
+            "bodyPlan": "bird"
           },
           {
             "id": "witch",
@@ -306,11 +309,13 @@
           },
           {
             "id": "dragon",
-            "text": "dragon"
+            "text": "dragon",
+            "bodyPlan": "quadruped"
           },
           {
             "id": "cat",
-            "text": "cat"
+            "text": "cat",
+            "bodyPlan": "quadruped"
           },
           {
             "id": "monster",
@@ -322,7 +327,8 @@
           },
           {
             "id": "penguin",
-            "text": "penguin"
+            "text": "penguin",
+            "bodyPlan": "bird"
           },
           {
             "id": "knight",
@@ -330,7 +336,8 @@
           },
           {
             "id": "dinosaur",
-            "text": "dinosaur"
+            "text": "dinosaur",
+            "bodyPlan": "quadruped"
           },
           {
             "id": "witch",

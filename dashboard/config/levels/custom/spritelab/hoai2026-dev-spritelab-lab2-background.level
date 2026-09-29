@@ -28,17 +28,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make a background.** Use AI to create the background for your story scene. Pick the words for a place and press **Generate**."
+        "text": "**Make a background.** Pick the words for a place and click **Generate**."
       },
       {
-        "text": "**That's your background!** Continue when you're ready.",
+        "text": "**That's your background!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "backgroundImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Pick the words for a place and press **Generate**."
+    "long_instructions": "# Make a background\nPick the words for a place and click **Generate**."
   }
 }]]></config>
 </GamelabJr>

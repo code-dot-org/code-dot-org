@@ -1,15 +1,9 @@
 import {ShowToast} from '@code-dot-org/component-library/toast';
 import {uniqueFileName} from '@codebridge/utils';
-import React from 'react';
 
-import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {
-  isUnifiedApi,
-  SaveToBackpackApi,
-} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
 import {
   DialogType,
   DialogControlInterface,
@@ -24,10 +18,11 @@ import {
   notifyWithToast,
 } from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  backpackApi: SaveToBackpackApi;
+  backpackApi: UnifiedBackpackClientApi;
   file: ProjectFile;
   showToast: ShowToast;
   sendLab2AnalyticsEvent: (
@@ -43,23 +38,11 @@ export const openSaveToBackpackPrompt = async ({
   showToast,
   sendLab2AnalyticsEvent,
 }: OpenSaveToBackpackPromptArgsType) => {
-  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
   const notify = notifyWithToast(showToast);
 
-  // The unified backpack reports failures as toasts. The
-  // legacy backpack keeps its modal, whose copy tells the user to close it.
   const handleError =
-    (toastMessage: string, dialogMessage: string, errorMessage: string) =>
-    (error?: Error) => {
-      if (unifiedApi) {
-        notify('danger', toastMessage);
-      } else {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: codebridgeI18n.saveToBackpackTitle(),
-          bodyComponent: <BackpackErrorAlertBody message={dialogMessage} />,
-        });
-      }
+    (toastMessage: string, errorMessage: string) => (error?: Error) => {
+      notify('danger', toastMessage);
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError(errorMessage, error);
@@ -67,13 +50,10 @@ export const openSaveToBackpackPrompt = async ({
 
   let filenamesByAppType: FilenamesByAppType;
   try {
-    filenamesByAppType = isUnifiedApi(backpackApi)
-      ? await backpackApi.getFileLists()
-      : {[backpackApi.appType]: await backpackApi.getFileList()};
+    filenamesByAppType = await backpackApi.getFileLists();
   } catch (error) {
     handleError(
       backpackSaveError(file.name),
-      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
       'Backpack file list fetch error'
     )(error as Error);
     return;
@@ -126,21 +106,14 @@ export const openSaveToBackpackPrompt = async ({
 
   const errorCallback = handleError(
     backpackSaveError(selectedFileName),
-    codebridgeI18n.saveToBackpackError({selectedFileName}) +
-      ' ' +
-      codebridgeI18n.closeWindowTryAgain(),
     'Save to backpack error'
   );
 
-  if (unifiedApi) {
-    notifySaving(notify, selectedFileName);
-  }
+  notifySaving(notify, selectedFileName);
 
   const saved = await new Promise<boolean>(resolve => {
     const onSuccess = () => {
-      if (unifiedApi) {
-        notifySaved(notify, selectedFileName);
-      }
+      notifySaved(notify, selectedFileName);
       successCallback();
       resolve(true);
     };
@@ -165,18 +138,17 @@ export const openSaveToBackpackPrompt = async ({
 
   const replacedLegacyCopy =
     saved && isDuplicateFileName && selectedFileName === file.name;
-  if (!unifiedApi || !replacedLegacyCopy) {
+  if (!replacedLegacyCopy) {
     return;
   }
 
   // Writes go to the universal backpack, so a name replaced in a legacy backpack is
   // still there. Deleting it after the save keeps a failed save non-destructive.
   try {
-    await unifiedApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
+    await backpackApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
   } catch (error) {
     handleError(
       backpackDuplicateDeleteError(selectedFileName),
-      '', // unused for unified api
       'Backpack duplicate delete error'
     )(error as Error);
   }

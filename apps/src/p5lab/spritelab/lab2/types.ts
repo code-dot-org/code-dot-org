@@ -2,7 +2,7 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
-import {AddBlock} from './addBlocks';
+import {AddBlockEntry} from './addBlocks';
 import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
@@ -145,14 +145,20 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       anchored to the floor. 'B' cells take the block image the student made
       most recently, 'S' the image_role_defaults sprite, else their first
       character. */
-  worldStartPattern?: string[];
+  /** Rows of a premade world (worldStartPattern.ts), or several such
+      layouts, one of which the project draws by its channel id. */
+  worldStartPattern?: string[] | string[][];
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;
   /** Blocks added to the pinned scene when the student arrives and the
       scene has none of that type (addBlocks.ts), in Blockly's block
-      state form: an event to fill in, a placeholder shadow on its `next`. */
-  addBlocks?: AddBlock[];
+      state form: an event to fill in, a placeholder shadow on its `next`.
+      An entry with `attachTo` instead hangs its shadow on the end of the
+      stack already there whose top block has that type. */
+  addBlocks?: AddBlockEntry[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
+  /** Runtime libraries the level opts into (see usesPlatformPhysics). */
+  helperLibraries?: string[];
 }
