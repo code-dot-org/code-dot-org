@@ -269,7 +269,7 @@ describe('useQuizAttempt', () => {
     expect(result.current.error).toBe('quiz is closed');
   });
 
-  it('surfaces a fallback error message when the initial check fails', async () => {
+  it('surfaces a fallback error message when the initial check for an attempt fails', async () => {
     get.mockRejectedValue(new Error('network down'));
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizAttempt({levelId: 42, unitId: 7})

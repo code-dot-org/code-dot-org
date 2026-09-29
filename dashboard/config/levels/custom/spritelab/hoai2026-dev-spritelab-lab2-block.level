@@ -28,17 +28,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make a platform block.** Platformers are built from blocks. Pick a material for a square tile the player can stand on and press **Generate**."
+        "text": "**Make a block.** Platformers are built from blocks. Pick a material and click **Generate**."
       },
       {
-        "text": "**Nice!** Continue when you're ready.",
+        "text": "**Nice!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "blockImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a platform block\nPlatformers are built from blocks. Pick a material for a square tile the player can stand on and press **Generate**."
+    "long_instructions": "# Make a block\nPlatformers are built from blocks. Pick a material and click **Generate**."
   }
 }]]></config>
 </GamelabJr>

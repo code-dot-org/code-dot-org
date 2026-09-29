@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
-import {Button as MuiButton, IconButton, Typography} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
@@ -81,7 +81,6 @@ interface InterventionBoxProps {
   jsonVideos: LessonDeepDiveData['jsonVideos'];
   reflectionData: ReflectionData | null;
   focusTopic?: string;
-  onNext: () => void;
 }
 
 const InterventionBox: FC<InterventionBoxProps> = ({
@@ -94,29 +93,9 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   jsonVideos,
   reflectionData,
   focusTopic,
-  onNext,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
   const userId = useAppSelector(state => state.currentUser.userId);
-
-  const handleNavSelect = useCallback(
-    (toCardId: CardId) => {
-      if (selected && selected !== toCardId) {
-        analyticsReporter.sendEvent(
-          EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION,
-          {
-            from: selected,
-            to: toCardId,
-            lessonId,
-            lessonName,
-            userId,
-          }
-        );
-      }
-      setSelected(toCardId);
-    },
-    [selected, lessonId, lessonName, userId]
-  );
 
   const handleCardSelect = useCallback(
     (cardId: CardId) => {
@@ -137,10 +116,6 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   const challengeEnabled = experiments.isEnabled(
     experiments.LESSON_TUTOR_CHALLENGE
   );
-
-  const navCards = challengeEnabled
-    ? [...GRID_CARDS, CHALLENGE_CARD]
-    : GRID_CARDS;
 
   return (
     <div className={styles.container}>
@@ -206,7 +181,12 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             reflectionData={reflectionData}
           />
         )}
-        {selected === 'challenge' && <Challenges lessonId={lessonId} />}
+        {selected === 'challenge' && (
+          <Challenges
+            lessonId={lessonId}
+            onReviewInstead={() => setSelected(null)}
+          />
+        )}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && (
           <PodcastsBox
@@ -216,50 +196,6 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           />
         )}
       </div>
-
-      {selected && (
-        <nav className={styles.bottomNav} aria-label="Practice options">
-          <IconButton
-            className={styles.navMenuButton}
-            onClick={() => setSelected(null)}
-            aria-label="Practice menu"
-          >
-            <FontAwesomeV6Icon iconName="grid-2" />
-          </IconButton>
-          <div className={styles.navDivider} />
-          {navCards.map(card => {
-            const isActive = selected === card.id;
-            return (
-              <button
-                key={card.id}
-                type="button"
-                className={`${styles.navItem} ${
-                  isActive ? styles.navItemActive : ''
-                }`}
-                onClick={() => handleNavSelect(card.id)}
-                aria-label={card.navLabel}
-                aria-current={isActive ? 'page' : undefined}
-              >
-                <span style={{color: card.iconColor}}>
-                  <FontAwesomeV6Icon iconName={card.icon} />
-                </span>
-                <span className={styles.navLabel}>{card.navLabel}</span>
-              </button>
-            );
-          })}
-          <div className={styles.navDivider} />
-          <div className={styles.doneWrapper}>
-            <MuiButton
-              variant="outlined"
-              className={styles.doneButton}
-              onClick={onNext}
-            >
-              Done
-              <FontAwesomeV6Icon iconName="arrow-right" />
-            </MuiButton>
-          </div>
-        </nav>
-      )}
     </div>
   );
 };

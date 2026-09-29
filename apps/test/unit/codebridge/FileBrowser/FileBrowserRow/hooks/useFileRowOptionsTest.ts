@@ -3,9 +3,6 @@ import {renderHook} from '@testing-library/react-hooks';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import experiments from '@cdo/apps/util/experiments';
 
 let mockState: {
   lab2Project: {
@@ -62,18 +59,6 @@ jest.mock('@cdo/apps/lab2/projects/utils', () => ({
   getAppOptionsEditBlocks: jest.fn(),
 }));
 
-jest.mock('@cdo/apps/sharedComponents/backpack/BackpackAPIContext', () => ({
-  useBackpackAPIContext: jest.fn(),
-}));
-
-jest.mock('@cdo/apps/util/experiments', () => ({
-  __esModule: true,
-  default: {
-    ...jest.requireActual('@cdo/apps/util/experiments').default,
-    isEnabledAllowingQueryString: jest.fn(() => false),
-  },
-}));
-
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
@@ -93,13 +78,6 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 const mockGetAppOptionsEditBlocks =
   getAppOptionsEditBlocks as jest.MockedFunction<
     typeof getAppOptionsEditBlocks
-  >;
-const mockUseBackpackAPIContext = useBackpackAPIContext as jest.MockedFunction<
-  typeof useBackpackAPIContext
->;
-const mockIsExperimentEnabled =
-  experiments.isEnabledAllowingQueryString as jest.MockedFunction<
-    typeof experiments.isEnabledAllowingQueryString
   >;
 
 describe('useFileRowOptions', () => {
@@ -127,8 +105,6 @@ describe('useFileRowOptions', () => {
     mockAiTutorDisabled = false;
     mockEnableUserAddedSelectionContext = true;
     mockGetAppOptionsEditBlocks.mockReturnValue(undefined);
-    mockUseBackpackAPIContext.mockReturnValue(null);
-    mockIsExperimentEnabled.mockReturnValue(false);
   });
 
   const visibleLabelsFor = (target = file) => {
@@ -192,26 +168,7 @@ describe('useFileRowOptions', () => {
   });
 
   describe('save to backpack option', () => {
-    it('hides save to backpack under the legacy experiment when there is no per-lab backpack', () => {
-      mockIsExperimentEnabled.mockReturnValue(true);
-
-      expect(visibleLabelsFor()).not.toContain(
-        codebridgeI18n.saveToBackpackTitle()
-      );
-    });
-
-    it('shows save to backpack under the legacy experiment when the per-lab backpack is available', () => {
-      mockIsExperimentEnabled.mockReturnValue(true);
-      mockUseBackpackAPIContext.mockReturnValue({
-        primaryApi: {} as BackpackClientApi,
-      });
-
-      expect(visibleLabelsFor()).toContain(
-        codebridgeI18n.saveToBackpackTitle()
-      );
-    });
-
-    it('shows save to backpack even with no per-lab backpack', () => {
+    it('shows save to backpack when signed in', () => {
       expect(visibleLabelsFor()).toContain(
         codebridgeI18n.saveToBackpackTitle()
       );

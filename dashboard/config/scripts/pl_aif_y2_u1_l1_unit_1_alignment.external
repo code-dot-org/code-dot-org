@@ -1,0 +1,117 @@
+name 'pl-aif-y2-u1-l1-unit-1-alignment'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 1 Curriculum Overview
+
+Unit 1: Logic-Based AI introduces students to what intelligence means, how to write and reason through basic Python, and how rule-based approaches to AI work, and where they break down.
+
+They learn to translate pseudocode into working code, use optimization and simulation to build intuition for how AI systems search for solutions, and build a decision tree they implement themselves in the unit's capstone project.
+
+<div style="background: #FFFFFF; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+  <h2>Students will:</h2>
+  <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
+    <li>Distinguish between different approaches to AI, from rule-based logic to learned behavior, and explain why "intelligence" isn't one single thing.</li><br>
+    <li>Write and trace basic Python: variables, functions, and pseudocode-to-code translation.</li><br>
+    <li>Use hill climbing and simulation to reason about optimization as a concept, not just a coding pattern.</li><br>
+    <li>Debug intelligent systems by reading error messages and tracing logic, not guessing at fixes.</li><br>
+    <li>Build a decision tree and implement it in Python, then reflect on where rule-based AI reaches its limits.</li>
+  </ul>
+</div>
+
+---
+
+## Unit Calendar
+
+Take a quick look at the lessons included in this unit using the calendar below. This unit spans 3 weeks, with the final 3 class periods of Week 3 dedicated to the capstone project.
+
+<div role="table" aria-label="Unit 1 lesson calendar across 3 weeks" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #ACA8EA;">
+
+  <!-- Week 1 -->
+  <div role="row" style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div role="rowheader" style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 1
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        What is Intelligence?
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        AI's Past, Present, and Future
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 3</span>
+        Algorithms
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        Hello, AI
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        Defining Functions
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div role="row" style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div role="rowheader" style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 2
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        Optimization
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        Simulation (Part 1)
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        Simulation (Part 2)
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        Debugging Intelligent Systems
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
+        Autocomplete
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div role="row" style="display: flex; align-items: stretch;">
+    <div role="rowheader" style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 3
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 11</span>
+        Decision Trees
+      </div>
+      <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 12</span>
+        Limits of Logic-Based AI
+      </div>
+      <div role="cell" style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 3 1 320px; min-width: 300px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 13 &middot; Spans 3 class periods</span>
+        Conversational AI Project
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<div style="font-size: 12pt; font-weight: bold; background-color: #E4E2F8; padding: 10px; border-left: 5px solid #4C42CF; border-radius: 6px; display: inline-block; color: #1F1976;">
+    &#10132; Explore the full unit curriculum <a href="PASTE_AIF_Y2_UNIT_1_COURSE_URL_HERE" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold; color: #1F1976;">here</a>.
+</div>
+MARKDOWN

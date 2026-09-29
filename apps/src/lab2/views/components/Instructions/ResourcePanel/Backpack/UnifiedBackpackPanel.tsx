@@ -260,11 +260,11 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
     setActionInProgress(true);
     try {
-      await saveToBackpackButton.onClick(fileNames, notify);
+      await saveToBackpackButton.onClick(notify);
     } finally {
       setActionInProgress(false);
     }
-  }, [saveToBackpackButton, fileNames, notify]);
+  }, [saveToBackpackButton, notify]);
 
   const visibleFiles = useMemo(() => {
     const matchingFiles =

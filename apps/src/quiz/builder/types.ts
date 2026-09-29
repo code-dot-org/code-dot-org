@@ -34,6 +34,13 @@ export interface QuizBuilderQuestion extends QuizQuestion {
   page: number | null;
 }
 
+// A negative id marks a question that has been added locally
+// and hasn't posted to the server yet - real ids are
+// database-assigned and always positive.
+export function isPendingQuestionId(id: number): boolean {
+  return id < 0;
+}
+
 // The fields a per-question editor can change.
 export interface QuizQuestionEditableFields {
   questionName: string;
@@ -47,24 +54,26 @@ export interface QuizQuestionEditableFields {
 export interface QuizBuilderQuestionsState {
   questions: QuizBuilderQuestion[];
   isLoading: boolean;
-  isCreating: boolean;
   error: string | null;
-  // The question `error` is about, or null for a load/create failure -
-  // general, not about any existing question. A caller uses this to show
-  // the error on that question's card instead of globally.
+  // The question `error` is about, or null for a load failure - general,
+  // not about any existing question. A caller uses this to show the error
+  // on that question's card instead of globally.
   errorQuestionId: number | null;
-  // Resolves with the created question's id on success, undefined on
-  // failure (with `error` set).
-  createQuestion: () => Promise<number | undefined>;
-  // Resolves with the saved question's id on success (see
-  // useQuizBuilderQuestions for why it may differ from `id`). On
-  // failure, resolves undefined (with `error` set) and leaves
-  // `questions` untouched, so a caller can keep showing the user's
-  // unsaved edits.
-  updateQuestion: (
+  // Adds a placeholder question to local state only.
+  addPendingQuestion: () => number;
+  // Resolves with the saved question's id on success. For a pending
+  // question this is its first save, which creates it server-side and
+  // replaces the negative id with the real one; otherwise it's a normal
+  // update, which may itself resolve with a different id (see
+  // useQuizBuilderQuestions for why). On failure, resolves undefined (with
+  // `error` set) and leaves `questions` untouched, so a caller can keep
+  // showing the user's unsaved edits.
+  saveQuestion: (
     id: number,
     payload: QuizQuestionEditableFields
   ) => Promise<number | undefined>;
+  // For a pending question, just drops it from local state. Otherwise
+  // detaches it from the quiz server-side first.
   removeQuestion: (id: number) => Promise<boolean>;
   load: () => Promise<void>;
 }

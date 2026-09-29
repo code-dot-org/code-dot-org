@@ -47,10 +47,7 @@ const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
 const LESSON_ID = 42;
 const LESSON_NAME = 'Variables';
 
-function renderInterventionBox(
-  onNext: jest.Mock = jest.fn(),
-  focusTopic?: string
-) {
+function renderInterventionBox(focusTopic?: string) {
   render(
     <InterventionBox
       lessonId={LESSON_ID}
@@ -62,7 +59,6 @@ function renderInterventionBox(
       jsonVideos={[]}
       reflectionData={null}
       focusTopic={focusTopic}
-      onNext={onNext}
     />
   );
 }
@@ -85,28 +81,11 @@ describe('InterventionBox', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('Does not list the Challenge option in the bottom nav if no experiment', () => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
-    renderInterventionBox();
-    // Select a modality to reveal the bottom nav, then verify Challenge is absent.
-    fireEvent.click(screen.getByRole('button', {name: 'Watch a video'}));
-    expect(
-      screen.queryByRole('button', {name: 'Challenge'})
-    ).not.toBeInTheDocument();
-  });
-
   it('lists the Challenge option in the practice menu', () => {
     renderInterventionBox();
     expect(
       screen.getByRole('button', {name: /I want a challenge instead/i})
     ).toBeInTheDocument();
-  });
-
-  it('lists the Challenge option in the bottom nav', () => {
-    renderInterventionBox();
-    // The bottom nav only appears after a modality is selected.
-    fireEvent.click(screen.getByRole('button', {name: 'Watch a video'}));
-    expect(screen.getByRole('button', {name: 'Challenge'})).toBeInTheDocument();
   });
 
   it('renders Challenges and reports the click when the Challenge link is clicked', () => {
@@ -128,17 +107,8 @@ describe('InterventionBox', () => {
     );
   });
 
-  it('renders Challenges when navigating to Challenge from the bottom nav', () => {
-    renderInterventionBox();
-    // Select any modality first to reveal the bottom nav.
-    fireEvent.click(screen.getByRole('button', {name: 'Watch a video'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Challenge'}));
-
-    expect(screen.getByText('challenge content')).toBeInTheDocument();
-  });
-
   it('shows personalised subtext when focusTopic is provided', () => {
-    renderInterventionBox(jest.fn(), 'variables and scope');
+    renderInterventionBox('variables and scope');
     // The <p> wraps all three inline nodes; its combined text content covers
     // both the prefix and the suffix.
     const subtext = screen.getByText(/Based on your reflection/i);
@@ -152,7 +122,7 @@ describe('InterventionBox', () => {
   });
 
   it('strips a trailing period from focusTopic in the subtext', () => {
-    renderInterventionBox(jest.fn(), 'loops.');
+    renderInterventionBox('loops.');
     // The <strong> element must not carry the trailing period.
     expect(screen.getByText('loops').tagName.toLowerCase()).toBe('strong');
   });
@@ -165,25 +135,5 @@ describe('InterventionBox', () => {
     expect(
       screen.queryByText(/Based on your reflection/)
     ).not.toBeInTheDocument();
-  });
-
-  it('reports a navigation event when moving between modalities to Challenge', () => {
-    renderInterventionBox();
-
-    // Start on Video, then move to Challenge.
-    fireEvent.click(screen.getByRole('button', {name: 'Watch a video'}));
-    sendEventMock.mockClear();
-    fireEvent.click(screen.getByRole('button', {name: 'Challenge'}));
-
-    expect(sendEventMock).toHaveBeenCalledWith(
-      EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_NAVIGATION,
-      {
-        from: 'videos',
-        to: 'challenge',
-        lessonId: LESSON_ID,
-        lessonName: LESSON_NAME,
-        userId: mockUserId,
-      }
-    );
   });
 });
