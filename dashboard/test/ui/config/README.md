@@ -61,10 +61,21 @@ point.
 ## Seeding
 
 `rake seed:ui_test` seeds this tree, and is the default seed in the test
-environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`.
-It seeds UI test levels, needed by ui-test- units, standalone project levels,
-which back urls like https://test-studio.code.org/projects/applab/, and, for
-now, production levels.
+environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`. It
+reads this tree in place of `config/levels`, `config/scripts` and
+`config/course_offerings`, not in addition to them: the tasks
+`child_dsls_ui_tests`, `custom_levels_ui_tests`, `parent_dsls_ui_tests` and
+`course_offerings_ui_tests` replace their production counterparts rather than
+following them.
+
+So a test environment holds no production course offering, and of production
+levels only the deprecated blockly levels above and the standalone project tree,
+`config/standalone_projects`, which backs urls like
+https://test-studio.code.org/projects/applab/ and is seeded in every
+environment.
+
+Development seeds both trees, since `DEFAULT_SEED_TASKS` there is the
+production list followed by the UI test list.
 
 ## Cached units
 
