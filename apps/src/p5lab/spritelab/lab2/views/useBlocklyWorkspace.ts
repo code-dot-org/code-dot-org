@@ -21,6 +21,7 @@ import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
+import {watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
@@ -191,9 +192,14 @@ export default function useBlocklyWorkspace({
     };
 
     workspaceRef.current.addChangeListener(onChange);
+    // Levelbuilder's toolbox editor lays blocks out by hand.
+    const stopStackRoom = isToolboxMode
+      ? undefined
+      : watchStackRoom(workspaceRef.current);
     setWorkspaceVersion(version => version + 1);
 
     return () => {
+      stopStackRoom?.();
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
       currentBlocksRef.current = null;
