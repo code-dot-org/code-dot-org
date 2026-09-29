@@ -23,7 +23,7 @@ class UserLogTokenTest < ActiveSupport::TestCase
       User::LogToken.token_for(@user.id, destination: DESTINATION)
 
       record = User::LogToken.find_by(user_id: @user.id, destination: DESTINATION)
-      assert_equal User::LogToken.current_period, record.period
+      assert_equal Policies::SchoolYear.starting_year, record.period
     end
 
     it 'is stable for the same user, destination and period' do
@@ -82,7 +82,7 @@ class UserLogTokenTest < ActiveSupport::TestCase
       existing = User::LogToken.create!(
         user_id: @user.id,
         destination: DESTINATION,
-        period: User::LogToken.current_period,
+        period: Policies::SchoolYear.starting_year,
         uuid: SecureRandom.uuid,
       )
       User::LogToken.stubs(:find_or_create_by!).raises(ActiveRecord::RecordNotUnique, 'duplicate')
@@ -95,8 +95,8 @@ class UserLogTokenTest < ActiveSupport::TestCase
     it 'mints a new token when the period changes' do
       this_year = User::LogToken.token_for(@user.id, destination: DESTINATION)
 
-      next_period = User::LogToken.current_period + 1
-      User::LogToken.stubs(:current_period).returns(next_period)
+      next_period = Policies::SchoolYear.starting_year + 1
+      Policies::SchoolYear.stubs(:starting_year).returns(next_period)
       next_year = User::LogToken.token_for(@user.id, destination: DESTINATION)
 
       refute_equal this_year, next_year
@@ -105,8 +105,8 @@ class UserLogTokenTest < ActiveSupport::TestCase
     # Tokens already written to a log only resolve while their row is still here.
     it 'still resolves a token from a superseded period' do
       before_rotation = User::LogToken.token_for(@user.id, destination: DESTINATION)
-      next_period = User::LogToken.current_period + 1
-      User::LogToken.stubs(:current_period).returns(next_period)
+      next_period = Policies::SchoolYear.starting_year + 1
+      Policies::SchoolYear.stubs(:starting_year).returns(next_period)
 
       assert_equal @user.id,
         User::LogToken.resolve(before_rotation, actor_id: 1, reason: 'test')[:user_id]
@@ -132,7 +132,7 @@ class UserLogTokenTest < ActiveSupport::TestCase
       result = User::LogToken.resolve(token, actor_id: 1, reason: 'test')
 
       assert_equal DESTINATION, result[:destination]
-      assert_equal User::LogToken.current_period, result[:period]
+      assert_equal Policies::SchoolYear.starting_year, result[:period]
     end
 
     # So the audit cannot be skipped by calling this from a console.
@@ -176,7 +176,7 @@ class UserLogTokenTest < ActiveSupport::TestCase
           entry['authenticated_user_id'] == 42 &&
           entry['affected_user_id'] == @user.id &&
           entry['destination'] == DESTINATION &&
-          entry['period'] == User::LogToken.current_period &&
+          entry['period'] == Policies::SchoolYear.starting_year &&
           entry['outcome'] == 'resolved' &&
           entry['reason'] == 'zendesk 4821'
       end
