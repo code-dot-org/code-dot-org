@@ -25,6 +25,8 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
+  before_action :initialize_statsig_stable_id
+
   before_action :persist_brand_params
 
   around_action :with_global_current_user
@@ -443,6 +445,22 @@ class ApplicationController < ActionController::Base
     ].include?(request.path)
 
     redirect_to lti_v1_account_linking_landing_path
+  end
+
+  protected def initialize_statsig_stable_id
+    statsig_stable_id = request.statsig_stable_id
+
+    # See: /apps/test/unit/lib/util/statsigHelpersTest.js
+    if cookies[SharedConstants::STATSIG_STABLE_ID_KEY].blank? && request.onetrust_performance_cookies_allowed?
+      cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = {
+        value: statsig_stable_id,
+        domain: request.shared_cookie_domain,
+        path: '/',
+        same_site: :lax,
+        secure: !CDO.rack_env?(:development),
+        expires: 1.year.from_now,
+      }
+    end
   end
 
   private def pairing_still_enabled

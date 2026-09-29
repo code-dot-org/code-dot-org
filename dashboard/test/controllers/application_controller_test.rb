@@ -218,6 +218,44 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'Statsig stable ID' do
+    it 'stores the ID in the session without consent' do
+      get '/'
+
+      stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+      _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+      _(response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]).must_be_nil
+    end
+
+    context 'with performance cookie consent revoked' do
+      before do
+        cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A0'
+      end
+
+      it 'does not expose the stable ID to the browser' do
+        get '/'
+
+        stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+        _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+        _(response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]).must_be_nil
+      end
+    end
+
+    context 'with performance cookie consent' do
+      before do
+        cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A1'
+      end
+
+      it 'stores the same ID in the session and cookie' do
+        get '/'
+
+        stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+        _(Cdo::AnonUserId.valid?(stable_id)).must_equal true
+        _(response.cookies[SharedConstants::STATSIG_STABLE_ID_KEY]).must_equal stable_id
+      end
+    end
+  end
+
   describe 'exception handling' do
     it 'gracefully handles UnsafeRedirectErrors' do
       Rails.logger.expects(:warn).once

@@ -2,7 +2,26 @@ import cookies from 'js-cookie';
 
 import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
 
-import {getEnvironment, isProductionEnvironment, createUuid} from '../utils';
+import {
+  getEnvironment,
+  isDevelopmentEnvironment,
+  isProductionEnvironment,
+  createUuid,
+} from '../utils';
+
+const STABLE_ID_KEY = StatsigStableIdKey;
+const COOKIE_OPTIONS = {
+  path: '/',
+  domain: '.code.org',
+  sameSite: 'Lax',
+  secure: !isDevelopmentEnvironment(),
+  expires: 365,
+};
+
+// Performance cookies (C0002). You can see what categories are enabled in OneTrust
+// by inspecting the window.OnetrustActiveGroups global variable.
+// Note that C0001 (Strictly Necessary) is always enabled and we do not need to check for it.
+const ONETRUST_ALLOWED_CATEGORIES = ['C0002'];
 
 export function getUserID() {
   const user_id_element = document.querySelector('script[data-user-id]');
@@ -14,13 +33,38 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
-/**
- * Returns the existing Statsig stable ID from cookies, or generates a new one.
- *
- * @returns {string} The existing stable ID or a newly generated UUID.
- */
 export function findOrCreateStableId() {
-  return cookies.get(StatsigStableIdKey) || createUuid();
+  if (consentAllowsStatsigCookie()) {
+    const stableId = cookies.get(STABLE_ID_KEY) || createUuid();
+    cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
+    return stableId;
+  } else {
+    // Ensure any existing cookie is removed to satisfy OneTrust
+    // (must pass same attributes used when setting the cookie)
+    cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
+
+    // Remove the legacy localStorage value written by earlier Studio versions.
+    // See: https://github.com/code-dot-org/code-dot-org/pull/69708
+    localStorage.removeItem(STABLE_ID_KEY.toUpperCase());
+
+    // Return undefined to let Statsig set it's own stableID
+    return undefined;
+  }
+}
+
+function consentAllowsStatsigCookie() {
+  const groups = getOnetrustGroups();
+  return ONETRUST_ALLOWED_CATEGORIES.some(id => groups.has(id));
+}
+
+function getOnetrustGroups() {
+  try {
+    const rawString =
+      typeof window !== 'undefined' ? window.OnetrustActiveGroups || '' : '';
+    return new Set(rawString.split(',').filter(Boolean));
+  } catch (error) {
+    return new Set();
+  }
 }
 
 export function formatUserId(userId) {

@@ -287,14 +287,10 @@ module Dashboard
     routes.default_url_options[:host] = CDO.dashboard_site_host
     routes.default_url_options.delete(:port)
 
-    initializer 'dashboard.statsig_stable_id', after: :load_config_initializers do |app|
-      app.config.middleware.insert_after RedisSessionStore, Middleware::StatsigStableId
-    end
-
-    # Ensure legacy APIs are loaded after middleware that provides required functionality
-    # such as I18n, GlobalEdition, Redis-backed sessions, cookies, and the Statsig stable ID.
-    initializer 'dashboard.legacy_apis', after: 'dashboard.statsig_stable_id' do |app|
-      app.config.middleware.insert_after Middleware::StatsigStableId, Middleware::LegacyApiStack
+    # Ensure legacy APIs are loaded after middleware that provides required
+    # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
+    initializer 'dashboard.legacy_apis', after: :load_config_initializers do |app|
+      app.config.middleware.insert_after RedisSessionStore, Middleware::LegacyApiStack
     end
   end
 end
