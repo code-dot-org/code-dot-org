@@ -11,11 +11,10 @@
 // leaving the project holding changes nobody agreed to and no record of where
 // they came from.
 
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import type {FC} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import {useTutor} from '../session/useTutor';
 
@@ -32,29 +31,29 @@ export const TutorHeaderButtons: FC = () => {
   const blocked = proposal !== undefined;
 
   return (
-    <WithTooltip
-      tooltipProps={{
-        tooltipId: CLEAR_TOOLTIP_ID,
-        text: blocked
-          ? 'Accept or reject the suggested changes first'
-          : 'Clear chat',
-        size: 'xs',
-        direction: 'onBottom',
-      }}
+    <Tooltip
+      id={CLEAR_TOOLTIP_ID}
+      title={
+        blocked ? 'Accept or reject the suggested changes first' : 'Clear chat'
+      }
+      placement="bottom"
     >
-      <MuiIconButton
-        variant="text"
-        color="tertiary"
-        size="extraSmall"
-        type="button"
-        aria-label="Clear chat"
-        aria-describedby={CLEAR_TOOLTIP_ID}
-        disabled={blocked}
-        onClick={clear}
-      >
-        <FontAwesomeV6Icon iconName="eraser" iconStyle="solid" />
-      </MuiIconButton>
-    </WithTooltip>
+      {/* A disabled button fires no pointer events; the tooltip listens on
+          the span, so the reason still shows while clearing is blocked. */}
+      <span>
+        <MuiIconButton
+          variant="text"
+          color="tertiary"
+          size="extraSmall"
+          type="button"
+          aria-label="Clear chat"
+          disabled={blocked}
+          onClick={clear}
+        >
+          <FontAwesomeV6Icon iconName="eraser" iconStyle="solid" />
+        </MuiIconButton>
+      </span>
+    </Tooltip>
   );
 };
 
