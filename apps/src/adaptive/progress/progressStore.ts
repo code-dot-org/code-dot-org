@@ -2,7 +2,7 @@
 // browser's local storage, behind an interface a server-backed store can
 // replace once the progress shape settles.
 
-import type {Progress} from './index';
+import type {Progress} from './model';
 
 export interface ProgressKey {
   /** Null for a signed-out student, who shares one record per browser. */

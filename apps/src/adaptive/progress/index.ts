@@ -1,45 +1,5 @@
-// Checkpoint progress: which checkpoints a student has started and completed,
-// and the status each checkpoint takes from that. The hook that loads and
-// saves it lives in useProgress; the store it goes through in progressStore.
+// Public surface of the progress module. The model, the hook and the store
+// live in their own files so none of them needs this barrel.
 
-import {Checkpoint, Pathway} from '../types';
-
-export type CheckpointStatus =
-  | 'locked'
-  | 'available'
-  | 'inProgress'
-  | 'complete';
-
-/** Each checkpoint's status, by checkpoint id. */
-export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
-
-export interface Progress {
-  completed: string[];
-  started: string[];
-}
-
-export const EMPTY_PROGRESS: Progress = {completed: [], started: []};
-
-/** A checkpoint unlocks once every checkpoint it requires is complete. */
-export function checkpointStatus(
-  checkpoint: Checkpoint,
-  progress: Progress
-): CheckpointStatus {
-  if (progress.completed.includes(checkpoint.id)) return 'complete';
-  const unlocked = (checkpoint.requires || []).every(r =>
-    progress.completed.includes(r)
-  );
-  if (!unlocked) return 'locked';
-  return progress.started.includes(checkpoint.id) ? 'inProgress' : 'available';
-}
-
-export function getStatusMap(
-  pathway: Pathway,
-  progress: Progress
-): CheckpointStatusMap {
-  return Object.fromEntries(
-    pathway.checkpoints.map(c => [c.id, checkpointStatus(c, progress)])
-  );
-}
-
+export * from './model';
 export {STATUS_LABELS, useProgress} from './useProgress';

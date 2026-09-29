@@ -6,17 +6,16 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {Pathway} from '../types';
 
 import {
-  ProgressKey,
-  ProgressStore,
-  localStorageProgressStore,
-} from './progressStore';
-
-import {
   CheckpointStatus,
   EMPTY_PROGRESS,
   Progress,
   getStatusMap,
-} from './index';
+} from './model';
+import {
+  ProgressKey,
+  ProgressStore,
+  localStorageProgressStore,
+} from './progressStore';
 
 export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   locked: 'Locked',
