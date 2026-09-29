@@ -117,8 +117,7 @@ const COMMIT_TRAILER = 'Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>
 const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-code)'
 // Models are aliases, so each resolves to the current release (opus is Opus 5.5 as of
 // 2026-09-28). Fact-gathering and mechanical steps run on Sonnet; decisions, code, gates
-// and git on Opus. Same policy as dsco-mui-design-system-migration.js, so a comparison of
-// the two scripts measures the shape, not the model.
+// and git on Opus.
 const READ_MODEL = 'sonnet'
 const WORK_MODEL = 'opus'
 // Agents that decide, write the wrapper, or diagnose a failure think at xhigh. Gates,
