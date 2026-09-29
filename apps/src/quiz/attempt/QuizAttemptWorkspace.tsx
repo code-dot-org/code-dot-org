@@ -125,15 +125,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     questionsRef.current?.querySelector<HTMLElement>('h2')?.focus();
   }, [currentPageNumber, isAttemptInProgress]);
 
-  // Focus on the Retake button or the result message when the attempt is submitted.
+  // Focus the heading first, like introRef - not a button, so the result
+  // gets announced before a screen reader user reaches Try again/Next level.
   useEffect(() => {
     if (!attempt?.submittedAt) {
       return;
     }
-    const target =
-      submittedRef.current?.querySelector<HTMLElement>('button') ??
-      submittedRef.current?.querySelector<HTMLElement>('[tabindex]');
-    target?.focus();
+    submittedRef.current?.querySelector<HTMLElement>('[tabindex]')?.focus();
   }, [attempt?.submittedAt]);
 
   const handleBeginAttempt = async () => {

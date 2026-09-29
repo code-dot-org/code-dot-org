@@ -385,7 +385,9 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
   });
 
-  it('moves focus to the Try again button once submitted, since the footer button is gone', () => {
+  it('moves focus to the title once submitted, with Try again in the footer', () => {
+    // The title, not a button - so the result is announced before a screen
+    // reader user reaches the action buttons.
     renderWorkspace({
       hookState: {
         attempt: {
@@ -396,12 +398,13 @@ describe('QuizAttemptWorkspace', () => {
       },
     });
 
-    expect(screen.getByRole('button', {name: 'Try again'})).toHaveFocus();
+    expect(
+      screen.getByRole('heading', {name: 'Unit 3 Assessment', level: 2})
+    ).toHaveFocus();
+    expect(screen.getByRole('button', {name: 'Try again'})).not.toHaveFocus();
   });
 
-  it('moves focus to the Next level button once submitted with no Try again button', () => {
-    // Next level is unconditional, so there's always a button here - the
-    // title-heading fallback in the focus effect is for a different case.
+  it('moves focus to the title once submitted, with no Try again button', () => {
     renderWorkspace({
       hookState: {
         attempt: {
@@ -412,7 +415,9 @@ describe('QuizAttemptWorkspace', () => {
       },
     });
 
-    expect(screen.getByRole('button', {name: /Next level/})).toHaveFocus();
+    expect(
+      screen.getByRole('heading', {name: 'Unit 3 Assessment', level: 2})
+    ).toHaveFocus();
   });
 
   it('does not show a Try again button when the attempt cannot be retaken', () => {
