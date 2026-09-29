@@ -6,11 +6,12 @@ profile, login, school, role, and account actions. Consumed by the Studio app
 
 Three tabs are implemented: **Account Details** (profile, login, parent/guardian
 email, account actions), **Educator Profile** (school information and educator
-role, educators only), and **Integrations** (linked accounts). The email
-opt-in lives in the Update email dialog, as in legacy.
+role, educators only), and **Integrations** (linked accounts and LMS roster
+sync). The email opt-in lives in the Update email dialog, as in legacy.
 
 Integrations is hidden from accounts that can't manage linked accounts, the
-same accounts legacy hides its linked accounts section from. Connecting and
+same accounts legacy hides its linked accounts section from, unless they have
+the LMS roster sync setting. Connecting and
 disconnecting a linked account are native form POSTs to the legacy OAuth and
 disconnect routes, and land on the legacy `/users/edit` page with its flash
 message, as unlinking an LMS login does.
@@ -74,6 +75,7 @@ persona:
 - `multi-sso-teacher`: Google, Microsoft and two ClassLink logins
 - `lti-teacher`: Canvas login beside a password
 - `lti-only-teacher`: Schoology is the only login
+- `restricted-lti-teacher`: educator in a district-restricted LMS deployment
 - `rostered-student`: Google and Clever tied to the student's sections
 - `cap-locked-student`: under-13 student awaiting parental permission
 - `unmigrated-teacher`: not yet migrated to multiple logins, so no Integrations tab
