@@ -36,8 +36,6 @@ module Observability
       end
     end
 
-    # Stable per user within a school year, so Sentry's grouping still works.
-    # A nil token stays anonymous rather than falling back to the raw id.
     def self.set_user_token(token)
       return if token.nil? || token.to_s.empty?
 

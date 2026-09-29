@@ -91,7 +91,6 @@ describe Observability::Sentry do
       Observability::Sentry.set_user_token('3f2a9c14-7b8e-4d21-9a33-c5e1f0b47d92')
     end
 
-    # A failed lookup yields nil upstream; it must not fall back to a raw id.
     it 'leaves the user context untouched when the token is nil' do
       Sentry.expects(:set_user).never
       Observability::Sentry.set_user_token(nil)
