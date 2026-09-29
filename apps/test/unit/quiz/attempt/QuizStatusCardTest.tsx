@@ -2,13 +2,13 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import QuizIntroCard, {
-  QuizIntroCardProps,
-} from '@cdo/apps/quiz/attempt/QuizIntroCard';
+import QuizStatusCard, {
+  QuizStatusCardProps,
+} from '@cdo/apps/quiz/attempt/QuizStatusCard';
 
-const renderCard = (props: Partial<QuizIntroCardProps> = {}) =>
+const renderCard = (props: Partial<QuizStatusCardProps> = {}) =>
   render(
-    <QuizIntroCard
+    <QuizStatusCard
       title="Unit 3 Assessment"
       questionCount={3}
       allowMultipleAttempts
@@ -17,7 +17,7 @@ const renderCard = (props: Partial<QuizIntroCardProps> = {}) =>
     />
   );
 
-describe('QuizIntroCard', () => {
+describe('QuizStatusCard', () => {
   it('renders the title as an h2 under the "Before you begin" label', () => {
     renderCard();
 
@@ -38,7 +38,7 @@ describe('QuizIntroCard', () => {
     expect(screen.getByText('1 question')).toBeInTheDocument();
 
     rerender(
-      <QuizIntroCard
+      <QuizStatusCard
         title="Unit 3 Assessment"
         questionCount={3}
         allowMultipleAttempts
@@ -53,7 +53,7 @@ describe('QuizIntroCard', () => {
     expect(screen.queryByText(/minute/)).not.toBeInTheDocument();
 
     rerender(
-      <QuizIntroCard
+      <QuizStatusCard
         title="Unit 3 Assessment"
         questionCount={3}
         timeLimitMinutes={15}
@@ -69,7 +69,7 @@ describe('QuizIntroCard', () => {
     expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
 
     rerender(
-      <QuizIntroCard
+      <QuizStatusCard
         title="Unit 3 Assessment"
         questionCount={3}
         allowMultipleAttempts={false}

@@ -14,7 +14,7 @@ import {QuizQuestionSummary, toBool} from '../types';
 import AttemptCard from './AttemptCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
-import QuizIntroCard from './QuizIntroCard';
+import QuizStatusCard from './QuizStatusCard';
 import ResultsCard from './ResultsCard';
 import useQuizAttempt from './useQuizAttempt';
 
@@ -257,7 +257,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </Typography>
         ) : isIntroOpen ? (
           <div className={styles.questions} ref={introRef}>
-            <QuizIntroCard
+            <QuizStatusCard
               title={displayName || levelName}
               introText={customIntroText}
               questionCount={quizQuestions.length}
@@ -301,7 +301,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               // shell as a submitted stamp instead of a results card. No
               // introText - the pre-attempt description doesn't belong here,
               // whether or not this quiz has an intro screen at all.
-              <QuizIntroCard
+              <QuizStatusCard
                 title={displayName || levelName}
                 questionCount={quizQuestions.length}
                 timeLimitMinutes={timeLimitMinutes}

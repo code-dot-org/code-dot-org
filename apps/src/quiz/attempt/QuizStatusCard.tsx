@@ -7,9 +7,9 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AttemptCard from './AttemptCard';
 import {formatSubmittedAt} from './types';
 
-import styles from './quiz-intro-card.module.scss';
+import styles from './quiz-status-card.module.scss';
 
-export interface QuizIntroCardProps {
+export interface QuizStatusCardProps {
   title: string;
   introText?: string;
   questionCount: number;
@@ -18,8 +18,8 @@ export interface QuizIntroCardProps {
   allowMultipleAttempts: boolean;
   onBegin?: () => void;
   // Set once an attempt is submitted with show correctness set to false.
-  // This reuses the intro card as the "submitted" screen instead of a results card, since
-  // there's nothing to reveal.
+  // Switches this from the pre-attempt intro to the "submitted" status
+  // screen instead of a results card, since there's nothing to reveal.
   submittedAt?: string | null;
   canRetake?: boolean;
   onTryAgain?: () => void;
@@ -29,7 +29,7 @@ export interface QuizIntroCardProps {
 const pluralize = (count: number, noun: string) =>
   `${count} ${noun}${count === 1 ? '' : 's'}`;
 
-const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
+const QuizStatusCard: React.FunctionComponent<QuizStatusCardProps> = ({
   title,
   introText,
   questionCount,
@@ -142,4 +142,4 @@ const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
   );
 };
 
-export default QuizIntroCard;
+export default QuizStatusCard;
