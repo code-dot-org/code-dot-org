@@ -50,12 +50,10 @@ enforced in the models:
 ## Seeding
 
 `rake seed:ui_test` seeds this tree, and is the default seed in the test
-environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`. Its
-level tasks (`custom_levels_ui_tests`, `child_dsls_ui_tests`,
-`parent_dsls_ui_tests`) run after the production level tasks, so a
-not-yet-migrated `ui-test-` unit can still resolve production levels.
-Production levels are currently needed in order to back standalone projects in
-the test environment on urls like https://test-studio.code.org/projects/applab/
+environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`.
+It seeds both UI test levels, needed by ui-test- units, and production levels,
+which are currently needed in order to back standalone projects in the test
+environment on urls like https://test-studio.code.org/projects/applab/
 
 ## Cached units
 
