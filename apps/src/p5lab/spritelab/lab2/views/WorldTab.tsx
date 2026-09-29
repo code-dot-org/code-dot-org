@@ -727,11 +727,20 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       const cell = {image: drag.item.image, kind: drag.item.kind};
       onSelect(cell);
       clickAfterDrop.current = true;
-      if (grid[target.row]?.[target.col]?.image === cell.image) {
+      const held = grid[target.row]?.[target.col];
+      if (held?.image === cell.image) {
         announce(`${cell.image} is already there.`);
         return;
       }
-      onPaintCell(target.row, target.col, cell);
+      if (placeOne && onMoveCell) {
+        if (held) {
+          announce('That square is taken.');
+          return;
+        }
+        onMoveCell(target.row, target.col, cell);
+      } else {
+        onPaintCell(target.row, target.col, cell);
+      }
       announce(`${cell.image} placed.`);
     };
     const onCancel = (e: PointerEvent) => {

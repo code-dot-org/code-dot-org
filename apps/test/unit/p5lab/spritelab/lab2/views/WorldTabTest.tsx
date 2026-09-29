@@ -41,7 +41,8 @@ beforeAll(() => {
 function renderTab(
   onPaintCell = jest.fn(),
   onSelect = jest.fn(),
-  world?: React.ComponentProps<typeof WorldTab>['world']
+  world?: React.ComponentProps<typeof WorldTab>['world'],
+  extra: Partial<React.ComponentProps<typeof WorldTab>> = {}
 ) {
   const utils = render(
     <WorldTab
@@ -50,6 +51,7 @@ function renderTab(
       onPaintCell={onPaintCell}
       selected={null}
       onSelect={onSelect}
+      {...extra}
     />
   );
   // jsdom lays nothing out: the grid's box is given, with no border.
@@ -157,6 +159,45 @@ describe('WorldTab palette', () => {
     expect(onPaintCell).not.toHaveBeenCalled();
     expect(onSelect).toHaveBeenCalledWith({image: 'Stone', kind: 'block'});
     expect(screen.getByText('Stone is already there.')).toBeTruthy();
+  });
+
+  it('moves the one placeable item on a drop, and refuses a taken cell', () => {
+    const onMoveCell = jest.fn();
+    const {onPaintCell} = renderTab(
+      jest.fn(),
+      jest.fn(),
+      {
+        grid: [
+          [
+            {image: 'Hero', kind: 'sprite'},
+            {image: 'Stone', kind: 'block'},
+          ],
+        ],
+      },
+      {only: 'Hero', placeOne: true, onMoveCell}
+    );
+    const hero = screen.getByRole('radio', {name: /Hero, sprite/});
+    const drop = (clientX: number, clientY: number) => {
+      fireEvent.pointerDown(hero, {
+        pointerId: 1,
+        button: 0,
+        clientX: 20,
+        clientY: 20,
+      });
+      fireEvent.pointerMove(hero, {pointerId: 1, clientX: 60, clientY: 60});
+      fireEvent.pointerUp(hero, {pointerId: 1, clientX, clientY});
+    };
+    // Onto the block: refused.
+    drop(100 + 1 + 50 + 10, 110);
+    expect(onMoveCell).not.toHaveBeenCalled();
+    expect(screen.getByText('That square is taken.')).toBeTruthy();
+    // Onto an empty cell: moved there, never painted.
+    drop(100 + 1 + 50 * 4 + 10, 100 + 1 + 50 * 2 + 10);
+    expect(onMoveCell).toHaveBeenCalledWith(2, 4, {
+      image: 'Hero',
+      kind: 'sprite',
+    });
+    expect(onPaintCell).not.toHaveBeenCalled();
   });
 
   it('drops nothing when released off the grid', () => {
