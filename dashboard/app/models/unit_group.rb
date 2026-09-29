@@ -345,6 +345,7 @@ class UnitGroup < ApplicationRecord
 
   def summarize(user = nil, for_edit: false, locale_code: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
+      dependency = ai_chat_tools_dependency
       {
         name: name,
         id: id,
@@ -378,8 +379,14 @@ class UnitGroup < ApplicationRecord
         course_version_id: course_version&.id,
         course_path: link,
         course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil,
-        ai_chat_tools_dependency: ai_chat_tools_dependency,
-        requires_inaccessible_ai_models: requires_inaccessible_ai_models?(user),
+        ai_chat_tools_dependency: dependency,
+        # Only consulted where the tools are essential, and a course whose
+        # dependency is anything else holds no level that could be blocking, so
+        # asking costs a query -- for the viewer's region, then for the levels
+        # -- that could not change the answer.
+        requires_inaccessible_ai_models:
+          dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] &&
+            requires_inaccessible_ai_models?(user),
       }
     end
   end

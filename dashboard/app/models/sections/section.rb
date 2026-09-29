@@ -616,6 +616,7 @@ class Section < ApplicationRecord
   # This is only needed for the teacher dashboard SELECTED section.
   def selected_section_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
+      ai_chat_dependency = assigned_ai_chat_tools_dependency
       login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
       if login_type == LOGIN_TYPE_LTI_V1
         issuer = lti_course.lti_integration.issuer
@@ -653,8 +654,8 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
-        assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
-        assigned_required_inaccessible_ai_models: assigned_required_inaccessible_ai_models?,
+        assigned_ai_chat_tools_dependency: ai_chat_dependency,
+        assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
         ai_chat_access_level: ai_chat_access_level,
       }
     end
@@ -669,6 +670,7 @@ class Section < ApplicationRecord
   # from the primary, since the replica may not have caught up yet.
   def summarize(include_students: true, role: :reading)
     ActiveRecord::Base.connected_to(role: role) do
+      ai_chat_dependency = assigned_ai_chat_tools_dependency
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
       course_version_name =
@@ -746,8 +748,8 @@ class Section < ApplicationRecord
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
-          assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
-          assigned_required_inaccessible_ai_models: assigned_required_inaccessible_ai_models?,
+          assigned_ai_chat_tools_dependency: ai_chat_dependency,
+          assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
           ai_chat_access_level: ai_chat_access_level,
         }
       )
@@ -890,7 +892,13 @@ class Section < ApplicationRecord
   # An assigned unit answers on its own: the section works through that unit,
   # not through whatever else its course contains. The course answers only when
   # no unit is assigned.
-  def assigned_required_inaccessible_ai_models?
+  #
+  # Takes the dependency the caller already computed. Curricula that do not
+  # depend on AI chat tools hold no level that could be blocking, so asking
+  # would spend a query on the instructor's region, and another on the levels,
+  # that could not change the answer.
+  def required_inaccessible_ai_models?(dependency = assigned_ai_chat_tools_dependency)
+    return false unless dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]
     assigned = script || unit_group
     !!assigned&.requires_inaccessible_ai_models?(user)
   end
