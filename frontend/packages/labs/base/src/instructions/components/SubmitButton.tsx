@@ -2,14 +2,16 @@ import type {FunctionComponent} from 'react';
 
 import {Button} from '@code-dot-org/component-library/button';
 import {LevelStatuses} from '@code-dot-org/progress';
-import {progressActions} from '@code-dot-org/progress/redux';
+import {
+  continueOrFinishLesson,
+  progressActions,
+} from '@code-dot-org/progress/redux';
 
 // TODO: add user level interaction back in
 //import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 
 import {useDialogControl} from '../../contexts';
 import {DialogType} from '../../dialogs';
-import continueOrFinishLesson from '../../progress/continueOrFinishLesson';
 import {useAppSelector, useAppDispatch} from '../../redux/store';
 
 import WithConditionalTooltip from './WithConditionalTooltip';
@@ -47,6 +49,7 @@ const SubmitButton: FunctionComponent<SubmitButtonProps> = ({
 
   const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
 
   const handleSubmit = async () => {
     // We either submit or unsubmit the project, depending on the current state.
@@ -62,7 +65,9 @@ const SubmitButton: FunctionComponent<SubmitButtonProps> = ({
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_submit,
       });*/
-      dispatch(continueOrFinishLesson());
+      if (levelProperties) {
+        dispatch(continueOrFinishLesson(levelProperties));
+      }
     }
   };
 
@@ -86,10 +91,8 @@ const SubmitButton: FunctionComponent<SubmitButtonProps> = ({
       <WithConditionalTooltip
         showTooltip={!enabled && !!tooltipMessage}
         tooltipProps={{
-          text: tooltipMessage,
-          direction: 'onTop',
-          tooltipId: 'submit-button-tooltip',
-          size: 'xs',
+          title: tooltipMessage,
+          id: 'submit-button-tooltip',
         }}
       >
         <Button

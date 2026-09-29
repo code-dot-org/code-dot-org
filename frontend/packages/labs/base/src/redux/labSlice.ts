@@ -15,12 +15,8 @@ import {
   levelsKeys,
   OPEN_ENDED_LAB2_PROJECT_TYPES,
 } from '@code-dot-org/core/api';
-import type {Validation, ValidationState} from '@code-dot-org/progress';
-import {
-  getInitialValidationState,
-  LevelStatuses,
-  progressActions,
-} from '@code-dot-org/progress';
+import type {Validation} from '@code-dot-org/progress';
+import {LevelStatuses, progressActions} from '@code-dot-org/progress';
 import {
   projectActions,
   ProjectManagerFactory,
@@ -68,9 +64,6 @@ export interface LabState {
   // Initial sources for the current level, as loaded from the server. Subsequent changes to sources
   // while the project is being edited are managed by the Lab and Project Manager directly.
   initialSources: ProjectSources | undefined;
-  // Validation status for the current level. This is used by the progress system to determine
-  // what instructions to display and if the user has satisfied the validation conditions, if present.
-  validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
   // AppOptions block
@@ -95,7 +88,6 @@ const initialState: LabState = {
   pageError: undefined,
   channel: undefined,
   initialSources: undefined,
-  validationState: getInitialValidationState(),
   levelProperties: undefined,
   appOptions: undefined,
   scriptId: undefined,
@@ -139,9 +131,6 @@ const slice: Slice<LabState> = createSlice({
     },
     setScriptId(state, action: PayloadAction<number | undefined>) {
       state.scriptId = action.payload;
-    },
-    setValidationState(state, action: PayloadAction<ValidationState>) {
-      state.validationState = {...action.payload};
     },
     // Update the level properties, initial sources, and channel simultaneously when the level changes.
     // These fields are updated together so that labs receive all updates at once.
@@ -666,7 +655,6 @@ export const {
   setIsLoading,
   setIsLoadingTheme,
   setPageError,
-  setValidationState,
   setIsShareView,
   setOverrideValidations,
   setScriptId,
