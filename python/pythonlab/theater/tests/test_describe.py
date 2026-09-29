@@ -105,6 +105,64 @@ def test_drawings_are_grouped_by_kind(tmp_path):
   )
 
 
+def test_only_text_that_is_not_the_default_black_is_named_by_its_color():
+  scene = Scene()
+  scene.draw_text("Hi", 0, 0)
+  scene.set_text_color("red")
+  scene.draw_text("Bye", 0, 0)
+  assert _transcript(scene) == 'Text: "Hi", red "Bye".'
+
+
+def test_repeated_text_puts_the_count_after_the_label():
+  scene = Scene()
+  for _ in range(3):
+    scene.draw_text("Hi", 0, 0)
+  assert _transcript(scene) == 'Text: "Hi" 3 times.'
+
+
+def test_a_line_is_named_by_its_stroke_color():
+  scene = Scene()
+  scene.set_stroke_color("red")
+  scene.draw_line(0, 0, 10, 10)
+  assert _transcript(scene) == "Shapes: red line."
+
+
+def test_a_wide_outline_in_another_color_is_named():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.set_stroke_color("blue")
+  scene.set_stroke_width(4)
+  scene.draw_rectangle(0, 0, 10, 10)
+  assert _transcript(scene) == "Shapes: blue-outlined red rectangle."
+
+
+def test_a_hairline_outline_is_left_unsaid():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.set_stroke_color("blue")
+  scene.draw_rectangle(0, 0, 10, 10)
+  assert _transcript(scene) == "Shapes: red rectangle."
+
+
+def test_a_wide_outline_matching_the_fill_is_left_unsaid():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.set_stroke_color("red")
+  scene.set_stroke_width(4)
+  scene.draw_rectangle(0, 0, 10, 10)
+  assert _transcript(scene) == "Shapes: red rectangle."
+
+
+def test_repeated_outlined_shapes_pluralize_the_shape_name():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.set_stroke_color("blue")
+  scene.set_stroke_width(4)
+  for offset in range(3):
+    scene.draw_rectangle(offset, 0, 10, 10)
+  assert _transcript(scene) == "Shapes: 3 blue-outlined red rectangles."
+
+
 def test_a_shape_is_named_by_its_fill_color():
   scene = Scene()
   scene.set_fill_color("red")

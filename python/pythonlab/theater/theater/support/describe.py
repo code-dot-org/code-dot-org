@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from .actions import SceneActionType
 from .color import _NAMED_COLORS
 from .constants import SAMPLE_RATE
-from .renderer import _audio_length_bound, _frame_durations
+from .renderer import _audio_length_bound, _frame_durations, _stroke
 
 _NOTE_NAMES = ("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
 
@@ -26,10 +26,11 @@ _GROUPS = {
   SceneActionType.PLAY_SOUND: "Sound",
 }
 
-# How each group counts repeats; a sound's name cannot simply take an s.
+# How each group counts repeats; only a shape phrase ends in a noun taking an s.
 _COUNT_FORMS = {
   "Shapes": "{count} {phrase}s",
   "Sound": "{phrase} {count} times",
+  "Text": "{phrase} {count} times",
 }
 
 # Groups that stay on the canvas; a sound plays with its frame and is gone.
@@ -42,14 +43,6 @@ _FILLABLE = frozenset({
   SceneActionType.DRAW_POLYGON,
   SceneActionType.DRAW_SHAPE,
 })
-
-# Shapes whose name is all there is to say about them.
-_SHAPE_NAMES = {
-  SceneActionType.DRAW_RECTANGLE: "rectangle",
-  SceneActionType.DRAW_ELLIPSE: "ellipse",
-  SceneActionType.DRAW_LINE: "line",
-}
-
 
 @dataclass
 class SceneDescription:
@@ -145,19 +138,27 @@ def _phrase(action):
   kind = action.type
   if _invisible(action):
     return None
-  if kind in _SHAPE_NAMES:
-    return f"{_paint_name(action)} {_SHAPE_NAMES[kind]}"
+  if kind is SceneActionType.DRAW_LINE:
+    # A line carries one color and no fill, so it has no outline to contrast.
+    return f"{_color_name(action.color)} line"
+  if kind is SceneActionType.DRAW_RECTANGLE:
+    return _painted(action, "rectangle")
+  if kind is SceneActionType.DRAW_ELLIPSE:
+    return _painted(action, "ellipse")
   if kind is SceneActionType.DRAW_POLYGON:
-    return f"{_paint_name(action)} {action.sides}-sided polygon"
+    return _painted(action, f"{action.sides}-sided polygon")
   if kind is SceneActionType.DRAW_SHAPE:
     if not action.close:
       return f"{_color_name(action.stroke_color)} open shape"
-    return f"{_paint_name(action)} shape"
+    return _painted(action, "shape")
   if kind is SceneActionType.DRAW_IMAGE:
     filename = action.image.get_filename()
     return os.path.basename(filename) if filename else "one drawn in code"
   if kind is SceneActionType.DRAW_TEXT:
-    return f'"{action.text}"'
+    # A Scene paints black until told otherwise, so naming it says nothing.
+    color = _color_name(action.color)
+    quoted = f'"{action.text}"'
+    return quoted if color == "black" else f"{color} {quoted}"
   if kind is SceneActionType.PLAY_NOTE:
     instrument = action.instrument.value.lower()
     return f"{instrument} {_note_name(action.note)}"
@@ -180,10 +181,18 @@ def _invisible(action):
   return False
 
 
-def _paint_name(action):
-  if action.type is SceneActionType.DRAW_LINE:
-    return _color_name(action.color)
-  return _color_name(action.fill_color or action.stroke_color)
+def _painted(action, noun):
+  """Name a shape by its fill, adding an outline wide enough to show."""
+  fill, stroke = action.fill_color, action.stroke_color
+  primary = _color_name(fill or stroke)
+  name = f"{primary} {noun}"
+  # The renderer floors a stroke at a pixel, so every filled shape has an edge.
+  if fill is None or stroke is None or _stroke(action.stroke_width) == 1:
+    return name
+  # Compared by name, so two hexes rounding to one palette word stay one word.
+  outline = _color_name(stroke)
+  # Noun last, so _COUNT_FORMS can pluralize a run by appending an s.
+  return name if outline == primary else f"{outline}-outlined {name}"
 
 
 def _color_name(color):
