@@ -95,30 +95,19 @@ class ScriptLevel < ApplicationRecord
   end
 
   # A unit and the levels it references must be on the same side of the
-  # "UI Test " partition, in both directions: the two trees are seeded
-  # independently, so either kind of crossing leaves the seed that loaded only
-  # one tree with "No level found". See dashboard/test/ui/config/README.md.
-  # Checked against the serialized level_keys property because ScriptSeed's
-  # import! runs validations before the HABTM join rows are imported. The
-  # levelbuilder attach path (update_levels) writes those rows without
-  # validating, so it applies the same rule itself through
-  # cross_partition_level_keys.
+  # "UI Test " partition. See dashboard/test/ui/config/README.md.
   def levels_stay_within_ui_test_partition
     offending = cross_partition_level_keys(level_keys || [])
     return if offending.empty?
     errors.add(:script_level, cross_partition_levels_message(offending))
   end
 
-  # Of the given level keys, those on the wrong side of the "UI Test "
-  # partition for this script_level's unit. Ignores nil entries, and blockly
-  # keys: deprecated blockly levels have no definition file to place in either
-  # tree, and both seeds load them from config/deprecated_levels.
+  # Returns those level keys on the wrong side of the "UI Test " partition for
+  # this script_level's unit.
   def cross_partition_level_keys(keys)
+    # Ignore deprecated blockly levels, which are allowed in any unit.
     keys = keys.compact.reject {|key| key.start_with?('blockly:')}
     return [] if keys.empty?
-    # Hoisted out of the block because it may load the unit, and this runs for
-    # every script_level of every seed -- which is why ScriptSeed hands each
-    # script_level its unit rather than its id.
     ui_test_script = ui_test_script?
     keys.reject {|key| Level.ui_test_name?(key) == ui_test_script}
   end
@@ -783,9 +772,8 @@ class ScriptLevel < ApplicationRecord
       Level.find(level_data['id'])
     end
 
-    # This path writes the levels HABTM rows without running model
-    # validations, so apply the UI Test partition rule here as well. Keys
-    # rather than names, so that blockly levels are recognized as exempt.
+    # Explicitly enforce UI Test partition rules, because the levels HABTM
+    # rows are written directly without triggering model validations.
     offending = cross_partition_level_keys(levels.map(&:key))
     raise cross_partition_levels_message(offending) if offending.any?
 
