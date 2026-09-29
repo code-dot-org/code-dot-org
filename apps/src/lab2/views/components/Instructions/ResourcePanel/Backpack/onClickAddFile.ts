@@ -1,6 +1,7 @@
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 
 import {AddFileHandler} from './types';
 
@@ -11,7 +12,7 @@ import {AddFileHandler} from './types';
 export function onClickAddFile(
   backpackApi: BackpackClientApi,
   fileName: string,
-  addAlert: (type: 'success' | 'danger', message: string) => void,
+  notify: BackpackNotify,
   setActionInProgress: (inProgress: boolean) => void,
   addFileHandler: AddFileHandler
 ) {
@@ -40,9 +41,9 @@ export function onClickAddFile(
         ? EVENTS.IMPORT_FROM_BACKPACK_REPLACE
         : EVENTS.IMPORT_FROM_BACKPACK_RENAME;
     sendLab2AnalyticsEvent(event, {fileType: fileName.split('.').pop() || ''});
-    addAlert('success', message);
+    notify('success', message);
   };
-  const notifyError = (message: string) => addAlert('danger', message);
+  const notifyError = (message: string) => notify('danger', message);
 
   addFileHandler({fileName, getFile, notifySuccess, notifyError});
 }

@@ -49,15 +49,15 @@ jest.mock(
     default: ({
       fileName,
       isRecentlyAdded,
-      addAlert,
+      notify,
     }: {
       fileName: string;
       isRecentlyAdded?: boolean;
-      addAlert: (type: string, message: string) => void;
+      notify: (type: string, message: string) => void;
     }) => (
       <div>
         {isRecentlyAdded ? `${fileName} (added)` : fileName}
-        <button type="button" onClick={() => addAlert('success', 'in project')}>
+        <button type="button" onClick={() => notify('success', 'in project')}>
           {`add ${fileName} to project`}
         </button>
       </div>
@@ -87,7 +87,6 @@ describe('UnifiedBackpackPanel', () => {
           saveFileToProject={jest.fn()}
           createNewProjectFile={jest.fn()}
           findIdForFileName={() => undefined}
-          openPanelCallback={jest.fn()}
           supportedFileTypes={['png']}
           backpackRefreshKey={0}
           saveToBackpackButton={
