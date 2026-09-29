@@ -9,6 +9,8 @@ import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
+import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -108,6 +110,7 @@ import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
+  moveWorldCell,
   paintWorldCell,
   resizeWorld,
   sceneGridSize,
@@ -217,8 +220,8 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 // The shared dialog's own copy names only the blocks.
 const START_OVER_MESSAGE =
-  "This will remove the blocks you've added and delete all of the images " +
-  "you've made. You can't undo this.";
+  "This deletes your blocks and your images. You can't undo it.";
+const START_OVER_RETURNS_MESSAGE = `${START_OVER_MESSAGE} You'll start again from the first level.`;
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
@@ -320,6 +323,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [activeTab]);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  // The project is shared by every level of the lesson, so Start Over sends
+  // the student back to its first level to remake it. A level outside a
+  // lesson has no first level to go to.
+  const firstLevelId = useAppSelector(
+    state => getCurrentLevels(state)?.[0]?.id as string | undefined
+  );
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
@@ -496,6 +505,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Premade world, when the level authors one.
   useWorldStartPattern({
     pattern: levelProperties.worldStartPattern,
+    channelId,
     pinnedSceneId,
     enabled: animationsSeeded,
     animations: animationList,
@@ -563,6 +573,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // a block; a selection whose image is gone counts as none.
   const focusImageType = levelProperties.levelMode?.imageType;
   const imageRoleDefaults = levelProperties.imageRoleDefaults;
+  // The level's image of its kind: the image_role_defaults role first, else
+  // the newest of the kind (orderedKeys is newest-first: Sprite Lab prepends
+  // new animations).
+  const focusImageName = useMemo(() => {
+    if (!focusImageType || focusImageType === 'background') {
+      return undefined;
+    }
+    const newest = animationList.orderedKeys.find(
+      key =>
+        imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
+        focusImageType
+    );
+    return (
+      defaultImageName(animationList, imageRoleDefaults, focusImageType) ??
+      (newest ? animationList.propsByKey[newest]?.name : undefined)
+    );
+  }, [focusImageType, animationList, imageRoleDefaults]);
   useEffect(() => {
     if (!focusImageType || focusImageType === 'background') {
       return;
@@ -576,23 +603,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (live && paletteChosenByStudent.current) {
       return;
     }
-    // The level's image_role_defaults role first; else the newest of the kind
-    // (orderedKeys is newest-first: Sprite Lab prepends new animations).
-    const newest = animationList.orderedKeys.find(
-      key =>
-        imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
-        focusImageType
-    );
-    const name =
-      defaultImageName(animationList, imageRoleDefaults, focusImageType) ??
-      (newest && animationList.propsByKey[newest]?.name);
     const current =
       worldPaletteSelection === 'erase' ? null : worldPaletteSelection?.image;
-    if ((name ?? null) === (current ?? null)) {
+    if ((focusImageName ?? null) === (current ?? null)) {
       return;
     }
-    setWorldPaletteSelection(name ? {image: name, kind: focusImageType} : null);
-  }, [worldPaletteSelection, focusImageType, animationList, imageRoleDefaults]);
+    setWorldPaletteSelection(
+      focusImageName ? {image: focusImageName, kind: focusImageType} : null
+    );
+  }, [worldPaletteSelection, focusImageType, focusImageName, animationList]);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
@@ -1380,26 +1399,36 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId]
   );
 
-  // Persist World-tab placements to the active scene and refresh the
-  // preview, mirroring code edits. Applied cell-by-cell against the saved
-  // sources so rapid paints can't overwrite each other.
-  const handlePaintWorldCell = useCallback(
-    (row: number, col: number, cell: WorldCell | null) => {
+  // Change the active scene's world against the saved sources, so rapid
+  // edits cannot overwrite each other, and refresh the preview. Editing the
+  // resized world is what persists its size.
+  const updateActiveWorld = useCallback(
+    (update: (world: World) => World) => {
       updateSources(prev => ({
         ...prev,
         scenes: getScenes(prev).map(s =>
-          s.id === activeSceneId
-            ? {
-                ...s,
-                // Painting the resized world is what persists its size.
-                world: paintWorldCell(worldFor(s), row, col, cell),
-              }
-            : s
+          s.id === activeSceneId ? {...s, world: update(worldFor(s))} : s
         ),
       }));
       scheduleRun();
     },
     [updateSources, activeSceneId, scheduleRun, worldFor]
+  );
+  const handlePaintWorldCell = useCallback(
+    (row: number, col: number, cell: WorldCell | null) =>
+      updateActiveWorld(world => paintWorldCell(world, row, col, cell)),
+    [updateActiveWorld]
+  );
+
+  // A world level about one kind of image offers the palette only the
+  // level's image of that kind.
+  const placeOne = !!levelProperties.levelMode?.placeOne;
+  const paletteOnlyImage =
+    levelProperties.levelMode?.kind === 'world' ? focusImageName : undefined;
+  const handleMoveWorldCell = useCallback(
+    (row: number, col: number, cell: WorldCell) =>
+      updateActiveWorld(world => moveWorldCell(world, row, col, cell)),
+    [updateActiveWorld]
   );
 
   // Rename an image and cascade through every reference — blocks in all
@@ -1493,12 +1522,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     loadCode(source);
-    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    // The level's added blocks join the pinned scene once it is on screen, so
-    // they can sit below what the workspace has rendered.
-    if (activeScene.id === pinnedSceneId && levelProperties.addBlocks) {
-      addMissingBlocks(workspace, levelProperties.addBlocks);
-    }
     runLocalScene(activeScene);
   }, [
     animationsSeeded,
@@ -1510,8 +1533,42 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
-    pinnedSceneId,
+  ]);
+
+  // The level's added blocks join the pinned scene once it is on screen,
+  // after the load above (effects run in order), so they sit below what the
+  // workspace has rendered. Per level, not per load: a level reached in
+  // page shares the scene's code with the last one, and loads nothing.
+  const addedBlocksForRef = useRef('');
+  useEffect(() => {
+    if (
+      !animationsSeeded ||
+      isToolboxMode ||
+      !levelProperties.addBlocks ||
+      activeScene.id !== pinnedSceneId
+    ) {
+      return;
+    }
+    const key = [
+      levelProperties.id,
+      activeScene.id,
+      sourcesReinitializedCount,
+      workspaceVersion,
+    ].join(':');
+    if (addedBlocksForRef.current === key) {
+      return;
+    }
+    addedBlocksForRef.current = key;
+    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
+    addMissingBlocks(workspace, levelProperties.addBlocks);
+  }, [
+    animationsSeeded,
+    levelProperties.id,
     levelProperties.addBlocks,
+    activeScene.id,
+    pinnedSceneId,
+    sourcesReinitializedCount,
+    workspaceVersion,
   ]);
 
   const sceneEditing = useSceneEditing({
@@ -1670,10 +1727,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
     adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
-    // Freeplay hands back the prompt box and the paint tools; every other
-    // level takes its words from the combos.
-    adlibOnly:
-      !isFreeplayMode(levelProperties.levelMode) && !imageFreeTextParam,
+    // Every level takes its words from the combos; the typed prompt box
+    // shows only behind ?image-free-text=true. Freeplay hands back the
+    // paint tools.
+    adlibOnly: !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
   };
@@ -1685,10 +1742,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           onConfirm={() => {
             startOver();
             setShowStartOver(false);
+            if (firstLevelId && firstLevelId !== currentLevelId) {
+              dispatch(navigateToLevelId(firstLevelId));
+            }
           }}
           onCancel={() => setShowStartOver(false)}
           type="custom"
-          message={START_OVER_MESSAGE}
+          message={
+            firstLevelId ? START_OVER_RETURNS_MESSAGE : START_OVER_MESSAGE
+          }
         />
       )}
       <ResourcePanel
@@ -1813,6 +1875,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 world={activeWorld}
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
+                only={paletteOnlyImage}
+                placeOne={placeOne}
+                onMoveCell={handleMoveWorldCell}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
               />
