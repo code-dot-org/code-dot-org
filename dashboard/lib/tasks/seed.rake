@@ -211,18 +211,31 @@ namespace :seed do
     update_scripts(incremental: true)
   end
 
-  # Moved course offerings ui test seed after regular course offerings are seeded
-  # because the regular course offerings seed task removes any course_offerings records
-  # left in the database that do not have a corresponding json file in config/course_offerings.
-  # The ui test course offerings must be seeded after so they are not accidentally removed.
-  # UI test scripts also need the "UI Test " levels, seeded after the normal
-  # level tasks in SCRIPTS_DEPENDENCIES; see dashboard/test/ui/config/README.md.
-  UI_TEST_SCRIPTS_DEPENDENCIES = SCRIPTS_DEPENDENCIES + [
+  # The UI test units resolve their course offerings and levels out of the UI
+  # test tree, apart from deprecated blockly levels, so the UI test seed reads
+  # that tree in place of config/levels, config/scripts and
+  # config/course_offerings rather than after them. The standalone project
+  # tree and the blockly levels stay, through SCRIPTS_DEPENDENCIES; see
+  # dashboard/test/ui/config/README.md.
+  PRODUCTION_CONTENT_DEPENDENCIES = [
+    :child_dsls,
+    :custom_levels,
+    :parent_dsls,
+    :course_offerings,
+  ].freeze
+
+  UI_TEST_CONTENT_DEPENDENCIES = [
     :child_dsls_ui_tests,
     :custom_levels_ui_tests,
     :parent_dsls_ui_tests,
     :course_offerings_ui_tests,
   ].freeze
+
+  # Development seeds both lists. Rake runs each task once per process, at the
+  # first position it appears in, so the production tasks dropped here still run
+  # under :scripts, ahead of these.
+  UI_TEST_SCRIPTS_DEPENDENCIES =
+    (SCRIPTS_DEPENDENCIES - PRODUCTION_CONTENT_DEPENDENCIES + UI_TEST_CONTENT_DEPENDENCIES).freeze
 
   timed_task_with_logging scripts_ui_tests: UI_TEST_SCRIPTS_DEPENDENCIES do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
