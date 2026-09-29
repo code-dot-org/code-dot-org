@@ -93,11 +93,11 @@ For each surviving finding, establish:
   engineering workflow (such as the daily deploy), or other internal workflow.
   LATENT if the issue can only be triggered by a future code or config change
   made by engineering.
-- **age** - approximately how long the issue has existed in its current form
-  (years, months, weeks, days, or introduced in the current PR)
+- **age** - NEW if introduced in this PR, or if made worse by it. Otherwise,
+  approximately how long the issue has existed (e.g. years, months, weeks, days).
+  if introduced by another pending PR, indicate that here.
 - **probability** ZERO, LOW, MEDIUM, or HIGH probability of failure given
   current code and config. By definition, latent issues have zero probability.
-- **whether this PR makes it more likely**, and
 - **which branch owns the fix**, when the PR is one of a stack.
 
 ## Phase 4 — the report
