@@ -81,18 +81,8 @@ judgment. `/code-review`'s ranking does not carry over.
 
 - **scenario** — what has to be true for it to fire.
 - **impact** — what goes wrong in that scenario.
-- **severity** of that impact, if it occurs:
-  - CRITICAL — data loss, security breach, privacy breach, or harm on that
-    scale.
-  - HIGH — significant functional impact on end users; anything that blocks
-    this PR from shipping, such as a deploy pipeline failure; or a break in
-    a core non-production workflow: curriculum authoring (levelbuilder),
-    the daily deploy, feature development and developer experience, adhoc
-    starts, test environments.
-  - MEDIUM — any other material impact on end users or core workflows, such
-    as substantial inconvenience or performance degradation; also code
-    quality, readability, maintainability, and technical debt.
-  - LOW — anything else.
+- **severity** of that impact, if it occurs — CRITICAL, HIGH, MEDIUM, or
+  LOW, on the scale under Tunables.
 - **current or latent** — CURRENT if it can happen now through the actions
   of attackers, end users, curriculum authors, translators, engineering
   workflows such as the daily deploy, or other internal workflows. LATENT
@@ -101,8 +91,8 @@ judgment. `/code-review`'s ranking does not carry over.
   PR but the PR makes it more likely, more severe, or newly reachable.
   EXISTING otherwise, including an issue introduced by another pending PR.
 - **age** — for EXISTING issues, roughly how long it has been in the repo
-  (days, weeks, months, years), or PENDING if another pending branch owns
-  the fix; name that branch in the finding. Age is evidence for
+  (days, weeks, months, years), or PENDING if it lives in another pending
+  PR and has not landed yet. Age is evidence for
   probability: an issue that has sat in production for years without
   firing is unlikely to fire this week.
 - **probability** — for CURRENT issues, HIGH, MEDIUM, or LOW chance it
@@ -161,11 +151,15 @@ When the PR is one step in a stack, or when the caller asks for it, add the
 merge-gating axis alongside the buckets:
 
 1. must fix before merge,
-2. track for follow-up, with a deadline: "before the new path becomes the
+2. document before merge — for a severe latent issue that cannot easily be
+   guarded against or eliminated. Put the note where the engineer who would
+   trigger it will read it: a comment at the call site, or the subsystem's
+   README.
+3. track for follow-up, with a deadline: "before the new path becomes the
    default", "before launch". Where to track it — a code TODO, a Jira
    ticket, the author's own list — is the team's call; say which fits. No
-   deadline, no follow-up: the item goes to 1 or 3.
-3. fine to leave.
+   deadline, no follow-up: the item goes to 1, 2, or 4.
+4. fine to leave.
 
 ### `--comment` and `--fix`
 
@@ -182,5 +176,17 @@ holds.
 
 These are the parts that drift.
 
+- **Severity scale.**
+  - CRITICAL — data loss, security breach, privacy breach, or harm on that
+    scale.
+  - HIGH — significant functional impact on end users; anything that blocks
+    this PR from shipping, such as a deploy pipeline failure; or a break in
+    a core non-production workflow: curriculum authoring (levelbuilder),
+    the daily deploy, feature development and developer experience, adhoc
+    starts, test environments.
+  - MEDIUM — any other material impact on end users or core workflows, such
+    as substantial inconvenience or performance degradation; also code
+    quality, readability, maintainability, and technical debt.
+  - LOW — anything else.
 - **Default effort.** `high`.
 - **Finding cap.** `/code-review` at `high` caps at 15.
