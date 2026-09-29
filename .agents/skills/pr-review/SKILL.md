@@ -85,8 +85,7 @@ blocker that dissolves under one question costs more than omitting it.
 Then classify each finding that survives, whether or not the PR is part of
 a stack. The triage estimate is provisional; this is where severity and
 probability are set, and later sections use these values, not fresh
-judgment. `/code-review`'s ranking
-does not carry over.
+judgment. `/code-review`'s ranking does not carry over.
 
 - **scenario** — what has to be true for it to fire.
 - **impact** — what goes wrong in that scenario.
@@ -101,9 +100,8 @@ does not carry over.
   EXISTING otherwise, including an issue introduced by another pending PR.
 - **age** — for EXISTING issues, roughly how long it has been in the repo
   (days, weeks, months, years), or PENDING if it lives in another pending
-  PR and has not landed yet. Age is evidence for
-  probability: an issue that has sat in production for years without
-  firing is unlikely to fire this week.
+  PR and has not landed yet. Age is evidence for probability: an issue that
+  has sat in production for years withoutfiring is unlikely to fire this week.
 - **probability** — for CURRENT issues, HIGH, MEDIUM, or LOW chance it
   fires under today's code and config. LATENT for latent issues.
 - **recommendation** — one of:
@@ -191,7 +189,7 @@ These are the parts that drift.
     this PR from shipping, such as a deploy pipeline failure; or a break in
     a core non-production workflow: curriculum authoring (levelbuilder),
     the daily deploy, feature development and developer experience, adhoc
-    starts, test environments.
+    starts, or staging/test environments.
   - MEDIUM — any other material impact on end users or core workflows, such
     as substantial inconvenience or performance degradation; also code
     quality, readability, maintainability, and technical debt.
