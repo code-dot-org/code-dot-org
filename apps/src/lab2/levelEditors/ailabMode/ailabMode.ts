@@ -3,6 +3,7 @@
   keeps only the keys and values Lab 2 AI Lab understands; anything else is
   dropped when the level is next saved.
 */
+import {setJsonObjectValue} from '../jsonUtils';
 
 export type ModeObject = Record<string, unknown>;
 
@@ -25,42 +26,6 @@ export const DEFAULT_TRAINER = 'knn';
 
 export const MIN_ACCURACY = 0;
 export const MAX_ACCURACY = 100;
-
-// Returns null when the string is not a JSON object.
-export function parseMode(
-  rawMode: string | null | undefined
-): ModeObject | null {
-  if (!rawMode || !rawMode.trim()) {
-    return {};
-  }
-  try {
-    const parsed = JSON.parse(rawMode);
-    return parsed && typeof parsed === 'object' && !Array.isArray(parsed)
-      ? parsed
-      : null;
-  } catch {
-    return null;
-  }
-}
-
-export function serializeMode(mode: ModeObject): string {
-  return Object.keys(mode).length ? JSON.stringify(mode, null, 2) : '';
-}
-
-// Passing undefined removes the key; replacing a key keeps its position.
-export function setModeValue(
-  mode: ModeObject,
-  key: string,
-  value: unknown
-): ModeObject {
-  const newMode = {...mode};
-  if (value === undefined) {
-    delete newMode[key];
-  } else {
-    newMode[key] = value;
-  }
-  return newMode;
-}
 
 export function isValidAccuracy(value: unknown): boolean {
   return (
@@ -119,6 +84,6 @@ export function getSelectedDataset(mode: ModeObject): string | undefined {
 // Names the default trainer explicitly, so a saved Lab 2 level always records one.
 export function withDefaultTrainer(mode: ModeObject): ModeObject {
   return mode.trainer === undefined
-    ? setModeValue(mode, 'trainer', DEFAULT_TRAINER)
+    ? setJsonObjectValue(mode, 'trainer', DEFAULT_TRAINER)
     : mode;
 }

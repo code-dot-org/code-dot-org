@@ -55,7 +55,7 @@
               "like": {
                 "type": "gamelab_spriteSay",
                 "fields": {
-                  "SPEECH": "Click my friend!"
+                  "SPEECH": "Click the other character!"
                 },
                 "inputs": {
                   "SPRITE": {
@@ -72,39 +72,25 @@
     ],
     "guide_steps": [
       {
-        "text": "**Say something else, a moment later.** Drag a **say** block into the dotted spot inside **at [3] seconds**. Press **Play** and your character speaks right on cue."
+        "text": "**Say something later.** Drag a **say** block onto the dotted outline under **at [3] seconds**. Click **Play** and wait for it."
       },
       {
-        "text": "**Perfect timing!** Watch your story unfold, then continue when you're ready.",
+        "text": "**Perfect timing!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Say something on a delay\nDrag out **at [3] seconds** and put a **say** block inside it. Your character will speak right on cue.",
+    "long_instructions": "# Say something later\nDrag a **say** block onto the dotted outline under **at [3] seconds**. Your character speaks 3 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_atTime",
-          "inputs": {
-            "N": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 3
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Click my friend!"
+            "SPEECH": "Click the other character!"
           },
           "inputs": {
             "SPRITE": {

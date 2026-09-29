@@ -1,10 +1,12 @@
 /* React component to handle displaying imported data. */
+import classNames from 'classnames';
+
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {getColumnClickable, getTableData, setCurrentColumn} from '../redux';
 
-import moduleStyles from './dataTable.module.scss';
+import styles from './dataTable.module.scss';
 
 interface DataTableProps {
   reducedColumns?: boolean;
@@ -46,35 +48,28 @@ const DataTable = ({
 
   const isClickable = (key: string) => clickableColumns.includes(key);
 
-  const getColumnHeaderClassName = (key: string) => {
-    const classNames = [moduleStyles.header];
-    if (key === labelColumn) {
-      classNames.push(moduleStyles.headerLabel);
-    } else if (selectedFeatures.includes(key)) {
-      classNames.push(moduleStyles.headerFeature);
-    }
-    if (!reducedColumns && key === currentColumn) {
-      classNames.push(moduleStyles.headerSelected);
-    }
-    if (isClickable(key)) {
-      classNames.push(moduleStyles.clickable);
-    }
-    return classNames.join(' ');
-  };
+  const getColumnHeaderClassName = (key: string) =>
+    classNames(styles.header, {
+      [styles.headerLabel]: key === labelColumn,
+      [styles.headerFeature]:
+        key !== labelColumn && selectedFeatures.includes(key),
+      [styles.headerSelected]: !reducedColumns && key === currentColumn,
+      [styles.clickable]: isClickable(key),
+    });
 
   const getColumnCellClassName = (key: string) => {
-    const classNames = ['uitest-data-table-column', moduleStyles.bodyCell];
+    let variant;
     if (hideLabel && key === labelColumn) {
-      classNames.push(moduleStyles.bodyCellHidden);
+      variant = styles.bodyCellHidden;
     } else if (key === labelColumn) {
-      classNames.push(moduleStyles.bodyCellLabel);
+      variant = styles.bodyCellLabel;
     } else if (selectedFeatures.includes(key)) {
-      classNames.push(moduleStyles.bodyCellFeature);
+      variant = styles.bodyCellFeature;
     }
-    if (isClickable(key)) {
-      classNames.push(moduleStyles.clickable);
-    }
-    return classNames.join(' ');
+
+    return classNames('uitest-data-table-column', styles.bodyCell, variant, {
+      [styles.clickable]: isClickable(key),
+    });
   };
 
   const getColumns = () => {
@@ -113,12 +108,12 @@ const DataTable = ({
   }
 
   return (
-    <table className={moduleStyles.table}>
+    <table className={styles.table}>
       <thead>
         <tr>
           {showRowNumbers && (
             <th
-              className={`${moduleStyles.indexCell} ${moduleStyles.indexHeader}`}
+              className={classNames(styles.indexCell, styles.indexHeader)}
               aria-label="Row"
             />
           )}
@@ -133,7 +128,7 @@ const DataTable = ({
                 {isClickable(columnId) ? (
                   <button
                     type="button"
-                    className={moduleStyles.headerButton}
+                    className={styles.headerButton}
                     aria-pressed={columnId === currentColumn}
                     onClick={() => handleSetCurrentColumn(columnId)}
                   >
@@ -150,9 +145,9 @@ const DataTable = ({
       <tbody>
         {getRows().map((row, index) => {
           return (
-            <tr key={index} className={moduleStyles.row}>
+            <tr key={index} className={styles.row}>
               {showRowNumbers && (
-                <th scope="row" className={moduleStyles.indexCell}>
+                <th scope="row" className={styles.indexCell}>
                   {index + 1}
                 </th>
               )}

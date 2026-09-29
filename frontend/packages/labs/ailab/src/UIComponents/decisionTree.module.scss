@@ -51,12 +51,12 @@
 
 .question {
   background-color: var(--background-neutral-white-fixed, white);
-  border-color: var(--tree-question-color);
+  border-color: var(--ailab-feature);
 }
 
 .answer {
-  background-color: var(--tree-answer-color);
-  border-color: var(--tree-answer-color);
+  background-color: var(--ailab-label);
+  border-color: var(--ailab-label);
 }
 
 .nodeText {
