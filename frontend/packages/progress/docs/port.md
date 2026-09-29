@@ -229,14 +229,38 @@ Differences from apps:
 
 ### 3.5 Selectors not ported
 
-`progressReduxSelectors.js` was folded in only partly. `getNextLevel` and
-`getParentLevel` have since been ported. Missing: `levelsByLesson`, `groupedLessons`,
+Fixed. `progressReduxSelectors.js` was folded in only partly. `getNextLevel`
+and `getParentLevel` were ported with the navigation fixes; the rest are now
+in `src/redux/progressSelectors.ts`: `levelsByLesson`, `groupedLessons`,
 `progressionsFromLevels`, `lessons`, `hasLockableLessons`, `hasGroups`,
 `getCurrentLesson`, `getLessonCount`, `levelCount`, `isPerfect`,
 `lessonExtrasUrl`, `lessonTutorPath`, `hasLessonPlan`, and the peer-review
-lesson and level synthesis. Most serve the unit overview and the progress
-table rather than the level page. Whether they belong here or in a future
-overview package is an open scoping decision.
+lesson and level synthesis.
+
+Scope was an open decision: level page only, or the overview too. They are
+all here, for two reasons. Each is a pure function of the progress slice's
+state, so an overview package would have depended on this one anyway. And the
+line between level page and overview does not hold in apps: the header's
+mini view, shown on every level page, renders the unit progress table
+through `hasGroups` and `groupedLessons`. The React views that consume them
+(the progress table, the mini view, the teacher panel) belong to whichever
+package builds the overview; nothing under `frontend/` does yet.
+
+Differences from apps:
+
+- The lesson fields `lessons` and the grouped lessons return follow core's
+  camelCase schema (`lessonPlanHtmlUrl`, `descriptionStudent`), where apps
+  returned the raw snake_case keys.
+- Peer review levels take the number `PEER_REVIEW_ID` as their id, where apps
+  used the string `'-1'`; ids are numbers throughout the package.
+- `levelsByLesson` shares its level shaping with `levelsForLessonId` through
+  a new `levelsForLesson(state, lesson)`, so the two cannot drift.
+
+The port also typed `lessonGroups` with core's `LessonGroupSummary`, which is
+an array of lessons, not a lesson group. Core now has `LessonGroupSchema`
+for `LessonGroup#summarize`, and `lessonGroups` uses it. Core's `Lesson`
+gained the `lessonTutorPath` the server sends, and its `UnitLevel` the
+`progression` that `progressionsFromLevels` groups by.
 
 ### 3.6 Validation API changes
 
@@ -368,9 +392,9 @@ overview package is an open scoping decision.
   `getParentLevel`, `nextLevelId`, `getNextLevel`, `levelsForLessonId` and
   `processedLessons` blocks. Apps' three `setViewType` cases all dispatched
   `Instructor` although two are named for students; the port dispatches
-  `Participant` there. Not yet ported: the peer-review, `levelsByLesson`,
-  `groupedLessons` and `progressionsFromLevels` blocks, which test selectors
-  the package lacks. Apps has
+  `Participant` there. The peer-review, `levelsByLesson`, `groupedLessons`,
+  `progressionsFromLevels`, `lessonExtrasUrl` and `isPerfect` blocks followed
+  with the selectors in 3.5. Apps has
   `progressReduxTest.js` (2074 lines: reducers, selectors,
   `userProgressFromServer`, peer reviews, bubble-choice navigation),
   `activityUtilsTest.js`, `progressHelpersTest.js` and
@@ -446,8 +470,8 @@ branch and the README says so until it is made.
    arguments; see 3.4.
 6. Done. Add `validations` to core's `LevelPropertiesBaseSchema`, with
    `Validation` and `Condition` schemas, so labs stop narrowing `unknown`.
-7. Decide the scope of the selectors in 3.5 (level page only, or overview
-   too) and port accordingly.
+7. Done. Decide the scope of the selectors in 3.5 (level page only, or
+   overview too) and port accordingly. All of them are here; see 3.5.
 8. Clean the manifest per `docs/conventions/packages.md`, delete the
    duplicate `ExemplarSettings`, add `as const` to `ViewTypes` and
    `ReviewStates`, replace `src/README.md`.
