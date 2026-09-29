@@ -43,11 +43,11 @@ const PREVIEW_SCALE = 0.64;
 // The preview's full horizontal footprint, for siblings that must keep their
 // content clear of it (it floats over the active tab's top-right corner).
 export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
-// The play bar under the box: one row of the design system's medium
-// buttons (2.5rem at the root font size) and its gap.
-const MEDIUM_BUTTON_PX = 40;
+// The play bar under the box: one row of the design system's small
+// buttons (2rem at the root font size, plus their 1px borders) and its gap.
+const SMALL_BUTTON_PX = 34;
 const BAR_GAP = 12;
-export const BAR_ROOM = MEDIUM_BUTTON_PX + BAR_GAP;
+export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
 const SLIDE_MS = 450;

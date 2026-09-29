@@ -96,7 +96,7 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
       <MuiButton
         variant="outlined"
         color="secondary"
-        size="medium"
+        size="small"
         aria-label={label}
         className={moduleStyles.holdKey}
         {...handlers}
@@ -109,7 +109,7 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
     <MuiIconButton
       variant="outlined"
       color="secondary"
-      size="medium"
+      size="small"
       aria-label={label}
       className={moduleStyles.holdKey}
       {...handlers}
@@ -144,7 +144,7 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
       <MuiButton
         variant="contained"
         color="primary"
-        size="medium"
+        size="small"
         sx={getRunButtonSx(setupBlockColor)}
         startIcon={<FontAwesomeV6Icon iconName="play" />}
         onClick={onPlay}
@@ -159,7 +159,7 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
         <MuiButton
           variant="contained"
           color="primary"
-          size="medium"
+          size="small"
           sx={getRunButtonSx(setupBlockColor)}
           startIcon={<FontAwesomeV6Icon iconName="stop" />}
           onClick={onStop}
