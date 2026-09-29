@@ -12,8 +12,11 @@ import progressSlice, {
   getCurrentLevels,
   initProgress,
   navigateToLevelId,
+  sendProgressReport,
+  sendStartedReportIfNotStarted,
   sendSubmitReport,
   sendSuccessReport,
+  sendSuccessReportForLevel,
   setCurrentLessonId,
   setScriptProgress,
 } from '../progressSlice';
@@ -155,6 +158,81 @@ describe('sendSuccessReport', () => {
       error: 'Failed to fetch',
     });
     expect(store.getState().progress.unitProgress[323]).toBeUndefined();
+  });
+});
+
+describe('sendSuccessReportForLevel', () => {
+  it('reports a bubble choice sublevel under its parent script level', async () => {
+    const {store, dispatch} = storeOn(323);
+    await dispatch(sendSuccessReportForLevel(10302, 'maze'));
+    expect(sent()).toMatchObject({
+      scriptLevelId: 103,
+      levelId: 10302,
+      testResult: TestResults.ALL_PASS,
+    });
+    const {levelResults} = store.getState().progress;
+    expect(levelResults[10302]).toBe(TestResults.ALL_PASS);
+    expect(levelResults[BUBBLE_CHOICE_LEVEL_ID]).toBe(TestResults.ALL_PASS);
+    // The current level is not the one reported.
+    expect(levelResults[323]).toBeUndefined();
+  });
+
+  it('reports nothing for a level outside the current lesson', async () => {
+    const {dispatch} = storeOn(323);
+    await dispatch(sendSuccessReportForLevel(999, 'maze'));
+    expect(reportMilestone).not.toHaveBeenCalled();
+  });
+});
+
+describe('sendProgressReport', () => {
+  it('reports the given result for the current level', async () => {
+    const {dispatch, levels} = storeOn(323);
+    await dispatch(sendProgressReport('maze', TestResults.LEVEL_STARTED));
+    expect(sent()).toMatchObject({
+      levelId: 323,
+      testResult: TestResults.LEVEL_STARTED,
+    });
+    expect(levels()[1].status).toBe('attempted');
+  });
+});
+
+describe('sendStartedReportIfNotStarted', () => {
+  beforeEach(() => {
+    // lodash's debounce keeps a setTimeout between calls.
+    vi.useFakeTimers();
+  });
+
+  afterEach(async () => {
+    // Let the debounce window close so the next test starts fresh.
+    await vi.advanceTimersByTimeAsync(1000);
+  });
+
+  it('reports an untried level as started, once per burst', async () => {
+    const {dispatch} = storeOn(323);
+    dispatch(sendStartedReportIfNotStarted('maze'));
+    dispatch(sendStartedReportIfNotStarted('maze'));
+    await vi.advanceTimersByTimeAsync(0);
+    expect(reportMilestone).toHaveBeenCalledTimes(1);
+    expect(sent().testResult).toBe(TestResults.LEVEL_STARTED);
+  });
+
+  it('does not report again once the level has been started', async () => {
+    const {dispatch} = storeOn(323);
+    dispatch(sendStartedReportIfNotStarted('maze'));
+    await vi.advanceTimersByTimeAsync(500);
+    dispatch(sendStartedReportIfNotStarted('maze'));
+    await vi.advanceTimersByTimeAsync(0);
+    expect(reportMilestone).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not report a level that has progress', async () => {
+    const {dispatch} = storeOn(323);
+    dispatch(
+      setScriptProgress({323: {status: 'perfect', result: 100 as never}}),
+    );
+    dispatch(sendStartedReportIfNotStarted('maze'));
+    await vi.advanceTimersByTimeAsync(0);
+    expect(reportMilestone).not.toHaveBeenCalled();
   });
 });
 

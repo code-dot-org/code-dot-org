@@ -3,10 +3,11 @@
 // apps/test/unit/code-studio/progressReduxTest.js.
 
 import type {Lesson, UnitLevel} from '@code-dot-org/core/api';
-import {describe, expect, it} from 'vitest';
+import {describe, expect, expectTypeOf, it} from 'vitest';
 
 import {TestResults, ViewTypes} from '../../constants';
 import type {ProgressState} from '../../types';
+import type {ProgressRootState} from '../progressSlice';
 import progressSlice, {
   disablePostMilestone,
   getNextLevel,
@@ -108,6 +109,14 @@ describe('reducer', () => {
     expect(state.lessons).toEqual(processedLessons(lessonData, false));
     expect(state.scriptName).toBe('course3');
     expect(state.currentLessonId).toBeUndefined();
+  });
+
+  it('keeps the course name, for loading rubrics', () => {
+    const state = reducer(
+      undefined,
+      initProgress(initPayload({courseId: 17, courseName: 'csd-2026'})),
+    );
+    expect(state.courseName).toBe('csd-2026');
   });
 
   it('can initialize progress on puzzle page', () => {
@@ -417,6 +426,21 @@ describe('levelsForLessonId', () => {
     ]);
   });
 
+  it('marks a level current when the current level is one of its other ids', () => {
+    // Apps wrote ids?.includes[currentLevelId], which never matched.
+    const swapped = {
+      ...lessonOneLevels[1],
+      ids: [323, 999],
+    } as UnitLevel;
+    const state = onLevel(999, [
+      lessonOneLevels[0],
+      swapped,
+      lessonOneLevels[2],
+    ]).progress;
+    const levels = levelsForLessonId(state, lessonData[0].id);
+    expect(levels.map(l => l.isCurrentLevel)).toEqual([false, true, false]);
+  });
+
   it('reports unitProgress status over levelResults', () => {
     const state = {
       ...progress(),
@@ -461,5 +485,17 @@ describe('processedLessons', () => {
   it('does not number lessons in a deeper learning course', () => {
     const lessons = [{id: 1, numberedLesson: true}] as unknown as Lesson[];
     expect(processedLessons(lessons, true)[0].lessonNumber).toBeUndefined();
+  });
+});
+
+describe('ProgressRootState', () => {
+  it('keys the progress slice by its name, and nothing else', () => {
+    expectTypeOf<
+      ProgressRootState['progress']
+    >().toEqualTypeOf<ProgressState>();
+    const read = (state: ProgressRootState) =>
+      // @ts-expect-error: only slices the store holds are keys.
+      state.notASlice;
+    expect(read).toBeTypeOf('function');
   });
 });

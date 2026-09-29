@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/progress",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "keywords": [
     "platform",
@@ -19,7 +19,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -48,13 +47,12 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
-    "@reduxjs/toolkit": "catalog:",
-    "lodash": "^4.17.21",
-    "react-redux": "catalog:"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
     "@code-dot-org/users": "workspace:*",
+    "@reduxjs/toolkit": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
@@ -64,6 +62,7 @@
     "prettier": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "react-redux": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
@@ -71,6 +70,8 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0"
+    "@reduxjs/toolkit": "^2.8.2",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-redux": "^9.2.0"
   }
 }

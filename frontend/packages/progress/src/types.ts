@@ -19,7 +19,7 @@ export const ReviewStates = {
   completed: 'completed',
   keepWorking: 'keepWorking',
   awaitingReview: 'awaitingReview',
-};
+} as const;
 
 /**
  * The schema for the unit progress as returned by our backend API.
@@ -62,6 +62,7 @@ export interface NumberedLevelFields {
   bubbleText?: string;
   scriptLevelId?: number;
   parentLevelId?: number;
+  isUnplugged?: boolean;
   // TODO: these are user_progress API return values. replace them with something in core/api
   status?: LevelStatus;
   paired?: boolean;
@@ -70,7 +71,7 @@ export interface NumberedLevelFields {
   teacherFeedbackReviewState?: string;
   teacherFeedbackNew?: boolean;
   teacherFeedbackCommented?: boolean;
-  lastTimestamp?: string;
+  lastTimestamp?: number;
   pages?: UnitProgress[];
 }
 
@@ -94,6 +95,8 @@ export interface ProgressState {
   scriptDisplayName?: string;
   unitTitle?: string;
   courseId?: number;
+  // The course's name, which Lab2 uses to load teacher-facing rubrics.
+  courseName?: string;
   isLessonExtras: boolean;
   unitProgress: {
     [key: number]: UnitProgress;
@@ -136,6 +139,7 @@ export interface InitProgressPayload {
   unitStudentDescription: string;
   unitHasUnnumberedLessons: boolean;
   courseId?: number;
+  courseName?: string;
   courseVersionId?: number;
   isLessonExtras: boolean;
   peerReviewLessonInfo?: PeerReviewLessonInfo;
@@ -215,12 +219,9 @@ export type TestStatus =
   | 'EXPECTED_FAILURE'
   | 'UNEXPECTED_SUCCESS';
 
-// Exemplar settings for a level.
-export interface ExemplarSettings {
-  validationEnabled: boolean;
-  validationSuccessMessage: string;
-  validationFailureMessage: string;
-}
+// Exemplar settings for a level, as core parses them; the server omits the
+// messages when none are configured.
+export type {ExemplarSettings} from '@code-dot-org/core/api';
 
 export interface OptionalMilestoneData {
   program?: string;

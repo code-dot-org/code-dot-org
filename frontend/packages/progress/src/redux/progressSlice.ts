@@ -1,10 +1,11 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import type {
   PayloadAction,
+  Slice,
+  SliceCaseReducers,
   ThunkAction,
   ThunkDispatch,
   AnyAction,
-  Slice,
 } from '@reduxjs/toolkit';
 import _ from 'lodash';
 
@@ -169,6 +170,8 @@ export const processedLevel: (
     // Script level ID doesn't apply for sublevels. Set to undefined if we have a parent level.
     scriptLevelId: parentLevelId ? undefined : level.id,
     parentLevelId,
+    // Apps' name for display_as_unplugged; sublevels carry none.
+    isUnplugged: (level as UnitLevel).displayAsUnplugged,
     levelNumber:
       (level as UnitLevel).kind === LevelKinds.Unplugged
         ? undefined
@@ -350,6 +353,7 @@ const _progressSlice = createSlice({
       state.unitStudentDescription = action.payload.unitStudentDescription;
       state.unitHasUnnumberedLessons = action.payload.unitHasUnnumberedLessons;
       state.courseId = action.payload.courseId;
+      state.courseName = action.payload.courseName;
       state.courseVersionId = action.payload.courseVersionId;
       state.currentLessonId = currentLessonId;
       state.hasFullProgress = action.payload.isFullProgress;
@@ -488,7 +492,14 @@ const _progressSlice = createSlice({
   },
 });
 
-const progressSlice: Slice<ProgressState> = _progressSlice;
+// The literal name matters: MockStore keys state by slice name, and a plain
+// Slice<ProgressState> widens it to string. Left inferred, the type names
+// immer internals and cannot be emitted in a declaration file.
+const progressSlice: Slice<
+  ProgressState,
+  SliceCaseReducers<ProgressState>,
+  'progress'
+> = _progressSlice;
 
 /**
  * Get the script level ID of the current level. If the current level is a sublevel,
@@ -559,9 +570,12 @@ export const levelById: (
 };
 
 /**
- * Helper method to send the milestone report to the backend API.
+ * Posts a milestone for a level of the current lesson and, once the server
+ * takes it, merges the result into the store. A bubble choice sublevel's
+ * result also lands on its parent, as the server records it there too.
  */
-function sendReportHelper(
+function sendReportForLevel(
+  levelId: number,
   appType: string,
   result: TestResult,
   dispatch: AppDispatch,
@@ -569,11 +583,14 @@ function sendReportHelper(
   extraData?: OptionalMilestoneData,
 ) {
   const state = getState().progress;
-  const levelId = state.currentLevelId;
-  if (!state.currentLessonId || !levelId) {
+  const level = levelById(state, state.currentLessonId, levelId);
+  if (!level) {
     return Promise.resolve();
   }
-  const scriptLevelId = getCurrentScriptLevelId(getState());
+  const parentLevelId = level.parentLevelId;
+  const scriptLevelId = parentLevelId
+    ? levelById(state, state.currentLessonId, parentLevelId)?.scriptLevelId
+    : level.scriptLevelId;
   if (!scriptLevelId) {
     return Promise.resolve();
   }
@@ -594,17 +611,11 @@ function sendReportHelper(
 
   return DashboardApiClient.activities.reportMilestone(request).then(
     () => {
-      // Update the progress store by merging in this
-      // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
       dispatch(mergeUnitProgress({levelId, result}));
-      // If the level is the sublevel of a bubble level,
-      // also update the status of the parent level.
-      const currentLevel = getCurrentLevel(getState());
-      if (currentLevel?.parentLevelId) {
-        const parentId = currentLevel.parentLevelId;
-        dispatch(mergeResults({[parentId]: result}));
-        dispatch(mergeUnitProgress({levelId: parentId, result}));
+      if (parentLevelId) {
+        dispatch(mergeResults({[parentLevelId]: result}));
+        dispatch(mergeUnitProgress({levelId: parentLevelId, result}));
       }
       // The next milestone's time counts from this one.
       milestoneTimer.resetMilestoneTimer();
@@ -621,6 +632,29 @@ function sendReportHelper(
         error: error instanceof Error ? error.message : String(error),
       });
     },
+  );
+}
+
+/** Posts a milestone for the current level. */
+function sendReportHelper(
+  appType: string,
+  result: TestResult,
+  dispatch: AppDispatch,
+  getState: () => RootState,
+  extraData?: OptionalMilestoneData,
+) {
+  const state = getState().progress;
+  const levelId = state.currentLevelId;
+  if (!state.currentLessonId || !levelId) {
+    return Promise.resolve();
+  }
+  return sendReportForLevel(
+    levelId,
+    appType,
+    result,
+    dispatch,
+    getState,
+    extraData,
   );
 }
 
@@ -1027,6 +1061,59 @@ export const sendSubmitReport = createAsyncThunk<
 export function sendSuccessReport(appType: string): AsyncProgressThunkAction {
   return (dispatch, getState) => {
     return sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
+  };
+}
+
+/**
+ * Reports a level other than the current one as complete: a free play level
+ * or a bubble choice sublevel finished from elsewhere on the page.
+ */
+export function sendSuccessReportForLevel(
+  levelId: number,
+  appType: string,
+): AsyncProgressThunkAction {
+  return (dispatch, getState) =>
+    sendReportForLevel(
+      levelId,
+      appType,
+      TestResults.ALL_PASS,
+      dispatch,
+      getState,
+    );
+}
+
+/** Reports any result, such as TestResults.LEVEL_STARTED, for the current level. */
+export function sendProgressReport(
+  appType: string,
+  result: TestResult,
+): AsyncProgressThunkAction {
+  return (dispatch, getState) =>
+    sendReportHelper(appType, result, dispatch, getState);
+}
+
+// Leading edge only: the first call in a burst reports; the rest are dropped.
+const debouncedSendStartedReport = _.debounce(
+  (dispatch: AppDispatch, getState: () => RootState, appType: string) => {
+    // A report that landed since the call may already have moved the status.
+    if (getCurrentLevel(getState())?.status === LevelStatuses.NotTried) {
+      dispatch(sendProgressReport(appType, TestResults.LEVEL_STARTED));
+    }
+  },
+  100,
+  {leading: true, trailing: false},
+);
+
+/**
+ * Reports the current level as started, once, if the user has not tried it:
+ * the first edit or run moves its bubble off not-tried.
+ */
+export function sendStartedReportIfNotStarted(
+  appType: string,
+): ThunkAction<void, RootState, undefined, AnyAction> {
+  return (dispatch, getState) => {
+    if (getCurrentLevel(getState())?.status === LevelStatuses.NotTried) {
+      debouncedSendStartedReport(dispatch, getState, appType);
+    }
   };
 }
 

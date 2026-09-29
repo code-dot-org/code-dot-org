@@ -164,12 +164,15 @@ The `mergeUnitProgress` dispatch it also makes is restored; see 3.1 item 3.
   message and `url` apps used. An HTTP error status is not logged, as in
   apps, where only a failed request reached the `.catch`. Either way the
   thunk resolves and progress is left unchanged.
-- `sendProgressReport(appType, result)` and `sendStartedReportIfNotStarted`
-  (debounced `LEVEL_STARTED`, #72949, used by Sketch Lab).
-- `sendSuccessReportForLevel(levelId, appType)` (#69574, free-play and
-  bubble-choice sublevel reporting).
-- `courseName` in state and in `InitProgressPayload` (#67364, used to load
-  rubrics).
+- Fixed. `sendProgressReport(appType, result)` and
+  `sendStartedReportIfNotStarted` (debounced `LEVEL_STARTED`, #72949, used by
+  Sketch Lab). Both are ported; the debounce is apps' 100 ms leading edge.
+- Fixed. `sendSuccessReportForLevel(levelId, appType)` (#69574, free-play and
+  bubble-choice sublevel reporting). As in apps, every report now goes
+  through one `sendReportForLevel`, which finds the level's script level
+  through its parent when it is a sublevel.
+- Fixed. `courseName` in state and in `InitProgressPayload` (#67364, used to
+  load rubrics).
 
 ### 3.3 Behaviour dropped from the user-progress path
 
@@ -276,10 +279,10 @@ gained the `lessonTutorPath` the server sends, and its `UnitLevel` the
   now takes only `Pick<AppOptions, 'isEditingExemplar'>`, the one field it
   reads, so a host can pass `{isEditingExemplar}`. The signature still
   differs from apps, which matters only to code ported from there.
-- `ConditionsChecker`'s logging flag moved from the
+- Fixed. `ConditionsChecker`'s logging flag moved from the
   `?log-validator-condition-changes` query parameter to a constructor
-  argument. The host must read the query string and pass it through if that
-  debugging aid is to survive.
+  argument. The argument now defaults to that query parameter, as apps read
+  it; a host can still pass it explicitly.
 - Fixed. `ProgressContainer` (mounts the manager, mirrors its state into
   redux, sends the success report) and `continueOrFinishLesson` (the
   Continue button's decision: send success when unvalidated and not
@@ -309,10 +312,9 @@ gained the `lessonTutorPath` the server sends, and its `UnitLevel` the
 
 ### 3.7 Type-level divergences
 
-- Two `ExemplarSettings`. `types.ts` declares the messages required;
+- Fixed. Two `ExemplarSettings`. `types.ts` declared the messages required;
   `ProgressManager` imports core's, where they are optional because the
-  server omits them. The package's own definition is dead and contradicts the
-  one in use.
+  server omits them. `types.ts` now re-exports core's.
 - Fixed. `Validation` and `Condition` had no schema in core, and
   `LevelPropertiesBaseSchema` did not list `validations`: passthrough kept
   the raw value, but `useLevelProperties().validations` was `unknown`. Core
@@ -339,23 +341,31 @@ gained the `lessonTutorPath` the server sends, and its `UnitLevel` the
   now typed `UnitProgressDefinition`.
 - `queryUserProgress` was typed `ProgressThunkAction` (void) although callers
   need the promise. Fixed: it returns `Promise<UserProgressResponse>`.
-- `ViewTypes` and `ReviewStates` lack `as const`, so `ViewType` widens to
-  `string`.
-- `NumberedLevelFields.lastTimestamp?: string` against
-  `UnitProgress.lastTimestamp: number | undefined`.
+- Fixed. `ViewTypes` and `ReviewStates` lacked `as const`, so `ViewType`
+  widened to `string`.
+- Fixed. `NumberedLevelFields.lastTimestamp?: string` against
+  `UnitProgress.lastTimestamp: number | undefined`; both are numbers now,
+  as the server sends seconds.
 - `levelWithProgress` fixes an apps typo (`ids?.includes[currentLevelId]`
   became `ids?.includes(currentLevelId)`). This is a behaviour change: a level
   whose inactive ids include the current level is now marked current.
-  Probably the intended behaviour; it is untested, and apps still has the
+  Probably the intended behaviour, and now tested; apps still has the
   typo.
+- Fixed. `processedLevel` never set `isUnplugged`, which apps derives from
+  `display_as_unplugged` and `getIconForLevel` reads. Core's level carries
+  it as `displayAsUnplugged`; `processedLevel` now maps it.
 - `processedLessons` set `hidden: false` where apps strips the field. Fixed:
   it omits `hidden`, as apps does.
-- `progressSlice` is annotated `Slice<ProgressState>`, which widens its name
-  to `string`. `MockStore` keys state by slice name, so the derived
-  `RootState` is `{[x: string]: ProgressState}` rather than
-  `{progress: ProgressState}`: `state.progress` type-checks, and so does any
-  other key. Dropping the annotation needs a check that the inferred slice
-  type still emits a portable declaration.
+- Fixed. `progressSlice` was annotated `Slice<ProgressState>`, which widens
+  its name to `string`. `MockStore` keys state by slice name, so the derived
+  `RootState` was `{[x: string]: ProgressState}` rather than
+  `{progress: ProgressState}`: `state.progress` type-checked, and so did any
+  other key. Dropping the annotation is not enough: the inferred type names
+  an immer internal, TypeScript cannot emit it (TS4023), and vite-plugin-dts
+  silently skipped `dist/redux/progressSlice.d.ts`. The annotation is now
+  `Slice<ProgressState, SliceCaseReducers<ProgressState>, 'progress'>`,
+  which emits and keeps the literal name. A type test pins
+  `ProgressRootState['progress']`.
 
 ### 3.8 Conventions
 
@@ -379,27 +389,49 @@ gained the `lessonTutorPath` the server sends, and its `UnitLevel` the
   `submitted` was already sent as a string and is unchanged. This is read
   from the controller, not observed against a running server.
 
-- `package.json` has `"type": "module"` (conventions: do not add; it breaks
-  the `apps/` webpack consumer) and `"version": "0.1.0"` (conventions:
-  `0.0.0`). `lodash`, `react-redux` and `@reduxjs/toolkit` sit in
-  `dependencies`; conventions want externalized deps in `peerDependencies`
-  plus `devDependencies`. `users` places `@reduxjs/toolkit` the same way, so
-  the precedent is mixed.
-- `README.md` was the teacher-dashboard README pasted verbatim (replaced
-  alongside this document). `src/README.md` is
-  `apps/src/lab2/progress/README.md` verbatim, apps-only pointers included.
+- Fixed. `package.json` had `"type": "module"` (conventions: do not add; it
+  breaks the `apps/` webpack consumer) and `"version": "0.1.0"`
+  (conventions: `0.0.0`); both are gone. `@reduxjs/toolkit` and
+  `react-redux` moved to `peerDependencies`, at core's ranges, plus
+  `devDependencies`. Unlike core, they are not optional: the slice needs
+  them everywhere, and a second copy of `react-redux` would not see the
+  host's store. `lodash` stays in `dependencies`, as core's utility
+  libraries do. `clean-package.config.cjs` pointed `main` at a
+  `dist/index.js` the build never emits; it names `dist/index.cjs` now.
+- Fixed. `README.md` was the teacher-dashboard README pasted verbatim.
+  `src/README.md` was `apps/src/lab2/progress/README.md` verbatim, apps-only
+  pointers included; it is rewritten for this package as
+  `docs/validation.md`.
 - Partial tests. Ported from apps: the `userProgressFromServer`, reducer,
   `getParentLevel`, `nextLevelId`, `getNextLevel`, `levelsForLessonId` and
   `processedLessons` blocks. Apps' three `setViewType` cases all dispatched
   `Instructor` although two are named for students; the port dispatches
   `Participant` there. The peer-review, `levelsByLesson`, `groupedLessons`,
   `progressionsFromLevels`, `lessonExtrasUrl` and `isPerfect` blocks followed
-  with the selectors in 3.5. Apps has
+  with the selectors in 3.5, and `activityUtilsTest.js` and the portable
+  blocks of `progressHelpersTest.js` with the helpers in 3.9. Apps has
   `progressReduxTest.js` (2074 lines: reducers, selectors,
   `userProgressFromServer`, peer reviews, bubble-choice navigation),
   `activityUtilsTest.js`, `progressHelpersTest.js` and
   `TestResultValidatorTest.ts`. All are portable to vitest and would have
   caught 3.1 items 1 through 5.
+
+### 3.9 Helpers not ported
+
+Fixed. The port took only the parsing helpers of
+`apps/src/templates/progress/progressHelpers.js`. The rest of its pure
+helpers are now in `src/progressHelpers.ts`: `lessonLocked`,
+`getIconForLevel`, `isLevelAssessment`, `isLevelStatusCompleted`,
+`lessonIsAllAssessment`, `lessonHasLevels`, `commentLeft`,
+`studentNeedsFeedback`, `shouldShowReviewStates`, `lessonProgressForSection`
+and `processServerSectionProgress`. They serve progress bubbles and the
+teacher progress tables; they live here for the reason the selectors do.
+
+Not ported: `lessonIsVisible`, `lessonIsLockedForUser` and
+`lessonIsLockedForAllStudents`. They read the hidden-lesson, lesson-lock and
+teacher-section slices, none of which exists under `frontend/`; they belong
+with whichever package brings those slices, as do `setVerified` and
+`authorizeLockable` (3.3).
 
 ## 4. Level validation for legacy (non-Lab2) labs
 
@@ -443,6 +475,11 @@ branch and the README says so until it is made.
 - Each package file diffed against its apps source at the branch point
   (merge-base 3b34a28d6db, 2026-09-08). The apps originals have not changed on
   `origin/staging` since, so the divergences above are the port's, not drift.
+- Rechecked after rebasing onto `origin/staging` (2026-09-28): the apps
+  progress code is still unchanged. `ActivitiesController#milestone` now
+  also records anonymous users' progress and time spent (#74939, #75173),
+  identified by a request cookie; the client sends nothing new, so the port
+  needs no change.
 - The GET-with-body failure reproduced with `new Request(...)` under Node 22.
 - Server contracts read from `ActivitiesController#milestone`,
   `ApiController#user_progress`, `UsersHelper#summarize_user_progress` and
@@ -472,7 +509,7 @@ branch and the README says so until it is made.
    `Validation` and `Condition` schemas, so labs stop narrowing `unknown`.
 7. Done. Decide the scope of the selectors in 3.5 (level page only, or
    overview too) and port accordingly. All of them are here; see 3.5.
-8. Clean the manifest per `docs/conventions/packages.md`, delete the
+8. Done. Clean the manifest per `docs/conventions/packages.md`, delete the
    duplicate `ExemplarSettings`, add `as const` to `ViewTypes` and
    `ReviewStates`, replace `src/README.md`.
 9. Decide whether legacy milestone reporting (section 4) is in scope. If it
