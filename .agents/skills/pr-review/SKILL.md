@@ -67,7 +67,14 @@ thorough and running it twice wastes the budget you need for Phase 3.
 Hold back `--comment` and `--fix` — both act on the raw, unranked list, which
 is the list you are about to re-rank.
 
-## Phase 3 — verify, then classify
+## Phase 3 — triage, verify, classify
+
+`/code-review` does not rate severity; it ranks findings most-severe first.
+Triage first: from each finding's summary and failure scenario alone,
+without investigating, estimate its severity on the Tunables scale. Send
+the clearly-LOW ones straight to LOW as one-liners marked "not
+investigated" and skip the rest of this phase for them. When in doubt,
+keep the finding.
 
 Verify yourself, in this context, every finding whose severity could be
 CRITICAL or HIGH: read the code, run the query, check the CI log, check the
@@ -75,9 +82,11 @@ branch actually under review. Findings sourced from an agent's summary get
 downgraded or dropped when the mechanism doesn't hold up, and stating a
 blocker that dissolves under one question costs more than omitting it.
 
-Then classify each surviving finding. This is the only place severity and
-probability are judged; later sections use these values, not fresh
-judgment. `/code-review`'s ranking does not carry over.
+Then classify each finding that survives, whether or not the PR is part of
+a stack. The triage estimate is provisional; this is where severity and
+probability are set, and later sections use these values, not fresh
+judgment. `/code-review`'s ranking
+does not carry over.
 
 - **scenario** — what has to be true for it to fire.
 - **impact** — what goes wrong in that scenario.
@@ -97,6 +106,17 @@ judgment. `/code-review`'s ranking does not carry over.
   firing is unlikely to fire this week.
 - **probability** — for CURRENT issues, HIGH, MEDIUM, or LOW chance it
   fires under today's code and config. LATENT for latent issues.
+- **recommendation** — one of:
+  1. fix before merge.
+  2. document before merge — for a severe latent issue that cannot easily
+     be guarded against or eliminated. Put the note where the engineer who
+     would trigger it will read it: a comment at the call site, or the
+     subsystem's README.
+  3. track for follow-up, with a deadline: "before the new path becomes
+     the default", "before launch". Where to track it — a code TODO, a
+     Jira ticket, the author's own list — is the team's call; say which
+     fits. No deadline, no follow-up: pick 1, 2, or 4.
+  4. fine to leave.
 
 ## Phase 4 — the report
 
@@ -132,6 +152,7 @@ Omit the section if there was no prior review.
 *Probability:* HIGH | MEDIUM | LOW | LATENT
 *Impact:* what goes wrong when it does.
 *Severity:* CRITICAL | HIGH | MEDIUM | LOW
+*Recommendation:* fix | document | follow up by <deadline> | leave
 
 ## MEDIUM
 ## LOW
@@ -139,27 +160,14 @@ Omit the section if there was no prior review.
 ## Questions
 ```
 
-Every finding carries the same four fields; in LOW, put them on one line.
-Don't pad LOW and don't argue for its items.
+Every classified finding carries the same five fields; in LOW, put them
+on one line. Triaged-out findings follow at the bottom of LOW, one line
+each, no fields. Don't pad LOW and don't argue for its items.
 
 Description findings are classified like any other. A body that tells the
 next reviewer not to look at a file the PR changes on the default path is
 severity HIGH: the scenario is this review, the impact is an unreviewed
 change shipping.
-
-When the PR is one step in a stack, or when the caller asks for it, add the
-merge-gating axis alongside the buckets:
-
-1. must fix before merge,
-2. document before merge — for a severe latent issue that cannot easily be
-   guarded against or eliminated. Put the note where the engineer who would
-   trigger it will read it: a comment at the call site, or the subsystem's
-   README.
-3. track for follow-up, with a deadline: "before the new path becomes the
-   default", "before launch". Where to track it — a code TODO, a Jira
-   ticket, the author's own list — is the team's call; say which fits. No
-   deadline, no follow-up: the item goes to 1, 2, or 4.
-4. fine to leave.
 
 ### `--comment` and `--fix`
 
