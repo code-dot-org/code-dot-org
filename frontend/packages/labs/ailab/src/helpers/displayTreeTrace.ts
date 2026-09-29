@@ -17,13 +17,11 @@ export interface DisplayTreeStep {
 }
 
 export interface DisplayTreeTrace {
-  // Node ids from the root to the answer.
   path: string[];
   steps: DisplayTreeStep[];
   prediction: string | number;
 }
 
-// The model's splits pick each branch, so the path is the route predict took.
 export function traceDisplayTree(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,

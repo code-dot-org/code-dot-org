@@ -47,7 +47,6 @@ export interface DisplayTreeContext {
   labelColumn: string;
 }
 
-// Nodes have no id. Layout and trace build the same id from branch positions.
 export const DISPLAY_TREE_ROOT_ID = '0';
 
 export function getChildNodeId(parentId: string, branchIndex: number): string {

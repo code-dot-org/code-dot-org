@@ -1,4 +1,3 @@
-/* Trains on a shipped dataset through the real store, as a level does. */
 import fs from 'fs';
 import path from 'path';
 
@@ -24,7 +23,6 @@ import train from '../../src/train';
 
 const DIR = path.join(__dirname, '../../public/datasets');
 
-// Every column except the label is a feature unless `features` names them.
 export function trainDataset(
   id,
   {label, features, mode = {trainer: 'decisionTree'}} = {},
@@ -61,7 +59,6 @@ export function trainDataset(
   return store.getState();
 }
 
-// Every row as the numbers the model reads.
 export function modelInputs(state) {
   return state.data.map(row =>
     state.selectedFeatures.map(feature =>
@@ -70,7 +67,6 @@ export function modelInputs(state) {
   );
 }
 
-// The model's own prediction for every row, as label values.
 export function modelPredictions(state) {
   const labelKey = state.featureNumberKey[state.labelColumn];
   return state.trainedModel
@@ -80,7 +76,6 @@ export function modelPredictions(state) {
     );
 }
 
-// The trace of every row, as a prediction of that row would give.
 export function rowTraces(state) {
   const tree = getDisplayTree(state);
   const {root} = state.trainedModel.toJSON();

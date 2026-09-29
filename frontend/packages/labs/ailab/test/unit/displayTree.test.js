@@ -3,8 +3,7 @@ import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
 
 import {modelPredictions, rowTraces, trainDataset} from './trainedDataset';
 
-// Follows the branch labels alone, as a student reading the tree would.
-function route(node, row) {
+function routeByLabels(node, row) {
   const path = ['0'];
   while (node.type === 'question') {
     const [left, right] = node.branches;
@@ -39,7 +38,7 @@ describe('getDisplayTree on shipped datasets', () => {
 
       expect(tree).toBeDefined();
       expect(countQuestions(tree)).toBeGreaterThan(0);
-      expect(state.data.map(row => route(tree, row))).toEqual(
+      expect(state.data.map(row => routeByLabels(tree, row))).toEqual(
         traces.map(trace => trace.path),
       );
       expect(traces.map(trace => trace.prediction)).toEqual(

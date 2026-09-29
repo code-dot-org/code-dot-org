@@ -64,7 +64,6 @@ describe('traceDisplayTree', () => {
     distribution[classCode] = 1;
     return {distribution: [distribution]};
   };
-  // Legs codes: '4' is 0, '0' is 1, '2' is 2 and '6' is 3.
   const legsModel = {
     name: 'DTClassifier',
     root: {
