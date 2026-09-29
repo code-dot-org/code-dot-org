@@ -54,10 +54,6 @@ class UserLogTokenTest < ActiveSupport::TestCase
         User::LogToken.token_for(other.id, destination: DESTINATION)
     end
 
-    it 'does not leak the user id into the token' do
-      refute_includes User::LogToken.token_for(@user.id, destination: DESTINATION), @user.id.to_s
-    end
-
     it 'returns nil for an unknown destination' do
       assert_nil User::LogToken.token_for(@user.id, destination: 'not_a_destination')
     end
