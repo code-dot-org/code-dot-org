@@ -66,16 +66,16 @@ const NavigationArea: FunctionComponent<NavigationAreaProps> = ({
     disableEditRunForSubmission,
   } = levelProperties;
   const hasValidationConditions = useAppSelector(
-    state => state.lab.validationState?.hasConditions,
+    state => state.progress.validationState?.hasConditions,
   );
   const validationMessage = useAppSelector(
-    state => state.lab.validationState?.message,
+    state => state.progress.validationState?.message,
   );
   const validationIndex = useAppSelector(
-    state => state.lab.validationState?.index,
+    state => state.progress.validationState?.index,
   );
   const validationSatisfied = useAppSelector(
-    state => state.lab.validationState?.satisfied,
+    state => state.progress.validationState?.satisfied,
   );
   const hasNextLevel = useAppSelector(
     state => nextLevelId(state) !== undefined,

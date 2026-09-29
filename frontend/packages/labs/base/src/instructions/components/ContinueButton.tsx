@@ -1,9 +1,9 @@
 import type {FunctionComponent} from 'react';
 
 import {Button, type ButtonProps} from '@code-dot-org/component-library/button';
+import {continueOrFinishLesson} from '@code-dot-org/progress/redux';
 
-import continueOrFinishLesson from '../../progress/continueOrFinishLesson';
-import {useAppDispatch} from '../../redux/store';
+import {useAppDispatch, useAppSelector} from '../../redux/store';
 
 import WithConditionalTooltip from './WithConditionalTooltip';
 
@@ -27,6 +27,7 @@ const ContinueButton: FunctionComponent<ContinueButtonProps> = ({
   ...buttonProps
 }) => {
   const dispatch = useAppDispatch();
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
 
   // Show tooltip when button is disabled AND we have a message.
   const shouldShowTooltip = !!disabled && !!tooltipMessage;
@@ -40,17 +41,17 @@ const ContinueButton: FunctionComponent<ContinueButtonProps> = ({
       <WithConditionalTooltip
         showTooltip={shouldShowTooltip}
         tooltipProps={{
-          text: tooltipMessage || '',
-          direction: 'onTop',
-          tooltipId: 'continue-button-tooltip',
-          size: 'xs',
+          title: tooltipMessage || '',
+          id: 'continue-button-tooltip',
         }}
       >
         <Button
           id="instructions-continue-button"
           onClick={() => {
             onContinue?.();
-            dispatch(continueOrFinishLesson());
+            if (levelProperties) {
+              dispatch(continueOrFinishLesson(levelProperties));
+            }
           }}
           disabled={disabled}
           size={'s'}

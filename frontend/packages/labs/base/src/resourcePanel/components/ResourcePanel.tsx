@@ -1,3 +1,4 @@
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import type {FunctionComponent, ReactNode} from 'react';
 import {useEffect, useMemo, useState, useCallback, useRef} from 'react';
@@ -5,7 +6,6 @@ import {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 //import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {
@@ -202,7 +202,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
 
   const levelId = instructionsProps.levelProperties.id;
   const hasValidationConditions = useAppSelector(
-    state => state.lab.validationState?.hasConditions,
+    state => state.progress.validationState?.hasConditions,
   );
   //const levelName = instructionsProps.levelProperties.name;
   //const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -475,16 +475,15 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
               will still be available for users to access the settings panel, etc.
             */}
               {isProjectLevel && hasTabs && (
-                <WithTooltip
-                  tooltipProps={{
-                    text: isStandaloneCollapsed ? 'Expand' : 'Collapse',
-                    tooltipId: 'tooltip-collapse',
-                    direction: 'onRight',
-                    size: 'xs',
-                    'data-theme': theme,
+                <Tooltip
+                  id="tooltip-collapse"
+                  title={isStandaloneCollapsed ? 'Expand' : 'Collapse'}
+                  placement="right"
+                  leaveDelay={hideTooltipDelayMs}
+                  disableInteractive
+                  slotProps={{
+                    tooltip: {...(theme ? {'data-theme': theme} : {})},
                   }}
-                  hideDelayMs={hideTooltipDelayMs}
-                  hideOnFirstLeave={true}
                 >
                   <Button
                     className={styles.resourcePanelButton}
@@ -508,21 +507,20 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                     type={'tertiary'}
                     aria-label={isStandaloneCollapsed ? 'Expand' : 'Collapse'}
                   />
-                </WithTooltip>
+                </Tooltip>
               )}
             </div>
             <nav id={resourcePanelTabsElementId} className={styles.tabs}>
               {getTypedKeys(availableTabs).map(tab => (
-                <WithTooltip
-                  tooltipProps={{
-                    text: tabInfo[tab].title,
-                    tooltipId: `tooltip-${tab}`,
-                    direction: 'onRight',
-                    size: 'xs',
-                    'data-theme': theme,
+                <Tooltip
+                  id={`tooltip-${tab}`}
+                  title={tabInfo[tab].title}
+                  placement="right"
+                  leaveDelay={hideTooltipDelayMs}
+                  disableInteractive
+                  slotProps={{
+                    tooltip: {...(theme ? {'data-theme': theme} : {})},
                   }}
-                  hideDelayMs={hideTooltipDelayMs}
-                  hideOnFirstLeave={true}
                   key={`tooltip-${tab}`}
                 >
                   <div id={`resource-panel-tab-${tab}`}>
@@ -547,7 +545,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                       aria-label={tabInfo[tab].title}
                     />
                   </div>
-                </WithTooltip>
+                </Tooltip>
               ))}
             </nav>
           </div>
@@ -564,7 +562,6 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                 icon={{iconName: 'book', iconStyle: 'solid'}}
                 type="tertiary"
                 color="gray"
-                tooltipSize="xs"
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
@@ -580,7 +577,6 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                 icon={{iconName: 'gear'}}
                 type="tertiary"
                 color="gray"
-                tooltipSize="xs"
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}

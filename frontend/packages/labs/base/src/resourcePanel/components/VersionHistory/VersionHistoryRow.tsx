@@ -1,10 +1,10 @@
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import type {FunctionComponent, PropsWithChildren} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {BodyFourText} from '@code-dot-org/component-library/typography';
 
 import {INITIAL_VERSION_ID} from '../../../constants';
@@ -115,35 +115,33 @@ const VersionHistoryRow: FunctionComponent<
             />
           )}
           {isAiSaveComment && !showRestoreButton && (
-            <WithTooltip
-              tooltipProps={{
-                text: 'AI Version Save',
-                size: 's',
-                tooltipId: `${versionId}-ai-saved-tooltip`,
-                direction: 'onBottom',
-              }}
+            <Tooltip
+              id={`${versionId}-ai-saved-tooltip`}
+              title="AI Version Save"
+              placement="bottom"
             >
-              <FontAwesomeV6Icon
-                iconFamily="kit"
-                iconName="ai-head-solid"
-                className={moduleStyles.aiSaveIcon}
-              />
-            </WithTooltip>
+              <span role="img" aria-label="AI Version Save">
+                <FontAwesomeV6Icon
+                  iconFamily="kit"
+                  iconName="ai-head-solid"
+                  className={moduleStyles.aiSaveIcon}
+                />
+              </span>
+            </Tooltip>
           )}
           {showAutoSavedIcon && !showRestoreButton && (
-            <WithTooltip
-              tooltipProps={{
-                text: 'Autosaved version',
-                size: 's',
-                tooltipId: `${versionId}-autosaved-tooltip`,
-                direction: 'onBottom',
-              }}
+            <Tooltip
+              id={`${versionId}-autosaved-tooltip`}
+              title="Autosaved version"
+              placement="bottom"
             >
-              <FontAwesomeV6Icon
-                iconName={'cloud-check'}
-                className={moduleStyles.autoSavedIcon}
-              />
-            </WithTooltip>
+              <span role="img" aria-label="Autosaved version">
+                <FontAwesomeV6Icon
+                  iconName={'cloud-check'}
+                  className={moduleStyles.autoSavedIcon}
+                />
+              </span>
+            </Tooltip>
           )}
         </div>
         {children}

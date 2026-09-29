@@ -14,6 +14,7 @@ import DialogViews from '../dialogs/DialogViews';
 import {useAppDispatch} from '../redux/store';
 
 import ErrorBoundary from './ErrorBoundary';
+import LabProgress from './LabProgress';
 import Loading from './Loading';
 import LoadingOverlay from './LoadingOverlay';
 
@@ -138,15 +139,18 @@ const Lab = ({
                 levelId={Number(levelId ?? NaN)}
                 levelPropertiesMap={levelPropertiesMap ?? {}}
               >
-                {/* Manages the shared lab dialogs (Start Over, Skip, Share, …);
-                  without it `useDialogControl().showDialog` is a no-op. */}
-                <DialogControlProvider dialogViews={DialogViews}>
-                  {/* Provides browser text-to-speech availability to the
-                    instructions' TextToSpeech buttons. */}
-                  <BrowserTextToSpeechWrapper>
-                    {labContent}
-                  </BrowserTextToSpeechWrapper>
-                </DialogControlProvider>
+                {/* Validates the level and reports its progress. */}
+                <LabProgress>
+                  {/* Manages the shared lab dialogs (Start Over, Skip, Share, …);
+                    without it `useDialogControl().showDialog` is a no-op. */}
+                  <DialogControlProvider dialogViews={DialogViews}>
+                    {/* Provides browser text-to-speech availability to the
+                      instructions' TextToSpeech buttons. */}
+                    <BrowserTextToSpeechWrapper>
+                      {labContent}
+                    </BrowserTextToSpeechWrapper>
+                  </DialogControlProvider>
+                </LabProgress>
               </LevelPropertiesProvider>
             </ExtraLinksButtonProvider>
           </ThemeProvider>

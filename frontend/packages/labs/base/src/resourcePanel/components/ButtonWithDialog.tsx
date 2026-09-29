@@ -1,8 +1,8 @@
+import {Tooltip} from '@mui/material';
 import type {FunctionComponent, ReactNode} from 'react';
 
 import {Button, type ButtonProps} from '@code-dot-org/component-library/button';
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import styles from './styles.module.scss';
 
@@ -32,16 +32,13 @@ const ButtonWithDialog: FunctionComponent<ButtonWithDialogProps> = ({
 
   return (
     <>
-      <WithTooltip
-        tooltipProps={{
-          text: text,
-          tooltipId: `tooltip-${id}`,
-          direction: 'onRight',
-          size: 'xs',
-          'data-theme': theme,
-        }}
-        hideDelayMs={hideTooltipDelayMs}
-        hideOnFirstLeave={true}
+      <Tooltip
+        id={`tooltip-${id}`}
+        title={text}
+        placement="right"
+        leaveDelay={hideTooltipDelayMs}
+        disableInteractive
+        slotProps={{tooltip: {...(theme ? {'data-theme': theme} : {})}}}
       >
         <Button
           className={styles.bottomButton}
@@ -54,7 +51,7 @@ const ButtonWithDialog: FunctionComponent<ButtonWithDialogProps> = ({
           aria-label={ariaLabel}
           size={buttonSize}
         />
-      </WithTooltip>
+      </Tooltip>
       {Dialog}
     </>
   );

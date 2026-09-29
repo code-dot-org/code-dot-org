@@ -29,7 +29,7 @@ const ValidationButton: FunctionComponent<ValidationButtonProps> = ({
   buttonType = 'secondary',
 }) => {
   const hasConditions = useAppSelector(
-    state => state.lab.validationState?.hasConditions,
+    state => state.progress.validationState?.hasConditions,
   );
   if (!hasConditions) {
     return null;
