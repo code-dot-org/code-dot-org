@@ -1,0 +1,1180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generator prompts aichat assembles the same prompt 1`] = `
+"You are helping a curriculum author build an "AI Chat" level using the
+"Explore" preset.
+Free-form chat with a persona-driven bot. Everything hidden; the system prompt sets the bot identity.
+
+Assume a middle-school student unless the description below names a
+different grade band. Produce:
+  - longInstructions: STUB only. Format as a single literal \`TODOs:\`
+    line followed by 4-8 markdown bullets, each bare content (no
+    \`TODO:\` prefix on the bullet). The curriculum author writes
+    student-facing prose later.
+  - systemPrompt: a real, runnable prompt that defines the bot's persona,
+    knowledge, and refusal rules for this level. This is the bot itself —
+    NOT a stub.
+  - levelSystemPrompt: hidden safety/scope rules appended to systemPrompt.
+    The same stub format is acceptable here (TODOs: header + bare
+    bullets); the curriculum author will tune.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Unit context — this level sits inside the unit "UNIT NAME". Use it for broad continuity (audience/grade, recurring themes, tone, arc)
+but build only the specific level described below:
+UNIT OUTLINE
+
+Lesson context (this level is one piece of a larger lesson — keep
+continuity with prior steps, but only build the specific level
+described below):
+LESSON OUTLINE
+
+Preceding levels in this lesson, in order. Use them for continuity
+— recurring persona, callbacks, building on earlier discussions —
+but do NOT restate them; only build the level described last:
+PRECEDING LEVELS
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts ailab assembles the same prompt 1`] = `
+"You are helping a curriculum author build an "AI Lab" level. AI Lab
+walks a student through a fixed machine-learning pipeline: pick a
+dataset, look at the data, pick features, train a model, evaluate
+accuracy, optionally save the model. The author scopes each level by
+choosing a dataset, hiding the screens the level does not need, and
+optionally setting an accuracy threshold.
+
+Assume a middle-school student unless the description below names a
+different grade band. Produce three things:
+  1. A STUB outline (\`longInstructions\`) — a single literal \`TODOs:\`
+     line followed by 4-8 markdown bullets, each bare content (no
+     \`TODO:\` prefix on the bullet — the header sets the context once).
+     No polished student-facing copy; the curriculum author writes the
+     final prose later.
+  2. A \`mode\` blob: dataset id + hide-screen toggles + optional
+     requireAccuracy. Hide every screen that is not the focus of this
+     level. Pick toy datasets (suffix \`_toy\`) only when the level is
+     about exploring a contrived example; otherwise prefer a real
+     dataset whose subject matches the description.
+  3. \`dynamicInstructions\`: one entry per pipeline screen. For
+     screens visible in this level, write a single \`TODO:\` stub. For
+     hidden screens, leave the value as an empty string.
+
+Available datasets (id: display name):
+  - dataset-a: Dataset A
+  - dataset-b: Dataset B
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Unit context — this level sits inside the unit "UNIT NAME". Use it for broad continuity (audience/grade, recurring themes, tone, arc)
+but build only the specific level described below:
+UNIT OUTLINE
+
+Lesson context (this level is one piece of a larger lesson — keep
+continuity with prior steps, but only build the specific level
+described below):
+LESSON OUTLINE
+
+Preceding levels in this lesson, in order. Use them for continuity
+— same dataset across levels, escalating accuracy requirements,
+reusing a worked example — but do NOT restate them; only build
+the level described last:
+PRECEDING LEVELS
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts bubbleChoice assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Bubble Choice" level: a
+picker page where the student sees a set of bubbles (each a thumbnail
+image + one-line teaser) and chooses one to open. You are writing the
+PARENT's own copy plus per-bubble teasers and image prompts. The
+actual content behind each bubble will be generated separately as its
+own level.
+
+Produce:
+  - displayName: 2-6 word title shown at the top of the picker.
+  - description: 1-3 short markdown paragraphs framing the choice
+    for the student. Real student-facing prose (not a stub).
+  - sublevels: EXACTLY one entry per input member below, in the same
+    order. Each entry has displayName (2-5 word Title Case title shown
+    on the bubble; do not echo the internal level name),
+    bubbleChoiceDescription (a one-sentence teaser, real copy, ~8-16
+    words), and thumbnailPrompt (an image subject description for the
+    bubble's thumbnail, no embedded text).
+
+Sublevel members (in order):
+  1. m-a: MEMBER A
+  2. m-b: MEMBER B
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Unit context — this level sits inside the unit "UNIT NAME". Use it for broad continuity but only produce the parent picker:
+UNIT OUTLINE
+
+Lesson context — the lesson outline the curriculum author wrote:
+LESSON OUTLINE
+
+Preceding levels in this lesson. Use them for continuity but do
+NOT restate them:
+PRECEDING LEVELS
+
+Parent description: PARENT DESCRIPTION"
+`;
+
+exports[`generator prompts codebridgeExemplar assembles the same prompt 1`] = `
+"You are writing the teacher-facing EXEMPLAR solution for a Web Lab 2
+level. The student sees the starter files below; their task is the
+level description below. Produce a complete, working solution that
+satisfies the description. Use the SAME file names as the starter
+(do not add new files unless the description requires them); keep
+the same languages, libraries, and structure.
+
+Constraints:
+  - CONSTRAINT
+  - Replace placeholder content with a real, working implementation.
+  - Keep it minimal — a model solution, not a portfolio piece. The
+    teacher uses this to check their own work or demo to students.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Starter files:
+=== index.html ===
+<h1>hi</h1>
+
+Level description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts freeResponse assembles the same prompt 1`] = `
+"You are helping a curriculum author build a free-response assessment
+level: the student reads a prompt and types a written answer. Output
+STUB content the author will rewrite — terse placeholders that get
+the structure right so the level is runnable as soon as it lands,
+not polished prose.
+
+Produce:
+  - question: 1-3 sentence prompt markdown. Placeholder prose.
+  - placeholder: one short clause shown inside the empty response box.
+  - solution: teacher-only markdown — a brief sample strong response
+    plus 1-3 look-fors for reviewing answers.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Lesson context (keep continuity, but only build this assessment):
+LESSON OUTLINE
+
+Preceding levels in this lesson. Reference what the student just
+did when writing the prompt:
+PRECEDING LEVELS
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts importPlan assembles the same prompt 1`] = `
+"You are converting a curriculum team's lesson planning document into
+level cards for the code.org lesson generator. The document defines
+the levels; your job is to interpret it, not to redesign it.
+
+The document's level list is CANONICAL: emit exactly one card per
+level, in document order. Do not add, remove, merge, or reorder
+levels, and do not invent panels, assessments, or vocabulary
+treatments the document does not contain.
+
+Rules:
+  - labType is one of "panels", "weblab2", "pythonlab", "ailab", "aichat", "sketchlab", "multi", "match", "freeResponse", "bubbleChoice".
+    Document type names map as: "Panels" is panels, "Web Lab 2" is weblab2, "Python Lab" is pythonlab, "AI Lab" is ailab, "AI Chat" is aichat, "Sketch Lab" is sketchlab, "Multiple Choice" is multi, "Matching" is match, "Free Response" is freeResponse, "Bubble Choice" is bubbleChoice. When a type has no
+    supported equivalent, leave the level out and list its heading in
+    \`unsupported\`.
+  - Lettered level groups (5a, 5b, 5c, …) are choice groups: emit ONE
+    bubbleChoice card for the group, with one sublevel per lettered
+    option and a parent description stating the choice offered. A lone
+    lettered level is a regular level.
+    Sublevel labType is one of "panels", "weblab2", "pythonlab", "ailab", "aichat", "sketchlab".
+  - Code the document attaches to a "weblab2", "pythonlab" level or option goes in that item's suppliedCode, VERBATIM. Code
+    attached to any other lab type goes in its description as a fenced
+    block.
+  - weblab2 levels that build one app across several steps share a
+    templateGroup; independent projects get none.
+  - Screenshot placeholders and images cannot be imported; where one
+    clearly carries content, note what it showed in the description.
+
+Lesson: LESSON NAME
+
+Document:
+DOCUMENT TEXT"
+`;
+
+exports[`generator prompts lessonOutline assembles the same prompt 1`] = `
+"You are helping a curriculum author plan a single lesson for a CS
+class. Assume a middle-school audience unless the outline below names
+a different grade band or target audience, in which case follow the
+outline. Break the outline below into a sequence of levels that, in
+order, take the student through the learning experience: 2 to 8 levels, or up to 12 where the course drafting rules below demand it.
+Each level is one of:
+  - Panels: a short comic-strip-like sequence used for narrative, introduction,
+    framing, or summarising. No coding.
+  - Weblab2: a hands-on HTML/CSS/JS exercise where the student edits starter
+    code.
+  - Pythonlab: a hands-on Python exercise where the student edits starter code and
+    runs it in the browser (console output, input(), and matplotlib
+    work; no network or third-party packages). Use for text/console
+    programming practice — not for building web pages.
+  - Ailab: a guided ML pipeline where the student picks a dataset, picks
+    features, trains a model, and inspects accuracy. Use this only when
+    the lesson is about data, machine learning, bias in data, or model
+    evaluation — not for general coding.
+  - Aichat: a chat-with-an-LLM level. Pick a preset via aichatPreset: "explore"
+    for free-form chat with a persona bot, "tutor" for a skill-guiding
+    bot, "evaluation" for a bot that evaluates the student's work,
+    "domainExpert" for a subject-constrained bot, "botBuilder" when the
+    student designs their own bot.
+  - Sketchlab: an open-ended drawing / annotation level on a blank canvas. Use for
+    diagramming, marking-up, or free-form visual reflection. Content
+    will be a STUB: only the instructions are generated, the sketch
+    canvas itself is left blank for the student to draw.
+  - Multi: a multiple-choice question. Use as a quick check-for-understanding
+    after a concept has been introduced. Content will be a STUB the
+    curriculum author rewrites.
+  - Match: a matching exercise. Use to connect related concepts, terms-to-
+    definitions, etc. Content will be a STUB.
+  - FreeResponse: a written-response prompt the student answers in a text box. Use
+    for reflection, prediction, or explain-your-thinking checks where
+    a fixed answer set would not fit. Content will be a STUB the
+    curriculum author rewrites.
+  - BubbleChoice: a picker page where the student picks one of 2-6 sublevel
+    activities to try. Use when the lesson wants to offer parallel
+    options (e.g. "pick a project theme") rather than a single linear
+    step. REQUIRED: emit a \`sublevels\` array with 2-6 entries in the
+    order the student sees them.
+    Sublevel labType is limited to "panels", "weblab2", "pythonlab", "ailab", "aichat", "sketchlab".
+
+Choose Panels for explanation/narrative, Weblab2 for web-coding practice, Pythonlab for Python-coding practice, Ailab for ML pipeline practice, Aichat for talking-to-AI practice, Sketchlab for drawing / annotation exercises, Multi for short formative assessments, Match for short formative assessments, FreeResponse for written reflection / open-ended assessment, BubbleChoice for student choice between parallel activities. A typical lesson alternates: Panels intro
+-> practice -> assessment -> Panels reflection, but you can deviate
+when the outline asks. Never open with an assessment — pair it with a
+concept the student has already seen.
+
+Course drafting rules — course-specific rules for choosing and
+patterning levels. Where they conflict with the general guidance
+above, these rules win:
+DRAFTING RULES
+
+Unit context — this lesson sits inside the unit "UNIT NAME". Keep the level sequence consistent with the unit's arc (including its intended audience/grade), but
+only plan levels for the specific lesson outline below:
+UNIT OUTLINE
+
+Target project — the final app the lesson is building toward.
+Plan the weblab2 levels as milestones on the path from blank to
+this code (introducing one or two concepts per level, in an
+order that yields a runnable intermediate at each step). Pick
+panels that motivate or recap the concepts the target uses. The
+student never sees this code; do not paste it into any
+description — just let it shape the progression.
+TARGET PROJECT
+
+Outline: LESSON OUTLINE"
+`;
+
+exports[`generator prompts match assembles the same prompt 1`] = `
+"You are helping a curriculum author build a matching assessment level.
+Output STUB content the author will rewrite — terse, generic
+placeholders that get the structure right so the level is runnable as
+soon as it lands, not polished prose.
+
+Produce:
+  - markdown: 1-3 short lines of instruction text shown above the
+    matching grid. Placeholder prose.
+  - pairs: 3-6 question/answer pairs. The student drags each answer
+    to its matching question; the order is randomized for them.
+  - longInstructions: optional hints for the author. When set, format
+    as a single literal \`TODOs:\` line followed by bare-content bullets.
+    May be empty.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Lesson context (keep continuity, but only build this assessment):
+LESSON OUTLINE
+
+Preceding levels in this lesson. Reference what the student just
+did when writing the pairs:
+PRECEDING LEVELS
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts multi assembles the same prompt 1`] = `
+"You are helping a curriculum author build a multiple-choice assessment
+level. Output STUB content the author will rewrite — terse, generic
+placeholders that get the structure right so the level is runnable as
+soon as it lands, not polished prose.
+
+Produce:
+  - question: 1-2 sentence question text. Placeholder prose.
+  - answers: 3-5 short answer choices, exactly one marked correct.
+    Distractors should be plausibly wrong (related to the topic), not
+    nonsense.
+  - longInstructions: optional hints for the author. When set, format
+    as a single literal \`TODOs:\` line followed by bare-content bullets.
+    May be empty.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Lesson context (keep continuity, but only build this assessment):
+LESSON OUTLINE
+
+Preceding levels in this lesson. Reference what the student just
+did when writing the question:
+PRECEDING LEVELS
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts panels assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Panels" level: a short,
+comic-strip-style sequence of full-width panels with overlay text.
+The level description follows. Plan a sequence of panels (3 to 6 by
+default; if the description names a specific count or range, honor
+that) that, in order, conveys the intent of the description. Assume a
+middle-school classroom unless the description names a different grade
+band or audience, in which case follow it. Each panel needs short
+overlay text (1-3 sentences, markdown allowed) and an image prompt for
+a single 16:9 illustration with no embedded text.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Unit context — this level sits inside the unit "UNIT NAME". Use it for broad continuity (audience/grade, recurring themes, tone, arc)
+but build only the specific level described below:
+UNIT OUTLINE
+
+Lesson context (this level is one piece of a larger lesson — keep
+tone, characters, and continuity consistent with this outline,
+but only produce content for the specific level description below):
+LESSON OUTLINE
+
+Preceding levels in this lesson, in order. Use them for continuity
+— recurring characters, callbacks, building on earlier setups —
+but do NOT regenerate or summarize them; only build the level
+described last:
+PRECEDING LEVELS
+
+Target project — the final app the lesson builds toward.
+Adjacent Web Lab 2 levels work toward this code, so these panels
+should motivate, foreshadow, or recap concepts that show up in
+it. The student never sees the code itself; use it as background
+so your story lands on relevant ideas. Do not paste code into
+panel text.
+TARGET PROJECT
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts pythonlab assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Python Lab" level: a
+small Python program that a student will edit and run in the browser.
+Assume a middle-school student unless the description below names a
+different grade band or audience, in which case follow it. Based on
+the description below, produce two things:
+  1. A STUB outline for the student-facing instructions. Format as a
+     single literal \`TODOs:\` line followed by 4-8 markdown bullets,
+     each bare content (no \`TODO:\` prefix on the bullet — the header
+     sets the context once). Name files the student touches and the
+     moves they make. Do NOT write polished student-facing copy — the
+     curriculum author writes that later. No other headings, no
+     paragraphs.
+  2. Starter files the student will edit. Always include main.py (the
+     entry point). Add extra .py modules or .csv/.txt/.json data files
+     only when the description calls for them. Keep total content
+     under a few kilobytes per file.
+
+Runtime constraints:
+  - Python 3 standard library only — no third-party packages except
+  -   matplotlib, and no network access.
+  - Console I/O: print() output and blocking input() calls both work.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Supplied code — the curriculum author provided this code for the
+level. Treat it as canonical: reproduce it verbatim in the starter
+files (choose file names for unlabeled snippets), add only what is
+needed to make the project runnable, and write the instruction stub
+around it.
+SUPPLIED CODE
+
+Unit context — this level sits inside the unit "UNIT NAME". Use it for broad continuity (audience/grade, recurring themes, tone, arc)
+but build only the specific level described below:
+UNIT OUTLINE
+
+Lesson context (this level is one piece of a larger lesson — keep
+continuity with prior steps, but only build the specific level
+described below):
+LESSON OUTLINE
+
+Preceding levels in this lesson, in order. Use them for continuity
+— building on the same code, reusing characters or examples — but
+do NOT restate them; only build the level described last:
+PRECEDING LEVELS
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts sketchlab assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Sketch Lab" level: an
+open-ended drawing / annotation exercise where the student draws on a
+blank canvas. Assume a middle-school audience unless the description
+below names a different grade band, in which case follow it.
+
+Emit ONE thing: a STUB outline for the student-facing instructions.
+Format as a single literal \`TODOs:\` line followed by 4-8 markdown
+bullets, each bare content (no \`TODO:\` prefix on the bullet — the
+header sets the context once). Name what the student should draw or
+annotate. Do NOT write polished student-facing copy — the curriculum
+author writes that later. No other headings, no paragraphs.
+
+The sketch canvas is intentionally left blank; do not describe
+starter shapes or images.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Unit context — this level sits inside the unit "UNIT NAME". Use it for broad continuity (audience/grade, recurring themes, tone, arc)
+but build only the specific level described below:
+UNIT OUTLINE
+
+Lesson context (this level is one piece of a larger lesson — keep
+continuity with prior steps, but only build the specific level
+described below):
+LESSON OUTLINE
+
+Preceding levels in this lesson, in order. Use them for continuity
+— building on the same concepts, reusing characters or examples —
+but do NOT restate them; only build the level described last:
+PRECEDING LEVELS
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts slide assembles the same prompt 1`] = `
+"You are helping a curriculum author build a single intro slide
+shown to students BEFORE a CS lesson begins. The slide is a
+Panels-app panel: one 16:9 illustration with a markdown text
+overlay. The slide should set context, motivation, or framing —
+never walk through a solution.
+
+Unit context — this lesson sits inside the unit "UNIT NAME". Use it for broad framing (audience, arc, recurring themes):
+UNIT OUTLINE
+
+Lesson outline (the levelbuilder typed this for the lesson as
+a whole; match its tone and the concepts it names):
+LESSON OUTLINE
+
+Slides outline (the levelbuilder typed this when planning the
+whole slide deck — match the audience, depth, vocabulary, and
+tone it implies; do not soften technical content if the
+outline asks for it):
+SLIDES OUTLINE
+
+Preceding slides in this deck, in order. Use them for continuity
+— consistent imagery, callbacks, building on prior framing — but
+do NOT regenerate or summarize them; only build the slide
+described last:
+PRECEDING SLIDES
+
+For the supplied slide description, return:
+  - text: markdown to overlay. Match the audience and depth from
+    the outline above. If the description names specific syntax,
+    tags, or terminology, name them in the text too rather than
+    paraphrasing them away.
+  - imagePrompt: a prompt for a single 16:9 illustration with NO
+    embedded text. The narrative text is the overlay; the image is
+    the picture.
+  - layout: where the text overlay sits.
+  - teacherNote: a short note for the teacher only — prep tips,
+    misconceptions to anticipate, classroom prompts, or what to
+    emphasise before showing this slide. Never shown to students.
+
+Slide description: SLIDE DESCRIPTION"
+`;
+
+exports[`generator prompts slidesOutline assembles the same prompt 1`] = `
+"You are helping a curriculum author plan a sequence of intro slides
+shown to students BEFORE they begin a CS lesson. The slides set up
+context — what the lesson is about, why it matters, and what concept
+or technique the students are about to practice. They must NOT walk
+through the solution to any level; they should leave students with
+curiosity and enough framing to engage productively.
+
+Each slide will be implemented as a single Panels-app panel (one
+16:9 illustration + text overlay). Plan 1 to 20 slides; default
+to 3-6 unless the outline below asks for more.
+
+Audience and tone: the unit may be aimed at any grade range, from
+elementary to high school or beyond. Read the outlines below for
+the levelbuilder's intent and match them. If no outline is provided,
+infer the level from the lesson content; do not assume any
+specific grade.
+
+Lesson: LESSON NAME
+
+Unit context — this lesson sits inside the unit "UNIT NAME". Use it for broad framing (audience, arc, recurring themes)
+but the deck itself is about the specific lesson below:
+UNIT OUTLINE
+
+Lesson outline (the levelbuilder typed this when planning the
+lesson's own levels — match its tone and the concepts it names
+when framing the intro deck):
+LESSON OUTLINE
+
+Slides outline (the levelbuilder typed this specifically for
+this deck; match its audience, depth, vocabulary, and tone —
+do not soften technical content if the outline asks for it):
+SLIDES OUTLINE
+
+Lesson level content (the existing generated levels of this
+lesson, in order). Use these to understand what the student
+is about to do so the slides can set the stage without
+spoiling solutions:
+LEVEL CONTENTS
+
+IMPORTANT — what each \`description\` should look like:
+Write each description in the curriculum author's voice, as a brief
+plan for the slide. The levelbuilder will scan a list of these on a
+page and decide whether each slide belongs; they are NOT what the
+student will read. The actual student-facing panel text is generated
+by a downstream AI call from this description — leave that to it.
+
+Good description shape:
+  - "Introduce why HTML structure matters; set up the contrast
+     between unstructured text and well-organized markup. Mention
+     the tags the lesson will cover: <h1>, <p>, <ul>."
+  - "Show what happens without alt text on an image. Set up the
+     accessibility motivation for the <img> attributes coming up."
+
+Bad description shape (do NOT do this — these read like the slide
+itself, not a plan for it):
+  - "Imagine a webpage with just plain text — no pictures, no...”
+  - "Have you ever wondered how websites organize their content?"
+
+Use imperative ("Introduce…", "Show…", "Frame…") or third-person
+("The slide presents…"). Never second-person student narration
+("you", "imagine", "have you ever"). 2-5 sentences. Name specific
+syntax or terminology you want carried into the slide text."
+`;
+
+exports[`generator prompts weblab2 assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Web Lab 2" level: a
+small, self-contained website that a student will edit. Assume a
+middle-school student unless the description below names a different
+grade band or audience, in which case follow it. Based on the
+description below, produce two things:
+  1. A STUB outline for the student-facing instructions. Format as a
+     single literal \`TODOs:\` line followed by 4-8 markdown bullets,
+     each bare content (no \`TODO:\` prefix on the bullet — the header
+     sets the context once). Name files the student touches and the
+     moves they make. Do NOT write polished student-facing copy — the
+     curriculum author writes that later. No other headings, no
+     paragraphs.
+  2. Starter files (HTML / CSS / JS) the student will edit. Always
+     include an index.html. Keep total content under a few kilobytes
+     per file. Do not include external script or stylesheet links —
+     everything should be local. Use a flat layout (one root folder)
+     by default; introduce subfolders only if the description asks
+     for them. Express subfolders as a \`/\` in the file name (e.g.
+     "css/style.css"). Honor any explicit file count or layout the
+     description specifies.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Supplied code — the curriculum author provided this code for the
+level. Treat it as canonical: reproduce it verbatim in the starter
+files (choose file names for unlabeled snippets), add only what is
+needed to make the project runnable, and write the instruction stub
+around it.
+SUPPLIED CODE
+
+Unit context — this level sits inside the unit "UNIT NAME". Use it for broad continuity (audience/grade, recurring themes, tone, arc)
+but build only the specific level described below:
+UNIT OUTLINE
+
+Lesson context (this level is one piece of a larger lesson — keep
+continuity with prior steps, but only build the specific level
+described below):
+LESSON OUTLINE
+
+Preceding levels in this lesson, in order. Use them for continuity
+— building on the same code, reusing characters or examples — but
+do NOT restate them; only build the level described last:
+PRECEDING LEVELS
+
+Target project — the final state the lesson is building toward.
+The student will reach something like this by the last weblab2
+level. Use it as a destination: pick file structure, library
+choices, naming, and idiom from it so the lesson reads as one
+coherent build. But DO NOT just emit this verbatim — this level
+should be a step along the way, partial relative to the final
+goal. Where the description and target disagree, the description
+wins (it scopes this specific level).
+TARGET PROJECT
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts weblab2Template assembles the same prompt 1`] = `
+"You are writing the SHARED STARTER FILES for a group of Web Lab 2
+levels in a single lesson. Each member level adds on top of these
+files; the student opens the same project across multiple levels and
+extends it. Your job is to produce files that:
+  - support every member level (every member can begin its task
+    without first having to recreate scaffolding)
+  - do NOT solve any single member level (e.g. if member 3 says
+    "add a navbar", do not include a navbar)
+  - keep total content under a few kilobytes per file
+  - stay flat (one root folder) unless a member explicitly asks for
+    subfolders; subfolders go as forward-slash segments in the name
+    (e.g. "css/style.css")
+  - always include index.html; add style.css and/or script.js only
+    if the member tasks suggest the student will need them
+  - have no external script or stylesheet links
+
+Members in this group:
+  1. m-a: MEMBER A
+     Code the author supplied for this member; include it
+     verbatim in the shared files it belongs to:
+MEMBER A CODE
+  2. m-b: MEMBER B
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Unit context — the lesson sits inside the unit "UNIT NAME". Use it for broad continuity:
+UNIT OUTLINE
+
+Lesson context — the lesson outline the curriculum author wrote:
+LESSON OUTLINE
+
+Target project — the final app the lesson is building toward.
+Use the file structure and idiom as a hint for how to scaffold
+the template:
+TARGET PROJECT"
+`;
+
+exports[`generator prompts weblab2TemplateBacked assembles the same prompt 1`] = `
+"You are writing the STUB student-facing instructions for a Web Lab 2
+level that shares its starter files with other levels in the lesson.
+The student already has the template files below open; this level
+asks them to do one specific thing on top of those files. Format as a
+single literal \`TODOs:\` line followed by 4-8 markdown bullets, each
+bare content (no \`TODO:\` prefix on the bullet). Name the files the
+student touches and the moves they make. Do NOT write polished prose;
+the curriculum author writes that later. No other headings.
+
+Course authoring rules — hard constraints on the content you
+generate. Where they conflict with the general guidance above,
+these rules win:
+AUTHORING RULES
+
+Code the author supplied for this level. It is already in the
+shared template above; write the instructions around it rather
+than asking the student to retype it:
+SUPPLIED CODE
+
+Shared template files (already open in the student's editor):
+=== index.html ===
+<h1>hi</h1>
+
+Lesson context — the lesson outline the curriculum author wrote:
+LESSON OUTLINE
+
+Preceding levels in this lesson. Reference what the student
+already did when listing the TODOs:
+PRECEDING LEVELS
+
+Level description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent aichat assembles the same prompt 1`] = `
+"You are helping a curriculum author build an "AI Chat" level using the
+"Explore" preset.
+Free-form chat with a persona-driven bot. Everything hidden; the system prompt sets the bot identity.
+
+Assume a middle-school student unless the description below names a
+different grade band. Produce:
+  - longInstructions: STUB only. Format as a single literal \`TODOs:\`
+    line followed by 4-8 markdown bullets, each bare content (no
+    \`TODO:\` prefix on the bullet). The curriculum author writes
+    student-facing prose later.
+  - systemPrompt: a real, runnable prompt that defines the bot's persona,
+    knowledge, and refusal rules for this level. This is the bot itself —
+    NOT a stub.
+  - levelSystemPrompt: hidden safety/scope rules appended to systemPrompt.
+    The same stub format is acceptable here (TODOs: header + bare
+    bullets); the curriculum author will tune.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent ailab assembles the same prompt 1`] = `
+"You are helping a curriculum author build an "AI Lab" level. AI Lab
+walks a student through a fixed machine-learning pipeline: pick a
+dataset, look at the data, pick features, train a model, evaluate
+accuracy, optionally save the model. The author scopes each level by
+choosing a dataset, hiding the screens the level does not need, and
+optionally setting an accuracy threshold.
+
+Assume a middle-school student unless the description below names a
+different grade band. Produce three things:
+  1. A STUB outline (\`longInstructions\`) — a single literal \`TODOs:\`
+     line followed by 4-8 markdown bullets, each bare content (no
+     \`TODO:\` prefix on the bullet — the header sets the context once).
+     No polished student-facing copy; the curriculum author writes the
+     final prose later.
+  2. A \`mode\` blob: dataset id + hide-screen toggles + optional
+     requireAccuracy. Hide every screen that is not the focus of this
+     level. Pick toy datasets (suffix \`_toy\`) only when the level is
+     about exploring a contrived example; otherwise prefer a real
+     dataset whose subject matches the description.
+  3. \`dynamicInstructions\`: one entry per pipeline screen. For
+     screens visible in this level, write a single \`TODO:\` stub. For
+     hidden screens, leave the value as an empty string.
+
+Available datasets (id: display name):
+  - dataset-a: Dataset A
+  - dataset-b: Dataset B
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent bubbleChoice assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Bubble Choice" level: a
+picker page where the student sees a set of bubbles (each a thumbnail
+image + one-line teaser) and chooses one to open. You are writing the
+PARENT's own copy plus per-bubble teasers and image prompts. The
+actual content behind each bubble will be generated separately as its
+own level.
+
+Produce:
+  - displayName: 2-6 word title shown at the top of the picker.
+  - description: 1-3 short markdown paragraphs framing the choice
+    for the student. Real student-facing prose (not a stub).
+  - sublevels: EXACTLY one entry per input member below, in the same
+    order. Each entry has displayName (2-5 word Title Case title shown
+    on the bubble; do not echo the internal level name),
+    bubbleChoiceDescription (a one-sentence teaser, real copy, ~8-16
+    words), and thumbnailPrompt (an image subject description for the
+    bubble's thumbnail, no embedded text).
+
+Sublevel members (in order):
+  1. m-a: MEMBER A
+  2. m-b: MEMBER B
+
+Parent description: PARENT DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent codebridgeExemplar assembles the same prompt 1`] = `
+"You are writing the teacher-facing EXEMPLAR solution for a Web Lab 2
+level. The student sees the starter files below; their task is the
+level description below. Produce a complete, working solution that
+satisfies the description. Use the SAME file names as the starter
+(do not add new files unless the description requires them); keep
+the same languages, libraries, and structure.
+
+Constraints:
+  - CONSTRAINT
+  - Replace placeholder content with a real, working implementation.
+  - Keep it minimal — a model solution, not a portfolio piece. The
+    teacher uses this to check their own work or demo to students.
+
+Starter files:
+=== index.html ===
+<h1>hi</h1>
+
+Level description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent freeResponse assembles the same prompt 1`] = `
+"You are helping a curriculum author build a free-response assessment
+level: the student reads a prompt and types a written answer. Output
+STUB content the author will rewrite — terse placeholders that get
+the structure right so the level is runnable as soon as it lands,
+not polished prose.
+
+Produce:
+  - question: 1-3 sentence prompt markdown. Placeholder prose.
+  - placeholder: one short clause shown inside the empty response box.
+  - solution: teacher-only markdown — a brief sample strong response
+    plus 1-3 look-fors for reviewing answers.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent importPlan assembles the same prompt 1`] = `
+"You are converting a curriculum team's lesson planning document into
+level cards for the code.org lesson generator. The document defines
+the levels; your job is to interpret it, not to redesign it.
+
+The document's level list is CANONICAL: emit exactly one card per
+level, in document order. Do not add, remove, merge, or reorder
+levels, and do not invent panels, assessments, or vocabulary
+treatments the document does not contain.
+
+Rules:
+  - labType is one of "panels", "weblab2", "pythonlab", "ailab", "aichat", "sketchlab", "multi", "match", "freeResponse", "bubbleChoice".
+    Document type names map as: "Panels" is panels, "Web Lab 2" is weblab2, "Python Lab" is pythonlab, "AI Lab" is ailab, "AI Chat" is aichat, "Sketch Lab" is sketchlab, "Multiple Choice" is multi, "Matching" is match, "Free Response" is freeResponse, "Bubble Choice" is bubbleChoice. When a type has no
+    supported equivalent, leave the level out and list its heading in
+    \`unsupported\`.
+  - Lettered level groups (5a, 5b, 5c, …) are choice groups: emit ONE
+    bubbleChoice card for the group, with one sublevel per lettered
+    option and a parent description stating the choice offered. A lone
+    lettered level is a regular level.
+    Sublevel labType is one of "panels", "weblab2", "pythonlab", "ailab", "aichat", "sketchlab".
+  - Code the document attaches to a "weblab2", "pythonlab" level or option goes in that item's suppliedCode, VERBATIM. Code
+    attached to any other lab type goes in its description as a fenced
+    block.
+  - weblab2 levels that build one app across several steps share a
+    templateGroup; independent projects get none.
+  - Screenshot placeholders and images cannot be imported; where one
+    clearly carries content, note what it showed in the description.
+
+Lesson: LESSON NAME
+
+Document:
+DOCUMENT TEXT"
+`;
+
+exports[`generator prompts with every section absent lessonOutline assembles the same prompt 1`] = `
+"You are helping a curriculum author plan a single lesson for a CS
+class. Assume a middle-school audience unless the outline below names
+a different grade band or target audience, in which case follow the
+outline. Break the outline below into a sequence of levels that, in
+order, take the student through the learning experience: 2 to 8 levels.
+Each level is one of:
+  - Panels: a short comic-strip-like sequence used for narrative, introduction,
+    framing, or summarising. No coding.
+  - Weblab2: a hands-on HTML/CSS/JS exercise where the student edits starter
+    code.
+  - Pythonlab: a hands-on Python exercise where the student edits starter code and
+    runs it in the browser (console output, input(), and matplotlib
+    work; no network or third-party packages). Use for text/console
+    programming practice — not for building web pages.
+  - Ailab: a guided ML pipeline where the student picks a dataset, picks
+    features, trains a model, and inspects accuracy. Use this only when
+    the lesson is about data, machine learning, bias in data, or model
+    evaluation — not for general coding.
+  - Aichat: a chat-with-an-LLM level. Pick a preset via aichatPreset: "explore"
+    for free-form chat with a persona bot, "tutor" for a skill-guiding
+    bot, "evaluation" for a bot that evaluates the student's work,
+    "domainExpert" for a subject-constrained bot, "botBuilder" when the
+    student designs their own bot.
+  - Sketchlab: an open-ended drawing / annotation level on a blank canvas. Use for
+    diagramming, marking-up, or free-form visual reflection. Content
+    will be a STUB: only the instructions are generated, the sketch
+    canvas itself is left blank for the student to draw.
+  - Multi: a multiple-choice question. Use as a quick check-for-understanding
+    after a concept has been introduced. Content will be a STUB the
+    curriculum author rewrites.
+  - Match: a matching exercise. Use to connect related concepts, terms-to-
+    definitions, etc. Content will be a STUB.
+  - FreeResponse: a written-response prompt the student answers in a text box. Use
+    for reflection, prediction, or explain-your-thinking checks where
+    a fixed answer set would not fit. Content will be a STUB the
+    curriculum author rewrites.
+  - BubbleChoice: a picker page where the student picks one of 2-6 sublevel
+    activities to try. Use when the lesson wants to offer parallel
+    options (e.g. "pick a project theme") rather than a single linear
+    step. REQUIRED: emit a \`sublevels\` array with 2-6 entries in the
+    order the student sees them.
+    Sublevel labType is limited to "panels", "weblab2", "pythonlab", "ailab", "aichat", "sketchlab".
+
+Choose Panels for explanation/narrative, Weblab2 for web-coding practice, Pythonlab for Python-coding practice, Ailab for ML pipeline practice, Aichat for talking-to-AI practice, Sketchlab for drawing / annotation exercises, Multi for short formative assessments, Match for short formative assessments, FreeResponse for written reflection / open-ended assessment, BubbleChoice for student choice between parallel activities. A typical lesson alternates: Panels intro
+-> practice -> assessment -> Panels reflection, but you can deviate
+when the outline asks. Never open with an assessment — pair it with a
+concept the student has already seen.
+
+Outline: "
+`;
+
+exports[`generator prompts with every section absent match assembles the same prompt 1`] = `
+"You are helping a curriculum author build a matching assessment level.
+Output STUB content the author will rewrite — terse, generic
+placeholders that get the structure right so the level is runnable as
+soon as it lands, not polished prose.
+
+Produce:
+  - markdown: 1-3 short lines of instruction text shown above the
+    matching grid. Placeholder prose.
+  - pairs: 3-6 question/answer pairs. The student drags each answer
+    to its matching question; the order is randomized for them.
+  - longInstructions: optional hints for the author. When set, format
+    as a single literal \`TODOs:\` line followed by bare-content bullets.
+    May be empty.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent multi assembles the same prompt 1`] = `
+"You are helping a curriculum author build a multiple-choice assessment
+level. Output STUB content the author will rewrite — terse, generic
+placeholders that get the structure right so the level is runnable as
+soon as it lands, not polished prose.
+
+Produce:
+  - question: 1-2 sentence question text. Placeholder prose.
+  - answers: 3-5 short answer choices, exactly one marked correct.
+    Distractors should be plausibly wrong (related to the topic), not
+    nonsense.
+  - longInstructions: optional hints for the author. When set, format
+    as a single literal \`TODOs:\` line followed by bare-content bullets.
+    May be empty.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent panels assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Panels" level: a short,
+comic-strip-style sequence of full-width panels with overlay text.
+The level description follows. Plan a sequence of panels (3 to 6 by
+default; if the description names a specific count or range, honor
+that) that, in order, conveys the intent of the description. Assume a
+middle-school classroom unless the description names a different grade
+band or audience, in which case follow it. Each panel needs short
+overlay text (1-3 sentences, markdown allowed) and an image prompt for
+a single 16:9 illustration with no embedded text.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent pythonlab assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Python Lab" level: a
+small Python program that a student will edit and run in the browser.
+Assume a middle-school student unless the description below names a
+different grade band or audience, in which case follow it. Based on
+the description below, produce two things:
+  1. A STUB outline for the student-facing instructions. Format as a
+     single literal \`TODOs:\` line followed by 4-8 markdown bullets,
+     each bare content (no \`TODO:\` prefix on the bullet — the header
+     sets the context once). Name files the student touches and the
+     moves they make. Do NOT write polished student-facing copy — the
+     curriculum author writes that later. No other headings, no
+     paragraphs.
+  2. Starter files the student will edit. Always include main.py (the
+     entry point). Add extra .py modules or .csv/.txt/.json data files
+     only when the description calls for them. Keep total content
+     under a few kilobytes per file.
+
+Runtime constraints:
+  - Python 3 standard library only — no third-party packages except
+  -   matplotlib, and no network access.
+  - Console I/O: print() output and blocking input() calls both work.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent sketchlab assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Sketch Lab" level: an
+open-ended drawing / annotation exercise where the student draws on a
+blank canvas. Assume a middle-school audience unless the description
+below names a different grade band, in which case follow it.
+
+Emit ONE thing: a STUB outline for the student-facing instructions.
+Format as a single literal \`TODOs:\` line followed by 4-8 markdown
+bullets, each bare content (no \`TODO:\` prefix on the bullet — the
+header sets the context once). Name what the student should draw or
+annotate. Do NOT write polished student-facing copy — the curriculum
+author writes that later. No other headings, no paragraphs.
+
+The sketch canvas is intentionally left blank; do not describe
+starter shapes or images.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent slide assembles the same prompt 1`] = `
+"You are helping a curriculum author build a single intro slide
+shown to students BEFORE a CS lesson begins. The slide is a
+Panels-app panel: one 16:9 illustration with a markdown text
+overlay. The slide should set context, motivation, or framing —
+never walk through a solution.
+
+Slides outline (the levelbuilder typed this when planning the
+whole slide deck — match the audience, depth, vocabulary, and
+tone it implies; do not soften technical content if the
+outline asks for it):
+SLIDES OUTLINE
+
+Preceding slides in this deck, in order. Use them for continuity
+— consistent imagery, callbacks, building on prior framing — but
+do NOT regenerate or summarize them; only build the slide
+described last:
+PRECEDING SLIDES
+
+For the supplied slide description, return:
+  - text: markdown to overlay. Match the audience and depth from
+    the outline above. If the description names specific syntax,
+    tags, or terminology, name them in the text too rather than
+    paraphrasing them away.
+  - imagePrompt: a prompt for a single 16:9 illustration with NO
+    embedded text. The narrative text is the overlay; the image is
+    the picture.
+  - layout: where the text overlay sits.
+  - teacherNote: a short note for the teacher only — prep tips,
+    misconceptions to anticipate, classroom prompts, or what to
+    emphasise before showing this slide. Never shown to students.
+
+Slide description: SLIDE DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent slidesOutline assembles the same prompt 1`] = `
+"You are helping a curriculum author plan a sequence of intro slides
+shown to students BEFORE they begin a CS lesson. The slides set up
+context — what the lesson is about, why it matters, and what concept
+or technique the students are about to practice. They must NOT walk
+through the solution to any level; they should leave students with
+curiosity and enough framing to engage productively.
+
+Each slide will be implemented as a single Panels-app panel (one
+16:9 illustration + text overlay). Plan 1 to 20 slides; default
+to 3-6 unless the outline below asks for more.
+
+Audience and tone: the unit may be aimed at any grade range, from
+elementary to high school or beyond. Read the outlines below for
+the levelbuilder's intent and match them. If no outline is provided,
+infer the level from the lesson content; do not assume any
+specific grade.
+
+Lesson: LESSON NAME
+
+Slides outline (the levelbuilder typed this specifically for
+this deck; match its audience, depth, vocabulary, and tone —
+do not soften technical content if the outline asks for it):
+SLIDES OUTLINE
+
+Lesson level content (the existing generated levels of this
+lesson, in order). Use these to understand what the student
+is about to do so the slides can set the stage without
+spoiling solutions:
+LEVEL CONTENTS
+
+IMPORTANT — what each \`description\` should look like:
+Write each description in the curriculum author's voice, as a brief
+plan for the slide. The levelbuilder will scan a list of these on a
+page and decide whether each slide belongs; they are NOT what the
+student will read. The actual student-facing panel text is generated
+by a downstream AI call from this description — leave that to it.
+
+Good description shape:
+  - "Introduce why HTML structure matters; set up the contrast
+     between unstructured text and well-organized markup. Mention
+     the tags the lesson will cover: <h1>, <p>, <ul>."
+  - "Show what happens without alt text on an image. Set up the
+     accessibility motivation for the <img> attributes coming up."
+
+Bad description shape (do NOT do this — these read like the slide
+itself, not a plan for it):
+  - "Imagine a webpage with just plain text — no pictures, no...”
+  - "Have you ever wondered how websites organize their content?"
+
+Use imperative ("Introduce…", "Show…", "Frame…") or third-person
+("The slide presents…"). Never second-person student narration
+("you", "imagine", "have you ever"). 2-5 sentences. Name specific
+syntax or terminology you want carried into the slide text."
+`;
+
+exports[`generator prompts with every section absent weblab2 assembles the same prompt 1`] = `
+"You are helping a curriculum author build a "Web Lab 2" level: a
+small, self-contained website that a student will edit. Assume a
+middle-school student unless the description below names a different
+grade band or audience, in which case follow it. Based on the
+description below, produce two things:
+  1. A STUB outline for the student-facing instructions. Format as a
+     single literal \`TODOs:\` line followed by 4-8 markdown bullets,
+     each bare content (no \`TODO:\` prefix on the bullet — the header
+     sets the context once). Name files the student touches and the
+     moves they make. Do NOT write polished student-facing copy — the
+     curriculum author writes that later. No other headings, no
+     paragraphs.
+  2. Starter files (HTML / CSS / JS) the student will edit. Always
+     include an index.html. Keep total content under a few kilobytes
+     per file. Do not include external script or stylesheet links —
+     everything should be local. Use a flat layout (one root folder)
+     by default; introduce subfolders only if the description asks
+     for them. Express subfolders as a \`/\` in the file name (e.g.
+     "css/style.css"). Honor any explicit file count or layout the
+     description specifies.
+
+Description: LEVEL DESCRIPTION"
+`;
+
+exports[`generator prompts with every section absent weblab2Template assembles the same prompt 1`] = `
+"You are writing the SHARED STARTER FILES for a group of Web Lab 2
+levels in a single lesson. Each member level adds on top of these
+files; the student opens the same project across multiple levels and
+extends it. Your job is to produce files that:
+  - support every member level (every member can begin its task
+    without first having to recreate scaffolding)
+  - do NOT solve any single member level (e.g. if member 3 says
+    "add a navbar", do not include a navbar)
+  - keep total content under a few kilobytes per file
+  - stay flat (one root folder) unless a member explicitly asks for
+    subfolders; subfolders go as forward-slash segments in the name
+    (e.g. "css/style.css")
+  - always include index.html; add style.css and/or script.js only
+    if the member tasks suggest the student will need them
+  - have no external script or stylesheet links
+
+Members in this group:
+  1. m-a: MEMBER A
+     Code the author supplied for this member; include it
+     verbatim in the shared files it belongs to:
+MEMBER A CODE
+  2. m-b: MEMBER B"
+`;
+
+exports[`generator prompts with every section absent weblab2TemplateBacked assembles the same prompt 1`] = `
+"You are writing the STUB student-facing instructions for a Web Lab 2
+level that shares its starter files with other levels in the lesson.
+The student already has the template files below open; this level
+asks them to do one specific thing on top of those files. Format as a
+single literal \`TODOs:\` line followed by 4-8 markdown bullets, each
+bare content (no \`TODO:\` prefix on the bullet). Name the files the
+student touches and the moves they make. Do NOT write polished prose;
+the curriculum author writes that later. No other headings.
+
+Shared template files (already open in the student's editor):
+=== index.html ===
+<h1>hi</h1>
+
+Level description: LEVEL DESCRIPTION"
+`;

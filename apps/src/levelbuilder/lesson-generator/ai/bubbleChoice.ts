@@ -4,7 +4,12 @@ import z from 'zod/v3';
 import {generateText} from '@cdo/apps/aiGateway';
 import {
   authoringRulesLines,
+  LESSON_CONTEXT_OUTLINE,
   LessonContext,
+  lessonContextLines,
+  LevelContext,
+  precedingLevelsLines,
+  unitContextLines,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getImageModel,
@@ -93,12 +98,12 @@ export interface BubbleChoiceGeneration {
 }
 
 export async function generateBubbleChoiceLevel(
-  ctx: LessonContext & {
-    parentLevelName: string;
-    parentDescription: string;
-    members: BubbleChoiceMember[];
-    precedingLevels?: string;
-  }
+  ctx: LessonContext &
+    Pick<LevelContext, 'precedingLevels'> & {
+      parentLevelName: string;
+      parentDescription: string;
+      members: BubbleChoiceMember[];
+    }
 ): Promise<BubbleChoiceGeneration> {
   const memberListing = ctx.members
     .map((m, i) => `  ${i + 1}. ${m.name}: ${m.description}`)
@@ -125,30 +130,14 @@ export async function generateBubbleChoiceLevel(
     'Sublevel members (in order):',
     memberListing,
     ...authoringRulesLines(ctx),
-    ...(ctx.unitOutline
-      ? [
-          '',
-          `Unit context — this level sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Use it for broad continuity but only produce the parent picker:`,
-          ctx.unitOutline,
-        ]
-      : []),
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context — the lesson outline the curriculum author wrote:',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.precedingLevels
-      ? [
-          '',
-          'Preceding levels in this lesson. Use them for continuity but do',
-          'NOT restate them:',
-          ctx.precedingLevels,
-        ]
-      : []),
+    ...unitContextLines(ctx, {
+      use: ['Use it for broad continuity but only produce the parent picker:'],
+    }),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_OUTLINE),
+    ...precedingLevelsLines(ctx, [
+      'Preceding levels in this lesson. Use them for continuity but do',
+      'NOT restate them:',
+    ]),
     '',
     `Parent description: ${ctx.parentDescription}`,
   ].join('\n');

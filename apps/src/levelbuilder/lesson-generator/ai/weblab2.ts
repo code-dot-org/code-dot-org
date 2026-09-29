@@ -5,7 +5,14 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {
   authoringRulesLines,
+  LESSON_CONTEXT_FOR_LEVEL,
+  LESSON_CONTEXT_OUTLINE,
+  lessonContextLines,
   LevelContext,
+  precedingLevelsLines,
+  sectionLines,
+  targetProjectLines,
+  unitContextLines,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
@@ -15,10 +22,11 @@ import {
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
 
 import {
-  CodebridgeGeneration,
   codebridgeFilesSchema,
+  CodebridgeGeneration,
   filesToMultiFileSource,
   generateCodebridgeExemplar,
+  PRECEDING_LEVELS_FOR_CODE,
   SourceFile,
   suppliedCodeLines,
 } from './codebridge';
@@ -87,48 +95,19 @@ export async function generateWeblab2Level(
     '     description specifies.',
     ...authoringRulesLines(ctx),
     ...suppliedCodeLines(ctx),
-    ...(ctx.unitOutline
-      ? [
-          '',
-          `Unit context — this level sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Use it for broad continuity (audience/grade, recurring themes, tone, arc)`,
-          'but build only the specific level described below:',
-          ctx.unitOutline,
-        ]
-      : []),
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context (this level is one piece of a larger lesson — keep',
-          'continuity with prior steps, but only build the specific level',
-          'described below):',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.precedingLevels
-      ? [
-          '',
-          'Preceding levels in this lesson, in order. Use them for continuity',
-          '— building on the same code, reusing characters or examples — but',
-          'do NOT restate them; only build the level described last:',
-          ctx.precedingLevels,
-        ]
-      : []),
-    ...(ctx.targetProject
-      ? [
-          '',
-          'Target project — the final state the lesson is building toward.',
-          'The student will reach something like this by the last weblab2',
-          'level. Use it as a destination: pick file structure, library',
-          'choices, naming, and idiom from it so the lesson reads as one',
-          'coherent build. But DO NOT just emit this verbatim — this level',
-          'should be a step along the way, partial relative to the final',
-          'goal. Where the description and target disagree, the description',
-          'wins (it scopes this specific level).',
-          ctx.targetProject,
-        ]
-      : []),
+    ...unitContextLines(ctx),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_FOR_LEVEL),
+    ...precedingLevelsLines(ctx, PRECEDING_LEVELS_FOR_CODE),
+    ...targetProjectLines(ctx, [
+      'Target project — the final state the lesson is building toward.',
+      'The student will reach something like this by the last weblab2',
+      'level. Use it as a destination: pick file structure, library',
+      'choices, naming, and idiom from it so the lesson reads as one',
+      'coherent build. But DO NOT just emit this verbatim — this level',
+      'should be a step along the way, partial relative to the final',
+      'goal. Where the description and target disagree, the description',
+      'wins (it scopes this specific level).',
+    ]),
     '',
     `Description: ${ctx.levelDescription}`,
   ].join('\n');
@@ -235,31 +214,16 @@ export async function generateWeblab2Template(
     'Members in this group:',
     memberList,
     ...authoringRulesLines(ctx),
-    ...(ctx.unitOutline
-      ? [
-          '',
-          `Unit context — the lesson sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Use it for broad continuity:`,
-          ctx.unitOutline,
-        ]
-      : []),
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context — the lesson outline the curriculum author wrote:',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.targetProject
-      ? [
-          '',
-          'Target project — the final app the lesson is building toward.',
-          'Use the file structure and idiom as a hint for how to scaffold',
-          'the template:',
-          ctx.targetProject,
-        ]
-      : []),
+    ...unitContextLines(ctx, {
+      subject: 'the lesson',
+      use: ['Use it for broad continuity:'],
+    }),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_OUTLINE),
+    ...targetProjectLines(ctx, [
+      'Target project — the final app the lesson is building toward.',
+      'Use the file structure and idiom as a hint for how to scaffold',
+      'the template:',
+    ]),
   ].join('\n');
 
   const logContext = {level: ctx.templateName, subtask: 'template'};
@@ -312,33 +276,22 @@ export async function generateWeblab2TemplateBackedLevel(
     'student touches and the moves they make. Do NOT write polished prose;',
     'the curriculum author writes that later. No other headings.',
     ...authoringRulesLines(ctx),
-    ...(ctx.suppliedCode
-      ? [
-          '',
-          'Code the author supplied for this level. It is already in the',
-          'shared template above; write the instructions around it rather',
-          'than asking the student to retype it:',
-          ctx.suppliedCode,
-        ]
-      : []),
+    ...sectionLines(
+      [
+        'Code the author supplied for this level. It is already in the',
+        'shared template above; write the instructions around it rather',
+        'than asking the student to retype it:',
+      ],
+      ctx.suppliedCode
+    ),
     '',
     "Shared template files (already open in the student's editor):",
     templateListing,
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context — the lesson outline the curriculum author wrote:',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.precedingLevels
-      ? [
-          '',
-          'Preceding levels in this lesson. Reference what the student',
-          'already did when listing the TODOs:',
-          ctx.precedingLevels,
-        ]
-      : []),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_OUTLINE),
+    ...precedingLevelsLines(ctx, [
+      'Preceding levels in this lesson. Reference what the student',
+      'already did when listing the TODOs:',
+    ]),
     '',
     `Level description: ${ctx.levelDescription}`,
   ].join('\n');

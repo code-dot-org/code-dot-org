@@ -3,7 +3,12 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 
-import {SlidesPageContext} from '../../curriculum-generator/ai/context';
+import {
+  lessonContextLines,
+  sectionLines,
+  SlidesPageContext,
+  unitContextLines,
+} from '../../curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -69,45 +74,36 @@ export async function generateSlidesOutline(
     'specific grade.',
     '',
     `Lesson: ${ctx.lessonName}`,
+    ...unitContextLines(ctx, {
+      subject: 'this lesson',
+      use: [
+        'Use it for broad framing (audience, arc, recurring themes)',
+        'but the deck itself is about the specific lesson below:',
+      ],
+    }),
+    ...lessonContextLines(ctx, [
+      'Lesson outline (the levelbuilder typed this when planning the',
+      "lesson's own levels — match its tone and the concepts it names",
+      'when framing the intro deck):',
+    ]),
+    ...sectionLines(
+      [
+        'Slides outline (the levelbuilder typed this specifically for',
+        'this deck; match its audience, depth, vocabulary, and tone —',
+        'do not soften technical content if the outline asks for it):',
+      ],
+      ctx.slidesOutline
+    ),
+    ...sectionLines(
+      [
+        'Lesson level content (the existing generated levels of this',
+        'lesson, in order). Use these to understand what the student',
+        'is about to do so the slides can set the stage without',
+        'spoiling solutions:',
+      ],
+      ctx.levelContents
+    ),
     '',
-    ...(ctx.unitOutline
-      ? [
-          `Unit context — this lesson sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Use it for broad framing (audience, arc, recurring themes)`,
-          'but the deck itself is about the specific lesson below:',
-          ctx.unitOutline,
-          '',
-        ]
-      : []),
-    ...(ctx.lessonOutline
-      ? [
-          'Lesson outline (the levelbuilder typed this when planning the',
-          "lesson's own levels — match its tone and the concepts it names",
-          'when framing the intro deck):',
-          ctx.lessonOutline,
-          '',
-        ]
-      : []),
-    ...(ctx.slidesOutline
-      ? [
-          'Slides outline (the levelbuilder typed this specifically for',
-          'this deck; match its audience, depth, vocabulary, and tone —',
-          'do not soften technical content if the outline asks for it):',
-          ctx.slidesOutline,
-          '',
-        ]
-      : []),
-    ...(ctx.levelContents
-      ? [
-          'Lesson level content (the existing generated levels of this',
-          'lesson, in order). Use these to understand what the student',
-          'is about to do so the slides can set the stage without',
-          'spoiling solutions:',
-          ctx.levelContents,
-          '',
-        ]
-      : []),
     'IMPORTANT — what each `description` should look like:',
     "Write each description in the curriculum author's voice, as a brief",
     'plan for the slide. The levelbuilder will scan a list of these on a',

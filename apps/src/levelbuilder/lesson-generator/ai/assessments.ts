@@ -4,7 +4,10 @@ import z from 'zod/v3';
 import {generateText} from '@cdo/apps/aiGateway';
 import {
   authoringRulesLines,
+  LESSON_CONTEXT_FOR_ASSESSMENT,
+  lessonContextLines,
   LevelContext,
+  precedingLevelsLines,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
@@ -83,21 +86,11 @@ export async function generateMultiLevel(
     '    as a single literal `TODOs:` line followed by bare-content bullets.',
     '    May be empty.',
     ...authoringRulesLines(ctx),
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context (keep continuity, but only build this assessment):',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.precedingLevels
-      ? [
-          '',
-          'Preceding levels in this lesson. Reference what the student just',
-          'did when writing the question:',
-          ctx.precedingLevels,
-        ]
-      : []),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_FOR_ASSESSMENT),
+    ...precedingLevelsLines(ctx, [
+      'Preceding levels in this lesson. Reference what the student just',
+      'did when writing the question:',
+    ]),
     '',
     `Description: ${ctx.levelDescription}`,
   ].join('\n');
@@ -186,21 +179,11 @@ export async function generateMatchLevel(
     '    as a single literal `TODOs:` line followed by bare-content bullets.',
     '    May be empty.',
     ...authoringRulesLines(ctx),
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context (keep continuity, but only build this assessment):',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.precedingLevels
-      ? [
-          '',
-          'Preceding levels in this lesson. Reference what the student just',
-          'did when writing the pairs:',
-          ctx.precedingLevels,
-        ]
-      : []),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_FOR_ASSESSMENT),
+    ...precedingLevelsLines(ctx, [
+      'Preceding levels in this lesson. Reference what the student just',
+      'did when writing the pairs:',
+    ]),
     '',
     `Description: ${ctx.levelDescription}`,
   ].join('\n');
