@@ -13,33 +13,15 @@ to `lab2/`, so `lab2/audioFeedback/heightTone.ts` becomes
 
 ## Layers
 
-| #   | Layer           | Apps files                                                                                                                                                                                                                                    | Status |
-| --- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| 1   | Simulation core | `platformPhysics`, `characterAnimations`, `camera`, `audioFeedback/*`, `ai/images/{keyColor,encoding,types}`                                                                                                                                  | Done   |
-| 2   | Scene model     | `types`, `world`, `imageReferences`, `imageTrim`, `imageGallery`, `imageRoleDefaults`, `levelMode`, `migrateSources`, `worldStartPattern`, `guideSteps`, `sceneToolbox`, `addBlocks`, `paintBlank`, `scenesApi`, `sceneThumbnails`, `redux/*` | Next   |
-| 3   | Blockly         | `blockly/**`                                                                                                                                                                                                                                  |        |
-| 4   | Engine          | `SpriteLab2Engine.js`, and everything under it in `apps/src/p5lab`                                                                                                                                                                            |        |
-| 5   | Views           | `views/**`, `entrypoint.ts`, `index.js`                                                                                                                                                                                                       |        |
-| 6   | AI images       | `ai/images/{imageGeneration,imageSafety,removeBackground,characterSet,imageAdlibs,modelHelpers}`                                                                                                                                              |        |
-| 7   | Scene music     | `sceneMusic`, `musicProjects`, `views/useSceneMusic`, `blockly/musicProjectDropdown`                                                                                                                                                          |        |
-
-### 2. Scene model
-
-`types.ts` is the lab's type hub; nearly every later file imports it. It
-needs frontend homes for four apps types:
-
-- `WorkspaceSerialization`, from `@cdo/apps/blockly/types`.
-- `BlocklyLevelProperties` and `ProjectSources`, from `@cdo/apps/lab2/types`.
-  Core's level-properties and sources schemata cover these.
-- `RGBA`, from `@cdo/apps/pixelEditor/tools`. It is a four-number tuple and
-  can be declared here.
-
-`world.ts` needs `imageReferences.ts`, which reads the value type of apps'
-`cdoFieldAnimationDropdown`; declare that type here until layer 3 ports the
-field. `scenesApi.ts` and `sceneThumbnails.ts` call Rails through apps'
-`HttpClient`; they move to `DashboardApiClient`. `levelMode.ts` reads a
-static manifest, `@cdo/static/spritelab_lab2/imageAdlibManifest.json`, which
-must be copied in or served.
+| #   | Layer           | Apps files                                                                                                                                                                                                                                           | Status |
+| --- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| 1   | Simulation core | `platformPhysics`, `characterAnimations`, `camera`, `audioFeedback/*`, `ai/images/{keyColor,encoding,types}`                                                                                                                                         | Done   |
+| 2   | Scene model     | `types`, `world`, `imageReferences`, `imageTrim`, `imageGallery`, `imageRoleDefaults`, `levelMode`, `worldStartPattern`, `guideSteps`, `sceneToolbox`, `addBlocks`, `scenesApi`, `sceneThumbnails`, `redux/spriteLab2Redux`, `ai/images/imageAdlibs` | Done   |
+| 3   | Blockly         | `blockly/**`, `migrateSources`                                                                                                                                                                                                                       | Next   |
+| 4   | Engine          | `SpriteLab2Engine.js`, `redux/reseedablePageConstants`, and everything under them in `apps/src/p5lab`                                                                                                                                                |        |
+| 5   | Views           | `views/**`, `entrypoint.ts`, `index.js`                                                                                                                                                                                                              |        |
+| 6   | AI images       | `ai/images/{imageGeneration,imageSafety,removeBackground,characterSet,modelHelpers}`, `paintBlank`                                                                                                                                                   |        |
+| 7   | Scene music     | `sceneMusic`, `musicProjects`, `views/useSceneMusic`, `blockly/musicProjectDropdown`                                                                                                                                                                 |        |
 
 ### 3. Blockly
 
@@ -50,6 +32,12 @@ fields) and `cdoFieldAnimationDropdown` (the image pickers). They belong in
 `@code-dot-org/blockly`. `blockly/setup.ts` also loads the legacy Sprite Lab
 blocks, `p5lab/spritelab/blocks`, and `blocksCommon`; those come with the
 engine.
+
+Two pieces of layer 2 wait here. `renameImageReferencesOnWorkspace` and
+`removeImageReferencesOnWorkspace`, from `imageReferences.ts`, find image
+pickers by `instanceof CdoFieldAnimationDropdown`; they return with that
+field. `migrateSources.ts` needs the when-run block types from
+`blockDefinitions/whenRun.ts`.
 
 ### 4. Engine
 
@@ -64,7 +52,8 @@ engine is therefore most of `apps/src/p5lab`:
 | `p5lab/redux/`             | 1,819 |
 | `p5lab/gamelab/`           | 3,097 |
 
-It also needs p5 and p5.play, which no frontend package carries, and
+`redux/reseedablePageConstants.ts` wraps apps' legacy `pageConstants`
+reducer, which only the engine reads. The engine also needs p5 and p5.play, which no frontend package carries, and
 JS-Interpreter through `CustomMarshalingInterpreter`, which
 `@code-dot-org/lab/interpreter` already ports.
 
@@ -79,7 +68,9 @@ design system.
 
 Generation runs through the `ai` SDK, `@ai-sdk/google` and apps'
 `aiGateway`; safety checks use `aichat`'s safety helpers and DCDO. Frontend
-has no AI gateway client yet.
+has no AI gateway client yet. `paintBlank.ts` belongs here too: it needs the
+model's output sizes from `modelHelpers.ts` and `crispScaleFor` from apps'
+`pixelEditor/pixelArt`.
 
 ### 7. Scene music
 
@@ -111,3 +102,21 @@ Layer 1:
 - Tests run under Vitest. `@testing-library/react-hooks` became
   `@testing-library/react`, and type imports are marked `type`, as
   `verbatimModuleSyntax` requires.
+
+Layer 2:
+
+- Apps' `WorkspaceSerialization` became `BlocklySerialization` from
+  `@code-dot-org/blockly`, and `JsonBlockConfig` became Blockly's own
+  `serialization.blocks.State`.
+- `Sources` extends core's `ProjectSources<BlocklySerialization>`;
+  `SpriteLab2LevelProperties` extends `BlocklyLevelProperties` from
+  `@code-dot-org/lab/types`. `RGBA` is declared in `types.ts`.
+- `scenesApi.ts` calls the new `spriteLab` module of `DashboardApiClient`
+  instead of apps' `HttpClient`, and `deleteProjectAsset` calls
+  `assets.remove`. The scene reference type comes from core.
+- `sceneFingerprint` hashes with the `md5` package, as apps' `hashString`
+  does, so fingerprints saved by apps still match.
+- The adlib manifest is copied from `apps/static/spritelab_lab2` into
+  `src/ai/images`.
+- `imageTrim`'s test was JavaScript; its fixtures are now cast to the
+  animation-list type.
