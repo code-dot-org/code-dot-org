@@ -35,6 +35,8 @@
   "modelCardPossibleValuesMinimum": "min",
   "modelCardPossibleValuesMaximum": "max",
   "modelCardFeatures": "Features",
+  "dataDisplayRowCount": "There are {rowCount} rows of data.",
+  "dataDisplayRowCountTruncated": "There are {rowCount} rows of data. (Showing first {rowLimit} rows)",
   "columnInspectorDataType": "Data Type",
   "columnInspectorDescription": "Description",
   "columnDetailsInformation": "Column information",
