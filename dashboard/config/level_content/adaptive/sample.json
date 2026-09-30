@@ -55,25 +55,28 @@
           "kind": "questions",
           "questions": [
             {
-              "id": "intro-what-is-prompt",
-              "type": "multipleChoice",
-              "text": "What is a prompt?",
-              "options": [
-                {"id": "instructions", "label": "Instructions you give an AI", "correct": true},
-                {"id": "website", "label": "A finished website"},
-                {"id": "error", "label": "An error message from the browser"}
-              ]
+              "id": 1,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-what-is-prompt",
+              "stem": "What is a prompt?",
+              "choices": [
+                {"id": "instructions", "text": "Instructions you give an AI"},
+                {"id": "website", "text": "A finished website"},
+                {"id": "error", "text": "An error message from the browser"}
+              ],
+              "correctChoiceId": "instructions"
             },
             {
-              "id": "intro-web-languages",
-              "type": "multipleChoice",
-              "text": "Which of these are used to build web pages? Choose all that apply.",
-              "multiSelect": true,
-              "options": [
-                {"id": "html", "label": "HTML", "correct": true},
-                {"id": "css", "label": "CSS", "correct": true},
-                {"id": "jpeg", "label": "JPEG"}
-              ]
+              "id": 2,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-styling-language",
+              "stem": "Which language styles a web page?",
+              "choices": [
+                {"id": "html", "text": "HTML"},
+                {"id": "css", "text": "CSS"},
+                {"id": "jpeg", "text": "JPEG"}
+              ],
+              "correctChoiceId": "css"
             }
           ]
         }

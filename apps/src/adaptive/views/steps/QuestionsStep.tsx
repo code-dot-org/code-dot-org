@@ -16,7 +16,11 @@ import {
   isPassed,
   reachableThrough,
 } from '../../progress';
-import {Question, QuestionsStep as QuestionsStepContent} from '../../types';
+import {
+  MultipleChoiceQuestion as MultipleChoiceContent,
+  Question,
+  QuestionsStep as QuestionsStepContent,
+} from '../../types';
 
 import MultipleChoiceQuestion, {Feedback} from './MultipleChoiceQuestion';
 import QuestionProgress from './QuestionProgress';
@@ -50,6 +54,9 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   onComplete,
 }) => {
   const [qIndex, setQIndex] = useState(0);
+  const [selectedChoiceId, setSelectedChoiceId] = useState(() =>
+    recordedChoice(step.questions[0], inputs)
+  );
   const [feedback, setFeedback] = useState<Feedback | undefined>();
   // True while the current question plays its exit animation.
   const [exiting, setExiting] = useState(false);
@@ -58,6 +65,9 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   const [navigated, setNavigated] = useState(false);
   const advanceTimer = useRef<ReturnType<typeof setTimeout> | undefined>();
   const exitTimer = useRef<ReturnType<typeof setTimeout> | undefined>();
+  // The exit timer reads the answers as they are when it fires.
+  const inputsRef = useRef(inputs);
+  inputsRef.current = inputs;
 
   const question = step.questions[qIndex];
   const isLast = qIndex >= step.questions.length - 1;
@@ -81,10 +91,13 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
         setExiting(false);
         setFeedback(undefined);
         setNavigated(true);
+        setSelectedChoiceId(
+          recordedChoice(step.questions[target], inputsRef.current)
+        );
         setQIndex(target);
       }, EXIT_TRANSITION_MS);
     },
-    [qIndex, exiting]
+    [qIndex, exiting, step.questions]
   );
 
   const goToNextQuestion = useCallback(() => {
@@ -95,15 +108,17 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     transitionTo(qIndex + 1);
   }, [isLast, onComplete, transitionTo, qIndex]);
 
-  const submit = (chosen: string[]) => {
-    if (question.type !== 'multipleChoice') return;
+  const submit = () => {
+    if (question.type !== 'MultipleChoiceQuestion' || !selectedChoiceId) {
+      return;
+    }
     const previous = inputs[question.id];
     if (isPassed(previous)) {
       goToNextQuestion();
       return;
     }
 
-    const record = answerRecord(step, question, chosen, previous);
+    const record = answerRecord(step, question, selectedChoiceId, previous);
     onAnswer(record);
 
     if (record.outcome === 'incorrect') {
@@ -137,18 +152,31 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           exiting ? styles.questionExit : styles.questionEnter
         }`}
       >
-        {question.type === 'multipleChoice' ? (
-          <MultipleChoiceQuestion
-            question={question}
-            record={inputs[question.id]}
-            feedback={feedback}
-            locked={locked}
-            isLast={isLast}
-            shakeNonce={shakeNonce}
-            focusOnMount={navigated}
-            onSelectionChange={() => setFeedback(undefined)}
-            onSubmit={submit}
-          />
+        {question.type === 'MultipleChoiceQuestion' ? (
+          <>
+            <MultipleChoiceQuestion
+              question={question}
+              selectedChoiceId={selectedChoiceId}
+              onSelectChoice={choiceId => {
+                setSelectedChoiceId(choiceId);
+                setFeedback(undefined);
+              }}
+              verdict={isPassed(inputs[question.id]) ? 'correct' : feedback}
+              disabled={locked || isPassed(inputs[question.id])}
+              shakeNonce={shakeNonce}
+              focusOnMount={navigated}
+            />
+            {isPassed(inputs[question.id]) && (
+              <p className={styles.passedNote}>Answered correctly</p>
+            )}
+            <SubmitButton
+              disabled={!selectedChoiceId}
+              locked={locked}
+              onClick={submit}
+            >
+              {isLast ? 'Finish →' : 'Next →'}
+            </SubmitButton>
+          </>
         ) : (
           <UnportedQuestion
             question={question}
@@ -177,7 +205,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
 };
 
 interface UnportedQuestionProps {
-  question: Question;
+  question: Exclude<Question, MultipleChoiceContent>;
   isLast: boolean;
   locked: boolean;
   focusOnMount: boolean;
@@ -211,5 +239,11 @@ const UnportedQuestion: React.FunctionComponent<UnportedQuestionProps> = ({
     </>
   );
 };
+
+function recordedChoice(question: Question, inputs: StudentInputs) {
+  return question.type === 'MultipleChoiceQuestion'
+    ? inputs[question.id]?.selectedChoiceId ?? null
+    : null;
+}
 
 export default QuestionsStep;

@@ -54,6 +54,12 @@
   }
 }
 
+.passedNote {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-success-primary);
+}
+
 // Holds its height so the card does not jump when feedback appears.
 .feedbackRegion {
   min-height: 32px;

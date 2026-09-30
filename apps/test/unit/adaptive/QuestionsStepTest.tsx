@@ -12,23 +12,29 @@ const step: Step = {
   kind: 'questions',
   questions: [
     {
-      id: 'q1',
-      type: 'multipleChoice',
-      text: 'First question',
-      options: [
-        {id: 'a', label: 'Right', correct: true},
-        {id: 'b', label: 'Wrong'},
+      id: 1,
+      type: 'MultipleChoiceQuestion',
+      questionName: 'first',
+      stem: 'First question',
+      choices: [
+        {id: 'a', text: 'Right'},
+        {id: 'b', text: 'Wrong'},
       ],
+      correctChoiceId: 'a',
+      page: 1,
     },
     {id: 'fr', type: 'freeResponse', text: 'Say something'},
     {
-      id: 'q3',
-      type: 'multipleChoice',
-      text: 'Third question',
-      options: [
-        {id: 'a', label: 'Yes', correct: true},
-        {id: 'b', label: 'No'},
+      id: 3,
+      type: 'MultipleChoiceQuestion',
+      questionName: 'third',
+      stem: 'Third question',
+      choices: [
+        {id: 'a', text: 'Yes'},
+        {id: 'b', text: 'No'},
       ],
+      correctChoiceId: 'a',
+      page: 1,
     },
   ],
 };
@@ -102,9 +108,9 @@ describe('QuestionsStep', () => {
     expect(onAnswer).toHaveBeenCalledTimes(2);
     expect(onAnswer).toHaveBeenLastCalledWith(
       expect.objectContaining({
-        questionId: 'q1',
+        questionId: 1,
         answer: 'Right',
-        optionId: 'a',
+        selectedChoiceId: 'a',
         outcome: 'correct',
         attempts: 2,
       })
@@ -171,12 +177,12 @@ describe('QuestionsStep', () => {
 
   it('makes answered questions reachable on a fresh mount', () => {
     renderStep({
-      q1: {
-        questionId: 'q1',
+      1: {
+        questionId: 1,
         stepId: 'quiz',
         prompt: 'First question',
         answer: 'Right',
-        optionId: 'a',
+        selectedChoiceId: 'a',
         outcome: 'correct',
         attempts: 1,
         at: '2026-09-30T00:00:00.000Z',
