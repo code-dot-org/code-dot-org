@@ -31,3 +31,24 @@
   padding: 0;
   list-style: none;
 }
+
+// The question text on every questions step.
+.questionPrompt {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+
+  // Focused by script when a question appears; ringed only for keyboard use.
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--background-brand-teal-primary);
+    outline-offset: 4px;
+  }
+}

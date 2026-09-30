@@ -1,0 +1,134 @@
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  // Floated, the legend lays out as an ordinary flex item.
+  legend {
+    float: left;
+    width: 100%;
+  }
+}
+
+// Options render as chips in a responsive grid: as many columns as fit
+// at ~210px each, reflowing with the container (a two-option question
+// sits side by side on a laptop, everything stacks on narrow screens).
+// Grid rows keep chips in the same row equal-height.
+.questionOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  width: min(720px, 100%);
+  justify-items: stretch;
+}
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 150ms ease, transform 150ms ease,
+    box-shadow 150ms ease;
+
+  // The input stays in the accessibility tree and keyboard order; the
+  // label is what shows.
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+  }
+
+  &:hover:not(:has(input:disabled)) {
+    border-color: var(--background-brand-teal-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
+  }
+
+  &:has(input:focus-visible) {
+    outline: 3px solid var(--background-brand-teal-primary);
+    outline-offset: 2px;
+  }
+
+  &:has(input:disabled) {
+    cursor: default;
+  }
+
+  &.optionSelected {
+    border-color: var(--background-brand-teal-primary);
+    background: var(--background-brand-teal-light);
+  }
+
+  &.optionCorrect {
+    border-color: var(--borders-success-primary);
+    background: var(--background-success-light);
+  }
+
+  &.optionWrong {
+    border-color: var(--borders-error-primary);
+    background: var(--background-error-light);
+  }
+}
+
+.passedNote {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-success-primary);
+}
+
+.optionsShake {
+  animation: options-shake 360ms ease both;
+}
+
+@keyframes options-shake {
+  15% {
+    transform: translateX(-8px);
+  }
+
+  35% {
+    transform: translateX(7px);
+  }
+
+  55% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .optionsShake {
+    animation: none;
+  }
+
+  .option {
+    transition: none;
+
+    &:hover:not(:has(input:disabled)) {
+      transform: none;
+    }
+  }
+}
