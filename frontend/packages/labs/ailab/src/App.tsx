@@ -1,8 +1,9 @@
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {type ReactNode, useEffect} from 'react';
+import classNames from 'classnames';
+import {type CSSProperties, type ReactNode, useEffect} from 'react';
 
-import {styles} from './constants';
+import {colors} from './constants';
 import {reportPanelView} from './helpers/metrics';
 import {
   isSaveComplete,
@@ -28,6 +29,15 @@ import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
 import TrainModel from './UIComponents/TrainModel';
+
+import styles from './app.module.scss';
+
+const colorVariables = {
+  '--ailab-feature': colors.feature,
+  '--ailab-label': colors.label,
+  '--ailab-background': colors.background,
+  '--ailab-teal': colors.teal,
+} as CSSProperties;
 
 interface PanelButtonsProps {
   panelButtons: PrevNextButtons;
@@ -103,17 +113,12 @@ const PanelButtons = ({
     : undefined;
 
   return (
-    <div style={styles.navigationButtonsContainer}>
+    <div className={styles.navigation}>
       {panelButtons.prev && (
-        <div style={styles.previousButton}>
+        <div className={styles.previous}>
           <button
             type="button"
-            style={{
-              ...styles.navButton,
-              ...(!panelButtons.prev.enabled
-                ? styles.disabledButton
-                : undefined),
-            }}
+            className={styles.navButton}
             onClick={onClickPrev}
             disabled={!panelButtons.prev.enabled}
           >
@@ -124,10 +129,10 @@ const PanelButtons = ({
 
       {shouldDisplaySaveStatusProp(saveStatus) &&
         currentPanel === 'saveModel' && (
-          <div style={styles.modelSaveMessage}>
+          <div className={styles.saveMessage}>
             {loadSaveStatus}
             {loadSaveResponseData && (
-              <div style={styles.modelSaveResponseDataMessage}>
+              <div className={styles.saveResponseData}>
                 {loadSaveResponseData}
               </div>
             )}
@@ -135,16 +140,11 @@ const PanelButtons = ({
         )}
 
       {panelButtons.next && (
-        <div style={styles.nextButton}>
+        <div className={styles.next}>
           <button
             type="button"
             id="uitest-continue-button"
-            style={{
-              ...styles.navButton,
-              ...(!panelButtons.next.enabled
-                ? styles.disabledButton
-                : undefined),
-            }}
+            className={styles.navButton}
             onClick={onClickNext}
             disabled={!panelButtons.next.enabled}
           >
@@ -161,7 +161,7 @@ interface BodyContainerProps {
 }
 
 const BodyContainer = ({children}: BodyContainerProps) => {
-  return <div style={styles.bodyContainer}>{children}</div>;
+  return <div className={styles.body}>{children}</div>;
 };
 
 interface ContainerLeftProps {
@@ -169,11 +169,7 @@ interface ContainerLeftProps {
 }
 
 const ContainerLeft = ({children}: ContainerLeftProps) => {
-  return (
-    <div style={{...styles.panelContainer, ...styles.panelContainerLeft}}>
-      {children}
-    </div>
-  );
+  return <div className={styles.column}>{children}</div>;
 };
 
 interface ContainerRightProps {
@@ -182,7 +178,7 @@ interface ContainerRightProps {
 
 const ContainerRight = ({children}: ContainerRightProps) => {
   return (
-    <div style={{...styles.panelContainer, ...styles.panelContainerRight}}>
+    <div className={classNames(styles.column, styles.rightColumn)}>
       {children}
     </div>
   );
@@ -193,7 +189,11 @@ interface ContainerFullWidthProps {
 }
 
 const ContainerFullWidth = ({children}: ContainerFullWidthProps) => {
-  return <div style={styles.panelContainerFullWidth}>{children}</div>;
+  return (
+    <div className={classNames(styles.column, styles.fullWidth)}>
+      {children}
+    </div>
+  );
 };
 
 export interface AppProps {
@@ -237,7 +237,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   }, [currentPanel]);
 
   return (
-    <div style={styles.app}>
+    <div className={styles.app} style={colorVariables}>
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
           <ContainerLeft>

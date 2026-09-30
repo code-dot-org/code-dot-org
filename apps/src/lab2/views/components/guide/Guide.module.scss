@@ -57,6 +57,9 @@ $gap-height: 43px;
   line-height: 1.5;
   gap: 16px;
   container-type: inline-size;
+  // A width change (a lab narrowing the guide on one of its tabs) animates
+  // rather than jumps.
+  transition: width 0.45s ease;
 
   &NormalWidth {
     width: 40%;

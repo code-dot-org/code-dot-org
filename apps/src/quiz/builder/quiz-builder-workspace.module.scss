@@ -24,21 +24,14 @@
   list-style: none;
 }
 
-.row {
+.createAction {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 12px 16px;
-  border: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 0.25rem;
-}
-
-.stem {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.createButton {
+  align-items: flex-start;
   align-self: flex-start;
+  gap: 4px;
+}
+
+.createHint {
+  color: var(--text-neutral-tertiary);
 }

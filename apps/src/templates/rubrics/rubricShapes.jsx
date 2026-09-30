@@ -25,6 +25,7 @@ export const rubricShape = PropTypes.shape({
   }),
   level: PropTypes.shape({
     id: PropTypes.number,
+    name: PropTypes.string,
   }),
 });
 

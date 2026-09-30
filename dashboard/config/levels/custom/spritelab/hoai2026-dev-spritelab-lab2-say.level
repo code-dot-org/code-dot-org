@@ -34,27 +34,20 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your character.** Use **make new sprite** to put your character on the **left** of the scene, then snap on a **say** block so they say something. Your changes run live in the preview. When it feels right, click **Play**."
+        "text": "**Make them talk.** Drag a **say** block onto the dotted outline under **make new sprite**. Type what they say. Click **Play**."
       },
       {
-        "text": "**They're alive!** Watch your character speak, then continue when you're ready.",
+        "text": "**They're alive!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Add your character\nUse **make new sprite** to put your character on the left of the scene, then snap on a **say** block so they say something.",
+    "long_instructions": "# Make them talk\nDrag a **say** block onto the dotted outline under **make new sprite** so your character talks.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition",
-          "fields": {
-            "POSITION": "left"
-          }
-        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
@@ -70,7 +63,30 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_spriteSay",
+              "fields": {
+                "SPEECH": "Hello!"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

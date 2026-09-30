@@ -103,9 +103,9 @@ const makeVocab = (lookup: VocabularyLookup) => {
     /*
      * MUI's tooltip clones its child rather than wrapping it, so the trigger
      * stays a <span> -- phrasing content, which is what a term sitting
-     * mid-sentence inside a <p> has to be. (The DSCO WithTooltip wraps its
-     * trigger in a block <div>, which is why this used the native `title`
-     * before.) CdoTheme styles every MUI tooltip, so this matches the design
+     * mid-sentence inside a <p> has to be. (The DSCO tooltip this replaced
+     * wrapped its trigger in a block <div>, which is why this used the native
+     * `title` before.) CdoTheme styles every MUI tooltip, so this matches the design
      * system without importing a wrapper.
      *
      * `tabIndex` makes the trigger keyboard-reachable: MUI opens the tooltip on

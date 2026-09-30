@@ -49,15 +49,15 @@ jest.mock(
     default: ({
       fileName,
       isRecentlyAdded,
-      addAlert,
+      notify,
     }: {
       fileName: string;
       isRecentlyAdded?: boolean;
-      addAlert: (type: string, message: string) => void;
+      notify: (type: string, message: string) => void;
     }) => (
       <div>
         {isRecentlyAdded ? `${fileName} (added)` : fileName}
-        <button type="button" onClick={() => addAlert('success', 'in project')}>
+        <button type="button" onClick={() => notify('success', 'in project')}>
           {`add ${fileName} to project`}
         </button>
       </div>
@@ -72,10 +72,12 @@ describe('UnifiedBackpackPanel', () => {
   const renderPanel = ({
     withSaveButton = true,
     viewingOldVersion = false,
+    isProjectLevel = false,
   } = {}) => {
     registerReducers({
       currentUser: () => ({userId: 1}),
       lab2Project: () => ({viewingOldVersion}),
+      lab: () => ({levelProperties: {isProjectLevel}}),
     });
     store = getStore();
     return render(
@@ -85,7 +87,6 @@ describe('UnifiedBackpackPanel', () => {
           saveFileToProject={jest.fn()}
           createNewProjectFile={jest.fn()}
           findIdForFileName={() => undefined}
-          openPanelCallback={jest.fn()}
           supportedFileTypes={['png']}
           backpackRefreshKey={0}
           saveToBackpackButton={
@@ -112,23 +113,6 @@ describe('UnifiedBackpackPanel', () => {
     restoreRedux();
   });
 
-  it('hands the save button every backpack file name', async () => {
-    const user = userEvent.setup();
-    mockBackpackApi.getFileLists.mockResolvedValue({
-      universal: ['tree.png'],
-      sketchlab: ['house.png'],
-    });
-    renderPanel();
-
-    await waitFor(() => expect(saveButton()).toBeEnabled());
-    await user.click(saveButton());
-
-    expect(onClick).toHaveBeenCalledWith(
-      ['tree.png', 'house.png'],
-      expect.any(Function)
-    );
-  });
-
   it('toasts what the save reports back', async () => {
     const user = userEvent.setup();
     renderPanel();
@@ -136,14 +120,18 @@ describe('UnifiedBackpackPanel', () => {
     await waitFor(() => expect(saveButton()).toBeEnabled());
     await user.click(saveButton());
 
-    const notify = onClick.mock.calls[0][1];
-    notify('info', 'Saving sketch.png to your Backpack...');
+    const notify = onClick.mock.calls[0][0];
+    notify('gray', 'Saving sketch.png to your Backpack...');
     notify('success', 'sketch.png saved to your Backpack.');
 
     expect(mockShowToast.mock.calls).toEqual([
       [
         'Saving sketch.png to your Backpack...',
-        {type: 'info', autoHideDuration: null},
+        {
+          type: 'gray',
+          autoHideDuration: null,
+          icon: {iconName: 'spinner', animationType: 'spin'},
+        },
       ],
       [
         'sketch.png saved to your Backpack.',
@@ -250,5 +238,19 @@ describe('UnifiedBackpackPanel', () => {
 
     await screen.findByText('Your Backpack is empty');
     expect(screen.queryByRole('button', {name: SAVE_BUTTON_TEXT})).toBeNull();
+  });
+
+  it('calls the workspace a level on an ordinary level', async () => {
+    mockBackpackApi.getFileLists.mockResolvedValue({universal: ['notes.txt']});
+    renderPanel();
+
+    await screen.findByText('Not supported in this level (1)');
+  });
+
+  it('calls the workspace a project on a standalone project level', async () => {
+    mockBackpackApi.getFileLists.mockResolvedValue({universal: ['notes.txt']});
+    renderPanel({isProjectLevel: true});
+
+    await screen.findByText('Not supported in this project (1)');
   });
 });

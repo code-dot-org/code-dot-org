@@ -13,8 +13,6 @@ module Services
       end
 
       def call
-        return unless DCDO.get('anonymous_level_tracking_enabled', false)
-
         anonymous_level_geo = ::AnonymousLevel::Geo.find_or_initialize_by(anon_user_id:)
         return anonymous_level_geo if anonymous_level_geo.persisted?
 
@@ -30,6 +28,9 @@ module Services
 
         anonymous_level_geo
       rescue ActiveRecord::RecordNotUnique
+        anonymous_level_geo
+      rescue ActiveRecord::RecordInvalid => exception
+        raise unless exception.record.errors.of_kind?(:anon_user_id, :taken)
         anonymous_level_geo
       end
     end

@@ -44,6 +44,7 @@ import {
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
+  usesPlatformPhysics,
 } from './platformPhysics';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
@@ -74,6 +75,12 @@ const CANVAS_DENSITY_FACTOR = 2;
 // How long a restart quiets further restarts: long enough to see the scene
 // run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
+// A block-triggered scene jump waits this long before it starts, so a say
+// block on the same event is seen before the scene changes.
+const SCENE_JUMP_DELAY_MS = 750;
+// How much a platform scene dims its background, so the blocks and the
+// player read against it: the alpha of a black fill over it.
+const PLATFORM_BACKGROUND_DIM = 0.25;
 
 // Markers in a scene's compiled program that make it a platformer: the
 // platform composites and player setup from the toolbox, or the world
@@ -136,6 +143,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
+    // captureFirstFrame() callbacks, called with the canvas as the first
+    // frame of the next run is drawn (see onP5Setup and the draw loops).
+    this.frameCaptureWaiters_ = [];
+    this.frameCaptureArmed_ = false;
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
@@ -152,8 +163,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // Which on-screen controls fit the running scene: fires on every run
+    // and on each set-gravity block, with {platformer, gravity}.
+    this.onControlsChange = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
+    // A block-triggered jump waiting out SCENE_JUMP_DELAY_MS; a fresh run
+    // cancels it.
+    this.jumpDelayTimer_ = null;
+    // null while no audio is listening.
+    this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -165,6 +184,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
+    // Set by destroy(): a rerun queued before the view left this engine
+    // behind must not start a program in it.
+    this.destroyed_ = false;
     this.rerunAfterExecute_ = false;
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
@@ -230,12 +252,18 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    // A fresh library is a fresh run: a jump the old one was waiting to make
+    // must not land in it.
+    this.clearSceneJumpDelay_();
+    // Fixed for the run: the scene type is set before the run begins.
+    const dimBackground = this.isPlatformScene();
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
     // classic's ~400px library art: resize once to the canvas's physical
     // resolution instead of CoreLibrary's logical 400. A frame (from the
     // zoomed platform draw loop) draws into that rectangle instead, straight
     // from the stored resolution — a zoomed-in view needs the extra pixels a
-    // one-time downsize would destroy.
+    // one-time downsize would destroy. A platform scene then dims the
+    // background with one translucent fill, before the sprites draw.
     library.drawBackground = function (frame) {
       if (typeof this.background === 'string') {
         this.p5.background(this.background);
@@ -253,26 +281,33 @@ export default class SpriteLab2Engine extends SpriteLab {
           frame.size,
           frame.size
         );
-        return;
+      } else {
+        const size = APP_WIDTH * (this.p5._pixelDensity || 1);
+        let buffer = this.background._displayBuffer;
+        if (!buffer || buffer.width !== size || buffer.height !== size) {
+          // A copy sized to the canvas backing: the shared preloaded image is
+          // never mutated (a resize in place changed it for every other
+          // consumer), and the unzoomed draw stays a same-size copy, which
+          // machines without GPU acceleration need to stay cheap.
+          buffer = this.background.get();
+          buffer.resize(size, size);
+          this.background._displayBuffer = buffer;
+        }
+        this.p5.image(buffer, 0, 0, APP_WIDTH, APP_HEIGHT);
       }
-      const size = APP_WIDTH * (this.p5._pixelDensity || 1);
-      let buffer = this.background._displayBuffer;
-      if (!buffer || buffer.width !== size || buffer.height !== size) {
-        // A copy sized to the canvas backing: the shared preloaded image is
-        // never mutated (a resize in place changed it for every other
-        // consumer), and the unzoomed draw stays a same-size copy, which
-        // machines without GPU acceleration need to stay cheap.
-        buffer = this.background.get();
-        buffer.resize(size, size);
-        this.background._displayBuffer = buffer;
+      if (dimBackground) {
+        this.p5.push();
+        this.p5.noStroke();
+        this.p5.fill(0, 0, 0, 255 * PLATFORM_BACKGROUND_DIM);
+        this.p5.rect(0, 0, APP_WIDTH, APP_HEIGHT);
+        this.p5.pop();
       }
-      this.p5.image(buffer, 0, 0, APP_WIDTH, APP_HEIGHT);
     };
+    const engine = this;
     // A costume name the scene-scoped preload never saw (one built
     // dynamically at runtime) decodes on demand: the sprite changes costume
     // when the decode lands, instead of p5.play throwing on the missing
     // label.
-    const engine = this;
     const baseSetAnimation = library.commands.setAnimation;
     library.commands.setAnimation = function (spriteArg, animation) {
       if (engine.p5Wrapper.preloadedSprites?.[animation]) {
@@ -303,7 +338,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // One cell at the default playfield size. A scene with a world
       // overrides this from the prelude with its own cell size, and the
       // grid blocks size their sprites from their own bitmaps.
-      library.defaultSpriteSize = this.isPlatformScene_()
+      library.defaultSpriteSize = this.isPlatformScene()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; the classic footing command
@@ -314,8 +349,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    this.notifyControlsChange_();
+    // A new run starts the player's history over, so the spawn is not heard
+    // as a move.
+    this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
+      this.notifyControlsChange_();
     };
     // The view eases toward the target zoom a frame at a time (see the
     // platform draw loop below); a fresh run starts back at 1.
@@ -330,6 +370,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
+    // Wraps whichever draw loop the scene uses, so a captured frame is a
+    // finished one: every pass drawn, nothing overdrawn. The platform loop
+    // takes its own picture (at zoom 1) and clears the flag first.
+    const drawLoop = library.commands.executeDrawLoopAndCallbacks;
+    library.commands.executeDrawLoopAndCallbacks = function () {
+      drawLoop.apply(this, arguments);
+      if (engine.frameCaptureArmed_) {
+        engine.frameCaptureArmed_ = false;
+        engine.settleFrameCaptures_(this.p5.canvas);
+      }
+    };
     // Story lanes: placement by name instead of coordinates, sized so two
     // characters share a scene; the right-lane character faces its partner
     // (generated art faces right natively).
@@ -340,8 +391,14 @@ export default class SpriteLab2Engine extends SpriteLab {
         location: {x, y: STORY_LANE_Y},
         scale: STORY_LANE_SPRITE_SIZE,
       });
+      // The right lane faces the others. A still picture is mirrored here;
+      // an animated character starts its poses facing left instead
+      // (updateCharacterAnimations_ sets the mirror every frame).
       if (position === 'right' && id !== undefined) {
-        library.getSpriteArray({id}).forEach(sprite => sprite.mirrorX(-1));
+        library.getSpriteArray({id}).forEach(sprite => {
+          sprite.mirrorX(-1);
+          sprite.startFacing = 'left';
+        });
       }
       return id;
     };
@@ -440,38 +497,55 @@ export default class SpriteLab2Engine extends SpriteLab {
       return setAnimation.call(this, spriteArg, animation);
     };
     library.commands.goToScene = sceneId => {
-      if (!this.onGoToScene || !this.beginSceneJump_()) {
-        return;
-      }
-      const id = String(sceneId);
-      // Defer a tick: jumping tears down the interpreter this command runs in.
-      setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
+      this.delaySceneJump_(() => this.onGoToScene, String(sceneId));
     };
-    // Through the jump gate, for its cover and fade. The quiet window is
-    // what keeps a condition that still holds on the next frame from
-    // restarting at frame rate.
+    // The quiet window is what keeps a condition that still holds on the
+    // next frame from restarting at frame rate. It runs from the jump
+    // itself, so the wait before it does not use it up.
     library.commands.restartScene = () => {
-      const now = Date.now();
-      if (now - this.lastRestartAt_ < RESTART_QUIET_MS) {
+      if (Date.now() - this.lastRestartAt_ < RESTART_QUIET_MS) {
         return;
       }
-      if (!this.onRestartScene || !this.beginSceneJump_()) {
-        return;
-      }
-      this.lastRestartAt_ = now;
-      setTimeout(() => this.onRestartScene && this.onRestartScene(), 0);
-    };
-    library.commands.goToExternalScene = sceneKey => {
-      if (!this.onGoToExternalScene || !this.beginSceneJump_()) {
-        return;
-      }
-      const key = String(sceneKey);
-      setTimeout(
-        () => this.onGoToExternalScene && this.onGoToExternalScene(key),
-        0
+      this.delaySceneJump_(
+        () =>
+          this.onRestartScene &&
+          (() => {
+            this.lastRestartAt_ = Date.now();
+            this.onRestartScene();
+          })
       );
     };
+    library.commands.goToExternalScene = sceneKey => {
+      this.delaySceneJump_(() => this.onGoToExternalScene, String(sceneKey));
+    };
     return library;
+  }
+
+  /**
+   * Start a block-triggered jump after SCENE_JUMP_DELAY_MS: the scene keeps
+   * running meanwhile, then freezes through the jump gate and the handler
+   * runs. The handler is read when the wait ends; nothing starts without
+   * one. One jump at a time: a trigger during the wait, or while a jump is
+   * in flight, is ignored.
+   */
+  delaySceneJump_(getHandler, ...args) {
+    if (!getHandler() || this.jumpDelayTimer_ || this.sceneJumpInFlight_) {
+      return;
+    }
+    this.jumpDelayTimer_ = setTimeout(() => {
+      this.jumpDelayTimer_ = null;
+      const handler = getHandler();
+      if (handler && this.beginSceneJump_()) {
+        handler(...args);
+      }
+    }, SCENE_JUMP_DELAY_MS);
+  }
+
+  clearSceneJumpDelay_() {
+    if (this.jumpDelayTimer_) {
+      clearTimeout(this.jumpDelayTimer_);
+      this.jumpDelayTimer_ = null;
+    }
   }
 
   /**
@@ -527,9 +601,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
-    // The zGameDev name is only the level's opt-in to platformer physics,
-    // which is engine-owned (platformPhysics.ts); no library loads for it.
-    this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
+    // zGameDev is the level's opt-in to the engine's platform physics
+    // (platformPhysics.ts); no library loads for it.
+    this.usesPlatformPhysics_ = usesPlatformPhysics(helperLibraries);
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
@@ -576,7 +650,18 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.referencedImages = referencedImages || null;
   }
 
-  isPlatformScene_() {
+  notifyControlsChange_() {
+    if (this.onControlsChange) {
+      this.onControlsChange({
+        platformer: this.usesPlatformPhysics_ && this.isPlatformScene(),
+        gravity: this.platformGravity_,
+      });
+    }
+  }
+
+  /** Whether the running scene is a platformer: by its type, or by platform
+      blocks in a scene made before scene types. */
+  isPlatformScene() {
     if (this.sceneType_) {
       return this.sceneType_ === 'platform';
     }
@@ -598,6 +683,12 @@ export default class SpriteLab2Engine extends SpriteLab {
    * p5 per edit flickers and races its own async preload callbacks.
    */
   runProgram(code, referencedImages, sceneType) {
+    if (this.destroyed_) {
+      return;
+    }
+    // Now, not when the new library is built: that is after an async
+    // preload, and a jump waiting out its delay could start in between.
+    this.clearSceneJumpDelay_();
     this.sceneType_ = sceneType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
@@ -653,6 +744,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
+    // A run has begun: the next frame drawn is its first.
+    this.frameCaptureArmed_ = this.frameCaptureWaiters_.length > 0;
     const p5 = this.p5Wrapper.p5;
     const density = Math.ceil(
       CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
@@ -679,6 +772,9 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   async doRerun_() {
+    if (this.destroyed_) {
+      return;
+    }
     const p5 = this.p5Wrapper.p5;
     if (!p5) {
       this.execute();
@@ -726,10 +822,14 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   destroy() {
+    this.destroyed_ = true;
     this.reset();
     this.stopTickTimer();
+    this.clearSceneJumpDelay_();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
+    this.frameCaptureArmed_ = false;
+    this.settleFrameCaptures_(null);
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
@@ -919,15 +1019,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       engine.physicsResolvedThisFrame_ = true;
       const player = this.getSpriteArray({group: 'players'})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
-      camera.off();
-      this.drawBackground(backgroundFrame(zoom, focus));
-      camera.zoom = zoom;
-      camera.position.x = focus.x;
-      camera.position.y = focus.y;
-      camera.on();
-      p5.drawSprites();
-      this.drawSpeechBubbles();
-      camera.off();
+      if (engine.frameCaptureArmed_) {
+        // The picture shows the whole world: drawn at zoom 1, copied by the
+        // callbacks (synchronously), then painted over by the real frame
+        // below, so nothing of it reaches the screen.
+        engine.frameCaptureArmed_ = false;
+        engine.drawWorld_(this, 1, cameraFocus(1, null));
+        engine.settleFrameCaptures_(p5.canvas);
+      }
+      engine.drawWorld_(this, zoom, focus);
       this.drawVariableBubbles();
       if (!this.isPreviewFrame()) {
         this.foregroundEffects.forEach(effect => effect.func());
@@ -937,6 +1037,37 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       this.commands.drawStoryLabText.apply(this);
     };
+  }
+
+  /** Background, sprites and speech bubbles through the camera. */
+  drawWorld_(library, zoom, focus) {
+    const {p5} = library;
+    const {camera} = p5;
+    camera.off();
+    library.drawBackground(backgroundFrame(zoom, focus));
+    camera.zoom = zoom;
+    camera.position.x = focus.x;
+    camera.position.y = focus.y;
+    camera.on();
+    p5.drawSprites();
+    library.drawSpeechBubbles();
+    camera.off();
+  }
+
+  /**
+   * Calls back with the canvas while the first frame of the next run is
+   * being drawn, or with null if the engine is torn down first. The callback
+   * must copy what it wants at once: the canvas is repainted right after.
+   * Every caller waiting on the same run gets the same frame.
+   */
+  captureFirstFrame(onFrame) {
+    this.frameCaptureWaiters_.push(onFrame);
+  }
+
+  settleFrameCaptures_(canvas) {
+    const waiters = this.frameCaptureWaiters_;
+    this.frameCaptureWaiters_ = [];
+    waiters.forEach(onFrame => onFrame(canvas));
   }
 
   // Platformer physics for players and marked sprites (see
@@ -1003,6 +1134,40 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
+    // Both the requested and the resolved positions are known here, so this
+    // is where the observer is fed.
+    this.observePlayer_(players, walls, view);
+  }
+
+  /** The audio's observer of the player, or null. */
+  setPlayerObserver(observer) {
+    this.playerObserver_?.forget();
+    this.playerObserver_ = observer;
+  }
+
+  forgetPlayer_() {
+    this.playerObserver_?.forget();
+  }
+
+  // Only the first player is observed; the controls move every player alike.
+  observePlayer_(players, walls, view) {
+    const observer = this.playerObserver_;
+    if (!observer) {
+      return;
+    }
+    if (!players.length) {
+      observer.forget();
+      return;
+    }
+    const {sprite, x: requestedX, y: requestedY} = players[0];
+    observer.observe({
+      sprite,
+      requestedX,
+      requestedY,
+      gravity: this.platformGravity_,
+      walls,
+      view,
+    });
   }
 
   // The walls, gathered once per frame — the footing commands ask several
@@ -1108,7 +1273,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.characterState ||
         (sprite.characterState = {
           x: sprite.position.x,
-          facing: 'right',
+          facing: sprite.startFacing || 'right',
           key: null,
           tick: 0,
           moving: false,

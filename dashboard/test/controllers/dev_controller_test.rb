@@ -27,139 +27,128 @@ class DevControllerTest < ActionDispatch::IntegrationTest
 
   test 'start-build is forbidden on production and development' do
     [:production, :development].each do |forbidden_env|
-      with_rack_env(forbidden_env) do
-        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).never
-        FileUtils.expects(:touch).never
-        post '/api/dev/start-build', params: SLACK_PARAMS
-        assert_response :forbidden
-      end
+      set_env(forbidden_env)
+      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).never
+      FileUtils.expects(:touch).never
+      post '/api/dev/start-build', params: SLACK_PARAMS
+      assert_response :forbidden
     end
   end
 
   test 'start-build is allowed on most environments' do
     [:staging, :test, :adhoc, :levelbuilder].each do |allowed_env|
-      with_rack_env(allowed_env) do
-        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
-        FileUtils.expects(:touch).once
-        post '/api/dev/start-build', params: SLACK_PARAMS
-        assert_response :success
-      end
+      set_env(allowed_env)
+      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
+      FileUtils.expects(:touch).once
+      post '/api/dev/start-build', params: SLACK_PARAMS
+      assert_response :success
     end
   end
 
   test 'start-build is forbidden with a missing or incorrect token' do
-    with_rack_env(:staging) do
-      post('/api/dev/start-build', params: {user_name: 'Dave'})
-      assert_response :forbidden
+    set_env(:staging)
+    post('/api/dev/start-build', params: {user_name: 'Dave'})
+    assert_response :forbidden
 
-      post(
-        '/api/dev/start-build',
-        params: {
-          token: 'incorrect-token',
-          user_name: 'Dave'
-        }
-      )
-      assert_response :forbidden
-    end
+    post(
+      '/api/dev/start-build',
+      params: {
+        token: 'incorrect-token',
+        user_name: 'Dave'
+      }
+    )
+    assert_response :forbidden
   end
 
   test 'start-build generates a start_build file if none exists' do
-    with_rack_env(:test) do
-      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
-      FileUtils.expects(:touch).once
-      post '/api/dev/start-build', params: SLACK_PARAMS
+    set_env(:test)
+    File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
+    FileUtils.expects(:touch).once
+    post '/api/dev/start-build', params: SLACK_PARAMS
 
-      # Check appropriate response to whole room, too
-      assert_response :success
-      response_body = JSON.parse(response.body)
-      assert_equal 'Test build restarted by Dave', response_body['text']
-      assert_equal 'in_channel', response_body['response_type']
-    end
+    # Check appropriate response to whole room, too
+    assert_response :success
+    response_body = JSON.parse(response.body)
+    assert_equal 'Test build restarted by Dave', response_body['text']
+    assert_equal 'in_channel', response_body['response_type']
   end
 
   test 'start-build succeeds without action if start_build exists' do
-    with_rack_env(:test) do
-      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(true)
-      FileUtils.expects(:touch).never
-      post '/api/dev/start-build', params: SLACK_PARAMS
+    set_env(:test)
+    File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(true)
+    FileUtils.expects(:touch).never
+    post '/api/dev/start-build', params: SLACK_PARAMS
 
-      # Check response to requester
-      assert_response :success
-      assert_equal(
-        "I can't do that Dave - a build is already queued",
-        response.body
-      )
-    end
+    # Check response to requester
+    assert_response :success
+    assert_equal(
+      "I can't do that Dave - a build is already queued",
+      response.body
+    )
   end
 
   test 'check-dts is forbidden on non-staging environments' do
     [:test, :adhoc, :levelbuilder, :production].each do |env|
-      with_rack_env(env) do
-        post '/api/dev/check-dts', params: GITHUB_PARAMS
-        assert_response :forbidden
-      end
+      set_env(env)
+      post '/api/dev/check-dts', params: GITHUB_PARAMS
+      assert_response :forbidden
     end
   end
 
   test 'check-dts ignores actions we dont care about' do
-    with_rack_env(:staging) do
-      ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
+    set_env(:staging)
+    ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
 
-      post '/api/dev/check-dts', params: {
-        payload: GITHUB_PAYLOAD.merge({'action' => 'other action'}).to_json,
-      }, headers: {HTTP_X_GITHUB_EVENT: 'pull_request'}
-      assert_response :accepted
-    end
+    post '/api/dev/check-dts', params: {
+      payload: GITHUB_PAYLOAD.merge({'action' => 'other action'}).to_json,
+    }, headers: {HTTP_X_GITHUB_EVENT: 'pull_request'}
+    assert_response :accepted
   end
 
   test 'check-dts ignores events we dont care about' do
-    with_rack_env(:staging) do
-      ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
+    set_env(:staging)
+    ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
 
-      post '/api/dev/check-dts', params: GITHUB_PARAMS, headers: {HTTP_X_GITHUB_EVENT: 'other_event'}
-      assert_response :accepted
-    end
+    post '/api/dev/check-dts', params: GITHUB_PARAMS, headers: {HTTP_X_GITHUB_EVENT: 'other_event'}
+    assert_response :accepted
   end
 
   test 'check-dts ignores PRs against branches we dont care about' do
-    with_rack_env(:staging) do
-      ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
+    set_env(:staging)
+    ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
 
-      post '/api/dev/check-dts', params: {
-        payload: {
-          action: 'opened',
-          pull_request: {
-            base: {
-              ref: 'test',
-            },
+    post '/api/dev/check-dts', params: {
+      payload: {
+        action: 'opened',
+        pull_request: {
+          base: {
+            ref: 'test',
           },
-        }.to_json,
-      }
-      assert_response :accepted
-    end
+        },
+      }.to_json,
+    }
+    assert_response :accepted
   end
 
   test 'check-dts Sets the dts check to pass if DTS is yes' do
-    with_rack_env(:staging) do
-      ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
-      GitHub.expects(:configure_octokit)
-      DevelopersTopic.expects(:dts?).returns(true)
-      GitHub.expects(:set_dts_check_pass)
+    set_env(:staging)
+    ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
+    GitHub.expects(:configure_octokit)
+    DevelopersTopic.expects(:dts?).returns(true)
+    GitHub.expects(:set_dts_check_pass)
 
-      post '/api/dev/check-dts', params: GITHUB_PARAMS, headers: {HTTP_X_GITHUB_EVENT: 'pull_request'}
-      assert_response :success
-    end
+    post '/api/dev/check-dts', params: GITHUB_PARAMS, headers: {HTTP_X_GITHUB_EVENT: 'pull_request'}
+    assert_response :success
   end
 
   test 'check-dts Sets the dts check to fail if DTS is no' do
-    with_rack_env(:staging) do
-      ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
-      GitHub.expects(:configure_octokit)
-      DevelopersTopic.expects(:dts?).returns(false)
-      GitHub.expects(:set_dts_check_fail)
+    set_env(:staging)
+    ActiveSupport::SecurityUtils.expects(:secure_compare).returns(true)
+    GitHub.expects(:configure_octokit)
+    DevelopersTopic.expects(:dts?).returns(false)
+    GitHub.expects(:set_dts_check_fail)
 
-      post '/api/dev/check-dts', params: GITHUB_PARAMS, headers: {HTTP_X_GITHUB_EVENT: 'pull_request'}
-      assert_response :success
-    end
+    post '/api/dev/check-dts', params: GITHUB_PARAMS, headers: {HTTP_X_GITHUB_EVENT: 'pull_request'}
+    assert_response :success
   end
 end

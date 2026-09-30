@@ -7,10 +7,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
-import {
-  BackpackAlertType,
-  toastOptionsFor,
-} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
+import {notifyWithToast} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -18,11 +15,12 @@ import BackpackFileChip, {
   SHOW_RECENTLY_ADDED_DURATION_MS,
 } from './BackpackFileChip';
 import {
-  ALL_FILES_CATEGORY_ID,
   BackpackSortOrder,
-  FileCategoryId,
-  getFileCategory,
   sortBackpackFiles,
+  FileExtension,
+  ALL_FILES_ID,
+  getPopulatedFileTypeConfigs,
+  findConfigForFile,
 } from './backpackFileFilters';
 import BackpackListControls from './BackpackListControls';
 import BackpackMessage from './BackpackMessage';
@@ -39,13 +37,11 @@ const fileKeyFor = (appType: string, fileName: string) =>
   `${appType}/${fileName}`;
 
 interface UnifiedBackpackPanelProps extends BackpackProps {
-  openPanelCallback: () => void;
   backpackRefreshKey: number;
 }
 
 /**
- * Backpack panel behind the 'unified-backpack' experiment. It shows every backpack file the
- * user has as one list.
+ * Backpack panel. It shows every backpack file the user has as one list.
  */
 const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   validateFileName,
@@ -64,6 +60,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const workspaceNoun = useAppSelector(state =>
+    state.lab.levelProperties?.isProjectLevel ? 'project' : 'level'
+  );
 
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -72,9 +71,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     new Set()
   );
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
-  const [selectedCategoryId, setSelectedCategoryId] = useState<
-    FileCategoryId | typeof ALL_FILES_CATEGORY_ID
-  >(ALL_FILES_CATEGORY_ID);
+  const [selectedExtension, setSelectedExtension] = useState<
+    FileExtension | typeof ALL_FILES_ID
+  >(ALL_FILES_ID);
   const [sortOrder, setSortOrder] = useState<BackpackSortOrder>('name-asc');
 
   const loadFiles = useCallback(
@@ -99,6 +98,12 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       setIsLoading(false);
     },
     [backpackApi]
+  );
+
+  const fileNames = useMemo(() => files.map(({fileName}) => fileName), [files]);
+  const populatedFileTypeConfigs = useMemo(
+    () => getPopulatedFileTypeConfigs(fileNames, supportedFileTypes),
+    [fileNames, supportedFileTypes]
   );
 
   useEffect(() => {
@@ -168,23 +173,21 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   }, [backpackApi, loadFiles, markRecentlyAdded]);
 
   useEffect(() => {
-    // Deleting the last file of a category retires that category, so fall back to
+    // Deleting the last file of an extension group retires that extension, so fall back to
     // showing everything rather than leaving an empty filter selected.
     if (
-      selectedCategoryId !== ALL_FILES_CATEGORY_ID &&
+      selectedExtension !== ALL_FILES_ID &&
       !files.some(
-        ({fileName}) => getFileCategory(fileName).id === selectedCategoryId
+        ({fileName}) =>
+          findConfigForFile(fileName, populatedFileTypeConfigs).id ===
+          selectedExtension
       )
     ) {
-      setSelectedCategoryId(ALL_FILES_CATEGORY_ID);
+      setSelectedExtension(ALL_FILES_ID);
     }
-  }, [files, selectedCategoryId]);
+  }, [files, populatedFileTypeConfigs, selectedExtension]);
 
-  const notify = useCallback(
-    (type: BackpackAlertType, message: string) =>
-      showToast(message, toastOptionsFor(type)),
-    [showToast]
-  );
+  const notify = useMemo(() => notifyWithToast(showToast), [showToast]);
 
   // Names held by more than one backpack. Those rows have to say which backpack they
   // came from, or they are indistinguishable.
@@ -216,8 +219,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           key={fileKey}
           fileName={fileName}
           backpackApi={client}
-          addAlert={notify}
-          showToast={showToast}
+          notify={notify}
           isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
           validateFileName={validateFileName}
           saveFileToProject={saveFileToProject}
@@ -237,7 +239,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       backpackApi,
       duplicateFileNames,
       notify,
-      showToast,
       recentlyAddedKeys,
       validateFileName,
       saveFileToProject,
@@ -250,29 +251,29 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     ]
   );
 
-  const fileNames = useMemo(() => files.map(({fileName}) => fileName), [files]);
-
   const handleSaveToBackpackClick = useCallback(async () => {
     if (!saveToBackpackButton) {
       return;
     }
     setActionInProgress(true);
     try {
-      await saveToBackpackButton.onClick(fileNames, notify);
+      await saveToBackpackButton.onClick(notify);
     } finally {
       setActionInProgress(false);
     }
-  }, [saveToBackpackButton, fileNames, notify]);
+  }, [saveToBackpackButton, notify]);
 
   const visibleFiles = useMemo(() => {
     const matchingFiles =
-      selectedCategoryId === ALL_FILES_CATEGORY_ID
+      selectedExtension === ALL_FILES_ID
         ? files
         : files.filter(
-            ({fileName}) => getFileCategory(fileName).id === selectedCategoryId
+            ({fileName}) =>
+              findConfigForFile(fileName, populatedFileTypeConfigs).id ===
+              selectedExtension
           );
     return sortBackpackFiles(matchingFiles, sortOrder);
-  }, [files, selectedCategoryId, sortOrder]);
+  }, [files, populatedFileTypeConfigs, selectedExtension, sortOrder]);
 
   const [supportedFiles, unsupportedFiles] = useMemo(() => {
     const supported: UnifiedBackpackFile[] = [];
@@ -340,10 +341,11 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
         {files.length > 0 && (
           <BackpackListControls
             fileNames={fileNames}
-            selectedCategoryId={selectedCategoryId}
-            onCategoryChange={setSelectedCategoryId}
+            selectedExtension={selectedExtension}
+            onExtensionChange={setSelectedExtension}
             sortOrder={sortOrder}
             onSortOrderChange={setSortOrder}
+            populatedFileTypeConfigs={populatedFileTypeConfigs}
           />
         )}
         <div className={moduleStyles.fileListContainer}>
@@ -365,7 +367,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
                       variant="strong"
                       className={moduleStyles.unsupportedText}
                     >
-                      {`Not supported in this lab (${unsupportedFiles.length})`}
+                      {`Not supported in this ${workspaceNoun} (${unsupportedFiles.length})`}
                     </Typography>
                   </Typography>
                   <FontAwesomeV6Icon

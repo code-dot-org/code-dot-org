@@ -34,7 +34,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     new MusicBlocklyWorkspace()
   );
 
-  const sourcesStoreRef = useRef<SourcesStore>(new SourcesStore());
+  const sourcesStoreRef = useRef<SourcesStore>(new SourcesStore('music'));
   const analyticsReporter = useRef<MusicAnalyticsReporter>(
     new MusicAnalyticsReporter()
   );

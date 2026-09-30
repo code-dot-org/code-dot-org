@@ -1,9 +1,10 @@
 import {Button, Typography} from '@mui/material';
-import React from 'react';
+import React, {useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
-import {QuizQuestion} from './types';
+import QuizQuestionCard from './QuizQuestionCard';
+import {isPendingQuestionId} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
 import styles from './quiz-builder-workspace.module.scss';
@@ -14,12 +15,30 @@ interface QuizBuilderWorkspaceProps {
 }
 
 // The center column: the quiz's question outline plus a create action.
-// Rows are read-only for now - opening one to edit is a later step.
+// Each row is a QuizQuestionCard, expandable in place for editing.
 const QuizBuilderWorkspace: React.FunctionComponent<
   QuizBuilderWorkspaceProps
 > = ({levelId, quizTitle}) => {
-  const {questions, isLoading, isCreating, error, createQuestion} =
-    useQuizBuilderQuestions(levelId);
+  const {
+    questions,
+    isLoading,
+    error,
+    errorQuestionId,
+    addPendingQuestion,
+    saveQuestion,
+    removeQuestion,
+  } = useQuizBuilderQuestions(levelId);
+  // Only one card is expanded at a time - opening one collapses whichever
+  // was open before it. A create opens the just-created question straight
+  // into editing.
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const hasPendingQuestion = questions.some(question =>
+    isPendingQuestionId(question.id)
+  );
+
+  const handleCreate = () => {
+    setExpandedId(addPendingQuestion());
+  };
 
   let outline: React.ReactNode;
   if (isLoading) {
@@ -32,20 +51,17 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     outline = (
       <ol className={styles.list}>
         {questions.map(question => (
-          <li key={question.id} className={styles.row}>
-            <Typography variant="overline3" component="span">
-              {questionTypeLabel(question.type)}
-            </Typography>
-            <Typography variant="strong" component="span">
-              {question.questionName}
-            </Typography>
-            <Typography
-              variant="body3"
-              component="span"
-              className={styles.stem}
-            >
-              {question.stem}
-            </Typography>
+          <li key={question.id}>
+            <QuizQuestionCard
+              question={question}
+              isExpanded={question.id === expandedId}
+              onExpandedChange={expanded =>
+                setExpandedId(expanded ? question.id : null)
+              }
+              error={question.id === errorQuestionId ? error : null}
+              onSave={saveQuestion}
+              onRemove={removeQuestion}
+            />
           </li>
         ))}
       </ol>
@@ -64,7 +80,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           </Typography>
         </header>
 
-        {error && (
+        {/* A question-specific error shows on that question's card instead - see error prop below. */}
+        {error && errorQuestionId === null && (
           <Typography variant="body2" color="error" role="alert">
             {error}
           </Typography>
@@ -72,17 +89,22 @@ const QuizBuilderWorkspace: React.FunctionComponent<
 
         {outline}
 
-        <Button
-          className={styles.createButton}
-          variant="contained"
-          color="primary"
-          type="button"
-          loading={isCreating}
-          disabled={isLoading || isCreating}
-          onClick={() => createQuestion()}
-        >
-          + Create question
-        </Button>
+        <div className={styles.createAction}>
+          <Button
+            variant="contained"
+            color="primary"
+            type="button"
+            disabled={isLoading || hasPendingQuestion}
+            onClick={handleCreate}
+          >
+            + Create question
+          </Button>
+          {hasPendingQuestion && (
+            <Typography variant="body3" className={styles.createHint}>
+              Save or remove your new question before creating another.
+            </Typography>
+          )}
+        </div>
       </div>
     </PanelContainer>
   );
@@ -90,16 +112,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
 
 function questionCountLabel(count: number): string {
   return count === 1 ? '1 question' : `${count} questions`;
-}
-
-// STI class name -> label. Multiple choice is the only type today.
-function questionTypeLabel(type: QuizQuestion['type']): string {
-  switch (type) {
-    case 'MultipleChoiceQuestion':
-      return 'Multiple choice';
-    default:
-      return type;
-  }
 }
 
 export default QuizBuilderWorkspace;

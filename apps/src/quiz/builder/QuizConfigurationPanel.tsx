@@ -4,9 +4,8 @@ import Toggle from '@code-dot-org/component-library/toggle';
 import {Alert} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
-
-import {networkErrorMessage} from './networkError';
 
 import styles from './quiz-configuration-panel.module.scss';
 
@@ -128,6 +127,10 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [savingField, setSavingField] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [timeLimitError, setTimeLimitError] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState(
+    initialValues.displayName ?? ''
+  );
+  const [displayNameAtFocus, setDisplayNameAtFocus] = useState(displayName);
 
   const panelRef = useRef<HTMLDivElement>(null);
   const previousSavingFieldRef = useRef<string | null>(null);
@@ -146,6 +149,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const handleSave = async (
     updatedConfigValues: Partial<QuizConfigurableFields> & {
       purpose?: string | null;
+      displayName?: string | null;
     } = {},
     savingFieldName: string | null = null
   ): Promise<boolean> => {
@@ -299,6 +303,24 @@ const QuizConfigurationPanel: React.FunctionComponent<
     });
   };
 
+  const handleDisplayNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDisplayName(e.target.value);
+  };
+
+  const handleDisplayNameFocus = () => {
+    setDisplayNameAtFocus(displayName);
+  };
+
+  const handleDisplayNameBlur = () => {
+    if (displayName === displayNameAtFocus) {
+      return;
+    }
+    const previous = displayNameAtFocus;
+    void handleSave({displayName}, 'displayName').then(ok => {
+      if (!ok) setDisplayName(previous);
+    });
+  };
+
   return (
     <div className={styles.panel} ref={panelRef}>
       {error && (
@@ -350,6 +372,21 @@ const QuizConfigurationPanel: React.FunctionComponent<
             />
           </div>
           <ConfigCard label="content">
+            <div className={styles.cardRow}>
+              <TextField
+                label="Quiz display name"
+                name="displayName"
+                size="s"
+                inputType="text"
+                color="gray"
+                className={styles.fullWidthField}
+                helperMessage="Leave unset to use level name as quiz title"
+                value={displayName}
+                onChange={handleDisplayNameChange}
+                onFocus={handleDisplayNameFocus}
+                onBlur={handleDisplayNameBlur}
+              />
+            </div>
             <div className={styles.cardRow}>
               <div className={styles.toggleRow}>
                 <span className={styles.toggleLabel}>Show intro screen</span>

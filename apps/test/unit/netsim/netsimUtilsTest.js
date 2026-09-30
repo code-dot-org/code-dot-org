@@ -201,6 +201,15 @@ describe('NetSimUtils', function () {
       );
     });
 
+    it('ignores the Global Edition region prefix', function () {
+      const level = '/courses/csp-2025/units/2/lessons/4/levels/1';
+      const key = urlToKey('https://studio.code.org' + level);
+
+      document.documentElement.dataset.geRegion = 'br';
+      expect(urlToKey('https://studio.code.org/br' + level)).to.equal(key);
+      delete document.documentElement.dataset.geRegion;
+    });
+
     it('ignores trailing slash in the URL', function () {
       expect('courses-csp-2019-units-1-lessons-3-levels-2')
         .to.equal(

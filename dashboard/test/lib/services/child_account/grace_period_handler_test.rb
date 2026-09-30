@@ -134,7 +134,7 @@ class Services::ChildAccount::GracePeriodHandlerTest < ActiveSupport::TestCase
   describe '#start_grace_period' do
     let(:start_grace_period) {described_instance.send(:start_grace_period)}
 
-    let(:scheduled_lockout_job) {stub(:scheduled_lockout_job)}
+    let(:scheduled_lockout_job) {stub(scheduled_lockout_job: nil)}
 
     let(:expect_grace_period_starting) {Services::ChildAccount.expects(:start_grace_period).with(user)}
     let(:expect_lockout_scheduling) {CAP::LockoutJob.expects(:schedule_for).with(user).returns(scheduled_lockout_job)}

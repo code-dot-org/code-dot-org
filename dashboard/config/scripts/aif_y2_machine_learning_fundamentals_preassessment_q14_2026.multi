@@ -5,7 +5,7 @@ wrong "Considering if a model is safe to use by different groups of people"
 wrong 'Deciding whether a model is ready to be released to the public'
 right 'Making a model more efficient'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following would NOT be a primary part of the role of an AI safety engineer?

@@ -1,0 +1,43 @@
+name 'pl-aif-y2-u1-l1-pl-format'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Where Unit 1 Fits
+
+Unit 1 doesn't map directly onto AI-901's tested content. There's no dedicated block of exam questions drawn from "What is Intelligence?" or hill climbing. That's by design, not a gap.
+
+What Unit 1 actually builds is the foundation the rest of the year assumes you already have:
+
+<div style="background: #FFFFFF; border: 1px solid #D5EFFF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); font-size: 14pt; margin: 20px 0;">
+  <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
+    <li>Basic Python fluency, which Domain 2's Foundry SDK work assumes students already have</li><br>
+    <li>Comfort reasoning about different approaches to AI, a light first pass at Domain 1's conceptual territory</li><br>
+    <li>Debugging habits students will lean on all year, especially once they're troubleshooting real Foundry implementations</li>
+  </ul>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px;">
+  <div style="font-size: 14pt; color: #06338D; line-height: 1.5;">
+    <strong>The takeaway:</strong> if Unit 1 feels disconnected from AI-901, that's expected. You're building foundations here, not chasing exam content. You'll see Cert Lit framing get more direct as the units go on and the content starts mapping onto tested domains.
+  </div>
+</div>
+
+
+<hr>
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 24px 0 16px 0;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 20px; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">&#10003;</div>
+    <div style="font-size: 14pt; color: #1F1976;">
+      <strong>Lesson 1 Complete</strong><br>
+      Nice work! You've finished Getting Started.
+    </div>
+  </div>
+</div>
+
+<div style="background-color: #4C42CF; color: #FFFFFF; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px;">
+  <span style="font-size: 11pt; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Up Next</span><br>
+  <span style="font-size: 14pt; font-weight: bold;">Lesson 2: What Is AI, Really?</span>
+</div>
+MARKDOWN

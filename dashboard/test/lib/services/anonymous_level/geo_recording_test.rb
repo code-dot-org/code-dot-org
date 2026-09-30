@@ -20,7 +20,6 @@ class Services::AnonymousLevel::GeoRecordingTest < ActiveSupport::TestCase
   let(:geo_scope) {AnonymousLevel::Geo.where(anon_user_id:)}
 
   before do
-    DCDO.set('anonymous_level_tracking_enabled', true)
     Geocoder.stubs(:find).with(ip_address).returns(geocoder_result)
   end
 
@@ -77,6 +76,27 @@ class Services::AnonymousLevel::GeoRecordingTest < ActiveSupport::TestCase
       end
     end
 
+    context 'when uniqueness validation detects matching geo created by another request' do
+      let(:new_geo) {build(:anonymous_level_geo, anon_user_id:)}
+
+      before do
+        create(:anonymous_level_geo, anon_user_id:)
+        AnonymousLevel::Geo.stubs(:find_or_initialize_by).with(anon_user_id:).returns(new_geo)
+      end
+
+      it 'returns initialized geo' do
+        _(record_geo).must_equal new_geo
+      end
+    end
+
+    context 'when geo fails another validation' do
+      let(:anon_user_id) {'invalid'}
+
+      it 'raises the validation error' do
+        _ {record_geo}.must_raise ActiveRecord::RecordInvalid
+      end
+    end
+
     context 'when the IP address has no location' do
       let(:geocoder_result) {nil}
 
@@ -100,20 +120,6 @@ class Services::AnonymousLevel::GeoRecordingTest < ActiveSupport::TestCase
         _(geo.state).must_be_nil
         _(geo.city).must_be_nil
         _(geo.postal_code).must_be_nil
-      end
-    end
-
-    context 'when anonymous level tracking is disabled' do
-      before do
-        DCDO.set('anonymous_level_tracking_enabled', false)
-        Geocoder.expects(:find).never
-      end
-
-      it 'does not record geo' do
-        result = nil
-
-        _ {result = record_geo}.wont_change -> {geo_scope.count}
-        _(result).must_be_nil
       end
     end
   end
