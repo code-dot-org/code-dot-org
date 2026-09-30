@@ -225,8 +225,10 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
 
     // Blockly v13 reads Blockly.Msg while building ARIA labels during inject, so
     // a locale must be loaded first. Fall back to English only when the embedder
-    // has not already set one, so we do not clobber a chosen locale.
-    if (Object.keys(Blockly.Msg).length === 0) {
+    // has not already set one, so we do not clobber a chosen locale. A field
+    // plugin or lab setting a message of its own is not a locale, so the test
+    // is for one of the messages inject reads.
+    if (Blockly.Msg['WORKSPACE_LABEL_MANY_STACKS'] === undefined) {
       Blockly.setLocale(En as unknown as {[key: string]: string});
     }
 
