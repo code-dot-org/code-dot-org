@@ -438,14 +438,19 @@ Execute departed from the plan as follows. None changes a twin's render.
   `some`, `every`), in every file processed, since a test reaches the dialog
   through the component it renders; `jest.mock` keys written as methods;
   namespace imports; re-exports; and `require()` / `import()` of the entry
-  point.
+  point. The enzyme report is conditional: `legacySharedComponents/Dialog`
+  has the same display name, and the test file imports neither.
+- The codemod parses `.ts` files with the `ts` parser, whatever `--parser`
+  says. `tsx` rejects `<T>x` casts, and jscodeshift skips a file that fails
+  to parse and moves on.
 - `yarn codemod:dialog` runs `jscodeshift` without `npx`, per
   `frontend/AGENTS.md`. Its flags are those of `codemod:buttons`.
-- The CSS-only fixes and the overlay rules are pinned by
-  `__tests__/muiDialogStyles.test.ts`, which compiles the module sheets through
-  Vite and asserts selectors and declarations against the legacy sheets. It
-  runs in the node environment: Vitest does not apply CSS under jsdom, and
-  esbuild does not run there.
+- The CSS-only fixes are verified in Storybook, not in Vitest. The
+  `DialogInNarrowViewport` story opens the dialog at 320px, and its play
+  function asserts that the panel stays inside the viewport; with the legacy
+  minimum width the panel starts at x = −155. The image, icon badge and
+  overlay rules show in the twinned stories under eyes. No DSCO story twins
+  `DialogInNarrowViewport`, since the legacy panel overflows there.
 - Observed, not planned: a click outside the panel focuses the MUI container
   (`tabIndex=-1`, `outline: 0`, so no ring shows) where legacy left focus on
   `body`. The next Tab reaches the same button in both. Escape and close

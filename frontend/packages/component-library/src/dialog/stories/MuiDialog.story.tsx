@@ -1,5 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
+import {expect, userEvent, within} from 'storybook/test';
 
 import {Button} from '@/button';
 
@@ -151,6 +152,30 @@ DialogWithLongText.args = {
     onClick: () => alert('Secondary button clicked!'),
   },
   onClose: () => console.log('Dialog with long text closed'),
+};
+
+// The legacy panel's 630px minimum width pushed it off viewports narrower than that.
+export const DialogInNarrowViewport = SingleTemplate.bind({});
+DialogInNarrowViewport.args = {
+  ...DialogWithLongText.args,
+  title: 'Dialog in a Narrow Viewport',
+};
+DialogInNarrowViewport.globals = {
+  viewport: {value: 'mobile1', isRotated: false},
+};
+DialogInNarrowViewport.parameters = {
+  eyes: {browser: {width: 320, height: 568, name: 'chrome'}},
+};
+DialogInNarrowViewport.play = async ({canvasElement}) => {
+  await userEvent.click(
+    within(canvasElement).getByRole('button', {name: 'Open Dialog'}),
+  );
+  const panel = await within(document.body).findByRole('alertdialog');
+  const {left, right} = panel.getBoundingClientRect();
+
+  expect(window.innerWidth).toBeLessThan(630);
+  expect(left).toBeGreaterThanOrEqual(0);
+  expect(right).toBeLessThanOrEqual(window.innerWidth);
 };
 
 export const DialogWithCustomContent = SingleTemplate.bind({});
