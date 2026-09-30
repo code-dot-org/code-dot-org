@@ -1,118 +1,85 @@
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 
-import {AnswerRecord, isPassed, recordedSelection} from '../../progress';
-import {MultipleChoiceQuestion as Question} from '../../types';
-
-import SubmitButton from './SubmitButton';
+import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 import styles from './multipleChoiceQuestion.module.scss';
 import shared from '../shared.module.scss';
 
 export type Feedback = 'correct' | 'incorrect';
 
+// The first four props match quiz's MultiChoiceQuestionContainer, so it can
+// replace this component; the rest are what that one lacks.
 interface MultipleChoiceQuestionProps {
-  question: Question;
-  record: AnswerRecord | undefined;
-  feedback: Feedback | undefined;
-  /** True while a correct answer's pause or an exit transition plays. */
-  locked: boolean;
-  isLast: boolean;
+  question: QuizQuestionSummary;
+  /** Unused here; kept for parity with MultiChoiceQuestionContainer. */
+  questionLabel?: string;
+  selectedChoiceId: string | null;
+  onSelectChoice: (choiceId: string) => void;
+  /** Tints the selected choice. */
+  verdict: Feedback | undefined;
+  disabled: boolean;
   /** Bumped on every wrong answer so the shake replays. */
   shakeNonce: number;
   /** Moves focus to the question text on mount. */
   focusOnMount: boolean;
-  onSelectionChange: () => void;
-  onSubmit: (optionIds: string[]) => void;
 }
 
-/**
- * One multiple-choice question. Key it by question id: the selection is
- * seeded from the record on mount.
- */
+/** One multiple-choice question's stem and choices. */
 const MultipleChoiceQuestion: React.FunctionComponent<
   MultipleChoiceQuestionProps
 > = ({
   question,
-  record,
-  feedback,
-  locked,
-  isLast,
+  selectedChoiceId,
+  onSelectChoice,
+  verdict,
+  disabled,
   shakeNonce,
   focusOnMount,
-  onSelectionChange,
-  onSubmit,
 }) => {
-  const [selectedIds, setSelectedIds] = useState(() =>
-    recordedSelection(record)
-  );
   const legend = useRef<HTMLLegendElement>(null);
-  const passed = isPassed(record);
-  const verdict = passed ? 'correct' : feedback;
 
   useEffect(() => {
     if (focusOnMount) legend.current?.focus();
   }, [focusOnMount]);
 
-  const select = (optionId: string) => {
-    setSelectedIds(ids => {
-      if (!question.multiSelect) return [optionId];
-      return ids.includes(optionId)
-        ? ids.filter(id => id !== optionId)
-        : [...ids, optionId];
-    });
-    onSelectionChange();
+  const choiceClass = (choiceId: string) => {
+    const selected = choiceId === selectedChoiceId;
+    return classNames(
+      styles.option,
+      selected && styles.optionSelected,
+      selected && verdict === 'correct' && styles.optionCorrect,
+      selected && verdict === 'incorrect' && styles.optionWrong
+    );
   };
 
-  const optionClass = (optionId: string) =>
-    classNames(
-      styles.option,
-      selectedIds.includes(optionId) && styles.optionSelected,
-      selectedIds.includes(optionId) &&
-        verdict === 'correct' &&
-        styles.optionCorrect,
-      selectedIds.includes(optionId) &&
-        verdict === 'incorrect' &&
-        styles.optionWrong
-    );
-
   return (
-    <>
-      <fieldset className={styles.fieldset}>
-        <legend ref={legend} tabIndex={-1} className={shared.questionPrompt}>
-          {question.text}
-        </legend>
-        <div
-          key={shakeNonce}
-          className={classNames(
-            styles.questionOptions,
-            feedback === 'incorrect' && styles.optionsShake
-          )}
-        >
-          {question.options.map(o => (
-            <label key={o.id} className={optionClass(o.id)}>
-              <input
-                type={question.multiSelect ? 'checkbox' : 'radio'}
-                name={question.id}
-                value={o.id}
-                checked={selectedIds.includes(o.id)}
-                disabled={locked || passed}
-                onChange={() => select(o.id)}
-              />
-              {o.label}
-            </label>
-          ))}
-        </div>
-      </fieldset>
-      {passed && <p className={styles.passedNote}>Answered correctly</p>}
-      <SubmitButton
-        disabled={selectedIds.length === 0}
-        locked={locked}
-        onClick={() => onSubmit(selectedIds)}
+    <fieldset className={styles.fieldset}>
+      <legend ref={legend} tabIndex={-1} className={shared.questionPrompt}>
+        {question.stem}
+      </legend>
+      <div
+        key={shakeNonce}
+        className={classNames(
+          styles.questionOptions,
+          verdict === 'incorrect' && styles.optionsShake
+        )}
       >
-        {isLast ? 'Finish →' : 'Next →'}
-      </SubmitButton>
-    </>
+        {(question.choices ?? []).map(choice => (
+          <label key={choice.id} className={choiceClass(choice.id)}>
+            <input
+              type="radio"
+              name={`question-${question.id}`}
+              value={choice.id}
+              checked={choice.id === selectedChoiceId}
+              disabled={disabled}
+              onChange={() => onSelectChoice(choice.id)}
+            />
+            {choice.text}
+          </label>
+        ))}
+      </div>
+    </fieldset>
   );
 };
 
