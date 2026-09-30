@@ -12,9 +12,9 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {QuizQuestionSummary, toBool} from '../types';
 
 import AttemptCard from './AttemptCard';
+import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
-import QuizStatusCard from './QuizStatusCard';
 import ResultsCard from './ResultsCard';
 import useQuizAttempt from './useQuizAttempt';
 
@@ -257,7 +257,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </Typography>
         ) : isIntroOpen ? (
           <div className={styles.questions} ref={introRef}>
-            <QuizStatusCard
+            <IntroCard
               title={displayName || levelName}
               introText={customIntroText}
               questionCount={quizQuestions.length}
@@ -284,34 +284,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           )
         ) : attempt.submittedAt ? (
           <div className={styles.questions} ref={submittedRef}>
-            {toBool(showCorrectness) ? (
-              <ResultsCard
-                title={displayName || levelName}
-                score={attempt.score}
-                maxScore={attempt.maxScore}
-                attemptNumber={attempt.attemptNumber}
-                allowMultipleAttempts={toBool(allowMultipleAttempts)}
-                canRetake={attempt.canRetake}
-                submittedAt={attempt.submittedAt}
-                onTryAgain={handleRetake}
-                onNextLevel={handleNextLevel}
-              />
-            ) : (
-              // Nothing to reveal without correctness - reuse the intro
-              // shell as a submitted stamp instead of a results card. No
-              // introText - the pre-attempt description doesn't belong here,
-              // whether or not this quiz has an intro screen at all.
-              <QuizStatusCard
-                title={displayName || levelName}
-                questionCount={quizQuestions.length}
-                timeLimitMinutes={timeLimitMinutes}
-                allowMultipleAttempts={toBool(allowMultipleAttempts)}
-                submittedAt={attempt.submittedAt}
-                canRetake={attempt.canRetake}
-                onTryAgain={handleRetake}
-                onNextLevel={handleNextLevel}
-              />
-            )}
+            <ResultsCard
+              title={displayName || levelName}
+              showCorrectness={toBool(showCorrectness)}
+              score={attempt.score}
+              maxScore={attempt.maxScore}
+              attemptNumber={attempt.attemptNumber}
+              allowMultipleAttempts={toBool(allowMultipleAttempts)}
+              canRetake={attempt.canRetake}
+              submittedAt={attempt.submittedAt}
+              onTryAgain={handleRetake}
+              onNextLevel={handleNextLevel}
+            />
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>
