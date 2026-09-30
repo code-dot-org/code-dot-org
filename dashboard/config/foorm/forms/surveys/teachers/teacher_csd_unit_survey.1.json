@@ -1014,7 +1014,7 @@
             {
               "type": "html",
               "name": "adapt_lesson_preamble",
-              "html": "<font size=+1> <strong>Lesson adapations</strong><br/>At several points in this unit, the curriculum encourages you to adapt lessons to your specific community and context.  If you made such an adaptation, we’d love to hear about it!  </font>"
+              "html": "<font size=+1> <strong>Lesson adaptations</strong><br/>At several points in this unit, the curriculum encourages you to adapt lessons to your specific community and context.  If you made such an adaptation, we’d love to hear about it!  </font>"
             },
             {
               "type": "radiogroup",

@@ -10415,6 +10415,12 @@ en:
               name: Generate lesson with AI and project
             lesson-28:
               name: Unit 1
+            lesson-29:
+              name: Unit 2
+            lesson-30:
+              name: Unit 3
+            lesson-31:
+              name: Unit 4
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -30360,6 +30366,8 @@ en:
               name: 'Lesson 7: Overflow and Rounding'
             lesson-23:
               name: 'Lesson 8: Representing Text'
+            lesson-24:
+              name: 'Lesson 9: Black and Whtie Images'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
