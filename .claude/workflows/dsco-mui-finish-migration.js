@@ -218,6 +218,9 @@ if (!discover.planDocFound) throw new Error(`${PLAN_DOC} not found; this compone
 if (discover.notes) log(`Discover notes: ${discover.notes}`)
 const next = discover.next
 if (next.kind === 'done') {
+  if (discover.legacySourceFiles.length || discover.rows.length) {
+    throw new Error(`Discover reported done, but ${discover.legacySourceFiles.length} legacy file(s) and ${discover.rows.length} deferred row(s) remain`)
+  }
   log(`${component}: nothing left to finish (${next.reason})`)
   return {component, step: 'done', reason: next.reason}
 }
@@ -225,6 +228,20 @@ if (next.kind === 'blocked') throw new Error(`${component}: ${next.reason}`)
 const cell = s => s.replace(/`/g, '').trim().toLowerCase()
 const row = next.kind === 'behavior' ? discover.rows.find(r => cell(r.behavior) === cell(next.behavior)) : null
 if (next.kind === 'behavior' && !row) throw new Error(`Discover picked "${next.behavior}", which is not a row of the table`)
+// Discover's choice is re-derived from its own facts, so an inconsistent result cannot start an unsafe step.
+if (next.kind === 'delete-legacy') {
+  const why = [
+    !discover.legacySourceFiles.length && 'no legacy source is left',
+    discover.legacyImports.length && `legacy imports remain: ${discover.legacyImports.join(', ')}`,
+    !discover.eslintBanPresent && `${ESLINT_APPS} has no ban on the legacy names`,
+  ].filter(Boolean)
+  if (why.length) throw new Error(`delete-legacy is not allowed: ${why.join('; ')}`)
+}
+if (row) {
+  if (discover.legacySourceFiles.length) throw new Error(`"${row.behavior}" must wait for delete-legacy: ${discover.legacySourceFiles.length} legacy file(s) remain`)
+  const pending = row.after.filter(b => discover.rows.some(r => cell(r.behavior) === cell(b)))
+  if (pending.length) throw new Error(`"${row.behavior}" must follow ${pending.join(', ')}, still in the table`)
+}
 const stepTitle = row ? row.behavior : 'delete the legacy DSCO source'
 const ticket = jiraKey || (row && row.ticket) || ''
 const remainingAfter = row ? discover.rows.filter(r => r !== row) : discover.rows
@@ -347,7 +364,8 @@ CONSUMER TESTS: ${JSON.stringify(discover.consumerTestFiles)}
    ${STORYBOOK}: yarn build.
 2. apps/: yarn run typecheck; yarn test:unit with every apps/ file in CONSUMER TESTS in ONE
    jest invocation.
-3. Every other frontend package with a changed file: yarn test, yarn typecheck, eslint.
+3. Every other frontend package with a changed file: whichever of its test, typecheck and
+   lint scripts exist (e2e-tests has no test script; its specs need a live studio).
 4. Lint like Drone: git add -- <changed files> (the one git write you may do), run
    ./tools/hooks/pre-commit from the repo root, then git restore --staged -- <the same
    files>. Never stage
@@ -366,6 +384,7 @@ while (true) {
   attempt++
   verify = await agent(verifyPrompt(attempt), {schema: VERIFY_SCHEMA, label: `verify-${attempt}`, phase: 'Verify', model: WORK_MODEL, effort: CHECK_EFFORT})
   if (!verify) throw new Error('verify agent was skipped')
+  if (verify.pass && verify.failures.length) verify = {...verify, pass: false}
   touched = [...new Set([...touched, ...verify.filesTouched])]
   log(`Verify ${attempt}: ${verify.pass ? 'clean' : verify.failures.map(f => f.check).join(', ')}`)
   if (verify.pass || attempt >= maxHealAttempts) break
