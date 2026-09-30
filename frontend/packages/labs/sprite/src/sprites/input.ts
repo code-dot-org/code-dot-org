@@ -1,10 +1,8 @@
 // Keyboard and mouse edge states (input.md, INP-). Raw events change the
-// down set and the raw mouse fields at any time; tracked edge states change
+// down set and the pointer state at any time; tracked edge states change
 // only in updateInputStates, which the lifecycle runs first in every pre
-// phase. The instance's mouseX, mouseY, mouseIsPressed, mouseButton and
-// touchIsDown are accessors over this module's raw state, because p5 2.x's
-// pointer handlers would otherwise overwrite them with INP-19's outside and
-// unrounded values.
+// phase. The pointer state is this module's own (INP-29): p5's mouse fields
+// are neither read nor written.
 import type p5 from 'p5';
 
 export type KeyName = number | string;
@@ -18,15 +16,15 @@ export interface InputState {
   /** Tracked keys; `null` is the single "no key" entry (INP-14). */
   readonly keys: Map<number | null, EdgeState>;
   readonly buttons: Map<unknown, EdgeState>;
+  /** The pointer state (INP-29). */
   mouseX: number;
   mouseY: number;
   mouseIsPressed: boolean;
+  /** `'left'`, `'right'` or `'center'`: the button of the last inside mousedown. */
   mouseButton: string;
   touchIsDown: boolean;
-  /** Nonzero while p5's own pointer handlers run; their writes are dropped. */
-  p5Writing: number;
-  /** p5's window blur listener, which runs after ours, clears mouseIsPressed; INP-20 does not. */
-  blurPending: boolean;
+  /** The canvas the instance's `createCanvas` last made (INP-19). */
+  canvas: HTMLElement | null;
 }
 
 /** The instance members input.md specifies. */
@@ -38,13 +36,10 @@ export interface InputMembers {
   mouseUp(button?: string): boolean;
   mouseWentDown(button?: string): boolean;
   mouseWentUp(button?: string): boolean;
-}
-
-/** Raw mouse fields that p5 2.x lacks or types differently (INP-20, INP-21). */
-export interface RawMouseMembers {
-  /** `'left'`, `'right'` or `'center'`: the button of the last inside mousedown. */
-  mouseButton: string;
-  touchIsDown: boolean;
+  /** INP-6: a keydown with this `which`, for hosts without a DOM event. */
+  pressKey(code: number): void;
+  /** INP-6: a keyup with this `which`. */
+  releaseKey(code: number): void;
 }
 
 export function createInputState(): InputState {
@@ -57,8 +52,7 @@ export function createInputState(): InputState {
     mouseIsPressed: false,
     mouseButton: 'left',
     touchIsDown: false,
-    p5Writing: 0,
-    blurPending: false,
+    canvas: null,
   };
 }
 
@@ -210,9 +204,11 @@ interface PointLike {
 }
 
 /** INP-19: the canvas point of an inside event, or null for an outside one. */
-function canvasPoint(p: p5, e: PointLike): {x: number; y: number} | null {
-  const canvas = (p as unknown as {_curElement?: {elt?: HTMLElement} | null})
-    ._curElement?.elt;
+function canvasPoint(
+  state: InputState,
+  e: PointLike,
+): {x: number; y: number} | null {
+  const canvas = state.canvas;
   if (!canvas) {
     return null;
   }
@@ -223,13 +219,13 @@ function canvasPoint(p: p5, e: PointLike): {x: number; y: number} | null {
     return null;
   }
   return {
-    x: Math.round((dx * canvas.offsetWidth) / rect.width),
-    y: Math.round((dy * canvas.offsetHeight) / rect.height),
+    x: (dx * canvas.offsetWidth) / rect.width,
+    y: (dy * canvas.offsetHeight) / rect.height,
   };
 }
 
-function moveMouse(p: p5, state: InputState, e: PointLike): boolean {
-  const point = canvasPoint(p, e);
+function moveMouse(state: InputState, e: PointLike): boolean {
+  const point = canvasPoint(state, e);
   if (!point) {
     return false;
   }
@@ -246,13 +242,16 @@ function mouseButtonName(button: number): string {
   return button === 2 ? 'right' : 'left';
 }
 
-function firstInsideTouch(p: p5, e: Event): {x: number; y: number} | null {
+function firstInsideTouch(
+  state: InputState,
+  e: Event,
+): {x: number; y: number} | null {
   const touches = (e as unknown as {touches?: ArrayLike<PointLike>}).touches;
   if (!touches) {
     return null;
   }
   for (let i = 0; i < touches.length; i++) {
-    const point = canvasPoint(p, touches[i]);
+    const point = canvasPoint(state, touches[i]);
     if (point) {
       return point;
     }
@@ -260,101 +259,7 @@ function firstInsideTouch(p: p5, e: Event): {x: number; y: number} | null {
   return null;
 }
 
-const RAW_MOUSE_FIELDS = [
-  'mouseX',
-  'mouseY',
-  'mouseIsPressed',
-  'mouseButton',
-  'touchIsDown',
-] as const;
-
-// p5 2.x binds `this._on<event>` for these at presetup, after attachment.
-const P5_POINTER_HANDLERS = [
-  'pointerdown',
-  'pointerup',
-  'pointercancel',
-  'pointermove',
-  'dragend',
-  'dragover',
-  'click',
-  'dblclick',
-  'wheel',
-] as const;
-
-type Handler = (this: p5, e: unknown) => unknown;
-
-function defineMember(p: p5, name: string, descriptor: PropertyDescriptor) {
-  Object.defineProperty(p, name, {
-    configurable: true,
-    enumerable: true,
-    ...descriptor,
-  });
-}
-
-/** Makes the instance's raw mouse fields accessors over `state` (INP-19..INP-22). */
-function installRawMouse(p: p5, state: InputState): void {
-  const target = p as unknown as Record<string, unknown>;
-  for (const name of RAW_MOUSE_FIELDS) {
-    defineMember(p, name, {
-      get: () => state[name],
-      set: (value: never) => {
-        if (state.p5Writing > 0) {
-          return;
-        }
-        if (name === 'mouseIsPressed' && state.blurPending && !value) {
-          state.blurPending = false;
-          return;
-        }
-        state[name] = value;
-      },
-    });
-  }
-  // p5 2.x's version assigns properties of an object-valued mouseButton.
-  defineMember(p, '_setMouseButton', {value: () => {}, writable: true});
-  for (const event of P5_POINTER_HANDLERS) {
-    const original = target[`_on${event}`] as Handler | undefined;
-    if (typeof original !== 'function') {
-      continue;
-    }
-    defineMember(p, `_on${event}`, {
-      writable: true,
-      value: function (this: p5, e: unknown) {
-        state.p5Writing++;
-        try {
-          return original.call(this, e);
-        } finally {
-          state.p5Writing--;
-        }
-      },
-    });
-  }
-}
-
-/**
- * INP-6: Code.org's mobile controls call the key handlers with a plain
- * object carrying `which`. Real events reach the down set through the
- * library's own listeners, so here only non-events do.
- */
-function installKeyHandlers(p: p5, state: InputState): void {
-  const target = p as unknown as Record<string, unknown>;
-  for (const [name, apply] of [
-    ['_onkeydown', keyPressed],
-    ['_onkeyup', keyReleased],
-  ] as const) {
-    const original = target[name] as Handler | undefined;
-    defineMember(p, name, {
-      writable: true,
-      value: function (this: p5, e: KeyLike) {
-        if (!(e instanceof Event)) {
-          apply(state, e);
-        }
-        return original?.call(this, e);
-      },
-    });
-  }
-}
-
-function addListeners(p: p5, state: InputState, signal: AbortSignal): void {
+function addListeners(state: InputState, signal: AbortSignal): void {
   const options = {signal};
   window.addEventListener('keydown', e => keyPressed(state, e), options);
   window.addEventListener('keyup', e => keyReleased(state, e), options);
@@ -362,17 +267,16 @@ function addListeners(p: p5, state: InputState, signal: AbortSignal): void {
     'blur',
     () => {
       state.down.clear();
-      state.blurPending = true;
+      state.mouseIsPressed = false;
     },
     options,
   );
   window.addEventListener(
     'mousedown',
     e => {
-      if (moveMouse(p, state, e)) {
+      if (moveMouse(state, e)) {
         state.mouseIsPressed = true;
         state.mouseButton = mouseButtonName(e.button);
-        state.blurPending = false;
       }
     },
     options,
@@ -380,17 +284,16 @@ function addListeners(p: p5, state: InputState, signal: AbortSignal): void {
   window.addEventListener(
     'mouseup',
     e => {
-      moveMouse(p, state, e);
+      moveMouse(state, e);
       state.mouseIsPressed = false;
-      state.blurPending = false;
     },
     options,
   );
-  window.addEventListener('mousemove', e => moveMouse(p, state, e), options);
+  window.addEventListener('mousemove', e => moveMouse(state, e), options);
   window.addEventListener(
     'touchstart',
     e => {
-      const point = firstInsideTouch(p, e);
+      const point = firstInsideTouch(state, e);
       if (point) {
         state.touchIsDown = true;
         state.mouseX = point.x;
@@ -402,7 +305,7 @@ function addListeners(p: p5, state: InputState, signal: AbortSignal): void {
   window.addEventListener(
     'touchend',
     e => {
-      if (!firstInsideTouch(p, e)) {
+      if (!firstInsideTouch(state, e)) {
         state.touchIsDown = false;
       }
     },
@@ -415,15 +318,10 @@ function addListeners(p: p5, state: InputState, signal: AbortSignal): void {
  * instance is removed.
  */
 export function installInput(
-  p: p5,
   state: InputState,
   signal: AbortSignal,
 ): InputMembers {
-  state.mouseX = p.mouseX;
-  state.mouseY = p.mouseY;
-  installRawMouse(p, state);
-  installKeyHandlers(p, state);
-  addListeners(p, state, signal);
+  addListeners(state, signal);
   return {
     keyDown: key => keyState(state, key) === 'DOWN',
     keyWentDown: key => keyState(state, key) === 'WENT_DOWN',
@@ -432,6 +330,8 @@ export function installInput(
     mouseUp: button => buttonState(state, button) === 'UP',
     mouseWentDown: button => buttonState(state, button) === 'WENT_DOWN',
     mouseWentUp: button => buttonState(state, button) === 'WENT_UP',
+    pressKey: code => keyPressed(state, {which: code}),
+    releaseKey: code => keyReleased(state, {which: code}),
   };
 }
 

@@ -12,7 +12,14 @@ import {Camera} from '../camera';
 import {postDraw, preDraw} from '../lifecycle';
 import type {SpriteP5} from '../types';
 
-import {context2d, frame, makeInstance, recordP5, setMouse} from './harness';
+import {
+  context2d,
+  frame,
+  makeInstance,
+  pointer,
+  recordP5,
+  setMouse,
+} from './harness';
 
 function matrix(p: SpriteP5): number[] {
   const m = context2d(p).getTransform();
@@ -248,16 +255,16 @@ describe('camera.md: the mouse hit test', () => {
     await frame(p);
     p.camera.x = 300;
     setMouse(p, 200, 200);
-    const raw = p as unknown as {mouseIsPressed: boolean};
+    const raw = pointer(p);
     let during: unknown[] = [];
     await frame(p, () => {
       const before = p.mousePressedOver(s);
       raw.mouseIsPressed = true;
       during = [before, p.mousePressedOver(s), p.mouseWentDown()];
       raw.mouseIsPressed = false;
-      p.touchIsDown = true;
+      raw.touchIsDown = true;
       during.push(p.mousePressedOver(s));
-      p.touchIsDown = false;
+      raw.touchIsDown = false;
     });
     expect(during).toEqual([false, true, false, true]);
   });
@@ -340,7 +347,11 @@ describe("camera.md: Sprite Lab 2's camera", () => {
     setMouse(p, 0, 0);
     await frame(p, () => {
       zoom = stepZoom(zoom, target);
-      const mouse = worldPoint({x: p.mouseX, y: p.mouseY}, zoom, p.camera);
+      const mouse = worldPoint(
+        {x: p.World.mouseX, y: p.World.mouseY},
+        zoom,
+        p.camera,
+      );
       p.camera.mouseX = mouse.x;
       p.camera.mouseY = mouse.y;
       seen.push(p.camera.active, p.camera.mouseX, p.camera.mouseY);

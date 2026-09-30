@@ -2,6 +2,7 @@
 // the activation the frame lifecycle needs (LIF-10 item 3, LIF-15 item 2).
 import type p5 from 'p5';
 
+import {findContext} from './context';
 import {makeVector} from './vector';
 
 const initialised = new WeakSet<Camera>();
@@ -18,8 +19,9 @@ export class Camera {
     instances.set(this, p);
     this.position = makeVector(p, x, y);
     this.zoom = zoom;
-    this.mouseX = p.mouseX;
-    this.mouseY = p.mouseY;
+    const pointer = findContext(p)?.input;
+    this.mouseX = pointer?.mouseX ?? 0;
+    this.mouseY = pointer?.mouseY ?? 0;
   }
 
   get x(): number {
@@ -66,8 +68,9 @@ function activate(camera: Camera): void {
     camera.y = halfHeight;
     initialised.add(camera);
   }
-  camera.mouseX = p.mouseX + camera.x - halfWidth;
-  camera.mouseY = p.mouseY + camera.y - halfHeight;
+  const pointer = findContext(p)?.input;
+  camera.mouseX = (pointer?.mouseX ?? 0) + camera.x - halfWidth;
+  camera.mouseY = (pointer?.mouseY ?? 0) + camera.y - halfHeight;
   if (!camera.active) {
     p.push();
     p.scale(camera.zoom);

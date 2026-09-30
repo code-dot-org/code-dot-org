@@ -4,7 +4,7 @@ import type {Animation, FrameRecord, SpriteSheet} from './animation';
 import type {Camera} from './camera';
 import type {CollisionMembers} from './collision';
 import type {Group} from './Group';
-import type {InputMembers, RawMouseMembers} from './input';
+import type {InputMembers} from './input';
 import type {Sprite} from './Sprite';
 import type {World} from './World';
 
@@ -12,10 +12,7 @@ import type {World} from './World';
 export type PredefinedAnimation = p5.Image | Animation;
 
 /** What the library adds to an attached instance (LIF-2). */
-export interface SpriteMembers
-  extends InputMembers,
-    RawMouseMembers,
-    CollisionMembers {
+export interface SpriteMembers extends InputMembers, CollisionMembers {
   createSprite(x?: number, y?: number, width?: number, height?: number): Sprite;
   readonly allSprites: Group;
   Group: new () => Group;
@@ -52,4 +49,4 @@ export interface SpriteMembers
 }
 
 /** A p5 instance with the sprite library attached. */
-export type SpriteP5 = Omit<p5, 'camera' | 'mouseButton'> & SpriteMembers;
+export type SpriteP5 = Omit<p5, 'camera'> & SpriteMembers;
