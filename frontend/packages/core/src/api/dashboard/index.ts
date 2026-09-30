@@ -12,6 +12,7 @@ export * from './projects';
 export * from './schools';
 export * from './sections';
 export * from './sources';
+export * from './spriteLab';
 export {usersKeys} from './users/users.keys';
 export {buildSchoolData} from './users/buildSchoolData';
 export {

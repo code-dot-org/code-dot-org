@@ -14,6 +14,7 @@ import {createProjectsApi} from '../dashboard/projects';
 import {createSchoolsApi} from '../dashboard/schools';
 import {createSectionsApi} from '../dashboard/sections';
 import {createSourcesApi} from '../dashboard/sources';
+import {createSpriteLabApi} from '../dashboard/spriteLab';
 import {createUsersApi} from '../dashboard/users';
 
 export const createApiClient = (transport: Transport) => ({
@@ -32,6 +33,7 @@ export const createApiClient = (transport: Transport) => ({
   schools: createSchoolsApi(transport),
   sections: createSectionsApi(transport),
   sources: createSourcesApi(transport),
+  spriteLab: createSpriteLabApi(transport),
   users: createUsersApi(transport),
 });
 
