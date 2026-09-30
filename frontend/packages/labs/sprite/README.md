@@ -24,6 +24,12 @@ depends on the engine or the views:
 - `blockly/`: the lab's own blocks, their fields and toolbox, as
   `@code-dot-org/blockly` definitions (`SPRITELAB2_BLOCKS`).
 - `migrateSources`: upgrades to sources saved by older versions.
+- `sprites/`: the sprite library over upstream p5, clean-room from
+  `docs/sprites/`, exported as `@code-dot-org/sprite-lab/sprites`. Collisions,
+  the camera and input are still placeholders.
+- `views/`: the parts of the lab's UI that need neither the engine nor
+  image generation: scene picking and editing, the tab shell, and the play
+  bar.
 
 See `docs/port-plan.md` for the layers still to port, their order, and the
 decisions they wait on.

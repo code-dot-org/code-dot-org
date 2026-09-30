@@ -23,6 +23,11 @@
       "types": "./dist/fixtures/index.d.ts",
       "import": "./dist/fixtures/index.mjs",
       "require": "./dist/fixtures/index.cjs"
+    },
+    "./sprites": {
+      "types": "./dist/sprites/index.d.ts",
+      "import": "./dist/sprites/index.mjs",
+      "require": "./dist/sprites/index.cjs"
     }
   },
   "scripts": {
@@ -54,7 +59,8 @@
     "@code-dot-org/lab": "workspace:*",
     "@reduxjs/toolkit": "catalog:",
     "blockly": "^13.1.0",
-    "md5": "^2.3.0"
+    "md5": "^2.3.0",
+    "p5": "^2.3.4"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
@@ -66,22 +72,23 @@
     "@testing-library/react": "catalog:",
     "@types/md5": "^2.3.5",
     "@types/node": "catalog:",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
     "acorn": "^8.15.0",
     "eslint": "catalog:",
     "jsdom": "catalog:",
     "playwright": "catalog:",
     "prettier": "catalog:",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "stylelint": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "vitest-canvas-mock": "^1.1.0"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
