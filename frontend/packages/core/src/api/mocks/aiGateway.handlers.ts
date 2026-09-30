@@ -103,6 +103,15 @@ export function cannedGatewayResponse(body: GatewayRequest) {
 }
 
 export const aiGatewayHandlers = [
+  // Image moderation, which AI image features run on every picture: every
+  // category at severity 0.
+  http.post('*/v3/images/moderate', () =>
+    HttpResponse.json({
+      categoriesAnalysis: ['Hate', 'SelfHarm', 'Sexual', 'Violence'].map(
+        category => ({category, severity: 0}),
+      ),
+    }),
+  ),
   http.post('*/ai_gateway/access_token', () =>
     HttpResponse.json({
       token: 'mock-ai-gateway-token',

@@ -2,6 +2,7 @@
 import {afterAll, afterEach, beforeAll, describe, expect, it} from 'vitest';
 
 import {createAiGatewayApi} from '../../aiGateway';
+import {createImagesApi, imageModerationVerdict} from '../../dashboard/images';
 import {createKyTransport} from '../../transports/kyTransport';
 import {
   AI_GATEWAY_MOCK_PATH,
@@ -79,5 +80,15 @@ describe('the mock AI gateway', () => {
     setActiveScenario({labKey: 'demo', tag: 'a'});
     const result = await gateway().generateText({model: 'm', prompt: 'x'});
     expect(result.text).toBe('from the scenario');
+  });
+
+  it('passes every image through moderation', async () => {
+    const images = createImagesApi(
+      createKyTransport({baseUrl: 'https://studio.code.org'}),
+    );
+    const result = await images.moderate({
+      image: new Blob(['png'], {type: 'image/png'}),
+    });
+    expect(imageModerationVerdict(result)).toBe('safe');
   });
 });

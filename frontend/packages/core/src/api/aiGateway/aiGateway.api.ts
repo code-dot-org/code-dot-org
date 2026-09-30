@@ -25,7 +25,11 @@ export function aiGatewayUrl(): string {
 }
 
 /** Which stage of a feature a call serves; the worker logs and meters by it. */
-export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
+export type GatewayPhase =
+  | 'input_filter'
+  | 'generation'
+  | 'output_filter'
+  | 'llm_safety_judge';
 
 export const TURNSTILE_ENFORCEMENT_MODES = [
   'disabled',
