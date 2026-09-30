@@ -19,7 +19,7 @@ to `lab2/`, so `lab2/audioFeedback/heightTone.ts` becomes
 | 2   | Scene model     | `types`, `world`, `imageReferences`, `imageTrim`, `imageGallery`, `imageRoleDefaults`, `levelMode`, `worldStartPattern`, `guideSteps`, `sceneToolbox`, `addBlocks`, `scenesApi`, `sceneThumbnails`, `redux/spriteLab2Redux`, `ai/images/imageAdlibs` | Done   |
 | 3   | Blockly         | `blockly/**`, `migrateSources`                                                                                                                                                                                                                       | Done   |
 | 4   | Engine          | `SpriteLab2Engine.js`, `redux/reseedablePageConstants`, and everything under them in `apps/src/p5lab`                                                                                                                                                |        |
-| 5   | Views           | `views/**`, `entrypoint.ts`, `index.js`                                                                                                                                                                                                              |        |
+| 5   | Views           | `views/**`, `entrypoint.ts`, `index.js`                                                                                                                                                                                                              | Begun  |
 | 6   | AI images       | `ai/images/{imageGeneration,imageSafety,removeBackground,characterSet,modelHelpers}`, `paintBlank`                                                                                                                                                   |        |
 | 7   | Scene music     | `sceneMusic`, `musicProjects`, `views/useSceneMusic`, `blockly/musicProjectDropdown`                                                                                                                                                                 |        |
 
@@ -62,6 +62,16 @@ views (`useSources`, `Lab2Registry`, `Loading`, instructions, `Guide`,
 `Adlib`); `@code-dot-org/lab` has all of these. The dialogs already use the
 design system.
 
+The views that need neither the engine nor image generation are ported: the
+scene picker, gallery and new-scene dialog; the tab shell; the play bar,
+controls and music bar; the image-pane buttons, sheet preview and
+temperature bot; and `useSceneEditing`. What remains waits on the engine
+(`SpriteLab2View`, `SpriteLab2Container`, `Playspace`, `WorldTab`,
+`useBlocklyWorkspace`, `useSceneThumbnails`), on image generation
+(`GenerateImagePane`, `GenerateImageView`, `ImageDetailsDialog`,
+`GenerateSpriteLab`, `useImageSession`), or on scene music
+(`useSceneMusic`).
+
 ### 6. AI images
 
 Generation runs through the `ai` SDK, `@ai-sdk/google` and apps'
@@ -78,10 +88,11 @@ does not.
 
 ## Decisions to make
 
-1. **Engine.** Port `P5Lab`, `SpriteLab` and p5.play into this package, move
-   them into a shared p5 package that Game Lab could later use, or replace
-   them with an engine written for Lab2. This decides the size of layer 4
-   and must be made before it starts.
+1. **Engine.** Decided: a slim p5 runtime extracted from apps, over
+   upstream p5, built in this package and exported as
+   `@code-dot-org/sprite-lab/engine`, avoiding the `@code-dot-org/p5.play`
+   and `@code-dot-org/p5` forks. `docs/engine.md` has the design and its own
+   open questions.
 2. **Pixel editor.** Sprite Lab edits costumes with apps' `pixelEditor`.
    World Lab has its own editor under `labs/world/src/imageEditor`. Port
    apps' editor, or extract World's into a shared package and adopt it.
@@ -93,8 +104,9 @@ does not.
    with `customInput` types, and code that calls the engine's commands.
    Porting it means apps' `block_utils.js` (1,216 lines), `blocksCommon.js`
    (270) and `p5lab/spritelab/blocks.js` (762), or a converter from the pool
-   format to `@code-dot-org/blockly` definitions. It belongs with the engine
-   decision, since the pool's code calls the engine.
+   format to `@code-dot-org/blockly` definitions. With the engine decided,
+   the pool's generated code runs on the ported runtime as it is; only the
+   installer, or a converter, remains to choose.
 
 ## Changes from apps
 
@@ -161,3 +173,25 @@ Layer 3:
   Blockly supports and the zoom block uses.
 - A new test, `blockly/__tests__/setup.test.ts`, registers every lab block
   as a workspace would and builds, serializes and generates each one.
+
+Layer 5, so far:
+
+- `useSceneEditing` takes `updateSources` as an updater,
+  `(update: (prev) => Sources) => void`; apps' `useSources` accepted one
+  directly, where `@code-dot-org/lab`'s takes whole sources, so the view
+  adapts it. New scene ids come from `crypto.randomUUID()` in place of apps'
+  `createUuid`; both are version 4 UUIDs.
+- `useSetupBlockColor` takes the workspace. Apps found the main workspace
+  through its Blockly wrapper's creation event, which `@code-dot-org/blockly`
+  does not fire. `PlayBar` takes the color as a prop instead of calling the
+  hook.
+- `runButtonSx.ts` and `dialogChrome.scss` are copied from apps' templates
+  and pixel editor. The four key codes `playBar.ts` needs are declared there.
+- `src/types/mui.d.ts` mirrors the design system's MUI augmentation, as
+  codebridge's does, for the `tertiary` color and `extraSmall` size.
+- The views import React's named exports instead of its default, as this
+  package's lint requires. The scene group in `TabShell` keeps its
+  pointer-only click, with the two accessibility rules waived on that line:
+  its keyboard route is the tab buttons inside it.
+- Apps has no tests for these views. New tests cover `useSceneEditing`,
+  `playBar`, `useSetupBlockColor` and `ScenesGallery`.
