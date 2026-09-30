@@ -167,7 +167,6 @@ module Dashboard
     # well as some subdirectories of the models dir that we use for organization.
 
     runtime_load_paths = [
-      Rails.root.join('lib'),
       Rails.root.join('app', 'models', 'experiments'),
       Rails.root.join('app', 'models', 'levels'),
       Rails.root.join('app', 'models', 'sections'),
@@ -183,14 +182,10 @@ module Dashboard
     # Zeitwerk, rather than as subdirectories which require namspacing.
     config.eager_load_paths += runtime_load_paths
 
-    # Ignore certain directories for autoloading and eager loading
+    # Auto- and eager-load `lib` directory, excluding certain subdirectories.
     # Ignore lib/clever becuase this is generated code and the generated code
     # does not expect 'Clever::' to be prepended to everything it references.
-    Rails.autoloaders.main.ignore(
-      Rails.root.join("lib", "tasks"),
-      Rails.root.join("lib", "assets"),
-      Rails.root.join("lib", "clever"),
-    )
+    config.autoload_lib(ignore: %w(assets tasks clever devtools))
 
     # Tools which are designed for development / test environments should not be eager-loaded
     # because they may depend on gems which are not available in production. These tools can
