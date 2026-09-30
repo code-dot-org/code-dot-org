@@ -230,6 +230,19 @@ describe('LinkedAccounts', () => {
     ).toBeNull();
   });
 
+  it('offers an LMS with only a help link, since it connects from the LMS', () => {
+    renderSection();
+
+    const canvas = rowOf('Canvas');
+    expect(
+      within(canvas).getByRole('link', {name: /learn more about canvas/i}),
+    ).toHaveAttribute(
+      'href',
+      expect.stringContaining('Single-Sign-On-with-Canvas'),
+    );
+    expect(within(canvas).queryByRole('button')).toBeNull();
+  });
+
   it('stops offering an LMS once it is linked', () => {
     renderSection(
       {
