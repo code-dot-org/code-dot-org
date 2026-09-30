@@ -128,4 +128,24 @@ describe('agent lifecycle', () => {
 
     expect(removed).toHaveBeenCalledWith(workspace);
   });
+
+  describe('old-style block definitions', () => {
+    it('registers a definition that builds itself in init', () => {
+      driver.blocks = [
+        {
+          type: 'driver_test_init_block',
+          init(this: Blockly.Block) {
+            this.appendValueInput('X').appendField('go');
+          },
+          generator: {javascript: () => 'go();\n'},
+        },
+      ] as unknown as BlockDefinition[];
+      const workspace = new Blockly.Workspace();
+      const block = workspace.newBlock('driver_test_init_block');
+      expect(block.inputList.map(input => input.name)).toEqual(['X']);
+      javascriptGenerator.init(workspace);
+      expect(javascriptGenerator.blockToCode(block)).toBe('go();\n');
+      workspace.dispose();
+    });
+  });
 });
