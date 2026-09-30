@@ -162,7 +162,12 @@ namespace :test do
     end
     failures = UI_SUITES.keys.zip(exceptions).to_h.compact
 
-    ChatClient.log ui_all_rollup(failures), color: (failures.empty? ? 'green' : 'red')
+    {
+      'Deploy-time UI suites:' => UI_SUITES.keys - PLAYWRIGHT_UI_SUITES.keys,
+      'Deploy-time Playwright suites:' => PLAYWRIGHT_UI_SUITES.keys,
+    }.each do |title, targets|
+      ChatClient.log ui_all_rollup(title, targets, failures), color: (failures.slice(*targets).empty? ? 'green' : 'red')
+    end
 
     # aws/ci_build turns the DTT red off this raise. Which exception surfaces
     # is arbitrary.
@@ -691,13 +696,13 @@ end
 
 # The suites report minutes apart and interleaved with everything else in the
 # room, so this is the only place the whole deploy window can be read at once.
-def ui_all_rollup(failures)
-  lines = UI_SUITES.map do |target, label|
+def ui_all_rollup(title, targets, failures)
+  lines = targets.map do |target|
     rollup = PLAYWRIGHT_ROLLUP[PLAYWRIGHT_UI_SUITES[target]]
     next rollup if rollup
-    failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
+    failures[target] ? "❌ #{UI_SUITES[target]}: #{failures[target].message}." : "✅ #{UI_SUITES[target]}: passed."
   end
-  ['Deploy-time UI suites:', *lines].join("\n")
+  [title, *lines].join("\n")
 end
 
 def playwright_results_summary(results_json)
