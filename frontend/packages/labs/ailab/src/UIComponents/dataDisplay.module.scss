@@ -1,22 +1,17 @@
+@use '../sharedMixins' as mixins;
+
 .panel {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-sizing: border-box;
+  @include mixins.panel;
+
   overflow: hidden;
-  font-family: var(--font-family-main);
   background-color: var(--background-neutral-primary);
 }
 
-// Matches the Train panel header so the two line up.
 .header {
-  display: flex;
-  align-items: center;
+  @include mixins.panel-header;
+
   gap: 8px;
-  min-height: 40px;
-  padding: 4px 8px 4px 10px;
-  box-sizing: border-box;
-  border-bottom: 1px solid var(--border-neutral-primary);
+  padding-left: 10px;
 }
 
 .title {

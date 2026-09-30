@@ -1,29 +1,22 @@
+@use '../sharedMixins' as mixins;
+
 .panel {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-sizing: border-box;
-  font-family: var(--font-family-main);
+  @include mixins.panel;
+
   background-color: var(--background-neutral-secondary);
   border-left: 1px solid var(--border-neutral-primary);
 }
 
 .header {
-  display: flex;
-  align-items: center;
+  @include mixins.panel-header;
+
   justify-content: center;
-  min-height: 40px;
-  margin: 0;
-  padding: 4px 8px;
-  box-sizing: border-box;
   font-size: 12px;
   font-weight: 600;
   line-height: 18px;
   letter-spacing: 0.72px;
   text-transform: uppercase;
   color: var(--text-neutral-quaternary);
-  background-color: var(--background-neutral-primary);
-  border-bottom: 1px solid var(--border-neutral-primary);
 }
 
 .content {
