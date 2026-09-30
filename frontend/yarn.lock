@@ -2193,6 +2193,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
     "@code-dot-org/progress": "workspace:*"
+    "@code-dot-org/shared-constants": "workspace:*"
     "@code-dot-org/teacher-dashboard": "workspace:*"
     "@code-dot-org/users": "workspace:*"
     "@emotion/react": "catalog:"
