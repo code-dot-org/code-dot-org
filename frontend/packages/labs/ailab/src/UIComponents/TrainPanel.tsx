@@ -1,5 +1,5 @@
-/* React component for choosing a model's label and features, then training it. */
-import {Button, Tooltip} from '@mui/material';
+/* Panel for choosing a model's label and features, then training it. */
+import {Button, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import type {ChangeEvent, ReactNode} from 'react';
 
@@ -31,13 +31,15 @@ const FieldLabel = ({text, tooltip}: FieldLabelProps) => (
   <div className={styles.fieldLabel}>
     <span aria-hidden="true">{text}</span>
     <Tooltip title={tooltip}>
-      <button
-        type="button"
+      <MuiIconButton
+        variant="text"
+        color="tertiary"
+        size="extraSmall"
         className={styles.infoButton}
         aria-label={`About ${text}`}
       >
         <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
-      </button>
+      </MuiIconButton>
     </Tooltip>
   </div>
 );

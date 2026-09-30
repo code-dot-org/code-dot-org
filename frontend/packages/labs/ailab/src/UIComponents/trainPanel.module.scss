@@ -57,23 +57,20 @@ $features-menu-max-height: 240px;
   color: var(--text-neutral-primary);
 }
 
-.infoButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  border: none;
-  border-radius: var(--shape-sm);
-  font-size: 12px;
-  line-height: 12px;
-  color: var(--text-neutral-quaternary);
-  background: none;
-  cursor: pointer;
+$info-icon-size: 12px;
 
-  &:focus-visible {
-    outline: 2px solid var(--border-brand-primary);
-    outline-offset: 1px;
+// Two classes, to outrank the theme's extraSmall padding and icon size.
+.fieldLabel .infoButton {
+  padding: 0;
+  min-width: $info-icon-size;
+  min-height: $info-icon-size;
+  width: $info-icon-size;
+  height: $info-icon-size;
+
+  i {
+    width: $info-icon-size;
+    font-size: $info-icon-size;
+    line-height: $info-icon-size;
   }
 }
 
