@@ -8,6 +8,9 @@
 
 import '@mui/material/Button';
 import '@mui/material/IconButton';
+import '@mui/material/Tooltip';
+
+import type {Theme as DataThemeMode} from '@code-dot-org/component-library/common/contexts';
 
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
@@ -105,6 +108,14 @@ declare module '@mui/material/Typography' {
     label4: true;
     strong: true;
     em: true;
+  }
+}
+
+// The tooltip portals out of any surrounding `data-theme` subtree, so callers
+// pass the theme to its slot explicitly.
+declare module '@mui/material/Tooltip' {
+  interface TooltipTooltipSlotPropsOverrides {
+    'data-theme'?: DataThemeMode;
   }
 }
 
