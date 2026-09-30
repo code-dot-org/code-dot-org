@@ -56,10 +56,12 @@ JS-Interpreter through `CustomMarshalingInterpreter`, which
 `@code-dot-org/lab/interpreter` already ports.
 
 Done, following `docs/engine.md`'s order of work: the clean-room sprite
-library that replaces p5.play (`src/sprites/`), and the runtime,
-`CoreLibrary` and `p5lab/spritelab/commands` (`src/engine/runtime/`),
-with apps' `CoreLibraryTest` and command tests ported. Animation loading,
-the engine class and the wiring remain.
+library that replaces p5.play (`src/sprites/`); the runtime, `CoreLibrary`
+and `p5lab/spritelab/commands` (`src/engine/runtime/`), with apps'
+`CoreLibraryTest` and command tests ported; animation loading
+(`src/engine/animations/`); and the engine class, `SpriteLabEngine`, run in
+a browser by `engine-demo.html` and `e2e/engine.spec.ts`. Wiring it into
+the views remains.
 
 ### 5. Views
 

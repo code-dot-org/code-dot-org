@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import {defineConfig} from 'vite';
+import {defineConfig, searchForWorkspaceRoot} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
@@ -12,16 +12,24 @@ export default defineConfig({
   ],
   server: {
     allowedHosts: ['localhost-studio.code.org'],
+    fs: {
+      // The engine demo runs the real NativeSpriteLab helper library.
+      allow: [
+        searchForWorkspaceRoot(process.cwd()),
+        '../../../../dashboard/config/libraries',
+      ],
+    },
   },
   build: {
     lib: {
-      // Object-form entry so the fixtures and sprites chunks emit at
-      // dist/fixtures/index.* and dist/sprites/index.*, which the `./mocks`
-      // and `./sprites` export subpaths resolve to.
+      // Object-form entry so the fixtures, sprites and engine chunks emit
+      // at dist/<name>/index.*, which the `./mocks`, `./sprites` and
+      // `./engine` export subpaths resolve to.
       entry: {
         index: 'src/index.ts',
         'fixtures/index': 'src/fixtures/index.ts',
         'sprites/index': 'src/sprites/index.ts',
+        'engine/index': 'src/engine/index.ts',
       },
       name: 'sprite-lab',
       formats: ['es', 'cjs'],
