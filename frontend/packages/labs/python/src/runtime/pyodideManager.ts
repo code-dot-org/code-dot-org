@@ -1,4 +1,4 @@
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
 import type {PyodideRuntime} from './pyodideRuntime';
 
@@ -53,8 +53,9 @@ export async function preloadPyodide(): Promise<void> {
 export async function asyncRun(
   python: string,
   source: MultiFileSource,
-): Promise<void> {
-  return (await getRuntime()).asyncRun(python, source);
+  validationFile?: ProjectFile,
+): Promise<string | undefined> {
+  return (await getRuntime()).asyncRun(python, source, validationFile);
 }
 
 export async function restartWorkerIfRunning(): Promise<void> {

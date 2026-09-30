@@ -1,8 +1,8 @@
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
 // Messages exchanged between the main thread (pyodideWorkerManager) and the
 // pyodide web worker. A trimmed subset of the legacy apps/src/pythonlab protocol
-// — input, packages, validation, and neighborhood messages are deferred.
+// — package and neighborhood messages are deferred.
 
 export type PyodideMessageType =
   | 'sysout'
@@ -16,6 +16,7 @@ export type PyodideMessageType =
 
 export interface PyodideMessage {
   type: PyodideMessageType;
+  /** With `run_complete`, the program's final value as JSON, if it had one. */
   message?: string;
   id: string;
   /**
@@ -36,6 +37,11 @@ export interface RunRequest {
    * so the post-run walk can fold new files back into it.
    */
   source: MultiFileSource;
+  /**
+   * The level's validation file. It is written beside the project for this run
+   * only and is never folded back into it.
+   */
+  validationFile?: ProjectFile;
 }
 
 /**

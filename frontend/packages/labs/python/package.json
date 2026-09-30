@@ -53,6 +53,7 @@
     "@code-dot-org/codebridge": "workspace:*",
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
+    "@code-dot-org/progress": "workspace:*",
     "@codemirror/lang-json": "^6.0.2",
     "@codemirror/lang-python": "^6.1.7",
     "@codemirror/state": "^6.5.2",

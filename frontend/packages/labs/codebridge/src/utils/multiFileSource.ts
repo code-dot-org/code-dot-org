@@ -475,3 +475,11 @@ export const moveFolder = (
     [folderId]: {...source.folders[folderId], parentId},
   },
 });
+
+/** The level's validation file, when the project carries it (start mode). */
+export const getValidationFromSource = (
+  source: MultiFileSource,
+): ProjectFile | undefined =>
+  Object.values(source.files).find(
+    file => file.type === ProjectFileTypes.VALIDATION,
+  );

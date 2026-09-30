@@ -14,6 +14,7 @@ import {
   getNextFileId,
   getNextFolderId,
   getOpenFileIds,
+  getValidationFromSource,
   renameFile,
   saveFileContents,
   shouldShowFile,
@@ -213,5 +214,24 @@ describe('folders', () => {
     expect(deleted.folders['1']).toBeUndefined();
     expect(deleted.files['9']).toBeUndefined();
     expect(deleted.files['1']).toBeDefined(); // root file untouched
+  });
+});
+
+describe('getValidationFromSource', () => {
+  it('finds the file typed as validation', () => {
+    const withValidation = source();
+    withValidation.files['9'] = {
+      id: '9',
+      name: 'validation.py',
+      language: 'python',
+      contents: '',
+      folderId: '0',
+      type: 'validation',
+    };
+    expect(getValidationFromSource(withValidation)?.id).toBe('9');
+  });
+
+  it('returns undefined when the project has none', () => {
+    expect(getValidationFromSource(source())).toBeUndefined();
   });
 });

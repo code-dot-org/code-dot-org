@@ -14,8 +14,13 @@ import type {PropsWithChildren} from 'react';
 export interface CodebridgeRuntime {
   /** Run the current program. */
   onRun?: () => void;
-  /** Stop a running program. */
+  /** Stop a running program, or a validation run. */
   onStop?: () => void;
+  /**
+   * Run the level's validation tests. Settles when they finish. Omitted, the
+   * resource panel shows no Validate button.
+   */
+  onValidate?: () => Promise<void>;
   /** Send a line of console input (stdin) to the running program. */
   sendConsoleInput?: (input: string) => void;
 }

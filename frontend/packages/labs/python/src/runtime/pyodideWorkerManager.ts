@@ -1,4 +1,4 @@
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
 import type {PyodideMessage, WorkerRequest} from './messages';
 import {getPyodideBaseUrl} from './pyodideConfig';
@@ -26,14 +26,14 @@ import PyodideWorker from './pyodideWebWorker.ts?worker&inline';
 export function createWorkerRuntime(): PyodideRuntime {
   // Resolvers for in-flight runs, keyed by run id. A non-empty map means a
   // program is currently running (used by `restartWorkerIfRunning`).
-  const callbacks: Record<string, () => void> = {};
+  const callbacks: Record<string, (message?: string) => void> = {};
   let worker: Worker | undefined;
 
   function createWorker(): Worker {
     const w = new PyodideWorker();
     w.onmessage = (event: MessageEvent<PyodideMessage>) =>
-      routeWorkerMessage(event.data, id => {
-        callbacks[id]?.();
+      routeWorkerMessage(event.data, (id, message) => {
+        callbacks[id]?.(message);
         delete callbacks[id];
       });
     // Tell the worker where to load pyodide + wheels from; this also starts the
@@ -58,11 +58,21 @@ export function createWorkerRuntime(): PyodideRuntime {
       ensureWorker();
     },
 
-    asyncRun(python: string, source: MultiFileSource): Promise<void> {
+    asyncRun(
+      python: string,
+      source: MultiFileSource,
+      validationFile?: ProjectFile,
+    ): Promise<string | undefined> {
       const id = crypto.randomUUID();
-      return new Promise<void>(resolve => {
+      return new Promise<string | undefined>(resolve => {
         callbacks[id] = resolve;
-        const request: WorkerRequest = {type: 'run', id, python, source};
+        const request: WorkerRequest = {
+          type: 'run',
+          id,
+          python,
+          source,
+          validationFile,
+        };
         ensureWorker().postMessage(request);
       });
     },

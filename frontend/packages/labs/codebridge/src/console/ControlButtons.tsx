@@ -19,6 +19,7 @@ import styles from './console.module.css';
 const ControlButtons = () => {
   const {onRun, onStop} = useCodebridgeRuntime();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
+  const isValidating = useAppSelector(state => state.labSystem.isValidating);
   const hasLoadedEnvironment = useAppSelector(
     state => state.labSystem.loadedCodeEnvironment,
   );
@@ -43,7 +44,9 @@ const ControlButtons = () => {
   // spinner sits beside the button and a tooltip explains the wait.
   const disabledTooltip = !hasLoadedEnvironment
     ? 'Your environment is loading. Please wait.'
-    : null;
+    : isValidating
+      ? 'You cannot run code while validation is running'
+      : null;
 
   return (
     <WithConditionalTooltip

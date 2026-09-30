@@ -1,4 +1,4 @@
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
 // The postMessage contract between the parent page (pyodideSandboxManager.ts,
 // running on the host origin) and the sandbox iframe
@@ -46,6 +46,7 @@ export interface SandboxRunMessage {
   id: string;
   python: string;
   source: MultiFileSource;
+  validationFile?: ProjectFile;
 }
 
 export interface SandboxRestartMessage {

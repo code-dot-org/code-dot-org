@@ -1,5 +1,5 @@
 import {CodebridgeRegistry, getImageMessage} from '@code-dot-org/codebridge';
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
 import {MessageTag} from './input/constants';
@@ -14,8 +14,15 @@ import {writeUpdatedSource} from './sourceWriteBack';
 export interface PyodideRuntime {
   /** Start loading pyodide ahead of the first run (e.g. at lab mount). */
   preloadPyodide(): void;
-  /** Run a program; resolves when it completes. */
-  asyncRun(python: string, source: MultiFileSource): Promise<void>;
+  /**
+   * Run a program; resolves when it completes, with its final value as JSON if
+   * it had one. A stopped run resolves with undefined.
+   */
+  asyncRun(
+    python: string,
+    source: MultiFileSource,
+    validationFile?: ProjectFile,
+  ): Promise<string | undefined>;
   /** Stop a running program by restarting the worker. No-op if idle. */
   restartWorkerIfRunning(): void;
   /** Supply a line of stdin to a program blocked on `input()`. */
@@ -36,12 +43,12 @@ function writePartialConsole(message: string) {
  * Route one message emitted by pyodideWebWorker.ts to the console and the base
  * `labSystem` slice. Both backends share it: the direct manager wires a worker's
  * `onmessage` to it; the sandbox manager feeds it messages relayed up from the
- * iframe. `onRunComplete` is called with the finished run's id so the caller can
- * resolve the matching run promise.
+ * iframe. `onRunComplete` is called with the finished run's id and final value
+ * so the caller can resolve the matching run promise.
  */
 export function routeWorkerMessage(
   data: PyodideMessage,
-  onRunComplete: (id: string) => void,
+  onRunComplete: (id: string, message?: string) => void,
 ) {
   const {type, id, message, source} = data;
   switch (type) {
@@ -83,7 +90,7 @@ export function routeWorkerMessage(
       break;
     case 'run_complete':
       writeConsole('');
-      onRunComplete(id);
+      onRunComplete(id, message);
       break;
     case 'loading_pyodide':
       store.dispatch(labSystemActions.setLoadedCodeEnvironment(false));

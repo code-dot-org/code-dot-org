@@ -8,7 +8,11 @@ export const PredictQuestionTypes = {
   MultipleChoice: 'multipleChoice',
 } as const;
 
-import {MultiFileSourceSchema, ProjectSourcesSchema} from '../sources';
+import {
+  MultiFileSourceSchema,
+  ProjectFileSchema,
+  ProjectSourcesSchema,
+} from '../sources';
 
 export const LevelPredictSettingsSchema = z.object({
   isPredictLevel: z.boolean(),
@@ -127,6 +131,9 @@ export const LevelPropertiesBaseSchema = z
       .transform(value => value ?? false),
     // Codebridge
     widgetView: z.boolean().optional(),
+    // The levelbuilder-written unittest file that validates a Python Lab level.
+    // Students never see it; it is added to the project only for a validation run.
+    validationFile: ProjectFileSchema.optional(),
   })
   // Preserve lab-specific fields this base schema does not enumerate (e.g.
   // music's `levelData`). A lab's kind schema (`registerLevelKindSchema`)

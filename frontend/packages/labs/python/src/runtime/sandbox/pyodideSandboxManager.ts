@@ -1,4 +1,4 @@
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
 import type {PyodideMessage} from '../messages';
 import {getPyodideBaseUrl} from '../pyodideConfig';
@@ -28,7 +28,7 @@ import {
  */
 export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
   // Resolvers for in-flight runs, keyed by id (see pyodideWorkerManager).
-  const callbacks: Record<string, () => void> = {};
+  const callbacks: Record<string, (message?: string) => void> = {};
   // Id of the program currently blocked awaiting input, if any.
   let awaitingInputId = '';
 
@@ -58,8 +58,8 @@ export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
         return;
       }
       // Everything else is a pyodideWebWorker message relayed up by the iframe.
-      routeWorkerMessage(event.data as PyodideMessage, id => {
-        callbacks[id]?.();
+      routeWorkerMessage(event.data as PyodideMessage, (id, message) => {
+        callbacks[id]?.(message);
         delete callbacks[id];
       });
     });
@@ -80,17 +80,22 @@ export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
       // The iframe (and its worker) already started when this runtime was built.
     },
 
-    async asyncRun(python: string, source: MultiFileSource): Promise<void> {
+    async asyncRun(
+      python: string,
+      source: MultiFileSource,
+      validationFile?: ProjectFile,
+    ): Promise<string | undefined> {
       // Wait until the iframe has loaded and posted READY before sending a run.
       await readyPromise;
       const id = crypto.randomUUID();
-      return new Promise<void>(resolve => {
+      return new Promise<string | undefined>(resolve => {
         callbacks[id] = resolve;
         const message: SandboxRunMessage = {
           type: ToSandboxMessage.RUN,
           id,
           python,
           source,
+          validationFile,
         };
         post(message);
       });

@@ -2543,6 +2543,7 @@ __metadata:
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/progress": "workspace:*"
     "@codemirror/lang-json": "npm:^6.0.2"
     "@codemirror/lang-python": "npm:^6.1.7"
     "@codemirror/state": "npm:^6.5.2"
