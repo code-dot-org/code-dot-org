@@ -19,8 +19,10 @@ import {useLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {compileSerializedWorkspace} from '../blockly/compile';
+import {SpriteLabConnectionChecker} from '../blockly/connectionChecker';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {setImageSource} from '../blockly/imageSource';
+import {levelPool, type PoolBlock} from '../blockly/pool';
 import {SPRITELAB2_BLOCKS} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {animationSourceUrl} from '../engine/animations';
@@ -81,7 +83,12 @@ const READY_TABS: readonly Tab[] = ['World', 'Code', 'Play'];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source as BlocklySerialization;
 
-const BLOCK_TYPES = SPRITELAB2_BLOCKS.map(block => block.type);
+const LAB_BLOCK_TYPES = SPRITELAB2_BLOCKS.map(block => block.type);
+
+const WORKSPACE_OPTIONS = {
+  trashcan: true,
+  plugins: {connectionChecker: SpriteLabConnectionChecker},
+};
 const DEFAULT_SCENE_ID = 'scene-1';
 
 // Between a workspace edit and the live preview's re-run.
@@ -313,7 +320,15 @@ const SpriteLabView: FunctionComponent = () => {
       toolboxForSceneType(levelProperties.toolboxDefinition, activeScene?.type),
     [levelProperties.toolboxDefinition, activeScene?.type],
   );
-  const workspace = useSpriteLabWorkspace(sceneToolbox, BLOCK_TYPES);
+  const sharedBlocks = levelProperties.sharedBlocks as PoolBlock[] | undefined;
+  const blockTypes = useMemo(
+    () => [
+      ...LAB_BLOCK_TYPES,
+      ...levelPool(sharedBlocks).definitions.map(block => block.type),
+    ],
+    [sharedBlocks],
+  );
+  const workspace = useSpriteLabWorkspace(sceneToolbox, blockTypes);
   const {
     workspaceVersion,
     getCode,
@@ -325,6 +340,10 @@ const SpriteLabView: FunctionComponent = () => {
   // The engine, once per level, drawing into the playspace.
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const engineRef = useRef<SpriteLabEngine | null>(null);
+  const getDefaultSpriteSize = useCallback(
+    () => engineRef.current?.library?.defaultSpriteSize || 100,
+    [],
+  );
   const [engineReady, setEngineReady] = useState(false);
   useEffect(() => {
     const container = canvasContainerRef.current;
@@ -892,7 +911,7 @@ const SpriteLabView: FunctionComponent = () => {
             <BlocklyWorkspace
               key={workspace.toolboxKind ?? 'none'}
               className={moduleStyles.blocklyDiv}
-              options={{trashcan: true}}
+              options={WORKSPACE_OPTIONS}
               {...workspace.workspaceProps}
             />
           )}
@@ -946,6 +965,7 @@ const SpriteLabView: FunctionComponent = () => {
           boxRef={playspaceRef}
           platformScene={playingPlatformer}
           mode={playspaceMode}
+          getDefaultSpriteSize={getDefaultSpriteSize}
           controls={
             <PlayControls
               onRestartGame={

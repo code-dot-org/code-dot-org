@@ -23,6 +23,8 @@ export default defineConfig({
       allow: [
         searchForWorkspaceRoot(process.cwd()),
         '../../../../dashboard/config/libraries',
+        // The fixtures' block pool.
+        '../../../../dashboard/config/blocks',
       ],
     },
   },

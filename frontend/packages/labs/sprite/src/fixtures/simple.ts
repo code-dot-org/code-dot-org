@@ -3,6 +3,8 @@ import {
   type LabFixture,
 } from '@code-dot-org/core/api/mocks';
 
+import {GAMELAB_JR_POOL} from './gamelabJrPool';
+
 // A level offering the lab's own blocks, and a project with two images and
 // a scene that makes a sprite of each. The images are SVG data URLs, so the
 // scenario runs without Rails or an animation library.
@@ -65,9 +67,26 @@ const simple: LabFixture = {
       isAssessment: false,
       offerBrowserTts: false,
       showExemplarLink: false,
+      sharedBlocks: GAMELAB_JR_POOL,
+      // The pool blocks Sprite Lab 2 levels use most, then the lab's own.
       toolboxDefinition: {
         kind: 'flyoutToolbox',
         contents: [
+          {kind: 'block', type: 'gamelab_makeNewSpriteAnon'},
+          {kind: 'block', type: 'gamelab_spriteSay'},
+          {kind: 'block', type: 'gamelab_moveInDirection'},
+          {kind: 'block', type: 'gamelab_setBackgroundImageAs'},
+          {kind: 'block', type: 'gamelab_whenKey'},
+          {kind: 'block', type: 'gamelab_whenTouching'},
+          {kind: 'block', type: 'gamelab_spriteClicked'},
+          {kind: 'block', type: 'gamelab_allSpritesWithAnimation'},
+          // An empty location generates `()`, which does not parse.
+          {
+            kind: 'block',
+            type: 'gamelab_location_picker',
+            fields: {LOCATION: JSON.stringify({x: 200, y: 200})},
+          },
+          {kind: 'block', type: 'gamelab_randomLocation'},
           {kind: 'block', type: 'spritelab2_makeSpriteAtPosition'},
           {kind: 'block', type: 'spritelab2_goToScene'},
           {kind: 'block', type: 'spritelab2_restartScene'},
