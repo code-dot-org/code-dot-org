@@ -105,7 +105,7 @@ const QuizStatusCard: React.FunctionComponent<QuizStatusCardProps> = ({
               {canRetake && (
                 <MuiButton
                   variant="outlined"
-                  color="secondary"
+                  color="tertiary"
                   size="small"
                   type="button"
                   onClick={onTryAgain}

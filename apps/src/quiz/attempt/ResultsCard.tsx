@@ -85,7 +85,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
             {canRetake && (
               <MuiButton
                 variant="outlined"
-                color="secondary"
+                color="tertiary"
                 size="medium"
                 type="button"
                 onClick={onTryAgain}

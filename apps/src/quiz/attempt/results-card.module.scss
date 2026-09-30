@@ -5,11 +5,8 @@
 
 .stat {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: var(--spacing-p-xxs);
+  gap: var(--spacing-p-xs);
   flex: 1 0 0;
   min-width: 0;
   padding: 20px;
@@ -28,7 +25,7 @@
 .statCaption {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .statTitle {
