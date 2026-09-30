@@ -68,6 +68,7 @@ import {type ArrowSet, arrowSetFor} from './playBar';
 import Playspace, {type PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
+import {useExternalSceneList, useExternalSceneRuns} from './useExternalScenes';
 import useSceneEditing from './useSceneEditing';
 import useSceneThumbnails from './useSceneThumbnails';
 import useSpriteLabWorkspace from './useSpriteLabWorkspace';
@@ -178,7 +179,7 @@ const SpriteLabView: FunctionComponent = () => {
   const visibleTabs = useMemo(() => tabs.filter(tab => tab !== 'Play'), [tabs]);
 
   // Once per level: the image list, from the sources the level loaded with.
-  const [animationsSeeded, setAnimationsSeeded] = useState(false);
+  const [imagesSeeded, setImagesSeeded] = useState(false);
   const seededLevel = useRef<unknown>(null);
   useEffect(() => {
     if (seededLevel.current === levelProperties.id) {
@@ -186,7 +187,7 @@ const SpriteLabView: FunctionComponent = () => {
     }
     seededLevel.current = levelProperties.id;
     dispatch(seedAnimationList(currentSources.animations, {channelId}));
-    setAnimationsSeeded(true);
+    setImagesSeeded(true);
     // Only the level identity reseeds; see the reinitialization effect.
   }, [levelProperties.id, currentSources.animations, channelId, dispatch]);
 
@@ -202,7 +203,7 @@ const SpriteLabView: FunctionComponent = () => {
 
   // Runs wait for the images, as apps' engine did, but not forever; a run
   // made without some reruns once they arrive (below).
-  const imagesLoaded = animationsSeeded && allAnimationsLoaded(animationList);
+  const imagesLoaded = imagesSeeded && allAnimationsLoaded(animationList);
   const [graceOver, setGraceOver] = useState(false);
   useEffect(() => {
     const timer = window.setTimeout(
@@ -211,7 +212,7 @@ const SpriteLabView: FunctionComponent = () => {
     );
     return () => window.clearTimeout(timer);
   }, [levelProperties.id, sourcesEpoch]);
-  const imagesReady = imagesLoaded || (animationsSeeded && graceOver);
+  const imagesReady = imagesLoaded || (imagesSeeded && graceOver);
 
   // The pickers read the images from the store.
   useEffect(() => {
@@ -225,16 +226,24 @@ const SpriteLabView: FunctionComponent = () => {
 
   // Image changes are saved in the serialized shape.
   useEffect(() => {
-    if (!animationsSeeded) {
+    if (!imagesSeeded) {
       return;
     }
     const animations = serializeAnimationList(animationList);
     if (!isEqual(animations, sourcesRef.current.animations)) {
       updateSources(prev => ({...prev, animations}));
     }
-  }, [animationList, animationsSeeded, updateSources]);
+  }, [animationList, imagesSeeded, updateSources]);
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
+  const scriptId = useAppSelector(state => state.lab.scriptId);
+  const externalListReady = useExternalSceneList({
+    levelId: levelProperties.id,
+    scriptId,
+    scenes,
+  });
+  // A workspace loads once the values its dropdowns check are in the store.
+  const seeded = imagesSeeded && externalListReady;
   const pinnedScene = levelProperties.pinnedScene;
   const pinnedSceneId = pinnedScene?.id;
   // The pinned scene is made on first load and again after Start Over.
@@ -401,6 +410,28 @@ const SpriteLabView: FunctionComponent = () => {
     enabled: true,
   });
 
+  const {
+    loading: externalLoading,
+    current: externalOnStage,
+    runScene: runExternalScene,
+    runProjectScene: runExternalProjectScene,
+    leave: leaveExternal,
+  } = useExternalSceneRuns({
+    engineRef,
+    levelId: levelProperties.id,
+    scriptId,
+    sceneMetadata,
+    compile: useCallback(
+      (scene: Scene) =>
+        compileSerializedWorkspace(scene.source ?? DEFAULT_SCENE_SOURCE),
+      [],
+    ),
+    onRun: useCallback(
+      () => setPlayingPlatformer(!!engineRef.current?.isPlatformScene()),
+      [],
+    ),
+  });
+
   const startRun = useCallback(
     (program: () => string, scene: Scene | undefined) => {
       const engine = engineRef.current;
@@ -411,11 +442,12 @@ const SpriteLabView: FunctionComponent = () => {
         requestThumbnail(scene.id);
       }
       const sceneType = scene?.type;
+      leaveExternal();
       const {result, referencedImages} = collectImageReferences(program);
       engine.runProgram(result, referencedImages, sceneType);
       setPlayingPlatformer(engine.isPlatformScene());
     },
-    [requestThumbnail],
+    [requestThumbnail, leaveExternal],
   );
 
   // The live preview of the scene being edited.
@@ -488,16 +520,31 @@ const SpriteLabView: FunctionComponent = () => {
       return;
     }
     engine.onGoToScene = sceneId => {
-      if (!isPlayingRef.current || !scenes.some(s => s.id === sceneId)) {
+      if (!isPlayingRef.current) {
         engine.cancelSceneJump();
         return;
       }
-      // Leaving Play lands on the scene that was just playing.
-      setActiveSceneId(sceneId);
-      runScene(sceneId);
+      if (scenes.some(s => s.id === sceneId)) {
+        // Leaving Play lands on the scene that was just playing.
+        setActiveSceneId(sceneId);
+        runScene(sceneId);
+        return;
+      }
+      const project = externalOnStage.current?.project;
+      if (project?.scenes.some(s => s.id === sceneId)) {
+        runExternalProjectScene(project, sceneId);
+        return;
+      }
+      // An unknown scene resumes the old one.
+      engine.cancelSceneJump();
     };
-    // External scenes arrive with the section scene list; see port-plan.
-    engine.onGoToExternalScene = () => engine.cancelSceneJump();
+    engine.onGoToExternalScene = key => {
+      if (!isPlayingRef.current) {
+        engine.cancelSceneJump();
+        return;
+      }
+      runExternalScene(key);
+    };
     engine.onRestartScene = () => {
       if (!isPlayingRef.current) {
         engine.cancelSceneJump();
@@ -516,12 +563,19 @@ const SpriteLabView: FunctionComponent = () => {
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onControlsChange = state => setArrowSet(arrowSetFor(state));
-  }, [engineReady, scenes, runScene]);
+  }, [
+    engineReady,
+    scenes,
+    runScene,
+    externalOnStage,
+    runExternalScene,
+    runExternalProjectScene,
+  ]);
 
   // The workspace follows the active scene; a fresh workspace is empty
   // whatever caused it.
   useEffect(() => {
-    if (!animationsSeeded || !workspaceVersion) {
+    if (!seeded || !workspaceVersion) {
       return;
     }
     const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
@@ -534,7 +588,7 @@ const SpriteLabView: FunctionComponent = () => {
     }
     // The tab is read, not followed: switching tabs runs scenes below.
   }, [
-    animationsSeeded,
+    seeded,
     activeScene,
     engineReady,
     imagesReady,
@@ -771,9 +825,14 @@ const SpriteLabView: FunctionComponent = () => {
     runScene(defaultPlaySceneId);
   }, [runScene, defaultPlaySceneId]);
   const handleRestartScene = useCallback(() => {
+    const onStage = externalOnStage.current;
+    if (onStage) {
+      runExternalProjectScene(onStage.project, onStage.sceneId);
+      return;
+    }
     // By id: the scene's code may have changed since it started.
     runScene(currentPlayingRef.current?.id ?? defaultPlaySceneId);
-  }, [runScene, defaultPlaySceneId]);
+  }, [runScene, defaultPlaySceneId, externalOnStage, runExternalProjectScene]);
   restartSceneRef.current = handleRestartScene;
   // A button restart fades as a block restart does when it lands.
   const handleRestartClick = useCallback(
@@ -884,7 +943,7 @@ const SpriteLabView: FunctionComponent = () => {
           showStartOverDialog('custom', START_OVER_MESSAGE)
         }
         sceneTabsExtra={
-          animationsSeeded && !pinnedSceneId ? (
+          seeded && !pinnedSceneId ? (
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}
@@ -907,7 +966,7 @@ const SpriteLabView: FunctionComponent = () => {
             pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
           }}
         >
-          {animationsSeeded && (
+          {seeded && (
             <BlocklyWorkspace
               key={workspace.toolboxKind ?? 'none'}
               className={moduleStyles.blocklyDiv}
@@ -988,6 +1047,7 @@ const SpriteLabView: FunctionComponent = () => {
           }
           fadeTrigger={fadeTrigger}
           covered={jumpCover}
+          loading={externalLoading}
           onPreviewClick={handlePreviewClick}
         />
       </TabShell>

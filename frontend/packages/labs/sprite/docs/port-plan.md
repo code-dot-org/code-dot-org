@@ -100,6 +100,12 @@ Wired to the engine (`App.tsx`, `views/SpriteLabView.tsx`):
 - The pool's location field asks `Playspace` for a point: while picking,
   the preview takes the pointer, a translucent costume follows it, and a
   click sets the field.
+- External scenes (`views/useExternalScenes.ts`): the go-to-external-scene
+  block lists the scenes of section-mates' projects on this level, and in
+  Play a jump runs one on its owner's images, its own jumps included.
+  The server answers only within a script, and Studio hosts Sprite Lab
+  only as a standalone project, so Studio never shows one; it was checked
+  there with a script id and the two endpoints mocked by hand.
 - Scene pictures (`views/useSceneThumbnails.ts`): a run's first frame,
   kept once the scene has held still, uploaded through
   `projectAssets.ts` onto core's assets API.
@@ -110,7 +116,6 @@ Wired to the engine (`App.tsx`, `views/SpriteLabView.tsx`):
 
 Still to port, in order:
 
-- External scenes: the section scene list and cross-project jumps.
 - The Images tab, the guide and image levels wait on layer 6; the music
   bar and `useSceneMusic` on layer 7; the navigation sounds' settings in
   the resource panel with them.
@@ -262,6 +267,21 @@ Layer 5, so far:
 - Apps has no tests for these views. New tests cover `useSceneEditing`,
   `playBar`, `useSetupBlockColor`, `ScenesGallery` and the playspace's
   location picking.
+
+External scenes:
+
+- Apps' view did this inline; here it is two hooks, `useExternalSceneList`
+  (the list, and whether a workspace may load yet) and
+  `useExternalSceneRuns` (fetching and running another project's scene).
+- Apps loaded the list once per level behind a ref, which React's strict
+  mode defeats: its second mount found the level loaded and the first
+  mount's fetch cancelled, so a project naming an external scene never
+  loaded its workspace. The list's effect follows the level and script
+  instead.
+- A saved song no longer holds the workspace back with the list; the
+  music list returns with layer 7.
+- The script id comes from lab-base's `state.lab.scriptId`.
+- New tests cover both hooks; apps has none.
 
 The block pool:
 
