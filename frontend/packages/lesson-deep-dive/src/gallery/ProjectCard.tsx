@@ -1,10 +1,9 @@
-import {
-  ChallengeResponse,
-  ChallengeResponseAsset,
-  ReactionChips,
-} from '@code-dot-org/lesson-deep-dive';
 import classNames from 'classnames';
-import React, {FC} from 'react';
+import {FC, type MouseEvent} from 'react';
+
+import {type ChallengeResponse, type ChallengeResponseAsset} from '../types';
+
+import ReactionChips from './ReactionChips';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -26,10 +25,10 @@ interface CardTag {
 
 const assetWithUrl = (
   response: ChallengeResponse,
-  assetType: ChallengeResponseAsset['asset_type']
+  assetType: ChallengeResponseAsset['asset_type'],
 ): ChallengeResponseAsset | null =>
   response.assets.find(
-    asset => asset.asset_type === assetType && asset.download_url
+    asset => asset.asset_type === assetType && asset.download_url,
   ) || null;
 
 // The modality tags on a card: video submissions carry the "Video Story"
@@ -37,7 +36,7 @@ const assetWithUrl = (
 // extra artifact on the response.
 const cardTags = (
   response: ChallengeResponse,
-  variant: ProjectVariant
+  variant: ProjectVariant,
 ): CardTag[] => {
   if (variant === 'video') {
     return [{label: 'Video Story', color: 'brand'}];
@@ -71,7 +70,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   onOpen,
 }) => {
   const projectHref = `?project=${response.id}`;
-  const handleOpen = (event: React.MouseEvent) => {
+  const handleOpen = (event: MouseEvent) => {
     if (!onOpen) {
       return;
     }
@@ -116,7 +115,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
     <div
       className={classNames(
         styles.card,
-        variant === 'video' ? styles.videoCard : styles.whiteboardCard
+        variant === 'video' ? styles.videoCard : styles.whiteboardCard,
       )}
     >
       {renderMedia()}
