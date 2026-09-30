@@ -119,6 +119,7 @@ function AvailableLms({platform}: {platform: string}) {
       credentialType={LTI_PROVIDER}
       lmsName={platform}
       name={linkedAccountName(LTI_PROVIDER, platform)}
+      learnMoreUrl={lmsPlatform(platform)?.learnMoreUrl}
     />
   );
 }
