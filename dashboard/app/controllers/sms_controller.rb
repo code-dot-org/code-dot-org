@@ -6,7 +6,7 @@ class SmsController < ApplicationController
   def send_to_phone
     if params[:level_source].present? && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms_link(level_source_url(level_source), params[:phone])
-    elsif params[:channel_id] && params[:phone] && ProjectsController::STANDALONE_PROJECTS.include?(params[:type])
+    elsif params[:channel_id] && params[:phone] && Policies::StandaloneProjects.all.include?(params[:type])
       url =
         if params[:type] == 'weblab'
           "https://codeprojects.org/#{params[:channel_id]}"
