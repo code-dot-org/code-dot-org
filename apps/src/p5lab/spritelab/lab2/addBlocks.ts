@@ -4,7 +4,7 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-import {ensureRoom, STACK_GAP_PX} from './stackRoom';
+import {ensureRoom, measureStack, STACK_GAP_PX} from './stackRoom';
 
 /** A block to add. Its `data`, when set, tells it apart from another entry
     of the same type in one scene. */
@@ -136,11 +136,7 @@ export function addMissingBlocks(
   const missing = missingBlocks(workspace.getAllBlocks(false), blocks);
   let added = 0;
   for (const entry of missing) {
-    const stacks = workspace.getTopBlocks(false).map(top => {
-      const {x, y} = top.getRelativeToSurfaceXY();
-      return {x, y, height: top.getHeightWidth().height};
-    });
-    const {x, y} = placeBelow(stacks);
+    const {x, y} = placeBelow(workspace.getTopBlocks(false).map(measureStack));
     try {
       BlocklyCore.serialization.blocks.append({...entry, x, y}, workspace, {
         recordUndo: false,

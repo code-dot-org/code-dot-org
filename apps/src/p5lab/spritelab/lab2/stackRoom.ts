@@ -4,6 +4,11 @@ import * as BlocklyCore from 'blockly/core';
 // height, so there is always somewhere to drop the next block.
 export const STACK_GAP_PX = 34;
 
+// The event group of the pass's own moves. They are tidying, not an edit:
+// the workspace hook does not save or re-run on them, and the pass does not
+// act on them.
+export const STACK_ROOM_EVENT_GROUP = 'stack-room';
+
 export interface StackBox {
   x: number;
   y: number;
@@ -23,12 +28,14 @@ export interface StackBox {
  */
 export function makeRoom(stacks: StackBox[], room: number): void {
   const ordered = [...stacks].sort((a, b) => a.y - b.y || a.x - b.x);
-  ordered.forEach((stack, i) => {
+  for (let i = 0; i < ordered.length; i++) {
+    const stack = ordered[i];
     if (stack.fixed) {
-      return;
+      continue;
     }
     let top = stack.y;
-    for (const above of ordered.slice(0, i)) {
+    for (let j = 0; j < i; j++) {
+      const above = ordered[j];
       if (above.x < stack.x + stack.width && above.x + above.width > stack.x) {
         top = Math.max(top, above.y + above.height + room);
       }
@@ -37,17 +44,24 @@ export function makeRoom(stacks: StackBox[], room: number): void {
       stack.moveBy(0, top - stack.y);
       stack.y = top;
     }
-  });
+  }
+}
+
+/** A top block's stack as a box on the workspace. */
+export function measureStack(block: BlocklyCore.BlockSvg): {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+} {
+  const {x, y} = block.getRelativeToSurfaceXY();
+  const {width, height} = block.getHeightWidth();
+  return {x, y, width, height};
 }
 
 function stackBox(block: BlocklyCore.BlockSvg, pinned: Set<string>): StackBox {
-  const {x, y} = block.getRelativeToSurfaceXY();
-  const {width, height} = block.getHeightWidth();
   return {
-    x,
-    y,
-    width,
-    height,
+    ...measureStack(block),
     fixed: !block.isMovable() || pinned.has(block.id),
     moveBy: (dx, dy) => block.moveBy(dx, dy),
   };
@@ -56,8 +70,6 @@ function stackBox(block: BlocklyCore.BlockSvg, pinned: Set<string>): StackBox {
 // Stacks the waiting pass must not move, by top block id; a pass is
 // waiting while its workspace has an entry.
 const pendingPins = new WeakMap<BlocklyCore.WorkspaceSvg, Set<string>>();
-// Workspaces whose stacks the pass is moving right now.
-const applying = new WeakSet<BlocklyCore.WorkspaceSvg>();
 
 /**
  * Make room under every stack once the workspace has finished rendering.
@@ -92,16 +104,21 @@ export function ensureRoom(
         .getTopBlocks(false)
         .map(block => stackBox(block, pinned));
       const recordUndo = BlocklyCore.Events.getRecordUndo();
+      const group = BlocklyCore.Events.getGroup();
       BlocklyCore.Events.setRecordUndo(false);
-      applying.add(workspace);
+      BlocklyCore.Events.setGroup(STACK_ROOM_EVENT_GROUP);
       try {
         makeRoom(stacks, STACK_GAP_PX);
       } finally {
-        applying.delete(workspace);
+        BlocklyCore.Events.setGroup(group);
         BlocklyCore.Events.setRecordUndo(recordUndo);
       }
     });
 }
+
+// A drop, and Blockly's bump of a dropped stack that nearly connected,
+// which comes a moment after the drop.
+const PLACEMENT_REASONS = ['drag', 'bump'];
 
 /**
  * Keep room under the stacks as the workspace changes: after code loads,
@@ -111,17 +128,18 @@ export function ensureRoom(
  * that stops watching.
  */
 export function watchStackRoom(
-  workspace: BlocklyCore.WorkspaceSvg
+  workspace: BlocklyCore.WorkspaceSvg,
+  schedule: typeof ensureRoom = ensureRoom
 ): () => void {
   const onChange = (event: BlocklyCore.Events.Abstract) => {
-    if (applying.has(workspace)) {
+    if (event.group === STACK_ROOM_EVENT_GROUP) {
       return;
     }
     if (
       event.type === BlocklyCore.Events.FINISHED_LOADING ||
       event.type === BlocklyCore.Events.BLOCK_CREATE
     ) {
-      ensureRoom(workspace);
+      schedule(workspace);
       return;
     }
     if (event.type !== BlocklyCore.Events.BLOCK_MOVE) {
@@ -129,9 +147,12 @@ export function watchStackRoom(
     }
     const move = event as BlocklyCore.Events.BlockMove;
     if (move.newParentId) {
-      ensureRoom(workspace);
-    } else if (move.reason?.includes('drag') && move.blockId) {
-      ensureRoom(workspace, move.blockId);
+      schedule(workspace);
+    } else if (
+      move.blockId &&
+      move.reason?.some(reason => PLACEMENT_REASONS.includes(reason))
+    ) {
+      schedule(workspace, move.blockId);
     }
   };
   workspace.addChangeListener(onChange);
