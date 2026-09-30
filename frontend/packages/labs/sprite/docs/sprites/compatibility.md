@@ -1052,6 +1052,100 @@ at a time, so no program can observe the difference.
 **Pinned by:** `input.test.ts`, "INP-5, INP-7: each instance has its own
 down set, empty at creation".
 
+### Input departures
+
+These follow from running over upstream p5 2.x without touching p5's
+private state. They were decided by the maintainer.
+
+#### CMP-43. Mouse positions are not rounded
+
+**Specified by:** INP-19; the CSS-scaled row of input.md's mouse vectors.
+
+**Behavior:** The fork rounds the pointer position to whole canvas
+pixels. The library does not: a canvas shown at 800 by 800 client pixels
+with a layout width of 400 gives position (200.5, 399.5) for a press at
+client (401, 799), where the fork gives (201, 400). Sprite Lab 2 shows
+its canvas through a CSS transform, so fractional positions are common.
+
+**Expected:** This is the decided behavior.
+
+**Who depends on it:** Programs that display the mouse position, which
+now show a fraction, and programs that compare a position for equality.
+Collisions and hit tests are unaffected in practice.
+
+**Fixing it:** Not applicable. Rounding at the point of display, if
+wanted, belongs to the runtime.
+
+**Pinned by:** `input.test.ts`, "INP-19: positions are canvas pixels,
+not rounded".
+
+#### CMP-44. A window blur releases the mouse button
+
+**Specified by:** INP-20; the blur row of input.md's mouse vectors.
+
+**Behavior:** The fork keeps the pressed flag when the window loses
+focus; only a `mouseup` clears it. The library clears it on `blur`, as
+upstream p5 does. A button held while the student switches windows reads
+as released, and a tracked button goes WENT_UP at the next pre phase.
+
+**Expected:** This is the decided behavior.
+
+**Who depends on it:** Nobody knowingly. A drag in progress when focus
+leaves the page now ends instead of staying attached to the pointer.
+
+**Fixing it:** Not applicable.
+
+**Pinned by:** `input.test.ts`, "INP-20: a window blur clears the
+pressed flag".
+
+#### CMP-45. Hosts press keys through `pressKey` and `releaseKey`
+
+**Specified by:** INP-6; the `pressKey` row of input.md's test vectors.
+
+**Behavior:** The fork's mobile controls pressed keys by calling p5's
+private key handlers with an object carrying `which`. The library does
+not touch p5's handlers. A host that presses keys without a DOM event
+calls the instance's `pressKey(code)` and `releaseKey(code)`, which
+change the down set as `keydown` and `keyup` would. Sprite Lab 2's
+on-screen buttons dispatch real keyboard events and need neither.
+
+**Expected:** This is the decided behavior.
+
+**Who depends on it:** Classic Sprite Lab's mobile controls, if they are
+ever ported; they must call these functions.
+
+**Fixing it:** Not applicable.
+
+**Pinned by:** `input.test.ts`, "INP-6: pressKey and releaseKey change
+the down set".
+
+#### CMP-46. The pointer state is the library's, not p5's
+
+**Specified by:** INP-29, INP-19..INP-22, INP-27, WLD-3, COL-24, COL-25,
+CAM-4, CAM-9.
+
+**Behavior:** The fork keeps the pointer position, pressed flag, button
+and touch flag in the p5 instance's own `mouseX`, `mouseY`,
+`mouseIsPressed`, `mouseButton` and `touchIsDown` fields. The library
+keeps them in its own state and neither reads nor writes those fields.
+Upstream p5 2.x fills them itself: it counts presses and moves anywhere
+on the page and ignores CSS transforms. So the library's
+`World.mouseX`, edge states, `mouseIsOver`, `mousePressedOver` and camera
+mouse point follow INP-19..INP-21, while p5's fields may differ.
+
+**Expected:** This is the decided behavior.
+
+**Who depends on it:** Any code that reads p5's own fields expecting the
+fork's values. In Sprite Lab the runtime reads the pointer through
+`World.mouseX` and `World.mouseY`; the one direct read of p5's `mouseX`
+is in the engine, whose port must use `World.mouseX`. The Sprite Lab
+block pool reads none of these fields.
+
+**Fixing it:** Not applicable.
+
+**Pinned by:** `input.test.ts`, "INP-29: the pointer state is the
+library's; p5's fields are neither read nor written".
+
 ## Summary
 
 | Id     | Behavior kept                                                 | Risk to existing projects if fixed |
@@ -1098,3 +1192,7 @@ down set, empty at creation".
 | CMP-40 | Departure: 1x1 costume collides and is hit-tested             | n/a                                |
 | CMP-41 | Departure: removal after `clear()` does not hang              | n/a                                |
 | CMP-42 | Departure: per-instance key down set                          | n/a                                |
+| CMP-43 | Departure: mouse positions not rounded                        | n/a                                |
+| CMP-44 | Departure: window blur releases the mouse button              | n/a                                |
+| CMP-45 | Departure: hosts press keys through `pressKey`/`releaseKey`   | n/a                                |
+| CMP-46 | Departure: the pointer state is the library's, not p5's       | n/a                                |

@@ -4,7 +4,7 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 import {preDraw} from '../lifecycle';
 import type {SpriteP5} from '../types';
 
-import {frame, frames, makeInstance} from './harness';
+import {frame, frames, makeInstance, pointer} from './harness';
 
 type Triple = [boolean, boolean, boolean];
 type Quad = [boolean, boolean, boolean, boolean];
@@ -28,9 +28,12 @@ function key(type: 'keydown' | 'keyup', code: number): void {
   );
 }
 
-function canvasOf(p: SpriteP5): HTMLCanvasElement {
-  return (p as unknown as {_curElement: {elt: HTMLCanvasElement}})._curElement
-    .elt;
+function canvasOf(p: SpriteP5): HTMLElement {
+  const canvas = pointer(p).canvas;
+  if (!canvas) {
+    throw new Error('the library recorded no canvas');
+  }
+  return canvas;
 }
 
 /** Lays the canvas out at the page origin: `client` square pixels shown, `layout` square pixels of layout. */
@@ -324,20 +327,20 @@ describe('input.md: keys', () => {
     expect(p.keyDown(37)).toBe(false);
   });
 
-  it('INP-6: the mobile-control path calls the key handlers with {which}', async () => {
+  it('CMP-45, INP-6: pressKey and releaseKey change the down set', async () => {
     const p = await makeInstance();
-    const handlers = p as unknown as {
-      _onkeydown(e: {which: number}): void;
-      _onkeyup(e: {which: number}): void;
-    };
-    handlers._onkeydown({which: 90});
-    expect(p.keyDown(90)).toBe(true);
-    handlers._onkeyup({which: 90});
+    keys(p, 'left');
+    p.pressKey(37);
     await frame(p);
-    expect(keys(p, 90)).toEqual([F, F, T]);
+    expect(keys(p, 'left')).toEqual([F, T, F]);
+    await frame(p);
+    expect(keys(p, 'left')).toEqual([T, F, F]);
+    p.releaseKey(37);
+    await frame(p);
+    expect(keys(p, 'left')).toEqual([F, F, T]);
   });
 
-  it('INP-2: a real event reaches the down set once through both paths', async () => {
+  it('INP-2, INP-3: a keydown and keyup pair leaves the key up', async () => {
     const p = await makeInstance();
     key('keydown', 38);
     key('keyup', 38);
@@ -394,12 +397,12 @@ describe('input.md: mouse', () => {
     layOut(p);
     await frame(p, () => expect(mouse(p)).toEqual([F, F, F, T]));
     mouseEvent('mousedown', 100, 50);
-    expect([p.mouseX, p.mouseY, p.mouseButton, p.mouseIsPressed]).toEqual([
-      100,
-      50,
-      'left',
-      true,
-    ]);
+    expect([
+      pointer(p).mouseX,
+      pointer(p).mouseY,
+      pointer(p).mouseButton,
+      pointer(p).mouseIsPressed,
+    ]).toEqual([100, 50, 'left', true]);
     expect(mouse(p)).toEqual([F, F, F, T]);
     await frame(p, () => {
       for (const button of [undefined, 'leftButton', 'left', p.LEFT]) {
@@ -411,8 +414,8 @@ describe('input.md: mouse', () => {
     await frame(p, () => expect(mouse(p)).toEqual([F, F, T, F]));
     await frame(p, () => expect(mouse(p)).toEqual([F, F, F, T]));
     mouseEvent('mousedown', 500, 50);
-    expect(p.mouseIsPressed).toBe(false);
-    expect(p.mouseX).toBe(100);
+    expect(pointer(p).mouseIsPressed).toBe(false);
+    expect(pointer(p).mouseX).toBe(100);
   });
 
   it('INP-20, INP-23: right and center buttons', async () => {
@@ -421,14 +424,14 @@ describe('input.md: mouse', () => {
     mouse(p, 'rightButton');
     mouse(p, 'left');
     mouseEvent('mousedown', 10, 10, 2);
-    expect(p.mouseButton).toBe('right');
+    expect(pointer(p).mouseButton).toBe('right');
     await frame(p);
     expect(mouse(p, 'right')).toEqual([F, T, F, F]);
     expect(mouse(p, 'left')).toEqual([F, F, F, T]);
     mouseEvent('mouseup', 10, 10, 2);
-    expect(p.mouseButton).toBe('right');
+    expect(pointer(p).mouseButton).toBe('right');
     mouseEvent('mousedown', 10, 10, 1);
-    expect(p.mouseButton).toBe('center');
+    expect(pointer(p).mouseButton).toBe('center');
     expect(p.mouseDown('centerButton')).toBe(true);
   });
 
@@ -456,11 +459,15 @@ describe('input.md: mouse', () => {
     layOut(p);
     mouseEvent('mousedown', 10, 10);
     mouseEvent('mousemove', 30, 40);
-    expect([p.mouseX, p.mouseY, p.mouseIsPressed]).toEqual([30, 40, true]);
+    expect([
+      pointer(p).mouseX,
+      pointer(p).mouseY,
+      pointer(p).mouseIsPressed,
+    ]).toEqual([30, 40, true]);
     mouseEvent('mousemove', 900, 40);
-    expect(p.mouseX).toBe(30);
+    expect(pointer(p).mouseX).toBe(30);
     mouseEvent('mouseup', 900, 900);
-    expect(p.mouseIsPressed).toBe(false);
+    expect(pointer(p).mouseIsPressed).toBe(false);
   });
 
   it('INP-21, INP-22: a touch presses the left button', async () => {
@@ -472,80 +479,77 @@ describe('input.md: mouse', () => {
       {clientX: 700, clientY: 10},
       {clientX: 20, clientY: 30},
     ]);
-    expect([p.touchIsDown, p.mouseX, p.mouseY]).toEqual([true, 20, 30]);
+    expect([
+      pointer(p).touchIsDown,
+      pointer(p).mouseX,
+      pointer(p).mouseY,
+    ]).toEqual([true, 20, 30]);
     await frame(p);
     expect(mouse(p, 'left')).toEqual([F, T, F, F]);
     expect(mouse(p, 'right')).toEqual([F, F, F, T]);
     touchEvent('touchend', [{clientX: 700, clientY: 10}]);
-    expect(p.touchIsDown).toBe(false);
+    expect(pointer(p).touchIsDown).toBe(false);
   });
 
   it('INP-21: touchend keeps the flag while an inside touch remains', async () => {
     const p = await makeInstance();
     layOut(p);
     touchEvent('touchstart', [{clientX: 700, clientY: 10}]);
-    expect(p.touchIsDown).toBe(false);
+    expect(pointer(p).touchIsDown).toBe(false);
     touchEvent('touchstart', [{clientX: 5, clientY: 5}]);
     touchEvent('touchend', [{clientX: 6, clientY: 6}]);
-    expect(p.touchIsDown).toBe(true);
+    expect(pointer(p).touchIsDown).toBe(true);
     touchEvent('touchend', []);
-    expect(p.touchIsDown).toBe(false);
+    expect(pointer(p).touchIsDown).toBe(false);
   });
 
   it('INP-22: an assigned touchIsDown presses left only', async () => {
     const p = await makeInstance();
     mouse(p, 'left');
     mouse(p, 'right');
-    p.touchIsDown = true;
+    pointer(p).touchIsDown = true;
     await frame(p);
     expect(mouse(p, 'left')).toEqual([F, T, F, F]);
     expect(mouse(p, 'right')).toEqual([F, F, F, T]);
   });
 
-  it('INP-19: CSS scaling is corrected', async () => {
+  it('CMP-43, INP-19: positions are canvas pixels, not rounded', async () => {
     const p = await makeInstance();
     layOut(p, 800, 400);
     mouseEvent('mousedown', 401, 799);
-    expect([p.mouseX, p.mouseY]).toEqual([201, 400]);
+    expect([pointer(p).mouseX, pointer(p).mouseY]).toEqual([200.5, 399.5]);
     mouseEvent('mousedown', 800, 10);
-    expect(p.mouseX).toBe(201);
+    expect(pointer(p).mouseX).toBe(200.5);
   });
 
-  it("INP-19, INP-20: p5's own pointer handlers do not change the raw state", async () => {
+  it("CMP-46, INP-29: the pointer state is the library's; p5's fields are neither read nor written", async () => {
     const p = await makeInstance();
     layOut(p);
-    const handlers = p as unknown as Record<string, (e: unknown) => void>;
-    const outside = {
-      pointerId: 1,
-      pointerType: 'mouse',
-      buttons: 1,
-      clientX: 500,
-      clientY: 50,
-      preventDefault() {},
-    };
-    handlers._onpointerdown(outside);
-    handlers._onpointermove(outside);
-    expect([p.mouseX, p.mouseIsPressed, p.mouseButton]).toEqual([
-      0,
-      false,
-      'left',
-    ]);
-    handlers._onpointerup(outside);
-    window.dispatchEvent(
-      new MouseEvent('pointerdown', {clientX: 500, clientY: 60, buttons: 1}),
-    );
-    expect([p.mouseY, p.mouseIsPressed]).toEqual([0, false]);
-    window.dispatchEvent(new MouseEvent('pointerup', {clientX: 500}));
+    const raw = p as unknown as {mouseX: number; mouseIsPressed: boolean};
+    mouse(p);
+    raw.mouseX = 321;
+    raw.mouseIsPressed = true;
+    expect([p.World.mouseX, pointer(p).mouseIsPressed]).toEqual([0, false]);
+    await frame(p);
+    expect(mouse(p)).toEqual([F, F, F, T]);
+    mouseEvent('mousedown', 10, 20);
+    expect([raw.mouseX, raw.mouseIsPressed]).toEqual([321, true]);
+    expect([p.World.mouseX, p.World.mouseY]).toEqual([10, 20]);
+    mouseEvent('mousedown', 900, 20);
+    expect(p.World.mouseX).toBe(10);
   });
 
-  it('INP-20: a window blur does not release the mouse', async () => {
+  it('CMP-44, INP-20: a window blur clears the pressed flag', async () => {
     const p = await makeInstance();
     layOut(p);
+    mouse(p);
     mouseEvent('mousedown', 10, 10);
+    await frame(p);
+    expect(mouse(p)).toEqual([F, T, F, F]);
     window.dispatchEvent(new Event('blur'));
-    expect(p.mouseIsPressed).toBe(true);
-    mouseEvent('mouseup', 10, 10);
-    expect(p.mouseIsPressed).toBe(false);
+    expect(pointer(p).mouseIsPressed).toBe(false);
+    await frame(p);
+    expect(mouse(p)).toEqual([F, F, F, T]);
   });
 
   it('INP-24: the initial state follows the button-pressed predicate', async () => {

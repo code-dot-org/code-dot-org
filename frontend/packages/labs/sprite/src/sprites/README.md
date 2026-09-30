@@ -37,35 +37,35 @@ registered for the whole class, so the library does not use them.
 
 ## Modules
 
-| File                    | Specification        | Notes                                            |
-| ----------------------- | -------------------- | ------------------------------------------------ |
-| `attach.ts`             | LIF-1..LIF-8, LIF-23 | instance members, attach-time defaults           |
-| `lifecycle.ts`          | LIF-9..LIF-21        | `preDraw`, `postDraw`, `withSpriteLifecycle`     |
-| `context.ts`            | LIF-1                | per-instance state, in a WeakMap                 |
-| `Sprite.ts`             | SPR-, ANI-18..ANI-26 | state, update step, drawing                      |
-| `Group.ts`              | GRP-, WLD-11         | groups; `draw()` sorts and draws                 |
-| `World.ts`              | WLD-1..WLD-8         |                                                  |
-| `attach.ts`, `edges.ts` | WLD-9..WLD-21        | `drawSprites`, `drawSprite`, `createEdgeSprites` |
-| `animation/`            | ANI-                 | `Animation`, `SpriteSheet`, frame drawing, tint  |
-| `camera.ts`             | CAM-1..CAM-14        | see below                                        |
-| `input.ts`              | INP-1..INP-25        | see below                                        |
-| `collision/`            | COL-                 | see below                                        |
+| File                    | Specification         | Notes                                            |
+| ----------------------- | --------------------- | ------------------------------------------------ |
+| `attach.ts`             | LIF-1..LIF-8, LIF-23  | instance members, attach-time defaults           |
+| `lifecycle.ts`          | LIF-9..LIF-21         | `preDraw`, `postDraw`, `withSpriteLifecycle`     |
+| `context.ts`            | LIF-1                 | per-instance state, in a WeakMap                 |
+| `Sprite.ts`             | SPR-, ANI-18..ANI-26  | state, update step, drawing                      |
+| `Group.ts`              | GRP-, WLD-11          | groups; `draw()` sorts and draws                 |
+| `World.ts`              | WLD-1..WLD-8          |                                                  |
+| `attach.ts`, `edges.ts` | WLD-9..WLD-21         | `drawSprites`, `drawSprite`, `createEdgeSprites` |
+| `animation/`            | ANI-                  | `Animation`, `SpriteSheet`, frame drawing, tint  |
+| `camera.ts`             | CAM-1..CAM-14         | see below                                        |
+| `input.ts`              | INP-1..INP-25, INP-29 | see below                                        |
+| `collision/`            | COL-                  | see below                                        |
 
 ## Input
 
 - Key and button edge states live in `InputState`, one per instance
   (INP-7). `updateInputStates` is LIF-10 item 1.
-- The instance's `mouseX`, `mouseY`, `mouseIsPressed`, `mouseButton` (a
-  string, as in p5 1.x) and `touchIsDown` are accessors over that state,
-  fed by the library's `mousedown`, `mouseup`, `mousemove`, `touchstart`
-  and `touchend` listeners (INP-19..INP-21). p5 2.x's own pointer handlers
-  still run, for `touches`, `winMouseX` and user callbacks, but their
-  writes to those five fields are dropped, as is p5's clearing of
-  `mouseIsPressed` on window blur. p5's `_setMouseButton` is a no-op.
-  Assignments from anywhere else are kept, so tests and hosts may set them.
-- `p._onkeydown(e)` and `p._onkeyup(e)` accept a plain `{which}` object,
-  as Code.org's mobile controls pass (INP-6); real events reach the down
-  set through the library's own `keydown` and `keyup` listeners.
+- The pointer state (position, pressed flag, button, touch flag) is also
+  in `InputState` (INP-29), fed by the library's `mousedown`, `mouseup`,
+  `mousemove`, `touchstart`, `touchend` and `blur` listeners on `window`
+  (INP-19..INP-21). The library reads it through `World.mouseX` and
+  `World.mouseY`, the edge states, `mouseIsOver`, `mousePressedOver` and
+  the camera. It never reads or writes p5's fields of the same names, nor
+  any of p5's private members (CMP-46).
+- The canvas the pointer is measured against is the element the
+  instance's `createCanvas` returned last (`attach.ts`).
+- Hosts press keys without a DOM event through `p.pressKey(code)` and
+  `p.releaseKey(code)` (INP-6, CMP-45).
 - A `which` of 0 falls back to `keyCode` (input.md Open question 3).
 - `mouseButton` starts as `'left'`; input.md gives no initial value.
 

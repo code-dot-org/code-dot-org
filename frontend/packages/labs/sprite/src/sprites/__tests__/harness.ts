@@ -4,6 +4,8 @@ import p5 from 'p5';
 import {afterEach} from 'vitest';
 
 import {attachSprites} from '../attach';
+import {getContext} from '../context';
+import type {InputState} from '../input';
 import {withSpriteLifecycle} from '../lifecycle';
 import type {SpriteP5} from '../types';
 
@@ -130,11 +132,15 @@ export function clearCanvasEvents(p: SpriteP5): void {
   context.__clearEvents();
 }
 
-/** Sets p5's mouse position as its event handlers would. */
+/** The library's pointer state (INP-29). */
+export function pointer(p: SpriteP5): InputState {
+  return getContext(p as unknown as p5).input;
+}
+
+/** Sets the pointer position as the library's event listeners would. */
 export function setMouse(p: SpriteP5, x: number, y: number): void {
-  const target = p as unknown as {mouseX: number; mouseY: number};
-  target.mouseX = x;
-  target.mouseY = y;
+  pointer(p).mouseX = x;
+  pointer(p).mouseY = y;
 }
 
 export function makeImage(
