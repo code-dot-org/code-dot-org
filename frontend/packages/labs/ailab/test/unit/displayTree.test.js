@@ -1,62 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-
-import {ColumnTypes, TestDataLocations} from '../../src/constants';
-import {parseCSV} from '../../src/csvReaderWrapper';
-import {buildDisplayTree} from '../../src/helpers/displayTree';
-import {getKeyByValue} from '../../src/helpers/utils';
-import {convertValueForTraining} from '../../src/helpers/valueConversion';
-import {
-  addSelectedFeature,
-  resetState,
-  setColumnsByDataType,
-  setImportedMetadata,
-  setLabelColumn,
-  setMode,
-  setReserveLocation,
-  setSelectedCSV,
-  setSelectedJSON,
-} from '../../src/redux';
+import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
-import {store} from '../../src/store';
-import train from '../../src/train';
 
-const DIR = path.join(__dirname, '../../public/datasets');
+import {modelPredictions, rowTraces, trainDataset} from './trainedDataset';
 
-function load(id, {label, features, mode = {trainer: 'decisionTree'}} = {}) {
-  const csv = fs.readFileSync(path.join(DIR, `${id}.csv`), 'utf8');
-  const metadata = JSON.parse(
-    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8'),
-  );
-
-  store.dispatch(resetState());
-  train.reset();
-  store.dispatch(setMode(mode));
-  store.dispatch(setSelectedCSV(`${id}.csv`));
-  store.dispatch(setSelectedJSON(`${id}.json`));
-  parseCSV(csv, false, false);
-  store.dispatch(setImportedMetadata(metadata));
-  metadata.fields.forEach(field =>
-    store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL),
-    ),
-  );
-  store.dispatch(setReserveLocation(TestDataLocations.END));
-  const labelColumn = label || metadata.defaultLabelColumn;
-  store.dispatch(setLabelColumn(labelColumn));
-  (
-    features ||
-    Object.keys(store.getState().data[0]).filter(
-      column => column !== labelColumn,
-    )
-  ).forEach(column => store.dispatch(addSelectedFeature(column)));
-
-  train.init(store);
-  train.onClickTrain();
-  return store.getState();
-}
-
-function route(node, row) {
+function routeByLabels(node, row) {
+  const path = ['0'];
   while (node.type === 'question') {
     const [left, right] = node.branches;
     const value = row[node.column];
@@ -64,23 +12,10 @@ function route(node, row) {
       left.kind === 'values'
         ? left.values.includes(String(value))
         : parseFloat(value) < left.threshold;
+    path.push(getChildNodeId(path[path.length - 1], goesLeft ? 0 : 1));
     node = goesLeft ? left.child : right.child;
   }
-  return node.prediction;
-}
-
-function modelPredictions(state) {
-  const rows = state.data.map(row =>
-    state.selectedFeatures.map(feature =>
-      convertValueForTraining(state, row[feature], feature),
-    ),
-  );
-  const labelKey = state.featureNumberKey[state.labelColumn];
-  return state.trainedModel
-    .predict(rows)
-    .map(prediction =>
-      labelKey ? getKeyByValue(labelKey, prediction) : prediction,
-    );
+  return path;
 }
 
 function countQuestions(node) {
@@ -94,19 +29,26 @@ describe('getDisplayTree on shipped datasets', () => {
     ['zoo', {label: 'Class', features: ['Legs', 'Feathers', 'Milk', 'Fins']}],
     ['insurance_cost', {}],
     ['jeans', {}],
-  ])('every row of %s reaches the answer the model predicts', (id, options) => {
-    const state = load(id, options);
-    const tree = getDisplayTree(state);
+  ])(
+    'every row of %s follows the labels down the model route to its answer',
+    (id, options) => {
+      const state = trainDataset(id, options);
+      const tree = getDisplayTree(state);
+      const traces = rowTraces(state);
 
-    expect(tree).toBeDefined();
-    expect(countQuestions(tree)).toBeGreaterThan(0);
-    expect(state.data.map(row => route(tree, row))).toEqual(
-      modelPredictions(state),
-    );
-  });
+      expect(tree).toBeDefined();
+      expect(countQuestions(tree)).toBeGreaterThan(0);
+      expect(state.data.map(row => routeByLabels(tree, row))).toEqual(
+        traces.map(trace => trace.path),
+      );
+      expect(traces.map(trace => trace.prediction)).toEqual(
+        modelPredictions(state),
+      );
+    },
+  );
 
   test('a KNN model has no display tree', () => {
-    const state = load('zoo', {label: 'Class', mode: {}});
+    const state = trainDataset('zoo', {label: 'Class', mode: {}});
 
     expect(state.trainedModel).toBeDefined();
     expect(getDisplayTree(state)).toBeUndefined();
