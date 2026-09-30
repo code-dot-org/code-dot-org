@@ -3,63 +3,34 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {
-  AiChatDisabledState,
-  ChatButtonData,
-  ResponseSchemaSettings,
-} from '@cdo/apps/aichat/types';
-import {ChatAsset} from '@cdo/apps/aichat/types/assets';
-import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
-import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import AiTutorChat, {
+  AiTutorChatProps,
+} from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import {useInstructionsDrawer} from './useInstructionsDrawer';
 
 import styles from './ai-tutor-chat-with-instructions-drawer.module.scss';
 
-interface AiTutorChatWithInstructionDrawerProps {
-  hiddenContextCallback: () => Promise<string>;
-  aiTutorMultimodalEnabled?: boolean;
-  levelId: number | null;
-  levelName?: string;
-  levelSystemPrompt?: string;
-  channelId?: string;
-  aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorSystemPrompt?: string;
-  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+type AiTutorChatWithInstructionDrawerProps = Omit<
+  AiTutorChatProps,
+  'hasInstructionsDrawer'
+> & {
   instructionsContent?: React.ReactNode;
-  tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
-  disabledState?: AiChatDisabledState;
-  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
-  onAssetRemoved?: (asset: ChatAsset) => void;
   // True when the AI Tutor tab is selected. This component is shared with the
   // Instructions tab (where it renders instructions only); the chat and the
   // Hide/Show Instructions toggle fade in only when the AI Tutor tab is active.
   aiTutorActive: boolean;
-  initialWelcomeMessage?: string;
-}
+};
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   AiTutorChatWithInstructionDrawerProps
 > = ({
-  hiddenContextCallback,
-  aiTutorMultimodalEnabled,
-  levelId,
-  levelName,
-  levelSystemPrompt,
-  channelId,
-  aiTutorChatButtonData,
-  aiTutorSystemPrompt,
-  aiTutorResponseSchemaSettings,
   instructionsContent,
-  tutorVideos,
   isPredictLevel,
-  disabledState,
-  onAssetUploaded,
-  onAssetRemoved,
   aiTutorActive,
-  initialWelcomeMessage,
+  ...aiTutorChatProps
 }) => {
   const {
     containerRef,
@@ -212,23 +183,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         )}
       >
         <div className={styles.chatContent} style={{height: chatContentHeight}}>
-          <AiTutorChat
-            hiddenContextCallback={hiddenContextCallback}
-            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-            levelId={levelId}
-            levelName={levelName}
-            levelSystemPrompt={levelSystemPrompt}
-            channelId={channelId}
-            aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPrompt={aiTutorSystemPrompt}
-            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-            hasInstructionsDrawer={true}
-            tutorVideos={tutorVideos}
-            disabledState={disabledState}
-            onAssetUploaded={onAssetUploaded}
-            onAssetRemoved={onAssetRemoved}
-            initialWelcomeMessage={initialWelcomeMessage}
-          />
+          <AiTutorChat {...aiTutorChatProps} hasInstructionsDrawer={true} />
         </div>
       </div>
     </div>
