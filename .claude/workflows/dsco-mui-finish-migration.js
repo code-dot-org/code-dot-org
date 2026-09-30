@@ -37,8 +37,8 @@ export const meta = {
 //                 (case-insensitive). Default: the next step Discover finds.
 //   base          branch the PR targets; HEAD must be at its tip (default 'staging'). A
 //                 local-only branch works with publish: false, to stack a dry run on one.
-//   branchPrefix  branch namespace (default '<owner>/mui-<component>'; owner is the current
-//                 branch's first segment, else the gh login, else 'mui' for local-only runs).
+//   branchPrefix  branch namespace (default '<owner>/mui-<component>', owner derived as in
+//                 dsco-mui-design-system-migration.js; required when none can be derived).
 //   jira          ticket key or browse URL for the commit and PR (default none).
 //   publish       false leaves one local branch: no push, no PR.
 //   maxHealAttempts  verify passes, with a heal between each (default 3, so at most two
@@ -62,7 +62,7 @@ const base = refName(a.base, 'base') || 'staging'
 const branchPrefixArg = refName(a.branchPrefix, 'branchPrefix')
 // Spliced into prompts, so only a table cell's worth of plain text.
 const stepArg = a.step === undefined ? '' : a.step
-if (typeof stepArg !== 'string' || !/^[A-Za-z0-9 `'().,/-]{0,80}$/.test(stepArg)) {
+if (typeof stepArg !== 'string' || !/^[A-Za-z0-9 `'().,/:+&_-]{0,80}$/.test(stepArg)) {
   throw new Error(`step must be 'delete-legacy' or a Behavior cell of the Deferred changes table, got ${JSON.stringify(a.step)}`)
 }
 const jira = a.jira === undefined ? '' : a.jira
@@ -129,15 +129,17 @@ const ROW_SCHEMA = {
 const DISCOVER_SCHEMA = {
   type: 'object',
   required: [
-    'preflight', 'headOnBase', 'branchOwner', 'ghLogin', 'finishBranches', 'preexistingUntracked', 'planDocFound', 'statusState',
+    'preflight', 'headOnBase', 'branchOwner', 'finishBranches', 'preexistingUntracked', 'planDocFound', 'statusState',
     'legacySourceFiles', 'legacyExports', 'legacyImports', 'eslintBanPresent', 'codemod', 'rows',
     'reference', 'consumerFiles', 'consumerTestFiles', 'next', 'notes',
   ],
   properties: {
     preflight: {type: 'array', items: {type: 'string'}, description: 'Blockers found in step 0; [] if none'},
     headOnBase: {type: 'boolean'},
-    branchOwner: {type: 'string', description: 'The part before the first "/" of the current branch, or ""'},
-    ghLogin: {type: 'string', description: 'gh api user --jq .login when publish is on, else ""'},
+    branchOwner: {
+      type: 'string',
+      description: "Namespace this developer uses for branches: first segment of the current branch when it contains '/', else the most common first segment among local branches containing '/', else the first word of git config user.name, lowercase",
+    },
     finishBranches: {type: 'array', items: {type: 'string'}, description: 'Local and origin branches whose last segment starts with finish-, short names without origin/'},
     preexistingUntracked: {type: 'array', items: {type: 'string'}},
     planDocFound: {type: 'boolean'},
@@ -173,10 +175,10 @@ ${TREE_RULES}
 ─── STEP 0 — Preflight ────────────────────────────────────────────────────────
   Record blockers; do not fix them: apps/node_modules, frontend/node_modules and apps/build
   exist; git status --porcelain shows no tracked modifications (list ?? lines as
-  preexistingUntracked); ${publish ? 'gh auth status succeeds; ghLogin from gh api user --jq .login.' : 'publish is off; skip gh.'}
+  preexistingUntracked); ${publish ? 'gh auth status succeeds.' : 'publish is off; skip gh.'}
   git fetch origin ${base} (skip it when ${base} is a local-only branch). headOnBase is
   true only when HEAD equals origin/${base} when that exists, else the local ${base}; an
-  older commit is false, since the audits below must see every current consumer. branchOwner from the current branch name. finishBranches: git branch --list
+  older commit is false, since the audits below must see every current consumer. branchOwner per its schema description. finishBranches: git branch --list
   '*finish-*'${publish ? ` and git ls-remote --heads origin '*finish-*'` : ''}.
 
 ─── STEP 1 — Docs ─────────────────────────────────────────────────────────────
@@ -240,10 +242,13 @@ if (next.kind === 'done') {
   log(`${component}: nothing left to finish (${next.reason})`)
   return {component, step: 'done', reason: next.reason}
 }
-if (next.kind === 'blocked') throw new Error(`${component}: ${next.reason}`)
+if (next.kind === 'blocked') {
+  const halfDone = !discover.legacySourceFiles.length && step4Left.length
+  throw new Error(`${component}: ${next.reason}${halfDone ? `. Step 4 is half done: ${step4Left.join(', ')} remain with the legacy source gone; finish them by hand` : ''}`)
+}
 const row = next.kind === 'behavior' ? discover.rows.find(r => cell(r.behavior) === cell(next.behavior)) : null
 if (next.kind === 'behavior' && !row) throw new Error(`Discover picked "${next.behavior}", which is not a row of the table`)
-// Discover's choice is re-derived from its own facts, so an inconsistent result cannot start an unsafe step.
+// Checks Discover's pick against its own facts; a wrong fact is caught only by Verify's import audit.
 if (next.kind === 'delete-legacy') {
   const why = [
     !discover.legacySourceFiles.length && 'no legacy source is left',
@@ -260,12 +265,14 @@ if (row) {
 const stepTitle = row ? row.behavior : 'delete the legacy DSCO source'
 const ticket = jiraKey || (row && row.ticket) || ''
 const remainingAfter = row ? discover.rows.filter(r => r !== row) : discover.rows
-const plainRef = v => /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(v || '')
-// HEAD is on base, usually staging, so the branch rarely names an owner; a shared fallback would collide on origin.
-const owner = plainRef(discover.branchOwner) ? discover.branchOwner : plainRef(discover.ghLogin) ? discover.ghLogin : 'mui'
-if (publish && !branchPrefixArg && owner === 'mui') throw new Error('No owner for the branch namespace (gh login unknown); pass branchPrefix')
+// Same owner rule as dsco-mui-design-system-migration.js, so both share one namespace; refs/heads/staging blocks staging/*.
+const bo = discover.branchOwner || ''
+const owner = /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(bo) && bo !== base && bo !== 'staging' ? bo : 'mui'
+if (publish && !branchPrefixArg && owner === 'mui') throw new Error('No branch owner could be derived; pass branchPrefix')
 const branchPrefix = branchPrefixArg || `${owner}/mui-${component}`
-const slug = (row ? row.behavior : 'delete-legacy').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+const slug =
+  (row ? row.behavior : 'delete-legacy').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40).replace(/-$/, '') ||
+  `row-${discover.rows.indexOf(row) + 1}`
 const branch = `${branchPrefix}/finish-${slug}`
 if (discover.finishBranches.includes(branch)) {
   throw new Error(`Branch ${branch} already exists (local or origin). Delete it or pass a different branchPrefix.`)
@@ -316,8 +323,7 @@ CODEMOD: ${discover.codemod || 'none'}
    Hand-edit only what the transform cannot reach.
 4. ${ESLINT_APPS}: remove the no-restricted-imports entry for the component; the names it
    bans no longer exist.
-5. Docs: ${STATUS_DOC} row notes step 4 is done (the state stays as it is while deferred
-   rows remain; it becomes **Migrated** only if the table is empty); the component README
+5. Docs: ${STATUS_DOC} row notes step 4 is done; ${remainingAfter.length ? `keep its state, since ${remainingAfter.length} deferred row(s) remain` : 'the table is empty, so set it to **Migrated**'}; the component README
    loses its legacy section; ${SKILL_DOC} names the plain import; ${PLAN_DOC} gains a
    "Legacy source deleted" paragraph under its Outcome.`
 
@@ -396,7 +402,7 @@ CONSUMER TESTS: ${JSON.stringify(discover.consumerTestFiles)}
    of its test, typecheck and lint scripts exist (e2e-tests has no test script; its specs need a live studio).
 4. Lint like Drone: git add -- <changed files> (the one git write you may do), run
    ./tools/hooks/pre-commit from the repo root, then git restore --staged -- <the same
-   files>. Never stage
+   files>, also when the lint fails; git diff --cached must be empty when you finish. Never stage
    ${JSON.stringify(discover.preexistingUntracked)}.
 5. Import audit: grep apps/src, apps/test, frontend and ${LIB_SRC} for any import of a name
    or path this step removed. Any hit is a failure.
@@ -408,6 +414,7 @@ pass is true only when every check is clean. Name suspect files for each failure
 
 let verify = null
 let attempt = 0
+const healNotes = []
 while (true) {
   attempt++
   verify = await agent(verifyPrompt(attempt), {schema: VERIFY_SCHEMA, label: `verify-${attempt}`, phase: 'Verify', model: WORK_MODEL, effort: CHECK_EFFORT})
@@ -431,6 +438,7 @@ Re-run only the checks that failed, then report filesTouched and notes.`,
     {schema: TOUCHED_SCHEMA, label: `heal-${attempt}`, phase: 'Verify', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (heal) {
+    healNotes.push(heal.notes)
     touched = [...new Set([...touched, ...heal.filesTouched])]
     uiTestEdits = [...uiTestEdits, ...(heal.uiTestEdits || [])]
   }
@@ -454,6 +462,7 @@ const PUBLISH_SCHEMA = {
     sha: {type: 'string'},
     prUrl: {type: 'string', description: 'Draft PR URL, or "" when publish is off'},
     leftovers: {type: 'array', items: {type: 'string'}},
+    unlisted: {type: 'array', items: {type: 'string'}, description: 'Committed paths no agent had reported'},
   },
 }
 
@@ -465,7 +474,8 @@ Run from the repo root and stop at the first git error rather than improvising.
    in leftovers.
 2. git add -- the files that changed and exist or were deleted, from this list:
    ${JSON.stringify(touched)}
-   NEVER stage ${JSON.stringify(discover.preexistingUntracked)}, anything under ${STORYBOOK}/dist,
+   Then run git status --porcelain and git add every other changed, deleted or untracked
+   path too, reporting each in unlisted: agents under-report the files they create. NEVER stage ${JSON.stringify(discover.preexistingUntracked)}, anything under ${STORYBOOK}/dist,
    or any *.png. Commit:
      ${subject}
 
@@ -474,12 +484,12 @@ Run from the repo root and stop at the first git error rather than improvising.
      ${COMMIT_TRAILER}
    The pre-commit hook lints staged files; fix lint errors in them, re-stage, retry.
 3. git status --porcelain: anything left besides the never-stage list goes in leftovers,
-   uncommitted.
+   uncommitted. With any leftover, stop here: do not push or open a PR.
 ${publish ? `4. git push -u origin ${branch}; then gh pr create --draft --base ${base} --head ${branch}
    --title "${subject}" --body-file <file>. The body follows .github/pull_request_template.md
    (read it); delete Deployment notes and Privacy; end with "${PR_FOOTER}". It says:
    lifecycle step ${row ? 5 : 4} of the ${component} migration, a link to ${PLAN_DOC}; what
-   changed and what did not (${JSON.stringify(exec.notes)}); the UI-test edits
+   changed and what did not (${JSON.stringify([exec.notes, ...healNotes])}); the UI-test edits
    ${JSON.stringify(uiTestEdits)}; "UI tests to run before merge" listing
    ${JSON.stringify(verify.uiTestsNotRun)}; ${requiredRuns ? `the line "${requiredRuns}"; ` : ''}the deferred rows still
    left ${JSON.stringify(remainingAfter.map(r => r.behavior))}; ${ticket ? `Links: Jira ${ticket}` : 'the Jira bullet left empty'}.
@@ -489,13 +499,16 @@ Report the branch, the commit sha, the PR URL and leftovers.`,
   {schema: PUBLISH_SCHEMA, label: 'publish', phase: 'Publish', model: WORK_MODEL, effort: ROUTINE_EFFORT},
 )
 if (!published) throw new Error(`publish agent was skipped; ${branch} may hold uncommitted work`)
+if (published.leftovers.length) {
+  throw new Error(`Publish left files uncommitted on ${branch}${published.sha ? ` after committing ${published.sha}` : ''}, and stopped before pushing: ${published.leftovers.join(', ')}`)
+}
 if (!published.sha || published.branch !== branch) {
   throw new Error(`Publish made no commit on ${branch}; the edits are uncommitted there. ${published.leftovers.join('; ')}`)
 }
 if (publish && !published.prUrl) {
   throw new Error(`Committed ${published.sha} on ${branch}, but no PR was opened. ${published.leftovers.join('; ')}`)
 }
-if (published.leftovers.length) log(`WARNING: leftovers: ${published.leftovers.join(', ')}`)
+if (published.unlisted && published.unlisted.length) log(`Committed files no agent reported: ${published.unlisted.join(', ')}`)
 log(`Done: ${published.branch} ${published.sha}${published.prUrl ? ` ${published.prUrl}` : ' (local only)'}`)
 
 return {
