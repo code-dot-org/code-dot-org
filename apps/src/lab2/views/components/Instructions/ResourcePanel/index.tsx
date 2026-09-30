@@ -274,10 +274,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.predictLevel.hasSubmittedResponse
   );
   const dispatch = useAppDispatch();
-  const setBackpackTabAsActive = useCallback(
-    () => setCurrentTab(Tabs.Backpack),
-    []
-  );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
@@ -426,7 +422,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Backpack] = (
         <UnifiedBackpackPanel
           {...backpackProps}
-          openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
         />
       );
@@ -501,7 +496,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isViewingOldVersion,
     currentTab,
     backpackProps,
-    setBackpackTabAsActive,
     backpackRefreshKey,
     hasInstructions,
   ]);

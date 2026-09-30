@@ -2,11 +2,13 @@
 import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setLabelColumn, removeSelectedFeature} from '../redux';
+
+import shared from '../shared.module.scss';
+import styles from './statement.module.scss';
 
 interface StatementProps {
   shouldShow?: boolean;
@@ -40,19 +42,19 @@ const Statement = ({
   const labelHTML = (label: string, currentPanel: string) => {
     const localizedLabel = getLocalizedColumnName(datasetId!, label);
     return (
-      <div style={styles.statementLabel}>
+      <div className={styles.label}>
         {localizedLabel || '____'}
         {localizedLabel && currentPanel === 'dataDisplayLabel' && (
           <div
             id="uitest-remove-statement-label"
             onClick={() => removeLabel()}
             onKeyDown={() => removeLabel()}
-            style={styles.statementDeleteIcon}
+            className={styles.deleteIcon}
             role="button"
             tabIndex={0}
           >
-            <div style={styles.statementDeleteCircle} />
-            <div style={styles.statementDeleteX}>
+            <div className={styles.deleteCircle} />
+            <div className={styles.deleteX}>
               <FontAwesomeIcon icon={faTimesCircle} />
             </div>
           </div>
@@ -74,19 +76,19 @@ const Statement = ({
           );
           return (
             <span key={index}>
-              <div style={styles.statementFeature}>
+              <div className={styles.feature}>
                 {localizedName}
                 {currentPanel === 'dataDisplayFeatures' && (
                   <div
                     id="uitest-remove-statement-feature"
                     onClick={() => removeFeature(selectedFeature)}
                     onKeyDown={() => removeFeature(selectedFeature)}
-                    style={styles.statementDeleteIcon}
+                    className={styles.deleteIcon}
                     role="button"
                     tabIndex={0}
                   >
-                    <div style={styles.statementDeleteCircle} />
-                    <div style={styles.statementDeleteX}>
+                    <div className={styles.deleteCircle} />
+                    <div className={styles.deleteX}>
                       <FontAwesomeIcon icon={faTimesCircle} />
                     </div>
                   </div>
@@ -97,7 +99,7 @@ const Statement = ({
           );
         })}
         {selectedFeatures.length === 0 && (
-          <span style={styles.statementFeature}>____</span>
+          <span className={styles.feature}>____</span>
         )}
       </span>
     );
@@ -143,10 +145,7 @@ const Statement = ({
     });
 
   return (
-    <div
-      style={smallFont ? styles.statementSmall : styles.statement}
-      id="statement"
-    >
+    <div className={smallFont ? styles.small : shared.largeText} id="statement">
       {predictionStatementComponents}
     </div>
   );

@@ -1,14 +1,18 @@
 /* React component to handle training. */
+import classNames from 'classnames';
 import {useState, useEffect, useRef, useCallback} from 'react';
 
 import {imageUrl} from '../assetPath';
-import {styles, getFadeOpacity} from '../constants';
+import {getFadeOpacity} from '../constants';
 import {deepEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getTableData} from '../redux';
 
 import {TestingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
+
+import shared from '../shared.module.scss';
+import styles from './generateResults.module.scss';
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -119,26 +123,18 @@ const GenerateResults = () => {
   return (
     <div
       id="train-model"
+      className={classNames(shared.panel, shared.scene)}
       style={{
-        ...styles.panel,
-        justifyContent: 'center',
-        backgroundSize: 'cover',
-        backgroundPosition: '50% 50%',
         backgroundImage:
           'url(' + imageUrl('results-background-light.jpg') + ')',
       }}
     >
-      <div style={styles.statementWithBackgroundAbsolute}>
+      <div className={shared.sceneHeading}>
         {I18n.t('generateResultsHeader')}
       </div>
 
-      <div style={styles.generateResultsContainer}>
-        <div
-          style={{
-            ...styles.generateResultsDataTable,
-            opacity: tableOpacity,
-          }}
-        >
+      <div className={styles.animationArea}>
+        <div className={shared.sceneTable} style={{opacity: tableOpacity}}>
           <DataTable
             useResultsData={true}
             reducedColumns={true}
@@ -170,20 +166,18 @@ const GenerateResults = () => {
       </div>
 
       <div
-        style={{
-          ...styles.generateResultsBotContainer,
-          transform: botContainerTransform,
-        }}
+        className={shared.sceneBot}
+        style={{transform: botContainerTransform}}
       >
-        <div className="ailab-image-hover" style={styles.trainBot}>
+        <div className={classNames(shared.hoverGrow, shared.bot)}>
           <img
             src={imageUrl('ai-bot/ai-bot-head.png')}
-            style={styles.trainBotHead}
+            className={shared.botHead}
             alt={I18n.t('aiBotHeadAltText')}
           />
           <img
             src={imageUrl('ai-bot/ai-bot-body.png')}
-            style={styles.trainBotBody}
+            className={shared.botBody}
             alt={I18n.t('aiBotBodyAltText')}
           />
           <div style={{width: 150, position: 'absolute', top: 140, zIndex: -1}}>
