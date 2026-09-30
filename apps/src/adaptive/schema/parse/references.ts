@@ -25,8 +25,8 @@ export function referenceProblems(pathway: Pathway): string[] {
  * keyed by question id alone, so each must name one question.
  */
 function questionProblems(pathway: Pathway): string[] {
-  const seen = new Set<string>();
-  const duplicates = new Set<string>();
+  const seen = new Set<string | number>();
+  const duplicates = new Set<string | number>();
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
       if (step.kind !== 'questions') continue;

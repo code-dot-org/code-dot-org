@@ -1,20 +1,18 @@
 // A student's answers to questions steps, in the shape of the AI Lessons
 // prototype's AnswerRecord so the consumers ported from it read them
-// unchanged. Nothing here touches React or storage.
+// unchanged, with the choice named as quiz responses name it. Nothing here
+// touches React or storage.
 
 import {MultipleChoiceQuestion, QuestionsStep} from '../types';
 
 export interface AnswerRecord {
-  questionId: string;
+  questionId: number;
   stepId: string;
-  /** The question text as shown. */
+  /** The question stem as shown. */
   prompt: string;
-  /** The selected labels, joined with "; ". */
+  /** The selected choice's text. */
   answer: string;
-  /** Single select only. */
-  optionId?: string;
-  /** Multi select only. */
-  optionIds?: string[];
+  selectedChoiceId: string;
   /** Of the latest submission. */
   outcome: 'correct' | 'incorrect';
   /** Submissions so far. */
@@ -24,39 +22,27 @@ export interface AnswerRecord {
 }
 
 /** The latest answer record, by question id. */
-export type StudentInputs = {[questionId: string]: AnswerRecord};
+export type StudentInputs = {[questionId: number]: AnswerRecord};
 
-/** Correct when the chosen set is exactly the set of options marked correct. */
-export function isCorrectSelection(
+export const isCorrectSelection = (
   question: MultipleChoiceQuestion,
-  chosen: string[]
-): boolean {
-  const correct = question.options.filter(o => o.correct).map(o => o.id);
-  return (
-    correct.length > 0 &&
-    chosen.length === correct.length &&
-    chosen.every(id => correct.includes(id))
-  );
-}
+  choiceId: string
+) => choiceId === question.correctChoiceId;
 
 export function answerRecord(
   step: QuestionsStep,
   question: MultipleChoiceQuestion,
-  chosen: string[],
+  choiceId: string,
   previous: AnswerRecord | undefined,
   now: Date = new Date()
 ): AnswerRecord {
-  const answer = question.options
-    .filter(o => chosen.includes(o.id))
-    .map(o => o.label)
-    .join('; ');
   return {
     questionId: question.id,
     stepId: step.id,
-    prompt: question.text,
-    answer,
-    ...(question.multiSelect ? {optionIds: chosen} : {optionId: chosen[0]}),
-    outcome: isCorrectSelection(question, chosen) ? 'correct' : 'incorrect',
+    prompt: question.stem,
+    answer: question.choices.find(c => c.id === choiceId)?.text ?? '',
+    selectedChoiceId: choiceId,
+    outcome: isCorrectSelection(question, choiceId) ? 'correct' : 'incorrect',
     attempts: (previous?.attempts || 0) + 1,
     at: now.toISOString(),
   };
@@ -64,10 +50,6 @@ export function answerRecord(
 
 export const isPassed = (record: AnswerRecord | undefined) =>
   record?.outcome === 'correct';
-
-/** The selection a record holds, whichever select mode wrote it. */
-export const recordedSelection = (record: AnswerRecord | undefined) =>
-  record?.optionIds || (record?.optionId ? [record.optionId] : []);
 
 /**
  * The highest question index a student may open: the first multiple-choice
@@ -79,7 +61,7 @@ export function reachableThrough(
   inputs: StudentInputs
 ): number {
   const blocking = step.questions.findIndex(
-    q => q.type === 'multipleChoice' && !isPassed(inputs[q.id])
+    q => q.type === 'MultipleChoiceQuestion' && !isPassed(inputs[q.id])
   );
   return blocking === -1 ? step.questions.length - 1 : blocking;
 }

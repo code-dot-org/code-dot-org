@@ -4,7 +4,6 @@ import {
   isCorrectSelection,
   isPassed,
   reachableThrough,
-  recordedSelection,
 } from '@cdo/apps/adaptive/progress';
 import {
   MultipleChoiceQuestion,
@@ -12,28 +11,21 @@ import {
   QuestionsStep,
 } from '@cdo/apps/adaptive/types';
 
-const single: MultipleChoiceQuestion = {
-  id: 'q1',
-  type: 'multipleChoice',
-  text: 'Pick one',
-  options: [
-    {id: 'a', label: 'A', correct: true},
-    {id: 'b', label: 'B'},
-    {id: 'c', label: 'C'},
+const first: MultipleChoiceQuestion = {
+  id: 1,
+  type: 'MultipleChoiceQuestion',
+  questionName: 'first',
+  stem: 'Pick one',
+  choices: [
+    {id: 'a', text: 'A'},
+    {id: 'b', text: 'B'},
+    {id: 'c', text: 'C'},
   ],
+  correctChoiceId: 'a',
+  page: 1,
 };
 
-const multi: MultipleChoiceQuestion = {
-  id: 'q2',
-  type: 'multipleChoice',
-  text: 'Pick all',
-  multiSelect: true,
-  options: [
-    {id: 'a', label: 'A', correct: true},
-    {id: 'b', label: 'B', correct: true},
-    {id: 'c', label: 'C'},
-  ],
-};
+const third: MultipleChoiceQuestion = {...first, id: 3, questionName: 'third'};
 
 const freeResponse: Question = {
   id: 'fr',
@@ -51,91 +43,60 @@ const stepOf = (...questions: Question[]): QuestionsStep => ({
 const now = new Date('2026-09-30T12:00:00.000Z');
 
 describe('isCorrectSelection', () => {
-  it('needs exactly the set of correct options, in any order', () => {
-    expect(isCorrectSelection(single, ['a'])).toBe(true);
-    expect(isCorrectSelection(single, ['b'])).toBe(false);
-    expect(isCorrectSelection(multi, ['b', 'a'])).toBe(true);
-    expect(isCorrectSelection(multi, ['a'])).toBe(false);
-    expect(isCorrectSelection(multi, ['a', 'b', 'c'])).toBe(false);
-  });
-
-  it('accepts nothing when no option is marked correct', () => {
-    const unkeyed = {...single, options: single.options.map(o => ({...o}))};
-    unkeyed.options[0].correct = undefined;
-    expect(isCorrectSelection(unkeyed, ['a'])).toBe(false);
+  it('accepts only the correct choice', () => {
+    expect(isCorrectSelection(first, 'a')).toBe(true);
+    expect(isCorrectSelection(first, 'b')).toBe(false);
   });
 });
 
 describe('answerRecord', () => {
-  const step = stepOf(single, multi);
+  const step = stepOf(first);
 
-  it('records a single-select answer by optionId', () => {
-    expect(answerRecord(step, single, ['b'], undefined, now)).toEqual({
-      questionId: 'q1',
+  it('records the choice id and text', () => {
+    expect(answerRecord(step, first, 'b', undefined, now)).toEqual({
+      questionId: 1,
       stepId: 'quiz',
       prompt: 'Pick one',
       answer: 'B',
-      optionId: 'b',
+      selectedChoiceId: 'b',
       outcome: 'incorrect',
       attempts: 1,
       at: '2026-09-30T12:00:00.000Z',
     });
   });
 
-  it('records a multi-select answer by optionIds, labels in option order', () => {
-    const record = answerRecord(step, multi, ['b', 'a'], undefined, now);
-    expect(record.optionIds).toEqual(['b', 'a']);
-    expect(record.optionId).toBeUndefined();
-    expect(record.answer).toBe('A; B');
-    expect(record.outcome).toBe('correct');
-  });
-
   it('counts attempts across a wrong then right answer', () => {
-    const wrong = answerRecord(step, single, ['b'], undefined, now);
-    const right = answerRecord(step, single, ['a'], wrong, now);
+    const wrong = answerRecord(step, first, 'b', undefined, now);
+    const right = answerRecord(step, first, 'a', wrong, now);
     expect(right).toMatchObject({
       answer: 'A',
-      optionId: 'a',
+      selectedChoiceId: 'a',
       outcome: 'correct',
       attempts: 2,
     });
   });
 });
 
-describe('recordedSelection', () => {
-  it('reads either select mode and nothing from no record', () => {
-    const step = stepOf(single, multi);
-    expect(
-      recordedSelection(answerRecord(step, single, ['a'], undefined))
-    ).toEqual(['a']);
-    expect(
-      recordedSelection(answerRecord(step, multi, ['a', 'b'], undefined))
-    ).toEqual(['a', 'b']);
-    expect(recordedSelection(undefined)).toEqual([]);
-  });
-});
-
 describe('reachableThrough', () => {
-  const second = {...single, id: 'q3'};
-  const step = stepOf(single, freeResponse, second);
+  const step = stepOf(first, freeResponse, third);
   const passed = (question: MultipleChoiceQuestion): AnswerRecord =>
-    answerRecord(step, question, ['a'], undefined);
+    answerRecord(step, question, 'a', undefined);
   const failed = (question: MultipleChoiceQuestion): AnswerRecord =>
-    answerRecord(step, question, ['b'], undefined);
+    answerRecord(step, question, 'b', undefined);
 
   it('stops at the first question not passed', () => {
     expect(reachableThrough(step, {})).toBe(0);
-    expect(reachableThrough(step, {q1: failed(single)})).toBe(0);
+    expect(reachableThrough(step, {1: failed(first)})).toBe(0);
   });
 
   it('passes over placeholder question types', () => {
-    expect(isPassed(passed(single))).toBe(true);
-    expect(reachableThrough(step, {q1: passed(single)})).toBe(2);
+    expect(isPassed(passed(first))).toBe(true);
+    expect(reachableThrough(step, {1: passed(first)})).toBe(2);
   });
 
   it('reaches every question once all are passed', () => {
-    expect(
-      reachableThrough(step, {q1: passed(single), q3: passed(second)})
-    ).toBe(2);
+    expect(reachableThrough(step, {1: passed(first), 3: passed(third)})).toBe(
+      2
+    );
   });
 });

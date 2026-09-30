@@ -136,22 +136,22 @@ describe('useProgress', () => {
       useProgress(pathway, key, store)
     );
     await waitForNextUpdate();
-    const record = (questionId: string, attempts: number): AnswerRecord => ({
+    const record = (questionId: number, attempts: number): AnswerRecord => ({
       questionId,
       stepId: 'quiz',
-      prompt: questionId,
+      prompt: `Question ${questionId}`,
       answer: 'A',
-      optionId: 'a',
+      selectedChoiceId: 'a',
       outcome: attempts > 1 ? 'correct' : 'incorrect',
       attempts,
       at: '2026-09-30T00:00:00.000Z',
     });
-    act(() => result.current.recordAnswer(record('q1', 1)));
-    act(() => result.current.recordAnswer(record('q2', 1)));
-    act(() => result.current.recordAnswer(record('q1', 2)));
+    act(() => result.current.recordAnswer(record(1, 1)));
+    act(() => result.current.recordAnswer(record(2, 1)));
+    act(() => result.current.recordAnswer(record(1, 2)));
     expect(result.current.inputs).toEqual({
-      q1: record('q1', 2),
-      q2: record('q2', 1),
+      1: record(1, 2),
+      2: record(2, 1),
     });
     expect(store.saved[store.saved.length - 1].inputs).toEqual(
       result.current.inputs

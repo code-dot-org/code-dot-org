@@ -1,22 +1,34 @@
 import {z} from 'zod';
 
-import {stepBaseSchema} from './steps/base';
+import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
-export const questionOptionSchema = z.strictObject({
-  id: z.string().min(1),
-  label: z.string().min(1),
-  correct: z.boolean().optional(),
-});
+import {stepBaseSchema} from './steps/base';
+import {subsetOf} from './subsetOf';
+
+/**
+ * A multiple-choice question, shaped like the quiz levels' question so the
+ * two can share views; the summary omits the answer key, so it is added.
+ */
+export const multipleChoiceQuestionSchema = subsetOf<
+  QuizQuestionSummary & {correctChoiceId: string}
+>()(
+  z.strictObject({
+    id: z.number().int().positive(),
+    type: z.literal('MultipleChoiceQuestion'),
+    questionName: z.string().min(1),
+    stem: z.string().min(1),
+    choices: z
+      .array(z.strictObject({id: z.string().min(1), text: z.string().min(1)}))
+      .min(2),
+    correctChoiceId: z.string().min(1),
+    // Quiz levels paginate; a questions step shows one question at a time.
+    page: z.number().int().default(1),
+  })
+);
 
 /** Represents a single question in a Question step. */
 export const questionSchema = z.discriminatedUnion('type', [
-  z.strictObject({
-    id: z.string().min(1),
-    type: z.literal('multipleChoice'),
-    text: z.string().min(1),
-    options: z.array(questionOptionSchema).min(2),
-    multiSelect: z.boolean().optional(),
-  }),
+  multipleChoiceQuestionSchema,
   z.strictObject({
     id: z.string().min(1),
     type: z.literal('freeResponse'),

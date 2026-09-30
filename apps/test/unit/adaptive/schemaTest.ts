@@ -73,13 +73,15 @@ const served = (): Raw => ({
           kind: 'questions',
           questions: [
             {
-              id: 'q1',
-              type: 'multipleChoice',
-              text: 'Pick one',
-              options: [
-                {id: 'a', label: 'A', correct: true},
-                {id: 'b', label: 'B'},
+              id: 1,
+              type: 'MultipleChoiceQuestion',
+              questionName: 'pick-one',
+              stem: 'Pick one',
+              choices: [
+                {id: 'a', text: 'A'},
+                {id: 'b', text: 'B'},
               ],
+              correctChoiceId: 'a',
             },
           ],
         },
@@ -155,6 +157,12 @@ const source = (): RawSource => {
   };
 };
 
+const questionOf = (raw: Raw) => {
+  const quiz = raw.checkpoints[0].steps[1];
+  if (quiz.kind !== 'questions') throw new Error('fixture has no quiz');
+  return quiz.questions[0];
+};
+
 function problemsOf(raw: unknown): string[] {
   try {
     parsePathway(raw);
@@ -181,6 +189,22 @@ describe('parsePathway', () => {
     const build = pathway.checkpoints[1].steps[0];
     expect(build.kind === 'level' && build.levelProperties?.id).toBe(2);
     expect(pathway.project.levelProperties?.appName).toBe('weblab2');
+  });
+
+  it('defaults a question page, as quiz questions carry one', () => {
+    const quiz = parsePathway(served()).checkpoints[0].steps[1];
+    expect(quiz.kind === 'questions' && quiz.questions[0]).toMatchObject({
+      id: 1,
+      page: 1,
+    });
+  });
+
+  it('rejects a key the quiz question summary lacks', () => {
+    const raw = served();
+    Object.assign(raw.checkpoints[0].steps[1], {
+      questions: [{...questionOf(raw), multiSelect: true}],
+    });
+    expect(problemsOf(raw)).toHaveLength(1);
   });
 
   it('accepts a level step the server could not resolve', () => {
@@ -334,7 +358,7 @@ describe('referenceProblems', () => {
       {...quiz, id: 'quiz-3'},
     ];
     expect(problemsOf(raw)).toEqual([
-      "checkpoints: question id 'q1' is used more than once",
+      "checkpoints: question id '1' is used more than once",
     ]);
   });
 

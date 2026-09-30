@@ -24,12 +24,12 @@ describe('localStorageProgressStore', () => {
     const withInputs: Progress = {
       ...progress,
       inputs: {
-        q1: {
-          questionId: 'q1',
+        1: {
+          questionId: 1,
           stepId: 'quiz',
           prompt: 'Pick one',
           answer: 'A',
-          optionId: 'a',
+          selectedChoiceId: 'a',
           outcome: 'correct',
           attempts: 2,
           at: '2026-09-30T00:00:00.000Z',
