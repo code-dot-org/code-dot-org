@@ -1,7 +1,12 @@
 import * as BlocklyCore from 'blockly/core';
+import {omit} from 'lodash';
 
 import * as blockUtils from '@cdo/apps/block_utils';
-import {BlockDefinition, CustomInputTypes} from '@cdo/apps/blockly/types';
+import {
+  BlockConfig,
+  BlockDefinition,
+  CustomInputTypes,
+} from '@cdo/apps/blockly/types';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
@@ -11,6 +16,11 @@ import {
   GO_TO_SCENE_BLOCK_TYPE,
   SceneDropdown,
 } from './blockDefinitions/goToScene';
+import {
+  PLACEHOLDER_MUTATOR,
+  PLACEHOLDER_OUTLINE_EXTENSION,
+  placeholderMutator,
+} from './blockDefinitions/placeholder';
 import {
   FIELD_SOUND_DROPDOWN_TYPE,
   SoundDropdown,
@@ -36,6 +46,7 @@ import {
   FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
   MusicProjectDropdown,
 } from './musicProjectDropdown';
+import {placeholderOutline} from './placeholderRendering';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -80,6 +91,14 @@ function installLabBlocks(): void {
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  BlocklyCore.Extensions.register(
+    PLACEHOLDER_OUTLINE_EXTENSION,
+    placeholderOutline
+  );
+  BlocklyCore.Extensions.registerMutator(
+    PLACEHOLDER_MUTATOR,
+    placeholderMutator
+  );
   for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {
@@ -99,7 +118,12 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
 } {
   return blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: sharedBlocks || [],
+    // The pool's event blocks carry a mini toolbox of pointer blocks, the
+    // "+" on "when clicked". This lab does not teach them.
+    blockDefinitions: (sharedBlocks || []).map(definition => ({
+      ...definition,
+      config: omit(definition.config, 'miniToolboxBlocks') as BlockConfig,
+    })),
     customInputTypes: {
       ...(spritelabBlocks.customInputTypes as unknown as CustomInputTypes),
       // Lab2 pickers: trim-aware costume thumbnails (backgrounds stay

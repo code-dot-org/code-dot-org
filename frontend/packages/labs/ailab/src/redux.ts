@@ -19,6 +19,7 @@ import {
 import {getTrainerId} from './trainers/ids';
 import type {
   DataRow,
+  Hyperparameters,
   Metadata,
   Mode,
   TrainedModelDetailsSave,
@@ -56,6 +57,8 @@ export interface RootState {
   accuracyCheckPredictedLabels: (number | string)[];
   testData: Record<string, string | number>;
   prediction: number | string | undefined;
+  predictionTestData: Record<string, string | number>;
+  predictionInputs: number[];
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
@@ -66,7 +69,7 @@ export interface RootState {
   historicResults: HistoricResult[];
   showResultsDetails: boolean;
   resultsHighlightRow: number | undefined;
-  hyperparameters: Record<string, number>;
+  hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
@@ -101,6 +104,8 @@ export const initialState: RootState = {
   accuracyCheckPredictedLabels: [],
   testData: {},
   prediction: undefined,
+  predictionTestData: {},
+  predictionInputs: [],
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: 'selectDataset',
@@ -115,7 +120,7 @@ export const initialState: RootState = {
   historicResults: [],
   showResultsDetails: false,
   resultsHighlightRow: undefined,
-  hyperparameters: {},
+  hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
@@ -246,8 +251,18 @@ const ailabSlice = createSlice({
         return {payload: {feature, value}};
       },
     },
-    setPrediction(state, action: PayloadAction<number | string>) {
-      state.prediction = action.payload;
+    setPrediction: {
+      reducer(
+        state,
+        action: PayloadAction<{prediction: number | string; inputs: number[]}>,
+      ) {
+        state.prediction = action.payload.prediction;
+        state.predictionTestData = {...state.testData};
+        state.predictionInputs = action.payload.inputs;
+      },
+      prepare(prediction: number | string, inputs: number[]) {
+        return {payload: {prediction, inputs}};
+      },
     },
     resetState(state) {
       return {
@@ -320,18 +335,10 @@ const ailabSlice = createSlice({
     },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
+      if (!getColumnClickable(state, currentColumn)) {
         return;
       }
-      if (
-        state.currentPanel === 'dataDisplayFeatures' &&
-        currentColumn === state.labelColumn
-      ) {
-        // If doing feature selection, and the label column is clicked, do
-        // nothing.
-        return;
-      } else if (state.currentColumn === currentColumn) {
+      if (state.currentColumn === currentColumn) {
         // If column is selected, then deselect.
         if (state.currentPanel === 'dataDisplayFeatures') {
           state.instructionsKey = 'dataDisplayFeatures';
@@ -417,7 +424,7 @@ const ailabSlice = createSlice({
       state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
-    setHyperparameters(state, action: PayloadAction<Record<string, number>>) {
+    setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
       state.hyperparameters = action.payload;
     },
     setInstructionsDismissed(state) {
@@ -505,6 +512,17 @@ function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
+export function getColumnClickable(state: RootState, column: string): boolean {
+  // If doing feature selection, the label column is no longer clickable
+  return (
+    getShowColumnClicking(state) &&
+    !(
+      state.currentPanel === 'dataDisplayFeatures' &&
+      column === state.labelColumn
+    )
+  );
+}
+
 export function getPredictAvailable(state: RootState): boolean {
   return (
     Object.keys(state.testData).filter(
@@ -561,7 +579,7 @@ export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
     features: getFeaturesToSave(state),
     summaryStat: getSummaryStat(state),
     trainedModel: state.trainedModel ? state.trainedModel.toJSON() : null,
-    hyperparameters: state.hyperparameters,
+    hyperparameters: state.hyperparameters ?? null,
   };
 
   return dataToSave;

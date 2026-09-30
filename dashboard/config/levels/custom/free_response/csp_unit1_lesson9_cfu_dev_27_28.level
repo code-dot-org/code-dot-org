@@ -1,0 +1,32 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-30T06:04:10.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Check for Understanding",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "A program stores these 16 bits:\r\n\r\n```0110100111111001```\r\n\r\nThese bits describe a black and white image that is 4 pixels wide and 4 pixels tall. Each bit is one pixel (0 = white, 1 = black), read row by row starting at the top left. \r\n1. Write out the four rows, or describe the picture.\r\n\r\n<br>\r\n\r\n2. Suppose a friend sent you only these 16 bits and nothing else. What two other things would you need to know to draw the picture correctly?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18874,
+    "name_suffix": "_2025",
+    "encrypted_solution": "Ou16SzCaqErWMwEoMEiOafb8sXCmpSeI0Ggczohh7DlYQvmMKJVoFotvspny\nc4lVWGxml1CNNp531TGs8vzVzQSjnd3b3aytZlsAJjW2VEPU1ulrTEj71ZLN\nMJoWlWPj0CxhnEmLmqwflGFubYOJFv6ZSq/t92U2sMmemPTlL2gfj8ER/5/q\ngu3q+GsbLpExj7Inus6ISH14VYWNTgIuBMnnjgnsJtShio/bEZNUGvvt9QzO\nTEvKTVrqrclkYStRHRRbLhQmmzzZwFftWSX7Vx6EHVUqOGK1kNtVfW19YoWm\ng+o86dBNzPHkK+1wApJUwooM4JPT/f02hvYkCpPxNw+/uS7E9swe3vH8iqAh\nWmJDy5sUCc41rvHsqovCju1L8K3BKi5yO+s82Wrj1SE9HOwsaBElWiSvaAnp\nn0f17W8Hx1aAYi8dTNTTCkbfr7QmzBwU8COHRuUJP9RqWnIYFXnfQvB6H3yh\nfti5pAKjopMHVmktELouivW5NMDRO5WP6xgE970q8X4IZnmyjgK9vg==\n",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-30T06:04:10.146+00:00\",\"changed\":[\"cloned from \\\"U1L9 CFU Sampling_2025\\\"\"],\"cloned_from\":\"U1L9 CFU Sampling_2025\"},{\"changed_at\":\"2026-09-30 06:06:08 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

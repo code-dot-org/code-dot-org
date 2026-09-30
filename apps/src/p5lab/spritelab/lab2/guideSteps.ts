@@ -96,6 +96,8 @@ export function nextGuideStepIndex(
 /** What the guide should show right now. */
 export interface GuideDisplay {
   text?: string;
+  /** What a collapsed guide still says, when the step gives it a line. */
+  collapsedText?: string;
   /** The current step offers the Continue button to the next level. */
   showContinue: boolean;
 }
@@ -138,5 +140,9 @@ export function useGuideSteps({
     return {text: fallback, showContinue: false};
   }
   const step = steps[Math.min(index, steps.length - 1)];
-  return {text: step.text, showContinue: !!step.showContinue};
+  return {
+    text: step.text,
+    collapsedText: step.collapsedText,
+    showContinue: !!step.showContinue,
+  };
 }

@@ -144,7 +144,7 @@ export type {
   ModelDataToSave,
   SaveResponse,
 } from './types';
-export {INSTRUCTIONS_KEYS} from './types';
+export {CONTENT_PANELS, INSTRUCTIONS_KEYS} from './types';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,

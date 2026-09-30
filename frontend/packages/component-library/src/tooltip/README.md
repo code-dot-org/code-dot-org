@@ -1,11 +1,8 @@
 # `componentLibrary/tooltip`
 
-## Which one to use
-
-| Component                          | Built on                        | Notes                                     |
-| ---------------------------------- | ------------------------------- | ----------------------------------------- |
-| MUI `Tooltip`                      | MUI `Tooltip` + `CdoTheme`      | Use this for new code.                    |
-| [`WithTooltip`](./WithTooltip.tsx) | our own SCSS + positioning code | Legacy. No callers left; do not add more. |
+There is one tooltip: MUI's, styled by `CdoTheme`. The DSCO components
+(`WithTooltip`, `LegacyTooltip`, `TooltipOverlay`) are gone; this directory
+ships only `keyboardOnlyTooltipProps`.
 
 Import `Tooltip` straight from `@mui/material`; the `MuiTooltip` entry in
 [`styleOverrides/tooltip.ts`](../themes/code.org/styleOverrides/tooltip.ts) (on
@@ -26,12 +23,10 @@ const RunButton = () => (
 The override is **global** — it styles every MUI tooltip in the app, the Sketch
 Lab ones included.
 
-`WithTooltip` and `LegacyTooltip` still ship, but nothing calls them any more
-— not the design system, not `apps/`. A `no-restricted-imports` entry in
-`apps/.eslintrc.js` keeps it that way; it names the three components, so
-`keyboardOnlyTooltipProps` and the `TooltipProps` type still import freely. The `TooltipProps` type still refers to
-the legacy component and is imported by `codebridge` `WithConditionalTooltip`,
-so deleting the sources means keeping or relocating that type.
+A component that takes tooltip settings as data rather than rendering the
+tooltip itself (`_Tab`, `apps` `WithConditionalTooltip`) types them as
+`Omit<TooltipProps, 'children'>` from `@mui/material` — it supplies the child
+itself. There is no design-system descriptor type any more.
 
 ### What the theme sets
 
@@ -100,72 +95,3 @@ surrounding `data-theme` subtree. Pass it through `slotProps` when needed:
 
 (Or, as a follow-up, the bubble could use `-fixed` tokens and stop caring about
 the surrounding theme at all.)
-
-## `WithTooltip` (legacy)
-
-This package exports following styled React
-components: [WithTooltip](./WithTooltip.tsx), [LegacyTooltip](./_Tooltip.tsx), [TooltipOverlay](./_Tooltip.tsx).
-
-`WithTooltip` is what we used before the MUI `Tooltip` override existed. It
-wraps `TooltipOverlay` and `LegacyTooltip` and handles showing and hiding,
-positioning and accessibility itself. New code uses MUI `Tooltip`; this section
-is here only for reading the history.
-
-The shape its callers used:
-
-```javascript
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-
-const ComponentWithTooltip = () => (
-  <WithTooltip tooltipProps={tooltipProps}>
-    <button>Hover over me</button>
-  </WithTooltip>
-);
-```
-
-Please note that it's required that `children` prop/component of `WithTooltip` component will be a single element
-and will support adding `aria-describedBy` attribute to it.
-
----
-
-For guidelines on how to use these components and the features they
-offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go
-to [Design System / Tooltip / WithTooltip](http://localhost:6006/?path=/story/designsystem-tooltip-withtooltip--default-tooltip).
-
----
-
-##### Custom usage of `LegacyTooltip` and `TooltipOverlay` components is not recommended, but still possible.
-
-If you'll need to use `LegacyTooltip` and `TooltipOverlay` for some custom behavior, you can do it, just remember that you'll
-need to handle all the logic with showing and hiding, positioning and some accessibility aspects of the tooltip
-yourself.
-
-In order to add tooltip to some element, you need to wrap it with TooltipOverlay component and add LegacyTooltip component
-inside it. You'll need to provide `tooltipId` prop to LegacyTooltip component and `aria-describedby` prop to the element
-you want to add tooltip to.
-
-You can import it like this:
-
-```javascript
-import {
-  LegacyTooltip,
-  TooltipOverlay,
-} from '@code-dot-org/component-library/tooltip';
-import moduleStyles from './styles.module.scss'; // some scss module with tooltip positioning styles
-
-const ComponentWithTooltip = () => {
-  // Handle showing and hiding of the tooltip via state or with the help of scss styles
-  return (
-    <TooltipOverlay>
-      <button aria-describedby="tooltip1">Hover over me</button>
-      <LegacyTooltip
-        tooltipId="tooltip1"
-        text="This is a tooltip"
-        className={moduleStyles.customTooltipStyles}
-      />
-    </TooltipOverlay>
-  );
-};
-```

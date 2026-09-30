@@ -34,30 +34,80 @@
       "type": "platform"
     },
     "world_start_pattern": [
-      "..........",
-      "..........",
-      "BB......BB",
-      "..........",
-      "....BB....",
-      "..........",
-      ".BB....BB.",
-      "....S.....",
-      "...BBBB...",
-      ".........."
+      [
+        "..........",
+        "..........",
+        "BB......BB",
+        "..........",
+        "....BB....",
+        "..........",
+        ".BB....BB.",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        ".......BBB",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB.....",
+        ".S........",
+        "BBB.......",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..BB...BB.",
+        "..........",
+        ".BBB..BBB.",
+        "..........",
+        "...BB.BB..",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB..BB.",
+        ".S........",
+        "BBB..BBBBB",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "....BB....",
+        "..........",
+        "..BB..BB..",
+        "..........",
+        "BB......BB",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ]
     ],
     "guide_steps": [
       {
-        "text": "**Make this world yours.** Pick your block in the palette and paint platforms onto the grid - add blocks, erase blocks, build new paths and towers. Then click **Play** to try your layout."
+        "text": "**Make this world yours.** Pick your block and paint platforms on the grid. Add blocks, erase blocks, build paths and towers. Click **Play** to try it."
       },
       {
-        "text": "**You built a platformer!** Run and jump through what you made, then continue when you're ready.",
+        "text": "**You built a platformer!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Make this world yours\nPaint platforms onto the grid in the World tab - add blocks, erase blocks, build new paths and towers. Then press **Play** to try your layout."
+    "long_instructions": "# Make this world yours\nPaint platforms on the grid: add blocks, erase blocks, build paths and towers. Click **Play** to try it."
   }
 }]]></config>
 </GamelabJr>

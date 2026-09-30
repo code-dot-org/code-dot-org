@@ -1,5 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
+  ChallengeResponse,
+  ChallengeResponseDetail,
+  challengeResponseDetailValidator,
+  challengeResponseListValidator,
+  GalleryUnit,
+  Reaction,
+} from '@code-dot-org/lesson-deep-dive';
+import {
   Typography,
   Button as MuiButton,
   IconButton as MuiIconButton,
@@ -8,20 +16,9 @@ import React, {FC, useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {
-  ChallengeResponse,
-  Reaction,
-  challengeResponseListValidator,
-} from '../lessonDeepDive/types';
-
 import AssessmentPanel from './AssessmentPanel';
 import ProjectDetailsCard from './ProjectDetailsCard';
 import ProjectStage from './ProjectStage';
-import {
-  ChallengeResponseDetail,
-  GalleryUnit,
-  challengeResponseDetailValidator,
-} from './types';
 
 import styles from './project-view.module.scss';
 

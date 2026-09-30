@@ -1,14 +1,15 @@
+import {
+  ChallengeResponse,
+  ChallengeResponseDetail,
+  TutorGalleryData,
+} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import {addReaction} from '@cdo/apps/aiTutor/views/gallery/reactionsApi';
-import {
-  ChallengeResponseDetail,
-  TutorGalleryData,
-} from '@cdo/apps/aiTutor/views/gallery/types';
-import {ChallengeResponse} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -104,9 +105,14 @@ describe('ChallengeGallery', () => {
   beforeEach(() => {
     fetchJson.mockReset();
     mockAddReaction.mockReset();
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
     // Project navigation pushes ?project=<id>; start each test off a
     // clean URL.
     window.history.replaceState(null, '', '/');
+  });
+
+  afterEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
   });
 
   it('fetches the first section and current unit, and groups projects', async () => {

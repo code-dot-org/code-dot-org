@@ -17,6 +17,7 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
@@ -136,6 +137,11 @@ export default function useBlocklyWorkspace({
       customSimpleDialog,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
+
+    // Drags onto a placeholder keep the placeholder showing, not a marker.
+    workspaceRef.current.options.plugins[
+      BlocklyCore.registry.Type.CONNECTION_PREVIEWER.toString()
+    ] = PlaceholderPreviewer;
 
     // CDO Blockly shrinks the container by the workspace-header height to
     // leave room for a header bar we don't render, leaving a gap at the

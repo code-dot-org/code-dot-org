@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 // Library build, app-shaped (see docs/conventions/packages.md). React, MUI, and
 // @code-dot-org/core stay external — the Studio host provides them so the lazy
@@ -16,6 +17,7 @@ export default defineConfig({
       entryRoot: 'src',
       exclude: ['**/__tests__/**', '**/*.test.ts', '**/*.test.tsx'],
     }),
+    libInjectCss(),
     externalizeDeps(),
   ],
   server: {

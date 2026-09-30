@@ -6,8 +6,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import progress from '@cdo/apps/code-studio/progressRedux';
-import lab from '@cdo/apps/lab2/lab2Redux';
+import lab, {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import lab2System from '@cdo/apps/lab2/redux/systemRedux';
+import {Channel} from '@cdo/apps/lab2/types';
 import BackpackFileChip from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/BackpackFileChip';
 import {
   getStore,
@@ -16,8 +18,21 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {notifyWithToast} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 
 const FILE_NAME = 'sunset.png';
+
+// Owning the channel keeps the workspace out of read-only mode, which would
+// otherwise disable the add button for its own reasons.
+const ownedChannel: Channel = {
+  id: '1',
+  name: '1',
+  isOwner: true,
+  projectType: 'weblab2',
+  publishedAt: null,
+  createdAt: '',
+  updatedAt: '',
+};
 
 // The chip opens a confirmation dialog before deleting; answer it with `result`.
 const dialogControlMock = {showDialog: jest.fn()};
@@ -28,14 +43,13 @@ jest.mock('@cdo/apps/lab2/views/dialogs', () => ({
 
 describe('BackpackFileChip', () => {
   let showToast: jest.Mock;
-  let addAlert: jest.Mock;
   let backpackApi: BackpackClientApi;
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({lab, lab2Project, progress});
+    registerReducers({lab, lab2Project, lab2System, progress});
+    getStore().dispatch(setChannel(ownedChannel));
     showToast = jest.fn();
-    addAlert = jest.fn();
     dialogControlMock.showDialog.mockResolvedValue({type: 'confirm'});
     backpackApi = {
       getFileFetchUrl: () => undefined,
@@ -55,8 +69,7 @@ describe('BackpackFileChip', () => {
           <BackpackFileChip
             fileName={FILE_NAME}
             backpackApi={backpackApi}
-            addAlert={addAlert}
-            showToast={showToast}
+            notify={notifyWithToast(showToast)}
             validateFileName={jest.fn()}
             saveFileToProject={jest.fn()}
             createNewProjectFile={jest.fn()}
@@ -92,8 +105,6 @@ describe('BackpackFileChip', () => {
       `${FILE_NAME} deleted from your Backpack.`,
       expect.objectContaining({type: 'success', autoHideDuration: 4000})
     );
-    // The panel's alert stack is gone; nothing should route back to it.
-    expect(addAlert).not.toHaveBeenCalled();
   });
 
   it('toasts an error when a delete fails', async () => {
@@ -110,30 +121,22 @@ describe('BackpackFileChip', () => {
         expect.objectContaining({type: 'danger', autoHideDuration: 8000})
       )
     );
-    expect(addAlert).not.toHaveBeenCalled();
   });
 
-  it('falls back to the in-panel alert without showToast (legacy panel)', async () => {
-    (backpackApi.deleteFiles as jest.Mock).mockImplementation(
-      (filenames, onError) => onError(new Error('delete boom'))
-    );
-    renderChip({showToast: undefined});
+  it('offers an enabled add button when the file is not recently added', () => {
+    renderChip();
 
-    await clickDelete();
-
-    await waitFor(() =>
-      expect(addAlert).toHaveBeenCalledWith(
-        'danger',
-        `Failed to delete ${FILE_NAME} from your Backpack.`
-      )
-    );
-    expect(showToast).not.toHaveBeenCalled();
+    const addButton = screen.getByRole('button', {name: 'Add to project'});
+    expect(addButton).toBeEnabled();
+    expect(addButton.querySelector('.fa-plus')).toBeInTheDocument();
   });
 
-  it('shows the Added confirmation in place of the add button', () => {
+  it('uses a check icon and disables the add button when the file has been recently added', () => {
     renderChip({isRecentlyAdded: true});
 
-    expect(screen.getByText('Added')).toBeInTheDocument();
+    const addButton = screen.getByRole('button', {name: 'New file!'});
+    expect(addButton).toBeDisabled();
+    expect(addButton.querySelector('.fa-check')).toBeInTheDocument();
     expect(
       screen.queryByRole('button', {name: 'Add to project'})
     ).not.toBeInTheDocument();

@@ -24,6 +24,7 @@ export {
   useRemoveParentEmail,
   useDeleteUser,
   useSignOutOtherSessions,
+  useUnlinkLtiAccount,
 } from './users/users.query';
 export {
   CurrentUserSchema,
@@ -39,6 +40,7 @@ export type {
   UserType,
   EducatorRoleOption,
   SchoolInfoSummary,
+  IntegrationsSettings,
   SchoolInfoRequest,
   UpdateProfileParams,
   UpdateSchoolInfoParams,
@@ -47,6 +49,7 @@ export type {
   CreatePasswordParams,
   UpdateUserTypeParams,
   DeleteUserParams,
-  ParentEmailOptIn,
+  EmailOptIn,
   UpdateParentEmailParams,
+  UnlinkLtiAccountParams,
 } from './users/users.types';

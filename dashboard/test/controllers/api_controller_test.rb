@@ -2462,6 +2462,20 @@ class ApiControllerTest < ActionController::TestCase
           _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
         end
       end
+
+      context 'student has progress in a course that has since sunset' do
+        let(:sunsetting_unit_group) {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)}
+        let!(:sunsetting_course_version) {create(:course_version, content_root: sunsetting_unit_group)}
+
+        before do
+          create(:user_script, user: student, script: sunsetting_unit_group.default_units.first)
+        end
+
+        it 'returns the sunsetting_unit_group even though it can no longer be assigned' do
+          refute sunsetting_unit_group.course_assignable?(teacher)
+          _(response.find {|cv| cv[:id] == sunsetting_course_version.id}).must_be_instance_of Hash
+        end
+      end
     end
   end
 

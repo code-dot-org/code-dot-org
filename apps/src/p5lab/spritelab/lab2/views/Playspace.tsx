@@ -1,7 +1,17 @@
 import * as BlocklyCore from 'blockly/core';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import {AnyAction} from 'redux';
 
+import {
+  GUIDE_BOTTOM_OFFSET_PX,
+  GUIDE_RIGHT_OFFSET_PX,
+} from '@cdo/apps/lab2/views/components/guide/Guide';
 import {
   isPickingLocation,
   selectLocation,
@@ -16,6 +26,10 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
+// Read by a screen reader when focus reaches the game, which otherwise
+// reports itself only in sound.
+const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
+
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale
 // it with a CSS transform to fit either the corner preview or the centered
 // play area.
@@ -29,6 +43,73 @@ const PREVIEW_SCALE = 0.64;
 // The preview's full horizontal footprint, for siblings that must keep their
 // content clear of it (it floats over the active tab's top-right corner).
 export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
+// The play bar under the box: one row of the design system's small
+// buttons (2rem at the root font size, plus their 1px borders) and its gap.
+const SMALL_BUTTON_PX = 34;
+const BAR_GAP = 12;
+export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
+// The box's slide between its two placements, and the fade of whatever
+// appears in place.
+const SLIDE_MS = 450;
+const FADE_MS = 180;
+
+interface Size {
+  w: number;
+  h: number;
+}
+
+interface Placement {
+  scale: number;
+  x: number;
+  y: number;
+}
+
+/** The box centered and scaled to fill an area, MARGIN kept all round. */
+function centeredIn(area: Size): Placement {
+  const scale = Math.max(0.1, (Math.min(area.w, area.h) - 2 * MARGIN) / CANVAS);
+  return {
+    scale,
+    x: (area.w - CANVAS * scale) / 2,
+    y: (area.h - CANVAS * scale) / 2,
+  };
+}
+
+/**
+ * Where the play view goes in an overlay of `size` with the guide pinned at
+ * its bottom-right: centered in the whole overlay when that clears the
+ * guide, else beside the guide or above it, whichever leaves the box
+ * bigger (beside on a landscape window, above on a portrait one). It
+ * shrinks rather than sliding under the guide. `reserveBelow` is room kept
+ * under the box (the play bar), so it is the box plus bar that is centered
+ * and kept clear of the guide.
+ */
+export function playPlacement(
+  size: Size,
+  guideSize?: {width: number; height: number} | null,
+  reserveBelow = 0
+): Placement {
+  const whole = centeredIn({w: size.w, h: size.h - reserveBelow});
+  if (!guideSize) {
+    return whole;
+  }
+  const guideLeft = size.w - guideSize.width - GUIDE_RIGHT_OFFSET_PX;
+  const guideTop = size.h - guideSize.height - GUIDE_BOTTOM_OFFSET_PX;
+  const clearsGuide =
+    whole.x + CANVAS * whole.scale <= guideLeft - MARGIN ||
+    whole.y + CANVAS * whole.scale + reserveBelow <= guideTop - MARGIN;
+  if (clearsGuide) {
+    return whole;
+  }
+  const beside = centeredIn({
+    w: guideLeft - MARGIN,
+    h: size.h - reserveBelow,
+  });
+  const above = centeredIn({
+    w: size.w,
+    h: guideTop - MARGIN - reserveBelow,
+  });
+  return above.scale > beside.scale ? above : beside;
+}
 
 interface PlayspaceProps {
   mode: PlayspaceMode;
@@ -49,6 +130,17 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  /** The scene playing now is a platformer, so the controls apply. */
+  platformScene?: boolean;
+  // Shown in the play area's top-right corner while playing (the restart
+  // buttons). Outside the box, so they keep their size whatever its scale.
+  controls?: React.ReactNode;
+  // Shown under the box in both visible modes (Play, or Stop and the arrow
+  // keys); the box is placed to leave it room.
+  playBar?: React.ReactNode;
+  // The floating guide's footprint, pinned to the overlay's bottom-right
+  // (playPlacement).
+  guideSize?: {width: number; height: number} | null;
 }
 
 /**
@@ -64,6 +156,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  platformScene = false,
+  controls,
+  playBar,
+  guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -219,23 +315,44 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  let transform: string;
+  let placement: Placement;
   if (mode === 'play') {
-    const scale = Math.max(
-      0.1,
-      (Math.min(size.w, size.h) - 2 * MARGIN) / CANVAS
-    );
-    const x = (size.w - CANVAS * scale) / 2;
-    const y = (size.h - CANVAS * scale) / 2;
-    transform = `translate(${x}px, ${y}px) scale(${scale})`;
+    placement = playPlacement(size, guideSize, playBar ? BAR_ROOM : 0);
   } else {
     // Preview: small box pinned to the top-right corner.
-    const x = Math.max(
-      PREVIEW_MARGIN,
-      size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
-    );
-    transform = `translate(${x}px, ${PREVIEW_MARGIN}px) scale(${PREVIEW_SCALE})`;
+    placement = {
+      scale: PREVIEW_SCALE,
+      x: Math.max(
+        PREVIEW_MARGIN,
+        size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
+      ),
+      y: PREVIEW_MARGIN,
+    };
   }
+  const {x, y, scale} = placement;
+  const transform = `translate(${x}px, ${y}px) scale(${scale})`;
+  const boxSide = CANVAS * scale;
+  // Under the box, unscaled, at the box's width.
+  const barTransform = `translate(${x}px, ${y + boxSide + BAR_GAP}px)`;
+  const visible = measured && mode !== 'hidden';
+  // The bar does not ride the slide: it waits, unseen, at its destination
+  // and fades in once the box has arrived. Before paint, so the jump is
+  // not seen.
+  const barRef = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    if (animate) {
+      barRef.current?.animate?.(
+        [
+          {opacity: 0},
+          {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
+          {opacity: 1},
+        ],
+        {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+      );
+    }
+    // Only a mode change moves the bar; animate is derived for that render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode]);
 
   return (
     <div
@@ -256,12 +373,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
+        aria-describedby={
+          mode === 'play' && platformScene ? CONTROLS_HELP_ID : undefined
+        }
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
           // Fade in on appearance (first measurement or hidden -> visible);
           // slide only between the two visible placements.
-          opacity: measured && mode !== 'hidden' ? 1 : 0,
+          opacity: visible ? 1 : 0,
           // Hairline seam so a white game canvas reads against a white page
           // in light mode — corner preview only; it fades out with the slide
           // to Play. A shadow, not a border, so the 400x400 geometry the
@@ -271,8 +391,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
               ? '0 0 0 1px transparent'
               : '0 0 0 1px var(--borders-neutral-primary)',
           transition: animate
-            ? 'transform 0.45s ease, opacity 0.18s ease-in, box-shadow 0.45s ease'
-            : 'opacity 0.18s ease-in',
+            ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in, box-shadow ${SLIDE_MS}ms ease`
+            : `opacity ${FADE_MS}ms ease-in`,
           // Interactive in Play, and while picking a location (so the preview
           // can be clicked even on the Code tab).
           pointerEvents: mode === 'play' || picking ? 'auto' : 'none',
@@ -344,6 +464,33 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           </div>
         )}
       </div>
+      {/* Outside the box: role="application" hides what is inside it from
+          screen readers, so anything to be read must sit beside it. */}
+      {mode === 'play' && platformScene && (
+        <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
+          Left and right arrows move. Space or up arrow jumps. In zero gravity,
+          up and down steer. Navigation sounds can be turned on in Settings:
+          footsteps and bumps, a tone for your height, and tones that grow
+          louder as a wall or an edge comes near.
+        </p>
+      )}
+      {mode === 'play' && controls && (
+        <div className={moduleStyles.playControls}>{controls}</div>
+      )}
+      {playBar && (
+        <div
+          ref={barRef}
+          className={moduleStyles.playBar}
+          style={{
+            transform: barTransform,
+            width: boxSide,
+            opacity: visible ? 1 : 0,
+            transition: `opacity ${FADE_MS}ms ease-in`,
+          }}
+        >
+          {playBar}
+        </div>
+      )}
     </div>
   );
 };

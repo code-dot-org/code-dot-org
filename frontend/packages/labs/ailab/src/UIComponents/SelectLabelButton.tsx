@@ -1,8 +1,11 @@
 /* React component to handle selecting a column as the label. */
-import {styles} from '../constants';
+import classNames from 'classnames';
+
 import {useAppDispatch} from '../hooks';
 import I18n from '../i18n';
 import {setLabelColumn} from '../redux';
+
+import shared from '../shared.module.scss';
 
 interface SelectLabelButtonProps {
   column?: string;
@@ -21,7 +24,7 @@ const SelectLabelButton = ({column}: SelectLabelButtonProps) => {
       id="uitest-select-label-button"
       type="button"
       onClick={event => setPredictColumn(event, column!)}
-      style={styles.selectLabelButton}
+      className={classNames(shared.columnButton, shared.labelButton)}
     >
       {I18n.t('selectLabelButton')}
     </button>

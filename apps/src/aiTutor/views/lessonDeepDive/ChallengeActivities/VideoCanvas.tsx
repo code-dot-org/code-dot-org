@@ -1,0 +1,533 @@
+import React, {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
+import {Image as KonvaImage, Layer, Stage, Transformer} from 'react-konva';
+
+import CanvasText, {TransformerNode} from './CanvasText';
+import {
+  CanvasTextItem,
+  NewCanvasText,
+  TEXT_FONT_STYLE,
+} from './canvasTextUtils';
+import EditToolbar from './EditToolbar';
+
+import styles from './video-canvas.module.scss';
+
+// 'edit': live stage, recorder stopped — where decorations get placed before
+// a take
+export type VideoCanvasMode = 'edit' | 'recording' | 'preview';
+
+type LayerNode = React.ElementRef<typeof Layer>;
+type ImageNode = React.ElementRef<typeof KonvaImage>;
+
+const TEXT_ANCHORS = [
+  'top-left',
+  'top-right',
+  'bottom-left',
+  'bottom-right',
+  'middle-left',
+  'middle-right',
+];
+
+const RING_RADIUS = 26;
+const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
+
+interface CountdownRingProps {
+  timeRemaining: number;
+  timeLimitSeconds: number;
+}
+
+const CountdownRing: FC<CountdownRingProps> = ({
+  timeRemaining,
+  timeLimitSeconds,
+}) => {
+  const progress = timeLimitSeconds > 0 ? timeRemaining / timeLimitSeconds : 0;
+  const offset = CIRCUMFERENCE * (1 - progress);
+  const color =
+    timeRemaining <= 5
+      ? '#ff4444'
+      : timeRemaining <= 10
+      ? '#ffd600'
+      : '#ffffff';
+
+  return (
+    <div
+      className={styles.countdownRing}
+      aria-live="polite"
+      aria-label={`${timeRemaining} seconds remaining`}
+    >
+      <svg
+        className={styles.countdownRingSvg}
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+        style={{transform: 'rotate(-90deg)'}}
+      >
+        <circle
+          cx="32"
+          cy="32"
+          r={RING_RADIUS}
+          fill="none"
+          stroke="rgba(255,255,255,0.2)"
+          strokeWidth="3.5"
+        />
+        <circle
+          cx="32"
+          cy="32"
+          r={RING_RADIUS}
+          fill="none"
+          stroke={color}
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          strokeDasharray={CIRCUMFERENCE}
+          strokeDashoffset={offset}
+          style={{transition: 'stroke-dashoffset 1s linear, stroke 0.5s ease'}}
+        />
+      </svg>
+      <span className={styles.countdownNumber} style={{color}}>
+        {timeRemaining}
+      </span>
+    </div>
+  );
+};
+
+// Prefer opus in a webm container; fall back to whatever the browser
+// defaults to if that combination isn't supported.
+function pickAudioMimeType(): string {
+  return MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
+    ? 'audio/webm;codecs=opus'
+    : 'audio/webm';
+}
+
+// Crop video stream to fit canvas ratio
+function getCoverCrop(
+  sourceWidth: number,
+  sourceHeight: number,
+  targetWidth: number,
+  targetHeight: number
+) {
+  const sourceRatio = sourceWidth / sourceHeight;
+  const targetRatio = targetWidth / targetHeight;
+  if (sourceRatio > targetRatio) {
+    const width = sourceHeight * targetRatio;
+    return {x: (sourceWidth - width) / 2, y: 0, width, height: sourceHeight};
+  }
+  const height = sourceWidth / targetRatio;
+  return {x: 0, y: (sourceHeight - height) / 2, width: sourceWidth, height};
+}
+
+interface VideoCanvasProps {
+  // Requested mode change: edit -> recording -> preview -> edit
+  mode: VideoCanvasMode;
+  onRecordingChange: (hasRecording: boolean) => void;
+  // Callback when the recording times out
+  onIsRecordingChange?: (isRecording: boolean) => void;
+  recordedBlob: Blob | null;
+  setRecordedBlob: Dispatch<SetStateAction<Blob | null>>;
+  recordedAudioBlob: Blob | null;
+  setRecordedAudioBlob: Dispatch<SetStateAction<Blob | null>>;
+  timeLimitSeconds?: number;
+  disabled?: boolean;
+}
+
+const VideoCanvas: FC<VideoCanvasProps> = ({
+  mode,
+  onRecordingChange,
+  onIsRecordingChange,
+  recordedBlob,
+  setRecordedBlob,
+  setRecordedAudioBlob,
+  timeLimitSeconds = 30,
+  disabled = false,
+}) => {
+  // Actual mode, set by start/stop recording effects
+  const [currentMode, setCurrentMode] = useState<VideoCanvasMode>('edit');
+  const [error, setError] = useState<string | null>(null);
+  const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
+  const [stageSize, setStageSize] = useState({width: 0, height: 0});
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  // A Layer ref state so the video stream animation reruns when the Layer
+  // remounts on the way to 'edit', unmounts while the take plays back
+  const [layerNode, setLayerNode] = useState<LayerNode | null>(null);
+  // the stage unmounts during preview, and the texts are added back when returning to edit mode
+  const [texts, setTexts] = useState<CanvasTextItem[]>([]);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const textIdRef = useRef(0);
+  const transformerRef = useRef<TransformerNode>(null);
+
+  const [wrapperNode, setWrapperNode] = useState<HTMLDivElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const imageNodeRef = useRef<ImageNode>(null);
+  const streamRef = useRef<MediaStream | null>(null);
+  const canvasStreamRef = useRef<MediaStream | null>(null);
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const audioRecorderRef = useRef<MediaRecorder | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const clearTimer = () => {
+    if (timerRef.current !== null) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+  // getUserMedia can resolve while the playback branch is still rendered, so
+  // the handoff is done both there and whenever the live branch mounts.
+  const attachStream = useCallback(() => {
+    if (videoRef.current && streamRef.current) {
+      videoRef.current.srcObject = streamRef.current;
+    }
+  }, []);
+
+  const startStream = useCallback(async () => {
+    if (!navigator.mediaDevices?.getUserMedia) {
+      setError(
+        'Camera recording is not available on this page. ' +
+          'Try opening the page over HTTPS.'
+      );
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: {
+          aspectRatio: 0.5625, // 9/16
+        },
+        audio: true,
+      });
+      streamRef.current = stream;
+      attachStream();
+      setError(null);
+    } catch {
+      setError(
+        'Camera or microphone access was denied. ' +
+          'Please allow access in your browser settings and try again.'
+      );
+    }
+  }, [attachStream]);
+
+  useEffect(() => {
+    if (currentMode !== 'preview') {
+      attachStream();
+    }
+  }, [currentMode, attachStream]);
+
+  useEffect(() => {
+    startStream();
+    return () => {
+      streamRef.current?.getTracks().forEach(t => t.stop());
+    };
+  }, [startStream]);
+
+  // Track the wrapper's rendered size so the stage — and thus the recorded
+  // output — matches it exactly, at whatever size the surrounding layout
+  // gives the 9/16 box.
+  useEffect(() => {
+    if (!wrapperNode) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const {width, height} = entry.contentRect;
+      // A wrapper leaving the page reports 0x0; keep the last real size.
+      if (!width || !height) return;
+      setStageSize({width: Math.round(width), height: Math.round(height)});
+    });
+    observer.observe(wrapperNode);
+    return () => observer.disconnect();
+  }, [wrapperNode]);
+
+  // Redraws the video's current frame onto the stage every animation frame.
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    const imageNode = imageNodeRef.current;
+    if (!layerNode || !videoEl || !imageNode) return;
+    if (!stageSize.width || !stageSize.height) return;
+
+    let frame = requestAnimationFrame(function draw() {
+      const {videoWidth, videoHeight} = videoEl;
+      if (videoWidth && videoHeight) {
+        imageNode.setAttrs({
+          image: videoEl,
+          width: stageSize.width,
+          height: stageSize.height,
+          crop: getCoverCrop(
+            videoWidth,
+            videoHeight,
+            stageSize.width,
+            stageSize.height
+          ),
+        });
+        layerNode.draw();
+      }
+      frame = requestAnimationFrame(draw);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [layerNode, stageSize]);
+
+  useEffect(() => {
+    if (!recordedBlob) {
+      setPreviewUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(recordedBlob);
+    setPreviewUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [recordedBlob]);
+
+  // current mode is set to 'preview' in onstop once the blob exists
+  const stopRecording = useCallback(() => {
+    if (recorderRef.current?.state !== 'recording') return;
+    clearTimer();
+    recorderRef.current.stop();
+    audioRecorderRef.current?.stop();
+    canvasStreamRef.current?.getTracks().forEach(t => t.stop());
+    streamRef.current?.getTracks().forEach(t => t.stop());
+  }, []);
+
+  useEffect(() => {
+    if (currentMode === 'recording' && timeRemaining === 0) {
+      stopRecording();
+    }
+  }, [timeRemaining, currentMode, stopRecording]);
+
+  // Discards the take
+  const returnToEdit = useCallback(async () => {
+    setRecordedBlob(null);
+    setRecordedAudioBlob(null);
+    onRecordingChange(false);
+    setTimeRemaining(timeLimitSeconds);
+    setCurrentMode('edit');
+    await startStream();
+  }, [
+    setRecordedBlob,
+    setRecordedAudioBlob,
+    onRecordingChange,
+    timeLimitSeconds,
+    startStream,
+  ]);
+
+  const startRecording = useCallback(() => {
+    // Only the content layer is recorded; the transformer's handles are
+    // drawn on a separate layer
+    const sceneCanvas = layerNode?.getNativeCanvasElement();
+    if (!streamRef.current || !sceneCanvas) return;
+    setSelectedId(null);
+    chunksRef.current = [];
+    audioChunksRef.current = [];
+    setTimeRemaining(timeLimitSeconds);
+
+    const canvasStream = sceneCanvas.captureStream(30);
+    canvasStreamRef.current = canvasStream;
+    const combinedStream = new MediaStream([
+      ...canvasStream.getVideoTracks(),
+      ...streamRef.current.getAudioTracks(),
+    ]);
+
+    const recorder = new MediaRecorder(combinedStream);
+    recorder.ondataavailable = e => {
+      if (e.data.size > 0) chunksRef.current.push(e.data);
+    };
+    recorder.onstop = () => {
+      const blob = new Blob(chunksRef.current, {type: 'video/webm'});
+      setRecordedBlob(blob);
+      onRecordingChange(true);
+      onIsRecordingChange?.(false);
+      setCurrentMode('preview');
+    };
+    recorderRef.current = recorder;
+
+    // A second recorder on an audio-only view of the same stream, so we end
+    // up with an audio/webm blob alongside the video/webm one, without
+    // having to demux the composited video afterwards.
+    const audioStream = new MediaStream(streamRef.current.getAudioTracks());
+    const audioRecorder = new MediaRecorder(audioStream, {
+      mimeType: pickAudioMimeType(),
+    });
+    audioRecorder.ondataavailable = e => {
+      if (e.data.size > 0) audioChunksRef.current.push(e.data);
+    };
+    audioRecorder.onstop = () => {
+      const blob = new Blob(audioChunksRef.current, {type: 'audio/webm'});
+      setRecordedAudioBlob(blob);
+    };
+    audioRecorderRef.current = audioRecorder;
+
+    recorder.start();
+    audioRecorder.start();
+    setCurrentMode('recording');
+
+    timerRef.current = setInterval(() => {
+      setTimeRemaining(prev => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+  }, [
+    layerNode,
+    timeLimitSeconds,
+    setRecordedBlob,
+    setRecordedAudioBlob,
+    onRecordingChange,
+    onIsRecordingChange,
+  ]);
+
+  const addText = useCallback(
+    async ({text, color, style}: NewCanvasText) => {
+      try {
+        await document.fonts?.load(`${TEXT_FONT_STYLE} 48px Geist`);
+      } catch (error) {
+        console.error(error);
+        // Draw with the fallback font rather than not at all.
+      }
+      const id = `text-${++textIdRef.current}`;
+      setTexts(prev => [
+        ...prev,
+        {
+          id,
+          text,
+          color,
+          style,
+          x: stageSize.width * 0.1,
+          y: stageSize.height * 0.4,
+          width: stageSize.width * 0.8,
+          fontSize: Math.round(stageSize.width * 0.12),
+        },
+      ]);
+      setSelectedId(id);
+    },
+    [stageSize]
+  );
+
+  const deleteSelected = useCallback(() => {
+    setTexts(prev => prev.filter(item => item.id !== selectedId));
+    setSelectedId(null);
+  }, [selectedId]);
+
+  const updateText = useCallback(
+    (id: string, changes: Partial<CanvasTextItem>) =>
+      setTexts(prev =>
+        prev.map(item => (item.id === id ? {...item, ...changes} : item))
+      ),
+    []
+  );
+
+  // The transformer lives on another layer and cannot see changes inside
+  // the Label it holds, so it is re-pointed and refreshed on every change.
+  useLayoutEffect(() => {
+    const transformer = transformerRef.current;
+    if (!transformer) return;
+    const node = selectedId ? layerNode?.findOne(`#${selectedId}`) : undefined;
+    transformer.nodes(node ? [node] : []);
+    transformer.forceUpdate();
+  }, [selectedId, texts, layerNode]);
+
+  useEffect(() => {
+    if (disabled) return;
+    if (mode === 'recording' && currentMode === 'edit') {
+      startRecording();
+    } else if (mode !== 'recording' && currentMode === 'recording') {
+      stopRecording();
+    } else if (mode === 'edit' && currentMode === 'preview') {
+      returnToEdit();
+    }
+  }, [
+    mode,
+    currentMode,
+    disabled,
+    startRecording,
+    stopRecording,
+    returnToEdit,
+  ]);
+
+  if (error) {
+    return <p className={styles.error}>{error}</p>;
+  }
+
+  if (currentMode === 'preview' && previewUrl) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.previewWrapper}>
+          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+          <video
+            className={styles.video}
+            src={previewUrl}
+            controls
+            key="playback"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.container}>
+      {currentMode === 'edit' && (
+        <EditToolbar
+          onAddText={addText}
+          canDelete={selectedId !== null}
+          onDelete={deleteSelected}
+        />
+      )}
+      <div className={styles.previewWrapper} ref={setWrapperNode}>
+        <video
+          key="preview"
+          ref={videoRef}
+          className={styles.hiddenVideo}
+          autoPlay
+          muted
+          playsInline
+        />
+        {stageSize.width > 0 && stageSize.height > 0 && (
+          <Stage
+            width={stageSize.width}
+            height={stageSize.height}
+            onMouseDown={e => {
+              if (e.target === e.target.getStage()) setSelectedId(null);
+            }}
+            onTouchStart={e => {
+              if (e.target === e.target.getStage()) setSelectedId(null);
+            }}
+          >
+            <Layer ref={setLayerNode} listening={currentMode === 'edit'}>
+              {/* Not listening, so a press on the video lands on the stage
+                  and deselects. */}
+              <KonvaImage
+                ref={imageNodeRef}
+                image={undefined}
+                listening={false}
+              />
+              {texts.map(item => (
+                <CanvasText
+                  key={item.id}
+                  item={item}
+                  editable={currentMode === 'edit'}
+                  transformerRef={transformerRef}
+                  onSelect={() => setSelectedId(item.id)}
+                  onChange={changes => updateText(item.id, changes)}
+                />
+              ))}
+            </Layer>
+            <Layer>
+              <Transformer
+                ref={transformerRef}
+                enabledAnchors={TEXT_ANCHORS}
+                rotateEnabled={false}
+                flipEnabled={false}
+              />
+            </Layer>
+          </Stage>
+        )}
+        {currentMode === 'recording' && (
+          <CountdownRing
+            timeRemaining={timeRemaining}
+            timeLimitSeconds={timeLimitSeconds}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default VideoCanvas;

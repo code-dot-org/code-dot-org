@@ -13,14 +13,14 @@ module LangfuseHelper
     wrap_response(tutor_client.add_dataset_item(dataset_item))
   end
 
-  # Sends a trace + generation to the TA Langfuse project for a lesson insight call.
+  # Exports data about a lesson insight AI call to Langfuse.
   def self.trace_lesson_insight(**opts)
     trace_student_snapshot_call(trace_name: "lesson-insight", **opts)
   rescue => exception
     Rails.logger.warn("LangfuseHelper.trace_lesson_insight failed: #{exception.message}")
   end
 
-  # Sends a trace + generation to the TA Langfuse project for a lesson feedback call.
+  # Exports data about a lesson feedback AI call to Langfuse.
   def self.trace_lesson_feedback(**opts)
     trace_student_snapshot_call(trace_name: "lesson-feedback", **opts)
   rescue => exception
@@ -41,7 +41,7 @@ module LangfuseHelper
       usage: {
         input: usage&.dig('prompt_tokens'),
         output: usage&.dig('completion_tokens'),
-        unit: "TOKENS",
+        total: usage&.dig('total_tokens'),
       },
       metadata: {
         lesson_id: lesson_id,
