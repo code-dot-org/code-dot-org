@@ -20,7 +20,7 @@ import styles from './ai-tutor-chat-with-instructions-drawer.module.scss';
 interface AiTutorChatWithInstructionDrawerProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
-  levelId?: number;
+  levelId: number | null;
   levelName?: string;
   levelSystemPrompt?: string;
   channelId?: string;

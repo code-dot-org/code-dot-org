@@ -33,7 +33,7 @@ const defaultChatButtonData: ChatButtonData[] = [
 interface AiTutorChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
-  levelId?: number;
+  levelId: number | null;
   levelName?: string;
   levelSystemPrompt?: string;
   channelId?: string;

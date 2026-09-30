@@ -25,7 +25,7 @@ const makeStore = () =>
   configureStore({
     reducer: {
       aichat: aichatReducer,
-      progress: (state = {currentLevelId: '1', scriptId: 2}) => state,
+      progress: (state = {scriptId: 2}) => state,
     },
   });
 
@@ -37,14 +37,14 @@ describe('fetchUserChatHistory', () => {
 
   it('does not request history for a signed-out viewer', async () => {
     const result = await makeStore().dispatch(
-      fetchUserChatHistory({userId: null, isOwnHistory: true})
+      fetchUserChatHistory({userId: null, isOwnHistory: true, levelId: 7})
     );
 
     expect(fetchUserChatHistory.fulfilled.match(result)).toBe(true);
     expect(mockGetUserChatHistory).not.toHaveBeenCalled();
   });
 
-  it('asks for the level it was given, not the page level', async () => {
+  it('asks for the level it was given', async () => {
     await makeStore().dispatch(
       fetchUserChatHistory({userId: 5, isOwnHistory: true, levelId: 7})
     );
@@ -52,20 +52,6 @@ describe('fetchUserChatHistory', () => {
     expect(mockGetUserChatHistory).toHaveBeenCalledWith(
       5,
       7,
-      2,
-      undefined,
-      undefined
-    );
-  });
-
-  it('falls back to the page level when none is given', async () => {
-    await makeStore().dispatch(
-      fetchUserChatHistory({userId: 5, isOwnHistory: true})
-    );
-
-    expect(mockGetUserChatHistory).toHaveBeenCalledWith(
-      5,
-      1,
       2,
       undefined,
       undefined

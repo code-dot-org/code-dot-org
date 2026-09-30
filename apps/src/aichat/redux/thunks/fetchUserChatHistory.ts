@@ -13,8 +13,8 @@ import {addChatEvent} from './addChatEvent';
 interface FetchUserChatHistoryParams {
   userId: number | null;
   isOwnHistory: boolean;
-  // The level the chat belongs to. Defaults to the page's level.
-  levelId?: number;
+  // The level the chat belongs to, or null outside any level.
+  levelId: number | null;
   channelId?: string;
   lessonId?: number;
   initialWelcomeMessage?: string;
@@ -43,7 +43,7 @@ export const fetchUserChatHistory = createAsyncThunk(
     try {
       const chatHistoryApiResponse = await getUserChatHistory(
         userId,
-        levelId ?? parseInt(state.progress.currentLevelId || ''),
+        levelId,
         state.progress.scriptId,
         channelId,
         lessonId
