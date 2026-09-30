@@ -780,6 +780,8 @@ end
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
+  # Skip tests that are covered by Playwright. The Port Cucumber to Playwright Claude dynamic workflow adds this tag once the feature has been migrated.
+  arguments += skip_tag('@playwright')
 
   # If --eyes is specified, only run scenarios with the corresponding eyes tag.
   # Otherwise, do not call tag(), allowing any scenarios to run which are not
