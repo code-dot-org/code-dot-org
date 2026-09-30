@@ -1221,9 +1221,6 @@ roles.each do |name, config| %>
                   - grafana:ListTagsForResource
                   - grafana:TagResource
                   - grafana:UntagResource
-                  # Service account + token the Grafana Tofu provider authenticates
-                  # with. The token is rotated every 25 days, so Create/Delete are
-                  # required for routine applies.
                   - grafana:CreateWorkspaceServiceAccount
                   - grafana:DeleteWorkspaceServiceAccount
                   - grafana:ListWorkspaceServiceAccounts
