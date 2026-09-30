@@ -3,14 +3,15 @@
 // sanitizing names on the way in, and cascading renames through everything
 // that references one.
 
-import type * as Blockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 
 import {IMAGE_TYPE_LABELS, type ImageType} from './ai/images/types';
+import CdoFieldAnimationDropdown from './blockly/fields/cdoFieldAnimationDropdown';
 import {type Sources} from './types';
 
-type BlockState = Blockly.serialization.blocks.State;
+type BlockState = BlocklyCore.serialization.blocks.State;
 
 export const IMAGE_NAME_MAX_LENGTH = 40;
 
@@ -209,6 +210,35 @@ export function renameImageReferences(
   return out;
 }
 
+/**
+ * Rename image references on the live Blockly workspace (the scene open in
+ * the Code tab), so the visible blocks match the renamed serialization
+ * without a reload.
+ */
+export function renameImageReferencesOnWorkspace(
+  workspace: BlocklyCore.Workspace | null,
+  oldName: string,
+  newName: string,
+): void {
+  if (!workspace) {
+    return;
+  }
+  const oldQuoted = quote(oldName);
+  const newQuoted = quote(newName);
+  workspace.getAllBlocks().forEach(block => {
+    block.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        if (
+          field instanceof CdoFieldAnimationDropdown &&
+          field.getValue() === oldQuoted
+        ) {
+          field.setValue(newQuoted);
+        }
+      });
+    });
+  });
+}
+
 function removeInBlock(block: BlockState, quoted: string): void {
   forEachBlock(block, visited => {
     for (const [name, value] of Object.entries(visited.fields || {})) {
@@ -246,6 +276,36 @@ export function removeImageReferences(sources: Sources, name: string): Sources {
     );
   });
   return out;
+}
+
+/**
+ * Point the live workspace's picker fields away from a deleted image, to
+ * their first remaining option, so the visible blocks match the cleaned
+ * serialization without a reload.
+ */
+export function removeImageReferencesOnWorkspace(
+  workspace: BlocklyCore.Workspace | null,
+  name: string,
+): void {
+  if (!workspace) {
+    return;
+  }
+  const quoted = quote(name);
+  workspace.getAllBlocks().forEach(block => {
+    block.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        if (
+          field instanceof CdoFieldAnimationDropdown &&
+          field.getValue() === quoted
+        ) {
+          const first = field.getOptions(false)[0];
+          if (first && first[1] !== quoted) {
+            field.setValue(first[1]);
+          }
+        }
+      });
+    });
+  });
 }
 
 // --- Compile-time reference collection ---
