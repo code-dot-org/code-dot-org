@@ -5,6 +5,7 @@ export * from './assets';
 export * from './auth';
 export * from './channels';
 export * from './courses';
+export * from './images';
 export * from './levels';
 export * from './libraries';
 export * from './media';

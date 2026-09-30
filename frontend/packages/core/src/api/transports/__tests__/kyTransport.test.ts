@@ -53,3 +53,36 @@ describe('the CSRF token', () => {
     expect(sentHeaders(fetchMock).get('X-CSRF-Token')).toBeNull();
   });
 });
+
+describe('a request body', () => {
+  it('is JSON, unless it is a Blob, which goes as its bytes', async () => {
+    const sent: {type: string | null; body: string}[] = [];
+    vi.stubGlobal(
+      'fetch',
+      vi.fn<typeof fetch>(async input => {
+        const request = input as Request;
+        sent.push({
+          type: request.headers.get('Content-Type'),
+          body: await request.text(),
+        });
+        return new Response('{}', {
+          headers: {'content-type': 'application/json'},
+        });
+      }),
+    );
+    const transport = createKyTransport({
+      baseUrl: 'https://studio.example.org',
+    });
+    await transport.request({method: 'POST', url: '/json', body: {a: 1}});
+    await transport.request({
+      method: 'POST',
+      url: '/bytes',
+      body: new Blob(['png'], {type: 'image/png'}),
+      headers: {'Content-Type': 'image/png'},
+    });
+    expect(sent).toEqual([
+      {type: 'application/json', body: '{"a":1}'},
+      {type: 'image/png', body: 'png'},
+    ]);
+  });
+});
