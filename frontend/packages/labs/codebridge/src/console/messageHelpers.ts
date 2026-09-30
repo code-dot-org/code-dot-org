@@ -24,17 +24,23 @@ function withColor(message: string, ansiColor: number) {
   return `\x1b[${ansiColor}m${message}\x1b[0m`;
 }
 
+/** What started a run: the program, the student's own tests, or validation. */
+export type RunType = 'RUN' | 'TEST' | 'VALIDATE';
+
 /**
  * A gray, dash-padded "RUN AT hh:mm PM" banner written to the console when a
  * program starts, e.g. "---------RUN AT 02:51 PM---------". The date is a
  * parameter so callers (and tests) can supply a fixed time.
  */
-export function getRunTimestampMessage(date: Date = new Date()) {
+export function getRunTimestampMessage(
+  date: Date = new Date(),
+  runType: RunType = 'RUN',
+) {
   const time = date.toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
   });
-  const label = `RUN AT ${time}`;
+  const label = `${runType} AT ${time}`;
   const leftPad = Math.max(Math.floor((TIMESTAMP_WIDTH - label.length) / 2), 0);
   const rightPad = Math.max(TIMESTAMP_WIDTH - label.length - leftPad, 0);
   const banner = '-'.repeat(leftPad) + label + '-'.repeat(rightPad);

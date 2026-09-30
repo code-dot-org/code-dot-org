@@ -8,16 +8,23 @@ import {
 } from '@code-dot-org/codebridge';
 import type {CodebridgeRuntime} from '@code-dot-org/codebridge';
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
-import {LabRegistry, useSources} from '@code-dot-org/lab/contexts';
+import {
+  LabRegistry,
+  useMaybeLevelProperties,
+  useSources,
+} from '@code-dot-org/lab/contexts';
 import {labActions} from '@code-dot-org/lab/redux';
+import {TestResultValidator, useProgressManager} from '@code-dot-org/progress';
 
 import styles from './app.module.css';
 import {pythonConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import PythonLayout from './layout/PythonLayout';
+import {pythonValidationTracker} from './progress/PythonValidationTracker';
 import {
   preloadPython,
   runPython,
+  runPythonTests,
   sendPythonInput,
   stopPython,
 } from './runtime/pythonRunner';
@@ -33,6 +40,19 @@ const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
   const {currentSources, previewSources} = useSources<MultiFileSource>();
   const sourceRef = useRef(currentSources.source);
   sourceRef.current = currentSources.source;
+
+  // A level passes when every test in its validation file passes.
+  const progressManager = useProgressManager();
+  const progressManagerRef = useRef(progressManager);
+  progressManagerRef.current = progressManager;
+  useEffect(() => {
+    progressManager?.setValidator(
+      new TestResultValidator(pythonValidationTracker),
+    );
+  }, [progressManager]);
+  const validationFile = useMaybeLevelProperties()?.validationFile;
+  const validationFileRef = useRef(validationFile);
+  validationFileRef.current = validationFile;
 
   // Start loading pyodide as soon as the lab mounts so the first Run is fast.
   useEffect(() => {
@@ -72,6 +92,12 @@ const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
     () => ({
       onRun: () => runPython(sourceRef.current),
       onStop: () => stopPython(),
+      onValidate: () =>
+        runPythonTests(
+          sourceRef.current,
+          validationFileRef.current,
+          progressManagerRef.current,
+        ),
       // Stdin for `input()`; only wired on the sandbox path (see pythonRunner).
       sendConsoleInput: (value: string) => sendPythonInput(value),
     }),

@@ -43,6 +43,33 @@ interface PyodidePathContent {
   contents: Record<string, PyodidePathContent>;
 }
 
+/** The dotted module name a project file imports as, e.g. `pkg.util`. */
+function getModuleName(file: ProjectFile, source: MultiFileSource) {
+  const path = [file.name.replace(/\.py$/, '')];
+  let folderId = file.folderId;
+  while (source.folders[folderId]) {
+    path.unshift(source.folders[folderId].name);
+    folderId = source.folders[folderId].parentId;
+  }
+  return path.join('.');
+}
+
+/**
+ * Python that evicts the project's modules from `sys.modules`. The interpreter
+ * lives as long as the worker, so without this a test that imports `main`
+ * would keep testing the code from its first run. Ported from
+ * deleteCachedUserModules in apps' pythonScriptUtils.
+ */
+export function getDeleteCachedUserModulesCode(source: MultiFileSource) {
+  const names = Object.values(source.files).map(file =>
+    getModuleName(file, source),
+  );
+  return `import sys
+for name in ${JSON.stringify(names)}:
+    sys.modules.pop(name, None)
+`;
+}
+
 /** Create a folder in the pyodide FS if it is not already there. */
 function createFolderIfNotExists(path: string, pyodide: PyodideInterface) {
   try {

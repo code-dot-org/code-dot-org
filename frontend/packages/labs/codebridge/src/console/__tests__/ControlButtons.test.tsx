@@ -11,6 +11,7 @@ import ControlButtons from '../ControlButtons';
 afterEach(() => {
   act(() => {
     store.dispatch(labSystemActions.setIsRunning(false));
+    store.dispatch(labSystemActions.setIsValidating(false));
     store.dispatch(labSystemActions.setLoadedCodeEnvironment(false));
   });
 });
@@ -57,4 +58,19 @@ it('shows Stop and invokes onStop while running', () => {
   expect(screen.queryByRole('button', {name: /run/i})).toBe(null);
   fireEvent.click(screen.getByRole('button', {name: /stop/i}));
   expect(onStop).toHaveBeenCalled();
+});
+
+it('disables Run while validation is running', () => {
+  const onRun = vi.fn();
+  renderButtons({onRun});
+
+  act(() => {
+    store.dispatch(labSystemActions.setLoadedCodeEnvironment(true));
+    store.dispatch(labSystemActions.setIsValidating(true));
+  });
+
+  const runButton = screen.getByRole('button', {name: /run/i});
+  expect((runButton as HTMLButtonElement).disabled).toBe(true);
+  fireEvent.click(runButton);
+  expect(onRun).not.toHaveBeenCalled();
 });

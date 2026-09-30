@@ -40,8 +40,19 @@ pyodide preloads at lab mount (`App.tsx` calls `preloadPython()`), so the first
 Run is fast. **matplotlib figures render inline in the console**: the
 `pythonlab_setup` wheel patches `plt.show()` to emit a tagged base64 PNG, which
 `routeWorkerMessage` turns into a `getImageMessage` escape rendered by xterm's
-`ImageAddon`. Deferred: source write-back, the neighborhood mini-app, and
-validation.
+`ImageAddon`. Deferred: source write-back and the neighborhood mini-app.
+
+### Validation
+
+A level with a `validationFile` is validated by the tests in that file. The
+Validate button in the resource panel calls `runPythonTests`, which runs
+`unittest_runner.run_validation_tests` with the file added to the project for
+that run only. The runner's per-test results come back as the run's final
+value; `PythonValidationTracker` holds them, and progress's
+`TestResultValidator` passes the level when every test passes. The server
+derives the level's one `PASSED_ALL_TESTS` condition from the file. A level
+with no validation file runs the student's own `test*.py` files instead,
+which reports nothing to progress.
 
 ### Input
 
@@ -128,6 +139,13 @@ inline console figures (works on either path):
 
 ```
 http://localhost:5137/frontend-studio/projects/python/matplotlib/edit
+```
+
+The `validation` fixture scenario has a validation file and a `main.py` that
+fails it; fix `add` and press Validate again to pass:
+
+```
+http://localhost:5137/frontend-studio/projects/python/validation/edit
 ```
 
 ## Scripts

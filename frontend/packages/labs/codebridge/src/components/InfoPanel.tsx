@@ -5,9 +5,10 @@ import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useThemeSetting} from '@code-dot-org/lab/hooks';
-import {labProjectActions} from '@code-dot-org/lab/redux';
+import {labProjectActions, labSystemActions} from '@code-dot-org/lab/redux';
 import ResourcePanel, {type Setting} from '@code-dot-org/lab/resourcePanel';
 
+import {useCodebridgeRuntime} from '../contexts/CodebridgeRuntimeContext';
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 import {useAppDispatch, useAppSelector} from '../redux/store';
 
@@ -84,6 +85,11 @@ export const InfoPanel = ({
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
   const hasRun = useAppSelector(state => state.labSystem.hasRun);
+  const isValidating = useAppSelector(state => state.labSystem.isValidating);
+  const hasLoadedEnvironment = useAppSelector(
+    state => state.labSystem.loadedCodeEnvironment,
+  );
+  const {onValidate, onStop} = useCodebridgeRuntime();
 
   // The project as the host loaded it: the baseline an edit is measured
   // against, and the fallback "Initial version" restores. Not a render-time
@@ -146,6 +152,25 @@ export const InfoPanel = ({
     ...extraSettings,
   ];
 
+  // The panel shows the Validate button only when the level has conditions.
+  const validationSettings = onValidate
+    ? {
+        onValidate: () => {
+          dispatch(labSystemActions.setIsValidating(true));
+          void onValidate().finally(() =>
+            dispatch(labSystemActions.setIsValidating(false)),
+          );
+          dispatch(labSystemActions.setHasValidated(true));
+        },
+        onStopValidation: () => {
+          onStop?.();
+          dispatch(labSystemActions.setIsValidating(false));
+        },
+        isValidating,
+        isValidateDisabled: !hasLoadedEnvironment || isRunning,
+      }
+    : undefined;
+
   if (!levelProperties) {
     return null;
   }
@@ -178,6 +203,7 @@ export const InfoPanel = ({
       isRunning={isRunning}
       hasRun={hasRun}
       hasEdited={hasEdited}
+      validationSettings={validationSettings}
       documentationUrl={documentationUrl}
       settings={settings}
       // Enables the Version History tab (like music lab). Auto-save groups stay

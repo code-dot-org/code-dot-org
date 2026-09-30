@@ -6,6 +6,7 @@ import {patchInputCode, pythonlabInputModule} from './input/pythonInput';
 import type {PyodideMessage, WorkerRequest} from './messages';
 import {
   DEFAULT_FOLDER_ID,
+  getDeleteCachedUserModulesCode,
   getUpdatedSourceAndDeleteFiles,
   writeSource,
 } from './pythonScriptUtils';
@@ -51,9 +52,12 @@ const STANDARD_PACKAGES = [
 // hosted directory. pythonlab_setup provides the matplotlib `show()` patch; it
 // imports `neighborhood` (via its teardown module), so that wheel is required
 // too even though the neighborhood mini-app itself is still deferred.
+// unittest_runner runs a level's validation tests and a student's own tests.
+// Versions must match the wheels in apps/lib/pyodide.
 const CUSTOM_WHEELS = [
-  'neighborhood-0.4.0-py3-none-any.whl',
-  'pythonlab_setup-0.2.0-py3-none-any.whl',
+  'unittest_runner-0.3.0-py3-none-any.whl',
+  'neighborhood-0.6.0-py3-none-any.whl',
+  'pythonlab_setup-0.4.0-py3-none-any.whl',
 ];
 
 // Patch matplotlib.pyplot.show() to emit figures as tagged base64 PNGs, which
@@ -141,17 +145,38 @@ ctx.onmessage = async (event: MessageEvent<WorkerRequest>) => {
 
   // A run request. Ensure loading is done first (defensive if no init arrived).
   await initializePyodide();
-  const {id, python, source} = data;
+  const {id, python, source, validationFile} = data;
+  // The "validation" id cannot collide with a project file's numeric id.
+  const sourceToWrite = validationFile
+    ? {
+        ...source,
+        files: {
+          ...source.files,
+          validation: {...validationFile, id: 'validation'},
+        },
+      }
+    : source;
+  // runPythonAsync's final value: a PyProxy for a Python object, else a JS value.
+  let results: unknown;
 
   try {
     // Write the project (with its folder tree) to the filesystem so imports and
     // file reads resolve.
-    writeSource(source, DEFAULT_FOLDER_ID, '', pyodide);
+    writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
     // Point `input()` at this run's id before running the user's code.
     await pyodide.runPythonAsync(patchInputCode(id));
-    await pyodide.runPythonAsync(python);
+    results = await pyodide.runPythonAsync(python);
   } catch (error) {
     post({type: 'error', message: (error as Error).message, id});
+  }
+  try {
+    await pyodide.runPythonAsync(getDeleteCachedUserModulesCode(sourceToWrite));
+  } catch (error) {
+    post({
+      type: 'internal_error',
+      message: `Failed to clear cached modules: ${(error as Error).message}`,
+      id,
+    });
   }
 
   // Drain the filesystem back into the project: files the program created or
@@ -164,6 +189,7 @@ ctx.onmessage = async (event: MessageEvent<WorkerRequest>) => {
       id,
       pyodide,
       post,
+      validationFile ? [validationFile.name] : [],
     );
     post({type: 'updated_source', source: updatedSource, id});
   } catch (error) {
@@ -174,5 +200,19 @@ ctx.onmessage = async (event: MessageEvent<WorkerRequest>) => {
     });
   }
 
-  post({type: 'run_complete', id});
+  // unittest_runner returns its per-test results as the run's final value.
+  const proxy = results as
+    | {toJs?: (options: object) => unknown; destroy?: () => void}
+    | undefined;
+  let message: string | undefined;
+  try {
+    const value = proxy?.toJs
+      ? proxy.toJs({dict_converter: Object.fromEntries})
+      : results;
+    message = value === undefined ? undefined : JSON.stringify(value);
+  } catch {
+    // A final value that is not plain data is not a test result.
+  }
+  proxy?.destroy?.();
+  post({type: 'run_complete', message, id});
 };

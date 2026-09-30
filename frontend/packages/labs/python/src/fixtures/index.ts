@@ -3,6 +3,7 @@ import type {LabFixtures} from '@code-dot-org/core/api/mocks';
 import input from './input';
 import matplotlib from './matplotlib';
 import simple from './simple';
+import validation from './validation';
 
 // Per-tag mock scenarios for Python Lab. The studio host (and the standalone
 // demo harness) register these under the lab key `python`; the route's channelId
@@ -11,4 +12,5 @@ export const PythonFixtures: LabFixtures = {
   simple,
   input,
   matplotlib,
+  validation,
 };
