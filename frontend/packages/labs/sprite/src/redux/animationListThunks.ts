@@ -2,6 +2,8 @@
 // project changed, the view saves the serialized list when it changes.
 import type {Dispatch} from '@reduxjs/toolkit';
 
+import {DashboardApiClient} from '@code-dot-org/core/api';
+
 import {
   loadAnimationSources,
   normalizeAnimationList,
@@ -26,7 +28,6 @@ export interface ImageLoadOptions {
   channelId: string | undefined;
   /** An image that failed to load; it stays in the list without data. */
   onError?: (key: string, name: string, error: unknown) => void;
-  fetch?: typeof fetch;
 }
 
 function loadFromSource(
@@ -95,10 +96,7 @@ export function addAnimation(
 }
 
 /** Removes an image and deletes its file from the project's animations. */
-export function deleteAnimation(
-  key: string,
-  {channelId, fetch: fetchImpl = fetch}: ImageLoadOptions,
-) {
+export function deleteAnimation(key: string, {channelId}: ImageLoadOptions) {
   return (dispatch: Dispatch, getState: GetState): Promise<void> => {
     const removed = getState().animationList.propsByKey[key];
     if (removed?.dataURI?.startsWith('blob:')) {
@@ -108,17 +106,8 @@ export function deleteAnimation(
     if (!channelId) {
       return Promise.resolve();
     }
-    const path = encodeURIComponent(key).replace(/%2F/g, '/');
-    return fetchImpl(`/v3/animations/${channelId}/${path}.png`, {
-      method: 'DELETE',
-    })
-      .then(response => {
-        if (!response.ok) {
-          console.error(
-            `Error deleting object ${key}: ${response.status} ${response.statusText}`,
-          );
-        }
-      })
+    return DashboardApiClient.animations
+      .remove({channelId, key})
       .catch(error => console.error(`Error deleting object ${key}:`, error));
   };
 }

@@ -1,10 +1,34 @@
 // Fetching a project's images, as apps' loadAnimationFromSource did for
 // Sprite Lab 2: each image is held as an object URL in `dataURI`.
+import {DashboardApiClient} from '@code-dot-org/core/api';
+
 import {mediaUrl} from '../../assetPaths';
 import type {RuntimeAnimationList, SerializedAnimationProps} from '../../types';
 
 /**
- * Where an animation's image is fetched from. An image with a `sourceUrl`
+ * Where an animation's image is read from, as the media API takes it: an
+ * image with a `sourceUrl` is read from there, asking for the saved version
+ * of one the project uploaded; any other is looked up by key in the
+ * project's animations.
+ */
+export function animationImageUrl(
+  key: string,
+  props: Pick<SerializedAnimationProps, 'sourceUrl' | 'version'>,
+  channelId: string | undefined,
+): string {
+  const {sourceUrl, version} = props;
+  if (sourceUrl) {
+    const uploaded = sourceUrl.includes(`v3/animations/${channelId}`);
+    return uploaded && !sourceUrl.includes('?version')
+      ? `${sourceUrl}?version=${version || 'latestVersion'}`
+      : sourceUrl;
+  }
+  const path = encodeURIComponent(key).replace(/%2F/g, '/');
+  return `/v3/animations/${channelId}/${path}.png?version=${version || ''}`;
+}
+
+/**
+ * Where a page shows an animation's image from. An image with a `sourceUrl`
  * outside the project's own animations (library, levelbuilder) is fetched
  * from there; one the project uploaded asks for its saved version; any other
  * is looked up by key in the project's animations.
@@ -30,7 +54,6 @@ export interface LoadSourcesOptions {
   channelId: string | undefined;
   /** Called for each image that fails to load; the image stays unloaded. */
   onError?: (key: string, name: string, error: unknown) => void;
-  fetch?: typeof fetch;
 }
 
 /**
@@ -40,7 +63,7 @@ export interface LoadSourcesOptions {
  */
 export async function loadAnimationSources(
   list: RuntimeAnimationList,
-  {channelId, onError, fetch: fetchImpl = fetch}: LoadSourcesOptions,
+  {channelId, onError}: LoadSourcesOptions,
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   await Promise.all(
@@ -50,14 +73,14 @@ export async function loadAnimationSources(
       if (props.dataURI) {
         return;
       }
+      const url = animationImageUrl(key, props, channelId);
+      // A data URL is the image itself.
+      if (url.startsWith('data:')) {
+        propsByKey[key] = {...props, dataURI: url};
+        return;
+      }
       try {
-        const response = await fetchImpl(
-          animationSourceUrl(key, props, channelId),
-        );
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`);
-        }
-        const blob = await response.blob();
+        const blob = await DashboardApiClient.media.getImage({url});
         propsByKey[key] = {...props, dataURI: URL.createObjectURL(blob)};
       } catch (error) {
         onError?.(key, props.name, error);
