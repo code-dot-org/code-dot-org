@@ -35,12 +35,13 @@ export const meta = {
 //   component     required.
 //   step          'delete-legacy', or a Behavior cell of the Deferred changes table
 //                 (case-insensitive). Default: the next step Discover finds.
-//   base          branch the PR targets and HEAD must sit on (default 'staging'). A
+//   base          branch the PR targets; HEAD must be at its tip (default 'staging'). A
 //                 local-only branch works with publish: false, to stack a dry run on one.
 //   branchPrefix  branch namespace (default '<owner>/mui-<component>').
 //   jira          ticket key or browse URL for the commit and PR (default none).
 //   publish       false leaves one local branch: no push, no PR.
-//   maxHealAttempts  heal loop budget (default 3).
+//   maxHealAttempts  verify passes, with a heal between each (default 3, so at most two
+//                 heals); counted as in dsco-mui-design-system-migration.js.
 //
 // Run from a checkout that has apps/node_modules, frontend/node_modules and apps/build,
 // with no tracked modifications, on base.
@@ -172,8 +173,8 @@ ${TREE_RULES}
   exist; git status --porcelain shows no tracked modifications (list ?? lines as
   preexistingUntracked); ${publish ? 'gh auth status succeeds.' : 'publish is off; skip gh.'}
   git fetch origin ${base} (skip it when ${base} is a local-only branch). headOnBase is
-  true when HEAD is at, or an ancestor of, origin/${base} when that exists, else the local
-  ${base}. branchOwner from the current branch name. finishBranches: git branch --list
+  true only when HEAD equals origin/${base} when that exists, else the local ${base}; an
+  older commit is false, since the audits below must see every current consumer. branchOwner from the current branch name. finishBranches: git branch --list
   '*finish-*'${publish ? ` and git ls-remote --heads origin '*finish-*'` : ''}.
 
 ─── STEP 1 — Docs ─────────────────────────────────────────────────────────────
@@ -199,6 +200,8 @@ ${TREE_RULES}
 
 ─── STEP 3 — Next step ────────────────────────────────────────────────────────
   Requested: ${stepArg ? JSON.stringify(stepArg) : 'nothing; pick the next one'}.
+  Match a request to a Behavior cell ignoring case, backticks and surrounding spaces;
+  next.behavior is then the cell's text verbatim.
   - delete-legacy is allowed when legacySourceFiles is non-empty, legacyImports is empty
     and eslintBanPresent is true.
   - A row is allowed when legacySourceFiles is empty and every row in its after list is
@@ -210,7 +213,7 @@ ${TREE_RULES}
 )
 if (!discover) throw new Error('discover agent was skipped')
 if (discover.preflight.length) throw new Error(`Preflight: ${discover.preflight.join('; ')}`)
-if (!discover.headOnBase) throw new Error(`HEAD is not on ${base}. Check out ${base} (or pass base) first.`)
+if (!discover.headOnBase) throw new Error(`HEAD is not at the tip of ${base}. Check out ${base} and pull (or pass base) first.`)
 if (!discover.planDocFound) throw new Error(`${PLAN_DOC} not found; this component was not migrated by the planned workflow.`)
 if (discover.notes) log(`Discover notes: ${discover.notes}`)
 const next = discover.next
@@ -219,7 +222,8 @@ if (next.kind === 'done') {
   return {component, step: 'done', reason: next.reason}
 }
 if (next.kind === 'blocked') throw new Error(`${component}: ${next.reason}`)
-const row = next.kind === 'behavior' ? discover.rows.find(r => r.behavior === next.behavior) : null
+const cell = s => s.replace(/`/g, '').trim().toLowerCase()
+const row = next.kind === 'behavior' ? discover.rows.find(r => cell(r.behavior) === cell(next.behavior)) : null
 if (next.kind === 'behavior' && !row) throw new Error(`Discover picked "${next.behavior}", which is not a row of the table`)
 const stepTitle = row ? row.behavior : 'delete the legacy DSCO source'
 const ticket = jiraKey || (row && row.ticket) || ''
