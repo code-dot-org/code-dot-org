@@ -7,6 +7,7 @@ function stacks(...specs: [string, number, number, number?, number?][]) {
     y,
     width,
     height,
+    fixed: name.startsWith('fixed'),
     moveBy: (dx: number, dy: number) => moves.push([name, dy]),
   }));
   return {boxes, moves};
@@ -46,6 +47,17 @@ describe('stackRoom', () => {
     makeRoom(boxes, 50);
     // wide spans both columns; tall's bottom (300) + 50 wins over short's.
     expect(moves).toEqual([['wide', 250]]);
+  });
+
+  it('leaves a fixed stack where it is, and still makes room under it', () => {
+    const {boxes, moves} = stacks(
+      ['run', 0, 100],
+      ['fixed', 110, 50],
+      ['below', 170, 30]
+    );
+    makeRoom(boxes, 50);
+    // fixed stays at 110 though it lacks room; below clears fixed's 160.
+    expect(moves).toEqual([['below', 40]]);
   });
 
   it('only ever moves a stack down', () => {

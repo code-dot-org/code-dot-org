@@ -9,6 +9,9 @@ export interface StackBox {
   y: number;
   width: number;
   height: number;
+  /** Stays put (pinned by the level, or just placed by the student) but
+      still pushes the stacks below it. */
+  fixed?: boolean;
   moveBy: (dx: number, dy: number) => void;
 }
 
@@ -21,6 +24,9 @@ export interface StackBox {
 export function makeRoom(stacks: StackBox[], room: number): void {
   const ordered = [...stacks].sort((a, b) => a.y - b.y || a.x - b.x);
   ordered.forEach((stack, i) => {
+    if (stack.fixed) {
+      return;
+    }
     let top = stack.y;
     for (const above of ordered.slice(0, i)) {
       if (above.x < stack.x + stack.width && above.x + above.width > stack.x) {
@@ -34,40 +40,64 @@ export function makeRoom(stacks: StackBox[], room: number): void {
   });
 }
 
-function stackBox(block: BlocklyCore.BlockSvg): StackBox {
+function stackBox(block: BlocklyCore.BlockSvg, pinned: Set<string>): StackBox {
   const {x, y} = block.getRelativeToSurfaceXY();
   const {width, height} = block.getHeightWidth();
-  return {x, y, width, height, moveBy: (dx, dy) => block.moveBy(dx, dy)};
+  return {
+    x,
+    y,
+    width,
+    height,
+    fixed: !block.isMovable() || pinned.has(block.id),
+    moveBy: (dx, dy) => block.moveBy(dx, dy),
+  };
 }
 
-const pending = new WeakSet<BlocklyCore.WorkspaceSvg>();
+// Stacks the waiting pass must not move, by top block id; a pass is
+// waiting while its workspace has an entry.
+const pendingPins = new WeakMap<BlocklyCore.WorkspaceSvg, Set<string>>();
+// Workspaces whose stacks the pass is moving right now.
+const applying = new WeakSet<BlocklyCore.WorkspaceSvg>();
 
 /**
  * Make room under every stack once the workspace has finished rendering.
- * Calls made while one is waiting fold into it. The moves are not undoable:
- * a student's undo should take back their edit, not the tidying.
+ * Calls made while one is waiting fold into it, pins included. The moves
+ * are not undoable: a student's undo should take back their edit, not the
+ * tidying.
  */
-export function ensureRoom(workspace: BlocklyCore.WorkspaceSvg): void {
-  if (pending.has(workspace)) {
+export function ensureRoom(
+  workspace: BlocklyCore.WorkspaceSvg,
+  pinnedBlockId?: string
+): void {
+  const pins = pendingPins.get(workspace);
+  if (pins) {
+    if (pinnedBlockId) {
+      pins.add(pinnedBlockId);
+    }
     return;
   }
-  pending.add(workspace);
+  pendingPins.set(workspace, new Set(pinnedBlockId ? [pinnedBlockId] : []));
   // A placeholder takes its block's shape in a second render pass, so
   // heights are final one tick after the queue drains.
   BlocklyCore.renderManagement
     .finishQueuedRenders()
     .then(() => new Promise(resolve => setTimeout(resolve)))
     .then(() => {
-      pending.delete(workspace);
+      const pinned = pendingPins.get(workspace) ?? new Set<string>();
+      pendingPins.delete(workspace);
       if (workspace.isDragging() || !workspace.rendered) {
         return;
       }
-      const stacks = workspace.getTopBlocks(false).map(stackBox);
+      const stacks = workspace
+        .getTopBlocks(false)
+        .map(block => stackBox(block, pinned));
       const recordUndo = BlocklyCore.Events.getRecordUndo();
       BlocklyCore.Events.setRecordUndo(false);
+      applying.add(workspace);
       try {
         makeRoom(stacks, STACK_GAP_PX);
       } finally {
+        applying.delete(workspace);
         BlocklyCore.Events.setRecordUndo(recordUndo);
       }
     });
@@ -75,23 +105,33 @@ export function ensureRoom(workspace: BlocklyCore.WorkspaceSvg): void {
 
 /**
  * Keep room under the stacks as the workspace changes: after code loads,
- * after a block is added, and after a block joins a stack. Dragging a
- * stack somewhere is the student's placement and is left alone. Returns
- * the function that stops watching.
+ * after a block is added, after a block joins a stack, and after a student
+ * drags a stack somewhere. The dragged stack is their placement and stays
+ * where they put it; the stacks below it make way. Returns the function
+ * that stops watching.
  */
 export function watchStackRoom(
   workspace: BlocklyCore.WorkspaceSvg
 ): () => void {
   const onChange = (event: BlocklyCore.Events.Abstract) => {
-    const joined =
-      event.type === BlocklyCore.Events.BLOCK_MOVE &&
-      !!(event as BlocklyCore.Events.BlockMove).newParentId;
+    if (applying.has(workspace)) {
+      return;
+    }
     if (
-      joined ||
       event.type === BlocklyCore.Events.FINISHED_LOADING ||
       event.type === BlocklyCore.Events.BLOCK_CREATE
     ) {
       ensureRoom(workspace);
+      return;
+    }
+    if (event.type !== BlocklyCore.Events.BLOCK_MOVE) {
+      return;
+    }
+    const move = event as BlocklyCore.Events.BlockMove;
+    if (move.newParentId) {
+      ensureRoom(workspace);
+    } else if (move.reason?.includes('drag') && move.blockId) {
+      ensureRoom(workspace, move.blockId);
     }
   };
   workspace.addChangeListener(onChange);
