@@ -15,12 +15,13 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // Object-form entry so the fixtures chunk emits at dist/fixtures/index.*
-      // alongside the main dist/index.* — the `./mocks` export subpath
-      // resolves to the former.
+      // Object-form entry so the fixtures and sprites chunks emit at
+      // dist/fixtures/index.* and dist/sprites/index.*, which the `./mocks`
+      // and `./sprites` export subpaths resolve to.
       entry: {
         index: 'src/index.ts',
         'fixtures/index': 'src/fixtures/index.ts',
+        'sprites/index': 'src/sprites/index.ts',
       },
       name: 'sprite-lab',
       formats: ['es', 'cjs'],
