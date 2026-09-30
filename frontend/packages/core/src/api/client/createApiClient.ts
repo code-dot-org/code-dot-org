@@ -8,6 +8,7 @@ import {createAssetsApi} from '../dashboard/assets';
 import {createAuthApi} from '../dashboard/auth';
 import {createChannelsApi} from '../dashboard/channels';
 import {createCoursesApi} from '../dashboard/courses';
+import {createImagesApi} from '../dashboard/images';
 import {createLevelsApi} from '../dashboard/levels';
 import {createLibrariesApi} from '../dashboard/libraries';
 import {createMediaApi} from '../dashboard/media';
@@ -31,6 +32,7 @@ export const createApiClient = (transport: Transport) => ({
   auth: createAuthApi(transport),
   channels: createChannelsApi(transport),
   courses: createCoursesApi(transport),
+  images: createImagesApi(transport),
   levels: createLevelsApi(transport),
   libraries: createLibrariesApi(transport),
   media: createMediaApi(transport),

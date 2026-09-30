@@ -98,9 +98,12 @@ export function createKyTransport(opts: {
 
     const isFormData =
       typeof FormData !== 'undefined' && req.body instanceof FormData;
+    // Bytes go as they are, typed by the caller or by the Blob itself.
+    const isBlob = typeof Blob !== 'undefined' && req.body instanceof Blob;
+    const isRaw = isFormData || isBlob;
     const hasBody = req.body !== undefined && req.body !== null;
 
-    if (hasBody && !isFormData) headers['Content-Type'] ||= 'application/json';
+    if (hasBody && !isRaw) headers['Content-Type'] ||= 'application/json';
 
     const isAbsolute = req.url.startsWith('http');
 
@@ -131,7 +134,7 @@ export function createKyTransport(opts: {
       ...(req.redirect && {redirect: req.redirect}),
       ...(isManualRedirect && {throwHttpErrors: false}),
       ...(hasBody &&
-        (isFormData ? {body: req.body as FormData} : {json: req.body})),
+        (isRaw ? {body: req.body as FormData | Blob} : {json: req.body})),
     };
 
     try {
