@@ -22,8 +22,6 @@ interface QuizPage {
 }
 
 // Groups the flat list into pages, ascending by page number.
-// There's no UI yet to move an existing question to a different page, or to
-// reorder or delete a page - a page exists only as long as it has a question.
 function groupByPage(questions: QuizBuilderQuestion[]): QuizPage[] {
   const pages = new Map<number, QuizBuilderQuestion[]>();
   questions.forEach(question => {
@@ -36,7 +34,7 @@ function groupByPage(questions: QuizBuilderQuestion[]): QuizPage[] {
     }
   });
   return Array.from(pages.entries())
-    .sort(([a], [b]) => a - b)
+    .sort(([pageA], [pageB]) => pageA - pageB)
     .map(([page, pageQuestions]) => ({page, questions: pageQuestions}));
 }
 

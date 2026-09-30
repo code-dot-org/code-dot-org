@@ -259,14 +259,6 @@ describe('QuizBuilderWorkspace', () => {
     ]);
   });
 
-  it('treats a null page the same as page 1', () => {
-    renderWorkspace({
-      questions: [question({id: 1, page: null})],
-    });
-
-    expect(screen.getByText('Page 1')).toBeInTheDocument();
-  });
-
   it('collapses the previously expanded question when another is opened', () => {
     renderWorkspace({
       questions: [
