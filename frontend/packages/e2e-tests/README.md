@@ -19,16 +19,16 @@ From `frontend/`:
 
 - **functional** — every test without the `@visual` tag. A failure stops the build.
 - **eyes** — visual differences are checked with a third-party provider,
-  Applitools. During a DTT, the test will fail if a mismatch is detected against
-  the visual baseline. For drone, differences are advisory only until we can
-  develop a PR-level visual diff strategy.
+  Applitools.
 
 ## Where these tests run
 
 - **Drone** — both suites, against the build the PR makes, before the Cucumber
   tests. Runs `chromium` only. To add browsers, see the commit tags in
-  [dashboard/test/ui/README.md](../../../dashboard/test/ui/README.md).
-- **DTT** — the functional suite in all three browsers, against test-studio. Visual diffs runs only on chromium against test-studio.
+  [dashboard/test/ui/README.md](../../../dashboard/test/ui/README.md). A visual
+  difference does not fail the build until we can develop a PR-level visual diff
+  strategy.
+- **DTT** — the functional suite in all three browsers, against test-studio. Visual diffs runs only on chromium against test-studio. A visual difference fails the DTT.
 
 ## Agent skill setup
 
