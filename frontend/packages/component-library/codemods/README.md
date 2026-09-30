@@ -31,78 +31,40 @@ Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/
 Build the package first via `yarn build`
 
 ```bash
-yarn codemod:dialog [--dry --print] <path>
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/dialog-to-mui-dialog.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register [--dry --print] <path>
 ```
 
 ## Usage
 
-### Prerequisites
-
-Run codemods from the `component-library` package directory:
+Codemods are one-off migration tools, so they have no `package.json`
+scripts. Run `jscodeshift` from the `component-library` package directory,
+which has it and `ts-node` as dev dependencies:
 
 ```bash
 cd frontend/packages/component-library
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift \
+  -t ./codemods/button-to-mui-button.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
+  <path-to-files-or-directory>...
 ```
 
-### Running the Button Codemod
-
-Use the yarn script (run from `frontend/packages/component-library` directory):
-
-```bash
-yarn codemod:buttons ../../../apps/src/templates/courseOfferings
-```
-
-**Examples:**
-
-1. **Transform a single file:**
-
-   ```bash
-   cd frontend/packages/component-library
-   yarn codemod:buttons ../../../apps/src/templates/courseOfferings/courseCard/CourseOfferingCard.tsx
-   ```
-
-2. **Transform all files in a directory:**
-
-   ```bash
-   cd frontend/packages/component-library
-   yarn codemod:buttons ../../../apps/src/templates/courseOfferings
-   ```
-
-3. **Transform multiple specific files:**
-   ```bash
-   cd frontend/packages/component-library
-   yarn codemod:buttons ../../../apps/src/templates/courseOfferings/courseCard/*.tsx ../../../apps/src/templates/courseOfferings/filters/*.tsx
-   ```
+Point `-t` at the codemod to run. `TS_NODE_TRANSPILE_ONLY=true` skips type
+checking the codemod itself; `--require ts-node/register` lets `jscodeshift`
+load a `.ts` transform.
 
 ### Path Notes
 
 - Paths are relative to the `component-library` package directory
 - Use `../../../` to go up to the repo root, then navigate to your target files
-- The codemod automatically processes `.js`, `.jsx`, `.ts`, and `.tsx` files
-- Directories are processed recursively
-
-### Direct Command (Alternative)
-
-You can also run the codemod directly without the yarn script:
-
-```bash
-cd frontend/packages/component-library
-TS_NODE_TRANSPILE_ONLY=true npx jscodeshift \
-  -t ./codemods/button-to-mui-button.ts \
-  --parser=tsx \
-  --extensions=js,jsx,ts,tsx \
-  --require ts-node/register \
-  <path-to-files-or-directory>
-```
+- `--extensions=js,jsx,ts,tsx` processes all four file types
+- Directories are processed recursively; several files, directories and
+  globs may be given at once
 
 ## Dry Run
 
-To see what changes would be made without actually modifying files, use the `--dry` flag:
-
-```bash
-cd frontend/packages/component-library
-yarn codemod:buttons --dry ../../../apps/src/templates/courseOfferings
-```
+Add `--dry --print` before the paths to print the rewritten source without
+writing any file.
 
 ## Output
 

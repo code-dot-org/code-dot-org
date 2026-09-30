@@ -138,7 +138,7 @@ call site edits only its import, and that edit is mechanical. The transform
 is idempotent, so it can be re-run when staging gains consumers while the PRs
 are open.
 
-Script: `codemods/dialog-to-mui-dialog.ts`, run as `yarn codemod:dialog`.
+Script: `codemods/dialog-to-mui-dialog.ts`, run with `yarn jscodeshift`.
 
 Transforms:
 
@@ -192,9 +192,9 @@ How to run (build the package first; apps resolves it to `dist/`):
 ```bash
 cd frontend/packages/component-library
 yarn build
-yarn codemod:dialog --dry ../../../apps/src/templates ../../../apps/test/unit/templates
-yarn codemod:dialog ../../../apps/src/templates ../../../apps/test/unit/templates
-yarn codemod:dialog src/modal/Modal.tsx
+TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/dialog-to-mui-dialog.ts \
+  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
+  ../../../apps/src/templates ../../../apps/test/unit/templates src/modal/Modal.tsx
 ```
 
 ## Parity
@@ -349,12 +349,11 @@ Apps parity sample:
 Execute:
 
 - `@deprecated` JSDoc on legacy `Dialog`, `CustomDialog`, `DialogProps` and
-  `CustomDialogProps`, naming the `Mui` replacement and `yarn codemod:dialog`.
+  `CustomDialogProps`, naming the `Mui` replacement and the codemod.
 - `src/dialog/README.md`: document both APIs, the import lines, in-place
   rendering, the shared hooks, `imageAlt`, and `zIndex` via the custom
   property.
 - `codemods/README.md`: add a section for the dialog codemod.
-- `package.json`: add `"codemod:dialog"`, shaped like `codemod:buttons`.
 - `MIGRATION_STATUS.md`: the `dialog` row becomes In Progress, pointing at
   this plan. The `closeButton` row notes that `MuiCustomDialog` is an
   internal consumer.
@@ -443,8 +442,9 @@ Execute departed from the plan as follows. None changes a twin's render.
 - The codemod parses `.ts` files with the `ts` parser, whatever `--parser`
   says. `tsx` rejects `<T>x` casts, and jscodeshift skips a file that fails
   to parse and moves on.
-- `yarn codemod:dialog` runs `jscodeshift` without `npx`, per
-  `frontend/AGENTS.md`. Its flags are those of `codemod:buttons`.
+- The codemod has no `package.json` script; the one-off `codemod:buttons`
+  and `codemod:dialog` scripts were removed after review. It runs through
+  `yarn jscodeshift`, not `npx`, per `frontend/AGENTS.md`.
 - The CSS-only fixes are verified in Storybook, not in Vitest. The
   `DialogInNarrowViewport` story opens the dialog at 320px, and its play
   function asserts that the panel stays inside the viewport; with the legacy
