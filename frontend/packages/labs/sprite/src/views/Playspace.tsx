@@ -4,17 +4,24 @@
 // always mounted, switching tabs only moves and scales it: the engine keeps
 // running, so the preview is live without pressing Run.
 //
-// Apps' location picker (a click on the preview reporting a point to a
-// block) waits on the pool's location field; see docs/port-plan.md.
+// It also answers a location field: while picking, a click anywhere on it,
+// preview included, reports a point in canvas coordinates.
 import {
   type FunctionComponent,
+  type MouseEvent,
+  type PointerEvent,
   type ReactNode,
   type RefObject,
+  useCallback,
   useEffect,
   useLayoutEffect,
   useRef,
   useState,
 } from 'react';
+
+import {type PickedLocation, setLocationPicker} from '../blockly/pool';
+import {getImageThumbnail} from '../imageTrim';
+import {useAppSelector} from '../redux/store';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -104,6 +111,8 @@ interface PlayspaceProps {
   covered?: boolean;
   /** The loading overlay, which fades in late so quick loads never show it. */
   loading?: boolean;
+  /** Sizes the picking ghost; a helper library may change it per run. */
+  getDefaultSpriteSize?: () => number;
   /** Clicking the live preview opens Play on the previewed scene. */
   onPreviewClick?: () => void;
   /** The play-mode game region, for handing keyboard focus to the game. */
@@ -129,10 +138,101 @@ const Playspace: FunctionComponent<PlayspaceProps> = ({
   controls,
   playBar,
   guideSize,
+  getDefaultSpriteSize,
   onPreviewClick,
 }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
+
+  const pickRef = useRef<{
+    onUpdate: (location: PickedLocation) => void;
+    onDone: (location: PickedLocation | null) => void;
+  } | null>(null);
+  const [picking, setPicking] = useState(false);
+  const [ghostCostume, setGhostCostume] = useState<string | null>(null);
+  const [hover, setHover] = useState<PickedLocation | null>(null);
+  useEffect(() => {
+    setLocationPicker((_initial, onUpdate, onDone, costume) => {
+      // A second request abandons the first.
+      pickRef.current?.onDone(null);
+      pickRef.current = {onUpdate, onDone};
+      setGhostCostume(costume);
+      setHover(null);
+      setPicking(true);
+    });
+    return () => {
+      setLocationPicker(null);
+      pickRef.current?.onDone(null);
+      pickRef.current = null;
+    };
+  }, []);
+
+  const ghostImage = useAppSelector(state => {
+    if (!picking || !ghostCostume) {
+      return null;
+    }
+    const list = state.animationList;
+    const key = list.orderedKeys.find(
+      k => list.propsByKey[k]?.name === ghostCostume,
+    );
+    const props = key ? list.propsByKey[key] : undefined;
+    // The raw dataURI of a sheet is the whole strip; the thumbnail is its
+    // first frame.
+    return props
+      ? getImageThumbnail(ghostCostume) || props.dataURI || props.sourceUrl
+      : null;
+  });
+
+  // Canvas coordinates, whatever the box's scale.
+  const canvasPoint = (e: PointerEvent): PickedLocation | null => {
+    const el = canvasContainerRef.current;
+    if (!el) {
+      return null;
+    }
+    const rect = el.getBoundingClientRect();
+    return {
+      x: Math.round(((e.clientX - rect.left) * el.offsetWidth) / rect.width),
+      y: Math.round(((e.clientY - rect.top) * el.offsetHeight) / rect.height),
+    };
+  };
+
+  const handlePointerMove = (e: PointerEvent) => {
+    const point = pickRef.current && canvasPoint(e);
+    if (point) {
+      pickRef.current?.onUpdate(point);
+      setHover(point);
+    }
+  };
+
+  // The pick's click must not reach Blockly as a deselect; it arrives after
+  // picking has ended, so a ref carries the swallow over.
+  const swallowNextClick = useRef(false);
+  const handlePointerUp = (e: PointerEvent) => {
+    const pick = pickRef.current;
+    if (!pick) {
+      return;
+    }
+    e.stopPropagation();
+    e.preventDefault();
+    swallowNextClick.current = true;
+    const point = canvasPoint(e);
+    if (point) {
+      pick.onUpdate(point);
+      pickRef.current = null;
+      setPicking(false);
+      pick.onDone(point);
+    }
+  };
+
+  const swallowWhilePicking = useCallback((e: PointerEvent | MouseEvent) => {
+    if (pickRef.current || swallowNextClick.current) {
+      e.stopPropagation();
+      e.preventDefault();
+      if (e.type === 'click') {
+        swallowNextClick.current = false;
+      }
+    }
+  }, []);
 
   // Animate only between the two visible placements; until the first
   // measurement the box stays transparent and fades in where it belongs.
@@ -199,6 +299,9 @@ const Playspace: FunctionComponent<PlayspaceProps> = ({
       // Visibility, not display: the overlay keeps its measured size.
       style={{visibility: mode === 'hidden' ? 'hidden' : 'visible'}}
     >
+      {/* The handlers only capture a pointer pick; apps' picker has no
+          keyboard path either. */}
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
       <div
         ref={boxRef}
         className={moduleStyles.playspaceBox}
@@ -222,14 +325,21 @@ const Playspace: FunctionComponent<PlayspaceProps> = ({
           transition: animate
             ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in, box-shadow ${SLIDE_MS}ms ease`
             : `opacity ${FADE_MS}ms ease-in`,
-          pointerEvents: mode === 'play' ? 'auto' : 'none',
+          // The preview takes the pointer only while picking.
+          pointerEvents: mode === 'play' || picking ? 'auto' : 'none',
+          cursor: picking ? 'crosshair' : undefined,
         }}
+        onPointerDown={swallowWhilePicking}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerLeave={() => setHover(null)}
+        onClick={swallowWhilePicking}
       >
         <div
           ref={canvasContainerRef}
           className={moduleStyles.playspaceCanvas}
         />
-        {mode === 'preview' && onPreviewClick && (
+        {mode === 'preview' && !picking && onPreviewClick && (
           <div
             className={moduleStyles.previewClickCatch}
             role="button"
@@ -245,6 +355,25 @@ const Playspace: FunctionComponent<PlayspaceProps> = ({
             }}
           />
         )}
+        {picking &&
+          hover &&
+          ghostImage &&
+          (() => {
+            const side = getDefaultSpriteSize?.() || 100;
+            return (
+              <img
+                src={ghostImage}
+                alt=""
+                className={moduleStyles.locationGhost}
+                style={{
+                  left: hover.x - side / 2,
+                  top: hover.y - side / 2,
+                  width: side,
+                  height: side,
+                }}
+              />
+            );
+          })()}
         {covered && <div className={moduleStyles.sceneCover} />}
         {/* Keyed so each landing restarts the fade. */}
         {fadeTrigger > 0 && (

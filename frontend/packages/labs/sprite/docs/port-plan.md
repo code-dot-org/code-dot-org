@@ -25,8 +25,7 @@ to `lab2/`, so `lab2/audioFeedback/heightTone.ts` becomes
 
 ### 3. Blockly
 
-The lab-owned blocks are done. Apps' `blockly/setup.ts` installed three
-sets of blocks, and only this one has ported:
+Apps' `blockly/setup.ts` installed three sets of blocks:
 
 - The lab's own blocks. `SPRITELAB2_BLOCKS` in `src/blockly/setup.ts`
   holds them as `@code-dot-org/blockly` definitions, for a workspace's
@@ -35,7 +34,7 @@ sets of blocks, and only this one has ported:
   `p5lab/spritelab/blocks.install`. These wait on the engine.
 - The level's DB block pool, through `installSharedBlocks`, which runs apps'
   `block_utils.installCustomBlocks` with Sprite Lab's custom input types.
-  Nothing in `@code-dot-org/blockly` reads the pool's format; see decision 5.
+  `src/blockly/pool` converts it when a level loads; see decision 5.
 
 ### 4. Engine
 
@@ -60,8 +59,8 @@ library that replaces p5.play (`src/sprites/`); the runtime, `CoreLibrary`
 and `p5lab/spritelab/commands` (`src/engine/runtime/`), with apps'
 `CoreLibraryTest` and command tests ported; animation loading
 (`src/engine/animations/`); and the engine class, `SpriteLabEngine`, run in
-a browser by `engine-demo.html` and `e2e/engine.spec.ts`. Wiring it into
-the views remains.
+a browser by `engine-demo.html` and `e2e/engine.spec.ts`, and wired into
+the views (layer 5).
 
 ### 5. Views
 
@@ -93,6 +92,14 @@ Wired to the engine (`App.tsx`, `views/SpriteLabView.tsx`):
 - The World tab (`views/WorldTab.tsx`, with apps' tests), shown when the
   level's mode names it or with `?world-tab=true`, paints a scene's world;
   the preview spawns it.
+- The level's block pool (`blockly/pool`): `App` converts the level's
+  `sharedBlocks` and hands them to the workspace after the lab's own
+  blocks. The `simple` fixture carries the whole GamelabJr pool, read from
+  `dashboard/config/blocks/GamelabJr`, and puts the common blocks in its
+  toolbox.
+- The pool's location field asks `Playspace` for a point: while picking,
+  the preview takes the pointer, a translucent costume follows it, and a
+  click sets the field.
 - Scene pictures (`views/useSceneThumbnails.ts`): a run's first frame,
   kept once the scene has held still, uploaded through
   `projectAssets.ts` onto core's assets API.
@@ -103,8 +110,6 @@ Wired to the engine (`App.tsx`, `views/SpriteLabView.tsx`):
 
 Still to port, in order:
 
-- The block pool converter (decision 5), with the pool's location field
-  and the playspace's location picker that serves it.
 - External scenes: the section scene list and cross-project jumps.
 - The Images tab, the guide and image levels wait on layer 6; the music
   bar and `useSceneMusic` on layer 7; the navigation sounds' settings in
@@ -120,6 +125,10 @@ Changes outside the package that the wiring needed:
   were lost on load; and it took only a string or Code Bridge's
   multi-file shape, so saving a Blockly lab's object source threw, and
   base reports that failure only to metrics.
+- `@code-dot-org/blockly`: `Driver` registers a definition that builds
+  itself in `init` through `Blockly.common.defineBlocks`. It passed every
+  definition to `defineBlocksWithJsonArray`, which ignores `init`, so such
+  blocks were built empty.
 - `@code-dot-org/blockly`: `Agent` loads English messages unless a locale
   has been, testing for a message inject reads. It tested for an empty
   `Blockly.Msg`, which a single field plugin's message defeats; Blockly
@@ -163,7 +172,7 @@ does not.
    keeps one block system; the converter carries `block_utils.js`'s
    semantics and is checked visually against apps. The views are wired
    first, against the lab's own blocks, and the pool joins the workspace
-   after.
+   after. Done: `src/blockly/pool`.
 
 ## Changes from apps
 
@@ -251,4 +260,33 @@ Layer 5, so far:
   pointer-only click, with the two accessibility rules waived on that line:
   its keyboard route is the tab buttons inside it.
 - Apps has no tests for these views. New tests cover `useSceneEditing`,
-  `playBar`, `useSetupBlockColor` and `ScenesGallery`.
+  `playBar`, `useSetupBlockColor`, `ScenesGallery` and the playspace's
+  location picking.
+
+The block pool:
+
+- Each pool entry becomes an `@code-dot-org/blockly` definition that
+  builds itself in `init`, as `block_utils`' blocks did, with a JavaScript
+  generator carrying `createJsWrapperBlockCreator`'s. Pool types and
+  helper code are as apps named them (`gamelab_<func>` for GamelabJr).
+- An entry that does not convert is left out and logged once per level;
+  apps threw while installing the pool.
+- Not carried: the mini-toolbox, and the pictures apps drew on the sprite
+  pointer blocks, which keep their labels. The behavior picker offers no
+  behaviors, since the behavior editor is not ported.
+- The sound picker is the lab's sound dropdown, keeping a saved value it
+  does not list; apps opened the asset manager's sound library.
+- The location field is a `Blockly.Field` subclass. Apps drew a button and
+  asked a Redux slice for the point; the field calls the picker `Playspace`
+  registers with `setLocationPicker`. The ghost's costume comes from the
+  field's block or its parent, where apps read Blockly's selected block. A
+  second pick abandons the first, and so does leaving the lab.
+- `SpriteLabConnectionChecker` is apps' `CdoConnectionChecker` without its
+  function-parameter clause, since functions are not ported.
+- An empty location picker generates `()`, which does not parse, as in
+  apps. The fixture's toolbox seeds the canvas centre.
+- Apps' `blockUtils` tests for `determineInputs`, `groupInputsByRow`,
+  `interpolateInputs` and the generators are ported, built on real blocks
+  in a headless workspace instead of stubs. The XML toolbox helpers they
+  also tested did not come. New tests cover the location field and the
+  connection checker.
