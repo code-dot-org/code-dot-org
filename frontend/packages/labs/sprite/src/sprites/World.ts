@@ -1,5 +1,6 @@
 import type p5 from 'p5';
 
+import {getContext} from './context';
 import type {Group} from './Group';
 
 /** A view of one instance's clock, canvas, mouse and sprites (WLD-1..WLD-8). */
@@ -22,12 +23,13 @@ export class World {
     return this.#p.height;
   }
 
+  /** WLD-3: the pointer state (INP-29), not p5's field. */
   get mouseX(): number {
-    return this.#p.mouseX;
+    return getContext(this.#p).input.mouseX;
   }
 
   get mouseY(): number {
-    return this.#p.mouseY;
+    return getContext(this.#p).input.mouseY;
   }
 
   get frameCount(): number {

@@ -15,8 +15,8 @@ WLD-1. `World` is an object belonging to the instance. Every read of
 WLD-2. `World.width` and `World.height` read the instance's current
 canvas `width` and `height` at the time of the read.
 
-WLD-3. `World.mouseX` and `World.mouseY` read the instance's `mouseX` and
-`mouseY` at the time of the read. They are screen coordinates on the
+WLD-3. `World.mouseX` and `World.mouseY` read the pointer position
+(INP-29, INP-19) at the time of the read. They are screen coordinates on the
 canvas: they are not corrected for the camera. `camera.mouseX` and
 `camera.mouseY` are the camera-corrected values (CAM-).
 

@@ -5,7 +5,7 @@ import {type Collider, ensureCollider} from '../collision/collider';
 import type {Sprite} from '../Sprite';
 import type {SpriteP5} from '../types';
 
-import {makeImage, makeInstance, recordP5, setMouse} from './harness';
+import {makeImage, makeInstance, pointer, recordP5, setMouse} from './harness';
 
 function pos(s: Sprite): [number, number] {
   return [s.x, s.y];
@@ -60,9 +60,8 @@ function overlapsAt(
 }
 
 function pressed(p: SpriteP5, mouse: boolean, touch = false): void {
-  const raw = p as unknown as {mouseIsPressed: boolean; touchIsDown: boolean};
-  raw.mouseIsPressed = mouse;
-  raw.touchIsDown = touch;
+  pointer(p).mouseIsPressed = mouse;
+  pointer(p).touchIsDown = touch;
 }
 
 describe('collision.md: colliders', () => {

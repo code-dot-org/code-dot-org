@@ -39,9 +39,13 @@ INP-6. Only `which` is read. Events do not need to be trusted: an
 event constructed by script and dispatched on `window` has the same
 effect as a real one. Sprite Lab 2's on-screen buttons dispatch
 `new KeyboardEvent(type, {keyCode, which, key, code, bubbles: true})`
-with `keyCode` and `which` both 37, 38, 39 or 40; Code.org's mobile
-controls instead call the key handlers directly with an object whose
-`which` is the code. Both reach the down set.
+with `keyCode` and `which` both 37, 38, 39 or 40. A host that presses a
+key without a DOM event calls the instance's `pressKey(code)` and
+`releaseKey(code)`, which change the down set exactly as a `keydown` and
+a `keyup` with that `which` would. (The fork's mobile controls called
+p5's key handlers directly with an object whose `which` is the code;
+those handlers are p5's private methods, and the library does not touch
+them. CMP-45.)
 
 INP-7. The library's own down set must be per p5 instance: two
 instances on a page each see every window event, and creating one must
@@ -163,21 +167,38 @@ run to the next.
 
 ## Raw mouse state
 
+INP-29. The library keeps its own _pointer state_ for each instance: a
+position in canvas pixels, a pressed flag, the name of the pressed
+button, and a touch flag. In these specifications `mouseX`, `mouseY`,
+`mouseIsPressed`, `mouseButton` and `touchIsDown` name that state, not
+the p5 instance's fields of the same names. The library neither reads
+nor writes p5's fields, which hold whatever p5 puts in them. The fork
+kept this state in p5's own fields. Upstream p5 2.x cannot: its handlers
+listen on the whole window, counting presses and moves outside the
+canvas, and it converts positions without regard to CSS transforms, so
+its fields cannot hold the values INP-19..INP-21 require. The pointer
+state starts at position (0, 0), not pressed, button `'left'`, not
+touched. (CMP-46.)
+
 INP-19. The mouse position `mouseX`, `mouseY` is in canvas pixels. For a
 mouse event with client coordinates (_cx_, _cy_), let _r_ be the
 canvas's bounding client rectangle and _ow_, _oh_ its layout width and
 height (`offsetWidth`, `offsetHeight`). The event is _inside_ when
 0 <= _cx_ - _r_.left < _r_.width and 0 <= _cy_ - _r_.top < _r_.height.
-An inside event sets `mouseX` = round((_cx_ - _r_.left) _ow_ / _r_.width)
-and `mouseY` likewise. An outside event leaves them unchanged. This
-corrects for CSS scaling of the canvas.
+An inside event sets `mouseX` = (_cx_ - _r_.left) _ow_ / _r_.width and
+`mouseY` likewise, not rounded. An outside event leaves them unchanged.
+This corrects for CSS scaling of the canvas, CSS transforms included. The
+canvas is the one the instance's `createCanvas` last made. (The fork
+rounds both to whole pixels. CMP-43.)
 
 INP-20. A `mousedown` on `window` that is inside sets the pressed flag
 `mouseIsPressed` and the button `mouseButton`: `'center'` if the event's
 `button` is 1, `'right'` if 2, `'left'` otherwise. An outside `mousedown`
 is ignored entirely. A `mouseup` anywhere on `window` clears
-`mouseIsPressed`; it does not change `mouseButton`. A `mousemove` updates
-the position only.
+`mouseIsPressed`; it does not change `mouseButton`. A `blur` of the
+window also clears `mouseIsPressed`, as upstream p5 does. A `mousemove`
+updates the position only. (The fork keeps the pressed flag across a
+blur. CMP-44.)
 
 INP-21. A `touchstart` with at least one touch inside the canvas sets the
 touch flag `touchIsDown` and moves `mouseX`, `mouseY` to the first
@@ -256,19 +277,21 @@ phase followed by the frame's draw.
 Mouse (canvas 400x400 at the page origin, unscaled; quadruple is
 (`mouseDown`, `mouseWentDown`, `mouseWentUp`, `mouseUp`) for `'left'`):
 
-| Sequence                                                                               | Result                                                                                    | Src  |
-| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---- |
-| query (frame 1), no press                                                              | (f, f, f, t)                                                                              | fork |
-| mousedown at client (100, 50), button 0                                                | `mouseX` 100, `mouseY` 50, `mouseButton` `'left'`, pressed; same frame still (f, f, f, t) | fork |
-| next frame: no argument, `'leftButton'`, `'left'`, `LEFT`                              | (f, t, f, f) for each                                                                     | fork |
-| next frame                                                                             | (t, f, f, f)                                                                              | fork |
-| mouseup; next frame                                                                    | (f, f, t, f)                                                                              | fork |
-| next frame                                                                             | (f, f, f, t)                                                                              | fork |
-| mousedown at client (500, 50)                                                          | not pressed, `mouseX` stays 100                                                           | fork |
-| `'rightButton'` tracked; mousedown button 2; frame                                     | right (f, t, f, f); left (f, f, f, t)                                                     | fork |
-| mousedown and mouseup between frames; frame                                            | (f, f, f, t)                                                                              | fork |
-| `touchIsDown` set; frame                                                               | left (f, t, f, f); right (f, f, f, t)                                                     | fork |
-| canvas CSS-scaled to 800x800 client pixels, layout 400; mousedown at client (401, 799) | `mouseX` 201, `mouseY` 400                                                                | hand |
+| Sequence                                                                               | Result                                                                                                | Src  |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ---- |
+| query (frame 1), no press                                                              | (f, f, f, t)                                                                                          | fork |
+| mousedown at client (100, 50), button 0                                                | `mouseX` 100, `mouseY` 50, `mouseButton` `'left'`, pressed; same frame still (f, f, f, t)             | fork |
+| next frame: no argument, `'leftButton'`, `'left'`, `LEFT`                              | (f, t, f, f) for each                                                                                 | fork |
+| next frame                                                                             | (t, f, f, f)                                                                                          | fork |
+| mouseup; next frame                                                                    | (f, f, t, f)                                                                                          | fork |
+| next frame                                                                             | (f, f, f, t)                                                                                          | fork |
+| mousedown at client (500, 50)                                                          | not pressed, `mouseX` stays 100                                                                       | fork |
+| `'rightButton'` tracked; mousedown button 2; frame                                     | right (f, t, f, f); left (f, f, f, t)                                                                 | fork |
+| mousedown and mouseup between frames; frame                                            | (f, f, f, t)                                                                                          | fork |
+| `touchIsDown` set; frame                                                               | left (f, t, f, f); right (f, f, f, t)                                                                 | fork |
+| canvas CSS-scaled to 800x800 client pixels, layout 400; mousedown at client (401, 799) | `mouseX` 200.5, `mouseY` 399.5 (the fork: 201, 400; CMP-43)                                           | hand |
+| mousedown inside; window blur                                                          | not pressed (the fork: still pressed; CMP-44)                                                         | hand |
+| `pressKey(37)`; two frames; `releaseKey(37)`; frame                                    | `keyWentDown('left')` in the first frame, `keyDown` in the second, `keyWentUp` after release (CMP-45) | hand |
 
 ## Not specified
 

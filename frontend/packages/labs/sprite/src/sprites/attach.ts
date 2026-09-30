@@ -87,7 +87,7 @@ export function attachSprites(p: p5): SpriteP5 {
       p.color(r, g, b, (a || 1) * 255),
     predefinedAnimations: undefined,
     pauseAnimationsByDefault: false,
-    ...installInput(p, input, abort.signal),
+    ...installInput(input, abort.signal),
     ...installCollision(p),
   };
   for (const [name, value] of Object.entries(members)) {
@@ -129,6 +129,11 @@ function installCanvasDefaults(p: p5): void {
         p,
         args,
       );
+      const input = findContext(p)?.input;
+      if (input) {
+        // INP-19: the renderer's public `elt` is the canvas element.
+        input.canvas = (result as {elt?: HTMLElement} | null)?.elt ?? null;
+      }
       p.fill(CANVAS_FILL_GREY);
       return result;
     },

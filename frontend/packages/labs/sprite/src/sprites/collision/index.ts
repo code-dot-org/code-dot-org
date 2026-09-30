@@ -88,13 +88,13 @@ export function installCollision(p: p5): CollisionMembers {
     const camera = getContext(p).camera;
     const point = camera.active
       ? pointBox(camera.mouseX, camera.mouseY)
-      : pointBox(p.mouseX, p.mouseY);
+      : pointBox(getContext(p).input.mouseX, getContext(p).input.mouseY);
     return separation(point, collider.box).overlaps;
   };
   const mousePressedOver = (sprite: Sprite | undefined | null): boolean => {
     // INP-27: the raw pressed state, not the tracked edge state.
-    const raw = p as unknown as {mouseIsPressed: boolean; touchIsDown: boolean};
-    const down = !!raw.mouseIsPressed || !!raw.touchIsDown;
+    const {mouseIsPressed, touchIsDown} = getContext(p).input;
+    const down = mouseIsPressed || touchIsDown;
     return down && mouseIsOver(sprite);
   };
   return {mouseIsOver, mousePressedOver};
