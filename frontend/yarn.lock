@@ -2255,6 +2255,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
     "@code-dot-org/progress": "workspace:*"
+    "@code-dot-org/shared-constants": "workspace:*"
     "@code-dot-org/teacher-dashboard": "workspace:*"
     "@code-dot-org/users": "workspace:*"
     "@emotion/react": "catalog:"
@@ -2587,7 +2588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/shared-constants@workspace:packages/shared-constants":
+"@code-dot-org/shared-constants@workspace:*, @code-dot-org/shared-constants@workspace:packages/shared-constants":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/shared-constants@workspace:packages/shared-constants"
   dependencies:
