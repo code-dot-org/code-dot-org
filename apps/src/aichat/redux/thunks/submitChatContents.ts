@@ -9,7 +9,6 @@ import {
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
-import type {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   isTurnstileDevToolsError,
@@ -25,10 +24,10 @@ import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
-import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import AichatContextManager from '../../aichatContextManager';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
 import shouldUseAiGateway from '../../api/shouldUseAiGateway';
 import {
@@ -38,7 +37,6 @@ import {
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
-  AichatContext,
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
@@ -67,7 +65,10 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      lessonId?: number;
+      // Names the level's asset folder for multimodal uploads.
+      levelName?: string;
+      // The level's own system prompt, sent ahead of modelParameters.systemPrompt.
+      levelSystemPrompt?: string;
       onSchemaResponse?: (response: unknown) => void;
       formatSchemaResponseForDisplay?: (response: unknown) => string;
     },
@@ -84,7 +85,8 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
-      lessonId,
+      levelName,
+      levelSystemPrompt,
       onSchemaResponse,
       formatSchemaResponseForDisplay,
     } = newUserMessageInput;
@@ -105,13 +107,8 @@ export const submitChatContents = createAsyncThunk(
     // Clear any user added context if present.
     dispatch(clearUserAddedSelectionContext());
 
-    const aichatContext: AichatContext = {
-      clientType,
-      currentLevelId: parseInt(state.progress.currentLevelId || ''),
-      scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
-      lessonId,
-    };
+    // Set by the chat workspace when it mounts; the event logger reads the same one.
+    const aichatContext = AichatContextManager.getContext();
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
     let chatMessageText = text;
@@ -192,13 +189,6 @@ export const submitChatContents = createAsyncThunk(
       );
 
       if (shouldUseAiGateway(modelParameters.selectedModelId)) {
-        const levelProperties = state.lab.levelProperties;
-        const levelName = levelProperties?.name;
-        const levelSystemPrompt =
-          (levelProperties as Weblab2LevelProperties)?.levelSystemPrompt ||
-          (levelProperties as AichatLevelProperties)?.aichatSettings
-            ?.levelSystemPrompt;
-
         messages = await performClientApiChatCompletion(
           newUserMessage,
           modelHistory().filter(event => event.status === Status.OK),

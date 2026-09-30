@@ -20,7 +20,9 @@ import styles from './ai-tutor-chat-with-instructions-drawer.module.scss';
 interface AiTutorChatWithInstructionDrawerProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
+  levelId?: number;
   levelName?: string;
+  levelSystemPrompt?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPrompt?: string;
@@ -43,7 +45,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
 > = ({
   hiddenContextCallback,
   aiTutorMultimodalEnabled,
+  levelId,
   levelName,
+  levelSystemPrompt,
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPrompt,
@@ -211,7 +215,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           <AiTutorChat
             hiddenContextCallback={hiddenContextCallback}
             aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelId={levelId}
             levelName={levelName}
+            levelSystemPrompt={levelSystemPrompt}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPrompt={aiTutorSystemPrompt}

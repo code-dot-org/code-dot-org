@@ -74,6 +74,12 @@ interface ChatWorkspaceProps {
   sendDisabled?: boolean;
   onMessageSent?: () => void;
 
+  // The level this chat belongs to. A host that plays one level inside another
+  // (an adaptive step) passes the inner level; otherwise the page's level is used.
+  levelId?: number;
+  // The level's own system prompt, sent to the model ahead of the lab's.
+  levelSystemPrompt?: string;
+
   // Multimodal support
   multimodalEnabled?: boolean;
   channelId?: string;
@@ -119,7 +125,9 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       chatButtons,
       hiddenContextCallback,
       multimodalEnabled = false,
+      levelId,
       levelName,
+      levelSystemPrompt,
       channelId,
       hasStarterAssets = false,
       onAssetUploaded,
@@ -157,9 +165,9 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     const studentChatHistory = useAppSelector(
       state => state.aichat.studentChatHistory
     );
-    const currentLevelId = useAppSelector(
-      state => state.progress.currentLevelId
-    );
+    const pageLevelId = useAppSelector(state => state.progress.currentLevelId);
+    const currentLevelId =
+      levelId ?? (pageLevelId ? parseInt(pageLevelId) : null);
     const scriptId = useAppSelector(state => state.progress.scriptId);
     const unfilteredVisibleItems = useAppSelector(selectAllVisibleMessages);
     const visibleItems = useMemo(() => {
@@ -203,7 +211,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     useEffect(() => {
       AichatContextManager.setContext({
         clientType,
-        currentLevelId: parseInt(currentLevelId || ''),
+        currentLevelId,
         scriptId,
         channelId,
         lessonId,
@@ -223,6 +231,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           fetchUserChatHistory({
             userId: selectedStudent.id,
             isOwnHistory: false,
+            levelId: currentLevelId ?? undefined,
             channelId,
             lessonId,
           })
@@ -232,6 +241,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
           fetchUserChatHistory({
             userId: currentUserId,
             isOwnHistory: true,
+            levelId: currentLevelId ?? undefined,
             channelId,
             lessonId,
             initialWelcomeMessage: disabled ? undefined : initialWelcomeMessage,
@@ -450,12 +460,12 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               hiddenContextCallback={hiddenContextCallback}
               multimodalAvailable={canUploadAssets}
               levelName={levelName}
+              levelSystemPrompt={levelSystemPrompt}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
               onAssetUploaded={onAssetUploaded}
               uploadDisabled={uploadDisabled}
               currentLevelId={currentLevelId}
-              lessonId={lessonId}
               chatDisabled={disabled || disableSendingMessages}
               sendDisabled={sendDisabled}
               onMessageSent={onMessageSent}
