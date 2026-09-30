@@ -210,17 +210,21 @@ const colour_random: BlockDefinition = {
  * Legacy blocks from Blockly with the OldBlockDefinition format.
  */
 const legacyBlocks: {[key: string]: OldBlockDefinition} = Object.fromEntries(
-  Object.entries(Blocks).map(([type, value]) => [
-    type,
-    {
+  Object.entries(Blocks).map(([type, value]) => {
+    // Taken now: once the Driver registers the block, the slot holds the
+    // Driver's wrapper, which calls this generator back.
+    const coreGenerator = javascriptGenerator.forBlock[type];
+    return [
       type,
-      init: (value as {init: () => void}).init,
-      generator: {
-        javascript: block =>
-          javascriptGenerator.forBlock[type](block, javascriptGenerator),
+      {
+        type,
+        init: (value as {init: () => void}).init,
+        generator: {
+          javascript: block => coreGenerator(block, javascriptGenerator),
+        },
       },
-    },
-  ]),
+    ];
+  }),
 );
 
 /**
