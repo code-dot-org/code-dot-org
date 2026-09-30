@@ -126,9 +126,12 @@ body {
   font-style: normal;
 }
 
-// The drawer is laid out beside the page, not over it: #main_content gives up
-// the width the drawer takes. Shells that anchor to the viewport instead of
-// flowing inside #main_content override this below and inset themselves.
+// The drawer is laid out beside the page, not over it, and below the header:
+// #main_content gives up the width the drawer takes while the header keeps the
+// full page width, being a sibling rather than an ancestor of the content.
+// Content that anchors to the viewport rather than flowing inside
+// #main_content -- the lab shells -- insets itself instead; see
+// shared/css/ta-drawer.scss.
 #main_content {
   margin-right: $ta-drawer-width;
   transition: margin-right $ta-drawer-transition;
@@ -138,19 +141,8 @@ body.pin_bottom {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: $ta-drawer-width;
+  right: 0;
   left: 0;
-}
-
-// Legacy labs position #codeApp against the pinned body and Lab2 positions
-// #lab-container against the viewport, so in both the shell -- not
-// #main_content -- is what has to give up the width. Insetting both would
-// move the page twice.
-body.pin_bottom,
-body:has(#lab2-container) {
-  #main_content {
-    margin-right: 0;
-  }
 }
 
 // Brand-aware lab shell background for legacy labs. Excludes Minecraft
@@ -1722,11 +1714,13 @@ body.iframe_embed_app_and_code {
 
 }
 
+// Pinned legacy labs are positioned against the pinned body, which spans the
+// viewport, so #main_content's margin never reaches them.
 #codeApp.pin_bottom {
   position: absolute;
   top: 60px;
   left: 10px;
-  right: 10px;
+  right: calc(10px + #{$ta-drawer-width});
   bottom: 10px;
 
   &.centered_embed {
