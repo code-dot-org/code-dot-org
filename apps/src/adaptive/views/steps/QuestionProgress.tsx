@@ -14,7 +14,6 @@ interface QuestionProgressProps {
   onSelect: (index: number) => void;
 }
 
-/** One dot per question; reached dots navigate. */
 const QuestionProgress: React.FunctionComponent<QuestionProgressProps> = ({
   questions,
   current,

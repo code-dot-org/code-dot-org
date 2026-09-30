@@ -1,7 +1,7 @@
 .questionProgress {
   display: flex;
 
-  // A 24px target around a 12px dot.
+  // 24px meets the WCAG 2.5.8 target size; the dot itself draws at 12px.
   button {
     display: flex;
     align-items: center;

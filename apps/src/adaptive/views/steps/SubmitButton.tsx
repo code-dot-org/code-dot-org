@@ -5,16 +5,12 @@ import styles from './submitButton.module.scss';
 
 interface SubmitButtonProps {
   disabled?: boolean;
-  /**
-   * Ignores clicks without the disabled attribute, so a button holding
-   * focus keeps it through a pause.
-   */
+  /** Ignores clicks but stays enabled: a disabled button drops its focus. */
   locked?: boolean;
   onClick: () => void;
   children: React.ReactNode;
 }
 
-/** The pill button under each question. */
 const SubmitButton: React.FunctionComponent<SubmitButtonProps> = ({
   disabled,
   locked,

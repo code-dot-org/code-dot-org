@@ -8,24 +8,20 @@ import shared from '../shared.module.scss';
 
 export type Feedback = 'correct' | 'incorrect';
 
-// The first four props match quiz's MultiChoiceQuestionContainer, so it can
-// replace this component; the rest are what that one lacks.
+// The first four props are MultiChoiceQuestionContainer's, so it can swap in.
 interface MultipleChoiceQuestionProps {
   question: QuizQuestionSummary;
   /** Unused here; kept for parity with MultiChoiceQuestionContainer. */
   questionLabel?: string;
   selectedChoiceId: string | null;
   onSelectChoice: (choiceId: string) => void;
-  /** Tints the selected choice. */
   verdict: Feedback | undefined;
   disabled: boolean;
   /** Bumped on every wrong answer so the shake replays. */
   shakeNonce: number;
-  /** Moves focus to the question text on mount. */
   focusOnMount: boolean;
 }
 
-/** One multiple-choice question's stem and choices. */
 const MultipleChoiceQuestion: React.FunctionComponent<
   MultipleChoiceQuestionProps
 > = ({

@@ -16,10 +16,6 @@
   }
 }
 
-// Options render as chips in a responsive grid: as many columns as fit
-// at ~210px each, reflowing with the container (a two-option question
-// sits side by side on a laptop, everything stacks on narrow screens).
-// Grid rows keep chips in the same row equal-height.
 .questionOptions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -46,8 +42,7 @@
   transition: border-color 150ms ease, transform 150ms ease,
     box-shadow 150ms ease;
 
-  // The input stays in the accessibility tree and keyboard order; the
-  // label is what shows.
+  // Hidden from sight only: it keeps the radio semantics and arrow keys.
   input {
     position: absolute;
     width: 1px;
