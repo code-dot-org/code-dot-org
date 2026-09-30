@@ -1,7 +1,7 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
 import * as BlocklyCore from 'blockly/core';
 
-import {arrayToMap, getUpdatedOptionsFromConfig} from './dropdownConfig';
+import {arrayToMap, getUpdatedOptionsFromConfig} from '@code-dot-org/blockly';
 
 // The image grid's rules from apps' cdoCss.ts: each image fills its item,
 // which has no border of its own.

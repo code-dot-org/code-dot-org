@@ -1,8 +1,8 @@
 // A level's block pool as @code-dot-org/blockly block definitions: apps'
 // createJsWrapperBlockCreator and installCustomBlocks. Each block builds
 // itself in init as block_utils' did, so pool blocks look and compile as
-// they did in apps. Not carried: the mini-toolbox and the sprite pointer
-// blocks' pictures.
+// they did in apps. The mini-toolbox is dropped, as apps' Lab2 drops it;
+// the sprite pointer blocks' pictures are not carried.
 import type * as BlocklyCore from 'blockly/core';
 import {
   javascriptGenerator,

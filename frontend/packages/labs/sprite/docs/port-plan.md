@@ -31,7 +31,10 @@ Apps' `blockly/setup.ts` installed three sets of blocks:
   holds them as `@code-dot-org/blockly` definitions, for a workspace's
   `blocks`.
 - The legacy Sprite Lab blocks, through `blocksCommon.install` and
-  `p5lab/spritelab/blocks.install`. These wait on the engine.
+  `p5lab/spritelab/blocks.install`. blocksCommon's blocks are now in
+  `@code-dot-org/blockly`'s `BaseBlocks`, and `COMMON_BLOCKS` in
+  `src/blockly/setup.ts` registers them; so is `sprite_variables_get`
+  from `blocks.install`. The rest of `blocks.install` waits on the engine.
 - The level's DB block pool, through `installSharedBlocks`, which runs apps'
   `block_utils.installCustomBlocks` with Sprite Lab's custom input types.
   `src/blockly/pool` converts it when a level loads; see decision 5.
@@ -247,8 +250,8 @@ Layer 3:
   the registered type name. The placeholder's outline and `like` state are
   `defineExtension` and `defineMutator` objects on its definition.
 - Apps' `CdoFieldImageDropdown`, `CdoFieldAnimationDropdown` and
-  `CdoFieldBitmap`, with the `config` helpers and number ranges they use,
-  are copied into `src/blockly/fields`. They extend
+  `CdoFieldBitmap` are copied into `src/blockly/fields`. The `config`
+  helpers and number ranges they use come from `@code-dot-org/blockly`. They extend
   `@blockly/field-grid-dropdown` and `@blockly/field-bitmap` 13.3, the
   releases for Blockly 13, where apps uses the Blockly 12 releases.
 - The rules apps kept in `cdoCss.ts` for the placeholder outline and the
@@ -271,6 +274,37 @@ Layer 3:
   Blockly supports and the zoom block uses.
 - A new test, `blockly/__tests__/setup.test.ts`, registers every lab block
   as a workspace would and builds, serializes and generates each one.
+
+blocksCommon:
+
+- The blocks and `CdoFieldDropdown` are ported into `@code-dot-org/blockly`
+  (`BaseBlocks`, `fields/cdoFieldDropdown`), with apps' tests for the
+  dropdown's `config` parsing and number ranges. The lab registers them
+  ahead of its own blocks, and the toolbox filter keeps them.
+- `when_run` is not registered: the lab has its own hat, and
+  `migrateSources` renames the old type.
+- `category` and `custom_category` are the lab's own definitions, as in
+  apps, where the lab's install ran after blocksCommon's.
+- The repeat blocks have no picture beside DO; Lab2's skin is empty, so
+  apps drew none either.
+- Labels are literal English ("repeat", "times", "comment:", "random
+  color"); apps took them from `commonI18n`. Blockly's messages still win
+  where they are set.
+- The repeat count's validator does not accept `???`; apps accepted it
+  only in levelbuilder's start and toolbox modes, which are not ported.
+- The comment block takes its color from the theme's `comment_blocks`;
+  apps fixed it to gray.
+- `CdoFieldDropdown` drops apps' right-to-left display-text override.
+- `colour_random` generates with `@blockly/field-colour`'s generator, as
+  apps did; the package's colour plugin no longer replaces a registered
+  `colour_random` with its British one.
+- A `CdoFieldDropdown` still saves as its XML string, as apps' did, since
+  Blockly saves a field that overrides `toXml` that way.
+- `sprite_variables_get` lists only Sprite variables, as the pool's sprite
+  picker does; apps listed every variable and created Sprite ones. It
+  generates apps' `{name: '...'}`. Apps' plain-label form for levels that
+  disable variable editing, and its registration as the Sprite getter in
+  the Variables category, are not ported.
 
 Layer 5, so far:
 
@@ -347,9 +381,13 @@ The block pool:
   helper code are as apps named them (`gamelab_<func>` for GamelabJr).
 - An entry that does not convert is left out and logged once per level;
   apps threw while installing the pool.
-- Not carried: the mini-toolbox, and the pictures apps drew on the sprite
-  pointer blocks, which keep their labels. The behavior picker offers no
-  behaviors, since the behavior editor is not ported.
+- The mini-toolbox (the "+" on event blocks) is dropped, as apps' Lab2
+  drops it: the lab does not teach the pointer blocks it offers.
+- Not carried: the pictures apps drew on the sprite pointer blocks, which
+  keep their labels.
+- The behavior picker offers no behaviors, as in apps' Lab2: the modal
+  behavior editor is legacy Sprite Lab's (`P5LabView` mounts it; Lab2 never
+  does), and Lab2's Behaviors category holds only the predefined ones.
 - The sound picker is the lab's sound dropdown, keeping a saved value it
   does not list; apps opened the asset manager's sound library.
 - The location field is a `Blockly.Field` subclass. Apps drew a button and
