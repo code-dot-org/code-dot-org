@@ -24,7 +24,7 @@ import {SpriteLabConnectionChecker} from '../blockly/connectionChecker';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {setImageSource} from '../blockly/imageSource';
 import {levelPool, type PoolBlock} from '../blockly/pool';
-import {SPRITELAB2_BLOCKS} from '../blockly/setup';
+import {COMMON_BLOCKS, SPRITELAB2_BLOCKS} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {animationSourceUrl} from '../engine/animations';
 import {SpriteLabEngine} from '../engine/Engine';
@@ -101,7 +101,9 @@ const READY_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source as BlocklySerialization;
 
-const LAB_BLOCK_TYPES = SPRITELAB2_BLOCKS.map(block => block.type);
+const LAB_BLOCK_TYPES = [...COMMON_BLOCKS, ...SPRITELAB2_BLOCKS].map(
+  block => block.type,
+);
 
 const WORKSPACE_OPTIONS = {
   trashcan: true,

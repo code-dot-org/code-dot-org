@@ -267,8 +267,8 @@ export const SPRITE_LAB_INPUT_TYPES: Record<string, InputType> = {
       return `{name: '${generator.getVariableName(block.getFieldValue(name(input)))}'}`;
     },
   },
-  // Behaviors are defined in apps' behavior editor, which is not ported;
-  // the dropdown says so and the block passes no behavior.
+  // Apps' Lab2 offers no way to define a behavior (the modal behavior
+  // editor is legacy Sprite Lab's), so the list is always empty, as there.
   behaviorPicker: {
     addInput(_blockly, _block, input, row) {
       row

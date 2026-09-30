@@ -1,15 +1,19 @@
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
+import * as En from 'blockly/msg/en';
 import {describe, expect, it, vi} from 'vitest';
 
 import type {BlockDefinition, Extension, Mutator} from '@code-dot-org/blockly';
 import type {FieldPlugin} from '@code-dot-org/blockly/plugins';
 
-import {SPRITELAB2_BLOCKS} from '../setup';
+import {COMMON_BLOCKS, SPRITELAB2_BLOCKS} from '../setup';
 
 vi.mock('../../redux/store', () => ({
   default: {getState: () => ({lab: {}, spriteLab2: {}}), dispatch: vi.fn()},
 }));
+
+// A variable field's menu reads Blockly.Msg, which a workspace sets on inject.
+Blockly.setLocale(En as unknown as {[key: string]: string});
 
 const ARG_KEYS = ['args0', 'args1', 'args2', 'args3', 'args4'] as const;
 
@@ -82,5 +86,48 @@ describe('SPRITELAB2_BLOCKS', () => {
         workspace.dispose();
       }
     });
+  });
+});
+
+describe('sprite_variables_get', () => {
+  it('reads a Sprite variable as the sprite it names', () => {
+    const workspace = new Blockly.Workspace();
+    try {
+      const variables = workspace.getVariableMap();
+      const variable = variables.createVariable('mySprite', 'Sprite');
+      variables.createVariable('score', '');
+      const block = Blockly.serialization.blocks.append(
+        {type: 'sprite_variables_get', fields: {VAR: {id: variable.getId()}}},
+        workspace,
+      );
+      const field = block.getField('VAR') as Blockly.FieldVariable;
+      const names = field.getOptions(false).map(([name]) => name);
+      expect(names).toContain('mySprite');
+      expect(names).not.toContain('score');
+      expect(block.outputConnection?.getCheck()).toEqual(['Sprite']);
+      javascriptGenerator.init(workspace);
+      expect(javascriptGenerator.blockToCode(block)).toEqual([
+        "{name: 'mySprite'}",
+        0,
+      ]);
+    } finally {
+      workspace.dispose();
+    }
+  });
+});
+
+describe('COMMON_BLOCKS', () => {
+  it('leaves out when_run and the blocks the lab defines itself', () => {
+    const types = COMMON_BLOCKS.map(block => block.type);
+    expect(types).toEqual([
+      'comment',
+      'controls_repeat_simplified',
+      'controls_repeat_simplified_dropdown',
+      'controls_repeat_dropdown',
+      'math_number_dropdown',
+      'pick_one',
+      'text_join_simple',
+      'colour_random',
+    ]);
   });
 });

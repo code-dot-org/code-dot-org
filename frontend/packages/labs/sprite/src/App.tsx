@@ -4,7 +4,7 @@ import {BlocklyLab} from '@code-dot-org/lab/components';
 import {useLevelProperties} from '@code-dot-org/lab/contexts';
 
 import {levelPool, type PoolBlock} from './blockly/pool';
-import {SPRITELAB2_BLOCKS} from './blockly/setup';
+import {COMMON_BLOCKS, SPRITELAB2_BLOCKS} from './blockly/setup';
 import defaultSources from './defaultSources.json';
 import type {Sources, SpriteLab2LevelProperties} from './types';
 import SpriteLabView from './views/SpriteLabView';
@@ -15,7 +15,11 @@ function App() {
   const sharedBlocks = levelProperties?.sharedBlocks as PoolBlock[] | undefined;
   const blocklyProps = useMemo(
     () => ({
-      blocks: [...SPRITELAB2_BLOCKS, ...levelPool(sharedBlocks).definitions],
+      blocks: [
+        ...COMMON_BLOCKS,
+        ...SPRITELAB2_BLOCKS,
+        ...levelPool(sharedBlocks).definitions,
+      ],
     }),
     [sharedBlocks],
   );

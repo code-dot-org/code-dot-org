@@ -19,6 +19,7 @@ import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
+import spriteVariablesGet from './spriteVariablesGet';
 import thePlayer from './thePlayer';
 import whenRun from './whenRun';
 
@@ -43,6 +44,7 @@ const labBlockDefinitions: LabBlock[] = [
   setAsPlatformPlayer,
   setCameraZoom,
   thePlayer,
+  spriteVariablesGet,
   placeholder,
   // Toolbox edit mode's category marker blocks.
   category,
