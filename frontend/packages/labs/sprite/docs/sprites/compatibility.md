@@ -264,9 +264,35 @@ positions.
 look different in all existing projects; a version gate is optional since
 the result is random-looking either way.
 
-**Pinned by:** none yet. The ported runtime needs a test that runs one
-burst step for a sprite with direction 90 and checks the displacement uses
-sin(90 rad) and cos(90 rad).
+**Pinned by:** `src/engine/runtime/__tests__/compatibility.test.ts`,
+"CMP-9: burst and pop take a degree direction as radians".
+
+### CMP-47. The first sprite of a spiral effect never moves
+
+**Specified by:** no library requirement; the runtime's `makeBurst` and
+`spiralFunc`.
+
+**Behavior:** `makeBurst` gives spiral sprite `i` a delay of
+`i * 30 / n`, so sprite 0 has delay 0. `addSprite` copies `delay` only
+when it is truthy, so sprite 0 has none. `spiralFunc` moves a sprite only
+while `delay <= 0`, which is false for `undefined`, then decrements it to
+NaN, which never compares true again. Sprite 0 stays at (200, 200), at
+1/100 scale, until its lifetime ends. `initialAngle` has the same guard;
+when the random offset makes it 0 the sprite's angle is NaN once it
+moves. Confirmed on the port; by reasoning for classic, whose runtime
+source is the same.
+
+**Expected:** Sprite 0 starts spiralling on the first frame, as the
+others do when their delay runs out.
+
+**Who depends on it:** Every spiral effect shows one sprite fewer than
+asked for, as a dot at the centre. No validation reads effect positions.
+
+**Fixing it:** In `addSprite`, copy `delay` and `initialAngle` when they
+are numbers. Low risk; the change adds one visible sprite.
+
+**Pinned by:** `src/engine/runtime/__tests__/compatibility.test.ts`,
+"CMP-47: the first spiral sprite never leaves the centre".
 
 ## Groups and edges
 
@@ -1196,3 +1222,4 @@ library's; p5's fields are neither read nor written".
 | CMP-44 | Departure: window blur releases the mouse button              | n/a                                |
 | CMP-45 | Departure: hosts press keys through `pressKey`/`releaseKey`   | n/a                                |
 | CMP-46 | Departure: the pointer state is the library's, not p5's       | n/a                                |
+| CMP-47 | First spiral sprite never moves (runtime)                     | low                                |

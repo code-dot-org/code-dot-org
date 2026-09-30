@@ -52,7 +52,8 @@ src/sprites/   the p5.play replacement, clean-room: Sprite, Group,
                animations, sprite sheets, colliders, collisions, camera,
                input edges; exported as @code-dot-org/sprite-lab/sprites
 src/engine/
-  runtime/     CoreLibrary, commands, drawUtils, locationUtils (ported)
+  runtime/     CoreLibrary, commands, their p5lab helpers and effect
+               shapes (ported), RuntimeHost
   animations/  loading a project's images into animations
   Engine.ts    the engine class
   index.ts     the export
@@ -72,7 +73,21 @@ src/engine/
   configuration rather than Game Lab's.
 - **Runtime.** `CoreLibrary` and the commands, taking the sprite core's p5
   instance where they took `P5Wrapper`'s. Their apps tests run unchanged
-  apart from the test harness.
+  apart from the test harness. What apps reached through its Redux store,
+  `audioApi` and the Blockly globals goes through a `RuntimeHost` the
+  engine passes to `CoreLibrary`: workspace alerts, text and choice
+  prompts, console lines, speech, and the workspace's variable names.
+  Commands are typed by `defineCommands`, which makes `this` the
+  `CoreLibrary` the host applies them to, as apps did. Changes from apps
+  beyond typing:
+  - `drawBackground` calls `image(bg, 0, 0)`; p5 2.x has no one-argument
+    form.
+  - `setBackgroundImageAs` takes only an image from
+    `predefinedAnimations`; `drawBackground` cannot draw an `Animation`.
+  - `getP5Color` sets alpha with `setAlpha`, not p5 0.5.4's `_array`.
+  - Sounds play through the package's own `audio/sounds`.
+    The runtime's own kept bugs are in the compatibility register with the
+    library's (CMP-9, CMP-21, CMP-47).
 - **Interpreter.** `CustomMarshalingInterpreter` from
   `@code-dot-org/lab/interpreter`, as `P5Lab` used apps' copy. `P5Lab`
   gives the interpreter every command as a global, and also every global
@@ -119,7 +134,8 @@ upstream p5 provides.
    as a dependency and the `./sprites` export. Every requirement and test
    vector is a test, and every register entry is pinned by a test that
    names it.
-3. The runtime, with `CoreLibraryTest` and the command tests ported.
+3. Done. The runtime, with `CoreLibraryTest` and the command tests
+   ported (`src/engine/runtime/__tests__/`); all pass unchanged in intent.
 4. Animation loading.
 5. The engine class, with a demo scene run in a browser.
 6. Wiring the engine into the views (layer 5).
