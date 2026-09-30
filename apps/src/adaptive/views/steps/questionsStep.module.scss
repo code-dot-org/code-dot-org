@@ -1,7 +1,4 @@
-// Interactive question surface (QuestionsStep): one big bold question at
-// a time in the main area, with entrance/exit transitions between
-// questions.  Timings must stay in sync with EXIT_TRANSITION_MS in
-// QuestionsStep.tsx.
+// .questionExit must finish within EXIT_TRANSITION_MS in QuestionsStep.tsx.
 .questionFlow {
   display: flex;
   flex: 1;
@@ -17,7 +14,6 @@
   overflow-x: hidden;
 }
 
-// The per-question card that animates in and out.
 .questionCard {
   display: flex;
   flex-direction: column;
@@ -92,7 +88,6 @@
   }
 }
 
-// Kill all question-surface motion for users who ask for less of it.
 @media (prefers-reduced-motion: reduce) {
   .questionEnter,
   .questionExit,

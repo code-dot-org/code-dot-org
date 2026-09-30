@@ -1,11 +1,6 @@
-// A questions step: one question at a time, full page. A multiple-choice
-// question gates the next until answered correctly; every submission
-// before that is recorded through onAnswer. Free response and scale are
-// not ported yet and show a placeholder.
-//
-// Advancing plays a short exit animation on the current question card,
-// then the next question mounts (keyed by question id) with an entrance
-// animation.
+// One question at a time. A multiple-choice question blocks the next until
+// answered correctly. Moving plays the card's exit animation on a timer,
+// then mounts the next card, keyed by question id, which plays its entrance.
 
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -40,10 +35,8 @@ const FEEDBACK_TEXT: {[kind in Feedback]: string} = {
 
 interface QuestionsStepProps {
   step: QuestionsStepContent;
-  /** Recorded answers; they prefill questions and decide which are reachable. */
   inputs: StudentInputs;
   onAnswer: (record: AnswerRecord) => void;
-  /** Called when the last question is done. */
   onComplete: () => void;
 }
 
@@ -58,7 +51,6 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     recordedChoice(step.questions[0], inputs)
   );
   const [feedback, setFeedback] = useState<Feedback | undefined>();
-  // True while the current question plays its exit animation.
   const [exiting, setExiting] = useState(false);
   const [shakeNonce, setShakeNonce] = useState(0);
   // Focus moves to a question only once the student has moved at least once.
@@ -127,7 +119,6 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
       return;
     }
 
-    // Let the student see the "Correct!" beat before moving on.
     setFeedback('correct');
     advanceTimer.current = setTimeout(
       goToNextQuestion,
