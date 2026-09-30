@@ -153,7 +153,7 @@ const TrainPanel = () => {
             <div className={styles.field}>
               <FieldLabel
                 text="Predict"
-                tooltip="What you want your model to predict"
+                tooltip="What you want your model to predict."
               />
               <SimpleDropdown
                 name="ailab-label"
@@ -171,7 +171,7 @@ const TrainPanel = () => {
             <div className={classNames(styles.field, styles.featuresField)}>
               <FieldLabel
                 text="Using"
-                tooltip="What your model will use to make a prediction"
+                tooltip="What your model will use to make a prediction."
               />
               <DropdownProviderWrapper>
                 <CheckboxDropdown
