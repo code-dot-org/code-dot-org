@@ -183,7 +183,7 @@ def _invisible(action):
 
 
 def _painted(action, noun):
-  """Name a shape by its fill, adding an outline wide enough to show."""
+  """Name a shape by its fill, plus an outline if wide and in a second color."""
   fill, stroke = action.fill_color, action.stroke_color
   primary = _color_name(fill or stroke)
   name = f"{primary} {noun}"
