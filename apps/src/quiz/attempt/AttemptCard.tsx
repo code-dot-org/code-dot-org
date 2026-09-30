@@ -8,6 +8,8 @@ export interface AttemptCardProps {
   title: string;
   description?: React.ReactNode;
   children?: React.ReactNode;
+  // A bordered row between the body and the footer.
+  beforeFooterBorderedRow?: React.ReactNode;
   footer?: React.ReactNode;
 }
 
@@ -17,6 +19,7 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
   title,
   description,
   children,
+  beforeFooterBorderedRow,
   footer,
 }) => (
   <div className={styles.card}>
@@ -37,6 +40,11 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
       </div>
       {children && <div className={styles.body}>{children}</div>}
     </div>
+    {beforeFooterBorderedRow && (
+      <div className={styles.beforeFooterBorderedRow}>
+        {beforeFooterBorderedRow}
+      </div>
+    )}
     {footer && <div className={styles.actionRow}>{footer}</div>}
   </div>
 );
