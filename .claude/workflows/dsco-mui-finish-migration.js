@@ -141,7 +141,7 @@ const DISCOVER_SCHEMA = {
     planDocFound: {type: 'boolean'},
     statusState: {type: 'string', description: `The component's state in ${STATUS_DOC}, e.g. "Migrated, behavior pending"`},
     legacySourceFiles: {type: 'array', items: {type: 'string'}, description: 'Deprecated DSCO files still in the tree: sources, their styles, tests and stories'},
-    legacyExports: {type: 'array', items: {type: 'string'}, description: 'Legacy names the entry point still exports ("default" included when it is legacy)'},
+    legacyExports: {type: 'array', items: {type: 'string'}, description: 'Entry-point exports that still resolve to the legacy implementation ("default" included); a plain name re-pointed at the MUI version is not one'},
     legacyImports: {type: 'array', items: {type: 'string'}, description: 'Files outside the component directory that still import a legacy export'},
     eslintBanPresent: {type: 'boolean'},
     codemod: {type: 'string', description: 'The component codemod path and its yarn script, or ""'},
@@ -204,11 +204,14 @@ ${TREE_RULES}
   next.behavior is then the cell's text verbatim.
   - delete-legacy is allowed when legacySourceFiles is non-empty, legacyImports is empty
     and eslintBanPresent is true.
-  - A row is allowed when legacySourceFiles is empty and every row in its after list is
-    gone from the table.
+  - Step 4 is complete when legacySourceFiles, legacyExports and legacyImports are empty
+    and eslintBanPresent is false.
+  - A row is allowed when step 4 is complete and every row in its after list is gone from
+    the table.
   - With no request: delete-legacy if legacySourceFiles is non-empty, else the first
-    allowed row, else done when the table is empty.
-  kind blocked, with the reason, when the request (or every candidate) is not allowed.`,
+    allowed row, else done when step 4 is complete and the table is empty.
+  kind blocked, with the reason, when the request (or every candidate) is not allowed. A
+  request that is not allowed is blocked, never replaced by another step.`,
   {schema: DISCOVER_SCHEMA, label: 'discover', phase: 'Discover', model: READ_MODEL, effort: CHECK_EFFORT},
 )
 if (!discover) throw new Error('discover agent was skipped')
@@ -217,15 +220,25 @@ if (!discover.headOnBase) throw new Error(`HEAD is not at the tip of ${base}. Ch
 if (!discover.planDocFound) throw new Error(`${PLAN_DOC} not found; this component was not migrated by the planned workflow.`)
 if (discover.notes) log(`Discover notes: ${discover.notes}`)
 const next = discover.next
+const cell = s => s.replace(/`/g, '').trim().toLowerCase()
+const step4Left = [
+  discover.legacySourceFiles.length && `${discover.legacySourceFiles.length} legacy file(s)`,
+  discover.legacyExports.length && `legacy exports ${discover.legacyExports.join(', ')}`,
+  discover.legacyImports.length && `${discover.legacyImports.length} legacy import(s)`,
+  discover.eslintBanPresent && `the ${ESLINT_APPS} ban`,
+].filter(Boolean)
+if (stepArg && next.kind !== 'blocked') {
+  const picked = next.kind === 'behavior' ? next.behavior : next.kind
+  if (cell(picked) !== cell(stepArg)) throw new Error(`Requested step "${stepArg}", but Discover picked "${picked}"`)
+}
 if (next.kind === 'done') {
-  if (discover.legacySourceFiles.length || discover.rows.length) {
-    throw new Error(`Discover reported done, but ${discover.legacySourceFiles.length} legacy file(s) and ${discover.rows.length} deferred row(s) remain`)
+  if (step4Left.length || discover.rows.length) {
+    throw new Error(`Discover reported done, but ${[...step4Left, discover.rows.length && `${discover.rows.length} deferred row(s)`].filter(Boolean).join(', ')} remain`)
   }
   log(`${component}: nothing left to finish (${next.reason})`)
   return {component, step: 'done', reason: next.reason}
 }
 if (next.kind === 'blocked') throw new Error(`${component}: ${next.reason}`)
-const cell = s => s.replace(/`/g, '').trim().toLowerCase()
 const row = next.kind === 'behavior' ? discover.rows.find(r => cell(r.behavior) === cell(next.behavior)) : null
 if (next.kind === 'behavior' && !row) throw new Error(`Discover picked "${next.behavior}", which is not a row of the table`)
 // Discover's choice is re-derived from its own facts, so an inconsistent result cannot start an unsafe step.
@@ -238,7 +251,7 @@ if (next.kind === 'delete-legacy') {
   if (why.length) throw new Error(`delete-legacy is not allowed: ${why.join('; ')}`)
 }
 if (row) {
-  if (discover.legacySourceFiles.length) throw new Error(`"${row.behavior}" must wait for delete-legacy: ${discover.legacySourceFiles.length} legacy file(s) remain`)
+  if (step4Left.length) throw new Error(`"${row.behavior}" must wait until step 4 is complete: ${step4Left.join(', ')} remain`)
   const pending = row.after.filter(b => discover.rows.some(r => cell(r.behavior) === cell(b)))
   if (pending.length) throw new Error(`"${row.behavior}" must follow ${pending.join(', ')}, still in the table`)
 }
@@ -364,8 +377,8 @@ CONSUMER TESTS: ${JSON.stringify(discover.consumerTestFiles)}
    ${STORYBOOK}: yarn build.
 2. apps/: yarn run typecheck; yarn test:unit with every apps/ file in CONSUMER TESTS in ONE
    jest invocation.
-3. Every other frontend package with a changed file: whichever of its test, typecheck and
-   lint scripts exist (e2e-tests has no test script; its specs need a live studio).
+3. Every other frontend package with a changed file or a file in CONSUMER TESTS: whichever
+   of its test, typecheck and lint scripts exist (e2e-tests has no test script; its specs need a live studio).
 4. Lint like Drone: git add -- <changed files> (the one git write you may do), run
    ./tools/hooks/pre-commit from the repo root, then git restore --staged -- <the same
    files>. Never stage
