@@ -40,12 +40,16 @@ references stay as written. See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
   `default` / `Dialog` / `CustomDialog` keys
 - Idempotent: files without either source, and specifiers already on `Mui`
   names, are left alone, so it can be re-run as new consumers land
+- `.ts` files are parsed with the `ts` parser and all others with `tsx`,
+  whatever `--parser` says, since `tsx` rejects `<T>x` casts
 
 **Reported, not rewritten** (a `REP` line per occurrence):
 
-- Enzyme string selectors such as `find('Dialog')`, which match the display
-  name and must become `find('MuiDialog')`; left alone they match nothing and
-  the assertion passes without testing anything
+- Enzyme string selectors such as `find('Dialog')`. One that targets the
+  component-library dialog must become `find('MuiDialog')`, or it matches
+  nothing and the assertion passes without testing anything. Others, such as
+  `legacySharedComponents/Dialog`, share the display name and must stay;
+  check which component each one reaches
 - `jest.mock` factories of any other shape, namespace imports, re-exports,
   and `require()` / `import()` of the entry point
 

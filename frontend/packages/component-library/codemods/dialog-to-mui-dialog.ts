@@ -107,13 +107,15 @@ function renameSpecifiers(j: JSCodeshift, decl: ImportDeclaration): boolean {
 }
 
 function transformer(file: FileInfo, api: API) {
-  const j = api.jscodeshift;
+  // tsx rejects `<T>x` casts, which are valid in .ts files.
+  const j = api.jscodeshift.withParser(/\.ts$/.test(file.path) ? 'ts' : 'tsx');
   const root = j(file.source);
   const report = (node: Located, message: string) =>
     api.report(`line ${node.loc?.start.line ?? '?'}: ${message}`);
   let changed = false;
 
   // Enzyme matches a string selector against the display name, which becomes MuiDialog / MuiCustomDialog.
+  // A test does not import the dialog it finds, so a match may be another Dialog, such as legacySharedComponents'.
   root.find(j.CallExpression).forEach(path => {
     const {callee, arguments: args} = path.value;
     if (callee.type !== 'MemberExpression') return;
@@ -127,7 +129,7 @@ function transformer(file: FileInfo, api: API) {
     ) {
       report(
         path.value,
-        `.${method}('${selector}') matches the legacy display name; use '${DISPLAY_NAMES[selector]}'.`,
+        `.${method}('${selector}'): if it targets the component-library dialog, use '${DISPLAY_NAMES[selector]}'.`,
       );
     }
   });
