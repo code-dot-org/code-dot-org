@@ -140,8 +140,8 @@ namespace :test do
     raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional, blocking: true)
   end
 
-  # The DTT daemon has the key Cucumber's Eyes suite uses (eyes_steps.rb) and
-  # derives the rest; on that machine a missing key is a configuration error.
+  # The DTT daemon has the key in CDO.applitools_eyes_api_key and derives the
+  # rest; on that machine a missing key is a configuration error.
   timed_task_with_logging playwright_eyes: :playwright_install do
     env = dtt_playwright_eyes_env
     if env.empty?
@@ -150,7 +150,8 @@ namespace :test do
       next
     end
     secrets = {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
-    raise 'Playwright Eyes e2e tests failed' unless run_playwright_suite(:eyes, blocking: true, env: env, env_secrets: secrets)
+    playwright_tests_passed = run_playwright_suite(:eyes, blocking: true, env: env, env_secrets: secrets)
+    raise 'Playwright Eyes e2e tests failed' unless playwright_tests_passed
   end
 
   # Run the deploy-time UI suites in parallel. If one suite raises, allow the
