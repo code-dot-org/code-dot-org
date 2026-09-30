@@ -1,5 +1,5 @@
 import {TutorGalleryData} from '@code-dot-org/lesson-deep-dive';
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter} from 'react-router-dom';
@@ -14,7 +14,22 @@ jest.mock(
 
 jest.mock('@cdo/apps/aiTutor/views/gallery/ChallengeGallery', () => ({
   __esModule: true,
-  default: () => <div>challenge-gallery</div>,
+  default: ({viewSwitcher}: {viewSwitcher?: React.ReactNode}) => (
+    <div>
+      challenge-gallery
+      {viewSwitcher}
+    </div>
+  ),
+}));
+
+jest.mock('@cdo/apps/aiTutor/views/gallery/ClassProjectGallery', () => ({
+  __esModule: true,
+  default: ({viewSwitcher}: {viewSwitcher?: React.ReactNode}) => (
+    <div>
+      class-project-gallery
+      {viewSwitcher}
+    </div>
+  ),
 }));
 
 jest.mock(
@@ -115,6 +130,22 @@ describe('TutorApp routing', () => {
     it('does not render the gallery route when tutorGalleryData is null', () => {
       renderAt('/gallery', LESSON_DATA, null);
       expect(screen.queryByText('challenge-gallery')).not.toBeInTheDocument();
+    });
+
+    it('renders ClassProjectGallery at /gallery/projects', () => {
+      renderAt('/gallery/projects');
+      expect(screen.getByText('class-project-gallery')).toBeInTheDocument();
+    });
+
+    it('switches between the gallery views', () => {
+      renderAt('/gallery');
+      fireEvent.click(screen.getByRole('button', {name: 'Class Projects'}));
+      expect(screen.getByText('class-project-gallery')).toBeInTheDocument();
+
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Extension Activities'})
+      );
+      expect(screen.getByText('challenge-gallery')).toBeInTheDocument();
     });
   });
 });

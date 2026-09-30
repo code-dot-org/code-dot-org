@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React, {FC} from 'react';
 
 import ReactionChips from './ReactionChips';
+import {challengeResponseReactionsPath} from './reactionsApi';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -149,7 +150,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           </a>
         </p>
         <ReactionChips
-          responseId={response.id}
+          reactionsPath={challengeResponseReactionsPath(response.id)}
           reactions={response.reactions}
           readOnly
         />

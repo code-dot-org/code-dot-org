@@ -4433,6 +4433,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "class_gallery": true,
         "level_keys": [
           "test-music-lab-mini-project-walk-4_v2"
         ],
@@ -5558,6 +5559,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "class_gallery": true,
         "progression": "Submit your Project!"
       },
       "bonus": false,
@@ -6430,6 +6432,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "class_gallery": true,
         "level_keys": [
           "music-lab-genre-project_v2"
         ],

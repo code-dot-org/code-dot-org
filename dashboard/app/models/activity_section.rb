@@ -104,6 +104,7 @@ class ActivitySection < ApplicationRecord
         variants: sl_data['variants'],
         instructor_in_training: !!sl_data['instructor_in_training'],
         show_ai_analysis: !!sl_data['show_ai_analysis'],
+        class_gallery: !!sl_data['class_gallery'],
         progression: progression_name.present? && progression_name
       )
       sl.update_levels(sl_data['levels'] || [])

@@ -6,7 +6,7 @@ import {
   TutorGalleryData,
   unitCountsValidator,
 } from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useEffect, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -19,6 +19,9 @@ import styles from './challenge-gallery.module.scss';
 
 interface ChallengeGalleryProps {
   tutorGalleryData: TutorGalleryData;
+  // Rendered above the page title; links this view with the class project
+  // gallery.
+  viewSwitcher?: ReactNode;
 }
 
 const hasVideoAsset = (response: ChallengeResponse) =>
@@ -37,7 +40,10 @@ const projectIdFromLocation = () => {
 // the selected section's work, or the signed-in user's own submissions in
 // the "My projects" view. Clicking a project opens its project page in
 // place.
-const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
+const ChallengeGallery: FC<ChallengeGalleryProps> = ({
+  tutorGalleryData,
+  viewSwitcher,
+}) => {
   const {units, sections, currentUnitId} = tutorGalleryData;
 
   const [sectionId, setSectionId] = useState<number | null>(
@@ -253,6 +259,9 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
       />
       <main className={styles.main}>
         <header className={styles.pageHeader}>
+          {viewSwitcher && (
+            <div className={styles.viewSwitcher}>{viewSwitcher}</div>
+          )}
           <p className={styles.pageOverline}>{sectionName || 'My Projects'}</p>
           <h1 className={styles.pageTitle}>Extension Activities</h1>
         </header>

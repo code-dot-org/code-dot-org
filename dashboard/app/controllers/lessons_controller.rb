@@ -123,6 +123,7 @@ class LessonsController < ApplicationController
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/tutor/gallery
   # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor/gallery
+  # GET /s/:script_name_or_id/lessons/:lesson_position/tutor/gallery/*path (gallery sub-views)
   #
   # The Tutor+ project gallery: the class section's submitted challenge work,
   # browsable by section and unit. This action only bootstraps the page —

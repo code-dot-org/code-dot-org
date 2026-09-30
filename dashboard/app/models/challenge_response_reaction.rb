@@ -19,11 +19,7 @@ class ChallengeResponseReaction < ApplicationRecord
   belongs_to :challenge_response
   belongs_to :user
 
-  # The reaction vocabulary, stored by name (the gallery maps each to a glyph).
-  # A fixed set keeps the column a short, index-friendly token and lets client
-  # and server agree on the reaction set. Listed in the order chips render (see
-  # ChallengeResponse#reaction_summary).
-  EMOJIS = %w[clap fire smile heart party trophy].freeze
+  EMOJIS = EmojiReactions::EMOJIS
 
   validates :emoji, presence: true, inclusion: {in: EMOJIS}
   # Mirrors the unique index: a user may leave several different emoji on a

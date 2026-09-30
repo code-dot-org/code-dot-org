@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_21_151250) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_30_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2042,6 +2042,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_21_151250) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_commits_on_storage_app_id_and_object_version_id", unique: true
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
+  end
+
+  create_table "project_reactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "user_id", null: false
+    t.string "emoji", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id", "user_id", "emoji"], name: "index_project_reactions_on_project_user_emoji", unique: true
+    t.index ["project_id"], name: "index_project_reactions_on_project_id"
+    t.index ["user_id"], name: "index_project_reactions_on_user_id"
   end
 
   create_table "project_storage_geos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|

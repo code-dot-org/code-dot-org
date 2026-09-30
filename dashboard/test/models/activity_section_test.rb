@@ -43,6 +43,28 @@ class ActivitySectionTest < ActiveSupport::TestCase
     assert_includes error.message, 'activity_section_position is required'
   end
 
+  test 'update_script_levels saves and clears the class gallery flag' do
+    activity_section = create(:activity_section)
+    lesson = activity_section.lesson_activity.lesson
+    level = create(:music, name: 'class gallery level')
+    script_level = create(:script_level, script: lesson.script, lesson: lesson, levels: [level],
+      activity_section: activity_section, activity_section_position: 1
+)
+    sl_data = {
+      'id' => script_level.id,
+      'activitySectionPosition' => 1,
+      'levels' => [{'id' => level.id.to_s}],
+    }
+
+    activity_section.update_script_levels([sl_data.merge('class_gallery' => true)])
+    assert script_level.reload.class_gallery
+    assert script_level.summarize_for_lesson_edit[:class_gallery]
+
+    activity_section.update_script_levels([sl_data])
+    refute script_level.reload.class_gallery
+    refute script_level.properties.key?('class_gallery')
+  end
+
   test 'lesson edit summary does not preprocess markdown' do
     activity_section = create(:activity_section)
     Services::MarkdownPreprocessor.expects(:process!).never

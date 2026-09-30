@@ -7806,6 +7806,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "class_gallery": true,
         "level_keys": [
           "programming-fundamentals-lesson13-level1_2025"
         ],

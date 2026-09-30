@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import React, {FC} from 'react';
 
 import ReactionChips from './ReactionChips';
+import {challengeResponseReactionsPath} from './reactionsApi';
 
 import styles from './project-view.module.scss';
 
@@ -88,7 +89,7 @@ const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
         </Typography>
       )}
       <ReactionChips
-        responseId={detail.id}
+        reactionsPath={challengeResponseReactionsPath(detail.id)}
         reactions={detail.reactions}
         onReactionsChange={onReactionsChange}
       />

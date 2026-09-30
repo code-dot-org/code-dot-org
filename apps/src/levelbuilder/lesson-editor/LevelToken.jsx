@@ -199,6 +199,9 @@ export class LevelTokenContents extends Component {
               {scriptLevel.challenge && (
                 <span style={styles.tag}>challenge</span>
               )}
+              {scriptLevel.class_gallery && (
+                <span style={styles.tag}>class gallery</span>
+              )}
               {scriptLevel.levels.length > 1 && (
                 <span style={styles.tag}>variants</span>
               )}

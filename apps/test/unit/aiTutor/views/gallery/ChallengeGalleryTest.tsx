@@ -18,7 +18,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 }));
 
 jest.mock('@cdo/apps/aiTutor/views/gallery/reactionsApi', () => ({
-  __esModule: true,
+  ...jest.requireActual('@cdo/apps/aiTutor/views/gallery/reactionsApi'),
   addReaction: jest.fn(),
   removeReaction: jest.fn(),
 }));
@@ -324,7 +324,10 @@ describe('ChallengeGallery', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
-    expect(mockAddReaction).toHaveBeenCalledWith(8, 'heart');
+    expect(mockAddReaction).toHaveBeenCalledWith(
+      '/challenge_responses/8/reactions',
+      'heart'
+    );
 
     // Back on the gallery, the card carries the reaction made on the project
     // page rather than the stale empty list from the initial fetch. The card

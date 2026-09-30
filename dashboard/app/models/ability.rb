@@ -367,6 +367,18 @@ class Ability
       # Only the response's owner uploads asset bytes.
       can :upload, ChallengeResponseAsset, challenge_response: {user_id: user.id}
 
+      # Class gallery viewers may react to a project: its owner, the owner's
+      # teachers, and students who share a section with the owner, as for
+      # challenge responses above.
+      can :react_in_class_gallery, Project do |project|
+        owner_id = project.owner_id
+        owner_id.present? && (
+          owner_id == user.id ||
+            user.students.exists?(id: owner_id) ||
+            Follower.exists?(section_id: user.sections_as_student.select(:id), student_user_id: owner_id)
+        )
+      end
+
       can :show, Rubric
     end
 

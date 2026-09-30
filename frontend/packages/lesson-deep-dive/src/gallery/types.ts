@@ -1,6 +1,8 @@
 import {
   ChallengeResponse,
   challengeResponseValidator,
+  parseReactions,
+  Reaction,
   ResponseValidator,
 } from '../types';
 
@@ -103,4 +105,62 @@ export const unitCountsValidator: ResponseValidator<
     throw new Error('Expected an object of unit counts');
   }
   return bodyJson as Record<string, number>;
+};
+
+// GET /class_gallery_projects — one student's saved project behind a level
+// the unit tags for the class gallery. share_path is null for project types
+// with no share view; thumbnail_url is null when the lab captured none.
+export type ClassGalleryProject = {
+  channel: string;
+  project_type: string | null;
+  name: string | null;
+  thumbnail_url: string | null;
+  share_path: string | null;
+  updated_at: string;
+  user_id: number;
+  user_name: string;
+  unit_id: number;
+  lesson_position: number | null;
+  lesson_name: string | null;
+  script_level_id: number;
+  level_position: number | null;
+  reactions: Reaction[];
+};
+
+type ServerClassGalleryProject = Partial<
+  Omit<ClassGalleryProject, 'reactions'>
+> & {reactions?: unknown};
+
+export const classGalleryProjectListValidator: ResponseValidator<
+  ClassGalleryProject[]
+> = bodyJson => {
+  if (!Array.isArray(bodyJson)) {
+    throw new Error('Expected an array of class gallery projects');
+  }
+  return (bodyJson as ServerClassGalleryProject[]).map(p => {
+    if (
+      typeof p.channel !== 'string' ||
+      typeof p.user_id !== 'number' ||
+      typeof p.unit_id !== 'number' ||
+      typeof p.script_level_id !== 'number'
+    ) {
+      throw new Error('Class gallery project missing an id');
+    }
+    return {
+      channel: p.channel,
+      project_type: p.project_type ?? null,
+      name: p.name ?? null,
+      thumbnail_url: p.thumbnail_url ?? null,
+      share_path: p.share_path ?? null,
+      updated_at: p.updated_at ?? '',
+      user_id: p.user_id,
+      user_name: p.user_name ?? '',
+      unit_id: p.unit_id,
+      lesson_position: p.lesson_position ?? null,
+      lesson_name: p.lesson_name ?? null,
+      script_level_id: p.script_level_id,
+      level_position: p.level_position ?? null,
+      reactions: parseReactions(p.reactions),
+    };
+  });
 };

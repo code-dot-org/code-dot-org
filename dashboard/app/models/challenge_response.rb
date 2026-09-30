@@ -82,22 +82,8 @@ class ChallengeResponse < ApplicationRecord
     summary
   end
 
-  # Emoji reaction tallies for the gallery chips: one entry per emoji that
-  # has at least one reaction, each {emoji, count, reacted}, where `reacted`
-  # is whether `viewer` is among the reactors. Ordered by the fixed emoji
-  # vocabulary so chips keep a stable left-to-right order across responses.
-  # Reads the loaded association (group in Ruby, not SQL) so a preloaded
-  # gallery listing does not fan out into a query per response.
+  # Emoji reaction tallies for the gallery chips; see EmojiReactions.summarize.
   def reaction_summary(viewer)
-    by_emoji = challenge_response_reactions.group_by(&:emoji)
-    ChallengeResponseReaction::EMOJIS.filter_map do |emoji|
-      reactions = by_emoji[emoji]
-      next unless reactions
-      {
-        emoji: emoji,
-        count: reactions.size,
-        reacted: viewer.present? && reactions.any? {|reaction| reaction.user_id == viewer.id},
-      }
-    end
+    EmojiReactions.summarize(challenge_response_reactions, viewer)
   end
 end

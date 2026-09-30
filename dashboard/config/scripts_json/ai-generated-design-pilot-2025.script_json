@@ -6376,6 +6376,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "class_gallery": true,
         "level_keys": [
           "ai-generated-design-lesson13-level4_2025"
         ],

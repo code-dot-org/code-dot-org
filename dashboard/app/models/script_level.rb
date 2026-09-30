@@ -134,6 +134,7 @@ class ScriptLevel < ApplicationRecord
     level_keys
     instructor_in_training
     show_ai_analysis
+    class_gallery
   )
 
   def script
@@ -472,6 +473,7 @@ class ScriptLevel < ApplicationRecord
         summary[:challenge] = !!challenge
         summary[:instructor_in_training] = !!instructor_in_training
         summary[:show_ai_analysis] = !!show_ai_analysis
+        summary[:class_gallery] = !!class_gallery
       end
 
       if include_prev_next

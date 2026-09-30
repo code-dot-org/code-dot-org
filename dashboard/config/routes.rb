@@ -533,6 +533,7 @@ Dashboard::Application.routes.draw do
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
         get 'tutor/gallery', to: 'lessons#tutor_gallery', format: false
+        get 'tutor/gallery/*path', to: 'lessons#tutor_gallery', format: false
         get 'tutor/*path', to: 'lessons#tutor', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -1548,6 +1549,15 @@ Dashboard::Application.routes.draw do
       # plain DELETE .../reactions/:emoji with no reaction row id exposed.
       resources :reactions, only: [:create, :destroy], param: :emoji,
         controller: 'challenge_response_reactions'
+    end
+    # The Tutor+ class project gallery. Projects are addressed by channel id,
+    # as on every other project route.
+    resources :class_gallery_projects, only: [:index], param: :channel_id do
+      collection do
+        get :unit_counts
+      end
+      resources :reactions, only: [:create, :destroy], param: :emoji,
+        controller: 'class_gallery_project_reactions'
     end
     resources :challenge_response_assets, only: [:show] do
       member do

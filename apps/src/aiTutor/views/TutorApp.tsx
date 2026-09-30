@@ -1,8 +1,10 @@
 import {TutorGalleryData} from '@code-dot-org/lesson-deep-dive';
 import React, {FC} from 'react';
-import {Navigate, Route, Routes} from 'react-router-dom';
+import {Navigate, Route, Routes, useNavigate} from 'react-router-dom';
 
 import ChallengeGallery from './gallery/ChallengeGallery';
+import ClassProjectGallery from './gallery/ClassProjectGallery';
+import GalleryViewSwitcher, {GalleryView} from './gallery/GalleryViewSwitcher';
 import ChallengeRoute from './lessonDeepDive/ChallengeActivities/ChallengeRoute';
 import LessonDeepDiveContainer from './lessonDeepDive/LessonDeepDiveContainer';
 import {LessonDeepDiveData} from './lessonDeepDive/types';
@@ -16,7 +18,16 @@ const TutorApp: FC<TutorAppProps> = ({
   lessonDeepDiveData,
   tutorGalleryData,
 }) => {
+  const navigate = useNavigate();
   const defaultRoute = lessonDeepDiveData ? 'welcome' : 'gallery';
+  const viewSwitcher = (view: GalleryView) => (
+    <GalleryViewSwitcher
+      view={view}
+      onChange={next =>
+        navigate(next === 'projects' ? '/gallery/projects' : '/gallery')
+      }
+    />
+  );
 
   return (
     <Routes>
@@ -38,10 +49,26 @@ const TutorApp: FC<TutorAppProps> = ({
         </>
       )}
       {tutorGalleryData && (
-        <Route
-          path="gallery"
-          element={<ChallengeGallery tutorGalleryData={tutorGalleryData} />}
-        />
+        <>
+          <Route
+            path="gallery"
+            element={
+              <ChallengeGallery
+                tutorGalleryData={tutorGalleryData}
+                viewSwitcher={viewSwitcher('challenges')}
+              />
+            }
+          />
+          <Route
+            path="gallery/projects"
+            element={
+              <ClassProjectGallery
+                tutorGalleryData={tutorGalleryData}
+                viewSwitcher={viewSwitcher('projects')}
+              />
+            }
+          />
+        </>
       )}
     </Routes>
   );

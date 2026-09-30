@@ -7,6 +7,8 @@ import React from 'react';
 import ReactionChips from '@cdo/apps/aiTutor/views/gallery/ReactionChips';
 import * as reactionsApi from '@cdo/apps/aiTutor/views/gallery/reactionsApi';
 
+const PATH = '/challenge_responses/5/reactions';
+
 describe('ReactionChips', () => {
   let addReaction: jest.SpyInstance;
   let removeReaction: jest.SpyInstance;
@@ -30,7 +32,7 @@ describe('ReactionChips', () => {
   it('renders a chip per reaction with its count, plus the add button', () => {
     render(
       <ReactionChips
-        responseId={5}
+        reactionsPath={PATH}
         reactions={[heart(), {emoji: 'clap', count: 1, reacted: false}]}
       />
     );
@@ -50,7 +52,7 @@ describe('ReactionChips', () => {
     const user = userEvent.setup();
     render(
       <ReactionChips
-        responseId={5}
+        reactionsPath={PATH}
         reactions={[heart({reacted: true})]}
         readOnly
       />
@@ -70,14 +72,17 @@ describe('ReactionChips', () => {
 
   it('renders nothing read-only when there are no reactions', () => {
     const {container} = render(
-      <ReactionChips responseId={5} reactions={[]} readOnly />
+      <ReactionChips reactionsPath={PATH} reactions={[]} readOnly />
     );
     expect(container).toBeEmptyDOMElement();
   });
 
   it('marks the viewer’s own reaction as pressed', () => {
     render(
-      <ReactionChips responseId={5} reactions={[heart({reacted: true})]} />
+      <ReactionChips
+        reactionsPath={PATH}
+        reactions={[heart({reacted: true})]}
+      />
     );
 
     expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
@@ -89,11 +94,11 @@ describe('ReactionChips', () => {
   it('adds the reaction and reconciles when a not-yet-reacted chip is clicked', async () => {
     const user = userEvent.setup();
     addReaction.mockResolvedValue([heart({count: 4, reacted: true})]);
-    render(<ReactionChips responseId={5} reactions={[heart()]} />);
+    render(<ReactionChips reactionsPath={PATH} reactions={[heart()]} />);
 
     await user.click(screen.getByRole('button', {name: /Heart/}));
 
-    expect(addReaction).toHaveBeenCalledWith(5, 'heart');
+    expect(addReaction).toHaveBeenCalledWith(PATH, 'heart');
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
         'aria-pressed',
@@ -110,14 +115,14 @@ describe('ReactionChips', () => {
     removeReaction.mockResolvedValue([heart({count: 2, reacted: false})]);
     render(
       <ReactionChips
-        responseId={5}
+        reactionsPath={PATH}
         reactions={[heart({count: 3, reacted: true})]}
       />
     );
 
     await user.click(screen.getByRole('button', {name: /Heart/}));
 
-    expect(removeReaction).toHaveBeenCalledWith(5, 'heart');
+    expect(removeReaction).toHaveBeenCalledWith(PATH, 'heart');
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
         'aria-pressed',
@@ -129,7 +134,7 @@ describe('ReactionChips', () => {
   it('reverts the optimistic update when the request fails', async () => {
     const user = userEvent.setup();
     addReaction.mockRejectedValue(new Error('network'));
-    render(<ReactionChips responseId={5} reactions={[heart()]} />);
+    render(<ReactionChips reactionsPath={PATH} reactions={[heart()]} />);
 
     await user.click(screen.getByRole('button', {name: /Heart/}));
 
@@ -147,12 +152,12 @@ describe('ReactionChips', () => {
   it('opens the picker and adds the chosen emoji', async () => {
     const user = userEvent.setup();
     addReaction.mockResolvedValue([{emoji: 'fire', count: 1, reacted: true}]);
-    render(<ReactionChips responseId={5} reactions={[]} />);
+    render(<ReactionChips reactionsPath={PATH} reactions={[]} />);
 
     await user.click(screen.getByRole('button', {name: 'Add reaction'}));
     await user.click(screen.getByRole('menuitem', {name: 'Fire'}));
 
-    expect(addReaction).toHaveBeenCalledWith(5, 'fire');
+    expect(addReaction).toHaveBeenCalledWith(PATH, 'fire');
     // The picker closes after a choice.
     await waitFor(() =>
       expect(screen.queryByRole('menu')).not.toBeInTheDocument()
@@ -166,7 +171,7 @@ describe('ReactionChips', () => {
     addReaction.mockResolvedValue(server);
     render(
       <ReactionChips
-        responseId={5}
+        reactionsPath={PATH}
         reactions={[heart()]}
         onReactionsChange={onReactionsChange}
       />

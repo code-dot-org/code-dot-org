@@ -8,7 +8,7 @@ import {addReaction, removeReaction} from './reactionsApi';
 import styles from './challenge-gallery.module.scss';
 
 // The reaction vocabulary, in the order chips render. Kept in lockstep with
-// the server's ChallengeResponseReaction::EMOJIS; the picker offers exactly
+// the server's EmojiReactions::EMOJIS; the picker offers exactly
 // this set. GLYPHS maps each name to its emoji, LABELS to a screen-reader
 // name.
 const EMOJI_ORDER = ['clap', 'fire', 'smile', 'heart', 'party', 'trophy'];
@@ -72,9 +72,9 @@ const applyToggle = (
 };
 
 interface ReactionChipsProps {
-  // The response these reactions belong to; the react/unreact endpoints hang
-  // off it.
-  responseId: number;
+  // The reactions collection of the item these chips belong to (see
+  // reactionsApi); the react/unreact requests go to it.
+  reactionsPath: string;
   reactions: Reaction[];
   // Show the tallies without the "add reaction" button and without toggling,
   // for surfaces that only display reactions (the gallery card). Reactions are
@@ -91,7 +91,7 @@ interface ReactionChipsProps {
 // click, updating optimistically and reconciling with the server's tallies.
 // On the gallery card (readOnly) it shows the same chips as static labels.
 const ReactionChips: FC<ReactionChipsProps> = ({
-  responseId,
+  reactionsPath,
   reactions,
   readOnly = false,
   onReactionsChange,
@@ -111,13 +111,13 @@ const ReactionChips: FC<ReactionChipsProps> = ({
     onReactionsChange?.(next);
   };
 
-  // Reseed when the component is reused for a different response (the gallery
+  // Reseed when the component is reused for a different item (the gallery
   // reuses cards as the listing changes). Own optimistic edits for the same
-  // response are preserved.
+  // item are preserved.
   useEffect(() => {
     setItems(reactions);
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- reseed on id, not on every new array identity
-  }, [responseId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- reseed on the item, not on every new array identity
+  }, [reactionsPath]);
 
   // Close the picker on an outside click or Escape.
   useEffect(() => {
@@ -153,8 +153,8 @@ const ReactionChips: FC<ReactionChipsProps> = ({
     setPending(prev => new Set(prev).add(emoji));
 
     const request = nowReacted
-      ? addReaction(responseId, emoji)
-      : removeReaction(responseId, emoji);
+      ? addReaction(reactionsPath, emoji)
+      : removeReaction(reactionsPath, emoji);
     request
       .then(serverReactions => applyItems(serverReactions))
       .catch(() => applyItems(previous))

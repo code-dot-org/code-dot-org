@@ -62,11 +62,27 @@ describe('LevelTokenDetails', () => {
     assertCheckboxVisible(wrapper, 'Bonus', true);
     assertCheckboxVisible(wrapper, 'Assessment', true);
     assertCheckboxVisible(wrapper, 'Challenge', true);
+    assertCheckboxVisible(wrapper, 'Class Gallery', true);
     assertCheckboxVisible(wrapper, 'Instructor In Training', false);
 
     assertChecked(wrapper, 'Bonus', false);
     assertChecked(wrapper, 'Assessment', false);
     assertChecked(wrapper, 'Challenge', false);
+    assertChecked(wrapper, 'Class Gallery', false);
+  });
+
+  it('toggles the class gallery flag', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    wrapper
+      .find('.level-token-checkboxes')
+      .findWhere(
+        n => n.name() === 'label' && n.text().includes('Class Gallery')
+      )
+      .find('input')
+      .simulate('change');
+    expect(setScriptLevelField).toHaveBeenCalledWith(1, 5, 1, {
+      class_gallery: true,
+    });
   });
 
   it('instructor in training is not shown if not a professional learning course', () => {

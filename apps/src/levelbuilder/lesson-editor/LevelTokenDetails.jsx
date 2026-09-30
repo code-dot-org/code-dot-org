@@ -16,6 +16,8 @@ const tooltipText = {
     'Allow participant in a professional learning course to view certain instructor features.',
   show_ai_analysis:
     'Show AI analysis of student responses on the level summary page.',
+  class_gallery:
+    "List students' saved projects from this level in the Tutor+ class project gallery.",
 };
 
 const optionText = {
@@ -24,6 +26,7 @@ const optionText = {
   challenge: 'Challenge',
   instructor_in_training: 'Instructor In Training',
   show_ai_analysis: 'Show AI Analysis',
+  class_gallery: 'Class Gallery',
 };
 
 const disabledBonusTooltipText =
@@ -83,6 +86,7 @@ class LevelTokenDetails extends Component {
       'assessment',
       'challenge',
       'show_ai_analysis',
+      'class_gallery',
     ];
 
     if (this.props.isProfessionalLearningCourse) {

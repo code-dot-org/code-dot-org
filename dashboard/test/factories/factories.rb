@@ -1503,6 +1503,12 @@ FactoryBot.define do
     emoji {'heart'}
   end
 
+  factory :project_reaction do
+    association :project
+    association :user, factory: :student
+    emoji {'heart'}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective

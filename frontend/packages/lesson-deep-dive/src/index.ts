@@ -28,10 +28,12 @@ export type {
 export {assetWithUrl} from './gallery/assetUtils';
 export {
   challengeResponseDetailValidator,
+  classGalleryProjectListValidator,
   unitCountsValidator,
 } from './gallery/types';
 export type {
   ChallengeResponseDetail,
+  ClassGalleryProject,
   EvaluationResult,
   GallerySection,
   GallerySort,

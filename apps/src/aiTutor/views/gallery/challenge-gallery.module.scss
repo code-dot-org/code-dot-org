@@ -1,6 +1,7 @@
-// Styles for the Tutor+ project gallery: the page layout (ChallengeGallery),
-// the filter rail (GallerySidebar), the project cards (ProjectCard), and the
-// emoji reaction chips (ReactionChips).
+// Styles for the Tutor+ project gallery: the page layout (ChallengeGallery,
+// ClassProjectGallery), the filter rail (GallerySidebar), the project cards
+// (ProjectCard, ClassProjectCard), and the emoji reaction chips
+// (ReactionChips).
 
 // --- Page layout ---
 
@@ -21,6 +22,10 @@
 
 .pageHeader {
   margin-bottom: 24px;
+}
+
+.viewSwitcher {
+  margin-bottom: 16px;
 }
 
 .pageOverline {
@@ -78,6 +83,12 @@
 }
 
 .whiteboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 16px;
+}
+
+.classProjectGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
   gap: 16px;
@@ -202,11 +213,22 @@
   height: 179px;
 }
 
+.classProjectCard .media {
+  height: 179px;
+}
+
 .media {
   display: block;
   width: 100%;
   object-fit: cover;
   background-color: var(--background-neutral-tertiary);
+}
+
+// A lab's placeholder image stands in for a missing thumbnail; it is an
+// icon, so it is shown whole rather than cropped.
+.placeholderMedia {
+  padding: 24px;
+  object-fit: contain;
 }
 
 .details {
