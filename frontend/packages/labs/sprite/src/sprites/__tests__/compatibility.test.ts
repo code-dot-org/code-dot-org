@@ -20,9 +20,13 @@ const entries = register
   })
   .filter((entry): entry is {id: string; awaitingPort: boolean} => !!entry.id);
 
-const testSources = readdirSync(testsDir)
-  .filter(name => name.endsWith('.test.ts'))
-  .map(name => readFileSync(join(testsDir, name), 'utf8'))
+// The runtime's entries are pinned beside the runtime.
+const testSources = [testsDir, join(testsDir, '../../engine/runtime/__tests__')]
+  .flatMap(dir =>
+    readdirSync(dir)
+      .filter(name => name.endsWith('.test.ts'))
+      .map(name => readFileSync(join(dir, name), 'utf8')),
+  )
   .join('\n');
 
 describe('compatibility register', () => {
