@@ -28,13 +28,16 @@ export type StartOverDialogProps = GenericDialogProps & {
 const StartOverDialog: FunctionComponent<StartOverDialogProps> = ({
   onConfirm,
   onCancel = () => {},
+  message,
 }) => {
   const currentAppName = useApp().lab?.levelProperties.appName;
 
   const isTextWorkspace =
     currentAppName && TEXT_BASED_LABS.includes(currentAppName);
 
+  // A caller's own message wins over the lab's and the default.
   const dialogMessage =
+    message ||
     (currentAppName && LAB_SPECIFIC_MESSAGES[currentAppName]) ||
     (isTextWorkspace
       ? "This will reset the workspace to its start state and remove all the code you've added or changed."
