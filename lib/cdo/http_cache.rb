@@ -57,8 +57,6 @@ class HttpCache
     Cdo::I18n::LOCALE_COOKIE_KEY,
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
-    # OneTrust consent cookie.
-    'OptanonConsent',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
@@ -150,6 +148,7 @@ class HttpCache
       'rack.session',
       'remember_user_token',
       '__profilin', # Used by rack-mini-profiler
+      'OptanonConsent', # OneTrust consent cookie
       'statsig_stable_id',
       session_key,
       storage_id,
