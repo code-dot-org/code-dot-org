@@ -22,7 +22,11 @@ describe('BaseDialog', function () {
   describe('style option', function () {
     it('applies box styles to the visible .modal-content box', function () {
       const result = mount(
-        <BaseDialog isOpen useUpdatedStyles style={{padding: 20, color: 'red'}} />
+        <BaseDialog
+          isOpen
+          useUpdatedStyles
+          style={{padding: 20, color: 'red'}}
+        />
       );
       expect(result.find('.modal-content').props().style).toEqual({
         padding: 20,
@@ -48,7 +52,12 @@ describe('BaseDialog', function () {
 
     it('lets style.width override fixedWidth', function () {
       const result = mount(
-        <BaseDialog isOpen useUpdatedStyles fixedWidth={300} style={{width: 740}} />
+        <BaseDialog
+          isOpen
+          useUpdatedStyles
+          fixedWidth={300}
+          style={{width: 740}}
+        />
       );
       expect(result.find('.modal-dialog').props().style.width).toBe(740);
     });
