@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
+import RequiresInaccessibleAiModelsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresInaccessibleAiModelsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -225,13 +226,12 @@ class UnitOverview extends React.Component {
               aiChatToolsDependency={aiChatToolsDependency}
             />
             {viewAs === ViewType.Instructor &&
+              unitRequiresInaccessibleAiModels && (
+                <RequiresInaccessibleAiModelsAlert subject="unit" />
+              )}
+            {viewAs === ViewType.Instructor &&
               aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-                <RequiresAiChatToolsAlert
-                  subject="unit"
-                  requiresInaccessibleAiModels={
-                    unitRequiresInaccessibleAiModels
-                  }
-                />
+                <RequiresAiChatToolsAlert />
               )}
           </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}

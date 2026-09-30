@@ -3,12 +3,7 @@ import NotificationBanner from '@code-dot-org/component-library/notification-ban
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
-import {
-  AI_COUNTRY_AVAILABILITY_SUPPORT_LINK,
-  AI_SETTINGS_SUPPORT_LINK,
-  usOnlyModelsEssentialMessage,
-  UsOnlyModelsSubject,
-} from '@cdo/apps/aichat/constants';
+import {AI_SETTINGS_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
@@ -20,24 +15,11 @@ import AiChatToolsInfoAlert from './AiChatToolsInfoAlert';
 
 import styles from './ai-chat-tools-dependency-alerts.module.scss';
 
-interface RequiresAiChatToolsAlertProps {
-  /** What this page is about, which is the noun the warning uses for it. */
-  subject: UsOnlyModelsSubject;
-  /** Whether that subject needs AI models the teacher's region blocks. */
-  requiresInaccessibleAiModels?: boolean;
-}
-
 /**
  * Alerts the teacher that a course or unit requires AI Chat tools, or
  * warns them loudly if they have it turned off.
- *
- * Callers render this only where AI Chat tools are essential to the assigned
- * curriculum, so nothing here re-checks that.
  */
-const RequiresAiChatToolsAlert: React.FC<RequiresAiChatToolsAlertProps> = ({
-  subject,
-  requiresInaccessibleAiModels,
-}) => {
+const RequiresAiChatToolsAlert: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
   const handleReviewAiSettings = React.useCallback(() => {
     navigateToHref(
@@ -49,33 +31,8 @@ const RequiresAiChatToolsAlert: React.FC<RequiresAiChatToolsAlertProps> = ({
     | AiChatAccessLevel
     | undefined;
 
-  // Blocked models and a disabled access level are independent problems, and a
-  // teacher can be hit by both at once, so each gets its own banner.
-  const usOnlyModelsBlocked = !!requiresInaccessibleAiModels;
-
   return (
     <>
-      {usOnlyModelsBlocked && (
-        <NotificationBanner
-          variant="error"
-          style="filled"
-          className={styles.chatToolsAlert}
-          title=""
-          description={
-            <>
-              {usOnlyModelsEssentialMessage(subject)}&nbsp;&nbsp;
-              <Link
-                href={AI_COUNTRY_AVAILABILITY_SUPPORT_LINK}
-                text="Learn more"
-                type="secondary"
-                size="s"
-                openInNewTab
-              />
-            </>
-          }
-          icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
-        />
-      )}
       {aiChatAccessLevel !== AiChatAccessLevels.DISABLED && (
         <AiChatToolsInfoAlert text="This course requires the use of AI chat tools to complete." />
       )}

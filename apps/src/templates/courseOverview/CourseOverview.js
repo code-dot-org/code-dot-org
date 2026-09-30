@@ -7,6 +7,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
+import RequiresInaccessibleAiModelsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresInaccessibleAiModelsAlert';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
@@ -239,12 +240,12 @@ class CourseOverview extends Component {
           participantAudience={participantAudience}
           aiChatToolsDependency={aiChatToolsDependency}
         />
+        {viewAsTeacher && requiresInaccessibleAiModels && (
+          <RequiresInaccessibleAiModelsAlert subject="course" />
+        )}
         {viewAsTeacher &&
           aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-            <RequiresAiChatToolsAlert
-              subject="course"
-              requiresInaccessibleAiModels={requiresInaccessibleAiModels}
-            />
+            <RequiresAiChatToolsAlert />
           )}
         <SafeMarkdown
           className={styles.description}

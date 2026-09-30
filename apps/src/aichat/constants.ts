@@ -48,10 +48,8 @@ export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'This AI Chat level is not available in your region.';
 export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =
   'AI Tutor is not available in your region.';
-// Shown on the course and unit overview pages when what the page is about
-// cannot be completed without AI models the instructor's region blocks.
-export type UsOnlyModelsSubject = 'course' | 'unit';
-export const usOnlyModelsEssentialMessage = (subject: UsOnlyModelsSubject) =>
+export type CourseOrUnit = 'course' | 'unit';
+export const usOnlyModelsEssentialMessage = (subject: CourseOrUnit) =>
   `This ${subject} requires AI models that are not available in your region. AI chat tools will be disabled in some levels.`;
 
 export const MODEL_PARAMETER_LABELS: {
