@@ -5,6 +5,7 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {Pathway} from '../types';
 
+import {AnswerRecord, StudentInputs} from './answers';
 import {
   CheckpointStatus,
   EMPTY_PROGRESS,
@@ -23,6 +24,8 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   inProgress: 'In progress',
   complete: 'Complete',
 };
+
+const NO_INPUTS: StudentInputs = {};
 
 export function useProgress(
   pathway: Pathway,
@@ -68,14 +71,22 @@ export function useProgress(
     );
   }, []);
 
+  const recordAnswer = useCallback((record: AnswerRecord) => {
+    setProgress(p =>
+      p ? {...p, inputs: {...p.inputs, [record.questionId]: record}} : p
+    );
+  }, []);
+
   const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
 
   return {
     progress,
     isLoading: progress === undefined,
     statusMap,
+    inputs: progress?.inputs ?? NO_INPUTS,
     markStarted,
     markComplete,
+    recordAnswer,
     reset,
   };
 }

@@ -1,175 +1,68 @@
-// Interactive renderer for a questions step: one question at a time in
-// the main area — free response, multiple choice (single or check-all),
-// or a slider scale.
+// A questions step: one question at a time, full page. A multiple-choice
+// question gates the next until answered correctly; every submission
+// before that is recorded through onAnswer. Free response and scale are
+// not ported yet and show a placeholder.
 //
-// Every submission is recorded as an AnswerRecord via onAnswer, graded or
-// not.  Key-validated questions (an option marked `correct`) gate
-// progression to the next question with retries; branch options complete
-// the whole step through onComplete(optionId) so the navigation resolver
-// can route.
-//
-// Transitions are pure CSS: advancing plays a short exit animation on the
-// current question card, then the next question mounts (keyed by question
-// id) with an entrance animation.  Wrong answers shake the options; the
-// chosen option is tinted by verdict.  Everything honours
-// prefers-reduced-motion via the stylesheet.
+// Advancing plays a short exit animation on the current question card,
+// then the next question mounts (keyed by question id) with an entrance
+// animation.
 
-import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {AnswerRecord, StudentInputs} from './studentInputs';
-import {Question, QuestionsStep} from './types';
+import {
+  AnswerRecord,
+  StudentInputs,
+  answerRecord,
+  isPassed,
+  reachableThrough,
+} from '../../progress';
+import {Question, QuestionsStep as QuestionsStepContent} from '../../types';
 
-import styles from './aiLessons.module.scss';
+import MultipleChoiceQuestion, {Feedback} from './MultipleChoiceQuestion';
+import QuestionProgress from './QuestionProgress';
+import SubmitButton from './SubmitButton';
 
-// The advance button under every question, MUI-themed so its colors come
-// from semantic tokens rather than hand-rolled CSS.
-const SubmitButton: React.FunctionComponent<{
-  disabled?: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}> = ({disabled, onClick, children}) => (
-  <MuiButton
-    type="button"
-    variant="contained"
-    color="primary"
-    size="large"
-    className={styles.pillButton}
-    disabled={disabled}
-    onClick={onClick}
-  >
-    {children}
-  </MuiButton>
-);
+import styles from './questionsStep.module.scss';
+import shared from '../shared.module.scss';
 
 const CORRECT_ADVANCE_DELAY_MS = 700;
-// Must cover the question-exit animation duration in aiLessons.module.scss.
+// Must cover the question-exit animation duration in questionsStep.module.scss.
 const EXIT_TRANSITION_MS = 220;
 
-interface QuestionFlowProps {
-  step: QuestionsStep;
-  // Previously recorded answers, used to prefill (re-visiting a step or
-  // a hub shows what was chosen before).
+const FEEDBACK_TEXT: {[kind in Feedback]: string} = {
+  correct: 'Correct!',
+  incorrect: 'Not quite — try again!',
+};
+
+interface QuestionsStepProps {
+  step: QuestionsStepContent;
+  /** Recorded answers; they prefill questions and decide which are reachable. */
   inputs: StudentInputs;
-  // Visited step ids, for check marks on branch options whose target the
-  // student has already been to.
-  path?: string[];
   onAnswer: (record: AnswerRecord) => void;
-  // Called when the step is finished: the last question was answered, or
-  // a branch option was chosen (passed through so the resolver sees it).
-  onComplete: (selectedOptionId?: string) => void;
-  // Asks the navigation resolver which option (if any) to highlight as
-  // the suggested path for this question.  Purely advisory — never a
-  // gate.
-  getRecommendation?: (question: Question) => Promise<string | null>;
-  // Judges a validation: 'tutor' free response against its success
-  // criteria.  Gates like a key-validated question, with the LLM as the
-  // key and its feedback as the retry hint.
-  judgeAnswer?: (
-    question: Question,
-    answer: string
-  ) => Promise<{accepted: boolean; feedback: string}>;
+  /** Called when the last question is done. */
+  onComplete: () => void;
 }
 
-function answerRecord(
-  step: QuestionsStep,
-  question: Question,
-  fields: Partial<AnswerRecord> & {answer: string},
-  previous?: AnswerRecord
-): AnswerRecord {
-  return {
-    questionId: question.id,
-    stepId: step.id,
-    prompt: question.prompt,
-    contextKind: question.contextKind,
-    at: new Date().toISOString(),
-    attempts: (previous?.attempts || 0) + 1,
-    outcome: 'accepted',
-    ...fields,
-  };
-}
-
-// A key-validated selection is correct when the chosen set is exactly
-// the set of options marked correct.
-function isCorrectSelection(question: Question, chosen: string[]): boolean {
-  const correct = (question.options || [])
-    .filter(o => o.correct)
-    .map(o => o.id);
-  return (
-    correct.length > 0 &&
-    chosen.length === correct.length &&
-    chosen.every(id => correct.includes(id))
-  );
-}
-
-const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
+const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   step,
   inputs,
-  path,
   onAnswer,
   onComplete,
-  getRecommendation,
-  judgeAnswer,
 }) => {
   const [qIndex, setQIndex] = useState(0);
-  const [freeText, setFreeText] = useState('');
-  const [selectedIds, setSelectedIds] = useState<string[]>([]);
-  const [scaleValue, setScaleValue] = useState<number | undefined>(undefined);
-  const [feedback, setFeedback] = useState<
-    {kind: 'correct' | 'incorrect'; text: string} | undefined
-  >();
-  // True while the current question plays its exit animation; the next
-  // question mounts when the timer fires.  Interactions are locked so a
-  // double-click can't submit into the outgoing question.
+  const [feedback, setFeedback] = useState<Feedback | undefined>();
+  // True while the current question plays its exit animation.
   const [exiting, setExiting] = useState(false);
-  // Bumped on every wrong answer so the shake animation restarts even
-  // when the previous attempt was also wrong (the key remounts the
-  // options container).
   const [shakeNonce, setShakeNonce] = useState(0);
+  // Focus moves to a question only once the student has moved at least once.
+  const [navigated, setNavigated] = useState(false);
   const advanceTimer = useRef<ReturnType<typeof setTimeout> | undefined>();
   const exitTimer = useRef<ReturnType<typeof setTimeout> | undefined>();
 
-  // True while a tutor-validated answer is out for judging.
-  const [judging, setJudging] = useState(false);
-
   const question = step.questions[qIndex];
   const isLast = qIndex >= step.questions.length - 1;
-  const visited = new Set(path || []);
-  // Lock inputs while a correct-answer beat, an exit animation, or an
-  // async judgment is in flight.
-  const locked = exiting || judging || feedback?.kind === 'correct';
-
-  // Prefill the controls from the recorded answer whenever the active
-  // question changes.
-  useEffect(() => {
-    const previous = question ? inputs[question.id] : undefined;
-    setFreeText(previous?.optionId ? '' : previous?.answer || '');
-    setSelectedIds(
-      previous?.optionIds || (previous?.optionId ? [previous.optionId] : [])
-    );
-    setScaleValue(previous?.value);
-    setFeedback(undefined);
-    // `inputs` is deliberately not a dependency: prefill happens on
-    // question change, not on every answer save.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step.id, qIndex]);
-
-  // Ask the resolver for a suggested option whenever the active question
-  // changes.  Advisory badge only; a slow answer just appears late.
-  const [recommendedId, setRecommendedId] = useState<string | null>(null);
-  useEffect(() => {
-    setRecommendedId(null);
-    if (!question || !getRecommendation) return;
-    let cancelled = false;
-    getRecommendation(question).then(id => {
-      if (!cancelled) setRecommendedId(id);
-    });
-    return () => {
-      cancelled = true;
-    };
-    // Keyed on the question identity, like prefill above.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step.id, qIndex]);
+  const reachable = reachableThrough(step, inputs);
+  const locked = exiting || feedback === 'correct';
 
   useEffect(
     () => () => {
@@ -179,21 +72,15 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
     []
   );
 
-  // Highest question index the student has reached; the progress dots
-  // navigate freely within [0, maxReached].  Advancing past a gated
-  // question still requires answering it, since maxReached only grows
-  // through submission.
-  const [maxReached, setMaxReached] = useState(0);
-
-  // Play the exit animation, then mount the target question (which
-  // enters via its own keyed mount animation).
   const transitionTo = useCallback(
     (target: number) => {
       if (target === qIndex || exiting) return;
+      if (advanceTimer.current) clearTimeout(advanceTimer.current);
       setExiting(true);
-      setMaxReached(m => Math.max(m, target));
       exitTimer.current = setTimeout(() => {
         setExiting(false);
+        setFeedback(undefined);
+        setNavigated(true);
         setQIndex(target);
       }, EXIT_TRANSITION_MS);
     },
@@ -208,339 +95,121 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
     transitionTo(qIndex + 1);
   }, [isLast, onComplete, transitionTo, qIndex]);
 
-  // Record + route one submission.  `branchOptionId` is set when the
-  // student clicked an option that carries a goTo.
-  const submit = useCallback(
-    (fields: Partial<AnswerRecord> & {answer: string}) => {
-      if (!question) return;
-
-      // Tutor-validated free response: async LLM judgment gates like a
-      // key question, with the judge's feedback as the retry hint.  A
-      // judge failure accepts rather than stranding the student.
-      if (
-        question.validation === 'tutor' &&
-        question.type === 'freeResponse' &&
-        judgeAnswer
-      ) {
-        setJudging(true);
-        setFeedback(undefined);
-        judgeAnswer(question, fields.answer)
-          .then(({accepted, feedback: judgeFeedback}) => {
-            setJudging(false);
-            onAnswer(
-              answerRecord(
-                step,
-                question,
-                {...fields, outcome: accepted ? 'correct' : 'incorrect'},
-                inputs[question.id]
-              )
-            );
-            if (!accepted) {
-              setFeedback({
-                kind: 'incorrect',
-                text: judgeFeedback || 'Not quite — try again!',
-              });
-              setShakeNonce(n => n + 1);
-              return;
-            }
-            setFeedback({kind: 'correct', text: judgeFeedback || 'Nice!'});
-            advanceTimer.current = setTimeout(
-              goToNextQuestion,
-              CORRECT_ADVANCE_DELAY_MS
-            );
-          })
-          .catch(() => {
-            setJudging(false);
-            onAnswer(
-              answerRecord(
-                step,
-                question,
-                {...fields, outcome: 'accepted'},
-                inputs[question.id]
-              )
-            );
-            goToNextQuestion();
-          });
-        return;
-      }
-
-      const graded =
-        question.validation === 'key' && (question.options || []).length > 0;
-      const chosen =
-        fields.optionIds || (fields.optionId ? [fields.optionId] : []);
-      const correct = graded ? isCorrectSelection(question, chosen) : undefined;
-
-      onAnswer(
-        answerRecord(
-          step,
-          question,
-          {
-            ...fields,
-            outcome: graded ? (correct ? 'correct' : 'incorrect') : 'accepted',
-          },
-          inputs[question.id]
-        )
-      );
-
-      if (graded && !correct) {
-        setFeedback({kind: 'incorrect', text: 'Not quite — try again!'});
-        setShakeNonce(n => n + 1);
-        return;
-      }
-
-      const branchTarget = fields.optionId
-        ? (question.options || []).find(o => o.id === fields.optionId)?.goTo
-        : undefined;
-      if (branchTarget) {
-        onComplete(fields.optionId);
-        return;
-      }
-
-      if (graded) {
-        // Let the student see the "Correct!" beat before moving on.
-        setFeedback({kind: 'correct', text: 'Correct!'});
-        advanceTimer.current = setTimeout(
-          goToNextQuestion,
-          CORRECT_ADVANCE_DELAY_MS
-        );
-        return;
-      }
-
+  const submit = (chosen: string[]) => {
+    if (question.type !== 'multipleChoice') return;
+    const previous = inputs[question.id];
+    if (isPassed(previous)) {
       goToNextQuestion();
-    },
-    [
-      step,
-      question,
-      inputs,
-      onAnswer,
-      onComplete,
+      return;
+    }
+
+    const record = answerRecord(step, question, chosen, previous);
+    onAnswer(record);
+
+    if (record.outcome === 'incorrect') {
+      setFeedback('incorrect');
+      setShakeNonce(n => n + 1);
+      return;
+    }
+
+    // Let the student see the "Correct!" beat before moving on.
+    setFeedback('correct');
+    advanceTimer.current = setTimeout(
       goToNextQuestion,
-      judgeAnswer,
-    ]
-  );
-
-  if (!question) {
-    // A questions step with no questions — nothing to collect.
-    return (
-      <div className={styles.questionFlow}>
-        <h2>{step.title}</h2>
-        <SubmitButton onClick={() => onComplete()}>Continue →</SubmitButton>
-      </div>
-    );
-  }
-
-  const labelsOf = (ids: string[]) =>
-    (question.options || [])
-      .filter(o => ids.includes(o.id))
-      .map(o => o.label)
-      .join('; ');
-
-  // Selected options get a verdict tint once graded feedback exists.
-  const optionClass = (optionId: string): string => {
-    const classes: string[] = [];
-    if (selectedIds.includes(optionId)) {
-      classes.push(styles.questionOptionSelected);
-      if (feedback) {
-        classes.push(
-          feedback.kind === 'correct'
-            ? styles.questionOptionCorrect
-            : styles.questionOptionWrong
-        );
-      }
-    }
-    return classes.join(' ');
-  };
-
-  const optionsClass = `${styles.questionOptions}${
-    feedback?.kind === 'incorrect' ? ` ${styles.optionsShake}` : ''
-  }`;
-
-  const renderMultipleChoice = () => {
-    if (question.multiSelect) {
-      return (
-        <>
-          <div className={optionsClass} key={shakeNonce}>
-            {(question.options || []).map(o => {
-              const selected = selectedIds.includes(o.id);
-              return (
-                <button
-                  key={o.id}
-                  type="button"
-                  className={optionClass(o.id)}
-                  aria-pressed={selected}
-                  disabled={locked}
-                  onClick={() => {
-                    setSelectedIds(ids =>
-                      selected ? ids.filter(id => id !== o.id) : [...ids, o.id]
-                    );
-                    // A changed selection resets any try-again feedback.
-                    setFeedback(undefined);
-                  }}
-                >
-                  {o.label}
-                  {o.id === recommendedId && (
-                    <span className={styles.suggestedBadge}>✨ Suggested</span>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-          <SubmitButton
-            disabled={selectedIds.length === 0 || locked}
-            onClick={() =>
-              submit({answer: labelsOf(selectedIds), optionIds: selectedIds})
-            }
-          >
-            {isLast ? 'Finish →' : 'Next →'}
-          </SubmitButton>
-        </>
-      );
-    }
-    // Single select: clicking selects, the button below submits — same
-    // rhythm as every other question type, and it gives a revisited
-    // question (previous answer pre-selected) an obvious way onward.
-    return (
-      <>
-        <div className={optionsClass} key={shakeNonce}>
-          {(question.options || []).map(o => (
-            <button
-              key={o.id}
-              type="button"
-              className={optionClass(o.id)}
-              aria-pressed={selectedIds.includes(o.id)}
-              disabled={locked}
-              onClick={() => {
-                setSelectedIds([o.id]);
-                // A new selection resets any try-again feedback.
-                setFeedback(undefined);
-              }}
-            >
-              {o.label}
-              {o.goTo && visited.has(o.goTo) ? ' ✓' : ''}
-              {o.id === recommendedId && (
-                <span className={styles.suggestedBadge}>✨ Suggested</span>
-              )}
-            </button>
-          ))}
-        </div>
-        <SubmitButton
-          disabled={selectedIds.length === 0 || locked}
-          onClick={() => {
-            const chosen = (question.options || []).find(
-              o => o.id === selectedIds[0]
-            );
-            if (chosen) submit({answer: chosen.label, optionId: chosen.id});
-          }}
-        >
-          {isLast ? 'Finish →' : 'Next →'}
-        </SubmitButton>
-      </>
+      CORRECT_ADVANCE_DELAY_MS
     );
   };
-
-  const renderScale = () => {
-    const scale = question.scale || {min: 0, max: 10};
-    const value = scaleValue ?? Math.round((scale.min + scale.max) / 2);
-    return (
-      <>
-        <div className={styles.questionScale}>
-          <span className={styles.questionScaleLabel}>
-            {scale.minLabel || scale.min}
-          </span>
-          <input
-            type="range"
-            min={scale.min}
-            max={scale.max}
-            value={value}
-            aria-label={question.prompt}
-            onChange={e => setScaleValue(Number(e.target.value))}
-          />
-          <span className={styles.questionScaleLabel}>
-            {scale.maxLabel || scale.max}
-          </span>
-        </div>
-        <div className={styles.questionScaleValue}>{value}</div>
-        <SubmitButton
-          disabled={locked}
-          onClick={() => submit({answer: String(value), value})}
-        >
-          {isLast ? 'Finish →' : 'Next →'}
-        </SubmitButton>
-      </>
-    );
-  };
-
-  const renderFreeResponse = () => (
-    <>
-      <textarea
-        className={styles.questionTextarea}
-        value={freeText}
-        placeholder={question.placeholder || 'Type your answer…'}
-        rows={4}
-        onChange={e => setFreeText(e.target.value)}
-      />
-      <SubmitButton
-        disabled={freeText.trim() === '' || locked}
-        onClick={() => submit({answer: freeText.trim()})}
-      >
-        {isLast ? 'Finish →' : 'Next →'}
-      </SubmitButton>
-    </>
-  );
 
   return (
     <div className={styles.questionFlow}>
       {step.questions.length > 1 && (
-        <div className={styles.questionProgress}>
-          {/* The dots double as navigation: any question the student
-              has already reached is one click away.  Unreached dots
-              stay disabled so gated questions can't be skipped. */}
-          {step.questions.map((q, i) => (
-            <button
-              key={q.id}
-              type="button"
-              className={
-                i === qIndex
-                  ? styles.questionDotActive
-                  : i <= maxReached
-                  ? styles.questionDotDone
-                  : ''
-              }
-              aria-label={`Go to question ${i + 1}`}
-              aria-current={i === qIndex ? 'step' : undefined}
-              disabled={i > maxReached || i === qIndex || exiting}
-              onClick={() => transitionTo(i)}
-            />
-          ))}
-        </div>
+        <QuestionProgress
+          questions={step.questions}
+          current={qIndex}
+          reachable={reachable}
+          disabled={locked}
+          onSelect={transitionTo}
+        />
       )}
-      {/* Keyed by question id so each question mounts fresh and plays
-          the entrance animation; the exit class plays it out first. */}
       <div
         key={question.id}
         className={`${styles.questionCard} ${
           exiting ? styles.questionExit : styles.questionEnter
         }`}
       >
-        <h2 className={styles.questionPrompt}>{question.prompt}</h2>
-        {question.type === 'multipleChoice' && renderMultipleChoice()}
-        {question.type === 'scale' && renderScale()}
-        {question.type === 'freeResponse' && renderFreeResponse()}
-        {judging && <div className={styles.muted}>Checking your answer…</div>}
+        {question.type === 'multipleChoice' ? (
+          <MultipleChoiceQuestion
+            question={question}
+            record={inputs[question.id]}
+            feedback={feedback}
+            locked={locked}
+            isLast={isLast}
+            shakeNonce={shakeNonce}
+            focusOnMount={navigated}
+            onSelectionChange={() => setFeedback(undefined)}
+            onSubmit={submit}
+          />
+        ) : (
+          <UnportedQuestion
+            question={question}
+            isLast={isLast}
+            locked={locked}
+            focusOnMount={navigated}
+            onContinue={goToNextQuestion}
+          />
+        )}
+      </div>
+      <div role="status" className={styles.feedbackRegion}>
         {feedback && (
-          <div
+          <span
             className={
-              feedback.kind === 'correct'
+              feedback === 'correct'
                 ? styles.questionFeedbackCorrect
                 : styles.questionFeedbackIncorrect
             }
           >
-            {feedback.text}
-          </div>
+            {FEEDBACK_TEXT[feedback]}
+          </span>
         )}
       </div>
     </div>
   );
 };
 
-export default QuestionFlow;
+interface UnportedQuestionProps {
+  question: Question;
+  isLast: boolean;
+  locked: boolean;
+  focusOnMount: boolean;
+  onContinue: () => void;
+}
+
+const UnportedQuestion: React.FunctionComponent<UnportedQuestionProps> = ({
+  question,
+  isLast,
+  locked,
+  focusOnMount,
+  onContinue,
+}) => {
+  const heading = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (focusOnMount) heading.current?.focus();
+  }, [focusOnMount]);
+
+  return (
+    <>
+      <h2 ref={heading} tabIndex={-1} className={shared.questionPrompt}>
+        {question.text}
+      </h2>
+      <p className={shared.muted}>
+        This question type ({question.type}) is not available yet.
+      </p>
+      <SubmitButton locked={locked} onClick={onContinue}>
+        {isLast ? 'Finish →' : 'Continue →'}
+      </SubmitButton>
+    </>
+  );
+};
+
+export default QuestionsStep;

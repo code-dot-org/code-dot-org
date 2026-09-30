@@ -1,6 +1,7 @@
 import {act, renderHook} from '@testing-library/react-hooks';
 
 import {
+  AnswerRecord,
   EMPTY_PROGRESS,
   Progress,
   checkpointStatus,
@@ -127,5 +128,35 @@ describe('useProgress', () => {
     ]);
     act(() => result.current.reset());
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
+  });
+
+  it('keeps the latest answer per question and clears answers on reset', async () => {
+    const store = fakeStore(undefined);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useProgress(pathway, key, store)
+    );
+    await waitForNextUpdate();
+    const record = (questionId: string, attempts: number): AnswerRecord => ({
+      questionId,
+      stepId: 'quiz',
+      prompt: questionId,
+      answer: 'A',
+      optionId: 'a',
+      outcome: attempts > 1 ? 'correct' : 'incorrect',
+      attempts,
+      at: '2026-09-30T00:00:00.000Z',
+    });
+    act(() => result.current.recordAnswer(record('q1', 1)));
+    act(() => result.current.recordAnswer(record('q2', 1)));
+    act(() => result.current.recordAnswer(record('q1', 2)));
+    expect(result.current.inputs).toEqual({
+      q1: record('q1', 2),
+      q2: record('q2', 1),
+    });
+    expect(store.saved[store.saved.length - 1].inputs).toEqual(
+      result.current.inputs
+    );
+    act(() => result.current.reset());
+    expect(result.current.inputs).toEqual({});
   });
 });

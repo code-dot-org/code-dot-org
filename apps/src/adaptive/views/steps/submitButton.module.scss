@@ -1,0 +1,7 @@
+// The doubled class out-specifies MUI's emotion classes without leaning on
+// stylesheet order.
+.pillButton.pillButton {
+  border-radius: 999px;
+  padding-left: 28px;
+  padding-right: 28px;
+}

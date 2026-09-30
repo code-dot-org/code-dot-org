@@ -326,6 +326,18 @@ describe('referenceProblems', () => {
     ]);
   });
 
+  it('flags a question id used in two steps, once', () => {
+    const raw = served();
+    const quiz = raw.checkpoints[0].steps[1];
+    raw.checkpoints[2].steps = [
+      {...quiz, id: 'quiz-2'},
+      {...quiz, id: 'quiz-3'},
+    ];
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints: question id 'q1' is used more than once",
+    ]);
+  });
+
   it('flags a project step whose level does not share the template', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
