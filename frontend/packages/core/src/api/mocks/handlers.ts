@@ -1,5 +1,6 @@
 import type {RequestHandler} from 'msw';
 
+import {aiGatewayHandlers} from './aiGateway.handlers';
 import {assetsHandlers} from './assets.handlers';
 import {channelsHandlers} from './channels.handlers';
 import {dispatchHandlers} from './dispatch.handlers';
@@ -28,6 +29,7 @@ export function getMockHandlers(): RequestHandler[] {
     ...projectsHandlers,
     ...usersHandlers,
     ...assetsHandlers,
+    ...aiGatewayHandlers,
     ...usersHandlers,
   ];
 }
