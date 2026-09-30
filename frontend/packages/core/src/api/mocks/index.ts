@@ -33,3 +33,10 @@ export {
   maybeResetFromUrl,
 } from './scenarioStore';
 export * from './users.handlers';
+export {
+  AI_GATEWAY_MOCK_PATH,
+  CANNED_TEXT,
+  cannedGatewayResponse,
+  cannedValueFor,
+} from './aiGateway.handlers';
+export {CANNED_IMAGE_PNG_BASE64} from './aiGateway.cannedImage';
