@@ -254,26 +254,44 @@ class QuickAssignHelperTest < ActionController::TestCase
     assert_empty grouped_offerings
   end
 
-  test 'featured HoC and PL offerings are grouped under Recommended instead of their own header' do
-    featured_course_offering = create(:course_offering, marketing_initiative: 'HOC', header: 'Favorites', is_featured: true)
-    favorite_course_offering = create(:course_offering, marketing_initiative: 'HOC', header: 'Favorites')
-    course_offering = create(:course_offering, marketing_initiative: 'HOC', header: 'A Header')
+  test 'featured PL offerings are grouped under Recommended instead of their own header' do
+    featured_course_offering = create(:course_offering, header: 'Self-Paced', is_featured: true)
+    self_paced_course_offering = create(:course_offering, header: 'Self-Paced')
+    course_offering = create(:course_offering, header: 'A Header')
 
     teacher = create(:teacher)
-    grouped_offerings = QuickAssignHelper.group_hoc_and_pl_offerings([course_offering, favorite_course_offering, featured_course_offering], teacher, I18n.default_locale)
+    grouped_offerings = QuickAssignHelper.group_hoc_and_pl_offerings([course_offering, self_paced_course_offering, featured_course_offering], teacher, I18n.default_locale)
 
     assert_equal 1, grouped_offerings['Recommended'].length
     assert_equal featured_course_offering.id, grouped_offerings['Recommended'][0][:id]
 
     # The featured offering is listed once, not under both headers.
-    assert_equal 1, grouped_offerings['Favorites'].length
-    assert_equal favorite_course_offering.id, grouped_offerings['Favorites'][0][:id]
+    assert_equal 1, grouped_offerings['Self-Paced'].length
+    assert_equal self_paced_course_offering.id, grouped_offerings['Self-Paced'][0][:id]
 
-    assert_equal ['Recommended', 'Favorites', 'A Header'], grouped_offerings.keys
+    assert_equal ['Recommended', 'A Header', 'Self-Paced'], grouped_offerings.keys
   end
 
-  test 'featured HoC and PL offerings without a header are still ignored' do
-    no_header_course_offering = create(:course_offering, marketing_initiative: 'HOC', is_featured: true)
+  test 'featured HoC and HoAI offerings stay under their own header' do
+    hoc_course_version = create(:course_version)
+    hoc_course_version.content_root.update!(published_state: 'stable')
+    hoc_course_version.course_offering.update!(marketing_initiative: 'HOC', header: 'Favorites', grade_levels: '11', curriculum_type: 'Course', is_featured: true)
+
+    hoai_course_version = create(:course_version)
+    hoai_course_version.content_root.update!(published_state: 'stable')
+    hoai_course_version.course_offering.update!(marketing_initiative: 'HOAI', header: 'HoAI Test', is_featured: true)
+
+    teacher = create(:teacher)
+    course_offerings = QuickAssignHelper.course_offerings(teacher, I18n.default_locale, 'student')
+
+    assert_equal ['Favorites'], course_offerings[:hoc].keys
+    assert_equal ['HoAI Test'], course_offerings[:hoai].keys
+    # The same offering is still recommended in its grade band.
+    assert_equal ['Recommended'], course_offerings[:high]['Course'].keys
+  end
+
+  test 'featured PL offerings without a header are still ignored' do
+    no_header_course_offering = create(:course_offering, is_featured: true)
 
     teacher = create(:teacher)
     grouped_offerings = QuickAssignHelper.group_hoc_and_pl_offerings([no_header_course_offering], teacher, I18n.default_locale)

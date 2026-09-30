@@ -974,9 +974,11 @@ export const noRecommendedVersionsOfferings = {
 The quick assign endpoint groups a featured course offering under a 'Recommended'
 header in place of the header the offering was assigned, and sorts 'Recommended'
 ahead of every other header including 'Favorites' and 'Year Long'. See
-QuickAssignHelper#compare_headers. The two fixtures below are the ones above with
-one offering featured, so the renderers get exercised with a 'Recommended' group
-without disturbing the header counts the other tests assert on.
+QuickAssignHelper#compare_headers. HoC and HoAI ignore is_featured, so only the
+grade-band and PL views can carry a 'Recommended' group. The two fixtures below
+are the ones above with one offering featured, so the renderers get exercised
+with a 'Recommended' group without disturbing the header counts the other tests
+assert on.
 */
 
 const [featuredHighSchoolCourse, ...remainingYearLongCourses] =
@@ -992,12 +994,13 @@ export const highSchoolCourseOfferingsWithRecommended = {
   },
 };
 
-const {Favorites: featuredHocCourses, ...remainingHocHeaders} =
-  hocCourseOfferings.hoc;
+const [featuredPlCourse, ...remainingWorkshopCourses] =
+  plCourseOfferings.pl['6–12 Virtual Academic Year Workshops'];
 
-export const hocCourseOfferingsWithRecommended = {
-  hoc: {
-    Recommended: featuredHocCourses,
-    ...remainingHocHeaders,
+export const plCourseOfferingsWithRecommended = {
+  pl: {
+    Recommended: [featuredPlCourse],
+    '6–12 Virtual Academic Year Workshops': remainingWorkshopCourses,
+    'Self-Paced': plCourseOfferings.pl['Self-Paced'],
   },
 };

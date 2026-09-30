@@ -223,6 +223,10 @@ export default function CourseOfferingEditor(props) {
             curriculum catalog.
           </p>
           <p>
+            The Hour of Code and Hour of AI lists in quick assign ignore this
+            flag: a featured offering stays under its own Header there.
+          </p>
+          <p>
             A course offering still needs a Header to appear in quick assign at
             all. Featuring one promotes it; it does not publish it.
           </p>

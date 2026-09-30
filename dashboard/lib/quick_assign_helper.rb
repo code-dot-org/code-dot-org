@@ -12,8 +12,8 @@ module QuickAssignHelper
     offerings[:elementary] = group_grade_level_offerings(assignable_elementary_offerings, user, locale)
     offerings[:middle] = group_grade_level_offerings(assignable_middle_offerings, user, locale)
     offerings[:high] = group_grade_level_offerings(assignable_high_offerings, user, locale)
-    offerings[:hoc] = group_hoc_and_pl_offerings(assignable_hoc_offerings, user, locale)
-    offerings[:hoai] = group_hoc_and_pl_offerings(assignable_hoai_offerings, user, locale)
+    offerings[:hoc] = group_hoc_and_pl_offerings(assignable_hoc_offerings, user, locale, recommend_featured: false)
+    offerings[:hoai] = group_hoc_and_pl_offerings(assignable_hoai_offerings, user, locale, recommend_featured: false)
 
     unless participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       # Courses with a participant_audience of student are shown in other places
@@ -82,12 +82,14 @@ module QuickAssignHelper
   # The offerings within a header will be sorted alphabetically by display_name.
   # Any course_offerings that do not have a header will be ignored, whether or not they
   # are featured. See header_for.
-  def self.group_hoc_and_pl_offerings(course_offerings, user, locale)
+  # With recommend_featured: false, as for HoC and HoAI, is_featured is ignored and every
+  # offering stays under its own header.
+  def self.group_hoc_and_pl_offerings(course_offerings, user, locale, recommend_featured: true)
     data = {}
     course_offerings.each do |co|
       next if co.header.blank?
 
-      header = header_for(co)
+      header = recommend_featured ? header_for(co) : localized_header(co.header)
       data[header] ||= []
       data[header].append(co.summarize_for_quick_assign(user, locale))
     end

@@ -7,8 +7,8 @@ import i18n from '@cdo/locale';
 
 import {
   hocCourseOfferings,
-  hocCourseOfferingsWithRecommended,
   plCourseOfferings,
+  plCourseOfferingsWithRecommended,
 } from './CourseOfferingsTestData';
 
 const DEFAULT_PROPS = {
@@ -48,13 +48,18 @@ describe('QuickAssignTable', () => {
   });
 
   it('renders a Recommended header at the top of the first column', () => {
-    const wrapper = setUp(MARKETING_AUDIENCE.HOC, {
-      courseOfferings: hocCourseOfferingsWithRecommended,
+    const wrapper = setUp(MARKETING_AUDIENCE.PL, {
+      courseOfferings: plCourseOfferingsWithRecommended,
     });
     expect(wrapper.find('table').length).toBe(3);
-    // 'Recommended' sorts first, so it lands in table 0 where 'Favorites' used to.
+    // 'Recommended' sorts first, so it takes table 0 and pushes the others right.
     expect(wrapper.find('table').at(0).contains('Recommended')).toBe(true);
-    expect(wrapper.find('table').at(0).contains('Favorites')).toBe(false);
+    expect(
+      wrapper
+        .find('table')
+        .at(1)
+        .contains('6–12 Virtual Academic Year Workshops')
+    ).toBe(true);
   });
 
   it('renders Professional Learning as the first and only table/column header', () => {
