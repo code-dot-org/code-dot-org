@@ -1701,6 +1701,8 @@ __metadata:
     "@fortawesome/react-fontawesome": "npm:^3.3.0"
     "@mui/material": "catalog:"
     "@reduxjs/toolkit": "npm:^1.9.7"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/react": "catalog:"
     "@types/d3-selection": "npm:^3.0.11"
     "@types/d3-transition": "npm:^3.0.9"
     "@types/d3-zoom": "npm:^3.0.8"

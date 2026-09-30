@@ -1,21 +1,16 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {act, createElement} from 'react';
-import {createRoot} from 'react-dom/client';
+import {act, fireEvent, render, screen} from '@testing-library/react';
+import {createElement} from 'react';
 
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import TreeCanvas from '../../src/UIComponents/TreeCanvas';
-
-import moduleStyles from '../../src/UIComponents/treeCanvas.module.scss';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
 const TOOLBAR_LEFT = 8;
 const TOOLBAR_WIDTH = 40;
 
 let viewportSize;
 let resizeCallbacks;
-let root;
 
 vi.stubGlobal(
   'ResizeObserver',
@@ -37,29 +32,26 @@ function resizeViewport(width, height) {
   act(() => resizeCallbacks.forEach(callback => callback([])));
 }
 
-function render(props = {}) {
-  root = createRoot(document.body.appendChild(document.createElement('div')));
-  act(() =>
-    root.render(
+function renderCanvas(props = {}) {
+  render(
+    createElement(
+      ThemeProvider,
+      {theme: getMuiThemeForBrand(undefined)},
       createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(
-          TreeCanvas,
-          {contentWidth: 752, contentHeight: 312, ...props},
-          'tree',
-        ),
+        TreeCanvas,
+        {contentWidth: 752, contentHeight: 312, ...props},
+        'tree',
       ),
     ),
   );
 }
 
-function button(label) {
-  return document.querySelector(`button[aria-label="${label}"]`);
+function button(name) {
+  return screen.getByRole('button', {name});
 }
 
 function contentTransform() {
-  return document.querySelector(`.${moduleStyles.content}`).style.transform;
+  return screen.getByText('tree').style.transform;
 }
 
 function contentScale() {
@@ -87,14 +79,10 @@ describe('TreeCanvas', () => {
       },
     );
   });
-  afterEach(() => {
-    act(() => root.unmount());
-    document.body.innerHTML = '';
-    vi.restoreAllMocks();
-  });
+  afterEach(() => vi.restoreAllMocks());
 
   it('fits the content beside the toolbar once the viewport has room', () => {
-    render();
+    renderCanvas();
     resizeViewport(0, 0);
 
     expect(contentTransform()).toBe('');
@@ -105,7 +93,7 @@ describe('TreeCanvas', () => {
   });
 
   it('refits when the viewport resizes', () => {
-    render();
+    renderCanvas();
     resizeViewport(472, 360);
     resizeViewport(848, 360);
 
@@ -113,22 +101,20 @@ describe('TreeCanvas', () => {
   });
 
   it('zooms in a whole step per click, however fast the clicks come', async () => {
-    render();
+    renderCanvas();
     resizeViewport(472, 360);
 
-    act(() => {
-      button('Zoom in').click();
-      button('Zoom in').click();
-    });
+    fireEvent.click(button('Zoom in'));
+    fireEvent.click(button('Zoom in'));
 
     await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25 * 1.25));
   });
 
   it('zooms to the path beside the toolbar', async () => {
-    render({pathBounds: {x: 0, y: 208, width: 160, height: 104}});
+    renderCanvas({pathBounds: {x: 0, y: 208, width: 160, height: 104}});
     resizeViewport(472, 360);
 
-    act(() => button('Zoom to your path').click());
+    fireEvent.click(button('Zoom to your path'));
 
     await vi.waitFor(() =>
       expect(contentTransform()).toBe('translate(180px, -80px) scale(1)'),
@@ -136,7 +122,7 @@ describe('TreeCanvas', () => {
   });
 
   it('lets keyboard users reach why zooming to the path is unavailable', () => {
-    render();
+    renderCanvas();
 
     expect(button('Zoom to your path').disabled).toBe(true);
     expect(button('Zoom to your path').parentElement.tabIndex).toBe(0);

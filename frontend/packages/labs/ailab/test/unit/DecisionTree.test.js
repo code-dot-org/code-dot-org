@@ -1,6 +1,6 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {act, createElement} from 'react';
-import {createRoot} from 'react-dom/client';
+import {act, render, screen} from '@testing-library/react';
+import {createElement} from 'react';
 import {Provider} from 'react-redux';
 
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
@@ -14,7 +14,6 @@ import {levelStore} from './levelStore';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 vi.stubGlobal(
   'ResizeObserver',
   class {
@@ -22,25 +21,6 @@ vi.stubGlobal(
     disconnect() {}
   },
 );
-
-let root;
-
-function render(store) {
-  root = createRoot(document.body.appendChild(document.createElement('div')));
-  act(() =>
-    root.render(
-      createElement(
-        Provider,
-        {store},
-        createElement(
-          ThemeProvider,
-          {theme: getMuiThemeForBrand(undefined)},
-          createElement(DecisionTree),
-        ),
-      ),
-    ),
-  );
-}
 
 function predictSnake(store) {
   act(() => {
@@ -55,12 +35,23 @@ function renderTrainedTree() {
   train.reset();
   train.init(store);
   train.onClickTrain();
-  render(store);
+  render(createElement(DecisionTree), {
+    wrapper: ({children}) =>
+      createElement(
+        Provider,
+        {store},
+        createElement(
+          ThemeProvider,
+          {theme: getMuiThemeForBrand(undefined)},
+          children,
+        ),
+      ),
+  });
   return store;
 }
 
 function zoomToPathButton() {
-  return document.querySelector('[aria-label="Zoom to your path"]');
+  return screen.getByRole('button', {name: 'Zoom to your path'});
 }
 
 function slotPosition(node) {
@@ -73,11 +64,7 @@ describe('DecisionTree', () => {
   beforeEach(() => {
     store = renderTrainedTree();
   });
-  afterEach(() => {
-    act(() => root.unmount());
-    document.body.innerHTML = '';
-    I18n.reset();
-  });
+  afterEach(() => I18n.reset());
 
   it('marks every node as either a question or an answer', () => {
     const nodes = [...document.getElementsByClassName(moduleStyles.node)];

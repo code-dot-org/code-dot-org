@@ -53,6 +53,8 @@
     "@fortawesome/react-fontawesome": "^3.3.0",
     "@mui/material": "catalog:",
     "@reduxjs/toolkit": "^1.9.7",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/react": "catalog:",
     "@types/d3-selection": "^3.0.11",
     "@types/d3-transition": "^3.0.9",
     "@types/d3-zoom": "^3.0.8",
