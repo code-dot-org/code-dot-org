@@ -85,9 +85,7 @@ const PLAN_DOC = `${COMPONENT_DIR}/${component.toUpperCase().replace(/-/g, '_')}
 const UI_TEST_DIRS = 'dashboard/test/ui/features, dashboard/test/ui/step_definitions and frontend/packages/e2e-tests/tests'
 const COMMIT_TRAILER = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-code)'
-// Aliases, so each resolves to the current release. Discover gathers facts on Sonnet;
-// code, gates and git run on Opus. Every agent pins its effort, so a run behaves the same
-// whoever starts it: xhigh to write or diagnose, high to discover or gate, medium for git.
+// Every agent pins model and effort, so a run behaves the same whatever session starts it.
 const READ_MODEL = 'sonnet'
 const WORK_MODEL = 'opus'
 const DEEP_EFFORT = 'xhigh'
@@ -129,7 +127,7 @@ const ROW_SCHEMA = {
 const DISCOVER_SCHEMA = {
   type: 'object',
   required: [
-    'preflight', 'headOnBase', 'branchOwner', 'preexistingUntracked', 'planDocFound', 'statusState',
+    'preflight', 'headOnBase', 'branchOwner', 'finishBranches', 'preexistingUntracked', 'planDocFound', 'statusState',
     'legacySourceFiles', 'legacyExports', 'legacyImports', 'eslintBanPresent', 'codemod', 'rows',
     'reference', 'consumerFiles', 'consumerTestFiles', 'next', 'notes',
   ],
@@ -137,6 +135,7 @@ const DISCOVER_SCHEMA = {
     preflight: {type: 'array', items: {type: 'string'}, description: 'Blockers found in step 0; [] if none'},
     headOnBase: {type: 'boolean'},
     branchOwner: {type: 'string', description: 'The part before the first "/" of the current branch, or ""'},
+    finishBranches: {type: 'array', items: {type: 'string'}, description: 'Local and origin branches whose last segment starts with finish-, short names without origin/'},
     preexistingUntracked: {type: 'array', items: {type: 'string'}},
     planDocFound: {type: 'boolean'},
     statusState: {type: 'string', description: `The component's state in ${STATUS_DOC}, e.g. "Migrated, behavior pending"`},
@@ -174,7 +173,8 @@ ${TREE_RULES}
   preexistingUntracked); ${publish ? 'gh auth status succeeds.' : 'publish is off; skip gh.'}
   git fetch origin ${base} (skip it when ${base} is a local-only branch). headOnBase is
   true when HEAD is at, or an ancestor of, origin/${base} when that exists, else the local
-  ${base}. branchOwner from the current branch name.
+  ${base}. branchOwner from the current branch name. finishBranches: git branch --list
+  '*finish-*'${publish ? ` and git ls-remote --heads origin '*finish-*'` : ''}.
 
 ─── STEP 1 — Docs ─────────────────────────────────────────────────────────────
   Read ${PLAN_DOC} in full (planDocFound), and the ${component} row of ${STATUS_DOC}
@@ -224,6 +224,14 @@ if (next.kind === 'behavior' && !row) throw new Error(`Discover picked "${next.b
 const stepTitle = row ? row.behavior : 'delete the legacy DSCO source'
 const ticket = jiraKey || (row && row.ticket) || ''
 const remainingAfter = row ? discover.rows.filter(r => r !== row) : discover.rows
+const owner = /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(discover.branchOwner || '') ? discover.branchOwner : 'mui'
+const branchPrefix = branchPrefixArg || `${owner}/mui-${component}`
+const slug = (row ? row.behavior : 'delete-legacy').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+const branch = `${branchPrefix}/finish-${slug}`
+// Checked before Execute: a collision found at Publish would strand the edits uncommitted on the base.
+if (discover.finishBranches.includes(branch)) {
+  throw new Error(`Branch ${branch} already exists (local or origin). Delete it or pass a different branchPrefix.`)
+}
 log(`${component}: ${stepTitle}${ticket ? ` (${ticket})` : ''}; ${discover.rows.length} deferred row(s) in the table`)
 
 // ── Execute ──────────────────────────────────────────────────────────────────
@@ -381,10 +389,6 @@ if (!verify.pass) log(`WARNING: verify still failing after ${attempt} attempt(s)
 // ── Publish ──────────────────────────────────────────────────────────────────
 phase('Publish')
 
-const owner = /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(discover.branchOwner || '') ? discover.branchOwner : 'mui'
-const branchPrefix = branchPrefixArg || `${owner}/mui-${component}`
-const slug = (row ? row.behavior : 'delete-legacy').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-const branch = `${branchPrefix}/finish-${slug}`
 const subject = row
   ? `[MUI Migration] ${componentTitle}: hand ${row.behavior.replace(/`/g, '')} to MUI`
   : `[MUI Migration] ${componentTitle}: delete the legacy DSCO source`
