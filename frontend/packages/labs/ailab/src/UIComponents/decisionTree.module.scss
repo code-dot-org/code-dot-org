@@ -11,11 +11,6 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   margin-bottom: 8px;
 }
 
-.scroll {
-  overflow-x: auto;
-  padding: $path-ring-width $path-ring-width 10px;
-}
-
 .canvas {
   position: relative;
   color: var(--text-neutral-black-fixed, black);

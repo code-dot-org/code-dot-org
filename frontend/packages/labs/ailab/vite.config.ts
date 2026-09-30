@@ -120,6 +120,11 @@ export default defineConfig({
           entryFileNames: '[name].cjs',
           preserveModules: false,
           exports: 'named',
+          // apps loads this build. Without the `__esModule` check, a default
+          // import of a component-library subpath resolves to its namespace
+          // object and React throws "Element type is invalid". Remove once
+          // apps resolves the ESM build.
+          interop: 'auto',
           dir: 'dist',
         },
       ],

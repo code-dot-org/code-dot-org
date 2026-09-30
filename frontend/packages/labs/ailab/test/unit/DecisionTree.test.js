@@ -1,5 +1,5 @@
-import {createElement} from 'react';
-import {renderToStaticMarkup} from 'react-dom/server';
+import {act, createElement} from 'react';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import I18n from '../../src/i18n';
@@ -11,10 +11,22 @@ import {levelStore} from './levelStore';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
+let root;
+
 function render(store) {
-  document.body.innerHTML = renderToStaticMarkup(
-    createElement(Provider, {store}, createElement(DecisionTree)),
+  root = createRoot(document.body.appendChild(document.createElement('div')));
+  act(() =>
+    root.render(createElement(Provider, {store}, createElement(DecisionTree))),
   );
+}
+
+function predictSnake(store) {
+  act(() => {
+    store.dispatch(setTestData('legs', '0'));
+    train.onClickPredict(store);
+  });
 }
 
 function renderTrainedTree() {
@@ -27,6 +39,10 @@ function renderTrainedTree() {
   return store;
 }
 
+function zoomToPathButton() {
+  return document.querySelector('[aria-label="Zoom to your path"]');
+}
+
 function slotPosition(node) {
   const {left, top} = node.parentElement.style;
   return [parseFloat(left), parseFloat(top)];
@@ -37,7 +53,11 @@ describe('DecisionTree', () => {
   beforeEach(() => {
     store = renderTrainedTree();
   });
-  afterEach(() => I18n.reset());
+  afterEach(() => {
+    act(() => root.unmount());
+    document.body.innerHTML = '';
+    I18n.reset();
+  });
 
   it('marks every node as either a question or an answer', () => {
     const nodes = [...document.getElementsByClassName(moduleStyles.node)];
@@ -63,10 +83,16 @@ describe('DecisionTree', () => {
     );
   });
 
+  it('offers zooming to the path only once there is a prediction', () => {
+    expect(zoomToPathButton().disabled).toBe(true);
+
+    predictSnake(store);
+
+    expect(zoomToPathButton().disabled).toBe(false);
+  });
+
   it('marks the path from the root to the answer the model predicts', () => {
-    store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict(store);
-    render(store);
+    predictSnake(store);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
     const edges = [...document.getElementsByTagName('path')];
