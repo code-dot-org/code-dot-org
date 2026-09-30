@@ -52,6 +52,7 @@ export const GlobalEditionDefaultRegion = 'us' as const;
 export const GlobalEditionExcludedPaths = [
   "/assets/",
   "/shared/",
+  "/v3/",
   "/api/hour/",
   "/users/auth/",
   "/lti/",
