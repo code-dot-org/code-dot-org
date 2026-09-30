@@ -28,7 +28,6 @@
 
 $features-menu-max-height: 240px;
 
-// No overflow clipping here: the features menu has to extend past the card.
 .card {
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-primary);
@@ -78,7 +77,6 @@ $features-menu-max-height: 240px;
   }
 }
 
-// Two classes, to outrank the library's own width and alignment rules.
 .field .dropdown {
   width: 100%;
   align-items: stretch;
@@ -97,7 +95,7 @@ $features-menu-max-height: 240px;
     }
   }
 
-  // The menu.
+  // The checkbox menu of features.
   > div {
     width: 100%;
     box-sizing: border-box;
