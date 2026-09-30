@@ -434,7 +434,6 @@ const PLAN_SCHEMA = {
         required: {type: 'boolean', description: 'MUST be true unless some propMap entry\'s consumerChange is rewrite (per-site judgment). none and rename are mechanical; drop means the transform skips the call sites passing that prop and lists them. The import and JSX name swap is always mechanical.'},
         rationale: {type: 'string'},
         script: {type: 'string', description: `Path under ${CODEMODS_DIR}, e.g. ${CODEMODS_DIR}/${component}-to-mui.ts, or ""`},
-        yarnScript: {type: 'string', description: `Script name to add to ${LIB}/package.json, e.g. codemod:${component}, or ""`},
         transforms: {type: 'array', items: {type: 'string'}, description: 'Each rewrite the codemod performs, one line each (import specifier, JSX name, prop rename, prop value mapping)'},
         expectedResidue: {type: 'array', items: {type: 'string'}, description: 'What the codemod knowingly leaves for hand work: SCSS specificity against MUI classes, snapshot updates, dropped props, tests that find() the old component'},
       },
@@ -711,7 +710,7 @@ const EXECUTE_SCHEMA = {
         },
       },
     },
-    codemodCommand: {type: 'string', description: `The yarn script consumers run from ${LIB} with a path argument, or "" when the plan required no codemod`},
+    codemodCommand: {type: 'string', description: `The full jscodeshift command consumers run from ${LIB}, paths appended (TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/<file>.ts ...), or "" when the plan required no codemod`},
     deviations: {type: 'array', items: {type: 'string'}, description: 'Every place the code departs from the plan doc, also written into its Deviations section'},
     checks: {
       type: 'object',
@@ -772,12 +771,22 @@ Do, in order:
 3. Stories: one MUI story per twin, same visual state, same launcher pattern as the DSCO
    story. Keep the DSCO stories untouched. Confirm every muiStoryId in
    dist/component-library-storybook/index.json after building Storybook.
-4. Tests: vitest coverage for every propMap entry and every sharedGlobals rule (for a
+4. Tests: vitest covers behavior: every propMap entry, every sharedGlobals rule (for a
    shared scroll lock: open a legacy and an MUI instance, close them out of order, assert
-   the body state), plus the legacy defect fixes; keep the legacy tests running.
+   the body state), roles, ids and focus, and the legacy defect fixes that change
+   behavior (an alt text, a prop honored). Keep the legacy tests running. Never test
+   styling in vitest: no compiling SCSS, no asserting class names, selectors or
+   declarations. Styling and the CSS-only defect fixes are verified in Storybook, where
+   the twins and eyes show them; a fix the default viewport cannot show (a narrow-viewport
+   overflow) gets its own MUI story with that viewport and a play function asserting the
+   rendered geometry.
 5. Codemod, if the plan requires it: ${CODEMODS_DIR}/${component}-to-mui.ts modeled on
-   button-to-mui-button.ts implementing exactly the planned transforms; a yarn script in
-   ${LIB}/package.json; an entry in ${CODEMODS_DIR}/README.md. Dry-run it with
+   button-to-mui-button.ts implementing exactly the planned transforms, and an entry in
+   ${CODEMODS_DIR}/README.md with the full command to run it. No ${LIB}/package.json
+   script: a codemod runs once per migration. Run it as TS_NODE_TRANSPILE_ONLY=true yarn
+   jscodeshift -t <file> --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register,
+   and have the transform pick the ts parser for .ts files (api.jscodeshift.withParser),
+   since tsx rejects the <T>x casts valid there. Dry-run it with
    jscodeshift --dry --print on three consumers from this list and check the output:
    ${JSON.stringify(discover.consumers.filter(c => c.kind === 'apps').slice(0, 6).map(c => c.file))}
    --dry only: reverting a real run would need git checkout, which is forbidden here.
@@ -1432,7 +1441,7 @@ STATE
   The note also names the deferred behaviors (${plan.deferredChanges.map(d => d.behavior).join(', ')}),
   links the "Deferred changes" section of ${PLAN_DOC}, and says they are lifecycle step 5.` : ''}
   ${SKILL_DOC}: ${fullyMigrated ? `move ${componentTitle} into the "Use MUI" list with the import to use and out of "Use DSCO".` : `leave ${componentTitle} under "Use DSCO"; consumers remain.`}
-  ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' next to the button entry, message naming the replacement${exec.codemodCommand ? ' and the codemod command' : ''}. If any non-legacy export still lives at that path, ban only the legacy names with importNames: ${JSON.stringify(legacyExports)}.` : 'No eslint rule: consumers remain on the legacy component.'}
+  ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' next to the button entry, message naming the replacement${exec.codemodCommand ? ` and the codemod file under ${CODEMODS_DIR}` : ''}. If any non-legacy export still lives at that path, ban only the legacy names with importNames: ${JSON.stringify(legacyExports)}.` : 'No eslint rule: consumers remain on the legacy component.'}
   ${PLAN_DOC}: append an "Outcome" section: consumers migrated/left, verify result, parity
   result, apps parity result, codemod files rewritten/untouched.
   Run prettier from ${LIB} on the markdown you changed.
