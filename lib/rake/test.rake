@@ -588,7 +588,7 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   docker/ci/**/*
 )
 
-PLAYWRIGHT_SUITES = {functional: '🎭 Playwright', eyes: '🎭👁️ Playwright Eyes'}.freeze
+PLAYWRIGHT_SUITES = {functional: 'Playwright', eyes: '👁️ Playwright Eyes'}.freeze
 
 # The suites test:ui_all dispatches, and the names its rollups give them, by rollup.
 UI_SUITES_BY_ROLLUP = {
@@ -597,7 +597,7 @@ UI_SUITES_BY_ROLLUP = {
     saucelabs_ui: 'Safari + iPad + iPhone UI',
     devicefarm_desktop_ui: 'Chrome + Firefox UI',
   },
-  'Deploy-time Playwright suites:' => {
+  '🎭 Deploy-time Playwright suites:' => {
     playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
     playwright_eyes: PLAYWRIGHT_SUITES.fetch(:eyes),
   },
