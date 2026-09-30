@@ -8,7 +8,7 @@ export const meta = {
     {title: 'Discover', detail: 'preconditions, the plan doc, the Deferred changes table, which step is next'},
     {title: 'Execute', detail: 'the one step: delete the legacy source, or adopt one deferred MUI behavior'},
     {title: 'Verify', detail: 'package and apps checks, UI-test hooks, import audit; heal loop'},
-    {title: 'Publish', detail: 'one branch, one commit, one draft PR'},
+    {title: 'Publish', detail: 'one commit on the branch made before Execute, one draft PR'},
   ],
 }
 
@@ -94,7 +94,7 @@ const CHECK_EFFORT = 'high'
 const ROUTINE_EFFORT = 'medium'
 const componentTitle = component.charAt(0).toUpperCase() + component.slice(1)
 
-// Same contract as the migration script: agents edit, the Publish agent alone owns git.
+// Same contract as the migration script: agents edit; only the branch and Publish agents write to git.
 const TREE_RULES = `## Working-tree rules
 - All paths are repo-root relative; run commands from the repo root unless told otherwise.
 - Never run git checkout, stash, reset, commit, rebase, clean, or add, except where a step
@@ -262,7 +262,6 @@ const owner = /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(discover.branchOwner || '') ? 
 const branchPrefix = branchPrefixArg || `${owner}/mui-${component}`
 const slug = (row ? row.behavior : 'delete-legacy').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const branch = `${branchPrefix}/finish-${slug}`
-// Checked before Execute: a collision found at Publish would strand the edits uncommitted on the base.
 if (discover.finishBranches.includes(branch)) {
   throw new Error(`Branch ${branch} already exists (local or origin). Delete it or pass a different branchPrefix.`)
 }
@@ -270,6 +269,17 @@ log(`${component}: ${stepTitle}${ticket ? ` (${ticket})` : ''}; ${discover.rows.
 
 // ── Execute ──────────────────────────────────────────────────────────────────
 phase('Execute')
+
+// The branch exists before any edit, so a ref clash stops the run with a clean tree.
+const branched = await agent(
+  `Run from the repo root: git checkout -b ${branch}. Run nothing else. ok is true when
+git branch --show-current then prints ${branch}; otherwise put git's message in error.`,
+  {
+    schema: {type: 'object', required: ['ok', 'error'], properties: {ok: {type: 'boolean'}, error: {type: 'string'}}},
+    label: 'branch', phase: 'Execute', model: WORK_MODEL, effort: ROUTINE_EFFORT,
+  },
+)
+if (!branched || !branched.ok) throw new Error(`Could not create ${branch}: ${branched ? branched.error : 'the branch agent was skipped'}`)
 
 const TOUCHED_SCHEMA = {
   type: 'object',
@@ -446,8 +456,8 @@ const published = await agent(
   `You PUBLISH one finishing step of the MUI "${component}" migration. This step owns git.
 Run from the repo root and stop at the first git error rather than improvising.
 
-1. git branch --list ${branch}; if it exists, stop and report it in leftovers.
-   git checkout -b ${branch}
+1. git branch --show-current must print ${branch}; if it does not, stop and report that
+   in leftovers.
 2. git add -- the files that changed and exist or were deleted, from this list:
    ${JSON.stringify(touched)}
    NEVER stage ${JSON.stringify(discover.preexistingUntracked)}, anything under ${STORYBOOK}/dist,
@@ -473,7 +483,13 @@ ${publish ? `4. git push -u origin ${branch}; then gh pr create --draft --base $
 Report the branch, the commit sha, the PR URL and leftovers.`,
   {schema: PUBLISH_SCHEMA, label: 'publish', phase: 'Publish', model: WORK_MODEL, effort: ROUTINE_EFFORT},
 )
-if (!published) throw new Error('publish agent was skipped; the tree may hold uncommitted work')
+if (!published) throw new Error(`publish agent was skipped; ${branch} may hold uncommitted work`)
+if (!published.sha || published.branch !== branch) {
+  throw new Error(`Publish made no commit on ${branch}; the edits are uncommitted there. ${published.leftovers.join('; ')}`)
+}
+if (publish && !published.prUrl) {
+  throw new Error(`Committed ${published.sha} on ${branch}, but no PR was opened. ${published.leftovers.join('; ')}`)
+}
 if (published.leftovers.length) log(`WARNING: leftovers: ${published.leftovers.join(', ')}`)
 log(`Done: ${published.branch} ${published.sha}${published.prUrl ? ` ${published.prUrl}` : ' (local only)'}`)
 
