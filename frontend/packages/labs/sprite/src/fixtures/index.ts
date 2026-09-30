@@ -1,6 +1,7 @@
 import type {LabFixtures} from '@code-dot-org/core/api/mocks';
 
 import freeplay from './freeplay';
+import image from './image';
 import simple from './simple';
 
 // Per-tag scenarios for Sprite Lab. Studio's MSW boot registers
@@ -9,4 +10,5 @@ import simple from './simple';
 export const SpriteFixtures: LabFixtures = {
   simple,
   freeplay,
+  image,
 };

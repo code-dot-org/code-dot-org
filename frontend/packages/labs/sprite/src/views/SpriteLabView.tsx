@@ -28,6 +28,7 @@ import {SPRITELAB2_BLOCKS} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {animationSourceUrl} from '../engine/animations';
 import {SpriteLabEngine} from '../engine/Engine';
+import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {imageTypeFromCategories} from '../imageGallery';
 import {
   collectImageReferences,
@@ -42,6 +43,7 @@ import {
   adlibSetForMode,
   DEFAULT_IMAGE_STYLE,
   isFreeplayMode,
+  isImageMode,
   tabsForMode,
 } from '../levelMode';
 import {migrateBlockTypes, migrateScenes} from '../migrateSources';
@@ -79,6 +81,7 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
+import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import {type ArrowSet, arrowSetFor} from './playBar';
 import Playspace, {type PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
@@ -735,6 +738,58 @@ const SpriteLabView: FunctionComponent = () => {
   }, [activeTab]);
   const activeWorld = worldFor(activeScene);
 
+  // Counted from the sources the level loaded with, so image steps count
+  // only what this level adds; the project is shared across the unit.
+  const baselineImages = useMemo(
+    () =>
+      countImagesByType(
+        sourcesRef.current.animations ?? {orderedKeys: [], propsByKey: {}},
+      ),
+    // Once per level: later sources are this level's own work.
+    [levelProperties.id],
+  );
+  const guide = useGuideSteps({
+    steps: levelProperties.guideSteps,
+    grid: activeWorld.grid,
+    activeTab,
+    animations: animationList,
+    baselineImages,
+    fallback: levelProperties.longInstructions,
+  });
+  // The guide's size, which Play lays the game out around. An equal report
+  // keeps the old object, so nothing below re-renders mid-animation.
+  const [guideSize, setGuideSize] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
+  const handleGuideLayout = useCallback(
+    (size: {width: number; height: number}) =>
+      setGuideSize(prev =>
+        prev && prev.width === size.width && prev.height === size.height
+          ? prev
+          : size,
+      ),
+    [],
+  );
+
+  // One set of props for both of the pane's places: the Images tab, and an
+  // image level, where the pane is the whole lab.
+  const imagePaneProps = {
+    uploadImage,
+    onRenameImage: handleRenameImage,
+    onDeleteImage: handleDeleteImage,
+    lockedImageType: levelProperties.levelMode?.imageType,
+    lockedImageSubject: levelProperties.levelMode?.imageSubject,
+    imageRole: levelProperties.levelMode?.imageRole,
+    advanced: imageParams.advanced,
+    adlibSet:
+      imageParams.adlibSet || adlibSetForMode(levelProperties.levelMode),
+    // Words come from the adlibs unless ?image-free-text=true.
+    adlibOnly: !imageParams.freeText,
+    defaultStyle: DEFAULT_IMAGE_STYLE,
+    paintDisabled: !isFreeplayMode(levelProperties.levelMode),
+  };
+
   // The palette selection lives here so it survives leaving the tab. Only
   // a choice the student made holds against the level's default.
   const [worldPaletteSelection, setWorldPaletteSelection] = useState<
@@ -1029,6 +1084,24 @@ const SpriteLabView: FunctionComponent = () => {
     }
   }, [playspaceMode]);
 
+  if (isImageMode(levelProperties.levelMode)) {
+    // The image pane is the whole lab, with the guide over it; there is no
+    // stage, so no engine starts.
+    return (
+      <div className={moduleStyles.labRow}>
+        <div className={moduleStyles.imageLevelArea}>
+          <GenerateImagePane imageLevel {...imagePaneProps} />
+          <GenerateSpriteLab
+            levelMode={levelProperties.levelMode}
+            instructions={guide.text}
+            showContinue={guide.showContinue}
+            levelProperties={levelProperties}
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={moduleStyles.labRow}>
       <TabShell
@@ -1084,23 +1157,7 @@ const SpriteLabView: FunctionComponent = () => {
             }}
           >
             <div className={moduleStyles.imagesTab}>
-              <GenerateImagePane
-                uploadImage={uploadImage}
-                onRenameImage={handleRenameImage}
-                onDeleteImage={handleDeleteImage}
-                lockedImageType={levelProperties.levelMode?.imageType}
-                lockedImageSubject={levelProperties.levelMode?.imageSubject}
-                imageRole={levelProperties.levelMode?.imageRole}
-                advanced={imageParams.advanced}
-                adlibSet={
-                  imageParams.adlibSet ||
-                  adlibSetForMode(levelProperties.levelMode)
-                }
-                // Words come from the adlibs unless ?image-free-text=true.
-                adlibOnly={!imageParams.freeText}
-                defaultStyle={DEFAULT_IMAGE_STYLE}
-                paintDisabled={!isFreeplayMode(levelProperties.levelMode)}
-              />
+              <GenerateImagePane {...imagePaneProps} />
             </div>
           </div>
         )}
@@ -1177,8 +1234,23 @@ const SpriteLabView: FunctionComponent = () => {
           fadeTrigger={fadeTrigger}
           covered={jumpCover}
           loading={externalLoading}
+          guideSize={levelProperties.levelMode ? guideSize : null}
           onPreviewClick={handlePreviewClick}
         />
+
+        {/* On a level with a mode, the guide follows the student across
+            every tab, narrowing on Play to leave the game room. */}
+        {!!levelProperties.levelMode && (
+          <GenerateSpriteLab
+            levelMode={levelProperties.levelMode}
+            width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
+            onLayout={handleGuideLayout}
+            instructions={guide.text}
+            collapsedText={guide.collapsedText}
+            showContinue={guide.showContinue}
+            levelProperties={levelProperties}
+          />
+        )}
       </TabShell>
     </div>
   );

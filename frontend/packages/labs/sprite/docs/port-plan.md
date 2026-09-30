@@ -145,6 +145,11 @@ Changes outside the package that the wiring needed:
   site's image through the media proxy (`needsMediaProxy`, which the lab's
   own `mediaUrl` now shares). A `data:` image source is taken as the image,
   with no request.
+- `@code-dot-org/lab`: `Guide` caught up with apps' (`collapsed`,
+  `panelRef`, a width in px, and the offsets siblings lay out around), and
+  `NavigationArea` is exported from `./instructions`. Its Continue button
+  already says only Continue or Finish, so apps' `textVariant` did not
+  come.
 - Studio: the project edit route wraps the lab in `LabProviders` and
   `LabHost`, as the music branch does, and `FullHeightLabFrame` lets the
   lab's theme wrapper fill it.
@@ -165,10 +170,11 @@ Done: the pixel editor (`src/pixelEditor`), `paintBlank.ts`, the
 generation modules (`src/ai/images`), `useImageSession`, and the Images
 tab: `GenerateImagePane`, `GenerateImageView` and `ImageDetailsDialog`
 in `SpriteLabView`, with rename and delete reaching every reference. The
-`freeplay` fixture offers the paint tools, which only freeplay levels
-have. Still to come: image levels, where the pane replaces the tabs, and
-the guide (`GenerateSpriteLab`), which needs props lab-base's `Guide`
-lacks.
+guide (`GenerateSpriteLab`) floats over any level with a mode, following
+its `guideSteps`, and an image level is the pane alone, with the guide
+over it and no engine. Fixtures: `freeplay` offers the paint tools, which
+only freeplay levels have; `image` is an image level whose guide moves on
+once a character is made.
 
 ### 7. Scene music
 
