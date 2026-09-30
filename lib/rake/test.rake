@@ -683,7 +683,7 @@ def run_playwright_suite(suite, blocking:, env: {}, env_secrets: {})
   report = "#{label} e2e tests for <b>dashboard</b>: #{status}\n"
   report += pass_fail_line
   report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
-  report += %(\nVisual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url && !passed
+  report += %( Visual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url
   ChatClient.log report, color: color
 
   passed
