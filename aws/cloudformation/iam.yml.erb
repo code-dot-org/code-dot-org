@@ -1210,8 +1210,7 @@ roles.each do |name, config| %>
               - Sid: ManagedGrafanaWorkspace
                 Effect: Allow
                 Action:
-                  # - grafana:CreateWorkspace
-                  # - grafana:DeleteWorkspace
+                  # Specifically not grafana:DeleteWorkspace grafana:CreateWorkspace
                   - grafana:DescribeWorkspace
                   - grafana:DescribeWorkspaceAuthentication
                   - grafana:DescribeWorkspaceConfiguration
@@ -1231,8 +1230,7 @@ roles.each do |name, config| %>
               - Sid: ManagedPrometheusWorkspace
                 Effect: Allow
                 Action:
-                  # - aps:CreateWorkspace
-                  # - aps:DeleteWorkspace
+                  # Specifically not aps:CreateWorkspace aps:DeleteWorkspace
                   - aps:DescribeWorkspace
                   - aps:DescribeLoggingConfiguration
                   - aps:UpdateWorkspaceAlias
@@ -1244,9 +1242,7 @@ roles.each do |name, config| %>
               - Sid: GrafanaWorkspaceIamRole
                 Effect: Allow
                 Action:
-                  # - iam:CreateRole
-                  # - iam:DeleteRole
-                  # - iam:ListInstanceProfilesForRole
+                  # Specifically not iam:CreateRole iam:DeleteRole iam:ListInstanceProfilesForRole
                   - iam:GetRole
                   - iam:UpdateRole
                   - iam:UpdateAssumeRolePolicy
