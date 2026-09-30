@@ -1,8 +1,4 @@
-import {
-  makeRoom,
-  roomFor,
-  STACK_GAP_PX,
-} from '@cdo/apps/p5lab/spritelab/lab2/stackRoom';
+import {makeRoom} from '@cdo/apps/p5lab/spritelab/lab2/stackRoom';
 
 function stacks(...specs: [string, number, number, number?, number?][]) {
   const moves: [string, number][] = [];
@@ -56,10 +52,5 @@ describe('stackRoom', () => {
     const {boxes, moves} = stacks(['run', 0, 10], ['far', 500, 10]);
     makeRoom(boxes, 50);
     expect(moves).toEqual([]);
-  });
-
-  it('leaves room for the tallest toolbox block plus the gap', () => {
-    expect(roomFor([40, 96, 60])).toBe(96 + STACK_GAP_PX);
-    expect(roomFor([])).toBe(STACK_GAP_PX);
   });
 });

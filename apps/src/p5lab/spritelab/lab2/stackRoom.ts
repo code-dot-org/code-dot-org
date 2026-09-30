@@ -1,7 +1,8 @@
 import * as BlocklyCore from 'blockly/core';
 
-// Between one stack's bottom and the next stack's top.
-export const STACK_GAP_PX = 24;
+// Between one stack's bottom and the next stack's top: one plain block's
+// height, so there is always somewhere to drop the next block.
+export const STACK_GAP_PX = 34;
 
 export interface StackBox {
   x: number;
@@ -33,23 +34,10 @@ export function makeRoom(stacks: StackBox[], room: number): void {
   });
 }
 
-/** The room to keep under a stack: the tallest block the toolbox offers,
-    plus the gap, so any of them can be added there. */
-export function roomFor(toolboxBlockHeights: number[]): number {
-  return Math.max(0, ...toolboxBlockHeights) + STACK_GAP_PX;
-}
-
 function stackBox(block: BlocklyCore.BlockSvg): StackBox {
   const {x, y} = block.getRelativeToSurfaceXY();
   const {width, height} = block.getHeightWidth();
   return {x, y, width, height, moveBy: (dx, dy) => block.moveBy(dx, dy)};
-}
-
-function toolboxBlockHeights(workspace: BlocklyCore.WorkspaceSvg): number[] {
-  const flyout = workspace.getFlyout() ?? workspace.getToolbox()?.getFlyout();
-  return (flyout?.getWorkspace().getTopBlocks(false) ?? []).map(
-    block => block.getHeightWidth().height
-  );
 }
 
 const pending = new WeakSet<BlocklyCore.WorkspaceSvg>();
@@ -78,7 +66,7 @@ export function ensureRoom(workspace: BlocklyCore.WorkspaceSvg): void {
       const recordUndo = BlocklyCore.Events.getRecordUndo();
       BlocklyCore.Events.setRecordUndo(false);
       try {
-        makeRoom(stacks, roomFor(toolboxBlockHeights(workspace)));
+        makeRoom(stacks, STACK_GAP_PX);
       } finally {
         BlocklyCore.Events.setRecordUndo(recordUndo);
       }
