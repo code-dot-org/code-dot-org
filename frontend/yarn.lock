@@ -1695,6 +1695,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/field-bitmap@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "@blockly/field-bitmap@npm:13.3.0"
+  peerDependencies:
+    blockly: ^13.2.0
+  checksum: 10c0/66d219d39e5ceaa41aafa2d04f9399bed982ee0abf18817a62228ea297b18bff1e33058fabda56b02f24cd81f6df0cb1fcee2c4145e6bb14d33f88a9b9774b34
+  languageName: node
+  linkType: hard
+
 "@blockly/field-colour@npm:^6.0.4":
   version: 6.0.12
   resolution: "@blockly/field-colour@npm:6.0.12"
@@ -1703,6 +1712,15 @@ __metadata:
   peerDependencies:
     blockly: ^12.0.0
   checksum: 10c0/e20e84ab8645a3d440a9e07142660a1fa83471806ac79fd8364ffe82044aa0c14854e7d402fac3d1f3bbcbc07103b5c78b43c04141101022dd5d9e4b949255aa
+  languageName: node
+  linkType: hard
+
+"@blockly/field-grid-dropdown@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "@blockly/field-grid-dropdown@npm:13.3.0"
+  peerDependencies:
+    blockly: ^13.2.0
+  checksum: 10c0/fa427de0dc462ba12fc878c0dc1e9564b0672d032b9eb06546062b613ff059729e85c5c1db2126bfb3da6296b710a21fd781121d8b8a3592e25004da2c927e67
   languageName: node
   linkType: hard
 
@@ -2588,6 +2606,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/sprite-lab@workspace:packages/labs/sprite"
   dependencies:
+    "@blockly/field-bitmap": "npm:^13.3.0"
+    "@blockly/field-grid-dropdown": "npm:^13.3.0"
+    "@code-dot-org/audio": "workspace:*"
     "@code-dot-org/blockly": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
@@ -2604,6 +2625,7 @@ __metadata:
     "@types/react": "npm:^19.2.5"
     "@types/react-dom": "npm:^19.2.3"
     "@vitejs/plugin-react": "catalog:"
+    acorn: "npm:^8.15.0"
     blockly: "npm:^13.1.0"
     eslint: "catalog:"
     jsdom: "catalog:"
@@ -2612,6 +2634,7 @@ __metadata:
     prettier: "catalog:"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
+    stylelint: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
     vite-plugin-dts: "catalog:"

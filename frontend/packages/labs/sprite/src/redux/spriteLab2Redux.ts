@@ -51,7 +51,7 @@ const initialState: SpriteLab2State = {
   musicProjects: [],
 };
 
-const spriteLab2Slice = createSlice({
+export const spriteLab2Slice = createSlice({
   name: 'spriteLab2',
   initialState,
   reducers: {
