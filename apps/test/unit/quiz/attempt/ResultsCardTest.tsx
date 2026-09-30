@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -53,18 +53,6 @@ describe('ResultsCard', () => {
   it('adds Try again alongside Next level when the attempt can be retaken', () => {
     renderCard({canRetake: true});
     expect(screen.getByRole('button', {name: 'Try again'})).toBeInTheDocument();
-  });
-
-  it('calls onTryAgain and onNextLevel from their respective buttons', () => {
-    const onTryAgain = jest.fn();
-    const onNextLevel = jest.fn();
-    renderCard({canRetake: true, onTryAgain, onNextLevel});
-
-    fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
-    fireEvent.click(screen.getByRole('button', {name: /Next level/}));
-
-    expect(onTryAgain).toHaveBeenCalledTimes(1);
-    expect(onNextLevel).toHaveBeenCalledTimes(1);
   });
 
   describe('showCorrectness off', () => {

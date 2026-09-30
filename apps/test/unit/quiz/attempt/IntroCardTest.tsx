@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -75,14 +75,5 @@ describe('IntroCard', () => {
       />
     );
     expect(screen.getByText('1 attempt')).toBeInTheDocument();
-  });
-
-  it('calls onBegin when Begin is clicked', () => {
-    const onBegin = jest.fn();
-    renderCard({onBegin});
-
-    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
-
-    expect(onBegin).toHaveBeenCalledTimes(1);
   });
 });

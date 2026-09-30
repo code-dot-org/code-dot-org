@@ -404,7 +404,7 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.getByRole('button', {name: 'Try again'})).not.toHaveFocus();
   });
 
-  it('moves focus to the title once submitted, with no Try again button', () => {
+  it('moves focus to the title once submitted, without a retake', () => {
     renderWorkspace({
       hookState: {
         attempt: {
