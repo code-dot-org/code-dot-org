@@ -1,6 +1,9 @@
+import {ThemeProvider} from '@mui/material/styles';
 import {act, createElement} from 'react';
 import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
+
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
 import {setTestData} from '../../src/redux';
@@ -12,13 +15,30 @@ import {levelStore} from './levelStore';
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+vi.stubGlobal(
+  'ResizeObserver',
+  class {
+    observe() {}
+    disconnect() {}
+  },
+);
 
 let root;
 
 function render(store) {
   root = createRoot(document.body.appendChild(document.createElement('div')));
   act(() =>
-    root.render(createElement(Provider, {store}, createElement(DecisionTree))),
+    root.render(
+      createElement(
+        Provider,
+        {store},
+        createElement(
+          ThemeProvider,
+          {theme: getMuiThemeForBrand(undefined)},
+          createElement(DecisionTree),
+        ),
+      ),
+    ),
   );
 }
 

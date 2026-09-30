@@ -89,8 +89,9 @@ export default defineConfig({
     // Emit `.d.ts` from the library entry.
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
     // Externalize peerDependencies only (react, react-dom, redux,
-    // react-redux) so the consumer's single instances are used at runtime;
-    // bundle everything else (chart.js, ml-knn, papaparse, messageformat, …).
+    // react-redux, MUI, emotion, component-library) so the consumer's single
+    // instances are used at runtime; bundle everything else (chart.js, d3,
+    // ml-knn, papaparse, messageformat, …).
     externalizeDeps({deps: false}),
     // The built JS imports its own CSS, so apps gets the styles with the module.
     libInjectCss(),
@@ -120,10 +121,7 @@ export default defineConfig({
           entryFileNames: '[name].cjs',
           preserveModules: false,
           exports: 'named',
-          // apps loads this build. Without the `__esModule` check, a default
-          // import of a component-library subpath resolves to its namespace
-          // object and React throws "Element type is invalid". Remove once
-          // apps resolves the ESM build.
+          // apps loads this build; component-library default imports need the `__esModule` check.
           interop: 'auto',
           dir: 'dist',
         },

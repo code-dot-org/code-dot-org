@@ -13,18 +13,20 @@ export interface ViewTransform {
 
 export function fitToView(
   rect: Rect,
-  viewport: {width: number; height: number},
-  padding: number,
+  frame: Rect,
   maxScale: number,
-): ViewTransform {
+): ViewTransform | undefined {
+  if (frame.width <= 0 || frame.height <= 0) {
+    return undefined;
+  }
   const scale = Math.min(
     maxScale,
-    (viewport.width - 2 * padding) / rect.width,
-    (viewport.height - 2 * padding) / rect.height,
+    frame.width / rect.width,
+    frame.height / rect.height,
   );
   return {
-    x: viewport.width / 2 - scale * (rect.x + rect.width / 2),
-    y: viewport.height / 2 - scale * (rect.y + rect.height / 2),
+    x: frame.x + frame.width / 2 - scale * (rect.x + rect.width / 2),
+    y: frame.y + frame.height / 2 - scale * (rect.y + rect.height / 2),
     scale,
   };
 }

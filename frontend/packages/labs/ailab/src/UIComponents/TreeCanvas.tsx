@@ -1,8 +1,8 @@
 import {IconButton, Tooltip} from '@mui/material';
 import {select} from 'd3-selection';
 import 'd3-transition';
-import {zoom, zoomIdentity, type ZoomBehavior} from 'd3-zoom';
-import {type ReactNode, useEffect, useRef} from 'react';
+import {zoom, zoomIdentity, zoomTransform, type ZoomBehavior} from 'd3-zoom';
+import {type ReactNode, useLayoutEffect, useMemo, useRef} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
@@ -23,14 +23,21 @@ function zoomDuration(): number {
     : ZOOM_DURATION_MS;
 }
 
-function fitTransform(viewport: HTMLElement, rect: Rect) {
-  const {x, y, scale} = fitToView(
+function fitTransform(viewport: HTMLElement, toolbar: HTMLElement, rect: Rect) {
+  const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FIT_PADDING;
+  const fitted = fitToView(
     rect,
-    {width: viewport.clientWidth, height: viewport.clientHeight},
-    FIT_PADDING,
+    {
+      x: frameLeft,
+      y: FIT_PADDING,
+      width: viewport.clientWidth - frameLeft - FIT_PADDING,
+      height: viewport.clientHeight - 2 * FIT_PADDING,
+    },
     FIT_MAX_SCALE,
   );
-  return zoomIdentity.translate(x, y).scale(scale);
+  return (
+    fitted && zoomIdentity.translate(fitted.x, fitted.y).scale(fitted.scale)
+  );
 }
 
 interface ZoomButtonProps {
@@ -41,7 +48,6 @@ interface ZoomButtonProps {
   disabledHint?: string;
 }
 
-// The span lets the tooltip open over a disabled button, which gets no pointer events.
 const ZoomButton = ({
   label,
   iconName,
@@ -52,9 +58,9 @@ const ZoomButton = ({
   <Tooltip
     title={disabled && disabledHint ? disabledHint : label}
     placement="right"
-    describeChild
   >
-    <span>
+    {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- a disabled button takes no pointer events or focus, so the span carries its tooltip */}
+    <span tabIndex={disabled ? 0 : undefined}>
       <IconButton
         aria-label={label}
         onClick={onClick}
@@ -84,9 +90,15 @@ const TreeCanvas = ({
 }: TreeCanvasProps) => {
   const viewportRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const toolbarRef = useRef<HTMLDivElement>(null);
   const zoomRef = useRef<ZoomBehavior<HTMLDivElement, unknown>>();
+  const scaleTargetRef = useRef<number>();
+  const contentRect = useMemo(
+    () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),
+    [contentWidth, contentHeight],
+  );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const viewport = select(viewportRef.current!);
     const content = contentRef.current!;
     zoomRef.current = zoom<HTMLDivElement, unknown>().on(
@@ -101,30 +113,51 @@ const TreeCanvas = ({
     };
   }, []);
 
-  useEffect(() => {
+  // ResizeObserver reports the starting size before first paint, which makes the initial fit.
+  useLayoutEffect(() => {
     const viewport = viewportRef.current!;
-    const fitted = fitTransform(viewport, {
-      x: 0,
-      y: 0,
-      width: contentWidth,
-      height: contentHeight,
+    const observer = new ResizeObserver(() => {
+      const fitted = fitTransform(viewport, toolbarRef.current!, contentRect);
+      if (fitted) {
+        zoomRef
+          .current!.scaleExtent([Math.min(MIN_SCALE, fitted.k), MAX_SCALE])
+          .transform(select(viewport), fitted);
+      }
     });
-    zoomRef
-      .current!.scaleExtent([Math.min(MIN_SCALE, fitted.k), MAX_SCALE])
-      .transform(select(viewport), fitted);
-  }, [contentWidth, contentHeight]);
+    observer.observe(viewport);
+    return () => observer.disconnect();
+  }, [contentRect]);
 
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
 
-  const zoomBy = (factor: number) =>
-    zoomRef.current!.scaleBy(animate(), factor);
-
-  const zoomTo = (rect: Rect) =>
-    zoomRef.current!.transform(
-      animate(),
-      fitTransform(viewportRef.current!, rect),
+  const zoomBy = (factor: number) => {
+    const zoomer = zoomRef.current!;
+    const [minScale, maxScale] = zoomer.scaleExtent();
+    const from =
+      scaleTargetRef.current ?? zoomTransform(viewportRef.current!).k;
+    const target = Math.min(maxScale, Math.max(minScale, from * factor));
+    scaleTargetRef.current = target;
+    zoomer.scaleTo(
+      animate().on('end interrupt cancel', () => {
+        if (scaleTargetRef.current === target) {
+          scaleTargetRef.current = undefined;
+        }
+      }),
+      target,
     );
+  };
+
+  const zoomTo = (rect: Rect) => {
+    const fitted = fitTransform(
+      viewportRef.current!,
+      toolbarRef.current!,
+      rect,
+    );
+    if (fitted) {
+      zoomRef.current!.transform(animate(), fitted);
+    }
+  };
 
   return (
     <div className={styles.treeCanvas}>
@@ -133,7 +166,12 @@ const TreeCanvas = ({
           {children}
         </div>
       </div>
-      <div role="group" aria-label="Zoom" className={styles.toolbar}>
+      <div
+        ref={toolbarRef}
+        role="group"
+        aria-label="Zoom"
+        className={styles.toolbar}
+      >
         <ZoomButton
           label="Zoom in"
           iconName="plus"
@@ -147,9 +185,7 @@ const TreeCanvas = ({
         <ZoomButton
           label="Zoom to fit"
           iconName="expand"
-          onClick={() =>
-            zoomTo({x: 0, y: 0, width: contentWidth, height: contentHeight})
-          }
+          onClick={() => zoomTo(contentRect)}
         />
         <ZoomButton
           label="Zoom to your path"
