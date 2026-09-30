@@ -28,6 +28,11 @@
       "types": "./dist/sprites/index.d.ts",
       "import": "./dist/sprites/index.mjs",
       "require": "./dist/sprites/index.cjs"
+    },
+    "./engine": {
+      "types": "./dist/engine/index.d.ts",
+      "import": "./dist/engine/index.mjs",
+      "require": "./dist/engine/index.cjs"
     }
   },
   "scripts": {
