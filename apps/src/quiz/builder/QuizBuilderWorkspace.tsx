@@ -73,9 +73,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
       <Typography variant="body2">This quiz has no questions yet.</Typography>
     );
   } else {
-    // A page only exists because a placement references it - there's no
-    // separate page entity, so starting one just means creating its first
-    // question one past the last page currently in use.
     const nextPage = pages[pages.length - 1].page + 1;
     outline = (
       <div className={styles.pages}>
