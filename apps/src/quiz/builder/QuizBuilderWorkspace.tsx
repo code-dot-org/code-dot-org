@@ -169,6 +169,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
 
         {questions.length === 0 && (
           <Button
+            className={styles.createButton}
             variant="contained"
             color="primary"
             type="button"
