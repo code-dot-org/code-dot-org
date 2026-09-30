@@ -6,9 +6,9 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import AttemptCard from './AttemptCard';
 
-import styles from './quiz-intro-card.module.scss';
+import styles from './intro-card.module.scss';
 
-export interface QuizIntroCardProps {
+export interface IntroCardProps {
   title: string;
   introText?: string;
   questionCount: number;
@@ -21,7 +21,8 @@ export interface QuizIntroCardProps {
 const pluralize = (count: number, noun: string) =>
   `${count} ${noun}${count === 1 ? '' : 's'}`;
 
-const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
+// Shown before an attempt begins - what the quiz is and what to expect.
+const IntroCard: React.FunctionComponent<IntroCardProps> = ({
   title,
   introText,
   questionCount,
@@ -83,4 +84,4 @@ const QuizIntroCard: React.FunctionComponent<QuizIntroCardProps> = ({
   );
 };
 
-export default QuizIntroCard;
+export default IntroCard;
