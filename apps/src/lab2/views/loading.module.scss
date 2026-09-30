@@ -1,6 +1,5 @@
 @use './components/layout/variables.scss' as variables;
 @import 'color.scss';
-@import 'ta-drawer.scss';
 @import './common.scss';
 
 // We actually fade out the block to reveal the lab underneath.
@@ -49,12 +48,19 @@
   position: fixed;
   top: $top-spacing;
   left: 0;
-  right: $ta-drawer-width;
+  right: 0;
   bottom: 0;
   pointer-events: none;
   opacity: 0;
   z-index: variables.$z-index-overlay;
   background-color: var(--background-neutral-lab);
+
+  // Bounded to the lab's own box instead of the viewport; the box already
+  // starts below the header, so the top offset above does not apply.
+  &.boundedBlock {
+    position: absolute;
+    top: 0;
+  }
 
   &.noFadeLoading {
     opacity: 0;

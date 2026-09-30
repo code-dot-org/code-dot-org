@@ -61,6 +61,12 @@ interface AiDiffFloatingActionButtonProps {
    * be the only visible entry point to the drawer.
    */
   hideButton?: boolean;
+  /**
+   * Lays the drawer out in the surrounding flow rather than over the page.
+   * Set by Lab2Wrapper, which hosts this component inside the lab's own
+   * component tree so the lab's layout accounts for the drawer directly.
+   */
+  inline?: boolean;
 }
 
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
@@ -82,6 +88,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   canDefaultOpen = true,
   openToNav,
   hideButton = false,
+  inline = false,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -337,7 +344,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const brand = document.documentElement.dataset.brand;
 
   return (
-    <div id="fab-contained">
+    <div
+      id="fab-contained"
+      className={inline ? style.fabContainedInline : undefined}
+    >
       {!hideButton && !chatIsOpen && (
         <button
           ref={buttonRef}
@@ -419,6 +429,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           unreadNotificationCount={
             unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
           }
+          inline={inline}
         />
       </React.Suspense>
     </div>

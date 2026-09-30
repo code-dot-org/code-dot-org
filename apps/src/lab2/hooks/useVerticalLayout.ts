@@ -4,6 +4,7 @@ import {useResizable} from 'react-resizable-layout';
 import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {ColumnPanelConfig} from '@cdo/apps/lab2/views/components/layout/types';
+import {useMeasuredLabWidth} from '@cdo/apps/lab2/views/LabContentWidth';
 import {availableContentWidth} from '@cdo/apps/util/taDrawerInset';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
@@ -73,13 +74,16 @@ export const useVerticalLayout = ({
       }),
   });
 
+  const measuredLabWidth = useMeasuredLabWidth();
+
   const adjustWidths = useCallback(() => {
     const RESIZE_BARS_WIDTH = RESIZE_BAR_SIZE_PX * (middlePanel ? 2 : 1);
+    const labWidth = measuredLabWidth ?? availableContentWidth();
 
     if (middlePanel) {
       // Middle panel takes priority in terms of available space in a 3 panel layout.
       const adjustedMiddleWidth = Math.max(
-        availableContentWidth() -
+        labWidth -
           rawLeftPanelWidth -
           rawRightPanelWidth -
           RESIZE_BARS_WIDTH,
@@ -89,7 +93,7 @@ export const useVerticalLayout = ({
 
       // Second priority is right panel.
       const spaceForRightPanel = Math.max(
-        availableContentWidth() -
+        labWidth -
           leftPanel.minWidth -
           RESIZE_BARS_WIDTH -
           adjustedMiddleWidth,
@@ -103,7 +107,7 @@ export const useVerticalLayout = ({
 
       // Left panel takes up remaining space, but won't go below the minimum width.
       const spaceForLeftPanel = Math.max(
-        availableContentWidth() -
+        labWidth -
           adjustedRightWidth -
           RESIZE_BARS_WIDTH -
           adjustedMiddleWidth,
@@ -120,7 +124,7 @@ export const useVerticalLayout = ({
       // In 2-panel mode, only the left panel is resizable,
       // so we start by establishing the size of that panel.
       const spaceForLeftPanel = Math.max(
-        availableContentWidth() - rightPanel.minWidth - RESIZE_BARS_WIDTH,
+        labWidth - rightPanel.minWidth - RESIZE_BARS_WIDTH,
         leftPanel.minWidth
       );
       const adjustedLeftWidth = Math.min(rawLeftPanelWidth, spaceForLeftPanel);
@@ -128,12 +132,13 @@ export const useVerticalLayout = ({
 
       // Then, we give the remaining space to the right panel, but it won't go below its minimum width.
       const adjustedRightWidth = Math.max(
-        availableContentWidth() - adjustedLeftWidth - RESIZE_BARS_WIDTH,
+        labWidth - adjustedLeftWidth - RESIZE_BARS_WIDTH,
         rightPanel.minWidth
       );
       setRightPanelWidth(adjustedRightWidth);
     }
   }, [
+    measuredLabWidth,
     middlePanel,
     leftPanel.minWidth,
     rawLeftPanelWidth,

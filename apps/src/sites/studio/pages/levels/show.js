@@ -3,6 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {setHostedDrawerConfig} from '@cdo/apps/aiTeacherDrawer/redux';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import ShareLogo from '@cdo/apps/code-studio/components/shareLogo/ShareLogo';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
@@ -65,42 +66,56 @@ function initPage() {
     );
   }
 
-  // AI Differentiation FAB to be shown only if rubric FAB is not.
-  const renderAiDiffButton = ({hideButton = false} = {}) => {
-    const reportingData = {
-      unitName: config.script_name,
-      courseName: config.course_name,
-      levelName: config.level_name,
-    };
-    const differentiationContext = {type: AiDiffContext.LEVEL};
+  const aiDiffLevelContext = () => {
+    const context = {type: AiDiffContext.LEVEL};
     if (hasScriptData('script[data-aiDiffData]')) {
-      const aiDiffData = getScriptData('aiDiffData');
-      const {levelId, scriptId} = aiDiffData;
-      differentiationContext.levelId = levelId;
-      differentiationContext.unitId = scriptId;
+      const {levelId, scriptId} = getScriptData('aiDiffData');
+      context.levelId = levelId;
+      context.unitId = scriptId;
     }
+    return context;
+  };
 
+  /**
+   * Put the TA drawer on the page. Which gating applies is the caller's
+   * business; what differs here is who renders it. A Lab2 level lays the
+   * drawer out inside the lab's own component tree, so that the lab sizes its
+   * panels around the drawer rather than being told to leave room for it —
+   * there we hand the configuration to Lab2Wrapper. Every other level mounts
+   * it over the page as before.
+   */
+  const showAiDiffDrawer = (mountPoint, props) => {
+    if (document.getElementById('lab2-container')) {
+      getStore().dispatch(setHostedDrawerConfig(props));
+      return;
+    }
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton {...props} />
+      </Provider>,
+      mountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  };
+
+  // AI Differentiation FAB to be shown only if rubric FAB is not. Eligibility
+  // is decided server-side: the mount point exists only for eligible users.
+  const renderAiDiffButton = ({hideButton = false} = {}) => {
     const aiDiffFabMountPoint = document.getElementById(
       'ai-differentiation-fab-mount-point'
     );
-    if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
-      createReactRoot(
-        <Provider store={getStore()}>
-          <AiDiffFloatingActionButton
-            context={differentiationContext}
-            scriptId={reportingData.unitName}
-            scriptName={reportingData.unitName}
-            canStartOpen={false}
-            canDefaultOpen={false}
-            hideButton={hideButton}
-          />
-        </Provider>,
-        aiDiffFabMountPoint,
-        {
-          legacyReactDomRender: true,
-        }
-      );
+    if (!aiDiffFabMountPoint || !experiments.isEnabled('ai-diff-levels')) {
+      return;
     }
+    showAiDiffDrawer(aiDiffFabMountPoint, {
+      context: aiDiffLevelContext(),
+      scriptName: config.script_name,
+      hideButton,
+      canStartOpen: false,
+      canDefaultOpen: false,
+    });
   };
 
   const scrapbookMountPoint = document.getElementById(
@@ -154,25 +169,11 @@ function initPage() {
         // Same trigger position as the rubric FAB below, but it hands off
         // to the AI TA drawer's Rubrics screen (apps/src/aiTeacherDrawer/
         // rubrics/) instead of the floating RubricContainer panel.
-        const differentiationContext = {type: AiDiffContext.LEVEL};
-        if (hasScriptData('script[data-aiDiffData]')) {
-          const aiDiffData = getScriptData('aiDiffData');
-          differentiationContext.levelId = aiDiffData.levelId;
-          differentiationContext.unitId = aiDiffData.scriptId;
-        }
-        createReactRoot(
-          <Provider store={getStore()}>
-            <AiDiffFloatingActionButton
-              context={differentiationContext}
-              scriptName={reportingData.unitName}
-              openToNav="Rubrics"
-            />
-          </Provider>,
-          rubricFabMountPoint,
-          {
-            legacyReactDomRender: true,
-          }
-        );
+        showAiDiffDrawer(rubricFabMountPoint, {
+          context: aiDiffLevelContext(),
+          scriptName: reportingData.unitName,
+          openToNav: 'Rubrics',
+        });
       } else {
         createReactRoot(
           <Provider store={getStore()}>

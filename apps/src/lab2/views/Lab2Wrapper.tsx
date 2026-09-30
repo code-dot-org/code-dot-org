@@ -9,8 +9,13 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ToastProvider} from '@code-dot-org/component-library/toast';
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
+
+// The drawer's own weight sits behind a lazy boundary inside this component,
+// so importing it here does not pull the drawer into every lab2 page.
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -43,6 +48,7 @@ import {PartialUserAppOptions} from '../types';
 import {LifecycleEvent} from '../utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import {LabContentWidthProvider} from './LabContentWidth';
 import LevelPropertiesWrapper from './LevelPropertiesWrapper';
 import Loading from './Loading';
 import {ProjectBlockedUI} from './ProjectBlockedUI';
@@ -75,6 +81,31 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       dispatch(setPermissions(data));
     });
   }, [dispatch]);
+
+  // The lab lays itself out against this rather than against the window: the
+  // drawer below is a sibling, so the two differ whenever it is open.
+  const labContentRef = useRef<HTMLDivElement>(null);
+  const [labContentWidth, setLabContentWidth] = useState<number | undefined>(
+    undefined
+  );
+  useLayoutEffect(() => {
+    const element = labContentRef.current;
+    if (!element) {
+      return;
+    }
+    const observer = new ResizeObserver(([entry]) =>
+      setLabContentWidth(entry.contentRect.width)
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  // Rendering the drawer here, rather than at the page's own mount point, is
+  // what lets the lab treat it as part of its layout. levels/show.js still
+  // decides whether there should be one; see HostedDrawerConfig.
+  const hostedDrawerConfig = useAppSelector(
+    state => state.aiDiffChat?.hostedDrawerConfig
+  );
   const errorMessage: string | undefined = useSelector(
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
@@ -176,24 +207,31 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           isShareView && moduleStyles.labContainerShareView
         )}
       >
-        <ToastProvider className={moduleStyles.labToast}>
-          {levelPropertiesMap && (
-            // Don't display children (including lab views) until we have loaded level properties.
-            <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
-              {children}
-            </LevelPropertiesWrapper>
-          )}
-          <Loading isLoading={isLoading} />
+        <div ref={labContentRef} className={moduleStyles.labContent}>
+          <LabContentWidthProvider value={labContentWidth}>
+            <ToastProvider className={moduleStyles.labToast}>
+              {levelPropertiesMap && (
+                // Don't display children (including lab views) until we have loaded level properties.
+                <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
+                  {children}
+                </LevelPropertiesWrapper>
+              )}
+              <Loading isLoading={isLoading} bounded />
 
-          {isPageError && <ErrorUI message={errorMessage} />}
-          {blockedType && (
-            <ProjectBlockedUI
-              blockedType={blockedType}
-              isProjectValidator={isProjectValidator}
-            />
-          )}
-          <ScreenAnalyticsOverlay />
-        </ToastProvider>
+              {isPageError && <ErrorUI message={errorMessage} />}
+              {blockedType && (
+                <ProjectBlockedUI
+                  blockedType={blockedType}
+                  isProjectValidator={isProjectValidator}
+                />
+              )}
+              <ScreenAnalyticsOverlay />
+            </ToastProvider>
+          </LabContentWidthProvider>
+        </div>
+        {hostedDrawerConfig && (
+          <AiDiffFloatingActionButton inline {...hostedDrawerConfig} />
+        )}
       </div>
     </ErrorBoundary>
   );

@@ -4,14 +4,20 @@
  *
  * Page shells inset themselves by this width in CSS, reading it from
  * --ta-drawer-width; shared/css/ta-drawer.scss documents that side. CSS is
- * enough wherever the browser does the layout, but the labs size their panels
- * from window.innerWidth, which still counts the strip the drawer took. Those
- * widths come from availableContentWidth() instead, and the two must agree or
- * a lab's panels overflow the shell they sit in.
+ * enough wherever the browser does the layout, but a legacy lab sizes its
+ * playspace from window.innerWidth, which still counts the strip the drawer
+ * took. Those widths come from availableContentWidth() instead, and the two
+ * must agree or a lab's contents overflow the shell they sit in.
  *
  * Both answer with the geometry the page ends up with, not the geometry it has
  * mid-animation, which is why a shell whose contents are measured or computed
  * resizes in one step instead of animating.
+ *
+ * None of this reaches a Lab2 lab, which renders the drawer inside its own
+ * component tree and measures the box it is left with; see
+ * apps/src/lab2/views/LabContentWidth.ts. The fallback there is the only
+ * reason a Lab2 lab consults this at all, for when it is rendered outside a
+ * Lab2Wrapper.
  */
 
 const WIDTH_PROPERTY = '--ta-drawer-width';

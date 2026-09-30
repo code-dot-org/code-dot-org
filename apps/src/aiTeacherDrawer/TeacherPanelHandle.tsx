@@ -11,12 +11,23 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const TeacherPanelHandle: React.FC = () => {
   const dispatch = useAppDispatch();
   const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
+  // A drawer Lab2 hosts is laid out beside the lab, so unlike one that covers
+  // the page it never reaches this handle, which is fixed to the viewport.
+  const drawerIsInline = useAppSelector(
+    state => !!state.aiDiffChat.hostedDrawerConfig
+  );
 
-  // The open drawer covers the handle rather than displacing it, which is what
-  // makes it look slid over. Stay mounted so that reads as an animation, but
-  // leave the accessibility tree, since a covered handle is not a way in.
+  // An open drawer either covers the handle or, laid out inline, would leave it
+  // stranded on top of the drawer; hide it in the second case. Either way it
+  // stops being a way in, so it leaves the accessibility tree.
+  const stranded = chatIsOpen && drawerIsInline;
+
   return (
-    <div className="teacher-panel hidden" aria-hidden={chatIsOpen}>
+    <div
+      className="teacher-panel hidden"
+      aria-hidden={chatIsOpen}
+      style={stranded ? {visibility: 'hidden'} : undefined}
+    >
       <div
         className="show-handle"
         onClick={() => dispatch(openDrawerToNav('Roster'))}

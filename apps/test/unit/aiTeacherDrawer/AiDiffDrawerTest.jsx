@@ -127,6 +127,22 @@ describe('AiDiffDrawer', () => {
     });
   });
 
+  it('takes real layout space instead of an inset when inline', async () => {
+    // Lab2 hosts the drawer inside the lab's own flex row, so the space it
+    // takes is its own width. A page that also left room for it would give up
+    // the width twice.
+    const before = drawerInset();
+    const store = renderDefault({inline: true});
+    store.dispatch(setChatIsOpen(true));
+
+    await waitFor(() => {
+      screen.getByText(/AI Teaching Assistant/);
+    });
+
+    expect(drawerInset()).toBe(before);
+    expect(drawerInset()).not.toBe(`${DRAWER_WIDTH}px`);
+  });
+
   it('publishes a zero inset when chat closes', async () => {
     const store = renderDefault();
     store.dispatch(setChatIsOpen(true));

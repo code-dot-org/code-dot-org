@@ -1,13 +1,16 @@
 @import 'color.scss';
-@import 'ta-drawer.scss';
 @import './common.scss';
 
+// The lab and the TA drawer are laid out side by side: the lab gets whatever
+// the drawer is not using, so it can measure its own box rather than being
+// told how much of the window to leave alone.
 .labContainer {
   position: absolute;
   top: $top-spacing;
   bottom: 0;
   left: 0;
-  right: $ta-drawer-width;
+  right: 0;
+  display: flex;
   font-size: 13px;
 
   &Loading {
@@ -17,6 +20,15 @@
   &ShareView {
     top: 0;
     bottom: 0;
+  }
+
+  .labContent {
+    position: relative;
+    flex: 1;
+    // Without this a wide lab refuses to shrink below its content when the
+    // drawer opens, and pushes the drawer off the edge instead.
+    min-width: 0;
+    height: 100%;
   }
 
   .pageErrorContainer {

@@ -32,6 +32,13 @@ interface AiDiffContainerProps {
   curriculumCourses: string[];
   scriptName?: string;
   unreadNotificationCount: number;
+  /**
+   * Render as a sized box in the surrounding flow instead of a drawer fixed to
+   * the viewport. Lab2Wrapper lays the drawer out beside the lab, so there the
+   * width the drawer takes has to be real layout space the lab can measure
+   * rather than an overlay the page is told to leave room for.
+   */
+  inline?: boolean;
 }
 
 const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
@@ -42,6 +49,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   curriculumCourses,
   scriptName,
   unreadNotificationCount,
+  inline = false,
 }) => {
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
@@ -99,13 +107,17 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     !hasCompletedAiDifferentiationWelcome && showWelcomeExperience;
   const drawerWidth = isWelcomeView ? DRAWER_WIDTH_WELCOME : DRAWER_WIDTH;
 
-  // Publish the width we take so the page can make room for it. Which element
-  // gives up that width differs by page -- #main_content on most, the lab
-  // shell on levels -- so each reads it for itself rather than being pushed
-  // from here; see apps/src/util/taDrawerInset.ts.
+  // Publish the width we take so the page can make room for it; which element
+  // gives up that width differs by page, so each reads it for itself rather
+  // than being pushed from here (see apps/src/util/taDrawerInset.ts). An
+  // inline drawer publishes nothing: it occupies real layout space, so a page
+  // that also left room for it would give up the width twice.
   useEffect(() => {
+    if (inline) {
+      return;
+    }
     setTaDrawerInset(chatIsOpen ? drawerWidth : 0);
-  }, [chatIsOpen, drawerWidth]);
+  }, [inline, chatIsOpen, drawerWidth]);
 
   // The drawer unmounts on navigation away from a page that has it, and the
   // inset is a global; leave the page its full width.
@@ -181,6 +193,46 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     }
   }
 
+  const panel = (
+    <div style={{display: 'flex', flexDirection: 'column', height: '100%'}}>
+      <AiDiffHeader
+        closeTutor={closeTutor}
+        closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+      />
+      <div className={style.fabBackgroundDrawer}>{content}</div>
+      <BottomNav
+        activeLabel={activeNav}
+        onNavChange={label => {
+          setActiveNav(label);
+          setShowChatList(label === 'Chats');
+        }}
+        unreadNotificationCount={unreadNotificationCount}
+        showChats={showChats}
+        showLearn={showLearn}
+        showTeacherPanel={showTeacherPanel}
+        showRubrics={showRubrics}
+      />
+    </div>
+  );
+
+  if (inline) {
+    // The outer box is what the surrounding flex row sees, so it animates from
+    // no width to the drawer's width; the inner box holds the drawer at its
+    // full width throughout, so the contents slide into view rather than
+    // reflowing on every frame of the transition.
+    return (
+      <div
+        className={style.inlineDrawer}
+        style={{width: chatIsOpen ? drawerWidth : 0}}
+        aria-hidden={!chatIsOpen}
+      >
+        <div className={style.inlineDrawerPanel} style={{width: drawerWidth}}>
+          {panel}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Drawer
       anchor="right"
@@ -190,25 +242,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         sx: {width: drawerWidth, top: 50, height: 'calc(100% - 50px)'},
       }}
     >
-      <div style={{display: 'flex', flexDirection: 'column', height: '100%'}}>
-        <AiDiffHeader
-          closeTutor={closeTutor}
-          closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
-        />
-        <div className={style.fabBackgroundDrawer}>{content}</div>
-        <BottomNav
-          activeLabel={activeNav}
-          onNavChange={label => {
-            setActiveNav(label);
-            setShowChatList(label === 'Chats');
-          }}
-          unreadNotificationCount={unreadNotificationCount}
-          showChats={showChats}
-          showLearn={showLearn}
-          showTeacherPanel={showTeacherPanel}
-          showRubrics={showRubrics}
-        />
-      </div>
+      {panel}
     </Drawer>
   );
 };
