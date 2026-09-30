@@ -102,12 +102,25 @@ $info-icon-size: 12px;
 }
 
 .sentence {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 4px 6px;
   padding: 8px;
   border-top: 1px solid var(--border-neutral-primary);
+}
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
 }
 
 .sentenceText {

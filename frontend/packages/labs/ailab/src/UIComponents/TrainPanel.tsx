@@ -52,6 +52,7 @@ interface SentenceTagProps {
 
 const SentenceTag = ({text, placeholder, variant}: SentenceTagProps) => (
   <span
+    aria-hidden="true"
     className={classNames(
       styles.tag,
       text ? styles[`${variant}Tag`] : styles.placeholderTag,
@@ -140,11 +141,22 @@ const TrainPanel = () => {
         );
       }
       return (
-        <span key={index} className={styles.sentenceText}>
+        <span key={index} aria-hidden="true" className={styles.sentenceText}>
           {part.trim()}
         </span>
       );
     });
+
+  // The visual pieces have no text between them, so screen readers get the
+  // whole sentence as one string instead.
+  const readableSentence =
+    I18n.t('predictionStatement', {
+      output: labelColumn ? columnName(labelColumn) : 'label',
+      inputs:
+        selectedFeatures.length > 0
+          ? selectedFeatures.map(columnName).join(', ')
+          : 'feature',
+    }) || '';
 
   return (
     <div id="train-panel" className={styles.panel}>
@@ -191,7 +203,10 @@ const TrainPanel = () => {
               </DropdownProviderWrapper>
             </div>
           </div>
-          <div className={styles.sentence}>{sentenceParts}</div>
+          <div className={styles.sentence}>
+            <span className={styles.visuallyHidden}>{readableSentence}</span>
+            {sentenceParts}
+          </div>
           <div className={styles.actionRow}>
             <Button
               variant="contained"
