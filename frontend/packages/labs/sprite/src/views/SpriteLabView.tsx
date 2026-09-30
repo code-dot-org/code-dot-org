@@ -17,6 +17,7 @@ import {BlocklyWorkspace} from '@code-dot-org/blockly';
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 import {useLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
+import {isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {compileSerializedWorkspace} from '../blockly/compile';
 import {SpriteLabConnectionChecker} from '../blockly/connectionChecker';
@@ -28,15 +29,28 @@ import defaultSources from '../defaultSources.json';
 import {animationSourceUrl} from '../engine/animations';
 import {SpriteLabEngine} from '../engine/Engine';
 import {imageTypeFromCategories} from '../imageGallery';
-import {collectImageReferences} from '../imageReferences';
+import {
+  collectImageReferences,
+  removeImageReferences,
+  removeImageReferencesOnWorkspace,
+  renameImageReferences,
+  renameImageReferencesOnWorkspace,
+} from '../imageReferences';
 import {defaultImageName} from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
-import {isFreeplayMode, tabsForMode} from '../levelMode';
+import {
+  adlibSetForMode,
+  DEFAULT_IMAGE_STYLE,
+  isFreeplayMode,
+  tabsForMode,
+} from '../levelMode';
 import {migrateBlockTypes, migrateScenes} from '../migrateSources';
 import {projectImageUploader} from '../projectAssets';
 import {
   allAnimationsLoaded,
+  isNameUnique,
   serializeAnimationList,
+  setAnimationName,
 } from '../redux/animationListSlice';
 import {seedAnimationList} from '../redux/animationListThunks';
 import {
@@ -64,6 +78,7 @@ import {isPointerClick} from './blurAfterPointerClick';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import TabShell from './components/TabShell';
+import GenerateImagePane from './GenerateImagePane';
 import {type ArrowSet, arrowSetFor} from './playBar';
 import Playspace, {type PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
@@ -79,8 +94,7 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 const TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // ?world-tab=true, for a level whose mode does not name the tab.
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
-// The Images tab comes with layer 6.
-const READY_TABS: readonly Tab[] = ['World', 'Code', 'Play'];
+const READY_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source as BlocklySerialization;
 
@@ -169,6 +183,18 @@ const SpriteLabView: FunctionComponent = () => {
       new URLSearchParams(window.location.search).get('world-tab') === 'true',
     [],
   );
+  // ?image-adlibs=<set> previews an adlib set without a level change;
+  // ?image-free-text=true brings back the typed prompt; ?images-advanced=true
+  // shows the levelbuilder's image controls.
+  const imageParams = useMemo(() => {
+    const params = new URLSearchParams(window.location.search);
+    const adlibSet = params.get('image-adlibs');
+    return {
+      adlibSet: isImageAdlibSet(adlibSet) ? adlibSet : undefined,
+      freeText: params.get('image-free-text') === 'true',
+      advanced: params.get('images-advanced') === 'true',
+    };
+  }, []);
   const tabs = useMemo(
     () =>
       tabsForMode(levelProperties.levelMode) ??
@@ -244,6 +270,28 @@ const SpriteLabView: FunctionComponent = () => {
   });
   // A workspace loads once the values its dropdowns check are in the store.
   const seeded = imagesSeeded && externalListReady;
+
+  // The Images tab mounts once, when first visited or when the page is next
+  // idle after seeding, and then stays mounted behind a clip.
+  const [imagesMounted, setImagesMounted] = useState(false);
+  useEffect(() => {
+    if (activeTab === 'Images') {
+      setImagesMounted(true);
+    }
+  }, [activeTab]);
+  useEffect(() => {
+    if (!seeded || imagesMounted) {
+      return;
+    }
+    if (typeof window.requestIdleCallback === 'function') {
+      const handle = window.requestIdleCallback(() => setImagesMounted(true), {
+        timeout: 3000,
+      });
+      return () => window.cancelIdleCallback(handle);
+    }
+    const handle = window.setTimeout(() => setImagesMounted(true), 1500);
+    return () => window.clearTimeout(handle);
+  }, [seeded, imagesMounted]);
   const pinnedScene = levelProperties.pinnedScene;
   const pinnedSceneId = pinnedScene?.id;
   // The pinned scene is made on first load and again after Start Over.
@@ -465,6 +513,55 @@ const SpriteLabView: FunctionComponent = () => {
     runTimer.current = window.setTimeout(runProgram, RUN_DEBOUNCE_MS);
   }, [runProgram]);
   useEffect(() => () => window.clearTimeout(runTimer.current), []);
+
+  // A rename reaches every reference, in all scenes, the World grids and
+  // the open workspace, so tidying a name never breaks the project.
+  const handleRenameImage = useCallback(
+    (oldName: string, newName: string): string | null => {
+      if (!newName) {
+        return 'Enter a name.';
+      }
+      const list = store.getState().animationList;
+      if (!isNameUnique(newName, list)) {
+        return 'That name is already used.';
+      }
+      const key = list.orderedKeys.find(
+        k => list.propsByKey[k]?.name === oldName,
+      );
+      if (!key) {
+        return 'Image not found.';
+      }
+      dispatch(setAnimationName({key, name: newName}));
+      updateSources(prev => renameImageReferences(prev, oldName, newName));
+      renameImageReferencesOnWorkspace(
+        workspace.workspaceProps.workspaceRef.current,
+        oldName,
+        newName,
+      );
+      refreshAnimationDropdownThumbnails();
+      scheduleRun();
+      return null;
+    },
+    [
+      dispatch,
+      updateSources,
+      workspace.workspaceProps.workspaceRef,
+      scheduleRun,
+    ],
+  );
+
+  const handleDeleteImage = useCallback(
+    (name: string) => {
+      updateSources(prev => removeImageReferences(prev, name));
+      removeImageReferencesOnWorkspace(
+        workspace.workspaceProps.workspaceRef.current,
+        name,
+      );
+      refreshAnimationDropdownThumbnails();
+      scheduleRun();
+    },
+    [updateSources, workspace.workspaceProps.workspaceRef, scheduleRun],
+  );
 
   // The scene on stage now, through any jumps, for Restart scene.
   const currentPlayingRef = useRef<Scene | null>(null);
@@ -975,6 +1072,38 @@ const SpriteLabView: FunctionComponent = () => {
             />
           )}
         </div>
+
+        {/* Kept mounted behind a clip, as the Code tab is: mounting on a
+            switch costs the switch its frames, and a remount loses state. */}
+        {imagesMounted && (
+          <div
+            className={moduleStyles.codeTabWrapper}
+            style={{
+              clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
+            }}
+          >
+            <div className={moduleStyles.imagesTab}>
+              <GenerateImagePane
+                uploadImage={uploadImage}
+                onRenameImage={handleRenameImage}
+                onDeleteImage={handleDeleteImage}
+                lockedImageType={levelProperties.levelMode?.imageType}
+                lockedImageSubject={levelProperties.levelMode?.imageSubject}
+                imageRole={levelProperties.levelMode?.imageRole}
+                advanced={imageParams.advanced}
+                adlibSet={
+                  imageParams.adlibSet ||
+                  adlibSetForMode(levelProperties.levelMode)
+                }
+                // Words come from the adlibs unless ?image-free-text=true.
+                adlibOnly={!imageParams.freeText}
+                defaultStyle={DEFAULT_IMAGE_STYLE}
+                paintDisabled={!isFreeplayMode(levelProperties.levelMode)}
+              />
+            </div>
+          </div>
+        )}
 
         {activeTab === 'Scenes' && (
           <div className={moduleStyles.codeTabWrapper}>

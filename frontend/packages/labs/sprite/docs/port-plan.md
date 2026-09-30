@@ -151,23 +151,24 @@ Changes outside the package that the wiring needed:
 
 ### 6. AI images
 
-Generation runs through the `ai` SDK, `@ai-sdk/google` and apps'
-`aiGateway`; safety checks use `aichat`'s safety helpers and DCDO. Frontend
-has no AI gateway client yet. `paintBlank.ts` belongs here too: it needs the
-model's output sizes from `modelHelpers.ts` and `crispScaleFor` from apps'
-`pixelEditor/pixelArt`.
+Apps generates through the `ai` SDK and its own `aiGateway` client, and
+checks safety with `aichat`'s helpers and DCDO. Here the gateway is
+core's `DashboardApiClient.aiGateway`, the safety checks are lab-base's
+`@code-dot-org/lab/ai`, and moderation is core's `images.moderate`.
+Without dashboard or a gateway, core's mocks answer: generation returns
+a prepared pixel character on magenta, the judges say OK and moderation
+says safe. `GOOGLE_GENERATIVE_AI_API_KEY` with
+`VITE_AI_GATEWAY_URL=/__ai-gateway` calls Gemini with a developer's own
+key instead; see core's `api/mocks/README.md`.
 
-The Images tab comes first without generation. Done so far: apps' pixel
-editor (`src/pixelEditor`, with apps' `pixelArt` and `tools` tests), which
-only Sprite Lab 2 uses. Still to come, in order: `paintBlank.ts` with the
-model's size constants split from `modelHelpers.ts`; `useImageSession` and
-the details dialog without its generate view; a new-image form cut from
-`GenerateImageView` (type, style, name, paint); the pane; the tab in
-`SpriteLabView` with rename and delete; then image levels and the guide.
-
-Apps offers painting only in freeplay (`paintDisabled`), so an image level
-without generation leaves a student no way to make an image. Until
-generation arrives, that policy has to change or image levels stay out.
+Done: the pixel editor (`src/pixelEditor`), `paintBlank.ts`, the
+generation modules (`src/ai/images`), `useImageSession`, and the Images
+tab: `GenerateImagePane`, `GenerateImageView` and `ImageDetailsDialog`
+in `SpriteLabView`, with rename and delete reaching every reference. The
+`freeplay` fixture offers the paint tools, which only freeplay levels
+have. Still to come: image levels, where the pane replaces the tabs, and
+the guide (`GenerateSpriteLab`), which needs props lab-base's `Guide`
+lacks.
 
 ### 7. Scene music
 
@@ -187,7 +188,8 @@ does not.
    apps' editor, or extract World's into a shared package and adopt it.
 3. **Music player.** Layer 7 needs the frontend music player, which exists
    only on `world-lab`. It must reach lab-base first.
-4. **AI gateway.** Layer 6 needs a frontend client for the AI gateway.
+4. **AI gateway.** Decided: core's `aiGateway` client, a mock gateway
+   with canned answers, and a dev-server proxy for a developer's own key.
 5. **Legacy block pool.** Decided: a runtime converter. Most of a Sprite
    Lab level's blocks come from the DB block pool, in apps' `block_utils`
    format: `blockText`, argument lists with `customInput` types, and code
@@ -286,6 +288,25 @@ Layer 5, so far:
 - Apps has no tests for these views. New tests cover `useSceneEditing`,
   `playBar`, `useSetupBlockColor`, `ScenesGallery` and the playspace's
   location picking.
+
+Layer 6:
+
+- Generation and the safety judges go through core's gateway client
+  rather than the `ai` SDK; requests carry the same wire body apps' SDK
+  call sent.
+- The two DCDO kill switches over the image judges read as on, their
+  default; frontend has no DCDO.
+- The image-prompt event is a metric count without the prompt text; apps
+  sent the student's prompt to its analytics reporter, which frontend
+  does not have.
+- `uploadAssetToLevel` (levelbuilder's starter assets) is not ported:
+  core has no API for `/level_starter_assets`, and levelbuilder edit modes
+  wait on lab-base.
+- Moderation drops apps' Amplitude events and `MetricsReporter` counters.
+- The bot and style pictures are imported, so the library build inlines
+  them (about 230 KB); apps served them as static files.
+- `createNamedAnimation` requires a `frameSize`, which both callers pass;
+  apps' untyped thunk accepted an animation without one.
 
 The pixel editor:
 
