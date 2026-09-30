@@ -12,11 +12,12 @@ module CaptureQueries
       end.output.string
     end
 
-    attr_accessor :output
+    def output
+      @output ||= StringIO.new
+    end
 
     def logger
-      @output ||= StringIO.new
-      @logger ||= Logger.new(@output).tap do |l|
+      @logger ||= Logger.new(output).tap do |l|
         l.level = Logger::DEBUG
         l.formatter = ->(*, msg) {msg}
       end
