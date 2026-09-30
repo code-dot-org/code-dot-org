@@ -993,23 +993,276 @@ roles.each do |name, config| %>
     Properties:
       AWSServiceName: logger.cloudfront.amazonaws.com
 
-  # IAM Role for GitHub Actions in the code-dot-org/code-dot-org and
-  # code-dot-org/infrastructure repositories. Workflows assume this role via OIDC
-  # federation; the trust policy lists the allowed repo/environment pairs.
-  # Scoped for OpenTofu plan/apply on:
-  #   - EKS infrastructure (code-dot-org/code-dot-org)
+  # GitHub Actions roles for OpenTofu in the code-dot-org/infrastructure repo.
+  # Workflows assume a role via OIDC federation. Each trust policy admits one
+  # GitHub environment, and the environments carry the review gate:
+  #   open-tofu-plan   runs on every pull request with no reviewer; read-only role
+  #   open-tofu-apply  requires a reviewer; read/write role
+  # Both roles cover:
+  #   - EKS infrastructure (reads only until the writes are enabled)
   #   - the observability workspace: Managed Grafana, Managed Prometheus, the
   #     Grafana workspace IAM role and the Sentry secrets
-  #     (code-dot-org/infrastructure, observability/opentofu/environments/prod)
+  #     (observability/opentofu/environments/prod)
   # Create/Delete on the Grafana workspace, the Prometheus workspace and the Grafana
   # IAM role are intentionally NOT granted so CI can never replace them; an apply
   # that needs a replacement fails and must be run by hand.
-  # Note: The GitHub OIDC provider (token.actions.githubusercontent.com) is managed
-  # in the infrastructure repo.
-  GitHubActionsCodeDotOrgRole:
+  # The GitHub OIDC provider (token.actions.githubusercontent.com) is managed in
+  # the infrastructure repo.
+
+  # Everything a plan needs. Only reads may be live here; when a commented action
+  # that mutates is enabled it belongs in GitHubActionsOpenTofuWritePolicy.
+  GitHubActionsOpenTofuReadPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: GitHubActionsOpenTofuRead
+      Path: /admin/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: S3StateRead
+            Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:ListBucket
+            Resource:
+              - arn:aws:s3:::codeai-tofu-state
+              - arn:aws:s3:::codeai-tofu-state/*
+          # The S3 backend holds its state lock as <key>.tflock, and plan locks too.
+          - Sid: S3StateLock
+            Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:DeleteObject
+            Resource: arn:aws:s3:::codeai-tofu-state/*.tflock
+          - Sid: EKSClusterRead
+            Effect: Allow
+            Action:
+              # - eks:CreateCluster
+              # - eks:DeleteCluster
+              - eks:DescribeCluster
+              # - eks:UpdateClusterConfig
+              # - eks:UpdateClusterVersion
+              # - eks:TagResource
+              # - eks:UntagResource
+              # - eks:ListTagsForResource
+              # - eks:CreateFargateProfile
+              # - eks:DeleteFargateProfile
+              # - eks:DescribeFargateProfile
+              # - eks:ListFargateProfiles
+              # - eks:CreateAddon
+              # - eks:DeleteAddon
+              # - eks:DescribeAddon
+              # - eks:DescribeAddonVersions
+              # - eks:UpdateAddon
+              # - eks:ListAddons
+              # - eks:CreateAccessEntry
+              # - eks:DeleteAccessEntry
+              # - eks:DescribeAccessEntry
+              # - eks:ListAccessEntries
+              # - eks:AssociateAccessPolicy
+              # - eks:DisassociateAccessPolicy
+              # - eks:ListAssociatedAccessPolicies
+              # - eks:CreateNodegroup
+              # - eks:DeleteNodegroup
+              # - eks:DescribeNodegroup
+              # - eks:UpdateNodegroupConfig
+              # - eks:UpdateNodegroupVersion
+              # - eks:ListNodegroups
+              # - eks:DescribeUpdate
+              # - eks:ListUpdates
+              # - eks:AssociateIdentityProviderConfig
+              # - eks:DescribeIdentityProviderConfig
+              # - eks:DisassociateIdentityProviderConfig
+              # - eks:ListIdentityProviderConfigs
+            Resource: "*"
+          - Sid: VPCNetworkRead
+            Effect: Allow
+            Action:
+              # - ec2:CreateSubnet
+              # - ec2:DeleteSubnet
+              # - ec2:ModifySubnetAttribute
+              - ec2:DescribeSubnets
+              # - ec2:CreateRouteTable
+              # - ec2:DeleteRouteTable
+              # - ec2:AssociateRouteTable
+              # - ec2:DisassociateRouteTable
+              # - ec2:CreateRoute
+              # - ec2:DeleteRoute
+              # - ec2:ReplaceRoute
+              # - ec2:DescribeRouteTables
+              # - ec2:CreateNatGateway
+              # - ec2:DeleteNatGateway
+              # - ec2:DescribeNatGateways
+              # - ec2:AllocateAddress
+              # - ec2:ReleaseAddress
+              # - ec2:DescribeAddresses
+              # - ec2:CreateTags
+              # - ec2:DeleteTags
+              # - ec2:DescribeTags
+              # - ec2:DescribeVpcs
+              # - ec2:DescribeInternetGateways
+              # - ec2:DescribeAvailabilityZones
+              # - ec2:DescribeSecurityGroups
+              # - ec2:DescribeSecurityGroupRules
+              # - ec2:CreateSecurityGroup
+              # - ec2:DeleteSecurityGroup
+              # - ec2:AuthorizeSecurityGroupIngress
+              # - ec2:AuthorizeSecurityGroupEgress
+              # - ec2:RevokeSecurityGroupIngress
+              # - ec2:RevokeSecurityGroupEgress
+              # - ec2:DescribeNetworkInterfaces
+            Resource: "*"
+          - Sid: IAMForEKSRead
+            Effect: Allow
+            Action:
+              # - iam:CreateRole
+              # - iam:DeleteRole
+              # - iam:GetRole
+              # - iam:UpdateRole
+              # - iam:TagRole
+              # - iam:UntagRole
+              # - iam:UpdateAssumeRolePolicy
+              # - iam:PutRolePolicy
+              # - iam:GetRolePolicy
+              # - iam:DeleteRolePolicy
+              # - iam:AttachRolePolicy
+              # - iam:DetachRolePolicy
+              # - iam:ListAttachedRolePolicies
+              # - iam:ListRolePolicies
+              # - iam:ListInstanceProfilesForRole
+              # - iam:PassRole
+              # - iam:CreatePolicy
+              # - iam:DeletePolicy
+              - iam:GetPolicy
+              # - iam:GetPolicyVersion
+              # - iam:CreatePolicyVersion
+              # - iam:DeletePolicyVersion
+              # - iam:ListPolicyVersions
+              # - iam:CreateOpenIDConnectProvider
+              # - iam:DeleteOpenIDConnectProvider
+              # - iam:GetOpenIDConnectProvider
+              # - iam:TagOpenIDConnectProvider
+              # - iam:UpdateOpenIDConnectProviderThumbprint
+              # - iam:AddClientIDToOpenIDConnectProvider
+              # - iam:CreateServiceLinkedRole
+            Resource: "*"
+          - Sid: KMSForEKSRead
+            Effect: Allow
+            Action:
+              # - kms:CreateKey
+              # - kms:CreateAlias
+              # - kms:DeleteAlias
+              - kms:DescribeKey
+              # - kms:GetKeyPolicy
+              # - kms:GetKeyRotationStatus
+              # - kms:ListAliases
+              # - kms:ListResourceTags
+              # - kms:PutKeyPolicy
+              # - kms:TagResource
+              # - kms:UntagResource
+              # - kms:EnableKeyRotation
+              # - kms:ScheduleKeyDeletion
+            Resource: "*"
+          - Sid: SecretsManagerRead
+            Effect: Allow
+            Action: secretsmanager:DescribeSecret
+            Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:*/cdo/*"
+          # The Sentry provider reads its auth token and the Sentry->PagerDuty
+          # integration keys through data sources, so plan needs the values too.
+          - Sid: ObservabilitySentrySecretsRead
+            Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:production/cdo/sentry_*"
+          - Sid: ManagedGrafanaWorkspaceRead
+            Effect: Allow
+            Action:
+              - grafana:DescribeWorkspace
+              - grafana:DescribeWorkspaceAuthentication
+              - grafana:DescribeWorkspaceConfiguration
+              - grafana:ListTagsForResource
+              - grafana:ListWorkspaceServiceAccounts
+              - grafana:ListWorkspaceServiceAccountTokens
+            Resource: !Sub "arn:aws:grafana:${AWS::Region}:${AWS::AccountId}:/workspaces/*"
+          - Sid: ManagedPrometheusWorkspaceRead
+            Effect: Allow
+            Action:
+              - aps:DescribeWorkspace
+              - aps:DescribeLoggingConfiguration
+              - aps:ListTagsForResource
+            Resource: !Sub "arn:aws:aps:${AWS::Region}:${AWS::AccountId}:workspace/*"
+          # The IAM role Managed Grafana assumes to query CloudWatch/Prometheus.
+          - Sid: GrafanaWorkspaceIamRoleRead
+            Effect: Allow
+            Action:
+              # Specifically not iam:ListInstanceProfilesForRole
+              - iam:GetRole
+              - iam:ListRoleTags
+              - iam:ListRolePolicies
+              - iam:GetRolePolicy
+              - iam:ListAttachedRolePolicies
+            Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/observability-grafana-workspace-role"
+
+  # The mutations an apply needs, on top of GitHubActionsOpenTofuReadPolicy.
+  GitHubActionsOpenTofuWritePolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: GitHubActionsOpenTofuWrite
+      Path: /admin/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: S3StateWrite
+            Effect: Allow
+            Action: s3:PutObject
+            Resource: arn:aws:s3:::codeai-tofu-state/*
+          - Sid: ManagedGrafanaWorkspaceWrite
+            Effect: Allow
+            Action:
+              # Specifically not grafana:CreateWorkspace grafana:DeleteWorkspace
+              - grafana:UpdateWorkspace
+              - grafana:UpdateWorkspaceAuthentication
+              - grafana:UpdateWorkspaceConfiguration
+              - grafana:TagResource
+              - grafana:UntagResource
+              - grafana:CreateWorkspaceServiceAccount
+              - grafana:DeleteWorkspaceServiceAccount
+              - grafana:CreateWorkspaceServiceAccountToken
+              - grafana:DeleteWorkspaceServiceAccountToken
+            Resource: !Sub "arn:aws:grafana:${AWS::Region}:${AWS::AccountId}:/workspaces/*"
+          - Sid: ManagedPrometheusWorkspaceWrite
+            Effect: Allow
+            Action:
+              # Specifically not aps:CreateWorkspace aps:DeleteWorkspace
+              - aps:UpdateWorkspaceAlias
+              - aps:TagResource
+              - aps:UntagResource
+            Resource: !Sub "arn:aws:aps:${AWS::Region}:${AWS::AccountId}:workspace/*"
+          # The IAM role Managed Grafana assumes to query CloudWatch/Prometheus.
+          - Sid: GrafanaWorkspaceIamRoleWrite
+            Effect: Allow
+            Action:
+              # Specifically not iam:CreateRole iam:DeleteRole iam:UpdateAssumeRolePolicy
+              - iam:UpdateRole
+              - iam:TagRole
+              - iam:UntagRole
+              - iam:PutRolePolicy
+              - iam:DeleteRolePolicy
+              - iam:AttachRolePolicy
+              - iam:DetachRolePolicy
+            Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/observability-grafana-workspace-role"
+          # Lets the workspace's role_arn be (re)assigned to Managed Grafana.
+          - Sid: PassGrafanaWorkspaceRole
+            Effect: Allow
+            Action: iam:PassRole
+            Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/observability-grafana-workspace-role"
+            Condition:
+              StringEquals:
+                iam:PassedToService: grafana.amazonaws.com
+
+  GitHubActionsCodeDotOrgPlanRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: github-actions-code-dot-org
+      RoleName: github-actions-code-dot-org-plan
       AssumeRolePolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -1020,248 +1273,28 @@ roles.each do |name, config| %>
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                token.actions.githubusercontent.com:sub:
-                  - "repo:code-dot-org/infrastructure:environment:open-tofu-plan"
-                  - "repo:code-dot-org/infrastructure:environment:open-tofu-apply"
-      Policies:
-        - PolicyName: OpenTofuStateAccess
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Sid: S3StateBackend
-                Effect: Allow
-                Action:
-                  - s3:GetObject
-                  - s3:PutObject
-                  - s3:DeleteObject
-                  - s3:ListBucket
-                Resource:
-                  - arn:aws:s3:::codeai-tofu-state
-                  - arn:aws:s3:::codeai-tofu-state/*
-        - PolicyName: EKSManagement
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Sid: EKSClusterManagement
-                Effect: Allow
-                Action:
-                  # - eks:CreateCluster
-                  # - eks:DeleteCluster
-                  - eks:DescribeCluster
-                  # - eks:UpdateClusterConfig
-                  # - eks:UpdateClusterVersion
-                  # - eks:TagResource
-                  # - eks:UntagResource
-                  # - eks:ListTagsForResource
-                  # - eks:CreateFargateProfile
-                  # - eks:DeleteFargateProfile
-                  # - eks:DescribeFargateProfile
-                  # - eks:ListFargateProfiles
-                  # - eks:CreateAddon
-                  # - eks:DeleteAddon
-                  # - eks:DescribeAddon
-                  # - eks:DescribeAddonVersions
-                  # - eks:UpdateAddon
-                  # - eks:ListAddons
-                  # - eks:CreateAccessEntry
-                  # - eks:DeleteAccessEntry
-                  # - eks:DescribeAccessEntry
-                  # - eks:ListAccessEntries
-                  # - eks:AssociateAccessPolicy
-                  # - eks:DisassociateAccessPolicy
-                  # - eks:ListAssociatedAccessPolicies
-                  # - eks:CreateNodegroup
-                  # - eks:DeleteNodegroup
-                  # - eks:DescribeNodegroup
-                  # - eks:UpdateNodegroupConfig
-                  # - eks:UpdateNodegroupVersion
-                  # - eks:ListNodegroups
-                  # - eks:DescribeUpdate
-                  # - eks:ListUpdates
-                  # - eks:AssociateIdentityProviderConfig
-                  # - eks:DescribeIdentityProviderConfig
-                  # - eks:DisassociateIdentityProviderConfig
-                  # - eks:ListIdentityProviderConfigs
-                Resource: "*"
-        - PolicyName: VPCNetworking
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Sid: VPCNetworkManagement
-                Effect: Allow
-                Action:
-                  # - ec2:CreateSubnet
-                  # - ec2:DeleteSubnet
-                  # - ec2:ModifySubnetAttribute
-                  - ec2:DescribeSubnets
-                  # - ec2:CreateRouteTable
-                  # - ec2:DeleteRouteTable
-                  # - ec2:AssociateRouteTable
-                  # - ec2:DisassociateRouteTable
-                  # - ec2:CreateRoute
-                  # - ec2:DeleteRoute
-                  # - ec2:ReplaceRoute
-                  # - ec2:DescribeRouteTables
-                  # - ec2:CreateNatGateway
-                  # - ec2:DeleteNatGateway
-                  # - ec2:DescribeNatGateways
-                  # - ec2:AllocateAddress
-                  # - ec2:ReleaseAddress
-                  # - ec2:DescribeAddresses
-                  # - ec2:CreateTags
-                  # - ec2:DeleteTags
-                  # - ec2:DescribeTags
-                  # - ec2:DescribeVpcs
-                  # - ec2:DescribeInternetGateways
-                  # - ec2:DescribeAvailabilityZones
-                  # - ec2:DescribeSecurityGroups
-                  # - ec2:DescribeSecurityGroupRules
-                  # - ec2:CreateSecurityGroup
-                  # - ec2:DeleteSecurityGroup
-                  # - ec2:AuthorizeSecurityGroupIngress
-                  # - ec2:AuthorizeSecurityGroupEgress
-                  # - ec2:RevokeSecurityGroupIngress
-                  # - ec2:RevokeSecurityGroupEgress
-                  # - ec2:DescribeNetworkInterfaces
-                Resource: "*"
-        - PolicyName: IAMForEKS
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Sid: IAMRoleManagement
-                Effect: Allow
-                Action:
-                  # - iam:CreateRole
-                  # - iam:DeleteRole
-                  # - iam:GetRole
-                  # - iam:UpdateRole
-                  # - iam:TagRole
-                  # - iam:UntagRole
-                  # - iam:UpdateAssumeRolePolicy
-                  # - iam:PutRolePolicy
-                  # - iam:GetRolePolicy
-                  # - iam:DeleteRolePolicy
-                  # - iam:AttachRolePolicy
-                  # - iam:DetachRolePolicy
-                  # - iam:ListAttachedRolePolicies
-                  # - iam:ListRolePolicies
-                  # - iam:ListInstanceProfilesForRole
-                  # - iam:PassRole
-                  # - iam:CreatePolicy
-                  # - iam:DeletePolicy
-                  - iam:GetPolicy
-                  # - iam:GetPolicyVersion
-                  # - iam:CreatePolicyVersion
-                  # - iam:DeletePolicyVersion
-                  # - iam:ListPolicyVersions
-                  # - iam:CreateOpenIDConnectProvider
-                  # - iam:DeleteOpenIDConnectProvider
-                  # - iam:GetOpenIDConnectProvider
-                  # - iam:TagOpenIDConnectProvider
-                  # - iam:UpdateOpenIDConnectProviderThumbprint
-                  # - iam:AddClientIDToOpenIDConnectProvider
-                  # - iam:CreateServiceLinkedRole
-                Resource: "*"
-        - PolicyName: KMSForEKS
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Sid: KMSKeyManagement
-                Effect: Allow
-                Action:
-                  # - kms:CreateKey
-                  # - kms:CreateAlias
-                  # - kms:DeleteAlias
-                  - kms:DescribeKey
-                  # - kms:GetKeyPolicy
-                  # - kms:GetKeyRotationStatus
-                  # - kms:ListAliases
-                  # - kms:ListResourceTags
-                  # - kms:PutKeyPolicy
-                  # - kms:TagResource
-                  # - kms:UntagResource
-                  # - kms:EnableKeyRotation
-                  # - kms:ScheduleKeyDeletion
-                Resource: "*"
-        - PolicyName: SecretsManagerReadOnly
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Sid: SecretsManagerRead
-                Effect: Allow
-                Action:
-                  # - secretsmanager:GetSecretValue
-                  - secretsmanager:DescribeSecret
-                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:*/cdo/*"
-              # The observability OpenTofu workspace reads the Sentry auth tokens and
-              # the Sentry->PagerDuty integration keys. Scoped to those secrets only.
-              - Sid: ObservabilitySentrySecretsRead
-                Effect: Allow
-                Action: secretsmanager:GetSecretValue
-                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:production/cdo/sentry_*"
-        # Permissions for the observability OpenTofu workspace
-        # (code-dot-org/infrastructure, observability/opentofu/environments/prod).
-        - PolicyName: ObservabilityOpenTofu
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Sid: ManagedGrafanaWorkspace
-                Effect: Allow
-                Action:
-                  # Specifically not grafana:DeleteWorkspace grafana:CreateWorkspace
-                  - grafana:DescribeWorkspace
-                  - grafana:DescribeWorkspaceAuthentication
-                  - grafana:DescribeWorkspaceConfiguration
-                  - grafana:UpdateWorkspace
-                  - grafana:UpdateWorkspaceAuthentication
-                  - grafana:UpdateWorkspaceConfiguration
-                  - grafana:ListTagsForResource
-                  - grafana:TagResource
-                  - grafana:UntagResource
-                  - grafana:CreateWorkspaceServiceAccount
-                  - grafana:DeleteWorkspaceServiceAccount
-                  - grafana:ListWorkspaceServiceAccounts
-                  - grafana:CreateWorkspaceServiceAccountToken
-                  - grafana:DeleteWorkspaceServiceAccountToken
-                  - grafana:ListWorkspaceServiceAccountTokens
-                Resource: !Sub "arn:aws:grafana:${AWS::Region}:${AWS::AccountId}:/workspaces/*"
-              - Sid: ManagedPrometheusWorkspace
-                Effect: Allow
-                Action:
-                  # Specifically not aps:CreateWorkspace aps:DeleteWorkspace
-                  - aps:DescribeWorkspace
-                  - aps:DescribeLoggingConfiguration
-                  - aps:UpdateWorkspaceAlias
-                  - aps:ListTagsForResource
-                  - aps:TagResource
-                  - aps:UntagResource
-                Resource: !Sub "arn:aws:aps:${AWS::Region}:${AWS::AccountId}:workspace/*"
-              # The IAM role Managed Grafana assumes to query CloudWatch/Prometheus.
-              - Sid: GrafanaWorkspaceIamRole
-                Effect: Allow
-                Action:
-                  # Specifically not iam:CreateRole iam:DeleteRole iam:ListInstanceProfilesForRole
-                  - iam:GetRole
-                  - iam:UpdateRole
-                  - iam:TagRole
-                  - iam:UntagRole
-                  - iam:ListRoleTags
-                  - iam:ListRolePolicies
-                  - iam:GetRolePolicy
-                  - iam:PutRolePolicy
-                  - iam:DeleteRolePolicy
-                  - iam:ListAttachedRolePolicies
-                  - iam:AttachRolePolicy
-                  - iam:DetachRolePolicy
-                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/observability-grafana-workspace-role"
-              # Lets the workspace's role_arn be (re)assigned to Managed Grafana.
-              - Sid: PassGrafanaWorkspaceRole
-                Effect: Allow
-                Action: iam:PassRole
-                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/observability-grafana-workspace-role"
-                Condition:
-                  StringEquals:
-                    iam:PassedToService: grafana.amazonaws.com
+                token.actions.githubusercontent.com:sub: "repo:code-dot-org/infrastructure:environment:open-tofu-plan"
+      ManagedPolicyArns:
+        - !Ref GitHubActionsOpenTofuReadPolicy
+
+  GitHubActionsCodeDotOrgApplyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: github-actions-code-dot-org-apply
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: "repo:code-dot-org/infrastructure:environment:open-tofu-apply"
+      ManagedPolicyArns:
+        - !Ref GitHubActionsOpenTofuReadPolicy
+        - !Ref GitHubActionsOpenTofuWritePolicy
 
 Outputs:
   DevPermissions:
@@ -1276,3 +1309,11 @@ Outputs:
     Description: Execution Role for GenAI Sagemaker Models
     Value: !GetAtt SagemakerModelExecutionRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}
+  GitHubActionsCodeDotOrgPlanRoleArn:
+    Description: Read-only role assumed by the open-tofu-plan GitHub environment
+    Value: !GetAtt GitHubActionsCodeDotOrgPlanRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-GitHubActionsCodeDotOrgPlanRoleArn"}
+  GitHubActionsCodeDotOrgApplyRoleArn:
+    Description: Read/write role assumed by the open-tofu-apply GitHub environment
+    Value: !GetAtt GitHubActionsCodeDotOrgApplyRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-GitHubActionsCodeDotOrgApplyRoleArn"}
