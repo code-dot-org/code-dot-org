@@ -105,6 +105,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const isIntroOpen =
     toBool(showIntroScreen) &&
     (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
+  // Also true when attempt is null, not just undefined - a quiz with no
+  // intro screen tries to start the attempt automatically, and that can
+  // fail too.
+  const didInitialCheckForAttemptFail = !attempt && !!error;
+  const hasNoAttemptYet = attempt === null;
 
   // Covers both the very first intro screen and Retake reopening it - either
   // way, the button that led here is gone, so hand focus to the heading.
@@ -172,12 +177,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // A quiz with no intro screen has no click-through step - start the
   // attempt automatically once the initial check finds there isn't one yet.
   useEffect(() => {
-    if (!isLoading && !!unitId && attempt === null && !showIntroScreen) {
+    if (!isLoading && !!unitId && hasNoAttemptYet && !showIntroScreen) {
       beginAttempt().catch(() => {
         // Already recorded as a user-facing error in useQuizAttempt.
       });
     }
-  }, [isLoading, unitId, attempt, showIntroScreen, beginAttempt]);
+  }, [isLoading, unitId, hasNoAttemptYet, showIntroScreen, beginAttempt]);
 
   const handleSelectChoice = (questionId: number, choiceId: string) => {
     const previousChoiceId = selectedChoicesByQuestionId[questionId];
@@ -257,8 +262,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         ) : !attempt ? (
           // No intro screen to click through - the effect begins the attempt automatically.
-          // This button is only shown if the initial check failed.
-          error ? (
+          didInitialCheckForAttemptFail ? (
             <MuiButton
               variant="contained"
               color="primary"

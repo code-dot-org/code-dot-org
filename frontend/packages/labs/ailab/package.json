@@ -42,6 +42,8 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "devDependencies": {
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
@@ -54,6 +56,7 @@
     "@vitejs/plugin-react": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
     "chart.js": "^2.9.4",
+    "classnames": "catalog:",
     "eslint": "catalog:",
     "jsdom": "catalog:",
     "messageformat": "^2.3.0",

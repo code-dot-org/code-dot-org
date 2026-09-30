@@ -1,6 +1,6 @@
 import type {ReactNode} from 'react';
 
-import {styles} from '../constants';
+import styles from './scrollableContent.module.scss';
 
 interface ScrollableContentProps {
   tinted?: boolean;
@@ -9,12 +9,8 @@ interface ScrollableContentProps {
 
 const ScrollableContent = ({tinted, children}: ScrollableContentProps) => {
   return (
-    <div
-      style={
-        tinted ? styles.scrollableContentsTinted : styles.scrollableContents
-      }
-    >
-      <div style={styles.scrollingContents}>{children}</div>
+    <div className={tinted ? styles.tinted : styles.plain}>
+      <div className={styles.scrolling}>{children}</div>
     </div>
   );
 };
