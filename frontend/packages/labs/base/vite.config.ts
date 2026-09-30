@@ -75,6 +75,7 @@ export default defineConfig({
     lib: {
       entry: [
         // The host shell (Studio / apps only — see lint-config/eslint/lab.mjs).
+        'src/ai/index.ts',
         'src/host.ts',
         'src/metrics.ts',
         'src/index.ts',
