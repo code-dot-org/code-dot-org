@@ -28,13 +28,13 @@ register-by-name conventions scattered through `blocklyWrapper.ts`.
 - ✅ `defineMutator` / `defineExtension` / `defineMixin` — `mutators/`, `extensions/`, `mixins/`
 - ✅ React-field bridge — `fields/createReactField.tsx`
 
-## 1. Fields (2 / 6 core)
+## 1. Fields (3 / 6 core)
 
 | App item                      | File                                          | Status | Package                                    |
 | ----------------------------- | --------------------------------------------- | ------ | ------------------------------------------ |
 | CdoFieldButton                | `addons/cdoFieldButton.ts`                    | ✅     | `fields/fieldButton/`                      |
 | CdoFieldColour                | `addons/cdoFieldColour.ts`                    | 🟡     | `fields/fieldColour/` (parity unverified)  |
-| CdoFieldDropdown              | `addons/cdoFieldDropdown.ts`                  | ⬜     |                                            |
+| CdoFieldDropdown              | `addons/cdoFieldDropdown.ts`                  | ✅     | `fields/cdoFieldDropdown/` (no RTL text)   |
 | CdoFieldVariable              | `addons/cdoFieldVariable.ts`                  | ⬜     |                                            |
 | CdoFieldParameter             | `addons/cdoFieldParameter.ts`                 | ⬜     |                                            |
 | CdoFieldNumber                | `addons/cdoFieldNumber.ts`                    | ⬜     |                                            |
@@ -153,12 +153,13 @@ Left (🟢 small):
 
 ## 7. Block families & generators (mechanism only)
 
-| App item                           | File                               | Status | Package                                                |
-| ---------------------------------- | ---------------------------------- | ------ | ------------------------------------------------------ |
-| Generator wiring                   | `addons/cdoGenerator.ts`           | 🟡     | `generators/simple.ts` + per-block `generator` in defs |
-| Variable blocks                    | `customBlocks/variableBlocks.ts`   | ⬜     |                                                        |
-| Procedure blocks                   | `customBlocks/proceduresBlocks.ts` | 🟡     | via shareable-procedures plugin                        |
-| argument_reporter / parameters_get | `customBlocks/`                    | ⬜     |                                                        |
+| App item                                  | File                               | Status | Package                                                |
+| ----------------------------------------- | ---------------------------------- | ------ | ------------------------------------------------------ |
+| Generator wiring                          | `addons/cdoGenerator.ts`           | 🟡     | `generators/simple.ts` + per-block `generator` in defs |
+| Variable blocks                           | `customBlocks/variableBlocks.ts`   | ⬜     |                                                        |
+| Procedure blocks                          | `customBlocks/proceduresBlocks.ts` | 🟡     | via shareable-procedures plugin                        |
+| argument_reporter / parameters_get        | `customBlocks/`                    | ⬜     |                                                        |
+| blocksCommon (`apps/src/blocksCommon.js`) | —                                  | ✅     | `blocks/index.ts` (`BaseBlocks`)                       |
 
 > The package ships the _mechanism_ (`defineBlock` + typed generators) but no
 > central concrete block library yet.
@@ -177,7 +178,7 @@ Left (🟢 small):
 
 | Category                  | Core items | Done/partial                                  |
 | ------------------------- | ---------- | --------------------------------------------- |
-| Fields                    | 6          | 2 (1✅ 1🟡)                                   |
+| Fields                    | 6          | 3 (2✅ 1🟡)                                   |
 | Plugins                   | 14         | 5 (3✅ 2🟡)                                   |
 | Mutators/extensions       | 5          | 2🟡                                           |
 | Renderers                 | 3 families | 1✅ +constants🟡                              |
