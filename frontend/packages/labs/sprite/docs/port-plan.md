@@ -138,6 +138,13 @@ Changes outside the package that the wiring needed:
   has been, testing for a message inject reads. It tested for an empty
   `Blockly.Msg`, which a single field plugin's message defeats; Blockly
   then threw while labelling the workspace.
+- `@code-dot-org/core`: the lab makes no request of its own. Every one is
+  a module on `DashboardApiClient`: `libraries.getSource` for a level's
+  helper library, `animations.remove` for a deleted image, and
+  `media.getImage` for reading an image by URL, which routes another
+  site's image through the media proxy (`needsMediaProxy`, which the lab's
+  own `mediaUrl` now shares). A `data:` image source is taken as the image,
+  with no request.
 - Studio: the project edit route wraps the lab in `LabProviders` and
   `LabHost`, as the music branch does, and `FullHeightLabFrame` lets the
   lab's theme wrapper fill it.
@@ -149,6 +156,18 @@ Generation runs through the `ai` SDK, `@ai-sdk/google` and apps'
 has no AI gateway client yet. `paintBlank.ts` belongs here too: it needs the
 model's output sizes from `modelHelpers.ts` and `crispScaleFor` from apps'
 `pixelEditor/pixelArt`.
+
+The Images tab comes first without generation. Done so far: apps' pixel
+editor (`src/pixelEditor`, with apps' `pixelArt` and `tools` tests), which
+only Sprite Lab 2 uses. Still to come, in order: `paintBlank.ts` with the
+model's size constants split from `modelHelpers.ts`; `useImageSession` and
+the details dialog without its generate view; a new-image form cut from
+`GenerateImageView` (type, style, name, paint); the pane; the tab in
+`SpriteLabView` with rename and delete; then image levels and the guide.
+
+Apps offers painting only in freeplay (`paintDisabled`), so an image level
+without generation leaves a student no way to make an image. Until
+generation arrives, that policy has to change or image levels stay out.
 
 ### 7. Scene music
 
@@ -267,6 +286,16 @@ Layer 5, so far:
 - Apps has no tests for these views. New tests cover `useSceneEditing`,
   `playBar`, `useSetupBlockColor`, `ScenesGallery` and the playspace's
   location picking.
+
+The pixel editor:
+
+- Apps' `HttpClient.get` of the image being edited is
+  `DashboardApiClient.media.getImage`; a `data:` or `blob:` URL is read by
+  an image element instead, as apps' fallback did.
+- React's event types are imported under `React`-prefixed names, so the DOM
+  event types the window listeners use keep their own.
+- The tooltip's `data-theme` slot prop needs the design system's MUI
+  augmentation, now mirrored in `src/types/mui.d.ts`.
 
 External scenes:
 
