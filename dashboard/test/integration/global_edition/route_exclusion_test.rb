@@ -58,10 +58,12 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
     end
 
     it 'serves a region-prefixed image when CloudFront forwards no cookies or language header' do
-      cookies.clear
+      cookies.delete('ge_region')
+      cookies.delete('language_')
 
       get "/us/es#{asset_path}", headers: {'Accept-Language' => ''}
 
+      _(request.cookies).must_be_empty
       must_respond_with 200
       _(response.media_type).must_equal 'image/png'
       _(response.body).must_equal asset_body
