@@ -4,6 +4,8 @@ import ViteRails from 'vite-plugin-rails';
 import path from 'node:path';
 import {tanstackRouter} from '@tanstack/router-plugin/vite';
 
+import {aiGatewayKeyProxy} from '@code-dot-org/core/api/aiGateway/dev';
+
 // https://vite.dev/config/
 export default defineConfig(({mode}) => {
   const isDev = mode === 'development';
@@ -43,6 +45,9 @@ export default defineConfig(({mode}) => {
         autoCodeSplitting: true,
       }),
       react(),
+      // With GOOGLE_GENERATIVE_AI_API_KEY and
+      // VITE_AI_GATEWAY_URL=/__ai-gateway, AI calls use the developer's key.
+      aiGatewayKeyProxy(),
     ],
   };
 });
