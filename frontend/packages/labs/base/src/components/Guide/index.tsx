@@ -1,17 +1,28 @@
 import classNames from 'classnames';
-import type {FunctionComponent, PropsWithChildren} from 'react';
+import type {FunctionComponent, PropsWithChildren, Ref} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import styles from './guide.module.scss';
 
+/** The guide's distances from its container's right and bottom edges
+    (.guide in guide.module.scss), for siblings that lay out around it. */
+export const GUIDE_RIGHT_OFFSET_PX = 32;
+export const GUIDE_BOTTOM_OFFSET_PX = 20;
+
 export interface GuideProps extends PropsWithChildren {
   id?: string;
-  width?: 'normal' | 'narrow' | 'very-narrow';
+  /** A named share of the container, or a fixed width in px. A change
+      animates. */
+  width?: 'normal' | 'narrow' | 'very-narrow' | number;
   position?: 'normal' | 'bottom';
   modal?: 'full' | 'gap';
   cornerIcon?: 'minimize' | 'maximize';
   onCornerIconClick?: () => void;
+  /** Shrink-wrap whatever is left showing, e.g. a single button. */
+  collapsed?: boolean;
+  /** The floating panel itself, for a caller that measures it. */
+  panelRef?: Ref<HTMLDivElement>;
 }
 
 // The Guide is a floating container for instructional content.  It is larger
@@ -25,6 +36,8 @@ const Guide: FunctionComponent<GuideProps> = ({
   modal,
   cornerIcon,
   onCornerIconClick,
+  collapsed,
+  panelRef,
 }) => {
   return (
     <div
@@ -36,17 +49,24 @@ const Guide: FunctionComponent<GuideProps> = ({
     >
       <div
         id={id}
+        ref={panelRef}
+        // A collapsed panel is only as wide as its buttons, so a fixed width
+        // applies only while it is open.
+        style={typeof width === 'number' && !collapsed ? {width} : undefined}
         className={classNames(
           styles.guide,
-          width === 'very-narrow'
-            ? styles.guideVeryNarrowWidth
-            : width === 'narrow'
-              ? styles.guideNarrowWidth
-              : styles.guideNormalWidth,
+          typeof width === 'number'
+            ? undefined
+            : width === 'very-narrow'
+              ? styles.guideVeryNarrowWidth
+              : width === 'narrow'
+                ? styles.guideNarrowWidth
+                : styles.guideNormalWidth,
           position === 'bottom'
             ? styles.guideBottomPosition
             : styles.guideNormalPosition,
           modal === 'gap' && styles.guideGap,
+          collapsed && styles.guideCollapsed,
         )}
       >
         {children}
