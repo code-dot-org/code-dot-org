@@ -137,24 +137,20 @@ namespace :test do
 
   # A failure stops the Drone PR build (lib/rake/ci.rake) and the DTT (ui_all).
   timed_task_with_logging playwright_ui: :playwright_install do
-    raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional)
+    raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional, blocking: true)
   end
 
-  # A visual diff stops only the DTT. Drone run failures are suppressed until we
-  # can develop a PR-level visual diff strategy.
-  # Drone exports the Applitools variables (.drone.yml). The DTT
-  # daemon has the key Cucumber's Eyes suite uses (eyes_steps.rb) and derives
-  # the rest; on that machine a missing key is a configuration error.
+  # The DTT daemon has the key Cucumber's Eyes suite uses (eyes_steps.rb) and
+  # derives the rest; on that machine a missing key is a configuration error.
   timed_task_with_logging playwright_eyes: :playwright_install do
     env = dtt_playwright_eyes_env
-    if env.empty? && ENV['VISUAL_PROVIDER'].blank?
+    if env.empty?
       raise 'Playwright Eyes: the test system has no applitools_eyes_api_key' if CDO.test_system?
       ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
       next
     end
-    secrets = env.empty? ? {} : {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
-    passed = run_playwright_suite(:eyes, env: env, env_secrets: secrets)
-    raise 'Playwright Eyes e2e tests failed' if CDO.test_system? && !passed
+    secrets = {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
+    raise 'Playwright Eyes e2e tests failed' unless run_playwright_suite(:eyes, blocking: true, env: env, env_secrets: secrets)
   end
 
   # Run the deploy-time UI suites in parallel. If one suite raises, allow the
@@ -632,7 +628,7 @@ end
 
 # Never raises. The caller decides if a failure stops the build. `env` is
 # logged with the command; `env_secrets` are not.
-def run_playwright_suite(suite, env: {}, env_secrets: {})
+def run_playwright_suite(suite, blocking:, env: {}, env_secrets: {})
   label = PLAYWRIGHT_SUITES.fetch(suite)
   # Both suites run in one directory. Equal names would lose the first report.
   suffix = suite == :eyes ? '-eyes' : ''
@@ -671,7 +667,6 @@ def run_playwright_suite(suite, env: {}, env_secrets: {})
   summary = playwright_results_summary(File.join(e2e_dir, "test-results#{suffix}", 'results.json'))
 
   pass_fail_line = playwright_pass_fail_summary(summary, duration)
-  blocking = suite == :functional || CDO.test_system?
   qualifier = blocking ? '' : ' (non-blocking)'
   # Yellow: the suite failed and the build did not.
   glyph, color =
