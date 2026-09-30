@@ -16,6 +16,8 @@ const jestAliases = {
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
   '^firmata$': 'mock-firmata/mock-firmata',
+  // core's api module imports ESM-only packages Jest does not transform; a suite that asserts on requests mocks it itself.
+  '^@code-dot-org/core/api$': '<rootDir>/test/util/stubCoreApi.ts',
   'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
 };
 

@@ -14,11 +14,6 @@ import React from 'react';
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import experiments from '@cdo/apps/util/experiments';
 
-jest.mock('@code-dot-org/core/api', () => {
-  const client = {transport: {}};
-  return {useApiClient: () => client};
-});
-
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
   addReaction: jest.fn(),

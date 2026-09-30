@@ -10,11 +10,6 @@ import React from 'react';
 
 import ReactionChips from '@cdo/apps/aiTutor/views/gallery/ReactionChips';
 
-jest.mock('@code-dot-org/core/api', () => {
-  const client = {transport: {}};
-  return {useApiClient: () => client};
-});
-
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
   addReaction: jest.fn(),
