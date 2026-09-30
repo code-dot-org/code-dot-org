@@ -3,10 +3,12 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {AnswerRecord, StudentInputs} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
+import QuestionsStep from './QuestionsStep';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
@@ -15,6 +17,8 @@ interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  inputs: StudentInputs;
+  onAnswer: (record: AnswerRecord) => void;
   onExit: () => void;
   onFinish: () => void;
 }
@@ -23,6 +27,8 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  inputs,
+  onAnswer,
   onExit,
   onFinish,
 }) => {
@@ -46,17 +52,15 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
-      default:
-        // Other step kinds arrive in later changes.
+      case 'questions':
         return (
-          <div className={styles.stepFallback}>
-            <MuiTypography variant="body3" className={shared.muted}>
-              This step type ({step.kind}) is not available yet.
-            </MuiTypography>
-            <MuiButton variant="contained" onClick={advance}>
-              {continueLabel}
-            </MuiButton>
-          </div>
+          <QuestionsStep
+            key={step.id}
+            step={step}
+            inputs={inputs}
+            onAnswer={onAnswer}
+            onComplete={advance}
+          />
         );
     }
   };

@@ -55,9 +55,25 @@
           "kind": "questions",
           "questions": [
             {
-              "id": "intro-placeholder",
-              "type": "freeResponse",
-              "text": "Placeholder until question steps render."
+              "id": "intro-what-is-prompt",
+              "type": "multipleChoice",
+              "text": "What is a prompt?",
+              "options": [
+                {"id": "instructions", "label": "Instructions you give an AI", "correct": true},
+                {"id": "website", "label": "A finished website"},
+                {"id": "error", "label": "An error message from the browser"}
+              ]
+            },
+            {
+              "id": "intro-web-languages",
+              "type": "multipleChoice",
+              "text": "Which of these are used to build web pages? Choose all that apply.",
+              "multiSelect": true,
+              "options": [
+                {"id": "html", "label": "HTML", "correct": true},
+                {"id": "css", "label": "CSS", "correct": true},
+                {"id": "jpeg", "label": "JPEG"}
+              ]
             }
           ]
         }
