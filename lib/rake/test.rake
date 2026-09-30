@@ -162,11 +162,8 @@ namespace :test do
     end
     failures = UI_SUITES.keys.zip(exceptions).to_h.compact
 
-    {
-      'Deploy-time UI suites:' => UI_SUITES.keys - PLAYWRIGHT_UI_SUITES.keys,
-      'Deploy-time Playwright suites:' => PLAYWRIGHT_UI_SUITES.keys,
-    }.each do |title, targets|
-      ChatClient.log ui_all_rollup(title, targets, failures), color: (failures.slice(*targets).empty? ? 'green' : 'red')
+    UI_SUITES_BY_ROLLUP.each do |title, suites|
+      ChatClient.log ui_all_rollup(title, suites, failures), color: (failures.slice(*suites.keys).empty? ? 'green' : 'red')
     end
 
     # aws/ci_build turns the DTT red off this raise. Which exception surfaces
@@ -593,14 +590,19 @@ GLOBS_AFFECTING_EVERYTHING = %w(
 
 PLAYWRIGHT_SUITES = {functional: '🎭 Playwright', eyes: '🎭👁️ Playwright Eyes'}.freeze
 
-# The suites test:ui_all dispatches, and the names its rollup gives them.
-UI_SUITES = {
-  eyes_ui: 'Eyes',
-  saucelabs_ui: 'Safari + iPad + iPhone UI',
-  devicefarm_desktop_ui: 'Chrome + Firefox UI',
-  playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
-  playwright_eyes: PLAYWRIGHT_SUITES.fetch(:eyes),
+# The suites test:ui_all dispatches, and the names its rollups give them, by rollup.
+UI_SUITES_BY_ROLLUP = {
+  'Deploy-time UI suites:' => {
+    eyes_ui: 'Eyes',
+    saucelabs_ui: 'Safari + iPad + iPhone UI',
+    devicefarm_desktop_ui: 'Chrome + Firefox UI',
+  },
+  'Deploy-time Playwright suites:' => {
+    playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
+    playwright_eyes: PLAYWRIGHT_SUITES.fetch(:eyes),
+  },
 }.freeze
+UI_SUITES = UI_SUITES_BY_ROLLUP.values.reduce(:merge).freeze
 
 # Which run_playwright_suite rollup stands in for a UI_SUITES entry.
 PLAYWRIGHT_UI_SUITES = {playwright_ui: :functional, playwright_eyes: :eyes}.freeze
@@ -696,11 +698,11 @@ end
 
 # The suites report minutes apart and interleaved with everything else in the
 # room, so this is the only place the whole deploy window can be read at once.
-def ui_all_rollup(title, targets, failures)
-  lines = targets.map do |target|
+def ui_all_rollup(title, suites, failures)
+  lines = suites.map do |target, label|
     rollup = PLAYWRIGHT_ROLLUP[PLAYWRIGHT_UI_SUITES[target]]
     next rollup if rollup
-    failures[target] ? "❌ #{UI_SUITES[target]}: #{failures[target].message}." : "✅ #{UI_SUITES[target]}: passed."
+    failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
   end
   [title, *lines].join("\n")
 end
