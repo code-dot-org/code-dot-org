@@ -60,10 +60,22 @@ export const ProjectVersionSchema = z.object({
 
 export const ProjectVersionListSchema = z.array(ProjectVersionSchema);
 
-export const ProjectSourcesSchema = z.object({
-  source: z.union([z.string(), MultiFileSourceSchema]),
-  labConfig: z.record(z.string(), z.record(z.string(), z.string())).optional(),
-});
+// Passthrough: a lab keeps its own top-level keys beside `source` (Sprite
+// Lab's `scenes` and `animations`), and stripping them loses the project.
+export const ProjectSourcesSchema = z
+  .object({
+    // A Blockly lab may keep its workspace serialization as an object, as
+    // Sprite Lab 2 projects do; the server stores whatever JSON it is given.
+    source: z.union([
+      z.string(),
+      MultiFileSourceSchema,
+      z.record(z.string(), z.unknown()),
+    ]),
+    labConfig: z
+      .record(z.string(), z.record(z.string(), z.string()))
+      .optional(),
+  })
+  .passthrough();
 
 export const SourcesUpdateResponseSchema = z.object({
   timestamp: z.string().nullable(),
