@@ -1,0 +1,71 @@
+// What kind of level this is, and everything that follows from it: the
+// surfaces a student sees, and the image controls they get.
+
+import {type ImageAdlibSet} from './ai/images/imageAdlibs';
+import {
+  type ImageStyle,
+  type ImageSubject,
+  type ImageType,
+} from './ai/images/types';
+import {type Tab} from './redux/spriteLab2Redux';
+
+export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
+
+export interface LevelMode {
+  kind: LevelModeKind;
+  /** The kind of image the level is about. On a world level, the palette
+      offers only the level's image of this kind (image_role_defaults, else
+      the newest); a world level without one offers everything. */
+  imageType?: ImageType;
+  /** For a sprite: a character, which can be animated, or an object, which
+      is one still picture with its own words. Character when unset. */
+  imageSubject?: ImageSubject;
+  /** Recorded on every image this level makes. The other end of the link
+      is the image_role_defaults level property (imageRoleDefaults.ts), which code
+      and world levels use to open their dropdowns on an image by role. */
+  imageRole?: string;
+  /** Word combos to offer, in place of the set the kind implies. */
+  adlibs?: ImageAdlibSet;
+  /** A world level that places one thing: no Erase, the image goes on an
+      empty cell, and choosing another cell moves it. */
+  placeOne?: boolean;
+}
+
+/** The style every generate form starts on; students can still switch. */
+export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
+
+/** The tabs a kind shows, the first being where the level opens. An image
+    level has none: its panel replaces the tab shell. */
+const TABS: Record<LevelModeKind, Tab[]> = {
+  code: ['Code', 'Play'],
+  world: ['World', 'Play'],
+  play: ['Play'],
+  image: [],
+  freeplay: ['Code', 'Images', 'World', 'Play'],
+};
+
+/** Which combos a kind offers when the level names none. */
+const ADLIBS: Partial<Record<LevelModeKind, ImageAdlibSet>> = {
+  image: 'simple',
+  freeplay: 'expanded',
+};
+
+export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
+  return mode ? TABS[mode.kind] : undefined;
+}
+
+/** The image panel is the whole level, in place of the tabs and the stage. */
+export function isImageMode(mode: LevelMode | undefined): boolean {
+  return mode?.kind === 'image';
+}
+
+/** The only mode offering the prompt box and the paint tools. */
+export function isFreeplayMode(mode: LevelMode | undefined): boolean {
+  return mode?.kind === 'freeplay';
+}
+
+export function adlibSetForMode(
+  mode: LevelMode | undefined,
+): ImageAdlibSet | undefined {
+  return mode ? (mode.adlibs ?? ADLIBS[mode.kind]) : undefined;
+}
