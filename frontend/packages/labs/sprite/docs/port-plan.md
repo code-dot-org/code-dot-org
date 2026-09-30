@@ -18,7 +18,7 @@ to `lab2/`, so `lab2/audioFeedback/heightTone.ts` becomes
 | 1   | Simulation core | `platformPhysics`, `characterAnimations`, `camera`, `audioFeedback/*`, `ai/images/{keyColor,encoding,types}`                                                                                                                                         | Done   |
 | 2   | Scene model     | `types`, `world`, `imageReferences`, `imageTrim`, `imageGallery`, `imageRoleDefaults`, `levelMode`, `worldStartPattern`, `guideSteps`, `sceneToolbox`, `addBlocks`, `scenesApi`, `sceneThumbnails`, `redux/spriteLab2Redux`, `ai/images/imageAdlibs` | Done   |
 | 3   | Blockly         | `blockly/**`, `migrateSources`                                                                                                                                                                                                                       | Done   |
-| 4   | Engine          | `SpriteLab2Engine.js`, `redux/reseedablePageConstants`, and everything under them in `apps/src/p5lab`                                                                                                                                                |        |
+| 4   | Engine          | `SpriteLab2Engine.js`, `redux/reseedablePageConstants`, and everything under them in `apps/src/p5lab`                                                                                                                                                | Begun  |
 | 5   | Views           | `views/**`, `entrypoint.ts`, `index.js`                                                                                                                                                                                                              | Begun  |
 | 6   | AI images       | `ai/images/{imageGeneration,imageSafety,removeBackground,characterSet,modelHelpers}`, `paintBlank`                                                                                                                                                   |        |
 | 7   | Scene music     | `sceneMusic`, `musicProjects`, `views/useSceneMusic`, `blockly/musicProjectDropdown`                                                                                                                                                                 |        |
@@ -51,9 +51,15 @@ engine is therefore most of `apps/src/p5lab`:
 | `p5lab/gamelab/`           | 3,097 |
 
 `redux/reseedablePageConstants.ts` wraps apps' legacy `pageConstants`
-reducer, which only the engine reads. The engine also needs p5 and p5.play, which no frontend package carries, and
+reducer, which only the engine reads. The engine also needs
 JS-Interpreter through `CustomMarshalingInterpreter`, which
 `@code-dot-org/lab/interpreter` already ports.
+
+Done, following `docs/engine.md`'s order of work: the clean-room sprite
+library that replaces p5.play (`src/sprites/`), and the runtime,
+`CoreLibrary` and `p5lab/spritelab/commands` (`src/engine/runtime/`),
+with apps' `CoreLibraryTest` and command tests ported. Animation loading,
+the engine class and the wiring remain.
 
 ### 5. Views
 
