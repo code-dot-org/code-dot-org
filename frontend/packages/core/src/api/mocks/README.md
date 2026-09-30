@@ -130,6 +130,25 @@ should get the same baseline response with no fixture registered:
 4. For writes, persist via `scenarioStore`'s `writeResource(name, value)`;
    reads layer `readResource()` over the seed for the latest state.
 
+## The AI gateway
+
+`aiGateway.handlers.ts` stands in for dashboard's token endpoint and the AI
+gateway (`https://ai-gateway.code.org`). Every `generateText` call gets a
+canned answer: a sentence for text, the first value the requested output
+schema admits for structured output (so a safety classifier answers with the
+first of its enum, e.g. `OK`), and a prepared image
+(`aiGateway.cannedImage.ts`: a pixel character on pure magenta, at the
+model's output size) for a call that asks for one. A scenario answers its own
+way by registering a route for `AI_GATEWAY_MOCK_PATH`.
+
+To call the real model instead, with your own key and without dashboard's
+gateway, run the dev server with `GOOGLE_GENERATIVE_AI_API_KEY` in its
+environment and `VITE_AI_GATEWAY_URL=/__ai-gateway`. The Vite plugin in
+`@code-dot-org/core/api/aiGateway/dev` holds the key on the server and calls
+the Gemini API directly; it runs none of the gateway's checks, and the mocked
+access token still stands. A model the public API does not offer (the
+gateway calls Vertex) can be renamed with the plugin's `models` option.
+
 ## Vitest
 
 The same handler library runs in tests via an MSW node server. From a
