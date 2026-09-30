@@ -35,7 +35,6 @@ interface UserChatMessageEditorProps {
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
   currentLevelId: number | null;
-  // Forwarded to submitChatContents as the level's own system prompt.
   levelSystemPrompt?: string;
   sendDisabled?: boolean;
   onMessageSent?: () => void;

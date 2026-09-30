@@ -65,9 +65,7 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      // Names the level's asset folder for multimodal uploads.
       levelName?: string;
-      // The level's own system prompt, sent ahead of modelParameters.systemPrompt.
       levelSystemPrompt?: string;
       onSchemaResponse?: (response: unknown) => void;
       formatSchemaResponseForDisplay?: (response: unknown) => string;
