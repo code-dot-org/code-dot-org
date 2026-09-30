@@ -26,15 +26,18 @@ What Unit 1 actually builds is the foundation the rest of the year assumes you a
 
 <hr>
 
-<div style="display: flex; align-items: center; gap: 12px; background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 24px 0 16px 0;">
-  <div style="background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 20px; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">&#10003;</div>
-  <div style="font-size: 14pt; color: #1F1976;">
-    <strong>Lesson 1 Complete</strong><br>
-    Nice work! You've finished Getting Started.
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 24px 0 16px 0;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 20px; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">&#10003;</div>
+    <div style="font-size: 14pt; color: #1F1976;">
+      <strong>Lesson 1 Complete</strong><br>
+      Nice work! You've finished Getting Started.
+    </div>
   </div>
 </div>
 
-<div style="text-align: center; margin: 20px 0;">
-  <a href="#" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 14pt;">Continue to Lesson 2: What Is AI, Really? </a>
+<div style="background-color: #4C42CF; color: #FFFFFF; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px;">
+  <span style="font-size: 11pt; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Up Next</span><br>
+  <span style="font-size: 14pt; font-weight: bold;">Lesson 2: What Is AI, Really?</span>
 </div>
 MARKDOWN

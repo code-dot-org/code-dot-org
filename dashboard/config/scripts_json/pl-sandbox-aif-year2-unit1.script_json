@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-28 20:02:09 UTC",
+    "serialized_at": "2026-09-29 18:08:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -52,7 +52,7 @@
       "name": "What is AI, Really?",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -150,6 +150,19 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-year2-unit1"
       }
+    },
+    {
+      "key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
     }
   ],
   "activity_sections": [
@@ -173,6 +186,28 @@
       "seeding_key": {
         "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0",
         "lesson_activity.key": "46836efd-e059-4fbb-b367-90c6b94ebe96"
+      }
+    },
+    {
+      "key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7",
+      "position": 1,
+      "properties": {
+        "progression_name": "What is Intelligence?"
+      },
+      "seeding_key": {
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7",
+        "lesson_activity.key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67"
+      }
+    },
+    {
+      "key": "8f57faa1-120d-47f2-9674-1c1333a8b86a",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI's Past, Present, and Future"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a",
+        "lesson_activity.key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67"
       }
     }
   ],
@@ -308,6 +343,160 @@
       "level_keys": [
         "pl-aif-y2-u1-l1-pl-format"
       ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intro"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-intro"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-what-is-intelligence"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-what-is-intelligence"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-turing-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-turing-test"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intelligence-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-intelligence-facilitation"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Past, Present, and Future"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-ai-history"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Past, Present, and Future"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-ai-history-facilitation"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Past, Present, and Future"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-lesson-reflection"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-ai-lesson-reflection"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -381,6 +570,90 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-year2-unit1",
         "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-intro",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intro"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-what-is-intelligence",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-what-is-intelligence"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-turing-test",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-turing-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-intelligence-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intelligence-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-ai-history",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-ai-history-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-ai-lesson-reflection",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-lesson-reflection"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
       }
     }
   ],

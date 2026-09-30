@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-28 21:24:01 UTC",
+    "serialized_at": "2026-09-29 23:11:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -233,7 +233,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can we process data to find patterns and solve problems?**\n\nIn this lesson, students will explore how computational tasks like sorting, filtering, and aggregating can uncover patterns and solve problems using a library dataset. Students will begin with a quick hands-on activity to introduce these concepts, then apply them systematically to real-world data about library books. Through guided examples, independent practice, and reflective discussions, students will understand how computational tools make data analysis more efficient and impactful.",
-        "preparation": "- Gather **index cards** (one per student) or an equivalent number of small pieces of paper.\n- Collect enough **UNO cards** for each group of 4 students to have 20–25 cards.\n    - *(Optional)* Print and cut out the provided UNO cards if physical cards aren’t available. Prepare enough for each group of four students.\n- Print copies of the Processing Library Data activity guide (one for each student).",
+        "preparation": "- Collect enough **playing cards** for each group of 4 students to have 20–26 cards.\n    - *(Optional)* Print and cut out the provided playing cards if physical cards aren’t available. Prepare enough for each group of four students.\n- Print copies of the Processing Library Data activity guide (one for each student).",
         "student_overview": "**How can we process data to find patterns and solve problems?**\n\nIn this lesson, you’ll explore how to process data using computational tasks like sorting, filtering, and aggregating. You’ll work with a library dataset to uncover patterns and solve challenges, learning how computers organize and analyze large amounts of information."
       },
       "seeding_key": {
@@ -2607,10 +2607,22 @@
       }
     },
     {
-      "key": "4ef61477-ca71-4985-ae12-9e09589e2fba",
+      "key": "53d32666-2e3c-4a23-8284-a250bab0782a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video (0:00 - 1:48).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of IoT devices you've heard about or used?*\n* **Sticky Note Swap:** Have students write a response on a sticky note, then trade notes with a partner. They read and respond to their partner’s idea before sharing key insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to realize they interact with IoT devices and systems in different parts of their lives. For example, a smartwatch tracks your steps and sends the information to an app on your phone, or a smart thermostat adjusts the temperature in your home based on the weather outside.",
+        "description": "Today we're going to explore IoT (Internet of Things) devices as an emerging technology. Let's take a look at an example in action of how these smart devices are changing the way that we live, work, and play.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "53d32666-2e3c-4a23-8284-a250bab0782a",
+        "lesson_activity.key": "0dc9dca1-0aac-4661-8a09-efc73e63087d"
+      }
+    },
+    {
+      "key": "4ef61477-ca71-4985-ae12-9e09589e2fba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video. It highlights an IoT (Internet of Things) mouthguard that is now being used in rugby matches that communicate wirelessly with observers to flag players that might need to be assessed for a concussion.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of IoT devices you've heard about or used?*\n* **Sticky Note Swap:** Have students write a response on a sticky note, then trade notes with a partner. They read and respond to their partner’s idea before sharing key insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to realize they interact with IoT devices and systems in different parts of their lives. For example, a smartwatch tracks your steps and sends the information to an app on your phone, or a smart thermostat adjusts the temperature in your home based on the weather outside.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2620,16 +2632,6 @@
       },
       "seeding_key": {
         "activity_section.key": "4ef61477-ca71-4985-ae12-9e09589e2fba",
-        "lesson_activity.key": "0dc9dca1-0aac-4661-8a09-efc73e63087d"
-      }
-    },
-    {
-      "key": "972497b1-d851-4bda-b03a-ad88f923d159",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "972497b1-d851-4bda-b03a-ad88f923d159",
         "lesson_activity.key": "0dc9dca1-0aac-4661-8a09-efc73e63087d"
       }
     },
@@ -2648,7 +2650,7 @@
       "key": "ac92d0dd-49cc-4d4c-b8f1-579c57709e90",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n",
         "duration": "15",
         "name": "Exploring IoT Systems, Hardware, and Privacy Concerns"
       },
@@ -2691,6 +2693,10 @@
       "key": "f8e7a23d-72cb-4923-b1c9-28fca1bdf634",
       "position": 4,
       "properties": {
+        "description": "In the next activity, you and your partner will take part in a design challenge to quickly brainstorm an innovative device for a connected classroom in a futuristic smart school using IoT solutions\n",
+        "duration": "20",
+        "name": "Smart Classroom Design Challenge",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "f8e7a23d-72cb-4923-b1c9-28fca1bdf634",
@@ -2698,12 +2704,28 @@
       }
     },
     {
-      "key": "8b50299b-d0e4-487b-8ee0-c66ba0e60a16",
+      "key": "8e0b1d9b-66ed-43d9-86df-536d1699a796",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each student make a copy of the Smart Classroom Template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design a Smart Classroom activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the steps students need to take to complete the activity. Refer to the example that is in the template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share the innovation they developed. Students should share the innovation as well as the data it collects, how it transmits that information, and any privacy or security concerns that might exist.",
-        "duration": "20",
-        "name": "Design a Smart Classroom",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design a Smart Classroom activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the model Smart Classroom device. Give students a minute to examine this IoT device and then have volunteers explain how this IoT device works and what problem it is attempting to solve. In this case, it is a device that allows students to borrow pencils from a teacher automatically. It logs the pencil data and the student who borrowed it through the use of facial recognition. It transmits its data over bluetooth to the teacher's computer so that they have a list of who borrowed a pencil for the class. When they return it, it automatically checks it back in for them.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 10, Level 2 in order to complete the Smart Classroom Design Challenge. Students will design an innovative device for a connected classroom in a futuristic smart school using IoT solutions. They can drag the furniture, classroom items, and communication devices available in the Sketch Lab template into the Canvas to the right to create the design. They will use the digital sticky notes to label what problem they are solving, what data they are collecting, how data is transmitted, and any security & safety concerns that might arise.\n",
+        "progression_name": "Smart Classroom Design Challenge",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Tell students that the goal of the design challenge is to create their design in a limited amount of time. It might be helpful to display a timer so that students can keep track of where they are in the process and how much time they have left."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8e0b1d9b-66ed-43d9-86df-536d1699a796",
+        "lesson_activity.key": "b4b521bf-9a10-43eb-8843-9ccfd53ed242"
+      }
+    },
+    {
+      "key": "8b50299b-d0e4-487b-8ee0-c66ba0e60a16",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a **Give One, Get One** to share the innovation they developed. Students should share the innovation as well as the data it collects, how it transmits that information, and any privacy or security concerns that might exist.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2724,7 +2746,7 @@
       "key": "372c0cc5-117d-4b56-b338-0874059e2b9e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students popcorn out answers based on what they learned and designed in the day's activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the vocabulary.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4200,6 +4222,28 @@
     },
     {
       "chapter": 33,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Smart Classroom Design Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson10-smart-classroom"
+        ],
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "8e0b1d9b-66ed-43d9-86df-536d1699a796"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson10-smart-classroom"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4221,7 +4265,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4243,7 +4287,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4265,7 +4309,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4287,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4309,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4331,7 +4375,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4353,7 +4397,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4375,7 +4419,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4397,7 +4441,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4419,7 +4463,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4441,7 +4485,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4463,7 +4507,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4485,7 +4529,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4507,7 +4551,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4529,7 +4573,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4938,6 +4982,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson10-smart-classroom",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson10-smart-classroom"
+        ],
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "8e0b1d9b-66ed-43d9-86df-536d1699a796"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson11-level1_v2_2026-dev",
         "script_level.level_keys": [
           "computer-systems-lesson11-level1_v2_2026-dev"
@@ -5238,18 +5294,6 @@
       }
     },
     {
-      "name": "[KEY] Lesson 10 - Unit Guide",
-      "url": "https://docs.google.com/document/d/1XpyPLl4isakHOVH2271ObfGMh--dKEYG3xfcmezzVT8/edit?usp=drivesdk",
-      "key": "_key_lesson_10_-_unit_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_lesson_10_-_unit_guide"
-      }
-    },
-    {
       "name": "[KEY] Optimization",
       "url": "https://docs.google.com/document/d/1BmbrbcqsWgu9YSMzdFAF_BfW4eWP5Xs3TTlz-aIyu1E/edit?usp=drivesdk",
       "key": "_key_optimization",
@@ -5263,8 +5307,8 @@
     },
     {
       "name": "[KEY] Processing Library Data",
-      "url": "https://docs.google.com/document/d/1yo9k9fLnkYSHJi3IrVCeclU3A04z49JagemmGMao2a4/edit?usp=sharing",
-      "key": "_key_processing_library_data",
+      "url": "https://docs.google.com/document/d/12tmdujNznGHzbNThDGthiu0XIeXGAp5Yr5_fWyakykM",
+      "key": "_key_processing_library_data_1",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -5272,7 +5316,7 @@
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_processing_library_data"
+        "resource.key": "_key_processing_library_data_1"
       }
     },
     {
@@ -5683,7 +5727,7 @@
     {
       "name": "Processing Data in a System",
       "url": "https://docs.google.com/presentation/d/1GwDtGNHKKRHgZzfKhcDho-H2DYimqOcWsUcSVrLc_QA",
-      "key": "processing_data_in_a_system_1",
+      "key": "processing_data_in_a_system_2",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -5691,13 +5735,13 @@
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "processing_data_in_a_system_1"
+        "resource.key": "processing_data_in_a_system_2"
       }
     },
     {
       "name": "Processing Library Data",
-      "url": "https://docs.google.com/document/d/1-JLKmlnVwZffCRvACIRb3teUV4m6yF7GiENiNdAlgeg/edit?usp=sharing",
-      "key": "processing_library_data",
+      "url": "https://docs.google.com/document/d/1e26NO0zxUX7PDmHFYW1GHdy7LoxEu0bKUf36lxI3yDI",
+      "key": "processing_library_data_1",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
@@ -5705,19 +5749,7 @@
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "processing_library_data"
-      }
-    },
-    {
-      "name": "Smart Classroom Template",
-      "url": "https://docs.google.com/presentation/d/11XsC2sKi0AYy49yZV3sSWTMAvlFGlMgeHeCn2YQ6I74/edit?usp=drivesdk",
-      "key": "smart_classroom_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "smart_classroom_template"
+        "resource.key": "processing_library_data_1"
       }
     },
     {
@@ -5934,11 +5966,12 @@
       }
     },
     {
-      "name": "What is IoT?",
-      "url": "https://www.youtube.com/watch?v=6mBO2vqLv38",
+      "name": "IoT in Real-Life",
+      "url": "https://youtube.com/shorts/8B6klBOu3r4?si=JwzNLKXejN87tk9j",
       "key": "what_is_iot_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Video"
       },
       "seeding_key": {
@@ -5956,31 +5989,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: IoT and Emerging Technologies",
-        "resource.key": "_key_lesson_10_-_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
         "resource.key": "_key_the_internet_of_things"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: IoT and Emerging Technologies",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
         "resource.key": "iot_and_emerging_technologies"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
-        "resource.key": "smart_classroom_template"
       }
     },
     {
@@ -6262,19 +6277,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "_key_processing_library_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
+        "resource.key": "_key_processing_library_data_1"
       }
     },
     {
@@ -6286,13 +6289,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "processing_data_in_a_system_1"
+        "resource.key": "processing_data_in_a_system_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "processing_library_data"
+        "resource.key": "processing_library_data_1"
       }
     },
     {
@@ -6842,16 +6845,6 @@
       }
     },
     {
-      "key": "3cb04039-48b7-46d1-8824-cbdf61ce85f0",
-      "properties": {
-        "description": "Decompose problems into actionable steps that define the goal, data, process, and desired outcome"
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "objective.key": "3cb04039-48b7-46d1-8824-cbdf61ce85f0"
-      }
-    },
-    {
       "key": "42b88997-8a0c-4c42-b2b1-11697333f17b",
       "properties": {
         "description": "Develop ethical guidelines for the responsible design and development of AI and emerging technologies"
@@ -6859,6 +6852,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 12: Just Because We Can, Should We?",
         "objective.key": "42b88997-8a0c-4c42-b2b1-11697333f17b"
+      }
+    },
+    {
+      "key": "45035f65-279d-41dc-8dba-1a41f234a619",
+      "properties": {
+        "description": "Explain the benefits and limitations of processing data manually and computationally"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Processing Data in a System",
+        "objective.key": "45035f65-279d-41dc-8dba-1a41f234a619"
       }
     },
     {
@@ -7029,6 +7032,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
         "objective.key": "dbdc368a-8237-4498-8ebc-071a62e0be80"
+      }
+    },
+    {
+      "key": "dcd88314-cfec-4b76-85e3-7f7c3e6a63ed",
+      "properties": {
+        "description": "Decompose problems into actionable steps that define the goal, data, process, and desired outcome"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Processing Data in a System",
+        "objective.key": "dcd88314-cfec-4b76-85e3-7f7c3e6a63ed"
       }
     },
     {
