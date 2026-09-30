@@ -14,6 +14,7 @@ import {QuizQuestionSummary, toBool} from '../types';
 import AttemptCard from './AttemptCard';
 import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
+import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
 import useQuizAttempt from './useQuizAttempt';
@@ -300,6 +301,31 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               onTryAgain={handleRetake}
               onNextLevel={handleNextLevel}
             />
+            {quizQuestions
+              .filter(question => question.type === 'MultipleChoiceQuestion')
+              .map(question => {
+                const result = attempt.questionResults?.find(
+                  r => r.quizQuestionId === question.id
+                );
+                return (
+                  result && (
+                    <QuestionResultCard
+                      key={question.id}
+                      question={question}
+                      questionLabel={
+                        quizQuestions.length > 1
+                          ? `Question ${
+                              quizQuestions.findIndex(
+                                q => q.id === question.id
+                              ) + 1
+                            } of ${quizQuestions.length}`
+                          : undefined
+                      }
+                      result={result}
+                    />
+                  )
+                );
+              })}
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>
