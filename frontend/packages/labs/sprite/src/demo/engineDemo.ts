@@ -2,8 +2,8 @@
 // NativeSpriteLab helper library, and a program that exercises keys,
 // touching, behaviors, timed events and speech. `window.spriteLabEngine`
 // is the engine, for driving it from Playwright.
-import nativeSpriteLab from '../../../../../../dashboard/config/libraries/NativeSpriteLab.interpreted.js?raw';
 import {SpriteLabEngine} from '../engine/Engine';
+import {loadHelperLibrary} from '../engine/helperLibraries';
 import type {RuntimeAnimationList, RuntimeAnimationProps} from '../types';
 
 function drawImage(
@@ -98,7 +98,7 @@ const status = document.getElementById('status') as HTMLElement;
 const engine = new SpriteLabEngine({
   container: document.getElementById('playspace') as HTMLElement,
   images: () => images,
-  loadLibrary: async () => nativeSpriteLab,
+  loadLibrary: loadHelperLibrary,
   host: {
     displayWorkspaceAlert: (type, message) =>
       (status.textContent = `${type}: ${message}`),

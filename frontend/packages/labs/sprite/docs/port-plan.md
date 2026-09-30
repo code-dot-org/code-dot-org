@@ -70,15 +70,63 @@ views (`useSources`, `Lab2Registry`, `Loading`, instructions, `Guide`,
 `Adlib`); `@code-dot-org/lab` has all of these. The dialogs already use the
 design system.
 
-The views that need neither the engine nor image generation are ported: the
-scene picker, gallery and new-scene dialog; the tab shell; the play bar,
-controls and music bar; the image-pane buttons, sheet preview and
-temperature bot; and `useSceneEditing`. What remains waits on the engine
-(`SpriteLab2View`, `SpriteLab2Container`, `Playspace`, `WorldTab`,
-`useBlocklyWorkspace`, `useSceneThumbnails`), on image generation
-(`GenerateImagePane`, `GenerateImageView`, `ImageDetailsDialog`,
-`GenerateSpriteLab`, `useImageSession`), or on scene music
-(`useSceneMusic`).
+Ported before the engine: the scene picker, gallery and new-scene dialog;
+the tab shell; the play bar, controls and music bar; the image-pane
+buttons, sheet preview and temperature bot; and `useSceneEditing`.
+
+Wired to the engine (`App.tsx`, `views/SpriteLabView.tsx`):
+
+- `App` is `BlocklyLab` around `SpriteLabView`, which a host renders in its
+  `<Lab>`. Studio does, at `/projects/sprite/<tag>/edit`; with
+  `VITE_API_MODE=msw` the `simple` fixture runs without Rails.
+- The project's images are a Redux slice, `redux/animationListSlice.ts`,
+  with apps' thunks in `redux/animationListThunks.ts`. They are seeded once
+  per level and again after Start Over, and saved in the serialized shape.
+  Runs wait until they have loaded, for at most ten seconds, and a run
+  made without some reruns once they arrive.
+- The Code tab's workspace is `@code-dot-org/blockly`'s `BlocklyWorkspace`,
+  driven by `views/useSpriteLabWorkspace.ts`, which offers what apps'
+  `useBlocklyWorkspace` did. A scene not open in the editor compiles
+  headless (`blockly/compile.ts`).
+- `views/Playspace.tsx` holds the engine's canvas: the corner preview on
+  the Code tab, the centred game on Play.
+- The World tab (`views/WorldTab.tsx`, with apps' tests), shown when the
+  level's mode names it or with `?world-tab=true`, paints a scene's world;
+  the preview spawns it.
+- Scene pictures (`views/useSceneThumbnails.ts`): a run's first frame,
+  kept once the scene has held still, uploaded through
+  `projectAssets.ts` onto core's assets API.
+- Scenes, the live preview, local scene jumps, Play, Stop, the restarts,
+  freezing the game while hidden, and the keyboard routing between the
+  editor and the game are `SpriteLabView`'s, as they were
+  `SpriteLab2View`'s.
+
+Still to port, in order:
+
+- The block pool converter (decision 5), with the pool's location field
+  and the playspace's location picker that serves it.
+- External scenes: the section scene list and cross-project jumps.
+- The Images tab, the guide and image levels wait on layer 6; the music
+  bar and `useSceneMusic` on layer 7; the navigation sounds' settings in
+  the resource panel with them.
+- Levelbuilder edit modes (start, toolbox, exemplar), the AI context, and
+  Start Over's return to the lesson's first level.
+
+Changes outside the package that the wiring needed:
+
+- `@code-dot-org/core`: `ProjectSourcesSchema` passes a lab's own keys
+  through, and takes a `source` kept as an object. It stripped everything
+  but `source` and `labConfig`, so a project's `scenes` and `animations`
+  were lost on load; and it took only a string or Code Bridge's
+  multi-file shape, so saving a Blockly lab's object source threw, and
+  base reports that failure only to metrics.
+- `@code-dot-org/blockly`: `Agent` loads English messages unless a locale
+  has been, testing for a message inject reads. It tested for an empty
+  `Blockly.Msg`, which a single field plugin's message defeats; Blockly
+  then threw while labelling the workspace.
+- Studio: the project edit route wraps the lab in `LabProviders` and
+  `LabHost`, as the music branch does, and `FullHeightLabFrame` lets the
+  lab's theme wrapper fill it.
 
 ### 6. AI images
 
@@ -107,14 +155,15 @@ does not.
 3. **Music player.** Layer 7 needs the frontend music player, which exists
    only on `world-lab`. It must reach lab-base first.
 4. **AI gateway.** Layer 6 needs a frontend client for the AI gateway.
-5. **Legacy block pool.** Most of a Sprite Lab level's blocks come from the
-   DB block pool, in apps' `block_utils` format: `blockText`, argument lists
-   with `customInput` types, and code that calls the engine's commands.
-   Porting it means apps' `block_utils.js` (1,216 lines), `blocksCommon.js`
-   (270) and `p5lab/spritelab/blocks.js` (762), or a converter from the pool
-   format to `@code-dot-org/blockly` definitions. With the engine decided,
-   the pool's generated code runs on the ported runtime as it is; only the
-   installer, or a converter, remains to choose.
+5. **Legacy block pool.** Decided: a runtime converter. Most of a Sprite
+   Lab level's blocks come from the DB block pool, in apps' `block_utils`
+   format: `blockText`, argument lists with `customInput` types, and code
+   that calls the engine's commands. When a level loads, each pool entry
+   becomes an `@code-dot-org/blockly` `BlockDefinition`, so the frontend
+   keeps one block system; the converter carries `block_utils.js`'s
+   semantics and is checked visually against apps. The views are wired
+   first, against the lab's own blocks, and the pool joins the workspace
+   after.
 
 ## Changes from apps
 

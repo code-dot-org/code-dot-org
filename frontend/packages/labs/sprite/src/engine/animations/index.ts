@@ -1,5 +1,5 @@
 export {AnimationTable, type AnimationTableOptions} from './AnimationTable';
-export {normalizeAnimationList} from './animationList';
+export {normalizeAnimationList, uniqueName} from './animationList';
 export {
   animationSourceUrl,
   loadAnimationSources,

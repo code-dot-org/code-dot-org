@@ -208,8 +208,10 @@ export function extendLibrary(library: CoreLibrary, hooks: SceneHooks): void {
     );
   };
   const addSprite = library.addSprite.bind(library);
+  // A new sprite needs its costume decoded now; the library throws on one
+  // that is not.
   library.addSprite = (opts?: SpriteOptions | null) => {
-    if (opts?.animation && !knownCostume(opts.animation)) {
+    if (opts?.animation && !hooks.hasImage(opts.animation)) {
       warnMissing(opts.animation);
       return undefined;
     }

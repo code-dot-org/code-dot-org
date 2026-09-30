@@ -5,11 +5,13 @@ import {injectSlices, storeHooks} from '@code-dot-org/core/redux';
 import type {StateFor} from '@code-dot-org/core/redux';
 import {default as labStore} from '@code-dot-org/lab/redux';
 
+import {animationListSlice} from './animationListSlice';
 import {spriteLab2Slice} from './spriteLab2Redux';
 
-const store = injectSlices<[typeof spriteLab2Slice], typeof labStore>([
-  spriteLab2Slice,
-]);
+const store = injectSlices<
+  [typeof spriteLab2Slice, typeof animationListSlice],
+  typeof labStore
+>([spriteLab2Slice, animationListSlice]);
 
 export type RootState = StateFor<typeof store>;
 export type AppDispatch = (typeof store)['dispatch'];

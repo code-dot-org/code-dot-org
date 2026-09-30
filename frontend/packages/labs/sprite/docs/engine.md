@@ -159,10 +159,10 @@ src/engine/
   - p5's friendly errors are off: in 2.x they fetch and lint the page's
     scripts.
 - **Changes from `SpriteLab2Engine`.**
-  - The missing-costume guard runs before the on-demand decode and reads
-    `p.predefinedAnimations`, which here holds only what the scene
-    decoded; it checks the project's image list instead, so a costume the
-    preload skipped still decodes on demand.
+  - The missing-costume guard on `setAnimation` checks the project's image
+    list rather than the decoded table, so a costume the scene's preload
+    skipped still decodes on demand. A new sprite still needs its costume
+    decoded, as in apps; the view holds runs until the images have loaded.
   - During a scene jump no frame runs the program or updates sprites, so
     the last frame stays up under the fade, as its comment intended.
   - Validation code, the speed slider, mobile controls and the classic
@@ -212,4 +212,5 @@ upstream p5 provides.
    `engine-demo.html` (`?scene=platform` for the platform scene), which
    `e2e/engine.spec.ts` drives: keys, a touch event, dragging, and a
    player landing under a zoom.
-6. Wiring the engine into the views (layer 5).
+6. Begun. Wiring the engine into the views (layer 5); `docs/port-plan.md`
+   lists what is wired and what is left.

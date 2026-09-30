@@ -19,6 +19,7 @@ import type {RuntimeAnimationList, SceneType} from '../types';
 import {AnimationTable, type AnimationTableOptions} from './animations';
 import {loadImageOnDemand, preloadSceneImages} from './animations/preload';
 import {CUSTOM_MARSHAL_OBJECTS, defineGlobals} from './globals';
+import {loadHelperLibrary} from './helperLibraries';
 import {
   type NativeCallback,
   type ProgramError,
@@ -61,7 +62,7 @@ export interface EngineOptions {
   /** The project's images, with the data of each that has loaded. */
   images: () => RuntimeAnimationList;
   host?: RuntimeHost;
-  /** Fetches an interpreted helper library's source. */
+  /** An interpreted helper library's source; bundled or fetched by default. */
   loadLibrary?: (name: string) => Promise<string>;
   /** Decodes an image; for tests. */
   loadImage?: AnimationTableOptions['loadImage'];
@@ -76,14 +77,6 @@ function deferred(): {promise: Promise<void>; resolve: () => void} {
   let resolve = () => {};
   const promise = new Promise<void>(r => (resolve = r));
   return {promise, resolve};
-}
-
-async function fetchLibrary(name: string): Promise<string> {
-  const response = await fetch(`/libraries/${encodeURIComponent(name)}`);
-  if (!response.ok) {
-    throw new Error(`Unable to load library ${name}: HTTP ${response.status}`);
-  }
-  return response.text();
 }
 
 export class SpriteLabEngine implements SceneHooks {
@@ -155,7 +148,7 @@ export class SpriteLabEngine implements SceneHooks {
       sharedBlocks: [...(level.sharedBlocks ?? []), ...SPRITELAB2_HELPER_CODE],
       customHelperLibrary: level.customHelperLibrary ?? '',
     };
-    const load = this.#options.loadLibrary ?? fetchLibrary;
+    const load = this.#options.loadLibrary ?? loadHelperLibrary;
     await Promise.all(
       this.#level.helperLibraries.map(async name => {
         if (!this.#libraries.has(name)) {
