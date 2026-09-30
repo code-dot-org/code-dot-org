@@ -37,7 +37,8 @@ export const meta = {
 //                 (case-insensitive). Default: the next step Discover finds.
 //   base          branch the PR targets; HEAD must be at its tip (default 'staging'). A
 //                 local-only branch works with publish: false, to stack a dry run on one.
-//   branchPrefix  branch namespace (default '<owner>/mui-<component>').
+//   branchPrefix  branch namespace (default '<owner>/mui-<component>'; owner is the current
+//                 branch's first segment, else the gh login, else 'mui' for local-only runs).
 //   jira          ticket key or browse URL for the commit and PR (default none).
 //   publish       false leaves one local branch: no push, no PR.
 //   maxHealAttempts  verify passes, with a heal between each (default 3, so at most two
@@ -128,7 +129,7 @@ const ROW_SCHEMA = {
 const DISCOVER_SCHEMA = {
   type: 'object',
   required: [
-    'preflight', 'headOnBase', 'branchOwner', 'finishBranches', 'preexistingUntracked', 'planDocFound', 'statusState',
+    'preflight', 'headOnBase', 'branchOwner', 'ghLogin', 'finishBranches', 'preexistingUntracked', 'planDocFound', 'statusState',
     'legacySourceFiles', 'legacyExports', 'legacyImports', 'eslintBanPresent', 'codemod', 'rows',
     'reference', 'consumerFiles', 'consumerTestFiles', 'next', 'notes',
   ],
@@ -136,6 +137,7 @@ const DISCOVER_SCHEMA = {
     preflight: {type: 'array', items: {type: 'string'}, description: 'Blockers found in step 0; [] if none'},
     headOnBase: {type: 'boolean'},
     branchOwner: {type: 'string', description: 'The part before the first "/" of the current branch, or ""'},
+    ghLogin: {type: 'string', description: 'gh api user --jq .login when publish is on, else ""'},
     finishBranches: {type: 'array', items: {type: 'string'}, description: 'Local and origin branches whose last segment starts with finish-, short names without origin/'},
     preexistingUntracked: {type: 'array', items: {type: 'string'}},
     planDocFound: {type: 'boolean'},
@@ -171,7 +173,7 @@ ${TREE_RULES}
 ─── STEP 0 — Preflight ────────────────────────────────────────────────────────
   Record blockers; do not fix them: apps/node_modules, frontend/node_modules and apps/build
   exist; git status --porcelain shows no tracked modifications (list ?? lines as
-  preexistingUntracked); ${publish ? 'gh auth status succeeds.' : 'publish is off; skip gh.'}
+  preexistingUntracked); ${publish ? 'gh auth status succeeds; ghLogin from gh api user --jq .login.' : 'publish is off; skip gh.'}
   git fetch origin ${base} (skip it when ${base} is a local-only branch). headOnBase is
   true only when HEAD equals origin/${base} when that exists, else the local ${base}; an
   older commit is false, since the audits below must see every current consumer. branchOwner from the current branch name. finishBranches: git branch --list
@@ -258,7 +260,10 @@ if (row) {
 const stepTitle = row ? row.behavior : 'delete the legacy DSCO source'
 const ticket = jiraKey || (row && row.ticket) || ''
 const remainingAfter = row ? discover.rows.filter(r => r !== row) : discover.rows
-const owner = /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(discover.branchOwner || '') ? discover.branchOwner : 'mui'
+const plainRef = v => /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(v || '')
+// HEAD is on base, usually staging, so the branch rarely names an owner; a shared fallback would collide on origin.
+const owner = plainRef(discover.branchOwner) ? discover.branchOwner : plainRef(discover.ghLogin) ? discover.ghLogin : 'mui'
+if (publish && !branchPrefixArg && owner === 'mui') throw new Error('No owner for the branch namespace (gh login unknown); pass branchPrefix')
 const branchPrefix = branchPrefixArg || `${owner}/mui-${component}`
 const slug = (row ? row.behavior : 'delete-legacy').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const branch = `${branchPrefix}/finish-${slug}`
