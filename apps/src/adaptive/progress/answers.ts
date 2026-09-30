@@ -1,27 +1,21 @@
-// A student's answers to questions steps, in the shape of the AI Lessons
-// prototype's AnswerRecord so the consumers ported from it read them
-// unchanged, with the choice named as quiz responses name it. Nothing here
-// touches React or storage.
-
 import {MultipleChoiceQuestion, QuestionsStep} from '../types';
 
+/**
+ * The AI Lessons prototype's AnswerRecord, which its AI consumers read, with
+ * the choice named as quiz responses name it.
+ */
 export interface AnswerRecord {
   questionId: number;
   stepId: string;
-  /** The question stem as shown. */
   prompt: string;
-  /** The selected choice's text. */
   answer: string;
   selectedChoiceId: string;
-  /** Of the latest submission. */
+  /** Of the latest submission; earlier ones are not kept. */
   outcome: 'correct' | 'incorrect';
-  /** Submissions so far. */
   attempts: number;
-  /** ISO 8601 time of the latest submission. */
   at: string;
 }
 
-/** The latest answer record, by question id. */
 export type StudentInputs = {[questionId: number]: AnswerRecord};
 
 export const isCorrectSelection = (
@@ -51,11 +45,7 @@ export function answerRecord(
 export const isPassed = (record: AnswerRecord | undefined) =>
   record?.outcome === 'correct';
 
-/**
- * The highest question index a student may open: the first multiple-choice
- * question not yet passed, or the last question once all are. Placeholder
- * question types never block.
- */
+/** The highest question index a student may open. */
 export function reachableThrough(
   step: QuestionsStep,
   inputs: StudentInputs

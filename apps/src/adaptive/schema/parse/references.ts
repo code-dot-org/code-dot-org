@@ -20,10 +20,7 @@ export function referenceProblems(pathway: Pathway): string[] {
   ];
 }
 
-/**
- * Detects question ids used more than once in the pathway. Answers are
- * keyed by question id alone, so each must name one question.
- */
+/** Answers are keyed by question id alone, so each must name one question. */
 function questionProblems(pathway: Pathway): string[] {
   const seen = new Set<string | number>();
   const duplicates = new Set<string | number>();

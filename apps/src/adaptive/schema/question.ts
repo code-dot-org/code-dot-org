@@ -5,10 +5,7 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 import {stepBaseSchema} from './steps/base';
 import {subsetOf} from './subsetOf';
 
-/**
- * A multiple-choice question, shaped like the quiz levels' question so the
- * two can share views; the summary omits the answer key, so it is added.
- */
+/** Quiz's question summary, so the two share views, plus the answer it omits. */
 export const multipleChoiceQuestionSchema = subsetOf<
   QuizQuestionSummary & {correctChoiceId: string}
 >()(
@@ -21,7 +18,7 @@ export const multipleChoiceQuestionSchema = subsetOf<
       .array(z.strictObject({id: z.string().min(1), text: z.string().min(1)}))
       .min(2),
     correctChoiceId: z.string().min(1),
-    // Quiz levels paginate; a questions step shows one question at a time.
+    // Quiz levels paginate; a step does not.
     page: z.number().int().default(1),
   })
 );
