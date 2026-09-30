@@ -1,6 +1,6 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, and whether each level step's `project` flag agrees with the level
-// the server resolved for it.
+// shape, each level played by at most one step, and whether each level
+// step's `project` flag agrees with the level the server resolved for it.
 
 import {z} from 'zod';
 
@@ -15,8 +15,41 @@ export function referenceProblems(pathway: Pathway): string[] {
   return [
     ...skillProblems(pathway),
     ...checkpointProblems(pathway),
+    ...levelReuseProblems(pathway),
     ...levelStepProblems(pathway),
   ];
+}
+
+/**
+ * Detects a level played by more than one step, or by a step and the project
+ * view. A level's tutor transcript, settings and progress are one per level,
+ * so two steps on one level would share them; the project template level is
+ * the project view's own.
+ */
+function levelReuseProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const template = pathway.project.templateLevel;
+  const firstUse = new Map<string, string>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'level') continue;
+      const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
+      if (step.level === template) {
+        problems.push(
+          `${where}: level '${step.level}' is the project template level, which only the project view plays`
+        );
+      }
+      const earlier = firstUse.get(step.level);
+      if (earlier) {
+        problems.push(
+          `${where}: level '${step.level}' is already played by ${earlier}`
+        );
+      } else {
+        firstUse.set(step.level, where);
+      }
+    }
+  }
+  return problems;
 }
 
 /**
