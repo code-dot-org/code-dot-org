@@ -107,7 +107,6 @@ export const submitChatContents = createAsyncThunk(
     // Clear any user added context if present.
     dispatch(clearUserAddedSelectionContext());
 
-    // Set by the chat workspace when it mounts; the event logger reads the same one.
     const aichatContext = AichatContextManager.getContext();
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.

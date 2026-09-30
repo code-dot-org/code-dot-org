@@ -56,8 +56,6 @@ export const AiTutorContainer: FC<{
   // When a teacher is viewing a student, viewAsUserId is set.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
-  // The legacy labs play one level per page, so the chat's level is the page's;
-  // a standalone project has none.
   const pageLevelId = useAppSelector(state => state.progress.currentLevelId);
   const levelId = pageLevelId ? parseInt(pageLevelId) : null;
 

@@ -74,8 +74,7 @@ interface ChatWorkspaceProps {
   sendDisabled?: boolean;
   onMessageSent?: () => void;
 
-  // The level this chat belongs to, or null for a chat outside any level. A host
-  // that plays one level inside another (an adaptive step) passes the inner level.
+  // The level this chat belongs to, or null for a chat outside any level.
   levelId: number | null;
   // The level's own system prompt, sent to the model ahead of the lab's.
   levelSystemPrompt?: string;
