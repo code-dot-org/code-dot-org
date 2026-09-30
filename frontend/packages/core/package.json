@@ -38,6 +38,11 @@
       "import": "./dist/api/mocks/server.mjs",
       "require": "./dist/api/mocks/server.cjs"
     },
+    "./api/aiGateway/dev": {
+      "types": "./dist/api/aiGateway/dev/index.d.ts",
+      "import": "./dist/api/aiGateway/dev/index.mjs",
+      "require": "./dist/api/aiGateway/dev/index.cjs"
+    },
     "./constants": {
       "types": "./dist/constants/index.d.ts",
       "import": "./dist/constants/index.mjs",
