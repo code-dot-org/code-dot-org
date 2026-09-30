@@ -85,3 +85,27 @@ export function getToolboxDefinition(
     ),
   };
 }
+
+/**
+ * The toolbox without blocks Blockly does not know, which it would fail to
+ * render. Categories stay, even when emptied.
+ */
+export function filterToolboxToRegisteredBlocks(
+  toolbox: BlocklyCore.utils.toolbox.ToolboxInfo,
+  registered: Record<string, unknown>,
+): BlocklyCore.utils.toolbox.ToolboxInfo {
+  const filter = (entries: ToolboxItemInfo[]): ToolboxItemInfo[] =>
+    entries
+      .filter(
+        entry => !isBlockInfo(entry) || !entry.type || entry.type in registered,
+      )
+      .map(entry =>
+        isStaticCategoryInfo(entry)
+          ? {...entry, contents: filter(entry.contents)}
+          : entry,
+      );
+  return {
+    ...toolbox,
+    contents: filter(toolbox.contents as ToolboxItemInfo[]),
+  } as BlocklyCore.utils.toolbox.ToolboxInfo;
+}
