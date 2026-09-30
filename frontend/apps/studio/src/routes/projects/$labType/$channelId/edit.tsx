@@ -1,7 +1,8 @@
 import {createFileRoute, notFound} from '@tanstack/react-router';
 
-import {Lab} from '@code-dot-org/lab/host';
+import {LabHost} from '@code-dot-org/lab/host';
 
+import LabProviders from '@/modules/labs/LabProviders';
 import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
@@ -44,12 +45,19 @@ export const Route = createFileRoute('/projects/$labType/$channelId/edit')({
 
 function RouteComponent() {
   const {LabEntrypoint} = Route.useLoaderData();
+  const {labType, channelId} = Route.useParams();
 
+  // A `@code-dot-org/lab` lab needs the host's data providers, and LabHost
+  // loads its level and project before rendering the lab's entrypoint.
   return (
     <FullHeightLabFrame>
-      <Lab>
-        <LabEntrypoint />
-      </Lab>
+      <LabProviders>
+        <LabHost
+          LabEntrypoint={LabEntrypoint}
+          standaloneProjectType={labType}
+          channelId={channelId}
+        />
+      </LabProviders>
     </FullHeightLabFrame>
   );
 }

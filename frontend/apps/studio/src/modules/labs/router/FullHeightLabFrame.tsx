@@ -14,6 +14,14 @@ export default function FullHeightLabFrame({children}: PropsWithChildren) {
         display: 'flex',
         flexDirection: 'column',
         minHeight: 'calc(100vh - 50px)',
+        // A `@code-dot-org/lab` lab renders inside ThemeProvider's
+        // `<div data-theme>`, which would otherwise size to its content and
+        // leave a full-height lab nothing to fill.
+        '& > [data-theme]': {
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+        },
       }}
     >
       {children}
