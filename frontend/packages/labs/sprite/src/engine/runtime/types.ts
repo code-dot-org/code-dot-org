@@ -46,7 +46,24 @@ export interface RuntimeSprite extends Sprite {
   getScale(): number;
   glideTargets?: Location[];
   targetSet?: TargetSet;
+  /** Sprite Lab 2: the facing a character set starts in. */
+  startFacing?: 'left' | 'right';
+  /** Sprite Lab 2: the character set's pose state (engine/platform.ts). */
+  characterState?: CharacterState;
+  /** Sprite Lab 2: this frame's request for platform physics. */
+  __slab2Body?: boolean;
+  /** Sprite Lab 2: the physics resolver's last position. */
+  __slab2Prev?: {x: number; y: number};
   [prop: string]: unknown;
+}
+
+export interface CharacterState {
+  x: number;
+  facing: 'left' | 'right';
+  key: string | null;
+  tick: number;
+  moving: boolean;
+  teetering: boolean;
 }
 
 /** A background image, which the runtime labels with its name. */
