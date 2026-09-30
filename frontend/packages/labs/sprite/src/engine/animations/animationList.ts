@@ -107,7 +107,11 @@ function renameDuplicates(list: RuntimeAnimationList): void {
   }
 }
 
-function uniqueName(baseName: string, list: RuntimeAnimationList): string {
+/** `baseName_n` with n the lowest number no image in `list` uses. */
+export function uniqueName(
+  baseName: string,
+  list: RuntimeAnimationList,
+): string {
   const taken: number[] = [];
   for (const {name} of Object.values(list.propsByKey)) {
     if (name?.startsWith(baseName)) {
