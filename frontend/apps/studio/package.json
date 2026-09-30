@@ -28,6 +28,7 @@
     "@code-dot-org/lesson-deep-dive": "workspace:*",
     "@code-dot-org/music-lab": "workspace:*",
     "@code-dot-org/oceans-lab": "workspace:*",
+    "@code-dot-org/sprite-lab": "workspace:*",
     "@code-dot-org/users": "workspace:*",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
