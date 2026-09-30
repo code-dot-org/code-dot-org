@@ -135,20 +135,15 @@ namespace :test do
     end
   end
 
-  # A failure stops the Drone PR build (lib/rake/ci.rake) and the DTT (ui_all).
   timed_task_with_logging playwright_ui: :playwright_install do
     raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional, blocking: true)
   end
 
-  # The DTT daemon has the key in CDO.applitools_eyes_api_key and derives the
-  # rest; on that machine a missing key is a configuration error.
+  # Runs the Playwright Eyes tests in the managed test environment.
   timed_task_with_logging playwright_eyes: :playwright_install do
+    raise 'Playwright Eyes: this task runs only on the test system' unless CDO.test_system?
     env = dtt_playwright_eyes_env
-    if env.empty?
-      raise 'Playwright Eyes: the test system has no applitools_eyes_api_key' if CDO.test_system?
-      ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
-      next
-    end
+    raise 'Playwright Eyes: the test system has no applitools_eyes_api_key' if env.empty?
     secrets = {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
     playwright_tests_passed = run_playwright_suite(:eyes, blocking: true, env: env, env_secrets: secrets)
     raise 'Playwright Eyes e2e tests failed' unless playwright_tests_passed
