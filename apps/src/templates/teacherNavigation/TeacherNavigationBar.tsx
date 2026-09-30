@@ -231,8 +231,7 @@ const TeacherNavigationBar: React.FC<{
       if (!selectedSection) {
         return false;
       }
-      // AI tools switched off by an access level: the teacher fixes that on
-      // the AI settings page.
+      // Error icon pairs with RequiresAiChatToolsAlert on the AI chat settings page
       if (key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings) {
         return shouldShowAiChatEssentialAlert({
           assignedAiChatToolsDependency:
@@ -241,8 +240,7 @@ const TeacherNavigationBar: React.FC<{
           teacherAiChatAccessLevel,
         });
       }
-      // Models unavailable in the teacher's region: nothing in AI settings
-      // changes that, so the warning lives with the curriculum instead.
+      // Error icon pairs with RequiresInaccessibleAiModelsAlert on the course page
       if (COURSE_OVERVIEW_PATH_KEYS.includes(key)) {
         return !!selectedSection.assignedRequiredInaccessibleAiModels;
       }

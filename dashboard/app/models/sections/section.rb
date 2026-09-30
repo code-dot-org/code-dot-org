@@ -886,17 +886,8 @@ class Section < ApplicationRecord
     SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 
-  # Whether this section's instructor cannot complete the assigned curriculum,
-  # because it needs AI models unavailable outside the US.
-  #
-  # An assigned unit answers on its own: the section works through that unit,
-  # not through whatever else its course contains. The course answers only when
-  # no unit is assigned.
-  #
-  # Takes the dependency the caller already computed. Curricula that do not
-  # depend on AI chat tools hold no level that could be blocking, so asking
-  # would spend a query on the instructor's region, and another on the levels,
-  # that could not change the answer.
+  # Whether this section's assigned unit or course has levels required
+  # AI chat tools that are going to be blocked due to the teacher's region
   def required_inaccessible_ai_models?(dependency = assigned_ai_chat_tools_dependency)
     return false unless dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]
     assigned = script || unit_group

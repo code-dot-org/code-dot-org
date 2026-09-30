@@ -64,7 +64,6 @@ class CourseOverview extends Component {
     participantAudience: PropTypes.string,
     aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
       .isRequired,
-    // Whether this course needs AI models the teacher's region blocks.
     requiresInaccessibleAiModels: PropTypes.bool,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),

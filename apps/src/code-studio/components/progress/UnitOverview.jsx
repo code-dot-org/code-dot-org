@@ -73,7 +73,6 @@ class UnitOverview extends React.Component {
     aiChatToolsDependency: PropTypes.oneOf(
       Object.values(AiChatToolsDependency)
     ),
-    // Whether the unit being viewed needs AI models the teacher's region blocks.
     unitRequiresInaccessibleAiModels: PropTypes.bool,
 
     // redux provided
