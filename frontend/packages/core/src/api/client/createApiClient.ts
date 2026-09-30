@@ -2,11 +2,14 @@ import type {Transport} from '../transports/types';
 
 import {createActivitiesApi} from '../dashboard/activities';
 import {createAichatApi} from '../dashboard/aichat';
+import {createAnimationsApi} from '../dashboard/animations';
 import {createAssetsApi} from '../dashboard/assets';
 import {createAuthApi} from '../dashboard/auth';
 import {createChannelsApi} from '../dashboard/channels';
 import {createCoursesApi} from '../dashboard/courses';
 import {createLevelsApi} from '../dashboard/levels';
+import {createLibrariesApi} from '../dashboard/libraries';
+import {createMediaApi} from '../dashboard/media';
 import {createMetricsApi} from '../dashboard/metrics';
 import {createPreferencesApi} from '../dashboard/preferences';
 import {createProgressApi} from '../dashboard/progress';
@@ -21,11 +24,14 @@ export const createApiClient = (transport: Transport) => ({
   transport,
   activities: createActivitiesApi(transport),
   aichat: createAichatApi(transport),
+  animations: createAnimationsApi(transport),
   assets: createAssetsApi(transport),
   auth: createAuthApi(transport),
   channels: createChannelsApi(transport),
   courses: createCoursesApi(transport),
   levels: createLevelsApi(transport),
+  libraries: createLibrariesApi(transport),
+  media: createMediaApi(transport),
   metrics: createMetricsApi(transport),
   preferences: createPreferencesApi(transport),
   progress: createProgressApi(transport),
