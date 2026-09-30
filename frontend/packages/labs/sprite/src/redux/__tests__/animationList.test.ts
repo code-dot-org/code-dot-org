@@ -1,6 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
+import {DashboardApiClient} from '@code-dot-org/core/api';
+
 import type {SerializedAnimationList} from '../../types';
 import reducer, {
   allAnimationsLoaded,
@@ -49,13 +51,28 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-const ok = vi.fn(async () => new Response(new Blob(['png'])));
+vi.mock('@code-dot-org/core/api', async importOriginal => ({
+  ...(await importOriginal<object>()),
+  DashboardApiClient: {
+    media: {getImage: vi.fn()},
+    animations: {remove: vi.fn()},
+  },
+}));
+const getImage = vi.mocked(DashboardApiClient.media.getImage);
+const remove = vi.mocked(DashboardApiClient.animations.remove);
+
+beforeEach(() => {
+  getImage.mockReset();
+  remove.mockReset();
+  getImage.mockResolvedValue(new Blob(['png']));
+  remove.mockResolvedValue(undefined);
+});
 
 describe('animation list', () => {
   it('seeds from saved sources and loads every image', async () => {
     const store = makeStore();
     const seeding = store.dispatch(
-      seedAnimationList(saved('cat', 'dog'), {channelId: 'ch', fetch: ok}),
+      seedAnimationList(saved('cat', 'dog'), {channelId: 'ch'}),
     );
     expect(allAnimationsLoaded(store.getState().animationList)).toBe(false);
     await seeding;
@@ -68,10 +85,10 @@ describe('animation list', () => {
   it('counts a failed image as loaded, without data', async () => {
     const store = makeStore();
     const onError = vi.fn();
+    getImage.mockRejectedValue(new Error('404'));
     await store.dispatch(
       seedAnimationList(saved('cat'), {
         channelId: 'ch',
-        fetch: async () => new Response('', {status: 404}),
         onError,
       }),
     );
@@ -83,12 +100,8 @@ describe('animation list', () => {
 
   it('reseeding frees the old images', async () => {
     const store = makeStore();
-    await store.dispatch(
-      seedAnimationList(saved('cat'), {channelId: 'ch', fetch: ok}),
-    );
-    await store.dispatch(
-      seedAnimationList(saved('dog'), {channelId: 'ch', fetch: ok}),
-    );
+    await store.dispatch(seedAnimationList(saved('cat'), {channelId: 'ch'}));
+    await store.dispatch(seedAnimationList(saved('dog'), {channelId: 'ch'}));
     expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:image-1');
   });
 
@@ -98,7 +111,7 @@ describe('animation list', () => {
     await store.dispatch(
       seedAnimationList(
         {orderedKeys: ['a'], propsByKey: {}} as SerializedAnimationList,
-        {channelId: 'ch', fetch: ok},
+        {channelId: 'ch'},
       ),
     );
     expect(store.getState().animationList.orderedKeys).toEqual([]);
@@ -107,14 +120,12 @@ describe('animation list', () => {
 
   it('adds an image first, under a unique name', async () => {
     const store = makeStore();
-    await store.dispatch(
-      seedAnimationList(saved('cat'), {channelId: 'ch', fetch: ok}),
-    );
+    await store.dispatch(seedAnimationList(saved('cat'), {channelId: 'ch'}));
     await store.dispatch(
       addAnimation(
         'new',
         {...saved('cat').propsByKey['key-cat'], looping: false},
-        {channelId: 'ch', fetch: ok},
+        {channelId: 'ch'},
       ),
     );
     const list = store.getState().animationList;
@@ -126,25 +137,16 @@ describe('animation list', () => {
 
   it('deletes an image and its file', async () => {
     const store = makeStore();
-    await store.dispatch(
-      seedAnimationList(saved('cat'), {channelId: 'ch', fetch: ok}),
-    );
-    const remove = vi.fn(async () => new Response(''));
-    await store.dispatch(
-      deleteAnimation('key-cat', {channelId: 'ch', fetch: remove}),
-    );
+    await store.dispatch(seedAnimationList(saved('cat'), {channelId: 'ch'}));
+    await store.dispatch(deleteAnimation('key-cat', {channelId: 'ch'}));
     expect(store.getState().animationList.orderedKeys).toEqual([]);
-    expect(remove).toHaveBeenCalledWith('/v3/animations/ch/key-cat.png', {
-      method: 'DELETE',
-    });
+    expect(remove).toHaveBeenCalledWith({channelId: 'ch', key: 'key-cat'});
     expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:image-1');
   });
 
   it('renames, and knows which names are taken', async () => {
     const store = makeStore();
-    await store.dispatch(
-      seedAnimationList(saved('cat'), {channelId: 'ch', fetch: ok}),
-    );
+    await store.dispatch(seedAnimationList(saved('cat'), {channelId: 'ch'}));
     store.dispatch(setAnimationName({key: 'key-cat', name: 'tabby'}));
     const list = store.getState().animationList;
     expect(isNameUnique('cat', list)).toBe(true);
@@ -153,9 +155,7 @@ describe('animation list', () => {
 
   it('serializes without image data or load state', async () => {
     const store = makeStore();
-    await store.dispatch(
-      seedAnimationList(saved('cat'), {channelId: 'ch', fetch: ok}),
-    );
+    await store.dispatch(seedAnimationList(saved('cat'), {channelId: 'ch'}));
     expect(serializeAnimationList(store.getState().animationList)).toEqual(
       saved('cat'),
     );
