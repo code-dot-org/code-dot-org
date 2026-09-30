@@ -22,9 +22,7 @@ export function referenceProblems(pathway: Pathway): string[] {
 
 /**
  * Detects a level played by more than one step, or by a step and the project
- * view. A level's tutor transcript, settings and progress are one per level,
- * so two steps on one level would share them; the project template level is
- * the project view's own.
+ * view: level steps must be unique and must not name the project template.
  */
 function levelReuseProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
