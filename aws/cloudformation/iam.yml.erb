@@ -1021,8 +1021,6 @@ roles.each do |name, config| %>
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
                 token.actions.githubusercontent.com:sub:
-                  - "repo:code-dot-org/code-dot-org:environment:open-tofu-plan"
-                  - "repo:code-dot-org/code-dot-org:environment:open-tofu-apply"
                   - "repo:code-dot-org/infrastructure:environment:open-tofu-plan"
                   - "repo:code-dot-org/infrastructure:environment:open-tofu-apply"
       Policies:
@@ -1245,7 +1243,6 @@ roles.each do |name, config| %>
                   # Specifically not iam:CreateRole iam:DeleteRole iam:ListInstanceProfilesForRole
                   - iam:GetRole
                   - iam:UpdateRole
-                  - iam:UpdateAssumeRolePolicy
                   - iam:TagRole
                   - iam:UntagRole
                   - iam:ListRoleTags
