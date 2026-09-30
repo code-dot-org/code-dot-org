@@ -158,10 +158,15 @@ const PanelButtons = ({
 
 interface BodyContainerProps {
   children: ReactNode;
+  flush?: boolean;
 }
 
-const BodyContainer = ({children}: BodyContainerProps) => {
-  return <div className={styles.body}>{children}</div>;
+const BodyContainer = ({children, flush}: BodyContainerProps) => {
+  return (
+    <div className={classNames(styles.body, {[styles.flushBody]: flush})}>
+      {children}
+    </div>
+  );
 };
 
 interface ContainerLeftProps {
@@ -250,7 +255,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
-        <BodyContainer>
+        <BodyContainer flush>
           <ContainerLeft>
             <DataDisplay />
           </ContainerLeft>
