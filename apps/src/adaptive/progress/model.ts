@@ -4,6 +4,8 @@
 
 import {Checkpoint, Pathway} from '../types';
 
+import type {StudentInputs} from './answers';
+
 export type CheckpointStatus =
   | 'locked'
   | 'available'
@@ -16,6 +18,8 @@ export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 export interface Progress {
   completed: string[];
   started: string[];
+  /** Absent in records saved before questions steps existed. */
+  inputs?: StudentInputs;
 }
 
 export const EMPTY_PROGRESS: Progress = {completed: [], started: []};
