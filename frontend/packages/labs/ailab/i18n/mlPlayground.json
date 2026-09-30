@@ -69,6 +69,6 @@
   "predictButton": "Predict",
   "predictAIBotPredicts": "A.I. predicts",
   "predictPlaceholder": "min {minimum}, max {maximum}",
-  "uniqueOptionsWarningMessage": "Categorical columns with more than {valueCount} unique values can not be selected as the label or a feature.",
+  "uniqueOptionsWarningMessage": "Categorical columns with more than {valueCount} unique values cannot be selected as the label or a feature.",
   "predictionStatement": "Predict {output} based on {inputs}"
 }

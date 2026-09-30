@@ -2,6 +2,7 @@
 import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
@@ -24,7 +25,6 @@ import {
 import styles from './columnAnalysis.module.scss';
 
 const AXIS_INTERVALS = 4;
-// Each bar gets its own color only while there are enough distinct ones.
 const BAR_COLOR_CLASSES = [
   styles.barColor0,
   styles.barColor1,
@@ -32,6 +32,8 @@ const BAR_COLOR_CLASSES = [
   styles.barColor3,
   styles.barColor4,
 ];
+// One distinct color per bar, so the chart is capped at the palette size.
+const MAX_DISTRIBUTION_BARS = BAR_COLOR_CLASSES.length;
 
 const formatNumber = (value: number) =>
   Number.isFinite(value)
@@ -65,10 +67,7 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
     {length: axisMax / step + 1},
     (_, index) => index * step,
   );
-  const colorClass = (index: number) =>
-    bars.length <= BAR_COLOR_CLASSES.length
-      ? BAR_COLOR_CLASSES[index]
-      : BAR_COLOR_CLASSES[0];
+  const colorClass = (index: number) => BAR_COLOR_CLASSES[index];
 
   return (
     <div className={styles.chart}>
@@ -149,7 +148,7 @@ const ColumnAnalysis = () => {
   if (isCategorical) {
     const {uniqueOptions, frequencies} = categoricalDetails;
     const common = getMostAndLeastCommon(uniqueOptions, frequencies);
-    stats.push({label: 'Categories', value: String(uniqueOptions.length)});
+    stats.push({label: 'Values', value: String(uniqueOptions.length)});
     if (common) {
       stats.push(
         {label: 'Most Common', value: localizedOption(common.mostCommon)},
@@ -205,23 +204,39 @@ const ColumnAnalysis = () => {
               <StatCard key={stat.label} {...stat} />
             ))}
           </div>
-        </div>
-        {isCategorical && (
-          <div className={styles.distribution}>
-            <h3 className={styles.distributionTitle}>Distribution</h3>
-            {tooManyOptions ? (
-              <p className={styles.warning}>
-                {I18n.t('uniqueOptionsWarningMessage', {
+          {isCategorical && tooManyOptions && (
+            <Alert
+              type="warning"
+              size="xs"
+              isImmediateImportance={false}
+              className={styles.alert}
+              text={
+                I18n.t('uniqueOptionsWarningMessage', {
                   valueCount: UNIQUE_OPTIONS_MAX,
-                })}
+                }) ?? ''
+              }
+            />
+          )}
+        </div>
+        {isCategorical &&
+          (bars.length > MAX_DISTRIBUTION_BARS ? (
+            <div className={classNames(styles.distribution, styles.emptyGraph)}>
+              <span className={styles.emptyGraphIcon} aria-hidden="true">
+                <FontAwesomeV6Icon iconName="chart-simple" iconStyle="solid" />
+              </span>
+              <h3 className={styles.emptyGraphTitle}>Too many values</h3>
+              <p className={styles.emptyGraphMessage}>
+                {`A graph is shown when there are ${MAX_DISTRIBUTION_BARS} or fewer values.`}
               </p>
-            ) : (
-              bars.length > 0 && (
+            </div>
+          ) : (
+            <div className={styles.distribution}>
+              <h3 className={styles.distributionTitle}>Distribution</h3>
+              {bars.length > 0 && (
                 <DistributionChart columnName={columnName} bars={bars} />
-              )
-            )}
-          </div>
-        )}
+              )}
+            </div>
+          ))}
       </div>
     </section>
   );
