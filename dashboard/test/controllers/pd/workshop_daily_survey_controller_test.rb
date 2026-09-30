@@ -290,8 +290,7 @@ module Pd
 
     test 'csf post201 survey: redirect to sign-in page if teacher did not authenticate' do
       get '/pd/workshop_survey/csf/post201'
-      assert_response :redirect
-      assert_redirected_to_sign_in
+      assert_redirected_to new_user_session_path
     end
 
     test 'csf post201 survey: show not-enrolled page if teacher did not enroll' do
@@ -518,10 +517,6 @@ module Pd
 
     private def assert_thanks
       assert_select '#thanks>h1', text: 'Thank you for submitting today’s survey.'
-    end
-
-    private def assert_redirected_to_sign_in
-      assert_match %r{users/sign_in.*redirected}, response.body
     end
   end
 end

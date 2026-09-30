@@ -117,15 +117,10 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     );
   }
 
-  // With nothing saved yet, the hook hands back the level's own start or
-  // template sources by reference, in the level's shape rather than the
-  // project's. The lab seeds those itself, so only saved sources pass through.
-  const savedSources =
-    currentSources === EMPTY_SOURCES ||
-    currentSources === levelProperties.startSources ||
-    currentSources === levelProperties.templateSources
-      ? undefined
-      : currentSources;
+  // A level with no sources at all falls back to our sentinel; the lab seeds
+  // its own default in that case.
+  const initialSources =
+    currentSources === EMPTY_SOURCES ? undefined : currentSources;
 
   const ready = currentSources !== undefined && (!projectManager || registered);
   return (
@@ -134,7 +129,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
         <Suspense fallback={<Loading isLoading />}>
           <View
             levelProperties={levelProperties}
-            initialSources={savedSources}
+            initialSources={initialSources}
             channel={channel}
           />
         </Suspense>

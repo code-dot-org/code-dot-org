@@ -1,8 +1,9 @@
 /* React component to handle showing details of numerical columns. */
-import {styles} from '../constants';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getNumericalColumnDetails} from '../selectors/currentColumnSelectors';
+
+import shared from '../shared.module.scss';
 
 const ColumnDetailsNumerical = () => {
   const columnDetails = useAppSelector(getNumericalColumnDetails);
@@ -11,12 +12,14 @@ const ColumnDetailsNumerical = () => {
 
   return (
     <div>
-      <div style={styles.bold}>{I18n.t('columnDetailsInformation')}</div>
+      <div className={shared.bold}>{I18n.t('columnDetailsInformation')}</div>
       {!containsOnlyNumbers && (
-        <p style={styles.error}>{I18n.t('columnDetailsNumericalTypeError')}</p>
+        <p className={shared.error}>
+          {I18n.t('columnDetailsNumericalTypeError')}
+        </p>
       )}
       {containsOnlyNumbers && extrema && (
-        <div style={styles.contents}>
+        <div className={shared.contents}>
           {I18n.t('columnDetailsMinimumValue')} {extrema.min}
           <br />
           {I18n.t('columnDetailsMaximumValue')} {extrema.max}

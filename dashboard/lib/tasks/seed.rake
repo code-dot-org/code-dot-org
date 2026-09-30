@@ -283,9 +283,7 @@ namespace :seed do
     end
   end
 
-  # "UI Test " levels are seeded only for UI tests, after the normal level
-  # tasks, so a not-yet-migrated ui-test-* unit can still resolve normal
-  # levels; see dashboard/test/ui/config/README.md. Same child -> custom ->
+  # "UI Test " levels are seeded only for UI tests. Same child -> custom ->
   # parent ordering as above.
   UI_TEST_CHILD_DSL_FILES = dsl_files('test/ui/config/scripts', CHILD_DSL_TYPES).freeze
   UI_TEST_PARENT_DSL_FILES = dsl_files('test/ui/config/scripts', PARENT_DSL_TYPES).freeze

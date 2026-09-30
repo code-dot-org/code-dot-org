@@ -56,6 +56,9 @@ export const AiTutorContainer: FC<{
   // When a teacher is viewing a student, viewAsUserId is set.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
+  const pageLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const levelId = pageLevelId ? parseInt(pageLevelId) : null;
+
   const sectionAiChatAccessLevel = useAppSelector(
     state => selectedSectionSelector(state)?.aiChatAccessLevel
   );
@@ -90,6 +93,7 @@ export const AiTutorContainer: FC<{
         fetchUserChatHistory({
           userId: viewAsUserId,
           isOwnHistory: false,
+          levelId,
           channelId: lab?.channel,
         })
       );
@@ -186,6 +190,7 @@ export const AiTutorContainer: FC<{
         <AiTutorChat
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
+          levelId={levelId}
           channelId={lab?.channel}
           disabledState={disabledState}
         />

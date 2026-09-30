@@ -827,6 +827,8 @@ Dashboard::Application.routes.draw do
         post :delete_progress
         post :mass_progress_reset
         get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
+        get :log_token, action: 'log_token_form', as: 'log_token_form'
+        post 'log_token/resolve', action: 'resolve_log_token', as: 'resolve_log_token'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
         post :delete_user_progress

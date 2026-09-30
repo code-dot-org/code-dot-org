@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-29T17:31:36.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "Protype 3\r\n\r\ncards for each recommendation",
+    "mini_app": "theater",
+    "mini_app_variant": "functional",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# PROTOTYPE 3 — \"Amusement Park Ride Finder\" — THEATER PROGRAM \n# These five values stand in for what the console program decided.\n# Students carry them over once their console program is working.\n\nrecommend_coaster = True\nrecommend_drop_tower = True\nrecommend_log_flume = True\nrecommend_haunted_manor = False\nrecommend_ferris_wheel = False\n\nfrom theater import Scene, play_scenes\n\nscene = Scene()\nscene.set_fill_color(\"teal\")\nscene.draw_rectangle(0, 0, 400, 400)\nscene.set_text_color(\"white\")\nscene.set_text_height(26)\nscene.draw_text(\"Your Ride Picks!\", 60, 60)\nscene.pause(0.6)\n\n# No list to loop over, so each ride's reveal card is its own block —\n# it only actually draws if that ride's carried-over value is True.\nif recommend_coaster:\n    scene.set_fill_color(\"teal\")\n    scene.draw_rectangle(0, 100, 400, 300)\n    scene.set_text_color(\"white\")\n    scene.set_text_height(28)\n    scene.draw_text(\"Coaster Storm\", 40, 220)\n    scene.play_note(64, 0.4)\n    scene.pause(0.8)\n\nif recommend_drop_tower:\n    scene.set_fill_color(\"teal\")\n    scene.draw_rectangle(0, 100, 400, 300)\n    scene.set_text_color(\"white\")\n    scene.set_text_height(28)\n    scene.draw_text(\"Drop Tower\", 40, 220)\n    scene.play_note(67, 0.4)\n    scene.pause(0.8)\n\nif recommend_log_flume:\n    scene.set_fill_color(\"teal\")\n    scene.draw_rectangle(0, 100, 400, 300)\n    scene.set_text_color(\"white\")\n    scene.set_text_height(28)\n    scene.draw_text(\"Log Flume\", 40, 220)\n    scene.play_note(69, 0.4)\n    scene.pause(0.8)\n\nif recommend_haunted_manor:\n    scene.set_fill_color(\"teal\")\n    scene.draw_rectangle(0, 100, 400, 300)\n    scene.set_text_color(\"white\")\n    scene.set_text_height(28)\n    scene.draw_text(\"Haunted Manor\", 40, 220)\n    scene.play_note(71, 0.4)\n    scene.pause(0.8)\n\nif recommend_ferris_wheel:\n    scene.set_fill_color(\"teal\")\n    scene.draw_rectangle(0, 100, 400, 300)\n    scene.set_text_color(\"white\")\n    scene.set_text_height(28)\n    scene.draw_text(\"Ferris Wheel\", 40, 220)\n    scene.play_note(72, 0.4)\n    scene.pause(0.8)\n\nscene.set_fill_color(\"gold\")\nscene.draw_rectangle(0, 100, 400, 300)\nscene.set_text_color(\"black\")\nscene.set_text_height(20)\nscene.draw_text(\"Have a great day\", 40, 220)\nscene.play_note(76, 0.6)\nscene.pause(1.0)\n\nplay_scenes(scene)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-29T17:31:36.071+00:00\",\"changed\":[\"cloned from \\\"ang-csp-u2-prototype3\\\"\"],\"cloned_from\":\"ang-csp-u2-prototype3\"},{\"changed_at\":\"2026-09-29 17:31:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 20:10:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 20:11:39 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 20:11:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>
