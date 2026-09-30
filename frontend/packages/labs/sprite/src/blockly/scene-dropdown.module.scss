@@ -1,0 +1,29 @@
+// The go-to-scene dropdown's menu items once a picture is added to them.
+// Like image-dropdown.module.scss, this styles DOM in the document-level
+// DropDownDiv, outside the lab's component tree.
+
+// A row: checkmark slot, picture, name.
+.menuItemContent {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.menuThumb {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+// Blockly lays the checkmark out inline and pulls only the selected item's
+// glyph into the row's left padding with a negative margin. Every row gets
+// the same box and inset, so the pictures form a column, checked or not.
+.menuCheck {
+  display: inline-block;
+  flex: 0 0 16px;
+  width: 16px;
+  margin-left: -24px;
+  margin-right: 4px;
+}

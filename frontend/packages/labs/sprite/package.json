@@ -33,6 +33,8 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
+    "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
+    "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
@@ -40,7 +42,13 @@
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
+    "@blockly/field-bitmap": "^13.3.0",
+    "@blockly/field-grid-dropdown": "^13.3.0",
+    "@code-dot-org/audio": "workspace:*",
     "@code-dot-org/blockly": "workspace:*",
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
@@ -61,12 +69,14 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "catalog:",
+    "acorn": "^8.15.0",
     "eslint": "catalog:",
     "jsdom": "catalog:",
     "playwright": "catalog:",
     "prettier": "catalog:",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "stylelint": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",

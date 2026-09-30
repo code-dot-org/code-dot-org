@@ -17,7 +17,7 @@ to `lab2/`, so `lab2/audioFeedback/heightTone.ts` becomes
 | --- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | 1   | Simulation core | `platformPhysics`, `characterAnimations`, `camera`, `audioFeedback/*`, `ai/images/{keyColor,encoding,types}`                                                                                                                                         | Done   |
 | 2   | Scene model     | `types`, `world`, `imageReferences`, `imageTrim`, `imageGallery`, `imageRoleDefaults`, `levelMode`, `worldStartPattern`, `guideSteps`, `sceneToolbox`, `addBlocks`, `scenesApi`, `sceneThumbnails`, `redux/spriteLab2Redux`, `ai/images/imageAdlibs` | Done   |
-| 3   | Blockly         | `blockly/**`, `migrateSources`                                                                                                                                                                                                                       | Next   |
+| 3   | Blockly         | `blockly/**`, `migrateSources`                                                                                                                                                                                                                       | Done   |
 | 4   | Engine          | `SpriteLab2Engine.js`, `redux/reseedablePageConstants`, and everything under them in `apps/src/p5lab`                                                                                                                                                |        |
 | 5   | Views           | `views/**`, `entrypoint.ts`, `index.js`                                                                                                                                                                                                              |        |
 | 6   | AI images       | `ai/images/{imageGeneration,imageSafety,removeBackground,characterSet,modelHelpers}`, `paintBlank`                                                                                                                                                   |        |
@@ -25,19 +25,17 @@ to `lab2/`, so `lab2/audioFeedback/heightTone.ts` becomes
 
 ### 3. Blockly
 
-The block definitions depend on apps' `blockly/constants`, `blockly/types`
-and `blockly/javascript`, all of which `@code-dot-org/blockly` covers. Two
-custom fields have no frontend version yet: `cdoFieldBitmap` (the grid
-fields) and `cdoFieldAnimationDropdown` (the image pickers). They belong in
-`@code-dot-org/blockly`. `blockly/setup.ts` also loads the legacy Sprite Lab
-blocks, `p5lab/spritelab/blocks`, and `blocksCommon`; those come with the
-engine.
+The lab-owned blocks are done. Apps' `blockly/setup.ts` installed three
+sets of blocks, and only this one has ported:
 
-Two pieces of layer 2 wait here. `renameImageReferencesOnWorkspace` and
-`removeImageReferencesOnWorkspace`, from `imageReferences.ts`, find image
-pickers by `instanceof CdoFieldAnimationDropdown`; they return with that
-field. `migrateSources.ts` needs the when-run block types from
-`blockDefinitions/whenRun.ts`.
+- The lab's own blocks. `SPRITELAB2_BLOCKS` in `src/blockly/setup.ts`
+  holds them as `@code-dot-org/blockly` definitions, for a workspace's
+  `blocks`.
+- The legacy Sprite Lab blocks, through `blocksCommon.install` and
+  `p5lab/spritelab/blocks.install`. These wait on the engine.
+- The level's DB block pool, through `installSharedBlocks`, which runs apps'
+  `block_utils.installCustomBlocks` with Sprite Lab's custom input types.
+  Nothing in `@code-dot-org/blockly` reads the pool's format; see decision 5.
 
 ### 4. Engine
 
@@ -90,6 +88,13 @@ does not.
 3. **Music player.** Layer 7 needs the frontend music player, which exists
    only on `world-lab`. It must reach lab-base first.
 4. **AI gateway.** Layer 6 needs a frontend client for the AI gateway.
+5. **Legacy block pool.** Most of a Sprite Lab level's blocks come from the
+   DB block pool, in apps' `block_utils` format: `blockText`, argument lists
+   with `customInput` types, and code that calls the engine's commands.
+   Porting it means apps' `block_utils.js` (1,216 lines), `blocksCommon.js`
+   (270) and `p5lab/spritelab/blocks.js` (762), or a converter from the pool
+   format to `@code-dot-org/blockly` definitions. It belongs with the engine
+   decision, since the pool's code calls the engine.
 
 ## Changes from apps
 
@@ -120,3 +125,39 @@ Layer 2:
   `src/ai/images`.
 - `imageTrim`'s test was JavaScript; its fixtures are now cast to the
   animation-list type.
+
+Layer 3:
+
+- Each block file keeps apps' `{definition, generator, helperCode}` shape.
+  `setup.ts` assembles them into `@code-dot-org/blockly` definitions instead
+  of registering them with apps' global `Blockly`; statement connections
+  are `true` rather than `null`, as that package writes them.
+- Custom fields are field plugins, exported beside each field class (for
+  example `COSTUME_FIELD`) and referenced from the definitions in place of
+  the registered type name. The placeholder's outline and `like` state are
+  `defineExtension` and `defineMutator` objects on its definition.
+- Apps' `CdoFieldImageDropdown`, `CdoFieldAnimationDropdown` and
+  `CdoFieldBitmap`, with the `config` helpers and number ranges they use,
+  are copied into `src/blockly/fields`. They extend
+  `@blockly/field-grid-dropdown` and `@blockly/field-bitmap` 13.3, the
+  releases for Blockly 13, where apps uses the Blockly 12 releases.
+- The rules apps kept in `cdoCss.ts` for the placeholder outline and the
+  image grid register through `Blockly.Css` beside the code that draws them.
+- The placeholder's constants moved to `placeholderConstants.ts`, since the
+  placeholder block now imports its rendering, which imports them.
+- The dropdowns read the lab store (`src/redux/store.ts`, lab-base's store
+  with `spriteLab2` injected) where apps read its global store.
+- The image pickers read the project's images through `setImageSource`
+  (`src/blockly/imageSource.ts`). Apps read the engine's `animationList`
+  store and `animationSourceUrl`; the engine or view layer supplies both.
+- The sound dropdown plays through `src/audio/sounds.ts`, a
+  `@code-dot-org/audio` sound board with apps' `sound://` path. Apps' test
+  that every option names a sound in `soundLibrary.json` did not come: that
+  manifest is a 2 MB file in apps' static assets.
+- `imageReferences.ts` has its two workspace functions back.
+- The when-run block's label is the literal "when run"; apps took it from
+  `commonI18n`. The bitmap editor's "Clear" is likewise literal.
+- `@code-dot-org/blockly`'s number argument type gained `precision`, which
+  Blockly supports and the zoom block uses.
+- A new test, `blockly/__tests__/setup.test.ts`, registers every lab block
+  as a workspace would and builds, serializes and generates each one.

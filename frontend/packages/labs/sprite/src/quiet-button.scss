@@ -1,0 +1,22 @@
+// Quiet outlined button: the lab's secondary-action voice (the gallery's
+// Delete, the image dropdown's Make-an-image). Token fallbacks cover
+// surfaces rendered outside the lab's component tree — the Blockly
+// DropDownDiv portals to <body>.
+@mixin quiet-button($height, $font-size) {
+  box-sizing: border-box;
+  height: $height;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-primary, #d5d8dd);
+  border-radius: 4px;
+  background: none;
+  box-shadow: none;
+  color: var(--text-neutral-secondary, #5c6570);
+  font-size: $font-size;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-neutral-primary, #292f36);
+    border-color: var(--text-neutral-secondary, #5c6570);
+  }
+}
