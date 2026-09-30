@@ -8,7 +8,7 @@ import {
   pathwaySchema,
   pathwaySourceSchema,
   pathwayStandards,
-  referenceProblems,
+  findReferenceProblems,
   referencedSkillIds,
 } from '@cdo/apps/adaptive/schema';
 
@@ -266,9 +266,9 @@ describe('parsePathwaySource', () => {
   });
 });
 
-describe('referenceProblems', () => {
+describe('findReferenceProblems', () => {
   it('finds nothing wrong with consistent content', () => {
-    expect(referenceProblems(parsePathway(served()))).toEqual([]);
+    expect(findReferenceProblems(parsePathway(served()))).toEqual([]);
   });
 
   it('flags an unknown skill id', () => {
