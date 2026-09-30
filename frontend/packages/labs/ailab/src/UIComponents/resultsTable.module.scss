@@ -1,0 +1,41 @@
+.rangeNote {
+  font-size: 12px;
+  text-align: right;
+}
+
+.header {
+  text-align: right;
+  position: sticky;
+  top: 0;
+  font-size: 12px;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.groupHeader {
+  background-color: white;
+  color: rgb(30 30 30);
+  vertical-align: top;
+  font-size: 24px;
+  height: 31px;
+}
+
+.columnHeader {
+  top: 42px;
+  color: white;
+  height: 15px;
+}
+
+.featureHeader {
+  background-color: var(--ailab-feature);
+}
+
+.labelHeader {
+  background-color: var(--ailab-label);
+}
+
+.highlighted {
+  background-color: var(--ailab-background);
+}

@@ -57,6 +57,8 @@ export interface RootState {
   accuracyCheckPredictedLabels: (number | string)[];
   testData: Record<string, string | number>;
   prediction: number | string | undefined;
+  predictionTestData: Record<string, string | number>;
+  predictionInputs: number[];
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
@@ -102,6 +104,8 @@ export const initialState: RootState = {
   accuracyCheckPredictedLabels: [],
   testData: {},
   prediction: undefined,
+  predictionTestData: {},
+  predictionInputs: [],
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: 'selectDataset',
@@ -247,8 +251,18 @@ const ailabSlice = createSlice({
         return {payload: {feature, value}};
       },
     },
-    setPrediction(state, action: PayloadAction<number | string>) {
-      state.prediction = action.payload;
+    setPrediction: {
+      reducer(
+        state,
+        action: PayloadAction<{prediction: number | string; inputs: number[]}>,
+      ) {
+        state.prediction = action.payload.prediction;
+        state.predictionTestData = {...state.testData};
+        state.predictionInputs = action.payload.inputs;
+      },
+      prepare(prediction: number | string, inputs: number[]) {
+        return {payload: {prediction, inputs}};
+      },
     },
     resetState(state) {
       return {
@@ -321,18 +335,10 @@ const ailabSlice = createSlice({
     },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
+      if (!getColumnClickable(state, currentColumn)) {
         return;
       }
-      if (
-        state.currentPanel === 'dataDisplayFeatures' &&
-        currentColumn === state.labelColumn
-      ) {
-        // If doing feature selection, and the label column is clicked, do
-        // nothing.
-        return;
-      } else if (state.currentColumn === currentColumn) {
+      if (state.currentColumn === currentColumn) {
         // If column is selected, then deselect.
         if (state.currentPanel === 'dataDisplayFeatures') {
           state.instructionsKey = 'dataDisplayFeatures';
@@ -504,6 +510,17 @@ export function getSpecifiedDatasets(state: RootState): string[] | undefined {
 
 function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
+}
+
+export function getColumnClickable(state: RootState, column: string): boolean {
+  // If doing feature selection, the label column is no longer clickable
+  return (
+    getShowColumnClicking(state) &&
+    !(
+      state.currentPanel === 'dataDisplayFeatures' &&
+      column === state.labelColumn
+    )
+  );
 }
 
 export function getPredictAvailable(state: RootState): boolean {

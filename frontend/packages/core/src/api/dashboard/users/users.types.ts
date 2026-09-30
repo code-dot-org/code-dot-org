@@ -50,6 +50,8 @@ export type EducatorRoleOption = NonNullable<
 
 export type SchoolInfoSummary = NonNullable<UserSettings['schoolInfo']>;
 
+export type IntegrationsSettings = UserSettings['integrations'];
+
 export interface UpdateProfileParams {
   givenName?: string;
   familyName?: string;
@@ -60,6 +62,11 @@ export interface UpdateProfileParams {
   gender?: string;
   /** Set or changed only; the role can never be cleared. */
   educatorRole?: string;
+  ltiRosterSyncEnabled?: boolean;
+}
+
+export interface UnlinkLtiAccountParams {
+  authenticationOptionId: number;
 }
 
 export interface UpdateSchoolInfoParams {

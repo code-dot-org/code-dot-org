@@ -127,7 +127,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
     if (state.trainedModel) {
       const predictions = state.trainedModel.predict([testValues]);
-      this.store.dispatch(setPrediction(predictions[0]));
+      this.store.dispatch(setPrediction(predictions[0], testValues));
     }
   }
 

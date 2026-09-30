@@ -1690,6 +1690,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/ailab@workspace:packages/labs/ailab"
   dependencies:
+    "@code-dot-org/component-library-styles": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@fortawesome/fontawesome-svg-core": "npm:^7.2.0"
     "@fortawesome/free-solid-svg-icons": "npm:^7.2.0"
@@ -1702,6 +1704,7 @@ __metadata:
     "@vitejs/plugin-react": "catalog:"
     "@vitest/eslint-plugin": "catalog:"
     chart.js: "npm:^2.9.4"
+    classnames: "catalog:"
     eslint: "catalog:"
     jsdom: "catalog:"
     messageformat: "npm:^2.3.0"

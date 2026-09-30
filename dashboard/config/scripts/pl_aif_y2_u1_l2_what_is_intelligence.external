@@ -1,0 +1,23 @@
+name 'pl-aif-y2-u1-l2-what-is-intelligence'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sort the AI Approaches
+
+In Intelligence Card Sort, students group real behaviors, human, animal, and machine, based on what kind of intelligence each one shows. Before you facilitate that discussion, try a version of the sort yourself below and notice how quickly "AI" stops feeling like one single thing.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/ai-approaches-sort.html"
+    width="100%"
+    height="1150"
+    frameborder="0"
+    scrolling="no"
+    title="Sort AI examples into Rule-Based Logic or Learns from Data"
+    style="display:block; border-radius:10px;">
+  </iframe>
+</div>
+
+
+MARKDOWN
