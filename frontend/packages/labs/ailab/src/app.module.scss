@@ -13,12 +13,20 @@
 }
 
 .flushBody {
+  display: flex;
+  flex-direction: column;
   padding: 0;
 
   .rightColumn {
     margin-left: 0;
     width: 30%;
   }
+}
+
+.panelRow {
+  display: flex;
+  flex: 1;
+  min-height: 0;
 }
 
 .column {
