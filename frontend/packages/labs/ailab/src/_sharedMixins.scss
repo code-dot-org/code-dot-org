@@ -17,16 +17,3 @@
   background-color: var(--background-neutral-primary);
   border-bottom: 1px solid var(--border-neutral-primary);
 }
-
-// Removed from view but still read by screen readers.
-@mixin visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-}

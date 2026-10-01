@@ -5,6 +5,7 @@ import classNames from 'classnames';
 
 import {getNiceAxisStep} from '../helpers/utils';
 
+import appStyles from '../app.module.scss';
 import styles from './distributionChart.module.scss';
 
 const AXIS_INTERVALS = 4;
@@ -79,7 +80,7 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
                   style={{height: `${(bar.count / axisMax) * 100}%`}}
                 />
                 {/* Label for screen readers */}
-                <span className={styles.visuallyHidden}>
+                <span className={appStyles.visuallyHidden}>
                   {bar.label}: {bar.count}
                 </span>
               </li>

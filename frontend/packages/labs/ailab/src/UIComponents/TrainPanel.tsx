@@ -20,6 +20,7 @@ import {
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
 
+import appStyles from '../app.module.scss';
 import styles from './trainPanel.module.scss';
 
 interface FieldLabelProps {
@@ -204,7 +205,7 @@ const TrainPanel = () => {
             </div>
           </div>
           <div className={styles.sentence}>
-            <span className={styles.visuallyHidden}>{readableSentence}</span>
+            <span className={appStyles.visuallyHidden}>{readableSentence}</span>
             {sentenceParts}
           </div>
           <div className={styles.actionRow}>

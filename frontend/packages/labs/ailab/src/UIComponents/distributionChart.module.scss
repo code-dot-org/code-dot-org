@@ -1,5 +1,3 @@
-@use '../sharedMixins' as mixins;
-
 $axis-label-width: 40px;
 $plot-end-padding: 16px;
 $bar-gap: 12px;
@@ -132,8 +130,4 @@ $bar-gap: 12px;
 
 .barColor4 {
   background-color: var(--background-success-primary);
-}
-
-.visuallyHidden {
-  @include mixins.visually-hidden;
 }

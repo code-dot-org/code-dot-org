@@ -30,8 +30,8 @@ export function getRandomInt(max: number): number {
 
 const NICE_STEP_MULTIPLIERS = [1, 2, 5, 10];
 
-// The smallest 1, 2 or 5 times a power of ten that splits `max` into at most
-// `intervals` steps.
+// The smallest step in 1, 2, 5, 10, 20, 50, (powers of 10, including 10^0)
+// that splits `max` into at most `intervals` steps.
 export function getNiceAxisStep(max: number, intervals: number): number {
   if (max <= 0) {
     return 1;
