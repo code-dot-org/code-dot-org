@@ -30368,6 +30368,8 @@ en:
               name: 'Lesson 8: Representing Text'
             lesson-24:
               name: 'Lesson 9: Black and Whtie Images'
+            lesson-25:
+              name: 'Lesson 10: Color Images'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
@@ -30979,3 +30981,33 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        pl-sandbox-aif-year2-unit2:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit3:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit4:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit5:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit6:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit7:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit8:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit9:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit10:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-onboarding:
+          lessons: {}
+          lesson_groups: {}
