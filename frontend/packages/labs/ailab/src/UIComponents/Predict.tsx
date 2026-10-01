@@ -1,20 +1,22 @@
 /* React component to handle predicting and displaying predictions. */
+import {Button} from '@mui/material';
 import classNames from 'classnames';
 import type React from 'react';
 
 import {imageUrl} from '../assetPath';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
-import {getRandomTestData} from '../helpers/randomTestData';
+import {getRandomPredictInputs} from '../helpers/randomPredictInputs';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {setTestData, getPredictAvailable} from '../redux';
+import {setTestData, setTestDataValues, getPredictAvailable} from '../redux';
 import {
   getSelectedCategoricalFeatures,
   getSelectedNumericalFeatures,
   getUniqueOptionsByColumn,
   getExtremaByColumn,
+  getDecimalPlacesByColumn,
 } from '../selectors';
 import {store} from '../store';
 import train from '../train';
@@ -38,6 +40,7 @@ const Predict = () => {
   const uniqueOptionsByColumn = useAppSelector(getUniqueOptionsByColumn);
   const predictAvailable = useAppSelector(getPredictAvailable);
   const extremaByColumn = useAppSelector(getExtremaByColumn);
+  const decimalPlacesByColumn = useAppSelector(getDecimalPlacesByColumn);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 
   const handleChange = (
@@ -48,8 +51,16 @@ const Predict = () => {
   };
 
   const onClickRandomize = () => {
-    Object.entries(getRandomTestData(store.getState())).forEach(
-      ([feature, value]) => dispatch(setTestData(feature, value)),
+    dispatch(
+      setTestDataValues(
+        getRandomPredictInputs({
+          numericalFeatures: selectedNumericalFeatures,
+          categoricalFeatures: selectedCategoricalFeatures,
+          extremaByColumn,
+          decimalPlacesByColumn,
+          uniqueOptionsByColumn,
+        }),
+      ),
     );
   };
 
@@ -63,8 +74,9 @@ const Predict = () => {
       <ScrollableContent>
         <div>
           {selectedNumericalFeatures.map((feature, index) => {
-            const min = extremaByColumn[feature].min.toFixed(2);
-            const max = extremaByColumn[feature].max.toFixed(2);
+            const decimalPlaces = decimalPlacesByColumn[feature];
+            const min = extremaByColumn[feature].min.toFixed(decimalPlaces);
+            const max = extremaByColumn[feature].max.toFixed(decimalPlaces);
 
             return (
               <div className={shared.cardRow} key={index}>
@@ -114,17 +126,23 @@ const Predict = () => {
       </ScrollableContent>
       <br />
       <div className={styles.buttons}>
-        <button type="button" onClick={onClickRandomize}>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          onClick={onClickRandomize}
+        >
           Randomize
-        </button>
-        <button
-          type="button"
-          className={styles.button}
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={onClickPredict}
           disabled={!predictAvailable}
         >
           {I18n.t('predictButton')}
-        </button>
+        </Button>
       </div>
       {predictedLabel !== undefined && (
         <div className={classNames(shared.contents, styles.botResult)}>

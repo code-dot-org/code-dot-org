@@ -8,6 +8,7 @@ import {
   tooManyUniqueOptions,
   isColumnReadOnly,
   getExtrema,
+  getDecimalPlaces,
   containsOnlyNumbers,
   getColumnDescription,
 } from '../../src/helpers/columnDetails';
@@ -113,6 +114,29 @@ describe('extrema', () => {
     expect(result.max).toBe(mosquitoCountMax);
     expect(result.min).toBe(mosquitoCountMin);
     expect(result.range).toBe(mosquitoCountMax - mosquitoCountMin);
+  });
+});
+
+describe('getDecimalPlaces', () => {
+  const column = cells => cells.map(x => ({x}));
+
+  test('takes the precision of the most precise cells', () => {
+    expect(getDecimalPlaces(column(['3750', '39.1', '46.25']), 'x')).toBe(2);
+  });
+
+  test('reads scientific notation', () => {
+    expect(getDecimalPlaces(column(['1.2E-5']), 'x')).toBe(6);
+    expect(getDecimalPlaces(column(['2e-5']), 'x')).toBe(5);
+    expect(getDecimalPlaces(column(['1.23E+11']), 'x')).toBe(0);
+  });
+
+  test('ignores a stray long decimal', () => {
+    const cells = [...Array(19).fill('1.5'), '4.333333333333333'];
+    expect(getDecimalPlaces(column(cells), 'x')).toBe(1);
+  });
+
+  test('stays within what toFixed accepts', () => {
+    expect(getDecimalPlaces(column([`1.${'1'.repeat(150)}`]), 'x')).toBe(100);
   });
 });
 

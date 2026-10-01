@@ -254,6 +254,10 @@ const ailabSlice = createSlice({
         return {payload: {feature, value}};
       },
     },
+    setTestDataValues(state, action: PayloadAction<Record<string, string>>) {
+      Object.assign(state.testData, action.payload);
+      state.prediction = undefined;
+    },
     setPrediction: {
       reducer(
         state,
@@ -463,6 +467,7 @@ export const {
   setTrainingExamples,
   setTrainingLabels,
   setTestData,
+  setTestDataValues,
   setPrediction,
   resetState,
   setTrainedModel,
