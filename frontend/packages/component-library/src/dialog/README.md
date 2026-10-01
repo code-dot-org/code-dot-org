@@ -106,16 +106,8 @@ on close.
 ## Deprecated: Dialog and CustomDialog
 
 `Dialog` (also the default export), `CustomDialog`, `DialogProps` and
-`CustomDialogProps` are deprecated. Move call sites with the codemod:
-
-```bash
-cd frontend/packages/component-library
-yarn build
-yarn codemod:dialog --dry --print ../../../apps/src/<path>
-yarn codemod:dialog ../../../apps/src/<path>
-```
-
-See [codemods/README.md](../../codemods/README.md#dialog-to-mui-dialogts).
+`CustomDialogProps` are deprecated. Move call sites with the codemod; see
+[codemods/README.md](../../codemods/README.md#dialog-to-mui-dialogts).
 The legacy components are unchanged and keep five defects the MUI versions
 fix: the panel's fixed minimum width overflows narrow viewports, the image
 distorts and never scales down, its alt is the literal `"Dialog"`, the icon
