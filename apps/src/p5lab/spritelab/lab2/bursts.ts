@@ -1,8 +1,8 @@
-// A burst: sparks flung out from a point, slowing in the air, drawn down by
-// the scene's gravity, and gone in under a second. A visual flourish, like
-// confetti or metal sparks: it passes through tiles and bodies, and nothing
-// of it is left to pick up. Several can be in flight. Particles are plain
-// records, not sprites.
+// A burst: sparks or confetti flung out from a point, slowing in the air,
+// drawn down by the scene's gravity, and gone in a moment. A visual
+// flourish: it passes through tiles and bodies, and nothing of it is left
+// to pick up. Several can be in flight. Particles are plain records, not
+// sprites.
 
 import {PLATFORM_GRAVITY} from './platformPhysics';
 import {Random, weatherGravity} from './weather';
@@ -26,7 +26,9 @@ export interface BurstParticle {
   size: number;
   rotation: number;
   spin: number;
-  /** The tint the shared spark image takes, 0..255 each. */
+  /** Per-particle phase for confetti's flutter. */
+  phase: number;
+  /** The tint the particle takes, 0..255 each. */
   color: [number, number, number];
 }
 
@@ -39,32 +41,67 @@ export interface Burst {
 export const MAX_BURST_PARTICLES = 400;
 export const MAX_BURST_COUNT = 100;
 
-// Fall acceleration per frame under the default gravity, air drag per
-// frame, and the share of a particle's life over which it fades out.
-const FALL_ACCEL = 0.25;
-const DRAG = 0.96;
-const FADE_SHARE = 0.4;
+// The share of a particle's life over which it fades out.
+const FADE_SHARE = 0.5;
 
-const between = (random: Random, min: number, max: number) =>
-  min + random() * (max - min);
+/** How a look moves and shows. */
+interface Look {
+  speed: [number, number];
+  /** Launch push against gravity. */
+  lift: number;
+  /** Velocity kept per frame. */
+  drag: number;
+  /** Fall acceleration per frame under the default gravity. */
+  fall: number;
+  life: [number, number];
+  size: [number, number];
+  spin: [number, number];
+  /** The spark image, or a tumbling scrap of paper. */
+  shape: 'spark' | 'paper';
+  palette: [number, number, number][];
+}
 
-// Each look's tints: hot whites and golds for sparks, a party for confetti.
-const PALETTES: Record<BurstLook, [number, number, number][]> = {
-  sparks: [
-    [255, 255, 255],
-    [255, 240, 150],
-    [255, 200, 60],
-    [255, 150, 40],
-  ],
-  confetti: [
-    [255, 90, 90],
-    [255, 190, 50],
-    [90, 220, 120],
-    [80, 170, 255],
-    [200, 110, 255],
-    [255, 120, 200],
-  ],
+const LOOKS: Record<BurstLook, Look> = {
+  // Hot, fast and brief, like metal sparks.
+  sparks: {
+    speed: [5, 12],
+    lift: 2,
+    drag: 0.95,
+    fall: 0.25,
+    life: [25, 40],
+    size: [10, 18],
+    spin: [-0.3, 0.3],
+    shape: 'spark',
+    palette: [
+      [255, 255, 255],
+      [255, 240, 150],
+      [255, 200, 60],
+      [255, 150, 40],
+    ],
+  },
+  // Light scraps that tumble and float down.
+  confetti: {
+    speed: [3, 8],
+    lift: 3,
+    drag: 0.97,
+    fall: 0.08,
+    life: [70, 110],
+    size: [6, 11],
+    spin: [-0.25, 0.25],
+    shape: 'paper',
+    palette: [
+      [255, 90, 90],
+      [255, 190, 50],
+      [90, 220, 120],
+      [80, 170, 255],
+      [200, 110, 255],
+      [255, 120, 200],
+    ],
+  },
 };
+
+const between = (random: Random, [min, max]: [number, number]) =>
+  min + random() * (max - min);
 
 /** A burst of `count` particles from a point, flung out in every direction
     with a little lift against gravity. */
@@ -75,22 +112,26 @@ export function createBurst(
   gravity: number,
   random: Random = Math.random
 ): Burst {
+  const rule = LOOKS[look];
   const up = weatherGravity(gravity) < 0 ? 1 : -1;
-  const palette = PALETTES[look];
   const particles = Array.from({length: count}, () => {
     const angle = random() * Math.PI * 2;
-    const speed = between(random, 4, 11);
+    const speed = between(random, rule.speed);
     return {
       x: origin.x,
       y: origin.y,
       vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed + up * 2,
+      vy: Math.sin(angle) * speed + up * rule.lift,
       age: 0,
-      life: Math.round(between(random, 30, 50)),
-      size: between(random, 10, 18),
+      life: Math.round(between(random, rule.life)),
+      size: between(random, rule.size),
       rotation: random() * Math.PI * 2,
-      spin: between(random, -0.3, 0.3),
-      color: palette[Math.floor(random() * palette.length) % palette.length],
+      spin: between(random, rule.spin),
+      phase: random() * Math.PI * 2,
+      color:
+        rule.palette[
+          Math.floor(random() * rule.palette.length) % rule.palette.length
+        ],
     };
   });
   return {look, particles};
@@ -104,20 +145,21 @@ export interface BurstScene {
 
 /**
  * One frame for one burst. Particles slow in the air, fall with the scene's
- * gravity, spin, and are dropped once their life is up or they leave the
- * world. Returns whether anything is left.
+ * gravity at their look's rate, spin, and are dropped once their life is up
+ * or they leave the world. Returns whether anything is left.
  */
 export function stepBurst(burst: Burst, scene: BurstScene): boolean {
+  const rule = LOOKS[burst.look];
   const g = weatherGravity(scene.gravity);
-  const accel = (FALL_ACCEL * g) / PLATFORM_GRAVITY;
+  const accel = (rule.fall * g) / PLATFORM_GRAVITY;
   const margin = 40;
   burst.particles = burst.particles.filter(p => {
     p.age++;
     if (p.age >= p.life) {
       return false;
     }
-    p.vx *= DRAG;
-    p.vy = p.vy * DRAG + accel;
+    p.vx *= rule.drag;
+    p.vy = p.vy * rule.drag + accel;
     p.x += p.vx;
     p.y += p.vy;
     p.rotation += p.spin;
@@ -143,18 +185,22 @@ export interface BurstCanvas {
   pop(): void;
   translate(x: number, y: number): void;
   rotate(angle: number): void;
+  scale(x: number, y: number): void;
   tint(r: number, g: number, b: number, a?: number): void;
   noTint(): void;
   imageMode(mode: unknown): void;
+  rectMode(mode: unknown): void;
   image(img: unknown, x: number, y: number, w: number, h: number): void;
   noStroke(): void;
   fill(r: number, g: number, b: number, a?: number): void;
+  rect(x: number, y: number, w: number, h: number): void;
   ellipse(x: number, y: number, w: number, h?: number): void;
   CENTER: unknown;
 }
 
-/** Draw every burst's particles as the spark image, tinted, spinning and
-    fading; a tinted dot until the image has loaded. */
+/** Draw every burst's particles: sparks as the tinted spark image,
+    shrinking as they fade (a tinted dot until the image has loaded);
+    confetti as scraps of paper that tumble by narrowing and widening. */
 export function drawBursts(
   p5: BurstCanvas,
   bursts: Burst[],
@@ -165,20 +211,31 @@ export function drawBursts(
   }
   p5.push();
   p5.imageMode(p5.CENTER);
+  p5.rectMode(p5.CENTER);
   p5.noStroke();
   for (const burst of bursts) {
+    const paper = LOOKS[burst.look].shape === 'paper';
     for (const p of burst.particles) {
-      const a = burstAlpha(p) * 255;
+      const alpha = burstAlpha(p);
+      const a = alpha * 255;
       const [r, g, b] = p.color;
       p5.push();
       p5.translate(p.x, p.y);
       p5.rotate(p.rotation);
-      if (spark) {
-        p5.tint(r, g, b, a);
-        p5.image(spark, 0, 0, p.size, p.size);
-      } else {
+      if (paper) {
+        // A scrap seen edge-on and face-on by turns.
+        p5.scale(Math.max(0.15, Math.abs(Math.cos(p.age * 0.18 + p.phase))), 1);
         p5.fill(r, g, b, a);
-        p5.ellipse(0, 0, p.size * 0.4, p.size * 0.4);
+        p5.rect(0, 0, p.size, p.size * 0.6);
+      } else {
+        const size = p.size * (0.4 + 0.6 * alpha);
+        if (spark) {
+          p5.tint(r, g, b, a);
+          p5.image(spark, 0, 0, size, size);
+        } else {
+          p5.fill(r, g, b, a);
+          p5.ellipse(0, 0, size * 0.4, size * 0.4);
+        }
       }
       p5.pop();
     }

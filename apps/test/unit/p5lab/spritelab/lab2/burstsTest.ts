@@ -94,13 +94,31 @@ describe('bursts', () => {
     const p = burst.particles[0];
     Object.assign(p, {vx: 0, vy: 0, life: 30});
     expect(burstAlpha(p)).toBe(1);
-    p.age = 18;
+    p.age = 14;
     expect(burstAlpha(p)).toBe(1);
-    p.age = 24;
-    expect(burstAlpha(p)).toBeCloseTo(0.5, 5);
+    p.age = 21;
+    expect(burstAlpha(p)).toBeCloseTo(0.6, 5);
     p.age = 29;
     expect(stepBurst(burst, scene())).toBe(false);
     expect(burst.particles).toHaveLength(0);
+  });
+
+  it('confetti floats: it lives longer, falls slower and launches gentler than sparks', () => {
+    const at = (look: 'sparks' | 'confetti') =>
+      createBurst(look, 1, {x: 200, y: 200}, PLATFORM_GRAVITY, () => 0.5);
+    const sparks = at('sparks');
+    const confetti = at('confetti');
+    expect(confetti.particles[0].life).toBeGreaterThan(
+      sparks.particles[0].life
+    );
+    const speed = (b: ReturnType<typeof at>) =>
+      Math.hypot(b.particles[0].vx, b.particles[0].vy);
+    expect(speed(confetti)).toBeLessThan(speed(sparks));
+    for (const b of [sparks, confetti]) {
+      Object.assign(b.particles[0], {vx: 0, vy: 0, life: 1000});
+      for (let i = 0; i < 30; i++) stepBurst(b, scene());
+    }
+    expect(confetti.particles[0].vy).toBeLessThan(sparks.particles[0].vy);
   });
 
   it('knows its looks', () => {
@@ -109,7 +127,7 @@ describe('bursts', () => {
     expect(isBurstLook('rain')).toBe(false);
   });
 
-  it('draws each particle as the tinted spark when loaded, a dot otherwise', () => {
+  it('draws sparks as the tinted image, a dot until it loads, and confetti as paper', () => {
     const calls: string[] = [];
     const canvas = new Proxy(
       {CENTER: 'center'},
@@ -129,6 +147,14 @@ describe('bursts', () => {
     calls.length = 0;
     drawBursts(canvas, bursts, undefined);
     expect(calls.filter(c => c === 'ellipse')).toHaveLength(3);
+    expect(calls.filter(c => c === 'image')).toHaveLength(0);
+    calls.length = 0;
+    drawBursts(
+      canvas,
+      [createBurst('confetti', 4, {x: 0, y: 0}, PLATFORM_GRAVITY, () => 0.5)],
+      {}
+    );
+    expect(calls.filter(c => c === 'rect')).toHaveLength(4);
     expect(calls.filter(c => c === 'image')).toHaveLength(0);
   });
 });
