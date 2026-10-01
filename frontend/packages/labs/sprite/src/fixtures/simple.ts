@@ -3,6 +3,7 @@ import {
   type LabFixture,
 } from '@code-dot-org/core/api/mocks';
 
+import {SPRITE_AI_IMAGES} from './aiImages';
 import {GAMELAB_JR_POOL} from './gamelabJrPool';
 
 // A level offering the lab's own blocks, and a project with two images and
@@ -109,6 +110,7 @@ const simple: LabFixture = {
     },
   } as unknown as LabFixture['sources'],
   theme: {},
+  aiImages: SPRITE_AI_IMAGES,
 };
 
 export default simple;

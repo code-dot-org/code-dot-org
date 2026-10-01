@@ -33,8 +33,15 @@ Then open a fixture by its channel id:
 Saved work persists in `sessionStorage` across reloads. Add
 `?cdoMockReset=1` to start the fixture over.
 
-Image generation is mocked: the gateway answers with a prepared image. To
-call the model with your own key instead, start the server with
+Image generation is mocked. The fixtures' `aiImages` rules
+(`src/fixtures/aiImages.ts`) pick a prepared image by the wording the lab
+adds to each kind of prompt: a meadow for a background (a night sky when the
+prompt says night), a grass tile for a block, each in pixel art when that
+style is chosen, and a smooth face for a smooth sprite. Anything else gets
+core's pixel bear, and an animation's posed frames repeat its first. Add a
+rule ahead of the others to answer a prompt of your own.
+
+To call the model with your own key instead, start the server with
 `GOOGLE_GENERATIVE_AI_API_KEY` set and `VITE_AI_GATEWAY_URL=/__ai-gateway`;
 the key stays on the dev server. See `packages/core/src/api/mocks/README.md`.
 
