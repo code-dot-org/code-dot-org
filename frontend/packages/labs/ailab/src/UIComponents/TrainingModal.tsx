@@ -78,7 +78,7 @@ const TrainingModal = () => {
             <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
           }
         >
-          {testingFinished ? 'Continue' : 'Skip'}
+          {testingFinished ? 'Test your model' : 'Skip'}
         </Button>
       </div>
     </MuiCustomDialog>
