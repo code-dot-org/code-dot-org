@@ -1,0 +1,61 @@
+import React, {useMemo} from 'react';
+
+import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
+import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
+
+import {useLocalAttemptSource} from '../../progress/localAttemptSource';
+import {
+  MultipleChoiceQuestion,
+  QuestionsStep as QuestionsStepContent,
+} from '../../types';
+
+import styles from './stepPlayer.module.scss';
+
+interface QuestionsStepProps {
+  step: QuestionsStepContent;
+  attempts: QuizAttemptData[];
+  onSaveAttempts: (attempts: QuizAttemptData[]) => void;
+  continueLabel: string;
+  onComplete: () => void;
+}
+
+/** Plays a questions step as a quiz level, keeping its attempts locally. */
+const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
+  step,
+  attempts,
+  onSaveAttempts,
+  continueLabel,
+  onComplete,
+}) => {
+  const attemptSource = useLocalAttemptSource(step, attempts, onSaveAttempts);
+  const quizQuestions = useMemo(
+    () =>
+      step.questions.filter(
+        (q): q is MultipleChoiceQuestion => q.type === 'MultipleChoiceQuestion'
+      ),
+    [step.questions]
+  );
+
+  return (
+    <div className={styles.questionsStep}>
+      <QuizAttemptWorkspace
+        // Unused with an attempt source, which takes no level or unit.
+        levelId={0}
+        appName="quiz"
+        levelName={step.title}
+        unitId={undefined}
+        quizQuestions={quizQuestions}
+        displayName={step.title}
+        customIntroText={step.description}
+        showIntroScreen={step.showIntroScreen}
+        showCorrectness={step.showCorrectness}
+        allowMultipleAttempts={step.allowMultipleAttempts}
+        attemptSource={attemptSource}
+        onNextLevel={onComplete}
+        nextLevelLabel={continueLabel}
+      />
+    </div>
+  );
+};
+
+export default QuestionsStep;

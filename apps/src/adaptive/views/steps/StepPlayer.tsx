@@ -3,18 +3,26 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
+
 import {Checkpoint, Step} from '../../types';
 
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
+import QuestionsStep from './QuestionsStep';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
+
+const NO_ATTEMPTS: QuizAttemptData[] = [];
 
 interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  /** Each questions step's attempts, by step id. */
+  attempts: {[stepId: string]: QuizAttemptData[]};
+  onSaveAttempts: (stepId: string, attempts: QuizAttemptData[]) => void;
   onExit: () => void;
   onFinish: () => void;
 }
@@ -23,6 +31,8 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  attempts,
+  onSaveAttempts,
   onExit,
   onFinish,
 }) => {
@@ -46,17 +56,16 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
-      default:
-        // Other step kinds arrive in later changes.
+      case 'questions':
         return (
-          <div className={styles.stepFallback}>
-            <MuiTypography variant="body3" className={shared.muted}>
-              This step type ({step.kind}) is not available yet.
-            </MuiTypography>
-            <MuiButton variant="contained" onClick={advance}>
-              {continueLabel}
-            </MuiButton>
-          </div>
+          <QuestionsStep
+            key={step.id}
+            step={step}
+            attempts={attempts[step.id] ?? NO_ATTEMPTS}
+            onSaveAttempts={list => onSaveAttempts(step.id, list)}
+            continueLabel={continueLabel}
+            onComplete={advance}
+          />
         );
     }
   };

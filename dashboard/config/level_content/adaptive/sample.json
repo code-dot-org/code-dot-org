@@ -53,11 +53,33 @@
           "id": "intro-questions",
           "title": "Quick questions",
           "kind": "questions",
+          "showCorrectness": true,
+          "allowMultipleAttempts": true,
           "questions": [
             {
-              "id": "intro-placeholder",
-              "type": "freeResponse",
-              "text": "Placeholder until question steps render."
+              "id": 1,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-what-is-prompt",
+              "stem": "What is a prompt?",
+              "choices": [
+                {"id": "instructions", "text": "Instructions you give an AI"},
+                {"id": "website", "text": "A finished website"},
+                {"id": "error", "text": "An error message from the browser"}
+              ],
+              "correctChoiceId": "instructions"
+            },
+            {
+              "id": 2,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-styling-language",
+              "stem": "Which language styles a web page?",
+              "choices": [
+                {"id": "html", "text": "HTML"},
+                {"id": "css", "text": "CSS"},
+                {"id": "jpeg", "text": "JPEG"}
+              ],
+              "correctChoiceId": "css",
+              "page": 2
             }
           ]
         }

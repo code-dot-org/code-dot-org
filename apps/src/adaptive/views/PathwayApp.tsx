@@ -52,10 +52,15 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
 }) => {
-  const {statusMap, isLoading, markStarted, markComplete, reset} = useProgress(
-    pathway,
-    progressKey
-  );
+  const {
+    statusMap,
+    attempts,
+    isLoading,
+    markStarted,
+    markComplete,
+    saveAttempts,
+    reset,
+  } = useProgress(pathway, progressKey);
   const [view, setView] = useState<View>({kind: 'map'});
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
 
@@ -78,6 +83,8 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
         <StepPlayer
           checkpoint={project}
           finishLabel="Back to map"
+          attempts={attempts}
+          onSaveAttempts={saveAttempts}
           onExit={() => setView({kind: 'map'})}
           onFinish={() => setView({kind: 'map'})}
         />
@@ -90,6 +97,8 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       {checkpoint ? (
         <StepPlayer
           checkpoint={checkpoint}
+          attempts={attempts}
+          onSaveAttempts={saveAttempts}
           onExit={() => setView({kind: 'map', focusId: checkpoint.id})}
           onFinish={() => {
             markComplete(checkpoint.id);
