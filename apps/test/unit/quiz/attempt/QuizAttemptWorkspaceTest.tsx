@@ -349,6 +349,7 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
   });
 
+  // If a levelbuilder adds a new question to a quiz that has already been submitted by a student.
   it('omits a question from the submitted results when it has no result', () => {
     renderWorkspace({
       quizQuestions: [question({id: 1, stem: 'What is the value of x?'})],
