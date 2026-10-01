@@ -47,10 +47,10 @@ import {
   usesPlatformPhysics,
 } from './platformPhysics';
 import {
+  bodyBox,
   createWeather,
   drawWeather,
   isWeatherKind,
-  playerBox,
   stepWeather,
 } from './weather';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
@@ -254,11 +254,18 @@ export default class SpriteLab2Engine extends SpriteLab {
         halfH: half,
       };
     };
+    // Everything that is not a tile: players, characters, objects.
+    const bodies = Object.values(this.library.nativeSpriteMap)
+      .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
+      .map(bodyBox);
     return {
       width: p5.width,
       height: p5.height,
       walls: this.wallsThisFrame_(this.library).map(tileBox),
-      bodies: this.library.getSpriteArray({group: 'players'}).map(playerBox),
+      bodies,
+      gravity: this.usesPlatformPhysics_
+        ? this.platformGravity_
+        : PLATFORM_GRAVITY,
     };
   }
 

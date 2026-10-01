@@ -1,7 +1,8 @@
+import {PLATFORM_GRAVITY} from '@cdo/apps/p5lab/spritelab/lab2/platformPhysics';
 import {
+  bodyBox,
   createWeather,
   drawWeather,
-  playerBox,
   stepWeather,
   weatherCount,
   WeatherScene,
@@ -12,15 +13,11 @@ const fixed = (value: number) => () => value;
 
 const scene = (
   walls: WeatherScene['walls'] = [],
-  bodies: WeatherScene['bodies'] = []
-): WeatherScene => ({
-  width: 400,
-  height: 400,
-  walls,
-  bodies,
-});
+  bodies: WeatherScene['bodies'] = [],
+  gravity = PLATFORM_GRAVITY
+): WeatherScene => ({width: 400, height: 400, walls, bodies, gravity});
 
-const settle = (
+const steps = (
   w: ReturnType<typeof createWeather>,
   s: WeatherScene,
   n: number
@@ -30,17 +27,25 @@ const settle = (
   }
 };
 
+const tile = {x: 200, y: 300, halfW: 20, halfH: 20};
+const body = {x: 200, y: 300, halfW: 15, halfH: 20};
+
 describe('weather', () => {
-  it('fills a pool of its kind above the world, and none for none', () => {
+  it('fills a pool of its kind spread along the fall, and none for none', () => {
     const rain = createWeather('rain', scene(), fixed(0.5));
     expect(rain.particles).toHaveLength(weatherCount('rain'));
-    expect(rain.particles.every(p => p.y < 0 && p.state === 'falling')).toBe(
-      true
+    expect(rain.particles.every(p => p.vy > 0)).toBe(true);
+    // Spread from a world above the top to the bottom: the first frame is
+    // already raining, not a front arriving.
+    const spread = createWeather('rain', scene(), Math.random).particles.map(
+      p => p.y
     );
+    expect(Math.min(...spread)).toBeLessThan(-100);
+    expect(Math.max(...spread)).toBeGreaterThan(100);
     expect(createWeather('none', scene()).particles).toHaveLength(0);
   });
 
-  it('keeps the pool full: a drop that leaves the world comes back from the top', () => {
+  it('a drop that leaves the world comes back from the top, keeping the pool full', () => {
     const rain = createWeather('rain', scene(), fixed(0.5));
     const drop = rain.particles[0];
     drop.y = 401;
@@ -50,51 +55,69 @@ describe('weather', () => {
     expect(rain.particles[0].y).toBeLessThan(0);
   });
 
-  it('a drop landing on a tile splashes there for a few frames, then comes around', () => {
-    const tile = {x: 200, y: 300, halfW: 20, halfH: 20};
+  it('a drop landing on a tile bounces a little, fades for a few frames, then comes around', () => {
     const rain = createWeather('rain', scene([tile]), fixed(0.5));
     const drop = rain.particles[0];
-    Object.assign(drop, {x: 200, y: 275, vx: 0, vy: 8});
+    Object.assign(drop, {x: 200, y: 275, vx: 0, vy: 8, speed: 8});
     stepWeather(rain, scene([tile]), fixed(0.5));
-    expect(drop.state).toBe('splashing');
+    expect(drop.state).toBe('settling');
     expect(drop.y).toBe(280);
-    settle(rain, scene([tile]), 3);
+    expect(drop.vy).toBeLessThan(0);
+    steps(rain, scene([tile]), 3);
+    expect(drop.alpha).toBeLessThan(0.7);
+    steps(rain, scene([tile]), 5);
     expect(rain.particles[0]).not.toBe(drop);
   });
 
-  it('a flake rests on a tile and fades before it comes around', () => {
-    const tile = {x: 200, y: 300, halfW: 20, halfH: 20};
+  it('a drop landing on a body does the same as on a tile, kicked away from it', () => {
+    const rain = createWeather('rain', scene([], [body]), fixed(0.5));
+    const drop = rain.particles[0];
+    Object.assign(drop, {x: 190, y: 275, vx: 0, vy: 8, speed: 8});
+    stepWeather(rain, scene([], [body]), fixed(0.5));
+    expect(drop.state).toBe('settling');
+    expect(drop.settleFrames).toBe(8);
+    expect(drop.vy).toBeLessThan(0);
+    expect(drop.vx).toBeLessThan(0);
+  });
+
+  it('a flake rests on a tile and fades for a second', () => {
     const snow = createWeather('snow', scene([tile]), fixed(0.5));
     const flake = snow.particles[0];
-    Object.assign(flake, {x: 200, y: 279, vx: 0, vy: 1.5, age: 0});
+    Object.assign(flake, {x: 200, y: 279, vx: 0, vy: 1.5, speed: 1.5, age: 0});
     stepWeather(snow, scene([tile]), fixed(0.5));
-    expect(flake.state).toBe('resting');
-    settle(snow, scene([tile]), 30);
+    expect(flake.state).toBe('settling');
+    expect(flake.settleFrames).toBe(60);
+    steps(snow, scene([tile]), 30);
     expect(snow.particles[0]).toBe(flake);
+    expect(flake.y).toBe(280);
     expect(flake.alpha).toBeLessThan(0.6);
-    settle(snow, scene([tile]), 31);
+    steps(snow, scene([tile]), 31);
     expect(snow.particles[0]).not.toBe(flake);
   });
 
-  it('a drop bounces off a player and keeps falling', () => {
-    const player = {x: 200, y: 300, halfW: 15, halfH: 20};
-    const rain = createWeather('rain', scene([], [player]), fixed(0.5));
-    const drop = rain.particles[0];
-    Object.assign(drop, {x: 190, y: 275, vx: 0, vy: 8});
-    stepWeather(rain, scene([], [player]), fixed(0.5));
-    expect(drop.state).toBe('falling');
-    expect(drop.vy).toBeLessThan(0);
-    expect(drop.vx).toBeLessThan(0);
-    settle(rain, scene([], [player]), 10);
-    expect(drop.vy).toBeGreaterThan(0);
+  it('a flake touching a body melts away quickly without bouncing', () => {
+    const snow = createWeather('snow', scene([], [body]), fixed(0.5));
+    const flake = snow.particles[0];
+    Object.assign(flake, {x: 200, y: 279, vx: 0, vy: 1.5, speed: 1.5, age: 0});
+    stepWeather(snow, scene([], [body]), fixed(0.5));
+    expect(flake.state).toBe('settling');
+    expect(flake.settleFrames).toBe(10);
+    steps(snow, scene([], [body]), 5);
+    expect(flake.y).toBe(280);
   });
 
   it('a flake drifting into a tile through its side slides down outside it', () => {
-    const tile = {x: 200, y: 300, halfW: 20, halfH: 20};
     const snow = createWeather('snow', scene([tile]), fixed(0.5));
     const flake = snow.particles[0];
-    // Already below the tile's top, just outside its left face, drifting in.
-    Object.assign(flake, {x: 179.5, y: 300, vx: 0, vy: 1, age: 0, phase: 0});
+    Object.assign(flake, {
+      x: 179.5,
+      y: 300,
+      vx: 0,
+      vy: 1,
+      speed: 1,
+      age: 0,
+      phase: 0,
+    });
     snow.wind = 2;
     stepWeather(snow, scene([tile]), fixed(0.5));
     expect(flake.state).toBe('falling');
@@ -102,14 +125,54 @@ describe('weather', () => {
     expect(flake.y).toBeGreaterThan(300);
   });
 
-  it('measures a player as its feet-anchored body', () => {
-    const box = playerBox({
-      position: {x: 100, y: 100},
-      width: 50,
-      height: 100,
-      scale: 1,
-    });
-    expect(box).toEqual({x: 100, y: 110, halfW: 20, halfH: 40});
+  it('hangs in the air at zero gravity', () => {
+    const rain = createWeather('rain', scene(), fixed(0.5));
+    steps(rain, scene([], [], 0), 120);
+    const drop = rain.particles[0];
+    expect(Math.abs(drop.vy)).toBeLessThan(0.01);
+    const y = drop.y;
+    steps(rain, scene([], [], 0), 10);
+    expect(drop.y).toBe(y);
+  });
+
+  it('flipping gravity slows the drops, turns them, and sends them up to speed upward', () => {
+    const rain = createWeather('rain', scene(), fixed(0.5));
+    const drop = rain.particles[0];
+    Object.assign(drop, {y: 200, vy: 8, speed: 8});
+    const up = scene([], [], -PLATFORM_GRAVITY);
+    const trace: number[] = [];
+    for (let i = 0; i < 90; i++) {
+      stepWeather(rain, up, fixed(0.5));
+      trace.push(rain.particles[0] === drop ? drop.vy : NaN);
+    }
+    const seen = trace.filter(Number.isFinite);
+    // Still falling at first, slower; then rising gently; then at full
+    // speed upward before it leaves the top.
+    expect(seen[2]).toBeGreaterThan(0);
+    expect(seen[2]).toBeLessThan(8);
+    expect(seen.some(v => v < 0 && v > -4)).toBe(true);
+    expect(Math.min(...seen)).toBeLessThan(-7);
+  });
+
+  it('under upward gravity drops land on undersides and come back from below', () => {
+    const up = scene([tile], [], -PLATFORM_GRAVITY);
+    const rain = createWeather('rain', up, fixed(0.5));
+    expect(rain.particles.every(p => p.vy < 0)).toBe(true);
+    const drop = rain.particles[0];
+    Object.assign(drop, {x: 200, y: 325, vx: 0, vy: -8, speed: 8});
+    stepWeather(rain, up, fixed(0.5));
+    expect(drop.state).toBe('settling');
+    expect(drop.y).toBe(320);
+    const other = rain.particles[1];
+    other.y = -9;
+    stepWeather(rain, up, fixed(0.5));
+    expect(rain.particles[1].y).toBeGreaterThan(400);
+  });
+
+  it('measures a character as its feet-anchored body', () => {
+    expect(
+      bodyBox({position: {x: 100, y: 100}, width: 50, height: 100, scale: 1})
+    ).toEqual({x: 100, y: 110, halfW: 20, halfH: 40});
   });
 
   it('draws nothing for none and one shape per particle otherwise', () => {

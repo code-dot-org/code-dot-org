@@ -1,9 +1,10 @@
-// World-wide weather for a scene: a fixed pool of particles that fall
-// through the world, react to what they land on by their kind's rule, and
-// come back around from the top. Particles are plain records stepped once
-// a frame, not sprites: no blocks can name them and no event sees them.
+// World-wide weather for a scene: a fixed pool of particles that fall with
+// the scene's gravity, react to what they land on by their kind's rule, and
+// come back around from the edge the flow comes from. Particles are plain
+// records stepped once a frame, not sprites: no block can name them and no
+// event sees them.
 
-import {PLAYER_BODY_SCALE} from './platformPhysics';
+import {PLATFORM_GRAVITY, PLAYER_BODY_SCALE} from './platformPhysics';
 
 export const WEATHER_KINDS = ['none', 'rain', 'snow'] as const;
 export type WeatherKind = (typeof WEATHER_KINDS)[number];
@@ -26,21 +27,30 @@ export interface WeatherScene {
   height: number;
   /** Tiles: a particle landing on one does what its kind does on ground. */
   walls: Box[];
-  /** Players: a particle landing on one bounces off. */
+  /** Characters and objects: a particle landing on one does what its kind
+      does on a body. */
   bodies: Box[];
+  /** The scene's gravity right now; the weather eases toward it. */
+  gravity: number;
 }
 
-export type ParticleState = 'falling' | 'splashing' | 'resting';
+export type ParticleState = 'falling' | 'settling';
 
 export interface Particle {
   x: number;
   y: number;
   vx: number;
   vy: number;
+  /** Fall speed under the default gravity; gravity scales it. */
+  speed: number;
   /** Frames in the current state. */
   age: number;
   state: ParticleState;
-  /** 0..1, for the fade of a resting flake. */
+  /** Frames a settling particle lasts before it comes around. */
+  settleFrames: number;
+  /** The bounce of its contact; zero means it sits where it landed. */
+  bounce: number;
+  /** 0..1, the fade of a settling particle. */
   alpha: number;
   /** Per-particle phase, so drifting flakes do not sway in step. */
   phase: number;
@@ -51,72 +61,56 @@ export interface Weather {
   particles: Particle[];
   /** Horizontal push shared by every particle this run. */
   wind: number;
+  /** The gravity the particles feel: eased toward the scene's, so a flip
+      slows them, turns them, and brings them up to speed the other way. */
+  gravity: number;
 }
 
 export type Random = () => number;
 
+/** What a particle does when it lands on something. */
+interface Contact {
+  /** Frames it lasts after the contact, fading out. */
+  frames: number;
+  /** Fraction of its fall speed it leaves with, away from the surface;
+      zero sits where it landed. */
+  bounce: number;
+}
+
 interface Rule {
   count: number;
   wind: (random: Random) => number;
-  /** A fresh particle above the top edge, spread across the world. */
-  spawn: (scene: WeatherScene, wind: number, random: Random) => Particle;
-  /** One frame of free fall. */
-  fall: (p: Particle, wind: number) => void;
-  /** Frames a particle spends on the ground before it comes around. */
-  groundFrames: number;
-  groundState: ParticleState;
-  /** How hard a particle bounces off a player: fraction of its fall speed. */
-  bounce: number;
+  speed: (random: Random) => number;
+  /** Sideways motion per frame, scaled by how much gravity is felt. */
+  sway: (p: Particle, wind: number) => number;
+  onTile: Contact;
+  onBody: Contact;
 }
+
+// How far the felt gravity closes on the scene's each frame.
+const GRAVITY_EASE = 0.06;
+// Frames a particle takes to reach its fall speed under default gravity.
+const SPEED_UP_FRAMES = 8;
 
 const between = (random: Random, min: number, max: number) =>
   min + random() * (max - min);
 
-function spawnAbove(
-  scene: WeatherScene,
-  random: Random,
-  vy: number,
-  vx: number
-): Particle {
-  return {
-    x: between(random, 0, scene.width),
-    // Staggered above the top, so a fresh pool does not arrive as one sheet.
-    y: -between(random, 4, scene.height / 2),
-    vx,
-    vy,
-    age: 0,
-    state: 'falling',
-    alpha: 1,
-    phase: random() * Math.PI * 2,
-  };
-}
-
 const RULES: Record<Exclude<WeatherKind, 'none'>, Rule> = {
   rain: {
-    count: 60,
+    count: 80,
     wind: random => between(random, -0.6, 0.6),
-    spawn: (scene, wind, random) =>
-      spawnAbove(scene, random, between(random, 7, 10), wind),
-    fall: p => {
-      p.x += p.vx;
-      p.y += p.vy;
-    },
-    groundFrames: 3,
-    groundState: 'splashing',
-    bounce: 0.35,
+    speed: random => between(random, 7, 10),
+    sway: (p, wind) => wind,
+    onTile: {frames: 8, bounce: 0.35},
+    onBody: {frames: 8, bounce: 0.35},
   },
   snow: {
-    count: 30,
+    count: 40,
     wind: random => between(random, -0.3, 0.3),
-    spawn: (scene, wind, random) =>
-      spawnAbove(scene, random, between(random, 0.8, 1.6), wind),
-    fall: (p, wind) => {
-      p.x += wind + Math.sin(p.age * 0.05 + p.phase) * 0.5;
-      p.y += p.vy;
-    },
-    groundFrames: 60,
-    groundState: 'resting',
-    bounce: 0.5,
+    speed: random => between(random, 0.8, 1.6),
+    sway: (p, wind) => wind + Math.sin(p.age * 0.05 + p.phase) * 0.5,
+    onTile: {frames: 60, bounce: 0},
+    onBody: {frames: 10, bounce: 0},
   },
 };
 
@@ -124,25 +118,83 @@ export function weatherCount(kind: WeatherKind): number {
   return kind === 'none' ? 0 : RULES[kind].count;
 }
 
-/** A full pool for the kind, already falling. */
+// 1 falling down, -1 up; a weightless pool keeps its last direction.
+function flow(weather: Weather): number {
+  return weather.gravity < 0 ? -1 : 1;
+}
+
+// A fresh particle at height `y`, falling with the flow.
+function particleAt(
+  rule: Rule,
+  scene: WeatherScene,
+  y: number,
+  random: Random
+): Particle {
+  return {
+    x: between(random, 0, scene.width),
+    y,
+    vx: 0,
+    vy: 0,
+    speed: rule.speed(random),
+    age: 0,
+    state: 'falling',
+    settleFrames: 0,
+    bounce: 0,
+    alpha: 1,
+    phase: random() * Math.PI * 2,
+  };
+}
+
+// A particle coming around: up to a world's height beyond the edge the
+// flow comes from, spread so the pool arrives as a drizzle, not a wave.
+function respawn(
+  rule: Rule,
+  scene: WeatherScene,
+  weather: Weather,
+  random: Random
+): Particle {
+  const beyond = between(random, 4, scene.height);
+  const y = flow(weather) > 0 ? -beyond : scene.height + beyond;
+  return particleAt(rule, scene, y, random);
+}
+
+/** A full pool for the kind, already under way: spread from a world's
+    height before the edge to the far edge, so the first frame is weather,
+    not a front arriving. */
 export function createWeather(
   kind: WeatherKind,
   scene: WeatherScene,
   random: Random = Math.random
 ): Weather {
   if (kind === 'none') {
-    return {kind, particles: [], wind: 0};
+    return {kind, particles: [], wind: 0, gravity: scene.gravity};
   }
   const rule = RULES[kind];
-  const wind = rule.wind(random);
-  const particles = Array.from({length: rule.count}, () =>
-    rule.spawn(scene, wind, random)
-  );
-  return {kind, particles, wind};
+  const weather: Weather = {
+    kind,
+    particles: [],
+    wind: rule.wind(random),
+    gravity: scene.gravity,
+  };
+  const down = flow(weather);
+  const felt = Math.min(1, Math.abs(scene.gravity) / PLATFORM_GRAVITY);
+  weather.particles = Array.from({length: rule.count}, () => {
+    const along = between(random, -scene.height, scene.height);
+    const p = particleAt(
+      rule,
+      scene,
+      down > 0 ? along : scene.height - along,
+      random
+    );
+    p.vy = down * p.speed * felt;
+    return p;
+  });
+  return weather;
 }
 
-/** The box a player presents to the weather: its feet-anchored body. */
-export function playerBox(sprite: {
+/** The box a character or object presents to the weather: its
+    feet-anchored body, as the platform resolver measures a player. */
+export function bodyBox(sprite: {
   position: {x: number; y: number};
   width: number;
   height: number;
@@ -158,8 +210,36 @@ export function playerBox(sprite: {
   };
 }
 
+// The surface facing the flow that a falling particle crossed this frame,
+// if any: tops when falling down, undersides when falling up.
+function landedOn(
+  boxes: Box[],
+  down: number,
+  x: number,
+  fromY: number,
+  toY: number
+): {box: Box; y: number} | undefined {
+  let hit: {box: Box; y: number} | undefined;
+  for (const box of boxes) {
+    const surface = box.y - down * box.halfH;
+    const crossed =
+      down > 0
+        ? fromY <= surface && toY >= surface
+        : fromY >= surface && toY <= surface;
+    if (
+      crossed &&
+      x >= box.x - box.halfW &&
+      x <= box.x + box.halfW &&
+      (!hit || (surface - hit.y) * down < 0)
+    ) {
+      hit = {box, y: surface};
+    }
+  }
+  return hit;
+}
+
 // Push a particle that drifted into a box through its side back out to the
-// nearer side, so it slides down the face instead of falling inside it.
+// nearer side, so it slides along the face instead of falling inside it.
 function keepOutside(boxes: Box[], p: Particle): void {
   for (const box of boxes) {
     if (
@@ -171,28 +251,24 @@ function keepOutside(boxes: Box[], p: Particle): void {
   }
 }
 
-// The top surface a falling particle crossed this frame, if any.
-function landedOn(boxes: Box[], x: number, fromY: number, toY: number) {
-  let hit: Box | undefined;
-  for (const box of boxes) {
-    const top = box.y - box.halfH;
-    if (
-      x >= box.x - box.halfW &&
-      x <= box.x + box.halfW &&
-      fromY <= top &&
-      toY >= top &&
-      (!hit || top < hit.y - hit.halfH)
-    ) {
-      hit = box;
-    }
+function settle(p: Particle, y: number, down: number, contact: Contact) {
+  p.y = y;
+  p.state = 'settling';
+  p.age = 0;
+  p.settleFrames = contact.frames;
+  p.bounce = contact.bounce;
+  p.vy = -down * Math.abs(p.vy) * contact.bounce;
+  if (contact.bounce === 0) {
+    p.vx = 0;
   }
-  return hit;
 }
 
 /**
- * One frame. Falling particles move, land on tiles (and do what their kind
- * does there), bounce off players, and come back around from the top once
- * they leave the world or finish on the ground.
+ * One frame. The felt gravity eases toward the scene's. Falling particles
+ * speed up toward their fall speed under that gravity, move, land on tiles
+ * and bodies and do what their kind does there, and come back around once
+ * they leave the world or finish settling. At zero gravity everything
+ * hangs where it is.
  */
 export function stepWeather(
   weather: Weather,
@@ -203,40 +279,57 @@ export function stepWeather(
     return;
   }
   const rule = RULES[weather.kind];
+  weather.gravity += (scene.gravity - weather.gravity) * GRAVITY_EASE;
+  if (Math.abs(weather.gravity - scene.gravity) < 0.005) {
+    weather.gravity = scene.gravity;
+  }
+  const g = weather.gravity;
+  const felt = Math.abs(g) / PLATFORM_GRAVITY;
+  const down = flow(weather);
   weather.particles.forEach((p, i) => {
     p.age++;
-    if (p.state !== 'falling') {
-      p.alpha = 1 - p.age / rule.groundFrames;
-      if (p.age >= rule.groundFrames) {
-        weather.particles[i] = rule.spawn(scene, weather.wind, random);
+    if (p.state !== 'settling' || p.bounce > 0) {
+      // Toward the fall speed this gravity gives, at this gravity's pace;
+      // a floor on the pace lets a weightless particle come to rest.
+      const target = p.speed * (g / PLATFORM_GRAVITY);
+      const step = (p.speed / SPEED_UP_FRAMES) * Math.max(felt, 0.15);
+      p.vy += Math.max(-step, Math.min(step, target - p.vy));
+    }
+    if (p.state === 'settling') {
+      p.alpha = 1 - p.age / p.settleFrames;
+      if (p.age >= p.settleFrames) {
+        weather.particles[i] = respawn(rule, scene, weather, random);
+        return;
+      }
+      if (p.bounce > 0) {
+        p.x += p.vx;
+        p.y += p.vy;
       }
       return;
     }
     const fromY = p.y;
-    rule.fall(p, weather.wind);
-    const body = landedOn(scene.bodies, p.x, fromY, p.y);
-    if (body) {
-      p.y = body.y - body.halfH;
-      p.vy = -Math.abs(p.vy) * rule.bounce;
-      p.vx += p.x < body.x ? -1 : 1;
-      return;
-    }
-    // A bounce is over once the particle falls again.
-    if (p.vy < 0) {
-      p.vy += 0.5;
-      return;
-    }
-    const wall = landedOn(scene.walls, p.x, fromY, p.y);
-    if (wall) {
-      p.y = wall.y - wall.halfH;
-      p.state = rule.groundState;
-      p.age = 0;
-      return;
+    p.x += rule.sway(p, weather.wind) * felt + p.vx;
+    p.y += p.vy;
+    // Only a particle moving with the flow lands; one on its way back out
+    // after a bounce passes.
+    if (p.vy * down > 0) {
+      const onBody = landedOn(scene.bodies, down, p.x, fromY, p.y);
+      if (onBody) {
+        settle(p, onBody.y, down, rule.onBody);
+        p.vx += (p.x < onBody.box.x ? -1 : 1) * rule.onBody.bounce * 2;
+        return;
+      }
+      const onTile = landedOn(scene.walls, down, p.x, fromY, p.y);
+      if (onTile) {
+        settle(p, onTile.y, down, rule.onTile);
+        return;
+      }
     }
     keepOutside(scene.walls, p);
     keepOutside(scene.bodies, p);
-    if (p.y > scene.height + 8 || p.x < -8 || p.x > scene.width + 8) {
-      weather.particles[i] = rule.spawn(scene, weather.wind, random);
+    const gone = down > 0 ? p.y > scene.height + 8 : p.y < -8;
+    if (gone || p.x < -8 || p.x > scene.width + 8) {
+      weather.particles[i] = respawn(rule, scene, weather, random);
     }
   });
 }
@@ -246,7 +339,6 @@ export interface WeatherCanvas {
   push(): void;
   pop(): void;
   noStroke(): void;
-  noFill(): void;
   stroke(r: number, g: number, b: number, a?: number): void;
   strokeWeight(w: number): void;
   fill(r: number, g: number, b: number, a?: number): void;
@@ -254,8 +346,9 @@ export interface WeatherCanvas {
   ellipse(x: number, y: number, w: number, h?: number): void;
 }
 
-/** Draw the pool in world coordinates: a streak per raindrop, a dot per
-    flake, a short splash on the ground. Shapes stand in for art for now. */
+/** Draw the pool in world coordinates: a streak per raindrop along its
+    motion, a dot per flake, both fading as they settle. Shapes stand in for
+    art for now. */
 export function drawWeather(p5: WeatherCanvas, weather: Weather): void {
   if (weather.kind === 'none') {
     return;
@@ -264,16 +357,10 @@ export function drawWeather(p5: WeatherCanvas, weather: Weather): void {
   for (const p of weather.particles) {
     const a = Math.max(0, Math.min(1, p.alpha)) * 255;
     if (weather.kind === 'rain') {
-      if (p.state === 'splashing') {
-        p5.noFill();
-        p5.stroke(170, 200, 240, a);
-        p5.strokeWeight(1);
-        p5.ellipse(p.x, p.y, 4 + p.age * 3, 2 + p.age);
-      } else {
-        p5.stroke(120, 160, 230, 200);
-        p5.strokeWeight(2);
-        p5.line(p.x, p.y, p.x - p.vx * 1.5, p.y - p.vy * 1.5);
-      }
+      p5.stroke(120, 160, 230, a * 0.8);
+      p5.strokeWeight(2);
+      // A streak the length of the motion; a slow drop is a tick.
+      p5.line(p.x, p.y, p.x - p.vx * 1.5, p.y - p.vy * 1.5);
     } else {
       // Tinted and edged, so a flake also shows against a white stage.
       p5.stroke(170, 190, 220, a);
