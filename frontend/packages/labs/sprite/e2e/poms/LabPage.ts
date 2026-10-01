@@ -9,25 +9,30 @@ import {type Page} from 'playwright/test';
 export class LabPage {
   constructor(readonly page: Page) {}
 
-  /** Main heading rendered by the top-level App component. */
-  get heading() {
-    return this.page.getByRole('heading', {name: 'Sprite Lab'});
+  /** The Code tab, which every fixture but the image level shows. */
+  get codeTab() {
+    return this.page.getByRole('tab', {name: 'Code'});
   }
 
-  /** Navigate to the standalone dev server root. */
+  /** The scene's Blockly workspace. */
+  get workspace() {
+    return this.page.locator('.blocklySvg').first();
+  }
+
+  /** Navigate to the standalone dev server root: the `simple` fixture. */
   async goto(): Promise<void> {
     await this.page.goto('/');
   }
 
   /**
-   * Navigate and wait for the main heading to be visible.
+   * Navigate and wait for the lab to show its Code tab.
    *
    * @returns Loaded LabPage instance.
    */
   static async load(page: Page): Promise<LabPage> {
     const lab = new LabPage(page);
     await lab.goto();
-    await lab.heading.waitFor({state: 'visible', timeout: 10_000});
+    await lab.codeTab.waitFor({state: 'visible', timeout: 10_000});
     return lab;
   }
 }
