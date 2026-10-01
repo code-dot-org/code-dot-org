@@ -99,10 +99,11 @@ class Level < ApplicationRecord
   validates :level_num, uniqueness: {case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}}
 
   validate :validate_game, on: [:create, :update]
-  validate :name_change_stays_within_ui_test_partition, on: :update
-  validate :ui_test_levels_are_immutable_on_levelbuilder
+  validate :name_matches_at_most_one_partition
+  validate :name_change_stays_within_partition, on: :update
+  validate :non_production_levels_are_immutable_on_levelbuilder
   # prepend: the abort must come before remove_empty_script_levels destroys rows
-  before_destroy :ui_test_levels_are_immutable_on_levelbuilder, prepend: true
+  before_destroy :non_production_levels_are_immutable_on_levelbuilder, prepend: true
 
   after_save {Services::LevelFiles.write_custom_level_file(self)}
   after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
@@ -273,6 +274,11 @@ class Level < ApplicationRecord
 
   def ui_test?
     Level.ui_test_partition_name?(name)
+  end
+
+  # Like ui_test_partition_name?, for the standalone project partition.
+  def self.standalone_partition_name?(name)
+    Policies::StandaloneProjects.partition_name?(name)
   end
 
   def should_localize?
@@ -501,29 +507,45 @@ class Level < ApplicationRecord
     end
   end
 
-  # Renaming across the "UI Test " boundary moves the level's definition file
-  # between the two trees, changing which environments seed it. Refuse while a
+  # Renaming into another partition moves the level's definition file to
+  # another tree, changing which environments seed it. Refuse while a
   # script references the level, or while it is attached to another level as a
   # parent or child (contained level, project template, LevelGroup/BubbleChoice
-  # sublevel), since parent and child must stay on the same side. See
+  # sublevel), since parent and child must stay in one partition. See
   # dashboard/test/ui/config/README.md.
-  def name_change_stays_within_ui_test_partition
+  def name_change_stays_within_partition
     return unless name_changed?
-    return if Level.ui_test_partition_name?(name) == Level.ui_test_partition_name?(name_was)
+    return if Policies::LevelFiles.same_partition?(name, name_was)
     return unless script_levels.exists? || parent_levels.exists? || child_levels.exists?
-    errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script or another level")
+    errors.add(:name, "cannot be renamed into another partition (\"UI Test \", standalone project, or production) while the level is used by a script or another level")
   end
 
-  # UI test levels are engineering-owned test content: developers author them
-  # locally, and their definition files live under dashboard/test/ui/config, a
-  # tree the daily content push from the levelbuilder environment must never
-  # modify. Refuse to save or destroy them there; the throw halts a destroy
-  # and is harmless during validation. See dashboard/test/ui/config/README.md.
-  def ui_test_levels_are_immutable_on_levelbuilder
-    return unless rack_env?(:levelbuilder)
-    return unless ui_test? || Level.ui_test_partition_name?(name_was)
-    errors.add(:base, "UI test levels cannot be changed on levelbuilder; they are maintained in the repo under dashboard/test/ui/config")
+  # UI test and standalone project levels are engineering-owned: developers
+  # author them locally, and their definition files live under
+  # dashboard/test/ui/config and dashboard/config/standalone_projects, trees
+  # the daily content push from the levelbuilder environment must never
+  # modify. Refuse to save or destroy them from its web application; seeds
+  # still load them there. The throw halts a destroy and is harmless during
+  # validation. See dashboard/test/ui/config/README.md.
+  def non_production_levels_are_immutable_on_levelbuilder
+    return unless rack_env?(:levelbuilder) && CDO.running_web_application?
+    return if [name, name_was].none? {|n| Level.ui_test_partition_name?(n) || Level.standalone_partition_name?(n)}
+    errors.add(
+      :base,
+      'UI test and standalone project levels cannot be changed on levelbuilder; they are maintained in the repo ' \
+        'under dashboard/test/ui/config and dashboard/config/standalone_projects'
+    )
     throw :abort
+  end
+
+  # Each partition's seed would claim the definition file of a level matching
+  # both rules; Policies::LevelFiles.partition_for_name raises on such a name.
+  def name_matches_at_most_one_partition
+    return unless Level.ui_test_partition_name?(name) && Level.standalone_partition_name?(name)
+    errors.add(
+      :name,
+      'may match only one partition rule, "UI Test " or standalone project ("New ... Project", "... Subproject"); drop one of the markers'
+    )
   end
 
   # Uses specific knowledge of how the key method is implemented in hopes of
