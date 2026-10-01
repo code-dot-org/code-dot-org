@@ -15,8 +15,6 @@ import {useSelector} from 'react-redux';
 // The drawer's own weight sits behind a lazy boundary inside this component,
 // so importing it here does not pull the drawer into every lab2 page.
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-
-
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {

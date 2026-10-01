@@ -220,8 +220,15 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     // no width to the drawer's width; the inner box holds the drawer at its
     // full width throughout, so the contents slide into view rather than
     // reflowing on every frame of the transition.
+    //
+    // The drawer's colors are its own, not the host page's: a dark Lab2 lab
+    // wraps its tree in data-theme="Dark", and inline we sit inside that
+    // wrapper rather than portaling to <body> past it. Light is the default
+    // theme (see colors_codeAi.css), so this is the appearance the drawer has
+    // everywhere else.
     return (
       <div
+        data-theme="Light"
         className={style.inlineDrawer}
         style={{width: chatIsOpen ? drawerWidth : 0}}
         aria-hidden={!chatIsOpen}

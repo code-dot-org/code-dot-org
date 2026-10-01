@@ -346,6 +346,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   return (
     <div
       id="fab-contained"
+      // Hosted inside a dark Lab2 lab, the button would otherwise pick up that
+      // lab's theme; the drawer resets this for itself too. Light is the
+      // default theme, so this changes nothing on pages without one.
+      data-theme={inline ? 'Light' : undefined}
       className={inline ? style.fabContainedInline : undefined}
     >
       {!hideButton && !chatIsOpen && (

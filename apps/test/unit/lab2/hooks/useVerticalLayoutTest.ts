@@ -38,11 +38,7 @@ describe('useVerticalLayout', () => {
     // already narrower than the window and no inset is published.
     const MEASURED = 900;
     const wrapper = ({children}: {children: React.ReactNode}) =>
-      React.createElement(
-        LabContentWidthProvider,
-        {value: MEASURED},
-        children
-      );
+      React.createElement(LabContentWidthProvider, {value: MEASURED}, children);
 
     const {result} = renderHook(() => useVerticalLayout(TWO_PANEL), {wrapper});
 

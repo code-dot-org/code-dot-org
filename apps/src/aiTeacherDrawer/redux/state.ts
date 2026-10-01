@@ -1,5 +1,11 @@
 import {ThreadTypeFields} from '../constants';
-import {AiArtifact, ChatItem, ChatPrompt, ChatTextMessage, Context} from '../types';
+import {
+  AiArtifact,
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+  Context,
+} from '../types';
 
 /**
  * Everything the drawer needs in order to be rendered by a host that did not

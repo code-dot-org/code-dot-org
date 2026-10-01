@@ -83,20 +83,14 @@ export const useVerticalLayout = ({
     if (middlePanel) {
       // Middle panel takes priority in terms of available space in a 3 panel layout.
       const adjustedMiddleWidth = Math.max(
-        labWidth -
-          rawLeftPanelWidth -
-          rawRightPanelWidth -
-          RESIZE_BARS_WIDTH,
+        labWidth - rawLeftPanelWidth - rawRightPanelWidth - RESIZE_BARS_WIDTH,
         middlePanel.minWidth
       );
       setMiddlePanelWidth(adjustedMiddleWidth);
 
       // Second priority is right panel.
       const spaceForRightPanel = Math.max(
-        labWidth -
-          leftPanel.minWidth -
-          RESIZE_BARS_WIDTH -
-          adjustedMiddleWidth,
+        labWidth - leftPanel.minWidth - RESIZE_BARS_WIDTH - adjustedMiddleWidth,
         rightPanel.minWidth
       );
       const adjustedRightWidth = Math.min(
@@ -107,10 +101,7 @@ export const useVerticalLayout = ({
 
       // Left panel takes up remaining space, but won't go below the minimum width.
       const spaceForLeftPanel = Math.max(
-        labWidth -
-          adjustedRightWidth -
-          RESIZE_BARS_WIDTH -
-          adjustedMiddleWidth,
+        labWidth - adjustedRightWidth - RESIZE_BARS_WIDTH - adjustedMiddleWidth,
         leftPanel.minWidth
       );
       const adjustedLeftPanelWidth = Math.min(
