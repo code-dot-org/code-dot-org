@@ -98,8 +98,8 @@ spec:
 
 
         envFrom:
-          # Inject local config as CDO_* ENV vars so it matches kustomize and the
-          # existing Config loader precedence for env-sourced locals.
+          # Inject local config as CDO_* ENV vars so it matches the existing
+          # Config loader precedence for env-sourced locals.
           - prefix: CDO_
             configMapRef:
               name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
