@@ -78,7 +78,10 @@ function silentWavDataUri(seconds: number): string {
 const videoScene = (label: string, audio?: string) => ({
   duration: '30s',
   speech: label,
-  html: `<h1 style="color:#fff;font-family:sans-serif;margin:1em">${label}</h1>`,
+  html:
+    '<div style="display:flex;align-items:center;justify-content:center;' +
+    'height:100vh;background:#1f1976;color:#fff;font:700 3rem sans-serif">' +
+    `${label}</div>`,
   ...(audio ? {audio} : {}),
 });
 
