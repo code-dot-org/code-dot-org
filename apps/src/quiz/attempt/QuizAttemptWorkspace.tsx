@@ -9,7 +9,8 @@ import {
 import {AppName} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {QuizQuestionSummary, toBool} from '../types';
+import {QuizQuestionSummary} from '../types';
+import {toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
 import IntroCard from './IntroCard';

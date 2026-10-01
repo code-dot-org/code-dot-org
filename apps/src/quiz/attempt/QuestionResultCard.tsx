@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
+import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
 import {QuizQuestionResult} from './types';
@@ -17,8 +18,6 @@ export interface QuestionResultCardProps {
   result: QuizQuestionResult;
   revealAnswerExplanation?: boolean;
 }
-
-const CHOICE_LETTERS = 'ABCDEFGHIJ';
 
 // Read-only review of one submitted question, graded or not. Not a
 // RadioButton - these choices are no longer interactive.
@@ -66,7 +65,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
                 className={styles.optionText}
               >
                 <span className={styles.optionLetter}>
-                  {CHOICE_LETTERS[index]}.
+                  {formatChoiceLetter(index)}.
                 </span>{' '}
                 {choice.text}
               </Typography>
