@@ -1,3 +1,5 @@
+import {QuizQuestionSummary} from '../types';
+
 export interface QuizQuestionResult {
   quizQuestionId: number;
   selectedChoiceId: string | null;
@@ -10,6 +12,11 @@ export interface QuizQuestionInProgressResult {
   quizQuestionId: number;
   // Unanswered questions are omitted from the map, so this is always set.
   selectedChoiceId: string;
+}
+
+export interface QuizPage {
+  page: number;
+  questions: QuizQuestionSummary[];
 }
 
 export interface QuizAttemptData {

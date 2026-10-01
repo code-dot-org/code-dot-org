@@ -15,12 +15,31 @@ import {toBool} from '../utils';
 import AttemptCard from './AttemptCard';
 import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
+import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
+import {QuizPage} from './types';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
+
+// Groups a flat question list into pages, ascending by page number.
+function groupByPage(questions: QuizQuestionSummary[]): QuizPage[] {
+  const pages = new Map<number, QuizQuestionSummary[]>();
+  questions.forEach(question => {
+    const page = question.page ?? 1;
+    const pageQuestions = pages.get(page);
+    if (pageQuestions) {
+      pageQuestions.push(question);
+    } else {
+      pages.set(page, [question]);
+    }
+  });
+  return Array.from(pages.entries())
+    .sort(([pageA], [pageB]) => pageA - pageB)
+    .map(([page, pageQuestions]) => ({page, questions: pageQuestions}));
+}
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
@@ -73,6 +92,21 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     (a, b) => a - b
   );
   const totalPages = pageNumbers.length || 1;
+  // TODO: Add support for other question types.
+  const mcQuestions = quizQuestions.filter(
+    question => question.type === 'MultipleChoiceQuestion'
+  );
+  let resultQuestionNumber = 0;
+  const resultPages = groupByPage(mcQuestions).map(({page, questions}) => {
+    const firstQuestionNumber = resultQuestionNumber + 1;
+    resultQuestionNumber += questions.length;
+    return {
+      page,
+      questions,
+      firstQuestionNumber,
+      lastQuestionNumber: resultQuestionNumber,
+    };
+  });
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
     useState<Record<number, string>>({});
@@ -304,32 +338,47 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               onTryAgain={handleRetake}
               onNextLevel={handleNextLevel}
             />
-            {quizQuestions
-              .filter(question => question.type === 'MultipleChoiceQuestion')
-              .map(question => {
-                const result = attempt.questionResults?.find(
-                  r => r.quizQuestionId === question.id
-                );
-                return (
-                  result && (
-                    <QuestionResultCard
-                      key={question.id}
-                      question={question}
-                      questionLabel={
-                        quizQuestions.length > 1
-                          ? `Question ${
-                              quizQuestions.findIndex(
-                                q => q.id === question.id
-                              ) + 1
-                            } of ${quizQuestions.length}`
-                          : undefined
-                      }
-                      result={result}
-                      revealAnswerExplanation={toBool(revealAnswerExplanation)}
+            {resultPages.map(
+              (
+                {page, questions, firstQuestionNumber, lastQuestionNumber},
+                pageIndex
+              ) => (
+                <React.Fragment key={page}>
+                  {resultPages.length > 1 && (
+                    <PageDivider
+                      pageNumber={pageIndex + 1}
+                      totalPages={resultPages.length}
+                      firstQuestionNumber={firstQuestionNumber}
+                      lastQuestionNumber={lastQuestionNumber}
                     />
-                  )
-                );
-              })}
+                  )}
+                  {questions.map((question, indexInPage) => {
+                    const result = attempt.questionResults?.find(
+                      r => r.quizQuestionId === question.id
+                    );
+                    return (
+                      result && (
+                        <QuestionResultCard
+                          key={question.id}
+                          question={question}
+                          questionLabel={
+                            mcQuestions.length > 1
+                              ? `Question ${
+                                  firstQuestionNumber + indexInPage
+                                } of ${mcQuestions.length}`
+                              : undefined
+                          }
+                          result={result}
+                          revealAnswerExplanation={toBool(
+                            revealAnswerExplanation
+                          )}
+                        />
+                      )
+                    );
+                  })}
+                </React.Fragment>
+              )
+            )}
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>
