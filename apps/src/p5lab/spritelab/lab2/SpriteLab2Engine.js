@@ -46,6 +46,13 @@ import {
   resolvePlatformPhysics,
   usesPlatformPhysics,
 } from './platformPhysics';
+import {
+  createWeather,
+  drawWeather,
+  isWeatherKind,
+  playerBox,
+  stepWeather,
+} from './weather';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
@@ -206,6 +213,70 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
+    // The weather every run starts with (see setDefaultWeather), and the
+    // live pool for the current run.
+    this.defaultWeather_ = 'none';
+    this.weather_ = null;
+  }
+
+  /**
+   * The weather a run starts with: a level or a URL switch sets it before
+   * the program runs; the set-weather block changes it during a run.
+   */
+  setDefaultWeather(kind) {
+    this.defaultWeather_ = isWeatherKind(kind) ? kind : 'none';
+    if (this.library) {
+      this.setWeather(this.defaultWeather_);
+    }
+  }
+
+  setWeather(kind) {
+    const scene = this.weatherScene_();
+    if (!scene) {
+      return;
+    }
+    this.weather_ = createWeather(isWeatherKind(kind) ? kind : 'none', scene);
+  }
+
+  // What the weather falls through this frame; null before the canvas is up.
+  weatherScene_() {
+    const p5 = this.p5Wrapper.p5;
+    if (!p5 || !this.library) {
+      return null;
+    }
+    // Collision treats a tile as its full cell, as the platform resolver does.
+    const tileBox = sprite => {
+      const half = (Math.max(sprite.width, sprite.height) * sprite.scale) / 2;
+      return {
+        x: sprite.position.x,
+        y: sprite.position.y,
+        halfW: half,
+        halfH: half,
+      };
+    };
+    return {
+      width: p5.width,
+      height: p5.height,
+      walls: this.wallsThisFrame_(this.library).map(tileBox),
+      bodies: this.library.getSpriteArray({group: 'players'}).map(playerBox),
+    };
+  }
+
+  // Runs inside the paint, after the sprites, so in a platform scene the
+  // particles are in world space under the camera.
+  stepAndDrawWeather_() {
+    if (!this.weather_) {
+      this.setWeather(this.defaultWeather_);
+    }
+    if (!this.weather_ || this.weather_.kind === 'none') {
+      return;
+    }
+    const scene = this.weatherScene_();
+    if (!scene) {
+      return;
+    }
+    stepWeather(this.weather_, scene);
+    drawWeather(this.p5Wrapper.p5, this.weather_);
   }
 
   /**
@@ -350,6 +421,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.notifyControlsChange_();
+    // A fresh run starts in the default weather; the pool is built at the
+    // first paint, once the canvas is up (see wrapDrawSpritesOnce_).
+    this.weather_ = null;
+    library.commands.setWeather = kind => this.setWeather(kind);
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
@@ -1213,7 +1288,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       this.physicsResolvedThisFrame_ = false;
       this.updateCharacterAnimations_();
-      return paint(...args);
+      const painted = paint(...args);
+      this.stepAndDrawWeather_();
+      return painted;
     };
   }
 
