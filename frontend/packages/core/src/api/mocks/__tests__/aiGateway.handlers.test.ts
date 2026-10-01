@@ -9,7 +9,9 @@ import {
   CANNED_IMAGE_PNG_BASE64,
   CANNED_TEXT,
   clearActiveScenario,
+  cannedImageFor,
   clearMockFixtures,
+  registerLabFixtures,
   registerMockFixture,
   setActiveScenario,
 } from '../index';
@@ -82,6 +84,69 @@ describe('the mock AI gateway', () => {
     expect(result.text).toBe('from the scenario');
   });
 
+  it("draws the active fixture's first matching image", async () => {
+    registerLabFixtures('demo', {
+      a: {
+        aiImages: [
+          {match: /castle/, image: 'data:image/png;base64,Q0FTVExF'},
+          {match: /scenery/, image: 'data:image/png;base64,U0NFTkVSWQ=='},
+        ],
+      },
+    });
+    setActiveScenario({labKey: 'demo', tag: 'a'});
+    const draw = async (prompt: string) =>
+      (
+        await gateway().generateText({
+          model: 'gemini-3.1-flash-image',
+          messages: [{role: 'user', content: prompt}],
+          providerOptions: {google: {imageConfig: {aspectRatio: '1:1'}}},
+        })
+      ).files[0].base64;
+    expect(await draw('a castle. scenery only')).toBe('Q0FTVExF');
+    expect(await draw('a meadow. scenery only')).toBe('U0NFTkVSWQ==');
+    expect(await draw('a bear')).toBe(CANNED_IMAGE_PNG_BASE64);
+  });
+});
+
+describe('cannedImageFor', () => {
+  const edit = {
+    messages: [
+      {
+        role: 'user',
+        content: [
+          {type: 'image', image: 'data:image/jpeg;base64,QkFTRQ=='},
+          {type: 'text', text: 'Modify the provided image: wave'},
+        ],
+      },
+    ],
+  };
+
+  it('answers an edit with the image it edits', () => {
+    expect(cannedImageFor(edit)).toEqual({
+      mediaType: 'image/jpeg',
+      base64: 'QkFTRQ==',
+    });
+  });
+
+  it('lets a rule answer an edit, testing every text part', () => {
+    const rules = [
+      {
+        match: (prompt: string) => prompt.startsWith('Modify'),
+        image: 'data:image/png;base64,V0FWRQ==',
+      },
+    ];
+    expect(cannedImageFor(edit, rules).base64).toBe('V0FWRQ==');
+  });
+
+  it('skips a rule whose image is not a data URL', () => {
+    const rules = [{match: /bear/, image: '/bear.png'}];
+    expect(cannedImageFor({prompt: 'a bear'}, rules).base64).toBe(
+      CANNED_IMAGE_PNG_BASE64,
+    );
+  });
+});
+
+describe('the mock moderation endpoint', () => {
   it('passes every image through moderation', async () => {
     const images = createImagesApi(
       createKyTransport({baseUrl: 'https://studio.code.org'}),
