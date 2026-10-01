@@ -849,8 +849,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         engine.destroy();
         return;
       }
-      // Weather has no block yet; a URL switch starts every run in one.
-      engine.setDefaultWeather(queryParams('weather'));
       engineRef.current = engine;
       setEngineReady(true);
     };

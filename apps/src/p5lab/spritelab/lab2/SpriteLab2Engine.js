@@ -213,29 +213,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
-    // The weather every run starts with (see setDefaultWeather), and the
-    // live pool for the current run.
-    this.defaultWeather_ = 'none';
+    // The run's weather kind, set by the set-weather block, and its live
+    // pool, built at the first paint after the kind changes.
+    this.weatherKind_ = 'none';
     this.weather_ = null;
   }
 
-  /**
-   * The weather a run starts with: a level or a URL switch sets it before
-   * the program runs; the set-weather block changes it during a run.
-   */
-  setDefaultWeather(kind) {
-    this.defaultWeather_ = isWeatherKind(kind) ? kind : 'none';
-    if (this.library) {
-      this.setWeather(this.defaultWeather_);
-    }
-  }
-
+  /** The set-weather block: the scene's weather from now until the next
+      set or the end of the run. */
   setWeather(kind) {
-    const scene = this.weatherScene_();
-    if (!scene) {
-      return;
-    }
-    this.weather_ = createWeather(isWeatherKind(kind) ? kind : 'none', scene);
+    this.weatherKind_ = isWeatherKind(kind) ? kind : 'none';
+    this.weather_ = null;
   }
 
   // What the weather falls through this frame; null before the canvas is up.
@@ -272,15 +260,15 @@ export default class SpriteLab2Engine extends SpriteLab {
   // Runs inside the paint, after the sprites, so in a platform scene the
   // particles are in world space under the camera.
   stepAndDrawWeather_() {
-    if (!this.weather_) {
-      this.setWeather(this.defaultWeather_);
-    }
-    if (!this.weather_ || this.weather_.kind === 'none') {
+    if (this.weatherKind_ === 'none' && !this.weather_) {
       return;
     }
     const scene = this.weatherScene_();
     if (!scene) {
       return;
+    }
+    if (!this.weather_ || this.weather_.kind !== this.weatherKind_) {
+      this.weather_ = createWeather(this.weatherKind_, scene);
     }
     stepWeather(this.weather_, scene);
     drawWeather(this.p5Wrapper.p5, this.weather_);
@@ -428,8 +416,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.notifyControlsChange_();
-    // A fresh run starts in the default weather; the pool is built at the
-    // first paint, once the canvas is up (see wrapDrawSpritesOnce_).
+    // A fresh run starts with no weather; the block sets it.
+    this.weatherKind_ = 'none';
     this.weather_ = null;
     library.commands.setWeather = kind => this.setWeather(kind);
     // A new run starts the player's history over, so the spawn is not heard

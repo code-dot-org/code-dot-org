@@ -19,6 +19,7 @@ import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
+import setWeather from './setWeather';
 import thePlayer from './thePlayer';
 import whenRun from './whenRun';
 
@@ -46,6 +47,7 @@ const labBlockDefinitions: {
   setPlatformGravity,
   setAsPlatformPlayer,
   setCameraZoom,
+  setWeather,
   thePlayer,
   placeholder,
   // Toolbox edit mode's category marker blocks.
