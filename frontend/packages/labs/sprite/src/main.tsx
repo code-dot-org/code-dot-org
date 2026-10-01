@@ -38,10 +38,14 @@ document.documentElement.dataset.brand = resolveBrand(
 );
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
+// Studio's path names the fixture; a static host that serves only files
+// (dist-pages on GitHub Pages) names it as ?fixture= instead.
 const channelId =
   window.location.pathname.match(
-    /^\/app\/projects\/sprite\/([^/]+)\/edit$/,
-  )?.[1] ?? 'simple';
+    /\/app\/projects\/sprite\/([^/]+)\/edit$/,
+  )?.[1] ??
+  new URLSearchParams(window.location.search).get('fixture') ??
+  'simple';
 
 // The worker must be answering before the lab's first request goes out.
 async function enableMocks() {
@@ -56,7 +60,9 @@ async function enableMocks() {
   maybeResetFromUrl();
   registerLabFixtures('sprite', SpriteFixtures);
   setActiveScenario({labKey: 'sprite', tag: channelId});
-  await startMockWorker();
+  await startMockWorker({
+    serviceWorker: {url: `${import.meta.env.BASE_URL}mockServiceWorker.js`},
+  });
 }
 
 await enableMocks();
