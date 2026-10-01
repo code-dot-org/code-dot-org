@@ -246,16 +246,30 @@ describe('TreeCanvas', () => {
     );
   });
 
-  it('pans a node that takes keyboard focus into view', async () => {
+  it('zooms to a readable scale and pans a node that takes keyboard focus into view', async () => {
     const [node] = renderNodesAt([800]);
 
     act(() => node.focus());
 
     await vi.waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
-        'translate(-32px, 102px) scale(0.5)',
+        'translate(-512px, 2px) scale(1)',
       ),
     );
+  });
+
+  it('tells only the focused node the scale, so its ring can keep a width on screen', async () => {
+    const [node] = renderNodesAt([800]);
+
+    act(() => node.focus());
+
+    expect(node.style.getPropertyValue('--tree-canvas-scale')).toBe('0.5');
+    await vi.waitFor(() =>
+      expect(node.style.getPropertyValue('--tree-canvas-scale')).toBe('1'),
+    );
+    expect(
+      node.parentElement.style.getPropertyValue('--tree-canvas-scale'),
+    ).toBe('');
   });
 
   it('leaves the view alone when focus shows no ring, as after a click', async () => {
@@ -285,7 +299,7 @@ describe('TreeCanvas', () => {
 
     await vi.waitFor(() =>
       expect(near.parentElement.style.transform).toBe(
-        'translate(22px, 102px) scale(0.5)',
+        'translate(-28px, 2px) scale(1)',
       ),
     );
   });
@@ -310,7 +324,7 @@ describe('TreeCanvas', () => {
 
     await vi.waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
-        'translate(72px, 114px) scale(0.5)',
+        'translate(22px, 204px) scale(1)',
       ),
     );
   });

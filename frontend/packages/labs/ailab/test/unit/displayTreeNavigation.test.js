@@ -30,29 +30,30 @@ describe('getNodeForKey', () => {
     return to && (to.node.column ?? to.node.prediction);
   };
 
-  test('up moves to the parent', () => {
-    expect(move('deep', 'ArrowUp')).toBe('right');
+  test('down and up follow the reading order, a whole branch before the next', () => {
+    expect(move('root', 'ArrowDown')).toBe('left');
+    expect(move('left.1', 'ArrowDown')).toBe('right');
+    expect(move('right', 'ArrowUp')).toBe('left.1');
   });
 
-  test('down moves to the first child', () => {
-    expect(move('right', 'ArrowDown')).toBe('right.0');
+  test('right moves to the first child', () => {
+    expect(move('right', 'ArrowRight')).toBe('right.0');
   });
 
-  test('left and right move along the row, across subtrees', () => {
-    expect(move('left.1', 'ArrowRight')).toBe('right.0');
-    expect(move('right.0', 'ArrowLeft')).toBe('left.1');
+  test('left moves to the parent', () => {
+    expect(move('deep', 'ArrowLeft')).toBe('right');
   });
 
   test('an arrow toward an edge stays put', () => {
     expect(move('root', 'ArrowUp')).toBe('root');
-    expect(move('left.0', 'ArrowDown')).toBe('left.0');
-    expect(move('left.0', 'ArrowLeft')).toBe('left.0');
-    expect(move('deep', 'ArrowRight')).toBe('deep');
+    expect(move('root', 'ArrowLeft')).toBe('root');
+    expect(move('deep.1', 'ArrowDown')).toBe('deep.1');
+    expect(move('left.0', 'ArrowRight')).toBe('left.0');
   });
 
-  test('home moves to the root and end to the last node in the row', () => {
+  test('home moves to the root and end to the last node', () => {
     expect(move('deep.1', 'Home')).toBe('root');
-    expect(move('left.0', 'End')).toBe('deep');
+    expect(move('left.0', 'End')).toBe('deep.1');
   });
 
   test('other keys move nowhere', () => {

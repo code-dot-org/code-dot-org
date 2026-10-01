@@ -134,6 +134,25 @@ describe('DecisionTree', () => {
     expect(tree.contains(tabStops()[0])).toBe(true);
   });
 
+  it('marks each question open on its answers, and no answer at all', () => {
+    const items = screen.getAllByRole('treeitem');
+    const questions = items.filter(item =>
+      item.querySelector(`.${moduleStyles.question}`),
+    );
+    const answers = items.filter(item =>
+      item.querySelector(`.${moduleStyles.answer}`),
+    );
+
+    expect(questions.length).toBeGreaterThan(0);
+    expect(answers.length).toBeGreaterThan(0);
+    questions.forEach(item =>
+      expect(item.getAttribute('aria-expanded')).toBe('true'),
+    );
+    answers.forEach(item =>
+      expect(item.hasAttribute('aria-expanded')).toBe(false),
+    );
+  });
+
   it('places each node in the tree by level and branch', () => {
     const [root, firstChild] = screen.getAllByRole('treeitem');
 
@@ -147,7 +166,9 @@ describe('DecisionTree', () => {
     const [, firstChild] = screen.getAllByRole('treeitem');
 
     expect(
-      screen.getByRole('treeitem', {name: 'legs is < 1 , predicts snake'}),
+      screen.getByRole('treeitem', {
+        name: 'legs is less than 1 , predicts snake',
+      }),
     ).toBe(firstChild);
   });
 
@@ -155,8 +176,37 @@ describe('DecisionTree', () => {
     const [, , secondChild] = screen.getAllByRole('treeitem');
 
     expect(
-      screen.getByRole('treeitem', {name: /^legs is ≥ 1 , then legs/}),
+      screen.getByRole('treeitem', {name: /^legs is at least 1 , then legs/}),
     ).toBe(secondChild);
+  });
+
+  it('describes the tree and its root by how to move through it', () => {
+    const hint = 'Use the arrow keys to move through the tree';
+    const [root] = screen.getAllByRole('treeitem');
+
+    expect(screen.getByRole('tree', {description: hint})).toBe(
+      screen.getByRole('tree'),
+    );
+    expect(screen.getByRole('treeitem', {description: hint})).toBe(root);
+  });
+
+  it("shows each branch's whole text on its pill", () => {
+    const pills = [...document.getElementsByClassName(moduleStyles.branch)];
+
+    expect(pills.map(pill => pill.textContent)).toContain('< 1');
+    expect(pills.map(pill => pill.textContent)).toContain('≥ 1');
+    pills.forEach(pill => expect(pill.textContent).toBe(pill.title));
+  });
+
+  it('describes each node on the path as on it', () => {
+    predictSnake(store);
+
+    const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
+    const described = screen.getAllByRole('treeitem', {
+      description: /On your path/,
+    });
+
+    expect(described).toEqual(marked.map(node => node.parentElement));
   });
 
   it('moves focus and the tab stop down to a child and back up', () => {

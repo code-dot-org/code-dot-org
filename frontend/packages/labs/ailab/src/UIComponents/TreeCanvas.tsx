@@ -30,6 +30,8 @@ const MIN_SCALE = 0.25;
 const MAX_SCALE = 2;
 const ZOOM_STEP = 1.25;
 const ZOOM_DURATION_MS = 250;
+const READABLE_SCALE = 1;
+const SCALE_PROPERTY = '--tree-canvas-scale';
 
 function zoomDuration(): number {
   return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
@@ -133,6 +135,10 @@ const TreeCanvas = ({
           autoFitRef.current = false;
         }
         content.style.transform = `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`;
+        const focused = document.activeElement;
+        if (focused instanceof HTMLElement && content.contains(focused)) {
+          focused.style.setProperty(SCALE_PROPERTY, String(transform.k));
+        }
       },
     );
     viewport.call(zoomRef.current).on('dblclick.zoom', null);
@@ -206,30 +212,40 @@ const TreeCanvas = ({
   };
 
   const followFocus = ({target}: FocusEvent<HTMLElement>) => {
-    if (!target.matches(':focus-visible')) {
-      return;
-    }
     const viewport = viewportRef.current!;
     const toolbar = toolbarRef.current!;
     const current = zoomTransform(viewport);
+    target.style.setProperty(SCALE_PROPERTY, String(current.k));
+    if (!target.matches(':focus-visible')) {
+      return;
+    }
     const from = panTargetRef.current ?? current;
-    const scale = from.k / current.k;
     const box = boundingBox(target);
     const origin = contentRef.current!.getBoundingClientRect();
     const node = {
-      x: from.x + (box.x - origin.left) * scale,
-      y: from.y + (box.y - origin.top) * scale,
-      width: box.width * scale,
-      height: box.height * scale,
+      x: (box.x - origin.left) / current.k,
+      y: (box.y - origin.top) / current.k,
+      width: box.width / current.k,
+      height: box.height / current.k,
+    };
+    const k = Math.max(from.k, READABLE_SCALE);
+    const zoomedAboutNode = zoomIdentity
+      .translate(from.x + node.x * (from.k - k), from.y + node.y * (from.k - k))
+      .scale(k);
+    const zoomedNode = {
+      x: zoomedAboutNode.applyX(node.x),
+      y: zoomedAboutNode.applyY(node.y),
+      width: node.width * k,
+      height: node.height * k,
     };
     const insetRight = overlayInset(viewport, overlayRef?.current ?? null);
     const pan =
-      panIntoView(node, viewFrame(viewport, toolbar, insetRight)) ??
-      panIntoView(node, viewFrame(viewport, toolbar));
-    if (pan && (pan.x || pan.y)) {
+      panIntoView(zoomedNode, viewFrame(viewport, toolbar, insetRight)) ??
+      panIntoView(zoomedNode, viewFrame(viewport, toolbar));
+    if (pan && (pan.x || pan.y || k !== from.k)) {
       autoFitRef.current = false;
-      const panned = from.translate(pan.x / from.k, pan.y / from.k);
-      zoomRef.current!.transform(animateToward(panTargetRef, panned), panned);
+      const to = zoomedAboutNode.translate(pan.x / k, pan.y / k);
+      zoomRef.current!.transform(animateToward(panTargetRef, to), to);
     }
   };
 

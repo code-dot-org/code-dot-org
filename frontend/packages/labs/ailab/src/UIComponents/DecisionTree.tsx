@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {
   type CSSProperties,
@@ -14,7 +15,8 @@ import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
   formatNumber,
-  thresholdText,
+  THRESHOLD_SIGNS,
+  thresholdValue,
   type DisplayTreeBranch,
   type DisplayTreeNode,
   type DisplayTreeQuestion,
@@ -81,6 +83,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const keysHintId = useId();
   const nameId = useId();
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
   const nodeElements = useRef(new Map<string, HTMLElement>());
@@ -97,8 +100,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const columnId = (id: string) => `${nameId}-column-${id}`;
   const branchId = (id: string) => `${nameId}-branch-${id}`;
   const isId = `${nameId}-is`;
+  const thresholdWordIds = {
+    lessThan: `${nameId}-less-than`,
+    atLeast: `${nameId}-at-least`,
+  };
   const predictsId = `${nameId}-predicts`;
   const thenId = `${nameId}-then`;
+  const onPathId = `${nameId}-on-path`;
 
   const trackNodeElement = (id: string, element: HTMLElement | null) => {
     if (element) {
@@ -122,12 +130,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const valueText = (value: string): string =>
     String(getLocalizedValue(value, datasetId));
 
-  const branchText = (branch: DisplayTreeBranch): string => {
-    if (branch.kind !== 'values') {
-      return thresholdText(branch);
-    }
-    return orList.format(branch.values.map(valueText));
-  };
+  const branchLabel = (
+    branch: DisplayTreeBranch,
+  ): {sign?: string; text: string} =>
+    branch.kind === 'values'
+      ? {text: orList.format(branch.values.map(valueText))}
+      : {sign: THRESHOLD_SIGNS[branch.kind], text: thresholdValue(branch)};
 
   const columnText = (node: DisplayTreeQuestion): string =>
     getLocalizedColumnName(datasetId, node.column);
@@ -155,11 +163,20 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
       <span id={isId} hidden>
         is
       </span>
+      <span id={thresholdWordIds.lessThan} hidden>
+        less than
+      </span>
+      <span id={thresholdWordIds.atLeast} hidden>
+        at least
+      </span>
       <span id={predictsId} hidden>
         , predicts
       </span>
       <span id={thenId} hidden>
         , then
+      </span>
+      <span id={onPathId} hidden>
+        On your path
       </span>
       <div className={styles.canvasArea}>
         <TreeCanvas
@@ -171,6 +188,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           <div
             role="tree"
             aria-label="Your model's decision tree"
+            aria-describedby={keysHintId}
             className={styles.canvas}
             style={{
               ...canvasVariables,
@@ -199,13 +217,19 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             </svg>
             {layout.nodes.map(placed => {
               const text = nodeText(placed.node);
-              const branch = placed.branch && branchText(placed.branch);
+              const label = placed.branch && branchLabel(placed.branch);
+              const branch = label?.sign
+                ? `${label.sign} ${label.text}`
+                : label?.text;
               const kind =
                 placed.node.type === 'answer' ? styles.answer : styles.question;
               const siblings = placed.parent?.children ?? [placed];
               const nameParts = [
                 placed.parent && columnId(placed.parent.id),
                 placed.parent && isId,
+                placed.branch &&
+                  placed.branch.kind !== 'values' &&
+                  thresholdWordIds[placed.branch.kind],
                 placed.branch && branchId(placed.id),
                 placed.node.type === 'answer' && predictsId,
                 placed.parent && placed.node.type === 'question' && thenId,
@@ -218,6 +242,15 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
                   role="treeitem"
                   aria-labelledby={nameParts.filter(Boolean).join(' ')}
+                  aria-describedby={
+                    [
+                      placed.id === DISPLAY_TREE_ROOT_ID && keysHintId,
+                      pathIds.has(placed.id) && onPathId,
+                    ]
+                      .filter(Boolean)
+                      .join(' ') || undefined
+                  }
+                  aria-expanded={placed.node.type === 'question' || undefined}
                   aria-level={placed.depth + 1}
                   aria-setsize={siblings.length}
                   aria-posinset={siblings.indexOf(placed) + 1}
@@ -227,15 +260,15 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   className={styles.nodeSlot}
                   style={{left: placed.x, top: placed.y}}
                 >
-                  {branch && (
+                  {label?.text && (
                     <div
-                      id={branchId(placed.id)}
                       title={branch}
                       className={classNames(styles.branch, {
                         [styles.pathBranch]: pathIds.has(placed.id),
                       })}
                     >
-                      {branch}
+                      {label.sign && `${label.sign} `}
+                      <span id={branchId(placed.id)}>{label.text}</span>
                     </div>
                   )}
                   <div
@@ -262,6 +295,15 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             })}
           </div>
         </TreeCanvas>
+        <Typography
+          id={keysHintId}
+          variant="body4"
+          component="span"
+          className={styles.keysHint}
+          sx={{color: 'var(--text-neutral-secondary)'}}
+        >
+          Use the arrow keys to move through the tree
+        </Typography>
         {overlay && (
           <div
             ref={overlayRef}
