@@ -48,6 +48,8 @@ export const projectsHandlers = [
   // Returned `{}` and recorded nothing, so saving "before I broke it" produced
   // a version whose row in the panel was a bare timestamp. The comment is the
   // whole reason a student presses that button.
+  // No projects of the user's own, unless a scenario registers some.
+  http.get('*/api/v1/projects/personal', () => HttpResponse.json([])),
   http.post('*/project_commits', async ({request}) => {
     const body = (await request.json()) as {
       version_id?: string;
