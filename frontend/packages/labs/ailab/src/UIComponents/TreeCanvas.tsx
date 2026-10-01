@@ -1,12 +1,11 @@
-import {IconButton, Tooltip} from '@mui/material';
 import {select} from 'd3-selection';
 import 'd3-transition';
 import {zoom, zoomIdentity, zoomTransform, type ZoomBehavior} from 'd3-zoom';
 import {type ReactNode, useLayoutEffect, useMemo, useRef} from 'react';
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-
 import {fitToView, type Rect} from '../helpers/fitToView';
+
+import ZoomButton from './ZoomButton';
 
 import styles from './treeCanvas.module.scss';
 
@@ -39,41 +38,6 @@ function fitTransform(viewport: HTMLElement, toolbar: HTMLElement, rect: Rect) {
     fitted && zoomIdentity.translate(fitted.x, fitted.y).scale(fitted.scale)
   );
 }
-
-interface ZoomButtonProps {
-  label: string;
-  iconName: string;
-  onClick: () => void;
-  disabled?: boolean;
-  disabledHint?: string;
-}
-
-const ZoomButton = ({
-  label,
-  iconName,
-  onClick,
-  disabled,
-  disabledHint,
-}: ZoomButtonProps) => (
-  <Tooltip
-    title={disabled && disabledHint ? disabledHint : label}
-    placement="right"
-  >
-    {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- a disabled button takes no pointer events or focus, so the span carries its tooltip */}
-    <span tabIndex={disabled ? 0 : undefined}>
-      <IconButton
-        aria-label={label}
-        onClick={onClick}
-        disabled={disabled}
-        size="extraSmall"
-        color="tertiary"
-        variant="text"
-      >
-        <FontAwesomeV6Icon iconName={iconName} aria-hidden="true" />
-      </IconButton>
-    </span>
-  </Tooltip>
-);
 
 interface TreeCanvasProps {
   contentWidth: number;
