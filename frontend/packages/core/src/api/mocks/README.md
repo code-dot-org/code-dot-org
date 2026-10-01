@@ -136,10 +136,29 @@ should get the same baseline response with no fixture registered:
 gateway (`https://ai-gateway.code.org`). Every `generateText` call gets a
 canned answer: a sentence for text, the first value the requested output
 schema admits for structured output (so a safety classifier answers with the
-first of its enum, e.g. `OK`), and a prepared image
-(`aiGateway.cannedImage.ts`: a pixel character on pure magenta, at the
-model's output size) for a call that asks for one. A scenario answers its own
-way by registering a route for `AI_GATEWAY_MOCK_PATH`.
+first of its enum, e.g. `OK`), and an image for a call that asks for one.
+
+The image is the first of these that applies:
+
+1. The active fixture's first `aiImages` rule whose `match` (a RegExp or a
+   function) accepts the request's text, every text part joined by spaces.
+   Its `image` is a base64 data URL; a `?inline` import of a PNG gives one.
+2. For a request that sends an image (an edit), that image, unchanged.
+3. The prepared image in `aiGateway.cannedImage.ts`: a pixel character on
+   pure magenta, at the model's output size.
+
+```ts
+import meadow from './aiImages/meadow.png?inline';
+
+const fixture: LabFixture = {
+  aiImages: [{match: /The place is deserted/, image: meadow}],
+};
+```
+
+A lab's prompts carry wording of its own for each kind of image, which is
+what its rules match; build the patterns from the constants the lab's prompt
+code uses, so a prompt change cannot leave them stale. A scenario answers
+some other way entirely by registering a route for `AI_GATEWAY_MOCK_PATH`.
 
 To call the real model instead, with your own key and without dashboard's
 gateway, run the dev server with `GOOGLE_GENERATIVE_AI_API_KEY` in its
