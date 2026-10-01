@@ -181,9 +181,16 @@ once a character is made.
 
 ### 7. Scene music
 
-`sceneMusic.ts` drives apps' music `ProjectPlayer` and `MusicPlayer`. The
-frontend music package on `world-lab` has a player; lab-base's music package
-does not.
+Done. The branch sits on `ngfp/music-lab-package`, whose Music package
+plays a saved project headlessly: `@code-dot-org/music-lab/player` exports
+`ProjectPlayer` and `createMusicPlayer`. `sceneMusic.ts` loops one song at a
+time, `views/useSceneMusic.ts` plays it only in Play, and the music bar
+names it. The play-music block's songs are the user's Music Lab projects on
+the default pack (`musicProjects.ts`, through core's
+`projects.getPersonal`); `views/useMusicProjects.ts` holds the workspace for
+the list when a saved block names a song, as the external scene list does.
+The `music` fixture plays an electro loop from the real library at
+`curriculum.code.org`.
 
 ## Decisions to make
 
@@ -195,8 +202,8 @@ does not.
 2. **Pixel editor.** Sprite Lab edits costumes with apps' `pixelEditor`.
    World Lab has its own editor under `labs/world/src/imageEditor`. Port
    apps' editor, or extract World's into a shared package and adopt it.
-3. **Music player.** Layer 7 needs the frontend music player, which exists
-   only on `world-lab`. It must reach lab-base first.
+3. **Music player.** Decided: `ngfp/music-lab-package`, `world-lab`'s Music
+   package on lab-base, with a headless `ProjectPlayer` added.
 4. **AI gateway.** Decided: core's `aiGateway` client, a mock gateway
    with canned answers, and a dev-server proxy for a developer's own key.
 5. **Legacy block pool.** Decided: a runtime converter. Most of a Sprite
@@ -347,6 +354,18 @@ Layer 6:
   them (about 230 KB); apps served them as static files.
 - `createNamedAnimation` requires a `frameSize`, which both callers pass;
   apps' untyped thunk accepted an animation without one.
+
+Layer 7:
+
+- Music's player is a dynamic import, made on the first song or the first
+  song list: most games have no music, and the player brings ToneJS. Apps
+  imported it statically.
+- The song list comes through core's `projects.getPersonal`; apps used
+  `HttpClient`. Holding the workspace for it is its own hook, beside the
+  external scene list's, where apps fetched both in one effect.
+- Apps' tests for `sceneMusic` and `musicProjects` are ported; the factory
+  the wrapper takes now returns a promise, and `musicProjectOptions` takes
+  Music's pack rule as an argument so the tests need not load the player.
 
 The pixel editor:
 

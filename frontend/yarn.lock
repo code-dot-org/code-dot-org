@@ -2615,6 +2615,7 @@ __metadata:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/music-lab": "workspace:*"
     "@code-dot-org/playwright-support": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
