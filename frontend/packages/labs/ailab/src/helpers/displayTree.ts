@@ -28,7 +28,7 @@ export type DisplayTreeNode = DisplayTreeQuestion | DisplayTreeAnswer;
 // A saved model holds a nested array; a live model holds an ml-matrix row vector
 type ClassDistribution = number[][] | {getRow(row: number): number[]};
 
-interface SerializedTreeNode {
+export interface SerializedTreeNode {
   splitColumn?: number;
   splitValue?: number;
   left?: SerializedTreeNode;
@@ -45,6 +45,12 @@ export interface DisplayTreeContext {
   features: string[];
   featureNumberKey: Record<string, Record<string, number>>;
   labelColumn: string;
+}
+
+export const DISPLAY_TREE_ROOT_ID = '0';
+
+export function getChildNodeId(parentId: string, branchIndex: number): string {
+  return `${parentId}.${branchIndex}`;
 }
 
 // The `name` in ml-cart's toJSON().

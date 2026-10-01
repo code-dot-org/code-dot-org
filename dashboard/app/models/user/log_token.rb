@@ -46,6 +46,8 @@ class User::LogToken < ApplicationRecord
   # must stop being emitted then rather than when the cache entry expires.
   after_destroy {CDO.shared_cache.delete(self.class.send(:cache_key, user_id, destination, period))}
 
+  scope :for_user, ->(user_id) {where(user_id: user_id).order(period: :desc, destination: :asc)}
+
   validates :destination, inclusion: {in: DESTINATIONS}
   validates :period, presence: true
   validates :uuid, presence: true, uniqueness: true
