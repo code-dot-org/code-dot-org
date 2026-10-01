@@ -1,6 +1,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {keyboardOnlyTooltipProps} from '@code-dot-org/component-library/tooltip';
 import {autocompletion} from '@codemirror/autocomplete';
+import {autoCloseTags} from '@codemirror/lang-html';
 import {MergeView} from '@codemirror/merge';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
@@ -110,9 +111,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const themeCompartment = useMemo(() => new Compartment(), []);
 
   // Autocomplete is a setting because its popup competes with screen readers.
+  // autoCloseTags does nothing outside HTML, so every lab can load it.
   const autocompleteCompartment = useMemo(() => new Compartment(), []);
   const autocompleteExtension = useMemo(
-    () => (editorAutocompleteEnabled ? autocompletion() : []),
+    () => (editorAutocompleteEnabled ? [autocompletion(), autoCloseTags] : []),
     [editorAutocompleteEnabled]
   );
 

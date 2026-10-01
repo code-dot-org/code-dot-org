@@ -44,7 +44,8 @@ import moduleStyles from './styles/weblab2-view.module.scss';
 const aiTutorHelper = new AiTutorWebLab2ContextHelper();
 
 const weblab2LangMapping: {[key: string]: LanguageSupport} = {
-  html: html(),
+  // Tag closing follows the autocomplete setting, so html() must not add it.
+  html: html({autoCloseTags: false}),
   css: css(),
   js: javascript(),
   md: markdown(),
