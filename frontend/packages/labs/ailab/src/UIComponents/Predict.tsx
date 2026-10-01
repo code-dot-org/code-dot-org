@@ -4,6 +4,7 @@ import type React from 'react';
 
 import {imageUrl} from '../assetPath';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getRandomTestData} from '../helpers/randomTestData';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -44,6 +45,12 @@ const Predict = () => {
     feature: string,
   ) => {
     dispatch(setTestData(feature, event.target.value));
+  };
+
+  const onClickRandomize = () => {
+    Object.entries(getRandomTestData(store.getState())).forEach(
+      ([feature, value]) => dispatch(setTestData(feature, value)),
+    );
   };
 
   const onClickPredict = () => {
@@ -106,7 +113,10 @@ const Predict = () => {
         </div>
       </ScrollableContent>
       <br />
-      <div>
+      <div className={styles.buttons}>
+        <button type="button" onClick={onClickRandomize}>
+          Randomize
+        </button>
         <button
           type="button"
           className={styles.button}
