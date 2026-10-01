@@ -1,14 +1,12 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import QuizIntroCard, {
-  QuizIntroCardProps,
-} from '@cdo/apps/quiz/attempt/QuizIntroCard';
+import IntroCard, {IntroCardProps} from '@cdo/apps/quiz/attempt/IntroCard';
 
-const renderCard = (props: Partial<QuizIntroCardProps> = {}) =>
+const renderCard = (props: Partial<IntroCardProps> = {}) =>
   render(
-    <QuizIntroCard
+    <IntroCard
       title="Unit 3 Assessment"
       questionCount={3}
       allowMultipleAttempts
@@ -17,7 +15,7 @@ const renderCard = (props: Partial<QuizIntroCardProps> = {}) =>
     />
   );
 
-describe('QuizIntroCard', () => {
+describe('IntroCard', () => {
   it('renders the title as an h2 under the "Before you begin" label', () => {
     renderCard();
 
@@ -38,7 +36,7 @@ describe('QuizIntroCard', () => {
     expect(screen.getByText('1 question')).toBeInTheDocument();
 
     rerender(
-      <QuizIntroCard
+      <IntroCard
         title="Unit 3 Assessment"
         questionCount={3}
         allowMultipleAttempts
@@ -53,7 +51,7 @@ describe('QuizIntroCard', () => {
     expect(screen.queryByText(/minute/)).not.toBeInTheDocument();
 
     rerender(
-      <QuizIntroCard
+      <IntroCard
         title="Unit 3 Assessment"
         questionCount={3}
         timeLimitMinutes={15}
@@ -69,7 +67,7 @@ describe('QuizIntroCard', () => {
     expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
 
     rerender(
-      <QuizIntroCard
+      <IntroCard
         title="Unit 3 Assessment"
         questionCount={3}
         allowMultipleAttempts={false}
@@ -77,14 +75,5 @@ describe('QuizIntroCard', () => {
       />
     );
     expect(screen.getByText('1 attempt')).toBeInTheDocument();
-  });
-
-  it('calls onBegin when Begin is clicked', () => {
-    const onBegin = jest.fn();
-    renderCard({onBegin});
-
-    fireEvent.click(screen.getByRole('button', {name: 'Begin'}));
-
-    expect(onBegin).toHaveBeenCalledTimes(1);
   });
 });

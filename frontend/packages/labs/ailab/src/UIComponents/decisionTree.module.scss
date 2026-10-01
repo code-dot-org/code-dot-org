@@ -1,3 +1,6 @@
+$path-ring-width: 3px;
+$path-color: var(--border-selected-primary, #2b1e9f);
+
 .decisionTree {
   clear: both;
   padding-top: 20px;
@@ -10,7 +13,7 @@
 
 .scroll {
   overflow-x: auto;
-  padding-bottom: 10px;
+  padding: $path-ring-width $path-ring-width 10px;
 }
 
 .canvas {
@@ -25,6 +28,11 @@
   fill: none;
   stroke: var(--neutral-gray-70, grey);
   stroke-width: 1.5;
+}
+
+.pathEdge {
+  stroke: $path-color;
+  stroke-width: 3;
 }
 
 .nodeSlot {
@@ -57,6 +65,12 @@
 .answer {
   background-color: var(--ailab-label);
   border-color: var(--ailab-label);
+}
+
+// An outline, unlike a box-shadow, still shows in forced-colors mode.
+.pathNode {
+  border-color: $path-color;
+  outline: $path-ring-width solid $path-color;
 }
 
 .nodeText {

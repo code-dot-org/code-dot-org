@@ -1,4 +1,9 @@
-import type {DisplayTreeBranch, DisplayTreeNode} from './displayTree';
+import {
+  DISPLAY_TREE_ROOT_ID,
+  getChildNodeId,
+  type DisplayTreeBranch,
+  type DisplayTreeNode,
+} from './displayTree';
 
 export const TREE_NODE_WIDTH = 160;
 export const TREE_NODE_HEIGHT = 40;
@@ -52,7 +57,7 @@ export function layoutDisplayTree(root: DisplayTreeNode): DisplayTreeLayout {
       const children = node.branches.map((childBranch, index) =>
         place(
           childBranch.child,
-          `${id}.${index}`,
+          getChildNodeId(id, index),
           depth + 1,
           placed,
           childBranch,
@@ -63,7 +68,7 @@ export function layoutDisplayTree(root: DisplayTreeNode): DisplayTreeLayout {
     return placed;
   };
 
-  place(root, '0', 0);
+  place(root, DISPLAY_TREE_ROOT_ID, 0);
 
   return {
     nodes,

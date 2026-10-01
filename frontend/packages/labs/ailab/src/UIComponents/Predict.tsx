@@ -116,7 +116,7 @@ const Predict = () => {
           {I18n.t('predictButton')}
         </button>
       </div>
-      {predictedLabel && (
+      {predictedLabel !== undefined && (
         <div className={classNames(shared.contents, styles.botResult)}>
           <div className={styles.botColumn}>
             <img

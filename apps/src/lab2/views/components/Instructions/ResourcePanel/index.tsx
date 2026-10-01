@@ -263,6 +263,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.lab.validationState?.hasConditions
   );
   const levelName = instructionsProps.levelProperties.name;
+  const levelSystemPrompt = instructionsProps.levelProperties.levelSystemPrompt;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
@@ -366,7 +367,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       const aiTutorProps = {
         hiddenContextCallback,
         aiTutorMultimodalEnabled,
+        levelId,
         levelName,
+        levelSystemPrompt,
         channelId,
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
@@ -479,6 +482,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     otherAvailableTours,
     aiTutorMultimodalEnabled,
     levelName,
+    levelSystemPrompt,
     channelId,
     aiTutorChatButtonData,
     aiTutorSystemPrompt,
