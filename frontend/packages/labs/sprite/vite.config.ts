@@ -18,7 +18,22 @@ export default defineConfig(({mode}) => ({
   plugins: [
     react(),
     ...(mode === 'pages'
-      ? []
+      ? [
+          // A static host serves over HTTPS, where the default development
+          // API origin (http://localhost-studio…) is blocked as mixed
+          // content before the mock worker can answer; see core's
+          // SiteConfig.
+          {
+            name: 'same-origin-api',
+            transformIndexHtml: () => [
+              {
+                tag: 'meta',
+                attrs: {name: 'cdo-api-url', content: 'same-origin'},
+                injectTo: 'head' as const,
+              },
+            ],
+          },
+        ]
       : [
           // Each chunk imports its own CSS, so a host gets the styles by
           // importing the module; see base's vite.config.ts.
