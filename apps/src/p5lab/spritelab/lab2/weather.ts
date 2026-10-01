@@ -109,7 +109,7 @@ const RULES: Record<Exclude<WeatherKind, 'none'>, Rule> = {
     wind: random => between(random, -0.3, 0.3),
     speed: random => between(random, 0.8, 1.6),
     sway: (p, wind) => wind + Math.sin(p.age * 0.05 + p.phase) * 0.5,
-    onTile: {frames: 60, bounce: 0},
+    onTile: {frames: 30, bounce: 0},
     onBody: {frames: 10, bounce: 0},
   },
 };

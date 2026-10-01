@@ -80,18 +80,18 @@ describe('weather', () => {
     expect(drop.vx).toBeLessThan(0);
   });
 
-  it('a flake rests on a tile and fades for a second', () => {
+  it('a flake rests on a tile and fades for half a second', () => {
     const snow = createWeather('snow', scene([tile]), fixed(0.5));
     const flake = snow.particles[0];
     Object.assign(flake, {x: 200, y: 279, vx: 0, vy: 1.5, speed: 1.5, age: 0});
     stepWeather(snow, scene([tile]), fixed(0.5));
     expect(flake.state).toBe('settling');
-    expect(flake.settleFrames).toBe(60);
-    steps(snow, scene([tile]), 30);
+    expect(flake.settleFrames).toBe(30);
+    steps(snow, scene([tile]), 15);
     expect(snow.particles[0]).toBe(flake);
     expect(flake.y).toBe(280);
     expect(flake.alpha).toBeLessThan(0.6);
-    steps(snow, scene([tile]), 31);
+    steps(snow, scene([tile]), 16);
     expect(snow.particles[0]).not.toBe(flake);
   });
 
