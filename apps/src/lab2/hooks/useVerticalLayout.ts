@@ -5,7 +5,6 @@ import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {ColumnPanelConfig} from '@cdo/apps/lab2/views/components/layout/types';
 import {useMeasuredLabWidth} from '@cdo/apps/lab2/views/LabContentWidth';
-import {availableContentWidth} from '@cdo/apps/util/taDrawerInset';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -78,7 +77,7 @@ export const useVerticalLayout = ({
 
   const adjustWidths = useCallback(() => {
     const RESIZE_BARS_WIDTH = RESIZE_BAR_SIZE_PX * (middlePanel ? 2 : 1);
-    const labWidth = measuredLabWidth ?? availableContentWidth();
+    const labWidth = measuredLabWidth ?? window.innerWidth;
 
     if (middlePanel) {
       // Middle panel takes priority in terms of available space in a 3 panel layout.

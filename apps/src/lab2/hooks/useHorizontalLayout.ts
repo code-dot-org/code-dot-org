@@ -9,7 +9,6 @@ import {
   RowPanelConfig,
 } from '@cdo/apps/lab2/views/components/layout/types';
 import {useMeasuredLabWidth} from '@cdo/apps/lab2/views/LabContentWidth';
-import {availableContentWidth} from '@cdo/apps/util/taDrawerInset';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -92,7 +91,7 @@ export const useHorizontalLayout = ({
   const measuredLabWidth = useMeasuredLabWidth();
 
   const adjustRightPanelWidth = useCallback(() => {
-    const labWidth = measuredLabWidth ?? availableContentWidth();
+    const labWidth = measuredLabWidth ?? window.innerWidth;
     const newRightPanelWidth = Math.max(
       labWidth -
         rawLeftPanelWidth -

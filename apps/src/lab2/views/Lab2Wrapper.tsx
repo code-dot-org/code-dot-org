@@ -9,7 +9,7 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ToastProvider} from '@code-dot-org/component-library/toast';
 import classNames from 'classnames';
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 // The drawer's own weight sits behind a lazy boundary inside this component,
@@ -34,6 +34,7 @@ import {
   setUserRoleInCourse,
 } from '@cdo/apps/templates/currentUserRedux';
 import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
+import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
@@ -82,21 +83,11 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
 
   // The lab lays itself out against this rather than against the window: the
   // drawer below is a sibling, so the two differ whenever it is open.
+  // useElementSize reports 0 until it has measured, which a lab must not read
+  // as a zero-width box -- unmeasured is absent, and the lab falls back.
   const labContentRef = useRef<HTMLDivElement>(null);
-  const [labContentWidth, setLabContentWidth] = useState<number | undefined>(
-    undefined
-  );
-  useLayoutEffect(() => {
-    const element = labContentRef.current;
-    if (!element) {
-      return;
-    }
-    const observer = new ResizeObserver(([entry]) =>
-      setLabContentWidth(entry.contentRect.width)
-    );
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
+  const [measuredLabWidth] = useElementSize(labContentRef);
+  const labContentWidth = measuredLabWidth || undefined;
 
   // Rendering the drawer here, rather than at the page's own mount point, is
   // what lets the lab treat it as part of its layout. levels/show.js still

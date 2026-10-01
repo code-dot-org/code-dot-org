@@ -83,6 +83,13 @@ function initPage() {
    * panels around the drawer rather than being told to leave room for it —
    * there we hand the configuration to Lab2Wrapper. Every other level mounts
    * it over the page as before.
+   *
+   * The question is whether a Lab2Wrapper exists to host the drawer, which is
+   * narrower than whether the level uses Lab2: levels/show.html.haml renders
+   * #lab2-container only in the branch that reaches it, so a level with
+   * uses_lab2? true still has no lab on a summary view (?view=summary) or in a
+   * locked or hidden lesson. Handing the drawer to a wrapper that never mounts
+   * would leave those pages with no drawer at all, so test for the container.
    */
   const showAiDiffDrawer = (mountPoint, props) => {
     if (document.getElementById('lab2-container')) {
