@@ -102,7 +102,7 @@ describe('ailab reducer', () => {
       expect(deselected.currentColumn).toBeUndefined();
     });
 
-    test('ignores a click on the label column during feature selection', () => {
+    test('selects the label column during feature selection without feature instructions', () => {
       let state = reducer(initialState, setLabelColumn('lbl'));
       state = reducer(
         state,
@@ -110,6 +110,13 @@ describe('ailab reducer', () => {
       );
       state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
       const next = reducer(state, setCurrentColumn('lbl'));
+      expect(next.currentColumn).toBe('lbl');
+      expect(next.instructionsKey).toBe('dataDisplayFeatures');
+    });
+
+    test('ignores clicks when the mode hides column clicking', () => {
+      const state = reducer(initialState, setMode({hideColumnClicking: true}));
+      const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBeUndefined();
     });
   });
