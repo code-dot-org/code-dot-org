@@ -13,7 +13,7 @@ import moduleStyles from './version-history-row.module.scss';
 
 interface VersionHistoryRowProps {
   versionId: string;
-  label: string;
+  label?: string;
   isLatest: boolean;
   isSelected: boolean;
   comment?: string;
@@ -49,8 +49,11 @@ const VersionHistoryRow: React.FunctionComponent<
   className,
   alwaysShowAutoSaves = false,
 }) => {
+  let title;
   if (isLatest) {
-    label = commonI18n.currentVersion();
+    title = commonI18n.currentVersion();
+  } else if (versionId === INITIAL_VERSION_ID) {
+    title = lab2I18n.initialVersion();
   }
 
   let ariaLabel;
@@ -97,14 +100,21 @@ const VersionHistoryRow: React.FunctionComponent<
             className={moduleStyles.versionLabel}
             name={versionId}
             value={versionId}
-            label={label}
+            label={title || label}
             onChange={onChange}
             checked={isSelected}
             ariaLabel={ariaLabel}
             textThickness={isBoldtype ? 'thick' : 'thin'}
             disabled={disabled}
             size="s"
-          />
+          >
+            {title && label && (
+              <Typography variant="body3" component="span">
+                <span className={moduleStyles.separator}>{'·'}</span>
+                {label}
+              </Typography>
+            )}
+          </RadioButton>
           {showRestoreButton && (
             <MuiButton
               variant="outlined"

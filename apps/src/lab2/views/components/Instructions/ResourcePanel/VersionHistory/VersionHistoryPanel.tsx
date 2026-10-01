@@ -120,17 +120,18 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.hasEditedSinceLastVersionSave
   );
 
-  // Ex: "Jun 5, 3:30 PM"
+  // Ex: "Jun 5, 3:30:45 PM"
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
       month: 'short',
       day: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
+      second: 'numeric',
     });
   }, [locale]);
 
-  // Ex: "Jun 5, 2022, 3:30 PM"
+  // Ex: "Jun 5, 2022, 3:30:45 PM"
   const dateFormatterWithYear = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
       month: 'short',
@@ -138,8 +139,13 @@ const VersionHistoryPanel: React.FunctionComponent<
       year: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
+      second: 'numeric',
     });
   }, [locale]);
+
+  const projectCreatedAt = useAppSelector(
+    state => state.lab.channel?.createdAt
+  );
 
   const dispatch = useAppDispatch();
 
@@ -348,6 +354,14 @@ const VersionHistoryPanel: React.FunctionComponent<
     [dateFormatter, dateFormatterWithYear]
   );
 
+  // Start sources have no date of their own, so the project's will do.
+  const initialVersionTimestamp = useMemo(() => {
+    if (!projectCreatedAt || Number.isNaN(Date.parse(projectCreatedAt))) {
+      return undefined;
+    }
+    return parseDate(projectCreatedAt);
+  }, [projectCreatedAt, parseDate]);
+
   const onVersionChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setSelectedVersion(e.target.value);
@@ -459,7 +473,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const renderVersionRow = useCallback(
     (
       versionId: string,
-      label: string,
+      label: string | undefined,
       isLatest: boolean,
       comment?: string,
       className?: string,
@@ -621,7 +635,7 @@ const VersionHistoryPanel: React.FunctionComponent<
             })}
             {renderVersionRow(
               INITIAL_VERSION_ID,
-              lab2I18n.initialVersion(),
+              initialVersionTimestamp,
               latestVersion === INITIAL_VERSION_ID,
               undefined,
               undefined,
