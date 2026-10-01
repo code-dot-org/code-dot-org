@@ -5,6 +5,7 @@ import {
   drawWeather,
   stepWeather,
   weatherCount,
+  weatherGravity,
   WeatherScene,
 } from '@cdo/apps/p5lab/spritelab/lab2/weather';
 
@@ -130,14 +131,14 @@ describe('weather', () => {
     expect(flake.y).toBeGreaterThan(300);
   });
 
-  it('hangs in the air at zero gravity', () => {
-    const rain = createWeather('rain', scene(), fixed(0.5));
-    steps(rain, scene([], [], 0), 120);
+  it('falls as under the default gravity when the scene has none', () => {
+    const rain = createWeather('rain', scene([], [], 0), fixed(0.5));
+    expect(rain.gravity).toBe(PLATFORM_GRAVITY);
     const drop = rain.particles[0];
-    expect(Math.abs(drop.vy)).toBeLessThan(0.01);
-    const y = drop.y;
+    Object.assign(drop, {y: 100, vy: 8, speed: 8});
     steps(rain, scene([], [], 0), 10);
-    expect(drop.y).toBe(y);
+    expect(drop.vy).toBeCloseTo(8, 5);
+    expect(drop.y).toBeCloseTo(180, 5);
   });
 
   it('flipping gravity slows the drops, turns them, and sends them up to speed upward', () => {
@@ -172,6 +173,12 @@ describe('weather', () => {
     other.y = -9;
     stepWeather(rain, up, fixed(0.5));
     expect(rain.particles[1].y).toBeGreaterThan(400);
+  });
+
+  it('reads zero gravity as the default and any other gravity as itself', () => {
+    expect(weatherGravity(0)).toBe(PLATFORM_GRAVITY);
+    expect(weatherGravity(0.3)).toBe(0.3);
+    expect(weatherGravity(-0.75)).toBe(-0.75);
   });
 
   it('measures a character as its feet-anchored body', () => {

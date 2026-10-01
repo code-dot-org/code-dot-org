@@ -90,6 +90,12 @@ interface Rule {
   onBody: Contact;
 }
 
+/** The gravity the weather answers to. A scene at zero gravity still reads
+    as a side view, so its weather falls as under the default. */
+export function weatherGravity(sceneGravity: number): number {
+  return sceneGravity === 0 ? PLATFORM_GRAVITY : sceneGravity;
+}
+
 // How far the felt gravity closes on the scene's each frame.
 const GRAVITY_EASE = 0.06;
 // Frames a particle takes to reach its fall speed under default gravity.
@@ -169,18 +175,19 @@ export function createWeather(
   scene: WeatherScene,
   random: Random = Math.random
 ): Weather {
+  const gravity = weatherGravity(scene.gravity);
   if (kind === 'none') {
-    return {kind, particles: [], wind: 0, gravity: scene.gravity};
+    return {kind, particles: [], wind: 0, gravity};
   }
   const rule = RULES[kind];
   const weather: Weather = {
     kind,
     particles: [],
     wind: rule.wind(random),
-    gravity: scene.gravity,
+    gravity,
   };
   const down = flow(weather);
-  const felt = Math.min(1, Math.abs(scene.gravity) / PLATFORM_GRAVITY);
+  const felt = Math.min(1, Math.abs(gravity) / PLATFORM_GRAVITY);
   weather.particles = Array.from({length: rule.count}, () => {
     const along = between(random, -scene.height, scene.height);
     const p = particleAt(
@@ -281,8 +288,7 @@ function overlaps(boxes: Box[], p: Particle): boolean {
  * One frame. The felt gravity eases toward the scene's. Falling particles
  * speed up toward their fall speed under that gravity, move, land on tiles
  * and bodies and do what their kind does there, and come back around once
- * they leave the world or finish settling. At zero gravity everything
- * hangs where it is.
+ * they leave the world or finish settling.
  */
 export function stepWeather(
   weather: Weather,
@@ -293,9 +299,10 @@ export function stepWeather(
     return;
   }
   const rule = RULES[weather.kind];
-  weather.gravity += (scene.gravity - weather.gravity) * GRAVITY_EASE;
-  if (Math.abs(weather.gravity - scene.gravity) < 0.005) {
-    weather.gravity = scene.gravity;
+  const gravity = weatherGravity(scene.gravity);
+  weather.gravity += (gravity - weather.gravity) * GRAVITY_EASE;
+  if (Math.abs(weather.gravity - gravity) < 0.005) {
+    weather.gravity = gravity;
   }
   const g = weather.gravity;
   const felt = Math.abs(g) / PLATFORM_GRAVITY;
@@ -304,7 +311,7 @@ export function stepWeather(
     p.age++;
     if (!p.holds) {
       // Toward the fall speed this gravity gives, at this gravity's pace;
-      // a floor on the pace lets a weightless particle come to rest.
+      // a floor on the pace keeps a faint gravity from stalling the turn.
       const target = p.speed * (g / PLATFORM_GRAVITY);
       const step = (p.speed / SPEED_UP_FRAMES) * Math.max(felt, 0.15);
       p.vy += Math.max(-step, Math.min(step, target - p.vy));
