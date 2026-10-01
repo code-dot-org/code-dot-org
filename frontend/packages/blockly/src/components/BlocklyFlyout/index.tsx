@@ -4,6 +4,7 @@ import type {MutableRefObject, ReactElement} from 'react';
 
 import {DriverEvent} from '../../Driver';
 import {useBlocklyContext} from '../../contexts/BlocklyContext';
+import {releaseFocus} from '../../utils/releaseFocus';
 
 /**
  * An inline flyout: a panel of blocks that can be dragged out to create real
@@ -340,6 +341,7 @@ export function BlocklyFlyout({
       disposed = true;
       cancelAnimationFrame(frame);
       driverInstance.removeListener(DriverEvent.ThemeChanged, onThemeChanged);
+      releaseFocus(flyoutRef.current?.getWorkspace());
       flyoutRef.current?.dispose();
       flyoutRef.current = null;
       if (workspaceRef) {

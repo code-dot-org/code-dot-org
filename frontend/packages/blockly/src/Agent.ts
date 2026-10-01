@@ -9,6 +9,7 @@ import {DriverEvent} from './Driver';
 import {positionBlocksOnWorkspace} from './serialization';
 import type {Toolbox} from './toolbox';
 import {buildToolbox} from './toolbox';
+import {releaseFocus} from './utils/releaseFocus';
 import type {Environment, BlocklySerialization} from './types';
 
 export const AgentEvent = {
@@ -421,6 +422,7 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
     );
 
     // Deconstruct the workspace
+    releaseFocus(this._workspace);
     this._workspace?.dispose();
     this._workspace = undefined;
 
