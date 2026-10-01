@@ -109,3 +109,21 @@ export const ExtraLinksProjectDataSchema = z
     message: z.string().optional(),
   })
   .transform(data => camelcaseKeys(data, {deep: true}));
+
+/**
+ * One of the user's own projects, as the personal projects list gives it.
+ * Fields a project never set come back null or absent; `labConfig` is a
+ * Lab2 lab's project-level settings (Music Lab's sound pack, for one).
+ */
+export const PersonalProjectSchema = z
+  .object({
+    channel: z.string(),
+    name: z.string().nullish(),
+    type: z.string().nullish(),
+    updatedAt: z.string().nullish(),
+    thumbnailUrl: z.string().nullish(),
+    labConfig: z.record(z.string(), z.unknown()).nullish(),
+  })
+  .passthrough();
+
+export const PersonalProjectsResponseSchema = z.array(PersonalProjectSchema);
