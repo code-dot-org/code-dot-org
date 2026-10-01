@@ -95,15 +95,20 @@ describe('weather', () => {
     expect(snow.particles[0]).not.toBe(flake);
   });
 
-  it('a flake touching a body melts away quickly without bouncing', () => {
+  it('a flake touched by a body melts along its own path, unmoved by it', () => {
     const snow = createWeather('snow', scene([], [body]), fixed(0.5));
     const flake = snow.particles[0];
-    Object.assign(flake, {x: 200, y: 279, vx: 0, vy: 1.5, speed: 1.5, age: 0});
+    // Walked into from the side, below the body's top.
+    Object.assign(flake, {x: 190, y: 300, vx: 0, vy: 1.5, speed: 1.5, age: 0});
     stepWeather(snow, scene([], [body]), fixed(0.5));
     expect(flake.state).toBe('settling');
     expect(flake.settleFrames).toBe(10);
-    steps(snow, scene([], [body]), 5);
-    expect(flake.y).toBe(280);
+    const y = flake.y;
+    steps(snow, scene([], [body]), 4);
+    expect(flake.y).toBeGreaterThan(y);
+    // Its own sway only: never shoved to the body's edge.
+    expect(Math.abs(flake.x - 190)).toBeLessThan(1);
+    expect(flake.alpha).toBeLessThan(0.6);
   });
 
   it('a flake drifting into a tile through its side slides down outside it', () => {

@@ -48,8 +48,8 @@ export interface Particle {
   state: ParticleState;
   /** Frames a settling particle lasts before it comes around. */
   settleFrames: number;
-  /** The bounce of its contact; zero means it sits where it landed. */
-  bounce: number;
+  /** A settling particle that sits where it landed, rather than moving on. */
+  holds: boolean;
   /** 0..1, the fade of a settling particle. */
   alpha: number;
   /** Per-particle phase, so drifting flakes do not sway in step. */
@@ -68,13 +68,16 @@ export interface Weather {
 
 export type Random = () => number;
 
-/** What a particle does when it lands on something. */
+/** What a particle does when it meets something. */
 interface Contact {
   /** Frames it lasts after the contact, fading out. */
   frames: number;
   /** Fraction of its fall speed it leaves with, away from the surface;
       zero sits where it landed. */
   bounce: number;
+  /** Carries on along its path, fading, untouched by the thing it met;
+      any overlap counts, not only a landing. */
+  pass?: boolean;
 }
 
 interface Rule {
@@ -110,7 +113,7 @@ const RULES: Record<Exclude<WeatherKind, 'none'>, Rule> = {
     speed: random => between(random, 0.8, 1.6),
     sway: (p, wind) => wind + Math.sin(p.age * 0.05 + p.phase) * 0.5,
     onTile: {frames: 30, bounce: 0},
-    onBody: {frames: 10, bounce: 0},
+    onBody: {frames: 10, bounce: 0, pass: true},
   },
 };
 
@@ -139,7 +142,7 @@ function particleAt(
     age: 0,
     state: 'falling',
     settleFrames: 0,
-    bounce: 0,
+    holds: false,
     alpha: 1,
     phase: random() * Math.PI * 2,
   };
@@ -252,15 +255,26 @@ function keepOutside(boxes: Box[], p: Particle): void {
 }
 
 function settle(p: Particle, y: number, down: number, contact: Contact) {
-  p.y = y;
   p.state = 'settling';
   p.age = 0;
   p.settleFrames = contact.frames;
-  p.bounce = contact.bounce;
+  if (contact.pass) {
+    p.holds = false;
+    return;
+  }
+  p.y = y;
+  p.holds = contact.bounce === 0;
   p.vy = -down * Math.abs(p.vy) * contact.bounce;
-  if (contact.bounce === 0) {
+  if (p.holds) {
     p.vx = 0;
   }
+}
+
+function overlaps(boxes: Box[], p: Particle): boolean {
+  return boxes.some(
+    box =>
+      Math.abs(p.x - box.x) < box.halfW && Math.abs(p.y - box.y) < box.halfH
+  );
 }
 
 /**
@@ -288,7 +302,7 @@ export function stepWeather(
   const down = flow(weather);
   weather.particles.forEach((p, i) => {
     p.age++;
-    if (p.state !== 'settling' || p.bounce > 0) {
+    if (!p.holds) {
       // Toward the fall speed this gravity gives, at this gravity's pace;
       // a floor on the pace lets a weightless particle come to rest.
       const target = p.speed * (g / PLATFORM_GRAVITY);
@@ -301,7 +315,7 @@ export function stepWeather(
         weather.particles[i] = respawn(rule, scene, weather, random);
         return;
       }
-      if (p.bounce > 0) {
+      if (!p.holds) {
         p.x += p.vx;
         p.y += p.vy;
       }
@@ -310,15 +324,22 @@ export function stepWeather(
     const fromY = p.y;
     p.x += rule.sway(p, weather.wind) * felt + p.vx;
     p.y += p.vy;
-    // Only a particle moving with the flow lands; one on its way back out
-    // after a bounce passes.
-    if (p.vy * down > 0) {
+    if (rule.onBody.pass) {
+      if (overlaps(scene.bodies, p)) {
+        settle(p, p.y, down, rule.onBody);
+        return;
+      }
+    } else if (p.vy * down > 0) {
       const onBody = landedOn(scene.bodies, down, p.x, fromY, p.y);
       if (onBody) {
         settle(p, onBody.y, down, rule.onBody);
         p.vx += (p.x < onBody.box.x ? -1 : 1) * rule.onBody.bounce * 2;
         return;
       }
+    }
+    // Only a particle moving with the flow lands; one on its way back out
+    // after a bounce passes.
+    if (p.vy * down > 0) {
       const onTile = landedOn(scene.walls, down, p.x, fromY, p.y);
       if (onTile) {
         settle(p, onTile.y, down, rule.onTile);
@@ -326,7 +347,9 @@ export function stepWeather(
       }
     }
     keepOutside(scene.walls, p);
-    keepOutside(scene.bodies, p);
+    if (!rule.onBody.pass) {
+      keepOutside(scene.bodies, p);
+    }
     const gone = down > 0 ? p.y > scene.height + 8 : p.y < -8;
     if (gone || p.x < -8 || p.x > scene.width + 8) {
       weather.particles[i] = respawn(rule, scene, weather, random);
