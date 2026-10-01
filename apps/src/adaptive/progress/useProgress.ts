@@ -3,6 +3,8 @@
 
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
+import type {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
+
 import {Pathway} from '../types';
 
 import {
@@ -23,6 +25,8 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   inProgress: 'In progress',
   complete: 'Complete',
 };
+
+const NO_ATTEMPTS: NonNullable<Progress['inputs']> = {};
 
 export function useProgress(
   pathway: Pathway,
@@ -68,14 +72,25 @@ export function useProgress(
     );
   }, []);
 
+  const saveAttempts = useCallback(
+    (stepId: string, attempts: QuizAttemptData[]) => {
+      setProgress(p =>
+        p ? {...p, inputs: {...p.inputs, [stepId]: attempts}} : p
+      );
+    },
+    []
+  );
+
   const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
 
   return {
     progress,
     isLoading: progress === undefined,
     statusMap,
+    attempts: progress?.inputs ?? NO_ATTEMPTS,
     markStarted,
     markComplete,
+    saveAttempts,
     reset,
   };
 }

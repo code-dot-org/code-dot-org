@@ -2,6 +2,8 @@
 // and the status each checkpoint takes from that. Nothing here touches React
 // or storage; useProgress and progressStore build on it.
 
+import type {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
+
 import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =
@@ -16,6 +18,8 @@ export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 export interface Progress {
   completed: string[];
   started: string[];
+  /** Each questions step's attempts, oldest first. */
+  inputs?: {[stepId: string]: QuizAttemptData[]};
 }
 
 export const EMPTY_PROGRESS: Progress = {completed: [], started: []};

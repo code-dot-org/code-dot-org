@@ -128,4 +128,33 @@ describe('useProgress', () => {
     act(() => result.current.reset());
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
+
+  it("replaces one step's attempts and clears them on reset", async () => {
+    const store = fakeStore(undefined);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useProgress(pathway, key, store)
+    );
+    await waitForNextUpdate();
+    const attempt = (attemptNumber: number) => ({
+      id: attemptNumber,
+      attemptNumber,
+      submittedAt: null,
+      score: null,
+      maxScore: null,
+      expiresAt: null,
+      canRetake: true,
+    });
+    act(() => result.current.saveAttempts('quiz', [attempt(1)]));
+    act(() => result.current.saveAttempts('survey', [attempt(1)]));
+    act(() => result.current.saveAttempts('quiz', [attempt(1), attempt(2)]));
+    expect(result.current.attempts).toEqual({
+      quiz: [attempt(1), attempt(2)],
+      survey: [attempt(1)],
+    });
+    expect(store.saved[store.saved.length - 1].inputs).toEqual(
+      result.current.attempts
+    );
+    act(() => result.current.reset());
+    expect(result.current.attempts).toEqual({});
+  });
 });

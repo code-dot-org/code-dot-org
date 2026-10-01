@@ -1,6 +1,6 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, and whether each level step's `project` flag agrees with the level
-// the server resolved for it.
+// shape, question ids, and whether each level step's `project` flag agrees
+// with the level the server resolved for it.
 
 import {z} from 'zod';
 
@@ -15,8 +15,27 @@ export function referenceProblems(pathway: Pathway): string[] {
   return [
     ...skillProblems(pathway),
     ...checkpointProblems(pathway),
+    ...questionProblems(pathway),
     ...levelStepProblems(pathway),
   ];
+}
+
+/** Answers are keyed by question id alone, so each must name one question. */
+function questionProblems(pathway: Pathway): string[] {
+  const seen = new Set<string | number>();
+  const duplicates = new Set<string | number>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'questions') continue;
+      for (const question of step.questions) {
+        if (seen.has(question.id)) duplicates.add(question.id);
+        seen.add(question.id);
+      }
+    }
+  }
+  return [...duplicates].map(
+    id => `checkpoints: question id '${id}' is used more than once`
+  );
 }
 
 /**
