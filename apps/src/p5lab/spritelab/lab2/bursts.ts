@@ -19,7 +19,7 @@ export interface BurstParticle {
   y: number;
   vx: number;
   vy: number;
-  /** Frames lived; gone at `life`, fading over the last few. */
+  /** Frames lived; gone at `life`, fading over the last part. */
   age: number;
   life: number;
   /** Drawn size in world pixels. */
@@ -40,10 +40,10 @@ export const MAX_BURST_PARTICLES = 400;
 export const MAX_BURST_COUNT = 100;
 
 // Fall acceleration per frame under the default gravity, air drag per
-// frame, and the fade at the end of a particle's life.
+// frame, and the share of a particle's life over which it fades out.
 const FALL_ACCEL = 0.25;
 const DRAG = 0.96;
-const FADE_FRAMES = 8;
+const FADE_SHARE = 0.4;
 
 const between = (random: Random, min: number, max: number) =>
   min + random() * (max - min);
@@ -131,9 +131,10 @@ export function stepBurst(burst: Burst, scene: BurstScene): boolean {
   return burst.particles.length > 0;
 }
 
-/** 1 at full strength, down to 0 over the particle's last few frames. */
+/** 1 at full strength, easing to 0 over the last part of the particle's
+    life, as its motion dies away. */
 export function burstAlpha(p: BurstParticle): number {
-  return Math.max(0, Math.min(1, (p.life - p.age) / FADE_FRAMES));
+  return Math.max(0, Math.min(1, (p.life - p.age) / (p.life * FADE_SHARE)));
 }
 
 /** The p5 calls the drawing needs. */

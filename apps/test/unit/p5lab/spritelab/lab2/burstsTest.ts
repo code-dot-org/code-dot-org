@@ -83,7 +83,7 @@ describe('bursts', () => {
     expect(frames).toBeLessThan(60);
   });
 
-  it('fades quickly at the very end and is dropped when its life is up', () => {
+  it('fades out over the last part of its life and is dropped when it is up', () => {
     const burst = createBurst(
       'sparks',
       1,
@@ -94,9 +94,9 @@ describe('bursts', () => {
     const p = burst.particles[0];
     Object.assign(p, {vx: 0, vy: 0, life: 30});
     expect(burstAlpha(p)).toBe(1);
-    p.age = 21;
+    p.age = 18;
     expect(burstAlpha(p)).toBe(1);
-    p.age = 26;
+    p.age = 24;
     expect(burstAlpha(p)).toBeCloseTo(0.5, 5);
     p.age = 29;
     expect(stepBurst(burst, scene())).toBe(false);
