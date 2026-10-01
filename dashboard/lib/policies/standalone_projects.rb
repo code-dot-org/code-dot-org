@@ -47,12 +47,29 @@ module Policies
       ALL
     end
 
+    # Frozen once: Level validations consult it on every save.
+    LEVEL_NAMES = ALL.values.pluck(:name).freeze
+
     def self.level_names
-      ALL.values.pluck(:name)
+      LEVEL_NAMES
     end
 
     def self.project_level_name?(name)
-      level_names.include?(name)
+      LEVEL_NAMES.include?(name)
+    end
+
+    # The standalone project partition's name rule, case-insensitive like
+    # "UI Test "; see dashboard/config/standalone_projects/README.md.
+    PROJECT_NAME_PATTERN = /\Anew .+ project\z/i
+    SUBPROJECT_NAME_SUFFIX = ' subproject'.freeze
+    # Project levels named before the "New ... Project" rule.
+    LEGACY_PROJECT_NAMES = ['Calc Free Play', 'Eval Free Play'].freeze
+
+    def self.tree_name?(name)
+      name = name.to_s
+      PROJECT_NAME_PATTERN.match?(name) ||
+        name.downcase.end_with?(SUBPROJECT_NAME_SUFFIX) ||
+        LEGACY_PROJECT_NAMES.any? {|legacy| legacy.casecmp?(name)}
     end
   end
 end

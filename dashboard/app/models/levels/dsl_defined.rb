@@ -148,9 +148,16 @@ class DSLDefined < Level
     existing_filename.presence || canonical_filename
   end
 
-  # See dashboard/test/ui/config/README.md.
+  # See dashboard/test/ui/config/README.md and
+  # dashboard/config/standalone_projects/README.md.
+  SCRIPTS_DIRS = {
+    production: 'config/scripts',
+    ui_test: 'test/ui/config/scripts',
+    standalone_project: 'config/standalone_projects/scripts',
+  }.freeze
+
   def scripts_dir
-    ui_test? ? 'test/ui/config/scripts' : 'config/scripts'
+    SCRIPTS_DIRS.fetch(Policies::LevelFiles.tree_for_name(name))
   end
 
   def existing_filename

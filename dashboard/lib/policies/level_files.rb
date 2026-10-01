@@ -1,22 +1,42 @@
 module Policies
   module LevelFiles
-    # The two level trees never overlap: a "UI Test " level never resolves to
-    # config/levels/**, and vice versa. See dashboard/test/ui/config/README.md.
+    # A level's name selects exactly one of these trees, so no two trees ever
+    # define the same level. See dashboard/test/ui/config/README.md and
+    # dashboard/config/standalone_projects/README.md.
     LEVELS_SUBDIR = {
       production: 'config/levels',
       ui_test: 'test/ui/config/levels',
+      standalone_project: 'config/standalone_projects/levels',
     }.freeze
 
+    # Raises on a name that matches both the "UI Test " and the standalone
+    # project rules rather than picking a tree: each seed would claim its file.
     def self.tree_for_name(level_name)
-      Level.ui_test_name?(level_name) ? :ui_test : :production
+      ui_test = Level.ui_test_name?(level_name)
+      standalone = Level.standalone_tree_name?(level_name)
+      if ui_test && standalone
+        raise ArgumentError, "level name #{level_name.to_s.dump} matches both the \"UI Test \" " \
+          "and the standalone project partition rules; a name may match only one"
+      end
+      return :ui_test if ui_test
+      return :standalone_project if standalone
+      :production
     end
 
-    # Which tree the given definition file path (.level or DSL) lies in:
-    # files under test/ui/config define ui_test content, everything else is
-    # production. Seed tasks compare this against tree_for_name to refuse
-    # misfiled definitions.
+    # Unlike tree_for_name, never raises, so validations can call it: a name
+    # matching two rules is set apart here, and Level refuses it on its own.
+    def self.same_tree?(name, other_name)
+      [Level.ui_test_name?(name), Level.standalone_tree_name?(name)] ==
+        [Level.ui_test_name?(other_name), Level.standalone_tree_name?(other_name)]
+    end
+
+    # Which tree the given definition file path (.level or DSL) lies in. Seed
+    # tasks compare this against tree_for_name to refuse misfiled definitions.
     def self.tree_for_path(path)
-      path.to_s.include?('test/ui/config/') ? :ui_test : :production
+      path = path.to_s
+      return :ui_test if path.include?('test/ui/config/')
+      return :standalone_project if path.include?('config/standalone_projects/')
+      :production
     end
 
     # We organize new level files into a `levels` directory to keep them
@@ -52,8 +72,8 @@ module Policies
 
     # Return a glob which can be used either to find the specified level file
     # by name if provided, or all level files if not. With a name, the tree is
-    # selected by the name's prefix; without one, `tree` picks which tree's
-    # levels to enumerate.
+    # selected by the name; without one, `tree` picks which tree's levels to
+    # enumerate.
     def self.level_file_glob(level_name, root_dir = '.', tree: nil)
       tree ||= level_name ? tree_for_name(level_name) : :production
       "#{root_dir}/#{LEVELS_SUBDIR.fetch(tree)}/**/#{level_name || '*'}.level"
