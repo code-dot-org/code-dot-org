@@ -3,9 +3,10 @@ import {expect, test} from 'playwright/test';
 import {LabPage} from './poms/LabPage';
 
 test.describe('Sprite Lab smoke', () => {
-  test('lab loads and renders heading', async ({page}) => {
+  test('lab loads its fixture into the Code tab', async ({page}) => {
     const lab = await LabPage.load(page);
-    await expect(lab.heading).toBeVisible();
+    await expect(lab.codeTab).toBeVisible();
+    await expect(lab.workspace).toBeVisible();
   });
 
   // Folded in from the former console-health spec: a load with no thrown errors.
