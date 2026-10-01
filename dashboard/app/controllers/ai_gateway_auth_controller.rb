@@ -51,8 +51,6 @@ class AiGatewayAuthController < ApplicationController
 
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
-
-    # Send the log token, not the raw id.
     user_log_token = current_user.log_token(destination: User::LogToken::SENTRY)
 
     # Set a little in the past to account for time drift
