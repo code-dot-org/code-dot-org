@@ -1,6 +1,7 @@
 /* React component to handle displaying imported data. */
 import classNames from 'classnames';
 
+import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
@@ -93,7 +94,7 @@ const DataTable = ({
     if (singleRow !== undefined) {
       return [data[Math.min(singleRow, data.length - 1)]];
     } else {
-      return data.slice(0, 100);
+      return data.slice(0, DATA_TABLE_ROW_LIMIT);
     }
   };
 

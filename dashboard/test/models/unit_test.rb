@@ -2419,6 +2419,61 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.has_ai_chat_tools?
   end
 
+  test 'with_essential_us_only_ai_models returns only units holding a level that needs a US only model' do
+    us_only_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+
+    unit_with_us_only = create(:script, name: 'unit-with-us-only')
+    us_only_lesson = create(:lesson, :with_lesson_group, script: unit_with_us_only)
+    create(:script_level, script: unit_with_us_only, lesson: us_only_lesson, levels: [us_only_level])
+
+    unit_without_us_only = create(:script, name: 'unit-without-us-only')
+    openai_lesson = create(:lesson, :with_lesson_group, script: unit_without_us_only)
+    create(:script_level, script: unit_without_us_only, lesson: openai_lesson, levels: [openai_level])
+
+    result = Unit.with_essential_us_only_ai_models
+    assert_includes result, unit_with_us_only
+    refute_includes result, unit_without_us_only
+
+    # Both still count as AI chat units; only the model differs.
+    assert unit_without_us_only.has_ai_chat_tools?
+  end
+
+  test 'requires_inaccessible_ai_models? is only true for a restricted user on a unit that needs blocked models' do
+    teacher = create(:teacher)
+    gemini_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+    # AI Tutor has no per-level model, so it is always US only, but a unit that
+    # merely offers the tutor is still completable without it.
+    tutor_level = create(:level, properties: {'ai_tutor_available' => 'true'})
+
+    essential_us_only = create(:script, name: 'unit-essential-us-only')
+    create(:script_level, script: essential_us_only, lesson: create(:lesson, :with_lesson_group, script: essential_us_only), levels: [gemini_level])
+
+    essential_reachable = create(:script, name: 'unit-essential-reachable')
+    create(:script_level, script: essential_reachable, lesson: create(:lesson, :with_lesson_group, script: essential_reachable), levels: [openai_level])
+
+    optional_us_only = create(:script, name: 'unit-optional-us-only')
+    create(:script_level, script: optional_us_only, lesson: create(:lesson, :with_lesson_group, script: optional_us_only), levels: [tutor_level])
+
+    # The user can reach US only models, so nothing is blocked. The method also
+    # returns before querying the unit's levels, but stubbing Unit.where to
+    # prove that breaks unrelated teardown, so only the result is asserted.
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    refute essential_us_only.requires_inaccessible_ai_models?(teacher)
+
+    User.any_instance.unstub(:us_only_aichat_models_disabled?)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    assert essential_us_only.requires_inaccessible_ai_models?(teacher)
+    # Reachable models, so the unit is completable.
+    refute essential_reachable.requires_inaccessible_ai_models?(teacher)
+    # A blocked tutor is optional here, so the unit is still completable.
+    refute optional_us_only.requires_ai_chat_tools?
+    refute optional_us_only.requires_inaccessible_ai_models?(teacher)
+    # A signed out visitor has no restrictions to apply.
+    refute essential_us_only.requires_inaccessible_ai_models?(nil)
+  end
+
   describe '#title_for_display' do
     let(:numbered_units) {nil}
     let(:unit_group) {create(:unit_group, numbered_units: numbered_units)}
