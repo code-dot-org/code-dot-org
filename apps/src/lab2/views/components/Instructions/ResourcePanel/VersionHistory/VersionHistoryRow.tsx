@@ -13,7 +13,7 @@ import moduleStyles from './version-history-row.module.scss';
 
 interface VersionHistoryRowProps {
   versionId: string;
-  label?: string;
+  timestamp?: string;
   isLatest: boolean;
   isSelected: boolean;
   comment?: string;
@@ -35,7 +35,7 @@ const VersionHistoryRow: React.FunctionComponent<
   VersionHistoryRowProps & RestoreVersionButtonProps
 > = ({
   versionId,
-  label,
+  timestamp,
   isLatest,
   isSelected,
   comment,
@@ -49,11 +49,11 @@ const VersionHistoryRow: React.FunctionComponent<
   className,
   alwaysShowAutoSaves = false,
 }) => {
-  let title;
+  let label;
   if (isLatest) {
-    title = commonI18n.currentVersion();
+    label = commonI18n.currentVersion();
   } else if (versionId === INITIAL_VERSION_ID) {
-    title = lab2I18n.initialVersion();
+    label = lab2I18n.initialVersion();
   }
 
   let ariaLabel;
@@ -100,18 +100,20 @@ const VersionHistoryRow: React.FunctionComponent<
             className={moduleStyles.versionLabel}
             name={versionId}
             value={versionId}
-            label={title || label}
+            label={label || timestamp}
             onChange={onChange}
             checked={isSelected}
-ariaLabel={ariaLabel && label ? `${ariaLabel}, ${label}` : ariaLabel}
+            ariaLabel={
+              ariaLabel && timestamp ? `${ariaLabel}, ${timestamp}` : ariaLabel
+            }
             textThickness={isBoldtype ? 'thick' : 'thin'}
             disabled={disabled}
             size="s"
           >
-            {title && label && (
+            {label && timestamp && (
               <Typography variant="body3" component="span">
                 <span className={moduleStyles.separator}>{'·'}</span>
-                {label}
+                {timestamp}
               </Typography>
             )}
           </RadioButton>

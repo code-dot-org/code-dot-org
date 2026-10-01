@@ -473,7 +473,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const renderVersionRow = useCallback(
     (
       versionId: string,
-      label: string | undefined,
+      timestamp: string | undefined,
       isLatest: boolean,
       comment?: string,
       className?: string,
@@ -484,7 +484,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           className={className}
           key={versionId}
           versionId={versionId}
-          label={label}
+          timestamp={timestamp}
           comment={comment}
           isLatest={isLatest}
           isSelected={selectedVersion === versionId}
