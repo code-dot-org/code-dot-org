@@ -1,0 +1,253 @@
+import type {
+  Condition,
+  Lesson,
+  LessonGroup,
+  UnitLevel,
+  Sublevel,
+} from '@code-dot-org/core/api';
+
+import type {ProgressLevelTypes, TestResults} from './constants';
+import {LevelStatuses, ViewTypes} from './constants';
+
+export type TestResult = (typeof TestResults)[keyof typeof TestResults];
+export type LevelStatus = (typeof LevelStatuses)[keyof typeof LevelStatuses];
+
+// LevelResults is a map of levelId -> TestResult. TestResult is a number.
+export type LevelResults = {[key: number]: TestResult};
+
+export const ReviewStates = {
+  completed: 'completed',
+  keepWorking: 'keepWorking',
+  awaitingReview: 'awaitingReview',
+} as const;
+
+/**
+ * The schema for the unit progress as returned by our backend API.
+ */
+export interface UnitProgressDefinition {
+  // Absent for an unattempted level in a lockable lesson, which arrives as
+  // just {locked: true}.
+  status?: LevelStatus;
+  last_progress_at?: number;
+  locked?: boolean;
+  // null for an unattempted page.
+  pages_completed?: (TestResult | null)[] | null;
+  paired?: boolean;
+  result?: TestResult;
+  teacher_feedback_commented?: boolean;
+  teacher_feedback_review_state?: keyof typeof ReviewStates;
+  teacher_feedback_new?: boolean;
+  time_spent?: number;
+}
+
+export interface UnitProgress {
+  lastTimestamp: number | undefined;
+  locked: boolean;
+  pages?: UnitProgress[];
+  paired: boolean;
+  result: TestResult;
+  status: LevelStatus;
+  teacherFeedbackCommented: boolean;
+  teacherFeedbackReviewState: keyof typeof ReviewStates | undefined;
+  teacherFeedbackNew: boolean;
+  timeSpent: number | undefined;
+}
+
+export interface NumberedLevelFields {
+  ids: number[];
+  activeId: number;
+  levelNumber: number;
+  isCurrentLevel: boolean;
+  sublevels?: NumberedLevel[];
+  bubbleText?: string;
+  scriptLevelId?: number;
+  parentLevelId?: number;
+  isUnplugged?: boolean;
+  // TODO: these are user_progress API return values. replace them with something in core/api
+  status?: LevelStatus;
+  paired?: boolean;
+  isLocked?: boolean;
+  timeSpent?: number;
+  teacherFeedbackReviewState?: string;
+  teacherFeedbackNew?: boolean;
+  teacherFeedbackCommented?: boolean;
+  lastTimestamp?: number;
+  pages?: UnitProgress[];
+}
+
+export type NumberedSublevel = Sublevel & NumberedLevelFields;
+
+export type NumberedLevel =
+  | (UnitLevel & NumberedLevelFields)
+  | NumberedSublevel;
+
+export interface ProgressState {
+  currentLevelId?: number;
+  currentLessonId?: number;
+  standaloneProjectType?: string;
+  deeperLearningCourse?: boolean;
+  saveAnswersBeforeNavigation?: boolean;
+  lessons?: Lesson[];
+  lessonGroups?: LessonGroup[];
+  scriptId?: number;
+  viewAsUserId?: number;
+  scriptName?: string;
+  scriptDisplayName?: string;
+  unitTitle?: string;
+  courseId?: number;
+  // The course's name, which Lab2 uses to load teacher-facing rubrics.
+  courseName?: string;
+  isLessonExtras: boolean;
+  unitProgress: {
+    [key: number]: UnitProgress;
+  };
+  unitProgressHasLoaded: boolean;
+  levelResults: LevelResults;
+  focusAreaLessonIds: number[];
+  peerReviewLessonInfo?: PeerReviewLessonInfo;
+  peerReviewsPerformed: PeerReviewSummary[];
+  postMilestoneDisabled: boolean;
+  isAge13Required: boolean;
+  studentDefaultsSummaryView: boolean;
+  isSummaryView: boolean;
+  isMiniView: boolean;
+  hasFullProgress: boolean;
+  lessonExtrasEnabled: boolean;
+  usingDbProgress: boolean;
+  currentPageNumber: number;
+  courseVersionId?: number;
+  unitDescription?: string;
+  unitStudentDescription?: string;
+  unitHasUnnumberedLessons: boolean;
+  changeFocusAreaPath?: string;
+  unitCompleted?: boolean;
+  validationState: ValidationState;
+}
+
+export interface InitProgressPayload {
+  currentLevelId?: number;
+  standaloneProjectType?: string;
+  deeperLearningCourse: boolean;
+  saveAnswersBeforeNavigation?: boolean;
+  lessons: Lesson[];
+  lessonGroups?: LessonGroup[];
+  scriptId?: number;
+  scriptName?: string;
+  scriptDisplayName?: string;
+  unitTitle?: string;
+  unitDescription?: string;
+  unitStudentDescription: string;
+  unitHasUnnumberedLessons: boolean;
+  courseId?: number;
+  courseName?: string;
+  courseVersionId?: number;
+  isLessonExtras: boolean;
+  peerReviewLessonInfo?: PeerReviewLessonInfo;
+  isFullProgress: boolean;
+  currentPageNumber: number;
+}
+
+export interface PeerReviewSummary {
+  status: string;
+  name: string;
+  result: string;
+  icon: string;
+  locked: boolean;
+}
+
+export interface PeerReviewLevelInfo {
+  id: number;
+  kind: string;
+  title: string;
+  url: string;
+  name: string;
+  icon: string;
+  locked: boolean;
+  status?: string;
+}
+
+export interface PeerReviewLessonInfo {
+  name: string;
+  lesson_group_display_name: string;
+  levels: PeerReviewLevelInfo[];
+  lockable: boolean;
+}
+
+export type ViewType = (typeof ViewTypes)[keyof typeof ViewTypes];
+
+// A level's validations and their conditions, as core parses them from the
+// level properties.
+export type {Condition, Validation} from '@code-dot-org/core/api';
+
+// Abstract class that validates a set of conditions. How
+// the validation works is up to the implementor.
+export abstract class Validator {
+  abstract shouldCheckConditions(): boolean;
+  abstract shouldCheckNextConditionsOnly(): boolean;
+  abstract checkConditions(): void;
+  abstract conditionsMet(conditions: Condition[]): boolean;
+  // isChangingLevels is false when the user re-runs code on the same level.
+  abstract clear(isChangingLevels?: boolean): void;
+  abstract getValidationResults(): ValidationResult[] | undefined;
+  didPassExemplarValidation(): boolean {
+    return false;
+  }
+}
+
+// The current progress validation state.
+export interface ValidationState {
+  hasConditions: boolean;
+  satisfied: boolean;
+  message: string | null;
+  callout?: string;
+  index: number;
+  validationResults?: ValidationResult[];
+}
+
+export interface ValidationResult {
+  message: string;
+  result: TestStatus;
+}
+
+// Test results for upper-grade labs (labs that use levelbuilder-written unit tests for validation)
+export type TestStatus =
+  | 'PASS'
+  | 'FAIL'
+  | 'SKIP'
+  | 'ERROR'
+  | 'PENDING'
+  | 'EXPECTED_FAILURE'
+  | 'UNEXPECTED_SUCCESS';
+
+// Exemplar settings for a level, as core parses them; the server omits the
+// messages when none are configured.
+export type {ExemplarSettings} from '@code-dot-org/core/api';
+
+export interface OptionalMilestoneData {
+  program?: string;
+  submitted?: boolean;
+}
+
+export type ProgressLevelType =
+  (typeof ProgressLevelTypes)[keyof typeof ProgressLevelTypes];
+
+/**
+ * The body of GET /api/user_progress/:script. A signed-out user gets only
+ * `signedIn: false`.
+ */
+export interface UserProgressResponse {
+  signedIn?: boolean;
+  teacherViewingStudent?: boolean;
+  disableSocialShare?: boolean;
+  lockableAuthorized?: boolean;
+  isTeacher?: boolean;
+  isInstructor?: boolean;
+  isVerifiedInstructor?: boolean;
+  deeperLearningCourse?: boolean;
+  focusAreaLessonIds?: number[];
+  changeFocusAreaPath?: string;
+  completed?: boolean;
+  progress?: {[levelId: number]: UnitProgressDefinition};
+  peerReviewsPerformed?: PeerReviewLevelInfo[];
+  current_lesson?: number;
+}

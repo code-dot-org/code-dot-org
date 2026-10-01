@@ -64,4 +64,51 @@ describe('createActivitiesApi', () => {
       }),
     );
   });
+
+  it('sends the Lab2 fields and course_id when given', async () => {
+    const transport = mockTransport();
+    const api = createActivitiesApi(transport);
+
+    await api.reportMilestone({
+      userId: 0,
+      scriptLevelId: 102,
+      levelId: 323,
+      result: true,
+      testResult: 1000,
+      app: 'music',
+      program: 'my answer',
+      submitted: true,
+      timeSinceLastMilestone: 90_000,
+      courseId: 17,
+    });
+
+    expect(transport.request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/milestone/0/102/323',
+      query: {course_id: 17},
+      body: {
+        result: 'true',
+        testResult: 1000,
+        app: 'music',
+        program: 'my answer',
+        submitted: 'true',
+        timeSinceLastMilestone: 90_000,
+      },
+    });
+  });
+
+  it('sends submitted false as the string the server compares against', async () => {
+    const transport = mockTransport();
+    const api = createActivitiesApi(transport);
+
+    await api.reportMilestone({
+      userId: 0,
+      scriptLevelId: 102,
+      levelId: 323,
+      result: true,
+      submitted: false,
+    });
+
+    expect(transport.request.mock.calls[0][0].body.submitted).toBe('false');
+  });
 });

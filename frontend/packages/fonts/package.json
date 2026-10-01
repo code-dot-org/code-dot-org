@@ -86,6 +86,7 @@
     "@fontsource/noto-sans-tc": "^5.1.1",
     "@fontsource/roboto-mono": "^5.2.6",
     "@fontsource/space-grotesk": "^5.3.0",
+    "eslint": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
     "sass": "catalog:",

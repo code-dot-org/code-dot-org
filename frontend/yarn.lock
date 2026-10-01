@@ -1803,6 +1803,7 @@ __metadata:
     classnames: "catalog:"
     clean-package: "npm:^2.2.0"
     esbuild-sass-plugin: "npm:^3.3.1"
+    eslint: "catalog:"
     eslint-plugin-storybook: "npm:^10.1.7"
     glob: "npm:^11.1.0"
     globals: "catalog:"
@@ -1933,6 +1934,7 @@ __metadata:
     "@vitest/coverage-v8": "catalog:"
     axe-playwright: "npm:^2.0.3"
     concurrently: "npm:^9.1.0"
+    eslint: "catalog:"
     globals: "catalog:"
     http-server: "npm:^14.1.1"
     playwright: "catalog:"
@@ -1996,6 +1998,7 @@ __metadata:
     "@fontsource/noto-sans-tc": "npm:^5.1.1"
     "@fontsource/roboto-mono": "npm:^5.2.6"
     "@fontsource/space-grotesk": "npm:^5.3.0"
+    eslint: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"
     sass: "catalog:"
@@ -2260,6 +2263,37 @@ __metadata:
     playwright: 1.59.1
   bin:
     prove-visual: ./bin/prove-visual.mjs
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/progress@workspace:packages/progress":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/progress@workspace:packages/progress"
+  dependencies:
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/users": "workspace:*"
+    "@reduxjs/toolkit": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
+    eslint-plugin-react-refresh: "catalog:"
+    jsdom: "catalog:"
+    lodash: "npm:^4.17.21"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    react-redux: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    "@reduxjs/toolkit": ^2.8.2
+    react: ^18.0.0 || ^19.0.0
+    react-redux: ^9.2.0
   languageName: unknown
   linkType: soft
 
