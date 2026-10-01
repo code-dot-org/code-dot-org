@@ -25,6 +25,11 @@ not by where its file happens to sit:
 Levels are matched on the level name rather than the filename because the two
 differ: the DSL file defining `UI Test Foo` is `ui_test_foo.multi`.
 
+A third tree, under `dashboard/config/standalone_projects`, holds the levels
+behind `/projects/<key>` and is selected by its own name rules (`New ...
+Project`, `... Subproject`); see the README there. A name may match only one
+tree's rule.
+
 A name prefix rather than a level property, because the partition has to be
 decidable from a bare string: the seed checks a unit's level references as
 serialized keys, before the rows joining unit to level exist, and a definition
@@ -45,15 +50,21 @@ enforced in the models:
   child, may not be renamed across the boundary, since that would move its
   definition file between the trees or split it from its relatives.
 
-`grep -r ui_test_name? dashboard` finds every enforcement point.
+The second and third rules hold between all three partitions, the standalone
+project tree included, by comparing the trees two names select
+(`Policies::LevelFiles.same_tree?`). The first applies only here, since units
+exist only in production and UI test.
+
+`grep -r -e ui_test_name? -e same_tree? dashboard` finds every enforcement
+point.
 
 ## Seeding
 
 `rake seed:ui_test` seeds this tree, and is the default seed in the test
 environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`.
-It seeds both UI test levels, needed by ui-test- units, and production levels,
-which are currently needed in order to back standalone projects in the test
-environment on urls like https://test-studio.code.org/projects/applab/
+It seeds UI test levels, needed by ui-test- units, standalone project levels,
+which back urls like https://test-studio.code.org/projects/applab/, and, for
+now, production levels.
 
 ## Cached units
 
