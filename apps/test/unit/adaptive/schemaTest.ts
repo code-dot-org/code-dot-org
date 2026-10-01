@@ -183,6 +183,19 @@ describe('parsePathway', () => {
     expect(pathway.project.levelProperties?.appName).toBe('weblab2');
   });
 
+  it('coerces string booleans in inlined level properties', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    Object.assign(build.levelProperties!, {hideShareAndRemix: 'false'});
+    Object.assign(raw.project.levelProperties!, {hideShareAndRemix: 'true'});
+    const pathway = parsePathway(raw);
+    const step = pathway.checkpoints[1].steps[0];
+    if (step.kind !== 'level') throw new Error('fixture changed');
+    expect(step.levelProperties?.hideShareAndRemix).toBe(false);
+    expect(pathway.project.levelProperties?.hideShareAndRemix).toBe(true);
+  });
+
   it('accepts a level step the server could not resolve', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];

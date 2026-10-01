@@ -1,6 +1,10 @@
 import {
+  addReaction,
   ChallengeResponse,
   ChallengeResponseDetail,
+  getChallengeResponse,
+  getUnitCounts,
+  listChallengeResponses,
   TutorGalleryData,
 } from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
@@ -8,23 +12,27 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
-import {addReaction} from '@cdo/apps/aiTutor/views/gallery/reactionsApi';
 import experiments from '@cdo/apps/util/experiments';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {fetchJson: jest.fn()},
-}));
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
 
-jest.mock('@cdo/apps/aiTutor/views/gallery/reactionsApi', () => ({
-  __esModule: true,
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
   addReaction: jest.fn(),
-  removeReaction: jest.fn(),
+  getChallengeResponse: jest.fn(),
+  getUnitCounts: jest.fn(),
+  listChallengeResponses: jest.fn(),
 }));
 
-const fetchJson = HttpClient.fetchJson as jest.Mock;
+const mockList = listChallengeResponses as jest.Mock;
+const mockUnitCounts = getUnitCounts as jest.Mock;
+const mockDetail = getChallengeResponse as jest.Mock;
 const mockAddReaction = addReaction as jest.Mock;
+const listParams = () =>
+  mockList.mock.calls.map(([, params]) => params.toString());
 
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
@@ -85,11 +93,8 @@ const stubFetches = (
   responses: ChallengeResponse[],
   counts: Record<string, number> = {}
 ) => {
-  fetchJson.mockImplementation((url: string) =>
-    url.includes('unit_counts')
-      ? Promise.resolve({value: counts})
-      : Promise.resolve({value: responses})
-  );
+  mockList.mockResolvedValue(responses);
+  mockUnitCounts.mockResolvedValue(counts);
 };
 
 const whiteboardDetail: ChallengeResponseDetail = {
@@ -103,7 +108,9 @@ const whiteboardDetail: ChallengeResponseDetail = {
 
 describe('ChallengeGallery', () => {
   beforeEach(() => {
-    fetchJson.mockReset();
+    mockList.mockReset();
+    mockUnitCounts.mockReset();
+    mockDetail.mockReset();
     mockAddReaction.mockReset();
     experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
     // Project navigation pushes ?project=<id>; start each test off a
@@ -123,11 +130,7 @@ describe('ChallengeGallery', () => {
     await waitFor(() =>
       expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses?unit_id=100&section_id=5',
-      {},
-      expect.any(Function)
-    );
+    expect(listParams()).toContain('unit_id=100&section_id=5');
 
     // Grouped into the two design sections.
     expect(screen.getByText('Video Projects')).toBeInTheDocument();
@@ -161,11 +164,7 @@ describe('ChallengeGallery', () => {
     );
 
     await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=200&section_id=5',
-        {},
-        expect.any(Function)
-      )
+      expect(listParams()).toContain('unit_id=200&section_id=5')
     );
   });
 
@@ -182,11 +181,7 @@ describe('ChallengeGallery', () => {
     });
 
     await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=100&section_id=5&sort=oldest',
-        {},
-        expect.any(Function)
-      )
+      expect(listParams()).toContain('unit_id=100&section_id=5&sort=oldest')
     );
   });
 
@@ -202,13 +197,7 @@ describe('ChallengeGallery', () => {
       target: {value: 'mine'},
     });
 
-    await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=100',
-        {},
-        expect.any(Function)
-      )
-    );
+    await waitFor(() => expect(listParams()).toContain('unit_id=100'));
     expect(screen.getByText('My Projects')).toBeInTheDocument();
   });
 
@@ -219,13 +208,7 @@ describe('ChallengeGallery', () => {
       <ChallengeGallery tutorGalleryData={{...galleryData, sections: []}} />
     );
 
-    await waitFor(() =>
-      expect(fetchJson).toHaveBeenCalledWith(
-        '/challenge_responses?unit_id=100',
-        {},
-        expect.any(Function)
-      )
-    );
+    await waitFor(() => expect(listParams()).toContain('unit_id=100'));
     expect(screen.getByText('My Projects')).toBeInTheDocument();
   });
 
@@ -242,7 +225,8 @@ describe('ChallengeGallery', () => {
   });
 
   it('shows an error message when the fetch fails', async () => {
-    fetchJson.mockRejectedValue(new Error('network'));
+    mockList.mockRejectedValue(new Error('network'));
+    mockUnitCounts.mockRejectedValue(new Error('network'));
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
 
@@ -259,15 +243,9 @@ describe('ChallengeGallery', () => {
       viewer_role: 'peer',
       question: 'Draw a network.',
     };
-    fetchJson.mockImplementation((url: string) => {
-      if (url.startsWith('/challenge_responses/')) {
-        return Promise.resolve({value: detail});
-      }
-      if (url.includes('unit_counts')) {
-        return Promise.resolve({value: {}});
-      }
-      return Promise.resolve({value: [videoResponse, whiteboardResponse]});
-    });
+    mockDetail.mockResolvedValue(detail);
+    mockUnitCounts.mockResolvedValue({});
+    mockList.mockResolvedValue([videoResponse, whiteboardResponse]);
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
@@ -282,11 +260,7 @@ describe('ChallengeGallery', () => {
         screen.getByText('Project Prompt: Draw a network.')
       ).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses/8',
-      {},
-      expect.any(Function)
-    );
+    expect(mockDetail).toHaveBeenCalledWith(expect.anything(), 8);
 
     fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
 
@@ -297,15 +271,9 @@ describe('ChallengeGallery', () => {
   });
 
   it('keeps a reaction made on the project page when returning to the gallery', async () => {
-    fetchJson.mockImplementation((url: string) => {
-      if (url.startsWith('/challenge_responses/')) {
-        return Promise.resolve({value: whiteboardDetail});
-      }
-      if (url.includes('unit_counts')) {
-        return Promise.resolve({value: {}});
-      }
-      return Promise.resolve({value: [whiteboardResponse]});
-    });
+    mockDetail.mockResolvedValue(whiteboardDetail);
+    mockUnitCounts.mockResolvedValue({});
+    mockList.mockResolvedValue([whiteboardResponse]);
     mockAddReaction.mockResolvedValue([
       {emoji: 'heart', count: 1, reacted: true},
     ]);
@@ -324,7 +292,7 @@ describe('ChallengeGallery', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
-    expect(mockAddReaction).toHaveBeenCalledWith(8, 'heart');
+    expect(mockAddReaction).toHaveBeenCalledWith(expect.anything(), 8, 'heart');
 
     // Back on the gallery, the card carries the reaction made on the project
     // page rather than the stale empty list from the initial fetch. The card

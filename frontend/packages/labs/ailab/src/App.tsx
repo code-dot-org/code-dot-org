@@ -19,7 +19,6 @@ import type {
   SaveResponseData,
   SaveTrainedModel,
 } from './types';
-import ColumnInspector from './UIComponents/ColumnInspector';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import GenerateResults from './UIComponents/GenerateResults';
@@ -29,6 +28,7 @@ import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
 import TrainModel from './UIComponents/TrainModel';
+import TrainPanel from './UIComponents/TrainPanel';
 
 import styles from './app.module.scss';
 
@@ -158,10 +158,15 @@ const PanelButtons = ({
 
 interface BodyContainerProps {
   children: ReactNode;
+  flush?: boolean;
 }
 
-const BodyContainer = ({children}: BodyContainerProps) => {
-  return <div className={styles.body}>{children}</div>;
+const BodyContainer = ({children, flush}: BodyContainerProps) => {
+  return (
+    <div className={classNames(styles.body, {[styles.flushBody]: flush})}>
+      {children}
+    </div>
+  );
 };
 
 interface ContainerLeftProps {
@@ -250,13 +255,13 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
-        <BodyContainer>
+        <BodyContainer flush>
           <ContainerLeft>
             <DataDisplay />
           </ContainerLeft>
 
           <ContainerRight>
-            <ColumnInspector />
+            <TrainPanel />
           </ContainerRight>
         </BodyContainer>
       )}

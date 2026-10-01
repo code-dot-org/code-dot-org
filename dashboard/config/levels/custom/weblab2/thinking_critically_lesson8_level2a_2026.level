@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Photogram Post",
-    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "long_instructions": "## Sample Photogram Post\r\n\r\n1. Examine the sample Photogram Post to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
     "bubble_choice_description": "A photo posted recently to Photogram",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -62,6 +62,6 @@
     },
     "thumbnail_url": "https://images.code.org/719d74eb27c20d9668149746284a701d-one.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-28 15:59:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:01:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:02:11 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-28 15:59:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:01:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:02:11 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 17:46:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 17:49:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

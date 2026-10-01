@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-30 06:06:46 UTC",
+    "serialized_at": "2026-10-01 05:55:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -154,12 +154,27 @@
       }
     },
     {
-      "key": "lesson-14",
-      "name": "Lesson 12: Generative AI and LLMs",
+      "key": "lesson-25",
+      "name": "Lesson 10: Color Images",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Lesson 12: Generative AI and LLMs",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -171,10 +186,10 @@
     {
       "key": "lesson-20",
       "name": "Lesson 13: Automate or Augment?",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -186,10 +201,10 @@
     {
       "key": "lesson-21",
       "name": "Lesson 14: Trustworthy AI: Transparency and Maintenance",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -201,10 +216,10 @@
     {
       "key": "lesson-1",
       "name": "Lesson 19: Intro to Programming - Day 1",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -216,10 +231,10 @@
     {
       "key": "lesson-2",
       "name": "Lesson 20: Intro to Programming - Day 2",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -231,10 +246,10 @@
     {
       "key": "lesson-4",
       "name": "Lesson 21: Variables - Day 1",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -246,10 +261,10 @@
     {
       "key": "lesson-5",
       "name": "Lesson 22: Variables - Day 2",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -261,10 +276,10 @@
     {
       "key": "lesson-6",
       "name": "Lesson 23: Variables - Day 3",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -276,10 +291,10 @@
     {
       "key": "lesson-7",
       "name": "Lesson 24: Strings - Day 1",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -291,10 +306,10 @@
     {
       "key": "lesson-8",
       "name": "Lesson 25: Strings - Day 2",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -306,10 +321,10 @@
     {
       "key": "lesson-9",
       "name": "Lesson 26: Expressions and Operators - Day 1",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -321,10 +336,10 @@
     {
       "key": "lesson-10",
       "name": "Lesson 27: Expressions and Operators - Day 2",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -336,10 +351,10 @@
     {
       "key": "lesson-11",
       "name": "Lesson 28: Random Values - Day 1",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
@@ -351,10 +366,10 @@
     {
       "key": "lesson-12",
       "name": "Lesson 29: Random Values - Day 2",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
       },
       "seeding_key": {
@@ -366,10 +381,10 @@
     {
       "key": "lesson-13",
       "name": "Lesson 30: Project - Wrapped",
-      "absolute_position": 23,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
       },
       "seeding_key": {

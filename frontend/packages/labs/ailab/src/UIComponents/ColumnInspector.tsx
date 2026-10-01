@@ -8,14 +8,12 @@ import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getCurrentColumnDetails} from '../selectors/currentColumnSelectors';
 
-import AddFeatureButton from './AddFeatureButton';
 import ColumnDataTypeDropdown from './ColumnDataTypeDropdown';
 import ColumnDetailsCategorical from './ColumnDetailsCategorical';
 import ColumnDetailsNumerical from './ColumnDetailsNumerical';
 import CrossTab from './CrossTab';
 import ScatterPlot from './ScatterPlot';
 import ScrollableContent from './ScrollableContent';
-import SelectLabelButton from './SelectLabelButton';
 import UniqueOptionsWarning from './UniqueOptionsWarning';
 
 import shared from '../shared.module.scss';
@@ -27,7 +25,6 @@ const ColumnInspector = () => {
     state => state.metadata && state.metadata.name,
   );
   const selectingFeatures = currentPanel === 'dataDisplayFeatures';
-  const selectingLabel = currentPanel === 'dataDisplayLabel';
 
   const isCategorical =
     currentColumnDetails &&
@@ -84,12 +81,6 @@ const ColumnInspector = () => {
           {isCategorical && <ColumnDetailsCategorical />}
           {isNumerical && <ColumnDetailsNumerical />}
         </ScrollableContent>
-        {selectingLabel && currentColumnDetails.isSelectable && (
-          <SelectLabelButton column={currentColumnDetails.id} />
-        )}
-        {selectingFeatures && currentColumnDetails.isSelectable && (
-          <AddFeatureButton column={currentColumnDetails.id} />
-        )}
         <UniqueOptionsWarning />
       </div>
     )

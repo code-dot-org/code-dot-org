@@ -3893,6 +3893,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/ailab@portal:../frontend/packages/labs/ailab/::locator=blockly-mooc%40workspace%3A."
   peerDependencies:
+    "@code-dot-org/component-library": "*"
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
     react: ^18.3.1 || ^19.0.0
     react-dom: ^18.3.1 || ^19.0.0
     react-redux: ^8.1.3 || ^9.0.0

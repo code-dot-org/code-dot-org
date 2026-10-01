@@ -51,6 +51,7 @@ export interface Section {
   avatar_color?: number | null;
   avatar_emoji?: number | null;
   assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
+  assignedRequiredInaccessibleAiModels?: boolean;
   aiChatAccessLevel?: AiChatAccessLevel;
 }
 

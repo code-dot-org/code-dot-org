@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
+import RequiresInaccessibleAiModelsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresInaccessibleAiModelsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -72,6 +73,7 @@ class UnitOverview extends React.Component {
     aiChatToolsDependency: PropTypes.oneOf(
       Object.values(AiChatToolsDependency)
     ),
+    unitRequiresInaccessibleAiModels: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -162,6 +164,7 @@ class UnitOverview extends React.Component {
       showAiAssessmentsAnnouncement,
       isOnTeacherDashboard = false,
       aiChatToolsDependency,
+      unitRequiresInaccessibleAiModels,
     } = this.props;
 
     const displayRedirectDialog =
@@ -221,6 +224,10 @@ class UnitOverview extends React.Component {
               isMigrated={isMigrated}
               aiChatToolsDependency={aiChatToolsDependency}
             />
+            {viewAs === ViewType.Instructor &&
+              unitRequiresInaccessibleAiModels && (
+                <RequiresInaccessibleAiModelsAlert subject="unit" />
+              )}
             {viewAs === ViewType.Instructor &&
               aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
                 <RequiresAiChatToolsAlert />

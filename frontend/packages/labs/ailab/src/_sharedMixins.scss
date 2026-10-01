@@ -1,0 +1,19 @@
+// Shared by side-by-side panels so their layout and header rows line up.
+@mixin panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-family-main);
+}
+
+@mixin panel-header {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  margin: 0;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  background-color: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
