@@ -782,7 +782,10 @@ Do, in order:
    rendered geometry.
 5. Codemod, if the plan requires it: ${CODEMODS_DIR}/${component}-to-mui.ts modeled on
    button-to-mui-button.ts implementing exactly the planned transforms, and an entry in
-   ${CODEMODS_DIR}/README.md with the full command to run it. No ${LIB}/package.json
+   ${CODEMODS_DIR}/README.md shaped like the button entry: one or two sentences, at most
+   four one-line bullets, and the command with a <path> placeholder, never hard-coded
+   paths. Import-shape rules and caveats go in the codemod's header comment and the
+   plan doc, not the README. No ${LIB}/package.json
    script: a codemod runs once per migration. Run it as TS_NODE_TRANSPILE_ONLY=true yarn
    jscodeshift -t <file> --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register,
    and have the transform pick the ts parser for .ts files (api.jscodeshift.withParser),
@@ -792,7 +795,8 @@ Do, in order:
    --dry only: reverting a real run would need git checkout, which is forbidden here.
 6. Docs planned for this phase: @deprecated JSDoc on the legacy component naming the
    replacement; ${COMPONENT_DIR}/README.md documenting the MUI version first and the legacy
-   path as deprecated, with the prop map; the component's row in ${STATUS_DOC} set to In
+   path as deprecated, with the prop map, and pointing at the codemod's README entry
+   rather than repeating its command; the component's row in ${STATUS_DOC} set to In
    Progress with the override file; the STYLE_OVERRIDES block there if you registered an
    override. Write every departure from the plan into the Deviations section of ${PLAN_DOC}.
 7. Checks, from ${LIB} unless noted: yarn test; yarn typecheck; ../../node_modules/.bin/eslint .;
