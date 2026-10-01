@@ -16,7 +16,7 @@ import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
-import useQuizAttempt from './useQuizAttempt';
+import useQuizAttempt, {QuizAttemptSource} from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
 
@@ -34,6 +34,11 @@ export interface QuizAttemptWorkspaceProps {
   timeLimitMinutes?: number;
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
+  /** Replaces the quiz server; the caller then owns progress reporting. */
+  attemptSource?: QuizAttemptSource;
+  /** Replaces reporting and moving to the next level from the results. */
+  onNextLevel?: () => void;
+  nextLevelLabel?: string;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -50,8 +55,16 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   timeLimitMinutes,
   showIntroScreen,
   showCorrectness,
+  attemptSource,
+  onNextLevel,
+  nextLevelLabel,
 }) => {
   const dispatch = useAppDispatch();
+  // Always called so hook order is fixed; with no unit it sends nothing.
+  const serverAttempt = useQuizAttempt({
+    levelId,
+    unitId: attemptSource ? undefined : unitId,
+  });
   const {
     attempt,
     isLoading,
@@ -59,10 +72,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     beginAttempt,
     finishAttempt,
     submitQuestionResponse,
-  } = useQuizAttempt({
-    levelId,
-    unitId,
-  });
+  } = attemptSource ?? serverAttempt;
+  const canAttempt = !!attemptSource || !!unitId;
 
   // currentPageNumber is a 1-based position into this list, not a raw page value.
   const pageNumbers = Array.from(new Set(quizQuestions.map(q => q.page))).sort(
@@ -107,7 +118,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   }, [attempt?.id, attempt?.questionResultsInProgress]);
 
   const isAttemptInProgress =
-    !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
+    !isLoading && canAttempt && !!attempt && !attempt.submittedAt;
   const isIntroOpen =
     toBool(showIntroScreen) &&
     (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
@@ -143,7 +154,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     const requestLevelId = levelId;
     try {
       await beginAttempt();
-      if (currentLevelKeyRef.current === requestLevelId) {
+      if (!attemptSource && currentLevelKeyRef.current === requestLevelId) {
         dispatch(sendStartedReportIfNotStarted(appName));
       }
     } catch {
@@ -164,6 +175,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     const requestLevelId = levelId;
     try {
       await finishAttempt(responsesByQuestionId);
+      if (attemptSource) return;
       pendingReportRef.current = Promise.resolve(
         dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName))
       );
@@ -181,6 +193,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   };
 
   const handleNextLevel = async () => {
+    if (onNextLevel) {
+      onNextLevel();
+      return;
+    }
     await pendingReportRef.current;
     dispatch(navigateToNextLevel());
   };
@@ -188,12 +204,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // A quiz with no intro screen has no click-through step - start the
   // attempt automatically once the initial check finds there isn't one yet.
   useEffect(() => {
-    if (!isLoading && !!unitId && hasNoAttemptYet && !showIntroScreen) {
+    if (!isLoading && canAttempt && hasNoAttemptYet && !showIntroScreen) {
       beginAttempt().catch(() => {
         // Already recorded as a user-facing error in useQuizAttempt.
       });
     }
-  }, [isLoading, unitId, hasNoAttemptYet, showIntroScreen, beginAttempt]);
+  }, [isLoading, canAttempt, hasNoAttemptYet, showIntroScreen, beginAttempt]);
 
   const handleSelectChoice = (questionId: number, choiceId: string) => {
     const previousChoiceId = selectedChoicesByQuestionId[questionId];
@@ -254,7 +270,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
         )}
         {isLoading ? (
           <Typography variant="body2">Loading…</Typography>
-        ) : !unitId ? (
+        ) : !canAttempt ? (
           // Reachable via /levels/:id, which levelbuilder uses to preview
           // a level outside any unit.
           <Typography variant="body2">
@@ -299,6 +315,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               submittedAt={attempt.submittedAt}
               onTryAgain={handleRetake}
               onNextLevel={handleNextLevel}
+              nextLevelLabel={nextLevelLabel}
             />
           </div>
         ) : (

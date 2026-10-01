@@ -18,6 +18,7 @@ export interface ResultsCardProps {
   submittedAt: string;
   onTryAgain: () => void;
   onNextLevel: () => void;
+  nextLevelLabel?: string;
 }
 
 // Shown once an attempt is submitted.
@@ -33,6 +34,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
   submittedAt,
   onTryAgain,
   onNextLevel,
+  nextLevelLabel = 'Next level',
 }) => {
   const percentage = maxScore
     ? Math.round(((score ?? 0) / maxScore) * 100)
@@ -108,7 +110,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
               endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
               onClick={onNextLevel}
             >
-              Next level
+              {nextLevelLabel}
             </MuiButton>
           </div>
         </>
