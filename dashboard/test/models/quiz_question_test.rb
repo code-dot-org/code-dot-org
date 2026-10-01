@@ -105,11 +105,11 @@ class QuizQuestionTest < ActiveSupport::TestCase
     refute_includes file_contents, 'because'
   end
 
-  test "formatted_for_file's encryptedContent decrypts back to content and explanation" do
+  test "formatted_for_file's encrypted_content decrypts back to content and explanation" do
     question = create(:multiple_choice_question, explanation: 'because')
 
     parsed = JSON.parse(question.formatted_for_file)
-    decrypted = Encryption.decrypt_object(parsed['encryptedContent'])
+    decrypted = Encryption.decrypt_object(parsed['encrypted_content'])
 
     assert_equal question.content, decrypted['content']
     assert_equal question.explanation, decrypted['explanation']
@@ -147,7 +147,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
           'key' => key,
           'type' => 'MultipleChoiceQuestion',
           'name' => 'seeded_question',
-          'encryptedContent' => Encryption.encrypt_object(
+          'encrypted_content' => Encryption.encrypt_object(
             'content' => {'stem' => 'stem', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
             'explanation' => 'an explanation'
           )
@@ -175,7 +175,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
             'key' => key,
             'type' => 'MultipleChoiceQuestion',
             'name' => name,
-            'encryptedContent' => Encryption.encrypt_object(
+            'encrypted_content' => Encryption.encrypt_object(
               'content' => {'stem' => 'stem', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
               'explanation' => ''
             )

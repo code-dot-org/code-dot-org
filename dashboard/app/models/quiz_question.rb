@@ -45,7 +45,7 @@ class QuizQuestion < ApplicationRecord
         source = JSON.parse(File.read(path))
         question = source['type'].constantize.find_or_initialize_by(key: source['key'])
         question.name = source['name']
-        decrypted = Encryption.decrypt_object(source['encryptedContent'])
+        decrypted = Encryption.decrypt_object(source['encrypted_content'])
         question.content = decrypted['content']
         question.explanation = decrypted['explanation']
         question.save! if question.changed?
@@ -60,7 +60,7 @@ class QuizQuestion < ApplicationRecord
       'key' => key,
       'type' => type,
       'name' => name,
-      'encryptedContent' => Encryption.encrypt_object('content' => content, 'explanation' => explanation)
+      'encrypted_content' => Encryption.encrypt_object('content' => content, 'explanation' => explanation)
     )
   end
 
