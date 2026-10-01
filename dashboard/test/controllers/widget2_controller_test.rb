@@ -100,7 +100,8 @@ class Widget2ControllerTest < ActionController::TestCase
 
   test 'levelbuilder is sent to the editor for a new widget2' do
     sign_in @levelbuilder
-    level = create(:weblab2, name: 'New Web Lab 2 Project')
+    # Seeded by seed:standalone_project_levels.
+    level = Level.find_by_name!('New Web Lab 2 Project')
 
     post :new, params: {id: 'mywidget'}
     assert_redirected_to "/levels/#{level.id}/edit_blocks/widget2_sources?widget2=mywidget"
