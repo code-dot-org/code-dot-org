@@ -39,6 +39,8 @@ export type LabFixture = {
   levelProperties?: LevelPropertiesMap;
   appOptions?: AppOptions;
   theme?: UserThemeSettings | null;
+  /** Further endpoints the scenario answers, ahead of the default handlers. */
+  routes?: MockRoute[];
 };
 
 /** All scenarios for a lab, keyed by tag (e.g. `simple`, `complex`, `error`). */
@@ -99,7 +101,7 @@ function withStartSources(fixture: LabFixture): LevelPropertiesMap {
 
 /** Routes for the read-only slices of one scenario's fixture. */
 function readOnlyRoutes(fixture: LabFixture): MockRoute[] {
-  const routes: MockRoute[] = [];
+  const routes: MockRoute[] = [...(fixture.routes ?? [])];
 
   if (fixture.levelProperties) {
     const body = withStartSources(fixture);
