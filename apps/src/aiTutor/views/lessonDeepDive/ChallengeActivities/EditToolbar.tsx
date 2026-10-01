@@ -278,7 +278,7 @@ const EditToolbar: FC<EditToolbarProps> = ({
           />
           <ToolButton
             label="Stickers"
-            iconName="badge"
+            iconName="face-smile"
             pressed={openPanel === 'stickers'}
             onClick={() => toggle('stickers')}
             buttonRef={stickersButtonRef}
