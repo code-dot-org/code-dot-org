@@ -349,6 +349,7 @@ const ailabSlice = createSlice({
         }
         state.currentColumn = undefined;
       } else {
+        // If we are selecting features, don't update instructions text when clicking the label column.
         if (
           state.currentPanel === 'dataDisplayFeatures' &&
           currentColumn !== state.labelColumn
