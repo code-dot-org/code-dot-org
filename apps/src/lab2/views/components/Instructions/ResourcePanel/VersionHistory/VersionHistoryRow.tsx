@@ -103,7 +103,7 @@ const VersionHistoryRow: React.FunctionComponent<
             label={title || label}
             onChange={onChange}
             checked={isSelected}
-            ariaLabel={ariaLabel}
+ariaLabel={ariaLabel && label ? `${ariaLabel}, ${label}` : ariaLabel}
             textThickness={isBoldtype ? 'thick' : 'thin'}
             disabled={disabled}
             size="s"
