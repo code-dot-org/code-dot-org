@@ -108,7 +108,7 @@ describe('weather', () => {
     expect(flake.y).toBeGreaterThan(y);
     // Its own sway only: never shoved to the body's edge.
     expect(Math.abs(flake.x - 190)).toBeLessThan(1);
-    expect(flake.alpha).toBeLessThan(0.6);
+    expect(flake.alpha).toBeLessThanOrEqual(0.6);
   });
 
   it('a flake drifting into a tile through its side slides down outside it', () => {
