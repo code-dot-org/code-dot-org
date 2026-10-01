@@ -11,7 +11,8 @@ interface UseQuizAttemptArgs {
   unitId: number | undefined;
 }
 
-interface UseQuizAttemptState {
+/** A quiz attempt backend; useQuizAttempt is the quiz server's. */
+export interface QuizAttemptSource {
   // undefined while the initial existing-attempt check is in flight; null
   // once checked and there truly isn't one yet.
   attempt: QuizAttemptData | null | undefined;
@@ -32,7 +33,7 @@ interface UseQuizAttemptState {
 export default function useQuizAttempt({
   levelId,
   unitId,
-}: UseQuizAttemptArgs): UseQuizAttemptState {
+}: UseQuizAttemptArgs): QuizAttemptSource {
   const [attempt, setAttempt] = useState<QuizAttemptData | null | undefined>(
     undefined
   );

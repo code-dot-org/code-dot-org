@@ -102,6 +102,9 @@ function renderWorkspace({
   // ResultsCard - only tests for the no-correctness path opt out.
   showCorrectness = true,
   customIntroText,
+  attemptSource,
+  onNextLevel,
+  nextLevelLabel,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -111,6 +114,9 @@ function renderWorkspace({
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
   customIntroText?: string;
+  attemptSource?: typeof BASE_HOOK_STATE;
+  onNextLevel?: () => void;
+  nextLevelLabel?: string;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -125,6 +131,9 @@ function renderWorkspace({
       showIntroScreen={showIntroScreen}
       showCorrectness={showCorrectness}
       customIntroText={customIntroText}
+      attemptSource={attemptSource}
+      onNextLevel={onNextLevel}
+      nextLevelLabel={nextLevelLabel}
     />
   );
 }
@@ -841,5 +850,91 @@ describe('QuizAttemptWorkspace', () => {
     expect(
       screen.queryByRole('button', {name: /Next|Submit|Finish/})
     ).not.toBeInTheDocument();
+  });
+
+  describe('with an injected attempt source', () => {
+    const source = (overrides: Partial<typeof BASE_HOOK_STATE> = {}) => ({
+      ...BASE_HOOK_STATE,
+      beginAttempt: jest.fn().mockResolvedValue(ATTEMPT),
+      submitQuestionResponse: jest.fn().mockResolvedValue(undefined),
+      finishAttempt: jest.fn().mockResolvedValue(ATTEMPT),
+      ...overrides,
+    });
+
+    it('runs without a unit and asks the server for nothing', () => {
+      renderWorkspace({
+        unitId: null,
+        attemptSource: source({attempt: ATTEMPT}),
+        quizQuestions: [question()],
+      });
+
+      expect(
+        screen.queryByText(
+          'Quiz attempts are not allowed on a standalone level.'
+        )
+      ).not.toBeInTheDocument();
+      expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
+      expect(mockUseQuizAttempt).toHaveBeenCalledWith({
+        levelId: 42,
+        unitId: undefined,
+      });
+    });
+
+    it('begins, saves and finishes through the source without reporting progress', async () => {
+      const attemptSource = source({attempt: null});
+      const {rerender} = renderWorkspace({
+        unitId: null,
+        attemptSource,
+        quizQuestions: [question({id: 5})],
+      });
+      await waitFor(() =>
+        expect(attemptSource.beginAttempt).toHaveBeenCalledTimes(1)
+      );
+
+      const open = {...attemptSource, attempt: ATTEMPT};
+      rerender(
+        <QuizAttemptWorkspace
+          levelId={42}
+          appName="quiz"
+          levelName="quiz-level-name"
+          unitId={undefined}
+          quizQuestions={[question({id: 5})]}
+          attemptSource={open}
+        />
+      );
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+      await waitFor(() =>
+        expect(open.submitQuestionResponse).toHaveBeenCalledWith(5, {
+          selectedChoiceId: 'b',
+        })
+      );
+      fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+      await waitFor(() =>
+        expect(open.finishAttempt).toHaveBeenCalledWith({
+          5: {selectedChoiceId: 'b'},
+        })
+      );
+
+      expect(mockSendStartedReportIfNotStarted).not.toHaveBeenCalled();
+      expect(mockSendSuccessReportForLevel).not.toHaveBeenCalled();
+      expect(mockDispatch).not.toHaveBeenCalled();
+    });
+
+    it('hands Next level to the caller, under its label', () => {
+      const onNextLevel = jest.fn();
+      renderWorkspace({
+        unitId: null,
+        attemptSource: source({
+          attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
+        }),
+        onNextLevel,
+        nextLevelLabel: 'Continue',
+      });
+
+      fireEvent.click(screen.getByRole('button', {name: /Continue/}));
+
+      expect(onNextLevel).toHaveBeenCalledTimes(1);
+      expect(mockNavigateToNextLevel).not.toHaveBeenCalled();
+    });
   });
 });

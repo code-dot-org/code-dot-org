@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -76,5 +76,17 @@ describe('ResultsCard', () => {
         screen.getByRole('button', {name: /Next level/})
       ).toBeInTheDocument();
     });
+  });
+
+  it('labels the primary button as told and calls onNextLevel', () => {
+    const onNextLevel = jest.fn();
+    renderCard({onNextLevel, nextLevelLabel: 'Continue'});
+
+    fireEvent.click(screen.getByRole('button', {name: /Continue/}));
+
+    expect(onNextLevel).toHaveBeenCalledTimes(1);
+    expect(
+      screen.queryByRole('button', {name: /Next level/})
+    ).not.toBeInTheDocument();
   });
 });
