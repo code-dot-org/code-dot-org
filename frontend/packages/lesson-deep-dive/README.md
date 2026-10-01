@@ -99,6 +99,9 @@ In msw mode, `src/dev/mocks.ts` registers the same endpoints with
 unmodified in either mode. The podcast loop is the most heavily faked surface:
 the mocks return a one-second silent WAV in place of synthesized audio. Plain
 `localhost:5173` works here; no cookies are involved.
+`GET /json_videos/:key/content` is mocked for the fixture's two keys with
+generated videos, one narrated per scene and one with a top-level track, so
+the intervention step's video carousel plays in msw mode.
 
 The page payload is a fixture in both modes. Studio embeds
 `lessonDeepDiveData` server-side in the HTML
@@ -117,31 +120,6 @@ Regenerate the payload by loading the real page as a signed-in student and
 reading `script[data-lessondeepdivedata]`. Rebuilding it from
 `LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
 `unitLabel` comes from the unit-group context, not the lesson.
-
-### Video page
-
-`video.html` renders one tutor video from `apps/src/jsonVideo/TutorVideo` with
-a Previous/Next switch over the fixture's `jsonVideos`. The switch does what
-the intervention step's carousel does: the same `<json-video>` gets a new
-`src` and reloads. The page reads only `apps/src/jsonVideo/` from apps, which
-depends on nothing but React, so it runs without apps' generated scripts or
-`apps/node_modules`.
-
-```bash
-VITE_API_MODE=msw yarn dev      # http://localhost:5173/video.html
-```
-
-In msw mode, `src/dev/mocks.ts` serves `GET /json_videos/:key/content` for the
-two fixture keys: one video narrated per scene with no top-level audio track
-(how the lesson pipeline emits them), one with a top-level track over a silent
-scene. The clips are generated silence, like the podcast audio.
-
-### E2E tests
-
-`e2e/` holds the package's Playwright suite. `yarn test:ui` starts the dev
-server in msw mode on port 5197 (or reuses one already there) and drives
-`video.html`; the specs assert on the audio elements inside `<json-video>`,
-not on sound. CI runs `test:ui:ci` in `lesson-deep-dive-ci.yml`.
 
 ### Teacher gallery
 

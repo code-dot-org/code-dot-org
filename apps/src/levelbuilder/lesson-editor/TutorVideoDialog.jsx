@@ -5,9 +5,6 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
-// Importing the element registers the <json-video> custom element used by the
-// preview player below.
-import '@cdo/apps/jsonVideo/jsonVideoElement';
 import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 
 import LessonEditorDialog from './LessonEditorDialog';

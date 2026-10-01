@@ -1,10 +1,10 @@
 import {expect, test, type Page} from '@playwright/test';
 
 // <json-video> plays through two <audio> elements in its shadow root: one for
-// a video's top-level track, one for the current scene's own clip. The mock
-// videos (src/dev/mocks.ts) cover one of each: v1 narrates per scene with no
-// top-level track, 60 s long; v2 has a top-level track over one silent 30 s
-// scene. The assertions read the audio elements' own state, never the
+// a video's top-level track, one for the current scene's own clip. The dev
+// page's videos (src/dev/videos.ts) cover one of each: v1 narrates per scene
+// with no top-level track, 60 s long; v2 has a top-level track over one silent
+// 30 s scene. The assertions read the audio elements' own state, never the
 // speakers, so the clips can be silence.
 
 type AudioState = {paused: boolean; currentTime: number; src: string | null};
@@ -49,7 +49,7 @@ async function expectPlaying(page: Page, track: 'main' | 'scene') {
 }
 
 test.beforeEach(async ({page}) => {
-  await page.goto('/video.html');
+  await page.goto('/');
   await expectLoaded(page, 60);
 });
 

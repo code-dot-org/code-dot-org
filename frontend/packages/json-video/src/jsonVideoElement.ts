@@ -1,22 +1,93 @@
 import styles from './jsonVideoStyles';
 
+/** One scene of a video document. */
+export interface JsonVideoScene {
+  /** Seconds, as `'12.38s'` or `'12.38'`; `'auto'` or absent derives it from `speech`. */
+  duration?: string;
+  /** Caption text; also drives the `auto` duration. */
+  speech?: string;
+  /** Markup rendered in the scene frame. */
+  html?: string;
+  /** This scene's own clip, a URL or data URI. */
+  audio?: string;
+  /** Pause the top-level track for this scene. */
+  pauseBackground?: boolean;
+}
+
+/** The JSON document a `src` resolves to. */
+export interface JsonVideoData {
+  /** A track that runs under the whole video. */
+  audio?: string;
+  scenes: JsonVideoScene[];
+}
+
+interface ProcessedScene extends JsonVideoScene {
+  startTimeMs: number;
+  endTimeMs: number;
+}
+
 // Simulated MediaError to match native <video> behavior
 class SimulatedMediaError {
-  constructor(code, message) {
+  code: number;
+  message: string;
+  // Standard codes: 1=ABORTED, 2=NETWORK, 3=DECODE, 4=SRC_NOT_SUPPORTED
+  readonly MEDIA_ERR_ABORTED = 1;
+  readonly MEDIA_ERR_NETWORK = 2;
+  readonly MEDIA_ERR_DECODE = 3;
+  readonly MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
+
+  constructor(code: number, message: string) {
     this.code = code;
     this.message = message;
-    // Standard codes: 1=ABORTED, 2=NETWORK, 3=DECODE, 4=SRC_NOT_SUPPORTED
-    this.MEDIA_ERR_ABORTED = 1;
-    this.MEDIA_ERR_NETWORK = 2;
-    this.MEDIA_ERR_DECODE = 3;
-    this.MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
   }
+}
+
+// Old WebKit fullscreen API, still the only one on iOS Safari.
+interface WebkitFullscreenDocument extends Document {
+  webkitFullscreenElement?: Element | null;
+  webkitExitFullscreen?: () => void;
+}
+interface WebkitFullscreenElement extends HTMLElement {
+  webkitRequestFullscreen?: () => void;
 }
 
 export class JsonVideo extends HTMLElement {
   static get observedAttributes() {
     return ['src', 'controls', 'poster'];
   }
+
+  _videoData: JsonVideoData | null;
+  _processedScenes: ProcessedScene[];
+  _totalDurationMs: number;
+  _currentTimeMs: number;
+  _isPlaying: boolean;
+  _currentSceneIndex: number;
+  _lastTimestamp: number;
+  _animationFrameId: number | null;
+  _showCaptions: boolean;
+  _volume: number;
+  _lastVolume?: number;
+  _currentBlobUrl?: string;
+  error: SimulatedMediaError | null;
+  _mainAudio: HTMLAudioElement;
+  _sceneAudio: HTMLAudioElement;
+  _mainAudioPausedByScene: boolean;
+  _mainAudioResumeTime: number;
+  renderer!: HTMLIFrameElement;
+  posterImg!: HTMLImageElement;
+  ccOverlay!: HTMLElement;
+  ccText!: HTMLElement;
+  ui!: {
+    playBtn: HTMLButtonElement;
+    muteBtn: HTMLButtonElement;
+    progress: HTMLInputElement;
+    curTime: HTMLElement;
+    totTime: HTMLElement;
+    volume: HTMLInputElement;
+    ccBtn: HTMLButtonElement;
+    fullscreenBtn: HTMLButtonElement;
+  };
+  _onFullscreenChange!: () => void;
 
   constructor() {
     super();
@@ -42,8 +113,8 @@ export class JsonVideo extends HTMLElement {
     this._mainAudio.crossOrigin = 'anonymous';
     this._sceneAudio.crossOrigin = 'anonymous';
 
-    this.shadowRoot.appendChild(this._mainAudio);
-    this.shadowRoot.appendChild(this._sceneAudio);
+    this.shadowRoot!.appendChild(this._mainAudio);
+    this.shadowRoot!.appendChild(this._sceneAudio);
 
     this._mainAudioPausedByScene = false;
     this._mainAudioResumeTime = 0;
@@ -81,23 +152,26 @@ export class JsonVideo extends HTMLElement {
             </div>
         `;
 
-    this.shadowRoot.appendChild(styleElement);
-    this.shadowRoot.appendChild(container);
+    const root = this.shadowRoot!;
+    root.appendChild(styleElement);
+    root.appendChild(container);
 
-    this.renderer = this.shadowRoot.querySelector('#scene-renderer');
-    this.posterImg = this.shadowRoot.querySelector('#poster');
-    this.ccOverlay = this.shadowRoot.querySelector('#closed-caption-overlay');
-    this.ccText = this.shadowRoot.querySelector('.cc-text');
+    const q = <T extends Element>(selector: string) =>
+      root.querySelector(selector) as T;
+    this.renderer = q('#scene-renderer');
+    this.posterImg = q('#poster');
+    this.ccOverlay = q('#closed-caption-overlay');
+    this.ccText = q('.cc-text');
 
     this.ui = {
-      playBtn: this.shadowRoot.querySelector('#play-btn'),
-      muteBtn: this.shadowRoot.querySelector('#mute-btn'),
-      progress: this.shadowRoot.querySelector('#progress-bar'),
-      curTime: this.shadowRoot.querySelector('#cur-time'),
-      totTime: this.shadowRoot.querySelector('#tot-time'),
-      volume: this.shadowRoot.querySelector('#volume-slider'),
-      ccBtn: this.shadowRoot.querySelector('#cc-btn'),
-      fullscreenBtn: this.shadowRoot.querySelector('#fullscreen-btn'),
+      playBtn: q('#play-btn'),
+      muteBtn: q('#mute-btn'),
+      progress: q('#progress-bar'),
+      curTime: q('#cur-time'),
+      totTime: q('#tot-time'),
+      volume: q('#volume-slider'),
+      ccBtn: q('#cc-btn'),
+      fullscreenBtn: q('#fullscreen-btn'),
     };
 
     this._bindEvents();
@@ -124,9 +198,12 @@ export class JsonVideo extends HTMLElement {
 
   _bindEvents() {
     this.ui.playBtn.onclick = () => (this.paused ? this.play() : this.pause());
-    this.ui.progress.oninput = e =>
-      this.seekTo((parseFloat(e.target.value) / 100) * this._totalDurationMs);
-    this.ui.volume.oninput = e => (this.volume = parseFloat(e.target.value));
+    this.ui.progress.oninput = () =>
+      this.seekTo(
+        (parseFloat(this.ui.progress.value) / 100) * this._totalDurationMs,
+      );
+    this.ui.volume.oninput = () =>
+      (this.volume = parseFloat(this.ui.volume.value));
 
     this.ui.muteBtn.onclick = () => {
       if (this.volume > 0) {
@@ -146,24 +223,28 @@ export class JsonVideo extends HTMLElement {
     this.ui.fullscreenBtn.onclick = () => this._toggleFullscreen();
 
     this._onFullscreenChange = () => {
+      const doc = document as WebkitFullscreenDocument;
       const isFs =
-        document.fullscreenElement === this ||
-        document.webkitFullscreenElement === this;
+        doc.fullscreenElement === this || doc.webkitFullscreenElement === this;
       this.ui.fullscreenBtn.classList.toggle('fullscreen-active', isFs);
     };
     document.addEventListener('fullscreenchange', this._onFullscreenChange);
     document.addEventListener(
       'webkitfullscreenchange',
-      this._onFullscreenChange
+      this._onFullscreenChange,
     );
 
-    this.shadowRoot.querySelector('#video-container').onclick = e => {
+    const container =
+      this.shadowRoot!.querySelector<HTMLElement>('#video-container')!;
+    container.onclick = (e: MouseEvent) => {
+      const id = (e.target as Element).id;
       if (
-        e.target.id === 'video-container' ||
-        e.target.id === 'scene-renderer' ||
-        e.target.id === 'poster'
+        id === 'video-container' ||
+        id === 'scene-renderer' ||
+        id === 'poster'
       ) {
-        this.paused ? this.play() : this.pause();
+        if (this.paused) this.play();
+        else this.pause();
       }
     };
 
@@ -178,24 +259,24 @@ export class JsonVideo extends HTMLElement {
   get volume() {
     return this._volume;
   }
-  set volume(val) {
+  set volume(val: number) {
     this._volume = Math.max(0, Math.min(1, val));
     this._mainAudio.volume = this._volume;
     this._sceneAudio.volume = this._volume;
-    this.ui.volume.value = this._volume;
+    this.ui.volume.value = String(this._volume);
     this.ui.muteBtn.classList.toggle('muted', this.volume === 0);
   }
 
-  get src() {
-    return this.getAttribute('src');
+  get src(): string {
+    return this.getAttribute('src') ?? '';
   }
-  set src(val) {
+  set src(val: string) {
     this.setAttribute('src', val);
   }
   get currentTime() {
     return this._currentTimeMs / 1000;
   }
-  set currentTime(sec) {
+  set currentTime(sec: number) {
     this.seekTo(sec * 1000);
   }
   get duration() {
@@ -207,17 +288,21 @@ export class JsonVideo extends HTMLElement {
   get poster() {
     return this.getAttribute('poster');
   }
-  set poster(val) {
+  set poster(val: string | null) {
     if (val) this.setAttribute('poster', val);
     else this.removeAttribute('poster');
   }
 
-  attributeChangedCallback(name, oldVal, newVal) {
+  attributeChangedCallback(
+    name: string,
+    oldVal: string | null,
+    newVal: string | null,
+  ) {
     if (name === 'src' && newVal !== oldVal) this.load();
     if (name === 'poster') this._updatePosterUI(newVal);
   }
 
-  _updatePosterUI(url) {
+  _updatePosterUI(url: string | null) {
     if (url) {
       this.posterImg.src = url;
       // Only show the poster if we haven't started playing yet
@@ -242,7 +327,7 @@ export class JsonVideo extends HTMLElement {
       this.posterImg.classList.remove('hidden');
     }
 
-    let data = null;
+    let data: JsonVideoData | null = null;
     try {
       if (source.startsWith('data:application/json')) {
         const commaIndex = source.indexOf(',');
@@ -253,14 +338,15 @@ export class JsonVideo extends HTMLElement {
           // Throw so we catch it below and simulate a network error
           throw new SimulatedMediaError(
             2,
-            `Network response was not ok: ${response.status}`
+            `Network response was not ok: ${response.status}`,
           );
         }
         data = await response.json();
       }
-      this._processLoadedData(data);
+      this._processLoadedData(data!);
     } catch (e) {
       console.error('JsonVideo load error:', e);
+      const message = e instanceof Error ? e.message : String(e);
 
       this.classList.add('has-error');
 
@@ -268,20 +354,20 @@ export class JsonVideo extends HTMLElement {
       this.error =
         e instanceof SimulatedMediaError
           ? e
-          : new SimulatedMediaError(3, e.message);
+          : new SimulatedMediaError(3, message);
 
       // Dispatch standard error event
       this.dispatchEvent(new Event('error'));
     }
   }
 
-  _processLoadedData(data) {
+  _processLoadedData(data: JsonVideoData) {
     this._videoData = data;
     this._calculateDurations();
     // Drop the previous video's tracks; a stale main track would otherwise
     // play under a video that only has per-scene audio.
     this._resetAudio(this._mainAudio, data.audio);
-    this._resetAudio(this._sceneAudio, null);
+    this._resetAudio(this._sceneAudio, undefined);
     this._mainAudioPausedByScene = false;
     this._mainAudioResumeTime = 0;
     this._currentSceneIndex = -1;
@@ -295,7 +381,7 @@ export class JsonVideo extends HTMLElement {
 
   // removeAttribute, not src = '': an empty src resolves to the page URL,
   // which still counts as a track everywhere `.src` is tested.
-  _resetAudio(el, src) {
+  _resetAudio(el: HTMLAudioElement, src: string | undefined) {
     el.pause();
     if (src) el.src = src;
     else el.removeAttribute('src');
@@ -319,12 +405,12 @@ export class JsonVideo extends HTMLElement {
     this.dispatchEvent(new Event('pause'));
   }
 
-  seekTo(ms) {
+  seekTo(ms: number) {
     this._currentTimeMs = Math.max(0, Math.min(ms, this._totalDurationMs));
     let idx = this._processedScenes.findIndex(
       s =>
         this._currentTimeMs >= s.startTimeMs &&
-        this._currentTimeMs < s.endTimeMs
+        this._currentTimeMs < s.endTimeMs,
     );
     if (idx === -1 && this._currentTimeMs >= this._totalDurationMs)
       idx = this._processedScenes.length - 1;
@@ -340,7 +426,9 @@ export class JsonVideo extends HTMLElement {
       } else {
         try {
           this._mainAudio.currentTime = seekSec;
-        } catch (e) {}
+        } catch {
+          // Seeking before metadata has loaded throws in some browsers.
+        }
         if (this._isPlaying) this._mainAudio.play().catch(() => {});
         this._mainAudioPausedByScene = false;
       }
@@ -349,7 +437,7 @@ export class JsonVideo extends HTMLElement {
     this.dispatchEvent(new Event('timeupdate'));
   }
 
-  _tick(ts) {
+  _tick(ts: number) {
     if (!this._isPlaying) return;
     const delta = ts - this._lastTimestamp;
     this._lastTimestamp = ts;
@@ -361,7 +449,7 @@ export class JsonVideo extends HTMLElement {
       return;
     }
     const newIdx = this._processedScenes.findIndex(
-      s => this._currentTimeMs < s.endTimeMs
+      s => this._currentTimeMs < s.endTimeMs,
     );
     if (newIdx !== this._currentSceneIndex) this._handleSceneTransition(newIdx);
     this.dispatchEvent(new Event('timeupdate'));
@@ -369,16 +457,17 @@ export class JsonVideo extends HTMLElement {
   }
 
   _updateUI() {
-    this.ui.progress.value =
-      (this._currentTimeMs / this._totalDurationMs) * 100 || 0;
+    this.ui.progress.value = String(
+      (this._currentTimeMs / this._totalDurationMs) * 100 || 0,
+    );
     this.ui.curTime.textContent = this._formatTime(this._currentTimeMs);
     this.ui.progress.style.setProperty(
       '--progress-value',
-      this.ui.progress.value + '%'
+      this.ui.progress.value + '%',
     );
   }
 
-  _formatTime(ms) {
+  _formatTime(ms: number) {
     const s = Math.floor(ms / 1000),
       m = Math.floor(s / 60),
       sec = s % 60;
@@ -386,13 +475,15 @@ export class JsonVideo extends HTMLElement {
   }
 
   _toggleFullscreen() {
+    const doc = document as WebkitFullscreenDocument;
+    const el = this as WebkitFullscreenElement;
     if (
-      document.fullscreenElement === this ||
-      document.webkitFullscreenElement === this
+      doc.fullscreenElement === this ||
+      doc.webkitFullscreenElement === this
     ) {
-      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      (doc.exitFullscreen || doc.webkitExitFullscreen)?.call(doc);
     } else {
-      (this.requestFullscreen || this.webkitRequestFullscreen).call(this);
+      (el.requestFullscreen || el.webkitRequestFullscreen)?.call(el);
     }
   }
 
@@ -400,19 +491,19 @@ export class JsonVideo extends HTMLElement {
     document.removeEventListener('fullscreenchange', this._onFullscreenChange);
     document.removeEventListener(
       'webkitfullscreenchange',
-      this._onFullscreenChange
+      this._onFullscreenChange,
     );
   }
 
   _calculateDurations() {
     this._totalDurationMs = 0;
-    this._processedScenes = this._videoData.scenes.map(scene => {
-      let dur =
+    this._processedScenes = this._videoData!.scenes.map(scene => {
+      const dur =
         scene.duration === 'auto' || !scene.duration
           ? scene.speech
             ? Math.max(
                 2000,
-                scene.speech.split(/\s+/).filter(w => w.length).length * 350
+                scene.speech.split(/\s+/).filter(w => w.length).length * 350,
               )
             : 2000
           : parseFloat(scene.duration) * 1000;
@@ -422,7 +513,7 @@ export class JsonVideo extends HTMLElement {
     });
   }
 
-  _handleSceneTransition(newIdx) {
+  _handleSceneTransition(newIdx: number) {
     const prev = this._processedScenes[this._currentSceneIndex],
       next = this._processedScenes[newIdx];
     if (this._mainAudio.src) {
@@ -474,7 +565,9 @@ export class JsonVideo extends HTMLElement {
       if (Math.abs(this._sceneAudio.currentTime - sceneTime) > 0.2) {
         this._sceneAudio.currentTime = Math.max(0, sceneTime);
       }
-    } catch (e) {}
+    } catch {
+      // Seeking before metadata has loaded throws in some browsers.
+    }
 
     if (this._isPlaying) {
       this._sceneAudio.play().catch(() => {});
@@ -507,7 +600,7 @@ export class JsonVideo extends HTMLElement {
             </html>
         `,
         ],
-        {type: 'text/html'}
+        {type: 'text/html'},
       );
 
       this._currentBlobUrl = URL.createObjectURL(blob);
@@ -519,10 +612,20 @@ export class JsonVideo extends HTMLElement {
     this.ccText.textContent = scene.speech || '';
     this.ccOverlay.classList.toggle(
       'hidden',
-      !(this._showCaptions && scene.speech)
+      !(this._showCaptions && scene.speech),
     );
 
     this._syncSceneAudio();
   }
 }
-customElements.define('json-video', JsonVideo);
+// Register on import. The guard keeps a second copy of this module (two
+// bundles on one page) from throwing on an already-defined name.
+if (!customElements.get('json-video')) {
+  customElements.define('json-video', JsonVideo);
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'json-video': JsonVideo;
+  }
+}

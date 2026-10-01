@@ -1,0 +1,54 @@
+{
+  "name": "@code-dot-org/json-video",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The <json-video> element: a video player for scene-by-scene JSON videos, and the TutorVideo React wrapper around it.",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/json-video/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/json-video"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@playwright/test": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}

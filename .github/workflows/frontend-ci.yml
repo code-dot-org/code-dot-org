@@ -35,6 +35,7 @@ jobs:
       markdown-changed: ${{ steps.changes.outputs.markdown }}
       users-changed: ${{ steps.changes.outputs.users }}
       lesson-deep-dive-changed: ${{ steps.changes.outputs.lesson-deep-dive }}
+      json-video-changed: ${{ steps.changes.outputs.json-video }}
       shared-constants-changed: ${{ steps.changes.outputs.shared-constants }}
       playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     steps:
@@ -88,10 +89,13 @@ jobs:
               - '.github/**'
             lesson-deep-dive:
               - 'frontend/packages/lesson-deep-dive/**'
-              # The package's e2e suite renders apps' <json-video> element.
-              - 'apps/src/jsonVideo/**'
               - 'frontend/packages/component-library/**'
               - 'frontend/packages/component-library-styles/**'
+              - 'frontend/packages/lint-config/**'
+              - 'frontend/*'
+              - '.github/**'
+            json-video:
+              - 'frontend/packages/json-video/**'
               - 'frontend/packages/lint-config/**'
               - 'frontend/*'
               - '.github/**'
@@ -148,6 +152,13 @@ jobs:
     if: ${{ needs.setup.outputs.lesson-deep-dive-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/lesson-deep-dive-ci.yml
+    secrets: inherit
+
+  # Start the json-video package CI workflow
+  json-video:
+    if: ${{ needs.setup.outputs.json-video-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/json-video-ci.yml
     with:
       playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
