@@ -1,5 +1,6 @@
 // A burst: a handful of a project's image flung out from a point, falling
-// with the scene's gravity, bouncing off tiles and bodies, and fading away.
+// with the scene's gravity, bouncing off tiles and bodies, and gone soon
+// after it comes to rest.
 // One-shot, unlike weather; several can be in flight, and a second burst
 // from the same place adds to the first. Particles are plain records, not
 // sprites.
@@ -19,7 +20,7 @@ export interface BurstParticle {
   y: number;
   vx: number;
   vy: number;
-  /** Frames lived; the particle fades over its last third. */
+  /** Frames lived; the particle fades over its last few frames. */
   age: number;
   life: number;
   /** Drawn size in world pixels. */
@@ -43,10 +44,16 @@ export const MAX_BURST_COUNT = 100;
 // a particle falls.
 const FALL_ACCEL = 0.45;
 const TERMINAL = 10;
-// Energy kept on a bounce, and how many bounces before the particle stays
-// down.
+// Energy kept on a bounce, how many bounces before the particle stays
+// down, and the slowest bounce worth making.
 const BOUNCE = 0.5;
 const MAX_BOUNCES = 3;
+const MIN_BOUNCE_SPEED = 1.5;
+// Frames a particle lies still before it is gone, and the fade at the end
+// of any particle's life. Short, so a stopped particle never reads as
+// something to go and pick up.
+const REST_FRAMES = 12;
+const FADE_FRAMES = 8;
 
 const between = (random: Random, min: number, max: number) =>
   min + random() * (max - min);
@@ -122,10 +129,12 @@ export function stepBurst(burst: Burst, scene: BurstScene): boolean {
       if (hit) {
         p.y = hit.y;
         p.bounces++;
-        if (p.bounces > MAX_BOUNCES) {
+        const rebound = Math.abs(p.vy) * BOUNCE;
+        if (p.bounces > MAX_BOUNCES || rebound < MIN_BOUNCE_SPEED) {
           p.vy = 0;
           p.vx = 0;
           p.spin = 0;
+          p.life = Math.min(p.life, p.age + REST_FRAMES);
         } else {
           p.vy = -down * Math.abs(p.vy) * BOUNCE;
           p.vx *= 0.7;
@@ -145,10 +154,9 @@ export function stepBurst(burst: Burst, scene: BurstScene): boolean {
   return burst.particles.length > 0;
 }
 
-/** 1 at full strength, down to 0 over the particle's last third. */
+/** 1 at full strength, down to 0 over the particle's last few frames. */
 export function burstAlpha(p: BurstParticle): number {
-  const fadeFrom = p.life * (2 / 3);
-  return p.age < fadeFrom ? 1 : 1 - (p.age - fadeFrom) / (p.life - fadeFrom);
+  return Math.max(0, Math.min(1, (p.life - p.age) / FADE_FRAMES));
 }
 
 /** A loaded image to draw: whole, or one frame cut from a sheet. */

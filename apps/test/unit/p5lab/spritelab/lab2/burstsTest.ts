@@ -83,10 +83,19 @@ describe('bursts', () => {
     expect(p.vy).toBeLessThan(0);
     expect(Math.abs(p.vy)).toBeLessThan(8);
     expect(p.bounces).toBe(1);
-    for (let i = 0; i < 300; i++) stepBurst(burst, scene([tile]));
-    expect(p.bounces).toBeGreaterThan(3);
-    expect(p.vy).toBe(0);
+    // Each bounce is weaker; once one would be a hop, the particle lies
+    // still and is gone shortly after.
+    let stopped = 0;
+    for (let i = 0; i < 300 && burst.particles.length; i++) {
+      stepBurst(burst, scene([tile]));
+      if (p.vy === 0 && p.vx === 0) {
+        stopped++;
+      }
+    }
     expect(p.y).toBe(280);
+    expect(stopped).toBeGreaterThan(0);
+    expect(stopped).toBeLessThanOrEqual(13);
+    expect(burst.particles).toHaveLength(0);
   });
 
   it('lands on the stage floor when the scene says it has one', () => {
@@ -114,7 +123,7 @@ describe('bursts', () => {
     expect(falling.particles[0].y).toBeGreaterThan(400);
   });
 
-  it('fades over its last third and is dropped at the end of its life', () => {
+  it('fades quickly at the very end and is dropped when its life is up', () => {
     const burst = createBurst(
       'coin',
       1,
@@ -125,9 +134,9 @@ describe('bursts', () => {
     const p = burst.particles[0];
     Object.assign(p, {vx: 0, vy: 0, life: 30});
     expect(burstAlpha(p)).toBe(1);
-    p.age = 20;
+    p.age = 21;
     expect(burstAlpha(p)).toBe(1);
-    p.age = 25;
+    p.age = 26;
     expect(burstAlpha(p)).toBeCloseTo(0.5, 5);
     p.age = 29;
     expect(stepBurst(burst, scene())).toBe(false);
