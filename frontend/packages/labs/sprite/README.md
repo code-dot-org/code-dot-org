@@ -29,6 +29,7 @@ Then open a fixture by its channel id:
 | `/app/projects/sprite/freeplay/edit` | Free play: World, Code and Images tabs     |
 | `/app/projects/sprite/image/edit`    | An image level with guide steps            |
 | `/app/projects/sprite/music/edit`    | A scene that plays a Music Lab song        |
+| `/app/projects/sprite/hoai2026/edit` | hoai2026-dev's free play, from its .level  |
 
 Saved work persists in `sessionStorage` across reloads. Add
 `?cdoMockReset=1` to start the fixture over.
