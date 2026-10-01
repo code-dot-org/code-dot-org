@@ -21,13 +21,12 @@ import type {
 } from './types';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
-import GenerateResults from './UIComponents/GenerateResults';
 import ModelCard from './UIComponents/ModelCard';
 import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
-import TrainModel from './UIComponents/TrainModel';
+import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 
 import styles from './app.module.scss';
@@ -266,21 +265,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      {currentPanel === 'trainModel' && (
-        <BodyContainer>
-          <ContainerFullWidth>
-            <TrainModel />
-          </ContainerFullWidth>
-        </BodyContainer>
-      )}
-
-      {currentPanel === 'generateResults' && (
-        <BodyContainer>
-          <ContainerFullWidth>
-            <GenerateResults />
-          </ContainerFullWidth>
-        </BodyContainer>
-      )}
+      <TrainingModal />
 
       {currentPanel === 'results' && (
         <BodyContainer>

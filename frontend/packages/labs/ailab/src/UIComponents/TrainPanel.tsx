@@ -15,10 +15,12 @@ import {
   addSelectedFeature,
   readyToTrain,
   removeSelectedFeature,
-  setCurrentPanel,
   setLabelColumn,
+  setTrainingModalStep,
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
+import {store} from '../store';
+import train from '../train';
 
 import styles from './trainPanel.module.scss';
 
@@ -95,6 +97,14 @@ const TrainPanel = () => {
     dispatch(
       checked ? addSelectedFeature(value) : removeSelectedFeature(value),
     );
+  };
+
+  // Training also computes the test results, so the modal's Skip can go
+  // straight to them.
+  const onTrain = () => {
+    train.init(store);
+    train.onClickTrain();
+    dispatch(setTrainingModalStep('training'));
   };
 
   const featuresSummary =
@@ -214,7 +224,7 @@ const TrainPanel = () => {
               size="small"
               fullWidth
               disabled={!canTrain}
-              onClick={() => dispatch(setCurrentPanel('trainModel'))}
+              onClick={onTrain}
             >
               Train model
             </Button>

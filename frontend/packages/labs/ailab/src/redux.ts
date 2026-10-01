@@ -33,6 +33,7 @@ import type {
   SaveTrainedModel,
   Panel,
   TrainedModel,
+  TrainingModalStep,
 } from './types';
 
 export interface RootState {
@@ -62,6 +63,7 @@ export interface RootState {
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
+  trainingModalStep: TrainingModalStep | undefined;
   currentColumn: string | undefined;
   resultsPhase: number | undefined;
   saveStatus: string;
@@ -109,6 +111,7 @@ export const initialState: RootState = {
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: 'selectDataset',
+  trainingModalStep: undefined,
   currentColumn: undefined,
   resultsPhase: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
@@ -321,6 +324,7 @@ const ailabSlice = createSlice({
         showedOverlay = true;
       }
       state.currentPanel = currentPanel;
+      state.trainingModalStep = undefined;
       state.instructionsOverlayActive = showedOverlay;
       state.instructionsKey = currentPanel as InstructionsKey;
       state.showOverlay = showedOverlay;
@@ -391,6 +395,12 @@ const ailabSlice = createSlice({
     },
     setResultsPhase(state, action: PayloadAction<number>) {
       state.resultsPhase = action.payload;
+    },
+    setTrainingModalStep(
+      state,
+      action: PayloadAction<TrainingModalStep | undefined>,
+    ) {
+      state.trainingModalStep = action.payload;
     },
     setResultsHighlightRow(state, action: PayloadAction<number>) {
       state.resultsHighlightRow = action.payload;
@@ -476,6 +486,7 @@ export const {
   setHighlightColumn,
   setHighlightDataset,
   setResultsPhase,
+  setTrainingModalStep,
   setResultsHighlightRow,
   setSaveStatus,
   setHistoricResult,
