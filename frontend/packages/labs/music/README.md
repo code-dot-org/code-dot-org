@@ -38,6 +38,26 @@ This starts Vite at `http://localhost-studio.code.org:5173`. The dev server requ
 
 Music Lab exports a single default React component. Studio registers it as a lazy-loaded route entry. See [docs/architecture.md](./docs/architecture.md) for the registration pattern and init ordering constraints.
 
+## Playing a project from another lab
+
+The `./player` subpath plays a student's Music Lab project without rendering
+Music Lab. `createProjectPlayer()` builds the Music API client over
+`DashboardApiClient`, as `App` does over the context client.
+
+```typescript
+const {createProjectPlayer} = await import('@code-dot-org/music-lab/player');
+
+const player = createProjectPlayer();
+await player.loadProject(channelId); // the default song if the channel has no sources
+player.play(() => console.log('ended'));
+player.stop();
+```
+
+`loadProject` compiles the saved workspace headlessly. Music's blocks occupy
+Blockly's global registries only for the duration of the compile, so the host
+lab's own definitions of shared types (the procedure blocks) are restored.
+Only Simple2 projects compile; the package has no Advanced block set.
+
 ## Mock fixtures
 
 `src/fixtures/` holds per-scenario canned data (`simple.ts`, `complex.ts`,
