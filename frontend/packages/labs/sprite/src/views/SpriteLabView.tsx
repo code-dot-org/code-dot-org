@@ -19,6 +19,7 @@ import {useLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
+import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {compileSerializedWorkspace} from '../blockly/compile';
 import {SpriteLabConnectionChecker} from '../blockly/connectionChecker';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
@@ -79,6 +80,7 @@ import {
 import {isPointerClick} from './blurAfterPointerClick';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
+import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
@@ -87,7 +89,9 @@ import Playspace, {type PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import {useExternalSceneList, useExternalSceneRuns} from './useExternalScenes';
+import useMusicProjects from './useMusicProjects';
 import useSceneEditing from './useSceneEditing';
+import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
 import useSpriteLabWorkspace from './useSpriteLabWorkspace';
 import WorldTab from './WorldTab';
@@ -273,8 +277,12 @@ const SpriteLabView: FunctionComponent = () => {
     scriptId,
     scenes,
   });
+  const musicListReady = useMusicProjects({
+    levelId: levelProperties.id,
+    scenes,
+  });
   // A workspace loads once the values its dropdowns check are in the store.
-  const seeded = imagesSeeded && externalListReady;
+  const seeded = imagesSeeded && externalListReady && musicListReady;
 
   // The Images tab mounts once, when first visited or when the page is next
   // idle after seeding, and then stays mounted behind a clip.
@@ -610,6 +618,31 @@ const SpriteLabView: FunctionComponent = () => {
 
   // Scene jumps navigate only while playing: in the preview a go-to-scene
   // block would pull the editor off the scene being edited.
+  // The game's background music plays only in Play.
+  const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
+  const {nowPlaying, playMusic} = useSceneMusic(
+    activeTab === 'Play',
+    musicProjects,
+  );
+  // When the song list lands, the flyout is redrawn with it, and a block
+  // placed meanwhile, holding no song, is given the newest.
+  const {refreshToolbox} = workspace;
+  useEffect(() => {
+    if (!musicProjects.length) {
+      return;
+    }
+    refreshToolbox();
+    const newest = musicProjects.find(p => !p.unavailable);
+    const ws = workspace.workspaceProps.workspaceRef.current;
+    if (newest && ws) {
+      ws.getBlocksByType(PLAY_MUSIC_BLOCK_TYPE, false).forEach(block => {
+        if (!block.getFieldValue('SONG')) {
+          block.setFieldValue(newest.channel, 'SONG');
+        }
+      });
+    }
+  }, [musicProjects, refreshToolbox, workspace.workspaceProps.workspaceRef]);
+
   const isPlayingRef = useRef(activeTab === 'Play');
   isPlayingRef.current = activeTab === 'Play';
   const restartSceneRef = useRef<() => void>(() => {});
@@ -665,8 +698,10 @@ const SpriteLabView: FunctionComponent = () => {
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onControlsChange = state => setArrowSet(arrowSetFor(state));
+    engine.onPlayMusic = playMusic;
   }, [
     engineReady,
+    playMusic,
     scenes,
     runScene,
     externalOnStage,
@@ -1113,6 +1148,14 @@ const SpriteLabView: FunctionComponent = () => {
         visibleTabs={visibleTabs}
         onClickStartOver={() =>
           showStartOverDialog('custom', START_OVER_MESSAGE)
+        }
+        startOverExtra={
+          activeTab === 'Play' && nowPlaying ? (
+            <SceneMusicBar
+              title={nowPlaying.title}
+              loading={nowPlaying.loading}
+            />
+          ) : undefined
         }
         sceneTabsExtra={
           seeded && !pinnedSceneId ? (
