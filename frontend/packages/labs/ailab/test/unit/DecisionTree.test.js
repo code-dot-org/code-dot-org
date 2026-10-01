@@ -143,6 +143,22 @@ describe('DecisionTree', () => {
     expect(firstChild.getAttribute('aria-setsize')).toBe('2');
   });
 
+  it("names an answer by its parent's question, its branch and its prediction", () => {
+    const [, firstChild] = screen.getAllByRole('treeitem');
+
+    expect(
+      screen.getByRole('treeitem', {name: 'legs is < 1 , predicts snake'}),
+    ).toBe(firstChild);
+  });
+
+  it("names a question by its parent's question, its branch and itself", () => {
+    const [, , secondChild] = screen.getAllByRole('treeitem');
+
+    expect(
+      screen.getByRole('treeitem', {name: /^legs is ≥ 1 , then legs/}),
+    ).toBe(secondChild);
+  });
+
   it('moves focus and the tab stop down to a child and back up', () => {
     const root = focusRoot();
 

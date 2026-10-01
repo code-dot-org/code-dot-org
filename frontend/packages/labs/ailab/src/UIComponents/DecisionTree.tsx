@@ -3,6 +3,7 @@ import {
   type CSSProperties,
   type KeyboardEvent,
   type ReactNode,
+  useId,
   useMemo,
   useRef,
   useState,
@@ -16,6 +17,7 @@ import {
   thresholdText,
   type DisplayTreeBranch,
   type DisplayTreeNode,
+  type DisplayTreeQuestion,
 } from '../helpers/displayTree';
 import {
   getNodesBounds,
@@ -79,6 +81,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const nameId = useId();
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
   const nodeElements = useRef(new Map<string, HTMLElement>());
 
@@ -89,6 +92,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const tabStopId = layout.nodes.some(placed => placed.id === focusedId)
     ? focusedId
     : DISPLAY_TREE_ROOT_ID;
+
+  const textId = (id: string) => `${nameId}-text-${id}`;
+  const columnId = (id: string) => `${nameId}-column-${id}`;
+  const branchId = (id: string) => `${nameId}-branch-${id}`;
+  const isId = `${nameId}-is`;
+  const predictsId = `${nameId}-predicts`;
+  const thenId = `${nameId}-then`;
 
   const trackNodeElement = (id: string, element: HTMLElement | null) => {
     if (element) {
@@ -119,9 +129,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     return orList.format(branch.values.map(valueText));
   };
 
+  const columnText = (node: DisplayTreeQuestion): string =>
+    getLocalizedColumnName(datasetId, node.column);
+
   const nodeText = (node: DisplayTreeNode): string => {
     if (node.type === 'question') {
-      return `${getLocalizedColumnName(datasetId, node.column)}?`;
+      return `${columnText(node)}?`;
     }
     return typeof node.prediction === 'number'
       ? formatNumber(node.prediction)
@@ -139,6 +152,15 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
 
   return (
     <div id="uitest-decision-tree" className={styles.decisionTree}>
+      <span id={isId} hidden>
+        is
+      </span>
+      <span id={predictsId} hidden>
+        , predicts
+      </span>
+      <span id={thenId} hidden>
+        , then
+      </span>
       <div className={styles.canvasArea}>
         <TreeCanvas
           contentWidth={layout.width}
@@ -181,12 +203,21 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               const kind =
                 placed.node.type === 'answer' ? styles.answer : styles.question;
               const siblings = placed.parent?.children ?? [placed];
+              const nameParts = [
+                placed.parent && columnId(placed.parent.id),
+                placed.parent && isId,
+                placed.branch && branchId(placed.id),
+                placed.node.type === 'answer' && predictsId,
+                placed.parent && placed.node.type === 'question' && thenId,
+                textId(placed.id),
+              ];
               return (
                 <div
                   key={placed.id}
                   ref={element => trackNodeElement(placed.id, element)}
                   // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
                   role="treeitem"
+                  aria-labelledby={nameParts.filter(Boolean).join(' ')}
                   aria-level={placed.depth + 1}
                   aria-setsize={siblings.length}
                   aria-posinset={siblings.indexOf(placed) + 1}
@@ -198,6 +229,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                 >
                   {branch && (
                     <div
+                      id={branchId(placed.id)}
                       title={branch}
                       className={classNames(styles.branch, {
                         [styles.pathBranch]: pathIds.has(placed.id),
@@ -212,7 +244,18 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                       [styles.pathNode]: pathIds.has(placed.id),
                     })}
                   >
-                    <span className={styles.nodeText}>{text}</span>
+                    <span id={textId(placed.id)} className={styles.nodeText}>
+                      {placed.node.type === 'question' ? (
+                        <>
+                          <span id={columnId(placed.id)}>
+                            {columnText(placed.node)}
+                          </span>
+                          ?
+                        </>
+                      ) : (
+                        text
+                      )}
+                    </span>
                   </div>
                 </div>
               );
