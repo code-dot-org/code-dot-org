@@ -125,7 +125,7 @@ export function weatherCount(kind: WeatherKind): number {
   return kind === 'none' ? 0 : RULES[kind].count;
 }
 
-// 1 falling down, -1 up; a weightless pool keeps its last direction.
+// 1 falling down, -1 up.
 function flow(weather: Weather): number {
   return weather.gravity < 0 ? -1 : 1;
 }
