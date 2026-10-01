@@ -28,6 +28,10 @@ const TrainingModal = () => {
     if (step) {
       reportPanelView(step === 'training' ? 'trainModel' : 'generateResults');
     }
+    // This component stays mounted between runs, so each run starts over.
+    if (step === 'training') {
+      setTestingFinished(false);
+    }
   }, [step]);
 
   if (!step) {
@@ -78,7 +82,7 @@ const TrainingModal = () => {
             <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
           }
         >
-          {testingFinished ? 'Test your model' : 'Skip'}
+          {!isTraining && testingFinished ? 'Test your model' : 'Skip'}
         </Button>
       </div>
     </MuiCustomDialog>
