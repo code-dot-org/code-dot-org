@@ -4,7 +4,7 @@ import {
 } from '@code-dot-org/core/api/mocks';
 
 import {SPRITE_AI_IMAGES} from './aiImages';
-import {GAMELAB_JR_POOL} from './gamelabJrPool';
+import {GAMELAB_JR_POOL} from './blockPools';
 
 // A level offering the lab's own blocks, and a project with two images and
 // a scene that makes a sprite of each. The images are SVG data URLs, so the

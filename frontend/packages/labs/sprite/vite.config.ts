@@ -28,8 +28,9 @@ export default defineConfig({
       allow: [
         searchForWorkspaceRoot(process.cwd()),
         '../../../../dashboard/config/libraries',
-        // The fixtures' block pool.
+        // The fixtures' block pools and course levels.
         '../../../../dashboard/config/blocks',
+        '../../../../dashboard/config/levels/custom/spritelab',
       ],
     },
   },

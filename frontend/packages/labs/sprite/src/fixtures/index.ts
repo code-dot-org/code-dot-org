@@ -1,6 +1,7 @@
 import type {LabFixtures} from '@code-dot-org/core/api/mocks';
 
 import freeplay from './freeplay';
+import hoai2026 from './hoai2026';
 import image from './image';
 import music from './music';
 import simple from './simple';
@@ -11,6 +12,7 @@ import simple from './simple';
 export const SpriteFixtures: LabFixtures = {
   simple,
   freeplay,
+  hoai2026,
   image,
   music,
 };
