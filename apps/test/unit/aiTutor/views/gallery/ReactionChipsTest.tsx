@@ -1,19 +1,33 @@
-import {Reaction} from '@code-dot-org/lesson-deep-dive';
+import {
+  addReaction as addReactionApi,
+  Reaction,
+  removeReaction as removeReactionApi,
+} from '@code-dot-org/lesson-deep-dive';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ReactionChips from '@cdo/apps/aiTutor/views/gallery/ReactionChips';
-import * as reactionsApi from '@cdo/apps/aiTutor/views/gallery/reactionsApi';
+
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
+
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  addReaction: jest.fn(),
+  removeReaction: jest.fn(),
+}));
+
+const addReaction = addReactionApi as jest.Mock;
+const removeReaction = removeReactionApi as jest.Mock;
 
 describe('ReactionChips', () => {
-  let addReaction: jest.SpyInstance;
-  let removeReaction: jest.SpyInstance;
-
   beforeEach(() => {
-    addReaction = jest.spyOn(reactionsApi, 'addReaction');
-    removeReaction = jest.spyOn(reactionsApi, 'removeReaction');
+    addReaction.mockReset();
+    removeReaction.mockReset();
   });
 
   afterEach(() => {
@@ -93,7 +107,7 @@ describe('ReactionChips', () => {
 
     await user.click(screen.getByRole('button', {name: /Heart/}));
 
-    expect(addReaction).toHaveBeenCalledWith(5, 'heart');
+    expect(addReaction).toHaveBeenCalledWith(expect.anything(), 5, 'heart');
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
         'aria-pressed',
@@ -117,7 +131,7 @@ describe('ReactionChips', () => {
 
     await user.click(screen.getByRole('button', {name: /Heart/}));
 
-    expect(removeReaction).toHaveBeenCalledWith(5, 'heart');
+    expect(removeReaction).toHaveBeenCalledWith(expect.anything(), 5, 'heart');
     await waitFor(() =>
       expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
         'aria-pressed',
@@ -152,7 +166,7 @@ describe('ReactionChips', () => {
     await user.click(screen.getByRole('button', {name: 'Add reaction'}));
     await user.click(screen.getByRole('menuitem', {name: 'Fire'}));
 
-    expect(addReaction).toHaveBeenCalledWith(5, 'fire');
+    expect(addReaction).toHaveBeenCalledWith(expect.anything(), 5, 'fire');
     // The picker closes after a choice.
     await waitFor(() =>
       expect(screen.queryByRole('menu')).not.toBeInTheDocument()

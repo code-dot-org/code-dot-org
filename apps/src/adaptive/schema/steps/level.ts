@@ -1,21 +1,26 @@
 import {z} from 'zod';
 
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {coerceStringBooleans} from '@cdo/apps/lab2/utils';
 
 import {stepBaseSchema} from './base';
 
 /**
  * Lab2 level properties as the server serializes them. Only the keys every
- * lab needs are checked; the rest of the shape is the lab's business.
+ * lab needs are checked; the rest of the shape is the lab's business. String
+ * booleans are coerced as the level properties request does for a top-level
+ * level, so an inlined level reads the same way to its lab.
  */
-export const levelPropertiesSchema = z.custom<LevelProperties>(
-  value =>
-    typeof value === 'object' &&
-    value !== null &&
-    typeof (value as LevelProperties).id === 'number' &&
-    typeof (value as LevelProperties).appName === 'string',
-  {message: 'expected Lab2 level properties with a numeric id and appName'}
-);
+export const levelPropertiesSchema = z
+  .custom<LevelProperties>(
+    value =>
+      typeof value === 'object' &&
+      value !== null &&
+      typeof (value as LevelProperties).id === 'number' &&
+      typeof (value as LevelProperties).appName === 'string',
+    {message: 'expected Lab2 level properties with a numeric id and appName'}
+  )
+  .transform((value): LevelProperties => coerceStringBooleans(value));
 
 /**
  * A step that plays an existing level. A level whose project template is the

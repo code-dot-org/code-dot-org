@@ -59,8 +59,8 @@ export interface QuizBuilderQuestionsState {
   // not about any existing question. A caller uses this to show the error
   // on that question's card instead of globally.
   errorQuestionId: number | null;
-  // Adds a placeholder question to local state only.
-  addPendingQuestion: () => number;
+  // Adds a placeholder question to local state only, on the given page.
+  addPendingQuestion: (page: number) => number;
   // Resolves with the saved question's id on success. For a pending
   // question this is its first save, which creates it server-side and
   // replaces the negative id with the real one; otherwise it's a normal

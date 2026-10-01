@@ -4,6 +4,7 @@ import {
   type DisplayTreeBranch,
   type DisplayTreeNode,
 } from './displayTree';
+import type {Rect} from './fitToView';
 
 export const TREE_NODE_WIDTH = 160;
 export const TREE_NODE_HEIGHT = 40;
@@ -74,5 +75,18 @@ export function layoutDisplayTree(root: DisplayTreeNode): DisplayTreeLayout {
     nodes,
     width: answerCount * (TREE_NODE_WIDTH + TREE_COLUMN_GAP) - TREE_COLUMN_GAP,
     height: (maxDepth + 1) * (TREE_NODE_HEIGHT + TREE_ROW_GAP) - TREE_ROW_GAP,
+  };
+}
+
+export function getNodesBounds(nodes: PlacedTreeNode[]): Rect {
+  const xs = nodes.map(placed => placed.x);
+  const ys = nodes.map(placed => placed.y);
+  const left = Math.min(...xs);
+  const top = Math.min(...ys);
+  return {
+    x: left,
+    y: top,
+    width: Math.max(...xs) + TREE_NODE_WIDTH - left,
+    height: Math.max(...ys) + TREE_NODE_HEIGHT - top,
   };
 }

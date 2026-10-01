@@ -1,10 +1,11 @@
 /* React component to handle displaying imported data. */
 import classNames from 'classnames';
 
+import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
-import {getColumnClickable, getTableData, setCurrentColumn} from '../redux';
+import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
 
 import styles from './dataTable.module.scss';
 
@@ -34,19 +35,10 @@ const DataTable = ({
   const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const currentColumn = useAppSelector(state => state.currentColumn);
-  const clickableColumns = useAppSelector(
-    state =>
-      reducedColumns
-        ? []
-        : Object.keys(data[0] ?? {}).filter(key =>
-            getColumnClickable(state, key),
-          ),
-    deepEqual,
-  );
+  const showColumnClicking = useAppSelector(getShowColumnClicking);
 
   const showRowNumbers = !reducedColumns;
-
-  const isClickable = (key: string) => clickableColumns.includes(key);
+  const isClickable = !reducedColumns && showColumnClicking;
 
   const getColumnHeaderClassName = (key: string) =>
     classNames(styles.header, {
@@ -54,7 +46,7 @@ const DataTable = ({
       [styles.headerFeature]:
         key !== labelColumn && selectedFeatures.includes(key),
       [styles.headerSelected]: !reducedColumns && key === currentColumn,
-      [styles.clickable]: isClickable(key),
+      [styles.clickable]: isClickable,
     });
 
   const getColumnCellClassName = (key: string) => {
@@ -68,7 +60,7 @@ const DataTable = ({
     }
 
     return classNames('uitest-data-table-column', styles.bodyCell, variant, {
-      [styles.clickable]: isClickable(key),
+      [styles.clickable]: isClickable,
     });
   };
 
@@ -93,12 +85,12 @@ const DataTable = ({
     if (singleRow !== undefined) {
       return [data[Math.min(singleRow, data.length - 1)]];
     } else {
-      return data.slice(0, 100);
+      return data.slice(0, DATA_TABLE_ROW_LIMIT);
     }
   };
 
   const handleSetCurrentColumn = (columnId: string) => {
-    if (isClickable(columnId)) {
+    if (isClickable) {
       dispatch(setCurrentColumn(columnId));
     }
   };
@@ -125,7 +117,7 @@ const DataTable = ({
                 scope="col"
                 className={getColumnHeaderClassName(columnId)}
               >
-                {isClickable(columnId) ? (
+                {isClickable ? (
                   <button
                     type="button"
                     className={styles.headerButton}

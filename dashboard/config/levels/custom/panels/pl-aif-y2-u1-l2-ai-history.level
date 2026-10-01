@@ -9,37 +9,37 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "## Many Fields, One Breakthrough\nAI didn't come from one field or one breakthrough. It's the product of decades of separate work in computer science, psychology, neurology, and linguistics, four different kinds of researchers solving four different problems that all turned out to matter for AI.",
+        "text": "# Many Fields, One Breakthrough\nAI didn't come from one field or one breakthrough. It's the product of decades of separate work in computer science, psychology, neurology, and linguistics, four different kinds of researchers solving four different problems that all turned out to matter for AI.",
         "imageUrl": "https://images.code.org/24cdefb5ecb27e172600a70b2bd53f23-panel1.png",
         "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
         "layout": "text-bottom-right"
       },
       {
-        "text": "# Computer Science: Algorithms and Computation\n Computer science gave AI its algorithms and computation, the actual step-by-step mechanics of how a machine processes information and executes a task.",
+        "text": "# Computer Science:\n### Algorithms and Computation\n Computer science gave AI its algorithms and computation, the actual step-by-step mechanics of how a machine processes information and executes a task.",
         "imageUrl": "https://images.code.org/cce122554cce2517c63fc4385d11338c-panel2.png",
         "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Psychology: How Minds Learn\n\nPsychology contributed research on human behavior, learning, and memory, the models of how minds actually learn that early AI researchers borrowed from directly.",
+        "text": "## Psychology: \n### How Minds Learn\n\nPsychology contributed research on human behavior, learning, and memory, the models of how minds actually learn that early AI researchers borrowed from directly.",
         "imageUrl": "https://images.code.org/8f5ed0a006f3da52547d78a3e291cf4d-panel3.png",
         "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Neurology: Modeling the Brain\nNeurology's study of the brain and nervous system inspired the earliest ideas behind neural networks, systems loosely modeled on how real neurons connect and fire.",
+        "text": "## Neurology: \n### Modeling the Brain\nNeurology's study of the brain and nervous system inspired the earliest ideas behind neural networks, systems loosely modeled on how real neurons connect and fire.",
         "imageUrl": "https://images.code.org/5d817271f814eb10a712c65dc34cd7a7-panel4.png",
         "key": "pl-sandbox-aif2-U1-weblab-panels_10-f545a3f8-80df-47e7-a398-659a35ae4b5b",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Linguistics: Understanding Language\nLinguistics, the study of how language is structured and how it carries meaning, is why AI can process and generate human language at all, from early chatbots to today's models.",
+        "text": "## Linguistics:\n### Understanding Language\nLinguistics, the study of how language is structured and how it carries meaning, is why AI can process and generate human language at all, from early chatbots to today's models.",
         "imageUrl": "https://images.code.org/73fc52da2d73fd2ed2aedde112bda7d3-panel5.png",
         "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-31887a3d-5ad5-424f-a333-ceecdb0181f9",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## From History to Prediction\nStudents won't need to master all four fields. In class, they'll pick one discipline that interests them to explore through \"Explore AI Milestones,\" then make their own prediction about where AI goes next. Curiosity about one thread matters more here than covering all four.",
+        "text": "## From History to Prediction\nStudents won't need to master all four fields. In Lesson 2, they'll research one discipline's AI innovation using AI Chat, then predict where AI goes next. Curiosity about one thread matters more here than covering all four.",
         "imageUrl": "https://images.code.org/0ce761c139e8dcd21d692c1d17cf9d3b-panel6.png",
         "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-f9a89711-4b6e-4fbc-ae64-71f41573296a",
         "layout": "text-bottom-right"
@@ -49,6 +49,6 @@
     "offer_browser_tts": "false",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-29T15:07:35.540+00:00\",\"changed\":[\"cloned from \\\"pl-aif1-weblab-panels\\\"\"],\"cloned_from\":\"pl-aif1-weblab-panels\"},{\"changed_at\":\"2026-09-29 16:19:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:29:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:31:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:41:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-29T15:07:35.540+00:00\",\"changed\":[\"cloned from \\\"pl-aif1-weblab-panels\\\"\"],\"cloned_from\":\"pl-aif1-weblab-panels\"},{\"changed_at\":\"2026-09-29 16:19:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:29:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:31:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:41:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-30 16:20:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
