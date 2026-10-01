@@ -794,9 +794,11 @@ Do, in order:
    ${JSON.stringify(discover.consumers.filter(c => c.kind === 'apps').slice(0, 6).map(c => c.file))}
    --dry only: reverting a real run would need git checkout, which is forbidden here.
 6. Docs planned for this phase: @deprecated JSDoc on the legacy component naming the
-   replacement; ${COMPONENT_DIR}/README.md documenting the MUI version first and the legacy
-   path as deprecated, with the prop map, and pointing at the codemod's README entry
-   rather than repeating its command; the component's row in ${STATUS_DOC} set to In
+   replacement; JSDoc on every prop of the MUI props interface, carrying what a
+   reader needs (element, default, edge cases), since Storybook autodocs renders the
+   props table from it; ${COMPONENT_DIR}/README.md as short as its neighbours' (the
+   import, which component to use, pointers to ${PLAN_DOC}, the codemod's README entry
+   and Storybook), with no prop table and no restated command; the component's row in ${STATUS_DOC} set to In
    Progress with the override file; the STYLE_OVERRIDES block there if you registered an
    override. Write every departure from the plan into the Deviations section of ${PLAN_DOC}.
 7. Checks, from ${LIB} unless noted: yarn test; yarn typecheck; ../../node_modules/.bin/eslint .;
