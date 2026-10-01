@@ -4,6 +4,8 @@ import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
+import {aiGatewayKeyProxy} from '@code-dot-org/core/api/aiGateway/dev';
+
 import {stripModuleFromCssName} from './vite/cssAssetNames';
 
 // https://vite.dev/config/
@@ -15,9 +17,12 @@ export default defineConfig({
     libInjectCss(),
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
     externalizeDeps(),
+    // With GOOGLE_GENERATIVE_AI_API_KEY and
+    // VITE_AI_GATEWAY_URL=/__ai-gateway, generation uses the developer's key.
+    aiGatewayKeyProxy(),
   ],
   server: {
-    allowedHosts: ['localhost-studio.code.org'],
+    allowedHosts: ['localhost', 'localhost-studio.code.org'],
     fs: {
       // The engine demo runs the real NativeSpriteLab helper library.
       allow: [
