@@ -10,13 +10,18 @@ import React, {
 } from 'react';
 import {Image as KonvaImage, Layer, Stage, Transformer} from 'react-konva';
 
+import CanvasSticker from './CanvasSticker';
 import CanvasText, {TransformerNode} from './CanvasText';
 import {
+  CanvasItem,
+  CanvasStickerItem,
   CanvasTextItem,
+  CORNER_ANCHORS,
   NewCanvasText,
   TEXT_FONT_STYLE,
 } from './canvasTextUtils';
 import EditToolbar from './EditToolbar';
+import {Sticker} from './stickers';
 
 import styles from './video-canvas.module.scss';
 
@@ -27,15 +32,9 @@ export type VideoCanvasMode = 'edit' | 'recording' | 'preview';
 type LayerNode = React.ElementRef<typeof Layer>;
 type ImageNode = React.ElementRef<typeof KonvaImage>;
 
-const TEXT_ANCHORS = [
-  'top-left',
-  'top-right',
-  'bottom-left',
-  'bottom-right',
-  'middle-left',
-  'middle-right',
-];
+const TEXT_ANCHORS = [...CORNER_ANCHORS, 'middle-left', 'middle-right'];
 const ROTATION_SNAPS = [0, 90, 180, 270];
+const MIN_STICKER_SIZE = 24;
 
 const RING_RADIUS = 26;
 const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
@@ -156,10 +155,10 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   // A Layer ref state so the video stream animation reruns when the Layer
   // remounts on the way to 'edit', unmounts while the take plays back
   const [layerNode, setLayerNode] = useState<LayerNode | null>(null);
-  // the stage unmounts during preview, and the texts are added back when returning to edit mode
-  const [texts, setTexts] = useState<CanvasTextItem[]>([]);
+  // the stage unmounts during preview, and the items are added back when returning to edit mode
+  const [items, setItems] = useState<CanvasItem[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const textIdRef = useRef(0);
+  const itemIdRef = useRef(0);
   const transformerRef = useRef<TransformerNode>(null);
 
   const [wrapperNode, setWrapperNode] = useState<HTMLDivElement | null>(null);
@@ -374,6 +373,11 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     onIsRecordingChange,
   ]);
 
+  const addItem = useCallback((item: CanvasItem) => {
+    setItems(prev => [...prev, item]);
+    setSelectedId(item.id);
+  }, []);
+
   const addText = useCallback(
     async ({text, color, style}: NewCanvasText) => {
       try {
@@ -382,38 +386,55 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
         console.error(error);
         // Draw with the fallback font rather than not at all.
       }
-      const id = `text-${++textIdRef.current}`;
-      setTexts(prev => [
-        ...prev,
-        {
-          id,
-          text,
-          color,
-          style,
-          x: stageSize.width * 0.1,
-          y: stageSize.height * 0.4,
-          width: stageSize.width * 0.8,
-          fontSize: Math.round(stageSize.width * 0.12),
-          rotation: 0,
-        },
-      ]);
-      setSelectedId(id);
+      addItem({
+        kind: 'text',
+        id: `text-${++itemIdRef.current}`,
+        text,
+        color,
+        style,
+        x: stageSize.width * 0.1,
+        y: stageSize.height * 0.4,
+        width: stageSize.width * 0.8,
+        fontSize: Math.round(stageSize.width * 0.12),
+        rotation: 0,
+      });
     },
-    [stageSize]
+    [stageSize, addItem]
+  );
+
+  const addSticker = useCallback(
+    ({src}: Sticker) => {
+      const size = Math.round(stageSize.width * 0.3);
+      addItem({
+        kind: 'sticker',
+        id: `sticker-${++itemIdRef.current}`,
+        src,
+        x: (stageSize.width - size) / 2,
+        y: (stageSize.height - size) / 2,
+        size,
+        rotation: 0,
+      });
+    },
+    [stageSize, addItem]
   );
 
   const deleteSelected = useCallback(() => {
-    setTexts(prev => prev.filter(item => item.id !== selectedId));
+    setItems(prev => prev.filter(item => item.id !== selectedId));
     setSelectedId(null);
   }, [selectedId]);
 
-  const updateText = useCallback(
-    (id: string, changes: Partial<CanvasTextItem>) =>
-      setTexts(prev =>
-        prev.map(item => (item.id === id ? {...item, ...changes} : item))
+  const updateItem = useCallback(
+    (id: string, changes: Partial<CanvasTextItem | CanvasStickerItem>) =>
+      setItems(prev =>
+        prev.map(item =>
+          item.id === id ? ({...item, ...changes} as CanvasItem) : item
+        )
       ),
     []
   );
+
+  const selectedIsSticker =
+    items.find(item => item.id === selectedId)?.kind === 'sticker';
 
   // The transformer lives on another layer and cannot see changes inside
   // the Label it holds, so it is re-pointed and refreshed on every change.
@@ -423,7 +444,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     const node = selectedId ? layerNode?.findOne(`#${selectedId}`) : undefined;
     transformer.nodes(node ? [node] : []);
     transformer.forceUpdate();
-  }, [selectedId, texts, layerNode]);
+  }, [selectedId, items, layerNode]);
 
   useEffect(() => {
     if (disabled) return;
@@ -468,6 +489,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
       {currentMode === 'edit' && (
         <EditToolbar
           onAddText={addText}
+          onAddSticker={addSticker}
           canDelete={selectedId !== null}
           onDelete={deleteSelected}
         />
@@ -500,23 +522,40 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
                 image={undefined}
                 listening={false}
               />
-              {texts.map(item => (
-                <CanvasText
-                  key={item.id}
-                  item={item}
-                  editable={currentMode === 'edit'}
-                  transformerRef={transformerRef}
-                  onSelect={() => setSelectedId(item.id)}
-                  onChange={changes => updateText(item.id, changes)}
-                />
-              ))}
+              {items.map(item =>
+                item.kind === 'text' ? (
+                  <CanvasText
+                    key={item.id}
+                    item={item}
+                    editable={currentMode === 'edit'}
+                    transformerRef={transformerRef}
+                    onSelect={() => setSelectedId(item.id)}
+                    onChange={changes => updateItem(item.id, changes)}
+                  />
+                ) : (
+                  <CanvasSticker
+                    key={item.id}
+                    item={item}
+                    editable={currentMode === 'edit'}
+                    onSelect={() => setSelectedId(item.id)}
+                    onChange={changes => updateItem(item.id, changes)}
+                  />
+                )
+              )}
             </Layer>
             <Layer>
               <Transformer
                 ref={transformerRef}
-                enabledAnchors={TEXT_ANCHORS}
+                enabledAnchors={
+                  selectedIsSticker ? CORNER_ANCHORS : TEXT_ANCHORS
+                }
                 rotationSnaps={ROTATION_SNAPS}
                 flipEnabled={false}
+                boundBoxFunc={(oldBox, newBox) =>
+                  selectedIsSticker && newBox.width < MIN_STICKER_SIZE
+                    ? oldBox
+                    : newBox
+                }
               />
             </Layer>
           </Stage>
