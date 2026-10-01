@@ -114,8 +114,15 @@ export default defineConfig({
       // `src/fixtures/index.ts` is an explicit entry so its JS is emitted to
       // dist/fixtures/index.* (the `./mocks` export subpath). Nothing in the
       // App.tsx graph imports it, so without this only its .d.ts would build.
-      // `src/player/index.ts` is one for the same reason (the `./player` subpath).
-      entry: ['src/App.tsx', 'src/fixtures/index.ts', 'src/player/index.ts'],
+      // The player, components and redux entries are there for the same reason
+      // (the `./player`, `./components` and `./redux` subpaths).
+      entry: [
+        'src/App.tsx',
+        'src/fixtures/index.ts',
+        'src/player/index.ts',
+        'src/components/index.ts',
+        'src/redux/index.ts',
+      ],
       name: 'music-lab',
       formats: ['es', 'cjs'],
     },

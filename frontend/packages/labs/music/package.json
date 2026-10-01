@@ -20,14 +20,9 @@
       "require": "./dist/fixtures/index.cjs"
     },
     "./components": {
-      "types": "./dist/types/components/index.d.ts",
-      "import": "./dist/esm/components/index.mjs",
-      "require": "./dist/cjs/components/index.cjs"
-    },
-    "./parser": {
-      "types": "./dist/types/parser/index.d.ts",
-      "import": "./dist/esm/parser/index.mjs",
-      "require": "./dist/cjs/parser/index.cjs"
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.cjs"
     },
     "./player": {
       "types": "./dist/player/index.d.ts",
@@ -35,9 +30,9 @@
       "require": "./dist/player/index.cjs"
     },
     "./redux": {
-      "types": "./dist/types/redux/index.d.ts",
-      "import": "./dist/esm/redux/index.mjs",
-      "require": "./dist/cjs/redux/index.cjs"
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
     }
   },
   "scripts": {
