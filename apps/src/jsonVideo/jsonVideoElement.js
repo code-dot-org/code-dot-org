@@ -278,16 +278,28 @@ export class JsonVideo extends HTMLElement {
   _processLoadedData(data) {
     this._videoData = data;
     this._calculateDurations();
-    if (data.audio) {
-      this._mainAudio.src = data.audio;
-      this._mainAudio.load();
-    }
+    // Drop the previous video's tracks; a stale main track would otherwise
+    // play under a video that only has per-scene audio.
+    this._resetAudio(this._mainAudio, data.audio);
+    this._resetAudio(this._sceneAudio, null);
+    this._mainAudioPausedByScene = false;
+    this._mainAudioResumeTime = 0;
+    this._currentSceneIndex = -1;
     this.seekTo(0);
     this.ui.totTime.textContent = this._formatTime(this._totalDurationMs);
 
     // Dispatch success events similar to native <video>
     this.dispatchEvent(new Event('loadedmetadata'));
     this.dispatchEvent(new Event('loadeddata'));
+  }
+
+  // removeAttribute, not src = '': an empty src resolves to the page URL,
+  // which still counts as a track everywhere `.src` is tested.
+  _resetAudio(el, src) {
+    el.pause();
+    if (src) el.src = src;
+    else el.removeAttribute('src');
+    el.load();
   }
 
   play() {
