@@ -5,7 +5,8 @@ The levels behind `/projects/<key>` (`/projects/applab`, `/projects/dance`,
 level name, and `ProjectsController` looks the level up by that name on every
 request, so these are platform fixtures the code depends on, not curriculum
 reached through a unit. They are seeded in every environment by
-`rake seed:standalone_project_levels`, which runs as part of `seed:scripts`.
+`rake seed:standalone_project_levels`, which runs as part of `seed:scripts` and
+of `seed:test`, so the unit-test database has them too.
 
 The layout matches the production and UI test trees: `.level` files under
 `levels/custom/<game>/`, DSL files (a `BubbleChoice` project with sublevels)
