@@ -25,6 +25,9 @@ class StandaloneProjectLevelsTest < ActionDispatch::IntegrationTest
           RAILS_ENV=test bundle exec rake db:reset db:test:prepare
       MESSAGE
       refute_nil level.game, "#{config[:name].dump} has no game"
+      # Without it the page never hands a Lab2 lab its project channel.
+      assert level.try(:is_project_level),
+        "#{config[:name].dump} does not set is_project_level: \"is_project_level\": true in a .level file, `standalone` in a BubbleChoice DSL"
 
       get "/projects/#{key}/new"
       channel_id = assert_redirected_to_edit(key)

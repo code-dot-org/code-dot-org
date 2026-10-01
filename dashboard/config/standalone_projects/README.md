@@ -64,7 +64,9 @@ name with exactly one file here; every file here has a standalone tree name.
 Work locally with `levelbuilder_mode` on. The name puts the file in this tree
 on the first save.
 
-1. Create the level as `New Foo Project`.
+1. Create the level as `New Foo Project`, and set `"is_project_level": true`
+   in its file by hand (`standalone` in a BubbleChoice DSL); levelbuilder has
+   no field for it. Without it a Lab2 page never receives its project channel.
 2. For a multi-project lab, create each sublevel as `<Something> Subproject`
    before attaching it to the parent.
 3. Add the `foo:` entry to `standalone_projects.yml`.
@@ -87,6 +89,8 @@ on the first save.
 - Registered a name with no level: the unit test fails on the missing file, and
   `test/integration/standalone_project_levels_test.rb` fails for that key.
   Create the level.
+- Forgot `is_project_level`: `test/integration/standalone_project_levels_test.rb`
+  fails for that key. Set the flag in its file.
 - A pattern-named file landed under `config/levels` by hand: any seed with
   production content mapped in stops as misfiled and prints the `git mv`.
 - Retiring a lab: remove the yml entry, which releases the destroy guard, then
