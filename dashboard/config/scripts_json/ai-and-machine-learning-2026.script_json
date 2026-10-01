@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-14 15:10:17 UTC",
+    "serialized_at": "2026-09-30 21:33:14 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -12290,7 +12290,7 @@
     },
     {
       "name": "Troubleshooting Models - Activity Guide",
-      "url": "https://docs.google.com/presentation/d/17zc0lS1UdDav7Vk6MzyNDofphs_vUgy8cKQbIY4T_cQ/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1CWOJ7PHNlO7Z-4C51KvZnu55EDKn1t33i-2oUw5Zc_g/",
       "key": "troubleshooting_models_-_activity_guide",
       "properties": {
         "audience": "Student",
