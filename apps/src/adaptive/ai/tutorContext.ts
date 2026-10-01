@@ -22,7 +22,12 @@ const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {
   locked: 'Not started',
 };
 
-const ORDER: CheckpointStatus[] = ['complete', 'inProgress', 'available'];
+// Checkpoint statuses relevant to the tutor; locked reads as available.
+const TUTOR_STATUSES: CheckpointStatus[] = [
+  'complete',
+  'inProgress',
+  'available',
+];
 
 function skillTitles(pathway: Pathway, ids: string[] | undefined): string[] {
   return (ids || []).map(id => pathway.skills[id]?.title ?? id);
@@ -69,11 +74,12 @@ function progressSection(
   pathway: Pathway,
   statusMap: CheckpointStatusMap
 ): string {
-  const lines = ORDER.map(status => {
+  // List each checkpoint grouped by its status. For tutor purposes, available
+  // and locked mean the same thing.
+  const lines = TUTOR_STATUSES.map(status => {
     const titles = pathway.checkpoints
       .filter(c => {
         const s = statusMap[c.id];
-        // Locked and available both read as not started to the tutor.
         return status === 'available'
           ? s === 'available' || s === 'locked'
           : s === status;
