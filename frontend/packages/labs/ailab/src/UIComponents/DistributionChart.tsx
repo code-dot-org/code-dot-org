@@ -1,4 +1,5 @@
-/* Bar chart of how many rows have each value of a categorical column. */
+/* Bar chart of how many rows have each value of a categorical column.
+It uses a list behind the scenes to make the data accessible to screen readers. */
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 
@@ -77,6 +78,7 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
                   className={classNames(styles.bar, colorClass(index))}
                   style={{height: `${(bar.count / axisMax) * 100}%`}}
                 />
+                {/* Label for screen readers */}
                 <span className={styles.visuallyHidden}>
                   {bar.label}: {bar.count}
                 </span>
