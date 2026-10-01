@@ -22,6 +22,7 @@ import type {
 import type {UserThemeSettings} from '../dashboard/preferences';
 import type {ProjectSourcesAny} from '../dashboard/sources';
 
+import type {CannedImageRule} from './aiGateway.handlers';
 import {
   clearMockFixtures,
   registerMockFixture,
@@ -41,6 +42,8 @@ export type LabFixture = {
   theme?: UserThemeSettings | null;
   /** Further endpoints the scenario answers, ahead of the default handlers. */
   routes?: MockRoute[];
+  /** What the mock AI gateway draws, by prompt; the first match wins. */
+  aiImages?: CannedImageRule[];
 };
 
 /** All scenarios for a lab, keyed by tag (e.g. `simple`, `complex`, `error`). */
