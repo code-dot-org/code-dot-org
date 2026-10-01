@@ -129,30 +129,43 @@ describe('bursts', () => {
 
   it('draws sparks as the tinted image, a dot until it loads, and confetti as paper', () => {
     const calls: string[] = [];
+    const context = {globalAlpha: 1};
+    const alphas: number[] = [];
     const canvas = new Proxy(
-      {CENTER: 'center'},
+      {CENTER: 'center', drawingContext: context},
       {
-        get: (t, name: string) =>
-          name in t
-            ? (t as Record<string, unknown>)[name]
-            : () => calls.push(name),
+        get: (t, name: string) => {
+          if (name in t) {
+            return (t as Record<string, unknown>)[name];
+          }
+          return () => {
+            if (name === 'image' || name === 'ellipse' || name === 'rect') {
+              alphas.push(context.globalAlpha);
+            }
+            calls.push(name);
+          };
+        },
       }
     ) as Parameters<typeof drawBursts>[0];
     const bursts = [
       createBurst('sparks', 3, {x: 0, y: 0}, PLATFORM_GRAVITY, () => 0.5),
     ];
-    drawBursts(canvas, bursts, {});
+    bursts[0].particles[1].age = bursts[0].particles[1].life - 1;
+    drawBursts(canvas, bursts, () => ({}));
     expect(calls.filter(c => c === 'image')).toHaveLength(3);
-    expect(calls.filter(c => c === 'tint')).toHaveLength(3);
+    // The fade goes through the canvas alpha, restored afterwards.
+    expect(alphas[0]).toBe(1);
+    expect(alphas[1]).toBeLessThan(0.2);
+    expect(context.globalAlpha).toBe(1);
     calls.length = 0;
-    drawBursts(canvas, bursts, undefined);
+    drawBursts(canvas, bursts, () => undefined);
     expect(calls.filter(c => c === 'ellipse')).toHaveLength(3);
     expect(calls.filter(c => c === 'image')).toHaveLength(0);
     calls.length = 0;
     drawBursts(
       canvas,
       [createBurst('confetti', 4, {x: 0, y: 0}, PLATFORM_GRAVITY, () => 0.5)],
-      {}
+      () => ({})
     );
     expect(calls.filter(c => c === 'rect')).toHaveLength(4);
     expect(calls.filter(c => c === 'image')).toHaveLength(0);

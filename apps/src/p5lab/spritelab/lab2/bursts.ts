@@ -179,32 +179,36 @@ export function burstAlpha(p: BurstParticle): number {
   return Math.max(0, Math.min(1, (p.life - p.age) / (p.life * FADE_SHARE)));
 }
 
-/** The p5 calls the drawing needs. */
+/** The p5 calls the drawing needs. The fade goes through the canvas's own
+    alpha: in this p5 a tint's alpha is tint strength, not opacity. */
 export interface BurstCanvas {
   push(): void;
   pop(): void;
   translate(x: number, y: number): void;
   rotate(angle: number): void;
   scale(x: number, y: number): void;
-  tint(r: number, g: number, b: number, a?: number): void;
-  noTint(): void;
   imageMode(mode: unknown): void;
   rectMode(mode: unknown): void;
   image(img: unknown, x: number, y: number, w: number, h: number): void;
   noStroke(): void;
-  fill(r: number, g: number, b: number, a?: number): void;
+  fill(r: number, g: number, b: number): void;
   rect(x: number, y: number, w: number, h: number): void;
   ellipse(x: number, y: number, w: number, h?: number): void;
+  drawingContext: {globalAlpha: number};
   CENTER: unknown;
 }
 
-/** Draw every burst's particles: sparks as the tinted spark image,
-    shrinking as they fade (a tinted dot until the image has loaded);
-    confetti as scraps of paper that tumble by narrowing and widening. */
+/** The spark image already tinted a colour, or nothing until it has
+    loaded. */
+export type SparkFor = (color: [number, number, number]) => unknown;
+
+/** Draw every burst's particles: sparks as the spark image in their colour,
+    shrinking as they fade (a dot until the image has loaded); confetti as
+    scraps of paper that tumble by narrowing and widening. */
 export function drawBursts(
   p5: BurstCanvas,
   bursts: Burst[],
-  spark: unknown
+  sparkFor: SparkFor
 ): void {
   if (!bursts.length) {
     return;
@@ -213,33 +217,35 @@ export function drawBursts(
   p5.imageMode(p5.CENTER);
   p5.rectMode(p5.CENTER);
   p5.noStroke();
+  const context = p5.drawingContext;
+  const alphaBefore = context.globalAlpha;
   for (const burst of bursts) {
     const paper = LOOKS[burst.look].shape === 'paper';
     for (const p of burst.particles) {
       const alpha = burstAlpha(p);
-      const a = alpha * 255;
       const [r, g, b] = p.color;
       p5.push();
       p5.translate(p.x, p.y);
       p5.rotate(p.rotation);
+      context.globalAlpha = alphaBefore * alpha;
       if (paper) {
         // A scrap seen edge-on and face-on by turns.
         p5.scale(Math.max(0.15, Math.abs(Math.cos(p.age * 0.18 + p.phase))), 1);
-        p5.fill(r, g, b, a);
+        p5.fill(r, g, b);
         p5.rect(0, 0, p.size, p.size * 0.6);
       } else {
         const size = p.size * (0.4 + 0.6 * alpha);
+        const spark = sparkFor(p.color);
         if (spark) {
-          p5.tint(r, g, b, a);
           p5.image(spark, 0, 0, size, size);
         } else {
-          p5.fill(r, g, b, a);
+          p5.fill(r, g, b);
           p5.ellipse(0, 0, size * 0.4, size * 0.4);
         }
       }
       p5.pop();
     }
   }
-  p5.noTint();
+  context.globalAlpha = alphaBefore;
   p5.pop();
 }

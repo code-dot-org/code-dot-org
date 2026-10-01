@@ -52,11 +52,12 @@ import {
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
+  bodyBox,
   resolvePlatformPhysics,
   usesPlatformPhysics,
+  wallBox,
 } from './platformPhysics';
 import {
-  bodyBox,
   createWeather,
   drawWeather,
   isWeatherKind,
@@ -226,10 +227,33 @@ export default class SpriteLab2Engine extends SpriteLab {
     // pool, built at the first paint after the kind changes.
     this.weatherKind_ = 'none';
     this.weather_ = null;
-    // Bursts in flight (see burstParticles), and the shared spark image,
-    // loaded on the first burst.
+    // Bursts in flight (see burstParticles); the spark image, loaded on
+    // the first burst, and a copy of it per palette colour (see sparkFor_).
     this.bursts_ = [];
     this.spark_ = null;
+    this.tintedSparks_ = new Map();
+    // The frame the particles last stepped in: a thumbnail capture paints
+    // twice in one frame, and the particles must move once.
+    this.particlesSteppedFrame_ = -1;
+  }
+
+  // The spark image in one colour, made once per colour: this p5 recolours
+  // an image by rebuilding a canvas on every draw, too slow per particle.
+  sparkFor_(color) {
+    const image = this.spark_?.image;
+    if (!image) {
+      return undefined;
+    }
+    const key = color.join(',');
+    let tinted = this.tintedSparks_.get(key);
+    if (!tinted) {
+      const p5 = this.p5Wrapper.p5;
+      tinted = p5.createGraphics(image.width, image.height);
+      tinted.tint(color[0], color[1], color[2]);
+      tinted.image(image, 0, 0);
+      this.tintedSparks_.set(key, tinted);
+    }
+    return tinted;
   }
 
   /**
@@ -238,8 +262,8 @@ export default class SpriteLab2Engine extends SpriteLab {
    * Capped so a block in a loop cannot flood the scene.
    */
   burstParticles(count, look, spriteArg) {
-    const scene = this.weatherScene_();
-    if (!scene) {
+    const view = this.particleView_();
+    if (!view) {
       return;
     }
     if (!this.spark_) {
@@ -252,18 +276,20 @@ export default class SpriteLab2Engine extends SpriteLab {
       .getSpriteArray(spriteArg)
       .map(sprite => ({x: sprite.position.x, y: sprite.position.y}));
     if (!origins.length) {
-      origins.push({x: scene.width / 2, y: scene.height / 2});
+      origins.push({x: view.width / 2, y: view.height / 2});
     }
     const inFlight = this.bursts_.reduce((n, b) => n + b.particles.length, 0);
     const wanted = Math.min(MAX_BURST_COUNT, Math.max(1, Number(count) || 0));
     const allowed = Math.min(wanted, MAX_BURST_PARTICLES - inFlight);
-    if (allowed <= 0) {
-      return;
-    }
-    const each = Math.max(1, Math.floor(allowed / origins.length));
     const kind = isBurstLook(look) ? look : 'sparks';
-    origins.forEach(origin => {
-      this.bursts_.push(createBurst(kind, each, origin, scene.gravity));
+    // The allowance shared out exactly: the first origins take the extra.
+    const base = Math.floor(allowed / origins.length);
+    const extra = allowed % origins.length;
+    origins.forEach((origin, i) => {
+      const each = base + (i < extra ? 1 : 0);
+      if (each > 0) {
+        this.bursts_.push(createBurst(kind, each, origin, view.gravity));
+      }
     });
   }
 
@@ -274,56 +300,63 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.weather_ = null;
   }
 
-  // What the weather falls through this frame; null before the canvas is up.
-  weatherScene_() {
+  // The world the particles fly through: its size and gravity; null before
+  // the canvas is up.
+  particleView_() {
     const p5 = this.p5Wrapper.p5;
     if (!p5 || !this.library) {
       return null;
     }
-    // Collision treats a tile as its full cell, as the platform resolver does.
-    const tileBox = sprite => {
-      const half = (Math.max(sprite.width, sprite.height) * sprite.scale) / 2;
-      return {
-        x: sprite.position.x,
-        y: sprite.position.y,
-        halfW: half,
-        halfH: half,
-      };
-    };
-    // Everything that is not a tile: players, characters, objects.
-    const bodies = Object.values(this.library.nativeSpriteMap)
-      .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
-      .map(bodyBox);
     return {
       width: p5.width,
       height: p5.height,
-      walls: this.wallsThisFrame_(this.library).map(tileBox),
-      bodies,
       gravity: this.usesPlatformPhysics_
         ? this.platformGravity_
         : PLATFORM_GRAVITY,
     };
   }
 
+  // What the weather lands on this frame, on top of the view: the tiles,
+  // and every other sprite as a body.
+  weatherScene_(view) {
+    const bodies = Object.values(this.library.nativeSpriteMap)
+      .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
+      .map(bodyBox);
+    return {
+      ...view,
+      walls: this.wallsThisFrame_(this.library).map(wallBox),
+      bodies,
+    };
+  }
+
   // Runs inside the paint, after the sprites, so in a platform scene the
   // particles are in world space under the camera.
   stepAndDrawParticles_() {
-    const idle =
-      this.weatherKind_ === 'none' && !this.weather_ && !this.bursts_.length;
-    if (idle) {
+    const weatherOn = this.weatherKind_ !== 'none' || !!this.weather_;
+    if (!weatherOn && !this.bursts_.length) {
       return;
     }
-    const scene = this.weatherScene_();
-    if (!scene) {
+    const view = this.particleView_();
+    if (!view) {
       return;
     }
-    if (!this.weather_ || this.weather_.kind !== this.weatherKind_) {
-      this.weather_ = createWeather(this.weatherKind_, scene);
+    const p5 = this.p5Wrapper.p5;
+    const step = this.particlesSteppedFrame_ !== p5.frameCount;
+    this.particlesSteppedFrame_ = p5.frameCount;
+    if (weatherOn) {
+      const scene = this.weatherScene_(view);
+      if (!this.weather_ || this.weather_.kind !== this.weatherKind_) {
+        this.weather_ = createWeather(this.weatherKind_, scene);
+      }
+      if (step) {
+        stepWeather(this.weather_, scene);
+      }
+      drawWeather(p5, this.weather_);
     }
-    stepWeather(this.weather_, scene);
-    drawWeather(this.p5Wrapper.p5, this.weather_);
-    this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, scene));
-    drawBursts(this.p5Wrapper.p5, this.bursts_, this.spark_?.image);
+    if (step) {
+      this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, view));
+    }
+    drawBursts(p5, this.bursts_, color => this.sparkFor_(color));
   }
 
   /**
@@ -473,8 +506,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.weather_ = null;
     this.bursts_ = [];
     library.commands.setWeather = kind => this.setWeather(kind);
-    library.commands.burstParticles = (count, imageName, spriteArg) =>
-      this.burstParticles(count, imageName, spriteArg);
+    library.commands.burstParticles = (count, look, spriteArg) =>
+      this.burstParticles(count, look, spriteArg);
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();

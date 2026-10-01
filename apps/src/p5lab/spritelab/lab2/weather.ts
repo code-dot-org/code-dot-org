@@ -4,7 +4,9 @@
 // records stepped once a frame, not sprites: no block can name them and no
 // event sees them.
 
-import {PLATFORM_GRAVITY, PLAYER_BODY_SCALE} from './platformPhysics';
+import {bodyBox, CollisionBox, PLATFORM_GRAVITY} from './platformPhysics';
+
+export {bodyBox};
 
 export const WEATHER_KINDS = ['none', 'rain', 'snow'] as const;
 export type WeatherKind = (typeof WEATHER_KINDS)[number];
@@ -13,13 +15,7 @@ export function isWeatherKind(value: unknown): value is WeatherKind {
   return WEATHER_KINDS.includes(value as WeatherKind);
 }
 
-/** An axis-aligned box in world coordinates, by center and half sizes. */
-export interface Box {
-  x: number;
-  y: number;
-  halfW: number;
-  halfH: number;
-}
+export type Box = CollisionBox;
 
 /** What the particles fall through this frame. */
 export interface WeatherScene {
@@ -41,6 +37,8 @@ export interface Particle {
   y: number;
   vx: number;
   vy: number;
+  /** This frame's sideways drift from wind and sway, for the streak. */
+  drift: number;
   /** Fall speed under the default gravity; gravity scales it. */
   speed: number;
   /** Frames in the current state. */
@@ -144,6 +142,7 @@ function particleAt(
     y,
     vx: 0,
     vy: 0,
+    drift: 0,
     speed: rule.speed(random),
     age: 0,
     state: 'falling',
@@ -189,35 +188,22 @@ export function createWeather(
   const down = flow(weather);
   const felt = Math.min(1, Math.abs(gravity) / PLATFORM_GRAVITY);
   weather.particles = Array.from({length: rule.count}, () => {
-    const along = between(random, -scene.height, scene.height);
-    const p = particleAt(
-      rule,
-      scene,
-      down > 0 ? along : scene.height - along,
-      random
-    );
+    let p: Particle;
+    // Not inside a tile: a particle seeded there would never land on it.
+    let tries = 0;
+    do {
+      const along = between(random, -scene.height, scene.height);
+      p = particleAt(
+        rule,
+        scene,
+        down > 0 ? along : scene.height - along,
+        random
+      );
+    } while (inside(scene.walls, p) && ++tries < 8);
     p.vy = down * p.speed * felt;
     return p;
   });
   return weather;
-}
-
-/** The box a character or object presents to the weather: its
-    feet-anchored body, as the platform resolver measures a player. */
-export function bodyBox(sprite: {
-  position: {x: number; y: number};
-  width: number;
-  height: number;
-  scale: number;
-}): Box {
-  const imgHalfH = (sprite.height * sprite.scale) / 2;
-  const halfH = imgHalfH * PLAYER_BODY_SCALE;
-  return {
-    x: sprite.position.x,
-    y: sprite.position.y + (imgHalfH - halfH),
-    halfW: ((sprite.width * sprite.scale) / 2) * PLAYER_BODY_SCALE,
-    halfH,
-  };
 }
 
 /** The surface facing the flow that a falling particle crossed this frame,
@@ -248,18 +234,29 @@ export function landedOn(
   return hit;
 }
 
+function inside(boxes: Box[], p: {x: number; y: number}): Box | undefined {
+  return boxes.find(
+    box =>
+      Math.abs(p.x - box.x) < box.halfW && Math.abs(p.y - box.y) < box.halfH
+  );
+}
+
 /** Push a particle that drifted into a box through its side back out to
     the nearer side, so it slides along the face instead of falling inside
-    it. */
-export function keepOutside(boxes: Box[], p: {x: number; y: number}): void {
-  for (const box of boxes) {
-    if (
-      Math.abs(p.x - box.x) < box.halfW &&
-      Math.abs(p.y - box.y) < box.halfH
-    ) {
-      p.x = p.x < box.x ? box.x - box.halfW - 1 : box.x + box.halfW + 1;
+    it. A push into a neighbouring box pushes again; returns the box it is
+    still inside when a row leaves it nowhere to go. */
+export function keepOutside(
+  boxes: Box[],
+  p: {x: number; y: number}
+): Box | undefined {
+  for (let i = 0; i < 3; i++) {
+    const box = inside(boxes, p);
+    if (!box) {
+      return undefined;
     }
+    p.x = p.x < box.x ? box.x - box.halfW - 1 : box.x + box.halfW + 1;
   }
+  return inside(boxes, p);
 }
 
 function settle(p: Particle, y: number, down: number, contact: Contact) {
@@ -324,13 +321,15 @@ export function stepWeather(
         return;
       }
       if (!p.holds) {
-        p.x += p.vx;
+        p.drift = rule.sway(p, weather.wind) * felt;
+        p.x += p.drift + p.vx;
         p.y += p.vy;
       }
       return;
     }
     const fromY = p.y;
-    p.x += rule.sway(p, weather.wind) * felt + p.vx;
+    p.drift = rule.sway(p, weather.wind) * felt;
+    p.x += p.drift + p.vx;
     p.y += p.vy;
     if (rule.onBody.pass) {
       if (overlaps(scene.bodies, p)) {
@@ -354,7 +353,12 @@ export function stepWeather(
         return;
       }
     }
-    keepOutside(scene.walls, p);
+    // Boxed in by a row of tiles: it lands on the one it is in.
+    const stuck = keepOutside(scene.walls, p);
+    if (stuck) {
+      settle(p, stuck.y - down * stuck.halfH, down, rule.onTile);
+      return;
+    }
     if (!rule.onBody.pass) {
       keepOutside(scene.bodies, p);
     }
@@ -391,7 +395,7 @@ export function drawWeather(p5: WeatherCanvas, weather: Weather): void {
       p5.stroke(120, 160, 230, a * 0.8);
       p5.strokeWeight(2);
       // A streak the length of the motion; a slow drop is a tick.
-      p5.line(p.x, p.y, p.x - p.vx * 1.5, p.y - p.vy * 1.5);
+      p5.line(p.x, p.y, p.x - (p.vx + p.drift) * 1.5, p.y - p.vy * 1.5);
     } else {
       // Tinted and edged, so a flake also shows against a white stage.
       p5.stroke(170, 190, 220, a);

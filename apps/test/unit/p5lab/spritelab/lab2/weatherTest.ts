@@ -98,18 +98,68 @@ describe('weather', () => {
 
   it('a flake touched by a body melts along its own path, unmoved by it', () => {
     const snow = createWeather('snow', scene([], [body]), fixed(0.5));
+    snow.wind = 2;
     const flake = snow.particles[0];
     // Walked into from the side, below the body's top.
     Object.assign(flake, {x: 190, y: 300, vx: 0, vy: 1.5, speed: 1.5, age: 0});
     stepWeather(snow, scene([], [body]), fixed(0.5));
     expect(flake.state).toBe('settling');
     expect(flake.settleFrames).toBe(10);
-    const y = flake.y;
+    const {x, y} = flake;
     steps(snow, scene([], [body]), 4);
+    // Still falling and still drifting with the wind: never shoved to the
+    // body's edge, never frozen in place.
     expect(flake.y).toBeGreaterThan(y);
-    // Its own sway only: never shoved to the body's edge.
-    expect(Math.abs(flake.x - 190)).toBeLessThan(1);
+    expect(flake.x).toBeGreaterThan(x + 4);
+    expect(flake.x).toBeLessThan(x + 12);
     expect(flake.alpha).toBeLessThanOrEqual(0.6);
+  });
+
+  it('seeds no particle inside a tile, and lands one boxed in by a row', () => {
+    const row = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => ({
+      x: 20 + i * 40,
+      y: 380,
+      halfW: 20,
+      halfH: 20,
+    }));
+    const snow = createWeather('snow', scene(row), Math.random);
+    expect(
+      snow.particles.some(p => p.y > 360 && p.y < 400 && p.x > 0 && p.x < 400)
+    ).toBe(false);
+    // Pushed from one tile into the next and back: it lands on the one it
+    // is in instead of falling through the row.
+    const flake = snow.particles[0];
+    Object.assign(flake, {x: 100, y: 385, vx: 0, vy: 1, speed: 1, age: 0});
+    stepWeather(snow, scene(row), fixed(0.5));
+    expect(flake.state).toBe('settling');
+    expect(flake.y).toBe(360);
+  });
+
+  it('the rain streak follows the wind the drop drifts with', () => {
+    const rain = createWeather('rain', scene(), fixed(0.5));
+    rain.wind = 0.6;
+    const drop = rain.particles[0];
+    Object.assign(drop, {x: 100, y: 100, vx: 0, vy: 8, speed: 8});
+    stepWeather(rain, scene(), fixed(0.5));
+    expect(drop.drift).toBeCloseTo(0.6, 5);
+    const lines: number[][] = [];
+    const canvas = new Proxy(
+      {},
+      {
+        get: (_, name: string) =>
+          name === 'line'
+            ? (...args: number[]) => lines.push(args)
+            : () => undefined,
+      }
+    ) as Parameters<typeof drawWeather>[0];
+    drawWeather(canvas, {
+      kind: 'rain',
+      particles: [drop],
+      wind: 0.6,
+      gravity: 0.75,
+    });
+    const [x1, , x2] = lines[0];
+    expect(x1 - x2).toBeCloseTo(0.9, 5);
   });
 
   it('a flake drifting into a tile through its side slides down outside it', () => {
