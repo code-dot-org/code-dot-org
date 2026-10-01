@@ -129,15 +129,6 @@ describe('getDecimalPlaces', () => {
     expect(getDecimalPlaces(column(['2e-5']), 'x')).toBe(5);
     expect(getDecimalPlaces(column(['1.23E+11']), 'x')).toBe(0);
   });
-
-  test('ignores a stray long decimal', () => {
-    const cells = [...Array(19).fill('1.5'), '4.333333333333333'];
-    expect(getDecimalPlaces(column(cells), 'x')).toBe(1);
-  });
-
-  test('stays within what toFixed accepts', () => {
-    expect(getDecimalPlaces(column([`1.${'1'.repeat(150)}`]), 'x')).toBe(100);
-  });
 });
 
 describe('containsOnlyNumbers', () => {

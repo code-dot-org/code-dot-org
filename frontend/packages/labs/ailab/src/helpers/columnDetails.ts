@@ -84,10 +84,6 @@ export function getExtrema(data: DataRow[], column: string): Extrema {
   return extrema;
 }
 
-const TO_FIXED_MAX_DIGITS = 100;
-// Precisions held by fewer than one cell in twenty are stray computed values.
-const DECIMAL_PLACES_PERCENTILE = 0.95;
-
 function countDecimalPlaces(cell: string | number): number {
   const [mantissa, exponent = '0'] = String(cell).toLowerCase().split('e');
   const fractionDigits = mantissa.split('.')[1]?.length ?? 0;
@@ -95,12 +91,7 @@ function countDecimalPlaces(cell: string | number): number {
 }
 
 export function getDecimalPlaces(data: DataRow[], column: string): number {
-  const decimalPlaces = getColumnData(data, column)
-    .map(countDecimalPlaces)
-    .sort((a, b) => a - b);
-  const percentileIndex =
-    Math.ceil(DECIMAL_PLACES_PERCENTILE * decimalPlaces.length) - 1;
-  return Math.min(decimalPlaces[percentileIndex], TO_FIXED_MAX_DIGITS);
+  return Math.max(...getColumnData(data, column).map(countDecimalPlaces));
 }
 
 export function containsOnlyNumbers(data: DataRow[], column: string): boolean {
