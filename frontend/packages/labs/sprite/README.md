@@ -53,6 +53,15 @@ These query parameters turn on what levels and experiments otherwise would:
 - `image-free-text=true`: a free-text prompt.
 - `images-advanced=true`: the advanced generation options.
 
+### As a static site
+
+`yarn build:pages` builds the same page into `dist-pages/` with relative
+URLs, so it runs from any path a static host serves it at, GitHub Pages'
+`/<repo>/` included. A file host cannot answer Studio's deep paths, so name
+the fixture in the query instead: `…/?fixture=hoai2026`. The mock worker
+answers everything dashboard would; Music Lab's sounds still come from
+curriculum.code.org.
+
 `engine-demo.html` runs the engine alone over the real block pool, without
 the lab's interface; `?scene=platform` picks the platform scene.
 

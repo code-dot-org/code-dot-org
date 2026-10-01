@@ -41,6 +41,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "build:pages": "vite build --mode pages",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
