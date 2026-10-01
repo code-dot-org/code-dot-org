@@ -89,6 +89,19 @@ describe('weather', () => {
     expect(drop.vy).toBeGreaterThan(0);
   });
 
+  it('a flake drifting into a tile through its side slides down outside it', () => {
+    const tile = {x: 200, y: 300, halfW: 20, halfH: 20};
+    const snow = createWeather('snow', scene([tile]), fixed(0.5));
+    const flake = snow.particles[0];
+    // Already below the tile's top, just outside its left face, drifting in.
+    Object.assign(flake, {x: 179.5, y: 300, vx: 0, vy: 1, age: 0, phase: 0});
+    snow.wind = 2;
+    stepWeather(snow, scene([tile]), fixed(0.5));
+    expect(flake.state).toBe('falling');
+    expect(flake.x).toBeLessThan(180);
+    expect(flake.y).toBeGreaterThan(300);
+  });
+
   it('measures a player as its feet-anchored body', () => {
     const box = playerBox({
       position: {x: 100, y: 100},

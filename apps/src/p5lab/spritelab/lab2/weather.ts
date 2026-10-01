@@ -158,6 +158,19 @@ export function playerBox(sprite: {
   };
 }
 
+// Push a particle that drifted into a box through its side back out to the
+// nearer side, so it slides down the face instead of falling inside it.
+function keepOutside(boxes: Box[], p: Particle): void {
+  for (const box of boxes) {
+    if (
+      Math.abs(p.x - box.x) < box.halfW &&
+      Math.abs(p.y - box.y) < box.halfH
+    ) {
+      p.x = p.x < box.x ? box.x - box.halfW - 1 : box.x + box.halfW + 1;
+    }
+  }
+}
+
 // The top surface a falling particle crossed this frame, if any.
 function landedOn(boxes: Box[], x: number, fromY: number, toY: number) {
   let hit: Box | undefined;
@@ -220,6 +233,8 @@ export function stepWeather(
       p.age = 0;
       return;
     }
+    keepOutside(scene.walls, p);
+    keepOutside(scene.bodies, p);
     if (p.y > scene.height + 8 || p.x < -8 || p.x > scene.width + 8) {
       weather.particles[i] = rule.spawn(scene, weather.wind, random);
     }
