@@ -2,6 +2,7 @@ import {Order} from 'blockly/javascript';
 
 import {defineBlock} from '../blocks/defineBlock';
 import type {BlockArgDefinition, BlockDefinition} from '../blocks/types';
+import type {Extension} from '../types';
 
 /** How to build a {@link TypedVariable} flavour. Only `type` is required. */
 export interface TypedVariableConfig {
@@ -19,6 +20,28 @@ export interface TypedVariableConfig {
   check?: string;
   /** The block style for the getter (e.g. `'variable_blocks'`). */
   style?: string;
+  /**
+   * The field type that draws the name. Defaults to Blockly's own
+   * `field_variable`, which lists every variable of this flavour on the
+   * workspace.
+   *
+   * A lab whose language has SCOPES registers a field of its own and names it
+   * here: a workspace is the only thing a Blockly variable can belong to, so a
+   * name that exists inside one block is a distinction only the field can
+   * make. Everything else about the flavour is unchanged.
+   *
+   * It applies to the GETTER and SETTER only. `field()` — spread into the
+   * blocks that bind a name, a loop's and a declaration's — keeps Blockly's,
+   * because such a block always names a variable and there is nothing to
+   * decide.
+   */
+  readerFieldType?: string;
+  /**
+   * Extensions applied to the getter and the setter — the blocks that READ a
+   * name. Same reasoning as {@link readerFieldType}: what a reader may name
+   * depends on where it sits, which is a fact only the lab knows.
+   */
+  readerExtensions?: (string | Extension)[];
   /** The name a freshly-created variable of this type is given. Defaults to the
    * lower-cased {@link type}. */
   defaultName?: string;
@@ -99,6 +122,18 @@ export function createTypedVariable(
   const check = config.check ?? type;
   const style = config.style ?? 'variable_blocks';
   const defaultName = config.defaultName ?? type.toLowerCase();
+  // WHICH FIELD DRAWS THE NAME. `field_variable` is Blockly's own and lists
+  // every variable of this flavour on the workspace, which is right while a
+  // workspace is the only thing a name can belong to. A lab whose language has
+  // SCOPES registers a field of its own and names it here, and gets the rest of
+  // the flavour — the check, the style, the generator — unchanged.
+  // A field on a block that DECLARES a name — a loop's, a `let`'s — keeps
+  // Blockly's own, because such a block always has a variable and inventing
+  // one for it is right. A field on a block that READS a name is the lab's,
+  // when a lab says so: it may name nothing, and what it can name depends on
+  // where it sits.
+  const readerFieldType = config.readerFieldType ?? 'field_variable';
+  const readerExtensions = config.readerExtensions ?? [];
   const getterType = config.getterType ?? `variables_get_${type}`;
   const setterType = config.setterType ?? `variables_set_${type}`;
   const message0 = config.message0 ?? '%1';
@@ -118,10 +153,18 @@ export function createTypedVariable(
     defaultType: type,
   });
 
+  /** The same field, drawn by whatever this lab reads names with. */
+  const readerField = (name: string): BlockArgDefinition =>
+    ({
+      ...(field(name) as unknown as Record<string, unknown>),
+      type: readerFieldType,
+    }) as unknown as BlockArgDefinition;
+
   const getterBlock = defineBlock({
     type: getterType,
     message0,
-    args0: [field('VAR')],
+    args0: [readerField('VAR')],
+    ...(readerExtensions.length ? {extensions: readerExtensions} : {}),
     output: check,
     style,
     tooltip,
@@ -129,8 +172,14 @@ export function createTypedVariable(
       javascript(block, generator) {
         // The field value is the variable id; the generator maps it to a safe,
         // collision-free JS identifier (and remembers it for the whole pass).
+        //
+        // AN EMPTY ID IS A REAL ANSWER where a lab scopes its names: a getter
+        // that can see none has nothing to read, and reads `undefined` — which
+        // is what an empty socket gives and what an unset variable held
+        // anyway. Naming one would generate an identifier nothing declares.
+        const id = block.getFieldValue('VAR');
         return [
-          generator.getVariableName(block.getFieldValue('VAR')),
+          id ? generator.getVariableName(id) : 'undefined',
           Order.ATOMIC,
         ] as [string, number];
       },
@@ -140,7 +189,8 @@ export function createTypedVariable(
   const setterBlock = defineBlock({
     type: setterType,
     message0: setterMessage0,
-    args0: [field('VAR'), {type: 'input_value', name: 'VALUE', check}],
+    args0: [readerField('VAR'), {type: 'input_value', name: 'VALUE', check}],
+    ...(readerExtensions.length ? {extensions: readerExtensions} : {}),
     inputsInline: true,
     previousStatement: true,
     nextStatement: true,
@@ -151,7 +201,14 @@ export function createTypedVariable(
         // The same name table the getter reads, so an assignment and a read of
         // one variable agree on the identifier. Blockly's `finish()` emits the
         // `var` declarations for everything named this way.
-        const name = generator.getVariableName(block.getFieldValue('VAR'));
+        //
+        // …and a setter naming nothing writes nothing, for the reason the
+        // getter reads nothing: there is no identifier to assign to.
+        const id = block.getFieldValue('VAR');
+        if (!id) {
+          return '';
+        }
+        const name = generator.getVariableName(id);
         const value = generator.valueToCode(block, 'VALUE', Order.NONE) || '0';
         return `${name} = ${value};\n`;
       },
