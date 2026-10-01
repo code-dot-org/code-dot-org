@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
+ActiveRecord::Schema[7.0].define(version: 2026_10_01_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -112,6 +112,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.text "response"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "execution_source"
     t.index ["created_at"], name: "index_aichat_requests_on_created_at"
     t.index ["execution_status"], name: "index_aichat_requests_on_execution_status"
   end

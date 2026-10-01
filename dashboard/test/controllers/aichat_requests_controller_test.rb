@@ -237,4 +237,70 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_equal json_response['executionStatus'], execution_status
     assert_equal json_response['response'], response
   end
+
+  test 'create records the gateway execution source' do
+    sign_in(@authorized_student1)
+    post :create, params: @valid_params_chat_completion, as: :json
+
+    assert_response :success
+    request = AichatRequest.find(json_response['requestId'])
+    assert request.executed_by_gateway?
+  end
+
+  test 'PUT update records status and response on a gateway request' do
+    sign_in(@authorized_student1)
+    request = create(
+      :aichat_request,
+      user: @authorized_student1,
+      execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:GATEWAY]
+    )
+
+    put :update, params: {
+      id: request.id,
+      execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS],
+      response: 'reported by the client'
+    }, as: :json
+
+    assert_response :success
+    request.reload
+    assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], request.execution_status
+    assert_equal 'reported by the client', request.response
+  end
+
+  # Our own job wrote this row's response, and event integrity compares a logged
+  # Rails-path event against it. A client overwrite would replace evidence with
+  # a claim.
+  test 'PUT update returns forbidden on a dashboard-executed request' do
+    sign_in(@authorized_student1)
+    request = create(
+      :aichat_request,
+      user: @authorized_student1,
+      response: 'what the job recorded',
+      execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:DASHBOARD]
+    )
+
+    put :update, params: {id: request.id, response: 'forged'}, as: :json
+
+    assert_response :forbidden
+    assert_equal 'what the job recorded', request.reload.response
+  end
+
+  test 'PUT update returns forbidden if user is not the requester' do
+    sign_in(@authorized_teacher1)
+    request = create(
+      :aichat_request,
+      user: @authorized_student1,
+      execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:GATEWAY]
+    )
+
+    put :update, params: {id: request.id, response: 'not mine'}, as: :json
+
+    assert_response :forbidden
+  end
+
+  test 'PUT update returns not found if request does not exist' do
+    sign_in(@authorized_student1)
+    put :update, params: {id: 100, response: 'nothing to update'}, as: :json
+    assert_response :not_found
+  end
 end

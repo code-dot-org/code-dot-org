@@ -247,7 +247,11 @@ class AichatAiHelperTest < ActionView::TestCase
     end
 
     it 'builds attributes with filtered messages and context' do
-      attributes = AichatAiHelper.build_request_attributes(10, params)
+      attributes = AichatAiHelper.build_request_attributes(
+        10,
+        params,
+        execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:DASHBOARD]
+      )
 
       _(attributes[:user_id]).must_equal 10
       _(attributes[:model_customizations][:temperature]).must_equal 0.8
@@ -258,6 +262,17 @@ class AichatAiHelperTest < ActionView::TestCase
       _(attributes[:level_id]).must_equal 7
       _(attributes[:script_id]).must_equal 3
       _(attributes[:project_id]).must_be_nil
+      _(attributes[:execution_source]).must_equal SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:DASHBOARD]
+    end
+
+    it 'records the execution source it was given' do
+      attributes = AichatAiHelper.build_request_attributes(
+        10,
+        params,
+        execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:GATEWAY]
+      )
+
+      _(attributes[:execution_source]).must_equal SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:GATEWAY]
     end
   end
 

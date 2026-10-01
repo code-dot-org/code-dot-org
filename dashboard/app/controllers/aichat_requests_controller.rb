@@ -55,7 +55,9 @@ class AichatRequestsController < ApplicationController
 
     # Create the request object.
     begin
-      request = create_request
+      request = create_request(
+        execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:DASHBOARD]
+      )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
     end
@@ -95,8 +97,8 @@ class AichatRequestsController < ApplicationController
 
   # POST /aichat_requests
   # -----------------------
-  # The row exists only to satisfy the aichat_events foreign key: no job runs and
-  # nothing reads the conversation back, so the messages are not stored.
+  # Create a new AichatRequest record without enqueuing a job.
+  # Used for scenarios where the actual request will be carried out elsewhere (e.g. on the client).
   def create
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
@@ -108,18 +110,53 @@ class AichatRequestsController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type, error: MODEL_REGION_BLOCKED_ERROR}
     end
 
-    request = create_request(store_messages: false)
+    request = create_request(
+      execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:GATEWAY]
+    )
     render json: {requestId: request.id}
   end
 
-  def create_request(store_messages: true)
+  # PUT /aichat_requests/:id
+  # -----------------------
+  # Report the outcome of a request carried out on the client, so the row carries
+  # the execution status and response that analytics exports join against.
+  #
+  # Both values are the client's account of its own turn, not ours. That is why
+  # execution_source exists: AichatEventsController must not treat a GATEWAY
+  # row's columns as evidence of what the model was asked or answered, and
+  # checks the worker's signature on the logged event instead.
+  def update
+    begin
+      request = AichatRequest.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: {}
+    end
+
+    # Only the user who initiated the request can update it.
+    return render status: :forbidden, json: {} if request.user_id != current_user.id
+
+    # A dashboard-executed row is written by our own job. Letting the client
+    # overwrite it would replace recorded output with a claim, and that output is
+    # what event integrity compares a logged Rails-path event against.
+    if request.executed_by_dashboard?
+      return render status: :forbidden, json: {error: 'request was executed by dashboard'}
+    end
+
+    if request.update(update_params)
+      render status: :ok, json: {requestId: request.id}
+    else
+      render status: :unprocessable_entity, json: {errors: request.errors}
+    end
+  end
+
+  def create_request(execution_source:)
     # TODO: confirm request shape and data usage https://codedotorg.atlassian.net/browse/TEACHING-60
     request_params = params.permit!.to_h.deep_symbolize_keys
 
     attributes = AichatAiHelper.build_request_attributes(
       current_user.id,
       request_params,
-      store_messages: store_messages
+      execution_source: execution_source
     )
 
     AichatRequest.new(attributes).tap(&:save!)
@@ -175,5 +212,9 @@ class AichatRequestsController < ApplicationController
 
   private def get_backoff_rate
     DCDO.get("aichat_polling_backoff_rate", DEFAULT_POLLING_BACKOFF_RATE)
+  end
+
+  private def update_params
+    params.permit(:execution_status, :response)
   end
 end

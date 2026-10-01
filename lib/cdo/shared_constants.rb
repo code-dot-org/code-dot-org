@@ -847,6 +847,21 @@ module SharedConstants
     MODEL_CONTENT_FILTERED: 1009,
   }
 
+  # Where an AichatRequest was carried out. Set when the row is created, from
+  # which endpoint created it, and never from client input.
+  #
+  # This is what tells AichatEventsController whether the row's own columns are
+  # evidence. On a DASHBOARD request our job wrote them, so a logged event can
+  # be compared against them. On a GATEWAY request the browser called the model
+  # and reports back, so the columns are its claims and only the worker's
+  # signature on the event attests anything.
+  AI_REQUEST_EXECUTION_SOURCE = {
+    # AichatRequestChatCompletionJob called the model.
+    DASHBOARD: 0,
+    # The browser called the AI gateway worker directly.
+    GATEWAY: 1,
+  }
+
   STUDENT_WORK_EVALUATION_STATUS = {
     # The student submitted a blank free response or did not change the starter code.
     NO_ATTEMPT: 'no_attempt',

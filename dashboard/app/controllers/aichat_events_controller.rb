@@ -173,7 +173,8 @@ class AichatEventsController < ApplicationController
     {error: result.error || result.status.to_s, status: result.status}
   end
 
-  # Compares against columns our own job wrote, not against client input.
+  # Compares against columns our own job wrote. Only a DASHBOARD request has
+  # those; a GATEWAY row's columns are the client's report of its own turn.
   private def legacy_mismatch(event, role)
     request_id = event[:requestId]
     return "#{role} message without requestId or response signature" if request_id.blank?
@@ -182,6 +183,13 @@ class AichatEventsController < ApplicationController
     return 'requestId not found' if request.nil?
     # requestId is client-supplied, so ownership needs an explicit check.
     return 'requestId belongs to another user' if request.user_id != current_user.id
+
+    # The worker signs every gateway turn it answers, so an unsigned event on a
+    # gateway request is the thing this check exists to catch. Say that, rather
+    # than comparing against columns the client itself reported.
+    if request.executed_by_gateway?
+      return 'gateway request without a response signature'
+    end
 
     if role == USER_ROLE
       # What the job actually sent, whatever the client now claims.

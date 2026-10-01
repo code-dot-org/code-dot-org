@@ -15,7 +15,10 @@ import {
 } from '../types';
 
 import {getClientApi} from './client';
-import {createAichatRequest} from './client/helpers/aichatRequestHelpers';
+import {
+  createAichatRequest,
+  updateAichatRequest,
+} from './client/helpers/aichatRequestHelpers';
 
 const metricPrefix = 'AichatClientApi';
 
@@ -34,10 +37,7 @@ export async function performClientApiChatCompletion(
   levelSystemPrompt?: string
 ): Promise<CompletedChatMessage[]> {
   // Create an AichatRequest row for this request. Needed only because the
-  // AichatEvent model (which tracks chat history) has a foreign key to it, so
-  // the row is created and never written to again. Remove if/when we can
-  // decouple. The worker's signature, relayed on each message below, is what
-  // dashboard checks this turn against.
+  // AichatEvent model (which tracks chat history) has a foreign key to it.
   const requestId = await createAichatRequest(
     newMessage,
     storedMessages,
@@ -79,8 +79,17 @@ export async function performClientApiChatCompletion(
     {name: 'ExecutionStatus', value: statusName},
   ]);
 
-  // Carried by the student's message too: one signature covers both halves.
-  // Undefined when the model was never called, which log_chat_event carves out.
+  // The turn is already complete; losing the report costs analytics a row, so
+  // it must not cost the student their answer.
+  try {
+    await updateAichatRequest(requestId, status, response);
+  } catch (error) {
+    metricsReporter.logError(
+      'Failed to report aichat request outcome',
+      error as Error
+    );
+  }
+
   const updatedUserMessage = {...newMessage, requestId, responseSignature};
 
   if (status === AiRequestExecutionStatus.USER_PROFANITY) {

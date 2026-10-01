@@ -14,6 +14,7 @@
 #  response             :text(65535)
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  execution_source     :integer
 #
 # Indexes
 #
@@ -36,6 +37,7 @@ class AichatRequest < ApplicationRecord
     response: :restricted,
     created_at: :restricted,
     updated_at: :restricted,
+    execution_source: :restricted,
   )
 
   belongs_to :user
@@ -43,5 +45,19 @@ class AichatRequest < ApplicationRecord
 
   def set_default_execution_status
     self.execution_status ||= SharedConstants::AI_REQUEST_EXECUTION_STATUS[:NOT_STARTED]
+  end
+
+  # Whether this row's own columns are evidence of what the model was asked and
+  # answered. False when the browser called the model and reported back, so a
+  # logged event must be checked against the worker's signature instead.
+  #
+  # NULL predates execution_source, so it cannot answer either way; callers
+  # decide what to do with that rather than being handed a guess.
+  def executed_by_dashboard?
+    execution_source == SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:DASHBOARD]
+  end
+
+  def executed_by_gateway?
+    execution_source == SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:GATEWAY]
   end
 end
