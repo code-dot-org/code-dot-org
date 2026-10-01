@@ -28,7 +28,7 @@ Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/
 - Reports Enzyme string selectors and import shapes it cannot rewrite
 - Idempotent; parses `.ts` files with the `ts` parser
 
-Build the package first (`yarn build`); apps resolves it to `dist/`.
+Build the package first via `yarn build`
 
 ```bash
 yarn codemod:dialog [--dry --print] <path>

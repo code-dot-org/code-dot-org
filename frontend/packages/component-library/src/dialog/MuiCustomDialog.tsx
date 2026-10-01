@@ -15,11 +15,11 @@ export interface MuiCustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   mode?: 'light' | 'dark';
   /** Custom class name, applied to the panel (the role="dialog" element) */
   className?: string;
-  /** onClose handler. Without it there is no close button and Escape does nothing. */
+  /** onClose handler. Without it there is no close button and Escape does nothing. A backdrop click never closes. */
   onClose?: () => void;
-  /** Close button aria label */
+  /** Close button aria label; defaults to 'Close dialog' */
   closeLabel?: string;
-  /** z-index for the overlay, set through --cdo-dialog-z-index. See variables.scss for the default. */
+  /** z-index for the overlay, set through --cdo-dialog-z-index; defaults to $zindex-modal-backdrop (1040). 0 is honored. */
   zIndex?: number;
   /** Panel content */
   children?: ReactNode;
