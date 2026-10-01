@@ -13,7 +13,13 @@ class QuizAttemptsController < ApplicationController
       authorize! :view_quiz_attempts, viewed_user
     end
     attempt = latest_attempt(params[:levelId], params[:unitId], viewed_user)
-    render json: attempt && quiz_attempt_json(attempt)
+    if attempt && viewed_user.id != current_user.id
+      # Allow an authorized reviewer who isn't the student (e.g. a teacher)
+      # to always see the correct answers and answer explanations.
+      render json: quiz_attempt_json(attempt, show_correctness: true, reveal_answer_explanation: true)
+    else
+      render json: attempt && quiz_attempt_json(attempt)
+    end
   rescue ActiveRecord::RecordNotFound
     render json: nil
   end
@@ -99,23 +105,31 @@ class QuizAttemptsController < ApplicationController
       order(attempt_number: :desc).first
   end
 
-  private def quiz_attempt_json(attempt)
+  # show_correctness/reveal_answer_explanation default to the quiz's own
+  # settings (self-view); #index overrides both for an authorized viewer
+  # who isn't the student themselves.
+  private def quiz_attempt_json(
+    attempt,
+    show_correctness: attempt.level&.show_correctness?,
+    reveal_answer_explanation: attempt.level&.reveal_answer_explanation?
+  )
     {
       id: attempt.id,
       attemptNumber: attempt.attempt_number,
       submittedAt: attempt.submitted_at,
-      # nil when the quiz doesn't show correctness - a hidden score is still
-      # a score, and question_results already withholds correctness the
-      # same way; a deleted quiz (level nil) defaults to hidden too.
-      score: attempt.level&.show_correctness? ? attempt.score : nil,
-      maxScore: attempt.level&.show_correctness? ? attempt.max_score : nil,
+      # nil when hidden (or the quiz is deleted) - matches question_results.
+      score: show_correctness ? attempt.score : nil,
+      maxScore: show_correctness ? attempt.max_score : nil,
       # nil when the quiz has no time limit - see QuizAttempt#expires_at.
       expiresAt: attempt.expires_at,
       # Whether POSTing to #create again would start a new attempt rather
       # than just returning this one.
       canRetake: attempt.retakeable?,
       # nil unless this attempt is submitted.
-      questionResults: attempt.question_results&.map do |result|
+      questionResults: attempt.question_results(
+        show_correctness: show_correctness,
+        reveal_answer_explanation: reveal_answer_explanation
+      )&.map do |result|
         {
           quizQuestionId: result[:quiz_question_id],
           selectedChoiceId: result[:selected_choice_id],

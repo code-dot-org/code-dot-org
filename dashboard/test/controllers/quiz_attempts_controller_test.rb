@@ -5,8 +5,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
 
   setup do
     @student = create(:student)
-    # These tests are about grading/re-grading, not the show_correctness gate
-    # itself - see "update omits score and maxScore..." below for that.
+    # show_correctness: true - these tests are about grading, not that gate.
     @quiz = create(:quiz, show_correctness: true)
     @question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: @quiz, quiz_question: @question)
@@ -82,6 +81,36 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     assert_nil body['score']
     assert_nil body['maxScore']
+  end
+
+  test "index still shows a teacher the score, correctness, and explanation even when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+    teacher = create(:teacher)
+    create(:follower, student_user: @student, user: teacher)
+    sign_in teacher
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id, userId: @student.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    result = body['questionResults'].first
+    assert result['correct']
+    assert_equal 'because math', result['explanation']
+    assert_equal 'b', result['correctChoiceId']
   end
 
   test "update re-grades stored responses when none are submitted, and only scores questions on the quiz" do
