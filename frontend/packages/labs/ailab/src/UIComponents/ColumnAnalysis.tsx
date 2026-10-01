@@ -25,7 +25,7 @@ import DistributionChart, {
   type DistributionBar,
   MAX_DISTRIBUTION_BARS,
 } from './DistributionChart';
-import StatCard, {type StatCardProps} from './StatCard';
+import StatCard from './StatCard';
 
 import styles from './columnAnalysis.module.scss';
 
@@ -51,7 +51,7 @@ const ColumnAnalysis = () => {
   const localizedOption = (option: string) =>
     String(getLocalizedValue(option, datasetId));
 
-  const stats: StatCardProps[] = [
+  const stats = [
     {label: 'Type', value: isCategorical ? 'Categorical' : 'Numerical'},
   ];
   if (isCategorical) {
