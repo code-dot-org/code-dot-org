@@ -74,15 +74,15 @@ function progressSection(
   pathway: Pathway,
   statusMap: CheckpointStatusMap
 ): string {
-  // List each checkpoint grouped by its status. For tutor purposes, available
-  // and locked mean the same thing.
+  // List each checkpoint grouped by its status.
   const lines = TUTOR_STATUSES.map(status => {
     const titles = pathway.checkpoints
       .filter(c => {
-        const s = statusMap[c.id];
-        return status === 'available'
-          ? s === 'available' || s === 'locked'
-          : s === status;
+        const checkpointStatus = statusMap[c.id];
+        // For tutor purposes, locked and available read the same.
+        const statusToUse =
+          checkpointStatus === 'locked' ? 'available' : checkpointStatus;
+        return statusToUse === status;
       })
       .map(c => c.title);
     return titles.length
