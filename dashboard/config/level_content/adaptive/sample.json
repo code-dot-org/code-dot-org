@@ -130,7 +130,7 @@
           "id": "structure-build",
           "title": "Add a header and footer",
           "kind": "level",
-          "level": "adaptive-web-project-prompting",
+          "level": "adaptive-web-project-structure",
           "project": true,
           "instructions": "Ask for a header with your site's name and a footer with a way to contact you. Point the AI at the `<header>` and `<footer>` elements already on the page."
         }
