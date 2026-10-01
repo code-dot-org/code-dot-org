@@ -4,6 +4,7 @@ import {type CSSProperties, useMemo} from 'react';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
 import {
+  getNodesBounds,
   layoutDisplayTree,
   type PlacedTreeNode,
   TREE_NODE_HEIGHT,
@@ -16,6 +17,8 @@ import {
   getDisplayTree,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
+
+import TreeCanvas from './TreeCanvas';
 
 import shared from '../shared.module.scss';
 import styles from './decisionTree.module.scss';
@@ -73,6 +76,10 @@ const DecisionTree = () => {
       : valueText(node.prediction);
   };
 
+  const pathBounds =
+    trace &&
+    getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
+
   // Path edges go last so a sibling edge cannot paint over the stub they share.
   const edgeOrder = [...layout.nodes].sort(
     (a, b) => Number(pathIds.has(a.id)) - Number(pathIds.has(b.id)),
@@ -83,7 +90,11 @@ const DecisionTree = () => {
       <div className={classNames(styles.header, shared.bold)}>
         Your model's decision tree
       </div>
-      <div className={styles.scroll}>
+      <TreeCanvas
+        contentWidth={layout.width}
+        contentHeight={layout.height}
+        pathBounds={pathBounds}
+      >
         <div
           role="img"
           aria-label="Diagram of your model's decision tree"
@@ -141,7 +152,7 @@ const DecisionTree = () => {
             );
           })}
         </div>
-      </div>
+      </TreeCanvas>
     </div>
   );
 };
