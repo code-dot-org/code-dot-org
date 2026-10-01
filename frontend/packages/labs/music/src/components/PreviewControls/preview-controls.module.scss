@@ -1,0 +1,58 @@
+.controlsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: space-around;
+
+  &.v2 {
+    margin: 0;
+    gap: 16px;
+  }
+
+  .buttonContainer {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--neutral-gray-5);
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:active {
+      border: none !important;
+    }
+
+    &:hover,
+    &:focus {
+      > .previewButton {
+        color: var(--brand-teal-40);
+
+        &Disabled {
+          color: var(--neutral-gray-40);
+        }
+      }
+    }
+  }
+
+  .previewButton {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.1s ease;
+
+    &Disabled {
+      color: var(--neutral-gray-40);
+      cursor: default;
+    }
+  }
+
+  .clearButton {
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+  }
+}

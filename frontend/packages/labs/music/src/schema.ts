@@ -11,6 +11,8 @@ export const LevelDataSchema = z.object({
   showSoundFilters: z.boolean().default(false),
   library: z.string(),
   toolbox: ToolboxSchema,
+  // The level's authored starting workspace (Blockly serialization).
+  startSources: z.record(z.string(), z.unknown()).optional(),
 });
 
 /**
@@ -18,9 +20,14 @@ export const LevelDataSchema = z.object({
  */
 export const MusicLevelPropertiesSchema = z.object({
   startBlocks: z.record(z.string(), z.unknown()).optional(),
-  toolboxBlocks: z.record(z.string(), z.unknown()).optional(),
-  preloadAssetList: z.boolean().default(false),
-  containedLevelNames: z.array(z.string()).default([]),
+  preloadAssetList: z
+    .boolean()
+    .nullable()
+    .transform(value => value ?? false),
+  containedLevelNames: z
+    .array(z.string())
+    .nullable()
+    .transform(value => value ?? []),
   useRestrictedSongs: z.boolean().default(false),
   levelData: LevelDataSchema,
 });
