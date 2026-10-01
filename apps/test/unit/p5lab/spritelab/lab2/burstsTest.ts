@@ -1,19 +1,16 @@
 import {
+  BURST_LOOKS,
   burstAlpha,
   createBurst,
   drawBursts,
+  isBurstLook,
   stepBurst,
 } from '@cdo/apps/p5lab/spritelab/lab2/bursts';
 import {PLATFORM_GRAVITY} from '@cdo/apps/p5lab/spritelab/lab2/platformPhysics';
 
-const scene = (
-  walls = [] as {x: number; y: number; halfW: number; halfH: number}[],
-  gravity = PLATFORM_GRAVITY
-) => ({
+const scene = (gravity = PLATFORM_GRAVITY) => ({
   width: 400,
   height: 400,
-  walls,
-  bodies: [],
   gravity,
 });
 
@@ -24,9 +21,9 @@ function turning() {
 }
 
 describe('bursts', () => {
-  it('flings the count out from the origin in different directions, with lift', () => {
+  it('flings the count out from the origin in different directions and colours, with lift', () => {
     const burst = createBurst(
-      'coin',
+      'confetti',
       12,
       {x: 100, y: 200},
       PLATFORM_GRAVITY,
@@ -35,97 +32,60 @@ describe('bursts', () => {
     expect(burst.particles).toHaveLength(12);
     expect(burst.particles.every(p => p.x === 100 && p.y === 200)).toBe(true);
     const headings = new Set(
-      burst.particles.map(p => Math.sign(p.vx) + ':' + Math.sign(p.vy))
+      burst.particles.map(p => `${Math.sign(p.vx)}:${Math.sign(p.vy)}`)
     );
     expect(headings.size).toBeGreaterThan(1);
+    expect(
+      new Set(burst.particles.map(p => p.color.join())).size
+    ).toBeGreaterThan(1);
     const meanVy = burst.particles.reduce((s, p) => s + p.vy, 0) / 12;
     expect(meanVy).toBeLessThan(0);
   });
 
-  it('falls with gravity, and under upward gravity rises', () => {
+  it('slows in the air and is drawn down by gravity, up under upward gravity', () => {
     const down = createBurst(
-      'coin',
+      'sparks',
       1,
       {x: 100, y: 100},
       PLATFORM_GRAVITY,
       () => 0.5
     );
-    down.particles[0].vx = 0;
-    down.particles[0].vy = 0;
+    Object.assign(down.particles[0], {vx: 6, vy: 0, life: 1000});
+    stepBurst(down, scene());
+    expect(down.particles[0].vx).toBeLessThan(6);
     for (let i = 0; i < 20; i++) stepBurst(down, scene());
     expect(down.particles[0].vy).toBeGreaterThan(0);
     const up = createBurst(
-      'coin',
+      'sparks',
       1,
       {x: 100, y: 300},
       -PLATFORM_GRAVITY,
       () => 0.5
     );
-    up.particles[0].vx = 0;
-    up.particles[0].vy = 0;
-    for (let i = 0; i < 20; i++) stepBurst(up, scene([], -PLATFORM_GRAVITY));
+    Object.assign(up.particles[0], {vx: 0, vy: 0, life: 1000});
+    for (let i = 0; i < 20; i++) stepBurst(up, scene(-PLATFORM_GRAVITY));
     expect(up.particles[0].vy).toBeLessThan(0);
   });
 
-  it('bounces off a tile top, losing energy, and settles after a few bounces', () => {
-    const tile = {x: 100, y: 300, halfW: 40, halfH: 20};
+  it('passes through everything and is gone in under a second', () => {
     const burst = createBurst(
-      'coin',
-      1,
-      {x: 100, y: 275},
+      'sparks',
+      20,
+      {x: 200, y: 200},
       PLATFORM_GRAVITY,
-      () => 0.5
+      turning()
     );
-    const p = burst.particles[0];
-    Object.assign(p, {vx: 0, vy: 8, life: 1000});
-    stepBurst(burst, scene([tile]));
-    expect(p.y).toBe(280);
-    expect(p.vy).toBeLessThan(0);
-    expect(Math.abs(p.vy)).toBeLessThan(8);
-    expect(p.bounces).toBe(1);
-    // Each bounce is weaker; once one would be a hop, the particle lies
-    // still and is gone shortly after.
-    let stopped = 0;
-    for (let i = 0; i < 300 && burst.particles.length; i++) {
-      stepBurst(burst, scene([tile]));
-      if (p.vy === 0 && p.vx === 0) {
-        stopped++;
-      }
+    let frames = 0;
+    while (stepBurst(burst, scene()) && frames < 120) {
+      frames++;
     }
-    expect(p.y).toBe(280);
-    expect(stopped).toBeGreaterThan(0);
-    expect(stopped).toBeLessThanOrEqual(13);
     expect(burst.particles).toHaveLength(0);
-  });
-
-  it('lands on the stage floor when the scene says it has one', () => {
-    const burst = createBurst(
-      'coin',
-      1,
-      {x: 100, y: 395},
-      PLATFORM_GRAVITY,
-      () => 0.5
-    );
-    const p = burst.particles[0];
-    Object.assign(p, {vx: 0, vy: 8, life: 1000});
-    stepBurst(burst, {...scene(), floor: true});
-    expect(p.y).toBe(400);
-    expect(p.vy).toBeLessThan(0);
-    const falling = createBurst(
-      'coin',
-      1,
-      {x: 100, y: 395},
-      PLATFORM_GRAVITY,
-      () => 0.5
-    );
-    Object.assign(falling.particles[0], {vx: 0, vy: 8, life: 1000});
-    stepBurst(falling, scene());
-    expect(falling.particles[0].y).toBeGreaterThan(400);
+    expect(frames).toBeLessThan(60);
   });
 
   it('fades quickly at the very end and is dropped when its life is up', () => {
     const burst = createBurst(
-      'coin',
+      'sparks',
       1,
       {x: 100, y: 100},
       PLATFORM_GRAVITY,
@@ -143,7 +103,13 @@ describe('bursts', () => {
     expect(burst.particles).toHaveLength(0);
   });
 
-  it('draws each particle as the image when loaded, a dot otherwise', () => {
+  it('knows its looks', () => {
+    expect(BURST_LOOKS).toEqual(['sparks', 'confetti']);
+    expect(isBurstLook('confetti')).toBe(true);
+    expect(isBurstLook('rain')).toBe(false);
+  });
+
+  it('draws each particle as the tinted spark when loaded, a dot otherwise', () => {
     const calls: string[] = [];
     const canvas = new Proxy(
       {CENTER: 'center'},
@@ -155,18 +121,13 @@ describe('bursts', () => {
       }
     ) as Parameters<typeof drawBursts>[0];
     const bursts = [
-      createBurst('coin', 3, {x: 0, y: 0}, PLATFORM_GRAVITY, () => 0.5),
+      createBurst('sparks', 3, {x: 0, y: 0}, PLATFORM_GRAVITY, () => 0.5),
     ];
-    drawBursts(canvas, bursts, () => ({image: {}}));
+    drawBursts(canvas, bursts, {});
     expect(calls.filter(c => c === 'image')).toHaveLength(3);
+    expect(calls.filter(c => c === 'tint')).toHaveLength(3);
     calls.length = 0;
-    drawBursts(canvas, bursts, () => ({
-      image: {},
-      frame: {x: 0, y: 0, width: 32, height: 32},
-    }));
-    expect(calls.filter(c => c === 'image')).toHaveLength(3);
-    calls.length = 0;
-    drawBursts(canvas, bursts, () => undefined);
+    drawBursts(canvas, bursts, undefined);
     expect(calls.filter(c => c === 'ellipse')).toHaveLength(3);
     expect(calls.filter(c => c === 'image')).toHaveLength(0);
   });

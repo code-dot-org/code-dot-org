@@ -9,6 +9,7 @@ import {
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import sparkUrl from '@cdo/static/spritelab_lab2/particles/spark.png';
 
 import SpriteLab from '../SpriteLab';
 
@@ -16,6 +17,7 @@ import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   createBurst,
   drawBursts,
+  isBurstLook,
   MAX_BURST_COUNT,
   MAX_BURST_PARTICLES,
   stepBurst,
@@ -224,22 +226,27 @@ export default class SpriteLab2Engine extends SpriteLab {
     // pool, built at the first paint after the kind changes.
     this.weatherKind_ = 'none';
     this.weather_ = null;
-    // Bursts in flight (see burstParticles), and the image names a burst
-    // is waiting on (see particleImage_).
+    // Bursts in flight (see burstParticles), and the shared spark image,
+    // loaded on the first burst.
     this.bursts_ = [];
-    this.decodingImages_ = new Set();
+    this.spark_ = null;
   }
 
   /**
-   * The burst block: fling copies of an image from each sprite the
-   * argument names, the count shared among them; from the stage centre
-   * when it names none. Capped so a block in a loop cannot flood the
-   * scene.
+   * The burst block: fling sparks from each sprite the argument names, the
+   * count shared among them; from the stage centre when it names none.
+   * Capped so a block in a loop cannot flood the scene.
    */
-  burstParticles(count, imageName, spriteArg) {
+  burstParticles(count, look, spriteArg) {
     const scene = this.weatherScene_();
-    if (!scene || !imageName) {
+    if (!scene) {
       return;
+    }
+    if (!this.spark_) {
+      this.spark_ = {image: null};
+      this.p5Wrapper.p5.loadImage(sparkUrl, image => {
+        this.spark_.image = image;
+      });
     }
     const origins = this.library
       .getSpriteArray(spriteArg)
@@ -254,29 +261,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const each = Math.max(1, Math.floor(allowed / origins.length));
+    const kind = isBurstLook(look) ? look : 'sparks';
     origins.forEach(origin => {
-      this.bursts_.push(createBurst(imageName, each, origin, scene.gravity));
+      this.bursts_.push(createBurst(kind, each, origin, scene.gravity));
     });
-  }
-
-  // The first frame of a loaded project image, for the burst's particles:
-  // a sheet's first frame rectangle, or the whole image. A name the
-  // scene-scoped preload never saw decodes on demand, once; the particles
-  // show as dots until it lands.
-  particleImage_(name) {
-    const loaded = this.p5Wrapper.preloadedSprites?.[name];
-    if (!loaded) {
-      if (!this.decodingImages_.has(name)) {
-        this.decodingImages_.add(name);
-        this.decodeAnimationOnDemand_(name).finally(() =>
-          this.decodingImages_.delete(name)
-        );
-      }
-      return undefined;
-    }
-    return loaded.spriteSheet
-      ? {image: loaded.spriteSheet.image, frame: loaded.images[0]}
-      : {image: loaded};
   }
 
   /** The set-weather block: the scene's weather from now until the next
@@ -334,12 +322,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
     stepWeather(this.weather_, scene);
     drawWeather(this.p5Wrapper.p5, this.weather_);
-    // A story scene has no tiles: its bursts land on the stage's bottom edge.
-    const burstScene = {...scene, floor: !this.usesPlatformPhysics_};
-    this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, burstScene));
-    drawBursts(this.p5Wrapper.p5, this.bursts_, name =>
-      this.particleImage_(name)
-    );
+    this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, scene));
+    drawBursts(this.p5Wrapper.p5, this.bursts_, this.spark_?.image);
   }
 
   /**
