@@ -59,14 +59,17 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
               key={bar.label}
               arrow={false}
               placement="top"
+              slotProps={{tooltip: {className: styles.tooltip}}}
               title={
-                <span className={styles.tooltip}>
-                  <span
-                    className={classNames(styles.swatch, colorClass(index))}
-                  />
-                  {bar.label}
-                  <strong>{bar.count}</strong>
-                </span>
+                <>
+                  <span className={styles.tooltipLabel}>
+                    <span
+                      className={classNames(styles.swatch, colorClass(index))}
+                    />
+                    {bar.label}
+                  </span>
+                  <strong className={styles.tooltipCount}>{bar.count}</strong>
+                </>
               }
             >
               <li className={styles.barSlot}>

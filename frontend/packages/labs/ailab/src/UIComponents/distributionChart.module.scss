@@ -85,10 +85,26 @@ $bar-gap: 12px;
   color: var(--text-neutral-primary);
 }
 
-.tooltip {
+// Two classes, to outrank the theme's dark tooltip surface.
+.tooltip.tooltip {
+  align-items: center;
+  gap: 9px;
+  padding: 6px 12px 6px 9px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+}
+
+.tooltipLabel {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.tooltipCount {
+  font-weight: 600;
 }
 
 .swatch {
