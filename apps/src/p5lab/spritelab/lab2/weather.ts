@@ -220,9 +220,9 @@ export function bodyBox(sprite: {
   };
 }
 
-// The surface facing the flow that a falling particle crossed this frame,
-// if any: tops when falling down, undersides when falling up.
-function landedOn(
+/** The surface facing the flow that a falling particle crossed this frame,
+    if any: tops when falling down, undersides when falling up. */
+export function landedOn(
   boxes: Box[],
   down: number,
   x: number,
@@ -248,9 +248,10 @@ function landedOn(
   return hit;
 }
 
-// Push a particle that drifted into a box through its side back out to the
-// nearer side, so it slides along the face instead of falling inside it.
-function keepOutside(boxes: Box[], p: Particle): void {
+/** Push a particle that drifted into a box through its side back out to
+    the nearer side, so it slides along the face instead of falling inside
+    it. */
+export function keepOutside(boxes: Box[], p: {x: number; y: number}): void {
   for (const box of boxes) {
     if (
       Math.abs(p.x - box.x) < box.halfW &&

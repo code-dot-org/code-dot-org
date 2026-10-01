@@ -14,6 +14,13 @@ import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
+  createBurst,
+  drawBursts,
+  MAX_BURST_COUNT,
+  MAX_BURST_PARTICLES,
+  stepBurst,
+} from './bursts';
+import {
   backgroundFrame,
   cameraFocus,
   clampZoom,
@@ -217,6 +224,59 @@ export default class SpriteLab2Engine extends SpriteLab {
     // pool, built at the first paint after the kind changes.
     this.weatherKind_ = 'none';
     this.weather_ = null;
+    // Bursts in flight (see burstParticles), and the image names a burst
+    // is waiting on (see particleImage_).
+    this.bursts_ = [];
+    this.decodingImages_ = new Set();
+  }
+
+  /**
+   * The burst block: fling copies of an image from each sprite the
+   * argument names, the count shared among them; from the stage centre
+   * when it names none. Capped so a block in a loop cannot flood the
+   * scene.
+   */
+  burstParticles(count, imageName, spriteArg) {
+    const scene = this.weatherScene_();
+    if (!scene || !imageName) {
+      return;
+    }
+    const origins = this.library
+      .getSpriteArray(spriteArg)
+      .map(sprite => ({x: sprite.position.x, y: sprite.position.y}));
+    if (!origins.length) {
+      origins.push({x: scene.width / 2, y: scene.height / 2});
+    }
+    const inFlight = this.bursts_.reduce((n, b) => n + b.particles.length, 0);
+    const wanted = Math.min(MAX_BURST_COUNT, Math.max(1, Number(count) || 0));
+    const allowed = Math.min(wanted, MAX_BURST_PARTICLES - inFlight);
+    if (allowed <= 0) {
+      return;
+    }
+    const each = Math.max(1, Math.floor(allowed / origins.length));
+    origins.forEach(origin => {
+      this.bursts_.push(createBurst(imageName, each, origin, scene.gravity));
+    });
+  }
+
+  // The first frame of a loaded project image, for the burst's particles:
+  // a sheet's first frame rectangle, or the whole image. A name the
+  // scene-scoped preload never saw decodes on demand, once; the particles
+  // show as dots until it lands.
+  particleImage_(name) {
+    const loaded = this.p5Wrapper.preloadedSprites?.[name];
+    if (!loaded) {
+      if (!this.decodingImages_.has(name)) {
+        this.decodingImages_.add(name);
+        this.decodeAnimationOnDemand_(name).finally(() =>
+          this.decodingImages_.delete(name)
+        );
+      }
+      return undefined;
+    }
+    return loaded.spriteSheet
+      ? {image: loaded.spriteSheet.image, frame: loaded.images[0]}
+      : {image: loaded};
   }
 
   /** The set-weather block: the scene's weather from now until the next
@@ -259,8 +319,10 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   // Runs inside the paint, after the sprites, so in a platform scene the
   // particles are in world space under the camera.
-  stepAndDrawWeather_() {
-    if (this.weatherKind_ === 'none' && !this.weather_) {
+  stepAndDrawParticles_() {
+    const idle =
+      this.weatherKind_ === 'none' && !this.weather_ && !this.bursts_.length;
+    if (idle) {
       return;
     }
     const scene = this.weatherScene_();
@@ -272,6 +334,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
     stepWeather(this.weather_, scene);
     drawWeather(this.p5Wrapper.p5, this.weather_);
+    // A story scene has no tiles: its bursts land on the stage's bottom edge.
+    const burstScene = {...scene, floor: !this.usesPlatformPhysics_};
+    this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, burstScene));
+    drawBursts(this.p5Wrapper.p5, this.bursts_, name =>
+      this.particleImage_(name)
+    );
   }
 
   /**
@@ -416,10 +484,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.notifyControlsChange_();
-    // A fresh run starts with no weather; the block sets it.
+    // A fresh run starts with no weather and nothing in flight.
     this.weatherKind_ = 'none';
     this.weather_ = null;
+    this.bursts_ = [];
     library.commands.setWeather = kind => this.setWeather(kind);
+    library.commands.burstParticles = (count, imageName, spriteArg) =>
+      this.burstParticles(count, imageName, spriteArg);
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
@@ -1284,7 +1355,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.physicsResolvedThisFrame_ = false;
       this.updateCharacterAnimations_();
       const painted = paint(...args);
-      this.stepAndDrawWeather_();
+      this.stepAndDrawParticles_();
       return painted;
     };
   }
