@@ -15,6 +15,7 @@ export interface QuestionResultCardProps {
   // Omit for a quiz with only one question.
   questionLabel?: string;
   result: QuizQuestionResult;
+  revealAnswerExplanation?: boolean;
 }
 
 const CHOICE_LETTERS = 'ABCDEFGHIJ';
@@ -25,6 +26,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   question,
   questionLabel,
   result,
+  revealAnswerExplanation,
 }) => (
   <AttemptCard label={questionLabel} title={question.stem}>
     <ul className={styles.choices}>
@@ -96,6 +98,18 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
         );
       })}
     </ul>
+    {revealAnswerExplanation && result.explanation && (
+      <div className={styles.explanation}>
+        <div className={styles.explanationHeader}>
+          <Typography variant="overline2" className={styles.explanationLabel}>
+            Answer explanation
+          </Typography>
+        </div>
+        <Typography variant="body3" className={styles.explanationBody}>
+          {result.explanation}
+        </Typography>
+      </div>
+    )}
   </AttemptCard>
 );
 

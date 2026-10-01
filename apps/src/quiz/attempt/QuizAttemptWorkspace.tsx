@@ -35,6 +35,7 @@ export interface QuizAttemptWorkspaceProps {
   timeLimitMinutes?: number;
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
+  revealAnswerExplanation?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -51,6 +52,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   timeLimitMinutes,
   showIntroScreen,
   showCorrectness,
+  revealAnswerExplanation,
 }) => {
   const dispatch = useAppDispatch();
   const {
@@ -322,6 +324,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                           : undefined
                       }
                       result={result}
+                      revealAnswerExplanation={toBool(revealAnswerExplanation)}
                     />
                   )
                 );
