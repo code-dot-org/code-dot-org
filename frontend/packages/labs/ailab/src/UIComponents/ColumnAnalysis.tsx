@@ -1,5 +1,5 @@
 /* Panel describing the column selected in the data table. */
-import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 
 import Alert from '@code-dot-org/component-library/alert';
@@ -10,7 +10,6 @@ import {
   getLocalizedColumnName,
   getMostAndLeastCommon,
 } from '../helpers/columnDetails';
-import {getNiceAxisStep} from '../helpers/utils';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
@@ -22,108 +21,18 @@ import {
   hasTooManyUniqueOptions,
 } from '../selectors/currentColumnSelectors';
 
-import styles from './columnAnalysis.module.scss';
+import DistributionChart, {
+  type DistributionBar,
+  MAX_DISTRIBUTION_BARS,
+} from './DistributionChart';
+import StatCard, {type StatCardProps} from './StatCard';
 
-const AXIS_INTERVALS = 4;
-const BAR_COLOR_CLASSES = [
-  styles.barColor0,
-  styles.barColor1,
-  styles.barColor2,
-  styles.barColor3,
-  styles.barColor4,
-];
-// One distinct color per bar, so the chart is capped at the palette size.
-const MAX_DISTRIBUTION_BARS = BAR_COLOR_CLASSES.length;
+import styles from './columnAnalysis.module.scss';
 
 const formatNumber = (value: number) =>
   Number.isFinite(value)
     ? value.toLocaleString(undefined, {maximumFractionDigits: 2})
     : '—';
-
-interface StatCardProps {
-  label: string;
-  value: string;
-}
-
-const StatCard = ({label, value}: StatCardProps) => (
-  <div className={styles.statCard}>
-    <div className={styles.statLabel}>{label}</div>
-    <div className={styles.statValue} title={value}>
-      {value}
-    </div>
-  </div>
-);
-
-interface DistributionChartProps {
-  columnName: string;
-  bars: {label: string; count: number}[];
-}
-
-const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
-  const maxCount = Math.max(...bars.map(bar => bar.count));
-  const step = getNiceAxisStep(maxCount, AXIS_INTERVALS);
-  const axisMax = Math.max(step, Math.ceil(maxCount / step) * step);
-  const ticks = Array.from(
-    {length: axisMax / step + 1},
-    (_, index) => index * step,
-  );
-  const colorClass = (index: number) => BAR_COLOR_CLASSES[index];
-
-  return (
-    <div className={styles.chart}>
-      <div className={styles.plot}>
-        {ticks.map(tick => (
-          <div
-            key={tick}
-            className={styles.gridLine}
-            style={{bottom: `${(tick / axisMax) * 100}%`}}
-            aria-hidden="true"
-          >
-            <span className={styles.tickLabel}>{tick}</span>
-          </div>
-        ))}
-        <ul
-          className={styles.bars}
-          aria-label={`Distribution of ${columnName}`}
-        >
-          {bars.map((bar, index) => (
-            <Tooltip
-              key={bar.label}
-              arrow={false}
-              placement="top"
-              title={
-                <span className={styles.tooltip}>
-                  <span
-                    className={classNames(styles.swatch, colorClass(index))}
-                  />
-                  {bar.label}
-                  <strong>{bar.count}</strong>
-                </span>
-              }
-            >
-              <li className={styles.barSlot}>
-                <span
-                  className={classNames(styles.bar, colorClass(index))}
-                  style={{height: `${(bar.count / axisMax) * 100}%`}}
-                />
-                <span className={styles.visuallyHidden}>
-                  {bar.label}: {bar.count}
-                </span>
-              </li>
-            </Tooltip>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.barLabels} aria-hidden="true">
-        {bars.map(bar => (
-          <span key={bar.label} className={styles.barLabel}>
-            {bar.label}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const ColumnAnalysis = () => {
   const dispatch = useAppDispatch();
@@ -164,7 +73,7 @@ const ColumnAnalysis = () => {
     );
   }
 
-  const bars = isCategorical
+  const bars: DistributionBar[] = isCategorical
     ? categoricalDetails.uniqueOptions.map(option => ({
         label: localizedOption(option),
         count: categoricalDetails.frequencies[option],

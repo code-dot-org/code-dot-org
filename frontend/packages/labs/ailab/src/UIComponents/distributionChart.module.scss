@@ -1,0 +1,123 @@
+@use '../sharedMixins' as mixins;
+
+$axis-label-width: 40px;
+$plot-end-padding: 16px;
+$bar-gap: 12px;
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100px;
+}
+
+.plot {
+  position: relative;
+  flex: 1;
+}
+
+.gridLine {
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateY(50%);
+
+  &::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--border-neutral-primary);
+  }
+}
+
+.tickLabel {
+  width: 15px;
+  text-align: right;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--text-neutral-secondary);
+}
+
+.bars {
+  position: absolute;
+  inset: 0 $plot-end-padding 0 $axis-label-width;
+  display: flex;
+  align-items: flex-end;
+  gap: $bar-gap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// The whole column is the hover target, not just the bar.
+.barSlot {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  min-width: 0;
+  height: 100%;
+}
+
+.bar {
+  width: 100%;
+  border-radius: var(--shape-sm) var(--shape-sm) 0 0;
+}
+
+.barLabels {
+  display: flex;
+  gap: $bar-gap;
+  padding: 0 $plot-end-padding 0 $axis-label-width;
+}
+
+.barLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-neutral-primary);
+}
+
+.tooltip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+// Fixed order, checked for colorblind separation between neighbors.
+.barColor0 {
+  background-color: var(--background-brand-primary);
+}
+
+.barColor1 {
+  background-color: var(--background-accent-orange-primary);
+}
+
+.barColor2 {
+  background-color: var(--background-info-primary);
+}
+
+.barColor3 {
+  background-color: var(--background-accent-pink-primary);
+}
+
+.barColor4 {
+  background-color: var(--background-success-primary);
+}
+
+.visuallyHidden {
+  @include mixins.visually-hidden;
+}
