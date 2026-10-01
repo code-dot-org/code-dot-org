@@ -309,6 +309,63 @@ describe('QuizAttemptWorkspace', () => {
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
+  it('shows a result card for each submitted multiple choice question', () => {
+    renderWorkspace({
+      quizQuestions: [
+        question({id: 1, stem: 'What is the value of x?'}),
+        question({id: 2, stem: 'What is the value of y?'}),
+      ],
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          questionResults: [
+            {
+              quizQuestionId: 1,
+              selectedChoiceId: 'a',
+              correct: true,
+              explanation: null,
+              correctChoiceId: 'a',
+            },
+            {
+              quizQuestionId: 2,
+              selectedChoiceId: 'b',
+              correct: false,
+              explanation: null,
+              correctChoiceId: 'a',
+            },
+          ],
+        },
+      },
+    });
+
+    expect(
+      screen.getByRole('heading', {name: 'What is the value of x?'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {name: 'What is the value of y?'})
+    ).toBeInTheDocument();
+    expect(screen.getByText('Question 1 of 2')).toBeInTheDocument();
+    expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
+  });
+
+  it('omits a question from the submitted results when it has no result', () => {
+    renderWorkspace({
+      quizQuestions: [question({id: 1, stem: 'What is the value of x?'})],
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          questionResults: [],
+        },
+      },
+    });
+
+    expect(
+      screen.queryByRole('heading', {name: 'What is the value of x?'})
+    ).not.toBeInTheDocument();
+  });
+
   it('dispatches navigateToNextLevel when Next level is clicked', async () => {
     renderWorkspace({
       hookState: {
