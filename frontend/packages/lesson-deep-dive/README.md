@@ -118,6 +118,31 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 `LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
 `unitLabel` comes from the unit-group context, not the lesson.
 
+### Video page
+
+`video.html` renders one tutor video from `apps/src/jsonVideo/TutorVideo` with
+a Previous/Next switch over the fixture's `jsonVideos`. The switch does what
+the intervention step's carousel does: the same `<json-video>` gets a new
+`src` and reloads. The page reads only `apps/src/jsonVideo/` from apps, which
+depends on nothing but React, so it runs without apps' generated scripts or
+`apps/node_modules`.
+
+```bash
+VITE_API_MODE=msw yarn dev      # http://localhost:5173/video.html
+```
+
+In msw mode, `src/dev/mocks.ts` serves `GET /json_videos/:key/content` for the
+two fixture keys: one video narrated per scene with no top-level audio track
+(how the lesson pipeline emits them), one with a top-level track over a silent
+scene. The clips are generated silence, like the podcast audio.
+
+### E2E tests
+
+`e2e/` holds the package's Playwright suite. `yarn test:ui` starts the dev
+server in msw mode on port 5197 (or reuses one already there) and drives
+`video.html`; the specs assert on the audio elements inside `<json-video>`,
+not on sound. CI runs `test:ui:ci` in `lesson-deep-dive-ci.yml`.
+
 ### Teacher gallery
 
 `gallery.html` renders the Tutor+ project gallery from

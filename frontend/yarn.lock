@@ -2081,6 +2081,7 @@ __metadata:
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
+    "@playwright/test": "catalog:"
     "@testing-library/jest-dom": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"

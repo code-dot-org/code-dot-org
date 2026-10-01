@@ -88,6 +88,8 @@ jobs:
               - '.github/**'
             lesson-deep-dive:
               - 'frontend/packages/lesson-deep-dive/**'
+              # The package's e2e suite renders apps' <json-video> element.
+              - 'apps/src/jsonVideo/**'
               - 'frontend/packages/component-library/**'
               - 'frontend/packages/component-library-styles/**'
               - 'frontend/packages/lint-config/**'
@@ -146,6 +148,8 @@ jobs:
     if: ${{ needs.setup.outputs.lesson-deep-dive-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/lesson-deep-dive-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Start the shared-constants package CI workflow

@@ -34,3 +34,13 @@ declare module '@cdo/apps/aiTutor/views/gallery/ChallengeGallery' {
   const ChallengeGallery: FC<{tutorGalleryData: TutorGalleryData}>;
   export default ChallengeGallery;
 }
+
+// Side-effect import: defines the <json-video> custom element.
+declare module '@cdo/apps/jsonVideo/jsonVideoElement';
+
+declare module '@cdo/apps/jsonVideo/TutorVideo' {
+  import type {FC} from 'react';
+
+  const TutorVideo: FC<{href: string}>;
+  export default TutorVideo;
+}

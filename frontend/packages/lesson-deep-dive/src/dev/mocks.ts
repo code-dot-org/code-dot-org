@@ -4,10 +4,12 @@
 //
 // Shapes mirror the Rails controllers: practice_problems,
 // user_practice_problem_attempts, challenges, challenge_responses,
-// ai_student_podcasts, user_lesson_reflections, plus get_token for CSRF.
+// ai_student_podcasts, user_lesson_reflections, json_videos content, plus
+// get_token for CSRF.
 
 import {
   registerMockFixture,
+  type MockJsonBody,
   type MockRoute,
 } from '@code-dot-org/core/api/mocks';
 
@@ -25,9 +27,9 @@ const PODCAST_SCRIPT = [
   },
 ];
 
-// A one-second silent WAV, so the audio element and its AnalyserNode have real
-// bytes to work with without committing a media fixture.
-function silentWav(seconds = 1, sampleRate = 8000): Response {
+// Silent 8-bit PCM WAV bytes, so audio elements have something real to decode
+// without committing a media fixture.
+function silentWavBytes(seconds: number, sampleRate = 8000): ArrayBuffer {
   const samples = seconds * sampleRate;
   const buffer = new ArrayBuffer(44 + samples);
   const view = new DataView(buffer);
@@ -49,8 +51,49 @@ function silentWav(seconds = 1, sampleRate = 8000): Response {
   ascii(36, 'data');
   view.setUint32(40, samples, true);
   new Uint8Array(buffer, 44).fill(128); // 8-bit PCM silence
-  return new Response(buffer, {headers: {'Content-Type': 'audio/wav'}});
+  return buffer;
 }
+
+// One second of silence in place of the synthesized podcast audio; the
+// AnalyserNode still gets real bytes.
+function silentWav(): Response {
+  return new Response(silentWavBytes(1), {
+    headers: {'Content-Type': 'audio/wav'},
+  });
+}
+
+// The pipeline inlines each clip as a data URI, so the mock videos do too.
+function silentWavDataUri(seconds: number): string {
+  const bytes = new Uint8Array(silentWavBytes(seconds));
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return `data:audio/wav;base64,${btoa(binary)}`;
+}
+
+// The two videos LESSON_DEEP_DIVE_DATA.jsonVideos points at, in the two
+// shapes <json-video> has to handle: narration on each scene with no
+// top-level track (how the lesson pipeline emits videos), and one top-level
+// track over silent scenes (how the older examples are built). Scenes are
+// 30 s so nothing in a test's polling window crosses a scene boundary.
+const videoScene = (label: string, audio?: string) => ({
+  duration: '30s',
+  speech: label,
+  html: `<h1 style="color:#fff;font-family:sans-serif;margin:1em">${label}</h1>`,
+  ...(audio ? {audio} : {}),
+});
+
+const JSON_VIDEOS: Record<string, MockJsonBody> = {
+  'lesson-tutor-aif26-u1-l1-v1': {
+    scenes: [
+      videoScene('Scene one', silentWavDataUri(12)),
+      videoScene('Scene two', silentWavDataUri(12)),
+    ],
+  },
+  'lesson-tutor-aif26-u1-l1-v2': {
+    audio: silentWavDataUri(12),
+    scenes: [videoScene('Main track')],
+  },
+};
 
 let nextAttemptId = 500;
 
@@ -65,6 +108,13 @@ export const csrfTokenRoute: MockRoute = {
 export function registerLessonDeepDiveMocks(): void {
   registerMockFixture([
     csrfTokenRoute,
+
+    // JsonVideosController#content. An unknown key declines, so the element
+    // sees the 404 and shows its error poster, as Studio would.
+    {
+      path: '*/json_videos/:key/content',
+      respond: ({params}) => JSON_VIDEOS[String(params.key)],
+    },
 
     // PracticeProblemsController#index filters by objective when asked. The
     // seeded problems hang off a different lesson's objective, so the deep

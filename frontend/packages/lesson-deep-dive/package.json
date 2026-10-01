@@ -30,6 +30,8 @@
     "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
     "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
+    "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -45,6 +47,7 @@
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
+    "@playwright/test": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
