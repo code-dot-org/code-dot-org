@@ -239,6 +239,8 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   // The spark image in one colour, made once per colour: this p5 recolours
   // an image by rebuilding a canvas on every draw, too slow per particle.
+  // A p5.Image, not a p5.Graphics: a graphics canvas is scaled by the pixel
+  // density while image() reads it at its logical size, showing one corner.
   sparkFor_(color) {
     const image = this.spark_?.image;
     if (!image) {
@@ -247,10 +249,14 @@ export default class SpriteLab2Engine extends SpriteLab {
     const key = color.join(',');
     let tinted = this.tintedSparks_.get(key);
     if (!tinted) {
-      const p5 = this.p5Wrapper.p5;
-      tinted = p5.createGraphics(image.width, image.height);
-      tinted.tint(color[0], color[1], color[2]);
-      tinted.image(image, 0, 0);
+      tinted = this.p5Wrapper.p5.createImage(image.width, image.height);
+      const context = tinted.drawingContext;
+      // The spark is white, so the colour is the whole tint; the image
+      // keeps only its own alpha.
+      context.fillStyle = `rgb(${color.join(',')})`;
+      context.fillRect(0, 0, image.width, image.height);
+      context.globalCompositeOperation = 'destination-in';
+      context.drawImage(image.canvas, 0, 0);
       this.tintedSparks_.set(key, tinted);
     }
     return tinted;
