@@ -93,7 +93,7 @@ describe('bursts', () => {
     const burst = createBurst(
       'coin',
       1,
-      {x: 100, y: 390},
+      {x: 100, y: 395},
       PLATFORM_GRAVITY,
       () => 0.5
     );
@@ -105,7 +105,7 @@ describe('bursts', () => {
     const falling = createBurst(
       'coin',
       1,
-      {x: 100, y: 390},
+      {x: 100, y: 395},
       PLATFORM_GRAVITY,
       () => 0.5
     );
