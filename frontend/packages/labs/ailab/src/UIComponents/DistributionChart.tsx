@@ -61,6 +61,9 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
               key={bar.label}
               arrow={false}
               placement="top"
+              // The open tooltip names the focused bar instead of repeating
+              // its hidden label as a description.
+              describeChild={false}
               slotProps={{tooltip: {className: styles.tooltip}}}
               title={
                 <>
@@ -74,7 +77,12 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
                 </>
               }
             >
-              <li className={styles.barSlot}>
+              <li
+                className={styles.barSlot}
+                // Focusable so keyboard users can open the count's tooltip.
+                // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+                tabIndex={0}
+              >
                 <span
                   className={classNames(styles.bar, colorClass(index))}
                   style={{height: `${(bar.count / axisMax) * 100}%`}}
