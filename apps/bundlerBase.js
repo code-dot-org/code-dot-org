@@ -295,11 +295,11 @@ function makeSplitChunks(appsEntries) {
       },
       // With just the cacheGroups listed above, we end up with many
       // duplicate modules between the "common" and "code-studio-common"
-      // chunks. This cache group eliminates some of this duplication
-      // by pulling more modules from "common" into "code-studio-common".
+      // chunks. isCodeStudioSharedModule eliminates some of this duplication
+      // by pulling more modules from "common" into "code-studio-common(-deps)".
       //
-      // The use of minChunks provides a guarantee that we don't
-      // unnecessarily move things into "code-studio-common" which are
+      // Its chunk-count threshold provides a guarantee that we don't
+      // unnecessarily move things into "code-studio-common(-deps)" which are
       // needed only by appsEntries. This avoids increasing the download
       // size for code studio pages which include code-studio-common.js
       // but not common.js.
@@ -315,7 +315,6 @@ function makeSplitChunks(appsEntries) {
       // cacheGroups will go away.
       //
       // For more information see: https://webpack.js.org/guides/code-splitting/
-      // isCodeStudioSharedModule now does this job for both cache groups.
       'code-studio-common-deps': {
         name: 'code-studio-common-deps',
         minChunks: 2,
