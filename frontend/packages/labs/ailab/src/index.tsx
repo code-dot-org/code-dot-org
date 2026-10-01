@@ -1,4 +1,4 @@
-import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
+import {ThemeProvider} from '@mui/material/styles';
 import {createRoot, type Root} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
@@ -63,14 +63,15 @@ export const mount = function (options: MountOptions): void {
   // Dispatching early so instructions enabled state is set before processMode().
   store.dispatch(setInstructionsEnabled(!!options.setInstructionsKey));
 
-  // This root is separate from the host page's, so it needs its own MUI theme.
-  const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
   root = createRoot(document.getElementById('root')!);
+  // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
     <Provider store={store}>
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider
+        theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
+      >
         <App {...options} />
-      </MuiThemeProvider>
+      </ThemeProvider>
     </Provider>,
   );
 };

@@ -13,7 +13,7 @@ import type {ModelDataToSave, Mode, SaveResponse} from './types';
 
 import {initAll, instructionsDismissed} from './index';
 
-void injectFontAwesome();
+injectFontAwesome();
 
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes: Record<string, Mode> = {

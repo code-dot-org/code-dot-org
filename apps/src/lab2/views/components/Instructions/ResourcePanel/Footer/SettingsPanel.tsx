@@ -3,7 +3,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useEffect, useState} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import localization, {useLocalization} from '@cdo/apps/localization';
 import {LanguageInfo} from '@cdo/apps/localization/Localization';

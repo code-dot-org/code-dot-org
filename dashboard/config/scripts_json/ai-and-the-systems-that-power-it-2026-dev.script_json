@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-28 21:24:01 UTC",
+    "serialized_at": "2026-10-01 00:17:55 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -233,7 +233,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can we process data to find patterns and solve problems?**\n\nIn this lesson, students will explore how computational tasks like sorting, filtering, and aggregating can uncover patterns and solve problems using a library dataset. Students will begin with a quick hands-on activity to introduce these concepts, then apply them systematically to real-world data about library books. Through guided examples, independent practice, and reflective discussions, students will understand how computational tools make data analysis more efficient and impactful.",
-        "preparation": "- Gather **index cards** (one per student) or an equivalent number of small pieces of paper.\n- Collect enough **UNO cards** for each group of 4 students to have 20–25 cards.\n    - *(Optional)* Print and cut out the provided UNO cards if physical cards aren’t available. Prepare enough for each group of four students.\n- Print copies of the Processing Library Data activity guide (one for each student).",
+        "preparation": "- Collect enough **playing cards** for each group of 4 students to have 20–26 cards.\n    - *(Optional)* Print and cut out the provided playing cards if physical cards aren’t available. Prepare enough for each group of four students.\n- Print copies of the Processing Library Data activity guide (one for each student).",
         "student_overview": "**How can we process data to find patterns and solve problems?**\n\nIn this lesson, you’ll explore how to process data using computational tasks like sorting, filtering, and aggregating. You’ll work with a library dataset to uncover patterns and solve challenges, learning how computers organize and analyze large amounts of information."
       },
       "seeding_key": {
@@ -613,18 +613,6 @@
       }
     },
     {
-      "key": "01447c73-bf35-440f-a2bc-71f03de030df",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "01447c73-bf35-440f-a2bc-71f03de030df",
-        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
-      }
-    },
-    {
       "key": "c20c16a2-e54d-43ec-b9f0-b260f6c4e345",
       "position": 1,
       "properties": {
@@ -712,7 +700,7 @@
       "key": "a7659db3-6a3f-4978-910f-348f1d8071c4",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -726,7 +714,7 @@
       "key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1720,13 +1708,24 @@
       }
     },
     {
-      "key": "e248e3c6-5278-4167-a42a-7bc0933a17a4",
+      "key": "43a494fc-f8c3-42b2-9763-1cf51daa55c7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
-        "duration": "20",
-        "name": "Troubleshooting",
-        "progression_name": "Troubleshooting",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Troubleshooting and Optimizing activity guide.\n",
+        "duration": "15",
+        "name": "Troubleshooting"
+      },
+      "seeding_key": {
+        "activity_section.key": "43a494fc-f8c3-42b2-9763-1cf51daa55c7",
+        "lesson_activity.key": "44a7e009-a431-4270-b698-b620ec30462b"
+      }
+    },
+    {
+      "key": "e248e3c6-5278-4167-a42a-7bc0933a17a4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. There are a variety of issues that students can troubleshoot using the Chromebook simulation:\nSlow performance \nApplication crashes\nMissing files\nNetwork errors\nPermission errors\n",
+        "progression_name": "Troubleshooting Software",
         "tips": [
           {
             "type": "teachingTip",
@@ -1740,21 +1739,11 @@
       }
     },
     {
-      "key": "f9c2262b-8c7e-469a-aa35-54e95f09f0bf",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f9c2262b-8c7e-469a-aa35-54e95f09f0bf",
-        "lesson_activity.key": "44a7e009-a431-4270-b698-b620ec30462b"
-      }
-    },
-    {
       "key": "7609cd1f-d4bb-45c9-a5fd-29e76749e945",
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 5, Level 2 and have them answer the prompts.",
-        "progression_name": "Reflection",
+        "progression_name": "Troubleshooting Synthesis",
         "tips": [
           {
             "type": "teachingTip",
@@ -1785,7 +1774,7 @@
       "key": "2ca137b8-2249-4fd7-90f7-809c64d90bf7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which scenario felt most realistic?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share comparisons to real-world troubleshooting situations they’ve encountered and how those were similar or different to what they encountered in the simulation. Pull out the idea of a process being followed no matter what the problem you are facing.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one step you would always try first in a real-world troubleshooting process?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Pick out themes or specific answers for students to expand on.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share the “why” behind the step they picked and have them expand on their reasoning. Some examples of things students might share:\n- “I always restart my device when there is an issue because I’ve found that it fixes most problems even if I don’t necessarily understand why.”\n- “I start by googling the error or problem I’m facing to see if I can find a youtube video showing how to fix it. That way I have a step-by-step guide that I can go through at my own pace.”\n- “I would try anything that would help me narrow down the what it causing the issue because that’s what we learned a few lessons ago.”"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of the problems in the simulation seemed most similar to something you’ve experienced with a computer or device in real life?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share comparisons to real-world troubleshooting situations they’ve encountered and how those were similar or different to what they encountered in the simulation. Pull out the idea of a process being followed no matter what the problem you are facing.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one step you would always try first in a real-world troubleshooting process?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Pick out themes or specific answers for students to expand on.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share the “why” behind the step they picked and have them expand on their reasoning. Some examples of things students might share:\n- “I always restart my device when there is an issue because I’ve found that it fixes most problems even if I don’t necessarily understand why.”\n- “I start by googling the error or problem I’m facing to see if I can find a youtube video showing how to fix it. That way I have a step-by-step guide that I can go through at my own pace.”\n- “I would try anything that would help me narrow down the what it causing the issue because that’s what we learned a few lessons ago.”"
       },
       "seeding_key": {
         "activity_section.key": "2ca137b8-2249-4fd7-90f7-809c64d90bf7",
@@ -1797,8 +1786,8 @@
       "position": 6,
       "properties": {
         "description": "Now that we’ve worked on troubleshooting when things aren’t working correctly, we are going to focus on solving a different type of problem: how do you make sure your computer system performs at its best for the task you are trying to accomplish? This is known as optimization.",
-        "duration": "15",
-        "name": "Optimizing",
+        "duration": "20",
+        "name": "Optimizing Software",
         "remarks": true
       },
       "seeding_key": {
@@ -1810,8 +1799,8 @@
       "key": "8f4cab6d-7fbf-43a8-868c-06ad831c5952",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.",
-        "progression_name": "Optimization"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students going back and forth between discussing the options amongst themselves and asking the AI Chat for input. If students aren’t engaging with each other, use questioning to get them to explain their process and thinking about whichever scenario they are working through.\n",
+        "progression_name": "Optimizing Software"
       },
       "seeding_key": {
         "activity_section.key": "8f4cab6d-7fbf-43a8-868c-06ad831c5952",
@@ -1822,7 +1811,6 @@
       "key": "e330df1d-7b7e-4a35-a530-60f4caaffa5e",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students going back and forth between discussing the options amongst themselves and asking the AI Chat for input. If students aren’t engaging with each other, use questioning to get them to explain their process and thinking about whichever scenario they are working through.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1839,28 +1827,17 @@
       "key": "b83c97c8-952a-4f77-8d5e-ecbc057d9806",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have a few students share their learning from the day's activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the vocabulary\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The Unit Guides can be collected at the end of the lesson as a formative assessment to gauge how well students grasped the concepts of troubleshooting and optimization and which concepts might need further review."
+            "markdown": "Student responses to the Question of the Day can be used to assess how well students grasped the concepts of troubleshooting and optimization and which concepts might need further review.\n"
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "b83c97c8-952a-4f77-8d5e-ecbc057d9806",
         "lesson_activity.key": "5fec846f-4e1c-4404-9255-5b5ad128ccc7"
-      }
-    },
-    {
-      "key": "7524970a-c433-418d-9442-4d08db04a277",
-      "position": 1,
-      "properties": {
-        "progression_name": "New Progression"
-      },
-      "seeding_key": {
-        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277",
-        "lesson_activity.key": "01447c73-bf35-440f-a2bc-71f03de030df"
       }
     },
     {
@@ -2155,11 +2132,11 @@
       "key": "9350b3c4-3755-4631-8dfa-735299328d0c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students 20 to 25 UNO cards.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group 20-26 standard playing cards and each student a Processing Data activity guide.\n- Mix all four suits into every set.\n- Include 4-6 aces and face cards in each set.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you don't have UNO cards, there are digital card templates you can print and cut out for the activity. You can also use regular playing cards as an alternative. "
+            "markdown": "One standard deck makes two group sets. If you don't have playing cards, there are digital card templates you can print and cut out for the activity."
           }
         ]
       },
@@ -2172,6 +2149,13 @@
       "key": "1e5ceb64-67be-470f-990a-3615fc8c4fc6",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the Warm Up section of their activity guide from memory, labeling each box with one of the four parts of a computer system.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Retrieval practice: Students recall the parts of a computer system from Lesson 2 before they see the answer. Pulling information from memory, even imperfectly, helps students remember it longer than rereading notes."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1e5ceb64-67be-470f-990a-3615fc8c4fc6",
@@ -2182,7 +2166,7 @@
       "key": "23eea253-cbe4-4b84-825d-18213e19b6e3",
       "position": 3,
       "properties": {
-        "description": "Your task is to sort the cards in ascending order by number. Take your time and focus on organizing your deck.",
+        "description": "Let’s check to see how we did. Every computer system inputs data, keeps it in storage, processes it, to turn the data into output. Today we’re zooming in on processing.",
         "remarks": true
       },
       "seeding_key": {
@@ -2194,7 +2178,7 @@
       "key": "41af24fd-0cf0-4331-8baf-9fe3b6c53221",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students sort their cards by number in ascending order.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after sorting?*\n* **Turn and Talk:** Pause instruction and have students briefly discuss a question with a partner. Call on a few pairs to share insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for responses like, \"The cards were easier to analyze,\" or \"It helped us quickly identify the highest and lowest values.\""
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**:Click to reveal the four types of processing: filter, sort, aggregate, and validate.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "41af24fd-0cf0-4331-8baf-9fe3b6c53221",
@@ -2202,58 +2186,18 @@
       }
     },
     {
-      "key": "63450db8-69ed-4ab5-8dd8-265217215b03",
-      "position": 5,
-      "properties": {
-        "description": "Now, choose one color and filter your deck to include only the cards of that color. Set aside any cards that don't match.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "63450db8-69ed-4ab5-8dd8-265217215b03",
-        "lesson_activity.key": "a7659db3-6a3f-4978-910f-348f1d8071c4"
-      }
-    },
-    {
-      "key": "27ebf41d-1d19-45a2-8c64-48737e8e0ad4",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students will choose one color and filter their deck to include only the cards of that color, setting aside the others.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after filtering?*\n* **Turn and Talk:** Pause instruction and have students briefly discuss a question with a partner. Call on a few pairs to share insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for responses like, \"We could focus on a specific group of cards,\" or \"It showed which colors had more or fewer cards.\""
-      },
-      "seeding_key": {
-        "activity_section.key": "27ebf41d-1d19-45a2-8c64-48737e8e0ad4",
-        "lesson_activity.key": "a7659db3-6a3f-4978-910f-348f1d8071c4"
-      }
-    },
-    {
-      "key": "25b6feff-f60e-4afe-ac7d-95bc90f0f6ae",
-      "position": 7,
-      "properties": {
-        "description": "Now, count how many cards you have for each color. Record the totals for red, blue, yellow, and green.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "25b6feff-f60e-4afe-ac7d-95bc90f0f6ae",
-        "lesson_activity.key": "a7659db3-6a3f-4978-910f-348f1d8071c4"
-      }
-    },
-    {
-      "key": "7cfbc85d-d795-4b64-86ad-151524111e55",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will count how many cards they have for each color and record the totals for red, blue, yellow, and green.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after counting?*\n* **Turn and Talk:** Pause instruction and have students briefly discuss a question with a partner. Call on a few pairs to share insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for insights like, \"Red and blue cards made up most of the deck,\" or \"It helped us see which colors were more common.\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
-      },
-      "seeding_key": {
-        "activity_section.key": "7cfbc85d-d795-4b64-86ad-151524111e55",
-        "lesson_activity.key": "a7659db3-6a3f-4978-910f-348f1d8071c4"
-      }
-    },
-    {
       "key": "03000ad2-92b2-4056-9292-953079076e96",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Processing Library Data activity guide.",
-        "duration": "20",
-        "name": "Processing Library Data"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students process data manually using playing cards to compare, filter, sort, group, aggregate and validate. By the end of all six rounds, every student should be able to describe the different ways to process data and explain why data should be validated before it is processed.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give groups 10 seconds to answer the first question without organizing their cards.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What suit do you have the most of? How many cards do you have in that suit?*\n- *What makes this task challenging to complete quickly?*\n\n**Turn and Talk:** Give partners 30 seconds, then take two or three answers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to notice that even a simple question is slow and easy to get wrong when the cards are mixed up.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read the Problem in the Processing Cards section of their activity guide. Students complete the first three rounds and after each round write the steps they followed in the Steps to Process column, with enough detail, that another group could repeat them. \n- Round 1: Shuffle the deck. Draw one card. Is it a club?\n- Round 2: Filter the deck to include only cards that match the suit of the card you drew in Round 1.\n- Round 3: Using your pile from Round 2, sort the cards by number in ascending order (smallest to largest).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students for specific steps. Ask: “Which card did you look at first? What did you compare it to? What did you do with it next?”\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *How did the comparison from Round 1 show up again in Round 2?*\n- *What would change if your deck had 1,000 cards?*\n\n**Turn and Talk:** Give partners 30 seconds, then take two or three answers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that Round 2 repeats the Round 1 comparison on every card, and sorting is many comparisons between pairs of cards. Students articulate an increase in the time it takes and the amount of mistakes they make.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define filter.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define sort.\n\n\n\n\n",
+        "duration": "15",
+        "name": "Processing Cards",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Filtering hides data; it doesn't delete it. Students set cards aside rather than throwing them away, just as filtered rows in a spreadsheet are still there.\n\nIn everyday speech, \"sort\" often means group (\"sort the laundry\"). In data, sort means put in order. Students group the cards in the next round."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "03000ad2-92b2-4056-9292-953079076e96",
@@ -2261,27 +2205,68 @@
       }
     },
     {
-      "key": "5686a567-d27f-4b88-a477-d98a29b330bb",
+      "key": "4b1a92b9-1b1e-4df9-8970-691d592cbf15",
       "position": 2,
       "properties": {
-        "description": "Before we start processing data, let’s act like real data scientists and make sure our dataset is trustworthy. Sometimes data includes mistakes or even made-up information. We’ll use the chatbot to help spot those issues before we analyze anything.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Run Rounds 4-6 the same as the previous three rounds. \n- Round 4: Shuffle all the cards back together. Make one pile for each suit.\n- Round 5: Count the cards in each pile. Which suit has the most?\n- Round 6: Only number cards 2-10 in spades, hearts, diamonds, or clubs are valid. Remove cards that are not valid.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Round 6, students should find the aces and face cards (jacks, queens, and kings).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define aggregate.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define validate.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If needed, define the remaining terms for students:\n- **Group** - Put data into categories based on something they have in common\n- **Match** - Find data that is the same or connected across different sets of information\n- **Summarize** - Give a short overview of the most important information in the data\n- **Compare** - Look at two or more sets of data to find similarities and differences"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4b1a92b9-1b1e-4df9-8970-691d592cbf15",
+        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
+      }
+    },
+    {
+      "key": "5cdd1f20-65e0-445d-ae24-a74888241c20",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What happened to your Round 5 totals once you removed the non-valid cards?*\n- *Why should data be checked before it is processed?*\n\n**Turn and Talk:** Give partners 30 seconds, then take two or three answers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students conclude that bad data leads to wrong output, even when the processing is done correctly. Listen for “Our spades total was too high because it counted a king and an ace.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "5cdd1f20-65e0-445d-ae24-a74888241c20",
+        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
+      }
+    },
+    {
+      "key": "1b04676a-2cbb-4453-a1be-8c314920b89a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students validate and process data computationally. After level three every student should be able to decompose a scenario into a goal, the required data, correct process and desired outcome.",
+        "duration": "15",
+        "name": "Library Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b04676a-2cbb-4453-a1be-8c314920b89a",
+        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
+      }
+    },
+    {
+      "key": "22bd6a1e-2f9e-42c8-83c9-9ab681a802bc",
+      "position": 5,
+      "properties": {
+        "description": "Before we process the library data, let's act like real data scientists and make sure our dataset is trustworthy. We'll use the chatbot to help spot problems before we analyze anything.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "5686a567-d27f-4b88-a477-d98a29b330bb",
+        "activity_section.key": "22bd6a1e-2f9e-42c8-83c9-9ab681a802bc",
         "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
       }
     },
     {
       "key": "5e56cfd8-3eec-42fd-ba5b-fae201ad247e",
-      "position": 3,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 8, Level 1: Validate the Data.\nExplain that in this level, they’ll review the library dataset and use AI Chat to identify misleading or fabricated entries.\n- Open the Library Books Dataset\n- Ask the chatbot for one strategy to validate the data.\n- Try that strategy—look for duplicates, mismatched author names, or impossible publication dates.\n- Verify what you find by checking the spreadsheet yourself.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 8, Level 1: Validate the Data.\nExplain that in this level, they’ll review the library dataset and use AI Chat to identify misleading or fabricated entries.\n- Open the Library Books Dataset\n- Ask the chatbot for ways to validate the data\n- Choose and apply one strategy to look for duplicates, mismatched author names, or impossible publication dates.\n- Verify what you find by checking the spreadsheet yourself.\n- Complete the Validating Library Data section of the activity guide.\n",
         "progression_name": "Validating Library Data",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Teaching Tip\nStudents don’t need to fix the errors right now—just identify and note any misleading or fabricated entries. They’ll keep these findings in mind when they process the data in Level 2."
+            "markdown": "Students don't need to fix the errors right now. They identify and note any misleading or fabricated entries and keep these findings in mind when they process the data in Level 2."
           }
         ]
       },
@@ -2291,22 +2276,10 @@
       }
     },
     {
-      "key": "41e1cfe8-63da-4bdb-9985-0aa4e8c460b7",
-      "position": 4,
-      "properties": {
-        "description": "Let's connect this to something we learned earlier. Every computer system takes in input, keeps it in storage, processes it, and produces output. Today we're zooming in on processing. Processing is where the system actually works with the data: sorting, filtering, aggregating, and validating. You already validated the library data in Level 1. Now let's try the others.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "41e1cfe8-63da-4bdb-9985-0aa4e8c460b7",
-        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
-      }
-    },
-    {
       "key": "0d5c80d7-1876-486e-9c30-c09f041a951f",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "Imagine you’re a librarian who needs to make decisions quickly, like recommending books to visitors or identifying which books are rarely checked out. You can’t rely on manual sorting all the time, especially when dealing with thousands of records. That’s where computer systems and computational tasks come in. Today, we’ll work with a dataset about a library’s book collection and use computational processes to uncover patterns and make data-driven decisions, just like a computer system would. In this activity, you’ll analyze a dataset step by step, just like a computer system processes data. We’ll use a template to break the problem into clear steps. Let’s walk through an example together to get started.",
+        "description": "You already validated the library data in Level 1. Now let's try the other kinds of processing. Imagine you're a librarian who needs to make decisions quickly, like recommending books to visitors or deciding which books to buy. You can't sort thousands of records by hand the way you sorted your cards. That's where computer systems come in. We'll use a template to break the problem into clear steps.",
         "remarks": true
       },
       "seeding_key": {
@@ -2316,10 +2289,10 @@
     },
     {
       "key": "5d02bf8d-6890-4987-9571-5573de87fa38",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 2. Walk students through solving the first choice level using the following steps ([here is a demo](https://drive.google.com/file/d/1tkR53BYic9eqtBFS5-Y9AAktrc_2ey-v/view) of how to do this):\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (reference the action bank at the top of their activity guides):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort by descending order (Z-A) of Popularity Score**.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
-        "progression_name": "Processing Library Data"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Students open Lesson 8, Level 2.\n- Pairs complete the Template Summary for the  scenario in the Processing Library Data section of their activity guide.\n- Then they process the data in the spreadsheet according to their summary.\n\n",
+        "progression_name": "Popular Books Scenario"
       },
       "seeding_key": {
         "activity_section.key": "5d02bf8d-6890-4987-9571-5573de87fa38",
@@ -2327,32 +2300,21 @@
       }
     },
     {
-      "key": "bbe8b6bc-1d0d-4cd6-ac68-e8e9783f9551",
-      "position": 7,
+      "key": "612040f8-efde-4182-9bd0-ee294c60d39e",
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**:  Model filling out the Madlib template on chart paper or the board for the first scenario: “The goal is to [show the hottest books to visitors]. The system will [Sort] the [Popularity Score column] by [descending order]. The output is [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Use questions to help guide students: “What is the goal?”, “Which column has the data you need?”, “Which action from the Action Bank fits the goal?”, “Should the list go from highest to lowest or lowest to highest?”\n\n- Observe students as they work through the scenarios.\n- Check that students are filling out their templates correctly.\n- Provide guidance or clarification if students are stuck on any step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click the animated slide to model filling out the template. Walk students through solving the level using the following steps ([here is a demo](https://images.code.org/cfe80011879584a708ac31fd03dabd36-sortdemo.gif)):\n- **Define the goal:** \"A new visitor wants to know the hottest books to start reading.\"\n- **Identify the relevant data:** \"Popularity Score column.\"\n- **Choose the action (reference the action bank at the top of their activity guides):** \"Sort.\"\n- **Apply the action:** Use the spreadsheet to sort by descending order (Z-A) of Popularity Score.\n- **Describe the output:** \"The books are now listed from most popular to least popular.\"\n- **Reflect on insights:** \"This helps the library highlight the most popular books to new visitors.\"\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "bbe8b6bc-1d0d-4cd6-ac68-e8e9783f9551",
-        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
-      }
-    },
-    {
-      "key": "1a38e48b-d170-435f-ac6f-2f2a3e2bc15f",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *sort*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *filter*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *aggregate*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *validate*\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "1a38e48b-d170-435f-ac6f-2f2a3e2bc15f",
+        "activity_section.key": "612040f8-efde-4182-9bd0-ee294c60d39e",
         "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
       }
     },
     {
       "key": "e701a85b-a332-40ac-acd0-323f8adaca34",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "Now it’s your turn! Work with your partner to complete two additional library data choice levels. For each scenario, follow the steps we just practiced: define the goal, choose the action, identify the relevant data, apply the action, describe the output, and reflect on the insights.",
+        "description": "Complete one of the Processing Library Data scenarios. Follow the steps we just reviewed: define the goal, choose the action, identify the relevant data, apply the action, describe the output.",
         "remarks": true
       },
       "seeding_key": {
@@ -2361,27 +2323,11 @@
       }
     },
     {
-      "key": "6f341cc3-7184-4948-b2d7-4b7fbc89c26a",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete two more library data choice levels in Lesson 8, Level 2. They use their activity guide to write down the steps for two of the choice levels, and fill out the template to summarize their process and results each.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "6f341cc3-7184-4948-b2d7-4b7fbc89c26a",
-        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
-      }
-    },
-    {
       "key": "a2032752-147c-419d-a7c1-b4628c510352",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to think back to the UNO card activity. Remind them how sorting, filtering, and aggregating helped them see patterns and make decisions with their cards. They can apply the same strategies to the library dataset."
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3, to pick one of the scenarios, complete the template summary for Scenario #2 in their activity guide, and process the data in the spreadsheet.",
+        "progression_name": "Processing Library Data"
       },
       "seeding_key": {
         "activity_section.key": "a2032752-147c-419d-a7c1-b4628c510352",
@@ -2392,6 +2338,7 @@
       "key": "6edb1f45-94ac-455a-a9b5-a3a8bc3ec714",
       "position": 12,
       "properties": {
+        "description": "\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their templates correctly.\n- Provide guidance or clarification if students are stuck on any step."
       },
       "seeding_key": {
         "activity_section.key": "6edb1f45-94ac-455a-a9b5-a3a8bc3ec714",
@@ -2402,7 +2349,13 @@
       "key": "863b20aa-c2f1-40e5-8832-74cfa05b08d8",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. \n- Ask student pairs to share their answers.\n- Highlight and clarify any differences or commonalities in their findings."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios Use the blue play icon to start the Give One, Get One activity. Prompt students to find a partner and share template summary from Scenario #2. After both students share, they should find a new partner and repeat the process.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Give One, Get One encourages students to circulate and share their findings. Each student “gives” an idea to a partner, then “gets” an idea in return. Prompt students to repeat with new partners."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "863b20aa-c2f1-40e5-8832-74cfa05b08d8",
@@ -2410,34 +2363,15 @@
       }
     },
     {
-      "key": "c9cc480d-6cd2-491e-82a6-52da457eba45",
+      "key": "7e008a15-eaec-4f4f-958e-fb05de58c139",
       "position": 14,
       "properties": {
-        "description": "Let’s take some time to reflect on what you’ve learned. You’ll answer two free-response questions to compare the benefits and limitations of manual and computational data processing. Think about how the tools and methods we used today improve efficiency, accuracy, and help us handle larger datasets.",
-        "duration": "10",
-        "name": "Reflection",
-        "remarks": true
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *Compare the cards and the library data activities. What was faster or more accurate when the computer did the processing?*\n- *What could the computer not do without you?*\n\n**Think-Write-Share:** Give students 30 seconds to think and another 30 seconds to write a response. Have them quickly share their thoughts with a partner or a small group.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain the benefits and limitations of processing data by hand and by computer. Computers are faster and more accurate with large amounts of data. People still set the goal, choose the process, decide the rules for good data, and catch problems. Guide students by sharing a frame: \"The computer was better at ... because ... It still needed people to ...\"",
+        "duration": "5",
+        "name": "Reflection"
       },
       "seeding_key": {
-        "activity_section.key": "c9cc480d-6cd2-491e-82a6-52da457eba45",
-        "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
-      }
-    },
-    {
-      "key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3 to respond to the reflection questions on Levels 3 and 4.",
-        "progression_name": "Reflection",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Processing Library Data activity guide can be collected and used to formatively assess the lesson objectives.\n\nThe free response questions in Levels 3 and 4 can be used to formatively assess the lesson objectives."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a",
+        "activity_section.key": "7e008a15-eaec-4f4f-958e-fb05de58c139",
         "lesson_activity.key": "c0ff2db7-4e0e-4f9a-a9d8-4f86f7f25744"
       }
     },
@@ -2445,11 +2379,11 @@
       "key": "527ac923-5aed-4ff1-9d8f-93291995e00d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Think about an app or software you have used before. List examples of processing from that app.*\n\n**Popcorn Share:** One student shares, then pops to another student with a hand up.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the four processing types to apps they use. Ask them to name the type for each example. Help guide students by offering an example from another app: \"A fitness app adds up your steps for the day. What does a music app do with your plays?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the the Question of the Day",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "This way of working with the Question of the Day works well as an exit ticket or a quick way to gauge comprehension during a lesson.\n\n"
+            "markdown": "The Processing Data activity guide can be used to formatively assess the lesson objectives:\n- Describe different ways data can be analyzed.\n- The benefits and limitations of processing data manually and computationally.\n- Decompose problems into actionable steps that define the goal, data, process, and desired outcome."
           }
         ]
       },
@@ -2607,10 +2541,22 @@
       }
     },
     {
-      "key": "4ef61477-ca71-4985-ae12-9e09589e2fba",
+      "key": "53d32666-2e3c-4a23-8284-a250bab0782a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video (0:00 - 1:48).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of IoT devices you've heard about or used?*\n* **Sticky Note Swap:** Have students write a response on a sticky note, then trade notes with a partner. They read and respond to their partner’s idea before sharing key insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to realize they interact with IoT devices and systems in different parts of their lives. For example, a smartwatch tracks your steps and sends the information to an app on your phone, or a smart thermostat adjusts the temperature in your home based on the weather outside.",
+        "description": "Today we're going to explore IoT (Internet of Things) devices as an emerging technology. Let's take a look at an example in action of how these smart devices are changing the way that we live, work, and play.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "53d32666-2e3c-4a23-8284-a250bab0782a",
+        "lesson_activity.key": "0dc9dca1-0aac-4661-8a09-efc73e63087d"
+      }
+    },
+    {
+      "key": "4ef61477-ca71-4985-ae12-9e09589e2fba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video. It highlights an IoT (Internet of Things) mouthguard that is now being used in rugby matches that communicate wirelessly with observers to flag players that might need to be assessed for a concussion.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of IoT devices you've heard about or used?*\n* **Sticky Note Swap:** Have students write a response on a sticky note, then trade notes with a partner. They read and respond to their partner’s idea before sharing key insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to realize they interact with IoT devices and systems in different parts of their lives. For example, a smartwatch tracks your steps and sends the information to an app on your phone, or a smart thermostat adjusts the temperature in your home based on the weather outside.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2620,16 +2566,6 @@
       },
       "seeding_key": {
         "activity_section.key": "4ef61477-ca71-4985-ae12-9e09589e2fba",
-        "lesson_activity.key": "0dc9dca1-0aac-4661-8a09-efc73e63087d"
-      }
-    },
-    {
-      "key": "972497b1-d851-4bda-b03a-ad88f923d159",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "972497b1-d851-4bda-b03a-ad88f923d159",
         "lesson_activity.key": "0dc9dca1-0aac-4661-8a09-efc73e63087d"
       }
     },
@@ -2648,7 +2584,7 @@
       "key": "ac92d0dd-49cc-4d4c-b8f1-579c57709e90",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n",
         "duration": "15",
         "name": "Exploring IoT Systems, Hardware, and Privacy Concerns"
       },
@@ -2691,6 +2627,10 @@
       "key": "f8e7a23d-72cb-4923-b1c9-28fca1bdf634",
       "position": 4,
       "properties": {
+        "description": "In the next activity, you and your partner will take part in a design challenge to quickly brainstorm an innovative device for a connected classroom in a futuristic smart school using IoT solutions\n",
+        "duration": "20",
+        "name": "Smart Classroom Design Challenge",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "f8e7a23d-72cb-4923-b1c9-28fca1bdf634",
@@ -2698,12 +2638,28 @@
       }
     },
     {
-      "key": "8b50299b-d0e4-487b-8ee0-c66ba0e60a16",
+      "key": "8e0b1d9b-66ed-43d9-86df-536d1699a796",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each student make a copy of the Smart Classroom Template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design a Smart Classroom activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the steps students need to take to complete the activity. Refer to the example that is in the template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share the innovation they developed. Students should share the innovation as well as the data it collects, how it transmits that information, and any privacy or security concerns that might exist.",
-        "duration": "20",
-        "name": "Design a Smart Classroom",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design a Smart Classroom activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the model Smart Classroom device. Give students a minute to examine this IoT device and then have volunteers explain how this IoT device works and what problem it is attempting to solve. In this case, it is a device that allows students to borrow pencils from a teacher automatically. It logs the pencil data and the student who borrowed it through the use of facial recognition. It transmits its data over bluetooth to the teacher's computer so that they have a list of who borrowed a pencil for the class. When they return it, it automatically checks it back in for them.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 10, Level 2 in order to complete the Smart Classroom Design Challenge. Students will design an innovative device for a connected classroom in a futuristic smart school using IoT solutions. They can drag the furniture, classroom items, and communication devices available in the Sketch Lab template into the Canvas to the right to create the design. They will use the digital sticky notes to label what problem they are solving, what data they are collecting, how data is transmitted, and any security & safety concerns that might arise.\n",
+        "progression_name": "Smart Classroom Design Challenge",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Tell students that the goal of the design challenge is to create their design in a limited amount of time. It might be helpful to display a timer so that students can keep track of where they are in the process and how much time they have left."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8e0b1d9b-66ed-43d9-86df-536d1699a796",
+        "lesson_activity.key": "b4b521bf-9a10-43eb-8843-9ccfd53ed242"
+      }
+    },
+    {
+      "key": "8b50299b-d0e4-487b-8ee0-c66ba0e60a16",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a **Give One, Get One** to share the innovation they developed. Students should share the innovation as well as the data it collects, how it transmits that information, and any privacy or security concerns that might exist.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2724,7 +2680,7 @@
       "key": "372c0cc5-117d-4b56-b338-0874059e2b9e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students popcorn out answers based on what they learned and designed in the day's activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the vocabulary.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3786,12 +3742,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Troubleshooting"
+        "progression": "Troubleshooting Software"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson5-level1_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson5-troubleshooting"
         ],
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "lesson_group.key": "lessonGroup-3",
@@ -3799,7 +3755,7 @@
         "activity_section.key": "e248e3c6-5278-4167-a42a-7bc0933a17a4"
       },
       "level_keys": [
-        "computer-systems-lesson5-level1_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson5-troubleshooting"
       ]
     },
     {
@@ -3808,7 +3764,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Reflection"
+        "progression": "Troubleshooting Synthesis"
       },
       "bonus": false,
       "seeding_key": {
@@ -3830,29 +3786,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Optimization"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson5-level3_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "8f4cab6d-7fbf-43a8-868c-06ad831c5952"
-      },
-      "level_keys": [
-        "computer-systems-lesson5-level3_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "New Progression"
+        "progression": "Optimizing Software"
       },
       "bonus": false,
       "seeding_key": {
@@ -3862,14 +3796,14 @@
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277"
+        "activity_section.key": "8f4cab6d-7fbf-43a8-868c-06ad831c5952"
       },
       "level_keys": [
         "ai-and-the-systems-that-power-it-lesson5-choice"
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3891,7 +3825,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3913,7 +3847,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3935,7 +3869,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -3957,7 +3891,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3979,7 +3913,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4001,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4023,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4045,8 +3979,30 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Popular Books Scenario"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level2a_v2_2026-dev"
+        ],
+        "lesson.key": "Lesson 8: Processing Data in a System",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "5d02bf8d-6890-4987-9571-5573de87fa38"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level2a_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4060,7 +4016,7 @@
         "lesson.key": "Lesson 8: Processing Data in a System",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "5d02bf8d-6890-4987-9571-5573de87fa38"
+        "activity_section.key": "a2032752-147c-419d-a7c1-b4628c510352"
       },
       "level_keys": [
         "computer-systems-lesson8-level2_v3_2026-dev"
@@ -4068,50 +4024,6 @@
     },
     {
       "chapter": 27,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Reflection"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson8-level3_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a"
-      },
-      "level_keys": [
-        "computer-systems-lesson8-level3_v3_2026-dev"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "progression": "Reflection"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson8-level5_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a"
-      },
-      "level_keys": [
-        "computer-systems-lesson8-level5_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4133,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4155,7 +4067,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4177,7 +4089,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4199,7 +4111,29 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Smart Classroom Design Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson10-smart-classroom"
+        ],
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "8e0b1d9b-66ed-43d9-86df-536d1699a796"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson10-smart-classroom"
+      ]
+    },
+    {
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4221,7 +4155,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4243,7 +4177,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4265,7 +4199,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4287,7 +4221,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4309,7 +4243,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4331,7 +4265,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4353,7 +4287,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4375,7 +4309,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4397,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4419,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4441,7 +4375,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4463,7 +4397,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4485,7 +4419,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4507,7 +4441,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4529,7 +4463,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4710,9 +4644,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson5-level1_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson5-troubleshooting",
         "script_level.level_keys": [
-          "computer-systems-lesson5-level1_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson5-troubleshooting"
         ],
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "lesson_group.key": "lessonGroup-3",
@@ -4734,18 +4668,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson5-level3_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson5-level3_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "8f4cab6d-7fbf-43a8-868c-06ad831c5952"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-and-the-systems-that-power-it-lesson5-choice",
         "script_level.level_keys": [
           "ai-and-the-systems-that-power-it-lesson5-choice"
@@ -4753,7 +4675,7 @@
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277"
+        "activity_section.key": "8f4cab6d-7fbf-43a8-868c-06ad831c5952"
       }
     },
     {
@@ -4854,9 +4776,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson8-level2_v3_2026-dev",
+        "level.key": "computer-systems-lesson8-level2a_v2_2026-dev",
         "script_level.level_keys": [
-          "computer-systems-lesson8-level2_v3_2026-dev"
+          "computer-systems-lesson8-level2a_v2_2026-dev"
         ],
         "lesson.key": "Lesson 8: Processing Data in a System",
         "lesson_group.key": "lessonGroup-3",
@@ -4866,26 +4788,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson8-level3_v3_2026-dev",
+        "level.key": "computer-systems-lesson8-level2_v3_2026-dev",
         "script_level.level_keys": [
-          "computer-systems-lesson8-level3_v3_2026-dev"
+          "computer-systems-lesson8-level2_v3_2026-dev"
         ],
         "lesson.key": "Lesson 8: Processing Data in a System",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson8-level5_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson8-level5_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "42a605c2-e2b9-4e92-b47a-6f4e3f05266a"
+        "activity_section.key": "a2032752-147c-419d-a7c1-b4628c510352"
       }
     },
     {
@@ -4934,6 +4844,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
         "activity_section.key": "65d9819a-77fd-48f8-baf5-eeab5b666177"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson10-smart-classroom",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson10-smart-classroom"
+        ],
+        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "8e0b1d9b-66ed-43d9-86df-536d1699a796"
       }
     },
     {
@@ -5238,23 +5160,12 @@
       }
     },
     {
-      "name": "[KEY] Lesson 10 - Unit Guide",
-      "url": "https://docs.google.com/document/d/1XpyPLl4isakHOVH2271ObfGMh--dKEYG3xfcmezzVT8/edit?usp=drivesdk",
-      "key": "_key_lesson_10_-_unit_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_lesson_10_-_unit_guide"
-      }
-    },
-    {
-      "name": "[KEY] Optimization",
-      "url": "https://docs.google.com/document/d/1BmbrbcqsWgu9YSMzdFAF_BfW4eWP5Xs3TTlz-aIyu1E/edit?usp=drivesdk",
+      "name": "[KEY] Optimization & Troubleshooting",
+      "url": "https://docs.google.com/document/d/1c0OASpfHSQwP2LwJIpk2t7IyU7t1iN05MRX2U4r2NdY/",
       "key": "_key_optimization",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -5263,8 +5174,8 @@
     },
     {
       "name": "[KEY] Processing Library Data",
-      "url": "https://docs.google.com/document/d/1yo9k9fLnkYSHJi3IrVCeclU3A04z49JagemmGMao2a4/edit?usp=sharing",
-      "key": "_key_processing_library_data",
+      "url": "https://docs.google.com/document/d/12tmdujNznGHzbNThDGthiu0XIeXGAp5Yr5_fWyakykM",
+      "key": "_key_processing_library_data_1",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -5272,7 +5183,7 @@
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_processing_library_data"
+        "resource.key": "_key_processing_library_data_1"
       }
     },
     {
@@ -5334,6 +5245,7 @@
       "key": "ai_and_the_systems_that_power_it_unit_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5654,11 +5566,26 @@
       }
     },
     {
-      "name": "Optimization",
-      "url": "https://docs.google.com/document/d/1BoFQgaB9A-sAGPAUYAcYVO-_ZSe8m7c2dGX2moPeHnE/edit?usp=drivesdk",
+      "name": "Mini Playing Cards",
+      "url": "https://drive.google.com/file/d/1PHJnudshFBPVRwiykbIQZFJMJkAN7HkU",
+      "key": "mini_playing_cards_1",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "mini_playing_cards_1"
+      }
+    },
+    {
+      "name": "Troubleshooting & Optimization",
+      "url": "https://docs.google.com/document/d/1B7ouAvwOxtIZBm0ljX2x4geEcscIk0xQwvzmmRL1D8g/",
       "key": "optimization",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -5683,7 +5610,7 @@
     {
       "name": "Processing Data in a System",
       "url": "https://docs.google.com/presentation/d/1GwDtGNHKKRHgZzfKhcDho-H2DYimqOcWsUcSVrLc_QA",
-      "key": "processing_data_in_a_system_1",
+      "key": "processing_data_in_a_system_2",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -5691,13 +5618,13 @@
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "processing_data_in_a_system_1"
+        "resource.key": "processing_data_in_a_system_2"
       }
     },
     {
       "name": "Processing Library Data",
-      "url": "https://docs.google.com/document/d/1-JLKmlnVwZffCRvACIRb3teUV4m6yF7GiENiNdAlgeg/edit?usp=sharing",
-      "key": "processing_library_data",
+      "url": "https://docs.google.com/document/d/1e26NO0zxUX7PDmHFYW1GHdy7LoxEu0bKUf36lxI3yDI",
+      "key": "processing_library_data_1",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
@@ -5705,19 +5632,7 @@
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "processing_library_data"
-      }
-    },
-    {
-      "name": "Smart Classroom Template",
-      "url": "https://docs.google.com/presentation/d/11XsC2sKi0AYy49yZV3sSWTMAvlFGlMgeHeCn2YQ6I74/edit?usp=drivesdk",
-      "key": "smart_classroom_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "smart_classroom_template"
+        "resource.key": "processing_library_data_1"
       }
     },
     {
@@ -5868,18 +5783,6 @@
       }
     },
     {
-      "name": "UNO Cards",
-      "url": "https://drive.google.com/file/d/1GmineBV7vVU9pcMpF31g6zgkYjXPaiQ_/view?usp=sharing",
-      "key": "uno_cards",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "uno_cards"
-      }
-    },
-    {
       "name": "User Testing",
       "url": "https://docs.google.com/presentation/d/10ozrMDlBXcP3crgLf_AJgiYuaC2esCTVzZMhW8LyU6E/",
       "key": "user_testing",
@@ -5934,11 +5837,12 @@
       }
     },
     {
-      "name": "What is IoT?",
-      "url": "https://www.youtube.com/watch?v=6mBO2vqLv38",
+      "name": "IoT in Real-Life",
+      "url": "https://youtube.com/shorts/8B6klBOu3r4?si=JwzNLKXejN87tk9j",
       "key": "what_is_iot_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Video"
       },
       "seeding_key": {
@@ -5956,31 +5860,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: IoT and Emerging Technologies",
-        "resource.key": "_key_lesson_10_-_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
         "resource.key": "_key_the_internet_of_things"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: IoT and Emerging Technologies",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
         "resource.key": "iot_and_emerging_technologies"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: IoT and Emerging Technologies",
-        "resource.key": "smart_classroom_template"
       }
     },
     {
@@ -6166,19 +6052,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "resource.key": "_key_optimization"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
       }
     },
     {
@@ -6262,19 +6136,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "_key_processing_library_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
+        "resource.key": "_key_processing_library_data_1"
       }
     },
     {
@@ -6286,19 +6148,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "processing_data_in_a_system_1"
+        "resource.key": "mini_playing_cards_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "processing_library_data"
+        "resource.key": "processing_data_in_a_system_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Processing Data in a System",
-        "resource.key": "uno_cards"
+        "resource.key": "processing_library_data_1"
       }
     },
     {
@@ -6832,6 +6694,16 @@
       }
     },
     {
+      "key": "33230121-ddab-4158-b2e7-a6ab3f34d0f2",
+      "properties": {
+        "description": "Decompose problems into actionable steps that define the goal, data, process, and desired outcome"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Processing Data in a System",
+        "objective.key": "33230121-ddab-4158-b2e7-a6ab3f34d0f2"
+      }
+    },
+    {
       "key": "3ac68f59-276a-4726-a697-437aa70bea0a",
       "properties": {
         "description": "Troubleshoot issues in software using appropriate strategies"
@@ -6842,16 +6714,6 @@
       }
     },
     {
-      "key": "3cb04039-48b7-46d1-8824-cbdf61ce85f0",
-      "properties": {
-        "description": "Decompose problems into actionable steps that define the goal, data, process, and desired outcome"
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Processing Data in a System",
-        "objective.key": "3cb04039-48b7-46d1-8824-cbdf61ce85f0"
-      }
-    },
-    {
       "key": "42b88997-8a0c-4c42-b2b1-11697333f17b",
       "properties": {
         "description": "Develop ethical guidelines for the responsible design and development of AI and emerging technologies"
@@ -6859,6 +6721,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 12: Just Because We Can, Should We?",
         "objective.key": "42b88997-8a0c-4c42-b2b1-11697333f17b"
+      }
+    },
+    {
+      "key": "45035f65-279d-41dc-8dba-1a41f234a619",
+      "properties": {
+        "description": "Explain the benefits and limitations of processing data manually and computationally"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Processing Data in a System",
+        "objective.key": "45035f65-279d-41dc-8dba-1a41f234a619"
       }
     },
     {

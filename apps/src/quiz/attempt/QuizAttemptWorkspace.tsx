@@ -2,6 +2,7 @@ import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
+  navigateToNextLevel,
   sendStartedReportIfNotStarted,
   sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
@@ -11,9 +12,10 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {QuizQuestionSummary, toBool} from '../types';
 
 import AttemptCard from './AttemptCard';
+import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
-import QuizIntroCard from './QuizIntroCard';
+import ResultsCard from './ResultsCard';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
@@ -31,6 +33,7 @@ export interface QuizAttemptWorkspaceProps {
   customIntroText?: string;
   timeLimitMinutes?: number;
   showIntroScreen?: boolean;
+  showCorrectness?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -46,6 +49,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   customIntroText,
   timeLimitMinutes,
   showIntroScreen,
+  showCorrectness,
 }) => {
   const dispatch = useAppDispatch();
   const {
@@ -77,6 +81,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const pendingWritesByQuestionIdRef = useRef<Record<number, Promise<unknown>>>(
     {}
   );
+  // The finish-time success report, so Next level can wait for it.
+  const pendingReportRef = useRef<Promise<unknown>>(Promise.resolve());
 
   const questionsRef = useRef<HTMLDivElement>(null);
   const submittedRef = useRef<HTMLDivElement>(null);
@@ -124,15 +130,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     questionsRef.current?.querySelector<HTMLElement>('h2')?.focus();
   }, [currentPageNumber, isAttemptInProgress]);
 
-  // Focus on the Retake button or the result message when the attempt is submitted.
+  // Focus the heading first, like introRef - not a button, so the result
+  // gets announced before a screen reader user reaches Try again/Next level.
   useEffect(() => {
     if (!attempt?.submittedAt) {
       return;
     }
-    const target =
-      submittedRef.current?.querySelector<HTMLElement>('button') ??
-      submittedRef.current?.querySelector<HTMLElement>('[tabindex]');
-    target?.focus();
+    submittedRef.current?.querySelector<HTMLElement>('[tabindex]')?.focus();
   }, [attempt?.submittedAt]);
 
   const handleBeginAttempt = async () => {
@@ -160,7 +164,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     const requestLevelId = levelId;
     try {
       await finishAttempt(responsesByQuestionId);
-      dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName));
+      pendingReportRef.current = Promise.resolve(
+        dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName))
+      );
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
@@ -172,6 +178,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     } else {
       handleBeginAttempt();
     }
+  };
+
+  const handleNextLevel = async () => {
+    await pendingReportRef.current;
+    dispatch(navigateToNextLevel());
   };
 
   // A quiz with no intro screen has no click-through step - start the
@@ -251,7 +262,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </Typography>
         ) : isIntroOpen ? (
           <div className={styles.questions} ref={introRef}>
-            <QuizIntroCard
+            <IntroCard
               title={displayName || levelName}
               introText={customIntroText}
               questionCount={quizQuestions.length}
@@ -276,21 +287,19 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             <Typography variant="body2">Loading…</Typography>
           )
         ) : attempt.submittedAt ? (
-          <div ref={submittedRef}>
-            <Typography variant="body2" tabIndex={-1}>
-              Submitted. Score: {attempt.score} / {attempt.maxScore}
-            </Typography>
-            {attempt.canRetake && (
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="medium"
-                type="button"
-                onClick={handleRetake}
-              >
-                Retake Quiz
-              </MuiButton>
-            )}
+          <div className={styles.questions} ref={submittedRef}>
+            <ResultsCard
+              title={displayName || levelName}
+              showCorrectness={toBool(showCorrectness)}
+              score={attempt.score}
+              maxScore={attempt.maxScore}
+              attemptNumber={attempt.attemptNumber}
+              allowMultipleAttempts={toBool(allowMultipleAttempts)}
+              canRetake={attempt.canRetake}
+              submittedAt={attempt.submittedAt}
+              onTryAgain={handleRetake}
+              onNextLevel={handleNextLevel}
+            />
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>

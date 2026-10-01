@@ -18,7 +18,7 @@ function renderModal({
   const client = createQueryClient({queries: {retry: false}});
   const tree = (address: string | null) => (
     <QueryClientProvider client={client}>
-      <ToastProvider>
+      <ToastProvider politeness="polite">
         <ParentEmailModal open onClose={onClose} currentParentEmail={address} />
       </ToastProvider>
     </QueryClientProvider>
@@ -209,9 +209,12 @@ describe('ParentEmailModal — submission', () => {
         parent_email_preference_source: 'PARENT_EMAIL_CHANGE',
       },
     });
-    expect(
-      screen.getByText('Parent/guardian email updated.'),
-    ).toBeInTheDocument();
+    // The announcer fills a frame after the snackbar; the still-open dialog hides it.
+    await waitFor(() =>
+      expect(screen.getByRole('status', {hidden: true})).toHaveTextContent(
+        'Parent/guardian email updated.',
+      ),
+    );
   });
 
   it('disables the fields and the opt-in while saving', async () => {

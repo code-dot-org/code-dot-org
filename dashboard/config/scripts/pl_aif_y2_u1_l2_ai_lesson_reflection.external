@@ -1,0 +1,44 @@
+name 'pl-aif-y2-u1-l2-ai-lesson-reflection'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Reflection
+
+Both lessons in this pair keep steering you toward the same redirect. Take a moment with each question below before revealing a way to think about it.
+
+<details style="margin-top: 12px; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
+  <summary style="background-color: #E4E2F8; padding: 12px 16px; cursor: pointer; font-weight: bold; color: #1F1976; font-size: 14pt;">
+    &#128161; Why does the "what it does" vs. "how it works" distinction matter so much specifically for teaching AI?
+  </summary>
+  <div style="background-color: #FFFFFF; padding: 16px; border: 1px solid #ACA8EA; font-size: 14pt; color: #1A1A1A; line-height: 1.6;">
+    There's no single right answer here, but one strong response: this distinction matters because "AI is smart because it gives good answers" is exactly the thinking that later makes it hard for students to diagnose why an AI system fails, hallucinates, or produces a biased result. If a student only evaluates outcomes, they have no framework for examining process, and that framework is what debugging depends on.
+  </div>
+</details>
+
+<details style="margin-top: 12px; border-radius: 8px; overflow: hidden;">
+  <summary style="background-color: #E4E2F8; padding: 12px 16px; cursor: pointer; font-weight: bold; color: #1F1976; font-size: 14pt;">
+    &#128161; Where do you expect you'll need to make this same redirect again later in the unit?
+  </summary>
+  <div style="background-color: #FFFFFF; padding: 16px; border: 1px solid #ACA8EA; font-size: 14pt; color: #1A1A1A; line-height: 1.6;">
+    Expect to make this same redirect again anywhere the unit touches on evaluating or debugging a system, not just questions about intelligence itself.
+  </div>
+</details>
+
+<hr>
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 24px 0 16px 0;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 20px; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">&#10003;</div>
+    <div style="font-size: 14pt; color: #1F1976;">
+      <strong>Lesson 2 Complete</strong><br>
+      Nice work! You've finished What Is AI, Really?
+    </div>
+  </div>
+</div>
+
+<div style="background-color: #4C42CF; color: #FFFFFF; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px;">
+  <span style="font-size: 11pt; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Up Next</span><br>
+  <span style="font-size: 14pt; font-weight: bold;">Lesson 3: Python Basics</span>
+</div>
+MARKDOWN

@@ -30,6 +30,13 @@ const BASE: UserSettings = {
   dependentStudentsCount: 0,
   ageOptions: [],
   usStateOptions: [],
+  integrations: {
+    canManageLinkedAccounts: true,
+    isGoogleClassroomStudent: false,
+    isCleverStudent: false,
+    personalAccountLinkingEnabled: true,
+    lmsName: null,
+  },
 };
 
 function renderSection(overrides: Partial<UserSettings>) {
@@ -79,7 +86,7 @@ describe('LoginInformation password affordances', () => {
       hasPassword: false,
       shouldSeeAddPasswordForm: true,
       authenticationOptions: [
-        {credentialType: 'google_oauth2', email: 'grace@example.com'},
+        {id: 1, credentialType: 'google_oauth2', email: 'grace@example.com'},
       ],
     });
     expect(createPassword()).toBeInTheDocument();
@@ -93,7 +100,9 @@ describe('LoginInformation password affordances', () => {
       userType: 'student',
       hasPassword: false,
       shouldSeeAddPasswordForm: false,
-      authenticationOptions: [{credentialType: 'google_oauth2', email: null}],
+      authenticationOptions: [
+        {id: 1, credentialType: 'google_oauth2', email: null},
+      ],
     });
     expect(createPassword()).toBeNull();
     expect(updatePassword()).toBeNull();
@@ -112,7 +121,7 @@ describe('LoginInformation password affordances', () => {
       hasPassword: false,
       shouldSeeAddPasswordForm: true,
       authenticationOptions: [
-        {credentialType: 'google_oauth2', email: 'grace@example.com'},
+        {id: 1, credentialType: 'google_oauth2', email: 'grace@example.com'},
       ],
     });
     expect(

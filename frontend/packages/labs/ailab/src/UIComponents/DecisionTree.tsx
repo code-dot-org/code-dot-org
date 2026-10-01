@@ -4,6 +4,7 @@ import {type CSSProperties, useMemo} from 'react';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
 import {
+  getNodesBounds,
   layoutDisplayTree,
   type PlacedTreeNode,
   TREE_NODE_HEIGHT,
@@ -12,7 +13,12 @@ import {
 } from '../helpers/displayTreeLayout';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
-import {getDisplayTree} from '../selectors/visualizationSelectors';
+import {
+  getDisplayTree,
+  getPredictionTrace,
+} from '../selectors/visualizationSelectors';
+
+import TreeCanvas from './TreeCanvas';
 
 import shared from '../shared.module.scss';
 import styles from './decisionTree.module.scss';
@@ -38,11 +44,13 @@ function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
 
 const DecisionTree = () => {
   const tree = useAppSelector(getDisplayTree);
+  const trace = useAppSelector(getPredictionTrace);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
     () => (tree ? layoutDisplayTree(tree) : undefined),
     [tree],
   );
+  const pathIds = useMemo(() => new Set(trace?.path), [trace]);
 
   if (!tree || !layout) {
     return null;
@@ -68,12 +76,25 @@ const DecisionTree = () => {
       : valueText(node.prediction);
   };
 
+  const pathBounds =
+    trace &&
+    getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
+
+  // Path edges go last so a sibling edge cannot paint over the stub they share.
+  const edgeOrder = [...layout.nodes].sort(
+    (a, b) => Number(pathIds.has(a.id)) - Number(pathIds.has(b.id)),
+  );
+
   return (
     <div id="uitest-decision-tree" className={styles.decisionTree}>
       <div className={classNames(styles.header, shared.bold)}>
         Your model's decision tree
       </div>
-      <div className={styles.scroll}>
+      <TreeCanvas
+        contentWidth={layout.width}
+        contentHeight={layout.height}
+        pathBounds={pathBounds}
+      >
         <div
           role="img"
           aria-label="Diagram of your model's decision tree"
@@ -90,10 +111,16 @@ const DecisionTree = () => {
             aria-hidden="true"
             className={styles.edges}
           >
-            {layout.nodes.map(
+            {edgeOrder.map(
               placed =>
                 placed.parent && (
-                  <path key={placed.id} d={edgePath(placed.parent, placed)} />
+                  <path
+                    key={placed.id}
+                    d={edgePath(placed.parent, placed)}
+                    className={classNames({
+                      [styles.pathEdge]: pathIds.has(placed.id),
+                    })}
+                  />
                 ),
             )}
           </svg>
@@ -113,14 +140,19 @@ const DecisionTree = () => {
                     {branch}
                   </div>
                 )}
-                <div title={text} className={classNames(styles.node, kind)}>
+                <div
+                  title={text}
+                  className={classNames(styles.node, kind, {
+                    [styles.pathNode]: pathIds.has(placed.id),
+                  })}
+                >
                   <span className={styles.nodeText}>{text}</span>
                 </div>
               </div>
             );
           })}
         </div>
-      </div>
+      </TreeCanvas>
     </div>
   );
 };

@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-30T05:17:14.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: What Abstraction Hides",
+    "long_instructions": "When you send a text message, you don't think about ASCII or binary at all. What's being hidden from you, and why is that a good thing?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18870,
+    "name_suffix": "_2025",
+    "instructions_important": "false",
+    "encrypted_solution": "Wb6lNuv7xTOoqcsw/hjvcS10eut0dTK8R8slLR8JQDkNQnZyEYzLC+yGljoa\nluLB29D25KuSOwmRm2OSY+v94Hugbjg7jNrp+3MDa2YILCc4ZMhfZU1SSRo4\nkzeejSpDzZ1O1osGmVemzlNZsAwYJcInGSW7zQZ2sP1Yj0Hjy5OwU3Pv+MOW\nsgQiq4DvuHnGN7tlfbgYnuuoZDBq3/OrUyyqMU3/q3P+ol6GzFYUFAsuAhb4\n/VSY6G7mMUcf6nX6L/NNFhteIu8HCAoBXgbxKQ==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-30T05:17:14.397+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson8_cfu2_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson8_cfu2_dev_27_28\"},{\"changed_at\":\"2026-09-30 05:17:19 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
