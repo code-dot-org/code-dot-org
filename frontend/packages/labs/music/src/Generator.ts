@@ -29,7 +29,7 @@ export const triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
  * Generates code and tracks triggers, etc, in the workspace.
  */
 class Generator {
-  protected readonly workspace: Blockly.WorkspaceSvg;
+  protected readonly workspace: Blockly.Workspace;
   protected readonly blockMode: (typeof BlockMode)[keyof typeof BlockMode];
   private compiledEvents: CompiledEvents;
   private triggerIdToStartType: {[id: string]: string};
@@ -37,7 +37,7 @@ class Generator {
 
   constructor(
     lastExecutedEvents: CompiledEvents,
-    workspace: Blockly.WorkspaceSvg,
+    workspace: Blockly.Workspace,
     javascriptGenerator: JavascriptGenerator,
     blockMode: (typeof BlockMode)[keyof typeof BlockMode],
     codeHooks: CodeHooks,

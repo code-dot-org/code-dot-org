@@ -30,9 +30,9 @@
       "require": "./dist/cjs/parser/index.cjs"
     },
     "./player": {
-      "types": "./dist/types/player/index.d.ts",
-      "import": "./dist/esm/player/index.mjs",
-      "require": "./dist/cjs/player/index.cjs"
+      "types": "./dist/player/index.d.ts",
+      "import": "./dist/player/index.mjs",
+      "require": "./dist/player/index.cjs"
     },
     "./redux": {
       "types": "./dist/types/redux/index.d.ts",

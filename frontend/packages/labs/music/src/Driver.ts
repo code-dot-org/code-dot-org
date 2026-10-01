@@ -14,12 +14,17 @@ import {TRIGGER_FIELD} from './blockly/constants';
 import type {ToolboxData} from './blockly/toolbox';
 import {DEFAULT_BPM, DEFAULT_KEY, BlockMode, Triggers} from './constants';
 import type {CompiledEvents} from './Generator';
-import Generator, {Sequencers, triggerIdToEvent} from './Generator';
-import type {FunctionEvents} from './player/interfaces/FunctionEvents';
+import Generator, {triggerIdToEvent} from './Generator';
+import type {PlaybackExecutionData} from './execution';
+import {
+  callUserGeneratedCode,
+  emptyPlaybackData,
+  executeWhenRun,
+  mergePlaybackData,
+} from './execution';
 import type {PlaybackEvent} from './player/interfaces/PlaybackEvent';
 import MusicPlayer from './player/MusicPlayer';
 import MusicLibrary from './player/MusicLibrary';
-import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
 import {KeyFromName, KeyMapping} from './utils/Notes';
 import type {MusicLevelProperties} from './types';
 import AnalyticsReporter from './LabMusicMetricsReporter';
@@ -78,11 +83,7 @@ const isToolboxMode = false;
 
 export type TriggerEvents = {id: string; startPosition: number}[];
 
-export type PlaybackExecutionData = {
-  playbackEvents: PlaybackEvent[];
-  orderedFunctions: FunctionEvents[];
-  lastMeasure: number;
-};
+export type {PlaybackExecutionData};
 
 /**
  * This is the interface to the music lab player and blockly workspace.
@@ -469,11 +470,7 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   executeCompiledSong(
     triggerEvents: TriggerEvents = [],
   ): PlaybackExecutionData {
-    const data = {
-      playbackEvents: [],
-      orderedFunctions: [],
-      lastMeasure: 0,
-    };
+    const data = emptyPlaybackData();
 
     if (!this.generator) {
       return data;
@@ -489,15 +486,13 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     const startTime = Date.now();
     console.log('Executing compiled song.');
 
-    if (this.generator.hooks.whenRunButton) {
-      this.mergePlaybackData(
-        data,
-        this.callUserGeneratedCode(this.generator.hooks.whenRunButton, [0]),
-      );
-    }
+    mergePlaybackData(
+      data,
+      executeWhenRun(this.generator, this.blockMode, this.onExecutionError),
+    );
 
     for (const {id, startPosition} of triggerEvents) {
-      this.mergePlaybackData(data, this.executeTrigger(id, startPosition));
+      mergePlaybackData(data, this.executeTrigger(id, startPosition));
     }
 
     console.log('Execution time: ', Date.now() - startTime);
@@ -667,38 +662,16 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     fn: (...args: unknown[]) => void,
     args: unknown[] = [],
   ): PlaybackExecutionData {
-    const sequencer = Sequencers[this.blockMode];
-    sequencer.clear();
-    try {
-      fn.call(this, ...args);
-    } catch (e) {
-      this.metricsReporter.logError(
-        'Error running user generated code',
-        e as Error,
-      );
-    }
-
-    return {
-      playbackEvents: sequencer.getPlaybackEvents(),
-      orderedFunctions:
-        sequencer instanceof Simple2Sequencer
-          ? sequencer.getOrderedFunctions()
-          : [],
-      lastMeasure: sequencer.getLastMeasure(),
-    };
-  }
-
-  private mergePlaybackData(
-    currentData: PlaybackExecutionData,
-    newData: PlaybackExecutionData,
-  ) {
-    currentData.playbackEvents.push(...newData.playbackEvents);
-    currentData.orderedFunctions.push(...newData.orderedFunctions);
-    currentData.lastMeasure = Math.max(
-      currentData.lastMeasure,
-      newData.lastMeasure,
+    return callUserGeneratedCode(
+      fn,
+      args,
+      this.blockMode,
+      this.onExecutionError,
     );
   }
+
+  private readonly onExecutionError = (e: Error) =>
+    this.metricsReporter.logError('Error running user generated code', e);
 
   /**
    * For each function body in the current workspace, add a function call
