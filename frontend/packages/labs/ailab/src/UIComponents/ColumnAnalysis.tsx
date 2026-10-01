@@ -1,5 +1,5 @@
 /* Panel describing the column selected in the data table. */
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton} from '@mui/material';
 import classNames from 'classnames';
 
 import Alert from '@code-dot-org/component-library/alert';
@@ -91,7 +91,7 @@ const ColumnAnalysis = () => {
         <h2 id="column-analysis-heading" className={styles.headerTitle}>
           Column Analysis
         </h2>
-        <MuiIconButton
+        <IconButton
           variant="text"
           color="tertiary"
           size="extraSmall"
@@ -100,7 +100,7 @@ const ColumnAnalysis = () => {
           onClick={() => dispatch(setCurrentColumn(columnDetails.id))}
         >
           <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
-        </MuiIconButton>
+        </IconButton>
       </div>
       <div className={styles.body}>
         <div className={styles.summary}>
