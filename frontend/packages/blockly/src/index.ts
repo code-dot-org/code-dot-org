@@ -10,6 +10,8 @@ export {defineExtension} from './extensions/defineExtension';
 export {defineBlock} from './blocks/defineBlock';
 export {createInjectPlugin} from './plugins';
 export {TopLeftMetricsManager} from './metricsManager';
+// Registers a lab's blocks without a workspace component, e.g. for a headless compile.
+export {default as Driver} from './Driver';
 // The dragger inject option that pairs with the scrollOptions plugin
 // (`@code-dot-org/blockly/plugins/scrollOptions`). Re-exported so consumers wire
 // it without depending on the plugin package directly.
