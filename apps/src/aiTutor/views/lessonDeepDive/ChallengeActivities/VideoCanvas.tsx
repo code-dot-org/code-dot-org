@@ -35,6 +35,7 @@ const TEXT_ANCHORS = [
   'middle-left',
   'middle-right',
 ];
+const ROTATION_SNAPS = [0, 90, 180, 270];
 
 const RING_RADIUS = 26;
 const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
@@ -393,6 +394,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
           y: stageSize.height * 0.4,
           width: stageSize.width * 0.8,
           fontSize: Math.round(stageSize.width * 0.12),
+          rotation: 0,
         },
       ]);
       setSelectedId(id);
@@ -513,7 +515,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
               <Transformer
                 ref={transformerRef}
                 enabledAnchors={TEXT_ANCHORS}
-                rotateEnabled={false}
+                rotationSnaps={ROTATION_SNAPS}
                 flipEnabled={false}
               />
             </Layer>

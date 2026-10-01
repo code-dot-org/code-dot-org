@@ -18,6 +18,7 @@ export interface CanvasTextItem {
   y: number;
   width: number;
   fontSize: number;
+  rotation: number;
 }
 
 export type NewCanvasText = Pick<CanvasTextItem, 'text' | 'color' | 'style'>;
