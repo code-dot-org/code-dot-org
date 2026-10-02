@@ -23,7 +23,7 @@ export default function useQuizBuilderView({
     revealAnswerExplanation: toBool(props.revealAnswerExplanation),
     showIntroScreen: toBool(props.showIntroScreen),
     allowMultipleAttempts: toBool(props.allowMultipleAttempts),
-    hideQuestionsAfterSubmit: toBool(props.hideQuestionsAfterSubmit),
+    showQuestionsAfterSubmit: toBool(props.showQuestionsAfterSubmit),
   });
 
   return {

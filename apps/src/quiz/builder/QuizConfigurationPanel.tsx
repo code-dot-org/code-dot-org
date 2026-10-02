@@ -18,7 +18,7 @@ export interface QuizConfigurationData {
   showIntroScreen: boolean;
   purpose?: string;
   allowMultipleAttempts: boolean;
-  hideQuestionsAfterSubmit: boolean;
+  showQuestionsAfterSubmit: boolean;
 }
 
 const PURPOSE_OPTIONS = [
@@ -50,7 +50,7 @@ interface QuizConfigurableFields {
   allowMultipleAttempts: boolean;
   showCorrectness: boolean;
   revealAnswerExplanation: boolean;
-  hideQuestionsAfterSubmit: boolean;
+  showQuestionsAfterSubmit: boolean;
 }
 
 // Applied once, only when a purpose is chosen for the first time.
@@ -61,7 +61,7 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     allowMultipleAttempts: true,
     showCorrectness: true,
     revealAnswerExplanation: true,
-    hideQuestionsAfterSubmit: false,
+    showQuestionsAfterSubmit: true,
   },
   practice: {
     showIntroScreen: false,
@@ -69,7 +69,7 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     allowMultipleAttempts: true,
     showCorrectness: true,
     revealAnswerExplanation: true,
-    hideQuestionsAfterSubmit: false,
+    showQuestionsAfterSubmit: true,
   },
   exam: {
     showIntroScreen: true,
@@ -77,7 +77,7 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     allowMultipleAttempts: false,
     showCorrectness: false,
     revealAnswerExplanation: false,
-    hideQuestionsAfterSubmit: true,
+    showQuestionsAfterSubmit: false,
   },
   exam_simulation: {
     showIntroScreen: true,
@@ -85,7 +85,7 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     allowMultipleAttempts: true,
     showCorrectness: true,
     revealAnswerExplanation: false,
-    hideQuestionsAfterSubmit: true,
+    showQuestionsAfterSubmit: false,
   },
 };
 
@@ -130,8 +130,8 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
     initialValues.allowMultipleAttempts
   );
-  const [hideQuestionsAfterSubmit, setHideQuestionsAfterSubmit] = useState(
-    initialValues.hideQuestionsAfterSubmit
+  const [showQuestionsAfterSubmit, setShowQuestionsAfterSubmit] = useState(
+    initialValues.showQuestionsAfterSubmit
   );
   const [savingField, setSavingField] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -221,7 +221,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
     setAllowMultipleAttempts(defaults.allowMultipleAttempts);
     setShowCorrectness(defaults.showCorrectness);
     setRevealAnswerExplanation(defaults.revealAnswerExplanation);
-    setHideQuestionsAfterSubmit(defaults.hideQuestionsAfterSubmit);
+    setShowQuestionsAfterSubmit(defaults.showQuestionsAfterSubmit);
     void handleSave(
       {
         purpose: purposeValue,
@@ -313,25 +313,25 @@ const QuizConfigurationPanel: React.FunctionComponent<
     });
   };
 
-  const handleHideQuestionsAfterSubmitChange = (
+  const handleShowQuestionsAfterSubmitChange = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const checked = e.target.checked;
     const previousReveal = revealAnswerExplanation;
-    setHideQuestionsAfterSubmit(checked);
-    if (checked) {
+    setShowQuestionsAfterSubmit(checked);
+    if (!checked) {
       setRevealAnswerExplanation(false);
     }
     void handleSave(
       {
-        hideQuestionsAfterSubmit: checked,
-        ...(checked && {revealAnswerExplanation: false}),
+        showQuestionsAfterSubmit: checked,
+        ...(!checked && {revealAnswerExplanation: false}),
       },
-      'hideQuestionsAfterSubmit'
+      'showQuestionsAfterSubmit'
     ).then(ok => {
       if (!ok) {
-        setHideQuestionsAfterSubmit(!checked);
-        if (checked) {
+        setShowQuestionsAfterSubmit(!checked);
+        if (!checked) {
           setRevealAnswerExplanation(previousReveal);
         }
       }
@@ -491,18 +491,18 @@ const QuizConfigurationPanel: React.FunctionComponent<
               </div>
               <div className={styles.toggleRow}>
                 <span className={styles.toggleLabel}>
-                  Hide questions after submit
+                  Show questions after submit
                 </span>
                 <Toggle
-                  name="hideQuestionsAfterSubmit"
-                  aria-label="Hide questions after submit"
+                  name="showQuestionsAfterSubmit"
+                  aria-label="Show questions after submit"
                   size="s"
-                  disabled={savingField === 'hideQuestionsAfterSubmit'}
-                  checked={hideQuestionsAfterSubmit}
-                  onChange={handleHideQuestionsAfterSubmitChange}
+                  disabled={savingField === 'showQuestionsAfterSubmit'}
+                  checked={showQuestionsAfterSubmit}
+                  onChange={handleShowQuestionsAfterSubmitChange}
                 />
               </div>
-              {showCorrectness && !hideQuestionsAfterSubmit && (
+              {showCorrectness && showQuestionsAfterSubmit && (
                 <div className={styles.conditionalWrap}>
                   <div className={styles.toggleRow}>
                     <span className={styles.toggleLabel}>

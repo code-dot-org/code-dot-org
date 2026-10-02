@@ -25,7 +25,7 @@ const INITIAL_VALUES: QuizConfigurationData = {
   showIntroScreen: true,
   purpose: 'practice',
   allowMultipleAttempts: true,
-  hideQuestionsAfterSubmit: true,
+  showQuestionsAfterSubmit: false,
 };
 
 const TIME_LIMIT_LABEL = /Set time limit/;
@@ -287,7 +287,11 @@ describe('QuizConfigurationPanel', () => {
   it('turning off show correctness also clears reveal answer/explanation in the same request', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
-      initialValues: {...INITIAL_VALUES, revealAnswerExplanation: true},
+      initialValues: {
+        ...INITIAL_VALUES,
+        revealAnswerExplanation: true,
+        showQuestionsAfterSubmit: true,
+      },
     });
 
     fireEvent.click(screen.getByLabelText('Show correctness'));
@@ -313,7 +317,11 @@ describe('QuizConfigurationPanel', () => {
       )
     );
     renderPanel({
-      initialValues: {...INITIAL_VALUES, revealAnswerExplanation: true},
+      initialValues: {
+        ...INITIAL_VALUES,
+        revealAnswerExplanation: true,
+        showQuestionsAfterSubmit: true,
+      },
     });
 
     fireEvent.click(screen.getByLabelText('Show correctness'));
@@ -333,7 +341,9 @@ describe('QuizConfigurationPanel', () => {
 
   it('saves reveal answer/explanation independently once shown', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
-    renderPanel();
+    renderPanel({
+      initialValues: {...INITIAL_VALUES, showQuestionsAfterSubmit: true},
+    });
 
     fireEvent.click(screen.getByLabelText('Reveal answer and explanation'));
 
@@ -341,31 +351,31 @@ describe('QuizConfigurationPanel', () => {
     expect(lastRequestBody().revealAnswerExplanation).toBe(true);
   });
 
-  it('saves hideQuestionsAfterSubmit, clearing reveal answer/explanation alongside it, even with showCorrectness off', async () => {
+  it('saves showQuestionsAfterSubmit, clearing reveal answer/explanation alongside it, even with showCorrectness off', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
       initialValues: {
         ...INITIAL_VALUES,
         showCorrectness: false,
-        hideQuestionsAfterSubmit: false,
+        showQuestionsAfterSubmit: true,
       },
     });
 
-    fireEvent.click(screen.getByLabelText('Hide questions after submit'));
+    fireEvent.click(screen.getByLabelText('Show questions after submit'));
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody()).toEqual({
-      hideQuestionsAfterSubmit: true,
+      showQuestionsAfterSubmit: false,
       revealAnswerExplanation: false,
     });
   });
 
-  it('hides reveal answer/explanation when hideQuestionsAfterSubmit is on, even with showCorrectness on', () => {
+  it('hides reveal answer/explanation when showQuestionsAfterSubmit is off, even with showCorrectness on', () => {
     renderPanel({
       initialValues: {
         ...INITIAL_VALUES,
         showCorrectness: true,
-        hideQuestionsAfterSubmit: true,
+        showQuestionsAfterSubmit: false,
       },
     });
 
@@ -374,22 +384,22 @@ describe('QuizConfigurationPanel', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('turning on hideQuestionsAfterSubmit also clears reveal answer/explanation in the same request', async () => {
+  it('turning off showQuestionsAfterSubmit also clears reveal answer/explanation in the same request', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
       initialValues: {
         ...INITIAL_VALUES,
         showCorrectness: true,
         revealAnswerExplanation: true,
-        hideQuestionsAfterSubmit: false,
+        showQuestionsAfterSubmit: true,
       },
     });
 
-    fireEvent.click(screen.getByLabelText('Hide questions after submit'));
+    fireEvent.click(screen.getByLabelText('Show questions after submit'));
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody()).toMatchObject({
-      hideQuestionsAfterSubmit: true,
+      showQuestionsAfterSubmit: false,
       revealAnswerExplanation: false,
     });
     expect(
@@ -397,7 +407,7 @@ describe('QuizConfigurationPanel', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('reverts both hideQuestionsAfterSubmit and reveal answer/explanation together on failure', async () => {
+  it('reverts both showQuestionsAfterSubmit and reveal answer/explanation together on failure', async () => {
     put.mockRejectedValue(
       new NetworkError(
         '400 Bad Request',
@@ -412,17 +422,17 @@ describe('QuizConfigurationPanel', () => {
         ...INITIAL_VALUES,
         showCorrectness: true,
         revealAnswerExplanation: true,
-        hideQuestionsAfterSubmit: false,
+        showQuestionsAfterSubmit: true,
       },
     });
 
-    fireEvent.click(screen.getByLabelText('Hide questions after submit'));
+    fireEvent.click(screen.getByLabelText('Show questions after submit'));
 
     expect(await screen.findByText('nope')).toBeInTheDocument();
     expect(
-      (screen.getByLabelText('Hide questions after submit') as HTMLInputElement)
+      (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
         .checked
-    ).toBe(false);
+    ).toBe(true);
     expect(
       (
         screen.getByLabelText(
@@ -453,9 +463,9 @@ describe('QuizConfigurationPanel', () => {
       screen.queryByLabelText('Reveal answer and explanation')
     ).not.toBeInTheDocument();
     expect(
-      (screen.getByLabelText('Hide questions after submit') as HTMLInputElement)
+      (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
         .checked
-    ).toBe(true);
+    ).toBe(false);
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody()).toMatchObject({
@@ -465,11 +475,11 @@ describe('QuizConfigurationPanel', () => {
       allowMultipleAttempts: false,
       showCorrectness: false,
       revealAnswerExplanation: false,
-      hideQuestionsAfterSubmit: true,
+      showQuestionsAfterSubmit: false,
     });
   });
 
-  it("exam_simulation's defaults don't reveal an explanation that hideQuestionsAfterSubmit would never show", async () => {
+  it("exam_simulation's defaults don't reveal an explanation that showQuestionsAfterSubmit being off would never show", async () => {
     put.mockResolvedValue(
       jsonResponse({...INITIAL_VALUES, purpose: 'exam_simulation'})
     );
@@ -481,9 +491,9 @@ describe('QuizConfigurationPanel', () => {
       (screen.getByLabelText('Show correctness') as HTMLInputElement).checked
     ).toBe(true);
     expect(
-      (screen.getByLabelText('Hide questions after submit') as HTMLInputElement)
+      (screen.getByLabelText('Show questions after submit') as HTMLInputElement)
         .checked
-    ).toBe(true);
+    ).toBe(false);
     expect(
       screen.queryByLabelText('Reveal answer and explanation')
     ).not.toBeInTheDocument();
@@ -493,7 +503,7 @@ describe('QuizConfigurationPanel', () => {
       purpose: 'exam_simulation',
       showCorrectness: true,
       revealAnswerExplanation: false,
-      hideQuestionsAfterSubmit: true,
+      showQuestionsAfterSubmit: false,
     });
   });
 

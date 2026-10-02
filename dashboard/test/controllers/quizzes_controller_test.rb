@@ -134,7 +134,7 @@ class QuizzesControllerTest < ActionController::TestCase
       showIntroScreen: true,
       purpose: 'check_for_understanding',
       allowMultipleAttempts: false,
-      hideQuestionsAfterSubmit: true
+      showQuestionsAfterSubmit: true
     }, as: :json
 
     assert_response :success
@@ -147,7 +147,7 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal true, body['showIntroScreen']
     assert_equal 'check_for_understanding', body['purpose']
     assert_equal false, body['allowMultipleAttempts']
-    assert_equal true, body['hideQuestionsAfterSubmit']
+    assert_equal true, body['showQuestionsAfterSubmit']
 
     @quiz.reload
     assert_equal 'Unit 3 Check for Understanding', @quiz.display_name

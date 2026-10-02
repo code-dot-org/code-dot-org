@@ -22,7 +22,7 @@ export default function useQuizAttemptView({
     showIntroScreen,
     showCorrectness,
     revealAnswerExplanation,
-    hideQuestionsAfterSubmit,
+    showQuestionsAfterSubmit,
   } = levelProperties as QuizLevelProperties;
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
@@ -43,7 +43,7 @@ export default function useQuizAttemptView({
         showIntroScreen={showIntroScreen}
         showCorrectness={showCorrectness}
         revealAnswerExplanation={revealAnswerExplanation}
-        hideQuestionsAfterSubmit={hideQuestionsAfterSubmit}
+        showQuestionsAfterSubmit={showQuestionsAfterSubmit}
       />
     ),
   };

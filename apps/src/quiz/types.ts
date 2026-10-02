@@ -29,6 +29,6 @@ export interface QuizLevelProperties extends LevelProperties {
   showIntroScreen?: boolean;
   purpose?: string;
   allowMultipleAttempts?: boolean;
-  hideQuestionsAfterSubmit?: boolean;
+  showQuestionsAfterSubmit?: boolean;
   quizQuestions?: QuizQuestionSummary[];
 }

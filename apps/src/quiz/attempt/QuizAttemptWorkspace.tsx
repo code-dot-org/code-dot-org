@@ -56,7 +56,7 @@ export interface QuizAttemptWorkspaceProps {
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
   revealAnswerExplanation?: boolean;
-  hideQuestionsAfterSubmit?: boolean;
+  showQuestionsAfterSubmit?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -74,7 +74,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   showIntroScreen,
   showCorrectness,
   revealAnswerExplanation,
-  hideQuestionsAfterSubmit,
+  showQuestionsAfterSubmit,
 }) => {
   const dispatch = useAppDispatch();
   const {
@@ -340,7 +340,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               onTryAgain={handleRetake}
               onNextLevel={handleNextLevel}
             />
-            {!toBool(hideQuestionsAfterSubmit) &&
+            {toBool(showQuestionsAfterSubmit) &&
               resultPages.map(
                 (
                   {page, questions, firstQuestionNumber, lastQuestionNumber},

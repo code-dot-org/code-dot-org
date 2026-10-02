@@ -102,7 +102,10 @@ function renderWorkspace({
   // ResultsCard - only tests for the no-correctness path opt out.
   showCorrectness = true,
   customIntroText,
-  hideQuestionsAfterSubmit,
+  // Defaults true so existing submitted-state tests keep exercising the
+  // per-question results list - only tests for the hidden-questions path
+  // opt out.
+  showQuestionsAfterSubmit = true,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -112,7 +115,7 @@ function renderWorkspace({
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
   customIntroText?: string;
-  hideQuestionsAfterSubmit?: boolean;
+  showQuestionsAfterSubmit?: boolean;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -127,7 +130,7 @@ function renderWorkspace({
       showIntroScreen={showIntroScreen}
       showCorrectness={showCorrectness}
       customIntroText={customIntroText}
-      hideQuestionsAfterSubmit={hideQuestionsAfterSubmit}
+      showQuestionsAfterSubmit={showQuestionsAfterSubmit}
     />
   );
 }
@@ -542,7 +545,7 @@ describe('QuizAttemptWorkspace', () => {
     ).toBeInTheDocument();
   });
 
-  it('hides per-question results when hideQuestionsAfterSubmit is on, but still shows the score', () => {
+  it('hides per-question results when showQuestionsAfterSubmit is off, but still shows the score', () => {
     renderWorkspace({
       quizQuestions: [
         question({id: 1, stem: 'What is the value of x?'}),
@@ -572,7 +575,7 @@ describe('QuizAttemptWorkspace', () => {
           ],
         },
       },
-      hideQuestionsAfterSubmit: true,
+      showQuestionsAfterSubmit: false,
     });
 
     expect(screen.getByText('67%')).toBeInTheDocument();
