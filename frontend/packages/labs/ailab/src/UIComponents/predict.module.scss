@@ -1,5 +1,6 @@
-.button:disabled {
-  opacity: 0.5;
+.buttons {
+  display: flex;
+  gap: 8px;
 }
 
 .botResult {

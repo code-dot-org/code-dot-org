@@ -16,6 +16,8 @@ const jestAliases = {
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
   '^firmata$': 'mock-firmata/mock-firmata',
+  // Stub out core's api module, since it carries in ESM-only packages which don't play well with apps' CommonJS build.
+  '^@code-dot-org/core/api$': '<rootDir>/test/util/stubCoreApi.ts',
   'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
 };
 

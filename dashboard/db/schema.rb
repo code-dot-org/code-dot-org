@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
+ActiveRecord::Schema[7.0].define(version: 2026_10_02_151559) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -427,6 +427,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "evaluation_status"
+    t.boolean "approved", default: false, null: false
     t.index ["challenge_id", "user_id", "created_at"], name: "index_challenge_responses_on_challenge_user_created"
     t.index ["user_id"], name: "index_challenge_responses_on_user_id"
   end
