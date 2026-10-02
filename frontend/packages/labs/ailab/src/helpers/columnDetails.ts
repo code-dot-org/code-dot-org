@@ -85,8 +85,8 @@ export function getExtrema(data: DataRow[], column: string): Extrema {
 }
 
 function countDecimalPlaces(cell: string | number): number {
-  const [mantissa, exponent = '0'] = String(cell).toLowerCase().split('e');
-  const fractionDigits = mantissa.split('.')[1]?.length ?? 0;
+  const [coefficient, exponent = '0'] = String(cell).toLowerCase().split('e');
+  const fractionDigits = coefficient.split('.')[1]?.length ?? 0;
   return Math.max(0, fractionDigits - Number(exponent));
 }
 
