@@ -344,7 +344,11 @@ describe('QuizConfigurationPanel', () => {
   it('saves hideQuestionsAfterSubmit independently, with no dependency on showCorrectness', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
-      initialValues: {...INITIAL_VALUES, showCorrectness: false},
+      initialValues: {
+        ...INITIAL_VALUES,
+        showCorrectness: false,
+        hideQuestionsAfterSubmit: false,
+      },
     });
 
     fireEvent.click(screen.getByLabelText('Hide questions after submit'));
