@@ -15,9 +15,23 @@
   top: 16px;
 }
 
+// Floats beside the statement, so each row has to contain them.
+.result {
+  display: flow-root;
+}
+
+.testPanelSlot {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  min-height: 0;
+}
+
 .previousResults {
-  clear: both;
-  padding-top: 40px;
+  flex: none;
+  max-height: 30%;
+  overflow-y: auto;
+  padding-top: 20px;
 }
 
 .statement {

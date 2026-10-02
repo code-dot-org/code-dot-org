@@ -22,14 +22,19 @@ function zoomDuration(): number {
     : ZOOM_DURATION_MS;
 }
 
-function fitTransform(viewport: HTMLElement, toolbar: HTMLElement, rect: Rect) {
+function fitTransform(
+  viewport: HTMLElement,
+  toolbar: HTMLElement,
+  insetRight: number,
+  rect: Rect,
+) {
   const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FIT_PADDING;
   const fitted = fitToView(
     rect,
     {
       x: frameLeft,
       y: FIT_PADDING,
-      width: viewport.clientWidth - frameLeft - FIT_PADDING,
+      width: viewport.clientWidth - insetRight - frameLeft - FIT_PADDING,
       height: viewport.clientHeight - 2 * FIT_PADDING,
     },
     FIT_MAX_SCALE,
@@ -43,6 +48,8 @@ interface TreeCanvasProps {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
+  /** Width along the right edge that fits keep clear, for a panel floating there. */
+  insetRight?: number;
   children: ReactNode;
 }
 
@@ -50,6 +57,7 @@ const TreeCanvas = ({
   contentWidth,
   contentHeight,
   pathBounds,
+  insetRight = 0,
   children,
 }: TreeCanvasProps) => {
   const viewportRef = useRef<HTMLDivElement>(null);
@@ -81,7 +89,12 @@ const TreeCanvas = ({
   useLayoutEffect(() => {
     const viewport = viewportRef.current!;
     const observer = new ResizeObserver(() => {
-      const fitted = fitTransform(viewport, toolbarRef.current!, contentRect);
+      const fitted = fitTransform(
+        viewport,
+        toolbarRef.current!,
+        insetRight,
+        contentRect,
+      );
       if (fitted) {
         zoomRef
           .current!.scaleExtent([Math.min(MIN_SCALE, fitted.k), MAX_SCALE])
@@ -90,7 +103,7 @@ const TreeCanvas = ({
     });
     observer.observe(viewport);
     return () => observer.disconnect();
-  }, [contentRect]);
+  }, [contentRect, insetRight]);
 
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
@@ -116,6 +129,7 @@ const TreeCanvas = ({
     const fitted = fitTransform(
       viewportRef.current!,
       toolbarRef.current!,
+      insetRight,
       rect,
     );
     if (fitted) {

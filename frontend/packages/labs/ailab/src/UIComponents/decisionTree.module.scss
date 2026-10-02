@@ -2,8 +2,29 @@ $path-ring-width: 3px;
 $path-color: var(--border-selected-primary, #2b1e9f);
 
 .decisionTree {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
   clear: both;
   padding-top: 20px;
+}
+
+.canvasArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
 }
 
 .header {

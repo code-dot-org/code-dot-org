@@ -1,19 +1,21 @@
 @use '../sharedMixins' as mixins;
 
+// The padding keeps the cards' shadows inside the scrolling box.
 .panel {
-  @include mixins.side-panel;
-}
-
-.content {
-  @include mixins.panel-content;
-
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px 8px 12px;
+  box-sizing: border-box;
+  font-family: var(--font-family-main);
 }
 
 .card {
   @include mixins.card;
+
+  box-shadow: var(--shadow-sm);
 }
 
 .cardHeader {
