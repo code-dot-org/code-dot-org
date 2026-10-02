@@ -90,8 +90,10 @@ export default class BaseDialog extends React.Component {
 
     let bodyStyle, modalBodyStyle, xCloseStyle;
 
+    const {width, top, ...contentStyle} = this.props.style || {};
     let dialogStyle = {
-      ...this.props.style,
+      ...(width !== undefined && {width}),
+      ...(top !== undefined && {top}),
     };
 
     if (this.props.fullWidth) {
@@ -182,7 +184,7 @@ export default class BaseDialog extends React.Component {
         onKeyDown={this.handleKeyDown}
       >
         <div className={modalDialogClassNames} style={dialogStyle || {}}>
-          <div className={modalContentClassNames}>
+          <div className={modalContentClassNames} style={contentStyle}>
             <div
               style={modalBodyStyle}
               id={this.props.bodyId}

@@ -4,11 +4,16 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import queryString from 'query-string';
+
+import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import type {ModelDataToSave, Mode, SaveResponse} from './types';
 
 import {initAll, instructionsDismissed} from './index';
+
+injectFontAwesome();
 
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes: Record<string, Mode> = {
