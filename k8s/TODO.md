@@ -105,7 +105,3 @@ needs its own CPU / RAM profiling before we lock in requests / limits.
 
 In `k8s-gitops/bootstrap/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
 to a non-personal email.
-
-## Helm / Kustomize parity
-
-- Allow `verify-helm-parity` to still check parity when `k8s-gitops` / kustomize + helm charts are modified locally, so we can verify them before we commit.

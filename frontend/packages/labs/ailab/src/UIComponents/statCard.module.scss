@@ -1,0 +1,28 @@
+.statCard {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px 10px 8px;
+  border-radius: var(--shape-sm);
+  background-color: var(--background-neutral-secondary);
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+  color: var(--text-neutral-quaternary);
+}
+
+.statValue {
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-neutral-primary);
+}
