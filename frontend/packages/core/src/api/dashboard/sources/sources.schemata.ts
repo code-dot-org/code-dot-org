@@ -38,6 +38,11 @@ export const ProjectFileSchema = z.object({
   active: z.boolean().optional(),
   folderId: FolderIdSchema,
   type: z.enum(Object.values(ProjectFileTypes)).optional(),
+  // Uploaded binary files (images, audio) are stored in the assets backend and
+  // referenced by URL; `contents` is empty for them. `mimeType` records the
+  // uploaded content type. Text files leave both unset.
+  url: z.string().optional(),
+  mimeType: z.string().optional(),
 });
 
 export const MultiFileSourceSchema = z.object({
