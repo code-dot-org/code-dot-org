@@ -13,8 +13,6 @@ const panelList = [
   { id: "selectDataset", label: "Import" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
-  { id: "trainModel", label: "Train" },
-  { id: "generateResults", label: "Test" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
   { id: "saveModel", label: "Save" },
@@ -39,12 +37,6 @@ export function isPanelEnabled(state: RootState, panelId: string): boolean {
 
   if (panelId === 'selectFeatures') {
     if (!minOneFeatureSelected(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === 'trainModel') {
-    if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
   }

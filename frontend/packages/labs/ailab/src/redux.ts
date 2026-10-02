@@ -5,7 +5,7 @@ import {
   type AnyAction,
 } from '@reduxjs/toolkit';
 
-import {ColumnTypes, TestDataLocations, ResultsGrades} from './constants';
+import {TestDataLocations, ResultsGrades} from './constants';
 import {
   getSummaryStat,
   getResultsDataInDataTableForm,
@@ -131,6 +131,19 @@ export const initialState: RootState = {
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
 };
+
+function getPanelInstructionsKey(panel: Panel): InstructionsKey | null {
+  switch (panel) {
+    case 'dataDisplayLabel':
+    case 'dataDisplayFeatures':
+      return 'datasetView';
+    case 'continue':
+    case 'finish':
+      return null;
+    default:
+      return panel;
+  }
+}
 
 const ailabSlice = createSlice({
   name: 'ailab',
@@ -330,7 +343,7 @@ const ailabSlice = createSlice({
       state.currentPanel = currentPanel;
       state.trainingModalStep = undefined;
       state.instructionsOverlayActive = showedOverlay;
-      state.instructionsKey = currentPanel as InstructionsKey;
+      state.instructionsKey = getPanelInstructionsKey(currentPanel);
       state.showOverlay = showedOverlay;
       if (currentPanel === 'dataDisplayLabel') {
         state.currentColumn = undefined;
@@ -349,34 +362,8 @@ const ailabSlice = createSlice({
       if (!getShowColumnClicking(state)) {
         return;
       }
-      if (state.currentColumn === currentColumn) {
-        // If column is selected, then deselect.
-        if (state.currentPanel === 'dataDisplayFeatures') {
-          state.instructionsKey = 'dataDisplayFeatures';
-          state.showOverlay = false;
-        }
-        state.currentColumn = undefined;
-      } else {
-        // If we are selecting features, don't update instructions text when clicking the label column.
-        if (
-          state.currentPanel === 'dataDisplayFeatures' &&
-          currentColumn !== state.labelColumn
-        ) {
-          if (
-            state.columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL
-          ) {
-            state.instructionsKey = 'selectedFeatureNumerical';
-            state.showOverlay = false;
-          } else if (
-            state.columnsByDataType[currentColumn] === ColumnTypes.CATEGORICAL
-          ) {
-            state.instructionsKey = 'selectedFeatureCategorical';
-            state.showOverlay = false;
-          }
-        }
-        // Select the column.
-        state.currentColumn = currentColumn;
-      }
+      state.currentColumn =
+        state.currentColumn === currentColumn ? undefined : currentColumn;
     },
     setHighlightColumn(state, action: PayloadAction<string>) {
       const highlightColumn = action.payload;

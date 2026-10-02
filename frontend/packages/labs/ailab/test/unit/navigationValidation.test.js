@@ -1,6 +1,7 @@
 import {
   isPanelEnabled,
   prevNextButtons,
+  uniqLabelFeaturesSelected,
 } from '../../src/helpers/navigationValidation';
 import I18n from '../../src/i18n';
 
@@ -103,16 +104,6 @@ describe('isPanelEnabled', () => {
     expect(result).toBe(true);
   });
 
-  test('trainModel - disabled', async () => {
-    const result = isPanelEnabled(sameFeatureLabelState, 'trainModel');
-    expect(result).toBe(false);
-  });
-
-  test('trainModel - enabled', async () => {
-    const result = isPanelEnabled(selectedFeaturesState, 'trainModel');
-    expect(result).toBe(true);
-  });
-
   test('results - disabled', async () => {
     const result = isPanelEnabled(selectedFeaturesState, 'results');
     expect(result).toBe(false);
@@ -136,6 +127,16 @@ describe('isPanelEnabled', () => {
   test('modelSummary - enabled', async () => {
     const result = isPanelEnabled(savedModelState, 'modelSummary');
     expect(result).toBe(true);
+  });
+});
+
+describe('uniqLabelFeaturesSelected', () => {
+  test('false when a feature is also the label', () => {
+    expect(uniqLabelFeaturesSelected(sameFeatureLabelState)).toBe(false);
+  });
+
+  test('true when the label and features differ', () => {
+    expect(uniqLabelFeaturesSelected(selectedFeaturesState)).toBe(true);
   });
 });
 

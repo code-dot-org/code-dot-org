@@ -22,29 +22,29 @@ import reducer, {
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {
     test('disabled: setCurrentPanel never activates the overlay', () => {
-      const next = reducer(initialState, setCurrentPanel('trainModel'));
+      const next = reducer(initialState, setCurrentPanel('results'));
       expect(next.instructionsOverlayActive).toBe(false);
       expect(next.viewedPanels).toEqual([]);
     });
 
     test('enabled: first visit activates the overlay and records the panel', () => {
       const enabled = reducer(initialState, setInstructionsEnabled(true));
-      const next = reducer(enabled, setCurrentPanel('trainModel'));
+      const next = reducer(enabled, setCurrentPanel('results'));
       expect(next.instructionsOverlayActive).toBe(true);
-      expect(next.viewedPanels).toContain('trainModel');
+      expect(next.viewedPanels).toContain('results');
     });
 
     test('enabled: a second visit to the same panel does not re-activate it', () => {
       let state = reducer(initialState, setInstructionsEnabled(true));
-      state = reducer(state, setCurrentPanel('trainModel'));
-      const next = reducer(state, setCurrentPanel('trainModel'));
+      state = reducer(state, setCurrentPanel('results'));
+      const next = reducer(state, setCurrentPanel('results'));
       expect(next.instructionsOverlayActive).toBe(false);
     });
 
     test('enabled but mode hides the overlay: never activates', () => {
       let state = reducer(initialState, setInstructionsEnabled(true));
       state = reducer(state, setMode({hideInstructionsOverlay: true}));
-      const next = reducer(state, setCurrentPanel('trainModel'));
+      const next = reducer(state, setCurrentPanel('results'));
       expect(next.instructionsOverlayActive).toBe(false);
       expect(next.viewedPanels).toEqual([]);
     });
@@ -67,7 +67,7 @@ describe('ailab reducer', () => {
     test('does not change the instructions while open', () => {
       let state = reducer(initialState, setCurrentPanel('dataDisplayFeatures'));
       state = reducer(state, setTrainingModalStep('training'));
-      expect(state.instructionsKey).toBe('dataDisplayFeatures');
+      expect(state.instructionsKey).toBe('datasetView');
     });
   });
 
@@ -124,7 +124,7 @@ describe('ailab reducer', () => {
       expect(deselected.currentColumn).toBeUndefined();
     });
 
-    test('selects the label column during feature selection without feature instructions', () => {
+    test('selects the label column during feature selection', () => {
       let state = reducer(initialState, setLabelColumn('lbl'));
       state = reducer(
         state,
@@ -133,7 +133,7 @@ describe('ailab reducer', () => {
       state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
       const next = reducer(state, setCurrentColumn('lbl'));
       expect(next.currentColumn).toBe('lbl');
-      expect(next.instructionsKey).toBe('dataDisplayFeatures');
+      expect(next.instructionsKey).toBe('datasetView');
     });
 
     test('ignores clicks when the mode hides column clicking', () => {
@@ -157,7 +157,7 @@ describe('ailab reducer', () => {
       let state = reducer(initialState, setMode({datasets: ['d1']}));
       state = reducer(state, setReserveLocation('random'));
       state = reducer(state, addSelectedFeature('a'));
-      state = reducer(state, setCurrentPanel('trainModel'));
+      state = reducer(state, setCurrentPanel('results'));
       const next = reducer(state, resetState());
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
@@ -175,29 +175,37 @@ describe('ailab reducer', () => {
   describe('instructionsKey selection', () => {
     test('setCurrentPanel records the panel as the key; showOverlay tracks first visit', () => {
       const enabled = reducer(initialState, setInstructionsEnabled(true));
-      const first = reducer(enabled, setCurrentPanel('trainModel'));
-      expect(first.instructionsKey).toBe('trainModel');
+      const first = reducer(enabled, setCurrentPanel('results'));
+      expect(first.instructionsKey).toBe('results');
       expect(first.showOverlay).toBe(true);
-      const second = reducer(first, setCurrentPanel('trainModel'));
-      expect(second.instructionsKey).toBe('trainModel');
+      const second = reducer(first, setCurrentPanel('results'));
+      expect(second.instructionsKey).toBe('results');
       expect(second.showOverlay).toBe(false);
     });
 
     test('setCurrentPanel sets showOverlay false when instructions are disabled', () => {
-      const next = reducer(initialState, setCurrentPanel('trainModel'));
-      expect(next.instructionsKey).toBe('trainModel');
+      const next = reducer(initialState, setCurrentPanel('results'));
+      expect(next.instructionsKey).toBe('results');
       expect(next.showOverlay).toBe(false);
     });
 
-    test('selecting a numerical feature records selectedFeatureNumerical', () => {
+    test.each(['dataDisplayLabel', 'dataDisplayFeatures'])(
+      '%s records datasetView',
+      panel => {
+        const next = reducer(initialState, setCurrentPanel(panel));
+        expect(next.instructionsKey).toBe('datasetView');
+      },
+    );
+
+    test('selecting a feature column leaves the instructions alone', () => {
       let state = reducer(
         initialState,
         setColumnsByDataType('a', ColumnTypes.NUMERICAL),
       );
       state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
       const next = reducer(state, setCurrentColumn('a'));
-      expect(next.instructionsKey).toBe('selectedFeatureNumerical');
-      expect(next.showOverlay).toBe(false);
+      expect(next.currentColumn).toBe('a');
+      expect(next.instructionsKey).toBe('datasetView');
     });
 
     test('the results-details toggle records resultsDetails / results', () => {

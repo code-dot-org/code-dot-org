@@ -6,7 +6,7 @@ import EditAilabDynamicInstructions from '@cdo/apps/lab2/levelEditors/ailabDynam
 
 const DEFAULTS = {
   results: 'Review the results.',
-  trainModel: 'Your model is being trained.',
+  datasetView: 'Choose the columns.',
 };
 
 function renderEditor(
@@ -62,30 +62,37 @@ describe('EditAilabDynamicInstructions', () => {
   it('shows saved text in the fields and defaults as placeholders', () => {
     renderEditor('{"results": "How accurate was it?"}');
     expect(field('Results screen')).toHaveValue('How accurate was it?');
-    expect(field('Train model screen')).toHaveValue('');
-    expect(field('Train model screen')).toHaveAttribute(
+    expect(field('Dataset screen')).toHaveValue('');
+    expect(field('Dataset screen')).toHaveAttribute(
       'placeholder',
-      'Your model is being trained.'
+      'Choose the columns.'
     );
     expect(screen.queryByText(/will be removed/)).not.toBeInTheDocument();
   });
 
   it('omits keys Lab 2 never shows', () => {
     renderEditor(null);
-    expect(screen.getAllByRole('textbox')).toHaveLength(10);
     expect(
-      screen.queryByRole('textbox', {name: /dataset/i})
-    ).not.toBeInTheDocument();
+      screen
+        .getAllByRole('textbox')
+        .map(textbox => textbox.getAttribute('name'))
+    ).toEqual([
+      'ailab_dynamic_instructions_datasetView',
+      'ailab_dynamic_instructions_results',
+      'ailab_dynamic_instructions_saveModel',
+      'ailab_dynamic_instructions_modelSummary',
+      'ailab_dynamic_instructions_resultsDetails',
+    ]);
   });
 
   it('drops unknown keys and non-string values, and lists them', () => {
     const saved = renderEditor(
-      '{"selectTrainer": "Set up training.", "selectDataset": "Pick.", "results": 5, "trainModel": "Wait.", "saveModel": ""}'
+      '{"trainModel": "Wait.", "selectDataset": "Pick.", "results": 5, "datasetView": "Look.", "saveModel": ""}'
     );
     expect(screen.getByText(/will be removed/)).toHaveTextContent(
-      'selectTrainer: "Set up training."; selectDataset: "Pick."; results: 5'
+      'trainModel: "Wait."; selectDataset: "Pick."; results: 5'
     );
-    expect(JSON.parse(saved())).toEqual({trainModel: 'Wait.'});
+    expect(JSON.parse(saved())).toEqual({datasetView: 'Look.'});
   });
 
   it('replaces a value that is not valid JSON', () => {
@@ -98,14 +105,14 @@ describe('EditAilabDynamicInstructions', () => {
 
   it('adds a key when its field is filled and removes it when cleared', () => {
     const saved = renderEditor(null);
-    fireEvent.change(field('After selecting a numerical column'), {
-      target: {value: 'That column holds **numbers**.'},
+    fireEvent.change(field('While viewing result details'), {
+      target: {value: 'Look at the **wrong** ones.'},
     });
     expect(JSON.parse(saved())).toEqual({
-      selectedFeatureNumerical: 'That column holds **numbers**.',
+      resultsDetails: 'Look at the **wrong** ones.',
     });
 
-    fireEvent.change(field('After selecting a numerical column'), {
+    fireEvent.change(field('While viewing result details'), {
       target: {value: '  '},
     });
     expect(saved()).toBe('');
@@ -120,21 +127,21 @@ describe('EditAilabDynamicInstructions', () => {
     );
 
     lab2.set(true);
-    fireEvent.change(field('Train model screen'), {
-      target: {value: 'Wait.'},
+    fireEvent.change(field('Dataset screen'), {
+      target: {value: 'Look.'},
     });
 
     lab2.set(false);
     expect(JSON.parse(field('Dynamic instructions JSON').value)).toEqual({
       results: 'Done.',
-      trainModel: 'Wait.',
+      datasetView: 'Look.',
     });
 
     lab2.set(true);
     expect(field('Results screen')).toHaveValue('Done.');
     expect(JSON.parse(saved())).toEqual({
       results: 'Done.',
-      trainModel: 'Wait.',
+      datasetView: 'Look.',
     });
   });
 });
