@@ -38,6 +38,7 @@ class Quiz < Level
     show_intro_screen
     allow_multiple_attempts
     max_attempts
+    hide_questions_after_submit
   )
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze

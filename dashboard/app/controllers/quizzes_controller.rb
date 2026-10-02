@@ -62,6 +62,7 @@ class QuizzesController < ApplicationController
     showIntroScreen: [:show_intro_screen, CAST_BOOLEAN],
     purpose: [:purpose, :itself.to_proc],
     allowMultipleAttempts: [:allow_multiple_attempts, CAST_BOOLEAN],
+    hideQuestionsAfterSubmit: [:hide_questions_after_submit, CAST_BOOLEAN],
   }.freeze
 
   # Only includes a key if its wire param was actually present in the
@@ -88,7 +89,8 @@ class QuizzesController < ApplicationController
       revealAnswerExplanation: quiz.reveal_answer_explanation?,
       showIntroScreen: quiz.show_intro_screen?,
       purpose: quiz.purpose,
-      allowMultipleAttempts: quiz.allow_multiple_attempts?
+      allowMultipleAttempts: quiz.allow_multiple_attempts?,
+      hideQuestionsAfterSubmit: quiz.hide_questions_after_submit?
     }
   end
 end
