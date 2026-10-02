@@ -46,7 +46,13 @@ const TrainingModal = () => {
       closeLabel="Close"
     >
       <div className={styles.titleRow}>
-        <Typography id={TITLE_ID} variant="h3" component="h2">
+        <Typography
+          id={TITLE_ID}
+          variant="h3"
+          component="h2"
+          // Announces the switch to testing, which happens on its own.
+          aria-live="polite"
+        >
           {isTraining ? 'Training your model' : 'Testing your model'}
         </Typography>
       </div>
