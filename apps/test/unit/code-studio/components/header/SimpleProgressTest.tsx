@@ -30,10 +30,12 @@ describe('SimpleProgress', () => {
     );
   });
 
-  it('draws no bar when the label covers one level', () => {
+  it('fills the bar for a label that covers one level', () => {
     render(<SimpleProgress levels={levelsWithCurrent('1')} />);
     expect(screen.getByText('Getting started')).toBeTruthy();
-    expect(screen.queryByRole('progressbar')).toBeNull();
+    const bar = screen.getByRole('progressbar');
+    expect(bar.getAttribute('aria-valuetext')).toBe('Level 1 of 1');
+    expect((bar.firstChild as HTMLElement).style.width).toBe('100%');
   });
 
   it('shows nothing but the logo for a level without a label', () => {
@@ -75,9 +77,11 @@ describe('subPathFor', () => {
     });
   });
 
-  it('gives only the label when it covers one level', () => {
+  it('counts a label that covers one level as 1 of 1', () => {
     expect(subPathFor(levelsWithCurrent('1'))).toEqual({
       label: 'Getting started',
+      position: 1,
+      total: 1,
     });
   });
 
