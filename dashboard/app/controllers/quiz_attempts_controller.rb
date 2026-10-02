@@ -14,9 +14,13 @@ class QuizAttemptsController < ApplicationController
     end
     attempt = latest_attempt(params[:levelId], params[:unitId], viewed_user)
     if attempt && viewed_user.id != current_user.id
-      # Allow an authorized reviewer who isn't the student (e.g. a teacher)
-      # to always see the correct answers and answer explanations.
-      render json: quiz_attempt_json(attempt, show_correctness: true, reveal_answer_explanation: true)
+      # Any authorized viewer of someone else's attempt (e.g. a teacher of a student)
+      # always sees correctness. Only a verified teacher also sees the answer and explanation.
+      render json: quiz_attempt_json(
+        attempt,
+        show_correctness: true,
+        reveal_answer_explanation: current_user.verified_instructor?
+      )
     else
       render json: attempt && quiz_attempt_json(attempt)
     end
@@ -106,8 +110,8 @@ class QuizAttemptsController < ApplicationController
   end
 
   # show_correctness/reveal_answer_explanation default to the quiz's own
-  # settings (self-view); #index overrides both for an authorized viewer
-  # who isn't the student themselves.
+  # settings (self-view); #index overrides them for an authorized viewer
+  # who isn't the student themselves - see #index for which.
   private def quiz_attempt_json(
     attempt,
     show_correctness: attempt.level&.show_correctness?,

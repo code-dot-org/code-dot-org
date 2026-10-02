@@ -83,7 +83,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_nil body['maxScore']
   end
 
-  test "index still shows a teacher the score, correctness, and explanation even when the quiz does not show correctness" do
+  test "index still shows a verified teacher the score, correctness, and explanation even when the quiz does not show correctness" do
     quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
     question = create(:multiple_choice_question, explanation: 'because math')
     create(:quiz_question_placement, level: quiz, quiz_question: question)
@@ -97,7 +97,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       score: 1,
       max_score: 1
     )
-    teacher = create(:teacher)
+    teacher = create(:authorized_teacher)
     create(:follower, student_user: @student, user: teacher)
     sign_in teacher
 
@@ -111,6 +111,37 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert result['correct']
     assert_equal 'because math', result['explanation']
     assert_equal 'b', result['correctChoiceId']
+  end
+
+  test "index shows an unverified teacher correctness but not the answer key, even for their own student" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+    # Plain :teacher is self-declared at signup, with no verification.
+    teacher = create(:teacher)
+    create(:follower, student_user: @student, user: teacher)
+    sign_in teacher
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id, userId: @student.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    result = body['questionResults'].first
+    assert result['correct']
+    assert_nil result['explanation']
+    assert_nil result['correctChoiceId']
   end
 
   test "update re-grades stored responses when none are submitted, and only scores questions on the quiz" do
