@@ -84,7 +84,7 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     timeLimitMinutes: null,
     allowMultipleAttempts: true,
     showCorrectness: true,
-    revealAnswerExplanation: true,
+    revealAnswerExplanation: false,
     hideQuestionsAfterSubmit: true,
   },
 };
@@ -317,12 +317,24 @@ const QuizConfigurationPanel: React.FunctionComponent<
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const checked = e.target.checked;
+    const previousReveal = revealAnswerExplanation;
     setHideQuestionsAfterSubmit(checked);
+    if (checked) {
+      setRevealAnswerExplanation(false);
+    }
     void handleSave(
-      {hideQuestionsAfterSubmit: checked},
+      {
+        hideQuestionsAfterSubmit: checked,
+        ...(checked && {revealAnswerExplanation: false}),
+      },
       'hideQuestionsAfterSubmit'
     ).then(ok => {
-      if (!ok) setHideQuestionsAfterSubmit(!checked);
+      if (!ok) {
+        setHideQuestionsAfterSubmit(!checked);
+        if (checked) {
+          setRevealAnswerExplanation(previousReveal);
+        }
+      }
     });
   };
 
@@ -477,7 +489,20 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   onChange={handleShowCorrectnessChange}
                 />
               </div>
-              {showCorrectness && (
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>
+                  Hide questions after submit
+                </span>
+                <Toggle
+                  name="hideQuestionsAfterSubmit"
+                  aria-label="Hide questions after submit"
+                  size="s"
+                  disabled={savingField === 'hideQuestionsAfterSubmit'}
+                  checked={hideQuestionsAfterSubmit}
+                  onChange={handleHideQuestionsAfterSubmitChange}
+                />
+              </div>
+              {showCorrectness && !hideQuestionsAfterSubmit && (
                 <div className={styles.conditionalWrap}>
                   <div className={styles.toggleRow}>
                     <span className={styles.toggleLabel}>
@@ -494,21 +519,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   </div>
                 </div>
               )}
-            </div>
-            <div className={styles.cardRow}>
-              <div className={styles.toggleRow}>
-                <span className={styles.toggleLabel}>
-                  Hide questions after submit
-                </span>
-                <Toggle
-                  name="hideQuestionsAfterSubmit"
-                  aria-label="Hide questions after submit"
-                  size="s"
-                  disabled={savingField === 'hideQuestionsAfterSubmit'}
-                  checked={hideQuestionsAfterSubmit}
-                  onChange={handleHideQuestionsAfterSubmitChange}
-                />
-              </div>
             </div>
           </ConfigCard>
         </>

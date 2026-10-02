@@ -48,6 +48,7 @@ class Quiz < Level
   validates :time_limit_minutes, numericality: {only_integer: true, greater_than: 0}, allow_blank: true
 
   validate :reveal_answer_explanation_requires_show_correctness
+  validate :reveal_answer_explanation_requires_visible_questions
   validate :max_attempts_requires_allow_multiple_attempts
   validate :show_intro_screen_required_when_time_limit
 
@@ -112,6 +113,13 @@ class Quiz < Level
   private def reveal_answer_explanation_requires_show_correctness
     return unless reveal_answer_explanation? && !show_correctness?
     errors.add(:reveal_answer_explanation, 'cannot be true unless show_correctness is also true')
+  end
+
+  # The explanation only ever surfaces on a per-question result card, which
+  # hide_questions_after_submit removes entirely.
+  private def reveal_answer_explanation_requires_visible_questions
+    return unless reveal_answer_explanation? && hide_questions_after_submit?
+    errors.add(:reveal_answer_explanation, 'cannot be true when hide_questions_after_submit is also true')
   end
 
   # A time limit with no intro screen means a student could start the timer

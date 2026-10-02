@@ -33,6 +33,17 @@ class QuizTest < ActiveSupport::TestCase
     assert quiz.valid?
   end
 
+  test "reveal_answer_explanation cannot be true when hide_questions_after_submit is true" do
+    quiz = create(:quiz, show_correctness: true)
+    quiz.hide_questions_after_submit = true
+    quiz.reveal_answer_explanation = true
+    refute quiz.valid?
+    assert_includes quiz.errors[:reveal_answer_explanation].join, 'hide_questions_after_submit'
+
+    quiz.hide_questions_after_submit = false
+    assert quiz.valid?
+  end
+
   test "show_intro_screen cannot be false when time_limit_minutes is set" do
     quiz = create(:quiz, time_limit_minutes: nil, show_intro_screen: false)
     assert quiz.valid?
