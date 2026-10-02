@@ -120,10 +120,9 @@ function tidy(moves: () => void): void {
 // Workspaces whose stacks Blockly must not bump (see quietStackBumps).
 const quiet = new WeakSet<BlocklyCore.Workspace>();
 
-// Blockly nudges an unconnected block sideways and down whenever a
-// connection ends up within the snap radius of it, on every render. Here
-// the pass makes the room instead, so the bump is off for the stacks of a
-// quiet workspace; loose value blocks keep it.
+// Blockly nudges an unconnected block aside whenever a connection lands
+// within the snap radius of it, on every render; for stacks, the pass
+// makes the room instead.
 const blocklyBumpNeighbours = BlocklyCore.BlockSvg.prototype.bumpNeighbours;
 BlocklyCore.BlockSvg.prototype.bumpNeighbours = function () {
   const root = this.getRootBlock();
