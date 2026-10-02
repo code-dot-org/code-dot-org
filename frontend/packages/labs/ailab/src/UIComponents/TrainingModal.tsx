@@ -40,6 +40,7 @@ const TrainingModal = () => {
 
   const isTraining = step === 'training';
   const closeModal = () => dispatch(setTrainingModalStep(undefined));
+  const showTesting = () => dispatch(setTrainingModalStep('testing'));
   const showResults = () => dispatch(setCurrentPanel('results'));
 
   return (
@@ -63,9 +64,7 @@ const TrainingModal = () => {
       </p>
       <div className={styles.content}>
         {isTraining ? (
-          <TrainModel
-            onFinished={() => dispatch(setTrainingModalStep('testing'))}
-          />
+          <TrainModel onFinished={showTesting} />
         ) : (
           <GenerateResults onFinished={() => setTestingFinished(true)} />
         )}
@@ -77,7 +76,7 @@ const TrainingModal = () => {
         <Button
           variant="contained"
           color="primary"
-          onClick={showResults}
+          onClick={isTraining ? showTesting : showResults}
           endIcon={
             <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
           }
