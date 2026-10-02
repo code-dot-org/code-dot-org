@@ -223,7 +223,6 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
@@ -287,11 +286,9 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
           <ContainerLeft>
             <Results />
           </ContainerLeft>
-          {resultsPhase === 1 && (
-            <ContainerRight>
-              <TestPanel />
-            </ContainerRight>
-          )}
+          <ContainerRight>
+            <TestPanel />
+          </ContainerRight>
         </BodyContainer>
       )}
 
