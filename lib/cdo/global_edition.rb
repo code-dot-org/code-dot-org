@@ -63,6 +63,7 @@ module Cdo
     EXCLUDED_PATHS = Set[
       '/assets/',
       '/shared/',
+      '/v3/',
       # Exclude HoC legacy API routes from Global Edition scope.
       '/api/hour/',
       # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.

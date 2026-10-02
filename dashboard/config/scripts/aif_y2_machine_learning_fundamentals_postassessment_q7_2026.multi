@@ -5,10 +5,18 @@ right 'return 3 + 2 * miles'
 wrong 'return miles + 3 + 2'
 wrong 'return miles * 3 + 2'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
-A linear regression model predicts that a taxi ride will cost $3 plus an additional A linear regression model predicts that a taxi ride will cost $3 plus an additional $2 per mile. Choose the line that completes the Python function so that it represents this model.
+A linear regression model predicts that a taxi ride will cost $3 plus an additional A linear regression model predicts that a taxi ride will cost $3 plus an additional A linear regression model predicts that a taxi ride will cost $3 plus an additional A linear regression model predicts that a taxi ride will cost $3 plus an additional $2 per mile. Choose the line that completes the Python function so that it represents this model.
+
+```
+def predict_cost(miles):
+``` per mile. Choose the line that completes the Python function so that it represents this model.
+
+```
+def predict_cost(miles):
+``` per mile. Choose the line that completes the Python function so that it represents this model.
 
 ```
 def predict_cost(miles):

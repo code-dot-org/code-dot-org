@@ -43,7 +43,7 @@ const SAVED_MODEL_KEYS = [
   'datasetDetails',
   'featureNumberKey',
   'features',
-  'kValue',
+  'hyperparameters',
   'label',
   'name',
   'potentialMisuses',
@@ -142,10 +142,10 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
     const state = load('shapes_v1_toy');
     const saved = getTrainedModelDataToSave(state);
 
-    expect(state.kValue).toBe(1);
+    expect(state.hyperparameters).toEqual({k: 1});
     expect(getPercentCorrect(state)).toBe('90.00');
     expect(saved.selectedTrainer).toBe('knnClassify');
-    expect(saved.kValue).toBe(1);
+    expect(saved.hyperparameters).toEqual({k: 1});
     // Asserted here to prove `load` mirrors a level rather than a user upload;
     // `datasetDetails.test.js` covers the flag itself.
     expect(saved.datasetDetails.isUserUploaded).toBe(false);
@@ -164,7 +164,7 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
     const state = load('shapes_v1_toy', ['sides']);
 
     expect(getPercentCorrect(state)).toBe('100.00');
-    expect(state.kValue).toBe(1);
+    expect(state.hyperparameters).toEqual({k: 1});
   });
 
   test('records a sweep that does not choose the smallest k', () => {
@@ -174,8 +174,11 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
       'fill color',
     ]);
 
-    expect(state.kValue).toBe(7);
+    expect(state.hyperparameters).toEqual({k: 7});
     expect(getPercentCorrect(state)).toBe('100.00');
+
+    const saved = getTrainedModelDataToSave(state);
+    expect(saved.hyperparameters).toEqual({k: 7});
   });
 });
 
@@ -185,8 +188,9 @@ describe('KNN characterization: jeans, a numerical label', () => {
     const saved = getTrainedModelDataToSave(state);
 
     // A numerical label under 100 rows takes the minimal k, without a sweep.
-    expect(state.kValue).toBe(1);
+    expect(state.hyperparameters).toEqual({k: 1});
     expect(saved.selectedTrainer).toBe('knnRegress');
+    expect(saved.hyperparameters).toEqual({k: 1});
     expect(getPercentCorrect(state)).toBe('62.50');
     expect(state.accuracyCheckLabels).toEqual([
       48, 48, 58, 48, 89.95, 92.95, 94.95, 94.95,

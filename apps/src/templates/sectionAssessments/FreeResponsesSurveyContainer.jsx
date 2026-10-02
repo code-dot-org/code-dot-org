@@ -37,7 +37,7 @@ class FreeResponsesSurveyContainer extends Component {
     const {freeResponsesByQuestion} = this.props;
     return (
       <div>
-        <Typography variant="h2">
+        <Typography variant="h6" component="h2">
           {i18n.studentFreeResponseAnswers()}
         </Typography>
         {freeResponsesByQuestion.map((question, index) => (

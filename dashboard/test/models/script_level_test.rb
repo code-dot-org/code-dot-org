@@ -1327,33 +1327,70 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal [level], script_level.reload.levels.to_a
   end
 
-  test 'level_keys with UI Test levels are only valid in ui-test-* scripts' do
-    level = create(:level, name: 'UI Test ScriptLevelTest level')
+  test 'add_variant refuses a prod variant in a UI Test script and leaves no join row' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    ui_test_script = create(:script, name: 'ui-test-script-level-test')
-    script_level = create(:script_level, script: ui_test_script, levels: [level])
-    script_level.level_keys = [level.key]
-    assert script_level.valid?
+    script = create(:script, :in_single_unit_course, is_migrated: true, name: 'ui-test-script-level-variant')
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest kept variant')
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [ui_test_level])
 
-    prod_script = create(:script, name: 'script-level-test-prod')
-    script_level = create(:script_level, script: prod_script)
-    script_level.level_keys = [level.key]
-    refute script_level.valid?
-    assert_includes script_level.errors.full_messages.first, level.name
+    assert_raises ActiveRecord::RecordInvalid do
+      script_level.add_variant create(:level, name: 'ScriptLevelTest prod variant')
+    end
+    assert_equal [ui_test_level], script_level.reload.levels.to_a
   end
 
-  test 'update_levels rejects UI Test levels in non-ui-test scripts' do
-    level = create(:level, name: 'UI Test ScriptLevelTest attach')
+  test 'level_keys and their script must be on the same side of the UI Test partition' do
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest level')
+    prod_level = create(:level, name: 'ScriptLevelTest prod level')
+
+    script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-test'))
+    script_level.level_keys = [ui_test_level.key]
+    assert script_level.valid?, script_level.errors.full_messages.to_s
+    script_level.level_keys = [prod_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, prod_level.name
+
+    script_level = create(:script_level, script: create(:script, name: 'script-level-test-prod'))
+    script_level.level_keys = [prod_level.key]
+    assert script_level.valid?, script_level.errors.full_messages.to_s
+    script_level.level_keys = [ui_test_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, ui_test_level.name
+  end
+
+  test 'deprecated blockly levels are exempt from the UI Test partition' do
+    blockly_level = create(:level, level_num: 'script_level_test_maze', game: Game.find_by_name('maze'))
+    assert_equal 'blockly:Maze:script_level_test_maze', blockly_level.key
+
+    ['ui-test-script-level-blockly', 'script-level-blockly-prod'].each do |script_name|
+      script_level = create(:script_level, script: create(:script, name: script_name))
+      script_level.level_keys = [blockly_level.key]
+      assert script_level.valid?, script_level.errors.full_messages.to_s
+    end
+  end
+
+  test 'update_levels enforces the UI Test partition in both directions' do
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest attach')
+    prod_level = create(:level, name: 'ScriptLevelTest prod attach')
 
     prod_script_level = create(:script_level, script: create(:script, name: 'script-level-attach-prod'))
     error = assert_raises RuntimeError do
-      prod_script_level.update_levels([{'id' => level.id}])
+      prod_script_level.update_levels([{'id' => ui_test_level.id}])
     end
-    assert_includes error.message, level.name
+    assert_includes error.message, ui_test_level.name
+    prod_script_level.update_levels([{'id' => prod_level.id}])
+    assert_equal [prod_level], prod_script_level.levels.to_a
 
     ui_test_script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-attach'))
-    ui_test_script_level.update_levels([{'id' => level.id}])
-    assert_equal [level], ui_test_script_level.levels.to_a
+    error = assert_raises RuntimeError do
+      ui_test_script_level.update_levels([{'id' => prod_level.id}])
+    end
+    assert_includes error.message, prod_level.name
+    ui_test_script_level.update_levels([{'id' => ui_test_level.id}])
+    assert_equal [ui_test_level], ui_test_script_level.levels.to_a
   end
 
   private def create_fake_plc_data

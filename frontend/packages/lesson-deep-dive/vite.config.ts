@@ -58,6 +58,8 @@ const dashboardProxyPrefixes = [
   '/aichat_request',
   '/ai_gateway',
   '/get_token',
+  // A regex, not a prefix: '/api/v1' alone would proxy every JSON API.
+  '^/api/v1/scripts/[^/]+/lessons/[^/]+/tutor_gallery_data$',
 ];
 
 const dashboardTarget = 'http://localhost-studio.code.org:3000';
@@ -100,6 +102,7 @@ export default defineConfig(({command}) => ({
       'react',
       'react-dom',
       'react-redux',
+      'react-router-dom',
       '@mui/material',
       '@emotion/react',
       '@emotion/styled',

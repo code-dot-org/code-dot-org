@@ -58,6 +58,7 @@
     "react": "catalog:",
     "react-dom": "catalog:",
     "react-redux": "catalog:",
+    "react-router-dom": "^6.26.0",
     "sass": "catalog:",
     "stylelint": "catalog:",
     "typescript": "catalog:",

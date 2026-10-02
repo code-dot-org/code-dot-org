@@ -1,10 +1,9 @@
-import classNames from 'classnames';
-import React, {FC} from 'react';
-
 import {
   ChallengeResponse,
   ChallengeResponseAsset,
-} from '../lessonDeepDive/types';
+} from '@code-dot-org/lesson-deep-dive';
+import classNames from 'classnames';
+import React, {FC} from 'react';
 
 import ReactionChips from './ReactionChips';
 

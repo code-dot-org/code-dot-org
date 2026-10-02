@@ -6,6 +6,21 @@ export interface QuizQuestionResult {
   correctChoiceId: string | null;
 }
 
+export interface QuizQuestionInProgressResult {
+  quizQuestionId: number;
+  // Unanswered questions are omitted from the map, so this is always set.
+  selectedChoiceId: string;
+}
+
+export function formatSubmittedAt(isoString: string): string {
+  return new Date(isoString).toLocaleString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  });
+}
+
 export interface QuizAttemptData {
   id: number;
   attemptNumber: number;
@@ -17,4 +32,6 @@ export interface QuizAttemptData {
   canRetake: boolean;
   // Present only once submitted.
   questionResults?: QuizQuestionResult[];
+  // Present only while the attempt is in progress.
+  questionResultsInProgress?: QuizQuestionInProgressResult[];
 }

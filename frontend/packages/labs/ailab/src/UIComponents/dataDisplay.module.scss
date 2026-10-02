@@ -1,0 +1,45 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.panel;
+
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+}
+
+.header {
+  @include mixins.panel-header;
+
+  gap: 8px;
+  padding-left: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
+.separator {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--background-neutral-quinary);
+}
+
+.rowCount {
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: var(--text-neutral-quaternary);
+}
+
+.tableContainer {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}

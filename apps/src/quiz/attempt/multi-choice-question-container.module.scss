@@ -1,0 +1,25 @@
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.option {
+  align-items: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px 10px 12px;
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+}
+
+.optionSelected {
+  background: var(--background-brand-purple-light);
+  border-color: var(--borders-brand-purple-light);
+}
+
+.optionLetter {
+  font-weight: 600;
+}

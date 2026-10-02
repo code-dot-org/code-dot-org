@@ -23,7 +23,7 @@ module AWS
     HTTP_CACHE = HttpCache.config(rack_env)
     CACHE_INVALIDATION_MAX_RETRIES = 10
 
-    # CloudFront distribution config (`pegasus` and `dashboard`):
+    # CloudFront distribution config (`dashboard`):
     # - `aliases`: whitelist of domains this distribution will use (`*`-wildcards are allowed, e.g. `*.example.com`).
     #   CloudFront does not allow the same domain to be used by multiple distributions.
     # - `origin`: default origin server endpoint. This should point to the load balancer domain.
@@ -31,18 +31,6 @@ module AWS
     # - `ssl_cert`: ACM domain name for an SSL certificate previously uploaded to AWS.
     #   If not provided, the default *.cloudfront.net SSL certificate is used.
     cloudfront_config = {
-      pegasus: {
-        # NOTE: Keep this list in sync with the call to AWS::CloudFront.distribution_config in cloud_formation_stack.yml.erb.
-        # CloudFormation stack should be refactored to reference this configuration in the future.
-        aliases: [CDO.pegasus_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
-        origin: "#{ENV.fetch('RACK_ENV', nil)}-pegasus.code.org",
-        # ACM domain name
-        ssl_cert: 'code.org',
-        log: {
-          bucket: 'cdo-logs',
-          prefix: "#{ENV.fetch('RACK_ENV', nil)}-pegasus-cdn"
-        }
-      },
       dashboard: {
         aliases: [CDO.dashboard_hostname],
         origin: "#{ENV.fetch('RACK_ENV', nil)}-dashboard.code.org",
@@ -51,22 +39,11 @@ module AWS
           bucket: 'cdo-logs',
           prefix: "#{ENV.fetch('RACK_ENV', nil)}-dashboard-cdn"
         }
-      },
-      hourofcode: {
-        aliases: [CDO.hourofcode_hostname],
-        origin: "#{ENV.fetch('RACK_ENV', nil)}-origin.hourofcode.com",
-        ssl_cert: 'hourofcode.com',
-        log: {
-          bucket: 'cdo-logs',
-          prefix: "#{ENV.fetch('RACK_ENV', nil)}-hourofcode-cdn"
-        }
       }
     }
 
     # Integration environment has a slightly different setup
     if ENV['RACK_ENV'] == 'integration'
-      cloudfront_config[:pegasus][:aliases] << 'cdo-pegasus.ngrok.io'
-      cloudfront_config[:pegasus][:origin] = 'cdo-pegasus.ngrok.io'
       cloudfront_config[:dashboard][:aliases] << 'cdo.ngrok.io'
       cloudfront_config[:dashboard][:origin] = 'cdo.ngrok.io'
       puts "CONFIG: #{cloudfront_config}"

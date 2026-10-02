@@ -102,13 +102,30 @@ export function paintWorldCell(
   col: number,
   cell: WorldCell | null
 ): World {
-  const grid = (world?.grid ?? createEmptyWorld().grid).map(cells => [
-    ...cells,
-  ]);
+  // Only the painted row gets a new identity: the editor memoizes its rows
+  // on theirs, so the other rows skip their render.
+  const grid = (world?.grid ?? createEmptyWorld().grid).slice();
   if (grid[row] && col < grid[row].length) {
+    grid[row] = grid[row].slice();
     grid[row][col] = cell;
   }
   return {grid};
+}
+
+/** The world with `cell`'s image in one place: cleared from wherever it
+    was, then painted at (row, col). */
+export function moveWorldCell(
+  world: World | undefined,
+  row: number,
+  col: number,
+  cell: WorldCell
+): World {
+  const grid = (world?.grid ?? createEmptyWorld().grid).map(cells =>
+    cells.some(c => c?.image === cell.image)
+      ? cells.map(c => (c?.image === cell.image ? null : c))
+      : cells
+  );
+  return paintWorldCell({grid}, row, col, cell);
 }
 
 // Interpreted-JS prelude that spawns the world's starter sprites, prepended

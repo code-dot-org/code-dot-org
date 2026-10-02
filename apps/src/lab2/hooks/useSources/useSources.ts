@@ -21,7 +21,9 @@ import type {
   ProjectSources,
   ProjectVersion,
 } from '@cdo/apps/lab2/types';
-import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
+import getInitialSources, {
+  getStartOverSources,
+} from '@cdo/apps/lab2/utils/getInitialSources';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import configureHeader from './configureHeader';
@@ -62,7 +64,7 @@ export interface UseSourcesOutput<T extends ProjectSources> {
   hasEdited: boolean;
   /** The current project sources. */
   currentSources: T | undefined;
-  /** The project channel (once loaded). */
+  /** The project channel as last loaded or saved. */
   channel: Channel | undefined;
   /**
    * The ProjectManager for the current project, once created.
@@ -241,7 +243,11 @@ export default function useSources<T extends ProjectSources>({
         await refreshVersionList(projectManagerRef.current, isCancelled);
         if (isCancelled()) return;
       }
-      setProjectCallbacks(projectManagerRef.current, dispatch);
+      // Saves can change the channel (rename, updateChannel, thumbnails);
+      // keep the hook's copy as current as the one redux receives.
+      setProjectCallbacks(projectManagerRef.current, dispatch, saved => {
+        if (!isCancelled()) setChannel(saved);
+      });
     },
     [
       levelProperties,
@@ -298,14 +304,13 @@ export default function useSources<T extends ProjectSources>({
   );
 
   const startOver = useCallback(() => {
-    const {templateSources, startSources} = levelProperties;
-    const startOverSources = isToolboxMode
-      ? getToolboxEditSourcesRef.current?.(levelProperties) ?? defaultSources
-      : isStartMode
-      ? defaultSources
-      : templateSources || startSources || defaultSources;
-    projectManagerRef.current?.save(startOverSources as T, true);
-    reinitializeSources(startOverSources as T | undefined);
+    const startOverSources = getStartOverSources(
+      levelProperties,
+      defaultSources,
+      getToolboxEditSourcesRef.current?.(levelProperties)
+    );
+    projectManagerRef.current?.save(startOverSources, true);
+    reinitializeSources(startOverSources);
     setHasEdited(false);
   }, [defaultSources, levelProperties, reinitializeSources]);
 

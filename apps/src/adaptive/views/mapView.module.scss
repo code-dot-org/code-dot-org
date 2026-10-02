@@ -1,0 +1,121 @@
+.board {
+  position: relative;
+  margin: 0 auto;
+  transition: transform 450ms ease;
+  transform-origin: center top;
+}
+
+.edges {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: visible;
+}
+
+.edge {
+  fill: none;
+  stroke: var(--borders-neutral-primary);
+  stroke-width: 3;
+  stroke-dasharray: 8 8;
+  transition: stroke 300ms;
+}
+
+.edgeActive {
+  stroke: var(--borders-success-primary);
+  stroke-dasharray: none;
+}
+
+.node {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 190px;
+  transform: translateX(-50%);
+  transition: opacity 300ms;
+}
+
+.nodeLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  max-width: 100%;
+  margin-bottom: 8px;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  background: var(--background-neutral-primary);
+  font-size: 13px;
+  line-height: 1.15;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  padding: 0;
+  border: 4px solid var(--borders-neutral-primary);
+  border-radius: 50%;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-disabled);
+  font-size: 22px;
+  cursor: pointer;
+  transition:
+    transform 200ms,
+    box-shadow 200ms,
+    background 200ms;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
+  }
+}
+
+.locked .circle {
+  background: var(--background-neutral-secondary);
+}
+
+.available .circle {
+  border-color: var(--background-brand-purple-primary);
+  color: var(--text-brand-purple-primary);
+  animation: pulse 1.8s ease-out infinite;
+}
+
+.inProgress .circle {
+  border-color: var(--borders-warning-primary);
+  border-style: dashed;
+  color: var(--text-warning-primary);
+}
+
+.complete .circle {
+  border-color: var(--borders-success-primary);
+  background: var(--background-success-primary);
+  color: var(--text-neutral-white-fixed);
+}
+
+.dimmed {
+  opacity: 0.2;
+}
+
+.focused .circle {
+  box-shadow: 0 0 0 10px var(--background-brand-purple-light);
+  animation: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(118 101 165 / 45%);
+  }
+
+  60% {
+    box-shadow: 0 0 0 14px rgb(118 101 165 / 0%);
+  }
+}

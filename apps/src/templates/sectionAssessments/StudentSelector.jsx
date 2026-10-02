@@ -6,8 +6,6 @@ import i18n from '@cdo/locale';
 
 import {ALL_STUDENT_FILTER} from './sectionAssessmentsRedux';
 
-import styles from './studentSelector.module.scss';
-
 export default class StudentSelector extends Component {
   static propTypes = {
     studentList: PropTypes.array.isRequired,
@@ -35,12 +33,10 @@ export default class StudentSelector extends Component {
         id="student-selector"
         name="student-selector"
         labelText={i18n.selectStudent()}
-        isLabelVisible={false}
         selectedValue={studentId?.toString()}
         onChange={event => onChange(parseInt(event.target.value))}
         items={dropdownItems}
         size="s"
-        className={styles.studentSelector}
         dropdownTextThickness="thin"
         color="gray"
       />

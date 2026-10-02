@@ -222,12 +222,14 @@ describe('useQuizAttempt', () => {
 
     let returned: QuizAttemptData | undefined;
     await act(async () => {
-      returned = await result.current.finishAttempt();
+      returned = await result.current.finishAttempt({
+        5: {selectedChoiceId: 'b'},
+      });
     });
 
     expect(put).toHaveBeenCalledWith(
       `/quiz_attempts/${ATTEMPT.id}`,
-      JSON.stringify({}),
+      JSON.stringify({responses: {5: {selectedChoiceId: 'b'}}}),
       true,
       {'Content-Type': 'application/json'}
     );
@@ -240,7 +242,7 @@ describe('useQuizAttempt', () => {
       useQuizAttempt({levelId: 42, unitId: undefined})
     );
 
-    await expect(result.current.finishAttempt()).rejects.toThrow();
+    await expect(result.current.finishAttempt({})).rejects.toThrow();
     expect(put).not.toHaveBeenCalled();
   });
 
@@ -267,7 +269,7 @@ describe('useQuizAttempt', () => {
     expect(result.current.error).toBe('quiz is closed');
   });
 
-  it('surfaces a fallback error message when the initial check fails', async () => {
+  it('surfaces a fallback error message when the initial check for an attempt fails', async () => {
     get.mockRejectedValue(new Error('network down'));
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizAttempt({levelId: 42, unitId: 7})

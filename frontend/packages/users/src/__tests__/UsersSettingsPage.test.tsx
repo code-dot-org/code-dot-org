@@ -76,10 +76,14 @@ describe('UsersSettingsPage', () => {
     expect(document.title).toBe('My Account — Code.org');
 
     const tabs = within(tablist).getAllByRole('tab');
-    expect(tabs).toHaveLength(4);
+    expect(tabs.map(tab => tab.textContent)).toEqual([
+      'Account Details',
+      'Educator Profile',
+      'Integrations',
+    ]);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
-    expect(tabs[1]).not.toHaveAttribute('aria-disabled'); // Educator Profile
-    expect(tabs[2]).toHaveAttribute('aria-disabled', 'true'); // Communications
+    expect(tabs[1]).not.toHaveAttribute('aria-disabled');
+    expect(tabs[2]).toHaveAttribute('aria-disabled', 'true');
 
     for (const name of [
       'My Information',
@@ -97,11 +101,11 @@ describe('UsersSettingsPage', () => {
   });
 
   it('hides the educator-only Educator Profile tab for students', async () => {
-    // Students hide Educator Profile; Communications and Integrations still apply.
+    // Students hide Educator Profile; Integrations still applies.
     renderPage('student');
     const tablist = await screen.findByRole('tablist');
     const tabs = within(tablist).getAllByRole('tab');
-    expect(tabs).toHaveLength(3);
+    expect(tabs).toHaveLength(2);
     expect(
       within(tablist).queryByRole('tab', {name: 'Educator Profile'}),
     ).toBeNull();
@@ -302,6 +306,7 @@ describe('UsersSettingsPage — Login Information', () => {
     fireEvent.change(within(dialog).getByLabelText(/current password/i), {
       target: {value: 'currentpass'},
     });
+    fireEvent.click(within(dialog).getByRole('radio', {name: 'Yes'}));
     fireEvent.click(
       within(dialog).getByRole('button', {name: /update email/i}),
     );

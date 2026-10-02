@@ -15,7 +15,7 @@ const TeacherPanelHandle: React.FC = () => {
     <div className="teacher-panel hidden">
       <div
         className="show-handle"
-        onClick={() => dispatch(openDrawerToNav('Teacher Panel'))}
+        onClick={() => dispatch(openDrawerToNav('Roster'))}
       >
         <FontAwesome
           icon="chevron-left"

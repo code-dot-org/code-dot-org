@@ -85,10 +85,8 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
       <WithConditionalTooltip
         showTooltip={!enabled && !!tooltipMessage}
         tooltipProps={{
-          text: tooltipMessage,
-          direction: 'onTop',
-          tooltipId: 'submit-button-tooltip',
-          size: 'xs',
+          title: tooltipMessage,
+          id: 'submit-button-tooltip',
         }}
       >
         <MuiButton

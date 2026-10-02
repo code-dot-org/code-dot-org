@@ -28,17 +28,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make a background for your game.** Your platformer needs scenery behind it. Pick the words for a place and press **Generate**."
+        "text": "**Make a background for your game.** Pick the words for a place and click **Generate**."
       },
       {
-        "text": "**That sets the mood!** Continue when you're ready.",
+        "text": "**That sets the mood!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "backgroundImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a background for your game\nYour platformer needs scenery behind it. Pick the words for a place and press **Generate**."
+    "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**."
   }
 }]]></config>
 </GamelabJr>

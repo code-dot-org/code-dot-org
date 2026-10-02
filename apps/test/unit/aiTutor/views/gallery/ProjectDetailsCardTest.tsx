@@ -1,9 +1,14 @@
+import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ProjectDetailsCard from '@cdo/apps/aiTutor/views/gallery/ProjectDetailsCard';
-import {ChallengeResponseDetail} from '@cdo/apps/aiTutor/views/gallery/types';
+
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,

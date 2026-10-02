@@ -1,4 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useApiClient} from '@code-dot-org/core/api';
+import {
+  ChallengeResponse,
+  ChallengeResponseDetail,
+  GalleryUnit,
+  getChallengeResponse,
+  listChallengeResponses,
+  Reaction,
+} from '@code-dot-org/lesson-deep-dive';
 import {
   Typography,
   Button as MuiButton,
@@ -6,22 +15,9 @@ import {
 } from '@mui/material';
 import React, {FC, useEffect, useState} from 'react';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
-
-import {
-  ChallengeResponse,
-  Reaction,
-  challengeResponseListValidator,
-} from '../lessonDeepDive/types';
-
 import AssessmentPanel from './AssessmentPanel';
 import ProjectDetailsCard from './ProjectDetailsCard';
 import ProjectStage from './ProjectStage';
-import {
-  ChallengeResponseDetail,
-  GalleryUnit,
-  challengeResponseDetailValidator,
-} from './types';
 
 import styles from './project-view.module.scss';
 
@@ -60,16 +56,14 @@ const ProjectView: FC<ProjectViewProps> = ({
   // the "response #N" switcher.
   const [versions, setVersions] = useState<ChallengeResponse[] | null>(null);
 
+  const api = useApiClient();
+
   useEffect(() => {
     let cancelled = false;
     setDetail(null);
     setLoadFailed(false);
-    HttpClient.fetchJson<ChallengeResponseDetail>(
-      `/challenge_responses/${responseId}`,
-      {},
-      challengeResponseDetailValidator
-    )
-      .then(({value}) => {
+    getChallengeResponse(api.transport, responseId)
+      .then(value => {
         if (!cancelled && value) {
           setDetail(value);
         }
@@ -82,7 +76,7 @@ const ProjectView: FC<ProjectViewProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [responseId]);
+  }, [responseId, api]);
 
   const challengeId = detail?.challenge_id;
   const studentId = detail?.user_id;
@@ -102,12 +96,8 @@ const ProjectView: FC<ProjectViewProps> = ({
       user_id: studentId.toString(),
       sort: 'oldest',
     });
-    HttpClient.fetchJson<ChallengeResponse[]>(
-      `/challenge_responses?${params.toString()}`,
-      {},
-      challengeResponseListValidator
-    )
-      .then(({value}) => {
+    listChallengeResponses(api.transport, params)
+      .then(value => {
         if (!cancelled) {
           setVersions(value || []);
         }
@@ -118,7 +108,7 @@ const ProjectView: FC<ProjectViewProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [challengeId, studentId, viewerRole]);
+  }, [challengeId, studentId, viewerRole, api]);
 
   if (loadFailed) {
     return (

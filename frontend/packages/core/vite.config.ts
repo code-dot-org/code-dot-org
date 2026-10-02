@@ -13,6 +13,8 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'auto',
+    // apps bundles this CJS output; a bare require of ESM-only ky yields the namespace, not the function.
+    interop: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
@@ -50,6 +52,7 @@ export default defineConfig({
         'src/api/mocks/index.ts',
         'src/api/mocks/server.ts',
         'src/constants/index.ts',
+        'src/plugins/experiments/index.ts',
         'src/plugins/localization/index.ts',
         'src/plugins/observability/index.ts',
         'src/plugins/consent/index.ts',

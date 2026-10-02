@@ -1,4 +1,5 @@
 @use './imageTile' as tile;
+@use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '../quiet-button.scss' as buttons;
 
 .labRow {
@@ -799,6 +800,13 @@ $tab-segment-height: $tab-item-height - 2px;
   margin-top: 10px;
 }
 
+// Room for the corner icon on its right; the collapsed panel is otherwise
+// only as wide as its button.
+.guideCollapsedText {
+  margin: 0 28px 0 0;
+  white-space: nowrap;
+}
+
 // The persistent playspace overlay: spans the tab content area; lets clicks
 // through to the content beneath (e.g. the Blockly workspace) except over the
 // box itself.
@@ -830,6 +838,38 @@ $tab-segment-height: $tab-item-height - 2px;
     outline: 2px solid var(--borders-neutral-primary);
     outline-offset: 2px;
   }
+}
+
+// The Play/Stop and arrow bar under the playspace box. Only its buttons
+// take pointer events: the bar spans the box's width, and over the corner
+// preview that strip would otherwise sit on the Blockly workspace.
+.playBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: none;
+
+  button {
+    pointer-events: auto;
+  }
+}
+
+.arrowKeys {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// A held key acts on the touch itself: no scroll or double-tap wait, and
+// no selection or callout under a long press.
+.holdKey {
+  touch-action: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 // Restart buttons in the play area's top-right corner, clear of the game
@@ -986,6 +1026,11 @@ $tab-segment-height: $tab-item-height - 2px;
   to {
     transform: rotate(360deg);
   }
+}
+
+// Visually hidden: the playspace's how-to-play text.
+.srOnly {
+  @include chrome.sr-only;
 }
 
 // The lab's own ground, which the dance generator also sits on: black in

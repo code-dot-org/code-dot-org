@@ -1,0 +1,39 @@
+.treeCanvas {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  background-color: var(--background-neutral-secondary, #f1f2f4);
+}
+
+.viewport {
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+  // Touch drags and pinches move the tree instead of scrolling or zooming the page.
+  touch-action: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+
+.toolbar {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--border-neutral-primary, #d3d6da);
+  border-radius: var(--shape-sm, 6px);
+  background-color: var(--background-neutral-primary, white);
+  box-shadow: var(--shadow-sm);
+}

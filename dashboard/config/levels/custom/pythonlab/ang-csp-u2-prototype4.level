@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-30T22:58:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "debug",
+        "explainCode",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+        "buildPython": ""
+      }
+    },
+    "long_instructions": "Prototype 4\r\n\r\n",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# MOVIE NIGHT MATCHER\n# A strong sample submission for the Build Your Own Recommender project.\n#\n# AI USE LOG (Skill 3.F):\n\n\nfrom theater import *\n\nprint(\"MOVIE NIGHT MATCHER\")\nprint(\"Answer a few questions and I'll find your movie.\\n\")\n\n# ---------- QUESTION 1: mood, with input validation ----------\nmood = input(\"Are you in the mood for something INTENSE or something RELAXING? (type intense or relaxing) \")\nwhile mood != \"intense\" and mood != \"relaxing\":\n    print(\"Hmm, that's not one of the options -- please type exactly 'intense' or 'relaxing'.\")\n    mood = input(\"Intense or relaxing? \")\n\n# ---------- QUESTION 2: company, with input validation ----------\nwatching_with = input(\"Are you watching ALONE or with OTHERS? (type alone or others) \")\nwhile watching_with != \"alone\" and watching_with != \"others\":\n    print(\"That's not a valid option -- please type exactly 'alone' or 'others'.\")\n    watching_with = input(\"Alone or others? \")\n\n# ---------- QUESTION 3: scare tolerance, with input validation ----------\nscary_ok = input(\"Are you okay with something scary tonight? (yes/no) \")\nwhile scary_ok != \"yes\" and scary_ok != \"no\":\n    print(\"Please answer with exactly 'yes' or 'no'.\")\n    scary_ok = input(\"Okay with scary? (yes/no) \")\n\n# ---------- THE ALGORITHM: nested if-else + a compound if that both matter ----------\nif mood == \"intense\":\n    if watching_with == \"alone\":\n        if scary_ok == \"yes\":\n            recommendation = \"Horror Movie\"\n            reason = \"intense, alone, and okay with scares -- horror hits different solo.\"\n        else:\n            recommendation = \"Action Thriller\"\n            reason = \"intense and alone, but keeping the scares out.\"\n    else:\n        recommendation = \"Group Action Movie\"\n        reason = \"intense with company -- something everyone can react to together.\"\nelse:\n    # Compound condition: BOTH parts matter here. Change either one and the\n    # recommendation changes -- this isn't just an \"and\" for show.\n    if watching_with == \"others\" and scary_ok == \"no\":\n        recommendation = \"Comedy Special\"\n        reason = \"relaxing, with others, and no scares -- comedy's the easy win.\"\n    else:\n        recommendation = \"Documentary\"\n        reason = \"relaxing, and either solo or open to something heavier -- a documentary fits.\"\n\nprint(\"\")\nprint(\"Your movie:\", recommendation)\nprint(\"Check the Theater for your full reveal!\")\n\n# ---------- THE REVEAL (one Theater scene, built from the values above) ----------\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "mini_app": "theater",
+    "mini_app_variant": "functional",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqQoNR5jdlle7jD\n/MNw3qSRVYSVAjKuVU8oYN2+FO9duQ5QXVZhsyRpEo6DcQ9X89FZI5PzLKWp\nwD8hiESRWUjtTUELg+TM8guqfN+xAVy/V30dnGDGpwuUl5AaLLETlHDMSVgy\nRRkmoqqK9njTuAkAFrh/gtBdSEI0VNtvTVGZj7P+Xrs9ULNQwsA243GYBvyk\npX8Ejw/YLwFNbugUH8fe9FFaRLV/1u2fxp6xiIXjWHosJg16iK8STaFJ/aTd\nUJyslsxb0jkpJ7vb0X734TjmB9EUHVv3l94ANuvqfL2v24HdAZW08UDydhDD\nyayE4jjZCS8TN5V01vIaGd77v1g0kShRGhnL1MPhSYYXFjqfD87vOzWBEwO5\nNb3X9IxZYSavrOkKtNMcxSkvlk/4Rb6UvjjrgIA9JCcwXHmYVqwfgKg62V2U\nA6/7djJMDDXCXI7Wqe5WTj6TdmIZ5wXrkPFCT7ZUc8737KxyeLUWOhLGeANc\n1mZS5GC1ieNa4j64BK5vWmpbBnzdpPz7W0NSckU52+fExOWDclkHYDTnmEr+\nq5RL/24BR6IO19qnx4sq8ZwJ9bXj/gI68RHpgGbEeIzcyNpH2R2Cssn8KvJE\ndrZUouhp8gVOYA+DjlzhVsPAJsY/A30jEXXJuCs/7i1xU3/rOugLErA+COvs\nUywFC9TE1zj9iaiKnCO1AqjEeoZPcRXd7usUFgkPvAnrowtYNtNJMvREMMxs\nWdCQ40DYUN8zF9MELChcvr8Y9MWIhDT/pfsR3vkH7Osl1nz47z9Nom/x+/bl\n7kJjYZmhBL02D4u7yvOlqEAK96lSsUmYhtS1VR0/GBvMKarTyU2lLFQ0n91m\nvaOgJ854sztj2zhB4nRY4D5b+85602PldUUJ3l0NVI2FRFfnaprnRB56EM+s\nM88eXn46vRj/BKLoINSh9Uz6Em8YMOCYOAeyJ2knvIvSWVwoSo/rZHCmK8nm\nI+o9AthcEJuAt7nlT02XCzqAb0gYsMxZvQjOVXHHGkyL4tLNpPURs6u5JYdN\nvn4hXUk4HQGNIiDhnpe6zej7t8/GxHrtVLu84USo7rhkXJYGlXcZZWa4wZjr\n9sUiZ/sk52wNc71gpYAvtdJuAKrPoZ7bt06MXdSHSafqoGKsv1qBOR+8gZQ3\nsuPgQxBim4dPX1JhiivBSuyH7Ebhplc89BXlKRW69kz7h6mY9wV12gA3vS8H\nsjz6tu9Kf3yTVHk1477K/AnXJJ9w3eg3LkfCYR8sJOeZZ323ULFQT3GBEsRg\nb2jnl2rIocPbCQ7ez7zLNgPHgfl8hWoQKlRkTQIqSshLk1UxvRVyWATr282Z\npJvEFpbVqIhJ6rXThAIbWf0xeKCyXWs2MYTXFhp+VmZQ1bO0QbGIpw2wiOVj\nGPDDHnbdLPz+51QvzG1sPRJGeNQ/MIsJPAFqD5Wummr1EOJIK+wKYa4XTVCx\nNo7Jgcm1NzqQXa++i5Q7QIdnrihWwqyr9eIwpd1O73xTTSt22OJ7j1NFrfbY\nf/owhDjItBxzH5MbKjqAmqS6NsniqP5LnsYIWo63DB7cVn2VO82v5hl4nJyV\ndT9sUZVjZjVVwHiE2GTg+xp+dLZMN4xKtYzUQC9SsNfqk7vW8kmZSCJJMkV+\n7X927zLJGYFP3bxHWKMRmMdaMEEptm8G9i/lREIb9VPMDwSDyBpvf3GwLjS/\nfu4AOjOWS+Eqv37zKI3bhGpqVgVXn1IrF3b+1hOrDsA/9BlwGVQCctGIbM6y\ndB7pTWrAcJeWOI0YiXU00j2MBMXOMC288kryJa3XTcblaQ41kXI3rFw/vFGc\n4ct1rwuev5Yt8djKB23Og3aP6mLL5Kglh+ujeRbVCPhRXUufRocsFRQTULzi\nNnubTpMVrwFV9ykkHwZaRWYVxSOc3N6aHcZLBAnydM3zlPkKLkaB5QWQ9gKz\nWj18RdEpTX00eFhESRokNJ3fUaM950tsGp0qFvzM980UkBZ3d3Mw1w0TT/BU\nW7SOqq1sAzDZC5neHlFkc3x7FYoAX9tWEDa5Urh5kI4iCpUtn6LJtbETi3ek\ntPT9F0VO7EhD9SjPSWyxqQMiWWX2KjO7d7QsefWYQJbnd3b3cb7m7L7X5qRu\nXbcVe6AI/Twnpf23EP4XnEZQ6QbEBQusXXYZQsYHlnPLxstJZ6DDc5meT0kL\nP/4ihNqwCmqGNjpCRKEoXJbv/ZKmSzk/Qh3FX94KZn5o+zEZKMrLGY5jYONl\nacQ0jMHOzLg59moqnSSwBNnvb8e8MdFAv8lGqnXvX/FDt8Fl2EevL1W84DRn\nOxXLEFZWHpHqBXAbWE7vM15t8N6tjVIqDUVULr8jEjndYK1zkCVFLvyybv41\nMQPnKZe65wxxVaVvW3CB8szq5bFdGYj8dEDYBEXTdU8cHm9pPGEMWSvCJer3\nCLJbmvxJjkrlTcbqiPY5WnsSchjmPyNEIVsw2pf+8NqQy1mMmUY8VbVAuuQQ\ninqVdaQ3ErH2u+fuX2PZzUICX/LjsQ8zt3gkGW+GWDd8UB0Q1nftXCR8hih3\nASkqSBK2QsB0NEMGgG4V0Z7I28NVBEFPyic+q3Nygj0/9QUP/KBrRFpP0xjT\nW0JVRwTcxCBSKb2grTMqkPjUguujh1zkG4Wp8kzjSFQSSehG/mN7ZasVJnLl\nCAFL4t89xA1eWtiVjjrAZVwpquxy9OnH6bCHEhjRJ4plgvsAy2hlf3FSA4Na\nIMU0Et2m6+b81xK2mg3w/uCzxWANOuyYDI9j2cxvYxXN0TkQbYDJDG9lNQZH\nj0Yiv/xWn/mO8PbNg8mLi4qCTkSIBOyVGbZebJFlX+kB2GeZXaIkUZvp/UFF\nbX97Kw/lwDXEurZc7N2IdT7U8zPNVPwoGuvYURxm2rLb5uM/IJsud6nocv2A\nPDIEC/0Rz+E+ReyJx3TIG+5j0ERqjV2RaLOLH1/6louZybN1xRNinYN9VrVj\nl9+zERsrDRc1b9dwydwmVqW9Tlhg6jQDjYbTQZ7O9M8bdQJsFQvFHlPnIPR9\nngG2e5YEzJPj8oYNSdWb2qqrAR6d5/Z+WuEHo0XIlieuLrNlxoutq+YlgSs9\n4KvNXF+8L4CqjxUtVCsCEEqPdEhfnkbr2/B+PbOU+v5p4wyoaA8sNCH/Na/L\n7moW+ywZ0j60Dg0OdVzuvGMHIOTyNnY8rnn/n00MbVwgpjJ4hzKTgYOTC4av\n5gVaenr0/Vy4mHYlFlDbFfaf5Up0xiYTucXV5DfrE0VZtKbhQ20JXlnKjtJG\nMbJSMauOBkSUpMq76C9o4nCEAVxN89leiEwLXk4BsxGgQYiTWpT1i4pwLitp\nuZSZrbNqaxHeWaNevn5EQjVRk2fhBTYfNCZFgey+Y3A5vkJaxjip83wAK/ll\nywEtZ7mgTG0ncGaNCm8t6Zx/EiMs9HQia7GsfcAd9juhScG2PgvNnXWuyo6/\nH4PK7SFAKYY2UrMXlJPm7x5/fjI08wLfZPhXWPRUlJRXstxJVyxkwUMvVqTx\n7aQ7l9b2bgBRZRWjRfv8yrH6yS980OmnctQXFGILinIvkouBNYcgGJYfXSoT\nOHaQ/mjS+GsWel6rT3XhojrB9anTA3qEcizUHiGRGp1lDEfbrEPnCSvl8fJL\nm7vluoKe8YVQCLNZSt1J8No0djRdNCB1ooFOVTp8QK6aPk0+bknwNebbUyFq\n4OECZd0t2HR/VYfM2Gy9XZvFhsiFwTwY9uGmd9ea5He69XoL7JNly8Ub669e\nSwxCU/o1LQyieAK7W9IjRm0r7Ta+qVOu5HLxrMqfby6G+GWCoDjQNLTtz0nG\nJ0SgNOejhMc/2mfhvbLzlq5218A0nsvTqvXltJ0KfGY/f50+KOttxckpVfKh\nfxjA+NkNbANkPAH/zMCpPpYMxMwMaiA2Wo/UN2/bJPd5/tAxiBZi5dz5oZwn\n6SaliaK34yRv0K424bJ9NLOKUiUo4WCXeiLhxBa7zzj9BmwBSv28Yu3+2QJ4\neUnnoeE2iG9jTEkC/ANpcbkI+1Dq5yE+JZSeP7Cw3IZJYBz7DJa4xSiSR01/\noWtQ//25BeAKALMOceO/lUGWEcoTWcLZOHZJccrMiQWdEHLLjGe0HYSgdqJS\n7o4bOu8y8753lfBp0HDKAdRUkAMx8rrwMdLQf1B3ZDDMKw76hl/FMb5HMDWr\nHOAH5dM4CXz2MHyljhcY4h+nIB171/aPRhrhHJbnyLSKgT8XCRIOFE5n2bok\nx/oQDESO9EwfpdkuAkQM8hcopqz++W8Z9Q128FFewuUqTmJCmVtSQsRB33Fb\niHmvfdjb05DVT8ot8D8xFU4nK5y29ZUUHYWx+KS0LJ2+JihhoO1Ro8mteW6k\n9Q5kMJ/pmRAgXzauv1PHW9gen9mqoJvym6DyRicJ2KsLd1E5xn1NllsfpBC+\nmG1awlzHQyXjBNgJetmYbdn/Un2gunTuGTkj9LTxsKTXwcgwICEPq8pw7y6H\n4CoV6vAriU7E/fNJWP1mEquF8PamN/sqPCFkt+Qdr4jDfMId8tdE3/eM4LdP\nJUIRWPWuylqMW4xdglzO3Dr6g7M8RLYoUwwvEfdu/3erPt7zsnCtqxODJVU6\n0QqNv0qEP3E8Afy7wYKb46+uwnfMbHu1m4Eua3fPQJy7Ifj/J6+GSsdtCJgf\nmDX3Dxquz0qE1odSzM0xLDLQHt4eCQPWsb1m9JmAXtylqgsyMkbCuxD5hkx2\nBqM50DU36EM7tmRk0padMp05wMXyoVEvEwnJFxu/nibp1nTOBmGPT0Z9DPG4\nKpnM1ZQse5ER8P+kk9NTGGGkFmlgnV+PN05eUQDsjnP0EK5DvAhOQZ+yqq+0\npScIMrtZrkZpOjdlQCg4BqH5j4bdt/GHDc4D6oxTzYUC2xBiJx7RQiVCnqi4\n3YdBhsx8HrzGEAUg9KLOqX1GEPWneHASCGn+ODZXCWIlCd7qs59pkcsiXT4X\nmBNEW42LPhq36KmG\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-30T22:58:50.553+00:00\",\"changed\":[\"cloned from \\\"ang-csp-u2-prototype3\\\"\"],\"cloned_from\":\"ang-csp-u2-prototype3\"},{\"changed_at\":\"2026-09-30 22:59:01 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:02:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:02:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:06:35 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:08:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:08:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:13:45 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:19:53 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:21:35 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -618,6 +618,7 @@ class Section < ApplicationRecord
   # This is only needed for the teacher dashboard SELECTED section.
   def selected_section_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
+      ai_chat_dependency = assigned_ai_chat_tools_dependency
       login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
       if login_type == LOGIN_TYPE_LTI_V1
         issuer = lti_course.lti_integration.issuer
@@ -655,7 +656,8 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
-        assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+        assigned_ai_chat_tools_dependency: ai_chat_dependency,
+        assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
         ai_chat_access_level: ai_chat_access_level,
       }
     end
@@ -670,6 +672,7 @@ class Section < ApplicationRecord
   # from the primary, since the replica may not have caught up yet.
   def summarize(include_students: true, role: :reading)
     ActiveRecord::Base.connected_to(role: role) do
+      ai_chat_dependency = assigned_ai_chat_tools_dependency
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
       course_version_name =
@@ -747,7 +750,8 @@ class Section < ApplicationRecord
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
-          assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+          assigned_ai_chat_tools_dependency: ai_chat_dependency,
+          assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
           ai_chat_access_level: ai_chat_access_level,
         }
       )
@@ -871,17 +875,25 @@ class Section < ApplicationRecord
   end
 
   # Returns true if any student in the section has ever made progress on any unit
-  # in any course that the instructor of the section can be an instructor for.
+  # in any course whose progress the instructor of the section is allowed to see.
   def any_student_has_progress?
     units = Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)})
     unit_groups = units.map(&:unit_groups).flatten.uniq
-    unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
+    unit_groups.any? {|unit_group| unit_group.course_progress_viewable?(user)}
   end
 
   def assigned_ai_chat_tools_dependency
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
     SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
+  end
+
+  # Whether this section's assigned unit or course has levels required
+  # AI chat tools that are going to be blocked due to the teacher's region
+  def required_inaccessible_ai_models?(dependency = assigned_ai_chat_tools_dependency)
+    return false unless dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]
+    assigned = script || unit_group
+    !!assigned&.requires_inaccessible_ai_models?(user)
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

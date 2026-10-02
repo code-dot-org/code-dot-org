@@ -1,0 +1,33 @@
+.toggle {
+  margin-top: 20px;
+  background-color: var(--ailab-background);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 10px;
+  height: 42px;
+}
+
+.pill {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Gotham 5r', sans-serif;
+  font-size: 20px;
+  background-color: var(--ailab-background);
+  margin: 0 0 0 20px;
+  box-shadow: none;
+  outline: none;
+  padding: 8px 18px;
+  float: left;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--ailab-teal);
+  color: white;
+}
+
+.correct {
+  color: #73be73;
+}
