@@ -56,6 +56,27 @@ export function getUniqueOptions(
   );
 }
 
+// Ties go to the option that comes first in `options`.
+export function getMostAndLeastCommon(
+  options: string[],
+  frequencies: Record<string, number>,
+): {mostCommon: string; leastCommon: string} | undefined {
+  if (options.length === 0) {
+    return undefined;
+  }
+  let mostCommon = options[0];
+  let leastCommon = options[0];
+  for (const option of options) {
+    if (frequencies[option] > frequencies[mostCommon]) {
+      mostCommon = option;
+    }
+    if (frequencies[option] < frequencies[leastCommon]) {
+      leastCommon = option;
+    }
+  }
+  return {mostCommon, leastCommon};
+}
+
 export function isColumnReadOnly(metadata: Metadata, column: string): boolean {
   const metadataColumnType =
     column &&

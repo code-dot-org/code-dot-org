@@ -22,6 +22,7 @@ import {getSelectableColumns} from '../selectors';
 import FieldLabel from './FieldLabel';
 import SentenceTag from './SentenceTag';
 
+import appStyles from '../app.module.scss';
 import styles from './trainPanel.module.scss';
 
 const TrainPanel = () => {
@@ -166,7 +167,7 @@ const TrainPanel = () => {
             </div>
           </div>
           <div className={styles.sentence}>
-            <span className={styles.visuallyHidden}>{readableSentence}</span>
+            <span className={appStyles.visuallyHidden}>{readableSentence}</span>
             {sentenceParts}
           </div>
           <div className={styles.actionRow}>
