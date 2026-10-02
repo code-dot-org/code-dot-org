@@ -62,20 +62,20 @@ describe('SimpleHeader', () => {
     expect(document.querySelector('#header_middle_content')).toBeNull();
   });
 
-  it('centres a flex row whose parts may each shrink', () => {
+  it('centres a flex row where the names shrink and the buttons do not', () => {
     renderHeader({appLoadStarted: true, appLoaded: true});
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.style.display).toBe('flex');
     expect(row.style.justifyContent).toBe('center');
-    for (const id of [
-      'project_info_container',
-      'unit_name_container',
-      'simple_progress_container',
-    ]) {
+    for (const id of ['unit_name_container', 'simple_progress_container']) {
       const part = document.querySelector(`#${id}`) as HTMLElement;
       expect(part.style.minWidth).toBe('0');
       expect(part.style.flexShrink).toBe('1');
     }
+    const buttons = document.querySelector(
+      '#project_info_container'
+    ) as HTMLElement;
+    expect(buttons.style.flexShrink).toBe('0');
     expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
       'Story'
     );

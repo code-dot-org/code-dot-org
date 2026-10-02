@@ -108,11 +108,12 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: 'center',
     animation: 'header-fadein 0.4s',
   },
-  // Each part may shrink below its content; what it holds ellipsizes.
+  // The project buttons cannot shrink, and their container clips, so the
+  // project info keeps its width and the names give way instead.
   projectInfo: {
-    flex: '0 1 auto',
-    minWidth: 0,
+    flex: 'none',
   },
+  // Each name may shrink below its content; what it holds ellipsizes.
   unitName: {
     flex: '0 1 auto',
     minWidth: 0,
