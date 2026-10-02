@@ -287,12 +287,14 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
       {currentPanel === 'results' && (
         <BodyContainer flush>
-          <ContainerLeft>
-            <Results />
-          </ContainerLeft>
-          <ContainerRight>
-            <TestPanel />
-          </ContainerRight>
+          <div className={styles.panelRow}>
+            <ContainerLeft>
+              <Results />
+            </ContainerLeft>
+            <ContainerRight>
+              <TestPanel />
+            </ContainerRight>
+          </div>
         </BodyContainer>
       )}
 
