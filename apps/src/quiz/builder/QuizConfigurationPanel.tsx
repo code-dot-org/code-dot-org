@@ -512,10 +512,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   onChange={handleHideQuestionsAfterSubmitChange}
                 />
               </div>
-              <p className={styles.cardHelperText}>
-                Show only the score, not the individual questions, once
-                submitted.
-              </p>
             </div>
           </ConfigCard>
         </>
