@@ -137,6 +137,9 @@ class ChallengeResponsesController < ApplicationController
     section = Section.find(params[:section_id])
     authorize! :list_projects, section
     section_scope = scope.where(user_id: section.students.select(:id))
+    unless current_user.students.exists?(id: section.students.select(:id))
+      section_scope = section_scope.where(approved: true).or(section_scope.where(user_id: current_user.id))
+    end
     ChallengeResponse.where(id: section_scope.group(:challenge_id, :user_id).select('MAX(id)'))
   end
 
