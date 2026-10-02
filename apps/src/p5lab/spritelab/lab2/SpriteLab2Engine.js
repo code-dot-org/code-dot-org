@@ -496,10 +496,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (Date.now() - this.lastRestartAt_ < RESTART_QUIET_MS) {
         return;
       }
-      if (this.onRestartScene && this.beginSceneJump_()) {
-        this.lastRestartAt_ = Date.now();
-        this.onRestartScene();
-      }
+      this.triggerSceneJump_(
+        this.onRestartScene &&
+          (() => {
+            this.lastRestartAt_ = Date.now();
+            this.onRestartScene();
+          })
+      );
     };
     library.commands.goToExternalScene = sceneKey => {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
@@ -507,12 +510,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     return library;
   }
 
-  // A block-triggered jump: through the gate, then the view's handler.
-  // Nothing starts without a handler (an engine with no view wired).
+  // Off the interpreter's step: the handler tears down the interpreter this
+  // command runs in. No handler (an engine with no view wired) starts nothing.
   triggerSceneJump_(handler, ...args) {
-    if (handler && this.beginSceneJump_()) {
-      handler(...args);
+    if (!handler) {
+      return;
     }
+    setTimeout(() => {
+      if (!this.destroyed_ && this.beginSceneJump_()) {
+        handler(...args);
+      }
+    }, 0);
   }
 
   /**

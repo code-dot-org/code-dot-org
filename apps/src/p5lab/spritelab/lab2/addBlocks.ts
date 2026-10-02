@@ -63,22 +63,37 @@ function pinnedValues(entry: AddBlock): [string | null, string, unknown][] {
   return values;
 }
 
+// Field values compare as text; a field that holds an object (a variable's
+// id and name) compares by its JSON.
+function sameValue(have: unknown, want: unknown): boolean {
+  if (have === undefined || have === null) {
+    return false;
+  }
+  const text = (v: unknown) =>
+    typeof v === 'object' ? JSON.stringify(v) : String(v);
+  return text(have) === text(want);
+}
+
 /** Whether a workspace block stands for an entry: it carries the entry's
     tag, or, untagged (older than tags, or built from the toolbox), it has
     the entry's type and every value the entry pins. */
-export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
+export function matchesEntry(
+  present: PresentBlock,
+  entry: AddBlock,
+  pins = pinnedValues(entry)
+): boolean {
   if (present.type !== entry.type) {
     return false;
   }
   if (entry.data && present.data) {
     return present.data === entry.data;
   }
-  return pinnedValues(entry).every(([input, name, value]) => {
-    const have = input
-      ? present.inputFieldValue(input, name)
-      : present.fieldValue(name);
-    return have !== undefined && String(have) === String(value);
-  });
+  return pins.every(([input, name, value]) =>
+    sameValue(
+      input ? present.inputFieldValue(input, name) : present.fieldValue(name),
+      value
+    )
+  );
 }
 
 /** The blocks the workspace lacks (see matchesEntry). */
@@ -87,9 +102,10 @@ export function missingBlocks(
   blocks: AddBlock[]
 ): AddBlock[] {
   const presentBlocks = Array.from(present);
-  return blocks.filter(
-    block => !presentBlocks.some(p => matchesEntry(p, block))
-  );
+  return blocks.filter(block => {
+    const pins = pinnedValues(block);
+    return !presentBlocks.some(p => matchesEntry(p, block, pins));
+  });
 }
 
 /** Where the next added block begins: a gap under the lowest stack, at
@@ -185,11 +201,11 @@ export function freeStackEnd(
 }
 
 /** Hang the shadow on the first stack of the type with a free end, and
-    move the stacks below it out of its way; returns whether it was hung. */
+    move the stacks below it out of its way; returns that stack, or null. */
 export function attachShadow(
   workspace: BlocklyCore.WorkspaceSvg,
   entry: AttachShadow
-): boolean {
+): BlocklyCore.BlockSvg | null {
   for (const top of workspace.getTopBlocks(false)) {
     if (top.type !== entry.attachTo) {
       continue;
@@ -210,10 +226,10 @@ export function attachShadow(
             makeRoomBelow(stackBox(top), others.map(stackBox));
           }
         });
-      return true;
+      return top;
     }
   }
-  return false;
+  return null;
 }
 
 /**
@@ -247,6 +263,8 @@ export function addMissingBlocks(
         workspace,
         {recordUndo: false}
       );
+      // Rendered now, so the next entry is placed under its real height.
+      BlocklyCore.renderManagement.triggerQueuedRenders(workspace);
       added.push(block as BlocklyCore.BlockSvg);
     } catch (e) {
       // A block the pool cannot build (a misnamed input, a missing type) is
@@ -257,13 +275,9 @@ export function addMissingBlocks(
   for (const entry of entries) {
     if (isAttachShadow(entry)) {
       try {
-        if (attachShadow(workspace, entry)) {
-          const top = workspace
-            .getTopBlocks(false)
-            .find(block => block.type === entry.attachTo);
-          if (top) {
-            added.push(top);
-          }
+        const top = attachShadow(workspace, entry);
+        if (top) {
+          added.push(top);
         }
       } catch (e) {
         console.warn(`add_blocks shadow for ${entry.attachTo} not hung:`, e);
@@ -274,16 +288,28 @@ export function addMissingBlocks(
   return added.length;
 }
 
-// Scroll the workspace so the blocks just added are on screen: a long
-// program can push them below the fold on a small screen.
-function showBlocks(
+// Scroll the blocks just added on screen: a long program can leave them
+// below the fold of a small screen.
+async function showBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   blocks: BlocklyCore.BlockSvg[]
-): void {
-  if (!blocks.length || !workspace.isMovable()) {
+): Promise<void> {
+  // scrollBoundsIntoView is internal to Blockly: without it, no scroll.
+  if (
+    !blocks.length ||
+    !workspace.isMovable() ||
+    typeof workspace.scrollBoundsIntoView !== 'function'
+  ) {
     return;
   }
-  const rects = blocks.map(block => block.getBoundingRectangle());
+  await BlocklyCore.renderManagement.finishQueuedRenders();
+  // A hung placeholder sizes itself a tick after the renders run.
+  await new Promise(resolve => setTimeout(resolve));
+  const live = blocks.filter(block => !block.isDisposed());
+  if (!live.length) {
+    return;
+  }
+  const rects = live.map(block => block.getBoundingRectangle());
   workspace.scrollBoundsIntoView(
     new BlocklyCore.utils.Rect(
       Math.min(...rects.map(r => r.top)),
