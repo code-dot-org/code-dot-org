@@ -1,5 +1,4 @@
 import {
-  addReaction,
   ChallengeResponse,
   ChallengeResponseDetail,
   getChallengeResponse,
@@ -14,14 +13,19 @@ import React from 'react';
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import experiments from '@cdo/apps/util/experiments';
 
+const mockRequest = jest.fn();
+
+// ReactionChips now calls the package's own api module, which the barrel
+// mock below cannot reach; its writes surface at the transport.
 jest.mock('@code-dot-org/core/api', () => {
-  const client = {transport: {}};
+  const client = {
+    transport: {request: (...args: unknown[]) => mockRequest(...args)},
+  };
   return {useApiClient: () => client};
 });
 
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  addReaction: jest.fn(),
   getChallengeResponse: jest.fn(),
   getUnitCounts: jest.fn(),
   listChallengeResponses: jest.fn(),
@@ -30,7 +34,6 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
 const mockList = listChallengeResponses as jest.Mock;
 const mockUnitCounts = getUnitCounts as jest.Mock;
 const mockDetail = getChallengeResponse as jest.Mock;
-const mockAddReaction = addReaction as jest.Mock;
 const listParams = () =>
   mockList.mock.calls.map(([, params]) => params.toString());
 
@@ -111,7 +114,7 @@ describe('ChallengeGallery', () => {
     mockList.mockReset();
     mockUnitCounts.mockReset();
     mockDetail.mockReset();
-    mockAddReaction.mockReset();
+    mockRequest.mockReset();
     experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
     // Project navigation pushes ?project=<id>; start each test off a
     // clean URL.
@@ -274,9 +277,9 @@ describe('ChallengeGallery', () => {
     mockDetail.mockResolvedValue(whiteboardDetail);
     mockUnitCounts.mockResolvedValue({});
     mockList.mockResolvedValue([whiteboardResponse]);
-    mockAddReaction.mockResolvedValue([
-      {emoji: 'heart', count: 1, reacted: true},
-    ]);
+    mockRequest.mockResolvedValue({
+      reactions: [{emoji: 'heart', count: 1, reacted: true}],
+    });
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
@@ -292,7 +295,11 @@ describe('ChallengeGallery', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
-    expect(mockAddReaction).toHaveBeenCalledWith(expect.anything(), 8, 'heart');
+    expect(mockRequest).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses/8/reactions',
+      body: {emoji: 'heart'},
+    });
 
     // Back on the gallery, the card carries the reaction made on the project
     // page rather than the stale empty list from the initial fetch. The card

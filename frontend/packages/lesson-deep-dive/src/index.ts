@@ -47,3 +47,4 @@ export {
   listChallengeResponses,
   removeReaction,
 } from './gallery/api';
+export {default as ReactionChips} from './gallery/ReactionChips';
