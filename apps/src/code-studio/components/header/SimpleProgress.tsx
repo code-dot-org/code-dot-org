@@ -14,7 +14,7 @@ const FILL_TRANSITION = window.matchMedia?.('(prefers-reduced-motion: reduce)')
   ? undefined
   : 'width 400ms ease-out';
 
-/** A lesson's level as the progress store gives it; only what the banner reads. */
+/** A lesson's level as the progress store gives it; only what this reads. */
 export interface ProgressLevel {
   headerLabel?: string;
   isCurrentLevel?: boolean;
@@ -94,7 +94,7 @@ const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
   const progress = subPath?.total ? subPath : null;
   return (
     <div id="simple_progress" style={{width, overflow: 'hidden'}}>
-      <div ref={innerRef} style={styles.banner}>
+      <div ref={innerRef} style={styles.row}>
         {imageUrl && <img src={imageUrl} alt="" style={styles.image} />}
         {label && (
           // Keyed on the label so a new part starts at its own fill rather
@@ -142,7 +142,7 @@ export default SimpleProgress;
 const styles: Record<string, React.CSSProperties> = {
   // Natural width when the header has room; no wider than the slot when
   // it has not, so the label and bar shrink instead of being cut off.
-  banner: {
+  row: {
     display: 'inline-flex',
     alignItems: 'center',
     height: 50,

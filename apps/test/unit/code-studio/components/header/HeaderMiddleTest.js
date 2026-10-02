@@ -172,7 +172,7 @@ describe('HeaderMiddle', () => {
     expect(widths.finish).toEqual(0);
   });
 
-  it('gives the popup no room when a banner replaces the bubbles', () => {
+  it('gives the popup no room when simple progress replaces the bubbles', () => {
     const widths = HeaderMiddle.getWidths(
       350,    // width,
       false,  // projectInfoOnly,
@@ -190,7 +190,7 @@ describe('HeaderMiddle', () => {
     expect(widths.showPopupBecauseProgressCropped).toEqual(false);
   });
 
-  it('keeps the lesson list popup for a banner unit with several lessons', () => {
+  it('keeps the lesson list popup for a simple progress unit with several lessons', () => {
     const widths = HeaderMiddle.getWidths(
       350,    // width,
       false,  // projectInfoOnly,

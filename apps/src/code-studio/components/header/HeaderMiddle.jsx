@@ -223,7 +223,7 @@ class HeaderMiddle extends React.Component {
       this.props.lessonData && this.props.lessonData.finishLink
     );
 
-    // The banner takes the bubbles' slot and reports its width the same way.
+    // Simple progress takes the bubbles' slot and reports its width the same way.
     const showSimpleProgress = !!scriptData?.simpleProgress;
 
     const widths = HeaderMiddle.getWidths(

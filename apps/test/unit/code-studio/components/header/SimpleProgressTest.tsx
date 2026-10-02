@@ -80,7 +80,7 @@ describe('SimpleProgress', () => {
     );
     const {rerender} = render(squeezed());
     const label = screen.getByText('Story');
-    // jsdom lays nothing out: the banner measures 0 wide, and the label
+    // jsdom lays nothing out: the row measures 0 wide, and the label
     // hides 80px behind its ellipsis.
     Object.defineProperty(label, 'scrollWidth', {value: 140});
     Object.defineProperty(label, 'clientWidth', {value: 60});
