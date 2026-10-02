@@ -8,12 +8,12 @@ import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 
 import LessonProgress from '../progress/LessonProgress';
 
-import HeaderBanner from './HeaderBanner';
 import HeaderFinish from './HeaderFinish';
 import HeaderPopup from './HeaderPopup';
 import ProjectInfo from './ProjectInfo';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 import ScriptName from './ScriptName';
+import SimpleProgress from './SimpleProgress';
 
 // These components will be given additional width beyond what they desire.
 const scriptNameExtraWidth = 10;
@@ -316,7 +316,7 @@ class HeaderMiddle extends React.Component {
               }}
             >
               {showBanner ? (
-                <HeaderBanner
+                <SimpleProgress
                   imageUrl={scriptData.headerBannerImage}
                   levels={levels}
                   width={widths.progress - lessonProgressExtraWidth}
