@@ -5,6 +5,8 @@ import {
   matchesEntry,
   missingBlocks,
   placeBelow,
+  trailingShadow,
+  unfilledOutlines,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 
 const placeholder = (like: string, fields?: Record<string, string>) => ({
@@ -227,5 +229,82 @@ describe('addBlocks', () => {
     expect(freeStackEnd(filled, GO_TO_SCENE)).toBe(
       filled.nextConnection.targetBlock().nextConnection
     );
+  });
+
+  describe('unfilled outlines', () => {
+    // A top block of `type` over `ends`, read by the matcher like a block.
+    const top = (
+      type: string,
+      ends: End[],
+      values: {data?: string; fields?: Record<string, unknown>} = {}
+    ) =>
+      Object.assign(stack(...ends), {
+        type,
+        data: values.data,
+        getFieldValue: (name: string) => values.fields?.[name],
+        getInputTargetBlock: () => null,
+      });
+
+    const workspace = (...tops: unknown[]) =>
+      ({getTopBlocks: () => tops} as unknown as Parameters<
+        typeof unfilledOutlines
+      >[0]);
+    const WHEN_RUN_SAY = {attachTo: 'spritelab2_whenRun', shadow: SAY};
+    const AT_6 = {type: 'gamelab_atTime', data: 'at-6'};
+
+    it('finds the shadow a stack ends in', () => {
+      const waiting = stack({shadow: SAY, next: true}, {isShadow: true});
+      expect(trailingShadow(waiting)?.shadow).toBe(
+        waiting.nextConnection.targetBlock()
+      );
+      expect(trailingShadow(stack({shadow: SAY, next: true}, {}))).toBeNull();
+      expect(trailingShadow(stack(null))).toBeNull();
+    });
+
+    it("a hung placeholder still waiting counts; a filled one doesn't", () => {
+      const waiting = top('spritelab2_whenRun', [
+        {shadow: SAY, next: true},
+        {isShadow: true},
+      ]);
+      expect(unfilledOutlines(workspace(waiting), [WHEN_RUN_SAY])).toEqual([
+        waiting,
+      ]);
+      const filled = top('spritelab2_whenRun', [{shadow: SAY, next: true}, {}]);
+      expect(unfilledOutlines(workspace(filled), [WHEN_RUN_SAY])).toEqual([]);
+    });
+
+    it("another level's placeholder on the same stack is not this level's", () => {
+      const waiting = top('spritelab2_whenRun', [
+        {shadow: GO_TO_SCENE, next: true},
+        {isShadow: true},
+      ]);
+      expect(unfilledOutlines(workspace(waiting), [WHEN_RUN_SAY])).toEqual([]);
+    });
+
+    it("an added block's outline counts while it waits, by the block's tag", () => {
+      const waiting = top(
+        'gamelab_atTime',
+        [{shadow: SAY, next: true}, {isShadow: true}],
+        {data: 'at-6'}
+      );
+      const other = top(
+        'gamelab_atTime',
+        [{shadow: SAY, next: true}, {isShadow: true}],
+        {data: 'at-9'}
+      );
+      expect(unfilledOutlines(workspace(other, waiting), [AT_6])).toEqual([
+        waiting,
+      ]);
+    });
+
+    it('lists a stack once when two entries point at it', () => {
+      const waiting = top('spritelab2_whenRun', [
+        {shadow: SAY, next: true},
+        {isShadow: true},
+      ]);
+      expect(
+        unfilledOutlines(workspace(waiting), [WHEN_RUN_SAY, WHEN_RUN_SAY])
+      ).toEqual([waiting]);
+    });
   });
 });

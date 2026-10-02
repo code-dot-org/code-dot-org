@@ -4,6 +4,8 @@
 
 import * as BlocklyCore from 'blockly/core';
 
+import {scrollIntoView} from './scrollIntoView';
+
 /** A block to add. Its `data`, when set, tells it apart from another entry
     of the same type in one scene. */
 export type AddBlock = BlocklyCore.serialization.blocks.State;
@@ -200,6 +202,52 @@ export function freeStackEnd(
   }
 }
 
+/** The shadow a stack ends in, an outline still waiting for its block, with
+    the connection it hangs from; null when the stack ends in a real block. */
+export function trailingShadow(top: BlocklyCore.Block): {
+  connection: BlocklyCore.Connection;
+  shadow: BlocklyCore.Block;
+} | null {
+  for (let block: BlocklyCore.Block = top; ; ) {
+    const connection = block.nextConnection;
+    const next = connection?.targetBlock();
+    if (!connection || !next) {
+      return null;
+    }
+    if (next.isShadow()) {
+      return {connection, shadow: next};
+    }
+    block = next;
+  }
+}
+
+/** The stacks that end in one of the level's outlines: a block the level
+    adds, or the stack its placeholder hangs on, still ending in that
+    placeholder. */
+export function unfilledOutlines(
+  workspace: BlocklyCore.WorkspaceSvg,
+  entries: AddBlockEntry[]
+): BlocklyCore.BlockSvg[] {
+  const tops = workspace.getTopBlocks(false);
+  const found = new Set<BlocklyCore.BlockSvg>();
+  for (const entry of entries) {
+    for (const top of tops) {
+      const end = trailingShadow(top);
+      if (!end) {
+        continue;
+      }
+      const matches = isAttachShadow(entry)
+        ? top.type === entry.attachTo &&
+          samePlaceholder(end.connection.getShadowState(), entry.shadow)
+        : matchesEntry(presentBlock(top), entry);
+      if (matches) {
+        found.add(top);
+      }
+    }
+  }
+  return [...found];
+}
+
 /** Hang the shadow on the first stack of the type with a free end, and
     move the stacks below it out of its way; returns that stack, or null. */
 export function attachShadow(
@@ -236,7 +284,9 @@ export function attachShadow(
  * Add the level's blocks the workspace lacks, each placed below
  * everything already there, and hang its shadows on the stacks named for
  * them. Returns how many were added. Fires ordinary create events, so
- * the workspace saves and re-runs as after an edit.
+ * the workspace saves and re-runs as after an edit. Then scrolls what was
+ * added, and any outline of the level's still waiting for its block, into
+ * view, so a pass with nothing to add still shows the student their task.
  */
 export function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
@@ -284,22 +334,21 @@ export function addMissingBlocks(
       }
     }
   }
-  showBlocks(workspace, added);
+  const show = new Set(added);
+  for (const top of unfilledOutlines(workspace, entries)) {
+    show.add(top);
+  }
+  showBlocks(workspace, [...show]);
   return added.length;
 }
 
-// Scroll the blocks just added on screen: a long program can leave them
-// below the fold of a small screen.
+// Scroll the blocks on screen: a long program can leave them below the
+// fold of a small screen.
 async function showBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   blocks: BlocklyCore.BlockSvg[]
 ): Promise<void> {
-  // scrollBoundsIntoView is internal to Blockly: without it, no scroll.
-  if (
-    !blocks.length ||
-    !workspace.isMovable() ||
-    typeof workspace.scrollBoundsIntoView !== 'function'
-  ) {
+  if (!blocks.length) {
     return;
   }
   await BlocklyCore.renderManagement.finishQueuedRenders();
@@ -310,13 +359,14 @@ async function showBlocks(
     return;
   }
   const rects = live.map(block => block.getBoundingRectangle());
-  workspace.scrollBoundsIntoView(
-    new BlocklyCore.utils.Rect(
-      Math.min(...rects.map(r => r.top)),
-      Math.max(...rects.map(r => r.bottom)),
-      Math.min(...rects.map(r => r.left)),
-      Math.max(...rects.map(r => r.right))
-    ),
+  scrollIntoView(
+    workspace,
+    {
+      top: Math.min(...rects.map(r => r.top)),
+      bottom: Math.max(...rects.map(r => r.bottom)),
+      left: Math.min(...rects.map(r => r.left)),
+      right: Math.max(...rects.map(r => r.right)),
+    },
     STACK_GAP_PX
   );
 }

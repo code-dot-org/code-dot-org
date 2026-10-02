@@ -1520,6 +1520,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // workspace follows the active scene and re-runs the preview.
   // Sources generation and workspace the toolbox was last loaded into.
   const toolboxLoadedForRef = useRef('');
+  // Loads of a scene's code into the workspace. A load puts the view back
+  // wherever the workspace was, so the added-blocks pass runs again after
+  // one and brings the level's outline back on screen.
+  const sceneLoadsRef = useRef(0);
   useEffect(() => {
     if (!animationsSeeded) {
       return;
@@ -1538,6 +1542,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (isEqual(getCurrentBlocks(), source)) {
       return;
     }
+    sceneLoadsRef.current++;
     loadCode(source);
     runLocalScene(activeScene);
   }, [
@@ -1554,8 +1559,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // The level's added blocks join the pinned scene once it is on screen,
   // after the load above (effects run in order), so they sit below what the
-  // workspace has rendered. Per level, not per load: a level reached in
-  // page shares the scene's code with the last one, and loads nothing.
+  // workspace has rendered. Per level and per load: a level reached in page
+  // shares the scene's code with the last one, and loads nothing.
   const addedBlocksForRef = useRef('');
   // Set when Start Over leaves for the first level: the level being left and
   // the reinitialization count before its reset. The pass skips that reset,
@@ -1579,6 +1584,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       activeScene.id,
       sourcesReinitializedCount,
       workspaceVersion,
+      sceneLoadsRef.current,
     ].join(':');
     if (addedBlocksForRef.current === key) {
       return;
