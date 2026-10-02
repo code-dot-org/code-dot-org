@@ -151,7 +151,7 @@ describe('useProgress', () => {
       quiz: [attempt(1), attempt(2)],
       survey: [attempt(1)],
     });
-    expect(store.saved[store.saved.length - 1].inputs).toEqual(
+    expect(store.saved[store.saved.length - 1].questionAnswers).toEqual(
       result.current.attempts
     );
     act(() => result.current.reset());

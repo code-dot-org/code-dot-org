@@ -20,7 +20,6 @@ export function referenceProblems(pathway: Pathway): string[] {
   ];
 }
 
-/** Answers are keyed by question id alone, so each must name one question. */
 function questionProblems(pathway: Pathway): string[] {
   const seen = new Set<string | number>();
   const duplicates = new Set<string | number>();

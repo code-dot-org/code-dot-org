@@ -13,7 +13,6 @@ type QuizAttemptSource = ReturnType<typeof useQuizAttempt>;
 const isMultipleChoice = (q: QuestionsStep['questions'][number]) =>
   q.type === 'MultipleChoiceQuestion';
 
-/** Grades an open attempt against each question's correct choice. */
 export function gradeAttempt(
   step: QuestionsStep,
   open: QuizAttemptData,
@@ -53,24 +52,18 @@ export function gradeAttempt(
   return graded;
 }
 
-/**
- * Quiz attempts for one questions step, kept in the student's progress
- * record instead of on the quiz server.
- */
 export function useLocalAttemptSource(
   step: QuestionsStep,
   attempts: QuizAttemptData[],
   save: (attempts: QuizAttemptData[]) => void
 ): QuizAttemptSource {
-  // Writes chain on this rather than on props, which lag a save by a render.
   const latest = useRef(attempts);
   const lastProps = useRef(attempts);
   if (attempts !== lastProps.current) {
     lastProps.current = attempts;
     latest.current = attempts;
   }
-  // Changes only on begin and finish: the quiz view resets its selections
-  // whenever the attempt's in-progress answers change.
+
   const [attempt, setAttempt] = useState<QuizAttemptData | null>(
     () => attempts[attempts.length - 1] ?? null
   );

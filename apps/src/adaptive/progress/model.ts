@@ -18,8 +18,7 @@ export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 export interface Progress {
   completed: string[];
   started: string[];
-  /** Each questions step's attempts, oldest first. */
-  inputs?: {[stepId: string]: QuizAttemptData[]};
+  questionAnswers?: {[stepId: string]: QuizAttemptData[]};
 }
 
 export const EMPTY_PROGRESS: Progress = {completed: [], started: []};

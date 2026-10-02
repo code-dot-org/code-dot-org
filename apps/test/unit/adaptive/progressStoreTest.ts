@@ -23,7 +23,7 @@ describe('localStorageProgressStore', () => {
   it('reads back attempts saved with the progress', async () => {
     const withAttempts: Progress = {
       ...progress,
-      inputs: {
+      questionAnswers: {
         quiz: [
           {
             id: 1,
@@ -80,7 +80,10 @@ describe('localStorageProgressStore', () => {
     expect(await store.load(key)).toBeUndefined();
     window.localStorage.setItem(
       storageKey,
-      JSON.stringify({pathwayId: 'sample', progress: {...progress, inputs: 1}})
+      JSON.stringify({
+        pathwayId: 'sample',
+        progress: {...progress, questionAnswers: 1},
+      })
     );
     expect(await store.load(key)).toBeUndefined();
   });
