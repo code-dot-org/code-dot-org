@@ -1,6 +1,6 @@
 {
   "key": "self-paced-pl-csd",
-  "display_name": "Teaching AI Discoveries",
+  "display_name": "Teaching CS Discoveries",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
@@ -11,7 +11,7 @@
   "cs_topic": "artificial_intelligence",
   "school_subject": null,
   "device_compatibility": null,
-  "description": "After completing this online professional learning module, you'll be ready to get started teaching Code.org's AI Discoveries curriculum with your students.",
+  "description": "After completing this online professional learning module, you'll be ready to get started teaching CodeAI's CS Discoveries curriculum with your students.",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
