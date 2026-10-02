@@ -8,6 +8,7 @@ import {
   tooManyUniqueOptions,
   isColumnReadOnly,
   getExtrema,
+  getDecimalPlaces,
   containsOnlyNumbers,
   getColumnDescription,
   getMostAndLeastCommon,
@@ -114,6 +115,20 @@ describe('extrema', () => {
     expect(result.max).toBe(mosquitoCountMax);
     expect(result.min).toBe(mosquitoCountMin);
     expect(result.range).toBe(mosquitoCountMax - mosquitoCountMin);
+  });
+});
+
+describe('getDecimalPlaces', () => {
+  const column = cells => cells.map(x => ({x}));
+
+  test('takes the precision of the most precise cells', () => {
+    expect(getDecimalPlaces(column(['3750', '39.1', '46.25']), 'x')).toBe(2);
+  });
+
+  test('reads scientific notation', () => {
+    expect(getDecimalPlaces(column(['1.2E-5']), 'x')).toBe(6);
+    expect(getDecimalPlaces(column(['2e-5']), 'x')).toBe(5);
+    expect(getDecimalPlaces(column(['1.23E+11']), 'x')).toBe(0);
   });
 });
 

@@ -105,6 +105,16 @@ export function getExtrema(data: DataRow[], column: string): Extrema {
   return extrema;
 }
 
+function countDecimalPlaces(cell: string | number): number {
+  const [coefficient, exponent = '0'] = String(cell).toLowerCase().split('e');
+  const fractionDigits = coefficient.split('.')[1]?.length ?? 0;
+  return Math.max(0, fractionDigits - Number(exponent));
+}
+
+export function getDecimalPlaces(data: DataRow[], column: string): number {
+  return Math.max(...getColumnData(data, column).map(countDecimalPlaces));
+}
+
 export function containsOnlyNumbers(data: DataRow[], column: string): boolean {
   const columnData = getColumnData(data, column);
   return columnData.every(cell => !isNaN(Number(cell)));
