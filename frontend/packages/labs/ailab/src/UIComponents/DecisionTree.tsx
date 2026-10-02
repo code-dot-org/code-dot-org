@@ -144,7 +144,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   style={{left: placed.x, top: placed.y}}
                 >
                   {branch && (
-                    <div title={branch} className={styles.branch}>
+                    <div
+                      title={branch}
+                      className={classNames(styles.branch, {
+                        [styles.pathBranch]: pathIds.has(placed.id),
+                      })}
+                    >
                       {branch}
                     </div>
                   )}

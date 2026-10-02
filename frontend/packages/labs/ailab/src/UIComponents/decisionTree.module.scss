@@ -1,5 +1,6 @@
-$path-ring-width: 3px;
+$path-ring-width: 1px;
 $path-color: var(--border-selected-primary, #2b1e9f);
+$off-path-color: var(--border-neutral-secondary, #9ea5ad);
 $overlay-float-min-width: 600px;
 
 .decisionTree {
@@ -43,7 +44,7 @@ $overlay-float-min-width: 600px;
 
 .canvas {
   position: relative;
-  color: var(--text-neutral-black-fixed, black);
+  color: var(--text-neutral-primary, black);
 }
 
 .edges {
@@ -51,13 +52,13 @@ $overlay-float-min-width: 600px;
   top: 0;
   left: 0;
   fill: none;
-  stroke: var(--neutral-gray-70, grey);
+  stroke: $off-path-color;
   stroke-width: 1.5;
 }
 
 .pathEdge {
   stroke: $path-color;
-  stroke-width: 3;
+  stroke-width: 2;
 }
 
 .nodeSlot {
@@ -82,14 +83,11 @@ $overlay-float-min-width: 600px;
   text-align: center;
 }
 
-.question {
-  background-color: var(--background-neutral-white-fixed, white);
-  border-color: var(--ailab-feature);
-}
-
+.question,
 .answer {
-  background-color: var(--ailab-label);
-  border-color: var(--ailab-label);
+  background-color: var(--background-neutral-primary, white);
+  border-color: $off-path-color;
+  box-shadow: var(--shadow-sm);
 }
 
 // An outline, unlike a box-shadow, still shows in forced-colors mode.
@@ -116,11 +114,17 @@ $overlay-float-min-width: 600px;
   height: 18px;
   line-height: 16px;
   padding: 0 6px;
-  border: 1px solid var(--neutral-gray-70, grey);
   border-radius: 9px;
-  background-color: var(--background-neutral-white-fixed, white);
+  background-color: var(--background-neutral-secondary, #f1f2f4);
+  color: var(--text-neutral-secondary, #363b40);
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.pathBranch {
+  background-color: var(--background-selected-primary, #2b1e9f);
+  color: var(--text-selected-primary, white);
+  font-weight: 600;
 }
