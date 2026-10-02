@@ -11,10 +11,15 @@ jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
     {id: '2', headerLabel: 'Story'},
   ],
 }));
-// Connected to a store of its own; stubbed to what the row places.
+// Connected to stores of their own; stubbed to what the row places.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
   default: () => null,
+}));
+jest.mock('@cdo/apps/code-studio/components/header/ScriptName', () => ({
+  __esModule: true,
+  default: (props: {name: string; href: string}) =>
+    require('react').createElement('a', {href: props.href}, props.name),
 }));
 
 function renderHeader(
@@ -23,7 +28,10 @@ function renderHeader(
   const store = createStore(() => ({header, isRtl: false}));
   return render(
     <Provider store={store}>
-      <SimpleHeader scriptData={{simpleProgressImage: '/logo.png'}} />
+      <SimpleHeader
+        scriptData={{simpleProgressImage: '/logo.png'}}
+        scriptNameData={{name: 'hoai2026 dev', href: '/s/hoai2026-dev'}}
+      />
     </Provider>
   );
 }
@@ -59,7 +67,11 @@ describe('SimpleHeader', () => {
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.style.display).toBe('flex');
     expect(row.style.justifyContent).toBe('center');
-    for (const id of ['project_info_container', 'simple_progress_container']) {
+    for (const id of [
+      'project_info_container',
+      'unit_name_container',
+      'simple_progress_container',
+    ]) {
       const part = document.querySelector(`#${id}`) as HTMLElement;
       expect(part.style.minWidth).toBe('0');
       expect(part.style.flexShrink).toBe('1');
@@ -67,6 +79,9 @@ describe('SimpleHeader', () => {
     expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
       'Story'
     );
+    expect(
+      document.querySelector('a[href="/s/hoai2026-dev"]')?.textContent
+    ).toBe('hoai2026 dev');
   });
 
   it('marks the document as carrying the header', () => {

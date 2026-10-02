@@ -1,5 +1,6 @@
 // The level header's middle for a unit with simple progress: the project
-// info and the unit's logo with the part's label and bar, in one flex row.
+// info, the unit name over its saved-at line, and the unit's logo with the
+// part's label and bar, in one flex row.
 // Nothing is measured: each part shrinks on its own and the row centres what
 // is left. HeaderMiddle measures because its bubbles need a count that fits;
 // nothing here does.
@@ -12,6 +13,7 @@ import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 
 import ProjectInfo from './ProjectInfo';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
+import ScriptName from './ScriptName';
 import SimpleProgress, {ProgressLevel} from './SimpleProgress';
 
 // How long the header waits for an app load to begin before showing without
@@ -25,6 +27,8 @@ interface HeaderState {
 
 interface SimpleHeaderProps {
   scriptData: {simpleProgressImage?: string};
+  /** The unit name and its link, as header.build receives them. */
+  scriptNameData?: {name: string; href: string; smallText?: boolean};
 }
 
 /**
@@ -49,6 +53,7 @@ export function useAppLoadGate(): boolean {
 
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   scriptData,
+  scriptNameData,
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
   // The selector builds a new array per call; compare by content or every
@@ -77,6 +82,11 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
       <div id="project_info_container" style={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
+      {scriptNameData && (
+        <div id="unit_name_container" style={styles.unitName}>
+          <ScriptName {...scriptNameData} isRtl={isRtl} />
+        </div>
+      )}
       <div id="simple_progress_container" style={styles.progress}>
         <SimpleProgress
           imageUrl={scriptData.simpleProgressImage}
@@ -102,6 +112,11 @@ const styles: Record<string, React.CSSProperties> = {
   projectInfo: {
     flex: '0 1 auto',
     minWidth: 0,
+  },
+  unitName: {
+    flex: '0 1 auto',
+    minWidth: 0,
+    margin: '0 5px',
   },
   progress: {
     flex: '0 1 auto',

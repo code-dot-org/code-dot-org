@@ -75,13 +75,18 @@ class ScriptName extends React.Component {
   }
 
   render() {
-    const fullWidth = this.getFullWidth();
+    // With no width from the header, the name sits in the header's flex row
+    // and ellipsizes whenever the row squeezes it.
+    const inFlow = this.props.width === undefined;
     const actualWidth = this.props.width;
-    const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
+    const isTruncated =
+      !inFlow && actualWidth > 0 && this.getFullWidth() > actualWidth;
     this._isTruncated = isTruncated;
     const {isRtl} = this.props;
 
-    const ellipsisStyle = isTruncated
+    const ellipsisStyle = inFlow
+      ? styles.flowLink
+      : isTruncated
       ? {
           display: 'block',
           width: actualWidth,
@@ -94,11 +99,17 @@ class ScriptName extends React.Component {
 
     if (!this.props.showProjectUpdatedAt) {
       return (
-        <div style={{...styles.headerContainer, height: 18}}>
+        <div
+          style={
+            inFlow
+              ? {...styles.flowContainer, height: 18}
+              : {...styles.headerContainer, height: 18}
+          }
+        >
           <div
             className="script_name"
             ref="scriptName"
-            style={styles.headerInner}
+            style={inFlow ? styles.flowInner : styles.headerInner}
           >
             {this.renderScriptLink(ellipsisStyle)}
           </div>
@@ -107,13 +118,15 @@ class ScriptName extends React.Component {
     }
 
     return (
-      <div style={styles.headerContainer}>
+      <div style={inFlow ? styles.flowContainer : styles.headerContainer}>
         <div
           className="script_name"
           ref="scriptName"
-          style={{...styles.headerInner, height: 40}}
+          style={
+            inFlow ? styles.flowInner : {...styles.headerInner, height: 40}
+          }
         >
-          <div style={styles.outerContainer}>
+          <div style={inFlow ? styles.flowOuter : styles.outerContainer}>
             <div style={styles.containerWithUpdatedAt}>
               {this.renderScriptLink({
                 ...styles.scriptLinkWithUpdatedAt,
@@ -144,6 +157,27 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
   },
+  flowContainer: {
+    height: 40,
+    minWidth: 0,
+  },
+  flowInner: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    minWidth: 0,
+  },
+  flowOuter: {
+    textAlign: 'end',
+    minWidth: 0,
+  },
+  flowLink: {
+    display: 'block',
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
   scriptLinkWithUpdatedAt: {
     display: 'block',
   },
@@ -158,6 +192,7 @@ const styles = {
   },
 };
 
+export const UnconnectedScriptName = ScriptName;
 export default connect(state => ({
   showProjectUpdatedAt: state.project.showProjectUpdatedAt,
 }))(ScriptName);
