@@ -132,19 +132,6 @@ export const initialState: RootState = {
   resultsTab: ResultsGrades.CORRECT,
 };
 
-function getPanelInstructionsKey(panel: Panel): InstructionsKey | null {
-  switch (panel) {
-    case 'dataDisplayLabel':
-    case 'dataDisplayFeatures':
-      return 'datasetView';
-    case 'continue':
-    case 'finish':
-      return null;
-    default:
-      return panel;
-  }
-}
-
 const ailabSlice = createSlice({
   name: 'ailab',
   initialState,
@@ -343,12 +330,9 @@ const ailabSlice = createSlice({
       state.currentPanel = currentPanel;
       state.trainingModalStep = undefined;
       state.instructionsOverlayActive = showedOverlay;
-      state.instructionsKey = getPanelInstructionsKey(currentPanel);
+      state.instructionsKey = currentPanel as InstructionsKey;
       state.showOverlay = showedOverlay;
-      if (currentPanel === 'dataDisplayLabel') {
-        state.currentColumn = undefined;
-        state.selectedFeatures = [];
-      } else if (currentPanel === 'results') {
+      if (currentPanel === 'results') {
         state.testData = {};
         state.prediction = undefined;
         state.resultsTab = ResultsGrades.CORRECT;
@@ -372,11 +356,9 @@ const ailabSlice = createSlice({
         return;
       }
       if (
-        state.currentPanel === 'dataDisplayFeatures' &&
+        state.currentPanel === 'datasetView' &&
         highlightColumn === state.labelColumn
       ) {
-        // If doing feature selection, and the label column is clicked, do
-        // nothing.
         return;
       }
       state.highlightColumn = highlightColumn;

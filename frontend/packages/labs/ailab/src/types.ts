@@ -178,8 +178,7 @@ export interface PrevNextButtons {
 
 export const CONTENT_PANELS = [
   'selectDataset',
-  'dataDisplayLabel',
-  'dataDisplayFeatures',
+  'datasetView',
   'results',
   'saveModel',
   'modelSummary',
@@ -192,17 +191,8 @@ export type Panel = ContentPanel | 'continue' | 'finish';
 
 export type TrainingModalStep = 'training' | 'testing';
 
-// Both data display panels share the datasetView instructions.
-export const SCREEN_INSTRUCTIONS_KEYS = [
-  'selectDataset',
-  'datasetView',
-  'results',
-  'saveModel',
-  'modelSummary',
-] as const;
-
 export const INSTRUCTIONS_KEYS = [
-  ...SCREEN_INSTRUCTIONS_KEYS,
+  ...CONTENT_PANELS,
   'uploadedDataset',
   'selectedDataset',
   'resultsDetails',

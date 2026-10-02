@@ -5,8 +5,8 @@
   level is next saved.
 */
 import {
+  CONTENT_PANELS,
   INSTRUCTIONS_KEYS,
-  SCREEN_INSTRUCTIONS_KEYS,
   type InstructionsKey,
 } from '@code-dot-org/ailab';
 
@@ -44,12 +44,12 @@ function toFields(keys: readonly string[]): DynamicInstructionsField[] {
   return keys.filter(isLab2Key).map(key => ({key, label: FIELD_LABELS[key]}));
 }
 
-const SCREEN_KEYS: readonly string[] = SCREEN_INSTRUCTIONS_KEYS;
+const CONTENT_PANEL_KEYS: readonly string[] = CONTENT_PANELS;
 
-export const SCREEN_FIELDS = toFields(SCREEN_INSTRUCTIONS_KEYS);
+export const SCREEN_FIELDS = toFields(CONTENT_PANELS);
 
 export const ACTION_FIELDS = toFields(
-  INSTRUCTIONS_KEYS.filter(key => !SCREEN_KEYS.includes(key))
+  INSTRUCTIONS_KEYS.filter(key => !CONTENT_PANEL_KEYS.includes(key))
 );
 
 // An empty value removes the key, so Lab 2 falls back to the default text.

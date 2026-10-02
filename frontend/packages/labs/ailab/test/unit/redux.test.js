@@ -65,20 +65,26 @@ describe('ailab reducer', () => {
     });
 
     test('does not change the instructions while open', () => {
-      let state = reducer(initialState, setCurrentPanel('dataDisplayFeatures'));
+      let state = reducer(initialState, setCurrentPanel('datasetView'));
       state = reducer(state, setTrainingModalStep('training'));
       expect(state.instructionsKey).toBe('datasetView');
     });
   });
 
   describe('setCurrentPanel per-panel resets', () => {
-    test('dataDisplayLabel clears the selected features and current column', () => {
-      let state = reducer(initialState, addSelectedFeature('a'));
-      state = reducer(state, setCurrentColumn('a'));
-      const next = reducer(state, setCurrentPanel('dataDisplayLabel'));
-      expect(next.selectedFeatures).toEqual([]);
-      expect(next.currentColumn).toBeUndefined();
-    });
+    test.each([{}, {hideSelectLabel: true}])(
+      'datasetView keeps the label and features but clears the current column, mode %o',
+      mode => {
+        let state = reducer(initialState, setMode(mode));
+        state = reducer(state, setLabelColumn('lbl'));
+        state = reducer(state, addSelectedFeature('a'));
+        state = reducer(state, setCurrentColumn('a'));
+        const next = reducer(state, setCurrentPanel('datasetView'));
+        expect(next.labelColumn).toBe('lbl');
+        expect(next.selectedFeatures).toEqual(['a']);
+        expect(next.currentColumn).toBeUndefined();
+      },
+    );
 
     test('results clears prediction state but keeps the current column', () => {
       let state = reducer(initialState, setCurrentColumn('a'));
@@ -124,13 +130,13 @@ describe('ailab reducer', () => {
       expect(deselected.currentColumn).toBeUndefined();
     });
 
-    test('selects the label column during feature selection', () => {
+    test('selects the label column on the dataset view', () => {
       let state = reducer(initialState, setLabelColumn('lbl'));
       state = reducer(
         state,
         setColumnsByDataType('lbl', ColumnTypes.NUMERICAL),
       );
-      state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
+      state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('lbl'));
       expect(next.currentColumn).toBe('lbl');
       expect(next.instructionsKey).toBe('datasetView');
@@ -189,20 +195,12 @@ describe('ailab reducer', () => {
       expect(next.showOverlay).toBe(false);
     });
 
-    test.each(['dataDisplayLabel', 'dataDisplayFeatures'])(
-      '%s records datasetView',
-      panel => {
-        const next = reducer(initialState, setCurrentPanel(panel));
-        expect(next.instructionsKey).toBe('datasetView');
-      },
-    );
-
     test('selecting a feature column leaves the instructions alone', () => {
       let state = reducer(
         initialState,
         setColumnsByDataType('a', ColumnTypes.NUMERICAL),
       );
-      state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
+      state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBe('a');
       expect(next.instructionsKey).toBe('datasetView');

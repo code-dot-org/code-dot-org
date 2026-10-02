@@ -128,11 +128,7 @@ const processMode = (mode: Mode | undefined): void => {
       // Also retrieve model metadata and set column data types.
       parseJSON(assetPath + item.metadataPath);
 
-      if (mode.hideSelectLabel) {
-        store.dispatch(setCurrentPanel('dataDisplayFeatures'));
-      } else {
-        store.dispatch(setCurrentPanel('dataDisplayLabel'));
-      }
+      store.dispatch(setCurrentPanel('datasetView'));
       panelSet = true;
     }
   }
@@ -154,7 +150,7 @@ export type {
   ModelDataToSave,
   SaveResponse,
 } from './types';
-export {INSTRUCTIONS_KEYS, SCREEN_INSTRUCTIONS_KEYS} from './types';
+export {CONTENT_PANELS, INSTRUCTIONS_KEYS} from './types';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,
