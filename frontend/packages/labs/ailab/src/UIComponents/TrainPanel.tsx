@@ -99,8 +99,6 @@ const TrainPanel = () => {
     );
   };
 
-  // Training also computes the test results, so the modal's Skip can go
-  // straight to them.
   const onTrain = () => {
     train.init(store);
     train.onClickTrain();

@@ -5,7 +5,6 @@ import {useEffect, useState} from 'react';
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {reportPanelView} from '../helpers/metrics';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setCurrentPanel, setTrainingModalStep} from '../redux';
@@ -23,12 +22,8 @@ const TrainingModal = () => {
   const step = useAppSelector(state => state.trainingModalStep);
   const [testingFinished, setTestingFinished] = useState(false);
 
-  // These steps used to be panels; keep reporting them as panel views.
+  // This component stays mounted between runs, so each run starts over.
   useEffect(() => {
-    if (step) {
-      reportPanelView(step === 'training' ? 'trainModel' : 'generateResults');
-    }
-    // This component stays mounted between runs, so each run starts over.
     if (step === 'training') {
       setTestingFinished(false);
     }
