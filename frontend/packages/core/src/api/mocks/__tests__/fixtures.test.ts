@@ -7,6 +7,7 @@ import {afterAll, afterEach, beforeAll, describe, expect, it} from 'vitest';
 
 import {
   clearActiveScenario,
+  registerLabFixtures,
   clearMockFixtures,
   registerMockFixture,
   setActiveScenario,
@@ -142,5 +143,20 @@ describe('registerMockFixture', () => {
 
     // Route gone: the default levels handler answers with {}.
     expect(await (await get('/levels/1/level_properties')).json()).toEqual({});
+  });
+});
+
+describe("a lab fixture's own routes", () => {
+  it('are served for its scenario, and survive the lab registering again', async () => {
+    const fixtures = {
+      songs: {routes: [{path: '*/api/widget', respond: {from: 'songs'}}]},
+      plain: {},
+    };
+    registerLabFixtures('demo', fixtures);
+    registerLabFixtures('demo', fixtures);
+    setActiveScenario({labKey: 'demo', tag: 'songs'});
+    expect(await (await get('/api/widget')).json()).toEqual({from: 'songs'});
+    setActiveScenario({labKey: 'demo', tag: 'plain'});
+    expect((await get('/api/widget')).status).not.toBe(200);
   });
 });

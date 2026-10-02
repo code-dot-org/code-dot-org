@@ -1,5 +1,6 @@
 import DashboardApiClient from './dashboard/SingletonDashboardApiClient';
 
+export * from './aiGateway';
 export * from './dashboard';
 
 export {DashboardApiClient};

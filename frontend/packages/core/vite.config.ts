@@ -53,6 +53,8 @@ export default defineConfig({
         'src/api/index.ts',
         'src/api/mocks/index.ts',
         'src/api/mocks/server.ts',
+        // Node only: the dev server's local-key stand-in for the AI gateway.
+        'src/api/aiGateway/dev/index.ts',
         'src/constants/index.ts',
         'src/plugins/experiments/index.ts',
         'src/plugins/localization/index.ts',

@@ -33,9 +33,11 @@ function isCanvasImageData(nativeVar: any): boolean {
 }
 
 class CustomMarshalingInterpreter extends Interpreter {
-  customMarshaler?: CustomMarshaler;
+  // Both are set while the base constructor runs; as class fields they
+  // would be reset to undefined when it returns.
+  declare customMarshaler?: CustomMarshaler;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  asyncFunctionList?: any[];
+  declare asyncFunctionList?: any[];
 
   constructor(
     code: string,

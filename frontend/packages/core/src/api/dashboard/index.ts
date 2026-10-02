@@ -1,10 +1,14 @@
 export * from './activities';
 export * from './aichat';
+export * from './animations';
 export * from './assets';
 export * from './auth';
 export * from './channels';
 export * from './courses';
+export * from './images';
 export * from './levels';
+export * from './libraries';
+export * from './media';
 export * from './metrics';
 export * from './preferences';
 export * from './progress';
@@ -12,6 +16,7 @@ export * from './projects';
 export * from './schools';
 export * from './sections';
 export * from './sources';
+export * from './spriteLab';
 export {usersKeys} from './users/users.keys';
 export {buildSchoolData} from './users/buildSchoolData';
 export {

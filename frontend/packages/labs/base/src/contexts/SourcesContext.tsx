@@ -176,9 +176,10 @@ export const SourcesProvider = <
   const readonlyWorkspaceRef = useRef(readonlyWorkspace);
   readonlyWorkspaceRef.current = readonlyWorkspace;
 
-  const [startOverMessage, setStartOverMessage] = useState<string | undefined>(
-    undefined,
-  );
+  // Open while set; a message of its own only for a 'custom' request.
+  const [startOverRequest, setStartOverRequest] = useState<
+    {message?: string} | undefined
+  >(undefined);
 
   // How many times the sources have been replaced wholesale; see the field's
   // note in SourcesContent.
@@ -335,14 +336,21 @@ export const SourcesProvider = <
 
   const onStartOver = useCallback(() => {
     reinitializeSources(memoizedStartOverSources as ProjectSources<U>, true);
-    setStartOverMessage(undefined);
+    setStartOverRequest(undefined);
   }, [reinitializeSources, memoizedStartOverSources]);
 
   const showStartOverDialog = useCallback(
-    (message?: string) => {
-      setStartOverMessage(message || defaultStartOverMessage);
+    (type: MessageType, message?: string) => {
+      setStartOverRequest({
+        message:
+          type === 'custom'
+            ? message
+            : type === 'text'
+              ? STARTOVER_WORKSPACE_TEXT_MESSAGE
+              : defaultStartOverMessage,
+      });
     },
-    [defaultStartOverMessage, setStartOverMessage],
+    [defaultStartOverMessage],
   );
 
   const TypedContext = SourcesContext as unknown as ReturnType<
@@ -364,15 +372,11 @@ export const SourcesProvider = <
       }}
     >
       {children}
-      {startOverMessage !== undefined && (
+      {startOverRequest && (
         <StartOverDialog
           onConfirm={onStartOver}
-          onCancel={() => setStartOverMessage(undefined)}
-          message={
-            startOverMessage ||
-            defaultStartOverMessage ||
-            STARTOVER_WORKSPACE_TEXT_MESSAGE
-          }
+          onCancel={() => setStartOverRequest(undefined)}
+          message={startOverRequest.message}
         />
       )}
     </TypedContext.Provider>

@@ -1544,7 +1544,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.25.6, @babel/runtime@npm:^7.28.6, @babel/runtime@npm:^7.29.2, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.25.6, @babel/runtime@npm:^7.28.6, @babel/runtime@npm:^7.29.2, @babel/runtime@npm:^7.9.2":
   version: 7.29.7
   resolution: "@babel/runtime@npm:7.29.7"
   checksum: 10c0/ca11572f7146b21e0bde6a9ed4bb6a89eafbee5f0944c7eb54d0d8a2dac962c33638a1d611e14faa71dfbb92b4b5f9236232208568a6b7d5c6f3f39ddb91771e
@@ -1695,6 +1695,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/field-bitmap@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "@blockly/field-bitmap@npm:13.3.0"
+  peerDependencies:
+    blockly: ^13.2.0
+  checksum: 10c0/66d219d39e5ceaa41aafa2d04f9399bed982ee0abf18817a62228ea297b18bff1e33058fabda56b02f24cd81f6df0cb1fcee2c4145e6bb14d33f88a9b9774b34
+  languageName: node
+  linkType: hard
+
 "@blockly/field-colour@npm:^6.0.4":
   version: 6.0.12
   resolution: "@blockly/field-colour@npm:6.0.12"
@@ -1703,6 +1712,15 @@ __metadata:
   peerDependencies:
     blockly: ^12.0.0
   checksum: 10c0/e20e84ab8645a3d440a9e07142660a1fa83471806ac79fd8364ffe82044aa0c14854e7d402fac3d1f3bbcbc07103b5c78b43c04141101022dd5d9e4b949255aa
+  languageName: node
+  linkType: hard
+
+"@blockly/field-grid-dropdown@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "@blockly/field-grid-dropdown@npm:13.3.0"
+  peerDependencies:
+    blockly: ^13.2.0
+  checksum: 10c0/fa427de0dc462ba12fc878c0dc1e9564b0672d032b9eb06546062b613ff059729e85c5c1db2126bfb3da6296b710a21fd781121d8b8a3592e25004da2c927e67
   languageName: node
   linkType: hard
 
@@ -2237,6 +2255,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
     "@code-dot-org/progress": "workspace:*"
+    "@code-dot-org/shared-constants": "workspace:*"
     "@code-dot-org/teacher-dashboard": "workspace:*"
     "@code-dot-org/users": "workspace:*"
     "@emotion/react": "catalog:"
@@ -2569,7 +2588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/shared-constants@workspace:packages/shared-constants":
+"@code-dot-org/shared-constants@workspace:*, @code-dot-org/shared-constants@workspace:packages/shared-constants":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/shared-constants@workspace:packages/shared-constants"
   dependencies:
@@ -2581,6 +2600,64 @@ __metadata:
     vite: "catalog:"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/sprite-lab@workspace:*, @code-dot-org/sprite-lab@workspace:packages/labs/sprite":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/sprite-lab@workspace:packages/labs/sprite"
+  dependencies:
+    "@blockly/field-bitmap": "npm:^13.3.0"
+    "@blockly/field-grid-dropdown": "npm:^13.3.0"
+    "@code-dot-org/audio": "workspace:*"
+    "@code-dot-org/blockly": "workspace:*"
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lab": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/music-lab": "workspace:*"
+    "@code-dot-org/playwright-support": "workspace:*"
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
+    "@reduxjs/toolkit": "catalog:"
+    "@tanstack/react-query": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/lodash": "npm:^4"
+    "@types/md5": "npm:^2.3.5"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    acorn: "npm:^8.15.0"
+    blockly: "npm:^13.1.0"
+    classnames: "catalog:"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    lodash: "npm:^4.17.21"
+    md5: "npm:^2.3.0"
+    p5: "npm:^2.3.4"
+    playwright: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    stylelint: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "npm:^2.2.2"
+    vitest: "catalog:"
+    vitest-canvas-mock: "npm:^1.1.0"
+  peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
+    "@tanstack/react-query": "*"
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
 
@@ -2598,6 +2675,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/music-lab": "workspace:*"
     "@code-dot-org/oceans-lab": "workspace:*"
+    "@code-dot-org/sprite-lab": "workspace:*"
     "@code-dot-org/users": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
@@ -2805,6 +2883,13 @@ __metadata:
   peerDependencies:
     postcss-selector-parser: ^7.0.0
   checksum: 10c0/186b444cabcdcdeb553bfe021f80c58bfe9ef38dcc444f2b1f34a5aab9be063ab4e753022b2d5792049c041c28cfbb78e4b707ec398459300e402030d35c07eb
+  languageName: node
+  linkType: hard
+
+"@davepagurek/bezier-path@npm:^0.0.7":
+  version: 0.0.7
+  resolution: "@davepagurek/bezier-path@npm:0.0.7"
+  checksum: 10c0/b8e23700df3a9f9a1ec8b2887d8198e5532d4b19f01b00a47c1c29149bb19634069b973156f8bb71ca045c3919bca851fd02e9e93bad4f2e8666289e8affc2d1
   languageName: node
   linkType: hard
 
@@ -5110,6 +5195,13 @@ __metadata:
   version: 0.1.3
   resolution: "@istanbuljs/schema@npm:0.1.3"
   checksum: 10c0/61c5286771676c9ca3eb2bd8a7310a9c063fb6e0e9712225c8471c582d157392c88f5353581c8c9adbe0dff98892317d2fdfc56c3499aa42e0194405206a963a
+  languageName: node
+  linkType: hard
+
+"@japont/unicode-range@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@japont/unicode-range@npm:1.0.0"
+  checksum: 10c0/d85e4d1cfaf951ff8061f6957dd1f74946c0e8cf03e40731aeaa6f331a7057cd692b8de5d0b30a1230ba0ce31b81cf37f419196a4c7b2ca2d0a7e690a02a25e7
   languageName: node
   linkType: hard
 
@@ -9324,6 +9416,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"acorn-walk@npm:^8.3.4":
+  version: 8.3.5
+  resolution: "acorn-walk@npm:8.3.5"
+  dependencies:
+    acorn: "npm:^8.11.0"
+  checksum: 10c0/e31bf5b5423ed1349437029d66d708b9fbd1b77a644b031501e2c753b028d13b56348210ed901d5b1d0d86eb3381c0a0fc0d0998511a9d546d1194936266a332
+  languageName: node
+  linkType: hard
+
 "acorn@npm:^7.1.1":
   version: 7.4.1
   resolution: "acorn@npm:7.4.1"
@@ -11196,7 +11297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-name@npm:^1.0.0, color-name@npm:~1.1.4":
+"color-name@npm:^1.0.0, color-name@npm:^1.1.4, color-name@npm:~1.1.4":
   version: 1.1.4
   resolution: "color-name@npm:1.1.4"
   checksum: 10c0/a1a3f914156960902f46f7f56bc62effc6c94e84b2cae157a526b1c1f74b677a47ec602bf68a61abfa2b42d15b7c5651c6dbe72a43af720bc588dff885b10f95
@@ -11214,6 +11315,13 @@ __metadata:
   version: 2.0.20
   resolution: "colorette@npm:2.0.20"
   checksum: 10c0/e94116ff33b0ff56f3b83b9ace895e5bf87c2a7a47b3401b8c3f3226e050d5ef76cf4072fb3325f9dc24d1698f9b730baf4e05eeaf861d74a1883073f4c98a40
+  languageName: node
+  linkType: hard
+
+"colorjs.io@npm:^0.6.0":
+  version: 0.6.1
+  resolution: "colorjs.io@npm:0.6.1"
+  checksum: 10c0/972aff12d88e86726898ff110aa15ea57a0348a3b958aeb93f4d6ae2d0ca91e487864e4d0d98b53943cc3ac3f747fb01b5ba3b6d922848d5c6888cb56e470b84
   languageName: node
   linkType: hard
 
@@ -11700,6 +11808,13 @@ __metadata:
   bin:
     cssesc: bin/cssesc
   checksum: 10c0/6bcfd898662671be15ae7827120472c5667afb3d7429f1f917737f3bf84c4176003228131b643ae74543f17a394446247df090c597bb9a728cce298606ed0aa7
+  languageName: node
+  linkType: hard
+
+"cssfontparser@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "cssfontparser@npm:1.2.1"
+  checksum: 10c0/ceb9b2976d503dbff3ac2aff0229b263affb4fb221a6947b357682cd8a952f6995253646ca5f820020d2fe05b5e29b56dbdd2343388c32203e8dd0ed15bdc1ca
   languageName: node
   linkType: hard
 
@@ -14687,6 +14802,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gifenc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "gifenc@npm:1.0.3"
+  checksum: 10c0/34fc6b2c66c305fc556cd2f475154ce2ad68384a52ceb8253b901c8c7d9c63f2c0a5d109ceb3cb46e44c2c6155009920a286cf08a621105863aa43468e345229
+  languageName: node
+  linkType: hard
+
 "git-hooks-list@npm:^3.0.0":
   version: 3.1.0
   resolution: "git-hooks-list@npm:3.1.0"
@@ -15571,6 +15693,24 @@ __metadata:
   version: 8.0.0
   resolution: "human-signals@npm:8.0.0"
   checksum: 10c0/e4dac4f7d3eb791ed04129fc6a85bd454a9102d3e3b76c911d0db7057ebd60b2956b435b5b5712aec18960488ede3c21ef7c56e42cdd70760c0d84d3c05cd92e
+  languageName: node
+  linkType: hard
+
+"i18next-browser-languagedetector@npm:^4.0.1":
+  version: 4.3.1
+  resolution: "i18next-browser-languagedetector@npm:4.3.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.5.5"
+  checksum: 10c0/3b719b9a1fbe7e125b6b5a544ab125e76eee5f7b602cd42667f58f1b0e0ebe87d3f6a36faaa040378b21bb3f734a311e530f0d7680fbc2cfd9f5184010b83f64
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^19.0.2":
+  version: 19.9.2
+  resolution: "i18next@npm:19.9.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.0"
+  checksum: 10c0/ee4991039a9acfff3ff4d5872ba183fce6ddc7017b689095d3d3df98ca16c0563f7d1333b4a4d3d4de65af5a521661bed36d677a5dd712c62095683e33f33a66
   languageName: node
   linkType: hard
 
@@ -17569,6 +17709,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"libtess@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "libtess@npm:1.2.2"
+  checksum: 10c0/2bcc95a6fcf98e2e90c6376a009ed29eae2effae7d9fc74823c35ab27a023366abd89dbc9dbc1afd0ac73e3d44a6f37eb89a1dfdfc349c1f42b3524b84508353
+  languageName: node
+  linkType: hard
+
 "lie@npm:3.1.1":
   version: 3.1.1
   resolution: "lie@npm:3.1.1"
@@ -19212,6 +19359,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"moo-color@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "moo-color@npm:1.0.3"
+  dependencies:
+    color-name: "npm:^1.1.4"
+  checksum: 10c0/778c82f67f638c03a1d0fa78dcd6ea376a9f17b5e78e349c7e34a290b496dbdb43fd0b1c38070e2062d5e784bcf08e57f499015fcbcf52b3a1887d7825ebb80d
+  languageName: node
+  linkType: hard
+
 "mrmime@npm:^2.0.0":
   version: 2.0.1
   resolution: "mrmime@npm:2.0.1"
@@ -19832,7 +19988,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"omggif@npm:1.0.10":
+"omggif@npm:1.0.10, omggif@npm:^1.0.10":
   version: 1.0.10
   resolution: "omggif@npm:1.0.10"
   checksum: 10c0/5ddb6959555bf16ac93ee8724a6f600b0e97e77855515af9df0f657c69ebe0eb7d769763fdc4765f888827e4e64ca71ebeaf7255c7f51058e4bba5cc7950fe8e
@@ -20103,6 +20259,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"p5@npm:^2.3.4":
+  version: 2.3.4
+  resolution: "p5@npm:2.3.4"
+  dependencies:
+    "@davepagurek/bezier-path": "npm:^0.0.7"
+    "@japont/unicode-range": "npm:^1.0.0"
+    acorn: "npm:^8.15.0"
+    acorn-walk: "npm:^8.3.4"
+    colorjs.io: "npm:^0.6.0"
+    escodegen: "npm:^2.1.0"
+    gifenc: "npm:^1.0.3"
+    i18next: "npm:^19.0.2"
+    i18next-browser-languagedetector: "npm:^4.0.1"
+    libtess: "npm:^1.2.2"
+    omggif: "npm:^1.0.10"
+    pako: "npm:^2.1.0"
+    zod: "npm:^4.2.1"
+  checksum: 10c0/47b004581d1f7fb1cd15c6c7907eea8b880f5522a26ea5a9851b3b71710caeb0386a040d11e75724652ff8200978935c3d2574b14ba022ffe919cbc3f15c5d62
+  languageName: node
+  linkType: hard
+
 "pac-proxy-agent@npm:^7.1.0":
   version: 7.1.0
   resolution: "pac-proxy-agent@npm:7.1.0"
@@ -20164,6 +20341,13 @@ __metadata:
   version: 1.0.11
   resolution: "pako@npm:1.0.11"
   checksum: 10c0/86dd99d8b34c3930345b8bbeb5e1cd8a05f608eeb40967b293f72fe469d0e9c88b783a8777e4cc7dc7c91ce54c5e93d88ff4b4f060e6ff18408fd21030d9ffbe
+  languageName: node
+  linkType: hard
+
+"pako@npm:^2.1.0":
+  version: 2.2.0
+  resolution: "pako@npm:2.2.0"
+  checksum: 10c0/e5d31de1940fdd13cc4014296b0026112483d0834bce4856ca29c8af8438d030c6416986a0f6df7d5372cae18d6dd6c57f48b24a49d6c207c0a4cc66af15c07d
   languageName: node
   linkType: hard
 
@@ -26073,6 +26257,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vitest-canvas-mock@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "vitest-canvas-mock@npm:1.2.0"
+  dependencies:
+    cssfontparser: "npm:^1.2.1"
+    moo-color: "npm:^1.0.3"
+  peerDependencies:
+    vitest: ^3.0.0 || ^4.0.0 || ^5.0.0
+  checksum: 10c0/7721130ce09df23c2d727391fb3454cf0c44979c06503863563e88806c1c064eeaff0461c0ca1d53741a82fec5e71fba92cba7aa877d918fcbc6d2d7e044285f
+  languageName: node
+  linkType: hard
+
 "vitest@npm:^4.1.5":
   version: 4.1.7
   resolution: "vitest@npm:4.1.7"
@@ -26987,6 +27183,13 @@ __metadata:
   version: 4.1.13
   resolution: "zod@npm:4.1.13"
   checksum: 10c0/d7e74e82dba81a91ffc3239cd85bc034abe193a28f7087a94ab258a3e48e9a7ca4141920cac979a0d781495b48fc547777394149f26be04c3dc642f58bbc3941
+  languageName: node
+  linkType: hard
+
+"zod@npm:^4.2.1":
+  version: 4.6.5
+  resolution: "zod@npm:4.6.5"
+  checksum: 10c0/32eb6c5e98becbe045675b2141c3611451c16ba567f9779231d79af41c4d651ca1c22f154aef7e6c6e77b929f23e43f1154ca05b82e119e922353725d6776af5
   languageName: node
   linkType: hard
 

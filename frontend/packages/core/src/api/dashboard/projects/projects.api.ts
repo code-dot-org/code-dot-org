@@ -1,6 +1,7 @@
 import type {Transport} from '../../transports/types';
 import {
   ExtraLinksProjectDataSchema,
+  PersonalProjectsResponseSchema,
   ProjectChannelForLevelSchema,
 } from './projects.schemata';
 
@@ -22,6 +23,18 @@ export function createProjectsApi(transport: Transport) {
       });
 
       return ProjectChannelForLevelSchema.parse(raw);
+    },
+
+    /**
+     * GET /api/v1/projects/personal: the signed-in user's own projects,
+     * hidden ones left out.
+     */
+    async getPersonal() {
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: '/api/v1/projects/personal',
+      });
+      return PersonalProjectsResponseSchema.parse(raw);
     },
 
     /**

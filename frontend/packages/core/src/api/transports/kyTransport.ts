@@ -30,6 +30,12 @@ export function createKyTransport(opts: {
     ...kyOptions,
   });
 
+  function isOwnOrigin(url: string): boolean {
+    const page = globalThis.location?.origin;
+    const own = baseUrl?.startsWith('http') ? new URL(baseUrl).origin : page;
+    return new URL(url).origin === own;
+  }
+
   function buildSearchParams(
     query?: RequestOptions['query'],
   ): URLSearchParams | undefined {
@@ -92,16 +98,22 @@ export function createKyTransport(opts: {
 
     const isFormData =
       typeof FormData !== 'undefined' && req.body instanceof FormData;
+    // Bytes go as they are, typed by the caller or by the Blob itself.
+    const isBlob = typeof Blob !== 'undefined' && req.body instanceof Blob;
+    const isRaw = isFormData || isBlob;
     const hasBody = req.body !== undefined && req.body !== null;
 
-    if (hasBody && !isFormData) headers['Content-Type'] ||= 'application/json';
+    if (hasBody && !isRaw) headers['Content-Type'] ||= 'application/json';
 
-    if (req.method !== 'GET') {
+    const isAbsolute = req.url.startsWith('http');
+
+    // The token is dashboard's; another origin, such as the AI gateway, must
+    // never see it.
+    if (req.method !== 'GET' && (!isAbsolute || isOwnOrigin(req.url))) {
       const token = getCsrfToken?.();
       if (token) headers['X-CSRF-Token'] = token;
     }
 
-    const isAbsolute = req.url.startsWith('http');
     // Strip leading slash — ky joins prefixUrl + input and a leading slash
     // would make it relative to the origin, bypassing prefixUrl.
     const input = isAbsolute
@@ -122,7 +134,7 @@ export function createKyTransport(opts: {
       ...(req.redirect && {redirect: req.redirect}),
       ...(isManualRedirect && {throwHttpErrors: false}),
       ...(hasBody &&
-        (isFormData ? {body: req.body as FormData} : {json: req.body})),
+        (isRaw ? {body: req.body as FormData | Blob} : {json: req.body})),
     };
 
     try {
