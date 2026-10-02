@@ -17,8 +17,9 @@ const GAP_MIN_PX = 8;
 // A row or column with no more opaque pixels than this is empty: a stray
 // speck does not join two figures.
 const EMPTY_MAX_PX = 2;
-// A cell this small next to the largest is debris, not another figure.
-const FIGURE_MIN_SHARE = 0.2;
+// Copies of a sheet are near-equal; a cell under half the largest is a
+// detached part of one figure, a halo or a floating hand.
+const FIGURE_MIN_SHARE = 0.5;
 
 // Spans of occupied lines between gaps, over [first, last].
 function spans(counts: number[]): Array<[number, number]> {
@@ -48,8 +49,8 @@ function spans(counts: number[]): Array<[number, number]> {
 
 /**
  * The figures in RGBA pixels, as the cells of a sheet split along
- * near-empty rows and columns; one cell means one figure. Cells with
- * little in them next to the largest are left out.
+ * near-empty rows and columns; one cell means one figure. A cell well
+ * short of the largest is part of it, not another figure.
  */
 export function findFigureCells(
   data: Uint8ClampedArray,

@@ -387,6 +387,19 @@ export async function cropToContent(blob: Blob): Promise<Blob> {
 }
 
 /** Decode an image Blob into an element ready to draw. */
+/** A blob drawn onto a fresh canvas of its own size. */
+export async function canvasFromBlob(
+  blob: Blob
+): Promise<{canvas: HTMLCanvasElement; ctx: CanvasRenderingContext2D}> {
+  const img = await loadImageFromBlob(blob);
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.drawImage(img, 0, 0);
+  return {canvas, ctx};
+}
+
 export function loadImageFromBlob(blob: Blob): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();

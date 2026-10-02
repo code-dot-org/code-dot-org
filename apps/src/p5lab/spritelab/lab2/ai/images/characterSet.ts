@@ -34,6 +34,7 @@ import {
   getCharacterSetImageModel,
 } from './modelHelpers';
 import {
+  canvasFromBlob,
   canvasToBlob,
   loadImageFromBlob,
   removeKeyColor,
@@ -322,17 +323,10 @@ async function composeStrip(
   return canvasToBlob(strip);
 }
 
-// How many figures a keyed frame holds (see singleFigure.ts), with the
-// frame cut down to its largest one on request.
-async function readFigures(
-  keyed: Blob
-): Promise<{count: number; largestOnly: () => Promise<Blob>}> {
-  const img = await loadImageFromBlob(keyed);
-  const canvas = document.createElement('canvas');
-  canvas.width = img.width;
-  canvas.height = img.height;
-  const ctx = canvas.getContext('2d')!;
-  ctx.drawImage(img, 0, 0);
+// A keyed frame as one figure: how many it held, and the frame cut down to
+// the largest when it held more (see singleFigure.ts).
+async function oneFigure(keyed: Blob): Promise<{figures: number; blob: Blob}> {
+  const {canvas, ctx} = await canvasFromBlob(keyed);
   const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const cells = findFigureCells(
     image.data,
@@ -340,26 +334,20 @@ async function readFigures(
     canvas.height,
     SOLID_ALPHA
   );
-  return {
-    count: cells.length,
-    largestOnly: async () => {
-      keepLargestFigure(image.data, canvas.width, canvas.height, cells);
-      ctx.putImageData(image, 0, 0);
-      return canvasToBlob(canvas);
-    },
-  };
+  if (cells.length <= 1) {
+    return {figures: cells.length, blob: keyed};
+  }
+  keepLargestFigure(image.data, canvas.width, canvas.height, cells);
+  ctx.putImageData(image, 0, 0);
+  return {figures: cells.length, blob: await canvasToBlob(canvas)};
 }
 
 // A keyed frame back on its flat key colour, as the model drew it.
 async function onKeyColor(keyed: Blob, key: KeyColor): Promise<Blob> {
-  const img = await loadImageFromBlob(keyed);
-  const canvas = document.createElement('canvas');
-  canvas.width = img.width;
-  canvas.height = img.height;
-  const ctx = canvas.getContext('2d')!;
+  const {canvas, ctx} = await canvasFromBlob(keyed);
+  ctx.globalCompositeOperation = 'destination-over';
   ctx.fillStyle = key.hex;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(img, 0, 0);
   return canvasToBlob(canvas);
 }
 
@@ -459,22 +447,27 @@ export async function generateCharacterSet(
   let baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
 
   // The model sometimes draws the character as a sheet of copies, which
-  // the posed frames would then inherit. One more try, with the point
-  // pressed; if that is a sheet too, its largest figure is kept.
-  let figures = await readFigures(baseKeyed);
-  if (figures.count > 1) {
+  // the posed frames would inherit.
+  let single = await oneFigure(baseKeyed);
+  if (single.figures > 1) {
     onProgress?.({done: 0, total, label: 'the character, once more'});
-    base = await requestFrameWithRetry(
-      `${basePromptText} ${ONE_FIGURE_RETRY}`,
-      baseRequest(seed + RETRY_SEED_OFFSET)
-    );
-    const retryVerdict = judgeFrame(base);
-    baseKeyed = await keyFrame(base);
-    await retryVerdict;
-    baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
-    figures = await readFigures(baseKeyed);
-    if (figures.count > 1) {
-      baseKeyed = await figures.largestOnly();
+    try {
+      const again = await requestFrameWithRetry(
+        `${basePromptText} ${ONE_FIGURE_RETRY}`,
+        baseRequest((seed + RETRY_SEED_OFFSET) % 2 ** 31)
+      );
+      const againVerdict = judgeFrame(again);
+      const againKeyed = await keyFrame(again);
+      await againVerdict;
+      base = again;
+      baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
+      single = await oneFigure(againKeyed);
+    } catch {
+      // A failed or flagged second try: the first base, cut down, still
+      // makes a set.
+    }
+    baseKeyed = single.blob;
+    if (single.figures > 1) {
       baseURI = await previewURI(await onKeyColor(baseKeyed, key));
     }
   }
@@ -497,7 +490,7 @@ export async function generateCharacterSet(
         }
       );
       const verdict = judgeFrame(raw);
-      const keyed = await keyFrame(raw);
+      const keyed = (await oneFigure(await keyFrame(raw))).blob;
       await verdict;
       done++;
       preview = await previewURI(keyed);

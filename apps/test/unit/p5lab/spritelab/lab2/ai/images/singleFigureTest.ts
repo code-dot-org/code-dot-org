@@ -21,9 +21,11 @@ const cells = (p: ReturnType<typeof picture>) =>
   findFigureCells(p.data, p.w, p.h, 64);
 
 describe('singleFigure', () => {
-  it('sees one figure in one shape, even with a speck beside it', () => {
+  it('sees one figure in one shape, even with a speck or a detached part beside it', () => {
     expect(cells(picture([20, 10, 60, 90]))).toHaveLength(1);
     expect(cells(picture([20, 10, 60, 90], [80, 40, 82, 42]))).toHaveLength(1);
+    // A floating hand a third the body's size is the same character.
+    expect(cells(picture([20, 10, 60, 90], [75, 20, 95, 60]))).toHaveLength(1);
   });
 
   it('sees two figures side by side, and four in a two-by-two sheet', () => {
