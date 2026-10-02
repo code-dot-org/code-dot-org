@@ -1,5 +1,5 @@
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
   navigateToNextLevel,
@@ -16,38 +16,30 @@ import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
-import useQuizAttempt, {QuizAttemptSource} from './useQuizAttempt';
+import {QuizAttemptSource} from './types';
+import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
 
-export interface QuizAttemptWorkspaceProps {
-  levelId: number;
-  appName: AppName;
+export interface SwappableQuizAttemptWorkspaceProps {
   // Levelbuilders may leave displayName blank - falls back to this.
   levelName: string;
-  // Attempt tracking only applies inside a unit.
-  unitId: number | undefined;
   quizQuestions: QuizQuestionSummary[];
+  attemptSource: QuizAttemptSource;
+  onNextLevel: () => void;
+  nextLevelLabel?: string;
   allowMultipleAttempts?: boolean;
   displayName?: string;
   customIntroText?: string;
   timeLimitMinutes?: number;
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
-  /** Replaces the quiz server; the caller then owns progress reporting. */
-  attemptSource?: QuizAttemptSource;
-  /** Replaces reporting and moving to the next level from the results. */
-  onNextLevel?: () => void;
-  nextLevelLabel?: string;
 }
 
-const QuizAttemptWorkspace: React.FunctionComponent<
-  QuizAttemptWorkspaceProps
+export const SwappableQuizAttemptWorkspace: React.FunctionComponent<
+  SwappableQuizAttemptWorkspaceProps
 > = ({
-  appName,
-  levelId,
   levelName,
-  unitId,
   quizQuestions,
   allowMultipleAttempts,
   displayName,
@@ -59,12 +51,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   onNextLevel,
   nextLevelLabel,
 }) => {
-  const dispatch = useAppDispatch();
-  // Always called so hook order is fixed; with no unit it sends nothing.
-  const serverAttempt = useQuizAttempt({
-    levelId,
-    unitId: attemptSource ? undefined : unitId,
-  });
   const {
     attempt,
     isLoading,
@@ -72,8 +58,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     beginAttempt,
     finishAttempt,
     submitQuestionResponse,
-  } = attemptSource ?? serverAttempt;
-  const canAttempt = !!attemptSource || !!unitId;
+  } = attemptSource;
 
   // currentPageNumber is a 1-based position into this list, not a raw page value.
   const pageNumbers = Array.from(new Set(quizQuestions.map(q => q.page))).sort(
@@ -92,18 +77,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const pendingWritesByQuestionIdRef = useRef<Record<number, Promise<unknown>>>(
     {}
   );
-  // The finish-time success report, so Next level can wait for it.
-  const pendingReportRef = useRef<Promise<unknown>>(Promise.resolve());
 
   const questionsRef = useRef<HTMLDivElement>(null);
   const submittedRef = useRef<HTMLDivElement>(null);
-  // Quiz views stay mounted across same-lab navigation, so a begin/finish
-  // request can resolve after a different level is already current.
-  // Gate progress reporting on this level instead.
-  const currentLevelKeyRef = useRef(levelId);
-  useEffect(() => {
-    currentLevelKeyRef.current = levelId;
-  }, [levelId]);
   const introRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -117,8 +93,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     pendingWritesByQuestionIdRef.current = {};
   }, [attempt?.id, attempt?.questionResultsInProgress]);
 
-  const isAttemptInProgress =
-    !isLoading && canAttempt && !!attempt && !attempt.submittedAt;
+  const isAttemptInProgress = !isLoading && !!attempt && !attempt.submittedAt;
   const isIntroOpen =
     toBool(showIntroScreen) &&
     (!attempt || (!!attempt.submittedAt && isRetakeIntroOpen));
@@ -151,12 +126,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   }, [attempt?.submittedAt]);
 
   const handleBeginAttempt = async () => {
-    const requestLevelId = levelId;
     try {
       await beginAttempt();
-      if (!attemptSource && currentLevelKeyRef.current === requestLevelId) {
-        dispatch(sendStartedReportIfNotStarted(appName));
-      }
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
@@ -170,15 +141,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
         ([questionId, choiceId]) => [questionId, {selectedChoiceId: choiceId}]
       )
     );
-    // Targets the level the attempt was for, not whichever quiz is current
-    // by the time this resolves.
-    const requestLevelId = levelId;
     try {
       await finishAttempt(responsesByQuestionId);
-      if (attemptSource) return;
-      pendingReportRef.current = Promise.resolve(
-        dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName))
-      );
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
@@ -192,24 +156,15 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
-  const handleNextLevel = async () => {
-    if (onNextLevel) {
-      onNextLevel();
-      return;
-    }
-    await pendingReportRef.current;
-    dispatch(navigateToNextLevel());
-  };
-
   // A quiz with no intro screen has no click-through step - start the
   // attempt automatically once the initial check finds there isn't one yet.
   useEffect(() => {
-    if (!isLoading && canAttempt && hasNoAttemptYet && !showIntroScreen) {
+    if (!isLoading && hasNoAttemptYet && !showIntroScreen) {
       beginAttempt().catch(() => {
         // Already recorded as a user-facing error in useQuizAttempt.
       });
     }
-  }, [isLoading, canAttempt, hasNoAttemptYet, showIntroScreen, beginAttempt]);
+  }, [isLoading, hasNoAttemptYet, showIntroScreen, beginAttempt]);
 
   const handleSelectChoice = (questionId: number, choiceId: string) => {
     const previousChoiceId = selectedChoicesByQuestionId[questionId];
@@ -270,12 +225,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
         )}
         {isLoading ? (
           <Typography variant="body2">Loading…</Typography>
-        ) : !canAttempt ? (
-          // Reachable via /levels/:id, which levelbuilder uses to preview
-          // a level outside any unit.
-          <Typography variant="body2">
-            Quiz attempts are not allowed on a standalone level.
-          </Typography>
         ) : isIntroOpen ? (
           <div className={styles.questions} ref={introRef}>
             <IntroCard
@@ -314,7 +263,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               canRetake={attempt.canRetake}
               submittedAt={attempt.submittedAt}
               onTryAgain={handleRetake}
-              onNextLevel={handleNextLevel}
+              onNextLevel={onNextLevel}
               nextLevelLabel={nextLevelLabel}
             />
           </div>
@@ -361,6 +310,86 @@ const QuizAttemptWorkspace: React.FunctionComponent<
         />
       )}
     </div>
+  );
+};
+
+export interface QuizAttemptWorkspaceProps
+  extends Omit<
+    SwappableQuizAttemptWorkspaceProps,
+    'attemptSource' | 'onNextLevel'
+  > {
+  levelId: number;
+  appName: AppName;
+  // Attempt tracking only applies inside a unit.
+  unitId: number | undefined;
+}
+
+const QuizAttemptWorkspace: React.FunctionComponent<
+  QuizAttemptWorkspaceProps
+> = ({levelId, appName, unitId, ...workspaceProps}) => {
+  const dispatch = useAppDispatch();
+  const serverAttempt = useQuizAttempt({levelId, unitId});
+  const {beginAttempt: beginServerAttempt, finishAttempt: finishServerAttempt} =
+    serverAttempt;
+
+  // The finish-time success report, so Next level can wait for it.
+  const pendingReportRef = useRef<Promise<unknown>>(Promise.resolve());
+  // Quiz views stay mounted across same-lab navigation, so a begin/finish
+  // request can resolve after a different level is already current.
+  // Gate progress reporting on this level instead.
+  const currentLevelKeyRef = useRef(levelId);
+  useEffect(() => {
+    currentLevelKeyRef.current = levelId;
+  }, [levelId]);
+
+  const beginAttempt = useCallback(async () => {
+    const requestLevelId = levelId;
+    const attempt = await beginServerAttempt();
+    if (currentLevelKeyRef.current === requestLevelId) {
+      dispatch(sendStartedReportIfNotStarted(appName));
+    }
+    return attempt;
+  }, [beginServerAttempt, levelId, appName, dispatch]);
+
+  const finishAttempt = useCallback(
+    async (responsesByQuestionId: Record<number, Record<string, unknown>>) => {
+      // Targets the level the attempt was for, not whichever quiz is current
+      // by the time this resolves.
+      const requestLevelId = levelId;
+      const attempt = await finishServerAttempt(responsesByQuestionId);
+      pendingReportRef.current = Promise.resolve(
+        dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName))
+      );
+      return attempt;
+    },
+    [finishServerAttempt, levelId, appName, dispatch]
+  );
+
+  const handleNextLevel = async () => {
+    await pendingReportRef.current;
+    dispatch(navigateToNextLevel());
+  };
+
+  if (!unitId) {
+    // Reachable via /levels/:id, which levelbuilder uses to preview a level
+    // outside any unit.
+    return (
+      <div className={styles.attemptWorkspace}>
+        <div className={styles.attemptBody}>
+          <Typography variant="body2">
+            Quiz attempts are not allowed on a standalone level.
+          </Typography>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <SwappableQuizAttemptWorkspace
+      {...workspaceProps}
+      attemptSource={{...serverAttempt, beginAttempt, finishAttempt}}
+      onNextLevel={handleNextLevel}
+    />
   );
 };
 
