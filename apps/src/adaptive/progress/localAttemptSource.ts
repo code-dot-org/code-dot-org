@@ -2,13 +2,11 @@ import {useCallback, useRef, useState} from 'react';
 
 import type {
   QuizAttemptData,
+  QuizAttemptSource,
   QuizQuestionResult,
 } from '@cdo/apps/quiz/attempt/types';
-import type useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
 
 import {MultipleChoiceQuestion, QuestionsStep} from '../types';
-
-type QuizAttemptSource = ReturnType<typeof useQuizAttempt>;
 
 const isMultipleChoice = (q: QuestionsStep['questions'][number]) =>
   q.type === 'MultipleChoiceQuestion';

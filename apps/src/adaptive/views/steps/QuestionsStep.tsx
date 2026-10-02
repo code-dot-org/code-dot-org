@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 
-import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
+import {SwappableQuizAttemptWorkspace} from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 
 import {useLocalAttemptSource} from '../../progress/localAttemptSource';
@@ -38,12 +38,8 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
 
   return (
     <div className={styles.questionsStep}>
-      <QuizAttemptWorkspace
-        // Unused with an attempt source, which takes no level or unit.
-        levelId={0}
-        appName="quiz"
+      <SwappableQuizAttemptWorkspace
         levelName={step.title}
-        unitId={undefined}
         quizQuestions={quizQuestions}
         displayName={step.title}
         customIntroText={step.description}
