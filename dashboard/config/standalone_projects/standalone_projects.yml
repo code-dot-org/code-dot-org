@@ -1,10 +1,13 @@
-# The map from /projects/<key> to the level that page loads, read by
-# Policies::StandaloneProjects. The level names here are the single source for
-# which levels are standalone projects. Per entry: `name` is the level;
-# `levelbuilder_required` and `login_required` gate who may load it (default
-# false); `default_image_url` becomes the thumbnail of a new project;
-# `i18n` includes the level in the i18n sync. A project level file must also
-# have "is_project_level": true.
+# Each entry defines a standalone project type to be served from
+# /projects/<type>, with the following options:
+# - {String} :name The name of the level to use for this project type.
+# - {Boolean|nil} :levelbuilder_required Whether you must have
+#   UserPermission::LEVELBUILDER to access this project type. Default: false.
+# - {Boolean|nil} :login_required Whether you must be logged in to access this
+#   project type. Default: false.
+# - {String|nil} :default_image_url If present, set this as the thumbnail image
+#   url when creating a project of this type.
+# - {Boolean|nil} :i18n If present, include this level in the i18n sync
 adaptations:
   name: New Adaptations Project
 artist:
