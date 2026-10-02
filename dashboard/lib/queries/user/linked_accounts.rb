@@ -15,13 +15,13 @@ module Queries
     class LinkedAccounts < Queries::Base
       # Providers that may hold several records per identity, with the
       # version the listed record should come from.
-      COLLAPSED_PROVIDERS = {
+      VERSIONED_PROVIDERS = {
         AuthenticationOption::CLASSLINK => AuthenticationOption::Classlink::VERSION[:v2],
         AuthenticationOption::CLEVER => AuthenticationOption::Clever::VERSION[:v3],
       }.freeze
 
-      def self.collapsed?(credential_type)
-        COLLAPSED_PROVIDERS.key?(credential_type)
+      def self.versioned?(credential_type)
+        VERSIONED_PROVIDERS.key?(credential_type)
       end
 
       def initialize(user:)
@@ -30,7 +30,7 @@ module Queries
 
       def call
         options = @user.authentication_options.to_a
-        hidden = COLLAPSED_PROVIDERS.flat_map do |credential_type, preferred_version|
+        hidden = VERSIONED_PROVIDERS.flat_map do |credential_type, preferred_version|
           records = options.select {|option| option.credential_type == credential_type}
           next [] if records.size <= 1
 

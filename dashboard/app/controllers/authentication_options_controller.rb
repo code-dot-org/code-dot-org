@@ -31,7 +31,7 @@ class AuthenticationOptionsController < ApplicationController
   # disconnecting it removes every one. Removing only the listed record would
   # leave the user still signed up with the provider through a hidden one.
   private def options_to_disconnect(auth_option)
-    return [auth_option] unless Queries::User::LinkedAccounts.collapsed?(auth_option.credential_type)
+    return [auth_option] unless Queries::User::LinkedAccounts.versioned?(auth_option.credential_type)
 
     current_user.authentication_options.where(credential_type: auth_option.credential_type).to_a
   end
