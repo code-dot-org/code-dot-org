@@ -1257,7 +1257,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // from the tab button or "Restart game" clears it.
   const [playStartSceneId, setPlayStartSceneId] = useState<string | null>(null);
   // The arrow buttons the running scene wants, as the engine reports it.
-  const [arrowSet, setArrowSet] = useState<ArrowSet>('steer');
+  // No controls until the engine says which the running scene wants.
+  const [arrowSet, setArrowSet] = useState<ArrowSet>('none');
 
   // p5 listens for keys on window, so a game reading arrows/space would eat
   // them while the student edits blocks. Give the game the keyboard only in

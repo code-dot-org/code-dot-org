@@ -13,8 +13,7 @@ export interface ControlsState {
 /** Left and right plus Jump; left, right, up and down; or no arrows. */
 export type ArrowSet = 'jump' | 'steer' | 'none';
 
-/** A story scene has nothing to steer; a weightless platform scene steers
-    up and down. */
+/** A story scene has nothing to steer. */
 export function arrowSetFor(state: ControlsState): ArrowSet {
   if (!state.platformer) {
     return 'none';
