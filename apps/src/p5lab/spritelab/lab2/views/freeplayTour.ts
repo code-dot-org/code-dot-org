@@ -1,5 +1,6 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
+import {PLAY_BAR_BUTTON_ID} from './components/PlayBar';
 import {SCENE_CHIP_ID, SCENE_MANAGE_ITEM_ID} from './SceneSelector';
 import {SCENE_CARD_ATTRIBUTE} from './ScenesGallery';
 
@@ -81,7 +82,7 @@ export function tourSteps(chipOpensGallery: boolean): TourStep[] {
       id: 'play',
       text: 'Play your game.',
       view: 'play',
-      target: {selector: '[role="tab"][data-label="Play"]', direction: 'up'},
+      target: {selector: `#${PLAY_BAR_BUTTON_ID}`, direction: 'up'},
     },
   ];
 }

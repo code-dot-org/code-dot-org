@@ -1,3 +1,4 @@
+import {PLAY_BAR_BUTTON_ID} from '@cdo/apps/p5lab/spritelab/lab2/views/components/PlayBar';
 import {
   tourListSteps,
   tourSteps,
@@ -55,6 +56,12 @@ describe('freeplayTour', () => {
       selector: '[data-scene-card]',
       direction: 'left',
     });
+  });
+
+  it("points the last line at the play bar's button", () => {
+    const last = tourSteps(false).at(-1)!;
+    expect(last.view).toBe('play');
+    expect(last.target?.selector).toBe(`#${PLAY_BAR_BUTTON_ID}`);
   });
 
   it('shares the lines after the scene ones', () => {
