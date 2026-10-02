@@ -3,35 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The Turing Test in Action
+# Reading Python, Piece by Piece
 
-In Lesson 1, you'll walk the whole class through a slide-based version of the guessing game below.
+You just saw variables and data types as concepts. In Lesson 4, students write this same kind of code themselves to build their first chatbot: starting with a program that only prints a message, then one that stores information in a variable and prints it. Try the interactive below to walk through that same progression yourself.
 
-Afterward, students debate their own stance on the Turing Test with an AI chatbot.
-
-**Try the simulator below yourself first**: *can you always tell which response was written by AI?*
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <div style="font-size: 14pt; line-height: 1.5;">
-    <strong>&#128214; Turing test:</strong> a test in which a machine is considered intelligent if you can't tell it apart from a human in conversation.
-  </div>
-</div>
-
-<hr>
+---
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe
-    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/turing-test-simulator.html"
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/python-syntax-builder.html"
     width="100%"
-    height="920"
+    height="860"
     frameborder="0"
     scrolling="no"
-    title="Sort AI examples into Rule-Based Logic or Learns from Data"
+    title="Reading Python Line by Line: click-to-label syntax with console output"
     style="display:block; border-radius:10px;">
   </iframe>
 </div>
-
-</div>
-
-
 MARKDOWN
