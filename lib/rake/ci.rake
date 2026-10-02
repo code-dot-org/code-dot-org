@@ -364,7 +364,7 @@ def check_for_new_file_changes
   Dir.chdir('dashboard') do
     RakeUtils.rake_stream_output 'analytics_export:generate_materialized_view_templates'
   end
-  zeroetl_dir = Cdo::Aws::Redshift::MaterializedViewManager::SQL_VIEW_TEMPLATE_DIR
+  zeroetl_dir = Cdo::AWS::Redshift::MaterializedViewManager::SQL_VIEW_TEMPLATE_DIR
   if GitUtils.file_changed_from_git?(zeroetl_dir)
     RakeUtils.system_stream_output("git status --short -- #{zeroetl_dir} | cat")
     RakeUtils.system_stream_output("git diff -- #{zeroetl_dir} | cat")
