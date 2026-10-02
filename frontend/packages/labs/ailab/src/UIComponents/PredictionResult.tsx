@@ -54,12 +54,16 @@ const PredictionResult = () => {
         <ol role="list" className={styles.steps}>
           {steps.map(({subject, condition}, index) => (
             <li key={index} className={styles.step}>
-              <span aria-hidden="true" className={styles.stepNumber}>
+              <Typography
+                variant="label4"
+                aria-hidden="true"
+                className={styles.stepNumber}
+              >
                 {index + 1}
-              </span>
-              <span>
+              </Typography>
+              <Typography variant="body3" component="span">
                 {subject} is <strong>{condition}</strong>
-              </span>
+              </Typography>
             </li>
           ))}
         </ol>

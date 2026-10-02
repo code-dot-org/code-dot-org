@@ -1,7 +1,8 @@
 @use '../sharedMixins' as mixins;
 
 $step-gap: 8px;
-$step-line-height: 20px;
+// Typography body3's line height, so each number centers on its step's first line.
+$step-line-height: calc(0.875rem * 1.54);
 $step-number-size: 16px;
 $step-number-top: calc(($step-line-height - $step-number-size) / 2);
 
@@ -9,7 +10,8 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
   @include mixins.card;
 }
 
-.header {
+// Two classes, to outrank the theme's Typography color.
+.card .header {
   padding: 8px;
   color: var(--text-neutral-secondary);
 
@@ -34,9 +36,6 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 14px;
-  line-height: $step-line-height;
-  color: var(--text-neutral-primary);
 
   strong {
     font-weight: 600;
@@ -53,16 +52,16 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
   border-left: 1px solid var(--border-neutral-primary);
 }
 
-.stepNumber {
+// Two classes, to outrank the theme's Typography margin and color.
+.step .stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: $step-number-size;
   height: $step-number-size;
   margin-top: $step-number-top;
-  border-radius: 50%;
+  border-radius: var(--shape-round);
   background-color: var(--background-neutral-tertiary);
-  font-size: 10px;
-  font-weight: 600;
-  line-height: $step-number-size;
-  text-align: center;
   color: var(--text-neutral-secondary);
 }
