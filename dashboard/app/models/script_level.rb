@@ -454,7 +454,7 @@ class ScriptLevel < ApplicationRecord
 
       # Shown in the level header when the unit uses simple progress.
       if level.header_label.present?
-        summary[:headerLabel] =
+        summary[:header_label] =
           level.get_localized_property(:header_label).presence ||
           level.header_label
       end

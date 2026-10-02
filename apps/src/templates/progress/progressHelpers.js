@@ -300,7 +300,7 @@ export const processedLevel = (level, parentLevelId) => {
     isValidated: level.is_validated,
     canHaveFeedback: level.can_have_feedback,
     bonus: level.bonus,
-    headerLabel: level.headerLabel,
+    headerLabel: level.header_label,
     pageNumber:
       typeof level.page_number !== 'undefined'
         ? level.page_number
