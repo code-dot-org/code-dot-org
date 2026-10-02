@@ -69,7 +69,8 @@ describe('SimpleProgress', () => {
 
   it('asks for its natural width even while squeezed, counting what the label hides', () => {
     const setDesiredWidth = jest.fn();
-    render(
+    // A fresh element each time: React skips a re-render of the same one.
+    const squeezed = () => (
       <SimpleProgress
         imageUrl="/logo.png"
         levels={levelsWithCurrent('3')}
@@ -77,27 +78,21 @@ describe('SimpleProgress', () => {
         setDesiredWidth={setDesiredWidth}
       />
     );
+    const {rerender} = render(squeezed());
     const label = screen.getByText('Story');
-    Object.defineProperty(label, 'scrollWidth', {
-      value: 140,
-      configurable: true,
-    });
-    Object.defineProperty(label, 'clientWidth', {
-      value: 60,
-      configurable: true,
-    });
-    setDesiredWidth.mockClear();
-    // A re-measure, as a font load or an update would cause.
-    window.dispatchEvent(new Event('resize'));
-    render(
-      <SimpleProgress
-        imageUrl="/logo.png"
-        levels={levelsWithCurrent('2')}
-        width={120}
-        setDesiredWidth={setDesiredWidth}
-      />
-    );
-    expect(setDesiredWidth).toHaveBeenCalled();
+    // jsdom lays nothing out: the banner measures 0 wide, and the label
+    // hides 80px behind its ellipsis.
+    Object.defineProperty(label, 'scrollWidth', {value: 140});
+    Object.defineProperty(label, 'clientWidth', {value: 60});
+    rerender(squeezed());
+    expect(setDesiredWidth).toHaveBeenLastCalledWith(81);
+  });
+
+  it('names the bar after its label', () => {
+    render(<SimpleProgress levels={levelsWithCurrent('3')} width={300} />);
+    const bar = screen.getByRole('progressbar');
+    expect(bar.getAttribute('aria-labelledby')).toBe('simple_progress_label');
+    expect(screen.getByText('Story').id).toBe('simple_progress_label');
   });
 
   it('reports its natural width', () => {
@@ -126,6 +121,15 @@ describe('subPathFor', () => {
     expect(subPathFor(levelsWithCurrent('1'))).toEqual({
       label: 'Getting started',
     });
+  });
+
+  it("counts a sublevel's parent as current and leaves bonus levels out", () => {
+    const levels = [
+      {id: '1', headerLabel: 'Story'},
+      {id: '2', headerLabel: 'Story', sublevels: [{isCurrentLevel: true}]},
+      {id: '3', headerLabel: 'Story', bonus: true},
+    ];
+    expect(subPathFor(levels)).toEqual({label: 'Story', position: 2, total: 2});
   });
 
   it('is null for a level without a label, or with no levels', () => {

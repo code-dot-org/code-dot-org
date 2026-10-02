@@ -1,6 +1,7 @@
-import React, {useCallback, useEffect, useLayoutEffect, useRef} from 'react';
+import React, {useEffect, useLayoutEffect, useRef} from 'react';
 
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 
@@ -17,6 +18,8 @@ const FILL_TRANSITION = window.matchMedia?.('(prefers-reduced-motion: reduce)')
 export interface ProgressLevel {
   headerLabel?: string;
   isCurrentLevel?: boolean;
+  bonus?: boolean;
+  sublevels?: {isCurrentLevel?: boolean}[];
 }
 
 export interface SubPath {
@@ -27,13 +30,17 @@ export interface SubPath {
 }
 
 // Where the current level sits among the levels sharing its header label.
-// Null when the current level has no label.
+// Null when the current level has no label. As the bubbles count: a
+// sublevel's parent is current, and bonus levels are left out.
 export function subPathFor(levels?: ProgressLevel[]): SubPath | null {
-  const current = levels?.find(l => l.isCurrentLevel);
-  if (!levels || !current?.headerLabel) {
+  const counted = levels?.filter(l => !l.bonus);
+  const current = counted?.find(
+    l => l.isCurrentLevel || l.sublevels?.some(sub => sub.isCurrentLevel)
+  );
+  if (!counted || !current?.headerLabel) {
     return null;
   }
-  const path = levels.filter(l => l.headerLabel === current.headerLabel);
+  const path = counted.filter(l => l.headerLabel === current.headerLabel);
   return path.length > 1
     ? {
         label: current.headerLabel,
@@ -51,14 +58,9 @@ interface SimpleProgressProps {
   setDesiredWidth?: (width: number) => void;
 }
 
-/**
- * A unit's logo, the current level's header label and, under the label, a
- * bar showing where the level sits among those sharing it, in the header
- * slot that otherwise holds the progress bubbles. The two lines sit where
- * the unit name and its saved-at line sit on the left. Reports its natural
- * width to the header the way LessonProgress does, so the header's width
- * budget applies unchanged.
- */
+/** A unit's logo, the current level's header label and a bar showing where
+    the level sits among those sharing it, in the progress bubbles' slot;
+    reports its width to the header the way LessonProgress does. */
 const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
   imageUrl,
   levels,
@@ -68,11 +70,9 @@ const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
   const innerRef = useRef<HTMLDivElement>(null);
   const labelRef = useRef<HTMLSpanElement>(null);
 
-  // The natural width: what is on screen plus whatever the label is hiding
-  // behind its ellipsis, so a squeezed banner still asks for its full size.
-  // Rounded up: text is a fraction of a pixel wide, and a slot a fraction
-  // too narrow ellipsizes the label.
-  const reportWidth = useCallback(() => {
+  // The natural width: what shows plus what the label hides behind its
+  // ellipsis, rounded up past the sub-pixel fraction that would ellipsize it.
+  const reportWidth = () => {
     const inner = innerRef.current;
     if (!setDesiredWidth || !inner) {
       return;
@@ -81,11 +81,13 @@ const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
     const hidden = label ? label.scrollWidth - label.clientWidth : 0;
     const shown = inner.getBoundingClientRect().width;
     setDesiredWidth(Math.ceil(shown + Math.max(0, hidden)) + 1);
-  }, [setDesiredWidth]);
+  };
+  const reportWidthRef = useRef(reportWidth);
+  reportWidthRef.current = reportWidth;
 
-  // After every render: the slot and the label both change what is shown.
+  // After every render: the slot and the label both change what shows.
   useLayoutEffect(reportWidth);
-  useEffect(() => remeasureOnFontsReady(reportWidth), [reportWidth]);
+  useEffect(() => remeasureOnFontsReady(() => reportWidthRef.current()), []);
 
   const subPath = subPathFor(levels);
   const label = subPath?.label;
@@ -98,7 +100,11 @@ const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
           // Keyed on the label so a new part starts at its own fill rather
           // than sliding from the last part's.
           <div key={label} style={styles.text}>
-            <span ref={labelRef} style={styles.label}>
+            <span
+              id="simple_progress_label"
+              ref={labelRef}
+              style={styles.label}
+            >
               {label}
             </span>
             {progress && (
@@ -106,10 +112,14 @@ const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
                 <div
                   style={styles.track}
                   role="progressbar"
+                  aria-labelledby="simple_progress_label"
                   aria-valuemin={0}
                   aria-valuemax={progress.total}
                   aria-valuenow={progress.position}
-                  aria-valuetext={`Level ${progress.position} of ${progress.total}`}
+                  aria-valuetext={i18n.simpleProgressLevelOf({
+                    position: progress.position,
+                    total: progress.total,
+                  })}
                 >
                   <div
                     style={{

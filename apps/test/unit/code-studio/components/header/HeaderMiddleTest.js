@@ -189,4 +189,22 @@ describe('HeaderMiddle', () => {
     expect(widths.popup).toEqual(0);
     expect(widths.showPopupBecauseProgressCropped).toEqual(false);
   });
+
+  it('keeps the lesson list popup for a banner unit with several lessons', () => {
+    const widths = HeaderMiddle.getWidths(
+      350,    // width,
+      false,  // projectInfoOnly,
+      false,  // scriptNameOnly,
+      0,      // projectInfoDesiredWidth,
+      200,    // scriptNameDesiredWidth,
+      150,    // lessonProgressDesiredWidth,
+      3,      // numScriptLessons,
+      200,    // finishDesiredWidth,
+      true,   // showFinish
+      false   // allowPopup
+    );
+
+    expect(widths.popup).toEqual(40);
+    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
+  });
 });

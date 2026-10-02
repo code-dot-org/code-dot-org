@@ -163,11 +163,13 @@ class HeaderMiddle extends React.Component {
     // or because we have cropped the lesson progress bubbles.
     let showPopup = false;
     let showPopupBecauseProgressCropped = false;
-    if (!allowPopup) {
-      // A banner replaces the bubbles, so there is no lesson list to open.
-    } else if (numScriptLessons > 1) {
+    if (numScriptLessons > 1) {
       showPopup = true;
-    } else if (progressWidth < lessonProgressDesiredWidthAdjusted) {
+    } else if (
+      allowPopup &&
+      progressWidth < lessonProgressDesiredWidthAdjusted
+    ) {
+      // Simple progress is never cropped bubbles, so it opens no popup.
       showPopup = true;
       showPopupBecauseProgressCropped = true;
     }
