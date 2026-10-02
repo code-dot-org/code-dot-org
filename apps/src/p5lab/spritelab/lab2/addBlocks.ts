@@ -6,8 +6,8 @@ import * as BlocklyCore from 'blockly/core';
 
 import {scrollIntoView} from './scrollIntoView';
 
-/** A block to add. Its `data`, when set, tells it apart from another entry
-    of the same type in one scene. */
+/** A block to add. Its `data`, when set, is the tag a workspace block must
+    carry to stand for it. */
 export type AddBlock = BlocklyCore.serialization.blocks.State;
 
 /**
@@ -37,9 +37,9 @@ export interface PresentBlock {
 }
 
 /** Whether a workspace block stands for an entry: the entry's type, and the
-    entry's tag when it has one. Every block the dev unit adds carries a
-    tag, so a block the student edited keeps standing for its level, and a
-    block of the type the student built does not. */
+    entry's tag when it has one. The tag, not the block's values, is the
+    identity, so a block the student edited still stands for its entry and
+    a block of the type the student built does not. */
 export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
   return (
     present.type === entry.type && (!entry.data || present.data === entry.data)
