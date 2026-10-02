@@ -1,0 +1,17 @@
+@use '../sharedMixins' as mixins;
+
+// Matches the height of Lab2's own panel headers, such as Instructions.
+$lab2-panel-header-height: 41px;
+
+.header {
+  @include mixins.panel-header;
+
+  flex-shrink: 0;
+  min-height: $lab2-panel-header-height;
+  justify-content: center;
+  font-family: var(--font-family-main);
+}
+
+.title {
+  @include mixins.panel-header-title;
+}

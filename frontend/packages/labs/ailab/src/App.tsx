@@ -30,6 +30,7 @@ import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
 import TrainModel from './UIComponents/TrainModel';
 import TrainPanel from './UIComponents/TrainPanel';
+import WorkspaceHeader from './UIComponents/WorkspaceHeader';
 
 import styles from './app.module.scss';
 
@@ -244,6 +245,8 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
   return (
     <div className={styles.app} style={colorVariables}>
+      <WorkspaceHeader />
+
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
           <ContainerLeft>
