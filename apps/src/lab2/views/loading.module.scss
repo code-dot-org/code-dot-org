@@ -55,6 +55,13 @@
   z-index: variables.$z-index-overlay;
   background-color: var(--background-neutral-lab);
 
+  // Bounded to the lab's own box instead of the viewport; the box already
+  // starts below the header, so the top offset above does not apply.
+  &.boundedBlock {
+    position: absolute;
+    top: 0;
+  }
+
   &.noFadeLoading {
     opacity: 0;
     pointer-events: initial;
