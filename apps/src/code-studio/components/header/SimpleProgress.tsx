@@ -1,9 +1,7 @@
-import React, {useEffect, useLayoutEffect, useRef} from 'react';
+import React from 'react';
 
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 const IMAGE_SIZE = 32;
 
@@ -53,58 +51,27 @@ export function subPathFor(levels?: ProgressLevel[]): SubPath | null {
 interface SimpleProgressProps {
   imageUrl?: string;
   levels?: ProgressLevel[];
-  /** The slot the header gives it. */
-  width?: number;
-  setDesiredWidth?: (width: number) => void;
 }
 
 /** A unit's logo, the current level's header label and a bar showing where
-    the level sits among those sharing it, in the progress bubbles' slot;
-    reports its width to the header the way LessonProgress does. */
+    the level sits among those sharing it. Shrinks with the header's row:
+    the label ellipsizes and the bar fills what is left. */
 const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
   imageUrl,
   levels,
-  width,
-  setDesiredWidth,
 }) => {
-  const innerRef = useRef<HTMLDivElement>(null);
-  const labelRef = useRef<HTMLSpanElement>(null);
-
-  // The natural width: what shows plus what the label hides behind its
-  // ellipsis, rounded up past the sub-pixel fraction that would ellipsize it.
-  const reportWidth = () => {
-    const inner = innerRef.current;
-    if (!setDesiredWidth || !inner) {
-      return;
-    }
-    const label = labelRef.current;
-    const hidden = label ? label.scrollWidth - label.clientWidth : 0;
-    const shown = inner.getBoundingClientRect().width;
-    setDesiredWidth(Math.ceil(shown + Math.max(0, hidden)) + 1);
-  };
-  const reportWidthRef = useRef(reportWidth);
-  reportWidthRef.current = reportWidth;
-
-  // After every render: the slot and the label both change what shows.
-  useLayoutEffect(reportWidth);
-  useEffect(() => remeasureOnFontsReady(() => reportWidthRef.current()), []);
-
   const subPath = subPathFor(levels);
   const label = subPath?.label;
   const progress = subPath?.total ? subPath : null;
   return (
-    <div id="simple_progress" style={{width, overflow: 'hidden'}}>
-      <div ref={innerRef} style={styles.row}>
+    <div id="simple_progress" style={styles.outer}>
+      <div style={styles.row}>
         {imageUrl && <img src={imageUrl} alt="" style={styles.image} />}
         {label && (
           // Keyed on the label so a new part starts at its own fill rather
           // than sliding from the last part's.
           <div key={label} style={styles.text}>
-            <span
-              id="simple_progress_label"
-              ref={labelRef}
-              style={styles.label}
-            >
+            <span id="simple_progress_label" style={styles.label}>
               {label}
             </span>
             {progress && (
@@ -140,14 +107,15 @@ const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
 export default SimpleProgress;
 
 const styles: Record<string, React.CSSProperties> = {
-  // Natural width when the header has room; no wider than the slot when
-  // it has not, so the label and bar shrink instead of being cut off.
+  outer: {
+    minWidth: 0,
+    overflow: 'hidden',
+  },
   row: {
-    display: 'inline-flex',
+    display: 'flex',
     alignItems: 'center',
     height: 50,
     padding: '0 5px',
-    maxWidth: '100%',
     boxSizing: 'border-box',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -168,7 +136,7 @@ const styles: Record<string, React.CSSProperties> = {
     marginInlineStart: 12,
     display: 'flex',
     flexDirection: 'column',
-    // Shrinks with the slot; the label ellipsizes and the bar fills the column.
+    // Shrinks with the row; the label ellipsizes and the bar fills the column.
     flex: '1 1 auto',
     minWidth: 0,
   },

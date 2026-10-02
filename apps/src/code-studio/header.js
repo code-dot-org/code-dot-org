@@ -3,6 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {
   setUserSignedIn,
@@ -114,14 +115,19 @@ header.build = function (
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
   $(document).ready(function () {
+    // A unit with simple progress has no bubbles to fit, so its header is
+    // a plain flex row rather than the measured one.
+    const middle = scriptData.simpleProgress ? (
+      <SimpleHeader scriptData={scriptData} lessonData={lessonData} />
+    ) : (
+      <HeaderMiddle
+        scriptNameData={scriptNameData}
+        lessonData={lessonData}
+        scriptData={scriptData}
+      />
+    );
     createReactRoot(
-      <Provider store={getStore()}>
-        <HeaderMiddle
-          scriptNameData={scriptNameData}
-          lessonData={lessonData}
-          scriptData={scriptData}
-        />
-      </Provider>,
+      <Provider store={getStore()}>{middle}</Provider>,
       document.querySelector('.header_level'),
       {
         legacyReactDomRender: true,

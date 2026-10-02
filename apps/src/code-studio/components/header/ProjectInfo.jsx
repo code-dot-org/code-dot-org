@@ -63,12 +63,18 @@ class ProjectInfo extends React.Component {
     }
 
     const HeaderComponent = headerComponents[this.props.currentHeader];
+    // With no width from the header, the info sits in the header's flex row
+    // and shrinks with it instead of being sized from outside.
+    const inFlow = this.props.width === undefined;
     return (
-      <div className="project_info_container" style={styles.headerContainer}>
+      <div
+        className="project_info_container"
+        style={inFlow ? styles.flowContainer : styles.headerContainer}
+      >
         <div
           className="project_info"
           ref="projectInfo"
-          style={styles.projectInfo}
+          style={inFlow ? styles.flowInfo : styles.projectInfo}
         >
           <HeaderComponent onChangedWidth={() => this.onChangedWidth()} />
         </div>
@@ -88,6 +94,16 @@ const styles = {
     bottom: 0,
     display: 'flex',
     alignItems: 'center',
+  },
+  flowContainer: {
+    height: 38,
+    minWidth: 0,
+  },
+  flowInfo: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    minWidth: 0,
   },
 };
 

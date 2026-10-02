@@ -18,11 +18,7 @@ const levelsWithCurrent = (currentId: string) =>
 describe('SimpleProgress', () => {
   it('shows the current level label and its place in the sub-path', () => {
     render(
-      <SimpleProgress
-        imageUrl="/logo.png"
-        levels={levelsWithCurrent('3')}
-        width={300}
-      />
+      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('3')} />
     );
     expect(screen.getByText('Story')).toBeTruthy();
     const bar = screen.getByRole('progressbar');
@@ -33,78 +29,37 @@ describe('SimpleProgress', () => {
   });
 
   it('draws no bar when the label covers one level', () => {
-    render(<SimpleProgress levels={levelsWithCurrent('1')} width={300} />);
+    render(<SimpleProgress levels={levelsWithCurrent('1')} />);
     expect(screen.getByText('Getting started')).toBeTruthy();
     expect(screen.queryByRole('progressbar')).toBeNull();
   });
 
   it('shows nothing but the logo for a level without a label', () => {
     render(
-      <SimpleProgress
-        imageUrl="/logo.png"
-        levels={levelsWithCurrent('5')}
-        width={300}
-      />
+      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('5')} />
     );
     expect(screen.queryByRole('progressbar')).toBeNull();
     expect(document.querySelector('#simple_progress')?.textContent).toBe('');
   });
 
-  it('shrinks to its slot, the label ellipsizing and the bar filling the column', () => {
+  it("shrinks with the header's row, the label ellipsizing and the bar filling the column", () => {
     render(
-      <SimpleProgress
-        imageUrl="/logo.png"
-        levels={levelsWithCurrent('3')}
-        width={120}
-      />
+      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('3')} />
     );
+    const outer = document.querySelector('#simple_progress') as HTMLElement;
+    expect(outer.style.minWidth).toBe('0');
     const label = screen.getByText('Story');
-    const inner = label.parentElement!.parentElement!;
-    expect(inner.style.maxWidth).toBe('100%');
     expect(label.style.textOverflow).toBe('ellipsis');
     expect(label.parentElement!.style.minWidth).toBe('0');
     expect(label.parentElement!.style.flex).toBe('1 1 auto');
     expect(screen.getByRole('progressbar').style.width).toBe('100%');
   });
 
-  it('asks for its natural width even while squeezed, counting what the label hides', () => {
-    const setDesiredWidth = jest.fn();
-    // A fresh element each time: React skips a re-render of the same one.
-    const squeezed = () => (
-      <SimpleProgress
-        imageUrl="/logo.png"
-        levels={levelsWithCurrent('3')}
-        width={120}
-        setDesiredWidth={setDesiredWidth}
-      />
-    );
-    const {rerender} = render(squeezed());
-    const label = screen.getByText('Story');
-    // jsdom lays nothing out: the row measures 0 wide, and the label
-    // hides 80px behind its ellipsis.
-    Object.defineProperty(label, 'scrollWidth', {value: 140});
-    Object.defineProperty(label, 'clientWidth', {value: 60});
-    rerender(squeezed());
-    expect(setDesiredWidth).toHaveBeenLastCalledWith(81);
-  });
-
   it('names the bar after its label', () => {
-    render(<SimpleProgress levels={levelsWithCurrent('3')} width={300} />);
+    render(<SimpleProgress levels={levelsWithCurrent('3')} />);
     const bar = screen.getByRole('progressbar');
     expect(bar.getAttribute('aria-labelledby')).toBe('simple_progress_label');
     expect(screen.getByText('Story').id).toBe('simple_progress_label');
-  });
-
-  it('reports its natural width', () => {
-    const setDesiredWidth = jest.fn();
-    render(
-      <SimpleProgress
-        levels={levelsWithCurrent('2')}
-        width={200}
-        setDesiredWidth={setDesiredWidth}
-      />
-    );
-    expect(setDesiredWidth).toHaveBeenCalled();
   });
 });
 

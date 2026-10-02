@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
-
 import LessonProgress from '../progress/LessonProgress';
 
 import HeaderFinish from './HeaderFinish';
@@ -13,7 +11,6 @@ import HeaderPopup from './HeaderPopup';
 import ProjectInfo from './ProjectInfo';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 import ScriptName from './ScriptName';
-import SimpleProgress from './SimpleProgress';
 
 // These components will be given additional width beyond what they desire.
 const scriptNameExtraWidth = 10;
@@ -27,7 +24,6 @@ class HeaderMiddle extends React.Component {
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
-    levels: PropTypes.array,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     isRtl: PropTypes.bool,
@@ -113,8 +109,7 @@ class HeaderMiddle extends React.Component {
     lessonProgressDesiredWidth,
     numScriptLessons,
     finishDesiredWidth,
-    showFinish,
-    allowPopup = true
+    showFinish
   ) {
     // For levels that show only project info, do an early return.
     if (projectInfoOnly) {
@@ -165,11 +160,7 @@ class HeaderMiddle extends React.Component {
     let showPopupBecauseProgressCropped = false;
     if (numScriptLessons > 1) {
       showPopup = true;
-    } else if (
-      allowPopup &&
-      progressWidth < lessonProgressDesiredWidthAdjusted
-    ) {
-      // Simple progress is never cropped bubbles, so it opens no popup.
+    } else if (progressWidth < lessonProgressDesiredWidthAdjusted) {
       showPopup = true;
       showPopupBecauseProgressCropped = true;
     }
@@ -210,21 +201,12 @@ class HeaderMiddle extends React.Component {
   }
 
   render() {
-    const {
-      scriptNameData,
-      lessonData,
-      scriptData,
-      currentLevelId,
-      levels,
-      isRtl,
-    } = this.props;
+    const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
+      this.props;
 
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink
     );
-
-    // Simple progress takes the bubbles' slot and reports its width the same way.
-    const showSimpleProgress = !!scriptData?.simpleProgress;
 
     const widths = HeaderMiddle.getWidths(
       this.state.width,
@@ -235,8 +217,7 @@ class HeaderMiddle extends React.Component {
       this.state.lessonProgressDesiredWidth,
       this.props.lessonData ? this.props.lessonData.num_script_lessons : 0,
       this.state.finishDesiredWidth,
-      showFinish,
-      !showSimpleProgress
+      showFinish
     );
 
     const extraScriptNameData = scriptNameData
@@ -317,24 +298,13 @@ class HeaderMiddle extends React.Component {
                     : undefined,
               }}
             >
-              {showSimpleProgress ? (
-                <SimpleProgress
-                  imageUrl={scriptData.simpleProgressImage}
-                  levels={levels}
-                  width={widths.progress - lessonProgressExtraWidth}
-                  setDesiredWidth={width => {
-                    this.setDesiredWidth('lessonProgress', width);
-                  }}
-                />
-              ) : (
-                <LessonProgress
-                  width={widths.progress - lessonProgressExtraWidth}
-                  setDesiredWidth={width => {
-                    this.setDesiredWidth('lessonProgress', width);
-                  }}
-                  lessonName={lessonData.name}
-                />
-              )}
+              <LessonProgress
+                width={widths.progress - lessonProgressExtraWidth}
+                setDesiredWidth={width => {
+                  this.setDesiredWidth('lessonProgress', width);
+                }}
+                lessonName={lessonData.name}
+              />
             </div>
           )}
 
@@ -407,5 +377,4 @@ export default connect(state => ({
   appLoadStarted: state.header.appLoadStarted,
   appLoaded: state.header.appLoaded,
   currentLevelId: state.progress.currentLevelId,
-  levels: getCurrentLevels(state),
 }))(HeaderMiddle);

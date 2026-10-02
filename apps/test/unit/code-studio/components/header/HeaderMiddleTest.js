@@ -171,40 +171,4 @@ describe('HeaderMiddle', () => {
     expect(widths.popup).toEqual(0);
     expect(widths.finish).toEqual(0);
   });
-
-  it('gives the popup no room when simple progress replaces the bubbles', () => {
-    const widths = HeaderMiddle.getWidths(
-      350,    // width,
-      false,  // projectInfoOnly,
-      false,  // scriptNameOnly,
-      0,      // projectInfoDesiredWidth,
-      200,    // scriptNameDesiredWidth,
-      350,    // lessonProgressDesiredWidth,
-      0,      // numScriptLessons,
-      200,    // finishDesiredWidth,
-      true,   // showFinish
-      false   // allowPopup
-    );
-
-    expect(widths.popup).toEqual(0);
-    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
-  });
-
-  it('keeps the lesson list popup for a simple progress unit with several lessons', () => {
-    const widths = HeaderMiddle.getWidths(
-      350,    // width,
-      false,  // projectInfoOnly,
-      false,  // scriptNameOnly,
-      0,      // projectInfoDesiredWidth,
-      200,    // scriptNameDesiredWidth,
-      150,    // lessonProgressDesiredWidth,
-      3,      // numScriptLessons,
-      200,    // finishDesiredWidth,
-      true,   // showFinish
-      false   // allowPopup
-    );
-
-    expect(widths.popup).toEqual(40);
-    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
-  });
 });
