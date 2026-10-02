@@ -7,8 +7,6 @@ import {getFadeOpacity} from '../constants';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getTableData} from '../redux';
-import {store} from '../store';
-import train from '../train';
 
 import {TrainingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
@@ -19,7 +17,11 @@ import styles from './trainModel.module.scss';
 const framesPerCycle = 80;
 const maxNumItems = 7;
 
-const TrainModel = () => {
+interface TrainModelProps {
+  onFinished: () => void;
+}
+
+const TrainModel = ({onFinished}: TrainModelProps) => {
   const data = useAppSelector(state => getTableData(state, false));
   const instructionsOverlayActive = useAppSelector(
     state => state.instructionsOverlayActive,
@@ -32,6 +34,7 @@ const TrainModel = () => {
   const finishedRef = useRef(false);
   const instructionsOverlayActiveRef = useRef(instructionsOverlayActive);
   const dataRef = useRef(data);
+  const onFinishedRef = useRef(onFinished);
 
   // Keep refs in sync with props
   useEffect(() => {
@@ -43,9 +46,10 @@ const TrainModel = () => {
   }, [data]);
 
   useEffect(() => {
-    train.init(store);
-    train.onClickTrain();
+    onFinishedRef.current = onFinished;
+  }, [onFinished]);
 
+  useEffect(() => {
     const animationTimer = setInterval(() => {
       const currentData = dataRef.current;
       if (!currentData) {
@@ -62,11 +66,12 @@ const TrainModel = () => {
       const animationStep = Math.floor(currentFrame / framesPerCycle);
       const numItems = Math.min(maxNumItems, currentData.length);
 
-      if (animationStep >= numItems) {
+      if (animationStep >= numItems && !finishedRef.current) {
         headOpenRef.current = false;
         finishedRef.current = true;
         setHeadOpen(false);
         setFinished(true);
+        onFinishedRef.current();
       }
 
       if (!instructionsOverlayActiveRef.current) {
@@ -129,8 +134,6 @@ const TrainModel = () => {
           'url(' + imageUrl('results-background-light.jpg') + ')',
       }}
     >
-      <div className={shared.sceneHeading}>{I18n.t('trainModelHeading')}</div>
-
       <div className={shared.sceneTable} style={{opacity: tableOpacity}}>
         <DataTable reducedColumns={true} startingRow={startingRow} />
       </div>
