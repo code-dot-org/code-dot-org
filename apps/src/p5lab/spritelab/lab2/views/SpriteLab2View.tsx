@@ -1557,6 +1557,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // workspace has rendered. Per level, not per load: a level reached in
   // page shares the scene's code with the last one, and loads nothing.
   const addedBlocksForRef = useRef('');
+  // The reset Start Over makes while leaving for the first level, by level
+  // and sources generation. The fresh project is remade from that level on,
+  // so this level's blocks must not seed it.
+  const leavingResetRef = useRef<{level: number; reinit: number}>();
   useEffect(() => {
     if (
       !animationsSeeded ||
@@ -1576,6 +1580,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     addedBlocksForRef.current = key;
+    const leaving = leavingResetRef.current;
+    if (
+      leaving &&
+      leaving.level === levelProperties.id &&
+      leaving.reinit === sourcesReinitializedCount
+    ) {
+      leavingResetRef.current = undefined;
+      return;
+    }
     const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
     addMissingBlocks(workspace, levelProperties.addBlocks);
   }, [
@@ -1803,9 +1816,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showStartOver && isEditable && (
         <StartOverDialog
           onConfirm={() => {
+            const leaving = !!firstLevelId && firstLevelId !== currentLevelId;
+            if (leaving) {
+              leavingResetRef.current = {
+                level: levelProperties.id,
+                reinit: sourcesReinitializedCount + 1,
+              };
+            }
             startOver();
             setShowStartOver(false);
-            if (firstLevelId && firstLevelId !== currentLevelId) {
+            if (leaving) {
               dispatch(navigateToLevelId(firstLevelId));
             }
           }}
