@@ -37,7 +37,8 @@ class QuizQuestion < ApplicationRecord
   validates :name, presence: true
   validates :content, presence: true
 
-  after_commit :write_to_file
+  after_commit :write_to_file, on: %i(create update)
+  after_commit :delete_file, on: :destroy
 
   def self.setup(dashboard_root = '.')
     ActiveRecord::Base.transaction do
@@ -70,6 +71,10 @@ class QuizQuestion < ApplicationRecord
       FileUtils.mkdir_p(File.dirname(file_path))
       File.write(file_path, formatted_for_file)
     end
+  end
+
+  def delete_file
+    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if write_to_file?
   end
 
   def write_to_file?

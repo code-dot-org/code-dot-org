@@ -137,6 +137,23 @@ class QuizQuestionTest < ActiveSupport::TestCase
     question.write_to_file
   end
 
+  test "destroying a question deletes its file instead of rewriting it" do
+    question = create(:quiz_question)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).never
+    FileUtils.expects(:rm_f).with(Rails.root.join("config/quiz_questions/#{question.key}.json"))
+    question.destroy!
+  end
+
+  test "destroying a question does nothing to the file outside levelbuilder_mode" do
+    question = create(:quiz_question)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    FileUtils.expects(:rm_f).never
+    question.destroy!
+  end
+
   test "setup creates a question from a quiz_questions file" do
     Dir.mktmpdir do |dir|
       FileUtils.mkdir_p("#{dir}/config/quiz_questions")
