@@ -162,6 +162,29 @@ describe('weather', () => {
     expect(x1 - x2).toBeCloseTo(0.9, 5);
   });
 
+  it("a bouncing drop's streak points away from the tile it landed on", () => {
+    const rain = createWeather('rain', scene([tile]), fixed(0.5));
+    const drop = rain.particles[0];
+    Object.assign(drop, {x: 200, y: 275, vx: 0, vy: 8, speed: 8});
+    stepWeather(rain, scene([tile]), fixed(0.5));
+    expect(drop.state).toBe('settling');
+    const lines: number[][] = [];
+    const canvas = new Proxy(
+      {},
+      {
+        get: (_, name: string) =>
+          name === 'line'
+            ? (...args: number[]) => lines.push(args)
+            : () => undefined,
+      }
+    ) as Parameters<typeof drawWeather>[0];
+    drawWeather(canvas, rain);
+    const [, y1, , y2] = lines[0];
+    // The tile's top is at 280: both ends of the streak sit above it.
+    expect(y1).toBeLessThanOrEqual(280);
+    expect(y2).toBeLessThan(y1);
+  });
+
   it('a flake drifting into a tile through its side slides down outside it', () => {
     const snow = createWeather('snow', scene([tile]), fixed(0.5));
     const flake = snow.particles[0];

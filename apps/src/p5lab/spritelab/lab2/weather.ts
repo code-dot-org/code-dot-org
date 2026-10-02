@@ -394,8 +394,10 @@ export function drawWeather(p5: WeatherCanvas, weather: Weather): void {
     if (weather.kind === 'rain') {
       p5.stroke(120, 160, 230, a * 0.8);
       p5.strokeWeight(2);
-      // A streak the length of the motion; a slow drop is a tick.
-      p5.line(p.x, p.y, p.x - (p.vx + p.drift) * 1.5, p.y - p.vy * 1.5);
+      // A streak the length of the motion, trailing the fall; a bouncing
+      // drop's streak leads instead, so it never reaches into the surface.
+      const back = p.state === 'settling' ? -1.5 : 1.5;
+      p5.line(p.x, p.y, p.x - (p.vx + p.drift) * back, p.y - p.vy * back);
     } else {
       // Tinted and edged, so a flake also shows against a white stage.
       p5.stroke(170, 190, 220, a);
