@@ -15,6 +15,10 @@
   padding: 10px 10px 0;
 }
 
+.withoutNavigation {
+  padding-bottom: 0;
+}
+
 .flushBody {
   display: flex;
   flex-direction: column;

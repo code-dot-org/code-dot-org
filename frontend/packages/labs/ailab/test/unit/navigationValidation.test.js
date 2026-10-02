@@ -191,12 +191,12 @@ describe('prevNextButtons on the data panels', () => {
     },
   );
 
-  test('results has no back button; the Dataset tab goes back', () => {
-    const {prev} = prevNextButtons({
+  test('results has neither button; the Dataset tab goes back', () => {
+    const {prev, next} = prevNextButtons({
       ...resultsState,
       currentPanel: 'results',
-      historicResults: [{accuracy: '100'}],
     });
     expect(prev).toBeUndefined();
+    expect(next).toBeUndefined();
   });
 });

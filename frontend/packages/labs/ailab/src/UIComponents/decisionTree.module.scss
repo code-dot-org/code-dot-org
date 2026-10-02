@@ -1,3 +1,5 @@
+@use '../sharedMixins' as mixins;
+
 $path-color: var(--border-selected-primary);
 $off-path-color: var(--text-neutral-quaternary);
 $overlay-float-min-width: 600px;
@@ -6,7 +8,6 @@ $overlay-float-min-width: 600px;
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 20px;
 }
 
 .canvasArea {
@@ -19,13 +20,7 @@ $overlay-float-min-width: 600px;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  max-height: 100%;
+  @include mixins.canvas-overlay;
 }
 
 @container (width < #{$overlay-float-min-width}) {
@@ -34,11 +29,6 @@ $overlay-float-min-width: 600px;
     align-self: flex-end;
     max-height: none;
   }
-}
-
-.header {
-  font-size: 14px;
-  margin-bottom: 8px;
 }
 
 .canvas {

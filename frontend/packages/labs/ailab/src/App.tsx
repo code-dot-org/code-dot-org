@@ -227,6 +227,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
+  const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -241,7 +242,12 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   }, [currentPanel]);
 
   return (
-    <div className={styles.app} style={colorVariables}>
+    <div
+      className={classNames(styles.app, {
+        [styles.withoutNavigation]: !hasNavigation,
+      })}
+      style={colorVariables}
+    >
       <WorkspaceHeader />
 
       {currentPanel === 'selectDataset' && (
@@ -273,7 +279,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       <TrainingModal />
 
       {currentPanel === 'results' && (
-        <BodyContainer>
+        <BodyContainer flush>
           <ContainerFullWidth>
             <Results />
           </ContainerFullWidth>
@@ -296,17 +302,19 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      <PanelButtons
-        panelButtons={panelButtons}
-        currentPanel={currentPanel}
-        setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
-        onContinue={onContinue}
-        startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
-        saveStatus={saveStatus}
-        saveResponseData={saveResponseData}
-        isSaveComplete={isSaveComplete}
-        shouldDisplaySaveStatus={shouldDisplaySaveStatus}
-      />
+      {hasNavigation && (
+        <PanelButtons
+          panelButtons={panelButtons}
+          currentPanel={currentPanel}
+          setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
+          onContinue={onContinue}
+          startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
+          saveStatus={saveStatus}
+          saveResponseData={saveResponseData}
+          isSaveComplete={isSaveComplete}
+          shouldDisplaySaveStatus={shouldDisplaySaveStatus}
+        />
+      )}
     </div>
   );
 };

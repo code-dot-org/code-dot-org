@@ -166,3 +166,7 @@ export function getAccuracyRegression(state: RootState): AccuracyGrades {
     {tolerance: regressionTolerance(state)},
   );
 }
+
+export function formatAccuracy(accuracy: string): string {
+  return `${Number(accuracy)}%`;
+}
