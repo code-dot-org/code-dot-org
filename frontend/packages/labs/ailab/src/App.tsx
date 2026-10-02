@@ -23,10 +23,10 @@ import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import GenerateResults from './UIComponents/GenerateResults';
 import ModelCard from './UIComponents/ModelCard';
-import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
+import TestPanel from './UIComponents/TestPanel';
 import TrainModel from './UIComponents/TrainModel';
 import TrainPanel from './UIComponents/TrainPanel';
 
@@ -283,13 +283,13 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {currentPanel === 'results' && (
-        <BodyContainer>
+        <BodyContainer flush>
           <ContainerLeft>
             <Results />
           </ContainerLeft>
           {resultsPhase === 1 && (
             <ContainerRight>
-              <Predict />
+              <TestPanel />
             </ContainerRight>
           )}
         </BodyContainer>
