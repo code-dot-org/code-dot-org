@@ -10,6 +10,7 @@ import {
   getExtrema,
   containsOnlyNumbers,
   getColumnDescription,
+  getMostAndLeastCommon,
 } from '../../src/helpers/columnDetails';
 import I18n from '../../src/i18n';
 
@@ -166,5 +167,25 @@ describe('getLocalizedColumnName', () => {
     I18n.initI18n(premadeDatasetTranslations);
     const result = getLocalizedColumnName('bats_eat_mozzies', 'mosquitoCount');
     expect(result).toEqual(premadeDatasetColumnNameLocalized);
+  });
+});
+
+describe('getMostAndLeastCommon', () => {
+  test('finds the most and least frequent options', () => {
+    const result = getMostAndLeastCommon(['hot', 'medium', 'mild'], {
+      hot: 16,
+      medium: 1,
+      mild: 18,
+    });
+    expect(result).toEqual({mostCommon: 'mild', leastCommon: 'medium'});
+  });
+
+  test('breaks ties by option order', () => {
+    const result = getMostAndLeastCommon(['a', 'b'], {a: 2, b: 2});
+    expect(result).toEqual({mostCommon: 'a', leastCommon: 'a'});
+  });
+
+  test('returns undefined when there are no options', () => {
+    expect(getMostAndLeastCommon([], {})).toBeUndefined();
   });
 });

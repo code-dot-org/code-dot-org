@@ -1,12 +1,11 @@
 /* Panel for choosing a model's label and features, then training it. */
-import {Button, IconButton as MuiIconButton, Tooltip} from '@mui/material';
+import {Button} from '@mui/material';
 import classNames from 'classnames';
 import type {ChangeEvent, ReactNode} from 'react';
 
 import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxDropdown';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
@@ -22,47 +21,11 @@ import {getSelectableColumns} from '../selectors';
 import {store} from '../store';
 import train from '../train';
 
+import FieldLabel from './FieldLabel';
+import SentenceTag from './SentenceTag';
+
+import appStyles from '../app.module.scss';
 import styles from './trainPanel.module.scss';
-
-interface FieldLabelProps {
-  text: string;
-  tooltip: string;
-}
-
-const FieldLabel = ({text, tooltip}: FieldLabelProps) => (
-  <div className={styles.fieldLabel}>
-    <span aria-hidden="true">{text}</span>
-    <Tooltip title={tooltip}>
-      <MuiIconButton
-        variant="text"
-        color="tertiary"
-        size="extraSmall"
-        className={styles.infoButton}
-        aria-label={`About ${text}`}
-      >
-        <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
-      </MuiIconButton>
-    </Tooltip>
-  </div>
-);
-
-interface SentenceTagProps {
-  text: string | undefined;
-  placeholder: string;
-  variant: 'label' | 'feature';
-}
-
-const SentenceTag = ({text, placeholder, variant}: SentenceTagProps) => (
-  <span
-    aria-hidden="true"
-    className={classNames(
-      styles.tag,
-      text ? styles[`${variant}Tag`] : styles.placeholderTag,
-    )}
-  >
-    {text || placeholder}
-  </span>
-);
 
 const TrainPanel = () => {
   const dispatch = useAppDispatch();
@@ -212,7 +175,7 @@ const TrainPanel = () => {
             </div>
           </div>
           <div className={styles.sentence}>
-            <span className={styles.visuallyHidden}>{readableSentence}</span>
+            <span className={appStyles.visuallyHidden}>{readableSentence}</span>
             {sentenceParts}
           </div>
           <div className={styles.actionRow}>

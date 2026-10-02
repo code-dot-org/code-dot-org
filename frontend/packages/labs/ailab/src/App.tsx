@@ -19,6 +19,7 @@ import type {
   SaveResponseData,
   SaveTrainedModel,
 } from './types';
+import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import ModelCard from './UIComponents/ModelCard';
@@ -255,13 +256,16 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
       {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
         <BodyContainer flush>
-          <ContainerLeft>
-            <DataDisplay />
-          </ContainerLeft>
+          <div className={styles.panelRow}>
+            <ContainerLeft>
+              <DataDisplay />
+            </ContainerLeft>
 
-          <ContainerRight>
-            <TrainPanel />
-          </ContainerRight>
+            <ContainerRight>
+              <TrainPanel />
+            </ContainerRight>
+          </div>
+          <ColumnAnalysis />
         </BodyContainer>
       )}
 
