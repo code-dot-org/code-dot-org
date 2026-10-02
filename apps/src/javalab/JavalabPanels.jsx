@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import color from '@cdo/apps/util/color';
+import {availableContentWidth} from '@cdo/apps/util/taDrawerInset';
 
 import globalStyleConstants from '../styleConstants';
 
@@ -240,7 +241,7 @@ class JavalabPanels extends React.Component {
     const actualLeftWidth = this.props.isLeftSideVisible
       ? this.props.leftWidth + globalStyleConstants['resize-bar-width']
       : 0;
-    const newRightWidth = window.innerWidth - actualLeftWidth - 20;
+    const newRightWidth = availableContentWidth() - actualLeftWidth - 20;
     this.props.setRightWidth(newRightWidth);
   };
 

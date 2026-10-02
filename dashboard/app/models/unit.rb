@@ -345,6 +345,8 @@ class Unit < ApplicationRecord
     generate_outline
     generate_drafting_rules
     generate_authoring_rules
+    simple_progress
+    simple_progress_image
   )
 
   def self.starwars_unit
@@ -1475,6 +1477,8 @@ class Unit < ApplicationRecord
         version_year: unit_group_unit&.cached_unit_group&.version_year,
         assigned_section_id: assigned_section_id,
         tts: tts?,
+        simpleProgress: simple_progress?,
+        simpleProgressImage: simple_progress_image,
         deprecated: deprecated?,
         is_migrated: is_migrated?,
         scriptPath: unit_path,
@@ -1627,6 +1631,8 @@ class Unit < ApplicationRecord
       age_13_required: logged_out_age_13_required?,
       show_sign_in_callout: csf? || csc?,
       hasUnnumberedLessons: has_unnumbered_lessons?,
+      simpleProgress: simple_progress?,
+      simpleProgressImage: simple_progress_image,
       course_name: unit_group_unit&.unit_group&.name,
       course_id: unit_group_unit&.unit_group&.id,
       unit_position: unit_group_unit&.position,
@@ -1798,6 +1804,7 @@ class Unit < ApplicationRecord
       :weekly_instructional_minutes,
       :content_area,
       :topic_tags,
+      :simple_progress_image,
     ]
     boolean_keys = [
       :has_unnumbered_lessons,
@@ -1808,7 +1815,8 @@ class Unit < ApplicationRecord
       :is_migrated,
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
-      :enable_blockly_keyboard_navigation
+      :enable_blockly_keyboard_navigation,
+      :simple_progress
     ]
 
     result = {}

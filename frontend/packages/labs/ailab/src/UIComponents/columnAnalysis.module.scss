@@ -1,0 +1,116 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  flex-shrink: 0;
+  font-family: var(--font-family-main);
+  background-color: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.header {
+  @include mixins.panel-header;
+}
+
+.headerSpacer {
+  width: 24px;
+}
+
+.headerTitle {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  color: var(--text-neutral-quaternary);
+}
+
+.body {
+  display: flex;
+}
+
+.summary {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 10px 12px;
+}
+
+.columnName {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--text-neutral-primary);
+}
+
+.description {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-neutral-secondary);
+}
+
+.stats {
+  display: flex;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.distribution {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 10px 10px 12px;
+  border-left: 1px solid var(--border-neutral-primary);
+}
+
+.distributionTitle {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+}
+
+.alert {
+  margin-top: 8px;
+}
+
+.emptyGraph {
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  text-align: center;
+}
+
+.emptyGraphIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  border-radius: var(--shape-round);
+  font-size: 24px;
+  color: var(--text-neutral-primary-inverse);
+  background-color: var(--background-neutral-septenary);
+}
+
+.emptyGraphTitle {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-neutral-primary);
+}
+
+.emptyGraphMessage {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-neutral-secondary);
+}

@@ -10,8 +10,7 @@ data:
 
   # ActiveJob queue adapter, shared by enqueuers (dashboard) and the
   # active-job-worker deployment so jobs land where the worker looks.
-  # Mirrored in k8s/kustomize/components/backend/locals.yml.yaml.
-  # Deliberately unquoted to render byte-identically to the kustomize side.
+  # Deliberately unquoted so it renders as a Ruby symbol.
   active_job_queue_adapter: :delayed_job
 
   build_apps: "true"
@@ -26,8 +25,7 @@ data:
   properties_encryption_key: ""
 
   # Same idea for the adhoc environment used by the ActiveJob worker and the
-  # setup-db-minimal job; mirrored in
-  # k8s/kustomize/components/backend/locals.yml.yaml.
+  # setup-db-minimal job.
   contentful_api_key: ""
   contentful_cs_for_all_access_token: ""
   javabuilder_key_password: ""
