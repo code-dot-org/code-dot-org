@@ -53,9 +53,9 @@ export default class HeaderFinish extends React.Component {
     // With no width from the header, the link sits in the header's flex row
     // and ellipsizes whenever the row squeezes it.
     const inFlow = this.props.width === undefined;
-    const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
-    const isTruncated = !inFlow && actualWidth > 0 && fullWidth > actualWidth;
+    const isTruncated =
+      !inFlow && actualWidth > 0 && this.getFullWidth() > actualWidth;
     this._isTruncated = isTruncated;
 
     const ellipsisStyle = inFlow

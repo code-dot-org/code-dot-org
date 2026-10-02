@@ -4,6 +4,7 @@
 // the row centres what is left. HeaderMiddle measures because its bubbles
 // need a count that fits; nothing here does.
 
+import {isEqual} from 'lodash';
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -53,7 +54,11 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   lessonData,
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
-  const levels = useSelector(getCurrentLevels) as ProgressLevel[] | undefined;
+  // The selector builds a new array per call; compare by content or every
+  // store change re-renders the row.
+  const levels = useSelector(getCurrentLevels, isEqual) as
+    | ProgressLevel[]
+    | undefined;
   const show = useAppLoadGate();
 
   // Eyes UI tests key on these to tell a page with this header from one with
@@ -72,7 +77,7 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   }
   return (
     <div id="header_middle_content" style={styles.row}>
-      <div id="project_info_container" style={styles.part}>
+      <div id="project_info_container" style={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
       <div id="simple_progress_container" style={styles.progress}>
@@ -102,7 +107,7 @@ const styles: Record<string, React.CSSProperties> = {
     animation: 'header-fadein 0.4s',
   },
   // Each part may shrink below its content; what it holds ellipsizes.
-  part: {
+  projectInfo: {
     flex: '0 1 auto',
     minWidth: 0,
   },

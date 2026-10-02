@@ -111,9 +111,9 @@ header.build = function (
     setupNavigationHandler(currentLevelId);
   }
 
-  // Hold off on rendering HeaderMiddle.  This will allow the "app load"
-  // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
-  // the opportunity to wait until the app is loaded before rendering.
+  // Hold off on rendering the header middle.  This will allow the "app load"
+  // to potentially begin before we first render it, giving it the
+  // opportunity to wait until the app is loaded before rendering.
   $(document).ready(function () {
     // A unit with simple progress has no bubbles to fit, so its header is
     // a plain flex row rather than the measured one.
