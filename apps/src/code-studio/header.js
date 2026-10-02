@@ -118,7 +118,7 @@ header.build = function (
     // A unit with simple progress has no bubbles to fit, so its header is
     // a plain flex row rather than the measured one.
     const middle = scriptData.simpleProgress ? (
-      <SimpleHeader scriptData={scriptData} lessonData={lessonData} />
+      <SimpleHeader scriptData={scriptData} />
     ) : (
       <HeaderMiddle
         scriptNameData={scriptNameData}

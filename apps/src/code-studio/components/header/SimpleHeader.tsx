@@ -1,8 +1,8 @@
 // The level header's middle for a unit with simple progress: the project
-// info, the unit's logo with the part's label and bar, and the finish link
-// in one flex row. Nothing is measured: each part shrinks on its own and
-// the row centres what is left. HeaderMiddle measures because its bubbles
-// need a count that fits; nothing here does.
+// info and the unit's logo with the part's label and bar, in one flex row.
+// Nothing is measured: each part shrinks on its own and the row centres what
+// is left. HeaderMiddle measures because its bubbles need a count that fits;
+// nothing here does.
 
 import {isEqual} from 'lodash';
 import React, {useEffect, useState} from 'react';
@@ -10,7 +10,6 @@ import {useSelector} from 'react-redux';
 
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 
-import HeaderFinish from './HeaderFinish';
 import ProjectInfo from './ProjectInfo';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 import SimpleProgress, {ProgressLevel} from './SimpleProgress';
@@ -26,7 +25,6 @@ interface HeaderState {
 
 interface SimpleHeaderProps {
   scriptData: {simpleProgressImage?: string};
-  lessonData: {finishLink?: string; finishText?: string};
 }
 
 /**
@@ -51,7 +49,6 @@ export function useAppLoadGate(): boolean {
 
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   scriptData,
-  lessonData,
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
   // The selector builds a new array per call; compare by content or every
@@ -86,11 +83,6 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
           levels={levels}
         />
       </div>
-      {lessonData.finishLink && (
-        <div id="finish_link_container" style={styles.finish}>
-          <HeaderFinish lessonData={lessonData} isRtl={isRtl} />
-        </div>
-      )}
     </div>
   );
 };
@@ -115,11 +107,5 @@ const styles: Record<string, React.CSSProperties> = {
     flex: '0 1 auto',
     minWidth: 0,
     margin: '0 5px',
-  },
-  finish: {
-    flex: '0 1 auto',
-    minWidth: 0,
-    marginInlineEnd: 5,
-    height: 18,
   },
 };

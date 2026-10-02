@@ -11,34 +11,19 @@ jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
     {id: '2', headerLabel: 'Story'},
   ],
 }));
-// Connected to stores of their own; stubbed to what the row places.
+// Connected to a store of its own; stubbed to what the row places.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
   default: () => null,
 }));
-jest.mock('@cdo/apps/code-studio/components/header/HeaderFinish', () => ({
-  __esModule: true,
-  default: (props: {lessonData: {finishLink: string; finishText: string}}) =>
-    require('react').createElement(
-      'a',
-      {href: props.lessonData.finishLink},
-      props.lessonData.finishText
-    ),
-}));
-
-const LESSON = {finishLink: '/finish', finishText: 'Finish'};
 
 function renderHeader(
-  header: {appLoadStarted?: boolean; appLoaded?: boolean} = {},
-  lessonData: {finishLink?: string; finishText?: string} = LESSON
+  header: {appLoadStarted?: boolean; appLoaded?: boolean} = {}
 ) {
   const store = createStore(() => ({header, isRtl: false}));
   return render(
     <Provider store={store}>
-      <SimpleHeader
-        scriptData={{simpleProgressImage: '/logo.png'}}
-        lessonData={lessonData}
-      />
+      <SimpleHeader scriptData={{simpleProgressImage: '/logo.png'}} />
     </Provider>
   );
 }
@@ -74,11 +59,7 @@ describe('SimpleHeader', () => {
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.style.display).toBe('flex');
     expect(row.style.justifyContent).toBe('center');
-    for (const id of [
-      'project_info_container',
-      'simple_progress_container',
-      'finish_link_container',
-    ]) {
+    for (const id of ['project_info_container', 'simple_progress_container']) {
       const part = document.querySelector(`#${id}`) as HTMLElement;
       expect(part.style.minWidth).toBe('0');
       expect(part.style.flexShrink).toBe('1');
@@ -86,14 +67,6 @@ describe('SimpleHeader', () => {
     expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
       'Story'
     );
-    expect(document.querySelector('a[href="/finish"]')?.textContent).toBe(
-      'Finish'
-    );
-  });
-
-  it('places no finish link when the lesson has none', () => {
-    renderHeader({appLoadStarted: true, appLoaded: true}, {});
-    expect(document.querySelector('#finish_link_container')).toBeNull();
   });
 
   it('marks the document as carrying the header', () => {

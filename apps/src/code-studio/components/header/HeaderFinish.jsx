@@ -50,17 +50,12 @@ export default class HeaderFinish extends React.Component {
   render() {
     const {lessonData} = this.props;
 
-    // With no width from the header, the link sits in the header's flex row
-    // and ellipsizes whenever the row squeezes it.
-    const inFlow = this.props.width === undefined;
+    const fullWidth = this.getFullWidth();
     const actualWidth = this.props.width;
-    const isTruncated =
-      !inFlow && actualWidth > 0 && this.getFullWidth() > actualWidth;
+    const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
     this._isTruncated = isTruncated;
 
-    const ellipsisStyle = inFlow
-      ? styles.flowLink
-      : isTruncated
+    const ellipsisStyle = isTruncated
       ? {
           display: 'block',
           width: actualWidth,
@@ -71,11 +66,11 @@ export default class HeaderFinish extends React.Component {
       : {};
 
     return (
-      <div style={inFlow ? styles.flowContainer : styles.headerContainer}>
+      <div style={styles.headerContainer}>
         <div
           className="header_finished"
           ref="headerFinish"
-          style={inFlow ? undefined : styles.headerInner}
+          style={styles.headerInner}
         >
           <div className="header_finished_link" style={styles.finishedLink}>
             <a
@@ -100,16 +95,6 @@ const styles = {
   },
   headerInner: {
     position: 'absolute',
-  },
-  flowContainer: {
-    height: 18,
-    minWidth: 0,
-  },
-  flowLink: {
-    display: 'block',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
   },
   scriptLinkWithUpdatedAt: {
     display: 'block',
