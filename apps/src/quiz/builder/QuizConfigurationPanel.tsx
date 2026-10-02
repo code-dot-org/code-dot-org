@@ -492,9 +492,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
                       onChange={handleRevealAnswerExplanationChange}
                     />
                   </div>
-                  <p className={styles.cardHelperText}>
-                    Reveal the correct answer and the explanation.
-                  </p>
                 </div>
               )}
             </div>
