@@ -13,6 +13,8 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'auto',
+    // apps bundles this CJS output; a bare require of ESM-only ky yields the namespace, not the function.
+    interop: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
@@ -46,6 +48,8 @@ export default defineConfig({
     lib: {
       entry: [
         'src/index.ts',
+        // ./redux subpath — the shared store the lab packages inject slices into.
+        'src/redux/index.ts',
         'src/api/index.ts',
         'src/api/mocks/index.ts',
         'src/api/mocks/server.ts',

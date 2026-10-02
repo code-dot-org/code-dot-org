@@ -5,6 +5,7 @@ import {type Mock, describe, expect, it, vi} from 'vitest';
 
 import type {LevelPropertiesMap} from '@code-dot-org/core/api';
 import {useConsent} from '@code-dot-org/core/plugins/consent';
+import {RootStateProvider} from '@code-dot-org/core/redux';
 import {Lab} from '@code-dot-org/lab/host';
 
 import StandaloneVideo from '..';
@@ -38,14 +39,16 @@ function renderWithLab(
   onContinue?: () => void,
 ) {
   render(
-    <Lab
-      levelId={1}
-      levelPropertiesMap={
-        {'1': levelProperties} as unknown as LevelPropertiesMap
-      }
-    >
-      <StandaloneVideo onContinue={onContinue} />
-    </Lab>,
+    <RootStateProvider>
+      <Lab
+        levelId={1}
+        levelPropertiesMap={
+          {'1': levelProperties} as unknown as LevelPropertiesMap
+        }
+      >
+        <StandaloneVideo onContinue={onContinue} />
+      </Lab>
+    </RootStateProvider>,
   );
 }
 
@@ -72,28 +75,36 @@ describe('StandaloneVideo', () => {
 
   it('shows a continue button only when onContinue is provided', () => {
     const {rerender} = render(
-      <Lab
-        levelId={1}
-        levelPropertiesMap={
-          {'1': {appName: 'standalone_video'}} as unknown as LevelPropertiesMap
-        }
-      >
-        <StandaloneVideo />
-      </Lab>,
+      <RootStateProvider>
+        <Lab
+          levelId={1}
+          levelPropertiesMap={
+            {
+              '1': {appName: 'standalone_video'},
+            } as unknown as LevelPropertiesMap
+          }
+        >
+          <StandaloneVideo />
+        </Lab>
+      </RootStateProvider>,
     );
     expect(
       screen.queryByRole('button', {name: /continue/i}),
     ).not.toBeInTheDocument();
 
     rerender(
-      <Lab
-        levelId={1}
-        levelPropertiesMap={
-          {'1': {appName: 'standalone_video'}} as unknown as LevelPropertiesMap
-        }
-      >
-        <StandaloneVideo onContinue={vi.fn()} />
-      </Lab>,
+      <RootStateProvider>
+        <Lab
+          levelId={1}
+          levelPropertiesMap={
+            {
+              '1': {appName: 'standalone_video'},
+            } as unknown as LevelPropertiesMap
+          }
+        >
+          <StandaloneVideo onContinue={vi.fn()} />
+        </Lab>
+      </RootStateProvider>,
     );
     expect(screen.getByRole('button', {name: /continue/i})).toBeInTheDocument();
   });

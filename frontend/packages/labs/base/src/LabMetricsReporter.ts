@@ -32,19 +32,34 @@ class LabMetricsReporter {
     logger.warn(typeof message === 'string' ? message : 'lab.warn', decorated);
   }
 
-  logError(errorMessage: string, error?: Error) {
+  logError(errorMessage: string, error?: Error, details?: object) {
     recordError(error ?? new Error(errorMessage), {
       ...this.commonProperties,
       errorMessage,
+      error: error?.stack || error?.message,
+      details,
     });
   }
 
-  reportLoadTime(metricName: string, loadTimeMs: number) {
-    metrics.distribution(metricName, loadTimeMs, this.getCommonAttributes());
+  reportLoadTime(metricName: string, loadTimeMs: number, details?: object) {
+    metrics.distribution(metricName, loadTimeMs, {
+      ...this.getCommonAttributes(),
+      ...(details || {}),
+    });
   }
 
-  incrementCounter(metricName: string) {
-    metrics.count(metricName, 1, this.getCommonAttributes());
+  incrementCounter(metricName: string, details?: object) {
+    metrics.count(metricName, 1, {
+      ...this.getCommonAttributes(),
+      ...(details || {}),
+    });
+  }
+
+  incrementCounterBy(metricName: string, count: number, details?: object) {
+    metrics.count(metricName, count, {
+      ...this.getCommonAttributes(),
+      ...(details || {}),
+    });
   }
 
   reportSevereError() {

@@ -1,0 +1,44 @@
+{
+  "name": "pl-sandbox-aif-year2",
+  "script_names": [
+    "pl-sandbox-aif-year2-unit1",
+    "pl-sandbox-aif-year2-unit2",
+    "pl-sandbox-aif-year2-unit3",
+    "pl-sandbox-aif-year2-unit4",
+    "pl-sandbox-aif-year2-unit5",
+    "pl-sandbox-aif-year2-unit6",
+    "pl-sandbox-aif-year2-unit7",
+    "pl-sandbox-aif-year2-unit8",
+    "pl-sandbox-aif-year2-unit9",
+    "pl-sandbox-aif-year2-unit10",
+    "pl-sandbox-aif-year2-onboarding"
+  ],
+  "original_script_names": [
+    "pl-sandbox-aif-year2-unit1",
+    "pl-sandbox-aif-year2-unit2",
+    "pl-sandbox-aif-year2-unit3",
+    "pl-sandbox-aif-year2-unit4",
+    "pl-sandbox-aif-year2-unit5",
+    "pl-sandbox-aif-year2-unit6",
+    "pl-sandbox-aif-year2-unit7",
+    "pl-sandbox-aif-year2-unit8",
+    "pl-sandbox-aif-year2-unit9",
+    "pl-sandbox-aif-year2-unit10",
+    "pl-sandbox-aif-year2-onboarding"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "pl-sandbox-aif-year2",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,4 +1,6 @@
 export * from './activities';
+export * from './aichat';
+export * from './assets';
 export * from './auth';
 export * from './channels';
 export * from './courses';
@@ -25,6 +27,7 @@ export {
   useRemoveParentEmail,
   useDeleteUser,
   useSignOutOtherSessions,
+  useUnlinkLtiAccount,
 } from './users/users.query';
 export {
   CurrentUserSchema,
@@ -40,6 +43,7 @@ export type {
   UserType,
   EducatorRoleOption,
   SchoolInfoSummary,
+  IntegrationsSettings,
   SchoolInfoRequest,
   UpdateProfileParams,
   UpdateSchoolInfoParams,
@@ -50,4 +54,5 @@ export type {
   DeleteUserParams,
   EmailOptIn,
   UpdateParentEmailParams,
+  UnlinkLtiAccountParams,
 } from './users/users.types';

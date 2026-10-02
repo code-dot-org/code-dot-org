@@ -1,13 +1,20 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
+import {performClientApiChatCompletion} from '@cdo/apps/aichat/api/performClientApiChatCompletion';
+import shouldUseAiGateway from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {
   addEventToChatEventsCurrent,
   aichatReducer,
 } from '@cdo/apps/aichat/redux/slice';
 import {sendAnalytics} from '@cdo/apps/aichat/redux/thunks/sendAnalytics';
 import {submitChatContents} from '@cdo/apps/aichat/redux/thunks/submitChatContents';
-import {CompletedChatMessage, ModelParameters} from '@cdo/apps/aichat/types';
+import {
+  AichatContext,
+  CompletedChatMessage,
+  ModelParameters,
+} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {
@@ -24,6 +31,15 @@ const mockMetricsReporter = {
 
 jest.mock('@cdo/apps/aichat/aichatApi', () => ({
   postAichatCompletionMessage: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/aichat/api/performClientApiChatCompletion', () => ({
+  performClientApiChatCompletion: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
+  __esModule: true,
+  default: jest.fn(() => false),
 }));
 
 jest.mock('@cdo/apps/aichat/helpers/logChatEvent', () => ({
@@ -55,6 +71,11 @@ const mockPostAichatCompletionMessage =
   postAichatCompletionMessage as jest.MockedFunction<
     typeof postAichatCompletionMessage
   >;
+const mockPerformClientApiChatCompletion =
+  performClientApiChatCompletion as jest.MockedFunction<
+    typeof performClientApiChatCompletion
+  >;
+const mockShouldUseAiGateway = shouldUseAiGateway as jest.Mock;
 const mockSendProgressReport = sendProgressReport as jest.Mock;
 const mockSendAnalytics = sendAnalytics as jest.Mock;
 
@@ -63,6 +84,15 @@ const modelParameters: ModelParameters = {
   temperature: 0.5,
   retrievalContexts: [],
   systemPrompt: 'system prompt',
+};
+
+// The workspace sets this on mount. Its level differs from the page's level
+// in the store below, as it does inside an adaptive step.
+const aichatContext: AichatContext = {
+  clientType: AiChatClientTypes.AI_TUTOR,
+  currentLevelId: 7,
+  scriptId: 2,
+  channelId: 'channel-id',
 };
 
 const makeStore = () =>
@@ -99,8 +129,53 @@ const makeMessages = (
 describe('submitChatContents', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockShouldUseAiGateway.mockReturnValue(false);
     mockSendProgressReport.mockReturnValue({type: 'progress/report'});
     mockSendAnalytics.mockReturnValue({type: 'analytics/send'});
+    AichatContextManager.setContext(aichatContext);
+  });
+
+  it('sends the context the workspace set, not one rebuilt from the page', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({chatMessageText: 'ok', status: Status.OK})
+    );
+
+    await makeStore().dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+      })
+    );
+
+    expect(mockPostAichatCompletionMessage.mock.calls[0][3]).toEqual(
+      aichatContext
+    );
+  });
+
+  it('hands the gateway the level prompt and asset folder it was given', async () => {
+    mockShouldUseAiGateway.mockReturnValue(true);
+    mockPerformClientApiChatCompletion.mockResolvedValue(
+      makeMessages({chatMessageText: 'ok', status: Status.OK})
+    );
+
+    await makeStore().dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        levelName: 'step-level',
+        levelSystemPrompt: 'Answer as a web tutor.',
+      })
+    );
+
+    const [, , , context, buildAssetUrl, levelSystemPrompt] =
+      mockPerformClientApiChatCompletion.mock.calls[0];
+    expect(context).toEqual(aichatContext);
+    expect(levelSystemPrompt).toBe('Answer as a web tutor.');
+    expect(
+      buildAssetUrl({source: 'level', filename: 'cat.png'} as never)
+    ).toContain('step-level');
   });
 
   it('saves the model response verbatim, without reshaping it', async () => {

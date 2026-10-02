@@ -10,6 +10,10 @@ import {
   type DisplayTreeNode,
   type SerializedTree,
 } from '../helpers/displayTree';
+import {
+  traceDisplayTree,
+  type DisplayTreeTrace,
+} from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -260,5 +264,28 @@ export const getDisplayTree = createSelector(
       featureNumberKey,
       labelColumn,
     });
+  },
+);
+
+export const getPredictionTrace = createSelector(
+  [
+    getDisplayTree,
+    (state: RootState) => state.trainedModel,
+    (state: RootState) => state.prediction,
+    (state: RootState) => state.predictionInputs,
+    (state: RootState) => state.predictionTestData,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    prediction: number | string | undefined,
+    inputs: number[],
+    testData: DataRow,
+  ): DisplayTreeTrace | undefined => {
+    if (!tree || !trainedModel || prediction === undefined) {
+      return undefined;
+    }
+    const {root} = trainedModel.toJSON() as SerializedTree;
+    return traceDisplayTree(tree, root!, inputs, testData);
   },
 );
