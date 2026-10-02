@@ -47,33 +47,6 @@ $features-menu-max-height: 240px;
   gap: 2px;
 }
 
-.fieldLabel {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  color: var(--text-neutral-primary);
-}
-
-$info-icon-size: 12px;
-
-// Two classes, to outrank the theme's extraSmall padding and icon size.
-.fieldLabel .infoButton {
-  padding: 0;
-  min-width: $info-icon-size;
-  min-height: $info-icon-size;
-  width: $info-icon-size;
-  height: $info-icon-size;
-
-  i {
-    width: $info-icon-size;
-    font-size: $info-icon-size;
-    line-height: $info-icon-size;
-  }
-}
-
 .field .dropdown {
   width: 100%;
   align-items: stretch;
@@ -116,38 +89,6 @@ $info-icon-size: 12px;
   font-weight: 600;
   line-height: 18px;
   color: var(--text-neutral-primary);
-}
-
-.tag {
-  display: inline-flex;
-  align-items: center;
-  height: 20px;
-  padding: 0 6px;
-  box-sizing: border-box;
-  border: 1px solid;
-  border-radius: var(--shape-sm);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  white-space: nowrap;
-}
-
-.placeholderTag {
-  color: var(--text-neutral-quaternary);
-  border-style: dashed;
-  border-color: var(--border-neutral-secondary);
-}
-
-.labelTag {
-  color: var(--text-accent-pink-secondary);
-  background-color: var(--background-accent-pink-light);
-  border-color: var(--border-accent-pink-mid);
-}
-
-.featureTag {
-  color: var(--text-info-secondary);
-  background-color: var(--background-info-light);
-  border-color: var(--border-info-mid);
 }
 
 .actionRow {

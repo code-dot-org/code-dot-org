@@ -1,0 +1,26 @@
+$info-icon-size: 12px;
+
+.fieldLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+}
+
+// Two classes, to outrank the theme's extraSmall padding and icon size.
+.fieldLabel .infoButton {
+  padding: 0;
+  min-width: $info-icon-size;
+  min-height: $info-icon-size;
+  width: $info-icon-size;
+  height: $info-icon-size;
+
+  i {
+    width: $info-icon-size;
+    font-size: $info-icon-size;
+    line-height: $info-icon-size;
+  }
+}
