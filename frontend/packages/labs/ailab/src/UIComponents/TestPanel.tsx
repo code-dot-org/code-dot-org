@@ -1,5 +1,5 @@
 /* Panel for trying a trained model on new inputs. */
-import {Button} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import type {ChangeEvent} from 'react';
 
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
@@ -105,7 +105,13 @@ const TestPanel = () => {
     <div id="test-panel" className={styles.panel}>
       <div className={styles.content}>
         <section className={styles.card}>
-          <h2 className={styles.cardHeader}>Make a prediction</h2>
+          <Typography
+            variant="label3"
+            component="h2"
+            className={styles.cardHeader}
+          >
+            Make a prediction
+          </Typography>
           <div className={styles.fields}>
             {selectedFeatures.map(renderField)}
           </div>

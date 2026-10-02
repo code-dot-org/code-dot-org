@@ -10,11 +10,7 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
 }
 
 .header {
-  margin: 0;
   padding: 8px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
   color: var(--text-neutral-secondary);
 
   strong {

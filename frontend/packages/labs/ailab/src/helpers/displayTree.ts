@@ -59,10 +59,12 @@ export function formatNumber(value: number): string {
 
 const THRESHOLD_SIGNS = {lessThan: '<', atLeast: '≥'};
 
+// Not formatNumber: two places can round across the input that took the branch.
 export function thresholdText(
   branch: Extract<DisplayTreeBranch, {threshold: number}>,
 ): string {
-  return `${THRESHOLD_SIGNS[branch.kind]} ${formatNumber(branch.threshold)}`;
+  const threshold = Number(branch.threshold.toPrecision(12));
+  return `${THRESHOLD_SIGNS[branch.kind]} ${threshold}`;
 }
 
 // The `name` in ml-cart's toJSON().

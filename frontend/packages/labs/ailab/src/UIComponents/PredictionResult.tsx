@@ -1,4 +1,6 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
+import {Typography} from '@mui/material';
+
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {formatNumber, thresholdText} from '../helpers/displayTree';
 import type {DisplayTreeStep} from '../helpers/displayTreeTrace';
@@ -44,11 +46,12 @@ const PredictionResult = () => {
 
   return (
     <section className={styles.card}>
-      <h2 className={styles.header}>
+      <Typography variant="body1" component="h2" className={styles.header}>
         AI predicts <strong>{predictionText}</strong>
-      </h2>
+      </Typography>
       {steps.length > 0 && (
-        <ol className={styles.steps}>
+        // eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics
+        <ol role="list" className={styles.steps}>
           {steps.map(({subject, condition}, index) => (
             <li key={index} className={styles.step}>
               <span aria-hidden="true" className={styles.stepNumber}>
