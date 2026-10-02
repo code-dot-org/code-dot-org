@@ -102,6 +102,7 @@ function renderWorkspace({
   // ResultsCard - only tests for the no-correctness path opt out.
   showCorrectness = true,
   customIntroText,
+  hideQuestionsAfterSubmit,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -111,6 +112,7 @@ function renderWorkspace({
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
   customIntroText?: string;
+  hideQuestionsAfterSubmit?: boolean;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -125,6 +127,7 @@ function renderWorkspace({
       showIntroScreen={showIntroScreen}
       showCorrectness={showCorrectness}
       customIntroText={customIntroText}
+      hideQuestionsAfterSubmit={hideQuestionsAfterSubmit}
     />
   );
 }
@@ -537,6 +540,48 @@ describe('QuizAttemptWorkspace', () => {
     expect(
       screen.getByRole('button', {name: /Next level/})
     ).toBeInTheDocument();
+  });
+
+  it('hides per-question results when hideQuestionsAfterSubmit is on, but still shows the score', () => {
+    renderWorkspace({
+      quizQuestions: [
+        question({id: 1, stem: 'What is the value of x?'}),
+        question({id: 2, stem: 'What is the value of y?'}),
+      ],
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          score: 2,
+          maxScore: 3,
+          questionResults: [
+            {
+              quizQuestionId: 1,
+              selectedChoiceId: 'a',
+              correct: true,
+              explanation: null,
+              correctChoiceId: 'a',
+            },
+            {
+              quizQuestionId: 2,
+              selectedChoiceId: 'b',
+              correct: false,
+              explanation: null,
+              correctChoiceId: 'a',
+            },
+          ],
+        },
+      },
+      hideQuestionsAfterSubmit: true,
+    });
+
+    expect(screen.getByText('67%')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', {name: 'What is the value of x?'})
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', {name: 'What is the value of y?'})
+    ).not.toBeInTheDocument();
   });
 
   it('shows the submitted intro shell even when the quiz has no intro screen', () => {

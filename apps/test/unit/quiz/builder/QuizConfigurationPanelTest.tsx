@@ -25,6 +25,7 @@ const INITIAL_VALUES: QuizConfigurationData = {
   showIntroScreen: true,
   purpose: 'practice',
   allowMultipleAttempts: true,
+  hideQuestionsAfterSubmit: true,
 };
 
 const TIME_LIMIT_LABEL = /Set time limit/;
@@ -340,6 +341,18 @@ describe('QuizConfigurationPanel', () => {
     expect(lastRequestBody().revealAnswerExplanation).toBe(true);
   });
 
+  it('saves hideQuestionsAfterSubmit independently, with no dependency on showCorrectness', async () => {
+    put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
+    renderPanel({
+      initialValues: {...INITIAL_VALUES, showCorrectness: false},
+    });
+
+    fireEvent.click(screen.getByLabelText('Hide questions after submit'));
+
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    expect(lastRequestBody()).toEqual({hideQuestionsAfterSubmit: true});
+  });
+
   it("choosing a purpose for the first time applies that purpose's defaults to every field, in the same request", async () => {
     put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
     renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
@@ -360,6 +373,10 @@ describe('QuizConfigurationPanel', () => {
     expect(
       screen.queryByLabelText('Reveal answer and explanation')
     ).not.toBeInTheDocument();
+    expect(
+      (screen.getByLabelText('Hide questions after submit') as HTMLInputElement)
+        .checked
+    ).toBe(true);
 
     await waitFor(() => expect(put).toHaveBeenCalled());
     expect(lastRequestBody()).toMatchObject({
@@ -369,6 +386,7 @@ describe('QuizConfigurationPanel', () => {
       allowMultipleAttempts: false,
       showCorrectness: false,
       revealAnswerExplanation: false,
+      hideQuestionsAfterSubmit: true,
     });
   });
 
