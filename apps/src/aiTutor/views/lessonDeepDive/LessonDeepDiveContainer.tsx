@@ -371,6 +371,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
             focusTopic={getFocusTopic(reflectionData)}
+            onDone={goToNext}
           />
         );
       case 'pre-skills-check':
