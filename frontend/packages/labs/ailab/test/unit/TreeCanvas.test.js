@@ -100,6 +100,13 @@ describe('TreeCanvas', () => {
     expect(contentTransform()).toBe('translate(72px, 24px) scale(1)');
   });
 
+  it('fits the content clear of the inset at the right edge', () => {
+    renderCanvas({insetRight: 376});
+    resizeViewport(848, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)');
+  });
+
   it('zooms in a whole step per click, however fast the clicks come', async () => {
     renderCanvas();
     resizeViewport(472, 360);

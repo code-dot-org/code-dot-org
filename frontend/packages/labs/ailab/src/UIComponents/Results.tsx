@@ -2,14 +2,17 @@
 import classNames from 'classnames';
 import {useEffect, useCallback} from 'react';
 
+import {CANVAS_OVERLAY_WIDTH} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setShowResultsDetails, setResultsPhase} from '../redux';
+import {getDisplayTree} from '../selectors/visualizationSelectors';
+import type {HistoricResult} from '../types';
 
 import DecisionTree from './DecisionTree';
 import ResultsDetails from './ResultsDetails';
-import ScrollableContent from './ScrollableContent';
 import {UnconnectedStatement} from './Statement';
+import TestPanel from './TestPanel';
 
 import shared from '../shared.module.scss';
 import styles from './results.module.scss';
@@ -17,6 +20,8 @@ import styles from './results.module.scss';
 const Results = () => {
   const historicResults = useAppSelector(state => state.historicResults);
   const showResultsDetails = useAppSelector(state => state.showResultsDetails);
+  const resultsPhase = useAppSelector(state => state.resultsPhase);
+  const hasTree = useAppSelector(state => !!getDisplayTree(state));
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -31,64 +36,74 @@ const Results = () => {
     dispatch(setShowResultsDetails(true));
   }, [dispatch]);
 
+  const [currentResult, ...previousResults] = historicResults;
+  const testPanel = resultsPhase === 1 ? <TestPanel /> : null;
+
+  const resultRow = (result: HistoricResult, index: number) => (
+    <div key={index} className={styles.result}>
+      <div className={styles.statement}>
+        <UnconnectedStatement
+          shouldShow={true}
+          smallFont={true}
+          labelColumn={result.label}
+          selectedFeatures={result.features}
+        />
+      </div>
+      <div className={classNames(styles.accuracy, shared.bold)}>
+        {result.accuracy}%
+      </div>
+      {index === 0 && (
+        <div className={styles.detailsButtonContainer}>
+          <button
+            id="uitest-details-button"
+            type="button"
+            onClick={showDetails}
+            className={styles.detailsButton}
+          >
+            {I18n.t('resultsDetailsButton')}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <div className={styles.container}>
       {showResultsDetails && <ResultsDetails />}
 
       <div id="results" className={shared.panel}>
-        <ScrollableContent>
-          <div className={shared.largeText}>
-            <div className={styles.heading}>{I18n.t('resultsHeader')}</div>
-            <div className={styles.accuracyHeading}>
-              {I18n.t('resultsAccuracy')}
-            </div>
+        <div className={shared.largeText}>
+          <div className={styles.heading}>{I18n.t('resultsHeader')}</div>
+          <div className={styles.accuracyHeading}>
+            {I18n.t('resultsAccuracy')}
           </div>
-          {historicResults.map((historicResult, index) => {
-            return (
-              <div key={index}>
-                <div className={styles.statement}>
-                  <UnconnectedStatement
-                    shouldShow={true}
-                    smallFont={true}
-                    labelColumn={historicResult.label}
-                    selectedFeatures={historicResult.features}
-                  />
-                </div>
-                <div className={classNames(styles.accuracy, shared.bold)}>
-                  {historicResult.accuracy}%
-                </div>
-                {index === 0 && (
-                  <div className={styles.detailsButtonContainer}>
-                    <button
-                      id="uitest-details-button"
-                      type="button"
-                      onClick={showDetails}
-                      className={styles.detailsButton}
-                    >
-                      {I18n.t('resultsDetailsButton')}
-                    </button>
-                  </div>
-                )}
-                {index === 0 && <DecisionTree />}
-                {index === 0 && historicResults.length > 1 && (
-                  <div
-                    className={classNames(
-                      shared.largeText,
-                      styles.previousResults,
-                    )}
-                  >
-                    <div className={styles.heading}>
-                      {I18n.t('resultsPreviousResults')}
-                    </div>
-                    <div className={styles.accuracyHeading}>
-                      {I18n.t('resultsAccuracy')}
-                    </div>
-                  </div>
-                )}
+        </div>
+        {currentResult && resultRow(currentResult, 0)}
+        {hasTree ? (
+          <DecisionTree overlay={testPanel} />
+        ) : (
+          <div
+            className={styles.testPanelSlot}
+            style={{width: CANVAS_OVERLAY_WIDTH}}
+          >
+            {testPanel}
+          </div>
+        )}
+        {previousResults.length > 0 && (
+          <div className={styles.previousResults}>
+            <div className={shared.largeText}>
+              <div className={styles.heading}>
+                {I18n.t('resultsPreviousResults')}
               </div>
-            );
-          })}
-        </ScrollableContent>
+              <div className={styles.accuracyHeading}>
+                {I18n.t('resultsAccuracy')}
+              </div>
+            </div>
+            {previousResults.map((result, index) =>
+              resultRow(result, index + 1),
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

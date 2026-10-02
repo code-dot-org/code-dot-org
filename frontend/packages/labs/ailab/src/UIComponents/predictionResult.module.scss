@@ -7,6 +7,8 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
 
 .card {
   @include mixins.card;
+
+  box-shadow: var(--shadow-sm);
 }
 
 .header {

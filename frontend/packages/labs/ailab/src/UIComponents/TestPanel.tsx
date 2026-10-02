@@ -104,34 +104,32 @@ const TestPanel = () => {
 
   return (
     <div id="test-panel" className={styles.panel}>
-      <div className={styles.content}>
-        <section className={styles.card}>
-          <h2 className={styles.cardHeader}>Make a prediction</h2>
-          <div className={styles.fields}>{selectedFeatures.map(renderField)}</div>
-          <div className={styles.actionRow}>
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
-              disabled={!predictAvailable}
-              onClick={() => train.onClickPredict(store)}
-            >
-              Predict
-            </Button>
-            <Button
-              variant="outlined"
-              color="secondary"
-              size="small"
-              startIcon={<FontAwesomeV6Icon iconName="shuffle" />}
-              onClick={onClickRandom}
-            >
-              Random
-            </Button>
-          </div>
-        </section>
-        <div aria-live="polite">
-          <PredictionResult />
+      <section className={styles.card}>
+        <h2 className={styles.cardHeader}>Make a prediction</h2>
+        <div className={styles.fields}>{selectedFeatures.map(renderField)}</div>
+        <div className={styles.actionRow}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            disabled={!predictAvailable}
+            onClick={() => train.onClickPredict(store)}
+          >
+            Predict
+          </Button>
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
+            startIcon={<FontAwesomeV6Icon iconName="shuffle" />}
+            onClick={onClickRandom}
+          >
+            Random
+          </Button>
         </div>
+      </section>
+      <div aria-live="polite">
+        <PredictionResult />
       </div>
     </div>
   );

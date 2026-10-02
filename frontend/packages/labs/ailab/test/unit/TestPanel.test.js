@@ -101,7 +101,9 @@ describe('TestPanel', () => {
 
     predictSnake(store);
 
-    expect(screen.getByRole('heading', {name: 'AI predicts snake'})).toBeTruthy();
+    expect(
+      screen.getByRole('heading', {name: 'AI predicts snake'}),
+    ).toBeTruthy();
     const steps = within(screen.getByRole('list')).getAllByRole('listitem');
     expect(steps.length).toBeGreaterThan(1);
     expect(steps[0].textContent).toMatch(/^1legs is [<≥] \d/);

@@ -26,7 +26,6 @@ import ModelCard from './UIComponents/ModelCard';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
-import TestPanel from './UIComponents/TestPanel';
 import TrainModel from './UIComponents/TrainModel';
 import TrainPanel from './UIComponents/TrainPanel';
 
@@ -223,7 +222,6 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
@@ -283,15 +281,10 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {currentPanel === 'results' && (
-        <BodyContainer flush>
-          <ContainerLeft>
+        <BodyContainer>
+          <ContainerFullWidth>
             <Results />
-          </ContainerLeft>
-          {resultsPhase === 1 && (
-            <ContainerRight>
-              <TestPanel />
-            </ContainerRight>
-          )}
+          </ContainerFullWidth>
         </BodyContainer>
       )}
 
