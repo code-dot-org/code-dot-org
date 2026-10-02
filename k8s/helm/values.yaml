@@ -58,8 +58,7 @@ dashboardJob:
 # ActiveJob (delayed_job) worker, enabled by default. RAILS_ENV, extraEnv, and
 # resources here are pinned per component; they do not inherit the chart-wide
 # values. This keeps the worker identical in every environment until k8s-gitops
-# configures it per envType. Keep in sync with the static manifest in
-# k8s/kustomize/components/backend/active-job-worker-deployment.yaml.
+# configures it per envType.
 activeJobWorker:
   enabled: true
   replicas: 1

@@ -58,7 +58,7 @@ export default function useQuizBuilderQuestions(
     load();
   }, [load]);
 
-  const addPendingQuestion = useCallback(() => {
+  const addPendingQuestion = useCallback((page: number) => {
     const id = nextPendingId.current--;
     setQuestions(prev => [
       ...prev,
@@ -70,7 +70,7 @@ export default function useQuizBuilderQuestions(
         standards: [],
         attachedToOtherQuizzes: false,
         usedInPublishedUnit: false,
-        page: 1,
+        page,
       },
     ]);
     return id;
@@ -89,7 +89,10 @@ export default function useQuizBuilderQuestions(
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
               `/levels/${levelId}/quiz_question_placements`,
-              JSON.stringify({...payload, page: 1}),
+              JSON.stringify({
+                ...payload,
+                page: questions.find(question => question.id === id)?.page ?? 1,
+              }),
               true,
               {'Content-Type': 'application/json'}
             )
@@ -110,7 +113,7 @@ export default function useQuizBuilderQuestions(
         return undefined;
       }
     },
-    [levelId]
+    [levelId, questions]
   );
 
   // A pending question only exists locally, so removing one is just a

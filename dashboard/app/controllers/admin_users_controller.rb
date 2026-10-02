@@ -152,7 +152,7 @@ class AdminUsersController < ApplicationController
       if @target_user.teacher?
         @sections = @target_user.sections_instructed.includes(:students).order(:name)
         all_student_ids = @sections.flat_map {|s| s.students.map(&:id)}.uniq
-        script_ids = UserScript.where(user_id: all_student_ids).distinct.pluck(:script_id)
+        script_ids = UserScript.where(user_id: all_student_ids + [@target_user.id]).distinct.pluck(:script_id)
         @all_scripts = Unit.where(id: script_ids).order(:name).sort.uniq
       else
         @user_scripts = UserScript.

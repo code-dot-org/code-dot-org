@@ -36,9 +36,10 @@ module Observability
       end
     end
 
-    # Sets the user_id in the Sentry context. Intended to be called from a Warden after_fetch hook.
-    def self.set_user_id(id)
-      ::Sentry.set_user(id:)
+    def self.set_user_token(token)
+      return if token.nil? || token.to_s.empty?
+
+      ::Sentry.set_user(id: token)
     end
   end
 end

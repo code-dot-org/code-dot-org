@@ -57,7 +57,7 @@ describe('useQuizBuilderQuestions', () => {
 
     let id: number | undefined;
     act(() => {
-      id = result.current.addPendingQuestion();
+      id = result.current.addPendingQuestion(1);
     });
 
     expect(postSpy).not.toHaveBeenCalled();
@@ -70,7 +70,21 @@ describe('useQuizBuilderQuestions', () => {
         {id: '1', text: 'Option B'},
       ],
       correctChoiceId: '0',
+      page: 1,
     });
+  });
+
+  it('adds the placeholder to the given page', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    act(() => {
+      result.current.addPendingQuestion(2);
+    });
+
+    expect(result.current.questions[1]).toMatchObject({page: 2});
   });
 
   it('returns a negative id, distinct from any real server id', async () => {
@@ -81,7 +95,7 @@ describe('useQuizBuilderQuestions', () => {
 
     let id: number | undefined;
     act(() => {
-      id = result.current.addPendingQuestion();
+      id = result.current.addPendingQuestion(1);
     });
 
     expect(id).toBeLessThan(0);
@@ -183,7 +197,7 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion();
+        pendingId = result.current.addPendingQuestion(1);
       });
 
       const created = {...QUESTION, ...PAYLOAD, id: 99};
@@ -204,6 +218,32 @@ describe('useQuizBuilderQuestions', () => {
       expect(updatedId).toBe(99);
       expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
     });
+
+    it("posts the pending question's own page, not always page 1", async () => {
+      const {result, waitForNextUpdate} = renderHook(() =>
+        useQuizBuilderQuestions(42)
+      );
+      await waitForNextUpdate();
+
+      let pendingId: number | undefined;
+      act(() => {
+        pendingId = result.current.addPendingQuestion(2);
+      });
+
+      const created = {...QUESTION, ...PAYLOAD, id: 99, page: 2};
+      postSpy.mockResolvedValue({json: async () => created} as Response);
+
+      await act(async () => {
+        await result.current.saveQuestion(pendingId!, PAYLOAD);
+      });
+
+      expect(postSpy).toHaveBeenCalledWith(
+        '/levels/42/quiz_question_placements',
+        JSON.stringify({...PAYLOAD, page: 2}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+    });
   });
 
   describe('removeQuestion', () => {
@@ -215,7 +255,7 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion();
+        pendingId = result.current.addPendingQuestion(1);
       });
 
       let succeeded = false;

@@ -304,6 +304,18 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select "#user-scripts-table tbody tr", 2
   end
 
+  test "user_progress for a teacher offers the teacher's own progress for reset" do
+    teacher = create(:teacher)
+    own_script = create(:script)
+    UserScript.create!(user: teacher, script: own_script)
+
+    sign_in @admin
+    post :user_progress_form, params: {user_identifier: teacher.id.to_s}
+
+    assert_select "#teacher-self-checkbox[value=?]", teacher.id.to_s
+    assert_select "input[name='unit_ids[]'][value=?]", own_script.id.to_s
+  end
+
   test "delete_progress_form returns error if not admin" do
     sign_in @not_admin
     get :delete_progress_form, params: {user_id: @user.id, script_id: @script.id}
