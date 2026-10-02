@@ -103,7 +103,7 @@ describe('stackRoom', () => {
       ]);
     });
 
-    it('pins the stack a drop or a bump just placed', () => {
+    it('pins the stack a drop just placed, and again when Blockly bumps that same stack', () => {
       const {fire, schedule, workspace} = watched();
       fire({
         type: BlocklyCore.Events.BLOCK_MOVE,
@@ -112,13 +112,42 @@ describe('stackRoom', () => {
       });
       fire({
         type: BlocklyCore.Events.BLOCK_MOVE,
-        blockId: 'b',
+        blockId: 'd',
         reason: ['bump'],
       });
       expect(schedule.mock.calls).toEqual([
         [workspace, 'd'],
-        [workspace, 'b'],
+        [workspace, 'd'],
       ]);
+    });
+
+    it('puts back a stack Blockly bumped that the student did not drag, and makes room instead', () => {
+      jest
+        .spyOn(BlocklyCore.Events, 'setRecordUndo')
+        .mockImplementation(() => {});
+      jest.spyOn(BlocklyCore.Events, 'getRecordUndo').mockReturnValue(true);
+      jest.spyOn(BlocklyCore.Events, 'setGroup').mockImplementation(() => {});
+      jest.spyOn(BlocklyCore.Events, 'getGroup').mockReturnValue('');
+      const {fire, schedule, workspace} = watched();
+      const bumped = {moveBy: jest.fn()};
+      (workspace as unknown as {getBlockById: unknown}).getBlockById = (
+        id: string
+      ) => (id === 'n' ? bumped : null);
+      fire({
+        type: BlocklyCore.Events.BLOCK_MOVE,
+        blockId: 'd',
+        reason: ['drag'],
+      });
+      fire({
+        type: BlocklyCore.Events.BLOCK_MOVE,
+        blockId: 'n',
+        reason: ['bump'],
+        oldCoordinate: {x: 20, y: 109},
+        newCoordinate: {x: 53, y: 141},
+      });
+      expect(bumped.moveBy).toHaveBeenCalledWith(-33, -32);
+      expect(schedule.mock.calls).toEqual([[workspace, 'd'], [workspace]]);
+      jest.restoreAllMocks();
     });
 
     it('ignores other moves, other events, and its own tidying', () => {

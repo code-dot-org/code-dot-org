@@ -103,22 +103,38 @@ export function ensureRoom(
       const stacks = workspace
         .getTopBlocks(false)
         .map(block => stackBox(block, pinned));
-      const recordUndo = BlocklyCore.Events.getRecordUndo();
-      const group = BlocklyCore.Events.getGroup();
-      BlocklyCore.Events.setRecordUndo(false);
-      BlocklyCore.Events.setGroup(STACK_ROOM_EVENT_GROUP);
-      try {
-        makeRoom(stacks, STACK_GAP_PX);
-      } finally {
-        BlocklyCore.Events.setGroup(group);
-        BlocklyCore.Events.setRecordUndo(recordUndo);
-      }
+      tidy(() => makeRoom(stacks, STACK_GAP_PX));
     });
 }
 
-// A drop, and Blockly's bump of a dropped stack that nearly connected,
-// which comes a moment after the drop.
-const PLACEMENT_REASONS = ['drag', 'bump'];
+// Run moves as the pass's own: not undoable, and in the pass's event group.
+function tidy(moves: () => void): void {
+  const recordUndo = BlocklyCore.Events.getRecordUndo();
+  const group = BlocklyCore.Events.getGroup();
+  BlocklyCore.Events.setRecordUndo(false);
+  BlocklyCore.Events.setGroup(STACK_ROOM_EVENT_GROUP);
+  try {
+    moves();
+  } finally {
+    BlocklyCore.Events.setGroup(group);
+    BlocklyCore.Events.setRecordUndo(recordUndo);
+  }
+}
+
+// Put a stack back where it was before Blockly bumped it. Blockly shoves a
+// stack sideways and down when a connection ends up near it; the pass
+// makes the room below instead, keeping the column.
+function undoBump(
+  workspace: BlocklyCore.WorkspaceSvg,
+  move: BlocklyCore.Events.BlockMove
+): void {
+  const block = move.blockId ? workspace.getBlockById(move.blockId) : null;
+  const {oldCoordinate: from, newCoordinate: to} = move;
+  if (!block || !from || !to) {
+    return;
+  }
+  tidy(() => block.moveBy(from.x - to.x, from.y - to.y));
+}
 
 /**
  * Keep room under the stacks as the workspace changes: after code loads,
@@ -131,6 +147,10 @@ export function watchStackRoom(
   workspace: BlocklyCore.WorkspaceSvg,
   schedule: typeof ensureRoom = ensureRoom
 ): () => void {
+  // The block the student last dragged. Blockly's bump of it, when a drop
+  // nearly connected, is still their placement; its bump of any other
+  // stack is not.
+  let dragged: string | null = null;
   const onChange = (event: BlocklyCore.Events.Abstract) => {
     if (event.group === STACK_ROOM_EVENT_GROUP) {
       return;
@@ -148,11 +168,21 @@ export function watchStackRoom(
     const move = event as BlocklyCore.Events.BlockMove;
     if (move.newParentId) {
       schedule(workspace);
-    } else if (
-      move.blockId &&
-      move.reason?.some(reason => PLACEMENT_REASONS.includes(reason))
-    ) {
+      return;
+    }
+    if (!move.blockId || !move.reason) {
+      return;
+    }
+    if (move.reason.includes('drag')) {
+      dragged = move.blockId;
       schedule(workspace, move.blockId);
+    } else if (move.reason.includes('bump')) {
+      if (move.blockId === dragged) {
+        schedule(workspace, move.blockId);
+      } else {
+        undoBump(workspace, move);
+        schedule(workspace);
+      }
     }
   };
   workspace.addChangeListener(onChange);
