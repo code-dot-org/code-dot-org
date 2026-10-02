@@ -75,17 +75,58 @@ describe('stackRoom', () => {
   });
 
   describe('watchStackRoom', () => {
-    // A workspace that hands its listener back for the test to fire events at.
-    function watched() {
+    // A workspace that hands its listener back for the test to fire events
+    // at, with `blocks` as its stacks by id.
+    function watched(
+      blocks: Record<string, {x: number; y: number; width: number}> = {}
+    ) {
       let listener: (e: unknown) => void = () => {};
+      const made = Object.fromEntries(
+        Object.entries(blocks).map(([id, box]) => [
+          id,
+          {
+            id,
+            moveTo: jest.fn(),
+            getRelativeToSurfaceXY: () => ({x: box.x, y: box.y}),
+            getHeightWidth: () => ({width: box.width, height: 50}),
+          },
+        ])
+      );
       const workspace = {
         addChangeListener: (fn: typeof listener) => (listener = fn),
         removeChangeListener: jest.fn(),
+        getBlockById: (id: string) => made[id] ?? null,
+        getTopBlocks: () => Object.values(made),
       } as unknown as BlocklyCore.WorkspaceSvg;
       const schedule = jest.fn();
       const stop = watchStackRoom(workspace, schedule);
-      return {fire: (e: unknown) => listener(e), schedule, stop, workspace};
+      const fire = (e: Record<string, unknown>) =>
+        listener({recordUndo: true, ...e});
+      return {fire, schedule, stop, workspace, made};
     }
+    const bump = (blockId: string, extra: Record<string, unknown> = {}) => ({
+      type: BlocklyCore.Events.BLOCK_MOVE,
+      blockId,
+      reason: ['bump'],
+      oldCoordinate: {x: 20, y: 109},
+      newCoordinate: {x: 53, y: 141},
+      ...extra,
+    });
+    const drag = (blockId: string) => ({
+      type: BlocklyCore.Events.BLOCK_MOVE,
+      blockId,
+      reason: ['drag'],
+    });
+
+    beforeEach(() => {
+      jest
+        .spyOn(BlocklyCore.Events, 'setRecordUndo')
+        .mockImplementation(() => {});
+      jest.spyOn(BlocklyCore.Events, 'getRecordUndo').mockReturnValue(true);
+      jest.spyOn(BlocklyCore.Events, 'setGroup').mockImplementation(() => {});
+      jest.spyOn(BlocklyCore.Events, 'getGroup').mockReturnValue('');
+    });
+    afterEach(() => jest.restoreAllMocks());
 
     it('schedules a pass for a load, a new block, an edited block, and a block joining a stack', () => {
       const {fire, schedule, workspace} = watched();
@@ -107,49 +148,67 @@ describe('stackRoom', () => {
 
     it('pins the stack a drop just placed, and again when Blockly bumps that same stack', () => {
       const {fire, schedule, workspace} = watched();
-      fire({
-        type: BlocklyCore.Events.BLOCK_MOVE,
-        blockId: 'd',
-        reason: ['drag'],
-      });
-      fire({
-        type: BlocklyCore.Events.BLOCK_MOVE,
-        blockId: 'd',
-        reason: ['bump'],
-      });
+      fire(drag('d'));
+      fire(bump('d'));
       expect(schedule.mock.calls).toEqual([
         [workspace, 'd'],
         [workspace, 'd'],
       ]);
     });
 
-    it('puts back a stack Blockly bumped that the student did not drag, and makes room instead', () => {
-      jest
-        .spyOn(BlocklyCore.Events, 'setRecordUndo')
-        .mockImplementation(() => {});
-      jest.spyOn(BlocklyCore.Events, 'getRecordUndo').mockReturnValue(true);
-      jest.spyOn(BlocklyCore.Events, 'setGroup').mockImplementation(() => {});
-      jest.spyOn(BlocklyCore.Events, 'getGroup').mockReturnValue('');
-      const {fire, schedule, workspace} = watched();
-      const bumped = {moveBy: jest.fn()};
-      (workspace as unknown as {getBlockById: unknown}).getBlockById = (
-        id: string
-      ) => (id === 'n' ? bumped : null);
-      fire({
-        type: BlocklyCore.Events.BLOCK_MOVE,
-        blockId: 'd',
-        reason: ['drag'],
+    it("puts back a stack Blockly bumped that the student did not drag, in the bump's group, and makes room instead", () => {
+      const {fire, schedule, workspace, made} = watched({
+        d: {x: 20, y: 20, width: 200},
+        n: {x: 53, y: 141, width: 150},
       });
-      fire({
-        type: BlocklyCore.Events.BLOCK_MOVE,
-        blockId: 'n',
-        reason: ['bump'],
-        oldCoordinate: {x: 20, y: 109},
-        newCoordinate: {x: 53, y: 141},
-      });
-      expect(bumped.moveBy).toHaveBeenCalledWith(-33, -32);
+      fire(drag('d'));
+      fire(bump('n', {group: 'the-drop'}));
+      expect(made.n.moveTo).toHaveBeenCalledWith(
+        expect.objectContaining({x: 20, y: 109})
+      );
+      expect(BlocklyCore.Events.setGroup).toHaveBeenCalledWith('the-drop');
       expect(schedule.mock.calls).toEqual([[workspace, 'd'], [workspace]]);
-      jest.restoreAllMocks();
+    });
+
+    it('leaves a bumped stack where Blockly put it when nothing is above it in its column', () => {
+      const {fire, schedule, workspace, made} = watched({
+        d: {x: 20, y: 200, width: 200},
+        n: {x: 53, y: 141, width: 150},
+      });
+      fire(drag('d'));
+      fire(bump('n'));
+      expect(made.n.moveTo).not.toHaveBeenCalled();
+      expect(schedule.mock.calls).toEqual([
+        [workspace, 'd'],
+        [workspace, 'n'],
+      ]);
+    });
+
+    it('ignores replayed moves from undo and redo', () => {
+      const {fire, schedule, made} = watched({
+        d: {x: 20, y: 20, width: 200},
+        n: {x: 53, y: 141, width: 150},
+      });
+      fire({...drag('d'), recordUndo: false});
+      fire(bump('n', {recordUndo: false}));
+      expect(made.n.moveTo).not.toHaveBeenCalled();
+      expect(schedule).not.toHaveBeenCalled();
+    });
+
+    it('forgets the dragged stack when new code loads', () => {
+      const {fire, schedule, workspace, made} = watched({
+        a: {x: 20, y: 20, width: 200},
+        d: {x: 53, y: 141, width: 150},
+      });
+      fire(drag('d'));
+      fire({type: BlocklyCore.Events.FINISHED_LOADING});
+      fire(bump('d'));
+      expect(made.d.moveTo).toHaveBeenCalled();
+      expect(schedule.mock.calls).toEqual([
+        [workspace, 'd'],
+        [workspace],
+        [workspace],
+      ]);
     });
 
     it('ignores other moves, other events, and its own tidying', () => {

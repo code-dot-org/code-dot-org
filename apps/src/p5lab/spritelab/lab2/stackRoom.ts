@@ -107,33 +107,51 @@ export function ensureRoom(
     });
 }
 
-// Run moves as the pass's own: not undoable, and in the pass's event group.
-function tidy(moves: () => void): void {
+// Run moves as the pass's own: not undoable, and in `group`.
+function tidy(moves: () => void, group = STACK_ROOM_EVENT_GROUP): void {
   const recordUndo = BlocklyCore.Events.getRecordUndo();
-  const group = BlocklyCore.Events.getGroup();
+  const outerGroup = BlocklyCore.Events.getGroup();
   BlocklyCore.Events.setRecordUndo(false);
-  BlocklyCore.Events.setGroup(STACK_ROOM_EVENT_GROUP);
+  BlocklyCore.Events.setGroup(group);
   try {
     moves();
   } finally {
-    BlocklyCore.Events.setGroup(group);
+    BlocklyCore.Events.setGroup(outerGroup);
     BlocklyCore.Events.setRecordUndo(recordUndo);
   }
 }
 
-// Put a stack back where it was before Blockly bumped it. Blockly shoves a
-// stack sideways and down when a connection ends up near it; the pass
-// makes the room below instead, keeping the column.
+// Put a bumped stack back for the pass to make room below it; with nothing
+// above it in its column the pass could not, so the bump stands.
 function undoBump(
   workspace: BlocklyCore.WorkspaceSvg,
   move: BlocklyCore.Events.BlockMove
-): void {
+): boolean {
   const block = move.blockId ? workspace.getBlockById(move.blockId) : null;
-  const {oldCoordinate: from, newCoordinate: to} = move;
-  if (!block || !from || !to) {
-    return;
+  const from = move.oldCoordinate;
+  if (!block || !from) {
+    return false;
   }
-  tidy(() => block.moveBy(from.x - to.x, from.y - to.y));
+  const {width} = block.getHeightWidth();
+  const hasAbove = workspace.getTopBlocks(false).some(other => {
+    const box = measureStack(other);
+    return (
+      other !== block &&
+      box.y < from.y &&
+      box.x < from.x + width &&
+      box.x + box.width > from.x
+    );
+  });
+  if (!hasAbove) {
+    return false;
+  }
+  // In the bump's own group, so the workspace hook saves this position and
+  // not the bumped one.
+  tidy(
+    () => block.moveTo(new BlocklyCore.utils.Coordinate(from.x, from.y)),
+    move.group
+  );
+  return true;
 }
 
 /**
@@ -147,13 +165,15 @@ export function watchStackRoom(
   workspace: BlocklyCore.WorkspaceSvg,
   schedule: typeof ensureRoom = ensureRoom
 ): () => void {
-  // The block the student last dragged. Blockly's bump of it, when a drop
-  // nearly connected, is still their placement; its bump of any other
-  // stack is not.
+  // The stack the student last dragged; Blockly's bump of it is still
+  // their placement.
   let dragged: string | null = null;
   const onChange = (event: BlocklyCore.Events.Abstract) => {
     if (event.group === STACK_ROOM_EVENT_GROUP) {
       return;
+    }
+    if (event.type === BlocklyCore.Events.FINISHED_LOADING) {
+      dragged = null;
     }
     // A field edit can make a block taller without moving anything.
     if (
@@ -172,18 +192,18 @@ export function watchStackRoom(
       schedule(workspace);
       return;
     }
-    if (!move.blockId || !move.reason) {
+    // Undo and redo replay moves with their original reasons.
+    if (!move.blockId || !move.reason || !move.recordUndo) {
       return;
     }
     if (move.reason.includes('drag')) {
       dragged = move.blockId;
       schedule(workspace, move.blockId);
     } else if (move.reason.includes('bump')) {
-      if (move.blockId === dragged) {
-        schedule(workspace, move.blockId);
-      } else {
-        undoBump(workspace, move);
+      if (move.blockId !== dragged && undoBump(workspace, move)) {
         schedule(workspace);
+      } else {
+        schedule(workspace, move.blockId);
       }
     }
   };
