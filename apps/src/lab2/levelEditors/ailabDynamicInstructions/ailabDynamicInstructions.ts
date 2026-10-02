@@ -15,20 +15,21 @@ export interface DynamicInstructionsField {
   label: string;
 }
 
-// Lab 2 levels load their one dataset directly, so these never show.
-const UNREACHABLE_KEYS = [
+// Lab 2 levels load their one dataset directly, so the dataset keys never
+// show; the save screens are about to be hidden.
+const UNEDITABLE_KEYS = [
   'selectDataset',
   'uploadedDataset',
   'selectedDataset',
+  'saveModel',
+  'modelSummary',
 ] as const;
 
-type Lab2Key = Exclude<InstructionsKey, (typeof UNREACHABLE_KEYS)[number]>;
+type Lab2Key = Exclude<InstructionsKey, (typeof UNEDITABLE_KEYS)[number]>;
 
 const FIELD_LABELS: Record<Lab2Key, string> = {
   datasetView: 'Dataset screen',
   results: 'Results screen',
-  saveModel: 'Save model screen',
-  modelSummary: 'Model summary screen',
 };
 
 function isLab2Key(key: string): key is Lab2Key {

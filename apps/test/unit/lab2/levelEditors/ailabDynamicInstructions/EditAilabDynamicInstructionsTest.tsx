@@ -79,17 +79,15 @@ describe('EditAilabDynamicInstructions', () => {
     ).toEqual([
       'ailab_dynamic_instructions_datasetView',
       'ailab_dynamic_instructions_results',
-      'ailab_dynamic_instructions_saveModel',
-      'ailab_dynamic_instructions_modelSummary',
     ]);
   });
 
   it('drops unknown keys and non-string values, and lists them', () => {
     const saved = renderEditor(
-      '{"trainModel": "Wait.", "selectDataset": "Pick.", "results": 5, "resultsDetails": "Details.", "datasetView": "Look.", "saveModel": ""}'
+      '{"trainModel": "Wait.", "selectDataset": "Pick.", "results": 5, "resultsDetails": "Details.", "datasetView": "Look.", "modelSummary": "Done.", "saveModel": ""}'
     );
     expect(screen.getByText(/will be removed/)).toHaveTextContent(
-      'trainModel: "Wait."; selectDataset: "Pick."; results: 5; resultsDetails: "Details."'
+      'trainModel: "Wait."; selectDataset: "Pick."; results: 5; resultsDetails: "Details."; modelSummary: "Done."'
     );
     expect(JSON.parse(saved())).toEqual({datasetView: 'Look.'});
   });
@@ -104,14 +102,14 @@ describe('EditAilabDynamicInstructions', () => {
 
   it('adds a key when its field is filled and removes it when cleared', () => {
     const saved = renderEditor(null);
-    fireEvent.change(field('Save model screen'), {
-      target: {value: 'Give it a **name**.'},
+    fireEvent.change(field('Results screen'), {
+      target: {value: 'How **accurate** was it?'},
     });
     expect(JSON.parse(saved())).toEqual({
-      saveModel: 'Give it a **name**.',
+      results: 'How **accurate** was it?',
     });
 
-    fireEvent.change(field('Save model screen'), {
+    fireEvent.change(field('Results screen'), {
       target: {value: '  '},
     });
     expect(saved()).toBe('');
