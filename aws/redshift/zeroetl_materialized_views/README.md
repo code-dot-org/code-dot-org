@@ -20,8 +20,6 @@ the current ActiveRecord models. Regeneration is triggered:
 - on demand by `bundle exec rake analytics_export:generate_materialized_view_templates`;
 - and at the start of `analytics_export:provision_materialized_views`.
 
-Drone regenerates them too, and fails the build if the result differs from what the branch commits.
-
 To change a view, change its source — a Rails migration (columns) or the model's `data_classification`
 declaration (which columns land in which view) — then regenerate. Editing a `.sql.erb` directly will
 be overwritten on the next regeneration.
