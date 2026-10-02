@@ -28,20 +28,67 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
 // Between one stack's bottom and the next stack's top.
 const STACK_GAP_PX = 24;
 
-/** The blocks the workspace lacks. A block without data (added before
-    entries carried any) stands for every entry of its type. */
+/** A block in the workspace, read live: serialized field values are not
+    the level JSON's (a dropdown saves as XML, custom fields not at all). */
+export interface PresentBlock {
+  type: string;
+  data?: string | null;
+  fieldValue(name: string): unknown;
+  inputFieldValue(input: string, name: string): unknown;
+}
+
+export function presentBlock(block: BlocklyCore.Block): PresentBlock {
+  return {
+    type: block.type,
+    data: block.data,
+    fieldValue: name => block.getFieldValue(name),
+    inputFieldValue: (input, name) =>
+      block.getInputTargetBlock(input)?.getFieldValue(name),
+  };
+}
+
+// The values an entry pins down: its own fields, and the fields of the
+// shadows (or blocks) in its inputs.
+function pinnedValues(entry: AddBlock): [string | null, string, unknown][] {
+  const values: [string | null, string, unknown][] = Object.entries(
+    entry.fields ?? {}
+  ).map(([name, value]) => [null, name, value]);
+  for (const [input, {shadow, block}] of Object.entries(entry.inputs ?? {})) {
+    const fields: Record<string, unknown> | undefined = (block ?? shadow)
+      ?.fields;
+    for (const [name, value] of Object.entries(fields ?? {})) {
+      values.push([input, name, value]);
+    }
+  }
+  return values;
+}
+
+/** Whether a workspace block stands for an entry: it carries the entry's
+    tag, or, untagged (older than tags, or built from the toolbox), it has
+    the entry's type and every value the entry pins. */
+export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
+  if (present.type !== entry.type) {
+    return false;
+  }
+  if (entry.data && present.data) {
+    return present.data === entry.data;
+  }
+  return pinnedValues(entry).every(([input, name, value]) => {
+    const have = input
+      ? present.inputFieldValue(input, name)
+      : present.fieldValue(name);
+    return have !== undefined && String(have) === String(value);
+  });
+}
+
+/** The blocks the workspace lacks (see matchesEntry). */
 export function missingBlocks(
-  present: Iterable<{type: string; data?: string | null}>,
+  present: Iterable<PresentBlock>,
   blocks: AddBlock[]
 ): AddBlock[] {
   const presentBlocks = Array.from(present);
   return blocks.filter(
-    block =>
-      !presentBlocks.some(
-        p =>
-          p.type === block.type &&
-          (!block.data || !p.data || p.data === block.data)
-      )
+    block => !presentBlocks.some(p => matchesEntry(p, block))
   );
 }
 
@@ -182,8 +229,12 @@ export function addMissingBlocks(
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachShadow(entry)
   );
-  const missing = missingBlocks(workspace.getAllBlocks(false), blocks);
-  let added = 0;
+  const present = workspace
+    .getAllBlocks(false)
+    .filter(block => !block.isShadow())
+    .map(presentBlock);
+  const missing = missingBlocks(present, blocks);
+  const added: BlocklyCore.BlockSvg[] = [];
   for (const entry of missing) {
     const stacks = workspace.getTopBlocks(false).map(top => {
       const {x, y} = top.getRelativeToSurfaceXY();
@@ -191,10 +242,12 @@ export function addMissingBlocks(
     });
     const {x, y} = placeBelow(stacks);
     try {
-      BlocklyCore.serialization.blocks.append({...entry, x, y}, workspace, {
-        recordUndo: false,
-      });
-      added++;
+      const block = BlocklyCore.serialization.blocks.append(
+        {...entry, x, y},
+        workspace,
+        {recordUndo: false}
+      );
+      added.push(block as BlocklyCore.BlockSvg);
     } catch (e) {
       // A block the pool cannot build (a misnamed input, a missing type) is
       // a level-authoring slip; the level must still open.
@@ -205,12 +258,39 @@ export function addMissingBlocks(
     if (isAttachShadow(entry)) {
       try {
         if (attachShadow(workspace, entry)) {
-          added++;
+          const top = workspace
+            .getTopBlocks(false)
+            .find(block => block.type === entry.attachTo);
+          if (top) {
+            added.push(top);
+          }
         }
       } catch (e) {
         console.warn(`add_blocks shadow for ${entry.attachTo} not hung:`, e);
       }
     }
   }
-  return added;
+  showBlocks(workspace, added);
+  return added.length;
+}
+
+// Scroll the workspace so the blocks just added are on screen: a long
+// program can push them below the fold on a small screen.
+function showBlocks(
+  workspace: BlocklyCore.WorkspaceSvg,
+  blocks: BlocklyCore.BlockSvg[]
+): void {
+  if (!blocks.length || !workspace.isMovable()) {
+    return;
+  }
+  const rects = blocks.map(block => block.getBoundingRectangle());
+  workspace.scrollBoundsIntoView(
+    new BlocklyCore.utils.Rect(
+      Math.min(...rects.map(r => r.top)),
+      Math.max(...rects.map(r => r.bottom)),
+      Math.min(...rects.map(r => r.left)),
+      Math.max(...rects.map(r => r.right))
+    ),
+    STACK_GAP_PX
+  );
 }

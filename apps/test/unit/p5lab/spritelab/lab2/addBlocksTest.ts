@@ -2,6 +2,7 @@ import {
   freeStackEnd,
   isAttachShadow,
   makeRoomBelow,
+  matchesEntry,
   missingBlocks,
   placeBelow,
 } from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
@@ -46,11 +47,27 @@ const CLICKED = {type: 'gamelab_spriteClicked'};
 const TOUCH_TREASURE = {type: 'gamelab_checkTouching', data: 'treasure'};
 const TOUCH_PATROL = {type: 'gamelab_checkTouching', data: 'patrol'};
 
+// A block in the workspace as the matcher reads it.
+const present = (
+  type: string,
+  values: {
+    data?: string;
+    fields?: Record<string, unknown>;
+    inputs?: Record<string, Record<string, unknown>>;
+  } = {}
+) => ({
+  type,
+  data: values.data,
+  fieldValue: (name: string) => values.fields?.[name],
+  inputFieldValue: (input: string, name: string) =>
+    values.inputs?.[input]?.[name],
+});
+
 describe('addBlocks', () => {
   it('keeps only the blocks whose type the workspace lacks', () => {
     expect(
       missingBlocks(
-        [{type: 'spritelab2_whenRun'}, {type: 'gamelab_atTime'}],
+        [present('spritelab2_whenRun'), present('gamelab_atTime')],
         [AT_TIME, CLICKED]
       )
     ).toEqual([CLICKED]);
@@ -58,14 +75,48 @@ describe('addBlocks', () => {
   });
 
   it('tells two entries of one type apart by their data', () => {
-    const present = [{type: 'gamelab_checkTouching', data: 'treasure'}];
-    expect(missingBlocks(present, [TOUCH_TREASURE, TOUCH_PATROL])).toEqual([
+    const treasure = [present('gamelab_checkTouching', {data: 'treasure'})];
+    expect(missingBlocks(treasure, [TOUCH_TREASURE, TOUCH_PATROL])).toEqual([
       TOUCH_PATROL,
     ]);
-    // A block without data stands for any entry of its type.
+    // An untagged block stands for an entry that pins no values.
     expect(
-      missingBlocks([{type: 'gamelab_checkTouching'}], [TOUCH_PATROL])
+      missingBlocks([present('gamelab_checkTouching')], [TOUCH_PATROL])
     ).toEqual([]);
+  });
+
+  describe('matchesEntry', () => {
+    const AT_6 = {
+      type: 'gamelab_atTime',
+      data: 'at-6',
+      fields: {UNIT: '"seconds"'},
+      inputs: {N: {shadow: {type: 'math_number', fields: {NUM: 6}}}},
+    };
+    const atSeconds = (n: number, data?: string) =>
+      present('gamelab_atTime', {
+        data,
+        fields: {UNIT: '"seconds"'},
+        inputs: {N: {NUM: n}},
+      });
+
+    it('an untagged block stands for the entry whose values it has, not another', () => {
+      expect(matchesEntry(atSeconds(6), AT_6)).toBe(true);
+      expect(matchesEntry(atSeconds(3), AT_6)).toBe(false);
+      expect(matchesEntry(present('gamelab_spriteClicked'), AT_6)).toBe(false);
+    });
+
+    it('a tagged block keeps standing for its entry when the student edits it', () => {
+      expect(matchesEntry(atSeconds(7, 'at-6'), AT_6)).toBe(true);
+      expect(matchesEntry(atSeconds(6, 'at-3'), AT_6)).toBe(false);
+    });
+
+    it('reads values live, so a number typed as text still counts', () => {
+      const typed = present('gamelab_atTime', {
+        fields: {UNIT: '"seconds"'},
+        inputs: {N: {NUM: '6'}},
+      });
+      expect(matchesEntry(typed, AT_6)).toBe(true);
+    });
   });
 
   it('places a block a small gap under the lowest stack, at the leftmost x', () => {
