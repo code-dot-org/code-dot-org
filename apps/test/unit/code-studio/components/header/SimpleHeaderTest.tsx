@@ -1,4 +1,4 @@
-import {act, render} from '@testing-library/react';
+import {render} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
@@ -24,10 +24,8 @@ jest.mock('@cdo/apps/code-studio/components/header/ScriptName', () => ({
     require('react').createElement('a', {href: props.href}, props.name),
 }));
 
-function renderHeader(
-  header: {appLoadStarted?: boolean; appLoaded?: boolean} = {}
-) {
-  const store = createStore(() => ({header, isRtl: false}));
+function renderHeader() {
+  const store = createStore(() => ({isRtl: false}));
   return render(
     <Provider store={store}>
       <SimpleHeader
@@ -39,33 +37,13 @@ function renderHeader(
 }
 
 describe('SimpleHeader', () => {
-  beforeEach(() => jest.useFakeTimers());
-  afterEach(() => jest.useRealTimers());
-
-  it('waits for an app load to begin, then shows without one', () => {
+  it('shows on mount', () => {
     renderHeader();
-    expect(document.querySelector('#header_middle_content')).toBeNull();
-    act(() => {
-      jest.advanceTimersByTime(750);
-    });
     expect(document.querySelector('#header_middle_content')).not.toBeNull();
-  });
-
-  it('shows at once when an app load has begun and ended', () => {
-    renderHeader({appLoadStarted: true, appLoaded: true});
-    expect(document.querySelector('#header_middle_content')).not.toBeNull();
-  });
-
-  it('holds while an app load is under way', () => {
-    renderHeader({appLoadStarted: true});
-    act(() => {
-      jest.advanceTimersByTime(2000);
-    });
-    expect(document.querySelector('#header_middle_content')).toBeNull();
   });
 
   it('places each part of the row under its class', () => {
-    renderHeader({appLoadStarted: true, appLoaded: true});
+    renderHeader();
     const has = (id: string, className: string) =>
       (document.querySelector(`#${id}`) as HTMLElement).classList.contains(
         className

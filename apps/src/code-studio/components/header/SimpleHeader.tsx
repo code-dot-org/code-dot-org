@@ -1,12 +1,13 @@
 // The level header's middle for a unit with simple progress: the project
 // info, the unit name over its saved-at line, and the unit's logo with the
-// part's label and bar, in one flex row.
-// Nothing is measured: each part shrinks on its own and the row centres what
-// is left. HeaderMiddle measures because its bubbles need a count that fits;
-// nothing here does.
+// part's label and bar, in one flex row. Nothing is measured: each part
+// shrinks on its own and the row centres what is left. HeaderMiddle measures
+// because its bubbles need a count that fits; nothing here does. It shows
+// on mount: HeaderMiddle's wait for an app load has no signal under Lab2,
+// the only place simple progress is used.
 
 import {isEqual} from 'lodash';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -18,12 +19,7 @@ import SimpleProgress, {ProgressLevel} from './SimpleProgress';
 
 import styles from './simple-header.module.scss';
 
-// How long the header waits for an app load to begin before showing without
-// one.
-const APP_LOAD_WAIT_MS = 750;
-
 interface HeaderState {
-  header: {appLoadStarted?: boolean; appLoaded?: boolean};
   isRtl: boolean;
 }
 
@@ -31,26 +27,6 @@ interface SimpleHeaderProps {
   scriptData: {simpleProgressImage?: string};
   /** The unit name and its link, as header.build receives them. */
   scriptNameData?: {name: string; href: string; smallText?: boolean};
-}
-
-/**
- * Whether the header may show yet, by HeaderMiddle's rule: hold off for a
- * moment so an app load can begin; once one has begun, wait for it to end;
- * if none begins in time, show anyway.
- */
-export function useAppLoadGate(): boolean {
-  const appLoadStarted = useSelector(
-    (state: HeaderState) => !!state.header.appLoadStarted
-  );
-  const appLoaded = useSelector(
-    (state: HeaderState) => !!state.header.appLoaded
-  );
-  const [waited, setWaited] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => setWaited(true), APP_LOAD_WAIT_MS);
-    return () => clearTimeout(timer);
-  }, []);
-  return (waited && !appLoadStarted) || (appLoadStarted && appLoaded);
 }
 
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
@@ -63,7 +39,6 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   const levels = useSelector(getCurrentLevels, isEqual) as
     | ProgressLevel[]
     | undefined;
-  const show = useAppLoadGate();
 
   // Eyes UI tests key on these to tell a page with this header from one with
   // a server-rendered header, and to wait for the font swap.
@@ -76,9 +51,6 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
     });
   }, []);
 
-  if (!show) {
-    return null;
-  }
   return (
     <div id="header_middle_content" className={styles.row}>
       <div id="project_info_container" className={styles.projectInfo}>

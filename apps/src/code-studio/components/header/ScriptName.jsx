@@ -97,19 +97,15 @@ class ScriptName extends React.Component {
         }
       : {};
 
-    if (!this.props.showProjectUpdatedAt) {
+    // In flow the two-line layout is kept even before the saved-at state
+    // arrives, so the name does not move when the line below it fills in.
+    if (!this.props.showProjectUpdatedAt && !inFlow) {
       return (
-        <div
-          style={
-            inFlow
-              ? {...styles.flowContainer, height: 18}
-              : {...styles.headerContainer, height: 18}
-          }
-        >
+        <div style={{...styles.headerContainer, height: 18}}>
           <div
             className="script_name"
             ref="scriptName"
-            style={inFlow ? styles.flowInner : styles.headerInner}
+            style={styles.headerInner}
           >
             {this.renderScriptLink(ellipsisStyle)}
           </div>
@@ -127,7 +123,13 @@ class ScriptName extends React.Component {
           }
         >
           <div style={inFlow ? styles.flowOuter : styles.outerContainer}>
-            <div style={styles.containerWithUpdatedAt}>
+            <div
+              style={
+                inFlow
+                  ? styles.flowColumnWithUpdatedAt
+                  : styles.containerWithUpdatedAt
+              }
+            >
               {this.renderScriptLink({
                 ...styles.scriptLinkWithUpdatedAt,
                 ...ellipsisStyle,
@@ -135,9 +137,11 @@ class ScriptName extends React.Component {
                   ? {alignSelf: isRtl ? 'flex-end' : 'flex-start'}
                   : {}),
               })}
-              <ProjectUpdatedAt
-                onContentUpdated={this.onProjectUpdatedAtContentUpdated}
-              />
+              {this.props.showProjectUpdatedAt && (
+                <ProjectUpdatedAt
+                  onContentUpdated={this.onProjectUpdatedAtContentUpdated}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -189,6 +193,13 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'end',
+  },
+  // The two lines' full height, held before the second line arrives.
+  flowColumnWithUpdatedAt: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+    height: 40,
   },
 };
 

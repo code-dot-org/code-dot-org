@@ -15,6 +15,16 @@ describe('ScriptName', () => {
     expect(wrapper.find('.script_name').prop('style').position).toBeUndefined();
   });
 
+  it('keeps the two-line layout in flow before the saved-at line arrives', () => {
+    const inFlow = shallow(<ScriptName {...NAME} />);
+    const column = inFlow.find('.script_name').childAt(0).childAt(0);
+    expect(column.prop('style').height).toBe(40);
+    const measured = shallow(<ScriptName {...NAME} width={100} />);
+    expect(measured.find('.script_name').parent().prop('style').height).toBe(
+      18
+    );
+  });
+
   it('is laid out from outside when the header gives it a width', () => {
     const wrapper = shallow(
       <ScriptName {...NAME} showProjectUpdatedAt width={100} />
