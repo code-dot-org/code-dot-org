@@ -49,21 +49,8 @@ const CLICKED = {type: 'gamelab_spriteClicked'};
 const TOUCH_TREASURE = {type: 'gamelab_checkTouching', data: 'treasure'};
 const TOUCH_PATROL = {type: 'gamelab_checkTouching', data: 'patrol'};
 
-// A block in the workspace as the matcher reads it.
-const present = (
-  type: string,
-  values: {
-    data?: string;
-    fields?: Record<string, unknown>;
-    inputs?: Record<string, Record<string, unknown>>;
-  } = {}
-) => ({
-  type,
-  data: values.data,
-  fieldValue: (name: string) => values.fields?.[name],
-  inputFieldValue: (input: string, name: string) =>
-    values.inputs?.[input]?.[name],
-});
+// A block in the workspace as the matcher sees it.
+const present = (type: string, data?: string) => ({type, data});
 
 describe('addBlocks', () => {
   it('keeps only the blocks whose type the workspace lacks', () => {
@@ -76,48 +63,33 @@ describe('addBlocks', () => {
     expect(missingBlocks([], [AT_TIME])).toEqual([AT_TIME]);
   });
 
-  it('tells two entries of one type apart by their data', () => {
-    const treasure = [present('gamelab_checkTouching', {data: 'treasure'})];
+  it('tells two entries of one type apart by their tags', () => {
+    const treasure = [present('gamelab_checkTouching', 'treasure')];
     expect(missingBlocks(treasure, [TOUCH_TREASURE, TOUCH_PATROL])).toEqual([
       TOUCH_PATROL,
     ]);
-    // An untagged block stands for an entry that pins no values.
-    expect(
-      missingBlocks([present('gamelab_checkTouching')], [TOUCH_PATROL])
-    ).toEqual([]);
   });
 
   describe('matchesEntry', () => {
-    const AT_6 = {
-      type: 'gamelab_atTime',
-      data: 'at-6',
-      fields: {UNIT: '"seconds"'},
-      inputs: {N: {shadow: {type: 'math_number', fields: {NUM: 6}}}},
-    };
-    const atSeconds = (n: number, data?: string) =>
-      present('gamelab_atTime', {
-        data,
-        fields: {UNIT: '"seconds"'},
-        inputs: {N: {NUM: n}},
-      });
+    const AT_6 = {type: 'gamelab_atTime', data: 'at-6'};
 
-    it('an untagged block stands for the entry whose values it has, not another', () => {
-      expect(matchesEntry(atSeconds(6), AT_6)).toBe(true);
-      expect(matchesEntry(atSeconds(3), AT_6)).toBe(false);
-      expect(matchesEntry(present('gamelab_spriteClicked'), AT_6)).toBe(false);
+    it('a tagged entry is satisfied by its tag alone, whatever the block says', () => {
+      expect(matchesEntry(present('gamelab_atTime', 'at-6'), AT_6)).toBe(true);
+      expect(matchesEntry(present('gamelab_atTime', 'at-3'), AT_6)).toBe(false);
+      expect(matchesEntry(present('gamelab_spriteClicked', 'at-6'), AT_6)).toBe(
+        false
+      );
     });
 
-    it('a tagged block keeps standing for its entry when the student edits it', () => {
-      expect(matchesEntry(atSeconds(7, 'at-6'), AT_6)).toBe(true);
-      expect(matchesEntry(atSeconds(6, 'at-3'), AT_6)).toBe(false);
+    it('a block the student built has no tag, so the level still adds its own', () => {
+      expect(matchesEntry(present('gamelab_atTime'), AT_6)).toBe(false);
     });
 
-    it('reads values live, so a number typed as text still counts', () => {
-      const typed = present('gamelab_atTime', {
-        fields: {UNIT: '"seconds"'},
-        inputs: {N: {NUM: '6'}},
-      });
-      expect(matchesEntry(typed, AT_6)).toBe(true);
+    it('an untagged entry is satisfied by any block of its type', () => {
+      expect(matchesEntry(present('gamelab_atTime', 'at-6'), AT_TIME)).toBe(
+        true
+      );
+      expect(matchesEntry(present('gamelab_atTime'), AT_TIME)).toBe(true);
     });
   });
 
@@ -233,17 +205,8 @@ describe('addBlocks', () => {
 
   describe('unfilled outlines', () => {
     // A top block of `type` over `ends`, read by the matcher like a block.
-    const top = (
-      type: string,
-      ends: End[],
-      values: {data?: string; fields?: Record<string, unknown>} = {}
-    ) =>
-      Object.assign(stack(...ends), {
-        type,
-        data: values.data,
-        getFieldValue: (name: string) => values.fields?.[name],
-        getInputTargetBlock: () => null,
-      });
+    const top = (type: string, ends: End[], values: {data?: string} = {}) =>
+      Object.assign(stack(...ends), {type, data: values.data});
 
     const workspace = (...tops: unknown[]) =>
       ({getTopBlocks: () => tops} as unknown as Parameters<

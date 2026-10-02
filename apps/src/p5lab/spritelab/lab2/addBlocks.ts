@@ -30,71 +30,19 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
 // Between one stack's bottom and the next stack's top.
 const STACK_GAP_PX = 24;
 
-/** A block in the workspace, read live: serialized field values are not
-    the level JSON's (a dropdown saves as XML, custom fields not at all). */
+/** A block in the workspace as the matcher sees it. */
 export interface PresentBlock {
   type: string;
   data?: string | null;
-  fieldValue(name: string): unknown;
-  inputFieldValue(input: string, name: string): unknown;
 }
 
-export function presentBlock(block: BlocklyCore.Block): PresentBlock {
-  return {
-    type: block.type,
-    data: block.data,
-    fieldValue: name => block.getFieldValue(name),
-    inputFieldValue: (input, name) =>
-      block.getInputTargetBlock(input)?.getFieldValue(name),
-  };
-}
-
-// The values an entry pins down: its own fields, and the fields of the
-// shadows (or blocks) in its inputs.
-function pinnedValues(entry: AddBlock): [string | null, string, unknown][] {
-  const values: [string | null, string, unknown][] = Object.entries(
-    entry.fields ?? {}
-  ).map(([name, value]) => [null, name, value]);
-  for (const [input, {shadow, block}] of Object.entries(entry.inputs ?? {})) {
-    const fields: Record<string, unknown> | undefined = (block ?? shadow)
-      ?.fields;
-    for (const [name, value] of Object.entries(fields ?? {})) {
-      values.push([input, name, value]);
-    }
-  }
-  return values;
-}
-
-// Field values compare as text; a field that holds an object (a variable's
-// id and name) compares by its JSON.
-function sameValue(have: unknown, want: unknown): boolean {
-  if (have === undefined || have === null) {
-    return false;
-  }
-  const text = (v: unknown) =>
-    typeof v === 'object' ? JSON.stringify(v) : String(v);
-  return text(have) === text(want);
-}
-
-/** Whether a workspace block stands for an entry: it carries the entry's
-    tag, or, untagged (older than tags, or built from the toolbox), it has
-    the entry's type and every value the entry pins. */
-export function matchesEntry(
-  present: PresentBlock,
-  entry: AddBlock,
-  pins = pinnedValues(entry)
-): boolean {
-  if (present.type !== entry.type) {
-    return false;
-  }
-  if (entry.data && present.data) {
-    return present.data === entry.data;
-  }
-  return pins.every(([input, name, value]) =>
-    sameValue(
-      input ? present.inputFieldValue(input, name) : present.fieldValue(name),
-      value
-    )
+/** Whether a workspace block stands for an entry: the entry's type, and the
+    entry's tag when it has one. Every block the dev unit adds carries a
+    tag, so a block the student edited keeps standing for its level, and a
+    block of the type the student built does not. */
+export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
+  return (
+    present.type === entry.type && (!entry.data || present.data === entry.data)
   );
 }
 
@@ -104,10 +52,9 @@ export function missingBlocks(
   blocks: AddBlock[]
 ): AddBlock[] {
   const presentBlocks = Array.from(present);
-  return blocks.filter(block => {
-    const pins = pinnedValues(block);
-    return !presentBlocks.some(p => matchesEntry(p, block, pins));
-  });
+  return blocks.filter(
+    block => !presentBlocks.some(p => matchesEntry(p, block))
+  );
 }
 
 /** Where the next added block begins: a gap under the lowest stack, at
@@ -241,7 +188,7 @@ export function unfilledOutlines(
       const end = trailingShadow(top);
       const matches = isAttachShadow(entry)
         ? top.type === entry.attachTo
-        : matchesEntry(presentBlock(top), entry);
+        : matchesEntry(top, entry);
       if (
         end &&
         matches &&
@@ -301,10 +248,7 @@ export function addMissingBlocks(
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachShadow(entry)
   );
-  const present = workspace
-    .getAllBlocks(false)
-    .filter(block => !block.isShadow())
-    .map(presentBlock);
+  const present = workspace.getAllBlocks(false).filter(b => !b.isShadow());
   const missing = missingBlocks(present, blocks);
   const added: BlocklyCore.BlockSvg[] = [];
   for (const entry of missing) {
