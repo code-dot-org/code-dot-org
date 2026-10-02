@@ -1,0 +1,56 @@
+name 'pl-aif-y2-u1-l3-return-values'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Return Values
+
+Functions can also produce output you can use elsewhere in your program, not just print directly.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 14pt; line-height: 1.5;">
+    <strong>&#128214; Return value:</strong> the output of a function.
+  </div>
+</div>
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 15px; color: #E4E2F8; line-height: 1.8;">
+def next_number(num):<br>
+&nbsp;&nbsp;return num + 1<br>
+<br>
+age = 15<br>
+print(f"This year, I am {age} years old.")<br>
+next_age = next_number(age)<br>
+print(f"Next year, I will be {next_age} years old.")
+  </div>
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 14px; color: #1F1976;">
+This year, I am 15 years old.<br>
+Next year, I will be 16 years old.
+  </div>
+</div>
+
+## What Return Actually Means
+
+<code style="font-size:14px;">return</code> doesn't mean "add one," specifically, it means "produce whatever value comes after the word return." That value could be anything: a number, a calculation, text, whatever the function is built to produce. In this example, it happens to be <code style="font-size:14px;">num + 1</code>, saved into <code style="font-size:14px;">next_age</code> and reused in the line after it.
+
+## Return vs. Print
+
+<div style="display: flex; gap: 16px; margin: 16px 0;">
+  <div style="width: 48%;">
+    <div style="font-size: 14px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">A Function That Prints</div>
+    <div style="background-color: #F7F7FB; border-radius: 10px; padding: 14px 16px; font-size: 13.5px; color: #333; line-height: 1.6;">
+      Shows something immediately. Gives you nothing back to reuse afterward.
+    </div>
+  </div>
+  <div style="width: 48%;">
+    <div style="font-size: 14px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">A Function That Returns</div>
+    <div style="background-color: #F7F7FB; border-radius: 10px; padding: 14px 16px; font-size: 13.5px; color: #333; line-height: 1.6;">
+      Gives you a value to reuse. Shows nothing on its own, unless you print it yourself.
+    </div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+<p><b>&#128161; Teacher tip:</b> this is the part of the lesson students tend to find hardest, not the syntax itself, but following the sequence: a function gets called, an input goes in, a value comes back out, and that value gets saved for later. If a student looks stuck, walking through those steps in order usually unsticks them faster than re-explaining the syntax.</p>
+</div>
+MARKDOWN
