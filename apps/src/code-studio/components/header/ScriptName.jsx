@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import ProjectUpdatedAt, {
+  PROJECT_UPDATED_AT_HEIGHT,
   PROJECT_UPDATED_AT_MIN_WIDTH,
 } from './ProjectUpdatedAt';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
@@ -99,8 +100,8 @@ class ScriptName extends React.Component {
         }
       : {};
 
-    // In flow the two-line layout and its width are kept even before the
-    // saved-at state arrives, so nothing moves when the line fills in.
+    // In flow the two-line layout, its width and its height are kept even
+    // before the saved-at state arrives, so nothing moves when it fills in.
     if (!this.props.showProjectUpdatedAt && !inFlow) {
       return (
         <div style={{...styles.headerContainer, height: 18}}>
@@ -139,10 +140,12 @@ class ScriptName extends React.Component {
                   ? {alignSelf: isRtl ? 'flex-end' : 'flex-start'}
                   : {}),
               })}
-              {this.props.showProjectUpdatedAt && (
+              {this.props.showProjectUpdatedAt ? (
                 <ProjectUpdatedAt
                   onContentUpdated={this.onProjectUpdatedAtContentUpdated}
                 />
+              ) : (
+                <div style={styles.updatedAtPlaceholder} />
               )}
             </div>
           </div>
@@ -196,16 +199,19 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'end',
   },
-  // The two lines' full height and the saved-at badge's width, held before
-  // the badge arrives so the row does not re-center when it does. Shrinks
-  // with the row like the rest.
+  // The saved-at badge's width, held before the badge arrives so the row
+  // does not re-center when it does. Shrinks with the row like the rest.
   flowColumnWithUpdatedAt: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'end',
-    height: 40,
     width: PROJECT_UPDATED_AT_MIN_WIDTH,
     maxWidth: '100%',
+  },
+  // The badge's line, held empty until it arrives, so the name sits where
+  // it will end up.
+  updatedAtPlaceholder: {
+    height: PROJECT_UPDATED_AT_HEIGHT,
   },
 };
 
