@@ -8,8 +8,10 @@ import {
   tooManyUniqueOptions,
   isColumnReadOnly,
   getExtrema,
+  getDecimalPlaces,
   containsOnlyNumbers,
   getColumnDescription,
+  getMostAndLeastCommon,
 } from '../../src/helpers/columnDetails';
 import I18n from '../../src/i18n';
 
@@ -116,6 +118,20 @@ describe('extrema', () => {
   });
 });
 
+describe('getDecimalPlaces', () => {
+  const column = cells => cells.map(x => ({x}));
+
+  test('takes the precision of the most precise cells', () => {
+    expect(getDecimalPlaces(column(['3750', '39.1', '46.25']), 'x')).toBe(2);
+  });
+
+  test('reads scientific notation', () => {
+    expect(getDecimalPlaces(column(['1.2E-5']), 'x')).toBe(6);
+    expect(getDecimalPlaces(column(['2e-5']), 'x')).toBe(5);
+    expect(getDecimalPlaces(column(['1.23E+11']), 'x')).toBe(0);
+  });
+});
+
 describe('containsOnlyNumbers', () => {
   test('contains only numbers', async () => {
     const result = containsOnlyNumbers(allNumericalState.data, 'mosquitoCount');
@@ -166,5 +182,25 @@ describe('getLocalizedColumnName', () => {
     I18n.initI18n(premadeDatasetTranslations);
     const result = getLocalizedColumnName('bats_eat_mozzies', 'mosquitoCount');
     expect(result).toEqual(premadeDatasetColumnNameLocalized);
+  });
+});
+
+describe('getMostAndLeastCommon', () => {
+  test('finds the most and least frequent options', () => {
+    const result = getMostAndLeastCommon(['hot', 'medium', 'mild'], {
+      hot: 16,
+      medium: 1,
+      mild: 18,
+    });
+    expect(result).toEqual({mostCommon: 'mild', leastCommon: 'medium'});
+  });
+
+  test('breaks ties by option order', () => {
+    const result = getMostAndLeastCommon(['a', 'b'], {a: 2, b: 2});
+    expect(result).toEqual({mostCommon: 'a', leastCommon: 'a'});
+  });
+
+  test('returns undefined when there are no options', () => {
+    expect(getMostAndLeastCommon([], {})).toBeUndefined();
   });
 });

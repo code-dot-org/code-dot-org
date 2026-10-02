@@ -211,6 +211,13 @@ class CdoGlobalEditionTest < Minitest::Test
     )
   end
 
+  def test_v3_asset_paths_do_not_receive_a_global_edition_prefix
+    path = '/v3/assets/channel/cat.png'
+
+    assert_equal path, Cdo::GlobalEdition.path('us', path, locale: 'es-MX')
+    assert_equal path, Cdo::GlobalEdition.path('us', "/us/es#{path}", locale: 'es-MX')
+  end
+
   def test_path_does_not_strip_unsupported_global_edition_like_prefix
     assert_equal(
       global_edition_path(@single_locale_region, @unknown_region, 'home'),

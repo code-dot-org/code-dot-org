@@ -1,24 +1,30 @@
 /* React component to handle predicting and displaying predictions. */
+import {Button} from '@mui/material';
+import classNames from 'classnames';
 import type React from 'react';
 
 import {imageUrl} from '../assetPath';
-import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getRandomPredictInputs} from '../helpers/randomPredictInputs';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {setTestData, getPredictAvailable} from '../redux';
+import {setTestData, setTestDataValues, getPredictAvailable} from '../redux';
 import {
   getSelectedCategoricalFeatures,
   getSelectedNumericalFeatures,
   getUniqueOptionsByColumn,
   getExtremaByColumn,
+  getDecimalPlacesByColumn,
 } from '../selectors';
 import {store} from '../store';
 import train from '../train';
 
 import ScrollableContent from './ScrollableContent';
+
+import shared from '../shared.module.scss';
+import styles from './predict.module.scss';
 
 const Predict = () => {
   const dispatch = useAppDispatch();
@@ -34,6 +40,7 @@ const Predict = () => {
   const uniqueOptionsByColumn = useAppSelector(getUniqueOptionsByColumn);
   const predictAvailable = useAppSelector(getPredictAvailable);
   const extremaByColumn = useAppSelector(getExtremaByColumn);
+  const decimalPlacesByColumn = useAppSelector(getDecimalPlacesByColumn);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 
   const handleChange = (
@@ -43,21 +50,36 @@ const Predict = () => {
     dispatch(setTestData(feature, event.target.value));
   };
 
+  const onClickRandomize = () => {
+    dispatch(
+      setTestDataValues(
+        getRandomPredictInputs({
+          numericalFeatures: selectedNumericalFeatures,
+          categoricalFeatures: selectedCategoricalFeatures,
+          extremaByColumn,
+          decimalPlacesByColumn,
+          uniqueOptionsByColumn,
+        }),
+      ),
+    );
+  };
+
   const onClickPredict = () => {
     train.onClickPredict(store);
   };
 
   return (
-    <div id="predict" style={{...styles.panel, ...styles.rightPanel}}>
-      <div style={styles.largeText}>{I18n.t('predictHeader')}</div>
+    <div id="predict" className={shared.panel}>
+      <div className={shared.largeText}>{I18n.t('predictHeader')}</div>
       <ScrollableContent>
         <div>
           {selectedNumericalFeatures.map((feature, index) => {
-            const min = extremaByColumn[feature].min.toFixed(2);
-            const max = extremaByColumn[feature].max.toFixed(2);
+            const decimalPlaces = decimalPlacesByColumn[feature];
+            const min = extremaByColumn[feature].min.toFixed(decimalPlaces);
+            const max = extremaByColumn[feature].max.toFixed(decimalPlaces);
 
             return (
-              <div style={styles.cardRow} key={index}>
+              <div className={shared.cardRow} key={index}>
                 <label>
                   {getLocalizedColumnName(datasetId, feature)}
                   &nbsp;
@@ -78,7 +100,7 @@ const Predict = () => {
         <div>
           {selectedCategoricalFeatures.map((feature, index) => {
             return (
-              <div style={styles.cardRow} key={index}>
+              <div className={shared.cardRow} key={index}>
                 <div>{getLocalizedColumnName(datasetId, feature)}&nbsp;</div>
                 <div>
                   <select
@@ -103,28 +125,38 @@ const Predict = () => {
         </div>
       </ScrollableContent>
       <br />
-      <div>
-        <button
-          type="button"
-          style={!predictAvailable ? styles.disabledButton : undefined}
+      <div className={styles.buttons}>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          onClick={onClickRandomize}
+        >
+          Randomize
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={onClickPredict}
           disabled={!predictAvailable}
         >
           {I18n.t('predictButton')}
-        </button>
+        </Button>
       </div>
-      {predictedLabel && (
-        <div style={styles.contentsPredictBot}>
-          <div style={styles.predictBotLeft}>
+      {predictedLabel !== undefined && (
+        <div className={classNames(shared.contents, styles.botResult)}>
+          <div className={styles.botColumn}>
             <img
-              className="ailab-image-hover"
-              style={styles.predictBot}
+              className={classNames(shared.hoverGrow, styles.bot)}
               src={imageUrl('ai-bot/ai-bot-border.png')}
               alt={I18n.t('aiBotAltText')}
             />
           </div>
-          <div style={styles.predictBotRight}>
-            <div style={styles.statement}>{I18n.t('predictAIBotPredicts')}</div>
+          <div className={styles.prediction}>
+            <div className={shared.largeText}>
+              {I18n.t('predictAIBotPredicts')}
+            </div>
             <div>{getLocalizedColumnName(datasetId, labelColumn)}</div>
             <div>{getLocalizedValue(predictedLabel, datasetId)}</div>
           </div>

@@ -70,10 +70,9 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
-  SPECIAL_UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
-  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
-    allthethings
-  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
+
+  # Every unit the UI tests need now lives in the UI test curriculum tree.
+  UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
   # Each year we should update this list and :courses_adhoc
@@ -238,13 +237,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses_ui_tests: :environment do
-    # seed those courses that are needed for UI tests
-    %w(
-      allthethingscourse
-      original-allthethings-course
-    ).each do |course_name|
-      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
-    end
+    # Every course the UI tests need now lives in the UI test curriculum tree.
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
       UnitGroup.load_from_path(path)
     end
@@ -290,9 +283,7 @@ namespace :seed do
     end
   end
 
-  # "UI Test " levels are seeded only for UI tests, after the normal level
-  # tasks, so a not-yet-migrated ui-test-* unit can still resolve normal
-  # levels; see dashboard/test/ui/config/README.md. Same child -> custom ->
+  # "UI Test " levels are seeded only for UI tests. Same child -> custom ->
   # parent ordering as above.
   UI_TEST_CHILD_DSL_FILES = dsl_files('test/ui/config/scripts', CHILD_DSL_TYPES).freeze
   UI_TEST_PARENT_DSL_FILES = dsl_files('test/ui/config/scripts', PARENT_DSL_TYPES).freeze

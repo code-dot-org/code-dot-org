@@ -225,9 +225,9 @@ module ActiveJobMetrics
     # Log wait times only for jobs that were enqueued
     return if enqueued_at.nil?
 
-    # In Rails 7.1, [`enqueued_at` was changed from an ISO8601 String to a Time
-    # object](https://github.com/rails/rails/blob/7-1-stable/activejob/CHANGELOG.md#rails-710rc1-september-27-2023),
-    # and so no longer needs to be parsed.
+    # In Rails 7.1, `enqueued_at` was changed from an ISO8601 String to a Time
+    # object and so no longer needs to be parsed.
+    # See: https://github.com/rails/rails/blob/7-1-stable/activejob/CHANGELOG.md#rails-710rc1-september-27-2023
     # TODO infra: simplify this once we've fully updated to Rails 7.1
     @enqueued_or_started_at =
       if Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 0

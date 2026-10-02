@@ -1,0 +1,54 @@
+.bot {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(35% - 185px);
+  width: 150px;
+}
+
+.botImage {
+  width: 100%;
+}
+
+.card {
+  background-color: rgb(198 202 205);
+  border-radius: 5px;
+  padding: 20px;
+  white-space: normal;
+  overflow-y: auto;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.name {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 24px;
+  font-family: 'Gotham 7r', sans-serif;
+}
+
+.section {
+  background-color: rgb(231 232 234);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.heading {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: 'Gotham 7r', sans-serif;
+}
+
+.content {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.details {
+  margin-bottom: 0;
+}

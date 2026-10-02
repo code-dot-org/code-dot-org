@@ -37,7 +37,6 @@ const fileKeyFor = (appType: string, fileName: string) =>
   `${appType}/${fileName}`;
 
 interface UnifiedBackpackPanelProps extends BackpackProps {
-  openPanelCallback: () => void;
   backpackRefreshKey: number;
 }
 
@@ -220,8 +219,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           key={fileKey}
           fileName={fileName}
           backpackApi={client}
-          addAlert={notify}
-          showToast={showToast}
+          notify={notify}
           isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
           validateFileName={validateFileName}
           saveFileToProject={saveFileToProject}
@@ -241,7 +239,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       backpackApi,
       duplicateFileNames,
       notify,
-      showToast,
       recentlyAddedKeys,
       validateFileName,
       saveFileToProject,

@@ -72,21 +72,13 @@ import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
 import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
-import {ExtraTab, Tabs} from './types';
+import {ExtraTab, Setting, Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
 } from './Validation/ValidationPanel';
 import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
-
-export interface Setting {
-  id: string;
-  label: string;
-  options: {value: string; text: string}[];
-  selectedValue: string | undefined;
-  onChange: (value: string) => void;
-}
 
 interface VersionHistoryProps {
   startSources: ProjectSources;
@@ -263,6 +255,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.lab.validationState?.hasConditions
   );
   const levelName = instructionsProps.levelProperties.name;
+  const levelSystemPrompt = instructionsProps.levelProperties.levelSystemPrompt;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
@@ -274,10 +267,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.predictLevel.hasSubmittedResponse
   );
   const dispatch = useAppDispatch();
-  const setBackpackTabAsActive = useCallback(
-    () => setCurrentTab(Tabs.Backpack),
-    []
-  );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
@@ -341,7 +330,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const validExtraTabs = useMemo(() => filterExtraTabs(extraTabs), [extraTabs]);
 
   // Build available tabs based on level information.
-  const availableTabs = useMemo(() => {
+  const buildAvailableTabs = () => {
     if (sidebarOnly) {
       return {};
     }
@@ -370,7 +359,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       const aiTutorProps = {
         hiddenContextCallback,
         aiTutorMultimodalEnabled,
+        levelId,
         levelName,
+        levelSystemPrompt,
         channelId,
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
@@ -426,7 +417,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Backpack] = (
         <UnifiedBackpackPanel
           {...backpackProps}
-          openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
         />
       );
@@ -461,50 +451,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     return tabMap;
-  }, [
-    sidebarOnly,
-    levelProperties,
-    instructionsProps,
-    hideInstructionsNavigation,
-    hideAllNavigation,
-    validExtraTabs,
-    validationSettings,
-    hasValidationConditions,
-    hiddenContextCallback,
-    aiTutorVisible,
-    isPermanentlyReadOnly,
-    viewAsUserId,
-    isWidgetView,
-    isReadOnlyPredict,
-    versionHistoryProps,
-    showRubric,
-    showBackpack,
-    isUserTeacher,
-    levelTours,
-    otherAvailableTours,
-    aiTutorMultimodalEnabled,
-    levelName,
-    channelId,
-    aiTutorChatButtonData,
-    aiTutorSystemPrompt,
-    aiTutorResponseSchemaSettings,
-    tutorVideos,
-    aiChatDisabledState,
-    onAssetUploaded,
-    onAssetRemoved,
-    initialWelcomeMessage,
-    usesSharedInstructionsDrawer,
-    isPredictLevel,
-    selectedVersion,
-    levelId,
-    isTemporarilyReadOnly,
-    isViewingOldVersion,
-    currentTab,
-    backpackProps,
-    setBackpackTabAsActive,
-    backpackRefreshKey,
-    hasInstructions,
-  ]);
+  };
+  const availableTabs = buildAvailableTabs();
 
   const extraTabInfo = useMemo(() => {
     const info: {[id: string]: {title: string; icon: string}} = {};
@@ -521,9 +469,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return extraTabInfo[tab];
   };
 
-  const hasTabs = useMemo(() => {
-    return Object.keys(availableTabs).length > 0;
-  }, [availableTabs]);
+  const hasTabs = Object.keys(availableTabs).length > 0;
 
   const displayedTab =
     currentTab !== undefined && Object.hasOwn(availableTabs, currentTab)
@@ -537,9 +483,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     onHasTabsChange?.(hasTabs);
   }, [hasTabs, onHasTabsChange]);
 
-  const hasAiTutorTab = useMemo(() => {
-    return availableTabs[Tabs.AiTutor] !== undefined;
-  }, [availableTabs]);
+  const hasAiTutorTab = availableTabs[Tabs.AiTutor] !== undefined;
 
   const floatingSettingsPanelStyles = usePanelPosition(
     isFloatingSettingsOpen,

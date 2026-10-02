@@ -581,7 +581,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :description_teacher, :version_title, :scripts, :teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path,
-                  :ai_chat_tools_dependency], summary.keys
+                  :ai_chat_tools_dependency, :requires_inaccessible_ai_models], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]

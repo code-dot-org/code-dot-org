@@ -1,0 +1,97 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.panel;
+
+  background-color: var(--background-neutral-secondary);
+  border-left: 1px solid var(--border-neutral-primary);
+}
+
+.header {
+  @include mixins.panel-header;
+
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  color: var(--text-neutral-quaternary);
+}
+
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+$features-menu-max-height: 240px;
+
+.card {
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-md);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 8px 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.field .dropdown {
+  width: 100%;
+  align-items: stretch;
+}
+
+.featuresField .featuresDropdown {
+  display: block;
+  width: 100%;
+
+  > button {
+    width: 100%;
+
+    > span {
+      flex-grow: 1;
+      text-align: start;
+    }
+  }
+
+  // The checkbox menu of features.
+  > div {
+    width: 100%;
+    box-sizing: border-box;
+    max-height: $features-menu-max-height;
+    overflow-y: auto;
+  }
+}
+
+.sentence {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.sentenceText {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+}
+
+.actionRow {
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+}

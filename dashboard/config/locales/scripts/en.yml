@@ -10415,6 +10415,12 @@ en:
               name: Generate lesson with AI and project
             lesson-28:
               name: Unit 1
+            lesson-29:
+              name: Unit 2
+            lesson-30:
+              name: Unit 3
+            lesson-31:
+              name: Unit 4
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -30356,6 +30362,14 @@ en:
               name: 'Lesson 13: Automate or Augment?'
             lesson-21:
               name: 'Lesson 14: Trustworthy AI: Transparency and Maintenance'
+            lesson-22:
+              name: 'Lesson 7: Overflow and Rounding'
+            lesson-23:
+              name: 'Lesson 8: Representing Text'
+            lesson-24:
+              name: 'Lesson 9: Black and Whtie Images'
+            lesson-25:
+              name: 'Lesson 10: Color Images'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
@@ -30944,3 +30958,56 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-foundations-of-ai-programming-javascript-2026
+        pl-sandbox-aif-year2-unit1:
+          lessons:
+            lesson-1:
+              name: Getting Started
+            lesson-2:
+              name: What is AI, Really?
+            lesson-3:
+              name: Python Basics
+            lesson-4:
+              name: Optimization in Action
+            lesson-5:
+              name: Loop Basics
+            lesson-6:
+              name: Reasoning and It's Limits
+            lesson-7:
+              name: Conversational AI Project
+          lesson_groups: {}
+          name: pl-sandbox-aif-year2-unit1
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-sandbox-aif-year2-unit2:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit3:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit4:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit5:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit6:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit7:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit8:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit9:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-unit10:
+          lessons: {}
+          lesson_groups: {}
+        pl-sandbox-aif-year2-onboarding:
+          lessons: {}
+          lesson_groups: {}

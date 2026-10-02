@@ -3,7 +3,7 @@ import {faTimes} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useCallback} from 'react';
 
-import {ResultsGrades, styles} from '../constants';
+import {ResultsGrades} from '../constants';
 import {
   getPercentCorrect,
   getCorrectResults,
@@ -14,6 +14,8 @@ import {setShowResultsDetails} from '../redux';
 
 import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
+
+import styles from './resultsDetails.module.scss';
 
 const ResultsDetails = () => {
   const dispatch = useAppDispatch();
@@ -30,12 +32,12 @@ const ResultsDetails = () => {
     resultsTab === ResultsGrades.CORRECT ? correctResults : incorrectResults;
 
   return (
-    <div style={styles.panelPopupContainer}>
-      <div id="results-details" style={styles.panelPopup}>
+    <div className={styles.popupContainer}>
+      <div id="results-details" className={styles.popup}>
         <div
           onClick={onClose}
           onKeyDown={onClose}
-          style={styles.popupClose}
+          className={styles.close}
           role="button"
           tabIndex={0}
         >

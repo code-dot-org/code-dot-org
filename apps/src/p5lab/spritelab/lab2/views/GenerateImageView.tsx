@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
+import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -16,6 +17,8 @@ import aiBot3 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-3.png';
 import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
 import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
+import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
+import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
 import {
   CHARACTER_SET_PICTURE_COUNT,
@@ -24,6 +27,7 @@ import {
 } from '../ai/images/characterSet';
 import {
   ImageAdlibSet,
+  bodyPlanFor,
   imageAdlibFor,
   imageAdlibId,
 } from '../ai/images/imageAdlibs';
@@ -70,10 +74,10 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
-// Where the slider goes when a character set is asked for: every posed
-// frame must agree with the base, so less wildness. Level 3 is a
-// temperature of 0.6, the setting a good live run used.
-const CHARACTER_SET_TEMPERATURE_LEVEL = 3;
+// Where the slider goes when a character set is asked for: the regular
+// level, on trial. Every posed frame must agree with the base, so drift
+// between frames is what to watch.
+const CHARACTER_SET_TEMPERATURE_LEVEL = TEMPERATURE_LEVEL_DEFAULT;
 
 // The input is the only bound on prompt length: prompts persist verbatim
 // into each image's generation metadata and travel in every request.
@@ -205,17 +209,26 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
-  const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
-  const [name, setName] = useState(create?.initial?.name || '');
   const initialImageType =
     existing?.imageType ||
     lockedImageType ||
     create?.initial?.imageType ||
     'sprite';
-  const [imageType, setImageType] = useState<ImageType>(initialImageType);
-  const [subject, setSubject] = useState<ImageSubject>(
-    existing?.generation?.subject || lockedImageSubject || 'character'
+  const initialSubject =
+    existing?.generation?.subject || lockedImageSubject || 'character';
+  // Not seeded where the combo is the only prompt: typed text would hide it.
+  // The same test as the prompt box's, on the form's opening choices.
+  const combOnlyAtStart =
+    adlibOnly &&
+    !advanced &&
+    !!adlibSet &&
+    !!imageAdlibFor(initialImageType, adlibSet, initialSubject);
+  const [prompt, setPrompt] = useState(
+    combOnlyAtStart ? '' : existing?.generation?.prompt || ''
   );
+  const [name, setName] = useState(create?.initial?.name || '');
+  const [imageType, setImageType] = useState<ImageType>(initialImageType);
+  const [subject, setSubject] = useState<ImageSubject>(initialSubject);
   const [style, setStyle] = useState<ImageStyle>(
     existing?.generation?.style ||
       create?.initial?.style ||
@@ -231,17 +244,18 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     const scale = recorded && defaultPixelGrid(initialImageType) / recorded;
     return scale && PIXEL_SCALES.includes(scale) ? scale : 1;
   });
+  // A whole character — idling, walking, jumping — instead of one picture.
+  // An existing image keeps its kind when regenerated.
+  const startsAsSet = existing ? !!sheet : true;
   // Calm when the set checkbox starts checked (posed frames must agree
-  // with the base), as checking it by hand also sets.
+  // with the base), as checking it by hand also sets. While the calm level
+  // is on trial at the regular one, this changes nothing.
   const [temperatureLevel, setTemperatureLevel] = useState(
-    sheet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
+    startsAsSet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
-  // A whole character — idling, walking, jumping — instead of one picture.
-  // Pre-checked when the image already is one: regenerating a character
-  // should keep it a character unless the student unchecks it.
-  const [characterSet, setCharacterSet] = useState(!!sheet);
+  const [characterSet, setCharacterSet] = useState(startsAsSet);
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   // Counts generate runs; progress callbacks from older runs are dropped.
   const progressEpochRef = useRef(0);
@@ -362,6 +376,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             style,
             temperature: options.temperature,
             pixelGrid: options.pixelGrid,
+            // The combo's creature word says how the character is built; a
+            // typed prompt is drawn upright.
+            bodyPlan: usingAdlib
+              ? bodyPlanFor(adlibChoices.creature)
+              : undefined,
           },
           p => {
             if (epoch === progressEpochRef.current) {
@@ -398,6 +417,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   }, [
     promptText,
     usingAdlib,
+    adlibChoices.creature,
     adlibSet,
     imageType,
     subject,
@@ -582,11 +602,27 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                     key={s}
                     name="generation-style"
                     value={s}
-                    label={IMAGE_STYLE_LABELS[s]}
                     size="s"
                     checked={style === s}
                     onChange={() => setStyle(s)}
-                  />
+                    className={moduleStyles.styleOption}
+                  >
+                    {/* The same star in each style, ahead of the label so
+                        the two rows line up. The label is ours, in the
+                        radio's own text size, so it can follow the sample. */}
+                    <span className={moduleStyles.styleSwatch}>
+                      <img
+                        src={s === 'pixel' ? pixelSample : smoothSample}
+                        alt=""
+                        className={classNames(
+                          s === 'pixel' && moduleStyles.pixelArt
+                        )}
+                      />
+                    </span>
+                    <MuiTypography variant="body3" component="span">
+                      {IMAGE_STYLE_LABELS[s]}
+                    </MuiTypography>
+                  </RadioButton>
                 ))}
               </fieldset>
               {/* Internal knob: ask the model for a coarser grid than the

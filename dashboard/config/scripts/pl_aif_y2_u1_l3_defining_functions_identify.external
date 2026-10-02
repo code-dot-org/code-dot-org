@@ -1,0 +1,21 @@
+name 'pl-aif-y2-u1-l3-defining-functions-identify'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reading Functions, Return Values and All
+
+You've seen functions, parameters, and return values as separate ideas. Now see all three working together in real code. Click through the interactive below: reveal what each highlighted part does, then press Run to watch the actual console output, including the moment where a function runs but produces no output at all.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/functions-parameters-return.html"
+    width="100%"
+    height="1060"
+    frameborder="0"
+    scrolling="no"
+    title="Reading Functions Line by Line: click-to-label syntax with console output"
+    style="display:block; border-radius:10px;">
+  </iframe>
+</div>
+MARKDOWN
