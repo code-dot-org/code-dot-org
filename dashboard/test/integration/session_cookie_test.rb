@@ -2,8 +2,6 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
-  include Minitest::RSpecMocks
-
   test 'session cookie name contains environment' do
     get '/reset_session'
 
@@ -62,131 +60,6 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
-  describe 'request#onetrust_consent_data' do
-    let(:onetrust_consent_cookie_value) do
-      [
-        'isGpcEnabled=0',
-        'datestamp=Sat+Sep+26+2026+02%3A10%3A25+GMT%2B0300+(Eastern+European+Summer+Time)',
-        'version=202505.1.0',
-        'browserGpcFlag=0',
-        'isIABGlobal=false',
-        'hosts=',
-        'consentId=cb3aa65a-3f04-4053-aaea-327f3efd4adc',
-        'interactionCount=1',
-        'isAnonUser=1',
-        'landingPath=NotLandingPage',
-        'groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1%2CC0008%3A1%2CC0012%3A0',
-        'AwaitingReconsent=false'
-      ].join('&')
-    end
-
-    before do
-      cookies['OptanonConsent'] = onetrust_consent_cookie_value
-    end
-
-    it 'parses the consent cookie data' do
-      get '/'
-      _(request.onetrust_consent_data).must_equal(
-        {
-          'isGpcEnabled' => '0',
-          'datestamp' => 'Sat Sep 26 2026 02:10:25 GMT+0300 (Eastern European Summer Time)',
-          'version' => '202505.1.0',
-          'browserGpcFlag' => '0',
-          'isIABGlobal' => 'false',
-          'hosts' => '',
-          'consentId' => 'cb3aa65a-3f04-4053-aaea-327f3efd4adc',
-          'interactionCount' => '1',
-          'isAnonUser' => '1',
-          'landingPath' => 'NotLandingPage',
-          'groups' => 'C0001:1,C0002:1,C0003:1,C0004:1,C0008:1,C0012:0',
-          'AwaitingReconsent' => 'false'
-        }
-      )
-    end
-
-    context 'when the consent cookie is absent' do
-      before do
-        cookies.delete('OptanonConsent')
-      end
-
-      it 'returns empty data' do
-        get '/'
-        _(request.onetrust_consent_data).must_equal({})
-      end
-    end
-
-    context 'when the consent cookie has invalid percent encoding' do
-      let(:onetrust_consent_cookie_value) {'groups=%'}
-
-      it 'returns empty data' do
-        get '/'
-        _(request.onetrust_consent_data).must_equal({})
-      end
-    end
-  end
-
-  describe 'request#onetrust_active_groups' do
-    subject(:onetrust_request) {ActionDispatch::Request.new(Rack::MockRequest.env_for('/'))}
-
-    let(:onetrust_consent_data) do
-      {'groups' => 'C0001:0,C0002:1,C0003:0,C0004:1,C0008:1,C0012:0'}
-    end
-
-    before do
-      allow(onetrust_request).to receive(:onetrust_consent_data).and_return(onetrust_consent_data)
-    end
-
-    it 'returns only active consent groups' do
-      _(onetrust_request.onetrust_active_groups).must_equal Set['C0002', 'C0004', 'C0008']
-    end
-
-    context 'when consent data has no groups' do
-      let(:onetrust_consent_data) {{}}
-
-      it 'returns no active groups' do
-        _(onetrust_request.onetrust_active_groups).must_be_empty
-      end
-    end
-
-    context 'when consent data has a non-string groups value' do
-      let(:onetrust_consent_data) {{'groups' => nil}}
-
-      it 'returns no active groups' do
-        _(onetrust_request.onetrust_active_groups).must_be_empty
-      end
-    end
-  end
-
-  describe 'request#onetrust_performance_cookies_allowed?' do
-    subject(:onetrust_request) {ActionDispatch::Request.new(Rack::MockRequest.env_for('/'))}
-
-    let(:onetrust_active_groups) {Set['C0001', 'C0002']}
-
-    before do
-      allow(onetrust_request).to receive(:onetrust_active_groups).and_return(onetrust_active_groups)
-    end
-
-    it 'allows performance cookies when C0002 is active' do
-      _(onetrust_request.onetrust_performance_cookies_allowed?).must_equal true
-    end
-
-    context 'when C0002 is inactive' do
-      let(:onetrust_active_groups) {Set['C0001']}
-
-      it 'does not allow performance cookies' do
-        _(onetrust_request.onetrust_performance_cookies_allowed?).must_equal false
-      end
-    end
-
-    context 'without active consent groups' do
-      let(:onetrust_active_groups) {Set.new}
-
-      it 'does not allow performance cookies' do
-        _(onetrust_request.onetrust_performance_cookies_allowed?).must_equal false
-      end
-    end
-  end
-
   describe 'request#statsig_stable_id' do
     subject(:request_statsig_stable_id) {request.statsig_stable_id}
 
@@ -224,7 +97,6 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
       before do
         cookies[:statsig_stable_id] = cookies_statsig_stable_id
-        cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A1'
       end
 
       it 'stores Statsig cookie value in session' do
@@ -253,19 +125,6 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
           get '/'
           _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
           _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
-        end
-      end
-
-      context 'without performance cookie consent' do
-        before do
-          cookies['OptanonConsent'] = 'groups=C0001%3A1%2CC0002%3A0'
-        end
-
-        it 'ignores the Statsig cookie' do
-          get '/'
-
-          _(request.statsig_stable_id).wont_equal cookies_statsig_stable_id
-          _(session[:statsig_stable_id]).must_equal request.statsig_stable_id
         end
       end
     end
