@@ -222,7 +222,7 @@ class HeaderMiddle extends React.Component {
     );
 
     // The banner takes the bubbles' slot and reports its width the same way.
-    const showBanner = !!scriptData?.headerBanner;
+    const showSimpleProgress = !!scriptData?.simpleProgress;
 
     const widths = HeaderMiddle.getWidths(
       this.state.width,
@@ -234,7 +234,7 @@ class HeaderMiddle extends React.Component {
       this.props.lessonData ? this.props.lessonData.num_script_lessons : 0,
       this.state.finishDesiredWidth,
       showFinish,
-      !showBanner
+      !showSimpleProgress
     );
 
     const extraScriptNameData = scriptNameData
@@ -315,9 +315,9 @@ class HeaderMiddle extends React.Component {
                     : undefined,
               }}
             >
-              {showBanner ? (
+              {showSimpleProgress ? (
                 <SimpleProgress
-                  imageUrl={scriptData.headerBannerImage}
+                  imageUrl={scriptData.simpleProgressImage}
                   levels={levels}
                   width={widths.progress - lessonProgressExtraWidth}
                   setDesiredWidth={width => {

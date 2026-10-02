@@ -78,8 +78,8 @@ class UnitEditor extends React.Component {
     ]),
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
-    initialHeaderBanner: PropTypes.bool,
-    initialHeaderBannerImage: PropTypes.string,
+    initialSimpleProgress: PropTypes.bool,
+    initialSimpleProgressImage: PropTypes.string,
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
@@ -138,8 +138,8 @@ class UnitEditor extends React.Component {
       topicTags: this.props.initialTopicTags,
       contentArea: this.props.initialContentArea,
       tts: this.props.initialTts,
-      headerBanner: this.props.initialHeaderBanner,
-      headerBannerImage: this.props.initialHeaderBannerImage || '',
+      simpleProgress: this.props.initialSimpleProgress,
+      simpleProgressImage: this.props.initialSimpleProgressImage || '',
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
@@ -250,8 +250,8 @@ class UnitEditor extends React.Component {
       topic_tags: this.state.topicTags,
       content_area: this.state.contentArea,
       tts: this.state.tts,
-      header_banner: this.state.headerBanner,
-      header_banner_image: this.state.headerBannerImage,
+      simple_progress: this.state.simpleProgress,
+      simple_progress_image: this.state.simpleProgressImage,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
@@ -435,12 +435,12 @@ class UnitEditor extends React.Component {
             </HelpTip>
           </label>
           <label>
-            Show a banner instead of progress bubbles in the level header
+            Show simple progress instead of progress bubbles in the level header
             <input
               type="checkbox"
-              checked={this.state.headerBanner}
+              checked={this.state.simpleProgress}
               style={styles.checkbox}
-              onChange={e => this.setState({headerBanner: e.target.checked})}
+              onChange={e => this.setState({simpleProgress: e.target.checked})}
             />
             <HelpTip>
               <p>
@@ -449,15 +449,15 @@ class UnitEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
-          {this.state.headerBanner && (
+          {this.state.simpleProgress && (
             <label>
-              Header banner image URL
+              Simple progress image URL
               <input
-                value={this.state.headerBannerImage}
+                value={this.state.simpleProgressImage}
                 style={styles.input}
                 placeholder="/blockly/media/hoai2026/logo.png"
                 onChange={e =>
-                  this.setState({headerBannerImage: e.target.value})
+                  this.setState({simpleProgressImage: e.target.value})
                 }
               />
             </label>

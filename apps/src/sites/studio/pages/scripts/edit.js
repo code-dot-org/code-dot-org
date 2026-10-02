@@ -74,8 +74,8 @@ export default function initPage(unitEditorData) {
         initialContentArea={scriptData.content_area || ''}
         isLevelbuilder={unitEditorData.is_levelbuilder}
         initialTts={scriptData.tts}
-        initialHeaderBanner={scriptData.headerBanner}
-        initialHeaderBannerImage={scriptData.headerBannerImage}
+        initialSimpleProgress={scriptData.simpleProgress}
+        initialSimpleProgressImage={scriptData.simpleProgressImage}
         hasCourse={unitEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
         initialWeeklyInstructionalMinutes={
