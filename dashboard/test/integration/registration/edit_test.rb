@@ -48,5 +48,27 @@ module RegistrationsControllerTests
       classlink_options = options.select {|option| option['credential_type'] == AuthenticationOption::CLASSLINK}
       assert_equal [v2_option.id], classlink_options.pluck('id')
     end
+
+    test 'lists one Clever row when the user holds both pre-v3 and v3 Clever options' do
+      teacher = create(:teacher, :with_clever_authentication_option)
+      v3_option = create(
+        :authentication_option,
+        user: teacher,
+        email: teacher.email,
+        hashed_email: teacher.hashed_email,
+        credential_type: AuthenticationOption::CLEVER,
+        authentication_id: 'clever-v3-id',
+        version: AuthenticationOption::Clever::VERSION[:v3]
+      )
+      sign_in teacher
+
+      get users_edit_path
+
+      assert_response :success
+      script = css_select('script[data-edit]').first
+      options = JSON.parse(script['data-edit'])['authenticationOptions']
+      clever_options = options.select {|option| option['credential_type'] == AuthenticationOption::CLEVER}
+      assert_equal [v3_option.id], clever_options.pluck('id')
+    end
   end
 end

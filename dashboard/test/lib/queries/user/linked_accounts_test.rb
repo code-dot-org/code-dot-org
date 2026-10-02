@@ -4,13 +4,13 @@ class Queries::User::LinkedAccountsTest < ActiveSupport::TestCase
   let(:user) {create(:teacher)}
   let(:result) {Queries::User::LinkedAccounts.call(user: user)}
 
-  def create_classlink_option(version:, authentication_id:, created_at: Time.zone.now)
+  def create_option(credential_type:, version:, authentication_id:, created_at: Time.zone.now)
     create(
       :authentication_option,
       user: user,
       email: user.email,
       hashed_email: user.hashed_email,
-      credential_type: AuthenticationOption::CLASSLINK,
+      credential_type: credential_type,
       authentication_id: authentication_id,
       version: version,
       created_at: created_at
@@ -18,18 +18,42 @@ class Queries::User::LinkedAccountsTest < ActiveSupport::TestCase
   end
 
   def create_v1_option(created_at: Time.zone.now)
-    create_classlink_option(version: nil, authentication_id: rand(10_000_000..99_999_999).to_s, created_at: created_at)
+    create_option(
+      credential_type: AuthenticationOption::CLASSLINK,
+      version: nil,
+      authentication_id: rand(10_000_000..99_999_999).to_s,
+      created_at: created_at
+    )
   end
 
   def create_v2_option(created_at: Time.zone.now)
-    create_classlink_option(
+    create_option(
+      credential_type: AuthenticationOption::CLASSLINK,
       version: AuthenticationOption::Classlink::VERSION[:v2],
       authentication_id: "tenant|#{SecureRandom.uuid}",
       created_at: created_at
     )
   end
 
-  test 'returns every option when none is ClassLink' do
+  def create_clever_pre_v3_option(created_at: Time.zone.now)
+    create_option(
+      credential_type: AuthenticationOption::CLEVER,
+      version: nil,
+      authentication_id: SecureRandom.uuid,
+      created_at: created_at
+    )
+  end
+
+  def create_clever_v3_option(created_at: Time.zone.now)
+    create_option(
+      credential_type: AuthenticationOption::CLEVER,
+      version: AuthenticationOption::Clever::VERSION[:v3],
+      authentication_id: SecureRandom.uuid,
+      created_at: created_at
+    )
+  end
+
+  test 'returns every option when none is ClassLink or Clever' do
     google = create(:google_authentication_option, user: user)
     user.reload
 
@@ -90,6 +114,44 @@ class Queries::User::LinkedAccountsTest < ActiveSupport::TestCase
 
     assert_includes result, google
     assert_includes result, v2
+    assert_includes result, user.primary_contact_info
+    assert_equal 3, result.size
+  end
+
+  test 'keeps a lone pre-v3 Clever option' do
+    pre_v3 = create_clever_pre_v3_option
+    user.reload
+
+    assert_includes result, pre_v3
+  end
+
+  test 'lists only the v3 option when the user holds both pre-v3 and v3 Clever options' do
+    pre_v3 = create_clever_pre_v3_option(created_at: 1.day.ago)
+    v3 = create_clever_v3_option
+    user.reload
+
+    assert_includes result, v3
+    refute_includes result, pre_v3
+  end
+
+  test 'prefers the v3 Clever option even when the pre-v3 option is newer' do
+    v3 = create_clever_v3_option(created_at: 1.day.ago)
+    pre_v3 = create_clever_pre_v3_option
+    user.reload
+
+    assert_includes result, v3
+    refute_includes result, pre_v3
+  end
+
+  test 'collapses ClassLink and Clever independently' do
+    create_v1_option
+    v2 = create_v2_option
+    create_clever_pre_v3_option
+    v3 = create_clever_v3_option
+    user.reload
+
+    assert_includes result, v2
+    assert_includes result, v3
     assert_includes result, user.primary_contact_info
     assert_equal 3, result.size
   end

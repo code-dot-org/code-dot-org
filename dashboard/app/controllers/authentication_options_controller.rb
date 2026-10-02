@@ -26,14 +26,14 @@ class AuthenticationOptionsController < ApplicationController
     redirect_to edit_user_registration_path
   end
 
-  # The account page lists one ClassLink row for all of a user's ClassLink
-  # records (see Queries::User::LinkedAccounts), so disconnecting it removes
-  # every one. Removing only the listed record would leave the user still
-  # signed up with ClassLink through the hidden one.
+  # For ClassLink and Clever the account page lists one row for all of a
+  # user's records with that provider (see Queries::User::LinkedAccounts), so
+  # disconnecting it removes every one. Removing only the listed record would
+  # leave the user still signed up with the provider through a hidden one.
   private def options_to_disconnect(auth_option)
-    return [auth_option] unless auth_option.credential_type == AuthenticationOption::CLASSLINK
+    return [auth_option] unless Queries::User::LinkedAccounts.collapsed?(auth_option.credential_type)
 
-    current_user.authentication_options.where(credential_type: AuthenticationOption::CLASSLINK).to_a
+    current_user.authentication_options.where(credential_type: auth_option.credential_type).to_a
   end
 
   private def email_option_from_deleted_option(deleted_option)
