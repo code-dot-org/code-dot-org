@@ -1,0 +1,72 @@
+@use '../sharedMixins' as mixins;
+
+$step-gap: 8px;
+$step-line-height: 20px;
+$step-number-size: 16px;
+$step-number-top: calc(($step-line-height - $step-number-size) / 2);
+
+.card {
+  @include mixins.card;
+}
+
+.header {
+  margin: 0;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--text-neutral-secondary);
+
+  strong {
+    font-weight: 600;
+    color: var(--text-neutral-primary);
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: $step-gap;
+  margin: 0;
+  padding: 10px 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  line-height: $step-line-height;
+  color: var(--text-neutral-primary);
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+// Joins this step's number to the next one's, however many lines each wraps to.
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: calc($step-number-top + $step-number-size);
+  bottom: calc(-1 * ($step-gap + $step-number-top));
+  left: calc($step-number-size / 2);
+  border-left: 1px solid var(--border-neutral-primary);
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: $step-number-size;
+  height: $step-number-size;
+  margin-top: $step-number-top;
+  border-radius: 50%;
+  background-color: var(--background-neutral-tertiary);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: $step-number-size;
+  text-align: center;
+  color: var(--text-neutral-secondary);
+}

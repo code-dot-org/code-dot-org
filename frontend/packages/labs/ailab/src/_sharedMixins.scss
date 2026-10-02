@@ -7,6 +7,12 @@
   font-family: var(--font-family-main);
 }
 
+@mixin card {
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-md);
+}
+
 @mixin panel-header {
   display: flex;
   align-items: center;
