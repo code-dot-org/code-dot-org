@@ -65,10 +65,14 @@ export default class HeaderBanner extends React.Component {
     this.cancelFontRemeasure?.();
   }
 
+  // The natural width: what is on screen plus whatever the label is hiding
+  // behind its ellipsis, so a squeezed banner still asks for its full size.
   setDesiredWidth() {
     const inner = $(this.refs.inner);
     if (this.props.setDesiredWidth && inner.length > 0) {
-      this.props.setDesiredWidth(inner.outerWidth());
+      const label = this.refs.label;
+      const hidden = label ? label.scrollWidth - label.clientWidth : 0;
+      this.props.setDesiredWidth(inner.outerWidth() + Math.max(0, hidden));
     }
   }
 
@@ -85,7 +89,9 @@ export default class HeaderBanner extends React.Component {
             // Keyed on the label so a new part starts at its own fill rather
             // than sliding from the last part's.
             <div key={label} style={styles.text}>
-              <span style={styles.label}>{label}</span>
+              <span ref="label" style={styles.label}>
+                {label}
+              </span>
               {progress && (
                 <div style={styles.barRow}>
                   <div
@@ -114,11 +120,15 @@ export default class HeaderBanner extends React.Component {
 }
 
 const styles = {
+  // Natural width when the header has room; no wider than the slot when
+  // it has not, so the label and bar shrink instead of being cut off.
   banner: {
     display: 'inline-flex',
     alignItems: 'center',
     height: 50,
     padding: '0 5px',
+    maxWidth: '100%',
+    boxSizing: 'border-box',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
   },
@@ -138,7 +148,9 @@ const styles = {
     marginInlineStart: 12,
     display: 'flex',
     flexDirection: 'column',
-    minWidth: 80,
+    // Shrinks with the slot; the label ellipsizes and the bar fills the column.
+    flex: '1 1 auto',
+    minWidth: 0,
   },
   label: {
     color: color.white,

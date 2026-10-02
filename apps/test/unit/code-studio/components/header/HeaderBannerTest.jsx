@@ -46,6 +46,56 @@ describe('HeaderBanner', () => {
     expect(document.querySelector('#header_banner').textContent).toBe('');
   });
 
+  it('shrinks to its slot, the label ellipsizing and the bar filling the column', () => {
+    render(
+      <HeaderBanner
+        imageUrl="/logo.png"
+        levels={levelsWithCurrent('3')}
+        width={120}
+      />
+    );
+    const label = screen.getByText('Story');
+    const inner = label.parentElement.parentElement;
+    expect(inner.style.maxWidth).toBe('100%');
+    expect(label.style.textOverflow).toBe('ellipsis');
+    expect(label.parentElement.style.minWidth).toBe('0');
+    expect(label.parentElement.style.flex).toBe('1 1 auto');
+    expect(screen.getByRole('progressbar').style.width).toBe('100%');
+  });
+
+  it('asks for its natural width even while squeezed, counting what the label hides', () => {
+    const setDesiredWidth = jest.fn();
+    render(
+      <HeaderBanner
+        imageUrl="/logo.png"
+        levels={levelsWithCurrent('3')}
+        width={120}
+        setDesiredWidth={setDesiredWidth}
+      />
+    );
+    const label = screen.getByText('Story');
+    Object.defineProperty(label, 'scrollWidth', {
+      value: 140,
+      configurable: true,
+    });
+    Object.defineProperty(label, 'clientWidth', {
+      value: 60,
+      configurable: true,
+    });
+    setDesiredWidth.mockClear();
+    // A re-measure, as a font load or an update would cause.
+    window.dispatchEvent(new Event('resize'));
+    render(
+      <HeaderBanner
+        imageUrl="/logo.png"
+        levels={levelsWithCurrent('2')}
+        width={120}
+        setDesiredWidth={setDesiredWidth}
+      />
+    );
+    expect(setDesiredWidth).toHaveBeenCalled();
+  });
+
   it('reports its natural width', () => {
     const setDesiredWidth = jest.fn();
     render(
