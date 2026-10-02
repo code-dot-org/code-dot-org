@@ -250,7 +250,7 @@ describe('addBlocks', () => {
         typeof unfilledOutlines
       >[0]);
     const WHEN_RUN_SAY = {attachTo: 'spritelab2_whenRun', shadow: SAY};
-    const AT_6 = {type: 'gamelab_atTime', data: 'at-6'};
+    const AT_6 = {type: 'gamelab_atTime', data: 'at-6', next: {shadow: SAY}};
 
     it('finds the shadow a stack ends in', () => {
       const waiting = stack({shadow: SAY, next: true}, {isShadow: true});
@@ -295,6 +295,19 @@ describe('addBlocks', () => {
       expect(unfilledOutlines(workspace(other, waiting), [AT_6])).toEqual([
         waiting,
       ]);
+    });
+
+    it('an entry with no placeholder has no outline to wait for', () => {
+      const waiting = top(
+        'gamelab_atTime',
+        [{shadow: SAY, next: true}, {isShadow: true}],
+        {data: 'at-6'}
+      );
+      expect(
+        unfilledOutlines(workspace(waiting), [
+          {type: 'gamelab_atTime', data: 'at-6'},
+        ])
+      ).toEqual([]);
     });
 
     it('lists a stack once when two entries point at it', () => {

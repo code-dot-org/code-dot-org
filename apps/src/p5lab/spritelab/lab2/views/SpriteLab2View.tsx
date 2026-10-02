@@ -1520,47 +1520,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // workspace follows the active scene and re-runs the preview.
   // Sources generation and workspace the toolbox was last loaded into.
   const toolboxLoadedForRef = useRef('');
-  // Loads of a scene's code into the workspace. A load puts the view back
-  // wherever the workspace was, so the added-blocks pass runs again after
-  // one and brings the level's outline back on screen.
+  // Loads of a scene's code into the workspace.
   const sceneLoadsRef = useRef(0);
-  useEffect(() => {
-    if (!animationsSeeded) {
-      return;
-    }
-    if (isToolboxMode) {
-      const loadedFor = `${sourcesReinitializedCount}:${workspaceVersion}`;
-      if (toolboxLoadedForRef.current !== loadedFor) {
-        toolboxLoadedForRef.current = loadedFor;
-        // Toolbox edit sources always carry the object form (the
-        // container builds them from the toolbox definition).
-        loadCode((currentSources.source ?? {}) as WorkspaceSerialization);
-      }
-      return;
-    }
-    const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
-    if (isEqual(getCurrentBlocks(), source)) {
-      return;
-    }
-    sceneLoadsRef.current++;
-    loadCode(source);
-    runLocalScene(activeScene);
-  }, [
-    animationsSeeded,
-    activeScene,
-    currentSources.source,
-    getCurrentBlocks,
-    loadCode,
-    runLocalScene,
-    sourcesReinitializedCount,
-    // A re-injected workspace is empty, whatever caused it.
-    workspaceVersion,
-  ]);
-
-  // The level's added blocks join the pinned scene once it is on screen,
-  // after the load above (effects run in order), so they sit below what the
-  // workspace has rendered. Per level and per load: a level reached in page
-  // shares the scene's code with the last one, and loads nothing.
+  // The key of the last added-blocks pass (see addLevelBlocks).
   const addedBlocksForRef = useRef('');
   // Set when Start Over leaves for the first level: the level being left and
   // the reinitialization count before its reset. The pass skips that reset,
@@ -1570,7 +1532,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     leavingResetRef.current = undefined;
   }, [levelProperties.id]);
-  useEffect(() => {
+  // The level's added blocks join the pinned scene once it is on screen:
+  // once per level, load, sources generation and workspace. A level reached
+  // in page loads nothing, so arriving runs it; a load puts the view back
+  // wherever the workspace was, so a load runs it too and brings the
+  // level's outline back on screen.
+  const addLevelBlocks = useCallback(() => {
     if (
       !animationsSeeded ||
       isToolboxMode ||
@@ -1581,7 +1548,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     const key = [
       levelProperties.id,
-      activeScene.id,
       sourcesReinitializedCount,
       workspaceVersion,
       sceneLoadsRef.current,
@@ -1610,6 +1576,44 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     workspaceVersion,
   ]);
+  useEffect(() => {
+    if (!animationsSeeded) {
+      return;
+    }
+    if (isToolboxMode) {
+      const loadedFor = `${sourcesReinitializedCount}:${workspaceVersion}`;
+      if (toolboxLoadedForRef.current !== loadedFor) {
+        toolboxLoadedForRef.current = loadedFor;
+        // Toolbox edit sources always carry the object form (the
+        // container builds them from the toolbox definition).
+        loadCode((currentSources.source ?? {}) as WorkspaceSerialization);
+      }
+      return;
+    }
+    const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
+    if (isEqual(getCurrentBlocks(), source)) {
+      return;
+    }
+    sceneLoadsRef.current++;
+    loadCode(source);
+    runLocalScene(activeScene);
+    // After the load, so the blocks sit below what the workspace holds.
+    addLevelBlocks();
+  }, [
+    addLevelBlocks,
+    animationsSeeded,
+    activeScene,
+    currentSources.source,
+    getCurrentBlocks,
+    loadCode,
+    runLocalScene,
+    sourcesReinitializedCount,
+    // A re-injected workspace is empty, whatever caused it.
+    workspaceVersion,
+  ]);
+  useEffect(() => {
+    addLevelBlocks();
+  }, [addLevelBlocks]);
 
   const sceneEditing = useSceneEditing({
     scenes,

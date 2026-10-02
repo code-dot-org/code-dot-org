@@ -110,7 +110,8 @@ export function scrollIntoView(
   running.set(workspace, stop);
   let start: number | undefined;
   const step = (time: number) => {
-    if (workspace.isDragging()) {
+    // A disposed workspace is no longer rendered.
+    if (!workspace.rendered || workspace.isDragging()) {
       stop();
       return;
     }

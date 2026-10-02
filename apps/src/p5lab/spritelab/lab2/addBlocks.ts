@@ -221,9 +221,9 @@ export function trailingShadow(top: BlocklyCore.Block): {
   }
 }
 
-/** The stacks that end in one of the level's outlines: a block the level
-    adds, or the stack its placeholder hangs on, still ending in that
-    placeholder. */
+/** The stacks still ending in one of the level's placeholders: under a
+    block the level adds, or on the stack the level hangs it on. An entry
+    with no placeholder has no outline to wait for. */
 export function unfilledOutlines(
   workspace: BlocklyCore.WorkspaceSvg,
   entries: AddBlockEntry[]
@@ -231,16 +231,22 @@ export function unfilledOutlines(
   const tops = workspace.getTopBlocks(false);
   const found = new Set<BlocklyCore.BlockSvg>();
   for (const entry of entries) {
+    const placeholder = isAttachShadow(entry)
+      ? entry.shadow
+      : entry.next?.shadow;
+    if (!placeholder) {
+      continue;
+    }
     for (const top of tops) {
       const end = trailingShadow(top);
-      if (!end) {
-        continue;
-      }
       const matches = isAttachShadow(entry)
-        ? top.type === entry.attachTo &&
-          samePlaceholder(end.connection.getShadowState(), entry.shadow)
+        ? top.type === entry.attachTo
         : matchesEntry(presentBlock(top), entry);
-      if (matches) {
+      if (
+        end &&
+        matches &&
+        samePlaceholder(end.connection.getShadowState(), placeholder)
+      ) {
         found.add(top);
       }
     }

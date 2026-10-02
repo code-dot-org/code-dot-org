@@ -16,6 +16,7 @@ function fakeWorkspace(view = VIEW, scale = 1) {
     scrollX: 0,
     scrollY: 0,
     dragging: false,
+    rendered: true,
     isMovable: () => true,
     isDragging: () => workspace.dragging,
     getScale: () => scale,
