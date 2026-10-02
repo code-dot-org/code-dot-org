@@ -265,6 +265,121 @@
               "name": "header_unit_tcai",
               "visible": false,
               "html": "<h1>Unit: thinking critically about AI (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "tcai_identify_ai_daily",
+              "title": "Identify where AI exists in our daily lives and the different stakeholders that use it",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_ai_evaluation",
+              "title": "Implement verification strategies to evaluate AI outputs",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_position_ai",
+              "title": "TBD",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_analyze_privacy_risks",
+              "title": "Analyze privacy risks that exist when sharing information online",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_create_chatbot",
+              "title": "Create a chatbot that uses context and a goal to direct AI towards a specific purpose",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ]
         },

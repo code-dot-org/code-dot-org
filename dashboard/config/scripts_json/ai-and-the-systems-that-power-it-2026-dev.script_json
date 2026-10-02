@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-01 00:17:55 UTC",
+    "serialized_at": "2026-10-02 00:05:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -286,9 +286,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can user testing help make a product better? What happens when user testing is skipped?**\n\nIn this lesson, students explore the importance of user testing through hands-on activities analyzing real feedback data and making product development decisions. Students learn to leverage AI tools to process user testing data and practice justifying decisions about next steps based on testing insights, emphasizing the value of diverse perspectives in the development process.",
-        "preparation": "- Print copies of the User Testing activity guide (one for each student)\n- Print copies of the User Testing Unit Guide (one for each student)",
-        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can user testing help make a product better? What happens when user testing is skipped?**\n\nDiscover how user testing helps create better products by analyzing real feedback and using AI tools to find patterns in user data. Work with your classmates to make and justify decisions about product improvements, learning how different perspectives can lead to better solutions."
+        "overview": "**How can user testing help make a product better? What happens when user testing is skipped?**\n\nIn this lesson, students explore the importance of user testing through hands-on activities analyzing real feedback data and making product development decisions. Students learn to leverage AI tools to process user testing data and practice justifying decisions about next steps based on testing insights, emphasizing the value of diverse perspectives in the development process.",
+        "preparation": "- Print copies of the User Testing activity guide.\n- Print copies of the User Persona cards. There are 10 unique user personas and each student will need one.\n",
+        "student_overview": "**How can user testing help make a product better? What happens when user testing is skipped?**\n\nDiscover how user testing helps create better products by analyzing real feedback and using AI tools to find patterns in user data. Work with your classmates to make and justify decisions about product improvements, learning how different perspectives can lead to better solutions."
       },
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
@@ -840,7 +840,7 @@
       "key": "ea92a01b-455d-46d3-baa0-67596568f6da",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -854,7 +854,7 @@
       "key": "36a23c81-d674-45e6-9ec3-e36d41b010ba",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2419,10 +2419,10 @@
       "key": "f2f61c86-86bc-4f32-a86b-f9425c08885c",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 1. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
+        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these three processing units work.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide and one sticky note.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce Artificial Intelligence Accelerators(AIAs).\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 1. Students pick a computing task, start the race and watch all processors run it at the same time. They record the place each processing unit finished in their activity guide, and repeat the process for all computing tasks.",
         "duration": "15",
         "name": "AI Hardware",
-        "progression_name": "Processing Unit Battle"
+        "progression_name": "Processor Racing"
       },
       "seeding_key": {
         "activity_section.key": "f2f61c86-86bc-4f32-a86b-f9425c08885c",
@@ -2441,23 +2441,12 @@
       }
     },
     {
-      "key": "32a07286-e408-418f-ae24-72b571198a41",
+      "key": "436bc714-c914-4591-a2a3-1e4913fee674",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide.",
-        "duration": "10",
-        "name": "AI in the Real World"
-      },
-      "seeding_key": {
-        "activity_section.key": "32a07286-e408-418f-ae24-72b571198a41",
-        "lesson_activity.key": "0821943e-1e5d-45db-81cb-0d51b0b0050a"
-      }
-    },
-    {
-      "key": "436bc714-c914-4591-a2a3-1e4913fee674",
-      "position": 4,
-      "properties": {
         "description": "AI systems use data to make decisions in real-world applications. Let’s explore how different AI models function and what data they rely on.",
+        "duration": "10",
+        "name": "AI in the Real World",
         "remarks": true
       },
       "seeding_key": {
@@ -2467,9 +2456,9 @@
     },
     {
       "key": "475491bf-70e2-44d7-adaa-0c37d6601d02",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4. Assign each group an AI use case:\n- Voice Assistants (Alexa/Siri): AI processes voice input and generates responses.\n- Self-Driving Cars: AI uses sensor data to navigate roads.\n- Medical Imaging AI: AI scans medical images for disease detection.\n- AI Translation Tools: AI converts text/audio between languages.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to open Lesson 9, Level 2. In their groups, students will watch a video about the assigned technology and answer the following questions in their activity guide:\n- What is the AI model doing in this scenario?\n- What type of data is being input?\n- What is the decision being made? In other words, what does this AI system do with the data?\n- Why does this task require speed and scale?",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students choose a career that interests them each with a unique AI task that a computing system could solve and Complete the Exploring AI Models section of your activity guide. On level 3, students design a computing system to be used by the AI Model.\n- **Veterinarian:**\n- **Athletic Trainer:**\n- **Agriculture Farmer:**\n- **Visualization Supervisor:**\n- **Pharmacist:**",
         "progression_name": "Explore an AI Model"
       },
       "seeding_key": {
@@ -2479,7 +2468,7 @@
     },
     {
       "key": "56e512da-e488-471d-8c06-f020cdfdb01d",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that all students are able to answer all questions. At the end of the lesson, students will do a jigsaw activity to share out their answers."
       },
@@ -2490,7 +2479,7 @@
     },
     {
       "key": "7ce7ccea-9c50-4266-be4d-4c97196dac4b",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for various tasks that might be associated with an AI model",
         "progression_name": "Determine AI Hardware",
@@ -2735,14 +2724,14 @@
       "key": "77a5da82-218a-4b24-9a4a-e38b151e362b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 1. Students look at user testing results for a product and pull out the main themes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around to ensure students are looking at all the types of data (observations, user survey response tables, and feedback) when doing their analysis.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each students one copy of the User Testing activity guide to students\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 1. Students look at user testing results for a product and pull out the main themes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around to ensure students are looking at all the types of data (observations, user survey response tables, and feedback) when doing their analysis.",
         "duration": "15",
-        "name": "User Testing Data",
+        "name": "Introduction to User Testing",
         "progression_name": "User Testing Results",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Keep this activity moving. Students will refine their summaries with the chatbot in the next level, so aim to limit this analysis to five minutes or so, and allow about fifteen minutes with the chatbot in Level 2. "
+            "markdown": "Keep this activity moving. Students will refine their summaries with the chatbot in the next level, so aim to limit this analysis to five minutes or so, and allow about ten minutes with the chatbot in Level 2. "
           }
         ]
       },
@@ -2752,21 +2741,10 @@
       }
     },
     {
-      "key": "146d7c84-9c86-46e3-83f6-0f3c89470e19",
+      "key": "8f9c8fab-1f1a-41ca-b4d0-7805e0e87151",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around to ensure students are looking at all the types of data (observations, user survey response tables, and feedback) when doing their analysis."
-      },
-      "seeding_key": {
-        "activity_section.key": "146d7c84-9c86-46e3-83f6-0f3c89470e19",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "8f9c8fab-1f1a-41ca-b4d0-7805e0e87151",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 2 to work with the chatbot to help summarize the same data they just looked at.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to compare the chatbot’s summary with their own observations from Level 1. Remind them to record the chatbot’s response, revise their prompt for clarity or focus, and note any improvements in their activity guide.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 2 to work with the chatbot to help summarize the same data they just looked at.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to compare the chatbot’s summary with their own observations from Level 1. Remind them to record the chatbot’s response, revise their prompt for clarity or focus, and note any improvements in their activity guide.",
         "progression_name": "Using AI to Analyze Data",
         "tips": [
           {
@@ -2782,7 +2760,7 @@
     },
     {
       "key": "934fbb2f-f2c3-4bfa-a3a3-36176192ce2d",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is AI helpful when processing user testing data? What would have been difficult to do without it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to point out for when the chatbot noticed something that they did not or for times when AI summarized the results more clearly. Also make sure to make space in the conversation for evaluating the AI responses and having students share the tips they used to help the AI work better at generating insights from the data or when the AI made incorrect statements from the data.\n\nDepending on where the discussion goes, here are some potential follow-up questions to engage the class with:\n- Which summary do you think you would include a report to the team working on this product, yours or the chatbots? Why?\n- How do you think your summary would have been different if you’d used AI to summarize the data first before doing your own analysis?"
       },
@@ -2793,12 +2771,18 @@
     },
     {
       "key": "286446ff-7c47-4b63-8d28-cd812418a6cf",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the second page of the User Testing activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 3. Students will see the same scenario, along with four choices for how Alice should respond to this situation.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the User Testing Gallery Walk activity in which students will participate in simulated user testing of Smart Classroom Devices by assuming a user persona. Each persona contains:\nA statement that explains user background & motivation\nQuestions to consider while user testing\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** One user persona card for each student in the class. There are 10 different unique personas.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 3. This Sketch Lab level will contain the Smart Classroom Device that the students created in Lesson 10: IoT and Emerging Technologies. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will participate in a Gallery Walk activity in which they will assume the user persona indicated on the card that was distributed to them and will evaluate their classmates' smart classroom designs through that lens. They should evaluate both the positive and negative aspects of the design as seen through the eyes of the user and provide a possible improvement or iteration that might be done.\n",
         "duration": "20",
-        "name": "What's Next",
-        "progression_name": "Alice's Scenario"
+        "name": "User Testing Gallery Walk",
+        "progression_name": "Smart Classroom Device User Testing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This gallery walk makes use of the Smart Classroom Device that students previously creating in the IoT and Emerging Technologies lesson. If students were unable to finish, then you might choose to shift the focus of the activity by using the Smart Classroom Device Model and have the students examine it from multiple user personas."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "286446ff-7c47-4b63-8d28-cd812418a6cf",
@@ -2807,13 +2791,13 @@
     },
     {
       "key": "cc48a78b-9ce0-449b-ae7e-f3e1d2449051",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option they think Alice should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Provide an example of either a strong design or a pain point from the viewpoint of your user persona.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to explain their feedback through their persona's needs instead of their own opinions. For example, \"As Aaliyah, this design wouldn't work because it needs a newer phone\" is stronger than \"I didn't like it.\" Point out moments when one persona's strength is another persona's pain point. These conflicts help students see that a design can work well for some users and poorly for others, and that testing with many different perspectives brings up problems a single tester would miss.\n",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "This level is designed to use the Student Summaries feature, which lets you view and display the responses from the class. This requires having this level opened on your computer and, in the teacher panel, selecting the current section of your classes. [**Click here to learn more about viewing student responses**](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels). If you are unable to use the student summaries, you can also run this as an unplugged discussion where students vote in their seats or move to different corners of the room depending on their responses. Ultimately, students need a way to take a stand and be ready to discuss their opinions in the next slide."
+            "type": "assessmentOpportunity",
+            "markdown": "The User Testing activity guide can be collected and used to formatively assess the lesson objectives:\nExplain why user testing is an important part of the development process\nJustify next steps for a product based on user testing insights and diverse perspectives\n"
           }
         ]
       },
@@ -2823,148 +2807,10 @@
       }
     },
     {
-      "key": "7d3ebfc4-38a6-4f6f-b6da-634b9909f6e3",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7d3ebfc4-38a6-4f6f-b6da-634b9909f6e3",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "7e6af133-e34d-491d-bc0f-ab2b2ae72309",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Who should Alice prioritize in her design decisions, and how might her choice affect the product’s purpose and impact?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no definitive right answer here, as long as students can explain and justify their thoughts. Some students may choose option A, given that the device works as intended for the specific target user – gamers with mobility issues. Other students may gravitate towards options B or C - either fixing it after launch, or delaying in order to fix - because it doesn’t work as well as it should for all users and it should be made more equitable before launching.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Regardless of what answer students pick, the more important goal is for students to recognize that there are still important decisions - made by humans - before their technology should be released to the public, and this exercise introduces students to some of the choices they could make. Additionally, students should discuss who to prioritize when making updates. In this case, should they prioritize the positive feedback they received from mobility challenged gamers (primary user) or from other gamers (secondary users)?"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7e6af133-e34d-491d-bc0f-ab2b2ae72309",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "727bf631-bca6-4c56-8eb0-03f531d41aa3",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "727bf631-bca6-4c56-8eb0-03f531d41aa3",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "28367f86-219f-40c2-8648-b6ed0966961a",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 4. Students will see the same scenario, along with four choices for how Josh should respond to this situation.",
-        "progression_name": "Josh's Scenario"
-      },
-      "seeding_key": {
-        "activity_section.key": "28367f86-219f-40c2-8648-b6ed0966961a",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "b3cb795d-1667-43dd-a823-c9438c2837e2",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option they think Josh should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide."
-      },
-      "seeding_key": {
-        "activity_section.key": "b3cb795d-1667-43dd-a823-c9438c2837e2",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "f59b7546-2ae2-4eb5-be26-c9e0be5dbd7d",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are the risks of releasing a product that works better for some groups than others, and how could Josh design more fairly for all users?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This answer tends to have a more moral or ethical component, since the technology shows a clear gender bias against women, who are more likely to have higher pitched voices and therefore not be able to use the technology. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This scenario is based on real-world events where this exact situation unfolded - multiple car companies released voice activated phone systems knowing that they were unlikely to work for women -you can read more about that here. The real-life version of this may be surprising to students - the companies initially ignored the user testing feedback and went with option (B), releasing the voice-recognition system to the public first before making changes. It was only after several years that these harmful effects were addressed. You can decide if you want to highlight this scenario with students and discuss the approach to user testing: “Improvements were made first for males, then females, then Midwestern speakers. Finally it was adjusted for Southern speakers and people from New England.”"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f59b7546-2ae2-4eb5-be26-c9e0be5dbd7d",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "0a4aac3c-4fbd-43ff-96fe-2e4d8008883a",
-      "position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0a4aac3c-4fbd-43ff-96fe-2e4d8008883a",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "b47a1f1f-d37c-404c-a541-71b7f7104610",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 5. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.",
-        "progression_name": "Lydia's Scenario"
-      },
-      "seeding_key": {
-        "activity_section.key": "b47a1f1f-d37c-404c-a541-71b7f7104610",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "b8fea71d-475d-4b4f-9e7b-b1954a2f716d",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide."
-      },
-      "seeding_key": {
-        "activity_section.key": "b8fea71d-475d-4b4f-9e7b-b1954a2f716d",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "b5349cfe-e525-4fd4-b7b5-12b7c19dd3c5",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can Lydia redesign her product so that all users, including those who are color blind, can understand its signals clearly?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students understand that people experience technology differently, and that good design includes options that work for everyone—not just most people.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The User Testing activity guide can be collected and used to formatively assess the lesson objectives:\n- Explain why user testing is an important part of the development process\n- Justify next steps for a product based on user testing insights and diverse perspectives\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b5349cfe-e525-4fd4-b7b5-12b7c19dd3c5",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
-      "key": "1813894a-e107-4530-8c0f-89a99d8ef805",
-      "position": 17,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "1813894a-e107-4530-8c0f-89a99d8ef805",
-        "lesson_activity.key": "ea92a01b-455d-46d3-baa0-67596568f6da"
-      }
-    },
-    {
       "key": "92d60786-9886-4001-abba-698863ff1ccf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two reasons why user testing can improve a product in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two answers for what happens when user testing is skipped in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson vocabulary.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2974,17 +2820,6 @@
       },
       "seeding_key": {
         "activity_section.key": "92d60786-9886-4001-abba-698863ff1ccf",
-        "lesson_activity.key": "36a23c81-d674-45e6-9ec3-e36d41b010ba"
-      }
-    },
-    {
-      "key": "56876fd8-eb89-42a5-8929-d87e60dc0e6a",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on their Question of the Day reflection, have students write down their top two reasons why user testing can improve a product in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two answers for what happens when user testing is skipped in their unit guides.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you choose, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to cite examples shared during the class period and/or personal experiences the students have had themselves as justifications for their answers.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "56876fd8-eb89-42a5-8929-d87e60dc0e6a",
         "lesson_activity.key": "36a23c81-d674-45e6-9ec3-e36d41b010ba"
       }
     },
@@ -3108,27 +2943,8 @@
       }
     },
     {
-      "key": "00f23c96-809b-400b-89f9-60b28ead86d3",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the AI Artifact Station. They will use AI chat to create a short artifact connected to the scenario and discuss who should be credited as the author.",
-        "name": "AI Artifact Station",
-        "progression_name": "AI Artifact Station",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage variety—some groups might generate short text pieces, others images or dialogues. After creating their artifacts, have groups share briefly or post them for a quick gallery walk before moving to the Ethical Guideline reflection."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "00f23c96-809b-400b-89f9-60b28ead86d3",
-        "lesson_activity.key": "d55c5d9d-a126-4012-b2f6-c00270beab51"
-      }
-    },
-    {
       "key": "426b4f76-29f7-4b53-b817-6a4e57b0a2c0",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Ethical Guideline Activity Guide.",
         "duration": "15",
@@ -3141,7 +2957,7 @@
     },
     {
       "key": "cc5cae89-0e34-4d2f-ab5d-fd7fbc4e7baa",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on your discussion, students should identify a key ethical value or rule that should guide the responsible use of technology. They should write this on a half-sheet of paper."
       },
@@ -3152,7 +2968,7 @@
     },
     {
       "key": "2e0814a2-3416-40b2-9256-0812607d82cf",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fold their activity guides in half along the dotted line and hang up the ethical guidelines that they have developed around the classroom or in the hallway. They should wander around and read what other classmates have written as a result of their learning and conversations.\n",
         "progression_name": "Student Survey",
@@ -3170,7 +2986,7 @@
     },
     {
       "key": "4a2570b9-457d-4874-8d14-64387febf747",
-      "position": 10,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -3180,9 +2996,9 @@
     },
     {
       "key": "c75f398d-a272-4aab-8aa0-f51bde1b34bc",
-      "position": 11,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 2 to respond to the question.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 1 to respond to the question.",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -3194,7 +3010,7 @@
       "key": "458d364d-7861-4d1f-8efd-e68a3d9e75c1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Popcorn to various students and have them provide their unique answer for the question of the day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4028,12 +3844,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Processing Unit Battle"
+        "progression": "Processor Racing"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson9-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson9-processor-racing"
         ],
         "lesson.key": "Lesson 9: How AI Uses Data",
         "lesson_group.key": "lessonGroup-3",
@@ -4041,7 +3857,7 @@
         "activity_section.key": "f2f61c86-86bc-4f32-a86b-f9425c08885c"
       },
       "level_keys": [
-        "computer-systems-lesson9-level2_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson9-processor-racing"
       ]
     },
     {
@@ -4182,12 +3998,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Alice's Scenario"
+        "progression": "Smart Classroom Device User Testing"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson11-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson11-smart-classroom-revisited"
         ],
         "lesson.key": "Lesson 11: User Testing",
         "lesson_group.key": "lessonGroup-3",
@@ -4195,100 +4011,12 @@
         "activity_section.key": "286446ff-7c47-4b63-8d28-cd812418a6cf"
       },
       "level_keys": [
-        "computer-systems-lesson11-level3_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson11-smart-classroom-revisited"
       ]
     },
     {
       "chapter": 35,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Josh's Scenario"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson11-level4_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 11: User Testing",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "28367f86-219f-40c2-8648-b6ed0966961a"
-      },
-      "level_keys": [
-        "computer-systems-lesson11-level4_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Lydia's Scenario"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson11-level5_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 11: User Testing",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "b47a1f1f-d37c-404c-a541-71b7f7104610"
-      },
-      "level_keys": [
-        "computer-systems-lesson11-level5_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "progression": "Lydia's Scenario"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson11-level6_2025-launch_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 11: User Testing",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "b47a1f1f-d37c-404c-a541-71b7f7104610"
-      },
-      "level_keys": [
-        "computer-systems-lesson11-level6_2025-launch_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 38,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "AI Artifact Station"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson12-level1_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "00f23c96-809b-400b-89f9-60b28ead86d3"
-      },
-      "level_keys": [
-        "computer-systems-lesson12-level1_v3_2026-dev"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4309,7 +4037,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4331,7 +4059,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4353,7 +4081,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4375,7 +4103,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4397,7 +4125,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4419,7 +4147,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4441,7 +4169,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4463,7 +4191,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4800,9 +4528,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson9-level2_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson9-processor-racing",
         "script_level.level_keys": [
-          "computer-systems-lesson9-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson9-processor-racing"
         ],
         "lesson.key": "Lesson 9: How AI Uses Data",
         "lesson_group.key": "lessonGroup-3",
@@ -4884,62 +4612,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson11-level3_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson11-smart-classroom-revisited",
         "script_level.level_keys": [
-          "computer-systems-lesson11-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson11-smart-classroom-revisited"
         ],
         "lesson.key": "Lesson 11: User Testing",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
         "activity_section.key": "286446ff-7c47-4b63-8d28-cd812418a6cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson11-level4_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson11-level4_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 11: User Testing",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "28367f86-219f-40c2-8648-b6ed0966961a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson11-level5_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson11-level5_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 11: User Testing",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "b47a1f1f-d37c-404c-a541-71b7f7104610"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson11-level6_2025-launch_v2_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson11-level6_2025-launch_v2_2026-dev"
-        ],
-        "lesson.key": "Lesson 11: User Testing",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "b47a1f1f-d37c-404c-a541-71b7f7104610"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson12-level1_v3_2026-dev",
-        "script_level.level_keys": [
-          "computer-systems-lesson12-level1_v3_2026-dev"
-        ],
-        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
-        "activity_section.key": "00f23c96-809b-400b-89f9-60b28ead86d3"
       }
     },
     {
@@ -5213,7 +4893,7 @@
     },
     {
       "name": "[KEY] User Testing",
-      "url": "https://docs.google.com/document/d/1uKchorQvM--IFoPcoBlNNvLinVydVTm8CdL13M4PK1M/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1P6_U275HbvM8b2L5pcPMPZobgcbVqCeuyi2xQCboElk/",
       "key": "_key_user_testing",
       "properties": {
         "audience": "Verified Teacher",
@@ -5783,6 +5463,20 @@
       }
     },
     {
+      "name": "User Persona Cards",
+      "url": "https://drive.google.com/file/d/1b2fu4MUNRrwwD-cGuKF3mJCOenY9Rpqj/",
+      "key": "user_persona_cards",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "user_persona_cards"
+      }
+    },
+    {
       "name": "User Testing",
       "url": "https://docs.google.com/presentation/d/10ozrMDlBXcP3crgLf_AJgiYuaC2esCTVzZMhW8LyU6E/",
       "key": "user_testing",
@@ -5798,7 +5492,7 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/document/d/1Nqb8_xopj7cL8vE5XUARg4L-3PCY9GcporaBdUKHHXw/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1KtJRIclZ_gqzlHqDojNNi36dENDV6WLnbbsBbfWN-n4/",
       "key": "user_testing_1",
       "properties": {
         "audience": "Student",
@@ -5884,19 +5578,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: User Testing",
         "resource.key": "_key_user_testing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
+        "resource.key": "user_persona_cards"
       }
     },
     {
@@ -5914,19 +5602,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: Just Because We Can, Should We?",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
         "resource.key": "ai_and_emerging_technology_slide_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
       }
     },
     {
