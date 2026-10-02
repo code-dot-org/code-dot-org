@@ -25,6 +25,7 @@ const INITIAL_VALUES: QuizConfigurationData = {
   showIntroScreen: true,
   purpose: 'practice',
   allowMultipleAttempts: true,
+  hideQuestionsAfterSubmit: false,
 };
 
 const TIME_LIMIT_LABEL = /Set time limit/;
