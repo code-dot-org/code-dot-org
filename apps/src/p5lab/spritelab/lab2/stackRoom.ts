@@ -14,8 +14,7 @@ export interface StackBox {
   y: number;
   width: number;
   height: number;
-  /** Stays put (pinned by the level, or just placed by the student) but
-      still pushes the stacks below it. */
+  /** Pinned by the level: stays put, but still pushes the stacks below it. */
   fixed?: boolean;
   moveBy: (dx: number, dy: number) => void;
 }
@@ -59,121 +58,103 @@ export function measureStack(block: BlocklyCore.BlockSvg): {
   return {x, y, width, height};
 }
 
-function stackBox(block: BlocklyCore.BlockSvg, pinned: Set<string>): StackBox {
+/** A stack of statement blocks: a hat, or a block with a top or bottom
+    connection. Loose value blocks are left to Blockly. */
+export function isStack(block: BlocklyCore.Block): boolean {
+  return !!(block.previousConnection || block.nextConnection);
+}
+
+function stackBox(block: BlocklyCore.BlockSvg): StackBox {
   return {
     ...measureStack(block),
-    fixed: !block.isMovable() || pinned.has(block.id),
+    fixed: !block.isMovable(),
     moveBy: (dx, dy) => block.moveBy(dx, dy),
   };
 }
 
-// Stacks the waiting pass must not move, by top block id; a pass is
-// waiting while its workspace has an entry.
-const pendingPins = new WeakMap<BlocklyCore.WorkspaceSvg, Set<string>>();
+// Workspaces with a pass waiting.
+const pending = new WeakSet<BlocklyCore.WorkspaceSvg>();
 
 /**
  * Make room under every stack once the workspace has finished rendering.
- * Calls made while one is waiting fold into it, pins included. The moves
- * are not undoable: a student's undo should take back their edit, not the
- * tidying.
+ * Calls made while one is waiting fold into it. The moves are not
+ * undoable: a student's undo should take back their edit, not the tidying.
  */
-export function ensureRoom(
-  workspace: BlocklyCore.WorkspaceSvg,
-  pinnedBlockId?: string
-): void {
-  const pins = pendingPins.get(workspace);
-  if (pins) {
-    if (pinnedBlockId) {
-      pins.add(pinnedBlockId);
-    }
+export function ensureRoom(workspace: BlocklyCore.WorkspaceSvg): void {
+  if (pending.has(workspace)) {
     return;
   }
-  pendingPins.set(workspace, new Set(pinnedBlockId ? [pinnedBlockId] : []));
+  pending.add(workspace);
   // A placeholder takes its block's shape in a second render pass, so
   // heights are final one tick after the queue drains.
   BlocklyCore.renderManagement
     .finishQueuedRenders()
     .then(() => new Promise(resolve => setTimeout(resolve)))
     .then(() => {
-      const pinned = pendingPins.get(workspace) ?? new Set<string>();
-      pendingPins.delete(workspace);
+      pending.delete(workspace);
       if (workspace.isDragging() || !workspace.rendered) {
         return;
       }
       const stacks = workspace
         .getTopBlocks(false)
-        .map(block => stackBox(block, pinned));
+        .filter(isStack)
+        .map(stackBox);
       tidy(() => makeRoom(stacks, STACK_GAP_PX));
     });
 }
 
-// Run moves as the pass's own: not undoable, and in `group`.
-function tidy(moves: () => void, group = STACK_ROOM_EVENT_GROUP): void {
+// Run moves as the pass's own: not undoable, and in the pass's group.
+function tidy(moves: () => void): void {
   const recordUndo = BlocklyCore.Events.getRecordUndo();
-  const outerGroup = BlocklyCore.Events.getGroup();
+  const group = BlocklyCore.Events.getGroup();
   BlocklyCore.Events.setRecordUndo(false);
-  BlocklyCore.Events.setGroup(group);
+  BlocklyCore.Events.setGroup(STACK_ROOM_EVENT_GROUP);
   try {
     moves();
   } finally {
-    BlocklyCore.Events.setGroup(outerGroup);
+    BlocklyCore.Events.setGroup(group);
     BlocklyCore.Events.setRecordUndo(recordUndo);
   }
 }
 
-// Put a bumped stack back for the pass to make room below it; with nothing
-// above it in its column the pass could not, so the bump stands.
-function undoBump(
-  workspace: BlocklyCore.WorkspaceSvg,
-  move: BlocklyCore.Events.BlockMove
-): boolean {
-  const block = move.blockId ? workspace.getBlockById(move.blockId) : null;
-  const from = move.oldCoordinate;
-  if (!block || !from) {
-    return false;
+// Workspaces whose stacks Blockly must not bump (see quietStackBumps).
+const quiet = new WeakSet<BlocklyCore.Workspace>();
+
+// Blockly nudges an unconnected block sideways and down whenever a
+// connection ends up within the snap radius of it, on every render. Here
+// the pass makes the room instead, so the bump is off for the stacks of a
+// quiet workspace; loose value blocks keep it.
+const blocklyBumpNeighbours = BlocklyCore.BlockSvg.prototype.bumpNeighbours;
+BlocklyCore.BlockSvg.prototype.bumpNeighbours = function () {
+  const root = this.getRootBlock();
+  if (quiet.has(root.workspace) && isStack(root)) {
+    return;
   }
-  const {width} = block.getHeightWidth();
-  const hasAbove = workspace.getTopBlocks(false).some(other => {
-    const box = measureStack(other);
-    return (
-      other !== block &&
-      box.y < from.y &&
-      box.x < from.x + width &&
-      box.x + box.width > from.x
-    );
-  });
-  if (!hasAbove) {
-    return false;
-  }
-  // In the bump's own group, so the workspace hook saves this position and
-  // not the bumped one.
-  tidy(
-    () => block.moveTo(new BlocklyCore.utils.Coordinate(from.x, from.y)),
-    move.group
-  );
-  return true;
+  blocklyBumpNeighbours.call(this);
+};
+
+/** Stop Blockly bumping this workspace's stacks apart. Returns the
+    function that lets it again. */
+export function quietStackBumps(workspace: BlocklyCore.Workspace): () => void {
+  quiet.add(workspace);
+  return () => quiet.delete(workspace);
 }
 
 /**
  * Keep room under the stacks as the workspace changes: after code loads,
  * after a block is added or edited, after a block joins a stack, and after
- * a student drags a stack somewhere. The dragged stack is their placement
- * and stays where they put it; the stacks below it make way. Returns the
- * function that stops watching.
+ * a student drags a stack somewhere. A dropped stack keeps the place the
+ * student gave it, except that one overlapping the stack above it in its
+ * column slides down under that stack. Returns the function that stops
+ * watching.
  */
 export function watchStackRoom(
   workspace: BlocklyCore.WorkspaceSvg,
   schedule: typeof ensureRoom = ensureRoom
 ): () => void {
-  // The stack the student last dragged; Blockly's bump of it is still
-  // their placement.
-  let dragged: string | null = null;
   const onChange = (event: BlocklyCore.Events.Abstract) => {
     if (event.group === STACK_ROOM_EVENT_GROUP) {
       return;
-    }
-    if (event.type === BlocklyCore.Events.FINISHED_LOADING) {
-      dragged = null;
     }
     // A field edit can make a block taller without moving anything.
     if (
@@ -188,25 +169,14 @@ export function watchStackRoom(
       return;
     }
     const move = event as BlocklyCore.Events.BlockMove;
-    if (move.newParentId) {
+    if (move.newParentId || move.reason?.includes('drag')) {
       schedule(workspace);
-      return;
-    }
-    // Undo and redo replay moves with their original reasons.
-    if (!move.blockId || !move.reason || !move.recordUndo) {
-      return;
-    }
-    if (move.reason.includes('drag')) {
-      dragged = move.blockId;
-      schedule(workspace, move.blockId);
-    } else if (move.reason.includes('bump')) {
-      if (move.blockId !== dragged && undoBump(workspace, move)) {
-        schedule(workspace);
-      } else {
-        schedule(workspace, move.blockId);
-      }
     }
   };
+  const letBump = quietStackBumps(workspace);
   workspace.addChangeListener(onChange);
-  return () => workspace.removeChangeListener(onChange);
+  return () => {
+    workspace.removeChangeListener(onChange);
+    letBump();
+  };
 }

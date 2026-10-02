@@ -75,60 +75,19 @@ describe('stackRoom', () => {
   });
 
   describe('watchStackRoom', () => {
-    // A workspace that hands its listener back for the test to fire events
-    // at, with `blocks` as its stacks by id.
-    function watched(
-      blocks: Record<string, {x: number; y: number; width: number}> = {}
-    ) {
+    // A workspace that hands its listener back for the test to fire events at.
+    function watched() {
       let listener: (e: unknown) => void = () => {};
-      const made = Object.fromEntries(
-        Object.entries(blocks).map(([id, box]) => [
-          id,
-          {
-            id,
-            moveTo: jest.fn(),
-            getRelativeToSurfaceXY: () => ({x: box.x, y: box.y}),
-            getHeightWidth: () => ({width: box.width, height: 50}),
-          },
-        ])
-      );
       const workspace = {
         addChangeListener: (fn: typeof listener) => (listener = fn),
         removeChangeListener: jest.fn(),
-        getBlockById: (id: string) => made[id] ?? null,
-        getTopBlocks: () => Object.values(made),
       } as unknown as BlocklyCore.WorkspaceSvg;
       const schedule = jest.fn();
       const stop = watchStackRoom(workspace, schedule);
-      const fire = (e: Record<string, unknown>) =>
-        listener({recordUndo: true, ...e});
-      return {fire, schedule, stop, workspace, made};
+      return {fire: (e: unknown) => listener(e), schedule, stop, workspace};
     }
-    const bump = (blockId: string, extra: Record<string, unknown> = {}) => ({
-      type: BlocklyCore.Events.BLOCK_MOVE,
-      blockId,
-      reason: ['bump'],
-      oldCoordinate: {x: 20, y: 109},
-      newCoordinate: {x: 53, y: 141},
-      ...extra,
-    });
-    const drag = (blockId: string) => ({
-      type: BlocklyCore.Events.BLOCK_MOVE,
-      blockId,
-      reason: ['drag'],
-    });
 
-    beforeEach(() => {
-      jest
-        .spyOn(BlocklyCore.Events, 'setRecordUndo')
-        .mockImplementation(() => {});
-      jest.spyOn(BlocklyCore.Events, 'getRecordUndo').mockReturnValue(true);
-      jest.spyOn(BlocklyCore.Events, 'setGroup').mockImplementation(() => {});
-      jest.spyOn(BlocklyCore.Events, 'getGroup').mockReturnValue('');
-    });
-    afterEach(() => jest.restoreAllMocks());
-
-    it('schedules a pass for a load, a new block, an edited block, and a block joining a stack', () => {
+    it('schedules a pass for a load, a new or edited block, a block joining a stack, and a drop', () => {
       const {fire, schedule, workspace} = watched();
       fire({type: BlocklyCore.Events.FINISHED_LOADING});
       fire({type: BlocklyCore.Events.BLOCK_CREATE});
@@ -138,77 +97,12 @@ describe('stackRoom', () => {
         newParentId: 'p',
         blockId: 'b',
       });
-      expect(schedule.mock.calls).toEqual([
-        [workspace],
-        [workspace],
-        [workspace],
-        [workspace],
-      ]);
-    });
-
-    it('pins the stack a drop just placed, and again when Blockly bumps that same stack', () => {
-      const {fire, schedule, workspace} = watched();
-      fire(drag('d'));
-      fire(bump('d'));
-      expect(schedule.mock.calls).toEqual([
-        [workspace, 'd'],
-        [workspace, 'd'],
-      ]);
-    });
-
-    it("puts back a stack Blockly bumped that the student did not drag, in the bump's group, and makes room instead", () => {
-      const {fire, schedule, workspace, made} = watched({
-        d: {x: 20, y: 20, width: 200},
-        n: {x: 53, y: 141, width: 150},
+      fire({
+        type: BlocklyCore.Events.BLOCK_MOVE,
+        blockId: 'd',
+        reason: ['drag'],
       });
-      fire(drag('d'));
-      fire(bump('n', {group: 'the-drop'}));
-      expect(made.n.moveTo).toHaveBeenCalledWith(
-        expect.objectContaining({x: 20, y: 109})
-      );
-      expect(BlocklyCore.Events.setGroup).toHaveBeenCalledWith('the-drop');
-      expect(schedule.mock.calls).toEqual([[workspace, 'd'], [workspace]]);
-    });
-
-    it('leaves a bumped stack where Blockly put it when nothing is above it in its column', () => {
-      const {fire, schedule, workspace, made} = watched({
-        d: {x: 20, y: 200, width: 200},
-        n: {x: 53, y: 141, width: 150},
-      });
-      fire(drag('d'));
-      fire(bump('n'));
-      expect(made.n.moveTo).not.toHaveBeenCalled();
-      expect(schedule.mock.calls).toEqual([
-        [workspace, 'd'],
-        [workspace, 'n'],
-      ]);
-    });
-
-    it('ignores replayed moves from undo and redo', () => {
-      const {fire, schedule, made} = watched({
-        d: {x: 20, y: 20, width: 200},
-        n: {x: 53, y: 141, width: 150},
-      });
-      fire({...drag('d'), recordUndo: false});
-      fire(bump('n', {recordUndo: false}));
-      expect(made.n.moveTo).not.toHaveBeenCalled();
-      expect(schedule).not.toHaveBeenCalled();
-    });
-
-    it('forgets the dragged stack when new code loads', () => {
-      const {fire, schedule, workspace, made} = watched({
-        a: {x: 20, y: 20, width: 200},
-        d: {x: 53, y: 141, width: 150},
-      });
-      fire(drag('d'));
-      fire({type: BlocklyCore.Events.FINISHED_LOADING});
-      fire(bump('d'));
-      expect(made.d.moveTo).toHaveBeenCalled();
-      expect(schedule.mock.calls).toEqual([
-        [workspace, 'd'],
-        [workspace],
-        [workspace],
-      ]);
+      expect(schedule.mock.calls).toEqual(Array(5).fill([workspace]));
     });
 
     it('ignores other moves, other events, and its own tidying', () => {
@@ -219,6 +113,11 @@ describe('stackRoom', () => {
         blockId: 'x',
         reason: ['disconnect'],
       });
+      fire({
+        type: BlocklyCore.Events.BLOCK_MOVE,
+        blockId: 'x',
+        reason: ['bump'],
+      });
       fire({type: BlocklyCore.Events.BLOCK_DELETE});
       fire({
         type: BlocklyCore.Events.BLOCK_CREATE,
@@ -228,6 +127,25 @@ describe('stackRoom', () => {
       stop();
       expect(workspace.removeChangeListener).toHaveBeenCalled();
     });
+
+    it("quiets Blockly's bump for the workspace's stacks while watching, never for value blocks", () => {
+      const {stop, workspace} = watched();
+      // Blockly's own bump first asks whether the block is dying; a stack
+      // never gets that far.
+      const asked = jest.fn(() => true);
+      const self = (root: object) => ({
+        isDeadOrDying: asked,
+        getRootBlock: () => root,
+      });
+      const bump = BlocklyCore.BlockSvg.prototype.bumpNeighbours;
+      bump.call(self({workspace, nextConnection: {}}) as never);
+      expect(asked).not.toHaveBeenCalled();
+      bump.call(self({workspace, outputConnection: {}}) as never);
+      expect(asked).toHaveBeenCalledTimes(1);
+      stop();
+      bump.call(self({workspace, nextConnection: {}}) as never);
+      expect(asked).toHaveBeenCalledTimes(2);
+    });
   });
 
   describe('ensureRoom', () => {
@@ -236,6 +154,7 @@ describe('stackRoom', () => {
       const b = {
         id,
         y,
+        nextConnection: {},
         isMovable: () => movable,
         getRelativeToSurfaceXY: () => ({x: 0, y: b.y}),
         getHeightWidth: () => ({width: 100, height}),
@@ -258,11 +177,16 @@ describe('stackRoom', () => {
     });
     afterEach(() => jest.restoreAllMocks());
 
-    it('folds calls made while a pass waits, pins included, and runs once', async () => {
+    it('folds calls made while a pass waits and runs once, over stacks only', async () => {
       const blocks = [
         block('a', 0, 100),
         block('b', 110, 50),
         block('c', 170, 30),
+        {
+          ...block('v', 105, 20),
+          nextConnection: null,
+          previousConnection: null,
+        },
       ];
       const workspace = {
         rendered: true,
@@ -270,11 +194,18 @@ describe('stackRoom', () => {
         getTopBlocks: () => blocks,
       } as unknown as BlocklyCore.WorkspaceSvg;
       ensureRoom(workspace);
-      ensureRoom(workspace, 'b');
+      ensureRoom(workspace);
       await flush();
       await flush();
-      // b is pinned at 110; c clears b's bottom (160) by the gap.
-      expect(blocks.map(b => b.y)).toEqual([0, 110, 160 + STACK_GAP_PX]);
+      // b clears a's bottom by the gap, c clears b's; the loose value block
+      // v neither moves nor pushes.
+      const bTop = 100 + STACK_GAP_PX;
+      expect(blocks.map(b => b.y)).toEqual([
+        0,
+        bTop,
+        bTop + 50 + STACK_GAP_PX,
+        105,
+      ]);
       expect(
         BlocklyCore.renderManagement.finishQueuedRenders
       ).toHaveBeenCalledTimes(1);
