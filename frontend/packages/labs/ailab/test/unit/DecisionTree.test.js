@@ -50,6 +50,14 @@ function tabStops() {
   return screen.getAllByRole('treeitem').filter(item => item.tabIndex === 0);
 }
 
+function canvasGroup() {
+  return screen.getByRole('group', {name: "Your model's decision tree"});
+}
+
+function zoomInButton() {
+  return screen.getByRole('button', {name: 'Zoom in'});
+}
+
 function focusRoot() {
   const [root] = screen.getAllByRole('treeitem');
   act(() => root.focus());
@@ -126,12 +134,53 @@ describe('DecisionTree', () => {
     );
   });
 
-  it('is one tab stop, on the root, in a tree named by its header', () => {
-    const tree = screen.getByRole('tree', {name: "Your model's decision tree"});
+  it('is one tab stop, around the tree and its zoom buttons', () => {
+    expect(canvasGroup().tabIndex).toBe(0);
+    expect(tabStops()).toHaveLength(0);
+    expect(zoomInButton().tabIndex).toBe(-1);
+  });
 
-    expect(tabStops()).toHaveLength(1);
-    expect(tabStops()[0].getAttribute('aria-level')).toBe('1');
-    expect(tree.contains(tabStops()[0])).toBe(true);
+  it('goes in on Enter, to the root of a tree named by its header', () => {
+    const tree = screen.getByRole('tree', {name: "Your model's decision tree"});
+    const [root] = screen.getAllByRole('treeitem');
+
+    act(() => canvasGroup().focus());
+    fireEvent.keyDown(canvasGroup(), {key: 'Enter'});
+
+    expect(document.activeElement).toBe(root);
+    expect(tree.contains(root)).toBe(true);
+    expect(tabStops()).toEqual([root]);
+    expect(zoomInButton().tabIndex).toBe(0);
+  });
+
+  it('comes back out to the canvas on Escape', () => {
+    const root = focusRoot();
+
+    fireEvent.keyDown(root, {key: 'Escape'});
+
+    expect(document.activeElement).toBe(canvasGroup());
+    expect(tabStops()).toHaveLength(0);
+    expect(zoomInButton().tabIndex).toBe(-1);
+  });
+
+  it('goes back in at the node it left', () => {
+    const items = screen.getAllByRole('treeitem');
+    const last = items[items.length - 1];
+    act(() => last.focus());
+
+    fireEvent.keyDown(last, {key: 'Escape'});
+    fireEvent.keyDown(canvasGroup(), {key: 'Enter'});
+
+    expect(document.activeElement).toBe(last);
+  });
+
+  it('takes the tree out of the tab order once focus leaves the canvas', () => {
+    const root = focusRoot();
+
+    act(() => root.blur());
+
+    expect(tabStops()).toHaveLength(0);
+    expect(zoomInButton().tabIndex).toBe(-1);
   });
 
   it('marks each question open on its answers, and no answer at all', () => {
@@ -180,14 +229,19 @@ describe('DecisionTree', () => {
     ).toBe(secondChild);
   });
 
-  it('describes the tree and its root by how to move through it', () => {
-    const hint = 'Use the arrow keys to move through the tree';
+  it('describes the canvas by how to go in, and the tree and its root by how to move', () => {
+    const keysHint = 'Use the arrow keys to move, and Escape to exit';
     const [root] = screen.getAllByRole('treeitem');
 
-    expect(screen.getByRole('tree', {description: hint})).toBe(
+    expect(
+      screen.getByRole('group', {
+        description: 'Press Enter to explore the tree',
+      }),
+    ).toBe(canvasGroup());
+    expect(screen.getByRole('tree', {description: keysHint})).toBe(
       screen.getByRole('tree'),
     );
-    expect(screen.getByRole('treeitem', {description: hint})).toBe(root);
+    expect(screen.getByRole('treeitem', {description: keysHint})).toBe(root);
   });
 
   it("shows each branch's whole text on its pill", () => {

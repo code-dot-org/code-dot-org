@@ -8,6 +8,7 @@ interface ZoomButtonProps {
   onClick: () => void;
   disabled?: boolean;
   disabledHint?: string;
+  tabbable?: boolean;
 }
 
 const ZoomButton = ({
@@ -16,25 +17,30 @@ const ZoomButton = ({
   onClick,
   disabled,
   disabledHint,
-}: ZoomButtonProps) => (
-  <Tooltip
-    title={disabled && disabledHint ? disabledHint : label}
-    placement="right"
-  >
-    {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- a disabled button takes no pointer events or focus, so the span carries its tooltip */}
-    <span tabIndex={disabled ? 0 : undefined}>
-      <IconButton
-        aria-label={label}
-        onClick={onClick}
-        disabled={disabled}
-        size="extraSmall"
-        color="tertiary"
-        variant="text"
-      >
-        <FontAwesomeV6Icon iconName={iconName} aria-hidden="true" />
-      </IconButton>
-    </span>
-  </Tooltip>
-);
+  tabbable = true,
+}: ZoomButtonProps) => {
+  const tabIndex = tabbable ? 0 : -1;
+  return (
+    <Tooltip
+      title={disabled && disabledHint ? disabledHint : label}
+      placement="right"
+    >
+      {/* A disabled button takes no pointer events or focus, so the span carries its tooltip. */}
+      <span tabIndex={disabled ? tabIndex : undefined}>
+        <IconButton
+          aria-label={label}
+          tabIndex={tabIndex}
+          onClick={onClick}
+          disabled={disabled}
+          size="extraSmall"
+          color="tertiary"
+          variant="text"
+        >
+          <FontAwesomeV6Icon iconName={iconName} aria-hidden="true" />
+        </IconButton>
+      </span>
+    </Tooltip>
+  );
+};
 
 export default ZoomButton;

@@ -103,6 +103,7 @@ interface TreeCanvasProps {
   contentHeight: number;
   pathBounds?: Rect;
   overlayRef?: RefObject<HTMLElement>;
+  toolbarTabbable?: boolean;
   children: ReactNode;
 }
 
@@ -111,6 +112,7 @@ const TreeCanvas = ({
   contentHeight,
   pathBounds,
   overlayRef,
+  toolbarTabbable = true,
   children,
 }: TreeCanvasProps) => {
   const viewportRef = useRef<HTMLDivElement>(null);
@@ -265,21 +267,25 @@ const TreeCanvas = ({
       >
         <ZoomButton
           label="Zoom in"
+          tabbable={toolbarTabbable}
           iconName="plus"
           onClick={() => zoomBy(ZOOM_STEP)}
         />
         <ZoomButton
           label="Zoom out"
+          tabbable={toolbarTabbable}
           iconName="minus"
           onClick={() => zoomBy(1 / ZOOM_STEP)}
         />
         <ZoomButton
           label="Zoom to fit"
+          tabbable={toolbarTabbable}
           iconName="expand"
           onClick={() => zoomTo(contentRect)}
         />
         <ZoomButton
           label="Zoom to your path"
+          tabbable={toolbarTabbable}
           iconName="arrows-minimize"
           onClick={() => pathBounds && zoomTo(pathBounds)}
           disabled={!pathBounds}

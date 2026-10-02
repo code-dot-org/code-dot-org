@@ -246,6 +246,13 @@ describe('TreeCanvas', () => {
     );
   });
 
+  it('takes its zoom buttons out of the tab order when asked', () => {
+    renderCanvas({toolbarTabbable: false});
+
+    expect(button('Zoom in').tabIndex).toBe(-1);
+    expect(button('Zoom to your path').parentElement.tabIndex).toBe(-1);
+  });
+
   it('zooms to a readable scale and pans a node that takes keyboard focus into view', async () => {
     const [node] = renderNodesAt([800]);
 

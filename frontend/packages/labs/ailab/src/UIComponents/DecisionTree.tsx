@@ -2,6 +2,7 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {
   type CSSProperties,
+  type FocusEvent,
   type KeyboardEvent,
   type ReactNode,
   useId,
@@ -42,6 +43,8 @@ import styles from './decisionTree.module.scss';
 
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});
 
+const TREE_NAME = "Your model's decision tree";
+
 const EDGE_BEND_DROP = 20;
 const EDGE_CORNER_RADIUS = 8;
 const BRANCH_LABEL_RISE = 22;
@@ -69,6 +72,24 @@ function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   ].join(' ');
 }
 
+interface KeyHintProps {
+  id: string;
+  shown: boolean;
+  children: ReactNode;
+}
+
+const KeyHint = ({id, shown, children}: KeyHintProps) => (
+  <Typography
+    id={id}
+    variant="body4"
+    component="span"
+    className={classNames(styles.hint, {[styles.shownHint]: shown})}
+    sx={{color: 'var(--text-neutral-secondary)'}}
+  >
+    {children}
+  </Typography>
+);
+
 interface DecisionTreeProps {
   overlay?: ReactNode;
 }
@@ -83,9 +104,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const enterHintId = useId();
   const keysHintId = useId();
   const nameId = useId();
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
+  const [entered, setEntered] = useState(false);
   const nodeElements = useRef(new Map<string, HTMLElement>());
 
   if (!tree || !layout) {
@@ -124,6 +147,29 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     if (to) {
       event.preventDefault();
       nodeElements.current.get(to.id)?.focus({preventScroll: true});
+    }
+  };
+
+  const trackEntered = (event: FocusEvent<HTMLElement>) =>
+    setEntered(event.target !== event.currentTarget);
+
+  const leaveWhenFocusLeaves = ({
+    currentTarget,
+    relatedTarget,
+  }: FocusEvent<HTMLElement>) => {
+    if (!currentTarget.contains(relatedTarget)) {
+      setEntered(false);
+    }
+  };
+
+  const enterOrLeave = (event: KeyboardEvent<HTMLElement>) => {
+    const onCanvas = event.target === event.currentTarget;
+    if (event.key === 'Enter' && onCanvas) {
+      event.preventDefault();
+      nodeElements.current.get(tabStopId)?.focus({preventScroll: true});
+    } else if (event.key === 'Escape' && !onCanvas) {
+      event.preventDefault();
+      event.currentTarget.focus();
     }
   };
 
@@ -179,131 +225,146 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
         On your path
       </span>
       <div className={styles.canvasArea}>
-        <TreeCanvas
-          contentWidth={layout.width}
-          contentHeight={layout.height}
-          pathBounds={pathBounds}
-          overlayRef={overlayRef}
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- one tab stop for the canvas, entered with Enter and left with Escape, as in the AI chat history */}
+        <div
+          role="group"
+          aria-label={TREE_NAME}
+          aria-describedby={enterHintId}
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- see above
+          tabIndex={0}
+          onFocus={trackEntered}
+          onBlur={leaveWhenFocusLeaves}
+          onKeyDown={enterOrLeave}
+          className={styles.canvasGroup}
         >
-          <div
-            role="tree"
-            aria-label="Your model's decision tree"
-            aria-describedby={keysHintId}
-            className={styles.canvas}
-            style={{
-              ...canvasVariables,
-              width: layout.width,
-              height: layout.height,
-            }}
+          <TreeCanvas
+            contentWidth={layout.width}
+            contentHeight={layout.height}
+            pathBounds={pathBounds}
+            overlayRef={overlayRef}
+            toolbarTabbable={entered}
           >
-            <svg
-              width={layout.width}
-              height={layout.height}
-              aria-hidden="true"
-              className={styles.edges}
+            <div
+              role="tree"
+              aria-label={TREE_NAME}
+              aria-describedby={keysHintId}
+              className={styles.canvas}
+              style={{
+                ...canvasVariables,
+                width: layout.width,
+                height: layout.height,
+              }}
             >
-              {edgeOrder.map(
-                placed =>
-                  placed.parent && (
-                    <path
-                      key={placed.id}
-                      d={edgePath(placed.parent, placed)}
-                      className={classNames({
-                        [styles.pathEdge]: pathIds.has(placed.id),
-                      })}
-                    />
-                  ),
-              )}
-            </svg>
-            {layout.nodes.map(placed => {
-              const text = nodeText(placed.node);
-              const label = placed.branch && branchLabel(placed.branch);
-              const branch = label?.sign
-                ? `${label.sign} ${label.text}`
-                : label?.text;
-              const kind =
-                placed.node.type === 'answer' ? styles.answer : styles.question;
-              const siblings = placed.parent?.children ?? [placed];
-              const nameParts = [
-                placed.parent && columnId(placed.parent.id),
-                placed.parent && isId,
-                placed.branch &&
-                  placed.branch.kind !== 'values' &&
-                  thresholdWordIds[placed.branch.kind],
-                placed.branch && branchId(placed.id),
-                placed.node.type === 'answer' && predictsId,
-                placed.parent && placed.node.type === 'question' && thenId,
-                textId(placed.id),
-              ];
-              return (
-                <div
-                  key={placed.id}
-                  ref={element => trackNodeElement(placed.id, element)}
-                  // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
-                  role="treeitem"
-                  aria-labelledby={nameParts.filter(Boolean).join(' ')}
-                  aria-describedby={
-                    [
-                      placed.id === DISPLAY_TREE_ROOT_ID && keysHintId,
-                      pathIds.has(placed.id) && onPathId,
-                    ]
-                      .filter(Boolean)
-                      .join(' ') || undefined
-                  }
-                  aria-expanded={placed.node.type === 'question' || undefined}
-                  aria-level={placed.depth + 1}
-                  aria-setsize={siblings.length}
-                  aria-posinset={siblings.indexOf(placed) + 1}
-                  tabIndex={placed.id === tabStopId ? 0 : -1}
-                  onFocus={() => setFocusedId(placed.id)}
-                  onKeyDown={event => moveFocus(event, placed)}
-                  className={styles.nodeSlot}
-                  style={{left: placed.x, top: placed.y}}
-                >
-                  {label?.text && (
+              <svg
+                width={layout.width}
+                height={layout.height}
+                aria-hidden="true"
+                className={styles.edges}
+              >
+                {edgeOrder.map(
+                  placed =>
+                    placed.parent && (
+                      <path
+                        key={placed.id}
+                        d={edgePath(placed.parent, placed)}
+                        className={classNames({
+                          [styles.pathEdge]: pathIds.has(placed.id),
+                        })}
+                      />
+                    ),
+                )}
+              </svg>
+              {layout.nodes.map(placed => {
+                const text = nodeText(placed.node);
+                const label = placed.branch && branchLabel(placed.branch);
+                const branch = label?.sign
+                  ? `${label.sign} ${label.text}`
+                  : label?.text;
+                const kind =
+                  placed.node.type === 'answer'
+                    ? styles.answer
+                    : styles.question;
+                const siblings = placed.parent?.children ?? [placed];
+                const nameParts = [
+                  placed.parent && columnId(placed.parent.id),
+                  placed.parent && isId,
+                  placed.branch &&
+                    placed.branch.kind !== 'values' &&
+                    thresholdWordIds[placed.branch.kind],
+                  placed.branch && branchId(placed.id),
+                  placed.node.type === 'answer' && predictsId,
+                  placed.parent && placed.node.type === 'question' && thenId,
+                  textId(placed.id),
+                ];
+                return (
+                  <div
+                    key={placed.id}
+                    ref={element => trackNodeElement(placed.id, element)}
+                    // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
+                    role="treeitem"
+                    aria-labelledby={nameParts.filter(Boolean).join(' ')}
+                    aria-describedby={
+                      [
+                        placed.id === DISPLAY_TREE_ROOT_ID && keysHintId,
+                        pathIds.has(placed.id) && onPathId,
+                      ]
+                        .filter(Boolean)
+                        .join(' ') || undefined
+                    }
+                    aria-expanded={placed.node.type === 'question' || undefined}
+                    aria-level={placed.depth + 1}
+                    aria-setsize={siblings.length}
+                    aria-posinset={siblings.indexOf(placed) + 1}
+                    tabIndex={entered && placed.id === tabStopId ? 0 : -1}
+                    onFocus={() => setFocusedId(placed.id)}
+                    onKeyDown={event => moveFocus(event, placed)}
+                    className={styles.nodeSlot}
+                    style={{left: placed.x, top: placed.y}}
+                  >
+                    {label?.text && (
+                      <div
+                        title={branch}
+                        className={classNames(styles.branch, {
+                          [styles.pathBranch]: pathIds.has(placed.id),
+                        })}
+                      >
+                        {label.sign && `${label.sign} `}
+                        <span id={branchId(placed.id)}>{label.text}</span>
+                      </div>
+                    )}
                     <div
-                      title={branch}
-                      className={classNames(styles.branch, {
-                        [styles.pathBranch]: pathIds.has(placed.id),
+                      title={text}
+                      className={classNames(styles.node, kind, {
+                        [styles.pathNode]: pathIds.has(placed.id),
                       })}
                     >
-                      {label.sign && `${label.sign} `}
-                      <span id={branchId(placed.id)}>{label.text}</span>
+                      <span id={textId(placed.id)} className={styles.nodeText}>
+                        {placed.node.type === 'question' ? (
+                          <>
+                            <span id={columnId(placed.id)}>
+                              {columnText(placed.node)}
+                            </span>
+                            ?
+                          </>
+                        ) : (
+                          text
+                        )}
+                      </span>
                     </div>
-                  )}
-                  <div
-                    title={text}
-                    className={classNames(styles.node, kind, {
-                      [styles.pathNode]: pathIds.has(placed.id),
-                    })}
-                  >
-                    <span id={textId(placed.id)} className={styles.nodeText}>
-                      {placed.node.type === 'question' ? (
-                        <>
-                          <span id={columnId(placed.id)}>
-                            {columnText(placed.node)}
-                          </span>
-                          ?
-                        </>
-                      ) : (
-                        text
-                      )}
-                    </span>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </TreeCanvas>
-        <Typography
-          id={keysHintId}
-          variant="body4"
-          component="span"
-          className={styles.keysHint}
-          sx={{color: 'var(--text-neutral-secondary)'}}
-        >
-          Use the arrow keys to move through the tree
-        </Typography>
+                );
+              })}
+            </div>
+          </TreeCanvas>
+          <span className={styles.hints}>
+            <KeyHint id={enterHintId} shown={!entered}>
+              Press Enter to explore the tree
+            </KeyHint>
+            <KeyHint id={keysHintId} shown={entered}>
+              Use the arrow keys to move, and Escape to exit
+            </KeyHint>
+          </span>
+        </div>
         {overlay && (
           <div
             ref={overlayRef}

@@ -30,13 +30,43 @@ $overlay-float-min-width: 600px;
   @include mixins.canvas-overlay;
 }
 
-.keysHint {
+.canvasGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  // The panel's scroll box clips a ring outside the canvas, and the canvas paints over one inside it.
+  &:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    outline: $focus-ring-width solid $focus-color;
+    outline-offset: -$focus-ring-width;
+    pointer-events: none;
+  }
+}
+
+.hints {
   position: absolute;
   top: 8px;
   left: 8px;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   // The 300px Test panel floats only in a canvas at least twice its width.
   max-width: calc(50% - 16px);
+}
+
+.hint {
+  grid-area: 1 / 1;
+  justify-self: start;
+  box-sizing: border-box;
+  max-width: 100%;
   padding: 4px 8px;
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-sm);
@@ -48,12 +78,13 @@ $overlay-float-min-width: 600px;
   text-overflow: ellipsis;
 }
 
-.decisionTree:has(.nodeSlot:focus-visible) .keysHint {
+.canvasGroup:focus-visible .shownHint,
+.canvasGroup:has(:focus-visible) .shownHint {
   visibility: visible;
 }
 
 @supports not selector(:has(*)) {
-  .decisionTree:focus-within .keysHint {
+  .canvasGroup:focus-within .shownHint {
     visibility: visible;
   }
 }
@@ -65,7 +96,7 @@ $overlay-float-min-width: 600px;
     max-height: none;
   }
 
-  .keysHint {
+  .hints {
     max-width: calc(100% - 16px);
   }
 }
