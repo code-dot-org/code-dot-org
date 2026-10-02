@@ -3,9 +3,7 @@ import {
   shallowEqual,
   useDispatch,
   useSelector,
-  useStore,
 } from 'react-redux';
-import type {Store} from 'redux';
 
 import type {RootState} from './redux';
 import type {AppDispatch} from './store';
@@ -13,7 +11,6 @@ import type {AppDispatch} from './store';
 // Typed react-redux hooks for use throughout the package, in place of connect().
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const useAppDispatch: () => AppDispatch = useDispatch;
-export const useAppStore: () => Store<RootState> = useStore;
 
 // Re-exported for selectors that build a fresh object/array each call (e.g.
 // derived shapes that also read non-Redux globals like I18n and so can't be

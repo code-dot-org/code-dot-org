@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen, within} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 
@@ -7,7 +7,7 @@ import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {ColumnTypes} from '../../src/constants';
 import I18n from '../../src/i18n';
-import {setPrediction, setTestData} from '../../src/redux';
+import {setPrediction} from '../../src/redux';
 import train from '../../src/train';
 import TestPanel from '../../src/UIComponents/TestPanel';
 
@@ -48,10 +48,8 @@ function trainedAnimalStore(mode) {
   return store;
 }
 
-function predictSnake(store) {
-  act(() => {
-    store.dispatch(setTestData('legs', '0'));
-  });
+function predictSnake() {
+  fireEvent.change(screen.getByLabelText('legs'), {target: {value: '0'}});
   fireEvent.click(predictButton());
 }
 
@@ -78,6 +76,26 @@ describe('TestPanel', () => {
     ]);
   });
 
+  test('a dropdown offers each option after a disabled prompt, and sets its feature', () => {
+    const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
+    renderTestPanel(store);
+    const island = screen.getByLabelText('island');
+
+    expect(
+      [...island.options].map(option => [option.text, option.disabled]),
+    ).toEqual([
+      ['Choose one', true],
+      ['Biscoe', false],
+      ['Dream', false],
+      ['Torgersen', false],
+    ]);
+
+    fireEvent.change(island, {target: {value: 'Dream'}});
+
+    expect(store.getState().testData.island).toBe('Dream');
+    expect(island.value).toBe('Dream');
+  });
+
   test('Random fills every feature, enables Predict, and clears the last prediction', () => {
     const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
     store.dispatch(setPrediction('Adelie', []));
@@ -99,7 +117,7 @@ describe('TestPanel', () => {
     const store = trainedAnimalStore({trainer: 'decisionTree'});
     renderTestPanel(store);
 
-    predictSnake(store);
+    predictSnake();
 
     expect(
       screen.getByRole('heading', {name: 'AI predicts snake'}),
@@ -108,7 +126,7 @@ describe('TestPanel', () => {
     expect(steps.length).toBeGreaterThan(1);
     expect(steps[0].textContent).toMatch(/^1legs is [<≥] \d/);
     expect(steps[steps.length - 1].textContent).toBe(
-      `${steps.length}Prediction is snake`,
+      `${steps.length}animal is snake`,
     );
   });
 
@@ -116,7 +134,7 @@ describe('TestPanel', () => {
     const store = trainedAnimalStore(undefined);
     renderTestPanel(store);
 
-    predictSnake(store);
+    predictSnake();
 
     expect(
       screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/}),

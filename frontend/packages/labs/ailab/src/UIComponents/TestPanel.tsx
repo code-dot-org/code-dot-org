@@ -9,7 +9,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getRandomPredictInputs} from '../helpers/randomPredictInputs';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {useAppDispatch, useAppSelector, useAppStore} from '../hooks';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import {getPredictAvailable, setTestData, setTestDataValues} from '../redux';
 import {
   getDecimalPlacesByColumn,
@@ -26,7 +26,6 @@ import styles from './testPanel.module.scss';
 
 const TestPanel = () => {
   const dispatch = useAppDispatch();
-  const store = useAppStore();
   const datasetId = useAppSelector(state => state.metadata?.name || '');
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const testData = useAppSelector(state => state.testData);
@@ -82,7 +81,7 @@ const TestPanel = () => {
 
     const items = [
       {value: '', text: 'Choose one', disabled: true},
-      ...[...uniqueOptionsByColumn[feature]].sort().map(option => ({
+      ...uniqueOptionsByColumn[feature].map(option => ({
         value: option,
         text: String(getLocalizedValue(option, datasetId)),
       })),
@@ -116,7 +115,7 @@ const TestPanel = () => {
               color="primary"
               size="small"
               disabled={!predictAvailable}
-              onClick={() => train.onClickPredict(store)}
+              onClick={train.onClickPredict}
             >
               Predict
             </Button>

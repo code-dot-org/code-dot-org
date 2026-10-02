@@ -7,10 +7,38 @@
   font-family: var(--font-family-main);
 }
 
+@mixin side-panel {
+  @include panel;
+
+  background-color: var(--background-neutral-secondary);
+  border-left: 1px solid var(--border-neutral-primary);
+}
+
+@mixin panel-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px;
+}
+
 @mixin card {
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-md);
+}
+
+@mixin card-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 8px 10px;
+}
+
+// Include under two classes, to outrank the design system's minimum field width.
+@mixin full-width-field {
+  min-width: 0;
+  width: 100%;
+  align-items: stretch;
 }
 
 @mixin panel-header {

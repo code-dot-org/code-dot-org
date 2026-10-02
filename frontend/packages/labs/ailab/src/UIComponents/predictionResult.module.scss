@@ -53,7 +53,7 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
   position: absolute;
   top: calc($step-number-top + $step-number-size);
   bottom: calc(-1 * ($step-gap + $step-number-top));
-  left: calc($step-number-size / 2);
+  left: calc($step-number-size / 2 - 0.5px);
   border-left: 1px solid var(--border-neutral-primary);
 }
 

@@ -1,5 +1,6 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {formatNumber, thresholdText} from '../helpers/displayTree';
 import type {DisplayTreeStep} from '../helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
@@ -8,10 +9,9 @@ import {getPredictionTrace} from '../selectors/visualizationSelectors';
 
 import styles from './predictionResult.module.scss';
 
-const THRESHOLD_SIGNS = {lessThan: '<', atLeast: '≥'};
-
 const PredictionResult = () => {
   const datasetId = useAppSelector(state => state.metadata?.name || '');
+  const labelColumn = useAppSelector(state => state.labelColumn || '');
   const predictedLabel = useAppSelector(getConvertedPredictedLabel);
   const trace = useAppSelector(getPredictionTrace);
 
@@ -21,24 +21,26 @@ const PredictionResult = () => {
 
   const valueText = (value: string | number): string =>
     typeof value === 'number'
-      ? String(Number(value.toFixed(2)))
+      ? formatNumber(value)
       : String(getLocalizedValue(value, datasetId));
 
   const conditionText = ({branch, value}: DisplayTreeStep): string =>
-    branch.kind === 'values'
-      ? valueText(value ?? '')
-      : `${THRESHOLD_SIGNS[branch.kind]} ${branch.threshold}`;
+    branch.kind === 'values' ? valueText(value ?? '') : thresholdText(branch);
 
   const predictionText = valueText(predictedLabel);
-  const steps = trace
-    ? [
-        ...trace.steps.map(step => ({
-          subject: getLocalizedColumnName(datasetId, step.column),
-          condition: conditionText(step),
-        })),
-        {subject: 'Prediction', condition: predictionText},
-      ]
-    : [];
+  const steps =
+    trace && trace.steps.length > 0
+      ? [
+          ...trace.steps.map(step => ({
+            subject: getLocalizedColumnName(datasetId, step.column),
+            condition: conditionText(step),
+          })),
+          {
+            subject: getLocalizedColumnName(datasetId, labelColumn),
+            condition: predictionText,
+          },
+        ]
+      : [];
 
   return (
     <section className={styles.card}>

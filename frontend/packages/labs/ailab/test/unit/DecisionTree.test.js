@@ -25,7 +25,7 @@ vi.stubGlobal(
 function predictSnake(store) {
   act(() => {
     store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict(store);
+    train.onClickPredict();
   });
 }
 
