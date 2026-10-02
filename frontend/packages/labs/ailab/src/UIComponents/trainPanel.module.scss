@@ -29,9 +29,7 @@
 $features-menu-max-height: 240px;
 
 .card {
-  background-color: var(--background-neutral-primary);
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-md);
+  @include mixins.card;
 }
 
 .fields {
