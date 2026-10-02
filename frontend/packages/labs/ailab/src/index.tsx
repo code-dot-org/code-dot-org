@@ -23,6 +23,7 @@ import {
   setInstructionsDismissed,
   setInstructionsEnabled,
   resetState,
+  setHistoricResults,
 } from './redux';
 import {store} from './store';
 import train from './train';
@@ -92,6 +93,15 @@ export const loadLevel = function (mode?: Mode): void {
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);
+};
+
+/**
+ * Reload the current level, keeping the results of the models trained in it.
+ */
+export const startOver = function (): void {
+  const {mode, historicResults} = store.getState();
+  loadLevel(mode);
+  store.dispatch(setHistoricResults(historicResults));
 };
 
 /**

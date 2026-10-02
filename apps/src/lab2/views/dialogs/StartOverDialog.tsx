@@ -11,6 +11,8 @@ import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
 // Lab-specific messages for starting over.
 const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
+  ailab:
+    'This will reset this level to its start state. Your previous results will stay, so you can compare your next model with them.',
   aichat:
     "This will reset this level to its start state and remove any model customizations or model card information you've added or changed.",
   music: musicI18n.startOverMusicWorkspace(),

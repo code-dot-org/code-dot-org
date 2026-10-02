@@ -211,6 +211,8 @@ export interface AppProps {
     key: InstructionsKey,
     options: {showOverlay?: boolean} | null,
   ) => void;
+  /** Called from the header's Start over button, shown only when this is given. */
+  onStartOver?: () => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -219,7 +221,12 @@ export interface AppProps {
 const panelButtonsEqual = (a: PrevNextButtons, b: PrevNextButtons) =>
   shallowEqual(a.prev, b.prev) && shallowEqual(a.next, b.next);
 
-const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
+const App = ({
+  onContinue,
+  saveTrainedModel,
+  setInstructionsKey,
+  onStartOver,
+}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
@@ -243,7 +250,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
   return (
     <div className={styles.app} style={colorVariables}>
-      <WorkspaceHeader />
+      <WorkspaceHeader onStartOver={onStartOver} />
 
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
