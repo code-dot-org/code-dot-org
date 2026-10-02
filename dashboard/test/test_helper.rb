@@ -31,7 +31,10 @@ ENV['TZ'] = 'UTC'
 
 require 'mocha/minitest'
 
-CDO.stubs(:rack_env).returns(:test) if defined? CDO
+if defined? CDO
+  Mocha::Mockery.setup
+  CDO.stubs(:rack_env).returns(:test)
+end
 Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)

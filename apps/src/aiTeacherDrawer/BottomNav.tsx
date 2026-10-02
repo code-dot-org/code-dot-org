@@ -17,6 +17,7 @@ interface BottomNavProps {
   showChats?: boolean;
   showLearn?: boolean;
   showTeacherPanel?: boolean;
+  showRubrics?: boolean;
 }
 
 const BottomNav: React.FC<BottomNavProps> = ({
@@ -26,12 +27,14 @@ const BottomNav: React.FC<BottomNavProps> = ({
   showChats = true,
   showLearn = false,
   showTeacherPanel = false,
+  showRubrics = false,
 }) => {
   const navItems: NavItem[] = [
     // {label: 'Home', iconName: 'house'},
     ...(showChats ? [{label: 'Chats', iconName: 'comment'}] : []),
     ...(showLearn ? [{label: 'Prepare', iconName: 'folder-check'}] : []),
     {label: 'Alerts', iconName: 'bell'},
+    ...(showRubrics ? [{label: 'Rubrics', iconName: 'rectangle-list'}] : []),
     ...(showTeacherPanel ? [{label: 'Roster', iconName: 'users'}] : []),
   ];
 

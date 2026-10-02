@@ -1,5 +1,8 @@
+import {ThemeProvider} from '@mui/material/styles';
 import {createRoot, type Root} from 'react-dom/client';
 import {Provider} from 'react-redux';
+
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
@@ -15,6 +18,7 @@ import {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
+  setSelectedName,
   setReserveLocation,
   setInstructionsDismissed,
   setInstructionsEnabled,
@@ -60,9 +64,14 @@ export const mount = function (options: MountOptions): void {
   store.dispatch(setInstructionsEnabled(!!options.setInstructionsKey));
 
   root = createRoot(document.getElementById('root')!);
+  // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
     <Provider store={store}>
-      <App {...options} />
+      <ThemeProvider
+        theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
+      >
+        <App {...options} />
+      </ThemeProvider>
     </Provider>,
   );
 };
@@ -108,6 +117,7 @@ const processMode = (mode: Mode | undefined): void => {
       const item = getDatasets().filter((item: Dataset) => {
         return item.id === mode.datasets![0];
       })[0];
+      store.dispatch(setSelectedName(item.name));
       store.dispatch(setSelectedCSV(assetPath + item.path));
       store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
       // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
@@ -144,7 +154,7 @@ export type {
   ModelDataToSave,
   SaveResponse,
 } from './types';
-export {INSTRUCTIONS_KEYS} from './types';
+export {CONTENT_PANELS, INSTRUCTIONS_KEYS} from './types';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,

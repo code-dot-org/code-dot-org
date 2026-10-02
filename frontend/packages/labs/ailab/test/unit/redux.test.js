@@ -16,6 +16,7 @@ import reducer, {
   resetState,
   setSaveStatus,
   saveModel,
+  setTrainingModalStep,
 } from '../../src/redux';
 
 describe('ailab reducer', () => {
@@ -46,6 +47,27 @@ describe('ailab reducer', () => {
       const next = reducer(state, setCurrentPanel('trainModel'));
       expect(next.instructionsOverlayActive).toBe(false);
       expect(next.viewedPanels).toEqual([]);
+    });
+  });
+
+  describe('training modal', () => {
+    test('opens on a step and closes', () => {
+      const opened = reducer(initialState, setTrainingModalStep('training'));
+      expect(opened.trainingModalStep).toBe('training');
+      const closed = reducer(opened, setTrainingModalStep(undefined));
+      expect(closed.trainingModalStep).toBeUndefined();
+    });
+
+    test('closes when moving to another panel', () => {
+      const opened = reducer(initialState, setTrainingModalStep('testing'));
+      const next = reducer(opened, setCurrentPanel('results'));
+      expect(next.trainingModalStep).toBeUndefined();
+    });
+
+    test('does not change the instructions while open', () => {
+      let state = reducer(initialState, setCurrentPanel('dataDisplayFeatures'));
+      state = reducer(state, setTrainingModalStep('training'));
+      expect(state.instructionsKey).toBe('dataDisplayFeatures');
     });
   });
 
@@ -84,6 +106,16 @@ describe('ailab reducer', () => {
     });
   });
 
+  describe('setLabelColumn', () => {
+    test('removes the new label from the selected features', () => {
+      let state = reducer(initialState, addSelectedFeature('a'));
+      state = reducer(state, addSelectedFeature('b'));
+      const next = reducer(state, setLabelColumn('a'));
+      expect(next.labelColumn).toBe('a');
+      expect(next.selectedFeatures).toEqual(['b']);
+    });
+  });
+
   describe('setCurrentColumn', () => {
     test('selects, then deselects on a repeated click', () => {
       const selected = reducer(initialState, setCurrentColumn('a'));
@@ -92,7 +124,7 @@ describe('ailab reducer', () => {
       expect(deselected.currentColumn).toBeUndefined();
     });
 
-    test('ignores a click on the label column during feature selection', () => {
+    test('selects the label column during feature selection without feature instructions', () => {
       let state = reducer(initialState, setLabelColumn('lbl'));
       state = reducer(
         state,
@@ -100,6 +132,13 @@ describe('ailab reducer', () => {
       );
       state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
       const next = reducer(state, setCurrentColumn('lbl'));
+      expect(next.currentColumn).toBe('lbl');
+      expect(next.instructionsKey).toBe('dataDisplayFeatures');
+    });
+
+    test('ignores clicks when the mode hides column clicking', () => {
+      const state = reducer(initialState, setMode({hideColumnClicking: true}));
+      const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBeUndefined();
     });
   });

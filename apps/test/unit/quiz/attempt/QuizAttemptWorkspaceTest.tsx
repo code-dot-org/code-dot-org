@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import {
+  navigateToNextLevel,
   sendStartedReportIfNotStarted,
   sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
@@ -30,11 +31,13 @@ jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
     type: 'SEND_STARTED_REPORT',
     appName,
   })),
+  navigateToNextLevel: jest.fn(() => ({type: 'NAVIGATE_TO_NEXT_LEVEL'})),
 }));
 const mockSendSuccessReportForLevel = jest.mocked(sendSuccessReportForLevel);
 const mockSendStartedReportIfNotStarted = jest.mocked(
   sendStartedReportIfNotStarted
 );
+const mockNavigateToNextLevel = jest.mocked(navigateToNextLevel);
 
 const ATTEMPT: QuizAttemptData = {
   id: 1,
@@ -95,6 +98,10 @@ function renderWorkspace({
   allowMultipleAttempts,
   displayName = 'Unit 3 Assessment',
   showIntroScreen,
+  // Defaults true so existing submitted-state tests keep exercising
+  // ResultsCard - only tests for the no-correctness path opt out.
+  showCorrectness = true,
+  customIntroText,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -102,6 +109,8 @@ function renderWorkspace({
   allowMultipleAttempts?: boolean;
   displayName?: string;
   showIntroScreen?: boolean;
+  showCorrectness?: boolean;
+  customIntroText?: string;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -114,6 +123,8 @@ function renderWorkspace({
       allowMultipleAttempts={allowMultipleAttempts}
       displayName={displayName}
       showIntroScreen={showIntroScreen}
+      showCorrectness={showCorrectness}
+      customIntroText={customIntroText}
     />
   );
 }
@@ -136,12 +147,18 @@ describe('QuizAttemptWorkspace', () => {
           typeof sendStartedReportIfNotStarted
         >)
     );
+    mockNavigateToNextLevel.mockImplementation(
+      () =>
+        ({type: 'NAVIGATE_TO_NEXT_LEVEL'} as unknown as ReturnType<
+          typeof navigateToNextLevel
+        >)
+    );
     // clear, not reset: beginAttempt's resolved implementation has to
     // survive, since a no-intro render calls it from the auto-begin effect.
     jest.clearAllMocks();
   });
 
-  it('shows a loading message while the initial check is in flight', () => {
+  it('shows a loading message while the initial check for an attempt is in flight', () => {
     renderWorkspace({hookState: {isLoading: true}});
     expect(screen.getByText('Loading…')).toBeInTheDocument();
   });
@@ -163,7 +180,7 @@ describe('QuizAttemptWorkspace', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('shows a Begin Quiz button to retry when the initial check itself failed', () => {
+  it('shows a Begin Quiz button to retry when the initial check for an attempt itself failed', () => {
     // attempt stays undefined (not null) when the check fails, so the
     // auto-begin effect never fires - this button is the only way out.
     const beginAttempt = jest.fn().mockResolvedValue(undefined);
@@ -174,6 +191,20 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.queryByText('Loading…')).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', {name: 'Begin Quiz'}));
     expect(beginAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it('shows a Begin Quiz button to retry when the no-intro auto-begin itself fails', () => {
+    // attempt is null, not undefined - the initial check succeeded and found
+    // nothing; it's the auto-begin's own POST that failed.
+    const beginAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: null, error: 'Something went wrong.', beginAttempt},
+    });
+
+    expect(screen.queryByText('Loading…')).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Begin Quiz'})
+    ).toBeInTheDocument();
   });
 
   it('shows the intro screen instead of Begin Quiz when the quiz has one', () => {
@@ -219,7 +250,7 @@ describe('QuizAttemptWorkspace', () => {
       showIntroScreen: true,
     });
 
-    fireEvent.click(screen.getByRole('button', {name: 'Retake Quiz'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
 
     expect(beginAttempt).not.toHaveBeenCalled();
     const heading = screen.getByRole('heading', {
@@ -249,7 +280,7 @@ describe('QuizAttemptWorkspace', () => {
     );
   });
 
-  it('shows the score and a Retake button once submitted and retakeable', () => {
+  it('shows the results stats and a Try again button once submitted and retakeable', () => {
     const beginAttempt = jest.fn();
     renderWorkspace({
       hookState: {
@@ -264,12 +295,113 @@ describe('QuizAttemptWorkspace', () => {
       },
     });
 
-    expect(screen.getByText('Submitted. Score: 2 / 3')).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', {name: 'Retake Quiz'}));
+    expect(screen.getByText('67%')).toBeInTheDocument();
+    expect(screen.getByText('2 of 3 Correct')).toBeInTheDocument();
+    // Single-attempt default (allowMultipleAttempts unset) - no remaining count to fabricate.
+    expect(screen.getByText('Attempt #1')).toBeInTheDocument();
+    expect(screen.getByText('0 attempts remaining')).toBeInTheDocument();
+    // Next level is always available alongside Try again, not just when retakeable.
+    expect(
+      screen.getByRole('button', {name: /Next level/})
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
-  it('moves focus to the Retake button once submitted, since the footer button is gone', () => {
+  it('dispatches navigateToNextLevel when Next level is clicked', async () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
+      },
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: /Next level/}));
+
+    // Waits on the (already-resolved, since nothing was submitted this
+    // render) pending-report promise first.
+    await waitFor(() => expect(mockNavigateToNextLevel).toHaveBeenCalled());
+    expect(mockDispatch).toHaveBeenCalledWith(
+      mockNavigateToNextLevel.mock.results[0].value
+    );
+  });
+
+  it('waits for the finish-time success report to settle before navigating to the next level', async () => {
+    const report = deferred<unknown>();
+    mockDispatch.mockImplementation(action =>
+      action?.type === 'SEND_SUCCESS_REPORT_FOR_LEVEL'
+        ? report.promise
+        : undefined
+    );
+    const finishAttempt = jest
+      .fn()
+      .mockResolvedValue({...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'});
+    mockUseQuizAttempt.mockReturnValue({
+      ...BASE_HOOK_STATE,
+      attempt: ATTEMPT,
+      finishAttempt,
+    });
+    const {rerender} = render(
+      <QuizAttemptWorkspace
+        levelId={42}
+        appName="quiz"
+        levelName="quiz-level-name"
+        unitId={7}
+        quizQuestions={[question({id: 1, page: 1})]}
+        displayName="Unit 3 Assessment"
+        showCorrectness
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+    await waitFor(() =>
+      expect(mockSendSuccessReportForLevel).toHaveBeenCalled()
+    );
+
+    // The real hook would have updated attempt to submitted by now.
+    mockUseQuizAttempt.mockReturnValue({
+      ...BASE_HOOK_STATE,
+      attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
+    });
+    rerender(
+      <QuizAttemptWorkspace
+        levelId={42}
+        appName="quiz"
+        levelName="quiz-level-name"
+        unitId={7}
+        quizQuestions={[question({id: 1, page: 1})]}
+        displayName="Unit 3 Assessment"
+        showCorrectness
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: /Next level/}));
+    expect(mockNavigateToNextLevel).not.toHaveBeenCalled();
+
+    report.resolve(undefined);
+    await waitFor(() => expect(mockNavigateToNextLevel).toHaveBeenCalled());
+  });
+
+  it('shows an open-ended attempt count when the quiz allows multiple attempts', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          attemptNumber: 2,
+          canRetake: true,
+        },
+      },
+      allowMultipleAttempts: true,
+    });
+
+    expect(screen.getByText('Attempt #2')).toBeInTheDocument();
+    expect(screen.getByText('Unlimited attempts')).toBeInTheDocument();
+  });
+
+  it('moves focus to the title once submitted, with Try again in the footer', () => {
+    // The title, not a button - so the result is announced before a screen
+    // reader user reaches the action buttons.
     renderWorkspace({
       hookState: {
         attempt: {
@@ -280,24 +412,13 @@ describe('QuizAttemptWorkspace', () => {
       },
     });
 
-    expect(screen.getByRole('button', {name: 'Retake Quiz'})).toHaveFocus();
+    expect(
+      screen.getByRole('heading', {name: 'Unit 3 Assessment', level: 2})
+    ).toHaveFocus();
+    expect(screen.getByRole('button', {name: 'Try again'})).not.toHaveFocus();
   });
 
-  it('moves focus to the result message when submitted with no Retake button', () => {
-    renderWorkspace({
-      hookState: {
-        attempt: {
-          ...ATTEMPT,
-          submittedAt: '2026-01-01T00:00:00Z',
-          canRetake: false,
-        },
-      },
-    });
-
-    expect(screen.getByText(/Submitted\. Score:/)).toHaveFocus();
-  });
-
-  it('does not show a Retake button when the attempt cannot be retaken', () => {
+  it('moves focus to the title once submitted, without a retake', () => {
     renderWorkspace({
       hookState: {
         attempt: {
@@ -309,8 +430,99 @@ describe('QuizAttemptWorkspace', () => {
     });
 
     expect(
-      screen.queryByRole('button', {name: 'Retake Quiz'})
+      screen.getByRole('heading', {name: 'Unit 3 Assessment', level: 2})
+    ).toHaveFocus();
+  });
+
+  it('does not show a Try again button when the attempt cannot be retaken', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          canRetake: false,
+        },
+      },
+    });
+
+    expect(
+      screen.queryByRole('button', {name: 'Try again'})
     ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: /Next level/})
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
+  });
+
+  it('shows the submitted intro shell instead of results when showCorrectness is off', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          score: 2,
+          maxScore: 3,
+          canRetake: false,
+        },
+      },
+      showCorrectness: false,
+    });
+
+    expect(screen.getByText('submitted')).toBeInTheDocument();
+    expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
+    // Nothing to reveal without correctness - no score/stats card here.
+    expect(screen.queryByText('67%')).not.toBeInTheDocument();
+    expect(screen.queryByText('2 of 3 Correct')).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Try again'})
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: /Next level/})
+    ).toBeInTheDocument();
+  });
+
+  it('shows the submitted intro shell even when the quiz has no intro screen', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
+      },
+      showCorrectness: false,
+      showIntroScreen: false,
+    });
+
+    expect(screen.getByText('submitted')).toBeInTheDocument();
+  });
+
+  it('omits the pre-attempt intro text from the submitted intro shell', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
+      },
+      showCorrectness: false,
+      customIntroText: 'Read each question carefully.',
+    });
+
+    expect(
+      screen.queryByText('Read each question carefully.')
+    ).not.toBeInTheDocument();
+  });
+
+  it('offers Try again on the submitted intro shell when attempts remain', () => {
+    renderWorkspace({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          canRetake: true,
+        },
+      },
+      showCorrectness: false,
+    });
+
+    expect(screen.getByRole('button', {name: 'Try again'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: /Next level/})
+    ).toBeInTheDocument();
   });
 
   it('renders only the questions on the current page', () => {

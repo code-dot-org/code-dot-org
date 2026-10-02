@@ -18,6 +18,7 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {notifyWithToast} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 
 const FILE_NAME = 'sunset.png';
 
@@ -42,7 +43,6 @@ jest.mock('@cdo/apps/lab2/views/dialogs', () => ({
 
 describe('BackpackFileChip', () => {
   let showToast: jest.Mock;
-  let addAlert: jest.Mock;
   let backpackApi: BackpackClientApi;
 
   beforeEach(() => {
@@ -50,7 +50,6 @@ describe('BackpackFileChip', () => {
     registerReducers({lab, lab2Project, lab2System, progress});
     getStore().dispatch(setChannel(ownedChannel));
     showToast = jest.fn();
-    addAlert = jest.fn();
     dialogControlMock.showDialog.mockResolvedValue({type: 'confirm'});
     backpackApi = {
       getFileFetchUrl: () => undefined,
@@ -70,8 +69,7 @@ describe('BackpackFileChip', () => {
           <BackpackFileChip
             fileName={FILE_NAME}
             backpackApi={backpackApi}
-            addAlert={addAlert}
-            showToast={showToast}
+            notify={notifyWithToast(showToast)}
             validateFileName={jest.fn()}
             saveFileToProject={jest.fn()}
             createNewProjectFile={jest.fn()}
@@ -107,8 +105,6 @@ describe('BackpackFileChip', () => {
       `${FILE_NAME} deleted from your Backpack.`,
       expect.objectContaining({type: 'success', autoHideDuration: 4000})
     );
-    // The panel's alert stack is gone; nothing should route back to it.
-    expect(addAlert).not.toHaveBeenCalled();
   });
 
   it('toasts an error when a delete fails', async () => {
@@ -125,7 +121,6 @@ describe('BackpackFileChip', () => {
         expect.objectContaining({type: 'danger', autoHideDuration: 8000})
       )
     );
-    expect(addAlert).not.toHaveBeenCalled();
   });
 
   it('offers an enabled add button when the file is not recently added', () => {

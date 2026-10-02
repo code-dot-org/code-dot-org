@@ -440,7 +440,9 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}
+                  levelId={levelProperties.id}
                   levelName={levelName}
+                  levelSystemPrompt={levelAichatSettings?.levelSystemPrompt}
                   channelId={channelId}
                   hasStarterAssets={
                     starterAssets && Object.keys(starterAssets).length > 0

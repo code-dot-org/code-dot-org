@@ -166,30 +166,15 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
       : isPanelAvailable(state, 'dataDisplayFeatures')
         ? {panel: 'dataDisplayFeatures', text: I18n.t('navigateForward')}
         : undefined;
-  } else if (state.currentPanel === 'dataDisplayLabel') {
+  } else if (
+    state.currentPanel === 'dataDisplayLabel' ||
+    state.currentPanel === 'dataDisplayFeatures'
+  ) {
+    // The Train panel's own button moves on to training.
     prev = isPanelAvailable(state, 'selectDataset')
       ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
       : undefined;
-    next = isPanelAvailable(state, 'dataDisplayFeatures')
-      ? {panel: 'dataDisplayFeatures', text: I18n.t('navigateForward')}
-      : undefined;
-  } else if (state.currentPanel === 'dataDisplayFeatures') {
-    prev = isPanelAvailable(state, 'dataDisplayLabel')
-      ? {panel: 'dataDisplayLabel', text: I18n.t('navigateBack')}
-      : undefined;
-    next = isPanelAvailable(state, 'trainModel')
-      ? {panel: 'trainModel', text: I18n.t('trainModelButtonText')}
-      : undefined;
-  } else if (state.currentPanel === 'trainModel') {
-    if (state.trainedModel) {
-      prev = undefined;
-      next = {panel: 'generateResults', text: I18n.t('navigateForward')};
-    }
-  } else if (state.currentPanel === 'generateResults') {
-    if (state.trainedModel) {
-      prev = undefined;
-      next = {panel: 'results', text: I18n.t('navigateForward')};
-    }
+    next = undefined;
   } else if (state.currentPanel === 'results') {
     prev = isPanelAvailable(state, 'dataDisplayFeatures')
       ? {panel: 'dataDisplayFeatures', text: I18n.t('tryAgain')}

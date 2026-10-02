@@ -86,14 +86,14 @@ export async function postLogChatEvent(
  */
 export async function getUserChatHistory(
   userId: number,
-  levelId: number,
+  levelId: number | null,
   scriptId: number | null,
   channelId?: string,
   lessonId?: number
 ): Promise<ServerChatEvent[]> {
   const params: Record<string, string> = {
     userId: userId.toString(),
-    levelId: levelId.toString(),
+    levelId: levelId?.toString() || '',
     scriptId: scriptId?.toString() || '',
     lessonId: lessonId?.toString() || '',
     channelId: channelId ?? '',

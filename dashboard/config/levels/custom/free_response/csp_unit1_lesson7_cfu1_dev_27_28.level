@@ -1,0 +1,32 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-29T05:50:29.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "Modern car odometers can record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading?\r\n\r\nSome programming languages, like Python, don't have this problem for whole numbers. Why not?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18867,
+    "name_suffix": "_2025",
+    "encrypted_solution": "uySqsN/CujXylhTdCOFY9RzctKN8/zvJswqw6IkgDuLnJAVAPkjqgjaOwYjD\nmmZXLw6IGiPmNvVuJ5O8leeoIp+fhTW5F+Lwc2FbTFz0bOcpPioyhOSnBf6i\npEBOlgtpL70MXAWa0+Uo6qW2rmTSdtGo81cb+NthSJ86Cs4MdAph5YUSeo02\nwOLTpCAaxGkNYtq9QNCbNmUD8RPlm9h+3Ze6G7vVvgpkvpJpyVfJyXcBXmdW\npswqQFF+BnGfDd07uaTj5qfbFsEaNCKJZHlus5T3PgtHL5qZWG4hSqVjUjgM\n9arBwz/03kOoCmIKKMRN0mHdBFaHAcw0G0YN7PORdzwoJKrcy4J3iusmx8M7\nLbHxjsNW1nX1A73UXYh4UuRGo2jQERs8adeLPDcfLYbMhOHA5M9FPVuIisOX\nOjjRRXXXVPB6q9ZdEPyJz0fac+y5d8b6WWhVjXmx/Aka526pY/X9x3tMYwBP\ndsgBmmDOOXw=\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Reflection: Car Odometer",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-29T05:50:29.516+00:00\",\"changed\":[\"cloned from \\\"U1L6 CFU beyond odometer_2025\\\"\"],\"cloned_from\":\"U1L6 CFU beyond odometer_2025\"},{\"changed_at\":\"2026-09-29 05:50:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-30 04:06:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

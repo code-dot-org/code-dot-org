@@ -110,6 +110,7 @@ const Chat: FC<ChatProps> = ({
           aiTutorSystemPrompt={getSystemPrompt()}
           aiTutorChatButtonData={[]}
           isLessonDeepDive={true}
+          levelId={null}
           lessonId={lessonId}
         />
       </div>

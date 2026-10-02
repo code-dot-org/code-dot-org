@@ -1,13 +1,17 @@
 /* React component to handle displaying test data and A.I. Bot's guesses. */
+import classNames from 'classnames';
 import {useCallback} from 'react';
 
-import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
+import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setResultsHighlightRow} from '../redux';
 import type {ResultsData} from '../types';
+
+import shared from '../shared.module.scss';
+import styles from './resultsTable.module.scss';
 
 interface ResultsTableProps {
   results: ResultsData;
@@ -26,12 +30,11 @@ const ResultsTable = ({results}: ResultsTableProps) => {
   const highlightRow = (row: number | undefined) =>
     dispatch(setResultsHighlightRow(row as number));
 
-  const getRowCellStyle = useCallback(
+  const getRowCellClassName = useCallback(
     (index: number) => {
-      return {
-        ...styles.tableCell,
-        ...(index === resultsHighlightRow && styles.resultsCellHighlight),
-      };
+      return classNames(shared.tableCell, {
+        [styles.highlighted]: index === resultsHighlightRow,
+      });
     },
     [resultsHighlightRow],
   );
@@ -39,42 +42,29 @@ const ResultsTable = ({results}: ResultsTableProps) => {
   const featureCount = selectedFeatures.length;
 
   return (
-    <div style={styles.panel}>
+    <div className={shared.panel}>
       {isRegressionMode && (
-        <div style={styles.smallTextRight}>
+        <div className={styles.rangeNote}>
           {I18n.t('resultsTablePredictionRange', {
             percentage: REGRESSION_ERROR_TOLERANCE,
           })}
         </div>
       )}
 
-      <div style={styles.tableParent}>
-        <table style={styles.displayTable}>
+      <div className={shared.tableParent}>
+        <table className={shared.displayTable}>
           <thead>
             <tr>
               <th
                 colSpan={featureCount}
-                style={{
-                  ...styles.tableHeader,
-                  ...styles.resultsTableFirstHeader,
-                }}
+                className={classNames(styles.header, styles.groupHeader)}
               >
                 {I18n.t('resultsTableFeatureHeader')}
               </th>
-              <th
-                style={{
-                  ...styles.tableHeader,
-                  ...styles.resultsTableFirstHeader,
-                }}
-              >
+              <th className={classNames(styles.header, styles.groupHeader)}>
                 {I18n.t('resultsTableActualValueHeader')}
               </th>
-              <th
-                style={{
-                  ...styles.tableHeader,
-                  ...styles.resultsTableFirstHeader,
-                }}
-              >
+              <th className={classNames(styles.header, styles.groupHeader)}>
                 {I18n.t('resultsTablePredictedValueHeader')}
               </th>
             </tr>
@@ -82,11 +72,11 @@ const ResultsTable = ({results}: ResultsTableProps) => {
               {selectedFeatures.map((feature, index) => {
                 return (
                   <th
-                    style={{
-                      ...styles.tableHeader,
-                      backgroundColor: colors.feature,
-                      ...styles.resultsTableSecondHeader,
-                    }}
+                    className={classNames(
+                      styles.header,
+                      styles.featureHeader,
+                      styles.columnHeader,
+                    )}
                     key={index}
                   >
                     {getLocalizedColumnName(datasetId, feature)}
@@ -94,20 +84,20 @@ const ResultsTable = ({results}: ResultsTableProps) => {
                 );
               })}
               <th
-                style={{
-                  ...styles.tableHeader,
-                  backgroundColor: colors.label,
-                  ...styles.resultsTableSecondHeader,
-                }}
+                className={classNames(
+                  styles.header,
+                  styles.labelHeader,
+                  styles.columnHeader,
+                )}
               >
                 {getLocalizedColumnName(datasetId, labelColumn)}
               </th>
               <th
-                style={{
-                  ...styles.tableHeader,
-                  backgroundColor: colors.label,
-                  ...styles.resultsTableSecondHeader,
-                }}
+                className={classNames(
+                  styles.header,
+                  styles.labelHeader,
+                  styles.columnHeader,
+                )}
               >
                 {getLocalizedColumnName(datasetId, labelColumn)}
               </th>
@@ -123,15 +113,15 @@ const ResultsTable = ({results}: ResultsTableProps) => {
                 >
                   {examples.map((example, i) => {
                     return (
-                      <td style={getRowCellStyle(index)} key={i}>
+                      <td className={getRowCellClassName(index)} key={i}>
                         {getLocalizedValue(example, datasetId)}
                       </td>
                     );
                   })}
-                  <td style={getRowCellStyle(index)}>
+                  <td className={getRowCellClassName(index)}>
                     {getLocalizedValue(results.labels[index], datasetId)}
                   </td>
-                  <td style={getRowCellStyle(index)}>
+                  <td className={getRowCellClassName(index)}>
                     {getLocalizedValue(
                       results.predictedLabels[index],
                       datasetId,
