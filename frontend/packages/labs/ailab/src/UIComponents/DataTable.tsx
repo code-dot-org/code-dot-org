@@ -1,11 +1,12 @@
 /* React component to handle displaying imported data. */
 import classNames from 'classnames';
+import {useEffect, useRef} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
-import {getColumnClickable, getTableData, setCurrentColumn} from '../redux';
+import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
 
 import styles from './dataTable.module.scss';
 
@@ -35,19 +36,23 @@ const DataTable = ({
   const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const currentColumn = useAppSelector(state => state.currentColumn);
-  const clickableColumns = useAppSelector(
-    state =>
-      reducedColumns
-        ? []
-        : Object.keys(data[0] ?? {}).filter(key =>
-            getColumnClickable(state, key),
-          ),
-    deepEqual,
-  );
+  const showColumnClicking = useAppSelector(getShowColumnClicking);
+  const headerButtons = useRef<Record<string, HTMLButtonElement | null>>({});
+  const previousColumn = useRef(currentColumn);
+
+  // When closing the column analysis panel, return focus to that column's header.
+  useEffect(() => {
+    const closedColumn = previousColumn.current;
+    previousColumn.current = currentColumn;
+    const focusWasLost =
+      !document.activeElement || document.activeElement === document.body;
+    if (closedColumn && !currentColumn && focusWasLost) {
+      headerButtons.current[closedColumn]?.focus();
+    }
+  }, [currentColumn]);
 
   const showRowNumbers = !reducedColumns;
-
-  const isClickable = (key: string) => clickableColumns.includes(key);
+  const isClickable = !reducedColumns && showColumnClicking;
 
   const getColumnHeaderClassName = (key: string) =>
     classNames(styles.header, {
@@ -55,7 +60,7 @@ const DataTable = ({
       [styles.headerFeature]:
         key !== labelColumn && selectedFeatures.includes(key),
       [styles.headerSelected]: !reducedColumns && key === currentColumn,
-      [styles.clickable]: isClickable(key),
+      [styles.clickable]: isClickable,
     });
 
   const getColumnCellClassName = (key: string) => {
@@ -69,7 +74,7 @@ const DataTable = ({
     }
 
     return classNames('uitest-data-table-column', styles.bodyCell, variant, {
-      [styles.clickable]: isClickable(key),
+      [styles.clickable]: isClickable,
     });
   };
 
@@ -99,7 +104,7 @@ const DataTable = ({
   };
 
   const handleSetCurrentColumn = (columnId: string) => {
-    if (isClickable(columnId)) {
+    if (isClickable) {
       dispatch(setCurrentColumn(columnId));
     }
   };
@@ -126,8 +131,11 @@ const DataTable = ({
                 scope="col"
                 className={getColumnHeaderClassName(columnId)}
               >
-                {isClickable(columnId) ? (
+                {isClickable ? (
                   <button
+                    ref={element => {
+                      headerButtons.current[columnId] = element;
+                    }}
                     type="button"
                     className={styles.headerButton}
                     aria-pressed={columnId === currentColumn}

@@ -4,6 +4,7 @@ import {ColumnTypes} from './constants';
 import {
   containsOnlyNumbers,
   filterColumnsByType,
+  getDecimalPlaces,
   getUniqueOptions,
   getExtrema,
   getColumnDescription,
@@ -126,6 +127,20 @@ export const getExtremaByColumn = createSelector(
     );
     return extremaByColumn;
   },
+);
+
+export const getDecimalPlacesByColumn = createSelector(
+  [getSelectedNumericalColumns, getData],
+  (
+    selectedNumericalColumns: string[],
+    data: DataRow[],
+  ): Record<string, number> =>
+    Object.fromEntries(
+      selectedNumericalColumns.map(column => [
+        column,
+        getDecimalPlaces(data, column),
+      ]),
+    ),
 );
 
 export const getSelectedColumnsDescriptions = createSelector(
