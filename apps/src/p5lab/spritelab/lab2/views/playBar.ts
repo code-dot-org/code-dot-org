@@ -10,12 +10,16 @@ export interface ControlsState {
   gravity: number;
 }
 
-/** Left and right plus Jump, or left, right, up and down. */
-export type ArrowSet = 'jump' | 'steer';
+/** Left and right plus Jump; left, right, up and down; or no arrows. */
+export type ArrowSet = 'jump' | 'steer' | 'none';
 
-/** A weightless platform scene steers up and down like a story scene. */
+/** A story scene has nothing to steer; a weightless platform scene steers
+    up and down. */
 export function arrowSetFor(state: ControlsState): ArrowSet {
-  return state.platformer && state.gravity !== 0 ? 'jump' : 'steer';
+  if (!state.platformer) {
+    return 'none';
+  }
+  return state.gravity !== 0 ? 'jump' : 'steer';
 }
 
 export type GameKey = 'left' | 'right' | 'up' | 'down';
