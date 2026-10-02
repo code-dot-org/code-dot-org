@@ -26,9 +26,12 @@ class Image:
   """
 
   def __init__(self, *args):
+    self._filename = None
     if len(args) == 1 and isinstance(args[0], str):
+      self._filename = args[0]
       self._pil = _load_and_fit(args[0])
     elif len(args) == 1 and isinstance(args[0], Image):
+      self._filename = args[0]._filename
       self._pil = args[0]._pil.copy()
     elif len(args) == 1 and isinstance(args[0], PILImage.Image):
       self._pil = args[0].convert("RGBA")
@@ -45,6 +48,9 @@ class Image:
   def get_height(self):
     return self._pil.height
 
+  def get_filename(self):
+    return self._filename
+
   def get_pixel(self, x, y):
     r, g, b, _a = self._pil.getpixel((int(round(x)), int(round(y))))
     return Pixel(Color(r, g, b))
@@ -57,10 +63,12 @@ class Image:
     existing = self._pil.getpixel((x, y))
     alpha = existing[3] if len(existing) == 4 else 255
     self._pil.putpixel((x, y), (r, g, b, alpha))
+    self._filename = None
 
   def clear(self, color):
     r, g, b = as_color(color).to_rgb_tuple()
     self._pil.paste((r, g, b, 255), (0, 0, self._pil.width, self._pil.height))
+    self._filename = None
 
   def to_pil(self):
     """Return the backing Pillow image (RGBA). Internal use for rendering."""

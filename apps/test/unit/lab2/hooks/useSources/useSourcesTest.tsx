@@ -465,6 +465,20 @@ describe('useSources', () => {
   });
 
   describe('startOver', () => {
+    it('saves the start sources as ProjectSources even when the level stores them bare', async () => {
+      const bare = {folders: {}, files: {}};
+      const {result} = renderUseSources({
+        ...LEVEL_ONE,
+        startSources: bare,
+      } as LevelProperties);
+      await flush();
+
+      act(() => result.current.startOver());
+
+      expect(fakeManager.save).toHaveBeenCalledWith({source: bare}, true);
+      expect(result.current.currentSources).toEqual({source: bare});
+    });
+
     it('resets to start sources and force-saves', async () => {
       const startSources = {source: 'start'};
       const {result} = renderUseSources({...LEVEL_ONE, startSources});

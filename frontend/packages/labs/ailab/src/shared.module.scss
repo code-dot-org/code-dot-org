@@ -1,0 +1,141 @@
+.bold {
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.italic {
+  font-family: 'Gotham 4i', sans-serif;
+}
+
+.error {
+  color: #e51f68;
+}
+
+.hoverGrow:hover {
+  transform: scale(1.03, 1.03);
+  transition: 0.1s ease-in-out;
+}
+
+.columnButton {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.labelButton {
+  background-color: var(--ailab-label);
+}
+
+.featureButton {
+  background-color: var(--ailab-feature);
+}
+
+.panel {
+  padding: 10px;
+  background-color: white;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 14px;
+}
+
+.largeText {
+  line-height: 38px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px black;
+  padding-bottom: 10px;
+}
+
+.cardRow {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.chart {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contents {
+  background-color: var(--ailab-background);
+  padding: 15px;
+}
+
+.tableParent {
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  font-size: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.displayTable {
+  white-space: nowrap;
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: initial;
+}
+
+.tableCell {
+  padding-left: 20px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.scene {
+  justify-content: center;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.sceneHeading {
+  line-height: 38px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.sceneTable {
+  width: 30%;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.sceneBot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.bot {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  transform-origin: 25%;
+}
+
+.botHead {
+  transition: transform 500ms;
+  left: 3%;
+  width: 43%;
+  top: 0%;
+  position: absolute;
+  direction: ltr;
+  transform-origin: bottom right;
+}
+
+.botBody {
+  width: 49%;
+  margin-top: 30%;
+  direction: ltr;
+}

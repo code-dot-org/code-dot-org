@@ -1,6 +1,6 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, and whether each level step's `project` flag agrees with the level
-// the server resolved for it.
+// shape, each level played by at most one step, and whether each level
+// step's `project` flag agrees with the level the server resolved for it.
 
 import {z} from 'zod';
 
@@ -11,12 +11,43 @@ type Pathway = z.infer<typeof pathwaySchema>;
 /**
  * Detects and returns any reference problems in a pathway.
  */
-export function referenceProblems(pathway: Pathway): string[] {
+export function findReferenceProblems(pathway: Pathway): string[] {
   return [
-    ...skillProblems(pathway),
-    ...checkpointProblems(pathway),
-    ...levelStepProblems(pathway),
+    ...findSkillProblems(pathway),
+    ...findCheckpointProblems(pathway),
+    ...findLevelReuseProblems(pathway),
+    ...findLevelStepProblems(pathway),
   ];
+}
+
+/**
+ * Detects a level played by more than one step, or by a step and the project
+ * view: level steps must be unique and must not name the project template.
+ */
+function findLevelReuseProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const template = pathway.project.templateLevel;
+  const firstUse = new Map<string, string>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'level') continue;
+      const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
+      if (step.level === template) {
+        problems.push(
+          `${where}: level '${step.level}' is the project template level, which only the project view plays`
+        );
+      }
+      const earlier = firstUse.get(step.level);
+      if (earlier) {
+        problems.push(
+          `${where}: level '${step.level}' is already played by ${earlier}`
+        );
+      } else {
+        firstUse.set(step.level, where);
+      }
+    }
+  }
+  return problems;
 }
 
 /**
@@ -24,7 +55,7 @@ export function referenceProblems(pathway: Pathway): string[] {
  * project step's level must share the pathway's project template, and a
  * sandbox step's must not. Steps whose level did not resolve are skipped.
  */
-function levelStepProblems(pathway: Pathway): string[] {
+function findLevelStepProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
   const template = pathway.project.templateLevel;
   for (const checkpoint of pathway.checkpoints) {
@@ -52,7 +83,7 @@ function levelStepProblems(pathway: Pathway): string[] {
  * Detects and returns any problems with skills: map keys must match ids and
  * checkpoints may only reference skills in the map.
  */
-function skillProblems(pathway: Pathway): string[] {
+function findSkillProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
   for (const [skillId, skill] of Object.entries(pathway.skills)) {
     if (skill.id !== skillId) {
@@ -77,7 +108,7 @@ function skillProblems(pathway: Pathway): string[] {
  * root, and every checkpoint can eventually unlock, meaning its `requires`
  * chains all lead back to a root rather than looping.
  */
-function checkpointProblems(pathway: Pathway): string[] {
+function findCheckpointProblems(pathway: Pathway): string[] {
   const where = 'checkpoints';
   const problems: string[] = [];
   const ids = new Set(pathway.checkpoints.map(c => c.id));

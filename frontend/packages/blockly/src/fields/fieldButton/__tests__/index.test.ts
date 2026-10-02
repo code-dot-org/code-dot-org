@@ -103,6 +103,46 @@ describe('FieldButton', () => {
     expect(rect.getAttribute('style')).toBe('fill: rebeccapurple');
   });
 
+  it('wears a field class even after EDITABLE is cleared', () => {
+    // The other half of the same bug. Blockly's own `updateEditable` does
+    // nothing at all when `EDITABLE` is false, and every caller clears that
+    // flag so the button is not serialized — so whether a button ever got a
+    // class came down to WHEN it was cleared relative to the field being
+    // initialized. A button appended to a block already on screen got one; one
+    // built as part of the block (every flyout preview, and everything dragged
+    // out of a flyout) got neither, and missed the `fill-opacity: .6` that
+    // makes a white rect read as a tint of the block rather than a white chip.
+    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const field = new FieldButton({value: 'x', onClick: () => {}});
+    field.EDITABLE = false;
+    Object.assign(field as unknown as Record<string, unknown>, {
+      fieldGroup_: group,
+      getSourceBlock: () => ({isEditable: () => true}),
+    });
+
+    field.updateEditable();
+
+    expect(group.classList.contains('blocklyEditableField')).toBe(true);
+  });
+
+  it('reads as non-editable where the block is', () => {
+    // A flyout preview and a read-only workspace, which lose the hover
+    // highlight along with the class — right, because the button does nothing
+    // in either.
+    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    const field = new FieldButton({value: 'x', onClick: () => {}});
+    field.EDITABLE = false;
+    Object.assign(field as unknown as Record<string, unknown>, {
+      fieldGroup_: group,
+      getSourceBlock: () => ({isEditable: () => false}),
+    });
+
+    field.updateEditable();
+
+    expect(group.classList.contains('blocklyNonEditableField')).toBe(true);
+    expect(group.classList.contains('blocklyEditableField')).toBe(false);
+  });
+
   it('is exposed as a field plugin', () => {
     expect(plugin.type).toBe(PluginType.Field);
     expect(plugin.name).toBe('field_button');

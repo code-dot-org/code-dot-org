@@ -34,11 +34,10 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
-  currentLevelId?: string | null;
+  currentLevelId: number | null;
+  levelSystemPrompt?: string;
   sendDisabled?: boolean;
   onMessageSent?: () => void;
-
-  lessonId?: number;
 
   // Forwarded to submitChatContents, which invokes it once for a schema lab's
   // response after that response has been logged.
@@ -70,7 +69,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   hiddenContextCallback,
   multimodalAvailable,
   currentLevelId,
-  lessonId,
+  levelSystemPrompt,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
@@ -136,7 +135,8 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
-            lessonId,
+            levelName,
+            levelSystemPrompt,
             onSchemaResponse,
             formatSchemaResponseForDisplay,
           })
@@ -154,7 +154,8 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
-      lessonId,
+      levelName,
+      levelSystemPrompt,
       onMessageSent,
       onSchemaResponse,
       formatSchemaResponseForDisplay,

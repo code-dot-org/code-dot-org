@@ -183,6 +183,12 @@ class Unit < ApplicationRecord
       where.not(scripts: {name: NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS})
   end)
 
+  # Units holding a level that have both essential AI and a US only model.
+  scope :with_essential_us_only_ai_models, (lambda do
+    joins(:levels).merge(Level.with_essential_us_only_ai_models).
+      where.not(scripts: {name: NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS})
+  end)
+
   attr_accessor :skip_name_format_validation
 
   include SerializedToFileValidation
@@ -2099,6 +2105,11 @@ class Unit < ApplicationRecord
 
   def requires_ai_chat_tools?
     self.class.where(id: id).with_essential_ai_chat_tools.exists?
+  end
+
+  def requires_inaccessible_ai_models?(user)
+    return false unless user&.us_only_aichat_models_disabled?
+    self.class.where(id: id).with_essential_us_only_ai_models.exists?
   end
 
   private def teacher_feedback_enabled?

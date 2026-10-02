@@ -149,6 +149,8 @@ export interface BlockNumberArgDefinition extends BlockBaseArgDefinition {
   min?: number;
   /** The maximum value */
   max?: number;
+  /** The step the value rounds to, e.g. 0.1 */
+  precision?: number;
 }
 
 /**

@@ -38,7 +38,7 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
         {!isFirstPage && (
           <MuiButton
             variant="outlined"
-            color="secondary"
+            color="tertiary"
             size="small"
             type="button"
             startIcon={<FontAwesomeV6Icon iconName="arrow-left" />}

@@ -4,7 +4,6 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
-require 'cdo/github'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
@@ -136,53 +135,23 @@ namespace :test do
     end
   end
 
-  # A failure stops the Drone PR build (lib/rake/ci.rake) and the DTT (ui_all).
   timed_task_with_logging playwright_ui: :playwright_install do
-    raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional)
+    raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional, blocking: true)
   end
 
-  # A visual diff never stops a build; a person approves each new image in
-  # Applitools. Drone exports the Applitools variables (.drone.yml). The DTT
-  # daemon has the key Cucumber's Eyes suite uses (eyes_steps.rb) and derives
-  # the rest; on that machine a missing key is a configuration error.
+  # Runs the Playwright Eyes tests in the managed test environment.
   timed_task_with_logging playwright_eyes: :playwright_install do
+    raise 'Playwright Eyes: this task runs only on the test system' unless CDO.test_system?
     env = dtt_playwright_eyes_env
-    if env.empty? && ENV['VISUAL_PROVIDER'].blank?
-      raise 'Playwright Eyes: the test system has no applitools_eyes_api_key' if CDO.test_system?
-      ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
-      next
-    end
-    secrets = env.empty? ? {} : {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
-    run_playwright_suite(:eyes, env: env, env_secrets: secrets)
-  end
-
-  # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
-  # browser execution off the daemon and onto horizontally scalable runners. The
-  # GHA run hits the same test-studio; only the execution substrate differs.
-  # Fire-and-forget: GitHub schedules and runs it, the daemon's job ends here.
-  # Non-blocking — a dispatch error warns but never raises (matches :playwright_ui).
-  timed_task_with_logging :dispatch_gha_dtt do
-    GitHub.dispatch_workflow(workflow_id: 'dtt.yml', ref: 'test')
-    ChatClient.log 'Dispatched <b>dtt.yml</b> Playwright e2e run on GitHub Actions (ref: test).'
-  rescue StandardError => exception
-    ChatClient.log "Could not dispatch dtt.yml Playwright run (non-blocking): #{exception.message}", color: 'red'
+    raise 'Playwright Eyes: the test system has no applitools_eyes_api_key' if env.empty?
+    secrets = {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
+    playwright_tests_passed = run_playwright_suite(:eyes, blocking: true, env: env, env_secrets: secrets)
+    raise 'Playwright Eyes e2e tests failed' unless playwright_tests_passed
   end
 
   # Run the deploy-time UI suites in parallel. If one suite raises, allow the
   # others to complete, then make sure this task raises.
-  #
-  # The GHA run is dispatched first because from the ensure block its ~18
-  # minutes straddled the next deploy's Puma restart, which is where its 502s
-  # in late-scheduled firefox and webkit came from.
   timed_task_with_logging :ui_all do
-    # Rescued out here too: TimedTaskWithLogging logs its start event before
-    # entering its own rescue, and that must not cost us the suites.
-    begin
-      Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
-    rescue StandardError => exception
-      ChatClient.log "Could not dispatch the GHA Playwright run (non-blocking): #{exception.message}", color: 'red'
-    end
-
     # map returns each suite's exception in order, so the rollup needs no state
     # shared across the threads.
     exceptions = Parallel.map(UI_SUITES.keys, in_threads: UI_SUITES.size) do |target|
@@ -193,7 +162,9 @@ namespace :test do
     end
     failures = UI_SUITES.keys.zip(exceptions).to_h.compact
 
-    ChatClient.log ui_all_rollup(failures), color: (failures.empty? ? 'green' : 'red')
+    UI_SUITES_BY_ROLLUP.each do |title, suites|
+      ChatClient.log ui_all_rollup(title, suites, failures), color: (failures.slice(*suites.keys).empty? ? 'green' : 'red')
+    end
 
     # aws/ci_build turns the DTT red off this raise. Which exception surfaces
     # is arbitrary.
@@ -617,16 +588,21 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   docker/ci/**/*
 )
 
-PLAYWRIGHT_SUITES = {functional: 'Playwright', eyes: 'Playwright Eyes'}.freeze
+PLAYWRIGHT_SUITES = {functional: 'Playwright', eyes: '👁️ Playwright Eyes'}.freeze
 
-# The suites test:ui_all dispatches, and the names its rollup gives them.
-UI_SUITES = {
-  eyes_ui: 'Eyes',
-  saucelabs_ui: 'Safari + iPad + iPhone UI',
-  devicefarm_desktop_ui: 'Chrome + Firefox UI',
-  playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
-  playwright_eyes: PLAYWRIGHT_SUITES.fetch(:eyes),
+# The suites test:ui_all dispatches, and the names its rollups give them, by rollup.
+UI_SUITES_BY_ROLLUP = {
+  'Deploy-time UI suites:' => {
+    eyes_ui: 'Eyes',
+    saucelabs_ui: 'Safari + iPad + iPhone UI',
+    devicefarm_desktop_ui: 'Chrome + Firefox UI',
+  },
+  '🎭 Deploy-time Playwright suites:' => {
+    playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
+    playwright_eyes: PLAYWRIGHT_SUITES.fetch(:eyes),
+  },
 }.freeze
+UI_SUITES = UI_SUITES_BY_ROLLUP.values.reduce(:merge).freeze
 
 # Which run_playwright_suite rollup stands in for a UI_SUITES entry.
 PLAYWRIGHT_UI_SUITES = {playwright_ui: :functional, playwright_eyes: :eyes}.freeze
@@ -655,7 +631,7 @@ end
 
 # Never raises. The caller decides if a failure stops the build. `env` is
 # logged with the command; `env_secrets` are not.
-def run_playwright_suite(suite, env: {}, env_secrets: {})
+def run_playwright_suite(suite, blocking:, env: {}, env_secrets: {})
   label = PLAYWRIGHT_SUITES.fetch(suite)
   # Both suites run in one directory. Equal names would lose the first report.
   suffix = suite == :eyes ? '-eyes' : ''
@@ -663,7 +639,6 @@ def run_playwright_suite(suite, env: {}, env_secrets: {})
   e2e_dir = frontend_dir('packages', 'e2e-tests')
   script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
 
-  # GitHub Actions sets its own PLAYWRIGHT_PROVIDER and skips this task.
   provider =
     if CDO.test_system?            then 'dtt'
     elsif CI::Utils.running_on_ci? then 'drone'
@@ -695,12 +670,12 @@ def run_playwright_suite(suite, env: {}, env_secrets: {})
   summary = playwright_results_summary(File.join(e2e_dir, "test-results#{suffix}", 'results.json'))
 
   pass_fail_line = playwright_pass_fail_summary(summary, duration)
-  qualifier = suite == :eyes ? ' (non-blocking)' : ''
+  qualifier = blocking ? '' : ' (non-blocking)'
   # Yellow: the suite failed and the build did not.
   glyph, color =
     if passed
       ['✅', 'green']
-    elsif suite == :eyes
+    elsif !blocking
       ['🟡', 'yellow']
     else
       ['❌', 'red']
@@ -715,7 +690,7 @@ def run_playwright_suite(suite, env: {}, env_secrets: {})
   report = "#{label} e2e tests for <b>dashboard</b>: #{status}\n"
   report += pass_fail_line
   report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
-  report += %(\nVisual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url && !passed
+  report += %( Visual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url
   ChatClient.log report, color: color
 
   passed
@@ -723,13 +698,13 @@ end
 
 # The suites report minutes apart and interleaved with everything else in the
 # room, so this is the only place the whole deploy window can be read at once.
-def ui_all_rollup(failures)
-  lines = UI_SUITES.map do |target, label|
+def ui_all_rollup(title, suites, failures)
+  lines = suites.map do |target, label|
     rollup = PLAYWRIGHT_ROLLUP[PLAYWRIGHT_UI_SUITES[target]]
     next rollup if rollup
     failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
   end
-  ['Deploy-time UI suites:', *lines].join("\n")
+  [title, *lines].join("\n")
 end
 
 def playwright_results_summary(results_json)

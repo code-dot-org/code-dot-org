@@ -123,7 +123,15 @@ class Driver<
       if (Blockly.Blocks[blockDefinition.type]) {
         delete Blockly.Blocks[blockDefinition.type];
       }
-      Blockly.common.defineBlocksWithJsonArray([formedBlockDefinition]);
+      // An old-style definition builds itself in `init`; as JSON it would be
+      // wrapped in an `init` of Blockly's own and lose its inputs.
+      if ('init' in formedBlockDefinition) {
+        Blockly.common.defineBlocks({
+          [blockDefinition.type]: formedBlockDefinition,
+        });
+      } else {
+        Blockly.common.defineBlocksWithJsonArray([formedBlockDefinition]);
+      }
 
       const environment = this._environment;
 

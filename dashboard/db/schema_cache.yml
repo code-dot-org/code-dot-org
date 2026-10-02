@@ -1616,6 +1616,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_alt_text
+    sql_type_metadata: *11
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
   challenge_response_reactions:
   - *9
   - *42
@@ -16948,7 +16956,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260921151250
+version: 20260930144328
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

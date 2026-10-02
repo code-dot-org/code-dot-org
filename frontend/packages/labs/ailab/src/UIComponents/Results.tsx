@@ -1,7 +1,7 @@
 /* React component to handle displaying accuracy results. */
+import classNames from 'classnames';
 import {useEffect, useCallback} from 'react';
 
-import {styles} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setShowResultsDetails, setResultsPhase} from '../redux';
@@ -10,6 +10,9 @@ import DecisionTree from './DecisionTree';
 import ResultsDetails from './ResultsDetails';
 import ScrollableContent from './ScrollableContent';
 import {UnconnectedStatement} from './Statement';
+
+import shared from '../shared.module.scss';
+import styles from './results.module.scss';
 
 const Results = () => {
   const historicResults = useAppSelector(state => state.historicResults);
@@ -29,21 +32,21 @@ const Results = () => {
   }, [dispatch]);
 
   return (
-    <div style={styles.resultsPanelContainer}>
+    <div className={styles.container}>
       {showResultsDetails && <ResultsDetails />}
 
-      <div id="results" style={styles.panel}>
+      <div id="results" className={shared.panel}>
         <ScrollableContent>
-          <div style={styles.largeText}>
-            <div style={styles.resultsHeader}>{I18n.t('resultsHeader')}</div>
-            <div style={styles.resultsHeaderAccuracy}>
+          <div className={shared.largeText}>
+            <div className={styles.heading}>{I18n.t('resultsHeader')}</div>
+            <div className={styles.accuracyHeading}>
               {I18n.t('resultsAccuracy')}
             </div>
           </div>
           {historicResults.map((historicResult, index) => {
             return (
               <div key={index}>
-                <div style={styles.resultsStatement}>
+                <div className={styles.statement}>
                   <UnconnectedStatement
                     shouldShow={true}
                     smallFont={true}
@@ -51,16 +54,16 @@ const Results = () => {
                     selectedFeatures={historicResult.features}
                   />
                 </div>
-                <div style={{...styles.resultsAccuracy, ...styles.bold}}>
+                <div className={classNames(styles.accuracy, shared.bold)}>
                   {historicResult.accuracy}%
                 </div>
                 {index === 0 && (
-                  <div style={styles.resultsDetailsButtonContainer}>
+                  <div className={styles.detailsButtonContainer}>
                     <button
                       id="uitest-details-button"
                       type="button"
                       onClick={showDetails}
-                      style={styles.resultsDetailsButton}
+                      className={styles.detailsButton}
                     >
                       {I18n.t('resultsDetailsButton')}
                     </button>
@@ -69,16 +72,15 @@ const Results = () => {
                 {index === 0 && <DecisionTree />}
                 {index === 0 && historicResults.length > 1 && (
                   <div
-                    style={{
-                      ...styles.largeText,
-                      clear: 'both',
-                      paddingTop: 40,
-                    }}
+                    className={classNames(
+                      shared.largeText,
+                      styles.previousResults,
+                    )}
                   >
-                    <div style={styles.resultsHeader}>
+                    <div className={styles.heading}>
                       {I18n.t('resultsPreviousResults')}
                     </div>
-                    <div style={styles.resultsHeaderAccuracy}>
+                    <div className={styles.accuracyHeading}>
                       {I18n.t('resultsAccuracy')}
                     </div>
                   </div>

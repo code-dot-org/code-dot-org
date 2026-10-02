@@ -10,6 +10,7 @@ import {
   type FixtureResponse,
   type GalleryChallengeResponse,
 } from './galleryFixtures';
+import {csrfTokenRoute} from './mocks';
 
 type ViewerRole = 'owner' | 'teacher' | 'peer';
 
@@ -37,8 +38,54 @@ function toListResponse(response: FixtureResponse): GalleryChallengeResponse {
   };
 }
 
+// The viewer's own reactions by response id; the fixture has no other viewers.
+const viewerReactions = new Map<number, ReadonlySet<string>>();
+
+// Synced with ChallengeResponseReaction::EMOJIS, whose order Rails returns.
+const EMOJI_ORDER = ['clap', 'fire', 'smile', 'heart', 'party', 'trophy'];
+
+function reactionsBody(responseId: number) {
+  const mine = viewerReactions.get(responseId) ?? new Set<string>();
+  return {
+    reactions: EMOJI_ORDER.filter(emoji => mine.has(emoji)).map(emoji => ({
+      emoji,
+      count: 1,
+      reacted: true,
+    })),
+  };
+}
+
 export function registerGalleryMocks(): void {
   registerMockFixture([
+    csrfTokenRoute,
+
+    // POST /challenge_responses/:id/reactions {emoji}
+    {
+      method: 'post',
+      path: '*/challenge_responses/:id/reactions',
+      respond: async ({params, request}) => {
+        const id = Number(params.id);
+        const {emoji} = (await request.json()) as {emoji: string};
+        const current = viewerReactions.get(id) ?? new Set<string>();
+        viewerReactions.set(id, new Set([...current, emoji]));
+        return reactionsBody(id);
+      },
+    },
+
+    // DELETE /challenge_responses/:id/reactions/:emoji
+    {
+      method: 'delete',
+      path: '*/challenge_responses/:id/reactions/:emoji',
+      respond: ({params}) => {
+        const id = Number(params.id);
+        const remaining = [...(viewerReactions.get(id) ?? [])].filter(
+          emoji => emoji !== params.emoji,
+        );
+        viewerReactions.set(id, new Set(remaining));
+        return reactionsBody(id);
+      },
+    },
+
     // GET /api/v1/scripts/:script/lessons/:position/tutor_gallery_data
     {
       path: '*/tutor_gallery_data',

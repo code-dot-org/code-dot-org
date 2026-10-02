@@ -50,6 +50,63 @@ function renderFlyout(
 }
 
 describe('BlocklyFlyout', () => {
+  it('lets go of a block in a keyboard move when it unmounts', async () => {
+    // Enter places a block and starts a keyboard move, which keeps the block in
+    // the drag layer outside the workspace's DOM. Unless the workspaces release
+    // focus before they are disposed, the focus manager keeps that dead block,
+    // and the next press on any block throws re-focusing it.
+    const flyoutWorkspaceRef: {current: Blockly.WorkspaceSvg | null} = {
+      current: null,
+    };
+    const mainWorkspaceRef: {current: Blockly.WorkspaceSvg | null} = {
+      current: null,
+    };
+    const {container, unmount} = renderFlyout(
+      {
+        blocks: [{kind: 'block', type: 'text'}],
+        workspaceRef: flyoutWorkspaceRef,
+      },
+      mainWorkspaceRef,
+    ) as unknown as {container: HTMLElement; unmount: () => void};
+    await vi.waitFor(
+      () => {
+        expect(flyoutWorkspaceRef.current?.getTopBlocks(false)).toHaveLength(1);
+        expect(mainWorkspaceRef.current).not.toBeNull();
+      },
+      {timeout: 5000, interval: 50},
+    );
+    const focusManager = Blockly.getFocusManager();
+    const flyoutSvg = container.querySelector('.blocklyFlyout')!;
+    const press = (keyCode: number) => {
+      const event = new KeyboardEvent('keydown', {
+        bubbles: true,
+        cancelable: true,
+      });
+      Object.defineProperty(event, 'keyCode', {value: keyCode});
+      flyoutSvg.dispatchEvent(event);
+    };
+    focusManager.focusNode(flyoutWorkspaceRef.current!);
+    press(40);
+    await vi.waitFor(
+      () =>
+        expect(focusManager.getFocusedNode()).toBe(
+          flyoutWorkspaceRef.current!.getTopBlocks(false)[0],
+        ),
+      {timeout: 2000, interval: 30},
+    );
+    press(13);
+    await vi.waitFor(
+      () =>
+        expect(mainWorkspaceRef.current!.getAllBlocks(false)).toHaveLength(1),
+      {timeout: 2000, interval: 30},
+    );
+    expect(focusManager.getFocusedNode()).not.toBeNull();
+
+    unmount();
+
+    expect(focusManager.getFocusedNode()).toBeNull();
+  });
+
   it('supports keyboard navigation: focus, move, and place a block', async () => {
     // Keyboard parity with a real flyout via *real* keydown events (Blockly's own
     // keydown router is bound to the main injection div, which the external
