@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
+
 import LessonProgress from '../progress/LessonProgress';
 
+import HeaderBanner from './HeaderBanner';
 import HeaderFinish from './HeaderFinish';
 import HeaderPopup from './HeaderPopup';
 import ProjectInfo from './ProjectInfo';
@@ -24,6 +27,7 @@ class HeaderMiddle extends React.Component {
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
+    levels: PropTypes.array,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     isRtl: PropTypes.bool,
@@ -109,7 +113,8 @@ class HeaderMiddle extends React.Component {
     lessonProgressDesiredWidth,
     numScriptLessons,
     finishDesiredWidth,
-    showFinish
+    showFinish,
+    allowPopup = true
   ) {
     // For levels that show only project info, do an early return.
     if (projectInfoOnly) {
@@ -158,7 +163,9 @@ class HeaderMiddle extends React.Component {
     // or because we have cropped the lesson progress bubbles.
     let showPopup = false;
     let showPopupBecauseProgressCropped = false;
-    if (numScriptLessons > 1) {
+    if (!allowPopup) {
+      // A banner replaces the bubbles, so there is no lesson list to open.
+    } else if (numScriptLessons > 1) {
       showPopup = true;
     } else if (progressWidth < lessonProgressDesiredWidthAdjusted) {
       showPopup = true;
@@ -201,12 +208,21 @@ class HeaderMiddle extends React.Component {
   }
 
   render() {
-    const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
-      this.props;
+    const {
+      scriptNameData,
+      lessonData,
+      scriptData,
+      currentLevelId,
+      levels,
+      isRtl,
+    } = this.props;
 
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink
     );
+
+    // The banner takes the bubbles' slot and reports its width the same way.
+    const showBanner = !!scriptData?.headerBanner;
 
     const widths = HeaderMiddle.getWidths(
       this.state.width,
@@ -217,7 +233,8 @@ class HeaderMiddle extends React.Component {
       this.state.lessonProgressDesiredWidth,
       this.props.lessonData ? this.props.lessonData.num_script_lessons : 0,
       this.state.finishDesiredWidth,
-      showFinish
+      showFinish,
+      !showBanner
     );
 
     const extraScriptNameData = scriptNameData
@@ -298,13 +315,24 @@ class HeaderMiddle extends React.Component {
                     : undefined,
               }}
             >
-              <LessonProgress
-                width={widths.progress - lessonProgressExtraWidth}
-                setDesiredWidth={width => {
-                  this.setDesiredWidth('lessonProgress', width);
-                }}
-                lessonName={lessonData.name}
-              />
+              {showBanner ? (
+                <HeaderBanner
+                  imageUrl={scriptData.headerBannerImage}
+                  levels={levels}
+                  width={widths.progress - lessonProgressExtraWidth}
+                  setDesiredWidth={width => {
+                    this.setDesiredWidth('lessonProgress', width);
+                  }}
+                />
+              ) : (
+                <LessonProgress
+                  width={widths.progress - lessonProgressExtraWidth}
+                  setDesiredWidth={width => {
+                    this.setDesiredWidth('lessonProgress', width);
+                  }}
+                  lessonName={lessonData.name}
+                />
+              )}
             </div>
           )}
 
@@ -377,4 +405,5 @@ export default connect(state => ({
   appLoadStarted: state.header.appLoadStarted,
   appLoaded: state.header.appLoaded,
   currentLevelId: state.progress.currentLevelId,
+  levels: getCurrentLevels(state),
 }))(HeaderMiddle);

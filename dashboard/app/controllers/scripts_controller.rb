@@ -433,6 +433,8 @@ class ScriptsController < ApplicationController
       :lesson_groups,
       :content_area,
       :enable_blockly_keyboard_navigation,
+      :header_banner,
+      :header_banner_image,
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],

@@ -171,4 +171,22 @@ describe('HeaderMiddle', () => {
     expect(widths.popup).toEqual(0);
     expect(widths.finish).toEqual(0);
   });
+
+  it('gives the popup no room when a banner replaces the bubbles', () => {
+    const widths = HeaderMiddle.getWidths(
+      350,    // width,
+      false,  // projectInfoOnly,
+      false,  // scriptNameOnly,
+      0,      // projectInfoDesiredWidth,
+      200,    // scriptNameDesiredWidth,
+      350,    // lessonProgressDesiredWidth,
+      0,      // numScriptLessons,
+      200,    // finishDesiredWidth,
+      true,   // showFinish
+      false   // allowPopup
+    );
+
+    expect(widths.popup).toEqual(0);
+    expect(widths.showPopupBecauseProgressCropped).toEqual(false);
+  });
 });
