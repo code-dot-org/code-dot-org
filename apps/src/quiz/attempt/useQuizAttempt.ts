@@ -3,31 +3,12 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {QuizAttemptData} from './types';
+import {QuizAttemptData, QuizAttemptSource} from './types';
 
 interface UseQuizAttemptArgs {
   levelId: number;
   // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
-}
-
-/** A quiz attempt backend; useQuizAttempt is the quiz server's. */
-export interface QuizAttemptSource {
-  // undefined while the initial existing-attempt check is in flight; null
-  // once checked and there truly isn't one yet.
-  attempt: QuizAttemptData | null | undefined;
-  isLoading: boolean;
-  error: string | null;
-  beginAttempt: () => Promise<QuizAttemptData>;
-  submitQuestionResponse: (
-    quizQuestionId: number,
-    responseData: Record<string, unknown>
-  ) => Promise<void>;
-  // responsesByQuestionId is the student's current answer for every
-  // question they've answered.
-  finishAttempt: (
-    responsesByQuestionId: Record<number, Record<string, unknown>>
-  ) => Promise<QuizAttemptData>;
 }
 
 export default function useQuizAttempt({
