@@ -8,18 +8,17 @@ import {
   serveJsonVideos,
 } from '../shared/json-video-documents';
 
-// aif1-v2-2025 lesson 1 has two json videos attached, so the intervention
-// screen shows the carousel, which reuses one <json-video> and gives it a new
-// src per video. The documents themselves come from serveJsonVideos, so the
-// first video is known to be narrated per scene and the second to have a
-// top-level track; the real ones live in S3 and could be authored either way.
-//
-// Drone's instance seeds only the UI-test units (dashboard/test/ui/config),
-// not this one, hence @no_ci: the spec runs on DTT against test-studio.
-const UNIT = 'aif1-v2-2025';
+// ui-test-lesson-tutor (dashboard/test/ui/config) is a unit under an AIF
+// course offering, which is what turns the Tutor+ deep dive on, with two json
+// videos seeded against its one lesson's objectives, so the intervention
+// screen shows the carousel. The carousel reuses one <json-video> and gives
+// it a new src per video. The documents themselves come from serveJsonVideos,
+// so the first video is known to be narrated per scene and the second to have
+// a top-level track.
+const UNIT = 'ui-test-lesson-tutor';
 const LESSON = 1;
 
-test.describe('Lesson tutor videos', {tag: ['@no_ci']}, () => {
+test.describe('Lesson tutor videos', () => {
   test.beforeEach(async ({page, signInAsNewUser}) => {
     await signInAsNewUser({type: 'student', name: 'Test Student'});
     await serveJsonVideos(page, [SCENE_NARRATED_VIDEO, MAIN_TRACK_VIDEO]);
