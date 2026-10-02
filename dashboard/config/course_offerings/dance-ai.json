@@ -1,7 +1,7 @@
 {
   "key": "dance-ai",
   "display_name": "Dance Party: AI Edition",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Hour of Code",
   "marketing_initiative": "HOAI",

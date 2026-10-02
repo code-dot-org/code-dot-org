@@ -204,6 +204,9 @@ const ailabSlice = createSlice({
     },
     setLabelColumn(state, action: PayloadAction<string>) {
       state.labelColumn = action.payload;
+      state.selectedFeatures = state.selectedFeatures.filter(
+        item => item !== action.payload,
+      );
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -250,6 +253,10 @@ const ailabSlice = createSlice({
       prepare(feature: string, value: string | number) {
         return {payload: {feature, value}};
       },
+    },
+    setTestDataValues(state, action: PayloadAction<Record<string, string>>) {
+      Object.assign(state.testData, action.payload);
+      state.prediction = undefined;
     },
     setPrediction: {
       reducer(
@@ -335,7 +342,7 @@ const ailabSlice = createSlice({
     },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
-      if (!getColumnClickable(state, currentColumn)) {
+      if (!getShowColumnClicking(state)) {
         return;
       }
       if (state.currentColumn === currentColumn) {
@@ -346,7 +353,11 @@ const ailabSlice = createSlice({
         }
         state.currentColumn = undefined;
       } else {
-        if (state.currentPanel === 'dataDisplayFeatures') {
+        // If we are selecting features, don't update instructions text when clicking the label column.
+        if (
+          state.currentPanel === 'dataDisplayFeatures' &&
+          currentColumn !== state.labelColumn
+        ) {
           if (
             state.columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL
           ) {
@@ -460,6 +471,7 @@ export const {
   setTrainingExamples,
   setTrainingLabels,
   setTestData,
+  setTestDataValues,
   setPrediction,
   resetState,
   setTrainedModel,
@@ -508,19 +520,8 @@ export function getSpecifiedDatasets(state: RootState): string[] | undefined {
 
 /* Functions for determining UI element availability and interactivity. */
 
-function getShowColumnClicking(state: RootState): boolean {
+export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
-}
-
-export function getColumnClickable(state: RootState, column: string): boolean {
-  // If doing feature selection, the label column is no longer clickable
-  return (
-    getShowColumnClicking(state) &&
-    !(
-      state.currentPanel === 'dataDisplayFeatures' &&
-      column === state.labelColumn
-    )
-  );
 }
 
 export function getPredictAvailable(state: RootState): boolean {

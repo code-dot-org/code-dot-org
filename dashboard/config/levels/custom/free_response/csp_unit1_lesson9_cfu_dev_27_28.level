@@ -8,7 +8,7 @@
   "properties": {
     "title": "Check for Understanding",
     "placeholder": "Enter your reflection here.",
-    "long_instructions": "A program stores these 16 bits:\r\n\r\n```0110100111111001```\r\n\r\nThese bits describe a black and white image that is 4 pixels wide and 4 pixels tall. Each bit is one pixel (0 = white, 1 = black), read row by row starting at the top left. \r\n1. Write out the four rows, or describe the picture.\r\n\r\n<br>\r\n\r\n2. Suppose a friend sent you only these 16 bits and nothing else. What two other things would you need to know to draw the picture correctly?",
+    "long_instructions": "A program stores these 16 bits:\r\n\r\n```1001011000000110```\r\n\r\nThese bits describe a black and white image that is 4 pixels wide and 4 pixels tall. Each bit is one pixel (0 = black, 1 = white), read row by row starting at the top left. Write out the four rows, or describe the picture.\r\n\r\nSuppose a friend sent you only these 16 bits and nothing else. \r\n\r\nExplain why you might draw a different picture than your friend intended.",
     "skip_dialog": true,
     "skip_sound": true,
     "submittable": "false",
@@ -17,7 +17,7 @@
     "instructions_important": "false",
     "parent_level_id": 18874,
     "name_suffix": "_2025",
-    "encrypted_solution": "Ou16SzCaqErWMwEoMEiOafb8sXCmpSeI0Ggczohh7DlYQvmMKJVoFotvspny\nc4lVWGxml1CNNp531TGs8vzVzQSjnd3b3aytZlsAJjW2VEPU1ulrTEj71ZLN\nMJoWlWPj0CxhnEmLmqwflGFubYOJFv6ZSq/t92U2sMmemPTlL2gfj8ER/5/q\ngu3q+GsbLpExj7Inus6ISH14VYWNTgIuBMnnjgnsJtShio/bEZNUGvvt9QzO\nTEvKTVrqrclkYStRHRRbLhQmmzzZwFftWSX7Vx6EHVUqOGK1kNtVfW19YoWm\ng+o86dBNzPHkK+1wApJUwooM4JPT/f02hvYkCpPxNw+/uS7E9swe3vH8iqAh\nWmJDy5sUCc41rvHsqovCju1L8K3BKi5yO+s82Wrj1SE9HOwsaBElWiSvaAnp\nn0f17W8Hx1aAYi8dTNTTCkbfr7QmzBwU8COHRuUJP9RqWnIYFXnfQvB6H3yh\nfti5pAKjopMHVmktELouivW5NMDRO5WP6xgE970q8X4IZnmyjgK9vg==\n",
+    "encrypted_solution": "0QBaNPVUSRIsddJDxwI3z452tLmYXhLqjerKQX0Zf/F81WhmUtyzYLE/Fu4y\ns3DiInjYcWDLEeE80ytvizPXR2Czbx3ROFR0iy5NoLRPd44x7yI/9hwuKDXy\n8QhcEr7dxi45yWE6DraN49XyWOPkwmUcFfGpgyRYF1s4VW6SJGkSenjFy7nL\n2T9qZaKwQ8rqey8WsWSaPt2+5QuF8rQpY0prQr7+AzWajV8zB0aLMSdWsmgS\nVT+ZFmrvEQj1maOC/mP7E7HEsJ8ha2MdDoIPmNTC7PPTtubfz4VN8S1GxBu8\nC+Xz4yVRHCN50RM7VgkQ0CaOsXwnzSksZFzb6p37k2rmDCZlwSMl4fYOczOe\nQhej9cywpRVetdstIMTyGjtm1S7dGXogZdRkRnNh+Uc+qWFhH8vN2ah89pck\ndmVAYBGqcQgInH2VG5K6XdGer0D/CMInXc05u54Cys15EicBVN1BJFEokCSC\nB4TsUXow1HfzssfD8O2qK3CJ+zDTe2e+I3jExOEgRYQkO/aZu57TD+ATPJTj\nPfFefDDx6UW3xMlkRTy0zEAc25bxB1EmsaHzphnljyy28l79k6vqzzNNe1iX\n+iAKgF/DRpZ99519lOdGQAfQvJx2JMwq2W84GFXy\n",
     "encrypted": "false",
     "optional": "false",
     "allow_multiple_attempts": "true",
@@ -25,7 +25,7 @@
     "stay_on_level_after_submit": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-09-30T06:04:10.146+00:00\",\"changed\":[\"cloned from \\\"U1L9 CFU Sampling_2025\\\"\"],\"cloned_from\":\"U1L9 CFU Sampling_2025\"},{\"changed_at\":\"2026-09-30 06:06:08 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-30T06:04:10.146+00:00\",\"changed\":[\"cloned from \\\"U1L9 CFU Sampling_2025\\\"\"],\"cloned_from\":\"U1L9 CFU Sampling_2025\"},{\"changed_at\":\"2026-09-30 06:06:08 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-01 05:32:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

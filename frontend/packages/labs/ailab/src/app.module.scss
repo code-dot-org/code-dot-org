@@ -1,12 +1,32 @@
 .app {
   user-select: none;
   height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 10px;
   font-family: 'Gotham 4r', sans-serif;
 }
 
 .body {
   height: calc(100% - 50px);
   box-sizing: border-box;
+  padding: 10px 10px 0;
+}
+
+.flushBody {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  .rightColumn {
+    margin-left: 0;
+    width: 30%;
+  }
+}
+
+.panelRow {
+  display: flex;
+  flex: 1;
+  min-height: 0;
 }
 
 .column {
@@ -27,6 +47,7 @@
 
 .navigation {
   position: relative;
+  margin: 0 10px;
 }
 
 .previous,
@@ -76,4 +97,17 @@
   display: inline-block;
   opacity: 0.5;
   padding: 0 5px;
+}
+
+// Removed from view but still read by screen readers.
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
 }

@@ -1,11 +1,10 @@
 import {
   ChallengeResponse,
   ChallengeResponseAsset,
+  ReactionChips,
 } from '@code-dot-org/lesson-deep-dive';
 import classNames from 'classnames';
 import React, {FC} from 'react';
-
-import ReactionChips from './ReactionChips';
 
 import styles from './challenge-gallery.module.scss';
 

@@ -1,5 +1,27 @@
 import {ThreadTypeFields} from '../constants';
-import {AiArtifact, ChatItem, ChatPrompt, ChatTextMessage} from '../types';
+import {
+  AiArtifact,
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+  Context,
+} from '../types';
+
+/**
+ * Everything the drawer needs in order to be rendered by a host that did not
+ * decide it should exist. Level pages work out eligibility server-side and
+ * apply the experiment gating in levels/show.js; on a Lab2 level the drawer is
+ * then rendered from inside the lab's own component tree, so that decision has
+ * to reach Lab2Wrapper rather than a mount point.
+ */
+export interface HostedDrawerConfig {
+  context: Context;
+  scriptName?: string;
+  openToNav?: string;
+  hideButton?: boolean;
+  canStartOpen?: boolean;
+  canDefaultOpen?: boolean;
+}
 
 export interface AiDiffChatState {
   chatIsOpen: boolean;
@@ -34,4 +56,7 @@ export interface AiDiffChatState {
   pendingArtifactMessage?: ChatTextMessage;
   // When set, the drawer will navigate to this tab on next open.
   requestedNav: string | null;
+  // Set when a host other than the page's own mount point should render the
+  // drawer; null when the page renders it itself.
+  hostedDrawerConfig: HostedDrawerConfig | null;
 }
