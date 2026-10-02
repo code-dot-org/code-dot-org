@@ -1,7 +1,7 @@
 // The level header's middle for a unit with simple progress: the project
 // info, the unit name over its saved-at line, and the unit's logo with the
 // part's label and bar, in one flex row. Nothing is measured: each part
-// shrinks on its own and the row centres what is left. HeaderMiddle measures
+// shrinks on its own and the row centers what is left. HeaderMiddle measures
 // because its bubbles need a count that fits; nothing here does. It shows
 // on mount: HeaderMiddle's wait for an app load has no signal under Lab2,
 // the only place simple progress is used.

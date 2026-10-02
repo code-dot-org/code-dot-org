@@ -197,7 +197,7 @@ const styles = {
     alignItems: 'end',
   },
   // The two lines' full height and the saved-at badge's width, held before
-  // the badge arrives so the row does not re-centre when it does. Shrinks
+  // the badge arrives so the row does not re-center when it does. Shrinks
   // with the row like the rest.
   flowColumnWithUpdatedAt: {
     display: 'flex',
