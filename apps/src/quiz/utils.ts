@@ -1,4 +1,25 @@
+import {QuizPage} from './types';
+
 export const toBool = (value: boolean | undefined) => value ?? false;
+
+// Groups a flat question list into pages, ascending by page number.
+export function groupByPage<T extends {page: number | null}>(
+  questions: T[]
+): QuizPage<T>[] {
+  const pages = new Map<number, T[]>();
+  questions.forEach(question => {
+    const page = question.page ?? 1;
+    const pageQuestions = pages.get(page);
+    if (pageQuestions) {
+      pageQuestions.push(question);
+    } else {
+      pages.set(page, [question]);
+    }
+  });
+  return Array.from(pages.entries())
+    .sort(([pageA], [pageB]) => pageA - pageB)
+    .map(([page, pageQuestions]) => ({page, questions: pageQuestions}));
+}
 
 export function formatSubmittedAt(isoString: string): string {
   return new Date(isoString).toLocaleString(undefined, {
