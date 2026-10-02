@@ -1,0 +1,39 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  // Code Studio's global th rule fills headers and borders them in white.
+  th {
+    padding: 0 0 12px;
+    background-color: transparent;
+    border: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.72px;
+    text-align: start;
+    text-transform: uppercase;
+    color: var(--text-neutral-quaternary);
+  }
+
+  td {
+    padding: 12px 0;
+    border-top: 1px solid var(--border-neutral-primary);
+  }
+}
+
+.accuracy {
+  width: 80px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
+.empty {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-neutral-secondary);
+}

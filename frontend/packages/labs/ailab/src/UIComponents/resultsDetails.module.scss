@@ -1,27 +1,5 @@
-.popupContainer {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  z-index: 10;
-}
-
-.popup {
-  padding: 10px;
-  background-color: white;
-  overflow: hidden;
-  height: 100%;
-  box-sizing: border-box;
+.details {
   display: flex;
   flex-direction: column;
-  border: solid 1px black;
-  box-shadow: -5px 5px 10px rgb(0 0 0 / 0.5);
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
+  gap: 8px;
 }

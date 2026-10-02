@@ -1,0 +1,48 @@
+$dialog-max-width: 800px;
+$dialog-margin: 24px;
+$content-height: 416px;
+// Title, tab and action rows plus the space kept around the dialog.
+$chrome-height: 258px;
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: min(#{$dialog-max-width}, calc(100vw - #{2 * $dialog-margin}));
+  overflow: hidden;
+  border-radius: var(--shape-xl);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-family-main);
+
+  // The design system's close button, moved into the title row.
+  > button {
+    inset-block-start: 24px;
+    inset-inline-end: 20px;
+  }
+}
+
+.titleRow {
+  padding: 18px 56px 18px 24px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+// An inset shadow paints under the tabs, so the selected tab's fill breaks the line.
+.tabRow {
+  padding: 10px 14px 0;
+  background-color: var(--background-neutral-secondary);
+  box-shadow: inset 0 -1px 0 var(--border-neutral-primary);
+}
+
+.panels {
+  height: min(#{$content-height}, calc(100vh - #{$chrome-height}));
+  overflow-y: auto;
+  padding: 16px 24px 24px;
+  box-sizing: border-box;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+  padding: 18px 20px 18px 24px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
