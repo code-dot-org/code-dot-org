@@ -5,6 +5,8 @@ import SimpleProgress, {
   subPathFor,
 } from '@cdo/apps/code-studio/components/header/SimpleProgress';
 
+import styles from '@cdo/apps/code-studio/components/header/simple-progress.module.scss';
+
 // The lesson's levels as getCurrentLevels gives them, with one current.
 const levelsWithCurrent = (currentId: string) =>
   [
@@ -42,17 +44,18 @@ describe('SimpleProgress', () => {
     expect(document.querySelector('#simple_progress')?.textContent).toBe('');
   });
 
-  it("shrinks with the header's row, the label ellipsizing and the bar filling the column", () => {
+  it("wears the classes that shrink it with the header's row", () => {
     render(
       <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('3')} />
     );
     const outer = document.querySelector('#simple_progress') as HTMLElement;
-    expect(outer.style.minWidth).toBe('0');
+    expect(outer.classList.contains(styles.outer)).toBe(true);
     const label = screen.getByText('Story');
-    expect(label.style.textOverflow).toBe('ellipsis');
-    expect(label.parentElement!.style.minWidth).toBe('0');
-    expect(label.parentElement!.style.flex).toBe('1 1 auto');
-    expect(screen.getByRole('progressbar').style.width).toBe('100%');
+    expect(label.classList.contains(styles.label)).toBe(true);
+    expect(label.parentElement!.classList.contains(styles.text)).toBe(true);
+    expect(
+      screen.getByRole('progressbar').classList.contains(styles.track)
+    ).toBe(true);
   });
 
   it('names the bar after its label', () => {

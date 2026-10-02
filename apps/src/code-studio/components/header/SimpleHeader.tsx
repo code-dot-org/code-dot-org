@@ -16,6 +16,8 @@ import remeasureOnFontsReady from './remeasureOnFontsReady';
 import ScriptName from './ScriptName';
 import SimpleProgress, {ProgressLevel} from './SimpleProgress';
 
+import styles from './simple-header.module.scss';
+
 // How long the header waits for an app load to begin before showing without
 // one.
 const APP_LOAD_WAIT_MS = 750;
@@ -78,16 +80,16 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
     return null;
   }
   return (
-    <div id="header_middle_content" style={styles.row}>
-      <div id="project_info_container" style={styles.projectInfo}>
+    <div id="header_middle_content" className={styles.row}>
+      <div id="project_info_container" className={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
       {scriptNameData && (
-        <div id="unit_name_container" style={styles.unitName}>
+        <div id="unit_name_container" className={styles.unitName}>
           <ScriptName {...scriptNameData} isRtl={isRtl} />
         </div>
       )}
-      <div id="simple_progress_container" style={styles.progress}>
+      <div id="simple_progress_container" className={styles.progress}>
         <SimpleProgress
           imageUrl={scriptData.simpleProgressImage}
           levels={levels}
@@ -98,30 +100,3 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
 };
 
 export default SimpleHeader;
-
-const styles: Record<string, React.CSSProperties> = {
-  row: {
-    width: '100%',
-    minWidth: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    animation: 'header-fadein 0.4s',
-  },
-  // The project buttons cannot shrink, and their container clips, so the
-  // project info keeps its width and the names give way instead.
-  projectInfo: {
-    flex: 'none',
-  },
-  // Each name may shrink below its content; what it holds ellipsizes.
-  unitName: {
-    flex: '0 1 auto',
-    minWidth: 0,
-    margin: '0 5px',
-  },
-  progress: {
-    flex: '0 1 auto',
-    minWidth: 0,
-    margin: '0 5px',
-  },
-};

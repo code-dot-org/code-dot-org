@@ -5,6 +5,8 @@ import {createStore} from 'redux';
 
 import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
 
+import styles from '@cdo/apps/code-studio/components/header/simple-header.module.scss';
+
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
   getCurrentLevels: () => [
     {id: '1', headerLabel: 'Story', isCurrentLevel: true},
@@ -62,20 +64,16 @@ describe('SimpleHeader', () => {
     expect(document.querySelector('#header_middle_content')).toBeNull();
   });
 
-  it('centres a flex row where the names shrink and the buttons do not', () => {
+  it('places each part of the row under its class', () => {
     renderHeader({appLoadStarted: true, appLoaded: true});
-    const row = document.querySelector('#header_middle_content') as HTMLElement;
-    expect(row.style.display).toBe('flex');
-    expect(row.style.justifyContent).toBe('center');
-    for (const id of ['unit_name_container', 'simple_progress_container']) {
-      const part = document.querySelector(`#${id}`) as HTMLElement;
-      expect(part.style.minWidth).toBe('0');
-      expect(part.style.flexShrink).toBe('1');
-    }
-    const buttons = document.querySelector(
-      '#project_info_container'
-    ) as HTMLElement;
-    expect(buttons.style.flexShrink).toBe('0');
+    const has = (id: string, className: string) =>
+      (document.querySelector(`#${id}`) as HTMLElement).classList.contains(
+        className
+      );
+    expect(has('header_middle_content', styles.row)).toBe(true);
+    expect(has('project_info_container', styles.projectInfo)).toBe(true);
+    expect(has('unit_name_container', styles.unitName)).toBe(true);
+    expect(has('simple_progress_container', styles.progress)).toBe(true);
     expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
       'Story'
     );
