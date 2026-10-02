@@ -1557,10 +1557,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // workspace has rendered. Per level, not per load: a level reached in
   // page shares the scene's code with the last one, and loads nothing.
   const addedBlocksForRef = useRef('');
-  // The reset Start Over makes while leaving for the first level, by level
-  // and sources generation. The fresh project is remade from that level on,
-  // so this level's blocks must not seed it.
-  const leavingResetRef = useRef<{level: number; reinit: number}>();
+  // Set when Start Over leaves for the first level: the level being left and
+  // the reinitialization count before its reset. The pass skips that reset,
+  // or the fresh project would open with this level's blocks in it. A level
+  // change ends it, consumed or not.
+  const leavingResetRef = useRef<{level: number; reinitBefore: number}>();
+  useEffect(() => {
+    leavingResetRef.current = undefined;
+  }, [levelProperties.id]);
   useEffect(() => {
     if (
       !animationsSeeded ||
@@ -1580,11 +1584,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     addedBlocksForRef.current = key;
-    const leaving = leavingResetRef.current;
+    const leavingReset = leavingResetRef.current;
     if (
-      leaving &&
-      leaving.level === levelProperties.id &&
-      leaving.reinit === sourcesReinitializedCount
+      leavingReset &&
+      leavingReset.level === levelProperties.id &&
+      sourcesReinitializedCount > leavingReset.reinitBefore
     ) {
       leavingResetRef.current = undefined;
       return;
@@ -1820,7 +1824,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             if (leaving) {
               leavingResetRef.current = {
                 level: levelProperties.id,
-                reinit: sourcesReinitializedCount + 1,
+                reinitBefore: sourcesReinitializedCount,
               };
             }
             startOver();
