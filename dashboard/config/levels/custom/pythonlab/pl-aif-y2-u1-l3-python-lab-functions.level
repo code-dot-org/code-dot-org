@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-09-30T17:08:50.000Z",
   "level_num": "custom",
   "user_id": 23838,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "You’re building a music streaming program that plays a user’s favorite songs.\r\n\r\n**Do This**\r\n\r\n1. Update the definition of `play_song` to print a song of your choice to play. For example, your program might print “Now playing: Dancing Queen”.\r\n2. Call your `play_song` function.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo “call” a function is to tell the computer to run it. To call a function in Python, use its name followed by parentheses. For example, to call a function named `hello`, you could write:\r\n\r\n```python\r\nhello()\r\n```",
+    "long_instructions": "In Lesson 5, students complete this exact task: defining a function, then calling it, the same two steps from the function example you just read about.\r\n\r\nYou’re building a music streaming program that plays a user’s favorite songs.\r\n\r\n**Do This**\r\n\r\n1. Update the definition of `play_song` to print a song of your choice to play. For example, your program might print “Now playing: Dancing Queen”.\r\n2. Call your `play_song` function.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo “call” a function is to tell the computer to run it. To call a function in Python, use its name followed by parentheses. For example, to call a function named `hello`, you could write:\r\n\r\n```python\r\nhello()\r\n```\r\n\r\n---\r\n**Reflection:** What might your students find challenging about this task, remembering to call the function after defining it, or something else?",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -45,7 +46,6 @@
     },
     "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrv95xZXzqJMxY/\nt5IFwMb8YsqE6NPJQMA0wA1NNwXCU8W5xy7DRuoX7VhcRVvyHePMB870/Ds/\ngHV9cLk0S3zNhOTMGffY7My/FB3JGiRRFVBuXt+T/t5mfXSOJEH9+layVQsE\nx6fQIuZ5HM9JfacOf3lmvMluKhIoWzXWLD0VwvjTCzwN0H/fwn81GftnLPnS\neajFfWtg7qHJG5UQT0SR\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-30T17:08:50.275+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson5-level3-choice1--2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson5-level3-choice1--2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-30T17:08:50.275+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson5-level3-choice1--2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson5-level3-choice1--2026\"},{\"changed_at\":\"2026-10-01 17:25:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

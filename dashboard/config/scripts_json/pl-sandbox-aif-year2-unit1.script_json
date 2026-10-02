@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-30 17:13:49 UTC",
+    "serialized_at": "2026-10-01 16:14:22 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -611,10 +611,10 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Algorithms"
+        "progression": "Hello, AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -624,7 +624,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-year2-unit1",
-        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
       },
       "level_keys": [
         "pl-aif-y2-u1-l3-functions-facilitate"
@@ -633,7 +633,7 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Hello, AI"
@@ -655,7 +655,7 @@
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Hello, AI"
@@ -677,7 +677,7 @@
     {
       "chapter": 20,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Hello, AI"
@@ -699,7 +699,7 @@
     {
       "chapter": 21,
       "position": 8,
-      "activity_section_position": 4,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Hello, AI"
@@ -721,7 +721,7 @@
     {
       "chapter": 22,
       "position": 9,
-      "activity_section_position": 5,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Hello, AI"
@@ -771,27 +771,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-y2-u1-l3-defining-functions-identify"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-year2-unit1",
-        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
-      },
-      "level_keys": [
-        "pl-aif-y2-u1-l3-defining-functions-identify"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 12,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "pl-aif-y2-u1-l3-python-lab-functions"
         ],
         "lesson.key": "lesson-3",
@@ -804,9 +783,51 @@
       ]
     },
     {
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-return-values"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-return-values"
+      ]
+    },
+    {
       "chapter": 26,
       "position": 13,
       "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-defining-functions-identify"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-defining-functions-identify"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 14,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
       },
@@ -1027,7 +1048,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-year2-unit1",
-        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
       }
     },
     {
@@ -1104,9 +1125,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-y2-u1-l3-defining-functions-identify",
+        "level.key": "pl-aif-y2-u1-l3-python-lab-functions",
         "script_level.level_keys": [
-          "pl-aif-y2-u1-l3-defining-functions-identify"
+          "pl-aif-y2-u1-l3-python-lab-functions"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1116,9 +1137,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-y2-u1-l3-python-lab-functions",
+        "level.key": "pl-aif-y2-u1-l3-return-values",
         "script_level.level_keys": [
-          "pl-aif-y2-u1-l3-python-lab-functions"
+          "pl-aif-y2-u1-l3-return-values"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-defining-functions-identify",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-defining-functions-identify"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
