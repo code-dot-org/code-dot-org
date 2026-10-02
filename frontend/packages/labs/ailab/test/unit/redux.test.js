@@ -206,9 +206,11 @@ describe('ailab reducer', () => {
       expect(next.instructionsKey).toBe('datasetView');
     });
 
-    test('the results-details toggle records resultsDetails / results', () => {
-      const open = reducer(initialState, setShowResultsDetails(true));
-      expect(open.instructionsKey).toBe('resultsDetails');
+    test('the results-details toggle keeps the results instructions', () => {
+      const results = reducer(initialState, setCurrentPanel('results'));
+      const open = reducer(results, setShowResultsDetails(true));
+      expect(open.showResultsDetails).toBe(true);
+      expect(open.instructionsKey).toBe('results');
       const closed = reducer(open, setShowResultsDetails(false));
       expect(closed.instructionsKey).toBe('results');
     });

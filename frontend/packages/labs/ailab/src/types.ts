@@ -195,7 +195,6 @@ export const INSTRUCTIONS_KEYS = [
   ...CONTENT_PANELS,
   'uploadedDataset',
   'selectedDataset',
-  'resultsDetails',
 ] as const;
 
 export type InstructionsKey = (typeof INSTRUCTIONS_KEYS)[number];

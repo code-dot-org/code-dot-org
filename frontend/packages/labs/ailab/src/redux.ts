@@ -410,8 +410,6 @@ const ailabSlice = createSlice({
       },
     },
     setShowResultsDetails(state, action: PayloadAction<boolean>) {
-      state.instructionsKey = action.payload ? 'resultsDetails' : 'results';
-      state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
     setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
