@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -67,12 +66,15 @@ export default class HeaderBanner extends React.Component {
 
   // The natural width: what is on screen plus whatever the label is hiding
   // behind its ellipsis, so a squeezed banner still asks for its full size.
+  // Rounded up: text is a fraction of a pixel wide, and a slot a fraction
+  // too narrow ellipsizes the label.
   setDesiredWidth() {
-    const inner = $(this.refs.inner);
-    if (this.props.setDesiredWidth && inner.length > 0) {
+    const inner = this.refs.inner;
+    if (this.props.setDesiredWidth && inner) {
       const label = this.refs.label;
       const hidden = label ? label.scrollWidth - label.clientWidth : 0;
-      this.props.setDesiredWidth(inner.outerWidth() + Math.max(0, hidden));
+      const shown = inner.getBoundingClientRect().width;
+      this.props.setDesiredWidth(Math.ceil(shown + Math.max(0, hidden)) + 1);
     }
   }
 
