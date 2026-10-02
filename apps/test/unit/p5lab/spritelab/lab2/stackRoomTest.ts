@@ -3,6 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import {
   ensureRoom,
   makeRoom,
+  quietsBump,
   STACK_GAP_PX,
   STACK_ROOM_EVENT_GROUP,
   watchStackRoom,
@@ -128,23 +129,54 @@ describe('stackRoom', () => {
       expect(workspace.removeChangeListener).toHaveBeenCalled();
     });
 
-    it("quiets Blockly's bump for the workspace's stacks while watching, never for value blocks", () => {
+    // Blockly's nudge, as the guard sees it: the connection being moved and
+    // the one it moves away from, each on a block with a root.
+    function nudge(
+      workspace: unknown,
+      movingRoot: object,
+      superiorRoot: object = movingRoot
+    ) {
+      const conn = (root: object) =>
+        ({
+          getSourceBlock: () => ({workspace, getRootBlock: () => root}),
+        } as unknown as BlocklyCore.RenderedConnection);
+      return [conn(movingRoot), conn(superiorRoot)] as const;
+    }
+    const stack = (movable = true) => ({isMovable: () => movable});
+    const value = (movable = true) => ({
+      isMovable: () => movable,
+      outputConnection: {},
+    });
+
+    it("quiets Blockly's nudge of a stack in a watched workspace, not of a value block, and not after watching stops", () => {
       const {stop, workspace} = watched();
-      // Blockly's own bump first asks whether the block is dying; a stack
-      // never gets that far.
-      const asked = jest.fn(() => true);
-      const self = (root: object) => ({
-        isDeadOrDying: asked,
-        getRootBlock: () => root,
-      });
-      const bump = BlocklyCore.BlockSvg.prototype.bumpNeighbours;
-      bump.call(self({workspace, nextConnection: {}}) as never);
-      expect(asked).not.toHaveBeenCalled();
-      bump.call(self({workspace, outputConnection: {}}) as never);
-      expect(asked).toHaveBeenCalledTimes(1);
+      expect(quietsBump(...nudge(workspace, stack()))).toBe(true);
+      expect(quietsBump(...nudge(workspace, value()))).toBe(false);
+      // A pinned mover makes Blockly move the other root instead.
+      expect(quietsBump(...nudge(workspace, stack(false), stack()))).toBe(true);
+      expect(quietsBump(...nudge(workspace, value(false), stack()))).toBe(true);
+      expect(quietsBump(...nudge(workspace, stack(false), value()))).toBe(
+        false
+      );
+      expect(quietsBump(...nudge({}, stack()))).toBe(false);
       stop();
-      bump.call(self({workspace, nextConnection: {}}) as never);
-      expect(asked).toHaveBeenCalledTimes(2);
+      expect(quietsBump(...nudge(workspace, stack()))).toBe(false);
+    });
+
+    it("installs the guard once on Blockly's connection, which then returns before touching a quiet stack", () => {
+      const {workspace} = watched();
+      const bump = BlocklyCore.RenderedConnection.prototype.bumpAwayFrom;
+      watchStackRoom(
+        {
+          addChangeListener: () => {},
+          removeChangeListener: () => {},
+        } as unknown as BlocklyCore.WorkspaceSvg,
+        jest.fn()
+      );
+      expect(BlocklyCore.RenderedConnection.prototype.bumpAwayFrom).toBe(bump);
+      // The fakes have nothing else Blockly's own nudge would read.
+      const [moving, superior] = nudge(workspace, stack());
+      expect(() => bump.call(moving, superior)).not.toThrow();
     });
   });
 
@@ -182,11 +214,7 @@ describe('stackRoom', () => {
         block('a', 0, 100),
         block('b', 110, 50),
         block('c', 170, 30),
-        {
-          ...block('v', 105, 20),
-          nextConnection: null,
-          previousConnection: null,
-        },
+        {...block('v', 105, 20), outputConnection: {}},
       ];
       const workspace = {
         rendered: true,

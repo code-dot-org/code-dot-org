@@ -58,10 +58,10 @@ export function measureStack(block: BlocklyCore.BlockSvg): {
   return {x, y, width, height};
 }
 
-/** A stack of statement blocks: a hat, or a block with a top or bottom
-    connection. Loose value blocks are left to Blockly. */
-export function isStack(block: BlocklyCore.Block): boolean {
-  return !!(block.previousConnection || block.nextConnection);
+// A stack: any top block that is not a value block. Loose value blocks are
+// left to Blockly.
+function isStack(block: BlocklyCore.Block): boolean {
+  return !block.outputConnection;
 }
 
 function stackBox(block: BlocklyCore.BlockSvg): StackBox {
@@ -117,36 +117,60 @@ function tidy(moves: () => void): void {
   }
 }
 
-// Workspaces whose stacks Blockly must not bump (see quietStackBumps).
-const quiet = new WeakSet<BlocklyCore.Workspace>();
+// Workspaces whose stacks Blockly must not bump, shared by every copy of
+// this module the dev server has loaded.
+const QUIET_KEY = Symbol.for('spritelab2.quietStackBumps');
+const quiet: WeakSet<BlocklyCore.Workspace> = ((
+  globalThis as Record<symbol, unknown>
+)[QUIET_KEY] ??= new WeakSet()) as WeakSet<BlocklyCore.Workspace>;
+
+/**
+ * Whether Blockly's nudge of `moving` away from `superior` would move a
+ * stack of a quiet workspace. Blockly moves the root of `moving`, or the
+ * root of `superior` when that one is pinned.
+ */
+export function quietsBump(
+  moving: BlocklyCore.RenderedConnection,
+  superior: BlocklyCore.RenderedConnection
+): boolean {
+  const block = moving.getSourceBlock();
+  if (!quiet.has(block.workspace)) {
+    return false;
+  }
+  let root = block.getRootBlock();
+  if (!root.isMovable()) {
+    root = superior.getSourceBlock().getRootBlock();
+  }
+  return isStack(root);
+}
+
+type BumpAwayFrom = BlocklyCore.RenderedConnection['bumpAwayFrom'];
 
 // Blockly nudges an unconnected block aside whenever a connection lands
 // within the snap radius of it, on every render; for stacks, the pass
 // makes the room instead.
-const blocklyBumpNeighbours = BlocklyCore.BlockSvg.prototype.bumpNeighbours;
-BlocklyCore.BlockSvg.prototype.bumpNeighbours = function () {
-  const root = this.getRootBlock();
-  if (quiet.has(root.workspace) && isStack(root)) {
-    return;
+function quietStackBumps(workspace: BlocklyCore.Workspace): () => void {
+  const proto = BlocklyCore.RenderedConnection.prototype;
+  const current = proto.bumpAwayFrom as BumpAwayFrom & {quietsStacks?: true};
+  if (!current.quietsStacks) {
+    const quieted: BumpAwayFrom & {quietsStacks?: true} = function (
+      this: BlocklyCore.RenderedConnection,
+      ...args
+    ) {
+      if (!quietsBump(this, args[0])) {
+        current.apply(this, args);
+      }
+    };
+    quieted.quietsStacks = true;
+    proto.bumpAwayFrom = quieted;
   }
-  blocklyBumpNeighbours.call(this);
-};
-
-/** Stop Blockly bumping this workspace's stacks apart. Returns the
-    function that lets it again. */
-export function quietStackBumps(workspace: BlocklyCore.Workspace): () => void {
   quiet.add(workspace);
   return () => quiet.delete(workspace);
 }
 
-/**
- * Keep room under the stacks as the workspace changes: after code loads,
- * after a block is added or edited, after a block joins a stack, and after
- * a student drags a stack somewhere. A dropped stack keeps the place the
- * student gave it, except that one overlapping the stack above it in its
- * column slides down under that stack. Returns the function that stops
- * watching.
- */
+/** Keep room under the stacks as the workspace changes. A dropped stack
+    keeps its place, except that one overlapping the stack above it in its
+    column slides down under it. Returns the function that stops watching. */
 export function watchStackRoom(
   workspace: BlocklyCore.WorkspaceSvg,
   schedule: typeof ensureRoom = ensureRoom
