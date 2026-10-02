@@ -7,9 +7,10 @@ module Policies
 
     InvalidConfig = Class.new(StandardError)
 
-    # Checked at run time, not only in a unit test: routes.rb reads this
-    # config early in boot, so a malformed file stops the app, and every test
-    # with it, before any test can report it. Keys are strings here.
+    # Thoroughly validate the config at runtime, to pinpoint any issue that
+    # would otherwise cause a misleading error when this config is loaded by
+    # routes.rb during rails startup. Unit tests cannot be relied upon for this
+    # validation, because rails startup errors prevent unit tests from running.
     def self.validate!(config)
       filename = CONFIG_PATH.basename
       raise InvalidConfig, "#{filename}: expected a map of /projects/<key> entries, got #{config.inspect}" unless config.is_a?(Hash)
@@ -40,7 +41,6 @@ module Policies
       end
     end
 
-    # Indifferent access because callers index with both strings and symbols.
     ALL = YAML.safe_load_file(CONFIG_PATH).tap {|config| validate!(config)}.with_indifferent_access.freeze
 
     def self.all
