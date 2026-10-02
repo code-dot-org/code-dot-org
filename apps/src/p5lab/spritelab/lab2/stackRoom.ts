@@ -138,10 +138,10 @@ function undoBump(
 
 /**
  * Keep room under the stacks as the workspace changes: after code loads,
- * after a block is added, after a block joins a stack, and after a student
- * drags a stack somewhere. The dragged stack is their placement and stays
- * where they put it; the stacks below it make way. Returns the function
- * that stops watching.
+ * after a block is added or edited, after a block joins a stack, and after
+ * a student drags a stack somewhere. The dragged stack is their placement
+ * and stays where they put it; the stacks below it make way. Returns the
+ * function that stops watching.
  */
 export function watchStackRoom(
   workspace: BlocklyCore.WorkspaceSvg,
@@ -155,9 +155,11 @@ export function watchStackRoom(
     if (event.group === STACK_ROOM_EVENT_GROUP) {
       return;
     }
+    // A field edit can make a block taller without moving anything.
     if (
       event.type === BlocklyCore.Events.FINISHED_LOADING ||
-      event.type === BlocklyCore.Events.BLOCK_CREATE
+      event.type === BlocklyCore.Events.BLOCK_CREATE ||
+      event.type === BlocklyCore.Events.BLOCK_CHANGE
     ) {
       schedule(workspace);
       return;

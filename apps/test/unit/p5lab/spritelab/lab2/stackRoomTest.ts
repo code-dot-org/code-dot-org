@@ -87,16 +87,18 @@ describe('stackRoom', () => {
       return {fire: (e: unknown) => listener(e), schedule, stop, workspace};
     }
 
-    it('schedules a pass for a load, a new block, and a block joining a stack', () => {
+    it('schedules a pass for a load, a new block, an edited block, and a block joining a stack', () => {
       const {fire, schedule, workspace} = watched();
       fire({type: BlocklyCore.Events.FINISHED_LOADING});
       fire({type: BlocklyCore.Events.BLOCK_CREATE});
+      fire({type: BlocklyCore.Events.BLOCK_CHANGE});
       fire({
         type: BlocklyCore.Events.BLOCK_MOVE,
         newParentId: 'p',
         blockId: 'b',
       });
       expect(schedule.mock.calls).toEqual([
+        [workspace],
         [workspace],
         [workspace],
         [workspace],
