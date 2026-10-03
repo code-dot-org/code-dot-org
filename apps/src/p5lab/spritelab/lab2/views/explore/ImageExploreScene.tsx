@@ -296,6 +296,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               }}
             >
               <MuiIconButton
+                className={styles.infoButton}
                 aria-label="What we asked the AI"
                 aria-expanded={showPrompt}
                 disabled={busy}

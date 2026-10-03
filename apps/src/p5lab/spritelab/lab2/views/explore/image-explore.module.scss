@@ -148,6 +148,12 @@
   margin-top: 16px;
 }
 
+// MUI's default icon colour is a grey that vanishes on the dark theme.
+.infoButton {
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+  font-size: 20px;
+}
+
 // Wider than the popover's default so the prompt reads as a few lines, not
 // a column; doubled to outrank the component's own width.
 .promptPopover.promptPopover {
