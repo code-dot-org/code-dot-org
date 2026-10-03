@@ -20,6 +20,11 @@ export interface QuizQuestionSummary {
   page: number;
 }
 
+export interface QuizPage<T> {
+  page: number;
+  questions: T[];
+}
+
 export interface QuizLevelProperties extends LevelProperties {
   displayName?: string;
   customIntroText?: string;
@@ -31,5 +36,3 @@ export interface QuizLevelProperties extends LevelProperties {
   allowMultipleAttempts?: boolean;
   quizQuestions?: QuizQuestionSummary[];
 }
-
-export const toBool = (value: boolean | undefined) => value ?? false;
