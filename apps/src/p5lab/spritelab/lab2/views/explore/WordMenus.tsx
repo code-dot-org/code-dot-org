@@ -66,7 +66,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   // The sentence with only its chosen words: an empty slot and an unfilled
   // phrase leave nothing behind, not even a space.
   const renderSegments = (segments: Segment[]): React.ReactNode[] =>
-    segments.flatMap((segment, i) => {
+    segments.flatMap((segment, i): React.ReactNode[] => {
       if ('text' in segment) {
         return [<span key={i}>{segment.text}</span>];
       }
