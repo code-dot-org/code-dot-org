@@ -154,27 +154,29 @@
   img.pixelArt {
     image-rendering: pixelated;
   }
+}
 
-  // A character set plays one pose at a time at full size (the canvas takes
-  // the pane's own img/canvas sizing), named in the pane's top left corner.
-  .sheetPreview {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    inset: 0;
-  }
+// A character set plays one pose at a time at full size (the canvas takes
+// its host's img/canvas sizing), named in a pill in the host's top left
+// corner. Top level, so every host of AnimatedSheetPreview gets the pill;
+// the host supplies the positioned box.
+.sheetPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
 
-  .sheetPreviewCaption {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    background: rgb(0 0 0 / 45%);
-    color: #fff;
-    font-size: 13px;
-  }
+.sheetPreviewCaption {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgb(0 0 0 / 45%);
+  color: #fff;
+  font-size: 13px;
 }
 
 // Checkerboard signals transparency; base and tint follow the theme (the

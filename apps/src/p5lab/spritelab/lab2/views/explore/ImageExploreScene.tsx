@@ -25,9 +25,6 @@ import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLess
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
-import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
-import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
 import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
@@ -72,7 +69,6 @@ import WordMenus from './WordMenus';
 import styles from './image-explore.module.scss';
 
 const STYLES: ImageStyle[] = ['pixel', 'smooth'];
-const BOT_FRAMES = [aiBotGenerating0, aiBotGenerating1, aiBotGenerating2];
 // The service's middle temperature, what the student form sends.
 const TEMPERATURE = 1;
 
@@ -180,16 +176,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   // Counts runs; a superseded run's progress and result are dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
-
-  // The bot's frames cycle while a request is out.
-  const [tick, setTick] = useState(0);
-  useEffect(() => {
-    if (mode !== 'generating') {
-      return;
-    }
-    const timer = setInterval(() => setTick(t => t + 1), 500);
-    return () => clearInterval(timer);
-  }, [mode]);
 
   const generate = useCallback(async () => {
     const run = ++runRef.current;
@@ -399,7 +385,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           >
             {generating ? (
               <div className={styles.generating} role="status">
-                {progress?.preview ? (
+                {progress?.preview && (
                   <img
                     src={progress.preview}
                     alt=""
@@ -407,12 +393,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                       styles.preview,
                       style === 'pixel' && styles.pixelArt
                     )}
-                  />
-                ) : (
-                  <img
-                    src={BOT_FRAMES[tick % BOT_FRAMES.length]}
-                    alt=""
-                    className={styles.bot}
                   />
                 )}
                 <div className={styles.spinnerRow}>
@@ -491,7 +471,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 <Popover
                   direction="none"
                   title="Behind the scenes"
-                  content="The AI predicted your picture from patterns in these words:"
+                  content="We sent the AI these words. It predicted a picture to match them."
                   className={styles.promptPopover}
                   onClose={() => setShowPrompt(false)}
                 >
