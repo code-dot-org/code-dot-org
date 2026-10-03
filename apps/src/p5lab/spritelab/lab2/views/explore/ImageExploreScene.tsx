@@ -28,11 +28,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
 import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
-import {
-  basePrompt,
-  CharacterSetProgress,
-  generateCharacterSet,
-} from '../../ai/images/characterSet';
+import {basePrompt, generateCharacterSet} from '../../ai/images/characterSet';
 import {bytesToDataURI} from '../../ai/images/encoding';
 import {
   fullPromptFor,
@@ -130,7 +126,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [made, setMade] = useState<Made | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [fact, setFact] = useState<string | null>(null);
-  const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
   const [expected, setExpected] = useState<Expected | null>(null);
@@ -173,7 +168,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       document.removeEventListener('keydown', onKeyDown);
     };
   }, [showPrompt]);
-  // Counts runs; a superseded run's progress and result are dropped.
+  // Counts runs; a superseded run's result is dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
 
@@ -184,7 +179,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     setShowPrompt(false);
     setExpected(null);
     setError(null);
-    setProgress(null);
     setFact(current => pickFact(current ?? undefined));
     try {
       const options: GenerateImageOptions = {
@@ -208,20 +202,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           )
         : fullPromptFor(prompt, options);
       const result = asSet
-        ? await generateCharacterSet(
-            prompt,
-            {
-              style,
-              temperature: TEMPERATURE,
-              pixelGrid: options.pixelGrid,
-              bodyPlan,
-            },
-            p => {
-              if (run === runRef.current) {
-                setProgress(p);
-              }
-            }
-          )
+        ? await generateCharacterSet(prompt, {
+            style,
+            temperature: TEMPERATURE,
+            pixelGrid: options.pixelGrid,
+            bodyPlan,
+          })
         : await generateImage(prompt, options);
       if (run !== runRef.current) {
         return;
@@ -384,25 +370,14 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             )}
           >
             {generating ? (
-              <div className={styles.generating} role="status">
-                {progress?.preview && (
-                  <img
-                    src={progress.preview}
-                    alt=""
-                    className={classNames(
-                      styles.preview,
-                      style === 'pixel' && styles.pixelArt
-                    )}
-                  />
-                )}
-                <div className={styles.spinnerRow}>
-                  <CircularProgress size={48} thickness={5} />
-                  <MuiTypography variant="body1">
-                    {progress
-                      ? `Drawing ${progress.label}… (${progress.done} of ${progress.total})`
-                      : 'Making your picture…'}
-                  </MuiTypography>
-                </div>
+              // Nothing of the picture shows until all of it is ready: a set's
+              // frames arrive one by one, and the spinner alone covers that.
+              <div
+                className={styles.generating}
+                role="status"
+                aria-label="Making your picture"
+              >
+                <CircularProgress size={56} thickness={5} />
               </div>
             ) : made ? (
               sheet ? (
