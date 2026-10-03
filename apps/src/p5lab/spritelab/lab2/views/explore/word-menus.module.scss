@@ -89,12 +89,14 @@
   padding: 3px 12px;
   cursor: pointer;
 
-  &:hover:not(:disabled) {
+  &:hover:not(:disabled, .chosen) {
     background-color: var(--background-neutral-primary, color.$lightest_gray);
   }
 }
 
-.chosen {
+// Outranks the hover above, so a chosen word keeps its colours under the
+// pointer that just chose it.
+.word.chosen {
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);
 }
