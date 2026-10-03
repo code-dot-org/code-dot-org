@@ -64,6 +64,18 @@
   cursor: pointer;
 }
 
+// The carousel and its dots sit in a tinted box of their own, so they read
+// as one control under the sentence.
+.carouselBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-neutral-secondary, color.$light_gray);
+  background-color: var(--background-neutral-primary, color.$lightest_gray);
+}
+
 // One slot's words at a time, between the arrows.
 .carousel {
   display: flex;

@@ -186,89 +186,93 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       <p className={styles.sentence} aria-live="polite">
         {renderSegments(sentence.segments)}.
       </p>
-      <div className={styles.carousel}>
-        <button
-          type="button"
-          className={styles.arrow}
-          aria-label="Previous words"
-          disabled={!canMove || index === 0}
-          onClick={() => goTo(Math.max(0, index - 1))}
-        >
-          <FontAwesomeV6Icon iconName="chevron-left" />
-        </button>
-        <div
-          // Keyed on the slot so a new set mounts afresh and plays its entrance.
-          key={slot.id}
-          className={classNames(
-            styles.set,
-            direction === 'left' ? styles.enterFromLeft : styles.enterFromRight
-          )}
-          role="group"
-          aria-label={`${slot.label}${slot.required ? ' (pick one)' : ''}`}
-        >
-          <div className={styles.words}>
-            {slot.words.map(word => {
-              const chosen = chosenId === word.id;
-              return (
-                <button
-                  key={word.id}
-                  type="button"
-                  className={classNames(styles.word, chosen && styles.chosen)}
-                  aria-pressed={chosen}
-                  disabled={disabled}
-                  draggable={!disabled}
-                  onDragStart={e => {
-                    e.dataTransfer.setData(
-                      WORD_DRAG_TYPE,
-                      JSON.stringify({slot: slot.id, word: word.id})
-                    );
-                    e.dataTransfer.effectAllowed = 'copy';
-                  }}
-                  onClick={() =>
-                    // A chosen optional word clicked again clears its slot.
-                    choose(
-                      slot.id,
-                      chosen && !slot.required ? undefined : word.id
-                    )
-                  }
-                >
-                  {word.emoji && (
-                    <span className={styles.emoji} aria-hidden>
-                      {word.emoji}
-                    </span>
-                  )}
-                  {word.text}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-        <button
-          type="button"
-          className={styles.arrow}
-          aria-label="Next words"
-          disabled={!canMove || index >= slots.length - 1}
-          onClick={() => goTo(Math.min(slots.length - 1, index + 1))}
-        >
-          <FontAwesomeV6Icon iconName="chevron-right" />
-        </button>
-      </div>
-      <div className={styles.dots}>
-        {slots.map((s, i) => (
+      <div className={styles.carouselBox}>
+        <div className={styles.carousel}>
           <button
-            key={s.id}
             type="button"
+            className={styles.arrow}
+            aria-label="Previous words"
+            disabled={!canMove || index === 0}
+            onClick={() => goTo(Math.max(0, index - 1))}
+          >
+            <FontAwesomeV6Icon iconName="chevron-left" />
+          </button>
+          <div
+            // Keyed on the slot so a new set mounts afresh and plays its entrance.
+            key={slot.id}
             className={classNames(
-              styles.dot,
-              i === index && styles.dotCurrent,
-              wordFor(sentence, s.id, choices[s.id]) && styles.dotFilled
+              styles.set,
+              direction === 'left'
+                ? styles.enterFromLeft
+                : styles.enterFromRight
             )}
-            aria-label={`${s.label} words`}
-            aria-current={i === index ? 'true' : undefined}
-            disabled={!canMove}
-            onClick={() => goTo(i)}
-          />
-        ))}
+            role="group"
+            aria-label={`${slot.label}${slot.required ? ' (pick one)' : ''}`}
+          >
+            <div className={styles.words}>
+              {slot.words.map(word => {
+                const chosen = chosenId === word.id;
+                return (
+                  <button
+                    key={word.id}
+                    type="button"
+                    className={classNames(styles.word, chosen && styles.chosen)}
+                    aria-pressed={chosen}
+                    disabled={disabled}
+                    draggable={!disabled}
+                    onDragStart={e => {
+                      e.dataTransfer.setData(
+                        WORD_DRAG_TYPE,
+                        JSON.stringify({slot: slot.id, word: word.id})
+                      );
+                      e.dataTransfer.effectAllowed = 'copy';
+                    }}
+                    onClick={() =>
+                      // A chosen optional word clicked again clears its slot.
+                      choose(
+                        slot.id,
+                        chosen && !slot.required ? undefined : word.id
+                      )
+                    }
+                  >
+                    {word.emoji && (
+                      <span className={styles.emoji} aria-hidden>
+                        {word.emoji}
+                      </span>
+                    )}
+                    {word.text}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <button
+            type="button"
+            className={styles.arrow}
+            aria-label="Next words"
+            disabled={!canMove || index >= slots.length - 1}
+            onClick={() => goTo(Math.min(slots.length - 1, index + 1))}
+          >
+            <FontAwesomeV6Icon iconName="chevron-right" />
+          </button>
+        </div>
+        <div className={styles.dots}>
+          {slots.map((s, i) => (
+            <button
+              key={s.id}
+              type="button"
+              className={classNames(
+                styles.dot,
+                i === index && styles.dotCurrent,
+                wordFor(sentence, s.id, choices[s.id]) && styles.dotFilled
+              )}
+              aria-label={`${s.label} words`}
+              aria-current={i === index ? 'true' : undefined}
+              disabled={!canMove}
+              onClick={() => goTo(i)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
