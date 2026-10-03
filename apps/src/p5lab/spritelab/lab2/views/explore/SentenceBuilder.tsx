@@ -1,9 +1,9 @@
 // A sentence of word slots. Clicking a slot opens its tray of words below
 // the sentence; clicking a word puts it in the slot, swapping out what was
-// there, and the tray stays open so the next click tries another. A word
-// can also be dragged from the tray onto its slot. A filled slot wears its
-// word as a chip with an x that empties it. A phrase around an empty slot
-// is dimmed: the sentence reads without it.
+// there, and closes the tray. A word can also be dragged from the tray onto
+// its slot. A filled slot wears its word as a chip with an x that empties
+// it. A phrase around an empty slot is dimmed: the sentence reads without
+// it.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -40,8 +40,10 @@ const SentenceBuilder: React.FunctionComponent<SentenceBuilderProps> = ({
   const [overSlotId, setOverSlotId] = useState<string | null>(null);
   const openSlot = openSlotId ? sentence.slots[openSlotId] : undefined;
 
-  const choose = (slotId: string, wordId: string | undefined) =>
+  const choose = (slotId: string, wordId: string | undefined) => {
     onChange({...choices, [slotId]: wordId});
+    setOpenSlotId(null);
+  };
 
   const dragData = (
     e: React.DragEvent

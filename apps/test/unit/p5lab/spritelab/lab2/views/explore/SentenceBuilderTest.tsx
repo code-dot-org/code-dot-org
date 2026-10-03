@@ -21,19 +21,21 @@ const Harness: React.FunctionComponent<{initial?: Choices}> = ({
 };
 
 describe('SentenceBuilder', () => {
-  it('opens a tray for a clicked slot and keeps it open across picks', () => {
+  it('opens a tray for a clicked slot and closes it on a pick', () => {
     render(<Harness />);
     expect(screen.queryByRole('group')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Choose a creature'}));
-    const tray = screen.getByRole('group', {name: 'Words for creature'});
-    expect(tray).toBeTruthy();
+    expect(
+      screen.getByRole('group', {name: 'Words for creature'})
+    ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
     expect(
       screen.getByRole('button', {name: 'creature: cat. Change it'})
     ).toBeTruthy();
-    expect(
-      screen.getByRole('group', {name: 'Words for creature'})
-    ).toBeTruthy();
+    expect(screen.queryByRole('group')).toBeNull();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'creature: cat. Change it'})
+    );
     fireEvent.click(screen.getByRole('button', {name: 'wizard'}));
     expect(
       screen.getByRole('button', {name: 'creature: wizard. Change it'})
