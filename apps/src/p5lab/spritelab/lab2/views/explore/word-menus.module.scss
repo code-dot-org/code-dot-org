@@ -51,22 +51,49 @@
   cursor: pointer;
 }
 
-.row {
+// One slot's words at a time, between the arrows.
+.carousel {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: stretch;
+  gap: 8px;
 }
 
-.rowLabel {
+.arrow {
   flex: none;
-  width: 88px;
+  width: 36px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-neutral-primary, color.$lightest_gray);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+}
+
+.set {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 4px;
+}
+
+.setLabel {
   font-size: 14px;
   color: var(--text-neutral-secondary, color.$dark_charcoal);
 }
 
 .required {
-  display: block;
-  font-size: 12px;
   font-weight: 600;
   color: var(--text-brand-primary, color.$brand_primary_default);
 }
@@ -75,6 +102,33 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+// One dot per slot: the current one is larger, a filled one is solid.
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--text-neutral-secondary, color.$dark_charcoal);
+  background: transparent;
+  cursor: pointer;
+}
+
+.dotFilled {
+  background-color: var(--text-neutral-secondary, color.$dark_charcoal);
+}
+
+.dotCurrent {
+  border-color: var(--text-brand-primary, color.$brand_primary_default);
+  background-color: var(--text-brand-primary, color.$brand_primary_default);
+  transform: scale(1.25);
 }
 
 // Unchosen words are outlined; the chosen one is the filled chip the
