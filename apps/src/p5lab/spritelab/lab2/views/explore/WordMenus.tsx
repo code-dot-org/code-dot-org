@@ -14,6 +14,7 @@ import {
   Segment,
   Sentence,
   Slot,
+  WORD_DRAG_TYPE,
   wordFor,
 } from './exploreSentences';
 
@@ -56,6 +57,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   const [index, setIndex] = useState(0);
   // Which way the last move went, so the new set eases in from that side.
   const [direction, setDirection] = useState<'left' | 'right'>('right');
+  const [overSlotId, setOverSlotId] = useState<string | null>(null);
   const slot = slots[Math.min(index, slots.length - 1)];
   const goTo = (next: number) => {
     setDirection(next < index ? 'left' : 'right');
@@ -64,6 +66,30 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
 
   const choose = (slotId: string, wordId: string | undefined) =>
     onChange({...choices, [slotId]: wordId});
+
+  // A chip in the sentence takes a word dragged from the set on show, when
+  // it is that slot's word.
+  const dropHandlers = (slotId: string) => ({
+    onDragOver: (e: React.DragEvent) => {
+      if (e.dataTransfer.types.includes(WORD_DRAG_TYPE)) {
+        e.preventDefault();
+        setOverSlotId(slotId);
+      }
+    },
+    onDragLeave: () => setOverSlotId(null),
+    onDrop: (e: React.DragEvent) => {
+      setOverSlotId(null);
+      try {
+        const data = JSON.parse(e.dataTransfer.getData(WORD_DRAG_TYPE));
+        if (data.slot === slotId) {
+          e.preventDefault();
+          choose(slotId, data.word);
+        }
+      } catch {
+        // Not a word.
+      }
+    },
+  });
 
   const anyRequiredMissing = slots.some(
     s => s.required && !wordFor(sentence, s.id, choices[s.id])
@@ -102,8 +128,13 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             ? [
                 <span
                   key={s.id}
-                  className={classNames(styles.chip, styles.placeholder)}
+                  className={classNames(
+                    styles.chip,
+                    styles.placeholder,
+                    overSlotId === s.id && styles.dropTarget
+                  )}
                   aria-hidden
+                  {...dropHandlers(s.id)}
                 >
                   {'\u00a0'}
                 </span>,
@@ -111,7 +142,14 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             : [];
         }
         return [
-          <span key={s.id} className={styles.chip}>
+          <span
+            key={s.id}
+            className={classNames(
+              styles.chip,
+              overSlotId === s.id && styles.dropTarget
+            )}
+            {...dropHandlers(s.id)}
+          >
             {word.emoji && (
               <span className={styles.emoji} aria-hidden>
                 {word.emoji}
@@ -184,6 +222,14 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                   className={classNames(styles.word, chosen && styles.chosen)}
                   aria-pressed={chosen}
                   disabled={disabled}
+                  draggable={!disabled}
+                  onDragStart={e => {
+                    e.dataTransfer.setData(
+                      WORD_DRAG_TYPE,
+                      JSON.stringify({slot: slot.id, word: word.id})
+                    );
+                    e.dataTransfer.effectAllowed = 'copy';
+                  }}
                   onClick={() =>
                     // A chosen optional word clicked again clears its slot.
                     choose(

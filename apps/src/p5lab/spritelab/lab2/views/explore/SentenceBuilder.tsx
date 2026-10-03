@@ -15,13 +15,11 @@ import {
   Segment,
   Sentence,
   Slot,
+  WORD_DRAG_TYPE,
   wordFor,
 } from './exploreSentences';
 
 import styles from './sentence-builder.module.scss';
-
-// The drag payload: which slot's word is being carried, and which word.
-const DRAG_TYPE = 'application/x-spritelab2-word';
 
 interface SentenceBuilderProps {
   sentence: Sentence;
@@ -49,7 +47,7 @@ const SentenceBuilder: React.FunctionComponent<SentenceBuilderProps> = ({
     e: React.DragEvent
   ): {slot: string; word: string} | null => {
     try {
-      return JSON.parse(e.dataTransfer.getData(DRAG_TYPE));
+      return JSON.parse(e.dataTransfer.getData(WORD_DRAG_TYPE));
     } catch {
       return null;
     }
@@ -68,7 +66,7 @@ const SentenceBuilder: React.FunctionComponent<SentenceBuilderProps> = ({
           overSlotId === slot.id && styles.dropTarget
         )}
         onDragOver={e => {
-          if (e.dataTransfer.types.includes(DRAG_TYPE)) {
+          if (e.dataTransfer.types.includes(WORD_DRAG_TYPE)) {
             e.preventDefault();
             setOverSlotId(slot.id);
           }
@@ -167,7 +165,7 @@ const SentenceBuilder: React.FunctionComponent<SentenceBuilderProps> = ({
                 draggable={!disabled}
                 onDragStart={e => {
                   e.dataTransfer.setData(
-                    DRAG_TYPE,
+                    WORD_DRAG_TYPE,
                     JSON.stringify({slot: openSlot.id, word: word.id})
                   );
                   e.dataTransfer.effectAllowed = 'copy';

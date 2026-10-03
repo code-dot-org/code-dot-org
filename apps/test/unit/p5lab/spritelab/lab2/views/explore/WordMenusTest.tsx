@@ -129,4 +129,26 @@ describe('WordMenus', () => {
     expect(sentenceText()).toBe('A cat wearing a .');
     expect(placeholderShown()).toBe(true);
   });
+
+  it('takes a word dragged from the set on show onto its blank in the sentence', () => {
+    render(<Harness initial={{creature: 'cat'}} />);
+    next();
+    const data: Record<string, string> = {};
+    const dataTransfer = {
+      setData: (type: string, value: string) => {
+        data[type] = value;
+      },
+      getData: (type: string) => data[type] ?? '',
+      types: ['application/x-spritelab2-word'],
+      effectAllowed: 'copy',
+    };
+    fireEvent.dragStart(screen.getByRole('button', {name: 'grumpy'}), {
+      dataTransfer,
+    });
+    const blank = document.querySelector(
+      'p [class*="placeholder"]'
+    ) as HTMLElement;
+    fireEvent.drop(blank, {dataTransfer});
+    expect(sentenceText()).toBe('A grumpy cat.');
+  });
 });

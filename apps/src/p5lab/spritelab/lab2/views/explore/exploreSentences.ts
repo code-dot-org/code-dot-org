@@ -39,6 +39,9 @@ export interface Sentence {
 /** The word chosen for each slot, by slot id. */
 export type Choices = Record<string, string | undefined>;
 
+/** The drag payload's type: a JSON {slot, word} carried from a word chip. */
+export const WORD_DRAG_TYPE = 'application/x-spritelab2-word';
+
 const CREATURES: Word[] = [
   {id: 'blob', text: 'blob', emoji: '🟢'},
   {id: 'robot', text: 'robot', emoji: '🤖'},

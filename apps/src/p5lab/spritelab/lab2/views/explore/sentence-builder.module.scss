@@ -23,7 +23,7 @@
   align-items: center;
   margin: 0 2px;
   border-radius: 8px;
-  border: 2px dashed var(--border-neutral-secondary, color.$light_gray);
+  border: 1px dashed var(--border-neutral-secondary, color.$light_gray);
   vertical-align: middle;
 }
 
@@ -33,7 +33,7 @@
   color: inherit;
   font: inherit;
   line-height: 1.4;
-  padding: 4px 12px;
+  padding: 6px 14px;
   border-radius: 6px;
   cursor: pointer;
   // Empty, the slot is a blank about one word wide.
@@ -48,7 +48,7 @@
 
   .slotButton {
     min-width: 0;
-    padding-right: 22px;
+    padding-right: 24px;
   }
 }
 
@@ -64,8 +64,8 @@
 // The x sits in the chip's top-right corner, as the legacy AI Lab's did.
 .remove {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -11px;
+  right: -11px;
   width: 20px;
   height: 20px;
   padding: 0;
@@ -99,13 +99,13 @@
 }
 
 .chip {
-  border: 2px solid var(--text-neutral-primary, color.$dark_charcoal);
+  border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
   border-radius: 8px;
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);
   font: inherit;
   font-size: 16px;
-  padding: 4px 12px;
+  padding: 6px 14px;
   cursor: grab;
 
   &:hover:not(:disabled) {

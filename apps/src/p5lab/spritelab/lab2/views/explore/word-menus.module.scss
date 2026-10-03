@@ -24,7 +24,7 @@
   position: relative;
   display: inline-block;
   margin: 0 2px;
-  padding: 2px 22px 2px 12px;
+  padding: 4px 24px 4px 14px;
   border-radius: 8px;
   line-height: 1.4;
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
@@ -35,10 +35,15 @@
 // Where the word from the set on show would land.
 .placeholder {
   min-width: 72px;
-  padding-right: 12px;
+  padding-right: 14px;
   background: transparent;
-  border: 2px dashed var(--text-neutral-secondary, color.$dark_charcoal);
+  border: 1px dashed var(--text-neutral-secondary, color.$dark_charcoal);
   opacity: 0.5;
+}
+
+.dropTarget {
+  opacity: 1;
+  box-shadow: 0 0 0 3px var(--border-brand-primary, color.$brand_primary_default);
 }
 
 .dimmed {
@@ -47,8 +52,8 @@
 
 .remove {
   position: absolute;
-  top: -8px;
-  right: -8px;
+  top: -11px;
+  right: -11px;
   width: 20px;
   height: 20px;
   padding: 0;
@@ -73,7 +78,9 @@
 
 .arrow {
   flex: none;
+  align-self: center;
   width: 36px;
+  height: 40px;
   border: 0;
   border-radius: 8px;
   background: transparent;
@@ -185,14 +192,14 @@
 // Unchosen words are outlined; the chosen one is the filled chip the
 // sentence shows.
 .word {
-  border: 2px solid var(--text-neutral-primary, color.$dark_charcoal);
+  border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
   border-radius: 8px;
   background: transparent;
   color: var(--text-neutral-primary, color.$dark_charcoal);
   font: inherit;
   font-size: 16px;
-  padding: 3px 12px;
-  cursor: pointer;
+  padding: 6px 14px;
+  cursor: grab;
 
   &:hover:not(:disabled, .chosen) {
     background-color: var(--background-neutral-primary, color.$lightest_gray);
