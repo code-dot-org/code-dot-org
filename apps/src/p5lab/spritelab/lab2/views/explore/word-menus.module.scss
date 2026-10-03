@@ -32,6 +32,19 @@
   vertical-align: middle;
 }
 
+// Where the word from the set on show would land.
+.placeholder {
+  min-width: 72px;
+  padding-right: 12px;
+  background: transparent;
+  border: 2px dashed var(--text-neutral-secondary, color.$dark_charcoal);
+  opacity: 0.5;
+}
+
+.dimmed {
+  opacity: 0.5;
+}
+
 .remove {
   position: absolute;
   top: -8px;
@@ -86,6 +99,44 @@
   flex-direction: column;
   gap: 8px;
   padding: 8px 4px;
+}
+
+// A new set fades in with a short slide from the side it came from.
+@keyframes enter-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enter-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.enterFromRight {
+  animation: enter-from-right 0.2s ease-out;
+}
+
+.enterFromLeft {
+  animation: enter-from-left 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enterFromRight,
+  .enterFromLeft {
+    animation: none;
+  }
 }
 
 .setLabel {
@@ -153,4 +204,8 @@
 .word.chosen {
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);
+}
+
+.emoji {
+  margin-right: 6px;
 }

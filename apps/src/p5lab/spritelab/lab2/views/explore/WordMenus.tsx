@@ -54,7 +54,13 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
 }) => {
   const slots = slotsToOffer(sentence);
   const [index, setIndex] = useState(0);
+  // Which way the last move went, so the new set eases in from that side.
+  const [direction, setDirection] = useState<'left' | 'right'>('right');
   const slot = slots[Math.min(index, slots.length - 1)];
+  const goTo = (next: number) => {
+    setDirection(next < index ? 'left' : 'right');
+    setIndex(next);
+  };
 
   const choose = (slotId: string, wordId: string | undefined) =>
     onChange({...choices, [slotId]: wordId});
@@ -62,22 +68,55 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   const anyRequiredMissing = slots.some(
     s => s.required && !wordFor(sentence, s.id, choices[s.id])
   );
+  // The required set holds the carousel until its word is chosen.
+  const canMove = !disabled && !anyRequiredMissing;
+
+  const mentions = (segments: Segment[], slotId: string): boolean =>
+    segments.some(
+      segment =>
+        ('slot' in segment && segment.slot === slotId) ||
+        ('phrase' in segment && mentions(segment.phrase, slotId))
+    );
 
   // The sentence with only its chosen words: an empty slot and an unfilled
-  // phrase leave nothing behind, not even a space.
-  const renderSegments = (segments: Segment[]): React.ReactNode[] =>
+  // phrase leave nothing behind, not even a space. The one exception is the
+  // set on show: its empty slot appears as a dimmed blank chip, with its
+  // phrase dimmed around it, so the student sees where the word would go.
+  const renderSegments = (
+    segments: Segment[],
+    dimmed = false
+  ): React.ReactNode[] =>
     segments.flatMap((segment, i): React.ReactNode[] => {
       if ('text' in segment) {
-        return [<span key={i}>{segment.text}</span>];
+        return [
+          <span key={i} className={classNames(dimmed && styles.dimmed)}>
+            {segment.text}
+          </span>,
+        ];
       }
       if ('slot' in segment) {
         const s = sentence.slots[segment.slot];
         const word = wordFor(sentence, s.id, choices[s.id]);
         if (!word) {
-          return [];
+          return s.id === slot.id
+            ? [
+                <span
+                  key={s.id}
+                  className={classNames(styles.chip, styles.placeholder)}
+                  aria-hidden
+                >
+                  {'\u00a0'}
+                </span>,
+              ]
+            : [];
         }
         return [
           <span key={s.id} className={styles.chip}>
+            {word.emoji && (
+              <span className={styles.emoji} aria-hidden>
+                {word.emoji}
+              </span>
+            )}
             {word.text}
             <button
               type="button"
@@ -91,8 +130,11 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           </span>,
         ];
       }
-      return phraseFilled(sentence, segment.phrase, choices)
-        ? renderSegments(segment.phrase)
+      if (phraseFilled(sentence, segment.phrase, choices)) {
+        return renderSegments(segment.phrase);
+      }
+      return mentions(segment.phrase, slot.id)
+        ? renderSegments(segment.phrase, true)
         : [];
     });
 
@@ -111,13 +153,18 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           type="button"
           className={styles.arrow}
           aria-label="Previous words"
-          disabled={disabled || index === 0}
-          onClick={() => setIndex(i => Math.max(0, i - 1))}
+          disabled={!canMove || index === 0}
+          onClick={() => goTo(Math.max(0, index - 1))}
         >
           <FontAwesomeV6Icon iconName="chevron-left" />
         </button>
         <div
-          className={styles.set}
+          // Keyed on the slot so a new set mounts afresh and plays its entrance.
+          key={slot.id}
+          className={classNames(
+            styles.set,
+            direction === 'left' ? styles.enterFromLeft : styles.enterFromRight
+          )}
           role="group"
           aria-label={`${slot.label}${slot.required ? ' (pick one)' : ''}`}
         >
@@ -145,6 +192,11 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                     )
                   }
                 >
+                  {word.emoji && (
+                    <span className={styles.emoji} aria-hidden>
+                      {word.emoji}
+                    </span>
+                  )}
                   {word.text}
                 </button>
               );
@@ -155,8 +207,8 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           type="button"
           className={styles.arrow}
           aria-label="Next words"
-          disabled={disabled || index >= slots.length - 1}
-          onClick={() => setIndex(i => Math.min(slots.length - 1, i + 1))}
+          disabled={!canMove || index >= slots.length - 1}
+          onClick={() => goTo(Math.min(slots.length - 1, index + 1))}
         >
           <FontAwesomeV6Icon iconName="chevron-right" />
         </button>
@@ -173,8 +225,8 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             )}
             aria-label={`${s.label} words`}
             aria-current={i === index ? 'true' : undefined}
-            disabled={disabled}
-            onClick={() => setIndex(i)}
+            disabled={!canMove}
+            onClick={() => goTo(i)}
           />
         ))}
       </div>

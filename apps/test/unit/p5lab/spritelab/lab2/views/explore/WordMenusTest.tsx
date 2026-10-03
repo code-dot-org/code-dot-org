@@ -22,11 +22,17 @@ const Harness: React.FunctionComponent<{initial?: Choices}> = ({
   );
 };
 
-const sentenceText = () =>
-  (document.querySelector('p') as HTMLElement).textContent?.replace(
-    /\s+/g,
-    ' '
-  );
+// The sentence as read: without the emoji and blanks that are hidden
+// from the accessible tree.
+const sentenceText = () => {
+  const p = (document.querySelector('p') as HTMLElement).cloneNode(
+    true
+  ) as HTMLElement;
+  p.querySelectorAll('[aria-hidden]').forEach(e => e.remove());
+  return p.textContent?.replace(/\s+/g, ' ').trim();
+};
+const placeholderShown = () =>
+  !!document.querySelector('p [class*="placeholder"]');
 const next = () =>
   fireEvent.click(screen.getByRole('button', {name: 'Next words'}));
 
@@ -41,8 +47,25 @@ describe('WordMenus', () => {
     ]);
   });
 
-  it('shows one set of words at a time, starting with the required one', () => {
+  it('holds on the required set until its word is chosen', () => {
     render(<Harness />);
+    expect(
+      screen.getByRole('group', {name: 'creature (pick one)'})
+    ).toBeTruthy();
+    const nextButton = screen.getByRole('button', {
+      name: 'Next words',
+    }) as HTMLButtonElement;
+    expect(nextButton.disabled).toBe(true);
+    expect(
+      (screen.getByRole('button', {name: 'detail words'}) as HTMLButtonElement)
+        .disabled
+    ).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
+    expect(nextButton.disabled).toBe(false);
+  });
+
+  it('shows one set of words at a time, starting with the required one', () => {
+    render(<Harness initial={{creature: 'cat'}} />);
     expect(
       screen.getByRole('group', {name: 'creature (pick one)'})
     ).toBeTruthy();
@@ -63,6 +86,20 @@ describe('WordMenus', () => {
       (screen.getByRole('button', {name: 'Next words'}) as HTMLButtonElement)
         .disabled
     ).toBe(true);
+  });
+
+  it('shows where the set on show would land, dimmed, until a word is chosen', () => {
+    render(<Harness initial={{creature: 'cat'}} />);
+    expect(placeholderShown()).toBe(false);
+    next();
+    expect(placeholderShown()).toBe(true);
+    expect(sentenceText()).toBe('A cat.');
+    fireEvent.click(screen.getByRole('button', {name: 'sparkly'}));
+    expect(placeholderShown()).toBe(false);
+    expect(sentenceText()).toBe('A sparkly cat.');
+    next();
+    expect(placeholderShown()).toBe(true);
+    expect(sentenceText()).toBe('A sparkly cat wearing a .');
   });
 
   it('shows a hint until the required word is chosen, then finished prose', () => {
@@ -88,6 +125,8 @@ describe('WordMenus', () => {
     fireEvent.click(screen.getByRole('button', {name: 'hat'}));
     expect(sentenceText()).toBe('A cat wearing a hat.');
     fireEvent.click(screen.getByRole('button', {name: 'Remove hat'}));
-    expect(sentenceText()).toBe('A cat.');
+    // The clothing set is still on show, so its blank comes back.
+    expect(sentenceText()).toBe('A cat wearing a .');
+    expect(placeholderShown()).toBe(true);
   });
 });

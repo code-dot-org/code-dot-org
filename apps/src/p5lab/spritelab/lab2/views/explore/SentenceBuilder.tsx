@@ -97,7 +97,18 @@ const SentenceBuilder: React.FunctionComponent<SentenceBuilderProps> = ({
         >
           {/* An empty slot is a blank to fill; its label is for the screen
               reader only. */}
-          {word ? word.text : '\u00a0'}
+          {word ? (
+            <>
+              {word.emoji && (
+                <span className={styles.emoji} aria-hidden>
+                  {word.emoji}
+                </span>
+              )}
+              {word.text}
+            </>
+          ) : (
+            '\u00a0'
+          )}
         </button>
         {word && (
           <button
@@ -163,6 +174,11 @@ const SentenceBuilder: React.FunctionComponent<SentenceBuilderProps> = ({
                 }}
                 onClick={() => choose(openSlot.id, word.id)}
               >
+                {word.emoji && (
+                  <span className={styles.emoji} aria-hidden>
+                    {word.emoji}
+                  </span>
+                )}
                 {word.text}
               </button>
             );

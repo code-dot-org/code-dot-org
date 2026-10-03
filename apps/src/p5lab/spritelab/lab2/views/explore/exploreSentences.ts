@@ -9,6 +9,8 @@ import {BodyPlan, ImageSubject, ImageType} from '../../ai/images/types';
 export interface Word {
   id: string;
   text: string;
+  /** Shown on the word's chip beside the text; decoration, not read aloud. */
+  emoji?: string;
   /** How a creature is built, for the character-set poses. */
   bodyPlan?: BodyPlan;
 }
@@ -38,48 +40,48 @@ export interface Sentence {
 export type Choices = Record<string, string | undefined>;
 
 const CREATURES: Word[] = [
-  {id: 'blob', text: 'blob'},
-  {id: 'robot', text: 'robot'},
-  {id: 'dragon', text: 'dragon', bodyPlan: 'quadruped'},
-  {id: 'cat', text: 'cat', bodyPlan: 'quadruped'},
-  {id: 'monster', text: 'monster'},
-  {id: 'wizard', text: 'wizard'},
-  {id: 'penguin', text: 'penguin', bodyPlan: 'bird'},
-  {id: 'witch', text: 'witch'},
+  {id: 'blob', text: 'blob', emoji: '🟢'},
+  {id: 'robot', text: 'robot', emoji: '🤖'},
+  {id: 'dragon', text: 'dragon', emoji: '🐉', bodyPlan: 'quadruped'},
+  {id: 'cat', text: 'cat', emoji: '🐱', bodyPlan: 'quadruped'},
+  {id: 'monster', text: 'monster', emoji: '👾'},
+  {id: 'wizard', text: 'wizard', emoji: '🧙'},
+  {id: 'penguin', text: 'penguin', emoji: '🐧', bodyPlan: 'bird'},
+  {id: 'witch', text: 'witch', emoji: '🧹'},
 ];
 
 const ADJECTIVES: Word[] = [
-  {id: 'brave', text: 'brave'},
-  {id: 'sparkly', text: 'sparkly'},
-  {id: 'grumpy', text: 'grumpy'},
-  {id: 'friendly', text: 'friendly'},
-  {id: 'cute', text: 'cute'},
-  {id: 'sleepy', text: 'sleepy'},
-  {id: 'tiny', text: 'tiny'},
+  {id: 'brave', text: 'brave', emoji: '💪'},
+  {id: 'sparkly', text: 'sparkly', emoji: '✨'},
+  {id: 'grumpy', text: 'grumpy', emoji: '😠'},
+  {id: 'friendly', text: 'friendly', emoji: '😊'},
+  {id: 'cute', text: 'cute', emoji: '🥰'},
+  {id: 'sleepy', text: 'sleepy', emoji: '😴'},
+  {id: 'tiny', text: 'tiny', emoji: '🐜'},
 ];
 
 const CLOTHING: Word[] = [
-  {id: 'hat', text: 'hat'},
-  {id: 'crown', text: 'crown'},
-  {id: 'cape', text: 'cape'},
-  {id: 'scarf', text: 'scarf'},
-  {id: 'boots', text: 'boots'},
-  {id: 'glasses', text: 'glasses'},
+  {id: 'hat', text: 'hat', emoji: '🎩'},
+  {id: 'crown', text: 'crown', emoji: '👑'},
+  {id: 'cape', text: 'cape', emoji: '🦸'},
+  {id: 'scarf', text: 'scarf', emoji: '🧣'},
+  {id: 'boots', text: 'boots', emoji: '👢'},
+  {id: 'glasses', text: 'glasses', emoji: '👓'},
 ];
 
 const THINGS: Word[] = [
-  {id: 'wand', text: 'wand'},
-  {id: 'balloon', text: 'balloon'},
-  {id: 'flower', text: 'flower'},
-  {id: 'book', text: 'book'},
-  {id: 'lantern', text: 'lantern'},
-  {id: 'fish', text: 'fish'},
+  {id: 'wand', text: 'wand', emoji: '🪄'},
+  {id: 'balloon', text: 'balloon', emoji: '🎈'},
+  {id: 'flower', text: 'flower', emoji: '🌸'},
+  {id: 'book', text: 'book', emoji: '📖'},
+  {id: 'lantern', text: 'lantern', emoji: '🏮'},
+  {id: 'fish', text: 'fish', emoji: '🐟'},
 ];
 
 const DETAIL: Word[] = [
-  {id: 'simple', text: 'simple shapes'},
-  {id: 'some', text: 'some detail'},
-  {id: 'lots', text: 'lots of detail'},
+  {id: 'simple', text: 'simple shapes', emoji: '⬜'},
+  {id: 'some', text: 'some detail', emoji: '✏️'},
+  {id: 'lots', text: 'lots of detail', emoji: '🖼️'},
 ];
 
 /** Level 2's character: a creature at least, dressed up as far as the
@@ -118,12 +120,12 @@ const OBJECT_SENTENCE: Sentence = {
       id: 'thing',
       label: 'thing',
       words: [
-        {id: 'key', text: 'key'},
-        {id: 'gem', text: 'gem'},
-        {id: 'coin', text: 'coin'},
-        {id: 'apple', text: 'apple'},
-        {id: 'star', text: 'star'},
-        {id: 'potion', text: 'potion'},
+        {id: 'key', text: 'key', emoji: '🔑'},
+        {id: 'gem', text: 'gem', emoji: '💎'},
+        {id: 'coin', text: 'coin', emoji: '🪙'},
+        {id: 'apple', text: 'apple', emoji: '🍎'},
+        {id: 'star', text: 'star', emoji: '⭐'},
+        {id: 'potion', text: 'potion', emoji: '🧪'},
       ],
       required: true,
     },
@@ -138,23 +140,23 @@ const PLACE_SENTENCE: Sentence = {
       id: 'adjective',
       label: 'adjective',
       words: [
-        {id: 'sunny', text: 'sunny'},
-        {id: 'misty', text: 'misty'},
-        {id: 'frozen', text: 'frozen'},
-        {id: 'spooky', text: 'spooky'},
-        {id: 'peaceful', text: 'peaceful'},
+        {id: 'sunny', text: 'sunny', emoji: '☀️'},
+        {id: 'misty', text: 'misty', emoji: '🌫️'},
+        {id: 'frozen', text: 'frozen', emoji: '❄️'},
+        {id: 'spooky', text: 'spooky', emoji: '👻'},
+        {id: 'peaceful', text: 'peaceful', emoji: '🕊️'},
       ],
     },
     place: {
       id: 'place',
       label: 'place',
       words: [
-        {id: 'forest', text: 'forest'},
-        {id: 'cave', text: 'cave'},
-        {id: 'beach', text: 'beach'},
-        {id: 'castle', text: 'castle'},
-        {id: 'city', text: 'city'},
-        {id: 'space', text: 'space station'},
+        {id: 'forest', text: 'forest', emoji: '🌲'},
+        {id: 'cave', text: 'cave', emoji: '🕳️'},
+        {id: 'beach', text: 'beach', emoji: '🏖️'},
+        {id: 'castle', text: 'castle', emoji: '🏰'},
+        {id: 'city', text: 'city', emoji: '🏙️'},
+        {id: 'space', text: 'space station', emoji: '🛰️'},
       ],
       required: true,
     },
