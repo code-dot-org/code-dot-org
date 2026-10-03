@@ -124,8 +124,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [showPrompt, setShowPrompt] = useState(false);
   const infoButtonRef = useRef<HTMLButtonElement>(null);
   const resultBarRef = useRef<HTMLDivElement>(null);
-  // Height free above the result bar, so the prompt panel never has to flip
-  // below the button that opened it; the text scrolls instead.
+  // Half the height free above the result bar: the prompt panel never has
+  // to flip below the button that opened it, and a shorter panel that
+  // scrolls reads as less of a wall of text than one that fills the column.
   const [promptRoom, setPromptRoom] = useState<number | null>(null);
   useLayoutEffect(() => {
     if (!showPrompt) {
@@ -134,7 +135,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const measure = () => {
       const bar = resultBarRef.current;
       if (bar) {
-        setPromptRoom(Math.max(120, bar.getBoundingClientRect().top - 16));
+        setPromptRoom(
+          Math.max(160, (bar.getBoundingClientRect().top - 16) / 2)
+        );
       }
     };
     measure();
