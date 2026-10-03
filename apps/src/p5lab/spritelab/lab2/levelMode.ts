@@ -25,6 +25,15 @@ export interface LevelMode {
   /** A world level that places one thing: no Erase, the image goes on an
       empty cell, and choosing another cell moves it. */
   placeOne?: boolean;
+  /** Which image-level layout to show; absent is the image dialog pane. */
+  imageUi?: ImageUi;
+}
+
+/** The image-level layouts: `explore` is the two-half scene under trial. */
+export type ImageUi = 'explore';
+
+export function isImageUi(value: unknown): value is ImageUi {
+  return value === 'explore';
 }
 
 /** The style every generate form starts on; students can still switch. */

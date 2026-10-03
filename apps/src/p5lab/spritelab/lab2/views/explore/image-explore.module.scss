@@ -1,0 +1,106 @@
+@use "color.scss";
+
+// Two halves across the level, each free to shrink; the image keeps square.
+.scene {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+  align-items: flex-start;
+}
+
+.imagePane,
+.editPane {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.imageFrame {
+  aspect-ratio: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border-neutral-secondary, color.$light_gray);
+  border-radius: 12px;
+  background-color: var(--background-neutral-secondary, color.$white);
+}
+
+.imageHint,
+.placeholder {
+  color: var(--text-neutral-secondary, color.$dark_charcoal);
+  text-align: center;
+}
+
+.editPane {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--background-neutral-secondary, color.$white);
+}
+
+.groupLabel {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.styleChoice {
+  display: flex;
+  gap: 16px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  legend {
+    float: left;
+    width: 100%;
+  }
+}
+
+.styleOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.styleSwatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+// Where the sentence builder goes; a box of about its final height for now.
+.sentenceSlot {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--border-neutral-secondary, color.$light_gray);
+}
+
+.generateRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.drawButton {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+}
