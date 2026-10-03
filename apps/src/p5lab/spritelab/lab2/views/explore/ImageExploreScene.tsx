@@ -75,6 +75,14 @@ const TEMPERATURE = 1;
 
 type Mode = 'edit' | 'generating' | 'result';
 
+// The reflection asked beside the thumbs once a picture is back.
+type Expected = 'no' | 'kind-of' | 'yes';
+const EXPECTED_CHOICES: {id: Expected; label: string}[] = [
+  {id: 'no', label: 'No'},
+  {id: 'kind-of', label: 'Kind of'},
+  {id: 'yes', label: 'Yes'},
+];
+
 interface Made {
   result: GeneratedImageResult;
   dataURI: string;
@@ -122,6 +130,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
+  const [expected, setExpected] = useState<Expected | null>(null);
   const infoButtonRef = useRef<HTMLButtonElement>(null);
   const resultBarRef = useRef<HTMLDivElement>(null);
   // Half the height free above the result bar: the prompt panel never has
@@ -173,6 +182,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const prompt = promptText(sentence, choices);
     setMode('generating');
     setShowPrompt(false);
+    setExpected(null);
     setError(null);
     setProgress(null);
     setFact(current => pickFact(current ?? undefined));
@@ -273,103 +283,135 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   return (
     <div className={styles.scene}>
       <section className={styles.imagePane} aria-label="Your image">
-        <div
-          className={classNames(
-            styles.imageFrame,
-            made && !generating && styles.imageFrameFilled
-          )}
-        >
-          {generating ? (
-            <div className={styles.generating} role="status">
-              {progress?.preview ? (
-                <img
-                  src={progress.preview}
-                  alt=""
-                  className={classNames(
-                    styles.preview,
-                    style === 'pixel' && styles.pixelArt
-                  )}
-                />
+        <div className={styles.imageColumn}>
+          <div
+            className={classNames(
+              styles.imageFrame,
+              made && !generating && styles.imageFrameFilled
+            )}
+          >
+            {generating ? (
+              <div className={styles.generating} role="status">
+                {progress?.preview ? (
+                  <img
+                    src={progress.preview}
+                    alt=""
+                    className={classNames(
+                      styles.preview,
+                      style === 'pixel' && styles.pixelArt
+                    )}
+                  />
+                ) : (
+                  <img
+                    src={BOT_FRAMES[tick % BOT_FRAMES.length]}
+                    alt=""
+                    className={styles.bot}
+                  />
+                )}
+                <div className={styles.spinnerRow}>
+                  <CircularProgress size={48} thickness={5} />
+                  <MuiTypography variant="body1">
+                    {progress
+                      ? `Drawing ${progress.label}… (${progress.done} of ${progress.total})`
+                      : 'Making your picture…'}
+                  </MuiTypography>
+                </div>
+              </div>
+            ) : made ? (
+              sheet ? (
+                <AnimatedSheetPreview {...sheet} />
               ) : (
                 <img
-                  src={BOT_FRAMES[tick % BOT_FRAMES.length]}
-                  alt=""
-                  className={styles.bot}
+                  src={made.dataURI}
+                  alt={made.result.generation.prompt}
+                  className={classNames(
+                    styles.preview,
+                    made.result.pixelGridSize && styles.pixelArt
+                  )}
                 />
-              )}
-              <div className={styles.spinnerRow}>
-                <CircularProgress size={48} thickness={5} />
-                <MuiTypography variant="body1">
-                  {progress
-                    ? `Drawing ${progress.label}… (${progress.done} of ${progress.total})`
-                    : 'Making your picture…'}
-                </MuiTypography>
-              </div>
-            </div>
-          ) : made ? (
-            sheet ? (
-              <AnimatedSheetPreview {...sheet} />
-            ) : (
-              <img
-                src={made.dataURI}
-                alt={made.result.generation.prompt}
-                className={classNames(
-                  styles.preview,
-                  made.result.pixelGridSize && styles.pixelArt
-                )}
-              />
-            )
-          ) : null}
-        </div>
-        {mode === 'result' && made && (
-          <div
-            className={styles.resultBar}
-            ref={resultBarRef}
-            style={
-              promptRoom === null
-                ? undefined
-                : ({'--prompt-room': `${promptRoom}px`} as React.CSSProperties)
-            }
-          >
-            <MuiIconButton
-              ref={infoButtonRef}
-              className={styles.infoButton}
-              aria-label="What we asked the AI"
-              aria-expanded={showPrompt}
-              disabled={busy}
-              onClick={() => setShowPrompt(open => !open)}
-            >
-              <FontAwesomeV6Icon iconName="circle-info" />
-            </MuiIconButton>
-            {showPrompt && (
-              <Popover
-                direction="none"
-                title="What we asked the AI"
-                content={made.sentPrompt}
-                className={styles.promptPopover}
-                onClose={() => setShowPrompt(false)}
-              />
-            )}
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              startIcon={<FontAwesomeV6Icon iconName="thumbs-down" />}
-              disabled={busy}
-              onClick={generate}
-            >
-              Try again
-            </MuiButton>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              startIcon={<FontAwesomeV6Icon iconName="thumbs-up" />}
-              disabled={busy}
-              onClick={keep}
-            >
-              Keep it
-            </MuiButton>
+              )
+            ) : null}
           </div>
-        )}
+          {mode === 'result' && made && (
+            <div
+              className={styles.reflectRow}
+              role="group"
+              aria-label="Was it what you expected?"
+            >
+              <span className={styles.reflectQuestion}>
+                Was it what you expected?
+              </span>
+              {EXPECTED_CHOICES.map(choice => (
+                <button
+                  key={choice.id}
+                  type="button"
+                  className={classNames(
+                    styles.reflectChip,
+                    expected === choice.id && styles.reflectChosen
+                  )}
+                  aria-pressed={expected === choice.id}
+                  disabled={busy}
+                  onClick={() => setExpected(choice.id)}
+                >
+                  {choice.label}
+                </button>
+              ))}
+            </div>
+          )}
+          {mode === 'result' && made && (
+            <div
+              className={styles.resultBar}
+              ref={resultBarRef}
+              style={
+                promptRoom === null
+                  ? undefined
+                  : ({
+                      '--prompt-room': `${promptRoom}px`,
+                    } as React.CSSProperties)
+              }
+            >
+              <MuiIconButton
+                ref={infoButtonRef}
+                className={styles.infoButton}
+                aria-label="Behind the scenes"
+                aria-expanded={showPrompt}
+                disabled={busy}
+                onClick={() => setShowPrompt(open => !open)}
+              >
+                <FontAwesomeV6Icon iconName="circle-info" />
+              </MuiIconButton>
+              {showPrompt && (
+                <Popover
+                  direction="none"
+                  title="Behind the scenes"
+                  content="The AI predicted your picture from patterns in these words:"
+                  className={styles.promptPopover}
+                  onClose={() => setShowPrompt(false)}
+                >
+                  <p className={styles.promptText}>{made.sentPrompt}</p>
+                </Popover>
+              )}
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                startIcon={<FontAwesomeV6Icon iconName="thumbs-down" />}
+                disabled={busy}
+                onClick={generate}
+              >
+                Try again
+              </MuiButton>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                startIcon={<FontAwesomeV6Icon iconName="thumbs-up" />}
+                disabled={busy}
+                onClick={keep}
+              >
+                Keep it
+              </MuiButton>
+            </div>
+          )}
+        </div>
       </section>
       <section className={styles.editPane} aria-label="Make your image">
         <div className={styles.group}>

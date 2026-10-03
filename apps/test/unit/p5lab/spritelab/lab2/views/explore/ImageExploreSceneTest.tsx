@@ -138,7 +138,7 @@ describe('ImageExploreScene', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    const info = screen.getByRole('button', {name: 'What we asked the AI'});
+    const info = screen.getByRole('button', {name: 'Behind the scenes'});
     expect(info.getAttribute('aria-expanded')).toBe('false');
     expect(screen.queryByText(/^A cat\. /)).toBeNull();
     fireEvent.click(info);
@@ -147,6 +147,26 @@ describe('ImageExploreScene', () => {
     expect(sent).toContain('pixel');
     fireEvent.click(screen.getByRole('button', {name: 'Close'}));
     expect(screen.queryByText(/^A cat\. /)).toBeNull();
+  });
+
+  it('asks whether the picture was expected, remembering the answer', async () => {
+    generateImage.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    const group = screen.getByRole('group', {
+      name: 'Was it what you expected?',
+    });
+    expect(group).toBeTruthy();
+    const kindOf = screen.getByRole('button', {name: 'Kind of'});
+    expect(kindOf.getAttribute('aria-pressed')).toBe('false');
+    fireEvent.click(kindOf);
+    expect(kindOf.getAttribute('aria-pressed')).toBe('true');
+    expect(
+      screen.getByRole('button', {name: 'Yes'}).getAttribute('aria-pressed')
+    ).toBe('false');
   });
 
   it('makes another picture on thumbs down, with the same words', async () => {

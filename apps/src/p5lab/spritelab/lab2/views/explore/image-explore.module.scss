@@ -17,6 +17,14 @@
   min-width: 0;
 }
 
+// The frame, the reflection line and the result buttons share one column,
+// no wider than the window is tall minus the rows under the frame, so the
+// buttons stay on screen.
+.imageColumn {
+  width: min(100%, calc(100vh - 200px));
+  margin: 0 auto;
+}
+
 .imageFrame {
   aspect-ratio: 1;
   width: 100%;
@@ -141,6 +149,40 @@
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
+.reflectRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+}
+
+.reflectQuestion {
+  margin-right: 4px;
+}
+
+.reflectChip {
+  padding: 4px 12px;
+  border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover:not(:disabled, .reflectChosen) {
+    background-color: var(--background-neutral-primary, color.$lightest_gray);
+  }
+}
+
+.reflectChip.reflectChosen {
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
+}
+
 .resultBar {
   position: relative;
   display: flex;
@@ -168,10 +210,12 @@
   max-height: var(--prompt-room, 60vh);
   z-index: 1;
 
-  p {
+  // The intro line stays put; the prompt under it is what scrolls.
+  .promptText {
     align-self: stretch;
     overflow-y: auto;
-    max-height: calc(var(--prompt-room, 60vh) - 110px);
+    max-height: calc(var(--prompt-room, 60vh) - 150px);
+    margin: 0;
     font-family: monospace;
     font-size: 13px;
     line-height: 1.5;
