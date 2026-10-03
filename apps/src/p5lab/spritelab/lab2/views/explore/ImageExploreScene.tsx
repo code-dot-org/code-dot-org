@@ -230,8 +230,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 />
               )}
               <div className={styles.spinnerRow}>
-                <CircularProgress size={28} />
-                <MuiTypography variant="body2">
+                <CircularProgress size={48} thickness={5} />
+                <MuiTypography variant="body1">
                   {progress
                     ? `Drawing ${progress.label}… (${progress.done} of ${progress.total})`
                     : 'Making your picture…'}
