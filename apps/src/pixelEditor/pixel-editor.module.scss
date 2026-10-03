@@ -124,6 +124,42 @@ $border-subtle: chrome.$border-subtle;
   padding-top: 8px;
 }
 
+// The toolbar as one wrapping row, for a host that lays the editor out
+// across a page instead of a modal: tools, sizes and colour in a line with
+// undo/redo at its end, dividers upright, and the palette opening upward.
+.toolbarRow {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  .toolGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .toolbarDivider {
+    width: 1px;
+    height: 26px;
+    margin: 0 4px;
+  }
+
+  .historyRow {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .colorPicker {
+    width: 64px;
+  }
+
+  .spectrumPopover {
+    bottom: calc(100% + 8px);
+    left: 0;
+  }
+}
+
 .canvasArea {
   display: flex;
   align-items: center;
