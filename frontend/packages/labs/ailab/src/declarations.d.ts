@@ -1,19 +1,6 @@
 // Asset module types (`*.png`, `*.jpg`, `*.css`, …) come from `vite/client`,
 // which is listed in `tsconfig.app.json`'s compiler `types`.
 
-declare module 'react-chartjs-2' {
-  export const Bar: import('react').ComponentType<{
-    data: object;
-    width?: number;
-    height?: number;
-    options?: object;
-  }>;
-  export const Scatter: import('react').ComponentType<{
-    data: object;
-    options?: object;
-  }>;
-}
-
 // `ml-cart` ships no types. These are hand-written against 2.1.1, which is why
 // package.json pins that exact version rather than a range.
 declare module 'ml-cart' {

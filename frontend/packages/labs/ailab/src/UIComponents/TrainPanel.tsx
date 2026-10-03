@@ -14,14 +14,17 @@ import {
   addSelectedFeature,
   readyToTrain,
   removeSelectedFeature,
-  setCurrentPanel,
   setLabelColumn,
+  setTrainingModalStep,
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
+import {store} from '../store';
+import train from '../train';
 
 import FieldLabel from './FieldLabel';
 import SentenceTag from './SentenceTag';
 
+import appStyles from '../app.module.scss';
 import styles from './trainPanel.module.scss';
 
 const TrainPanel = () => {
@@ -57,6 +60,12 @@ const TrainPanel = () => {
     dispatch(
       checked ? addSelectedFeature(value) : removeSelectedFeature(value),
     );
+  };
+
+  const onTrain = () => {
+    train.init(store);
+    train.onClickTrain();
+    dispatch(setTrainingModalStep('training'));
   };
 
   const featuresSummary =
@@ -166,7 +175,7 @@ const TrainPanel = () => {
             </div>
           </div>
           <div className={styles.sentence}>
-            <span className={styles.visuallyHidden}>{readableSentence}</span>
+            <span className={appStyles.visuallyHidden}>{readableSentence}</span>
             {sentenceParts}
           </div>
           <div className={styles.actionRow}>
@@ -176,7 +185,7 @@ const TrainPanel = () => {
               size="small"
               fullWidth
               disabled={!canTrain}
-              onClick={() => dispatch(setCurrentPanel('trainModel'))}
+              onClick={onTrain}
             >
               Train model
             </Button>
