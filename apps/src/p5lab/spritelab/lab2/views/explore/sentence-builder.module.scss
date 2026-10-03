@@ -35,7 +35,8 @@
   padding: 4px 12px;
   border-radius: 6px;
   cursor: pointer;
-  opacity: 0.7;
+  // Empty, the slot is a blank about one word wide.
+  min-width: 80px;
 }
 
 .filled {
@@ -45,7 +46,7 @@
   color: var(--background-neutral-primary, color.$white);
 
   .slotButton {
-    opacity: 1;
+    min-width: 0;
     padding-right: 22px;
   }
 }

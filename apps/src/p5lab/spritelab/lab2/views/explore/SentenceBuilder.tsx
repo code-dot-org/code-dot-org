@@ -95,7 +95,9 @@ const SentenceBuilder: React.FunctionComponent<SentenceBuilderProps> = ({
           disabled={disabled}
           onClick={() => setOpenSlotId(open ? null : slot.id)}
         >
-          {word ? word.text : slot.label}
+          {/* An empty slot is a blank to fill; its label is for the screen
+              reader only. */}
+          {word ? word.text : '\u00a0'}
         </button>
         {word && (
           <button
