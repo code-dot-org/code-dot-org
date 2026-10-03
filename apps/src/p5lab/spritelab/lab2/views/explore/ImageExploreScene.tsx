@@ -4,7 +4,7 @@
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithPopover} from '@code-dot-org/component-library/popover';
+import Popover from '@code-dot-org/component-library/popover';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import {
   Button as MuiButton,
@@ -13,7 +13,13 @@ import {
   Typography as MuiTypography,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -116,6 +122,35 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
+  const infoButtonRef = useRef<HTMLButtonElement>(null);
+  const resultBarRef = useRef<HTMLDivElement>(null);
+  // Height free above the result bar, so the prompt panel never has to flip
+  // below the button that opened it; the text scrolls instead.
+  const [promptRoom, setPromptRoom] = useState<number | null>(null);
+  useLayoutEffect(() => {
+    if (!showPrompt) {
+      return;
+    }
+    const measure = () => {
+      const bar = resultBarRef.current;
+      if (bar) {
+        setPromptRoom(Math.max(120, bar.getBoundingClientRect().top - 16));
+      }
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setShowPrompt(false);
+        infoButtonRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('resize', measure);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [showPrompt]);
   // Counts runs; a superseded run's progress and result are dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
@@ -284,27 +319,34 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           ) : null}
         </div>
         {mode === 'result' && made && (
-          <div className={styles.resultBar}>
-            <WithPopover
-              showPopover={showPrompt}
-              popoverProps={{
-                title: 'What we asked the AI',
-                content: made.sentPrompt,
-                direction: 'onTop',
-                className: styles.promptPopover,
-                onClose: () => setShowPrompt(false),
-              }}
+          <div
+            className={styles.resultBar}
+            ref={resultBarRef}
+            style={
+              promptRoom === null
+                ? undefined
+                : ({'--prompt-room': `${promptRoom}px`} as React.CSSProperties)
+            }
+          >
+            <MuiIconButton
+              ref={infoButtonRef}
+              className={styles.infoButton}
+              aria-label="What we asked the AI"
+              aria-expanded={showPrompt}
+              disabled={busy}
+              onClick={() => setShowPrompt(open => !open)}
             >
-              <MuiIconButton
-                className={styles.infoButton}
-                aria-label="What we asked the AI"
-                aria-expanded={showPrompt}
-                disabled={busy}
-                onClick={() => setShowPrompt(open => !open)}
-              >
-                <FontAwesomeV6Icon iconName="circle-info" />
-              </MuiIconButton>
-            </WithPopover>
+              <FontAwesomeV6Icon iconName="circle-info" />
+            </MuiIconButton>
+            {showPrompt && (
+              <Popover
+                direction="none"
+                title="What we asked the AI"
+                content={made.sentPrompt}
+                className={styles.promptPopover}
+                onClose={() => setShowPrompt(false)}
+              />
+            )}
             <MuiButton
               variant="outlined"
               color="secondary"

@@ -142,6 +142,7 @@
 }
 
 .resultBar {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -154,11 +155,27 @@
   font-size: 20px;
 }
 
-// Wider than the popover's default so the prompt reads as a few lines, not
-// a column; doubled to outrank the component's own width.
+// Sits above the (i) button that opens it and never flips below the bar;
+// when the room above runs out the prompt scrolls. Doubled to outrank the
+// component's own width and margin.
 .promptPopover.promptPopover {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  margin: 0;
   width: 460px;
-  max-width: calc(100vw - 32px);
+  max-width: 100%;
+  max-height: var(--prompt-room, 60vh);
+  z-index: 1;
+
+  p {
+    align-self: stretch;
+    overflow-y: auto;
+    max-height: calc(var(--prompt-room, 60vh) - 110px);
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.5;
+  }
 }
 
 .error {
