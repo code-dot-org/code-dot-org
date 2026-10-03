@@ -22,6 +22,8 @@ import React, {
 } from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
+import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
 import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
@@ -52,6 +54,7 @@ import {
   ImageSubject,
   ImageType,
 } from '../../ai/images/types';
+import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import {pickFact} from './exploreFacts';
@@ -62,7 +65,7 @@ import {
   promptText,
   sentenceFor,
 } from './exploreSentences';
-import {saveGeneratedImage} from './saveGeneratedImage';
+import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
 import SentenceBuilder from './SentenceBuilder';
 import WordMenus from './WordMenus';
 
@@ -73,7 +76,11 @@ const BOT_FRAMES = [aiBotGenerating0, aiBotGenerating1, aiBotGenerating2];
 // The service's middle temperature, what the student form sends.
 const TEMPERATURE = 1;
 
-type Mode = 'edit' | 'generating' | 'result';
+type Mode = 'edit' | 'generating' | 'result' | 'paint';
+
+// Drawing by hand offers the pen and the eraser; the rest of the editor's
+// tools stay out of a first picture.
+const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'eraser'];
 
 // The reflection asked beside the thumbs once a picture is back.
 type Expected = 'no' | 'kind-of' | 'yes';
@@ -131,6 +138,13 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
   const [expected, setExpected] = useState<Expected | null>(null);
+  // The blank the student draws on, sized for the style, and the mode to
+  // return to if they cancel.
+  const [paintFrom, setPaintFrom] = useState<{
+    dataURI: string;
+    pixelGridSize?: number;
+  } | null>(null);
+  const paintReturnRef = useRef<Mode>('edit');
   const infoButtonRef = useRef<HTMLButtonElement>(null);
   const resultBarRef = useRef<HTMLDivElement>(null);
   // Half the height free above the result bar: the prompt panel never has
@@ -269,6 +283,38 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     }
   }, [made, dispatch, uploadImage, imageType, imageRole]);
 
+  const startPaint = useCallback(() => {
+    paintReturnRef.current = mode;
+    setShowPrompt(false);
+    setError(null);
+    setPaintFrom(blankPaintImage(imageType, style));
+    setMode('paint');
+  }, [mode, imageType, style]);
+
+  const cancelPaint = useCallback(() => {
+    setPaintFrom(null);
+    setMode(paintReturnRef.current === 'result' && made ? 'result' : 'edit');
+  }, [made]);
+
+  const savePaint = useCallback(
+    async (dataURI: string, meta: {pixelGridSize?: number}) => {
+      setSaving(true);
+      try {
+        await savePaintedImage(dispatch, dataURI, meta.pixelGridSize, {
+          uploadImage,
+          imageType,
+          imageRole,
+        });
+        dispatch(continueOrFinishLesson());
+      } catch (e) {
+        console.error('Saving the drawing failed:', e);
+        setError("Couldn't save the drawing. Try again.");
+        setSaving(false);
+      }
+    },
+    [dispatch, uploadImage, imageType, imageRole]
+  );
+
   const generating = mode === 'generating';
   const busy = generating || saving;
   const sheet =
@@ -279,6 +325,67 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           poses: made.result.frames.poses,
         }
       : null;
+
+  if (mode === 'paint' && paintFrom) {
+    return (
+      <PixelEditor
+        imageUrl={paintFrom.dataURI}
+        knownPixelGrid={paintFrom.pixelGridSize}
+        tools={PAINT_TOOLS}
+        fit="container"
+        toolbarLayout="row"
+        canvasClassName={styles.paintCanvas}
+        opaqueGround={
+          imageType === 'background' ? BACKGROUND_GROUND_COLOR : undefined
+        }
+        onSave={savePaint}
+      >
+        {parts => (
+          <div className={styles.scene}>
+            <section className={styles.imagePane} aria-label="Your drawing">
+              <div className={styles.imageColumn}>
+                <div
+                  className={classNames(styles.imageFrame, styles.paintFrame)}
+                >
+                  {parts.canvas}
+                </div>
+              </div>
+            </section>
+            <section className={styles.editPane} aria-label="Draw your image">
+              <div className={styles.group}>{parts.toolbar}</div>
+              {error && (
+                <MuiTypography
+                  variant="body2"
+                  className={styles.error}
+                  role="alert"
+                >
+                  {error}
+                </MuiTypography>
+              )}
+              <div className={classNames(styles.group, styles.paintActions)}>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  disabled={saving}
+                  onClick={cancelPaint}
+                >
+                  Cancel
+                </MuiButton>
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  disabled={!parts.canSave || saving}
+                  onClick={parts.save}
+                >
+                  Save
+                </MuiButton>
+              </div>
+            </section>
+          </div>
+        )}
+      </PixelEditor>
+    );
+  }
 
   return (
     <div className={styles.scene}>
@@ -503,7 +610,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             color="secondary"
             size="large"
             className={styles.drawButton}
-            disabled
+            disabled={busy}
+            onClick={startPaint}
           >
             I'll draw it myself
           </MuiButton>

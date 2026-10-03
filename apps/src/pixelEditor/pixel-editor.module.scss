@@ -126,7 +126,9 @@ $border-subtle: chrome.$border-subtle;
 
 // The toolbar as one wrapping row, for a host that lays the editor out
 // across a page instead of a modal: tools, sizes and colour in a line with
-// undo/redo at its end, dividers upright, and the palette opening upward.
+// undo/redo at its end, dividers upright, and the palette dropping below
+// the swatch (a row sits at the top of its panel, so there is room under
+// it, not over it).
 .toolbarRow {
   flex-direction: row;
   flex-wrap: wrap;
@@ -155,7 +157,8 @@ $border-subtle: chrome.$border-subtle;
   }
 
   .spectrumPopover {
-    bottom: calc(100% + 8px);
+    top: calc(100% + 8px);
+    bottom: auto;
     left: 0;
   }
 }

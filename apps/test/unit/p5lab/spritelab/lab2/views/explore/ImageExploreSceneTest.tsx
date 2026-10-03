@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -50,7 +51,9 @@ function renderScene(props = {}) {
   const store = createStore(() => ({}));
   return render(
     <Provider store={store}>
-      <ImageExploreScene imageType="sprite" defaultStyle="pixel" {...props} />
+      <ThemeProvider>
+        <ImageExploreScene imageType="sprite" defaultStyle="pixel" {...props} />
+      </ThemeProvider>
     </Provider>
   );
 }
@@ -81,6 +84,22 @@ describe('ImageExploreScene', () => {
     expect(
       screen.getByRole('button', {name: "I'll draw it myself"})
     ).toBeTruthy();
+  });
+
+  it('turns the frame into a drawing canvas with pen and eraser only', () => {
+    renderScene();
+    fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
+    expect(screen.getByRole('region', {name: 'Your drawing'})).toBeTruthy();
+    expect(
+      screen.getByRole('application', {name: 'Drawing canvas'})
+    ).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Pen (P)'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Eraser (E)'})).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Fill (F)'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
+    expect(screen.queryByRole('application')).toBeNull();
   });
 
   it('offers no animation for an object', () => {

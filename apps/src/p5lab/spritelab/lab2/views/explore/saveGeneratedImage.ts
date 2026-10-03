@@ -1,7 +1,7 @@
-// Keep a generated image: upload it and add it to the project's images as
-// a new animation with the level's role. Mirrors what GenerateImagePane does
-// on accept, kept apart while the explore layout is on trial; fold the two
-// together when it settles.
+// Keep a picture the student made: upload it and add it to the project's
+// images as a new animation with the level's role. Mirrors what
+// GenerateImagePane does on accept and on a paint save, kept apart while the
+// explore layout is on trial; fold the two together when it settles.
 
 import {AnyAction, Dispatch} from 'redux';
 
@@ -33,6 +33,45 @@ interface SaveOptions {
   imageRole?: string;
 }
 
+/** Upload the bytes when there is somewhere to; else the data URI itself is
+    the source, which persists in project sources. */
+async function sourceUrlFor(
+  uploadImage: UploadImageFunction | undefined,
+  filename: string,
+  bytes: Uint8Array,
+  dataURI: string
+): Promise<string> {
+  if (!uploadImage) {
+    return dataURI;
+  }
+  try {
+    return await uploadImage(filename, bytes, 'image/png');
+  } catch {
+    return dataURI;
+  }
+}
+
+/** Add one new animation under the next free name for its type; the name
+    it got. addAnimation is an untyped JS thunk that renames to name_N, so
+    the plain name is set back when it is free. */
+function addNamedImage(
+  dispatch: Dispatch,
+  imageType: ImageType,
+  props: Record<string, unknown>
+): string {
+  const name = nextImageName(
+    imageType,
+    candidate =>
+      !isNameUnique(candidate, getStore().getState().animationList.propsByKey)
+  );
+  const key = createUuid();
+  dispatch(addAnimation(key, {name, ...props}) as unknown as AnyAction);
+  if (isNameUnique(name, getStore().getState().animationList.propsByKey)) {
+    dispatch(setAnimationName(key, name) as unknown as AnyAction);
+  }
+  return name;
+}
+
 /** The name the saved image got. */
 export async function saveGeneratedImage(
   dispatch: Dispatch,
@@ -40,59 +79,70 @@ export async function saveGeneratedImage(
   {uploadImage, imageType, imageRole}: SaveOptions
 ): Promise<string> {
   const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
-  let sourceUrl = dataURI;
-  if (uploadImage) {
-    try {
-      sourceUrl = await uploadImage(
-        result.filename,
-        result.uint8Array,
-        result.mediaType
-      );
-    } catch {
-      // The embedded data URI still works; the project just grows.
-    }
-  }
+  const sourceUrl = await sourceUrlFor(
+    uploadImage,
+    result.filename,
+    result.uint8Array,
+    dataURI
+  );
   const frameSize = (await dataURIToSourceSize(dataURI).catch(() => null)) ?? {
     x: MODEL_OUTPUT_PX,
     y: MODEL_OUTPUT_PX,
   };
   const frames = result.frames;
-  const name = nextImageName(
-    imageType,
-    candidate =>
-      !isNameUnique(candidate, getStore().getState().animationList.propsByKey)
+  return addNamedImage(dispatch, imageType, {
+    ...SINGLE_FRAME,
+    sourceUrl,
+    frameSize,
+    ...(frames
+      ? {
+          frameSize: frames.frameSize,
+          sourceSize: {
+            x: frames.frameSize.x * frames.frameCount,
+            y: frames.frameSize.y,
+          },
+          frameCount: frames.frameCount,
+          frameDelay: frames.frameDelay,
+          looping: frames.looping,
+          poses: frames.poses,
+        }
+      : {}),
+    categories: categoriesForType(imageType),
+    ...(imageRole && {role: imageRole}),
+    pixelGridSize: result.pixelGridSize,
+    trimmed: !!result.trimmed,
+    generation: result.generation,
+  });
+}
+
+/** Keep a picture painted by hand, as the editor handed it back (a PNG data
+    URI, full canvas); the name it got. */
+export async function savePaintedImage(
+  dispatch: Dispatch,
+  dataURI: string,
+  pixelGridSize: number | undefined,
+  {uploadImage, imageType, imageRole}: SaveOptions
+): Promise<string> {
+  const bytes = Uint8Array.from(atob(dataURI.split(',')[1]), c =>
+    c.charCodeAt(0)
   );
-  const key = createUuid();
-  // addAnimation is an untyped JS thunk that renames to name_N; the plain
-  // name is set back when it is free.
-  dispatch(
-    addAnimation(key, {
-      name,
-      ...SINGLE_FRAME,
-      sourceUrl,
-      frameSize,
-      ...(frames
-        ? {
-            frameSize: frames.frameSize,
-            sourceSize: {
-              x: frames.frameSize.x * frames.frameCount,
-              y: frames.frameSize.y,
-            },
-            frameCount: frames.frameCount,
-            frameDelay: frames.frameDelay,
-            looping: frames.looping,
-            poses: frames.poses,
-          }
-        : {}),
-      categories: categoriesForType(imageType),
-      ...(imageRole && {role: imageRole}),
-      pixelGridSize: result.pixelGridSize,
-      trimmed: !!result.trimmed,
-      generation: result.generation,
-    }) as unknown as AnyAction
+  const sourceUrl = await sourceUrlFor(
+    uploadImage,
+    `painted_${Date.now()}.png`,
+    bytes,
+    dataURI
   );
-  if (isNameUnique(name, getStore().getState().animationList.propsByKey)) {
-    dispatch(setAnimationName(key, name) as unknown as AnyAction);
-  }
-  return name;
+  const frameSize = (await dataURIToSourceSize(dataURI).catch(() => null)) ?? {
+    x: MODEL_OUTPUT_PX,
+    y: MODEL_OUTPUT_PX,
+  };
+  return addNamedImage(dispatch, imageType, {
+    ...SINGLE_FRAME,
+    sourceUrl,
+    frameSize,
+    categories: categoriesForType(imageType),
+    ...(imageRole && {role: imageRole}),
+    pixelGridSize,
+    trimmed: false,
+  });
 }
