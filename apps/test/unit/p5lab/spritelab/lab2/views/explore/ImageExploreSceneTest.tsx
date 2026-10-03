@@ -7,7 +7,17 @@ import ImageExploreScene from '@cdo/apps/p5lab/spritelab/lab2/views/explore/Imag
 
 const generateImage = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration'
+  ),
   generateImage: (...args: unknown[]) => generateImage(...args),
+}));
+const generateCharacterSet = jest.fn();
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet'
+  ),
+  generateCharacterSet: (...args: unknown[]) => generateCharacterSet(...args),
 }));
 const saveGeneratedImage = jest.fn();
 jest.mock(
@@ -53,6 +63,7 @@ const pickCreature = () => {
 describe('ImageExploreScene', () => {
   beforeEach(() => {
     generateImage.mockReset();
+    generateCharacterSet.mockReset();
     saveGeneratedImage.mockReset();
     continueOrFinishLesson.mockClear();
   });
@@ -75,6 +86,23 @@ describe('ImageExploreScene', () => {
   it('offers no animation for an object', () => {
     renderScene({imageSubject: 'object'});
     expect(screen.queryByRole('checkbox')).toBeNull();
+  });
+
+  it('animates every character in the menu variant, with no checkbox', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({sentenceUi: 'menu'});
+    expect(screen.queryByRole('checkbox')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    expect(generateImage).not.toHaveBeenCalled();
+    expect(generateCharacterSet).toHaveBeenCalledTimes(1);
+    expect(generateCharacterSet.mock.calls[0][0]).toBe('A dragon');
+    expect(generateCharacterSet.mock.calls[0][1]).toMatchObject({
+      style: 'pixel',
+      bodyPlan: 'quadruped',
+    });
   });
 
   it('shows a fact and a spinner while making the picture, then the two choices', async () => {
@@ -101,6 +129,24 @@ describe('ImageExploreScene', () => {
     expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Try again'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Keep it'})).toBeTruthy();
+  });
+
+  it('shows the prompt as sent behind the (i) button', async () => {
+    generateImage.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    const info = screen.getByRole('button', {name: 'What we asked the AI'});
+    expect(info.getAttribute('aria-expanded')).toBe('false');
+    expect(screen.queryByText(/^A cat\. /)).toBeNull();
+    fireEvent.click(info);
+    expect(info.getAttribute('aria-expanded')).toBe('true');
+    const sent = screen.getByText(/^A cat\. /).textContent ?? '';
+    expect(sent).toContain('pixel');
+    fireEvent.click(screen.getByRole('button', {name: 'Close'}));
+    expect(screen.queryByText(/^A cat\. /)).toBeNull();
   });
 
   it('makes another picture on thumbs down, with the same words', async () => {

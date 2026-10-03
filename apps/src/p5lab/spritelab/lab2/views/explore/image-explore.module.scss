@@ -1,4 +1,5 @@
 @use "color.scss";
+@use "../../../../../pixelEditor/dialogChrome" as chrome;
 
 // Two halves across the level, each free to shrink; the image keeps square.
 .scene {
@@ -27,11 +28,6 @@
   background-color: var(--background-neutral-secondary, color.$white);
 }
 
-.imageHint {
-  color: var(--text-neutral-secondary, color.$dark_charcoal);
-  text-align: center;
-}
-
 .editPane {
   display: flex;
   flex-direction: column;
@@ -47,12 +43,10 @@
   background-color: var(--background-neutral-secondary, color.$white);
 }
 
-.groupLabel {
-  font-weight: 600;
-  margin-bottom: 8px;
-  padding: 0;
-  border: 0;
-  color: var(--text-neutral-primary, color.$dark_charcoal);
+// The style legend is for the screen reader only; on the page, a heading
+// over the first group read as a heading for the whole pane.
+.srOnly {
+  @include chrome.sr-only;
 }
 
 .styleChoice {
@@ -152,6 +146,13 @@
   justify-content: center;
   gap: 16px;
   margin-top: 16px;
+}
+
+// Wider than the popover's default so the prompt reads as a few lines, not
+// a column; doubled to outrank the component's own width.
+.promptPopover.promptPopover {
+  width: 460px;
+  max-width: calc(100vw - 32px);
 }
 
 .error {

@@ -64,6 +64,17 @@ describe('WordMenus', () => {
     expect(nextButton.disabled).toBe(false);
   });
 
+  it('returns to the required set when its word is removed elsewhere', () => {
+    render(<Harness initial={{creature: 'cat'}} />);
+    next();
+    expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));
+    expect(
+      screen.getByRole('group', {name: 'creature (pick one)'})
+    ).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'dragon'})).toBeTruthy();
+  });
+
   it('shows one set of words at a time, starting with the required one', () => {
     render(<Harness initial={{creature: 'cat'}} />);
     expect(
@@ -102,10 +113,12 @@ describe('WordMenus', () => {
     expect(sentenceText()).toBe('A sparkly cat wearing a .');
   });
 
-  it('shows a hint until the required word is chosen, then finished prose', () => {
+  it('starts as the sentence waiting for its noun, then reads as prose', () => {
     render(<Harness />);
-    expect(sentenceText()).toBe('Pick a word below to start.');
+    expect(placeholderShown()).toBe(true);
+    expect(sentenceText()).toBe('A .');
     fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
+    expect(placeholderShown()).toBe(false);
     expect(sentenceText()).toBe('A dragon.');
     next();
     fireEvent.click(screen.getByRole('button', {name: 'sparkly'}));

@@ -4,10 +4,12 @@
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithPopover} from '@code-dot-org/component-library/popover';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import {
   Button as MuiButton,
   CircularProgress,
+  IconButton as MuiIconButton,
   Typography as MuiTypography,
 } from '@mui/material';
 import classNames from 'classnames';
@@ -22,17 +24,21 @@ import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
 import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
 import {
+  basePrompt,
   CharacterSetProgress,
   generateCharacterSet,
 } from '../../ai/images/characterSet';
 import {bytesToDataURI} from '../../ai/images/encoding';
 import {
+  fullPromptFor,
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
+  pixelBlockFor,
   UploadImageFunction,
 } from '../../ai/images/imageGeneration';
 import {ImageSafetyError} from '../../ai/images/imageSafety';
+import {chooseKeyColor} from '../../ai/images/keyColor';
 import {defaultPixelGrid} from '../../ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
@@ -66,6 +72,8 @@ type Mode = 'edit' | 'generating' | 'result';
 interface Made {
   result: GeneratedImageResult;
   dataURI: string;
+  /** The words as the model got them, for the (i) button. */
+  sentPrompt: string;
 }
 
 interface ImageExploreSceneProps {
@@ -91,7 +99,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
-  const [animated, setAnimated] = useState(false);
+  // The menu variant animates every character and offers no choice.
+  const offersAnimation = sentenceUi === 'slots';
+  const [animated, setAnimated] = useState(!offersAnimation);
   const sentence = sentenceFor(imageType, imageSubject);
   const [choices, setChoices] = useState<Choices>({});
   const complete = isComplete(sentence, choices);
@@ -105,6 +115,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [fact, setFact] = useState<string | null>(null);
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   const [saving, setSaving] = useState(false);
+  const [showPrompt, setShowPrompt] = useState(false);
   // Counts runs; a superseded run's progress and result are dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
@@ -123,6 +134,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const run = ++runRef.current;
     const prompt = promptText(sentence, choices);
     setMode('generating');
+    setShowPrompt(false);
     setError(null);
     setProgress(null);
     setFact(current => pickFact(current ?? undefined));
@@ -134,29 +146,42 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         temperature: TEMPERATURE,
         ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
       };
-      const result =
-        animated && canAnimate
-          ? await generateCharacterSet(
-              prompt,
-              {
-                style,
-                temperature: TEMPERATURE,
-                pixelGrid: options.pixelGrid,
-                bodyPlan: chosenBodyPlan(sentence, choices),
-              },
-              p => {
-                if (run === runRef.current) {
-                  setProgress(p);
-                }
+      const bodyPlan = chosenBodyPlan(sentence, choices);
+      const asSet = animated && canAnimate;
+      // A set's first frame is asked for in its own words; the (i) button
+      // shows those, the posed frames being edits of that picture.
+      const sentPrompt = asSet
+        ? basePrompt(
+            prompt,
+            style,
+            chooseKeyColor(prompt),
+            pixelBlockFor('sprite', options.pixelGrid),
+            bodyPlan
+          )
+        : fullPromptFor(prompt, options);
+      const result = asSet
+        ? await generateCharacterSet(
+            prompt,
+            {
+              style,
+              temperature: TEMPERATURE,
+              pixelGrid: options.pixelGrid,
+              bodyPlan,
+            },
+            p => {
+              if (run === runRef.current) {
+                setProgress(p);
               }
-            )
-          : await generateImage(prompt, options);
+            }
+          )
+        : await generateImage(prompt, options);
       if (run !== runRef.current) {
         return;
       }
       setMade({
         result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
+        sentPrompt,
       });
       setMode('result');
     } catch (e) {
@@ -249,21 +274,36 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             ) : (
               <img
                 src={made.dataURI}
-                alt={promptText(sentence, choices)}
+                alt={made.result.generation.prompt}
                 className={classNames(
                   styles.preview,
                   made.result.pixelGridSize && styles.pixelArt
                 )}
               />
             )
-          ) : (
-            <MuiTypography variant="body2" className={styles.imageHint}>
-              Your image will show here.
-            </MuiTypography>
-          )}
+          ) : null}
         </div>
-        {mode === 'result' && (
+        {mode === 'result' && made && (
           <div className={styles.resultBar}>
+            <WithPopover
+              showPopover={showPrompt}
+              popoverProps={{
+                title: 'What we asked the AI',
+                content: made.sentPrompt,
+                direction: 'onTop',
+                className: styles.promptPopover,
+                onClose: () => setShowPrompt(false),
+              }}
+            >
+              <MuiIconButton
+                aria-label="What we asked the AI"
+                aria-expanded={showPrompt}
+                disabled={busy}
+                onClick={() => setShowPrompt(open => !open)}
+              >
+                <FontAwesomeV6Icon iconName="circle-info" />
+              </MuiIconButton>
+            </WithPopover>
             <MuiButton
               variant="outlined"
               color="secondary"
@@ -290,7 +330,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       <section className={styles.editPane} aria-label="Make your image">
         <div className={styles.group}>
           <fieldset className={styles.styleChoice} disabled={busy}>
-            <legend className={styles.groupLabel}>Style</legend>
+            <legend className={styles.srOnly}>Style</legend>
             <div className={styles.styleOptions}>
               {STYLES.map(s => (
                 <RadioButton
@@ -333,7 +373,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             />
           )}
           <div className={styles.generateRow}>
-            {canAnimate && (
+            {canAnimate && offersAnimation && (
               <Checkbox
                 name="explore-animated"
                 label="Make it move"

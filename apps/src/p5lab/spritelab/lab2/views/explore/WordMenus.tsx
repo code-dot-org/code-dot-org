@@ -1,8 +1,8 @@
 // The sentence as prose above, reading only the words chosen so far, and
 // one slot's words at a time below, in a carousel: arrows either side and a
 // dot per slot. The other way to build the same sentence as SentenceBuilder:
-// nothing in the sentence is ever blank, so "A dragon" reads as finished and
-// each set of words is an offer to add to it.
+// the only blank the sentence ever shows is for the set on show, so "A
+// dragon" reads as finished and each set of words is an offer to add to it.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -25,8 +25,6 @@ interface WordMenusProps {
   choices: Choices;
   onChange: (choices: Choices) => void;
   disabled?: boolean;
-  /** Shown as the sentence until a required word is chosen. */
-  hint?: string;
 }
 
 /** The slots to offer: the required ones first, then the rest, each group
@@ -51,7 +49,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   choices,
   onChange,
   disabled,
-  hint = 'Pick a word below to start.',
 }) => {
   const slots = slotsToOffer(sentence);
   const [index, setIndex] = useState(0);
@@ -64,8 +61,15 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     setIndex(next);
   };
 
-  const choose = (slotId: string, wordId: string | undefined) =>
+  const choose = (slotId: string, wordId: string | undefined) => {
     onChange({...choices, [slotId]: wordId});
+    // Clearing a required word locks the carousel again, so bring the
+    // student back to the set the word came from.
+    const at = slots.findIndex(s => s.id === slotId);
+    if (!wordId && slots[at].required && at !== index) {
+      goTo(at);
+    }
+  };
 
   // A chip in the sentence takes a word dragged from the set on show, when
   // it is that slot's word.
@@ -180,11 +184,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   return (
     <div className={styles.menus}>
       <p className={styles.sentence} aria-live="polite">
-        {anyRequiredMissing ? (
-          <span className={styles.hint}>{hint}</span>
-        ) : (
-          <>{renderSegments(sentence.segments)}.</>
-        )}
+        {renderSegments(sentence.segments)}.
       </p>
       <div className={styles.carousel}>
         <button
