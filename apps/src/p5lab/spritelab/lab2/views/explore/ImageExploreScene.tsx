@@ -52,6 +52,7 @@ import {
 } from './exploreSentences';
 import {saveGeneratedImage} from './saveGeneratedImage';
 import SentenceBuilder from './SentenceBuilder';
+import WordMenus from './WordMenus';
 
 import styles from './image-explore.module.scss';
 
@@ -75,6 +76,9 @@ interface ImageExploreSceneProps {
   /** Recorded on the saved image. */
   imageRole?: string;
   uploadImage?: UploadImageFunction;
+  /** How the sentence is built: word slots in the sentence, or a prose
+      sentence over word menus. */
+  sentenceUi?: 'slots' | 'menu';
 }
 
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
@@ -83,6 +87,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   defaultStyle,
   imageRole,
   uploadImage,
+  sentenceUi = 'slots',
 }) => {
   const dispatch = useAppDispatch();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
@@ -312,12 +317,21 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               ))}
             </div>
           </fieldset>
-          <SentenceBuilder
-            sentence={sentence}
-            choices={choices}
-            onChange={setChoices}
-            disabled={busy}
-          />
+          {sentenceUi === 'menu' ? (
+            <WordMenus
+              sentence={sentence}
+              choices={choices}
+              onChange={setChoices}
+              disabled={busy}
+            />
+          ) : (
+            <SentenceBuilder
+              sentence={sentence}
+              choices={choices}
+              onChange={setChoices}
+              disabled={busy}
+            />
+          )}
           <div className={styles.generateRow}>
             {canAnimate && (
               <Checkbox

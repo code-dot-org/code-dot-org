@@ -1788,6 +1788,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
+  const imageUi = getImageUiParam() ?? levelProperties.levelMode?.imageUi;
+
   // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
@@ -1840,14 +1842,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {isImageMode(levelProperties.levelMode) ? (
         // The image panel is the whole lab, with the floating guide over it.
         <div className={moduleStyles.imageLevelArea}>
-          {(getImageUiParam() ?? levelProperties.levelMode?.imageUi) ===
-          'explore' ? (
+          {imageUi ? (
             <ImageExploreScene
               imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
               imageSubject={levelProperties.levelMode?.imageSubject}
               defaultStyle={DEFAULT_IMAGE_STYLE}
               imageRole={levelProperties.levelMode?.imageRole}
               uploadImage={uploadImage}
+              sentenceUi={imageUi === 'explore-menu' ? 'menu' : 'slots'}
             />
           ) : (
             <GenerateImagePane imageLevel {...imagePaneProps} />

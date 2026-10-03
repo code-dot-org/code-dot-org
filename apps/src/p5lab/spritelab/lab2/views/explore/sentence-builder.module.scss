@@ -9,7 +9,8 @@
 .sentence {
   margin: 0;
   font-size: 20px;
-  line-height: 2.2;
+  // Room between lines so stacked slots do not touch.
+  line-height: 2.8;
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 

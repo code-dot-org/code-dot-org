@@ -1,0 +1,100 @@
+@use "color.scss";
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// The sentence reads as finished prose; chosen words wear chips.
+.sentence {
+  margin: 0;
+  min-height: 48px;
+  font-size: 22px;
+  line-height: 2;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+}
+
+.hint {
+  font-size: 18px;
+  color: var(--text-neutral-secondary, color.$dark_charcoal);
+}
+
+.chip {
+  position: relative;
+  display: inline-block;
+  margin: 0 2px;
+  padding: 2px 22px 2px 12px;
+  border-radius: 8px;
+  line-height: 1.4;
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
+  vertical-align: middle;
+}
+
+.remove {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 2px solid var(--background-neutral-primary, color.$white);
+  border-radius: 50%;
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
+  font-size: 11px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.rowLabel {
+  flex: none;
+  width: 88px;
+  font-size: 14px;
+  color: var(--text-neutral-secondary, color.$dark_charcoal);
+}
+
+.required {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-brand-primary, color.$brand_primary_default);
+}
+
+.words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+// Unchosen words are outlined; the chosen one is the filled chip the
+// sentence shows.
+.word {
+  border: 2px solid var(--text-neutral-primary, color.$dark_charcoal);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+  font: inherit;
+  font-size: 16px;
+  padding: 3px 12px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-neutral-primary, color.$lightest_gray);
+  }
+}
+
+.chosen {
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
+}

@@ -29,11 +29,13 @@ export interface LevelMode {
   imageUi?: ImageUi;
 }
 
-/** The image-level layouts: `explore` is the two-half scene under trial. */
-export type ImageUi = 'explore';
+/** The image-level layouts under trial: the two-half scene with the
+    sentence built from slots (`explore`) or from word menus under a prose
+    sentence (`explore-menu`). */
+export type ImageUi = 'explore' | 'explore-menu';
 
 export function isImageUi(value: unknown): value is ImageUi {
-  return value === 'explore';
+  return value === 'explore' || value === 'explore-menu';
 }
 
 /** The style every generate form starts on; students can still switch. */
