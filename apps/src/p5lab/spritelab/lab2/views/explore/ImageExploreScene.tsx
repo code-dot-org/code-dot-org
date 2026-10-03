@@ -18,6 +18,9 @@ import {
   ImageType,
 } from '../../ai/images/types';
 
+import {Choices, isComplete, promptText, sentenceFor} from './exploreSentences';
+import SentenceBuilder from './SentenceBuilder';
+
 import styles from './image-explore.module.scss';
 
 const STYLES: ImageStyle[] = ['pixel', 'smooth'];
@@ -36,6 +39,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
 }) => {
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
   const [animated, setAnimated] = useState(false);
+  const sentence = sentenceFor(imageType, imageSubject);
+  const [choices, setChoices] = useState<Choices>({});
+  const complete = isComplete(sentence, choices);
   // Only a character can be animated; an object or a background is one
   // picture.
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
@@ -53,35 +59,37 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         <div className={styles.group}>
           <fieldset className={styles.styleChoice}>
             <legend className={styles.groupLabel}>Style</legend>
-            {STYLES.map(s => (
-              <RadioButton
-                key={s}
-                name="explore-style"
-                value={s}
-                size="s"
-                checked={style === s}
-                onChange={() => setStyle(s)}
-                className={styles.styleOption}
-              >
-                <img
-                  src={s === 'pixel' ? pixelSample : smoothSample}
-                  alt=""
-                  className={classNames(
-                    styles.styleSwatch,
-                    s === 'pixel' && styles.pixelArt
-                  )}
-                />
-                <MuiTypography variant="body3" component="span">
-                  {IMAGE_STYLE_LABELS[s]}
-                </MuiTypography>
-              </RadioButton>
-            ))}
+            <div className={styles.styleOptions}>
+              {STYLES.map(s => (
+                <RadioButton
+                  key={s}
+                  name="explore-style"
+                  value={s}
+                  size="s"
+                  checked={style === s}
+                  onChange={() => setStyle(s)}
+                  className={styles.styleOption}
+                >
+                  <img
+                    src={s === 'pixel' ? pixelSample : smoothSample}
+                    alt=""
+                    className={classNames(
+                      styles.styleSwatch,
+                      s === 'pixel' && styles.pixelArt
+                    )}
+                  />
+                  <MuiTypography variant="body3" component="span">
+                    {IMAGE_STYLE_LABELS[s]}
+                  </MuiTypography>
+                </RadioButton>
+              ))}
+            </div>
           </fieldset>
-          <div className={styles.sentenceSlot}>
-            <MuiTypography variant="body2" className={styles.placeholder}>
-              Pick the words for your character here.
-            </MuiTypography>
-          </div>
+          <SentenceBuilder
+            sentence={sentence}
+            choices={choices}
+            onChange={setChoices}
+          />
           <div className={styles.generateRow}>
             {canAnimate && (
               <Checkbox
@@ -92,7 +100,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 onChange={e => setAnimated(e.target.checked)}
               />
             )}
-            <MuiButton variant="contained" color="primary" disabled>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              disabled={!complete}
+              title={promptText(sentence, choices)}
+            >
               Generate
             </MuiButton>
           </div>

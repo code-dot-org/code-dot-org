@@ -27,8 +27,7 @@
   background-color: var(--background-neutral-secondary, color.$white);
 }
 
-.imageHint,
-.placeholder {
+.imageHint {
   color: var(--text-neutral-secondary, color.$dark_charcoal);
   text-align: center;
 }
@@ -51,25 +50,26 @@
 .groupLabel {
   font-weight: 600;
   margin-bottom: 8px;
+  padding: 0;
+  border: 0;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
 .styleChoice {
-  display: flex;
-  gap: 16px;
   border: 0;
   margin: 0;
   padding: 0;
+  min-width: 0;
+}
 
-  legend {
-    float: left;
-    width: 100%;
-  }
+.styleOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .styleOption {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  white-space: nowrap;
 }
 
 .styleSwatch {
@@ -80,16 +80,6 @@
 
 .pixelArt {
   image-rendering: pixelated;
-}
-
-// Where the sentence builder goes; a box of about its final height for now.
-.sentenceSlot {
-  min-height: 96px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  border: 1px solid var(--border-neutral-secondary, color.$light_gray);
 }
 
 .generateRow {

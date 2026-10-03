@@ -1,0 +1,116 @@
+@use "color.scss";
+
+.builder {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sentence {
+  margin: 0;
+  font-size: 20px;
+  line-height: 2.2;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+}
+
+// A slot is the outline a chip drops into; filled, it is the chip. The
+// chip is the text colour on the page colour reversed, so it reads as a
+// label laid on the page, in either theme.
+.slot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 2px;
+  border-radius: 8px;
+  border: 2px dashed var(--border-neutral-secondary, color.$light_gray);
+  vertical-align: middle;
+}
+
+.slotButton {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.4;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.filled {
+  border-style: solid;
+  border-color: var(--text-neutral-primary, color.$dark_charcoal);
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
+
+  .slotButton {
+    opacity: 1;
+    padding-right: 22px;
+  }
+}
+
+.open {
+  box-shadow: 0 0 0 3px var(--border-brand-primary, color.$brand_primary_default);
+}
+
+.dropTarget {
+  border-style: solid;
+  box-shadow: 0 0 0 3px var(--border-brand-primary, color.$brand_primary_default);
+}
+
+// The x sits in the chip's top-right corner, as the legacy AI Lab's did.
+.remove {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 2px solid var(--background-neutral-primary, color.$white);
+  border-radius: 50%;
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
+  font-size: 11px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.phrase {
+  transition: opacity 0.2s;
+}
+
+.dimmed {
+  opacity: 0.4;
+}
+
+.tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--background-neutral-primary, color.$lightest_gray);
+}
+
+.chip {
+  border: 2px solid var(--text-neutral-primary, color.$dark_charcoal);
+  border-radius: 8px;
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
+  font: inherit;
+  font-size: 16px;
+  padding: 4px 12px;
+  cursor: grab;
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.15);
+  }
+}
+
+.chosen {
+  box-shadow: 0 0 0 3px var(--border-brand-primary, color.$brand_primary_default);
+}
