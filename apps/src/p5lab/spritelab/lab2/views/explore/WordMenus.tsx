@@ -206,12 +206,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           role="group"
           aria-label={`${slot.label}${slot.required ? ' (pick one)' : ''}`}
         >
-          <span className={styles.setLabel}>
-            {slot.label}
-            {slot.required && (
-              <span className={styles.required}> · pick one</span>
-            )}
-          </span>
           <div className={styles.words}>
             {slot.words.map(word => {
               const chosen = chosenId === word.id;

@@ -68,8 +68,16 @@
   gap: 24px;
 }
 
+// A Style option is taller than its text, so its radio, swatch and label
+// centre on the row; the design system aligns a radio row to the top.
 .styleOption {
+  align-items: center;
+  gap: 8px;
   white-space: nowrap;
+
+  i {
+    margin-top: 0;
+  }
 }
 
 .styleSwatch {
