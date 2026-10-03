@@ -3,40 +3,88 @@
 // by level_mode.imageUi or ?image-ui=explore; the pane is untouched.
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  CircularProgress,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
+import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
+import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
 import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
+import {
+  CharacterSetProgress,
+  generateCharacterSet,
+} from '../../ai/images/characterSet';
+import {bytesToDataURI} from '../../ai/images/encoding';
+import {
+  GeneratedImageResult,
+  generateImage,
+  GenerateImageOptions,
+  UploadImageFunction,
+} from '../../ai/images/imageGeneration';
+import {ImageSafetyError} from '../../ai/images/imageSafety';
+import {defaultPixelGrid} from '../../ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
   ImageStyle,
   ImageSubject,
   ImageType,
 } from '../../ai/images/types';
+import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
-import {Choices, isComplete, promptText, sentenceFor} from './exploreSentences';
+import {pickFact} from './exploreFacts';
+import {
+  Choices,
+  chosenBodyPlan,
+  isComplete,
+  promptText,
+  sentenceFor,
+} from './exploreSentences';
+import {saveGeneratedImage} from './saveGeneratedImage';
 import SentenceBuilder from './SentenceBuilder';
 
 import styles from './image-explore.module.scss';
 
 const STYLES: ImageStyle[] = ['pixel', 'smooth'];
+const BOT_FRAMES = [aiBotGenerating0, aiBotGenerating1, aiBotGenerating2];
+// The service's middle temperature, what the student form sends.
+const TEMPERATURE = 1;
+
+type Mode = 'edit' | 'generating' | 'result';
+
+interface Made {
+  result: GeneratedImageResult;
+  dataURI: string;
+}
 
 interface ImageExploreSceneProps {
   imageType: ImageType;
   imageSubject?: ImageSubject;
   /** Style the controls start on. */
   defaultStyle: ImageStyle;
+  /** Recorded on the saved image. */
+  imageRole?: string;
+  uploadImage?: UploadImageFunction;
 }
 
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   imageType,
   imageSubject,
   defaultStyle,
+  imageRole,
+  uploadImage,
 }) => {
+  const dispatch = useAppDispatch();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
   const [animated, setAnimated] = useState(false);
   const sentence = sentenceFor(imageType, imageSubject);
@@ -46,18 +94,197 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   // picture.
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
 
+  const [mode, setMode] = useState<Mode>('edit');
+  const [made, setMade] = useState<Made | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [fact, setFact] = useState<string | null>(null);
+  const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
+  const [saving, setSaving] = useState(false);
+  // Counts runs; a superseded run's progress and result are dropped.
+  const runRef = useRef(0);
+  useEffect(() => () => void runRef.current++, []);
+
+  // The bot's frames cycle while a request is out.
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    if (mode !== 'generating') {
+      return;
+    }
+    const timer = setInterval(() => setTick(t => t + 1), 500);
+    return () => clearInterval(timer);
+  }, [mode]);
+
+  const generate = useCallback(async () => {
+    const run = ++runRef.current;
+    const prompt = promptText(sentence, choices);
+    setMode('generating');
+    setError(null);
+    setProgress(null);
+    setFact(current => pickFact(current ?? undefined));
+    try {
+      const options: GenerateImageOptions = {
+        imageType,
+        ...(imageType === 'sprite' && {subject: imageSubject ?? 'character'}),
+        style,
+        temperature: TEMPERATURE,
+        ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
+      };
+      const result =
+        animated && canAnimate
+          ? await generateCharacterSet(
+              prompt,
+              {
+                style,
+                temperature: TEMPERATURE,
+                pixelGrid: options.pixelGrid,
+                bodyPlan: chosenBodyPlan(sentence, choices),
+              },
+              p => {
+                if (run === runRef.current) {
+                  setProgress(p);
+                }
+              }
+            )
+          : await generateImage(prompt, options);
+      if (run !== runRef.current) {
+        return;
+      }
+      setMade({
+        result,
+        dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
+      });
+      setMode('result');
+    } catch (e) {
+      if (run !== runRef.current) {
+        return;
+      }
+      if (e instanceof ImageSafetyError) {
+        setError(
+          e.phase === 'prompt'
+            ? "Those words aren't okay for class. Try different ones."
+            : "That picture didn't pass our safety check. Try again."
+        );
+      } else {
+        console.error('Image generation failed:', e);
+        setError("Couldn't make the picture. Try again.");
+      }
+      setMode('edit');
+    }
+  }, [sentence, choices, imageType, imageSubject, style, animated, canAnimate]);
+
+  const keep = useCallback(async () => {
+    if (!made) {
+      return;
+    }
+    setSaving(true);
+    try {
+      await saveGeneratedImage(dispatch, made.result, {
+        uploadImage,
+        imageType,
+        imageRole,
+      });
+      dispatch(continueOrFinishLesson());
+    } catch (e) {
+      console.error('Saving the image failed:', e);
+      setError("Couldn't save the picture. Try again.");
+      setSaving(false);
+    }
+  }, [made, dispatch, uploadImage, imageType, imageRole]);
+
+  const generating = mode === 'generating';
+  const busy = generating || saving;
+  const sheet =
+    made?.result.frames?.poses && made.result.frames
+      ? {
+          src: made.dataURI,
+          frameSize: made.result.frames.frameSize,
+          poses: made.result.frames.poses,
+        }
+      : null;
+
   return (
     <div className={styles.scene}>
       <section className={styles.imagePane} aria-label="Your image">
-        <div className={styles.imageFrame}>
-          <MuiTypography variant="body2" className={styles.imageHint}>
-            Your image will show here.
-          </MuiTypography>
+        <div
+          className={classNames(
+            styles.imageFrame,
+            made && !generating && styles.imageFrameFilled
+          )}
+        >
+          {generating ? (
+            <div className={styles.generating} role="status">
+              {progress?.preview ? (
+                <img
+                  src={progress.preview}
+                  alt=""
+                  className={classNames(
+                    styles.preview,
+                    style === 'pixel' && styles.pixelArt
+                  )}
+                />
+              ) : (
+                <img
+                  src={BOT_FRAMES[tick % BOT_FRAMES.length]}
+                  alt=""
+                  className={styles.bot}
+                />
+              )}
+              <div className={styles.spinnerRow}>
+                <CircularProgress size={28} />
+                <MuiTypography variant="body2">
+                  {progress
+                    ? `Drawing ${progress.label}… (${progress.done} of ${progress.total})`
+                    : 'Making your picture…'}
+                </MuiTypography>
+              </div>
+            </div>
+          ) : made ? (
+            sheet ? (
+              <AnimatedSheetPreview {...sheet} />
+            ) : (
+              <img
+                src={made.dataURI}
+                alt={promptText(sentence, choices)}
+                className={classNames(
+                  styles.preview,
+                  made.result.pixelGridSize && styles.pixelArt
+                )}
+              />
+            )
+          ) : (
+            <MuiTypography variant="body2" className={styles.imageHint}>
+              Your image will show here.
+            </MuiTypography>
+          )}
         </div>
+        {mode === 'result' && (
+          <div className={styles.resultBar}>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="large"
+              startIcon={<FontAwesomeV6Icon iconName="thumbs-down" />}
+              disabled={busy}
+              onClick={generate}
+            >
+              Try again
+            </MuiButton>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="large"
+              startIcon={<FontAwesomeV6Icon iconName="thumbs-up" />}
+              disabled={busy}
+              onClick={keep}
+            >
+              Keep it
+            </MuiButton>
+          </div>
+        )}
       </section>
       <section className={styles.editPane} aria-label="Make your image">
         <div className={styles.group}>
-          <fieldset className={styles.styleChoice}>
+          <fieldset className={styles.styleChoice} disabled={busy}>
             <legend className={styles.groupLabel}>Style</legend>
             <div className={styles.styleOptions}>
               {STYLES.map(s => (
@@ -89,6 +316,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             sentence={sentence}
             choices={choices}
             onChange={setChoices}
+            disabled={busy}
           />
           <div className={styles.generateRow}>
             {canAnimate && (
@@ -97,18 +325,37 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 label="Make it move"
                 size="s"
                 checked={animated}
+                disabled={busy}
                 onChange={e => setAnimated(e.target.checked)}
               />
             )}
             <MuiButton
               variant="contained"
               color="primary"
-              disabled={!complete}
-              title={promptText(sentence, choices)}
+              disabled={!complete || busy}
+              onClick={generate}
             >
-              Generate
+              {mode === 'result' ? 'Generate again' : 'Generate'}
             </MuiButton>
           </div>
+          {error && (
+            <MuiTypography
+              variant="body2"
+              className={styles.error}
+              role="alert"
+            >
+              {error}
+            </MuiTypography>
+          )}
+          {generating && fact && (
+            <aside className={styles.factBox} aria-label="Did you know?">
+              <FontAwesomeV6Icon
+                iconName="lightbulb"
+                className={styles.factIcon}
+              />
+              <MuiTypography variant="body2">{fact}</MuiTypography>
+            </aside>
+          )}
         </div>
         <div className={styles.group}>
           <MuiButton

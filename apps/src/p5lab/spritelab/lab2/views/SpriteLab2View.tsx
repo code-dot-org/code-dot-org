@@ -1846,6 +1846,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
               imageSubject={levelProperties.levelMode?.imageSubject}
               defaultStyle={DEFAULT_IMAGE_STYLE}
+              imageRole={levelProperties.levelMode?.imageRole}
+              uploadImage={uploadImage}
             />
           ) : (
             <GenerateImagePane imageLevel {...imagePaneProps} />
