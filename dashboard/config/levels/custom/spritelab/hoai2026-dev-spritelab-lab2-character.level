@@ -1,10 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
-  "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "uses_lab2": "true",
     "block_pools": [
@@ -28,7 +23,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Make a character.** Pick the words for your main character and click **Generate**."
+        "text": "**Make a character.**"
       },
       {
         "text": "**There's your main character!** Click **Continue**.",
@@ -38,8 +33,15 @@
         }
       }
     ],
-    "long_instructions": "# Make a character\nPick the words for your main character and click **Generate**.",
-    "header_label": "Make a story"
-  }
+    "long_instructions": "# Make a character",
+    "header_label": "Make a story",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1
 }]]></config>
+  <blocks/>
 </GamelabJr>
