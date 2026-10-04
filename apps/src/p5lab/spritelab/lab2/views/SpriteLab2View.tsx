@@ -3,6 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import FocusLock from 'react-focus-lock';
 import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -124,6 +125,9 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
+import TourArrow from './components/TourArrow';
+import {tourVariantFromParams} from './freeplayTour';
+import FreeplayTourGuide from './FreeplayTourGuide';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
@@ -131,6 +135,7 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import useFreeplayTour, {TOUR_LAYER_ID} from './useFreeplayTour';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -1644,6 +1649,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
+  // The welcome tour, on freeplay, while ?tour= asks for one.
+  const tourVariant = useMemo(
+    () =>
+      isFreeplayMode(levelProperties.levelMode)
+        ? tourVariantFromParams()
+        : undefined,
+    [levelProperties.levelMode]
+  );
+  const tour = useFreeplayTour({
+    variant: tourVariant,
+    chipOpensGallery,
+    scenes,
+    selectScene: sceneEditing.selectScene,
+    // From the beginning, as the Play tab does.
+    startPlay: () => {
+      setPlayStartSceneId(null);
+      unlockGameAudioRef.current();
+      dispatch(setActiveTab('Play'));
+    },
+  });
+
   // A play control must not leave focus parked on the clicked button, where
   // Space — also a game key — would re-activate it on every press. Keyboard
   // activations hand focus to the playspace; pointer activations blur to
@@ -1824,6 +1850,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
   };
+
+  const floatingGuide = !!levelProperties.levelMode && (
+    <GenerateSpriteLab
+      levelMode={levelProperties.levelMode}
+      width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
+      onLayout={handleGuideLayout}
+      instructions={guide.text}
+      collapsedText={guide.collapsedText}
+      showContinue={guide.showContinue}
+      levelProperties={levelProperties}
+      override={tour && <FreeplayTourGuide tour={tour} />}
+    />
+  );
 
   return (
     <div className={moduleStyles.labRow}>
@@ -2024,16 +2063,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {/* Floating guide, when the level asks for it; it follows the
           student across every tab, narrowing on Play to leave the game more
           space. */}
-          {!!levelProperties.levelMode && (
-            <GenerateSpriteLab
-              levelMode={levelProperties.levelMode}
-              width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
-              onLayout={handleGuideLayout}
-              instructions={guide.text}
-              collapsedText={guide.collapsedText}
-              showContinue={guide.showContinue}
-              levelProperties={levelProperties}
-            />
+          {/* The tour blacks out the lab below the bar until its first view,
+          and points at what each line describes. */}
+          {tour?.coverBlack && <div className={moduleStyles.tourCover} />}
+          {tour?.arrowTarget && <TourArrow target={tour.arrowTarget} />}
+          {tour ? (
+            <div id={TOUR_LAYER_ID} className={moduleStyles.tourLayer}>
+              <FocusLock returnFocus className={moduleStyles.tourFocus}>
+                {floatingGuide}
+              </FocusLock>
+            </div>
+          ) : (
+            floatingGuide
           )}
         </TabShell>
       )}

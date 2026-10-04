@@ -143,6 +143,10 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
   );
 };
 
+/** On the Play or Stop button, whichever shows; the welcome tour points
+    at it (freeplayTour.ts). */
+export const PLAY_BAR_BUTTON_ID = 'spritelab2-play-bar-button';
+
 interface PlayBarProps {
   playing: boolean;
   arrows: ArrowSet;
@@ -166,6 +170,7 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
   if (!playing) {
     return (
       <MuiButton
+        id={PLAY_BAR_BUTTON_ID}
         variant="contained"
         color="primary"
         size="small"
@@ -181,6 +186,7 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
     <>
       {onStop && (
         <MuiButton
+          id={PLAY_BAR_BUTTON_ID}
           variant="contained"
           color="primary"
           size="small"
