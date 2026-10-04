@@ -65,15 +65,15 @@
   image-rendering: pixelated;
 }
 
-// Generate (after the animation checkbox, where there is one) at the left,
-// the style dropdown at the right.
+// The style dropdown (after the animation checkbox, where there is one) at
+// the left, Generate at the right.
 .generateRow {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.styleDropdown {
+.generateButton {
   margin-left: auto;
 }
 

@@ -523,16 +523,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   onChange={e => setAnimated(e.target.checked)}
                 />
               )}
-              <MuiButton
-                variant="contained"
-                color="primary"
-                disabled={!complete || busy}
-                onClick={generate}
-              >
-                Generate
-              </MuiButton>
               <SimpleDropdown
-                className={styles.styleDropdown}
                 name="explore-style"
                 labelText="Style"
                 isLabelVisible={false}
@@ -546,6 +537,15 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 disabled={busy}
                 onChange={e => setStyle(e.target.value as ImageStyle)}
               />
+              <MuiButton
+                className={styles.generateButton}
+                variant="contained"
+                color="primary"
+                disabled={!complete || busy}
+                onClick={generate}
+              >
+                Generate
+              </MuiButton>
             </div>
           )}
           {error && (
