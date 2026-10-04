@@ -234,9 +234,10 @@ describe('stackRoom', () => {
         bTop + 50 + STACK_GAP_PX,
         105,
       ]);
+      // One pass: its two flushes of the render queue.
       expect(
         BlocklyCore.renderManagement.finishQueuedRenders
-      ).toHaveBeenCalledTimes(1);
+      ).toHaveBeenCalledTimes(2);
       expect(BlocklyCore.Events.setGroup).toHaveBeenCalledWith(
         STACK_ROOM_EVENT_GROUP
       );

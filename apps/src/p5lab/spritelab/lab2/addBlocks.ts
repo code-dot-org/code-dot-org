@@ -5,7 +5,12 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {scrollIntoView} from './scrollIntoView';
-import {ensureRoom, measureStack, STACK_GAP_PX} from './stackRoom';
+import {
+  ensureRoom,
+  heightsSettled,
+  measureStack,
+  STACK_GAP_PX,
+} from './stackRoom';
 
 /** A block to add. Its `data`, when set, is the tag a workspace block must
     carry to stand for it. */
@@ -183,15 +188,6 @@ export function attachShadow(
   return null;
 }
 
-// Resolves once queued renders have run and placeholders have their
-// blocks' shape: they size themselves a tick after the queue drains, with
-// a render of their own.
-async function settled(): Promise<void> {
-  await BlocklyCore.renderManagement.finishQueuedRenders();
-  await new Promise(resolve => setTimeout(resolve));
-  await BlocklyCore.renderManagement.finishQueuedRenders();
-}
-
 /**
  * Add the level's blocks the workspace lacks, each placed below
  * everything already there, and hang its shadows on the stacks named for
@@ -204,8 +200,7 @@ export async function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   entries: AddBlockEntry[]
 ): Promise<number> {
-  // Stacks are measured at their final heights.
-  await settled();
+  await heightsSettled();
   if (!workspace.rendered) {
     return 0;
   }
@@ -253,8 +248,8 @@ export async function addMissingBlocks(
 }
 
 // Scroll the blocks on screen: a long program can leave them below the
-// fold of a small screen. Only up or down, so the stacks keep their place
-// across the workspace.
+// fold of a small screen. Only up or down, so the stacks keep their left
+// edge.
 async function showBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   blocks: BlocklyCore.BlockSvg[]
@@ -262,7 +257,7 @@ async function showBlocks(
   if (!blocks.length) {
     return;
   }
-  await settled();
+  await heightsSettled();
   const live = blocks.filter(block => !block.isDisposed());
   if (!live.length) {
     return;

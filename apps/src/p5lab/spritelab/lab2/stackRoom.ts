@@ -72,6 +72,17 @@ function stackBox(block: BlocklyCore.BlockSvg): StackBox {
   };
 }
 
+/**
+ * Resolves once every block has its final height. A placeholder takes its
+ * block's shape a tick after the render queue drains, with a render of its
+ * own.
+ */
+export async function heightsSettled(): Promise<void> {
+  await BlocklyCore.renderManagement.finishQueuedRenders();
+  await new Promise(resolve => setTimeout(resolve));
+  await BlocklyCore.renderManagement.finishQueuedRenders();
+}
+
 // Workspaces with a pass waiting.
 const pending = new WeakSet<BlocklyCore.WorkspaceSvg>();
 
@@ -85,22 +96,14 @@ export function ensureRoom(workspace: BlocklyCore.WorkspaceSvg): void {
     return;
   }
   pending.add(workspace);
-  // A placeholder takes its block's shape in a second render pass, so
-  // heights are final one tick after the queue drains.
-  BlocklyCore.renderManagement
-    .finishQueuedRenders()
-    .then(() => new Promise(resolve => setTimeout(resolve)))
-    .then(() => {
-      pending.delete(workspace);
-      if (workspace.isDragging() || !workspace.rendered) {
-        return;
-      }
-      const stacks = workspace
-        .getTopBlocks(false)
-        .filter(isStack)
-        .map(stackBox);
-      tidy(() => makeRoom(stacks, STACK_GAP_PX));
-    });
+  heightsSettled().then(() => {
+    pending.delete(workspace);
+    if (workspace.isDragging() || !workspace.rendered) {
+      return;
+    }
+    const stacks = workspace.getTopBlocks(false).filter(isStack).map(stackBox);
+    tidy(() => makeRoom(stacks, STACK_GAP_PX));
+  });
 }
 
 // Run moves as the pass's own: not undoable, and in the pass's group.
