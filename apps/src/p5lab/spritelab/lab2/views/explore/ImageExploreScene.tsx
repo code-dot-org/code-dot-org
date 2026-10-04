@@ -709,7 +709,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         {mode === 'edit' && (
           <div className={classNames(styles.group, styles.bottomGroup)}>
             <MuiButton
-              variant="text"
+              variant="outlined"
               color="secondary"
               className={styles.drawButton}
               startIcon={<FontAwesomeV6Icon iconName="pen" />}

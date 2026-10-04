@@ -92,9 +92,17 @@
   margin-top: auto;
 }
 
-// Full width, but at the plain button size: Generate is the main call.
-.drawButton {
+// Full width at the plain button size, outlined in the quieter neutral so
+// it keeps an edge without competing with Generate, the main call.
+.drawButton.drawButton {
   width: 100%;
+  border-color: var(--border-neutral-secondary, color.$light_gray);
+  color: var(--text-neutral-secondary, color.$dark_charcoal);
+
+  &:hover {
+    border-color: var(--text-neutral-primary, color.$dark_charcoal);
+    color: var(--text-neutral-primary, color.$dark_charcoal);
+  }
 }
 
 // Drawing: the frame holds the editor's canvas, which paints its own
