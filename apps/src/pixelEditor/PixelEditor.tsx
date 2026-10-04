@@ -157,6 +157,9 @@ export interface PixelEditorProps {
   // A fixed set of colors, one round swatch each, in place of the
   // full-spectrum picker; the first is the color the editor opens on.
   palette?: readonly PaletteColor[];
+  // The single-key shortcuts (letters for tools, digits for brush sizes);
+  // off, a bumped key changes nothing. Ctrl+Z and Ctrl+Y stay either way.
+  singleKeyShortcuts?: boolean;
   // The host lays the parts out; it renders inside the editor's theme host
   // so the chrome colors reach every part.
   children: (parts: PixelEditorParts) => React.ReactNode;
@@ -183,6 +186,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   toolbarLayout = 'column',
   canvasClassName,
   palette,
+  singleKeyShortcuts = true,
   children,
 }) => {
   const {theme} = useTheme();
@@ -191,6 +195,8 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   // For the window keydown listener, which is bound once.
   const shownToolsRef = useRef(shownTools);
   shownToolsRef.current = shownTools;
+  const singleKeyShortcutsRef = useRef(singleKeyShortcuts);
+  singleKeyShortcutsRef.current = singleKeyShortcuts;
   const column = toolbarLayout === 'column';
   // A ref so repaint (a stable callback) always draws the current theme's
   // checkerboard.
@@ -588,7 +594,12 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         }
         return;
       }
-      if (e.metaKey || e.ctrlKey || e.altKey) {
+      if (
+        e.metaKey ||
+        e.ctrlKey ||
+        e.altKey ||
+        !singleKeyShortcutsRef.current
+      ) {
         return;
       }
       const target = e.target as HTMLElement | null;
