@@ -154,11 +154,12 @@ $border-subtle: chrome.$border-subtle;
     padding-top: 0;
   }
 
-  // The colour control takes the second line.
+  // The colour control takes the second line, set off from the tools.
   .colorRow {
     flex-basis: 100%;
     display: flex;
     align-items: center;
+    margin-top: 8px;
   }
 
   .colorPicker {
