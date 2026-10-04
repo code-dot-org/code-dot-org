@@ -11,7 +11,7 @@ import {
   Sentence,
   wordFor,
 } from './exploreSentences';
-import {withPeriod} from './WordMenus';
+import {withPeriod} from './sentencePieces';
 
 import styles from './word-menus.module.scss';
 

@@ -27,6 +27,11 @@ jest.mock(
     saveGeneratedImage: (...args: unknown[]) => saveGeneratedImage(...args),
   })
 );
+const sendEvent = jest.fn();
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: (...args: unknown[]) => sendEvent(...args)},
+}));
 const continueOrFinishLesson = jest.fn(() => ({type: 'continue'}));
 jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () => ({
   __esModule: true,
@@ -69,6 +74,7 @@ describe('ImageExploreScene', () => {
     generateCharacterSet.mockReset();
     saveGeneratedImage.mockReset();
     continueOrFinishLesson.mockClear();
+    sendEvent.mockClear();
   });
 
   it('shows the image area and the editing controls', () => {
@@ -264,6 +270,30 @@ describe('ImageExploreScene', () => {
     fireEvent.click(down);
     expect(down.getAttribute('aria-pressed')).toBe('true');
     expect(up.getAttribute('aria-pressed')).toBe('false');
+    expect(sendEvent).toHaveBeenCalledWith(
+      'hoai2026-image-verdict',
+      expect.objectContaining({verdict: 'down', promptText: 'A cat'}),
+      true
+    );
+  });
+
+  it('reports the words it generates from', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    expect(sendEvent).toHaveBeenCalledWith(
+      'hoai2026-image-prompt',
+      expect.objectContaining({
+        promptText: 'A cat',
+        method: 'explore',
+        sentenceId: 'character',
+        choices: {creature: 'cat'},
+      }),
+      true
+    );
   });
 
   it('makes another picture on Generate again, with the same words', async () => {

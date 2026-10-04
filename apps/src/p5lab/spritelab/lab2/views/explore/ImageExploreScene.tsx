@@ -5,7 +5,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Popover from '@code-dot-org/component-library/popover';
 import {
   Button as MuiButton,
   CircularProgress,
@@ -26,27 +25,21 @@ import Guide, {
   GUIDE_RIGHT_OFFSET_PX,
 } from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {
-  basePrompt,
-  generateCharacterSet,
-  posedFrames,
-  posePrompt,
-} from '../../ai/images/characterSet';
+import {generateCharacterSet} from '../../ai/images/characterSet';
 import {bytesToDataURI} from '../../ai/images/encoding';
 import {
-  fullPromptFor,
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
-  pixelBlockFor,
   UploadImageFunction,
 } from '../../ai/images/imageGeneration';
 import {ImageSafetyError} from '../../ai/images/imageSafety';
-import {chooseKeyColor} from '../../ai/images/keyColor';
 import {defaultPixelGrid} from '../../ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
@@ -57,6 +50,7 @@ import {
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
+import BehindTheScenes from './BehindTheScenes';
 import {pickFact} from './exploreFacts';
 import {
   Choices,
@@ -67,6 +61,7 @@ import {
 } from './exploreSentences';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
 import SentenceReadOnly from './SentenceReadOnly';
+import {SentPrompts, sentPromptsFor} from './sentPrompts';
 import WordMenus from './WordMenus';
 
 import styles from './image-explore.module.scss';
@@ -100,17 +95,6 @@ const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Purple', rgba: [142, 36, 170, 255]},
   {name: 'Pink', rgba: [236, 64, 122, 255]},
 ];
-
-// Stands in for the pose in the words every posed frame shares.
-const POSE_MARK = '[pose]';
-
-interface SentPrompts {
-  /** The words for the one picture, or for a set's first picture. */
-  picture: string;
-  /** For a set: the words every posed frame got, with POSE_MARK where its
-      pose goes, and each frame's pose. */
-  poses?: {common: string; frames: {label: string; pose: string}[]};
-}
 
 interface Made {
   result: GeneratedImageResult;
@@ -156,8 +140,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  const [showPrompt, setShowPrompt] = useState(false);
-  const [promptTab, setPromptTab] = useState<'picture' | 'poses'>('picture');
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   // The blank the student draws on, sized for the style, and the mode to
   // return to if they cancel.
@@ -166,37 +148,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     pixelGridSize?: number;
   } | null>(null);
   const paintReturnRef = useRef<Mode>('edit');
-  const infoButtonRef = useRef<HTMLButtonElement>(null);
-  const promptRowRef = useRef<HTMLDivElement>(null);
-  // The prompt panel opens above the link under the frame, capped so it
-  // never covers the whole picture: the words inside scroll instead.
-  const [promptRoom, setPromptRoom] = useState<number | null>(null);
-  useLayoutEffect(() => {
-    if (!showPrompt) {
-      return;
-    }
-    const measure = () => {
-      const row = promptRowRef.current;
-      if (row) {
-        setPromptRoom(
-          Math.min(420, Math.max(200, row.getBoundingClientRect().top - 16))
-        );
-      }
-    };
-    measure();
-    window.addEventListener('resize', measure);
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setShowPrompt(false);
-        infoButtonRef.current?.focus();
-      }
-    };
-    document.addEventListener('keydown', onKeyDown);
-    return () => {
-      window.removeEventListener('resize', measure);
-      document.removeEventListener('keydown', onKeyDown);
-    };
-  }, [showPrompt]);
   // Counts runs; a superseded run's result is dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
@@ -204,8 +155,21 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const generate = useCallback(async () => {
     const run = ++runRef.current;
     const prompt = promptText(sentence, choices);
+    // true attaches the project context (level path, app) for per-level
+    // breakdowns, as the image dialog's event does.
+    analyticsReporter.sendEvent(
+      EVENTS.HOAI2026_IMAGE_PROMPT,
+      {
+        promptText: prompt,
+        method: 'explore',
+        imageType,
+        sentenceId: sentence.id,
+        choices,
+        style,
+      },
+      true
+    );
     setMode('generating');
-    setShowPrompt(false);
     setVerdict(null);
     setError(null);
     setFact(current => pickFact(current ?? undefined));
@@ -218,32 +182,13 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
-      // What "Behind the scenes" shows: a set's first frame is asked for
-      // in its own words, and every posed frame then gets the same words
-      // around its pose.
-      let sent: SentPrompts;
-      if (canAnimate) {
-        const key = chooseKeyColor(prompt);
-        const block = pixelBlockFor('sprite', options.pixelGrid);
-        sent = {
-          picture: basePrompt(prompt, style, key, block, bodyPlan),
-          poses: {
-            common: posePrompt(
-              prompt,
-              {label: 'pose', pose: POSE_MARK},
-              style,
-              key,
-              block
-            ),
-            frames: posedFrames(bodyPlan).map(({label, pose}) => ({
-              label,
-              pose,
-            })),
-          },
-        };
-      } else {
-        sent = {picture: fullPromptFor(prompt, options)};
-      }
+      const sent: SentPrompts = sentPromptsFor(
+        prompt,
+        options,
+        style,
+        canAnimate,
+        bodyPlan
+      );
       const result = canAnimate
         ? await generateCharacterSet(prompt, {
             style,
@@ -300,7 +245,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
 
   const startPaint = useCallback(() => {
     paintReturnRef.current = mode;
-    setShowPrompt(false);
     setError(null);
     setPaintFrom(blankPaintImage(imageType, style));
     setMode('paint');
@@ -333,9 +277,26 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   // Back to the words with the picture still showing; the next Generate
   // replaces it.
   const changeWords = useCallback(() => {
-    setShowPrompt(false);
     setMode('edit');
   }, []);
+
+  // The thumb is the student's reflection; it goes to analytics with the
+  // words it judged, and nowhere else.
+  const judge = useCallback(
+    (next: Verdict) => {
+      setVerdict(next);
+      analyticsReporter.sendEvent(
+        EVENTS.HOAI2026_IMAGE_VERDICT,
+        {
+          verdict: next,
+          promptText: made ? promptText(sentence, choices) : undefined,
+          imageType,
+        },
+        true
+      );
+    },
+    [made, sentence, choices, imageType]
+  );
 
   const generating = mode === 'generating';
   const busy = generating || saving;
@@ -501,121 +462,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             ) : null}
           </div>
           {showingResult && made && (
-            <div
-              className={styles.underFrame}
-              ref={promptRowRef}
-              style={
-                promptRoom === null
-                  ? undefined
-                  : ({
-                      '--prompt-room': `${promptRoom}px`,
-                    } as React.CSSProperties)
-              }
-            >
-              <button
-                type="button"
-                ref={infoButtonRef}
-                className={styles.promptLink}
-                aria-expanded={showPrompt}
-                disabled={busy}
-                onClick={() => {
-                  setPromptTab('picture');
-                  setShowPrompt(open => !open);
-                }}
-              >
-                <FontAwesomeV6Icon iconName="circle-info" />
-                Behind the scenes
-              </button>
-              {showPrompt && (
-                <Popover
-                  direction="none"
-                  title="Behind the scenes"
-                  content="We sent the AI these words. It predicted a picture to match them."
-                  className={styles.promptPopover}
-                  onClose={() => setShowPrompt(false)}
-                >
-                  {made.sent.poses && (
-                    <div
-                      className={styles.promptTabs}
-                      role="tablist"
-                      aria-label="Which words"
-                    >
-                      {(
-                        [
-                          ['picture', 'First picture'],
-                          ['poses', 'Other poses'],
-                        ] as const
-                      ).map(([tab, label]) => (
-                        <button
-                          key={tab}
-                          type="button"
-                          role="tab"
-                          id={`explore-prompt-tab-${tab}`}
-                          aria-selected={promptTab === tab}
-                          aria-controls="explore-prompt-panel"
-                          className={styles.promptTab}
-                          onClick={() => setPromptTab(tab)}
-                        >
-                          {label}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                  {made.sent.poses && promptTab === 'poses' ? (
-                    <>
-                      <p className={styles.promptNote}>
-                        Then, for each pose, we sent the first picture back with
-                        these words. Only the part in brackets changed.
-                      </p>
-                      <div
-                        id="explore-prompt-panel"
-                        className={styles.promptText}
-                        role="tabpanel"
-                        aria-labelledby="explore-prompt-tab-poses"
-                      >
-                        <p className={styles.promptCommon}>
-                          {made.sent.poses.common
-                            .split(POSE_MARK)
-                            .flatMap((piece, i) =>
-                              i === 0
-                                ? [piece]
-                                : [
-                                    <mark key={i} className={styles.poseMark}>
-                                      {POSE_MARK}
-                                    </mark>,
-                                    piece,
-                                  ]
-                            )}
-                        </p>
-                        <ul className={styles.poseList}>
-                          {made.sent.poses.frames.map(frame => (
-                            <li key={frame.label}>
-                              <span className={styles.poseLabel}>
-                                {frame.label}:
-                              </span>{' '}
-                              {frame.pose}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  ) : (
-                    <p
-                      id="explore-prompt-panel"
-                      className={styles.promptText}
-                      role="tabpanel"
-                      aria-labelledby={
-                        made.sent.poses
-                          ? 'explore-prompt-tab-picture'
-                          : undefined
-                      }
-                    >
-                      {made.sent.picture}
-                    </p>
-                  )}
-                </Popover>
-              )}
-            </div>
+            <BehindTheScenes sent={made.sent} disabled={busy} />
           )}
         </div>
       </section>
@@ -662,7 +509,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                         verdict === 'up' && styles.verdictChosen
                       )}
                       disabled={busy}
-                      onClick={() => setVerdict('up')}
+                      onClick={() => judge('up')}
                     >
                       <FontAwesomeV6Icon iconName="thumbs-up" />
                     </MuiIconButton>
@@ -674,7 +521,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                         verdict === 'down' && styles.verdictChosen
                       )}
                       disabled={busy}
-                      onClick={() => setVerdict('down')}
+                      onClick={() => judge('down')}
                     >
                       <FontAwesomeV6Icon iconName="thumbs-down" />
                     </MuiIconButton>

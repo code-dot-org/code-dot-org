@@ -19,6 +19,7 @@ import {
   WORD_DRAG_TYPE,
   wordFor,
 } from './exploreSentences';
+import {withPeriod} from './sentencePieces';
 
 import styles from './word-menus.module.scss';
 
@@ -48,17 +49,6 @@ export function slotsToOffer(sentence: Sentence): Slot[] {
 
 const wordWidth = (w: Word) => w.text.length + (w.emoji ? 2 : 0);
 
-/** The sentence's pieces with the full stop glued to the last one, so a
-    line never ends with a chip and starts with a lone period. */
-export function withPeriod(pieces: React.ReactNode[]): React.ReactNode {
-  const last = pieces[pieces.length - 1];
-  return (
-    <>
-      {pieces.slice(0, -1)}
-      <span className={styles.keepTogether}>{last}.</span>
-    </>
-  );
-}
 // How many sets, in carousel order, the sentence holds room for.
 const RESERVED_SETS = 4;
 
