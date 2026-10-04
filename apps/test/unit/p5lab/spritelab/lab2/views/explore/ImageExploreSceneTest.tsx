@@ -74,8 +74,9 @@ describe('ImageExploreScene', () => {
   it('shows the image area and the editing controls', () => {
     renderScene();
     expect(screen.getByRole('region', {name: 'Your image'})).toBeTruthy();
-    expect(screen.getByRole('radio', {name: /Pixel/})).toBeTruthy();
-    expect(screen.getByRole('radio', {name: /Smooth/})).toBeTruthy();
+    const style = screen.getByRole('combobox') as HTMLSelectElement;
+    expect(style.value).toBe('pixel');
+    expect(screen.getByRole('option', {name: 'Smooth'})).toBeTruthy();
     expect(screen.getByRole('checkbox', {name: 'Make it move'})).toBeTruthy();
     expect(
       (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
@@ -196,22 +197,17 @@ describe('ImageExploreScene', () => {
     expect(screen.queryByText(/^A cat\. /)).toBeNull();
   });
 
-  it('asks how the AI did, remembering the thumb', async () => {
+  it('captions the three choices with the question they answer', async () => {
     generateImage.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
+    const group = screen.getByRole('group', {name: 'How did the AI do?'});
     expect(
-      screen.getByRole('group', {name: 'How did the AI do?'})
-    ).toBeTruthy();
-    const up = screen.getByRole('button', {name: 'Thumbs up'});
-    const down = screen.getByRole('button', {name: 'Thumbs down'});
-    expect(up.getAttribute('aria-pressed')).toBe('false');
-    fireEvent.click(down);
-    expect(down.getAttribute('aria-pressed')).toBe('true');
-    expect(up.getAttribute('aria-pressed')).toBe('false');
+      [...group.querySelectorAll('button')].map(b => b.textContent?.trim())
+    ).toEqual(['Change words', 'Generate again', 'Continue']);
   });
 
   it('makes another picture on Generate again, with the same words', async () => {

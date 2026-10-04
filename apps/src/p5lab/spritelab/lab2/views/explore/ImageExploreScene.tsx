@@ -3,13 +3,13 @@
 // by level_mode.imageUi or ?image-ui=explore; the pane is untouched.
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Popover from '@code-dot-org/component-library/popover';
-import RadioButton from '@code-dot-org/component-library/radioButton';
 import {
   Button as MuiButton,
   CircularProgress,
-  IconButton as MuiIconButton,
   Typography as MuiTypography,
 } from '@mui/material';
 import classNames from 'classnames';
@@ -25,8 +25,6 @@ import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLess
 import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
-import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
 import {basePrompt, generateCharacterSet} from '../../ai/images/characterSet';
 import {bytesToDataURI} from '../../ai/images/encoding';
@@ -86,9 +84,6 @@ const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Purple', rgba: [142, 36, 170, 255]},
 ];
 
-// The reflection asked once a picture is back: a thumb each way.
-type Verdict = 'up' | 'down';
-
 interface Made {
   result: GeneratedImageResult;
   dataURI: string;
@@ -118,6 +113,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   sentenceUi = 'slots',
 }) => {
   const dispatch = useAppDispatch();
+  const {theme} = useTheme();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
   // The menu variant animates every character and offers no choice.
   const offersAnimation = sentenceUi === 'slots';
@@ -135,7 +131,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
-  const [verdict, setVerdict] = useState<Verdict | null>(null);
   // The blank the student draws on, sized for the style, and the mode to
   // return to if they cancel.
   const [paintFrom, setPaintFrom] = useState<{
@@ -145,9 +140,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const paintReturnRef = useRef<Mode>('edit');
   const infoButtonRef = useRef<HTMLButtonElement>(null);
   const promptRowRef = useRef<HTMLDivElement>(null);
-  // The prompt panel drops below the row that opened it and is capped to
-  // the room left under that row, and to a height that scrolls rather than
-  // filling the pane with text.
+  // The prompt panel opens above the link under the frame, capped at half
+  // the room above it: a shorter panel that scrolls reads as less of a wall
+  // of text than one that covers the picture.
   const [promptRoom, setPromptRoom] = useState<number | null>(null);
   useLayoutEffect(() => {
     if (!showPrompt) {
@@ -156,8 +151,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const measure = () => {
       const row = promptRowRef.current;
       if (row) {
-        const below = window.innerHeight - row.getBoundingClientRect().bottom;
-        setPromptRoom(Math.min(360, Math.max(160, below - 24)));
+        setPromptRoom(
+          Math.max(160, (row.getBoundingClientRect().top - 16) / 2)
+        );
       }
     };
     measure();
@@ -183,7 +179,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const prompt = promptText(sentence, choices);
     setMode('generating');
     setShowPrompt(false);
-    setVerdict(null);
     setError(null);
     setFact(current => pickFact(current ?? undefined));
     try {
@@ -349,7 +344,13 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   {error}
                 </MuiTypography>
               )}
-              <div className={classNames(styles.group, styles.paintActions)}>
+              <div
+                className={classNames(
+                  styles.group,
+                  styles.paintActions,
+                  styles.bottomGroup
+                )}
+              >
                 <MuiButton
                   variant="outlined"
                   color="secondary"
@@ -409,38 +410,46 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               )
             ) : null}
           </div>
+          {showingResult && made && (
+            <div
+              className={styles.underFrame}
+              ref={promptRowRef}
+              style={
+                promptRoom === null
+                  ? undefined
+                  : ({
+                      '--prompt-room': `${promptRoom}px`,
+                    } as React.CSSProperties)
+              }
+            >
+              <button
+                type="button"
+                ref={infoButtonRef}
+                className={styles.promptLink}
+                aria-expanded={showPrompt}
+                disabled={busy}
+                onClick={() => setShowPrompt(open => !open)}
+              >
+                <FontAwesomeV6Icon iconName="circle-info" />
+                What we sent the AI
+              </button>
+              {showPrompt && (
+                <Popover
+                  direction="none"
+                  title="Behind the scenes"
+                  content="We sent the AI these words. It predicted a picture to match them."
+                  className={styles.promptPopover}
+                  onClose={() => setShowPrompt(false)}
+                >
+                  <p className={styles.promptText}>{made.sentPrompt}</p>
+                </Popover>
+              )}
+            </div>
+          )}
         </div>
       </section>
       <section className={styles.editPane} aria-label="Make your image">
         <div className={styles.group}>
-          <fieldset className={styles.styleChoice} disabled={busy}>
-            <legend className={styles.srOnly}>Style</legend>
-            <div className={styles.styleOptions}>
-              {STYLES.map(s => (
-                <RadioButton
-                  key={s}
-                  name="explore-style"
-                  value={s}
-                  size="s"
-                  checked={style === s}
-                  onChange={() => setStyle(s)}
-                  className={styles.styleOption}
-                >
-                  <img
-                    src={s === 'pixel' ? pixelSample : smoothSample}
-                    alt=""
-                    className={classNames(
-                      styles.styleSwatch,
-                      s === 'pixel' && styles.pixelArt
-                    )}
-                  />
-                  <MuiTypography variant="body3" component="span">
-                    {IMAGE_STYLE_LABELS[s]}
-                  </MuiTypography>
-                </RadioButton>
-              ))}
-            </div>
-          </fieldset>
           {showingResult ? (
             <SentenceReadOnly sentence={sentence} choices={choices} />
           ) : sentenceUi === 'menu' ? (
@@ -461,95 +470,45 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           {showingResult && made ? (
             <>
               <div
-                className={styles.verdictRow}
-                ref={promptRowRef}
-                style={
-                  promptRoom === null
-                    ? undefined
-                    : ({
-                        '--prompt-room': `${promptRoom}px`,
-                      } as React.CSSProperties)
-                }
+                className={styles.resultActions}
+                role="group"
+                aria-labelledby="explore-result-label"
               >
-                <span id="explore-verdict-label">How did the AI do?</span>
-                <div
-                  className={styles.verdictButtons}
-                  role="group"
-                  aria-labelledby="explore-verdict-label"
+                <span
+                  id="explore-result-label"
+                  className={styles.resultQuestion}
                 >
-                  <MuiIconButton
-                    aria-label="Thumbs up"
-                    aria-pressed={verdict === 'up'}
-                    className={classNames(
-                      styles.verdictButton,
-                      verdict === 'up' && styles.verdictChosen
-                    )}
+                  How did the AI do?
+                </span>
+                <div className={styles.resultButtons}>
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    startIcon={<FontAwesomeV6Icon iconName="thumbs-down" />}
                     disabled={busy}
-                    onClick={() => setVerdict('up')}
+                    onClick={changeWords}
                   >
-                    <FontAwesomeV6Icon iconName="thumbs-up" />
-                  </MuiIconButton>
-                  <MuiIconButton
-                    aria-label="Thumbs down"
-                    aria-pressed={verdict === 'down'}
-                    className={classNames(
-                      styles.verdictButton,
-                      verdict === 'down' && styles.verdictChosen
-                    )}
+                    Change words
+                  </MuiButton>
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
                     disabled={busy}
-                    onClick={() => setVerdict('down')}
+                    onClick={generate}
                   >
-                    <FontAwesomeV6Icon iconName="thumbs-down" />
-                  </MuiIconButton>
+                    Generate again
+                  </MuiButton>
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    startIcon={<FontAwesomeV6Icon iconName="thumbs-up" />}
+                    disabled={busy}
+                    onClick={keep}
+                  >
+                    Continue
+                  </MuiButton>
                 </div>
-                <button
-                  type="button"
-                  ref={infoButtonRef}
-                  className={styles.promptLink}
-                  aria-expanded={showPrompt}
-                  disabled={busy}
-                  onClick={() => setShowPrompt(open => !open)}
-                >
-                  <FontAwesomeV6Icon iconName="circle-info" />
-                  What we sent the AI
-                </button>
-                {showPrompt && (
-                  <Popover
-                    direction="none"
-                    title="Behind the scenes"
-                    content="We sent the AI these words. It predicted a picture to match them."
-                    className={styles.promptPopover}
-                    onClose={() => setShowPrompt(false)}
-                  >
-                    <p className={styles.promptText}>{made.sentPrompt}</p>
-                  </Popover>
-                )}
-              </div>
-              <div className={styles.resultActions}>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  disabled={busy}
-                  onClick={changeWords}
-                >
-                  Change words
-                </MuiButton>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  disabled={busy}
-                  onClick={generate}
-                >
-                  Generate again
-                </MuiButton>
-                <MuiButton
-                  variant="contained"
-                  color="primary"
-                  disabled={busy}
-                  onClick={keep}
-                >
-                  Continue
-                </MuiButton>
               </div>
             </>
           ) : (
@@ -564,14 +523,30 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   onChange={e => setAnimated(e.target.checked)}
                 />
               )}
-              <MuiButton
-                variant="contained"
-                color="primary"
-                disabled={!complete || busy}
-                onClick={generate}
-              >
-                Generate
-              </MuiButton>
+              <div className={styles.generateControls}>
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  disabled={!complete || busy}
+                  onClick={generate}
+                >
+                  Generate
+                </MuiButton>
+                <SimpleDropdown
+                  name="explore-style"
+                  labelText="Style"
+                  isLabelVisible={false}
+                  size="s"
+                  color={theme === 'Dark' ? 'white' : 'black'}
+                  items={STYLES.map(s => ({
+                    value: s,
+                    text: IMAGE_STYLE_LABELS[s],
+                  }))}
+                  selectedValue={style}
+                  disabled={busy}
+                  onChange={e => setStyle(e.target.value as ImageStyle)}
+                />
+              </div>
             </div>
           )}
           {error && (
@@ -593,7 +568,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             </aside>
           )}
         </div>
-        <div className={styles.group}>
+        <div className={classNames(styles.group, styles.bottomGroup)}>
           <MuiButton
             variant="outlined"
             color="secondary"

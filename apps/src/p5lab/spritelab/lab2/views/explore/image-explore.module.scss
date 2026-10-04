@@ -1,5 +1,4 @@
 @use "color.scss";
-@use "../../../../../pixelEditor/dialogChrome" as chrome;
 
 // Two halves across the level, each free to shrink; the image keeps square.
 .scene {
@@ -8,7 +7,9 @@
   width: 100%;
   max-width: 1200px;
   min-width: 0;
-  align-items: flex-start;
+  // Both halves run the frame's full height, so a group can sit on the
+  // right pane's floor level with the frame's bottom edge.
+  align-items: stretch;
 }
 
 .imagePane,
@@ -52,44 +53,6 @@
   background-color: var(--background-neutral-secondary, color.$white);
 }
 
-// The style legend is for the screen reader only; on the page, a heading
-// over the first group read as a heading for the whole pane.
-.srOnly {
-  @include chrome.sr-only;
-}
-
-.styleChoice {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
-}
-
-.styleOptions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 24px;
-}
-
-// A Style option is taller than its text, so its radio, swatch and label
-// centre on the row; the design system aligns a radio row to the top.
-.styleOption {
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-
-  i {
-    margin-top: 0;
-  }
-}
-
-.styleSwatch {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-}
-
 .pixelArt {
   image-rendering: pixelated;
 }
@@ -107,6 +70,19 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+}
+
+// Generate with the style dropdown at its right, together at the row's end.
+.generateControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+// Pushed to the pane's floor.
+.bottomGroup {
+  margin-top: auto;
 }
 
 .drawButton {
@@ -166,37 +142,19 @@
   box-sizing: border-box;
 }
 
-// Once a picture is back: the question, a thumb each way, and the link to
-// the prompt as sent, with the prompt panel anchored under this row.
-.verdictRow {
+// Under the frame once a picture is back: the link to the prompt as sent,
+// flush right, with the prompt panel anchored above it.
+.underFrame {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-neutral-primary, color.$dark_charcoal);
-}
-
-.verdictButtons {
-  display: flex;
-  gap: 4px;
-}
-
-.verdictButton {
-  color: var(--text-neutral-primary, color.$dark_charcoal);
-}
-
-// Doubled to outrank the button's own hover background.
-.verdictButton.verdictChosen {
-  background-color: var(--text-neutral-primary, color.$dark_charcoal);
-  color: var(--background-neutral-primary, color.$white);
+  justify-content: flex-end;
+  margin-top: 8px;
 }
 
 .promptLink {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-left: auto;
   padding: 4px 8px;
   border: 0;
   border-radius: 6px;
@@ -211,22 +169,32 @@
   }
 }
 
+// The three choices, captioned with the question they answer.
 .resultActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+}
+
+.resultButtons {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 12px;
 }
 
-// Drops below the row that opens it; when the room runs out the prompt
-// scrolls. Doubled to outrank the component's own width and margin.
+// Opens above the link, its right edge on the link's; when the room runs
+// out the prompt scrolls. Doubled to outrank the component's own width and
+// margin.
 .promptPopover.promptPopover {
   position: absolute;
-  left: 0;
-  top: calc(100% + 8px);
+  right: 0;
+  bottom: calc(100% + 8px);
   margin: 0;
   width: 460px;
   max-width: 100%;
+  border: 1px solid var(--border-neutral-secondary, color.$light_gray);
   max-height: var(--prompt-room, 60vh);
   z-index: 1;
 
