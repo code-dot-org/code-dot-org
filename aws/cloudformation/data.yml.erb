@@ -28,21 +28,18 @@ Parameters:
   LogsBucket:
     Type: String
 Resources:
-  # Created by hand before this template tracked it; imported with IMPORT_RESOURCES=TableauParameterGroup:cdo.
-  # Description is create-only, so it must keep its original text or CloudFormation will replace the group.
-  TableauParameterGroup:
+  TableauProductionParameterGroup:
     Type: AWS::Redshift::ClusterParameterGroup
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
     Properties:
-      ParameterGroupName: cdo
-      Description: parameter group for production Redshift cluster
+      ParameterGroupName: production
+      Description: Parameter Group for production Redshift cluster.
       ParameterGroupFamily: redshift-1.0
       Parameters:
-        # Static; takes effect only after the cluster reboots.
         - ParameterName: require_ssl
           ParameterValue: 'true'
-        # Required on the target of the Zero-ETL integration from production Aurora.
+        # Required on the target of the Zero-ETL Integration from Aurora MySQL cluster.
         - ParameterName: enable_case_sensitive_identifier
           ParameterValue: 'true'
         - ParameterName: wlm_json_configuration
@@ -55,19 +52,21 @@ Resources:
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
-      ClusterParameterGroupName: !Ref TableauParameterGroup
+      # Stale on purpose. The cluster really uses TableauParameterGroup (`cdo`).
+      ClusterParameterGroupName: !Ref TableauProductionParameterGroup
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
-      ClusterType: single-node
+      ClusterType: multi-node
       ClusterVersion: 1.0
       DBName: {Ref: RedshiftDatabase}
       Encrypted: true
       KmsKeyId: alias/aws/redshift
       MasterUsername: {Ref: RedshiftAdminUsername}
       MasterUserPassword: {Ref: RedshiftAdminPassword}
-      NodeType: dc1.large
+      NodeType: ra3.4xlarge
+      NumberOfNodes: 3
       # This maintenance can interfere with analytics batch routines that execute a sequence of long duration SQL
       # statements over an extended period, such as the dbt model runs. This is scheduled to avoid conflicting.
-      PreferredMaintenanceWindow: 'Mon:22:30-Mon:23:00'
+      PreferredMaintenanceWindow: 'mon:22:30-mon:23:00'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
 #  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy
