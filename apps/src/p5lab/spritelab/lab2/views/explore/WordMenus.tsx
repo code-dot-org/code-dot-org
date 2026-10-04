@@ -244,11 +244,10 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                             e.dataTransfer.effectAllowed = 'copy';
                           }}
                           onClick={() =>
-                            // A chosen optional word clicked again clears its slot.
-                            choose(
-                              set.id,
-                              chosen && !set.required ? undefined : word.id
-                            )
+                            // A chosen word clicked again clears its slot, as
+                            // its x in the sentence does; clearing the required
+                            // one locks the carousel here until a new pick.
+                            choose(set.id, chosen ? undefined : word.id)
                           }
                         >
                           {word.emoji && (

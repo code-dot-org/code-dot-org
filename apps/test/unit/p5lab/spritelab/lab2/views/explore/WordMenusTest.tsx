@@ -127,8 +127,14 @@ describe('WordMenus', () => {
     expect(sentenceText()).toBe('A sparkly dragon wearing a crown.');
   });
 
-  it('clears an optional word on a second click or its x, never the required one', () => {
+  it('clears a word on a second click or its x, the required one included', () => {
     render(<Harness initial={{creature: 'cat', adjective: 'cute'}} />);
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    expect(sentenceText()).toBe('A cute .');
+    expect(
+      (screen.getByRole('button', {name: 'Next words'}) as HTMLButtonElement)
+        .disabled
+    ).toBe(true);
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
     expect(sentenceText()).toBe('A cute cat.');
     next();
