@@ -187,7 +187,7 @@ class LevelsController < ApplicationController
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
-    @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
+    @standalone = Policies::StandaloneProjects.all.values.pluck(:name).include?(@level.name)
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
@@ -592,9 +592,9 @@ class LevelsController < ApplicationController
       script_level = ScriptLevel.find_by(id: params[:scriptLevelId].to_i)
     end
 
-    is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
+    is_standalone_project = Policies::StandaloneProjects.all.values.pluck(:name).include?(@level.name)
 
-    # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
+    # Curriculum writers rarely need to edit standalone project levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     # We allow editing from the test environment to enable UI testing of the edit page.
     if (Rails.application.config.levelbuilder_mode || rack_env?(:test)) && !is_standalone_project

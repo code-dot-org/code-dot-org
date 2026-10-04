@@ -343,7 +343,7 @@ Dashboard::Application.routes.draw do
 
     resources :p, path: '/p/', only: [:index] do
       collection do
-        ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+        Policies::StandaloneProjects.all.each do |key, value|
           get '/' + key.to_s, to: 'projects#redirect_legacy', key: value[:name], as: key.to_s
         end
         get '/', to: redirect('/projects')
@@ -368,7 +368,7 @@ Dashboard::Application.routes.draw do
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
-        ProjectsController::STANDALONE_PROJECTS.each do |key, _|
+        Policies::StandaloneProjects.all.each do |key, _|
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
           get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
 
