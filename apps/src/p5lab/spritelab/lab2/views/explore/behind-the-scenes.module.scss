@@ -1,10 +1,15 @@
 @use "color.scss";
 
+// Between the frame and the link row.
+$frame-gap: 2px;
+// From the frame's right and bottom edges to the panel's.
+$panel-inset: 6px;
+
 .underFrame {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-top: 2px;
+  margin-top: $frame-gap;
 
   &,
   * {
@@ -36,12 +41,12 @@
   }
 }
 
-// Above the link, right edges aligned. Doubled to outrank the component's
-// own width and margin.
+// Above the link, in the frame's bottom right corner. Doubled to outrank
+// the component's own width and margin.
 .promptPopover.promptPopover {
   position: absolute;
-  right: 0;
-  bottom: calc(100% + 8px);
+  right: $panel-inset;
+  bottom: calc(100% + #{$frame-gap + $panel-inset});
   margin: 0;
   width: 460px;
   max-width: 100%;
