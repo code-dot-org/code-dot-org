@@ -1,5 +1,10 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-10T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "uses_lab2": "true",
     "block_pools": [
@@ -35,14 +40,7 @@
       }
     ],
     "long_instructions": "# Make a character\nUse AI or draw your own.",
-    "header_label": "Make a story",
-    "preload_asset_list": null
-  },
-  "published": true,
-  "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
-  "level_num": "custom",
-  "user_id": 1
+    "header_label": "Make a story"
+  }
 }]]></config>
-  <blocks/>
 </GamelabJr>
