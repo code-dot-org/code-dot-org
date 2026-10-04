@@ -484,7 +484,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   <MuiButton
                     variant="outlined"
                     color="secondary"
-                    startIcon={<FontAwesomeV6Icon iconName="thumbs-down" />}
                     disabled={busy}
                     onClick={changeWords}
                   >
@@ -502,7 +501,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   <MuiButton
                     variant="contained"
                     color="primary"
-                    startIcon={<FontAwesomeV6Icon iconName="thumbs-up" />}
                     disabled={busy}
                     onClick={keep}
                   >

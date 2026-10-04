@@ -180,10 +180,16 @@
   font-weight: 600;
 }
 
+// Each button grows from its own label's width, so the three fill the row
+// without any label breaking onto a second line.
 .resultButtons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 12px;
+
+  > * {
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
 }
 
 // Opens above the link, its right edge on the link's; when the room runs
