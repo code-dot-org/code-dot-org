@@ -14,6 +14,17 @@ describe('exploreSentences', () => {
     expect(isComplete(CHARACTER_SENTENCE, {creature: 'blob'})).toBe(true);
   });
 
+  it('builds every sentence in the manifest with its words resolved', () => {
+    for (const imageType of ['sprite', 'block', 'background'] as const) {
+      const sentence = sentenceFor(imageType);
+      for (const [slotId, slot] of Object.entries(sentence.slots)) {
+        expect(slot.id).toBe(slotId);
+        expect(slot.words.length).toBeGreaterThan(0);
+      }
+    }
+    expect(sentenceFor('sprite', 'object').id).toBe('object');
+  });
+
   it('chains the slots inside phrases, in sentence order', () => {
     expect(chainedSlotIds(CHARACTER_SENTENCE)).toEqual([
       'clothing',

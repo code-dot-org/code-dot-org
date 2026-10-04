@@ -4,6 +4,8 @@
 // whose words show only when its slot is filled. A required slot must be
 // filled before the sentence can generate.
 
+import manifestJson from '@cdo/static/spritelab_lab2/exploreSentences.json';
+
 import {BodyPlan, ImageSubject, ImageType} from '../../ai/images/types';
 
 export interface Word {
@@ -42,129 +44,55 @@ export type Choices = Record<string, string | undefined>;
 /** The drag payload's type: a JSON {slot, word} carried from a word chip. */
 export const WORD_DRAG_TYPE = 'application/x-spritelab2-word';
 
-const CREATURES: Word[] = [
-  {id: 'blob', text: 'blob', emoji: '🟢'},
-  {id: 'robot', text: 'robot', emoji: '🤖'},
-  {id: 'dragon', text: 'dragon', emoji: '🐉', bodyPlan: 'quadruped'},
-  {id: 'cat', text: 'cat', emoji: '🐱', bodyPlan: 'quadruped'},
-  {id: 'monster', text: 'monster', emoji: '👾'},
-  {id: 'wizard', text: 'wizard', emoji: '🧙'},
-  {id: 'penguin', text: 'penguin', emoji: '🐧', bodyPlan: 'bird'},
-  {id: 'witch', text: 'witch', emoji: '🧹'},
-];
+// The content lives in the manifest: named word sets, and sentences whose
+// slots name a set (or carry their own words). This is its own file, apart
+// from the image dialog's adlib manifest, while the two systems are tried
+// side by side.
+interface ManifestSlot {
+  label: string;
+  words: string | Word[];
+  required?: boolean;
+}
 
-const ADJECTIVES: Word[] = [
-  {id: 'brave', text: 'brave', emoji: '💪'},
-  {id: 'sparkly', text: 'sparkly', emoji: '✨'},
-  {id: 'grumpy', text: 'grumpy', emoji: '😠'},
-  {id: 'friendly', text: 'friendly', emoji: '😊'},
-  {id: 'cute', text: 'cute', emoji: '🥰'},
-  {id: 'sleepy', text: 'sleepy', emoji: '😴'},
-  {id: 'tiny', text: 'tiny', emoji: '🐜'},
-];
+interface Manifest {
+  wordSets: Record<string, Word[]>;
+  sentences: Record<
+    string,
+    {segments: Segment[]; slots: Record<string, ManifestSlot>}
+  >;
+}
 
-const CLOTHING: Word[] = [
-  {id: 'hat', text: 'hat', emoji: '🎩'},
-  {id: 'crown', text: 'crown', emoji: '👑'},
-  {id: 'cape', text: 'cape', emoji: '🦸'},
-  {id: 'scarf', text: 'scarf', emoji: '🧣'},
-  {id: 'boots', text: 'boots', emoji: '👢'},
-  {id: 'glasses', text: 'glasses', emoji: '👓'},
-];
+function loadSentences(manifest: Manifest): Record<string, Sentence> {
+  return Object.fromEntries(
+    Object.entries(manifest.sentences).map(([id, entry]) => [
+      id,
+      {
+        id,
+        segments: entry.segments,
+        slots: Object.fromEntries(
+          Object.entries(entry.slots).map(([slotId, slot]) => {
+            const words =
+              typeof slot.words === 'string'
+                ? manifest.wordSets[slot.words]
+                : slot.words;
+            if (!words) {
+              throw new Error(
+                `exploreSentences.json: sentence "${id}" slot "${slotId}" names an unknown word set "${slot.words}"`
+              );
+            }
+            return [slotId, {...slot, id: slotId, words}];
+          })
+        ),
+      },
+    ])
+  );
+}
 
-const THINGS: Word[] = [
-  {id: 'wand', text: 'wand', emoji: '🪄'},
-  {id: 'balloon', text: 'balloon', emoji: '🎈'},
-  {id: 'flower', text: 'flower', emoji: '🌸'},
-  {id: 'book', text: 'book', emoji: '📖'},
-  {id: 'lantern', text: 'lantern', emoji: '🏮'},
-  {id: 'fish', text: 'fish', emoji: '🐟'},
-];
-
-const DETAIL: Word[] = [
-  {id: 'simple', text: 'simple shapes', emoji: '⬜'},
-  {id: 'some', text: 'some detail', emoji: '✏️'},
-  {id: 'lots', text: 'lots of detail', emoji: '🖼️'},
-];
+const SENTENCES = loadSentences(manifestJson as Manifest);
 
 /** Level 2's character: a creature at least, dressed up as far as the
     student likes. */
-export const CHARACTER_SENTENCE: Sentence = {
-  id: 'character',
-  segments: [
-    {text: 'A '},
-    {slot: 'adjective'},
-    {text: ' '},
-    {slot: 'creature'},
-    {phrase: [{text: ' wearing a '}, {slot: 'clothing'}]},
-    {phrase: [{text: ' holding a '}, {slot: 'thing'}]},
-    {phrase: [{text: ', drawn with '}, {slot: 'detail'}]},
-  ],
-  slots: {
-    adjective: {id: 'adjective', label: 'adjective', words: ADJECTIVES},
-    creature: {
-      id: 'creature',
-      label: 'creature',
-      words: CREATURES,
-      required: true,
-    },
-    clothing: {id: 'clothing', label: 'clothing', words: CLOTHING},
-    thing: {id: 'thing', label: 'thing', words: THINGS},
-    detail: {id: 'detail', label: 'detail', words: DETAIL},
-  },
-};
-
-const OBJECT_SENTENCE: Sentence = {
-  id: 'object',
-  segments: [{text: 'A '}, {slot: 'adjective'}, {text: ' '}, {slot: 'thing'}],
-  slots: {
-    adjective: {id: 'adjective', label: 'adjective', words: ADJECTIVES},
-    thing: {
-      id: 'thing',
-      label: 'thing',
-      words: [
-        {id: 'key', text: 'key', emoji: '🔑'},
-        {id: 'gem', text: 'gem', emoji: '💎'},
-        {id: 'coin', text: 'coin', emoji: '🪙'},
-        {id: 'apple', text: 'apple', emoji: '🍎'},
-        {id: 'star', text: 'star', emoji: '⭐'},
-        {id: 'potion', text: 'potion', emoji: '🧪'},
-      ],
-      required: true,
-    },
-  },
-};
-
-const PLACE_SENTENCE: Sentence = {
-  id: 'place',
-  segments: [{text: 'A '}, {slot: 'adjective'}, {text: ' '}, {slot: 'place'}],
-  slots: {
-    adjective: {
-      id: 'adjective',
-      label: 'adjective',
-      words: [
-        {id: 'sunny', text: 'sunny', emoji: '☀️'},
-        {id: 'misty', text: 'misty', emoji: '🌫️'},
-        {id: 'frozen', text: 'frozen', emoji: '❄️'},
-        {id: 'spooky', text: 'spooky', emoji: '👻'},
-        {id: 'peaceful', text: 'peaceful', emoji: '🕊️'},
-      ],
-    },
-    place: {
-      id: 'place',
-      label: 'place',
-      words: [
-        {id: 'forest', text: 'forest', emoji: '🌲'},
-        {id: 'cave', text: 'cave', emoji: '🕳️'},
-        {id: 'beach', text: 'beach', emoji: '🏖️'},
-        {id: 'castle', text: 'castle', emoji: '🏰'},
-        {id: 'city', text: 'city', emoji: '🏙️'},
-        {id: 'space', text: 'space station', emoji: '🛰️'},
-      ],
-      required: true,
-    },
-  },
-};
+export const CHARACTER_SENTENCE: Sentence = SENTENCES.character;
 
 /** The sentence for what the level makes. */
 export function sentenceFor(
@@ -172,12 +100,12 @@ export function sentenceFor(
   subject?: ImageSubject
 ): Sentence {
   if (imageType === 'background') {
-    return PLACE_SENTENCE;
+    return SENTENCES.place;
   }
   if (imageType === 'block' || subject === 'object') {
-    return OBJECT_SENTENCE;
+    return SENTENCES.object;
   }
-  return CHARACTER_SENTENCE;
+  return SENTENCES.character;
 }
 
 export function wordFor(
