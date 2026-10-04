@@ -65,18 +65,15 @@
   image-rendering: pixelated;
 }
 
+// Generate (after the animation checkbox, where there is one) at the left,
+// the style dropdown at the right.
 .generateRow {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
 }
 
-// Generate with the style dropdown at its right, together at the row's end.
-.generateControls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.styleDropdown {
   margin-left: auto;
 }
 

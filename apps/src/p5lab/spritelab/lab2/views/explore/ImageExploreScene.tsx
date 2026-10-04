@@ -523,30 +523,29 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   onChange={e => setAnimated(e.target.checked)}
                 />
               )}
-              <div className={styles.generateControls}>
-                <MuiButton
-                  variant="contained"
-                  color="primary"
-                  disabled={!complete || busy}
-                  onClick={generate}
-                >
-                  Generate
-                </MuiButton>
-                <SimpleDropdown
-                  name="explore-style"
-                  labelText="Style"
-                  isLabelVisible={false}
-                  size="s"
-                  color={theme === 'Dark' ? 'white' : 'black'}
-                  items={STYLES.map(s => ({
-                    value: s,
-                    text: IMAGE_STYLE_LABELS[s],
-                  }))}
-                  selectedValue={style}
-                  disabled={busy}
-                  onChange={e => setStyle(e.target.value as ImageStyle)}
-                />
-              </div>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                disabled={!complete || busy}
+                onClick={generate}
+              >
+                Generate
+              </MuiButton>
+              <SimpleDropdown
+                className={styles.styleDropdown}
+                name="explore-style"
+                labelText="Style"
+                isLabelVisible={false}
+                size="s"
+                color={theme === 'Dark' ? 'white' : 'black'}
+                items={STYLES.map(s => ({
+                  value: s,
+                  text: IMAGE_STYLE_LABELS[s],
+                }))}
+                selectedValue={style}
+                disabled={busy}
+                onChange={e => setStyle(e.target.value as ImageStyle)}
+              />
             </div>
           )}
           {error && (
