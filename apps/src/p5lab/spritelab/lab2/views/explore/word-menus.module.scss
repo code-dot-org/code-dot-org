@@ -7,6 +7,20 @@
 }
 
 // The sentence reads as finished prose; chosen words wear chips.
+// The sentence and its hidden longest form share one grid cell.
+.sentenceStack {
+  display: grid;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
+
+.sentenceGhost {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .sentence {
   margin: 0;
   min-height: 48px;

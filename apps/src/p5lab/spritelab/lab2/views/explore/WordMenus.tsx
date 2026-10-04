@@ -15,6 +15,7 @@ import {
   Segment,
   Sentence,
   Slot,
+  Word,
   WORD_DRAG_TYPE,
   wordFor,
 } from './exploreSentences';
@@ -45,6 +46,8 @@ export function slotsToOffer(sentence: Sentence): Slot[] {
   return [...slots.filter(s => s.required), ...slots.filter(s => !s.required)];
 }
 
+const wordWidth = (w: Word) => w.text.length + (w.emoji ? 2 : 0);
+
 const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   sentence,
   choices,
@@ -65,6 +68,14 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   };
 
   const chained = chainedSlotIds(sentence);
+  // Every slot filled with its longest word, by text (an emoji counts for
+  // about two letters): the sentence's longest form.
+  const longestChoices: Choices = Object.fromEntries(
+    Object.values(sentence.slots).map(s => [
+      s.id,
+      s.words.reduce((a, b) => (wordWidth(b) > wordWidth(a) ? b : a)).id,
+    ])
+  );
   const filled = (id: string) => !!wordFor(sentence, id, choices[id]);
 
   const choose = (slotId: string, wordId: string | undefined) => {
@@ -156,6 +167,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   // one flat list, where an index alone would repeat.
   const renderSegments = (
     segments: Segment[],
+    which: Choices,
     dimmed = false,
     path = ''
   ): React.ReactNode[] =>
@@ -172,7 +184,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       }
       if ('slot' in segment) {
         const s = sentence.slots[segment.slot];
-        const word = wordFor(sentence, s.id, choices[s.id]);
+        const word = wordFor(sentence, s.id, which[s.id]);
         if (!word) {
           return s.id === slot.id
             ? [
@@ -227,19 +239,30 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           </span>,
         ];
       }
-      if (phraseFilled(sentence, segment.phrase, choices)) {
-        return renderSegments(segment.phrase, false, `${path}${i}.`);
+      if (phraseFilled(sentence, segment.phrase, which)) {
+        return renderSegments(segment.phrase, which, false, `${path}${i}.`);
       }
       return mentions(segment.phrase, slot.id)
-        ? renderSegments(segment.phrase, true, `${path}${i}.`)
+        ? renderSegments(segment.phrase, which, true, `${path}${i}.`)
         : [];
     });
 
   return (
     <div className={styles.menus}>
-      <p className={styles.sentence} aria-live="polite">
-        {renderSegments(sentence.segments)}.
-      </p>
+      {/* A hidden copy with every slot's longest word shares the cell, so
+          the sentence keeps the height of its longest form and nothing
+          below it moves as words come and go. */}
+      <div className={styles.sentenceStack}>
+        <p className={styles.sentence} aria-live="polite">
+          {renderSegments(sentence.segments, choices)}.
+        </p>
+        <p
+          className={classNames(styles.sentence, styles.sentenceGhost)}
+          aria-hidden
+        >
+          {renderSegments(sentence.segments, longestChoices)}.
+        </p>
+      </div>
       <div className={styles.carouselBox}>
         <div className={styles.carousel}>
           <button

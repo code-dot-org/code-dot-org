@@ -102,6 +102,15 @@ describe('WordMenus', () => {
     ).toBe(true);
   });
 
+  it('lays out a hidden longest sentence beside the real one', () => {
+    render(<Harness initial={{creature: 'cat'}} />);
+    const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
+    expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
+      'A 😊friendly 👾monster wearing a 👓glasses holding a 🎈balloon, drawn with 🖼️lots of detail.'
+    );
+    expect(sentenceText()).toBe('A cat.');
+  });
+
   it('jumps to the set a word came from when its chip is clicked', () => {
     render(<Harness initial={{creature: 'cat', adjective: 'cute'}} />);
     next();
