@@ -577,6 +577,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           )}
           {showingResult && made ? (
             <>
+              <hr className={styles.resultDivider} />
               <div
                 className={styles.resultActions}
                 role="group"
@@ -655,20 +656,22 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   onChange={e => setAnimated(e.target.checked)}
                 />
               )}
-              <SimpleDropdown
-                name="explore-style"
-                labelText="Style"
-                isLabelVisible={false}
-                size="s"
-                color={theme === 'Dark' ? 'white' : 'black'}
-                items={STYLES.map(s => ({
-                  value: s,
-                  text: IMAGE_STYLE_LABELS[s],
-                }))}
-                selectedValue={style}
-                disabled={busy}
-                onChange={e => setStyle(e.target.value as ImageStyle)}
-              />
+              {/* Hidden, not greyed, while a picture is made. */}
+              {!generating && (
+                <SimpleDropdown
+                  name="explore-style"
+                  labelText="Style"
+                  isLabelVisible={false}
+                  size="s"
+                  color={theme === 'Dark' ? 'white' : 'black'}
+                  items={STYLES.map(s => ({
+                    value: s,
+                    text: IMAGE_STYLE_LABELS[s],
+                  }))}
+                  selectedValue={style}
+                  onChange={e => setStyle(e.target.value as ImageStyle)}
+                />
+              )}
               <MuiButton
                 className={styles.generateButton}
                 variant="contained"

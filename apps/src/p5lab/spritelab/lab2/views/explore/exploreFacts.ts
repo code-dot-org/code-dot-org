@@ -6,7 +6,7 @@ export const EXPLORE_FACTS: readonly string[] = [
   'Image AIs learn from millions of pictures with captions. That is how they know what a "cat" or a "crown" looks like.',
   'The AI starts with a screen full of random noise and clears it up, step by step, until a picture appears.',
   'Every word in your sentence matters. "Sparkly" and "grumpy" send the picture in different directions.',
-  'The AI does not know what your image "really" looks like. It makes its best guess from the words.',
+  'The AI does not know what the thing you asked for "really" looks like. It makes its best guess from the words.',
   'Ask for the same sentence twice and you can get two different pictures. A hidden number called a seed changes the roll.',
   'Image AIs are bad at writing. If letters show up in a picture, they are often scrambled.',
   'Hands, fingers and feet are hard for image AIs. Count them when your picture arrives.',

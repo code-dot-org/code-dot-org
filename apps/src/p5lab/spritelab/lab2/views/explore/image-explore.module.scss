@@ -168,11 +168,19 @@
 // The question with a thumb each way, then the three choices sharing the
 // group's full width; roomy gaps keep the sentence, the question and the
 // choices reading as three things.
+// A thin rule between the sentence and what to do about the picture.
+.resultDivider {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--border-neutral-secondary, color.$light_gray);
+  opacity: 0.5;
+}
+
 .resultActions {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 8px;
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
