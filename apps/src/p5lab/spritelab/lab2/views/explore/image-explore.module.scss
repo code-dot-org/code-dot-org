@@ -82,10 +82,9 @@
   margin-top: auto;
 }
 
+// Full width, but at the plain button size: Generate is the main call.
 .drawButton {
   width: 100%;
-  padding: 16px;
-  font-size: 18px;
 }
 
 // Drawing: the frame holds the editor's canvas, which paints its own

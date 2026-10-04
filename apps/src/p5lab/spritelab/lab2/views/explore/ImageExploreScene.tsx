@@ -703,8 +703,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           <MuiButton
             variant="outlined"
             color="secondary"
-            size="large"
             className={styles.drawButton}
+            startIcon={<FontAwesomeV6Icon iconName="pen" />}
             disabled={busy}
             onClick={startPaint}
           >
