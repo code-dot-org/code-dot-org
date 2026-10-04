@@ -1,7 +1,6 @@
 // Keep a picture the student made: upload it and add it to the project's
-// images as a new animation with the level's role. Mirrors what
-// GenerateImagePane does on accept and on a paint save, kept apart while the
-// explore layout is on trial; fold the two together when it settles.
+// images as a new animation with the level's role. A copy of
+// GenerateImagePane's accept and paint saves, to fold back together.
 
 import {AnyAction, Dispatch} from 'redux';
 
@@ -11,18 +10,17 @@ import {
   isNameUnique,
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {getStore} from '@cdo/apps/redux';
-import {createUuid} from '@cdo/apps/utils';
-
-import {bytesToDataURI} from '../../ai/images/encoding';
+import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
   GeneratedImageResult,
   UploadImageFunction,
-} from '../../ai/images/imageGeneration';
-import {MODEL_OUTPUT_PX} from '../../ai/images/modelHelpers';
-import {ImageType} from '../../ai/images/types';
-import {categoriesForType} from '../../imageGallery';
-import {nextImageName} from '../../imageReferences';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {MODEL_OUTPUT_PX} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
+import {ImageType} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {categoriesForType} from '@cdo/apps/p5lab/spritelab/lab2/imageGallery';
+import {nextImageName} from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
+import {getStore} from '@cdo/apps/redux';
+import {createUuid} from '@cdo/apps/utils';
 
 const SINGLE_FRAME = {frameCount: 1, frameDelay: 2, looping: true};
 
@@ -33,8 +31,7 @@ interface SaveOptions {
   imageRole?: string;
 }
 
-/** Upload the bytes when there is somewhere to; else the data URI itself is
-    the source, which persists in project sources. */
+/** The uploaded URL, or the data URI itself when there is no uploader. */
 async function sourceUrlFor(
   uploadImage: UploadImageFunction | undefined,
   filename: string,
@@ -51,9 +48,9 @@ async function sourceUrlFor(
   }
 }
 
-/** Add one new animation under the next free name for its type; the name
-    it got. addAnimation is an untyped JS thunk that renames to name_N, so
-    the plain name is set back when it is free. */
+/** Add one animation under the next free name for its type; the name it
+    got. addAnimation renames to name_N, so the plain name is set back when
+    it is free. */
 function addNamedImage(
   dispatch: Dispatch,
   imageType: ImageType,
@@ -115,8 +112,8 @@ export async function saveGeneratedImage(
   });
 }
 
-/** Keep a picture painted by hand, as the editor handed it back (a PNG data
-    URI, full canvas); the name it got. */
+/** Keep a hand-painted picture (a PNG data URI, full canvas); the name it
+    got. */
 export async function savePaintedImage(
   dispatch: Dispatch,
   dataURI: string,

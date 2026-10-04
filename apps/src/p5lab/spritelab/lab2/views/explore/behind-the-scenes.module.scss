@@ -1,7 +1,5 @@
 @use "color.scss";
 
-// Under the frame once a picture is back: the link to the prompt as sent,
-// flush right, with the prompt panel anchored above it.
 .underFrame {
   position: relative;
   display: flex;
@@ -38,9 +36,8 @@
   }
 }
 
-// Opens above the link, its right edge on the link's; when the room runs
-// out the prompt scrolls. Doubled to outrank the component's own width and
-// margin.
+// Above the link, right edges aligned. Doubled to outrank the component's
+// own width and margin.
 .promptPopover.promptPopover {
   position: absolute;
   right: 0;
@@ -49,16 +46,13 @@
   width: 460px;
   max-width: 100%;
   border: 1px solid var(--border-neutral-secondary, color.$light_gray);
-  // One height whichever tab is on show; the words scroll in what is left
-  // under the title, the intro, the tabs and the note.
+  // One height whichever tab is on show; the words scroll in what is left.
   height: var(--prompt-room, 60vh);
   overflow: hidden;
   z-index: 1;
 
-  // The component's own boxes between the panel and the words, by place
-  // since their classes are hashed: the section, the content column and the
-  // text column. Each lets its child shrink so the scroll area gets the
-  // room instead of the panel growing.
+  // The component's own boxes between the panel and the words, by position
+  // since their classes are hashed; each lets its child shrink.
   > div:last-child,
   > div:last-child > div,
   > div:last-child > div > div {
@@ -78,7 +72,6 @@
     line-height: 1.5;
   }
 
-  // For a set: the first picture's words, or the words every pose shared.
   .promptTabs {
     display: flex;
     gap: 6px;

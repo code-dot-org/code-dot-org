@@ -4,8 +4,7 @@ import React from 'react';
 
 import styles from './word-menus.module.scss';
 
-/** The sentence's pieces with the full stop glued to the last one, so a
-    line never ends with a chip and starts with a lone period. */
+/** The pieces with the full stop kept on the last one's line. */
 export function withPeriod(pieces: React.ReactNode[]): React.ReactNode {
   const last = pieces[pieces.length - 1];
   return (

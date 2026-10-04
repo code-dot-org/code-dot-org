@@ -20,7 +20,6 @@
   pointer-events: none;
 }
 
-// The sentence reads as finished prose; chosen words wear chips.
 .sentence {
   margin: 0;
   min-height: 48px;
@@ -41,14 +40,12 @@
   vertical-align: middle;
 }
 
-// The last piece and the full stop wrap as one.
 .keepTogether {
   white-space: nowrap;
 }
 
-// The word inside a chip is a button in the chip's own clothes. The page
-// gives every button a 5px margin, which here would make the chip taller
-// than the sentence's line and stack the lines touching.
+// Margin 0: the page gives every button 5px, which would make the chip
+// taller than the sentence's line.
 .chipWord {
   margin: 0;
   padding: 0;
@@ -58,14 +55,14 @@
   font: inherit;
   cursor: pointer;
 
-  // With nowhere to jump, the word is plain text: no greying.
+  // Disabled, the word is plain text: not greyed.
   &:disabled {
     color: inherit;
     cursor: default;
   }
 }
 
-// Read back, a chip has no x to leave room for.
+// No x in a read-only chip.
 .readOnly .chip {
   padding-right: 14px;
 }
@@ -107,8 +104,6 @@
   cursor: pointer;
 }
 
-// The carousel and its dots sit in a tinted box of their own, so they read
-// as one control under the sentence.
 .carouselBox {
   display: flex;
   flex-direction: column;
@@ -119,7 +114,6 @@
   background-color: var(--background-neutral-primary, color.$lightest_gray);
 }
 
-// On a short window the sentence and the word box take less height.
 @media (max-height: 800px) {
   .sentence {
     min-height: 40px;
@@ -163,16 +157,13 @@
   }
 }
 
-// All sets share one grid cell, so the stack is as tall as the tallest set
-// and the arrows and dots hold still as the slides change.
+// All sets share one grid cell, so the stack is as tall as the tallest set.
 .sets {
   flex: 1 1 auto;
   min-width: 0;
   display: grid;
 }
 
-// The set's name is for the screen reader only; the dots and the blank in
-// the sentence say where the student is.
 .set {
   grid-area: 1 / 1;
   min-width: 0;
@@ -189,12 +180,11 @@
   }
 }
 
-// Laid out for height, but neither seen, focused nor clicked.
+// Laid out for height only.
 .setHidden {
   visibility: hidden;
 }
 
-// A new set fades in with a short slide from the side it came from.
 @keyframes enter-from-right {
   from {
     opacity: 0;
@@ -232,16 +222,14 @@
   }
 }
 
-// Close together, the way the chips sit in the sentence above. The page
-// gives every button a 5px margin; zeroed on the chips, dots and arrows so
-// the gaps here are the real gaps.
+// The page gives every button a 5px margin; the chips, dots and arrows
+// zero it so these gaps are the whole gap.
 .words {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-// One dot per slot: the current one is larger, a filled one is solid.
 .dots {
   display: flex;
   justify-content: center;
@@ -287,8 +275,6 @@
   transform: scale(1.25);
 }
 
-// Unchosen words are outlined; the chosen one is the filled chip the
-// sentence shows.
 .word {
   margin: 0;
   border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
@@ -305,8 +291,7 @@
   }
 }
 
-// Outranks the hover above, so a chosen word keeps its colors under the
-// pointer that just chose it.
+// Outranks the hover above.
 .word.chosen {
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);

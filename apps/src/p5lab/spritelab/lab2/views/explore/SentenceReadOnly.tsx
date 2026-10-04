@@ -1,5 +1,4 @@
-// The sentence as it was sent, chosen words as chips with nothing to press:
-// what the student reads back once a picture is on the left.
+// The sentence read back: chosen words as chips with nothing to press.
 
 import classNames from 'classnames';
 import React from 'react';
@@ -24,8 +23,7 @@ const SentenceReadOnly: React.FunctionComponent<SentenceReadOnlyProps> = ({
   sentence,
   choices,
 }) => {
-  // Keys carry the path to each piece: every phrase's pieces land in one
-  // flat list, where an index alone would repeat.
+  // Keys carry each piece's path: an index alone repeats across phrases.
   const render = (segments: Segment[], path = ''): React.ReactNode[] =>
     segments.flatMap((segment, i): React.ReactNode[] => {
       if ('text' in segment) {

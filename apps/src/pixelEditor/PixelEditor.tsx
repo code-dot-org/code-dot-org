@@ -154,11 +154,10 @@ export interface PixelEditorProps {
   toolbarLayout?: 'column' | 'row';
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
-  // A fixed set of colors, one round swatch each, in place of the
-  // full-spectrum picker; the first is the color the editor opens on.
+  // One round swatch each, in place of the spectrum picker; the first is
+  // the color the editor opens on.
   palette?: readonly PaletteColor[];
-  // The host lays the parts out; it renders inside the editor's theme host
-  // so the chrome colors reach every part.
+  // The host lays the parts out, inside the editor's theme host.
   children: (parts: PixelEditorParts) => React.ReactNode;
 }
 
@@ -1582,9 +1581,8 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   };
 
   return (
-    // display: contents host carrying the theme, so the chrome colors reach
-    // the parts wherever the host puts them (and, in the modal, the panel
-    // styles win over CustomDialog's via parent-selector specificity).
+    // display: contents host carrying the theme for the parts wherever the
+    // host puts them; in the modal its selector also outranks CustomDialog's.
     <div className={moduleStyles.dialogHost} data-theme={themeMode}>
       {children(parts)}
     </div>

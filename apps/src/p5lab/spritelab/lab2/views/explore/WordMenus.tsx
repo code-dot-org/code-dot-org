@@ -1,8 +1,6 @@
-// The sentence as prose above, reading only the words chosen so far, and
-// one slot's words at a time below, in a carousel: arrows either side and a
-// dot per slot. The only blank the sentence ever shows is for the set on
-// show, so "A dragon" reads as finished and each set of words is an offer
-// to add to it.
+// The sentence as prose above, with only the words chosen so far, and one
+// slot's words at a time below in a carousel. The sentence's only blank is
+// for the set on show.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -47,9 +45,12 @@ export function slotsToOffer(sentence: Sentence): Slot[] {
   return [...slots.filter(s => s.required), ...slots.filter(s => !s.required)];
 }
 
-const wordWidth = (w: Word) => w.text.length + (w.emoji ? 2 : 0);
+// An emoji is about this many letters wide.
+const EMOJI_WIDTH_IN_LETTERS = 2;
+const wordWidth = (w: Word) =>
+  w.text.length + (w.emoji ? EMOJI_WIDTH_IN_LETTERS : 0);
 
-// How many sets, in carousel order, the sentence holds room for.
+// How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;
 
 const WordMenus: React.FunctionComponent<WordMenusProps> = ({
@@ -75,9 +76,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   };
 
   const chained = chainedSlotIds(sentence);
-  // The first few sets filled with their longest word, by text (an emoji
-  // counts for about two letters): the longest sentence worth holding room
-  // for. The last set is rarely reached, so the room is not kept for it.
+  // The reserved sets each filled with their longest word, by text width.
   const longestChoices: Choices = Object.fromEntries(
     slots
       .slice(0, RESERVED_SETS)
@@ -90,8 +89,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
 
   const choose = (slotId: string, wordId: string | undefined) => {
     const next = {...choices, [slotId]: wordId};
-    // Clearing a chained word clears the ones after it, so the phrases
-    // stay a prefix.
+    // Clearing a chained word clears the ones after it.
     const chainedAt = chained.indexOf(slotId);
     if (!wordId && chainedAt >= 0) {
       chained.slice(chainedAt + 1).forEach(id => {
@@ -99,16 +97,14 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       });
     }
     onChange(next);
-    // Clearing a required word locks the carousel again, so bring the
-    // student back to the set the word came from.
+    // Clearing a required word locks the carousel on that word's set.
     const at = slots.findIndex(s => s.id === slotId);
     if (!wordId && slots[at].required && at !== index) {
       goTo(at);
     }
   };
 
-  // A chip in the sentence takes a word dragged from the set on show, when
-  // it is that slot's word.
+  // A chip takes a dragged word of its own slot.
   const dropHandlers = (slotId: string) => ({
     onDragOver: (e: React.DragEvent) => {
       if (e.dataTransfer.types.includes(WORD_DRAG_TYPE)) {
@@ -137,8 +133,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   // The required set holds the carousel until its word is chosen.
   const canMove = !disabled && !anyRequiredMissing;
 
-  // A chained set opens once every chained set before it has its word;
-  // the rest open with the required word.
+  // A chained set opens once every chained set before it has its word.
   const isAvailable = (s: Slot) => {
     if (s.required) {
       return true;
@@ -153,8 +148,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     (last, s, i) => (isAvailable(s) ? i : last),
     0
   );
-  // A set that closed under the student (its word before it was cleared)
-  // hands the carousel back to the last open one.
+  // A set that closed while on show gives way to the last open one.
   useEffect(() => {
     if (index > lastAvailable) {
       setDirection('left');
@@ -169,12 +163,9 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         ('phrase' in segment && mentions(segment.phrase, slotId))
     );
 
-  // The sentence with only its chosen words: an empty slot and an unfilled
-  // phrase leave nothing behind, not even a space. The one exception is the
-  // set on show: its empty slot appears as a dimmed blank chip, with its
-  // phrase dimmed around it, so the student sees where the word would go.
-  // Keys carry the path to each piece: the pieces of every phrase land in
-  // one flat list, where an index alone would repeat.
+  // Empty slots and unfilled phrases leave nothing, except the set on show,
+  // whose empty slot is a dimmed blank with its phrase dimmed around it.
+  // Keys carry each piece's path: an index alone repeats across phrases.
   const renderSegments = (
     segments: Segment[],
     which: Choices,
@@ -222,8 +213,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             )}
             {...dropHandlers(s.id)}
           >
-            {/* The word itself jumps the carousel to the set it came from,
-                while the carousel may move and that set is open. */}
+            {/* Jumps to the word's set while that set is open. */}
             <button
               type="button"
               className={styles.chipWord}
@@ -260,9 +250,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
 
   return (
     <div className={styles.menus}>
-      {/* A hidden copy with every slot's longest word shares the cell, so
-          the sentence keeps the height of its longest form and nothing
-          below it moves as words come and go. */}
+      {/* A hidden longest form shares the cell, so the height holds. */}
       <div className={styles.sentenceStack}>
         <p className={styles.sentence} aria-live="polite">
           {withPeriod(renderSegments(sentence.segments, choices))}
@@ -285,15 +273,14 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           >
             <FontAwesomeV6Icon iconName="chevron-left" />
           </button>
-          {/* Every set is laid out, stacked in one cell, so the carousel
-              keeps the height of its tallest set as the slides change; only
-              the one on show is visible. */}
+          {/* Every set is laid out in one cell; only the one on show is
+              visible. */}
           <div className={styles.sets}>
             {slots.map((set, i) => {
               const shown = i === index;
               return (
                 <div
-                  // Remounted on each arrival so the entrance plays again.
+                  // Remounted on each arrival so the entrance replays.
                   key={shown ? `${set.id}-${moveCount}` : set.id}
                   className={classNames(
                     styles.set,
@@ -331,9 +318,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                             e.dataTransfer.effectAllowed = 'copy';
                           }}
                           onClick={() =>
-                            // A chosen word clicked again clears its slot, as
-                            // its x in the sentence does; clearing the required
-                            // one locks the carousel here until a new pick.
+                            // A chosen word clicked again clears its slot.
                             choose(set.id, chosen ? undefined : word.id)
                           }
                         >
@@ -362,7 +347,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           </button>
         </div>
         <div className={styles.dots}>
-          {/* A dot appears, fading in, as its set opens. */}
           {slots.map((s, i) =>
             isAvailable(s) ? (
               <button

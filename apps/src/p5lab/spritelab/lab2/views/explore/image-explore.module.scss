@@ -10,49 +10,41 @@
   align-items: stretch;
 }
 
-// The frame on the left takes the width the window's height allows, up
-// to half; the Guide, the lab's floating panel, takes the rest. On a short
-// window the frame gives up width and the panel's words wrap into fewer
-// rows. The host is positioned for the Guide and raised by the Guide's own
-// top offset, so the panel's top meets the frame's.
+// The frame takes the width the window's height allows, up to half; the
+// Guide takes the rest.
 .imagePane {
   flex: 0 0 auto;
   width: min(calc(50% - 12px), calc(100vh - 150px));
   min-width: 240px;
 }
 
+// Raised by the Guide's own top offset, so the panel's top meets the
+// frame's.
 .guideHost {
   flex: 1 1 0;
   min-width: 0;
   position: relative;
   margin-top: -62px;
 
-  // The Guide's panel (its container's child) plays a delayed entrance
-  // when it mounts; here it mounts again on the way into and out of
-  // drawing, where a second-and-a-half blank would read as a fault.
+  // No entrance animation: the Guide mounts again entering and leaving
+  // drawing.
   > div > div {
     animation: none;
   }
 }
 
-// The panel's content, a column with room between its rows; its last row
-// is pushed to the floor the frame's height sets.
 .panel {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  // Instructions, chips and buttons are things to press and drag, not
-  // text to select; a drag across them must not paint a selection. On
-  // every descendant too: the page gives p, pre and span user-select: text.
+  // On every descendant too: the page gives p, pre and span user-select: text.
   &,
   * {
     user-select: none;
   }
 }
 
-// A short window (a Chromebook with the browser chrome showing, a small
-// laptop) gets the same rows packed closer, so the panel fits without
-// scrolling.
+// A short window (a Chromebook, a small laptop) packs the rows closer.
 @media (max-height: 800px) {
   .panel {
     gap: 10px;
@@ -100,7 +92,6 @@
   image-rendering: pixelated;
 }
 
-// Fills the generate row's place while a picture is made.
 .generatingLabel {
   margin: 0;
   padding: 36px 0;
@@ -121,7 +112,7 @@
   margin-left: auto;
 }
 
-// Pushed to the panel's floor.
+// Held at the panel's bottom.
 .bottomRow {
   display: flex;
   flex-direction: column;
@@ -129,8 +120,7 @@
   margin-top: auto;
 }
 
-// Full width at the plain button size, outlined in the quieter neutral so
-// it keeps an edge without competing with Generate, the main call.
+// The quieter neutral: Generate is the main call to action.
 .drawButton.drawButton {
   width: 100%;
   border-color: var(--border-neutral-secondary, color.$light_gray);
@@ -142,8 +132,7 @@
   }
 }
 
-// Drawing: the frame holds the editor's canvas, which paints its own
-// checker, so the frame is a plain solid box.
+// The editor's canvas paints its own checkerboard.
 .paintFrame {
   border-style: solid;
   overflow: hidden;
@@ -163,7 +152,7 @@
   gap: 12px;
 }
 
-// A made picture sits on the checker that shows its transparency.
+// The checkerboard shows a made picture's transparency.
 .imageFrameFilled {
   border-style: solid;
   background-color: color.$white;
@@ -203,9 +192,6 @@
   opacity: 0.5;
 }
 
-// The question with a thumb each way, then the three choices sharing the
-// panel's full width; roomy gaps keep the sentence, the question and the
-// choices reading as three things.
 .resultActions {
   display: flex;
   flex-direction: column;
@@ -235,8 +221,7 @@
   color: var(--background-neutral-primary, color.$white);
 }
 
-// Each button grows from its own label's width, so the three fill the row
-// without any label breaking onto a second line.
+// Each button grows from its label's width, so no label wraps.
 .resultButtons {
   display: flex;
   gap: 12px;

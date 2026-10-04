@@ -1,17 +1,21 @@
-// The words the model got, as "Behind the scenes" shows them.
+// The words the model got, for showing back.
 
 import {
   basePrompt,
+  PosedFrame,
   posedFrames,
   posePrompt,
-} from '../../ai/images/characterSet';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {
   fullPromptFor,
   GenerateImageOptions,
   pixelBlockFor,
-} from '../../ai/images/imageGeneration';
-import {chooseKeyColor} from '../../ai/images/keyColor';
-import {BodyPlan, ImageStyle} from '../../ai/images/types';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {chooseKeyColor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
+import {
+  BodyPlan,
+  ImageStyle,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 
 /** Stands in for the pose in the words every posed frame shares. */
 export const POSE_MARK = '[pose]';
@@ -21,14 +25,12 @@ export interface SentPrompts {
   picture: string;
   /** For a set: the words every posed frame got, with POSE_MARK where its
       pose goes, and each frame's pose. */
-  poses?: {common: string; frames: {label: string; pose: string}[]};
+  poses?: {common: string; frames: PosedFrame[]};
 }
 
-/**
- * A set's first frame is asked for in its own words, and every posed frame
- * then gets the same words around its pose; one picture gets the plain
- * prompt.
- */
+/** A set's first frame is asked for in its own words, then every posed
+    frame gets the same words around its pose; one picture gets the plain
+    prompt. */
 export function sentPromptsFor(
   prompt: string,
   options: GenerateImageOptions,
@@ -51,7 +53,7 @@ export function sentPromptsFor(
         key,
         block
       ),
-      frames: posedFrames(bodyPlan).map(({label, pose}) => ({label, pose})),
+      frames: posedFrames(bodyPlan),
     },
   };
 }

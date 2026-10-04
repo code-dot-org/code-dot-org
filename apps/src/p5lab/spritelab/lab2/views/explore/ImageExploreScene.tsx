@@ -22,32 +22,36 @@ import React, {
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import Guide, {
+  GUIDE_PADDING_PX,
   GUIDE_RIGHT_OFFSET_PX,
 } from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
-import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-
-import {generateCharacterSet} from '../../ai/images/characterSet';
-import {bytesToDataURI} from '../../ai/images/encoding';
+import {generateCharacterSet} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
+import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
   UploadImageFunction,
-} from '../../ai/images/imageGeneration';
-import {ImageSafetyError} from '../../ai/images/imageSafety';
-import {defaultPixelGrid} from '../../ai/images/modelHelpers';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {ImageSafetyError} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
+import {defaultPixelGrid} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
   ImageStyle,
   ImageSubject,
   ImageType,
-} from '../../ai/images/types';
-import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../../paintBlank';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import {
+  BACKGROUND_GROUND_COLOR,
+  blankPaintImage,
+} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
+import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
+import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import BehindTheScenes from './BehindTheScenes';
@@ -75,12 +79,11 @@ type Mode = 'edit' | 'generating' | 'result' | 'paint';
 // The reflection asked once a picture is back: a thumb each way.
 type Verdict = 'up' | 'down';
 
-// Drawing by hand offers the pen and the eraser; the rest of the editor's
-// tools stay out of a first picture.
+// Drawing by hand offers the pen and the eraser only.
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'eraser'];
-// The Guide's own padding (.guide in Guide.module.scss).
-const GUIDE_PADDING_PX = 24;
-// Twelve plain colors, one swatch each, in place of the spectrum picker.
+// The narrowest the Guide gets, whatever its half's width.
+const MIN_GUIDE_WIDTH_PX = 240;
+// One round swatch each, in place of the spectrum picker.
 const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [34, 34, 34, 255]},
   {name: 'Gray', rgba: [158, 158, 158, 255]},
@@ -155,8 +158,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const generate = useCallback(async () => {
     const run = ++runRef.current;
     const prompt = promptText(sentence, choices);
-    // true attaches the project context (level path, app) for per-level
-    // breakdowns, as the image dialog's event does.
+    // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
@@ -280,8 +282,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     setMode('edit');
   }, []);
 
-  // The thumb is the student's reflection; it goes to analytics with the
-  // words it judged, and nowhere else.
+  // The thumb goes to analytics with the words it judged.
   const judge = useCallback(
     (next: Verdict) => {
       setVerdict(next);
@@ -302,9 +303,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const busy = generating || saving;
   const showingResult = mode === 'result' && !!made;
 
-  // The Guide floats at a pixel width inside its half; the panel's body is
-  // at least as tall as the frame, so its last row sits level with the
-  // frame's bottom edge.
+  // The Guide floats at a pixel width inside its half; the panel is at
+  // least as tall as the frame, so its last row ends at the frame's bottom.
   const guideHostRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
   const [guideWidth, setGuideWidth] = useState<number | undefined>();
@@ -316,7 +316,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       return;
     }
     const measure = () => {
-      setGuideWidth(Math.max(240, host.clientWidth - GUIDE_RIGHT_OFFSET_PX));
+      setGuideWidth(
+        Math.max(MIN_GUIDE_WIDTH_PX, host.clientWidth - GUIDE_RIGHT_OFFSET_PX)
+      );
       setFrameHeight(frame.clientHeight);
     };
     measure();
@@ -333,7 +335,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       showTts={showTts}
     />
   );
-  // Only while a row is pushed to the floor (the draw button, or the
+  // Only while a row is held at the bottom (the draw button, or the
   // drawing's Cancel and Save); a result's panel is as tall as its content.
   const panelStyle =
     frameHeight === undefined || showingResult
@@ -437,8 +439,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             )}
           >
             {generating ? (
-              // Nothing of the picture shows until all of it is ready: a set's
-              // frames arrive one by one, and the spinner alone covers that.
+              // A set's frames arrive one by one; none shows until all have.
               <div
                 className={styles.generating}
                 role="status"
@@ -474,8 +475,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             aria-label="Make your image"
           >
             {instructionsBlock}
-            {/* The words read back, with nothing to change, from the moment
-              Generate is pressed until Change words. */}
+            {/* Read-only from Generate until Change words. */}
             {showingResult || generating ? (
               <SentenceReadOnly sentence={sentence} choices={choices} />
             ) : (
@@ -556,8 +556,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 </div>
               </>
             ) : generating ? (
-              // The frame's status region already tells assistive tech; this
-              // is the sighted reader's word.
+              // The frame's status region already announces this.
               <p className={styles.generatingLabel} aria-hidden>
                 Generating…
               </p>
@@ -605,8 +604,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 <MuiTypography variant="body2">{fact}</MuiTypography>
               </aside>
             )}
-            {/* Offered while the words are being chosen, not once a picture is
-              on its way or back. */}
+            {/* Offered only while the words are being chosen. */}
             {mode === 'edit' && (
               <div className={styles.bottomRow}>
                 <hr className={styles.resultDivider} />

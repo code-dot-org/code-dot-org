@@ -4,9 +4,12 @@
 // whose words show only when its slot is filled. A required slot must be
 // filled before the sentence can generate.
 
+import {
+  BodyPlan,
+  ImageSubject,
+  ImageType,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import manifestJson from '@cdo/static/spritelab_lab2/exploreSentences.json';
-
-import {BodyPlan, ImageSubject, ImageType} from '../../ai/images/types';
 
 export interface Word {
   id: string;
@@ -44,10 +47,8 @@ export type Choices = Record<string, string | undefined>;
 /** The drag payload's type: a JSON {slot, word} carried from a word chip. */
 export const WORD_DRAG_TYPE = 'application/x-spritelab2-word';
 
-// The content lives in the manifest: named word sets, and sentences whose
-// slots name a set (or carry their own words). This is its own file, apart
-// from the image dialog's adlib manifest, while the two systems are tried
-// side by side.
+// The manifest: named word sets, and sentences whose slots name a set or
+// carry their own words. Separate from the image dialog's adlib manifest.
 interface ManifestSlot {
   label: string;
   words: string | Word[];
@@ -89,8 +90,7 @@ function loadSentences(manifest: Manifest): Record<string, Sentence> {
 }
 
 const SENTENCES = loadSentences(manifestJson as Manifest);
-// What sentenceFor hands out; a manifest without one of these would fail
-// on the level that asks for it, so it fails here instead.
+// The sentences sentenceFor returns; a missing one fails at load.
 ['character', 'object', 'place'].forEach(id => {
   if (!SENTENCES[id]) {
     throw new Error(`exploreSentences.json: no "${id}" sentence`);
@@ -132,11 +132,8 @@ export function isComplete(sentence: Sentence, choices: Choices): boolean {
   );
 }
 
-/**
- * The slots that live inside phrases, in sentence order. They unlock one
- * after another and clear together from the back, so a sentence is always
- * a prefix of its phrases: a handful of shapes to translate, not every mix.
- */
+/** The slots inside phrases, in sentence order: they open one after another
+    and clear from the back, so a sentence is always a prefix of its phrases. */
 export function chainedSlotIds(sentence: Sentence): string[] {
   const ids: string[] = [];
   const walk = (segments: Segment[], inPhrase: boolean) =>

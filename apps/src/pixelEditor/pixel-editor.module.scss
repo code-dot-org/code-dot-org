@@ -124,11 +124,9 @@ $border-subtle: chrome.$border-subtle;
   padding-top: 8px;
 }
 
-// The toolbar as one wrapping row, for a host that lays the editor out
-// across a page instead of a modal: tools, sizes and color in a line with
-// undo/redo at its end, dividers upright, and the palette dropping below
-// the swatch (a row sits at the top of its panel, so there is room under
-// it, not over it).
+// The toolbar as one wrapping row: tools, sizes and undo/redo on the
+// first line, the color control on the second, the palette opening
+// downward.
 .toolbarRow {
   flex-direction: row;
   flex-wrap: wrap;
@@ -147,14 +145,12 @@ $border-subtle: chrome.$border-subtle;
     margin: 0 4px;
   }
 
-  // Undo/redo end the first line, flush right.
   .historyRow {
     margin-top: 0;
     margin-left: auto;
     padding-top: 0;
   }
 
-  // The color control takes the second line, set off from the tools.
   .colorRow {
     flex-basis: 100%;
     display: flex;
@@ -285,7 +281,6 @@ $border-subtle: chrome.$border-subtle;
   @include chrome.primary-button;
 }
 
-// A fixed palette: one round swatch per color, the chosen one ringed.
 .palette {
   display: flex;
   flex-wrap: wrap;

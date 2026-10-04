@@ -8,6 +8,8 @@ import styles from './Guide.module.scss';
     (.guide in Guide.module.scss), for siblings that lay out around it. */
 export const GUIDE_RIGHT_OFFSET_PX = 32;
 export const GUIDE_BOTTOM_OFFSET_PX = 20;
+/** The guide's own padding (.guide in Guide.module.scss). */
+export const GUIDE_PADDING_PX = 24;
 
 interface GuideProps {
   id?: string;
