@@ -19,7 +19,8 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "imageRole": "hero"
+      "imageRole": "hero",
+      "imageUi": "explore"
     },
     "guide_steps": [
       {

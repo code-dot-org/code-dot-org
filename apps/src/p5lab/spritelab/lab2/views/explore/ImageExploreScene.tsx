@@ -2,7 +2,6 @@
 // controls on the right. An exploration beside GenerateImagePane, reached
 // by level_mode.imageUi or ?image-ui=explore; the pane is untouched.
 
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -67,7 +66,6 @@ import {
   sentenceFor,
 } from './exploreSentences';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
-import SentenceBuilder from './SentenceBuilder';
 import SentenceReadOnly from './SentenceReadOnly';
 import WordMenus from './WordMenus';
 
@@ -125,9 +123,6 @@ interface ImageExploreSceneProps {
   /** Recorded on the saved image. */
   imageRole?: string;
   uploadImage?: UploadImageFunction;
-  /** How the sentence is built: word slots in the sentence, or a prose
-      sentence over word menus. */
-  sentenceUi?: 'slots' | 'menu';
   /** The level's instructions, markdown, read at the top of the panel. */
   instructions?: string;
   /** Offer the read-aloud button on the instructions. */
@@ -140,21 +135,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   defaultStyle,
   imageRole,
   uploadImage,
-  sentenceUi = 'slots',
   instructions,
   showTts,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
-  // The menu variant animates every character and offers no choice.
-  const offersAnimation = sentenceUi === 'slots';
-  const [animated, setAnimated] = useState(!offersAnimation);
   const sentence = sentenceFor(imageType, imageSubject);
   const [choices, setChoices] = useState<Choices>({});
   const complete = isComplete(sentence, choices);
-  // Only a character can be animated; an object or a background is one
-  // picture.
+  // Every character is animated; an object or a background is one picture.
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
 
   const [mode, setMode] = useState<Mode>('edit');
@@ -224,7 +214,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
-      const asSet = animated && canAnimate;
+      const asSet = canAnimate;
       // What "Behind the scenes" shows: a set's first frame is asked for
       // in its own words, and every posed frame then gets the same words
       // around its pose.
@@ -284,7 +274,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       }
       setMode('edit');
     }
-  }, [sentence, choices, imageType, imageSubject, style, animated, canAnimate]);
+  }, [sentence, choices, imageType, imageSubject, style, canAnimate]);
 
   const keep = useCallback(async () => {
     if (!made) {
@@ -622,15 +612,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               Generate is pressed until Change words. */}
             {showingResult || generating ? (
               <SentenceReadOnly sentence={sentence} choices={choices} />
-            ) : sentenceUi === 'menu' ? (
-              <WordMenus
-                sentence={sentence}
-                choices={choices}
-                onChange={setChoices}
-                disabled={busy}
-              />
             ) : (
-              <SentenceBuilder
+              <WordMenus
                 sentence={sentence}
                 choices={choices}
                 onChange={setChoices}
@@ -714,16 +697,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               </p>
             ) : (
               <div className={styles.generateRow}>
-                {canAnimate && offersAnimation && (
-                  <Checkbox
-                    name="explore-animated"
-                    label="Make it move"
-                    size="s"
-                    checked={animated}
-                    disabled={busy}
-                    onChange={e => setAnimated(e.target.checked)}
-                  />
-                )}
                 {/* Hidden, not greyed, while a picture is made. */}
                 {!generating && (
                   <SimpleDropdown

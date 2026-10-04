@@ -1,8 +1,8 @@
 // The sentence as prose above, reading only the words chosen so far, and
 // one slot's words at a time below, in a carousel: arrows either side and a
-// dot per slot. The other way to build the same sentence as SentenceBuilder:
-// the only blank the sentence ever shows is for the set on show, so "A
-// dragon" reads as finished and each set of words is an offer to add to it.
+// dot per slot. The only blank the sentence ever shows is for the set on
+// show, so "A dragon" reads as finished and each set of words is an offer
+// to add to it.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';

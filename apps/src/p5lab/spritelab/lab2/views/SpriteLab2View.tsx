@@ -1850,7 +1850,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               defaultStyle={DEFAULT_IMAGE_STYLE}
               imageRole={levelProperties.levelMode?.imageRole}
               uploadImage={uploadImage}
-              sentenceUi={imageUi === 'explore-menu' ? 'menu' : 'slots'}
               instructions={guide.text}
               showTts={
                 !!levelProperties.offerBrowserTts ||

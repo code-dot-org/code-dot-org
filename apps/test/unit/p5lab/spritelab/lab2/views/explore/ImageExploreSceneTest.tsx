@@ -58,8 +58,8 @@ function renderScene(props = {}) {
   );
 }
 
+// The creature set shows first; a character's picture is a set of frames.
 const pickCreature = () => {
-  fireEvent.click(screen.getByRole('button', {name: 'Choose a creature'}));
   fireEvent.click(screen.getByRole('button', {name: 'cat'}));
 };
 
@@ -77,7 +77,6 @@ describe('ImageExploreScene', () => {
     const style = screen.getByRole('combobox') as HTMLSelectElement;
     expect(style.value).toBe('pixel');
     expect(screen.getByRole('option', {name: 'Smooth'})).toBeTruthy();
-    expect(screen.getByRole('checkbox', {name: 'Make it move'})).toBeTruthy();
     expect(
       (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
         .disabled
@@ -125,14 +124,20 @@ describe('ImageExploreScene', () => {
     expect(screen.queryByRole('application')).toBeNull();
   });
 
-  it('offers no animation for an object', () => {
+  it('makes one picture for an object', async () => {
+    generateImage.mockResolvedValue(RESULT);
     renderScene({imageSubject: 'object'});
-    expect(screen.queryByRole('checkbox')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'key'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    expect(generateImage).toHaveBeenCalledTimes(1);
+    expect(generateCharacterSet).not.toHaveBeenCalled();
   });
 
-  it('animates every character in the menu variant, with no checkbox', async () => {
+  it('animates every character, with nothing to tick', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
-    renderScene({sentenceUi: 'menu'});
+    renderScene();
     expect(screen.queryByRole('checkbox')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
     await act(async () => {
@@ -149,7 +154,7 @@ describe('ImageExploreScene', () => {
 
   it('shows a fact and a spinner while making the picture, then the two choices', async () => {
     let finish: (value: typeof RESULT) => void = () => {};
-    generateImage.mockReturnValue(
+    generateCharacterSet.mockReturnValue(
       new Promise(resolve => {
         finish = resolve;
       })
@@ -164,9 +169,9 @@ describe('ImageExploreScene', () => {
     expect(
       screen.getByRole('complementary', {name: 'Did you know?'})
     ).toBeTruthy();
-    expect(generateImage).toHaveBeenCalledWith(
+    expect(generateCharacterSet).toHaveBeenCalledWith(
       'A cat',
-      expect.objectContaining({imageType: 'sprite', style: 'pixel'})
+      expect.objectContaining({style: 'pixel'})
     );
     await act(async () => {
       finish(RESULT);
@@ -182,24 +187,23 @@ describe('ImageExploreScene', () => {
   });
 
   it('reads the sentence back without controls once a picture is made', async () => {
-    generateImage.mockResolvedValue(RESULT);
+    generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    expect(screen.queryByRole('button', {name: /Change it/})).toBeNull();
-    expect(
-      screen.queryByRole('button', {name: 'Choose a creature'})
-    ).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Next words'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Remove cat'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Change words'}));
-    expect(screen.getByRole('button', {name: /creature: cat/})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Next words'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Remove cat'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
     expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
   });
 
   it('shows the prompt as sent behind the link', async () => {
-    generateImage.mockResolvedValue(RESULT);
+    generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await act(async () => {
@@ -218,7 +222,7 @@ describe('ImageExploreScene', () => {
 
   it("shows a set's first-picture words and the shared pose words in two tabs", async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
-    renderScene({sentenceUi: 'menu'});
+    renderScene();
     fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
@@ -236,7 +240,7 @@ describe('ImageExploreScene', () => {
   });
 
   it('captions the three choices with the question they answer', async () => {
-    generateImage.mockResolvedValue(RESULT);
+    generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await act(async () => {
@@ -263,7 +267,7 @@ describe('ImageExploreScene', () => {
   });
 
   it('makes another picture on Generate again, with the same words', async () => {
-    generateImage.mockResolvedValue(RESULT);
+    generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await act(async () => {
@@ -272,12 +276,12 @@ describe('ImageExploreScene', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate again'}));
     });
-    expect(generateImage).toHaveBeenCalledTimes(2);
-    expect(generateImage.mock.calls[1][0]).toBe('A cat');
+    expect(generateCharacterSet).toHaveBeenCalledTimes(2);
+    expect(generateCharacterSet.mock.calls[1][0]).toBe('A cat');
   });
 
   it('keeps the picture and moves on with Continue', async () => {
-    generateImage.mockResolvedValue(RESULT);
+    generateCharacterSet.mockResolvedValue(RESULT);
     saveGeneratedImage.mockResolvedValue('Sprite 1');
     renderScene({imageRole: 'hero'});
     pickCreature();
@@ -299,7 +303,7 @@ describe('ImageExploreScene', () => {
     const {ImageSafetyError} = jest.requireActual(
       '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety'
     );
-    generateImage.mockRejectedValue(new ImageSafetyError('prompt'));
+    generateCharacterSet.mockRejectedValue(new ImageSafetyError('prompt'));
     renderScene();
     pickCreature();
     await act(async () => {
