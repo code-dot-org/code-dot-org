@@ -1,5 +1,6 @@
 /* React component to handle displaying imported data. */
 import classNames from 'classnames';
+import {useEffect, useRef} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -36,6 +37,19 @@ const DataTable = ({
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const currentColumn = useAppSelector(state => state.currentColumn);
   const showColumnClicking = useAppSelector(getShowColumnClicking);
+  const headerButtons = useRef<Record<string, HTMLButtonElement | null>>({});
+  const previousColumn = useRef(currentColumn);
+
+  // When closing the column analysis panel, return focus to that column's header.
+  useEffect(() => {
+    const closedColumn = previousColumn.current;
+    previousColumn.current = currentColumn;
+    const focusWasLost =
+      !document.activeElement || document.activeElement === document.body;
+    if (closedColumn && !currentColumn && focusWasLost) {
+      headerButtons.current[closedColumn]?.focus();
+    }
+  }, [currentColumn]);
 
   const showRowNumbers = !reducedColumns;
   const isClickable = !reducedColumns && showColumnClicking;
@@ -119,6 +133,9 @@ const DataTable = ({
               >
                 {isClickable ? (
                   <button
+                    ref={element => {
+                      headerButtons.current[columnId] = element;
+                    }}
                     type="button"
                     className={styles.headerButton}
                     aria-pressed={columnId === currentColumn}

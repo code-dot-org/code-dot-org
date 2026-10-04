@@ -21,6 +21,7 @@ export default function useQuizAttemptView({
     timeLimitMinutes,
     showIntroScreen,
     showCorrectness,
+    revealAnswerExplanation,
   } = levelProperties as QuizLevelProperties;
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
@@ -40,6 +41,7 @@ export default function useQuizAttemptView({
         timeLimitMinutes={timeLimitMinutes}
         showIntroScreen={showIntroScreen}
         showCorrectness={showCorrectness}
+        revealAnswerExplanation={revealAnswerExplanation}
       />
     ),
   };

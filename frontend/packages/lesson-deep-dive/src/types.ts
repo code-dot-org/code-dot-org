@@ -136,7 +136,7 @@ export type Challenge = {
   id: number;
   lesson_id: number;
   question: string;
-  default_modality: 'whiteboard' | 'video' | null;
+  default_modality: 'whiteboard' | 'video' | 'both' | null;
   whiteboard_starter_image_alt_text: string | null;
   // Same-origin path to the whiteboard starter image, or null when there is
   // none. Present only when whiteboard_starter_image_alt_text is set.
@@ -147,7 +147,7 @@ type ServerChallenge = {
   id: number;
   lesson_id: number;
   question: string;
-  default_modality: 'whiteboard' | 'video' | null;
+  default_modality: 'whiteboard' | 'video' | 'both' | null;
   whiteboard_starter_image_alt_text: string | null;
   whiteboard_starter_image_url: string | null;
   created_at: string;

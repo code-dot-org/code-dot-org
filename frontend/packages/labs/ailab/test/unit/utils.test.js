@@ -4,6 +4,7 @@ import {
   areArraysEqual,
   arrayIntersection,
   getRandomInt,
+  getNiceAxisStep,
 } from '../../src/helpers/utils';
 
 const menu = {
@@ -82,5 +83,18 @@ describe('getRandomInt', () => {
     let possibleValues = [0, 1, 2, 3, 4];
     const result = getRandomInt(max);
     expect(possibleValues.includes(result)).toBe(true);
+  });
+});
+
+describe('getNiceAxisStep', () => {
+  test.each([
+    [16, 5],
+    [20, 5],
+    [21, 10],
+    [3, 1],
+    [140, 50],
+    [0, 1],
+  ])('max %i in four intervals steps by %i', (max, step) => {
+    expect(getNiceAxisStep(max, 4)).toBe(step);
   });
 });
