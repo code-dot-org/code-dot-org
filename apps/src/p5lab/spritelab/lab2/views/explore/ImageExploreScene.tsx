@@ -355,7 +355,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         knownPixelGrid={paintFrom.pixelGridSize}
         tools={PAINT_TOOLS}
         palette={PAINT_COLORS}
-        singleKeyShortcuts={false}
         fit="container"
         toolbarLayout="row"
         canvasClassName={styles.paintCanvas}

@@ -157,8 +157,9 @@ export interface PixelEditorProps {
   // A fixed set of colors, one round swatch each, in place of the
   // full-spectrum picker; the first is the color the editor opens on.
   palette?: readonly PaletteColor[];
-  // The single-key shortcuts (letters for tools, digits for brush sizes);
-  // off, a bumped key changes nothing. Ctrl+Z and Ctrl+Y stay either way.
+  // The single-key shortcuts (letters for tools, digits for brush sizes),
+  // for a host that keeps the editor mounted while it is out of view, where
+  // a bumped key must change nothing. Ctrl+Z and Ctrl+Y stay either way.
   singleKeyShortcuts?: boolean;
   // The host lays the parts out; it renders inside the editor's theme host
   // so the chrome colors reach every part.
