@@ -27,6 +27,11 @@
   vertical-align: middle;
 }
 
+// Read back, a chip has no x to leave room for.
+.readOnly .chip {
+  padding-right: 14px;
+}
+
 // Where the word from the set on show would land.
 .placeholder {
   min-width: 72px;
@@ -105,15 +110,28 @@
   }
 }
 
+// All sets share one grid cell, so the stack is as tall as the tallest set
+// and the arrows and dots hold still as the slides change.
+.sets {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+}
+
 // The set's name is for the screen reader only; the dots and the blank in
 // the sentence say where the student is.
 .set {
-  flex: 1 1 auto;
+  grid-area: 1 / 1;
   min-width: 0;
   min-height: 96px;
   display: flex;
   align-items: center;
   padding: 8px 4px;
+}
+
+// Laid out for height, but neither seen, focused nor clicked.
+.setHidden {
+  visibility: hidden;
 }
 
 // A new set fades in with a short slide from the side it came from.

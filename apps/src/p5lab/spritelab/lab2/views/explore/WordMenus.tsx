@@ -54,11 +54,13 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   const [index, setIndex] = useState(0);
   // Which way the last move went, so the new set eases in from that side.
   const [direction, setDirection] = useState<'left' | 'right'>('right');
+  const [moveCount, setMoveCount] = useState(0);
   const [overSlotId, setOverSlotId] = useState<string | null>(null);
   const slot = slots[Math.min(index, slots.length - 1)];
   const goTo = (next: number) => {
     setDirection(next < index ? 'left' : 'right');
     setIndex(next);
+    setMoveCount(n => n + 1);
   };
 
   const choose = (slotId: string, wordId: string | undefined) => {
@@ -180,7 +182,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         : [];
     });
 
-  const chosenId = choices[slot.id];
   return (
     <div className={styles.menus}>
       <p className={styles.sentence} aria-live="polite">
@@ -197,54 +198,72 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           >
             <FontAwesomeV6Icon iconName="chevron-left" />
           </button>
-          <div
-            // Keyed on the slot so a new set mounts afresh and plays its entrance.
-            key={slot.id}
-            className={classNames(
-              styles.set,
-              direction === 'left'
-                ? styles.enterFromLeft
-                : styles.enterFromRight
-            )}
-            role="group"
-            aria-label={`${slot.label}${slot.required ? ' (pick one)' : ''}`}
-          >
-            <div className={styles.words}>
-              {slot.words.map(word => {
-                const chosen = chosenId === word.id;
-                return (
-                  <button
-                    key={word.id}
-                    type="button"
-                    className={classNames(styles.word, chosen && styles.chosen)}
-                    aria-pressed={chosen}
-                    disabled={disabled}
-                    draggable={!disabled}
-                    onDragStart={e => {
-                      e.dataTransfer.setData(
-                        WORD_DRAG_TYPE,
-                        JSON.stringify({slot: slot.id, word: word.id})
+          {/* Every set is laid out, stacked in one cell, so the carousel
+              keeps the height of its tallest set as the slides change; only
+              the one on show is visible. */}
+          <div className={styles.sets}>
+            {slots.map((set, i) => {
+              const shown = i === index;
+              return (
+                <div
+                  // Remounted on each arrival so the entrance plays again.
+                  key={shown ? `${set.id}-${moveCount}` : set.id}
+                  className={classNames(
+                    styles.set,
+                    !shown && styles.setHidden,
+                    shown &&
+                      (direction === 'left'
+                        ? styles.enterFromLeft
+                        : styles.enterFromRight)
+                  )}
+                  role="group"
+                  aria-label={`${set.label}${
+                    set.required ? ' (pick one)' : ''
+                  }`}
+                  aria-hidden={!shown}
+                >
+                  <div className={styles.words}>
+                    {set.words.map(word => {
+                      const chosen = choices[set.id] === word.id;
+                      return (
+                        <button
+                          key={word.id}
+                          type="button"
+                          className={classNames(
+                            styles.word,
+                            chosen && styles.chosen
+                          )}
+                          aria-pressed={chosen}
+                          disabled={disabled}
+                          draggable={!disabled}
+                          onDragStart={e => {
+                            e.dataTransfer.setData(
+                              WORD_DRAG_TYPE,
+                              JSON.stringify({slot: set.id, word: word.id})
+                            );
+                            e.dataTransfer.effectAllowed = 'copy';
+                          }}
+                          onClick={() =>
+                            // A chosen optional word clicked again clears its slot.
+                            choose(
+                              set.id,
+                              chosen && !set.required ? undefined : word.id
+                            )
+                          }
+                        >
+                          {word.emoji && (
+                            <span className={styles.emoji} aria-hidden>
+                              {word.emoji}
+                            </span>
+                          )}
+                          {word.text}
+                        </button>
                       );
-                      e.dataTransfer.effectAllowed = 'copy';
-                    }}
-                    onClick={() =>
-                      // A chosen optional word clicked again clears its slot.
-                      choose(
-                        slot.id,
-                        chosen && !slot.required ? undefined : word.id
-                      )
-                    }
-                  >
-                    {word.emoji && (
-                      <span className={styles.emoji} aria-hidden>
-                        {word.emoji}
-                      </span>
-                    )}
-                    {word.text}
-                  </button>
-                );
-              })}
-            </div>
+                    })}
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <button
             type="button"
