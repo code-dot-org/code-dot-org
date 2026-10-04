@@ -85,16 +85,20 @@ type Verdict = 'up' | 'down';
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'eraser'];
 // The Guide's own padding (.guide in Guide.module.scss).
 const GUIDE_PADDING_PX = 24;
-// Eight plain colours, one swatch each, in place of the spectrum picker.
+// Twelve plain colours, one swatch each, in place of the spectrum picker.
 const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [34, 34, 34, 255]},
+  {name: 'Gray', rgba: [158, 158, 158, 255]},
   {name: 'White', rgba: [255, 255, 255, 255]},
+  {name: 'Brown', rgba: [141, 85, 36, 255]},
   {name: 'Red', rgba: [229, 57, 53, 255]},
   {name: 'Orange', rgba: [251, 140, 0, 255]},
   {name: 'Yellow', rgba: [253, 216, 53, 255]},
   {name: 'Green', rgba: [67, 160, 71, 255]},
+  {name: 'Teal', rgba: [0, 172, 193, 255]},
   {name: 'Blue', rgba: [30, 136, 229, 255]},
   {name: 'Purple', rgba: [142, 36, 170, 255]},
+  {name: 'Pink', rgba: [236, 64, 122, 255]},
 ];
 
 // Stands in for the pose in the words every posed frame shares.
