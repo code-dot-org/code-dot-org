@@ -552,7 +552,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       </section>
       <section className={styles.editPane} aria-label="Make your image">
         <div className={styles.group}>
-          {showingResult ? (
+          {/* The words read back, with nothing to change, from the moment
+              Generate is pressed until Change words. */}
+          {showingResult || generating ? (
             <SentenceReadOnly sentence={sentence} choices={choices} />
           ) : sentenceUi === 'menu' ? (
             <WordMenus
