@@ -229,20 +229,29 @@
   width: 460px;
   max-width: 100%;
   border: 1px solid var(--border-neutral-secondary, color.$light_gray);
-  max-height: var(--prompt-room, 60vh);
-  // The component bottom-aligns its content, so anything taller than the
-  // cap would bleed out of the top; the scroll areas below are sized to
-  // the cap instead.
+  // One height whichever tab is on show; the words scroll in what is left
+  // under the title, the intro, the tabs and the note.
+  height: var(--prompt-room, 60vh);
   overflow: hidden;
   z-index: 1;
 
-  // The intro line stays put; the prompt under it is what scrolls. The
-  // subtraction is the height of everything else in the panel: padding,
-  // title, intro and tabs, plus the note on the poses tab.
+  // The component's own boxes between the panel and the words, by place
+  // since their classes are hashed: the section, the content column and the
+  // text column. Each lets its child shrink so the scroll area gets the
+  // room instead of the panel growing.
+  > div:last-child,
+  > div:last-child > div,
+  > div:last-child > div > div {
+    flex: 1 1 auto;
+    min-height: 0;
+    align-self: stretch;
+  }
+
   .promptText {
+    flex: 1 1 auto;
+    min-height: 0;
     align-self: stretch;
     overflow-y: auto;
-    max-height: calc(var(--prompt-room, 60vh) - 190px);
     margin: 0;
     font-family: monospace;
     font-size: 13px;
@@ -270,10 +279,6 @@
       background-color: var(--text-neutral-primary, color.$dark_charcoal);
       color: var(--background-neutral-primary, color.$white);
     }
-  }
-
-  .promptTextUnderNote {
-    max-height: calc(var(--prompt-room, 60vh) - 245px);
   }
 
   .promptNote {

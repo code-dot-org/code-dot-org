@@ -512,13 +512,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                         Then, for each pose, we sent the first picture back with
                         these words. Only the part in brackets changed.
                       </p>
-                      <div
-                        className={classNames(
-                          styles.promptText,
-                          styles.promptTextUnderNote
-                        )}
-                        role="tabpanel"
-                      >
+                      <div className={styles.promptText} role="tabpanel">
                         <p className={styles.promptCommon}>
                           {made.sent.poses.common
                             .split(POSE_MARK)
@@ -702,18 +696,21 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             </aside>
           )}
         </div>
-        <div className={classNames(styles.group, styles.bottomGroup)}>
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            className={styles.drawButton}
-            startIcon={<FontAwesomeV6Icon iconName="pen" />}
-            disabled={busy}
-            onClick={startPaint}
-          >
-            I'll draw it myself
-          </MuiButton>
-        </div>
+        {/* Offered while the words are being chosen, not once a picture is
+            on its way or back. */}
+        {mode === 'edit' && (
+          <div className={classNames(styles.group, styles.bottomGroup)}>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              className={styles.drawButton}
+              startIcon={<FontAwesomeV6Icon iconName="pen" />}
+              onClick={startPaint}
+            >
+              I'll draw it myself
+            </MuiButton>
+          </div>
+        )}
       </section>
     </div>
   );

@@ -160,6 +160,9 @@ describe('ImageExploreScene', () => {
     expect(screen.getByRole('button', {name: 'Generate again'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Continue'})).toBeTruthy();
     expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
+    expect(
+      screen.queryByRole('button', {name: "I'll draw it myself"})
+    ).toBeNull();
   });
 
   it('reads the sentence back without controls once a picture is made', async () => {
