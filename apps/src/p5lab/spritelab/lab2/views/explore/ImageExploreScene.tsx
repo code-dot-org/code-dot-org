@@ -10,6 +10,7 @@ import Popover from '@code-dot-org/component-library/popover';
 import {
   Button as MuiButton,
   CircularProgress,
+  IconButton as MuiIconButton,
   Typography as MuiTypography,
 } from '@mui/material';
 import classNames from 'classnames';
@@ -68,6 +69,9 @@ const STYLES: ImageStyle[] = ['pixel', 'smooth'];
 const TEMPERATURE = 1;
 
 type Mode = 'edit' | 'generating' | 'result' | 'paint';
+
+// The reflection asked once a picture is back: a thumb each way.
+type Verdict = 'up' | 'down';
 
 // Drawing by hand offers the pen and the eraser; the rest of the editor's
 // tools stay out of a first picture.
@@ -131,6 +135,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
+  const [verdict, setVerdict] = useState<Verdict | null>(null);
   // The blank the student draws on, sized for the style, and the mode to
   // return to if they cancel.
   const [paintFrom, setPaintFrom] = useState<{
@@ -179,6 +184,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const prompt = promptText(sentence, choices);
     setMode('generating');
     setShowPrompt(false);
+    setVerdict(null);
     setError(null);
     setFact(current => pickFact(current ?? undefined));
     try {
@@ -474,12 +480,38 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 role="group"
                 aria-labelledby="explore-result-label"
               >
-                <span
-                  id="explore-result-label"
-                  className={styles.resultQuestion}
-                >
-                  How did the AI do?
-                </span>
+                <div className={styles.resultQuestionRow}>
+                  <span
+                    id="explore-result-label"
+                    className={styles.resultQuestion}
+                  >
+                    How did the AI do?
+                  </span>
+                  <MuiIconButton
+                    aria-label="Thumbs up"
+                    aria-pressed={verdict === 'up'}
+                    className={classNames(
+                      styles.verdictButton,
+                      verdict === 'up' && styles.verdictChosen
+                    )}
+                    disabled={busy}
+                    onClick={() => setVerdict('up')}
+                  >
+                    <FontAwesomeV6Icon iconName="thumbs-up" />
+                  </MuiIconButton>
+                  <MuiIconButton
+                    aria-label="Thumbs down"
+                    aria-pressed={verdict === 'down'}
+                    className={classNames(
+                      styles.verdictButton,
+                      verdict === 'down' && styles.verdictChosen
+                    )}
+                    disabled={busy}
+                    onClick={() => setVerdict('down')}
+                  >
+                    <FontAwesomeV6Icon iconName="thumbs-down" />
+                  </MuiIconButton>
+                </div>
                 <div className={styles.resultButtons}>
                   <MuiButton
                     variant="outlined"

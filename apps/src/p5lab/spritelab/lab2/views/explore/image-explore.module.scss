@@ -166,18 +166,37 @@
   }
 }
 
-// The three choices, headed by the question they answer and sharing the
-// group's full width.
+// The question with a thumb each way, then the three choices sharing the
+// group's full width; roomy gaps keep the sentence, the question and the
+// choices reading as three things.
 .resultActions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
+  margin-top: 8px;
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
+.resultQuestionRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .resultQuestion {
+  margin-right: 8px;
   font-size: 16px;
   font-weight: 600;
+}
+
+.verdictButton {
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+}
+
+// Doubled to outrank the button's own hover background.
+.verdictButton.verdictChosen {
+  background-color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--background-neutral-primary, color.$white);
 }
 
 // Each button grows from its own label's width, so the three fill the row

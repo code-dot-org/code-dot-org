@@ -206,8 +206,22 @@ describe('ImageExploreScene', () => {
     });
     const group = screen.getByRole('group', {name: 'How did the AI do?'});
     expect(
-      [...group.querySelectorAll('button')].map(b => b.textContent?.trim())
-    ).toEqual(['Change words', 'Generate again', 'Continue']);
+      [...group.querySelectorAll('button')].map(
+        b => b.getAttribute('aria-label') ?? b.textContent?.trim()
+      )
+    ).toEqual([
+      'Thumbs up',
+      'Thumbs down',
+      'Change words',
+      'Generate again',
+      'Continue',
+    ]);
+    const up = screen.getByRole('button', {name: 'Thumbs up'});
+    const down = screen.getByRole('button', {name: 'Thumbs down'});
+    expect(up.getAttribute('aria-pressed')).toBe('false');
+    fireEvent.click(down);
+    expect(down.getAttribute('aria-pressed')).toBe('true');
+    expect(up.getAttribute('aria-pressed')).toBe('false');
   });
 
   it('makes another picture on Generate again, with the same words', async () => {
