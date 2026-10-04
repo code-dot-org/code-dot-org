@@ -107,8 +107,8 @@
 .carouselBox {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 8px 8px 10px;
+  gap: 2px;
+  padding: 6px 6px 8px;
   border-radius: 8px;
   border: 1px solid var(--border-neutral-secondary, color.$light_gray);
   background-color: var(--background-neutral-primary, color.$lightest_gray);
@@ -123,8 +123,8 @@
   }
 
   .carouselBox {
-    gap: 2px;
-    padding: 4px 6px 6px;
+    gap: 0;
+    padding: 4px 4px 6px;
   }
 }
 
@@ -132,12 +132,13 @@
 .carousel {
   display: flex;
   align-items: stretch;
-  gap: 8px;
+  gap: 4px;
 }
 
 .arrow {
   flex: none;
   align-self: center;
+  margin: 0;
   width: 36px;
   height: 40px;
   border: 0;
@@ -170,15 +171,15 @@
 .set {
   grid-area: 1 / 1;
   min-width: 0;
-  min-height: 96px;
+  min-height: 84px;
   display: flex;
   align-items: center;
-  padding: 8px 4px;
+  padding: 6px 4px;
 }
 
 @media (max-height: 800px) {
   .set {
-    min-height: 72px;
+    min-height: 64px;
     padding: 4px;
   }
 }
@@ -226,22 +227,26 @@
   }
 }
 
+// Close together, the way the chips sit in the sentence above. The page
+// gives every button a 5px margin; zeroed on the chips, dots and arrows so
+// the gaps here are the real gaps.
 .words {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 // One dot per slot: the current one is larger, a filled one is solid.
 .dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .dot {
   width: 12px;
   height: 12px;
+  margin: 0;
   padding: 0;
   border-radius: 50%;
   border: 2px solid var(--text-neutral-secondary, color.$dark_charcoal);
@@ -280,6 +285,7 @@
 // Unchosen words are outlined; the chosen one is the filled chip the
 // sentence shows.
 .word {
+  margin: 0;
   border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
   border-radius: 8px;
   background: transparent;
