@@ -105,8 +105,9 @@ describe('WordMenus', () => {
   it('lays out a hidden longest sentence beside the real one', () => {
     render(<Harness initial={{creature: 'cat'}} />);
     const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
+    // The first four sets only; the detail phrase is left out.
     expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
-      'A 😊friendly 👾monster wearing a 👓glasses holding a 🎈balloon, drawn with 🖼️lots of detail.'
+      'A 😊friendly 👾monster wearing a 👓glasses holding a 🎈balloon.'
     );
     expect(sentenceText()).toBe('A cat.');
   });

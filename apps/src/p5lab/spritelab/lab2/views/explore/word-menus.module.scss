@@ -41,8 +41,11 @@
   vertical-align: middle;
 }
 
-// The word inside a chip is a button in the chip's own clothes.
+// The word inside a chip is a button in the chip's own clothes. The page
+// gives every button a 5px margin, which here would make the chip taller
+// than the sentence's line and stack the lines touching.
 .chipWord {
+  margin: 0;
   padding: 0;
   border: 0;
   background: transparent;

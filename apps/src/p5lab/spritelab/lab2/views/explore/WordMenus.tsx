@@ -47,6 +47,8 @@ export function slotsToOffer(sentence: Sentence): Slot[] {
 }
 
 const wordWidth = (w: Word) => w.text.length + (w.emoji ? 2 : 0);
+// How many sets, in carousel order, the sentence holds room for.
+const RESERVED_SETS = 4;
 
 const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   sentence,
@@ -68,13 +70,16 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   };
 
   const chained = chainedSlotIds(sentence);
-  // Every slot filled with its longest word, by text (an emoji counts for
-  // about two letters): the sentence's longest form.
+  // The first few sets filled with their longest word, by text (an emoji
+  // counts for about two letters): the longest sentence worth holding room
+  // for. The last set is rarely reached, so the room is not kept for it.
   const longestChoices: Choices = Object.fromEntries(
-    Object.values(sentence.slots).map(s => [
-      s.id,
-      s.words.reduce((a, b) => (wordWidth(b) > wordWidth(a) ? b : a)).id,
-    ])
+    slots
+      .slice(0, RESERVED_SETS)
+      .map(s => [
+        s.id,
+        s.words.reduce((a, b) => (wordWidth(b) > wordWidth(a) ? b : a)).id,
+      ])
   );
   const filled = (id: string) => !!wordFor(sentence, id, choices[id]);
 
