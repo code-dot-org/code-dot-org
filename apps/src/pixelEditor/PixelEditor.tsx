@@ -119,6 +119,12 @@ export interface PixelEditorParts {
   canSave: boolean;
 }
 
+/** One colour of a fixed palette, named for the screen reader. */
+export interface PaletteColor {
+  name: string;
+  rgba: RGBA;
+}
+
 export interface PixelEditorProps {
   // The image to edit (dataURI or URL; must be canvas-readable).
   imageUrl: string;
@@ -148,6 +154,9 @@ export interface PixelEditorProps {
   toolbarLayout?: 'column' | 'row';
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
+  // A fixed set of colours, one round swatch each, in place of the
+  // full-spectrum picker; the first is the colour the editor opens on.
+  palette?: readonly PaletteColor[];
   // The host lays the parts out; it renders inside the editor's theme host
   // so the chrome colours reach every part.
   children: (parts: PixelEditorParts) => React.ReactNode;
@@ -173,6 +182,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   fit = 'viewport',
   toolbarLayout = 'column',
   canvasClassName,
+  palette,
   children,
 }) => {
   const {theme} = useTheme();
@@ -195,7 +205,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     lastNonEyedropperToolRef.current = tool;
   }
   const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1]);
-  const [color, setColor] = useState<RGBA>(DEFAULT_COLOR);
+  const [color, setColor] = useState<RGBA>(
+    () => palette?.[0]?.rgba ?? DEFAULT_COLOR
+  );
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
   // See the onReady prop; by ref so a changing identity can't re-fire it.
@@ -1337,6 +1349,36 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const canUndo = historyVersion >= 0 && undoStackRef.current.length > 0;
   const canRedo = historyVersion >= 0 && redoStackRef.current.length > 0;
 
+  const colorControl = palette ? (
+    <div className={moduleStyles.palette} role="group" aria-label="Colors">
+      {palette.map(swatch => {
+        const active = swatch.rgba.every((v, i) => v === color[i]);
+        return (
+          <button
+            key={swatch.name}
+            type="button"
+            aria-label={swatch.name}
+            aria-pressed={active}
+            className={classNames(
+              moduleStyles.paletteSwatch,
+              active && moduleStyles.paletteSwatchActive
+            )}
+            style={{
+              backgroundColor: `rgb(${swatch.rgba[0]} ${swatch.rgba[1]} ${swatch.rgba[2]})`,
+            }}
+            onClick={() => setColor(swatch.rgba)}
+          />
+        );
+      })}
+    </div>
+  ) : (
+    <ColorPicker
+      color={color}
+      onChange={setColor}
+      recentColors={recentColors}
+    />
+  );
+
   const parts: PixelEditorParts = {
     ready: loaded || loadError,
     loadError,
@@ -1402,12 +1444,12 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
               </button>
             </PixelTooltip>
           ))}
-          <div className={moduleStyles.toolbarDivider} />
-          <ColorPicker
-            color={color}
-            onChange={setColor}
-            recentColors={recentColors}
-          />
+          {column && (
+            <>
+              <div className={moduleStyles.toolbarDivider} />
+              {colorControl}
+            </>
+          )}
         </div>
         <div className={moduleStyles.historyRow}>
           <PixelTooltip
@@ -1440,6 +1482,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
             </button>
           </PixelTooltip>
         </div>
+        {!column && <div className={moduleStyles.colorRow}>{colorControl}</div>}
       </div>
     ),
     canvas: (

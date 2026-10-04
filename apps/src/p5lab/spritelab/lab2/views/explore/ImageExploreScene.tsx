@@ -22,7 +22,7 @@ import React, {
 } from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
+import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
@@ -73,6 +73,17 @@ type Mode = 'edit' | 'generating' | 'result' | 'paint';
 // Drawing by hand offers the pen and the eraser; the rest of the editor's
 // tools stay out of a first picture.
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'eraser'];
+// Eight plain colours, one swatch each, in place of the spectrum picker.
+const PAINT_COLORS: readonly PaletteColor[] = [
+  {name: 'Black', rgba: [34, 34, 34, 255]},
+  {name: 'White', rgba: [255, 255, 255, 255]},
+  {name: 'Red', rgba: [229, 57, 53, 255]},
+  {name: 'Orange', rgba: [251, 140, 0, 255]},
+  {name: 'Yellow', rgba: [253, 216, 53, 255]},
+  {name: 'Green', rgba: [67, 160, 71, 255]},
+  {name: 'Blue', rgba: [30, 136, 229, 255]},
+  {name: 'Purple', rgba: [142, 36, 170, 255]},
+];
 
 // The reflection asked beside the thumbs once a picture is back.
 type Expected = 'no' | 'kind-of' | 'yes';
@@ -304,6 +315,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         imageUrl={paintFrom.dataURI}
         knownPixelGrid={paintFrom.pixelGridSize}
         tools={PAINT_TOOLS}
+        palette={PAINT_COLORS}
         fit="container"
         toolbarLayout="row"
         canvasClassName={styles.paintCanvas}

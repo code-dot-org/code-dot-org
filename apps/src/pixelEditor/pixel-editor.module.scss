@@ -147,9 +147,18 @@ $border-subtle: chrome.$border-subtle;
     margin: 0 4px;
   }
 
+  // Undo/redo end the first line, flush right.
   .historyRow {
     margin-top: 0;
+    margin-left: auto;
     padding-top: 0;
+  }
+
+  // The colour control takes the second line.
+  .colorRow {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .colorPicker {
@@ -273,6 +282,35 @@ $border-subtle: chrome.$border-subtle;
 
 .savePrimary {
   @include chrome.primary-button;
+}
+
+// A fixed palette: one round swatch per colour, the chosen one ringed.
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.paletteSwatch {
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--dialog-control-border-strong);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--dialog-panel-text);
+  }
+}
+
+.paletteSwatchActive {
+  box-shadow:
+    0 0 0 2px var(--dialog-inset-bg),
+    0 0 0 3px var(--dialog-panel-text);
 }
 
 // Spans both toolbar columns; the popover offset below is measured from its

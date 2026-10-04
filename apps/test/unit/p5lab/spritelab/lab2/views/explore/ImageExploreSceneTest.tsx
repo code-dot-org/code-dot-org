@@ -96,6 +96,15 @@ describe('ImageExploreScene', () => {
     expect(screen.getByRole('button', {name: 'Pen (P)'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Eraser (E)'})).toBeTruthy();
     expect(screen.queryByRole('button', {name: 'Fill (F)'})).toBeNull();
+    const colors = screen.getByRole('group', {name: 'Colors'});
+    expect(colors.querySelectorAll('button')).toHaveLength(8);
+    expect(screen.queryByRole('button', {name: /Choose color/})).toBeNull();
+    const black = screen.getByRole('button', {name: 'Black'});
+    const red = screen.getByRole('button', {name: 'Red'});
+    expect(black.getAttribute('aria-pressed')).toBe('true');
+    fireEvent.click(red);
+    expect(red.getAttribute('aria-pressed')).toBe('true');
+    expect(black.getAttribute('aria-pressed')).toBe('false');
     expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
     expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
