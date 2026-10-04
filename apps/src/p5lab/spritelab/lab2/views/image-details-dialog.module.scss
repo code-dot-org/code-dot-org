@@ -177,6 +177,8 @@
   background: rgb(0 0 0 / 45%);
   color: #fff;
   font-size: 13px;
+  // The page gives every span user-select: text.
+  user-select: none;
 }
 
 // Checkerboard signals transparency; base and tint follow the theme (the
