@@ -1843,6 +1843,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         // The image panel is the whole lab, with the floating guide over it.
         <div className={moduleStyles.imageLevelArea}>
           {imageUi ? (
+            // The explore scene is its own Guide, instructions included.
             <ImageExploreScene
               imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
               imageSubject={levelProperties.levelMode?.imageSubject}
@@ -1850,16 +1851,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               imageRole={levelProperties.levelMode?.imageRole}
               uploadImage={uploadImage}
               sentenceUi={imageUi === 'explore-menu' ? 'menu' : 'slots'}
+              instructions={guide.text}
+              showTts={
+                !!levelProperties.offerBrowserTts ||
+                queryParams('show-tts') === 'true'
+              }
             />
           ) : (
-            <GenerateImagePane imageLevel {...imagePaneProps} />
+            <>
+              <GenerateImagePane imageLevel {...imagePaneProps} />
+              <GenerateSpriteLab
+                levelMode={levelProperties.levelMode}
+                instructions={guide.text}
+                showContinue={guide.showContinue}
+                levelProperties={levelProperties}
+              />
+            </>
           )}
-          <GenerateSpriteLab
-            levelMode={levelProperties.levelMode}
-            instructions={guide.text}
-            showContinue={guide.showContinue}
-            levelProperties={levelProperties}
-          />
         </div>
       ) : (
         <TabShell

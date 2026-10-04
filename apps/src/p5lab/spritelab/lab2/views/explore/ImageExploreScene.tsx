@@ -23,6 +23,10 @@ import React, {
 } from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import Guide, {
+  GUIDE_RIGHT_OFFSET_PX,
+} from '@cdo/apps/lab2/views/components/guide/Guide';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -81,6 +85,8 @@ type Verdict = 'up' | 'down';
 // Drawing by hand offers the pen and the eraser; the rest of the editor's
 // tools stay out of a first picture.
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'eraser'];
+// The Guide's own padding (.guide in Guide.module.scss).
+const GUIDE_PADDING_PX = 24;
 // Eight plain colours, one swatch each, in place of the spectrum picker.
 const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [34, 34, 34, 255]},
@@ -122,6 +128,10 @@ interface ImageExploreSceneProps {
   /** How the sentence is built: word slots in the sentence, or a prose
       sentence over word menus. */
   sentenceUi?: 'slots' | 'menu';
+  /** The level's instructions, markdown, read at the top of the panel. */
+  instructions?: string;
+  /** Offer the read-aloud button on the instructions. */
+  showTts?: boolean;
 }
 
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
@@ -131,6 +141,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   imageRole,
   uploadImage,
   sentenceUi = 'slots',
+  instructions,
+  showTts,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -335,6 +347,44 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const generating = mode === 'generating';
   const busy = generating || saving;
   const showingResult = mode === 'result' && !!made;
+
+  // The Guide floats at a pixel width inside its half; the panel's body is
+  // at least as tall as the frame, so its last row sits level with the
+  // frame's bottom edge.
+  const guideHostRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<HTMLDivElement>(null);
+  const [guideWidth, setGuideWidth] = useState<number | undefined>();
+  const [frameHeight, setFrameHeight] = useState<number | undefined>();
+  useLayoutEffect(() => {
+    const host = guideHostRef.current;
+    const frame = frameRef.current;
+    if (!host || !frame || typeof ResizeObserver !== 'function') {
+      return;
+    }
+    const measure = () => {
+      setGuideWidth(Math.max(240, host.clientWidth - GUIDE_RIGHT_OFFSET_PX));
+      setFrameHeight(frame.clientHeight);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(host);
+    observer.observe(frame);
+    return () => observer.disconnect();
+  }, [mode]);
+
+  const instructionsBlock = instructions && (
+    <MainInstructionsContent
+      instructionsText={instructions}
+      markdownClassName={styles.instructions}
+      showTts={showTts}
+    />
+  );
+  // Only while a row is pushed to the floor (the draw button, or the
+  // drawing's Cancel and Save); a result's panel is as tall as its content.
+  const panelStyle =
+    frameHeight === undefined || showingResult
+      ? undefined
+      : {minHeight: frameHeight - 2 * GUIDE_PADDING_PX};
   const sheet =
     made?.result.frames?.poses && made.result.frames
       ? {
@@ -364,48 +414,57 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             <section className={styles.imagePane} aria-label="Your drawing">
               <div className={styles.imageColumn}>
                 <div
+                  ref={frameRef}
                   className={classNames(styles.imageFrame, styles.paintFrame)}
                 >
                   {parts.canvas}
                 </div>
               </div>
             </section>
-            <section className={styles.editPane} aria-label="Draw your image">
-              <div className={styles.group}>{parts.toolbar}</div>
-              {error && (
-                <MuiTypography
-                  variant="body2"
-                  className={styles.error}
-                  role="alert"
+            <div ref={guideHostRef} className={styles.guideHost}>
+              <Guide id="explore-guide" width={guideWidth}>
+                <section
+                  className={styles.panel}
+                  style={panelStyle}
+                  aria-label="Draw your image"
                 >
-                  {error}
-                </MuiTypography>
-              )}
-              <div
-                className={classNames(
-                  styles.group,
-                  styles.paintActions,
-                  styles.bottomGroup
-                )}
-              >
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  disabled={saving}
-                  onClick={cancelPaint}
-                >
-                  Cancel
-                </MuiButton>
-                <MuiButton
-                  variant="contained"
-                  color="primary"
-                  disabled={!parts.canSave || saving}
-                  onClick={parts.save}
-                >
-                  Save
-                </MuiButton>
-              </div>
-            </section>
+                  {instructionsBlock}
+                  {parts.toolbar}
+                  {error && (
+                    <MuiTypography
+                      variant="body2"
+                      className={styles.error}
+                      role="alert"
+                    >
+                      {error}
+                    </MuiTypography>
+                  )}
+                  <div
+                    className={classNames(
+                      styles.paintActions,
+                      styles.bottomRow
+                    )}
+                  >
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      disabled={saving}
+                      onClick={cancelPaint}
+                    >
+                      Cancel
+                    </MuiButton>
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      disabled={!parts.canSave || saving}
+                      onClick={parts.save}
+                    >
+                      Save
+                    </MuiButton>
+                  </div>
+                </section>
+              </Guide>
+            </div>
           </div>
         )}
       </PixelEditor>
@@ -417,6 +476,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       <section className={styles.imagePane} aria-label="Your image">
         <div className={styles.imageColumn}>
           <div
+            ref={frameRef}
             className={classNames(
               styles.imageFrame,
               made && !generating && styles.imageFrameFilled
@@ -550,176 +610,184 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           )}
         </div>
       </section>
-      <section className={styles.editPane} aria-label="Make your image">
-        <div className={styles.group}>
-          {/* The words read back, with nothing to change, from the moment
+      <div ref={guideHostRef} className={styles.guideHost}>
+        <Guide id="explore-guide" width={guideWidth}>
+          <section
+            className={styles.panel}
+            style={panelStyle}
+            aria-label="Make your image"
+          >
+            {instructionsBlock}
+            {/* The words read back, with nothing to change, from the moment
               Generate is pressed until Change words. */}
-          {showingResult || generating ? (
-            <SentenceReadOnly sentence={sentence} choices={choices} />
-          ) : sentenceUi === 'menu' ? (
-            <WordMenus
-              sentence={sentence}
-              choices={choices}
-              onChange={setChoices}
-              disabled={busy}
-            />
-          ) : (
-            <SentenceBuilder
-              sentence={sentence}
-              choices={choices}
-              onChange={setChoices}
-              disabled={busy}
-            />
-          )}
-          {showingResult && made ? (
-            <>
-              <hr className={styles.resultDivider} />
-              <div
-                className={styles.resultActions}
-                role="group"
-                aria-labelledby="explore-result-label"
-              >
-                <div className={styles.resultQuestionRow}>
-                  <span
-                    id="explore-result-label"
-                    className={styles.resultQuestion}
-                  >
-                    How did the AI do?
-                  </span>
-                  <MuiIconButton
-                    aria-label="Thumbs up"
-                    aria-pressed={verdict === 'up'}
-                    className={classNames(
-                      styles.verdictButton,
-                      verdict === 'up' && styles.verdictChosen
-                    )}
-                    disabled={busy}
-                    onClick={() => setVerdict('up')}
-                  >
-                    <FontAwesomeV6Icon iconName="thumbs-up" />
-                  </MuiIconButton>
-                  <MuiIconButton
-                    aria-label="Thumbs down"
-                    aria-pressed={verdict === 'down'}
-                    className={classNames(
-                      styles.verdictButton,
-                      verdict === 'down' && styles.verdictChosen
-                    )}
-                    disabled={busy}
-                    onClick={() => setVerdict('down')}
-                  >
-                    <FontAwesomeV6Icon iconName="thumbs-down" />
-                  </MuiIconButton>
-                </div>
-                <div className={styles.resultButtons}>
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    disabled={busy}
-                    onClick={changeWords}
-                  >
-                    Change words
-                  </MuiButton>
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
-                    disabled={busy}
-                    onClick={generate}
-                  >
-                    Generate again
-                  </MuiButton>
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    disabled={busy}
-                    onClick={keep}
-                  >
-                    Continue
-                  </MuiButton>
-                </div>
-              </div>
-            </>
-          ) : generating ? (
-            // The frame's status region already tells assistive tech; this
-            // is the sighted reader's word.
-            <p className={styles.generatingLabel} aria-hidden>
-              Generating…
-            </p>
-          ) : (
-            <div className={styles.generateRow}>
-              {canAnimate && offersAnimation && (
-                <Checkbox
-                  name="explore-animated"
-                  label="Make it move"
-                  size="s"
-                  checked={animated}
-                  disabled={busy}
-                  onChange={e => setAnimated(e.target.checked)}
-                />
-              )}
-              {/* Hidden, not greyed, while a picture is made. */}
-              {!generating && (
-                <SimpleDropdown
-                  name="explore-style"
-                  labelText="Style"
-                  isLabelVisible={false}
-                  size="s"
-                  color={theme === 'Dark' ? 'white' : 'black'}
-                  items={STYLES.map(s => ({
-                    value: s,
-                    text: IMAGE_STYLE_LABELS[s],
-                  }))}
-                  selectedValue={style}
-                  onChange={e => setStyle(e.target.value as ImageStyle)}
-                />
-              )}
-              <MuiButton
-                className={styles.generateButton}
-                variant="contained"
-                color="primary"
-                disabled={!complete || busy}
-                onClick={generate}
-              >
-                Generate
-              </MuiButton>
-            </div>
-          )}
-          {error && (
-            <MuiTypography
-              variant="body2"
-              className={styles.error}
-              role="alert"
-            >
-              {error}
-            </MuiTypography>
-          )}
-          {generating && fact && (
-            <aside className={styles.factBox} aria-label="Did you know?">
-              <FontAwesomeV6Icon
-                iconName="lightbulb"
-                className={styles.factIcon}
+            {showingResult || generating ? (
+              <SentenceReadOnly sentence={sentence} choices={choices} />
+            ) : sentenceUi === 'menu' ? (
+              <WordMenus
+                sentence={sentence}
+                choices={choices}
+                onChange={setChoices}
+                disabled={busy}
               />
-              <MuiTypography variant="body2">{fact}</MuiTypography>
-            </aside>
-          )}
-        </div>
-        {/* Offered while the words are being chosen, not once a picture is
-            on its way or back. */}
-        {mode === 'edit' && (
-          <div className={classNames(styles.group, styles.bottomGroup)}>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              className={styles.drawButton}
-              startIcon={<FontAwesomeV6Icon iconName="pen" />}
-              onClick={startPaint}
-            >
-              I'll draw it myself
-            </MuiButton>
-          </div>
-        )}
-      </section>
+            ) : (
+              <SentenceBuilder
+                sentence={sentence}
+                choices={choices}
+                onChange={setChoices}
+                disabled={busy}
+              />
+            )}
+            {showingResult && made ? (
+              <>
+                <hr className={styles.resultDivider} />
+                <div
+                  className={styles.resultActions}
+                  role="group"
+                  aria-labelledby="explore-result-label"
+                >
+                  <div className={styles.resultQuestionRow}>
+                    <span
+                      id="explore-result-label"
+                      className={styles.resultQuestion}
+                    >
+                      How did the AI do?
+                    </span>
+                    <MuiIconButton
+                      aria-label="Thumbs up"
+                      aria-pressed={verdict === 'up'}
+                      className={classNames(
+                        styles.verdictButton,
+                        verdict === 'up' && styles.verdictChosen
+                      )}
+                      disabled={busy}
+                      onClick={() => setVerdict('up')}
+                    >
+                      <FontAwesomeV6Icon iconName="thumbs-up" />
+                    </MuiIconButton>
+                    <MuiIconButton
+                      aria-label="Thumbs down"
+                      aria-pressed={verdict === 'down'}
+                      className={classNames(
+                        styles.verdictButton,
+                        verdict === 'down' && styles.verdictChosen
+                      )}
+                      disabled={busy}
+                      onClick={() => setVerdict('down')}
+                    >
+                      <FontAwesomeV6Icon iconName="thumbs-down" />
+                    </MuiIconButton>
+                  </div>
+                  <div className={styles.resultButtons}>
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      disabled={busy}
+                      onClick={changeWords}
+                    >
+                      Change words
+                    </MuiButton>
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
+                      disabled={busy}
+                      onClick={generate}
+                    >
+                      Generate again
+                    </MuiButton>
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      disabled={busy}
+                      onClick={keep}
+                    >
+                      Continue
+                    </MuiButton>
+                  </div>
+                </div>
+              </>
+            ) : generating ? (
+              // The frame's status region already tells assistive tech; this
+              // is the sighted reader's word.
+              <p className={styles.generatingLabel} aria-hidden>
+                Generating…
+              </p>
+            ) : (
+              <div className={styles.generateRow}>
+                {canAnimate && offersAnimation && (
+                  <Checkbox
+                    name="explore-animated"
+                    label="Make it move"
+                    size="s"
+                    checked={animated}
+                    disabled={busy}
+                    onChange={e => setAnimated(e.target.checked)}
+                  />
+                )}
+                {/* Hidden, not greyed, while a picture is made. */}
+                {!generating && (
+                  <SimpleDropdown
+                    name="explore-style"
+                    labelText="Style"
+                    isLabelVisible={false}
+                    size="s"
+                    color={theme === 'Dark' ? 'white' : 'black'}
+                    items={STYLES.map(s => ({
+                      value: s,
+                      text: IMAGE_STYLE_LABELS[s],
+                    }))}
+                    selectedValue={style}
+                    onChange={e => setStyle(e.target.value as ImageStyle)}
+                  />
+                )}
+                <MuiButton
+                  className={styles.generateButton}
+                  variant="contained"
+                  color="primary"
+                  disabled={!complete || busy}
+                  onClick={generate}
+                >
+                  Generate
+                </MuiButton>
+              </div>
+            )}
+            {error && (
+              <MuiTypography
+                variant="body2"
+                className={styles.error}
+                role="alert"
+              >
+                {error}
+              </MuiTypography>
+            )}
+            {generating && fact && (
+              <aside className={styles.factBox} aria-label="Did you know?">
+                <FontAwesomeV6Icon
+                  iconName="lightbulb"
+                  className={styles.factIcon}
+                />
+                <MuiTypography variant="body2">{fact}</MuiTypography>
+              </aside>
+            )}
+            {/* Offered while the words are being chosen, not once a picture is
+              on its way or back. */}
+            {mode === 'edit' && (
+              <div className={styles.bottomRow}>
+                <hr className={styles.resultDivider} />
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  className={styles.drawButton}
+                  startIcon={<FontAwesomeV6Icon iconName="pen" />}
+                  onClick={startPaint}
+                >
+                  I'll draw it myself
+                </MuiButton>
+              </div>
+            )}
+          </section>
+        </Guide>
+      </div>
     </div>
   );
 };

@@ -87,6 +87,19 @@ describe('ImageExploreScene', () => {
     ).toBeTruthy();
   });
 
+  it('reads the level instructions at the top of its panel', () => {
+    renderScene({
+      instructions: '**Make a character.** Use AI or draw your own.',
+    });
+    const panel = screen.getByRole('region', {name: 'Make your image'});
+    expect(panel.textContent).toMatch(
+      /^Make a character\. Use AI or draw your own\./
+    );
+    expect(panel.querySelector('strong')?.textContent).toBe(
+      'Make a character.'
+    );
+  });
+
   it('turns the frame into a drawing canvas with pen and eraser only', () => {
     renderScene();
     fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
