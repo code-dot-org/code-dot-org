@@ -43,6 +43,13 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  // Instructions, chips and buttons are things to press and drag, not
+  // text to select; a drag across them must not paint a selection. On
+  // every descendant too: the page gives p, pre and span user-select: text.
+  &,
+  * {
+    user-select: none;
+  }
 }
 
 // A short window (a Chromebook with the browser chrome showing, a small
@@ -197,6 +204,17 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 8px;
+
+  &,
+  * {
+    user-select: none;
+  }
+
+  // The prompt itself may be copied.
+  .promptPopover,
+  .promptPopover * {
+    user-select: text;
+  }
 }
 
 .promptLink {
