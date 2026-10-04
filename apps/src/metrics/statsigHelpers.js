@@ -1,6 +1,7 @@
 import cookies from 'js-cookie';
 
 import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
+import {api_statsig_stable_id_url} from '@cdo/generated-scripts/studioRoutes';
 
 import {
   getEnvironment,
@@ -34,7 +35,31 @@ export function getUserType() {
 
 export function findOrCreateStableId() {
   if (consentAllowsStatsigCookie()) {
-    const stableId = cookies.get(STABLE_ID_KEY) || createUuid();
+    let stableId = cookies.get(STABLE_ID_KEY);
+
+    if (!stableId) {
+      try {
+        const request = new XMLHttpRequest();
+
+        request.open('GET', api_statsig_stable_id_url(), false);
+        request.send();
+
+        if (request.status === 200) {
+          stableId = request.responseText;
+        } else {
+          console.error(
+            'Failed to fetch Statsig stable ID:',
+            request.status,
+            request.responseText
+          );
+        }
+      } catch (error) {
+        console.error('Failed to fetch Statsig stable ID:', error);
+      }
+    }
+
+    stableId ||= createUuid();
+
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
     return stableId;
   } else {
