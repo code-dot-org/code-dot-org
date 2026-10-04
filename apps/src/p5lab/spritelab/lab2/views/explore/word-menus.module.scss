@@ -6,7 +6,6 @@
   gap: 12px;
 }
 
-// The sentence reads as finished prose; chosen words wear chips.
 // The sentence and its hidden longest form share one grid cell.
 .sentenceStack {
   display: grid;
@@ -21,6 +20,7 @@
   pointer-events: none;
 }
 
+// The sentence reads as finished prose; chosen words wear chips.
 .sentence {
   margin: 0;
   min-height: 48px;
@@ -305,7 +305,7 @@
   }
 }
 
-// Outranks the hover above, so a chosen word keeps its colours under the
+// Outranks the hover above, so a chosen word keeps its colors under the
 // pointer that just chose it.
 .word.chosen {
   background-color: var(--text-neutral-primary, color.$dark_charcoal);

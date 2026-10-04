@@ -111,7 +111,7 @@ export interface PixelEditorParts {
       empty panel renders nothing before this. */
   ready: boolean;
   loadError: boolean;
-  /** The tool buttons, brush sizes, colour and undo/redo. */
+  /** The tool buttons, brush sizes, color and undo/redo. */
   toolbar: React.ReactNode;
   /** The drawing surface with its keyboard help and live region. */
   canvas: React.ReactNode;
@@ -119,7 +119,7 @@ export interface PixelEditorParts {
   canSave: boolean;
 }
 
-/** One colour of a fixed palette, named for the screen reader. */
+/** One color of a fixed palette, named for the screen reader. */
 export interface PaletteColor {
   name: string;
   rgba: RGBA;
@@ -154,11 +154,11 @@ export interface PixelEditorProps {
   toolbarLayout?: 'column' | 'row';
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
-  // A fixed set of colours, one round swatch each, in place of the
-  // full-spectrum picker; the first is the colour the editor opens on.
+  // A fixed set of colors, one round swatch each, in place of the
+  // full-spectrum picker; the first is the color the editor opens on.
   palette?: readonly PaletteColor[];
   // The host lays the parts out; it renders inside the editor's theme host
-  // so the chrome colours reach every part.
+  // so the chrome colors reach every part.
   children: (parts: PixelEditorParts) => React.ReactNode;
 }
 
@@ -1582,7 +1582,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   };
 
   return (
-    // display: contents host carrying the theme, so the chrome colours reach
+    // display: contents host carrying the theme, so the chrome colors reach
     // the parts wherever the host puts them (and, in the modal, the panel
     // styles win over CustomDialog's via parent-selector specificity).
     <div className={moduleStyles.dialogHost} data-theme={themeMode}>

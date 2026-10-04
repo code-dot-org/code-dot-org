@@ -89,6 +89,13 @@ function loadSentences(manifest: Manifest): Record<string, Sentence> {
 }
 
 const SENTENCES = loadSentences(manifestJson as Manifest);
+// What sentenceFor hands out; a manifest without one of these would fail
+// on the level that asks for it, so it fails here instead.
+['character', 'object', 'place'].forEach(id => {
+  if (!SENTENCES[id]) {
+    throw new Error(`exploreSentences.json: no "${id}" sentence`);
+  }
+});
 
 /** Level 2's character: a creature at least, dressed up as far as the
     student likes. */

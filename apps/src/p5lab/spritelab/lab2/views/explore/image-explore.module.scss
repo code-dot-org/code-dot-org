@@ -7,8 +7,6 @@
   width: 100%;
   max-width: 1200px;
   min-width: 0;
-  // Both halves run the frame's full height, so a group can sit on the
-  // right pane's floor level with the frame's bottom edge.
   align-items: stretch;
 }
 
@@ -53,8 +51,8 @@
 }
 
 // A short window (a Chromebook with the browser chrome showing, a small
-// laptop) gets the
-// same rows packed closer, so the panel fits without scrolling.
+// laptop) gets the same rows packed closer, so the panel fits without
+// scrolling.
 @media (max-height: 800px) {
   .panel {
     gap: 10px;
@@ -112,8 +110,7 @@
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
-// The style dropdown (after the animation checkbox, where there is one) at
-// the left, Generate at the right.
+// The style dropdown at the left, Generate at the right.
 .generateRow {
   display: flex;
   align-items: center;
@@ -235,9 +232,6 @@
   }
 }
 
-// The question with a thumb each way, then the three choices sharing the
-// group's full width; roomy gaps keep the sentence, the question and the
-// choices reading as three things.
 // A thin rule between the sentence and what to do about the picture.
 .resultDivider {
   width: 100%;
@@ -247,6 +241,9 @@
   opacity: 0.5;
 }
 
+// The question with a thumb each way, then the three choices sharing the
+// panel's full width; roomy gaps keep the sentence, the question and the
+// choices reading as three things.
 .resultActions {
   display: flex;
   flex-direction: column;

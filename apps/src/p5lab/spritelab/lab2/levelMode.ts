@@ -29,9 +29,8 @@ export interface LevelMode {
   imageUi?: ImageUi;
 }
 
-/** The image-level layouts under trial: the two-half scene with the
-    sentence built from slots (`explore`) or from word menus under a prose
-    sentence (`explore-menu`). */
+/** The image-level layout under trial: the two-half scene with the word
+    carousel, its panel the Guide. */
 export type ImageUi = 'explore';
 
 export function isImageUi(value: unknown): value is ImageUi {

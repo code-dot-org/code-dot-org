@@ -85,7 +85,7 @@ type Verdict = 'up' | 'down';
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'eraser'];
 // The Guide's own padding (.guide in Guide.module.scss).
 const GUIDE_PADDING_PX = 24;
-// Twelve plain colours, one swatch each, in place of the spectrum picker.
+// Twelve plain colors, one swatch each, in place of the spectrum picker.
 const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [34, 34, 34, 255]},
   {name: 'Gray', rgba: [158, 158, 158, 255]},
@@ -218,12 +218,11 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
-      const asSet = canAnimate;
       // What "Behind the scenes" shows: a set's first frame is asked for
       // in its own words, and every posed frame then gets the same words
       // around its pose.
       let sent: SentPrompts;
-      if (asSet) {
+      if (canAnimate) {
         const key = chooseKeyColor(prompt);
         const block = pixelBlockFor('sprite', options.pixelGrid);
         sent = {
@@ -245,7 +244,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       } else {
         sent = {picture: fullPromptFor(prompt, options)};
       }
-      const result = asSet
+      const result = canAnimate
         ? await generateCharacterSet(prompt, {
             style,
             temperature: TEMPERATURE,
@@ -551,7 +550,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                           key={tab}
                           type="button"
                           role="tab"
+                          id={`explore-prompt-tab-${tab}`}
                           aria-selected={promptTab === tab}
+                          aria-controls="explore-prompt-panel"
                           className={styles.promptTab}
                           onClick={() => setPromptTab(tab)}
                         >
@@ -566,7 +567,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                         Then, for each pose, we sent the first picture back with
                         these words. Only the part in brackets changed.
                       </p>
-                      <div className={styles.promptText} role="tabpanel">
+                      <div
+                        id="explore-prompt-panel"
+                        className={styles.promptText}
+                        role="tabpanel"
+                        aria-labelledby="explore-prompt-tab-poses"
+                      >
                         <p className={styles.promptCommon}>
                           {made.sent.poses.common
                             .split(POSE_MARK)
@@ -594,7 +600,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                       </div>
                     </>
                   ) : (
-                    <p className={styles.promptText} role="tabpanel">
+                    <p
+                      id="explore-prompt-panel"
+                      className={styles.promptText}
+                      role="tabpanel"
+                      aria-labelledby={
+                        made.sent.poses
+                          ? 'explore-prompt-tab-picture'
+                          : undefined
+                      }
+                    >
                       {made.sent.picture}
                     </p>
                   )}
@@ -701,22 +716,19 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               </p>
             ) : (
               <div className={styles.generateRow}>
-                {/* Hidden, not greyed, while a picture is made. */}
-                {!generating && (
-                  <SimpleDropdown
-                    name="explore-style"
-                    labelText="Style"
-                    isLabelVisible={false}
-                    size="s"
-                    color={theme === 'Dark' ? 'white' : 'black'}
-                    items={STYLES.map(s => ({
-                      value: s,
-                      text: IMAGE_STYLE_LABELS[s],
-                    }))}
-                    selectedValue={style}
-                    onChange={e => setStyle(e.target.value as ImageStyle)}
-                  />
-                )}
+                <SimpleDropdown
+                  name="explore-style"
+                  labelText="Style"
+                  isLabelVisible={false}
+                  size="s"
+                  color={theme === 'Dark' ? 'white' : 'black'}
+                  items={STYLES.map(s => ({
+                    value: s,
+                    text: IMAGE_STYLE_LABELS[s],
+                  }))}
+                  selectedValue={style}
+                  onChange={e => setStyle(e.target.value as ImageStyle)}
+                />
                 <MuiButton
                   className={styles.generateButton}
                   variant="contained"
