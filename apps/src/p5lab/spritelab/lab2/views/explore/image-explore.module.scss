@@ -17,9 +17,8 @@
   min-width: 0;
 }
 
-// The frame, the reflection line and the result buttons share one column,
-// no wider than the window is tall minus the rows under the frame, so the
-// buttons stay on screen.
+// The frame's column is no wider than the window is tall, less the room
+// the page needs around it, so the whole picture stays on screen.
 .imageColumn {
   width: min(100%, calc(100vh - 200px));
   margin: 0 auto;
@@ -69,6 +68,7 @@
 .styleOptions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 24px;
 }
 
@@ -166,61 +166,64 @@
   box-sizing: border-box;
 }
 
-.reflectRow {
+// Once a picture is back: the question, a thumb each way, and the link to
+// the prompt as sent, with the prompt panel anchored under this row.
+.verdictRow {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
-  margin-top: 12px;
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
-.reflectQuestion {
-  margin-right: 4px;
+.verdictButtons {
+  display: flex;
+  gap: 4px;
 }
 
-.reflectChip {
-  padding: 4px 12px;
-  border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
-  border-radius: 999px;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  font-size: 14px;
-  cursor: pointer;
-
-  &:hover:not(:disabled, .reflectChosen) {
-    background-color: var(--background-neutral-primary, color.$lightest_gray);
-  }
+.verdictButton {
+  color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
-.reflectChip.reflectChosen {
+// Doubled to outrank the button's own hover background.
+.verdictButton.verdictChosen {
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);
 }
 
-.resultBar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-// MUI's default icon colour is a grey that vanishes on the dark theme.
-.infoButton {
+.promptLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
   color: var(--text-neutral-primary, color.$dark_charcoal);
-  font-size: 20px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-neutral-primary, color.$lightest_gray);
+  }
 }
 
-// Sits above the (i) button that opens it and never flips below the bar;
-// when the room above runs out the prompt scrolls. Doubled to outrank the
-// component's own width and margin.
+.resultActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+// Drops below the row that opens it; when the room runs out the prompt
+// scrolls. Doubled to outrank the component's own width and margin.
 .promptPopover.promptPopover {
   position: absolute;
   left: 0;
-  bottom: calc(100% + 8px);
+  top: calc(100% + 8px);
   margin: 0;
   width: 460px;
   max-width: 100%;

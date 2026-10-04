@@ -60,6 +60,7 @@ import {
 } from './exploreSentences';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
 import SentenceBuilder from './SentenceBuilder';
+import SentenceReadOnly from './SentenceReadOnly';
 import WordMenus from './WordMenus';
 
 import styles from './image-explore.module.scss';
@@ -85,13 +86,8 @@ const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Purple', rgba: [142, 36, 170, 255]},
 ];
 
-// The reflection asked beside the thumbs once a picture is back.
-type Expected = 'no' | 'kind-of' | 'yes';
-const EXPECTED_CHOICES: {id: Expected; label: string}[] = [
-  {id: 'no', label: 'No'},
-  {id: 'kind-of', label: 'Kind of'},
-  {id: 'yes', label: 'Yes'},
-];
+// The reflection asked once a picture is back: a thumb each way.
+type Verdict = 'up' | 'down';
 
 interface Made {
   result: GeneratedImageResult;
@@ -139,7 +135,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
-  const [expected, setExpected] = useState<Expected | null>(null);
+  const [verdict, setVerdict] = useState<Verdict | null>(null);
   // The blank the student draws on, sized for the style, and the mode to
   // return to if they cancel.
   const [paintFrom, setPaintFrom] = useState<{
@@ -148,21 +144,20 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   } | null>(null);
   const paintReturnRef = useRef<Mode>('edit');
   const infoButtonRef = useRef<HTMLButtonElement>(null);
-  const resultBarRef = useRef<HTMLDivElement>(null);
-  // Half the height free above the result bar: the prompt panel never has
-  // to flip below the button that opened it, and a shorter panel that
-  // scrolls reads as less of a wall of text than one that fills the column.
+  const promptRowRef = useRef<HTMLDivElement>(null);
+  // The prompt panel drops below the row that opened it and is capped to
+  // the room left under that row, and to a height that scrolls rather than
+  // filling the pane with text.
   const [promptRoom, setPromptRoom] = useState<number | null>(null);
   useLayoutEffect(() => {
     if (!showPrompt) {
       return;
     }
     const measure = () => {
-      const bar = resultBarRef.current;
-      if (bar) {
-        setPromptRoom(
-          Math.max(160, (bar.getBoundingClientRect().top - 16) / 2)
-        );
+      const row = promptRowRef.current;
+      if (row) {
+        const below = window.innerHeight - row.getBoundingClientRect().bottom;
+        setPromptRoom(Math.min(360, Math.max(160, below - 24)));
       }
     };
     measure();
@@ -188,7 +183,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const prompt = promptText(sentence, choices);
     setMode('generating');
     setShowPrompt(false);
-    setExpected(null);
+    setVerdict(null);
     setError(null);
     setFact(current => pickFact(current ?? undefined));
     try {
@@ -298,8 +293,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     [dispatch, uploadImage, imageType, imageRole]
   );
 
+  // Back to the words with the picture still showing; the next Generate
+  // replaces it.
+  const changeWords = useCallback(() => {
+    setShowPrompt(false);
+    setMode('edit');
+  }, []);
+
   const generating = mode === 'generating';
   const busy = generating || saving;
+  const showingResult = mode === 'result' && !!made;
   const sheet =
     made?.result.frames?.poses && made.result.frames
       ? {
@@ -406,85 +409,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               )
             ) : null}
           </div>
-          {mode === 'result' && made && (
-            <div
-              className={styles.reflectRow}
-              role="group"
-              aria-label="Was it what you expected?"
-            >
-              <span className={styles.reflectQuestion}>
-                Was it what you expected?
-              </span>
-              {EXPECTED_CHOICES.map(choice => (
-                <button
-                  key={choice.id}
-                  type="button"
-                  className={classNames(
-                    styles.reflectChip,
-                    expected === choice.id && styles.reflectChosen
-                  )}
-                  aria-pressed={expected === choice.id}
-                  disabled={busy}
-                  onClick={() => setExpected(choice.id)}
-                >
-                  {choice.label}
-                </button>
-              ))}
-            </div>
-          )}
-          {mode === 'result' && made && (
-            <div
-              className={styles.resultBar}
-              ref={resultBarRef}
-              style={
-                promptRoom === null
-                  ? undefined
-                  : ({
-                      '--prompt-room': `${promptRoom}px`,
-                    } as React.CSSProperties)
-              }
-            >
-              <MuiIconButton
-                ref={infoButtonRef}
-                className={styles.infoButton}
-                aria-label="Behind the scenes"
-                aria-expanded={showPrompt}
-                disabled={busy}
-                onClick={() => setShowPrompt(open => !open)}
-              >
-                <FontAwesomeV6Icon iconName="circle-info" />
-              </MuiIconButton>
-              {showPrompt && (
-                <Popover
-                  direction="none"
-                  title="Behind the scenes"
-                  content="We sent the AI these words. It predicted a picture to match them."
-                  className={styles.promptPopover}
-                  onClose={() => setShowPrompt(false)}
-                >
-                  <p className={styles.promptText}>{made.sentPrompt}</p>
-                </Popover>
-              )}
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                startIcon={<FontAwesomeV6Icon iconName="thumbs-down" />}
-                disabled={busy}
-                onClick={generate}
-              >
-                Try again
-              </MuiButton>
-              <MuiButton
-                variant="contained"
-                color="primary"
-                startIcon={<FontAwesomeV6Icon iconName="thumbs-up" />}
-                disabled={busy}
-                onClick={keep}
-              >
-                Keep it
-              </MuiButton>
-            </div>
-          )}
         </div>
       </section>
       <section className={styles.editPane} aria-label="Make your image">
@@ -517,7 +441,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               ))}
             </div>
           </fieldset>
-          {sentenceUi === 'menu' ? (
+          {showingResult ? (
+            <SentenceReadOnly sentence={sentence} choices={choices} />
+          ) : sentenceUi === 'menu' ? (
             <WordMenus
               sentence={sentence}
               choices={choices}
@@ -532,26 +458,122 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               disabled={busy}
             />
           )}
-          <div className={styles.generateRow}>
-            {canAnimate && offersAnimation && (
-              <Checkbox
-                name="explore-animated"
-                label="Make it move"
-                size="s"
-                checked={animated}
-                disabled={busy}
-                onChange={e => setAnimated(e.target.checked)}
-              />
-            )}
-            <MuiButton
-              variant="contained"
-              color="primary"
-              disabled={!complete || busy}
-              onClick={generate}
-            >
-              {mode === 'result' ? 'Generate again' : 'Generate'}
-            </MuiButton>
-          </div>
+          {showingResult && made ? (
+            <>
+              <div
+                className={styles.verdictRow}
+                ref={promptRowRef}
+                style={
+                  promptRoom === null
+                    ? undefined
+                    : ({
+                        '--prompt-room': `${promptRoom}px`,
+                      } as React.CSSProperties)
+                }
+              >
+                <span id="explore-verdict-label">How did the AI do?</span>
+                <div
+                  className={styles.verdictButtons}
+                  role="group"
+                  aria-labelledby="explore-verdict-label"
+                >
+                  <MuiIconButton
+                    aria-label="Thumbs up"
+                    aria-pressed={verdict === 'up'}
+                    className={classNames(
+                      styles.verdictButton,
+                      verdict === 'up' && styles.verdictChosen
+                    )}
+                    disabled={busy}
+                    onClick={() => setVerdict('up')}
+                  >
+                    <FontAwesomeV6Icon iconName="thumbs-up" />
+                  </MuiIconButton>
+                  <MuiIconButton
+                    aria-label="Thumbs down"
+                    aria-pressed={verdict === 'down'}
+                    className={classNames(
+                      styles.verdictButton,
+                      verdict === 'down' && styles.verdictChosen
+                    )}
+                    disabled={busy}
+                    onClick={() => setVerdict('down')}
+                  >
+                    <FontAwesomeV6Icon iconName="thumbs-down" />
+                  </MuiIconButton>
+                </div>
+                <button
+                  type="button"
+                  ref={infoButtonRef}
+                  className={styles.promptLink}
+                  aria-expanded={showPrompt}
+                  disabled={busy}
+                  onClick={() => setShowPrompt(open => !open)}
+                >
+                  <FontAwesomeV6Icon iconName="circle-info" />
+                  What we sent the AI
+                </button>
+                {showPrompt && (
+                  <Popover
+                    direction="none"
+                    title="Behind the scenes"
+                    content="We sent the AI these words. It predicted a picture to match them."
+                    className={styles.promptPopover}
+                    onClose={() => setShowPrompt(false)}
+                  >
+                    <p className={styles.promptText}>{made.sentPrompt}</p>
+                  </Popover>
+                )}
+              </div>
+              <div className={styles.resultActions}>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  disabled={busy}
+                  onClick={changeWords}
+                >
+                  Change words
+                </MuiButton>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  disabled={busy}
+                  onClick={generate}
+                >
+                  Generate again
+                </MuiButton>
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  disabled={busy}
+                  onClick={keep}
+                >
+                  Continue
+                </MuiButton>
+              </div>
+            </>
+          ) : (
+            <div className={styles.generateRow}>
+              {canAnimate && offersAnimation && (
+                <Checkbox
+                  name="explore-animated"
+                  label="Make it move"
+                  size="s"
+                  checked={animated}
+                  disabled={busy}
+                  onChange={e => setAnimated(e.target.checked)}
+                />
+              )}
+              <MuiButton
+                variant="contained"
+                color="primary"
+                disabled={!complete || busy}
+                onClick={generate}
+              >
+                Generate
+              </MuiButton>
+            </div>
+          )}
           {error && (
             <MuiTypography
               variant="body2"

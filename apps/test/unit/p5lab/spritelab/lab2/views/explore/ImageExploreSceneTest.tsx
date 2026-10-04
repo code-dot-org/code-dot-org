@@ -155,18 +155,37 @@ describe('ImageExploreScene', () => {
       finish(RESULT);
     });
     expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Try again'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Keep it'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Change words'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Generate again'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Continue'})).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
   });
 
-  it('shows the prompt as sent behind the (i) button', async () => {
+  it('reads the sentence back without controls once a picture is made', async () => {
     generateImage.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    const info = screen.getByRole('button', {name: 'Behind the scenes'});
+    expect(screen.queryByRole('button', {name: /Change it/})).toBeNull();
+    expect(
+      screen.queryByRole('button', {name: 'Choose a creature'})
+    ).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Change words'}));
+    expect(screen.getByRole('button', {name: /creature: cat/})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
+    expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
+  });
+
+  it('shows the prompt as sent behind the link', async () => {
+    generateImage.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    const info = screen.getByRole('button', {name: 'What we sent the AI'});
     expect(info.getAttribute('aria-expanded')).toBe('false');
     expect(screen.queryByText(/^A cat\. /)).toBeNull();
     fireEvent.click(info);
@@ -177,27 +196,25 @@ describe('ImageExploreScene', () => {
     expect(screen.queryByText(/^A cat\. /)).toBeNull();
   });
 
-  it('asks whether the picture was expected, remembering the answer', async () => {
+  it('asks how the AI did, remembering the thumb', async () => {
     generateImage.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    const group = screen.getByRole('group', {
-      name: 'Was it what you expected?',
-    });
-    expect(group).toBeTruthy();
-    const kindOf = screen.getByRole('button', {name: 'Kind of'});
-    expect(kindOf.getAttribute('aria-pressed')).toBe('false');
-    fireEvent.click(kindOf);
-    expect(kindOf.getAttribute('aria-pressed')).toBe('true');
     expect(
-      screen.getByRole('button', {name: 'Yes'}).getAttribute('aria-pressed')
-    ).toBe('false');
+      screen.getByRole('group', {name: 'How did the AI do?'})
+    ).toBeTruthy();
+    const up = screen.getByRole('button', {name: 'Thumbs up'});
+    const down = screen.getByRole('button', {name: 'Thumbs down'});
+    expect(up.getAttribute('aria-pressed')).toBe('false');
+    fireEvent.click(down);
+    expect(down.getAttribute('aria-pressed')).toBe('true');
+    expect(up.getAttribute('aria-pressed')).toBe('false');
   });
 
-  it('makes another picture on thumbs down, with the same words', async () => {
+  it('makes another picture on Generate again, with the same words', async () => {
     generateImage.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
@@ -205,13 +222,13 @@ describe('ImageExploreScene', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Try again'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Generate again'}));
     });
     expect(generateImage).toHaveBeenCalledTimes(2);
     expect(generateImage.mock.calls[1][0]).toBe('A cat');
   });
 
-  it('keeps the picture and moves on with thumbs up', async () => {
+  it('keeps the picture and moves on with Continue', async () => {
     generateImage.mockResolvedValue(RESULT);
     saveGeneratedImage.mockResolvedValue('Sprite 1');
     renderScene({imageRole: 'hero'});
@@ -220,7 +237,7 @@ describe('ImageExploreScene', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Keep it'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
     });
     expect(saveGeneratedImage).toHaveBeenCalledWith(
       expect.any(Function),
