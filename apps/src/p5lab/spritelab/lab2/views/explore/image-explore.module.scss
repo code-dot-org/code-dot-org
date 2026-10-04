@@ -49,10 +49,11 @@
   }
 }
 
-// The frame's column is no wider than the window is tall, less the room
-// the page needs around it, so the whole picture stays on screen.
+// The frame's column is no wider than the window is tall, less the header,
+// the area's padding and the one link row under the frame, so the whole
+// picture stays on screen.
 .imageColumn {
-  width: min(100%, calc(100vh - 200px));
+  width: min(100%, calc(100vh - 150px));
   margin: 0 auto;
 }
 
