@@ -4,10 +4,16 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-import {ensureRoom, measureStack, STACK_GAP_PX} from './stackRoom';
+import {scrollIntoView} from './scrollIntoView';
+import {
+  ensureRoom,
+  heightsSettled,
+  measureStack,
+  STACK_GAP_PX,
+} from './stackRoom';
 
-/** A block to add. Its `data`, when set, tells it apart from another entry
-    of the same type in one scene. */
+/** A block to add. Its `data`, when set, is the tag a workspace block must
+    carry to stand for it. */
 export type AddBlock = BlocklyCore.serialization.blocks.State;
 
 /**
@@ -27,20 +33,30 @@ export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
   return 'attachTo' in entry;
 }
 
-/** The blocks the workspace lacks. A block without data (added before
-    entries carried any) stands for every entry of its type. */
+/** A block in the workspace as the matcher sees it. */
+export interface PresentBlock {
+  type: string;
+  data?: string | null;
+}
+
+/** Whether a workspace block stands for an entry: the entry's type, and the
+    entry's tag when it has one. The tag, not the block's values, is the
+    identity, so a block the student edited still stands for its entry and
+    a block of the type the student built does not. */
+export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
+  return (
+    present.type === entry.type && (!entry.data || present.data === entry.data)
+  );
+}
+
+/** The blocks the workspace lacks (see matchesEntry). */
 export function missingBlocks(
-  present: Iterable<{type: string; data?: string | null}>,
+  present: Iterable<PresentBlock>,
   blocks: AddBlock[]
 ): AddBlock[] {
   const presentBlocks = Array.from(present);
   return blocks.filter(
-    block =>
-      !presentBlocks.some(
-        p =>
-          p.type === block.type &&
-          (!block.data || !p.data || p.data === block.data)
-      )
+    block => !presentBlocks.some(p => matchesEntry(p, block))
   );
 }
 
@@ -100,12 +116,64 @@ export function freeStackEnd(
   }
 }
 
+/** The shadow a stack ends in, an outline still waiting for its block, with
+    the connection it hangs from; null when the stack ends in a real block. */
+export function trailingShadow(top: BlocklyCore.Block): {
+  connection: BlocklyCore.Connection;
+  shadow: BlocklyCore.Block;
+} | null {
+  for (let block: BlocklyCore.Block = top; ; ) {
+    const connection = block.nextConnection;
+    const next = connection?.targetBlock();
+    if (!connection || !next) {
+      return null;
+    }
+    if (next.isShadow()) {
+      return {connection, shadow: next};
+    }
+    block = next;
+  }
+}
+
+/** The stacks still ending in one of the level's placeholders: under a
+    block the level adds, or on the stack the level hangs it on. An entry
+    with no placeholder has no outline to wait for. */
+export function unfilledOutlines(
+  workspace: BlocklyCore.WorkspaceSvg,
+  entries: AddBlockEntry[]
+): BlocklyCore.BlockSvg[] {
+  const tops = workspace.getTopBlocks(false);
+  const found = new Set<BlocklyCore.BlockSvg>();
+  for (const entry of entries) {
+    const placeholder = isAttachShadow(entry)
+      ? entry.shadow
+      : entry.next?.shadow;
+    if (!placeholder) {
+      continue;
+    }
+    for (const top of tops) {
+      const end = trailingShadow(top);
+      const matches = isAttachShadow(entry)
+        ? top.type === entry.attachTo
+        : matchesEntry(top, entry);
+      if (
+        end &&
+        matches &&
+        samePlaceholder(end.connection.getShadowState(), placeholder)
+      ) {
+        found.add(top);
+      }
+    }
+  }
+  return [...found];
+}
+
 /** Hang the shadow on the first stack of the type with a free end, and
-    make room under the stacks again; returns whether it was hung. */
+    make room under the stacks again; returns that stack, or null. */
 export function attachShadow(
   workspace: BlocklyCore.WorkspaceSvg,
   entry: AttachShadow
-): boolean {
+): BlocklyCore.BlockSvg | null {
   for (const top of workspace.getTopBlocks(false)) {
     if (top.type !== entry.attachTo) {
       continue;
@@ -114,34 +182,45 @@ export function attachShadow(
     if (connection) {
       connection.setShadowState(entry.shadow);
       ensureRoom(workspace);
-      return true;
+      return top;
     }
   }
-  return false;
+  return null;
 }
 
 /**
  * Add the level's blocks the workspace lacks, each placed below
  * everything already there, and hang its shadows on the stacks named for
  * them. Returns how many were added. Fires ordinary create events, so
- * the workspace saves and re-runs as after an edit.
+ * the workspace saves and re-runs as after an edit. Then scrolls what was
+ * added, and any outline of the level's still waiting for its block, into
+ * view, so a pass with nothing to add still shows the student their task.
  */
-export function addMissingBlocks(
+export async function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   entries: AddBlockEntry[]
-): number {
+): Promise<number> {
+  await heightsSettled();
+  if (!workspace.rendered) {
+    return 0;
+  }
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachShadow(entry)
   );
-  const missing = missingBlocks(workspace.getAllBlocks(false), blocks);
-  let added = 0;
+  const present = workspace.getAllBlocks(false).filter(b => !b.isShadow());
+  const missing = missingBlocks(present, blocks);
+  const added: BlocklyCore.BlockSvg[] = [];
   for (const entry of missing) {
     const {x, y} = placeBelow(workspace.getTopBlocks(false).map(measureStack));
     try {
-      BlocklyCore.serialization.blocks.append({...entry, x, y}, workspace, {
-        recordUndo: false,
-      });
-      added++;
+      const block = BlocklyCore.serialization.blocks.append(
+        {...entry, x, y},
+        workspace,
+        {recordUndo: false}
+      );
+      // Rendered now, so the next entry is placed under its real height.
+      BlocklyCore.renderManagement.triggerQueuedRenders(workspace);
+      added.push(block as BlocklyCore.BlockSvg);
     } catch (e) {
       // A block the pool cannot build (a misnamed input, a missing type) is
       // a level-authoring slip; the level must still open.
@@ -151,13 +230,48 @@ export function addMissingBlocks(
   for (const entry of entries) {
     if (isAttachShadow(entry)) {
       try {
-        if (attachShadow(workspace, entry)) {
-          added++;
+        const top = attachShadow(workspace, entry);
+        if (top) {
+          added.push(top);
         }
       } catch (e) {
         console.warn(`add_blocks shadow for ${entry.attachTo} not hung:`, e);
       }
     }
   }
-  return added;
+  const show = new Set(added);
+  for (const top of unfilledOutlines(workspace, entries)) {
+    show.add(top);
+  }
+  showBlocks(workspace, [...show]);
+  return added.length;
+}
+
+// Scroll the blocks on screen: a long program can leave them below the
+// fold of a small screen. Only up or down, so the stacks keep their left
+// edge.
+async function showBlocks(
+  workspace: BlocklyCore.WorkspaceSvg,
+  blocks: BlocklyCore.BlockSvg[]
+): Promise<void> {
+  if (!blocks.length) {
+    return;
+  }
+  await heightsSettled();
+  const live = blocks.filter(block => !block.isDisposed());
+  if (!live.length) {
+    return;
+  }
+  const rects = live.map(block => block.getBoundingRectangle());
+  scrollIntoView(
+    workspace,
+    {
+      top: Math.min(...rects.map(r => r.top)),
+      bottom: Math.max(...rects.map(r => r.bottom)),
+      left: Math.min(...rects.map(r => r.left)),
+      right: Math.max(...rects.map(r => r.right)),
+    },
+    STACK_GAP_PX,
+    'vertical'
+  );
 }

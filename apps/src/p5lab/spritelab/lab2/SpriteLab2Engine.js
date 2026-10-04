@@ -92,9 +92,6 @@ const CANVAS_DENSITY_FACTOR = 2;
 // How long a restart quiets further restarts: long enough to see the scene
 // run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
-// A block-triggered scene jump waits this long before it starts, so a say
-// block on the same event is seen before the scene changes.
-const SCENE_JUMP_DELAY_MS = 750;
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
@@ -185,9 +182,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onControlsChange = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
-    // A block-triggered jump waiting out SCENE_JUMP_DELAY_MS; a fresh run
-    // cancels it.
-    this.jumpDelayTimer_ = null;
     // null while no audio is listening.
     this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -409,9 +403,6 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
-    // A fresh library is a fresh run: a jump the old one was waiting to make
-    // must not land in it.
-    this.clearSceneJumpDelay_();
     // Fixed for the run: the scene type is set before the run begins.
     const dimBackground = this.isPlatformScene();
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
@@ -661,18 +652,16 @@ export default class SpriteLab2Engine extends SpriteLab {
       return setAnimation.call(this, spriteArg, animation);
     };
     library.commands.goToScene = sceneId => {
-      this.delaySceneJump_(() => this.onGoToScene, String(sceneId));
+      this.triggerSceneJump_(this.onGoToScene, String(sceneId));
     };
-    // The quiet window is what keeps a condition that still holds on the
-    // next frame from restarting at frame rate. It runs from the jump
-    // itself, so the wait before it does not use it up.
+    // The quiet window keeps a condition that still holds on the next frame
+    // from restarting at frame rate.
     library.commands.restartScene = () => {
       if (Date.now() - this.lastRestartAt_ < RESTART_QUIET_MS) {
         return;
       }
-      this.delaySceneJump_(
-        () =>
-          this.onRestartScene &&
+      this.triggerSceneJump_(
+        this.onRestartScene &&
           (() => {
             this.lastRestartAt_ = Date.now();
             this.onRestartScene();
@@ -680,36 +669,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
     };
     library.commands.goToExternalScene = sceneKey => {
-      this.delaySceneJump_(() => this.onGoToExternalScene, String(sceneKey));
+      this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     return library;
   }
 
-  /**
-   * Start a block-triggered jump after SCENE_JUMP_DELAY_MS: the scene keeps
-   * running meanwhile, then freezes through the jump gate and the handler
-   * runs. The handler is read when the wait ends; nothing starts without
-   * one. One jump at a time: a trigger during the wait, or while a jump is
-   * in flight, is ignored.
-   */
-  delaySceneJump_(getHandler, ...args) {
-    if (!getHandler() || this.jumpDelayTimer_ || this.sceneJumpInFlight_) {
+  // Off the interpreter's step: the handler tears down the interpreter this
+  // command runs in. No handler (an engine with no view wired) starts nothing.
+  triggerSceneJump_(handler, ...args) {
+    if (!handler) {
       return;
     }
-    this.jumpDelayTimer_ = setTimeout(() => {
-      this.jumpDelayTimer_ = null;
-      const handler = getHandler();
-      if (handler && this.beginSceneJump_()) {
+    setTimeout(() => {
+      if (!this.destroyed_ && this.beginSceneJump_()) {
         handler(...args);
       }
-    }, SCENE_JUMP_DELAY_MS);
-  }
-
-  clearSceneJumpDelay_() {
-    if (this.jumpDelayTimer_) {
-      clearTimeout(this.jumpDelayTimer_);
-      this.jumpDelayTimer_ = null;
-    }
+    }, 0);
   }
 
   /**
@@ -850,9 +825,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.destroyed_) {
       return;
     }
-    // Now, not when the new library is built: that is after an async
-    // preload, and a jump waiting out its delay could start in between.
-    this.clearSceneJumpDelay_();
     this.sceneType_ = sceneType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
@@ -989,7 +961,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.destroyed_ = true;
     this.reset();
     this.stopTickTimer();
-    this.clearSceneJumpDelay_();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
     this.frameCaptureArmed_ = false;
