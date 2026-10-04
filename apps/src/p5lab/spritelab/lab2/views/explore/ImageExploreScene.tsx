@@ -113,7 +113,7 @@ interface SentPrompts {
 interface Made {
   result: GeneratedImageResult;
   dataURI: string;
-  /** The words as the model got them, for "What we sent the AI". */
+  /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
 }
 
@@ -225,7 +225,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
       const asSet = animated && canAnimate;
-      // What "What we sent the AI" shows: a set's first frame is asked for
+      // What "Behind the scenes" shows: a set's first frame is asked for
       // in its own words, and every posed frame then gets the same words
       // around its pose.
       let sent: SentPrompts;
@@ -531,12 +531,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 }}
               >
                 <FontAwesomeV6Icon iconName="circle-info" />
-                What we sent the AI
+                Behind the scenes
               </button>
               {showPrompt && (
                 <Popover
                   direction="none"
-                  title="What we sent the AI"
+                  title="Behind the scenes"
                   content="We sent the AI these words. It predicted a picture to match them."
                   className={styles.promptPopover}
                   onClose={() => setShowPrompt(false)}

@@ -205,7 +205,7 @@ describe('ImageExploreScene', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    const info = screen.getByRole('button', {name: 'What we sent the AI'});
+    const info = screen.getByRole('button', {name: 'Behind the scenes'});
     expect(info.getAttribute('aria-expanded')).toBe('false');
     expect(screen.queryByText(/^A cat\. /)).toBeNull();
     fireEvent.click(info);
@@ -223,7 +223,7 @@ describe('ImageExploreScene', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    fireEvent.click(screen.getByRole('button', {name: 'What we sent the AI'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
     expect(screen.getByRole('tab', {name: 'First picture'})).toBeTruthy();
     expect(screen.getByRole('tabpanel').textContent).toMatch(
       /^A dragon\. Show the whole character/
