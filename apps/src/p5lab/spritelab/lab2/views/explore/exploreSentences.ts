@@ -197,6 +197,27 @@ export function isComplete(sentence: Sentence, choices: Choices): boolean {
   );
 }
 
+/**
+ * The slots that live inside phrases, in sentence order. They unlock one
+ * after another and clear together from the back, so a sentence is always
+ * a prefix of its phrases: a handful of shapes to translate, not every mix.
+ */
+export function chainedSlotIds(sentence: Sentence): string[] {
+  const ids: string[] = [];
+  const walk = (segments: Segment[], inPhrase: boolean) =>
+    segments.forEach(segment => {
+      if ('slot' in segment) {
+        if (inPhrase) {
+          ids.push(segment.slot);
+        }
+      } else if ('phrase' in segment) {
+        walk(segment.phrase, true);
+      }
+    });
+  walk(sentence.segments, false);
+  return ids;
+}
+
 /** Whether a phrase's slots are all filled, so its words show and count. */
 export function phraseFilled(
   sentence: Sentence,

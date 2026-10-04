@@ -56,12 +56,15 @@ describe('WordMenus', () => {
       name: 'Next words',
     }) as HTMLButtonElement;
     expect(nextButton.disabled).toBe(true);
+    // Only the required set's dot is out until its word is chosen.
     expect(
-      (screen.getByRole('button', {name: 'detail words'}) as HTMLButtonElement)
-        .disabled
-    ).toBe(true);
+      screen.getAllByRole('button', {name: /^[a-z]+ words$/})
+    ).toHaveLength(1);
     fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
     expect(nextButton.disabled).toBe(false);
+    expect(
+      screen.getAllByRole('button', {name: /^[a-z]+ words$/})
+    ).toHaveLength(3);
   });
 
   it('returns to the required set when its word is removed elsewhere', () => {
@@ -91,12 +94,51 @@ describe('WordMenus', () => {
     next();
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'sparkly'})).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', {name: 'detail words'}));
-    expect(screen.getByRole('group', {name: 'detail'})).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'clothing words'}));
+    expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
     expect(
       (screen.getByRole('button', {name: 'Next words'}) as HTMLButtonElement)
         .disabled
     ).toBe(true);
+  });
+
+  it('jumps to the set a word came from when its chip is clicked', () => {
+    render(<Harness initial={{creature: 'cat', adjective: 'cute'}} />);
+    next();
+    next();
+    expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'creature: cat. Show its words'})
+    );
+    expect(
+      screen.getByRole('group', {name: 'creature (pick one)'})
+    ).toBeTruthy();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'adjective: cute. Show its words'})
+    );
+    expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+  });
+
+  it('opens the phrases one after another and clears them from the back', () => {
+    render(<Harness initial={{creature: 'cat'}} />);
+    // Creature, adjective and the first phrase are open; the rest wait.
+    expect(
+      screen.getAllByRole('button', {name: /^[a-z]+ words$/})
+    ).toHaveLength(3);
+    expect(screen.queryByRole('button', {name: 'thing words'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'clothing words'}));
+    fireEvent.click(screen.getByRole('button', {name: 'hat'}));
+    expect(screen.getByRole('button', {name: 'thing words'})).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'detail words'})).toBeNull();
+    next();
+    fireEvent.click(screen.getByRole('button', {name: 'wand'}));
+    expect(screen.getByRole('button', {name: 'detail words'})).toBeTruthy();
+    expect(sentenceText()).toBe('A cat wearing a hat holding a wand.');
+    // Clearing the hat takes the wand with it and closes the later sets.
+    fireEvent.click(screen.getByRole('button', {name: 'Remove hat'}));
+    expect(sentenceText()).toBe('A cat wearing a .');
+    expect(screen.queryByRole('button', {name: 'thing words'})).toBeNull();
+    expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
   });
 
   it('shows where the set on show would land, dimmed, until a word is chosen', () => {

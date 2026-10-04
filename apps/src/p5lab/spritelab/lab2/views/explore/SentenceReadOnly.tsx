@@ -23,10 +23,12 @@ const SentenceReadOnly: React.FunctionComponent<SentenceReadOnlyProps> = ({
   sentence,
   choices,
 }) => {
-  const render = (segments: Segment[]): React.ReactNode[] =>
+  // Keys carry the path to each piece: every phrase's pieces land in one
+  // flat list, where an index alone would repeat.
+  const render = (segments: Segment[], path = ''): React.ReactNode[] =>
     segments.flatMap((segment, i): React.ReactNode[] => {
       if ('text' in segment) {
-        return [<span key={i}>{segment.text}</span>];
+        return [<span key={`${path}${i}`}>{segment.text}</span>];
       }
       if ('slot' in segment) {
         const word = wordFor(sentence, segment.slot, choices[segment.slot]);
@@ -44,7 +46,7 @@ const SentenceReadOnly: React.FunctionComponent<SentenceReadOnlyProps> = ({
           : [];
       }
       return phraseFilled(sentence, segment.phrase, choices)
-        ? render(segment.phrase)
+        ? render(segment.phrase, `${path}${i}.`)
         : [];
     });
   return (

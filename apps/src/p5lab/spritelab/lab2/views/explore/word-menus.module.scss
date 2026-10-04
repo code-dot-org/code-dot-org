@@ -27,6 +27,16 @@
   vertical-align: middle;
 }
 
+// The word inside a chip is a button in the chip's own clothes.
+.chipWord {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
 // Read back, a chip has no x to leave room for.
 .readOnly .chip {
   padding-right: 14px;
@@ -193,6 +203,24 @@
   border: 2px solid var(--text-neutral-secondary, color.$dark_charcoal);
   background: transparent;
   cursor: pointer;
+  animation: dot-in 0.3s ease-out;
+}
+
+@keyframes dot-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
 }
 
 .dotFilled {

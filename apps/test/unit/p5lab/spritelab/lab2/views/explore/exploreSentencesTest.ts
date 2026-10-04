@@ -1,4 +1,5 @@
 import {
+  chainedSlotIds,
   CHARACTER_SENTENCE,
   chosenBodyPlan,
   isComplete,
@@ -11,6 +12,14 @@ describe('exploreSentences', () => {
     expect(isComplete(CHARACTER_SENTENCE, {})).toBe(false);
     expect(isComplete(CHARACTER_SENTENCE, {adjective: 'brave'})).toBe(false);
     expect(isComplete(CHARACTER_SENTENCE, {creature: 'blob'})).toBe(true);
+  });
+
+  it('chains the slots inside phrases, in sentence order', () => {
+    expect(chainedSlotIds(CHARACTER_SENTENCE)).toEqual([
+      'clothing',
+      'thing',
+      'detail',
+    ]);
   });
 
   it('reads the simplest sentence without the empty slots', () => {

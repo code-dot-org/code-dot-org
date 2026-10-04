@@ -6,9 +6,10 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
+  chainedSlotIds,
   Choices,
   phraseFilled,
   Segment,
@@ -63,8 +64,20 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     setMoveCount(n => n + 1);
   };
 
+  const chained = chainedSlotIds(sentence);
+  const filled = (id: string) => !!wordFor(sentence, id, choices[id]);
+
   const choose = (slotId: string, wordId: string | undefined) => {
-    onChange({...choices, [slotId]: wordId});
+    const next = {...choices, [slotId]: wordId};
+    // Clearing a chained word clears the ones after it, so the phrases
+    // stay a prefix.
+    const chainedAt = chained.indexOf(slotId);
+    if (!wordId && chainedAt >= 0) {
+      chained.slice(chainedAt + 1).forEach(id => {
+        next[id] = undefined;
+      });
+    }
+    onChange(next);
     // Clearing a required word locks the carousel again, so bring the
     // student back to the set the word came from.
     const at = slots.findIndex(s => s.id === slotId);
@@ -103,6 +116,31 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   // The required set holds the carousel until its word is chosen.
   const canMove = !disabled && !anyRequiredMissing;
 
+  // A chained set opens once every chained set before it has its word;
+  // the rest open with the required word.
+  const isAvailable = (s: Slot) => {
+    if (s.required) {
+      return true;
+    }
+    if (anyRequiredMissing) {
+      return false;
+    }
+    const at = chained.indexOf(s.id);
+    return at <= 0 || chained.slice(0, at).every(filled);
+  };
+  const lastAvailable = slots.reduce(
+    (last, s, i) => (isAvailable(s) ? i : last),
+    0
+  );
+  // A set that closed under the student (its word before it was cleared)
+  // hands the carousel back to the last open one.
+  useEffect(() => {
+    if (index > lastAvailable) {
+      setDirection('left');
+      setIndex(lastAvailable);
+    }
+  }, [index, lastAvailable]);
+
   const mentions = (segments: Segment[], slotId: string): boolean =>
     segments.some(
       segment =>
@@ -114,14 +152,20 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   // phrase leave nothing behind, not even a space. The one exception is the
   // set on show: its empty slot appears as a dimmed blank chip, with its
   // phrase dimmed around it, so the student sees where the word would go.
+  // Keys carry the path to each piece: the pieces of every phrase land in
+  // one flat list, where an index alone would repeat.
   const renderSegments = (
     segments: Segment[],
-    dimmed = false
+    dimmed = false,
+    path = ''
   ): React.ReactNode[] =>
     segments.flatMap((segment, i): React.ReactNode[] => {
       if ('text' in segment) {
         return [
-          <span key={i} className={classNames(dimmed && styles.dimmed)}>
+          <span
+            key={`${path}${i}`}
+            className={classNames(dimmed && styles.dimmed)}
+          >
             {segment.text}
           </span>,
         ];
@@ -156,12 +200,21 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             )}
             {...dropHandlers(s.id)}
           >
-            {word.emoji && (
-              <span className={styles.emoji} aria-hidden>
-                {word.emoji}
-              </span>
-            )}
-            {word.text}
+            {/* The word itself jumps the carousel to the set it came from. */}
+            <button
+              type="button"
+              className={styles.chipWord}
+              aria-label={`${s.label}: ${word.text}. Show its words`}
+              disabled={disabled}
+              onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
+            >
+              {word.emoji && (
+                <span className={styles.emoji} aria-hidden>
+                  {word.emoji}
+                </span>
+              )}
+              {word.text}
+            </button>
             <button
               type="button"
               className={styles.remove}
@@ -175,10 +228,10 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         ];
       }
       if (phraseFilled(sentence, segment.phrase, choices)) {
-        return renderSegments(segment.phrase);
+        return renderSegments(segment.phrase, false, `${path}${i}.`);
       }
       return mentions(segment.phrase, slot.id)
-        ? renderSegments(segment.phrase, true)
+        ? renderSegments(segment.phrase, true, `${path}${i}.`)
         : [];
     });
 
@@ -268,28 +321,31 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             type="button"
             className={styles.arrow}
             aria-label="Next words"
-            disabled={!canMove || index >= slots.length - 1}
-            onClick={() => goTo(Math.min(slots.length - 1, index + 1))}
+            disabled={!canMove || index >= lastAvailable}
+            onClick={() => goTo(Math.min(lastAvailable, index + 1))}
           >
             <FontAwesomeV6Icon iconName="chevron-right" />
           </button>
         </div>
         <div className={styles.dots}>
-          {slots.map((s, i) => (
-            <button
-              key={s.id}
-              type="button"
-              className={classNames(
-                styles.dot,
-                i === index && styles.dotCurrent,
-                wordFor(sentence, s.id, choices[s.id]) && styles.dotFilled
-              )}
-              aria-label={`${s.label} words`}
-              aria-current={i === index ? 'true' : undefined}
-              disabled={!canMove}
-              onClick={() => goTo(i)}
-            />
-          ))}
+          {/* A dot appears, fading in, as its set opens. */}
+          {slots.map((s, i) =>
+            isAvailable(s) ? (
+              <button
+                key={s.id}
+                type="button"
+                className={classNames(
+                  styles.dot,
+                  i === index && styles.dotCurrent,
+                  filled(s.id) && styles.dotFilled
+                )}
+                aria-label={`${s.label} words`}
+                aria-current={i === index ? 'true' : undefined}
+                disabled={!canMove}
+                onClick={() => goTo(i)}
+              />
+            ) : null
+          )}
         </div>
       </div>
     </div>
