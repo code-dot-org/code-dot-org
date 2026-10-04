@@ -64,6 +64,9 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   const [overSlotId, setOverSlotId] = useState<string | null>(null);
   const slot = slots[Math.min(index, slots.length - 1)];
   const goTo = (next: number) => {
+    if (next === index) {
+      return;
+    }
     setDirection(next < index ? 'left' : 'right');
     setIndex(next);
     setMoveCount(n => n + 1);
@@ -217,12 +220,13 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             )}
             {...dropHandlers(s.id)}
           >
-            {/* The word itself jumps the carousel to the set it came from. */}
+            {/* The word itself jumps the carousel to the set it came from,
+                while the carousel may move and that set is open. */}
             <button
               type="button"
               className={styles.chipWord}
               aria-label={`${s.label}: ${word.text}. Show its words`}
-              disabled={disabled}
+              disabled={disabled || !canMove || !isAvailable(s)}
               onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
             >
               {word.emoji && (

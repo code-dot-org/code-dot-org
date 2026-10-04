@@ -52,6 +52,12 @@
   color: inherit;
   font: inherit;
   cursor: pointer;
+
+  // With nowhere to jump, the word is plain text: no greying.
+  &:disabled {
+    color: inherit;
+    cursor: default;
+  }
 }
 
 // Read back, a chip has no x to leave room for.
