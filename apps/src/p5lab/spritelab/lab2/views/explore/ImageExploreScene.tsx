@@ -162,9 +162,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const paintReturnRef = useRef<Mode>('edit');
   const infoButtonRef = useRef<HTMLButtonElement>(null);
   const promptRowRef = useRef<HTMLDivElement>(null);
-  // The prompt panel opens above the link under the frame, capped at half
-  // the room above it: a shorter panel that scrolls reads as less of a wall
-  // of text than one that covers the picture.
+  // The prompt panel opens above the link under the frame, capped so it
+  // never covers the whole picture: the words inside scroll instead.
   const [promptRoom, setPromptRoom] = useState<number | null>(null);
   useLayoutEffect(() => {
     if (!showPrompt) {
@@ -174,7 +173,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       const row = promptRowRef.current;
       if (row) {
         setPromptRoom(
-          Math.max(160, (row.getBoundingClientRect().top - 16) / 2)
+          Math.min(420, Math.max(200, row.getBoundingClientRect().top - 16))
         );
       }
     };
@@ -513,7 +512,13 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                         Then, for each pose, we sent the first picture back with
                         these words. Only the part in brackets changed.
                       </p>
-                      <div className={styles.promptText} role="tabpanel">
+                      <div
+                        className={classNames(
+                          styles.promptText,
+                          styles.promptTextUnderNote
+                        )}
+                        role="tabpanel"
+                      >
                         <p className={styles.promptCommon}>
                           {made.sent.poses.common
                             .split(POSE_MARK)
