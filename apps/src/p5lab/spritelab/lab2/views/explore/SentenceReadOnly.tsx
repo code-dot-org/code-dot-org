@@ -11,6 +11,7 @@ import {
   Sentence,
   wordFor,
 } from './exploreSentences';
+import {withPeriod} from './WordMenus';
 
 import styles from './word-menus.module.scss';
 
@@ -51,7 +52,7 @@ const SentenceReadOnly: React.FunctionComponent<SentenceReadOnlyProps> = ({
     });
   return (
     <p className={classNames(styles.sentence, styles.readOnly)}>
-      {render(sentence.segments)}.
+      {withPeriod(render(sentence.segments))}
     </p>
   );
 };
