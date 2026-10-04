@@ -183,6 +183,15 @@ export function attachShadow(
   return null;
 }
 
+// Resolves once queued renders have run and placeholders have their
+// blocks' shape: they size themselves a tick after the queue drains, with
+// a render of their own.
+async function settled(): Promise<void> {
+  await BlocklyCore.renderManagement.finishQueuedRenders();
+  await new Promise(resolve => setTimeout(resolve));
+  await BlocklyCore.renderManagement.finishQueuedRenders();
+}
+
 /**
  * Add the level's blocks the workspace lacks, each placed below
  * everything already there, and hang its shadows on the stacks named for
@@ -191,10 +200,15 @@ export function attachShadow(
  * added, and any outline of the level's still waiting for its block, into
  * view, so a pass with nothing to add still shows the student their task.
  */
-export function addMissingBlocks(
+export async function addMissingBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   entries: AddBlockEntry[]
-): number {
+): Promise<number> {
+  // Stacks are measured at their final heights.
+  await settled();
+  if (!workspace.rendered) {
+    return 0;
+  }
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachShadow(entry)
   );
@@ -239,7 +253,8 @@ export function addMissingBlocks(
 }
 
 // Scroll the blocks on screen: a long program can leave them below the
-// fold of a small screen.
+// fold of a small screen. Only up or down, so the stacks keep their place
+// across the workspace.
 async function showBlocks(
   workspace: BlocklyCore.WorkspaceSvg,
   blocks: BlocklyCore.BlockSvg[]
@@ -247,9 +262,7 @@ async function showBlocks(
   if (!blocks.length) {
     return;
   }
-  await BlocklyCore.renderManagement.finishQueuedRenders();
-  // A hung placeholder sizes itself a tick after the renders run.
-  await new Promise(resolve => setTimeout(resolve));
+  await settled();
   const live = blocks.filter(block => !block.isDisposed());
   if (!live.length) {
     return;
@@ -263,6 +276,7 @@ async function showBlocks(
       left: Math.min(...rects.map(r => r.left)),
       right: Math.max(...rects.map(r => r.right)),
     },
-    STACK_GAP_PX
+    STACK_GAP_PX,
+    'vertical'
   );
 }

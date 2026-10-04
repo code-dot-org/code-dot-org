@@ -22,25 +22,27 @@ export interface View {
 
 export const SCROLL_MS = 300;
 
+/** Which way the scroll may move. */
+export type Axis = 'both' | 'vertical';
+
 /**
  * The change to the scroll offset, in pixels, that brings `bounds` inside
  * `view` with `padding` around it; zero when it already is. A box too big
- * for the view shows its top left.
+ * for the view shows its top left. A vertical scroll ignores the box's
+ * left and right.
  */
 export function scrollDelta(
   bounds: Box,
   view: View,
   scale: number,
-  padding: number
+  padding: number,
+  axis: Axis = 'both'
 ): {dx: number; dy: number} {
   const right = view.left + view.width;
   const bottom = view.top + view.height;
-  if (
-    bounds.left >= view.left &&
-    bounds.top >= view.top &&
-    bounds.right <= right &&
-    bounds.bottom <= bottom
-  ) {
+  const inViewAcross =
+    axis === 'vertical' || (bounds.left >= view.left && bounds.right <= right);
+  if (inViewAcross && bounds.top >= view.top && bounds.bottom <= bottom) {
     return {dx: 0, dy: 0};
   }
   const padded = {
@@ -51,10 +53,12 @@ export function scrollDelta(
   };
   let dx = 0;
   let dy = 0;
-  if (padded.left < view.left) {
-    dx = view.left - padded.left;
-  } else if (padded.right > right) {
-    dx = right - padded.right;
+  if (axis === 'both') {
+    if (padded.left < view.left) {
+      dx = view.left - padded.left;
+    } else if (padded.right > right) {
+      dx = right - padded.right;
+    }
   }
   if (padded.top < view.top) {
     dy = view.top - padded.top;
@@ -80,14 +84,21 @@ const running = new WeakMap<BlocklyCore.WorkspaceSvg, () => void>();
 export function scrollIntoView(
   workspace: BlocklyCore.WorkspaceSvg,
   bounds: Box,
-  padding = 0
+  padding = 0,
+  axis: Axis = 'both'
 ): void {
   running.get(workspace)?.();
   if (!workspace.isMovable()) {
     return;
   }
   const view = workspace.getMetricsManager().getViewMetrics(true);
-  const {dx, dy} = scrollDelta(bounds, view, workspace.getScale(), padding);
+  const {dx, dy} = scrollDelta(
+    bounds,
+    view,
+    workspace.getScale(),
+    padding,
+    axis
+  );
   if (!dx && !dy) {
     return;
   }

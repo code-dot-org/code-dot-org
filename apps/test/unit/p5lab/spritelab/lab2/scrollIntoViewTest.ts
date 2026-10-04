@@ -66,6 +66,27 @@ describe('scrollIntoView', () => {
       expect(dy).toBe(20);
     });
 
+    it('a vertical scroll leaves a box off to the side where it is', () => {
+      expect(
+        scrollDelta(
+          {left: -20, top: 500, right: 100, bottom: 600},
+          VIEW,
+          1,
+          24,
+          'vertical'
+        )
+      ).toEqual({dx: 0, dy: -324});
+      expect(
+        scrollDelta(
+          {left: 500, top: 10, right: 600, bottom: 100},
+          VIEW,
+          1,
+          24,
+          'vertical'
+        )
+      ).toEqual({dx: 0, dy: 0});
+    });
+
     it('scales workspace units to pixels', () => {
       expect(
         scrollDelta({left: 0, top: 500, right: 100, bottom: 600}, VIEW, 2, 0)
