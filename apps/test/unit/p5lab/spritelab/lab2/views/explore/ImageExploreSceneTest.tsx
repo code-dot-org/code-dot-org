@@ -197,6 +197,25 @@ describe('ImageExploreScene', () => {
     expect(screen.queryByText(/^A cat\. /)).toBeNull();
   });
 
+  it("shows a set's first-picture words and the shared pose words in two tabs", async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({sentenceUi: 'menu'});
+    fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'What we sent the AI'}));
+    expect(screen.getByRole('tab', {name: 'First picture'})).toBeTruthy();
+    expect(screen.getByRole('tabpanel').textContent).toMatch(
+      /^A dragon\. Show the whole character/
+    );
+    fireEvent.click(screen.getByRole('tab', {name: 'Other poses'}));
+    const panel = screen.getByRole('tabpanel');
+    expect(panel.textContent).toContain('[pose]');
+    expect(panel.textContent).toContain('walking:');
+    expect(panel.querySelectorAll('li')).toHaveLength(4);
+  });
+
   it('captions the three choices with the question they answer', async () => {
     generateImage.mockResolvedValue(RESULT);
     renderScene();

@@ -229,11 +229,65 @@
   .promptText {
     align-self: stretch;
     overflow-y: auto;
-    max-height: calc(var(--prompt-room, 60vh) - 150px);
+    max-height: calc(var(--prompt-room, 60vh) - 190px);
     margin: 0;
     font-family: monospace;
     font-size: 13px;
     line-height: 1.5;
+  }
+
+  // For a set: the first picture's words, or the words every pose shared.
+  .promptTabs {
+    display: flex;
+    gap: 6px;
+    align-self: stretch;
+  }
+
+  .promptTab {
+    padding: 4px 12px;
+    border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+
+    &[aria-selected='true'] {
+      background-color: var(--text-neutral-primary, color.$dark_charcoal);
+      color: var(--background-neutral-primary, color.$white);
+    }
+  }
+
+  .promptNote {
+    align-self: stretch;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .promptCommon {
+    margin: 0;
+  }
+
+  .poseMark {
+    padding: 0 3px;
+    border-radius: 3px;
+    background-color: rgb(255 214 0 / 35%);
+    color: inherit;
+  }
+
+  .poseList {
+    margin: 10px 0 0;
+    padding-left: 18px;
+
+    li {
+      margin-top: 4px;
+    }
+  }
+
+  .poseLabel {
+    font-weight: 700;
+    text-transform: capitalize;
   }
 }
 

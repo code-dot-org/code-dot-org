@@ -27,7 +27,12 @@ import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {basePrompt, generateCharacterSet} from '../../ai/images/characterSet';
+import {
+  basePrompt,
+  generateCharacterSet,
+  posedFrames,
+  posePrompt,
+} from '../../ai/images/characterSet';
 import {bytesToDataURI} from '../../ai/images/encoding';
 import {
   fullPromptFor,
@@ -88,11 +93,22 @@ const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Purple', rgba: [142, 36, 170, 255]},
 ];
 
+// Stands in for the pose in the words every posed frame shares.
+const POSE_MARK = '[pose]';
+
+interface SentPrompts {
+  /** The words for the one picture, or for a set's first picture. */
+  picture: string;
+  /** For a set: the words every posed frame got, with POSE_MARK where its
+      pose goes, and each frame's pose. */
+  poses?: {common: string; frames: {label: string; pose: string}[]};
+}
+
 interface Made {
   result: GeneratedImageResult;
   dataURI: string;
-  /** The words as the model got them, for the (i) button. */
-  sentPrompt: string;
+  /** The words as the model got them, for "What we sent the AI". */
+  sent: SentPrompts;
 }
 
 interface ImageExploreSceneProps {
@@ -135,6 +151,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [showPrompt, setShowPrompt] = useState(false);
+  const [promptTab, setPromptTab] = useState<'picture' | 'poses'>('picture');
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   // The blank the student draws on, sized for the style, and the mode to
   // return to if they cancel.
@@ -197,17 +214,32 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
       const asSet = animated && canAnimate;
-      // A set's first frame is asked for in its own words; the (i) button
-      // shows those, the posed frames being edits of that picture.
-      const sentPrompt = asSet
-        ? basePrompt(
-            prompt,
-            style,
-            chooseKeyColor(prompt),
-            pixelBlockFor('sprite', options.pixelGrid),
-            bodyPlan
-          )
-        : fullPromptFor(prompt, options);
+      // What "What we sent the AI" shows: a set's first frame is asked for
+      // in its own words, and every posed frame then gets the same words
+      // around its pose.
+      let sent: SentPrompts;
+      if (asSet) {
+        const key = chooseKeyColor(prompt);
+        const block = pixelBlockFor('sprite', options.pixelGrid);
+        sent = {
+          picture: basePrompt(prompt, style, key, block, bodyPlan),
+          poses: {
+            common: posePrompt(
+              prompt,
+              {label: 'pose', pose: POSE_MARK},
+              style,
+              key,
+              block
+            ),
+            frames: posedFrames(bodyPlan).map(({label, pose}) => ({
+              label,
+              pose,
+            })),
+          },
+        };
+      } else {
+        sent = {picture: fullPromptFor(prompt, options)};
+      }
       const result = asSet
         ? await generateCharacterSet(prompt, {
             style,
@@ -222,7 +254,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       setMade({
         result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
-        sentPrompt,
+        sent,
       });
       setMode('result');
     } catch (e) {
@@ -434,7 +466,10 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 className={styles.promptLink}
                 aria-expanded={showPrompt}
                 disabled={busy}
-                onClick={() => setShowPrompt(open => !open)}
+                onClick={() => {
+                  setPromptTab('picture');
+                  setShowPrompt(open => !open);
+                }}
               >
                 <FontAwesomeV6Icon iconName="circle-info" />
                 What we sent the AI
@@ -442,12 +477,74 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               {showPrompt && (
                 <Popover
                   direction="none"
-                  title="Behind the scenes"
+                  title="What we sent the AI"
                   content="We sent the AI these words. It predicted a picture to match them."
                   className={styles.promptPopover}
                   onClose={() => setShowPrompt(false)}
                 >
-                  <p className={styles.promptText}>{made.sentPrompt}</p>
+                  {made.sent.poses && (
+                    <div
+                      className={styles.promptTabs}
+                      role="tablist"
+                      aria-label="Which words"
+                    >
+                      {(
+                        [
+                          ['picture', 'First picture'],
+                          ['poses', 'Other poses'],
+                        ] as const
+                      ).map(([tab, label]) => (
+                        <button
+                          key={tab}
+                          type="button"
+                          role="tab"
+                          aria-selected={promptTab === tab}
+                          className={styles.promptTab}
+                          onClick={() => setPromptTab(tab)}
+                        >
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {made.sent.poses && promptTab === 'poses' ? (
+                    <>
+                      <p className={styles.promptNote}>
+                        Then, for each pose, we sent the first picture back with
+                        these words. Only the part in brackets changed.
+                      </p>
+                      <div className={styles.promptText} role="tabpanel">
+                        <p className={styles.promptCommon}>
+                          {made.sent.poses.common
+                            .split(POSE_MARK)
+                            .flatMap((piece, i) =>
+                              i === 0
+                                ? [piece]
+                                : [
+                                    <mark key={i} className={styles.poseMark}>
+                                      {POSE_MARK}
+                                    </mark>,
+                                    piece,
+                                  ]
+                            )}
+                        </p>
+                        <ul className={styles.poseList}>
+                          {made.sent.poses.frames.map(frame => (
+                            <li key={frame.label}>
+                              <span className={styles.poseLabel}>
+                                {frame.label}:
+                              </span>{' '}
+                              {frame.pose}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  ) : (
+                    <p className={styles.promptText} role="tabpanel">
+                      {made.sent.picture}
+                    </p>
+                  )}
                 </Popover>
               )}
             </div>
