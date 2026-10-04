@@ -166,18 +166,23 @@
   }
 }
 
-// The three choices, captioned with the question they answer.
+// The three choices, headed by the question they answer and sharing the
+// group's full width.
 .resultActions {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
+.resultQuestion {
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .resultButtons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
