@@ -114,6 +114,20 @@
   background-color: var(--background-neutral-primary, color.$lightest_gray);
 }
 
+// On a short window the sentence and the word box take less height.
+@media (max-height: 800px) {
+  .sentence {
+    min-height: 40px;
+    font-size: 19px;
+    line-height: 1.9;
+  }
+
+  .carouselBox {
+    gap: 2px;
+    padding: 4px 6px 6px;
+  }
+}
+
 // One slot's words at a time, between the arrows.
 .carousel {
   display: flex;
@@ -160,6 +174,13 @@
   display: flex;
   align-items: center;
   padding: 8px 4px;
+}
+
+@media (max-height: 800px) {
+  .set {
+    min-height: 72px;
+    padding: 4px;
+  }
 }
 
 // Laid out for height, but neither seen, focused nor clicked.

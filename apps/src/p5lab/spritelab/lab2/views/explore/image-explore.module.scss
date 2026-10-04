@@ -12,16 +12,20 @@
   align-items: stretch;
 }
 
-// The frame on the left; the Guide, the lab's floating panel, is the
-// right half. Its host is positioned for it and raised by the Guide's own
+// The frame on the left takes the width the window's height allows, up
+// to half; the Guide, the lab's floating panel, takes the rest. On a short
+// window the frame gives up width and the panel's words wrap into fewer
+// rows. The host is positioned for the Guide and raised by the Guide's own
 // top offset, so the panel's top meets the frame's.
-.imagePane,
-.guideHost {
-  flex: 1 1 0;
-  min-width: 0;
+.imagePane {
+  flex: 0 0 auto;
+  width: min(calc(50% - 12px), calc(100vh - 150px));
+  min-width: 240px;
 }
 
 .guideHost {
+  flex: 1 1 0;
+  min-width: 0;
   position: relative;
   margin-top: -62px;
 
@@ -41,6 +45,19 @@
   gap: 16px;
 }
 
+// A short window (a Chromebook with the browser chrome showing, a small
+// laptop) gets the
+// same rows packed closer, so the panel fits without scrolling.
+@media (max-height: 800px) {
+  .panel {
+    gap: 10px;
+  }
+
+  .resultActions {
+    gap: 14px;
+  }
+}
+
 .instructions {
   line-height: 1.5;
 
@@ -49,12 +66,8 @@
   }
 }
 
-// The frame's column is no wider than the window is tall, less the header,
-// the area's padding and the one link row under the frame, so the whole
-// picture stays on screen.
 .imageColumn {
-  width: min(100%, calc(100vh - 150px));
-  margin: 0 auto;
+  width: 100%;
 }
 
 .imageFrame {
