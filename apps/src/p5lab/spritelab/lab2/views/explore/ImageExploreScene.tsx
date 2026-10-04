@@ -640,6 +640,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 </div>
               </div>
             </>
+          ) : generating ? (
+            // The frame's status region already tells assistive tech; this
+            // is the sighted reader's word.
+            <p className={styles.generatingLabel} aria-hidden>
+              Generating…
+            </p>
           ) : (
             <div className={styles.generateRow}>
               {canAnimate && offersAnimation && (

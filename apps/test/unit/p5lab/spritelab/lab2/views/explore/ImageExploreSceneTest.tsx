@@ -146,6 +146,8 @@ describe('ImageExploreScene', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     expect(screen.getByRole('status')).toBeTruthy();
     expect(screen.queryByRole('button', {name: /Change it/})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
+    expect(screen.getByText('Generating…')).toBeTruthy();
     expect(
       screen.getByRole('complementary', {name: 'Did you know?'})
     ).toBeTruthy();

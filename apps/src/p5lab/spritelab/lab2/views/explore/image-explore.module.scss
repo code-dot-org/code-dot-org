@@ -65,6 +65,16 @@
   image-rendering: pixelated;
 }
 
+// Fills the generate row's place while a picture is made.
+.generatingLabel {
+  margin: 0;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+}
+
 // The style dropdown (after the animation checkbox, where there is one) at
 // the left, Generate at the right.
 .generateRow {
