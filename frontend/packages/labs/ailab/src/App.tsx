@@ -26,7 +26,6 @@ import ModelCard from './UIComponents/ModelCard';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
-import TestPanel from './UIComponents/TestPanel';
 import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
@@ -274,15 +273,10 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       <TrainingModal />
 
       {currentPanel === 'results' && (
-        <BodyContainer flush>
-          <div className={styles.panelRow}>
-            <ContainerLeft>
-              <Results />
-            </ContainerLeft>
-            <ContainerRight>
-              <TestPanel />
-            </ContainerRight>
-          </div>
+        <BodyContainer>
+          <ContainerFullWidth>
+            <Results />
+          </ContainerFullWidth>
         </BodyContainer>
       )}
 
