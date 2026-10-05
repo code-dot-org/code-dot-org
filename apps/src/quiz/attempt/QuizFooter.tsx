@@ -13,6 +13,7 @@ export interface QuizFooterProps {
   onNavigateToPage: (pageNumber: number) => void;
   onNext: () => void;
   finishButtonLabel: string;
+  finishDisabled?: boolean;
 }
 
 const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
@@ -21,6 +22,7 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
   onNavigateToPage,
   onNext,
   finishButtonLabel,
+  finishDisabled,
 }) => {
   const isFirstPage = currentPageNumber === 1;
   const isLastPage = currentPageNumber === totalPages;
@@ -67,6 +69,7 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
           size="small"
           type="button"
           endIcon={!isLastPage && <FontAwesomeV6Icon iconName="arrow-right" />}
+          disabled={isLastPage && finishDisabled}
           onClick={onNext}
         >
           {isLastPage ? finishButtonLabel : 'Next'}

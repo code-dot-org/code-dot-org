@@ -128,4 +128,19 @@ describe('QuizFooter', () => {
 
     expect(screen.getByRole('button', {name: 'Submit'})).toBeInTheDocument();
   });
+
+  it('disables only the last-page button when finishDisabled is set', () => {
+    const props = {
+      totalPages: 2,
+      onNavigateToPage: jest.fn(),
+      onNext: jest.fn(),
+      finishButtonLabel: 'Continue',
+      finishDisabled: true,
+    };
+    const {rerender} = render(<QuizFooter {...props} currentPageNumber={1} />);
+    expect(screen.getByRole('button', {name: /Next/})).toBeEnabled();
+
+    rerender(<QuizFooter {...props} currentPageNumber={2} />);
+    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
+  });
 });

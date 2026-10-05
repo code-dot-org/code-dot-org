@@ -3,18 +3,28 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
+import QuestionsStep from './QuestionsStep';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
+
+const NO_ANSWERS: StepAnswers = {};
 
 interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  answers: {[stepId: string]: StepAnswers};
+  onSelectChoice: (
+    stepId: string,
+    questionId: number,
+    choiceId: string
+  ) => void;
   onExit: () => void;
   onFinish: () => void;
 }
@@ -23,6 +33,8 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  answers,
+  onSelectChoice,
   onExit,
   onFinish,
 }) => {
@@ -46,17 +58,18 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
-      default:
-        // Other step kinds arrive in later changes.
+      case 'questions':
         return (
-          <div className={styles.stepFallback}>
-            <MuiTypography variant="body3" className={shared.muted}>
-              This step type ({step.kind}) is not available yet.
-            </MuiTypography>
-            <MuiButton variant="contained" onClick={advance}>
-              {continueLabel}
-            </MuiButton>
-          </div>
+          <QuestionsStep
+            key={step.id}
+            step={step}
+            answers={answers[step.id] ?? NO_ANSWERS}
+            onSelectChoice={(questionId, choiceId) =>
+              onSelectChoice(step.id, questionId, choiceId)
+            }
+            continueLabel={continueLabel}
+            onComplete={advance}
+          />
         );
     }
   };
