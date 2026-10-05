@@ -8,7 +8,7 @@ import {
   serveJsonVideos,
 } from '../shared/json-video-documents';
 
-// An AIF course offering turns the deep dive on; two videos make a carousel.
+// Under an AIF course offering, which enables the deep dive, with two videos.
 const UNIT = 'ui-test-lesson-tutor';
 const LESSON = 1;
 
@@ -46,11 +46,11 @@ test.describe('Lesson tutor videos', () => {
       });
   });
 
-  // The seek, not play, starts the clip; a failure here is a stale track.
   test('Switching videos drops the previous video audio', async ({page}) => {
     const tutor = new LessonTutorPage(page);
 
     await tutor.playButton.click();
+    // Seeking starts the clip, so only a surviving track can fail this test.
     await tutor.seek(2);
     await expect
       .poll(() => tutor.audioTracks())

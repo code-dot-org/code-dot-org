@@ -278,7 +278,7 @@ export class JsonVideo extends HTMLElement {
   _processLoadedData(data) {
     this._videoData = data;
     this._calculateDurations();
-    // A leftover main track would play under the next video's scene clips.
+    // Even when the new video has no main track, the old one must not survive.
     this._resetAudio(this._mainAudio, data.audio);
     this._resetAudio(this._sceneAudio, null);
     this._mainAudioPausedByScene = false;
@@ -292,10 +292,10 @@ export class JsonVideo extends HTMLElement {
     this.dispatchEvent(new Event('loadeddata'));
   }
 
-  // src = '' resolves to the page URL and still reads as a track.
   _resetAudio(el, src) {
     el.pause();
     if (src) el.src = src;
+    // src = '' is a real URL (the page's own); only removal clears the track.
     else el.removeAttribute('src');
     el.load();
   }
