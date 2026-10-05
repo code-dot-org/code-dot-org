@@ -31,6 +31,18 @@ class FreeResponseQuestion < QuizQuestion
   # "description" is optional rich text.
   validate :validate_question_shape
 
+  def self.content_from_params(params)
+    {questionTitle: params[:questionTitle], description: params[:description]}
+  end
+
+  def editor_content_json
+    student_content_json
+  end
+
+  def student_content_json
+    {questionTitle: content['questionTitle'], description: content['description']}
+  end
+
   private def validate_question_shape
     return if content.blank?
     q = content.deep_stringify_keys

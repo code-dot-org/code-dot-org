@@ -23,6 +23,7 @@ class MultipleChoiceQuestion < QuizQuestion
   #
   # `content` shape:
   #   {
+  #     TODO: update and use questionTitle and description instead of stem.
   #     "stem" => "What is 2 + 2?",
   #     "choices" => [{"id" => "0", "text" => "Option A"}, {"id" => "1", "text" => "Option B"}, ...],
   #     "correct_choice_id" => "0"
@@ -43,10 +44,28 @@ class MultipleChoiceQuestion < QuizQuestion
     {score: correct ? 1 : 0, max_score: 1}
   end
 
+  # TODO: update and use questionTitle and description instead of stem.
+  def self.content_from_params(params)
+    {
+      stem: params[:stem],
+      choices: (params[:choices] || []).map(&:to_h),
+      correct_choice_id: params[:correctChoiceId],
+    }
+  end
+
+  def editor_content_json
+    student_content_json.merge(correctChoiceId: content['correct_choice_id'])
+  end
+
+  # TODO: update and use questionTitle and description instead of stem.
+  def student_content_json
+    {stem: content['stem'], choices: content['choices']}
+  end
+
   private def validate_question_shape
     return if content.blank?
     q = content.deep_stringify_keys
-
+    # TODO: update and use questionTitle and description instead of stem.
     unless q['stem'].is_a?(String) && q['stem'].present?
       errors.add(:content, 'must have a non-blank "stem"')
       return

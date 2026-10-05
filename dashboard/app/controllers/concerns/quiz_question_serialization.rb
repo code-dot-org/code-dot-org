@@ -6,12 +6,21 @@ module QuizQuestionSerialization
   # Distinguishes "not given, compute it" from a real false/nil value.
   UNSET = Object.new.freeze
 
+  # TODO: remove stem.
   private def quiz_question_params
     params.permit(
-      :questionName, :stem, :correctChoiceId, :explanation, :page, :editMode,
+      :type, :questionName, :explanation, :page, :editMode,
+      :stem, :correctChoiceId, :questionTitle, :description,
       choices: [:id, :text],
       standards: [:frameworkShortcode, :shortcode]
     )
+  end
+
+  # If type is missing, then fall back to MultipleChoiceQuestion.
+  private def quiz_question_class
+    type = quiz_question_params[:type].presence || MultipleChoiceQuestion.name
+    raise ArgumentError, "unknown quiz question type #{type}" unless QuizQuestion::TYPES.include?(type)
+    type.constantize
   end
 
   # (frameworkShortcode, shortcode) is how a Standard crosses the
@@ -52,9 +61,7 @@ module QuizQuestionSerialization
       id: question.id,
       type: question.type,
       questionName: question.name,
-      stem: question.content['stem'],
-      choices: question.content['choices'],
-      correctChoiceId: question.content['correct_choice_id'],
+      **question.editor_content_json,
       explanation: question.explanation,
       standards: question.standards.map(&:summarize_for_lesson_edit),
       attachedToOtherQuizzes:

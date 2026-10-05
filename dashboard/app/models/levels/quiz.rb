@@ -100,8 +100,7 @@ class Quiz < Level
         id: question.id,
         type: question.type,
         questionName: question.name,
-        stem: question.content['stem'],
-        choices: question.content['choices'],
+        **question.student_content_json,
         page: placement.page,
       }
     end
