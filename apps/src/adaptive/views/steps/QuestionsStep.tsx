@@ -5,7 +5,6 @@
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
-import AttemptCard from '@cdo/apps/quiz/attempt/AttemptCard';
 import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
 
 import {Answer, StepAnswers} from '../../progress';
@@ -98,14 +97,14 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
 
   return (
     <div className={styles.questionsStep} ref={questionsRef}>
-      <AttemptCard
-        title={step.title}
-        description={
-          step.description && (
-            <MuiTypography variant="body2">{step.description}</MuiTypography>
-          )
-        }
-      />
+      <div className={styles.questionsIntro}>
+        <MuiTypography variant="h3" component="h2" tabIndex={-1}>
+          {step.title}
+        </MuiTypography>
+        {step.description && (
+          <MuiTypography variant="body2">{step.description}</MuiTypography>
+        )}
+      </div>
       {questions.map(question => (
         <MultiChoiceQuestionContainer
           key={question.id}

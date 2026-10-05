@@ -84,6 +84,20 @@
   background: var(--background-neutral-secondary);
 }
 
+// Mirrors quiz's AttemptCard so the intro reads as one of the cards below.
+.questionsIntro {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  padding: 24px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+}
+
 // Matches AttemptCard's width so the button sits under the cards' right edge.
 .questionsActions {
   display: flex;
