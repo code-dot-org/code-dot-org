@@ -1,7 +1,7 @@
 {
   "key": "hello-world-soccer",
   "display_name": "Hello World: Soccer",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",

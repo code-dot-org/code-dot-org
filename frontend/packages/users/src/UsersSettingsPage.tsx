@@ -9,24 +9,34 @@ import {
   DashboardApiClient,
   useUserSettings,
   useCurrentUser,
+  type UserSettings,
 } from '@code-dot-org/core/api';
 
 import EducatorProfileForm from './components/EducatorProfileForm';
 import UsersDetailsForm from './components/UsersDetailsForm';
+import LinkedAccounts from './sections/LinkedAccounts';
 import styles from './UsersSettingsPage.module.css';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 const EDUCATOR_PROFILE_TAB = 'educator-profile';
+const INTEGRATIONS_TAB = 'integrations';
 
-// The Integrations placeholder ships disabled rather than hidden, for legacy parity.
-const TAB_META = [
+const ACCOUNT_TABS: {
+  value: string;
+  text: string;
+  isVisible?: (settings: UserSettings) => boolean;
+}[] = [
   {value: ACCOUNT_DETAILS_TAB, text: 'Account Details'},
   {
     value: EDUCATOR_PROFILE_TAB,
     text: 'Educator Profile',
-    educatorOnly: true,
+    isVisible: settings => settings.userType !== 'student',
   },
-  {value: 'integrations', text: 'Integrations', disabled: true},
+  {
+    value: INTEGRATIONS_TAB,
+    text: 'Integrations',
+    isVisible: settings => settings.integrations.canManageLinkedAccounts,
+  },
 ];
 
 const NO_OP = () => {};
@@ -53,13 +63,13 @@ export default function UsersSettingsPage({
   const currentUser = useCurrentUser(DashboardApiClient);
   const settings = useUserSettings(DashboardApiClient);
 
-  const isStudent = settings.data?.userType === 'student';
-  const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent));
+  // Until settings load every tab counts as visible, so a requested tab survives.
+  const visibleTabs = ACCOUNT_TABS.filter(
+    t => !settings.data || !t.isVisible || t.isVisible(settings.data),
+  );
 
   const activeTab =
-    tab && visibleTabs.some(t => t.value === tab && !t.disabled)
-      ? tab
-      : ACCOUNT_DETAILS_TAB;
+    tab && visibleTabs.some(t => t.value === tab) ? tab : ACCOUNT_DETAILS_TAB;
 
   // A requested tab can disappear under the user (an educator switches to
   // student). DSCO's Tabs falls back to the first tab without telling the host,
@@ -122,13 +132,16 @@ export default function UsersSettingsPage({
       );
     }
 
+    if (value === INTEGRATIONS_TAB) {
+      return <LinkedAccounts settings={data} />;
+    }
+
     return null;
   };
 
   const tabs: TabModel[] = visibleTabs.map(t => ({
     value: t.value,
     text: t.text,
-    disabled: t.disabled,
     tabContent: tabContent(t.value),
   }));
 
@@ -138,16 +151,16 @@ export default function UsersSettingsPage({
       aria-labelledby="account-page-heading"
       aria-busy={isPending}
       sx={{
-        // Legacy parity: .container caps at 970px, fluid below.
-        maxWidth: 970,
+        maxWidth: 1008,
         mx: 'auto',
         px: {xs: 2, sm: 3},
-        py: 3,
+        pt: 8,
+        pb: 3,
         color: 'var(--text-neutral-primary)',
       }}
     >
       <Typography
-        variant="h3"
+        variant="h1"
         component="h1"
         id="account-page-heading"
         ref={headingRef}
@@ -178,7 +191,7 @@ export default function UsersSettingsPage({
           on the field or in the dialog, not as a toast. */}
       {!isPending && !isError && settings.data && (
         <ToastProvider politeness="polite">
-          <Box className={styles.tabs} sx={{mt: 3}}>
+          <Box className={styles.tabs} sx={{mt: 4}}>
             <Tabs
               name="account-settings"
               type="primary"

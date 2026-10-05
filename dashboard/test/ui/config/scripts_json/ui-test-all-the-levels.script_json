@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-21 17:18:11 UTC",
+    "serialized_at": "2026-10-01 19:50:46 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8484,6 +8484,27 @@
     },
     {
       "chapter": 255,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test Allthelevels AI Lab Lab2 Decision Tree"
+        ],
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "ui-test-all-the-levels",
+        "activity_section.key": "cbbb72e0-86e7-4369-afb9-9d736bc275f4"
+      },
+      "level_keys": [
+        "UI Test Allthelevels AI Lab Lab2 Decision Tree"
+      ]
+    },
+    {
+      "chapter": 256,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8507,7 +8528,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 257,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8531,7 +8552,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 258,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8555,7 +8576,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 259,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8579,7 +8600,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 260,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11645,6 +11666,18 @@
         "level.key": "UI Test Allthethings AI Lab Lab2 3",
         "script_level.level_keys": [
           "UI Test Allthethings AI Lab Lab2 3"
+        ],
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "ui-test-all-the-levels",
+        "activity_section.key": "cbbb72e0-86e7-4369-afb9-9d736bc275f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test Allthelevels AI Lab Lab2 Decision Tree",
+        "script_level.level_keys": [
+          "UI Test Allthelevels AI Lab Lab2 Decision Tree"
         ],
         "lesson.key": "lesson-60",
         "lesson_group.key": "",

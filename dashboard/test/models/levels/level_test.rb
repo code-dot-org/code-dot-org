@@ -70,6 +70,33 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes result, maze_level
   end
 
+  test 'with_essential_us_only_ai_models returns Aichat levels configured with a US only model and Weblab2 levels' do
+    us_only_aichat_level = Level.create(
+      name: 'us_only_aichat',
+      type: 'Aichat',
+      properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}}
+    )
+    openai_aichat_level = Level.create(
+      name: 'openai_aichat',
+      type: 'Aichat',
+      properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}}
+    )
+    # AI Tutor has no per-level model and always uses a US only model, which
+    # blocks Weblab2, where the tutor is essential.
+    weblab2_level = Level.create(name: 'weblab2_us_only', type: 'Weblab2')
+    # Elsewhere the tutor is optional, so a blocked tutor still leaves the level
+    # completable.
+    ai_tutor_level = Level.create(name: 'ai_tutor_us_only', properties: {'ai_tutor_available' => 'true'})
+    maze_level = Level.create(name: 'maze_us_only', type: 'Maze')
+
+    result = Level.with_essential_us_only_ai_models
+    assert_includes result, us_only_aichat_level
+    assert_includes result, weblab2_level
+    refute_includes result, ai_tutor_level
+    refute_includes result, openai_aichat_level
+    refute_includes result, maze_level
+  end
+
   test 'types marked as having ideal level sources' do
     raise_unless_specifies_ideal_level_source(Level)
   end

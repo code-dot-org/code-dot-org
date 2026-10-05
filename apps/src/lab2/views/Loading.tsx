@@ -9,12 +9,19 @@ import moduleStyles from './loading.module.scss';
 
 export interface LoadingProps {
   isLoading: boolean;
+  /**
+   * Cover the nearest positioned ancestor rather than the viewport. Lab2Wrapper
+   * sets this because the drawer is laid out beside the lab, and an overlay
+   * that covers the window covers the drawer with it.
+   */
+  bounded?: boolean;
 }
 
 const noFade = window.location.href.includes('lab2-no-fade');
 
 const Loading: React.FunctionComponent<LoadingProps> = ({
   isLoading,
+  bounded = false,
 }: LoadingProps) => {
   const overlayStyle: string = noFade
     ? isLoading
@@ -31,6 +38,7 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
       id="fade-overlay"
       className={classNames(
         moduleStyles.solidBlock,
+        bounded && moduleStyles.boundedBlock,
         overlayStyle,
         isShare && moduleStyles.shareViewOverlay
       )}

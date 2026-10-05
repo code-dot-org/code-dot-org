@@ -9,55 +9,53 @@ markdown <<MARKDOWN
 
 AI Foundations Year 2 is built toward **Microsoft Certified: Azure AI Fundamentals**, earned by passing the AI-901 exam. Understanding how that exam is structured will help you decide where to spend extra time and attention as you teach.
 
-
-
 ## The Two-Domain Split
 
 AI-901 has two domains:
 
 <div role="img" aria-label="Bar showing exam weight split: Domain 1, Identify AI concepts and capabilities, 40 to 45 percent, and Domain 2, Implement AI solutions using Microsoft Foundry, 55 to 60 percent" style="display: flex; width: 100%; border-radius: 10px; overflow: hidden; margin: 16px 0 8px 0;">
   <div style="width: 42%; background: #0099F3; color: #FFFFFF; padding: 16px 12px; text-align: center;">
-    <div style="font-size: 13pt; font-weight: bold;">Domain 1</div>
-    <div style="font-size: 11pt; margin-top: 4px;">40&ndash;45%</div>
+    <div style="font-size: 18px; font-weight: bold;">Domain 1</div>
+    <div style="font-size: 16px; margin-top: 4px;">40&ndash;45%</div>
   </div>
   <div style="width: 58%; background: #06338D; color: #FFFFFF; padding: 16px 12px; text-align: center;">
-    <div style="font-size: 13pt; font-weight: bold;">Domain 2</div>
-    <div style="font-size: 11pt; margin-top: 4px;">55&ndash;60%</div>
+    <div style="font-size: 18px; font-weight: bold;">Domain 2</div>
+    <div style="font-size: 16px; margin-top: 4px;">55&ndash;60%</div>
   </div>
 </div>
 
 <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin: 20px 0; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden;">
   <thead>
     <tr style="background-color: #0099F3;">
-      <th scope="col" style="width: 30%; padding: 12px; text-align: left; color: #FFFFFF; font-size: 14pt;">Domain</th>
-      <th scope="col" style="width: 48%; padding: 12px; text-align: left; color: #FFFFFF; font-size: 14pt;">What it covers</th>
-      <th scope="col" style="width: 22%; padding: 12px; text-align: left; color: #FFFFFF; font-size: 14pt;">Where it lives in the year</th>
+      <th scope="col" style="width: 30%; padding: 12px; text-align: left; color: #FFFFFF; font-size: 18px;">Domain</th>
+      <th scope="col" style="width: 48%; padding: 12px; text-align: left; color: #FFFFFF; font-size: 18px;">What it covers</th>
+      <th scope="col" style="width: 22%; padding: 12px; text-align: left; color: #FFFFFF; font-size: 18px;">Where it lives in the year</th>
     </tr>
   </thead>
   <tbody>
     <tr style="background-color: #FFFFFF;">
-      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; border-bottom: 1px solid #D5EFFF; vertical-align: top;">Domain 1: Identify AI concepts and capabilities</th>
-      <td style="padding: 12px; border-bottom: 1px solid #D5EFFF; vertical-align: top;">
+      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; border-bottom: 1px solid #D5EFFF; vertical-align: top; font-size: 16px;">Domain 1: Identify AI concepts and capabilities</th>
+      <td style="padding: 12px; border-bottom: 1px solid #D5EFFF; vertical-align: top; font-size: 16px;">
         <div style="margin-bottom: 6px;">&bull; Conceptual understanding of AI</div>
         <div style="margin-bottom: 6px;">&bull; Responsible AI principles</div>
         <div>&bull; No implementation required</div>
       </td>
-      <td style="padding: 12px; border-bottom: 1px solid #D5EFFF; vertical-align: top;">Threaded across the full year, in both semesters</td>
+      <td style="padding: 12px; border-bottom: 1px solid #D5EFFF; vertical-align: top; font-size: 16px;">Threaded across the full year, in both semesters</td>
     </tr>
     <tr style="background-color: #D5EFFF;">
-      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; vertical-align: top;">Domain 2: Implement AI solutions using Microsoft Foundry</th>
-      <td style="padding: 12px; vertical-align: top;">
+      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; vertical-align: top; font-size: 16px;">Domain 2: Implement AI solutions using Microsoft Foundry</th>
+      <td style="padding: 12px; vertical-align: top; font-size: 16px;">
         <div style="margin-bottom: 6px;">&bull; Hands-on deployment and prompting</div>
         <div style="margin-bottom: 6px;">&bull; Building with Foundry</div>
         <div>&bull; Assumes basic Python</div>
       </td>
-      <td style="padding: 12px; vertical-align: top;">Concentrated in Semester 2 only (Units 7&ndash;10)</td>
+      <td style="padding: 12px; vertical-align: top; font-size: 16px;">Concentrated in Semester 2 only (Units 7&ndash;10)</td>
     </tr>
   </tbody>
 </table>
 
 <div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;">
-  <div style="font-size: 14pt; color: #06338D; line-height: 1.5;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.5;">
     <strong>Why this matters for how you teach:</strong> Semester 2 has fewer units than Semester 1, but it's not the lighter half. Domain 2 alone carries more exam weight than Domain 1, and it only shows up in Units 7&ndash;10. Don't let a shorter unit count read as lower priority when you're pacing the year.
   </div>
 </div>
@@ -65,9 +63,8 @@ AI-901 has two domains:
 ## Help Along the Way
 
 <div style="background-color: #F7F7FB; border: 1px dashed #ACA8EA; border-radius: 10px; padding: 16px 18px;">
-  <div style="font-size: 14pt; color: #555555; line-height: 1.5;">
-    <em>[PLACEHOLDER — resources TBD]</em> As you work through AI-901's two domains, you won't be figuring this out alone. This section will point you to the resources available to support you along the way.
+  <div style="font-size: 16px; color: #555555; line-height: 1.5;">
+    <em>[PLACEHOLDER &mdash; resources TBD]</em> As you work through AI-901's two domains, you won't be figuring this out alone. This section will point you to the resources available to support you along the way.
   </div>
 </div>
-
 MARKDOWN

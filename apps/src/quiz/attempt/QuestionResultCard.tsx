@@ -19,6 +19,27 @@ export interface QuestionResultCardProps {
   revealAnswerExplanation?: boolean;
 }
 
+type ChoiceStatus = 'correct' | 'incorrect' | 'selected_ungraded' | 'neutral';
+
+function getChoiceStatus(
+  choiceId: string,
+  result: QuizQuestionResult
+): ChoiceStatus {
+  const isSelected = choiceId === result.selectedChoiceId;
+  const isCorrectAnswer = choiceId === result.correctChoiceId;
+
+  // showCorrectness off - still show what was picked, ungraded.
+  if (result.correct === null) {
+    return isSelected ? 'selected_ungraded' : 'neutral';
+  }
+
+  // showCorrectness is on.
+  if (isSelected) {
+    return result.correct ? 'correct' : 'incorrect';
+  }
+  return isCorrectAnswer ? 'correct' : 'neutral';
+}
+
 // Read-only review of one submitted question, graded or not. Not a
 // RadioButton - these choices are no longer interactive.
 const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
@@ -30,26 +51,17 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   <AttemptCard label={questionLabel} title={question.stem}>
     <ul className={styles.choices}>
       {(question.choices ?? []).map((choice, index) => {
+        const status = getChoiceStatus(choice.id, result);
         const isSelectedChoice = choice.id === result.selectedChoiceId;
-        const isCorrectChoice =
-          choice.id === result.correctChoiceId ||
-          (result.correct === true && isSelectedChoice);
-        const isIncorrectSelection =
-          result.correct === false && isSelectedChoice;
-        // showCorrectness off - still show what was picked, ungraded.
-        const isUngradedSelection = result.correct === null && isSelectedChoice;
 
         return (
           <li
             key={choice.id}
             className={classNames(styles.option, {
-              [styles.optionCorrect]: isCorrectChoice,
-              [styles.optionIncorrect]: isIncorrectSelection,
-              [styles.optionSelectedUngraded]: isUngradedSelection,
-              [styles.optionNeutral]:
-                !isCorrectChoice &&
-                !isIncorrectSelection &&
-                !isUngradedSelection,
+              [styles.optionCorrect]: status === 'correct',
+              [styles.optionIncorrect]: status === 'incorrect',
+              [styles.optionSelectedUngraded]: status === 'selected_ungraded',
+              [styles.optionNeutral]: status === 'neutral',
             })}
           >
             <div className={styles.optionContent}>
@@ -70,7 +82,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
                 {choice.text}
               </Typography>
             </div>
-            {isCorrectChoice && (
+            {status === 'correct' && (
               <>
                 <FontAwesomeV6Icon
                   iconName="check"
@@ -80,7 +92,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
                 <span className={styles.srOnly}>Correct answer</span>
               </>
             )}
-            {isIncorrectSelection && (
+            {status === 'incorrect' && (
               <>
                 <FontAwesomeV6Icon
                   iconName="xmark"
@@ -90,7 +102,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
                 <span className={styles.srOnly}>Your answer, incorrect</span>
               </>
             )}
-            {isUngradedSelection && (
+            {status === 'selected_ungraded' && (
               <span className={styles.srOnly}>Your answer</span>
             )}
           </li>

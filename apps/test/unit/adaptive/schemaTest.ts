@@ -8,7 +8,7 @@ import {
   pathwaySchema,
   pathwaySourceSchema,
   pathwayStandards,
-  referenceProblems,
+  findReferenceProblems,
   referencedSkillIds,
 } from '@cdo/apps/adaptive/schema';
 
@@ -183,6 +183,19 @@ describe('parsePathway', () => {
     expect(pathway.project.levelProperties?.appName).toBe('weblab2');
   });
 
+  it('coerces string booleans in inlined level properties', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    Object.assign(build.levelProperties!, {hideShareAndRemix: 'false'});
+    Object.assign(raw.project.levelProperties!, {hideShareAndRemix: 'true'});
+    const pathway = parsePathway(raw);
+    const step = pathway.checkpoints[1].steps[0];
+    if (step.kind !== 'level') throw new Error('fixture changed');
+    expect(step.levelProperties?.hideShareAndRemix).toBe(false);
+    expect(pathway.project.levelProperties?.hideShareAndRemix).toBe(true);
+  });
+
   it('accepts a level step the server could not resolve', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
@@ -266,9 +279,9 @@ describe('parsePathwaySource', () => {
   });
 });
 
-describe('referenceProblems', () => {
+describe('findReferenceProblems', () => {
   it('finds nothing wrong with consistent content', () => {
-    expect(referenceProblems(parsePathway(served()))).toEqual([]);
+    expect(findReferenceProblems(parsePathway(served()))).toEqual([]);
   });
 
   it('flags an unknown skill id', () => {
@@ -350,13 +363,36 @@ describe('referenceProblems', () => {
     ]);
   });
 
-  it('treats the template level itself as sharing the project', () => {
+  it('flags a step that plays the project template level', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
     if (build.kind !== 'level') throw new Error('fixture changed');
     build.level = 'web-template';
     build.levelProperties = levelProperties(1, 'web-template');
-    expect(problemsOf(raw)).toEqual([]);
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.build: level 'web-template' is the project template level, which only the project view plays",
+    ]);
+  });
+
+  it('flags a level played by two steps', () => {
+    const raw = served();
+    raw.checkpoints[2].steps = [
+      {
+        id: 'style-build',
+        title: 'Build again',
+        kind: 'level',
+        level: 'web-project-basics',
+        project: true,
+        levelProperties: levelProperties(
+          2,
+          'web-project-basics',
+          'web-template'
+        ),
+      },
+    ];
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.style.steps.style-build: level 'web-project-basics' is already played by checkpoints.basics.steps.build",
+    ]);
   });
 
   it('does not check the flag on a level the server could not resolve', () => {

@@ -32,6 +32,8 @@ export const ModelNameMaxLength = 150;
 
 export const UNIQUE_OPTIONS_MAX = 50;
 
+export const DATA_TABLE_ROW_LIMIT = 100;
+
 export function getFadeOpacity(animationProgress: number): number {
   return animationProgress > 0.95
     ? 1 - (animationProgress - 0.95) / 0.05

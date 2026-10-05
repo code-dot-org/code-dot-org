@@ -1,4 +1,8 @@
-import {isPanelEnabled} from '../../src/helpers/navigationValidation';
+import {
+  isPanelEnabled,
+  prevNextButtons,
+} from '../../src/helpers/navigationValidation';
+import I18n from '../../src/i18n';
 
 const initialState = {
   data: [],
@@ -132,5 +136,32 @@ describe('isPanelEnabled', () => {
   test('modelSummary - enabled', async () => {
     const result = isPanelEnabled(savedModelState, 'modelSummary');
     expect(result).toBe(true);
+  });
+});
+
+describe('prevNextButtons on the data panels', () => {
+  beforeAll(() => {
+    I18n.initI18n();
+  });
+
+  test.each(['dataDisplayLabel', 'dataDisplayFeatures'])(
+    '%s goes back to dataset selection and has no next button',
+    currentPanel => {
+      const {prev, next} = prevNextButtons({
+        ...selectedFeaturesState,
+        currentPanel,
+      });
+      expect(prev.panel).toBe('selectDataset');
+      expect(next).toBeUndefined();
+    },
+  );
+
+  test('has no back button when the mode fixes the dataset', () => {
+    const {prev} = prevNextButtons({
+      ...selectedFeaturesState,
+      currentPanel: 'dataDisplayFeatures',
+      mode: {datasets: ['tacos_toy']},
+    });
+    expect(prev).toBeUndefined();
   });
 });

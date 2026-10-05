@@ -23,6 +23,14 @@ import styles from './intervention-box.module.scss';
 
 type CardId = 'flashcards' | 'chat' | 'videos' | 'podcasts' | 'challenge';
 
+// Modalities that show the bottom nav bar (excludes the choice grid and challenge).
+const REVIEW_MODALITY_IDS = new Set<CardId>([
+  'videos',
+  'podcasts',
+  'flashcards',
+  'chat',
+]);
+
 interface Card {
   id: CardId;
   label: string;
@@ -81,6 +89,7 @@ interface InterventionBoxProps {
   jsonVideos: LessonDeepDiveData['jsonVideos'];
   reflectionData: ReflectionData | null;
   focusTopic?: string;
+  onDone?: () => void;
 }
 
 const InterventionBox: FC<InterventionBoxProps> = ({
@@ -93,6 +102,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   jsonVideos,
   reflectionData,
   focusTopic,
+  onDone,
 }) => {
   const [selected, setSelected] = useState<CardId | null>(null);
   const userId = useAppSelector(state => state.currentUser.userId);
@@ -116,6 +126,8 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   const challengeEnabled = experiments.isEnabled(
     experiments.LESSON_TUTOR_CHALLENGE
   );
+
+  const showNavBar = selected !== null && REVIEW_MODALITY_IDS.has(selected);
 
   return (
     <div className={styles.container}>
@@ -196,6 +208,52 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           />
         )}
       </div>
+      {showNavBar && (
+        <nav className={styles.navBar} aria-label="Modality navigation">
+          <button
+            type="button"
+            className={styles.navItem}
+            onClick={() => setSelected(null)}
+          >
+            <span className={styles.navIcon}>
+              <FontAwesomeV6Icon iconName="grid-2" />
+            </span>
+            <span>Home</span>
+          </button>
+          <div className={styles.navDivider} aria-hidden="true" />
+          <div className={styles.navModalities}>
+            {GRID_CARDS.map(card => (
+              <button
+                key={card.id}
+                type="button"
+                className={`${styles.navItem}${
+                  selected === card.id ? ` ${styles.navItemActive}` : ''
+                }`}
+                onClick={() => handleCardSelect(card.id)}
+                aria-current={selected === card.id ? 'page' : undefined}
+              >
+                <span className={styles.navIcon}>
+                  <FontAwesomeV6Icon iconName={card.icon} />
+                </span>
+                <span>{card.navLabel}</span>
+              </button>
+            ))}
+          </div>
+          <div className={styles.navDivider} aria-hidden="true" />
+          {onDone && (
+            <button
+              type="button"
+              className={styles.doneButton}
+              onClick={onDone}
+            >
+              Done
+              <span className={styles.doneIcon}>
+                <FontAwesomeV6Icon iconName="arrow-right" />
+              </span>
+            </button>
+          )}
+        </nav>
+      )}
     </div>
   );
 };

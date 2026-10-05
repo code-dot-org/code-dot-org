@@ -97,14 +97,6 @@
   }
 }
 
-.addOption {
-  width: 100%;
-
-  &:global(.MuiButton-outlined) {
-    border-style: dashed;
-  }
-}
-
 .optionText {
   flex: 1 0 0;
   min-width: 0;

@@ -6,6 +6,7 @@ import {
   challengeResponseValidator,
   EvaluationStatus,
   ExplanationTypes,
+  ProjectDetailsCard,
 } from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -15,8 +16,6 @@ import {useNavigate} from 'react-router-dom';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
-
-import ProjectDetailsCard from '../../gallery/ProjectDetailsCard';
 
 import VideoChallenge from './VideoChallenge';
 import WhiteboardChallenge from './WhiteboardChallenge';

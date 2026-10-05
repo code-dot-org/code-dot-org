@@ -2,6 +2,7 @@ import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import burst from './burst';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
@@ -19,6 +20,7 @@ import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
+import setWeather from './setWeather';
 import thePlayer from './thePlayer';
 import whenRun from './whenRun';
 
@@ -46,6 +48,8 @@ const labBlockDefinitions: {
   setPlatformGravity,
   setAsPlatformPlayer,
   setCameraZoom,
+  setWeather,
+  burst,
   thePlayer,
   placeholder,
   // Toolbox edit mode's category marker blocks.
