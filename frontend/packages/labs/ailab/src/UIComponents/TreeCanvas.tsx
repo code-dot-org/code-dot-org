@@ -1,7 +1,13 @@
 import {select} from 'd3-selection';
 import 'd3-transition';
 import {zoom, zoomIdentity, zoomTransform, type ZoomBehavior} from 'd3-zoom';
-import {type ReactNode, useLayoutEffect, useMemo, useRef} from 'react';
+import {
+  type ReactNode,
+  type RefObject,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+} from 'react';
 
 import {fitToView, type Rect} from '../helpers/fitToView';
 
@@ -22,18 +28,33 @@ function zoomDuration(): number {
     : ZOOM_DURATION_MS;
 }
 
-function fitTransform(viewport: HTMLElement, toolbar: HTMLElement, rect: Rect) {
+function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {
+  if (!overlay) {
+    return 0;
+  }
+  const view = viewport.getBoundingClientRect();
+  const box = overlay.getBoundingClientRect();
+  const overlaps = box.top < view.bottom && box.bottom > view.top;
+  return overlaps ? Math.max(0, view.right - box.left) : 0;
+}
+
+function fitTransform(
+  viewport: HTMLElement,
+  toolbar: HTMLElement,
+  overlay: HTMLElement | null,
+  rect: Rect,
+) {
   const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FIT_PADDING;
-  const fitted = fitToView(
-    rect,
-    {
-      x: frameLeft,
-      y: FIT_PADDING,
-      width: viewport.clientWidth - frameLeft - FIT_PADDING,
-      height: viewport.clientHeight - 2 * FIT_PADDING,
-    },
-    FIT_MAX_SCALE,
-  );
+  const insetRight = overlayInset(viewport, overlay);
+  const frame = (inset: number) => ({
+    x: frameLeft,
+    y: FIT_PADDING,
+    width: viewport.clientWidth - inset - frameLeft - FIT_PADDING,
+    height: viewport.clientHeight - 2 * FIT_PADDING,
+  });
+  const fitted =
+    fitToView(rect, frame(insetRight), FIT_MAX_SCALE) ??
+    fitToView(rect, frame(0), FIT_MAX_SCALE);
   return (
     fitted && zoomIdentity.translate(fitted.x, fitted.y).scale(fitted.scale)
   );
@@ -43,6 +64,7 @@ interface TreeCanvasProps {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
+  overlayRef?: RefObject<HTMLElement>;
   children: ReactNode;
 }
 
@@ -50,6 +72,7 @@ const TreeCanvas = ({
   contentWidth,
   contentHeight,
   pathBounds,
+  overlayRef,
   children,
 }: TreeCanvasProps) => {
   const viewportRef = useRef<HTMLDivElement>(null);
@@ -57,6 +80,7 @@ const TreeCanvas = ({
   const toolbarRef = useRef<HTMLDivElement>(null);
   const zoomRef = useRef<ZoomBehavior<HTMLDivElement, unknown>>();
   const scaleTargetRef = useRef<number>();
+  const autoFitRef = useRef(true);
   const contentRect = useMemo(
     () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),
     [contentWidth, contentHeight],
@@ -67,7 +91,10 @@ const TreeCanvas = ({
     const content = contentRef.current!;
     zoomRef.current = zoom<HTMLDivElement, unknown>().on(
       'zoom',
-      ({transform}) => {
+      ({transform, sourceEvent}) => {
+        if (sourceEvent) {
+          autoFitRef.current = false;
+        }
         content.style.transform = `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`;
       },
     );
@@ -80,22 +107,34 @@ const TreeCanvas = ({
   // ResizeObserver reports the starting size before first paint, which makes the initial fit.
   useLayoutEffect(() => {
     const viewport = viewportRef.current!;
+    autoFitRef.current = true;
     const observer = new ResizeObserver(() => {
-      const fitted = fitTransform(viewport, toolbarRef.current!, contentRect);
-      if (fitted) {
-        zoomRef
-          .current!.scaleExtent([Math.min(MIN_SCALE, fitted.k), MAX_SCALE])
-          .transform(select(viewport), fitted);
+      const fitted = fitTransform(
+        viewport,
+        toolbarRef.current!,
+        overlayRef?.current ?? null,
+        contentRect,
+      );
+      if (!fitted) {
+        return;
+      }
+      const zoomer = zoomRef.current!.scaleExtent([
+        Math.min(MIN_SCALE, fitted.k),
+        MAX_SCALE,
+      ]);
+      if (autoFitRef.current) {
+        zoomer.transform(select(viewport), fitted);
       }
     });
     observer.observe(viewport);
     return () => observer.disconnect();
-  }, [contentRect]);
+  }, [contentRect, overlayRef]);
 
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
 
   const zoomBy = (factor: number) => {
+    autoFitRef.current = false;
     const zoomer = zoomRef.current!;
     const [minScale, maxScale] = zoomer.scaleExtent();
     const from =
@@ -113,9 +152,11 @@ const TreeCanvas = ({
   };
 
   const zoomTo = (rect: Rect) => {
+    autoFitRef.current = rect === contentRect;
     const fitted = fitTransform(
       viewportRef.current!,
       toolbarRef.current!,
+      overlayRef?.current ?? null,
       rect,
     );
     if (fitted) {
