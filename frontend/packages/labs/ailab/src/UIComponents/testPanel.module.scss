@@ -1,0 +1,38 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.side-panel;
+}
+
+.content {
+  @include mixins.panel-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  @include mixins.card;
+}
+
+.cardHeader {
+  padding: 8px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.fields {
+  @include mixins.card-fields;
+}
+
+.fields .field {
+  @include mixins.full-width-field;
+}
+
+.actionRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+}

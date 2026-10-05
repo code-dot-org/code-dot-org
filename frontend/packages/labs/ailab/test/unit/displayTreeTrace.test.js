@@ -166,7 +166,7 @@ describe('getPredictionTrace', () => {
     Object.entries(values).forEach(([feature, value]) =>
       store.dispatch(setTestData(feature, value)),
     );
-    train.onClickPredict(store);
+    train.onClickPredict();
     return store.getState();
   };
 
@@ -192,7 +192,7 @@ describe('getPredictionTrace', () => {
     store.dispatch(setTestData('Legs', '4'));
     expect(getPredictionTrace(store.getState())).toBeUndefined();
 
-    train.onClickPredict(store);
+    train.onClickPredict();
     const state = store.getState();
     expect(getPredictionTrace(state).prediction).toBe(
       getConvertedPredictedLabel(state),
