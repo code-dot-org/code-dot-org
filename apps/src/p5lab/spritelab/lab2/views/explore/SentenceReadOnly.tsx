@@ -38,7 +38,7 @@ const SentenceReadOnly: React.FunctionComponent<SentenceReadOnlyProps> = ({
                 key={segment.slot}
                 className={classNames(
                   styles.chip,
-                  styles[`hue_${hueFor(segment.slot)}`]
+                  styles[`hue_${hueFor(sentence, segment.slot)}`]
                 )}
               >
                 {word.emoji && (

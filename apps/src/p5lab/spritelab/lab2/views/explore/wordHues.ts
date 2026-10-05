@@ -1,15 +1,14 @@
-// Each word set's colour, worn by its words in the carousel and in the
-// sentence, so a finished sentence reads as a string of coloured beads.
+// Each slot's colour, worn by its words in the carousel, its dot and its
+// chip in the sentence: one per slot, in carousel order, so a sentence of
+// three words shows three colours.
+
+import {Sentence, slotsToOffer} from './exploreSentences';
 
 export type Hue = 'teal' | 'yellow' | 'purple' | 'orange' | 'blue';
 
-const HUES: Record<string, Hue> = {
-  creature: 'teal',
-  place: 'teal',
-  thing: 'orange',
-  adjective: 'yellow',
-  clothing: 'purple',
-  detail: 'blue',
-};
+const HUES: Hue[] = ['teal', 'yellow', 'purple', 'orange', 'blue'];
 
-export const hueFor = (slotId: string): Hue => HUES[slotId] ?? 'blue';
+export function hueFor(sentence: Sentence, slotId: string): Hue {
+  const at = slotsToOffer(sentence).findIndex(s => s.id === slotId);
+  return HUES[Math.max(0, at) % HUES.length];
+}

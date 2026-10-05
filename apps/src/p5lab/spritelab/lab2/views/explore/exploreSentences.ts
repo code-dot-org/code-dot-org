@@ -123,6 +123,23 @@ export function sentenceFor(
   return SENTENCES.character;
 }
 
+/** The slots in carousel order: the required ones first, then the rest,
+    each group in the order the sentence reads them. */
+export function slotsToOffer(sentence: Sentence): Slot[] {
+  const ids: string[] = [];
+  const walk = (segments: Segment[]) =>
+    segments.forEach(segment => {
+      if ('slot' in segment) {
+        ids.push(segment.slot);
+      } else if ('phrase' in segment) {
+        walk(segment.phrase);
+      }
+    });
+  walk(sentence.segments);
+  const slots = ids.map(id => sentence.slots[id]);
+  return [...slots.filter(s => s.required), ...slots.filter(s => !s.required)];
+}
+
 export function wordFor(
   sentence: Sentence,
   slotId: string,

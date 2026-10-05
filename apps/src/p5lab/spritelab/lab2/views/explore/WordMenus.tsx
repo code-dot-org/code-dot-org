@@ -13,6 +13,7 @@ import {
   Segment,
   Sentence,
   Slot,
+  slotsToOffer,
   Word,
   WORD_DRAG_TYPE,
   wordFor,
@@ -28,23 +29,6 @@ interface WordMenusProps {
   choices: Choices;
   onChange: (choices: Choices) => void;
   disabled?: boolean;
-}
-
-/** The slots to offer: the required ones first, then the rest, each group
-    in the order the sentence reads them. */
-export function slotsToOffer(sentence: Sentence): Slot[] {
-  const ids: string[] = [];
-  const walk = (segments: Segment[]) =>
-    segments.forEach(segment => {
-      if ('slot' in segment) {
-        ids.push(segment.slot);
-      } else if ('phrase' in segment) {
-        walk(segment.phrase);
-      }
-    });
-  walk(sentence.segments);
-  const slots = ids.map(id => sentence.slots[id]);
-  return [...slots.filter(s => s.required), ...slots.filter(s => !s.required)];
 }
 
 // An emoji is about this many letters wide.
@@ -227,7 +211,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                   className={classNames(
                     styles.chip,
                     styles.placeholder,
-                    styles[`hue_${hueFor(s.id)}`],
+                    styles[`hue_${hueFor(sentence, s.id)}`],
                     overSlotId === s.id && styles.dropTarget
                   )}
                   aria-hidden
@@ -244,7 +228,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             key={`${s.id}-${word.id}`}
             className={classNames(
               styles.chip,
-              styles[`hue_${hueFor(s.id)}`],
+              styles[`hue_${hueFor(sentence, s.id)}`],
               overSlotId === s.id && styles.dropTarget
             )}
             {...dropHandlers(s.id)}
@@ -341,7 +325,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                           type="button"
                           className={classNames(
                             styles.word,
-                            styles[`hue_${hueFor(set.id)}`],
+                            styles[`hue_${hueFor(sentence, set.id)}`],
                             chosen && styles.chosen
                           )}
                           style={{'--i': wordIndex} as React.CSSProperties}
@@ -393,6 +377,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                   type="button"
                   className={classNames(
                     styles.dot,
+                    styles[`hue_${hueFor(sentence, s.id)}`],
                     i === index && styles.dotCurrent,
                     filled(s.id) && styles.dotFilled
                   )}

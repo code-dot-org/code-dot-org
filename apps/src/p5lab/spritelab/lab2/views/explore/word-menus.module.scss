@@ -386,7 +386,8 @@
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  border: 2px solid var(--text-neutral-secondary, color.$dark_charcoal);
+  // Its set's colour: a ring until the set has its word.
+  border: 2px solid var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
   background: transparent;
   cursor: pointer;
   animation: dot-in 0.3s ease-out;
@@ -410,12 +411,12 @@
 }
 
 .dotFilled {
-  background-color: var(--text-neutral-secondary, color.$dark_charcoal);
+  background-color: var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
 }
 
 .dotCurrent {
-  border-color: var(--text-brand-primary, color.$brand_primary_default);
-  background-color: var(--text-brand-primary, color.$brand_primary_default);
+  background-color: var(--hue, var(--text-brand-primary, color.$brand_primary_default));
+  box-shadow: 0 0 0 2px var(--background-neutral-secondary, color.$white);
   transform: scale(1.25);
 }
 

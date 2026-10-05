@@ -4,10 +4,9 @@ import React, {useState} from 'react';
 import {
   CHARACTER_SENTENCE,
   Choices,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
-import WordMenus, {
   slotsToOffer,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/WordMenus';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
+import WordMenus from '@cdo/apps/p5lab/spritelab/lab2/views/explore/WordMenus';
 
 const Harness: React.FunctionComponent<{initial?: Choices}> = ({
   initial = {},
