@@ -3,6 +3,87 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# 
-functions facilitate
+## Facilitating Functions
+
+Students move from predicting what functions do to writing their own, then get assessed on reading a buggy one. Three real stuck-points show up along the way, and one of them, return values, is the one the curriculum itself flags as hardest.
+
+### What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Predict the Workout (Levels 1-2):</strong> students predict the output of a function, then a function with a parameter, before writing any code themselves</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Define Functions (Levels 3-7):</strong> students write functions with a message, with a parameter, with multiple parameters, and with a return value, then complete a Check for Understanding reading a buggy program</div>
+  </div>
+</div>
+
+<hr>
+
+### Watch for: Indentation
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Missing or Inconsistent</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">def greet(name):<br>print(f"Hi, {name}!")</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Consistently Indented</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">def greet(name):<br>&nbsp;&nbsp;print(f"Hi, {name}!")</div>
+  </div>
+</div>
+
+### Watch for: Parameter Scope
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Uses Parameter Outside</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Tries to print <code>name</code> below the function, outside its body.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Keeps It Inside</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Only uses <code>name</code> inside the function it belongs to.</div>
+  </div>
+</div>
+
+### Watch for: Return Value Control Flow
+
+This is the one the curriculum itself calls out as hardest, not the syntax, but tracing the sequence: call, input, return, save.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Loses the Sequence</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Can't say what value ends up in the variable, or assumes the function printed something it didn't.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Traces Step by Step</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Walks through: function called, input provided, return value produced, value saved.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For indentation</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Is this line part of your function? If so, it needs to be indented underneath it."</div>
+
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For parameter scope</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "That variable is only available inside the function's body. What would you use outside of it?"</div>
+
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For return value control flow</div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; "What inputs does this function need? Walk me through what happens when it's called."</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Did the function print something, or return something? Those aren't the same."</div>
+
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For defining without calling</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "You've written what the function should do. Where in your code do you actually run it?"</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Note:</strong> Level 7's Check for Understanding is a real assessment opportunity. If students can't identify the bug, ask them how many inputs the function needs, then compare that to how many values are actually provided when it's called.
+  </div>
+</div>
 MARKDOWN
