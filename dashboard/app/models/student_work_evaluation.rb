@@ -8,7 +8,6 @@
 #  requester_id        :integer
 #  level_id            :integer
 #  unit_id             :integer
-#  skill_id            :integer
 #  section_id          :integer
 #  school_year         :string(255)
 #  evaluator           :string(255)
@@ -36,7 +35,6 @@ class StudentWorkEvaluation < ApplicationRecord
     requester_id: :restricted,
     level_id: :restricted,
     unit_id: :restricted,
-    skill_id: :restricted,
     section_id: :restricted,
     school_year: :restricted,
     evaluator: :restricted,
