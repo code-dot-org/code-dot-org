@@ -1,5 +1,5 @@
 /* Panel describing the column selected in the data table. */
-import {IconButton} from '@mui/material';
+import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 
 import Alert from '@code-dot-org/component-library/alert';
@@ -88,9 +88,14 @@ const ColumnAnalysis = () => {
     >
       <div className={styles.header}>
         <span className={styles.headerSpacer} />
-        <h3 id="column-analysis-heading" className={styles.headerTitle}>
+        <Typography
+          id="column-analysis-heading"
+          component="h3"
+          variant="overline2"
+          className={styles.headerTitle}
+        >
           Column Analysis
-        </h3>
+        </Typography>
         <IconButton
           variant="text"
           color="tertiary"
@@ -104,7 +109,9 @@ const ColumnAnalysis = () => {
       </div>
       <div className={styles.body}>
         <div className={styles.summary}>
-          <h4 className={styles.columnName}>{columnName}</h4>
+          <Typography component="h4" variant="h6">
+            {columnName}
+          </Typography>
           {columnDetails.description && (
             <p className={styles.description}>{columnDetails.description}</p>
           )}
@@ -133,14 +140,22 @@ const ColumnAnalysis = () => {
               <span className={styles.emptyGraphIcon} aria-hidden="true">
                 <FontAwesomeV6Icon iconName="chart-simple" iconStyle="solid" />
               </span>
-              <h4 className={styles.emptyGraphTitle}>Too many values</h4>
+              <Typography
+                component="h4"
+                variant="label1"
+                className={styles.emptyGraphTitle}
+              >
+                Too many values
+              </Typography>
               <p className={styles.emptyGraphMessage}>
                 {`A graph is shown when there are ${MAX_DISTRIBUTION_BARS} or fewer values.`}
               </p>
             </div>
           ) : (
             <div className={styles.distribution}>
-              <h4 className={styles.distributionTitle}>Distribution</h4>
+              <Typography component="h4" variant="label3">
+                Distribution
+              </Typography>
               {bars.length > 0 && (
                 <DistributionChart columnName={columnName} bars={bars} />
               )}

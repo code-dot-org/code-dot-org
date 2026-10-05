@@ -1,5 +1,5 @@
 /* Panel for choosing a model's label and features, then training it. */
-import {Button} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
 import type {ChangeEvent, ReactNode} from 'react';
 
@@ -131,7 +131,11 @@ const TrainPanel = () => {
 
   return (
     <div id="train-panel" className={styles.panel}>
-      <h3 className={styles.header}>Train</h3>
+      <div className={styles.header}>
+        <Typography component="h3" variant="overline2" className={styles.title}>
+          Train
+        </Typography>
+      </div>
       <div className={styles.content}>
         <div className={styles.card}>
           <div className={styles.fields}>

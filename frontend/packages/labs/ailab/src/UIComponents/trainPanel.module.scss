@@ -6,9 +6,12 @@
 
 .header {
   @include mixins.panel-header;
-  @include mixins.panel-header-title;
 
   justify-content: center;
+}
+
+.header .title {
+  @include mixins.panel-header-title;
 }
 
 .content {
