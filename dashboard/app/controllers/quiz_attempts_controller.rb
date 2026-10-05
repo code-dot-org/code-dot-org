@@ -15,11 +15,12 @@ class QuizAttemptsController < ApplicationController
     attempt = latest_attempt(params[:levelId], params[:unitId], viewed_user)
     if attempt && viewed_user.id != current_user.id
       # Any authorized viewer of someone else's attempt (e.g. a teacher of a student)
-      # always sees correctness. Only a verified teacher also sees the answer and explanation.
+      # always sees correctness.
       render json: quiz_attempt_json(
         attempt,
         show_correctness: true,
-        reveal_answer_explanation: current_user.verified_instructor?
+        # Only a verified instructor also sees the correct answer and its explanation.
+        reveal_answer_explanation: can?(:reveal_quiz_attempt_answers, :quiz_attempt)
       )
     else
       render json: attempt && quiz_attempt_json(attempt)
