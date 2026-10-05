@@ -1,6 +1,8 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
 import type {NavButton, PrevNextButtons} from '../types';
+
+import {areArraysEqual} from './utils';
 /*
 Validation checks to determine if app set up is ready for machine learning
 training. Panels prompt users to incrementally complete actions in preparation
@@ -92,11 +94,19 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
   );
 }
 
+function isTrainedOnCurrentColumns(state: RootState): boolean {
+  const latestResult = state.historicResults[0];
+  return (
+    !!latestResult &&
+    latestResult.label === state.labelColumn &&
+    areArraysEqual(latestResult.features, state.selectedFeatures)
+  );
+}
+
 function resultsAvailable(state: RootState): boolean {
-  if (state.accuracyCheckExamples.length === 0) {
-    return false;
-  }
-  return !didSaveSucceed(state) || !isSaveInProgress(state);
+  return (
+    state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(state)
+  );
 }
 
 function isSaveInProgress(state: RootState): boolean {
@@ -147,7 +157,7 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
       : undefined;
     next = undefined;
   } else if (state.currentPanel === 'results') {
-    prev = {panel: 'datasetView', text: I18n.t('tryAgain')};
+    prev = undefined;
     next = !isAccuracyAcceptable(state)
       ? undefined
       : isPanelAvailable(state, 'saveModel')
