@@ -86,6 +86,26 @@ describe('QuestionsStep', () => {
     expect(screen.queryByText('Quick questions')).not.toBeInTheDocument();
   });
 
+  it('numbers questions in the order they are shown', () => {
+    renderStep(
+      {},
+      {
+        ...step,
+        questions: [
+          question(1, 2, 'Later question'),
+          question(2, 1, 'Earlier question'),
+        ],
+      }
+    );
+    expect(screen.getByText('Earlier question')).toBeInTheDocument();
+    expect(screen.getByText('Question 1 of 2')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('radio', {name: /Yes 2/}));
+    fireEvent.click(screen.getByRole('button', {name: /Next/}));
+    expect(screen.getByText('Later question')).toBeInTheDocument();
+    expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
+  });
+
   it('saves each selection', () => {
     const {saved} = renderStep();
     fireEvent.click(screen.getByRole('radio', {name: /No 1/}));
@@ -142,7 +162,11 @@ describe('QuestionsStep', () => {
       fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
       fireEvent.click(screen.getByRole('button', {name: /Next/}));
       expect(screen.getByText('Correct!')).toBeInTheDocument();
-      expect(screen.getByRole('button', {name: /Next/})).toBeDisabled();
+      // Still focusable, so keyboard focus is not lost during the pause.
+      const nextButton = screen.getByRole('button', {name: /Next/});
+      expect(nextButton).toBeEnabled();
+      expect(nextButton).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.click(nextButton);
 
       act(() => {
         jest.runAllTimers();

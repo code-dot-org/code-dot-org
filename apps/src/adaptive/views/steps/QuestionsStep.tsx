@@ -9,6 +9,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import AttemptCard from '@cdo/apps/quiz/attempt/AttemptCard';
 import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
+import {groupByPage} from '@cdo/apps/quiz/utils';
 
 import {StepAnswers} from '../../progress';
 import {
@@ -41,16 +42,17 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
       ),
     [step.questions]
   );
-  // currentPageNumber is a 1-based position into this list, not a raw page value.
-  const pageNumbers = Array.from(new Set(questions.map(q => q.page))).sort(
-    (a, b) => a - b
-  );
-  const totalPages = pageNumbers.length || 1;
+  const pages = useMemo(() => groupByPage(questions), [questions]);
+  const totalPages = pages.length || 1;
+  // A 1-based position into pages, not a raw page value.
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const isLastPage = currentPageNumber >= totalPages;
-  const pageQuestions = questions.filter(
-    q => q.page === pageNumbers[currentPageNumber - 1]
-  );
+  const pageQuestions = pages[currentPageNumber - 1]?.questions ?? [];
+  // Numbered in the order shown, which can differ from the authored order.
+  const firstQuestionNumber =
+    pages
+      .slice(0, currentPageNumber - 1)
+      .reduce((count, page) => count + page.questions.length, 0) + 1;
   const currentChoice = (q: MultipleChoiceQuestion) =>
     answers[q.id]?.slice(-1)[0];
   const isPageAnswered = pageQuestions.every(q => !!currentChoice(q));
@@ -83,7 +85,9 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     return () => clearTimeout(timer);
   }, [feedback]);
 
+  const isAdvancing = feedback === 'correct';
   const handleNext = () => {
+    if (isAdvancing) return;
     if (gradedQuestions.some(q => currentChoice(q) !== q.correctChoiceId)) {
       setFeedback('incorrect');
     } else if (gradedQuestions.length) {
@@ -105,13 +109,13 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           }
         />
       )}
-      {pageQuestions.map(question => (
+      {pageQuestions.map((question, indexInPage) => (
         <MultiChoiceQuestionContainer
           key={question.id}
           question={question}
           questionLabel={
             questions.length > 1
-              ? `Question ${questions.indexOf(question) + 1} of ${
+              ? `Question ${firstQuestionNumber + indexInPage} of ${
                   questions.length
                 }`
               : undefined
@@ -149,7 +153,9 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           size="medium"
           type="button"
           endIcon={!isLastPage && <FontAwesomeV6Icon iconName="arrow-right" />}
-          disabled={!isPageAnswered || feedback === 'correct'}
+          disabled={!isPageAnswered}
+          // Not disabled while advancing: that would drop keyboard focus.
+          aria-disabled={isAdvancing}
           onClick={handleNext}
         >
           {isLastPage ? 'Submit' : 'Next'}
