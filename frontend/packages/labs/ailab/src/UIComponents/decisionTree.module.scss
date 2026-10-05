@@ -44,6 +44,7 @@ $overlay-float-min-width: 600px;
 .canvas {
   position: relative;
   color: var(--text-neutral-primary, black);
+  font-family: var(--font-family-main);
 }
 
 .edges {
