@@ -25,6 +25,12 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     assert_equal({score: 0, max_score: 1}, question.grade({}))
   end
 
+  test "student_content_json omits the answer key" do
+    question = create(:multiple_choice_question)
+    refute question.student_content_json.key?(:correctChoiceId)
+    assert_equal 'b', question.editor_content_json[:correctChoiceId]
+  end
+
   test "requires a non-blank stem" do
     question = build(
       :multiple_choice_question,

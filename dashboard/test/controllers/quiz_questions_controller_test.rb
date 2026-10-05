@@ -345,4 +345,77 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal 'Edited name', unattached.reload.name
   end
+
+  # --- free response ---
+
+  test "show renders FreeResponseQuestion content fields" do
+    question = create(:free_response_question)
+
+    get :show, params: {id: question.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 'FreeResponseQuestion', body['type']
+    assert_equal question.content['questionTitle'], body['questionTitle']
+    assert_equal question.content['description'], body['description']
+    refute body.key?('stem')
+  end
+
+  test "index includes FreeResponseQuestions" do
+    standard = create(:standard)
+    question = create(:free_response_question)
+    question.standards << standard
+
+    get :index, params: {
+      quizLevelId: @quiz.id,
+      standardFrameworkShortcode: standard.framework.shortcode,
+      standardShortcode: standard.shortcode,
+      limit: 10
+    }
+
+    assert_response :success
+    assert_equal [question.id], (JSON.parse(response.body).map {|q| q['id']})
+  end
+
+  test "update edits a FreeResponseQuestion in place" do
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
+
+    put :update, params: {
+      id: question.id, quizLevelId: @quiz.id,
+      questionName: 'Edited name', questionTitle: 'Edited title', description: 'Edited description'
+    }
+
+    assert_response :success
+    question.reload
+    assert_equal 'Edited title', question.content['questionTitle']
+    assert_equal 'Edited description', question.content['description']
+  end
+
+  test "update forks a FreeResponseQuestion as a FreeResponseQuestion" do
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
+
+    assert_difference 'QuizQuestion.count', 1 do
+      put :update, params: {
+        id: question.id, quizLevelId: @quiz.id, editMode: 'fork',
+        questionName: 'Forked', questionTitle: 'Forked title'
+      }
+    end
+
+    assert_response :success
+    forked = QuizQuestion.find(JSON.parse(response.body)['id'])
+    assert_instance_of FreeResponseQuestion, forked
+    assert_equal question, forked.fork_parent
+  end
+
+  test "update cannot change a question's type" do
+    put :update, params: {
+      id: @question.id, quizLevelId: @quiz.id, type: 'FreeResponseQuestion',
+      questionName: 'Still MC', questionTitle: 'ignored'
+    }
+
+    assert_response :bad_request
+    assert_instance_of MultipleChoiceQuestion, @question.reload
+  end
 end

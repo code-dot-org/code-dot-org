@@ -88,6 +88,32 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     refute QuizQuestion.exists?(name: 'Orphan risk')
   end
 
+  test "create makes a FreeResponseQuestion when type is given" do
+    post :create, params: {
+      level_id: @quiz.id,
+      type: 'FreeResponseQuestion',
+      questionName: 'Reflection',
+      questionTitle: 'Give one example of an abstraction.',
+      description: 'A function counts.'
+    }
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    question = FreeResponseQuestion.find(body['id'])
+    assert_equal 'Give one example of an abstraction.', question.content['questionTitle']
+    assert_equal 'A function counts.', body['description']
+    refute body.key?('stem')
+    assert @quiz.placements.exists?(quiz_question_id: question.id)
+  end
+
+  test "create returns bad_request for a type that is not editable" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, params: {level_id: @quiz.id, type: 'QuizQuestion', questionName: 'x', questionTitle: 'x'}
+    end
+
+    assert_response :bad_request
+  end
+
   # --- attach / detach / destroy: three different removal semantics ---
 
   test "attach is idempotent - attaching an already-attached question does not duplicate the placement" do
@@ -103,6 +129,15 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_no_difference 'QuizQuestion.count' do
       post :attach, params: {level_id: @quiz.id, id: other_question.id}
     end
+
+    assert_response :created
+    assert @quiz.placements.exists?(quiz_question_id: other_question.id)
+  end
+
+  test "attach accepts a FreeResponseQuestion" do
+    other_question = create(:free_response_question)
+
+    post :attach, params: {level_id: @quiz.id, id: other_question.id}
 
     assert_response :created
     assert @quiz.placements.exists?(quiz_question_id: other_question.id)
