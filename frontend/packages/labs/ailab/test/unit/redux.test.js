@@ -16,6 +16,7 @@ import reducer, {
   resetState,
   setSaveStatus,
   saveModel,
+  setTrainingModalStep,
 } from '../../src/redux';
 
 describe('ailab reducer', () => {
@@ -46,6 +47,27 @@ describe('ailab reducer', () => {
       const next = reducer(state, setCurrentPanel('trainModel'));
       expect(next.instructionsOverlayActive).toBe(false);
       expect(next.viewedPanels).toEqual([]);
+    });
+  });
+
+  describe('training modal', () => {
+    test('opens on a step and closes', () => {
+      const opened = reducer(initialState, setTrainingModalStep('training'));
+      expect(opened.trainingModalStep).toBe('training');
+      const closed = reducer(opened, setTrainingModalStep(undefined));
+      expect(closed.trainingModalStep).toBeUndefined();
+    });
+
+    test('closes when moving to another panel', () => {
+      const opened = reducer(initialState, setTrainingModalStep('testing'));
+      const next = reducer(opened, setCurrentPanel('results'));
+      expect(next.trainingModalStep).toBeUndefined();
+    });
+
+    test('does not change the instructions while open', () => {
+      let state = reducer(initialState, setCurrentPanel('dataDisplayFeatures'));
+      state = reducer(state, setTrainingModalStep('training'));
+      expect(state.instructionsKey).toBe('dataDisplayFeatures');
     });
   });
 

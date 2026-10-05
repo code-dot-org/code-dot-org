@@ -3,64 +3,87 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Variables: What They Are, Why We Use Them
+## Facilitating Functions
 
-This lesson opens with a quick comparison: three social media profiles. Some things stay the same across all of them, the layout, the buttons. Other things change, the name, the photo, the follower count.
+Students move from predicting what functions do to writing their own, then get assessed on reading a buggy one. Three real stuck-points show up along the way, and one of them, return values, is the one the curriculum itself flags as hardest.
 
-That distinction, what stays the same versus what changes, is the whole motivation for variables. Students build a simple chatbot as the vehicle for learning them.
+### What's Actually Happening in This Lesson
 
-<div style="text-align: center; margin: 20px auto;">
-  <img src="https://images.code.org/0df910d24411432dfe653654fbde05b6-image-1790795232266.png" alt="Three social media profile cards showing Jada, Simon, and Mira. Each has a different name, photo, and post and follower count, but the same layout and button styling." style="width: 55%; border-radius: 10px;">
-  <p style="font-size: 12pt; color: #555555; margin-top: 8px;">Same layout and buttons across all three. Different names, photos, and counts.</p>
-</div>
-
----
-
-### Variables
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;">
-  <div style="font-size: 14pt; line-height: 1.5;">
-    <strong>&#128214; Variable:</strong> a container that stores a value in memory.
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Predict the Workout (Levels 1-2):</strong> students predict the output of a function, then a function with a parameter, before writing any code themselves</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Define Functions (Levels 3-7):</strong> students write functions with a message, with a parameter, with multiple parameters, and with a return value, then complete a Check for Understanding reading a buggy program</div>
   </div>
 </div>
 
-In the curriculum's example, <code style="font-size:14px;">posts</code> is a name the student chose, and <code style="font-size:14px;">31</code> is the value stored inside it.
+<hr>
 
-<div style="background-color: #1F1976; border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-family: 'Consolas', 'Courier New', monospace; font-size: 15px; color: #E4E2F8;">
-posts = 31
-</div>
+### Watch for: Indentation
 
-### Data Types
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;">
-  <div style="font-size: 14pt; line-height: 1.5;">
-    <strong>&#128214; Data type:</strong> the format of the data a variable can hold.
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Missing or Inconsistent</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">def greet(name):<br>print(f"Hi, {name}!")</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Consistently Indented</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">def greet(name):<br>&nbsp;&nbsp;print(f"Hi, {name}!")</div>
   </div>
 </div>
 
-Students will use three of these most often:
+### Watch for: Parameter Scope
 
-<ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
-  <li><strong>Integer</strong> (<code style="font-size:14px;">int</code>): a whole number</li><br>
-  <li><strong>String</strong> (<code style="font-size:14px;">string</code>): text</li><br>
-  <li><strong>Boolean</strong> (<code style="font-size:14px;">bool</code>): True or False</li>
-</ul>
-
-<div style="background-color: #1F1976; border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-family: 'Consolas', 'Courier New', monospace; font-size: 15px; color: #E4E2F8; line-height: 2;">
-posts = 31 <span style="color:#ACA8EA;"># int</span><br>
-name = "Jada" <span style="color:#ACA8EA;"># string</span><br>
-following = True <span style="color:#ACA8EA;"># bool</span>
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Uses Parameter Outside</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Tries to print <code>name</code> below the function, outside its body.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Keeps It Inside</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Only uses <code>name</code> inside the function it belongs to.</div>
+  </div>
 </div>
 
-<div style="background-color: #E4E2F8; border-radius: 10px; padding: 14px 18px; margin: 16px 0;">
-  <div style="font-size: 13.5px; color: #222222; line-height: 1.5;">
-    <strong>&#128161; Teacher tip:</strong> students choose their own variable names. Slide 12's own teaching tip is worth repeating to your class: descriptive names (<code style="font-size:13px;">posts</code>, not <code style="font-size:13px;">x</code>) make code easier for anyone, including their future selves, to read.
+### Watch for: Return Value Control Flow
+
+This is the one the curriculum itself calls out as hardest, not the syntax, but tracing the sequence: call, input, return, save.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Loses the Sequence</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Can't say what value ends up in the variable, or assumes the function printed something it didn't.</div>
   </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Traces Step by Step</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Walks through: function called, input provided, return value produced, value saved.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For indentation</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Is this line part of your function? If so, it needs to be indented underneath it."</div>
+
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For parameter scope</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "That variable is only available inside the function's body. What would you use outside of it?"</div>
+
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For return value control flow</div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; "What inputs does this function need? Walk me through what happens when it's called."</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Did the function print something, or return something? Those aren't the same."</div>
+
+  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For defining without calling</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "You've written what the function should do. Where in your code do you actually run it?"</div>
 </div>
 
 <div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
-  <div style="font-size: 13.5px; color: #06338D; line-height: 1.6;">
-    <strong>&#8505; Note:</strong> this PL assumes basic familiarity with Python and doesn't re-teach it in depth. If you'd like more practice before teaching this lesson, two good options: work through the curriculum lessons yourself before your students do, and/or complete the Intro to Python Programming PL module.
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Note:</strong> Level 7's Check for Understanding is a real assessment opportunity. If students can't identify the bug, ask them how many inputs the function needs, then compare that to how many values are actually provided when it's called.
   </div>
 </div>
 MARKDOWN

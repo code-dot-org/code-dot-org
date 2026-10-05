@@ -881,3 +881,9 @@ html body .sidebarActionTooltip {
     background: none;
   }
 }
+
+// Hosted inside a lab's flex row (see the `inline` prop): the container must
+// not claim width of its own, only the inline drawer within it does.
+.fabContainedInline {
+  display: contents;
+}

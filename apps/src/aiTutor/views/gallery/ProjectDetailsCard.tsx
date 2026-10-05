@@ -2,12 +2,11 @@ import {
   assetWithUrl,
   ChallengeResponseDetail,
   Reaction,
+  ReactionChips,
 } from '@code-dot-org/lesson-deep-dive';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
-
-import ReactionChips from './ReactionChips';
 
 import styles from './project-view.module.scss';
 
