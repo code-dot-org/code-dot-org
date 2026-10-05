@@ -83,8 +83,8 @@
   ],
   "lessons": [
     {
-      "key": "Lesson Tutor",
-      "name": "Lesson Tutor",
+      "key": "Artist",
+      "name": "Artist",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -97,7 +97,7 @@
         "student_overview": "Review how AI predicts the next word."
       },
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor"
       }
@@ -113,7 +113,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "fe3622b3-f17a-4cd4-a8ca-27a6e67b456c",
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor"
       }
@@ -127,7 +127,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "83f819aa-d8f4-441a-835f-d963642ff648",
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor"
       }
@@ -141,7 +141,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d9466835-0d49-4d89-a510-336b403c69ba",
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor"
       }
@@ -154,7 +154,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "59b3338d-e69a-4c18-81ab-eeb3358d3d95",
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor"
       }
@@ -280,7 +280,7 @@
         "script_level.level_keys": [
           "UI Test Standalone_Artist_1"
         ],
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor",
         "activity_section.key": "c9c63c83-0ae1-443a-a41c-0e84f9f44047"
@@ -304,7 +304,7 @@
         "script_level.level_keys": [
           "UI Test Standalone_Artist_2"
         ],
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor",
         "activity_section.key": "c9c63c83-0ae1-443a-a41c-0e84f9f44047"
@@ -328,7 +328,7 @@
         "script_level.level_keys": [
           "UI Test Standalone_Artist_9"
         ],
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor",
         "activity_section.key": "c9c63c83-0ae1-443a-a41c-0e84f9f44047"
@@ -345,7 +345,7 @@
         "script_level.level_keys": [
           "UI Test Standalone_Artist_1"
         ],
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor",
         "activity_section.key": "c9c63c83-0ae1-443a-a41c-0e84f9f44047"
@@ -357,7 +357,7 @@
         "script_level.level_keys": [
           "UI Test Standalone_Artist_2"
         ],
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor",
         "activity_section.key": "c9c63c83-0ae1-443a-a41c-0e84f9f44047"
@@ -369,7 +369,7 @@
         "script_level.level_keys": [
           "UI Test Standalone_Artist_9"
         ],
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "lesson_group.key": "",
         "script.name": "ui-test-lesson-tutor",
         "activity_section.key": "c9c63c83-0ae1-443a-a41c-0e84f9f44047"
@@ -418,19 +418,19 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "resource.key": "artist_introduction"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "resource.key": "turns_angles"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "resource.key": "turns_angles_1"
       }
     }
@@ -469,19 +469,19 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "vocabulary.key": "code"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "vocabulary.key": "program"
       }
     }
@@ -494,7 +494,7 @@
         "description": "Explain that AI models use probability and statistics to generate responses."
       },
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "objective.key": "82d11dd1-2488-44d2-99c7-b67e8c9ac26a"
       }
     },
@@ -504,7 +504,7 @@
         "description": "Describe how a prompt shapes what an AI model produces."
       },
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "objective.key": "1b17a7c4-49f1-414c-9746-0b7dc82d0f29"
       }
     }
@@ -512,21 +512,21 @@
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson Tutor",
+        "lesson.key": "Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
       }
