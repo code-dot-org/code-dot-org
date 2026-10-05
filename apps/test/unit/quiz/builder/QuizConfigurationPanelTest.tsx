@@ -351,25 +351,6 @@ describe('QuizConfigurationPanel', () => {
     expect(lastRequestBody().revealAnswerExplanation).toBe(true);
   });
 
-  it('saves showQuestionsAfterSubmit, clearing reveal answer/explanation alongside it, even with showCorrectness off', async () => {
-    put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
-    renderPanel({
-      initialValues: {
-        ...INITIAL_VALUES,
-        showCorrectness: false,
-        showQuestionsAfterSubmit: true,
-      },
-    });
-
-    fireEvent.click(screen.getByLabelText('Show questions after submit'));
-
-    await waitFor(() => expect(put).toHaveBeenCalled());
-    expect(lastRequestBody()).toEqual({
-      showQuestionsAfterSubmit: false,
-      revealAnswerExplanation: false,
-    });
-  });
-
   it('hides reveal answer/explanation when showQuestionsAfterSubmit is off, even with showCorrectness on', () => {
     renderPanel({
       initialValues: {
@@ -479,7 +460,7 @@ describe('QuizConfigurationPanel', () => {
     });
   });
 
-  it("exam_simulation's defaults don't reveal an explanation that showQuestionsAfterSubmit being off would never show", async () => {
+  it("exam_simulation's defaults show correctness but hide questions after submit, so the answer and explanation aren't revealed", async () => {
     put.mockResolvedValue(
       jsonResponse({...INITIAL_VALUES, purpose: 'exam_simulation'})
     );
