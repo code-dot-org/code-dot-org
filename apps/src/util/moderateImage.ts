@@ -6,6 +6,7 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
+// Here's a spreadsheet with more detailed info: https://docs.google.com/spreadsheets/d/1HgB95sNkNYawfoiGf5l8Jwy95ysZLh3_pENUboMprgQ/edit?gid=0#gid=0
 const LABS_WITH_IMAGE_MODERATION = [
   'weblab2',
   'aichat',

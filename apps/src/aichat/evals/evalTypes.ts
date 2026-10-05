@@ -70,6 +70,7 @@ export interface EvalResult {
   finishReason?: string;
   // The Azure moderation verdict, when moderation ran.
   moderationStatus?: 'safe' | 'flagged' | 'error';
+  // Cassi added LLM judge for model-generated images: https://github.com/code-dot-org/code-dot-org/pull/73729
   // The output-image LLM judge verdict, when that gate ran.
   outputImageSafetyStatus?: 'safe' | 'flagged' | 'error';
   // Raw Azure per-category analysis, kept for auditing flagged / passed images.
