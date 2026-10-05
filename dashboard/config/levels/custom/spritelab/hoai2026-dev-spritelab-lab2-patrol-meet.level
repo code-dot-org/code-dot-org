@@ -112,7 +112,8 @@
           }
         }
       }
-    ]
+    ],
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

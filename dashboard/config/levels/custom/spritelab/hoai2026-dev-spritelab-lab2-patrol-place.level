@@ -46,7 +46,8 @@
         }
       }
     ],
-    "long_instructions": "# Bring back your second character\nClick a square on top of some blocks to put them there. Click another square to move them."
+    "long_instructions": "# Bring back your second character\nClick a square on top of some blocks to put them there. Click another square to move them.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

@@ -9,6 +9,7 @@
 @import "mixins";
 @import "style-constants";
 @import "brand-selectors";
+@import "ta-drawer";
 @import "./legacy/NpsSurveyBlock";
 
 // Bootstrap Variables
@@ -123,6 +124,17 @@ p,pre,span {
 body {
   -webkit-tap-highlight-color: transparent;
   font-style: normal;
+}
+
+// The drawer is laid out beside the page, not over it, and below the header:
+// #main_content gives up the width the drawer takes while the header keeps the
+// full page width, being a sibling rather than an ancestor of the content.
+// Content that anchors to the viewport rather than flowing inside
+// #main_content -- the lab shells -- insets itself instead; see
+// shared/css/ta-drawer.scss.
+#main_content {
+  margin-right: $ta-drawer-width;
+  transition: margin-right $ta-drawer-transition;
 }
 
 body.pin_bottom {
@@ -1702,11 +1714,13 @@ body.iframe_embed_app_and_code {
 
 }
 
+// Pinned legacy labs are positioned against the pinned body, which spans the
+// viewport, so #main_content's margin never reaches them.
 #codeApp.pin_bottom {
   position: absolute;
   top: 60px;
   left: 10px;
-  right: 10px;
+  right: calc(10px + #{$ta-drawer-width});
   bottom: 10px;
 
   &.centered_embed {

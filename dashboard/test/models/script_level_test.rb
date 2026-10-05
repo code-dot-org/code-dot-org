@@ -309,6 +309,21 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
   end
 
+  test 'summarize carries the header label, localized when a translation exists' do
+    sl = create(:script_level)
+    assert_nil sl.summarize[:header_label]
+
+    sl.level.update!(header_label: 'Story')
+    assert_equal 'Story', sl.summarize[:header_label]
+
+    with_locale('es-MX') do
+      I18n.backend.store_translations 'es-MX', {
+        'data' => {'header_label' => {sl.level.name => 'Historia'}}
+      }
+      assert_equal 'Historia', sl.summarize[:header_label]
+    end
+  end
+
   test 'teacher panel summarize' do
     sl = create_script_level_with_ancestors({assessment: false})
 
