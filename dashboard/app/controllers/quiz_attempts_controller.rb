@@ -110,9 +110,8 @@ class QuizAttemptsController < ApplicationController
       order(attempt_number: :desc).first
   end
 
-  # show_correctness/reveal_answer_explanation default to the quiz's own
-  # settings (self-view); #index overrides them for an authorized viewer
-  # who isn't the student themselves - see #index for which.
+  # Defaults are the quiz's own settings (self-view). #index overrides both
+  # when viewing someone else's attempt.
   private def quiz_attempt_json(
     attempt,
     show_correctness: attempt.level&.show_correctness?,

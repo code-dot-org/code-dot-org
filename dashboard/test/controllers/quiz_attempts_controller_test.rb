@@ -113,7 +113,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 'b', result['correctChoiceId']
   end
 
-  test "index shows an unverified teacher correctness but not the answer key, even for their own student" do
+  test "index shows an unverified teacher correctness but not the correctanswer nor explanation, even for their own student" do
     quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
     question = create(:multiple_choice_question, explanation: 'because math')
     create(:quiz_question_placement, level: quiz, quiz_question: question)
