@@ -70,6 +70,7 @@ module ShareFiltering
     failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
     return failure if failure
 
+    # Slack thread https://codeai.slack.com/archives/C03DBDN67B7/p1778274582223499
     # Temporarily disable address filtering to prevent false positives.
     # TODO: re-enable this when we improve the user experience of the address filter. https://github.com/code-dot-org/code-dot-org/pull/73395
     find_profanity_failure(program_text, locale, {}, exceptions: exceptions)
