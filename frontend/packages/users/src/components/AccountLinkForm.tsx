@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import {useRef, type ReactNode} from 'react';
 
 import {resolveCsrfToken} from '@code-dot-org/core/api';
 
@@ -13,12 +13,20 @@ export default function AccountLinkForm({
   action: string;
   children: ReactNode;
 }) {
+  const tokenRef = useRef<HTMLInputElement>(null);
+
+  // Read again at submit: the session token can rotate after render.
+  const refreshToken = () => {
+    tokenRef.current!.value = resolveCsrfToken() ?? '';
+  };
+
   return (
-    <form method="post" action={action}>
+    <form method="post" action={action} onSubmit={refreshToken}>
       <input
+        ref={tokenRef}
         type="hidden"
         name="authenticity_token"
-        value={resolveCsrfToken() ?? ''}
+        defaultValue={resolveCsrfToken() ?? ''}
       />
       {children}
     </form>
