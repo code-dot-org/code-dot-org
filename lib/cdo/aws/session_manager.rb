@@ -30,6 +30,23 @@ module Cdo
       DEFAULT_COMMAND_POLL_INTERVAL = 2
       DEFAULT_COMMAND_TIMEOUT_SECONDS = 3600
 
+      # Raised when a Name tag matches more than one running instance, so the caller never silently connects to an
+      # arbitrary one.
+      class AmbiguousInstanceNameError < StandardError
+        attr_reader :name, :instance_ids
+
+        def initialize(name, instance_ids)
+          @name = name
+          @instance_ids = instance_ids
+          super(
+            "#{instance_ids.length} running instances are named #{name.inspect} " \
+            "(#{instance_ids.join(', ')}); re-run with the instance id you want."
+          )
+        end
+      end
+
+      class CommandTimeoutError < StandardError; end
+
       class << self
         attr_writer :ec2_client, :ssm_client
       end
@@ -72,15 +89,21 @@ module Cdo
         name_or_id.start_with?('i-')
       end
 
+      # Resolves a Name tag to a single running instance id. Returns nil when no
+      # running instance matches, and raises AmbiguousInstanceNameError when more
+      # than one does rather than connecting to an arbitrary instance.
       def self.instance_id_for(name_or_id)
         return name_or_id if instance_id?(name_or_id)
 
-        instances = describe_instances(
+        instance_ids = describe_instances(
           filters: [
-            {name: 'tag:Name', values: [name_or_id]}
+            {name: 'tag:Name', values: [name_or_id]},
+            {name: 'instance-state-name', values: ['running']}
           ]
-        )
-        instances.first&.instance_id
+        ).map(&:instance_id)
+        raise AmbiguousInstanceNameError.new(name_or_id, instance_ids) if instance_ids.length > 1
+
+        instance_ids.first
       end
 
       def self.availability_zone_for(instance_id)
@@ -339,8 +362,6 @@ module Cdo
       def self.monotonic_time
         Process.clock_gettime(Process::CLOCK_MONOTONIC)
       end
-
-      class CommandTimeoutError < StandardError; end
 
       private_class_method :describe_instances, :remote_command, :wait_for_command,
         :command_invocation, :monotonic_time

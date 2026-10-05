@@ -62,13 +62,12 @@ class CdoAwsSessionManagerTest < Minitest::Test
     )
   end
 
-  def test_instance_id_for_returns_first_instance_matching_name_tag
+  def test_instance_id_for_resolves_a_single_running_instance_by_name_tag
     ec2_client = stubbed_ec2_client(
       reservations: [
         {
           instances: [
-            {instance_id: 'i-aaaaaaaaaaaaaaaaa'},
-            {instance_id: 'i-bbbbbbbbbbbbbbbbb'}
+            {instance_id: 'i-aaaaaaaaaaaaaaaaa'}
           ]
         }
       ]
@@ -79,12 +78,8 @@ class CdoAwsSessionManagerTest < Minitest::Test
     assert_equal(
       {
         filters: [
-          {
-            name: 'tag:Name',
-            values: %w[
-              staging
-            ]
-          }
+          {name: 'tag:Name', values: %w[staging]},
+          {name: 'instance-state-name', values: %w[running]}
         ]
       },
       ec2_client.api_requests.first[:params]
@@ -494,6 +489,46 @@ class CdoAwsSessionManagerTest < Minitest::Test
       )
     )
     assert_match(/not a running SSM-managed instance/, err.string)
+  end
+
+  def test_instance_id_for_raises_when_a_name_matches_multiple_running_instances
+    Cdo::Aws::SessionManager.ec2_client = stubbed_ec2_client(
+      reservations: [
+        {
+          instances: [
+            {instance_id: 'i-aaaaaaaaaaaaaaaaa'},
+            {instance_id: 'i-bbbbbbbbbbbbbbbbb'}
+          ]
+        }
+      ]
+    )
+
+    error = assert_raises(Cdo::Aws::SessionManager::AmbiguousInstanceNameError) do
+      Cdo::Aws::SessionManager.instance_id_for('Frontend-autoscale-prod')
+    end
+    assert_equal 'Frontend-autoscale-prod', error.name
+    assert_equal %w[i-aaaaaaaaaaaaaaaaa i-bbbbbbbbbbbbbbbbb], error.instance_ids
+    assert_match(/re-run with the instance id/i, error.message)
+  end
+
+  def test_run_command_refuses_an_ambiguous_name_without_sending
+    Cdo::Aws::SessionManager.ec2_client = stubbed_ec2_client(
+      reservations: [
+        {
+          instances: [
+            {instance_id: 'i-aaaaaaaaaaaaaaaaa'},
+            {instance_id: 'i-bbbbbbbbbbbbbbbbb'}
+          ]
+        }
+      ]
+    )
+    ssm = mock
+    ssm.expects(:send_command).never
+    Cdo::Aws::SessionManager.ssm_client = ssm
+
+    assert_raises(Cdo::Aws::SessionManager::AmbiguousInstanceNameError) do
+      Cdo::Aws::SessionManager.run_command('Frontend-autoscale-prod', 'uptime')
+    end
   end
 
   def test_run_command_returns_false_without_sending_when_instance_is_not_found
