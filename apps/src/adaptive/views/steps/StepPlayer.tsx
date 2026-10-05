@@ -67,7 +67,6 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onSelectChoice={(questionId, choiceId) =>
               onSelectChoice(step.id, questionId, choiceId)
             }
-            continueLabel={continueLabel}
             onComplete={advance}
           />
         );

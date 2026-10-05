@@ -239,7 +239,7 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toEqual([]);
   });
 
-  it('rejects a quiz setting, as steps are ungraded', () => {
+  it('rejects a quiz setting, as steps have no attempts', () => {
     const raw = served();
     Object.assign(raw.checkpoints[0].steps[1], {showCorrectness: true});
     expect(problemsOf(raw)).toHaveLength(1);

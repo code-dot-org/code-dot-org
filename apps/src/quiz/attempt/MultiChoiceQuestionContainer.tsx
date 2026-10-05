@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -16,11 +17,19 @@ export interface MultiChoiceQuestionContainerProps {
   questionLabel?: string;
   selectedChoiceId: string | null;
   onSelectChoice: (choiceId: string) => void;
+  // Grades the selected choice in place, for a student retrying a question.
+  selectedChoiceStatus?: 'correct' | 'incorrect';
 }
 
 const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
-> = ({question, questionLabel, selectedChoiceId, onSelectChoice}) => (
+> = ({
+  question,
+  questionLabel,
+  selectedChoiceId,
+  onSelectChoice,
+  selectedChoiceStatus,
+}) => (
   <AttemptCard label={questionLabel} title={question.stem}>
     <div
       className={styles.choices}
@@ -38,7 +47,13 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
             onChange={() => onSelectChoice(choice.id)}
             className={classNames(
               styles.option,
-              isSelected && styles.optionSelected
+              isSelected && styles.optionSelected,
+              isSelected &&
+                selectedChoiceStatus === 'correct' &&
+                styles.optionCorrect,
+              isSelected &&
+                selectedChoiceStatus === 'incorrect' &&
+                styles.optionIncorrect
             )}
           >
             <Typography variant="body2" component="span">
@@ -47,6 +62,20 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
               </span>{' '}
               {choice.text}
             </Typography>
+            {isSelected && selectedChoiceStatus && (
+              <>
+                <FontAwesomeV6Icon
+                  iconName={
+                    selectedChoiceStatus === 'correct' ? 'check' : 'xmark'
+                  }
+                  iconStyle="solid"
+                  className={styles.statusIcon}
+                />
+                <span className={styles.srOnly}>
+                  {selectedChoiceStatus === 'correct' ? 'Correct' : 'Incorrect'}
+                </span>
+              </>
+            )}
           </RadioButton>
         );
       })}

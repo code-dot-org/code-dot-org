@@ -6,8 +6,9 @@ import {stepBaseSchema} from './steps/base';
 import {subsetOf} from './subsetOf';
 
 /**
- * Quiz's question summary, so the two share views. Steps are ungraded, so
- * correctChoiceId is recorded for authors but read by nothing yet.
+ * Quiz's question summary, so the two share views. With correctChoiceId the
+ * question is graded and the student retries until correct; without it, it
+ * is a survey question.
  */
 export const multipleChoiceQuestionSchema = subsetOf<
   QuizQuestionSummary & {correctChoiceId?: string}
@@ -47,7 +48,7 @@ export const questionSchema = z.discriminatedUnion('type', [
   }),
 ]);
 
-/** A questions step: an ungraded survey laid out like a quiz. */
+/** A questions step, laid out like a quiz but with no attempt or score. */
 export const questionsStepSchema = stepBaseSchema.extend({
   kind: z.literal('questions'),
   description: z.string().optional(),

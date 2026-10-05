@@ -77,6 +77,19 @@
                 {"id": "often", "text": "Often"}
               ],
               "page": 2
+            },
+            {
+              "id": 3,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-what-is-prompt",
+              "stem": "What is a prompt?",
+              "choices": [
+                {"id": "instructions", "text": "Instructions you give an AI"},
+                {"id": "website", "text": "A finished website"},
+                {"id": "error", "text": "An error message from the browser"}
+              ],
+              "correctChoiceId": "instructions",
+              "page": 3
             }
           ]
         }

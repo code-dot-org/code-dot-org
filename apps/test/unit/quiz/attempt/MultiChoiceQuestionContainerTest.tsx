@@ -78,4 +78,18 @@ describe('MultiChoiceQuestionContainer', () => {
 
     expect(onSelectChoice).toHaveBeenCalledWith('b');
   });
+
+  it('marks only the selected option with selectedChoiceStatus', () => {
+    render(
+      <MultiChoiceQuestionContainer
+        question={QUESTION}
+        selectedChoiceId="b"
+        onSelectChoice={jest.fn()}
+        selectedChoiceStatus="incorrect"
+      />
+    );
+
+    expect(screen.getByRole('radio', {name: /8.*Incorrect/})).toBeChecked();
+    expect(screen.getAllByText('Incorrect')).toHaveLength(1);
+  });
 });

@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React, {useState} from 'react';
 
@@ -36,15 +36,23 @@ const step: Step = {
   ],
 };
 
+const gradedStep: Step = {
+  ...step,
+  questions: [
+    {...question(1, 1, 'Graded question'), correctChoiceId: 'a'},
+    question(2, 2, 'Second question'),
+  ],
+};
+
 // Holds answers as PathwayApp does, so selections feed back in.
-function renderStep(initial: StepAnswers = {}) {
+function renderStep(initial: StepAnswers = {}, content: Step = step) {
   const onComplete = jest.fn();
   const saved: [number, string][] = [];
   const Host = () => {
     const [answers, setAnswers] = useState(initial);
     return (
       <QuestionsStep
-        step={step}
+        step={content}
         answers={answers}
         onSelectChoice={(questionId, choiceId) => {
           saved.push([questionId, choiceId]);
@@ -53,7 +61,6 @@ function renderStep(initial: StepAnswers = {}) {
             [questionId]: [...(prev[questionId] ?? []), choiceId],
           }));
         }}
-        continueLabel="Continue"
         onComplete={onComplete}
       />
     );
@@ -69,7 +76,11 @@ describe('QuestionsStep', () => {
     expect(screen.getByText('Tell us about yourself.')).toBeInTheDocument();
     expect(screen.getByText('Question 1 of 2')).toBeInTheDocument();
     expect(screen.queryByText('Second question')).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: /Go to page/})
+    ).not.toBeInTheDocument();
 
+    fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
     fireEvent.click(screen.getByRole('button', {name: /Next/}));
     expect(screen.getByText('Second question')).toBeInTheDocument();
     expect(screen.queryByText('Quick questions')).not.toBeInTheDocument();
@@ -87,16 +98,60 @@ describe('QuestionsStep', () => {
     expect(screen.getByRole('radio', {name: /Yes 1/})).toBeChecked();
   });
 
-  it('enables Continue only once every question is answered', () => {
+  it('enables Next and Submit once the page is answered', () => {
     const {onComplete} = renderStep();
+    const nextButton = screen.getByRole('button', {name: /Next/});
+    expect(nextButton).toBeDisabled();
     fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
-    fireEvent.click(screen.getByRole('button', {name: /Next/}));
-    const continueButton = screen.getByRole('button', {name: 'Continue'});
-    expect(continueButton).toBeDisabled();
+    expect(nextButton).toBeEnabled();
+    fireEvent.click(nextButton);
 
+    const submitButton = screen.getByRole('button', {name: 'Submit'});
+    expect(submitButton).toBeDisabled();
     fireEvent.click(screen.getByRole('radio', {name: /Yes 2/}));
-    expect(continueButton).toBeEnabled();
-    fireEvent.click(continueButton);
+    expect(submitButton).toBeEnabled();
+    fireEvent.click(submitButton);
     expect(onComplete).toHaveBeenCalledTimes(1);
+  });
+
+  describe('with a graded question', () => {
+    beforeEach(() => jest.useFakeTimers());
+    afterEach(() => jest.useRealTimers());
+
+    it('keeps a wrong answer on the page until it is corrected', () => {
+      renderStep({}, gradedStep);
+      fireEvent.click(screen.getByRole('radio', {name: /No 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      expect(screen.getByText('Not quite. Try again.')).toBeInTheDocument();
+      expect(screen.getByText('Incorrect')).toBeInTheDocument();
+      act(() => {
+        jest.runAllTimers();
+      });
+      expect(screen.queryByText('Second question')).not.toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      expect(
+        screen.queryByText('Not quite. Try again.')
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows Correct! and then moves on', () => {
+      const {saved} = renderStep({}, gradedStep);
+      fireEvent.click(screen.getByRole('radio', {name: /No 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      expect(screen.getByText('Correct!')).toBeInTheDocument();
+      expect(screen.getByRole('button', {name: /Next/})).toBeDisabled();
+
+      act(() => {
+        jest.runAllTimers();
+      });
+      expect(screen.getByText('Second question')).toBeInTheDocument();
+      expect(saved).toEqual([
+        [1, 'b'],
+        [1, 'a'],
+      ]);
+    });
   });
 });
