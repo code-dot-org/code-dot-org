@@ -230,6 +230,23 @@ describe('LinkedAccounts', () => {
     ).toBeNull();
   });
 
+  it('drops the help link from a linked LMS login, whose article explains linking', () => {
+    renderSection(
+      {
+        authenticationOptions: [
+          {id: 3, credentialType: 'lti_v1', email: 'ada@lms.example.com'},
+        ],
+      },
+      {lmsName: 'canvas_cloud'},
+    );
+
+    expect(
+      within(group('My integrations')).queryByRole('link', {
+        name: /learn more about canvas/i,
+      }),
+    ).toBeNull();
+  });
+
   it('offers an LMS with only a help link, since it connects from the LMS', () => {
     renderSection();
 

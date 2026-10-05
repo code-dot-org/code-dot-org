@@ -56,18 +56,14 @@ function ConnectedAccount({
   option: AuthenticationOptionSummary;
   lmsName: string | null;
 }) {
-  const learnMoreUrl =
-    option.credentialType === LTI_PROVIDER
-      ? lmsPlatform(lmsName)?.learnMoreUrl
-      : linkedAccountProvider(option.credentialType)?.learnMoreUrl;
-
   return (
     <LinkedAccountRow
       credentialType={option.credentialType}
       lmsName={lmsName}
       name={linkedAccountName(option.credentialType, lmsName)}
       email={option.email}
-      learnMoreUrl={learnMoreUrl}
+      // An LMS help article explains how to link, so a linked LMS row has none.
+      learnMoreUrl={linkedAccountProvider(option.credentialType)?.learnMoreUrl}
     />
   );
 }
