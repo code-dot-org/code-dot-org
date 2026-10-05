@@ -28,8 +28,8 @@
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
-// A word set's colours: the bead, its text, and the darker ledge under a
-// pressed button.
+// A slot's color, the text color on it, and the darker shade under a
+// raised button.
 .hue_teal {
   --hue: #{color.$teal};
   --hue-dark: #{color.$dark_teal};
@@ -51,7 +51,7 @@
 .hue_orange {
   --hue: #{color.$dark_orange};
   --hue-dark: #c25f00;
-  --hue-text: #{color.$white};
+  --hue-text: #{color.$dark_gray};
 }
 
 .hue_blue {
@@ -87,7 +87,6 @@
   }
 }
 
-// The emoji sits in its own round badge at the chip's left.
 .emojiBadge {
   display: inline-flex;
   align-items: center;
@@ -130,8 +129,7 @@
   padding-right: 14px;
 }
 
-// Where the word from the set on show would land: a breathing dashed slot
-// in that set's colour.
+// Where the word from the set on show would land.
 .placeholder {
   min-width: 80px;
   min-height: 1.5em;
@@ -185,7 +183,6 @@
   cursor: pointer;
 }
 
-// A tray the words sit in, with a ledge under it.
 .carouselBox {
   display: flex;
   flex-direction: column;
@@ -330,7 +327,6 @@
   gap: 6px;
 }
 
-// The dots centred, with the shuffle at the right.
 .dotsRow {
   position: relative;
   display: flex;
@@ -386,7 +382,7 @@
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  // Its set's colour: a ring until the set has its word.
+  // Its set's color: a ring until the set has its word.
   border: 2px solid var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
   background: transparent;
   cursor: pointer;
@@ -420,8 +416,6 @@
   transform: scale(1.25);
 }
 
-// A word to pick: a pill with a coloured rim and a ledge, that lifts on
-// hover and presses down on click. Each pops in a beat after the last.
 .word {
   display: inline-flex;
   align-items: center;

@@ -38,6 +38,8 @@ const wordWidth = (w: Word) =>
 
 // How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;
+// How often Surprise me fills an optional slot.
+const OPTIONAL_WORD_CHANCE = 0.67;
 
 const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   sentence,
@@ -109,7 +111,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       if (inChain && !chainOpen) {
         continue;
       }
-      if (Math.random() < 0.67) {
+      if (Math.random() < OPTIONAL_WORD_CHANCE) {
         next[s.id] = pick(s);
       } else if (inChain) {
         chainOpen = false;

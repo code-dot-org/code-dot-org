@@ -69,7 +69,7 @@ const SOUNDS: Record<ExploreSound, Note[]> = {
 
 let context: AudioContext | null = null;
 
-// ?quiet turns the sounds off for a whole session.
+// ?quiet on the URL turns the sounds off.
 const muted = (): boolean =>
   typeof window === 'undefined' ||
   typeof window.AudioContext !== 'function' ||

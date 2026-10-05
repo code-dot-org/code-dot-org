@@ -108,7 +108,7 @@
   gap: 16px;
 }
 
-// A big button with a ledge that presses down; it rocks once it can go.
+// Doubled to outrank the button's own padding and radius.
 .generateButton.generateButton {
   margin-left: auto;
   min-height: 48px;
@@ -131,7 +131,7 @@
   }
 }
 
-// Pressing stops the rock, so the press can move the button.
+// Pressing stops the rock, whose transform would hide the press.
 .generateReady {
   animation: ready-rock 2.4s ease-in-out infinite;
 
@@ -272,8 +272,7 @@
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
-// Doubled to outrank the button's own hover background. A chosen thumb
-// pops.
+// Doubled to outrank the button's own hover background.
 .verdictButton.verdictChosen {
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);

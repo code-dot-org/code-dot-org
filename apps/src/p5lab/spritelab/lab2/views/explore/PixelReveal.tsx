@@ -5,11 +5,9 @@
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import styles from './pixel-reveal.module.scss';
+import {reducedMotion} from '@cdo/apps/p5lab/spritelab/lab2/reducedMotion';
 
-const reducedMotion = (): boolean =>
-  typeof window.matchMedia === 'function' &&
-  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+import styles from './pixel-reveal.module.scss';
 
 // Blocks across the picture at each step of the resolve.
 const RESOLVE_LEVELS = [6, 12, 24, 48, 96];
@@ -30,6 +28,10 @@ export const PixelReveal: React.FunctionComponent<PixelRevealProps> = ({
   crop,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Read through a ref: a fresh crop object each render must not restart
+  // the resolve.
+  const cropRef = useRef(crop);
+  cropRef.current = crop;
   const [phase, setPhase] = useState<'blocks' | 'fading' | 'done'>(
     reducedMotion() ? 'done' : 'blocks'
   );
@@ -39,6 +41,7 @@ export const PixelReveal: React.FunctionComponent<PixelRevealProps> = ({
     if (!canvas || phase !== 'blocks') {
       return;
     }
+    const crop = cropRef.current;
     const img = new Image();
     let timer = 0;
     let cancelled = false;
@@ -110,7 +113,7 @@ export const PixelReveal: React.FunctionComponent<PixelRevealProps> = ({
       cancelled = true;
       window.clearTimeout(timer);
     };
-  }, [src, crop, phase]);
+  }, [src, phase]);
 
   if (phase === 'done') {
     return null;
@@ -130,6 +133,8 @@ export const PixelReveal: React.FunctionComponent<PixelRevealProps> = ({
 
 const SPARK_COUNT = 14;
 const SPARK_HUES = ['teal', 'yellow', 'purple', 'orange'] as const;
+// The spark animation's length plus its longest delay (pixel-reveal.module.scss).
+const BURST_MS = 900;
 
 /** Sparks flying out from the middle of the frame, once. */
 export const SparkleBurst: React.FunctionComponent = () => {
@@ -138,7 +143,7 @@ export const SparkleBurst: React.FunctionComponent = () => {
     if (done) {
       return;
     }
-    const timer = window.setTimeout(() => setDone(true), 900);
+    const timer = window.setTimeout(() => setDone(true), BURST_MS);
     return () => window.clearTimeout(timer);
   }, [done]);
   if (done) {
@@ -171,7 +176,7 @@ export const SparkleBurst: React.FunctionComponent = () => {
 
 const SHUFFLE_SIDE = 5;
 
-/** A grid of blocks blinking in the word colours while the picture is made. */
+/** A grid of blocks blinking in the word colors while the picture is made. */
 export const PixelShuffle: React.FunctionComponent = () => (
   <div className={styles.shuffle} aria-hidden>
     {Array.from({length: SHUFFLE_SIDE * SHUFFLE_SIDE}, (_, i) => {

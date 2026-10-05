@@ -1,6 +1,6 @@
-// Each slot's colour, worn by its words in the carousel, its dot and its
-// chip in the sentence: one per slot, in carousel order, so a sentence of
-// three words shows three colours.
+// Each slot's color, on its words in the carousel, its dot and its chip in
+// the sentence: one per slot, in carousel order, so a sentence of three
+// words shows three colors.
 
 import {Sentence, slotsToOffer} from './exploreSentences';
 

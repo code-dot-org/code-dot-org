@@ -16,7 +16,7 @@
   --spark: #{color.$orange};
 }
 
-// Over the picture, inside the frame's rounded border.
+// Over the picture; the radius is the frame's less its 2px border.
 .reveal {
   position: absolute;
   inset: 0;
