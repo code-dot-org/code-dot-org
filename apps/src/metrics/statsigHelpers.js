@@ -11,6 +11,7 @@ import {
 } from '../utils';
 
 const STABLE_ID_KEY = StatsigStableIdKey;
+const STABLE_ID_TIMEOUT_MS = 3000;
 const COOKIE_OPTIONS = {
   path: '/',
   domain: '.code.org',
@@ -33,26 +34,21 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
-export function findOrCreateStableId() {
+export async function findOrCreateStableId() {
   if (consentAllowsStatsigCookie()) {
     let stableId = cookies.get(STABLE_ID_KEY);
 
     if (!stableId) {
       try {
-        const request = new XMLHttpRequest();
+        const response = await fetch(api_statsig_stable_id_url(), {
+          signal: AbortSignal.timeout(STABLE_ID_TIMEOUT_MS),
+        });
 
-        request.open('GET', api_statsig_stable_id_url(), false);
-        request.send();
-
-        if (request.status === 200) {
-          stableId = request.responseText;
-        } else {
-          console.error(
-            'Failed to fetch Statsig stable ID:',
-            request.status,
-            request.responseText
-          );
+        if (!response.ok) {
+          throw new Error(`${response.status}: ${await response.text()}`);
         }
+
+        stableId = await response.text();
       } catch (error) {
         console.error('Failed to fetch Statsig stable ID:', error);
       }
