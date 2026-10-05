@@ -20,7 +20,6 @@ const WorkspaceHeader = () => {
   const canTest = useAppSelector(state => isPanelEnabled(state, 'results'));
   const openTab = TABS.find(tab => tab.panel === currentPanel);
 
-  // Entering results clears the prediction, so ignore a click on the open tab.
   const onTabChange = (value: string) => {
     const tab = TABS.find(({panel}) => panel === value);
     if (tab && tab !== openTab) {

@@ -95,7 +95,6 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
   );
 }
 
-// Feature order matters: predictions pass inputs in the order trained on.
 function isTrainedOnCurrentColumns(state: RootState): boolean {
   const latestResult = state.historicResults[0];
   return (
@@ -159,7 +158,6 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
       : undefined;
     next = undefined;
   } else if (state.currentPanel === 'results') {
-    // The workspace header's Dataset tab goes back to the dataset.
     prev = undefined;
     next = !isAccuracyAcceptable(state)
       ? undefined

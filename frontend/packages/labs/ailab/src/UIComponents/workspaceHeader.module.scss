@@ -3,7 +3,6 @@
 // Matches the height of Lab2's own panel headers, such as Instructions.
 $lab2-panel-header-height: 41px;
 
-// Equal outer columns keep the title centered beside the tabs.
 .header {
   @include mixins.panel-header;
 
@@ -22,7 +21,7 @@ $lab2-panel-header-height: 41px;
   justify-self: start;
 }
 
-// Three classes, to outrank DSCO's xs size; CADS segments are 24px tall.
+// Three classes, to outrank DSCO's xs size.
 .header .tabs .tab {
   gap: 4px;
 
