@@ -85,9 +85,10 @@ class Ailab < Level
   def generated_long_instructions
     return nil unless uses_lab2?
 
-    authored = JSON.parse(localized_dynamic_instructions || '{}')
+    authored = authored_dynamic_instructions
     items = self.class.lab2_instructions.map do |screen|
-      text = authored[screen['key']].presence || screen['defaultText']
+      text = authored[screen['key']]
+      text = screen['defaultText'] unless text.is_a?(String) && text.present?
       # Indenting continuation lines keeps multi-line text inside its list item.
       "- _The instructions for the **#{screen['name']}** screen say:_ #{text.gsub("\n", "\n  ")}"
     end
@@ -154,6 +155,18 @@ class Ailab < Level
       mode
       dynamic_instructions
     ).map {|x| x.camelize(:lower)}
+  end
+
+  # Checks the raw value first, since localized_dynamic_instructions raises on anything but a JSON object.
+  private def authored_dynamic_instructions
+    parsed = begin
+      JSON.parse(dynamic_instructions.presence || '{}')
+    rescue JSON::ParserError
+      nil
+    end
+    return {} unless parsed.is_a?(Hash)
+
+    JSON.parse(localized_dynamic_instructions || '{}')
   end
 
   private def validate_lab2_mode

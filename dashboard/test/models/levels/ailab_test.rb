@@ -112,6 +112,14 @@ class AilabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'generated_long_instructions falls back to default text for malformed dynamic instructions' do
+    defaults = build(:ailab, uses_lab2: 'true').generated_long_instructions
+    ['{not json', '["results"]', '3', '{"results": 3}'].each do |dynamic_instructions|
+      level = build(:ailab, uses_lab2: 'true', dynamic_instructions: dynamic_instructions)
+      assert_equal defaults, level.generated_long_instructions, dynamic_instructions
+    end
+  end
+
   test 'generated_long_instructions is nil for legacy levels' do
     [nil, 'false'].each do |uses_lab2|
       level = build(:ailab, uses_lab2: uses_lab2, dynamic_instructions: '{"results": "Done."}')
