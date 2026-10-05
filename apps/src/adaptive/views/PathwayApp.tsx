@@ -10,6 +10,7 @@ import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
 
 import MapScreen from './MapScreen';
+import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
 
 import styles from './shared.module.scss';
@@ -68,6 +69,11 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     view.kind === 'step'
       ? pathway.checkpoints.find(c => c.id === view.checkpointId)
       : undefined;
+  const playing = view.kind === 'project' ? project : checkpoint;
+  const pathwayContext = useMemo(
+    () => playing && {pathway, checkpoint: playing, statusMap},
+    [pathway, playing, statusMap]
+  );
 
   if (isLoading) {
     return (
@@ -77,51 +83,50 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     );
   }
 
-  if (view.kind === 'project') {
+  if (pathwayContext) {
+    const isProject = view.kind === 'project';
+    const {checkpoint} = pathwayContext;
     return (
       <div className={styles.app}>
-        <StepPlayer
-          checkpoint={project}
-          finishLabel="Back to map"
-          attempts={attempts}
-          onSaveAttempts={saveAttempts}
-          onExit={() => setView({kind: 'map'})}
-          onFinish={() => setView({kind: 'map'})}
-        />
+        <PathwayContext.Provider value={pathwayContext}>
+          <StepPlayer
+            checkpoint={checkpoint}
+            finishLabel={isProject ? 'Back to map' : undefined}
+            attempts={attempts}
+            onSaveAttempts={saveAttempts}
+            onExit={() =>
+              setView({
+                kind: 'map',
+                focusId: isProject ? undefined : checkpoint.id,
+              })
+            }
+            onFinish={() => {
+              if (!isProject) markComplete(checkpoint.id);
+              setView({kind: 'map'});
+            }}
+          />
+        </PathwayContext.Provider>
       </div>
     );
   }
 
   return (
     <div className={styles.app}>
-      {checkpoint ? (
-        <StepPlayer
-          checkpoint={checkpoint}
-          attempts={attempts}
-          onSaveAttempts={saveAttempts}
-          onExit={() => setView({kind: 'map', focusId: checkpoint.id})}
-          onFinish={() => {
-            markComplete(checkpoint.id);
-            setView({kind: 'map'});
-          }}
-        />
-      ) : (
-        <MapScreen
-          pathway={pathway}
-          statusMap={statusMap}
-          focusId={view.kind === 'map' ? view.focusId : undefined}
-          onFocus={focusId => setView({kind: 'map', focusId})}
-          onStart={id => {
-            markStarted(id);
-            setView({kind: 'step', checkpointId: id});
-          }}
-          onWorkOnProject={() => setView({kind: 'project'})}
-          onReset={() => {
-            reset();
-            setView({kind: 'map'});
-          }}
-        />
-      )}
+      <MapScreen
+        pathway={pathway}
+        statusMap={statusMap}
+        focusId={view.kind === 'map' ? view.focusId : undefined}
+        onFocus={focusId => setView({kind: 'map', focusId})}
+        onStart={id => {
+          markStarted(id);
+          setView({kind: 'step', checkpointId: id});
+        }}
+        onWorkOnProject={() => setView({kind: 'project'})}
+        onReset={() => {
+          reset();
+          setView({kind: 'map'});
+        }}
+      />
     </div>
   );
 };

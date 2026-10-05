@@ -26,7 +26,7 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   complete: 'Complete',
 };
 
-const NO_ATTEMPTS: NonNullable<Progress['inputs']> = {};
+const NO_ATTEMPTS: NonNullable<Progress['questionAnswers']> = {};
 
 export function useProgress(
   pathway: Pathway,
@@ -75,7 +75,9 @@ export function useProgress(
   const saveAttempts = useCallback(
     (stepId: string, attempts: QuizAttemptData[]) => {
       setProgress(p =>
-        p ? {...p, inputs: {...p.inputs, [stepId]: attempts}} : p
+        p
+          ? {...p, questionAnswers: {...p.questionAnswers, [stepId]: attempts}}
+          : p
       );
     },
     []
@@ -87,7 +89,7 @@ export function useProgress(
     progress,
     isLoading: progress === undefined,
     statusMap,
-    attempts: progress?.inputs ?? NO_ATTEMPTS,
+    attempts: progress?.questionAnswers ?? NO_ATTEMPTS,
     markStarted,
     markComplete,
     saveAttempts,

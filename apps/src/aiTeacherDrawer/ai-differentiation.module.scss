@@ -803,3 +803,16 @@ $sidebar-tooltip-z-index: 2010;
     background: none;
   }
 }
+
+// Drawer rendered inline (see AiDiffDrawer's `inline` prop): a flex item whose
+// width is the space it takes from the lab beside it.
+.inlineDrawer {
+  flex: 0 0 auto;
+  overflow: hidden;
+  height: 100%;
+  transition: width 225ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.inlineDrawerPanel {
+  height: 100%;
+}

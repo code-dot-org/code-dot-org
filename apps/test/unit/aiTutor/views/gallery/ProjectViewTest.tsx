@@ -10,11 +10,6 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ProjectView from '@cdo/apps/aiTutor/views/gallery/ProjectView';
-jest.mock('@code-dot-org/core/api', () => {
-  const client = {transport: {}};
-  return {useApiClient: () => client};
-});
-
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
   getChallengeResponse: jest.fn(),

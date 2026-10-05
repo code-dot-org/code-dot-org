@@ -56,7 +56,6 @@ export function useLocalAttemptSource(
   attempts: QuizAttemptData[],
   save: (attempts: QuizAttemptData[]) => void
 ): QuizAttemptSource {
-  // Writes chain on this rather than on props, which lag a save by a render.
   const latest = useRef(attempts);
   const lastProps = useRef(attempts);
   if (attempts !== lastProps.current) {

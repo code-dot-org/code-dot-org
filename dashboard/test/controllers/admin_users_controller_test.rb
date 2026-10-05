@@ -10,6 +10,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   setup do
+    # The test shared cache is a FileStore; it keeps tokens after their rows roll back.
+    CDO.stubs(:shared_cache).returns(ActiveSupport::Cache::MemoryStore.new)
     @admin = create(:admin)
     @facilitator = create(:facilitator)
 
@@ -1262,7 +1264,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'log_token_form mints nothing for a user with no tokens' do
     sign_in @admin
 
-    assert_no_difference 'User::LogToken.count' do
+    assert_no_difference -> {User::LogToken.where(user_id: @not_admin.id).count} do
       get :log_token_form, params: {user_id: @not_admin.id}
     end
     assert_response :success
