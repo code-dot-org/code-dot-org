@@ -41,7 +41,6 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
     setOpen(false);
     linkRef.current?.focus();
   };
-  // Left and right arrows move between the two tabs.
   const onTabKeyDown = (e: React.KeyboardEvent) => {
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
       return;
@@ -70,7 +69,6 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
       }
     };
     measure();
-    // Focus moves into the panel: its first tab, or its close button.
     const row = rowRef.current;
     (
       row?.querySelector<HTMLElement>('[role="tab"]') ??

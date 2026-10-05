@@ -1,6 +1,6 @@
-// The picture frame's moments: shuffling pixels while a picture is made,
-// the picture resolving from coarse blocks to sharp, and a burst of sparks
-// when it lands.
+// Three overlays for the picture frame: blinking blocks while a picture is
+// generated, the picture sharpening from coarse blocks to full detail, and
+// a burst of sparks when it appears.
 
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
@@ -65,7 +65,7 @@ export const PixelReveal: React.FunctionComponent<PixelRevealProps> = ({
         setPhase('done');
         return;
       }
-      // The picture fits the frame as the real one does: contained.
+      // Scaled like the real picture's object-fit: contain.
       const scale = Math.min(
         canvas.width / box.width,
         canvas.height / box.height

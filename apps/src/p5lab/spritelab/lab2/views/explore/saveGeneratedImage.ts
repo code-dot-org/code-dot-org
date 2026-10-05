@@ -1,6 +1,5 @@
 // Keep a picture the student made: upload it and add it to the project's
-// images as a new animation with the level's role. A copy of
-// GenerateImagePane's accept and paint saves, to fold back together.
+// images as a new animation with the level's role.
 
 import {AnyAction, Dispatch} from 'redux';
 

@@ -134,13 +134,10 @@
   background: transparent;
   color: inherit;
   font: inherit;
-  cursor: pointer;
+}
 
-  // Disabled, the word is plain text: not greyed.
-  &:disabled {
-    color: inherit;
-    cursor: default;
-  }
+button.chipWord {
+  cursor: pointer;
 }
 
 // No x in a read-only chip.
@@ -266,7 +263,7 @@
     cursor: default;
   }
 
-  // After the disabled rule, whose opacity it must beat.
+  // After the disabled rule so this opacity overrides it.
   &.navHidden {
     opacity: 0;
     visibility: hidden;

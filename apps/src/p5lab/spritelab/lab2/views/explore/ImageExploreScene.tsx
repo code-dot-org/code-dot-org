@@ -1,6 +1,5 @@
-// An image level laid out as two halves: the image on the left, the editing
-// controls on the right. An exploration beside GenerateImagePane, reached
-// by level_mode.imageUi or ?image-ui=explore; the pane is untouched.
+// An image level laid out as two halves: the picture on the left, the
+// controls on the right. Reached by level_mode.imageUi or ?image-ui=explore.
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
@@ -72,18 +71,16 @@ import WordMenus from './WordMenus';
 import styles from './image-explore.module.scss';
 
 const STYLES: ImageStyle[] = ['pixel', 'smooth'];
-// The service's middle temperature, what the student form sends.
+// The service's middle temperature.
 const TEMPERATURE = 1;
 
 type Mode = 'edit' | 'generating' | 'result' | 'paint';
 
-// The reflection asked once a picture is back: a thumb each way.
+// Goes to analytics only.
 type Verdict = 'up' | 'down';
 
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
-// The narrowest the Guide gets, whatever its half's width.
 const MIN_GUIDE_WIDTH_PX = 240;
-// One round swatch each, in place of the spectrum picker.
 const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [34, 34, 34, 255]},
   {name: 'Gray', rgba: [158, 158, 158, 255]},
@@ -298,7 +295,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     setMode('edit');
   }, []);
 
-  // The thumb goes to analytics with the words it judged.
   const judge = useCallback(
     (next: Verdict) => {
       setVerdict(next);
@@ -369,8 +365,9 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       showTts={showTts}
     />
   );
-  // Only while a row is held at the bottom (the draw button, or the
-  // drawing's Cancel and Save); a result's panel is as tall as its content.
+  // The min height applies only while a button row sits at the panel's
+  // bottom (the draw button, or Cancel and Save); a result panel takes its
+  // content's height.
   const panelStyle =
     frameHeight === undefined || showingResult
       ? undefined
@@ -493,7 +490,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                     )}
                   />
                 )}
-                {/* Keyed by picture: each new one resolves and sparks once. */}
+                {/* Keyed by picture, so each new one remounts and plays the
+                    reveal once. */}
                 <PixelReveal
                   key={`reveal-${made.dataURI}`}
                   src={made.dataURI}
@@ -530,7 +528,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               {status}
             </div>
             {instructionsBlock}
-            {/* Read-only from Generate until Change words. */}
             {showingResult || generating ? (
               <SentenceReadOnly sentence={sentence} choices={choices} />
             ) : (
@@ -664,7 +661,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 <MuiTypography variant="body2">{fact}</MuiTypography>
               </aside>
             )}
-            {/* Offered only while the words are being chosen. */}
             {mode === 'edit' && (
               <div className={styles.bottomRow}>
                 {showContinue && (

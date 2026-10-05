@@ -32,8 +32,8 @@ export interface LevelMode {
   sentence?: string;
 }
 
-/** The image-level layout under trial: the two-half scene with the word
-    carousel, its panel the Guide. */
+/** The two-half image scene with the word carousel; its panel is the
+    Guide. */
 export type ImageUi = 'explore';
 
 export function isImageUi(value: unknown): value is ImageUi {

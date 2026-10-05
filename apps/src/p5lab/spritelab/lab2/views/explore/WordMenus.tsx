@@ -82,7 +82,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
 
   const choose = (slotId: string, wordId: string | undefined) => {
     const next = {...choices, [slotId]: wordId};
-    // Clearing a chained word clears the ones after it.
     const chainedAt = chained.indexOf(slotId);
     if (!wordId && chainedAt >= 0) {
       chained.slice(chainedAt + 1).forEach(id => {
@@ -154,7 +153,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   const anyRequiredMissing = slots.some(
     s => s.required && !wordFor(sentence, s.id, choices[s.id])
   );
-  // The required set holds the carousel until its word is chosen.
   const canMove = !disabled && !anyRequiredMissing;
 
   // A chained set opens once every chained set before it has its word.
@@ -174,7 +172,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   );
   // With one set to show, there is nowhere to go: no arrows, no dots.
   const oneSet = lastAvailable === 0;
-  // A set that closed while on show gives way to the last open one.
+  // If the set on show becomes unavailable, move to the last available one.
   useEffect(() => {
     if (index > lastAvailable) {
       setDirection('left');
@@ -233,7 +231,8 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         }
         return [
           <span
-            // Keyed by word too, so a new word lands with its bounce.
+            // Keyed by word too, so a changed word remounts and replays the
+            // chip animation.
             key={`${s.id}-${word.id}`}
             className={classNames(
               styles.chip,
@@ -361,7 +360,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                             e.dataTransfer.effectAllowed = 'copy';
                           }}
                           onClick={() =>
-                            // A chosen word clicked again clears its slot.
                             choose(set.id, chosen ? undefined : word.id)
                           }
                         >

@@ -31,7 +31,7 @@ export interface Slot {
 export type Segment =
   | {text: string}
   | {slot: string}
-  /** Fixed words around a slot that read as one phrase: dimmed while the
+  /** Fixed words around a slot that form one phrase: dimmed while the
       slot is empty, left out of the prompt. */
   | {phrase: Segment[]};
 
@@ -97,8 +97,7 @@ const SENTENCES = loadSentences(manifestJson as Manifest);
   }
 });
 
-/** Level 2's character: a creature at least, dressed up as far as the
-    student likes. */
+/** The character sentence: a required creature plus optional extras. */
 export const CHARACTER_SENTENCE: Sentence = SENTENCES.character;
 
 /** The level's sentence by id, else the one for what the level makes. A
@@ -189,7 +188,7 @@ export function phraseFilled(
 }
 
 /**
- * The prompt the sentence reads as: empty optional slots and unfilled
+ * The prompt text for the sentence: empty optional slots and unfilled
  * phrases are left out, and the spaces they leave are closed up.
  */
 export function promptText(sentence: Sentence, choices: Choices): string {
