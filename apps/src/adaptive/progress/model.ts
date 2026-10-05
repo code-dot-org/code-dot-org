@@ -13,8 +13,11 @@ export type CheckpointStatus =
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
-/** A questions step's chosen choice ids, by question id. */
-export type StepAnswers = {[questionId: number]: string};
+/**
+ * Every choice id picked for each question of a questions step, in order,
+ * so a changed answer is still recorded. The last is the current answer.
+ */
+export type StepAnswers = {[questionId: number]: string[]};
 
 export interface Progress {
   completed: string[];

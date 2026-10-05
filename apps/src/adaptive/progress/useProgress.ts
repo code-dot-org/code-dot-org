@@ -74,7 +74,9 @@ export function useProgress(
     (stepId: string, questionId: number, choiceId: string) => {
       setProgress(p => {
         if (!p) return p;
-        const step = {...p.questionAnswers?.[stepId], [questionId]: choiceId};
+        const answers = p.questionAnswers?.[stepId];
+        const picks = [...(answers?.[questionId] ?? []), choiceId];
+        const step = {...answers, [questionId]: picks};
         return {...p, questionAnswers: {...p.questionAnswers, [stepId]: step}};
       });
     },

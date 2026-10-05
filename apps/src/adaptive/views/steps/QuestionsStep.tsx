@@ -44,7 +44,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   );
   const totalPages = pageNumbers.length || 1;
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
-  const allAnswered = questions.every(q => answers[q.id] !== undefined);
+  const allAnswered = questions.every(q => !!answers[q.id]?.length);
 
   const questionsRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -87,7 +87,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
                     }`
                   : undefined
               }
-              selectedChoiceId={answers[question.id] ?? null}
+              selectedChoiceId={answers[question.id]?.slice(-1)[0] ?? null}
               onSelectChoice={choiceId => onSelectChoice(question.id, choiceId)}
             />
           ))}

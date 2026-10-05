@@ -48,7 +48,10 @@ function renderStep(initial: StepAnswers = {}) {
         answers={answers}
         onSelectChoice={(questionId, choiceId) => {
           saved.push([questionId, choiceId]);
-          setAnswers(prev => ({...prev, [questionId]: choiceId}));
+          setAnswers(prev => ({
+            ...prev,
+            [questionId]: [...(prev[questionId] ?? []), choiceId],
+          }));
         }}
         continueLabel="Continue"
         onComplete={onComplete}
@@ -79,9 +82,9 @@ describe('QuestionsStep', () => {
     expect(screen.getByRole('radio', {name: /No 1/})).toBeChecked();
   });
 
-  it('restores saved answers', () => {
-    renderStep({1: 'b'});
-    expect(screen.getByRole('radio', {name: /No 1/})).toBeChecked();
+  it('restores the latest saved pick', () => {
+    renderStep({1: ['b', 'a']});
+    expect(screen.getByRole('radio', {name: /Yes 1/})).toBeChecked();
   });
 
   it('enables Continue only once every question is answered', () => {

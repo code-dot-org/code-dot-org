@@ -129,7 +129,7 @@ describe('useProgress', () => {
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
 
-  it('saves answers per step and clears them on reset', async () => {
+  it('keeps every pick per step and clears them on reset', async () => {
     const store = fakeStore(undefined);
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
@@ -140,8 +140,8 @@ describe('useProgress', () => {
     act(() => result.current.saveAnswer('survey', 2, 'b'));
     act(() => result.current.saveAnswer('survey', 1, 'b'));
     expect(result.current.answers).toEqual({
-      survey: {1: 'b', 2: 'b'},
-      other: {3: 'c'},
+      survey: {1: ['a', 'b'], 2: ['b']},
+      other: {3: ['c']},
     });
     expect(store.saved[store.saved.length - 1].questionAnswers).toEqual(
       result.current.answers
