@@ -15,7 +15,6 @@ import {
   type PlacedTreeNode,
   TREE_NODE_HEIGHT,
   TREE_NODE_WIDTH,
-  TREE_ROW_GAP,
 } from '../helpers/displayTreeLayout';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
@@ -31,17 +30,31 @@ import styles from './decisionTree.module.scss';
 
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});
 
+const EDGE_BEND_DROP = 20;
+const EDGE_CORNER_RADIUS = 8;
+const BRANCH_LABEL_RISE = 22;
+
 const canvasVariables = {
   '--tree-node-width': `${TREE_NODE_WIDTH}px`,
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
-  '--tree-branch-offset': `${TREE_ROW_GAP / 4}px`,
+  '--tree-branch-offset': `${BRANCH_LABEL_RISE}px`,
 } as CSSProperties;
 
 function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   const startX = parent.x + TREE_NODE_WIDTH / 2;
   const startY = parent.y + TREE_NODE_HEIGHT;
   const endX = child.x + TREE_NODE_WIDTH / 2;
-  return `M ${startX} ${startY} V ${startY + TREE_ROW_GAP / 2} H ${endX} V ${child.y}`;
+  const bendY = startY + EDGE_BEND_DROP;
+  const radius = Math.min(EDGE_CORNER_RADIUS, Math.abs(endX - startX) / 2);
+  const turn = Math.sign(endX - startX) * radius;
+  return [
+    `M ${startX} ${startY}`,
+    `V ${bendY - radius}`,
+    `Q ${startX} ${bendY} ${startX + turn} ${bendY}`,
+    `H ${endX - turn}`,
+    `Q ${endX} ${bendY} ${endX} ${bendY + radius}`,
+    `V ${child.y}`,
+  ].join(' ');
 }
 
 interface DecisionTreeProps {
