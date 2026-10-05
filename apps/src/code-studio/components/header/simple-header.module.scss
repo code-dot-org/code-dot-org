@@ -1,0 +1,32 @@
+// The same fade HeaderMiddle's row has; keyframes are scoped to the module.
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.row {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadein 0.4s;
+}
+
+// The project buttons cannot shrink, and their container clips, so the
+// project info keeps its width and the names give way instead.
+.projectInfo {
+  flex: none;
+}
+
+// Each name may shrink below its content; what it holds ellipsizes.
+.unitName,
+.progress {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0 5px;
+}

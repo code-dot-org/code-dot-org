@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
+import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
 
@@ -16,8 +17,6 @@ export interface MultiChoiceQuestionContainerProps {
   selectedChoiceId: string | null;
   onSelectChoice: (choiceId: string) => void;
 }
-
-const CHOICE_LETTERS = 'ABCDEFGHIJ';
 
 const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
@@ -44,7 +43,7 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
           >
             <Typography variant="body2" component="span">
               <span className={styles.optionLetter}>
-                {CHOICE_LETTERS[index]}.
+                {formatChoiceLetter(index)}.
               </span>{' '}
               {choice.text}
             </Typography>

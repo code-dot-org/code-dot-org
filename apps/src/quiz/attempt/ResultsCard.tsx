@@ -2,8 +2,9 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography} from '@mui/material';
 import React from 'react';
 
+import {formatSubmittedAt} from '../utils';
+
 import AttemptCard from './AttemptCard';
-import {formatSubmittedAt} from './types';
 
 import styles from './results-card.module.scss';
 

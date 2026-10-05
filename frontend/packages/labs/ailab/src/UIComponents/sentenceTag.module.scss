@@ -1,0 +1,31 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: var(--shape-sm);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.placeholderTag {
+  color: var(--text-neutral-quaternary);
+  border-style: dashed;
+  border-color: var(--border-neutral-secondary);
+}
+
+.labelTag {
+  color: var(--text-accent-pink-secondary);
+  background-color: var(--background-accent-pink-light);
+  border-color: var(--border-accent-pink-mid);
+}
+
+.featureTag {
+  color: var(--text-info-secondary);
+  background-color: var(--background-info-light);
+  border-color: var(--border-info-mid);
+}
