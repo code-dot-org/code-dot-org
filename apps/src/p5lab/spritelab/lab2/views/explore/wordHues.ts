@@ -4,11 +4,26 @@
 
 import {Sentence, slotsToOffer} from './exploreSentences';
 
-export type Hue = 'teal' | 'yellow' | 'purple' | 'orange' | 'blue';
+type Hue = 'teal' | 'yellow' | 'purple' | 'orange' | 'blue';
 
-const HUES: Hue[] = ['teal', 'yellow', 'purple', 'orange', 'blue'];
+/** In carousel order; the required word takes the first. */
+export const HUES: readonly Hue[] = [
+  'teal',
+  'yellow',
+  'purple',
+  'orange',
+  'blue',
+];
+
+const bySentence = new WeakMap<Sentence, Record<string, Hue>>();
 
 export function hueFor(sentence: Sentence, slotId: string): Hue {
-  const at = slotsToOffer(sentence).findIndex(s => s.id === slotId);
-  return HUES[Math.max(0, at) % HUES.length];
+  let hues = bySentence.get(sentence);
+  if (!hues) {
+    hues = Object.fromEntries(
+      slotsToOffer(sentence).map((s, i) => [s.id, HUES[i % HUES.length]])
+    );
+    bySentence.set(sentence, hues);
+  }
+  return hues[slotId] ?? HUES[0];
 }

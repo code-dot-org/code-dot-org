@@ -12,6 +12,7 @@ import React, {
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
+import PaletteSwatches from './PaletteSwatches';
 import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {PixelTool, TOOLS, toolTitle} from './toolDefinitions';
@@ -106,11 +107,13 @@ export interface PixelEditorSaveMeta {
   recentColors?: RGBA[];
 }
 
-export interface PixelEditorParts {
+interface PixelEditorParts {
   /** True once the image decoded or failed; a host that must not show an
       empty panel renders nothing before this. */
   ready: boolean;
   loadError: boolean;
+  /** The theme the parts are drawn in. */
+  themeMode: 'light' | 'dark';
   /** The tool buttons, brush sizes, color and undo/redo. */
   toolbar: React.ReactNode;
   /** The drawing surface with its keyboard help and live region. */
@@ -1352,27 +1355,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const canRedo = historyVersion >= 0 && redoStackRef.current.length > 0;
 
   const colorControl = palette ? (
-    <div className={moduleStyles.palette} role="group" aria-label="Colors">
-      {palette.map(swatch => {
-        const active = swatch.rgba.every((v, i) => v === color[i]);
-        return (
-          <button
-            key={swatch.name}
-            type="button"
-            aria-label={swatch.name}
-            aria-pressed={active}
-            className={classNames(
-              moduleStyles.paletteSwatch,
-              active && moduleStyles.paletteSwatchActive
-            )}
-            style={{
-              backgroundColor: `rgb(${swatch.rgba[0]} ${swatch.rgba[1]} ${swatch.rgba[2]})`,
-            }}
-            onClick={() => setColor(swatch.rgba)}
-          />
-        );
-      })}
-    </div>
+    <PaletteSwatches palette={palette} color={color} onChange={setColor} />
   ) : (
     <ColorPicker
       color={color}
@@ -1382,6 +1365,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   );
 
   const parts: PixelEditorParts = {
+    themeMode,
     ready: loaded || loadError,
     loadError,
     canSave: loaded,

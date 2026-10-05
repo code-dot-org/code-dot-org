@@ -10,8 +10,7 @@ import {
   Sentence,
   wordFor,
 } from './exploreSentences';
-import {withPeriod} from './sentencePieces';
-import {hueFor} from './wordHues';
+import {withPeriod, WordChip, WordText} from './sentencePieces';
 
 import styles from './word-menus.module.scss';
 
@@ -34,20 +33,13 @@ const SentenceReadOnly: React.FunctionComponent<SentenceReadOnlyProps> = ({
         const word = wordFor(sentence, segment.slot, choices[segment.slot]);
         return word
           ? [
-              <span
+              <WordChip
                 key={segment.slot}
-                className={classNames(
-                  styles.chip,
-                  styles[`hue_${hueFor(sentence, segment.slot)}`]
-                )}
+                sentence={sentence}
+                slotId={segment.slot}
               >
-                {word.emoji && (
-                  <span className={styles.emojiBadge} aria-hidden>
-                    {word.emoji}
-                  </span>
-                )}
-                {word.text}
-              </span>,
+                <WordText word={word} />
+              </WordChip>,
             ]
           : [];
       }

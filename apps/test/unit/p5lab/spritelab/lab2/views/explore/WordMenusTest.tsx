@@ -2,11 +2,13 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React, {useState} from 'react';
 
 import {
-  CHARACTER_SENTENCE,
   Choices,
   Sentence,
+  sentenceFor,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
 import WordMenus from '@cdo/apps/p5lab/spritelab/lab2/views/explore/WordMenus';
+
+const CHARACTER_SENTENCE = sentenceFor('sprite');
 
 // The character sentence with two more phrases, for the chaining tests.
 const CHAINED_SENTENCE: Sentence = {

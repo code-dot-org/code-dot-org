@@ -97,9 +97,6 @@ const SENTENCES = loadSentences(manifestJson as Manifest);
   }
 });
 
-/** The character sentence: a required creature plus optional extras. */
-export const CHARACTER_SENTENCE: Sentence = SENTENCES.character;
-
 /** The level's sentence by id, else the one for what the level makes. A
     level naming a sentence the manifest lacks gets that one too. */
 export function sentenceFor(

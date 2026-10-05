@@ -7,7 +7,10 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {reducedMotion} from '@cdo/apps/p5lab/spritelab/lab2/reducedMotion';
 
+import {HUES} from './wordHues';
+
 import styles from './pixel-reveal.module.scss';
+import wordStyles from './word-menus.module.scss';
 
 // Blocks across the picture at each step of the resolve.
 const RESOLVE_LEVELS = [6, 12, 24, 48, 96];
@@ -132,7 +135,7 @@ export const PixelReveal: React.FunctionComponent<PixelRevealProps> = ({
 };
 
 const SPARK_COUNT = 14;
-const SPARK_HUES = ['teal', 'yellow', 'purple', 'orange'] as const;
+const hueClass = (i: number) => wordStyles[`hue_${HUES[i % HUES.length]}`];
 // The spark animation's length plus its longest delay (pixel-reveal.module.scss).
 const BURST_MS = 900;
 
@@ -162,10 +165,7 @@ export const SparkleBurst: React.FunctionComponent = () => {
         return (
           <span
             key={i}
-            className={classNames(
-              styles.spark,
-              styles[`spark_${SPARK_HUES[i % SPARK_HUES.length]}`]
-            )}
+            className={classNames(styles.spark, hueClass(i))}
             style={style}
           />
         );
@@ -188,13 +188,7 @@ export const PixelShuffle: React.FunctionComponent = () => (
           key={i}
           className={classNames(
             styles.block,
-            styles[
-              `spark_${
-                SPARK_HUES[
-                  (i + Math.floor(i / SHUFFLE_SIDE)) % SPARK_HUES.length
-                ]
-              }`
-            ]
+            hueClass(i + Math.floor(i / SHUFFLE_SIDE))
           )}
           style={style}
         />

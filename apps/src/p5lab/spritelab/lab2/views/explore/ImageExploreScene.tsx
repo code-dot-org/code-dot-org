@@ -4,25 +4,11 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Button as MuiButton,
-  IconButton as MuiIconButton,
-  Typography as MuiTypography,
-} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React, {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import Guide, {
-  GUIDE_PADDING_PX,
-  GUIDE_RIGHT_OFFSET_PX,
-} from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -54,6 +40,7 @@ import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import BehindTheScenes from './BehindTheScenes';
 import {pickFact} from './exploreFacts';
+import ExploreLayout from './ExploreLayout';
 import {
   Choices,
   chosenBodyPlan,
@@ -63,6 +50,7 @@ import {
 } from './exploreSentences';
 import {playSound} from './exploreSounds';
 import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
+import ResultActions, {Verdict} from './ResultActions';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
 import SentenceReadOnly from './SentenceReadOnly';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
@@ -70,17 +58,13 @@ import WordMenus from './WordMenus';
 
 import styles from './image-explore.module.scss';
 
-const STYLES: ImageStyle[] = ['pixel', 'smooth'];
+const STYLES = Object.keys(IMAGE_STYLE_LABELS) as ImageStyle[];
 // The service's middle temperature.
 const TEMPERATURE = 1;
 
 type Mode = 'edit' | 'generating' | 'result' | 'paint';
 
-// Goes to analytics only.
-type Verdict = 'up' | 'down';
-
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
-const MIN_GUIDE_WIDTH_PX = 240;
 const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [34, 34, 34, 255]},
   {name: 'Gray', rgba: [158, 158, 158, 255]},
@@ -338,31 +322,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     ? 'Your picture is ready.'
     : '';
 
-  // The Guide floats at a pixel width inside its half; the panel is at
-  // least as tall as the frame, so its last row ends at the frame's bottom.
-  const guideHostRef = useRef<HTMLDivElement>(null);
-  const frameRef = useRef<HTMLDivElement>(null);
-  const [guideWidth, setGuideWidth] = useState<number | undefined>();
-  const [frameHeight, setFrameHeight] = useState<number | undefined>();
-  useLayoutEffect(() => {
-    const host = guideHostRef.current;
-    const frame = frameRef.current;
-    if (!host || !frame || typeof ResizeObserver !== 'function') {
-      return;
-    }
-    const measure = () => {
-      setGuideWidth(
-        Math.max(MIN_GUIDE_WIDTH_PX, host.clientWidth - GUIDE_RIGHT_OFFSET_PX)
-      );
-      setFrameHeight(frame.clientHeight);
-    };
-    measure();
-    const observer = new ResizeObserver(measure);
-    observer.observe(host);
-    observer.observe(frame);
-    return () => observer.disconnect();
-  }, [mode]);
-
   const instructionsBlock = instructions && (
     <MainInstructionsContent
       instructionsText={instructions}
@@ -370,13 +329,11 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       showTts={showTts}
     />
   );
-  // The min height applies only while a button row sits at the panel's
-  // bottom (the draw button, or Cancel and Save); a result panel takes its
-  // content's height.
-  const panelStyle =
-    frameHeight === undefined || showingResult
-      ? undefined
-      : {minHeight: frameHeight - 2 * GUIDE_PADDING_PX};
+  const errorLine = error && (
+    <MuiTypography variant="body2" className={styles.error} role="alert">
+      {error}
+    </MuiTypography>
+  );
   const sheet =
     made?.result.frames?.poses && made.result.frames
       ? {
@@ -402,299 +359,182 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         onSave={savePaint}
       >
         {parts => (
-          <div className={styles.scene}>
-            <section className={styles.imagePane} aria-label="Your drawing">
-              <div className={styles.imageColumn}>
-                <div
-                  ref={frameRef}
-                  className={classNames(styles.imageFrame, styles.paintFrame)}
-                >
-                  {parts.canvas}
-                </div>
-              </div>
-            </section>
-            <div ref={guideHostRef} className={styles.guideHost}>
-              <Guide id="explore-guide" width={guideWidth}>
-                <section
-                  ref={panelRef}
-                  tabIndex={-1}
-                  className={styles.panel}
-                  style={panelStyle}
-                  aria-label="Draw your picture"
-                >
-                  {instructionsBlock}
-                  {parts.toolbar}
-                  {error && (
-                    <MuiTypography
-                      variant="body2"
-                      className={styles.error}
-                      role="alert"
-                    >
-                      {error}
-                    </MuiTypography>
-                  )}
-                  <div
-                    className={classNames(
-                      styles.paintActions,
-                      styles.bottomRow
-                    )}
-                  >
-                    <MuiButton
-                      variant="outlined"
-                      color="secondary"
-                      disabled={saving}
-                      onClick={cancelPaint}
-                    >
-                      Cancel
-                    </MuiButton>
-                    <MuiButton
-                      variant="contained"
-                      color="primary"
-                      disabled={!parts.canSave || saving}
-                      onClick={parts.save}
-                    >
-                      Save
-                    </MuiButton>
-                  </div>
-                </section>
-              </Guide>
+          <ExploreLayout
+            frameClassName={styles.paintFrame}
+            frame={parts.canvas}
+            frameAriaLabel="Your drawing"
+            panelAriaLabel="Draw your picture"
+            panelRef={panelRef}
+            fillFrameHeight
+          >
+            {instructionsBlock}
+            {parts.toolbar}
+            {errorLine}
+            <div className={classNames(styles.paintActions, styles.bottomRow)}>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                disabled={saving}
+                onClick={cancelPaint}
+              >
+                Cancel
+              </MuiButton>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                disabled={!parts.canSave || saving}
+                onClick={parts.save}
+              >
+                Save
+              </MuiButton>
             </div>
-          </div>
+          </ExploreLayout>
         )}
       </PixelEditor>
     );
   }
 
-  return (
-    <div className={styles.scene}>
-      <section className={styles.imagePane} aria-label="Your picture">
-        <div className={styles.imageColumn}>
-          <div
-            ref={frameRef}
-            className={classNames(
-              styles.imageFrame,
-              made && !generating && styles.imageFrameFilled
-            )}
-          >
-            {generating ? (
-              // A set's frames arrive one by one; none shows until all have.
-              <div className={styles.generating}>
-                <PixelShuffle />
-              </div>
-            ) : made ? (
-              <>
-                {sheet ? (
-                  <AnimatedSheetPreview {...sheet} />
-                ) : (
-                  <img
-                    src={made.dataURI}
-                    alt={made.prompt}
-                    className={classNames(
-                      styles.preview,
-                      made.result.pixelGridSize && styles.pixelArt
-                    )}
-                  />
-                )}
-                {/* Keyed by picture, so each new one remounts and plays the
-                    reveal once. */}
-                <PixelReveal
-                  key={`reveal-${made.dataURI}`}
-                  src={made.dataURI}
-                  crop={
-                    sheet
-                      ? {
-                          x: 0,
-                          y: 0,
-                          width: sheet.frameSize.x,
-                          height: sheet.frameSize.y,
-                        }
-                      : undefined
-                  }
-                />
-                <SparkleBurst key={`burst-${made.dataURI}`} />
-              </>
-            ) : null}
-          </div>
-          {showingResult && made && (
-            <BehindTheScenes sent={made.sent} disabled={busy} />
-          )}
-        </div>
-      </section>
-      <div ref={guideHostRef} className={styles.guideHost}>
-        <Guide id="explore-guide" width={guideWidth}>
-          <section
-            ref={panelRef}
-            tabIndex={-1}
-            className={styles.panel}
-            style={panelStyle}
-            aria-label="Make your picture"
-          >
-            <div className={styles.srOnly} role="status">
-              {status}
-            </div>
-            {instructionsBlock}
-            {showingResult || generating ? (
-              <SentenceReadOnly sentence={sentence} choices={choices} />
-            ) : (
-              <WordMenus
-                sentence={sentence}
-                choices={choices}
-                onChange={setChoices}
-                disabled={busy}
-              />
-            )}
-            {showingResult && made ? (
-              <>
-                <hr className={styles.resultDivider} />
-                <div className={styles.resultActions}>
-                  <div
-                    className={styles.resultQuestionRow}
-                    role="group"
-                    aria-labelledby="explore-result-label"
-                  >
-                    <span
-                      id="explore-result-label"
-                      className={styles.resultQuestion}
-                    >
-                      How did the AI do?
-                    </span>
-                    <MuiIconButton
-                      aria-label="Good"
-                      aria-pressed={verdict === 'up'}
-                      className={classNames(
-                        styles.verdictButton,
-                        verdict === 'up' && styles.verdictChosen
-                      )}
-                      disabled={busy}
-                      onClick={() => judge('up')}
-                    >
-                      <FontAwesomeV6Icon iconName="thumbs-up" />
-                    </MuiIconButton>
-                    <MuiIconButton
-                      aria-label="Not so good"
-                      aria-pressed={verdict === 'down'}
-                      className={classNames(
-                        styles.verdictButton,
-                        verdict === 'down' && styles.verdictChosen
-                      )}
-                      disabled={busy}
-                      onClick={() => judge('down')}
-                    >
-                      <FontAwesomeV6Icon iconName="thumbs-down" />
-                    </MuiIconButton>
-                  </div>
-                  <div className={styles.resultButtons}>
-                    <MuiButton
-                      variant="outlined"
-                      color="secondary"
-                      disabled={busy}
-                      onClick={changeWords}
-                    >
-                      Change words
-                    </MuiButton>
-                    <MuiButton
-                      variant="outlined"
-                      color="secondary"
-                      startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
-                      disabled={busy}
-                      onClick={generate}
-                    >
-                      Generate again
-                    </MuiButton>
-                    <MuiButton
-                      variant="contained"
-                      color="primary"
-                      disabled={busy}
-                      onClick={keep}
-                    >
-                      Continue
-                    </MuiButton>
-                  </div>
-                </div>
-              </>
-            ) : generating ? (
-              // The status line above already reads this out.
-              <p className={styles.generatingLabel} aria-hidden>
-                Generating…
-              </p>
-            ) : (
-              <div className={styles.generateRow}>
-                <SimpleDropdown
-                  name="explore-style"
-                  labelText="Style"
-                  isLabelVisible={false}
-                  size="s"
-                  color={theme === 'Dark' ? 'white' : 'black'}
-                  items={STYLES.map(s => ({
-                    value: s,
-                    text: IMAGE_STYLE_LABELS[s],
-                  }))}
-                  selectedValue={style}
-                  onChange={e => setStyle(e.target.value as ImageStyle)}
-                />
-                <MuiButton
-                  className={classNames(
-                    styles.generateButton,
-                    complete && !busy && styles.generateReady
-                  )}
-                  variant="contained"
-                  color="primary"
-                  startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
-                  disabled={!complete || busy}
-                  onClick={generate}
-                >
-                  Generate
-                </MuiButton>
-              </div>
-            )}
-            {error && (
-              <MuiTypography
-                variant="body2"
-                className={styles.error}
-                role="alert"
-              >
-                {error}
-              </MuiTypography>
-            )}
-            {generating && fact && (
-              <aside className={styles.factBox} aria-label="Did you know?">
-                <FontAwesomeV6Icon
-                  iconName="lightbulb"
-                  className={styles.factIcon}
-                  aria-hidden
-                />
-                <MuiTypography variant="body2">{fact}</MuiTypography>
-              </aside>
-            )}
-            {mode === 'edit' && (
-              <div className={styles.bottomRow}>
-                {showContinue && (
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    className={styles.continueButton}
-                    disabled={busy}
-                    onClick={continueLesson}
-                  >
-                    Continue
-                  </MuiButton>
-                )}
-                <hr className={styles.resultDivider} />
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  className={styles.drawButton}
-                  startIcon={<FontAwesomeV6Icon iconName="pen" />}
-                  onClick={startPaint}
-                >
-                  I'll draw it myself
-                </MuiButton>
-              </div>
-            )}
-          </section>
-        </Guide>
-      </div>
+  // A set's frames arrive one by one; none shows until all have.
+  const frame = generating ? (
+    <div className={styles.generating}>
+      <PixelShuffle />
     </div>
+  ) : made ? (
+    <>
+      {sheet ? (
+        <AnimatedSheetPreview {...sheet} />
+      ) : (
+        <img
+          src={made.dataURI}
+          alt={made.prompt}
+          className={classNames(
+            styles.preview,
+            made.result.pixelGridSize && styles.pixelArt
+          )}
+        />
+      )}
+      {/* Keyed by picture, so each new one remounts and plays the reveal
+          once. */}
+      <PixelReveal
+        key={`reveal-${made.result.filename}`}
+        src={made.dataURI}
+        crop={
+          sheet
+            ? {x: 0, y: 0, width: sheet.frameSize.x, height: sheet.frameSize.y}
+            : undefined
+        }
+      />
+      <SparkleBurst key={`burst-${made.result.filename}`} />
+    </>
+  ) : null;
+
+  return (
+    <ExploreLayout
+      frameClassName={classNames(
+        made && !generating && styles.imageFrameFilled
+      )}
+      frame={frame}
+      underFrame={
+        showingResult &&
+        made && <BehindTheScenes sent={made.sent} disabled={busy} />
+      }
+      frameAriaLabel="Your picture"
+      panelAriaLabel="Make your picture"
+      panelRef={panelRef}
+      fillFrameHeight={!showingResult}
+    >
+      <div className={styles.srOnly} role="status">
+        {status}
+      </div>
+      {instructionsBlock}
+      {showingResult || generating ? (
+        <SentenceReadOnly sentence={sentence} choices={choices} />
+      ) : (
+        <WordMenus
+          sentence={sentence}
+          choices={choices}
+          onChange={setChoices}
+          disabled={busy}
+        />
+      )}
+      {showingResult && made ? (
+        <ResultActions
+          verdict={verdict}
+          onJudge={judge}
+          onChangeWords={changeWords}
+          onGenerateAgain={generate}
+          onContinue={keep}
+          disabled={busy}
+        />
+      ) : generating ? (
+        // The status line above already reads this out.
+        <p className={styles.generatingLabel} aria-hidden>
+          Generating…
+        </p>
+      ) : (
+        <div className={styles.generateRow}>
+          <SimpleDropdown
+            name="explore-style"
+            labelText="Style"
+            isLabelVisible={false}
+            size="s"
+            color={theme === 'Dark' ? 'white' : 'black'}
+            items={STYLES.map(s => ({value: s, text: IMAGE_STYLE_LABELS[s]}))}
+            selectedValue={style}
+            onChange={e => setStyle(e.target.value as ImageStyle)}
+          />
+          <MuiButton
+            className={classNames(
+              styles.generateButton,
+              complete && !busy && styles.generateReady
+            )}
+            variant="contained"
+            color="primary"
+            startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
+            disabled={!complete || busy}
+            onClick={generate}
+          >
+            Generate
+          </MuiButton>
+        </div>
+      )}
+      {errorLine}
+      {generating && fact && (
+        <aside className={styles.factBox} aria-label="Did you know?">
+          <FontAwesomeV6Icon
+            iconName="lightbulb"
+            className={styles.factIcon}
+            aria-hidden
+          />
+          <MuiTypography variant="body2">{fact}</MuiTypography>
+        </aside>
+      )}
+      {mode === 'edit' && (
+        <div className={styles.bottomRow}>
+          {showContinue && (
+            <MuiButton
+              variant="contained"
+              color="primary"
+              className={styles.continueButton}
+              disabled={busy}
+              onClick={continueLesson}
+            >
+              Continue
+            </MuiButton>
+          )}
+          <hr className={styles.resultDivider} />
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            className={styles.drawButton}
+            startIcon={<FontAwesomeV6Icon iconName="pen" aria-hidden />}
+            onClick={startPaint}
+          >
+            I'll draw it myself
+          </MuiButton>
+        </div>
+      )}
+    </ExploreLayout>
   );
 };
 

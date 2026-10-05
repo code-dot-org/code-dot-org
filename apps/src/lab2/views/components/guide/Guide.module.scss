@@ -1,9 +1,6 @@
 @use '../layout/variables.scss' as variables;
+@use 'guide-variables' as *;
 @import '../../../../mixins.scss';
-
-$top-position: 62px;
-$bottom-position: 20px;
-$gap-height: 43px;
 
 @keyframes slide-up {
   from {

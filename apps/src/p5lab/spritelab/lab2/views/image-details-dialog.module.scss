@@ -1,3 +1,4 @@
+@use "checkerboard";
 @use './imageTile' as tile;
 // The image dialog: image large on the left, details or the generate form
 // on the right, actions in a footer bar. Wears the same rounded chrome as
@@ -185,17 +186,11 @@
 // paint editor draws the same pair into its canvas). Only once there's an
 // image: an empty pane stays blank.
 .imagePaneChecker {
-  background-color: var(--dialog-checker-bg);
-  background-image: linear-gradient(
-      45deg,
-      var(--dialog-checker-tint) 25%,
-      transparent 25%
-    ),
-    linear-gradient(-45deg, var(--dialog-checker-tint) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--dialog-checker-tint) 75%),
-    linear-gradient(-45deg, transparent 75%, var(--dialog-checker-tint) 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  @include checkerboard.checkerboard(
+    20px,
+    var(--dialog-checker-tint),
+    var(--dialog-checker-bg)
+  );
 }
 
 // The summary view's image is itself the way into the paint editor.

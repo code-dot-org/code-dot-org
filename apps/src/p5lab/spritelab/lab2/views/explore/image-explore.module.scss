@@ -1,12 +1,13 @@
+@use "sass:math";
 @use "color.scss";
 @use "sr-only";
+@use "../checkerboard";
+@use "../../../../../lab2/views/components/guide/guide-variables" as guide;
 
 // Between the frame and the Guide.
 $scene-gap: 24px;
 // The page above and below the frame: the header and the gap to each edge.
 $window-allowance: 150px;
-// Guide.module.scss $top-position.
-$guide-top-offset: 62px;
 
 // Two halves across the level, each free to shrink; the image keeps square.
 .scene {
@@ -22,7 +23,10 @@ $guide-top-offset: 62px;
 // Guide takes the rest.
 .imagePane {
   flex: 0 0 auto;
-  width: min(calc(50% - #{$scene-gap / 2}), calc(100vh - #{$window-allowance}));
+  width: min(
+    calc(50% - #{math.div($scene-gap, 2)}),
+    calc(100vh - #{$window-allowance})
+  );
   min-width: 240px;
 }
 
@@ -32,7 +36,7 @@ $guide-top-offset: 62px;
   flex: 1 1 0;
   min-width: 0;
   position: relative;
-  margin-top: -$guide-top-offset;
+  margin-top: 0 - guide.$top-position;
 
   // No entrance animation: the Guide mounts again entering and leaving
   // drawing.
@@ -226,14 +230,9 @@ $guide-top-offset: 62px;
 // The checkerboard shows a made picture's transparency.
 .imageFrameFilled {
   border-style: solid;
-  background-color: color.$white;
-  background-image: linear-gradient(45deg, #ddd 25%, transparent 25%),
-    linear-gradient(-45deg, #ddd 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ddd 75%),
-    linear-gradient(-45deg, transparent 75%, #ddd 75%);
-  background-size: 24px 24px;
-  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
   overflow: hidden;
+
+  @include checkerboard.checkerboard(24px, color.$lighter_gray, color.$white);
 }
 
 // Fills the frame even when the stored image is smaller than it (small

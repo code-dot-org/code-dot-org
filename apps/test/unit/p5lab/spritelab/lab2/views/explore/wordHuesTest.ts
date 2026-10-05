@@ -1,9 +1,10 @@
 import {
-  CHARACTER_SENTENCE,
   sentenceFor,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
 import {hueFor} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/wordHues';
+
+const CHARACTER_SENTENCE = sentenceFor('sprite');
 
 describe('wordHues', () => {
   it('gives every slot of a sentence its own color, the required one first', () => {

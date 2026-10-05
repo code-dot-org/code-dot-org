@@ -6,7 +6,7 @@ import {
   wake,
 } from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/audioVoice';
 
-export type ExploreSound =
+type ExploreSound =
   | 'pick'
   | 'unpick'
   | 'flip'

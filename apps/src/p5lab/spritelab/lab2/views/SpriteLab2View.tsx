@@ -132,6 +132,7 @@ import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
+import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
@@ -1887,10 +1888,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               imageRole={levelProperties.levelMode?.imageRole}
               uploadImage={uploadImage}
               instructions={guide.text}
-              showTts={
-                !!levelProperties.offerBrowserTts ||
-                queryParams('show-tts') === 'true'
-              }
+              showTts={showTtsFor(levelProperties)}
               showContinue={guide.showContinue}
             />
           ) : (

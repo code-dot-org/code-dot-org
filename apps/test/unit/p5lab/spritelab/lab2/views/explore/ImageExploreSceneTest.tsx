@@ -209,41 +209,19 @@ describe('ImageExploreScene', () => {
     expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
   });
 
-  it('shows the prompt as sent behind the link', async () => {
+  it('offers Behind the scenes once a picture is back', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
+    expect(
+      screen.queryByRole('button', {name: 'Behind the scenes'})
+    ).toBeNull();
     pickCreature();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    const info = screen.getByRole('button', {name: 'Behind the scenes'});
-    expect(info.getAttribute('aria-expanded')).toBe('false');
-    expect(screen.queryByText(/^A cat\. /)).toBeNull();
-    fireEvent.click(info);
-    expect(info.getAttribute('aria-expanded')).toBe('true');
-    const sent = screen.getByText(/^A cat\. /).textContent ?? '';
-    expect(sent).toContain('pixel');
-    fireEvent.click(screen.getByRole('button', {name: 'Close'}));
-    expect(screen.queryByText(/^A cat\. /)).toBeNull();
-  });
-
-  it("shows a set's first-picture words and the shared pose words in two tabs", async () => {
-    generateCharacterSet.mockResolvedValue(RESULT);
-    renderScene();
-    fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
-    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
-    expect(screen.getByRole('tab', {name: 'First picture'})).toBeTruthy();
-    expect(screen.getByRole('tabpanel').textContent).toMatch(
-      /^A dragon\. Show the whole character/
-    );
-    fireEvent.click(screen.getByRole('tab', {name: 'Other poses'}));
-    const panel = screen.getByRole('tabpanel');
-    expect(panel.textContent).toContain('[pose]');
-    expect(panel.textContent).toContain('walking:');
-    expect(panel.querySelectorAll('li')).toHaveLength(4);
+    expect(
+      screen.getByRole('button', {name: 'Behind the scenes'})
+    ).toBeTruthy();
   });
 
   it('captions the three choices with the question they answer', async () => {

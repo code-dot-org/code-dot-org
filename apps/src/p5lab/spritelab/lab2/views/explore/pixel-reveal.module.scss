@@ -1,21 +1,5 @@
 @use "color.scss";
 
-.spark_teal {
-  --spark: #{color.$light_teal};
-}
-
-.spark_yellow {
-  --spark: #{color.$yellow};
-}
-
-.spark_purple {
-  --spark: #{color.$light_purple};
-}
-
-.spark_orange {
-  --spark: #{color.$orange};
-}
-
 // Over the picture; the radius is the frame's less its 2px border.
 .reveal {
   position: absolute;
@@ -47,7 +31,8 @@
   width: 12px;
   height: 12px;
   margin: -6px 0 0 -6px;
-  background: var(--spark);
+  // The lighter shade shows on the dark frame and the checkerboard alike.
+  background: var(--hue-light);
   // Square sparks: it is a pixel lab.
   border-radius: 2px;
   animation: spark-fly 0.75s cubic-bezier(0.2, 0.8, 0.3, 1) var(--delay)
@@ -74,7 +59,7 @@
 }
 
 .block {
-  background: var(--spark);
+  background: var(--hue-light);
   border-radius: 3px;
   animation: block-blink 1.2s ease-in-out var(--delay) infinite;
 }

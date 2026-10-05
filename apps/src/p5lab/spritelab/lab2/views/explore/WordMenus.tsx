@@ -20,8 +20,7 @@ import {
   wordFor,
 } from './exploreSentences';
 import {playSound} from './exploreSounds';
-import {withPeriod} from './sentencePieces';
-import {hueFor} from './wordHues';
+import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 
 import styles from './word-menus.module.scss';
 
@@ -213,42 +212,35 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         if (!word) {
           return s.id === slot.id
             ? [
-                <span
+                <WordChip
                   key={s.id}
+                  sentence={sentence}
+                  slotId={s.id}
                   className={classNames(
-                    styles.chip,
                     styles.placeholder,
-                    styles[`hue_${hueFor(sentence, s.id)}`],
                     overSlotId === s.id && styles.dropTarget
                   )}
                   aria-hidden
                   {...dropHandlers(s.id)}
                 >
                   {'\u00a0'}
-                </span>,
+                </WordChip>,
               ]
             : [];
         }
         return [
-          <span
+          <WordChip
             // Keyed by word too, so a changed word remounts and replays the
             // chip animation.
             key={`${s.id}-${word.id}`}
-            className={classNames(
-              styles.chip,
-              styles[`hue_${hueFor(sentence, s.id)}`],
-              overSlotId === s.id && styles.dropTarget
-            )}
+            sentence={sentence}
+            slotId={s.id}
+            className={classNames(overSlotId === s.id && styles.dropTarget)}
             {...dropHandlers(s.id)}
           >
             {disabled || !canMove || !isAvailable(s) ? (
               <span className={styles.chipWord}>
-                {word.emoji && (
-                  <span className={styles.emojiBadge} aria-hidden>
-                    {word.emoji}
-                  </span>
-                )}
-                {word.text}
+                <WordText word={word} />
               </span>
             ) : (
               <button
@@ -257,12 +249,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                 aria-label={`${word.text}. Show ${s.label} words`}
                 onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
               >
-                {word.emoji && (
-                  <span className={styles.emojiBadge} aria-hidden>
-                    {word.emoji}
-                  </span>
-                )}
-                {word.text}
+                <WordText word={word} />
               </button>
             )}
             <button
@@ -274,7 +261,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             >
               <FontAwesomeV6Icon iconName="xmark" aria-hidden />
             </button>
-          </span>,
+          </WordChip>,
         ];
       }
       if (phraseFilled(sentence, segment.phrase, which)) {
@@ -345,7 +332,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                           type="button"
                           className={classNames(
                             styles.word,
-                            styles[`hue_${hueFor(sentence, set.id)}`],
+                            hueClass(sentence, set.id),
                             chosen && styles.chosen
                           )}
                           style={{'--i': wordIndex} as React.CSSProperties}
@@ -363,12 +350,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                             choose(set.id, chosen ? undefined : word.id)
                           }
                         >
-                          {word.emoji && (
-                            <span className={styles.emojiBadge} aria-hidden>
-                              {word.emoji}
-                            </span>
-                          )}
-                          {word.text}
+                          <WordText word={word} />
                         </button>
                       );
                     })}
@@ -396,7 +378,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                   type="button"
                   className={classNames(
                     styles.dot,
-                    styles[`hue_${hueFor(sentence, s.id)}`],
+                    hueClass(sentence, s.id),
                     i === index && styles.dotCurrent,
                     filled(s.id) && styles.dotFilled
                   )}

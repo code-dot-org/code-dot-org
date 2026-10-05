@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
@@ -25,11 +24,9 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   onCancel,
   ...editorProps
 }) => {
-  const {theme} = useTheme();
-  const themeMode = theme === 'Dark' ? 'dark' : 'light';
   return (
     <PixelEditor {...editorProps}>
-      {({ready, toolbar, canvas, save, canSave}) =>
+      {({ready, themeMode, toolbar, canvas, save, canSave}) =>
         ready ? (
           <CustomDialog
             aria-label={title}

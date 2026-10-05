@@ -1,12 +1,13 @@
 import {
   chainedSlotIds,
-  CHARACTER_SENTENCE,
   chosenBodyPlan,
   isComplete,
   promptText,
   sentenceFor,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
+
+const CHARACTER_SENTENCE = sentenceFor('sprite');
 
 describe('exploreSentences', () => {
   it('needs only the creature', () => {
