@@ -129,7 +129,10 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
       <Typography variant="body4" className={moduleStyles.descriptionText}>
         Markdown shown in the instructions panel as students work. Leave a field
         blank to show the default text (the grayed out text if no text is
-        provided here).
+        provided here). The long instructions for this level (shown in the
+        lesson plan, etc.) will be generated from the dynamic instructions (they
+        will include the instructions for each screen or the default text,
+        separated by headings explaining where they appear).
       </Typography>
       {state.removed.length > 0 && (
         <Typography

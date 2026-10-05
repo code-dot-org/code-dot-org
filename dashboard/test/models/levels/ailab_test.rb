@@ -89,7 +89,7 @@ class AilabTest < ActiveSupport::TestCase
 
       Choose one column to predict, and one or more columns to help make the prediction.
 
-      ### Results screen
+      ### Testing screen
 
       How accurate was it?
     MARKDOWN
