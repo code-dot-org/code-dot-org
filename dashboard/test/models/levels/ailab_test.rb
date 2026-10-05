@@ -83,17 +83,21 @@ class AilabTest < ActiveSupport::TestCase
   end
 
   test 'generated_long_instructions lists each screen, using defaults for screens left blank' do
-    level = build(:ailab, uses_lab2: 'true', dynamic_instructions: '{"results": "How accurate was it?"}')
+    level = build(:ailab, uses_lab2: 'true', dynamic_instructions: '{"results": "**Do This:** Test your model!"}')
     expected = <<~MARKDOWN.chomp
-      ### Dataset screen
+      This level has dynamic instructions that change as you interact with AI Lab.
 
-      Choose one column to predict, and one or more columns to help make the prediction.
+      - _The instructions for the **Dataset** screen say:_ Choose one column to predict, and one or more columns to help make the prediction.
 
-      ### Testing screen
-
-      How accurate was it?
+      - _The instructions for the **Testing** screen say:_ **Do This:** Test your model!
     MARKDOWN
     assert_equal expected, level.generated_long_instructions
+  end
+
+  test 'generated_long_instructions keeps multi-line text inside its list item' do
+    level = build(:ailab, uses_lab2: 'true', dynamic_instructions: JSON.dump({results: "Test your model!\n\nThen check the accuracy."}))
+    assert_includes level.generated_long_instructions,
+      "- _The instructions for the **Testing** screen say:_ Test your model!\n  \n  Then check the accuracy."
   end
 
   test 'generated_long_instructions uses translated dynamic instructions' do

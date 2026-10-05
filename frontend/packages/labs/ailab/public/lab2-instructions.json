@@ -1,12 +1,12 @@
 [
   {
     "key": "datasetView",
-    "label": "Dataset screen",
+    "name": "Dataset",
     "defaultText": "Choose one column to predict, and one or more columns to help make the prediction."
   },
   {
     "key": "results",
-    "label": "Testing screen",
+    "name": "Testing",
     "defaultText": "Review the results."
   }
 ]

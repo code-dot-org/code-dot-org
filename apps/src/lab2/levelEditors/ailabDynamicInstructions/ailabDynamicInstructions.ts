@@ -16,7 +16,7 @@ export interface DynamicInstructionsField {
 }
 
 export const FIELDS: DynamicInstructionsField[] = LAB2_INSTRUCTIONS.map(
-  ({key, label}) => ({key, label})
+  ({key, name}) => ({key, label: `${name} screen`})
 );
 
 function isLab2Key(key: string): key is InstructionsKey {

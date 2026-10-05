@@ -9,10 +9,10 @@ describe('LAB2_INSTRUCTIONS', () => {
     ]);
   });
 
-  test('gives every screen a known key, a label and default text', () => {
-    LAB2_INSTRUCTIONS.forEach(({key, label, defaultText}) => {
+  test('gives every screen a known key, a name and default text', () => {
+    LAB2_INSTRUCTIONS.forEach(({key, name, defaultText}) => {
       expect(INSTRUCTIONS_KEYS).toContain(key);
-      expect(label).toBeTruthy();
+      expect(name).toBeTruthy();
       expect(defaultText).toBeTruthy();
     });
   });
