@@ -195,7 +195,11 @@ const ailabSlice = createSlice({
     },
     addSelectedFeature(state, action: PayloadAction<string>) {
       if (!state.selectedFeatures.includes(action.payload)) {
+        const columns = Object.keys(state.data[0] ?? {});
         state.selectedFeatures.push(action.payload);
+        state.selectedFeatures.sort(
+          (a, b) => columns.indexOf(a) - columns.indexOf(b),
+        );
       }
     },
     removeSelectedFeature(state, action: PayloadAction<string>) {
