@@ -19,7 +19,6 @@ interface QuestionsStepProps {
   onComplete: () => void;
 }
 
-/** Plays a questions step as a quiz level, keeping its attempts locally. */
 const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   step,
   attempts,

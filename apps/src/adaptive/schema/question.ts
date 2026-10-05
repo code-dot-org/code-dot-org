@@ -53,7 +53,6 @@ export const quizSettingsSchema = subsetOf<Partial<QuizLevelProperties>>()(
   })
 );
 
-/** A questions step, played as a quiz level whose title is the step's. */
 export const questionsStepSchema = stepBaseSchema.extend({
   ...quizSettingsSchema.shape,
   kind: z.literal('questions'),

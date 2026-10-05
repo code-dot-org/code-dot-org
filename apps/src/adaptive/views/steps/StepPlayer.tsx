@@ -20,7 +20,6 @@ interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
-  /** Each questions step's attempts, by step id. */
   attempts: {[stepId: string]: QuizAttemptData[]};
   onSaveAttempts: (stepId: string, attempts: QuizAttemptData[]) => void;
   onExit: () => void;

@@ -11,7 +11,6 @@ import {MultipleChoiceQuestion, QuestionsStep} from '../types';
 const isMultipleChoice = (q: QuestionsStep['questions'][number]) =>
   q.type === 'MultipleChoiceQuestion';
 
-/** Grades an open attempt against each question's correct choice. */
 export function gradeAttempt(
   step: QuestionsStep,
   open: QuizAttemptData,
@@ -51,10 +50,7 @@ export function gradeAttempt(
   return graded;
 }
 
-/**
- * Quiz attempts for one questions step, kept in the student's progress
- * record instead of on the quiz server.
- */
+/** A step's quiz attempts, kept in local progress rather than on the server. */
 export function useLocalAttemptSource(
   step: QuestionsStep,
   attempts: QuizAttemptData[],
@@ -67,8 +63,7 @@ export function useLocalAttemptSource(
     lastProps.current = attempts;
     latest.current = attempts;
   }
-  // Changes only on begin and finish: the quiz view resets its selections
-  // whenever the attempt's in-progress answers change.
+  // Not updated per answer: the quiz view resets selections when it changes.
   const [attempt, setAttempt] = useState<QuizAttemptData | null>(
     () => attempts[attempts.length - 1] ?? null
   );
