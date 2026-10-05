@@ -16,7 +16,6 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   min-height: 0;
 }
 
-// Drags in the overlay's empty margins reach the canvas; its content opts back in.
 .overlay {
   pointer-events: none;
   position: absolute;

@@ -1,6 +1,5 @@
 @use '../sharedMixins' as mixins;
 
-// The padding keeps the cards' shadows inside the scrolling box.
 .panel {
   display: flex;
   flex-direction: column;
@@ -12,6 +11,7 @@
   font-family: var(--font-family-main);
 }
 
+// Undoes the decision tree overlay's pointer-events: none.
 .panel > * {
   pointer-events: auto;
 }

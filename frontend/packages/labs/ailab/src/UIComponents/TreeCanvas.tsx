@@ -47,7 +47,6 @@ interface TreeCanvasProps {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
-  /** Width along the right edge that fits keep clear, for a panel floating there. */
   insetRight?: number;
   children: ReactNode;
 }
@@ -64,7 +63,6 @@ const TreeCanvas = ({
   const toolbarRef = useRef<HTMLDivElement>(null);
   const zoomRef = useRef<ZoomBehavior<HTMLDivElement, unknown>>();
   const scaleTargetRef = useRef<number>();
-  // Resizes refit the tree only until the student moves the view themselves.
   const autoFitRef = useRef(true);
   const contentRect = useMemo(
     () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),

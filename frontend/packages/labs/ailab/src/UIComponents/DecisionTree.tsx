@@ -45,7 +45,6 @@ function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
 }
 
 interface DecisionTreeProps {
-  /** Floats at the canvas's top right; fits keep room for it. */
   overlay?: ReactNode;
 }
 
