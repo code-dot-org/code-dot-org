@@ -37,9 +37,7 @@ TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/dialog-to-mui-dialog.
 
 ## Usage
 
-Codemods are one-off migration tools, so they have no `package.json`
-scripts. Run `jscodeshift` from the `component-library` package directory,
-which has it and `ts-node` as dev dependencies:
+Codemods are one-off migration scripts. Run `jscodeshift` from the `component-library` package directory.
 
 ```bash
 cd frontend/packages/component-library
@@ -48,10 +46,6 @@ TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift \
   --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
   <path-to-files-or-directory>...
 ```
-
-Point `-t` at the codemod to run. `TS_NODE_TRANSPILE_ONLY=true` skips type
-checking the codemod itself; `--require ts-node/register` lets `jscodeshift`
-load a `.ts` transform.
 
 ### Path Notes
 
