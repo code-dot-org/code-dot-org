@@ -5,8 +5,6 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 0;
-  clear: both;
   padding-top: 20px;
 }
 
@@ -18,7 +16,9 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   min-height: 0;
 }
 
+// Drags in the overlay's empty margins reach the canvas; its content opts back in.
 .overlay {
+  pointer-events: none;
   position: absolute;
   top: 0;
   right: 0;

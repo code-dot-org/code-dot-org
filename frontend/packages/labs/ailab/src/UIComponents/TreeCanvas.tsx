@@ -29,16 +29,15 @@ function fitTransform(
   rect: Rect,
 ) {
   const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FIT_PADDING;
-  const fitted = fitToView(
-    rect,
-    {
-      x: frameLeft,
-      y: FIT_PADDING,
-      width: viewport.clientWidth - insetRight - frameLeft - FIT_PADDING,
-      height: viewport.clientHeight - 2 * FIT_PADDING,
-    },
-    FIT_MAX_SCALE,
-  );
+  const frame = (inset: number) => ({
+    x: frameLeft,
+    y: FIT_PADDING,
+    width: viewport.clientWidth - inset - frameLeft - FIT_PADDING,
+    height: viewport.clientHeight - 2 * FIT_PADDING,
+  });
+  const fitted =
+    fitToView(rect, frame(insetRight), FIT_MAX_SCALE) ??
+    fitToView(rect, frame(0), FIT_MAX_SCALE);
   return (
     fitted && zoomIdentity.translate(fitted.x, fitted.y).scale(fitted.scale)
   );
@@ -65,6 +64,8 @@ const TreeCanvas = ({
   const toolbarRef = useRef<HTMLDivElement>(null);
   const zoomRef = useRef<ZoomBehavior<HTMLDivElement, unknown>>();
   const scaleTargetRef = useRef<number>();
+  // Resizes refit the tree only until the student moves the view themselves.
+  const autoFitRef = useRef(true);
   const contentRect = useMemo(
     () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),
     [contentWidth, contentHeight],
@@ -75,7 +76,10 @@ const TreeCanvas = ({
     const content = contentRef.current!;
     zoomRef.current = zoom<HTMLDivElement, unknown>().on(
       'zoom',
-      ({transform}) => {
+      ({transform, sourceEvent}) => {
+        if (sourceEvent) {
+          autoFitRef.current = false;
+        }
         content.style.transform = `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`;
       },
     );
@@ -88,6 +92,7 @@ const TreeCanvas = ({
   // ResizeObserver reports the starting size before first paint, which makes the initial fit.
   useLayoutEffect(() => {
     const viewport = viewportRef.current!;
+    autoFitRef.current = true;
     const observer = new ResizeObserver(() => {
       const fitted = fitTransform(
         viewport,
@@ -95,10 +100,15 @@ const TreeCanvas = ({
         insetRight,
         contentRect,
       );
-      if (fitted) {
-        zoomRef
-          .current!.scaleExtent([Math.min(MIN_SCALE, fitted.k), MAX_SCALE])
-          .transform(select(viewport), fitted);
+      if (!fitted) {
+        return;
+      }
+      const zoomer = zoomRef.current!.scaleExtent([
+        Math.min(MIN_SCALE, fitted.k),
+        MAX_SCALE,
+      ]);
+      if (autoFitRef.current) {
+        zoomer.transform(select(viewport), fitted);
       }
     });
     observer.observe(viewport);
@@ -109,6 +119,7 @@ const TreeCanvas = ({
     select(viewportRef.current!).transition().duration(zoomDuration());
 
   const zoomBy = (factor: number) => {
+    autoFitRef.current = false;
     const zoomer = zoomRef.current!;
     const [minScale, maxScale] = zoomer.scaleExtent();
     const from =
@@ -126,6 +137,7 @@ const TreeCanvas = ({
   };
 
   const zoomTo = (rect: Rect) => {
+    autoFitRef.current = rect === contentRect;
     const fitted = fitTransform(
       viewportRef.current!,
       toolbarRef.current!,

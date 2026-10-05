@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {type CSSProperties, type ReactNode, useMemo} from 'react';
 
-import {CANVAS_OVERLAY_WIDTH} from '../constants';
+import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   formatNumber,
@@ -101,7 +101,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           contentWidth={layout.width}
           contentHeight={layout.height}
           pathBounds={pathBounds}
-          insetRight={overlay ? CANVAS_OVERLAY_WIDTH : 0}
+          insetRight={overlay ? TEST_PANEL_WIDTH : 0}
         >
           <div
             role="img"
@@ -162,7 +162,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           </div>
         </TreeCanvas>
         {overlay && (
-          <div className={styles.overlay} style={{width: CANVAS_OVERLAY_WIDTH}}>
+          <div className={styles.overlay} style={{width: TEST_PANEL_WIDTH}}>
             {overlay}
           </div>
         )}

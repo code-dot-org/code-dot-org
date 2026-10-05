@@ -15,6 +15,15 @@
   top: 16px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
 // Floats beside the statement, so each row has to contain them.
 .result {
   display: flow-root;

@@ -2,7 +2,7 @@
 import classNames from 'classnames';
 import {useCallback} from 'react';
 
-import {CANVAS_OVERLAY_WIDTH} from '../constants';
+import {TEST_PANEL_WIDTH} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setShowResultsDetails} from '../redux';
@@ -62,38 +62,40 @@ const Results = () => {
       {showResultsDetails && <ResultsDetails />}
 
       <div id="results" className={shared.panel}>
-        <div className={shared.largeText}>
-          <div className={styles.heading}>{I18n.t('resultsHeader')}</div>
-          <div className={styles.accuracyHeading}>
-            {I18n.t('resultsAccuracy')}
-          </div>
-        </div>
-        {currentResult && resultRow(currentResult, 0)}
-        {hasTree ? (
-          <DecisionTree overlay={<TestPanel />} />
-        ) : (
-          <div
-            className={styles.testPanelSlot}
-            style={{width: CANVAS_OVERLAY_WIDTH}}
-          >
-            <TestPanel />
-          </div>
-        )}
-        {previousResults.length > 0 && (
-          <div className={styles.previousResults}>
-            <div className={shared.largeText}>
-              <div className={styles.heading}>
-                {I18n.t('resultsPreviousResults')}
-              </div>
-              <div className={styles.accuracyHeading}>
-                {I18n.t('resultsAccuracy')}
-              </div>
+        <div className={styles.content}>
+          <div className={shared.largeText}>
+            <div className={styles.heading}>{I18n.t('resultsHeader')}</div>
+            <div className={styles.accuracyHeading}>
+              {I18n.t('resultsAccuracy')}
             </div>
-            {previousResults.map((result, index) =>
-              resultRow(result, index + 1),
-            )}
           </div>
-        )}
+          {currentResult && resultRow(currentResult, 0)}
+          {hasTree ? (
+            <DecisionTree overlay={<TestPanel />} />
+          ) : (
+            <div
+              className={styles.testPanelSlot}
+              style={{width: TEST_PANEL_WIDTH}}
+            >
+              <TestPanel />
+            </div>
+          )}
+          {previousResults.length > 0 && (
+            <div className={styles.previousResults}>
+              <div className={shared.largeText}>
+                <div className={styles.heading}>
+                  {I18n.t('resultsPreviousResults')}
+                </div>
+                <div className={styles.accuracyHeading}>
+                  {I18n.t('resultsAccuracy')}
+                </div>
+              </div>
+              {previousResults.map((result, index) =>
+                resultRow(result, index + 1),
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

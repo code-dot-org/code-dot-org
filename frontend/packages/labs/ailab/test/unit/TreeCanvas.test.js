@@ -107,6 +107,50 @@ describe('TreeCanvas', () => {
     expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)');
   });
 
+  it('fits under the inset when keeping it clear leaves no room', () => {
+    renderCanvas({insetRight: 376});
+    resizeViewport(472, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)');
+  });
+
+  it('zooms to fit clear of the inset', async () => {
+    renderCanvas({insetRight: 376});
+    resizeViewport(848, 360);
+    fireEvent.click(button('Zoom in'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+
+    fireEvent.click(button('Zoom to fit'));
+
+    await vi.waitFor(() =>
+      expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)'),
+    );
+  });
+
+  it("keeps the student's zoom when the viewport resizes", async () => {
+    renderCanvas();
+    resizeViewport(472, 360);
+    fireEvent.click(button('Zoom in'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+
+    resizeViewport(848, 360);
+
+    expect(contentScale()).toBe(0.5 * 1.25);
+  });
+
+  it('refits on resize again after Zoom to fit', async () => {
+    renderCanvas();
+    resizeViewport(472, 360);
+    fireEvent.click(button('Zoom in'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+    fireEvent.click(button('Zoom to fit'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5));
+
+    resizeViewport(848, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 24px) scale(1)');
+  });
+
   it('zooms in a whole step per click, however fast the clicks come', async () => {
     renderCanvas();
     resizeViewport(472, 360);

@@ -12,6 +12,10 @@
   font-family: var(--font-family-main);
 }
 
+.panel > * {
+  pointer-events: auto;
+}
+
 .card {
   @include mixins.card;
 
