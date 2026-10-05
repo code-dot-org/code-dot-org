@@ -432,7 +432,7 @@ end
 # @returns true if the command succeeds, false if it fails. See Kernel#system
 def run_on(server_name, command)
   command_succeeded = if Cdo::Aws::SessionManager.available?
-                        Cdo::Aws::SessionManager.start_interactive_command(server_name, command)
+                        Cdo::Aws::SessionManager.run_command(server_name, command)
                       else
                         ssh_run_on(server_name, command)
                       end

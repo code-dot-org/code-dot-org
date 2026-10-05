@@ -1,9 +1,11 @@
 require 'minitest/autorun'
-require 'mocha/mini_test'
+require 'mocha/minitest'
 require 'aws-sdk-ec2'
 require 'aws-sdk-secretsmanager'
+require 'aws-sdk-ssm'
 require 'json'
 require 'shellwords'
+require 'stringio'
 
 $LOAD_PATH.unshift File.expand_path('../../..', __dir__)
 require 'cdo/aws/session_manager'
@@ -15,6 +17,16 @@ class CdoAwsSessionManagerTest < Minitest::Test
       success
     end
   end
+
+  SendCommandResult = Struct.new(:command)
+  Command = Struct.new(:command_id)
+  Invocation = Struct.new(
+    :status,
+    :response_code,
+    :standard_output_content,
+    :standard_error_content,
+    keyword_init: true
+  )
 
   def setup
     Cdo::Aws::SessionManager.reset_cache!
@@ -381,6 +393,136 @@ class CdoAwsSessionManagerTest < Minitest::Test
         runner: runner
       )
     )
+  end
+
+  def test_run_command_returns_true_when_remote_command_exits_zero
+    ssm = mock
+    ssm.expects(:send_command).with(
+      has_entries(
+        instance_ids: ['i-aaaaaaaaaaaaaaaaa'],
+        document_name: 'AWS-RunShellScript',
+        parameters: {'commands' => [wrapped_command('test/bin/content-push')]}
+      )
+    ).returns(send_command_result('cmd-1'))
+    ssm.expects(:get_command_invocation).
+      with(command_id: 'cmd-1', instance_id: 'i-aaaaaaaaaaaaaaaaa').
+      returns(invocation(status: 'Success', response_code: 0, stdout: "pushed\n"))
+    Cdo::Aws::SessionManager.ssm_client = ssm
+
+    out = StringIO.new
+    assert(
+      Cdo::Aws::SessionManager.run_command(
+        'i-aaaaaaaaaaaaaaaaa',
+        'test/bin/content-push',
+        out: out,
+        sleeper: no_sleep
+      )
+    )
+    assert_equal "pushed\n", out.string
+  end
+
+  def test_run_command_returns_false_when_remote_command_exits_nonzero
+    ssm = mock
+    ssm.expects(:send_command).returns(send_command_result('cmd-1'))
+    ssm.expects(:get_command_invocation).
+      returns(invocation(status: 'Failed', response_code: 1, stderr: "boom\n"))
+    Cdo::Aws::SessionManager.ssm_client = ssm
+
+    err = StringIO.new
+    refute(
+      Cdo::Aws::SessionManager.run_command(
+        'i-aaaaaaaaaaaaaaaaa',
+        'test/bin/content-push',
+        err: err,
+        sleeper: no_sleep
+      )
+    )
+    assert_equal "boom\n", err.string
+  end
+
+  def test_run_command_polls_until_the_invocation_leaves_a_pending_status
+    ssm = mock
+    ssm.expects(:send_command).returns(send_command_result('cmd-1'))
+    ssm.expects(:get_command_invocation).twice.
+      returns(invocation(status: 'InProgress')).then.
+      returns(invocation(status: 'Success', response_code: 0))
+    Cdo::Aws::SessionManager.ssm_client = ssm
+
+    sleeper = mock
+    sleeper.expects(:sleep).with(2).once
+
+    assert(
+      Cdo::Aws::SessionManager.run_command(
+        'i-aaaaaaaaaaaaaaaaa',
+        'test/bin/content-push',
+        poll_interval: 2,
+        sleeper: sleeper
+      )
+    )
+  end
+
+  def test_run_command_waits_for_the_invocation_to_register
+    ssm = mock
+    ssm.expects(:send_command).returns(send_command_result('cmd-1'))
+    ssm.expects(:get_command_invocation).twice.
+      raises(Aws::SSM::Errors::InvocationDoesNotExist.new(nil, 'not yet')).then.
+      returns(invocation(status: 'Success', response_code: 0))
+    Cdo::Aws::SessionManager.ssm_client = ssm
+
+    assert(
+      Cdo::Aws::SessionManager.run_command(
+        'i-aaaaaaaaaaaaaaaaa',
+        'test/bin/content-push',
+        sleeper: no_sleep
+      )
+    )
+  end
+
+  def test_run_command_returns_false_for_an_unmanaged_instance
+    ssm = mock
+    ssm.expects(:send_command).
+      raises(Aws::SSM::Errors::InvalidInstanceId.new(nil, 'bad instance'))
+    Cdo::Aws::SessionManager.ssm_client = ssm
+
+    err = StringIO.new
+    refute(
+      Cdo::Aws::SessionManager.run_command(
+        'i-aaaaaaaaaaaaaaaaa',
+        'test/bin/content-push',
+        err: err,
+        sleeper: no_sleep
+      )
+    )
+    assert_match(/not a running SSM-managed instance/, err.string)
+  end
+
+  def test_run_command_returns_false_without_sending_when_instance_is_not_found
+    Cdo::Aws::SessionManager.ec2_client = stubbed_ec2_client(reservations: [])
+    ssm = mock
+    ssm.expects(:send_command).never
+    Cdo::Aws::SessionManager.ssm_client = ssm
+
+    refute Cdo::Aws::SessionManager.run_command('missing', 'uptime')
+  end
+
+  private def send_command_result(command_id)
+    SendCommandResult.new(Command.new(command_id))
+  end
+
+  private def invocation(status:, response_code: nil, stdout: '', stderr: '')
+    Invocation.new(
+      status: status,
+      response_code: response_code,
+      standard_output_content: stdout,
+      standard_error_content: stderr
+    )
+  end
+
+  # A sleeper that permits, but does not require, polling delays.
+  private def no_sleep
+    sleeper = mock
+    sleeper.stubs(:sleep)
+    sleeper
   end
 
   private def stubbed_ec2_client(describe_instances_response)

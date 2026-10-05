@@ -1,4 +1,5 @@
 require 'aws-sdk-ec2'
+require 'aws-sdk-ssm'
 require 'json'
 require 'open3'
 require 'shellwords'
@@ -18,21 +19,33 @@ module Cdo
       ).freeze
       START_INTERACTIVE_COMMAND_DOCUMENT = 'AWS-StartInteractiveCommand'.freeze
       START_SSH_SESSION_DOCUMENT = 'AWS-StartSSHSession'.freeze
+      RUN_SHELL_SCRIPT_DOCUMENT = 'AWS-RunShellScript'.freeze
       DEFAULT_INSTANCE_OS_USER = 'ubuntu'.freeze
       DEFAULT_WORKING_DIRECTORY = "/home/#{DEFAULT_INSTANCE_OS_USER}".freeze
       LOGIN_SHELL_COMMAND = 'exec bash -l'.freeze
 
+      # An invocation sits in one of these states until the agent finishes; see
+      # https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetCommandInvocation.html
+      COMMAND_PENDING_STATUSES = %w[Pending InProgress Delayed].freeze
+      DEFAULT_COMMAND_POLL_INTERVAL = 2
+      DEFAULT_COMMAND_TIMEOUT_SECONDS = 3600
+
       class << self
-        attr_writer :ec2_client
+        attr_writer :ec2_client, :ssm_client
       end
 
       def self.ec2_client
         @ec2_client ||= ::Aws::EC2::Client.new
       end
 
+      def self.ssm_client
+        @ssm_client ||= ::Aws::SSM::Client.new
+      end
+
       def self.reset_cache!
         remove_instance_variable(:@available) if instance_variable_defined?(:@available)
         remove_instance_variable(:@ec2_client) if instance_variable_defined?(:@ec2_client)
+        remove_instance_variable(:@ssm_client) if instance_variable_defined?(:@ssm_client)
       end
 
       def self.available?
@@ -116,6 +129,11 @@ module Cdo
         )
       end
 
+      # Opens an interactive session running +command+. The return value only
+      # reports whether the session itself started and closed; the Session
+      # Manager plugin discards the remote command's exit status, so it cannot
+      # tell success from failure (https://github.com/aws/session-manager-plugin/issues/59).
+      # Use #run_command when the caller needs the remote exit status.
       def self.start_interactive_command(
         name_or_id,
         command,
@@ -136,6 +154,57 @@ module Cdo
             extra_args: extra_args
           )
         )
+      end
+
+      # Runs +command+ through SSM Run Command and returns true only when the
+      # remote command exits zero. Run Command reports the real exit status
+      # (ResponseCode), which an interactive session cannot. There is no live
+      # stream, so captured stdout/stderr print once the command finishes.
+      #
+      # @return [Boolean] true if the remote command exited zero, else false.
+      def self.run_command(
+        name_or_id,
+        command,
+        instance_os_user: DEFAULT_INSTANCE_OS_USER,
+        working_directory: DEFAULT_WORKING_DIRECTORY,
+        out: $stdout,
+        err: $stderr,
+        poll_interval: DEFAULT_COMMAND_POLL_INTERVAL,
+        timeout: DEFAULT_COMMAND_TIMEOUT_SECONDS,
+        sleeper: Kernel
+      )
+        instance_id = instance_id_for(name_or_id)
+        return false unless instance_id
+
+        command_id = ssm_client.send_command(
+          instance_ids: [instance_id],
+          document_name: RUN_SHELL_SCRIPT_DOCUMENT,
+          parameters: {
+            'commands' => [
+              remote_command(
+                command,
+                instance_os_user: instance_os_user,
+                working_directory: working_directory
+              )
+            ]
+          },
+          timeout_seconds: timeout
+        ).command.command_id
+
+        invocation = wait_for_command(
+          instance_id,
+          command_id,
+          poll_interval: poll_interval,
+          timeout: timeout,
+          sleeper: sleeper
+        )
+
+        out.print invocation.standard_output_content unless invocation.standard_output_content.to_s.empty?
+        err.print invocation.standard_error_content unless invocation.standard_error_content.to_s.empty?
+        invocation.response_code&.zero? || false
+      rescue ::Aws::SSM::Errors::InvalidInstanceId
+        err.puts "#{name_or_id} is not a running SSM-managed instance"
+        false
       end
 
       def self.send_ssh_public_key(
@@ -189,7 +258,7 @@ module Cdo
             '--parameters',
             JSON.dump(
               command: [
-                interactive_command(
+                remote_command(
                   command,
                   instance_os_user: instance_os_user,
                   working_directory: working_directory
@@ -238,14 +307,43 @@ module Cdo
         ec2_client.describe_instances(params).reservations.flat_map(&:instances)
       end
 
-      def self.interactive_command(command, instance_os_user: nil, working_directory: nil)
+      def self.remote_command(command, instance_os_user: nil, working_directory: nil)
         command = "cd #{Shellwords.escape(working_directory)} && #{command}" if working_directory
         return command unless instance_os_user
 
         Shellwords.join(['sudo', '-Hu', instance_os_user, 'bash', '-lc', command])
       end
 
-      private_class_method :describe_instances, :interactive_command
+      # Polls until the invocation reaches a terminal status, then returns it.
+      def self.wait_for_command(instance_id, command_id, poll_interval:, timeout:, sleeper:)
+        deadline = monotonic_time + timeout
+        loop do
+          invocation = command_invocation(instance_id, command_id)
+          return invocation if invocation && !COMMAND_PENDING_STATUSES.include?(invocation.status)
+
+          if monotonic_time >= deadline
+            raise CommandTimeoutError, "SSM command #{command_id} on #{instance_id} did not finish within #{timeout}s"
+          end
+
+          sleeper.sleep(poll_interval)
+        end
+      end
+
+      # Returns the invocation, or nil while the agent has not registered it yet.
+      def self.command_invocation(instance_id, command_id)
+        ssm_client.get_command_invocation(command_id: command_id, instance_id: instance_id)
+      rescue ::Aws::SSM::Errors::InvocationDoesNotExist
+        nil
+      end
+
+      def self.monotonic_time
+        Process.clock_gettime(Process::CLOCK_MONOTONIC)
+      end
+
+      class CommandTimeoutError < StandardError; end
+
+      private_class_method :describe_instances, :remote_command, :wait_for_command,
+        :command_invocation, :monotonic_time
     end
   end
 end
