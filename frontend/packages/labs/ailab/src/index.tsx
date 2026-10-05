@@ -137,11 +137,7 @@ const processMode = (mode: Mode | undefined): void => {
   // Also retrieve model metadata and set column data types.
   parseJSON(assetPath + item.metadataPath);
 
-  store.dispatch(
-    setCurrentPanel(
-      mode?.hideSelectLabel ? 'dataDisplayFeatures' : 'dataDisplayLabel',
-    ),
-  );
+  store.dispatch(setCurrentPanel('datasetView'));
 };
 
 // Export a few types.
@@ -151,7 +147,7 @@ export type {
   ModelDataToSave,
   SaveResponse,
 } from './types';
-export {CONTENT_PANELS, INSTRUCTIONS_KEYS} from './types';
+export {INSTRUCTIONS_KEYS} from './types';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,
