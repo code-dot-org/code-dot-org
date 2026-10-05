@@ -204,7 +204,7 @@ class AidiffThreadsController < ApplicationController
       lesson_name,
       params[:isPreset],
       @section_contexts,
-      @level&.long_instructions,
+      @level.try(:generated_long_instructions) || @level&.long_instructions,
       student_code,
       params[:artifactType],
       previous_message

@@ -36,13 +36,21 @@ class Ailab < Level
   )
 
   DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'datasets-manifest.json')
+  LAB2_INSTRUCTIONS_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'lab2-instructions.json')
 
   REQUIRE_ACCURACY_RANGE = (0..100)
 
   validate :validate_lab2_mode
 
+  # Lab 2 levels generate their long instructions, so a stored value would only go stale.
+  before_save {properties.delete('long_instructions') if uses_lab2?}
+
   def self.dataset_ids
     @dataset_ids ||= JSON.parse(File.read(DATASETS_MANIFEST_PATH))['datasets'].pluck('id')
+  end
+
+  def self.lab2_instructions
+    @lab2_instructions ||= JSON.parse(File.read(LAB2_INSTRUCTIONS_PATH))
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -71,6 +79,28 @@ class Ailab < Level
     end
 
     JSON.dump(parsed_default_value)
+  end
+
+  # Markdown of every screen's instructions, for readers who never see the screens.
+  def generated_long_instructions
+    return nil unless uses_lab2?
+
+    authored = JSON.parse(localized_dynamic_instructions || '{}')
+    self.class.lab2_instructions.map do |screen|
+      "### #{screen['label']}\n\n#{authored[screen['key']].presence || screen['defaultText']}"
+    end.join("\n\n")
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    summary = super
+    summary[:longInstructions] = generated_long_instructions if uses_lab2?
+    summary
+  end
+
+  def summary_for_lesson_plans(unit_group_unit: nil)
+    summary = super
+    summary['long_instructions'] = generated_long_instructions if uses_lab2?
+    summary
   end
 
   def get_localized_property(property_name)

@@ -81,4 +81,57 @@ class AilabTest < ActiveSupport::TestCase
     assert_includes Ailab.dataset_ids, 'zoo'
     assert_includes Ailab.dataset_ids, 'shapes_v1_toy'
   end
+
+  test 'generated_long_instructions lists each screen, using defaults for screens left blank' do
+    level = build(:ailab, uses_lab2: 'true', dynamic_instructions: '{"results": "How accurate was it?"}')
+    expected = <<~MARKDOWN.chomp
+      ### Dataset screen
+
+      Choose one column to predict, and one or more columns to help make the prediction.
+
+      ### Results screen
+
+      How accurate was it?
+    MARKDOWN
+    assert_equal expected, level.generated_long_instructions
+  end
+
+  test 'generated_long_instructions uses translated dynamic instructions' do
+    level = build(:ailab, name: 'ailab_generated_test', uses_lab2: 'true', dynamic_instructions: '{"results": "Original results"}')
+    test_locale = :'te-ST'
+    I18n.backend.store_translations test_locale, {
+      "data" => {"dynamic_instructions" => {"ailab_generated_test" => {"results" => "Translated results"}}}
+    }
+
+    I18n.with_locale(test_locale) do
+      assert_includes level.generated_long_instructions, "Translated results"
+    end
+  end
+
+  test 'generated_long_instructions is nil for legacy levels' do
+    [nil, 'false'].each do |uses_lab2|
+      level = build(:ailab, uses_lab2: uses_lab2, dynamic_instructions: '{"results": "Done."}')
+      assert_nil level.generated_long_instructions
+    end
+  end
+
+  test 'lesson plan summaries carry the generated long instructions for lab2 levels' do
+    level = create(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"]}', dynamic_instructions: '{"results": "Done."}')
+    assert_equal level.generated_long_instructions, level.summarize_for_lesson_show(false)[:longInstructions]
+    assert_equal level.generated_long_instructions, level.summary_for_lesson_plans['long_instructions']
+  end
+
+  test 'lesson plan summaries keep stored long instructions for legacy levels' do
+    level = create(:ailab, long_instructions: 'Stored.')
+    assert_equal 'Stored.', level.summarize_for_lesson_show(false)[:longInstructions]
+    assert_equal 'Stored.', level.summary_for_lesson_plans['long_instructions']
+  end
+
+  test 'saving a lab2 level drops stored long instructions' do
+    lab2_level = create(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"]}', long_instructions: 'Stored.')
+    legacy_level = create(:ailab, long_instructions: 'Stored.')
+
+    refute lab2_level.reload.properties.key?('long_instructions')
+    assert_equal 'Stored.', legacy_level.reload.long_instructions
+  end
 end

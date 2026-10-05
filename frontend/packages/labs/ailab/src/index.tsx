@@ -151,6 +151,8 @@ export type {
   SaveResponse,
 } from './types';
 export {INSTRUCTIONS_KEYS} from './types';
+export type {Lab2Instructions} from './lab2Instructions';
+export {LAB2_INSTRUCTIONS} from './lab2Instructions';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,
