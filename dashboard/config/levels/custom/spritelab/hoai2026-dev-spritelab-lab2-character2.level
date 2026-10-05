@@ -24,7 +24,9 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "imageRole": "friend"
+      "imageRole": "friend",
+      "imageUi": "explore",
+      "sentence": "friend"
     },
     "guide_steps": [
       {

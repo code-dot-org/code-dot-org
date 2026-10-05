@@ -24,7 +24,9 @@
     "level_mode": {
       "kind": "image",
       "imageType": "background",
-      "imageRole": "story-background"
+      "imageRole": "story-background",
+      "imageUi": "explore",
+      "sentence": "place-time"
     },
     "guide_steps": [
       {

@@ -101,11 +101,19 @@ const SENTENCES = loadSentences(manifestJson as Manifest);
     student likes. */
 export const CHARACTER_SENTENCE: Sentence = SENTENCES.character;
 
-/** The sentence for what the level makes. */
+/** The level's sentence by id, else the one for what the level makes. A
+    level naming a sentence the manifest lacks gets that one too. */
 export function sentenceFor(
   imageType: ImageType,
-  subject?: ImageSubject
+  subject?: ImageSubject,
+  sentenceId?: string
 ): Sentence {
+  if (sentenceId) {
+    if (SENTENCES[sentenceId]) {
+      return SENTENCES[sentenceId];
+    }
+    console.warn(`exploreSentences.json has no "${sentenceId}" sentence`);
+  }
   if (imageType === 'background') {
     return SENTENCES.place;
   }
