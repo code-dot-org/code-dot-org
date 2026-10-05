@@ -16,15 +16,9 @@
 }
 
 .headerTitle {
+  @include mixins.panel-header-title;
+
   flex: 1;
-  margin: 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  letter-spacing: 0.72px;
-  text-transform: uppercase;
-  color: var(--text-neutral-quaternary);
 }
 
 .body {

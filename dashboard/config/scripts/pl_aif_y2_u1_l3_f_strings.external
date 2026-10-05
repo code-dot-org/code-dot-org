@@ -12,11 +12,11 @@ Sometimes you want to include a variable's value inside text you're printing, no
 Here's what happens if you try the obvious way first.
 
 <div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
-  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 15px; color: #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
 followers = 41<br>
 print("The user is followed by followers people.")
   </div>
-  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 14px; color: #1F1976;">
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
 The user is followed by followers people.
   </div>
 </div>
@@ -26,23 +26,25 @@ The user is followed by followers people.
 ## The Fix: F-Strings
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <div style="font-size: 14pt; line-height: 1.5;">
-    <strong>&#128214; F-string:</strong> a string that starts with the letter <code style="font-size:14px;">f</code> right before the opening quotation mark. Any variable name placed inside curly braces <code style="font-size:14px;">{ }</code> gets replaced with that variable's actual value.
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; F-string:</strong> a string that starts with the letter <code style="font-size:16px;">f</code> right before the opening quotation mark. Any variable name placed inside curly braces <code style="font-size:16px;">{ }</code> gets replaced with that variable's actual value.
   </div>
 </div>
 
 <div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
-  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 15px; color: #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
 followers = 41<br>
 print(<span style="color:#ffffff; font-weight:700;">f</span>"The user is followed by <span style="color:#ffffff; font-weight:700;">{followers}</span> people.")
   </div>
-  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 14px; color: #1F1976;">
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
 The user is followed by 41 people.
   </div>
 </div>
 
-<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-<p><b>&#128161; Teacher tip:</b> the syntax is small but easy to forget under pressure: an <code style="font-size:14px;">f</code> right before the quote, and curly braces around the variable name. Expect to remind students of exactly this when they hit it live.</p>
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> the syntax is small but easy to forget under pressure: an <code style="font-size:16px;">f</code> right before the quote, and curly braces around the variable name. Expect to remind students of exactly this when they hit it live.
+  </div>
 </div>
 
 <p>Next, you'll trace and build this same pattern yourself in the Python Lab, exactly the kind of program students write in Lesson 4.</p>

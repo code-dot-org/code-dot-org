@@ -1,0 +1,45 @@
+name 'pl-aif-y2-u1-l4-hill-climbing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Optimization: Searching for a Good Answer
+
+<img src="https://images.code.org/ae6184685a311a495dbc038e26252694-image-1790959358950.png" alt="A simple hill illustration showing a climber partway up a slope, searching step by step toward a flag at the peak" style="width: 34%; border-radius: 10px; margin: 0 0 10px 16px; float: right;">
+
+So far, students have written code that follows fixed steps. Optimization is a different kind of problem: instead of one correct sequence of steps, there are many possible answers, some better than others, and the challenge is searching for a good one.
+
+### Hill Climbing
+
+Hill climbing is a simple search strategy: from where you are, look at your options, move toward whichever one improves your result, repeat. Students will walk through this with an unplugged thermostat activity before ever seeing it in code, adjusting a dial step by step toward a comfortable temperature, with no way to see the whole picture at once, only whether the last move helped.
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> the unplugged version matters. Students should feel what it's like to search blindly, one step at a time, before they see hill climbing described as an algorithm. The physical version is what makes the code version make sense afterward, not the other way around.
+  </div>
+</div>
+
+### Local vs. Global Optimum
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128214; Local optimum:</strong> the best answer among nearby options, even though a better one might exist further away.
+  </div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128214; Global optimum:</strong> the best answer out of every possible option, not just the nearby ones.
+  </div>
+</div>
+
+This is hill climbing's real limitation: it only ever looks at nearby options, so it can get stuck at a local optimum, a small hill, while never discovering a taller one just out of view. From where you're standing, every direction looks like it makes things worse, even though a much better answer exists somewhere else entirely.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> this distinction is worth having solid before a student asks about it live. A clean way to say it: "hill climbing finds a good answer nearby, not necessarily the best answer anywhere."
+  </div>
+</div>
+MARKDOWN

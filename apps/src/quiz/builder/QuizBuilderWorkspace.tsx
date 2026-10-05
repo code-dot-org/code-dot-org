@@ -4,9 +4,11 @@ import React, {useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import {groupByPage} from '../utils';
+
 import AddItemButton from './AddItemButton';
 import QuizQuestionCard from './QuizQuestionCard';
-import {isPendingQuestionId, QuizBuilderQuestion} from './types';
+import {isPendingQuestionId} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
 import styles from './quiz-builder-workspace.module.scss';
@@ -14,28 +16,6 @@ import styles from './quiz-builder-workspace.module.scss';
 interface QuizBuilderWorkspaceProps {
   levelId: number;
   quizTitle: string;
-}
-
-interface QuizPage {
-  page: number;
-  questions: QuizBuilderQuestion[];
-}
-
-// Groups the flat list into pages, ascending by page number.
-function groupByPage(questions: QuizBuilderQuestion[]): QuizPage[] {
-  const pages = new Map<number, QuizBuilderQuestion[]>();
-  questions.forEach(question => {
-    const page = question.page ?? 1;
-    const pageQuestions = pages.get(page);
-    if (pageQuestions) {
-      pageQuestions.push(question);
-    } else {
-      pages.set(page, [question]);
-    }
-  });
-  return Array.from(pages.entries())
-    .sort(([pageA], [pageB]) => pageA - pageB)
-    .map(([page, pageQuestions]) => ({page, questions: pageQuestions}));
 }
 
 // The center column: the quiz's question outline plus a create action.

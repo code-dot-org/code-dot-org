@@ -23,7 +23,7 @@ const DataDisplay = () => {
   return (
     <div id="data-display" className={styles.panel}>
       <div className={styles.header}>
-        <h2 className={styles.title}>{datasetName || 'Dataset'}</h2>
+        <h3 className={styles.title}>{datasetName || 'Dataset'}</h3>
         <span className={styles.separator} aria-hidden="true" />
         <span className={styles.rowCount}>{rowCountMessage}</span>
       </div>

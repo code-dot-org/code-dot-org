@@ -192,6 +192,8 @@ type ContentPanel = (typeof CONTENT_PANELS)[number];
 // Valid panels are content panels + Continue/Finish targets.
 export type Panel = ContentPanel | 'continue' | 'finish';
 
+export type TrainingModalStep = 'training' | 'testing';
+
 export const INSTRUCTIONS_KEYS = [
   ...CONTENT_PANELS,
   'uploadedDataset',
