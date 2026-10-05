@@ -96,11 +96,12 @@ class QuizQuestionTest < ActiveSupport::TestCase
     assert_includes dupe.errors.attribute_names, :key
   end
 
-  test "formatted_for_file never includes plaintext content or explanation" do
+  test "formatted_for_file includes a plaintext name but never content or explanation" do
     question = create(:multiple_choice_question, explanation: 'because')
 
     file_contents = question.formatted_for_file
 
+    assert_includes file_contents, question.name
     refute_includes file_contents, question.content['stem']
     refute_includes file_contents, 'because'
   end
@@ -124,6 +125,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
 
   test "after_commit writes to file on create when in levelbuilder_mode" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    FileUtils.stubs(:mkdir_p)
     File.expects(:write)
 
     create(:quiz_question)
@@ -133,6 +135,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
     question = create(:quiz_question)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    FileUtils.stubs(:mkdir_p)
     File.expects(:write).with(Rails.root.join("config/quiz_questions/#{question.key}.json"), question.formatted_for_file)
     question.write_to_file
   end

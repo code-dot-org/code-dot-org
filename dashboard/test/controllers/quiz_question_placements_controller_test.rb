@@ -8,6 +8,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    FileUtils.stubs(:mkdir_p)
     File.stubs(:write)
     @levelbuilder = create(:levelbuilder)
     @teacher = create(:teacher)
