@@ -5,7 +5,6 @@ import {
   CHARACTER_SENTENCE,
   Choices,
   Sentence,
-  slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
 import WordMenus from '@cdo/apps/p5lab/spritelab/lab2/views/explore/WordMenus';
 
@@ -60,21 +59,6 @@ const next = () =>
   fireEvent.click(screen.getByRole('button', {name: 'Next words'}));
 
 describe('WordMenus', () => {
-  it('offers the required slot first, then the rest in sentence order', () => {
-    expect(slotsToOffer(CHARACTER_SENTENCE).map(s => s.id)).toEqual([
-      'creature',
-      'adjective',
-      'clothing',
-    ]);
-    expect(slotsToOffer(CHAINED_SENTENCE).map(s => s.id)).toEqual([
-      'creature',
-      'adjective',
-      'clothing',
-      'thing',
-      'detail',
-    ]);
-  });
-
   it('holds on the required set until its word is chosen', () => {
     render(<Harness />);
     expect(

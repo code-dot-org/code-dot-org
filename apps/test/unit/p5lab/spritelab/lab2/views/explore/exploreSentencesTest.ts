@@ -5,6 +5,7 @@ import {
   isComplete,
   promptText,
   sentenceFor,
+  slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
 
 describe('exploreSentences', () => {
@@ -23,6 +24,17 @@ describe('exploreSentences', () => {
       }
     }
     expect(sentenceFor('sprite', 'object').id).toBe('object');
+  });
+
+  it('offers the required slot first, then the rest in sentence order', () => {
+    expect(slotsToOffer(CHARACTER_SENTENCE).map(s => s.id)).toEqual([
+      'creature',
+      'adjective',
+      'clothing',
+    ]);
+    expect(
+      slotsToOffer(sentenceFor('sprite', undefined, 'treasure')).map(s => s.id)
+    ).toEqual(['treasure', 'look', 'detail']);
   });
 
   it('chains the slots inside phrases, in sentence order', () => {
