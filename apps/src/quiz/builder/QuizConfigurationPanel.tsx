@@ -479,17 +479,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
           <ConfigCard label="feedback">
             <div className={styles.cardRow}>
               <div className={styles.toggleRow}>
-                <span className={styles.toggleLabel}>Show correctness</span>
-                <Toggle
-                  name="showCorrectness"
-                  aria-label="Show correctness"
-                  size="s"
-                  disabled={savingField === 'showCorrectness'}
-                  checked={showCorrectness}
-                  onChange={handleShowCorrectnessChange}
-                />
-              </div>
-              <div className={styles.toggleRow}>
                 <span className={styles.toggleLabel}>
                   Show questions after submit
                 </span>
@@ -500,6 +489,19 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   disabled={savingField === 'showQuestionsAfterSubmit'}
                   checked={showQuestionsAfterSubmit}
                   onChange={handleShowQuestionsAfterSubmitChange}
+                />
+              </div>
+            </div>
+            <div className={styles.cardRow}>
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>Show correctness</span>
+                <Toggle
+                  name="showCorrectness"
+                  aria-label="Show correctness"
+                  size="s"
+                  disabled={savingField === 'showCorrectness'}
+                  checked={showCorrectness}
+                  onChange={handleShowCorrectnessChange}
                 />
               </div>
               {showCorrectness && showQuestionsAfterSubmit && (
