@@ -1,5 +1,4 @@
 import type {Page} from '@playwright/test';
-import {WaveFile} from 'wavefile';
 
 // Replace the lesson's real videos, whose audio layout a spec cannot rely on.
 
@@ -18,15 +17,22 @@ interface JsonVideoDocument {
 
 /** 8-bit PCM silence, as the data URI the lesson pipeline inlines clips as. */
 function silentWavDataUri(seconds: number, sampleRate = 8000): string {
-  const wav = new WaveFile();
-  // 0x80 is the zero level of unsigned 8-bit PCM.
-  wav.fromScratch(
-    1,
-    sampleRate,
-    '8',
-    new Uint8Array(seconds * sampleRate).fill(0x80),
-  );
-  return wav.toDataURI();
+  const samples = seconds * sampleRate;
+  const buf = Buffer.alloc(44 + samples, 0x80);
+  buf.write('RIFF', 0);
+  buf.writeUInt32LE(36 + samples, 4);
+  buf.write('WAVE', 8);
+  buf.write('fmt ', 12);
+  buf.writeUInt32LE(16, 16);
+  buf.writeUInt16LE(1, 20); // PCM
+  buf.writeUInt16LE(1, 22); // mono
+  buf.writeUInt32LE(sampleRate, 24);
+  buf.writeUInt32LE(sampleRate, 28);
+  buf.writeUInt16LE(1, 32);
+  buf.writeUInt16LE(8, 34);
+  buf.write('data', 36);
+  buf.writeUInt32LE(samples, 40);
+  return 'data:audio/wav;base64,' + buf.toString('base64');
 }
 
 // 30s so no scene boundary, which also starts a clip, falls inside a poll.
