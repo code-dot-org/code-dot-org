@@ -88,9 +88,9 @@ const ColumnAnalysis = () => {
     >
       <div className={styles.header}>
         <span className={styles.headerSpacer} />
-        <h2 id="column-analysis-heading" className={styles.headerTitle}>
+        <h3 id="column-analysis-heading" className={styles.headerTitle}>
           Column Analysis
-        </h2>
+        </h3>
         <IconButton
           variant="text"
           color="tertiary"
@@ -104,7 +104,7 @@ const ColumnAnalysis = () => {
       </div>
       <div className={styles.body}>
         <div className={styles.summary}>
-          <h3 className={styles.columnName}>{columnName}</h3>
+          <h4 className={styles.columnName}>{columnName}</h4>
           {columnDetails.description && (
             <p className={styles.description}>{columnDetails.description}</p>
           )}
@@ -133,14 +133,14 @@ const ColumnAnalysis = () => {
               <span className={styles.emptyGraphIcon} aria-hidden="true">
                 <FontAwesomeV6Icon iconName="chart-simple" iconStyle="solid" />
               </span>
-              <h3 className={styles.emptyGraphTitle}>Too many values</h3>
+              <h4 className={styles.emptyGraphTitle}>Too many values</h4>
               <p className={styles.emptyGraphMessage}>
                 {`A graph is shown when there are ${MAX_DISTRIBUTION_BARS} or fewer values.`}
               </p>
             </div>
           ) : (
             <div className={styles.distribution}>
-              <h3 className={styles.distributionTitle}>Distribution</h3>
+              <h4 className={styles.distributionTitle}>Distribution</h4>
               {bars.length > 0 && (
                 <DistributionChart columnName={columnName} bars={bars} />
               )}

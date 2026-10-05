@@ -38,7 +38,8 @@
         }
       }
     ],
-    "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**."
+    "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>
