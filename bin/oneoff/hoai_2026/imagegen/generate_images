@@ -1,0 +1,544 @@
+#!/usr/bin/env ruby
+
+# This script generates images for the HoAI 2026 Sprite Lab image levels.
+#
+# The levels offer an 'Adlib'-style form: a sentence template with a
+# dropdown per slot (apps/static/spritelab_lab2/imageAdlibManifest.json).
+# This script generates an image for every combination of choices, in each
+# style, so the variety can be reviewed and the results cached for playtests
+# or for when the AI service is down or costly.
+#
+# PROMPTS:
+#
+# The prompts are not built here. dump_prompts.ts imports the prompt
+# builders from apps/ and prints one job per line; this script runs it via
+# `npx tsx`, so the text sent matches what the lab would send. It needs
+# Node 18 or newer.
+#
+# API KEY:
+#
+# It uses the 'openai_student_learning_api_key' config key.
+#
+# USAGE:
+#
+# Generate ALL ungenerated content (a great deal of it; see --list-adlibs):
+#
+# ./bin/oneoff/hoai_2026/imagegen/generate_images
+#
+# Remove any output in the image_output path next to this script in order
+# to regenerate it in the following invocation.
+#
+# You can validate the output with the validate_images script. If you
+# supply --delete to that script, it will remove any offending output so
+# you can run this script again to regenerate only those images.
+#
+# Nothing gets uploaded until --no-dry-run is specified.
+#
+# Nothing gets uploaded to the production bucket until --production is
+# specified. Otherwise it goes to the 'cdo-curriculum-devel' bucket.
+#
+# To only upload the files that have been generated, use the
+# --just-upload option.
+#
+# NOTES:
+#
+# Files are the raw model output, before the lab's background removal,
+# cropping and pixel-grid normalization: the lab is meant to run that
+# pipeline on a cached image as it does on a live one.
+#
+# A character sprite can also be made as an animated set (the student
+# form's 'Generate animation'): a base image, then four poses that each send
+# the base image back as a reference. These cost five requests each and are
+# off by default; see --produce-animations.
+#
+# Sprites and blocks are asked for a transparent background (OpenAI's
+# background: 'transparent') rather than the flat key color the lab erases
+# after a Gemini generation; see --no-transparent. Backgrounds fill their
+# frame and are always opaque.
+#
+# The OpenAI image API takes no seed, so a cached image records none and
+# cannot be replayed by seed as a live one can.
+
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+require 'cdo/aws/s3'
+
+require 'base64'
+require 'benchmark'
+require 'fileutils'
+require 'httparty'
+require 'json'
+require 'open3'
+require 'optparse'
+require 'parallel'
+require 'ruby-progressbar'
+
+require_relative 'constants'
+require_relative 'image_validation'
+
+# Raised for a request that should not be retried.
+class ImageRequestError < StandardError; end
+
+# Raised for a request worth another attempt.
+class RetryableImageRequestError < StandardError; end
+
+# Parse options
+options = {
+  adlibs: [],
+  dry_run: true,
+  filter: '',
+  jobs: JOBS,
+  just_save_prompt: false,
+  just_upload: false,
+  limit: nil,
+  list_adlibs: false,
+  model: MODEL,
+  produce_animations: false,
+  produce_singles: true,
+  transparent: true,
+  production: false,
+  quality: QUALITY,
+  styles: [],
+  variants: VARIANTS,
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script calls out to OpenAI to produce images for every combination of
+    the adlib choices in the Hour of AI Sprite Lab image levels.
+
+    It can selectively upload the generated images to our curriculum bucket for
+    production use.
+
+    Options:
+  BANNER
+
+  opts.on('--list-adlibs',
+          'Just lists the known adlibs (after filtering) with their job counts and exits.'
+         ) do |list_adlibs|
+           options[:list_adlibs] = list_adlibs
+         end
+
+  opts.on('--no-dry-run',
+          'Disables the read-only mode where no changes are written to S3'
+         ) do |no_dry_run|
+           options[:dry_run] = no_dry_run
+         end
+
+  opts.on('--production',
+          'Publishes the content into the production bucket.'
+         ) do |production|
+           options[:production] = production
+         end
+
+  opts.on('--just-save-prompt',
+          'Writes each job\'s metadata file, prompts included, without generating images.'
+         ) do |just_save_prompt|
+           options[:just_save_prompt] = just_save_prompt
+         end
+
+  opts.on('--just-upload',
+          'Skips image generation and just uploads'
+         ) do |just_upload|
+           options[:just_upload] = just_upload
+         end
+
+  opts.on('--produce-singles',
+          'Produce single images. Defaults to on.'
+         ) do |produce_singles|
+           options[:produce_singles] = produce_singles
+         end
+
+  opts.on('--no-produce-singles',
+          'Skips producing single images.'
+         ) do |produce_singles|
+           options[:produce_singles] = produce_singles
+         end
+
+  opts.on('--produce-animations',
+          'Produce animated character sets (5 images each). Defaults to off.'
+         ) do |produce_animations|
+           options[:produce_animations] = produce_animations
+         end
+
+  opts.on('--no-produce-animations',
+          'Skips producing animated character sets.'
+         ) do |produce_animations|
+           options[:produce_animations] = produce_animations
+         end
+
+  opts.on('--no-transparent',
+          'Asks sprites and blocks for the lab\'s key-color background instead of a transparent one.'
+         ) do |transparent|
+           options[:transparent] = transparent
+         end
+
+  opts.on('-a', '--adlib ADLIB',
+          'Adds the given adlib id (e.g. sprite-simple) to the adlibs list. If none are specified, uses all of them.'
+         ) do |adlib|
+           options[:adlibs] << adlib
+         end
+
+  opts.on('-f', '--filter FILTER',
+          'Filters out only adlibs with the given string within their id.'
+         ) do |filter|
+           options[:filter] = filter
+         end
+
+  opts.on('-s', '--style STYLE',
+          "Adds the given style to the styles list. If none are specified, uses [#{STYLES.join(', ')}]"
+         ) do |style|
+           options[:styles] << style
+         end
+
+  opts.on('-v', '--variants VARIANTS',
+          "Determines the number of variants to produce. Defaults to #{VARIANTS}"
+         ) do |variants|
+           options[:variants] = variants.to_i
+         end
+
+  opts.on('-m', '--model MODEL',
+          "Sets the OpenAI image model. Defaults to #{MODEL}."
+         ) do |model|
+           options[:model] = model
+         end
+
+  opts.on('-q', '--quality QUALITY',
+          'Sets the rendering quality (low, medium, high, auto). Omitted by default.'
+         ) do |quality|
+           options[:quality] = quality
+         end
+
+  opts.on('-j', '--jobs JOBS',
+          "Sets the number of concurrent requests. Defaults to #{JOBS}."
+         ) do |jobs|
+           options[:jobs] = jobs.to_i
+         end
+
+  opts.on('--limit LIMIT',
+          'Generates at most this many jobs, for trying things out.'
+         ) do |limit|
+           options[:limit] = limit.to_i
+         end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+options[:styles] = STYLES if options[:styles].empty?
+
+unknown_styles = options[:styles] - STYLES
+raise "Error: unknown style(s): #{unknown_styles.join(', ')}" if unknown_styles.any?
+
+script_path = File.dirname(__FILE__)
+repo_path = File.expand_path('../../../..', script_path)
+
+# Pull the prompts out of apps/
+node_version = begin
+  `node --version`.strip[/\d+/].to_i
+rescue Errno::ENOENT
+  0
+end
+if node_version < 18
+  raise "Error: dump_prompts.ts needs Node 18 or newer (found #{node_version.zero? ? 'none' : node_version}). Try `nvm use 22`."
+end
+
+puts
+puts "Building prompts with dump_prompts.ts..."
+stdout, stderr, status = Open3.capture3(
+  'npx', '--yes', 'tsx', File.join(script_path, 'dump_prompts.ts'),
+  chdir: repo_path
+)
+unless status.success?
+  warn stderr
+  raise 'Error: dump_prompts.ts failed'
+end
+
+prompts_path = File.join(script_path, PROMPTS_FILE)
+puts
+puts "Caching prompts in #{prompts_path}"
+File.write(prompts_path, stdout)
+
+jobs = stdout.lines.map {|line| JSON.parse(line)}
+known_adlibs = jobs.map {|job| job['adlibId']}.uniq
+
+unknown_adlibs = options[:adlibs] - known_adlibs
+raise "Error: unknown adlib(s): #{unknown_adlibs.join(', ')}" if unknown_adlibs.any?
+
+jobs = jobs.filter {|job| options[:adlibs].include?(job['adlibId'])} unless options[:adlibs].empty?
+jobs = jobs.filter {|job| job['adlibId'].include?(options[:filter])} unless options[:filter].empty?
+jobs = jobs.filter {|job| options[:styles].include?(job['style'])}
+jobs = jobs.reject {|job| job['animated']} unless options[:produce_animations]
+jobs = jobs.filter {|job| job['animated']} unless options[:produce_singles]
+
+variants = options[:variants]
+
+if options[:list_adlibs]
+  puts
+  puts "Listing adlibs (#{variants} variants each):"
+  jobs.group_by {|job| job['adlibId']}.each do |adlib_id, adlib_jobs|
+    job = adlib_jobs.first
+    images = adlib_jobs.sum {|j| j['frames'].length} * variants
+    puts " - #{adlib_id}: #{job['slots'].join(' x ')}, #{adlib_jobs.length * variants} jobs, #{images} images"
+  end
+  puts
+  puts "Total: #{jobs.length * variants} jobs, #{jobs.sum {|j| j['frames'].length} * variants} images"
+  exit
+end
+
+# Every job, once per variant
+objects = jobs.flat_map do |job|
+  Array.new(variants) {|variant| {job: job, variant: variant}}
+end
+objects = objects.first(options[:limit]) if options[:limit]
+
+output_path = File.join(script_path, OUTPUT_DIRECTORY)
+FileUtils.mkdir_p output_path
+
+# Paths are what the lab will build from the level's choice ids: ids never
+# contain dots, so the dotted file stem is unambiguous.
+def object_directory(object)
+  job = object[:job]
+  File.join(job['adlibId'], job['style'], *(job['animated'] ? ['animated'] : []))
+end
+
+def object_stem(object)
+  [*object[:job]['choiceIds'], object[:variant].to_s.rjust(2, '0')].join('.')
+end
+
+def frame_path(object, frame)
+  File.join(object_directory(object), "#{[object_stem(object), frame['pose']].compact.join('.')}.png")
+end
+
+def metadata_path(object)
+  File.join(object_directory(object), "#{object_stem(object)}.json")
+end
+
+def transparent?(options, job)
+  options[:transparent] && job['transparent']
+end
+
+def frame_prompt(options, job, frame)
+  transparent?(options, job) ? frame['transparentPrompt'] : frame['prompt']
+end
+
+def request_image(options, job, frame, reference_path)
+  api_key = CDO.openai_student_learning_api_key
+  headers = {'Authorization' => "Bearer #{api_key}"}
+  params = {
+    model: options[:model],
+    prompt: frame_prompt(options, job, frame),
+    size: SIZE,
+    n: 1,
+    quality: options[:quality],
+  }.compact
+  if transparent?(options, job)
+    params[:background] = 'transparent'
+    params[:output_format] = 'png'
+  end
+
+  attempts = 0
+  begin
+    attempts += 1
+    response =
+      if reference_path
+        File.open(reference_path, 'rb') do |image|
+          HTTParty.post(OPENAI_EDITS_URL, headers: headers, multipart: true, body: params.merge(image: image), timeout: 300)
+        end
+      else
+        HTTParty.post(OPENAI_GENERATIONS_URL, headers: headers.merge('Content-Type' => 'application/json'), body: params.to_json, timeout: 300)
+      end
+
+    if response.code == 429 || response.code >= 500
+      raise RetryableImageRequestError, "HTTP #{response.code}: #{response.body.to_s[0, 200]}"
+    end
+    unless response.success?
+      message = response.parsed_response.is_a?(Hash) ? response.parsed_response.dig('error', 'message') : nil
+      raise ImageRequestError, "HTTP #{response.code}: #{message || response.body.to_s[0, 200]}"
+    end
+
+    b64 = response.parsed_response.dig('data', 0, 'b64_json')
+    raise ImageRequestError, 'No image in the response' unless b64
+    Base64.decode64(b64)
+  rescue Net::ReadTimeout, Net::OpenTimeout, Errno::ECONNRESET, RetryableImageRequestError => exception
+    raise ImageRequestError, exception.message if attempts >= MAX_ATTEMPTS
+    sleep(3 * attempts)
+    retry
+  end
+end
+
+def metadata_for(options, object, generated)
+  job = object[:job]
+  {
+    adlibId: job['adlibId'],
+    set: job['set'],
+    imageType: job['imageType'],
+    subject: job['subject'],
+    choices: job['slots'].zip(job['choiceIds']).to_h,
+    prompt: job['prompt'],
+    style: job['style'],
+    pixelGrid: job['pixelGrid'],
+    animated: job['animated'],
+    transparent: transparent?(options, job),
+    keyColor: transparent?(options, job) ? nil : job['keyColor'],
+    bodyPlan: job['bodyPlan'],
+    variant: object[:variant],
+    provider: 'openai',
+    model: options[:model],
+    quality: options[:quality],
+    seed: nil,
+    generated: generated,
+    frames: job['frames'].map do |frame|
+      {
+        pose: frame['pose'],
+        file: File.basename(frame_path(object, frame)),
+        prompt: frame_prompt(options, job, frame),
+        reference: frame['reference'],
+      }
+    end,
+  }.compact
+end
+
+puts
+puts "Generating #{objects.length} jobs (#{objects.sum {|o| o[:job]['frames'].length}} images at most)..."
+
+average = {
+  sum: 0,
+  count: 0,
+}
+failures = []
+
+if options[:just_upload]
+  puts "Note: Not generating. Just using the content in the '#{OUTPUT_DIRECTORY}' directory."
+  puts "    : Remove --just-upload to generate any non-existing content."
+else
+  generate_progress_bar = ProgressBar.create(total: objects.size)
+  Parallel.map(objects, in_threads: options[:jobs], finish: lambda do |_, _, result|
+    if result.is_a?(Numeric)
+      average[:sum] += result
+      average[:count] += 1
+    elsif result.is_a?(String)
+      failures << result
+    end
+
+    generate_progress_bar&.increment
+  end
+  ) do |object|
+    job = object[:job]
+    frames = job['frames']
+    paths = frames.map {|frame| File.join(output_path, frame_path(object, frame))}
+    json_path = File.join(output_path, metadata_path(object))
+
+    # Images made with the other background setting are regenerated.
+    recorded = File.exist?(json_path) ? JSON.parse(File.read(json_path)) : {}
+    stale = recorded['generated'] && !!recorded['transparent'] != !!transparent?(options, job)
+
+    next true if !stale && paths.all? {|path| File.exist?(path)}
+
+    FileUtils.mkdir_p File.dirname(json_path)
+
+    if options[:just_save_prompt]
+      File.write(json_path, JSON.pretty_generate(metadata_for(options, object, false)))
+      next true
+    end
+
+    begin
+      Benchmark.measure do
+        frames.zip(paths).each do |frame, path|
+          next if !stale && File.exist?(path)
+
+          reference_path = nil
+          if frame['reference']
+            reference = frames.find {|f| f['pose'] == frame['reference']}
+            reference_path = File.join(output_path, frame_path(object, reference))
+          end
+
+          File.binwrite(path, request_image(options, job, frame, reference_path))
+        end
+        File.write(json_path, JSON.pretty_generate(metadata_for(options, object, true)))
+      end.real
+    rescue ImageRequestError => exception
+      "#{metadata_path(object)}: #{exception.message}"
+    end
+  end
+  generate_progress_bar&.finish
+end
+
+puts
+puts "Done generating. Average time: #{average[:sum] / (average[:count] > 0 ? average[:count] : 1)} seconds"
+
+if failures.any?
+  puts
+  puts "#{failures.length} job(s) failed; run again to retry them:"
+  failures.each {|failure| puts "  #{failure}"}
+end
+
+# We put the things in 'cdo-curriculum-devel' unless we use --production
+bucket_name = "#{BUCKET_NAME}#{options[:production] ? '' : '-devel'}"
+
+puts
+puts "Uploading to s3://#{bucket_name}..."
+
+unless !options[:dry_run] && options[:production]
+  puts "Note: Development bucket upload. Specify --production to commit to the production bucket for live use"
+end
+
+if options[:dry_run]
+  puts "Note: Dry run. Not uploading content. Specify --no-dry-run to upload"
+end
+
+unless options[:just_save_prompt]
+  upload_progress_bar = ProgressBar.create(total: objects.size)
+  Parallel.map(objects, in_threads: options[:jobs], finish: lambda do |_, _, _|
+    upload_progress_bar&.increment
+  end
+  ) do |object|
+    frames = object[:job]['frames']
+    json_path = File.join(output_path, metadata_path(object))
+    image_paths = frames.map {|frame| frame_path(object, frame)}
+
+    # A job uploads whole or not at all: a set missing a pose is useless.
+    # Validated against how the images were made, per the metadata file.
+    metadata = File.exist?(json_path) ? JSON.parse(File.read(json_path)) : nil
+    errors = image_paths.filter_map do |path|
+      error = validate_image(
+        File.join(output_path, path),
+        image_type: object[:job]['imageType'],
+        transparent: metadata&.dig('transparent')
+      )
+      "#{path}: #{error}" if error
+    end
+    errors << "#{metadata_path(object)}: missing" unless metadata
+    if errors.any?
+      puts "Not uploading: #{metadata_path(object)}\n        Error: #{errors.join('; ')}"
+      next
+    end
+
+    unless options[:dry_run]
+      image_paths.each do |path|
+        AWS::S3.upload_to_bucket(
+          bucket_name,
+          File.join(BUCKET_PATH, path),
+          File.binread(File.join(output_path, path)),
+          acl: 'public-read',
+          no_random: true,
+          content_type: 'image/png'
+        )
+      end
+      AWS::S3.upload_to_bucket(
+        bucket_name,
+        File.join(BUCKET_PATH, metadata_path(object)),
+        File.read(json_path),
+        acl: 'public-read',
+        no_random: true,
+        content_type: 'application/json'
+      )
+    end
+
+    true
+  end
+  upload_progress_bar&.finish
+end

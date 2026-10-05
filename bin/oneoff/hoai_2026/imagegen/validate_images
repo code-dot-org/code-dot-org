@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+
+# This script just ensures that the generated images are square PNGs, with
+# transparent backgrounds where their metadata file says they were asked for
+# one.
+#
+# You can specify --delete to actually delete the invalid files.
+
+# First: sets up bundler, so the gems below resolve from the Gemfile.
+require_relative '../../../../deployment'
+
+require 'json'
+require 'optparse'
+require_relative 'constants'
+require_relative 'image_validation'
+
+# Parse options
+options = {
+  delete: false,
+  filter: '',
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    Validates the generated images produced by the `generate_images` script.
+
+    Options:
+  BANNER
+
+  opts.on('--delete',
+          'Deletes any invalid files. Afterward, run the generate_images script to re-generate them.'
+         ) do |delete|
+           options[:delete] = delete
+         end
+
+  opts.on('-f', '--filter FILTER',
+          'Filters out only adlibs with the given string within their id.',
+         ) do |filter|
+           options[:filter] = filter
+         end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+good = 0
+count = 0
+output_path = File.join(File.dirname(__FILE__), OUTPUT_DIRECTORY)
+Dir.glob(File.join(output_path, '**', '*.json')) do |json_path|
+  directory = File.dirname(json_path)
+  next unless directory.delete_prefix("#{output_path}/").split('/').first.include?(options[:filter])
+
+  metadata = JSON.parse(File.read(json_path))
+  metadata['frames'].each do |frame|
+    path = File.join(directory, frame['file'])
+    next unless File.exist?(path)
+
+    error = validate_image(path, image_type: metadata['imageType'], transparent: metadata['transparent'])
+    name = path.delete_prefix("#{output_path}/")
+
+    # Print result if error
+    if error
+      puts "#{name}: #{error}"
+      if options[:delete]
+        puts "Deleting #{path}"
+        File.delete(path)
+      end
+    else
+      good += 1
+    end
+
+    count += 1
+  end
+end
+
+puts "Passed: #{good}/#{count}"
+puts
+puts "Done."

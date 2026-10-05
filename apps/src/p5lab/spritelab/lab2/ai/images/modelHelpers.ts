@@ -2,6 +2,7 @@ import {createGoogleGenerativeAI} from '@ai-sdk/google';
 
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
+import {ASSUMED_BLOCK, MODEL_OUTPUT_PX} from './imagePrompts';
 import {ImageType} from './types';
 
 // The API key is injected server-side by the aiGateway proxy.
@@ -50,19 +51,8 @@ export function imageProviderOptions(imageSize: ImageSize) {
   };
 }
 
-// Image-model output policy, kept beside the model id so a model swap forces
-// these into view. The image model emits roughly MODEL_OUTPUT_PX-square
-// images; the pixel-art prompt asks for ASSUMED_BLOCK-px blocks, and grid
-// detection falls back to the same value — what we ask for and what we
-// assume can't drift apart.
-export const MODEL_OUTPUT_PX = 1024;
-// Backgrounds carry a whole scene, so they get a finer grid than sprites
-// and blocks; finer still would sit at detection's 4px floor.
-export const ASSUMED_BLOCK: Record<ImageType, number> = {
-  sprite: 16,
-  block: 16,
-  background: 8,
-};
+// Image-model output policy, defined with the prompts that assume it.
+export {ASSUMED_BLOCK, MODEL_OUTPUT_PX};
 
 // Stored ceilings for smooth-style images: generation downscales the model's
 // 1K output once at save, and the blank paint canvas opens at the same size

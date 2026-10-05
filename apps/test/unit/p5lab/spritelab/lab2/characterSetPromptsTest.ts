@@ -3,8 +3,8 @@ import {
   basePrompt,
   posePrompt,
   posedFrames,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
-import {pixelBlockFor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSetPrompts';
+import {pixelBlockFor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imagePrompts';
 import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 
 const key = KEY_COLORS.magenta;
@@ -74,5 +74,25 @@ describe('SpriteLab2 characterSet', () => {
     expect(posedFrames('quadruped')[1].pose).toContain('four legs');
     expect(posedFrames('bird')[1].pose).toContain('wings');
     expect(posedFrames()).toBe(posedFrames('upright'));
+  });
+
+  it('asks for transparency instead of a key color when given none', () => {
+    const base = basePrompt(
+      'a knight',
+      'smooth',
+      null,
+      pixelBlockFor('sprite')
+    );
+    const pose = posePrompt(
+      'a knight',
+      posedFrames()[1],
+      'smooth',
+      null,
+      pixelBlockFor('sprite')
+    );
+    for (const text of [base, pose]) {
+      expect(text).toContain('fully transparent');
+      expect(text).not.toContain(key.name);
+    }
   });
 });
