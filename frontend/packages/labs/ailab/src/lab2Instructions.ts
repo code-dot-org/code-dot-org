@@ -1,11 +1,10 @@
-// Dashboard reads the same file to build a Lab 2 level's long instructions.
 import lab2InstructionsJson from '../public/lab2-instructions.json';
 
 import {INSTRUCTIONS_KEYS, type InstructionsKey} from './types';
 
 export interface Lab2Instructions {
   key: InstructionsKey;
-  // A bare screen name, such as "Dataset".
+  // A screen name, such as "Dataset".
   name: string;
   defaultText: string;
 }
