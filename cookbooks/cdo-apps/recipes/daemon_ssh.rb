@@ -21,6 +21,8 @@ ssh_config = <<~SSH_CONFIG
     StrictHostKeyChecking no
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/server_access_key
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
 SSH_CONFIG
 
 file "#{node[:home]}/.ssh/config" do

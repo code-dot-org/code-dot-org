@@ -1,0 +1,23 @@
+name 'pl-aif-y2-u1-l3-hello-ai'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reading Python, Piece by Piece
+
+You just saw variables and data types as concepts. In Lesson 4, students write this same kind of code themselves to build their first chatbot: starting with a program that only prints a message, then one that stores information in a variable and prints it. Try the interactive below to walk through that same progression yourself.
+
+---
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/python-syntax-builder.html"
+    width="100%"
+    height="860"
+    frameborder="0"
+    scrolling="no"
+    title="Reading Python Line by Line: click-to-label syntax with console output"
+    style="display:block; border-radius:10px;">
+  </iframe>
+</div>
+MARKDOWN

@@ -1,8 +1,12 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import {groupByPage} from '../utils';
+
+import AddItemButton from './AddItemButton';
 import QuizQuestionCard from './QuizQuestionCard';
 import {isPendingQuestionId} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
@@ -35,9 +39,10 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const hasPendingQuestion = questions.some(question =>
     isPendingQuestionId(question.id)
   );
+  const pages = useMemo(() => groupByPage(questions), [questions]);
 
-  const handleCreate = () => {
-    setExpandedId(addPendingQuestion());
+  const handleCreate = (page: number) => {
+    setExpandedId(addPendingQuestion(page));
   };
 
   let outline: React.ReactNode;
@@ -48,23 +53,76 @@ const QuizBuilderWorkspace: React.FunctionComponent<
       <Typography variant="body2">This quiz has no questions yet.</Typography>
     );
   } else {
+    const nextPage = pages[pages.length - 1].page + 1;
     outline = (
-      <ol className={styles.list}>
-        {questions.map(question => (
-          <li key={question.id}>
-            <QuizQuestionCard
-              question={question}
-              isExpanded={question.id === expandedId}
-              onExpandedChange={expanded =>
-                setExpandedId(expanded ? question.id : null)
-              }
-              error={question.id === errorQuestionId ? error : null}
-              onSave={saveQuestion}
-              onRemove={removeQuestion}
-            />
-          </li>
-        ))}
-      </ol>
+      <div className={styles.pages}>
+        {pages.map(({page, questions: pageQuestions}) => {
+          const pageHasPendingQuestion = pageQuestions.some(question =>
+            isPendingQuestionId(question.id)
+          );
+          return (
+            <div key={page} className={styles.page}>
+              <div className={styles.pageHeader}>
+                <Typography variant="overline2" className={styles.pageLabel}>
+                  Page {page}
+                </Typography>
+                <FontAwesomeV6Icon
+                  iconName="circle"
+                  iconStyle="solid"
+                  className={styles.pageHeaderDot}
+                />
+                <Typography variant="body4" component="span">
+                  {questionCountLabel(pageQuestions.length)}
+                </Typography>
+              </div>
+              <ol className={styles.list}>
+                {pageQuestions.map(question => (
+                  <li key={question.id}>
+                    <QuizQuestionCard
+                      question={question}
+                      isExpanded={question.id === expandedId}
+                      onExpandedChange={expanded =>
+                        setExpandedId(expanded ? question.id : null)
+                      }
+                      error={question.id === errorQuestionId ? error : null}
+                      onSave={saveQuestion}
+                      onRemove={removeQuestion}
+                    />
+                  </li>
+                ))}
+              </ol>
+              <AddItemButton
+                label="Create question"
+                onClick={() => handleCreate(page)}
+                disabled={hasPendingQuestion}
+              />
+              {pageHasPendingQuestion && (
+                <Typography variant="body3" className={styles.createHint}>
+                  Save or remove your new question before creating another.
+                </Typography>
+              )}
+            </div>
+          );
+        })}
+        <Button
+          className={styles.addPageButton}
+          variant="text"
+          color="secondary"
+          size="extraSmall"
+          type="button"
+          disabled={hasPendingQuestion}
+          onClick={() => handleCreate(nextPage)}
+          startIcon={<FontAwesomeV6Icon iconName="plus" />}
+        >
+          <Typography
+            variant="overline2"
+            component="span"
+            className={styles.pageLabel}
+          >
+            Add page
+          </Typography>
+        </Button>
+      </div>
     );
   }
 
@@ -89,22 +147,18 @@ const QuizBuilderWorkspace: React.FunctionComponent<
 
         {outline}
 
-        <div className={styles.createAction}>
+        {questions.length === 0 && (
           <Button
+            className={styles.createButton}
             variant="contained"
             color="primary"
             type="button"
-            disabled={isLoading || hasPendingQuestion}
-            onClick={handleCreate}
+            disabled={isLoading}
+            onClick={() => handleCreate(1)}
           >
             + Create question
           </Button>
-          {hasPendingQuestion && (
-            <Typography variant="body3" className={styles.createHint}>
-              Save or remove your new question before creating another.
-            </Typography>
-          )}
-        </div>
+        )}
       </div>
     </PanelContainer>
   );

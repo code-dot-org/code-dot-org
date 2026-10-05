@@ -34,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Click to talk.** The **when clicked** event is ready for your new character. Drag a **say** block onto the dotted outline under it. Click **Play**, then click your character."
+        "text": "**Talk later.** The **at [6] seconds** event is ready for your new character. Drag a **say** block onto the dotted outline under it. Click **Play** and wait for it."
       },
       {
-        "text": "**It's interactive!** Click **Continue**.",
+        "text": "**Right on time!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Click to talk\nDrag a **say** block onto the dotted outline under **when clicked** so your new character talks when clicked.",
+    "long_instructions": "# Talk later\nDrag a **say** block onto the dotted outline under **at [6] seconds**. Your new character speaks 6 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -52,7 +52,7 @@
           "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "You clicked me!"
+            "SPEECH": "Let's go!"
           },
           "inputs": {
             "SPRITE": {
@@ -66,14 +66,18 @@
     },
     "add_blocks": [
       {
-        "type": "gamelab_spriteClicked",
+        "type": "gamelab_atTime",
+        "data": "at-6",
         "fields": {
-          "CONDITION": "\"when\""
+          "UNIT": "\"seconds\""
         },
         "inputs": {
-          "SPRITE": {
+          "N": {
             "shadow": {
-              "type": "gamelab_allSpritesWithAnimation"
+              "type": "math_number",
+              "fields": {
+                "NUM": 6
+              }
             }
           }
         },
@@ -84,7 +88,7 @@
               "like": {
                 "type": "gamelab_spriteSay",
                 "fields": {
-                  "SPEECH": "You clicked me!"
+                  "SPEECH": "Let's go!"
                 },
                 "inputs": {
                   "SPRITE": {
@@ -98,7 +102,8 @@
           }
         }
       }
-    ]
+    ],
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

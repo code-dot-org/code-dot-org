@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import EditToolbar from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/EditToolbar';
+import {STICKER_SECTIONS} from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/stickers';
 
 const renderToolbar = (
   props: Partial<React.ComponentProps<typeof EditToolbar>> = {}
@@ -10,6 +11,7 @@ const renderToolbar = (
   render(
     <EditToolbar
       onAddText={jest.fn()}
+      onAddSticker={jest.fn()}
       canDelete={false}
       onDelete={jest.fn()}
       {...props}
@@ -101,7 +103,12 @@ describe('EditToolbar', () => {
     expect(tool('Delete')).toBeDisabled();
 
     rerender(
-      <EditToolbar onAddText={jest.fn()} canDelete onDelete={onDelete} />
+      <EditToolbar
+        onAddText={jest.fn()}
+        onAddSticker={jest.fn()}
+        canDelete
+        onDelete={onDelete}
+      />
     );
     fireEvent.click(tool('Delete'));
 
@@ -131,5 +138,40 @@ describe('EditToolbar', () => {
     fireEvent.change(input, {target: {value: 'Hello'}});
 
     expect(input).toHaveValue('Hello');
+  });
+
+  it('lists every sticker by name under its section', () => {
+    renderToolbar();
+    fireEvent.click(tool('Stickers'));
+
+    for (const title of [
+      'Reactions',
+      'Celebrate',
+      'Tech',
+      'Point it out',
+      'Just for fun',
+    ]) {
+      expect(screen.getByText(title)).toBeInTheDocument();
+    }
+    const stickers = STICKER_SECTIONS.flatMap(section => section.stickers);
+    expect(stickers).toHaveLength(51);
+    for (const {name} of stickers) {
+      expect(tool(name)).toBeInTheDocument();
+    }
+  });
+
+  it('adds the clicked sticker and keeps the panel open', () => {
+    const onAddSticker = jest.fn();
+    renderToolbar({onAddSticker});
+    fireEvent.click(tool('Stickers'));
+
+    fireEvent.click(tool('Trophy'));
+    fireEvent.click(tool('Pile of poo'));
+
+    expect(onAddSticker.mock.calls.map(([sticker]) => sticker.name)).toEqual([
+      'Trophy',
+      'Pile of poo',
+    ]);
+    expect(panel('Stickers')).toBeInTheDocument();
   });
 });

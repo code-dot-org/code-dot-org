@@ -80,6 +80,7 @@ interface CourseSummary {
   announcements: Announcement[];
   has_verified_resources: boolean;
   ai_chat_tools_dependency: AiChatToolsDependencyValue;
+  requires_inaccessible_ai_models: boolean;
 }
 
 interface Response {
@@ -245,6 +246,9 @@ const TeacherCourseOverview: React.FC = () => {
       assignmentFamilyTitle={courseSummary.assignment_family_title}
       id={courseSummary.id}
       aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
+      requiresInaccessibleAiModels={
+        courseSummary.requires_inaccessible_ai_models
+      }
       courseOfferingId={courseSummary.course_offering_id}
       courseVersionId={courseSummary.course_version_id}
       descriptionStudent={courseSummary.description_student}

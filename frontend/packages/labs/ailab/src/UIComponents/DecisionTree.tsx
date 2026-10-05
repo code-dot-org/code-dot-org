@@ -2,8 +2,14 @@ import classNames from 'classnames';
 import {type CSSProperties, useMemo} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
-import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
 import {
+  formatNumber,
+  thresholdText,
+  type DisplayTreeBranch,
+  type DisplayTreeNode,
+} from '../helpers/displayTree';
+import {
+  getNodesBounds,
   layoutDisplayTree,
   type PlacedTreeNode,
   TREE_NODE_HEIGHT,
@@ -17,6 +23,8 @@ import {
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
 
+import TreeCanvas from './TreeCanvas';
+
 import shared from '../shared.module.scss';
 import styles from './decisionTree.module.scss';
 
@@ -27,10 +35,6 @@ const canvasVariables = {
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
   '--tree-branch-offset': `${TREE_ROW_GAP / 4}px`,
 } as CSSProperties;
-
-function formatNumber(value: number): string {
-  return String(Number(value.toFixed(2)));
-}
 
 function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   const startX = parent.x + TREE_NODE_WIDTH / 2;
@@ -58,8 +62,7 @@ const DecisionTree = () => {
 
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
-      const sign = branch.kind === 'lessThan' ? '<' : '≥';
-      return `${sign} ${branch.threshold}`;
+      return thresholdText(branch);
     }
     return orList.format(branch.values.map(valueText));
   };
@@ -73,6 +76,10 @@ const DecisionTree = () => {
       : valueText(node.prediction);
   };
 
+  const pathBounds =
+    trace &&
+    getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
+
   // Path edges go last so a sibling edge cannot paint over the stub they share.
   const edgeOrder = [...layout.nodes].sort(
     (a, b) => Number(pathIds.has(a.id)) - Number(pathIds.has(b.id)),
@@ -83,7 +90,11 @@ const DecisionTree = () => {
       <div className={classNames(styles.header, shared.bold)}>
         Your model's decision tree
       </div>
-      <div className={styles.scroll}>
+      <TreeCanvas
+        contentWidth={layout.width}
+        contentHeight={layout.height}
+        pathBounds={pathBounds}
+      >
         <div
           role="img"
           aria-label="Diagram of your model's decision tree"
@@ -141,7 +152,7 @@ const DecisionTree = () => {
             );
           })}
         </div>
-      </div>
+      </TreeCanvas>
     </div>
   );
 };

@@ -1,6 +1,9 @@
+import {ThemeProvider} from '@mui/material/styles';
+import {act, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {renderToStaticMarkup} from 'react-dom/server';
 import {Provider} from 'react-redux';
+
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
 import {setTestData} from '../../src/redux';
@@ -11,10 +14,19 @@ import {levelStore} from './levelStore';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-function render(store) {
-  document.body.innerHTML = renderToStaticMarkup(
-    createElement(Provider, {store}, createElement(DecisionTree)),
-  );
+vi.stubGlobal(
+  'ResizeObserver',
+  class {
+    observe() {}
+    disconnect() {}
+  },
+);
+
+function predictSnake(store) {
+  act(() => {
+    store.dispatch(setTestData('legs', '0'));
+    train.onClickPredict();
+  });
 }
 
 function renderTrainedTree() {
@@ -23,8 +35,23 @@ function renderTrainedTree() {
   train.reset();
   train.init(store);
   train.onClickTrain();
-  render(store);
+  render(createElement(DecisionTree), {
+    wrapper: ({children}) =>
+      createElement(
+        Provider,
+        {store},
+        createElement(
+          ThemeProvider,
+          {theme: getMuiThemeForBrand(undefined)},
+          children,
+        ),
+      ),
+  });
   return store;
+}
+
+function zoomToPathButton() {
+  return screen.getByRole('button', {name: 'Zoom to your path'});
 }
 
 function slotPosition(node) {
@@ -63,10 +90,16 @@ describe('DecisionTree', () => {
     );
   });
 
+  it('offers zooming to the path only once there is a prediction', () => {
+    expect(zoomToPathButton().disabled).toBe(true);
+
+    predictSnake(store);
+
+    expect(zoomToPathButton().disabled).toBe(false);
+  });
+
   it('marks the path from the root to the answer the model predicts', () => {
-    store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict(store);
-    render(store);
+    predictSnake(store);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
     const edges = [...document.getElementsByTagName('path')];

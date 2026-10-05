@@ -10,7 +10,7 @@ import {AppName} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {QuizQuestionSummary} from '../types';
-import {toBool} from '../utils';
+import {groupByPage, toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
 import IntroCard from './IntroCard';
@@ -19,27 +19,9 @@ import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
-import {QuizPage} from './types';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
-
-// Groups a flat question list into pages, ascending by page number.
-function groupByPage(questions: QuizQuestionSummary[]): QuizPage[] {
-  const pages = new Map<number, QuizQuestionSummary[]>();
-  questions.forEach(question => {
-    const page = question.page ?? 1;
-    const pageQuestions = pages.get(page);
-    if (pageQuestions) {
-      pageQuestions.push(question);
-    } else {
-      pages.set(page, [question]);
-    }
-  });
-  return Array.from(pages.entries())
-    .sort(([pageA], [pageB]) => pageA - pageB)
-    .map(([page, pageQuestions]) => ({page, questions: pageQuestions}));
-}
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;

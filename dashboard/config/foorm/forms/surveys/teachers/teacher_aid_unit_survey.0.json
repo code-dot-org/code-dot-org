@@ -228,7 +228,7 @@
         {
           "type": "rating",
           "name": "saw_students_use_examples",
-          "visibleIf": "{unit_name} ='animations_games'",
+          "visibleIf": "{unit_name} ='musiclab'",
           "title": " I saw ____ of my students engage with example songs, tooltips, or producer spotlights to support their learning.",
           "rateValues": [
             {
@@ -265,6 +265,121 @@
               "name": "header_unit_tcai",
               "visible": false,
               "html": "<h1>Unit: thinking critically about AI (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "tcai_identify_ai_daily",
+              "title": "Identify where AI exists in our daily lives and the different stakeholders that use it",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_ai_evaluation",
+              "title": "Implement verification strategies to evaluate AI outputs",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_position_ai",
+              "title": "TBD",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_analyze_privacy_risks",
+              "title": "Analyze privacy risks that exist when sharing information online",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_create_chatbot",
+              "title": "Create a chatbot that uses context and a goal to direct AI towards a specific purpose",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ]
         },
@@ -969,7 +1084,7 @@
             },
             {
               "type": "radiogroup",
-              "name": "csd_adapt_lessons",
+              "name": "aid_adapt_lessons",
               "title": "Did you adapt lesson(s) in this unit to your community context?",
               "choices": [
                 {
@@ -988,8 +1103,9 @@
             },
             {
               "type": "radiogroup",
-              "name": "permission_adapt_followup",
+              "name": "aid_permission_adapt_followup",
               "title": "I would like the CodeAI team to follow up with me for more detail about the adaptations I made to this unit.",
+              "visibleIf": "{aid_adapt_lessons} = 'yes'",
               "choices": [
                 {
                   "value": "yes",

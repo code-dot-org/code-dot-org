@@ -1,0 +1,61 @@
+// Shared by side-by-side panels so their layout and header rows line up.
+@mixin panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-family-main);
+}
+
+@mixin side-panel {
+  @include panel;
+
+  background-color: var(--background-neutral-secondary);
+  border-left: 1px solid var(--border-neutral-primary);
+}
+
+@mixin panel-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+@mixin card {
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-md);
+}
+
+@mixin card-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 8px 10px;
+}
+
+// Include under two classes, to outrank the design system's minimum field width.
+@mixin full-width-field {
+  min-width: 0;
+  width: 100%;
+  align-items: stretch;
+}
+
+@mixin panel-header {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  margin: 0;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  background-color: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+@mixin panel-header-title {
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  color: var(--text-neutral-quaternary);
+}

@@ -35,6 +35,7 @@
     "add_blocks": [
       {
         "type": "gamelab_atTime",
+        "data": "at-3",
         "fields": {
           "UNIT": "\"seconds\""
         },
@@ -55,7 +56,7 @@
               "like": {
                 "type": "gamelab_spriteSay",
                 "fields": {
-                  "SPEECH": "Click the other character!"
+                  "SPEECH": "Welcome to the adventure."
                 },
                 "inputs": {
                   "SPRITE": {
@@ -90,7 +91,7 @@
           "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Click the other character!"
+            "SPEECH": "Welcome to the adventure."
           },
           "inputs": {
             "SPRITE": {
@@ -101,7 +102,8 @@
           }
         }
       ]
-    }
+    },
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

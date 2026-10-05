@@ -36,7 +36,7 @@ describe('train functions', () => {
     store.dispatch(setTestData('temperature', 10));
     store.dispatch(setTestData('rain', 1010));
 
-    train.onClickPredict(store);
+    train.onClickPredict();
 
     const predictedValue = getConvertedPredictedLabel(store.getState());
 
@@ -68,7 +68,7 @@ describe('train functions', () => {
     store.dispatch(setTestData('flavor', 'sweet'));
     store.dispatch(setTestData('texture', 'crunchy'));
 
-    train.onClickPredict(store);
+    train.onClickPredict();
 
     const predictedLabel = getConvertedPredictedLabel(store.getState());
 

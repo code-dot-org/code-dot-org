@@ -120,6 +120,14 @@ class RequestTest
       assert_equal stable_id, MockRequest.new(session).statsig_stable_id
     end
 
+    def test_statsig_stable_id_does_not_rewrite_existing_session_value
+      stable_id = SecureRandom.uuid
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => stable_id}
+      session.expects(:[]=).never
+
+      assert_equal stable_id, MockRequest.new(session).statsig_stable_id
+    end
+
     def test_statsig_stable_id_prefers_cookie
       cookie_id = SecureRandom.uuid
       session = {SharedConstants::STATSIG_STABLE_ID_KEY => SecureRandom.uuid}
@@ -128,6 +136,25 @@ class RequestTest
 
       assert_equal cookie_id, request.statsig_stable_id
       assert_equal cookie_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
+    end
+
+    def test_statsig_stable_id_uses_session_for_blank_cookie
+      session_id = SecureRandom.uuid
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => session_id}
+      request = MockRequest.new(session)
+      request.stubs(:cookies).returns(SharedConstants::STATSIG_STABLE_ID_KEY => '')
+
+      assert_equal session_id, request.statsig_stable_id
+      assert_equal session_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
+    end
+
+    def test_statsig_stable_id_replaces_blank_session_value
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => ''}
+
+      stable_id = MockRequest.new(session).statsig_stable_id
+
+      assert Cdo::AnonUserId.valid?(stable_id)
+      assert_equal stable_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
     end
 
     def test_anon_user_id_rejects_invalid_statsig_stable_id

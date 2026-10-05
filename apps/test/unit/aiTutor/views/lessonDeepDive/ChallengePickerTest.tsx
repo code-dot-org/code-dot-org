@@ -239,6 +239,59 @@ describe('ChallengePicker', () => {
     expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument();
   });
 
+  it("shows a 'both' challenge under the whiteboard section", async () => {
+    const bothChallenge: Challenge = {
+      id: 4,
+      lesson_id: 42,
+      question: 'Do something on either.',
+      default_modality: 'both',
+      whiteboard_starter_image_url: null,
+      whiteboard_starter_image_alt_text: null,
+    };
+    fetchJson.mockResolvedValue({value: [bothChallenge]});
+    renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+
+    await waitFor(() =>
+      expect(screen.getByText(bothChallenge.question)).toBeInTheDocument()
+    );
+  });
+
+  it("shows a 'both' challenge under the video section", async () => {
+    const bothChallenge: Challenge = {
+      id: 4,
+      lesson_id: 42,
+      question: 'Do something on either.',
+      default_modality: 'both',
+      whiteboard_starter_image_url: null,
+      whiteboard_starter_image_alt_text: null,
+    };
+    fetchJson.mockResolvedValue({value: [bothChallenge]});
+    renderPicker();
+
+    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
+
+    await waitFor(() =>
+      expect(screen.getByText(bothChallenge.question)).toBeInTheDocument()
+    );
+  });
+
+  it('excludes whiteboard-only challenges from the video section', async () => {
+    fetchJson.mockResolvedValue({value: [fakeChallenges[0]]});
+    renderPicker();
+
+    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(/No challenges available for this mode/)
+      ).toBeInTheDocument()
+    );
+  });
+
   it('shows an empty state when no challenges match the selected modality', async () => {
     fetchJson.mockResolvedValue({value: [fakeChallenges[1]]});
     renderPicker();
