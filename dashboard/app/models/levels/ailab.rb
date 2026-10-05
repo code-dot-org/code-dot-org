@@ -143,7 +143,7 @@ class Ailab < Level
   end
 
   def uses_lab2?
-    uses_lab2
+    JSONValue.value(uses_lab2) == true
   end
 
   # Attributes that are stored as JSON strings but should be passed through to the app as

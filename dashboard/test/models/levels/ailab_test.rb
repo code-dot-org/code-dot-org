@@ -133,9 +133,11 @@ class AilabTest < ActiveSupport::TestCase
 
   test 'saving a lab2 level drops stored long instructions' do
     lab2_level = create(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"]}', long_instructions: 'Stored.')
-    legacy_level = create(:ailab, long_instructions: 'Stored.')
-
     refute lab2_level.reload.properties.key?('long_instructions')
-    assert_equal 'Stored.', legacy_level.reload.long_instructions
+
+    [nil, 'false'].each do |uses_lab2|
+      legacy_level = create(:ailab, uses_lab2: uses_lab2, long_instructions: 'Stored.')
+      assert_equal 'Stored.', legacy_level.reload.long_instructions
+    end
   end
 end
