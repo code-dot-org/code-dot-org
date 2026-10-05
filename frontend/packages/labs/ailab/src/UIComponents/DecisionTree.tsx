@@ -2,7 +2,12 @@ import classNames from 'classnames';
 import {type CSSProperties, useMemo} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
-import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
+import {
+  formatNumber,
+  thresholdText,
+  type DisplayTreeBranch,
+  type DisplayTreeNode,
+} from '../helpers/displayTree';
 import {
   getNodesBounds,
   layoutDisplayTree,
@@ -31,10 +36,6 @@ const canvasVariables = {
   '--tree-branch-offset': `${TREE_ROW_GAP / 4}px`,
 } as CSSProperties;
 
-function formatNumber(value: number): string {
-  return String(Number(value.toFixed(2)));
-}
-
 function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   const startX = parent.x + TREE_NODE_WIDTH / 2;
   const startY = parent.y + TREE_NODE_HEIGHT;
@@ -61,8 +62,7 @@ const DecisionTree = () => {
 
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
-      const sign = branch.kind === 'lessThan' ? '<' : '≥';
-      return `${sign} ${branch.threshold}`;
+      return thresholdText(branch);
     }
     return orList.format(branch.values.map(valueText));
   };

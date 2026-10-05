@@ -1241,13 +1241,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_02_151559) do
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
   end
 
-  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.bigint "level_id", null: false
-    t.bigint "skill_id", null: false
-    t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
-    t.index ["skill_id", "level_id"], name: "index_levels_skills_on_skill_id_and_level_id"
-  end
-
   create_table "libraries", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.text "content"
@@ -2536,16 +2529,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_02_151559) do
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
 
-  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "description", null: false
-    t.text "evaluation_criteria"
-    t.string "concept"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "key", null: false
-    t.index ["key"], name: "index_skills_on_key", unique: true
-  end
-
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.integer "absolute_position"
@@ -2608,7 +2591,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_02_151559) do
     t.integer "requester_id"
     t.integer "level_id"
     t.integer "unit_id"
-    t.integer "skill_id"
     t.integer "section_id"
     t.string "school_year"
     t.string "evaluator"

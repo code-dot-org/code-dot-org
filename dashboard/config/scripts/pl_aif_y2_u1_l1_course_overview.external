@@ -8,47 +8,47 @@ markdown <<MARKDOWN
 AI Foundations Year 2 is a year-long course built around two semesters with different jobs. Semester 1 has students build AI from the ground up in Python. Semester 2 shifts to deploying and prompting AI that already exists, using Microsoft Foundry.
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 20px 0;">
-  <div style="font-size: 12pt; line-height: 1.5;">
+  <div style="font-size: 16px; line-height: 1.5;">
     <img src="https://images.code.org/5ec7d742efa4da97d9ae60b79611ef3d-image-1790625929941.png" alt="Microsoft Foundry logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> <strong>Microsoft Foundry</strong> is Microsoft's platform for deploying, testing, and building applications with AI models that already exist. Instead of writing an AI system from scratch, like students do in Semester 1, students use Foundry to put existing models to work: prompting them, testing them, and building programs around them.
   </div>
 </div>
 
 <div role="img" aria-label="Timeline showing two semesters: Semester 1, Fundamentals, Units 1 through 6, and Semester 2, Foundry, Units 7 through 10" style="display: flex; width: 100%; border-radius: 10px; overflow: hidden; margin: 20px 0 24px 0;">
   <div style="width: 50%; background: #4C42CF; color: #FFFFFF; padding: 16px 12px; text-align: center;">
-    <div style="font-size: 14pt; font-weight: bold;">Semester 1: Fundamentals</div>
-    <div style="font-size: 11pt; margin-top: 4px;">Units 1&ndash;6</div>
+    <div style="font-size: 18px; font-weight: bold;">Semester 1: Fundamentals</div>
+    <div style="font-size: 16px; margin-top: 4px;">Units 1&ndash;6</div>
   </div>
   <div style="width: 50%; background: #1F1976; color: #FFFFFF; padding: 16px 12px; text-align: center;">
-    <div style="font-size: 14pt; font-weight: bold;">Semester 2: Foundry</div>
-    <div style="font-size: 11pt; margin-top: 4px;">Units 7&ndash;10</div>
+    <div style="font-size: 18px; font-weight: bold;">Semester 2: Foundry</div>
+    <div style="font-size: 16px; margin-top: 4px;">Units 7&ndash;10</div>
   </div>
 </div>
 
 <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden;">
   <thead>
     <tr style="background-color: #4C42CF;">
-      <th scope="col" style="padding: 12px; text-align: left; color: #FFFFFF; font-size: 14pt;"></th>
-      <th scope="col" style="padding: 12px; text-align: left; color: #FFFFFF; font-size: 14pt;">Semester 1: Fundamentals</th>
-      <th scope="col" style="padding: 12px; text-align: left; color: #FFFFFF; font-size: 14pt;">Semester 2: Foundry</th>
+      <th scope="col" style="padding: 12px; text-align: left; color: #FFFFFF; font-size: 18px;"></th>
+      <th scope="col" style="padding: 12px; text-align: left; color: #FFFFFF; font-size: 18px;">Semester 1: Fundamentals</th>
+      <th scope="col" style="padding: 12px; text-align: left; color: #FFFFFF; font-size: 18px;">Semester 2: Foundry</th>
     </tr>
   </thead>
   <tbody>
     <tr style="background-color: #FFFFFF;">
-      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; border-bottom: 1px solid #E4E2F8;">Focus</th>
-      <td style="padding: 12px; border-bottom: 1px solid #E4E2F8;">Students build AI from the ground up: Python, logic, trained models, language, scale</td>
-      <td style="padding: 12px; border-bottom: 1px solid #E4E2F8;">Students deploy and prompt existing AI models using Microsoft Foundry</td>
+      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; border-bottom: 1px solid #E4E2F8; font-size: 16px;">Focus</th>
+      <td style="padding: 12px; border-bottom: 1px solid #E4E2F8; font-size: 16px;">Students build AI from the ground up: Python, logic, trained models, language, scale</td>
+      <td style="padding: 12px; border-bottom: 1px solid #E4E2F8; font-size: 16px;">Students deploy and prompt existing AI models using Microsoft Foundry</td>
     </tr>
     <tr style="background-color: #E4E2F8;">
-      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; vertical-align: top;">Units</th>
-      <td style="padding: 12px; vertical-align: top;">
-        <div style="margin-bottom: 6px;"><b>⭐Unit 1: Logic-Based AI</b></div>
+      <th scope="row" style="padding: 12px; text-align: left; font-weight: bold; vertical-align: top; font-size: 16px;">Units</th>
+      <td style="padding: 12px; vertical-align: top; font-size: 16px;">
+        <div style="margin-bottom: 6px;"><b>&#11088;Unit 1: Logic-Based AI</b></div>
         <div style="margin-bottom: 6px;">Unit 2: ML Fundamentals</div>
         <div style="margin-bottom: 6px;">Unit 3: Working with Data</div>
         <div style="margin-bottom: 6px;">Unit 4: Making Predictions</div>
         <div style="margin-bottom: 6px;">Unit 5: Natural Language Processing</div>
         <div>Unit 6: AI at Scale</div>
       </td>
-      <td style="padding: 12px; vertical-align: top;">
+      <td style="padding: 12px; vertical-align: top; font-size: 16px;">
         <div style="margin-bottom: 6px;">Unit 7: Integrating Software Systems</div>
         <div style="margin-bottom: 6px;">Unit 8: Generative AI</div>
         <div style="margin-bottom: 6px;">Unit 9: Multimodal Data</div>
@@ -59,8 +59,8 @@ AI Foundations Year 2 is a year-long course built around two semesters with diff
 </table>
 
 <div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;">
-  <div style="font-size: 14pt; color: #06338D; line-height: 1.5;">
-    <strong>ℹ️ Note:</strong> At time of publishing, Semester 2 activities are expected to run as an in-platform simulation of Microsoft Foundry rather than live Foundry accounts. This page will be updated if that changes.
+  <div style="font-size: 16px; color: #06338D; line-height: 1.5;">
+    <strong>&#8505; Note:</strong> At time of publishing, Semester 2 activities are expected to run as an in-platform simulation of Microsoft Foundry rather than live Foundry accounts. This page will be updated if that changes.
   </div>
 </div>
 

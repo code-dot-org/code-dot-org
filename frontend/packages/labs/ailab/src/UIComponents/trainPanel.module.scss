@@ -1,44 +1,31 @@
 @use '../sharedMixins' as mixins;
 
 .panel {
-  @include mixins.panel;
-
-  background-color: var(--background-neutral-secondary);
-  border-left: 1px solid var(--border-neutral-primary);
+  @include mixins.side-panel;
 }
 
 .header {
   @include mixins.panel-header;
 
   justify-content: center;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  letter-spacing: 0.72px;
-  text-transform: uppercase;
-  color: var(--text-neutral-quaternary);
+}
+
+.header .title {
+  @include mixins.panel-header-title;
 }
 
 .content {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  padding: 8px;
+  @include mixins.panel-content;
 }
 
 $features-menu-max-height: 240px;
 
 .card {
-  background-color: var(--background-neutral-primary);
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-md);
+  @include mixins.card;
 }
 
 .fields {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 6px 8px 10px;
+  @include mixins.card-fields;
 }
 
 .field {
@@ -48,8 +35,7 @@ $features-menu-max-height: 240px;
 }
 
 .field .dropdown {
-  width: 100%;
-  align-items: stretch;
+  @include mixins.full-width-field;
 }
 
 .featuresField .featuresDropdown {

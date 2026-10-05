@@ -33,6 +33,26 @@ for (const scenario of SCENARIOS) {
   });
 }
 
+for (const scenario of [
+  'multi-sso-teacher',
+  'lti-teacher',
+  'rostered-student',
+  'cap-locked-student',
+]) {
+  test(`no axe violations on the Integrations tab (${scenario})`, async ({
+    page,
+  }) => {
+    await page.goto(`/?scenario=${scenario}`);
+    await page.getByRole('tab', {name: 'Integrations'}).click();
+    await page
+      .getByRole('heading', {level: 2, name: 'Manage linked accounts'})
+      .waitFor();
+
+    const {violations} = await analyze(page);
+    expect(violations).toEqual([]);
+  });
+}
+
 test('no axe violations with the update-email modal open', async ({page}) => {
   await page.goto('/?scenario=teacher');
   await page.getByRole('button', {name: 'Update email'}).click();
