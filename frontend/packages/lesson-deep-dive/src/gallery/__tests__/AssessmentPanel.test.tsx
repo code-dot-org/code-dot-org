@@ -1,9 +1,7 @@
-import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
 
-import AssessmentPanel from '@cdo/apps/aiTutor/views/gallery/AssessmentPanel';
+import AssessmentPanel from '../AssessmentPanel';
+import {type ChallengeResponseDetail} from '../types';
 
 const baseDetail: ChallengeResponseDetail = {
   id: 8,
@@ -50,7 +48,7 @@ describe('AssessmentPanel', () => {
 
     expect(screen.getByText('Feedback')).toBeInTheDocument();
     expect(
-      screen.getByText('Great explanation of the network!')
+      screen.getByText('Great explanation of the network!'),
     ).toBeInTheDocument();
     expect(screen.queryByText('Rubric')).not.toBeInTheDocument();
     expect(screen.queryByText('AI Assigned Score')).not.toBeInTheDocument();
@@ -58,7 +56,7 @@ describe('AssessmentPanel', () => {
 
   it('shows a placeholder while the feedback is pending', () => {
     render(
-      <AssessmentPanel detail={{...baseDetail, student_feedback: null}} />
+      <AssessmentPanel detail={{...baseDetail, student_feedback: null}} />,
     );
 
     expect(screen.getByText('Feedback isn’t ready yet.')).toBeInTheDocument();
@@ -73,7 +71,7 @@ describe('AssessmentPanel', () => {
 
     // Levels are listed highest first, and only the assigned one is tagged.
     expect(
-      screen.getAllByText(/^Level \d$/).map(node => node.textContent)
+      screen.getAllByText(/^Level \d$/).map(node => node.textContent),
     ).toEqual(['Level 3', 'Level 2', 'Level 1', 'Level 0']);
     expect(screen.getByText('AI Assigned Score')).toBeInTheDocument();
     expect(screen.getByText('Answer is correct')).toBeInTheDocument();
