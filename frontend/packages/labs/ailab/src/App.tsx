@@ -23,10 +23,10 @@ import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import ModelCard from './UIComponents/ModelCard';
-import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
+import TestPanel from './UIComponents/TestPanel';
 import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
@@ -224,7 +224,6 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
@@ -275,15 +274,15 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       <TrainingModal />
 
       {currentPanel === 'results' && (
-        <BodyContainer>
-          <ContainerLeft>
-            <Results />
-          </ContainerLeft>
-          {resultsPhase === 1 && (
+        <BodyContainer flush>
+          <div className={styles.panelRow}>
+            <ContainerLeft>
+              <Results />
+            </ContainerLeft>
             <ContainerRight>
-              <Predict />
+              <TestPanel />
             </ContainerRight>
-          )}
+          </div>
         </BodyContainer>
       )}
 

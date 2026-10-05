@@ -65,7 +65,6 @@ export interface RootState {
   currentPanel: Panel;
   trainingModalStep: TrainingModalStep | undefined;
   currentColumn: string | undefined;
-  resultsPhase: number | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   historicResults: HistoricResult[];
@@ -113,7 +112,6 @@ export const initialState: RootState = {
   currentPanel: 'selectDataset',
   trainingModalStep: undefined,
   currentColumn: undefined,
-  resultsPhase: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: 'notStarted',
@@ -397,9 +395,6 @@ const ailabSlice = createSlice({
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
     },
-    setResultsPhase(state, action: PayloadAction<number>) {
-      state.resultsPhase = action.payload;
-    },
     setTrainingModalStep(
       state,
       action: PayloadAction<TrainingModalStep | undefined>,
@@ -490,7 +485,6 @@ export const {
   setCurrentColumn,
   setHighlightColumn,
   setHighlightDataset,
-  setResultsPhase,
   setTrainingModalStep,
   setResultsHighlightRow,
   setSaveStatus,
