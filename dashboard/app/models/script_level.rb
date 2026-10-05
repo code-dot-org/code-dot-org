@@ -452,6 +452,13 @@ class ScriptLevel < ApplicationRecord
         summary[:name] = level.display_name || level.name
       end
 
+      # Shown in the level header when the unit uses simple progress.
+      if level.header_label.present?
+        summary[:header_label] =
+          level.get_localized_property(:header_label).presence ||
+          level.header_label
+      end
+
       if bubble_choice?
         summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id, unit_group_unit: unit_group_unit)
       end

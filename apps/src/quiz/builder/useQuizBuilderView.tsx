@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';
 
-import {QuizLevelProperties, QuizViewContent, toBool} from '../types';
+import {QuizLevelProperties, QuizViewContent} from '../types';
+import {toBool} from '../utils';
 
 import QuizBuilderWorkspace from './QuizBuilderWorkspace';
 import QuizConfigurationPanel, {

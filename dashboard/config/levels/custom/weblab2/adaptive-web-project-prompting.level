@@ -1,14 +1,48 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-09-24T21:28:26.000Z",
   "level_num": "custom",
   "properties": {
     "project_template_level_name": "adaptive-web-template",
-    "hide_share_and_remix": true,
-    "initial_view_mode": "split",
-    "long_instructions": "This is your project. Prompt the AI to put your site's name in the header and a sentence about your site in the main section.\n\nBe specific about where each thing goes."
+    "hide_share_and_remix": "true",
+    "initial_view_mode": "preview",
+    "long_instructions": "**Do This:**\r\n\r\nPrompt the AI to put your site's name in the header and a sentence about your site in the main section. Be specific!",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "require_edit_to_continue": "false",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2026-09-30 22:16:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-09-30 22:16:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-09-30 22:19:28 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
 </Weblab2>

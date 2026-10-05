@@ -1,0 +1,192 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "cdo chart values",
+  "description": "Every key here is read by a template. A key absent from this file is rejected at render time instead of being silently dropped; that is the point of the file.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "nameOverride": {"type": "string"},
+    "fullnameOverride": {"type": "string"},
+    "image": {"type": "string"},
+    "imagePullPolicy": {"type": "string", "enum": ["Always", "IfNotPresent", "Never"]},
+    "command": {"$ref": "#/definitions/stringList"},
+    "args": {"$ref": "#/definitions/nullableStringList"},
+    "RAILS_ENV": {"type": ["string", "null"]},
+    "dnsName": {"type": "string"},
+    "dashboard_workers": {"type": "integer", "minimum": 0},
+    "dashboard": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {"type": "boolean"}
+      }
+    },
+    "locals.yml": {"$ref": "#/definitions/scalarMap"},
+    "extraEnv": {"$ref": "#/definitions/scalarMap"},
+    "require_external_secrets": {"type": "boolean"},
+    "healthChecks": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {"type": "boolean"}
+      }
+    },
+    "resources": {"$ref": "#/definitions/resources"},
+    "autoscaling": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "minReplicas": {"type": "integer", "minimum": 0},
+        "maxReplicas": {"type": "integer", "minimum": 0},
+        "replicasWhenAutoscaleDisabled": {"type": "integer", "minimum": 0}
+      }
+    },
+    "dashboardJob": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "name": {"type": "string"},
+        "command": {"$ref": "#/definitions/stringList"},
+        "args": {"$ref": "#/definitions/nullableStringList"},
+        "restartPolicy": {"type": "string", "enum": ["Never", "OnFailure"]},
+        "backoffLimit": {"type": "integer", "minimum": 0},
+        "ttlSecondsAfterFinished": {"type": "integer", "minimum": 0}
+      }
+    },
+    "activeJobWorker": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "replicas": {"type": "integer", "minimum": 0},
+        "priorityMode": {},
+        "command": {"$ref": "#/definitions/stringList"},
+        "args": {"$ref": "#/definitions/nullableStringList"},
+        "RAILS_ENV": {"type": ["string", "null"]},
+        "extraEnv": {"$ref": "#/definitions/scalarMap"},
+        "resources": {"$ref": "#/definitions/resources"}
+      }
+    },
+    "services": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "redis": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {"type": "boolean"},
+            "password": {"type": ["string", "null"]}
+          }
+        },
+        "mysql": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {"type": "boolean"},
+            "password": {"type": ["string", "null"]}
+          }
+        },
+        "minio": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {"type": "boolean"},
+            "user": {"type": "string"},
+            "password": {"type": ["string", "null"]},
+            "runSetupS3Job": {"type": "boolean"},
+            "storage": {"type": "string"}
+          }
+        }
+      }
+    },
+    "user": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "username": {"type": "string"},
+        "uid": {"$ref": "#/definitions/id"},
+        "gid": {"$ref": "#/definitions/id"},
+        "home": {"type": "string"},
+        "allowSudo": {"type": "boolean"}
+      }
+    },
+    "localDev": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mounts": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mountDotAWS": {"type": "boolean"},
+            "mountDotConfigGcloud": {"type": "boolean"},
+            "AWS_PROFILE": {"type": ["string", "null"]},
+            "hostPaths": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "home": {"type": ["string", "null"]},
+                "skaffoldStorage": {"type": ["string", "null"]}
+              }
+            }
+          }
+        }
+      }
+    },
+    "scheduling": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "nodeSelector": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        },
+        "tolerations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "key": {"type": "string"},
+              "operator": {"type": "string", "enum": ["Equal", "Exists"]},
+              "value": {"type": "string"},
+              "effect": {"type": "string", "enum": ["NoSchedule", "PreferNoSchedule", "NoExecute"]},
+              "tolerationSeconds": {"type": "integer"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "stringList": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "nullableStringList": {
+      "type": ["array", "null"],
+      "items": {"type": "string"}
+    },
+    "scalarMap": {
+      "type": ["object", "null"],
+      "additionalProperties": {"type": ["string", "number", "boolean", "null"]}
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cpu": {"type": ["number", "string", "null"]},
+        "memory": {"type": ["string", "null"]},
+        "ephemeralStorage": {"type": ["string", "null"]}
+      }
+    },
+    "id": {
+      "type": ["integer", "string"],
+      "pattern": "^[0-9]+$",
+      "minimum": 0
+    }
+  }
+}

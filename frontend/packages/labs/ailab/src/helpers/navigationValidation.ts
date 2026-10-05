@@ -175,16 +175,6 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
       ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
       : undefined;
     next = undefined;
-  } else if (state.currentPanel === 'trainModel') {
-    if (state.trainedModel) {
-      prev = undefined;
-      next = {panel: 'generateResults', text: I18n.t('navigateForward')};
-    }
-  } else if (state.currentPanel === 'generateResults') {
-    if (state.trainedModel) {
-      prev = undefined;
-      next = {panel: 'results', text: I18n.t('navigateForward')};
-    }
   } else if (state.currentPanel === 'results') {
     prev = isPanelAvailable(state, 'dataDisplayFeatures')
       ? {panel: 'dataDisplayFeatures', text: I18n.t('tryAgain')}
