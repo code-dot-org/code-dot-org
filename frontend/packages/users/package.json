@@ -45,6 +45,7 @@
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
     "@mui/utils": "catalog:",
+    "js-cookie": "^3.0.5",
     "tabbable": "^6.5.0"
   },
   "devDependencies": {

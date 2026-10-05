@@ -26,6 +26,19 @@ declare global {
 export interface SiteConfigExtensions {}
 
 /**
+ * Shape of the frontend analytics runtime config parsed from the
+ * <meta name="app-config"> tag.
+ */
+export interface AnalyticsRuntimeConfig {
+  analytics?: {
+    provider?: 'statsig' | 'none';
+    enabled?: boolean;
+    statsig?: {clientKey: string; autoCapture?: boolean};
+    user?: {userId: string; userType?: string};
+  };
+}
+
+/**
  * Shape of the frontend observability runtime config parsed from the
  * <meta name="app-config"> tag.
  */
@@ -47,13 +60,15 @@ export interface ObservabilityRuntimeConfig {
  * Parse the <meta name="app-config"> tag and return the runtime config.
  * Returns an empty object if the tag is absent or the JSON is malformed.
  */
-function parseRuntimeConfig(): ObservabilityRuntimeConfig {
+function parseRuntimeConfig(): AnalyticsRuntimeConfig &
+  ObservabilityRuntimeConfig {
   try {
     const meta = document.querySelector<HTMLMetaElement>(
       'meta[name="app-config"]',
     );
     if (!meta?.content) return {};
-    return JSON.parse(meta.content) as ObservabilityRuntimeConfig;
+    return JSON.parse(meta.content) as AnalyticsRuntimeConfig &
+      ObservabilityRuntimeConfig;
   } catch {
     return {};
   }
@@ -66,6 +81,13 @@ export class SiteConfig {
   public readonly dashboardApiUrl: string;
   /** Brand- and environment-aware marketing-site origin (scheme + host). */
   public readonly marketingOrigin: string;
+
+  /**
+   * Analytics runtime config parsed from the meta tag.
+   * Like observability, this is part of SiteConfig itself because core parses
+   * the runtime config before any plugins run.
+   */
+  public readonly analytics: NonNullable<AnalyticsRuntimeConfig['analytics']>;
 
   /**
    * Observability runtime config parsed from the meta tag.
@@ -83,10 +105,17 @@ export class SiteConfig {
     this.dashboardApiUrl = getDashboardApiUrl(this.environment);
     this.marketingOrigin = getMarketingOrigin(this.brand, this.environment);
 
+    // Normalize `provider` after the spread: the meta tag is untrusted input,
+    // and spreading last would let an explicit `"provider": null` overwrite
+    // the default and leave the field unset.
     const runtime = parseRuntimeConfig();
+    this.analytics = {
+      ...runtime.analytics,
+      provider: runtime.analytics?.provider ?? 'none',
+    };
     this.observability = {
-      provider: runtime.observability?.provider ?? 'none',
       ...runtime.observability,
+      provider: runtime.observability?.provider ?? 'none',
     };
   }
 
