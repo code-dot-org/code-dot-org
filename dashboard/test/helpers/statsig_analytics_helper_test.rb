@@ -14,6 +14,10 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
       end
     end
 
+    before do
+      DCDO.stubs(:get).with('statsig-enabled', true).returns(true)
+    end
+
     it 'returns false' do
       _load_web_analytics.must_equal false
     end
@@ -25,6 +29,18 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
         it 'returns true' do
           _load_web_analytics.must_equal true
         end
+      end
+    end
+
+    context 'when Statsig is switched off' do
+      let(:request_path) {StatsigAnalyticsHelper::TARGET_PATHS.first}
+
+      before do
+        DCDO.stubs(:get).with('statsig-enabled', true).returns(false)
+      end
+
+      it 'returns false even on a matching path' do
+        _load_web_analytics.must_equal false
       end
     end
   end
