@@ -285,6 +285,24 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_equal 'what the job recorded', request.reload.response
   end
 
+  # A row predating execution_source cannot say where it ran. Accepting the
+  # report would let a client overwrite the response that legacy_mismatch then
+  # compares its own event against.
+  test 'PUT update returns forbidden when execution source is unknown' do
+    sign_in(@authorized_student1)
+    request = create(
+      :aichat_request,
+      user: @authorized_student1,
+      response: 'what the job recorded',
+      execution_source: nil
+    )
+
+    put :update, params: {id: request.id, response: 'forged'}, as: :json
+
+    assert_response :forbidden
+    assert_equal 'what the job recorded', request.reload.response
+  end
+
   test 'PUT update returns forbidden if user is not the requester' do
     sign_in(@authorized_teacher1)
     request = create(

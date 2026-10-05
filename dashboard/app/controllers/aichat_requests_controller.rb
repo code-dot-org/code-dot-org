@@ -135,11 +135,13 @@ class AichatRequestsController < ApplicationController
     # Only the user who initiated the request can update it.
     return render status: :forbidden, json: {} if request.user_id != current_user.id
 
-    # A dashboard-executed row is written by our own job. Letting the client
-    # overwrite it would replace recorded output with a claim, and that output is
-    # what event integrity compares a logged Rails-path event against.
-    if request.executed_by_dashboard?
-      return render status: :forbidden, json: {error: 'request was executed by dashboard'}
+    # Only a row we know the client executed may be reported on. A dashboard row
+    # was written by our own job, and that output is what event integrity
+    # compares a logged Rails-path event against; letting the client overwrite it
+    # would replace evidence with a claim. A row predating execution_source
+    # cannot say which it is, so it is refused rather than assumed harmless.
+    unless request.executed_by_gateway?
+      return render status: :forbidden, json: {error: 'request was not executed by the client'}
     end
 
     if request.update(update_params)
