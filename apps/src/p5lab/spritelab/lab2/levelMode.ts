@@ -27,6 +27,9 @@ export interface LevelMode {
   placeOne?: boolean;
   /** Which image-level layout to show; absent is the image dialog pane. */
   imageUi?: ImageUi;
+  /** The explore layout's sentence, by id in exploreSentences.json; the
+      image type's own sentence when unset. */
+  sentence?: string;
 }
 
 /** The image-level layout under trial: the two-half scene with the word

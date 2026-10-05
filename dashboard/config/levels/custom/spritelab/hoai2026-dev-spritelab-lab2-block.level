@@ -24,7 +24,9 @@
     "level_mode": {
       "kind": "image",
       "imageType": "block",
-      "imageRole": "block"
+      "imageRole": "block",
+      "imageUi": "explore",
+      "sentence": "block"
     },
     "guide_steps": [
       {

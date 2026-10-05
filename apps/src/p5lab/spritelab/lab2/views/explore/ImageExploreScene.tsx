@@ -109,6 +109,8 @@ interface Made {
 interface ImageExploreSceneProps {
   imageType: ImageType;
   imageSubject?: ImageSubject;
+  /** The sentence to build, by id; the image type's own when unset. */
+  sentenceId?: string;
   /** Style the controls start on. */
   defaultStyle: ImageStyle;
   /** Recorded on the saved image. */
@@ -123,6 +125,7 @@ interface ImageExploreSceneProps {
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   imageType,
   imageSubject,
+  sentenceId,
   defaultStyle,
   imageRole,
   uploadImage,
@@ -132,7 +135,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
-  const sentence = sentenceFor(imageType, imageSubject);
+  const sentence = sentenceFor(imageType, imageSubject, sentenceId);
   const [choices, setChoices] = useState<Choices>({});
   const complete = isComplete(sentence, choices);
   // Every character is animated; an object or a background is one picture.

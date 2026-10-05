@@ -1882,6 +1882,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <ImageExploreScene
               imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
               imageSubject={levelProperties.levelMode?.imageSubject}
+              sentenceId={levelProperties.levelMode?.sentence}
               defaultStyle={DEFAULT_IMAGE_STYLE}
               imageRole={levelProperties.levelMode?.imageRole}
               uploadImage={uploadImage}

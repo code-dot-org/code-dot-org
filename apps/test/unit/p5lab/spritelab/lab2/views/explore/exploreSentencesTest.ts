@@ -77,4 +77,50 @@ describe('exploreSentences', () => {
     expect(sentenceFor('block').id).toBe('object');
     expect(sentenceFor('background').id).toBe('place');
   });
+
+  it('a level names its sentence; an unknown name falls back', () => {
+    expect(sentenceFor('block', undefined, 'block').id).toBe('block');
+    expect(sentenceFor('background', undefined, 'place-time').id).toBe(
+      'place-time'
+    );
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    expect(sentenceFor('background', undefined, 'nope').id).toBe('place');
+    expect(warn).toHaveBeenCalled();
+    warn.mockRestore();
+  });
+
+  it("the progression's sentences read as expected when full", () => {
+    const full = (id: string, choices: Record<string, string>) =>
+      promptText(sentenceFor('sprite', undefined, id), choices);
+    expect(
+      full('friend', {adjective: 'sleepy', creature: 'cat', expression: 'shy'})
+    ).toBe('A sleepy cat looking shy');
+    expect(
+      full('place-time', {adjective: 'spooky', place: 'castle', time: 'night'})
+    ).toBe('A spooky castle at night');
+    expect(
+      full('place-detail', {place: 'forest', detail: 'glowing-mushrooms'})
+    ).toBe('A forest with glowing mushrooms');
+    expect(full('block', {material: 'ice'})).toBe('A block of ice');
+    expect(full('block', {material: 'stone', detail: 'tiny-gems'})).toBe(
+      'A block of stone with tiny gems'
+    );
+    expect(
+      full('treasure', {look: 'golden', treasure: 'key', detail: 'a-ribbon'})
+    ).toBe('A golden key with a ribbon');
+  });
+
+  it("every sentence's optional slots are the ones inside phrases", () => {
+    for (const [id, chained] of [
+      ['friend', ['expression']],
+      ['place-time', ['time']],
+      ['place-detail', ['detail']],
+      ['block', ['detail']],
+      ['treasure', ['detail']],
+    ] as const) {
+      expect(chainedSlotIds(sentenceFor('sprite', undefined, id))).toEqual(
+        chained
+      );
+    }
+  });
 });
