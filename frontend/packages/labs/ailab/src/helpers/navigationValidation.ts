@@ -73,10 +73,9 @@ export function isPanelEnabled(state: RootState, panelId: string): boolean {
 function isPanelAvailable(state: RootState, panelId: string): boolean {
   const mode = state.mode;
 
+  // Hidden for now; the dataset picker will come back later.
   if (panelId === 'selectDataset') {
-    if (mode && mode.datasets && mode.datasets.length === 1) {
-      return false;
-    }
+    return false;
   }
 
   if (panelId === 'dataDisplayLabel') {

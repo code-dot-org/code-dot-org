@@ -144,24 +144,19 @@ describe('prevNextButtons on the data panels', () => {
     I18n.initI18n();
   });
 
-  test.each(['dataDisplayLabel', 'dataDisplayFeatures'])(
-    '%s goes back to dataset selection and has no next button',
-    currentPanel => {
+  test.each([
+    ['dataDisplayLabel', undefined],
+    ['dataDisplayFeatures', {datasets: ['a', 'b']}],
+  ])(
+    '%s never goes back to the hidden dataset picker',
+    (currentPanel, mode) => {
       const {prev, next} = prevNextButtons({
         ...selectedFeaturesState,
         currentPanel,
+        mode,
       });
-      expect(prev.panel).toBe('selectDataset');
+      expect(prev).toBeUndefined();
       expect(next).toBeUndefined();
     },
   );
-
-  test('has no back button when the mode fixes the dataset', () => {
-    const {prev} = prevNextButtons({
-      ...selectedFeaturesState,
-      currentPanel: 'dataDisplayFeatures',
-      mode: {datasets: ['tacos_toy']},
-    });
-    expect(prev).toBeUndefined();
-  });
 });
