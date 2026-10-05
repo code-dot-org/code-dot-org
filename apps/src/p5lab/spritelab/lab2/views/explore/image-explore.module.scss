@@ -108,8 +108,63 @@
   gap: 16px;
 }
 
-.generateButton {
+// A big button with a ledge that presses down; it rocks once it can go.
+.generateButton.generateButton {
   margin-left: auto;
+  min-height: 48px;
+  padding: 8px 28px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 4px 0 rgb(0 0 0 / 35%);
+  transition:
+    transform 0.1s ease-out,
+    box-shadow 0.1s ease-out;
+
+  &:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 rgb(0 0 0 / 35%);
+  }
+
+  &:disabled {
+    box-shadow: none;
+  }
+}
+
+// Pressing stops the rock, so the press can move the button.
+.generateReady {
+  animation: ready-rock 2.4s ease-in-out infinite;
+
+  &:active {
+    animation: none;
+  }
+}
+
+@keyframes ready-rock {
+  0%,
+  70%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+  78% {
+    transform: scale(1.06) rotate(-2deg);
+  }
+  86% {
+    transform: scale(1.06) rotate(2deg);
+  }
+  94% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .generateReady {
+    animation: none;
+  }
+
+  .generateButton.generateButton {
+    transition: none;
+  }
 }
 
 // Held at the panel's bottom.
@@ -215,10 +270,30 @@
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
-// Doubled to outrank the button's own hover background.
+// Doubled to outrank the button's own hover background. A chosen thumb
+// pops.
 .verdictButton.verdictChosen {
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);
+  animation: thumb-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes thumb-pop {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verdictButton.verdictChosen {
+    animation: none;
+  }
 }
 
 // Each button grows from its label's width, so no label wraps.

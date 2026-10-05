@@ -17,7 +17,9 @@ import {
   WORD_DRAG_TYPE,
   wordFor,
 } from './exploreSentences';
+import {playSound} from './exploreSounds';
 import {withPeriod} from './sentencePieces';
+import {hueFor} from './wordHues';
 
 import styles from './word-menus.module.scss';
 
@@ -73,6 +75,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     setDirection(next < index ? 'left' : 'right');
     setIndex(next);
     setMoveCount(n => n + 1);
+    playSound('flip');
   };
 
   const chained = chainedSlotIds(sentence);
@@ -97,11 +100,39 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       });
     }
     onChange(next);
-    // Clearing a required word locks the carousel on that word's set.
     const at = slots.findIndex(s => s.id === slotId);
+    // A required word completes the sentence: a chime, not a tick.
+    playSound(!wordId ? 'unpick' : slots[at].required ? 'complete' : 'pick');
+    // Clearing a required word locks the carousel on that word's set.
     if (!wordId && slots[at].required && at !== index) {
       goTo(at);
     }
+  };
+
+  // A word for every required slot and for most of the rest, a chained
+  // phrase stopping at the first it skips.
+  const shuffle = () => {
+    const next: Choices = {};
+    const pick = (s: Slot) =>
+      s.words[Math.floor(Math.random() * s.words.length)].id;
+    let chainOpen = true;
+    for (const s of slots) {
+      if (s.required) {
+        next[s.id] = pick(s);
+        continue;
+      }
+      const inChain = chained.includes(s.id);
+      if (inChain && !chainOpen) {
+        continue;
+      }
+      if (Math.random() < 0.67) {
+        next[s.id] = pick(s);
+      } else if (inChain) {
+        chainOpen = false;
+      }
+    }
+    onChange(next);
+    playSound('shuffle');
   };
 
   // A chip takes a dragged word of its own slot.
@@ -148,6 +179,8 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     (last, s, i) => (isAvailable(s) ? i : last),
     0
   );
+  // With one set to show, there is nowhere to go: no arrows, no dots.
+  const oneSet = lastAvailable === 0;
   // A set that closed while on show gives way to the last open one.
   useEffect(() => {
     if (index > lastAvailable) {
@@ -194,6 +227,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                   className={classNames(
                     styles.chip,
                     styles.placeholder,
+                    styles[`hue_${hueFor(s.id)}`],
                     overSlotId === s.id && styles.dropTarget
                   )}
                   aria-hidden
@@ -206,9 +240,11 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         }
         return [
           <span
-            key={s.id}
+            // Keyed by word too, so a new word lands with its bounce.
+            key={`${s.id}-${word.id}`}
             className={classNames(
               styles.chip,
+              styles[`hue_${hueFor(s.id)}`],
               overSlotId === s.id && styles.dropTarget
             )}
             {...dropHandlers(s.id)}
@@ -222,7 +258,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
               onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
             >
               {word.emoji && (
-                <span className={styles.emoji} aria-hidden>
+                <span className={styles.emojiBadge} aria-hidden>
                   {word.emoji}
                 </span>
               )}
@@ -266,7 +302,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         <div className={styles.carousel}>
           <button
             type="button"
-            className={styles.arrow}
+            className={classNames(styles.arrow, oneSet && styles.navHidden)}
             aria-label="Previous words"
             disabled={!canMove || index === 0}
             onClick={() => goTo(Math.max(0, index - 1))}
@@ -297,7 +333,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                   aria-hidden={!shown}
                 >
                   <div className={styles.words}>
-                    {set.words.map(word => {
+                    {set.words.map((word, wordIndex) => {
                       const chosen = choices[set.id] === word.id;
                       return (
                         <button
@@ -305,8 +341,10 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                           type="button"
                           className={classNames(
                             styles.word,
+                            styles[`hue_${hueFor(set.id)}`],
                             chosen && styles.chosen
                           )}
+                          style={{'--i': wordIndex} as React.CSSProperties}
                           aria-pressed={chosen}
                           disabled={disabled}
                           draggable={!disabled}
@@ -323,7 +361,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                           }
                         >
                           {word.emoji && (
-                            <span className={styles.emoji} aria-hidden>
+                            <span className={styles.emojiBadge} aria-hidden>
                               {word.emoji}
                             </span>
                           )}
@@ -338,7 +376,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
           </div>
           <button
             type="button"
-            className={styles.arrow}
+            className={classNames(styles.arrow, oneSet && styles.navHidden)}
             aria-label="Next words"
             disabled={!canMove || index >= lastAvailable}
             onClick={() => goTo(Math.min(lastAvailable, index + 1))}
@@ -346,24 +384,35 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             <FontAwesomeV6Icon iconName="chevron-right" />
           </button>
         </div>
-        <div className={styles.dots}>
-          {slots.map((s, i) =>
-            isAvailable(s) ? (
-              <button
-                key={s.id}
-                type="button"
-                className={classNames(
-                  styles.dot,
-                  i === index && styles.dotCurrent,
-                  filled(s.id) && styles.dotFilled
-                )}
-                aria-label={`${s.label} words`}
-                aria-current={i === index ? 'true' : undefined}
-                disabled={!canMove}
-                onClick={() => goTo(i)}
-              />
-            ) : null
-          )}
+        <div className={styles.dotsRow}>
+          <div className={classNames(styles.dots, oneSet && styles.navHidden)}>
+            {slots.map((s, i) =>
+              isAvailable(s) ? (
+                <button
+                  key={s.id}
+                  type="button"
+                  className={classNames(
+                    styles.dot,
+                    i === index && styles.dotCurrent,
+                    filled(s.id) && styles.dotFilled
+                  )}
+                  aria-label={`${s.label} words`}
+                  aria-current={i === index ? 'true' : undefined}
+                  disabled={!canMove}
+                  onClick={() => goTo(i)}
+                />
+              ) : null
+            )}
+          </div>
+          <button
+            type="button"
+            className={styles.shuffle}
+            disabled={disabled}
+            onClick={shuffle}
+          >
+            <FontAwesomeV6Icon iconName="shuffle" />
+            Surprise me
+          </button>
         </div>
       </div>
     </div>

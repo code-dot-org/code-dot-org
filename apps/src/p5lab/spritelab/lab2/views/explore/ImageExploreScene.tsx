@@ -7,7 +7,6 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   Button as MuiButton,
-  CircularProgress,
   IconButton as MuiIconButton,
   Typography as MuiTypography,
 } from '@mui/material';
@@ -63,6 +62,8 @@ import {
   promptText,
   sentenceFor,
 } from './exploreSentences';
+import {playSound} from './exploreSounds';
+import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
 import SentenceReadOnly from './SentenceReadOnly';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
@@ -175,6 +176,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     setVerdict(null);
     setError(null);
     setFact(current => pickFact(current ?? undefined));
+    playSound('go');
     try {
       const options: GenerateImageOptions = {
         imageType,
@@ -208,6 +210,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         sent,
       });
       setMode('result');
+      playSound('reveal');
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -286,6 +289,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const judge = useCallback(
     (next: Verdict) => {
       setVerdict(next);
+      playSound(next === 'up' ? 'cheer' : 'hmm');
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
@@ -445,21 +449,39 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 role="status"
                 aria-label="Making your picture"
               >
-                <CircularProgress size={56} thickness={5} />
+                <PixelShuffle />
               </div>
             ) : made ? (
-              sheet ? (
-                <AnimatedSheetPreview {...sheet} />
-              ) : (
-                <img
+              <>
+                {sheet ? (
+                  <AnimatedSheetPreview {...sheet} />
+                ) : (
+                  <img
+                    src={made.dataURI}
+                    alt={made.result.generation.prompt}
+                    className={classNames(
+                      styles.preview,
+                      made.result.pixelGridSize && styles.pixelArt
+                    )}
+                  />
+                )}
+                {/* Keyed by picture: each new one resolves and sparks once. */}
+                <PixelReveal
+                  key={`reveal-${made.dataURI}`}
                   src={made.dataURI}
-                  alt={made.result.generation.prompt}
-                  className={classNames(
-                    styles.preview,
-                    made.result.pixelGridSize && styles.pixelArt
-                  )}
+                  crop={
+                    sheet
+                      ? {
+                          x: 0,
+                          y: 0,
+                          width: sheet.frameSize.x,
+                          height: sheet.frameSize.y,
+                        }
+                      : undefined
+                  }
                 />
-              )
+                <SparkleBurst key={`burst-${made.dataURI}`} />
+              </>
             ) : null}
           </div>
           {showingResult && made && (
@@ -576,9 +598,13 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                   onChange={e => setStyle(e.target.value as ImageStyle)}
                 />
                 <MuiButton
-                  className={styles.generateButton}
+                  className={classNames(
+                    styles.generateButton,
+                    complete && !busy && styles.generateReady
+                  )}
                   variant="contained"
                   color="primary"
+                  startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
                   disabled={!complete || busy}
                   onClick={generate}
                 >

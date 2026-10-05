@@ -28,16 +28,76 @@
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
+// A word set's colours: the bead, its text, and the darker ledge under a
+// pressed button.
+.hue_teal {
+  --hue: #{color.$teal};
+  --hue-dark: #{color.$dark_teal};
+  --hue-text: #{color.$white};
+}
+
+.hue_yellow {
+  --hue: #{color.$yellow};
+  --hue-dark: #{color.$orange};
+  --hue-text: #{color.$dark_gray};
+}
+
+.hue_purple {
+  --hue: #{color.$purple};
+  --hue-dark: #{color.$dark_purple};
+  --hue-text: #{color.$white};
+}
+
+.hue_orange {
+  --hue: #{color.$dark_orange};
+  --hue-dark: #c25f00;
+  --hue-text: #{color.$white};
+}
+
+.hue_blue {
+  --hue: #{color.$default_blue};
+  --hue-dark: #{color.$dark_blue};
+  --hue-text: #{color.$white};
+}
+
 .chip {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin: 0 2px;
-  padding: 4px 24px 4px 14px;
-  border-radius: 8px;
+  padding: 3px 24px 3px 4px;
+  border-radius: 999px;
   line-height: 1.4;
-  background-color: var(--text-neutral-primary, color.$dark_charcoal);
-  color: var(--background-neutral-primary, color.$white);
+  background-color: var(--hue, var(--text-neutral-primary, color.$dark_charcoal));
+  color: var(--hue-text, var(--background-neutral-primary, color.$white));
+  box-shadow: 0 2px 0 var(--hue-dark, transparent);
   vertical-align: middle;
+  animation: chip-land 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes chip-land {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+// The emoji sits in its own round badge at the chip's left.
+.emojiBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 85%);
+  font-size: 0.85em;
+  line-height: 1;
 }
 
 .keepTogether {
@@ -47,6 +107,9 @@
 // Margin 0: the page gives every button 5px, which would make the chip
 // taller than the sentence's line.
 .chipWord {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -67,18 +130,36 @@
   padding-right: 14px;
 }
 
-// Where the word from the set on show would land.
+// Where the word from the set on show would land: a breathing dashed slot
+// in that set's colour.
 .placeholder {
-  min-width: 72px;
+  min-width: 80px;
+  min-height: 1.5em;
   padding-right: 14px;
   background: transparent;
-  border: 1px dashed var(--text-neutral-secondary, color.$dark_charcoal);
-  opacity: 0.5;
+  border: 2px dashed var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
+  box-shadow: none;
+  opacity: 0.8;
+  animation: slot-breathe 1.6s ease-in-out infinite;
+}
+
+@keyframes slot-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+  }
 }
 
 .dropTarget {
   opacity: 1;
-  box-shadow: 0 0 0 3px var(--border-brand-primary, color.$brand_primary_default);
+  animation: none;
+  transform: scale(1.08);
+  box-shadow: 0 0 0 4px var(--hue, var(--border-brand-primary, color.$brand_primary_default));
 }
 
 .dimmed {
@@ -104,14 +185,16 @@
   cursor: pointer;
 }
 
+// A tray the words sit in, with a ledge under it.
 .carouselBox {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 6px 6px 8px;
-  border-radius: 8px;
+  padding: 8px 6px 8px;
+  border-radius: 16px;
   border: 1px solid var(--border-neutral-secondary, color.$light_gray);
   background-color: var(--background-neutral-primary, color.$lightest_gray);
+  box-shadow: 0 4px 0 rgb(0 0 0 / 25%);
 }
 
 @media (max-height: 800px) {
@@ -132,6 +215,17 @@
   display: flex;
   align-items: stretch;
   gap: 4px;
+}
+
+// The arrows and dots fade in once there is a second set to go to.
+.arrow,
+.dots {
+  transition: opacity 0.3s ease-out;
+}
+
+.dots.navHidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .arrow {
@@ -155,6 +249,12 @@
     opacity: 0.3;
     cursor: default;
   }
+
+  // After the disabled rule, whose opacity it must beat.
+  &.navHidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 // All sets share one grid cell, so the stack is as tall as the tallest set.
@@ -167,7 +267,7 @@
 .set {
   grid-area: 1 / 1;
   min-width: 0;
-  min-height: 84px;
+  min-height: 108px;
   display: flex;
   align-items: center;
   padding: 6px 4px;
@@ -175,7 +275,7 @@
 
 @media (max-height: 800px) {
   .set {
-    min-height: 64px;
+    min-height: 84px;
     padding: 4px;
   }
 }
@@ -230,10 +330,54 @@
   gap: 6px;
 }
 
+// The dots centred, with the shuffle at the right.
+.dotsRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+}
+
 .dots {
   display: flex;
   justify-content: center;
   gap: 8px;
+}
+
+.shuffle {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--background-neutral-secondary, color.$white);
+  color: var(--text-neutral-primary, color.$dark_charcoal);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.08);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(calc(-50% + 2px));
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
 }
 
 .dot {
@@ -275,28 +419,81 @@
   transform: scale(1.25);
 }
 
+// A word to pick: a pill with a coloured rim and a ledge, that lifts on
+// hover and presses down on click. Each pops in a beat after the last.
 .word {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin: 0;
-  border: 1px solid var(--text-neutral-primary, color.$dark_charcoal);
-  border-radius: 8px;
-  background: transparent;
+  min-height: 44px;
+  border: 2px solid var(--hue, var(--text-neutral-primary, color.$dark_charcoal));
+  border-radius: 999px;
+  background: var(--background-neutral-secondary, color.$white);
   color: var(--text-neutral-primary, color.$dark_charcoal);
   font: inherit;
-  font-size: 16px;
-  padding: 6px 14px;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 4px 16px 4px 6px;
+  box-shadow: 0 3px 0 var(--hue-dark, color.$dark_charcoal);
   cursor: grab;
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.12s ease-out;
+  // Backwards only: a fill after the end would hold the pop's transform
+  // over the hover and press ones.
+  animation: word-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 35ms);
+
+  .emojiBadge {
+    background: var(--hue);
+    color: var(--hue-text);
+  }
 
   &:hover:not(:disabled, .chosen) {
-    background-color: var(--background-neutral-primary, color.$lightest_gray);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 var(--hue-dark, color.$dark_charcoal);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 var(--hue-dark, color.$dark_charcoal);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@keyframes word-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 // Outranks the hover above.
 .word.chosen {
-  background-color: var(--text-neutral-primary, color.$dark_charcoal);
-  color: var(--background-neutral-primary, color.$white);
+  background-color: var(--hue, var(--text-neutral-primary, color.$dark_charcoal));
+  color: var(--hue-text, var(--background-neutral-primary, color.$white));
+
+  .emojiBadge {
+    background: rgb(255 255 255 / 85%);
+  }
 }
 
-.emoji {
-  margin-right: 6px;
+@media (prefers-reduced-motion: reduce) {
+  .chip,
+  .word,
+  .placeholder {
+    animation: none;
+  }
+
+  .word {
+    transition: none;
+  }
 }

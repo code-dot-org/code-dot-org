@@ -1,0 +1,100 @@
+@use "color.scss";
+
+.spark_teal {
+  --spark: #{color.$light_teal};
+}
+
+.spark_yellow {
+  --spark: #{color.$yellow};
+}
+
+.spark_purple {
+  --spark: #{color.$light_purple};
+}
+
+.spark_orange {
+  --spark: #{color.$orange};
+}
+
+// Over the picture, inside the frame's rounded border.
+.reveal {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.18s ease-out;
+}
+
+.revealFading {
+  opacity: 0;
+}
+
+.burst {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.spark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  background: var(--spark);
+  // Square sparks: it is a pixel lab.
+  border-radius: 2px;
+  animation: spark-fly 0.75s cubic-bezier(0.2, 0.8, 0.3, 1) var(--delay)
+    both;
+}
+
+@keyframes spark-fly {
+  from {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) scale(0.3) rotate(90deg);
+  }
+}
+
+.shuffle {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  width: min(42%, 180px);
+  aspect-ratio: 1;
+}
+
+.block {
+  background: var(--spark);
+  border-radius: 3px;
+  animation: block-blink 1.2s ease-in-out var(--delay) infinite;
+}
+
+@keyframes block-blink {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block {
+    animation: none;
+    opacity: 0.6;
+    transform: none;
+  }
+}
