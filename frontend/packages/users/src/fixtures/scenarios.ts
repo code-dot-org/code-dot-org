@@ -34,6 +34,7 @@ export const USERS_SCENARIO_TAGS = [
   'multi-sso-teacher',
   'lti-teacher',
   'lti-only-teacher',
+  'restricted-lti-teacher',
   'rostered-student',
   'cap-locked-student',
   'unmigrated-teacher',
@@ -505,6 +506,17 @@ const ltiOnlyTeacher: UsersScenario = {
     'Schoology-only educator — unlinking would lock them out; roster sync off.',
 };
 
+const restrictedLtiTeacher: UsersScenario = {
+  ...ltiTeacher,
+  currentUser: {...ltiTeacher.currentUser, id: 18},
+  settings: {
+    ...ltiTeacher.settings,
+    integrations: {...ltiIntegrations, can_manage_linked_accounts: false},
+  },
+  description:
+    'Educator in a restricted LMS deployment — roster sync only, no linked accounts.',
+};
+
 const rosteredStudent: UsersScenario = {
   ...ssoStudent,
   currentUser: {...ssoStudent.currentUser, id: 19},
@@ -599,6 +611,7 @@ export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
   'multi-sso-teacher': multiSsoTeacher,
   'lti-teacher': ltiTeacher,
   'lti-only-teacher': ltiOnlyTeacher,
+  'restricted-lti-teacher': restrictedLtiTeacher,
   'rostered-student': rosteredStudent,
   'cap-locked-student': capLockedStudent,
   'unmigrated-teacher': unmigratedTeacher,
