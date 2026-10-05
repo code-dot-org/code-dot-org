@@ -1,10 +1,10 @@
 /* React component to handle displaying accuracy results. */
 import classNames from 'classnames';
-import {useEffect, useCallback} from 'react';
+import {useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {setShowResultsDetails, setResultsPhase} from '../redux';
+import {setShowResultsDetails} from '../redux';
 
 import DecisionTree from './DecisionTree';
 import ResultsDetails from './ResultsDetails';
@@ -18,14 +18,6 @@ const Results = () => {
   const historicResults = useAppSelector(state => state.historicResults);
   const showResultsDetails = useAppSelector(state => state.showResultsDetails);
   const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(setResultsPhase(0));
-    const timer = setTimeout(() => {
-      dispatch(setResultsPhase(1));
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [dispatch]);
 
   const showDetails = useCallback(() => {
     dispatch(setShowResultsDetails(true));

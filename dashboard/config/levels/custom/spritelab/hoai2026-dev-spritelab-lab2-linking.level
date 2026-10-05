@@ -29,7 +29,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Link your scenes.** Your second character has a **when clicked** event. Drag **go to scene** onto the dotted outline under it. Click **Play**, then click your character."
+        "text": "**Link your scenes.** The **at [9] seconds** event is ready. Drag **go to scene** onto the dotted outline under it. Click **Play** and wait for it."
       },
       {
         "text": "**Your scenes are connected!** Click **Continue**.",
@@ -39,7 +39,7 @@
         }
       }
     ],
-    "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **when clicked** so clicking your second character jumps to your platformer.",
+    "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **at [9] seconds**. After 9 seconds, your story jumps to your platformer.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -59,20 +59,37 @@
     },
     "add_blocks": [
       {
-        "attachTo": "gamelab_spriteClicked",
-        "shadow": {
-          "type": "spritelab2_placeholder",
-          "extraState": {
-            "like": {
-              "type": "spritelab2_goToScene",
+        "type": "gamelab_atTime",
+        "data": "at-9",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
               "fields": {
-                "SCENE": "platform-scene"
+                "NUM": 9
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "spritelab2_goToScene",
+                "fields": {
+                  "SCENE": "platform-scene"
+                }
               }
             }
           }
         }
       }
-    ]
+    ],
+    "header_label": "Conclusion"
   }
 }]]></config>
 </GamelabJr>

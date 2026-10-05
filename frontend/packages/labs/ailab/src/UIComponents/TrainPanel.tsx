@@ -1,12 +1,11 @@
 /* Panel for choosing a model's label and features, then training it. */
-import {Button, IconButton as MuiIconButton, Tooltip} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
 import type {ChangeEvent, ReactNode} from 'react';
 
 import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxDropdown';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
@@ -15,52 +14,18 @@ import {
   addSelectedFeature,
   readyToTrain,
   removeSelectedFeature,
-  setCurrentPanel,
   setLabelColumn,
+  setTrainingModalStep,
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
+import {store} from '../store';
+import train from '../train';
 
+import FieldLabel from './FieldLabel';
+import SentenceTag from './SentenceTag';
+
+import appStyles from '../app.module.scss';
 import styles from './trainPanel.module.scss';
-
-interface FieldLabelProps {
-  text: string;
-  tooltip: string;
-}
-
-const FieldLabel = ({text, tooltip}: FieldLabelProps) => (
-  <div className={styles.fieldLabel}>
-    <span aria-hidden="true">{text}</span>
-    <Tooltip title={tooltip}>
-      <MuiIconButton
-        variant="text"
-        color="tertiary"
-        size="extraSmall"
-        className={styles.infoButton}
-        aria-label={`About ${text}`}
-      >
-        <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
-      </MuiIconButton>
-    </Tooltip>
-  </div>
-);
-
-interface SentenceTagProps {
-  text: string | undefined;
-  placeholder: string;
-  variant: 'label' | 'feature';
-}
-
-const SentenceTag = ({text, placeholder, variant}: SentenceTagProps) => (
-  <span
-    aria-hidden="true"
-    className={classNames(
-      styles.tag,
-      text ? styles[`${variant}Tag`] : styles.placeholderTag,
-    )}
-  >
-    {text || placeholder}
-  </span>
-);
 
 const TrainPanel = () => {
   const dispatch = useAppDispatch();
@@ -95,6 +60,12 @@ const TrainPanel = () => {
     dispatch(
       checked ? addSelectedFeature(value) : removeSelectedFeature(value),
     );
+  };
+
+  const onTrain = () => {
+    train.init(store);
+    train.onClickTrain();
+    dispatch(setTrainingModalStep('training'));
   };
 
   const featuresSummary =
@@ -160,7 +131,11 @@ const TrainPanel = () => {
 
   return (
     <div id="train-panel" className={styles.panel}>
-      <h2 className={styles.header}>Train</h2>
+      <div className={styles.header}>
+        <Typography component="h3" variant="overline2" className={styles.title}>
+          Train
+        </Typography>
+      </div>
       <div className={styles.content}>
         <div className={styles.card}>
           <div className={styles.fields}>
@@ -204,7 +179,7 @@ const TrainPanel = () => {
             </div>
           </div>
           <div className={styles.sentence}>
-            <span className={styles.visuallyHidden}>{readableSentence}</span>
+            <span className={appStyles.visuallyHidden}>{readableSentence}</span>
             {sentenceParts}
           </div>
           <div className={styles.actionRow}>
@@ -214,7 +189,7 @@ const TrainPanel = () => {
               size="small"
               fullWidth
               disabled={!canTrain}
-              onClick={() => dispatch(setCurrentPanel('trainModel'))}
+              onClick={onTrain}
             >
               Train model
             </Button>

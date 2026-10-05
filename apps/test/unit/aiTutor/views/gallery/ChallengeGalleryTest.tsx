@@ -1,8 +1,6 @@
 import {
-  addReaction,
   ChallengeResponse,
   ChallengeResponseDetail,
-  getChallengeResponse,
   getUnitCounts,
   listChallengeResponses,
   TutorGalleryData,
@@ -14,25 +12,33 @@ import React from 'react';
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import experiments from '@cdo/apps/util/experiments';
 
+const mockRequest = jest.fn();
+
+// ProjectView and ReactionChips call the package's own api module, which the
+// barrel mock below cannot reach; their requests surface at the transport.
 jest.mock('@code-dot-org/core/api', () => {
-  const client = {transport: {}};
+  const client = {
+    transport: {request: (...args: unknown[]) => mockRequest(...args)},
+  };
   return {useApiClient: () => client};
 });
 
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  addReaction: jest.fn(),
-  getChallengeResponse: jest.fn(),
   getUnitCounts: jest.fn(),
   listChallengeResponses: jest.fn(),
 }));
 
 const mockList = listChallengeResponses as jest.Mock;
 const mockUnitCounts = getUnitCounts as jest.Mock;
-const mockDetail = getChallengeResponse as jest.Mock;
-const mockAddReaction = addReaction as jest.Mock;
 const listParams = () =>
   mockList.mock.calls.map(([, params]) => params.toString());
+// Answers the project page's transport requests, keyed by method and path.
+const stubRequests = (responses: Record<string, unknown>) =>
+  mockRequest.mockImplementation(
+    async ({method, url}: {method: string; url: string}) =>
+      responses[`${method} ${url.split('?')[0]}`]
+  );
 
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
@@ -110,8 +116,7 @@ describe('ChallengeGallery', () => {
   beforeEach(() => {
     mockList.mockReset();
     mockUnitCounts.mockReset();
-    mockDetail.mockReset();
-    mockAddReaction.mockReset();
+    mockRequest.mockReset();
     experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
     // Project navigation pushes ?project=<id>; start each test off a
     // clean URL.
@@ -243,7 +248,10 @@ describe('ChallengeGallery', () => {
       viewer_role: 'peer',
       question: 'Draw a network.',
     };
-    mockDetail.mockResolvedValue(detail);
+    stubRequests({
+      'GET /challenge_responses/8': detail,
+      'GET /challenge_responses': [whiteboardResponse],
+    });
     mockUnitCounts.mockResolvedValue({});
     mockList.mockResolvedValue([videoResponse, whiteboardResponse]);
 
@@ -260,7 +268,10 @@ describe('ChallengeGallery', () => {
         screen.getByText('Project Prompt: Draw a network.')
       ).toBeInTheDocument()
     );
-    expect(mockDetail).toHaveBeenCalledWith(expect.anything(), 8);
+    expect(mockRequest).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/challenge_responses/8',
+    });
 
     fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
 
@@ -271,12 +282,15 @@ describe('ChallengeGallery', () => {
   });
 
   it('keeps a reaction made on the project page when returning to the gallery', async () => {
-    mockDetail.mockResolvedValue(whiteboardDetail);
+    stubRequests({
+      'GET /challenge_responses/8': whiteboardDetail,
+      'GET /challenge_responses': [whiteboardResponse],
+      'POST /challenge_responses/8/reactions': {
+        reactions: [{emoji: 'heart', count: 1, reacted: true}],
+      },
+    });
     mockUnitCounts.mockResolvedValue({});
     mockList.mockResolvedValue([whiteboardResponse]);
-    mockAddReaction.mockResolvedValue([
-      {emoji: 'heart', count: 1, reacted: true},
-    ]);
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
@@ -292,7 +306,11 @@ describe('ChallengeGallery', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
-    expect(mockAddReaction).toHaveBeenCalledWith(expect.anything(), 8, 'heart');
+    expect(mockRequest).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses/8/reactions',
+      body: {emoji: 'heart'},
+    });
 
     // Back on the gallery, the card carries the reaction made on the project
     // page rather than the stale empty list from the initial fetch. The card

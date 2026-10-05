@@ -19,16 +19,17 @@ import type {
   SaveResponseData,
   SaveTrainedModel,
 } from './types';
+import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
-import GenerateResults from './UIComponents/GenerateResults';
 import ModelCard from './UIComponents/ModelCard';
-import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
-import TrainModel from './UIComponents/TrainModel';
+import TestPanel from './UIComponents/TestPanel';
+import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
+import WorkspaceHeader from './UIComponents/WorkspaceHeader';
 
 import styles from './app.module.scss';
 
@@ -223,7 +224,6 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
@@ -243,6 +243,8 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
   return (
     <div className={styles.app} style={colorVariables}>
+      <WorkspaceHeader />
+
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
           <ContainerLeft>
@@ -256,42 +258,31 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
       {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
         <BodyContainer flush>
-          <ContainerLeft>
-            <DataDisplay />
-          </ContainerLeft>
+          <div className={styles.panelRow}>
+            <ContainerLeft>
+              <DataDisplay />
+            </ContainerLeft>
 
-          <ContainerRight>
-            <TrainPanel />
-          </ContainerRight>
+            <ContainerRight>
+              <TrainPanel />
+            </ContainerRight>
+          </div>
+          <ColumnAnalysis />
         </BodyContainer>
       )}
 
-      {currentPanel === 'trainModel' && (
-        <BodyContainer>
-          <ContainerFullWidth>
-            <TrainModel />
-          </ContainerFullWidth>
-        </BodyContainer>
-      )}
-
-      {currentPanel === 'generateResults' && (
-        <BodyContainer>
-          <ContainerFullWidth>
-            <GenerateResults />
-          </ContainerFullWidth>
-        </BodyContainer>
-      )}
+      <TrainingModal />
 
       {currentPanel === 'results' && (
-        <BodyContainer>
-          <ContainerLeft>
-            <Results />
-          </ContainerLeft>
-          {resultsPhase === 1 && (
+        <BodyContainer flush>
+          <div className={styles.panelRow}>
+            <ContainerLeft>
+              <Results />
+            </ContainerLeft>
             <ContainerRight>
-              <Predict />
+              <TestPanel />
             </ContainerRight>
-          )}
+          </div>
         </BodyContainer>
       )}
 

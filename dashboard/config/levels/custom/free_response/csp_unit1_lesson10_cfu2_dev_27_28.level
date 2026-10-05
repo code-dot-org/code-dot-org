@@ -1,0 +1,32 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-03T23:14:45.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "A friend sends you a color photo. Your phone only stores and sends bits, but you see a picture. Name two layers between the bits and what you see, and explain what each layer lets you ignore.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18876,
+    "name_suffix": "_2025",
+    "encrypted_solution": "Li2k0QJuWQ/q18jok0HaBN/N8NBtk9nWkOsNXy17Ba1kW7lao15bZGlSZK9e\nSrMPRxBxmPawUz7qY78n+OwHIe/hack5bntMbhUmmLUlGxgV4wFJ/B2JwUDI\nfQ839y3HYJQ4eW/V/oMvqNZ22qz3ty8CGPfalo3pgKeCFXhEHDcWsNZJKNSW\nT1bJN2FPrhG86NDFZkyUuxJ7BBLm9er/zRotlVKTnQ1wZPJov8BVy+WAuZhl\ncG5c8Zqm+Jia9SAsahs8O17wVMJAbfKoQLMh16uhs2v2g7eI5u3c5yrLMloQ\nv76ZcJkSgzm+cRkh627/7siKrrTNj6kmb5Q0wLJP6CcNty3gzCtjxLpgkPiD\n6qY4uGXxbByFjSb5qjoKPW6rZ8w+m9rB0ewwL92t86ulFPN4imk+6nDcky0b\nJo84ynYXD0BtIRPrsouQ42VVag9eT+VE/l82W9ebNCziK36BrkN8Ko7FRpYj\nwHqVL8u/dakxl2gzzjRNSjmkDFpc484pS8VUWsRYjZlfNcO6Cb1lt5NF0SAE\n4iApS2mSh3dGO8zNot7q6RSzZdemXjbJSqaCVRYFw5sBWOEbGx4U8PIqCeyx\nYxc56fj/PuYAQfUaqC5Fiw5DtkQYv7xbefuhmfWefr+HKNJJ10+XCcZNub9i\nVw==\n",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-03T23:14:45.809+00:00\",\"changed\":[\"cloned from \\\"U1L10 CFU Sampling_2025\\\"\"],\"cloned_from\":\"U1L10 CFU Sampling_2025\"},{\"changed_at\":\"2026-10-03 23:15:12 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

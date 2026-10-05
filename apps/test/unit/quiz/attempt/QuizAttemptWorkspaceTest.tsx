@@ -286,6 +286,64 @@ describe('SwappableQuizAttemptWorkspace', () => {
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
+  it('shows a result card for each submitted multiple choice question', () => {
+    renderWorkspace({
+      quizQuestions: [
+        question({id: 1, stem: 'What is the value of x?'}),
+        question({id: 2, stem: 'What is the value of y?'}),
+      ],
+      source: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          questionResults: [
+            {
+              quizQuestionId: 1,
+              selectedChoiceId: 'a',
+              correct: true,
+              explanation: null,
+              correctChoiceId: 'a',
+            },
+            {
+              quizQuestionId: 2,
+              selectedChoiceId: 'b',
+              correct: false,
+              explanation: null,
+              correctChoiceId: 'a',
+            },
+          ],
+        },
+      },
+    });
+
+    expect(
+      screen.getByRole('heading', {name: 'What is the value of x?'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {name: 'What is the value of y?'})
+    ).toBeInTheDocument();
+    expect(screen.getByText('Question 1 of 2')).toBeInTheDocument();
+    expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
+  });
+
+  // If a levelbuilder adds a new question to a quiz that has already been submitted by a student.
+  it('omits a question from the submitted results when it has no result', () => {
+    renderWorkspace({
+      quizQuestions: [question({id: 1, stem: 'What is the value of x?'})],
+      source: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          questionResults: [],
+        },
+      },
+    });
+
+    expect(
+      screen.queryByRole('heading', {name: 'What is the value of x?'})
+    ).not.toBeInTheDocument();
+  });
+
   it('hands Next level to the caller, under its label', () => {
     const onNextLevel = jest.fn();
     renderWorkspace({
@@ -298,6 +356,7 @@ describe('SwappableQuizAttemptWorkspace', () => {
 
     expect(onNextLevel).toHaveBeenCalledTimes(1);
   });
+
   it('shows an open-ended attempt count when the quiz allows multiple attempts', () => {
     renderWorkspace({
       source: {

@@ -3,9 +3,6 @@
 #
 # This is currently an experimental feature, see: k8s/experimental.yaml
 #
-# IF YOU MODIFY THIS FILE, also fix its sibling k8s/kustomize/skaffold.yaml in the same
-# way until we decide between Helm and Kustomize.
-#
 # The config builds and deploys the backend stack: the ActiveJob worker and
 # cluster-local services, with no dashboard frontend or frontend asset build.
 # It uses the same root docker image family as the deployed clusters:
