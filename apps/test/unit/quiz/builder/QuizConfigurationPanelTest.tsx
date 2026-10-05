@@ -284,7 +284,7 @@ describe('QuizConfigurationPanel', () => {
     );
   });
 
-  it('turning off show correctness also clears reveal answer/explanation in the same request', async () => {
+  it('turning off showCorrectness also turns off reveal in the same request', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
       initialValues: {
@@ -306,7 +306,7 @@ describe('QuizConfigurationPanel', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('reverts both show correctness and reveal answer/explanation together on failure', async () => {
+  it('reverts showCorrectness and reveal together when the save fails', async () => {
     put.mockRejectedValue(
       new NetworkError(
         '400 Bad Request',
@@ -351,7 +351,7 @@ describe('QuizConfigurationPanel', () => {
     expect(lastRequestBody().revealAnswerExplanation).toBe(true);
   });
 
-  it('hides reveal answer/explanation when showQuestionsAfterSubmit is off, even with showCorrectness on', () => {
+  it('hides the reveal toggle when questions are hidden after submit, even if correctness is shown', () => {
     renderPanel({
       initialValues: {
         ...INITIAL_VALUES,
@@ -365,7 +365,7 @@ describe('QuizConfigurationPanel', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('turning off showQuestionsAfterSubmit also clears reveal answer/explanation in the same request', async () => {
+  it('turning off showQuestionsAfterSubmit also turns off reveal in the same request', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
       initialValues: {
@@ -388,7 +388,7 @@ describe('QuizConfigurationPanel', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('reverts both showQuestionsAfterSubmit and reveal answer/explanation together on failure', async () => {
+  it('reverts showQuestionsAfterSubmit and reveal together when the save fails', async () => {
     put.mockRejectedValue(
       new NetworkError(
         '400 Bad Request',
@@ -460,7 +460,7 @@ describe('QuizConfigurationPanel', () => {
     });
   });
 
-  it("exam_simulation's defaults show correctness but hide questions after submit, so the answer and explanation aren't revealed", async () => {
+  it('exam_simulation defaults: correctness shown, questions and explanation hidden', async () => {
     put.mockResolvedValue(
       jsonResponse({...INITIAL_VALUES, purpose: 'exam_simulation'})
     );
