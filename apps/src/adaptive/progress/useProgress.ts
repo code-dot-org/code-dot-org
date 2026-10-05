@@ -24,6 +24,8 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   complete: 'Complete',
 };
 
+const NO_ANSWERS: NonNullable<Progress['questionAnswers']> = {};
+
 export function useProgress(
   pathway: Pathway,
   key: ProgressKey,
@@ -68,14 +70,27 @@ export function useProgress(
     );
   }, []);
 
+  const saveAnswer = useCallback(
+    (stepId: string, questionId: number, choiceId: string) => {
+      setProgress(p => {
+        if (!p) return p;
+        const step = {...p.questionAnswers?.[stepId], [questionId]: choiceId};
+        return {...p, questionAnswers: {...p.questionAnswers, [stepId]: step}};
+      });
+    },
+    []
+  );
+
   const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
 
   return {
     progress,
     isLoading: progress === undefined,
     statusMap,
+    answers: progress?.questionAnswers ?? NO_ANSWERS,
     markStarted,
     markComplete,
+    saveAnswer,
     reset,
   };
 }

@@ -128,4 +128,25 @@ describe('useProgress', () => {
     act(() => result.current.reset());
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
+
+  it('saves answers per step and clears them on reset', async () => {
+    const store = fakeStore(undefined);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useProgress(pathway, key, store)
+    );
+    await waitForNextUpdate();
+    act(() => result.current.saveAnswer('survey', 1, 'a'));
+    act(() => result.current.saveAnswer('other', 3, 'c'));
+    act(() => result.current.saveAnswer('survey', 2, 'b'));
+    act(() => result.current.saveAnswer('survey', 1, 'b'));
+    expect(result.current.answers).toEqual({
+      survey: {1: 'b', 2: 'b'},
+      other: {3: 'c'},
+    });
+    expect(store.saved[store.saved.length - 1].questionAnswers).toEqual(
+      result.current.answers
+    );
+    act(() => result.current.reset());
+    expect(result.current.answers).toEqual({});
+  });
 });

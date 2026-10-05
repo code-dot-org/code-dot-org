@@ -5,8 +5,11 @@ import {LevelProperties} from '../lab2/types';
 import {
   checkpointSchema,
   levelStepSchema,
+  multipleChoiceQuestionSchema,
   panelsStepSchema,
   pathwaySchema,
+  questionSchema,
+  questionsStepSchema,
   skillSchema,
   stepSchema,
 } from './schema';
@@ -17,6 +20,11 @@ export type Skill = z.infer<typeof skillSchema>;
 export type Step = z.infer<typeof stepSchema>;
 export type PanelsStep = z.infer<typeof panelsStepSchema>;
 export type LevelStep = z.infer<typeof levelStepSchema>;
+export type QuestionsStep = z.infer<typeof questionsStepSchema>;
+export type Question = z.infer<typeof questionSchema>;
+export type MultipleChoiceQuestion = z.infer<
+  typeof multipleChoiceQuestionSchema
+>;
 
 export interface AdaptiveLevelProperties extends LevelProperties {
   adaptiveId?: string;

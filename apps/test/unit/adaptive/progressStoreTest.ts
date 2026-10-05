@@ -20,6 +20,23 @@ describe('localStorageProgressStore', () => {
     expect(await store.load(key)).toEqual(progress);
   });
 
+  it('reads back answers saved with the progress', async () => {
+    const withAnswers: Progress = {
+      ...progress,
+      questionAnswers: {survey: {1: 'a', 2: 'b'}},
+    };
+    await store.save(key, withAnswers);
+    expect(await store.load(key)).toEqual(withAnswers);
+  });
+
+  it('loads a record saved before answers existed', async () => {
+    window.localStorage.setItem(
+      'adaptive-progress:7:11:98263',
+      JSON.stringify({pathwayId: 'sample', progress})
+    );
+    expect(await store.load(key)).toEqual(progress);
+  });
+
   it('has no progress for an unsaved key', async () => {
     expect(await store.load(key)).toBeUndefined();
   });
@@ -44,6 +61,14 @@ describe('localStorageProgressStore', () => {
     window.localStorage.setItem(
       storageKey,
       JSON.stringify({pathwayId: 'sample', progress: {completed: 'intro'}})
+    );
+    expect(await store.load(key)).toBeUndefined();
+    window.localStorage.setItem(
+      storageKey,
+      JSON.stringify({
+        pathwayId: 'sample',
+        progress: {...progress, questionAnswers: 1},
+      })
     );
     expect(await store.load(key)).toBeUndefined();
   });

@@ -36,7 +36,10 @@ const isProgress = (value: unknown): value is Progress =>
   typeof value === 'object' &&
   value !== null &&
   Array.isArray((value as Progress).completed) &&
-  Array.isArray((value as Progress).started);
+  Array.isArray((value as Progress).started) &&
+  ((value as Progress).questionAnswers === undefined ||
+    (typeof (value as Progress).questionAnswers === 'object' &&
+      (value as Progress).questionAnswers !== null));
 
 /**
  * Progress in the browser's local storage. Unavailable storage (private

@@ -1,22 +1,33 @@
 import {z} from 'zod';
 
-import {stepBaseSchema} from './steps/base';
+import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
-export const questionOptionSchema = z.strictObject({
-  id: z.string().min(1),
-  label: z.string().min(1),
-  correct: z.boolean().optional(),
-});
+import {stepBaseSchema} from './steps/base';
+import {subsetOf} from './subsetOf';
+
+/**
+ * Quiz's question summary, so the two share views. Steps are ungraded, so
+ * correctChoiceId is recorded for authors but read by nothing yet.
+ */
+export const multipleChoiceQuestionSchema = subsetOf<
+  QuizQuestionSummary & {correctChoiceId?: string}
+>()(
+  z.strictObject({
+    id: z.number().int().positive(),
+    type: z.literal('MultipleChoiceQuestion'),
+    questionName: z.string().min(1),
+    stem: z.string().min(1),
+    choices: z
+      .array(z.strictObject({id: z.string().min(1), text: z.string().min(1)}))
+      .min(2),
+    correctChoiceId: z.string().min(1).optional(),
+    page: z.number().int().positive().default(1),
+  })
+);
 
 /** Represents a single question in a Question step. */
 export const questionSchema = z.discriminatedUnion('type', [
-  z.strictObject({
-    id: z.string().min(1),
-    type: z.literal('multipleChoice'),
-    text: z.string().min(1),
-    options: z.array(questionOptionSchema).min(2),
-    multiSelect: z.boolean().optional(),
-  }),
+  multipleChoiceQuestionSchema,
   z.strictObject({
     id: z.string().min(1),
     type: z.literal('freeResponse'),
@@ -36,7 +47,7 @@ export const questionSchema = z.discriminatedUnion('type', [
   }),
 ]);
 
-/** A questions step. */
+/** A questions step: an ungraded survey laid out like a quiz. */
 export const questionsStepSchema = stepBaseSchema.extend({
   kind: z.literal('questions'),
   description: z.string().optional(),

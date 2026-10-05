@@ -13,9 +13,13 @@ export type CheckpointStatus =
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
+/** A questions step's chosen choice ids, by question id. */
+export type StepAnswers = {[questionId: number]: string};
+
 export interface Progress {
   completed: string[];
   started: string[];
+  questionAnswers?: {[stepId: string]: StepAnswers};
 }
 
 export const EMPTY_PROGRESS: Progress = {completed: [], started: []};
