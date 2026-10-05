@@ -191,6 +191,7 @@ export const START_BLOCKS = 'start_blocks';
 
 export const DEPRECATED_PROJECT_TYPES = ['algebra_game', 'calc', 'eval'];
 
+// Sharing disabled by teacher - students unable to share these legacy project types.
 export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
   'applab',
   'gamelab',
@@ -202,12 +203,14 @@ export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
   'game_design',
 ];
 
+// Sharing disabled by teacher - students unable to share these lab2 project types.
 export const OPEN_ENDED_LAB2_PROJECT_TYPES = [
   'pythonlab',
   'weblab2',
   'sketchlab',
 ];
 
+// Project types that are filtered for profanity and PII.
 export const OPEN_ENDED_PROJECTS_YOUNG_AGE = [
   'spritelab',
   'poetry',
