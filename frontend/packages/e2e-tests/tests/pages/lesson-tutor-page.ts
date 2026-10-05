@@ -7,14 +7,14 @@ export interface LessonTutorUrlParams {
   unit: string;
   /** Lesson position within the unit, 1-based. */
   lesson: number;
-  /** Screen segment after /tutor; the review-modality chooser by default. */
+  /** URL segment after /tutor; defaults to the screen offering the videos. */
   screen?: string;
 }
 
-/** `src` is a length:tail fingerprint; data-URI clips would swamp failures. */
 export interface VideoAudioTrack {
   paused: boolean;
   currentTime: number;
+  /** Length and tail only; a full data URI would swamp failure output. */
   src: string | null;
 }
 
@@ -32,7 +32,7 @@ type JsonVideoElement = HTMLElement & {
   _sceneAudio: HTMLAudioElement;
 };
 
-/** The Tutor+ deep dive, /s/:unit/lessons/:n/tutor; screens follow /tutor. */
+/** The Tutor+ lesson deep dive at /s/:unit/lessons/:n/tutor/:screen. */
 export class LessonTutorPage extends BasePage {
   readonly watchVideoCard: Locator;
 

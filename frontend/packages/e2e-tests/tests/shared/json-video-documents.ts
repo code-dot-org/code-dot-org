@@ -1,6 +1,6 @@
 import type {Page} from '@playwright/test';
 
-// Stand-ins for the lesson's videos, so a spec knows how each is authored.
+// Replace the lesson's real videos, whose audio layout a spec cannot rely on.
 
 /** A scene of a json video document; see apps/src/jsonVideo. */
 interface JsonVideoScene {
@@ -35,7 +35,7 @@ function silentWavDataUri(seconds: number, sampleRate = 8000): string {
   return 'data:audio/wav;base64,' + buf.toString('base64');
 }
 
-// Long scenes keep scene boundaries, which start clips, out of poll windows.
+// 30s so no scene boundary, which also starts a clip, falls inside a poll.
 const scene = (label: string, audio?: string): JsonVideoScene => ({
   duration: '30s',
   speech: label,
@@ -46,7 +46,7 @@ const scene = (label: string, audio?: string): JsonVideoScene => ({
   ...(audio ? {audio} : {}),
 });
 
-/** Per-scene narration, no top-level track: the pipeline's shape. */
+/** Narrated per scene with no top-level track, as the lesson pipeline emits. */
 export const SCENE_NARRATED_VIDEO: JsonVideoDocument = {
   scenes: [
     scene('Scene one', silentWavDataUri(12)),
@@ -62,7 +62,7 @@ export const MAIN_TRACK_VIDEO: JsonVideoDocument = {
 };
 export const MAIN_TRACK_VIDEO_SECONDS = 30;
 
-/** Keys get documents in order of first request; a repeat key keeps its own. */
+/** Hands out documents by order of first request: the page picks the keys. */
 export async function serveJsonVideos(
   page: Page,
   documents: JsonVideoDocument[],
