@@ -3,16 +3,25 @@
 // Matches the height of Lab2's own panel headers, such as Instructions.
 $lab2-panel-header-height: 41px;
 
+// Equal outer columns keep the title centered beside the tabs.
 .header {
   @include mixins.panel-header;
 
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   flex-shrink: 0;
   min-height: $lab2-panel-header-height;
-  justify-content: center;
   font-family: var(--font-family-main);
+}
+
+.tabs {
+  grid-column: 1;
+  justify-self: start;
 }
 
 // Two classes, to outrank the Typography variant's own size.
 .header .title {
   @include mixins.panel-header-title;
+
+  grid-column: 2;
 }

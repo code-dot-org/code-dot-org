@@ -1,5 +1,6 @@
 import {
   isPanelEnabled,
+  isTrainedOnCurrentColumns,
   prevNextButtons,
   uniqLabelFeaturesSelected,
 } from '../../src/helpers/navigationValidation';
@@ -127,6 +128,36 @@ describe('uniqLabelFeaturesSelected', () => {
 
   test('true when the label and features differ', () => {
     expect(uniqLabelFeaturesSelected(selectedFeaturesState)).toBe(true);
+  });
+});
+
+describe('isTrainedOnCurrentColumns', () => {
+  const trainedState = {
+    ...resultsState,
+    selectedFeatures: ['house', 'name'],
+    historicResults: [
+      {label: 'isEvil', features: ['house', 'name'], accuracy: '100'},
+    ],
+  };
+
+  test('false before any training', () => {
+    expect(
+      isTrainedOnCurrentColumns({...resultsState, historicResults: []}),
+    ).toBe(false);
+  });
+
+  test('true when the columns match the latest training', () => {
+    expect(isTrainedOnCurrentColumns(trainedState)).toBe(true);
+  });
+
+  test.each([
+    ['label', {labelColumn: 'name', selectedFeatures: ['house']}],
+    ['features', {selectedFeatures: ['house']}],
+    ['feature order', {selectedFeatures: ['name', 'house']}],
+  ])('false when the %s changed since training', (_, changes) => {
+    expect(isTrainedOnCurrentColumns({...trainedState, ...changes})).toBe(
+      false,
+    );
   });
 });
 

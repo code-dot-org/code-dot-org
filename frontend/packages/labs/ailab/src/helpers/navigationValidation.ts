@@ -1,6 +1,8 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
 import type {NavButton, PrevNextButtons} from '../types';
+
+import {areArraysEqual} from './utils';
 /*
 Validation checks to determine if app set up is ready for machine learning
 training. Panels prompt users to incrementally complete actions in preparation
@@ -90,6 +92,16 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
     minOneFeatureSelected(state) &&
     labelSelected(state) &&
     !state.selectedFeatures.includes(state.labelColumn!)
+  );
+}
+
+// Feature order matters: predictions pass inputs in the order trained on.
+export function isTrainedOnCurrentColumns(state: RootState): boolean {
+  const latestResult = state.historicResults[0];
+  return (
+    !!latestResult &&
+    latestResult.label === state.labelColumn &&
+    areArraysEqual(latestResult.features, state.selectedFeatures)
   );
 }
 
