@@ -33,9 +33,53 @@ class QuizQuestion < ApplicationRecord
   # No cascade. Destroy checks this (and other placements) before hard-delete.
   has_many :quiz_question_responses, dependent: nil
 
-  validates :key, presence: true
+  validates :key, presence: true, uniqueness: true
   validates :name, presence: true
   validates :content, presence: true
+
+  after_commit :write_to_file, on: %i(create update)
+  after_commit :delete_file, on: :destroy
+
+  def self.setup(dashboard_root = '.')
+    ActiveRecord::Base.transaction do
+      Dir.glob("#{dashboard_root}/config/quiz_questions/**/*.json").each do |path|
+        source = JSON.parse(File.read(path))
+        question = source['type'].constantize.find_or_initialize_by(key: source['key'])
+        question.name = source['name']
+        decrypted = Encryption.decrypt_object(source['encrypted_content'])
+        question.content = decrypted['content']
+        question.explanation = decrypted['explanation']
+        question.save! if question.changed?
+      rescue JSON::ParserError
+        raise format('failed to parse %s', path)
+      end
+    end
+  end
+
+  def formatted_for_file
+    JSON.pretty_generate(
+      'key' => key,
+      'type' => type,
+      'name' => name,
+      'encrypted_content' => Encryption.encrypt_object('content' => content, 'explanation' => explanation)
+    )
+  end
+
+  def write_to_file
+    if write_to_file?
+      file_path = Rails.root.join("config/quiz_questions/#{key}.json")
+      FileUtils.mkdir_p(File.dirname(file_path))
+      File.write(file_path, formatted_for_file)
+    end
+  end
+
+  def delete_file
+    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if write_to_file?
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
+  end
 
   # published unit means preview/stable/sunsetting
   def used_in_published_unit?
