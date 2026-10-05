@@ -293,4 +293,76 @@ class AichatEventsControllerTest < ActionController::TestCase
     @student1_aichat_event1.reload
     assert_nil @student1_aichat_event1.aichat_event['teacherFeedback']
   end
+
+  # *****
+  # event integrity: which rows count as evidence
+  # *****
+
+  # A row predating execution_source cannot say where it ran, and its response
+  # may have been written by the client while the reporting endpoint was still
+  # ungated. Comparing an event against it would check a claim against itself.
+  test 'log_chat_event rejects an unsigned event on a request of unknown origin' do
+    DCDO.stubs(:get).with('aichat_require_response_signature', false).returns(true)
+    sign_in(@authorized_student1)
+
+    request = create(
+      :aichat_request,
+      user: @authorized_student1,
+      response: 'forged by the client while the route was ungated',
+      execution_source: nil
+    )
+    event = @valid_student1_chat_message1.merge(
+      role: 'assistant',
+      chatMessageText: 'forged by the client while the route was ungated',
+      requestId: request.id
+    )
+
+    post :log_chat_event, params: @valid_params_log_chat_event.merge(newChatEvent: event), as: :json
+
+    assert_response :unprocessable_entity
+  end
+
+  # The same event against a row our own job wrote is accepted: that response is
+  # ours, so matching it means the client reported what the model actually said.
+  test 'log_chat_event accepts an unsigned event matching a dashboard-executed request' do
+    DCDO.stubs(:get).with('aichat_require_response_signature', false).returns(true)
+    sign_in(@authorized_student1)
+
+    request = create(
+      :aichat_request,
+      user: @authorized_student1,
+      response: 'what the job recorded',
+      execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:DASHBOARD]
+    )
+    event = @valid_student1_chat_message1.merge(
+      role: 'assistant',
+      chatMessageText: 'what the job recorded',
+      requestId: request.id
+    )
+
+    post :log_chat_event, params: @valid_params_log_chat_event.merge(newChatEvent: event), as: :json
+
+    assert_response :success
+  end
+
+  test 'log_chat_event rejects an unsigned event on a gateway request' do
+    DCDO.stubs(:get).with('aichat_require_response_signature', false).returns(true)
+    sign_in(@authorized_student1)
+
+    request = create(
+      :aichat_request,
+      user: @authorized_student1,
+      response: 'reported by the client',
+      execution_source: SharedConstants::AI_REQUEST_EXECUTION_SOURCE[:GATEWAY]
+    )
+    event = @valid_student1_chat_message1.merge(
+      role: 'assistant',
+      chatMessageText: 'reported by the client',
+      requestId: request.id
+    )
+
+    post :log_chat_event, params: @valid_params_log_chat_event.merge(newChatEvent: event), as: :json
+
+    assert_response :unprocessable_entity
+  end
 end

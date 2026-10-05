@@ -191,6 +191,13 @@ class AichatEventsController < ApplicationController
       return 'gateway request without a response signature'
     end
 
+    # A row predating execution_source cannot say where it ran, and its response
+    # may have been written by the client while the reporting endpoint was still
+    # ungated. Comparing against it would check a claim against itself.
+    unless request.executed_by_dashboard?
+      return 'request predates execution_source'
+    end
+
     if role == USER_ROLE
       # What the job actually sent, whatever the client now claims.
       recorded = request.new_message.is_a?(Hash) ? request.new_message['chatMessageText'] : nil
