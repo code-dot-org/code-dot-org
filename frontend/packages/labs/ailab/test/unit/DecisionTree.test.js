@@ -66,6 +66,21 @@ describe('DecisionTree', () => {
   });
   afterEach(() => I18n.reset());
 
+  it('marks every node as either a question or an answer', () => {
+    const nodes = [...document.getElementsByClassName(moduleStyles.node)];
+    const kinds = nodes.map(node =>
+      node.classList.contains(moduleStyles.question)
+        ? 'question'
+        : node.classList.contains(moduleStyles.answer)
+          ? 'answer'
+          : 'neither',
+    );
+
+    expect(kinds).toContain('question');
+    expect(kinds).toContain('answer');
+    expect(kinds).not.toContain('neither');
+  });
+
   it('marks no path before a prediction', () => {
     expect(document.getElementsByClassName(moduleStyles.pathNode)).toHaveLength(
       0,

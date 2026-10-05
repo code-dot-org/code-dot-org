@@ -74,13 +74,19 @@ $overlay-float-min-width: 600px;
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  border: 2px solid $off-path-color;
+  border-width: 2px;
+  border-style: solid;
   border-radius: 6px;
-  background-color: var(--background-neutral-primary, white);
-  box-shadow: var(--shadow-sm);
   font-size: 13px;
   line-height: 1.2;
   text-align: center;
+}
+
+.question,
+.answer {
+  background-color: var(--background-neutral-primary, white);
+  border-color: $off-path-color;
+  box-shadow: var(--shadow-sm);
 }
 
 .pathNode {
