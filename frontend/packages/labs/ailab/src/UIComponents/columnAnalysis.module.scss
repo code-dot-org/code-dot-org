@@ -15,7 +15,6 @@
   width: 24px;
 }
 
-// Two classes, to outrank the Typography variant's own size.
 .header .headerTitle {
   @include mixins.panel-header-title;
 
@@ -79,7 +78,6 @@
   background-color: var(--background-neutral-septenary);
 }
 
-// Two classes, to outrank Typography's margin reset.
 .emptyGraph .emptyGraphTitle {
   margin-bottom: 2px;
 }

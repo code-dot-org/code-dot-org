@@ -18,7 +18,6 @@
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
-// Applied over the overline2 Typography variant, as Lab2's own panel headers do.
 @mixin panel-header-title {
   text-align: center;
   font-size: 12px;

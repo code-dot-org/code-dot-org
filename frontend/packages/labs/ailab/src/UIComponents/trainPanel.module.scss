@@ -13,7 +13,6 @@
   justify-content: center;
 }
 
-// Two classes, to outrank the Typography variant's own size.
 .header .title {
   @include mixins.panel-header-title;
 }
