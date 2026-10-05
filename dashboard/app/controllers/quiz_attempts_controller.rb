@@ -13,7 +13,18 @@ class QuizAttemptsController < ApplicationController
       authorize! :view_quiz_attempts, viewed_user
     end
     attempt = latest_attempt(params[:levelId], params[:unitId], viewed_user)
-    render json: attempt && quiz_attempt_json(attempt)
+    if attempt && viewed_user.id != current_user.id
+      # Any authorized viewer of someone else's attempt (e.g. a teacher of a student)
+      # always sees correctness.
+      render json: quiz_attempt_json(
+        attempt,
+        show_correctness: true,
+        # Only a verified instructor also sees the correct answer and its explanation.
+        reveal_answer_explanation: can?(:reveal_quiz_attempt_answers, :quiz_attempt)
+      )
+    else
+      render json: attempt && quiz_attempt_json(attempt)
+    end
   rescue ActiveRecord::RecordNotFound
     render json: nil
   end
@@ -99,20 +110,30 @@ class QuizAttemptsController < ApplicationController
       order(attempt_number: :desc).first
   end
 
-  private def quiz_attempt_json(attempt)
+  # Defaults are the quiz's own settings (self-view). #index overrides both
+  # when viewing someone else's attempt.
+  private def quiz_attempt_json(
+    attempt,
+    show_correctness: attempt.level&.show_correctness?,
+    reveal_answer_explanation: attempt.level&.reveal_answer_explanation?
+  )
     {
       id: attempt.id,
       attemptNumber: attempt.attempt_number,
       submittedAt: attempt.submitted_at,
-      score: attempt.score,
-      maxScore: attempt.max_score,
+      # nil when hidden (or the quiz is deleted) - matches question_results.
+      score: show_correctness ? attempt.score : nil,
+      maxScore: show_correctness ? attempt.max_score : nil,
       # nil when the quiz has no time limit - see QuizAttempt#expires_at.
       expiresAt: attempt.expires_at,
       # Whether POSTing to #create again would start a new attempt rather
       # than just returning this one.
       canRetake: attempt.retakeable?,
       # nil unless this attempt is submitted.
-      questionResults: attempt.question_results&.map do |result|
+      questionResults: attempt.question_results(
+        show_correctness: show_correctness,
+        reveal_answer_explanation: reveal_answer_explanation
+      )&.map do |result|
         {
           quizQuestionId: result[:quiz_question_id],
           selectedChoiceId: result[:selected_choice_id],
