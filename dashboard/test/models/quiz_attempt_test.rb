@@ -125,6 +125,31 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_equal 'b', result[:correct_choice_id]
   end
 
+  test "question_results overrides can reveal correctness/explanation regardless of the quiz's own settings" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+
+    result = attempt.question_results(
+      show_correctness: true,
+      reveal_answer_explanation: true
+    ).first
+
+    assert result[:correct]
+    assert_equal 'because math', result[:explanation]
+    assert_equal 'b', result[:correct_choice_id]
+  end
+
   test "question_results reports correct as nil for a pending/ungraded response, even with show_correctness on" do
     quiz = create(:quiz, show_correctness: true)
     question = create(:quiz_question)

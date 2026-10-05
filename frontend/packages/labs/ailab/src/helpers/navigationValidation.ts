@@ -11,10 +11,7 @@ action for a given panel.
 /*
 const panelList = [
   { id: "selectDataset", label: "Import" },
-  { id: "dataDisplayLabel", label: "Label" },
-  { id: "dataDisplayFeatures", label: "Features" },
-  { id: "trainModel", label: "Train" },
-  { id: "generateResults", label: "Test" },
+  { id: "datasetView", label: "Dataset" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
   { id: "saveModel", label: "Save" },
@@ -25,26 +22,14 @@ const panelList = [
 // Is a panel ready to be visited?  This determines whether a visible
 // nav button is enabled or disabled.
 export function isPanelEnabled(state: RootState, panelId: string): boolean {
-  if (panelId === 'dataDisplayLabel') {
+  if (panelId === 'datasetView') {
     if (!isDataUploaded(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === 'dataDisplayFeatures') {
-    if (!labelSelected(state)) {
       return false;
     }
   }
 
   if (panelId === 'selectFeatures') {
     if (!minOneFeatureSelected(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === 'trainModel') {
-    if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
   }
@@ -75,12 +60,6 @@ function isPanelAvailable(state: RootState, panelId: string): boolean {
 
   if (panelId === 'selectDataset') {
     if (mode && mode.datasets && mode.datasets.length === 1) {
-      return false;
-    }
-  }
-
-  if (panelId === 'dataDisplayLabel') {
-    if (mode && mode.hideSelectLabel) {
       return false;
     }
   }
@@ -161,24 +140,15 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
 
   if (state.currentPanel === 'selectDataset') {
     prev = undefined;
-    next = isPanelAvailable(state, 'dataDisplayLabel')
-      ? {panel: 'dataDisplayLabel', text: I18n.t('navigateForward')}
-      : isPanelAvailable(state, 'dataDisplayFeatures')
-        ? {panel: 'dataDisplayFeatures', text: I18n.t('navigateForward')}
-        : undefined;
-  } else if (
-    state.currentPanel === 'dataDisplayLabel' ||
-    state.currentPanel === 'dataDisplayFeatures'
-  ) {
+    next = {panel: 'datasetView', text: I18n.t('navigateForward')};
+  } else if (state.currentPanel === 'datasetView') {
     // The Train panel's own button moves on to training.
     prev = isPanelAvailable(state, 'selectDataset')
       ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
       : undefined;
     next = undefined;
   } else if (state.currentPanel === 'results') {
-    prev = isPanelAvailable(state, 'dataDisplayFeatures')
-      ? {panel: 'dataDisplayFeatures', text: I18n.t('tryAgain')}
-      : undefined;
+    prev = {panel: 'datasetView', text: I18n.t('tryAgain')};
     next = !isAccuracyAcceptable(state)
       ? undefined
       : isPanelAvailable(state, 'saveModel')

@@ -1,0 +1,23 @@
+.sentence {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+}
+
+.mediumSentence {
+  gap: 4px 8px;
+
+  .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--text-neutral-primary);
+}

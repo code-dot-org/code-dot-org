@@ -61,20 +61,8 @@ $features-menu-max-height: 240px;
 }
 
 .sentence {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px 6px;
   padding: 8px;
   border-top: 1px solid var(--border-neutral-primary);
-}
-
-.sentenceText {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  color: var(--text-neutral-primary);
 }
 
 .actionRow {
