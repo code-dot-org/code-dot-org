@@ -109,7 +109,7 @@ export const initialState: RootState = {
   predictionInputs: [],
   trainedModel: undefined,
   trainedModelDetails: {},
-  currentPanel: 'selectDataset',
+  currentPanel: 'datasetView',
   trainingModalStep: undefined,
   currentColumn: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
