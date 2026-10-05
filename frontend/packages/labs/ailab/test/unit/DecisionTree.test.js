@@ -66,21 +66,6 @@ describe('DecisionTree', () => {
   });
   afterEach(() => I18n.reset());
 
-  it('marks every node as either a question or an answer', () => {
-    const nodes = [...document.getElementsByClassName(moduleStyles.node)];
-    const kinds = nodes.map(node =>
-      node.classList.contains(moduleStyles.question)
-        ? 'question'
-        : node.classList.contains(moduleStyles.answer)
-          ? 'answer'
-          : 'neither',
-    );
-
-    expect(kinds).toContain('question');
-    expect(kinds).toContain('answer');
-    expect(kinds).not.toContain('neither');
-  });
-
   it('marks no path before a prediction', () => {
     expect(document.getElementsByClassName(moduleStyles.pathNode)).toHaveLength(
       0,
@@ -88,6 +73,9 @@ describe('DecisionTree', () => {
     expect(document.getElementsByClassName(moduleStyles.pathEdge)).toHaveLength(
       0,
     );
+    expect(
+      document.getElementsByClassName(moduleStyles.pathBranch),
+    ).toHaveLength(0);
   });
 
   it('offers zooming to the path only once there is a prediction', () => {
@@ -106,11 +94,18 @@ describe('DecisionTree', () => {
     const pathEdges = [
       ...document.getElementsByClassName(moduleStyles.pathEdge),
     ];
+    const pathBranches = [
+      ...document.getElementsByClassName(moduleStyles.pathBranch),
+    ];
 
     expect(marked.length).toBeGreaterThan(1);
     expect(slotPosition(marked[0])[1]).toBe(0);
     expect(marked[marked.length - 1].textContent).toBe('snake');
     expect(pathEdges).toHaveLength(marked.length - 1);
     expect(edges.slice(-pathEdges.length)).toEqual(pathEdges);
+    expect(pathBranches).toHaveLength(marked.length - 1);
+    expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
+      marked.slice(1),
+    );
   });
 });

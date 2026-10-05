@@ -135,8 +135,6 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             {layout.nodes.map(placed => {
               const text = nodeText(placed.node);
               const branch = placed.branch && branchText(placed.branch);
-              const kind =
-                placed.node.type === 'answer' ? styles.answer : styles.question;
               return (
                 <div
                   key={placed.id}
@@ -155,7 +153,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   )}
                   <div
                     title={text}
-                    className={classNames(styles.node, kind, {
+                    className={classNames(styles.node, {
                       [styles.pathNode]: pathIds.has(placed.id),
                     })}
                   >
