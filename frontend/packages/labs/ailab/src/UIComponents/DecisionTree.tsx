@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {type CSSProperties, type ReactNode, useMemo} from 'react';
+import {type CSSProperties, type ReactNode, useMemo, useRef} from 'react';
 
 import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -57,6 +57,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     [tree],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   if (!tree || !layout) {
     return null;
@@ -100,7 +101,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           contentWidth={layout.width}
           contentHeight={layout.height}
           pathBounds={pathBounds}
-          insetRight={overlay ? TEST_PANEL_WIDTH : 0}
+          overlayRef={overlayRef}
         >
           <div
             role="img"
@@ -161,7 +162,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           </div>
         </TreeCanvas>
         {overlay && (
-          <div className={styles.overlay} style={{width: TEST_PANEL_WIDTH}}>
+          <div
+            ref={overlayRef}
+            className={styles.overlay}
+            style={{width: TEST_PANEL_WIDTH}}
+          >
             {overlay}
           </div>
         )}

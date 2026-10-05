@@ -1,7 +1,13 @@
 import {select} from 'd3-selection';
 import 'd3-transition';
 import {zoom, zoomIdentity, zoomTransform, type ZoomBehavior} from 'd3-zoom';
-import {type ReactNode, useLayoutEffect, useMemo, useRef} from 'react';
+import {
+  type ReactNode,
+  type RefObject,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+} from 'react';
 
 import {fitToView, type Rect} from '../helpers/fitToView';
 
@@ -22,13 +28,24 @@ function zoomDuration(): number {
     : ZOOM_DURATION_MS;
 }
 
+function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {
+  if (!overlay) {
+    return 0;
+  }
+  const view = viewport.getBoundingClientRect();
+  const box = overlay.getBoundingClientRect();
+  const overlaps = box.top < view.bottom && box.bottom > view.top;
+  return overlaps ? Math.max(0, view.right - box.left) : 0;
+}
+
 function fitTransform(
   viewport: HTMLElement,
   toolbar: HTMLElement,
-  insetRight: number,
+  overlay: HTMLElement | null,
   rect: Rect,
 ) {
   const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FIT_PADDING;
+  const insetRight = overlayInset(viewport, overlay);
   const frame = (inset: number) => ({
     x: frameLeft,
     y: FIT_PADDING,
@@ -47,7 +64,7 @@ interface TreeCanvasProps {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
-  insetRight?: number;
+  overlayRef?: RefObject<HTMLElement>;
   children: ReactNode;
 }
 
@@ -55,7 +72,7 @@ const TreeCanvas = ({
   contentWidth,
   contentHeight,
   pathBounds,
-  insetRight = 0,
+  overlayRef,
   children,
 }: TreeCanvasProps) => {
   const viewportRef = useRef<HTMLDivElement>(null);
@@ -95,7 +112,7 @@ const TreeCanvas = ({
       const fitted = fitTransform(
         viewport,
         toolbarRef.current!,
-        insetRight,
+        overlayRef?.current ?? null,
         contentRect,
       );
       if (!fitted) {
@@ -111,7 +128,7 @@ const TreeCanvas = ({
     });
     observer.observe(viewport);
     return () => observer.disconnect();
-  }, [contentRect, insetRight]);
+  }, [contentRect, overlayRef]);
 
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
@@ -139,7 +156,7 @@ const TreeCanvas = ({
     const fitted = fitTransform(
       viewportRef.current!,
       toolbarRef.current!,
-      insetRight,
+      overlayRef?.current ?? null,
       rect,
     );
     if (fitted) {

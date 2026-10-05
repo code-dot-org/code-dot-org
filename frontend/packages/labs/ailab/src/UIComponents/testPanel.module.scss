@@ -11,11 +11,6 @@
   font-family: var(--font-family-main);
 }
 
-// Undoes the decision tree overlay's pointer-events: none.
-.panel > * {
-  pointer-events: auto;
-}
-
 .card {
   @include mixins.card;
 
