@@ -1891,6 +1891,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 !!levelProperties.offerBrowserTts ||
                 queryParams('show-tts') === 'true'
               }
+              showContinue={guide.showContinue}
             />
           ) : (
             <>

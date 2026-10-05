@@ -590,10 +590,13 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       if (e.metaKey || e.ctrlKey || e.altKey) {
         return;
       }
+      // Letters and digits act only with focus in the editor or on nothing,
+      // so a host's other controls keep their keys.
       const target = e.target as HTMLElement | null;
       if (
         target &&
-        (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')
+        target !== document.body &&
+        !target.closest('[data-pixel-editor]')
       ) {
         return;
       }
@@ -1385,6 +1388,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     save: handleSave,
     toolbar: (
       <div
+        data-pixel-editor=""
         className={classNames(
           moduleStyles.toolbar,
           !column && moduleStyles.toolbarRow
@@ -1487,6 +1491,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     canvas: (
       <div
         ref={canvasAreaRef}
+        data-pixel-editor=""
         className={classNames(moduleStyles.canvasArea, canvasClassName)}
       >
         {loadError ? (

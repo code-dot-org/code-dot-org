@@ -16,9 +16,9 @@ $border-subtle: chrome.$border-subtle;
   @include chrome.theme;
 }
 
-// One high-contrast keyboard focus ring for everything in the dark modal;
-// UA defaults are hard to see against the panel background.
-.dialogHost .modal :focus-visible {
+// One high-contrast keyboard focus ring for everything the editor renders,
+// in the modal or in a host's panel; UA defaults are hard to see on dark.
+.dialogHost :focus-visible {
   @include chrome.focus-ring;
 }
 
@@ -290,8 +290,8 @@ $border-subtle: chrome.$border-subtle;
 
 .paletteSwatch {
   box-sizing: border-box;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   margin: 0;
   padding: 0;
   border: 2px solid var(--dialog-control-border-strong);

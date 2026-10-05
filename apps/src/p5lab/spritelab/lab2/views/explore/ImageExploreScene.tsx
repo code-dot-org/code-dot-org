@@ -80,8 +80,7 @@ type Mode = 'edit' | 'generating' | 'result' | 'paint';
 // The reflection asked once a picture is back: a thumb each way.
 type Verdict = 'up' | 'down';
 
-// Drawing by hand offers the pen and the eraser only.
-const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'eraser'];
+const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
 // The narrowest the Guide gets, whatever its half's width.
 const MIN_GUIDE_WIDTH_PX = 240;
 // One round swatch each, in place of the spectrum picker.
@@ -103,6 +102,8 @@ const PAINT_COLORS: readonly PaletteColor[] = [
 interface Made {
   result: GeneratedImageResult;
   dataURI: string;
+  /** The student's sentence. */
+  prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
 }
@@ -121,6 +122,9 @@ interface ImageExploreSceneProps {
   instructions?: string;
   /** Offer the read-aloud button on the instructions. */
   showTts?: boolean;
+  /** The Guide's step offers Continue, as when the level's image already
+      exists. */
+  showContinue?: boolean;
 }
 
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
@@ -132,6 +136,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   uploadImage,
   instructions,
   showTts,
+  showContinue,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -148,13 +153,11 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [verdict, setVerdict] = useState<Verdict | null>(null);
-  // The blank the student draws on, sized for the style, and the mode to
-  // return to if they cancel.
+  // The blank the student draws on, sized for the style.
   const [paintFrom, setPaintFrom] = useState<{
     dataURI: string;
     pixelGridSize?: number;
   } | null>(null);
-  const paintReturnRef = useRef<Mode>('edit');
   // Counts runs; a superseded run's result is dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
@@ -210,6 +213,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       setMade({
         result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
+        prompt,
         sent,
       });
       setMode('result');
@@ -247,21 +251,22 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     } catch (e) {
       console.error('Saving the image failed:', e);
       setError("Couldn't save the picture. Try again.");
+    } finally {
+      // On the last level with no finish URL, the lesson does not move on.
       setSaving(false);
     }
   }, [made, dispatch, uploadImage, imageType, imageRole]);
 
   const startPaint = useCallback(() => {
-    paintReturnRef.current = mode;
     setError(null);
     setPaintFrom(blankPaintImage(imageType, style));
     setMode('paint');
-  }, [mode, imageType, style]);
+  }, [imageType, style]);
 
   const cancelPaint = useCallback(() => {
     setPaintFrom(null);
-    setMode(paintReturnRef.current === 'result' && made ? 'result' : 'edit');
-  }, [made]);
+    setMode('edit');
+  }, []);
 
   const savePaint = useCallback(
     async (dataURI: string, meta: {pixelGridSize?: number}) => {
@@ -276,11 +281,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       } catch (e) {
         console.error('Saving the drawing failed:', e);
         setError("Couldn't save the drawing. Try again.");
+      } finally {
         setSaving(false);
       }
     },
     [dispatch, uploadImage, imageType, imageRole]
   );
+
+  const continueLesson = useCallback(() => {
+    dispatch(continueOrFinishLesson());
+  }, [dispatch]);
 
   // Back to the words with the picture still showing; the next Generate
   // replaces it.
@@ -309,6 +319,23 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const generating = mode === 'generating';
   const busy = generating || saving;
   const showingResult = mode === 'result' && !!made;
+
+  // The control that changed the mode unmounts with it, so focus moves to
+  // the panel; not on the first render, which is the level opening.
+  const panelRef = useRef<HTMLElement>(null);
+  const firstModeRef = useRef(true);
+  useEffect(() => {
+    if (firstModeRef.current) {
+      firstModeRef.current = false;
+      return;
+    }
+    panelRef.current?.focus();
+  }, [mode]);
+  const status = generating
+    ? 'Making your picture…'
+    : showingResult
+    ? 'Your picture is ready.'
+    : '';
 
   // The Guide floats at a pixel width inside its half; the panel is at
   // least as tall as the frame, so its last row ends at the frame's bottom.
@@ -387,9 +414,11 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             <div ref={guideHostRef} className={styles.guideHost}>
               <Guide id="explore-guide" width={guideWidth}>
                 <section
+                  ref={panelRef}
+                  tabIndex={-1}
                   className={styles.panel}
                   style={panelStyle}
-                  aria-label="Draw your image"
+                  aria-label="Draw your picture"
                 >
                   {instructionsBlock}
                   {parts.toolbar}
@@ -436,7 +465,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
 
   return (
     <div className={styles.scene}>
-      <section className={styles.imagePane} aria-label="Your image">
+      <section className={styles.imagePane} aria-label="Your picture">
         <div className={styles.imageColumn}>
           <div
             ref={frameRef}
@@ -447,11 +476,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           >
             {generating ? (
               // A set's frames arrive one by one; none shows until all have.
-              <div
-                className={styles.generating}
-                role="status"
-                aria-label="Making your picture"
-              >
+              <div className={styles.generating}>
                 <PixelShuffle />
               </div>
             ) : made ? (
@@ -461,7 +486,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 ) : (
                   <img
                     src={made.dataURI}
-                    alt={made.result.generation.prompt}
+                    alt={made.prompt}
                     className={classNames(
                       styles.preview,
                       made.result.pixelGridSize && styles.pixelArt
@@ -495,10 +520,15 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       <div ref={guideHostRef} className={styles.guideHost}>
         <Guide id="explore-guide" width={guideWidth}>
           <section
+            ref={panelRef}
+            tabIndex={-1}
             className={styles.panel}
             style={panelStyle}
-            aria-label="Make your image"
+            aria-label="Make your picture"
           >
+            <div className={styles.srOnly} role="status">
+              {status}
+            </div>
             {instructionsBlock}
             {/* Read-only from Generate until Change words. */}
             {showingResult || generating ? (
@@ -514,12 +544,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             {showingResult && made ? (
               <>
                 <hr className={styles.resultDivider} />
-                <div
-                  className={styles.resultActions}
-                  role="group"
-                  aria-labelledby="explore-result-label"
-                >
-                  <div className={styles.resultQuestionRow}>
+                <div className={styles.resultActions}>
+                  <div
+                    className={styles.resultQuestionRow}
+                    role="group"
+                    aria-labelledby="explore-result-label"
+                  >
                     <span
                       id="explore-result-label"
                       className={styles.resultQuestion}
@@ -527,7 +557,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                       How did the AI do?
                     </span>
                     <MuiIconButton
-                      aria-label="Thumbs up"
+                      aria-label="Good"
                       aria-pressed={verdict === 'up'}
                       className={classNames(
                         styles.verdictButton,
@@ -539,7 +569,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                       <FontAwesomeV6Icon iconName="thumbs-up" />
                     </MuiIconButton>
                     <MuiIconButton
-                      aria-label="Thumbs down"
+                      aria-label="Not so good"
                       aria-pressed={verdict === 'down'}
                       className={classNames(
                         styles.verdictButton,
@@ -581,7 +611,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 </div>
               </>
             ) : generating ? (
-              // The frame's status region already announces this.
+              // The status line above already reads this out.
               <p className={styles.generatingLabel} aria-hidden>
                 Generating…
               </p>
@@ -629,6 +659,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 <FontAwesomeV6Icon
                   iconName="lightbulb"
                   className={styles.factIcon}
+                  aria-hidden
                 />
                 <MuiTypography variant="body2">{fact}</MuiTypography>
               </aside>
@@ -636,6 +667,17 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
             {/* Offered only while the words are being chosen. */}
             {mode === 'edit' && (
               <div className={styles.bottomRow}>
+                {showContinue && (
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    className={styles.continueButton}
+                    disabled={busy}
+                    onClick={continueLesson}
+                  >
+                    Continue
+                  </MuiButton>
+                )}
                 <hr className={styles.resultDivider} />
                 <MuiButton
                   variant="outlined"

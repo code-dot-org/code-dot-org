@@ -79,7 +79,7 @@ describe('ImageExploreScene', () => {
 
   it('shows the image area and the editing controls', () => {
     renderScene();
-    expect(screen.getByRole('region', {name: 'Your image'})).toBeTruthy();
+    expect(screen.getByRole('region', {name: 'Your picture'})).toBeTruthy();
     const style = screen.getByRole('combobox') as HTMLSelectElement;
     expect(style.value).toBe('pixel');
     expect(screen.getByRole('option', {name: 'Smooth'})).toBeTruthy();
@@ -96,7 +96,7 @@ describe('ImageExploreScene', () => {
     renderScene({
       instructions: '**Make a character.** Use AI or draw your own.',
     });
-    const panel = screen.getByRole('region', {name: 'Make your image'});
+    const panel = screen.getByRole('region', {name: 'Make your picture'});
     expect(panel.textContent).toMatch(
       /^Make a character\. Use AI or draw your own\./
     );
@@ -105,7 +105,7 @@ describe('ImageExploreScene', () => {
     );
   });
 
-  it('turns the frame into a drawing canvas with pen and eraser only', () => {
+  it('turns the frame into a drawing canvas with pen, fill and eraser only', () => {
     renderScene();
     fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
     expect(screen.getByRole('region', {name: 'Your drawing'})).toBeTruthy();
@@ -114,7 +114,8 @@ describe('ImageExploreScene', () => {
     ).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Pen (P)'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Eraser (E)'})).toBeTruthy();
-    expect(screen.queryByRole('button', {name: 'Fill (F)'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Fill (F)'})).toBeTruthy();
+    expect(screen.queryByRole('button', {name: /Eyedropper/})).toBeNull();
     const colors = screen.getByRole('group', {name: 'Colors'});
     expect(colors.querySelectorAll('button')).toHaveLength(12);
     expect(screen.queryByRole('button', {name: /Choose color/})).toBeNull();
@@ -254,18 +255,15 @@ describe('ImageExploreScene', () => {
     });
     const group = screen.getByRole('group', {name: 'How did the AI do?'});
     expect(
-      [...group.querySelectorAll('button')].map(
-        b => b.getAttribute('aria-label') ?? b.textContent?.trim()
+      [...group.querySelectorAll('button')].map(b =>
+        b.getAttribute('aria-label')
       )
-    ).toEqual([
-      'Thumbs up',
-      'Thumbs down',
-      'Change words',
-      'Generate again',
-      'Continue',
-    ]);
-    const up = screen.getByRole('button', {name: 'Thumbs up'});
-    const down = screen.getByRole('button', {name: 'Thumbs down'});
+    ).toEqual(['Good', 'Not so good']);
+    expect(screen.getByRole('button', {name: 'Change words'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Generate again'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Continue'})).toBeTruthy();
+    const up = screen.getByRole('button', {name: 'Good'});
+    const down = screen.getByRole('button', {name: 'Not so good'});
     expect(up.getAttribute('aria-pressed')).toBe('false');
     fireEvent.click(down);
     expect(down.getAttribute('aria-pressed')).toBe('true');

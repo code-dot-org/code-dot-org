@@ -70,12 +70,12 @@ describe('WordMenus', () => {
     expect(nextButton.disabled).toBe(true);
     // Only the required set's dot is out until its word is chosen.
     expect(
-      screen.getAllByRole('button', {name: /^[a-z]+ words$/})
+      screen.getAllByRole('button', {name: /^[a-z ]+ words/})
     ).toHaveLength(1);
     fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
     expect(nextButton.disabled).toBe(false);
     expect(
-      screen.getAllByRole('button', {name: /^[a-z]+ words$/})
+      screen.getAllByRole('button', {name: /^[a-z ]+ words/})
     ).toHaveLength(3);
   });
 
@@ -129,38 +129,34 @@ describe('WordMenus', () => {
     next();
     expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
     fireEvent.click(
-      screen.getByRole('button', {name: 'creature: cat. Show its words'})
+      screen.getByRole('button', {name: 'cat. Show creature words'})
     );
     expect(
       screen.getByRole('group', {name: 'creature (pick one)'})
     ).toBeTruthy();
     fireEvent.click(
-      screen.getByRole('button', {name: 'adjective: cute. Show its words'})
+      screen.getByRole('button', {name: 'cute. Show adjective words'})
     );
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
   });
 
-  it('leaves a chip inert while the creature is missing', () => {
+  it('shows a chip as plain text while the creature is missing', () => {
     render(<Harness initial={{creature: 'cat', adjective: 'cute'}} />);
     fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));
     expect(
       screen.getByRole('group', {name: 'creature (pick one)'})
     ).toBeTruthy();
-    const cute = screen.getByRole('button', {
-      name: 'adjective: cute. Show its words',
-    }) as HTMLButtonElement;
-    expect(cute.disabled).toBe(true);
-    fireEvent.click(cute);
     expect(
-      screen.getByRole('group', {name: 'creature (pick one)'})
-    ).toBeTruthy();
+      screen.queryByRole('button', {name: 'cute. Show adjective words'})
+    ).toBeNull();
+    expect(sentenceText()).toBe('A cute .');
   });
 
   it('opens the phrases one after another and clears them from the back', () => {
     render(<Harness initial={{creature: 'cat'}} sentence={CHAINED_SENTENCE} />);
     // Creature, adjective and the first phrase are open; the rest wait.
     expect(
-      screen.getAllByRole('button', {name: /^[a-z]+ words$/})
+      screen.getAllByRole('button', {name: /^[a-z ]+ words/})
     ).toHaveLength(3);
     expect(screen.queryByRole('button', {name: 'thing words'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'clothing words'}));

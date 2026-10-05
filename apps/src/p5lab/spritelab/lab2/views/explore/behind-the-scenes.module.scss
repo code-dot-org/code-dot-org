@@ -52,7 +52,7 @@ $panel-inset: 6px;
   max-width: 100%;
   border: 1px solid var(--border-neutral-secondary, color.$light_gray);
   // One height whichever tab is on show; the words scroll in what is left.
-  height: var(--prompt-room, 60vh);
+  height: var(--prompt-panel-height, 60vh);
   overflow: hidden;
   z-index: 1;
 

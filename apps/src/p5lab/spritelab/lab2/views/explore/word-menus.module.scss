@@ -1,9 +1,25 @@
+@use "sass:color" as sass-color;
 @use "color.scss";
+@use "sr-only";
+
+// Chips and words are controls, not text to copy; the page gives p and
+// span user-select: text.
+.menus,
+.readOnly {
+  &,
+  * {
+    user-select: none;
+  }
+}
 
 .menus {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
 }
 
 // The sentence and its hidden longest form share one grid cell.
@@ -28,36 +44,39 @@
   color: var(--text-neutral-primary, color.$dark_charcoal);
 }
 
-// A slot's color, the text color on it, and the darker shade under a
-// raised button.
+// A slot's color; the text color on it (4.5:1 in both themes); a darker
+// shade for the ledge under a raised button and for lines on the light
+// tray; a lighter shade for lines on the dark tray (3:1 on each).
+@mixin hue($base, $text) {
+  --hue: #{$base};
+  --hue-dark: #{sass-color.adjust($base, $lightness: -12%)};
+  --hue-light: #{sass-color.adjust($base, $lightness: 15%)};
+  --hue-text: #{$text};
+  --hue-line: var(--hue-dark);
+}
+
+:global([data-theme='Dark']) :is(.hue_teal, .hue_yellow, .hue_purple, .hue_orange, .hue_blue) {
+  --hue-line: var(--hue-light);
+}
+
 .hue_teal {
-  --hue: #{color.$teal};
-  --hue-dark: #{color.$dark_teal};
-  --hue-text: #{color.$white};
+  @include hue(color.$dark_blue, color.$white);
 }
 
 .hue_yellow {
-  --hue: #{color.$yellow};
-  --hue-dark: #{color.$orange};
-  --hue-text: #{color.$dark_gray};
+  @include hue(color.$yellow, color.$dark_gray);
 }
 
 .hue_purple {
-  --hue: #{color.$purple};
-  --hue-dark: #{color.$dark_purple};
-  --hue-text: #{color.$white};
+  @include hue(color.$purple, color.$white);
 }
 
 .hue_orange {
-  --hue: #{color.$dark_orange};
-  --hue-dark: #c25f00;
-  --hue-text: #{color.$dark_gray};
+  @include hue(color.$dark_orange, color.$dark_gray);
 }
 
 .hue_blue {
-  --hue: #{color.$default_blue};
-  --hue-dark: #{color.$dark_blue};
-  --hue-text: #{color.$white};
+  @include hue(color.$default_blue, color.$white);
 }
 
 .chip {
@@ -135,13 +154,13 @@
   min-height: 1.5em;
   padding-right: 14px;
   background: transparent;
-  border: 2px dashed var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
+  border: 2px dashed var(--hue-line, var(--text-neutral-secondary, color.$dark_charcoal));
   box-shadow: none;
   opacity: 0.8;
-  animation: slot-breathe 1.6s ease-in-out infinite;
+  animation: slot-pulse 1.6s ease-in-out infinite;
 }
 
-@keyframes slot-breathe {
+@keyframes slot-pulse {
   0%,
   100% {
     transform: scale(1);
@@ -166,16 +185,16 @@
 
 .remove {
   position: absolute;
-  top: -11px;
-  right: -11px;
-  width: 20px;
-  height: 20px;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   border: 2px solid var(--background-neutral-primary, color.$white);
   border-radius: 50%;
   background-color: var(--text-neutral-primary, color.$dark_charcoal);
   color: var(--background-neutral-primary, color.$white);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1;
   display: inline-flex;
   align-items: center;
@@ -376,17 +395,27 @@
   }
 }
 
+// A 24px button around a 12px dot: a neutral ring until the set has its
+// word (a hue ring fails contrast on one theme's tray or the other), filled
+// with the set's color once it does, and ringed darker while on show.
 .dot {
-  width: 12px;
-  height: 12px;
+  position: relative;
+  width: 24px;
+  height: 24px;
   margin: 0;
   padding: 0;
-  border-radius: 50%;
-  // Its set's color: a ring until the set has its word.
-  border: 2px solid var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
+  border: 0;
   background: transparent;
   cursor: pointer;
   animation: dot-in 0.3s ease-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 2px solid var(--text-neutral-secondary, color.$dark_charcoal);
+  }
 }
 
 @keyframes dot-in {
@@ -406,13 +435,13 @@
   }
 }
 
-.dotFilled {
+.dotFilled::before {
   background-color: var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
 }
 
-.dotCurrent {
+.dotCurrent::before {
   background-color: var(--hue, var(--text-brand-primary, color.$brand_primary_default));
-  box-shadow: 0 0 0 2px var(--background-neutral-secondary, color.$white);
+  border-color: var(--text-neutral-primary, color.$dark_charcoal);
   transform: scale(1.25);
 }
 
@@ -422,7 +451,7 @@
   gap: 8px;
   margin: 0;
   min-height: 44px;
-  border: 2px solid var(--hue, var(--text-neutral-primary, color.$dark_charcoal));
+  border: 2px solid var(--hue-line, var(--text-neutral-primary, color.$dark_charcoal));
   border-radius: 999px;
   background: var(--background-neutral-secondary, color.$white);
   color: var(--text-neutral-primary, color.$dark_charcoal);

@@ -10,6 +10,7 @@ import {
   chainedSlotIds,
   Choices,
   phraseFilled,
+  promptText,
   Segment,
   Sentence,
   Slot,
@@ -53,6 +54,9 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   const [direction, setDirection] = useState<'left' | 'right'>('right');
   const [moveCount, setMoveCount] = useState(0);
   const [overSlotId, setOverSlotId] = useState<string | null>(null);
+  // What the last pick did, for screen readers; the sentence itself is not
+  // live, since its chips carry controls.
+  const [announcement, setAnnouncement] = useState('');
   const slot = slots[Math.min(index, slots.length - 1)];
   const goTo = (next: number) => {
     if (next === index) {
@@ -87,6 +91,8 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     }
     onChange(next);
     const at = slots.findIndex(s => s.id === slotId);
+    const word = wordFor(sentence, slotId, wordId ?? choices[slotId]);
+    setAnnouncement(word ? `${word.text} ${wordId ? 'added' : 'removed'}` : '');
     // A required word completes the sentence: a chime, not a tick.
     playSound(!wordId ? 'unpick' : slots[at].required ? 'complete' : 'pick');
     // Clearing a required word locks the carousel on that word's set.
@@ -118,6 +124,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       }
     }
     onChange(next);
+    setAnnouncement(`New words: ${promptText(sentence, next)}`);
     playSound('shuffle');
   };
 
@@ -235,21 +242,30 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             )}
             {...dropHandlers(s.id)}
           >
-            {/* Jumps to the word's set while that set is open. */}
-            <button
-              type="button"
-              className={styles.chipWord}
-              aria-label={`${s.label}: ${word.text}. Show its words`}
-              disabled={disabled || !canMove || !isAvailable(s)}
-              onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
-            >
-              {word.emoji && (
-                <span className={styles.emojiBadge} aria-hidden>
-                  {word.emoji}
-                </span>
-              )}
-              {word.text}
-            </button>
+            {disabled || !canMove || !isAvailable(s) ? (
+              <span className={styles.chipWord}>
+                {word.emoji && (
+                  <span className={styles.emojiBadge} aria-hidden>
+                    {word.emoji}
+                  </span>
+                )}
+                {word.text}
+              </span>
+            ) : (
+              <button
+                type="button"
+                className={styles.chipWord}
+                aria-label={`${word.text}. Show ${s.label} words`}
+                onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
+              >
+                {word.emoji && (
+                  <span className={styles.emojiBadge} aria-hidden>
+                    {word.emoji}
+                  </span>
+                )}
+                {word.text}
+              </button>
+            )}
             <button
               type="button"
               className={styles.remove}
@@ -257,7 +273,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
               disabled={disabled}
               onClick={() => choose(s.id, undefined)}
             >
-              <FontAwesomeV6Icon iconName="xmark" />
+              <FontAwesomeV6Icon iconName="xmark" aria-hidden />
             </button>
           </span>,
         ];
@@ -273,8 +289,11 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   return (
     <div className={styles.menus}>
       {/* A hidden longest form shares the cell, so the height holds. */}
+      <div className={styles.srOnly} role="status">
+        {announcement}
+      </div>
       <div className={styles.sentenceStack}>
-        <p className={styles.sentence} aria-live="polite">
+        <p className={styles.sentence}>
           {withPeriod(renderSegments(sentence.segments, choices))}
         </p>
         <p
@@ -293,7 +312,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             disabled={!canMove || index === 0}
             onClick={() => goTo(Math.max(0, index - 1))}
           >
-            <FontAwesomeV6Icon iconName="chevron-left" />
+            <FontAwesomeV6Icon iconName="chevron-left" aria-hidden />
           </button>
           {/* Every set is laid out in one cell; only the one on show is
               visible. */}
@@ -367,7 +386,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             disabled={!canMove || index >= lastAvailable}
             onClick={() => goTo(Math.min(lastAvailable, index + 1))}
           >
-            <FontAwesomeV6Icon iconName="chevron-right" />
+            <FontAwesomeV6Icon iconName="chevron-right" aria-hidden />
           </button>
         </div>
         <div className={styles.dotsRow}>
@@ -383,7 +402,13 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
                     i === index && styles.dotCurrent,
                     filled(s.id) && styles.dotFilled
                   )}
-                  aria-label={`${s.label} words`}
+                  aria-label={`${s.label} words${
+                    filled(s.id)
+                      ? `, ${
+                          wordFor(sentence, s.id, choices[s.id])?.text
+                        } chosen`
+                      : ''
+                  }`}
                   aria-current={i === index ? 'true' : undefined}
                   disabled={!canMove}
                   onClick={() => goTo(i)}
@@ -397,7 +422,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
             disabled={disabled}
             onClick={shuffle}
           >
-            <FontAwesomeV6Icon iconName="shuffle" />
+            <FontAwesomeV6Icon iconName="shuffle" aria-hidden />
             Surprise me
           </button>
         </div>

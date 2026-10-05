@@ -19,6 +19,9 @@ const TABS = [
   ['poses', 'Other poses'],
 ] as const;
 type Tab = (typeof TABS)[number][0];
+// Pose names as students read them.
+const POSE_NAMES: Record<string, string> = {idling: 'standing'};
+const PANEL_ID = 'explore-prompt-popover';
 
 interface BehindTheScenesProps {
   sent: SentPrompts;
@@ -94,7 +97,9 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
       style={
         panelHeight === null
           ? undefined
-          : ({'--prompt-room': `${panelHeight}px`} as React.CSSProperties)
+          : ({
+              '--prompt-panel-height': `${panelHeight}px`,
+            } as React.CSSProperties)
       }
     >
       <button
@@ -102,20 +107,24 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
         ref={linkRef}
         className={styles.promptLink}
         aria-expanded={open}
+        aria-controls={open ? PANEL_ID : undefined}
         disabled={disabled}
         onClick={() => {
           setTab('picture');
           setOpen(current => !current);
         }}
       >
-        <FontAwesomeV6Icon iconName="circle-info" />
+        <FontAwesomeV6Icon iconName="circle-info" aria-hidden />
         {TITLE}
       </button>
       {open && (
         <Popover
+          id={PANEL_ID}
+          role="dialog"
+          aria-label={TITLE}
           direction="none"
           title={TITLE}
-          content="We sent the AI these words. It predicted a picture to match them."
+          content="We sent the AI these words. It made a picture to match them."
           className={styles.promptPopover}
           onClose={close}
         >
@@ -133,6 +142,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
                   id={`explore-prompt-tab-${id}`}
                   aria-selected={tab === id}
                   aria-controls="explore-prompt-panel"
+                  tabIndex={tab === id ? 0 : -1}
                   className={styles.promptTab}
                   onClick={() => setTab(id)}
                   onKeyDown={onTabKeyDown}
@@ -143,47 +153,49 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             </div>
           )}
           {sent.poses && tab === 'poses' ? (
-            <>
+            <div
+              id="explore-prompt-panel"
+              className={styles.promptText}
+              role="tabpanel"
+              aria-labelledby="explore-prompt-tab-poses"
+              tabIndex={0}
+            >
               <p className={styles.promptNote}>
                 Then, for each pose, we sent the first picture back with these
                 words. Only the part in brackets changed.
               </p>
-              <div
-                id="explore-prompt-panel"
-                className={styles.promptText}
-                role="tabpanel"
-                aria-labelledby="explore-prompt-tab-poses"
-              >
-                <p className={styles.promptCommon}>
-                  {sent.poses.common.split(POSE_MARK).flatMap((piece, i) =>
-                    i === 0
-                      ? [piece]
-                      : [
-                          <mark key={i} className={styles.poseMark}>
-                            {POSE_MARK}
-                          </mark>,
-                          piece,
-                        ]
-                  )}
-                </p>
-                <ul className={styles.poseList}>
-                  {sent.poses.frames.map(frame => (
-                    <li key={frame.label}>
-                      <span className={styles.poseLabel}>{frame.label}:</span>{' '}
-                      {frame.pose}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </>
+              <p className={styles.promptCommon}>
+                {sent.poses.common.split(POSE_MARK).flatMap((piece, i) =>
+                  i === 0
+                    ? [piece]
+                    : [
+                        <mark key={i} className={styles.poseMark}>
+                          {POSE_MARK}
+                        </mark>,
+                        piece,
+                      ]
+                )}
+              </p>
+              <ul className={styles.poseList}>
+                {sent.poses.frames.map(frame => (
+                  <li key={frame.label}>
+                    <span className={styles.poseLabel}>
+                      {POSE_NAMES[frame.label] ?? frame.label}:
+                    </span>{' '}
+                    {frame.pose}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : (
             <p
               id="explore-prompt-panel"
               className={styles.promptText}
-              role="tabpanel"
+              role={sent.poses ? 'tabpanel' : undefined}
               aria-labelledby={
                 sent.poses ? 'explore-prompt-tab-picture' : undefined
               }
+              tabIndex={0}
             >
               {sent.picture}
             </p>

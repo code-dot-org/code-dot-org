@@ -36,13 +36,14 @@ async function sourceUrlFor(
   uploadImage: UploadImageFunction | undefined,
   filename: string,
   bytes: Uint8Array,
+  mediaType: string,
   dataURI: string
 ): Promise<string> {
   if (!uploadImage) {
     return dataURI;
   }
   try {
-    return await uploadImage(filename, bytes, 'image/png');
+    return await uploadImage(filename, bytes, mediaType);
   } catch {
     return dataURI;
   }
@@ -80,6 +81,7 @@ export async function saveGeneratedImage(
     uploadImage,
     result.filename,
     result.uint8Array,
+    result.mediaType,
     dataURI
   );
   const frameSize = (await dataURIToSourceSize(dataURI).catch(() => null)) ?? {
@@ -127,6 +129,7 @@ export async function savePaintedImage(
     uploadImage,
     `painted_${Date.now()}.png`,
     bytes,
+    'image/png',
     dataURI
   );
   const frameSize = (await dataURIToSourceSize(dataURI).catch(() => null)) ?? {
