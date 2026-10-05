@@ -1,0 +1,61 @@
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 50rem;
+  font-size: 0.8rem;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-light);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.naming {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1 1 auto;
+  min-width: 0;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.25rem 0.5rem;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    border: 1px solid var(--borders-neutral-strong);
+    border-radius: 0.25rem;
+  }
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--text-neutral-secondary);
+}
