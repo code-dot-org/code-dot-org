@@ -129,19 +129,21 @@ describe('useProgress', () => {
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
 
-  it('keeps every pick per step and clears them on reset', async () => {
+  it('stores the answers it is given per step and clears them on reset', async () => {
     const store = fakeStore(undefined);
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
     );
     await waitForNextUpdate();
-    act(() => result.current.saveAnswer('survey', 1, 'a'));
-    act(() => result.current.saveAnswer('other', 3, 'c'));
-    act(() => result.current.saveAnswer('survey', 2, 'b'));
-    act(() => result.current.saveAnswer('survey', 1, 'b'));
+    const wrong = {answerId: 'a', isCorrect: false};
+    const right = {answerId: 'b', isCorrect: true};
+    act(() => result.current.saveAnswers('quiz', 1, [wrong]));
+    act(() => result.current.saveAnswers('other', 3, [right]));
+    act(() => result.current.saveAnswers('quiz', 2, [right]));
+    act(() => result.current.saveAnswers('quiz', 1, [wrong, right]));
     expect(result.current.answers).toEqual({
-      survey: {1: ['a', 'b'], 2: ['b']},
-      other: {3: ['c']},
+      quiz: {1: [wrong, right], 2: [right]},
+      other: {3: [right]},
     });
     expect(store.saved[store.saved.length - 1].questionAnswers).toEqual(
       result.current.answers

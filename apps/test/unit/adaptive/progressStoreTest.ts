@@ -23,7 +23,14 @@ describe('localStorageProgressStore', () => {
   it('reads back answers saved with the progress', async () => {
     const withAnswers: Progress = {
       ...progress,
-      questionAnswers: {survey: {1: ['a', 'b'], 2: ['b']}},
+      questionAnswers: {
+        quiz: {
+          1: [
+            {answerId: 'a', isCorrect: false},
+            {answerId: 'b', isCorrect: true},
+          ],
+        },
+      },
     };
     await store.save(key, withAnswers);
     expect(await store.load(key)).toEqual(withAnswers);

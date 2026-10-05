@@ -28,10 +28,9 @@ function findQuestionProblems(pathway: Pathway): string[] {
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
       if (step.kind !== 'questions') continue;
-      for (const question of step.questions) {
-        if (seen.has(question.id)) duplicates.add(question.id);
-        seen.add(question.id);
-      }
+      const {id} = step.question;
+      if (seen.has(id)) duplicates.add(id);
+      seen.add(id);
     }
   }
   return [...duplicates].map(

@@ -71,19 +71,17 @@ const served = (): Raw => ({
           id: 'quiz',
           title: 'Quiz',
           kind: 'questions',
-          questions: [
-            {
-              id: 1,
-              type: 'MultipleChoiceQuestion',
-              questionName: 'pick-one',
-              stem: 'Pick one',
-              choices: [
-                {id: 'a', text: 'A'},
-                {id: 'b', text: 'B'},
-              ],
-              correctChoiceId: 'a',
-            },
-          ],
+          question: {
+            id: 1,
+            type: 'MultipleChoiceQuestion',
+            questionName: 'pick-one',
+            stem: 'Pick one',
+            choices: [
+              {id: 'a', text: 'A'},
+              {id: 'b', text: 'B'},
+            ],
+            correctChoiceId: 'a',
+          },
         },
       ],
     },
@@ -160,7 +158,7 @@ const source = (): RawSource => {
 const questionOf = (raw: Raw) => {
   const quiz = raw.checkpoints[0].steps[1];
   if (quiz.kind !== 'questions') throw new Error('fixture has no quiz');
-  return quiz.questions[0];
+  return quiz.question;
 };
 
 function problemsOf(raw: unknown): string[] {
@@ -204,38 +202,27 @@ describe('parsePathway', () => {
     expect(pathway.project.levelProperties?.hideShareAndRemix).toBe(true);
   });
 
-  it('defaults a question page, as quiz questions carry one', () => {
-    const quiz = parsePathway(served()).checkpoints[0].steps[1];
-    expect(quiz.kind === 'questions' && quiz.questions[0]).toMatchObject({
-      id: 1,
-      page: 1,
-    });
-  });
-
   it('rejects a key the quiz question summary lacks', () => {
     const raw = served();
     Object.assign(raw.checkpoints[0].steps[1], {
-      questions: [{...questionOf(raw), multiSelect: true}],
+      question: {...questionOf(raw), multiSelect: true},
     });
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
-  it('keeps an authored question page', () => {
+  it('rejects a question page, as a step is one screen', () => {
     const raw = served();
     Object.assign(raw.checkpoints[0].steps[1], {
-      questions: [{...questionOf(raw), page: 2}],
+      question: {...questionOf(raw), page: 2},
     });
-    const quiz = parsePathway(raw).checkpoints[0].steps[1];
-    expect(quiz.kind === 'questions' && quiz.questions[0]).toMatchObject({
-      page: 2,
-    });
+    expect(problemsOf(raw)).toHaveLength(1);
   });
 
   it('accepts a question with no correct choice', () => {
     const raw = served();
     const question = {...questionOf(raw)} as {correctChoiceId?: string};
     delete question.correctChoiceId;
-    Object.assign(raw.checkpoints[0].steps[1], {questions: [question]});
+    Object.assign(raw.checkpoints[0].steps[1], {question});
     expect(problemsOf(raw)).toEqual([]);
   });
 

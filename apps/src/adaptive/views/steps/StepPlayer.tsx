@@ -3,7 +3,7 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {StepAnswers} from '../../progress';
+import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 
 import LevelStep from './LevelStep';
@@ -20,10 +20,10 @@ interface StepPlayerProps {
   /** Label for the last step's button. */
   finishLabel?: string;
   answers: {[stepId: string]: StepAnswers};
-  onSelectChoice: (
+  onSaveAnswers: (
     stepId: string,
     questionId: number,
-    choiceId: string
+    answers: Answer[]
   ) => void;
   onExit: () => void;
   onFinish: () => void;
@@ -34,7 +34,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
   answers,
-  onSelectChoice,
+  onSaveAnswers,
   onExit,
   onFinish,
 }) => {
@@ -64,8 +64,8 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             key={step.id}
             step={step}
             answers={answers[step.id] ?? NO_ANSWERS}
-            onSelectChoice={(questionId, choiceId) =>
-              onSelectChoice(step.id, questionId, choiceId)
+            onSaveAnswers={(questionId, list) =>
+              onSaveAnswers(step.id, questionId, list)
             }
             onComplete={advance}
           />

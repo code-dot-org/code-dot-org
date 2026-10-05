@@ -13,11 +13,14 @@ export type CheckpointStatus =
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
-/**
- * Every choice id picked for each question of a questions step, in order,
- * so a changed answer is still recorded. The last is the current answer.
- */
-export type StepAnswers = {[questionId: number]: string[]};
+/** One submitted answer. A survey question has no wrong answer. */
+export interface Answer {
+  answerId: string;
+  isCorrect: boolean;
+}
+
+/** Submitted answers per question, oldest first; the last is current. */
+export type StepAnswers = {[questionId: number]: Answer[]};
 
 export interface Progress {
   completed: string[];

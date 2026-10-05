@@ -5,13 +5,9 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 import {stepBaseSchema} from './steps/base';
 import {subsetOf} from './subsetOf';
 
-/**
- * Quiz's question summary, so the two share views. With correctChoiceId the
- * question is graded and the student retries until correct; without it, it
- * is a survey question.
- */
+/** Quiz's question summary less page: a questions step is one screen. */
 export const multipleChoiceQuestionSchema = subsetOf<
-  QuizQuestionSummary & {correctChoiceId?: string}
+  Omit<QuizQuestionSummary, 'page'> & {correctChoiceId?: string}
 >()(
   z.strictObject({
     id: z.number().int().positive(),
@@ -21,8 +17,8 @@ export const multipleChoiceQuestionSchema = subsetOf<
     choices: z
       .array(z.strictObject({id: z.string().min(1), text: z.string().min(1)}))
       .min(2),
+    /** Graded: the student retries until correct. Absent: a survey question. */
     correctChoiceId: z.string().min(1).optional(),
-    page: z.number().int().positive().default(1),
   })
 );
 
@@ -48,9 +44,10 @@ export const questionSchema = z.discriminatedUnion('type', [
   }),
 ]);
 
-/** A questions step, laid out like a quiz but with no attempt or score. */
+/**
+ *  One questions step laid out like a quiz but with no attempt or score. */
 export const questionsStepSchema = stepBaseSchema.extend({
   kind: z.literal('questions'),
   description: z.string().optional(),
-  questions: z.array(questionSchema).min(1),
+  question: questionSchema,
 });

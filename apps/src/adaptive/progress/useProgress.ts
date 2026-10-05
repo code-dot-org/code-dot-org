@@ -6,6 +6,7 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {Pathway} from '../types';
 
 import {
+  Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
   Progress,
@@ -70,13 +71,11 @@ export function useProgress(
     );
   }, []);
 
-  const saveAnswer = useCallback(
-    (stepId: string, questionId: number, choiceId: string) => {
+  const saveAnswers = useCallback(
+    (stepId: string, questionId: number, answers: Answer[]) => {
       setProgress(p => {
         if (!p) return p;
-        const answers = p.questionAnswers?.[stepId];
-        const picks = [...(answers?.[questionId] ?? []), choiceId];
-        const step = {...answers, [questionId]: picks};
+        const step = {...p.questionAnswers?.[stepId], [questionId]: answers};
         return {...p, questionAnswers: {...p.questionAnswers, [stepId]: step}};
       });
     },
@@ -92,7 +91,7 @@ export function useProgress(
     answers: progress?.questionAnswers ?? NO_ANSWERS,
     markStarted,
     markComplete,
-    saveAnswer,
+    saveAnswers,
     reset,
   };
 }

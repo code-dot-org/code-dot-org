@@ -12,7 +12,7 @@ import AttemptCard from './AttemptCard';
 import styles from './multi-choice-question-container.module.scss';
 
 export interface MultiChoiceQuestionContainerProps {
-  question: QuizQuestionSummary;
+  question: Pick<QuizQuestionSummary, 'id' | 'stem' | 'choices'>;
   // Omit for a quiz with only one question.
   questionLabel?: string;
   selectedChoiceId: string | null;

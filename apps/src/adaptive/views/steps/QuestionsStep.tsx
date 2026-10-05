@@ -1,17 +1,14 @@
-// Plays a questions step with quiz's question cards, so it looks like a quiz
-// level without quiz's attempt lifecycle. A question with a correctChoiceId
-// is graded on Next and must be answered correctly to move on; the rest are
-// survey questions.
+// Plays a questions step with quiz's question card, so it looks like a quiz
+// level without quiz's attempt lifecycle. A graded question is checked on
+// Submit and must be answered correctly to move on.
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import AttemptCard from '@cdo/apps/quiz/attempt/AttemptCard';
 import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
-import {groupByPage} from '@cdo/apps/quiz/utils';
 
-import {StepAnswers} from '../../progress';
+import {Answer, StepAnswers} from '../../progress';
 import {
   MultipleChoiceQuestion,
   QuestionsStep as QuestionsStepContent,
@@ -19,111 +16,104 @@ import {
 
 import styles from './stepPlayer.module.scss';
 
-// Long enough to read "Correct!" before the page changes.
+// Long enough to read "Correct!" before the step changes.
 const CORRECT_ADVANCE_DELAY_MS = 700;
 
 interface QuestionsStepProps {
   step: QuestionsStepContent;
   answers: StepAnswers;
-  onSelectChoice: (questionId: number, choiceId: string) => void;
+  onSaveAnswers: (questionId: number, answers: Answer[]) => void;
   onComplete: () => void;
 }
 
 const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   step,
   answers,
-  onSelectChoice,
+  onSaveAnswers,
   onComplete,
 }) => {
   const questions = useMemo(
     () =>
-      step.questions.filter(
+      [step.question].filter(
         (q): q is MultipleChoiceQuestion => q.type === 'MultipleChoiceQuestion'
       ),
-    [step.questions]
+    [step.question]
   );
-  const pages = useMemo(() => groupByPage(questions), [questions]);
-  const totalPages = pages.length || 1;
-  // A 1-based position into pages, not a raw page value.
-  const [currentPageNumber, setCurrentPageNumber] = useState(1);
-  const isLastPage = currentPageNumber >= totalPages;
-  const pageQuestions = pages[currentPageNumber - 1]?.questions ?? [];
-  // Numbered in the order shown, which can differ from the authored order.
-  const firstQuestionNumber =
-    pages
-      .slice(0, currentPageNumber - 1)
-      .reduce((count, page) => count + page.questions.length, 0) + 1;
+  // Picks stay local until Submit; only submitted answers are saved.
+  const [selectedChoiceIds, setSelectedChoiceIds] = useState(() => {
+    const restored: {[questionId: number]: string} = {};
+    for (const q of questions) {
+      const last = answers[q.id]?.slice(-1)[0];
+      if (last) restored[q.id] = last.answerId;
+    }
+    return restored;
+  });
   const currentChoice = (q: MultipleChoiceQuestion) =>
-    answers[q.id]?.slice(-1)[0];
-  const isPageAnswered = pageQuestions.every(q => !!currentChoice(q));
-  const gradedQuestions = pageQuestions.filter(q => q.correctChoiceId);
-  // Set by Next on a page with graded questions; any new pick clears it.
+    selectedChoiceIds[q.id] as string | undefined;
+  const isAnswered = questions.every(q => !!currentChoice(q));
+  const gradedQuestions = questions.filter(q => q.correctChoiceId);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect'>();
 
   const questionsRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     questionsRef.current?.querySelector<HTMLElement>('h2')?.focus();
-  }, [currentPageNumber]);
+  }, []);
 
-  const advance = () => {
-    setFeedback(undefined);
-    if (isLastPage) {
-      onComplete();
-    } else {
-      setCurrentPageNumber(currentPageNumber + 1);
-    }
-  };
-  const advanceRef = useRef(advance);
-  advanceRef.current = advance;
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
 
   useEffect(() => {
     if (feedback !== 'correct') return;
     const timer = setTimeout(
-      () => advanceRef.current(),
+      () => onCompleteRef.current(),
       CORRECT_ADVANCE_DELAY_MS
     );
     return () => clearTimeout(timer);
   }, [feedback]);
 
   const isAdvancing = feedback === 'correct';
-  const handleNext = () => {
+  const handleSubmit = () => {
     if (isAdvancing) return;
+    for (const q of questions) {
+      const answerId = currentChoice(q);
+      if (!answerId) continue;
+      const answer = {
+        answerId,
+        isCorrect: !q.correctChoiceId || answerId === q.correctChoiceId,
+      };
+      // Graded questions keep every try; survey questions only the last.
+      onSaveAnswers(
+        q.id,
+        q.correctChoiceId ? [...(answers[q.id] ?? []), answer] : [answer]
+      );
+    }
     if (gradedQuestions.some(q => currentChoice(q) !== q.correctChoiceId)) {
       setFeedback('incorrect');
     } else if (gradedQuestions.length) {
       setFeedback('correct');
     } else {
-      advance();
+      onComplete();
     }
   };
 
   return (
     <div className={styles.questionsStep} ref={questionsRef}>
-      {currentPageNumber === 1 && (
-        <AttemptCard
-          title={step.title}
-          description={
-            step.description && (
-              <MuiTypography variant="body2">{step.description}</MuiTypography>
-            )
-          }
-        />
-      )}
-      {pageQuestions.map((question, indexInPage) => (
+      <AttemptCard
+        title={step.title}
+        description={
+          step.description && (
+            <MuiTypography variant="body2">{step.description}</MuiTypography>
+          )
+        }
+      />
+      {questions.map(question => (
         <MultiChoiceQuestionContainer
           key={question.id}
           question={question}
-          questionLabel={
-            questions.length > 1
-              ? `Question ${firstQuestionNumber + indexInPage} of ${
-                  questions.length
-                }`
-              : undefined
-          }
           selectedChoiceId={currentChoice(question) ?? null}
           onSelectChoice={choiceId => {
             setFeedback(undefined);
-            onSelectChoice(question.id, choiceId);
+            setSelectedChoiceIds(prev => ({...prev, [question.id]: choiceId}));
           }}
           selectedChoiceStatus={
             feedback && question.correctChoiceId
@@ -152,13 +142,12 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           color="primary"
           size="medium"
           type="button"
-          endIcon={!isLastPage && <FontAwesomeV6Icon iconName="arrow-right" />}
-          disabled={!isPageAnswered}
+          disabled={!isAnswered}
           // Not disabled while advancing: that would drop keyboard focus.
           aria-disabled={isAdvancing}
-          onClick={handleNext}
+          onClick={handleSubmit}
         >
-          {isLastPage ? 'Submit' : 'Next'}
+          Submit
         </MuiButton>
       </div>
     </div>
