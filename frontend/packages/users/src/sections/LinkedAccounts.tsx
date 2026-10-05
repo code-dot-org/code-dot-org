@@ -62,7 +62,6 @@ function ConnectedAccount({
       lmsName={lmsName}
       name={linkedAccountName(option.credentialType, lmsName)}
       email={option.email}
-      // An LMS help article explains how to link, so a linked LMS row has none.
       learnMoreUrl={linkedAccountProvider(option.credentialType)?.learnMoreUrl}
     />
   );
@@ -73,7 +72,6 @@ function AvailableAccount({
   lockedMessageId,
 }: {
   provider: string;
-  /** Set while connecting is locked; the notice that says why. */
   lockedMessageId?: string;
 }) {
   const locked = !!lockedMessageId;

@@ -39,7 +39,7 @@ const PROVIDERS: Record<string, LinkedAccountProvider> = {
   [LTI_PROVIDER]: {icon: {iconName: 'graduation-cap'}},
 };
 
-const CANVAS_URL =
+const CANVAS_INSTRUCTIONS_URL =
   'https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas';
 
 // Keyed by LtiIntegration#platform_name; Canvas names from legacy
@@ -49,16 +49,20 @@ const LMS_PLATFORMS: Record<
   string,
   {name: string; icon: string; learnMoreUrl: string}
 > = {
-  canvas_cloud: {name: 'Canvas', icon: canvasLogo, learnMoreUrl: CANVAS_URL},
+  canvas_cloud: {
+    name: 'Canvas',
+    icon: canvasLogo,
+    learnMoreUrl: CANVAS_INSTRUCTIONS_URL,
+  },
   canvas_beta_cloud: {
     name: 'Canvas Beta',
     icon: canvasLogo,
-    learnMoreUrl: CANVAS_URL,
+    learnMoreUrl: CANVAS_INSTRUCTIONS_URL,
   },
   canvas_test_cloud: {
     name: 'Canvas Test',
     icon: canvasLogo,
-    learnMoreUrl: CANVAS_URL,
+    learnMoreUrl: CANVAS_INSTRUCTIONS_URL,
   },
   schoology: {
     name: 'PowerSchool (Schoology)',
