@@ -1,0 +1,77 @@
+def releaseRequested = gradle.startParameter.taskNames.any { it.toLowerCase().contains('release') }
+def releaseInputs = [
+    'FIRE_TABLET_APP_ID', 'FIRE_TABLET_APP_NAME',
+    'FIRE_TABLET_VERSION_CODE', 'FIRE_TABLET_VERSION_NAME',
+    'FIRE_TABLET_STORE_FILE', 'FIRE_TABLET_STORE_PASSWORD',
+    'FIRE_TABLET_KEY_ALIAS', 'FIRE_TABLET_KEY_PASSWORD'
+].collectEntries { name -> [(name): System.getenv(name)] }
+if (releaseRequested) {
+    def missing = releaseInputs.findAll { name, value -> !value?.trim() }.keySet()
+    if (missing) throw new GradleException("Missing release inputs: ${missing.join(', ')}. See docs/release.md.")
+    if (releaseInputs.FIRE_TABLET_APP_ID == 'org.code.firetablet.debug') {
+        throw new GradleException('Release requires an owner-confirmed application ID distinct from the temporary debug ID.')
+    }
+    if (!(releaseInputs.FIRE_TABLET_VERSION_CODE ==~ /[1-9][0-9]*/) ||
+        releaseInputs.FIRE_TABLET_VERSION_CODE.toBigInteger() > 2100000000) {
+        throw new GradleException('FIRE_TABLET_VERSION_CODE must be a positive Android version code (at most 2100000000).')
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    namespace = "org.code.firetablet.debug"
+    compileSdk = rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId releaseRequested ? releaseInputs.FIRE_TABLET_APP_ID : "org.code.firetablet.debug"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode releaseRequested ? releaseInputs.FIRE_TABLET_VERSION_CODE.toInteger() : 1
+        versionName releaseRequested ? releaseInputs.FIRE_TABLET_VERSION_NAME : "0.0.0-internal"
+        resValue "string", "app_name", releaseRequested ? releaseInputs.FIRE_TABLET_APP_NAME : "Studio (internal test)"
+        resValue "string", "title_activity_main", releaseRequested ? releaseInputs.FIRE_TABLET_APP_NAME : "Studio (internal test)"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    signingConfigs {
+        release {
+            if (releaseRequested) {
+                storeFile file(releaseInputs.FIRE_TABLET_STORE_FILE)
+                storePassword releaseInputs.FIRE_TABLET_STORE_PASSWORD
+                keyAlias releaseInputs.FIRE_TABLET_KEY_ALIAS
+                keyPassword releaseInputs.FIRE_TABLET_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'

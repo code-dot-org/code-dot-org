@@ -1,0 +1,35 @@
+:global(body) {
+  margin: 0;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.launcher {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 32px 16px;
+  overflow-wrap: break-word;
+
+  button {
+    min-height: 3rem;
+    max-width: 100%;
+    padding: 12px 24px;
+    border: 2px solid var(--text-neutral-primary);
+    border-radius: 0.25rem;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    font: inherit;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: default;
+  }
+
+  button:focus-visible {
+    outline: 3px solid var(--text-neutral-primary);
+    outline-offset: 3px;
+  }
+}
