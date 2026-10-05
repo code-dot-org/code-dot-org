@@ -6,11 +6,11 @@ import {
 import {hueFor} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/wordHues';
 
 describe('wordHues', () => {
-  it('gives every slot of a sentence its own colour, the required one first', () => {
+  it('gives every slot of a sentence its own color, the required one first', () => {
     const hues = slotsToOffer(CHARACTER_SENTENCE).map(s =>
       hueFor(CHARACTER_SENTENCE, s.id)
     );
-    expect(hues).toEqual(['teal', 'yellow', 'purple', 'orange', 'blue']);
+    expect(hues).toEqual(['teal', 'yellow', 'purple']);
     expect(new Set(hues).size).toBe(hues.length);
   });
 

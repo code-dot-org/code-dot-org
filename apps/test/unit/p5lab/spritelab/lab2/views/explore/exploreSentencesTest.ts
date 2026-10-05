@@ -26,11 +26,7 @@ describe('exploreSentences', () => {
   });
 
   it('chains the slots inside phrases, in sentence order', () => {
-    expect(chainedSlotIds(CHARACTER_SENTENCE)).toEqual([
-      'clothing',
-      'thing',
-      'detail',
-    ]);
+    expect(chainedSlotIds(CHARACTER_SENTENCE)).toEqual(['clothing']);
   });
 
   it('reads the simplest sentence without the empty slots', () => {
@@ -43,18 +39,14 @@ describe('exploreSentences', () => {
         adjective: 'sparkly',
         creature: 'wizard',
         clothing: 'crown',
-        thing: 'lantern',
-        detail: 'lots',
       })
-    ).toBe(
-      'A sparkly wizard wearing a crown holding a lantern, drawn with lots of detail'
-    );
+    ).toBe('A sparkly wizard wearing a crown');
   });
 
   it('leaves out a phrase whose slot is empty, and its words', () => {
     expect(
-      promptText(CHARACTER_SENTENCE, {creature: 'cat', thing: 'fish'})
-    ).toBe('A cat holding a fish');
+      promptText(CHARACTER_SENTENCE, {creature: 'cat', adjective: 'brave'})
+    ).toBe('A brave cat');
   });
 
   it('ignores a word the slot does not offer', () => {

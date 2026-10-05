@@ -4,20 +4,44 @@ import React, {useState} from 'react';
 import {
   CHARACTER_SENTENCE,
   Choices,
+  Sentence,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
 import WordMenus from '@cdo/apps/p5lab/spritelab/lab2/views/explore/WordMenus';
 
-const Harness: React.FunctionComponent<{initial?: Choices}> = ({
-  initial = {},
-}) => {
+// The character sentence with two more phrases, for the chaining tests.
+const CHAINED_SENTENCE: Sentence = {
+  id: 'chained',
+  segments: [
+    ...CHARACTER_SENTENCE.segments,
+    {phrase: [{text: ' holding a '}, {slot: 'thing'}]},
+    {phrase: [{text: ', drawn with '}, {slot: 'detail'}]},
+  ],
+  slots: {
+    ...CHARACTER_SENTENCE.slots,
+    thing: {
+      id: 'thing',
+      label: 'thing',
+      words: [
+        {id: 'wand', text: 'wand'},
+        {id: 'balloon', text: 'balloon'},
+      ],
+    },
+    detail: {
+      id: 'detail',
+      label: 'detail',
+      words: [{id: 'lots', text: 'lots of detail'}],
+    },
+  },
+};
+
+const Harness: React.FunctionComponent<{
+  initial?: Choices;
+  sentence?: Sentence;
+}> = ({initial = {}, sentence = CHARACTER_SENTENCE}) => {
   const [choices, setChoices] = useState<Choices>(initial);
   return (
-    <WordMenus
-      sentence={CHARACTER_SENTENCE}
-      choices={choices}
-      onChange={setChoices}
-    />
+    <WordMenus sentence={sentence} choices={choices} onChange={setChoices} />
   );
 };
 
@@ -38,6 +62,11 @@ const next = () =>
 describe('WordMenus', () => {
   it('offers the required slot first, then the rest in sentence order', () => {
     expect(slotsToOffer(CHARACTER_SENTENCE).map(s => s.id)).toEqual([
+      'creature',
+      'adjective',
+      'clothing',
+    ]);
+    expect(slotsToOffer(CHAINED_SENTENCE).map(s => s.id)).toEqual([
       'creature',
       'adjective',
       'clothing',
@@ -104,9 +133,8 @@ describe('WordMenus', () => {
   it('lays out a hidden longest sentence beside the real one', () => {
     render(<Harness initial={{creature: 'cat'}} />);
     const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
-    // The first four sets only; the detail phrase is left out.
     expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
-      'A 😊friendly 👾monster wearing a 👓glasses holding a 🎈balloon.'
+      'A 😊friendly 👾monster wearing a 👓glasses.'
     );
     expect(sentenceText()).toBe('A cat.');
   });
@@ -145,7 +173,7 @@ describe('WordMenus', () => {
   });
 
   it('opens the phrases one after another and clears them from the back', () => {
-    render(<Harness initial={{creature: 'cat'}} />);
+    render(<Harness initial={{creature: 'cat'}} sentence={CHAINED_SENTENCE} />);
     // Creature, adjective and the first phrase are open; the rest wait.
     expect(
       screen.getAllByRole('button', {name: /^[a-z]+ words$/})
