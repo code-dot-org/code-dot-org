@@ -563,6 +563,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     baselineImages,
     fallback: levelProperties.longInstructions,
   });
+  const showGuide =
+    !!levelProperties.levelMode &&
+    !(isFreeplayMode(levelProperties.levelMode) && !guide.text);
 
   // The World palette selection lives here so it survives leaving the tab
   // (WorldTab unmounts when hidden).
@@ -2013,7 +2016,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onStop={stopTab ? handleStopClick : undefined}
               />
             }
-            guideSize={levelProperties.levelMode ? guideSize : null}
+            guideSize={showGuide ? guideSize : null}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
             loading={externalLoading}
@@ -2024,7 +2027,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {/* Floating guide, when the level asks for it; it follows the
           student across every tab, narrowing on Play to leave the game more
           space. */}
-          {!!levelProperties.levelMode && (
+          {showGuide && (
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
