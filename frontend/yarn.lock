@@ -1976,6 +1976,7 @@ __metadata:
     eslint: "catalog:"
     prettier: "catalog:"
     typescript: "catalog:"
+    wavefile: "npm:^11.0.0"
   languageName: unknown
   linkType: soft
 
@@ -24150,6 +24151,15 @@ __metadata:
   dependencies:
     makeerror: "npm:1.0.12"
   checksum: 10c0/a17e037bccd3ca8a25a80cb850903facdfed0de4864bd8728f1782370715d679fa72e0a0f5da7c1c1379365159901e5935f35be531229da53bbfc0efdabdb48e
+  languageName: node
+  linkType: hard
+
+"wavefile@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "wavefile@npm:11.0.0"
+  bin:
+    wavefile: ./bin/wavefile.js
+  checksum: 10c0/cd6bde79c09d697a913b6b759380b2fc475320571bdaab64533136f3696700d5e03ee7dc18a0a40a70f1c02ce763be7b0d95cddc16acb06592096c94116b4a51
   languageName: node
   linkType: hard
 

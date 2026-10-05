@@ -63,7 +63,7 @@ export class JsonVideo extends HTMLElement {
             <div id="closed-caption-overlay" class="hidden"><span class="cc-text"></span></div>
             <div id="controls-bar">
                 <div class="controls-row">
-                    <button id="play-btn" class="control-btn"></button>
+                    <button id="play-btn" class="control-btn" aria-label="Play"></button>
                     <div class="volume-control">
                         <button id="mute-btn" class="control-btn"></button>
                         <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
@@ -169,9 +169,13 @@ export class JsonVideo extends HTMLElement {
 
     this.addEventListener('play', () => {
       this.classList.add('playing');
+      this.ui.playBtn.setAttribute('aria-label', 'Pause');
       this.posterImg.classList.add('hidden'); // Hide poster on play
     });
-    this.addEventListener('pause', () => this.classList.remove('playing'));
+    this.addEventListener('pause', () => {
+      this.classList.remove('playing');
+      this.ui.playBtn.setAttribute('aria-label', 'Play');
+    });
     this.addEventListener('timeupdate', () => this._updateUI());
   }
 

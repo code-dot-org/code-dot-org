@@ -14,7 +14,7 @@ export interface LessonTutorUrlParams {
 export interface VideoAudioTrack {
   paused: boolean;
   currentTime: number;
-  /** Length and tail only; a full data URI would swamp failure output. */
+  /** null when absent, else length and tail; a data URI would swamp output. */
   src: string | null;
 }
 
@@ -49,7 +49,7 @@ export class LessonTutorPage extends BasePage {
     super(page);
     this.watchVideoCard = page.getByRole('button', {name: 'Watch a video'});
     this.video = page.locator('json-video');
-    this.playButton = this.video.locator('#play-btn');
+    this.playButton = this.video.getByRole('button', {name: /^(Play|Pause)$/});
     this.nextVideoButton = page.getByRole('button', {name: 'Next video'});
     this.previousVideoButton = page.getByRole('button', {
       name: 'Previous video',
@@ -93,7 +93,7 @@ export class LessonTutorPage extends BasePage {
         return {
           paused: audio.paused,
           currentTime: audio.currentTime,
-          src: src ? `${src.length}:${src.slice(-32)}` : null,
+          src: src === null ? null : `${src.length}:${src.slice(-32)}`,
         };
       };
       const player = el as JsonVideoElement;
