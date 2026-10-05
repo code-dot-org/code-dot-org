@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-02 00:05:47 UTC",
+    "serialized_at": "2026-10-02 23:59:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -250,9 +250,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**How can AI help us analyze data?**\n\nIn this lesson, students explore how AI models process data and the role of specialized hardware in optimizing performance. They analyze an AI model, learn about different processing units, and test their capabilities in various tasks. Using their observations and research, students determine the most suitable hardware for their AI model and justify their choice.",
-        "preparation": "- Print copies of the How AI Uses Data activity guide",
-        "student_overview": "**How can AI help us analyze data?**\n\nToday, you explore how AI processes data and the role of different processors in optimizing performance. You analyze an AI model, test various processing units, and compare their effectiveness. Using research and observations, you determine the best hardware for your AI model and explain your choice. By the end of the lesson, you understand how hardware shapes AI performance and real-world applications."
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can AI help us analyze data?**\n\nIn this lesson, students explore how AI models use data and how processing units affect AI performance. They race a CPU, GPU and AIA on everyday tasks to infer what kind of work each processor does best. Students then choose a career and build a computer system that meets its AI task within a budget and power limit. Finally, they explore the career's AI model, comparing how different input data and predictive or generative models change the output and the decision.",
+        "preparation": "- Print copies of the How AI Uses Data activity guide (one for each student).\n- Have one sticky note for each student.\n- Divide a whiteboard into three sections labeled CPU, GPU and AIA. (Alternatively decide where students will place the sticky notes)",
+        "student_overview": "**How can AI help us analyze data?**\n\nToday, you explore how AI uses data and how different processors affect its performance. You race processors on everyday tasks to find out what each one does best. Then you choose a career and build a computer system that is fast enough for its AI task without going over the budget or power limit. Finally, you test how the input data and type of AI model change the result. By the end of the lesson, you understand how data and hardware work together to power AI."
       },
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
@@ -756,7 +756,7 @@
       "key": "0821943e-1e5d-45db-81cb-0d51b0b0050a",
       "position": 2,
       "properties": {
-        "duration": 25,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -770,7 +770,7 @@
       "key": "53e6765a-bb4d-4f11-88ff-a3d2a76f7882",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2419,7 +2419,7 @@
       "key": "f2f61c86-86bc-4f32-a86b-f9425c08885c",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these three processing units work.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide and one sticky note.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce Artificial Intelligence Accelerators(AIAs).\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 1. Students pick a computing task, start the race and watch all processors run it at the same time. They record the place each processing unit finished in their activity guide, and repeat the process for all computing tasks.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide and one sticky note.\n\n <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these three processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Divide a whiteboard into three sections: CPU, GPU and AIA. Students read the task and its data, then move their sticky note to the processor they think will be fastest. Repeat for each task.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the computing tasks.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 1. Students race all six tasks and record the tasks each processor did well at in the Processor Racing section of their activity guide.",
         "duration": "15",
         "name": "AI Hardware",
         "progression_name": "Processor Racing"
@@ -2433,7 +2433,7 @@
       "key": "be26180e-83db-44a8-91ae-c4d12ed3fc36",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that predictive AI focuses on identifying patterns in existing data, while generative AI uses patterns to produce something entirely new. Encourage students to notice how generative tasks need more processing power, memory, and energy on the bars above.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think generating new text might require more computational resources than predicting patterns?*\n- Think-Pair-Share: Ask students to consider their answers, share with a partner, and then debrief as a class. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that generative AI tasks demand more processing power and memory because they must create new outputs from complex models, while predictive tasks focus on analyzing existing data to make faster, simpler decisions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Summarize that predictive AI tasks focus on analyzing existing data and they’re fast and efficient whereas generative AI tasks have to create something new, like text or images, which takes much more computation and energy."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are running all tasks. Ask:\n- \"Does each step wait for the one before it, or can it all happen at once?\"\n- \"Does this task need to recognize something, like a face or a word?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Name a processor. What tasks did it perform well on? What tasks did it struggle to complete?*\n\n**Think-Pair-Share:** Pause instruction and have students briefly discuss a question with a partner. Call on a few pairs to share insights with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students infer what each processor is good at from evidence in the races. Listen for:\n- \"The GPU won the photos and the video game because every pixel gets the same change at the same time.\"\n- \"The CPU won the spreadsheet and the bus route because each step needs the answer from the step before.\"\n- \"The AIA only won the two AI tasks. It came last on everything else.\"\n"
       },
       "seeding_key": {
         "activity_section.key": "be26180e-83db-44a8-91ae-c4d12ed3fc36",
@@ -2441,12 +2441,33 @@
       }
     },
     {
-      "key": "436bc714-c914-4591-a2a3-1e4913fee674",
+      "key": "475491bf-70e2-44d7-adaa-0c37d6601d02",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 9, Level 2 and have them choose a career. Students read the scenario, set the CPU, GPU and AIA sliders, and press Run until the system works.\n- **Veterinarian:** Each X-ray result is due within 10 sec; small budget, low power.\n- **Athletic Trainer:** Each caption is due within 2 sec on a laptop battery.\n- **Agriculture Farmer:** Each tractor camera check is due within 1/10 sec, on battery all day. \n- **Visualization Supervisor:** 100 actors move 10 times a second, and the graphics already use 2 GPU levels.\n- **Pharmacist:** One question at a time, each within 3 sec; very small budget and power.",
+        "progression_name": "Hardware in AI Models"
+      },
+      "seeding_key": {
+        "activity_section.key": "475491bf-70e2-44d7-adaa-0c37d6601d02",
+        "lesson_activity.key": "0821943e-1e5d-45db-81cb-0d51b0b0050a"
+      }
+    },
+    {
+      "key": "ddffe01c-0478-4f7d-81d9-5cae2a1418ff",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they work on the widget and provide guidance or clarification if students are stuck on any step.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which processor did most of the work for your career?*\n- *What did you have to balance to make your system work?*\n\n**Think-Pair-Share:** Ask students to consider their answers, share with a partner, and then debrief as a class. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain trade-offs between speed, budget and power.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Summarize that predictive AI tasks focus on analyzing existing data to make a prediction and they’re fast and efficient whereas generative AI tasks have to create something new, like text or images, which takes much more computation and energy.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddffe01c-0478-4f7d-81d9-5cae2a1418ff",
+        "lesson_activity.key": "0821943e-1e5d-45db-81cb-0d51b0b0050a"
+      }
+    },
+    {
+      "key": "436bc714-c914-4591-a2a3-1e4913fee674",
+      "position": 5,
+      "properties": {
         "description": "AI systems use data to make decisions in real-world applications. Let’s explore how different AI models function and what data they rely on.",
-        "duration": "10",
-        "name": "AI in the Real World",
         "remarks": true
       },
       "seeding_key": {
@@ -2455,40 +2476,11 @@
       }
     },
     {
-      "key": "475491bf-70e2-44d7-adaa-0c37d6601d02",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students choose a career that interests them each with a unique AI task that a computing system could solve and Complete the Exploring AI Models section of your activity guide. On level 3, students design a computing system to be used by the AI Model.\n- **Veterinarian:**\n- **Athletic Trainer:**\n- **Agriculture Farmer:**\n- **Visualization Supervisor:**\n- **Pharmacist:**",
-        "progression_name": "Explore an AI Model"
-      },
-      "seeding_key": {
-        "activity_section.key": "475491bf-70e2-44d7-adaa-0c37d6601d02",
-        "lesson_activity.key": "0821943e-1e5d-45db-81cb-0d51b0b0050a"
-      }
-    },
-    {
-      "key": "56e512da-e488-471d-8c06-f020cdfdb01d",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that all students are able to answer all questions. At the end of the lesson, students will do a jigsaw activity to share out their answers."
-      },
-      "seeding_key": {
-        "activity_section.key": "56e512da-e488-471d-8c06-f020cdfdb01d",
-        "lesson_activity.key": "0821943e-1e5d-45db-81cb-0d51b0b0050a"
-      }
-    },
-    {
       "key": "7ce7ccea-9c50-4266-be4d-4c97196dac4b",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for various tasks that might be associated with an AI model",
-        "progression_name": "Determine AI Hardware",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The How AI Uses Data Activity Guide can be collected and used to formatively assess the lesson objectives.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 3 and have them choose the same career as in Level 2. Students pick the input data and AI model, press Run model, and compare results. They try every combination, then Noisy input.",
+        "progression_name": "Explore AI Models in Careers"
       },
       "seeding_key": {
         "activity_section.key": "7ce7ccea-9c50-4266-be4d-4c97196dac4b",
@@ -2496,10 +2488,27 @@
       }
     },
     {
+      "key": "56e512da-e488-471d-8c06-f020cdfdb01d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they work on the widget and provide guidance or clarification if students are stuck on any step.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which input data and AI model gave a result your person could use?*\n- *Why did the generative AI answer fall short for this job?*\n\n**Think-Pair-Share:** Ask students to consider their answers, share with a partner, and then debrief as a class. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain how a model uses a type of data to give an output a person acts on",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The How AI Uses Data Activity Guide can be collected and used to formatively assess the lesson objectives."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "56e512da-e488-471d-8c06-f020cdfdb01d",
+        "lesson_activity.key": "0821943e-1e5d-45db-81cb-0d51b0b0050a"
+      }
+    },
+    {
       "key": "774a0f77-cb14-4769-88f6-855944ff35a7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2516,7 +2525,7 @@
       "key": "160b181d-24fe-4f06-9f7f-056ffdaaed01",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Form new groups (1 student from each AI case study per group). Each student presents their AI system, explaining what the AI model does, what kind of data it processes, and what hardware best supports it and why.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Ensure students explain why specific hardware is best suited for their AI model.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Form new groups (1 student from each AI case study per group). Each student presents their AI system, explaining what the AI model does, what kind of data it processes, and what hardware best supports it and why.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Ensure students explain why specific hardware is best suited for their AI model.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3866,12 +3875,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore an AI Model"
+        "progression": "Hardware in AI Models"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson9-level1_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson9-choice-2"
         ],
         "lesson.key": "Lesson 9: How AI Uses Data",
         "lesson_group.key": "lessonGroup-3",
@@ -3879,7 +3888,7 @@
         "activity_section.key": "475491bf-70e2-44d7-adaa-0c37d6601d02"
       },
       "level_keys": [
-        "computer-systems-lesson9-level1_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson9-choice-2"
       ]
     },
     {
@@ -3888,12 +3897,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Determine AI Hardware"
+        "progression": "Explore AI Models in Careers"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson9-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson9-choice-1"
         ],
         "lesson.key": "Lesson 9: How AI Uses Data",
         "lesson_group.key": "lessonGroup-3",
@@ -3901,7 +3910,7 @@
         "activity_section.key": "7ce7ccea-9c50-4266-be4d-4c97196dac4b"
       },
       "level_keys": [
-        "computer-systems-lesson9-level3_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson9-choice-1"
       ]
     },
     {
@@ -4540,9 +4549,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson9-level1_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson9-choice-2",
         "script_level.level_keys": [
-          "computer-systems-lesson9-level1_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson9-choice-2"
         ],
         "lesson.key": "Lesson 9: How AI Uses Data",
         "lesson_group.key": "lessonGroup-3",
@@ -4552,9 +4561,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson9-level3_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson9-choice-1",
         "script_level.level_keys": [
-          "computer-systems-lesson9-level3_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson9-choice-1"
         ],
         "lesson.key": "Lesson 9: How AI Uses Data",
         "lesson_group.key": "lessonGroup-3",
@@ -4773,20 +4782,6 @@
       }
     },
     {
-      "name": "[KEY] AI and the Systems That Power It Unit Guide",
-      "url": "https://docs.google.com/document/d/158PRYzfYM0fRDuorQJ5GvE-A4PBvpgJn8EblGr71gjM/edit?usp=sharing",
-      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
-      }
-    },
-    {
       "name": "[KEY] Build a Computer System",
       "url": "https://docs.google.com/document/d/1IAZcD8QFc3c-jOhoGnMYFWnzweGu_Fb0Pgt6GGojHVM/edit?usp=sharing",
       "key": "_key_build_a_computer_system",
@@ -4829,14 +4824,16 @@
     },
     {
       "name": "[KEY] How AI Uses Data",
-      "url": "https://docs.google.com/document/d/1ivbKC2yDLRlwS0u-JHkKuqpEOUXHhrd--bThQWf0kT0/edit?usp=drivesdk",
-      "key": "_key_how_ai_uses_data",
+      "url": "https://docs.google.com/document/d/1_iXtY3aU8yp4zga4cl8-IFGQgQvCVbC4qjinlAMfp8Q",
+      "key": "_key_how_ai_uses_data_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_how_ai_uses_data"
+        "resource.key": "_key_how_ai_uses_data_1"
       }
     },
     {
@@ -4943,20 +4940,6 @@
       },
       "seeding_key": {
         "resource.key": "ai_and_the_systems_that_power_it_unit_guide_1"
-      }
-    },
-    {
-      "name": "AI and the Systems That Power It Unit Guide",
-      "url": "https://docs.google.com/document/d/1PbJJI6iyRpNriXMWOYpWnWQY7mxTqGv8v9T3Ku59-co/edit?usp=sharing",
-      "key": "ai_and_the_systems_that_power_it_unit_guide_2",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
       }
     },
     {
@@ -5127,41 +5110,29 @@
     },
     {
       "name": "How AI Uses Data",
-      "url": "https://docs.google.com/document/d/1gG4ZFYo_xMdzgIWV5iaUBIhZhhertxdKw_DMzBjdWMA/edit?usp=drivesdk",
-      "key": "how_ai_uses_data",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "how_ai_uses_data"
-      }
-    },
-    {
-      "name": "How AI Uses Data",
-      "url": "https://docs.google.com/presentation/d/1X0pcG_LASOP2WM4bjfASA_v2N53FW9e4Zs5kE0bNfH4/edit?usp=drivesdk",
-      "key": "how_ai_uses_data_1",
+      "url": "https://docs.google.com/presentation/d/1nzoGZ0OVRhmuib8dWVT2wI5rd0ePtT9WuqQKFi_lG8Q",
+      "key": "how_ai_uses_data_3",
       "properties": {
         "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "how_ai_uses_data_1"
-      }
-    },
-    {
-      "name": "How AI Uses Data",
-      "url": "https://docs.google.com/presentation/d/1cfi44CMWhHfUI9nRuSwR1NsnzEsIkCHIxyzMJAYNhgY/edit?usp=sharing",
-      "key": "how_ai_uses_data_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "how_ai_uses_data_2"
+        "resource.key": "how_ai_uses_data_3"
+      }
+    },
+    {
+      "name": "How AI Uses Data",
+      "url": "https://docs.google.com/document/d/1RjVWQ1Ll6Bodb81oVLGB3MM3a_Lkg16-3AZHMdu5FLI",
+      "key": "how_ai_uses_data_4",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_uses_data_4"
       }
     },
     {
@@ -5842,37 +5813,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
+        "resource.key": "_key_how_ai_uses_data_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "_key_how_ai_uses_data"
+        "resource.key": "how_ai_uses_data_3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "how_ai_uses_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "how_ai_uses_data_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "how_ai_uses_data_2"
+        "resource.key": "how_ai_uses_data_4"
       }
     }
   ],
@@ -5935,13 +5888,13 @@
       }
     },
     {
-      "key": "application_specific_integrated_circuit_asic_",
-      "word": "Application-Specific Integrated Circuit (ASIC)",
-      "definition": "a processor made for one specific task",
+      "key": "artificial_intelligence_accelerator_aia_",
+      "word": "Artificial Intelligence Accelerator (AIA)",
+      "definition": "a processor designed to run AI calculations quickly while using little energy",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "application_specific_integrated_circuit_asic_"
+        "vocabulary.key": "artificial_intelligence_accelerator_aia_"
       }
     },
     {
@@ -5992,16 +5945,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "ethics"
-      }
-    },
-    {
-      "key": "field_programmable_gate_array_fpga_",
-      "word": "Field Programmable Gate Array (FPGA)",
-      "definition": "a processor you can customize for specific tasks",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "field_programmable_gate_array_fpga_"
       }
     },
     {
@@ -6263,19 +6206,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
-        "vocabulary.key": "application_specific_integrated_circuit_asic_"
+        "vocabulary.key": "artificial_intelligence_accelerator_aia_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
         "vocabulary.key": "central_processing_unit_cpu_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: How AI Uses Data",
-        "vocabulary.key": "field_programmable_gate_array_fpga_"
       }
     },
     {

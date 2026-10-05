@@ -1,6 +1,5 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-09-02T21:28:15.000Z",
   "level_num": "custom",
@@ -727,7 +726,7 @@
             "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
             "type": "text",
             "data": {
-              "text": "Restate the problem and make your best guesses about possible solutions",
+              "text": "In your Activity Guide, restate the problem and make your best guesses about possible solutions",
               "strokeColor": "transparent",
               "fontFamily": "sans",
               "fontSize": "large",
@@ -735,14 +734,14 @@
               "locked": true
             },
             "position": {
-              "x": 1919.6407160285253,
-              "y": -101.99828374479044
+              "x": 2231.8783287296674,
+              "y": -76.2311021141137
             },
-            "width": 1045.0483482824857,
-            "height": 40,
+            "width": 635.8048753246787,
+            "height": 55.15716566510396,
             "measured": {
-              "width": 1045,
-              "height": 40
+              "width": 636,
+              "height": 55
             },
             "dragging": false
           },
@@ -870,6 +869,107 @@
             "measured": {
               "width": 104,
               "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "f75bc684-03a7-4ef9-9c9e-afe7098cf2a1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "locked": true
+            },
+            "position": {
+              "x": 2235.444845747368,
+              "y": -240.54970553794539
+            },
+            "width": 591.9792214554632,
+            "height": 157.8929141627599,
+            "measured": {
+              "width": 592,
+              "height": 158
+            },
+            "dragging": false
+          },
+          {
+            "id": "75d441f6-9814-4f53-9f02-007d18a2455a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-5/uuid/7e07ec3a-cf97-41bd-9bdd-f9e056ddcded.png",
+              "altText": "magnifyingGlass"
+            },
+            "position": {
+              "x": 2473.4123466895003,
+              "y": -219.3296736067998
+            },
+            "width": 123.62280240375048,
+            "height": 120,
+            "measured": {
+              "width": 124,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "009fc159-091a-47bb-a6df-50b4f199620d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-5/uuid/7e07ec3a-cf97-41bd-9bdd-f9e056ddcded.png",
+              "altText": "magnifyingGlass"
+            },
+            "position": {
+              "x": 2652.691781795931,
+              "y": -221.47405283372606
+            },
+            "width": 123.62280240375048,
+            "height": 120,
+            "measured": {
+              "width": 124,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "0c099a67-9b65-49fc-b601-04dfae7c2bf1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-5/uuid/7e07ec3a-cf97-41bd-9bdd-f9e056ddcded.png",
+              "altText": "magnifyingGlass"
+            },
+            "position": {
+              "x": 2282.856939567394,
+              "y": -221.47405283372603
+            },
+            "width": 123.62280240375048,
+            "height": 120,
+            "measured": {
+              "width": 124,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "b1bd265f-0d89-440d-981c-964ecf078f8e",
+            "type": "text",
+            "data": {
+              "text": "DO THIS - Drag the magnifying glass icons to highlight places in the diagram that might be a cause of the issues.",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2235.6293958195106,
+              "y": -311.1671699232251
+            },
+            "width": 603.9748274279607,
+            "height": 55.15716566510396,
+            "measured": {
+              "width": 604,
+              "height": 55
             },
             "dragging": false
           }
@@ -1009,8 +1109,8 @@
           }
         ],
         "viewport": {
-          "x": -1074.6238954609898,
-          "y": 251.43789028329078,
+          "x": -1064.1238954609896,
+          "y": 270.1183823725179,
           "zoom": 0.6597539553864479
         }
       }
@@ -1019,6 +1119,7 @@
     "bubble_choice_description": "Layla, the pharmacist, is dealing with issues with her pill dispensing machine.",
     "thumbnail_url": "https://images.code.org/acc07e0dc87ecaeb26fd4ed5958febc4-Layla.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:28:15.743+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-3\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-3\"},{\"changed_at\":\"2026-09-02 21:28:50 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:41:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:48:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:56:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:47:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:50:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:20:17 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:28:15.743+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-3\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-3\"},{\"changed_at\":\"2026-09-02 21:28:50 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:41:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:48:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:56:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:47:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:50:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:20:17 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-02 17:17:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
