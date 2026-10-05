@@ -59,7 +59,7 @@ export function formatNumber(value: number): string {
 
 const THRESHOLD_SIGNS = {lessThan: '<', atLeast: '≥'};
 
-// Not formatNumber: two places can round across the input that took the branch.
+// Unrounded, so the threshold stays on the correct side of the student's input.
 export function thresholdText(
   branch: Extract<DisplayTreeBranch, {threshold: number}>,
 ): string {
