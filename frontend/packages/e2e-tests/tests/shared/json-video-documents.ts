@@ -1,4 +1,6 @@
 import type {Page} from '@playwright/test';
+import {readFileSync} from 'fs';
+import path from 'path';
 
 // Replace the lesson's real videos, whose audio layout a spec cannot rely on.
 
@@ -15,25 +17,12 @@ interface JsonVideoDocument {
   scenes: JsonVideoScene[];
 }
 
-/** 8-bit PCM silence, as the data URI the lesson pipeline inlines clips as. */
-function silentWavDataUri(seconds: number, sampleRate = 8000): string {
-  const samples = seconds * sampleRate;
-  const buf = Buffer.alloc(44 + samples, 0x80);
-  buf.write('RIFF', 0);
-  buf.writeUInt32LE(36 + samples, 4);
-  buf.write('WAVE', 8);
-  buf.write('fmt ', 12);
-  buf.writeUInt32LE(16, 16);
-  buf.writeUInt16LE(1, 20); // PCM
-  buf.writeUInt16LE(1, 22); // mono
-  buf.writeUInt32LE(sampleRate, 24);
-  buf.writeUInt32LE(sampleRate, 28);
-  buf.writeUInt16LE(1, 32);
-  buf.writeUInt16LE(8, 34);
-  buf.write('data', 36);
-  buf.writeUInt32LE(samples, 40);
-  return 'data:audio/wav;base64,' + buf.toString('base64');
-}
+/** Twelve seconds of silence, inlined as the lesson pipeline inlines clips. */
+const SILENT_CLIP =
+  'data:audio/wav;base64,' +
+  readFileSync(path.join(__dirname, '../fixtures/silence.wav')).toString(
+    'base64',
+  );
 
 // 30s so no scene boundary, which also starts a clip, falls inside a poll.
 const scene = (label: string, audio?: string): JsonVideoScene => ({
@@ -48,16 +37,13 @@ const scene = (label: string, audio?: string): JsonVideoScene => ({
 
 /** Narrated per scene with no top-level track, as the lesson pipeline emits. */
 export const SCENE_NARRATED_VIDEO: JsonVideoDocument = {
-  scenes: [
-    scene('Scene one', silentWavDataUri(12)),
-    scene('Scene two', silentWavDataUri(12)),
-  ],
+  scenes: [scene('Scene one', SILENT_CLIP), scene('Scene two', SILENT_CLIP)],
 };
 export const SCENE_NARRATED_VIDEO_SECONDS = 60;
 
 /** One top-level track over a silent scene: how the older videos are built. */
 export const MAIN_TRACK_VIDEO: JsonVideoDocument = {
-  audio: silentWavDataUri(12),
+  audio: SILENT_CLIP,
   scenes: [scene('Main track')],
 };
 export const MAIN_TRACK_VIDEO_SECONDS = 30;
