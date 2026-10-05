@@ -11,11 +11,7 @@ export interface LessonTutorUrlParams {
   screen?: string;
 }
 
-/**
- * One of the two <audio> elements inside <json-video>. `src` is a fingerprint
- * (length and tail) rather than the attribute itself: the pipeline inlines
- * clips as data URIs, and a failure message quoting one would be unreadable.
- */
+/** `src` is a length:tail fingerprint; data-URI clips would swamp failures. */
 export interface VideoAudioTrack {
   paused: boolean;
   currentTime: number;
@@ -36,23 +32,16 @@ type JsonVideoElement = HTMLElement & {
   _sceneAudio: HTMLAudioElement;
 };
 
-/**
- * Page object for the AI Tutor+ lesson deep dive, /s/:unit/lessons/:n/tutor,
- * the post-lesson review flow. Screens are URL segments after /tutor. The
- * `intervention` screen is the review-modality chooser; its "Watch a video"
- * card renders the lesson's json videos, as a carousel when there are several.
- */
+/** The Tutor+ deep dive, /s/:unit/lessons/:n/tutor; screens follow /tutor. */
 export class LessonTutorPage extends BasePage {
-  /** Card on the intervention screen that opens the lesson's videos. */
   readonly watchVideoCard: Locator;
 
   /** The <json-video> player; the carousel reuses one element across videos. */
   readonly video: Locator;
 
-  /** The player's play/pause toggle, inside its shadow root. */
   readonly playButton: Locator;
 
-  /** Carousel controls; present only when the lesson has more than one video. */
+  /** Carousel controls; present only with more than one video. */
   readonly nextVideoButton: Locator;
   readonly previousVideoButton: Locator;
 
@@ -67,7 +56,6 @@ export class LessonTutorPage extends BasePage {
     });
   }
 
-  /** Open a deep dive screen. The flow is behind the lesson-tutor experiment. */
   async gotoScreen({
     unit,
     lesson,
@@ -80,7 +68,6 @@ export class LessonTutorPage extends BasePage {
     );
   }
 
-  /** Pick "Watch a video" and wait for the first video's document to load. */
   async openVideos(): Promise<void> {
     await this.watchVideoCard.click();
     await expect(this.video).toBeAttached();
@@ -99,7 +86,6 @@ export class LessonTutorPage extends BasePage {
     }, seconds);
   }
 
-  /** State of both audio tracks; see VideoAudioTrack. */
   audioTracks(): Promise<VideoAudioTracks> {
     return this.video.evaluate(el => {
       const read = (audio: HTMLAudioElement) => {
@@ -115,11 +101,7 @@ export class LessonTutorPage extends BasePage {
     });
   }
 
-  /**
-   * Click a carousel control and wait for the player to finish loading the
-   * video it switches to. The element fetches the new document after the
-   * click, so a plain click returns while the previous video is still loaded.
-   */
+  /** The click returns before the new document is fetched and loaded. */
   async switchVideo(control: Locator): Promise<void> {
     await this.video.evaluate(el => {
       window.__jsonVideoLoaded = new Promise<void>((resolve, reject) => {

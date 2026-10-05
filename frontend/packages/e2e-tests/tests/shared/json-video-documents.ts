@@ -1,10 +1,6 @@
 import type {Page} from '@playwright/test';
 
-// Documents for <json-video>, served in place of the lesson's own videos so a
-// spec knows how each one is authored. The element plays a video's top-level
-// `audio` track through one <audio> element and each scene's own `audio`
-// clip through another; which a video uses is decided when it is authored,
-// and the real documents live in S3.
+// Stand-ins for the lesson's videos, so a spec knows how each is authored.
 
 /** A scene of a json video document; see apps/src/jsonVideo. */
 interface JsonVideoScene {
@@ -39,8 +35,7 @@ function silentWavDataUri(seconds: number, sampleRate = 8000): string {
   return 'data:audio/wav;base64,' + buf.toString('base64');
 }
 
-// Scenes are long enough that no scene boundary (which also starts a scene
-// clip) falls inside a test's polling window.
+// Long scenes keep scene boundaries, which start clips, out of poll windows.
 const scene = (label: string, audio?: string): JsonVideoScene => ({
   duration: '30s',
   speech: label,
@@ -51,7 +46,7 @@ const scene = (label: string, audio?: string): JsonVideoScene => ({
   ...(audio ? {audio} : {}),
 });
 
-/** Narration on each scene and no top-level track: how the pipeline emits videos. */
+/** Per-scene narration, no top-level track: the pipeline's shape. */
 export const SCENE_NARRATED_VIDEO: JsonVideoDocument = {
   scenes: [
     scene('Scene one', silentWavDataUri(12)),
@@ -67,13 +62,7 @@ export const MAIN_TRACK_VIDEO: JsonVideoDocument = {
 };
 export const MAIN_TRACK_VIDEO_SECONDS = 30;
 
-/**
- * Answer the page's json video content requests with the given documents,
- * handed out in order of first request: the first video key the page asks for
- * gets documents[0], the next new key documents[1], and so on; a key asked
- * for again (the carousel going back) gets the document it had. The lesson's
- * own videos are never fetched.
- */
+/** Keys get documents in order of first request; a repeat key keeps its own. */
 export async function serveJsonVideos(
   page: Page,
   documents: JsonVideoDocument[],

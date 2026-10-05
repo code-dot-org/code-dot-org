@@ -8,13 +8,7 @@ import {
   serveJsonVideos,
 } from '../shared/json-video-documents';
 
-// ui-test-lesson-tutor (dashboard/test/ui/config) is a unit under an AIF
-// course offering, which is what turns the Tutor+ deep dive on, with two json
-// videos seeded against its one lesson's objectives, so the intervention
-// screen shows the carousel. The carousel reuses one <json-video> and gives
-// it a new src per video. The documents themselves come from serveJsonVideos,
-// so the first video is known to be narrated per scene and the second to have
-// a top-level track.
+// An AIF course offering turns the deep dive on; two videos make a carousel.
 const UNIT = 'ui-test-lesson-tutor';
 const LESSON = 1;
 
@@ -28,8 +22,6 @@ test.describe('Lesson tutor videos', () => {
     expect(await tutor.duration()).toBe(SCENE_NARRATED_VIDEO_SECONDS);
   });
 
-  // Before the fix, play() started only the top-level track; a scene clip
-  // started only on a scene change or a seek, so this video stayed silent.
   test('Play starts a scene-narrated video and pause stops it', async ({
     page,
   }) => {
@@ -54,11 +46,7 @@ test.describe('Lesson tutor videos', () => {
       });
   });
 
-  // Before the fix, a load kept whichever track the new video did not
-  // replace, so a track from the previous video survived the switch and
-  // play() started it under the new video. The scene clip is started by a
-  // seek rather than by play, which pre-fix did not start it, so this test
-  // fails on the stale track and not on the play bug above.
+  // The seek, not play, starts the clip; a failure here is a stale track.
   test('Switching videos drops the previous video audio', async ({page}) => {
     const tutor = new LessonTutorPage(page);
 

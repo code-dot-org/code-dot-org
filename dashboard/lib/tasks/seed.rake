@@ -44,8 +44,7 @@ namespace :seed do
     JSONVideo.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
-  # The UI test tree's json videos. Their objective_keys name objectives of
-  # ui-test- units, so this runs after scripts_ui_tests.
+  # Needs scripts_ui_tests first: the videos name ui-test- lesson objectives.
   timed_task_with_logging json_videos_ui_tests: :environment do
     JSONVideo.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME, glob: 'test/ui/config/json_videos/*.json')
   end

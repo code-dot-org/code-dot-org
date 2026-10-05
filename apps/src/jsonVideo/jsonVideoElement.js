@@ -154,7 +154,7 @@ export class JsonVideo extends HTMLElement {
     document.addEventListener('fullscreenchange', this._onFullscreenChange);
     document.addEventListener(
       'webkitfullscreenchange',
-      this._onFullscreenChange
+      this._onFullscreenChange,
     );
 
     this.shadowRoot.querySelector('#video-container').onclick = e => {
@@ -253,7 +253,7 @@ export class JsonVideo extends HTMLElement {
           // Throw so we catch it below and simulate a network error
           throw new SimulatedMediaError(
             2,
-            `Network response was not ok: ${response.status}`
+            `Network response was not ok: ${response.status}`,
           );
         }
         data = await response.json();
@@ -278,8 +278,7 @@ export class JsonVideo extends HTMLElement {
   _processLoadedData(data) {
     this._videoData = data;
     this._calculateDurations();
-    // Drop the previous video's tracks; a stale main track would otherwise
-    // play under a video that only has per-scene audio.
+    // A leftover main track would play under the next video's scene clips.
     this._resetAudio(this._mainAudio, data.audio);
     this._resetAudio(this._sceneAudio, null);
     this._mainAudioPausedByScene = false;
@@ -293,8 +292,7 @@ export class JsonVideo extends HTMLElement {
     this.dispatchEvent(new Event('loadeddata'));
   }
 
-  // removeAttribute, not src = '': an empty src resolves to the page URL,
-  // which still counts as a track everywhere `.src` is tested.
+  // src = '' resolves to the page URL and still reads as a track.
   _resetAudio(el, src) {
     el.pause();
     if (src) el.src = src;
@@ -324,7 +322,7 @@ export class JsonVideo extends HTMLElement {
     let idx = this._processedScenes.findIndex(
       s =>
         this._currentTimeMs >= s.startTimeMs &&
-        this._currentTimeMs < s.endTimeMs
+        this._currentTimeMs < s.endTimeMs,
     );
     if (idx === -1 && this._currentTimeMs >= this._totalDurationMs)
       idx = this._processedScenes.length - 1;
@@ -361,7 +359,7 @@ export class JsonVideo extends HTMLElement {
       return;
     }
     const newIdx = this._processedScenes.findIndex(
-      s => this._currentTimeMs < s.endTimeMs
+      s => this._currentTimeMs < s.endTimeMs,
     );
     if (newIdx !== this._currentSceneIndex) this._handleSceneTransition(newIdx);
     this.dispatchEvent(new Event('timeupdate'));
@@ -374,7 +372,7 @@ export class JsonVideo extends HTMLElement {
     this.ui.curTime.textContent = this._formatTime(this._currentTimeMs);
     this.ui.progress.style.setProperty(
       '--progress-value',
-      this.ui.progress.value + '%'
+      this.ui.progress.value + '%',
     );
   }
 
@@ -400,7 +398,7 @@ export class JsonVideo extends HTMLElement {
     document.removeEventListener('fullscreenchange', this._onFullscreenChange);
     document.removeEventListener(
       'webkitfullscreenchange',
-      this._onFullscreenChange
+      this._onFullscreenChange,
     );
   }
 
@@ -412,7 +410,7 @@ export class JsonVideo extends HTMLElement {
           ? scene.speech
             ? Math.max(
                 2000,
-                scene.speech.split(/\s+/).filter(w => w.length).length * 350
+                scene.speech.split(/\s+/).filter(w => w.length).length * 350,
               )
             : 2000
           : parseFloat(scene.duration) * 1000;
@@ -456,7 +454,6 @@ export class JsonVideo extends HTMLElement {
     this._syncSceneAudio();
   }
 
-  // Runs on play() too, not only on scene changes and seeks.
   _syncSceneAudio() {
     const scene = this._processedScenes[this._currentSceneIndex];
     if (!scene?.audio) {
@@ -507,7 +504,7 @@ export class JsonVideo extends HTMLElement {
             </html>
         `,
         ],
-        {type: 'text/html'}
+        {type: 'text/html'},
       );
 
       this._currentBlobUrl = URL.createObjectURL(blob);
@@ -519,7 +516,7 @@ export class JsonVideo extends HTMLElement {
     this.ccText.textContent = scene.speech || '';
     this.ccOverlay.classList.toggle(
       'hidden',
-      !(this._showCaptions && scene.speech)
+      !(this._showCaptions && scene.speech),
     );
 
     this._syncSceneAudio();
