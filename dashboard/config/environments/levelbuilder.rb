@@ -14,6 +14,6 @@ Dashboard::Application.configure do
   # Disable Rails.cache on levelbuilder (until code-dot-org/code-dot-org#8844 is merged)
   config.cache_store = :null_store
 
-  # Disable cache_classes so that content stored in en.yml files is immediately updated upon edit.
-  config.cache_classes = false
+  # Reload code so en.yml edits show at once, but not in ActiveJob workers.
+  config.cache_classes = CDO.running_active_job_worker?
 end
