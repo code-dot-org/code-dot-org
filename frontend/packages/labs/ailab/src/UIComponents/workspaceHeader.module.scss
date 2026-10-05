@@ -12,6 +12,7 @@ $lab2-panel-header-height: 41px;
   font-family: var(--font-family-main);
 }
 
-.title {
+// Two classes, to outrank the Typography variant's own size.
+.header .title {
   @include mixins.panel-header-title;
 }

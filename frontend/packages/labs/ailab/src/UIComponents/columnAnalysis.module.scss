@@ -15,7 +15,8 @@
   width: 24px;
 }
 
-.headerTitle {
+// Two classes, to outrank the Typography variant's own size.
+.header .headerTitle {
   @include mixins.panel-header-title;
 
   flex: 1;
@@ -29,14 +30,6 @@
   flex: 1;
   min-width: 0;
   padding: 10px 10px 12px;
-}
-
-.columnName {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  color: var(--text-neutral-primary);
 }
 
 .description {
@@ -60,14 +53,6 @@
   min-width: 0;
   padding: 10px 10px 12px;
   border-left: 1px solid var(--border-neutral-primary);
-}
-
-.distributionTitle {
-  margin: 0;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  color: var(--text-neutral-primary);
 }
 
 .alert {
@@ -94,12 +79,9 @@
   background-color: var(--background-neutral-septenary);
 }
 
-.emptyGraphTitle {
-  margin: 0 0 2px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  color: var(--text-neutral-primary);
+// Two classes, to outrank Typography's margin reset.
+.emptyGraph .emptyGraphTitle {
+  margin-bottom: 2px;
 }
 
 .emptyGraphMessage {
