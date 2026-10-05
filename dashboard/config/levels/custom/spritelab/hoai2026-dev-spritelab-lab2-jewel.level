@@ -32,7 +32,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Make some treasure.** Pick the words for a treasure and click **Generate**."
+        "text": "**Make some treasure.** Pick the words for a treasure and click **Generate**, or draw your own."
       },
       {
         "text": "**Ooh, shiny!** Click **Continue**.",
@@ -42,7 +42,7 @@
         }
       }
     ],
-    "long_instructions": "# Make some treasure\nPick the words for a treasure and click **Generate**.",
+    "long_instructions": "# Make some treasure\nPick the words for a treasure and click **Generate**, or draw your own.",
     "header_label": "Make a platformer"
   }
 }]]></config>

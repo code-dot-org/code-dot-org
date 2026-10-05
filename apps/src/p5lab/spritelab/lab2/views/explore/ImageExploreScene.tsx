@@ -178,7 +178,12 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     setMode('generating');
     setVerdict(null);
     setError(null);
-    setFact(current => pickFact(current ?? undefined));
+    setFact(current =>
+      pickFact(
+        {animated: canAnimate, pixel: style === 'pixel'},
+        current ?? undefined
+      )
+    );
     playSound('go');
     try {
       const options: GenerateImageOptions = {

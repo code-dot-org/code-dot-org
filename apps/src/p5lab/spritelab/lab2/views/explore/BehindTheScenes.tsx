@@ -122,7 +122,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           aria-label={TITLE}
           direction="none"
           title={TITLE}
-          content="We sent the AI these words. It made a picture to match them."
+          content="We sent the AI these words. It made a picture to match them. The first sentence is yours; the rest is what the lab adds every time."
           className={styles.promptPopover}
           onClose={close}
         >
