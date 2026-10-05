@@ -35,11 +35,11 @@ Take a quick look at the lessons included in this unit using the calendar below.
     </div>
     <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
         What is Intelligence?
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
         AI's Past, Present, and Future
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
@@ -47,11 +47,11 @@ Take a quick look at the lessons included in this unit using the calendar below.
         Algorithms
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
         Hello, AI
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
         Defining Functions
       </div>
     </div>
@@ -64,23 +64,23 @@ Take a quick look at the lessons included in this unit using the calendar below.
     </div>
     <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
         Optimization
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
         Simulation (Part 1)
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
         Simulation (Part 2)
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
         Debugging Intelligent Systems
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
         Autocomplete
       </div>
     </div>
@@ -93,15 +93,15 @@ Take a quick look at the lessons included in this unit using the calendar below.
     </div>
     <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 11</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 11</span>
         Decision Trees
       </div>
       <div role="cell" style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 12</span>
+        <span style="display:block; font-size:12px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 12</span>
         Limits of Logic-Based AI
       </div>
       <div role="cell" style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 3 1 320px; min-width: 300px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; font-weight: 600;">
-        <span style="display:block; font-size:10px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 13 &middot; Spans 3 class periods</span>
+        <span style="display:block; font-size:12px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 13 &middot; Spans 3 class periods</span>
         Conversational AI Project
       </div>
     </div>

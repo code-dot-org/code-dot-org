@@ -9,10 +9,19 @@ import {
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import sparkUrl from '@cdo/static/spritelab_lab2/particles/spark.png';
 
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
+import {
+  createBurst,
+  drawBursts,
+  isBurstLook,
+  MAX_BURST_COUNT,
+  MAX_BURST_PARTICLES,
+  stepBurst,
+} from './bursts';
 import {
   backgroundFrame,
   cameraFocus,
@@ -43,9 +52,17 @@ import {
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
+  bodyBox,
   resolvePlatformPhysics,
   usesPlatformPhysics,
+  wallBox,
 } from './platformPhysics';
+import {
+  createWeather,
+  drawWeather,
+  isWeatherKind,
+  stepWeather,
+} from './weather';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
@@ -75,9 +92,6 @@ const CANVAS_DENSITY_FACTOR = 2;
 // How long a restart quiets further restarts: long enough to see the scene
 // run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
-// A block-triggered scene jump waits this long before it starts, so a say
-// block on the same event is seen before the scene changes.
-const SCENE_JUMP_DELAY_MS = 750;
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
@@ -168,9 +182,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onControlsChange = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
-    // A block-triggered jump waiting out SCENE_JUMP_DELAY_MS; a fresh run
-    // cancels it.
-    this.jumpDelayTimer_ = null;
     // null while no audio is listening.
     this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -206,6 +217,146 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
+    // The run's weather kind, set by the set-weather block, and its live
+    // pool, built at the first paint after the kind changes.
+    this.weatherKind_ = 'none';
+    this.weather_ = null;
+    // Bursts in flight (see burstParticles); the spark image, loaded on
+    // the first burst, and a copy of it per palette colour (see sparkFor_).
+    this.bursts_ = [];
+    this.spark_ = null;
+    this.tintedSparks_ = new Map();
+    // The frame the particles last stepped in: a thumbnail capture paints
+    // twice in one frame, and the particles must move once.
+    this.particlesSteppedFrame_ = -1;
+  }
+
+  // The spark image in one colour, made once per colour: this p5 recolours
+  // an image by rebuilding a canvas on every draw, too slow per particle.
+  // A p5.Image, not a p5.Graphics: a graphics canvas is scaled by the pixel
+  // density while image() reads it at its logical size, showing one corner.
+  sparkFor_(color) {
+    const image = this.spark_?.image;
+    if (!image) {
+      return undefined;
+    }
+    const key = color.join(',');
+    let tinted = this.tintedSparks_.get(key);
+    if (!tinted) {
+      tinted = this.p5Wrapper.p5.createImage(image.width, image.height);
+      const context = tinted.drawingContext;
+      // The spark is white, so the colour is the whole tint; the image
+      // keeps only its own alpha.
+      context.fillStyle = `rgb(${color.join(',')})`;
+      context.fillRect(0, 0, image.width, image.height);
+      context.globalCompositeOperation = 'destination-in';
+      context.drawImage(image.canvas, 0, 0);
+      this.tintedSparks_.set(key, tinted);
+    }
+    return tinted;
+  }
+
+  /**
+   * The burst block: fling sparks from each sprite the argument names, the
+   * count shared among them; from the stage centre when it names none.
+   * Capped so a block in a loop cannot flood the scene.
+   */
+  burstParticles(count, look, spriteArg) {
+    const view = this.particleView_();
+    if (!view) {
+      return;
+    }
+    if (!this.spark_) {
+      this.spark_ = {image: null};
+      this.p5Wrapper.p5.loadImage(sparkUrl, image => {
+        this.spark_.image = image;
+      });
+    }
+    const origins = this.library
+      .getSpriteArray(spriteArg)
+      .map(sprite => ({x: sprite.position.x, y: sprite.position.y}));
+    if (!origins.length) {
+      origins.push({x: view.width / 2, y: view.height / 2});
+    }
+    const inFlight = this.bursts_.reduce((n, b) => n + b.particles.length, 0);
+    const wanted = Math.min(MAX_BURST_COUNT, Math.max(1, Number(count) || 0));
+    const allowed = Math.min(wanted, MAX_BURST_PARTICLES - inFlight);
+    const kind = isBurstLook(look) ? look : 'sparks';
+    // The allowance shared out exactly: the first origins take the extra.
+    const base = Math.floor(allowed / origins.length);
+    const extra = allowed % origins.length;
+    origins.forEach((origin, i) => {
+      const each = base + (i < extra ? 1 : 0);
+      if (each > 0) {
+        this.bursts_.push(createBurst(kind, each, origin, view.gravity));
+      }
+    });
+  }
+
+  /** The set-weather block: the scene's weather from now until the next
+      set or the end of the run. */
+  setWeather(kind) {
+    this.weatherKind_ = isWeatherKind(kind) ? kind : 'none';
+    this.weather_ = null;
+  }
+
+  // The world the particles fly through: its size and gravity; null before
+  // the canvas is up.
+  particleView_() {
+    const p5 = this.p5Wrapper.p5;
+    if (!p5 || !this.library) {
+      return null;
+    }
+    return {
+      width: p5.width,
+      height: p5.height,
+      gravity: this.usesPlatformPhysics_
+        ? this.platformGravity_
+        : PLATFORM_GRAVITY,
+    };
+  }
+
+  // What the weather lands on this frame, on top of the view: the tiles,
+  // and every other sprite as a body.
+  weatherScene_(view) {
+    const bodies = Object.values(this.library.nativeSpriteMap)
+      .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
+      .map(bodyBox);
+    return {
+      ...view,
+      walls: this.wallsThisFrame_(this.library).map(wallBox),
+      bodies,
+    };
+  }
+
+  // Runs inside the paint, after the sprites, so in a platform scene the
+  // particles are in world space under the camera.
+  stepAndDrawParticles_() {
+    const weatherOn = this.weatherKind_ !== 'none' || !!this.weather_;
+    if (!weatherOn && !this.bursts_.length) {
+      return;
+    }
+    const view = this.particleView_();
+    if (!view) {
+      return;
+    }
+    const p5 = this.p5Wrapper.p5;
+    const step = this.particlesSteppedFrame_ !== p5.frameCount;
+    this.particlesSteppedFrame_ = p5.frameCount;
+    if (weatherOn) {
+      const scene = this.weatherScene_(view);
+      if (!this.weather_ || this.weather_.kind !== this.weatherKind_) {
+        this.weather_ = createWeather(this.weatherKind_, scene);
+      }
+      if (step) {
+        stepWeather(this.weather_, scene);
+      }
+      drawWeather(p5, this.weather_);
+    }
+    if (step) {
+      this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, view));
+    }
+    drawBursts(p5, this.bursts_, color => this.sparkFor_(color));
   }
 
   /**
@@ -252,9 +403,6 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
-    // A fresh library is a fresh run: a jump the old one was waiting to make
-    // must not land in it.
-    this.clearSceneJumpDelay_();
     // Fixed for the run: the scene type is set before the run begins.
     const dimBackground = this.isPlatformScene();
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
@@ -350,6 +498,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.notifyControlsChange_();
+    // A fresh run starts with no weather and nothing in flight.
+    this.weatherKind_ = 'none';
+    this.weather_ = null;
+    this.bursts_ = [];
+    library.commands.setWeather = kind => this.setWeather(kind);
+    library.commands.burstParticles = (count, look, spriteArg) =>
+      this.burstParticles(count, look, spriteArg);
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
@@ -497,18 +652,16 @@ export default class SpriteLab2Engine extends SpriteLab {
       return setAnimation.call(this, spriteArg, animation);
     };
     library.commands.goToScene = sceneId => {
-      this.delaySceneJump_(() => this.onGoToScene, String(sceneId));
+      this.triggerSceneJump_(this.onGoToScene, String(sceneId));
     };
-    // The quiet window is what keeps a condition that still holds on the
-    // next frame from restarting at frame rate. It runs from the jump
-    // itself, so the wait before it does not use it up.
+    // The quiet window keeps a condition that still holds on the next frame
+    // from restarting at frame rate.
     library.commands.restartScene = () => {
       if (Date.now() - this.lastRestartAt_ < RESTART_QUIET_MS) {
         return;
       }
-      this.delaySceneJump_(
-        () =>
-          this.onRestartScene &&
+      this.triggerSceneJump_(
+        this.onRestartScene &&
           (() => {
             this.lastRestartAt_ = Date.now();
             this.onRestartScene();
@@ -516,36 +669,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
     };
     library.commands.goToExternalScene = sceneKey => {
-      this.delaySceneJump_(() => this.onGoToExternalScene, String(sceneKey));
+      this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     return library;
   }
 
-  /**
-   * Start a block-triggered jump after SCENE_JUMP_DELAY_MS: the scene keeps
-   * running meanwhile, then freezes through the jump gate and the handler
-   * runs. The handler is read when the wait ends; nothing starts without
-   * one. One jump at a time: a trigger during the wait, or while a jump is
-   * in flight, is ignored.
-   */
-  delaySceneJump_(getHandler, ...args) {
-    if (!getHandler() || this.jumpDelayTimer_ || this.sceneJumpInFlight_) {
+  // Off the interpreter's step: the handler tears down the interpreter this
+  // command runs in. No handler (an engine with no view wired) starts nothing.
+  triggerSceneJump_(handler, ...args) {
+    if (!handler) {
       return;
     }
-    this.jumpDelayTimer_ = setTimeout(() => {
-      this.jumpDelayTimer_ = null;
-      const handler = getHandler();
-      if (handler && this.beginSceneJump_()) {
+    setTimeout(() => {
+      if (!this.destroyed_ && this.beginSceneJump_()) {
         handler(...args);
       }
-    }, SCENE_JUMP_DELAY_MS);
-  }
-
-  clearSceneJumpDelay_() {
-    if (this.jumpDelayTimer_) {
-      clearTimeout(this.jumpDelayTimer_);
-      this.jumpDelayTimer_ = null;
-    }
+    }, 0);
   }
 
   /**
@@ -686,9 +825,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.destroyed_) {
       return;
     }
-    // Now, not when the new library is built: that is after an async
-    // preload, and a jump waiting out its delay could start in between.
-    this.clearSceneJumpDelay_();
     this.sceneType_ = sceneType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
@@ -825,7 +961,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.destroyed_ = true;
     this.reset();
     this.stopTickTimer();
-    this.clearSceneJumpDelay_();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
     this.frameCaptureArmed_ = false;
@@ -1213,7 +1348,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       this.physicsResolvedThisFrame_ = false;
       this.updateCharacterAnimations_();
-      return paint(...args);
+      const painted = paint(...args);
+      this.stepAndDrawParticles_();
+      return painted;
     };
   }
 

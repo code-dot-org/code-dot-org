@@ -131,7 +131,7 @@ const TrainPanel = () => {
 
   return (
     <div id="train-panel" className={styles.panel}>
-      <h2 className={styles.header}>Train</h2>
+      <h3 className={styles.header}>Train</h3>
       <div className={styles.content}>
         <div className={styles.card}>
           <div className={styles.fields}>
