@@ -118,7 +118,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:explanation]
     assert_nil result[:correct_choice_id]
 
-    quiz.update!(show_correctness: true, reveal_answer_explanation: true)
+    quiz.update!(show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
     result = attempt.reload.question_results.first
     assert result[:correct]
     assert_equal 'because math', result[:explanation]
@@ -196,7 +196,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
   end
 
   test "disconnected (nil) level does not raise on expires_at/expired?/response_deadline_passed?/retakeable?/question_results" do
-    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true)
+    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
     question = create(:multiple_choice_question, explanation: 'because math')
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
