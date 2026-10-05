@@ -110,6 +110,16 @@ describe('ailab reducer', () => {
       const twice = reducer(once, addSelectedFeature('a'));
       expect(twice.selectedFeatures).toEqual(['a']);
     });
+
+    test('keeps features in table order, whatever the order picked', () => {
+      let state = reducer(
+        initialState,
+        setImportedData([{a: '1', b: '2', c: '3'}], false),
+      );
+      state = reducer(state, addSelectedFeature('c'));
+      state = reducer(state, addSelectedFeature('a'));
+      expect(state.selectedFeatures).toEqual(['a', 'c']);
+    });
   });
 
   describe('setLabelColumn', () => {

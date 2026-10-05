@@ -15,8 +15,20 @@ $lab2-panel-header-height: 41px;
 }
 
 .tabs {
+  // CADS borders an unselected segment one step darker than DSCO does.
+  --border-neutral-primary: var(--border-neutral-secondary);
+
   grid-column: 1;
   justify-self: start;
+}
+
+// Three classes, to outrank DSCO's xs size; CADS segments are 24px tall.
+.header .tabs .tab {
+  gap: 4px;
+
+  span {
+    line-height: 18px;
+  }
 }
 
 // Two classes, to outrank the Typography variant's own size.

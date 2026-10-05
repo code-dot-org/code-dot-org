@@ -1,6 +1,5 @@
 import {
   isPanelEnabled,
-  isTrainedOnCurrentColumns,
   prevNextButtons,
   uniqLabelFeaturesSelected,
 } from '../../src/helpers/navigationValidation';
@@ -59,6 +58,7 @@ const sameFeatureLabelState = {
 const resultsState = {
   ...selectedFeaturesState,
   accuracyCheckExamples: [0, 0],
+  historicResults: [{label: 'isEvil', features: ['house'], accuracy: '100'}],
 };
 
 const savingModelState = {
@@ -131,7 +131,7 @@ describe('uniqLabelFeaturesSelected', () => {
   });
 });
 
-describe('isTrainedOnCurrentColumns', () => {
+describe('isPanelEnabled for results after training', () => {
   const trainedState = {
     ...resultsState,
     selectedFeatures: ['house', 'name'],
@@ -140,22 +140,22 @@ describe('isTrainedOnCurrentColumns', () => {
     ],
   };
 
-  test('false before any training', () => {
+  test('disabled before any training', () => {
     expect(
-      isTrainedOnCurrentColumns({...resultsState, historicResults: []}),
+      isPanelEnabled({...resultsState, historicResults: []}, 'results'),
     ).toBe(false);
   });
 
-  test('true when the columns match the latest training', () => {
-    expect(isTrainedOnCurrentColumns(trainedState)).toBe(true);
+  test('enabled when the columns match the latest training', () => {
+    expect(isPanelEnabled(trainedState, 'results')).toBe(true);
   });
 
   test.each([
-    ['label', {labelColumn: 'name', selectedFeatures: ['house']}],
+    ['label', {labelColumn: 'wand'}],
     ['features', {selectedFeatures: ['house']}],
     ['feature order', {selectedFeatures: ['name', 'house']}],
-  ])('false when the %s changed since training', (_, changes) => {
-    expect(isTrainedOnCurrentColumns({...trainedState, ...changes})).toBe(
+  ])('disabled when the %s changed since training', (_, changes) => {
+    expect(isPanelEnabled({...trainedState, ...changes}, 'results')).toBe(
       false,
     );
   });
@@ -196,12 +196,12 @@ describe('prevNextButtons on the data panels', () => {
     },
   );
 
-  test('results tries again on datasetView', () => {
+  test('results has no back button; the Dataset tab goes back', () => {
     const {prev} = prevNextButtons({
       ...resultsState,
       currentPanel: 'results',
       historicResults: [{accuracy: '100'}],
     });
-    expect(prev.panel).toBe('datasetView');
+    expect(prev).toBeUndefined();
   });
 });

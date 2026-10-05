@@ -96,7 +96,7 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
 }
 
 // Feature order matters: predictions pass inputs in the order trained on.
-export function isTrainedOnCurrentColumns(state: RootState): boolean {
+function isTrainedOnCurrentColumns(state: RootState): boolean {
   const latestResult = state.historicResults[0];
   return (
     !!latestResult &&
@@ -106,10 +106,9 @@ export function isTrainedOnCurrentColumns(state: RootState): boolean {
 }
 
 function resultsAvailable(state: RootState): boolean {
-  if (state.accuracyCheckExamples.length === 0) {
-    return false;
-  }
-  return !didSaveSucceed(state) || !isSaveInProgress(state);
+  return (
+    state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(state)
+  );
 }
 
 function isSaveInProgress(state: RootState): boolean {
@@ -160,7 +159,8 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
       : undefined;
     next = undefined;
   } else if (state.currentPanel === 'results') {
-    prev = {panel: 'datasetView', text: I18n.t('tryAgain')};
+    // The workspace header's Dataset tab goes back to the dataset.
+    prev = undefined;
     next = !isAccuracyAcceptable(state)
       ? undefined
       : isPanelAvailable(state, 'saveModel')

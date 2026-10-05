@@ -193,9 +193,14 @@ const ailabSlice = createSlice({
         return {payload: {column, dataType}};
       },
     },
+    // Table order, so reselecting a column leaves the model's inputs in place.
     addSelectedFeature(state, action: PayloadAction<string>) {
       if (!state.selectedFeatures.includes(action.payload)) {
+        const columns = Object.keys(state.data[0] ?? {});
         state.selectedFeatures.push(action.payload);
+        state.selectedFeatures.sort(
+          (a, b) => columns.indexOf(a) - columns.indexOf(b),
+        );
       }
     },
     removeSelectedFeature(state, action: PayloadAction<string>) {
