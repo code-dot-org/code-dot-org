@@ -54,13 +54,16 @@ test.describe('Lesson tutor videos', () => {
       });
   });
 
-  // Before the fix, a load only touched the top-level track's element when
-  // the new video had one, so a track from the previous video survived the
-  // switch and play() started it under the new video.
+  // Before the fix, a load kept whichever track the new video did not
+  // replace, so a track from the previous video survived the switch and
+  // play() started it under the new video. The scene clip is started by a
+  // seek rather than by play, which pre-fix did not start it, so this test
+  // fails on the stale track and not on the play bug above.
   test('Switching videos drops the previous video audio', async ({page}) => {
     const tutor = new LessonTutorPage(page);
 
     await tutor.playButton.click();
+    await tutor.seek(2);
     await expect
       .poll(() => tutor.audioTracks())
       .toMatchObject({
@@ -93,8 +96,8 @@ test.describe('Lesson tutor videos', () => {
     await expect
       .poll(() => tutor.audioTracks())
       .toMatchObject({
-        scene: {paused: false},
         main: {paused: true, src: null},
+        scene: {paused: false},
       });
   });
 });

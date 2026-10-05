@@ -30,6 +30,7 @@ export interface VideoAudioTracks {
 }
 
 type JsonVideoElement = HTMLElement & {
+  currentTime: number;
   duration: number;
   _mainAudio: HTMLAudioElement;
   _sceneAudio: HTMLAudioElement;
@@ -89,6 +90,13 @@ export class LessonTutorPage extends BasePage {
   /** Seconds; 0 until the element has a document. */
   duration(): Promise<number> {
     return this.video.evaluate(el => (el as JsonVideoElement).duration);
+  }
+
+  /** Move the playhead, as dragging the player's progress bar does. */
+  seek(seconds: number): Promise<void> {
+    return this.video.evaluate((el, s) => {
+      (el as JsonVideoElement).currentTime = s;
+    }, seconds);
   }
 
   /** State of both audio tracks; see VideoAudioTrack. */
