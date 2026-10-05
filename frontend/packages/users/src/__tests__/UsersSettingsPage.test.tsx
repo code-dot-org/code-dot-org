@@ -859,7 +859,7 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
       }),
     ).toBeInTheDocument();
     expect(
-      screen.getAllByRole('heading', {level: 4, name: 'ClassLink'}),
+      screen.getAllByRole('button', {name: /^disconnect classlink/i}),
     ).toHaveLength(2);
   });
 });
