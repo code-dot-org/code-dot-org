@@ -25,8 +25,6 @@
 - Writing: who wrote the code, and who wrote this description
 - Direction: decisions you made or overrode (architecture, design, tradeoffs), and AI-made decisions you weren't sure about
 - Context: specs, MCP servers, skills, or other inputs you gave the AI
-
-Example: "Claude wrote the code, using Figma MCP to pull in the mocks. I decided to reuse the existing table component instead of adding a new one. I asked Claude to look for logic that could be shared between widgets and gadgets. I wrote this description."
 -->
 
 ## Deployment notes
