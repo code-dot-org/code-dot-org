@@ -7,6 +7,7 @@ import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
 import {getExportStyleProperties} from './getExportStyleProperties';
+import {inlineSvgStylesForExport} from './inlineSvgStylesForExport';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
@@ -56,17 +57,23 @@ export const createSketchSnapshotBlob = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  const blob = await toBlob(viewport, {
-    backgroundColor,
-    includeStyleProperties: getExportStyleProperties(),
-    width: imageWidth,
-    height: imageHeight,
-    style: {
-      width: `${imageWidth}px`,
-      height: `${imageHeight}px`,
-      transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
-    },
-  });
+  const restoreSvgStyles = inlineSvgStylesForExport(viewport);
+  let blob: Blob | null;
+  try {
+    blob = await toBlob(viewport, {
+      backgroundColor,
+      includeStyleProperties: getExportStyleProperties(),
+      width: imageWidth,
+      height: imageHeight,
+      style: {
+        width: `${imageWidth}px`,
+        height: `${imageHeight}px`,
+        transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
+      },
+    });
+  } finally {
+    restoreSvgStyles();
+  }
 
   if (!blob) {
     return {error: 'Could not capture your sketch. Please try again.'};
