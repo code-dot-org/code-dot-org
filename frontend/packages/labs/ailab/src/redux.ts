@@ -390,22 +390,17 @@ const ailabSlice = createSlice({
       },
     },
     setHistoricResult: {
-      reducer(
-        state,
-        action: PayloadAction<{
-          label: string;
-          features: string[];
-          accuracy: string;
-        }>,
-      ) {
-        state.historicResults.unshift({
-          label: action.payload.label,
-          features: action.payload.features,
-          accuracy: action.payload.accuracy,
-        });
+      reducer(state, action: PayloadAction<HistoricResult>) {
+        state.historicResults.unshift(action.payload);
       },
-      prepare(label: string, features: string[], accuracy: string) {
-        return {payload: {label, features, accuracy}};
+      prepare(
+        label: string,
+        features: string[],
+        accuracy: string,
+        correct: number,
+        total: number,
+      ) {
+        return {payload: {label, features, accuracy, correct, total}};
       },
     },
     setShowResultsDetails(state, action: PayloadAction<boolean>) {

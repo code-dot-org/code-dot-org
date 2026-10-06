@@ -2,9 +2,9 @@ import {Button, Typography} from '@mui/material';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {getCorrectCount} from '../helpers/accuracy';
+import {formatAccuracy} from '../helpers/accuracy';
 import {isTrainedOnCurrentColumns} from '../helpers/navigationValidation';
-import {shallowEqual, useAppDispatch, useAppSelector} from '../hooks';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import {setCurrentPanel} from '../redux';
 
 import styles from './trainingResultCard.module.scss';
@@ -13,13 +13,13 @@ const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
   const isTrained = useAppSelector(isTrainedOnCurrentColumns);
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
-  const {correct, total} = useAppSelector(getCorrectCount, shallowEqual);
+  const latestResult = useAppSelector(state => state.historicResults[0]);
 
-  if (!isTrained || isModalOpen || total === 0) {
+  if (!isTrained || isModalOpen || latestResult.total === 0) {
     return null;
   }
 
-  const percentCorrect = Math.round((correct / total) * 100);
+  const {accuracy, correct, total} = latestResult;
 
   return (
     <div className={styles.card}>
@@ -29,7 +29,7 @@ const TrainingResultCard = () => {
             Accuracy
           </Typography>
           <Typography variant="body2" className={styles.accuracyValue}>
-            {percentCorrect}%
+            {formatAccuracy(accuracy)}
           </Typography>
         </div>
         <div className={styles.result}>

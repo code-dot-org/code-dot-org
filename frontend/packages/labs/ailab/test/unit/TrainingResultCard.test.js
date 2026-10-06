@@ -5,9 +5,9 @@ import {Provider} from 'react-redux';
 
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
-import {getCorrectCount} from '../../src/helpers/accuracy';
 import {
   removeSelectedFeature,
+  setHistoricResult,
   setLabelColumn,
   setTrainingModalStep,
 } from '../../src/redux';
@@ -17,7 +17,7 @@ import TrainingResultCard from '../../src/UIComponents/TrainingResultCard';
 import {levelStore} from './levelStore';
 
 function renderCard({trained = true} = {}) {
-  const store = levelStore({});
+  const store = levelStore({trainer: 'decisionTree'});
   if (trained) {
     train.reset();
     train.init(store);
@@ -46,14 +46,18 @@ describe('TrainingResultCard', () => {
   });
 
   test('shows accuracy and number correct after training', () => {
-    const store = renderCard();
-    const {correct, total} = getCorrectCount(store.getState());
-    expect(accuracy()).not.toBeNull();
-    expect(screen.getByText('Number correct')).not.toBeNull();
-    expect(
-      screen.getByText(`${Math.round((correct / total) * 100)}%`),
-    ).not.toBeNull();
-    expect(screen.getByText(`${correct}/${total}`)).not.toBeNull();
+    renderCard();
+    expect(screen.getByText('100%')).not.toBeNull();
+    expect(screen.getByText('1/1')).not.toBeNull();
+  });
+
+  test('shows the stored accuracy, not a rounded one', () => {
+    const store = renderCard({trained: false});
+    act(() => {
+      store.dispatch(setHistoricResult('animal', ['legs'], '83.33', 5, 6));
+    });
+    expect(screen.getByText('83.33%')).not.toBeNull();
+    expect(screen.getByText('5/6')).not.toBeNull();
   });
 
   test('Test model opens the testing view', () => {
