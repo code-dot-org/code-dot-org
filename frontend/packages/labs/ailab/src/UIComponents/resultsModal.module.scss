@@ -10,9 +10,9 @@ $content-height: 416px;
   @include mixins.modal-title-row;
 }
 
-// An inset shadow paints under the tabs, so the selected tab's fill breaks the line.
+// An inset shadow rather than a border, so the selected tab paints over the line.
 .tabRow {
-  // CADS colors tab text with different tokens than DSCO does.
+  // Tabs has no CodeAI brand override; these are the tokens it reads for text.
   --text-brand-teal-primary: var(--text-selected-primary-inverse);
   --text-neutral-tertiary: var(--text-neutral-quaternary);
 

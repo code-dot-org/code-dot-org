@@ -22,7 +22,7 @@ interface ResultsModalProps {
 const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
   const titleId = useId();
 
-  // The dialog focuses its first tab; move focus to the one it opened on.
+  // MuiCustomDialog has already focused the first tab, selected or not.
   useEffect(() => {
     document
       .getElementById(TABS_ID)
