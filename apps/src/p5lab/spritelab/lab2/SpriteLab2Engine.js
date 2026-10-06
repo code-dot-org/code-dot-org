@@ -57,6 +57,7 @@ import {
   usesPlatformPhysics,
   wallBox,
 } from './platformPhysics';
+import {asSoundEffect, playSoundEffect} from './soundEffects';
 import {
   createWeather,
   drawWeather,
@@ -613,6 +614,12 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    library.commands.playSoundEffect = (wave, pitch, length, pattern) => {
+      const effect = asSoundEffect(wave, pitch, length, pattern);
+      if (effect) {
+        playSoundEffect(effect);
+      }
+    };
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
