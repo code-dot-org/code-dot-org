@@ -15,9 +15,7 @@
   }
 }
 
-.text {
-  font-size: 12px;
+// Two classes, to outrank the Typography variant's own weight.
+.sentence .text {
   font-weight: 600;
-  line-height: 18px;
-  color: var(--text-neutral-primary);
 }

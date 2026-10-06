@@ -1,4 +1,5 @@
 /* A label or feature slot in the "Predict … based on …" sentence. */
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 
 import styles from './sentenceTag.module.scss';
@@ -16,7 +17,9 @@ const SentenceTag = ({
   variant,
   size = 's',
 }: SentenceTagProps) => (
-  <span
+  <Typography
+    component="span"
+    variant="body4"
     aria-hidden="true"
     className={classNames(
       styles.tag,
@@ -25,7 +28,7 @@ const SentenceTag = ({
     )}
   >
     {text || placeholder}
-  </span>
+  </Typography>
 );
 
 export default SentenceTag;

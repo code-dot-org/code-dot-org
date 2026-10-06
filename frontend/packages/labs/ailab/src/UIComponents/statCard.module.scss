@@ -9,10 +9,9 @@
   background-color: var(--background-neutral-secondary);
 }
 
-.statLabel {
-  font-size: 12px;
+// Two classes, to outrank the Typography variant's own weight and color.
+.statCard .statLabel {
   font-weight: 600;
-  line-height: 18px;
   white-space: nowrap;
   color: var(--text-neutral-quaternary);
 }
