@@ -16,6 +16,7 @@ import {
   hitTest,
   placementSize,
   rememberedPicture,
+  scriptButtonAt,
   type Remembered,
   MAX_SCALE,
   MIN_HIT_SIZE,
@@ -515,5 +516,46 @@ describe('rememberedPicture', () => {
     const seen = memory();
     rememberedPicture(seen, 'a', 'k1', picture('one'));
     expect(rememberedPicture(seen, 'b', 'k2', undefined)).toBeUndefined();
+  });
+});
+
+describe('scriptButtonAt', () => {
+  const button = {w: 60, h: 24};
+  const stage = {w: 800, h: 600};
+  // A box from (100,200) to (300,300), its corners in no particular order.
+  const square = [
+    {x: 100, y: 200},
+    {x: 300, y: 200},
+    {x: 300, y: 300},
+    {x: 100, y: 300},
+  ];
+
+  it('sits just outside the top-right corner, clear of it both ways', () => {
+    expect(scriptButtonAt(square, button, stage, 8)).toEqual({
+      x: 308,
+      y: 200 - 8 - 24,
+    });
+  });
+
+  it('takes whichever corner a turn has brought to the top right', () => {
+    // A diamond: a square turned 45°. Its right point is furthest up-and-right.
+    const diamond = [
+      {x: 200, y: 150},
+      {x: 260, y: 210},
+      {x: 200, y: 270},
+      {x: 140, y: 210},
+    ];
+    expect(scriptButtonAt(diamond, button, stage, 8)).toEqual({
+      x: 268,
+      y: 210 - 8 - 24,
+    });
+  });
+
+  it('stays inside the stage at its edges', () => {
+    const atTopRight = square.map(at => ({x: at.x + 480, y: at.y - 200}));
+    expect(scriptButtonAt(atTopRight, button, stage, 8)).toEqual({
+      x: 800 - 60 - 8,
+      y: 8,
+    });
   });
 });

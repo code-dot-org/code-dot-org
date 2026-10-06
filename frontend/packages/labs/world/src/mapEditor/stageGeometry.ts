@@ -387,3 +387,40 @@ export function nextSelection(
       : (at + dir + placed.length) % placed.length;
   return placed[next];
 }
+
+/**
+ * Where the selection's Script button goes, in stage pixels: its top-left.
+ *
+ * Just outside the corner of the selection that is furthest up and to the
+ * right ON SCREEN — the top-right corner, or for a turned box whichever corner
+ * has come round to stand there — and `gap` pixels clear of it both ways, so
+ * it covers neither the corner's grip nor the turn grip on its stalk above the
+ * middle of the top edge. Then kept inside the stage, so a placement at the
+ * edge of the view does not push its own button out of sight.
+ *
+ * `corners` are the selection's corners already in stage pixels; the caller
+ * owns the box and the view, and this owns only where a button goes.
+ */
+export function scriptButtonAt(
+  corners: readonly Vec[],
+  button: Size,
+  stage: Size,
+  gap: number,
+): Vec {
+  // A turn of exactly 45° leaves two corners tied; the one further right is
+  // the one further from the turn grip, which stands off the top edge.
+  const reach = (at: Vec) => at.x - at.y;
+  const corner = corners.reduce((best, at) =>
+    reach(at) > reach(best) || (reach(at) === reach(best) && at.x > best.x)
+      ? at
+      : best,
+  );
+  return {
+    x: clamp(corner.x + gap, gap, Math.max(gap, stage.w - button.w - gap)),
+    y: clamp(
+      corner.y - gap - button.h,
+      gap,
+      Math.max(gap, stage.h - button.h - gap),
+    ),
+  };
+}

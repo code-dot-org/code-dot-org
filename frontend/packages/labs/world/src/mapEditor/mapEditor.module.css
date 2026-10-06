@@ -592,3 +592,31 @@
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
 }
+
+/* The selected placement's Script button, floated just outside its top-right
+   corner on the canvas (`stageGeometry.scriptButtonAt`). Placed by the stage
+   in pixels, so it follows a pan, a zoom and a drag; sized to the constant the
+   stage clamps with (`SCRIPT_BUTTON`). */
+.scriptFloat {
+  position: absolute;
+  height: 26px;
+  min-width: 64px;
+  padding: 0 0.6rem;
+  border: 1px solid var(--borders-brand-teal-primary, #0093a4);
+  border-radius: 13px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+}
+
+.scriptFloat:hover {
+  background: var(--background-neutral-secondary);
+}
+
+.scriptFloat:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary, #0093a4);
+  outline-offset: 2px;
+}

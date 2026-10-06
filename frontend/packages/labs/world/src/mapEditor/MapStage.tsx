@@ -101,13 +101,15 @@ import {
   hitTest,
   nextSelection,
   panIntoView,
+  type Remembered,
+  rememberedPicture,
   screenToWorld as toWorld,
+  scriptButtonAt,
+  worldToScreen,
   snapPoint,
   snapToTile,
   steppedBy,
   zoomToward,
-  rememberedPicture,
-  type Remembered,
 } from './stageGeometry';
 import {VectorInput} from './VectorInput';
 import {WithheldNote} from './WithheldNote';
@@ -132,6 +134,13 @@ const RESIZE_STEP = 8;
 const TURN_STEP = 15;
 /** How big a grip is drawn and grabbed, in SCREEN pixels at any zoom. */
 const HANDLE_SIZE = 9;
+/**
+ * The floating Script button's size, for keeping it inside the stage, and how
+ * far it stands off the selection's corner — clear of the corner grip, which
+ * reaches half a `HANDLE_SIZE` out from it.
+ */
+const SCRIPT_BUTTON = {w: 64, h: 26};
+const SCRIPT_BUTTON_GAP = 10;
 /** How far beyond the top edge the turn grip sits, in screen pixels. */
 const TURN_REACH = 22;
 
@@ -360,6 +369,10 @@ export const MapStage = ({
   // the lesson that grants it. `where` tells two notes about one affordance
   // apart — scripts have a way in from the toolbar and one in the inspector.
   const locked = (id: Affordance): boolean => withheld?.has(id) ?? false;
+  // Whether a placement's script may be opened from the canvas — the floating
+  // button, a double-click, Enter. Withheld, the inspector's button stays and
+  // says which lesson brings it; the canvas offers nothing.
+  const canOpenScript = Boolean(onEditScript) && !locked('map-scripts');
   const noteId = (id: Affordance, where: string) => `withheld-${id}-${where}`;
   const orWithheld = (id: Affordance, where: string, act: () => void) =>
     locked(id)
@@ -1936,6 +1949,13 @@ export const MapStage = ({
     if (selected) {
       return;
     }
+    // Enter opens the selection's script: what double-clicking it does, from
+    // the keyboard the canvas already takes the arrows from.
+    if (event.key === 'Enter' && selectedId && canOpenScript) {
+      event.preventDefault();
+      onEditScript?.(selectedId);
+      return;
+    }
     // Shift+arrow NUDGES the selection rather than cycling it.
     const step = ARROW_STEPS[event.key];
     if (step && event.shiftKey && selectedId && !isReadOnly) {
@@ -1977,6 +1997,26 @@ export const MapStage = ({
       event.preventDefault();
       deleteActor(selectedId);
     }
+  };
+
+  /**
+   * Open the script of the placement under a double-click, selecting it too.
+   *
+   * Not while placing: there a double-click is two placements, and the second
+   * click already made one. Not on empty map either, which has no script to
+   * open — the map's own is the toolbar's button.
+   */
+  const handleDoubleClick = (event: ReactMouseEvent) => {
+    if (selected || !view || !canOpenScript) {
+      return;
+    }
+    const hit = hitUnder(screenToWorld(event.clientX, event.clientY));
+    if (!hit) {
+      return;
+    }
+    setSelectedId(hit.id);
+    setInspectingLayer(false);
+    onEditScript?.(hit.id);
   };
 
   const handleClick = (event: ReactMouseEvent) => {
@@ -2474,6 +2514,27 @@ export const MapStage = ({
     .filter(Boolean)
     .join(' ');
 
+  // The selection's Script button, floated just outside its top-right corner
+  // (`stageGeometry.scriptButtonAt`). Around the box the grips are drawn on,
+  // or for a kind with none, the outline drawn around what it looks like.
+  const scriptButton = (() => {
+    if (!selectedActor || !view || !canOpenScript || selected) {
+      return undefined;
+    }
+    const at = worldTransformOf(selectedActor, map.actors, scales);
+    const drawn = sizeOf(selectedActor.type);
+    const box: Box = selectedBox ?? {
+      center: at.pos,
+      width: drawn.width * Math.abs(at.scale.x),
+      height: drawn.height * Math.abs(at.scale.y),
+      rotation: at.rotation,
+    };
+    const corners = (
+      ['top-left', 'top-right', 'bottom-right', 'bottom-left'] as const
+    ).map(corner => worldToScreen(view, handlePoint(box, corner)));
+    return scriptButtonAt(corners, SCRIPT_BUTTON, size, SCRIPT_BUTTON_GAP);
+  })();
+
   // Only when a script can be opened, because opening it is the one thing
   // the camera list offers — and not at all while scripts are withheld from
   // this lesson: a list whose one button opens a script nobody may open is a
@@ -2506,6 +2567,7 @@ export const MapStage = ({
         onPointerUp={endGesture}
         onPointerLeave={handlePointerLeave}
         onClick={handleClick}
+        onDoubleClick={handleDoubleClick}
         onKeyDown={handleKeyDown}
         /*
          * APPLICATION, though the rule below calls that a non-interactive role
@@ -2519,7 +2581,8 @@ export const MapStage = ({
         aria-label={
           'Map. Arrow keys move between the actors on it. Shift and an arrow ' +
           'moves the selected one, Alt and an arrow resizes it, and the ' +
-          'square brackets turn it. Delete removes it.'
+          'square brackets turn it. Enter opens its script, and Delete ' +
+          'removes it.'
         }
       />
       <div
@@ -2530,6 +2593,19 @@ export const MapStage = ({
       >
         {announcement}
       </div>
+      {scriptButton && selectedActor && (
+        // HTML rather than drawn, so it can be focused, read and pointed at
+        // by a lesson, none of which a picture on a canvas can be.
+        <button
+          type="button"
+          className={styles.scriptFloat}
+          style={{left: scriptButton.x, top: scriptButton.y}}
+          aria-label={`Open the script of ${selectedActor.id}`}
+          onClick={() => onEditScript?.(selectedActor.id)}
+        >
+          Script
+        </button>
+      )}
       <div className={styles.toolbar}>
         <span className={styles.zoom}>
           {view ? `${Math.round(view.scale * 100)}%` : '—'}

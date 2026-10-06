@@ -2043,3 +2043,94 @@ describe('the records panel', () => {
     expect(written().actors.some(one => one.id === 'Note-1')).toBe(false);
   });
 });
+
+// The way into a placement's script from the canvas itself: a button floated
+// beside the selection, a double-click, and Enter. All three follow the same
+// gate as the inspector's Script button (`map-scripts`).
+describe('a placement’s script, from the canvas', () => {
+  /** A double-click at a world point, as the browser would give it. */
+  const doubleClick = (canvas: HTMLCanvasElement, map: MapDoc, at: Vec) => {
+    const {x, y} = screenPoint(map, at);
+    fireEvent.doubleClick(canvas, {clientX: x, clientY: y});
+  };
+  const select = (canvas: HTMLCanvasElement, map: MapDoc) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+  };
+  /** The floating button, or null; found by its name inside the stage. */
+  const floating = (view: {container: HTMLElement}) =>
+    view.container.querySelector<HTMLButtonElement>(
+      'button[aria-label^="Open the script of"]',
+    );
+
+  it('floats a Script button beside the selection, which opens it', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas, ...view} = mount(map, {onEditScript});
+    expect(floating(view)).toBeNull();
+    select(canvas, map);
+    const button = floating(view)!;
+    expect(button).toHaveAccessibleName('Open the script of a');
+    // Placed by the stage in pixels, beside the selection.
+    expect(button.style.left).toMatch(/px$/);
+    expect(button.style.top).toMatch(/px$/);
+    fireEvent.click(button);
+    expect(onEditScript).toHaveBeenCalledWith('a');
+  });
+
+  it('opens the script of what is double-clicked, and selects it', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas, selectedId} = mount(map, {onEditScript});
+    doubleClick(canvas, map, {x: 48, y: 48});
+    expect(onEditScript).toHaveBeenCalledWith('a');
+    expect(selectedId()).toBe('a');
+  });
+
+  it('opens nothing for a double-click on empty map', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas} = mount(map, {onEditScript});
+    doubleClick(canvas, map, {x: 300, y: 300});
+    expect(onEditScript).not.toHaveBeenCalled();
+  });
+
+  it('opens nothing while placing, where a double-click is two placements', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas, ...view} = mount(map, {
+      onEditScript,
+      placing: 'actors/coin',
+    });
+    doubleClick(canvas, map, {x: 48, y: 48});
+    expect(onEditScript).not.toHaveBeenCalled();
+    expect(floating(view)).toBeNull();
+  });
+
+  it('opens the selection’s script on Enter', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas} = mount(map, {onEditScript});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'}); // select a
+    fireEvent.keyDown(canvas, {key: 'Enter'});
+    expect(onEditScript).toHaveBeenCalledWith('a');
+  });
+
+  it('offers none of them while scripts are withheld, or with no scripts', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas, ...view} = mount(map, {
+      onEditScript,
+      withheld: new Set(['map-scripts'] as const),
+    });
+    select(canvas, map);
+    expect(floating(view)).toBeNull();
+    doubleClick(canvas, map, {x: 48, y: 48});
+    fireEvent.keyDown(canvas, {key: 'Enter'});
+    expect(onEditScript).not.toHaveBeenCalled();
+
+    const plain = mount(doc());
+    select(plain.canvas, map);
+    expect(floating(plain)).toBeNull();
+  });
+});
