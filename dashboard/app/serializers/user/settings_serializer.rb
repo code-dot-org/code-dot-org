@@ -49,7 +49,7 @@ class User::SettingsSerializer
   private attr_reader :user
 
   private def serialized_authentication_options
-    user.authentication_options.map do |option|
+    Queries::User::LinkedAccounts.call(user: user).map do |option|
       {
         id: option.id,
         credential_type: option.credential_type,
