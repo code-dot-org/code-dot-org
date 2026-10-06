@@ -1,8 +1,6 @@
 @use '../sharedMixins' as mixins;
 
 $content-height: 480px;
-// Title and action rows plus the space kept around the dialog.
-$chrome-height: 220px;
 
 .dialog {
   @include mixins.modal;
@@ -13,7 +11,8 @@ $chrome-height: 220px;
 }
 
 .content {
-  height: min(#{$content-height}, calc(100vh - #{$chrome-height}));
+  flex: 0 1 $content-height;
+  min-height: 0;
 }
 
 .actionRow {

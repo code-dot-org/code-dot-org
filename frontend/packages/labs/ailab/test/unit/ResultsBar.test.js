@@ -27,7 +27,6 @@ function renderBar(results) {
       ),
     ),
   );
-  return store;
 }
 
 function previousResultsButton() {
@@ -65,16 +64,25 @@ describe('ResultsBar', () => {
   });
 
   test('opens Results on the scorecard from the accuracy button', () => {
-    const store = renderBar([
-      {label: 'animal', features: ['legs'], accuracy: '80.00'},
-    ]);
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
 
     fireEvent.click(
       screen.getByRole('button', {name: 'View 80% Accuracy details'}),
     );
 
-    expect(store.getState().showResultsDetails).toBe(true);
     expect(selectedTab()).toBe('Scorecard');
+    const scorecard = screen.getByRole('tabpanel', {name: 'Scorecard'});
+    expect(within(scorecard).getByText('Actual')).toBeTruthy();
+  });
+
+  test('focuses the tab Results opened on', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+
+    fireEvent.click(previousResultsButton());
+
+    expect(document.activeElement).toBe(
+      screen.getByRole('tab', {name: 'Previous results'}),
+    );
   });
 
   test('lists earlier models, newest first, under Previous results', () => {
@@ -103,14 +111,29 @@ describe('ResultsBar', () => {
   });
 
   test('closes Results from Back to Testing', () => {
-    const store = renderBar([
-      {label: 'animal', features: ['legs'], accuracy: '80.00'},
-    ]);
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
     fireEvent.click(previousResultsButton());
 
     fireEvent.click(screen.getByRole('button', {name: 'Back to Testing'}));
 
-    expect(store.getState().showResultsDetails).toBe(false);
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  test('closes Results from the close button', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+    fireEvent.click(previousResultsButton());
+
+    fireEvent.click(screen.getByRole('button', {name: 'Close results'}));
+
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  test('closes Results on Escape', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+    fireEvent.click(previousResultsButton());
+
+    fireEvent.keyDown(document, {key: 'Escape'});
+
     expect(screen.queryByRole('dialog')).toBeNull();
   });
 });

@@ -1,4 +1,3 @@
-/* The models trained before the current one, newest first, with their accuracy. */
 import {formatAccuracy} from '../helpers/accuracy';
 import {useAppSelector} from '../hooks';
 
@@ -12,8 +11,8 @@ const PreviousResults = () => {
   if (previousResults.length === 0) {
     return (
       <p className={styles.empty}>
-        No previous results yet. Start over and train another model to compare
-        it with this one.
+        No previous results yet. Go back to Dataset and train another model to
+        compare it with this one.
       </p>
     );
   }

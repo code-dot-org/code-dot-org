@@ -1,8 +1,6 @@
 @use '../sharedMixins' as mixins;
 
 $content-height: 416px;
-// Title, tab and action rows plus the space kept around the dialog.
-$chrome-height: 258px;
 
 .dialog {
   @include mixins.modal;
@@ -24,10 +22,15 @@ $chrome-height: 258px;
 }
 
 .panels {
-  height: min(#{$content-height}, calc(100vh - #{$chrome-height}));
+  flex: 0 1 $content-height;
+  min-height: 0;
   overflow-y: auto;
   padding: 16px 24px 24px;
   box-sizing: border-box;
+
+  > [role='tabpanel'] {
+    height: 100%;
+  }
 }
 
 .actionRow {

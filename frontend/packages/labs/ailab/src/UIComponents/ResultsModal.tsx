@@ -1,6 +1,5 @@
-/* How the current model did, and how it compares with the models before it. */
 import {Button, Typography} from '@mui/material';
-import {useId} from 'react';
+import {useEffect, useId} from 'react';
 
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
@@ -13,6 +12,8 @@ import styles from './resultsModal.module.scss';
 
 export type ResultsModalTab = 'scorecard' | 'previousResults';
 
+const TABS_ID = 'ailab-results-tabs';
+
 interface ResultsModalProps {
   initialTab: ResultsModalTab;
   onClose: () => void;
@@ -20,6 +21,14 @@ interface ResultsModalProps {
 
 const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
   const titleId = useId();
+
+  // The dialog focuses its first tab; move focus to the one it opened on.
+  useEffect(() => {
+    document
+      .getElementById(TABS_ID)
+      ?.querySelector<HTMLElement>('[aria-selected="true"]')
+      ?.focus();
+  }, []);
 
   return (
     <MuiCustomDialog
@@ -42,6 +51,7 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
         type="secondary"
         defaultSelectedTabValue={initialTab}
         onChange={() => {}}
+        tabsContainerId={TABS_ID}
         tabsContainerClassName={styles.tabRow}
         tabPanelsContainerClassName={styles.panels}
         tabs={[

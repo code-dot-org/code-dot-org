@@ -49,6 +49,7 @@ $modal-margin: 24px;
   flex-direction: column;
   box-sizing: border-box;
   width: min(#{$modal-max-width}, calc(100vw - #{2 * $modal-margin}));
+  max-height: calc(100vh - #{2 * $modal-margin});
   overflow: hidden;
   border-radius: var(--shape-xl);
   box-shadow: var(--shadow-lg);
