@@ -801,7 +801,7 @@ Do, in order:
    replacement; JSDoc on every prop of the MUI props interface, carrying what a
    reader needs (element, default, edge cases), since Storybook autodocs renders the
    props table from it; ${COMPONENT_DIR}/README.md as short as its neighbours' (the
-   import, which component to use, pointers to ${PLAN_DOC}, the codemod's README entry
+   import, which component to use, pointers to ${PLAN_DOC}, the codemod's README entry if step 5 wrote one,
    and Storybook), with no prop table and no restated command; the component's row in ${STATUS_DOC} set to In
    Progress with the override file; the STYLE_OVERRIDES block there if you registered an
    override. Write every departure from the plan into the Deviations section of ${PLAN_DOC}.
