@@ -1,11 +1,14 @@
 import ailab, {
+  type AccuracyRequirement,
   type InitAllOptions,
   type SaveResponse,
   type InstructionsKey,
 } from '@code-dot-org/ailab';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {setValidationState} from '@cdo/apps/lab2/lab2Redux';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {ValidationState} from '@cdo/apps/lab2/progress/ProgressManager';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -18,6 +21,18 @@ import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
 
+const getValidationState = (
+  requirement: AccuracyRequirement | null
+): ValidationState => ({
+  hasConditions: !!requirement,
+  satisfied: !!requirement?.met,
+  message:
+    requirement && !requirement.met
+      ? `Train a model with at least ${requirement.minimum}% accuracy to continue.`
+      : null,
+  index: 0,
+});
+
 const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   levelProperties,
 }) => {
@@ -25,6 +40,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   const {showDialog} = useDialogControl();
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
     useState<InstructionsKey>();
+  const [accuracyRequirement, setAccuracyRequirement] =
+    useState<AccuracyRequirement | null>(null);
   const dynamicInstructionsMap: {[key: string]: string} = useMemo(
     () => JSON.parse(levelProperties.dynamicInstructions || '{}'),
     [levelProperties.dynamicInstructions]
@@ -76,6 +93,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       assetPath: '/blockly/media/skins/ailab/',
       onContinue,
       setInstructionsKey,
+      setAccuracyRequirement,
       i18n: {}, // TODO: Pass through localization map if necessary
       saveTrainedModel,
       logMetric,
@@ -92,6 +110,11 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       : undefined;
     ailab.loadLevel(mode);
   }, [levelProperties.id, levelProperties.mode]);
+
+  // From an effect, so ProgressContainer's validation reset can't overwrite it.
+  useEffect(() => {
+    dispatch(setValidationState(getValidationState(accuracyRequirement)));
+  }, [dispatch, accuracyRequirement]);
 
   const dynamicInstructionsContent = useMemo(() => {
     if (!dynamicInstructionsKey) {

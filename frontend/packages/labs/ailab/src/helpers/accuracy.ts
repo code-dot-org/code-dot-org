@@ -8,7 +8,13 @@
 
 import {ResultsGrades, REGRESSION_ERROR_TOLERANCE, MLTypes} from '../constants';
 import type {RootState} from '../redux';
-import type {ResultsData, DataRow} from '../types';
+import type {
+  AccuracyRequirement,
+  DataRow,
+  HistoricResult,
+  Mode,
+  ResultsData,
+} from '../types';
 
 import {getExtrema, isRegression} from './columnDetails';
 import {
@@ -101,6 +107,21 @@ export function getPercentCorrect(state: RootState): string {
     ? getAccuracyRegression(state).percentCorrect
     : getAccuracyClassification(state).percentCorrect;
   return percentCorrect;
+}
+
+// Null when the level sets no requireAccuracy, or sets it to 0.
+export function getAccuracyRequirement(
+  mode: Mode | undefined,
+  latestResult: HistoricResult | undefined,
+): AccuracyRequirement | null {
+  const minimum = mode?.requireAccuracy;
+  if (!minimum) {
+    return null;
+  }
+  return {
+    minimum,
+    met: !!latestResult && Number(latestResult.accuracy) >= minimum,
+  };
 }
 
 export interface AccuracyGradeOptions {

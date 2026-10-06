@@ -149,6 +149,7 @@ const processMode = (mode: Mode | undefined): void => {
 
 // Export a few types.
 export type {
+  AccuracyRequirement,
   InstructionsKey,
   Mode,
   ModelDataToSave,
