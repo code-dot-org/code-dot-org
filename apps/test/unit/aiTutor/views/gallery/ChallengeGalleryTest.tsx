@@ -55,6 +55,11 @@ const galleryData: TutorGalleryData = {
   ],
 };
 
+const teacherGalleryData: TutorGalleryData = {
+  ...galleryData,
+  is_teacher: true,
+};
+
 const baseResponse: Omit<ChallengeResponse, 'id' | 'user_name' | 'assets'> = {
   challenge_id: 1,
   user_id: 99,
@@ -272,6 +277,70 @@ describe('ChallengeGallery', () => {
     expect(window.location.search).toBe('');
     await waitFor(() =>
       expect(screen.getByText('Extension Activities')).toBeInTheDocument()
+    );
+  });
+
+  it('shows the teacher callout for teachers and hides it from students', async () => {
+    stubFetches([]);
+
+    const {rerender} = render(
+      <ChallengeGallery tutorGalleryData={teacherGalleryData} />
+    );
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(/By default, students can't see each other's projects/)
+      ).toBeInTheDocument()
+    );
+
+    rerender(<ChallengeGallery tutorGalleryData={galleryData} />);
+
+    expect(
+      screen.queryByText(/By default, students can't see each other's projects/)
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows the approval toggle for teachers and hides it from students', async () => {
+    stubFetches([videoResponse]);
+
+    const {rerender} = render(
+      <ChallengeGallery tutorGalleryData={teacherGalleryData} />
+    );
+
+    await waitFor(() =>
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+    );
+    expect(
+      screen.getByRole('checkbox', {name: /Visible for students/})
+    ).toBeInTheDocument();
+
+    rerender(<ChallengeGallery tutorGalleryData={galleryData} />);
+
+    expect(
+      screen.queryByRole('checkbox', {name: /Visible for students/})
+    ).not.toBeInTheDocument();
+  });
+
+  it('calls the approve endpoint when a teacher toggles a card', async () => {
+    mockRequest.mockResolvedValue({});
+    stubFetches([videoResponse]);
+
+    render(<ChallengeGallery tutorGalleryData={teacherGalleryData} />);
+
+    await waitFor(() =>
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+    );
+
+    fireEvent.click(
+      screen.getByRole('checkbox', {name: /Visible for students/})
+    );
+
+    await waitFor(() =>
+      expect(mockRequest).toHaveBeenCalledWith({
+        method: 'PATCH',
+        url: '/challenge_responses/7/approve',
+        body: {approved: true},
+      })
     );
   });
 
