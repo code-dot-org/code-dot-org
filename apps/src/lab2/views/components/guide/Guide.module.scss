@@ -1,6 +1,15 @@
 @use '../layout/variables.scss' as variables;
-@use 'guide-variables' as *;
 @import '../../../../mixins.scss';
+
+// Where the guide floats and how much it pads, for siblings that lay out
+// around it. Guide.tsx repeats three of these.
+:root {
+  --guide-top-position: 62px;
+  --guide-bottom-position: 20px;
+  --guide-gap-height: 43px;
+  --guide-right-offset: 32px;
+  --guide-padding: 24px;
+}
 
 @keyframes slide-up {
   from {
@@ -34,7 +43,7 @@
   z-index: 71;
 
   &Gap {
-    top: $gap-height;
+    top: var(--guide-gap-height);
   }
 }
 
@@ -42,9 +51,9 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: $right-offset;
+  right: var(--guide-right-offset);
   border-radius: 14px;
-  padding: $padding;
+  padding: var(--guide-padding);
   border: 1px solid var(--borders-neutral-primary);
   filter: drop-shadow(0 0 0.75rem black);
   z-index: variables.$z-index-floating-ui;
@@ -85,17 +94,17 @@
   }
 
   &NormalPosition {
-    top: $top-position;
+    top: var(--guide-top-position);
     animation: 0.75s ease 1.5s backwards slide-up;
   }
 
   &BottomPosition {
-    bottom: $bottom-position;
+    bottom: var(--guide-bottom-position);
     animation: 0.75s ease 1.5s backwards slide-down;
   }
 
   &Gap {
-    top: $top-position - $gap-height;
+    top: calc(var(--guide-top-position) - var(--guide-gap-height));
   }
 }
 
