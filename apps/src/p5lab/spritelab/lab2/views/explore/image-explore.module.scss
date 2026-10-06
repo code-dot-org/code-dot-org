@@ -1,8 +1,6 @@
 @use "sass:math";
-@use "color.scss";
 @use "sr-only";
 @use "../checkerboard";
-@use "../../../../../lab2/views/components/guide/guide-variables" as guide;
 
 // Between the frame and the Guide.
 $scene-gap: 24px;
@@ -36,7 +34,7 @@ $window-allowance: 150px;
   flex: 1 1 0;
   min-width: 0;
   position: relative;
-  margin-top: 0 - guide.$top-position;
+  margin-top: calc(-1 * var(--guide-top-position));
 
   // No entrance animation: the Guide mounts again entering and leaving
   // drawing.
@@ -95,9 +93,9 @@ $window-allowance: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed var(--border-neutral-secondary, color.$light_gray);
+  border: 2px dashed var(--border-neutral-secondary);
   border-radius: 12px;
-  background-color: var(--background-neutral-secondary, color.$white);
+  background-color: var(--background-neutral-secondary);
 }
 
 .pixelArt {
@@ -118,7 +116,7 @@ $window-allowance: 150px;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
-  color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--text-neutral-primary);
 }
 
 // The style dropdown at the left, Generate at the right.
@@ -136,14 +134,14 @@ $window-allowance: 150px;
   border-radius: 999px;
   font-size: 18px;
   font-weight: 700;
-  box-shadow: 0 4px 0 rgb(0 0 0 / 35%);
+  box-shadow: 0 4px 0 var(--neutral-black-alpha-40);
   transition:
     transform 0.1s ease-out,
     box-shadow 0.1s ease-out;
 
   &:active:not(:disabled) {
     transform: translateY(4px);
-    box-shadow: 0 0 0 rgb(0 0 0 / 35%);
+    box-shadow: 0 0 0 var(--neutral-black-alpha-40);
   }
 
   &:disabled {
@@ -198,12 +196,12 @@ $window-allowance: 150px;
 // The quieter neutral: Generate is the main call to action.
 .drawButton.drawButton {
   width: 100%;
-  border-color: var(--border-neutral-secondary, color.$light_gray);
-  color: var(--text-neutral-secondary, color.$dark_charcoal);
+  border-color: var(--border-neutral-secondary);
+  color: var(--text-neutral-secondary);
 
   &:hover {
-    border-color: var(--text-neutral-primary, color.$dark_charcoal);
-    color: var(--text-neutral-primary, color.$dark_charcoal);
+    border-color: var(--text-neutral-primary);
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -232,7 +230,11 @@ $window-allowance: 150px;
   border-style: solid;
   overflow: hidden;
 
-  @include checkerboard.checkerboard(24px, color.$lighter_gray, color.$white);
+  @include checkerboard.checkerboard(
+    24px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
 }
 
 // Fills the frame even when the stored image is smaller than it (small
@@ -260,7 +262,7 @@ $window-allowance: 150px;
   width: 100%;
   margin: 0;
   border: 0;
-  border-top: 1px solid var(--border-neutral-secondary, color.$light_gray);
+  border-top: 1px solid var(--border-neutral-secondary);
   opacity: 0.5;
 }
 
@@ -268,7 +270,7 @@ $window-allowance: 150px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--text-neutral-primary);
 }
 
 .resultQuestionRow {
@@ -284,13 +286,13 @@ $window-allowance: 150px;
 }
 
 .verdictButton {
-  color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--text-neutral-primary);
 }
 
 // Doubled to outrank the button's own hover background.
 .verdictButton.verdictChosen {
-  background-color: var(--text-neutral-primary, color.$dark_charcoal);
-  color: var(--background-neutral-primary, color.$white);
+  background-color: var(--text-neutral-primary);
+  color: var(--background-neutral-primary);
   animation: thumb-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -324,7 +326,7 @@ $window-allowance: 150px;
 }
 
 .error {
-  color: var(--text-danger-primary, color.$red);
+  color: var(--text-danger-primary);
 }
 
 .factBox {
@@ -333,11 +335,11 @@ $window-allowance: 150px;
   align-items: center;
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: var(--background-neutral-primary, color.$lightest_gray);
+  background-color: var(--background-neutral-primary);
 }
 
 .factIcon {
   flex: none;
   font-size: 32px;
-  color: var(--text-brand-primary, color.$brand_primary_default);
+  color: var(--text-brand-primary);
 }

@@ -1,5 +1,3 @@
-@use "sass:color" as sass-color;
-@use "color.scss";
 @use "sr-only";
 
 // Chips and words are controls, not text to copy; the page gives p and
@@ -41,42 +39,68 @@
   min-height: 48px;
   font-size: 22px;
   line-height: 2;
-  color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--text-neutral-primary);
 }
 
-// A slot's color; the text color on it (4.5:1 in both themes); a darker
-// shade for the ledge under a raised button and for lines on the light
-// tray; a lighter shade for lines on the dark tray (3:1 on each).
-@mixin hue($base, $text) {
-  --hue: #{$base};
-  --hue-dark: #{sass-color.adjust($base, $lightness: -12%)};
-  --hue-light: #{sass-color.adjust($base, $lightness: 15%)};
-  --hue-text: #{$text};
+// A slot's color from the palette; the text color on it (4.5:1 in both
+// themes); a darker shade for the ledge under a raised button and for
+// lines on the light tray; a lighter shade for lines on the dark tray
+// (3:1 on each).
+@mixin hue($base, $dark, $light, $text) {
+  --hue: var(#{$base});
+  --hue-dark: var(#{$dark});
+  --hue-light: var(#{$light});
+  --hue-text: var(#{$text});
   --hue-line: var(--hue-dark);
 }
 
-:global([data-theme='Dark']) :is(.hue_teal, .hue_yellow, .hue_purple, .hue_orange, .hue_blue) {
+:global([data-theme='Dark']) :is(.hue_blue, .hue_yellow, .hue_pink, .hue_orange, .hue_purple) {
   --hue-line: var(--hue-light);
 }
 
-.hue_teal {
-  @include hue(color.$dark_blue, color.$white);
+.hue_blue {
+  @include hue(
+    --sentiment-information-70,
+    --sentiment-information-90,
+    --sentiment-information-30,
+    --neutral-base-white
+  );
 }
 
 .hue_yellow {
-  @include hue(color.$yellow, color.$dark_gray);
+  @include hue(
+    --sentiment-warning-50,
+    --sentiment-warning-70,
+    --sentiment-warning-30,
+    --neutral-gray-95
+  );
 }
 
-.hue_purple {
-  @include hue(color.$purple, color.$white);
+.hue_pink {
+  @include hue(
+    --brand-pink-60,
+    --brand-pink-80,
+    --brand-pink-30,
+    --neutral-base-white
+  );
 }
 
 .hue_orange {
-  @include hue(color.$dark_orange, color.$dark_gray);
+  @include hue(
+    --brand-orange-50,
+    --brand-orange-70,
+    --brand-orange-30,
+    --neutral-gray-95
+  );
 }
 
-.hue_blue {
-  @include hue(color.$default_blue, color.$white);
+.hue_purple {
+  @include hue(
+    --brand-purple-50,
+    --brand-purple-70,
+    --brand-purple-30,
+    --neutral-base-white
+  );
 }
 
 .chip {
@@ -88,8 +112,8 @@
   padding: 3px 24px 3px 4px;
   border-radius: 999px;
   line-height: 1.4;
-  background-color: var(--hue, var(--text-neutral-primary, color.$dark_charcoal));
-  color: var(--hue-text, var(--background-neutral-primary, color.$white));
+  background-color: var(--hue);
+  color: var(--hue-text);
   box-shadow: 0 2px 0 var(--hue-dark, transparent);
   vertical-align: middle;
   animation: chip-land 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -113,7 +137,7 @@
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  background: rgb(255 255 255 / 85%);
+  background: var(--neutral-white-alpha-80);
   font-size: 0.85em;
   line-height: 1;
 }
@@ -151,7 +175,7 @@ button.chipWord {
   min-height: 1.5em;
   padding-right: 14px;
   background: transparent;
-  border: 2px dashed var(--hue-line, var(--text-neutral-secondary, color.$dark_charcoal));
+  border: 2px dashed var(--hue-line);
   box-shadow: none;
   opacity: 0.8;
   animation: slot-pulse 1.6s ease-in-out infinite;
@@ -173,7 +197,7 @@ button.chipWord {
   opacity: 1;
   animation: none;
   transform: scale(1.08);
-  box-shadow: 0 0 0 4px var(--hue, var(--border-brand-primary, color.$brand_primary_default));
+  box-shadow: 0 0 0 4px var(--hue);
 }
 
 .dimmed {
@@ -187,10 +211,10 @@ button.chipWord {
   width: 24px;
   height: 24px;
   padding: 0;
-  border: 2px solid var(--background-neutral-primary, color.$white);
+  border: 2px solid var(--background-neutral-primary);
   border-radius: 50%;
-  background-color: var(--text-neutral-primary, color.$dark_charcoal);
-  color: var(--background-neutral-primary, color.$white);
+  background-color: var(--text-neutral-primary);
+  color: var(--background-neutral-primary);
   font-size: 12px;
   line-height: 1;
   display: inline-flex;
@@ -205,9 +229,9 @@ button.chipWord {
   gap: 2px;
   padding: 8px 6px 8px;
   border-radius: 16px;
-  border: 1px solid var(--border-neutral-secondary, color.$light_gray);
-  background-color: var(--background-neutral-primary, color.$lightest_gray);
-  box-shadow: 0 4px 0 rgb(0 0 0 / 25%);
+  border: 1px solid var(--border-neutral-secondary);
+  background-color: var(--background-neutral-primary);
+  box-shadow: 0 4px 0 var(--neutral-black-alpha-30);
 }
 
 @media (max-height: 800px) {
@@ -250,12 +274,12 @@ button.chipWord {
   border: 0;
   border-radius: 8px;
   background: transparent;
-  color: var(--text-neutral-primary, color.$dark_charcoal);
+  color: var(--text-neutral-primary);
   font-size: 18px;
   cursor: pointer;
 
   &:hover:not(:disabled) {
-    background-color: var(--background-neutral-primary, color.$lightest_gray);
+    background-color: var(--background-neutral-primary);
   }
 
   &:disabled {
@@ -357,39 +381,13 @@ button.chipWord {
   gap: 8px;
 }
 
-.shuffle {
+// Doubled to outrank the button's own margin and position.
+.shuffle.shuffle {
   position: absolute;
   right: 2px;
   top: 50%;
   transform: translateY(-50%);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   margin: 0;
-  padding: 4px 12px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--background-neutral-secondary, color.$white);
-  color: var(--text-neutral-primary, color.$dark_charcoal);
-  font: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  box-shadow: 0 2px 0 rgb(0 0 0 / 25%);
-  cursor: pointer;
-
-  &:hover:not(:disabled) {
-    filter: brightness(1.08);
-  }
-
-  &:active:not(:disabled) {
-    transform: translateY(calc(-50% + 2px));
-    box-shadow: none;
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
 }
 
 // A 24px button around a 12px dot: a neutral ring until the set has its
@@ -411,7 +409,7 @@ button.chipWord {
     position: absolute;
     inset: 6px;
     border-radius: 50%;
-    border: 2px solid var(--text-neutral-secondary, color.$dark_charcoal);
+    border: 2px solid var(--text-neutral-secondary);
   }
 }
 
@@ -433,12 +431,12 @@ button.chipWord {
 }
 
 .dotFilled::before {
-  background-color: var(--hue, var(--text-neutral-secondary, color.$dark_charcoal));
+  background-color: var(--hue);
 }
 
 .dotCurrent::before {
-  background-color: var(--hue, var(--text-brand-primary, color.$brand_primary_default));
-  border-color: var(--text-neutral-primary, color.$dark_charcoal);
+  background-color: var(--hue);
+  border-color: var(--text-neutral-primary);
   transform: scale(1.25);
 }
 
@@ -448,15 +446,15 @@ button.chipWord {
   gap: 8px;
   margin: 0;
   min-height: 44px;
-  border: 2px solid var(--hue-line, var(--text-neutral-primary, color.$dark_charcoal));
+  border: 2px solid var(--hue-line);
   border-radius: 999px;
-  background: var(--background-neutral-secondary, color.$white);
-  color: var(--text-neutral-primary, color.$dark_charcoal);
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
   font: inherit;
   font-size: 17px;
   font-weight: 600;
   padding: 4px 16px 4px 6px;
-  box-shadow: 0 3px 0 var(--hue-dark, color.$dark_charcoal);
+  box-shadow: 0 3px 0 var(--hue-dark);
   cursor: grab;
   transition:
     transform 0.12s ease-out,
@@ -473,12 +471,12 @@ button.chipWord {
 
   &:hover:not(:disabled, .chosen) {
     transform: translateY(-2px);
-    box-shadow: 0 5px 0 var(--hue-dark, color.$dark_charcoal);
+    box-shadow: 0 5px 0 var(--hue-dark);
   }
 
   &:active:not(:disabled) {
     transform: translateY(3px);
-    box-shadow: 0 0 0 var(--hue-dark, color.$dark_charcoal);
+    box-shadow: 0 0 0 var(--hue-dark);
   }
 
   &:disabled {
@@ -499,11 +497,11 @@ button.chipWord {
 
 // Outranks the hover above.
 .word.chosen {
-  background-color: var(--hue, var(--text-neutral-primary, color.$dark_charcoal));
-  color: var(--hue-text, var(--background-neutral-primary, color.$white));
+  background-color: var(--hue);
+  color: var(--hue-text);
 
   .emojiBadge {
-    background: rgb(255 255 255 / 85%);
+    background: var(--neutral-white-alpha-80);
   }
 }
 

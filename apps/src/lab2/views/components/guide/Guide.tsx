@@ -2,14 +2,15 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
+import constants from './guide-constants.module.scss';
 import styles from './Guide.module.scss';
 
-/** The guide's distances from its container's right and bottom edges
-    (.guide in Guide.module.scss), for siblings that lay out around it. */
-export const GUIDE_RIGHT_OFFSET_PX = 32;
-export const GUIDE_BOTTOM_OFFSET_PX = 20;
-/** The guide's own padding (.guide in Guide.module.scss). */
-export const GUIDE_PADDING_PX = 24;
+/** The guide's distances from its container's right and bottom edges,
+    for siblings that lay out around it. */
+export const GUIDE_RIGHT_OFFSET_PX = parseInt(constants.rightOffset);
+export const GUIDE_BOTTOM_OFFSET_PX = parseInt(constants.bottomOffset);
+/** The guide's own padding. */
+export const GUIDE_PADDING_PX = parseInt(constants.padding);
 
 interface GuideProps {
   id?: string;

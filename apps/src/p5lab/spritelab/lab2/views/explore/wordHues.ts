@@ -4,15 +4,15 @@
 
 import {Sentence, slotsToOffer} from './exploreSentences';
 
-type Hue = 'teal' | 'yellow' | 'purple' | 'orange' | 'blue';
+type Hue = 'blue' | 'yellow' | 'pink' | 'orange' | 'purple';
 
 /** In carousel order; the required word takes the first. */
 export const HUES: readonly Hue[] = [
-  'teal',
-  'yellow',
-  'purple',
-  'orange',
   'blue',
+  'yellow',
+  'pink',
+  'orange',
+  'purple',
 ];
 
 const bySentence = new WeakMap<Sentence, Record<string, Hue>>();

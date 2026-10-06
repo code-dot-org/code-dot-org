@@ -1,0 +1,17 @@
+@use 'guide-variables' as *;
+
+// The guide's distances as CSS variables for siblings that lay out around
+// it, and exported for the TS that measures against it. Its own
+// stylesheet stays free of exports so tests keep its class names.
+:root {
+  --guide-top-position: #{$top-position};
+  --guide-bottom-position: #{$bottom-position};
+  --guide-right-offset: #{$right-offset};
+  --guide-padding: #{$padding};
+}
+
+:export {
+  rightOffset: $right-offset;
+  bottomOffset: $bottom-position;
+  padding: $padding;
+}

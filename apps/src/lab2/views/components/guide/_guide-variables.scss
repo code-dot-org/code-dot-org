@@ -1,4 +1,7 @@
-// Where the Guide floats, shared with hosts that line up against it.
+// Where the guide floats and how much it pads. guide-constants.module.scss
+// publishes these as CSS variables and to TS.
 $top-position: 62px;
 $bottom-position: 20px;
 $gap-height: 43px;
+$right-offset: 32px;
+$padding: 24px;

@@ -3,6 +3,7 @@
 // for the set on show.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
@@ -396,15 +397,17 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
               ) : null
             )}
           </div>
-          <button
-            type="button"
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             className={styles.shuffle}
+            startIcon={<FontAwesomeV6Icon iconName="shuffle" aria-hidden />}
             disabled={disabled}
             onClick={shuffle}
           >
-            <FontAwesomeV6Icon iconName="shuffle" aria-hidden />
             Surprise me
-          </button>
+          </MuiButton>
         </div>
       </div>
     </div>

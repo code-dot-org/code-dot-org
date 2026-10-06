@@ -11,14 +11,14 @@ describe('wordHues', () => {
     const hues = slotsToOffer(CHARACTER_SENTENCE).map(s =>
       hueFor(CHARACTER_SENTENCE, s.id)
     );
-    expect(hues).toEqual(['teal', 'yellow', 'purple']);
+    expect(hues).toEqual(['blue', 'yellow', 'pink']);
     expect(new Set(hues).size).toBe(hues.length);
   });
 
-  it('colours by position, so one word set differs between sentences', () => {
+  it('colors by position, so one word set differs between sentences', () => {
     const treasure = sentenceFor('sprite', 'object', 'treasure');
-    expect(hueFor(treasure, 'treasure')).toBe('teal');
+    expect(hueFor(treasure, 'treasure')).toBe('blue');
     expect(hueFor(treasure, 'look')).toBe('yellow');
-    expect(hueFor(treasure, 'detail')).toBe('purple');
+    expect(hueFor(treasure, 'detail')).toBe('pink');
   });
 });
