@@ -1,4 +1,5 @@
-/* Results of the latest training, while the Train panel still matches it. */
+/* If the train panel matches the current training, show the results.
+   Otherwise returns null. */
 import {Button, Typography} from '@mui/material';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -13,7 +14,7 @@ import styles from './trainingResultCard.module.scss';
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
   const isTrained = useAppSelector(isTrainedOnCurrentColumns);
-  // Keeps the result hidden behind the training animation.
+  // Keep the result hidden while the training modal is open.
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const {correct, total} = useAppSelector(getCorrectCount, shallowEqual);
 
@@ -25,28 +26,24 @@ const TrainingResultCard = () => {
 
   return (
     <div className={styles.card}>
-      <dl className={styles.results}>
+      <div className={styles.results}>
         <div className={styles.result}>
-          <Typography component="dt" variant="body4" className={styles.label}>
+          <Typography variant="body4" className={styles.label}>
             Accuracy
           </Typography>
-          <Typography
-            component="dd"
-            variant="body2"
-            className={styles.accuracyValue}
-          >
+          <Typography variant="body2" className={styles.accuracyValue}>
             {percentCorrect}%
           </Typography>
         </div>
         <div className={styles.result}>
-          <Typography component="dt" variant="body4" className={styles.label}>
+          <Typography variant="body4" className={styles.label}>
             Number correct
           </Typography>
-          <Typography component="dd" variant="body2" className={styles.value}>
+          <Typography variant="body2" className={styles.value}>
             {correct}/{total}
           </Typography>
         </div>
-      </dl>
+      </div>
       <div className={styles.actionRow}>
         <Button
           variant="contained"

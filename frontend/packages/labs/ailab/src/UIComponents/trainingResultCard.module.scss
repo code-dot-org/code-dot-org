@@ -8,10 +8,9 @@
 
 .results {
   display: flex;
-  margin: 0;
 }
 
-// The term comes first for screen readers but sits under the value.
+// The label comes first for screen readers but sits under the value.
 .result {
   display: flex;
   flex: 1;
@@ -30,7 +29,6 @@
 
 .card .value,
 .card .accuracyValue {
-  margin: 0;
   font-weight: 600;
 }
 
