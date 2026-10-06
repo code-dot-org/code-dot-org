@@ -710,7 +710,7 @@ const EXECUTE_SCHEMA = {
         },
       },
     },
-    codemodCommand: {type: 'string', description: `The full jscodeshift command consumers run from ${LIB}, paths appended (TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/<file>.ts ...), or "" when the plan required no codemod`},
+    codemodCommand: {type: 'string', description: `The full jscodeshift command consumers run from ${LIB}, paths appended (TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/<file>.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register), or "" when the plan required no codemod`},
     deviations: {type: 'array', items: {type: 'string'}, description: 'Every place the code departs from the plan doc, also written into its Deviations section'},
     checks: {
       type: 'object',
@@ -770,17 +770,20 @@ Do, in order:
    order cannot decide it. Set box-sizing explicitly where a width rule assumes it:
    Storybook and studio lack Bootstrap's global border-box reset.
 3. Stories: one MUI story per twin, same visual state, same launcher pattern as the DSCO
-   story. Keep the DSCO stories untouched. Confirm every muiStoryId in
+   story. Copy the DSCO story's parameters.a11y overrides, with their comments, onto its
+   twin. Keep the DSCO stories untouched. Confirm every muiStoryId in
    dist/component-library-storybook/index.json after building Storybook.
 4. Tests: vitest covers behavior: every propMap entry, every sharedGlobals rule (for a
    shared scroll lock: open a legacy and an MUI instance, close them out of order, assert
    the body state), roles, ids and focus, and the legacy defect fixes that change
-   behavior (an alt text, a prop honored). Keep the legacy tests running. Never test
-   styling in vitest: no compiling SCSS, no asserting class names, selectors or
-   declarations. Styling and the CSS-only defect fixes are verified in Storybook, where
-   the twins and eyes show them; a fix the default viewport cannot show (a narrow-viewport
-   overflow) gets its own MUI story with that viewport and a play function asserting the
-   rendered geometry.
+   behavior (an alt text, a prop honored). Keep the legacy tests running. Assert what the
+   user perceives (role, aria-*, toBeVisible, focus), never the class or declaration that
+   causes it: no compiling SCSS, no asserting class names, selectors or declarations.
+   Styling and the CSS-only defect fixes are verified in Storybook, where the twins and
+   eyes show them; a fix the default viewport cannot show (a narrow-viewport overflow)
+   gets its own MUI story with that viewport and a play function asserting the rendered
+   geometry. That story has no DSCO twin: leave it out of muiStories, which holds twins
+   only; test-storybook in step 7 runs it.
 5. Codemod, if the plan requires it: ${CODEMODS_DIR}/${component}-to-mui.ts modeled on
    button-to-mui-button.ts implementing exactly the planned transforms, and an entry in
    ${CODEMODS_DIR}/README.md shaped like the button entry: one or two sentences, at most
@@ -808,7 +811,10 @@ Do, in order:
    ../../packages/component-library/src/${component}, which runs every story of the
    component in a browser with its play function and axe, as CI's ui-test job does; yarn build
    alone runs no play function. If Playwright has no browser, run node_modules/.bin/playwright install
-   --only-shell chromium in frontend/. Fix what you broke; report each check's result.
+   --only-shell chromium in frontend/. A failing DSCO story you did not touch is not yours to
+   fix: if it also fails on origin/staging, or passes when rerun alone (a timeout under
+   load), name it in notes and leave it out of storybookTests. Fix what you broke; report
+   each check's result.
 
 Return the structured result.`,
   {schema: EXECUTE_SCHEMA, label: 'execute', phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
@@ -1150,8 +1156,8 @@ step: run it, report what changed, edit nothing by hand.
 
 ${TREE_RULES}
 
-From ${LIB}, run \`${exec.codemodCommand} <path>\` (see ${CODEMODS_DIR}/README.md for path
-conventions; paths are relative to that directory or absolute) over exactly these files,
+From ${LIB}, run \`${exec.codemodCommand} <path>\` (paths are relative to ${LIB}
+or absolute) over exactly these files,
 in batches if the tool accepts several paths:
 ${JSON.stringify(consumerSourceFiles)}
 Then git status --porcelain and git diff --stat to report which of them changed. A consumer
