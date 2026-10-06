@@ -108,15 +108,18 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
   }),
   'map.enhance': inProperties(
     'map.enhance',
-    kind => `Enhance is in the properties of ${kind}, under its name.`,
+    kind =>
+      `Enhance is the sparkles beside the name in the properties of ${kind}.`,
   ),
   'map.openKind': inProperties(
     'map.openKind',
-    kind => `Open is in the properties of ${kind}, beside Enhance.`,
+    kind =>
+      `Open is the box with an arrow beside the name in the properties of ${kind}.`,
   ),
   'map.script': inProperties(
     'map.script',
-    kind => `Script is at the top of the properties of ${kind}, beside Delete.`,
+    kind =>
+      `Code is the puzzle piece beside the name in the properties of ${kind}.`,
   ),
   'world.properties': () => ({
     mark: 'world.properties',

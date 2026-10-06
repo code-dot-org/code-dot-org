@@ -1678,7 +1678,7 @@ on a map can carry a **script** of its own, which is blocks about THIS one.
 ### What you do
 
 1. Open **World** and delete the handler about any Button. Open **Map** again.
-2. Click the RED button on the map, and press **Script** in its properties.
+2. Click the RED button on the map, and press **Code** in its properties.
 3. Add **when ⟨this actor⟩ is clicked**, and in it **set text of ⟨the ⟨Sign⟩⟩
    to ⟨RED⟩**. **the ⟨…⟩** is in the Map drawer: it names a thing on this map
    by the name the map gives it, and the Sign is called Sign.

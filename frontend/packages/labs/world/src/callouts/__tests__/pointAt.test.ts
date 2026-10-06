@@ -91,7 +91,9 @@ describe('pointAt', () => {
     setRevealer('view', () => false);
     expect(await pointAt('map.enhance:Hero')).toBe(false);
     expect(enhance).not.toHaveAttribute(RING_ATTRIBUTE);
-    expect(lastAnnounced()).toContain('Enhance is in the properties of Hero');
+    expect(lastAnnounced()).toContain(
+      'Enhance is the sparkles beside the name in the properties of Hero',
+    );
   });
 
   it('adds what a revealer found to what is said', async () => {

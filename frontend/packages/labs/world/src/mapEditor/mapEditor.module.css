@@ -256,14 +256,18 @@
   text-transform: capitalize;
 }
 
-/* What is about the selected placement's KIND rather than about it: Enhance
-   and Open, side by side, wrapping under each other in a narrow inspector. A
-   lesson link for a withheld one takes a line of its own. */
-.inspectorKind {
+/* The inspector's actions, as icons, at the right of its head row
+   (`IconAction`). Delete stands a little apart from the rest, so a press
+   meant for the one beside it does not land on it. */
+.inspectorActions {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 0 0.5rem;
+  gap: 0.15rem;
+  text-transform: none;
+}
+
+.inspectorDelete {
+  margin-left: 0.4rem;
 }
 
 /* The vector pairs (Pos X/Y, Scale X/Y) two-up, each half width. */

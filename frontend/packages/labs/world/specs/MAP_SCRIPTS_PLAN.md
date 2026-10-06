@@ -35,13 +35,20 @@ loads / unloads` hats.
   the map editor to that placement's workspace and back; a corner icon on
   any placement whose workspace holds a block, with a toolbar toggle; and
   the map's own workspace reached with nothing selected.
-  (Since Oct 2026 the canvas is a door too: a Script button floats just
+  (Since Oct 2026 the canvas is a door too: a button floats just
   outside the selection's top-right corner, clear of the grips; a
   double-click on a placement selects it and opens its script; and Enter
   opens the selection's. All three follow `map-scripts` as the inspector's
   button does, and none of them acts while a kind is being placed, where a
   double-click is two placements. `stageGeometry.scriptButtonAt` places
   the button.)
+  (Both buttons — the floating one and the inspector's — are labelled
+  **Code** since Oct 2026, which is what a learner calls what is behind
+  them; "Script" elsewhere in these specs is that button. The inspector's
+  is an icon now, a puzzle piece, in one row with Enhance (sparkles), Open
+  (box and arrow) and Delete (trash), each named in words for a screen
+  reader and in a tooltip (`mapEditor/IconAction`). The toolbar's
+  Map script and the camera list's Open script keep their words.)
 - **Retired**: the named-actor block and its engine registry, the Pause
   Menu actor. The stock pause menu is a Panel, a Label and two Buttons with
   scripts, and Breakout hears its `quit`.

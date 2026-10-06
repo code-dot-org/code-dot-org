@@ -42,6 +42,7 @@ import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {AngleInput} from './AngleInput';
 import {CameraPanel} from './CameraPanel';
+import {IconAction} from './IconAction';
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
 import styles from './mapEditor.module.css';
@@ -2600,10 +2601,10 @@ export const MapStage = ({
           type="button"
           className={styles.scriptFloat}
           style={{left: scriptButton.x, top: scriptButton.y}}
-          aria-label={`Open the script of ${selectedActor.id}`}
+          aria-label={`Open the code of ${selectedActor.id}`}
           onClick={() => onEditScript?.(selectedActor.id)}
         >
-          Script
+          Code
         </button>
       )}
       <div className={styles.toolbar}>
@@ -2785,70 +2786,60 @@ export const MapStage = ({
             <Typography variant="subtitle2" component="span">
               {selectedActor.type.split('/').pop()}
             </Typography>
-            {/* The way into this one placement's workspace, beside the
-                values that are also its own. */}
-            {onEditScript && (
-              <Button
-                variant="text"
-                size="extraSmall"
-                className={withheldClass('map-scripts')}
-                data-callout="map.script"
-                {...orWithheld('map-scripts', 'inspector', () =>
-                  onEditScript(selectedActor.id),
-                )}
-              >
-                Script
-              </Button>
-            )}
-            <Button
-              variant="text"
-              size="extraSmall"
-              onClick={() => deleteActor(selectedActor.id)}
-              disabled={isReadOnly}
-            >
-              Delete
-            </Button>
-          </div>
-          {onEditScript && note('map-scripts', 'inspector')}
-          {selectedKind && (onEnhanceKind || onOpenKind) && (
-            // About the KIND, and saying so: a placement is one of many, and
-            // a tick in Enhance or a block in its file changes them all.
-            <div className={styles.inspectorKind}>
-              {onEnhanceKind && (
-                <>
-                  <Button
-                    variant="text"
-                    size="extraSmall"
-                    disabled={isReadOnly}
-                    className={withheldClass('map-enhance')}
-                    data-callout="map.enhance"
-                    {...orWithheld('map-enhance', 'inspector', () =>
-                      onEnhanceKind(selectedActor.type),
-                    )}
-                  >
-                    Enhance {selectedKind.name}…
-                  </Button>
-                  {note('map-enhance', 'inspector')}
-                </>
+            {/* The four things to do from here, as the icons they wear
+                elsewhere (`IconAction`). This placement's own code first;
+                then the two about its KIND, whose words still say which kind,
+                since a tick in Enhance or a block in its file changes every
+                one of them; and Delete last, apart. */}
+            <div className={styles.inspectorActions}>
+              {onEditScript && (
+                <IconAction
+                  label="Code"
+                  icon="puzzle-piece"
+                  className={withheldClass('map-scripts')}
+                  data-callout="map.script"
+                  {...orWithheld('map-scripts', 'inspector', () =>
+                    onEditScript(selectedActor.id),
+                  )}
+                />
               )}
-              {onOpenKind && (
-                <>
-                  <Button
-                    variant="text"
-                    size="extraSmall"
-                    className={withheldClass('map-open-kind')}
-                    data-callout="map.openKind"
-                    {...orWithheld('map-open-kind', 'inspector', () =>
-                      onOpenKind(selectedActor.type),
-                    )}
-                  >
-                    Open {selectedKind.name}
-                  </Button>
-                  {note('map-open-kind', 'inspector')}
-                </>
+              {selectedKind && onEnhanceKind && (
+                <IconAction
+                  label={`Enhance ${selectedKind.name}…`}
+                  icon="sparkles"
+                  disabled={isReadOnly}
+                  className={withheldClass('map-enhance')}
+                  data-callout="map.enhance"
+                  {...orWithheld('map-enhance', 'inspector', () =>
+                    onEnhanceKind(selectedActor.type),
+                  )}
+                />
               )}
+              {selectedKind && onOpenKind && (
+                <IconAction
+                  label={`Open ${selectedKind.name}`}
+                  icon="arrow-up-right-from-square"
+                  className={withheldClass('map-open-kind')}
+                  data-callout="map.openKind"
+                  {...orWithheld('map-open-kind', 'inspector', () =>
+                    onOpenKind(selectedActor.type),
+                  )}
+                />
+              )}
+              <IconAction
+                label="Delete"
+                icon="trash"
+                className={styles.inspectorDelete}
+                onClick={() => deleteActor(selectedActor.id)}
+                disabled={isReadOnly}
+              />
             </div>
-          )}
+          </div>
+          {/* What a withheld one says about the lesson that brings it, under
+              the row rather than inside it. */}
+          {onEditScript && note('map-scripts', 'inspector')}
+          {selectedKind && onEnhanceKind && note('map-enhance', 'inspector')}
+          {selectedKind && onOpenKind && note('map-open-kind', 'inspector')}
           <TextField
             name="actor-id"
             label="ID"

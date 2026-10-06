@@ -563,7 +563,7 @@ describe('a placement with a script', () => {
     pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
 
-    fireEvent.click(view.getByRole('button', {name: 'Script'}));
+    fireEvent.click(view.getByRole('button', {name: 'Code'}));
     expect(onEditScript).toHaveBeenLastCalledWith('a');
 
     fireEvent.click(view.getByRole('button', {name: 'Map script'}));
@@ -576,7 +576,7 @@ describe('a placement with a script', () => {
     pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
 
-    expect(view.queryByRole('button', {name: 'Script'})).toBeNull();
+    expect(view.queryByRole('button', {name: 'Code'})).toBeNull();
     expect(view.queryByRole('button', {name: 'Map script'})).toBeNull();
   });
 
@@ -1050,7 +1050,7 @@ describe('what a gated lab withholds', () => {
     const map = doc();
     const {canvas, ...view} = mount(map);
     select(canvas, map);
-    expect(view.queryByRole('button', {name: 'Script'})).toBeNull();
+    expect(view.queryByRole('button', {name: 'Code'})).toBeNull();
     expect(view.queryByRole('button', {name: 'Icons'})).toBeNull();
   });
 
@@ -1080,7 +1080,7 @@ describe('what a gated lab withholds', () => {
       withheld: new Set(['map-scripts'] as const),
     });
     select(canvas, map);
-    const script = view.getByRole('button', {name: 'Script'});
+    const script = view.getByRole('button', {name: 'Code'});
     const mapScript = view.getByRole('button', {name: 'Map script'});
     expectWithheld(view, script);
     expectWithheld(view, mapScript);
@@ -2060,7 +2060,7 @@ describe('a placement’s script, from the canvas', () => {
   /** The floating button, or null; found by its name inside the stage. */
   const floating = (view: {container: HTMLElement}) =>
     view.container.querySelector<HTMLButtonElement>(
-      'button[aria-label^="Open the script of"]',
+      'button[aria-label^="Open the code of"]',
     );
 
   it('floats a Script button beside the selection, which opens it', () => {
@@ -2070,7 +2070,7 @@ describe('a placement’s script, from the canvas', () => {
     expect(floating(view)).toBeNull();
     select(canvas, map);
     const button = floating(view)!;
-    expect(button).toHaveAccessibleName('Open the script of a');
+    expect(button).toHaveAccessibleName('Open the code of a');
     // Placed by the stage in pixels, beside the selection.
     expect(button.style.left).toMatch(/px$/);
     expect(button.style.top).toMatch(/px$/);
