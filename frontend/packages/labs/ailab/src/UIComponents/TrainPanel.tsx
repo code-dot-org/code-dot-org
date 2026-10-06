@@ -22,6 +22,7 @@ import train from '../train';
 
 import FieldLabel from './FieldLabel';
 import PredictionSentence from './PredictionSentence';
+import TrainingResultCard from './TrainingResultCard';
 
 import styles from './trainPanel.module.scss';
 
@@ -138,6 +139,7 @@ const TrainPanel = () => {
             </Button>
           </div>
         </div>
+        <TrainingResultCard />
       </div>
     </div>
   );
