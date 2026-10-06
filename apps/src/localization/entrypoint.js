@@ -173,7 +173,8 @@ function loadLocalize() {
   });
 
   // Only the server-rendered footer select; React-rendered locale selects
-  // follow `localization` themselves and break if their options are replaced.
+  // follow `localization` changes by handling the `onchange` event.
+  // The haml-supplied server-rendered footer needs to be manually updated.
   const findLocaleSelect = () => document.querySelector('select#locale');
 
   const ensureSelector = cdoLanguage => {
