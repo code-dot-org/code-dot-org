@@ -24,9 +24,9 @@ class QuizQuestionPlacement < ApplicationRecord
 
   validates :position, presence: true
 
-  after_commit :export_quiz!
+  after_commit :save_to_quiz!
 
-  private def export_quiz!
-    level.export_question_placements! if level.is_a?(Quiz) && !level.destroyed?
+  private def save_to_quiz!
+    level.save_question_placements! if level.is_a?(Quiz) && !level.destroyed?
   end
 end

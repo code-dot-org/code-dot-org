@@ -82,7 +82,7 @@ class Quiz < Level
     placements.reset
   end
 
-  def export_question_placements!
+  def save_question_placements!
     self.question_placements = placements.includes(:quiz_question).map do |placement|
       {
         'question_key' => placement.quiz_question.key,

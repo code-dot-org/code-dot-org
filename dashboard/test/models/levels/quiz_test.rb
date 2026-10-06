@@ -161,12 +161,12 @@ class QuizTest < ActiveSupport::TestCase
     assert_equal 1, first.placements.count
   end
 
-  test "export_question_placements! reflects current placements, ordered by page then position" do
+  test "save_question_placements! reflects current placements, ordered by page then position" do
     quiz = create(:quiz)
     second = create(:quiz_question_placement, level: quiz, page: 1, position: 2)
     first = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
 
-    quiz.export_question_placements!
+    quiz.save_question_placements!
 
     assert_equal(
       [
