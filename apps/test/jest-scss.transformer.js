@@ -28,7 +28,9 @@ function collectDeclarations(filename, seen = new Set(), found = {}) {
   seen.add(filename);
   const source = fs.readFileSync(filename, 'utf8');
   for (const match of source.matchAll(DECLARATION)) {
-    found[match[1]] ??= match[2];
+    if (!(match[1] in found)) {
+      found[match[1]] = match[2];
+    }
   }
   for (const match of source.matchAll(PARTIAL_REF)) {
     const partial = partialPath(filename, match[1]);
@@ -70,23 +72,38 @@ module.exports = {
     // jest-scss-transform exports each value as the variable's name
     // ("$slider-width"), so code that parses a number out of it gets NaN.
     // Resolve names declared in this file or in the partials it uses.
-    const exported = JSON.parse(
-      transformed.code.slice('module.exports = '.length, -1)
-    );
+    let exported;
+    try {
+      exported = JSON.parse(
+        transformed.code.slice('module.exports = '.length, -1)
+      );
+    } catch {
+      return transformed;
+    }
     const declared = collectDeclarations(filename);
     for (const [key, value] of Object.entries(exported)) {
       let resolved = value;
-      for (let hops = 0; hops < 10 && declared[resolved]; hops++) {
-        resolved = declared[resolved];
+      for (let hops = 0; hops < 10; hops++) {
+        // A namespaced reference (guide.$padding) names the same variable.
+        const name = resolved.replace(/^[\w-]+\.(?=\$)/, '');
+        if (!(name in declared)) {
+          break;
+        }
+        resolved = declared[name];
       }
       exported[key] = resolved;
     }
     return {code: `module.exports = ${JSON.stringify(exported)};`};
   },
 
-  // Partials feed the exports, so their contents belong in the cache key.
+  // Partials feed the exports, so their contents belong in the cache key,
+  // as does this file.
   getCacheKey(src, filename, options) {
-    const hash = crypto.createHash('sha1').update(src).update(filename);
+    const hash = crypto
+      .createHash('sha1')
+      .update(src)
+      .update(filename)
+      .update(fs.readFileSync(__filename, 'utf8'));
     for (const file of dependencyFiles(filename)) {
       hash.update(fs.readFileSync(file, 'utf8'));
     }
