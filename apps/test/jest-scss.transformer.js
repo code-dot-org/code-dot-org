@@ -1,53 +1,64 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const scssTransformer = require('jest-scss-transform');
+const {getStrippedSource} = require('jest-scss-transform/lib/helpers');
 const path = require('path');
 
-// Partials a stylesheet pulls in: @use 'x', @import 'x', @forward 'x'.
 const PARTIAL_REF = /@(?:use|import|forward)\s+['"]([^'"]+)['"]/g;
-// A top-level variable declaration: $name: value; (!default allowed).
-const DECLARATION = /^\s*(\$[\w-]+)\s*:\s*(.+?)\s*(?:!default)?\s*;/gm;
+const DECLARATION = /^\s*(\$[\w-]+)\s*:\s*(.+?)\s*(!default)?\s*;/gm;
 
 /** The partial file a reference names, or null when none exists. */
 function partialPath(fromFile, ref) {
-  const dir = path.dirname(fromFile);
-  const base = path.basename(ref);
+  const dir = path.join(path.dirname(fromFile), path.dirname(ref));
+  const base = path.basename(ref, '.scss');
   const candidates = [
-    path.join(dir, path.dirname(ref), `_${base}.scss`),
-    path.join(dir, path.dirname(ref), `${base}.scss`),
-    path.join(dir, ref, '_index.scss'),
+    path.join(dir, `_${base}.scss`),
+    path.join(dir, `${base}.scss`),
+    path.join(dir, base, '_index.scss'),
   ];
   return candidates.find(fs.existsSync) || null;
 }
 
-/** Variable declarations in a stylesheet and the partials it pulls in. */
+/** The source with comments and every brace-delimited block removed:
+    a variable set inside a block is local to it. */
+function topLevelSource(source) {
+  let stripped = getStrippedSource(source);
+  for (let depth = 0; depth < 20 && /\{[^{}]*\}/.test(stripped); depth++) {
+    stripped = stripped.replace(/\{[^{}]*\}/g, '');
+  }
+  return stripped;
+}
+
+/** Variable values in a stylesheet and the partials it pulls in. A later
+    plain declaration replaces an earlier one; !default sets only an unset
+    variable; the stylesheet's own declarations win over its partials'. */
 function collectDeclarations(filename, seen = new Set(), found = {}) {
   if (seen.has(filename)) {
     return found;
   }
   seen.add(filename);
-  const source = fs.readFileSync(filename, 'utf8');
-  for (const match of source.matchAll(DECLARATION)) {
-    if (!(match[1] in found)) {
-      found[match[1]] = match[2];
-    }
-  }
+  const source = topLevelSource(fs.readFileSync(filename, 'utf8'));
   for (const match of source.matchAll(PARTIAL_REF)) {
     const partial = partialPath(filename, match[1]);
     if (partial) {
       collectDeclarations(partial, seen, found);
     }
   }
+  for (const [, name, value, isDefault] of source.matchAll(DECLARATION)) {
+    if (!isDefault || !(name in found)) {
+      found[name] = value;
+    }
+  }
   return found;
 }
 
-/** Files whose contents decide this stylesheet's exports. */
+/** The stylesheet and every partial it pulls in. */
 function dependencyFiles(filename, seen = new Set()) {
   if (seen.has(filename) || !fs.existsSync(filename)) {
     return seen;
   }
   seen.add(filename);
-  const source = fs.readFileSync(filename, 'utf8');
+  const source = getStrippedSource(fs.readFileSync(filename, 'utf8'));
   for (const match of source.matchAll(PARTIAL_REF)) {
     const partial = partialPath(filename, match[1]);
     if (partial) {
@@ -70,8 +81,7 @@ module.exports = {
     }
 
     // jest-scss-transform exports each value as the variable's name
-    // ("$slider-width"), so code that parses a number out of it gets NaN.
-    // Resolve names declared in this file or in the partials it uses.
+    // ("$slider-width"), not its value.
     let exported;
     try {
       exported = JSON.parse(
@@ -84,7 +94,7 @@ module.exports = {
     for (const [key, value] of Object.entries(exported)) {
       let resolved = value;
       for (let hops = 0; hops < 10; hops++) {
-        // A namespaced reference (guide.$padding) names the same variable.
+        // guide.$padding and $padding name the same variable.
         const name = resolved.replace(/^[\w-]+\.(?=\$)/, '');
         if (!(name in declared)) {
           break;
@@ -96,8 +106,6 @@ module.exports = {
     return {code: `module.exports = ${JSON.stringify(exported)};`};
   },
 
-  // Partials feed the exports, so their contents belong in the cache key,
-  // as does this file.
   getCacheKey(src, filename, options) {
     const hash = crypto
       .createHash('sha1')
@@ -108,6 +116,7 @@ module.exports = {
       hash.update(fs.readFileSync(file, 'utf8'));
     }
     hash.update(options?.configString ?? '');
+    hash.update(options?.instrument ? 'instrument' : '');
     return hash.digest('hex');
   },
 };
