@@ -47,14 +47,6 @@ export function getAllResults(state: RootState): ResultsData {
   return getResultsByGrade(state, ResultsGrades.ALL);
 }
 
-export function getCorrectResults(state: RootState): ResultsData {
-  return getResultsByGrade(state, ResultsGrades.CORRECT);
-}
-
-export function getIncorrectResults(state: RootState): ResultsData {
-  return getResultsByGrade(state, ResultsGrades.INCORRECT);
-}
-
 export function getResultsByGrade(
   state: RootState,
   grade: string,

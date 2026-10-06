@@ -4,19 +4,15 @@ import {getDisplayTree} from '../selectors/visualizationSelectors';
 
 import DecisionTree from './DecisionTree';
 import ResultsBar from './ResultsBar';
-import ResultsDetails from './ResultsDetails';
 import TestPanel from './TestPanel';
 
 import styles from './results.module.scss';
 
 const Results = () => {
-  const showResultsDetails = useAppSelector(state => state.showResultsDetails);
   const hasTree = useAppSelector(state => !!getDisplayTree(state));
 
   return (
     <div className={styles.container}>
-      {showResultsDetails && <ResultsDetails />}
-
       <div id="results" className={styles.results}>
         <ResultsBar />
         {hasTree ? (

@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 
@@ -27,7 +27,23 @@ function renderBar(results) {
       ),
     ),
   );
-  return store;
+}
+
+function allResultsButton() {
+  return screen.getByRole('button', {name: 'All results'});
+}
+
+function modelRows(table) {
+  return within(table)
+    .getAllByRole('row')
+    .slice(1)
+    .map(row => row.textContent);
+}
+
+function selectedTab() {
+  return within(screen.getByRole('dialog'))
+    .getAllByRole('tab')
+    .find(tab => tab.getAttribute('aria-selected') === 'true').textContent;
 }
 
 describe('ResultsBar', () => {
@@ -54,15 +70,88 @@ describe('ResultsBar', () => {
     expect(screen.queryByRole('button')).toBeNull();
   });
 
-  test('opens the details from the accuracy button', () => {
-    const store = renderBar([
-      {label: 'animal', features: ['legs'], accuracy: '80.00'},
-    ]);
+  test('opens Results on the scorecard from the accuracy button', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
 
     fireEvent.click(
       screen.getByRole('button', {name: 'View 80% Accuracy details'}),
     );
 
-    expect(store.getState().showResultsDetails).toBe(true);
+    expect(selectedTab()).toBe('Scorecard');
+    const scorecard = screen.getByRole('tabpanel', {name: 'Scorecard'});
+    expect(within(scorecard).getByText('Actual')).toBeTruthy();
+  });
+
+  test('focuses the tab Results opened on', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+
+    fireEvent.click(allResultsButton());
+
+    expect(document.activeElement).toBe(
+      screen.getByRole('tab', {name: 'All results'}),
+    );
+  });
+
+  test('lists the current model, then earlier ones newest first', () => {
+    renderBar([
+      {label: 'animal', features: ['legs'], accuracy: '50.00'},
+      {label: 'legs', features: ['animal'], accuracy: '60.00'},
+      {label: 'animal', features: ['legs'], accuracy: '70.00'},
+    ]);
+
+    fireEvent.click(allResultsButton());
+
+    expect(selectedTab()).toBe('All results');
+    const [current, previous] = screen.getAllByRole('table');
+    expect(
+      within(current).getByRole('columnheader', {name: 'Current'}),
+    ).toBeTruthy();
+    expect(modelRows(current)).toEqual([expect.stringContaining('70%')]);
+    expect(
+      within(previous).getByRole('columnheader', {name: 'Previous'}),
+    ).toBeTruthy();
+    expect(modelRows(previous)).toEqual([
+      expect.stringContaining('60%'),
+      expect.stringContaining('50%'),
+    ]);
+    expect(screen.queryByText(/No previous results yet/)).toBeNull();
+  });
+
+  test('says so when there is no earlier model', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+
+    fireEvent.click(allResultsButton());
+
+    expect(modelRows(screen.getByRole('table'))).toEqual([
+      expect.stringContaining('80%'),
+    ]);
+    expect(screen.getByText(/No previous results yet/)).toBeTruthy();
+  });
+
+  test('closes Results from Back to Testing', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+    fireEvent.click(allResultsButton());
+
+    fireEvent.click(screen.getByRole('button', {name: 'Back to Testing'}));
+
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  test('closes Results from the close button', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+    fireEvent.click(allResultsButton());
+
+    fireEvent.click(screen.getByRole('button', {name: 'Close results'}));
+
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  test('closes Results on Escape', () => {
+    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+    fireEvent.click(allResultsButton());
+
+    fireEvent.keyDown(document, {key: 'Escape'});
+
+    expect(screen.queryByRole('dialog')).toBeNull();
   });
 });
