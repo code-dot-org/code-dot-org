@@ -197,6 +197,23 @@ export const PRESETS = {
 
 export type PresetName = keyof typeof PRESETS;
 
+/** The play-sound block names a preset as synth://name beside its
+    sound:// files. */
+export const SYNTH_SOUND_PREFIX = 'synth://';
+
+export function synthSoundUrl(name: PresetName): string {
+  return `${SYNTH_SOUND_PREFIX}${name}`;
+}
+
+/** The preset a play-sound value names, or null for a sound file. */
+export function synthPresetOf(url: unknown): PresetName | null {
+  if (typeof url !== 'string' || !url.startsWith(SYNTH_SOUND_PREFIX)) {
+    return null;
+  }
+  const name = url.slice(SYNTH_SOUND_PREFIX.length);
+  return name in PRESETS ? (name as PresetName) : null;
+}
+
 // Long enough that a note doesn't start with a click.
 const ATTACK_S = 0.01;
 // Exponential ramps can't reach zero.
