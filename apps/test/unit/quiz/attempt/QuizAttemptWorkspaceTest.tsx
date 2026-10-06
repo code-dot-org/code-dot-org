@@ -550,8 +550,8 @@ describe('QuizAttemptWorkspace', () => {
   it('hides per-question results when showQuestionsAfterSubmit is off, but still shows the score', () => {
     renderWorkspace({
       quizQuestions: [
-        question({id: 1, stem: 'What is the value of x?'}),
-        question({id: 2, stem: 'What is the value of y?'}),
+        question({id: 1, questionTitle: 'What is the value of x?'}),
+        question({id: 2, questionTitle: 'What is the value of y?'}),
       ],
       hookState: {
         attempt: {
