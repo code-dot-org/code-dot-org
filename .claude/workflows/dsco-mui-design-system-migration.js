@@ -812,7 +812,7 @@ Do, in order:
    component in a browser with its play function and axe, as CI's ui-test job does; yarn build
    alone runs no play function. If Playwright has no browser, run node_modules/.bin/playwright install
    --only-shell chromium in frontend/. A failing DSCO story you did not touch is not yours to
-   fix: if it also fails on origin/staging, or passes when rerun alone (a timeout under
+   fix: if it also fails on origin/${base}, or passes when rerun alone (a timeout under
    load), name it in notes and leave it out of storybookTests. Fix what you broke; report
    each check's result.
 
