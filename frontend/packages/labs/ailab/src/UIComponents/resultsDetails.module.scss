@@ -1,6 +1,10 @@
 @use '../sharedMixins' as mixins;
 
+$sentence-min-width: 280px;
+$summary-one-line-min-width: 320px;
+
 .details {
+  container-type: inline-size;
   box-sizing: border-box;
   flex: 1;
   min-height: 0;
@@ -12,18 +16,20 @@
 
 .modelRow {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px 16px;
 }
 
 .sentence {
-  flex: 1;
+  flex: 1 1 $sentence-min-width;
   min-width: 0;
 }
 
 .summary {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
@@ -36,4 +42,10 @@
   width: 1px;
   height: 10px;
   background-color: var(--border-neutral-primary);
+}
+
+@container (width < #{$summary-one-line-min-width}) {
+  .divider {
+    display: none;
+  }
 }
