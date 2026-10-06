@@ -13,7 +13,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const SHOW_DELAY = 86400; // 1 day
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const renderModal = () => {
     // eslint-disable-next-line react/prop-types
     const Modal = ({lockoutDate, inSection}) => {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (getScriptData('forceDisplay')) {
     renderModal();
   } else {
-    const studentStableId = findOrCreateStableId();
+    const studentStableId = await findOrCreateStableId();
     const modalKey = `cap-ppm-last-shown-at-${studentStableId}`;
     const lastShownAt = moment(tryGetLocalStorage(modalKey, ''));
 
