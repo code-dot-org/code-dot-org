@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
@@ -17,9 +17,30 @@ function renderSentence(props) {
   );
 }
 
+// jsdom lays nothing out, so give every element 10px per character and the
+// sentence a fixed width.
+function layOutSentence(width) {
+  vi.spyOn(HTMLElement.prototype, 'offsetWidth', 'get').mockImplementation(
+    function () {
+      return this.textContent.length * 10;
+    },
+  );
+  vi.spyOn(HTMLElement.prototype, 'clientWidth', 'get').mockReturnValue(width);
+}
+
+// Everything after the readable sentence, up to the measuring ruler.
+function shownPieces(container) {
+  const [, ...pieces] = container.firstChild.children;
+  return pieces.slice(0, -1).map(piece => piece.textContent);
+}
+
 describe('PredictionSentence', () => {
   beforeAll(() => {
     I18n.initI18n();
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
   });
 
   test('shows the label and each feature as tags', () => {
@@ -53,5 +74,51 @@ describe('PredictionSentence', () => {
     expect(screen.getByText('label')).toBeTruthy();
     expect(screen.getByText('feature')).toBeTruthy();
     expect(screen.getByText('Predict label based on feature')).toBeTruthy();
+  });
+
+  test('on a single line, collapses features that do not fit into a tag', async () => {
+    // "based on" ends at 80px, the features at 140, 180 and 210, and "+3"
+    // needs 20px, so two features fit before the tag.
+    layOutSentence(200);
+    const {container} = renderSentence({
+      label: 'species',
+      features: ['island', 'mass', 'sex'],
+      singleLine: true,
+    });
+
+    expect(shownPieces(container)).toEqual([
+      'Predict',
+      'species',
+      'based on',
+      'island',
+      'mass',
+      '+1',
+    ]);
+    expect(
+      screen.getByText('Predict species based on island, mass, sex'),
+    ).toBeTruthy();
+
+    const overflowTag = screen.getByText('+1');
+    expect(overflowTag.tabIndex).toBe(0);
+    fireEvent.mouseOver(overflowTag);
+    expect((await screen.findByRole('tooltip')).textContent).toBe('sex');
+  });
+
+  test('on a single line, shows every feature when they fit', () => {
+    layOutSentence(1000);
+    const {container} = renderSentence({
+      label: 'species',
+      features: ['island', 'mass', 'sex'],
+      singleLine: true,
+    });
+
+    expect(shownPieces(container)).toEqual([
+      'Predict',
+      'species',
+      'based on',
+      'island',
+      'mass',
+      'sex',
+    ]);
   });
 });

@@ -1,5 +1,5 @@
 /* A label or feature slot in the "Predict … based on …" sentence. */
-import {Typography} from '@mui/material';
+import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 
 import styles from './sentenceTag.module.scss';
@@ -9,6 +9,7 @@ interface SentenceTagProps {
   placeholder: string;
   variant: 'label' | 'feature';
   size?: 's' | 'm';
+  tooltip?: string;
 }
 
 const SentenceTag = ({
@@ -16,19 +17,32 @@ const SentenceTag = ({
   placeholder,
   variant,
   size = 's',
-}: SentenceTagProps) => (
-  <Typography
-    component="span"
-    variant="body4"
-    aria-hidden="true"
-    className={classNames(
-      styles.tag,
-      size === 'm' && styles.mediumTag,
-      text ? styles[`${variant}Tag`] : styles.placeholderTag,
-    )}
-  >
-    {text || placeholder}
-  </Typography>
-);
+  tooltip,
+}: SentenceTagProps) => {
+  const tag = (
+    <Typography
+      component="span"
+      variant="body4"
+      aria-hidden={tooltip ? undefined : 'true'}
+      // Focusable so keyboard users can open the tooltip.
+      tabIndex={tooltip ? 0 : undefined}
+      className={classNames(
+        styles.tag,
+        size === 'm' && styles.mediumTag,
+        text ? styles[`${variant}Tag`] : styles.placeholderTag,
+      )}
+    >
+      {text || placeholder}
+    </Typography>
+  );
+
+  return tooltip ? (
+    <Tooltip title={tooltip} placement="top">
+      {tag}
+    </Tooltip>
+  ) : (
+    tag
+  );
+};
 
 export default SentenceTag;

@@ -6,6 +6,20 @@
   gap: 4px 6px;
 }
 
+.singleLine {
+  flex-wrap: nowrap;
+}
+
+.ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 .mediumSentence {
   gap: 4px 8px;
 
