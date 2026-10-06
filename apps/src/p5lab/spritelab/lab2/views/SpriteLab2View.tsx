@@ -54,7 +54,11 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {countImagesByType, useGuideSteps} from '../guideSteps';
+import {
+  countImagesByType,
+  imageCountsDelta,
+  useGuideSteps,
+} from '../guideSteps';
 import {imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
@@ -63,7 +67,11 @@ import {
   renameImageReferences,
   renameImageReferencesOnWorkspace,
 } from '../imageReferences';
-import {defaultImageName, defaultRole} from '../imageRoleDefaults';
+import {
+  defaultImageName,
+  defaultRole,
+  imageNamedForRole,
+} from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
   adlibSetForMode,
@@ -83,6 +91,7 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
+import {WorkspaceSource} from '../objectives';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -134,6 +143,7 @@ import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import {useObjectives, usePlayProgress} from './useObjectives';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -572,6 +582,56 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     animations: animationList,
     baselineImages,
     fallback: levelProperties.longInstructions,
+  });
+
+  // The level's checklist.
+  const playing = activeTab === 'Play' && isRunning;
+  const playProgress = usePlayProgress(playing);
+  const {onPlayerProgress, onSceneLanded} = playProgress;
+  const objectiveImages = useMemo(
+    () => imageCountsDelta(countImagesByType(animationList), baselineImages),
+    [animationList, baselineImages]
+  );
+  // The World grid a "changed" check compares against: the pinned scene's
+  // world as the level opened, from the same load-time sources as the image
+  // baseline.
+  const baselineGrid = useMemo(
+    () =>
+      getScenes(initialSources).find(scene => scene.id === pinnedSceneId)?.world
+        ?.grid,
+    [initialSources, pinnedSceneId]
+  );
+  const objectiveRoles = useMemo(() => {
+    const roles = new Set<string>();
+    levelProperties.objectives?.items.forEach(({check}) => {
+      if ('role' in check && check.role) {
+        roles.add(check.role);
+      }
+    });
+    return [...roles];
+  }, [levelProperties.objectives]);
+  const imageForRole = useMemo(
+    () =>
+      Object.fromEntries(
+        objectiveRoles.map(role => [
+          role,
+          // World cells and touched sprites are sprite images.
+          imageNamedForRole(animationList, 'sprite', role),
+        ])
+      ),
+    [objectiveRoles, animationList]
+  );
+  const objectives = useObjectives({
+    objectives: levelProperties.objectives,
+    storageKey: channelId ? `${levelProperties.id}:${channelId}` : undefined,
+    images: objectiveImages,
+    grid: activeWorld.grid,
+    baselineGrid,
+    imageForRole,
+    source: activeScene.source as WorkspaceSource | undefined,
+    activeTab,
+    everPlayed: playProgress.everPlayed,
+    runtime: playProgress.runtime,
   });
 
   // The World palette selection lives here so it survives leaving the tab
@@ -1324,6 +1384,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         engine.cancelSceneJump();
         return;
       }
+      onSceneLanded(sceneId);
       if (scenes.some(s => s.id === sceneId)) {
         // Follow the jump in the editor too: leaving Play lands on the
         // scene that was just playing.
@@ -1368,11 +1429,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onPlayMusic = playMusic;
+    engine.onPlayerProgress = onPlayerProgress;
     engine.onControlsChange = (state: ControlsState) =>
       setArrowSet(arrowSetFor(state));
   }, [
     engineReady,
     playMusic,
+    onPlayerProgress,
+    onSceneLanded,
     scenes,
     runScene,
     runExternalScene,
@@ -1897,6 +1961,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 levelMode={levelProperties.levelMode}
                 instructions={guide.text}
                 showContinue={guide.showContinue}
+                objectives={objectives}
                 levelProperties={levelProperties}
               />
             </>
@@ -2060,6 +2125,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               instructions={guide.text}
               collapsedText={guide.collapsedText}
               showContinue={guide.showContinue}
+              objectives={objectives}
               levelProperties={levelProperties}
             />
           )}

@@ -46,6 +46,26 @@
         }
       }
     ],
+    "objectives": {
+      "title": "**Bring back your second character.**",
+      "items": [
+        {
+          "text": "Click a square on top of some blocks to put your second character there.",
+          "check": {
+            "kind": "world",
+            "role": "friend"
+          }
+        },
+        {
+          "text": "Click **Play** and go find them.",
+          "check": {
+            "kind": "reach",
+            "role": "friend"
+          }
+        }
+      ],
+      "done": "**They're in your world.** Click **Play** and go find them. Then click **Continue**."
+    },
     "long_instructions": "# Bring back your second character\nClick a square on top of some blocks to put them there. Click another square to move them.",
     "header_label": "Make a platformer"
   }

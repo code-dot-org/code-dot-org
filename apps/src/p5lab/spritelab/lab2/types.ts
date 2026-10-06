@@ -7,6 +7,7 @@ import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
+import {Objectives} from './objectives';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
@@ -141,6 +142,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   };
   /** Staged text for the floating guide, in order. */
   guideSteps?: GuideStep[];
+  /** The level's checklist (objectives.ts); when present it gates Continue
+      in place of guide_steps' showContinue. */
+  objectives?: Objectives;
   /** Premade world for the pinned scene, one string per playfield row
       anchored to the floor. 'B' cells take the block image the student made
       most recently, 'S' the image_role_defaults sprite, else their first

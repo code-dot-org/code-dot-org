@@ -83,6 +83,27 @@
         }
       }
     ],
+    "objectives": {
+      "title": "**Say something later.**",
+      "items": [
+        {
+          "text": "Drag a **say** block onto the dotted outline under **at 3 seconds**.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "data": "at-3"
+          }
+        },
+        {
+          "text": "Click **Play** and wait for it.",
+          "check": {
+            "kind": "play",
+            "seconds": 3
+          }
+        }
+      ],
+      "done": "**Perfect timing!** Click **Continue**."
+    },
     "long_instructions": "# Say something later\nDrag a **say** block onto the dotted outline under **at [3] seconds**. Your character speaks 3 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

@@ -44,6 +44,29 @@
         }
       }
     ],
+    "objectives": {
+      "title": "**Add them on the right.**",
+      "items": [
+        {
+          "text": "Drag **make new sprite** with position **right** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_makeSpriteAtPosition",
+            "under": "spritelab2_whenRun",
+            "fields": {
+              "POSITION": "right"
+            }
+          }
+        },
+        {
+          "text": "Click **Play** to see them both.",
+          "check": {
+            "kind": "play"
+          }
+        }
+      ],
+      "done": "**Now there are two.** Click **Continue**."
+    },
     "long_instructions": "# Add your second character\nDrag **make new sprite** with position **right** onto the dotted outline to put your new character on the right.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

@@ -48,6 +48,30 @@
         }
       }
     ],
+    "objectives": {
+      "title": "**Go and meet them.**",
+      "items": [
+        {
+          "text": "Drag a **say** block or **restart scene** onto the dotted outline under **when touches**.",
+          "check": {
+            "kind": "block",
+            "type": [
+              "gamelab_spriteSay",
+              "spritelab2_restartScene"
+            ],
+            "data": "patrol-touch"
+          }
+        },
+        {
+          "text": "Click **Play** and go meet them.",
+          "check": {
+            "kind": "reach",
+            "role": "friend"
+          }
+        }
+      ],
+      "done": "**Your world has company.** Click **Continue**."
+    },
     "long_instructions": "# Go and meet them\nDrag a **say** block onto the dotted outline under **when touches** for a hello, or **restart scene** to send your player back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

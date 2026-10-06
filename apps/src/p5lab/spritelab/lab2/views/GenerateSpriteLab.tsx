@@ -7,7 +7,9 @@ import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/Navigat
 import {isFreeplayMode, LevelMode} from '../levelMode';
 import {SpriteLab2LevelProperties} from '../types';
 
+import ObjectivesList from './components/ObjectivesList';
 import {showTtsFor} from './showTts';
+import {ObjectivesState} from './useObjectives';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -55,6 +57,9 @@ interface GenerateSpriteLabProps {
   showContinue?: boolean;
   /** For the Continue button's progression handling. */
   levelProperties: SpriteLab2LevelProperties;
+  /** The level's checklist; when active it replaces the instructions and
+      gates Continue. */
+  objectives?: ObjectivesState;
 }
 
 /**
@@ -69,7 +74,10 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   onLayout,
   showContinue,
   levelProperties,
+  objectives,
 }) => {
+  const checklist = objectives?.active ? objectives : undefined;
+  const offerContinue = checklist ? checklist.allDone : showContinue;
   // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
 
@@ -81,7 +89,15 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     if (panel && onLayout) {
       onLayout(settledSize(panel, moduleStyles.guideAnimator));
     }
-  }, [onLayout, width, collapsed, instructions, collapsedText, showContinue]);
+  }, [
+    onLayout,
+    width,
+    collapsed,
+    instructions,
+    collapsedText,
+    showContinue,
+    checklist,
+  ]);
   useEffect(() => {
     const panel = panelRef.current;
     if (!panel || !onLayout) {
@@ -109,12 +125,21 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   }, []);
 
   const showTts = showTtsFor(levelProperties);
-  const instructionsBlock = instructions && (
-    <MainInstructionsContent
-      instructionsText={instructions}
-      markdownClassName={moduleStyles.guideInstructions}
-      showTts={showTts}
+  const instructionsBlock = checklist ? (
+    <ObjectivesList
+      title={checklist.title}
+      items={checklist.items}
+      doneText={checklist.doneText}
+      allDone={checklist.allDone}
     />
+  ) : (
+    instructions && (
+      <MainInstructionsContent
+        instructionsText={instructions}
+        markdownClassName={moduleStyles.guideInstructions}
+        showTts={showTts}
+      />
+    )
   );
 
   // Freeplay's guide sits over a full lab; the guided levels need theirs open.
@@ -143,7 +168,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
                 </p>
               )
             : instructionsBlock || 'Build a program, then press Run.'}
-          {showContinue && (
+          {offerContinue && (
             <div className={moduleStyles.guideContinue}>
               <NavigationArea
                 levelProperties={levelProperties}

@@ -48,6 +48,27 @@
         }
       }
     ],
+    "objectives": {
+      "title": "**Find the treasure.**",
+      "items": [
+        {
+          "text": "Drag a **say** block onto the dotted outline under **when touches**.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "data": "treasure-touch"
+          }
+        },
+        {
+          "text": "Click **Play** and go get the treasure.",
+          "check": {
+            "kind": "reach",
+            "role": "treasure"
+          }
+        }
+      ],
+      "done": "**Treasure found!** Click **Continue**."
+    },
     "long_instructions": "# Find the treasure\nDrag a **say** block onto the dotted outline under **when touches** so your character says something when they reach the treasure.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

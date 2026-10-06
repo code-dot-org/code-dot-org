@@ -44,6 +44,26 @@
         }
       }
     ],
+    "objectives": {
+      "title": "**Add the background to your game.**",
+      "items": [
+        {
+          "text": "Drag **set background** onto the dotted outline and pick your new background.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_setBackgroundImageAs",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play**.",
+          "check": {
+            "kind": "play"
+          }
+        }
+      ],
+      "done": "**Now that's a game!** Click **Continue**."
+    },
     "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline and pick your new background.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
