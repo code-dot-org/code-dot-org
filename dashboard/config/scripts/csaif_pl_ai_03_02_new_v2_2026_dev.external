@@ -5,120 +5,106 @@ description 'description here'
 markdown <<MARKDOWN
 <h1>Curriculum Overview</h1>
 
-<h3><b>What is AI and the Systems that Power It about?</b></h3>
+<h2>What is AI and the Systems that Power It about?</h2>
 
 <p>This unit explores how AI and computing systems process information and interact with hardware and software, through hands-on design, troubleshooting, and ethical evaluation of AI's real-world impact.</p>
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
-<p>This is the second unit in the six unit <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">AI Foundations</a> semester 1 course. This professional learning module prepares you to teach it!</p>
+<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin:20px 0;">
+<div style="font-size:16px;">
+<p>This is the second unit in the six unit <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/" target="_blank" rel="noopener noreferrer"><b>AI Foundations</b></a> semester 1 course. This professional learning module prepares you to teach it!</p>
+</div>
 </div>
 
 <h2>Student Learning Goals</h2>
 
-<div style="background-color: #F7F7FB; padding: 20px; border-radius: 10px; max-width: 800px; margin: 20px auto;">
-<h3 style="margin-top: 0;">Students will:</h3>
-<p style="margin: 0 0 10px 0;">• Explain how AI and computing systems process information and interact with hardware and software.</p>
-<p style="margin: 0 0 10px 0;">• Design, troubleshoot, and optimize computing systems while exploring emerging technologies like IoT and robotics.</p>
-<p style="margin: 0 0 10px 0;">• Apply human-centered design principles to develop AI-driven solutions for real-world problems.</p>
-<p style="margin: 0;">• Critically evaluate AI-generated outputs for accuracy, reliability, and potential biases.</p>
+<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin:20px 0;">
+<div style="font-size:16px;">
+<p><b>Students will:</b></p>
+<p>• Explain how AI and computing systems process information and interact with hardware and software.</p>
+<p>• Design, troubleshoot, and optimize computing systems while exploring emerging technologies like IoT and robotics.</p>
+<p>• Apply human-centered design principles to develop AI-driven solutions for real-world problems.</p>
+<p>• Critically evaluate AI-generated outputs for accuracy, reliability, and potential biases.</p>
 </div>
-
+</div>
 
 <h2>Unit Length and Format</h2>
 
 <p><b>Total Duration:</b> Approximately 3 weeks<br>
 <b>Structure:</b> Twelve 45-minute lessons and one 3-day culminating project</p>
 
-<h3>Unit Calendar</h3>
+<h2>Unit Calendar</h2>
 
 <p>Take a quick look at the lessons included in this unit using the calendar tool. This version of the calendar assumes 5 45-minute lessons per week.</p>
 
-<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #ACA8EA;">
+<div style="max-width:860px; margin:0 auto 20px auto; border-radius:10px; overflow:hidden; border:1.5px solid #ACA8EA;">
 
   <!-- Week 1 -->
-  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
-    <div style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center;">
-      Week 1
-    </div>
-    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 1</span>
-        Introduction to Computer Systems
+  <div style="display:flex; align-items:stretch; border-bottom:2px solid #FFFFFF;">
+    <div style="background-color:#4C42CF; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; min-width:84px; padding:16px 10px; text-align:center;">Week 1</div>
+    <div style="display:flex; flex:1; flex-wrap:wrap; background-color:#E4E2F8; gap:8px; padding:10px;">
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 1</span>Introduction to Computer Systems
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 2</span>
-        Hardware
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 2</span>Hardware
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 3</span>
-        Troubleshooting and Optimizing Hardware
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 3</span>Troubleshooting and Optimizing Hardware
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 4</span>
-        Software and Operating Systems
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 4</span>Software and Operating Systems
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 5</span>
-        Troubleshooting and Optimizing Software
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 5</span>Troubleshooting and Optimizing Software
       </div>
     </div>
   </div>
 
   <!-- Week 2 -->
-  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
-    <div style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center;">
-      Week 2
-    </div>
-    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 6</span>
-        Build a Computer
+  <div style="display:flex; align-items:stretch; border-bottom:2px solid #FFFFFF;">
+    <div style="background-color:#4C42CF; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; min-width:84px; padding:16px 10px; text-align:center;">Week 2</div>
+    <div style="display:flex; flex:1; flex-wrap:wrap; background-color:#E4E2F8; gap:8px; padding:10px;">
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 6</span>Build a Computer
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 7</span>
-        Data in Computer Systems
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 7</span>Data in Computer Systems
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 8</span>
-        Processing Data in a System
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 8</span>Processing Data in a System
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 9</span>
-        How AI Uses Data
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 9</span>How AI Uses Data
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 10</span>
-        IoT and Emerging Technologies
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 10</span>IoT and Emerging Technologies
       </div>
     </div>
   </div>
 
   <!-- Week 3 -->
-  <div style="display: flex; align-items: stretch;">
-    <div style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center;">
-      Week 3
-    </div>
-    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 11</span>
-        User Testing
+  <div style="display:flex; align-items:stretch;">
+    <div style="background-color:#4C42CF; color:#FFFFFF; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; min-width:84px; padding:16px 10px; text-align:center;">Week 3</div>
+    <div style="display:flex; flex:1; flex-wrap:wrap; background-color:#E4E2F8; gap:8px; padding:10px;">
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 11</span>User Testing
       </div>
-      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
-        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase;">Lesson 12</span>
-        Just Because We Can, Should We?
+      <div style="background-color:#FFFFFF; border:1.5px solid #ACA8EA; border-radius:8px; padding:10px; flex:1 1 140px; min-width:130px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4;">
+        <span style="display:block; font-size:16px; font-weight:700; color:#4C42CF; margin-bottom:4px;">Lesson 12</span>Just Because We Can, Should We?
       </div>
-      <div style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 2 1 240px; min-width: 220px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
-        <span style="display:inline-block; background:#4C42CF; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; white-space:nowrap;">★ Capstone</span>
-        Lesson 13: Sustainable Systems Project
+      <div style="background-color:#FFFFFF; border:2px solid #4C42CF; border-radius:8px; padding:10px; flex:2 1 280px; min-width:260px; font-size:16px; color:#1F1976; text-align:center; line-height:1.4; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px; font-weight:600;">
+        <span style="display:inline-block; background-color:#4C42CF; color:#FFFFFF; font-size:16px; font-weight:700; padding:2px 10px; border-radius:20px; white-space:nowrap;">★ Capstone</span>Lesson 13: Sustainable Systems Project
       </div>
     </div>
   </div>
 
 </div>
-<br>
+
 <p><i>Click "View Calendar" on the unit overview page to customize the lesson progression to fit your schedule.</i></p>
 
-<div style="background-color: #F7F7FB; padding: 10px; border-left: 5px solid #4C42CF; display: inline-block;">
-<p style="margin: 0;">➡️ Preview <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/3" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">AI and the Systems that Power It</a>.</p>
+<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin:20px 0;">
+<div style="font-size:16px;">
+<p>➡️ Preview <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/3" target="_blank" rel="noopener noreferrer"><b>AI and the Systems that Power It</b></a>.</p>
+</div>
 </div>
 MARKDOWN
