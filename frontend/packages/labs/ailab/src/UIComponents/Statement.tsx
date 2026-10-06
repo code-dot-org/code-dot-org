@@ -14,6 +14,7 @@ interface StatementProps {
   shouldShow?: boolean;
   smallFont?: boolean;
   currentPanel?: string;
+  labelIsPreset?: boolean;
   labelColumn?: string;
   selectedFeatures?: string[];
   setLabelColumn?: (column: string | null) => void;
@@ -25,6 +26,7 @@ const Statement = ({
   shouldShow,
   smallFont,
   currentPanel,
+  labelIsPreset,
   labelColumn,
   selectedFeatures,
   setLabelColumn,
@@ -44,7 +46,7 @@ const Statement = ({
     return (
       <div className={styles.label}>
         {localizedLabel || '____'}
-        {localizedLabel && currentPanel === 'dataDisplayLabel' && (
+        {localizedLabel && currentPanel === 'datasetView' && !labelIsPreset && (
           <div
             id="uitest-remove-statement-label"
             onClick={() => removeLabel()}
@@ -78,7 +80,7 @@ const Statement = ({
             <span key={index}>
               <div className={styles.feature}>
                 {localizedName}
-                {currentPanel === 'dataDisplayFeatures' && (
+                {currentPanel === 'datasetView' && (
                   <div
                     id="uitest-remove-statement-feature"
                     onClick={() => removeFeature(selectedFeature)}
@@ -160,6 +162,7 @@ const ConnectedStatement = () => {
   const dispatch = useAppDispatch();
   const shouldShow = useAppSelector(state => state.data.length !== 0);
   const currentPanel = useAppSelector(state => state.currentPanel);
+  const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const labelColumn = useAppSelector(state => state.labelColumn);
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const datasetId = useAppSelector(
@@ -170,6 +173,7 @@ const ConnectedStatement = () => {
     <Statement
       shouldShow={shouldShow}
       currentPanel={currentPanel}
+      labelIsPreset={labelIsPreset}
       labelColumn={labelColumn}
       selectedFeatures={selectedFeatures}
       datasetId={datasetId}

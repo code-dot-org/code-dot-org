@@ -191,25 +191,29 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
           Stop
         </MuiButton>
       )}
-      <div className={moduleStyles.arrowKeys}>
-        <HoldKey gameKey="left" label="Left">
-          <FontAwesomeV6Icon iconName="caret-left" />
-        </HoldKey>
-        {arrows === 'jump' && <HoldKey gameKey="up" label="Jump" text="Jump" />}
-        <HoldKey gameKey="right" label="Right">
-          <FontAwesomeV6Icon iconName="caret-right" />
-        </HoldKey>
-        {arrows === 'steer' && (
-          <>
-            <HoldKey gameKey="up" label="Up">
-              <FontAwesomeV6Icon iconName="caret-up" />
-            </HoldKey>
-            <HoldKey gameKey="down" label="Down">
-              <FontAwesomeV6Icon iconName="caret-down" />
-            </HoldKey>
-          </>
-        )}
-      </div>
+      {arrows !== 'none' && (
+        <div className={moduleStyles.arrowKeys}>
+          <HoldKey gameKey="left" label="Left">
+            <FontAwesomeV6Icon iconName="caret-left" />
+          </HoldKey>
+          {arrows === 'jump' && (
+            <HoldKey gameKey="up" label="Jump" text="Jump" />
+          )}
+          <HoldKey gameKey="right" label="Right">
+            <FontAwesomeV6Icon iconName="caret-right" />
+          </HoldKey>
+          {arrows === 'steer' && (
+            <>
+              <HoldKey gameKey="up" label="Up">
+                <FontAwesomeV6Icon iconName="caret-up" />
+              </HoldKey>
+              <HoldKey gameKey="down" label="Down">
+                <FontAwesomeV6Icon iconName="caret-down" />
+              </HoldKey>
+            </>
+          )}
+        </div>
+      )}
     </>
   );
 };

@@ -69,6 +69,10 @@ namespace :seed do
     Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
   end
 
+  timed_task_with_logging quiz_questions: :environment do
+    QuizQuestion.setup(CURRICULUM_CONTENT_DIR)
+  end
+
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
 
   # Every unit the UI tests need now lives in the UI test curriculum tree.
@@ -173,6 +177,7 @@ namespace :seed do
     :games,
     :deprecated_blockly_levels,
     :child_dsls,
+    :quiz_questions,
     :custom_levels,
     :parent_dsls,
     :code_docs,

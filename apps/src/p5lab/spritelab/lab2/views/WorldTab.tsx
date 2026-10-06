@@ -97,6 +97,10 @@ interface WorldRowProps {
   thumbsByImage: ReadonlyMap<string, string | undefined>;
   /** The cursor's column while it is on this row; -1 otherwise. */
   cursorCol: number;
+  lockedKinds: ReadonlySet<Kind>;
+  placeOne: boolean;
+  /** The item a press would place, for the cells that would refuse it. */
+  item: WorldCell | null;
   registerCell: (
     row: number,
     col: number,
@@ -128,6 +132,9 @@ const WorldRow = React.memo<WorldRowProps>(
     cells,
     thumbsByImage,
     cursorCol,
+    lockedKinds,
+    placeOne,
+    item,
     registerCell,
     onCellPointerDown,
     onCellPointerEnter,
@@ -137,6 +144,7 @@ const WorldRow = React.memo<WorldRowProps>(
       {Array.from({length: sceneSize}, (_, col) => {
         const cell = cells?.[col];
         const thumb = cell ? thumbsByImage.get(cell.image) : undefined;
+        const refusal = cellRefusal(cell, lockedKinds, placeOne, item);
         return (
           <button
             key={col}
@@ -144,7 +152,10 @@ const WorldRow = React.memo<WorldRowProps>(
             type="button"
             role="gridcell"
             tabIndex={col === cursorCol ? 0 : -1}
-            className={moduleStyles.worldCell}
+            className={classNames(
+              moduleStyles.worldCell,
+              refusal && moduleStyles.worldCellBlocked
+            )}
             onPointerDown={event => onCellPointerDown(event, row, col)}
             onPointerEnter={event => onCellPointerEnter(event, row, col)}
             onClick={event => onCellClick(event, row, col)}
@@ -153,7 +164,11 @@ const WorldRow = React.memo<WorldRowProps>(
                 every focus move to an element whose name has no backing
                 content. */}
             <span className={moduleStyles.srOnly}>
-              {cell ? `${cell.image}, ${cell.kind}` : 'empty'}
+              {cell
+                ? `${cell.image}, ${cell.kind}${
+                    refusal === 'stays' ? ', stays' : ''
+                  }`
+                : 'empty'}
             </span>
             {thumb && <img src={thumb} alt="" />}
           </button>
@@ -216,6 +231,33 @@ interface PaletteItem extends WorldCell {
 
 // What the palette can choose: a placeable cell, or the eraser.
 type PaletteSelection = WorldCell | 'erase';
+
+type Kind = WorldCell['kind'];
+
+type Refusal = 'stays' | 'taken';
+/** What a change to a cell did, for narration. */
+type Change = 'placed' | 'removed' | Refusal | null;
+
+/** Why a held cell refuses a change, or null: a kind the palette does not
+    offer stays (nothing could put it back); placing one thing, a held cell
+    is taken for any other item. */
+export function cellRefusal(
+  cell: WorldCell | null | undefined,
+  lockedKinds: ReadonlySet<Kind>,
+  placeOne: boolean,
+  item: WorldCell | null
+): Refusal | null {
+  if (!cell) {
+    return null;
+  }
+  if (lockedKinds.has(cell.kind)) {
+    return 'stays';
+  }
+  if (placeOne && item && item.image !== cell.image) {
+    return 'taken';
+  }
+  return null;
+}
 
 interface WorldTabProps {
   world?: World;
@@ -294,6 +336,12 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     () => new Map(placeable.map(item => [item.image, item.thumb])),
     [placeable]
   );
+  const lockedKinds = useMemo(() => {
+    const offered = new Set(palette.map(item => item.kind));
+    return new Set<Kind>(
+      (['block', 'sprite'] as const).filter(kind => !offered.has(kind))
+    );
+  }, [palette]);
   // The palette plus Erase, in keyboard order. Placing one thing has no
   // Erase: choosing its cell again removes it.
   const selections: PaletteSelection[] = useMemo(
@@ -339,52 +387,58 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     announce(`${selectionLabel(selection)} chosen.`);
   };
 
-  // Puts an item on a cell under the level's rule; taps and drops share it.
-  const placeCell = (
+  const changeCell = (
     row: number,
     col: number,
-    cell: WorldCell
-  ): 'placed' | 'taken' => {
+    next: WorldCell | null
+  ): Change => {
+    const held = grid[row]?.[col];
+    const refusal = cellRefusal(held, lockedKinds, placeOne, next);
+    if (refusal) {
+      return refusal;
+    }
+    if (!next) {
+      if (!held) {
+        return null;
+      }
+      if (placeOne && !palette.some(item => item.image === held.image)) {
+        return null;
+      }
+      onPaintCell(row, col, null);
+      return 'removed';
+    }
     if (onMoveCell) {
-      if (grid[row]?.[col]) {
+      if (held) {
         return 'taken';
       }
-      onMoveCell(row, col, cell);
+      onMoveCell(row, col, next);
     } else {
-      onPaintCell(row, col, cell);
+      onPaintCell(row, col, next);
     }
     return 'placed';
   };
-  const announceResult = (
-    did: 'placed' | 'removed' | 'taken' | null,
-    image: string
-  ) => {
+  const announceResult = (did: Change, image: string) => {
     if (did === 'placed') {
       announce(`${image} placed.`);
     } else if (did === 'removed') {
       announce('Removed.');
     } else if (did === 'taken') {
       announce('That square is taken.');
+    } else if (did === 'stays') {
+      announce('That one stays.');
     }
   };
-  // Returns what the press did, so the result can be narrated.
-  const paintCell = (
-    row: number,
-    col: number,
-    erase: boolean
-  ): 'placed' | 'removed' | 'taken' | null => {
+  const paintCell = (row: number, col: number, erase: boolean): Change => {
     if (!effectiveSelected) {
       return null;
     }
-    const erasing = erase || effectiveSelected === 'erase';
-    if (erasing) {
-      onPaintCell(row, col, null);
-      return 'removed';
-    }
-    return placeCell(row, col, {
-      image: effectiveSelected.image,
-      kind: effectiveSelected.kind,
-    });
+    return changeCell(
+      row,
+      col,
+      erase || effectiveSelected === 'erase'
+        ? null
+        : {image: effectiveSelected.image, kind: effectiveSelected.kind}
+    );
   };
   // A press on a tile already holding the selected item erases instead
   // (click-again-to-remove). The pressed tile decides for the whole drag
@@ -508,17 +562,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     if (event.key === 'Delete' || event.key === 'Backspace') {
       event.preventDefault();
       paintKeyHeld.current = false;
-      // Only a held cell: clearing empty cells would stream false
-      // "Removed." announcements on key repeat and restart the preview.
-      // Placing one thing, only what the palette offers can go.
-      const held = grid[cursorRow]?.[cursorCol];
-      if (
-        held &&
-        (!placeOne || palette.some(item => item.image === held.image))
-      ) {
-        onPaintCell(cursorRow, cursorCol, null);
-        announce('Removed.');
-      }
+      // Nothing on an empty cell: clearing it would stream "Removed." on key
+      // repeat and restart the preview.
+      announceResult(changeCell(cursorRow, cursorCol, null), '');
       return;
     }
     paintKeyHeld.current = false;
@@ -780,7 +826,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         announce(`${cell.image} is already there.`);
         return;
       }
-      announceResult(placeCell(target.row, target.col, cell), cell.image);
+      announceResult(changeCell(target.row, target.col, cell), cell.image);
     };
     const onCancel = (e: PointerEvent) => {
       if (e.pointerId === dragRef.current?.pointerId) {
@@ -915,6 +961,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           >
             {Array.from({length: sceneSize}, (_, row) => (
               <WorldRow
+                lockedKinds={lockedKinds}
+                placeOne={placeOne}
+                item={
+                  effectiveSelected && effectiveSelected !== 'erase'
+                    ? effectiveSelected
+                    : null
+                }
                 key={row}
                 row={row}
                 sceneSize={sceneSize}

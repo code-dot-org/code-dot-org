@@ -3,8 +3,13 @@ require 'test_helper'
 class QuizQuestionsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    FileUtils.stubs(:mkdir_p)
+    File.stubs(:write)
     @levelbuilder = create(:levelbuilder)
     @teacher = create(:teacher)
     @quiz = create(:quiz)
