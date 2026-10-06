@@ -363,7 +363,7 @@ const unlockIcon = (unlock: Unlock): string => {
 
 /** What an editor affordance is called: what it lets a learner do. */
 const AFFORDANCE_NAMES: Record<Affordance, string> = {
-  'map-scripts': 'Scripts on a map',
+  'map-scripts': 'Code on a map',
   'map-layers': 'Layers in a map',
   'map-enhance': 'Abilities, from the map',
   'map-open-kind': 'An actor’s blocks, from the map',

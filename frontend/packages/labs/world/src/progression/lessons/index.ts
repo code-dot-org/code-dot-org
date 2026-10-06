@@ -1673,7 +1673,7 @@ A kind cannot tell two of its own apart — and giving each its own kind, a
 RedButton file and a BlueButton file, is a lot of file for one word.
 
 The **map** can tell them apart: it is where there are two. Anything placed
-on a map can carry a **script** of its own, which is blocks about THIS one.
+on a map can carry **code** of its own, which is blocks about THIS one.
 
 ### What you do
 
@@ -1683,7 +1683,7 @@ on a map can carry a **script** of its own, which is blocks about THIS one.
    to ⟨RED⟩**. **the ⟨…⟩** is in the Map drawer: it names a thing on this map
    by the name the map gives it, and the Sign is called Sign.
 4. Go **Back** to the map and do the same for BLUE. Each button now has a
-   small mark on its corner, which says it has a script.
+   small mark on its corner, which says it has code of its own.
 5. Run it. Two Buttons of one kind, doing two different things — and
    \`button.actor\` has not changed at all.
 `.trim(),

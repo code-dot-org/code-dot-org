@@ -1264,8 +1264,8 @@ export const TILES: readonly Tile[] = [
     at: at('place', 3, 1),
     title: 'This one, not the other',
     teaches:
-      'A thing placed on a map can carry a script of its own: behavior that belongs to one placement, not to its kind.',
-    task: 'Two Buttons and a sign that says PRESSED whichever you click. Give each Button a script of its own, in the map.',
+      'A thing placed on a map can carry code of its own: behavior that belongs to one placement, not to its kind.',
+    task: 'Two Buttons and a sign that says PRESSED whichever you click. Give each Button code of its own, in the map.',
     requires: ['place/layers'],
     unlocks: [
       // The way into a placement's workspace, a map's own, and the marks that
@@ -1284,9 +1284,9 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'outcome',
-      says: 'Clicking RED makes the sign say RED and clicking BLUE makes it say BLUE, and each Button carries the script that does it.',
+      says: 'Clicking RED makes the sign say RED and clicking BLUE makes it say BLUE, and each Button carries the code that does it.',
       falsePass:
-        'One handler about any Button that reads the clicked Button’s own text and copies it to the sign. It works, and it is the thing a script replaces: it works only while what a Button DOES can be read off what it SAYS. So the shape half asks that two placements on the map carry scripts.',
+        'One handler about any Button that reads the clicked Button’s own text and copies it to the sign. It works, and it is the thing a placement’s own code replaces: it works only while what a Button DOES can be read off what it SAYS. So the shape half asks that two placements on the map carry code.',
       run: {
         probes: {said: {kind: 'property', of: 'Label', name: 'text'}},
         trace: [

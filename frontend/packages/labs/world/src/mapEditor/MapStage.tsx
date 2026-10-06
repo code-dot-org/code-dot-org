@@ -323,7 +323,7 @@ export const MapStage = ({
   kinds,
   onEnhanceKind,
   onOpenKind,
-  mapScriptLabel = 'Map script',
+  mapScriptLabel = 'Map code',
   world,
   mapChoices,
   heldMaps,
@@ -2582,7 +2582,7 @@ export const MapStage = ({
         aria-label={
           'Map. Arrow keys move between the actors on it. Shift and an arrow ' +
           'moves the selected one, Alt and an arrow resizes it, and the ' +
-          'square brackets turn it. Enter opens its script, and Delete ' +
+          'square brackets turn it. Enter opens its code, and Delete ' +
           'removes it.'
         }
       />

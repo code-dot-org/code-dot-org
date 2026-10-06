@@ -48,7 +48,9 @@ loads / unloads` hats.
   is an icon now, a puzzle piece, in one row with Enhance (sparkles), Open
   (box and arrow) and Delete (trash), each named in words for a screen
   reader and in a tooltip (`mapEditor/IconAction`). The toolbar's
-  Map script and the camera list's Open script keep their words.)
+  Map code and the camera list's Open code followed, as did every word a
+  learner reads about a map's or a placement's script; the files, types
+  and specs keep "script", which is what the code calls them.)
 - **Retired**: the named-actor block and its engine registry, the Pause
   Menu actor. The stock pause menu is a Panel, a Label and two Buttons with
   scripts, and Breakout hears its `quit`.

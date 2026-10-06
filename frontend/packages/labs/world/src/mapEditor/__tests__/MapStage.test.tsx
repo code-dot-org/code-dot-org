@@ -566,7 +566,7 @@ describe('a placement with a script', () => {
     fireEvent.click(view.getByRole('button', {name: 'Code'}));
     expect(onEditScript).toHaveBeenLastCalledWith('a');
 
-    fireEvent.click(view.getByRole('button', {name: 'Map script'}));
+    fireEvent.click(view.getByRole('button', {name: 'Map code'}));
     expect(onEditScript).toHaveBeenLastCalledWith(undefined);
   });
 
@@ -577,7 +577,7 @@ describe('a placement with a script', () => {
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
 
     expect(view.queryByRole('button', {name: 'Code'})).toBeNull();
-    expect(view.queryByRole('button', {name: 'Map script'})).toBeNull();
+    expect(view.queryByRole('button', {name: 'Map code'})).toBeNull();
   });
 
   it('renames what the other placements call it, when its id changes', () => {
@@ -897,7 +897,7 @@ describe('the camera strip', () => {
     fireEvent.click(view.getByRole('button', {name: 'Cameras'}));
     expect(view.getByText('Chase')).toBeInTheDocument();
 
-    fireEvent.click(view.getByRole('button', {name: 'Open script'}));
+    fireEvent.click(view.getByRole('button', {name: 'Open code'}));
     expect(onEditScript).toHaveBeenCalledWith('a');
   });
 
@@ -1076,12 +1076,12 @@ describe('what a gated lab withholds', () => {
     const onEditScript = vi.fn();
     const {canvas, ...view} = mount(map, {
       onEditScript,
-      mapScriptLabel: 'Map script',
+      mapScriptLabel: 'Map code',
       withheld: new Set(['map-scripts'] as const),
     });
     select(canvas, map);
     const script = view.getByRole('button', {name: 'Code'});
-    const mapScript = view.getByRole('button', {name: 'Map script'});
+    const mapScript = view.getByRole('button', {name: 'Map code'});
     expectWithheld(view, script);
     expectWithheld(view, mapScript);
     // Two ways in, two notes: an id names one element.

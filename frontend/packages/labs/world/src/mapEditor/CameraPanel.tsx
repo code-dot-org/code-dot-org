@@ -40,7 +40,7 @@ export const CameraPanel = ({cameras, owner, onOpen}: CameraPanelProps) => (
       >
         {/* Every space has a main camera whether or not one is declared, and
             saying so here is what stops an empty list reading as "no view". */}
-        Only the main camera. Declare another in the script.
+        Only the main camera. Declare another in the code.
       </Typography>
     ) : (
       <ul className={styles.layerList} aria-label={`Cameras of ${owner}`}>
@@ -62,11 +62,11 @@ export const CameraPanel = ({cameras, owner, onOpen}: CameraPanelProps) => (
       </ul>
     )}
     <div className={styles.layerActions}>
-      {/* "Open script" and not "Script": the placement inspector beside this
-          already has a button called Script, and two buttons with one name is
+      {/* "Open code" and not "Code": the placement inspector beside this
+          already has a button called Code, and two buttons with one name is
           one a screen reader cannot tell apart. */}
       <Button variant="text" size="extraSmall" onClick={onOpen}>
-        Open script
+        Open code
       </Button>
     </div>
   </div>
