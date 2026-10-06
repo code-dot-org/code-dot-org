@@ -128,7 +128,7 @@ The following DSCO components use `Button` or `Typography` internally, blocking 
 
 ### Dialog internal consumers (1) — **All Done**
 
-The legacy `Dialog` and `CustomDialog` sources have no importers left inside the package. `MuiCustomDialog` itself renders the DSCO `CloseButton`, so `closeButton` cannot be deleted while the wrapper uses it.
+No runtime code inside the package imports the legacy `Dialog` and `CustomDialog` sources; only their own tests and stories do, and step 4 deletes those with them. `MuiCustomDialog` itself renders the DSCO `CloseButton`, so `closeButton` cannot be deleted while the wrapper uses it.
 
 | DSCO Component | Migration Status |
 | -------------- | ---------------- |
