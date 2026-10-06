@@ -1,77 +1,25 @@
+@use '../sharedMixins' as mixins;
+
 .container {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
-.heading {
-  width: 75%;
-  float: left;
-}
-
-.accuracyHeading {
-  font-size: 14px;
-  position: relative;
-  top: 16px;
-}
-
-.content {
+// Scrolls when a narrow canvas stacks the Test panel under the tree.
+.results {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.emptyCanvas {
+  position: relative;
   flex: 1;
   min-height: 0;
-  overflow-y: auto;
-  overflow-wrap: break-word;
+  background-color: var(--background-neutral-secondary);
 }
 
-.result {
-  display: flow-root;
-}
-
-.testPanelSlot {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  max-width: 100%;
-  min-height: 0;
-}
-
-.previousResults {
-  flex: none;
-  max-height: 30%;
-  overflow-y: auto;
-  padding-top: 20px;
-}
-
-.statement {
-  float: left;
-  width: 75%;
-}
-
-.accuracy {
-  float: left;
-  font-size: 14px;
-  width: 10%;
-  padding-top: 1px;
-  line-height: 1.3;
-}
-
-.detailsButtonContainer {
-  float: left;
-  text-align: center;
-  width: 15%;
-}
-
-.detailsButton {
-  font-size: 14px;
-  padding: 8px 12px;
-  margin: 0;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: var(--ailab-teal);
-  color: white;
-  line-height: 1.3;
-  position: relative;
-  top: -7px;
+.overlay {
+  @include mixins.canvas-overlay;
 }

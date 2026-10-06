@@ -42,7 +42,12 @@ const ResultsToggle = () => {
             key={tab.key}
             className={getTogglePillClassName(tab.key)}
             onClick={() => dispatch(setResultsTab(tab.key))}
-            onKeyDown={() => dispatch(setResultsTab(tab.key))}
+            onKeyDown={event => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                dispatch(setResultsTab(tab.key));
+              }
+            }}
             role="button"
             tabIndex={0}
           >

@@ -1,5 +1,6 @@
 import {ResultsGrades, MLTypes} from '../../src/constants';
 import {
+  formatAccuracy,
   getAccuracyRegression,
   getAccuracyClassification,
   gradeAccuracy,
@@ -315,5 +316,16 @@ describe('getGradeOptions', () => {
         getGradeOptions(classificationState),
       ),
     );
+  });
+});
+
+describe('formatAccuracy', () => {
+  test('drops trailing zeros from the stored two decimals', () => {
+    expect(formatAccuracy('80.00')).toBe('80%');
+    expect(formatAccuracy('66.67')).toBe('66.67%');
+  });
+
+  test('shows a dash when there was nothing to grade', () => {
+    expect(formatAccuracy('NaN')).toBe('—');
   });
 });

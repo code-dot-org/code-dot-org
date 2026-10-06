@@ -58,6 +58,7 @@ const sameFeatureLabelState = {
 const resultsState = {
   ...selectedFeaturesState,
   accuracyCheckExamples: [0, 0],
+  historicResults: [{label: 'isEvil', features: ['house'], accuracy: '100'}],
 };
 
 const savingModelState = {
@@ -130,28 +131,53 @@ describe('uniqLabelFeaturesSelected', () => {
   });
 });
 
+describe('isPanelEnabled for results after training', () => {
+  const trainedState = {
+    ...resultsState,
+    selectedFeatures: ['house', 'name'],
+    historicResults: [
+      {label: 'isEvil', features: ['house', 'name'], accuracy: '100'},
+    ],
+  };
+
+  test('disabled before any training', () => {
+    expect(
+      isPanelEnabled({...resultsState, historicResults: []}, 'results'),
+    ).toBe(false);
+  });
+
+  test('enabled when the columns match the latest training', () => {
+    expect(isPanelEnabled(trainedState, 'results')).toBe(true);
+  });
+
+  test.each([
+    ['label', {labelColumn: 'wand'}],
+    ['features', {selectedFeatures: ['house']}],
+    ['feature order', {selectedFeatures: ['name', 'house']}],
+  ])('disabled when the %s changed since training', (_, changes) => {
+    expect(isPanelEnabled({...trainedState, ...changes}, 'results')).toBe(
+      false,
+    );
+  });
+});
+
 describe('prevNextButtons on the data panels', () => {
   beforeAll(() => {
     I18n.initI18n();
   });
 
-  test('datasetView goes back to dataset selection and has no next button', () => {
-    const {prev, next} = prevNextButtons({
-      ...selectedFeaturesState,
-      currentPanel: 'datasetView',
-    });
-    expect(prev.panel).toBe('selectDataset');
-    expect(next).toBeUndefined();
-  });
-
-  test('has no back button when the mode fixes the dataset', () => {
-    const {prev} = prevNextButtons({
-      ...selectedFeaturesState,
-      currentPanel: 'datasetView',
-      mode: {datasets: ['tacos_toy']},
-    });
-    expect(prev).toBeUndefined();
-  });
+  test.each([undefined, {datasets: ['a', 'b']}])(
+    'datasetView never goes back to the hidden dataset picker with mode %o',
+    mode => {
+      const {prev, next} = prevNextButtons({
+        ...selectedFeaturesState,
+        currentPanel: 'datasetView',
+        mode,
+      });
+      expect(prev).toBeUndefined();
+      expect(next).toBeUndefined();
+    },
+  );
 
   test.each([{}, {hideSelectLabel: true}])(
     'selectDataset moves on to datasetView with mode %o',
@@ -165,12 +191,12 @@ describe('prevNextButtons on the data panels', () => {
     },
   );
 
-  test('results tries again on datasetView', () => {
-    const {prev} = prevNextButtons({
+  test('results has neither button; the Dataset tab goes back', () => {
+    const {prev, next} = prevNextButtons({
       ...resultsState,
       currentPanel: 'results',
-      historicResults: [{accuracy: '100'}],
     });
-    expect(prev.panel).toBe('datasetView');
+    expect(prev).toBeUndefined();
+    expect(next).toBeUndefined();
   });
 });

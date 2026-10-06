@@ -8,6 +8,7 @@
     "encrypted": "false",
     "show_correctness": true,
     "reveal_answer_explanation": true,
+    "show_questions_after_submit": true,
     "purpose": "exam",
     "allow_multiple_attempts": true
   },

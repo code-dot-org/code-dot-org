@@ -31,10 +31,8 @@
   padding: 10px 10px 12px;
 }
 
-.description {
-  margin: 2px 0 0;
-  font-size: 12px;
-  line-height: 18px;
+.summary .description {
+  margin-top: 2px;
   color: var(--text-neutral-secondary);
 }
 
@@ -82,9 +80,10 @@
   margin-bottom: 2px;
 }
 
-.emptyGraphMessage {
-  margin: 0;
-  font-size: 12px;
-  line-height: 18px;
+.emptyGraph .emptyGraphMessage {
   color: var(--text-neutral-secondary);
+}
+
+.distribution .distributionTitle {
+  font-weight: 600;
 }

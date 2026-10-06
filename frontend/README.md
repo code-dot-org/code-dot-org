@@ -78,6 +78,10 @@ yarn dev
 Changing any monorepo managed dependencies (such as labs) will automatically trigger a rebuild and be made
 available to the persistent dev server using Turborepo's watch feature.
 
+`yarn dev` first runs `turbo clean --filter '@code-dot-org/studio...'`. The trailing `...` is Turborepo's
+"and its dependencies" selector, so only the `dist/` directories studio is about to rebuild are emptied;
+packages used solely by `apps` are left alone. Rebuilds during the session overwrite `dist/` in place.
+
 ### Formatting, Linting. (Prettier, ESLint, Stylelint)
 
 To format all files in all packages and apps, run the following command:
