@@ -24,11 +24,13 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "imageRole": "friend"
+      "imageRole": "friend",
+      "imageUi": "explore",
+      "sentence": "friend"
     },
     "guide_steps": [
       {
-        "text": "**Make another character.** A friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**."
+        "text": "**Make another character.** A friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**, or draw your own."
       },
       {
         "text": "**Your new character is ready.** Click **Continue**.",
@@ -38,7 +40,7 @@
         }
       }
     ],
-    "long_instructions": "# Make another character\nA friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**.",
+    "long_instructions": "# Make another character\nA friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**, or draw your own.",
     "header_label": "Make a story"
   }
 }]]></config>
