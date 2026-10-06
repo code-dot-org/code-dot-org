@@ -111,7 +111,11 @@ $panel-inset: 6px;
   .poseMark {
     padding: 0 3px;
     border-radius: 3px;
-    background-color: rgb(255 214 0 / 35%);
+    background-color: color-mix(
+      in srgb,
+      var(--sentiment-warning-50) 35%,
+      transparent
+    );
     color: inherit;
   }
 
