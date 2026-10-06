@@ -106,6 +106,7 @@ function renderWorkspace({
   // per-question results list - only tests for the hidden-questions path
   // opt out.
   showQuestionsAfterSubmit = true,
+  viewAsUserId,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -116,6 +117,7 @@ function renderWorkspace({
   showCorrectness?: boolean;
   customIntroText?: string;
   showQuestionsAfterSubmit?: boolean;
+  viewAsUserId?: number;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -131,6 +133,7 @@ function renderWorkspace({
       showCorrectness={showCorrectness}
       customIntroText={customIntroText}
       showQuestionsAfterSubmit={showQuestionsAfterSubmit}
+      viewAsUserId={viewAsUserId}
     />
   );
 }
@@ -947,5 +950,84 @@ describe('QuizAttemptWorkspace', () => {
     expect(
       screen.queryByRole('button', {name: /Next|Submit|Finish/})
     ).not.toBeInTheDocument();
+  });
+
+  describe('when a teacher is viewing a student', () => {
+    const SUBMITTED = {
+      ...ATTEMPT,
+      submittedAt: '2026-01-01T00:00:00Z',
+      score: 1,
+      maxScore: 1,
+      canRetake: true,
+      questionResults: [
+        {
+          quizQuestionId: 1,
+          selectedChoiceId: 'b',
+          correct: true,
+          explanation: 'Because 3 + 5 = 8.',
+          correctChoiceId: 'b',
+        },
+      ],
+    };
+
+    it("fetches the student's attempt rather than the teacher's own", () => {
+      renderWorkspace({viewAsUserId: 99});
+      expect(mockUseQuizAttempt).toHaveBeenCalledWith(
+        expect.objectContaining({userId: 99})
+      );
+    });
+
+    it('never starts an attempt, even for a quiz with no intro screen', () => {
+      const beginAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: null, beginAttempt},
+        showIntroScreen: false,
+        viewAsUserId: 99,
+      });
+
+      expect(beginAttempt).not.toHaveBeenCalled();
+      expect(
+        screen.getByText("This student hasn't started this quiz yet.")
+      ).toBeInTheDocument();
+    });
+
+    it("shows the student's saved answers, ungraded and read-only, while in progress", () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {quizQuestionId: 1, selectedChoiceId: 'b'},
+            ],
+          },
+        },
+        quizQuestions: [question({id: 1})],
+        viewAsUserId: 99,
+      });
+
+      expect(
+        screen.getByText(/In progress and not submitted yet/)
+      ).toBeInTheDocument();
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish/})
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows score, question results, and the explanation even when the quiz hides them, without Try again', () => {
+      renderWorkspace({
+        hookState: {attempt: SUBMITTED},
+        quizQuestions: [question({id: 1})],
+        showCorrectness: false,
+        showQuestionsAfterSubmit: false,
+        viewAsUserId: 99,
+      });
+
+      expect(screen.getByText('100%')).toBeInTheDocument();
+      expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Try again'})
+      ).not.toBeInTheDocument();
+    });
   });
 });

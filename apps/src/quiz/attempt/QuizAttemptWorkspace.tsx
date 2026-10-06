@@ -19,6 +19,7 @@ import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
+import {QuizQuestionResult} from './types';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
@@ -30,6 +31,9 @@ export interface QuizAttemptWorkspaceProps {
   levelName: string;
   // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
+  // Set when a teacher picks a student in the teacher panel; the view is
+  // then a read-only look at that student's latest attempt.
+  viewAsUserId?: number;
   quizQuestions: QuizQuestionSummary[];
   allowMultipleAttempts?: boolean;
   displayName?: string;
@@ -48,6 +52,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   levelId,
   levelName,
   unitId,
+  viewAsUserId,
   quizQuestions,
   allowMultipleAttempts,
   displayName,
@@ -69,7 +74,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   } = useQuizAttempt({
     levelId,
     unitId,
+    userId: viewAsUserId,
   });
+  const isViewingStudent = viewAsUserId !== undefined;
 
   // currentPageNumber is a 1-based position into this list, not a raw page value.
   const pageNumbers = Array.from(new Set(quizQuestions.map(q => q.page))).sort(
@@ -209,13 +216,27 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   // A quiz with no intro screen has no click-through step - start the
   // attempt automatically once the initial check finds there isn't one yet.
+  // Never for a teacher viewing a student: it would start the teacher's own attempt.
   useEffect(() => {
-    if (!isLoading && !!unitId && hasNoAttemptYet && !showIntroScreen) {
+    if (
+      !isLoading &&
+      !!unitId &&
+      !isViewingStudent &&
+      hasNoAttemptYet &&
+      !showIntroScreen
+    ) {
       beginAttempt().catch(() => {
         // Already recorded as a user-facing error in useQuizAttempt.
       });
     }
-  }, [isLoading, unitId, hasNoAttemptYet, showIntroScreen, beginAttempt]);
+  }, [
+    isLoading,
+    unitId,
+    isViewingStudent,
+    hasNoAttemptYet,
+    showIntroScreen,
+    beginAttempt,
+  ]);
 
   const handleSelectChoice = (questionId: number, choiceId: string) => {
     const previousChoiceId = selectedChoicesByQuestionId[questionId];
@@ -266,6 +287,49 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
+  // A teacher's view relies on the server to withhold the answer key from
+  // unverified teachers, so it doesn't apply the quiz's own setting.
+  const renderQuestionResults = (results: QuizQuestionResult[]) =>
+    resultPages.map(
+      (
+        {page, questions, firstQuestionNumber, lastQuestionNumber},
+        pageIndex
+      ) => (
+        <React.Fragment key={page}>
+          {resultPages.length > 1 && (
+            <PageDivider
+              pageNumber={pageIndex + 1}
+              totalPages={resultPages.length}
+              firstQuestionNumber={firstQuestionNumber}
+              lastQuestionNumber={lastQuestionNumber}
+            />
+          )}
+          {questions.map((question, indexInPage) => {
+            const result = results.find(r => r.quizQuestionId === question.id);
+            return (
+              result && (
+                <QuestionResultCard
+                  key={question.id}
+                  question={question}
+                  questionLabel={
+                    mcQuestions.length > 1
+                      ? `Question ${firstQuestionNumber + indexInPage} of ${
+                          mcQuestions.length
+                        }`
+                      : undefined
+                  }
+                  result={result}
+                  revealAnswerExplanation={
+                    isViewingStudent || toBool(revealAnswerExplanation)
+                  }
+                />
+              )
+            );
+          })}
+        </React.Fragment>
+      )
+    );
+
   return (
     <div className={styles.attemptWorkspace}>
       <div className={styles.attemptBody}>
@@ -282,6 +346,34 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           <Typography variant="body2">
             Quiz attempts are not allowed on a standalone level.
           </Typography>
+        ) : isViewingStudent && !attempt?.submittedAt ? (
+          <div className={styles.questions}>
+            {attempt === null && (
+              <Typography variant="body2">
+                This student hasn&apos;t started this quiz yet.
+              </Typography>
+            )}
+            {attempt && (
+              <>
+                <Typography variant="body2">
+                  In progress and not submitted yet. Showing the answers saved
+                  so far.
+                </Typography>
+                {renderQuestionResults(
+                  mcQuestions.map(question => ({
+                    quizQuestionId: question.id,
+                    selectedChoiceId:
+                      attempt.questionResultsInProgress?.find(
+                        r => r.quizQuestionId === question.id
+                      )?.selectedChoiceId ?? null,
+                    correct: null,
+                    explanation: null,
+                    correctChoiceId: null,
+                  }))
+                )}
+              </>
+            )}
+          </div>
         ) : isIntroOpen ? (
           <div className={styles.questions} ref={introRef}>
             <IntroCard
@@ -312,58 +404,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           <div className={styles.questions} ref={submittedRef}>
             <ResultsCard
               title={displayName || levelName}
-              showCorrectness={toBool(showCorrectness)}
+              showCorrectness={isViewingStudent || toBool(showCorrectness)}
               score={attempt.score}
               maxScore={attempt.maxScore}
               attemptNumber={attempt.attemptNumber}
               allowMultipleAttempts={toBool(allowMultipleAttempts)}
-              canRetake={attempt.canRetake}
+              canRetake={!isViewingStudent && attempt.canRetake}
               submittedAt={attempt.submittedAt}
               onTryAgain={handleRetake}
               onNextLevel={handleNextLevel}
             />
-            {toBool(showQuestionsAfterSubmit) &&
-              resultPages.map(
-                (
-                  {page, questions, firstQuestionNumber, lastQuestionNumber},
-                  pageIndex
-                ) => (
-                  <React.Fragment key={page}>
-                    {resultPages.length > 1 && (
-                      <PageDivider
-                        pageNumber={pageIndex + 1}
-                        totalPages={resultPages.length}
-                        firstQuestionNumber={firstQuestionNumber}
-                        lastQuestionNumber={lastQuestionNumber}
-                      />
-                    )}
-                    {questions.map((question, indexInPage) => {
-                      const result = attempt.questionResults?.find(
-                        r => r.quizQuestionId === question.id
-                      );
-                      return (
-                        result && (
-                          <QuestionResultCard
-                            key={question.id}
-                            question={question}
-                            questionLabel={
-                              mcQuestions.length > 1
-                                ? `Question ${
-                                    firstQuestionNumber + indexInPage
-                                  } of ${mcQuestions.length}`
-                                : undefined
-                            }
-                            result={result}
-                            revealAnswerExplanation={toBool(
-                              revealAnswerExplanation
-                            )}
-                          />
-                        )
-                      );
-                    })}
-                  </React.Fragment>
-                )
-              )}
+            {(isViewingStudent || toBool(showQuestionsAfterSubmit)) &&
+              renderQuestionResults(attempt.questionResults ?? [])}
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>
@@ -398,7 +450,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </div>
         )}
       </div>
-      {isAttemptInProgress && (
+      {isAttemptInProgress && !isViewingStudent && (
         <QuizFooter
           currentPageNumber={currentPageNumber}
           totalPages={totalPages}
