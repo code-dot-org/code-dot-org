@@ -1,4 +1,6 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
+import type {ReactNode} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
@@ -29,6 +31,12 @@ const featureCell = classNames(
 );
 const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
 
+const CellText = ({children}: {children: ReactNode}) => (
+  <Typography component="span" variant="body4" className={tableStyles.cellText}>
+    {children}
+  </Typography>
+);
+
 const ResultsTable = ({results}: ResultsTableProps) => {
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
@@ -56,26 +64,26 @@ const ResultsTable = ({results}: ResultsTableProps) => {
               colSpan={selectedFeatures.length}
               className={tableStyles.header}
             >
-              Feature
+              <CellText>Feature</CellText>
             </th>
             <th scope="col" className={tableStyles.header}>
-              Actual
+              <CellText>Actual</CellText>
             </th>
             <th scope="col" className={tableStyles.header}>
-              AI Prediction
+              <CellText>AI Prediction</CellText>
             </th>
           </tr>
           <tr>
             {selectedFeatures.map(feature => (
               <th key={feature} scope="col" className={featureHeader}>
-                {columnName(feature)}
+                <CellText>{columnName(feature)}</CellText>
               </th>
             ))}
             <th scope="col" className={labelHeader}>
-              {columnName(labelColumn)}
+              <CellText>{columnName(labelColumn)}</CellText>
             </th>
             <th scope="col" className={labelHeader}>
-              {columnName(labelColumn)}
+              <CellText>{columnName(labelColumn)}</CellText>
             </th>
           </tr>
         </thead>
@@ -84,12 +92,14 @@ const ResultsTable = ({results}: ResultsTableProps) => {
             <tr key={index} className={tableStyles.row}>
               {example.map((value, column) => (
                 <td key={column} className={featureCell}>
-                  {cellValue(value)}
+                  <CellText>{cellValue(value)}</CellText>
                 </td>
               ))}
-              <td className={labelCell}>{cellValue(results.labels[index])}</td>
               <td className={labelCell}>
-                {cellValue(results.predictedLabels[index])}
+                <CellText>{cellValue(results.labels[index])}</CellText>
+              </td>
+              <td className={labelCell}>
+                <CellText>{cellValue(results.predictedLabels[index])}</CellText>
               </td>
             </tr>
           ))}
