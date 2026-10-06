@@ -6,26 +6,12 @@ import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
+import {SketchCaptureError} from './SketchCaptureError';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
-
-// Friendly log instead of "[object Event]".
-const describeCaptureFailure = (error: unknown, context: object): Error => {
-  const reason =
-    error instanceof Error
-      ? error.message
-      : error instanceof Event
-      ? `${error.type} loading ${
-          (error.target as Element)?.tagName ?? 'element'
-        }`
-      : String(error);
-  return new Error(
-    `Sketch capture failed: ${reason} ${JSON.stringify(context)}`
-  );
-};
 
 export const createSketchSnapshotBlob = async (
   reactFlow: ReactFlowInstance | null
@@ -83,7 +69,7 @@ export const createSketchSnapshotBlob = async (
       },
     });
   } catch (error) {
-    throw describeCaptureFailure(error, {
+    throw new SketchCaptureError(error, {
       elements: contentRects.length,
       images: viewport.querySelectorAll('img').length,
       imageWidth,

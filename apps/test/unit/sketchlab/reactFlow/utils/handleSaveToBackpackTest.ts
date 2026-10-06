@@ -11,6 +11,7 @@ import {
   handleSaveToBackpack,
   SAVE_BLOCKED_TITLE,
 } from '@cdo/apps/sketchlab/reactFlow/utils/handleSaveToBackpack';
+import {SketchCaptureError} from '@cdo/apps/sketchlab/reactFlow/utils/SketchCaptureError';
 
 const mockProjectManager = {flushSave: jest.fn()};
 const mockMetricsReporter = {logError: jest.fn()};
@@ -216,7 +217,23 @@ describe('handleSaveToBackpack', () => {
     ]);
     expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
       'Sketch snapshot error',
-      expect.any(Error)
+      expect.any(Error),
+      undefined
+    );
+  });
+
+  it('logs the capture details when the snapshot fails to render', async () => {
+    const captureError = new SketchCaptureError(new Error('tainted canvas'), {
+      imageWidth: 100,
+    });
+    mockCreateSketchSnapshotBlob.mockRejectedValue(captureError);
+
+    await runSave();
+
+    expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
+      'Sketch snapshot error',
+      captureError,
+      {reason: 'tainted canvas', imageWidth: 100}
     );
   });
 

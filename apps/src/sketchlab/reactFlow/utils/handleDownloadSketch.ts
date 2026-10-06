@@ -4,6 +4,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
+import {SketchCaptureError} from './SketchCaptureError';
 
 export const handleDownloadSketch = async (
   reactFlow: ReactFlowInstance | null,
@@ -15,7 +16,11 @@ export const handleDownloadSketch = async (
   } catch (caught) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
-      .logError('Sketch snapshot error', caught as Error);
+      .logError(
+        'Sketch snapshot error',
+        caught as Error,
+        caught instanceof SketchCaptureError ? caught.details : undefined
+      );
     snapshot = {error: 'Could not capture your sketch. Please try again.'};
   }
   const {blob, error} = snapshot;
