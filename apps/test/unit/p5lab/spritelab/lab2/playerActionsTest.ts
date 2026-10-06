@@ -64,19 +64,33 @@ describe('createPlayerActionTracker', () => {
     expect(run([frame(100, STANDING_Y)])).toEqual([[]]);
   });
 
-  it('beats a walk when the walk animation changes frame', () => {
-    // Two walk frames, each held for three ticks.
-    const frames = Array.from({length: 13}, (_, i) =>
-      frame(100 + i * 3, STANDING_Y, {}, FLOOR, {
-        frame: 1 + (Math.floor(i / 3) % 2),
+  it('beats a walk on the first step and then on each walk-frame flip', () => {
+    // The strip shows standing frame 0 at rest; the walk pose opens on
+    // frame 2 the frame after the first step, then flips 1/2 every three
+    // ticks.
+    const walkFrame = (i: number) =>
+      i <= 1 ? 0 : 1 + ((Math.floor((i - 2) / 3) + 1) % 2);
+    const frames = Array.from({length: 15}, (_, i) =>
+      frame(100 + (i === 0 ? 0 : i * 3), STANDING_Y, {}, FLOOR, {
+        frame: walkFrame(i),
         frames: 5,
       })
     );
     const walks = run(frames)
       .map((actions, i) => (actions.includes('walk') ? i : -1))
       .filter(i => i >= 0);
-    // Frame 0 has no previous; the first move is frame 1, then each flip.
-    expect(walks).toEqual([1, 3, 6, 9, 12]);
+    // Frame 1 is the first step; frame 2's pose switch only arms; then
+    // each flip (frames 5, 8, 11, 14) beats.
+    expect(walks).toEqual([1, 5, 8, 11, 14]);
+  });
+
+  it('treats a gravity change in the air as neither jump nor landing', () => {
+    const tracker = createPlayerActionTracker();
+    tracker.observe(frame(100, STANDING_Y - 60), 0);
+    const weightless = {...frame(100, STANDING_Y - 60), gravity: 0};
+    expect([...tracker.observe(weightless, 16)]).toEqual([]);
+    const falling = frame(100, STANDING_Y - 62);
+    expect([...tracker.observe(falling, 32)]).toEqual([]);
   });
 
   it('beats a one-frame character on the period', () => {

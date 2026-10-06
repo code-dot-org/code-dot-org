@@ -18,7 +18,9 @@ export function isPlayerAction(value: unknown): value is PlayerAction {
 }
 
 // A walk fires on its first frame, then each time the walk animation
-// changes frame; a character with one frame falls back to this beat.
+// changes frame; a character with one frame falls back to this beat. The
+// pose switches to walking one frame after the first step, so the first
+// frame change after a beat only arms the next one.
 export const WALK_PERIOD_MS = 333;
 
 export interface PlayerFrame extends ObservedFrame {
@@ -35,7 +37,12 @@ export interface PlayerActionTracker {
 }
 
 export function createPlayerActionTracker(): PlayerActionTracker {
-  let previous: {x: number; y: number; grounded: boolean} | null = null;
+  let previous: {
+    x: number;
+    y: number;
+    grounded: boolean;
+    gravity: number;
+  } | null = null;
   let walking: {at: number; frame: number | undefined} | null = null;
   let intoWall = false;
   let intoBlock = false;
@@ -59,7 +66,7 @@ export function createPlayerActionTracker(): PlayerActionTracker {
       const grounded = weightless || isSupported(sprite, walls, view, gravity);
       const {x, y} = sprite.position;
       const last = previous;
-      previous = {x, y, grounded};
+      previous = {x, y, grounded, gravity};
       if (!last) {
         return actions;
       }
@@ -73,24 +80,33 @@ export function createPlayerActionTracker(): PlayerActionTracker {
 
       if (grounded && isMoving(moved)) {
         const animated = (animationFrames ?? 1) > 1;
-        const beat = animated
-          ? walking !== null && animationFrame !== walking.frame
-          : walking !== null && nowMs - walking.at >= WALK_PERIOD_MS;
-        if (walking === null || beat) {
+        if (walking === null) {
           actions.add('walk');
-          walking = {at: nowMs, frame: animationFrame};
-        } else {
-          walking.frame = animationFrame;
+          walking = {at: nowMs, frame: undefined};
+        } else if (animated) {
+          if (walking.frame === undefined) {
+            walking.frame = animationFrame;
+          } else if (animationFrame !== walking.frame) {
+            actions.add('walk');
+            walking.frame = animationFrame;
+          }
+        } else if (nowMs - walking.at >= WALK_PERIOD_MS) {
+          actions.add('walk');
+          walking.at = nowMs;
         }
       } else {
         walking = null;
       }
 
-      if (last.grounded && !grounded && movedUp > 0) {
-        actions.add('jump');
-      }
-      if (!last.grounded && grounded) {
-        actions.add('land');
+      // A gravity change mid-air changes what grounded means; it is not
+      // a jump or a landing.
+      if (gravity === last.gravity) {
+        if (last.grounded && !grounded && movedUp > 0) {
+          actions.add('jump');
+        }
+        if (!last.grounded && grounded) {
+          actions.add('land');
+        }
       }
 
       const wall = isMoving(requested) && refused(requested, moved);

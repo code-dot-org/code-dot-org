@@ -616,8 +616,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
-    // The player's actions are read off the physics pass, one frame before
-    // the events that fire on them.
+    // The physics pass records the player's actions; the events that fire
+    // on them run one frame later.
     this.playerActionTracker_ = createPlayerActionTracker();
     this.playerActions_ = new Set();
     library.commands.whenPlayer = (action, callback) => {

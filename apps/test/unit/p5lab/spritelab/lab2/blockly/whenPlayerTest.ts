@@ -1,3 +1,5 @@
+import * as BlocklyCore from 'blockly/core';
+
 import whenPlayer, {
   EVENT_HAT_EXTENSION,
   eventHat,
@@ -5,9 +7,7 @@ import whenPlayer, {
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/whenPlayer';
 import {PLAYER_ACTIONS} from '@cdo/apps/p5lab/spritelab/lab2/playerActions';
 
-// Blockly's own prefixLines: a prefix on every line of the text.
-const prefixLines = (text: string, prefix: string) =>
-  text === '' ? '' : prefix + text.replace(/(?!\n$)\n/g, '\n' + prefix);
+const prefixLines = BlocklyCore.CodeGenerator.prototype.prefixLines;
 
 describe('spritelab2_whenPlayer', () => {
   it('offers each player action once', () => {

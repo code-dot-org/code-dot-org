@@ -6,8 +6,7 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 export const WHEN_PLAYER_BLOCK_TYPE = 'spritelab2_whenPlayer';
 export const EVENT_HAT_EXTENSION = 'spritelab2_event_hat';
 
-/** The generator reads this flag before it runs the block's own generator,
-    so a hat sets it as it is created. */
+/** Set at init: the generator reads this flag before it runs. */
 export function eventHat(this: BlocklyCore.Block): void {
   (this as {skipNextBlockGeneration?: boolean}).skipNextBlockGeneration = true;
 }
@@ -17,7 +16,7 @@ export const WHEN_PLAYER_OPTIONS: [string, string][] = [
   ['walks', 'walk'],
   ['jumps', 'jump'],
   ['lands', 'land'],
-  ['bumps', 'bump'],
+  ['bumps a wall', 'bump'],
 ];
 
 const definition: BlockJson = {
@@ -30,16 +29,16 @@ const definition: BlockJson = {
   style: BlockStyles.EVENT,
   extensions: [EVENT_HAT_EXTENSION],
   tooltip:
-    'Runs the blocks below each time the player does this. Walking fires ' +
-    'about three times a second.',
+    'Runs the blocks below each time the player does this. Walking runs ' +
+    'them a few times a second.',
 };
 
 // The blocks below the hat are the handler; eventHat keeps them out of the
 // hat's next chain.
 const generator: GeneratorFunction = (block, javascript) => {
   const next = block.nextConnection?.targetBlock() ?? null;
-  const handler = next ? javascript.blockToCode(next, false) : '';
-  const body = javascript.prefixLines(String(handler), '  ');
+  const handler = next ? String(javascript.blockToCode(next, false)) : '';
+  const body = handler ? javascript.prefixLines(handler, '  ') : '';
   const action = JSON.stringify(block.getFieldValue('ACTION'));
   return `whenPlayer(${action}, function () {\n${body}});\n`;
 };
