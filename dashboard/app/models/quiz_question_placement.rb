@@ -23,4 +23,10 @@ class QuizQuestionPlacement < ApplicationRecord
   default_scope {order(:page, :position)}
 
   validates :position, presence: true
+
+  after_commit :export_quiz!
+
+  private def export_quiz!
+    level.export_question_placements! if level.is_a?(Quiz) && !level.destroyed?
+  end
 end

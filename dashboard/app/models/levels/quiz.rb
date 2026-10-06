@@ -38,6 +38,7 @@ class Quiz < Level
     show_intro_screen
     allow_multiple_attempts
     max_attempts
+    question_placements
   )
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
@@ -55,6 +56,42 @@ class Quiz < Level
   has_many :questions, through: :placements, source: :quiz_question
   # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
+
+  def self.import_question_placements_for(levels)
+    levels.each {|level| level.import_question_placements! if level.is_a?(Quiz)}
+  end
+
+  # question_placements (the desired state, already populated on this
+  # in-memory object loaded from a .level file) is
+  # imported into QuizQuestionPlacement rows (what's actually
+  # persisted). This deletes and recreates rather than updating in place.
+  def import_question_placements!
+    questions_by_key = QuizQuestion.where(key: (question_placements || []).map {|entry| entry['question_key']}).index_by(&:key)
+
+    desired = (question_placements || []).map do |entry|
+      question = questions_by_key[entry['question_key']]
+      raise "quiz #{name.dump}: unknown question_key #{entry['question_key'].dump}" unless question
+      {quiz_question_id: question.id, page: entry['page'], position: entry['position']}
+    end
+
+    existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
+    return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
+
+    placements.delete_all
+    desired.each {|d| placements.create!(d)}
+    placements.reset
+  end
+
+  def export_question_placements!
+    self.question_placements = placements.includes(:quiz_question).map do |placement|
+      {
+        'question_key' => placement.quiz_question.key,
+        'page' => placement.page,
+        'position' => placement.position,
+      }
+    end
+    save!
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(
