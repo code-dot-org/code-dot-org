@@ -107,6 +107,39 @@ describe('paintPattern', () => {
     expect(occupied(painted)).toEqual(['0,0:ownBlock', '9,0:firstCharacter']);
   });
 
+  it('moves a lone sprite onto its mark while its blocks are still to come', () => {
+    const placed = worldWith([[7, 4, cells.S]]);
+    const painted = paintPattern(placed, ['.S..', 'BBBB'], cells) as World;
+    expect(occupied(painted)).toEqual([
+      '8,1:firstCharacter',
+      '9,0:newBlock',
+      '9,1:newBlock',
+      '9,2:newBlock',
+      '9,3:newBlock',
+    ]);
+  });
+
+  it('changes nothing when the sprite already stands on its mark', () => {
+    const placed = worldWith([
+      [8, 1, cells.S],
+      [9, 0, cells.B],
+    ]);
+    expect(paintPattern(placed, ['.S..', 'B...'], cells)).toBeNull();
+  });
+
+  it('leaves a sprite where it is once the world holds two of it', () => {
+    const placed = worldWith([
+      [7, 4, cells.S],
+      [7, 5, cells.S],
+    ]);
+    expect(paintPattern(placed, ['.S..', '....'], cells)).toBeNull();
+  });
+
+  it('never moves blocks', () => {
+    const placed = worldWith([[0, 0, cells.B]]);
+    expect(paintPattern(placed, ['B'], cells)).toBeNull();
+  });
+
   it('never overwrites an occupied cell', () => {
     const placed = worldWith([[9, 0, {image: 'theirs', kind: 'sprite'}]]);
     expect(paintPattern(placed, ['S'], cells)).toBeNull();
@@ -139,39 +172,35 @@ describe('chooseStartPattern', () => {
     ['.B..', 'BBBB'],
     ['..C.', 'BBBB'],
   ];
+  const inProject = {hasProject: true, roll: 0.5};
 
   it('passes a single pattern through', () => {
-    expect(chooseStartPattern(one, 'abc')).toBe(one);
-    expect(chooseStartPattern(undefined, 'abc')).toBeUndefined();
-    expect(chooseStartPattern([], 'abc')).toBeUndefined();
+    expect(chooseStartPattern(one, inProject)).toBe(one);
+    expect(chooseStartPattern(undefined, inProject)).toBeUndefined();
+    expect(chooseStartPattern([], inProject)).toBeUndefined();
   });
 
-  it('picks one layout by the channel, the same one every time', () => {
-    const picked = chooseStartPattern(layouts, 'channel-one');
-    expect(layouts).toContain(picked);
-    expect(chooseStartPattern(layouts, 'channel-one')).toBe(picked);
+  it('picks the layout the roll lands on', () => {
+    const pick = (roll: number) =>
+      chooseStartPattern(layouts, {hasProject: true, roll});
+    expect(pick(0)).toBe(layouts[0]);
+    expect(pick(0.34)).toBe(layouts[1]);
+    expect(pick(0.99)).toBe(layouts[2]);
+    expect(pick(1)).toBe(layouts[2]);
   });
 
-  it('spreads channels over the layouts', () => {
-    const picks = new Set(
-      Array.from({length: 40}, (_, i) =>
-        chooseStartPattern(layouts, `channel-${i}`)
-      )
+  it('takes a named layout over the roll, within range', () => {
+    expect(chooseStartPattern(layouts, {...inProject, override: 2})).toBe(
+      layouts[2]
     );
-    expect(picks.size).toBe(layouts.length);
-  });
-
-  it('spreads real channel ids, whose last characters repeat', () => {
-    // Base64 without padding: a 22-character id ends in one of four letters.
-    const ids = Array.from(
-      {length: 40},
-      (_, i) => `${i.toString(36).padStart(21, 'x')}${'AQgw'[i % 4]}`
+    expect(chooseStartPattern(layouts, {...inProject, override: 7})).toBe(
+      layouts[1]
     );
-    const picks = new Set(ids.map(id => chooseStartPattern(layouts, id)));
-    expect(picks.size).toBe(layouts.length);
   });
 
-  it('takes the first layout with no channel', () => {
-    expect(chooseStartPattern(layouts, undefined)).toBe(layouts[0]);
+  it('takes the first layout with no project', () => {
+    expect(chooseStartPattern(layouts, {hasProject: false, roll: 0.9})).toBe(
+      layouts[0]
+    );
   });
 });

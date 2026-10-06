@@ -1,6 +1,6 @@
 // The premade world a level can hand a student, painted into its pinned scene.
 
-import {useEffect} from 'react';
+import {useEffect, useRef} from 'react';
 
 import {countWorldCells} from './guideSteps';
 import {imageTypeFromCategories} from './imageGallery';
@@ -38,15 +38,20 @@ export function patternCells(
 }
 
 /**
- * The layout a project gets from a level's world_start_pattern: the one
- * pattern given, or one of several chosen by the project's channel id, so
- * a class sees different worlds and one student sees the same world on
- * every level that seeds it. No channel (a levelbuilder preview) takes the
- * first.
+ * The layout a level's world_start_pattern hands a project: the one pattern
+ * given, or one of several by `roll` (0 to 1), so each run of the
+ * progression gets its own world. The world itself remembers the pick: a
+ * later level seeds only kinds the world still lacks. `override` names a
+ * layout by index (?layout=N). No project (a levelbuilder preview) takes
+ * the first.
  */
 export function chooseStartPattern(
   pattern: string[] | string[][] | undefined,
-  channelId: string | undefined
+  {
+    hasProject,
+    roll,
+    override,
+  }: {hasProject: boolean; roll: number; override?: number}
 ): string[] | undefined {
   if (!pattern?.length) {
     return undefined;
@@ -55,21 +60,24 @@ export function chooseStartPattern(
     return pattern as string[];
   }
   const layouts = pattern as string[][];
-  // A channel id is an encrypted string, but its last character carries
-  // only a few bits (base64 with the padding stripped), so every character
-  // counts.
-  let pick = 0;
-  for (let i = 0; i < (channelId ?? '').length; i++) {
-    pick += channelId!.charCodeAt(i);
+  if (override !== undefined && layouts[override]) {
+    return layouts[override];
   }
-  return layouts[pick % layouts.length];
+  if (!hasProject) {
+    return layouts[0];
+  }
+  return layouts[
+    Math.min(layouts.length - 1, Math.floor(roll * layouts.length))
+  ];
 }
 
 /**
  * The scene's world with the pattern painted in, or null when it would change
  * nothing. Each kind seeds only while the world holds none of it, and only
- * into empty cells, so a student's own placements always win. Rows anchor to
- * the playfield floor, resizeWorld's convention.
+ * into empty cells, so a student's own placements always win. One exception:
+ * a sprite the pattern names that stands alone elsewhere moves onto its
+ * mark, so a player seeded before the blocks lands where this layout puts
+ * it. Rows anchor to the playfield floor, resizeWorld's convention.
  */
 export function paintPattern(
   world: World | undefined,
@@ -90,9 +98,16 @@ export function paintPattern(
     }
     [...rowText].slice(0, size).forEach((char, col) => {
       const cell = cellFor[char];
-      const placed = cell?.kind === 'block' ? counts.blocks : counts.sprites;
-      if (!cell || placed > 0 || grid[row][col]) {
+      if (!cell || grid[row][col]) {
         return;
+      }
+      const placed = cell.kind === 'block' ? counts.blocks : counts.sprites;
+      if (placed > 0) {
+        const from = cell.kind === 'sprite' && soleCellOf(grid, cell);
+        if (!from) {
+          return;
+        }
+        grid[from.row][from.col] = null;
       }
       grid[row][col] = cell;
       painted = true;
@@ -101,11 +116,29 @@ export function paintPattern(
   return painted ? {grid} : null;
 }
 
+/** Where the one cell showing this image sits, or null when the grid holds
+    none or more than one. */
+function soleCellOf(
+  grid: (WorldCell | null)[][],
+  cell: WorldCell
+): {row: number; col: number} | null {
+  const found: {row: number; col: number}[] = [];
+  grid.forEach((cells, row) =>
+    cells.forEach((c, col) => {
+      if (c?.image === cell.image && c.kind === cell.kind) {
+        found.push({row, col});
+      }
+    })
+  );
+  return found.length === 1 ? found[0] : null;
+}
+
 /** Seeds the pattern whenever the image list changes. A trigger keyed on
     Start Over itself would fire with the pre-reset list. */
 export function useWorldStartPattern({
   pattern: patternOrLayouts,
   channelId,
+  layoutOverride,
   pinnedSceneId,
   enabled,
   animations,
@@ -114,14 +147,23 @@ export function useWorldStartPattern({
 }: {
   pattern: string[] | string[][] | undefined;
   channelId: string | undefined;
+  /** ?layout=N, for seeing a layout on demand. */
+  layoutOverride?: number;
   pinnedSceneId: string | undefined;
   enabled: boolean;
   animations: RuntimeAnimationList;
   spriteRole?: string;
   updateSources: (updater: (prev: Sources) => Sources) => void;
 }): void {
+  // One roll for the life of the level, so every seeding pass draws from
+  // the same layout.
+  const roll = useRef(Math.random());
   useEffect(() => {
-    const pattern = chooseStartPattern(patternOrLayouts, channelId);
+    const pattern = chooseStartPattern(patternOrLayouts, {
+      hasProject: !!channelId,
+      roll: roll.current,
+      override: layoutOverride,
+    });
     if (!pattern || !pinnedSceneId || !enabled) {
       return;
     }
@@ -143,6 +185,7 @@ export function useWorldStartPattern({
   }, [
     patternOrLayouts,
     channelId,
+    layoutOverride,
     pinnedSceneId,
     enabled,
     animations,
