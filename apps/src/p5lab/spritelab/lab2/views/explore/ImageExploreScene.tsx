@@ -468,9 +468,11 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         />
       ) : generating ? (
         // The status line above already reads this out.
-        <p className={styles.generatingLabel} aria-hidden>
-          Generating…
-        </p>
+        <div className={styles.generatingSpace}>
+          <p className={styles.generatingLabel} aria-hidden>
+            Generating…
+          </p>
+        </div>
       ) : (
         <div className={styles.generateRow}>
           <SimpleDropdown
@@ -500,7 +502,10 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       )}
       {errorLine}
       {generating && fact && (
-        <aside className={styles.factBox} aria-label="Did you know?">
+        <aside
+          className={classNames(styles.factBox, styles.bottomRow)}
+          aria-label="Did you know?"
+        >
           <FontAwesomeV6Icon
             iconName="lightbulb"
             className={styles.factIcon}
