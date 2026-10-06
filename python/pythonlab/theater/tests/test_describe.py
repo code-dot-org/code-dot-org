@@ -303,6 +303,7 @@ def test_a_long_animation_is_cut_off():
   (10, 200, "on the left"), (200, 200, "in the center"), (380, 200, "on the right"),
   (10, 380, "in the bottom left"), (200, 380, "at the bottom"),
   (380, 380, "in the bottom right"), (-500, -500, "off the stage"),
+  (400, 0, "off the stage"),
 ])
 def test_a_drawing_is_named_by_its_third_of_the_stage(x, y, place):
   scene = Scene()
@@ -311,19 +312,24 @@ def test_a_drawing_is_named_by_its_third_of_the_stage(x, y, place):
   assert _transcript(scene) == f"Shapes: red rectangle {place}."
 
 
+def test_a_drawing_partly_off_the_stage_is_placed_by_what_shows():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.draw_rectangle(-300, 150, 400, 100)
+  assert _transcript(scene) == "Shapes: red rectangle on the left."
+
+
+def test_text_is_placed_by_the_middle_of_its_words():
+  scene = Scene()
+  scene.draw_text("A long sentence that runs across the stage", 5, 200)
+  assert _transcript(scene).endswith(" in the center.")
+
+
 def test_a_line_is_placed_by_its_midpoint():
   scene = Scene()
   scene.set_stroke_color("red")
   scene.draw_line(0, 0, 400, 400)
   assert _transcript(scene) == "Shapes: red line in the center."
-
-
-def test_a_shape_is_placed_by_the_average_of_its_points():
-  # Points arrive flat: x, y, x, y.
-  scene = Scene()
-  scene.set_fill_color("red")
-  scene.draw_shape([180, 180, 220, 180, 200, 220], True)
-  assert _transcript(scene) == "Shapes: red shape in the center."
 
 
 # --- saying a shared thing once ---------------------------------------------

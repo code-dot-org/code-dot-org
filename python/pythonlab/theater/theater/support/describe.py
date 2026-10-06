@@ -7,6 +7,8 @@ from itertools import groupby
 from .actions import SceneActionType
 from .color import _NAMED_COLORS
 from .constants import SAMPLE_RATE, THEATER_HEIGHT, THEATER_WIDTH
+from .fonts import load_font
+from .image import fit_to_width
 from .renderer import _audio_length_bound, _frame_durations, _stroke
 
 _NOTE_NAMES = ("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
@@ -211,39 +213,48 @@ def _painted(action, noun):
 
 def _position(action):
   """Where a drawing sits, or None for something with no place on the stage."""
-  point = _anchor(action)
-  if point is None:
+  box = _bounds(action)
+  if box is None:
     return None
-  x, y = point
-  if not (0 <= x <= THEATER_WIDTH and 0 <= y <= THEATER_HEIGHT):
+  # Only the part on the stage counts, as that is all a sighted student sees.
+  left, top, right, bottom = box
+  left, top = max(left, 0), max(top, 0)
+  right, bottom = min(right, THEATER_WIDTH - 1), min(bottom, THEATER_HEIGHT - 1)
+  if left > right or top > bottom:
     return "off the stage"
-  row = min(2, int(y * 3 // THEATER_HEIGHT))
-  column = min(2, int(x * 3 // THEATER_WIDTH))
+  row = int((top + bottom) / 2 * 3 // THEATER_HEIGHT)
+  column = int((left + right) / 2 * 3 // THEATER_WIDTH)
   return _PLACES[row][column]
 
 
-def _anchor(action):
-  """The point a drawing is placed by: mostly the middle of what it covers."""
+def _bounds(action):
+  """The box a drawing covers, as left, top, right, bottom; rotation is ignored."""
   kind = action.type
   if kind in (SceneActionType.DRAW_RECTANGLE, SceneActionType.DRAW_ELLIPSE):
-    return (action.x + action.width / 2, action.y + action.height / 2)
+    return _around((action.x, action.x + action.width), (action.y, action.y + action.height))
   if kind is SceneActionType.DRAW_POLYGON:
-    return (action.x, action.y)
-  if kind is SceneActionType.DRAW_TEXT:
-    # Where the text starts; its width is not known here.
-    return (action.x, action.y)
+    r = action.radius
+    return _around((action.x - r, action.x + r), (action.y - r, action.y + r))
   if kind is SceneActionType.DRAW_LINE:
-    return ((action.start_x + action.end_x) / 2, (action.start_y + action.end_y) / 2)
+    return _around((action.start_x, action.end_x), (action.start_y, action.end_y))
   if kind is SceneActionType.DRAW_SHAPE:
     # Points arrive flat: x, y, x, y.
-    xs, ys = action.points[0::2], action.points[1::2]
-    return (sum(xs) / len(xs), sum(ys) / len(ys)) if ys else None
+    return _around(action.points[0::2], action.points[1::2])
   if kind is SceneActionType.DRAW_IMAGE:
-    # An image given only a size is assumed square.
-    width = action.width if action.width is not None else (action.size or 0)
-    height = action.height if action.height is not None else (action.size or 0)
-    return (action.x + width / 2, action.y + height / 2)
+    width, height = action.width, action.height
+    if action.size is not None:
+      image = action.image
+      width, height = fit_to_width(image.get_width(), image.get_height(), action.size)
+    return _around((action.x, action.x + width), (action.y, action.y + height))
+  if kind is SceneActionType.DRAW_TEXT:
+    font = load_font(action.font, action.font_style, action.height)
+    left, top, right, bottom = font.getbbox(action.text, anchor="ls")
+    return (action.x + left, action.y + top, action.x + right, action.y + bottom)
   return None
+
+
+def _around(xs, ys):
+  return (min(xs), min(ys), max(xs), max(ys))
 
 
 def _color_name(color):
