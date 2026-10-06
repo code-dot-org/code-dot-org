@@ -44,7 +44,7 @@ const SIZE_SPECS = {
   l: {
     padding: '0.625rem 1rem',
     gap: '0.5rem',
-    fontSize: '1.25rem', // button-one-text
+    fontSize: '1.125rem', // button-one-text
     lineHeight: 1.4, // button-one-text
     iconSize: '1.1875rem',
     iconWidth: '1.5rem',
