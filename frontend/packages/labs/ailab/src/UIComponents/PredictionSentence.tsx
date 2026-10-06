@@ -2,6 +2,7 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {useLayoutEffect, useRef, useState} from 'react';
+import {flushSync} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
@@ -25,13 +26,19 @@ function countFittingTags(
   lead: HTMLElement,
   ruler: HTMLElement,
 ) {
-  const gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+  const rowStyle = getComputedStyle(row);
+  const gap = parseFloat(rowStyle.columnGap) || 0;
   const widths = Array.from(
     ruler.children,
-    tag => (tag as HTMLElement).offsetWidth,
+    tag => tag.getBoundingClientRect().width,
   );
   const overflowTagWidth = widths.pop()!;
-  let end = lead.offsetLeft + lead.offsetWidth;
+  const rowBox = row.getBoundingClientRect();
+  const leadBox = lead.getBoundingClientRect();
+  let end =
+    rowStyle.direction === 'rtl'
+      ? rowBox.right - leadBox.left
+      : leadBox.right - rowBox.left;
   const tagEnds = widths.map(width => (end += gap + width));
   if (end <= row.clientWidth) {
     return widths.length;
@@ -64,7 +71,6 @@ const PredictionSentence = ({
   const visibleCount = singleLine ? fittingCount : features.length;
   const overflowNames = features.slice(visibleCount).map(columnName);
 
-  // A state update from the observer lands after paint, so fit once here too.
   useLayoutEffect(() => {
     if (!singleLine) {
       return;
@@ -75,7 +81,8 @@ const PredictionSentence = ({
         countFittingTags(row, leadRef.current!, rulerRef.current!),
       );
     fit();
-    const observer = new ResizeObserver(fit);
+    // Flushed, so a resize or a newly shown tab never paints a stale fit.
+    const observer = new ResizeObserver(() => flushSync(fit));
     observer.observe(row);
     return () => observer.disconnect();
   }, [singleLine, labelName, features]);

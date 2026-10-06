@@ -20,9 +20,10 @@ function renderSentence(props) {
 // jsdom lays nothing out, so give every element 10px per character and the
 // sentence a fixed width.
 function layOutSentence(width) {
-  vi.spyOn(HTMLElement.prototype, 'offsetWidth', 'get').mockImplementation(
+  vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(
     function () {
-      return this.textContent.length * 10;
+      const right = this.textContent.length * 10;
+      return {left: 0, top: 0, right, bottom: 0, width: right, height: 0};
     },
   );
   vi.spyOn(HTMLElement.prototype, 'clientWidth', 'get').mockReturnValue(width);

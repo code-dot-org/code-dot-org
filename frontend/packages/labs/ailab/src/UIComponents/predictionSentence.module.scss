@@ -8,6 +8,10 @@
 
 .singleLine {
   flex-wrap: nowrap;
+
+  .text {
+    white-space: nowrap;
+  }
 }
 
 .ruler {

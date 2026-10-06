@@ -19,29 +19,37 @@ const SentenceTag = ({
   size = 's',
   tooltip,
 }: SentenceTagProps) => {
-  const tag = (
-    <Typography
-      component="span"
-      variant="body4"
-      aria-hidden={tooltip ? undefined : 'true'}
-      // Focusable so keyboard users can open the tooltip.
-      tabIndex={tooltip ? 0 : undefined}
-      className={classNames(
-        styles.tag,
-        size === 'm' && styles.mediumTag,
-        text ? styles[`${variant}Tag`] : styles.placeholderTag,
-      )}
-    >
-      {text || placeholder}
-    </Typography>
+  const className = classNames(
+    styles.tag,
+    size === 'm' && styles.mediumTag,
+    text ? styles[`${variant}Tag`] : styles.placeholderTag,
   );
 
-  return tooltip ? (
-    <Tooltip title={tooltip} placement="top">
-      {tag}
+  if (!tooltip) {
+    return (
+      <Typography
+        component="span"
+        variant="body4"
+        aria-hidden="true"
+        className={className}
+      >
+        {text || placeholder}
+      </Typography>
+    );
+  }
+
+  // A button, so keyboard users can reach the tooltip.
+  return (
+    <Tooltip title={tooltip} placement="top" describeChild>
+      <Typography
+        component="button"
+        type="button"
+        variant="body4"
+        className={className}
+      >
+        {text || placeholder}
+      </Typography>
     </Tooltip>
-  ) : (
-    tag
   );
 };
 
