@@ -40,7 +40,7 @@ test.describe('Statsig stable ID', {tag: ['@no_mobile', '@chrome']}, () => {
     expect(await stableIdCookie(page)).toBeUndefined();
 
     // Without performance consent the client must not write the cookie.
-    await oneTrust.openPreferenceCenter('/users/sign_in');
+    await oneTrust.openPreferenceCenter('/users/sign_in', {geo: 'es'});
     await oneTrust.savePerformanceConsent(false);
     await page.reload();
     await expect
@@ -50,7 +50,7 @@ test.describe('Statsig stable ID', {tag: ['@no_mobile', '@chrome']}, () => {
     expect(await stableIdCookie(page)).toBeUndefined();
 
     // With consent, the client adopts the server's ID rather than minting one.
-    await oneTrust.openPreferenceCenter('/users/sign_in');
+    await oneTrust.openPreferenceCenter('/users/sign_in', {geo: 'es'});
     await oneTrust.savePerformanceConsent(true);
     await page.reload();
     await expect
@@ -96,7 +96,7 @@ test.describe('Statsig stable ID', {tag: ['@no_mobile', '@chrome']}, () => {
     expect(stableId).toMatch(STABLE_ID_FORMAT);
     expect(await stableIdCookie(page)).toBeUndefined();
 
-    await oneTrust.openPreferenceCenter('/users/sign_in');
+    await oneTrust.openPreferenceCenter('/users/sign_in', {geo: 'es'});
     await oneTrust.savePerformanceConsent(true);
     await page.reload();
     await expect.poll(() => stableIdCookie(page)).toBe(stableId);

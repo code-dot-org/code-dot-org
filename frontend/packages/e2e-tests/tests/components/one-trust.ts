@@ -75,14 +75,19 @@ export class OneTrustComponent {
   }
 
   /**
-   * Load path with a fresh OneTrust geo-gated (Spain) consent prompt and open
-   * the preference center. OneTrust rewrites otreset=true to otreset=false
-   * once it has processed the reset.
+   * Load path with a fresh OneTrust consent prompt as seen from region geo
+   * (an ISO country code OneTrust accepts as otgeo), and open the preference
+   * center. The default, Spain, is a region where OneTrust shows the banner.
+   * OneTrust rewrites otreset=true to otreset=false once it has processed the
+   * reset.
    */
-  async openPreferenceCenter(path: string): Promise<void> {
+  async openPreferenceCenter(
+    path: string,
+    {geo = 'es'}: {geo?: string} = {},
+  ): Promise<void> {
     const url = new URL(path, this.page.url());
     url.searchParams.set('otreset', 'true');
-    url.searchParams.set('otgeo', 'es');
+    url.searchParams.set('otgeo', geo);
     await this.page.goto(url.pathname + url.search);
     await expect(this.page).toHaveURL(/otreset=false/);
     await this.preferencesButton.click({timeout: 30_000});
