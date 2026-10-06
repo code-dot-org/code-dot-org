@@ -1,5 +1,3 @@
-/* If the train panel matches the current training, show the results.
-   Otherwise returns null. */
 import {Button, Typography} from '@mui/material';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -14,7 +12,6 @@ import styles from './trainingResultCard.module.scss';
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
   const isTrained = useAppSelector(isTrainedOnCurrentColumns);
-  // Keep the result hidden while the training modal is open.
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const {correct, total} = useAppSelector(getCorrectCount, shallowEqual);
 
