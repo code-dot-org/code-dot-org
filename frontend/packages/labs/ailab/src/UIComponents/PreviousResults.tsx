@@ -48,7 +48,7 @@ const PreviousResults = () => {
         <ModelTable heading="Previous" results={previous} />
       ) : (
         <p className={styles.empty}>
-          No previous results yet. Go back to Dataset and train another model to
+          No previous results yet. Go back to the Dataset and train another model to
           compare it with this one.
         </p>
       )}
