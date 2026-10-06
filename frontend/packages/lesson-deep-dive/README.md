@@ -121,7 +121,7 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 ### Teacher gallery
 
 `gallery.html` renders the Tutor+ project gallery from
-`apps/src/aiTutor/views/gallery/ChallengeGallery`. Both modes work as above:
+`src/gallery/ChallengeGallery`. Both modes work as above:
 
 ```bash
 yarn dev                        # http://localhost-studio.code.org:5173/gallery.html

@@ -1,19 +1,14 @@
+import {FC, useEffect, useState} from 'react';
+
 import {useApiClient} from '@code-dot-org/core/api';
-import {
-  ChallengeResponse,
-  GallerySort,
-  getUnitCounts,
-  listChallengeResponses,
-  ProjectView,
-  Reaction,
-  TutorGalleryData,
-} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useEffect, useState} from 'react';
 
-import experiments from '@cdo/apps/util/experiments';
+import {type ChallengeResponse, type Reaction} from '../types';
 
+import {getUnitCounts, listChallengeResponses} from './api';
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
+import ProjectView from './ProjectView';
+import {type GallerySort, type TutorGalleryData} from './types';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -41,7 +36,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const {units, sections, currentUnitId} = tutorGalleryData;
 
   const [sectionId, setSectionId] = useState<number | null>(
-    sections[0]?.id ?? null
+    sections[0]?.id ?? null,
   );
   const [unitId, setUnitId] = useState(currentUnitId);
   const [sort, setSort] = useState<GallerySort>('recent');
@@ -49,7 +44,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const [unitCounts, setUnitCounts] = useState<Record<string, number>>({});
   const [loadFailed, setLoadFailed] = useState(false);
   const [projectId, setProjectId] = useState<number | null>(
-    projectIdFromLocation
+    projectIdFromLocation,
   );
 
   const api = useApiClient();
@@ -71,7 +66,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     window.history.pushState(
       null,
       '',
-      window.location.pathname + (query ? `?${query}` : '')
+      window.location.pathname + (query ? `?${query}` : ''),
     );
     setProjectId(id);
   };
@@ -125,14 +120,6 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     };
   }, [sectionId, api]);
 
-  if (
-    !experiments.isEnabledAllowingQueryString(
-      experiments.LESSON_TUTOR_CHALLENGE
-    )
-  ) {
-    return null;
-  }
-
   // Folds a response's new reaction tallies into the listing held from the
   // initial fetch, so a reaction made on the project page shows on that
   // project's card when the viewer returns to the grid.
@@ -140,9 +127,9 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     setResponses(prev =>
       prev
         ? prev.map(response =>
-            response.id === id ? {...response, reactions} : response
+            response.id === id ? {...response, reactions} : response,
           )
-        : prev
+        : prev,
     );
 
   const unitPositionFor = (responseUnitId: number | null) =>
@@ -153,7 +140,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const renderProjectGroup = (
     title: string,
     variant: ProjectVariant,
-    groupResponses: ChallengeResponse[]
+    groupResponses: ChallengeResponse[],
   ) => (
     <section className={styles.projectGroup}>
       <div className={styles.groupHeader}>
@@ -201,7 +188,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     }
     const videoProjects = responses.filter(hasVideoAsset);
     const whiteboardProjects = responses.filter(
-      response => !hasVideoAsset(response)
+      response => !hasVideoAsset(response),
     );
     return (
       <>
@@ -211,7 +198,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
           renderProjectGroup(
             'Whiteboard Projects',
             'whiteboard',
-            whiteboardProjects
+            whiteboardProjects,
           )}
       </>
     );
