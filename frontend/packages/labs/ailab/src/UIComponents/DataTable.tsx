@@ -1,4 +1,5 @@
 /* React component to handle displaying imported data. */
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {useEffect, useRef} from 'react';
 
@@ -143,10 +144,22 @@ const DataTable = ({
                     aria-pressed={columnId === currentColumn}
                     onClick={() => handleSetCurrentColumn(columnId)}
                   >
-                    {columnName}
+                    <Typography
+                      component="span"
+                      variant="body4"
+                      className={styles.cellText}
+                    >
+                      {columnName}
+                    </Typography>
                   </button>
                 ) : (
-                  columnName
+                  <Typography
+                    component="span"
+                    variant="body4"
+                    className={styles.cellText}
+                  >
+                    {columnName}
+                  </Typography>
                 )}
               </th>
             );
@@ -159,7 +172,13 @@ const DataTable = ({
             <tr key={index} className={styles.row}>
               {showRowNumbers && (
                 <th scope="row" className={styles.indexCell}>
-                  {index + 1}
+                  <Typography
+                    component="span"
+                    variant="body4"
+                    className={styles.cellText}
+                  >
+                    {index + 1}
+                  </Typography>
                 </th>
               )}
               {getColumns().map(columnId => {
@@ -169,11 +188,15 @@ const DataTable = ({
                     className={getColumnCellClassName(columnId)}
                     onClick={() => handleSetCurrentColumn(columnId)}
                   >
-                    {startingRow !== undefined && index <= startingRow ? (
-                      <span>&nbsp;</span>
-                    ) : (
-                      getLocalizedValue(row[columnId], datasetId)
-                    )}
+                    <Typography
+                      component="span"
+                      variant="body4"
+                      className={styles.cellText}
+                    >
+                      {startingRow !== undefined && index <= startingRow
+                        ? ' '
+                        : getLocalizedValue(row[columnId], datasetId)}
+                    </Typography>
                   </td>
                 );
               })}
