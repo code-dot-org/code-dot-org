@@ -38,12 +38,11 @@ export function patternCells(
 }
 
 /**
- * The layout a level's world_start_pattern hands a project: the one pattern
- * given, or one of several by `roll` (0 to 1), so each run of the
- * progression gets its own world. The world itself remembers the pick: a
- * later level seeds only kinds the world still lacks. `override` names a
- * layout by index (?layout=N). No project (a levelbuilder preview) takes
- * the first.
+ * The layout a level's world_start_pattern gives a project: the one pattern
+ * given, or one of several by `roll` (0 to 1). The pick persists in the
+ * grid, since a later level seeds only kinds the grid lacks. `override`
+ * names a layout by index (?layout=N). No project (a levelbuilder preview)
+ * takes the first.
  */
 export function chooseStartPattern(
   pattern: string[] | string[][] | undefined,
@@ -75,9 +74,9 @@ export function chooseStartPattern(
  * The scene's world with the pattern painted in, or null when it would change
  * nothing. Each kind seeds only while the world holds none of it, and only
  * into empty cells, so a student's own placements always win. One exception:
- * a sprite the pattern names that stands alone elsewhere moves onto its
- * mark, so a player seeded before the blocks lands where this layout puts
- * it. Rows anchor to the playfield floor, resizeWorld's convention.
+ * while the world has no blocks yet, a sprite the pattern names that occurs
+ * exactly once in the grid, off its mark, is moved onto it. Rows anchor to
+ * the playfield floor, resizeWorld's convention.
  */
 export function paintPattern(
   world: World | undefined,
@@ -103,7 +102,10 @@ export function paintPattern(
       }
       const placed = cell.kind === 'block' ? counts.blocks : counts.sprites;
       if (placed > 0) {
-        const from = cell.kind === 'sprite' && soleCellOf(grid, cell);
+        const from =
+          cell.kind === 'sprite' &&
+          counts.blocks === 0 &&
+          soleCellOf(grid, cell);
         if (!from) {
           return;
         }
@@ -147,7 +149,6 @@ export function useWorldStartPattern({
 }: {
   pattern: string[] | string[][] | undefined;
   channelId: string | undefined;
-  /** ?layout=N, for seeing a layout on demand. */
   layoutOverride?: number;
   pinnedSceneId: string | undefined;
   enabled: boolean;
@@ -155,8 +156,7 @@ export function useWorldStartPattern({
   spriteRole?: string;
   updateSources: (updater: (prev: Sources) => Sources) => void;
 }): void {
-  // One roll for the life of the level, so every seeding pass draws from
-  // the same layout.
+  // The effect runs again on every animation change and must not reroll.
   const roll = useRef(Math.random());
   useEffect(() => {
     const pattern = chooseStartPattern(patternOrLayouts, {

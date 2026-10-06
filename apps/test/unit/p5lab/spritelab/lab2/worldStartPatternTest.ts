@@ -107,7 +107,7 @@ describe('paintPattern', () => {
     expect(occupied(painted)).toEqual(['0,0:ownBlock', '9,0:firstCharacter']);
   });
 
-  it('moves a lone sprite onto its mark while its blocks are still to come', () => {
+  it('moves a lone sprite onto its mark while the world has no blocks', () => {
     const placed = worldWith([[7, 4, cells.S]]);
     const painted = paintPattern(placed, ['.S..', 'BBBB'], cells) as World;
     expect(occupied(painted)).toEqual([
@@ -117,6 +117,19 @@ describe('paintPattern', () => {
       '9,2:newBlock',
       '9,3:newBlock',
     ]);
+  });
+
+  it('leaves a lone sprite off its mark once blocks exist', () => {
+    const placed = worldWith([
+      [7, 4, cells.S],
+      [0, 0, {image: 'ownBlock', kind: 'block'}],
+    ]);
+    expect(paintPattern(placed, ['.S..', 'BBBB'], cells)).toBeNull();
+  });
+
+  it('leaves another sprite alone when the named image is absent', () => {
+    const placed = worldWith([[7, 4, {image: 'theirs', kind: 'sprite'}]]);
+    expect(paintPattern(placed, ['.S..', '....'], cells)).toBeNull();
   });
 
   it('changes nothing when the sprite already stands on its mark', () => {

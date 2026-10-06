@@ -24,6 +24,9 @@
     "level_mode": {
       "kind": "play"
     },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
