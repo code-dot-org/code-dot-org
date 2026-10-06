@@ -81,18 +81,21 @@ class QuizAttempt < ApplicationRecord
   # One entry per response recorded for this attempt - a skipped question
   # still has one, since the client posts a response for every question on
   # submit, so it shows as incorrect rather than missing.
-  def question_results
+  def question_results(
+    show_correctness: level&.show_correctness?,
+    reveal_answer_explanation: level&.reveal_answer_explanation?
+  )
     return nil if submitted_at.blank?
 
     quiz_question_responses.in_quiz(level).includes(:quiz_question).map do |response|
-      reveal_answer = level&.show_correctness? && level&.reveal_answer_explanation?
+      reveal_answer = show_correctness && reveal_answer_explanation
       # Pending/manual/ungraded responses have no score yet - report nil rather than false,
       # or an ungraded response would be shown to the student as incorrect.
       graded = response.score.present? && response.max_score.present?
       {
         quiz_question_id: response.quiz_question_id,
         selected_choice_id: response.response_data['selectedChoiceId'],
-        correct: (level&.show_correctness? && graded) ? response.score == response.max_score : nil,
+        correct: (show_correctness && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,
         correct_choice_id: reveal_answer ? response.quiz_question.content['correct_choice_id'] : nil
       }

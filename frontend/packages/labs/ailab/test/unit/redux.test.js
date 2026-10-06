@@ -110,6 +110,16 @@ describe('ailab reducer', () => {
       const twice = reducer(once, addSelectedFeature('a'));
       expect(twice.selectedFeatures).toEqual(['a']);
     });
+
+    test('keeps features in table order, whatever the order picked', () => {
+      let state = reducer(
+        initialState,
+        setImportedData([{a: '1', b: '2', c: '3'}], false),
+      );
+      state = reducer(state, addSelectedFeature('c'));
+      state = reducer(state, addSelectedFeature('a'));
+      expect(state.selectedFeatures).toEqual(['a', 'c']);
+    });
   });
 
   describe('setLabelColumn', () => {
@@ -168,7 +178,7 @@ describe('ailab reducer', () => {
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
       expect(next.selectedFeatures).toEqual([]);
-      expect(next.currentPanel).toBe('selectDataset');
+      expect(next.currentPanel).toBe('datasetView');
     });
 
     test('preserves instructionsEnabled through reset', () => {
@@ -216,9 +226,10 @@ describe('ailab reducer', () => {
     });
 
     test('importing a dataset records uploaded vs selected', () => {
-      const uploaded = reducer(initialState, setImportedData([], true));
+      const onPicker = {...initialState, currentPanel: 'selectDataset'};
+      const uploaded = reducer(onPicker, setImportedData([], true));
       expect(uploaded.instructionsKey).toBe('uploadedDataset');
-      const selected = reducer(initialState, setImportedData([], false));
+      const selected = reducer(onPicker, setImportedData([], false));
       expect(selected.instructionsKey).toBe('selectedDataset');
     });
   });

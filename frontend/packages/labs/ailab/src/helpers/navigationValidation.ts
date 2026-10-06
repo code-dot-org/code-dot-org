@@ -1,6 +1,8 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
 import type {NavButton, PrevNextButtons} from '../types';
+
+import {areArraysEqual} from './utils';
 /*
 Validation checks to determine if app set up is ready for machine learning
 training. Panels prompt users to incrementally complete actions in preparation
@@ -58,10 +60,9 @@ export function isPanelEnabled(state: RootState, panelId: string): boolean {
 function isPanelAvailable(state: RootState, panelId: string): boolean {
   const mode = state.mode;
 
+  // Hidden for now; the dataset picker will come back later.
   if (panelId === 'selectDataset') {
-    if (mode && mode.datasets && mode.datasets.length === 1) {
-      return false;
-    }
+    return false;
   }
 
   if (panelId === 'saveModel') {
@@ -93,11 +94,19 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
   );
 }
 
+function isTrainedOnCurrentColumns(state: RootState): boolean {
+  const latestResult = state.historicResults[0];
+  return (
+    !!latestResult &&
+    latestResult.label === state.labelColumn &&
+    areArraysEqual(latestResult.features, state.selectedFeatures)
+  );
+}
+
 function resultsAvailable(state: RootState): boolean {
-  if (state.accuracyCheckExamples.length === 0) {
-    return false;
-  }
-  return !didSaveSucceed(state) || !isSaveInProgress(state);
+  return (
+    state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(state)
+  );
 }
 
 function isSaveInProgress(state: RootState): boolean {
@@ -120,20 +129,6 @@ function isModelNamed(state: RootState): boolean {
   return ![undefined, ''].includes(state.trainedModelDetails.name);
 }
 
-function isAccuracyAcceptable(state: RootState): boolean {
-  const mode = state.mode;
-
-  if (
-    mode &&
-    mode.requireAccuracy &&
-    mode.requireAccuracy > Number(state.historicResults[0].accuracy)
-  ) {
-    return false;
-  }
-
-  return true;
-}
-
 // Given the current panel, return the appropriate previous & next buttons.
 export function prevNextButtons(state: RootState): PrevNextButtons {
   let prev: NavButton | undefined, next: NavButton | undefined;
@@ -147,13 +142,6 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
       ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
       : undefined;
     next = undefined;
-  } else if (state.currentPanel === 'results') {
-    prev = {panel: 'datasetView', text: I18n.t('tryAgain')};
-    next = !isAccuracyAcceptable(state)
-      ? undefined
-      : isPanelAvailable(state, 'saveModel')
-        ? {panel: 'saveModel', text: I18n.t('navigateForward')}
-        : {panel: 'continue', text: I18n.t('navigateDone')};
   } else if (state.currentPanel === 'saveModel') {
     prev = {panel: 'results', text: I18n.t('navigateBack')};
     next = isPanelAvailable(state, 'modelSummary')

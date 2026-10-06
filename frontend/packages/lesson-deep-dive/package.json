@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "clean": "rimraf dist",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -60,6 +61,7 @@
     "react-dom": "catalog:",
     "react-redux": "catalog:",
     "react-router-dom": "^6.26.0",
+    "rimraf": "catalog:",
     "sass": "catalog:",
     "stylelint": "catalog:",
     "typescript": "catalog:",

@@ -41,7 +41,7 @@ import {
 import {BodyPlan, ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One frame of the strip after the base: its label and pose description. */
-interface PosedFrame {
+export interface PosedFrame {
   label: string;
   pose: string;
 }

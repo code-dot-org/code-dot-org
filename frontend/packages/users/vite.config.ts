@@ -24,6 +24,9 @@ export default defineConfig({
     allowedHosts: ['localhost-studio.code.org'],
   },
   build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
     lib: {
       // Object-form entry so the fixtures chunk emits at dist/fixtures/index.*
       // alongside dist/index.* — the `./mocks` export subpath resolves to it.

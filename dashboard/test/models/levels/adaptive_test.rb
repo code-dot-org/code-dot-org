@@ -23,6 +23,10 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert create(:adaptive).uses_lab2?
   end
 
+  test "counts as a level with essential AI chat tools" do
+    assert_includes Level.with_essential_ai_chat_tools, create(:adaptive)
+  end
+
   test "requires a content id whose file exists" do
     refute build(:adaptive, adaptive_id: nil).valid?
     refute build(:adaptive, adaptive_id: 'missing').valid?
