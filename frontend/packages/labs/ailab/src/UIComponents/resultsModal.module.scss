@@ -14,6 +14,10 @@ $chrome-height: 258px;
 
 // An inset shadow paints under the tabs, so the selected tab's fill breaks the line.
 .tabRow {
+  // CADS colors tab text with different tokens than DSCO does.
+  --text-brand-teal-primary: var(--text-selected-primary-inverse);
+  --text-neutral-tertiary: var(--text-neutral-quaternary);
+
   padding: 10px 14px 0;
   background-color: var(--background-neutral-secondary);
   box-shadow: inset 0 -1px 0 var(--border-neutral-primary);
