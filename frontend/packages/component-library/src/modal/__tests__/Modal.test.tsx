@@ -98,6 +98,10 @@ describe('Modal Component', () => {
 
   it('should aria-hide nothing but the backdrop', () => {
     render(<Modal {...defaultProps} />);
+    expect(document.querySelector('.MuiBackdrop-root')).toHaveAttribute(
+      'aria-hidden',
+      'true',
+    );
     const hidden = Array.from(
       document.querySelectorAll('[aria-hidden="true"]'),
     );
