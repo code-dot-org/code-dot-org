@@ -146,7 +146,7 @@
   }
 }
 
-// A cell that refuses the chosen item: no hover, and the cursor says so.
+// A cell that refuses the chosen item: no hover color, not-allowed cursor.
 .worldCellBlocked {
   cursor: not-allowed;
 

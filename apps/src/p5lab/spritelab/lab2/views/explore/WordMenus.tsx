@@ -143,7 +143,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         setOverSlotId(slotId);
       }
     },
-    // Moving between the chip's own children is not leaving it.
+    // dragleave fires when the pointer enters a child; only a true exit clears.
     onDragLeave: (e: React.DragEvent) => {
       if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
         setOverSlotId(null);

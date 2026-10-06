@@ -238,11 +238,9 @@ type Refusal = 'stays' | 'taken';
 /** What a change to a cell did, for narration. */
 type Change = 'placed' | 'removed' | Refusal | null;
 
-/**
- * Why a held cell refuses a change, or null. A cell of a kind the palette
- * does not offer stays: erased, nothing could put it back. Placing one
- * thing, a held cell is taken for any other item; its own item removes it.
- */
+/** Why a held cell refuses a change, or null: a kind the palette does not
+    offer stays (nothing could put it back); placing one thing, a held cell
+    is taken for any other item. */
 export function cellRefusal(
   cell: WorldCell | null | undefined,
   lockedKinds: ReadonlySet<Kind>,
@@ -389,7 +387,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     announce(`${selectionLabel(selection)} chosen.`);
   };
 
-  // Every change to a cell goes through here.
   const changeCell = (
     row: number,
     col: number,
@@ -565,8 +562,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     if (event.key === 'Delete' || event.key === 'Backspace') {
       event.preventDefault();
       paintKeyHeld.current = false;
-      // An empty cell says nothing: clearing it would stream false
-      // "Removed." announcements on key repeat and restart the preview.
+      // Nothing on an empty cell: clearing it would stream "Removed." on key
+      // repeat and restart the preview.
       announceResult(changeCell(cursorRow, cursorCol, null), '');
       return;
     }

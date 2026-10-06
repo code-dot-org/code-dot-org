@@ -2,7 +2,7 @@
 @import '../../../../mixins.scss';
 
 // Where the guide floats and how much it pads, for siblings that lay out
-// around it. Guide.tsx repeats three of these.
+// around it.
 :root {
   --guide-top-position: 62px;
   --guide-bottom-position: 20px;
