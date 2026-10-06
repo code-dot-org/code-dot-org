@@ -20,7 +20,7 @@ class QuizQuestionPlacementsController < ApplicationController
         key: SecureRandom.uuid,
         name: quiz_question_params[:questionName],
         content: {
-          stem: quiz_question_params[:stem],
+          question_title: quiz_question_params[:questionTitle],
           choices: (quiz_question_params[:choices] || []).map(&:to_h),
           correct_choice_id: quiz_question_params[:correctChoiceId],
         },

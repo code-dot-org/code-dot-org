@@ -102,7 +102,7 @@ class Quiz < Level
         id: question.id,
         type: question.type,
         questionName: question.name,
-        stem: question.content['stem'],
+        questionTitle: question.content['question_title'],
         choices: question.content['choices'],
         page: placement.page,
       }

@@ -79,7 +79,7 @@ function question(
     id: 1,
     type: 'MultipleChoiceQuestion',
     questionName: 'Variable reassignment',
-    stem: 'What is the value of x?',
+    questionTitle: 'What is the value of x?',
     choices: [
       {id: 'a', text: '5'},
       {id: 'b', text: '8'},
@@ -318,8 +318,8 @@ describe('QuizAttemptWorkspace', () => {
   it('shows a result card for each submitted multiple choice question', () => {
     renderWorkspace({
       quizQuestions: [
-        question({id: 1, stem: 'What is the value of x?'}),
-        question({id: 2, stem: 'What is the value of y?'}),
+        question({id: 1, questionTitle: 'What is the value of x?'}),
+        question({id: 2, questionTitle: 'What is the value of y?'}),
       ],
       hookState: {
         attempt: {
@@ -358,7 +358,9 @@ describe('QuizAttemptWorkspace', () => {
   // If a levelbuilder adds a new question to a quiz that has already been submitted by a student.
   it('omits a question from the submitted results when it has no result', () => {
     renderWorkspace({
-      quizQuestions: [question({id: 1, stem: 'What is the value of x?'})],
+      quizQuestions: [
+        question({id: 1, questionTitle: 'What is the value of x?'}),
+      ],
       hookState: {
         attempt: {
           ...ATTEMPT,
@@ -548,8 +550,8 @@ describe('QuizAttemptWorkspace', () => {
   it('hides per-question results when showQuestionsAfterSubmit is off, but still shows the score', () => {
     renderWorkspace({
       quizQuestions: [
-        question({id: 1, stem: 'What is the value of x?'}),
-        question({id: 2, stem: 'What is the value of y?'}),
+        question({id: 1, questionTitle: 'What is the value of x?'}),
+        question({id: 2, questionTitle: 'What is the value of y?'}),
       ],
       hookState: {
         attempt: {
@@ -635,8 +637,8 @@ describe('QuizAttemptWorkspace', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [
-        question({id: 1, stem: 'Page 1 question', page: 1}),
-        question({id: 2, stem: 'Page 2 question', page: 2}),
+        question({id: 1, questionTitle: 'Page 1 question', page: 1}),
+        question({id: 2, questionTitle: 'Page 2 question', page: 2}),
       ],
     });
 
@@ -648,8 +650,8 @@ describe('QuizAttemptWorkspace', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [
-        question({id: 1, stem: 'Page 1 question', page: 1}),
-        question({id: 2, stem: 'Page 3 question', page: 3}),
+        question({id: 1, questionTitle: 'Page 1 question', page: 1}),
+        question({id: 2, questionTitle: 'Page 3 question', page: 3}),
       ],
     });
 
@@ -692,7 +694,7 @@ describe('QuizAttemptWorkspace', () => {
       quizQuestions: [
         question({
           id: 1,
-          stem: 'First',
+          questionTitle: 'First',
           choices: [
             {id: 'a', text: 'five'},
             {id: 'b', text: 'eight'},
@@ -700,7 +702,7 @@ describe('QuizAttemptWorkspace', () => {
         }),
         question({
           id: 2,
-          stem: 'Second',
+          questionTitle: 'Second',
           choices: [
             {id: 'a', text: 'left'},
             {id: 'b', text: 'right'},
@@ -738,8 +740,8 @@ describe('QuizAttemptWorkspace', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT, finishAttempt},
       quizQuestions: [
-        question({id: 1, stem: 'Page 1 question', page: 1}),
-        question({id: 2, stem: 'Page 2 question', page: 2}),
+        question({id: 1, questionTitle: 'Page 1 question', page: 1}),
+        question({id: 2, questionTitle: 'Page 2 question', page: 2}),
       ],
     });
 
@@ -753,8 +755,8 @@ describe('QuizAttemptWorkspace', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT},
       quizQuestions: [
-        question({id: 1, stem: 'Page 1 question', page: 1}),
-        question({id: 2, stem: 'Page 2 question', page: 2}),
+        question({id: 1, questionTitle: 'Page 1 question', page: 1}),
+        question({id: 2, questionTitle: 'Page 2 question', page: 2}),
       ],
     });
 
@@ -768,7 +770,9 @@ describe('QuizAttemptWorkspace', () => {
   it('moves focus to the quiz title once the attempt begins without an intro screen', () => {
     renderWorkspace({
       hookState: {attempt: ATTEMPT},
-      quizQuestions: [question({id: 1, stem: 'Page 1 question', page: 1})],
+      quizQuestions: [
+        question({id: 1, questionTitle: 'Page 1 question', page: 1}),
+      ],
     });
 
     // Page 1 without an intro leads with the quiz title, so that heading
