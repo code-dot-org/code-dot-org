@@ -79,20 +79,24 @@ class Quiz < Level
     existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
     return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
 
+    # Using insert_all bypasses QuizQuestionPlacement callbacks,
+    # which would circularly trigger the after commit callback that writes question_placements back to the quiz.
     placements.delete_all
-    desired.each {|d| placements.create!(d)}
+    QuizQuestionPlacement.insert_all(desired.map {|d| d.merge(level_id: id)}) if desired.any?
     placements.reset
   end
 
   def save_question_placements!
-    self.question_placements = placements.includes(:quiz_question).map do |placement|
-      {
-        'question_key' => placement.quiz_question.key,
-        'page' => placement.page,
-        'position' => placement.position,
-      }
+    with_lock do
+      self.question_placements = placements.includes(:quiz_question).map do |placement|
+        {
+          'question_key' => placement.quiz_question.key,
+          'page' => placement.page,
+          'position' => placement.position,
+        }
+      end
+      save!
     end
-    save!
   end
 
   def self.create_from_level_builder(params, level_params)
