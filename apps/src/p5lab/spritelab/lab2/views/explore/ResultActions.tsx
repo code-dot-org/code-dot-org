@@ -84,6 +84,13 @@ const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
         <MuiButton
           variant="contained"
           color="primary"
+          endIcon={
+            <FontAwesomeV6Icon
+              iconName="arrow-right"
+              iconStyle="solid"
+              aria-hidden
+            />
+          }
           disabled={disabled}
           onClick={onContinue}
         >

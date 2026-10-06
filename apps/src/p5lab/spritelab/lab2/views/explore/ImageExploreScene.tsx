@@ -521,6 +521,13 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
               variant="contained"
               color="primary"
               className={styles.continueButton}
+              endIcon={
+                <FontAwesomeV6Icon
+                  iconName="arrow-right"
+                  iconStyle="solid"
+                  aria-hidden
+                />
+              }
               disabled={busy}
               onClick={continueLesson}
             >
