@@ -168,5 +168,6 @@ export function getAccuracyRegression(state: RootState): AccuracyGrades {
 }
 
 export function formatAccuracy(accuracy: string): string {
-  return `${Number(accuracy)}%`;
+  const percent = Number(accuracy);
+  return Number.isFinite(percent) ? `${percent}%` : '—';
 }

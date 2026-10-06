@@ -4,7 +4,6 @@
   user-select: none;
   height: 100%;
   box-sizing: border-box;
-  padding-bottom: 10px;
   font-family: 'Gotham 4r', sans-serif;
 }
 
@@ -13,10 +12,6 @@
   min-height: 0;
   box-sizing: border-box;
   padding: 10px 10px 0;
-}
-
-.withoutNavigation {
-  padding-bottom: 0;
 }
 
 .flushBody {
@@ -57,7 +52,7 @@
   position: relative;
   flex-shrink: 0;
   height: 50px;
-  margin: 0 10px;
+  margin: 0 10px 10px;
 }
 
 .previous,

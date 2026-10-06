@@ -36,9 +36,20 @@ describe('ResultsBar', () => {
   });
 
   test('reads the newest model as a sentence', () => {
-    renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
+    renderBar([
+      {label: 'animal', features: ['legs'], accuracy: '60.00'},
+      {label: 'legs', features: ['animal'], accuracy: '80.00'},
+    ]);
 
-    expect(screen.getByText('Predict animal based on legs')).toBeTruthy();
+    expect(screen.getByText('Predict legs based on animal')).toBeTruthy();
+    expect(screen.getByRole('button', {name: '80% Accuracy'})).toBeTruthy();
+  });
+
+  test('shows nothing before a model is trained', () => {
+    renderBar([]);
+
+    expect(screen.queryByText(/^Predict /)).toBeNull();
+    expect(screen.queryByRole('button')).toBeNull();
   });
 
   test('opens the details from the accuracy button', () => {

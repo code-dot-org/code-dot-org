@@ -41,7 +41,6 @@
   align-items: stretch;
 }
 
-// Pins a panel to a canvas's top right, no taller or wider than the canvas.
 @mixin canvas-overlay {
   position: absolute;
   top: 0;

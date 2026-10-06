@@ -242,12 +242,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   }, [currentPanel]);
 
   return (
-    <div
-      className={classNames(styles.app, {
-        [styles.withoutNavigation]: !hasNavigation,
-      })}
-      style={colorVariables}
-    >
+    <div className={styles.app} style={colorVariables}>
       <WorkspaceHeader />
 
       {currentPanel === 'selectDataset' && (

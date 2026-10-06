@@ -1,4 +1,7 @@
 .bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,4 +38,8 @@
 .accuracyText {
   padding: 2px 8px;
   background-color: var(--background-neutral-tertiary);
+}
+
+.accuracyButton:hover .accuracyText {
+  background-color: var(--background-neutral-quaternary);
 }
