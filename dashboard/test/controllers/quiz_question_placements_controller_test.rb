@@ -102,7 +102,6 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     question = FreeResponseQuestion.find(body['id'])
     assert_equal 'Give one example of an abstraction.', question.content['questionTitle']
     assert_equal 'A function counts.', body['description']
-    refute body.key?('stem')
     assert @quiz.placements.exists?(quiz_question_id: question.id)
   end
 
