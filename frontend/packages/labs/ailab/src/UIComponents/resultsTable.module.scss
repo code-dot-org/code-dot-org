@@ -13,7 +13,6 @@
   color: var(--text-neutral-secondary);
 }
 
-// Sticks under the first header row.
 .table .columnHeader {
   top: mixins.$data-table-row-height;
 }

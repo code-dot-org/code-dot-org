@@ -10,7 +10,6 @@ $content-height: 480px;
   @include mixins.modal-title-row;
 }
 
-// A flex chain, not height: 100%, which Safari leaves unresolved here.
 .content {
   display: flex;
   flex: 0 1 $content-height;

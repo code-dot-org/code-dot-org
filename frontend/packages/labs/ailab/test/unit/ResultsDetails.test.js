@@ -16,7 +16,6 @@ import ResultsDetails from '../../src/UIComponents/ResultsDetails';
 
 import {levelStore} from './levelStore';
 
-// The model gets the bird and the dog right, and calls the snake a bird.
 function renderScorecard() {
   const store = levelStore();
   store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));

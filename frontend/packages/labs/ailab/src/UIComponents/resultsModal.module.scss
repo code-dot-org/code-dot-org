@@ -20,7 +20,6 @@ $content-height: 416px;
   box-shadow: inset 0 -1px 0 var(--border-neutral-primary);
 }
 
-// A flex chain, not height: 100%, which Safari leaves unresolved here.
 .panels {
   display: flex;
   flex: 0 1 $content-height;
@@ -28,7 +27,6 @@ $content-height: 416px;
   min-height: 0;
   overflow-y: auto;
 
-  // Lets a tab fill the panel, so it can scroll just part of itself.
   > [role='tabpanel']:not([hidden]) {
     display: flex;
     flex: 1;
