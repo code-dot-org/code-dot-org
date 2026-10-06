@@ -10,7 +10,6 @@ $content-height: 416px;
   @include mixins.modal-title-row;
 }
 
-// An inset shadow rather than a border, so the selected tab paints over the line.
 .tabRow {
   // Tabs has no CodeAI brand override; these are the tokens it reads for text.
   --text-brand-teal-primary: var(--text-selected-primary-inverse);

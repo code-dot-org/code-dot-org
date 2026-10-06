@@ -4,7 +4,7 @@ import type {HistoricResult} from '../types';
 
 import PredictionSentence from './PredictionSentence';
 
-import styles from './previousResults.module.scss';
+import styles from './allResults.module.scss';
 
 interface ModelTableProps {
   heading: string;
@@ -38,7 +38,7 @@ const ModelTable = ({heading, results}: ModelTableProps) => (
   </table>
 );
 
-const PreviousResults = () => {
+const AllResults = () => {
   const [current, ...previous] = useAppSelector(state => state.historicResults);
 
   return (
@@ -48,12 +48,12 @@ const PreviousResults = () => {
         <ModelTable heading="Previous" results={previous} />
       ) : (
         <p className={styles.empty}>
-          No previous results yet. Go back to the Dataset and train another model to
-          compare it with this one.
+          No previous results yet. Go back to the Dataset and train another
+          model to compare it with this one.
         </p>
       )}
     </div>
   );
 };
 
-export default PreviousResults;
+export default AllResults;

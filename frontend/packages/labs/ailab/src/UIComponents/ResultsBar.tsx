@@ -49,9 +49,9 @@ const ResultsBar = () => {
             color="secondary"
             size="extraSmall"
             startIcon={<FontAwesomeV6Icon iconName="clock-rotate-left" />}
-            onClick={() => setOpenTab('previousResults')}
+            onClick={() => setOpenTab('allResults')}
           >
-            Previous results
+            All results
           </Button>
         </div>
       </div>

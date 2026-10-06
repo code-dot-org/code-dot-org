@@ -4,13 +4,13 @@ import {useEffect, useId} from 'react';
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
 
-import PreviousResults from './PreviousResults';
+import AllResults from './AllResults';
 import ResultsDetails from './ResultsDetails';
 
 import appStyles from '../app.module.scss';
 import styles from './resultsModal.module.scss';
 
-export type ResultsModalTab = 'scorecard' | 'previousResults';
+export type ResultsModalTab = 'scorecard' | 'allResults';
 
 const TABS_ID = 'ailab-results-tabs';
 
@@ -61,9 +61,9 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
             tabContent: <ResultsDetails />,
           },
           {
-            value: 'previousResults',
-            text: 'Previous results',
-            tabContent: <PreviousResults />,
+            value: 'allResults',
+            text: 'All results',
+            tabContent: <AllResults />,
           },
         ]}
       />

@@ -29,8 +29,8 @@ function renderBar(results) {
   );
 }
 
-function previousResultsButton() {
-  return screen.getByRole('button', {name: 'Previous results'});
+function allResultsButton() {
+  return screen.getByRole('button', {name: 'All results'});
 }
 
 function modelRows(table) {
@@ -85,10 +85,10 @@ describe('ResultsBar', () => {
   test('focuses the tab Results opened on', () => {
     renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
 
-    fireEvent.click(previousResultsButton());
+    fireEvent.click(allResultsButton());
 
     expect(document.activeElement).toBe(
-      screen.getByRole('tab', {name: 'Previous results'}),
+      screen.getByRole('tab', {name: 'All results'}),
     );
   });
 
@@ -99,9 +99,9 @@ describe('ResultsBar', () => {
       {label: 'animal', features: ['legs'], accuracy: '70.00'},
     ]);
 
-    fireEvent.click(previousResultsButton());
+    fireEvent.click(allResultsButton());
 
-    expect(selectedTab()).toBe('Previous results');
+    expect(selectedTab()).toBe('All results');
     const [current, previous] = screen.getAllByRole('table');
     expect(
       within(current).getByRole('columnheader', {name: 'Current'}),
@@ -120,7 +120,7 @@ describe('ResultsBar', () => {
   test('says so when there is no earlier model', () => {
     renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
 
-    fireEvent.click(previousResultsButton());
+    fireEvent.click(allResultsButton());
 
     expect(modelRows(screen.getByRole('table'))).toEqual([
       expect.stringContaining('80%'),
@@ -130,7 +130,7 @@ describe('ResultsBar', () => {
 
   test('closes Results from Back to Testing', () => {
     renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
-    fireEvent.click(previousResultsButton());
+    fireEvent.click(allResultsButton());
 
     fireEvent.click(screen.getByRole('button', {name: 'Back to Testing'}));
 
@@ -139,7 +139,7 @@ describe('ResultsBar', () => {
 
   test('closes Results from the close button', () => {
     renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
-    fireEvent.click(previousResultsButton());
+    fireEvent.click(allResultsButton());
 
     fireEvent.click(screen.getByRole('button', {name: 'Close results'}));
 
@@ -148,7 +148,7 @@ describe('ResultsBar', () => {
 
   test('closes Results on Escape', () => {
     renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
-    fireEvent.click(previousResultsButton());
+    fireEvent.click(allResultsButton());
 
     fireEvent.keyDown(document, {key: 'Escape'});
 
