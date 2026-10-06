@@ -46,5 +46,6 @@ export {
   getUnitCounts,
   listChallengeResponses,
   removeReaction,
+  setApproved,
 } from './gallery/api';
 export {default as ReactionChips} from './gallery/ReactionChips';

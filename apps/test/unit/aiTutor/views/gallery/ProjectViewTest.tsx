@@ -35,6 +35,7 @@ const detail: ChallengeResponseDetail = {
   student_feedback: 'Great explanation!',
   evaluation_status: 'success',
   is_final: true,
+  approved: false,
   created_at: '2026-08-10T12:00:00Z',
   assets: [
     {

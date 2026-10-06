@@ -39,6 +39,7 @@ const listParams = () =>
 
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
+  is_teacher: false,
   units: [
     {id: 100, name: 'Problem Solving with AI', position: 1, link: '/s/ai-1'},
     {
@@ -64,6 +65,7 @@ const baseResponse: Omit<ChallengeResponse, 'id' | 'user_name' | 'assets'> = {
   student_feedback: null,
   evaluation_status: null,
   is_final: true,
+  approved: false,
   created_at: '2026-08-10T12:00:00Z',
   reactions: [],
 };

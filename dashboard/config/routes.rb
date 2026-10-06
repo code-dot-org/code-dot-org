@@ -1544,6 +1544,7 @@ Dashboard::Application.routes.draw do
       end
       member do
         post :evaluate
+        patch :approve
       end
       # The signed-in viewer's emoji reactions on this response. The emoji
       # name (e.g. "heart") is the member id, so removing a reaction is a
