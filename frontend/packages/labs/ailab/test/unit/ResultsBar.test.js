@@ -33,6 +33,13 @@ function previousResultsButton() {
   return screen.getByRole('button', {name: 'Previous results'});
 }
 
+function modelRows(table) {
+  return within(table)
+    .getAllByRole('row')
+    .slice(1)
+    .map(row => row.textContent);
+}
+
 function selectedTab() {
   return within(screen.getByRole('dialog'))
     .getAllByRole('tab')
@@ -85,7 +92,7 @@ describe('ResultsBar', () => {
     );
   });
 
-  test('lists earlier models, newest first, under Previous results', () => {
+  test('lists the current model, then earlier ones newest first', () => {
     renderBar([
       {label: 'animal', features: ['legs'], accuracy: '50.00'},
       {label: 'legs', features: ['animal'], accuracy: '60.00'},
@@ -95,11 +102,19 @@ describe('ResultsBar', () => {
     fireEvent.click(previousResultsButton());
 
     expect(selectedTab()).toBe('Previous results');
-    const rows = within(screen.getByRole('table')).getAllByRole('row');
-    expect(rows.slice(1).map(row => row.textContent)).toEqual([
+    const [current, previous] = screen.getAllByRole('table');
+    expect(
+      within(current).getByRole('columnheader', {name: 'Current'}),
+    ).toBeTruthy();
+    expect(modelRows(current)).toEqual([expect.stringContaining('70%')]);
+    expect(
+      within(previous).getByRole('columnheader', {name: 'Previous'}),
+    ).toBeTruthy();
+    expect(modelRows(previous)).toEqual([
       expect.stringContaining('60%'),
       expect.stringContaining('50%'),
     ]);
+    expect(screen.queryByText(/No previous results yet/)).toBeNull();
   });
 
   test('says so when there is no earlier model', () => {
@@ -107,6 +122,9 @@ describe('ResultsBar', () => {
 
     fireEvent.click(previousResultsButton());
 
+    expect(modelRows(screen.getByRole('table'))).toEqual([
+      expect.stringContaining('80%'),
+    ]);
     expect(screen.getByText(/No previous results yet/)).toBeTruthy();
   });
 
