@@ -37,9 +37,6 @@ export class OneTrustComponent {
   /** Auto-block script for the test (977d-test) consent group. */
   readonly testAutoBlock: Locator;
 
-  /** Opens the preference center from the banner. */
-  readonly preferencesButton: Locator;
-
   /** The preference-center modal. */
   readonly preferenceCenter: Locator;
 
@@ -65,7 +62,6 @@ export class OneTrustComponent {
     this.testAutoBlock = page.locator(
       "script[src$='977d-test/OtAutoBlock.js']",
     );
-    this.preferencesButton = page.locator('#onetrust-pc-btn-handler');
     this.preferenceCenter = page.locator('#onetrust-pc-sdk');
     this.performanceToggle = page.locator('#ot-group-id-C0002');
     this.performanceToggleLabel = page.locator(
@@ -75,32 +71,47 @@ export class OneTrustComponent {
   }
 
   /**
-   * Load path with a fresh OneTrust consent prompt as seen from region geo
-   * (an ISO country code OneTrust accepts as otgeo), and open the preference
-   * center. The default, Spain, is a region where OneTrust shows the banner.
-   * OneTrust rewrites otreset=true to otreset=false once it has processed the
-   * reset.
+   * Load path as seen from region geo (an ISO country code OneTrust accepts as
+   * otgeo) and open the preference center through OneTrust's API, which works
+   * whether or not consent was already given. The default, Spain, gets the
+   * opt-in template with a performance-cookie toggle.
    */
   async openPreferenceCenter(
     path: string,
     {geo = 'es'}: {geo?: string} = {},
   ): Promise<void> {
     const url = new URL(path, this.page.url());
-    url.searchParams.set('otreset', 'true');
     url.searchParams.set('otgeo', geo);
     await this.page.goto(url.pathname + url.search);
-    await expect(this.page).toHaveURL(/otreset=false/);
-    await this.preferencesButton.click({timeout: 30_000});
-    await expect(this.preferenceCenter).toBeVisible();
+    await this.page.waitForFunction(
+      () =>
+        typeof (window as unknown as {OneTrust?: {ToggleInfoDisplay?: unknown}})
+          .OneTrust?.ToggleInfoDisplay === 'function',
+      undefined,
+      {timeout: 30_000},
+    );
+    // A call made while the banner is still initializing is silently dropped.
+    // Retry only while hidden, since a second call would close the panel.
+    await expect(async () => {
+      if (!(await this.preferenceCenter.isVisible())) {
+        await this.page.evaluate(() =>
+          (
+            window as unknown as {OneTrust: {ToggleInfoDisplay(): void}}
+          ).OneTrust.ToggleInfoDisplay(),
+        );
+      }
+      await expect(this.preferenceCenter).toBeVisible({timeout: 2_000});
+    }).toPass({timeout: 20_000});
   }
 
-  /** Set the performance-cookie toggle, save, and wait for the banner to close. */
+  /** Set the performance-cookie toggle, save, and wait for OneTrust's UI to close. */
   async savePerformanceConsent(enabled: boolean): Promise<void> {
     if ((await this.performanceToggle.isChecked()) !== enabled) {
       await this.performanceToggleLabel.click();
     }
     await expect(this.performanceToggle).toBeChecked({checked: enabled});
     await this.savePreferencesButton.click();
+    await expect(this.preferenceCenter).toBeHidden();
     await expect(this.banner).toBeHidden();
   }
 
