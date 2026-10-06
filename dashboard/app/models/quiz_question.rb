@@ -127,7 +127,7 @@ class QuizQuestion < ApplicationRecord
 
   # Builds `content` from editor request params.
   def self.content_from_params(_params)
-    raise NotImplementedError, "#{name} does not accept editor params"
+    raise ArgumentError, "#{name} does not accept editor params"
   end
 
   # Subtype-specific fields for the editor, answer key included.

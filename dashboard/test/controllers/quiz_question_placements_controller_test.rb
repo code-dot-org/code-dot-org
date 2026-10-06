@@ -143,6 +143,16 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert @quiz.placements.exists?(quiz_question_id: other_question.id)
   end
 
+  test "attach returns bad_request for a question type outside QuizQuestion::TYPES" do
+    base_question = create(:quiz_question)
+
+    assert_no_difference 'QuizQuestionPlacement.count' do
+      post :attach, params: {level_id: @quiz.id, id: base_question.id}
+    end
+
+    assert_response :bad_request
+  end
+
   test "detach removes the placement but leaves the question itself intact" do
     delete :detach, params: {level_id: @quiz.id, id: @question.id}
 

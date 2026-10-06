@@ -42,7 +42,7 @@ class QuizQuestionPlacementsController < ApplicationController
   # Attaches an existing bank question - no new QuizQuestion row, just a
   # placement. find_or_create_by! makes double-clicking idempotent.
   def attach
-    question = QuizQuestion.find(params[:id])
+    question = QuizQuestion.where(type: QuizQuestion::TYPES).find(params[:id])
     next_position = (@level.placements.maximum(:position) || 0) + 1
     QuizQuestionPlacement.find_or_create_by!(level: @level, quiz_question: question) do |placement|
       placement.page = 1
