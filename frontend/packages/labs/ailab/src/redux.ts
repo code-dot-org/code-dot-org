@@ -68,7 +68,6 @@ export interface RootState {
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   historicResults: HistoricResult[];
-  showResultsDetails: boolean;
   resultsHighlightRow: number | undefined;
   hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
@@ -119,7 +118,6 @@ export const initialState: RootState = {
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
   historicResults: [],
-  showResultsDetails: false,
   resultsHighlightRow: undefined,
   hyperparameters: undefined,
   viewedPanels: [],
@@ -338,7 +336,6 @@ const ailabSlice = createSlice({
         state.testData = {};
         state.prediction = undefined;
         state.resultsTab = ResultsGrades.CORRECT;
-        state.showResultsDetails = false;
       } else {
         state.currentColumn = undefined;
       }
@@ -408,9 +405,6 @@ const ailabSlice = createSlice({
         return {payload: {label, features, accuracy}};
       },
     },
-    setShowResultsDetails(state, action: PayloadAction<boolean>) {
-      state.showResultsDetails = action.payload;
-    },
     setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
       state.hyperparameters = action.payload;
     },
@@ -460,7 +454,6 @@ export const {
   setResultsHighlightRow,
   setSaveStatus,
   setHistoricResult,
-  setShowResultsDetails,
   setHyperparameters,
   setInstructionsDismissed,
   setInstructionsEnabled,

@@ -11,7 +11,6 @@ import reducer, {
   setPrediction,
   setMode,
   setReserveLocation,
-  setShowResultsDetails,
   setImportedData,
   resetState,
   setSaveStatus,
@@ -93,7 +92,6 @@ describe('ailab reducer', () => {
       const next = reducer(state, setCurrentPanel('results'));
       expect(next.testData).toEqual({});
       expect(next.prediction).toBeUndefined();
-      expect(next.showResultsDetails).toBe(false);
       // The results branch intentionally does not reset currentColumn.
       expect(next.currentColumn).toBe('a');
     });
@@ -214,15 +212,6 @@ describe('ailab reducer', () => {
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBe('a');
       expect(next.instructionsKey).toBe('datasetView');
-    });
-
-    test('the results-details toggle keeps the results instructions', () => {
-      const results = reducer(initialState, setCurrentPanel('results'));
-      const open = reducer(results, setShowResultsDetails(true));
-      expect(open.showResultsDetails).toBe(true);
-      expect(open.instructionsKey).toBe('results');
-      const closed = reducer(open, setShowResultsDetails(false));
-      expect(closed.instructionsKey).toBe('results');
     });
 
     test('importing a dataset records uploaded vs selected', () => {

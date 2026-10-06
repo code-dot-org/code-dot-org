@@ -1,0 +1,35 @@
+@use '../sharedMixins' as mixins;
+
+$content-height: 416px;
+
+.dialog {
+  @include mixins.modal;
+}
+
+.titleRow {
+  @include mixins.modal-title-row;
+}
+
+.tabRow {
+  // Tabs has no CodeAI brand override; these are the tokens it reads for text.
+  --text-brand-teal-primary: var(--text-selected-primary-inverse);
+  --text-neutral-tertiary: var(--text-neutral-quaternary);
+
+  padding: 10px 14px 0;
+  background-color: var(--background-neutral-secondary);
+  box-shadow: inset 0 -1px 0 var(--border-neutral-primary);
+}
+
+.panels {
+  flex: 0 1 $content-height;
+  min-height: 0;
+  overflow-y: auto;
+
+  > [role='tabpanel'] {
+    height: 100%;
+  }
+}
+
+.actionRow {
+  @include mixins.modal-action-row;
+}
