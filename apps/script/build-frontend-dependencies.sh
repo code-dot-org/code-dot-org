@@ -21,6 +21,11 @@ APPS_DEPENDENCIES=(
 
 cd ../frontend || exit 1
 
+# No turbo cache in either mode below. A git checkout during a build gets
+# cached under the old tree's key and is served as stale dist later; see
+# INF-2257. Costs ~40 s per start. Env var because `turbo watch` has no flag.
+export TURBO_CACHE='local:,remote:'
+
 if [ "$1" = "--watch" ]; then
   # watch mode skips `yarn` install: the plain invocation below always runs
   # first, as part of grunt's prebuild task.
