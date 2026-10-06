@@ -32,6 +32,7 @@ import {
   BACKGROUND_GROUND_COLOR,
   blankPaintImage,
 } from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
+import {playPreset} from '@cdo/apps/p5lab/spritelab/lab2/soundEffects';
 import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -48,7 +49,6 @@ import {
   promptText,
   sentenceFor,
 } from './exploreSentences';
-import {playSound} from './exploreSounds';
 import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
 import ResultActions, {Verdict} from './ResultActions';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
@@ -164,7 +164,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         current ?? undefined
       )
     );
-    playSound('go');
+    playPreset('go');
     try {
       const options: GenerateImageOptions = {
         imageType,
@@ -199,7 +199,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         sent,
       });
       setMode('result');
-      playSound('reveal');
+      playPreset('reveal');
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -279,7 +279,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const judge = useCallback(
     (next: Verdict) => {
       setVerdict(next);
-      playSound(next === 'up' ? 'cheer' : 'hmm');
+      playPreset(next === 'up' ? 'cheer' : 'hmm');
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {

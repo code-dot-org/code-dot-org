@@ -19,8 +19,8 @@ function blockWith(values: Record<string, string | null>) {
 }
 
 describe('spritelab2_playSoundEffect', () => {
-  // A field with a source block fires a change event on setValue; the fake
-  // block is no workspace member.
+  // setValue fires a change event when the field has a source block; the
+  // fake block has no workspace.
   beforeEach(() => {
     played.mockClear();
     BlocklyCore.Events.disable();
@@ -97,6 +97,17 @@ describe('spritelab2_playSoundEffect', () => {
       length: 'short',
       pattern: 'steady',
     });
+  });
+
+  it('builds from JSON with its options and refuses without them', () => {
+    const field = EffectOptionDropdown.fromJson({
+      options: [
+        ['low', 'low'],
+        ['high', 'high'],
+      ],
+    } as never);
+    expect(field.getValue()).toBe('low');
+    expect(() => EffectOptionDropdown.fromJson({} as never)).toThrow(/options/);
   });
 
   it('generates a playSoundEffect call with the four choices', () => {

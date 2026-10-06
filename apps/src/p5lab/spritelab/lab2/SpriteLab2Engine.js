@@ -57,7 +57,7 @@ import {
   usesPlatformPhysics,
   wallBox,
 } from './platformPhysics';
-import {asSoundEffect, playSoundEffect} from './soundEffects';
+import {asSoundEffect, playSoundEffect, stopSoundEffects} from './soundEffects';
 import {
   createWeather,
   drawWeather,
@@ -961,6 +961,7 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /** Stop execution. */
   resetRuntime() {
+    stopSoundEffects();
     this.reset();
   }
 

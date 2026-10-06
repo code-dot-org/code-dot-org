@@ -58,8 +58,8 @@ const PLATFORMER_COMPOSITES: [string, string][] = [
   ],
 ];
 
-// Field values a block starts with in the toolbox: grid-placement blocks
-// want a marked cell, the sound effect a sound worth hearing.
+// Field values a toolbox entry starts with: a marked cell for grid blocks,
+// a jump for the sound effect.
 const FIELD_DEFAULTS = new Map<string, Record<string, string>>([
   ...PLATFORMER_COMPOSITES.map(
     ([type, grid]) => [type, {GRID: grid}] as [string, Record<string, string>]

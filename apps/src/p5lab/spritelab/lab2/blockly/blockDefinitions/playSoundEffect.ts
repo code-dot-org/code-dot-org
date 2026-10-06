@@ -44,7 +44,10 @@ export function effectOf(
  */
 export class EffectOptionDropdown extends BlocklyCore.FieldDropdown {
   static fromJson(options: BlocklyCore.FieldDropdownFromJsonConfig) {
-    return new EffectOptionDropdown(options.options ?? []);
+    if (!options.options) {
+      throw new Error(`${FIELD_EFFECT_OPTION_TYPE} needs options`);
+    }
+    return new EffectOptionDropdown(options.options, undefined, options);
   }
 
   protected override onItemSelected_(
@@ -65,7 +68,7 @@ const options = (values: readonly string[]): [string, string][] =>
 const definition: BlockJson = {
   type: PLAY_SOUND_EFFECT_BLOCK_TYPE,
   message0: 'play sound effect %1 %2 %3 %4',
-  // The custom field type takes the dropdown's options.
+  // Cast: ArgumentJson ties `options` to type 'field_dropdown'.
   args0: [
     {type: FIELD_EFFECT_OPTION_TYPE, name: 'WAVE', options: options(WAVES)},
     {type: FIELD_EFFECT_OPTION_TYPE, name: 'PITCH', options: options(PITCHES)},
