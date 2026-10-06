@@ -4,47 +4,71 @@ const scssTransformer = require('jest-scss-transform');
 const {getStrippedSource} = require('jest-scss-transform/lib/helpers');
 const path = require('path');
 
-const PARTIAL_REF = /@(?:use|import|forward)\s+['"]([^'"]+)['"]/g;
+const PARTIAL_STATEMENT = /@(?:use|import|forward)\s+([^;]+);/g;
+const QUOTED = /['"]([^'"]+)['"]/g;
 const DECLARATION = /^\s*(\$[\w-]+)\s*:\s*(.+?)\s*(!default)?\s*;/gm;
+const INTERPOLATION = /#\{[^{}]*\}/g;
+const INTERPOLATED = '\0';
+
+// The directories the bundlers' sass includePaths name (webpack.config.js).
+const INCLUDE_DIRS = [path.join(__dirname, '..', '..', 'shared', 'css')];
+
+const OWN_SOURCE = fs.readFileSync(__filename, 'utf8');
 
 /** The partial file a reference names, or null when none exists. */
 function partialPath(fromFile, ref) {
-  const dir = path.join(path.dirname(fromFile), path.dirname(ref));
   const base = path.basename(ref, '.scss');
-  const candidates = [
+  const dirs = [path.dirname(fromFile), ...INCLUDE_DIRS].map(dir =>
+    path.join(dir, path.dirname(ref))
+  );
+  const candidates = dirs.flatMap(dir => [
     path.join(dir, `_${base}.scss`),
     path.join(dir, `${base}.scss`),
     path.join(dir, base, '_index.scss'),
-  ];
+  ]);
   return candidates.find(fs.existsSync) || null;
 }
 
-/** The source with comments and every brace-delimited block removed:
-    a variable set inside a block is local to it. */
+/** Every partial a stylesheet pulls in, in source order. */
+function partialRefs(source) {
+  return [...source.matchAll(PARTIAL_STATEMENT)].flatMap(([, statement]) =>
+    [...statement.matchAll(QUOTED)].map(([, ref]) => ref)
+  );
+}
+
+/** Source with comments and brace blocks removed; a variable set inside a
+    block is local to it. */
 function topLevelSource(source) {
-  let stripped = getStrippedSource(source);
+  let stripped = getStrippedSource(source).replace(INTERPOLATION, INTERPOLATED);
   for (let depth = 0; depth < 20 && /\{[^{}]*\}/.test(stripped); depth++) {
     stripped = stripped.replace(/\{[^{}]*\}/g, '');
   }
   return stripped;
 }
 
-/** Variable values in a stylesheet and the partials it pulls in. A later
-    plain declaration replaces an earlier one; !default sets only an unset
-    variable; the stylesheet's own declarations win over its partials'. */
-function collectDeclarations(filename, seen = new Set(), found = {}) {
+/** Partials are collected first, so the stylesheet's own declarations
+    override theirs; all share one map, namespaces included. */
+function collectDeclarations(filename, source, seen = new Set(), found = {}) {
   if (seen.has(filename)) {
     return found;
   }
   seen.add(filename);
-  const source = topLevelSource(fs.readFileSync(filename, 'utf8'));
-  for (const match of source.matchAll(PARTIAL_REF)) {
-    const partial = partialPath(filename, match[1]);
+  const topLevel = topLevelSource(source);
+  for (const ref of partialRefs(topLevel)) {
+    const partial = partialPath(filename, ref);
     if (partial) {
-      collectDeclarations(partial, seen, found);
+      collectDeclarations(
+        partial,
+        fs.readFileSync(partial, 'utf8'),
+        seen,
+        found
+      );
     }
   }
-  for (const [, name, value, isDefault] of source.matchAll(DECLARATION)) {
+  for (const [, name, value, isDefault] of topLevel.matchAll(DECLARATION)) {
+    if (value.includes(INTERPOLATED)) {
+      continue;
+    }
     if (!isDefault || !(name in found)) {
       found[name] = value;
     }
@@ -59,8 +83,8 @@ function dependencyFiles(filename, seen = new Set()) {
   }
   seen.add(filename);
   const source = getStrippedSource(fs.readFileSync(filename, 'utf8'));
-  for (const match of source.matchAll(PARTIAL_REF)) {
-    const partial = partialPath(filename, match[1]);
+  for (const ref of partialRefs(source)) {
+    const partial = partialPath(filename, ref);
     if (partial) {
       dependencyFiles(partial, seen);
     }
@@ -90,11 +114,10 @@ module.exports = {
     } catch {
       return transformed;
     }
-    const declared = collectDeclarations(filename);
+    const declared = collectDeclarations(filename, src);
     for (const [key, value] of Object.entries(exported)) {
       let resolved = value;
       for (let hops = 0; hops < 10; hops++) {
-        // guide.$padding and $padding name the same variable.
         const name = resolved.replace(/^[\w-]+\.(?=\$)/, '');
         if (!(name in declared)) {
           break;
@@ -111,7 +134,7 @@ module.exports = {
       .createHash('sha1')
       .update(src)
       .update(filename)
-      .update(fs.readFileSync(__filename, 'utf8'));
+      .update(OWN_SOURCE);
     for (const file of dependencyFiles(filename)) {
       hash.update(fs.readFileSync(file, 'utf8'));
     }

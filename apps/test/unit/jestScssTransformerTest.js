@@ -45,15 +45,24 @@ describe('jest-scss.transformer', () => {
   it('follows @use, @import and @forward to partials', () => {
     write('_vars.scss', ['$gap: 8px;', '$pad: $gap !default;']);
     write('_more.scss', ["@forward 'vars';"]);
+    write('_sizes.scss', ['$big: 40px;']);
     const file = write('uses.module.scss', [
       "@use 'more';",
-      "@import 'vars.scss';",
-      ':export { gap: more.$gap; pad: $pad; }',
+      "@import 'vars.scss', 'sizes';",
+      ':export { gap: more.$gap; pad: $pad; big: $big; }',
     ]);
-    expect(exportsOf(file)).toEqual({gap: '8px', pad: '8px'});
+    expect(exportsOf(file)).toEqual({gap: '8px', pad: '8px', big: '40px'});
   });
 
-  it('resolves like Sass: last plain wins, !default sets only once', () => {
+  it("finds a partial on the bundlers' include path", () => {
+    const file = write('shared.module.scss', [
+      "@import 'breakpoints';",
+      ':export { width: $width-sm; }',
+    ]);
+    expect(exportsOf(file).width).toMatch(/^\d+px$/);
+  });
+
+  it('keeps a later plain declaration and the first !default', () => {
     write('_vars.scss', ['$b: 2px;', '$shadow: 1px !default;']);
     const file = write('order.module.scss', [
       '$b: 1px;',
@@ -78,12 +87,22 @@ describe('jest-scss.transformer', () => {
     const file = write('expr.module.scss', [
       "@use 'sass:math';",
       '$w: 800px;',
-      ':export { half: math.div($w, 2); none: $missing; }',
+      '$wide: calc(100% - #{$w});',
+      ':export { half: math.div($w, 2); none: $missing; wide: $wide; }',
     ]);
     expect(exportsOf(file)).toEqual({
       half: 'math.div($w, 2)',
       none: '$missing',
+      wide: '$wide',
     });
+  });
+
+  it('gives ProgressSlider its width as a number', () => {
+    const file = path.resolve(
+      __dirname,
+      '../../src/music/views/progress-slider.module.scss'
+    );
+    expect(parseInt(exportsOf(file).sliderWidth)).toBe(200);
   });
 
   it('changes the cache key when a partial changes', () => {
@@ -94,6 +113,10 @@ describe('jest-scss.transformer', () => {
     ]);
     const src = fs.readFileSync(file, 'utf8');
     const before = transformer.getCacheKey(src, file, {configString: ''});
+    expect(transformer.getCacheKey(src, file, {configString: ''})).toBe(before);
+    expect(
+      transformer.getCacheKey(src, file, {configString: '', instrument: true})
+    ).not.toBe(before);
     fs.writeFileSync(vars, '$pad: 32px;\n');
     const after = transformer.getCacheKey(src, file, {configString: ''});
     expect(after).not.toBe(before);
