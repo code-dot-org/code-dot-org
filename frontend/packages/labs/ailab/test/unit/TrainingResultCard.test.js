@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {act, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 
@@ -54,6 +54,12 @@ describe('TrainingResultCard', () => {
       screen.getByText(`${Math.round((correct / total) * 100)}%`),
     ).not.toBeNull();
     expect(screen.getByText(`${correct}/${total}`)).not.toBeNull();
+  });
+
+  test('Test model opens the testing view', () => {
+    const store = renderCard();
+    fireEvent.click(screen.getByRole('button', {name: 'Test model'}));
+    expect(store.getState().currentPanel).toBe('results');
   });
 
   test('stays hidden while the training modal is open', () => {

@@ -1,13 +1,17 @@
 /* Results of the latest training, while the Train panel still matches it. */
-import {Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {getCorrectCount} from '../helpers/accuracy';
 import {isTrainedOnCurrentColumns} from '../helpers/navigationValidation';
-import {shallowEqual, useAppSelector} from '../hooks';
+import {shallowEqual, useAppDispatch, useAppSelector} from '../hooks';
+import {setCurrentPanel} from '../redux';
 
 import styles from './trainingResultCard.module.scss';
 
 const TrainingResultCard = () => {
+  const dispatch = useAppDispatch();
   const isTrained = useAppSelector(isTrainedOnCurrentColumns);
   // Keeps the result hidden behind the training animation.
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
@@ -20,28 +24,44 @@ const TrainingResultCard = () => {
   const percentCorrect = Math.round((correct / total) * 100);
 
   return (
-    <dl className={styles.card}>
-      <div className={styles.result}>
-        <Typography component="dt" variant="body4" className={styles.label}>
-          Accuracy
-        </Typography>
-        <Typography
-          component="dd"
-          variant="body2"
-          className={styles.accuracyValue}
+    <div className={styles.card}>
+      <dl className={styles.results}>
+        <div className={styles.result}>
+          <Typography component="dt" variant="body4" className={styles.label}>
+            Accuracy
+          </Typography>
+          <Typography
+            component="dd"
+            variant="body2"
+            className={styles.accuracyValue}
+          >
+            {percentCorrect}%
+          </Typography>
+        </div>
+        <div className={styles.result}>
+          <Typography component="dt" variant="body4" className={styles.label}>
+            Number correct
+          </Typography>
+          <Typography component="dd" variant="body2" className={styles.value}>
+            {correct}/{total}
+          </Typography>
+        </div>
+      </dl>
+      <div className={styles.actionRow}>
+        <Button
+          variant="contained"
+          color="primary"
+          size="small"
+          fullWidth
+          endIcon={
+            <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
+          }
+          onClick={() => dispatch(setCurrentPanel('results'))}
         >
-          {percentCorrect}%
-        </Typography>
+          Test model
+        </Button>
       </div>
-      <div className={styles.result}>
-        <Typography component="dt" variant="body4" className={styles.label}>
-          Number correct
-        </Typography>
-        <Typography component="dd" variant="body2" className={styles.value}>
-          {correct}/{total}
-        </Typography>
-      </div>
-    </dl>
+    </div>
   );
 };
 
