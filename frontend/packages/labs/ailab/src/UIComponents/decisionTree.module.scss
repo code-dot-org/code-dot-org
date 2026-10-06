@@ -1,5 +1,5 @@
 $path-color: var(--border-selected-primary);
-$off-path-color: var(--text-neutral-quaternary);
+$off-path-color: var(--background-neutral-septenary);
 $overlay-float-min-width: 600px;
 
 .decisionTree {
@@ -53,11 +53,12 @@ $overlay-float-min-width: 600px;
   left: 0;
   fill: none;
   stroke: $off-path-color;
-  stroke-width: 2;
+  stroke-width: 1.5;
 }
 
 .pathEdge {
   stroke: $path-color;
+  stroke-width: 2;
 }
 
 .nodeSlot {
@@ -74,7 +75,7 @@ $overlay-float-min-width: 600px;
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  border-width: 2px;
+  border-width: 1.5px;
   border-style: solid;
   border-radius: 6px;
   font-size: 13px;
@@ -91,6 +92,7 @@ $overlay-float-min-width: 600px;
 
 .pathNode {
   border-color: $path-color;
+  border-width: 2px;
 }
 
 .nodeText {
