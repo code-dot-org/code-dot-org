@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 /**
  * OneTrust cookie-consent integration. OneTrust is injected into every
@@ -37,6 +37,19 @@ export class OneTrustComponent {
   /** Auto-block script for the test (977d-test) consent group. */
   readonly testAutoBlock: Locator;
 
+  /** Opens the preference center from the banner. */
+  readonly preferencesButton: Locator;
+
+  /** The preference-center modal. */
+  readonly preferenceCenter: Locator;
+
+  /** Performance-cookie (C0002) toggle; OneTrust hides the input behind its label. */
+  readonly performanceToggle: Locator;
+  private readonly performanceToggleLabel: Locator;
+
+  /** "Confirm my choices" in the preference center. */
+  readonly savePreferencesButton: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.banner = page.locator('#onetrust-banner-sdk');
@@ -51,6 +64,50 @@ export class OneTrustComponent {
     this.prodAutoBlock = page.locator("script[src$='977d/OtAutoBlock.js']");
     this.testAutoBlock = page.locator(
       "script[src$='977d-test/OtAutoBlock.js']",
+    );
+    this.preferencesButton = page.locator('#onetrust-pc-btn-handler');
+    this.preferenceCenter = page.locator('#onetrust-pc-sdk');
+    this.performanceToggle = page.locator('#ot-group-id-C0002');
+    this.performanceToggleLabel = page.locator(
+      "label[for='ot-group-id-C0002']",
+    );
+    this.savePreferencesButton = page.locator('.save-preference-btn-handler');
+  }
+
+  /**
+   * Load path with a fresh OneTrust geo-gated (Spain) consent prompt and open
+   * the preference center. OneTrust rewrites otreset=true to otreset=false
+   * once it has processed the reset.
+   */
+  async openPreferenceCenter(path: string): Promise<void> {
+    const url = new URL(path, this.page.url());
+    url.searchParams.set('otreset', 'true');
+    url.searchParams.set('otgeo', 'es');
+    await this.page.goto(url.pathname + url.search);
+    await expect(this.page).toHaveURL(/otreset=false/);
+    await this.preferencesButton.click({timeout: 30_000});
+    await expect(this.preferenceCenter).toBeVisible();
+  }
+
+  /** Set the performance-cookie toggle, save, and wait for the banner to close. */
+  async savePerformanceConsent(enabled: boolean): Promise<void> {
+    if ((await this.performanceToggle.isChecked()) !== enabled) {
+      await this.performanceToggleLabel.click();
+    }
+    await expect(this.performanceToggle).toBeChecked({checked: enabled});
+    await this.savePreferencesButton.click();
+    await expect(this.banner).toBeHidden();
+  }
+
+  /** OneTrust's active consent groups, e.g. ['C0001', 'C0002']. */
+  async activeGroups(): Promise<string[]> {
+    return this.page.evaluate(() =>
+      (
+        (window as unknown as {OnetrustActiveGroups?: string})
+          .OnetrustActiveGroups ?? ''
+      )
+        .split(',')
+        .filter(Boolean),
     );
   }
 
