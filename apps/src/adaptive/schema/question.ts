@@ -17,7 +17,10 @@ export const multipleChoiceQuestionSchema = subsetOf<
     choices: z
       .array(z.strictObject({id: z.string().min(1), text: z.string().min(1)}))
       .min(2),
-    /** Graded: the student retries until correct. Absent: a survey question. */
+    /**
+     * When supplied, the student retries until correct.
+     * Otherwise any option allows the student to continue.
+     */
     correctChoiceId: z.string().min(1).optional(),
   })
 );
@@ -44,8 +47,7 @@ export const questionSchema = z.discriminatedUnion('type', [
   }),
 ]);
 
-/**
- *  One questions step laid out like a quiz but with no attempt or score. */
+/** A questions step. */
 export const questionsStepSchema = stepBaseSchema.extend({
   kind: z.literal('questions'),
   description: z.string().optional(),

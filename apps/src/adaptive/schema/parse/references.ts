@@ -1,5 +1,5 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, question ids, each level played by at most one step, and whether
+// shape, question and choice ids, each level played by at most one step, and whether
 // each level step's `project` flag agrees with the level the server resolved
 // for it.
 
@@ -22,20 +22,46 @@ export function findReferenceProblems(pathway: Pathway): string[] {
   ];
 }
 
+/**
+ * Detects question ids used more than once, and multiple choice questions
+ * whose choice ids repeat or whose correct choice is not among them.
+ */
 function findQuestionProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
   const seen = new Set<string | number>();
   const duplicates = new Set<string | number>();
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
       if (step.kind !== 'questions') continue;
-      const {id} = step.question;
-      if (seen.has(id)) duplicates.add(id);
-      seen.add(id);
+      const {question} = step;
+      if (seen.has(question.id)) duplicates.add(question.id);
+      seen.add(question.id);
+
+      if (question.type !== 'MultipleChoiceQuestion') continue;
+      const where = `checkpoints.${checkpoint.id}.steps.${step.id}.question`;
+      const choiceIds = new Set<string>();
+      const repeated = new Set<string>();
+      for (const {id} of question.choices) {
+        if (choiceIds.has(id)) repeated.add(id);
+        choiceIds.add(id);
+      }
+      for (const id of repeated) {
+        problems.push(`${where}: choice id '${id}' is used more than once`);
+      }
+      const {correctChoiceId} = question;
+      if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
+        problems.push(
+          `${where}.correctChoiceId: '${correctChoiceId}' is not one of its choices`
+        );
+      }
     }
   }
-  return [...duplicates].map(
-    id => `checkpoints: question id '${id}' is used more than once`
-  );
+  return [
+    ...[...duplicates].map(
+      id => `checkpoints: question id '${id}' is used more than once`
+    ),
+    ...problems,
+  ];
 }
 
 /**

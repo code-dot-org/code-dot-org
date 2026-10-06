@@ -3,19 +3,17 @@
 // Submit and must be answered correctly to move on.
 
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
 
 import {Answer, StepAnswers} from '../../progress';
-import {
-  MultipleChoiceQuestion,
-  QuestionsStep as QuestionsStepContent,
-} from '../../types';
+import {QuestionsStep as QuestionsStepContent} from '../../types';
 
 import styles from './stepPlayer.module.scss';
 
-// Long enough to read "Correct!" before the step changes.
+// Duration that "Correct" is shown on screen for students before
+// advancing to the next step.
 const CORRECT_ADVANCE_DELAY_MS = 700;
 
 interface QuestionsStepProps {
@@ -31,26 +29,13 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   onSaveAnswers,
   onComplete,
 }) => {
-  const questions = useMemo(
-    () =>
-      [step.question].filter(
-        (q): q is MultipleChoiceQuestion => q.type === 'MultipleChoiceQuestion'
-      ),
-    [step.question]
+  const question =
+    step.question.type === 'MultipleChoiceQuestion' ? step.question : undefined;
+  const correctChoiceId = question?.correctChoiceId;
+  // The pick stays local until Submit; only submitted answers are saved.
+  const [selectedChoiceId, setSelectedChoiceId] = useState(
+    () => question && answers[question.id]?.slice(-1)[0]?.answerId
   );
-  // Picks stay local until Submit; only submitted answers are saved.
-  const [selectedChoiceIds, setSelectedChoiceIds] = useState(() => {
-    const restored: {[questionId: number]: string} = {};
-    for (const q of questions) {
-      const last = answers[q.id]?.slice(-1)[0];
-      if (last) restored[q.id] = last.answerId;
-    }
-    return restored;
-  });
-  const currentChoice = (q: MultipleChoiceQuestion) =>
-    selectedChoiceIds[q.id] as string | undefined;
-  const isAnswered = questions.every(q => !!currentChoice(q));
-  const gradedQuestions = questions.filter(q => q.correctChoiceId);
   const [feedback, setFeedback] = useState<'correct' | 'incorrect'>();
 
   const questionsRef = useRef<HTMLDivElement>(null);
@@ -70,28 +55,32 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     return () => clearTimeout(timer);
   }, [feedback]);
 
+  const completedRef = useRef(false);
   const isAdvancing = feedback === 'correct';
   const handleSubmit = () => {
-    if (isAdvancing) return;
-    for (const q of questions) {
-      const answerId = currentChoice(q);
-      if (!answerId) continue;
+    if (isAdvancing || completedRef.current || !question || !selectedChoiceId) {
+      return;
+    }
+    const savedAnswers = answers[question.id] ?? [];
+    // Resubmitting the last saved pick is not a new try.
+    if (savedAnswers.slice(-1)[0]?.answerId !== selectedChoiceId) {
       const answer = {
-        answerId,
-        isCorrect: !q.correctChoiceId || answerId === q.correctChoiceId,
+        answerId: selectedChoiceId,
+        isCorrect: !correctChoiceId || selectedChoiceId === correctChoiceId,
       };
       // Graded questions keep every try; survey questions only the last.
       onSaveAnswers(
-        q.id,
-        q.correctChoiceId ? [...(answers[q.id] ?? []), answer] : [answer]
+        question.id,
+        correctChoiceId ? [...savedAnswers, answer] : [answer]
       );
     }
-    if (gradedQuestions.some(q => currentChoice(q) !== q.correctChoiceId)) {
-      setFeedback('incorrect');
-    } else if (gradedQuestions.length) {
-      setFeedback('correct');
-    } else {
+    if (!correctChoiceId) {
+      completedRef.current = true;
       onComplete();
+    } else {
+      setFeedback(
+        selectedChoiceId === correctChoiceId ? 'correct' : 'incorrect'
+      );
     }
   };
 
@@ -105,24 +94,17 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           <MuiTypography variant="body2">{step.description}</MuiTypography>
         )}
       </div>
-      {questions.map(question => (
+      {question && (
         <MultiChoiceQuestionContainer
-          key={question.id}
           question={question}
-          selectedChoiceId={currentChoice(question) ?? null}
+          selectedChoiceId={selectedChoiceId ?? null}
           onSelectChoice={choiceId => {
             setFeedback(undefined);
-            setSelectedChoiceIds(prev => ({...prev, [question.id]: choiceId}));
+            setSelectedChoiceId(choiceId);
           }}
-          selectedChoiceStatus={
-            feedback && question.correctChoiceId
-              ? currentChoice(question) === question.correctChoiceId
-                ? 'correct'
-                : 'incorrect'
-              : undefined
-          }
+          selectedChoiceStatus={feedback}
         />
-      ))}
+      )}
       <div className={styles.questionsActions}>
         <MuiTypography
           variant="body2"
@@ -141,7 +123,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           color="primary"
           size="medium"
           type="button"
-          disabled={!isAnswered}
+          disabled={!selectedChoiceId}
           // Not disabled while advancing: that would drop keyboard focus.
           aria-disabled={isAdvancing}
           onClick={handleSubmit}

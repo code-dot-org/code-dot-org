@@ -387,6 +387,29 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  it('flags a choice id used twice in one question, once', () => {
+    const raw = served();
+    Object.assign(questionOf(raw), {
+      choices: [
+        {id: 'a', text: 'A'},
+        {id: 'b', text: 'B'},
+        {id: 'b', text: 'C'},
+        {id: 'b', text: 'D'},
+      ],
+    });
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.question: choice id 'b' is used more than once",
+    ]);
+  });
+
+  it('flags a correct choice that is not one of the choices', () => {
+    const raw = served();
+    Object.assign(questionOf(raw), {correctChoiceId: 'z'});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.steps.quiz.question.correctChoiceId: 'z' is not one of its choices",
+    ]);
+  });
+
   it('flags a project step whose level does not share the template', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
