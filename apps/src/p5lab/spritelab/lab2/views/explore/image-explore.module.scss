@@ -60,10 +60,6 @@ $window-allowance: 150px;
   @include sr-only.sr-only;
 }
 
-.continueButton.continueButton {
-  width: 100%;
-}
-
 // A short window (a Chromebook, a small laptop) packs the rows closer.
 @media (max-height: 800px) {
   .panel {

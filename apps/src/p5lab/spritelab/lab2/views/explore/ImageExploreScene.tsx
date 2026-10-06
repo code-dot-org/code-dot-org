@@ -103,9 +103,6 @@ interface ImageExploreSceneProps {
   instructions?: string;
   /** Offer the read-aloud button on the instructions. */
   showTts?: boolean;
-  /** The Guide's step offers Continue, as when the level's image already
-      exists. */
-  showContinue?: boolean;
 }
 
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
@@ -117,7 +114,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   uploadImage,
   instructions,
   showTts,
-  showContinue,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -273,10 +269,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     },
     [dispatch, uploadImage, imageType, imageRole]
   );
-
-  const continueLesson = useCallback(() => {
-    dispatch(continueOrFinishLesson());
-  }, [dispatch]);
 
   // Back to the words with the picture still showing; the next Generate
   // replaces it.
@@ -516,24 +508,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       )}
       {mode === 'edit' && (
         <div className={styles.bottomRow}>
-          {showContinue && (
-            <MuiButton
-              variant="contained"
-              color="primary"
-              className={styles.continueButton}
-              endIcon={
-                <FontAwesomeV6Icon
-                  iconName="arrow-right"
-                  iconStyle="solid"
-                  aria-hidden
-                />
-              }
-              disabled={busy}
-              onClick={continueLesson}
-            >
-              Continue
-            </MuiButton>
-          )}
           <hr className={styles.resultDivider} />
           <MuiButton
             variant="outlined"

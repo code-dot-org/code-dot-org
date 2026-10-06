@@ -1889,7 +1889,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               uploadImage={uploadImage}
               instructions={guide.text}
               showTts={showTtsFor(levelProperties)}
-              showContinue={guide.showContinue}
             />
           ) : (
             <>
