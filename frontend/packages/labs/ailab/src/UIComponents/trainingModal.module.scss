@@ -1,30 +1,15 @@
-$dialog-max-width: 800px;
-$dialog-margin: 24px;
+@use '../sharedMixins' as mixins;
+
 $content-height: 480px;
 // Title and action rows plus the space kept around the dialog.
 $chrome-height: 220px;
 
 .dialog {
-  display: flex;
-  flex-direction: column;
-  width: min(#{$dialog-max-width}, calc(100vw - #{2 * $dialog-margin}));
-  overflow: hidden;
-  border-radius: var(--shape-xl);
-  box-shadow: var(--shadow-lg);
-  font-family: var(--font-family-main);
-
-  // The design system's close button, moved into the title row.
-  > button {
-    inset-block-start: 24px;
-    inset-inline-end: 20px;
-  }
+  @include mixins.modal;
 }
 
 .titleRow {
-  display: flex;
-  align-items: center;
-  padding: 18px 56px 18px 24px;
-  border-bottom: 1px solid var(--border-neutral-primary);
+  @include mixins.modal-title-row;
 }
 
 .content {
@@ -32,9 +17,5 @@ $chrome-height: 220px;
 }
 
 .actionRow {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  padding: 18px 20px 18px 24px;
-  border-top: 1px solid var(--border-neutral-primary);
+  @include mixins.modal-action-row;
 }
