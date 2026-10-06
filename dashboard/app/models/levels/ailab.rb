@@ -82,6 +82,7 @@ class Ailab < Level
   end
 
   # Markdown of every screen's instructions, for readers who never see the screens.
+  # Always use this method for lab2 AI Lab levels rather than calling properties['long_instructions'] directly.
   def generated_long_instructions
     return nil unless uses_lab2?
 
