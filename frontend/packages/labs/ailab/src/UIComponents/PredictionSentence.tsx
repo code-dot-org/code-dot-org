@@ -1,4 +1,5 @@
 /* The "Predict … based on …" sentence, with the label and features as tags. */
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -41,18 +42,28 @@ const PredictionSentence = ({
       )}
     >
       <span className={appStyles.visuallyHidden}>{readableSentence}</span>
-      <span aria-hidden="true" className={styles.text}>
+      <Typography
+        component="span"
+        variant="body4"
+        aria-hidden="true"
+        className={styles.text}
+      >
         Predict
-      </span>
+      </Typography>
       <SentenceTag
         text={labelName}
         placeholder="label"
         variant="label"
         size={size}
       />
-      <span aria-hidden="true" className={styles.text}>
+      <Typography
+        component="span"
+        variant="body4"
+        aria-hidden="true"
+        className={styles.text}
+      >
         based on
-      </span>
+      </Typography>
       {features.length > 0 ? (
         features.map(feature => (
           <SentenceTag
