@@ -2,7 +2,7 @@
 // four choices: the wave, how high, how long, and how the pitch moves. A
 // preset is a named sequence of notes.
 
-import {startVoice, wake} from './audioFeedback/audioVoice';
+import {wake} from './audioFeedback/audioVoice';
 
 export const WAVES = [
   'sine',
@@ -225,6 +225,15 @@ const STALE_MS = 1000;
 // A block fired every frame could pile up voices; past this many, a new
 // sound is dropped. Each voice costs the audio thread one oscillator.
 const MAX_LIVE_VOICES = 32;
+// Every play is nudged up to this far in pitch, so repeats don't sound
+// mechanical; one factor per play keeps a run in tune with itself.
+const HUMANIZE = 0.02;
+// A low-pass filter on each voice opens this far above the note and closes
+// toward it as the note fades, which rounds off a raw wave's fizz.
+const FILTER_OPEN_RATIO = 6;
+const FILTER_CLOSED_RATIO = 1.5;
+const FILTER_MAX_HZ = 12000;
+const FILTER_MIN_HZ = 200;
 
 interface Playing {
   source: AudioScheduledSourceNode;
@@ -232,6 +241,7 @@ interface Playing {
 }
 
 let context: AudioContext | null = null;
+let bus: DynamicsCompressorNode | null = null;
 let noise: AudioBuffer | null = null;
 const live = new Set<Playing>();
 let pending: {notes: Note[]; askedAt: number} | null = null;
@@ -252,6 +262,21 @@ function audioContext(): AudioContext | null {
   return context;
 }
 
+/** Every voice ends here: a compressor evens the loudness of overlapping
+    sounds and of the waves against each other. */
+function outputBus(ctx: AudioContext): AudioNode {
+  if (!bus) {
+    bus = ctx.createDynamicsCompressor();
+    bus.threshold.value = -18;
+    bus.knee.value = 12;
+    bus.ratio.value = 4;
+    bus.attack.value = 0.003;
+    bus.release.value = 0.15;
+    bus.connect(ctx.destination);
+  }
+  return bus;
+}
+
 // ?quiet on the URL turns the sounds off.
 const muted = (): boolean =>
   typeof window !== 'undefined' &&
@@ -268,66 +293,101 @@ function noiseBuffer(ctx: AudioContext): AudioBuffer {
   return noise;
 }
 
-/** A noise voice: looped white noise through a bandpass filter, whose
-    center frequency plays the part an oscillator's frequency does. */
-function startNoise(
+interface Voice extends Playing {
+  /** The pitch a slide or wobble drives: an oscillator's frequency, or a
+      noise voice's bandpass center. */
+  frequency: AudioParam;
+  /** The first node after the source, where the voice's filter attaches. */
+  tail: AudioNode;
+}
+
+function startOscillator(
   ctx: AudioContext,
+  type: OscillatorType,
   hz: number,
   start: number
-): Playing & {frequency: AudioParam} {
+): Voice {
+  const source = ctx.createOscillator();
+  source.type = type;
+  source.frequency.value = hz;
+  source.start(start);
+  return {
+    source,
+    gain: ctx.createGain(),
+    frequency: source.frequency,
+    tail: source,
+  };
+}
+
+/** Looped white noise through a bandpass filter whose center frequency
+    plays the part an oscillator's frequency does. */
+function startNoise(ctx: AudioContext, hz: number, start: number): Voice {
   const source = ctx.createBufferSource();
   source.buffer = noiseBuffer(ctx);
   source.loop = true;
-  const filter = ctx.createBiquadFilter();
-  filter.type = 'bandpass';
-  filter.frequency.value = hz;
-  filter.Q.value = NOISE_Q;
-  const gain = ctx.createGain();
-  gain.gain.value = 0;
-  source.connect(filter);
-  filter.connect(gain);
-  gain.connect(ctx.destination);
+  const band = ctx.createBiquadFilter();
+  band.type = 'bandpass';
+  band.frequency.value = hz;
+  band.Q.value = NOISE_Q;
+  source.connect(band);
   source.start(start);
-  return {source, gain, frequency: filter.frequency};
+  return {
+    source,
+    gain: ctx.createGain(),
+    frequency: band.frequency,
+    tail: band,
+  };
 }
+
+const clampHz = (hz: number) =>
+  Math.min(FILTER_MAX_HZ, Math.max(FILTER_MIN_HZ, hz));
 
 function schedule(ctx: AudioContext, notes: Note[]): void {
   if (live.size + notes.length > MAX_LIVE_VOICES) {
     return;
   }
   const now = ctx.currentTime;
+  const nudge = 1 + (Math.random() * 2 - 1) * HUMANIZE;
   for (const note of notes) {
+    const hz = note.hz * nudge;
     const start = now + note.at;
     const end = start + note.seconds;
-    let playing: Playing & {frequency: AudioParam};
-    if (note.type === 'noise') {
-      playing = startNoise(ctx, note.hz, start);
-    } else {
-      const {oscillator, gain} = startVoice(ctx, note.type, note.hz);
-      playing = {source: oscillator, gain, frequency: oscillator.frequency};
-    }
-    const {source, gain, frequency} = playing;
+    const voice =
+      note.type === 'noise'
+        ? startNoise(ctx, hz, start)
+        : startOscillator(ctx, note.type, hz, start);
+    const {source, gain, frequency, tail} = voice;
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(clampHz(hz * FILTER_OPEN_RATIO), start);
+    filter.frequency.exponentialRampToValueAtTime(
+      clampHz(hz * FILTER_CLOSED_RATIO),
+      end
+    );
+    tail.connect(filter);
+    filter.connect(gain);
+    gain.connect(outputBus(ctx));
     gain.gain.setValueAtTime(0, start);
     gain.gain.linearRampToValueAtTime(note.volume, start + ATTACK_S);
     gain.gain.exponentialRampToValueAtTime(SILENCE, end);
     if (note.slideTo) {
-      frequency.setValueAtTime(note.hz, start);
-      frequency.exponentialRampToValueAtTime(note.slideTo, end);
+      frequency.setValueAtTime(hz, start);
+      frequency.exponentialRampToValueAtTime(note.slideTo * nudge, end);
     }
     if (note.wobble) {
       const lfo = ctx.createOscillator();
       const depth = ctx.createGain();
       lfo.frequency.value = WOBBLE_RATE_HZ;
-      depth.gain.value = note.hz * WOBBLE_DEPTH;
+      depth.gain.value = hz * WOBBLE_DEPTH;
       lfo.connect(depth);
       depth.connect(frequency);
       lfo.start(start);
       lfo.stop(end);
     }
     source.stop(end);
-    live.add(playing);
+    live.add(voice);
     source.onended = () => {
-      live.delete(playing);
+      live.delete(voice);
       source.disconnect();
       gain.disconnect();
     };

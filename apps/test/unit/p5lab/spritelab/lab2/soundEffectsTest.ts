@@ -158,6 +158,7 @@ describe('playNotes', () => {
   const oscillators: FakeOscillator[] = [];
   const noiseSources: {start: jest.Mock; stop: jest.Mock; loop: boolean}[] = [];
   const filters: {type: string; frequency: FakeParam}[] = [];
+  const compressors: object[] = [];
   let state = 'running';
 
   class FakeAudioContext {
@@ -205,6 +206,18 @@ describe('playNotes', () => {
       noiseSources.push(source);
       return source;
     }
+    createDynamicsCompressor() {
+      const compressor = {
+        threshold: param(),
+        knee: param(),
+        ratio: param(),
+        attack: param(),
+        release: param(),
+        connect: jest.fn(),
+      };
+      compressors.push(compressor);
+      return compressor;
+    }
     createBiquadFilter() {
       const filter = {
         type: '',
@@ -220,11 +233,19 @@ describe('playNotes', () => {
   // Voices with a stop time are the notes; a wobble adds a vibrato
   // oscillator stopped the same way, so count by frequency instead.
   const noteOscillators = () => oscillators.filter(o => o.frequency.value > 20);
+  // Each play is nudged up to 2% in pitch.
+  const near = (value: number, hz: number) =>
+    Math.abs(value - hz) / hz <= 0.021;
+  const rampTarget = (p: FakeParam) =>
+    p.exponentialRampToValueAtTime.mock.calls.at(-1)?.[0] as number;
+  const rampTime = (p: FakeParam) =>
+    p.exponentialRampToValueAtTime.mock.calls.at(-1)?.[1] as number;
 
   beforeEach(() => {
     oscillators.length = 0;
     noiseSources.length = 0;
     filters.length = 0;
+    compressors.length = 0;
     state = 'running';
     (window as unknown as {AudioContext: unknown}).AudioContext =
       FakeAudioContext;
@@ -250,9 +271,34 @@ describe('playNotes', () => {
     playSoundEffect(jump);
     const [oscillator] = oscillators;
     const [note] = notesFor(jump);
-    expect(
-      oscillator.frequency.exponentialRampToValueAtTime
-    ).toHaveBeenCalledWith(note.slideTo, 10 + note.seconds);
+    expect(near(rampTarget(oscillator.frequency), note.slideTo!)).toBe(true);
+    expect(rampTime(oscillator.frequency)).toBe(10 + note.seconds);
+  });
+
+  it('keeps a run in tune with itself under the pitch nudge', () => {
+    const notes = notesFor({...jump, pattern: 'run up', length: 'long'});
+    playNotes(notes);
+    const ratios = noteOscillators().map(
+      (o, i) => o.frequency.value / notes[i].hz
+    );
+    ratios.forEach(ratio => expect(ratio).toBeCloseTo(ratios[0], 6));
+    expect(near(noteOscillators()[0].frequency.value, notes[0].hz)).toBe(true);
+  });
+
+  it('puts a closing low-pass filter and the shared compressor on each voice', () => {
+    playSoundEffect({...jump, pattern: 'steady'});
+    const lowpass = filters.filter(f => f.type === 'lowpass');
+    expect(lowpass).toHaveLength(1);
+    const [note] = notesFor({...jump, pattern: 'steady'});
+    const opened = lowpass[0].frequency.setValueAtTime.mock.calls[0][0];
+    expect(opened).toBeGreaterThan(rampTarget(lowpass[0].frequency));
+    expect(rampTarget(lowpass[0].frequency)).toBeGreaterThan(note.hz * 0.9);
+    // The bus lives with the module's context, so an earlier test may have
+    // made it; this test never adds a second.
+    const made = compressors.length;
+    expect(made).toBeLessThanOrEqual(1);
+    playSoundEffect({...jump, pattern: 'steady'});
+    expect(compressors).toHaveLength(made);
   });
 
   it('drives a wobble from a second oscillator', () => {
@@ -270,11 +316,10 @@ describe('playNotes', () => {
     expect(noiseSources).toHaveLength(1);
     expect(noiseSources[0].loop).toBe(true);
     expect(noiseSources[0].stop).toHaveBeenCalledWith(10 + note.seconds);
-    expect(filters[0].type).toBe('bandpass');
-    expect(filters[0].frequency.value).toBe(note.hz);
-    expect(
-      filters[0].frequency.exponentialRampToValueAtTime
-    ).toHaveBeenCalledWith(note.slideTo, 10 + note.seconds);
+    const band = filters.find(f => f.type === 'bandpass')!;
+    expect(near(band.frequency.value, note.hz)).toBe(true);
+    expect(near(rampTarget(band.frequency), note.slideTo!)).toBe(true);
+    expect(rampTime(band.frequency)).toBe(10 + note.seconds);
   });
 
   it('plays a preset', () => {
@@ -306,9 +351,12 @@ describe('playNotes', () => {
     expect(oscillators).toHaveLength(0);
     await new Promise(resolve => setTimeout(resolve, 0));
     expect(oscillators).toHaveLength(1);
-    expect(oscillators[0].frequency.value).toBe(
-      notesFor({...jump, pattern: 'steady', pitch: 'low'})[0].hz
-    );
+    expect(
+      near(
+        oscillators[0].frequency.value,
+        notesFor({...jump, pattern: 'steady', pitch: 'low'})[0].hz
+      )
+    ).toBe(true);
   });
 
   it('drops a sound once too many voices are live', () => {
