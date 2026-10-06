@@ -16,6 +16,7 @@ export function eventHat(this: BlocklyCore.Block): void {
 export const WHEN_PLAYER_OPTIONS: [string, string][] = [
   ['walks', 'walk'],
   ['jumps', 'jump'],
+  ['lands', 'land'],
   ['bumps', 'bump'],
 ];
 

@@ -50,8 +50,9 @@ function run(frames: PlayerFrame[], stepMs = 16): PlayerAction[][] {
 }
 
 describe('isPlayerAction', () => {
-  it('knows the three actions', () => {
+  it('knows the four actions', () => {
     expect(isPlayerAction('walk')).toBe(true);
+    expect(isPlayerAction('land')).toBe(true);
     expect(isPlayerAction('bump')).toBe(true);
     expect(isPlayerAction('fly')).toBe(false);
     expect(isPlayerAction(3)).toBe(false);
@@ -116,6 +117,18 @@ describe('createPlayerActionTracker', () => {
       frame(140, STANDING_Y + 4, {}, ledge),
     ]);
     expect(fall[1]).not.toContain('jump');
+  });
+
+  it('lands when the player reaches the ground again', () => {
+    const actions = run([
+      frame(100, STANDING_Y - 30),
+      frame(100, STANDING_Y - 12),
+      frame(100, STANDING_Y),
+      frame(100, STANDING_Y),
+    ]);
+    expect(actions[1]).not.toContain('land');
+    expect(actions[2]).toContain('land');
+    expect(actions[3]).not.toContain('land');
   });
 
   it('bumps once when a move into a wall is refused', () => {

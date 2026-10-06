@@ -1,12 +1,13 @@
-// The player's actions as program events: a walk beat, a jump, a bump. The
-// engine feeds one frame per tick; the tracker keeps the frame before it.
+// The player's actions as program events: a walk beat, a jump, a landing,
+// a bump. The engine feeds one frame per tick; the tracker keeps the frame
+// before it.
 
 import {refused} from './audioFeedback/movementEvents';
 import {ObservedFrame} from './audioFeedback/playerObserver';
 import {isMoving} from './characterAnimations';
 import {isSupported} from './platformPhysics';
 
-export const PLAYER_ACTIONS = ['walk', 'jump', 'bump'] as const;
+export const PLAYER_ACTIONS = ['walk', 'jump', 'land', 'bump'] as const;
 export type PlayerAction = (typeof PLAYER_ACTIONS)[number];
 
 export function isPlayerAction(value: unknown): value is PlayerAction {
@@ -87,6 +88,9 @@ export function createPlayerActionTracker(): PlayerActionTracker {
 
       if (last.grounded && !grounded && movedUp > 0) {
         actions.add('jump');
+      }
+      if (!last.grounded && grounded) {
+        actions.add('land');
       }
 
       const wall = isMoving(requested) && refused(requested, moved);
