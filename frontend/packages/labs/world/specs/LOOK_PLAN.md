@@ -88,8 +88,8 @@ specs/CANVAS_FIRST.md's step 4, after Input and Motion
 - A world's background COLOUR has no control on the map, so the lesson's
   starting state is still a block. It belongs with the world's own
   properties, which is the world inspector's question.
-- The import row is on both slots, so a foreground can be brought in the
-  same way; no lesson uses a foreground yet.
+- The import row was on both slots; foregrounds are retired since
+  (specs/LAYERS_PLAN.md), and a layer's one slot keeps it.
 - `look/animation` and `look/drawing` and `look/effect` stay in the
   workspace.
 

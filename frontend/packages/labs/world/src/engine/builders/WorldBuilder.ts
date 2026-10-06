@@ -506,11 +506,6 @@ export class WorldBuilder {
     return this.defer('setMusic', track);
   }
 
-  /** Draw an image in front of a layer's actors. See {@link World.setForeground}. */
-  setForeground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
-    return this.defer('setForeground', sprite, layer);
-  }
-
   /**
    * Say which theme this world's interface is painted in.
    *
@@ -544,19 +539,9 @@ export class WorldBuilder {
     return this.defer('setBackgroundOffset', offset, layer);
   }
 
-  /** Slide a layer's foreground. */
-  setForegroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
-    return this.defer('setForegroundOffset', offset, layer);
-  }
-
   /** Tile a layer's background rather than stretching it. */
   setBackgroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
     return this.defer('setBackgroundRepeat', repeat, layer);
-  }
-
-  /** Tile a layer's foreground rather than stretching it. */
-  setForegroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
-    return this.defer('setForegroundRepeat', repeat, layer);
   }
 
   /**
@@ -580,21 +565,6 @@ export class WorldBuilder {
   /** Stop an effect on the backdrop. Removing one not playing is a no-op. */
   removeBackgroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
     return this.defer('removeBackgroundEffect', path, layer);
-  }
-
-  /** Play an effect on a layer's foreground. See {@link World.addForegroundEffect}. */
-  addForegroundEffect(
-    path: string,
-    document: EffectDocument,
-    values?: AppliedEffectSpec['values'],
-    layer = DEFAULT_LAYER_ID,
-  ): this {
-    return this.defer('addForegroundEffect', path, document, values, layer);
-  }
-
-  /** Stop an effect on a layer's foreground. */
-  removeForegroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
-    return this.defer('removeForegroundEffect', path, layer);
   }
 
   /** Play an effect on a whole layer. See {@link World.addLayerEffect}. */

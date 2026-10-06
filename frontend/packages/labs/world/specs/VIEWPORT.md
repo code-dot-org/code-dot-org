@@ -391,6 +391,8 @@ and both are wanted.
 
 ### A layer's background and foreground
 
+(FOREGROUNDS RETIRED, Oct 2026: a layer has one image slot, its background. A foreground was the background of a layer one further forward by another name, so something in front of the actors is a layer above them, made in the map editor; specs/LAYERS_PLAN.md, "Foregrounds retired".)
+
 A Layer has a BACKGROUND image, drawn behind its actors, and a FOREGROUND image,
 drawn in front of them. Both are properties of the layer rather than objects in
 their own right, and they inherit the layer's factor and fit for free. There is

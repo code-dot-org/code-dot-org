@@ -37,11 +37,8 @@ import {Vector} from './Vector';
  */
 export const DEFAULT_LAYER_ID = 'main';
 
-/** Which of a layer's two image slots is meant. */
-export type SlotName = 'background' | 'foreground';
-
 /**
- * An image drawn with a layer — behind its actors, or in front of them.
+ * An image drawn with a layer, behind its actors.
  *
  * This is what a 'backdrop' was. A world used to hold a flat stack of them at
  * a fixed negative depth; they belong to a layer, because a layer is already
@@ -127,15 +124,9 @@ export interface Layer {
    * This is the one in between: blur the game and leave the HUD sharp.
    */
   readonly effects: AppliedEffectSpec[];
-  /**
-   * Drawn in front of this layer's actors.
-   *
-   * The same object as the background and drawn by the same code — fog over the
-   * game, a vignette, snow. Which side of the actors it lands on is the only
-   * difference, and it is a depth rather than a kind. That is why a "foreground
-   * layer" is not a thing anyone has to make: any layer has one.
-   */
-  readonly foreground: LayerSlot;
+  // NO FOREGROUND. A layer had a second slot drawn in front of its actors,
+  // and it was the background of a layer one further forward by another name:
+  // fog over the game is a layer above it with an image (specs/LAYERS_PLAN.md).
 }
 
 /** A layer with its defaults filled in. */
@@ -151,7 +142,6 @@ export interface MapLayer {
   parallax?: {x: number; y: number};
   fit?: boolean;
   background?: MapSlot;
-  foreground?: MapSlot;
 }
 
 /** A slot's starting values in a map: the image, how it fills, where it sits. */
@@ -186,7 +176,6 @@ export function layersOfMap(layers: readonly MapLayer[] | undefined): Layer[] {
       fit: layer.fit,
     }),
     background: slotFrom(layer.background),
-    foreground: slotFrom(layer.foreground),
   }));
   return made.some(layer => layer.id === DEFAULT_LAYER_ID)
     ? made
@@ -201,6 +190,5 @@ export function makeLayer(init: LayerInit): Layer {
     fit: init.fit ?? false,
     effects: [],
     background: emptySlot(),
-    foreground: emptySlot(),
   };
 }

@@ -213,11 +213,8 @@ describe('the `world` surface the blocks generate against', () => {
       'setBackground',
       'setBackgroundOffset',
       'setBackgroundRepeat',
-      'setForeground',
-      'setForegroundOffset',
-      'setForegroundRepeat',
       'addLayerEffect',
-      'removeForegroundEffect',
+      'removeBackgroundEffect',
     ]) {
       expect(names, name).toContain(name);
     }

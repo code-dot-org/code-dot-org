@@ -100,11 +100,10 @@ const cameraOffset = (
 });
 const DEGREES_TO_RADIANS = Math.PI / 180;
 // Depths WITHIN one layer's container. The container itself carries the layer's
-// place in the stack, so these three are all the ordering a layer needs: its
-// background behind its actors, its foreground in front of them.
+// place in the stack, so these two are all the ordering a layer needs: its
+// background behind its actors. Something in front of them is a layer above.
 const BACKGROUND_DEPTH = 0;
 const ACTOR_DEPTH = 1;
-const FOREGROUND_DEPTH = 2;
 
 /**
  * The name of a texture frame for `cell`, registering it on first use.
@@ -326,12 +325,11 @@ export class PhaserBinding {
         mirrors: string | undefined;
         /**
          * The space's own layers, back to front (specs/LAYERS_PLAN.md): a
-         * container each inside `inner`, and the two slots' images by layer
-         * index, as the world's are kept.
+         * container each inside `inner`, and the backgrounds' images by
+         * layer index, as the world's are kept.
          */
         layers: Array<Phaser.GameObjects.Container | undefined>;
         backdrops: Array<SlotObject | undefined>;
-        foregrounds: Array<SlotObject | undefined>;
       }
     >();
     // The backdrop layers' images, by layer index — created on demand, because
@@ -385,9 +383,6 @@ export class PhaserBinding {
     };
 
     const backdrops: Array<SlotObject | undefined> = [];
-    // The foregrounds' own images. A separate cache because they are separate
-    // objects at separate depths; nothing either holds concerns the other.
-    const foregrounds: Array<SlotObject | undefined> = [];
     // Every key currently held (by our name, `engine/core/keys`); fed to the
     // engine each frame. `update` reads it; the listeners below keep it current.
     const downKeys = new Set<string>();
@@ -590,7 +585,7 @@ export class PhaserBinding {
      * actors' and would cover them.
      */
     /**
-     * Draw one list of image slots — the backgrounds, or the foregrounds.
+     * Draw one list of image slots: the layers' backgrounds.
      *
      * A slot is an Image when it stretches and a TileSprite when it repeats,
      * because those are two different Phaser objects and only the second can
@@ -737,16 +732,6 @@ export class PhaserBinding {
         world.backdropSnapshot() as BackdropState[],
         backdrops,
         BACKGROUND_DEPTH,
-        shiftOfLayer,
-        parallaxOfLayer,
-        mapSize,
-        viewSize,
-      );
-      syncSlots(
-        scene,
-        world.foregroundSnapshot() as BackdropState[],
-        foregrounds,
-        FOREGROUND_DEPTH,
         shiftOfLayer,
         parallaxOfLayer,
         mapSize,
@@ -1167,7 +1152,6 @@ export class PhaserBinding {
             mirrors: space.mirrors,
             layers: [],
             backdrops: [],
-            foregrounds: [],
           };
           spaceHosts.set(space.id, host);
         }
@@ -1222,17 +1206,6 @@ export class PhaserBinding {
           space.layers.map(layer => layer.background),
           held.backdrops,
           BACKGROUND_DEPTH,
-          shiftOf,
-          parallaxOf,
-          space.bounds,
-          space.view,
-          intoSpaceLayer,
-        );
-        syncSlots(
-          scene,
-          space.layers.map(layer => layer.foreground),
-          held.foregrounds,
-          FOREGROUND_DEPTH,
           shiftOf,
           parallaxOf,
           space.bounds,

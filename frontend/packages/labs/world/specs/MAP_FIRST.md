@@ -445,6 +445,8 @@ on the layer the block says.
 
 ### Backgrounds, foregrounds and parallax under this model
 
+(FOREGROUNDS RETIRED, Oct 2026: a layer has one image slot, its background. A foreground was the background of a layer one further forward by another name, so something in front of the actors is a layer above them, made in the map editor; specs/LAYERS_PLAN.md, "Foregrounds retired".)
+
 VIEWPORT.md's layer model is kept whole: a layer has a background slot drawn
 behind its actors and a foreground slot drawn in front, each with repeat or
 stretch and an offset, and the layer has a per-axis parallax factor. What

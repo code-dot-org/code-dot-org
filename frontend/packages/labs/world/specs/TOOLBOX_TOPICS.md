@@ -24,7 +24,7 @@ The two drawers are six, each named for its topic:
 | **World**       | `define world`, its properties and events, theme, map and view size, adding and removing actors, pausing, tweens, typing, world effects, `any ⟨kind⟩` |
 | **Map**         | loading and unloading maps, into a Viewport too; and in a map's own workspaces, the blocks a map is written with |
 | **Cameras**     | defining, using, moving and naming cameras; camera traits; `this camera` |
-| **Backgrounds** | the background and foreground slots, colour, their effects; layers, parallax and layer effects |
+| **Backgrounds** | each layer's background, the colour behind everything, their effects; layers, parallax and layer effects |
 | **Memory**      | saving, recalling and forgetting what the world remembers, and records |
 | **Clock**       | how long the game has run, and what time it is out there              |
 
@@ -41,9 +41,11 @@ Every block is in exactly one of them, the same sixty-eight as before.
   blocks to a map's workspaces; in a map file it shows both halves.
 - **`add actor` stays in World**, beside `remove actor`: it places one
   actor, where loading a map places many.
-- **Layers live with Backgrounds.** A layer is what a background and a
-  foreground belong to; somebody looking for either finds the layer blocks
-  beside them.
+- **Layers live with Backgrounds.** A layer is what a background belongs
+  to; somebody looking for one finds the layer blocks beside it.
+- **Foregrounds are gone** since this split (specs/LAYERS_PLAN.md,
+  "Foregrounds retired"), which took six blocks out of Backgrounds: what
+  was in front of the actors is a layer above them.
 - **Gating is unchanged.** The lesson shelf narrows a drawer that holds any
   block a lesson grants, and every new drawer holds such a block, so each
   hides exactly the blocks the one World drawer hid. The shelf's ledger

@@ -13,7 +13,8 @@ const LAYERS = [
     background: {sprite: 'sky.png', repeat: true, offset: {x: 4, y: 0}},
   },
   {id: 'main'},
-  {id: 'layer2', name: 'Fog', fit: true, foreground: {sprite: 'fog.png'}},
+  // Fog over the game: a layer in front of it, with a background of its own.
+  {id: 'layer2', name: 'Fog', fit: true, background: {sprite: 'fog.png'}},
 ];
 
 describe('mainMapLayersOf', () => {
@@ -38,7 +39,7 @@ describe('layerDeclarations', () => {
         'world.setBackground("sky.png", "layer1");\n' +
         'world.setBackgroundRepeat(true, "layer1");\n' +
         'world.setBackgroundOffset(new WorldLab.Vector(4, 0), "layer1");\n' +
-        'world.setForeground("fog.png", "layer2");\n',
+        'world.setBackground("fog.png", "layer2");\n',
     );
   });
 

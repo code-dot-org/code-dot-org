@@ -369,9 +369,6 @@ const world = (held: {
     backdropSnapshot: () => [
       {effects: [], offset: {x: 0, y: 0}, repeat: false},
     ],
-    foregroundSnapshot: () => [
-      {effects: [], offset: {x: 0, y: 0}, repeat: false},
-    ],
     backdropColor: () => [0, 0, 0, 1],
     mapBounds: () => ({x: 320, y: 320}),
     viewSize: () => ({x: 320, y: 320}),
@@ -416,14 +413,12 @@ const world = (held: {
                   parallax: {x: 0.5, y: 0},
                   fit: false,
                   background: slot('sky.png'),
-                  foreground: slot(),
                 },
                 {
                   id: 'main',
                   parallax: {x: 1, y: 1},
                   fit: false,
                   background: slot(),
-                  foreground: slot(),
                 },
               ],
             },

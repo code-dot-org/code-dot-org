@@ -16,13 +16,13 @@ vi.mock('../../appearance/appearanceImport', () => ({
 const {LayerInspector, IMPORT_SLOT} = await import('../LayerInspector');
 
 const mount = (backgrounds: string[] = ['sky.png']) => {
-  const onSlot = vi.fn();
+  const onBackground = vi.fn();
   render(
     <LayerInspector
       layer={{id: 'main'}}
       backgrounds={backgrounds}
       onChange={vi.fn()}
-      onSlot={onSlot}
+      onBackground={onBackground}
       onClose={vi.fn()}
       isReadOnly={false}
     />,
@@ -31,7 +31,7 @@ const mount = (backgrounds: string[] = ['sky.png']) => {
     fireEvent.change(screen.getByRole('combobox', {name: 'Background'}), {
       target: {value},
     });
-  return {onSlot, pick};
+  return {onBackground, pick};
 };
 
 describe('a layer’s background', () => {
@@ -44,27 +44,27 @@ describe('a layer’s background', () => {
   });
 
   it('takes a file the project holds straight away', () => {
-    const {onSlot, pick} = mount();
+    const {onBackground, pick} = mount();
     pick('sky.png');
-    expect(onSlot).toHaveBeenCalledWith('background', {sprite: 'sky.png'});
+    expect(onBackground).toHaveBeenCalledWith({sprite: 'sky.png'});
     expect(requestAppearanceImport).not.toHaveBeenCalled();
   });
 
   it('asks the lab for one it has not, and takes what comes back', async () => {
     imported = 'cave.png';
-    const {onSlot, pick} = mount();
+    const {onBackground, pick} = mount();
     pick(IMPORT_SLOT);
     expect(requestAppearanceImport).toHaveBeenCalledWith('background');
     await vi.waitFor(() =>
-      expect(onSlot).toHaveBeenCalledWith('background', {sprite: 'cave.png'}),
+      expect(onBackground).toHaveBeenCalledWith({sprite: 'cave.png'}),
     );
   });
 
   it('changes nothing when the learner backs out of the library', async () => {
     imported = undefined;
-    const {onSlot, pick} = mount();
+    const {onBackground, pick} = mount();
     pick(IMPORT_SLOT);
     await Promise.resolve();
-    expect(onSlot).not.toHaveBeenCalled();
+    expect(onBackground).not.toHaveBeenCalled();
   });
 });

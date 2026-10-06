@@ -61,8 +61,6 @@ interface ReconcilableWorld {
      * layer, and restarting for one would restart sixty times a second.
      */
     backdrops: SlotValues[];
-    /** And what each draws in front of its actors. */
-    foregrounds: SlotValues[];
     /** The one color behind everything (engine color.ts). */
     clearColor: [number, number, number, number];
     /** The track playing, or undefined for silence (specs/SOUND.md). */
@@ -73,15 +71,12 @@ interface ReconcilableWorld {
   setWorldProperty(path: string, value: unknown): boolean;
   setActorProperty(actorId: string, path: string, value: unknown): boolean;
   setBackground(sprite: string | undefined, layer?: string): unknown;
-  setForeground(sprite: string | undefined, layer?: string): unknown;
   setCameraPosition(position: {x: number; y: number}, id?: string): unknown;
   setActiveCamera(id: string): unknown;
   setLayerParallax(parallax: {x: number; y: number}, layer?: string): unknown;
   setLayerFit(fit: boolean, layer?: string): unknown;
   setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
-  setForegroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
   setBackgroundRepeat(repeat: boolean, layer?: string): unknown;
-  setForegroundRepeat(repeat: boolean, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
   setMusic(track: string | undefined): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
@@ -174,7 +169,6 @@ export function reconcile(
     previous.activeCamera !== snapshot.activeCamera ||
     stable(previous.layerMotion) !== stable(snapshot.layerMotion) ||
     stable(previous.backdrops) !== stable(snapshot.backdrops) ||
-    stable(previous.foregrounds) !== stable(snapshot.foregrounds) ||
     stable(previous.clearColor) !== stable(snapshot.clearColor);
 
   // Actor values the LEARNER changed — not values that have merely moved.
@@ -256,11 +250,6 @@ export function reconcile(
       running.setBackground(slot.sprite, slot.layer);
       running.setBackgroundOffset(slot.offset, slot.layer);
       running.setBackgroundRepeat(slot.repeat, slot.layer);
-    }
-    for (const slot of snapshot.foregrounds) {
-      running.setForeground(slot.sprite, slot.layer);
-      running.setForegroundOffset(slot.offset, slot.layer);
-      running.setForegroundRepeat(slot.repeat, slot.layer);
     }
     // One sky, the world's — not a layer's (World.setBackgroundColor).
     running.setBackgroundColor(snapshot.clearColor);

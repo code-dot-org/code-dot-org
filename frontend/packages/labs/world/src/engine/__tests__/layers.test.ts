@@ -189,39 +189,14 @@ describe('a layer’s background', () => {
   });
 });
 
-describe('a layer’s foreground', () => {
-  const built = () =>
-    new WorldBuilder({id: 'w', name: 'W'})
-      .defineLayer({id: 'game'})
-      .defineLayer({id: DEFAULT_LAYER_ID})
-      .instantiate();
-
-  it('is the background’s twin, on the other side of the actors', () => {
-    const world = built();
-    world.setBackground('sky.png', 'game');
-    world.setForeground('fog.png', 'game');
-
-    expect(world.backdropSnapshot()[0].sprite).toBe('sky.png');
-    expect(world.foregroundSnapshot()[0].sprite).toBe('fog.png');
-    // Independent slots: setting one does not disturb the other.
-    world.setBackground(undefined, 'game');
-    expect(world.foregroundSnapshot()[0].sprite).toBe('fog.png');
-  });
-
-  it('is empty on every layer until something says otherwise', () => {
-    expect(built().foregroundSnapshot()).toEqual([EMPTY_SLOT, EMPTY_SLOT]);
-  });
-
-  it('carries effects under a key of its own', () => {
-    // `backdrop:` and `foreground:` on the same layer are two carriers, not
-    // one — otherwise fogging a layer would retune its sky.
-    const world = built();
-    world.addBackgroundEffect('effects/ripple', RIPPLE, undefined, 'game');
-    world.addForegroundEffect('effects/ripple', RIPPLE, undefined, 'game');
-
-    const {effectIds} = world.snapshot();
-    expect(effectIds).toContain('["backdrop:game","effects/ripple"]');
-    expect(effectIds).toContain('["foreground:game","effects/ripple"]');
+describe('a layer’s one image', () => {
+  // A layer has a background and nothing in front of its actors: something in
+  // front is a layer above, with a background of its own (specs/LAYERS_PLAN.md).
+  it('has no foreground to set', () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+    expect('setForeground' in world).toBe(false);
+    expect('foregroundSnapshot' in world).toBe(false);
+    expect(world.layerSnapshot()[0]).not.toHaveProperty('foreground');
   });
 });
 
@@ -249,8 +224,6 @@ describe('sliding a slot', () => {
 
     expect(world.backdropSnapshot()[0].offset).toEqual(new Vector(12, -4));
     expect(world.backdropSnapshot()[1].offset).toEqual(new Vector(0, 0));
-    // A layer's two slots drift independently — fog and sky at once.
-    expect(world.foregroundSnapshot()[0].offset).toEqual(new Vector(0, 0));
   });
 
   it('copies the vector rather than holding the caller’s', () => {
@@ -316,8 +289,8 @@ describe('an effect on a layer itself', () => {
   });
 
   it('travels under a key of its own, beside the slots’', () => {
-    // Three carriers on one layer — the layer, its background, its foreground —
-    // so filtering the layer must not retune its sky.
+    // Two carriers on one layer — the layer and its background — so filtering
+    // the layer must not retune its sky.
     const world = built();
     world.addLayerEffect('effects/blur', RIPPLE, undefined, 'game');
     world.addBackgroundEffect('effects/blur', RIPPLE, undefined, 'game');

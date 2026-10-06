@@ -104,7 +104,6 @@ export interface MapLayerDoc {
   /** Fixed to the screen: it does not consult the camera at all. */
   fit?: boolean;
   background?: MapSlotDoc;
-  foreground?: MapSlotDoc;
 }
 
 /**
@@ -182,21 +181,20 @@ export function withLayer(
   };
 }
 
-/** The map with one slot of one layer changed; an empty slot is dropped. */
-export function withSlot(
+/** The map with one layer's background changed; an empty one is dropped. */
+export function withBackground(
   doc: MapDoc,
   id: string,
-  which: 'background' | 'foreground',
   change: Partial<MapSlotDoc>,
 ): MapDoc {
   const layer = layersOf(doc).find(held => held.id === id);
-  const next: MapSlotDoc = {...layer?.[which], ...change};
+  const next: MapSlotDoc = {...layer?.background, ...change};
   if (!next.sprite) {
     delete next.sprite;
   }
   const empty =
     !next.sprite && !next.repeat && !(next.offset?.x || next.offset?.y);
-  return withLayer(doc, id, {[which]: empty ? undefined : next});
+  return withLayer(doc, id, {background: empty ? undefined : next});
 }
 
 /** A placement on a layer; the default is said by saying nothing. */

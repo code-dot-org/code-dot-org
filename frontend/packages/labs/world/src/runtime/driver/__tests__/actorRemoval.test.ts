@@ -148,9 +148,6 @@ const world = (actors: string[]) => {
       backdropSnapshot: () => [
         {effects: [], offset: {x: 0, y: 0}, repeat: false},
       ],
-      foregroundSnapshot: () => [
-        {effects: [], offset: {x: 0, y: 0}, repeat: false},
-      ],
       backdropColor: () => [0, 0, 0, 1],
       // Only the backdrop code reads them; one viewport is a world with no
       // map, seen through the standard window.

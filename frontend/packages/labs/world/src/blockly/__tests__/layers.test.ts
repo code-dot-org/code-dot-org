@@ -150,10 +150,10 @@ describe('the layer a placement lands in', () => {
 
 describe('the slot blocks', () => {
   it('paint the layer they are written in', () => {
-    // `set background` / `set foreground` name their layer for the same reason
-    // a placement does: the block's ancestor is the answer, so fogging inside
-    // a `define layer` fogs that layer and nothing else.
-    const block = chain('world_set_foreground', {
+    // `set background` names its layer for the same reason a placement does:
+    // the block's ancestor is the answer, so painting inside a `define layer`
+    // paints that layer and nothing else.
+    const block = chain('world_set_background', {
       type: 'world_define_layer',
       id: 'game',
     });

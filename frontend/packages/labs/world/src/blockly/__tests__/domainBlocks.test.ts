@@ -2592,17 +2592,15 @@ describe('world block generators', () => {
     );
   });
 
-  it('generates the same four blocks for both image slots', () => {
-    // They differ in one word, so they come from one factory over the two
-    // slots rather than eight hand-written near-copies — the house idiom, and
-    // what stops `set foreground` drifting away from `set background`.
+  it('generates the four blocks of a layer’s background, and no foreground', () => {
+    // A layer has one image slot: something in front of the actors is a layer
+    // above them (specs/LAYERS_PLAN.md).
     const types = DOMAIN_BLOCKS.map(block => block.type);
-    for (const slot of ['background', 'foreground']) {
-      expect(types).toContain(`world_set_${slot}`);
-      expect(types).toContain(`world_clear_${slot}`);
-      expect(types).toContain(`world_set_${slot}_offset`);
-      expect(types).toContain(`world_set_${slot}_repeat`);
-    }
+    expect(types).toContain('world_set_background');
+    expect(types).toContain('world_clear_background');
+    expect(types).toContain('world_set_background_offset');
+    expect(types).toContain('world_set_background_repeat');
+    expect(types.filter(type => type.includes('foreground'))).toEqual([]);
   });
 
   it('takes an image away again, in the layer it was written in', () => {
@@ -2613,13 +2611,10 @@ describe('world block generators', () => {
     expect(run('world_clear_background', {}, {}, '')).toBe(
       'world.setBackground(undefined, "main");\n',
     );
-    expect(run('world_clear_foreground', {}, {}, '')).toBe(
-      'world.setForeground(undefined, "main");\n',
-    );
   });
 
   it('slides a slot by a vector, naming the layer it is written in', () => {
-    const code = generatorFor('world_set_foreground_offset')(
+    const code = generatorFor('world_set_background_offset')(
       {getFieldValue: () => null} as never,
       {
         valueToCode: () => 'new WorldLab.Vector(8, 0)',
@@ -2628,7 +2623,7 @@ describe('world block generators', () => {
     ) as string;
 
     expect(code).toBe(
-      'world.setForegroundOffset(new WorldLab.Vector(8, 0), "main");\n',
+      'world.setBackgroundOffset(new WorldLab.Vector(8, 0), "main");\n',
     );
   });
 
@@ -2719,7 +2714,7 @@ describe('world block generators', () => {
 
   it('generates an add/remove pair for each non-actor effect owner', () => {
     const types = DOMAIN_BLOCKS.map(block => block.type);
-    for (const owner of ['world', 'background', 'foreground']) {
+    for (const owner of ['world', 'background']) {
       expect(types).toContain(`world_add_${owner}_effect`);
       expect(types).toContain(`world_remove_${owner}_effect`);
     }
@@ -2747,14 +2742,14 @@ describe('world block generators', () => {
         {} as never,
       ) as string;
 
-    expect(run('world_add_foreground_effect')).toBe(
-      'world.addForegroundEffect("effects/ripple", EffectsRipple, undefined, "main");\n',
+    expect(run('world_add_background_effect')).toBe(
+      'world.addBackgroundEffect("effects/ripple", EffectsRipple, undefined, "main");\n',
     );
     expect(run('world_add_world_effect')).toBe(
       'world.addEffect("effects/ripple", EffectsRipple);\n',
     );
-    expect(run('world_remove_foreground_effect')).toBe(
-      'world.removeForegroundEffect("effects/ripple", "main");\n',
+    expect(run('world_remove_background_effect')).toBe(
+      'world.removeBackgroundEffect("effects/ripple", "main");\n',
     );
     expect(run('world_remove_world_effect')).toBe(
       'world.removeEffect("effects/ripple");\n',

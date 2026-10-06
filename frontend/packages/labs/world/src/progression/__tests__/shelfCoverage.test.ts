@@ -19,7 +19,7 @@
 // the whole of the test.
 //
 // It is not a list of MISTAKES. Most of these are things no lesson has been
-// written for yet — the vector maths, the parenting blocks, the foreground.
+// written for yet — the vector maths, the parenting blocks, the effect pairs.
 // Some are genuinely missing and the list is how anybody would know which:
 // `world_time`, `math_random_int` and `text_length` are on it, and none of
 // them is exotic. Reading it is the cheapest survey of what the progression
@@ -80,16 +80,10 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'world_remove_camera_trait',
     'world_this_camera',
   ],
-  // The foreground, and the effect pairs.
+  // The effect pairs.
   Backgrounds: [
-    'world_set_foreground',
-    'world_clear_foreground',
-    'world_set_foreground_offset',
-    'world_set_foreground_repeat',
     'world_add_background_effect',
     'world_remove_background_effect',
-    'world_add_foreground_effect',
-    'world_remove_foreground_effect',
     'world_add_layer_effect',
     'world_remove_layer_effect',
   ],

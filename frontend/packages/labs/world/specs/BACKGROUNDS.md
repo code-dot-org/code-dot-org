@@ -77,7 +77,8 @@ remove effect [ripple ▾] from the background
   dropdown here is an unfinished block and generates nothing, so until this
   existed a sky, once set, could not be taken down. Both slots get one — they
   come from the same factory (`defineSlotBlocks`), which is what stops
-  `foreground` drifting from `background`.
+  `foreground` drifting from `background`. (Foregrounds are retired since;
+  the factory makes the background's four blocks, specs/LAYERS_PLAN.md.)
 - **The color socket** takes a value rather than owning a field, so it goes
   through `engine/core/color.ts` exactly as effect parameters do — and
   `colour_picker`, `colour_random`, `colour_blend` and the `r g b a` block all

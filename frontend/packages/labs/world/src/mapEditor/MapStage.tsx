@@ -78,7 +78,7 @@ import {
   withLayer,
   withPlacementAnchor,
   withPlacementLayer,
-  withSlot,
+  withBackground,
   type MapSlotDoc,
   toLocalPosition,
   withParent,
@@ -2295,7 +2295,7 @@ export const MapStage = ({
     const keyById = new Map<string, string | undefined>();
     // LAYER BY LAYER, back to front, which is how the game draws them
     // (specs/LAYERS_PLAN.md): a layer's background, then what is placed on
-    // it in the document's order, then its foreground. A placement naming a
+    // it in the document's order. A placement naming a
     // layer the map no longer has is on the default, as the engine puts it.
     const layers = layersOf(map);
     const known = new Set(layers.map(layer => layer.id));
@@ -2353,7 +2353,6 @@ export const MapStage = ({
           hoveredKey = key;
         }
       }
-      drawSlot(layer.foreground);
     }
     // Hover highlight (a lighter outline), drawn under the selection outline and
     // skipped when the hovered actor is already the selected one.
@@ -2739,8 +2738,8 @@ export const MapStage = ({
           onChange={change =>
             commit(withLayer(mapRef.current, inspectedLayer.id, change))
           }
-          onSlot={(which, change) =>
-            commit(withSlot(mapRef.current, inspectedLayer.id, which, change))
+          onBackground={change =>
+            commit(withBackground(mapRef.current, inspectedLayer.id, change))
           }
           onClose={() => setInspectingLayer(false)}
           isReadOnly={isReadOnly}

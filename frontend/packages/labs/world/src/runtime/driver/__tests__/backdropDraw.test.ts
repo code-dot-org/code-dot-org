@@ -277,8 +277,6 @@ const world = (
         ...backdrop,
         effects: [],
       })),
-    foregroundSnapshot: () =>
-      backdrops.map(() => ({effects: [], offset: {x: 0, y: 0}, repeat: false})),
     // One sky, the world's — not the bottom layer's (BACKGROUNDS.md).
     backdropColor: () => clearColor,
     // What a stretched slot covers: the level, not the window onto it.

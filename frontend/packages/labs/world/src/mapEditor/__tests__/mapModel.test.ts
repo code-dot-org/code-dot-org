@@ -22,7 +22,7 @@ import {
   removeLayer,
   withLayer,
   withPlacementLayer,
-  withSlot,
+  withBackground,
   renamePlacementReferences,
   withoutPlacement,
   MAX_MAP_TILES,
@@ -613,25 +613,20 @@ describe('a map’s layers', () => {
     expect(moveLayer(base(), 'layer1', -1)).toEqual(base());
   });
 
-  it('changes a layer’s own values, and a slot’s', () => {
+  it('changes a layer’s own values, and its background', () => {
     const moved = withLayer(base(), 'layer1', {parallax: {x: 0.2, y: 0}});
     expect(layersOf(moved)[0].parallax).toEqual({x: 0.2, y: 0});
 
-    const drawn = withSlot(base(), 'layer1', 'background', {sprite: 'sky.png'});
+    const drawn = withBackground(base(), 'layer1', {sprite: 'sky.png'});
     expect(layersOf(drawn)[0].background).toEqual({sprite: 'sky.png'});
-    // A slot with nothing left to say is dropped from the document.
-    const cleared = withSlot(drawn, 'layer1', 'background', {sprite: ''});
+    // A background with nothing left to say is dropped from the document.
+    const cleared = withBackground(drawn, 'layer1', {sprite: ''});
     expect(layersOf(cleared)[0].background).toBeUndefined();
     // A change to a map with no list yet makes the list.
-    const first = withSlot(
-      {...base(), layers: undefined},
-      'main',
-      'foreground',
-      {
-        repeat: true,
-      },
-    );
-    expect(first.layers).toEqual([{id: 'main', foreground: {repeat: true}}]);
+    const first = withBackground({...base(), layers: undefined}, 'main', {
+      repeat: true,
+    });
+    expect(first.layers).toEqual([{id: 'main', background: {repeat: true}}]);
   });
 
   it('puts a placement on a layer, the default by saying nothing', () => {

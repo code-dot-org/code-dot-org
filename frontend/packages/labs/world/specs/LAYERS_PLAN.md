@@ -3,14 +3,15 @@
 STATUS: BUILT, and seen working in the browser, less the look-through mode.
 The fourth build step of specs/MAP_FIRST.md, after
 specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md and specs/VIEWPORT_PLAN.md:
-a map's layers, backgrounds and foregrounds are part of the map, made in the
-map editor. The working record, as before.
+a map's layers and their backgrounds are part of the map, made in the
+map editor. The working record, as before. (Foregrounds were here too and
+are retired; see "Foregrounds retired" at the end.)
 
 ## What is being built
 
 - **Layers in the map document.** A map — a `.map`, or a world's `map` —
   gains `layers`, back to front, each with a name, a parallax factor, whether
-  it is fixed to the screen, and a background and a foreground slot (an
+  it is fixed to the screen, and a background slot (an
   image, stretched or tiled, and an offset). A placement gains a `layer`. A
   map that says nothing has the one layer every world has, `main`.
 - **The layer strip.** A panel on the stage listing the map's layers, front
@@ -24,7 +25,7 @@ map editor. The working record, as before.
   the top-left of the map. Whatever is open stacks in one column there. A
   lesson pointing at `map.layers` opens it — a `mapPanel` reveal.)
 - **The canvas draws them.** Each layer's background, then its placements,
-  then its foreground, back to front — a stretched image over the map's
+  back to front — a stretched image over the map's
   rectangle, a tiled one repeated across it.
 - **The main map's layers are the world's.** The world module declares them
   with the ones `define layer` blocks declare, and sets their slots, so what
@@ -142,3 +143,27 @@ the image behind what is on the layer, and the running game should scroll it
 slower than the default layer once the camera moves. Do the same in a level
 held by a Viewport: the background should draw inside the Viewport's box and
 move at its factor as the space's camera follows.
+
+## Foregrounds retired
+
+Built with two image slots per layer, a background drawn behind its actors
+and a foreground drawn in front, and retired in Oct 2026. Nothing in a
+starter, a lesson or a stock map used a foreground.
+
+A foreground was the background of a layer one further forward by another
+name: the draw order is a layer's background, its actors, its foreground,
+then the next layer's background, so layer N's foreground and a background
+on a layer directly above N draw the same. What the slot added was a second
+word for "an image on a layer", six blocks, a second slot in every layer's
+inspector, and a second path through the engine, the driver and the editor.
+What it saved was setting the upper layer's parallax and fit to match, and
+applying a layer effect once rather than twice.
+
+So fog over the game is a layer above it with an image, made in the map
+editor's layer strip. Removed outright (the lab has never shipped): the six
+`world_*_foreground*` block types, the layer's `foreground` field in the map
+document, the engine's `setForeground*` and foreground effect methods and
+`foregroundSnapshot`, the driver's second slot list, and the inspector's
+second slot. What remains of the slot is named for what it is: the map
+editor writes `withBackground`, and the inspector calls `onBackground`.
+

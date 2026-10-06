@@ -42,7 +42,7 @@ import {
   TEXT_ANCHORS,
   type PropertyType,
 } from '../engine';
-import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
+import {DEFAULT_LAYER_ID} from '../engine/core/Layer';
 import {FILE_ICONS} from '../fileIcons';
 import {VIEWPORT_TILES} from '../runtime/viewport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
@@ -7431,14 +7431,13 @@ const backgroundOptionsExtension = liveDropdown(
 );
 
 /**
- * The blocks for one of a layer's two image slots, generated.
+ * The blocks for a layer's image slot, generated.
  *
- * A slot has an image, an offset and a repeat, and there are two slots — six
- * blocks that differ in one word. They were hand-written, and `set foreground`
- * was already a copy of `set background` with the noun changed; a second copy
- * per setting is how a family like this stops agreeing with itself. Generating
- * them is the house idiom rather than a new one: every property, action, query,
- * event and emit block in this file already comes from a factory over metadata.
+ * A slot has an image, an offset and a repeat. There were two slots, a
+ * background and a foreground, and the factory made both; there is one now —
+ * a foreground was a background one layer further forward by another name
+ * (specs/LAYERS_PLAN.md) — and the factory stays, as every property, action,
+ * query, event and emit block in this file comes from one.
  *
  * The block TYPES are the names they already had (`world_set_background`), so
  * nothing a learner has saved changes.
@@ -7463,10 +7462,10 @@ export const GENERATED_WORLD_CALLS: string[] = [
 
 const defineSlotBlocks = (slot: {
   /** The slot's name, in the block type and in the engine method. */
-  id: SlotName;
+  id: 'background';
   /** What it is called in front of a learner. */
   label: string;
-  /** `Background` / `Foreground` — the engine's method suffix. */
+  /** `Background` — the engine's method suffix. */
   method: string;
   /** Where the image is drawn, for the tooltip. */
   where: string;
@@ -7607,31 +7606,22 @@ const defineSlotBlocks = (slot: {
   return [setImage, clearImage, setOffset, setRepeat];
 };
 
-/** The two slots, and the six blocks they generate between them. */
-const SLOT_BLOCKS = [
-  defineSlotBlocks({
-    id: 'background',
-    label: 'background',
-    method: 'Background',
-    where: 'behind this layer’s actors',
-  }),
-  defineSlotBlocks({
-    id: 'foreground',
-    label: 'foreground',
-    method: 'Foreground',
-    where: 'in front of this layer’s actors',
-  }),
-].flat();
+/** The slot, and the four blocks it generates. */
+const SLOT_BLOCKS = defineSlotBlocks({
+  id: 'background',
+  label: 'background',
+  method: 'Background',
+  where: 'behind this layer’s actors',
+});
 
 /**
  * The add/remove effect pair for one non-actor owner, generated.
  *
- * An effect can land on the world, on a layer's background, or on its
- * foreground, and those six blocks differ in a noun and a method name. They
- * were hand-written, and the background pair was already a copy of the world
- * pair; a foreground pair would have been a third. Generating them is what the
- * rest of this file already does for every property, action, query, event and
- * emit block.
+ * An effect can land on the world or on a layer's background, and those
+ * blocks differ in a noun and a method name. They were hand-written, and the
+ * background pair was already a copy of the world pair. Generating them is
+ * what the rest of this file already does for every property, action, query,
+ * event and emit block.
  *
  * THE ACTOR PAIR IS NOT HERE, and that asymmetry is the point rather than an
  * omission: an actor effect must be able to name the coin that was touched, a
@@ -7768,13 +7758,6 @@ const EFFECT_OWNER_BLOCKS = [
     method: 'Background',
     layered: true,
     filters: 'the background only — the actors in front of it are not affected',
-  }),
-  defineEffectBlocks({
-    infix: 'foreground',
-    noun: 'the foreground',
-    method: 'Foreground',
-    layered: true,
-    filters: 'the foreground only — the actors behind it are not affected',
   }),
 ].flat();
 
@@ -11471,7 +11454,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     ],
   },
   // THE WORLD'S BLOCKS, BY TOPIC. One drawer held all of these, sixty-odd
-  // blocks from `define world` to the foreground's effects, and a learner
+  // blocks from `define world` to the background's effects, and a learner
   // looking for `set background` read past cameras, layers, tweens and
   // saving to find it. Each topic is a drawer of its own now, so a drawer's
   // name says what is in it, and a level or a profile can leave out a whole
@@ -11600,15 +11583,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_clear_background',
       'world_set_background_offset',
       'world_set_background_repeat',
-      'world_set_foreground',
-      'world_clear_foreground',
-      'world_set_foreground_offset',
-      'world_set_foreground_repeat',
       'world_set_background_color',
       'world_add_background_effect',
       'world_remove_background_effect',
-      'world_add_foreground_effect',
-      'world_remove_foreground_effect',
       // The scope between a slot's and the world's: blur the game, leave the
       // score sharp (specs/VIEWPORT.md).
       'world_add_layer_effect',

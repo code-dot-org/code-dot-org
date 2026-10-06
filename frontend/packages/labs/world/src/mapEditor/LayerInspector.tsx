@@ -1,6 +1,6 @@
 // The inspector for a LAYER: its name, how it moves with the camera, and its
-// two images (specs/LAYERS_PLAN.md; VIEWPORT.md, "A layer's background and
-// foreground").
+// background (specs/LAYERS_PLAN.md). Something drawn in FRONT of the actors is
+// a layer above them, with a background of its own.
 //
 // Shown when a layer is opened from the strip and no placement is selected.
 // A factor is a multiplier per axis — `(1, 1)` moves with the view, `(0.2,
@@ -28,10 +28,7 @@ export interface LayerInspectorProps {
   /** The project's backgrounds, by file name. */
   backgrounds: readonly string[];
   onChange: (change: Partial<Omit<MapLayerDoc, 'id'>>) => void;
-  onSlot: (
-    which: 'background' | 'foreground',
-    change: Partial<MapSlotDoc>,
-  ) => void;
+  onBackground: (change: Partial<MapSlotDoc>) => void;
   onClose: () => void;
   isReadOnly: boolean;
 }
@@ -51,7 +48,7 @@ export const LayerInspector = ({
   layer,
   backgrounds,
   onChange,
-  onSlot,
+  onBackground,
   onClose,
   isReadOnly,
 }: LayerInspectorProps) => {
@@ -63,8 +60,6 @@ export const LayerInspector = ({
     py: String(layer.parallax?.y ?? 1),
     'background.x': String(layer.background?.offset?.x ?? 0),
     'background.y': String(layer.background?.offset?.y ?? 0),
-    'foreground.x': String(layer.foreground?.offset?.x ?? 0),
-    'foreground.y': String(layer.foreground?.offset?.y ?? 0),
   });
   const type = (key: string) => (event: ChangeEvent<HTMLInputElement>) =>
     setDraft(held => ({...held, [key]: event.target.value}));
@@ -77,19 +72,22 @@ export const LayerInspector = ({
     onChange({
       parallax: {x: asNumber(draft.px, 1), y: asNumber(draft.py, 1)},
     });
-  const commitOffset = (which: 'background' | 'foreground') =>
-    onSlot(which, {
+  const commitOffset = () =>
+    onBackground({
       offset: {
-        x: asNumber(draft[`${which}.x`], 0),
-        y: asNumber(draft[`${which}.y`], 0),
+        x: asNumber(draft['background.x'], 0),
+        y: asNumber(draft['background.y'], 0),
       },
     });
 
-  const slot = (which: 'background' | 'foreground', title: string) => (
+  // The one slot, named so its fields keep the names they had beside a
+  // second one (`layer-background`, `layer-background-tiled`, …).
+  const which = 'background';
+  const background = (
     <div className={styles.inspectorGroup}>
       <SimpleDropdown
         name={`layer-${which}`}
-        labelText={title}
+        labelText="Background"
         size="s"
         className={styles.inspectorDropdown}
         disabled={isReadOnly}
@@ -106,7 +104,7 @@ export const LayerInspector = ({
         onChange={(event: ChangeEvent<HTMLSelectElement>) => {
           const chosen = event.target.value;
           if (chosen !== IMPORT_SLOT) {
-            onSlot(which, {sprite: chosen});
+            onBackground({sprite: chosen});
             return;
           }
           // Asked of the lab, as every other import is; the dropdown goes
@@ -114,7 +112,7 @@ export const LayerInspector = ({
           // (`appearance/appearanceImport`).
           void requestAppearanceImport('background').then(name => {
             if (name) {
-              onSlot(which, {sprite: name});
+              onBackground({sprite: name});
             }
           });
         }}
@@ -125,7 +123,7 @@ export const LayerInspector = ({
         checked={Boolean(layer[which]?.repeat)}
         disabled={isReadOnly}
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onSlot(which, {repeat: event.target.checked})
+          onBackground({repeat: event.target.checked})
         }
       />
       <div className={styles.inspectorGrid}>
@@ -139,7 +137,7 @@ export const LayerInspector = ({
             value={draft[`${which}.${axis}`]}
             disabled={isReadOnly}
             onChange={type(`${which}.${axis}`)}
-            onBlur={() => commitOffset(which)}
+            onBlur={commitOffset}
             onKeyDown={blurOnEnter}
           />
         ))}
@@ -200,8 +198,7 @@ export const LayerInspector = ({
           onChange({fit: event.target.checked || undefined})
         }
       />
-      {slot('background', 'Background')}
-      {slot('foreground', 'Foreground')}
+      {background}
     </div>
   );
 };

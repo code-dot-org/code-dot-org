@@ -412,7 +412,8 @@ describe('a map’s layers', () => {
         background: {sprite: 'sky.png', repeat: true, offset: {x: 4, y: 0}},
       },
       {id: 'main'},
-      {id: 'fog', fit: true, foreground: {sprite: 'fog.png'}},
+      // Fog over the game: a layer above it, with a background of its own.
+      {id: 'fog', fit: true, background: {sprite: 'fog.png'}},
     ],
     actors: [
       {type: 'actors/coin', id: 'far', layer: 'sky'},
@@ -449,13 +450,12 @@ describe('a map’s layers', () => {
           repeat: true,
           offset: {x: 4, y: 0},
         }),
-        foreground: expect.objectContaining({repeat: false}),
       },
       expect.objectContaining({id: 'main', parallax: {x: 1, y: 1}}),
       expect.objectContaining({
         id: 'fog',
         fit: true,
-        foreground: expect.objectContaining({sprite: 'fog.png'}),
+        background: expect.objectContaining({sprite: 'fog.png'}),
       }),
     ]);
   });

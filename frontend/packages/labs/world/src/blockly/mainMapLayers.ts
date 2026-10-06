@@ -19,7 +19,6 @@ export interface MainMapLayer {
   parallax?: {x: number; y: number};
   fit?: boolean;
   background?: Slot;
-  foreground?: Slot;
 }
 
 /** The layers a world file's `map` states, or none. */
@@ -64,7 +63,7 @@ const declaration = (layer: MainMapLayer): string => {
 /** The calls that give one slot its starting values, or nothing to say. */
 const slotCalls = (
   layer: string,
-  which: 'Background' | 'Foreground',
+  which: 'Background',
   slot: Slot | undefined,
 ): string => {
   if (!slot) {
@@ -109,11 +108,7 @@ export function layerDeclarations(
       .map(entry => `world.defineLayer({id: ${q(entry.id)}});\n`)
       .join('') +
     mapLayers
-      .map(
-        layer =>
-          slotCalls(layer.id, 'Background', layer.background) +
-          slotCalls(layer.id, 'Foreground', layer.foreground),
-      )
+      .map(layer => slotCalls(layer.id, 'Background', layer.background))
       .join('')
   );
 }
