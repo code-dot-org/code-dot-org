@@ -57,6 +57,7 @@ import {
   usesPlatformPhysics,
   wallBox,
 } from './platformPhysics';
+import {createPlayerActionTracker, isPlayerAction} from './playerActions';
 import {
   createWeather,
   drawWeather,
@@ -92,6 +93,8 @@ const CANVAS_DENSITY_FACTOR = 2;
 // How long a restart quiets further restarts: long enough to see the scene
 // run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
+// The inputEvents type a when-player hat registers.
+const PLAYER_ACTION_EVENT = 'playerAction';
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
@@ -613,6 +616,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    // The player's actions are read off the physics pass, one frame before
+    // the events that fire on them.
+    this.playerActionTracker_ = createPlayerActionTracker();
+    this.playerActions_ = new Set();
+    library.commands.whenPlayer = (action, callback) => {
+      if (isPlayerAction(action)) {
+        library.addEvent(PLAYER_ACTION_EVENT, {action}, callback);
+      }
+    };
+    const callbackArgs = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent =>
+      inputEvent.type === PLAYER_ACTION_EVENT
+        ? this.playerActions_.has(inputEvent.args.action)
+          ? [{}]
+          : []
+        : callbackArgs(inputEvent);
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -1272,6 +1291,30 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Both the requested and the resolved positions are known here, so this
     // is where the observer is fed.
     this.observePlayer_(players, walls, view);
+    this.trackPlayerActions_(players, walls, view);
+  }
+
+  trackPlayerActions_(players, walls, view) {
+    if (!players.length) {
+      this.playerActionTracker_.forget();
+      this.playerActions_ = new Set();
+      return;
+    }
+    const {sprite, x: requestedX, y: requestedY} = players[0];
+    const animation = sprite.animation;
+    this.playerActions_ = this.playerActionTracker_.observe(
+      {
+        sprite,
+        requestedX,
+        requestedY,
+        gravity: this.platformGravity_,
+        walls,
+        view,
+        animationFrame: animation ? animation.getFrame() : undefined,
+        animationFrames: animation ? animation.getLastFrame() + 1 : undefined,
+      },
+      Date.now()
+    );
   }
 
   /** The audio's observer of the player, or null. */
