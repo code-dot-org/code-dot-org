@@ -9,7 +9,7 @@ const QUESTION: QuizQuestionSummary = {
   id: 5,
   type: 'MultipleChoiceQuestion',
   questionName: 'Variable reassignment',
-  stem: 'What is the value of x?',
+  questionTitle: 'What is the value of x?',
   choices: [
     {id: 'a', text: '5'},
     {id: 'b', text: '8'},
@@ -18,7 +18,7 @@ const QUESTION: QuizQuestionSummary = {
 };
 
 describe('MultiChoiceQuestionContainer', () => {
-  it("renders the question's stem as an h2 title", () => {
+  it('renders the question title as an h2 title', () => {
     render(
       <MultiChoiceQuestionContainer
         question={QUESTION}

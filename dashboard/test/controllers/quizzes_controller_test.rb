@@ -57,7 +57,7 @@ class QuizzesControllerTest < ActionController::TestCase
       :multiple_choice_question,
       name: 'Page 1, position 1',
       content: {
-        stem: 'Pick B',
+        question_title: 'Pick B',
         choices: [{id: 'a', text: 'A'}, {id: 'b', text: 'B'}],
         correct_choice_id: 'b'
       },

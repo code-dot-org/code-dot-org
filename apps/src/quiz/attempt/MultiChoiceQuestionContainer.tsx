@@ -21,11 +21,11 @@ export interface MultiChoiceQuestionContainerProps {
 const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
 > = ({question, questionLabel, selectedChoiceId, onSelectChoice}) => (
-  <AttemptCard label={questionLabel} title={question.stem}>
+  <AttemptCard label={questionLabel} title={question.questionTitle}>
     <div
       className={styles.choices}
       role="radiogroup"
-      aria-label={question.stem}
+      aria-label={question.questionTitle}
     >
       {(question.choices ?? []).map((choice, index) => {
         const isSelected = choice.id === selectedChoiceId;

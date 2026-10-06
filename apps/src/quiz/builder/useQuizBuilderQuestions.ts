@@ -12,7 +12,7 @@ import {
 
 const NEW_QUESTION_DEFAULTS = {
   questionName: 'New question',
-  stem: 'New question',
+  questionTitle: 'New question',
   choices: [
     {id: '0', text: 'Option A'},
     {id: '1', text: 'Option B'},
