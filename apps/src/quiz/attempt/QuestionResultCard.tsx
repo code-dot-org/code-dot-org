@@ -48,7 +48,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   result,
   revealAnswerExplanation,
 }) => (
-  <AttemptCard label={questionLabel} title={question.stem}>
+  <AttemptCard label={questionLabel} title={question.questionTitle}>
     <ul className={styles.choices}>
       {(question.choices ?? []).map((choice, index) => {
         const status = getChoiceStatus(choice.id, result);
