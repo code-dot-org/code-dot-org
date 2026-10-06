@@ -33,7 +33,7 @@ describe('asSoundEffect', () => {
       length: 'short',
       pattern: 'steady',
     });
-    expect(asSoundEffect('noise', 'low', 'short', 'steady')).toBeNull();
+    expect(asSoundEffect('organ', 'low', 'short', 'steady')).toBeNull();
     expect(asSoundEffect('sine', 'low', 'short', undefined)).toBeNull();
     expect(asSoundEffect('sine', 'low', 1, 'steady')).toBeNull();
   });
@@ -156,6 +156,8 @@ describe('playNotes', () => {
     onended: null | (() => void);
   }
   const oscillators: FakeOscillator[] = [];
+  const noiseSources: {start: jest.Mock; stop: jest.Mock; loop: boolean}[] = [];
+  const filters: {type: string; frequency: FakeParam}[] = [];
   let state = 'running';
 
   class FakeAudioContext {
@@ -186,6 +188,33 @@ describe('playNotes', () => {
     createGain() {
       return {gain: param(), connect: jest.fn(), disconnect: jest.fn()};
     }
+    sampleRate = 8000;
+    createBuffer(_channels: number, length: number) {
+      return {getChannelData: () => new Float32Array(length)};
+    }
+    createBufferSource() {
+      const source = {
+        buffer: null,
+        loop: false,
+        connect: jest.fn(),
+        disconnect: jest.fn(),
+        start: jest.fn(),
+        stop: jest.fn(),
+        onended: null,
+      };
+      noiseSources.push(source);
+      return source;
+    }
+    createBiquadFilter() {
+      const filter = {
+        type: '',
+        frequency: param(),
+        Q: param(),
+        connect: jest.fn(),
+      };
+      filters.push(filter);
+      return filter;
+    }
   }
 
   // Voices with a stop time are the notes; a wobble adds a vibrato
@@ -194,6 +223,8 @@ describe('playNotes', () => {
 
   beforeEach(() => {
     oscillators.length = 0;
+    noiseSources.length = 0;
+    filters.length = 0;
     state = 'running';
     (window as unknown as {AudioContext: unknown}).AudioContext =
       FakeAudioContext;
@@ -230,6 +261,20 @@ describe('playNotes', () => {
     const lfo = oscillators.find(o => o.frequency.value < 20)!;
     expect(lfo.start).toHaveBeenCalled();
     expect(lfo.stop).toHaveBeenCalled();
+  });
+
+  it('plays noise through a bandpass filter at the note pitch', () => {
+    const [note] = notesFor({...jump, wave: 'noise', pattern: 'slide down'});
+    playNotes([note]);
+    expect(oscillators).toHaveLength(0);
+    expect(noiseSources).toHaveLength(1);
+    expect(noiseSources[0].loop).toBe(true);
+    expect(noiseSources[0].stop).toHaveBeenCalledWith(10 + note.seconds);
+    expect(filters[0].type).toBe('bandpass');
+    expect(filters[0].frequency.value).toBe(note.hz);
+    expect(
+      filters[0].frequency.exponentialRampToValueAtTime
+    ).toHaveBeenCalledWith(note.slideTo, 10 + note.seconds);
   });
 
   it('plays a preset', () => {

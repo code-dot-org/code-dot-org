@@ -2,9 +2,15 @@
 // four choices: the wave, how high, how long, and how the pitch moves. A
 // preset is a named sequence of notes.
 
-import {startVoice, Voice, wake} from './audioFeedback/audioVoice';
+import {startVoice, wake} from './audioFeedback/audioVoice';
 
-export const WAVES = ['sine', 'triangle', 'square', 'sawtooth'] as const;
+export const WAVES = [
+  'sine',
+  'triangle',
+  'square',
+  'sawtooth',
+  'noise',
+] as const;
 export const PITCHES = ['low', 'middle', 'high'] as const;
 export const LENGTHS = ['short', 'medium', 'long'] as const;
 export const PATTERNS = [
@@ -33,7 +39,8 @@ export interface Note {
   /** Seconds after the sound starts. */
   at: number;
   seconds: number;
-  type: OscillatorType;
+  /** Noise is white noise through a bandpass filter centered on hz. */
+  type: OscillatorType | 'noise';
   /** Peak gain, 0 to 1. */
   volume: number;
   /** The frequency reached as the note ends, for a slide. */
@@ -52,7 +59,11 @@ const VOLUME: Record<Wave, number> = {
   triangle: 0.16,
   square: 0.07,
   sawtooth: 0.08,
+  noise: 0.3,
 };
+// How narrow the band of noise is; higher rings closer to a pitch.
+const NOISE_Q = 1.5;
+const NOISE_SECONDS = 1;
 // A major arpeggio, the steps of a run. A run up starts at the root, a run
 // down at the octave.
 const RUN_RATIOS = [1, 5 / 4, 3 / 2, 2];
@@ -176,6 +187,12 @@ export const PRESETS = {
     length: 'long',
     pattern: 'wobble',
   }),
+  boom: notesFor({
+    wave: 'noise',
+    pitch: 'low',
+    length: 'long',
+    pattern: 'slide down',
+  }),
 } satisfies Record<string, Note[]>;
 
 export type PresetName = keyof typeof PRESETS;
@@ -192,8 +209,14 @@ const STALE_MS = 1000;
 // sound is dropped. Each voice costs the audio thread one oscillator.
 const MAX_LIVE_VOICES = 32;
 
+interface Playing {
+  source: AudioScheduledSourceNode;
+  gain: GainNode;
+}
+
 let context: AudioContext | null = null;
-const live = new Set<Voice>();
+let noise: AudioBuffer | null = null;
+const live = new Set<Playing>();
 let pending: {notes: Note[]; askedAt: number} | null = null;
 
 function audioContext(): AudioContext | null {
@@ -217,22 +240,62 @@ const muted = (): boolean =>
   typeof window !== 'undefined' &&
   new URLSearchParams(window.location.search).has('quiet');
 
+function noiseBuffer(ctx: AudioContext): AudioBuffer {
+  if (!noise) {
+    noise = ctx.createBuffer(1, ctx.sampleRate * NOISE_SECONDS, ctx.sampleRate);
+    const samples = noise.getChannelData(0);
+    for (let i = 0; i < samples.length; i++) {
+      samples[i] = Math.random() * 2 - 1;
+    }
+  }
+  return noise;
+}
+
+/** A noise voice: looped white noise through a bandpass filter, whose
+    center frequency plays the part an oscillator's frequency does. */
+function startNoise(
+  ctx: AudioContext,
+  hz: number,
+  start: number
+): Playing & {frequency: AudioParam} {
+  const source = ctx.createBufferSource();
+  source.buffer = noiseBuffer(ctx);
+  source.loop = true;
+  const filter = ctx.createBiquadFilter();
+  filter.type = 'bandpass';
+  filter.frequency.value = hz;
+  filter.Q.value = NOISE_Q;
+  const gain = ctx.createGain();
+  gain.gain.value = 0;
+  source.connect(filter);
+  filter.connect(gain);
+  gain.connect(ctx.destination);
+  source.start(start);
+  return {source, gain, frequency: filter.frequency};
+}
+
 function schedule(ctx: AudioContext, notes: Note[]): void {
   if (live.size + notes.length > MAX_LIVE_VOICES) {
     return;
   }
   const now = ctx.currentTime;
   for (const note of notes) {
-    const voice = startVoice(ctx, note.type, note.hz);
-    const {oscillator, gain} = voice;
     const start = now + note.at;
     const end = start + note.seconds;
+    let playing: Playing & {frequency: AudioParam};
+    if (note.type === 'noise') {
+      playing = startNoise(ctx, note.hz, start);
+    } else {
+      const {oscillator, gain} = startVoice(ctx, note.type, note.hz);
+      playing = {source: oscillator, gain, frequency: oscillator.frequency};
+    }
+    const {source, gain, frequency} = playing;
     gain.gain.setValueAtTime(0, start);
     gain.gain.linearRampToValueAtTime(note.volume, start + ATTACK_S);
     gain.gain.exponentialRampToValueAtTime(SILENCE, end);
     if (note.slideTo) {
-      oscillator.frequency.setValueAtTime(note.hz, start);
-      oscillator.frequency.exponentialRampToValueAtTime(note.slideTo, end);
+      frequency.setValueAtTime(note.hz, start);
+      frequency.exponentialRampToValueAtTime(note.slideTo, end);
     }
     if (note.wobble) {
       const lfo = ctx.createOscillator();
@@ -240,15 +303,15 @@ function schedule(ctx: AudioContext, notes: Note[]): void {
       lfo.frequency.value = WOBBLE_RATE_HZ;
       depth.gain.value = note.hz * WOBBLE_DEPTH;
       lfo.connect(depth);
-      depth.connect(oscillator.frequency);
+      depth.connect(frequency);
       lfo.start(start);
       lfo.stop(end);
     }
-    oscillator.stop(end);
-    live.add(voice);
-    oscillator.onended = () => {
-      live.delete(voice);
-      oscillator.disconnect();
+    source.stop(end);
+    live.add(playing);
+    source.onended = () => {
+      live.delete(playing);
+      source.disconnect();
       gain.disconnect();
     };
   }
@@ -293,13 +356,13 @@ export function playNotes(notes: Note[]): void {
 /** Silences every sound still playing or scheduled. */
 export function stopSoundEffects(): void {
   pending = null;
-  for (const voice of live) {
-    voice.oscillator.onended = null;
-    voice.gain.gain.cancelScheduledValues(0);
-    voice.gain.gain.value = 0;
-    voice.oscillator.stop();
-    voice.oscillator.disconnect();
-    voice.gain.disconnect();
+  for (const {source, gain} of live) {
+    source.onended = null;
+    gain.gain.cancelScheduledValues(0);
+    gain.gain.value = 0;
+    source.stop();
+    source.disconnect();
+    gain.disconnect();
   }
   live.clear();
 }
