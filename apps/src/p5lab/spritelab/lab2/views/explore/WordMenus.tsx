@@ -58,13 +58,16 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   // live, since its chips carry controls.
   const [announcement, setAnnouncement] = useState('');
   const slot = slots[Math.min(index, slots.length - 1)];
+  const show = (next: number) => {
+    setDirection(next < index ? 'left' : 'right');
+    setIndex(next);
+    setMoveCount(n => n + 1);
+  };
   const goTo = (next: number) => {
     if (next === index) {
       return;
     }
-    setDirection(next < index ? 'left' : 'right');
-    setIndex(next);
-    setMoveCount(n => n + 1);
+    show(next);
     playSound('flip');
   };
 
@@ -124,6 +127,11 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     }
     onChange(next);
     setAnnouncement(`New words: ${promptText(sentence, next)}`);
+    // Back to the required set, which is always filled, so the sentence
+    // reads whole: a skipped set on show would leave a blank in it.
+    if (index !== 0) {
+      show(0);
+    }
     playSound('shuffle');
   };
 
