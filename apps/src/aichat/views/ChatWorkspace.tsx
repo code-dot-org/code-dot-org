@@ -203,6 +203,19 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
 
     const dispatch = useAppDispatch();
 
+    // Tracks the level ID for which the current chat slice has been cleared.
+    // When switching levels, there is one render pass where the level ID and
+    // level name props have been updated, but chat events still belong to the
+    // previous level, before being cleared by clearChatMessages(). In that window,
+    // we don't want to render the previous level's chat events with the current
+    // level's context (e.g. level name for starter assets).
+    // TODO: This goes away if each ChatWorkspace instance manages its own state
+    // locally rather than with a global redux slice.
+    const [clearedForLevelId, setClearedForLevelId] = useState<
+      number | null | undefined
+    >(undefined);
+    const levelChanging = clearedForLevelId !== levelId;
+
     // Initialize the ChatEventLogger with the current context, whenever it updates.
     useEffect(() => {
       AichatContextManager.setContext({
@@ -221,6 +234,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       dispatch(clearChatMessages());
       dispatch(clearStagedFiles());
       dispatch(clearUserAddedSelectionContext());
+      setClearedForLevelId(levelId);
 
       if (selectedStudent) {
         dispatch(
@@ -317,11 +331,13 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     // same list.
     const chatEvents = useMemo(
       () =>
-        applySchemaDisplayTransform(
-          storedChatEvents,
-          formatSchemaResponseForDisplay
-        ),
-      [storedChatEvents, formatSchemaResponseForDisplay]
+        levelChanging
+          ? []
+          : applySchemaDisplayTransform(
+              storedChatEvents,
+              formatSchemaResponseForDisplay
+            ),
+      [levelChanging, storedChatEvents, formatSchemaResponseForDisplay]
     );
     const hasChatHistory = chatEvents.length > 0;
     useEffect(() => {
@@ -349,7 +365,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             : `${selectedStudentName ?? ''}'s chat history`,
         tabContent: (
           <ChatEventsList
-            events={studentChatHistory}
+            events={levelChanging ? [] : studentChatHistory}
             isTeacherView={true}
             buildAssetUrl={buildAssetUrlValue}
             disabledState={disabledState}
@@ -438,7 +454,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
         )}
         <div className={moduleStyles.footer}>
           <div className={moduleStyles.chipsRow}>
-            {canUploadAssets && (
+            {canUploadAssets && !levelChanging && (
               <StagedFilesPreview
                 buildAssetUrl={buildAssetUrl}
                 onAssetRemoved={onAssetRemoved}
