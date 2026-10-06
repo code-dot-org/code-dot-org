@@ -234,6 +234,10 @@ type PaletteSelection = WorldCell | 'erase';
 
 type Kind = WorldCell['kind'];
 
+type Refusal = 'stays' | 'taken';
+/** What a change to a cell did, for narration. */
+type Change = 'placed' | 'removed' | Refusal | null;
+
 /**
  * Why a held cell refuses a change, or null. A cell of a kind the palette
  * does not offer stays: erased, nothing could put it back. Placing one
@@ -244,7 +248,7 @@ export function cellRefusal(
   lockedKinds: ReadonlySet<Kind>,
   placeOne: boolean,
   item: WorldCell | null
-): 'stays' | 'taken' | null {
+): Refusal | null {
   if (!cell) {
     return null;
   }
@@ -385,10 +389,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     announce(`${selectionLabel(selection)} chosen.`);
   };
 
-  // What a change to a cell did, so it can be narrated.
-  type Change = 'placed' | 'removed' | 'taken' | 'stays' | null;
-  // Every change to a cell goes through here: taps, drags, drops and the
-  // Delete key.
+  // Every change to a cell goes through here.
   const changeCell = (
     row: number,
     col: number,
