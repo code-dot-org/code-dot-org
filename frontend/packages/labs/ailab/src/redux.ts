@@ -68,7 +68,6 @@ export interface RootState {
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   historicResults: HistoricResult[];
-  resultsHighlightRow: number | undefined;
   hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
@@ -118,7 +117,6 @@ export const initialState: RootState = {
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
   historicResults: [],
-  resultsHighlightRow: undefined,
   hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
@@ -371,9 +369,6 @@ const ailabSlice = createSlice({
     ) {
       state.trainingModalStep = action.payload;
     },
-    setResultsHighlightRow(state, action: PayloadAction<number>) {
-      state.resultsHighlightRow = action.payload;
-    },
     setSaveStatus: {
       reducer(
         state,
@@ -451,7 +446,6 @@ export const {
   setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
-  setResultsHighlightRow,
   setSaveStatus,
   setHistoricResult,
   setHyperparameters,

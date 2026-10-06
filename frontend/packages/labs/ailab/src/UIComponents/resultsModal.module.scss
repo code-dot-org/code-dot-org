@@ -25,6 +25,7 @@ $content-height: 416px;
   min-height: 0;
   overflow-y: auto;
 
+  // Lets a tab fill the panel, so it can scroll just part of itself.
   > [role='tabpanel'] {
     height: 100%;
   }
