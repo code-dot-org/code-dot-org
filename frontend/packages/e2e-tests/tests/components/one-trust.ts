@@ -84,9 +84,7 @@ export class OneTrustComponent {
     url.searchParams.set('otgeo', geo);
     await this.page.goto(url.pathname + url.search);
     await this.page.waitForFunction(
-      () =>
-        typeof (window as unknown as {OneTrust?: {ToggleInfoDisplay?: unknown}})
-          .OneTrust?.ToggleInfoDisplay === 'function',
+      () => typeof window.OneTrust?.ToggleInfoDisplay === 'function',
       undefined,
       {timeout: 30_000},
     );
@@ -94,11 +92,7 @@ export class OneTrustComponent {
     // Retry only while hidden, since a second call would close the panel.
     await expect(async () => {
       if (!(await this.preferenceCenter.isVisible())) {
-        await this.page.evaluate(() =>
-          (
-            window as unknown as {OneTrust: {ToggleInfoDisplay(): void}}
-          ).OneTrust.ToggleInfoDisplay(),
-        );
+        await this.page.evaluate(() => window.OneTrust?.ToggleInfoDisplay?.());
       }
       await expect(this.preferenceCenter).toBeVisible({timeout: 2_000});
     }).toPass({timeout: 20_000});
@@ -118,12 +112,7 @@ export class OneTrustComponent {
   /** OneTrust's active consent groups, e.g. ['C0001', 'C0002']. */
   async activeGroups(): Promise<string[]> {
     return this.page.evaluate(() =>
-      (
-        (window as unknown as {OnetrustActiveGroups?: string})
-          .OnetrustActiveGroups ?? ''
-      )
-        .split(',')
-        .filter(Boolean),
+      (window.OnetrustActiveGroups ?? '').split(',').filter(Boolean),
     );
   }
 
