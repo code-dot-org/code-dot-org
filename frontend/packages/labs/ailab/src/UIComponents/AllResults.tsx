@@ -41,6 +41,10 @@ const ModelTable = ({heading, results}: ModelTableProps) => (
 const AllResults = () => {
   const [current, ...previous] = useAppSelector(state => state.historicResults);
 
+  if (!current) {
+    return null;
+  }
+
   return (
     <div className={styles.groups}>
       <ModelTable heading="Current" results={[current]} />

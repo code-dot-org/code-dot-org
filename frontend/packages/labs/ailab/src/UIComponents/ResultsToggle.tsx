@@ -1,4 +1,3 @@
-/* Switches the scorecard between the rows the model got right and the rows it missed. */
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 
 import {ResultsGrades} from '../constants';

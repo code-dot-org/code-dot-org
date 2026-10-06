@@ -1,6 +1,9 @@
+@use '../sharedMixins' as mixins;
+
 .details {
   box-sizing: border-box;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   padding: 16px 24px 24px;
   display: flex;
   flex-direction: column;
@@ -26,11 +29,7 @@
 }
 
 .accuracy {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
-  white-space: nowrap;
-  color: var(--text-neutral-primary);
+  @include mixins.accuracy-readout;
 }
 
 .divider {

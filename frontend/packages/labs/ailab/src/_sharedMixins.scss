@@ -41,6 +41,16 @@
   align-items: stretch;
 }
 
+$data-table-row-height: 28px;
+
+@mixin accuracy-readout {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
 $modal-max-width: 800px;
 $modal-margin: 24px;
 

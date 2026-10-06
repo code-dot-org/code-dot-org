@@ -1,4 +1,3 @@
-/* The reserved rows: what the model was given, the actual label, and its prediction. */
 import classNames from 'classnames';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
@@ -49,6 +48,7 @@ const ResultsTable = ({results}: ResultsTableProps) => {
         </p>
       )}
       <table className={classNames(tableStyles.table, styles.table)}>
+        <colgroup span={selectedFeatures.length} />
         <thead>
           <tr>
             <th

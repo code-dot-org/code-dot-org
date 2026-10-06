@@ -1,8 +1,4 @@
-import {
-  formatAccuracy,
-  getPercentCorrect,
-  getResultsByGrade,
-} from '../helpers/accuracy';
+import {formatAccuracy, getResultsByGrade} from '../helpers/accuracy';
 import {deepEqual, useAppSelector} from '../hooks';
 
 import PredictionSentence from './PredictionSentence';
@@ -13,7 +9,9 @@ import styles from './resultsDetails.module.scss';
 
 const ResultsDetails = () => {
   const currentResult = useAppSelector(state => state.historicResults[0]);
-  const percentCorrect = useAppSelector(getPercentCorrect);
+  const hasPredictions = useAppSelector(
+    state => state.accuracyCheckPredictedLabels.length > 0,
+  );
   const results = useAppSelector(
     state => getResultsByGrade(state, state.resultsTab),
     deepEqual,
@@ -33,7 +31,7 @@ const ResultsDetails = () => {
             <span className={styles.accuracy}>
               {formatAccuracy(currentResult.accuracy)} Accuracy
             </span>
-            {!isNaN(Number(percentCorrect)) && (
+            {hasPredictions && (
               <>
                 <span className={styles.divider} />
                 <ResultsToggle />

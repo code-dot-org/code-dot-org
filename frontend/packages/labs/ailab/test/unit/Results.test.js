@@ -11,14 +11,6 @@ import Results from '../../src/UIComponents/Results';
 
 import {levelStore} from './levelStore';
 
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    observe() {}
-    disconnect() {}
-  },
-);
-
 function renderTrainedResults(mode) {
   const store = levelStore(mode);
   train.reset();
