@@ -1,8 +1,7 @@
 // No redux Provider, unlike main.tsx: the gallery reads no redux state.
 
-import './nodeShims';
-
 import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
 import {z} from 'zod';
 
 import {
@@ -12,8 +11,6 @@ import {
   refreshCsrfToken,
   resolveCsrfToken,
 } from '@code-dot-org/core/api';
-
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import ChallengeGallery from '../gallery/ChallengeGallery';
 import {type TutorGalleryData} from '../gallery/types';
@@ -79,7 +76,7 @@ async function boot(): Promise<void> {
     return;
   }
 
-  createReactRoot(
+  createRoot(container).render(
     <StrictMode>
       <ApiClientProvider client={apiClient}>
         <DevPageChrome>
@@ -87,7 +84,6 @@ async function boot(): Promise<void> {
         </DevPageChrome>
       </ApiClientProvider>
     </StrictMode>,
-    container,
   );
 }
 
