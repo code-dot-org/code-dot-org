@@ -13,11 +13,16 @@ type TeacherViewingStudentProjectAlertProps = {
   inWorkspaceContainer?: boolean;
   /** Optional custom className */
   className?: string;
+  /**
+   * For a quiz level, the state of the student's attempt. Takes
+   * the place of level progress, which can't tell in progress from submitted.
+   */
+  attemptStatus?: 'notStarted' | 'inProgress' | 'submitted';
 };
 
 const TeacherViewingStudentProjectAlert: React.FC<
   TeacherViewingStudentProjectAlertProps
-> = ({inWorkspaceContainer, className}) => {
+> = ({inWorkspaceContainer, className, attemptStatus}) => {
   // Get the user ID of the student whose project is being viewed.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
@@ -64,8 +69,29 @@ const TeacherViewingStudentProjectAlert: React.FC<
     return student?.name;
   }, [viewAsUserId, studentsInSection]);
 
+  const attemptAlertText =
+    attemptStatus === 'notStarted' ? (
+      <>
+        <strong>{selectedStudentName ?? 'This student'}</strong> hasn't started
+        this level.
+      </>
+    ) : attemptStatus === 'inProgress' ? (
+      <>
+        <strong>{selectedStudentName ?? 'This student'}</strong> is still
+        working on this assessment.
+      </>
+    ) : (
+      <>
+        You are viewing{' '}
+        <strong>{selectedStudentName ?? 'this student'}'s</strong> work in read
+        only mode.
+      </>
+    );
+
   // Show a generic message while loading to avoid toggling stale status.
-  const alertText = isLoadingLevelProgress ? (
+  const alertText = attemptStatus ? (
+    attemptAlertText
+  ) : isLoadingLevelProgress ? (
     <>
       Loading <strong>{selectedStudentName ?? 'student'}'s</strong> project...
     </>
@@ -85,10 +111,11 @@ const TeacherViewingStudentProjectAlert: React.FC<
     <Alert
       className={classNames(
         inWorkspaceContainer && moduleStyles.inWorkspaceContainer,
+        attemptStatus === 'inProgress' && moduleStyles.warningBorder,
         className
       )}
       text={alertText}
-      type="info"
+      type={attemptStatus === 'inProgress' ? 'warning' : 'info'}
       size="xs"
     />
   );

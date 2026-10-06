@@ -7,6 +7,7 @@ import {
   sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import {AppName} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {QuizQuestionSummary} from '../types';
@@ -332,6 +333,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   return (
     <div className={styles.attemptWorkspace}>
+      {isViewingStudent && attempt !== undefined && (
+        <TeacherViewingStudentProjectAlert
+          inWorkspaceContainer
+          attemptStatus={
+            attempt === null
+              ? 'notStarted'
+              : attempt.submittedAt
+              ? 'submitted'
+              : 'inProgress'
+          }
+        />
+      )}
       <div className={styles.attemptBody}>
         {error && (
           <Typography variant="body3" color="error" role="alert">
@@ -348,31 +361,19 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </Typography>
         ) : isViewingStudent && !attempt?.submittedAt ? (
           <div className={styles.questions}>
-            {attempt === null && (
-              <Typography variant="body2">
-                This student hasn&apos;t started this quiz yet.
-              </Typography>
-            )}
-            {attempt && (
-              <>
-                <Typography variant="body2">
-                  In progress and not submitted yet. Showing the answers saved
-                  so far.
-                </Typography>
-                {renderQuestionResults(
-                  mcQuestions.map(question => ({
-                    quizQuestionId: question.id,
-                    selectedChoiceId:
-                      attempt.questionResultsInProgress?.find(
-                        r => r.quizQuestionId === question.id
-                      )?.selectedChoiceId ?? null,
-                    correct: null,
-                    explanation: null,
-                    correctChoiceId: null,
-                  }))
-                )}
-              </>
-            )}
+            {attempt &&
+              renderQuestionResults(
+                mcQuestions.map(question => ({
+                  quizQuestionId: question.id,
+                  selectedChoiceId:
+                    attempt.questionResultsInProgress?.find(
+                      r => r.quizQuestionId === question.id
+                    )?.selectedChoiceId ?? null,
+                  correct: null,
+                  explanation: null,
+                  correctChoiceId: null,
+                }))
+              )}
           </div>
         ) : isIntroOpen ? (
           <div className={styles.questions} ref={introRef}>

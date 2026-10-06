@@ -13,6 +13,14 @@ import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
+
+// The real alert reads teacher-section and progress state this test has no store for.
+jest.mock('@cdo/apps/lab2/views/alerts/teacherViewingStudentProject', () => ({
+  __esModule: true,
+  default: ({attemptStatus}: {attemptStatus: string}) => (
+    <div>viewing-student-alert:{attemptStatus}</div>
+  ),
+}));
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
 
 const mockDispatch = jest.fn();
@@ -952,6 +960,11 @@ describe('QuizAttemptWorkspace', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('shows no viewing-student alert to a student taking their own quiz', () => {
+    renderWorkspace({hookState: {attempt: null}, showIntroScreen: true});
+    expect(screen.queryByText(/viewing-student-alert/)).not.toBeInTheDocument();
+  });
+
   describe('when a teacher is viewing a student', () => {
     const SUBMITTED = {
       ...ATTEMPT,
@@ -987,7 +1000,7 @@ describe('QuizAttemptWorkspace', () => {
 
       expect(beginAttempt).not.toHaveBeenCalled();
       expect(
-        screen.getByText("This student hasn't started this quiz yet.")
+        screen.getByText('viewing-student-alert:notStarted')
       ).toBeInTheDocument();
     });
 
@@ -1006,7 +1019,7 @@ describe('QuizAttemptWorkspace', () => {
       });
 
       expect(
-        screen.getByText(/In progress and not submitted yet/)
+        screen.getByText('viewing-student-alert:inProgress')
       ).toBeInTheDocument();
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
@@ -1023,6 +1036,9 @@ describe('QuizAttemptWorkspace', () => {
         viewAsUserId: 99,
       });
 
+      expect(
+        screen.getByText('viewing-student-alert:submitted')
+      ).toBeInTheDocument();
       expect(screen.getByText('100%')).toBeInTheDocument();
       expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
       expect(
