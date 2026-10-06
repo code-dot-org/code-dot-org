@@ -97,12 +97,10 @@ interface WorldRowProps {
   thumbsByImage: ReadonlyMap<string, string | undefined>;
   /** The cursor's column while it is on this row; -1 otherwise. */
   cursorCol: number;
-  /** The kinds of cell the palette cannot place, joined; a cell of one
-      stays. */
-  lockedKinds: string;
-  /** Placing one thing: a held cell of another image refuses it. */
-  refusesOthers: boolean;
-  selectedImage?: string;
+  lockedKinds: ReadonlySet<Kind>;
+  placeOne: boolean;
+  /** The item a press would place, for the cells that would refuse it. */
+  item: WorldCell | null;
   registerCell: (
     row: number,
     col: number,
@@ -135,8 +133,8 @@ const WorldRow = React.memo<WorldRowProps>(
     thumbsByImage,
     cursorCol,
     lockedKinds,
-    refusesOthers,
-    selectedImage,
+    placeOne,
+    item,
     registerCell,
     onCellPointerDown,
     onCellPointerEnter,
@@ -146,9 +144,7 @@ const WorldRow = React.memo<WorldRowProps>(
       {Array.from({length: sceneSize}, (_, col) => {
         const cell = cells?.[col];
         const thumb = cell ? thumbsByImage.get(cell.image) : undefined;
-        const locked = !!cell && lockedKinds.includes(cell.kind);
-        const blocked =
-          locked || (refusesOthers && !!cell && cell.image !== selectedImage);
+        const refusal = cellRefusal(cell, lockedKinds, placeOne, item);
         return (
           <button
             key={col}
@@ -158,7 +154,7 @@ const WorldRow = React.memo<WorldRowProps>(
             tabIndex={col === cursorCol ? 0 : -1}
             className={classNames(
               moduleStyles.worldCell,
-              blocked && moduleStyles.worldCellBlocked
+              refusal && moduleStyles.worldCellBlocked
             )}
             onPointerDown={event => onCellPointerDown(event, row, col)}
             onPointerEnter={event => onCellPointerEnter(event, row, col)}
@@ -169,7 +165,9 @@ const WorldRow = React.memo<WorldRowProps>(
                 content. */}
             <span className={moduleStyles.srOnly}>
               {cell
-                ? `${cell.image}, ${cell.kind}${locked ? ', stays' : ''}`
+                ? `${cell.image}, ${cell.kind}${
+                    refusal === 'stays' ? ', stays' : ''
+                  }`
                 : 'empty'}
             </span>
             {thumb && <img src={thumb} alt="" />}
@@ -233,6 +231,31 @@ interface PaletteItem extends WorldCell {
 
 // What the palette can choose: a placeable cell, or the eraser.
 type PaletteSelection = WorldCell | 'erase';
+
+type Kind = WorldCell['kind'];
+
+/**
+ * Why a held cell refuses a change, or null. A cell of a kind the palette
+ * does not offer stays: erased, nothing could put it back. Placing one
+ * thing, a held cell is taken for any other item; its own item removes it.
+ */
+export function cellRefusal(
+  cell: WorldCell | null | undefined,
+  lockedKinds: ReadonlySet<Kind>,
+  placeOne: boolean,
+  item: WorldCell | null
+): 'stays' | 'taken' | null {
+  if (!cell) {
+    return null;
+  }
+  if (lockedKinds.has(cell.kind)) {
+    return 'stays';
+  }
+  if (placeOne && item && item.image !== cell.image) {
+    return 'taken';
+  }
+  return null;
+}
 
 interface WorldTabProps {
   world?: World;
@@ -311,13 +334,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     () => new Map(placeable.map(item => [item.image, item.thumb])),
     [placeable]
   );
-  // A cell of a kind the palette cannot place stays: erased, nothing could
-  // put it back (the player on a blocks-only level).
   const lockedKinds = useMemo(() => {
     const offered = new Set(palette.map(item => item.kind));
-    return (['block', 'sprite'] as const)
-      .filter(kind => !offered.has(kind))
-      .join(' ');
+    return new Set<Kind>(
+      (['block', 'sprite'] as const).filter(kind => !offered.has(kind))
+    );
   }, [palette]);
   // The palette plus Erase, in keyboard order. Placing one thing has no
   // Erase: choosing its cell again removes it.
@@ -367,17 +388,16 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   // What a change to a cell did, so it can be narrated.
   type Change = 'placed' | 'removed' | 'taken' | 'stays' | null;
   // Every change to a cell goes through here: taps, drags, drops and the
-  // Delete key. A cell of a kind the palette cannot place stays; placing one
-  // thing, an empty cell takes it and a held one refuses, and only an item
-  // the palette offers can go.
+  // Delete key.
   const changeCell = (
     row: number,
     col: number,
     next: WorldCell | null
   ): Change => {
     const held = grid[row]?.[col];
-    if (held && lockedKinds.includes(held.kind)) {
-      return 'stays';
+    const refusal = cellRefusal(held, lockedKinds, placeOne, next);
+    if (refusal) {
+      return refusal;
     }
     if (!next) {
       if (!held) {
@@ -944,11 +964,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             {Array.from({length: sceneSize}, (_, row) => (
               <WorldRow
                 lockedKinds={lockedKinds}
-                refusesOthers={placeOne}
-                selectedImage={
+                placeOne={placeOne}
+                item={
                   effectiveSelected && effectiveSelected !== 'erase'
-                    ? effectiveSelected.image
-                    : undefined
+                    ? effectiveSelected
+                    : null
                 }
                 key={row}
                 row={row}
