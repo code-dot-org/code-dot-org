@@ -17,6 +17,7 @@ interface DataTableProps {
   noLabel?: boolean;
   hideLabel?: boolean;
   useResultsData?: boolean;
+  maxRows?: number;
 }
 
 const DataTable = ({
@@ -26,6 +27,7 @@ const DataTable = ({
   noLabel,
   hideLabel,
   useResultsData,
+  maxRows = DATA_TABLE_ROW_LIMIT,
 }: DataTableProps) => {
   const dispatch = useAppDispatch();
   const data = useAppSelector(
@@ -99,7 +101,7 @@ const DataTable = ({
     if (singleRow !== undefined) {
       return [data[Math.min(singleRow, data.length - 1)]];
     } else {
-      return data.slice(0, DATA_TABLE_ROW_LIMIT);
+      return data.slice(0, maxRows);
     }
   };
 
