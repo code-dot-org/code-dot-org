@@ -714,13 +714,14 @@ const EXECUTE_SCHEMA = {
     deviations: {type: 'array', items: {type: 'string'}, description: 'Every place the code departs from the plan doc, also written into its Deviations section'},
     checks: {
       type: 'object',
-      required: ['vitest', 'typecheck', 'lint', 'build', 'storybookBuild', 'codemodDryRun'],
+      required: ['vitest', 'typecheck', 'lint', 'build', 'storybookBuild', 'storybookTests', 'codemodDryRun'],
       properties: {
         vitest: {type: 'string', description: 'pass, or the failing test names'},
         typecheck: {type: 'string'},
         lint: {type: 'string'},
         build: {type: 'string'},
         storybookBuild: {type: 'string'},
+        storybookTests: {type: 'string', description: "yarn test-storybook --run on the component's stories: pass, or the failing story names"},
         codemodDryRun: {type: 'string', description: 'Result of --dry --print on three consumers, or "n/a"'},
       },
     },
@@ -803,7 +804,11 @@ Do, in order:
    override. Write every departure from the plan into the Deviations section of ${PLAN_DOC}.
 7. Checks, from ${LIB} unless noted: yarn test; yarn typecheck; ../../node_modules/.bin/eslint .;
    ../../node_modules/.bin/prettier --check on touched files; yarn stylelint; yarn build.
-   Then yarn build in ${STORYBOOK}. Fix what you broke; report each check's result.
+   Then, in ${STORYBOOK}: yarn build, and yarn test-storybook --run
+   ../../packages/component-library/src/${component}, which runs every story of the
+   component in a browser with its play function and axe, as CI's ui-test job does; yarn build
+   alone runs no play function. If Playwright has no browser, run node_modules/.bin/playwright install
+   --only-shell chromium in frontend/. Fix what you broke; report each check's result.
 
 Return the structured result.`,
   {schema: EXECUTE_SCHEMA, label: 'execute', phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
@@ -822,7 +827,8 @@ Files touched so far: ${JSON.stringify(exec.filesTouched)}
 Plan doc: ${PLAN_DOC}
 
 Re-run every check (yarn test / typecheck / eslint / prettier --check / stylelint / build
-in ${LIB}; yarn build in ${STORYBOOK}) and report. filesTouched = the list above plus your
+in ${LIB}; yarn build and yarn test-storybook --run ../../packages/component-library/src/${component}
+in ${STORYBOOK}) and report. filesTouched = the list above plus your
 changes. Copy muiStories, codemodCommand and deviations from the previous result unless
 you changed them: ${JSON.stringify({muiStories: exec.muiStories, codemodCommand: exec.codemodCommand, deviations: exec.deviations})}`
 
@@ -962,8 +968,9 @@ PLAN (intended deviations are NOT to be reverted): ${JSON.stringify(plan.legacyD
 Look at each listed baseline/mui/diff PNG with the Read tool before changing anything. Fix
 the override or wrapper, not the story, unless the story fails to reproduce the DSCO
 story's state. Record any new departure from the plan in ${PLAN_DOC}'s Deviations section.
-Re-run yarn test / typecheck / eslint / prettier --check / stylelint / build in ${LIB} and
-yarn build in ${STORYBOOK}. Report every file touched and the checks.`,
+Re-run yarn test / typecheck / eslint / prettier --check / stylelint / build in ${LIB}, and
+yarn build and yarn test-storybook --run ../../packages/component-library/src/${component}
+in ${STORYBOOK}. Report every file touched and the checks.`,
     {schema: EXECUTE_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (fix) {
