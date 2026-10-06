@@ -3893,10 +3893,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/ailab@portal:../frontend/packages/labs/ailab/::locator=blockly-mooc%40workspace%3A."
   peerDependencies:
-    "@code-dot-org/component-library": "*"
-    "@emotion/react": ^11.0.0
-    "@emotion/styled": ^11.0.0
-    "@mui/material": ^7.0.0
     react: ^18.3.1 || ^19.0.0
     react-dom: ^18.3.1 || ^19.0.0
     react-redux: ^8.1.3 || ^9.0.0
@@ -4045,9 +4041,6 @@ __metadata:
   resolution: "@code-dot-org/lesson-deep-dive@portal:../frontend/packages/lesson-deep-dive/::locator=blockly-mooc%40workspace%3A."
   peerDependencies:
     "@code-dot-org/component-library": "*"
-    "@code-dot-org/core": "*"
-    "@mui/material": ^7.0.0
-    classnames: ^2.5.1
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: node
   linkType: soft
@@ -12075,7 +12068,7 @@ __metadata:
     grunt-webpack: "npm:^6.0.0"
     hammerjs: "npm:^2.0.8"
     history: "npm:^2.0.1"
-    html-to-image: "npm:1.11.11"
+    html-to-image: "npm:1.11.13"
     html2canvas: "npm:^0.5.0-beta4"
     htmlhint: "npm:^1.1.4"
     identity-obj-proxy: "npm:^3.0.0"
@@ -19132,10 +19125,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"html-to-image@npm:1.11.11":
-  version: 1.11.11
-  resolution: "html-to-image@npm:1.11.11"
-  checksum: 10/099206c3aaa54ca36d0df91426fe2b05258fe73c913dca6874dd8250973d47f629d3f45e427d5d51cc416ee305b898ce8db0a71336b3700a059ef1116b64d944
+"html-to-image@npm:1.11.13":
+  version: 1.11.13
+  resolution: "html-to-image@npm:1.11.13"
+  checksum: 10/f5950a0221b4ed4e59853db09917606309ebe3ddd2051c2f89aed3e37026d1893880f76e61bc2ca2280e3f1bbc0ad5b9ea5325188ff339987c8eeccbe8284f3f
   languageName: node
   linkType: hard
 

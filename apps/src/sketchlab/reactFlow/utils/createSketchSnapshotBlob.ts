@@ -6,6 +6,7 @@ import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
+import {getExportStyleProperties} from './getExportStyleProperties';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
@@ -57,6 +58,7 @@ export const createSketchSnapshotBlob = async (
 
   const blob = await toBlob(viewport, {
     backgroundColor,
+    includeStyleProperties: getExportStyleProperties(),
     width: imageWidth,
     height: imageHeight,
     style: {
