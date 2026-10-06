@@ -1,0 +1,45 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--border-neutral-primary);
+  font-family: var(--font-family-main);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// Two classes, to outrank the theme's padding, so each half can fill its own box.
+.buttons .accuracyButton {
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.accuracyIcon {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 6px;
+  border-right: 1px solid var(--border-neutral-primary);
+}
+
+.accuracyText {
+  padding: 2px 8px;
+  background-color: var(--background-neutral-tertiary);
+}
+
+.accuracyButton:hover .accuracyText {
+  background-color: var(--background-neutral-quaternary);
+}
