@@ -24,11 +24,12 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "imageRole": "hero"
+      "imageRole": "hero",
+      "imageUi": "explore"
     },
     "guide_steps": [
       {
-        "text": "**Make a character.** Pick the words for your main character and click **Generate**."
+        "text": "**Make a character.** Use AI or draw your own."
       },
       {
         "text": "**There's your main character!** Click **Continue**.",
@@ -38,7 +39,7 @@
         }
       }
     ],
-    "long_instructions": "# Make a character\nPick the words for your main character and click **Generate**.",
+    "long_instructions": "# Make a character\nUse AI or draw your own.",
     "header_label": "Make a story"
   }
 }]]></config>

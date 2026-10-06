@@ -1,15 +1,20 @@
 import classNames from 'classnames';
-import {type CSSProperties, useMemo} from 'react';
+import {type CSSProperties, type ReactNode, useMemo, useRef} from 'react';
 
+import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
-import type {DisplayTreeBranch, DisplayTreeNode} from '../helpers/displayTree';
+import {
+  formatNumber,
+  thresholdText,
+  type DisplayTreeBranch,
+  type DisplayTreeNode,
+} from '../helpers/displayTree';
 import {
   getNodesBounds,
   layoutDisplayTree,
   type PlacedTreeNode,
   TREE_NODE_HEIGHT,
   TREE_NODE_WIDTH,
-  TREE_ROW_GAP,
 } from '../helpers/displayTreeLayout';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
@@ -20,29 +25,42 @@ import {
 
 import TreeCanvas from './TreeCanvas';
 
-import shared from '../shared.module.scss';
 import styles from './decisionTree.module.scss';
 
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});
 
+const EDGE_BEND_DROP = 20;
+const EDGE_CORNER_RADIUS = 8;
+const BRANCH_LABEL_RISE = 22;
+
 const canvasVariables = {
   '--tree-node-width': `${TREE_NODE_WIDTH}px`,
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
-  '--tree-branch-offset': `${TREE_ROW_GAP / 4}px`,
+  '--tree-branch-offset': `${BRANCH_LABEL_RISE}px`,
 } as CSSProperties;
-
-function formatNumber(value: number): string {
-  return String(Number(value.toFixed(2)));
-}
 
 function edgePath(parent: PlacedTreeNode, child: PlacedTreeNode): string {
   const startX = parent.x + TREE_NODE_WIDTH / 2;
   const startY = parent.y + TREE_NODE_HEIGHT;
   const endX = child.x + TREE_NODE_WIDTH / 2;
-  return `M ${startX} ${startY} V ${startY + TREE_ROW_GAP / 2} H ${endX} V ${child.y}`;
+  const bendY = startY + EDGE_BEND_DROP;
+  const radius = Math.min(EDGE_CORNER_RADIUS, Math.abs(endX - startX) / 2);
+  const turn = Math.sign(endX - startX) * radius;
+  return [
+    `M ${startX} ${startY}`,
+    `V ${bendY - radius}`,
+    `Q ${startX} ${bendY} ${startX + turn} ${bendY}`,
+    `H ${endX - turn}`,
+    `Q ${endX} ${bendY} ${endX} ${bendY + radius}`,
+    `V ${child.y}`,
+  ].join(' ');
 }
 
-const DecisionTree = () => {
+interface DecisionTreeProps {
+  overlay?: ReactNode;
+}
+
+const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const tree = useAppSelector(getDisplayTree);
   const trace = useAppSelector(getPredictionTrace);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
@@ -51,6 +69,7 @@ const DecisionTree = () => {
     [tree],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   if (!tree || !layout) {
     return null;
@@ -61,8 +80,7 @@ const DecisionTree = () => {
 
   const branchText = (branch: DisplayTreeBranch): string => {
     if (branch.kind !== 'values') {
-      const sign = branch.kind === 'lessThan' ? '<' : '≥';
-      return `${sign} ${branch.threshold}`;
+      return thresholdText(branch);
     }
     return orList.format(branch.values.map(valueText));
   };
@@ -87,72 +105,86 @@ const DecisionTree = () => {
 
   return (
     <div id="uitest-decision-tree" className={styles.decisionTree}>
-      <div className={classNames(styles.header, shared.bold)}>
-        Your model's decision tree
-      </div>
-      <TreeCanvas
-        contentWidth={layout.width}
-        contentHeight={layout.height}
-        pathBounds={pathBounds}
-      >
-        <div
-          role="img"
-          aria-label="Diagram of your model's decision tree"
-          className={styles.canvas}
-          style={{
-            ...canvasVariables,
-            width: layout.width,
-            height: layout.height,
-          }}
+      <div className={styles.canvasArea}>
+        <TreeCanvas
+          contentWidth={layout.width}
+          contentHeight={layout.height}
+          pathBounds={pathBounds}
+          overlayRef={overlayRef}
         >
-          <svg
-            width={layout.width}
-            height={layout.height}
-            aria-hidden="true"
-            className={styles.edges}
+          <div
+            role="img"
+            aria-label="Diagram of your model's decision tree"
+            className={styles.canvas}
+            style={{
+              ...canvasVariables,
+              width: layout.width,
+              height: layout.height,
+            }}
           >
-            {edgeOrder.map(
-              placed =>
-                placed.parent && (
-                  <path
-                    key={placed.id}
-                    d={edgePath(placed.parent, placed)}
-                    className={classNames({
-                      [styles.pathEdge]: pathIds.has(placed.id),
-                    })}
-                  />
-                ),
-            )}
-          </svg>
-          {layout.nodes.map(placed => {
-            const text = nodeText(placed.node);
-            const branch = placed.branch && branchText(placed.branch);
-            const kind =
-              placed.node.type === 'answer' ? styles.answer : styles.question;
-            return (
-              <div
-                key={placed.id}
-                className={styles.nodeSlot}
-                style={{left: placed.x, top: placed.y}}
-              >
-                {branch && (
-                  <div title={branch} className={styles.branch}>
-                    {branch}
-                  </div>
-                )}
+            <svg
+              width={layout.width}
+              height={layout.height}
+              aria-hidden="true"
+              className={styles.edges}
+            >
+              {edgeOrder.map(
+                placed =>
+                  placed.parent && (
+                    <path
+                      key={placed.id}
+                      d={edgePath(placed.parent, placed)}
+                      className={classNames({
+                        [styles.pathEdge]: pathIds.has(placed.id),
+                      })}
+                    />
+                  ),
+              )}
+            </svg>
+            {layout.nodes.map(placed => {
+              const text = nodeText(placed.node);
+              const branch = placed.branch && branchText(placed.branch);
+              const kind =
+                placed.node.type === 'answer' ? styles.answer : styles.question;
+              return (
                 <div
-                  title={text}
-                  className={classNames(styles.node, kind, {
-                    [styles.pathNode]: pathIds.has(placed.id),
-                  })}
+                  key={placed.id}
+                  className={styles.nodeSlot}
+                  style={{left: placed.x, top: placed.y}}
                 >
-                  <span className={styles.nodeText}>{text}</span>
+                  {branch && (
+                    <div
+                      title={branch}
+                      className={classNames(styles.branch, {
+                        [styles.pathBranch]: pathIds.has(placed.id),
+                      })}
+                    >
+                      {branch}
+                    </div>
+                  )}
+                  <div
+                    title={text}
+                    className={classNames(styles.node, kind, {
+                      [styles.pathNode]: pathIds.has(placed.id),
+                    })}
+                  >
+                    <span className={styles.nodeText}>{text}</span>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </TreeCanvas>
+              );
+            })}
+          </div>
+        </TreeCanvas>
+        {overlay && (
+          <div
+            ref={overlayRef}
+            className={styles.overlay}
+            style={{width: TEST_PANEL_WIDTH}}
+          >
+            {overlay}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

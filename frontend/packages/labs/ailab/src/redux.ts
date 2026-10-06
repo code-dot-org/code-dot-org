@@ -5,7 +5,7 @@ import {
   type AnyAction,
 } from '@reduxjs/toolkit';
 
-import {ColumnTypes, TestDataLocations, ResultsGrades} from './constants';
+import {TestDataLocations, ResultsGrades} from './constants';
 import {
   getSummaryStat,
   getResultsDataInDataTableForm,
@@ -65,7 +65,6 @@ export interface RootState {
   currentPanel: Panel;
   trainingModalStep: TrainingModalStep | undefined;
   currentColumn: string | undefined;
-  resultsPhase: number | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   historicResults: HistoricResult[];
@@ -110,10 +109,9 @@ export const initialState: RootState = {
   predictionInputs: [],
   trainedModel: undefined,
   trainedModelDetails: {},
-  currentPanel: 'selectDataset',
+  currentPanel: 'datasetView',
   trainingModalStep: undefined,
   currentColumn: undefined,
-  resultsPhase: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: 'notStarted',
@@ -197,7 +195,11 @@ const ailabSlice = createSlice({
     },
     addSelectedFeature(state, action: PayloadAction<string>) {
       if (!state.selectedFeatures.includes(action.payload)) {
+        const columns = Object.keys(state.data[0] ?? {});
         state.selectedFeatures.push(action.payload);
+        state.selectedFeatures.sort(
+          (a, b) => columns.indexOf(a) - columns.indexOf(b),
+        );
       }
     },
     removeSelectedFeature(state, action: PayloadAction<string>) {
@@ -332,10 +334,7 @@ const ailabSlice = createSlice({
       state.instructionsOverlayActive = showedOverlay;
       state.instructionsKey = currentPanel as InstructionsKey;
       state.showOverlay = showedOverlay;
-      if (currentPanel === 'dataDisplayLabel') {
-        state.currentColumn = undefined;
-        state.selectedFeatures = [];
-      } else if (currentPanel === 'results') {
+      if (currentPanel === 'results') {
         state.testData = {};
         state.prediction = undefined;
         state.resultsTab = ResultsGrades.CORRECT;
@@ -349,34 +348,8 @@ const ailabSlice = createSlice({
       if (!getShowColumnClicking(state)) {
         return;
       }
-      if (state.currentColumn === currentColumn) {
-        // If column is selected, then deselect.
-        if (state.currentPanel === 'dataDisplayFeatures') {
-          state.instructionsKey = 'dataDisplayFeatures';
-          state.showOverlay = false;
-        }
-        state.currentColumn = undefined;
-      } else {
-        // If we are selecting features, don't update instructions text when clicking the label column.
-        if (
-          state.currentPanel === 'dataDisplayFeatures' &&
-          currentColumn !== state.labelColumn
-        ) {
-          if (
-            state.columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL
-          ) {
-            state.instructionsKey = 'selectedFeatureNumerical';
-            state.showOverlay = false;
-          } else if (
-            state.columnsByDataType[currentColumn] === ColumnTypes.CATEGORICAL
-          ) {
-            state.instructionsKey = 'selectedFeatureCategorical';
-            state.showOverlay = false;
-          }
-        }
-        // Select the column.
-        state.currentColumn = currentColumn;
-      }
+      state.currentColumn =
+        state.currentColumn === currentColumn ? undefined : currentColumn;
     },
     setHighlightColumn(state, action: PayloadAction<string>) {
       const highlightColumn = action.payload;
@@ -385,20 +358,15 @@ const ailabSlice = createSlice({
         return;
       }
       if (
-        state.currentPanel === 'dataDisplayFeatures' &&
+        state.currentPanel === 'datasetView' &&
         highlightColumn === state.labelColumn
       ) {
-        // If doing feature selection, and the label column is clicked, do
-        // nothing.
         return;
       }
       state.highlightColumn = highlightColumn;
     },
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
-    },
-    setResultsPhase(state, action: PayloadAction<number>) {
-      state.resultsPhase = action.payload;
     },
     setTrainingModalStep(
       state,
@@ -441,8 +409,6 @@ const ailabSlice = createSlice({
       },
     },
     setShowResultsDetails(state, action: PayloadAction<boolean>) {
-      state.instructionsKey = action.payload ? 'resultsDetails' : 'results';
-      state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
     setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
@@ -490,7 +456,6 @@ export const {
   setCurrentColumn,
   setHighlightColumn,
   setHighlightDataset,
-  setResultsPhase,
   setTrainingModalStep,
   setResultsHighlightRow,
   setSaveStatus,

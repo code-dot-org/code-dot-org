@@ -23,7 +23,6 @@ import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import ModelCard from './UIComponents/ModelCard';
-import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
@@ -224,11 +223,11 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
+  const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -257,7 +256,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
+      {currentPanel === 'datasetView' && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
             <ContainerLeft>
@@ -275,15 +274,10 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       <TrainingModal />
 
       {currentPanel === 'results' && (
-        <BodyContainer>
-          <ContainerLeft>
+        <BodyContainer flush>
+          <ContainerFullWidth>
             <Results />
-          </ContainerLeft>
-          {resultsPhase === 1 && (
-            <ContainerRight>
-              <Predict />
-            </ContainerRight>
-          )}
+          </ContainerFullWidth>
         </BodyContainer>
       )}
 
@@ -303,17 +297,19 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      <PanelButtons
-        panelButtons={panelButtons}
-        currentPanel={currentPanel}
-        setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
-        onContinue={onContinue}
-        startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
-        saveStatus={saveStatus}
-        saveResponseData={saveResponseData}
-        isSaveComplete={isSaveComplete}
-        shouldDisplaySaveStatus={shouldDisplaySaveStatus}
-      />
+      {hasNavigation && (
+        <PanelButtons
+          panelButtons={panelButtons}
+          currentPanel={currentPanel}
+          setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
+          onContinue={onContinue}
+          startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
+          saveStatus={saveStatus}
+          saveResponseData={saveResponseData}
+          isSaveComplete={isSaveComplete}
+          shouldDisplaySaveStatus={shouldDisplaySaveStatus}
+        />
+      )}
     </div>
   );
 };
