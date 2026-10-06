@@ -53,8 +53,7 @@ class StudentWorkEvaluationsController < ApplicationController
       :evaluation,
       :reasoning,
       :ai_model_version,
-      :code_version,
-      :skill_id
+      :code_version
     )
     student_work_evaluation_params[:requester_id] = current_user.id
     student_work_evaluation_params[:school_year] = school_year

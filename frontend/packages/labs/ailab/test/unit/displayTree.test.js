@@ -1,4 +1,8 @@
-import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
+import {
+  buildDisplayTree,
+  getChildNodeId,
+  thresholdText,
+} from '../../src/helpers/displayTree';
 import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
 
 import {modelPredictions, rowTraces, trainDataset} from './trainedDataset';
@@ -160,5 +164,20 @@ describe('buildDisplayTree', () => {
         child: {type: 'answer', prediction: 90},
       },
     ]);
+  });
+});
+
+describe('thresholdText', () => {
+  test('drops float noise from a split midpoint', () => {
+    expect(
+      thresholdText({kind: 'lessThan', threshold: (39.1 + 39.2) / 2}),
+    ).toBe('< 39.15');
+    expect(thresholdText({kind: 'atLeast', threshold: (3.3 + 3.4) / 2})).toBe(
+      '≥ 3.35',
+    );
+  });
+
+  test('keeps a split finer than two decimal places', () => {
+    expect(thresholdText({kind: 'atLeast', threshold: 0.005})).toBe('≥ 0.005');
   });
 });

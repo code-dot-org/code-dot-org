@@ -23,7 +23,6 @@ import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
 import ModelCard from './UIComponents/ModelCard';
-import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
@@ -224,7 +223,6 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
@@ -257,7 +255,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
+      {currentPanel === 'datasetView' && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
             <ContainerLeft>
@@ -276,14 +274,9 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
       {currentPanel === 'results' && (
         <BodyContainer>
-          <ContainerLeft>
+          <ContainerFullWidth>
             <Results />
-          </ContainerLeft>
-          {resultsPhase === 1 && (
-            <ContainerRight>
-              <Predict />
-            </ContainerRight>
-          )}
+          </ContainerFullWidth>
         </BodyContainer>
       )}
 

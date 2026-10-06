@@ -15,9 +15,32 @@
   top: 16px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+
+.result {
+  display: flow-root;
+}
+
+.testPanelSlot {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  max-width: 100%;
+  min-height: 0;
+}
+
 .previousResults {
-  clear: both;
-  padding-top: 40px;
+  flex: none;
+  max-height: 30%;
+  overflow-y: auto;
+  padding-top: 20px;
 }
 
 .statement {

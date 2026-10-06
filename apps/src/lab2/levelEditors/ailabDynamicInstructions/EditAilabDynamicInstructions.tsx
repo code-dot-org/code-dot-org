@@ -5,11 +5,10 @@ import React, {useEffect, useRef, useState} from 'react';
 import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
 
 import {
-  ACTION_FIELDS,
   cleanDynamicInstructions,
   DynamicInstructions,
   DynamicInstructionsField,
-  SCREEN_FIELDS,
+  FIELDS,
   setInstructionsText,
 } from './ailabDynamicInstructions';
 
@@ -142,22 +141,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
           when you save: {state.removed.join('; ')}
         </Typography>
       )}
-      <Typography
-        component="h2"
-        variant="h5"
-        className={moduleStyles.sectionHeading}
-      >
-        Screens
-      </Typography>
-      {SCREEN_FIELDS.map(renderField)}
-      <Typography
-        component="h2"
-        variant="h5"
-        className={moduleStyles.sectionHeading}
-      >
-        Student actions
-      </Typography>
-      {ACTION_FIELDS.map(renderField)}
+      {FIELDS.map(renderField)}
     </div>
   );
 };
