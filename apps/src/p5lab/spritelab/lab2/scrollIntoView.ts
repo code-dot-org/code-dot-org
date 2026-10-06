@@ -4,6 +4,8 @@
 
 import * as BlocklyCore from 'blockly/core';
 
+import {reducedMotion} from './reducedMotion';
+
 /** Workspace units. */
 export interface Box {
   left: number;
@@ -69,10 +71,6 @@ export function scrollDelta(
 }
 
 export const easeOut = (t: number): number => 1 - (1 - t) ** 3;
-
-const reducedMotion = (): boolean =>
-  typeof window.matchMedia === 'function' &&
-  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const running = new WeakMap<BlocklyCore.WorkspaceSvg, () => void>();
 

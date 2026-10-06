@@ -1,6 +1,7 @@
 import cookies from 'js-cookie';
 
 import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
+import {api_statsig_stable_id_url} from '@cdo/generated-scripts/studioRoutes';
 
 import {
   getEnvironment,
@@ -10,6 +11,7 @@ import {
 } from '../utils';
 
 const STABLE_ID_KEY = StatsigStableIdKey;
+const STABLE_ID_TIMEOUT_MS = 3000;
 const COOKIE_OPTIONS = {
   path: '/',
   domain: '.code.org',
@@ -32,9 +34,28 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
-export function findOrCreateStableId() {
+export async function findOrCreateStableId() {
   if (consentAllowsStatsigCookie()) {
-    const stableId = cookies.get(STABLE_ID_KEY) || createUuid();
+    let stableId = cookies.get(STABLE_ID_KEY);
+
+    if (!stableId) {
+      try {
+        const response = await fetch(api_statsig_stable_id_url(), {
+          signal: AbortSignal.timeout(STABLE_ID_TIMEOUT_MS),
+        });
+
+        if (!response.ok) {
+          throw new Error(`${response.status}: ${await response.text()}`);
+        }
+
+        stableId = await response.text();
+      } catch (error) {
+        console.error('Failed to fetch Statsig stable ID:', error);
+      }
+    }
+
+    stableId ||= createUuid();
+
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
     return stableId;
   } else {

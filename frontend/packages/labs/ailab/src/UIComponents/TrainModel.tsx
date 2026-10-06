@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import {useState, useEffect, useRef} from 'react';
 
 import {imageUrl} from '../assetPath';
-import {getFadeOpacity} from '../constants';
+import {ANIMATION_TABLE_ROW_LIMIT, getFadeOpacity} from '../constants';
 import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getTableData} from '../redux';
@@ -135,7 +135,11 @@ const TrainModel = ({onFinished}: TrainModelProps) => {
       }}
     >
       <div className={shared.sceneTable} style={{opacity: tableOpacity}}>
-        <DataTable reducedColumns={true} startingRow={startingRow} />
+        <DataTable
+          reducedColumns={true}
+          startingRow={startingRow}
+          maxRows={ANIMATION_TABLE_ROW_LIMIT}
+        />
       </div>
 
       <div className={styles.animationArea}>

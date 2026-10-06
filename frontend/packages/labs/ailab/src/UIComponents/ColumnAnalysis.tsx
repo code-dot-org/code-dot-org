@@ -113,7 +113,9 @@ const ColumnAnalysis = () => {
             {columnName}
           </Typography>
           {columnDetails.description && (
-            <p className={styles.description}>{columnDetails.description}</p>
+            <Typography variant="body4" className={styles.description}>
+              {columnDetails.description}
+            </Typography>
           )}
           <div className={styles.stats}>
             {stats.map(stat => (
@@ -147,13 +149,17 @@ const ColumnAnalysis = () => {
               >
                 Too many values
               </Typography>
-              <p className={styles.emptyGraphMessage}>
+              <Typography variant="body4" className={styles.emptyGraphMessage}>
                 {`A graph is shown when there are ${MAX_DISTRIBUTION_BARS} or fewer values.`}
-              </p>
+              </Typography>
             </div>
           ) : (
             <div className={styles.distribution}>
-              <Typography component="h4" variant="label3">
+              <Typography
+                component="h4"
+                variant="body4"
+                className={styles.distributionTitle}
+              >
                 Distribution
               </Typography>
               {bars.length > 0 && (

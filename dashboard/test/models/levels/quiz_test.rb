@@ -23,13 +23,24 @@ class QuizTest < ActiveSupport::TestCase
   end
 
   test "reveal_answer_explanation cannot be true unless show_correctness is true" do
-    quiz = create(:quiz)
+    quiz = create(:quiz, show_questions_after_submit: true)
     quiz.show_correctness = false
     quiz.reveal_answer_explanation = true
     refute quiz.valid?
     assert_includes quiz.errors[:reveal_answer_explanation].join, 'show_correctness'
 
     quiz.show_correctness = true
+    assert quiz.valid?
+  end
+
+  test "reveal_answer_explanation cannot be true unless show_questions_after_submit is true" do
+    quiz = create(:quiz, show_correctness: true)
+    quiz.show_questions_after_submit = false
+    quiz.reveal_answer_explanation = true
+    refute quiz.valid?
+    assert_includes quiz.errors[:reveal_answer_explanation].join, 'show_questions_after_submit'
+
+    quiz.show_questions_after_submit = true
     assert quiz.valid?
   end
 

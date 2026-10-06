@@ -42,8 +42,8 @@ class StatsigReporter {
     });
   }
 
-  initializeAfterConsent() {
-    this.stable_id = findOrCreateStableId();
+  async initializeAfterConsent() {
+    this.stable_id = await findOrCreateStableId();
     this.log(`Statsig Stable ID: ${this.stable_id}`);
     let user = {
       custom: {

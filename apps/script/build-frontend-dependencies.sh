@@ -26,6 +26,11 @@ if [ "$1" = "--watch" ]; then
   # first, as part of grunt's prebuild task.
   exec yarn turbo watch build "${APPS_DEPENDENCIES[@]}" --output-logs errors-only
 else
+  # Empty dist once here, before webpack starts watching it. Package builds no
+  # longer empty it themselves (emptyOutDir: false) because webpack never
+  # recovers on macOS when watched files vanish mid-build (INF-2257). This
+  # clean is what keeps removed or renamed outputs from piling up over time.
   yarn && \
+  yarn run clean "${APPS_DEPENDENCIES[@]}" --output-logs errors-only && \
   yarn run build "${APPS_DEPENDENCIES[@]}" --output-logs errors-only
 fi

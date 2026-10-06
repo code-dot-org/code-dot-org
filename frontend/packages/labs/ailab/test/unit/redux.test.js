@@ -11,7 +11,6 @@ import reducer, {
   setPrediction,
   setMode,
   setReserveLocation,
-  setShowResultsDetails,
   setImportedData,
   resetState,
   setSaveStatus,
@@ -93,7 +92,6 @@ describe('ailab reducer', () => {
       const next = reducer(state, setCurrentPanel('results'));
       expect(next.testData).toEqual({});
       expect(next.prediction).toBeUndefined();
-      expect(next.showResultsDetails).toBe(false);
       // The results branch intentionally does not reset currentColumn.
       expect(next.currentColumn).toBe('a');
     });
@@ -109,6 +107,16 @@ describe('ailab reducer', () => {
       const once = reducer(initialState, addSelectedFeature('a'));
       const twice = reducer(once, addSelectedFeature('a'));
       expect(twice.selectedFeatures).toEqual(['a']);
+    });
+
+    test('keeps features in table order, whatever the order picked', () => {
+      let state = reducer(
+        initialState,
+        setImportedData([{a: '1', b: '2', c: '3'}], false),
+      );
+      state = reducer(state, addSelectedFeature('c'));
+      state = reducer(state, addSelectedFeature('a'));
+      expect(state.selectedFeatures).toEqual(['a', 'c']);
     });
   });
 
@@ -168,7 +176,7 @@ describe('ailab reducer', () => {
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
       expect(next.selectedFeatures).toEqual([]);
-      expect(next.currentPanel).toBe('selectDataset');
+      expect(next.currentPanel).toBe('datasetView');
     });
 
     test('preserves instructionsEnabled through reset', () => {
@@ -206,19 +214,11 @@ describe('ailab reducer', () => {
       expect(next.instructionsKey).toBe('datasetView');
     });
 
-    test('the results-details toggle keeps the results instructions', () => {
-      const results = reducer(initialState, setCurrentPanel('results'));
-      const open = reducer(results, setShowResultsDetails(true));
-      expect(open.showResultsDetails).toBe(true);
-      expect(open.instructionsKey).toBe('results');
-      const closed = reducer(open, setShowResultsDetails(false));
-      expect(closed.instructionsKey).toBe('results');
-    });
-
     test('importing a dataset records uploaded vs selected', () => {
-      const uploaded = reducer(initialState, setImportedData([], true));
+      const onPicker = {...initialState, currentPanel: 'selectDataset'};
+      const uploaded = reducer(onPicker, setImportedData([], true));
       expect(uploaded.instructionsKey).toBe('uploadedDataset');
-      const selected = reducer(initialState, setImportedData([], false));
+      const selected = reducer(onPicker, setImportedData([], false));
       expect(selected.instructionsKey).toBe('selectedDataset');
     });
   });
