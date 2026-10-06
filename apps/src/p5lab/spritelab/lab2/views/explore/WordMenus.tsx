@@ -135,7 +135,12 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
         setOverSlotId(slotId);
       }
     },
-    onDragLeave: () => setOverSlotId(null),
+    // Moving between the chip's own children is not leaving it.
+    onDragLeave: (e: React.DragEvent) => {
+      if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+        setOverSlotId(null);
+      }
+    },
     onDrop: (e: React.DragEvent) => {
       setOverSlotId(null);
       try {

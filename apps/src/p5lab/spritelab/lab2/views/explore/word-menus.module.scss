@@ -193,11 +193,16 @@ button.chipWord {
   }
 }
 
+// Only the blank's pulse stops: an animation change on a filled chip would
+// replay its landing.
 .dropTarget {
   opacity: 1;
-  animation: none;
   transform: scale(1.08);
   box-shadow: 0 0 0 4px var(--hue);
+}
+
+.placeholder.dropTarget {
+  animation: none;
 }
 
 .dimmed {
