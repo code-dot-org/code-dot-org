@@ -23,7 +23,7 @@ class QuizTest < ActiveSupport::TestCase
   end
 
   test "reveal_answer_explanation cannot be true unless show_correctness is true" do
-    quiz = create(:quiz)
+    quiz = create(:quiz, show_questions_after_submit: true)
     quiz.show_correctness = false
     quiz.reveal_answer_explanation = true
     refute quiz.valid?
