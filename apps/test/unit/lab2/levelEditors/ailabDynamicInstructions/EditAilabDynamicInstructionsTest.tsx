@@ -49,7 +49,7 @@ describe('EditAilabDynamicInstructions', () => {
     const original = '{"selectDataset": "Pick one.", "bogus": 3}';
     const saved = renderEditor(original, false);
     expect(
-      screen.queryByRole('textbox', {name: 'Results screen'})
+      screen.queryByRole('textbox', {name: 'Testing screen'})
     ).not.toBeInTheDocument();
     expect(saved()).toBe(original);
 
@@ -61,7 +61,7 @@ describe('EditAilabDynamicInstructions', () => {
 
   it('shows saved text in the fields and defaults as placeholders', () => {
     renderEditor('{"results": "How accurate was it?"}');
-    expect(field('Results screen')).toHaveValue('How accurate was it?');
+    expect(field('Testing screen')).toHaveValue('How accurate was it?');
     expect(field('Dataset screen')).toHaveValue('');
     expect(field('Dataset screen')).toHaveAttribute(
       'placeholder',
@@ -102,14 +102,14 @@ describe('EditAilabDynamicInstructions', () => {
 
   it('adds a key when its field is filled and removes it when cleared', () => {
     const saved = renderEditor(null);
-    fireEvent.change(field('Results screen'), {
+    fireEvent.change(field('Testing screen'), {
       target: {value: 'How **accurate** was it?'},
     });
     expect(JSON.parse(saved())).toEqual({
       results: 'How **accurate** was it?',
     });
 
-    fireEvent.change(field('Results screen'), {
+    fireEvent.change(field('Testing screen'), {
       target: {value: '  '},
     });
     expect(saved()).toBe('');
@@ -135,7 +135,7 @@ describe('EditAilabDynamicInstructions', () => {
     });
 
     lab2.set(true);
-    expect(field('Results screen')).toHaveValue('Done.');
+    expect(field('Testing screen')).toHaveValue('Done.');
     expect(JSON.parse(saved())).toEqual({
       results: 'Done.',
       datasetView: 'Look.',
