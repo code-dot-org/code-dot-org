@@ -10,7 +10,7 @@ export interface StatCardProps {
 
 const StatCard = ({label, value}: StatCardProps) => (
   <div className={styles.statCard}>
-    <Typography component="div" variant="body4" className={styles.statLabel}>
+    <Typography variant="body4" className={styles.statLabel}>
       {label}
     </Typography>
     <div className={styles.statValue} title={value}>

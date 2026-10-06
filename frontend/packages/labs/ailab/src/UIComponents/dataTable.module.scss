@@ -41,8 +41,7 @@
   cursor: pointer;
 }
 
-// The cell's state sets the weight and color; two classes outrank the
-// Typography variant's own.
+// Headers, selection and hover set the text color and weight on the cell.
 .table .cellText {
   font-weight: inherit;
   color: inherit;
