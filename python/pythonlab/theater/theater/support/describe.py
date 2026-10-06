@@ -2,16 +2,27 @@
 
 import os
 from dataclasses import dataclass
+from itertools import groupby
 
 from .actions import SceneActionType
 from .color import _NAMED_COLORS
-from .constants import SAMPLE_RATE
+from .constants import SAMPLE_RATE, THEATER_HEIGHT, THEATER_WIDTH
 from .renderer import _audio_length_bound, _frame_durations, _stroke
 
 _NOTE_NAMES = ("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
 
 _MAX_ITEMS_PER_GROUP = 8
 _MAX_FRAMES_SHOWN = 50
+
+# Thirds of the stage, as spoken: coarse enough to picture, unlike pixels.
+_PLACES = (
+  ("in the top left", "at the top", "in the top right"),
+  ("on the left", "in the center", "on the right"),
+  ("in the bottom left", "at the bottom", "in the bottom right"),
+)
+
+# Palette names as they appear in a phrase, for spotting a shared color.
+_COLOR_WORDS = frozenset(name.lower() for name in _NAMED_COLORS)
 
 # Which line of the transcript each drawing is listed on, and in what order.
 _GROUPS = {
@@ -29,6 +40,7 @@ _GROUPS = {
 # How each group counts repeats; only a shape phrase ends in a noun taking an s.
 _COUNT_FORMS = {
   "Shapes": "{count} {phrase}s",
+  "Images": "{phrase} {count} times",
   "Sound": "{phrase} {count} times",
   "Text": "{phrase} {count} times",
 }
@@ -126,11 +138,12 @@ def _frame_lines(frame, onscreen=False):
       continue
     phrase = _phrase(action)
     if phrase:
-      groups[_GROUPS[action.type]].append(phrase)
+      groups[_GROUPS[action.type]].append((phrase, _position(action)))
   for label, items in groups.items():
     if items:
       name = f"Added {label.lower()}" if onscreen and label in _PERSISTENT else label
-      lines.append(f"{name}: {_join(items, _COUNT_FORMS.get(label))}.")
+      items, shared = _factor_shared(items)
+      lines.append(f"{name}{shared}: {_join(items, _COUNT_FORMS[label])}.")
   drawn = any(groups[label] for label in _PERSISTENT)
   return lines, onscreen or drawn
 
@@ -154,7 +167,7 @@ def _phrase(action):
     return _painted(action, "shape")
   if kind is SceneActionType.DRAW_IMAGE:
     filename = action.image.get_filename()
-    return os.path.basename(filename) if filename else "a picture made in code"
+    return os.path.basename(filename) if filename else "a picture made with code"
   if kind is SceneActionType.DRAW_TEXT:
     # A Scene paints black until told otherwise, so naming it says nothing.
     color = _color_name(action.color)
@@ -196,6 +209,43 @@ def _painted(action, noun):
   return name if outline == primary else f"{outline}-outlined {name}"
 
 
+def _position(action):
+  """Where a drawing sits, or None for something with no place on the stage."""
+  point = _anchor(action)
+  if point is None:
+    return None
+  x, y = point
+  if not (0 <= x <= THEATER_WIDTH and 0 <= y <= THEATER_HEIGHT):
+    return "off the stage"
+  row = min(2, int(y * 3 // THEATER_HEIGHT))
+  column = min(2, int(x * 3 // THEATER_WIDTH))
+  return _PLACES[row][column]
+
+
+def _anchor(action):
+  """The point a drawing is placed by: mostly the middle of what it covers."""
+  kind = action.type
+  if kind in (SceneActionType.DRAW_RECTANGLE, SceneActionType.DRAW_ELLIPSE):
+    return (action.x + action.width / 2, action.y + action.height / 2)
+  if kind is SceneActionType.DRAW_POLYGON:
+    return (action.x, action.y)
+  if kind is SceneActionType.DRAW_TEXT:
+    # Where the text starts; its width is not known here.
+    return (action.x, action.y)
+  if kind is SceneActionType.DRAW_LINE:
+    return ((action.start_x + action.end_x) / 2, (action.start_y + action.end_y) / 2)
+  if kind is SceneActionType.DRAW_SHAPE:
+    # Points arrive flat: x, y, x, y.
+    xs, ys = action.points[0::2], action.points[1::2]
+    return (sum(xs) / len(xs), sum(ys) / len(ys)) if ys else None
+  if kind is SceneActionType.DRAW_IMAGE:
+    # An image given only a size is assumed square.
+    width = action.width if action.width is not None else (action.size or 0)
+    height = action.height if action.height is not None else (action.size or 0)
+    return (action.x + width / 2, action.y + height / 2)
+  return None
+
+
 def _color_name(color):
   """The closest palette name, since hex digits read aloud are noise."""
   target = color.to_rgb_tuple()
@@ -212,27 +262,36 @@ def _note_name(note):
   return _NOTE_NAMES[note % 12] + str(note // 12 - 1)
 
 
+def _factor_shared(items):
+  """Move a color or place that every item shares into the group label."""
+  if len(items) < 2:
+    return items, ""
+  shared = []
+  # Color before place, so the group reads "all navy in the top left".
+  color = items[0][0].partition(" ")[0]
+  if color in _COLOR_WORDS and all(phrase.startswith(color + " ") for phrase, _ in items):
+    shared.append(color)
+    items = [(phrase.partition(" ")[2], place) for phrase, place in items]
+  place = items[0][1]
+  if place and all(other == place for _, other in items):
+    shared.append(place)
+    items = [(phrase, None) for phrase, _ in items]
+  return items, f", all {' '.join(shared)}" if shared else ""
+
+
 def _join(items, count_form):
-  if count_form:
-    items = _with_counts(items, count_form)
-  shown = items[:_MAX_ITEMS_PER_GROUP]
-  hidden = len(items) - len(shown)
+  written = []
+  # A repeat is the same thing in the same place, drawn back to back.
+  for (phrase, place), run in groupby(items):
+    count = len(list(run))
+    # Count first, so "ellipses" gets its s before the place is added.
+    text = count_form.format(phrase=phrase, count=count) if count > 1 else phrase
+    written.append(f"{text} {place}" if place else text)
+  shown = written[:_MAX_ITEMS_PER_GROUP]
+  hidden = len(written) - len(shown)
   if hidden:
     shown.append(f"and {hidden} more")
   return ", ".join(shown)
-
-
-def _with_counts(items, count_form):
-  counted = []
-  for item in items:
-    if counted and counted[-1][0] == item:
-      counted[-1][1] += 1
-    else:
-      counted.append([item, 1])
-  return [
-    item if count == 1 else count_form.format(phrase=item, count=count)
-    for item, count in counted
-  ]
 
 
 def _article(word):
