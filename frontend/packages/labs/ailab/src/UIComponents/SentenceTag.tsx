@@ -38,7 +38,6 @@ const SentenceTag = ({
     );
   }
 
-  // A button, so keyboard users can reach the tooltip.
   return (
     <Tooltip title={tooltip} placement="top" describeChild>
       <Typography

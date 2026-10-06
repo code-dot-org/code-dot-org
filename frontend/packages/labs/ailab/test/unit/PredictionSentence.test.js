@@ -17,8 +17,6 @@ function renderSentence(props) {
   );
 }
 
-// jsdom lays nothing out, so give every element 10px per character and the
-// sentence a fixed width.
 function layOutSentence(width) {
   vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(
     function () {
@@ -78,8 +76,7 @@ describe('PredictionSentence', () => {
   });
 
   test('on a single line, collapses features that do not fit into a tag', async () => {
-    // "based on" ends at 80px, the features at 140, 180 and 210, and "+3"
-    // needs 20px, so two features fit before the tag.
+    // "based on" ends at 80px; tags end at 140, 180, 210; "+3" needs 20px.
     layOutSentence(200);
     const {container} = renderSentence({
       label: 'species',
