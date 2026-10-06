@@ -11470,6 +11470,13 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_define_drawing',
     ],
   },
+  // THE WORLD'S BLOCKS, BY TOPIC. One drawer held all of these, sixty-odd
+  // blocks from `define world` to the foreground's effects, and a learner
+  // looking for `set background` read past cameras, layers, tweens and
+  // saving to find it. Each topic is a drawer of its own now, so a drawer's
+  // name says what is in it, and a level or a profile can leave out a whole
+  // topic (specs/TOOLBOX_TOPICS.md). Names that a rule's drawer may also
+  // have — Time, Camera — are avoided, since a drawer is found by its name.
   {
     name: 'World',
     blocks: [
@@ -11492,48 +11499,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Which theme the interface is painted in — the file every `use style`
       // in every drawing is looked up in (specs/STYLES_PLAN.md).
       'world_use_theme',
-      // Placing actors: from a map file, or one at a time.
-      'world_load_map',
-      'world_load_map_named',
-      'world_unload_newest_map',
-      'world_add_actor',
-      // …and into a Viewport, a window onto a map in a space of its own
-      // (specs/VIEWPORT_PLAN.md).
-      'world_load_map_into',
-      'world_unload_viewport',
-      'world_map_ref',
-      // Grouping what is placed, and what draws in front of what.
-      'world_define_layer',
-      // The opt-in to parallax, and the separate question of whether the
-      // layer looks at the camera at all.
-      'world_layer_parallax',
-      'world_layer_fixed',
-      'world_within_layer',
-      // Where the view is taken from; layers respond by their own parallax.
-      'world_define_camera',
-      'world_use_camera',
-      'world_move_camera',
-      // One camera by name, for a world wiring one up; and all of them, which
-      // is the only way a RULE can reach a camera — a dropdown cannot say
-      // "whichever cameras have this trait".
-      'world_camera',
-      'world_all_cameras',
-      // Movement over time: described once, played wherever. Beside the
-      // camera blocks because both are about how a thing gets somewhere
-      // rather than where it is.
-      'world_define_tween',
-      'world_play_tween',
-      // …and the same movement written where it is used, for the one that is
-      // not shared and has nobody waiting to hear it end.
-      'world_play_tween_here',
-      // How a camera rule reaches the camera every world already has. Listed
-      // HERE, beside the camera blocks, because that is where somebody wiring
-      // one up is looking — the actor pair stays with the runtime blocks.
-      'world_add_camera_trait',
-      'world_remove_camera_trait',
-      // The one a camera-scoped step is running for — `this actor`'s
-      // counterpart, and the only way such a step names its own subject.
-      'world_this_camera',
       // How big the level is, for anything that keeps a view inside it — and
       // how a world without a `.map` file says so in the first place.
       'world_set_map_size',
@@ -11542,14 +11507,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // as well: a room meant to be taken in at a glance says so here.
       'world_set_view_size',
       'world_view_size',
-      // …and how long it has been going, which is what every delay, cooldown
-      // and lifetime is measured against.
-      'world_time',
-      // …and what time it is OUT THERE, which is a different question and the
-      // only one that can answer what day it is (specs/CLOCK_PLAN.md).
-      'world_now',
-      'world_time_part',
-      'world_time_text',
+      // Placing one actor at a time, where a map places many.
+      'world_add_actor',
       // …and taking one back out again, while the game runs. Taking ALL of
       // them out was `clear world`, for changing level; a level is what a
       // Viewport holds now, and `load map ⟨…⟩ into ⟨…⟩` replaces it.
@@ -11557,15 +11516,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_pause_game',
       'world_resume_game',
       'world_game_is_paused',
-      // …and what survives a reload: a world's own memory, under a name the
-      // project chooses (specs/SAVING_PLAN.md).
-      'world_save_memory',
-      'world_recall_memory',
-      'world_forget_memory',
-      // …and the records themselves, which are ACTORS: a kind's own
-      // properties, kept and brought back (specs/RECORDS_PLAN.md).
-      'world_remember_actors',
-      'world_recall_actors',
+      // Movement over time: described once, played wherever.
+      'world_define_tween',
+      'world_play_tween',
+      // …and the same movement written where it is used, for the one that is
+      // not shared and has nobody waiting to hear it end.
+      'world_play_tween_here',
       // …and how a world types without a keyboard, which is what an app on a
       // touch screen has to do. A map of Buttons calls these, and whatever is
       // listening for typing hears them (specs/KEYBOARD_PLAN.md).
@@ -11584,6 +11540,60 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // nobody has opened still loads and runs.
       'world_add_world_effect',
       'world_remove_world_effect',
+    ],
+  },
+  {
+    // Everything about maps: loading one, and — in a map's own workspaces,
+    // where `ROOT_HOMES` lets them in — the blocks a map is written with
+    // (specs/MAP_FIRST.md). A world file sees the loading half only.
+    name: 'Map',
+    blocks: [
+      // Placing actors from a map file.
+      'world_load_map',
+      'world_load_map_named',
+      'world_unload_newest_map',
+      // …and into a Viewport, a window onto a map in a space of its own
+      // (specs/VIEWPORT_PLAN.md).
+      'world_load_map_into',
+      'world_unload_viewport',
+      'world_map_ref',
+
+      // The root a map opens with.
+      'world_map',
+      'world_placement',
+      'world_unload_this_map',
+      'world_on_map_loads',
+      'world_on_map_unloads',
+    ],
+  },
+  {
+    // Where the view is taken from (specs/SPACE_CAMERAS_PLAN.md).
+    name: 'Cameras',
+    blocks: [
+      // Where the view is taken from; layers respond by their own parallax.
+      'world_define_camera',
+      'world_use_camera',
+      'world_move_camera',
+      // One camera by name, for a world wiring one up; and all of them, which
+      // is the only way a RULE can reach a camera — a dropdown cannot say
+      // "whichever cameras have this trait".
+      'world_camera',
+      'world_all_cameras',
+      // How a camera rule reaches the camera every world already has. Listed
+      // with the camera blocks, because that is where somebody wiring one up
+      // is looking — the actor pair stays with the runtime blocks.
+      'world_add_camera_trait',
+      'world_remove_camera_trait',
+      // The one a camera-scoped step is running for — `this actor`'s
+      // counterpart, and the only way such a step names its own subject.
+      'world_this_camera',
+    ],
+  },
+  {
+    // What is behind and in front of everything, and the layers that hold
+    // them (specs/LAYERS_PLAN.md).
+    name: 'Backgrounds',
+    blocks: [
       // What is behind everything: an image, a color, and effects on that
       // image alone (BACKGROUNDS.md).
       'world_set_background',
@@ -11603,19 +11613,40 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // score sharp (specs/VIEWPORT.md).
       'world_add_layer_effect',
       'world_remove_layer_effect',
+      // Grouping what is placed, and what draws in front of what.
+      'world_define_layer',
+      // The opt-in to parallax, and the separate question of whether the
+      // layer looks at the camera at all.
+      'world_layer_parallax',
+      'world_layer_fixed',
+      'world_within_layer',
     ],
   },
   {
-    // A map's own blocks (specs/MAP_FIRST.md). Offered only in a map's
-    // workspaces — `ROOT_HOMES` empties the category everywhere else.
-    name: 'Map',
+    name: 'Memory',
     blocks: [
-      // The root a map opens with.
-      'world_map',
-      'world_placement',
-      'world_unload_this_map',
-      'world_on_map_loads',
-      'world_on_map_unloads',
+      // What survives a reload: a world's own memory, under a name the
+      // project chooses (specs/SAVING_PLAN.md).
+      'world_save_memory',
+      'world_recall_memory',
+      'world_forget_memory',
+      // …and the records themselves, which are ACTORS: a kind's own
+      // properties, kept and brought back (specs/RECORDS_PLAN.md).
+      'world_remember_actors',
+      'world_recall_actors',
+    ],
+  },
+  {
+    name: 'Clock',
+    blocks: [
+      // How long it has been going, which is what every delay, cooldown
+      // and lifetime is measured against.
+      'world_time',
+      // …and what time it is OUT THERE, which is a different question and the
+      // only one that can answer what day it is (specs/CLOCK_PLAN.md).
+      'world_now',
+      'world_time_part',
+      'world_time_text',
     ],
   },
   {

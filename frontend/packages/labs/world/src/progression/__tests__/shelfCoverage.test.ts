@@ -64,19 +64,24 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'world_acts_like',
     'world_define_drawing',
   ],
-  // Cameras, the foreground, and the effect pairs. `world_time` is the one
-  // here that stands out: every delay and cooldown is measured against it.
+  // The world's drawer, and the topics it was split into
+  // (specs/TOOLBOX_TOPICS.md): the same blocks the one World drawer hid,
+  // filed where they now live.
   World: [
+    'world_set_view_size',
+    'world_actor_kind',
+    'world_remove_world_effect',
+  ],
+  Cameras: [
     'world_move_camera',
     'world_camera',
     'world_all_cameras',
     'world_add_camera_trait',
     'world_remove_camera_trait',
     'world_this_camera',
-    'world_set_view_size',
-    'world_time',
-    'world_actor_kind',
-    'world_remove_world_effect',
+  ],
+  // The foreground, and the effect pairs.
+  Backgrounds: [
     'world_set_foreground',
     'world_clear_foreground',
     'world_set_foreground_offset',
@@ -88,6 +93,8 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'world_add_layer_effect',
     'world_remove_layer_effect',
   ],
+  // `world_time` stands out: every delay and cooldown is measured against it.
+  Clock: ['world_time'],
   // The two map hats. A map that does something when it loads is a real
   // thing (the pause menu is one) and no lesson reaches it.
   Map: ['world_on_map_loads', 'world_on_map_unloads'],

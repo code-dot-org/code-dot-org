@@ -283,7 +283,8 @@ added to the library tomorrow stays out of apps until somebody decides:
 - **Enhance**: types out text. Every other row makes a character.
 - **Map editor**: no Layers or Cameras button, no strip, no Layer on a
   placement; a lesson pointing at the strip is told no.
-- **Toolbox**: the layer, camera and Viewport blocks leave the World drawer
+- **Toolbox**: the layer, camera and Viewport blocks leave the toolbox — the
+  whole Cameras drawer, and the layers out of Backgrounds (specs/TOOLBOX_TOPICS.md)
   (`toolboxFilter.withoutBlocks`).
 
 Both app scenarios hold EVERY actor on that list, placed or not, so a

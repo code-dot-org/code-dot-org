@@ -1504,18 +1504,21 @@ describe('domain block generators', () => {
     }
   });
 
-  it('puts the actor-placing blocks in the World category', () => {
+  it('puts the actor-placing blocks in the World category, and maps in Map', () => {
     // There is no Scene category: a world holds both the laws and the actors,
-    // so `load map` / `add actor` belong beside the rules they run under.
+    // so `add actor` belongs beside the rules it runs under. Loading a whole
+    // map is a map's topic, in the Map drawer (specs/TOOLBOX_TOPICS.md).
     const names = (DOMAIN_TOOLBOX as Array<{name: string}>).map(c => c.name);
     expect(names).not.toContain('Scene');
-    expect(
+    const drawer = (name: string) =>
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
-        c => c.name === 'World',
-      )?.blocks,
-    ).toEqual(
+        c => c.name === name,
+      )?.blocks;
+    expect(drawer('Map')).toEqual(
+      expect.arrayContaining(['world_load_map', 'world_load_map_into']),
+    );
+    expect(drawer('World')).toEqual(
       expect.arrayContaining([
-        'world_load_map',
         'world_add_actor',
         // Taking actors out belongs beside putting them in.
         'world_remove_actor',
@@ -1780,7 +1783,7 @@ describe('the two time blocks', () => {
     // The clock is a fact about the world; an age is a fact about an actor.
     // Filing the age under World would put it beside `map size`, which is the
     // one place a learner is not looking for something about a bullet.
-    expect(inCategory('World', 'world_time')).toBe(true);
+    expect(inCategory('Clock', 'world_time')).toBe(true);
     expect(inCategory('Actor', 'world_actor_age')).toBe(true);
   });
 

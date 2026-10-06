@@ -41,7 +41,7 @@ export function withoutCategories(
  * category that held nothing else.
  *
  * Types, because a feature's blocks share a drawer with the rest of it: the
- * camera and layer blocks are in the World drawer, which an app still wants
+ * layer blocks are in the Backgrounds drawer, whose slots an app still wants
  * (`appBuilder.APP_HIDDEN_BLOCKS`). Identity when nothing is hidden.
  */
 export function withoutBlocks(
