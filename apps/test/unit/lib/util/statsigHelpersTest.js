@@ -102,7 +102,7 @@ describe('statsigHelpers', () => {
       expect(consoleErrorStub).not.to.have.been.called;
     });
 
-    it('requests the generated Studio URL with a two-second timeout signal', async () => {
+    it('requests the generated Studio URL with a three-second timeout signal', async () => {
       await findOrCreateStableId();
 
       expect(getStub).to.have.been.calledWith(api_statsig_stable_id_url());
