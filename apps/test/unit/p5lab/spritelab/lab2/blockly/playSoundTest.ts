@@ -67,6 +67,7 @@ describe('spritelab2_playSound', () => {
       }
     );
     expect(soundEffects.synthPresetOf('synth://nope')).toBeNull();
+    expect(soundEffects.synthPresetOf('synth://toString')).toBeNull();
     expect(soundEffects.synthPresetOf('sound://x.mp3')).toBeNull();
   });
 

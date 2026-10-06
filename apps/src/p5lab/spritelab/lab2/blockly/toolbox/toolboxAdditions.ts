@@ -14,7 +14,10 @@ import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
-import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
+import {
+  PLAY_SOUND_BLOCK_TYPE,
+  PLAY_SOUND_DEFAULT,
+} from '../blockDefinitions/playSound';
 import {
   EFFECT_FIELD_DEFAULTS,
   PLAY_SOUND_EFFECT_BLOCK_TYPE,
@@ -59,7 +62,7 @@ const PLATFORMER_COMPOSITES: [string, string][] = [
 ];
 
 // Field values a toolbox entry starts with: a marked cell for grid blocks,
-// a jump for the sound effect.
+// a jump for the sound effect, a hop for play sound.
 const FIELD_DEFAULTS = new Map<string, Record<string, string>>([
   ...PLATFORMER_COMPOSITES.map(
     ([type, grid]) => [type, {GRID: grid}] as [string, Record<string, string>]
@@ -75,6 +78,7 @@ const FIELD_DEFAULTS = new Map<string, Record<string, string>>([
     },
   ],
   [PLAY_SOUND_EFFECT_BLOCK_TYPE, EFFECT_FIELD_DEFAULTS],
+  [PLAY_SOUND_BLOCK_TYPE, {SOUND: PLAY_SOUND_DEFAULT}],
 ]);
 
 // Lab-injected toolbox categories, inserted at the top of every level's

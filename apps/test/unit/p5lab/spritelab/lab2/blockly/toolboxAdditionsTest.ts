@@ -42,6 +42,10 @@ describe('applyToolboxAdditions', () => {
     const sound = blocksIn(toolbox, 'Platform').find(
       block => block.type === 'spritelab2_playSound'
     );
-    expect(sound?.fields).toBeUndefined();
+    expect(sound?.fields).toEqual({SOUND: 'synth://jump'});
+    const music = blocksIn(toolbox, 'Platform').find(
+      block => block.type === 'spritelab2_playMusic'
+    );
+    expect(music?.fields).toBeUndefined();
   });
 });

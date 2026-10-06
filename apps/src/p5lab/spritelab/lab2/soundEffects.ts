@@ -211,7 +211,9 @@ export function synthPresetOf(url: unknown): PresetName | null {
     return null;
   }
   const name = url.slice(SYNTH_SOUND_PREFIX.length);
-  return name in PRESETS ? (name as PresetName) : null;
+  return Object.prototype.hasOwnProperty.call(PRESETS, name)
+    ? (name as PresetName)
+    : null;
 }
 
 // Long enough that a note doesn't start with a click.
@@ -219,17 +221,18 @@ const ATTACK_S = 0.01;
 // Exponential ramps can't reach zero.
 const SILENCE = 0.0001;
 // A sound asked for while the context was suspended plays once it runs,
-// unless this long has passed; an older request was a live preview, not a
-// student's click.
+// unless this long has passed.
 const STALE_MS = 1000;
 // A block fired every frame could pile up voices; past this many, a new
-// sound is dropped. Each voice costs the audio thread one oscillator.
+// sound is dropped. A voice is a source, a low-pass filter and a gain, plus
+// a bandpass filter for noise and an extra oscillator for wobble.
 const MAX_LIVE_VOICES = 32;
 // Every play is nudged up to this far in pitch, so repeats don't sound
 // mechanical; one factor per play keeps a run in tune with itself.
 const HUMANIZE = 0.02;
 // A low-pass filter on each voice opens this far above the note and closes
-// toward it as the note fades, which rounds off a raw wave's fizz.
+// toward it as the note fades, cutting the high harmonics of a square or
+// sawtooth. A slide closes toward its higher end.
 const FILTER_OPEN_RATIO = 6;
 const FILTER_CLOSED_RATIO = 1.5;
 const FILTER_MAX_HZ = 12000;
@@ -262,8 +265,8 @@ function audioContext(): AudioContext | null {
   return context;
 }
 
-/** Every voice ends here: a compressor evens the loudness of overlapping
-    sounds and of the waves against each other. */
+/** A compressor evens the loudness of overlapping sounds and of the waves
+    against each other; its makeup gain lifts every sound by several dB. */
 function outputBus(ctx: AudioContext): AudioNode {
   if (!bus) {
     bus = ctx.createDynamicsCompressor();
@@ -359,9 +362,10 @@ function schedule(ctx: AudioContext, notes: Note[]): void {
     const {source, gain, frequency, tail} = voice;
     const filter = ctx.createBiquadFilter();
     filter.type = 'lowpass';
+    const top = Math.max(hz, (note.slideTo ?? 0) * nudge);
     filter.frequency.setValueAtTime(clampHz(hz * FILTER_OPEN_RATIO), start);
     filter.frequency.exponentialRampToValueAtTime(
-      clampHz(hz * FILTER_CLOSED_RATIO),
+      clampHz(top * FILTER_CLOSED_RATIO),
       end
     );
     tail.connect(filter);

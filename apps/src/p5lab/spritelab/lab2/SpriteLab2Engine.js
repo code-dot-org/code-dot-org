@@ -624,6 +624,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.playSound = function (url) {
       const preset = synthPresetOf(url);
       if (preset) {
+        library.soundLog.push(url);
         playPreset(preset);
         return;
       }
@@ -933,6 +934,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.destroyed_) {
       return;
     }
+    stopSoundEffects();
     const p5 = this.p5Wrapper.p5;
     if (!p5) {
       this.execute();
@@ -976,12 +978,12 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /** Stop execution. */
   resetRuntime() {
-    stopSoundEffects();
     this.reset();
   }
 
   destroy() {
     this.destroyed_ = true;
+    stopSoundEffects();
     this.reset();
     this.stopTickTimer();
     this.imageWaitCancel_?.();

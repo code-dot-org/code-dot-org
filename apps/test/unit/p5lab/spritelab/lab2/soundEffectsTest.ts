@@ -285,6 +285,13 @@ describe('playNotes', () => {
     expect(near(noteOscillators()[0].frequency.value, notes[0].hz)).toBe(true);
   });
 
+  it('closes a slide-up filter toward the slide end, not the start', () => {
+    playSoundEffect(jump);
+    const [note] = notesFor(jump);
+    const lowpass = filters.find(f => f.type === 'lowpass')!;
+    expect(rampTarget(lowpass.frequency)).toBeGreaterThan(note.slideTo! * 1.4);
+  });
+
   it('puts a closing low-pass filter and the shared compressor on each voice', () => {
     playSoundEffect({...jump, pattern: 'steady'});
     const lowpass = filters.filter(f => f.type === 'lowpass');

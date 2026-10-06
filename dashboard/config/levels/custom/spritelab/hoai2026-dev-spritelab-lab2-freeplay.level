@@ -56,7 +56,10 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_playSound"
+              "type": "spritelab2_playSound",
+              "fields": {
+                "SOUND": "synth://jump"
+              }
             },
             {
               "kind": "block",
@@ -158,7 +161,10 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_playSound"
+              "type": "spritelab2_playSound",
+              "fields": {
+                "SOUND": "synth://jump"
+              }
             },
             {
               "kind": "block",

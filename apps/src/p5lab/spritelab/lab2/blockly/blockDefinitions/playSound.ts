@@ -7,6 +7,8 @@ import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {playPreset, synthPresetOf, synthSoundUrl} from '../../soundEffects';
 
 export const PLAY_SOUND_BLOCK_TYPE = 'spritelab2_playSound';
+/** The toolbox's starting sound; the list itself starts with boom. */
+export const PLAY_SOUND_DEFAULT = synthSoundUrl('jump');
 export const FIELD_SOUND_DROPDOWN_TYPE = 'field_spritelab2_sound';
 
 // Synthesized sounds (synth://name, see soundEffects.ts), then sound files
