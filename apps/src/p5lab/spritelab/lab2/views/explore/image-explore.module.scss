@@ -36,10 +36,12 @@ $window-allowance: 150px;
   position: relative;
   margin-top: calc(-1 * var(--guide-top-position));
 
-  // No entrance animation: the Guide mounts again entering and leaving
-  // drawing.
+  // No entrance animation, and no width transition: the Guide mounts again
+  // entering and leaving drawing, and its measured width must not slide in
+  // from the default.
   > div > div {
     animation: none;
+    transition: none;
   }
 }
 
