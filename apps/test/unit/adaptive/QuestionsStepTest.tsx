@@ -64,21 +64,18 @@ describe('QuestionsStep', () => {
   });
 
   it('saves a survey answer on Submit, replacing the last one', () => {
-    const {saved} = renderStep({1: [{answerId: 'a', isCorrect: true}]});
+    const {saved} = renderStep({1: [{answerId: 'a'}]});
     fireEvent.click(screen.getByRole('radio', {name: /No 1/}));
     expect(saved).toEqual([]);
     expect(screen.getByRole('radio', {name: /No 1/})).toBeChecked();
 
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
-    expect(saved).toEqual([[1, [{answerId: 'b', isCorrect: true}]]]);
+    expect(saved).toEqual([[1, [{answerId: 'b'}]]]);
   });
 
   it('restores the latest saved pick', () => {
     renderStep({
-      1: [
-        {answerId: 'b', isCorrect: true},
-        {answerId: 'a', isCorrect: true},
-      ],
+      1: [{answerId: 'b'}, {answerId: 'a'}],
     });
     expect(screen.getByRole('radio', {name: /Yes 1/})).toBeChecked();
   });

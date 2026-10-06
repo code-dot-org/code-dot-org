@@ -66,7 +66,9 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     if (savedAnswers.slice(-1)[0]?.answerId !== selectedChoiceId) {
       const answer = {
         answerId: selectedChoiceId,
-        isCorrect: !correctChoiceId || selectedChoiceId === correctChoiceId,
+        isCorrect: correctChoiceId
+          ? selectedChoiceId === correctChoiceId
+          : undefined,
       };
       // Graded questions keep every try; survey questions only the last.
       onSaveAnswers(
@@ -87,7 +89,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   return (
     <div className={styles.questionsStep} ref={questionsRef}>
       <div className={styles.questionsIntro}>
-        <MuiTypography variant="h3" component="h2" tabIndex={-1}>
+        <MuiTypography variant="h2" tabIndex={-1}>
           {step.title}
         </MuiTypography>
         {step.description && (
