@@ -1,4 +1,3 @@
-/* The test page's top bar: what the model predicts, and how accurate it is. */
 import {Button} from '@mui/material';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -19,6 +18,8 @@ const ResultsBar = () => {
     return null;
   }
 
+  const accuracy = formatAccuracy(currentResult.accuracy);
+
   return (
     <div className={styles.bar}>
       <PredictionSentence
@@ -33,14 +34,13 @@ const ResultsBar = () => {
           color="secondary"
           size="extraSmall"
           className={styles.accuracyButton}
+          aria-label={`View ${accuracy} Accuracy details`}
           onClick={() => dispatch(setShowResultsDetails(true))}
         >
           <span className={styles.accuracyIcon}>
             <FontAwesomeV6Icon iconName="calculator" />
           </span>
-          <span className={styles.accuracyText}>
-            {formatAccuracy(currentResult.accuracy)} Accuracy
-          </span>
+          <span className={styles.accuracyText}>{accuracy} Accuracy</span>
         </Button>
       </div>
     </div>

@@ -42,7 +42,9 @@ describe('ResultsBar', () => {
     ]);
 
     expect(screen.getByText('Predict legs based on animal')).toBeTruthy();
-    expect(screen.getByRole('button', {name: '80% Accuracy'})).toBeTruthy();
+    expect(
+      screen.getByRole('button', {name: 'View 80% Accuracy details'}),
+    ).toBeTruthy();
   });
 
   test('shows nothing before a model is trained', () => {
@@ -57,7 +59,9 @@ describe('ResultsBar', () => {
       {label: 'animal', features: ['legs'], accuracy: '80.00'},
     ]);
 
-    fireEvent.click(screen.getByRole('button', {name: '80% Accuracy'}));
+    fireEvent.click(
+      screen.getByRole('button', {name: 'View 80% Accuracy details'}),
+    );
 
     expect(store.getState().showResultsDetails).toBe(true);
   });

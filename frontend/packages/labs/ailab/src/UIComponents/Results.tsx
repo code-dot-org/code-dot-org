@@ -1,4 +1,3 @@
-/* The test page: the trained model, its decision tree, and the Test panel. */
 import {TEST_PANEL_WIDTH} from '../constants';
 import {useAppSelector} from '../hooks';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
