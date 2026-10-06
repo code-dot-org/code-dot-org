@@ -19,16 +19,8 @@ const ResultsToggle = () => {
         selectedButtonValue={resultsTab}
         onChange={value => dispatch(setResultsTab(value))}
         buttons={[
-          {
-            value: ResultsGrades.CORRECT,
-            label: 'Correct',
-            className: styles.segment,
-          },
-          {
-            value: ResultsGrades.INCORRECT,
-            label: 'Incorrect',
-            className: styles.segment,
-          },
+          {value: ResultsGrades.CORRECT, label: 'Correct'},
+          {value: ResultsGrades.INCORRECT, label: 'Incorrect'},
         ]}
       />
     </div>

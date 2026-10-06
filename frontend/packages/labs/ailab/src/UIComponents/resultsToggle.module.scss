@@ -1,9 +1,5 @@
-.toggle {
-  // CADS borders an unselected segment one step darker than DSCO does.
-  --border-neutral-primary: var(--border-neutral-secondary);
-}
+@use '../sharedMixins' as mixins;
 
-// Three classes, to outrank DSCO's xs size.
-.toggle .segments .segment span {
-  line-height: 18px;
+.toggle .segments {
+  @include mixins.segmented-buttons-xs;
 }
