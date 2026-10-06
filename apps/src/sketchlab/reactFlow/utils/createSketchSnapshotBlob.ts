@@ -5,12 +5,15 @@ import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
+import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
+// iOS Safari draws nothing on a canvas bigger than this.
+const MAX_EXPORT_CANVAS_PIXELS = 16_777_216;
 
 export const createSketchSnapshotBlob = async (
   reactFlow: ReactFlowInstance | null
@@ -55,16 +58,33 @@ export const createSketchSnapshotBlob = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  const blob = await toBlob(viewport, {
-    backgroundColor,
-    width: imageWidth,
-    height: imageHeight,
-    style: {
-      width: `${imageWidth}px`,
-      height: `${imageHeight}px`,
-      transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
-    },
-  });
+  // html-to-image multiplies the output by the device pixel ratio. Keep that
+  // detail, but not past a canvas iOS Safari will refuse to draw.
+  const pixelRatio = Math.min(
+    Math.max(window.devicePixelRatio || 1, 1),
+    Math.sqrt(MAX_EXPORT_CANVAS_PIXELS / (imageWidth * imageHeight))
+  );
+
+  const restoreImageSources = downscaleImagesForExport(
+    viewport,
+    scale * pixelRatio
+  );
+  let blob: Blob | null;
+  try {
+    blob = await toBlob(viewport, {
+      backgroundColor,
+      pixelRatio,
+      width: imageWidth,
+      height: imageHeight,
+      style: {
+        width: `${imageWidth}px`,
+        height: `${imageHeight}px`,
+        transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
+      },
+    });
+  } finally {
+    restoreImageSources();
+  }
 
   if (!blob) {
     return {error: 'Could not capture your sketch. Please try again.'};
