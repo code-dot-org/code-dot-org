@@ -133,8 +133,9 @@ const prepareTestData = (store: Store<RootState>): number[] => {
   return testValues;
 };
 
-const trainingState: {trainer?: Trainer} = {};
+const trainingState: {trainer?: Trainer; store?: Store<RootState>} = {};
 const init = (store: Store<RootState>): void => {
+  trainingState.store = store;
   trainingState.trainer = buildTrainer(store);
   buildOptionNumberKeysByFeature(store);
   prepareTrainingData(store);
@@ -144,14 +145,17 @@ const onClickTrain = (): void => {
   trainingState.trainer?.startTraining();
 };
 
-const onClickPredict = (store: Store<RootState>): void => {
-  const testValues = prepareTestData(store);
-  trainingState.trainer?.predict(testValues);
+const onClickPredict = (): void => {
+  const {trainer, store} = trainingState;
+  if (trainer && store) {
+    trainer.predict(prepareTestData(store));
+  }
 };
 
 // Discard the trainer held from a prior level/model.
 const reset = (): void => {
   trainingState.trainer = undefined;
+  trainingState.store = undefined;
 };
 
 export default {

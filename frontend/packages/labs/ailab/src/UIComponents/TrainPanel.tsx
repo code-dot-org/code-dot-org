@@ -1,7 +1,7 @@
 /* Panel for choosing a model's label and features, then training it. */
-import {Button} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
-import type {ChangeEvent, ReactNode} from 'react';
+import type {ChangeEvent} from 'react';
 
 import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxDropdown';
@@ -9,7 +9,6 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
-import I18n from '../i18n';
 import {
   addSelectedFeature,
   readyToTrain,
@@ -22,9 +21,8 @@ import {store} from '../store';
 import train from '../train';
 
 import FieldLabel from './FieldLabel';
-import SentenceTag from './SentenceTag';
+import PredictionSentence from './PredictionSentence';
 
-import appStyles from '../app.module.scss';
 import styles from './trainPanel.module.scss';
 
 const TrainPanel = () => {
@@ -73,65 +71,13 @@ const TrainPanel = () => {
       ? `${selectedFeatures.length} selected`
       : 'Choose one or more';
 
-  const OUTPUT_KEY = '__CDO_OUTPUT__';
-  const INPUTS_KEY = '__CDO_INPUTS__';
-  const sentence =
-    I18n.t('predictionStatement', {output: OUTPUT_KEY, inputs: INPUTS_KEY}) ||
-    '';
-  const sentenceParts: ReactNode[] = sentence
-    .split(new RegExp(`(${OUTPUT_KEY}|${INPUTS_KEY})`))
-    .filter(part => part.trim())
-    .map((part, index) => {
-      if (part === OUTPUT_KEY) {
-        return (
-          <SentenceTag
-            key={index}
-            text={labelColumn && columnName(labelColumn)}
-            placeholder="label"
-            variant="label"
-          />
-        );
-      }
-      if (part === INPUTS_KEY) {
-        return selectedFeatures.length > 0 ? (
-          selectedFeatures.map(feature => (
-            <SentenceTag
-              key={feature}
-              text={columnName(feature)}
-              placeholder="feature"
-              variant="feature"
-            />
-          ))
-        ) : (
-          <SentenceTag
-            key={index}
-            text={undefined}
-            placeholder="feature"
-            variant="feature"
-          />
-        );
-      }
-      return (
-        <span key={index} aria-hidden="true" className={styles.sentenceText}>
-          {part.trim()}
-        </span>
-      );
-    });
-
-  // The visual pieces have no text between them, so screen readers get the
-  // whole sentence as one string instead.
-  const readableSentence =
-    I18n.t('predictionStatement', {
-      output: labelColumn ? columnName(labelColumn) : 'label',
-      inputs:
-        selectedFeatures.length > 0
-          ? selectedFeatures.map(columnName).join(', ')
-          : 'feature',
-    }) || '';
-
   return (
     <div id="train-panel" className={styles.panel}>
-      <h2 className={styles.header}>Train</h2>
+      <div className={styles.header}>
+        <Typography component="h3" variant="overline2" className={styles.title}>
+          Train
+        </Typography>
+      </div>
       <div className={styles.content}>
         <div className={styles.card}>
           <div className={styles.fields}>
@@ -174,10 +120,11 @@ const TrainPanel = () => {
               </DropdownProviderWrapper>
             </div>
           </div>
-          <div className={styles.sentence}>
-            <span className={appStyles.visuallyHidden}>{readableSentence}</span>
-            {sentenceParts}
-          </div>
+          <PredictionSentence
+            label={labelColumn}
+            features={selectedFeatures}
+            className={styles.sentence}
+          />
           <div className={styles.actionRow}>
             <Button
               variant="contained"

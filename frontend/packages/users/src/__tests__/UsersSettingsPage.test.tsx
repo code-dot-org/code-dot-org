@@ -83,7 +83,6 @@ describe('UsersSettingsPage', () => {
     ]);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
     expect(tabs[1]).not.toHaveAttribute('aria-disabled');
-    expect(tabs[2]).toHaveAttribute('aria-disabled', 'true');
 
     for (const name of [
       'My Information',
@@ -790,5 +789,77 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
       within(tablist).getByRole('tab', {name: 'Account Details'}),
     ).toHaveAttribute('aria-selected', 'true');
     expect(currentTab()).toBe('account-details');
+  });
+
+  it('hides Integrations from an account that cannot manage linked accounts', async () => {
+    renderPage('unmigrated-teacher');
+    const tablist = await screen.findByRole('tablist');
+
+    expect(
+      within(tablist).queryByRole('tab', {name: 'Integrations'}),
+    ).toBeNull();
+  });
+
+  it('names a Schoology login by its platform', async () => {
+    renderPage('lti-only-teacher', {tab: 'integrations'});
+
+    expect(
+      await screen.findByRole('heading', {
+        level: 4,
+        name: 'PowerSchool (Schoology)',
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('lists each of two Canvas logins as its own row', async () => {
+    renderPage('all-connected-teacher', {tab: 'integrations'});
+
+    await screen.findByRole('heading', {
+      level: 2,
+      name: 'Manage linked accounts',
+    });
+    expect(
+      screen.getAllByRole('heading', {level: 4, name: 'Canvas'}),
+    ).toHaveLength(2);
+    expect(screen.getByText('ada@district-b.example.com')).toBeVisible();
+  });
+
+  it('lists every provider as linked when all are connected', async () => {
+    renderPage('all-connected-teacher', {tab: 'integrations'});
+
+    const headings = (name: string) =>
+      within(screen.getByRole('heading', {level: 3, name}).closest('section')!)
+        .getAllByRole('heading', {level: 4})
+        .map(heading => heading.textContent);
+    await screen.findByRole('heading', {
+      level: 2,
+      name: 'Manage linked accounts',
+    });
+    expect(headings('My integrations')).toEqual([
+      'Google',
+      'Microsoft',
+      'Clever',
+      'ClassLink',
+      'Facebook',
+      'Canvas',
+      'Canvas',
+    ]);
+    expect(headings('Available integrations')).toEqual([
+      'PowerSchool (Schoology)',
+    ]);
+  });
+
+  it('shows linked accounts on the Integrations tab', async () => {
+    renderPage('multi-sso-teacher', {tab: 'integrations'});
+
+    expect(
+      await screen.findByRole('heading', {
+        level: 2,
+        name: 'Manage linked accounts',
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByRole('heading', {level: 4, name: 'ClassLink'}),
+    ).toHaveLength(2);
   });
 });

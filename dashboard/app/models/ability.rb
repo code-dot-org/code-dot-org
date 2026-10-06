@@ -164,6 +164,12 @@ class Ability
         other_user.id == user.id || other_user.student_of?(user)
       end
 
+      # An authorized viewer of someone else's quiz attempt sees correctness.
+      # Only a verified instructor also sees the correct answer and its explanation.
+      can :reveal_quiz_attempt_answers, :quiz_attempt do
+        user.verified_instructor?
+      end
+
       can :create, CodeReviewComment do |code_review_comment|
         code_review_comment.code_review.open? && can?(:code_review, code_review_comment.code_review.owner)
       end
