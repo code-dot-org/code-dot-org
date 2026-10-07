@@ -19,7 +19,6 @@ const TrainingResultCard = () => {
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = useAppSelector(state => state.historicResults[0]);
   const tree = useAppSelector(getDisplayTree);
-  // A replay keeps the card mounted, so the dialog can return focus to it.
   const [isReplaying, setIsReplaying] = useState(false);
 
   useEffect(() => {

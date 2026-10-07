@@ -14,7 +14,6 @@ import {
 
 import styles from './treeMiniMap.module.scss';
 
-// Tighter than the full tree, which leaves room for branch labels.
 const MINI_ROW_GAP = 32;
 // In tree units, which the thumbnail scales down to a few pixels.
 const NODE_CORNER_RADIUS = 12;
