@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Set them walking.** Drag **begins patrolling** onto the dotted outline under **when run**. Click **Play**."
+        "text": "**Set them walking.** Drag **begins patrolling** onto the dotted outline. Click **Play**."
       },
       {
         "text": "**They're on the move.** Click **Continue**.",
@@ -48,7 +48,7 @@
       "title": "**Set them walking.**",
       "items": [
         {
-          "text": "Drag **begins patrolling** onto the dotted outline under **when run**.",
+          "text": "Drag **begins patrolling** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "gamelab_addBehaviorSimple",
@@ -64,7 +64,7 @@
         }
       ]
     },
-    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline under **when run**. Click **Play**.",
+    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline. Click **Play**.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
