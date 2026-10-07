@@ -11,8 +11,15 @@ $content-height: 480px;
 }
 
 .content {
+  display: flex;
   flex: 0 1 $content-height;
+  flex-direction: column;
   min-height: 0;
+
+  > * {
+    flex: 1;
+    min-height: 0;
+  }
 }
 
 .actionRow {

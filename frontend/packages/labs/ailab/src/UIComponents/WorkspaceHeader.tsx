@@ -46,7 +46,6 @@ const WorkspaceHeader = () => {
                 label: tab.label,
                 iconLeft: {iconName: tab.iconName, iconStyle: 'solid'},
                 disabled: tab.panel === 'results' && !canTest,
-                className: styles.tab,
               }))}
             />
           </div>

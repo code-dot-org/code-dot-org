@@ -1,3 +1,5 @@
+@use '../sharedMixins' as mixins;
+
 .groups {
   display: flex;
   flex-direction: column;
@@ -34,12 +36,9 @@
 }
 
 .accuracy {
+  @include mixins.accuracy-readout;
+
   width: 80px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
-  white-space: nowrap;
-  color: var(--text-neutral-primary);
 }
 
 .empty {
