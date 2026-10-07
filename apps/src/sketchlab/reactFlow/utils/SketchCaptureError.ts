@@ -1,5 +1,4 @@
-// Format sketch lab errors in a consistent structure for logging and reporting.
-// Specifically helps with Safari.
+// Format sketch lab export errors in a consistent structure for logging and reporting.
 
 // Only the scheme and MIME type are logged: a full src can hold user asset paths.
 const describeSource = (source: string): Record<string, unknown> => {
@@ -22,7 +21,6 @@ const describeTarget = (target: EventTarget | null): string => {
   return target?.constructor?.name ?? 'unknown target';
 };
 
-// html-to-image rejects with a bare Event when an image fails to load.
 const describeCause = (cause: unknown): Record<string, unknown> => {
   if (cause instanceof Error) {
     return {reason: cause.message};
