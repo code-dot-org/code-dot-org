@@ -1,61 +1,27 @@
-/* React component to handle toggling between correct/incorrect test results */
-import {faTimes, faCheck} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import classNames from 'classnames';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 
 import {ResultsGrades} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import I18n from '../i18n';
 import {setResultsTab} from '../redux';
 
-import shared from '../shared.module.scss';
 import styles from './resultsToggle.module.scss';
 
 const ResultsToggle = () => {
   const resultsTab = useAppSelector(state => state.resultsTab);
   const dispatch = useAppDispatch();
 
-  const getTogglePillClassName = (key: string) => {
-    return classNames(styles.pill, {[styles.selected]: key === resultsTab});
-  };
-
-  const resultsTabs = [
-    {
-      key: ResultsGrades.CORRECT,
-      headerText: I18n.t('correctAnswer'),
-      icon: faCheck,
-      iconClassName: styles.correct,
-    },
-    {
-      key: ResultsGrades.INCORRECT,
-      headerText: I18n.t('incorrectAnswer'),
-      icon: faTimes,
-      iconClassName: shared.error,
-    },
-  ];
-
   return (
-    <div>
-      <div className={styles.toggle}>
-        {resultsTabs.map(tab => (
-          <div
-            key={tab.key}
-            className={getTogglePillClassName(tab.key)}
-            onClick={() => dispatch(setResultsTab(tab.key))}
-            onKeyDown={event => {
-              if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                dispatch(setResultsTab(tab.key));
-              }
-            }}
-            role="button"
-            tabIndex={0}
-          >
-            <FontAwesomeIcon icon={tab.icon} className={tab.iconClassName} />{' '}
-            {tab.headerText}
-          </div>
-        ))}
-      </div>
+    <div role="group" aria-label="Show rows" className={styles.toggle}>
+      <SegmentedButtons
+        size="xs"
+        className={styles.segments}
+        selectedButtonValue={resultsTab}
+        onChange={value => dispatch(setResultsTab(value))}
+        buttons={[
+          {value: ResultsGrades.CORRECT, label: 'Correct'},
+          {value: ResultsGrades.INCORRECT, label: 'Incorrect'},
+        ]}
+      />
     </div>
   );
 };

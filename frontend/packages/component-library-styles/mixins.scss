@@ -10,26 +10,26 @@
 
 @mixin label-one {
   @include label-common;
-  font-size: 1rem;
-  line-height: 1.48;
+  font-size: var(--font-size-body-md);
+  line-height: 1.5;
 }
 
 @mixin label-two {
   @include label-common;
-  font-size: 0.875rem;
-  line-height: 1.54;
+  font-size: var(--font-size-body-sm);
+  line-height: 1.57;
 }
 
 @mixin label-three {
   @include label-common;
-  font-size: 0.75rem;
-  line-height: 1.64;
+  font-size: var(--font-size-body-xs);
+  line-height: 1.5;
 }
 
 @mixin label-four {
   @include label-common;
-  font-size: 0.625rem;
-  line-height: 1.8;
+  font-size: var(--font-size-body-xxs);
+  line-height: 1.6;
 }
 
 // Typography - Link styles (Link Body styles)
@@ -40,26 +40,26 @@
 
 @mixin link-body-one {
   @include link-body-common;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: var(--font-size-body-lg);
+  line-height: 1.44;
 }
 
 @mixin link-body-two {
   @include link-body-common;
-  font-size: 1rem;
-  line-height: 1.48;
+  font-size: var(--font-size-body-md);
+  line-height: 1.5;
 }
 
 @mixin link-body-three {
   @include link-body-common;
-  font-size: 0.875rem;
-  line-height: 1.54;
+  font-size: var(--font-size-body-sm);
+  line-height: 1.57;
 }
 
 @mixin link-body-four {
   @include link-body-common;
-  font-size: 0.75rem;
-  line-height: 1.64;
+  font-size: var(--font-size-body-xs);
+  line-height: 1.5;
 }
 
 // Typography Button text styles
