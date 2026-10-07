@@ -37,20 +37,20 @@ export function patternCells(
   return cells;
 }
 
-/**
- * The layout a level's world_start_pattern gives a project: the one pattern
- * given, or one of several picked by `roll`, a fraction from 0 up to 1 that
- * is scaled to a layout index. The pick persists in the grid, since a later
- * level seeds only kinds the grid lacks. `override` names a layout by index
- * (?layout=N). No project (a levelbuilder preview) takes the first.
- */
+// The pick is not stored: the grid keeps it, since a later level seeds only
+// the kinds the grid still lacks.
 export function chooseStartPattern(
   pattern: string[] | string[][] | undefined,
   {
     hasProject,
     roll,
     override,
-  }: {hasProject: boolean; roll: number; override?: number}
+  }: {
+    hasProject: boolean;
+    /** A fraction from 0 up to 1, not an index. */
+    roll: number;
+    override?: number;
+  }
 ): string[] | undefined {
   if (!pattern?.length) {
     return undefined;
