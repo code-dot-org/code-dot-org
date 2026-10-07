@@ -36,7 +36,7 @@ describe('UnlinkLmsAccountModal', () => {
     );
   });
 
-  it('posts the option id, then lands on the legacy account page', async () => {
+  it('posts the option id, then lands on the Rails account page', async () => {
     let body: unknown;
     mockServer.use(
       http.post('*/lti/v1/account_linking/unlink', async ({request}) => {

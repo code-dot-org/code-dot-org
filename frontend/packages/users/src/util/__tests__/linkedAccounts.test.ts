@@ -67,7 +67,7 @@ describe('connectedAccounts', () => {
 });
 
 describe('unconnectedProviders', () => {
-  it('lists the linkable providers with no linked login, in legacy order', () => {
+  it('lists the linkable providers with no linked login, in display order', () => {
     expect(unconnectedProviders([email, clever])).toEqual([
       'google_oauth2',
       'microsoft_v2_auth',

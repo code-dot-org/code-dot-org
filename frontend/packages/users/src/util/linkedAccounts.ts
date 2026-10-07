@@ -1,4 +1,3 @@
-// Linked-account rules ported from legacy apps/src/accounts/ManageLinkedAccounts.jsx.
 import type {
   AuthenticationOptionSummary,
   IntegrationsSettings,
@@ -7,7 +6,7 @@ import type {
 
 export const LTI_PROVIDER = 'lti_v1';
 
-// Legacy order (apps/src/accounts/constants.js SingleSignOnProviders).
+// Display order.
 export const LINKABLE_PROVIDERS = [
   'google_oauth2',
   'microsoft_v2_auth',
@@ -76,7 +75,7 @@ function isRosteredLogin(
   }
 }
 
-// Legacy keeps an LMS-only account linked even when it has a password.
+// An account whose only logins are LMS logins keeps them, password or not.
 function isLmsOnlyAccount(settings: UserSettings): boolean {
   return settings.authenticationOptions.every(
     option => option.credentialType === LTI_PROVIDER,
