@@ -91,7 +91,8 @@ The update PR must hold only the update, never skill edits (those go in their ow
 
 - Stage exactly: the three URL files, `constants/index.ts`, and the story file if it changed.
 - Title: `Update Font Awesome kit: <added icons, or "N new custom icons">`.
-- Body: S3 prefix (`cdo-dsco/assets/font-awesome-pro/<ts>`), added and removed icons, usages found for removed
+- Body: fill in `.agents/skills/update-fontawesome-kit/pr-template.md` (summary, added/removed icons table,
+  before/after story screenshots, testing checklist). It needs: S3 prefix (`cdo-dsco/assets/font-awesome-pro/<ts>`), added and removed icons, usages found for removed
   icons, the step 6 check results, and before/after screenshots of the Custom Icons story (take them yourself
   with Storybook plus Playwright; "before" is `origin/staging`, "after" is the branch).
 - Open as a draft into `staging`, then tell the operator the link.
