@@ -7,17 +7,27 @@ import {
 import {store} from './store';
 import type {Metadata} from './types';
 
-export const parseJSON = (jsonfile: string): void => {
-  const rawFile = new XMLHttpRequest();
-  rawFile.overrideMimeType('application/json');
-  rawFile.open('GET', jsonfile, true);
-  rawFile.onreadystatechange = function () {
-    if (rawFile.readyState === 4 && rawFile.status === 200) {
-      updateData(rawFile.responseText);
-    }
-  };
-  rawFile.send(null);
-};
+// Resolves once the request finishes or fails. A request that is no longer
+// current when it finishes leaves the store alone.
+export const parseJSON = (
+  jsonfile: string,
+  isCurrent: () => boolean = () => true,
+): Promise<void> =>
+  new Promise(resolve => {
+    const rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType('application/json');
+    rawFile.open('GET', jsonfile, true);
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState !== 4) {
+        return;
+      }
+      if (rawFile.status === 200 && isCurrent()) {
+        updateData(rawFile.responseText);
+      }
+      resolve();
+    };
+    rawFile.send(null);
+  });
 
 const updateData = (result: string): void => {
   const metadata: Metadata = JSON.parse(result);

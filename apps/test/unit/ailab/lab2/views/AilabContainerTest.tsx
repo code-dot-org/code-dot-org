@@ -1,3 +1,4 @@
+import type {AilabSnapshot} from '@code-dot-org/ailab';
 import {render} from '@testing-library/react';
 import React from 'react';
 
@@ -16,6 +17,7 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 
 const mockedUseSources = jest.mocked(useSources);
 const mockedView = jest.mocked(AilabView);
+const updateSources = jest.fn();
 
 const level = (id: number, usesProjects = true): AilabLevelProperties => ({
   id,
@@ -24,39 +26,93 @@ const level = (id: number, usesProjects = true): AilabLevelProperties => ({
   usesProjects,
 });
 
-function useSourcesReturns(loaded: boolean) {
+const snapshotFor = (datasetId: string) =>
+  ({datasetId, labelColumn: 'animal'} as unknown as AilabSnapshot);
+
+function useSourcesReturns(snapshot: AilabSnapshot | undefined | null) {
   mockedUseSources.mockReturnValue({
-    currentSources: loaded ? {source: ''} : undefined,
+    currentSources:
+      snapshot === null
+        ? undefined
+        : {source: snapshot ? JSON.stringify(snapshot) : ''},
     projectManager: null,
+    updateSources,
   } as unknown as ReturnType<typeof useSources>);
 }
+
+const lastViewProps = () => mockedView.mock.lastCall?.[0];
 
 describe('AilabContainer', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  it('shows loading until the project loads', () => {
-    useSourcesReturns(false);
+  it('shows loading until the saved work arrives', () => {
+    useSourcesReturns(null);
     render(<AilabContainer levelProperties={level(1)} />);
 
     expect(Loading).toHaveBeenCalled();
     expect(mockedView).not.toHaveBeenCalled();
   });
 
-  it('shows the lab once the project loads', () => {
-    useSourcesReturns(true);
-    render(<AilabContainer levelProperties={level(1)} />);
+  it('passes the saved work to the lab', () => {
+    useSourcesReturns(null);
+    const {rerender} = render(<AilabContainer levelProperties={level(1)} />);
 
-    expect(mockedView.mock.lastCall?.[0]).toMatchObject({
-      levelProperties: level(1),
+    useSourcesReturns(snapshotFor('zoo'));
+    rerender(<AilabContainer levelProperties={level(1)} />);
+
+    expect(lastViewProps()?.initialSnapshot).toEqual(snapshotFor('zoo'));
+  });
+
+  it('starts a level with no saved work empty', () => {
+    useSourcesReturns(null);
+    const {rerender} = render(<AilabContainer levelProperties={level(1)} />);
+
+    useSourcesReturns(undefined);
+    rerender(<AilabContainer levelProperties={level(1)} />);
+
+    expect(lastViewProps()).toMatchObject({initialSnapshot: undefined});
+  });
+
+  it("does not give a new level the previous level's work", () => {
+    useSourcesReturns(null);
+    const {rerender} = render(<AilabContainer levelProperties={level(1)} />);
+    useSourcesReturns(snapshotFor('first'));
+    rerender(<AilabContainer levelProperties={level(1)} />);
+    mockedView.mockClear();
+
+    rerender(<AilabContainer levelProperties={level(2)} />);
+    expect(mockedView).not.toHaveBeenCalled();
+
+    useSourcesReturns(null);
+    rerender(<AilabContainer levelProperties={level(2)} />);
+    useSourcesReturns(snapshotFor('second'));
+    rerender(<AilabContainer levelProperties={level(2)} />);
+
+    expect(lastViewProps()?.initialSnapshot).toEqual(snapshotFor('second'));
+  });
+
+  it('saves changes as project sources', () => {
+    useSourcesReturns(null);
+    const {rerender} = render(<AilabContainer levelProperties={level(1)} />);
+    useSourcesReturns(undefined);
+    rerender(<AilabContainer levelProperties={level(1)} />);
+
+    lastViewProps()?.onStateChange?.(snapshotFor('zoo'));
+
+    expect(updateSources).toHaveBeenCalledWith({
+      source: JSON.stringify(snapshotFor('zoo')),
     });
   });
 
-  it('shows the lab at once on a level that keeps no project', () => {
-    useSourcesReturns(false);
+  it('runs without saving on a level that keeps no project', () => {
+    useSourcesReturns(null);
     render(<AilabContainer levelProperties={level(1, false)} />);
 
-    expect(mockedView).toHaveBeenCalled();
+    expect(lastViewProps()).toMatchObject({
+      initialSnapshot: undefined,
+      onStateChange: undefined,
+    });
   });
 });

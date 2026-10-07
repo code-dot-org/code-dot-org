@@ -4,7 +4,7 @@ import type {Store} from 'redux';
 
 import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
-import {getRandomInt} from './helpers/utils';
+import {getRandomInt, newSeed, seededRandom} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
 import type {RootState} from './redux';
 import {
@@ -13,6 +13,7 @@ import {
   setTrainingLabels,
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
+  setSplitSeed,
 } from './redux';
 import {getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
@@ -80,7 +81,9 @@ const extractTrainingLabel = (
   return convertValueForTraining(state, value, state.labelColumn!);
 };
 
-const prepareTrainingData = (store: Store<RootState>): void => {
+const prepareTrainingData = (store: Store<RootState>, seed: number): void => {
+  store.dispatch(setSplitSeed(seed));
+  const random = seededRandom(seed);
   const updatedState = store.getState();
   const trainingExamples = updatedState.data.map((row: DataRow) =>
     extractTrainingExamples(updatedState, row),
@@ -104,7 +107,7 @@ const prepareTrainingData = (store: Store<RootState>): void => {
   if (updatedState.reserveLocation === TestDataLocations.RANDOM) {
     let numReserved = 0;
     while (numReserved < numToReserve) {
-      const randomIndex = getRandomInt(trainingExamples.length - 1);
+      const randomIndex = getRandomInt(trainingExamples.length - 1, random);
       accuracyCheckExamples.push(trainingExamples[randomIndex]);
       trainingExamples.splice(randomIndex, 1);
       accuracyCheckLabels.push(trainingLabels[randomIndex]);
@@ -134,15 +137,20 @@ const prepareTestData = (store: Store<RootState>): number[] => {
 };
 
 const trainingState: {trainer?: Trainer; store?: Store<RootState>} = {};
-const init = (store: Store<RootState>): void => {
+// Pass the seed of an earlier run to reproduce its random test split.
+const init = (store: Store<RootState>, seed: number = newSeed()): void => {
   trainingState.store = store;
   trainingState.trainer = buildTrainer(store);
   buildOptionNumberKeysByFeature(store);
-  prepareTrainingData(store);
+  prepareTrainingData(store, seed);
 };
 
 const onClickTrain = (): void => {
   trainingState.trainer?.startTraining();
+};
+
+const restoreTraining = (): void => {
+  trainingState.trainer?.restoreTraining();
 };
 
 const onClickPredict = (): void => {
@@ -161,6 +169,7 @@ const reset = (): void => {
 export default {
   init,
   onClickTrain,
+  restoreTraining,
   onClickPredict,
   reset,
 };

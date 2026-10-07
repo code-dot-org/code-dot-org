@@ -5,6 +5,7 @@ import {
   arrayIntersection,
   getRandomInt,
   getNiceAxisStep,
+  seededRandom,
 } from '../../src/helpers/utils';
 
 const menu = {
@@ -83,6 +84,25 @@ describe('getRandomInt', () => {
     let possibleValues = [0, 1, 2, 3, 4];
     const result = getRandomInt(max);
     expect(possibleValues.includes(result)).toBe(true);
+  });
+});
+
+describe('seededRandom', () => {
+  const draw = (random, count) => Array.from({length: count}, random);
+
+  test('repeats its sequence for the same seed', () => {
+    expect(draw(seededRandom(42), 5)).toEqual(draw(seededRandom(42), 5));
+  });
+
+  test('gives different sequences for different seeds', () => {
+    expect(draw(seededRandom(42), 5)).not.toEqual(draw(seededRandom(43), 5));
+  });
+
+  test('stays within [0, 1)', () => {
+    draw(seededRandom(7), 1000).forEach(value => {
+      expect(value).toBeGreaterThanOrEqual(0);
+      expect(value).toBeLessThan(1);
+    });
   });
 });
 

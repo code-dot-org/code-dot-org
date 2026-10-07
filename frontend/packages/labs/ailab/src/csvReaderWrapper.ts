@@ -12,34 +12,42 @@ import {
 import {store} from './store';
 import type {DataRow} from './types';
 
+// Resolves once parsing finishes or fails. A parse that is no longer current
+// when it finishes leaves the store alone.
 export const parseCSV = (
   csvfile: string,
   download: boolean,
   useDefaultColumnDataType: boolean,
-): void => {
-  // `csvfile` is either a URL to fetch (download) or a raw CSV string. These
-  // are distinct papaparse overloads — `download: true` selects the remote
-  // config, a plain string selects the local config — so the runtime branch
-  // is also what lets each call type-check (a single config carrying a
-  // non-literal `download` matches neither overload).
-  const complete = (result: ParseResult<Record<string, string>>) => {
-    updateData(result, useDefaultColumnDataType, !download);
-  };
-  if (download) {
-    Papa.parse(csvfile, {
-      complete,
-      header: true,
-      download: true,
-      skipEmptyLines: true,
-    });
-  } else {
-    Papa.parse<Record<string, string>>(csvfile, {
-      complete,
-      header: true,
-      skipEmptyLines: true,
-    });
-  }
-};
+  isCurrent: () => boolean = () => true,
+): Promise<void> =>
+  new Promise(resolve => {
+    // `csvfile` is either a URL to fetch (download) or a raw CSV string. These
+    // are distinct papaparse overloads — `download: true` selects the remote
+    // config, a plain string selects the local config — so the runtime branch
+    // is also what lets each call type-check (a single config carrying a
+    // non-literal `download` matches neither overload).
+    const complete = (result: ParseResult<Record<string, string>>) => {
+      if (isCurrent()) {
+        updateData(result, useDefaultColumnDataType, !download);
+      }
+      resolve();
+    };
+    if (download) {
+      Papa.parse(csvfile, {
+        complete,
+        error: () => resolve(),
+        header: true,
+        download: true,
+        skipEmptyLines: true,
+      });
+    } else {
+      Papa.parse<Record<string, string>>(csvfile, {
+        complete,
+        header: true,
+        skipEmptyLines: true,
+      });
+    }
+  });
 
 export const MIN_CSV_ROWS = 2;
 export const MIN_CSV_COLUMNS = 2;

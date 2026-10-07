@@ -16,6 +16,7 @@ import {parseJSON} from './jsonReaderWrapper';
 import {
   setMode,
   setCurrentPanel,
+  setDatasetId,
   setSelectedCSV,
   setSelectedJSON,
   setSelectedName,
@@ -25,17 +26,32 @@ import {
   resetState,
   setHistoricResults,
 } from './redux';
+import {
+  type AilabSnapshot,
+  restoreSnapshot,
+  selectSnapshot,
+  startOverSnapshot,
+} from './snapshot';
 import {store} from './store';
 import train from './train';
 import type {Mode} from './types';
 
 let root: Root | undefined;
+let unsubscribe: (() => void) | undefined;
+let onStateChange: ((snapshot: AilabSnapshot) => void) | undefined;
+let lastSnapshot: AilabSnapshot | undefined;
+// Bumped by every loadLevel, so a slower earlier load can tell it lost.
+let loadCount = 0;
+// Until a level's saved work is restored, its half-loaded state is not reported.
+let restoring = false;
 
 export interface MountOptions extends AppProps {
   /** Base path the consumer serves the lab's datasets/images from. */
   assetPath: string;
   i18n?: Record<string, string>;
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
+  /** Called with the student's work each time it changes, for the consumer to save. */
+  onStateChange?: (snapshot: AilabSnapshot) => void;
 }
 
 export interface InitAllOptions extends MountOptions {
@@ -64,6 +80,19 @@ export const mount = function (options: MountOptions): void {
   // Dispatching early so instructions enabled state is set before processMode().
   store.dispatch(setInstructionsEnabled(!!options.setInstructionsKey));
 
+  onStateChange = options.onStateChange;
+  lastSnapshot = selectSnapshot(store.getState());
+  unsubscribe = store.subscribe(() => {
+    if (restoring) {
+      return;
+    }
+    const snapshot = selectSnapshot(store.getState());
+    if (snapshot !== lastSnapshot) {
+      lastSnapshot = snapshot;
+      onStateChange?.(snapshot);
+    }
+  });
+
   root = createRoot(document.getElementById('root')!);
   // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
@@ -81,24 +110,58 @@ export const mount = function (options: MountOptions): void {
  * Tears down the lab.
  */
 export const unmount = function (): void {
+  unsubscribe?.();
+  unsubscribe = undefined;
+  onStateChange = undefined;
   root?.unmount();
   root = undefined;
 };
 
 /**
  * Prepare the lab for a level. Call this once per level after mount().
+ * `snapshot` is the student's saved work on this level, if any.
  */
-export const loadLevel = function (mode?: Mode): void {
+export const loadLevel = function (
+  mode?: Mode,
+  snapshot?: AilabSnapshot,
+): Promise<void> {
+  return load(mode, snapshot, false);
+};
+
+export const startOver = function (): Promise<void> {
+  const state = store.getState();
+  const loaded = load(state.mode, startOverSnapshot(state), true);
+  // Shown at once, rather than after the dataset reloads.
+  store.dispatch(setHistoricResults(state.historicResults));
+  return loaded;
+};
+
+// With `report`, the restored state is reported as a change; otherwise it
+// counts as what the consumer already has.
+const load = async (
+  mode: Mode | undefined,
+  snapshot: AilabSnapshot | undefined,
+  report: boolean,
+): Promise<void> => {
+  const thisLoad = ++loadCount;
+  const isCurrent = () => thisLoad === loadCount;
+  restoring = true;
   store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
-  processMode(mode);
-};
-
-export const startOver = function (): void {
-  const {mode, historicResults} = store.getState();
-  loadLevel(mode);
-  store.dispatch(setHistoricResults(historicResults));
+  await processMode(mode, isCurrent);
+  if (!isCurrent()) {
+    return;
+  }
+  if (snapshot) {
+    restoreSnapshot(snapshot);
+  }
+  restoring = false;
+  const restored = selectSnapshot(store.getState());
+  if (report && restored !== lastSnapshot) {
+    onStateChange?.(restored);
+  }
+  lastSnapshot = restored;
 };
 
 /**
@@ -106,15 +169,18 @@ export const startOver = function (): void {
  */
 export const initAll = function (options: InitAllOptions): void {
   mount(options);
-  loadLevel(options.mode);
+  void loadLevel(options.mode);
 };
 
 export const instructionsDismissed = function (): void {
   store.dispatch(setInstructionsDismissed());
 };
 
-// Process an optional mode.
-const processMode = (mode: Mode | undefined): void => {
+// Process an optional mode. Resolves once the dataset and its metadata load.
+const processMode = async (
+  mode: Mode | undefined,
+  isCurrent: () => boolean,
+): Promise<void> => {
   const assetPath = getAssetPath();
 
   const reserveLocation = mode?.randomizeTestData
@@ -133,18 +199,17 @@ const processMode = (mode: Mode | undefined): void => {
     return;
   }
 
+  store.dispatch(setDatasetId(item.id));
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
   store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-  // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
-  // directly and are fire-and-forget, so an in-flight load from a prior
-  // level/dataset can resolve after a newer loadLevel and clobber state.
-  parseCSV(assetPath + item.path, true, false);
-
-  // Also retrieve model metadata and set column data types.
-  parseJSON(assetPath + item.metadataPath);
-
   store.dispatch(setCurrentPanel('datasetView'));
+
+  await Promise.all([
+    parseCSV(assetPath + item.path, true, false, isCurrent),
+    // Also retrieve model metadata and set column data types.
+    parseJSON(assetPath + item.metadataPath, isCurrent),
+  ]);
 };
 
 // Export a few types.
@@ -155,6 +220,7 @@ export type {
   SaveResponse,
 } from './types';
 export {INSTRUCTIONS_KEYS} from './types';
+export type {AilabSnapshot} from './snapshot';
 export type {Lab2Instructions} from './lab2Instructions';
 export {LAB2_INSTRUCTIONS} from './lab2Instructions';
 export type {Dataset} from './datasetManifest';

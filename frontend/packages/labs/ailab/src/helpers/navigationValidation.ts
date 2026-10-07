@@ -57,7 +57,7 @@ export function isPanelEnabled(state: RootState, panelId: string): boolean {
 
 // Is a panel available to be shown?  This determines what panels
 // can possibly be visited in the app.
-function isPanelAvailable(state: RootState, panelId: string): boolean {
+export function isPanelAvailable(state: RootState, panelId: string): boolean {
   const mode = state.mode;
 
   // Hidden for now; the dataset picker will come back later.
@@ -94,7 +94,7 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
   );
 }
 
-function isTrainedOnCurrentColumns(state: RootState): boolean {
+export function isTrainedOnCurrentColumns(state: RootState): boolean {
   const latestResult = state.historicResults[0];
   return (
     !!latestResult &&
