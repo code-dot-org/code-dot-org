@@ -14,6 +14,10 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     sex: ''
   }
 
+  # The only fields a student types when training on a curated dataset; the
+  # rest of the payload is our own dataset metadata.
+  STUDENT_TEXT_FIELDS = %w[name potentialUses potentialMisuses].freeze
+
   # POST api/v1/ml_models/save
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
@@ -25,7 +29,7 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     # will succeed. The saved model will bypass the PII/profanity filters.
     begin
       profanity_or_pii = ShareFiltering.find_failure(
-        model_data.except(:trainedModel).to_s,
+        share_filter_text(model_data),
         I18n.locale.to_s,
         PROFANITY_FILTER_REPLACE_TEXT_LIST
       )
@@ -118,6 +122,14 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     status =
       @user_ml_model.destroyed? && deleted_from_s3 ? "success" : "failure"
     render json: {id: @user_ml_model.model_id, status: status}
+  end
+
+  # A user-uploaded dataset puts student text in column names, values and
+  # descriptions, so anything but an explicit curated dataset is scanned whole.
+  private def share_filter_text(model_data)
+    is_user_uploaded = ActiveModel::Type::Boolean.new.cast(model_data.dig(:datasetDetails, :isUserUploaded))
+    return model_data.except(:trainedModel).to_s unless is_user_uploaded == false
+    model_data.slice(*STUDENT_TEXT_FIELDS).values.map(&:to_s).join(' ')
   end
 
   private def upload_to_s3(model_id, trained_model)
