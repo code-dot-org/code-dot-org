@@ -82,6 +82,14 @@ describe('notesFor', () => {
     expect(notes[0].wobble).toBe(true);
   });
 
+  it('cycles a chord on one note, major or minor', () => {
+    const major = notesFor({...jump, pattern: 'chord'});
+    const minor = notesFor({...jump, pattern: 'minor chord'});
+    expect(major).toHaveLength(1);
+    expect(major[0].arpeggio).toEqual([1, 5 / 4, 3 / 2]);
+    expect(minor[0].arpeggio).toEqual([1, 6 / 5, 3 / 2]);
+  });
+
   it('runs up from the root and down from the octave', () => {
     const up = notesFor({...jump, pattern: 'run up', length: 'medium'});
     const down = notesFor({...jump, pattern: 'run down', length: 'medium'});
@@ -149,6 +157,7 @@ describe('playNotes', () => {
   interface FakeOscillator {
     type: string;
     frequency: FakeParam;
+    detune: FakeParam;
     connect: jest.Mock;
     disconnect: jest.Mock;
     start: jest.Mock;
@@ -158,6 +167,7 @@ describe('playNotes', () => {
   const oscillators: FakeOscillator[] = [];
   const noiseSources: {start: jest.Mock; stop: jest.Mock; loop: boolean}[] = [];
   const filters: {type: string; frequency: FakeParam}[] = [];
+  const gains: {gain: FakeParam}[] = [];
   const compressors: object[] = [];
   let state = 'running';
 
@@ -177,6 +187,7 @@ describe('playNotes', () => {
       const oscillator = {
         type: 'sine',
         frequency: param(),
+        detune: param(),
         connect: jest.fn(),
         disconnect: jest.fn(),
         start: jest.fn(),
@@ -187,7 +198,9 @@ describe('playNotes', () => {
       return oscillator;
     }
     createGain() {
-      return {gain: param(), connect: jest.fn(), disconnect: jest.fn()};
+      const gain = {gain: param(), connect: jest.fn(), disconnect: jest.fn()};
+      gains.push(gain);
+      return gain;
     }
     sampleRate = 8000;
     createBuffer(_channels: number, length: number) {
@@ -245,6 +258,7 @@ describe('playNotes', () => {
     oscillators.length = 0;
     noiseSources.length = 0;
     filters.length = 0;
+    gains.length = 0;
     compressors.length = 0;
     state = 'running';
     (window as unknown as {AudioContext: unknown}).AudioContext =
@@ -314,6 +328,61 @@ describe('playNotes', () => {
     const lfo = oscillators.find(o => o.frequency.value < 20)!;
     expect(lfo.start).toHaveBeenCalled();
     expect(lfo.stop).toHaveBeenCalled();
+  });
+
+  it('steps an arpeggio through its ratios fifty times a second', () => {
+    playSoundEffect({...jump, pattern: 'chord', length: 'short'});
+    const steps = oscillators[0].frequency.setValueAtTime.mock.calls;
+    // 0.12 s at 50 Hz: six steps, cycling root, third, fifth.
+    expect(steps).toHaveLength(6);
+    const hz = steps[0][0] as number;
+    expect(near(steps[1][0] as number, hz * 1.25)).toBe(true);
+    expect(near(steps[2][0] as number, hz * 1.5)).toBe(true);
+    expect(near(steps[3][0] as number, hz)).toBe(true);
+    expect(steps[1][1] - steps[0][1]).toBeCloseTo(0.02, 5);
+  });
+
+  it('spreads unison oscillators around the pitch and sums them', () => {
+    playNotes([
+      {hz: 440, at: 0, seconds: 0.2, type: 'sawtooth', volume: 0.1, unison: 3},
+    ]);
+    expect(noteOscillators()).toHaveLength(3);
+    const cents = noteOscillators().map(o => o.detune.value);
+    expect(cents).toEqual([-8, 0, 8]);
+    expect(noteOscillators().every(o => near(o.frequency.value, 440))).toBe(
+      true
+    );
+  });
+
+  it('counts unison oscillators against the voice cap', () => {
+    const unison = (n: number) =>
+      playNotes([
+        {hz: 440, at: 0, seconds: 1, type: 'square', volume: 0.1, unison: n},
+      ]);
+    for (let i = 0; i < 10; i++) {
+      unison(3);
+    }
+    expect(noteOscillators()).toHaveLength(30);
+    unison(3);
+    expect(noteOscillators()).toHaveLength(30);
+    unison(2);
+    expect(noteOscillators()).toHaveLength(32);
+  });
+
+  it('deepens a wobble from nothing as the note settles', () => {
+    playSoundEffect({...jump, pattern: 'wobble', length: 'long'});
+    const lfo = oscillators.find(o => o.frequency.value < 20)!;
+    expect(lfo).toBeDefined();
+    const depthGains = gains.filter(
+      g =>
+        g.gain.setValueAtTime.mock.calls[0]?.[0] === 0 &&
+        g.gain.linearRampToValueAtTime.mock.calls.length === 1 &&
+        g.gain.exponentialRampToValueAtTime.mock.calls.length === 0
+    );
+    expect(depthGains).toHaveLength(1);
+    const [, rampEnd] =
+      depthGains[0].gain.linearRampToValueAtTime.mock.calls[0];
+    expect(rampEnd - 10).toBeCloseTo(0.12, 5);
   });
 
   it('plays noise through a bandpass filter at the note pitch', () => {
