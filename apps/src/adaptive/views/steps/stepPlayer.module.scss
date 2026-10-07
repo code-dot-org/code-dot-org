@@ -84,10 +84,14 @@
   background: var(--background-neutral-secondary);
 }
 
+// Quiz's card clips its overflow, so a shrinking card would hide its choices.
+.questionsStep > * {
+  flex: none;
+}
+
 // Matches AttemptCard's width so the heading lines up with the card's left edge.
 .questionsIntro {
   display: flex;
-  flex: none;
   flex-direction: column;
   gap: 16px;
   width: 100%;
