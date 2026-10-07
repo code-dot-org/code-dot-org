@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import {select} from 'd3-selection';
 import 'd3-transition';
 import {
@@ -9,6 +10,7 @@ import {
 } from 'd3-zoom';
 import {
   type FocusEvent,
+  type HTMLAttributes,
   type MutableRefObject,
   type ReactNode,
   type RefObject,
@@ -98,12 +100,13 @@ function undoScroll({currentTarget}: UIEvent<HTMLElement>) {
   currentTarget.scrollLeft = 0;
 }
 
-interface TreeCanvasProps {
+interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
   overlayRef?: RefObject<HTMLElement>;
   toolbarTabbable?: boolean;
+  hints?: ReactNode;
   children: ReactNode;
 }
 
@@ -113,7 +116,10 @@ const TreeCanvas = ({
   pathBounds,
   overlayRef,
   toolbarTabbable = true,
+  hints,
+  className,
   children,
+  ...rootProps
 }: TreeCanvasProps) => {
   const viewportRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -252,7 +258,11 @@ const TreeCanvas = ({
   };
 
   return (
-    <div className={styles.treeCanvas} onScroll={undoScroll}>
+    <div
+      {...rootProps}
+      className={classNames(styles.treeCanvas, className)}
+      onScroll={undoScroll}
+    >
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- it only watches focus rising from the tree's nodes */}
       <div ref={viewportRef} className={styles.viewport} onFocus={followFocus}>
         <div ref={contentRef} className={styles.content}>
@@ -292,6 +302,7 @@ const TreeCanvas = ({
           disabledHint="Make a prediction to see your path"
         />
       </div>
+      {hints}
     </div>
   );
 };

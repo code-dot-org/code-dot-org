@@ -31,11 +31,6 @@ $overlay-float-min-width: 600px;
 }
 
 .canvasGroup {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
   &:focus-visible {
     outline: none;
   }
