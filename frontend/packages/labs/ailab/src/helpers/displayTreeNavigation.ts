@@ -1,6 +1,5 @@
 import type {PlacedTreeNode} from './displayTreeLayout';
 
-// The keys of the ARIA tree view pattern, for a tree that never collapses.
 export function getNodeForKey(
   nodes: PlacedTreeNode[],
   from: PlacedTreeNode,

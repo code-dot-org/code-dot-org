@@ -35,7 +35,7 @@ $overlay-float-min-width: 600px;
     outline: none;
   }
 
-  // The panel's scroll box clips a ring outside the canvas, and the canvas paints over one inside it.
+  // The panel's scroll box clips a ring outside the canvas, and its content paints over one inside it.
   &:focus-visible::after {
     content: '';
     position: absolute;
@@ -125,7 +125,6 @@ $overlay-float-min-width: 600px;
   &:focus-visible {
     z-index: 1;
     height: auto;
-    // Divided by the canvas scale, the ring and its gap keep their width on screen at any zoom.
     outline: calc(#{$focus-ring-width} / #{$canvas-scale}) solid $focus-color;
     outline-offset: calc(
       #{$path-ring-width} + #{$focus-ring-gap} / #{$canvas-scale}
@@ -139,7 +138,6 @@ $overlay-float-min-width: 600px;
       -webkit-line-clamp: unset;
     }
 
-    // The wrapped label keeps its bottom edge, growing up into the row gap instead of over its node.
     .branch {
       width: max-content;
       height: auto;
