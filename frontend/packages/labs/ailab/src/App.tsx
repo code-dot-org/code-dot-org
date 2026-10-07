@@ -211,7 +211,6 @@ export interface AppProps {
     key: InstructionsKey,
     options: {showOverlay?: boolean} | null,
   ) => void;
-  /** Called from the header's Start over button, shown only when this is given. */
   onStartOver?: () => void;
 }
 
