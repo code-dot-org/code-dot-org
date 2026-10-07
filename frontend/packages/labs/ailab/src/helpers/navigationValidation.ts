@@ -94,7 +94,7 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
   );
 }
 
-function isTrainedOnCurrentColumns(state: RootState): boolean {
+export function isTrainedOnCurrentColumns(state: RootState): boolean {
   const latestResult = state.historicResults[0];
   return (
     !!latestResult &&

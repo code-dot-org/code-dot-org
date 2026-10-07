@@ -68,7 +68,6 @@ export interface RootState {
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   historicResults: HistoricResult[];
-  resultsHighlightRow: number | undefined;
   hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
@@ -118,7 +117,6 @@ export const initialState: RootState = {
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
   historicResults: [],
-  resultsHighlightRow: undefined,
   hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
@@ -371,9 +369,6 @@ const ailabSlice = createSlice({
     ) {
       state.trainingModalStep = action.payload;
     },
-    setResultsHighlightRow(state, action: PayloadAction<number>) {
-      state.resultsHighlightRow = action.payload;
-    },
     setSaveStatus: {
       reducer(
         state,
@@ -387,22 +382,17 @@ const ailabSlice = createSlice({
       },
     },
     setHistoricResult: {
-      reducer(
-        state,
-        action: PayloadAction<{
-          label: string;
-          features: string[];
-          accuracy: string;
-        }>,
-      ) {
-        state.historicResults.unshift({
-          label: action.payload.label,
-          features: action.payload.features,
-          accuracy: action.payload.accuracy,
-        });
+      reducer(state, action: PayloadAction<HistoricResult>) {
+        state.historicResults.unshift(action.payload);
       },
-      prepare(label: string, features: string[], accuracy: string) {
-        return {payload: {label, features, accuracy}};
+      prepare(
+        label: string,
+        features: string[],
+        accuracy: string,
+        correct: number,
+        total: number,
+      ) {
+        return {payload: {label, features, accuracy, correct, total}};
       },
     },
     setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
@@ -451,7 +441,6 @@ export const {
   setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
-  setResultsHighlightRow,
   setSaveStatus,
   setHistoricResult,
   setHyperparameters,

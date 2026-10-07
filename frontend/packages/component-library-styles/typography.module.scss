@@ -78,7 +78,7 @@
   font-weight: var(--font-weight-semi-bold);
   font-size: 3rem;
   line-height: 1.08;
-  letter-spacing: -0.03rem;
+  letter-spacing: -0.01em;
 }
 
 @mixin heading-xl {
@@ -87,7 +87,7 @@
   font-weight: var(--font-weight-semi-bold);
   font-size: 2.375rem;
   line-height: 1.05;
-  letter-spacing: -0.03rem;
+  letter-spacing: -0.01em;
 }
 
 @mixin heading-lg {
@@ -128,25 +128,25 @@
 @mixin body-one {
   @include paragraph-common;
   font-size: var(--font-size-body-lg);
-  line-height: 1.4;
+  line-height: 1.44;
 }
 
 @mixin body-two {
   @include paragraph-common;
   font-size: var(--font-size-body-md);
-  line-height: 1.48;
+  line-height: 1.5;
 }
 
 @mixin body-three {
   @include paragraph-common;
   font-size: var(--font-size-body-sm);
-  line-height: 1.54;
+  line-height: 1.57;
 }
 
 @mixin body-four {
   @include paragraph-common;
   font-size: var(--font-size-body-xs);
-  line-height: 1.64;
+  line-height: 1.5;
 }
 
 // Overline styles
@@ -154,25 +154,25 @@
   @include paragraph-common;
   @include font.main-font-semi-bold;
   text-transform: uppercase;
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.06em;
 }
 
 @mixin overline-one {
   @include overline-common;
-  font-size: 0.875rem;
-  line-height: 1.54;
+  font-size: var(--font-size-body-sm);
+  line-height: 1.57;
 }
 
 @mixin overline-two {
   @include overline-common;
-  font-size: 0.813rem;
-  line-height: 1.64;
+  font-size: var(--font-size-body-xs);
+  line-height: 1.5;
 }
 
 @mixin overline-three {
   @include overline-common;
-  font-size: 0.688rem;
-  line-height: 1.76;
+  font-size: var(--font-size-body-xxs);
+  line-height: 1.6;
 }
 
 // Strong and Em styles
