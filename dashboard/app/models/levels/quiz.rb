@@ -63,10 +63,8 @@ class Quiz < Level
     levels.each {|level| level.import_question_placements! if level.is_a?(Quiz)}
   end
 
-  # question_placements (the desired state, already populated on this
-  # in-memory object loaded from a .level file) is
-  # imported into QuizQuestionPlacement rows (what's actually
-  # persisted). This deletes and recreates rather than updating in place.
+  # Replace this Quiz's QuizQuestionPlacement database rows with the list from its question_placements serialized attribute.
+  # This method is called when importing question placements from the .level file.
   def import_question_placements!
     # We leave existing placements alone if serialized question_placements is nil
     # in order to avoid accidentally deleting all existing placements.
