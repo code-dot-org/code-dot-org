@@ -76,21 +76,22 @@ function isRosteredLogin(
   }
 }
 
-function canSignInWithout(
+// Legacy keeps an LMS-only account linked even when it has a password.
+function isLmsOnlyAccount(settings: UserSettings): boolean {
+  return settings.authenticationOptions.every(
+    option => option.credentialType === LTI_PROVIDER,
+  );
+}
+
+function hasOtherSignIn(
   option: AuthenticationOptionSummary,
   settings: UserSettings,
 ): boolean {
-  const onlyLtiLogins = settings.authenticationOptions.every(
-    other => other.credentialType === LTI_PROVIDER,
-  );
-  if (option.credentialType === LTI_PROVIDER && onlyLtiLogins) return false;
-
-  const remaining = settings.authenticationOptions.filter(
-    other => other.id !== option.id,
-  );
   return (
     settings.hasPassword ||
-    remaining.some(other => other.credentialType !== 'email')
+    settings.authenticationOptions.some(
+      other => other.id !== option.id && other.credentialType !== 'email',
+    )
   );
 }
 
@@ -100,7 +101,9 @@ export function disconnectBlockedMessage(
   integrations: IntegrationsSettings,
 ): string | undefined {
   if (isRosteredLogin(option, integrations)) return ROSTERED_SECTION_MESSAGE;
-  if (!canSignInWithout(option, settings)) return NO_OTHER_LOGIN_MESSAGE;
+  if (isLmsOnlyAccount(settings) || !hasOtherSignIn(option, settings)) {
+    return NO_OTHER_LOGIN_MESSAGE;
+  }
   return undefined;
 }
 
