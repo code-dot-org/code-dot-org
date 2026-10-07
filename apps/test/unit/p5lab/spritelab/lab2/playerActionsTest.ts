@@ -30,7 +30,13 @@ function frame(
   animation?: {frame: number; frames: number}
 ): PlayerFrame {
   return {
-    sprite: {position: {x, y}, width: SIZE, height: SIZE, scale: 1} as never,
+    sprite: {
+      position: {x, y},
+      velocity: {x: 0, y: 0},
+      width: SIZE,
+      height: SIZE,
+      scale: 1,
+    } as never,
     requestedX: asked.x ?? x,
     requestedY: asked.y ?? y,
     gravity: GRAVITY,
@@ -162,6 +168,37 @@ describe('createPlayerActionTracker', () => {
       frame(100, STANDING_Y, {y: STANDING_Y - 10}),
     ]);
     expect(actions[1]).toContain('bump');
+  });
+
+  it('jumps and lands under flipped gravity, against the ceiling', () => {
+    // Gravity pulls up: the ceiling is a row of cells along the top, and the
+    // player stands with its head on them.
+    const ceiling = Array.from({length: 10}, (_, i) =>
+      cell(CELL / 2 + i * CELL, CELL / 2)
+    );
+    const standingY = CELL + SIZE / 2;
+    const flipped = (y: number) => ({
+      ...frame(100, y, {}, ceiling),
+      gravity: -GRAVITY,
+    });
+    const actions = run([
+      flipped(standingY),
+      flipped(standingY),
+      flipped(standingY + 20),
+      flipped(standingY + 60),
+      flipped(standingY + 30),
+      flipped(standingY),
+      flipped(standingY),
+    ]);
+    expect(actions.map(a => a.filter(x => x !== 'walk'))).toEqual([
+      [],
+      [],
+      ['jump'],
+      [],
+      [],
+      ['land'],
+      [],
+    ]);
   });
 
   it('forgets, so the next frame is a first frame again', () => {
