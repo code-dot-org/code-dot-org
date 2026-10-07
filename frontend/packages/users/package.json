@@ -27,6 +27,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "clean": "rimraf dist",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -72,6 +73,7 @@
     "prettier": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "rimraf": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",

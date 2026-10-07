@@ -323,6 +323,7 @@ roles = {
     ManagedPolicyArns: [
       '!Ref ContributorS3Policy',
       '!Ref ContributorSecretsPolicy',
+      '!Ref FontAwesomeS3UploadPolicy',
       'arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess'
     ]
   },
@@ -785,6 +786,31 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/firebase_secret-ngO5yy
+
+  # Lets contributors publish new Font Awesome kit builds to dsco.code.org.
+  # See frontend/packages/fonts/README.md#updating-fontawesome-files
+  # Each upload goes to a new timestamped folder, so no delete is granted.
+  FontAwesomeS3UploadPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: FontAwesomeS3UploadPolicy
+      Path: /engineering/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowListingDscoBucket
+            Effect: Allow
+            Action:
+              - s3:ListBucket
+              - s3:GetBucketCORS
+            Resource: arn:aws:s3:::cdo-dsco
+          - Sid: AllowUploadingFontAwesomeFiles
+            Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:GetObject
+              - s3:AbortMultipartUpload
+            Resource: arn:aws:s3:::cdo-dsco/assets/font-awesome-pro/*
 
   MusicLabS3ReadWritePolicy:
     Type: AWS::IAM::ManagedPolicy

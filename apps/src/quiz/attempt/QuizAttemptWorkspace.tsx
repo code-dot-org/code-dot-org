@@ -38,6 +38,7 @@ export interface QuizAttemptWorkspaceProps {
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
   revealAnswerExplanation?: boolean;
+  showQuestionsAfterSubmit?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -55,6 +56,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   showIntroScreen,
   showCorrectness,
   revealAnswerExplanation,
+  showQuestionsAfterSubmit,
 }) => {
   const dispatch = useAppDispatch();
   const {
@@ -320,47 +322,48 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               onTryAgain={handleRetake}
               onNextLevel={handleNextLevel}
             />
-            {resultPages.map(
-              (
-                {page, questions, firstQuestionNumber, lastQuestionNumber},
-                pageIndex
-              ) => (
-                <React.Fragment key={page}>
-                  {resultPages.length > 1 && (
-                    <PageDivider
-                      pageNumber={pageIndex + 1}
-                      totalPages={resultPages.length}
-                      firstQuestionNumber={firstQuestionNumber}
-                      lastQuestionNumber={lastQuestionNumber}
-                    />
-                  )}
-                  {questions.map((question, indexInPage) => {
-                    const result = attempt.questionResults?.find(
-                      r => r.quizQuestionId === question.id
-                    );
-                    return (
-                      result && (
-                        <QuestionResultCard
-                          key={question.id}
-                          question={question}
-                          questionLabel={
-                            mcQuestions.length > 1
-                              ? `Question ${
-                                  firstQuestionNumber + indexInPage
-                                } of ${mcQuestions.length}`
-                              : undefined
-                          }
-                          result={result}
-                          revealAnswerExplanation={toBool(
-                            revealAnswerExplanation
-                          )}
-                        />
-                      )
-                    );
-                  })}
-                </React.Fragment>
-              )
-            )}
+            {toBool(showQuestionsAfterSubmit) &&
+              resultPages.map(
+                (
+                  {page, questions, firstQuestionNumber, lastQuestionNumber},
+                  pageIndex
+                ) => (
+                  <React.Fragment key={page}>
+                    {resultPages.length > 1 && (
+                      <PageDivider
+                        pageNumber={pageIndex + 1}
+                        totalPages={resultPages.length}
+                        firstQuestionNumber={firstQuestionNumber}
+                        lastQuestionNumber={lastQuestionNumber}
+                      />
+                    )}
+                    {questions.map((question, indexInPage) => {
+                      const result = attempt.questionResults?.find(
+                        r => r.quizQuestionId === question.id
+                      );
+                      return (
+                        result && (
+                          <QuestionResultCard
+                            key={question.id}
+                            question={question}
+                            questionLabel={
+                              mcQuestions.length > 1
+                                ? `Question ${
+                                    firstQuestionNumber + indexInPage
+                                  } of ${mcQuestions.length}`
+                                : undefined
+                            }
+                            result={result}
+                            revealAnswerExplanation={toBool(
+                              revealAnswerExplanation
+                            )}
+                          />
+                        )
+                      );
+                    })}
+                  </React.Fragment>
+                )
+              )}
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>

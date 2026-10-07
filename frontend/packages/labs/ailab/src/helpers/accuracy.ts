@@ -47,14 +47,6 @@ export function getAllResults(state: RootState): ResultsData {
   return getResultsByGrade(state, ResultsGrades.ALL);
 }
 
-export function getCorrectResults(state: RootState): ResultsData {
-  return getResultsByGrade(state, ResultsGrades.CORRECT);
-}
-
-export function getIncorrectResults(state: RootState): ResultsData {
-  return getResultsByGrade(state, ResultsGrades.INCORRECT);
-}
-
 export function getResultsByGrade(
   state: RootState,
   grade: string,
@@ -165,4 +157,9 @@ export function getAccuracyRegression(state: RootState): AccuracyGrades {
     state.accuracyCheckLabels,
     {tolerance: regressionTolerance(state)},
   );
+}
+
+export function formatAccuracy(accuracy: string): string {
+  const percent = Number(accuracy);
+  return Number.isFinite(percent) ? `${percent}%` : '—';
 }

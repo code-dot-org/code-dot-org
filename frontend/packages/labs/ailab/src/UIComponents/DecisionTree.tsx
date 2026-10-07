@@ -25,7 +25,6 @@ import {
 
 import TreeCanvas from './TreeCanvas';
 
-import shared from '../shared.module.scss';
 import styles from './decisionTree.module.scss';
 
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});
@@ -106,9 +105,6 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
 
   return (
     <div id="uitest-decision-tree" className={styles.decisionTree}>
-      <div className={classNames(styles.header, shared.bold)}>
-        Your model's decision tree
-      </div>
       <div className={styles.canvasArea}>
         <TreeCanvas
           contentWidth={layout.width}
