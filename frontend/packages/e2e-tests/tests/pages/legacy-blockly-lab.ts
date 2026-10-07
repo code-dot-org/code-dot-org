@@ -40,9 +40,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   readonly showCodeHeader: Locator;
 
   /**
-   * Show Code dialog's overlay (the DSCO Modal's role="presentation" backdrop,
-   * mounted on #showCodeModal appended to body). Carries the modal-backdrop
-   * z-index; this is the element whose stacking sits in front of the callouts.
+   * Show Code dialog's overlay (the DSCO Modal's MUI Dialog root, mounted on
+   * #showCodeModal appended to body). Carries the modal-backdrop z-index; this
+   * is the element whose stacking sits in front of the callouts. Its inner
+   * .MuiDialog-container is also role="presentation", so match the class.
    */
   readonly showCodeModalOverlay: Locator;
 
@@ -92,9 +93,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.loadingSpinner = page.locator('#codeApp .loading');
     this.resetButton = page.locator('#resetButton');
     this.showCodeHeader = page.locator('#show-code-header');
-    this.showCodeModalOverlay = page.locator(
-      '#showCodeModal [role="presentation"]',
-    );
+    this.showCodeModalOverlay = page.locator('#showCodeModal .MuiDialog-root');
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );

@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import {Button as MuiButton, Typography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
 import _ from 'lodash';

@@ -12,7 +12,6 @@ import styles from './statement.module.scss';
 
 interface StatementProps {
   shouldShow?: boolean;
-  smallFont?: boolean;
   currentPanel?: string;
   labelIsPreset?: boolean;
   labelColumn?: string;
@@ -24,7 +23,6 @@ interface StatementProps {
 
 const Statement = ({
   shouldShow,
-  smallFont,
   currentPanel,
   labelIsPreset,
   labelColumn,
@@ -147,15 +145,11 @@ const Statement = ({
     });
 
   return (
-    <div className={smallFont ? styles.small : shared.largeText} id="statement">
+    <div className={shared.largeText} id="statement">
       {predictionStatementComponents}
     </div>
   );
 };
-
-// The presentational component, for callers that supply props directly (e.g.
-// the historic-results list in Results).
-export const UnconnectedStatement = Statement;
 
 // Store-connected container: the default export used in the live panels.
 const ConnectedStatement = () => {

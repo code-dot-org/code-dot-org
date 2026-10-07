@@ -23,7 +23,7 @@ class MultipleChoiceQuestion < QuizQuestion
   #
   # `content` shape:
   #   {
-  #     "stem" => "What is 2 + 2?",
+  #     "question_title" => "What is 2 + 2?",
   #     "choices" => [{"id" => "0", "text" => "Option A"}, {"id" => "1", "text" => "Option B"}, ...],
   #     "correct_choice_id" => "0"
   #   }
@@ -47,8 +47,8 @@ class MultipleChoiceQuestion < QuizQuestion
     return if content.blank?
     q = content.deep_stringify_keys
 
-    unless q['stem'].is_a?(String) && q['stem'].present?
-      errors.add(:content, 'must have a non-blank "stem"')
+    unless q['question_title'].is_a?(String) && q['question_title'].present?
+      errors.add(:content, 'must have a non-blank "question_title"')
       return
     end
 

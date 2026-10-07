@@ -1,27 +1,51 @@
-.popupContainer {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  z-index: 10;
-}
+@use '../sharedMixins' as mixins;
 
-.popup {
-  padding: 10px;
-  background-color: white;
-  overflow: hidden;
-  height: 100%;
+$sentence-min-width: 280px;
+$summary-one-line-min-width: 320px;
+
+.details {
+  container-type: inline-size;
   box-sizing: border-box;
+  flex: 1;
+  min-height: 0;
+  padding: 16px 24px 24px;
   display: flex;
   flex-direction: column;
-  border: solid 1px black;
-  box-shadow: -5px 5px 10px rgb(0 0 0 / 0.5);
+  gap: 16px;
 }
 
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
+.modelRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.sentence {
+  flex: 1 1 $sentence-min-width;
+  min-width: 0;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.accuracy {
+  @include mixins.accuracy-readout;
+}
+
+.divider {
+  width: 1px;
+  height: 10px;
+  background-color: var(--border-neutral-primary);
+}
+
+@container (width < #{$summary-one-line-min-width}) {
+  .divider {
+    display: none;
+  }
 }

@@ -14,14 +14,6 @@ import {levelStore} from './levelStore';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    observe() {}
-    disconnect() {}
-  },
-);
-
 function predictSnake(store) {
   act(() => {
     store.dispatch(setTestData('legs', '0'));

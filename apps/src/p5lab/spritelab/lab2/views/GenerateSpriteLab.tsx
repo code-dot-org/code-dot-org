@@ -1,12 +1,13 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 
 import {isFreeplayMode, LevelMode} from '../levelMode';
 import {SpriteLab2LevelProperties} from '../types';
+
+import {showTtsFor} from './showTts';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -107,10 +108,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  // Read-aloud of the guide text, on the same level/script property the
-  // platform's instructions panel uses.
-  const showTts =
-    !!levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
+  const showTts = showTtsFor(levelProperties);
   const instructionsBlock = instructions && (
     <MainInstructionsContent
       instructionsText={instructions}
