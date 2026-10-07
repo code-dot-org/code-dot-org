@@ -14,10 +14,9 @@ module QuizQuestionSerialization
     )
   end
 
-  # If type is missing, then fall back to MultipleChoiceQuestion.
   private def quiz_question_class
-    type = quiz_question_params[:type].presence || MultipleChoiceQuestion.name
-    raise ArgumentError, "unknown quiz question type #{type}" unless QuizQuestion::TYPES.include?(type)
+    type = quiz_question_params[:type]
+    raise ArgumentError, "unknown quiz question type #{type.inspect}" unless QuizQuestion::TYPES.include?(type)
     type.constantize
   end
 

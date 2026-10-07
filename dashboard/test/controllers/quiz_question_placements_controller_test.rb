@@ -46,6 +46,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_difference '@quiz.placements.count', 1 do
       post :create, params: {
         level_id: @quiz.id,
+        type: 'MultipleChoiceQuestion',
         questionName: 'New question',
         questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
@@ -65,7 +66,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
   test "create returns bad_request when required fields are missing" do
     assert_no_difference 'QuizQuestion.count' do
-      post :create, params: {level_id: @quiz.id, questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
+      post :create, params: {level_id: @quiz.id, type: 'MultipleChoiceQuestion', questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
     end
 
     assert_response :bad_request
@@ -76,6 +77,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_no_difference 'QuizQuestion.count' do
       post :create, params: {
         level_id: @quiz.id,
+        type: 'MultipleChoiceQuestion',
         questionName: 'Orphan risk',
         questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
@@ -88,7 +90,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     refute QuizQuestion.exists?(name: 'Orphan risk')
   end
 
-  test "create makes a FreeResponseQuestion when type is given" do
+  test "create makes a FreeResponseQuestion" do
     post :create, params: {
       level_id: @quiz.id,
       type: 'FreeResponseQuestion',
@@ -105,7 +107,21 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert @quiz.placements.exists?(quiz_question_id: question.id)
   end
 
-  test "create returns bad_request for a type that is not editable" do
+  test "create returns bad_request when type is missing" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, params: {
+        level_id: @quiz.id,
+        questionName: 'No type',
+        questionTitle: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
+        correctChoiceId: 'b'
+      }
+    end
+
+    assert_response :bad_request
+  end
+
+  test "create returns bad_request for a type not in QuizQuestion::TYPES" do
     assert_no_difference 'QuizQuestion.count' do
       post :create, params: {level_id: @quiz.id, type: 'QuizQuestion', questionName: 'x', questionTitle: 'x'}
     end
