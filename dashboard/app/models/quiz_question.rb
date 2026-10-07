@@ -19,7 +19,7 @@
 #  index_quiz_questions_on_name        (name)
 #
 class QuizQuestion < ApplicationRecord
-  # Every concrete question subtype. TODO: add MultipleSelectQuestion, MatchQuestion.
+  # Every concrete question subtype. TODO: P0 - add MultipleSelectQuestion, MatchQuestion.
   TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion).freeze
 
   after_initialize {self.type ||= self.class.sti_name}

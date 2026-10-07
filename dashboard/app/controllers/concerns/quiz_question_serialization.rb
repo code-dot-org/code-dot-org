@@ -8,8 +8,7 @@ module QuizQuestionSerialization
 
   private def quiz_question_params
     params.permit(
-      :type, :questionName, :explanation, :page, :editMode,
-      :questionTitle, :description, :correctChoiceId,
+      :questionName, :questionTitle, :correctChoiceId, :explanation, :page, :editMode, :description, :type,
       choices: [:id, :text],
       standards: [:frameworkShortcode, :shortcode]
     )
