@@ -55,6 +55,8 @@ usages: removing a used icon is a regression.
 
 ### 4. Apply (you)
 
+Do not run this until the operator has explicitly confirmed the step 3 gate. A dry run alone is not consent.
+
 Run the same command without `--dry-run` (add `--skip-upload` if step 2 chose it). It rewrites `../webfonts`
 to the timestamped URL, syncs to S3, bumps the three URL files and rewrites `kitIcons`.
 
