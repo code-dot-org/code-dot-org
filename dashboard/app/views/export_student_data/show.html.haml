@@ -1,0 +1,6 @@
+- @page_title = 'Export Student Data'
+
+#export-student-data
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/export_student_data/show.js'), data: {sections: @sections_data.to_json}}
