@@ -3,7 +3,7 @@
 // or storage; useProgress and progressStore build on it.
 
 import {hashString} from '../ai/hashString';
-import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
+import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =
   | 'locked'
@@ -20,22 +20,13 @@ export interface StepContext {
   generated?: {instructions: string; inputsHash: string};
 }
 
-/** Keys generated instructions to what they were made from. */
-export function generateInputsHash(
-  step: LevelStep,
-  projectInfo: PathwayProjectInfo,
-  sourceCode: string
-): string {
-  return hashString(
-    [
-      step.instructionsPrompt,
-      projectInfo.name,
-      projectInfo.description,
-      sourceCode,
-    ]
-      .map(s => s ?? '')
-      .join('\u0000')
-  );
+/**
+ * Keys generated content to the full prompt it was made from, so a change
+ * to any input, the brief, the project, the authored text or our wording,
+ * regenerates it.
+ */
+export function generateInputsHash(prompt: string): string {
+  return hashString(prompt);
 }
 
 export interface Progress {

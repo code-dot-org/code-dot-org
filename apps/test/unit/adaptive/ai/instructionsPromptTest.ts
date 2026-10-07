@@ -53,7 +53,8 @@ describe('buildInstructionsPrompt', () => {
     expect(prompt).toContain('TEMPLATE.');
     expect(prompt).toContain('```\nPut your name in the header.\n```');
     expect(prompt).toContain('40 words at most');
-    expect(prompt).toContain('one or two sentences');
+    expect(prompt).toContain('FORMAT RULES');
+    expect(prompt).toContain('labeled contrast pair');
     expect(prompt).not.toMatch(/Web Lab|HTML|CSS|code/);
   });
 

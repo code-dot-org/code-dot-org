@@ -1,4 +1,5 @@
 import {generate} from '@cdo/apps/adaptive/ai/generate';
+import {buildInstructionsPrompt} from '@cdo/apps/adaptive/ai/instructionsPrompt';
 import {resolveStepInstructions} from '@cdo/apps/adaptive/ai/resolveStepInstructions';
 import {generateInputsHash} from '@cdo/apps/adaptive/progress/model';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
@@ -39,8 +40,17 @@ const context: AichatContext = {
 };
 const sources = {source: {folders: {}, files: {}}};
 const projectInfo = {name: 'Cat Corner', description: 'Cats.'};
-// The project has no files, so its source code summary is empty.
-const inputsHash = generateInputsHash(step, projectInfo, '');
+// The cache is keyed by the full prompt; the project has no files, so its
+// source code summary is empty.
+const inputsHash = generateInputsHash(
+  buildInstructionsPrompt({
+    pathway,
+    checkpoint,
+    step,
+    project: {...projectInfo, sourceCode: ''},
+    fallback: 'Authored.',
+  })
+);
 
 const resolve = (
   overrides: Partial<Parameters<typeof resolveStepInstructions>[0]> = {}

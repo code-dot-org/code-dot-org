@@ -50,21 +50,21 @@ export async function resolveStepInstructions({
   if (!step.instructionsPrompt || !step.project) return authoredInstructions;
   if (sources === undefined) return authoredInstructions;
 
-  const sourceCode = summarizeProjectFiles(sources);
-  const inputsHash = generateInputsHash(step, projectInfo, sourceCode);
+  const prompt = buildInstructionsPrompt({
+    pathway,
+    checkpoint,
+    step,
+    project: {...projectInfo, sourceCode: summarizeProjectFiles(sources)},
+    fallback: authoredInstructions,
+  });
+  const inputsHash = generateInputsHash(prompt);
   if (stepContext?.generated?.inputsHash === inputsHash) {
     return stepContext.generated.instructions;
   }
 
   const result = await generate({
     schema: generatedInstructionsSchema,
-    prompt: buildInstructionsPrompt({
-      pathway,
-      checkpoint,
-      step,
-      project: {...projectInfo, sourceCode},
-      fallback: authoredInstructions,
-    }),
+    prompt,
     context: aichatContext,
   });
   if (!result) return authoredInstructions;
