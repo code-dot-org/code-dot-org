@@ -21,6 +21,7 @@ const TITLE_ID = 'training-modal-title';
 const TrainingModal = () => {
   const dispatch = useAppDispatch();
   const step = useAppSelector(state => state.trainingModalStep);
+  const isReplay = useAppSelector(state => state.isTrainingReplay);
   const [testingFinished, setTestingFinished] = useState(false);
 
   // This component stays mounted between runs, so each run starts over.
@@ -35,7 +36,7 @@ const TrainingModal = () => {
   }
 
   const isTraining = step === 'training';
-  const isInProgress = isTraining || !testingFinished;
+  const isInProgress = !isReplay && (isTraining || !testingFinished);
   const closeModal = () => {
     if (isInProgress) {
       train.cancel();

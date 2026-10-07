@@ -64,6 +64,8 @@ export interface RootState {
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
   trainingModalStep: TrainingModalStep | undefined;
+  // The modal is replaying the latest run's animation, not showing a new run.
+  isTrainingReplay: boolean;
   currentColumn: string | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
@@ -133,6 +135,7 @@ export const initialState: RootState = {
   trainedModelDetails: {},
   currentPanel: 'datasetView',
   trainingModalStep: undefined,
+  isTrainingReplay: false,
   currentColumn: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
@@ -351,6 +354,7 @@ const ailabSlice = createSlice({
       }
       state.currentPanel = currentPanel;
       state.trainingModalStep = undefined;
+      state.isTrainingReplay = false;
       state.instructionsOverlayActive = showedOverlay;
       state.instructionsKey = currentPanel as InstructionsKey;
       state.showOverlay = showedOverlay;
@@ -392,6 +396,13 @@ const ailabSlice = createSlice({
       action: PayloadAction<TrainingModalStep | undefined>,
     ) {
       state.trainingModalStep = action.payload;
+      if (action.payload !== 'testing') {
+        state.isTrainingReplay = false;
+      }
+    },
+    replayTraining(state) {
+      state.trainingModalStep = 'training';
+      state.isTrainingReplay = true;
     },
     setSaveStatus: {
       reducer(
@@ -471,6 +482,7 @@ export const {
   setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
+  replayTraining,
   setSaveStatus,
   setHistoricResult,
   setHistoricResults,
