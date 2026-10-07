@@ -19,11 +19,9 @@ What a finished update must contain (all of it, or the icons are not usable):
 4. The custom icons storybook (`.../fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx`, story "Group of
    Custom Icons") showing every icon in `kitIcons`, new ones included.
 
-## Status
+## Note
 
-First real run (2026-10-07, v6 kit, `AWS_PROFILE=codeorg-contributor`) worked end to end: S3 upload, CORS
-headers, URL bumps and `kitIcons` rewrite. The icon regex needed fixing against the real `custom-icons.css`
-(`.fa-kit.fa-NAME`); if the added/removed lists look absurd, check it first.
+The icon regex matches `.fa-kit.fa-NAME` in `custom-icons.css`; if the added/removed lists look absurd, check it first.
 
 ## Steps
 
@@ -48,23 +46,23 @@ If this fails, tell the operator what is missing (CLI install, credentials, `AWS
 ### 3. Preview (you)
 
 `node .agents/skills/update-fontawesome-kit/update.mjs <kit.zip> --dry-run` prints the timestamp and the
-added/removed icon names; it changes nothing. Show the operator the added and removed lists.
+added/removed icon names; it changes nothing (the real run picks its own, later timestamp). Show the operator
+the added and removed lists.
 
 For every removed icon the dry run also prints `USED:` (with up to 10 matching lines) or `unused:`. It
-matches the class `fa-<name>` and the bare quoted `'<name>'` (as in `iconName="<name>"`) in `apps/src`,
-`frontend`, `dashboard/app`, `shared`, `pegasus`. Short or common names (`move`, `clever`) match unrelated
-strings, so read each hit; a `USED` hit that is a real icon usage is a regression to fix or flag before the gate.
+matches the class `fa-<name>` and the bare quoted `'<name>'`, `"<name>"` or backticked name (as in
+`iconName="<name>"`) in all tracked files except locales and lockfiles. Short or common names (`move`, `clever`)
+match unrelated strings, so read each hit.
 
 **If any removed icon has hits:**
 
 1. Open each `USED` hit and classify it as a real usage or a false positive. Show the operator the real ones
    (file and line).
 2. Check for a rename: a removed icon next to a similarly named added one (`ai-head-regular` -> `ai-head`).
-3. A real usage blocks step 4, even if the operator says go. Ask them to pick: fix callers in the update PR
+3. A real usage blocks step 4 until the operator picks one of these in writing; any of them unblocks it: fix callers in the update PR
    (new name or another icon); keep the icon (ask design to restore it in the kit and stop here); or defer
    (apply anyway and open a follow-up; those spots render blank in production once the kit is live).
-4. Say plainly that "unused" is not proof. Known gaps: class names built at runtime (`fa-${x}`) and usages in
-   `dashboard/config` curriculum data are not searched, and only the five directories above are.
+4. Say plainly that "unused" is not proof: class names built at runtime (`fa-${x}`) are not found.
 
 **GATE:** operator confirms the icon diff matches what design added (ask for names if unsure).
 
@@ -85,8 +83,9 @@ timestamp folders; e.g. `apps/src/applab/Exporter.js` still pins one.
 
 ### 6. Verify the upload (you)
 
-`curl -sI https://dsco.code.org/assets/font-awesome-pro/<ts>/css/custom-icons.min.css` must return 200 with
-`access-control-allow-origin`. Same for `.../webfonts/custom-icons.woff2`. A missing CORS header means the
+For each `<ts>/css/*.min.css` the loader and `font.scss` reference and for `<ts>/webfonts/custom-icons.woff2`:
+`curl -sI -H 'Origin: https://studio.code.org' https://dsco.code.org/assets/font-awesome-pro/<ts>/<path>` must
+return 200 with `access-control-allow-origin` (S3 sends it only when an `Origin` header is present). A missing CORS header means the
 bucket CORS config needs fixing (see the README's Slack thread link); that is an operator/infra task.
 
 **GATE:** if anything fails, stop and report; do not commit URLs that do not resolve.
@@ -95,8 +94,9 @@ bucket CORS config needs fixing (see the README's Slack thread link); that is an
 
 - Confirm `git diff` touches exactly the three URL files and `constants/index.ts`.
 - Run `yarn typecheck` in `apps/` and `./tools/hooks/pre-commit`.
-- Storybook must show the new icons. Check the story reads `kitIcons` (it does at the time of writing) and,
-  if you can run Storybook (`yarn dev` in `frontend/`), look at "Group of Custom Icons".
+- Storybook must show the new icons. Run `yarn build` in `frontend/packages/fonts` (Storybook reads the built
+  package, so its URLs are stale until then), then `yarn storybook` in `frontend/apps/design-system-storybook`
+  and look at "Group of Custom Icons".
 
 **GATE:** operator looks at the story and confirms every new icon renders (a blank square means the icon
 name or the font URL is wrong).
@@ -106,7 +106,8 @@ name or the font URL is wrong).
 The update PR must hold only the update, never skill edits (those go in their own PR). From a branch off
 `origin/staging` named like `<user>/fontawesome-kit-update-<yyyy-mm>`:
 
-- Stage exactly: the three URL files, `constants/index.ts`, and the story file if it changed.
+- Stage exactly: the three URL files and `constants/index.ts`; add the story file only if you edited it.
+- End the commit message with the commit attribution line from the session's system reminder.
 - Title: `Update Font Awesome kit: <added icons, or "N new custom icons">`.
 - Body: fill in `.agents/skills/update-fontawesome-kit/pr-template.md` (summary, added/removed icons table,
   before/after story screenshots, testing checklist). It needs: S3 prefix (`cdo-dsco/assets/font-awesome-pro/<ts>`), added and removed icons, usages found for removed
