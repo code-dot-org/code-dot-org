@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 module CdoContentful
-  module CsForAll
+  module HourOfAi
     class Client < BaseClient
-      self.config = CdoContentful.config.cs_for_all.client
+      self.config = CdoContentful.config.hour_of_ai.client
     end
   end
 end
