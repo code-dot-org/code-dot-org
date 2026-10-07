@@ -1,21 +1,30 @@
 import {select} from 'd3-selection';
 import 'd3-transition';
-import {zoom, zoomIdentity, zoomTransform, type ZoomBehavior} from 'd3-zoom';
 import {
+  zoom,
+  zoomIdentity,
+  zoomTransform,
+  type ZoomBehavior,
+  type ZoomTransform,
+} from 'd3-zoom';
+import {
+  type FocusEvent,
+  type MutableRefObject,
   type ReactNode,
   type RefObject,
+  type UIEvent,
   useLayoutEffect,
   useMemo,
   useRef,
 } from 'react';
 
-import {fitToView, type Rect} from '../helpers/fitToView';
+import {fitToView, panIntoView, type Rect} from '../helpers/fitToView';
 
 import ZoomButton from './ZoomButton';
 
 import styles from './treeCanvas.module.scss';
 
-const FIT_PADDING = 24;
+const FRAME_PADDING = 24;
 const FIT_MAX_SCALE = 1;
 const MIN_SCALE = 0.25;
 const MAX_SCALE = 2;
@@ -38,26 +47,53 @@ function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {
   return overlaps ? Math.max(0, view.right - box.left) : 0;
 }
 
+function viewFrame(
+  viewport: HTMLElement,
+  toolbar: HTMLElement,
+  insetRight = 0,
+): Rect {
+  const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FRAME_PADDING;
+  return {
+    x: frameLeft,
+    y: FRAME_PADDING,
+    width: viewport.clientWidth - insetRight - frameLeft - FRAME_PADDING,
+    height: viewport.clientHeight - 2 * FRAME_PADDING,
+  };
+}
+
 function fitTransform(
   viewport: HTMLElement,
   toolbar: HTMLElement,
   overlay: HTMLElement | null,
   rect: Rect,
 ) {
-  const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FIT_PADDING;
   const insetRight = overlayInset(viewport, overlay);
-  const frame = (inset: number) => ({
-    x: frameLeft,
-    y: FIT_PADDING,
-    width: viewport.clientWidth - inset - frameLeft - FIT_PADDING,
-    height: viewport.clientHeight - 2 * FIT_PADDING,
-  });
   const fitted =
-    fitToView(rect, frame(insetRight), FIT_MAX_SCALE) ??
-    fitToView(rect, frame(0), FIT_MAX_SCALE);
+    fitToView(rect, viewFrame(viewport, toolbar, insetRight), FIT_MAX_SCALE) ??
+    fitToView(rect, viewFrame(viewport, toolbar), FIT_MAX_SCALE);
   return (
     fitted && zoomIdentity.translate(fitted.x, fitted.y).scale(fitted.scale)
   );
+}
+
+function boundingBox(element: Element): Rect {
+  const boxes = [element, ...element.children].map(part =>
+    part.getBoundingClientRect(),
+  );
+  const left = Math.min(...boxes.map(box => box.left));
+  const top = Math.min(...boxes.map(box => box.top));
+  return {
+    x: left,
+    y: top,
+    width: Math.max(...boxes.map(box => box.right)) - left,
+    height: Math.max(...boxes.map(box => box.bottom)) - top,
+  };
+}
+
+// Focusing a node scrolls this clipping box, but only the transform may place the content.
+function undoScroll({currentTarget}: UIEvent<HTMLElement>) {
+  currentTarget.scrollTop = 0;
+  currentTarget.scrollLeft = 0;
 }
 
 interface TreeCanvasProps {
@@ -80,6 +116,7 @@ const TreeCanvas = ({
   const toolbarRef = useRef<HTMLDivElement>(null);
   const zoomRef = useRef<ZoomBehavior<HTMLDivElement, unknown>>();
   const scaleTargetRef = useRef<number>();
+  const panTargetRef = useRef<ZoomTransform>();
   const autoFitRef = useRef(true);
   const contentRect = useMemo(
     () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),
@@ -133,6 +170,18 @@ const TreeCanvas = ({
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
 
+  const animateToward = <T,>(
+    targetRef: MutableRefObject<T | undefined>,
+    target: T,
+  ) => {
+    targetRef.current = target;
+    return animate().on('end interrupt cancel', () => {
+      if (targetRef.current === target) {
+        targetRef.current = undefined;
+      }
+    });
+  };
+
   const zoomBy = (factor: number) => {
     autoFitRef.current = false;
     const zoomer = zoomRef.current!;
@@ -140,15 +189,7 @@ const TreeCanvas = ({
     const from =
       scaleTargetRef.current ?? zoomTransform(viewportRef.current!).k;
     const target = Math.min(maxScale, Math.max(minScale, from * factor));
-    scaleTargetRef.current = target;
-    zoomer.scaleTo(
-      animate().on('end interrupt cancel', () => {
-        if (scaleTargetRef.current === target) {
-          scaleTargetRef.current = undefined;
-        }
-      }),
-      target,
-    );
+    zoomer.scaleTo(animateToward(scaleTargetRef, target), target);
   };
 
   const zoomTo = (rect: Rect) => {
@@ -164,9 +205,38 @@ const TreeCanvas = ({
     }
   };
 
+  const followFocus = ({target}: FocusEvent<HTMLElement>) => {
+    if (!target.matches(':focus-visible')) {
+      return;
+    }
+    const viewport = viewportRef.current!;
+    const toolbar = toolbarRef.current!;
+    const current = zoomTransform(viewport);
+    const from = panTargetRef.current ?? current;
+    const scale = from.k / current.k;
+    const box = boundingBox(target);
+    const origin = contentRef.current!.getBoundingClientRect();
+    const node = {
+      x: from.x + (box.x - origin.left) * scale,
+      y: from.y + (box.y - origin.top) * scale,
+      width: box.width * scale,
+      height: box.height * scale,
+    };
+    const insetRight = overlayInset(viewport, overlayRef?.current ?? null);
+    const pan =
+      panIntoView(node, viewFrame(viewport, toolbar, insetRight)) ??
+      panIntoView(node, viewFrame(viewport, toolbar));
+    if (pan && (pan.x || pan.y)) {
+      autoFitRef.current = false;
+      const panned = from.translate(pan.x / from.k, pan.y / from.k);
+      zoomRef.current!.transform(animateToward(panTargetRef, panned), panned);
+    }
+  };
+
   return (
-    <div className={styles.treeCanvas}>
-      <div ref={viewportRef} className={styles.viewport}>
+    <div className={styles.treeCanvas} onScroll={undoScroll}>
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- it only watches focus rising from the tree's nodes */}
+      <div ref={viewportRef} className={styles.viewport} onFocus={followFocus}>
         <div ref={contentRef} className={styles.content}>
           {children}
         </div>

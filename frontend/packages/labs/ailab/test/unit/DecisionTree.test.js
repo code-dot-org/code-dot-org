@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {act, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 
@@ -44,6 +44,16 @@ function renderTrainedTree() {
 
 function zoomToPathButton() {
   return screen.getByRole('button', {name: 'Zoom to your path'});
+}
+
+function tabStops() {
+  return screen.getAllByRole('treeitem').filter(item => item.tabIndex === 0);
+}
+
+function focusRoot() {
+  const [root] = screen.getAllByRole('treeitem');
+  act(() => root.focus());
+  return root;
 }
 
 function slotPosition(node) {
@@ -114,5 +124,62 @@ describe('DecisionTree', () => {
     expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
       marked.slice(1),
     );
+  });
+
+  it('is one tab stop, on the root, in a tree named by its header', () => {
+    const tree = screen.getByRole('tree', {name: "Your model's decision tree"});
+
+    expect(tabStops()).toHaveLength(1);
+    expect(tabStops()[0].getAttribute('aria-level')).toBe('1');
+    expect(tree.contains(tabStops()[0])).toBe(true);
+  });
+
+  it('places each node in the tree by level and branch', () => {
+    const [root, firstChild] = screen.getAllByRole('treeitem');
+
+    expect(root.getAttribute('aria-setsize')).toBe('1');
+    expect(firstChild.getAttribute('aria-level')).toBe('2');
+    expect(firstChild.getAttribute('aria-posinset')).toBe('1');
+    expect(firstChild.getAttribute('aria-setsize')).toBe('2');
+  });
+
+  it('moves focus and the tab stop down to a child and back up', () => {
+    const root = focusRoot();
+
+    fireEvent.keyDown(root, {key: 'ArrowDown'});
+    const child = document.activeElement;
+
+    expect(child.getAttribute('aria-level')).toBe('2');
+    expect(tabStops()).toEqual([child]);
+
+    fireEvent.keyDown(child, {key: 'ArrowUp'});
+
+    expect(document.activeElement).toBe(root);
+    expect(tabStops()).toEqual([root]);
+  });
+
+  it('keeps an arrow at an edge from scrolling the page', () => {
+    const root = focusRoot();
+
+    expect(fireEvent.keyDown(root, {key: 'ArrowUp'})).toBe(false);
+    expect(document.activeElement).toBe(root);
+  });
+
+  it('leaves arrows with a modifier to the browser', () => {
+    const root = focusRoot();
+
+    expect(fireEvent.keyDown(root, {key: 'ArrowDown', altKey: true})).toBe(
+      true,
+    );
+    expect(document.activeElement).toBe(root);
+  });
+
+  it('makes a node the tab stop when it takes focus another way', () => {
+    const items = screen.getAllByRole('treeitem');
+    const last = items[items.length - 1];
+
+    act(() => last.focus());
+
+    expect(tabStops()).toEqual([last]);
   });
 });

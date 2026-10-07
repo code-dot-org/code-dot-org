@@ -1,9 +1,17 @@
 import classNames from 'classnames';
-import {type CSSProperties, type ReactNode, useMemo, useRef} from 'react';
+import {
+  type CSSProperties,
+  type KeyboardEvent,
+  type ReactNode,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
+  DISPLAY_TREE_ROOT_ID,
   formatNumber,
   thresholdText,
   type DisplayTreeBranch,
@@ -16,6 +24,7 @@ import {
   TREE_NODE_HEIGHT,
   TREE_NODE_WIDTH,
 } from '../helpers/displayTreeLayout';
+import {getNodeForKey} from '../helpers/displayTreeNavigation';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {
@@ -70,10 +79,35 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
+  const nodeElements = useRef(new Map<string, HTMLElement>());
 
   if (!tree || !layout) {
     return null;
   }
+
+  const tabStopId = layout.nodes.some(placed => placed.id === focusedId)
+    ? focusedId
+    : DISPLAY_TREE_ROOT_ID;
+
+  const trackNodeElement = (id: string, element: HTMLElement | null) => {
+    if (element) {
+      nodeElements.current.set(id, element);
+    } else {
+      nodeElements.current.delete(id);
+    }
+  };
+
+  const moveFocus = (event: KeyboardEvent, from: PlacedTreeNode) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
+      return;
+    }
+    const to = getNodeForKey(layout.nodes, from, event.key);
+    if (to) {
+      event.preventDefault();
+      nodeElements.current.get(to.id)?.focus({preventScroll: true});
+    }
+  };
 
   const valueText = (value: string): string =>
     String(getLocalizedValue(value, datasetId));
@@ -113,8 +147,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           overlayRef={overlayRef}
         >
           <div
-            role="img"
-            aria-label="Diagram of your model's decision tree"
+            role="tree"
+            aria-label="Your model's decision tree"
             className={styles.canvas}
             style={{
               ...canvasVariables,
@@ -146,9 +180,19 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               const branch = placed.branch && branchText(placed.branch);
               const kind =
                 placed.node.type === 'answer' ? styles.answer : styles.question;
+              const siblings = placed.parent?.children ?? [placed];
               return (
                 <div
                   key={placed.id}
+                  ref={element => trackNodeElement(placed.id, element)}
+                  // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
+                  role="treeitem"
+                  aria-level={placed.depth + 1}
+                  aria-setsize={siblings.length}
+                  aria-posinset={siblings.indexOf(placed) + 1}
+                  tabIndex={placed.id === tabStopId ? 0 : -1}
+                  onFocus={() => setFocusedId(placed.id)}
+                  onKeyDown={event => moveFocus(event, placed)}
                   className={styles.nodeSlot}
                   style={{left: placed.x, top: placed.y}}
                 >

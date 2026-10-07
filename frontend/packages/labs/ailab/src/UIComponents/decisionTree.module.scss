@@ -1,7 +1,11 @@
 @use '../sharedMixins' as mixins;
 
+$path-ring-width: 3px;
 $path-color: var(--border-selected-primary);
 $off-path-color: var(--background-neutral-septenary);
+$focus-ring-width: 2px;
+$focus-color: var(--border-focused-primary);
+$node-radius: 6px;
 $overlay-float-min-width: 600px;
 
 .decisionTree {
@@ -55,6 +59,12 @@ $overlay-float-min-width: 600px;
   position: absolute;
   width: var(--tree-node-width);
   height: var(--tree-node-height);
+  border-radius: $node-radius;
+
+  &:focus-visible {
+    outline: $focus-ring-width solid $focus-color;
+    outline-offset: $path-ring-width + 2px;
+  }
 }
 
 .node {
@@ -67,7 +77,7 @@ $overlay-float-min-width: 600px;
   padding: 0 8px;
   border-width: 1.5px;
   border-style: solid;
-  border-radius: 6px;
+  border-radius: $node-radius;
   font-size: 13px;
   line-height: 1.2;
   text-align: center;
@@ -119,6 +129,6 @@ $overlay-float-min-width: 600px;
 @media (forced-colors: active) {
   .pathNode,
   .pathBranch {
-    outline: 3px solid;
+    outline: $path-ring-width solid;
   }
 }

@@ -32,7 +32,7 @@ function resizeViewport(width, height) {
   act(() => resizeCallbacks.forEach(callback => callback([])));
 }
 
-function renderCanvas(props = {}) {
+function renderCanvas(props = {}, children = 'tree') {
   render(
     createElement(
       ThemeProvider,
@@ -40,7 +40,7 @@ function renderCanvas(props = {}) {
       createElement(
         TreeCanvas,
         {contentWidth: 752, contentHeight: 312, ...props},
-        'tree',
+        children,
       ),
     ),
   );
@@ -55,6 +55,41 @@ function overlayRef(width, top = 0) {
     bottom: top + 200,
   });
   return {current: overlay};
+}
+
+function mockBoxes(boxes) {
+  vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(
+    function () {
+      const {left, top, width = 0, height = 0} = boxes.get(this);
+      return {
+        left,
+        top,
+        width,
+        height,
+        right: left + width,
+        bottom: top + height,
+      };
+    },
+  );
+}
+
+// Fitted, the content's origin sits at (72, 102) at scale 0.5, in a frame from x = 72 to 448.
+function renderNodesAt(xs) {
+  renderCanvas(
+    {},
+    xs.map(x => createElement('button', {key: x}, `node at ${x}`)),
+  );
+  resizeViewport(472, 360);
+  const nodes = xs.map(x => screen.getByText(`node at ${x}`));
+  const boxes = new Map(
+    nodes.map((node, index) => [
+      node,
+      {left: 72 + xs[index] / 2, top: 202, width: 80, height: 20},
+    ]),
+  );
+  boxes.set(nodes[0].parentElement, {left: 72, top: 102});
+  mockBoxes(boxes);
+  return nodes;
 }
 
 function button(name) {
@@ -208,6 +243,75 @@ describe('TreeCanvas', () => {
     );
     expect(button('Zoom in').parentElement.hasAttribute('tabindex')).toBe(
       false,
+    );
+  });
+
+  it('pans a node that takes keyboard focus into view', async () => {
+    const [node] = renderNodesAt([800]);
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-32px, 102px) scale(0.5)',
+      ),
+    );
+  });
+
+  it('leaves the view alone when focus shows no ring, as after a click', async () => {
+    const [node] = renderNodesAt([800]);
+    const matches = Element.prototype.matches;
+    vi.spyOn(Element.prototype, 'matches').mockImplementation(
+      function (selector) {
+        return selector === ':focus-visible'
+          ? false
+          : matches.call(this, selector);
+      },
+    );
+
+    act(() => node.focus());
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    expect(node.parentElement.style.transform).toBe(
+      'translate(72px, 102px) scale(0.5)',
+    );
+  });
+
+  it('pans from where the view is heading when focus moves again', async () => {
+    const [far, near] = renderNodesAt([800, 100]);
+
+    act(() => far.focus());
+    act(() => near.focus());
+
+    await vi.waitFor(() =>
+      expect(near.parentElement.style.transform).toBe(
+        'translate(22px, 102px) scale(0.5)',
+      ),
+    );
+  });
+
+  it('pans a label hanging off a node into view with it', async () => {
+    renderCanvas(
+      {},
+      createElement('button', {}, createElement('span', {}, 'label')),
+    );
+    resizeViewport(472, 360);
+    const label = screen.getByText('label');
+    const node = label.parentElement;
+    mockBoxes(
+      new Map([
+        [node, {left: 122, top: 40, width: 80, height: 20}],
+        [label, {left: 142, top: 12, width: 40, height: 9}],
+        [node.parentElement, {left: 72, top: 102}],
+      ]),
+    );
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(72px, 114px) scale(0.5)',
+      ),
     );
   });
 });
