@@ -35,11 +35,11 @@ class FreeResponseQuestion < QuizQuestion
     {question_title: params[:questionTitle], description: params[:description]}
   end
 
-  def editor_content_json
-    student_content_json
+  def builder_content_json
+    attempt_content_json
   end
 
-  def student_content_json
+  def attempt_content_json
     {questionTitle: content['question_title'], description: content['description']}
   end
 

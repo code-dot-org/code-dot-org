@@ -102,7 +102,7 @@ class Quiz < Level
         id: question.id,
         type: question.type,
         questionName: question.name,
-        **question.student_content_json,
+        **question.attempt_content_json,
         page: placement.page,
       }
     end

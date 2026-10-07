@@ -59,7 +59,7 @@ module QuizQuestionSerialization
       id: question.id,
       type: question.type,
       questionName: question.name,
-      **question.editor_content_json,
+      **question.builder_content_json,
       explanation: question.explanation,
       standards: question.standards.map(&:summarize_for_lesson_edit),
       attachedToOtherQuizzes:

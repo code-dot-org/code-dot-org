@@ -19,11 +19,11 @@ class FreeResponseQuestionTest < ActiveSupport::TestCase
     assert build(:free_response_question, content: {question_title: 'Why?', description: ''}).valid?
   end
 
-  test "editor and student json carry questionTitle and description" do
+  test "builder and attempt json carry questionTitle and description" do
     question = create(:free_response_question)
     expected = {questionTitle: question.content['question_title'], description: question.content['description']}
-    assert_equal expected, question.editor_content_json
-    assert_equal expected, question.student_content_json
+    assert_equal expected, question.builder_content_json
+    assert_equal expected, question.attempt_content_json
   end
 
   test "description must be a string" do

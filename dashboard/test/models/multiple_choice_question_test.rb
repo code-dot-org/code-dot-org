@@ -25,10 +25,10 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     assert_equal({score: 0, max_score: 1}, question.grade({}))
   end
 
-  test "student_content_json omits the answer key" do
+  test "attempt_content_json omits the answer key" do
     question = create(:multiple_choice_question)
-    refute question.student_content_json.key?(:correctChoiceId)
-    assert_equal 'b', question.editor_content_json[:correctChoiceId]
+    refute question.attempt_content_json.key?(:correctChoiceId)
+    assert_equal 'b', question.builder_content_json[:correctChoiceId]
   end
 
   test "requires a non-blank question title" do

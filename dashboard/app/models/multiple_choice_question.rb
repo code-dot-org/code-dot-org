@@ -51,11 +51,11 @@ class MultipleChoiceQuestion < QuizQuestion
     }
   end
 
-  def editor_content_json
-    student_content_json.merge(correctChoiceId: content['correct_choice_id'])
+  def builder_content_json
+    attempt_content_json.merge(correctChoiceId: content['correct_choice_id'])
   end
 
-  def student_content_json
+  def attempt_content_json
     {questionTitle: content['question_title'], choices: content['choices']}
   end
 

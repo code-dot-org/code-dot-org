@@ -130,13 +130,13 @@ class QuizQuestion < ApplicationRecord
     raise ArgumentError, "#{name} does not accept editor params"
   end
 
-  # Subtype-specific fields for the editor, answer key included.
-  def editor_content_json
+  # Subtype-specific fields for the quiz builder, answer key included.
+  def builder_content_json
     {}
   end
 
-  # Subtype-specific fields for students; must never include the answer key.
-  def student_content_json
+  # Subtype-specific fields for a student attempt; must never include the answer key.
+  def attempt_content_json
     {}
   end
 
