@@ -48,7 +48,7 @@
       "title": "**Set the scene.**",
       "items": [
         {
-          "text": "Drag **set background** onto the dotted outline and pick your background.",
+          "text": "Drag **set background** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "gamelab_setBackgroundImageAs",
@@ -63,7 +63,7 @@
         }
       ]
     },
-    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline and pick your background.",
+    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

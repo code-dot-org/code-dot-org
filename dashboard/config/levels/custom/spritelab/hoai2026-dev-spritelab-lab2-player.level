@@ -110,7 +110,7 @@
       "title": "**Make your character the player.**",
       "items": [
         {
-          "text": "Drag **set as player** onto the dotted outline under **when run** and pick your character.",
+          "text": "Drag **set as player** onto the dotted outline under **when run**.",
           "check": {
             "kind": "block",
             "type": "spritelab2_setAsPlatformPlayer",

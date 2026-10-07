@@ -48,7 +48,7 @@
       "title": "**Set them walking.**",
       "items": [
         {
-          "text": "Drag **begins patrolling** onto the dotted outline and pick your second character.",
+          "text": "Drag **begins patrolling** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "gamelab_addBehaviorSimple",
@@ -64,7 +64,7 @@
         }
       ]
     },
-    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline and pick your second character. Click **Play**.",
+    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline. Click **Play**.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

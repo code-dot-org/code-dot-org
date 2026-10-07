@@ -48,7 +48,7 @@
       "title": "**Add the background to your game.**",
       "items": [
         {
-          "text": "Drag **set background** onto the dotted outline and pick your new background.",
+          "text": "Drag **set background** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "gamelab_setBackgroundImageAs",
@@ -63,7 +63,7 @@
         }
       ]
     },
-    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline and pick your new background.",
+    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

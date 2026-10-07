@@ -48,7 +48,7 @@
       "title": "**Add them on the right.**",
       "items": [
         {
-          "text": "Drag **make new sprite** with position **right** onto the dotted outline.",
+          "text": "Drag **make new sprite** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "spritelab2_makeSpriteAtPosition",
