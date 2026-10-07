@@ -15,10 +15,12 @@ export const TREE_ROW_GAP = 64;
 export interface PlacedTreeNode {
   id: string;
   node: DisplayTreeNode;
+  depth: number;
   // Top-left corner.
   x: number;
   y: number;
   parent?: PlacedTreeNode;
+  children: PlacedTreeNode[];
   branch?: DisplayTreeBranch;
 }
 
@@ -70,9 +72,11 @@ export function layoutDisplayTree(
     const placed: PlacedTreeNode = {
       id,
       node,
+      depth,
       x: 0,
       y: depth * (TREE_NODE_HEIGHT + rowGap),
       parent,
+      children: [],
       branch,
     };
     nodes.push(placed);
@@ -91,6 +95,7 @@ export function layoutDisplayTree(
           childBranch,
         ),
       );
+      placed.children = children;
       placed.x = (children[0].x + children[children.length - 1].x) / 2;
     }
     return placed;

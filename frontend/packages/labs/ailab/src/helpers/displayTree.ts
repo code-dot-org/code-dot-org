@@ -57,14 +57,19 @@ export function formatNumber(value: number): string {
   return String(Number(value.toFixed(2)));
 }
 
-const THRESHOLD_SIGNS = {lessThan: '<', atLeast: '≥'};
+export const THRESHOLD_SIGNS = {lessThan: '<', atLeast: '≥'};
 
 // Unrounded, so the threshold stays on the correct side of the student's input.
+export function thresholdValue(
+  branch: Extract<DisplayTreeBranch, {threshold: number}>,
+): string {
+  return String(Number(branch.threshold.toPrecision(12)));
+}
+
 export function thresholdText(
   branch: Extract<DisplayTreeBranch, {threshold: number}>,
 ): string {
-  const threshold = Number(branch.threshold.toPrecision(12));
-  return `${THRESHOLD_SIGNS[branch.kind]} ${threshold}`;
+  return `${THRESHOLD_SIGNS[branch.kind]} ${thresholdValue(branch)}`;
 }
 
 // The `name` in ml-cart's toJSON().
