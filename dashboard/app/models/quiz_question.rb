@@ -125,8 +125,8 @@ class QuizQuestion < ApplicationRecord
     false
   end
 
-  # Builds `content` from editor request params.
-  def self.content_from_params(_params)
+  # Builds `content` from question builder request params.
+  def self.content_from_builder_params(builder_params)
     raise ArgumentError, "#{name} does not accept editor params"
   end
 

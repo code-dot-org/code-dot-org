@@ -20,7 +20,7 @@ class QuizQuestionPlacementsController < ApplicationController
       question = question_class.create!(
         key: SecureRandom.uuid,
         name: quiz_question_params[:questionName],
-        content: question_class.content_from_params(quiz_question_params),
+        content: question_class.content_from_builder_params(quiz_question_params),
         explanation: quiz_question_params[:explanation]
       )
       question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])

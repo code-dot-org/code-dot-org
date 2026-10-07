@@ -83,7 +83,7 @@ class QuizQuestionsController < ApplicationController
     ActiveRecord::Base.transaction(requires_new: true) do
       target.update!(
         name: quiz_question_params[:questionName],
-        content: question.class.content_from_params(quiz_question_params),
+        content: question.class.content_from_builder_params(quiz_question_params),
         explanation: quiz_question_params[:explanation]
       )
 

@@ -43,7 +43,7 @@ class MultipleChoiceQuestion < QuizQuestion
     {score: correct ? 1 : 0, max_score: 1}
   end
 
-  def self.content_from_params(params)
+  def self.content_from_builder_params(params)
     {
       question_title: params[:questionTitle],
       choices: (params[:choices] || []).map(&:to_h),
