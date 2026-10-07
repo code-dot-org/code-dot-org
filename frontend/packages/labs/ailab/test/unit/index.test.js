@@ -1,9 +1,11 @@
 import I18n from '../../src/i18n';
 import {loadLevel, startOver} from '../../src/index';
 import {
+  setAccuracyCheckExamples,
   setCurrentPanel,
   setHistoricResult,
   setLabelColumn,
+  setTrainedModel,
 } from '../../src/redux';
 import {store} from '../../src/store';
 
@@ -18,6 +20,8 @@ describe('startOver', () => {
     loadLevel(undefined);
     store.dispatch(setLabelColumn('animal'));
     store.dispatch(setCurrentPanel('results'));
+    store.dispatch(setAccuracyCheckExamples([[4]]));
+    store.dispatch(setTrainedModel({}));
     store.dispatch(setHistoricResult('animal', ['legs'], '80.00'));
   });
 
@@ -34,6 +38,8 @@ describe('startOver', () => {
 
     expect(store.getState().labelColumn).toBeUndefined();
     expect(store.getState().currentPanel).toBe('datasetView');
+    expect(store.getState().accuracyCheckExamples).toEqual([]);
+    expect(store.getState().trainedModel).toBeUndefined();
   });
 
   test("reloads the level's mode", () => {
