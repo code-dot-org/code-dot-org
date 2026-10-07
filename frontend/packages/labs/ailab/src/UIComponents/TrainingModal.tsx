@@ -51,7 +51,7 @@ const TrainingModal = () => {
       className={styles.dialog}
       aria-labelledby={TITLE_ID}
       onClose={closeModal}
-      closeLabel="Close"
+      closeLabel={isInProgress ? 'Cancel' : 'Close'}
     >
       <div className={styles.titleRow}>
         <Typography
