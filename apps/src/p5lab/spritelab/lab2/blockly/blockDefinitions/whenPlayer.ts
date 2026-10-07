@@ -16,7 +16,7 @@ export const WHEN_PLAYER_OPTIONS: [string, string][] = [
   ['walks', 'walk'],
   ['jumps', 'jump'],
   ['lands', 'land'],
-  ['bumps a wall', 'bump'],
+  ['bumps', 'bump'],
 ];
 
 const definition: BlockJson = {
