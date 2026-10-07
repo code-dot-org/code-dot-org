@@ -34,16 +34,8 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   # --- index ---
 
-  # index's default (blank search) mode browses the N most recent
-  # MultipleChoiceQuestion rows system-wide, not scoped to this test's own
-  # data - so asserting on specific rows this way is only reliable if
-  # nothing else in the table can outrank them within the limit. Tagging
-  # this test's own questions with a Standard created fresh here, then
-  # filtering by it (same mechanism "index narrows by standard..." already
-  # relies on, via a real JOIN/WHERE - not fulltext, so it isn't subject to
-  # MySQL's separate "fulltext can't see same-transaction inserts"
-  # limitation) guarantees the result set is only ever this test's own
-  # rows, regardless of what else exists.
+  # A blank search returns the newest questions table-wide; filtering by a
+  # fresh Standard limits the results to this test's own rows.
   test "index marks bank questions attached: true/false relative to this quiz" do
     standard = create(:standard)
     @question.standards << standard
@@ -118,13 +110,8 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       count
     end
 
-    # Warms up the session before either measurement - the very first
-    # request in a signed-in test does one-time auth/session queries
-    # (users, experiments, lti_user_identities, user_permissions) that a
-    # later request in the same session doesn't repeat. Without this, the
-    # "small" measurement below would include that overhead and the "large"
-    # one wouldn't, comparing cold-request cost against the index
-    # optimization itself.
+    # The first signed-in request runs one-time session queries; warm up so
+    # neither measurement below includes them.
     count_queries.call
 
     build_questions.call(2)
@@ -153,17 +140,13 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute_includes ids, @question.id
   end
 
-  # quizLevelId missing falls into the same "no results" bucket as an
-  # unresolvable course/unit id below, rather than a hard error - nothing
-  # yet browses the bank outside a specific quiz's builder, so there's no
-  # meaningful result set to return either way.
   test "index returns [] when quizLevelId is missing - nothing yet browses the bank outside a specific quiz's builder" do
     get :index, params: {}
     assert_response :success
     assert_equal [], JSON.parse(response.body)
   end
 
-  # --- course_unit_search (level-independent - top-level route, no :level_id) ---
+  # --- course_unit_search ---
 
   test "course_unit_search returns [] for a query shorter than MIN_WORD_LENGTH" do
     get :course_unit_search, params: {query: 'ab'}
@@ -194,11 +177,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   # --- show ---
 
-  # Regression test for a review finding on the level-nested predecessor of
-  # this controller: show used to be @level.questions.find(params[:id]),
-  # 404ing for a real question that just wasn't attached to whichever quiz
-  # happened to be in the URL. show is level-independent now - any bank
-  # question is reachable by its own id, attached anywhere or not.
+  # show once 404'd for a question not placed on the quiz in the URL.
   test "show works for a bank question not attached to any quiz" do
     unattached = create(:multiple_choice_question)
 
@@ -283,6 +262,16 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
+  test "update cannot change a question's type" do
+    put :update, params: {
+      id: @question.id, quizLevelId: @quiz.id, type: 'FreeResponseQuestion',
+      questionName: 'Still MC', questionTitle: 'ignored'
+    }
+
+    assert_response :bad_request
+    assert_instance_of MultipleChoiceQuestion, @question.reload
+  end
+
   # --- update: standards ---
 
   test "update preserves existing standards when the field is not supplied" do
@@ -330,9 +319,6 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal [], @question.reload.standards
   end
 
-  # quizLevelId is optional - editing a question with no particular quiz
-  # in view (e.g. a future standalone bank-management screen) still works,
-  # touching no placement.
   test "update edits the question in place when no quizLevelId is given" do
     unattached = create(:multiple_choice_question)
 
@@ -407,15 +393,5 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     forked = QuizQuestion.find(JSON.parse(response.body)['id'])
     assert_instance_of FreeResponseQuestion, forked
     assert_equal question, forked.fork_parent
-  end
-
-  test "update cannot change a question's type" do
-    put :update, params: {
-      id: @question.id, quizLevelId: @quiz.id, type: 'FreeResponseQuestion',
-      questionName: 'Still MC', questionTitle: 'ignored'
-    }
-
-    assert_response :bad_request
-    assert_instance_of MultipleChoiceQuestion, @question.reload
   end
 end
