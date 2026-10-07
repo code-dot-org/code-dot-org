@@ -41,8 +41,8 @@ const SentenceTag = ({
   return (
     <Tooltip title={tooltip} placement="top" describeChild>
       <Typography
-        component="button"
-        type="button"
+        component="span"
+        tabIndex={0}
         variant="body4"
         className={className}
       >
