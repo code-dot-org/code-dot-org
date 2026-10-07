@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Make them talk.** Drag a **say** block onto the dotted outline under **make new sprite**. Type what they say. Click **Play**."
+        "text": "**Make them talk.** Drag a **say** block onto the dotted outline. Type what they say. Click **Play**."
       },
       {
         "text": "**They're alive!** Click **Continue**.",
@@ -48,7 +48,7 @@
       "title": "**Make them talk.**",
       "items": [
         {
-          "text": "Drag a **say** block onto the dotted outline under **make new sprite**.",
+          "text": "Drag a **say** block onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "gamelab_spriteSay",

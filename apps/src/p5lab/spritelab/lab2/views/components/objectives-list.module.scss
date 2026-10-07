@@ -8,11 +8,16 @@ $mark-size: 22px;
   gap: 8px;
 }
 
-.title,
-.text {
-  p {
-    margin: 0;
-  }
+// Sizes sit on the paragraphs: dashboard's scaffolds style `p` at 13px.
+.title p,
+.text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.title p {
+  font-size: 18px;
 }
 
 .list {

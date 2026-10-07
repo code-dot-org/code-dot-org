@@ -48,7 +48,7 @@
       "title": "**Talk later.**",
       "items": [
         {
-          "text": "Drag a **say** block onto the dotted outline under **at 6 seconds**.",
+          "text": "Drag a **say** block onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "gamelab_spriteSay",

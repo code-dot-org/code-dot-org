@@ -52,7 +52,7 @@
       "title": "**Go and meet them.**",
       "items": [
         {
-          "text": "Drag a **say** block or **restart scene** onto the dotted outline under **when touches**.",
+          "text": "Drag a **say** block or **restart scene** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": [

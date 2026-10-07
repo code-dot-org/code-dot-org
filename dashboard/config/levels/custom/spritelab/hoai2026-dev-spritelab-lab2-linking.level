@@ -43,7 +43,7 @@
       "title": "**Link your scenes.**",
       "items": [
         {
-          "text": "Drag **go to scene** onto the dotted outline under **at 9 seconds**.",
+          "text": "Drag **go to scene** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "spritelab2_goToScene",
