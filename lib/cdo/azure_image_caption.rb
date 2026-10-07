@@ -1,10 +1,9 @@
 require 'net/http'
 require 'json'
+require 'openssl'
 
 #
 # Use Microsoft Azure AI Vision to caption an image in one sentence.
-#
-# API Docs:
 # https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-analyze-image-40
 #
 class AzureImageCaption
@@ -19,8 +18,7 @@ class AzureImageCaption
     '&language=en' \
     '&model-version=latest'
 
-  # The student already has theater's description, so a caption is not worth
-  # waiting long for.
+  # A caption is a supplement, so it is not worth waiting long for.
   OPEN_TIMEOUT = 2
   READ_TIMEOUT = 5
 
@@ -29,19 +27,16 @@ class AzureImageCaption
     @api_key = api_key
   end
 
-  #
   # @param [String] image_data - binary image data to caption
   # @return [Hash, nil] the captionResult, e.g.
   #   {"text" => "a red circle on a white background", "confidence" => 0.7421},
-  #   or nil when Azure returned no caption for the image.
+  #   or nil when Azure returned no caption.
   # @raise [AzureImageCaption::RequestFailed] when the request is not successful.
-  #
   def caption_image(image_data)
     uri = URI(@endpoint + API_PATH)
 
     request = Net::HTTP::Post.new(uri.request_uri)
-    # This endpoint wants the raw bytes. Content Safety, next door, wants them
-    # base64-encoded inside a JSON envelope.
+    # Raw bytes here; Content Safety, next door, takes base64 in a JSON envelope.
     request['Content-Type'] = 'application/octet-stream'
     request['Ocp-Apim-Subscription-Key'] = @api_key
     request.body = image_data
@@ -61,13 +56,15 @@ class AzureImageCaption
     JSON.parse(response.body)['captionResult']
   rescue JSON::ParserError => exception
     raise RequestFailed.new("Unparseable Azure AI Vision response: #{exception.message}")
+  # Transport failures arrive as plain StandardErrors. Unwrapped they slip past
+  # ImageCaption's rescue and turn an Azure outage into a 500.
+  rescue Net::OpenTimeout, Net::ReadTimeout, SocketError, SystemCallError, OpenSSL::SSL::SSLError => exception
+    raise RequestFailed.new("Azure AI Vision request failed: #{exception.class}: #{exception.message}")
   end
 
-  #
   # Extract error information from a failed Azure response.
   # @param [Net::HTTPResponse] response
   # @return [String]
-  #
   private def error_details(response)
     result = JSON.parse(response.body)
     "Request to Azure AI Vision failed with status #{response.code}: " \

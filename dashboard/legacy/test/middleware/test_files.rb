@@ -976,7 +976,9 @@ class FilesTest < FilesApiTestBase
 
   # --- POST /v3/images/caption ---
 
+  # The throttle's cache outlives a test, so each test below states its answer.
   def test_caption_image_success
+    Cdo::Throttle.stubs(:throttle).returns(false)
     ImageCaption.expects(:caption_image).with('fake-png-bytes').returns('a red circle')
 
     header 'CONTENT_TYPE', 'image/png'
@@ -987,9 +989,9 @@ class FilesTest < FilesApiTestBase
   end
 
   def test_caption_image_answers_null_when_there_is_no_caption
-    # Captioning off, a low-confidence guess, or Azure unreachable all land
-    # here. None of them is an error: the student still has the description
-    # theater built from their own code.
+    # Captioning off, a low-confidence guess and Azure unreachable all land here,
+    # and none of them is an error: the student still has theater's description.
+    Cdo::Throttle.stubs(:throttle).returns(false)
     ImageCaption.expects(:caption_image).returns(nil)
 
     header 'CONTENT_TYPE', 'image/png'
@@ -1000,6 +1002,7 @@ class FilesTest < FilesApiTestBase
   end
 
   def test_caption_image_empty_body_returns_400
+    Cdo::Throttle.stubs(:throttle).returns(false)
     ImageCaption.expects(:caption_image).never
 
     header 'CONTENT_TYPE', 'image/png'
@@ -1007,6 +1010,33 @@ class FilesTest < FilesApiTestBase
 
     assert_equal 400, last_response.status
     assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
+  end
+
+  def test_caption_image_oversized_body_returns_413
+    # Read one byte past the ceiling and no further, so nothing oversized is
+    # buffered whole.
+    Cdo::Throttle.stubs(:throttle).returns(false)
+    ImageCaption.stub_const(:MAX_CAPTION_SIZE, 10) do
+      ImageCaption.expects(:caption_image).never
+
+      header 'CONTENT_TYPE', 'image/png'
+      post '/v3/images/caption', 'x' * 11
+
+      assert_equal 413, last_response.status
+      assert_equal({'error' => 'Image too large to caption.'}, JSON.parse(last_response.body))
+    end
+  end
+
+  def test_caption_image_throttled_returns_429
+    # Every miss is a paid Azure call, so a throttled client never reaches one.
+    Cdo::Throttle.stubs(:throttle).returns(true)
+    ImageCaption.expects(:caption_image).never
+
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/caption', 'fake-png-bytes'
+
+    assert_equal 429, last_response.status
+    assert_equal({'error' => 'Too many caption requests.'}, JSON.parse(last_response.body))
   end
 
   # --- GET /v3/images/caption/enabled ---
@@ -1019,8 +1049,7 @@ class FilesTest < FilesApiTestBase
   end
 
   def test_caption_enabled_reports_the_flag_when_off
-    # The page asks before it sends anything, so a false here is what keeps a
-    # student's rendered work inside the browser.
+    # The page asks before it sends, so a false here keeps the work in the browser.
     ImageCaption.expects(:enabled?).returns(false)
     get '/v3/images/caption/enabled'
     assert successful?

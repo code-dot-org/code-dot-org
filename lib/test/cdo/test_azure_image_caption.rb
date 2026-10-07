@@ -29,8 +29,7 @@ class AzureImageCaptionTest < Minitest::Test
   end
 
   def test_returns_nil_when_azure_sends_no_caption
-    # A success with no captionResult is a picture Azure had nothing to say
-    # about, which is not an error.
+    # No captionResult means Azure had nothing to say, which is not an error.
     stub_azure({'modelVersion' => '2023-10-01'}.to_json)
     assert_nil @captioner.caption_image(@image_data)
   end
@@ -51,6 +50,23 @@ class AzureImageCaptionTest < Minitest::Test
     end
   end
 
+  def test_wraps_transport_failures_so_the_caller_can_rescue_them
+    # Unwrapped, these would escape ImageCaption's rescue and become a 500.
+    [
+      Net::OpenTimeout.new,
+      Net::ReadTimeout.new,
+      SocketError.new('getaddrinfo: Name or service not known'),
+      Errno::ECONNREFUSED.new,
+      OpenSSL::SSL::SSLError.new('certificate verify failed'),
+    ].each do |transport_error|
+      Net::HTTP.stubs(:start).raises(transport_error)
+      error = assert_raises AzureImageCaption::RequestFailed, "leaked #{transport_error.class}" do
+        @captioner.caption_image(@image_data)
+      end
+      assert_includes error.message, transport_error.class.name
+    end
+  end
+
   def test_error_message_survives_an_unparseable_error_body
     stub_azure_error(503, 'Service Unavailable')
     error = assert_raises AzureImageCaption::RequestFailed do
@@ -63,8 +79,7 @@ class AzureImageCaptionTest < Minitest::Test
 
   def test_sends_raw_image_bytes_with_the_subscription_key
     request = captured_request
-    # Raw bytes, not a base64 JSON envelope: this endpoint differs from Content
-    # Safety on exactly that point.
+    # Raw bytes, not a base64 JSON envelope like Content Safety.
     assert_equal 'application/octet-stream', request['Content-Type']
     assert_equal FAKE_API_KEY, request['Ocp-Apim-Subscription-Key']
     assert_equal @image_data, request.body
@@ -86,8 +101,7 @@ class AzureImageCaptionTest < Minitest::Test
     response = success_response(AZURE_RESPONSE.to_json)
     http = mock
     http.stubs(:request).returns(response)
-    # The student already has theater's description, so this request must not
-    # be able to hang.
+    # A caption is a supplement, so this request must not be able to hang.
     Net::HTTP.expects(:start).with do |_host, _port, options|
       options[:open_timeout] == AzureImageCaption::OPEN_TIMEOUT &&
         options[:read_timeout] == AzureImageCaption::READ_TIMEOUT
@@ -123,8 +137,7 @@ class AzureImageCaptionTest < Minitest::Test
     stub_http(response)
   end
 
-  # Make one captioning call against a stubbed Azure and hand back the request
-  # we would have sent, so a test can assert on it field by field.
+  # Run one stubbed call and hand back the request we would have sent.
   private def captured_request
     response = success_response(AZURE_RESPONSE.to_json)
     captured = nil

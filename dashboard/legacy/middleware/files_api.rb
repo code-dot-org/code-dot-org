@@ -5,6 +5,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_caption'
+require 'cdo/throttle'
 require 'cdo/image_moderation'
 require 'cdo/safe_http'
 require 'net/http'
@@ -1213,8 +1214,8 @@ class FilesApi < Sinatra::Base
   #
   # GET /v3/images/caption/enabled
   #
-  # Whether captioning is on. The page asks before it posts, so with captioning
-  # off a student's rendered work never leaves the browser.
+  # The page asks before it posts, so with captioning off a student's work
+  # never leaves the browser.
   #
   get %r{/v3/images/caption/enabled$} do
     content_type :json
@@ -1225,18 +1226,38 @@ class FilesApi < Sinatra::Base
   #
   # POST /v3/images/caption
   #
-  # Caption an image with Azure AI Vision, for Python Lab's theater.
-  # A caption the service cannot produce comes back as null, and theater reads
-  # its own description of the scene instead.
+  # Caption an image with Azure AI Vision. A caption the service cannot produce
+  # comes back as null, and theater reads its own description instead.
   #
+  # Caption requests allowed per minute before a client is throttled. Schools put
+  # many students behind one address, so the per-IP number is far larger.
+  CAPTION_LIMIT_PER_MIN_USER = 20
+  CAPTION_LIMIT_PER_MIN_IP = 1000
+
   post %r{/v3/images/caption$} do
     content_type :json
     dont_cache
 
-    raw = request.body.read
-    if raw.empty?
+    # Anyone can reach this route and every miss costs an Azure call. Signed-in
+    # students count per user; everyone else per IP, which cannot be discarded
+    # the way a cookie can.
+    throttle_id = current_user_id
+    limit = throttle_id ? CAPTION_LIMIT_PER_MIN_USER : CAPTION_LIMIT_PER_MIN_IP
+    if Cdo::Throttle.throttle("image_caption/#{throttle_id || request.ip}", limit, 60)
+      status 429
+      return {error: 'Too many caption requests.'}.to_json
+    end
+
+    # nginx accepts bodies up to 4G, so reading it all would let one request fill
+    # a worker. One byte past our ceiling is enough to know it is too big.
+    raw = request.body.read(ImageCaption::MAX_CAPTION_SIZE + 1)
+    if raw.nil? || raw.empty?
       status 400
       return {error: 'No image data provided.'}.to_json
+    end
+    if raw.bytesize > ImageCaption::MAX_CAPTION_SIZE
+      status 413
+      return {error: 'Image too large to caption.'}.to_json
     end
 
     {caption: ImageCaption.caption_image(raw)}.to_json

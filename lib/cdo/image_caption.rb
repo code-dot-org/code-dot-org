@@ -11,22 +11,14 @@ require 'honeybadger/ruby'
 require 'observability/errors'
 
 #
-# Caption an image with Azure AI Vision, for Python Lab's theater.
-#
-# Theater already describes a scene exactly, from the draw calls the student
-# wrote. A caption adds a sentence of gist on top of that.
-#
-# Nothing here raises. Every failure returns nil, and theater reads its own
-# description instead.
+# Caption an image with Azure AI Vision, for Python Lab's theater. Nothing here
+# raises: every failure returns nil and theater reads its own description.
 #
 module ImageCaption
-  # Captioning sends a student's work to a third party, so it stays off until
-  # someone turns it on for an environment.
+  # Off until someone turns it on: this sends a student's work to a third party.
   CAPTIONS_ENABLED_DCDO_KEY = 'python_theater_captions_enabled'
-  # Below this, Azure is guessing. Tunable without a deploy, because the right
-  # floor is something to learn from real student work.
-  CONFIDENCE_FLOOR_DCDO_KEY = 'python_theater_caption_confidence_floor'
-  DEFAULT_CONFIDENCE_FLOOR = 0.5
+  # Below this, Azure is guessing. Microsoft's own doc example scores 0.489.
+  CONFIDENCE_FLOOR = 0.4
 
   # Azure AI Vision rejects anything larger.
   MAX_CAPTION_SIZE = 20 * 1024 * 1024
@@ -34,11 +26,9 @@ module ImageCaption
   CACHE_KEY_PREFIX = 'image_caption'
   CACHE_EXPIRY = 30.days
 
-  #
   # @param [String] image_data - raw image bytes to caption
   # @return [String, nil] the caption, or nil when captioning is off,
-  #   unavailable, or not confident enough to be worth reading aloud
-  #
+  #   unavailable, or not confident enough to read aloud
   def self.caption_image(image_data)
     return nil unless enabled?
     return nil unless supported_image?(image_data)
@@ -52,30 +42,24 @@ module ImageCaption
       return nil
     end
 
-    # Re-running an unchanged program renders the same bytes, so it earns the
-    # same caption. Students re-run constantly: this spares them the wait and
-    # us the bill.
+    # The cache holds Azure's text and confidence, so the floor is checked again.
     key = cache_key(image_data)
     cached = CDO.shared_cache&.read(key)
-    return cached if cached
+    return confident_text(cached) if cached
 
     result = AzureImageCaption.new(
       endpoint: CDO.azure_computer_vision_endpoint,
       api_key: CDO.azure_computer_vision_key
     ).caption_image(image_data)
 
-    caption = confident_text(result)
-    # Only captions are cached. Asking again about a picture Azure declined is
-    # cheap, and a cached refusal would outlive a change to the floor.
-    CDO.shared_cache&.write(key, caption, expires_in: CACHE_EXPIRY) if caption
-    caption
+    CDO.shared_cache&.write(key, result, expires_in: CACHE_EXPIRY) if result
+    confident_text(result)
   rescue AzureImageCaption::AzureError => exception
     Observability::Errors.report(exception)
     nil
   end
 
-  # Keyed by the image itself, so two students who drew the same picture share
-  # a caption and nothing about either student is in the key.
+  # Keyed by the image alone, so nothing about the student is in the key.
   def self.cache_key(image_data)
     "#{CACHE_KEY_PREFIX}/#{Digest::SHA256.hexdigest(image_data)}"
   end
@@ -84,8 +68,7 @@ module ImageCaption
     DCDO.get(CAPTIONS_ENABLED_DCDO_KEY, false)
   end
 
-  # Only a caption Azure itself stands behind. A low-confidence guess read to a
-  # student who cannot check it against the stage is worse than silence.
+  # A guess Azure does not stand behind is worse than silence.
   def self.confident_text(result)
     return nil unless result.is_a?(Hash)
 
@@ -93,13 +76,12 @@ module ImageCaption
     confidence = result['confidence']
     return nil if text.empty?
     return nil unless confidence.is_a?(Numeric)
-    return nil if confidence < DCDO.get(CONFIDENCE_FLOOR_DCDO_KEY, DEFAULT_CONFIDENCE_FLOOR)
+    return nil if confidence < CONFIDENCE_FLOOR
 
     text
   end
 
-  # Trust the bytes, not the request's content type header, which is whatever
-  # the caller wrote. An unsupported format is a wasted call to Azure.
+  # Trust the bytes, not the caller's content type header.
   def self.supported_image?(image_data)
     actual_type = ImageMagickGuard.actual_content_type(image_data)
     SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(actual_type)

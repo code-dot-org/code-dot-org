@@ -12,10 +12,6 @@ class ImageCaptionTest < Minitest::Test
       azure_computer_vision_endpoint: 'https://fake.endpoint'
     )
     DCDO.stubs(:get).with(ImageCaption::CAPTIONS_ENABLED_DCDO_KEY, false).returns(true)
-    DCDO.stubs(:get).with(
-      ImageCaption::CONFIDENCE_FLOOR_DCDO_KEY,
-      ImageCaption::DEFAULT_CONFIDENCE_FLOOR
-    ).returns(ImageCaption::DEFAULT_CONFIDENCE_FLOOR)
     @cache = ActiveSupport::Cache::MemoryStore.new
     CDO.stubs(shared_cache: @cache)
   end
@@ -44,23 +40,13 @@ class ImageCaptionTest < Minitest::Test
   end
 
   def test_keeps_a_caption_exactly_at_the_confidence_floor
-    stub_caption('a red circle', ImageCaption::DEFAULT_CONFIDENCE_FLOOR)
+    stub_caption('a red circle', ImageCaption::CONFIDENCE_FLOOR)
     assert_equal 'a red circle', ImageCaption.caption_image(png_blob)
   end
 
   def test_drops_a_caption_below_the_confidence_floor
-    # A guess Azure does not stand behind is worse than silence for a student
-    # who cannot check it against the stage.
-    stub_caption('a clock', ImageCaption::DEFAULT_CONFIDENCE_FLOOR - 0.01)
-    assert_nil ImageCaption.caption_image(png_blob)
-  end
-
-  def test_floor_is_tunable_without_a_deploy
-    DCDO.stubs(:get).with(
-      ImageCaption::CONFIDENCE_FLOOR_DCDO_KEY,
-      ImageCaption::DEFAULT_CONFIDENCE_FLOOR
-    ).returns(0.9)
-    stub_caption('a clock', 0.8)
+    # A guess Azure does not stand behind is worse than silence.
+    stub_caption('a clock', ImageCaption::CONFIDENCE_FLOOR - 0.01)
     assert_nil ImageCaption.caption_image(png_blob)
   end
 
@@ -93,8 +79,7 @@ class ImageCaptionTest < Minitest::Test
     captioner.stubs(:caption_image).raises(AzureImageCaption::RequestFailed.new('boom'))
     AzureImageCaption.stubs(:new).returns(captioner)
     Honeybadger.expects(:notify).once
-    # The student keeps theater's own description; a caption that did not
-    # arrive is not an error worth surfacing to them.
+    # The student keeps theater's description; a missing caption is not an error.
     assert_nil ImageCaption.caption_image(png_blob)
   end
 
@@ -130,12 +115,24 @@ class ImageCaptionTest < Minitest::Test
     )
   end
 
-  def test_a_declined_caption_is_not_cached
-    # Caching a refusal would outlive a change to the confidence floor.
-    stub_caption('a clock', ImageCaption::DEFAULT_CONFIDENCE_FLOOR - 0.01)
+  def test_a_low_confidence_result_is_cached_but_not_read_out
+    # Asking again would cost the same and get the same answer.
+    stub_caption('a clock', ImageCaption::CONFIDENCE_FLOOR - 0.01)
     blob = png_blob
     assert_nil ImageCaption.caption_image(blob)
-    assert_nil @cache.read(ImageCaption.cache_key(blob))
+    assert_equal 'a clock', @cache.read(ImageCaption.cache_key(blob))['text']
+  end
+
+  def test_the_floor_is_applied_to_cache_hits
+    # An old caption stops being read out as soon as the floor moves.
+    stub_caption('a clock', 0.5)
+    blob = png_blob
+    assert_equal 'a clock', ImageCaption.caption_image(blob)
+
+    AzureImageCaption.expects(:new).never
+    ImageCaption.stub_const(:CONFIDENCE_FLOOR, 0.9) do
+      assert_nil ImageCaption.caption_image(blob)
+    end
   end
 
   def test_the_cache_key_carries_nothing_but_the_image
