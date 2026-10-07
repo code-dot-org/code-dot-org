@@ -20,6 +20,7 @@ import {
 } from 'react';
 
 import {activateFile, type CustomEditorProps} from '@code-dot-org/codebridge';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
@@ -770,7 +771,7 @@ export const MapEditor = ({
                 className={`${styles.thumb} ${styles.newActor}`}
                 aria-hidden="true"
               >
-                +
+                <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
               </span>
               <span className={styles.name}>New actor…</span>
             </button>

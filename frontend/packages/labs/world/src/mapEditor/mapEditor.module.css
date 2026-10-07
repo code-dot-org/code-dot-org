@@ -2,7 +2,9 @@
    world around it, and one actor's code. Nothing above them in the lab sets
    one, so text here fell to the browser's default — Times for a bare label,
    Arial for a button, which does not inherit a font unless told to. Every
-   control styled below says `font: inherit` for that reason. */
+   control styled below says `font: inherit` for that reason, and a size or
+   weight set here is one of the design system's type-scale variables
+   (`fontVariables.css`), not a number of our own. */
 .editor,
 .worldEditor,
 .script {
@@ -85,8 +87,6 @@
 .newActor {
   min-width: 40px;
   border: 1px dashed var(--borders-neutral-primary);
-  font-size: 1.25rem;
-  line-height: 1;
   color: var(--text-neutral-secondary);
 }
 
@@ -116,7 +116,7 @@
 }
 
 .name {
-  font-size: 0.7rem;
+  font-size: var(--font-size-body-xs);
   white-space: nowrap;
 }
 
@@ -308,7 +308,7 @@
 }
 
 .inspectorAccordion.inspectorAccordion details summary strong {
-  font-size: small;
+  font-size: var(--font-size-body-xs);
 }
 
 /* A set-valued reference: its members listed, each with a way out of the set.
@@ -321,7 +321,7 @@
 }
 
 .inspector-set-label {
-  font-weight: 600;
+  font-weight: var(--font-weight-semi-bold);
 }
 
 .inspector-set-empty {
@@ -477,7 +477,7 @@
   font: inherit;
   width: 100%;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: var(--font-size-body-sm);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -489,7 +489,7 @@
 .layerRow[aria-pressed='true'] {
   border-color: var(--borders-neutral-light);
   background: var(--background-neutral-secondary);
-  font-weight: 600;
+  font-weight: var(--font-weight-semi-bold);
 }
 
 .layerActions {
