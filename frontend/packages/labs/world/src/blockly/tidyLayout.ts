@@ -72,12 +72,24 @@ export const isFreeFloating = (block: {
  * A generated actor stacks everything at one x, where this is plain
  * top-to-bottom, which is the order such a file is written in.
  *
+ * `keys`, when given, IS the order — smallest first — and the positions say
+ * nothing about it. The editor passes them once it has laid a file out: a
+ * block keeps the place it was given, and only one the learner moved is
+ * placed by where it now is (`orderKeys`).
+ *
  * Returns one place per box, in the order the boxes were given.
  */
-export function arrangeTopBlocks(boxes: readonly Box[]): Place[] {
+export function arrangeTopBlocks(
+  boxes: readonly Box[],
+  keys?: readonly number[],
+): Place[] {
   const order = boxes
     .map((box, index) => ({box, index}))
-    .sort((a, b) => a.box.x - b.box.x || a.box.y - b.box.y);
+    .sort((a, b) =>
+      keys
+        ? keys[a.index] - keys[b.index]
+        : a.box.x - b.box.x || a.box.y - b.box.y,
+    );
 
   const places: Place[] = new Array<Place>(boxes.length);
   let y = ORIGIN.y;
@@ -85,5 +97,58 @@ export function arrangeTopBlocks(boxes: readonly Box[]): Place[] {
     places[index] = {x: ORIGIN.x, y};
     y += box.height + GAP;
   }
+  return places;
+}
+
+/**
+ * The order to lay top blocks out in, as keys for `arrangeTopBlocks`.
+ *
+ * A block the layout has placed keeps that place; one it has not — new, or
+ * MOVED by the learner since — is placed by where it is now, which is where
+ * it was dropped. The keys are the y of each place, so a dropped block
+ * compares against the places of the ones around it.
+ *
+ * Why not just read the positions, as the layout once did: Blockly moves
+ * blocks on its own. Expanding a body connects it, and Blockly then nudges
+ * apart blocks that overlap — the definition included — so a definition
+ * nudged to the right read as last and was laid out at the bottom.
+ */
+export function orderKeys(
+  ids: readonly string[],
+  boxes: readonly Box[],
+  placed: ReadonlyMap<string, number>,
+  moved: ReadonlySet<string>,
+): number[] {
+  return ids.map((id, index) => {
+    const held = placed.get(id);
+    return held === undefined || moved.has(id) ? boxes[index].y : held;
+  });
+}
+
+/**
+ * The places a document's top blocks are written at, as remembered places:
+ * left to right, then top to bottom, numbered — the order a file reads in
+ * as it was saved, before anything has moved a block. A top block written
+ * without a position is taken in the order the file lists it.
+ */
+export function placesOfDocument(
+  tops: ReadonlyArray<{id?: string; x?: number; y?: number}>,
+): Map<string, number> {
+  const positioned = tops.every(
+    top => typeof top.x === 'number' && typeof top.y === 'number',
+  );
+  const order = tops
+    .map((top, index) => ({top, index}))
+    .sort((a, b) =>
+      positioned
+        ? a.top.x! - b.top.x! || a.top.y! - b.top.y!
+        : a.index - b.index,
+    );
+  const places = new Map<string, number>();
+  order.forEach(({top}, rank) => {
+    if (top.id) {
+      places.set(top.id, rank);
+    }
+  });
   return places;
 }

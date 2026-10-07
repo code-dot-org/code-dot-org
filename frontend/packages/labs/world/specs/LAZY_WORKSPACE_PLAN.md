@@ -114,6 +114,24 @@ Not moved, and why:
   Kit before this, it built 450 block groups in 2.4 s; now it builds 21 —
   its top blocks — in 1.3 s, and reads as a list of what the actor answers.
 
+- **Order is remembered, not read off positions.** The layout first read
+  the order of the top blocks off where they sat, every time. Blockly moves
+  blocks on its own: expanding a body connects it, and Blockly then nudges
+  apart what overlaps — `define actor` included — so a nudged definition read
+  as last and was laid out at the bottom (reported from the browser). The
+  editor now remembers each top block's place: seeded from the file's
+  positions as saved, before anything moves a block, and kept across its own
+  reloads; only a top block the LEARNER moved — a drag, a paste, an undo, but
+  not a move whose reason is `bump` — is placed by where it now is
+  (`tidyLayout.orderKeys`, `placesOfDocument`).
+- **A reload takes the controls away.** The show/hide control is not part of
+  the file, so any reload builds blocks without it. The font and locale
+  reloads — a save and a load to re-measure — did not lay out afterwards, and
+  on a fresh page the fonts land after the file has opened: a large file
+  showed its headers with no way to open them until a tab switch reloaded it
+  with the fonts already there (reported from the browser). Both reloads now
+  run the layout, which puts the controls back.
+
 ## Not built, and known
 
 - **The size rule counts blocks, and the eye counts height.** A rule file's

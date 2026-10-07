@@ -8,7 +8,13 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {arrangeTopBlocks, isFreeFloating, type Box} from '../tidyLayout';
+import {
+  arrangeTopBlocks,
+  isFreeFloating,
+  orderKeys,
+  placesOfDocument,
+  type Box,
+} from '../tidyLayout';
 
 /** Whether any box shares area with another; touching edges do not count. */
 const anyOverlap = (boxes: readonly Box[]): boolean =>
@@ -127,5 +133,64 @@ describe('arranging the top blocks', () => {
     const once = arranged(piled([2400, 180, 240, 1500, 60]));
     expect(anyOverlap(once)).toBe(false);
     expect(arrangeTopBlocks(once)).toEqual(once.map(({x, y}) => ({x, y})));
+  });
+});
+
+describe('the order the editor keeps', () => {
+  // The layout remembers where it put each top block. Blockly moves blocks on
+  // its own — expanding a body nudges apart what overlaps it, the definition
+  // included — and an order read off positions would follow the nudge.
+  const box = (x: number, y: number): Box => ({x, y, width: 300, height: 100});
+
+  it('keeps a block where it was placed, however it has been nudged', () => {
+    const ids = ['define', 'first', 'second'];
+    // Blockly nudged the definition right and down, past the first handler.
+    const boxes = [box(68, 180), box(20, 152), box(20, 284)];
+    const placed = new Map([
+      ['define', 20],
+      ['first', 152],
+      ['second', 284],
+    ]);
+    const places = arrangeTopBlocks(
+      boxes,
+      orderKeys(ids, boxes, placed, new Set()),
+    );
+    expect(places[0]).toEqual({x: 20, y: 20});
+    expect(places[1].y).toBeLessThan(places[2].y);
+  });
+
+  it('places a block the learner moved by where it was dropped', () => {
+    const ids = ['define', 'first', 'second'];
+    // The second handler dropped between the definition and the first.
+    const boxes = [box(20, 20), box(20, 152), box(20, 140)];
+    const placed = new Map([
+      ['define', 20],
+      ['first', 152],
+      ['second', 284],
+    ]);
+    const places = arrangeTopBlocks(
+      boxes,
+      orderKeys(ids, boxes, placed, new Set(['second'])),
+    );
+    expect(places[2].y).toBeLessThan(places[1].y);
+    expect(places[0]).toEqual({x: 20, y: 20});
+  });
+
+  it('reads a saved file’s order off its positions, before anything moves', () => {
+    const places = placesOfDocument([
+      {id: 'handler', x: 500, y: 20},
+      {id: 'define', x: 20, y: 20},
+      {id: 'later', x: 500, y: 300},
+    ]);
+    expect([...places.entries()].sort((a, b) => a[1] - b[1])).toEqual([
+      ['define', 0],
+      ['handler', 1],
+      ['later', 2],
+    ]);
+  });
+
+  it('takes the file’s own order when it gives no positions', () => {
+    const places = placesOfDocument([{id: 'b'}, {id: 'a'}]);
+    expect(places.get('b')).toBeLessThan(places.get('a')!);
   });
 });

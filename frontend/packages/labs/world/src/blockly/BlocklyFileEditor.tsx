@@ -130,7 +130,12 @@ import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
-import {arrangeTopBlocks, isFreeFloating} from './tidyLayout';
+import {
+  arrangeTopBlocks,
+  isFreeFloating,
+  orderKeys,
+  placesOfDocument,
+} from './tidyLayout';
 import {
   withoutBlocks,
   withoutCategories,
@@ -292,7 +297,16 @@ function parseWorkspace(contents: string): BlocklySerialization {
  * positions read in is the order the layout made, so a file reopens as it
  * was left.
  */
-const tidyTopBlocks = (workspace: Blockly.WorkspaceSvg): void => {
+/** Where the layout put each top block, and which the learner has moved. */
+interface LayoutMemory {
+  placed: Map<string, number>;
+  moved: Set<string>;
+}
+
+const tidyTopBlocks = (
+  workspace: Blockly.WorkspaceSvg,
+  memory: LayoutMemory,
+): void => {
   const tops = workspace.getTopBlocks(false);
   if (tops.length === 0) {
     return;
@@ -304,7 +318,21 @@ const tidyTopBlocks = (workspace: Blockly.WorkspaceSvg): void => {
     const size = block.getHeightWidth();
     return {x: corner.x, y: corner.y, width: size.width, height: size.height};
   });
-  const places = arrangeTopBlocks(boxes);
+  // Each block keeps its place; only one the learner moved is placed by where
+  // it now is (`tidyLayout.orderKeys`).
+  const places = arrangeTopBlocks(
+    boxes,
+    orderKeys(
+      tops.map(block => block.id),
+      boxes,
+      memory.placed,
+      memory.moved,
+    ),
+  );
+  memory.placed = new Map(
+    tops.map((block, index) => [block.id, places[index].y]),
+  );
+  memory.moved.clear();
   if (
     places.every(
       (place, index) =>
@@ -756,6 +784,29 @@ export const BlocklyFileEditor = ({
   // argument is evaluated on every render and only the first result kept, so
   // the split would re-run and remint the ids its bodies are keyed by while
   // the workspace kept the first set.
+  /**
+   * Where the layout put each top block, and which the learner has moved
+   * since (`tidyLayout.orderKeys`). Seeded from the file as it was saved, and
+   * kept across this editor's reloads — a font arriving or the way Back from
+   * a body surface reloads the blocks, and the order must not come from
+   * positions Blockly has had its hands on in between.
+   */
+  const layoutMemory = useRef<LayoutMemory>({
+    placed: new Map(),
+    moved: new Set(),
+  });
+  /** Remember a document's order, unless every top block in it is known. */
+  const rememberOrder = useCallback((document: BlocklySerialization) => {
+    const tops = ((document as unknown as LazyDocument).blocks?.blocks ??
+      []) as Array<{id?: string; x?: number; y?: number}>;
+    const memory = layoutMemory.current;
+    if (tops.every(top => top.id && memory.placed.has(top.id))) {
+      return;
+    }
+    memory.placed = placesOfDocument(tops);
+    memory.moved.clear();
+  }, []);
+
   // THE BODIES HELD UNBUILT, by top block id (`lazyBodies`,
   // specs/LAZY_WORKSPACE_PLAN.md). The editor's own store, bound to the
   // workspace as it is injected — before the file is loaded, since loading
@@ -790,9 +841,10 @@ export const BlocklyFileEditor = ({
           bodies.delete(id);
         }
       }
+      rememberOrder(stripped as unknown as BlocklySerialization);
       return stripped as unknown as BlocklySerialization;
     },
-    [bodies, statementInputs],
+    [bodies, statementInputs, rememberOrder],
   );
 
   const [startBlocks] = useState(() => {
@@ -808,6 +860,7 @@ export const BlocklyFileEditor = ({
       statementInputs,
     );
     taken.forEach((body, id) => bodies.set(id, body));
+    rememberOrder(stripped as unknown as BlocklySerialization);
     return stripped as unknown as BlocklySerialization;
   });
 
@@ -1284,10 +1337,13 @@ export const BlocklyFileEditor = ({
       // is what this function exists to work around.
       void Blockly.renderManagement
         .finishQueuedRenders()
-        .then(() => tidyTopBlocks(workspace));
+        .then(() => tidyTopBlocks(workspace, layoutMemory.current));
     },
     [syncToggles],
   );
+  /** The current `layOut`, for the effect that listens for fonts only once. */
+  const layOutRef = useRef(layOut);
+  layOutRef.current = layOut;
 
   /**
    * Lay the top blocks out again once what is waiting to render has.
@@ -1307,7 +1363,7 @@ export const BlocklyFileEditor = ({
       void Blockly.renderManagement.finishQueuedRenders().then(() => {
         reflowPending.current = false;
         if (!workspace.isDragging()) {
-          tidyTopBlocks(workspace);
+          tidyTopBlocks(workspace, layoutMemory.current);
         }
       });
     },
@@ -1416,6 +1472,16 @@ export const BlocklyFileEditor = ({
         const varId = (event as Blockly.Events.VarDelete).varId ?? '';
         for (const [id, body] of [...bodies]) {
           bodies.set(id, bodyWithoutVariable(body, varId));
+        }
+      }
+      // A TOP BLOCK THE LEARNER MOVED is placed by where it now is; every
+      // other keeps its place. A drag, a paste, an undo — but not Blockly's
+      // own nudge apart of blocks that overlap, which says nothing about the
+      // order the learner wants (`tidyLayout.orderKeys`).
+      if (event.type === Blockly.Events.BLOCK_MOVE) {
+        const move = event as Blockly.Events.BlockMove;
+        if (!move.newParentId && !(move.reason ?? []).includes('bump')) {
+          layoutMemory.current.moved.add(move.blockId ?? '');
         }
       }
       // NO FREE-FLOATING BLOCKS (specs/LAZY_WORKSPACE_PLAN.md). A block that
@@ -1855,7 +1921,10 @@ export const BlocklyFileEditor = ({
     workspace.scroll(scrollX, scrollY);
     refreshActorPictures(workspace);
     refreshBlockDesigns(workspace);
-  }, [locale, localizedBlocks]);
+    // The reload made every block anew, and the show/hide control is not part
+    // of the file, so it is put back with the layout (`syncToggles`).
+    layOut(workspace);
+  }, [locale, localizedBlocks, layOut]);
 
   // Re-measure when the web fonts land.
   //
@@ -1921,6 +1990,12 @@ export const BlocklyFileEditor = ({
       workspace.scroll(scrollX, scrollY);
       refreshActorPictures(workspace);
       refreshBlockDesigns(workspace);
+      // …and the show/hide controls, which the reload took away: they are not
+      // part of the file, so a reload builds blocks without them. On a fresh
+      // page the fonts land after the file has opened, which is why a large
+      // file showed its headers with no way to open them until a tab switch
+      // reloaded it with the fonts already there.
+      layOutRef.current(workspace);
     };
     fonts.addEventListener('loadingdone', remeasure);
     return () => fonts.removeEventListener('loadingdone', remeasure);
