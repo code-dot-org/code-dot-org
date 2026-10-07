@@ -12,14 +12,6 @@ import train from '../../src/train';
 
 import {levelStore} from './levelStore';
 
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    observe() {}
-    disconnect() {}
-  },
-);
-
 function renderApp(mode) {
   const store = levelStore(mode);
   const onTrained = vi.fn();
