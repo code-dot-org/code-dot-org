@@ -61,6 +61,7 @@ import {projectActorIcons} from './actorIconMeta';
 import {addActorThumbnails, setActorIcons} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
+import {syncBodyToggles} from './bodyToggle';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
@@ -73,6 +74,20 @@ import {setSimpleColors} from './fields/FieldColorPicker';
 import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
 import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
+import {
+  bodyWithoutVariable,
+  collapsedByFile,
+  collapseTop,
+  COLLAPSE_ABOVE,
+  documentSize,
+  expandHolding,
+  expandTop,
+  putBody,
+  spliceBodies,
+  statementInputsOf,
+  stripBodies,
+  type Document as LazyDocument,
+} from './lazyBodies';
 import {registerLessonButtons} from './lessonFlyoutButton';
 import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
 import {
@@ -122,6 +137,11 @@ import {
   withoutEmptyHeadings,
 } from './toolboxFilter';
 import {DesignSystemToolboxPlugin} from './toolboxStyle';
+import {
+  bindUnbuiltBodies,
+  type SerializedBlock,
+  type UnbuiltBodies,
+} from './workspaceIndex';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -736,9 +756,59 @@ export const BlocklyFileEditor = ({
   // argument is evaluated on every render and only the first result kept, so
   // the split would re-run and remint the ids its bodies are keyed by while
   // the workspace kept the first set.
+  // THE BODIES HELD UNBUILT, by top block id (`lazyBodies`,
+  // specs/LAZY_WORKSPACE_PLAN.md). The editor's own store, bound to the
+  // workspace as it is injected — before the file is loaded, since loading
+  // builds dropdowns that ask the index what the file declares.
+  const [bodies] = useState<UnbuiltBodies>(() => new Map());
+  /** Bodies of top blocks deleted while collapsed, so undo can return them. */
+  const deletedBodies = useRef<UnbuiltBodies>(new Map());
+  /** Which inputs of each type are mouths: what a body is, besides `next`. */
+  const statementInputs = useMemo(() => statementInputsOf(blocks), [blocks]);
+
+  /**
+   * A document as the workspace should show it: the bodies of the top blocks
+   * held collapsed taken out, and the store brought up to date with what the
+   * document says they hold. A collapsed block whose body the document does
+   * not carry — one already taken out — keeps the body the store has.
+   */
+  const stripCollapsed = useCallback(
+    (document: BlocklySerialization): BlocklySerialization => {
+      const {document: stripped, bodies: taken} = stripBodies(
+        document as unknown as LazyDocument,
+        top => bodies.has(top.id ?? ''),
+        statementInputs,
+      );
+      taken.forEach((body, id) => bodies.set(id, body));
+      // …and nothing held for a top block this document does not have: its
+      // body's declarations would otherwise still answer the index.
+      const tops = new Set(
+        (stripped.blocks?.blocks ?? []).map(top => top.id ?? ''),
+      );
+      for (const id of [...bodies.keys()]) {
+        if (!tops.has(id)) {
+          bodies.delete(id);
+        }
+      }
+      return stripped as unknown as BlocklySerialization;
+    },
+    [bodies, statementInputs],
+  );
+
   const [startBlocks] = useState(() => {
     const document = parseWorkspace(initialContents);
-    return HIDE_BODIES ? seam.show(document) : document;
+    const shown = HIDE_BODIES ? seam.show(document) : document;
+    // As this file was left this session, or — for one not yet opened —
+    // collapsed when it is too big to read at once.
+    const remembered = collapsedByFile.get(fileId);
+    const big = documentSize(shown as unknown as LazyDocument) > COLLAPSE_ABOVE;
+    const {document: stripped, bodies: taken} = stripBodies(
+      shown as unknown as LazyDocument,
+      top => (remembered ? remembered.has(top.id ?? '') : big),
+      statementInputs,
+    );
+    taken.forEach((body, id) => bodies.set(id, body));
+    return stripped as unknown as BlocklySerialization;
   });
 
   // What the file holds beside its workspace — a world's main map — kept
@@ -749,15 +819,18 @@ export const BlocklyFileEditor = ({
   /** The FILE: what the workspace shows, with its bodies put back. */
   const readFile = useCallback(
     (workspace: Blockly.Workspace) => {
-      const saved = Blockly.serialization.workspaces.save(
-        workspace,
-      ) as BlocklySerialization;
+      // …with every collapsed body put back where it was taken from: the file
+      // a collapsed workspace writes is the file a built one would.
+      const saved = spliceBodies(
+        Blockly.serialization.workspaces.save(workspace) as LazyDocument,
+        bodies,
+      ) as unknown as BlocklySerialization;
       return withDocumentExtras(
         HIDE_BODIES ? seam.read(saved) : saved,
         extras.current,
       );
     },
-    [seam],
+    [seam, bodies],
   );
 
   /**
@@ -787,9 +860,12 @@ export const BlocklyFileEditor = ({
     }
     // Saved, not re-read from the file: the learner may have renamed a
     // property since, and going back should show what they left.
-    interfaceRef.current = Blockly.serialization.workspaces.save(
-      workspace,
-    ) as BlocklySerialization;
+    // With the collapsed bodies put back: going Back strips them out again,
+    // and a save made from the body surface writes the interface whole.
+    interfaceRef.current = spliceBodies(
+      Blockly.serialization.workspaces.save(workspace) as LazyDocument,
+      bodies,
+    ) as unknown as BlocklySerialization;
     // `define block` has no NAME field — what it is called is the signature
     // the learner designed, which is where every other reader of the file gets
     // it from too (`ruleMeta.addDesignedBlock`).
@@ -861,12 +937,14 @@ export const BlocklyFileEditor = ({
   const showFile = useCallback(
     (document: BlocklySerialization, workspace: Blockly.WorkspaceSvg) => {
       const shown = HIDE_BODIES ? seam.show(document) : document;
-      Blockly.serialization.workspaces.load(shown, workspace);
+      Blockly.serialization.workspaces.load(stripCollapsed(shown), workspace);
       // Handed back because the caller may be reloading UNDER an open body,
       // and the body is built from the interface, not from the workspace.
+      // WHOLE, collapsed bodies and all: it is what a save from the body
+      // surface writes.
       return shown;
     },
-    [seam],
+    [seam, stripCollapsed],
   );
 
   // The toolbox the surface in front of the learner can actually use. Kept
@@ -1141,18 +1219,75 @@ export const BlocklyFileEditor = ({
    * where it was noticed, since which blocks get missed is not something this
    * code decides.
    */
-  const layOut = useCallback((workspace: Blockly.WorkspaceSvg): void => {
-    for (const block of workspace.getAllBlocks(false)) {
-      block.queueRender();
-    }
-    // …and only once they have all reported their size is there anything to
-    // arrange, which is why the tidy hangs off the promise rather than
-    // following the loop. Asking a block how tall it is before it has rendered
-    // is what this function exists to work around.
-    void Blockly.renderManagement
-      .finishQueuedRenders()
-      .then(() => tidyTopBlocks(workspace));
-  }, []);
+  /**
+   * Show or hide one top block's body (`lazyBodies`), and remember it for
+   * this file. Held in a ref because the toggles are drawn by the layout,
+   * which this calls.
+   */
+  const toggleBodyRef = useRef<(id: string) => void>(() => {});
+  /** Top blocks whose copy carries their held body; see `syncToggles`. */
+  const copyCarriesBody = useRef(new WeakSet<Blockly.Block>());
+
+  /**
+   * Put the show/hide control on every top block with a body — on the file,
+   * not on a body surface, which is one member's implementation.
+   *
+   * …and make a collapsed block's COPY carry its body. Blockly copies what is
+   * built, and a collapsed block's body is not, so a copy of one would paste
+   * as a header with nothing under it. The block's own `toCopyData` is wrapped
+   * once to put the held body back into what it hands the clipboard.
+   */
+  const syncToggles = useCallback(
+    (workspace: Blockly.WorkspaceSvg): void => {
+      if (surfaceRef.current !== null) {
+        return;
+      }
+      const tops = workspace.getTopBlocks(false);
+      syncBodyToggles(
+        tops as never,
+        id => bodies.has(id),
+        id => toggleBodyRef.current(id),
+      );
+      for (const top of tops) {
+        if (copyCarriesBody.current.has(top)) {
+          continue;
+        }
+        copyCarriesBody.current.add(top);
+        const own = top.toCopyData.bind(top);
+        top.toCopyData = (addNextBlocks?: boolean) => {
+          const data = own(addNextBlocks);
+          const body = bodies.get(top.id);
+          return data && body
+            ? {
+                ...data,
+                blockState: putBody(
+                  data.blockState as unknown as SerializedBlock,
+                  body,
+                ) as unknown as typeof data.blockState,
+              }
+            : data;
+        };
+      }
+    },
+    [bodies],
+  );
+
+  const layOut = useCallback(
+    (workspace: Blockly.WorkspaceSvg): void => {
+      syncToggles(workspace);
+      for (const block of workspace.getAllBlocks(false)) {
+        block.queueRender();
+      }
+      // …and only once they have all reported their size is there anything to
+      // arrange, which is why the tidy hangs off the promise rather than
+      // following the loop. Asking a block how tall it is before it has rendered
+      // is what this function exists to work around.
+      void Blockly.renderManagement
+        .finishQueuedRenders()
+        .then(() => tidyTopBlocks(workspace));
+    },
+    [syncToggles],
+  );
 
   /**
    * Lay the top blocks out again once what is waiting to render has.
@@ -1162,18 +1297,77 @@ export const BlocklyFileEditor = ({
    * fires — a paste is dozens.
    */
   const reflowPending = useRef(false);
-  const reflow = useCallback((workspace: Blockly.WorkspaceSvg): void => {
-    if (reflowPending.current || workspace.isDragging()) {
+  const reflow = useCallback(
+    (workspace: Blockly.WorkspaceSvg): void => {
+      if (reflowPending.current || workspace.isDragging()) {
+        return;
+      }
+      reflowPending.current = true;
+      syncToggles(workspace);
+      void Blockly.renderManagement.finishQueuedRenders().then(() => {
+        reflowPending.current = false;
+        if (!workspace.isDragging()) {
+          tidyTopBlocks(workspace);
+        }
+      });
+    },
+    [syncToggles],
+  );
+
+  toggleBodyRef.current = (id: string) => {
+    const workspace = workspaceRef.current;
+    const top = workspace?.getBlockById(id);
+    if (!workspace || !top) {
       return;
     }
-    reflowPending.current = true;
-    void Blockly.renderManagement.finishQueuedRenders().then(() => {
-      reflowPending.current = false;
-      if (!workspace.isDragging()) {
-        tidyTopBlocks(workspace);
-      }
-    });
-  }, []);
+    if (bodies.has(id)) {
+      expandTop(workspace, top);
+    } else {
+      collapseTop(workspace, top);
+    }
+    collapsedByFile.set(fileId, new Set(bodies.keys()));
+    layOut(workspace);
+  };
+
+  /**
+   * What injecting the workspace does, before the file is loaded into it:
+   * bind the store of unbuilt bodies, and teach undo about them.
+   *
+   * UNDO EXPANDS WHAT IT IS ABOUT TO CHANGE. A change to a row inside a body
+   * that has since been collapsed names a block that is not built, and Blockly
+   * passes over an event whose block it cannot find — the undo would do
+   * nothing, silently. So the group about to be undone is looked at first and
+   * any collapsed body holding one of its blocks is built, which also shows
+   * the learner where the change happened.
+   */
+  const onInject = useCallback(
+    (workspace: Blockly.WorkspaceSvg) => {
+      bindUnbuiltBodies(workspace, bodies);
+      const undo = workspace.undo.bind(workspace);
+      workspace.undo = (redo?: boolean) => {
+        const stack = redo
+          ? workspace.getRedoStack()
+          : workspace.getUndoStack();
+        const last = stack[stack.length - 1];
+        const group = last?.group
+          ? stack.filter(event => event.group === last.group)
+          : last
+            ? [last]
+            : [];
+        const ids = new Set(
+          group
+            .map(event => (event as {blockId?: string}).blockId)
+            .filter((id): id is string => Boolean(id)),
+        );
+        if (ids.size && expandHolding(workspace, bodies, ids)) {
+          collapsedByFile.set(fileId, new Set(bodies.keys()));
+        }
+        undo(redo);
+      };
+      registerLessonButtons(workspace);
+    },
+    [bodies, fileId],
+  );
 
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
@@ -1198,6 +1392,31 @@ export const BlocklyFileEditor = ({
           layOut(workspace);
         }
         return;
+      }
+      // THE STORE OF UNBUILT BODIES FOLLOWS ITS TOP BLOCKS (`lazyBodies`).
+      // A collapsed top block deleted takes its body with it — kept aside, so
+      // undoing the delete brings the body back too; a variable deleted takes
+      // its uses out of every held body, as Blockly takes them out of the
+      // built ones.
+      if (event.type === Blockly.Events.BLOCK_DELETE) {
+        const id = (event as Blockly.Events.BlockDelete).blockId ?? '';
+        const body = bodies.get(id);
+        if (body) {
+          deletedBodies.current.set(id, body);
+          bodies.delete(id);
+        }
+      } else if (event.type === Blockly.Events.BLOCK_CREATE) {
+        const id = (event as Blockly.Events.BlockCreate).blockId ?? '';
+        const body = deletedBodies.current.get(id);
+        if (body) {
+          bodies.set(id, body);
+          deletedBodies.current.delete(id);
+        }
+      } else if (event.type === Blockly.Events.VAR_DELETE) {
+        const varId = (event as Blockly.Events.VarDelete).varId ?? '';
+        for (const [id, body] of [...bodies]) {
+          bodies.set(id, bodyWithoutVariable(body, varId));
+        }
       }
       // NO FREE-FLOATING BLOCKS (specs/LAZY_WORKSPACE_PLAN.md). A block that
       // ends a drag on its own, attached to nothing, means nothing — the
@@ -1527,7 +1746,9 @@ export const BlocklyFileEditor = ({
     }
     surfaceRef.current = want;
     const held = interfaceRef.current ?? startBlocks;
-    const document = editing ? seam.bodyOf(editing.id, held) : held;
+    const document = editing
+      ? seam.bodyOf(editing.id, held)
+      : stripCollapsed(held);
     Blockly.Events.disable();
     try {
       Blockly.serialization.workspaces.load(document, workspace);
@@ -1563,7 +1784,7 @@ export const BlocklyFileEditor = ({
     // arrives. Without this a query is drawn as an action, every time.
     refreshBlockDesigns(workspace);
     layOut(workspace);
-  }, [editing, blocks, seam, startBlocks, layOut]);
+  }, [editing, blocks, seam, startBlocks, layOut, stripCollapsed]);
 
   /**
    * Re-seed when the lab is handed a different document.
@@ -1825,7 +2046,7 @@ export const BlocklyFileEditor = ({
             // does (blockly/lessonFlyoutButton). Registered at injection, so a
             // toolbox rebuilt for any of the several reasons it is rebuilt still
             // finds its callbacks.
-            onInject={registerLessonButtons}
+            onInject={onInject}
             startBlocks={startBlocks}
             toolbox={localizedToolbox}
             options={options}

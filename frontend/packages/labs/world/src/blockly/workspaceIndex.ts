@@ -51,25 +51,45 @@ export interface IndexedBlock {
   isInsertionMarker?(): boolean;
 }
 
-/** The bodies held unbuilt in each workspace, by the top block they belong to. */
-const unbuilt = new WeakMap<
-  Blockly.Workspace,
-  Map<string, readonly SerializedBlock[]>
->();
+/**
+ * A top block's body, held as JSON: what hangs off its `next`, and what sits
+ * in each of its statement mouths. Its value sockets are its header and are
+ * always built.
+ */
+export interface UnbuiltBody {
+  next?: SerializedBlock;
+  statements: Record<string, SerializedBlock>;
+}
+
+/** The bodies a workspace holds unbuilt, by the id of their top block. */
+export type UnbuiltBodies = Map<string, UnbuiltBody>;
+
+/** The store each workspace's unbuilt bodies are in. */
+const unbuilt = new WeakMap<Blockly.Workspace, UnbuiltBodies>();
 
 /**
- * Hold `blocks` as the unbuilt body of the top block `topId`, or let go of it.
+ * Give a workspace the store its unbuilt bodies are kept in.
  *
- * The blocks are the body's ROOTS as the JSON has them — a `next` chain's
- * first block, a statement mouth's — each carrying everything under it.
+ * The editor owns the store and binds it as the workspace is injected —
+ * BEFORE the file is loaded, because loading builds blocks whose dropdowns
+ * ask this index what the file declares, and a body taken out of the file
+ * before loading is already in the store (`lazyBodies`).
  */
+export function bindUnbuiltBodies(
+  workspace: Blockly.Workspace,
+  bodies: UnbuiltBodies,
+): void {
+  unbuilt.set(workspace, bodies);
+}
+
+/** Hold `body` as the unbuilt body of the top block `topId`, or let go of it. */
 export function setUnbuiltBody(
   workspace: Blockly.Workspace,
   topId: string,
-  blocks: readonly SerializedBlock[] | undefined,
+  body: UnbuiltBody | undefined,
 ): void {
   let held = unbuilt.get(workspace);
-  if (!blocks) {
+  if (!body) {
     held?.delete(topId);
     return;
   }
@@ -77,14 +97,20 @@ export function setUnbuiltBody(
     held = new Map();
     unbuilt.set(workspace, held);
   }
-  held.set(topId, blocks);
+  held.set(topId, body);
 }
 
 /** The unbuilt body of one top block, if it is held unbuilt. */
 export const unbuiltBodyOf = (
   workspace: Blockly.Workspace,
   topId: string,
-): readonly SerializedBlock[] | undefined => unbuilt.get(workspace)?.get(topId);
+): UnbuiltBody | undefined => unbuilt.get(workspace)?.get(topId);
+
+/** A body's roots: its `next` chain's first block, then each mouth's. */
+export const rootsOf = (body: UnbuiltBody): SerializedBlock[] => [
+  ...(body.next ? [body.next] : []),
+  ...Object.values(body.statements),
+];
 
 /** Every top block whose body is held unbuilt. */
 export const unbuiltTopIds = (workspace: Blockly.Workspace): string[] => [
@@ -154,8 +180,8 @@ function* walk(json: SerializedBlock): Generator<SerializedBlock> {
 /** Every block in the unbuilt bodies of `workspace`, as views. */
 function unbuiltBlocks(workspace: Blockly.Workspace): IndexedBlock[] {
   const views: IndexedBlock[] = [];
-  for (const roots of unbuilt.get(workspace)?.values() ?? []) {
-    for (const root of roots) {
+  for (const body of unbuilt.get(workspace)?.values() ?? []) {
+    for (const root of rootsOf(body)) {
       for (const json of walk(root)) {
         views.push(viewOf(json, workspace));
       }

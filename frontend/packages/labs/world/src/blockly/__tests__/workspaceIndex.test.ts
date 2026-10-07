@@ -130,7 +130,7 @@ const unbuild = (workspace: Blockly.Workspace) => {
     addCoordinates: false,
   }) as unknown as SerializedBlock;
   body.dispose(false);
-  setUnbuiltBody(workspace, 'world', [json]);
+  setUnbuiltBody(workspace, 'world', {next: json, statements: {}});
   return world;
 };
 
