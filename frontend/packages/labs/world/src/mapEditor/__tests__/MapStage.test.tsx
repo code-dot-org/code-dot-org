@@ -545,7 +545,7 @@ describe('a placement with a script', () => {
     // With a way into scripts: the toggle is about their marks, and a stage
     // that offers no scripts offers no toggle.
     const view = mount(scripted(), {onEditScript: vi.fn()});
-    const toggle = view.getByRole('button', {name: 'Icons'});
+    const toggle = view.getByRole('button', {name: 'Code marks'});
     expect(toggle).toHaveAttribute('aria-pressed', 'true');
 
     fireEvent.click(toggle);
@@ -1051,7 +1051,7 @@ describe('what a gated lab withholds', () => {
     const {canvas, ...view} = mount(map);
     select(canvas, map);
     expect(view.queryByRole('button', {name: 'Code'})).toBeNull();
-    expect(view.queryByRole('button', {name: 'Icons'})).toBeNull();
+    expect(view.queryByRole('button', {name: 'Code marks'})).toBeNull();
   });
 
   /** Focusable, inert, and described by a note that is really there. */
@@ -1092,7 +1092,7 @@ describe('what a gated lab withholds', () => {
     fireEvent.click(mapScript);
     expect(onEditScript).not.toHaveBeenCalled();
     // The marks are drawn either way, so their toggle still works.
-    expect(view.getByRole('button', {name: 'Icons'})).toBeInTheDocument();
+    expect(view.getByRole('button', {name: 'Code marks'})).toBeInTheDocument();
   });
 
   it('offers a placement no Layer in App Builder', () => {

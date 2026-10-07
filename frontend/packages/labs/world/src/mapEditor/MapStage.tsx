@@ -16,7 +16,15 @@
 // comes from `stageGeometry`, which has no canvas in it and is tested as such.
 // What is left here is drawing, gesture and state.
 
-import {Button, ListSubheader, Menu, MenuItem, Typography} from '@mui/material';
+import {
+  Button,
+  IconButton,
+  ListSubheader,
+  Menu,
+  MenuItem,
+  Tooltip,
+  Typography,
+} from '@mui/material';
 import type {
   ChangeEvent,
   KeyboardEvent as ReactKeyboardEvent,
@@ -28,6 +36,7 @@ import {useEffect, useRef, useState} from 'react';
 import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
 import type {EventChoice} from '../blockly/eventChoices';
@@ -353,30 +362,37 @@ const eventRows = (
 };
 
 /**
- * A toolbar button that is on or off: the Icons, Layers and Cameras
- * switches. Outlined either way, in the brand's purple while on and in the
- * neutral secondary while off — the design system's two outlined buttons.
- * A filled button for "on" stood out darker than anything else on the
- * toolbar. `aria-pressed` says which to a reader.
+ * A toolbar switch: the code marks, the Layers list, the Cameras list.
+ *
+ * AN ICON, coloured as a tab is: the brand's primary while on, neutral while
+ * off, with no box either way — the design system's text icon buttons in
+ * those two colours. Its words are its accessible name and the tooltip a
+ * pointer finds, as the inspector's icon actions' are (`IconAction`), and
+ * `aria-pressed` says which state it is in.
  */
 const ToolbarToggle = ({
+  label,
+  icon,
   pressed,
   onClick,
-  children,
 }: {
+  label: string;
+  icon: string;
   pressed: boolean;
   onClick: () => void;
-  children: string;
 }) => (
-  <Button
-    variant="outlined"
-    color={pressed ? 'primary' : 'secondary'}
-    size="extraSmall"
-    aria-pressed={pressed}
-    onClick={onClick}
-  >
-    {children}
-  </Button>
+  <Tooltip title={label}>
+    <IconButton
+      aria-label={label}
+      aria-pressed={pressed}
+      variant="text"
+      color={pressed ? 'primary' : 'secondary'}
+      size="extraSmall"
+      onClick={onClick}
+    >
+      <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+    </IconButton>
+  </Tooltip>
 );
 
 export const MapStage = ({
@@ -2696,27 +2712,27 @@ export const MapStage = ({
           // works whether or not scripts are withheld, since the marks are
           // drawn either way: they say what the file holds.
           <ToolbarToggle
+            label="Code marks"
+            icon="code"
             pressed={showIcons}
             onClick={() => setShowIcons(shown => !shown)}
-          >
-            Icons
-          </ToolbarToggle>
+          />
         )}
         {!appBuilder && (
           <ToolbarToggle
+            label="Layers"
+            icon="layer-group"
             pressed={panels.layers}
             onClick={() => togglePanel('layers')}
-          >
-            Layers
-          </ToolbarToggle>
+          />
         )}
         {cameras && (
           <ToolbarToggle
+            label="Cameras"
+            icon="video"
             pressed={panels.cameras}
             onClick={() => togglePanel('cameras')}
-          >
-            Cameras
-          </ToolbarToggle>
+          />
         )}
         {onEditScript && (
           <>
