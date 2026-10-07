@@ -89,6 +89,7 @@ interface InterventionBoxProps {
   jsonVideos: LessonDeepDiveData['jsonVideos'];
   reflectionData: ReflectionData | null;
   focusTopic?: string;
+  initialSelection?: CardId | null;
   onDone?: () => void;
 }
 
@@ -102,9 +103,10 @@ const InterventionBox: FC<InterventionBoxProps> = ({
   jsonVideos,
   reflectionData,
   focusTopic,
+  initialSelection = null,
   onDone,
 }) => {
-  const [selected, setSelected] = useState<CardId | null>(null);
+  const [selected, setSelected] = useState<CardId | null>(initialSelection);
   const userId = useAppSelector(state => state.currentUser.userId);
 
   const handleCardSelect = useCallback(

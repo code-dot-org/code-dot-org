@@ -15,7 +15,11 @@ import WorkspaceHeader from '../../src/UIComponents/WorkspaceHeader';
 
 import {levelStore} from './levelStore';
 
-function renderHeader({panel = 'datasetView', trained = false} = {}) {
+function renderHeader({
+  panel = 'datasetView',
+  trained = false,
+  onStartOver,
+} = {}) {
   const store = levelStore({});
   if (trained) {
     train.reset();
@@ -30,7 +34,7 @@ function renderHeader({panel = 'datasetView', trained = false} = {}) {
       createElement(
         ThemeProvider,
         {theme: getMuiThemeForBrand(undefined)},
-        createElement(WorkspaceHeader),
+        createElement(WorkspaceHeader, {onStartOver}),
       ),
     ),
   );
@@ -79,5 +83,17 @@ describe('WorkspaceHeader', () => {
     });
     fireEvent.click(tab('Testing'));
     expect(store.getState().prediction).toBe('dog');
+  });
+
+  test('shows Start over only when the consumer handles it', () => {
+    renderHeader();
+    expect(screen.queryByRole('button', {name: 'Start over'})).toBeNull();
+  });
+
+  test('Start over calls the consumer', () => {
+    const onStartOver = vi.fn();
+    renderHeader({onStartOver});
+    fireEvent.click(screen.getByRole('button', {name: 'Start over'}));
+    expect(onStartOver).toHaveBeenCalledTimes(1);
   });
 });

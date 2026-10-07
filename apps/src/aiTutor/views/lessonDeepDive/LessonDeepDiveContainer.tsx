@@ -15,6 +15,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import FizzyButton from './FizzyButton';
+import NextStepPicker from './NextStepPicker';
 import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
@@ -29,6 +30,7 @@ const BOX_IDS = [
   'validated-levels',
   'lesson-summary',
   'reflection',
+  'next-step',
   'intervention',
   'pre-skills-check',
   'skills-check',
@@ -142,6 +144,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
     null
   );
+  const [nextStepChoice, setNextStepChoice] = useState<
+    'practice' | 'challenge'
+  >('practice');
 
   // Both values are fixed for the lifetime of this component instance.
   const colorOffset = useMemo(
@@ -359,6 +364,19 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             initialValues={reflectionData}
           />
         );
+      case 'next-step':
+        return (
+          <NextStepPicker
+            onPractice={() => {
+              setNextStepChoice('practice');
+              goToNext();
+            }}
+            onChallenge={() => {
+              setNextStepChoice('challenge');
+              goToNext();
+            }}
+          />
+        );
       case 'intervention':
         return (
           <InterventionBox
@@ -371,6 +389,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             jsonVideos={lessonDeepDiveData.jsonVideos}
             reflectionData={reflectionData}
             focusTopic={getFocusTopic(reflectionData)}
+            initialSelection={
+              nextStepChoice === 'challenge' ? 'challenge' : null
+            }
             onDone={goToNext}
           />
         );
@@ -404,6 +425,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       {!isLast &&
         !isStoryScreen &&
         currentScreenId !== 'reflection' &&
+        currentScreenId !== 'next-step' &&
         currentScreenId !== 'intervention' &&
         currentScreenId !== 'pre-skills-check' &&
         currentScreenId !== 'skills-check' && (
