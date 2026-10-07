@@ -1,14 +1,21 @@
-import ailab, {type AccuracyRequirement, type Mode} from '@code-dot-org/ailab';
+import ailab, {type Mode} from '@code-dot-org/ailab';
 import {act, render} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
+import {ACCURACY_AT_LEAST} from '@cdo/apps/ailab/lab2/AccuracyValidator';
 import {AilabLevelProperties} from '@cdo/apps/ailab/lab2/types';
 import AilabView from '@cdo/apps/ailab/lab2/views/AilabView';
-import progress, {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import progress, {
+  initProgress,
+  sendSuccessReport,
+  setCurrentLevelId,
+} from '@cdo/apps/code-studio/progressRedux';
 import lab from '@cdo/apps/lab2/lab2Redux';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
+import {Validation} from '@cdo/apps/lab2/types';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import LevelPropertiesWrapper, {
   useLevelProperties,
 } from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
@@ -29,21 +36,39 @@ jest.mock('@code-dot-org/ailab', () => ({
   },
 }));
 
-jest.mock(
-  '@cdo/apps/lab2/views/components/Instructions/ResourcePanel',
-  () => () => null
+jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
+  __esModule: true,
+  ...jest.requireActual('@cdo/apps/code-studio/progressRedux'),
+  sendSuccessReport: jest.fn(() => ({type: 'test/sendSuccessReport'})),
+}));
+
+jest.mock('@cdo/apps/lab2/views/components/Instructions/ResourcePanel', () =>
+  jest.fn(() => null)
 );
 
 const mockedAilab = jest.mocked(ailab);
 
-const reportRequirement = (requirement: AccuracyRequirement | null) =>
-  mockedAilab.mount.mock.lastCall?.[0].setAccuracyRequirement?.(requirement);
+const train = (accuracy: number) =>
+  act(() => mockedAilab.mount.mock.lastCall?.[0].onTrained?.(accuracy));
+
+const UNMET_MESSAGE = 'Train a model with at least 70% accuracy to continue.';
+
+const ACCURACY_VALIDATIONS: Validation[] = [
+  {
+    key: 'accuracy_met',
+    conditions: [{name: ACCURACY_AT_LEAST, value: 70}],
+    message: '',
+    next: true,
+  },
+  {key: 'accuracy_unmet', conditions: [], message: UNMET_MESSAGE, next: false},
+];
 
 const level = (id: number, mode?: Mode): AilabLevelProperties => ({
   id,
   name: `level ${id}`,
   appName: 'ailab',
   mode: mode && JSON.stringify(mode),
+  validations: mode?.requireAccuracy ? ACCURACY_VALIDATIONS : undefined,
 });
 
 const LEVELS = {
@@ -52,15 +77,6 @@ const LEVELS = {
   '3': level(3),
 };
 
-const UNMET = {
-  hasConditions: true,
-  satisfied: false,
-  message: 'Train a model with at least 70% accuracy to continue.',
-  index: 0,
-};
-
-// Hands AilabView its level in the same commit as ProgressContainer, so the
-// validation reset there runs after AilabView's effects.
 const CurrentLevel = () => {
   const {levelProperties} = useLevelProperties();
   return (
@@ -73,15 +89,14 @@ describe('AilabView', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    // Reports synchronously from loadLevel, earlier than the real package does.
-    mockedAilab.loadLevel.mockImplementation((mode?: Mode) => {
-      const minimum = mode?.requireAccuracy;
-      reportRequirement(minimum ? {minimum, met: false} : null);
-    });
-
     stubRedux();
     registerReducers({progress, lab});
     store = getStore();
+    store.dispatch(
+      initProgress({lessons: []} as unknown as Parameters<
+        typeof initProgress
+      >[0])
+    );
   });
 
   afterEach(() => {
@@ -101,33 +116,71 @@ describe('AilabView', () => {
     );
   }
 
+  const switchToLevel = (levelId: string) =>
+    act(() => {
+      store.dispatch(setCurrentLevelId(levelId));
+    });
+
   const validationState = () => store.getState().lab.validationState;
 
-  it('disables Continue until the model meets requireAccuracy', () => {
+  it('shows no message until a training run misses the minimum', () => {
     renderLevel('1');
-    expect(validationState()).toEqual(UNMET);
-
-    act(() => reportRequirement({minimum: 70, met: true}));
-    expect(validationState()).toEqual({
+    expect(validationState()).toMatchObject({
       hasConditions: true,
-      satisfied: true,
+      satisfied: false,
       message: null,
-      index: 0,
+    });
+
+    train(65);
+    expect(validationState()).toMatchObject({
+      satisfied: false,
+      message: UNMET_MESSAGE,
     });
   });
 
-  it('has no conditions when the level requires no accuracy', () => {
-    renderLevel('3');
-    expect(validationState().hasConditions).toBe(false);
+  it('gives fresh feedback after each miss', () => {
+    renderLevel('1');
+    train(60);
+    const firstIndex = validationState().index;
+    train(65);
+    expect(validationState().index).toBeGreaterThan(firstIndex);
+  });
+
+  it('reports success once the model reaches the minimum', () => {
+    renderLevel('1');
+    train(70);
+    expect(validationState().satisfied).toBe(true);
+    expect(sendSuccessReport).toHaveBeenCalledWith('ailab');
   });
 
   it('gates the next level again when its requirement matches', () => {
     renderLevel('1');
-    act(() => reportRequirement({minimum: 70, met: true}));
+    train(85);
 
-    act(() => {
-      store.dispatch(setCurrentLevelId('2'));
+    switchToLevel('2');
+    expect(validationState()).toMatchObject({
+      hasConditions: true,
+      satisfied: false,
+      message: null,
     });
-    expect(validationState()).toEqual(UNMET);
+  });
+
+  it('clears the gate when the next level requires no accuracy', () => {
+    renderLevel('1');
+    train(60);
+
+    switchToLevel('3');
+    expect(validationState()).toMatchObject({
+      hasConditions: false,
+      message: null,
+    });
+  });
+
+  it('describes the requirement on the disabled Continue', () => {
+    renderLevel('1');
+    expect(jest.mocked(ResourcePanel).mock.lastCall?.[0]).toMatchObject({
+      skipValidationOncePassed: true,
+      validationTooltip: 'Train a model with at least 70% accuracy',
+    });
   });
 });

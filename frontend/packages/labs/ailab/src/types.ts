@@ -148,13 +148,6 @@ export interface HistoricResult {
   total: number;
 }
 
-export interface AccuracyRequirement {
-  /** The level's `requireAccuracy`, as a percentage. */
-  minimum: number;
-  /** Whether the latest trained model reaches `minimum`. */
-  met: boolean;
-}
-
 export interface ModelDataToSave {
   name?: string;
   datasetDetails: DatasetDetails;

@@ -9,7 +9,6 @@ import {
   getCorrectCount,
   getResultsByGrade,
   getPercentCorrect,
-  getAccuracyRequirement,
   getResultsDataInDataTableForm,
   getSummaryStat,
 } from '../../src/helpers/accuracy';
@@ -206,37 +205,6 @@ describe('getCorrectCount', () => {
 
   test('regression', () => {
     expect(getCorrectCount(regressionState)).toEqual({correct: 4, total: 6});
-  });
-});
-
-describe('getAccuracyRequirement', () => {
-  const result = accuracy => ({label: 'animal', features: ['legs'], accuracy});
-
-  test('is null when the level sets no requireAccuracy', () => {
-    expect(getAccuracyRequirement(undefined, result('100.00'))).toBeNull();
-    expect(getAccuracyRequirement({}, result('100.00'))).toBeNull();
-  });
-
-  test('treats a requireAccuracy of 0 as none', () => {
-    expect(getAccuracyRequirement({requireAccuracy: 0}, undefined)).toBeNull();
-  });
-
-  test('is unmet before any training', () => {
-    expect(getAccuracyRequirement({requireAccuracy: 70}, undefined)).toEqual({
-      minimum: 70,
-      met: false,
-    });
-  });
-
-  test('is met once the latest result reaches the minimum', () => {
-    const mode = {requireAccuracy: 70};
-    expect(getAccuracyRequirement(mode, result('69.99')).met).toBe(false);
-    expect(getAccuracyRequirement(mode, result('70.00')).met).toBe(true);
-  });
-
-  test('is unmet when there was nothing to grade', () => {
-    const mode = {requireAccuracy: 70};
-    expect(getAccuracyRequirement(mode, result('NaN')).met).toBe(false);
   });
 });
 

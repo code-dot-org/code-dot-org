@@ -22,7 +22,7 @@ vi.stubGlobal(
 
 function renderApp(mode) {
   const store = levelStore(mode);
-  const setAccuracyRequirement = vi.fn();
+  const onTrained = vi.fn();
   render(
     createElement(
       Provider,
@@ -33,12 +33,12 @@ function renderApp(mode) {
         createElement(App, {
           onContinue: () => {},
           saveTrainedModel: () => {},
-          setAccuracyRequirement,
+          onTrained,
         }),
       ),
     ),
   );
-  return {store, setAccuracyRequirement};
+  return {store, onTrained};
 }
 
 function trainModel(store) {
@@ -49,44 +49,28 @@ function trainModel(store) {
   });
 }
 
-describe('setAccuracyRequirement', () => {
+describe('onTrained', () => {
   beforeEach(() => I18n.initI18n());
 
-  test('receives null when the level requires no accuracy', () => {
-    const {setAccuracyRequirement} = renderApp({});
-    expect(setAccuracyRequirement.mock.calls).toEqual([[null]]);
+  test('is not called before training', () => {
+    const {onTrained} = renderApp({});
+    expect(onTrained).not.toHaveBeenCalled();
   });
 
-  test('receives an unmet requirement when the level loads', () => {
-    const {setAccuracyRequirement} = renderApp({requireAccuracy: 100});
-    expect(setAccuracyRequirement.mock.calls).toEqual([
-      [{minimum: 100, met: false}],
-    ]);
-  });
-
-  test('is called after every training run, even when unchanged', () => {
-    const {store, setAccuracyRequirement} = renderApp({
-      trainer: 'decisionTree',
-      requireAccuracy: 100,
-    });
+  test('receives the accuracy of every training run', () => {
+    const {store, onTrained} = renderApp({trainer: 'decisionTree'});
     trainModel(store);
     trainModel(store);
-    expect(setAccuracyRequirement.mock.calls).toEqual([
-      [{minimum: 100, met: false}],
-      [{minimum: 100, met: true}],
-      [{minimum: 100, met: true}],
-    ]);
+    expect(onTrained.mock.calls).toEqual([[100], [100]]);
   });
 
-  test('is called again when the next level has the same requirement', () => {
-    const {store, setAccuracyRequirement} = renderApp({requireAccuracy: 100});
+  test('is not called when the next level loads', () => {
+    const {store, onTrained} = renderApp({trainer: 'decisionTree'});
+    trainModel(store);
     act(() => {
       store.dispatch(resetState());
-      store.dispatch(setMode({requireAccuracy: 100}));
+      store.dispatch(setMode({}));
     });
-    expect(setAccuracyRequirement.mock.calls).toEqual([
-      [{minimum: 100, met: false}],
-      [{minimum: 100, met: false}],
-    ]);
+    expect(onTrained).toHaveBeenCalledTimes(1);
   });
 });

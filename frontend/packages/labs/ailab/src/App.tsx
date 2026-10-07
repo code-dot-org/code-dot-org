@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import {type CSSProperties, type ReactNode, useEffect} from 'react';
 
 import {colors} from './constants';
-import {getAccuracyRequirement} from './helpers/accuracy';
 import {reportPanelView} from './helpers/metrics';
 import {
   isSaveComplete,
@@ -14,7 +13,6 @@ import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
 import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
 import type {
-  AccuracyRequirement,
   InstructionsKey,
   Panel,
   PrevNextButtons,
@@ -214,11 +212,8 @@ export interface AppProps {
     options: {showOverlay?: boolean} | null,
   ) => void;
   onStartOver?: () => void;
-  /**
-   * Optional callback invoked when a level loads and after each training run;
-   * receives null when the level requires no accuracy.
-   */
-  setAccuracyRequirement?: (requirement: AccuracyRequirement | null) => void;
+  /** Optional callback invoked with the accuracy of each newly trained model. */
+  onTrained?: (accuracy: number) => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -232,14 +227,13 @@ const App = ({
   saveTrainedModel,
   setInstructionsKey,
   onStartOver,
-  setAccuracyRequirement,
+  onTrained,
 }: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
-  const mode = useAppSelector(state => state.mode);
   const latestResult = useAppSelector(state => state.historicResults[0]);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
@@ -257,11 +251,11 @@ const App = ({
     reportPanelView(currentPanel);
   }, [currentPanel]);
 
-  // Keyed on references rather than the derived requirement, so a new mode or
-  // a new training result reports again even when the requirement is unchanged.
   useEffect(() => {
-    setAccuracyRequirement?.(getAccuracyRequirement(mode, latestResult));
-  }, [mode, latestResult]);
+    if (latestResult) {
+      onTrained?.(Number(latestResult.accuracy));
+    }
+  }, [latestResult]);
 
   return (
     <div className={styles.app} style={colorVariables}>
