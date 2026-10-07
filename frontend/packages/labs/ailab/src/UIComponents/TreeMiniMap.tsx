@@ -18,6 +18,8 @@ import styles from './treeMiniMap.module.scss';
 const MINI_ROW_GAP = 32;
 // In tree units, which the thumbnail scales down to a few pixels.
 const NODE_CORNER_RADIUS = 12;
+// Room for the half of each border that falls outside its node.
+const VIEW_MARGIN = 8;
 const LEAF_COLOR_CLASSES = [
   styles.leafColor0,
   styles.leafColor1,
@@ -39,7 +41,12 @@ const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
     <div className={styles.miniMap}>
       <svg
         className={styles.tree}
-        viewBox={`0 0 ${layout.width} ${layout.height}`}
+        viewBox={[
+          -VIEW_MARGIN,
+          -VIEW_MARGIN,
+          layout.width + 2 * VIEW_MARGIN,
+          layout.height + 2 * VIEW_MARGIN,
+        ].join(' ')}
         aria-hidden="true"
       >
         {layout.nodes.map(
