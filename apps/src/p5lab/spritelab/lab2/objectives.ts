@@ -2,7 +2,7 @@
 // the student to do, read against the project and the running game.
 
 import {ImageType} from './ai/images/types';
-import {ImageCounts} from './guideSteps';
+import {ImageCounts} from './projectCounts';
 import {Tab} from './redux/spriteLab2Redux';
 import {WorldCell} from './world';
 
@@ -60,9 +60,12 @@ export interface Objective {
 }
 
 export interface Objectives {
-  /** Markdown, shown above the list. */
+  /** Markdown, shown above the list, or alone when there is no list. */
   title?: string;
-  items: Objective[];
+  /** None means nothing to do: Continue from the start. */
+  items?: Objective[];
+  /** A short line the collapsed Guide keeps. */
+  collapsedText?: string;
 }
 
 /** What the running game has done so far on this level. */

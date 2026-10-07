@@ -36,18 +36,6 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Find the treasure.** The **when touches** event is ready. Drag a **say** block onto the dotted outline under it, so your character says something when they reach it. Click **Play** and go get it."
-      },
-      {
-        "text": "**Treasure found!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Find the treasure.**",
       "items": [

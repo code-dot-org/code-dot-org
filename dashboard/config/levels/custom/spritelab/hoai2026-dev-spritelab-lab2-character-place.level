@@ -32,18 +32,6 @@
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
-      {
-        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline. It puts your character on the **left**. Click **Play** to see them."
-      },
-      {
-        "text": "**There they are.** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Add your character.**",
       "items": [

@@ -32,18 +32,6 @@
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
-      {
-        "text": "**Add them on the right.** Drag **make new sprite** onto the dotted outline. They turn to face your main character. Click **Play**."
-      },
-      {
-        "text": "**Now there are two.** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Add them on the right.**",
       "items": [

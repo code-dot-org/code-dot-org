@@ -49,12 +49,9 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
-    "guide_steps": [
-      {
-        "text": "# Make another character for your story\n\n1. Press **New Image**\n\n- To use AI, write a prompt that describes your character, then press **Generate**.\n- You can always make adjustments and draw your own!",
-        "showContinue": true
-      }
-    ],
+    "objectives": {
+      "title": "# Make another character for your story\n\n1. Press **New Image**\n\n- To use AI, write a prompt that describes your character, then press **Generate**.\n- You can always make adjustments and draw your own!"
+    },
     "preload_asset_list": null,
     "encrypted_examples": [
 

@@ -50,12 +50,9 @@
     "enable_big_playspace": "false",
     "display_name": "Create a background",
     "bubble_choice_description": "Create a background for your game",
-    "guide_steps": [
-      {
-        "text": "# Make a background\n\n1. Give the image a name\n\n- Write a prompt that describes a place, then press **Generate**.\n- You can always make adjustments and draw your own!",
-        "showContinue": true
-      }
-    ],
+    "objectives": {
+      "title": "# Make a background\n\n1. Give the image a name\n\n- Write a prompt that describes a place, then press **Generate**.\n- You can always make adjustments and draw your own!"
+    },
     "preload_asset_list": null,
     "encrypted_examples": [
 

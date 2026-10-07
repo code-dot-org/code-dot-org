@@ -49,12 +49,9 @@
     "enable_big_playspace": "false",
     "display_name": "Create platforms",
     "bubble_choice_description": "Create the platforms for your game. ",
-    "guide_steps": [
-      {
-        "text": "# Create a platform to jump on to!\n\n1. Make a new image.\n- Write a prompt to create an image for platform tiles that your character can stand on.",
-        "showContinue": true
-      }
-    ],
+    "objectives": {
+      "title": "# Create a platform to jump on to!\n\n1. Make a new image.\n- Write a prompt to create an image for platform tiles that your character can stand on."
+    },
     "preload_asset_list": null,
     "encrypted_examples": [
 

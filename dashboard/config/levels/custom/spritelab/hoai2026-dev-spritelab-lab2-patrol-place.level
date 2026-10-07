@@ -34,18 +34,6 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Bring back your second character.** Click a square on top of some blocks to put them there. Click another square to move them."
-      },
-      {
-        "text": "**They're in your world.** Click **Play** and go find them. Then click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "worldSprites": 3
-        }
-      }
-    ],
     "objectives": {
       "title": "**Bring back your second character.**",
       "items": [

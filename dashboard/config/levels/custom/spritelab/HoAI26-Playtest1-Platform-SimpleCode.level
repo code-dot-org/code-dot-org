@@ -337,12 +337,9 @@
     "display_name": "Code Your Player",
     "bubble_choice_description": "Code your new player into your game",
     "thumbnail_url": "https://images.code.org/c4bbb55daea8eaf080045412da87b71d-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
-    "guide_steps": [
-      {
-        "text": "# Code your player sprite\n\n1. Use the blocks to set your sprite as the player.\n- Make it speak with a say block.\n- **Press the Play Button** then try moving the player with arrow keys! Use space to jump!",
-        "showContinue": true
-      }
-    ],
+    "objectives": {
+      "title": "# Code your player sprite\n\n1. Use the blocks to set your sprite as the player.\n- Make it speak with a say block.\n- **Press the Play Button** then try moving the player with arrow keys! Use space to jump!"
+    },
     "soft_buttons": [
       "leftButton",
       "rightButton",

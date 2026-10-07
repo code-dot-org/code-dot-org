@@ -91,12 +91,6 @@
         ".........."
       ]
     ],
-    "guide_steps": [
-      {
-        "text": "**A ready-made world.** We built some platforms with your block. Run and jump. Can you reach the top? Then click **Continue**.",
-        "showContinue": true
-      }
-    ],
     "objectives": {
       "title": "**A ready-made world.** We built some platforms with your block.",
       "items": [

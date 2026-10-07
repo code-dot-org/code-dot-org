@@ -32,18 +32,6 @@
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
-      {
-        "text": "**Talk later.** The **at [6] seconds** event is ready for your new character. Drag a **say** block onto the dotted outline under it. Click **Play** and wait for it."
-      },
-      {
-        "text": "**Right on time!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Talk later.**",
       "items": [

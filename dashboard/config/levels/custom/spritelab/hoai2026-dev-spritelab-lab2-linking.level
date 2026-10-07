@@ -27,18 +27,6 @@
     "image_role_defaults": {
       "sprite": "friend"
     },
-    "guide_steps": [
-      {
-        "text": "**Link your scenes.** The **at [9] seconds** event is ready. Drag **go to scene** onto the dotted outline under it. Click **Play** and wait for it."
-      },
-      {
-        "text": "**Your scenes are connected!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Link your scenes.**",
       "items": [

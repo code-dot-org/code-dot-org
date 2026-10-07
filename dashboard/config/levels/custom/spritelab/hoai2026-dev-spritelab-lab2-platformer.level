@@ -95,18 +95,6 @@
         ".........."
       ]
     ],
-    "guide_steps": [
-      {
-        "text": "**Make this world yours.** Place platforms on the grid. Add blocks, erase blocks, build paths and towers. Click **Play** to try it."
-      },
-      {
-        "text": "**You built a platformer!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Make this world yours.**",
       "items": [

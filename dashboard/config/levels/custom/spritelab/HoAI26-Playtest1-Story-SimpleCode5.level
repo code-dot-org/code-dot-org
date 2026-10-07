@@ -445,12 +445,9 @@
     "display_name": "Create an object",
     "bubble_choice_description": "Create an object for your story",
     "thumbnail_url": "https://images.code.org/d87a1c81d9e637d47936bde88c20cca3-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
-    "guide_steps": [
-      {
-        "text": "#Add more objects to your story\n\n1. Press **New Image**\n\n- To use AI, write a prompt that describes your character or object, then press **Generate**.\n- You can always make adjustments!",
-        "showContinue": true
-      }
-    ],
+    "objectives": {
+      "title": "#Add more objects to your story\n\n1. Press **New Image**\n\n- To use AI, write a prompt that describes your character or object, then press **Generate**.\n- You can always make adjustments!"
+    },
     "preload_asset_list": null,
     "encrypted_examples": [
 

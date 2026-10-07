@@ -54,11 +54,6 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {
-  countImagesByType,
-  imageCountsDelta,
-  useGuideSteps,
-} from '../guideSteps';
 import {imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
@@ -92,6 +87,7 @@ import {
   withUnavailableSongs,
 } from '../musicProjects';
 import {WorkspaceSource} from '../objectives';
+import {countImagesByType, imageCountsDelta} from '../projectCounts';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -575,15 +571,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     []
   );
-  const guide = useGuideSteps({
-    steps: levelProperties.guideSteps,
-    grid: activeWorld.grid,
-    activeTab,
-    animations: animationList,
-    baselineImages,
-    fallback: levelProperties.longInstructions,
-  });
-
   // The level's checklist.
   const playing = activeTab === 'Play' && isRunning;
   const playProgress = usePlayProgress(playing);
@@ -603,7 +590,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const objectiveRoles = useMemo(() => {
     const roles = new Set<string>();
-    levelProperties.objectives?.items.forEach(({check}) => {
+    levelProperties.objectives?.items?.forEach(({check}) => {
       if ('role' in check && check.role) {
         roles.add(check.role);
       }
@@ -1950,7 +1937,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               defaultStyle={DEFAULT_IMAGE_STYLE}
               imageRole={levelProperties.levelMode?.imageRole}
               uploadImage={uploadImage}
-              instructions={guide.text}
+              instructions={
+                objectives.active
+                  ? objectives.title
+                  : levelProperties.longInstructions
+              }
               showTts={showTtsFor(levelProperties)}
             />
           ) : (
@@ -1958,8 +1949,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <GenerateImagePane imageLevel {...imagePaneProps} />
               <GenerateSpriteLab
                 levelMode={levelProperties.levelMode}
-                instructions={guide.text}
-                showContinue={guide.showContinue}
+                instructions={levelProperties.longInstructions}
                 objectives={objectives}
                 levelProperties={levelProperties}
               />
@@ -2121,9 +2111,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
               onLayout={handleGuideLayout}
-              instructions={guide.text}
-              collapsedText={guide.collapsedText}
-              showContinue={guide.showContinue}
+              instructions={levelProperties.longInstructions}
               objectives={objectives}
               levelProperties={levelProperties}
             />

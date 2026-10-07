@@ -3,7 +3,6 @@
 
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
-import {ImageCounts} from '../guideSteps';
 import {
   checkObjective,
   EMPTY_RUNTIME,
@@ -12,6 +11,7 @@ import {
   RuntimeProgress,
   WorkspaceSource,
 } from '../objectives';
+import {ImageCounts} from '../projectCounts';
 import {Tab} from '../redux/spriteLab2Redux';
 import {WorldCell} from '../world';
 
@@ -26,6 +26,7 @@ export interface ObjectivesState {
   title?: string;
   items: ObjectiveItemState[];
   allDone: boolean;
+  collapsedText?: string;
 }
 
 /** What the engine reports about the running player. */
@@ -148,7 +149,7 @@ export function useObjectives({
   );
   const items = objectives?.items;
   useEffect(() => {
-    if (!items) {
+    if (!items?.length) {
       return;
     }
     setEarned(current => {
@@ -162,17 +163,18 @@ export function useObjectives({
     });
   }, [items, inputs]);
 
-  if (!items?.length) {
+  if (!objectives) {
     return {active: false, items: [], allDone: false};
   }
-  const states = items.map((item, index) => ({
+  const states = (items ?? []).map((item, index) => ({
     text: item.text,
     done: earned.has(index),
   }));
   return {
     active: true,
-    title: objectives?.title,
+    title: objectives.title,
     items: states,
     allDone: states.every(item => item.done),
+    collapsedText: objectives.collapsedText,
   };
 }

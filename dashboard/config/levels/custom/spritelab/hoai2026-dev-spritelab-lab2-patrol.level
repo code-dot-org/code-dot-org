@@ -32,18 +32,6 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Set them walking.** Drag **begins patrolling** onto the dotted outline. Click **Play**."
-      },
-      {
-        "text": "**They're on the move.** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Set them walking.**",
       "items": [

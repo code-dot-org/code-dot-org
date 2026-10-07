@@ -36,18 +36,6 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Go and meet them.** The **when touches** event is ready for your player and your second character. Drag a **say** block onto the dotted outline for a hello, or **restart scene** to send your player back to the start. Click **Play**."
-      },
-      {
-        "text": "**Your world has company.** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Go and meet them.**",
       "items": [

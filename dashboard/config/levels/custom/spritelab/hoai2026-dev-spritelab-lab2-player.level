@@ -94,18 +94,6 @@
         ".........."
       ]
     ],
-    "guide_steps": [
-      {
-        "text": "**Make your character the player.** Drag **set as player** onto the dotted outline. Click **Play**. Arrow keys: **left** and **right** to run, **up** to jump."
-      },
-      {
-        "text": "**You're in control!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Make your character the player.**",
       "items": [

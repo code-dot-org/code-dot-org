@@ -71,18 +71,6 @@
         }
       }
     ],
-    "guide_steps": [
-      {
-        "text": "**Say something later.** Drag a **say** block onto the dotted outline under **at [3] seconds**. Click **Play** and wait for it."
-      },
-      {
-        "text": "**Perfect timing!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
     "objectives": {
       "title": "**Say something later.**",
       "items": [

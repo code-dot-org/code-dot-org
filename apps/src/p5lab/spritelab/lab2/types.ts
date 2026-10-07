@@ -8,7 +8,6 @@ import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
 import {Objectives} from './objectives';
-import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
 /** The animation-list category marking an image as a background, not a costume. */
@@ -98,36 +97,6 @@ export interface Sources extends ProjectSources {
  * `after` is what must hold to reach this step from the one before it, every
  * listed clause of it (the first step needs none).
  */
-export interface GuideStep {
-  text: string;
-  /** A short line the guide keeps when the student collapses it, so the
-      Continue button does not sit there alone. */
-  collapsedText?: string;
-  /** Offer the Continue button to the next level while on this step. */
-  showContinue?: boolean;
-  /**
-   * Image counts are measured from what the project held when the level
-   * opened, so a level gates on the images made on it, not the ones it
-   * inherited from earlier levels.
-   */
-  after?: {
-    /** At least this many block-kind cells placed in the World. */
-    worldBlocks?: number;
-    /** At least this many sprite-kind cells placed in the World. */
-    worldSprites?: number;
-    /** At least this many images made on this level. */
-    images?: number;
-    /** At least this many sprite-type images made on this level. */
-    spriteImages?: number;
-    /** At least this many background-type images made on this level. */
-    backgroundImages?: number;
-    /** At least this many block-type images made on this level. */
-    blockImages?: number;
-    /** This tab is active. */
-    tab?: Tab;
-  };
-}
-
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
@@ -141,9 +110,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     type?: SceneType;
   };
   /** Staged text for the floating guide, in order. */
-  guideSteps?: GuideStep[];
-  /** The level's checklist (objectives.ts); when present it gates Continue
-      in place of guide_steps' showContinue. */
+  /** The level's objectives (objectives.ts): the Guide's text, checklist
+      and Continue gate. */
   objectives?: Objectives;
   /** Premade world for the pinned scene, one string per playfield row
       anchored to the floor. 'B' cells take the block image the student made

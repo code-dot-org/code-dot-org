@@ -49,12 +49,9 @@
     "display_name": "Create an object",
     "bubble_choice_description": "Create an object your player is searching for",
     "thumbnail_url": "https://images.code.org/964a851355f4b6c2b66095b459f57ab7-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
-    "guide_steps": [
-      {
-        "text": "# Create an Object your player is searching for\n\n1. Press **New Image**\n\n- Write a prompt that describes the object, then press **Generate**.\n- You can always make adjustments and draw your own!",
-        "showContinue": true
-      }
-    ],
+    "objectives": {
+      "title": "# Create an Object your player is searching for\n\n1. Press **New Image**\n\n- Write a prompt that describes the object, then press **Generate**.\n- You can always make adjustments and draw your own!"
+    },
     "preload_asset_list": null,
     "encrypted_examples": [
 

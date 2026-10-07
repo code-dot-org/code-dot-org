@@ -27,28 +27,30 @@ const ObjectivesList: React.FunctionComponent<ObjectivesListProps> = ({
         openExternalLinksInNewTab
       />
     )}
-    <ul className={styles.list}>
-      {items.map((item, index) => (
-        <li
-          key={index}
-          className={classNames(styles.item, item.done && styles.itemDone)}
-        >
-          <span className={styles.mark} aria-hidden="true">
-            {item.done && (
-              <FontAwesomeV6Icon iconStyle="solid" iconName="check" />
-            )}
-          </span>
-          <span className={styles.srOnly}>
-            {item.done ? 'Done: ' : 'To do: '}
-          </span>
-          <EnhancedSafeMarkdown
-            markdown={item.text}
-            className={styles.text}
-            openExternalLinksInNewTab
-          />
-        </li>
-      ))}
-    </ul>
+    {items.length > 0 && (
+      <ul className={styles.list}>
+        {items.map((item, index) => (
+          <li
+            key={index}
+            className={classNames(styles.item, item.done && styles.itemDone)}
+          >
+            <span className={styles.mark} aria-hidden="true">
+              {item.done && (
+                <FontAwesomeV6Icon iconStyle="solid" iconName="check" />
+              )}
+            </span>
+            <span className={styles.srOnly}>
+              {item.done ? 'Done: ' : 'To do: '}
+            </span>
+            <EnhancedSafeMarkdown
+              markdown={item.text}
+              className={styles.text}
+              openExternalLinksInNewTab
+            />
+          </li>
+        ))}
+      </ul>
+    )}
   </div>
 );
 
