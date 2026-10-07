@@ -2,7 +2,8 @@
 // and the status each checkpoint takes from that. Nothing here touches React
 // or storage; useProgress and progressStore build on it.
 
-import {hashString} from '../ai/hashString';
+import {hashString} from '@cdo/apps/utils';
+
 import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =

@@ -1,6 +1,9 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {resolveStepInstructions} from '@cdo/apps/adaptive/ai/resolveStepInstructions';
+import {
+  StepInstructionsOptions,
+  resolveStepInstructions,
+} from '@cdo/apps/adaptive/ai/resolveStepInstructions';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {useStepInstructions} from '@cdo/apps/adaptive/views/steps/useStepInstructions';
 import {AichatContext} from '@cdo/apps/aichat/types';
@@ -41,7 +44,7 @@ const aichatContext: AichatContext = {
   channelId: undefined,
 };
 const sources = {source: ''};
-const base = {
+const base: StepInstructionsOptions = {
   pathway,
   checkpoint,
   step,
@@ -91,7 +94,7 @@ describe('useStepInstructions', () => {
     expect(result.current.instructions).toBeUndefined();
   });
 
-  it('goes unresolved again when an input changes, then resolves for the new one', async () => {
+  it('re-resolves when an input changes, keeping the old answer until the new one', async () => {
     mockResolve
       .mockResolvedValueOnce('First.')
       .mockResolvedValueOnce('Second.');
@@ -104,9 +107,30 @@ describe('useStepInstructions', () => {
 
     rerender({...base, projectInfo: {name: 'Dog Den', description: 'Cats.'}});
 
-    expect(result.current.isResolved).toBe(false);
+    expect(result.current.isResolved).toBe(true);
+    expect(result.current.instructions).toBe('First.');
     await waitForNextUpdate();
     expect(result.current.instructions).toBe('Second.');
+    expect(mockResolve).toHaveBeenCalledTimes(2);
+  });
+
+  it('keeps its answer while re-resolving after an input change', async () => {
+    mockResolve.mockResolvedValueOnce('First.').mockResolvedValueOnce('First.');
+    const {result, rerender, waitForNextUpdate} = renderHook(
+      props => useStepInstructions(props),
+      {initialProps: base}
+    );
+    await waitForNextUpdate();
+
+    // The cache write-back after a generation changes stepContext; the lab
+    // must not lose its answer, and so unmount, while the hit is re-read.
+    rerender({
+      ...base,
+      stepContext: {generated: {instructions: 'First.', inputsHash: 'x'}},
+    });
+
+    expect(result.current.isResolved).toBe(true);
+    expect(result.current.instructions).toBe('First.');
     expect(mockResolve).toHaveBeenCalledTimes(2);
   });
 

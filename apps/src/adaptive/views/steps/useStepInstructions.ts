@@ -19,7 +19,8 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
   useEffect(() => {
     // Nothing to resolve until the project has loaded.
     if (opts.sources === undefined) return;
-    setResolved(undefined);
+    // Intentionally don't setResolved(undefined) here. After the lab first
+    // mounts, a rerun replaces the text in place rather than unmounting the lab.
     let cancelled = false;
     resolveStepInstructions({
       pathway: opts.pathway,

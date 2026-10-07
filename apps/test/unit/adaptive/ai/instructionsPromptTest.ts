@@ -1,4 +1,3 @@
-import {hashString} from '@cdo/apps/adaptive/ai/hashString';
 import {
   buildInstructionsPrompt,
   generatedInstructionsSchema,
@@ -150,13 +149,5 @@ describe('summarizeProjectFiles', () => {
 
   it('is empty with no sources', () => {
     expect(summarizeProjectFiles(undefined)).toBe('');
-  });
-});
-
-describe('hashString', () => {
-  it('is stable and distinguishes inputs', () => {
-    expect(hashString('abc')).toBe(hashString('abc'));
-    expect(hashString('abc')).not.toBe(hashString('abd'));
-    expect(hashString('')).toMatch(/^[0-9a-f]{8}$/);
   });
 });
