@@ -22,13 +22,24 @@ import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
+import {BUILTIN_RULE_META} from '../blockly/builtinMeta';
+import {buildDomainPalette} from '../blockly/domainBlocks';
+import {
+  eventChoicesForKind,
+  eventChoicesIn,
+  kindFactsFrom,
+  type EventChoice,
+} from '../blockly/eventChoices';
+import {FOUNDATION_TRAIT_VALUES} from '../blockly/foundation';
 import {label} from '../blockly/label';
 import {placementKey} from '../blockly/mapPlacements';
 import {fileIdForModule} from '../blockly/openModule';
 import {
   projectActorOptions,
-  projectStyleFileOptions,
   projectMapActorTypes,
+  projectOwnMetas,
+  projectRuleMetas,
+  projectStyleFileOptions,
   projectWorldOptions,
 } from '../blockly/projectModules';
 import {setRevealer} from '../callouts/reveal';
@@ -132,6 +143,47 @@ export const MapEditor = ({
     [currentSources],
   );
   const actorOptions = useMemo(() => projectActorOptions(files), [files]);
+
+  /**
+   * The events an actor of a kind can start a section with, for the map
+   * inspector's quick add (`blockly/eventChoices`): what a placement's own
+   * script can hold, narrowed to what reaches that kind. Built when the menu
+   * asks, and kept until the files change — building a palette is not
+   * something to do on every edit of the map.
+   */
+  const eventsCache = useRef<{
+    files: Record<string, string>;
+    choices: EventChoice[];
+    facts: ReturnType<typeof kindFactsFrom>;
+    rules: ReturnType<typeof projectRuleMetas>;
+  } | null>(null);
+  const eventsFor = useCallback(
+    (kind: string): EventChoice[] => {
+      if (eventsCache.current?.files !== files) {
+        const rules = projectRuleMetas(files);
+        const owns = projectOwnMetas(files);
+        const palette = buildDomainPalette(rules, {
+          fileKind: 'placement',
+          ownProperties: owns,
+        });
+        eventsCache.current = {
+          files,
+          choices: eventChoicesIn(palette.toolbox, palette.blocks),
+          facts: kindFactsFrom(files, owns as never),
+          rules: [...BUILTIN_RULE_META, ...rules],
+        };
+      }
+      const held = eventsCache.current;
+      return eventChoicesForKind(
+        held.choices,
+        kind,
+        held.facts,
+        held.rules,
+        FOUNDATION_TRAIT_VALUES,
+      );
+    },
+    [files],
+  );
   // The project's themes, for the map's own choice and for each placement's
   // (specs/STYLES_PLAN.md).
   const themeOptions = useMemo(() => projectStyleFileOptions(files), [files]);
@@ -731,6 +783,7 @@ export const MapEditor = ({
         }}
         withheld={withheld}
         appBuilder={appBuilder}
+        eventsFor={eventsFor}
         kinds={kinds}
         onEnhanceKind={enhanceKind}
         onOpenKind={openKind}

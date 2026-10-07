@@ -43,6 +43,7 @@ import {localizeBlocks, localizeToolbox} from '../blockly/localizeBlocks';
 import {setCurrentPlacements} from '../blockly/moduleOptions';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {standInBlocks} from '../blockly/standInBlocks';
+import {arrangeTopBlocks} from '../blockly/tidyLayout';
 import {withoutEmptyHeadings} from '../blockly/toolboxFilter';
 import {DesignSystemToolboxPlugin} from '../blockly/toolboxStyle';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
@@ -164,6 +165,30 @@ export const PlacementScriptEditor = ({
     if (loadedWorkspace.current !== workspace) {
       if (event.type === Blockly.Events.FINISHED_LOADING) {
         loadedWorkspace.current = workspace;
+        // One column, in the order the saved positions read — the file
+        // editor's layout (`blockly/tidyLayout`), so a section the quick add
+        // put first is first and in view. Silent: laying out is not editing.
+        void Blockly.renderManagement.finishQueuedRenders().then(() => {
+          const tops = workspace.getTopBlocks(false);
+          const boxes = tops.map(block => {
+            const at = block.getRelativeToSurfaceXY();
+            const size = block.getHeightWidth();
+            return {x: at.x, y: at.y, width: size.width, height: size.height};
+          });
+          const places = arrangeTopBlocks(boxes);
+          Blockly.Events.disable();
+          try {
+            tops.forEach((block, index) =>
+              block.moveBy(
+                places[index].x - boxes[index].x,
+                places[index].y - boxes[index].y,
+              ),
+            );
+          } finally {
+            Blockly.Events.enable();
+          }
+          workspace.scroll(0, 0);
+        });
       }
       return;
     }

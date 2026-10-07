@@ -84,6 +84,26 @@ Imperative, as a body surface's head is: Blockly writes `movable: false`
 and `deletable: false` into what it saves for such a block, and every save
 takes them back out (`withoutPins`), so the file says what it did before.
 
+## Adding a section — BUILT
+
+A "+" sits in each gap down the column and after the last section — never
+above the file's own definition. It opens the events this file's toolbox
+offers, grouped by drawer and worded as each hat reads (`when … is
+clicked`), and picking one adds that section at the gap: an edit, one undo
+step, laid out where it was put and brought into view
+(`eventChoices.eventChoicesIn`, `addSectionButtons`). The "+" is SVG in the
+workspace's own canvas, so it scrolls and zooms with the blocks; it is not
+drawn on a body surface, in a read-only file, or while a section is being
+dragged.
+
+The map inspector has the quick version for one placement: a bolt beside
+Code opens the events an actor of that kind can actually hear — its own,
+its parents', and those of the traits it holds, the built-in rules'
+reaching through their one trait (`eventChoicesForKind`). An event of a
+trait the kind does not hold is not offered: its handler would never run.
+Picking one puts the hat first in that placement's own code and opens it;
+the placement's editor lays out its column on opening, as the file's does.
+
 ## Order of work
 
 1. **The index.** `workspaceIndex` over live blocks and unbuilt bodies; the

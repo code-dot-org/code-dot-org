@@ -41,6 +41,7 @@ import {
   type MapDoc,
   type Placement,
   type Transform,
+  withEventHandler,
 } from '../mapModel';
 
 const doc = (map: Partial<MapDoc>): string =>
@@ -674,5 +675,30 @@ describe('what a map says about a camera', () => {
     expect(withoutPlacement(held, 'Hero').actors.map(one => one.id)).toEqual([
       'Coin',
     ]);
+  });
+});
+
+describe('withEventHandler', () => {
+  it('adds the hat above whatever the placement’s code already holds', () => {
+    const actor = {
+      type: 'actors/coin',
+      id: 'a',
+      blocks: {blocks: {blocks: [{type: 'hat', x: 20, y: 300}]}},
+    } as never;
+    const added = withEventHandler(actor, 'world_on_Space_CreatedEvent');
+    const blocks = added.blocks!.blocks!.blocks!;
+    expect(blocks.map(block => block.type)).toEqual([
+      'world_on_Space_CreatedEvent',
+      'hat',
+    ]);
+    expect(blocks[0].y).toBeLessThan(300);
+  });
+
+  it('gives a placement with no code its first section', () => {
+    const added = withEventHandler(
+      {type: 'actors/coin', id: 'a'} as never,
+      'world_on_Space_CreatedEvent',
+    );
+    expect(added.blocks!.blocks!.blocks).toHaveLength(1);
   });
 });

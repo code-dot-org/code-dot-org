@@ -11,6 +11,7 @@ import {describe, expect, it} from 'vitest';
 import {
   arrangeTopBlocks,
   isFreeFloating,
+  gapCenters,
   gapIndexFor,
   headerPlaces,
   orderKeys,
@@ -237,5 +238,24 @@ describe('dragging a top block between the others', () => {
     ]);
     // Over the end, nothing moves.
     expect(headerPlaces([40, 40], 2, 50)).toEqual([20, 92]);
+  });
+});
+
+describe('where the “+” between sections goes', () => {
+  const sections = [
+    {y: 20, height: 100},
+    {y: 152, height: 40},
+  ];
+
+  it('is the middle of each gap, and past the last', () => {
+    expect(gapCenters(sections, true)).toEqual([136, 208]);
+  });
+
+  it('is above the first too, unless the first is the file’s definition', () => {
+    expect(gapCenters(sections, false)).toEqual([4, 136, 208]);
+  });
+
+  it('is at the top of an empty file', () => {
+    expect(gapCenters([], false)).toEqual([20]);
   });
 });

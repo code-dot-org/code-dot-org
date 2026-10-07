@@ -16,7 +16,7 @@
 // comes from `stageGeometry`, which has no canvas in it and is tested as such.
 // What is left here is drawing, gesture and state.
 
-import {Button, Typography} from '@mui/material';
+import {Button, ListSubheader, Menu, MenuItem, Typography} from '@mui/material';
 import type {
   ChangeEvent,
   KeyboardEvent as ReactKeyboardEvent,
@@ -30,6 +30,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
+import type {EventChoice} from '../blockly/eventChoices';
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
@@ -79,6 +80,7 @@ import {
   withPlacementAnchor,
   withPlacementLayer,
   withBackground,
+  withEventHandler,
   type MapSlotDoc,
   toLocalPosition,
   withParent,
@@ -225,6 +227,11 @@ export interface MapStageProps {
    * the map editor's third view (specs/MAP_FIRST.md, "The editor's modes").
    */
   onEditScript?: (id: string | undefined) => void;
+  /**
+   * The events an actor of a kind can start a section with, for the quick
+   * add in the inspector (`blockly/eventChoices`). Absent, it is not offered.
+   */
+  eventsFor?: (kind: string) => readonly EventChoice[];
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
   /**
@@ -312,11 +319,45 @@ export interface MapStageProps {
  * (a pixel with Alt), dragging moves it, Delete removes it, and the inspector
  * edits its position and its other properties.
  */
+/**
+ * The quick-add menu's rows: each event under the drawer it is in, flat, as
+ * a menu's children have to be its rows.
+ */
+const eventRows = (
+  choices: readonly EventChoice[],
+  onPick: (type: string) => void,
+) => {
+  if (choices.length === 0) {
+    return [
+      <MenuItem key="none" dense disabled>
+        No events reach this kind
+      </MenuItem>,
+    ];
+  }
+  const rows: JSX.Element[] = [];
+  let drawer = '';
+  for (const choice of choices) {
+    if (choice.drawer !== drawer) {
+      drawer = choice.drawer;
+      rows.push(
+        <ListSubheader key={`drawer:${drawer}`}>{drawer}</ListSubheader>,
+      );
+    }
+    rows.push(
+      <MenuItem key={choice.type} dense onClick={() => onPick(choice.type)}>
+        {choice.label}
+      </MenuItem>,
+    );
+  }
+  return rows;
+};
+
 export const MapStage = ({
   doc,
   onDocChange,
   onDocPreview,
   onEditScript,
+  eventsFor,
   worldCameras = [],
   withheld,
   appBuilder = false,
@@ -374,6 +415,8 @@ export const MapStage = ({
   // button, a double-click, Enter. Withheld, the inspector's button stays and
   // says which lesson brings it; the canvas offers nothing.
   const canOpenScript = Boolean(onEditScript) && !locked('map-scripts');
+  /** The open quick-add menu's anchor: the button it opened from. */
+  const [eventMenu, setEventMenu] = useState<HTMLElement | null>(null);
   const noteId = (id: Affordance, where: string) => `withheld-${id}-${where}`;
   const orWithheld = (id: Affordance, where: string, act: () => void) =>
     locked(id)
@@ -2802,6 +2845,16 @@ export const MapStage = ({
                   )}
                 />
               )}
+              {canOpenScript && eventsFor && (
+                // A section for THIS actor, started from the event it
+                // answers: the quick way to its own code, for the events
+                // its kind can actually hear (`blockly/eventChoices`).
+                <IconAction
+                  label="Add an event"
+                  icon="bolt"
+                  onClick={event => setEventMenu(event.currentTarget)}
+                />
+              )}
               {selectedKind && onEnhanceKind && (
                 <IconAction
                   label={`Enhance ${selectedKind.name}…`}
@@ -2832,6 +2885,27 @@ export const MapStage = ({
                 onClick={() => deleteActor(selectedActor.id)}
                 disabled={isReadOnly}
               />
+              {eventMenu && eventsFor && selectedActor && (
+                <Menu
+                  open
+                  anchorEl={eventMenu}
+                  onClose={() => setEventMenu(null)}
+                  slotProps={{paper: {style: {maxHeight: 420}}}}
+                >
+                  {eventRows(eventsFor(selectedActor.type), type => {
+                    setEventMenu(null);
+                    commit({
+                      ...mapRef.current,
+                      actors: mapRef.current.actors.map(actor =>
+                        actor.id === selectedActor.id
+                          ? withEventHandler(actor, type)
+                          : actor,
+                      ),
+                    });
+                    onEditScript?.(selectedActor.id);
+                  })}
+                </Menu>
+              )}
             </div>
           </div>
           {/* What a withheld one says about the lesson that brings it, under

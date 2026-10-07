@@ -2134,3 +2134,52 @@ describe('a placement’s script, from the canvas', () => {
     expect(floating(plain)).toBeNull();
   });
 });
+
+// The quick way to a section of one actor's own code: an event its kind can
+// hear, picked from the inspector (`blockly/eventChoices`).
+describe('adding an event to a placement', () => {
+  const EVENTS = [
+    {
+      type: 'world_on_Mouse_IsClickedEvent',
+      label: 'when … is clicked',
+      drawer: 'Mouse',
+    },
+    {
+      type: 'world_on_Space_CreatedEvent',
+      label: 'when … is created',
+      drawer: 'Space',
+    },
+  ];
+  const select = (canvas: HTMLCanvasElement, map: MapDoc) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+  };
+
+  it('lists what the kind can hear, adds the section, and opens its code', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const eventsFor = vi.fn(() => EVENTS);
+    const {canvas, written, ...view} = mount(map, {onEditScript, eventsFor});
+    select(canvas, map);
+    fireEvent.click(view.getByRole('button', {name: 'Add an event'}));
+    expect(eventsFor).toHaveBeenCalledWith('actors/coin');
+    expect(screen.getByText('Mouse')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('menuitem', {name: 'when … is clicked'}));
+    const a = written().actors.find(actor => actor.id === 'a')!;
+    expect(a.blocks?.blocks?.blocks?.map(block => block.type)).toEqual([
+      'world_on_Mouse_IsClickedEvent',
+    ]);
+    expect(onEditScript).toHaveBeenCalledWith('a');
+  });
+
+  it('is not offered while a placement’s code is withheld', () => {
+    const map = doc();
+    const {canvas, ...view} = mount(map, {
+      onEditScript: vi.fn(),
+      eventsFor: () => EVENTS,
+      withheld: new Set(['map-scripts'] as const),
+    });
+    select(canvas, map);
+    expect(view.queryByRole('button', {name: 'Add an event'})).toBeNull();
+  });
+});

@@ -750,3 +750,32 @@ export const linksFrom = (
           : [],
       );
     });
+
+/**
+ * A placement with a section added to its own workspace: an event's hat, at
+ * the TOP of its column (specs/LAZY_WORKSPACE_PLAN.md, "Adding a section").
+ *
+ * First, so it is in view the moment the placement's code opens, with
+ * nothing to scroll to: above everything the workspace already holds, which
+ * is what the editor's layout reads a saved workspace's order off. What the
+ * hat's sockets hold (`this actor` in a placement's own script) is the
+ * block's to fill as it is built.
+ */
+export function withEventHandler(actor: Placement, type: string): Placement {
+  const held = actor.blocks?.blocks?.blocks ?? [];
+  const highest = held.reduce(
+    (least, block) =>
+      Math.min(least, typeof block.y === 'number' ? block.y : 0),
+    0,
+  );
+  return {
+    ...actor,
+    blocks: {
+      ...actor.blocks,
+      blocks: {
+        ...actor.blocks?.blocks,
+        blocks: [{type, x: 20, y: highest - 1000}, ...held],
+      },
+    },
+  };
+}

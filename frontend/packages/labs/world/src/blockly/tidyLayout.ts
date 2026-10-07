@@ -206,3 +206,31 @@ export function headerPlaces(
 export const COLUMN_X = ORIGIN.x;
 /** …and the gap between one section and the next down it. */
 export const COLUMN_GAP = GAP;
+
+/**
+ * Where the "+" between sections goes: the middle of each gap down the
+ * column, and one gap's width past the last section — not above the first
+ * when the first is the file's own definition, which nothing goes above
+ * (`pinnedRoots`).
+ *
+ * `sections` are the top blocks as they stand, in any order.
+ */
+export function gapCenters(
+  sections: ReadonlyArray<{y: number; height: number}>,
+  firstIsPinned: boolean,
+): number[] {
+  const ordered = [...sections].sort((a, b) => a.y - b.y);
+  if (ordered.length === 0) {
+    return [ORIGIN.y];
+  }
+  const centers: number[] = [];
+  if (!firstIsPinned) {
+    centers.push(ordered[0].y - GAP / 2);
+  }
+  ordered.forEach((section, index) => {
+    const bottom = section.y + section.height;
+    const next = ordered[index + 1];
+    centers.push(next ? (bottom + next.y) / 2 : bottom + GAP / 2);
+  });
+  return centers;
+}

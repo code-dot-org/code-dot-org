@@ -1,4 +1,4 @@
-import {Button, Typography} from '@mui/material';
+import {Button, ListSubheader, Menu, MenuItem, Typography} from '@mui/material';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
@@ -59,6 +59,7 @@ import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 import {refreshActorPictures} from './actorAbout';
 import {projectActorIcons} from './actorIconMeta';
 import {addActorThumbnails, setActorIcons} from './actorThumbnails';
+import {clearAddButtons, drawAddButtons} from './addSectionButtons';
 import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {syncBodyToggles} from './bodyToggle';
@@ -66,6 +67,7 @@ import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {movedItself} from './editorEvents';
+import {eventChoicesIn, type EventChoice} from './eventChoices';
 import {refreshBlockDesigns} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
@@ -136,6 +138,7 @@ import {
   arrangeTopBlocks,
   COLUMN_GAP,
   COLUMN_X,
+  gapCenters,
   gapIndexFor,
   headerPlaces,
   isFreeFloating,
@@ -303,6 +306,34 @@ function parseWorkspace(contents: string): BlocklySerialization {
  * positions read in is the order the layout made, so a file reopens as it
  * was left.
  */
+/**
+ * The add-a-section menu's rows: each event under the drawer it is in.
+ *
+ * Flat, headings and items side by side, because a menu's children have to
+ * be its rows — a fragment around a group is one child to it.
+ */
+const eventMenuItems = (
+  choices: readonly EventChoice[],
+  onPick: (type: string) => void,
+) => {
+  const rows: JSX.Element[] = [];
+  let drawer = '';
+  for (const choice of choices) {
+    if (choice.drawer !== drawer) {
+      drawer = choice.drawer;
+      rows.push(
+        <ListSubheader key={`drawer:${drawer}`}>{drawer}</ListSubheader>,
+      );
+    }
+    rows.push(
+      <MenuItem key={choice.type} dense onClick={() => onPick(choice.type)}>
+        {choice.label}
+      </MenuItem>,
+    );
+  }
+  return rows;
+};
+
 /** Where the layout put each top block, and which the learner has moved. */
 interface LayoutMemory {
   placed: Map<string, number>;
@@ -1022,6 +1053,21 @@ export const BlocklyFileEditor = ({
     [toolbox, editing],
   );
 
+  // ADDING A SECTION (specs/LAZY_WORKSPACE_PLAN.md): the events this file's
+  // toolbox offers, for the "+" in each gap down the column.
+  const eventMenuChoices = useMemo(
+    () => eventChoicesIn(surfaceToolbox, blocks),
+    [surfaceToolbox, blocks],
+  );
+  /** The open add-a-section menu: where it is, and which gap it is for. */
+  const [addMenu, setAddMenu] = useState<{
+    left: number;
+    top: number;
+    y: number;
+  } | null>(null);
+  /** A section just added, to bring into view once it is laid out. */
+  const revealAfterLayout = useRef<string | null>(null);
+
   // The words on the blocks, in the reader's language.
   //
   // Done to the DEFINITIONS rather than to the workspace: Blockly has no
@@ -1340,6 +1386,46 @@ export const BlocklyFileEditor = ({
     [bodies],
   );
 
+  /**
+   * What follows every layout pass: the "+" in each gap, redrawn where the
+   * sections now are, and a section just added brought into view.
+   *
+   * No "+" on a body surface, which is one member's implementation, nor in a
+   * read-only file, nor while a section is being dragged.
+   */
+  const afterLayout = useCallback(
+    (workspace: Blockly.WorkspaceSvg): void => {
+      if (surfaceRef.current !== null || isReadOnly || workspace.isDragging()) {
+        clearAddButtons(workspace);
+      } else {
+        const sections = workspace
+          .getTopBlocks(false)
+          .filter(top => !top.isInsertionMarker())
+          .map(top => ({
+            y: top.getRelativeToSurfaceXY().y,
+            height: top.getHeightWidth().height,
+            pinned: isPinnedRoot(top.type),
+          }));
+        const first = [...sections].sort((a, b) => a.y - b.y)[0];
+        drawAddButtons(
+          workspace,
+          gapCenters(sections, Boolean(first?.pinned)),
+          (y, left, top) => setAddMenu({left, top, y}),
+        );
+      }
+      const added = revealAfterLayout.current;
+      const block = added ? workspace.getBlockById(added) : null;
+      if (block) {
+        revealAfterLayout.current = null;
+        workspace.scrollBoundsIntoView(
+          block.getBoundingRectangleWithoutChildren(),
+          48,
+        );
+      }
+    },
+    [isReadOnly],
+  );
+
   const layOut = useCallback(
     (workspace: Blockly.WorkspaceSvg): void => {
       syncToggles(workspace);
@@ -1350,11 +1436,12 @@ export const BlocklyFileEditor = ({
       // arrange, which is why the tidy hangs off the promise rather than
       // following the loop. Asking a block how tall it is before it has rendered
       // is what this function exists to work around.
-      void Blockly.renderManagement
-        .finishQueuedRenders()
-        .then(() => tidyTopBlocks(workspace, layoutMemory.current));
+      void Blockly.renderManagement.finishQueuedRenders().then(() => {
+        tidyTopBlocks(workspace, layoutMemory.current);
+        afterLayout(workspace);
+      });
     },
-    [syncToggles],
+    [syncToggles, afterLayout],
   );
   /** The current `layOut`, for the effect that listens for fonts only once. */
   const layOutRef = useRef(layOut);
@@ -1379,10 +1466,11 @@ export const BlocklyFileEditor = ({
         reflowPending.current = false;
         if (!workspace.isDragging()) {
           tidyTopBlocks(workspace, layoutMemory.current);
+          afterLayout(workspace);
         }
       });
     },
-    [syncToggles],
+    [syncToggles, afterLayout],
   );
 
   toggleBodyRef.current = (id: string) => {
@@ -1481,6 +1569,7 @@ export const BlocklyFileEditor = ({
       const placed = layoutMemory.current.placed;
       const placeOf = (block: Blockly.BlockSvg) =>
         placed.get(block.id) ?? block.getRelativeToSurfaceXY().y;
+      clearAddButtons(workspace);
       const expanded = tops.filter(top => hasBuiltBody(top)).map(top => top.id);
       for (const top of tops) {
         if (hasBuiltBody(top)) {
@@ -1613,10 +1702,36 @@ export const BlocklyFileEditor = ({
           const bounds = block.getBoundingRectangleWithoutChildren();
           workspace.scrollBoundsIntoView(bounds, 48);
         }
+        afterLayout(workspace);
       });
     },
-    [bodies, fileId, syncToggles],
+    [bodies, fileId, syncToggles, afterLayout],
   );
+
+  /**
+   * Add a section starting with `type`, in the gap at `y`.
+   *
+   * An edit like dragging one out of a drawer — one undo step — placed at the
+   * gap so the layout files it there: a top block it has not placed yet goes
+   * where it is (`tidyLayout.orderKeys`). Then brought into view.
+   */
+  const addSection = useCallback((type: string, y: number) => {
+    const workspace = workspaceRef.current;
+    setAddMenu(null);
+    if (!workspace) {
+      return;
+    }
+    Blockly.Events.setGroup(true);
+    try {
+      const block = Blockly.serialization.blocks.append(
+        {type, x: COLUMN_X, y} as never,
+        workspace,
+      );
+      revealAfterLayout.current = block.id;
+    } finally {
+      Blockly.Events.setGroup(false);
+    }
+  }, []);
 
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
@@ -2356,6 +2471,25 @@ export const BlocklyFileEditor = ({
             onChange={handleChange}
           />
         </BlocklyProvider>
+        <Menu
+          open={addMenu !== null}
+          onClose={() => setAddMenu(null)}
+          anchorReference="anchorPosition"
+          anchorPosition={
+            addMenu ? {top: addMenu.top, left: addMenu.left} : undefined
+          }
+          slotProps={{paper: {style: {maxHeight: 420}}}}
+        >
+          {eventMenuChoices.length === 0 ? (
+            <MenuItem dense disabled>
+              Nothing to start a section with here
+            </MenuItem>
+          ) : (
+            eventMenuItems(eventMenuChoices, type =>
+              addSection(type, addMenu?.y ?? 0),
+            )
+          )}
+        </Menu>
       </div>
     </div>
   );
