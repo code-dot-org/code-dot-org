@@ -6,6 +6,7 @@ import {
   TutorGalleryData,
 } from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -339,7 +340,7 @@ describe('ChallengeGallery', () => {
       expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
     );
 
-    fireEvent.click(
+    await userEvent.click(
       screen.getByRole('checkbox', {name: /Visible for students/})
     );
 
