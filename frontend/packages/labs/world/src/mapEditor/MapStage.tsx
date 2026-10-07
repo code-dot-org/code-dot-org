@@ -354,8 +354,10 @@ const eventRows = (
 
 /**
  * A toolbar button that is on or off: the Icons, Layers and Cameras
- * switches. Filled while on, outlined while off — the design system's two
- * secondary buttons — and `aria-pressed` says which to a reader.
+ * switches. Outlined either way, in the brand's purple while on and in the
+ * neutral secondary while off — the design system's two outlined buttons.
+ * A filled button for "on" stood out darker than anything else on the
+ * toolbar. `aria-pressed` says which to a reader.
  */
 const ToolbarToggle = ({
   pressed,
@@ -367,8 +369,8 @@ const ToolbarToggle = ({
   children: string;
 }) => (
   <Button
-    variant={pressed ? 'contained' : 'outlined'}
-    color="secondary"
+    variant="outlined"
+    color={pressed ? 'primary' : 'secondary'}
     size="extraSmall"
     aria-pressed={pressed}
     onClick={onClick}
