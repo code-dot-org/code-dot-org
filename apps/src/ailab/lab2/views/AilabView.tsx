@@ -133,7 +133,6 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
         isRunning={false}
         hasRun={false}
         hasEdited={false}
-        skipValidationOncePassed
         validationTooltip={
           mode?.requireAccuracy
             ? `Train a model with at least ${mode.requireAccuracy}% accuracy`

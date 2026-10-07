@@ -267,42 +267,6 @@ describe('NavigationArea', () => {
       expect(getContinueButton().dataset.tooltip).toBe('Train a model');
     });
 
-    it('stays disabled on a passed validated level by default', () => {
-      mockGetCurrentLevel.mockReturnValue({
-        id: '1',
-        levelNumber: 1,
-        status: LevelStatus.perfect,
-      });
-      store.dispatch(
-        setValidationState({
-          hasConditions: true,
-          satisfied: false,
-          message: null,
-          index: 0,
-        })
-      );
-      renderDefault();
-      expect(getContinueButton().dataset.disabled).toBe('true');
-    });
-
-    it('is enabled on a passed validated level when skipValidationOncePassed', () => {
-      mockGetCurrentLevel.mockReturnValue({
-        id: '1',
-        levelNumber: 1,
-        status: LevelStatus.perfect,
-      });
-      store.dispatch(
-        setValidationState({
-          hasConditions: true,
-          satisfied: false,
-          message: null,
-          index: 0,
-        })
-      );
-      renderDefault({skipValidationOncePassed: true});
-      expect(getContinueButton().dataset.disabled).toBe('false');
-    });
-
     it('is enabled when validation is satisfied', () => {
       store.dispatch(
         setValidationState({

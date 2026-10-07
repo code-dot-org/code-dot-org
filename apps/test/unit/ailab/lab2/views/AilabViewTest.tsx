@@ -179,7 +179,6 @@ describe('AilabView', () => {
   it('describes the requirement on the disabled Continue', () => {
     renderLevel('1');
     expect(jest.mocked(ResourcePanel).mock.lastCall?.[0]).toMatchObject({
-      skipValidationOncePassed: true,
       validationTooltip: 'Train a model with at least 70% accuracy',
     });
   });
