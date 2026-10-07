@@ -12,8 +12,8 @@ class QuizQuestionPlacementsController < ApplicationController
   # POST /levels/:level_id/quiz_question_placements
   #
   # Creates a question of the given type and attaches it to this Quiz level.
-  # requires_new: true - a plain transaction
-  # would just join a test's open one and not actually roll back.
+  # requires_new: a unit test's own transaction would otherwise absorb this one,
+  # so a failed create would leave the question behind instead of rolling back.
   def create
     question = ActiveRecord::Base.transaction(requires_new: true) do
       question_class = quiz_question_class
