@@ -23,8 +23,8 @@ ARG \
 
 USER root
 
-# System build dependencies. mysql2 and rmagick link against the -dev packages,
-# node-gyp shells out to python3, and the Gemfile has git-sourced gems.
+# System build dependencies. mysql2, rmagick, and yaml link against the -dev
+# packages, node-gyp shells out to python3, and the Gemfile has git-sourced gems.
 RUN set -eux \
   && apt-get -qq update \
   && DEBIAN_FRONTEND=noninteractive apt-get -qq -y install --no-install-recommends \
@@ -32,6 +32,7 @@ RUN set -eux \
        default-libmysqlclient-dev \
        git \
        libmagickwand-dev \
+       libyaml-dev \
        pkg-config \
        python3 \
        > /dev/null \

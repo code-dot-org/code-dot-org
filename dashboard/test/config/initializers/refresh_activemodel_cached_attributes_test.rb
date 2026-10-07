@@ -13,15 +13,13 @@ class UpdatableTestModel
 
   # Define a custom implementation of the ActiveRecord-provided
   # `reset_column_information` method which will manually update column
-  # information to the new state, rather than just clearing the cache.
+  # information to the new state, to emulate the effect of the underlying
+  # database schema getting updated.
   def self.reset_column_information
     attribute :bar, :string
 
-    # _default_attributes is a class_attribute, so `self` is required
-    # rubocop:disable Style/RedundantSelf
-    self._default_attributes = ActiveModel::AttributeSet.new({})
-    self._default_attributes['bar'] = ActiveModel::Attribute.from_database('bar', nil, ActiveModel::Type::String.new)
-    # rubocop:enable Style/RedundantSelf
+    reset_default_attributes
+    _default_attributes['bar'] = ActiveModel::Attribute.from_database('bar', nil, ActiveModel::Type::String.new)
   end
 end
 
@@ -29,16 +27,12 @@ class RefreshActiveModelCachedAttributesTest < ActiveSupport::TestCase
   def setup
     # Mock the results of querying the SchemaMigrations table, so we can
     # dynamically override the number of versions it returns to emulate the
-    # experience of executing a migration.
-    ActiveRecord::SchemaMigration.stubs(:all).returns([1, 2, 3])
+    # effect of executing a migration.
+    ActiveRecord::SchemaMigration.any_instance.stubs(:count).returns(3)
 
     # Force a recount before every test, since the other tests might have
     # changed something.
     UpdatableTestModel.new.send(:count_and_remember_database_migrations)
-  end
-
-  def teardown
-    ActiveRecord::SchemaMigration.unstub(:all)
   end
 
   test 'count_and_remember_database_migrations' do
@@ -46,7 +40,7 @@ class RefreshActiveModelCachedAttributesTest < ActiveSupport::TestCase
     assert_equal 3, UpdatableTestModel.class_variable_get(:@@latest_count_of_database_migrations)
 
     # New migrations won't immediately update the saved count
-    ActiveRecord::SchemaMigration.stubs(:all).returns([1, 2, 3, 4])
+    ActiveRecord::SchemaMigration.any_instance.stubs(:count).returns(4)
     assert_equal 3, UpdatableTestModel.class_variable_get(:@@latest_count_of_database_migrations)
 
     # Invoking the "count and remember" method will
@@ -62,17 +56,9 @@ class RefreshActiveModelCachedAttributesTest < ActiveSupport::TestCase
 
     # Adding a new migration to the set of migrations that have been executed
     # on this database should result in a positive detection.
-    ActiveRecord::SchemaMigration.stubs(:all).returns([1, 2, 3, 4])
+    ActiveRecord::SchemaMigration.any_instance.stubs(:count).returns(4)
     assert u.send(:new_database_migration_since_initialization?)
     assert UpdatableTestModel.new.send(:new_database_migration_since_initialization?)
-
-    # Note that changing the specific versions returned without changing the
-    # total count of versions will result in a false negative. This probably
-    # isn't an desirable outcome, but we don't expect migrations to ever vanish
-    # from this set so shouldn't in practice ever be an issue.
-    ActiveRecord::SchemaMigration.stubs(:all).returns([9, 8, 7])
-    refute u.send(:new_database_migration_since_initialization?)
-    refute UpdatableTestModel.new.send(:new_database_migration_since_initialization?)
   end
 
   test 'assign_attributes will update cached information rather than raising an error when possible' do
@@ -87,7 +73,7 @@ class RefreshActiveModelCachedAttributesTest < ActiveSupport::TestCase
 
     # If the underlying database is updated such that the field does exist,
     # initialization will now work.
-    ActiveRecord::SchemaMigration.stubs(:all).returns([1, 2, 3, 4])
+    ActiveRecord::SchemaMigration.any_instance.stubs(:count).returns(4)
     UpdatableTestModel.new(bar: 'baz')
   end
 end

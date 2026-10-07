@@ -50,8 +50,6 @@ class Plc::LearningModule < ApplicationRecord
 
   NONREQUIRED_MODULE_TYPES = (MODULE_TYPES - [REQUIRED_MODULE]).freeze
 
-  attr_readonly :plc_course_unit_id
-
   belongs_to :lesson, foreign_key: 'stage_id', optional: true
   belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
