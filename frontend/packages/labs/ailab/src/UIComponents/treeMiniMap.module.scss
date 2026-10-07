@@ -1,7 +1,7 @@
 @use 'sass:list';
 
-// Leaves cycle through this order, chosen so neighbors stay distinct under
-// simulated colorblindness, including across the wrap from last to first.
+// Leaves cycle through this order, chosen so neighbors have good contrast for
+// colorblindness, including across the wrap from last to first.
 $leaf-colors: brand, accent-orange, info, error, warning, accent-pink, success;
 $mini-map-height: 80px;
 $edge-padding: 8px;
