@@ -4,8 +4,6 @@ import moduleStyles from './flyout-stamps.module.scss';
 
 const STAMP_HEIGHT_PX = 18;
 const STAMP_PADDING_PX = 6;
-// Width per character of the stamp's bold 11px text.
-const CHAR_PX = 7;
 // Gap between a block's right edge and its stamp.
 const GAP_PX = 12;
 // The stamp centers on the block's first row, whatever the block's height.
@@ -59,19 +57,18 @@ function decorateFlyout(
       const {height, width} = block.getHeightWidth();
       const x = xy.x + width + GAP_PX;
       const y = xy.y + Math.min(height, FIRST_ROW_PX) / 2 - STAMP_HEIGHT_PX / 2;
-      const stampWidth = label.length * CHAR_PX + STAMP_PADDING_PX * 2;
       const group = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.G,
         {
           class: `${STAMP_CLASS} ${moduleStyles.stamp}`,
           transform: `translate(${x}, ${y})`,
+          'aria-hidden': 'true',
         },
         canvas
       );
-      BlocklyCore.utils.dom.createSvgElement(
+      const rect = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.RECT,
         {
-          width: stampWidth,
           height: STAMP_HEIGHT_PX,
           rx: STAMP_HEIGHT_PX / 2,
           ry: STAMP_HEIGHT_PX / 2,
@@ -81,7 +78,6 @@ function decorateFlyout(
       const text = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.TEXT,
         {
-          x: stampWidth / 2,
           y: STAMP_HEIGHT_PX / 2,
           'text-anchor': 'middle',
           'dominant-baseline': 'central',
@@ -89,6 +85,10 @@ function decorateFlyout(
         group
       );
       text.textContent = label;
+      const stampWidth =
+        Math.ceil(text.getComputedTextLength()) + STAMP_PADDING_PX * 2;
+      rect.setAttribute('width', String(stampWidth));
+      text.setAttribute('x', String(stampWidth / 2));
     });
   };
 

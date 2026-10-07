@@ -3,13 +3,13 @@
 // the student deletes it again.
 
 import * as BlocklyCore from 'blockly/core';
-import {useEffect, useRef} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 
 import {installFlyoutStamps} from '../blockly/flyoutStamps';
 import {usedBlockTypes} from '../newBlocks';
 import {Scene} from '../types';
 
-export const NEW_STAMP_TEXT = 'New';
+const STAMP_TEXT = 'New';
 
 export function useNewBlockStamps({
   enabled,
@@ -23,18 +23,23 @@ export function useNewBlockStamps({
   workspaceVersion: number;
   getWorkspace: () => BlocklyCore.WorkspaceSvg | null | undefined;
 }): void {
-  const seen = useRef(new Set<string>());
-  usedBlockTypes(scenes).forEach(type => seen.current.add(type));
-  // Re-stamp when the set of used blocks grows.
-  const seenKey = [...seen.current].sort().join(',');
+  const used = useMemo(() => usedBlockTypes(scenes), [scenes]);
+  const [seen, setSeen] = useState<ReadonlySet<string>>(new Set());
+  useEffect(() => {
+    setSeen(current => {
+      if ([...used].every(type => current.has(type))) {
+        return current;
+      }
+      return new Set([...current, ...used]);
+    });
+  }, [used]);
 
   useEffect(() => {
     if (!enabled || !workspaceVersion) {
       return;
     }
-    const used = new Set(seenKey.split(',').filter(Boolean));
     return installFlyoutStamps(getWorkspace(), type =>
-      used.has(type) ? undefined : NEW_STAMP_TEXT
+      seen.has(type) ? undefined : STAMP_TEXT
     );
-  }, [enabled, workspaceVersion, seenKey, getWorkspace]);
+  }, [enabled, workspaceVersion, seen, getWorkspace]);
 }
