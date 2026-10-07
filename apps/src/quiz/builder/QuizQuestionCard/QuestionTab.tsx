@@ -26,11 +26,11 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
       disabled={disabled}
     />
     <TextField
-      name="stem"
+      name="questionTitle"
       label="Question title"
       size="m"
-      value={draft.stem}
-      onChange={e => onChange({...draft, stem: e.target.value})}
+      value={draft.questionTitle}
+      onChange={e => onChange({...draft, questionTitle: e.target.value})}
       disabled={disabled}
     />
   </div>

@@ -9,7 +9,7 @@ const QUESTION: QuizBuilderQuestion = {
   id: 7,
   type: 'MultipleChoiceQuestion',
   questionName: 'Existing question',
-  stem: 'What is 2 + 2?',
+  questionTitle: 'What is 2 + 2?',
   choices: [
     {id: 'a', text: '3'},
     {id: 'b', text: '4'},

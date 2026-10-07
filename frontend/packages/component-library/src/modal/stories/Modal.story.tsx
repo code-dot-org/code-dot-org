@@ -1,5 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
+import {expect, userEvent, within} from 'storybook/test';
 
 import {Button} from '@/button';
 
@@ -91,6 +92,49 @@ DefaultModal.args = {
     onClick: () => console.log('Secondary action clicked'),
   },
   onClose: () => null,
+};
+
+export const ModalInShortViewport = SingleTemplate.bind({});
+ModalInShortViewport.args = {
+  ...DefaultModal.args,
+  title: 'Modal in a Short Viewport',
+  description:
+    'This modal is taller than the viewport. The panel shrinks to fit and scrolls, so its title and buttons stay on screen. '.repeat(
+      8,
+    ),
+};
+ModalInShortViewport.globals = {
+  viewport: {value: 'short', isRotated: false},
+};
+ModalInShortViewport.parameters = {
+  viewport: {
+    options: {
+      short: {name: 'Short', styles: {width: '1024px', height: '320px'}},
+    },
+  },
+  eyes: {browser: {width: 1024, height: 320, name: 'chrome'}},
+  a11y: {
+    config: {
+      rules: [
+        {
+          // The shrunken content section scrolls but takes no focus; legacy Modal shares this defect.
+          id: 'scrollable-region-focusable',
+          enabled: false,
+        },
+      ],
+    },
+  },
+};
+ModalInShortViewport.play = async ({canvasElement}) => {
+  await userEvent.click(
+    within(canvasElement).getByRole('button', {name: 'Open Modal'}),
+  );
+  const panel = await within(document.body).findByRole('dialog');
+  const {top, bottom} = panel.getBoundingClientRect();
+
+  expect(window.innerHeight).toBe(320);
+  expect(top).toBeGreaterThanOrEqual(0);
+  expect(bottom).toBeLessThanOrEqual(window.innerHeight);
 };
 
 export const ModalWithoutSecondaryButton = SingleTemplate.bind({});

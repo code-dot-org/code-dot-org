@@ -4,10 +4,10 @@ $info-icon-size: 12px;
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 12px;
+}
+
+.fieldLabel .text {
   font-weight: 600;
-  line-height: 18px;
-  color: var(--text-neutral-primary);
 }
 
 // Two classes, to outrank the theme's extraSmall padding and icon size.

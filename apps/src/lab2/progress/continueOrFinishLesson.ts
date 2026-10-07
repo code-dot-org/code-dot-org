@@ -43,6 +43,18 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
     }
   };
 
+// The navigation half of continueOrFinishLesson, for a level that has
+// already sent its own success report.
+export const navigateToNextLevelOrFinish =
+  (): ThunkAction<void, RootState, undefined, AnyAction> =>
+  (dispatch, getState) => {
+    const levelProperties = getState().lab.levelProperties;
+    if (!levelProperties) {
+      return;
+    }
+    handleNavigation(levelProperties, dispatch, getState);
+  };
+
 function handleNavigation(
   levelProperties: LevelProperties,
   dispatch: ThunkDispatch<RootState, undefined, AnyAction>,

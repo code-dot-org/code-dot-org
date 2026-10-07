@@ -41,6 +41,66 @@
   align-items: stretch;
 }
 
+$data-table-row-height: 28px;
+
+@mixin accuracy-readout {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
+$modal-max-width: 800px;
+$modal-margin: 24px;
+
+@mixin modal {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: min(#{$modal-max-width}, calc(100vw - #{2 * $modal-margin}));
+  max-height: calc(100vh - #{2 * $modal-margin});
+  overflow: hidden;
+  border-radius: var(--shape-xl);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-family-main);
+
+  // The design system's close button, moved into the title row.
+  > button {
+    inset-block-start: 24px;
+    inset-inline-end: 20px;
+  }
+}
+
+@mixin modal-title-row {
+  display: flex;
+  align-items: center;
+  padding: 18px 56px 18px 24px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+@mixin modal-action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 18px 20px 18px 24px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+// Include under two classes, to outrank DSCO's xs segmented buttons.
+@mixin segmented-buttons-xs {
+  // CADS borders an unselected segment one step darker than DSCO does.
+  --border-neutral-primary: var(--border-neutral-secondary);
+
+  button {
+    gap: 4px;
+  }
+
+  button span {
+    line-height: 18px;
+  }
+}
+
 @mixin canvas-overlay {
   position: absolute;
   top: 0;
