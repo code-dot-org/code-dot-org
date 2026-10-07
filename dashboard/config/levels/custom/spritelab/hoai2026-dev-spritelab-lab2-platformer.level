@@ -97,7 +97,7 @@
     ],
     "guide_steps": [
       {
-        "text": "**Make this world yours.** Paint platforms on the grid. Add blocks, erase blocks, build paths and towers. Click **Play** to try it."
+        "text": "**Make this world yours.** Place platforms on the grid. Add blocks, erase blocks, build paths and towers. Click **Play** to try it."
       },
       {
         "text": "**You built a platformer!** Click **Continue**.",
@@ -111,7 +111,7 @@
       "title": "**Make this world yours.**",
       "items": [
         {
-          "text": "Paint platforms on the grid.",
+          "text": "Place platforms on the grid.",
           "check": {
             "kind": "world",
             "changed": true
