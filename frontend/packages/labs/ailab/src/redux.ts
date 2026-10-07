@@ -60,11 +60,11 @@ export interface RootState {
   prediction: number | string | undefined;
   predictionTestData: Record<string, string | number>;
   predictionInputs: number[];
+  // TODO: move out of redux, as this is not serializable.
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
   trainingModalStep: TrainingModalStep | undefined;
-  // The modal is replaying the latest run's animation, not showing a new run.
   isTrainingReplay: boolean;
   currentColumn: string | undefined;
   saveStatus: string;
@@ -80,7 +80,7 @@ export interface RootState {
   mode?: Mode;
 }
 
-// Everything a training run writes, so a cancelled run can be put back.
+// Everything a training run writes, so a cancelled run can be undone.
 const TRAINING_RESULT_KEYS = [
   'featureNumberKey',
   'trainingExamples',
