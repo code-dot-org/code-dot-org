@@ -1,6 +1,7 @@
 /* Header row across the top of the lab's workspace. */
-import {Tooltip, Typography} from '@mui/material';
+import {Button, Tooltip, Typography} from '@mui/material';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 
 import {isPanelEnabled} from '../helpers/navigationValidation';
@@ -14,7 +15,11 @@ const TABS = [
   {panel: 'results', label: 'Testing', iconName: 'flask'},
 ] as const;
 
-const WorkspaceHeader = () => {
+interface WorkspaceHeaderProps {
+  onStartOver?: () => void;
+}
+
+const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
   const dispatch = useAppDispatch();
   const currentPanel = useAppSelector(state => state.currentPanel);
   const canTest = useAppSelector(state => isPanelEnabled(state, 'results'));
@@ -54,6 +59,20 @@ const WorkspaceHeader = () => {
       <Typography component="h2" variant="overline2" className={styles.title}>
         Workspace
       </Typography>
+      {onStartOver && (
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
+          startIcon={
+            <FontAwesomeV6Icon iconName="rotate-left" aria-hidden="true" />
+          }
+          onClick={onStartOver}
+          className={styles.startOver}
+        >
+          Start over
+        </Button>
+      )}
     </div>
   );
 };

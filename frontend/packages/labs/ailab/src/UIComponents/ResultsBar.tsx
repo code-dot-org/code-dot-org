@@ -48,7 +48,12 @@ const ResultsBar = () => {
             variant="outlined"
             color="secondary"
             size="extraSmall"
-            startIcon={<FontAwesomeV6Icon iconName="clock-rotate-left" />}
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName="clock-rotate-left"
+                aria-hidden="true"
+              />
+            }
             onClick={() => setOpenTab('allResults')}
           >
             All results
