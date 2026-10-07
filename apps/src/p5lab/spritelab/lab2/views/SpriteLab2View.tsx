@@ -623,7 +623,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const objectives = useObjectives({
     objectives: levelProperties.objectives,
-    storageKey: channelId ? `${levelProperties.id}:${channelId}` : undefined,
     images: objectiveImages,
     grid: activeWorld.grid,
     baselineGrid,

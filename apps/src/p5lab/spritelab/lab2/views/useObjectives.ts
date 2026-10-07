@@ -1,9 +1,7 @@
 // The level's checklist as the Guide shows it: which items hold, kept once
 // earned for the rest of the visit, and the game's progress feeding them.
 
-import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
-
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {ImageCounts} from '../guideSteps';
 import {
@@ -30,8 +28,6 @@ export interface ObjectivesState {
   allDone: boolean;
   doneText?: string;
 }
-
-const STORAGE_PREFIX = 'spritelab2Objectives:';
 
 /** What the engine reports about the running player. */
 export interface PlayerProgressReport {
@@ -104,12 +100,11 @@ export function usePlayProgress(playing: boolean): {
 
 /**
  * The checklist's state. An item stays done once it has held, like the
- * Guide's steps never retreat, and the done set is kept in local storage
- * under `storageKey` so a reload does not ask for a game goal again.
+ * Guide's steps never retreat; a reload starts the list over, as the level's
+ * milestone is the lasting record.
  */
 export function useObjectives({
   objectives,
-  storageKey,
   images,
   grid,
   baselineGrid,
@@ -120,7 +115,6 @@ export function useObjectives({
   runtime,
 }: {
   objectives: Objectives | undefined;
-  storageKey: string | undefined;
   images: ImageCounts;
   grid?: (WorldCell | null)[][];
   baselineGrid?: (WorldCell | null)[][];
@@ -130,18 +124,7 @@ export function useObjectives({
   everPlayed: boolean;
   runtime: RuntimeProgress;
 }): ObjectivesState {
-  const key = storageKey && `${STORAGE_PREFIX}${storageKey}`;
-  const [earned, setEarned] = useState<ReadonlySet<number>>(() => {
-    const saved = key ? tryGetLocalStorage(key, '') : '';
-    try {
-      const indexes = saved ? (JSON.parse(saved) as unknown) : [];
-      return new Set(
-        Array.isArray(indexes) ? indexes.filter(Number.isInteger) : []
-      );
-    } catch {
-      return new Set();
-    }
-  });
+  const [earned, setEarned] = useState<ReadonlySet<number>>(new Set());
   const inputs: ObjectiveInputs = useMemo(
     () => ({
       images,
@@ -165,8 +148,6 @@ export function useObjectives({
     ]
   );
   const items = objectives?.items;
-  const keyRef = useRef(key);
-  keyRef.current = key;
   useEffect(() => {
     if (!items) {
       return;
@@ -178,13 +159,7 @@ export function useObjectives({
           next.add(index);
         }
       });
-      if (next.size === current.size) {
-        return current;
-      }
-      if (keyRef.current) {
-        trySetLocalStorage(keyRef.current, JSON.stringify([...next]));
-      }
-      return next;
+      return next.size === current.size ? current : next;
     });
   }, [items, inputs]);
 
