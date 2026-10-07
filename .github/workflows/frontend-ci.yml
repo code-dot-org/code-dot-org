@@ -65,6 +65,9 @@ jobs:
               - '.github/**'
             fire-tablet:
               - 'frontend/apps/fire-tablet/**'
+              - 'frontend/apps/studio/**'
+              - 'frontend/packages/component-library/**'
+              - 'frontend/packages/fonts/**'
               - 'frontend/packages/lint-config/**'
               - 'frontend/packages/component-library-styles/**'
               - 'frontend/*'

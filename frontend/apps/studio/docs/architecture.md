@@ -25,7 +25,28 @@ The catch-all answers 404 for any path with a file extension. Only files carry o
 
 > **Note:** In production the app answers only while the `frontend_studio_enabled` feature flag is on. It is a DCDO flag, off in production by default, so production returns 404 until someone turns it on. The same flag turns the app off again without a deploy.
 
-## Init ordering
+## Packaged launchpad entry
+
+The Android/iOS prototype builds `launchpad/index.html` with
+`vite.launchpad.config.ts`, independently of the Rails entry above. Its
+`launchpad/application.tsx` mounts the Studio launchpad with the existing React
+runtime, fonts and CodeAI theme. It does not import the Rails router or call
+`initializeCore`, so it needs no local-origin auth/CSRF bootstrap. The emitted
+`dist-launchpad/` is the Capacitor workspace's `webDir`.
+
+The launchpad's static catalog specifies five hosted activities and each one's
+permitted course/project path families. `openActivity` calls the same local
+`CuratedActivities.open({url,title,allowedPaths})` interface on Android and iOS.
+The native plugin resolves after the child closes the activity, enabling the
+launchpad to restore focus. A plain remote WebView/WKWebView remains separate
+from the bridge-bearing local Studio view. Native implementations, navigation
+policy, and platform scaffolding live in `frontend/apps/fire-tablet`.
+
+This build bundles neither Oceans nor another curriculum lab. It establishes
+the Studio entry and opening boundary where a future local lab can be connected;
+no local-lab dispatcher or migration is implemented speculatively.
+
+## Rails entry init ordering
 
 `entrypoints/application.tsx` must call `initializeCore()` before rendering the router.
 

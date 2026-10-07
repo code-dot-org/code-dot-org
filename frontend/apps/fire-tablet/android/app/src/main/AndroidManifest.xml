@@ -26,6 +26,13 @@
 
         </activity>
 
+        <activity
+            android:name=".CuratedActivity"
+            android:exported="false"
+            android:process=":curatedActivities"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|screenLayout|uiMode|density"
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
     <!-- Permissions -->

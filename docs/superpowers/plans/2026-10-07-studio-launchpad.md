@@ -18,8 +18,8 @@
 
 ## Tasks and verification
 
-- [ ] Create the worktree at `.claude/worktrees/fire-tablet` on `stephen/fire-tablet-studio-wrapper`. Verify with `git worktree list` and `git status --short --branch`; preserve the original checkout.
-- [ ] Add Studio's `launchpad/index.html`, `entrypoints/launchpad.tsx`, `vite.launchpad.config.ts`, `tsconfig.launchpad.json`, and `src/modules/launchpad/` catalog, opening boundary, and React view. Use existing design-system theme, semantic controls, visible focus, and responsive SCSS. Provide a story for the new view. Contract:
+- [x] Create the worktree at `.claude/worktrees/fire-tablet` on `stephen/fire-tablet-studio-wrapper`. Verify with `git worktree list` and `git status --short --branch`; preserve the original checkout.
+- [x] Add Studio's `launchpad/index.html`, `launchpad/application.tsx`, `vite.launchpad.config.ts`, `tsconfig.launchpad.json`, and `src/modules/launchpad/` catalog, opening boundary, and React view. Use existing design-system theme, semantic controls, visible focus, and responsive SCSS. Provide a story for the new view. Contract:
 
   ```ts
   interface CuratedActivitiesPlugin {
@@ -31,14 +31,14 @@
   }
   ```
 
-- [ ] Add focused tests in `src/modules/launchpad/__tests__/`: native selection passes the selected URL/policy; web preview does not call native APIs; launch errors allow retry; closing restores focus; repeated taps cannot open parallel views.
-- [ ] Change the packaging workspace's `webDir` to `../studio/dist-launchpad`, build through the Studio launchpad Turbo task, and remove the superseded launcher/source tests. Add the pinned iOS dependency; install with Yarn and then verify `yarn install --immutable`.
-- [ ] Add Android's `CuratedActivitiesPlugin`, `CuratedActivity`, and `NavigationPolicy` next to `MainActivity`; register the plugin and non-exported isolated activity in the manifest. The policy checks exact `https://studio.code.org` origin, rejects encoded/ambiguous paths, and matches a prefix only at a path-segment boundary. Native unit tests cover valid redirects, adjacent/unrelated courses, userinfo, non-HTTPS URLs, hostile hosts, encoded separators, and dot segments.
-- [ ] Generate the Capacitor iOS project, register the local plugin through a custom bridge controller, and implement the same policy in Swift. Keep WKWebView separate from the bridge and use a non-persistent store. Check project/source registration and sync; record that Xcode build/device validation is unavailable on Linux.
-- [ ] Update the CI path filter to rebuild the wrapper when Studio changes. Run Android policy unit tests in the debug job. Update Studio README/architecture and wrapper README/validation with exact commands and limitations.
-- [ ] Run targeted frontend tests, lint/format/style/type checks and the normal Studio build to detect regressions. Build the launchpad and inspect output to establish that lab bundles and auth/bootstrap code are absent.
-- [ ] Run Chromium smoke checks of the preview, keyboard/focus, narrow portrait and tablet landscape reflow, and axe. Mock only the native boundary for native launch/return behavior. Verify every selected live URL redirects into its permitted course/project family; do not claim device compatibility from browser tests.
-- [ ] If an Android toolchain can be installed locally, build `assembleDebug` and `testDebugUnitTest`, inspect the manifest and packaged launchpad, and provide the APK. Record unavailable physical Fire and iOS tests without marking them complete.
+- [x] Add focused tests in `src/modules/launchpad/__tests__/`: native selection passes the selected URL/policy; web preview does not call native APIs; launch errors allow retry; closing restores focus; repeated taps cannot open parallel views.
+- [x] Change the packaging workspace's `webDir` to `../studio/dist-launchpad`, build through the Studio launchpad Turbo task, and remove the superseded launcher/source tests. Add the pinned iOS dependency; install with Yarn and then verify `yarn install --immutable`.
+- [x] Add Android's `CuratedActivitiesPlugin`, `CuratedActivity`, and `NavigationPolicy` next to `MainActivity`; register the plugin and non-exported isolated activity in the manifest. The policy checks exact `https://studio.code.org` origin, rejects encoded/ambiguous paths, and matches a prefix only at a path-segment boundary. Native unit tests cover valid redirects, adjacent/unrelated courses, userinfo, non-HTTPS URLs, hostile hosts, encoded separators, and dot segments.
+- [x] Generate the Capacitor iOS project, register the local plugin through a custom bridge controller, and implement the same policy in Swift. Keep WKWebView separate from the bridge and use a non-persistent store. Check project/source registration and sync; record that Xcode build/device validation is unavailable on Linux.
+- [x] Update the CI path filter to rebuild the wrapper when Studio changes. Run Android policy unit tests in the debug job. Update Studio README/architecture and wrapper README/validation with exact commands and limitations.
+- [x] Run targeted frontend tests, lint/format/style/type checks and the normal Studio build to detect regressions. Build the launchpad and inspect output to establish that lab bundles and auth/bootstrap code are absent.
+- [x] Run Chromium smoke checks of the preview, keyboard/focus, narrow portrait and tablet landscape reflow, and axe. Mock only the native boundary for native launch/return behavior. Verify every selected live URL redirects into its permitted course/project family; do not claim device compatibility from browser tests.
+- [x] If an Android toolchain can be installed locally, build `assembleDebug` and `testDebugUnitTest`, inspect the manifest and packaged launchpad, and provide the APK. Record unavailable physical Fire and iOS tests without marking them complete.
 
 ## Commands
 
@@ -55,3 +55,7 @@ yarn workspace @code-dot-org/fire-tablet ios:sync
 ```
 
 On macOS, open `frontend/apps/fire-tablet/ios/App/App.xcodeproj`, select an iOS simulator and build/run. No iOS signing identity or release claim is supplied by this prototype.
+
+## Completion evidence
+
+Implemented in the requested worktree. Six launchpad tests, 115 total Studio tests, four Android policy tests, frontend checks, normal Studio build, Android APK build/signature/assets inspection, Chromium keyboard/reflow/axe and mocked native boundary checks pass. iOS sync and Xcode project parsing pass. Physical Fire/Amazon Kids and iOS compilation/runtime tests remain unverified and are recorded in `frontend/apps/fire-tablet/docs/validation.md`.
