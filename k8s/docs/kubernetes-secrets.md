@@ -35,3 +35,72 @@ This allows us to inject things like MySQL and redis credentials for adhoc or eq
 
 - the source secret in AWS Secrets Manager is encrypted at rest there
 - after sync, the value is also stored in a Kubernetes `Secret` object, not just transiently in process memory
+
+## Monitoring and local development
+
+Live deployments leave `localDev.disableExternalIntegrations: false` (the
+chart default). No monitoring credentials or blank boot defaults are emitted
+in that mode. Secrets Manager supplies the credentials through
+`cdo-external-secrets`.
+
+Skaffold's development values set `localDev.disableExternalIntegrations: true`.
+That mode supplies the blank credentials needed for keyless boot and disables
+Sentry and OpenTelemetry, even when the worker uses `RAILS_ENV=production`.
+Monitoring overrides remain after external secrets in `envFrom`, so a local
+cluster with synced credentials still suppresses reporting. Explicit container
+`env` entries take precedence over all `envFrom` sources.
+
+MySQL, Redis, and MinIO credentials remain controlled by their respective
+`services.*.enabled` flags. They do not depend on the monitoring setting.
+
+Live environment values must set both `require_external_secrets: true` and
+`activeJobWorker.RAILS_ENV` to the target Rails environment. The worker does not
+inherit the chart-wide `RAILS_ENV`; its default is `adhoc`, where Sentry is off.
+Production, staging, test, and levelbuilder enable Sentry in Rails configuration.
+The backend credential is `dashboard_sentry_dsn`; `sentry_dsn`, `sentry_api_key`,
+and `sentry_auth_token` do not configure Rails error reporting.
+
+Sentry initializes in Rails workers as well as web processes. Its ActiveJob
+integration captures unhandled job exceptions. OpenTelemetry is not required
+for error delivery. Handled errors can use `Observability::Errors.report`;
+intermediate failures handled by ActiveJob `retry_on` are not reported by default.
+
+### Upgrading an existing live deployment
+
+After syncing the chart with local mode disabled, inspect the existing
+`cdo-local-secrets` Secret for obsolete monitoring keys. Older chart versions
+wrote them through `stringData`, which Kubernetes stores in `data`; omission
+from the new template must not be assumed to remove those stored entries.
+
+For the default release name, run the following in the target live namespace
+(using `kubectl -n NAMESPACE`). This removes only monitoring overrides
+and preserves local service passwords. It also covers a namespace previously
+run with local mode enabled:
+
+```sh
+kubectl -n NAMESPACE patch secret cdo-local-secrets --type merge --patch '{
+  "data": {
+    "enable_sentry": null,
+    "enable_opentelemetry": null,
+    "dashboard_sentry_dsn": null,
+    "cronjobs_honeybadger_api_key": null,
+    "dashboard_honeybadger_api_key": null,
+    "pagerduty_token": null,
+    "sentry_api_key": null,
+    "sentry_auth_token": null,
+    "sentry_dsn": null,
+    "slack_bot_token": null,
+    "slack_endpoint": null,
+    "slack_start_build_token": null,
+    "slack_token": null
+  }
+}'
+kubectl -n NAMESPACE rollout restart deployment/cdo-active-job-worker
+kubectl -n NAMESPACE rollout status deployment/cdo-active-job-worker
+```
+
+Restart any other consumers of that Secret as well. Environment variables are
+read when containers start. Verify that the new worker has a nonblank
+`CDO.dashboard_sentry_dsn`, Sentry is initialized, and a controlled failing
+ActiveJob reaches Sentry in staging before rolling out to production. Check
+credential presence without printing credential values.

@@ -121,6 +121,11 @@ generated worker commands, and invalid values without a cluster or database.
 
 ## Non-local clusters
 
+Live deployments use externally synced monitoring credentials. Skaffold
+development disables external integrations explicitly. See the
+[secrets guide](docs/kubernetes-secrets.md#monitoring-and-local-development)
+for configuration, verification, and removal of legacy blank overrides.
+
 Argo CD and Kargo configuration lives in the
 [`k8s-gitops`](https://github.com/code-dot-org/k8s-gitops) repository, normally
 checked out beside this one. Kargo watches `ghcr.io/code-dot-org/cdo-rails` and
