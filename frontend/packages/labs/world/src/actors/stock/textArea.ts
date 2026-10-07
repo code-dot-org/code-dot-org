@@ -550,7 +550,6 @@ const blinking = () => ({
 const key = (name: string, body: object) => ({
   type: 'world_on_Input_PressesEvent',
   fields: {FILTER0: name},
-  inputs: {ACTOR: me()},
   next: {block: body},
 });
 
@@ -631,7 +630,6 @@ export const textAreaActor = actorFile(
       // way to look further down a paragraph than you are typing in.
       {
         type: 'world_on_Mouse_IsScrolledByEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: scrollTo(
             sum('ADD', scroll(), {block: {type: 'world_event_value'}}),
@@ -642,13 +640,11 @@ export const textAreaActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {block: chain([takeFocus(), placeTheBar()])},
       },
       // A character goes in at the bar.
       {
         type: 'world_on_Input_TypesEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: onlyIf(
             focused(),

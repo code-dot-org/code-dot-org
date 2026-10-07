@@ -75,7 +75,7 @@ describe('the cameras a world declares', () => {
 describe('the cameras a placement’s script declares', () => {
   const inCreate = (row: object) => ({
     type: 'world_on_Space_CreatedEvent',
-    inputs: {ACTOR: {block: {type: 'world_this_actor'}}, DO: {block: row}},
+    inputs: {DO: {block: row}},
   });
 
   it('finds `for ⟨this actor⟩` inside a hat’s mouth', () => {

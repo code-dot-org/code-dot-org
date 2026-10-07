@@ -86,13 +86,7 @@ describe('what `this actor` is about', () => {
     const hat = {
       type: 'world_on_Collisions_StartsTouchingEvent',
       workspace,
-      inputs: {
-        ACTOR: {
-          type: 'world_actor_kind',
-          fields: {ACTOR: 'actors/crate'},
-          workspace,
-        },
-      },
+      fields: {SUBJECT: 'actors/crate'},
     };
 
     expect(actorAbout(asBlock({parent: hat, workspace}), 'this')).toEqual({

@@ -258,7 +258,7 @@ const MAIN_WORLD = JSON.stringify(
           type: 'world_on_ActorsTextInput_ChangedEvent',
           x: 20,
           y: 260,
-          inputs: {ACTOR: kind('actors/textInput')},
+          fields: {SUBJECT: 'actors/textInput'},
           next: {
             block: {
               type: 'world_set_ActorsProgressBar_FractionProperty',
@@ -288,8 +288,7 @@ const MAIN_WORLD = JSON.stringify(
           type: 'world_on_Mouse_IsClickedWithEvent',
           x: 20,
           y: 400,
-          fields: {FILTER0: ''},
-          inputs: {ACTOR: kind('actors/button')},
+          fields: {FILTER0: '', SUBJECT: 'actors/button'},
           next: {
             block: {
               type: 'world_do_ActorsSpeechBox_SayAction',

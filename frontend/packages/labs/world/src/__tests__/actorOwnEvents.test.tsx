@@ -72,7 +72,6 @@ const BEACON = JSON.stringify({
       // The hat, a top-level block of its own as every hat is.
       {
         type: 'world_on_ActorsBeacon_FlashesEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_set_ActorsBeacon_FlashesSeenProperty',
@@ -81,7 +80,7 @@ const BEACON = JSON.stringify({
               VALUE: {
                 block: {
                   type: 'math_arithmetic',
-                  fields: {OP: 'ADD'},
+                  fields: {OP: 'ADD', SUBJECT: 'actors/beacon'},
                   inputs: {
                     A: {
                       block: {
@@ -158,14 +157,6 @@ const WORLD_HEARS = JSON.stringify({
       },
       {
         type: 'world_on_ActorsBeacon_FlashesEvent',
-        inputs: {
-          ACTOR: {
-            block: {
-              type: 'world_actor_kind',
-              fields: {ACTOR: 'actors/beacon'},
-            },
-          },
-        },
         next: {
           block: {
             type: 'world_set_WorldsMain_FlashesProperty',

@@ -122,7 +122,6 @@ export const toggleActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: chain([
             {

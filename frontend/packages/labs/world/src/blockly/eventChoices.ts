@@ -12,6 +12,7 @@
 
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
+import {ANY_FIELD, THIS_FIELD} from './eventSubject';
 import type {EventMeta, RuleMeta} from './ruleMeta';
 import {memberLocalName, memberValue} from './ruleRegistry';
 
@@ -29,14 +30,31 @@ export interface EventChoice {
 interface Definition {
   type?: string;
   message0?: string;
+  args0?: ReadonlyArray<{type?: string; name?: string}>;
 }
 
-/** The wording of a hat, its sockets and fields as "…". */
-const labelOf = (definition: Definition | undefined, type: string): string =>
-  (definition?.message0 ?? type)
-    .replace(/%\d+/g, '…')
+/**
+ * The wording of a hat, its sockets and fields as "…".
+ *
+ * Whose event it is (`eventSubject`) is `this actor`, or `any` and a kind,
+ * in inputs of their own. Here it is one "…", as every other choice the
+ * block holds is: the words and the inputs that hold them say nothing.
+ */
+const labelOf = (definition: Definition | undefined, type: string): string => {
+  const silent = new Set(
+    (definition?.args0 ?? []).flatMap((arg, index) =>
+      arg.type === 'input_dummy' ||
+      arg.name === THIS_FIELD ||
+      arg.name === ANY_FIELD
+        ? [index + 1]
+        : [],
+    ),
+  );
+  return (definition?.message0 ?? type)
+    .replace(/%(\d+)/g, (_, at) => (silent.has(Number(at)) ? '' : '…'))
     .replace(/\s+/g, ' ')
     .trim();
+};
 
 const typeOf = (item: unknown): string | undefined =>
   typeof item === 'string'

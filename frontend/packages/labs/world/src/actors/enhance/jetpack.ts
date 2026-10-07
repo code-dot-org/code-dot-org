@@ -79,8 +79,8 @@ const answers =
     if (block.type !== hat || block.fields?.FILTER0 !== FLY_KEY) {
       return false;
     }
-    const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
-      ?.block?.fields?.ACTOR;
+    // A kind named means a world's handler, not this actor's own.
+    const named = block.fields?.SUBJECT || undefined;
     return (
       named === undefined && [...down(block)].some(row => row.type === action)
     );

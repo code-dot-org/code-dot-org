@@ -72,7 +72,7 @@ const project = (): MultiFileSource => {
         },
         {
           type: 'world_on_ActorsSlider_ChangedEvent',
-          inputs: {ACTOR: kind('actors/slider')},
+          fields: {SUBJECT: 'actors/slider'},
           next: {
             block: {
               type: 'world_set_ActorsLabel_TextProperty',

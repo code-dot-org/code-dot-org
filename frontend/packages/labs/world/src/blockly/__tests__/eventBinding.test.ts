@@ -56,7 +56,7 @@ describe('an event that carries an actor', () => {
   it('says so in the wording', () => {
     expect(
       blockNamed('rules/collisions', collisionsRule, CONTACT_HAT)?.message0,
-    ).toMatch(/when %1 starts touching %2/);
+    ).toMatch(/when %1 %2 %3 %4 %5 %6 starts touching %7/);
   });
 
   it('binds nothing — no variable, no renamed argument', () => {

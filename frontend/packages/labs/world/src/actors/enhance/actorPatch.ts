@@ -10,10 +10,12 @@
 // EVERY ROW READS THESE. The four that predated this file carried their own
 // copies for a while, moved across in a commit with no behavior in it.
 //
-// `fileOf` AND `subjectOf` ARE ONE-LINERS NOW, and stay: there were two kinds
-// of actor, and a patch asked these two questions rather than knowing the
-// answer. Every actor is a file, and a row that still asks is a row that will
-// not have to be opened if the answer changes again.
+// `fileOf` IS A ONE-LINER NOW, and stays: there were two kinds of actor, and
+// a patch asked the question rather than knowing the answer. Every actor is a
+// file, and a row that still asks is a row that will not have to be opened if
+// the answer changes again. Who a handler a row adds is about needs no asking
+// at all: in an actor's own file it is this actor, which an event block says
+// with nothing stored (`blockly/eventSubject`).
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -44,16 +46,6 @@ export const fileOf = (
   path: `${target.path}.actor`,
   root: {type: 'world_actor'},
 });
-
-/**
- * Who a hat this adds is about.
- *
- * In an actor's own file a hat is already about the kind whose file it is in,
- * and `this actor` is what fills the socket. In a world the same file holds
- * every actor's hats, so it has to say which kind — otherwise the coin patrols
- * too.
- */
-export const subjectOf = () => me();
 
 /** Whether a `use trait` for `trait` is already in this actor's chain. */
 export const wears = (

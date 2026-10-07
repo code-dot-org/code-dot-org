@@ -253,7 +253,6 @@ export function typewriterFor(modulePath: string): Typewriter {
     handler: {
       // One letter per firing. The whole of the typewriter.
       type: 'world_on_Time_TimerFiresEvent',
-      inputs: {ACTOR: me()},
       next: {
         block: chain([
           // One more character than is showing. `text` is the count, so there

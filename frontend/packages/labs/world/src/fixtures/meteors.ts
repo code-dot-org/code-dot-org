@@ -167,7 +167,6 @@ const SHIP_ACTOR = JSON.stringify({
         fields: {FILTER0: 'actors/meteor'},
         x: 520,
         y: 300,
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_print',
@@ -232,7 +231,6 @@ const METEOR_ACTOR = JSON.stringify({
         fields: {FILTER0: 'actors/energyBall'},
         x: 20,
         y: 300,
-        inputs: {ACTOR: me()},
         next: {
           block: stack([
             {

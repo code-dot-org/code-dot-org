@@ -64,11 +64,7 @@ export interface ReadDrawing {
 }
 
 /** How wide `text` is at `size`, in pixels — the painter's own font. */
-export type Measure = (
-  text: string,
-  size: number,
-  weight?: 'bold',
-) => number;
+export type Measure = (text: string, size: number, weight?: 'bold') => number;
 
 /** The project as text: `actors/label.actor` → its JSON, and so on. */
 export type Files = Record<string, string>;

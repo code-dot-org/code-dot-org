@@ -35,9 +35,7 @@ describe('where a memory is filed', () => {
   it('puts the project in the key', () => {
     const {world: one, storage} = world('abc123');
     one.save('score');
-    expect([...storage.held.keys()]).toEqual([
-      'world-lab.memory.abc123.score',
-    ]);
+    expect([...storage.held.keys()]).toEqual(['world-lab.memory.abc123.score']);
   });
 
   it('keeps two projects apart under the same name', () => {

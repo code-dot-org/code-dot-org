@@ -56,12 +56,7 @@ const WORLD = JSON.stringify({
       },
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        inputs: {
-          ACTOR: {
-            block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/button'}},
-          },
-        },
+        fields: {FILTER0: '', SUBJECT: 'actors/button'},
         next: {
           block: {
             type: 'world_print',

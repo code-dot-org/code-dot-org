@@ -33,7 +33,7 @@
 // takes the focus. The field does not summon it, because a field that summoned
 // a keyboard would summon one on a desktop too.
 
-import {chain, defineMap, me, words} from '../../actors/stock/workspace';
+import {chain, defineMap, words} from '../../actors/stock/workspace';
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 
 /** How far apart the keys sit, and how big the face inside that is. */
@@ -96,7 +96,6 @@ const PANEL_MIDDLE = VIEW - PANEL_HEIGHT / 2;
 const whenClicked = () => ({
   type: 'world_on_Mouse_IsClickedWithEvent',
   fields: {FILTER0: ''},
-  inputs: {ACTOR: me()},
 });
 
 /** What one key does: type a character, or press a key that types none. */

@@ -97,7 +97,6 @@ const onClick = (rows: object[]) => ({
         {
           type: 'world_on_Mouse_IsClickedWithEvent',
           fields: {FILTER0: ''},
-          inputs: {ACTOR: me()},
           x: 20,
           y: 20,
           next: {block: chain(rows)},
@@ -456,7 +455,7 @@ const MAIN_WORLD = JSON.stringify(
           type: 'world_on_Space_CreatedEvent',
           x: 20,
           y: 260,
-          inputs: {ACTOR: kind('actors/list')},
+          fields: {SUBJECT: 'actors/list'},
           next: {
             block: chain([
               // The answer is KEPT rather than branched on, and the list is

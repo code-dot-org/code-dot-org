@@ -90,11 +90,6 @@ const scoreText = (who: object) => ({
   },
 });
 
-/** `any ⟨kind⟩` — a hat's subject, and so the TEMPLATE rather than an instance. */
-const kind = (path: string) => ({
-  block: {type: 'world_actor_kind', fields: {ACTOR: path}},
-});
-
 /** One axis of `mouse position`, which is what `set position` takes. */
 const mouseAxis = (component: 'x' | 'y') => ({
   block: {
@@ -571,10 +566,9 @@ const MAIN_WORLD = JSON.stringify({
       // that was clicked, so taking it out of the world is one block.
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
+        fields: {FILTER0: '', SUBJECT: COIN},
         x: 520,
         y: 700,
-        inputs: {ACTOR: kind(COIN)},
         next: {
           block: stack([
             // The world remembers. Before this there was nowhere to put a
@@ -602,10 +596,9 @@ const MAIN_WORLD = JSON.stringify({
       // `(any)` hears both buttons, and the value says which.
       {
         type: 'world_on_Mouse_PressesMouseButtonEvent',
-        fields: {FILTER0: ''},
+        fields: {FILTER0: '', SUBJECT: SCOREBOARD},
         x: 520,
         y: 880,
-        inputs: {ACTOR: kind(SCOREBOARD)},
         next: {
           block: {
             type: 'world_print',

@@ -28,7 +28,6 @@ const FOLLOW_THE_PILOT = {
     blocks: [
       {
         type: 'world_on_Space_CreatedEvent',
-        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
         next: {
           block: {
             type: 'world_set_CameraFollow_ActorToFollowProperty',

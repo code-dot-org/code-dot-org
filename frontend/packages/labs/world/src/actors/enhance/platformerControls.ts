@@ -126,8 +126,8 @@ const jumpsOnKey =
     if (block.type !== PRESSES || block.fields?.FILTER0 !== JUMP_KEY) {
       return false;
     }
-    const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
-      ?.block?.fields?.ACTOR;
+    // A kind named means a world's handler, not this actor's own.
+    const named = block.fields?.SUBJECT || undefined;
     return (
       named === undefined &&
       [...down(block)].some(row => row.type === MAKE_JUMP)

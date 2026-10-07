@@ -44,7 +44,6 @@ const SIGN = JSON.stringify({
       // `when this actor types ⟨…⟩: set typed to ⟨typed⟩ + ⟨“ what ”⟩`
       {
         type: 'world_on_Input_TypesEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_set_ActorsSign_TypedProperty',

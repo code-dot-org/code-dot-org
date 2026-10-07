@@ -113,7 +113,6 @@ const by = (pixels: number) =>
 const onKey = (key: string, pixels: number, hat = 'Presses') => ({
   type: `world_on_Input_${hat}Event`,
   fields: {FILTER0: key},
-  inputs: {ACTOR: me()},
   next: {
     block: chain([
       {
@@ -176,7 +175,6 @@ export const scrollViewActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: chain([
             {
@@ -190,7 +188,6 @@ export const scrollViewActor = actorFile(
       // with it: pulling up moves the window down the page.
       {
         type: 'world_on_Gestures_IsDraggedByEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: chain([
             scrollTo(
@@ -207,7 +204,6 @@ export const scrollViewActor = actorFile(
       // content the engine has already measured.
       {
         type: 'world_on_Mouse_IsScrolledByEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: scrollTo(
             point(

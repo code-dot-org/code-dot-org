@@ -86,7 +86,6 @@ const setText = (who: object, value: object): BlockJson => ({
 /** The hat that keeps the number true. */
 const watcher = (): BlockJson => ({
   type: 'world_on_Scoring_SeesTheScoreChangeEvent',
-  inputs: {ACTOR: me()},
   next: {
     block: setText(me(), {
       // `⟨SCORE ⟩ + ⟨“ the score ”⟩` — a chain, read left to right. It was

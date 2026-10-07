@@ -661,9 +661,9 @@ class ActorCollection {
    * Every actor of a kind — the module a template was registered under
    * (`actors/coin`).
    *
-   * What `any ⟨Coin⟩` means everywhere except a handler's subject socket: the
-   * coins there are, right now. (In that one socket it means the TEMPLATE, so
-   * that a handler registered on it reaches the coins placed later too.)
+   * What `any ⟨Coin⟩` means as a value: the coins there are, right now. (A
+   * handler about `any ⟨Coin⟩` registers on the TEMPLATE instead, so that it
+   * reaches the coins placed later too.)
    */
   ofType(type: string): Actor[] {
     return this.list.filter(actor => actor.type === type);

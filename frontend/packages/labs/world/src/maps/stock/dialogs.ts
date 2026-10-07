@@ -14,12 +14,7 @@
 // button on the map rewires nothing and the same map serves every use of it
 // (specs/MAP_EVENTS_PLAN.md).
 
-import {
-  chain,
-  defineMap,
-  emitWorldEvent,
-  me,
-} from '../../actors/stock/workspace';
+import {chain, defineMap, emitWorldEvent} from '../../actors/stock/workspace';
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 
 const VIEW = VIEWPORT_TILES * TILE_SIZE;
@@ -33,7 +28,6 @@ const script = (...then: object[]) => ({
         {
           type: 'world_on_Mouse_IsClickedWithEvent',
           fields: {FILTER0: ''},
-          inputs: {ACTOR: me()},
           x: 20,
           y: 20,
           next: {block: chain(then)},

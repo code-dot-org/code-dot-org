@@ -318,7 +318,7 @@ and nothing has elected it.
 4. Falling and landing are things that HAPPEN, and saying what to do when
    something happens is what blocks are for. Press
    [Open Hero](#clickable=map.openKind:Hero), add
-   [when ⟨this actor⟩ stops falling](#clickable=toolbox.block:world_on_Gravity_StopsFallingEvent@Hero),
+   [when this actor stops falling](#clickable=toolbox.block:world_on_Gravity_StopsFallingEvent@Hero),
    and print something in it, so you can see the moment.
 5. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\` to open the
    rule itself, and find the number that says how hard it pulls. Change it and
@@ -697,7 +697,7 @@ you lean on the button.
 
 1. Give the Hero **use trait ⟨Takes Keyboard Input⟩**. On its own it does
    nothing: it is the Hero electing to be told about keys at all.
-2. Add a **when ⟨Hero⟩ hears ⟨space⟩ pressed** handler, and put a **write to console**
+2. Add a **when ⟨any Hero⟩ hears ⟨space⟩ pressed** handler, and put a **write to console**
    inside it.
 3. Run it and hold space down for a few seconds. One line, not two hundred.
 4. Let go and press again. Now there are two.
@@ -735,7 +735,7 @@ so an actor can be told about its own clicks and nobody else's.
 ### What you do
 
 1. Give the Target **use trait ⟨Can Be Clicked⟩**.
-2. Add a **when ⟨Target⟩ is clicked** handler and **write to console** something in it.
+2. Add a **when ⟨any Target⟩ is clicked** handler and **write to console** something in it.
 3. Click the Target, then click the empty space beside it. Only one of those
    says anything.
 
@@ -746,7 +746,7 @@ and it is not an event — it is a block you can ask at any moment.
 
 4. Give the Target **use trait ⟨Takes Mouse Input⟩** as well. Now it hears
    every press, wherever it landed.
-5. Add a **when ⟨Target⟩ presses mouse button** handler, and inside it **set
+5. Add a **when ⟨any Target⟩ presses mouse button** handler, and inside it **set
    position of ⟨this actor⟩** — with **x of ⟨mouse position⟩** in the x socket
    and **y of ⟨mouse position⟩** in the y. **mouse position** is in the
    **Mouse** drawer; **x of** is in **Math**.
@@ -845,8 +845,7 @@ const consoleLine = (text: string) => ({
 
 const onPressed = (actor: string, key: string, body: object) => ({
   type: 'world_on_Input_PressesEvent',
-  fields: {FILTER0: key},
-  inputs: {ACTOR: anyKind(actor)},
+  fields: {FILTER0: key, SUBJECT: actorPath(actor)},
   next: {block: body},
 });
 
@@ -1137,7 +1136,7 @@ that said it wanted to be asked. What to DO about it is a separate matter, and
 ### What you do
 
 1. Give the Wall **use trait ⟨Solid⟩**. Run it: the Ball stops dead against it.
-2. Add a **when ⟨Ball⟩ starts touching** handler and print something, so you can
+2. Add a **when ⟨any Ball⟩ starts touching** handler and print something, so you can
    see the moment rather than only its consequence.
 3. Take the Ball's **⟨Can Collide⟩** off and watch it sail through again. Both
    sides have to agree before there is a collision at all.
@@ -1238,8 +1237,7 @@ The world is 320 pixels down, so halfway down is 160.
 /** `when ⟨any Kind⟩ starts touching ⟨any⟩`, as a root of the world. */
 const onTouching = (actor: string, body: object) => ({
   type: 'world_on_Collisions_StartsTouchingEvent',
-  fields: {FILTER0: ''},
-  inputs: {ACTOR: anyKind(actor)},
+  fields: {FILTER0: '', SUBJECT: actorPath(actor)},
   next: {block: body},
 });
 
@@ -1647,8 +1645,7 @@ const placementScript: WorldScenario = {
       handlers: [
         {
           type: 'world_on_Mouse_IsClickedWithEvent',
-          fields: {FILTER0: ''},
-          inputs: {ACTOR: anyKind('button')},
+          fields: {FILTER0: '', SUBJECT: actorPath('button')},
           next: {
             block: {
               type: 'world_set_ActorsLabel_TextProperty',
@@ -1679,7 +1676,7 @@ on a map can carry **code** of its own, which is blocks about THIS one.
 
 1. Open **World** and delete the handler about any Button. Open **Map** again.
 2. Click the RED button on the map, and press **Code** in its properties.
-3. Add **when ⟨this actor⟩ is clicked**, and in it **set text of ⟨the ⟨Sign⟩⟩
+3. Add **when this actor is clicked**, and in it **set text of ⟨the ⟨Sign⟩⟩
    to ⟨RED⟩**. **the ⟨…⟩** is in the Map drawer: it names a thing on this map
    by the name the map gives it, and the Sign is called Sign.
 4. Go **Back** to the map and do the same for BLUE. Each button now has a
@@ -3485,8 +3482,7 @@ const bricks: WorldScenario = {
       handlers: [
         {
           type: 'world_on_Collisions_StartsTouchingEvent',
-          fields: {FILTER0: ''},
-          inputs: {ACTOR: anyKind('ball')},
+          fields: {FILTER0: '', SUBJECT: actorPath('ball')},
           next: {
             block: {
               type: 'world_remove_actor',
@@ -3565,7 +3561,7 @@ const waves: WorldScenario = {
       handlers: [
         {
           type: 'world_on_Time_TimerFiresEvent',
-          inputs: {ACTOR: anyKind('spawner')},
+          fields: {SUBJECT: actorPath('spawner')},
           next: {
             block: addActor(actorPath('rock'), [
               placeAt(160, 40),
@@ -3739,15 +3735,7 @@ const script: WorldScenario = {
       handlers: [
         {
           type: 'world_on_Mouse_IsClickedWithEvent',
-          fields: {FILTER0: ''},
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: 'actors/speechBox'},
-              },
-            },
-          },
+          fields: {FILTER0: '', SUBJECT: 'actors/speechBox'},
           next: {block: consoleLine('click')},
         },
       ],
@@ -3861,15 +3849,7 @@ const choice: WorldScenario = {
       handlers: [
         {
           type: 'world_on_Mouse_IsClickedWithEvent',
-          fields: {FILTER0: ''},
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: 'actors/speechBox'},
-              },
-            },
-          },
+          fields: {FILTER0: '', SUBJECT: 'actors/speechBox'},
           next: {
             block: {
               type: 'world_do_Conversation_MakeSayTheNextThingAction',
@@ -3879,14 +3859,7 @@ const choice: WorldScenario = {
         },
         {
           type: 'world_on_Conversation_MovesToALineEvent',
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: 'actors/speechBox'},
-              },
-            },
-          },
+          fields: {SUBJECT: 'actors/speechBox'},
           next: {
             block: chainRows([
               lineIs(1, 'Somebody was knocking.'),
@@ -4046,15 +4019,7 @@ const scene: WorldScenario = {
       handlers: [
         {
           type: 'world_on_Mouse_IsClickedWithEvent',
-          fields: {FILTER0: ''},
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: 'actors/speechBox'},
-              },
-            },
-          },
+          fields: {FILTER0: '', SUBJECT: 'actors/speechBox'},
           next: {
             block: {
               type: 'world_do_Conversation_MakeSayTheNextThingAction',
@@ -4064,14 +4029,7 @@ const scene: WorldScenario = {
         },
         {
           type: 'world_on_Conversation_MovesToALineEvent',
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: 'actors/speechBox'},
-              },
-            },
-          },
+          fields: {SUBJECT: 'actors/speechBox'},
           next: {
             block: chainRows([
               lineIs(1, 'You are late.'),
@@ -6067,7 +6025,7 @@ const turns: WorldScenario = {
         stepOn('down arrow', 'StepDown'),
         {
           type: 'world_on_Time_TimerFiresEvent',
-          inputs: {ACTOR: anyKind('enemy')},
+          fields: {SUBJECT: actorPath('enemy')},
           next: {
             block: {
               type: 'world_do_Grid_StepRightAction',

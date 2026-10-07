@@ -28,10 +28,6 @@ const speechBox = stockActorById('speechBox')!;
 const LINE = 'The rain had not stopped for three days.';
 
 const me = () => ({block: {type: 'world_this_actor'}});
-const anyBox = () => ({
-  block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/speechBox'}},
-});
-
 /** `say ⟨LINE⟩ on ⟨this actor⟩`, as the placement body says it. */
 const say = {
   type: 'world_do_ActorsSpeechBox_SayAction',
@@ -75,7 +71,7 @@ const WORLD = JSON.stringify({
         type: 'world_on_ActorsSpeechBox_FinishesRevealingEvent',
         x: 520,
         y: 20,
-        inputs: {ACTOR: anyBox()},
+        fields: {SUBJECT: 'actors/speechBox'},
         next: {
           block: {
             type: 'world_set_WorldsMain_CuesProperty',

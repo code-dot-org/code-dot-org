@@ -1,14 +1,12 @@
 // "Any Coin", and where a handler for it has to be registered.
 //
-// An `.actor` file is about one actor, so `this actor` is the subject and the
-// socket says so. A `.world` file names several and binds no principal one, so
-// the subject is a KIND — every actor of it, placed now or later — which
-// resolves to the template, because a template takes the same messages its
-// instances do.
+// As a value, `any ⟨Coin⟩` is the coins there are. A handler's own `any
+// ⟨kind⟩` is a field on the event block, not this block, and is tested with
+// it (`eventSubject`).
 
 import {describe, expect, it} from 'vitest';
 
-import {actorInputExtension, actorSubjectExtension} from '../actorInput';
+import {actorInputExtension} from '../actorInput';
 import {assembleWorldModule} from '../assembleActorModule';
 import {DOMAIN_BLOCKS} from '../domainBlocks';
 
@@ -60,23 +58,6 @@ const emitValue = (
   return {code: result[0], imports: Object.keys(definitions)};
 };
 
-/** …as plugged into a handler's subject socket. */
-const emitSubject = (
-  fields: Record<string, string>,
-  space: unknown = WORLD(),
-) => emitValue(fields, space, 'world_on_Gravity_StartsFallingEvent');
-
-describe('any <kind>, in a handler’s subject socket', () => {
-  // The TEMPLATE, so that registering a handler on it reaches the coins placed
-  // later as well — the half of "every actor of this kind" a list cannot honour.
-  it('is a module actor, imported like anything else that names one', () => {
-    const {code, imports} = emitSubject({ACTOR: 'actors/coin'});
-
-    expect(code).toBe('ActorsCoin');
-    expect(imports).toEqual(['mod:actors/coin']);
-  });
-});
-
 describe('any <kind>, anywhere else', () => {
   it('is the actors of that kind, there and then', () => {
     // What a statement acts on and a value reads. Nothing is imported: the
@@ -89,10 +70,6 @@ describe('any <kind>, anywhere else', () => {
 
   it('names no actors at all when it names nothing', () => {
     expect(emitValue({ACTOR: ''}).code).toBe('[]');
-  });
-
-  it('still falls back to the subject on a hat', () => {
-    expect(emitSubject({ACTOR: ''}).code).toBe('actor');
   });
 });
 
@@ -115,7 +92,7 @@ describe('assembleWorldModule', () => {
   });
 });
 
-describe('the ACTOR socket’s default', () => {
+describe('an action’s ACTOR socket default', () => {
   /** Apply an extension to a block in a given workspace, and read the shadow. */
   const shadowIn = (extension: unknown, space: unknown): string | undefined => {
     let shadow: {type?: string} | undefined;
@@ -146,22 +123,9 @@ describe('the ACTOR socket’s default', () => {
     expect(shadowIn(actorInputExtension, WORLD())).toBe('world_this_actor');
   });
 
-  it('is `this actor` on an event hat in an actor file', () => {
-    // One actor, and the file is about it.
-    expect(shadowIn(actorSubjectExtension, ACTOR_FILE())).toBe(
-      'world_this_actor',
-    );
-  });
-
-  it('is `any <kind>` on an event hat in a world file', () => {
-    // Several actors and no principal one — `actor` is not even bound there.
-    expect(shadowIn(actorSubjectExtension, WORLD())).toBe('world_actor_kind');
-  });
-
   it('asks the workspace a flyout block would be dragged into', () => {
     const flyout = {...workspace([]), isFlyout: true, targetWorkspace: WORLD()};
 
-    expect(shadowIn(actorSubjectExtension, flyout)).toBe('world_actor_kind');
     expect(shadowIn(actorInputExtension, flyout)).toBe('world_this_actor');
   });
 });

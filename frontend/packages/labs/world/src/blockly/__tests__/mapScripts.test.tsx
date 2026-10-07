@@ -55,7 +55,6 @@ const WORLD = JSON.stringify({
  */
 const whenClicked = (...then: object[]) => ({
   type: 'world_on_Space_LeftMapEvent',
-  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
   next: {
     block: then.reduceRight((next, block) => ({...block, next: {block: next}})),
   },

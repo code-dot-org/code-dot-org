@@ -516,7 +516,6 @@ export const listActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: chain([
             {
@@ -535,14 +534,12 @@ export const listActor = actorFile(
       // with the finger, a wheel pushes it away.
       {
         type: 'world_on_Mouse_IsScrolledByEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: scrollTo(arithmetic('ADD', scroll(), paramValue(BY))),
         },
       },
       {
         type: 'world_on_Gestures_IsDraggedByEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: chain([
             scrollTo(
@@ -563,21 +560,18 @@ export const listActor = actorFile(
       ...(['left', 'right'] as const).map(way => ({
         type: 'world_on_Gestures_IsSwipedEvent',
         fields: {FILTER0: way},
-        inputs: {ACTOR: me()},
         next: {block: takeOutRow(rowUnderPointer())},
       })),
       // …and Delete does it from the keyboard, on the highlighted row.
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'delete'},
-        inputs: {ACTOR: me()},
         next: {block: either(focused(), [takeOutRow(highlighted())])},
       },
       // Enter chooses whatever the highlight is on.
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'enter'},
-        inputs: {ACTOR: me()},
         next: {block: either(focused(), [chooseRow(highlighted())])},
       },
       // The arrows move it by one, the page keys by a windowful — the only
@@ -601,7 +595,6 @@ export const listActor = actorFile(
           hat => ({
             type: hat,
             fields: {FILTER0: key},
-            inputs: {ACTOR: me()},
             next: {block: either(focused(), [moveHighlight(by())])},
           }),
         ),

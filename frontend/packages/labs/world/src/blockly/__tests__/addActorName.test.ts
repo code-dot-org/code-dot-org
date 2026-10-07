@@ -40,14 +40,16 @@ const chain = (...types: Array<string | FakeBlock>): FakeBlock => {
   return blocks[0];
 };
 
-// `hasEnclosingActor` reads only `getParent`, `type`, `getFieldValue` and
-// `getInput`, so a plain object is a truthful stand-in — the same trick the
-// generator tests use.
+// `hasEnclosingActor` reads only `getParent`, `type`, `getFieldValue`,
+// `getField` and `getInput`, so a plain object is a truthful stand-in — the
+// same trick the generator tests use.
 const asBlock = (block: FakeBlock): never =>
   ({
     type: block.type,
     getParent: () => (block.parent ? asBlock(block.parent) : null),
     getFieldValue: (name: string) => block.fields?.[name] ?? null,
+    getField: (name: string) =>
+      block.fields && name in block.fields ? {} : null,
     getInput: (name: string) => (block.inputs?.includes(name) ? {} : null),
     // Which of MY inputs holds `child` — null when it arrived through `next`.
     getInputWithBlock: (child: {type: string}) => {
@@ -93,14 +95,14 @@ describe('where naming the placed actor is offered', () => {
     // treats any handler as disqualifying, which is right for the question IT
     // asks and would be exactly wrong here.
     expect(
-      enclosed({type: 'world_on_Zapping_ZapsEvent', inputs: ['ACTOR']}),
+      enclosed({type: 'world_on_Zapping_ZapsEvent', fields: {SUBJECT: ''}}),
     ).toBe(true);
   });
 
   it('is not, inside a world’s event handler', () => {
     // `when ⟨space⟩ pressed` on a world binds `world` and no actor. The hat
-    // carries no ACTOR socket, which is what tells the two apart locally —
-    // no registry of event kinds to keep in step.
+    // has no subject field, which is what tells the two apart locally — no
+    // registry of event kinds to keep in step.
     expect(enclosed({type: 'world_on_Input_KeyPressedEvent'})).toBe(false);
   });
 

@@ -235,7 +235,7 @@ const MAIN_WORLD = JSON.stringify({
         type: 'world_on_Conversation_MovesToALineEvent',
         x: 20,
         y: 320,
-        inputs: {ACTOR: box()},
+        fields: {SUBJECT: 'actors/speechBox'},
         next: {block: scriptFor()},
       },
       // Space begins it, and then moves it on.

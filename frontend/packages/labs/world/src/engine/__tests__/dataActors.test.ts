@@ -14,8 +14,7 @@ import {Vector} from '../core/Vector';
 import {PositionalTrait, PositionProperty} from '../rules/spatial';
 
 /** A Note: two fields and nowhere to be. */
-const Note = () =>
-  new ActorBuilder({id: 'note', name: 'Note'}).isData();
+const Note = () => new ActorBuilder({id: 'note', name: 'Note'}).isData();
 const Coin = () => new ActorBuilder({id: 'coin', name: 'Coin'});
 
 const world = () => new WorldBuilder({id: 'w', name: 'W'}).getWorld();
@@ -68,9 +67,7 @@ describe('an actor that is data', () => {
   });
 
   it('is inherited by a kind that acts like a data kind', () => {
-    const child = new ActorBuilder({id: 'todo', name: 'Todo'}).actsLike(
-      Note(),
-    );
+    const child = new ActorBuilder({id: 'todo', name: 'Todo'}).actsLike(Note());
     expect(child.isRecord).toBe(true);
     const one = world();
     one.addActor(child.instantiate('t'));

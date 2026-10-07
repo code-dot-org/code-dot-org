@@ -73,7 +73,7 @@ const project = (): MultiFileSource => {
         },
         {
           type: 'world_on_ActorsDropdown_ChosenEvent',
-          inputs: {ACTOR: kind('actors/dropdown')},
+          fields: {SUBJECT: 'actors/dropdown'},
           next: {
             block: {
               type: 'world_set_ActorsLabel_TextProperty',

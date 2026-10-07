@@ -34,7 +34,6 @@ import {
   importRules,
   kindOf,
   me,
-  subjectOf,
   wears,
 } from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
@@ -91,7 +90,6 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
   /** The hat this adds: when it appears, it learns what it is after. */
   const handler = (_target: EnhanceTarget, actor: string): BlockJson => ({
     type: CREATED_HAT,
-    inputs: {ACTOR: subjectOf()},
     next: {
       block: {
         type: spec.property,
@@ -105,8 +103,8 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
     if (block.type !== CREATED_HAT) {
       return false;
     }
-    const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
-      ?.block?.fields?.ACTOR;
+    // A kind named means a world's handler, not this actor's own.
+    const named = block.fields?.SUBJECT || undefined;
     return (
       named === undefined &&
       [...down(block)].some(row => row.type === spec.property)

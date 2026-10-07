@@ -34,7 +34,7 @@ import {playCheck} from '../../runtime/playCheck';
 import {projectFiles} from '../../runtime/projectFiles';
 import {tile} from '../index';
 import {LESSONS} from '../lessons';
-import {actorPath, anyKind} from '../lessons/worlds';
+import {actorPath} from '../lessons/worlds';
 import type {TileId} from '../types';
 
 /**
@@ -742,8 +742,10 @@ describe('the key-press lesson’s check', () => {
     const solved = editing(lesson.source, 'main.world', contents =>
       saying(electing(contents, 'Input#TakesKeyboardInputTrait', 'Hero'), {
         type: 'world_on_Input_PressesEvent',
-        fields: {FILTER0: 'space'},
-        inputs: {ACTOR: anyKind('hero')},
+        fields: {
+          FILTER0: 'space',
+          SUBJECT: actorPath('hero'),
+        },
       }),
     );
     const {passes, result} = await check('input/press', solved);
@@ -764,8 +766,7 @@ describe('the key-press lesson’s check', () => {
         type: 'world_on_Input_PressesEvent',
         x: 420,
         y: 300,
-        fields: {FILTER0: ''},
-        inputs: {ACTOR: anyKind('hero')},
+        fields: {FILTER0: '', SUBJECT: actorPath('hero')},
         next: {
           block: {
             type: 'world_print',
@@ -820,8 +821,7 @@ describe('the click lesson’s check', () => {
         // `IsClickedWith`, and the empty filter means "any button" — the block
         // is "when ⟨Target⟩ is clicked with ⟨any⟩".
         type: 'world_on_Mouse_IsClickedWithEvent',
-        fields: {FILTER0: ''},
-        inputs: {ACTOR: anyKind('target')},
+        fields: {FILTER0: '', SUBJECT: actorPath('target')},
       }),
     );
     const {passes, result} = await check('input/mouse', solved);
@@ -1092,7 +1092,6 @@ const myAxis = (component: 'x' | 'y') => ({
   block: {
     type: 'world_get_Space_PositionProperty',
     fields: {COMPONENT: component},
-    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
   },
 });
 
@@ -1437,7 +1436,6 @@ describe('the loop lesson’s check', () => {
             block: {
               type: 'world_set_sprite',
               fields: {SPRITE: 'coin.png'},
-              inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
             },
           };
         }
@@ -1730,7 +1728,6 @@ describe('the drawing lesson’s check', () => {
             B: {
               block: {
                 type: 'world_get_ActorsBar_FractionProperty',
-                inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
               },
             },
           },
@@ -1868,7 +1865,6 @@ describe('the animation lesson’s check', () => {
       under(actorIn(workspace, 'Hero'), {
         type: 'world_play_animation',
         fields: {ANIMATION: imported.value},
-        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
       });
       return JSON.stringify(workspace);
     });
@@ -1894,7 +1890,6 @@ describe('the effect lesson’s check', () => {
       under(actorIn(workspace, 'Coin'), {
         type: 'world_add_effect',
         fields: {EFFECT: imported.path},
-        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
       });
       if (where === 'both') {
         const world = workspace.blocks.blocks[0];
@@ -2422,7 +2417,6 @@ describe('the placement-script lesson’s check', () => {
           x: 20,
           y: 20,
           fields: {FILTER0: ''},
-          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
           next: {
             block: {
               type: 'world_set_ActorsLabel_TextProperty',
@@ -2495,7 +2489,6 @@ describe('the placement-script lesson’s check', () => {
           type: 'world_get_ActorsLabel_TextProperty',
           // The Button the hat matched, which under `any ⟨Button⟩` is
           // what `this actor` means.
-          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
         },
       } as never;
       return JSON.stringify(file);
@@ -2761,8 +2754,7 @@ describe('the jetpack lesson’s check', () => {
       // counted anywhere in the project.
       workspace.blocks.blocks.push({
         type: 'world_on_Input_ReleasesEvent',
-        fields: {FILTER0: 'space'},
-        inputs: {ACTOR: anyKind('hero')},
+        fields: {FILTER0: 'space', SUBJECT: actorPath('hero')},
         next: {
           block: {
             type: 'world_do_Jetpack_StopFlyingAction',
@@ -2964,14 +2956,6 @@ describe('the level lesson’s check', () => {
         x: 700,
         y: 20,
         fields: {FILTER0: ''},
-        inputs: {
-          ACTOR: {
-            block: {
-              type: 'world_actor_kind',
-              fields: {ACTOR: actorPath('hero')},
-            },
-          },
-        },
         next: {
           block: asking
             ? {
@@ -3104,14 +3088,7 @@ describe('the zapping lesson’s check', () => {
         type: 'world_on_Zapping_ZapsEvent',
         x: 900,
         y: 20,
-        inputs: {
-          ACTOR: {
-            block: {
-              type: 'world_actor_kind',
-              fields: {ACTOR: actorPath('ship')},
-            },
-          },
-        },
+        fields: {SUBJECT: actorPath('ship')},
         next: {block: spawn},
       } as unknown as Row);
       if (lifetime !== undefined) {
@@ -3373,7 +3350,6 @@ describe('the reveal lesson’s check', () => {
       const electing2 = (trait: string, rest: Row): Row => ({
         type: 'world_add_trait',
         fields: {TRAIT: trait},
-        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
         next: {block: rest},
       });
       let placed: Row = body;
@@ -3383,19 +3359,10 @@ describe('the reveal lesson’s check', () => {
           type: 'world_on_Mouse_IsClickedWithEvent',
           x: 700,
           y: 20,
-          fields: {FILTER0: ''},
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: 'actors/speechBox'},
-              },
-            },
-          },
+          fields: {FILTER0: '', SUBJECT: 'actors/speechBox'},
           next: {
             block: {
               type: 'world_do_ActorsSpeechBox_ShowAllOfItAction',
-              inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
             },
           },
         } as unknown as Row);
@@ -3443,7 +3410,6 @@ describe('the script lesson’s check', () => {
         block: {
           type: 'world_add_trait',
           fields: {TRAIT: 'Conversation#HasAConversationTrait'},
-          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
           next: {
             block: {
               type: 'world_set_Conversation_HowManyLinesProperty',
@@ -3477,7 +3443,6 @@ describe('the script lesson’s check', () => {
                 A: {
                   block: {
                     type: 'world_get_Conversation_LineProperty',
-                    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                   },
                 },
                 B: {shadow: {type: 'math_number', fields: {NUM: n}}},
@@ -3499,14 +3464,7 @@ describe('the script lesson’s check', () => {
         type: 'world_on_Conversation_MovesToALineEvent',
         x: 900,
         y: 20,
-        inputs: {
-          ACTOR: {
-            block: {
-              type: 'world_actor_kind',
-              fields: {ACTOR: 'actors/speechBox'},
-            },
-          },
-        },
+        fields: {SUBJECT: 'actors/speechBox'},
         next: {
           block: [line(1), line(2), line(3)].reduceRight((next, row) => ({
             ...row,
@@ -3552,12 +3510,7 @@ describe('the choice lesson’s check', () => {
         type: 'world_on_Mouse_IsClickedWithEvent',
         x: 1200,
         y: 20,
-        fields: {FILTER0: ''},
-        inputs: {
-          ACTOR: {
-            block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/button'}},
-          },
-        },
+        fields: {FILTER0: '', SUBJECT: 'actors/button'},
         next: {
           block: {
             type: 'controls_if',
@@ -3571,7 +3524,6 @@ describe('the choice lesson’s check', () => {
                     A: {
                       block: {
                         type: 'world_get_ActorsLabel_TextProperty',
-                        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                       },
                     },
                     B: {shadow: {type: 'text', fields: {TEXT: 'Open it'}}},
@@ -3885,7 +3837,6 @@ describe('the rule-property lesson’s check', () => {
               B: {
                 block: {
                   type: 'world_get_Wind_StrengthProperty',
-                  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                 },
               },
             },
@@ -3974,19 +3925,10 @@ describe('the grid lesson’s check', () => {
           type: 'world_on_Input_PressesEvent',
           x: 900,
           y: 20,
-          fields: {FILTER0: key},
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: actorPath('player')},
-              },
-            },
-          },
+          fields: {FILTER0: key, SUBJECT: actorPath('player')},
           next: {
             block: {
               type: `world_do_Grid_${action}Action`,
-              inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
             },
           },
         } as unknown as Row);
@@ -4113,14 +4055,7 @@ describe('the errand lesson’s check', () => {
         type: 'world_on_Collection_CollectsEvent',
         x: 900,
         y: 20,
-        inputs: {
-          ACTOR: {
-            block: {
-              type: 'world_actor_kind',
-              fields: {ACTOR: actorPath('hero')},
-            },
-          },
-        },
+        fields: {SUBJECT: actorPath('hero')},
         next: {
           block: {
             type: 'world_set_ActorsProgressBar_FractionProperty',
@@ -4685,15 +4620,7 @@ describe('the goal lesson’s check', () => {
           // The KIND, on the hat. It is the same guard the learner would
           // otherwise write with `if ⟨event actor⟩ is a ⟨Mark⟩`, and it is
           // three blocks shorter.
-          fields: {FILTER0: actorPath('mark')},
-          inputs: {
-            ACTOR: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: actorPath('crate')},
-              },
-            },
-          },
+          fields: {FILTER0: actorPath('mark'), SUBJECT: actorPath('crate')},
           next: {block: scoring(by)},
         }) as unknown as Row;
 
@@ -4756,7 +4683,7 @@ describe('the undo lesson’s check', () => {
       const remembers = (name: string) =>
         under(actorIn(workspace, name), {
           type: 'world_use_trait',
-          fields: {TRAIT: REMEMBERS},
+          fields: {TRAIT: REMEMBERS, SUBJECT: 'actors/door'},
         });
       remembers('Player');
       if (options.crate) {
@@ -4778,8 +4705,7 @@ describe('the undo lesson’s check', () => {
         type: 'world_on_Input_PressesEvent',
         x: 1400,
         y: 20,
-        fields: {FILTER0: 'z'},
-        inputs: {ACTOR: anyKind('player')},
+        fields: {FILTER0: 'z', SUBJECT: actorPath('player')},
         next: {block: {type: 'world_do_History_TakeBackAMoveAction'}},
       } as unknown as Row);
       return JSON.stringify(workspace);
@@ -4865,8 +4791,10 @@ describe('the turns lesson’s check', () => {
           : 'world_on_Input_PressesEvent',
         x: 1400,
         y: 20,
-        ...(options.onTheStep ? {} : {fields: {FILTER0: 'right arrow'}}),
-        inputs: {ACTOR: anyKind('player')},
+        fields: {
+          ...(options.onTheStep ? {} : {FILTER0: 'right arrow'}),
+          SUBJECT: actorPath('player'),
+        },
         next: {block: {type: 'world_do_Turns_EndTheTurnAction'}},
       } as unknown as Row);
       return JSON.stringify(workspace);
@@ -5158,7 +5086,7 @@ describe('the key lesson’s check', () => {
           type: 'world_on_Collection_CollectsEvent',
           x: 1400,
           y: 20,
-          inputs: {ACTOR: anyKind('player')},
+          fields: {SUBJECT: actorPath('player')},
           next: {
             block: {
               type: 'world_do_Inventory_TakesAction',
@@ -5175,8 +5103,7 @@ describe('the key lesson’s check', () => {
           y: 220,
           // The door listens for a Player, on the hat: a Crate rolling into it
           // is not somebody arriving with a key.
-          fields: {FILTER0: actorPath('player')},
-          inputs: {ACTOR: anyKind('door')},
+          fields: {FILTER0: actorPath('player'), SUBJECT: actorPath('door')},
           next: {
             block: {
               type: 'controls_if',
@@ -5234,7 +5161,7 @@ describe('the key lesson’s check', () => {
         type: 'world_on_Collection_CollectsEvent',
         x: 1400,
         y: 20,
-        inputs: {ACTOR: anyKind('player')},
+        fields: {SUBJECT: actorPath('player')},
         next: {
           block: {
             type: 'world_do_Inventory_TakesAction',
@@ -5292,14 +5219,6 @@ describe('the two-rooms lesson’s check', () => {
         x: 1400,
         y: 20,
         fields: {FILTER0: ''},
-        inputs: {
-          ACTOR: {
-            block: {
-              type: 'world_actor_kind',
-              fields: {ACTOR: 'actors/door'},
-            },
-          },
-        },
         next: {block: body},
       } as unknown as Row);
       return JSON.stringify(workspace);

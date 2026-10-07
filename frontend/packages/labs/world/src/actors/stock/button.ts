@@ -138,7 +138,6 @@ export const buttonActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_do_TabNavigation_TakeTheFocusAction',
@@ -152,7 +151,6 @@ export const buttonActor = actorFile(
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'enter'},
-        inputs: {ACTOR: me()},
         next: {
           block: onlyIf(focused(), [
             {

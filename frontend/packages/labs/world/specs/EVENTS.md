@@ -30,6 +30,33 @@ pressed` is one block instead of a hat and an `if`. Some hats filter on a
 - **Every handler runs.** There is no order among them, no way for one to
   say it has dealt with it, and no way for a handler to answer.
 
+### Whose event — BUILT
+
+A handler about an actor's event says whose it is in words, from one
+stored field, `SUBJECT` (`blockly/eventSubject`):
+
+- **In an actor file, and in one placed actor's code on a map**, it is
+  the actor the code is about: `when this actor starts falling`. Nothing
+  is stored, and the handler registers on `actor`.
+- **In a world file** it is every actor of a kind: `when any ⟨Coin▾⟩ is
+clicked`. The kind's module path is stored, and the handler registers
+  on the kind's template, so the coins placed later hear it too.
+
+It used to be a socket, taking any actor value. Every project the lab
+had held one of the two above in it, by file, and nothing else: no actor
+in a variable, no single placed actor (a placed actor's own code is the
+home for that). What else the socket took was meaningless — a variable is
+read once, when the world is built — or broken: `this actor` in a world
+names an actor nothing declares, and stopped the project as it loaded.
+
+The words are two inputs of the block, `this actor` and `any ⟨kind⟩`, of
+which one is shown; a hidden FIELD would still take its share of the
+row's spacing. The stored value decides which, so a block says the right
+thing however it was loaded; which kind of file it is in decides only
+what a new handler starts as, and whether a pasted one belongs
+(`misplacedBlocks`): a world's handler with no kind, or an actor's naming
+one, is disabled until its dropdown is set right.
+
 That is a good model for a game, and its limits are visible in the lab's
 own interface kit: **five stock controls each hand-roll a change event** —
 Text Input and Text Area raise `changed`, Slider raises `changed`, Toggle

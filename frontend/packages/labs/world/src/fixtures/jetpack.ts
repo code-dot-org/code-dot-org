@@ -487,7 +487,6 @@ const refuel = (canKind: string, amount: number, y: number) => ({
   x: 20,
   y,
   fields: {FILTER0: canKind},
-  inputs: {ACTOR: me()},
   next: {
     block: {
       type: 'world_do_Jetpack_GiveFuelAction',
@@ -513,7 +512,6 @@ const looks = (event: string, body: object, y: number) => ({
   type: `world_on_${event}`,
   x: 20,
   y,
-  inputs: {ACTOR: me()},
   next: {block: body},
 });
 
@@ -599,7 +597,6 @@ const teleportSafely = () => [
     type: 'world_on_Teleport_StartsTravelingEvent',
     x: 320,
     y: 380,
-    inputs: {ACTOR: me()},
     next: {
       block: {
         type: 'world_do_Health_BeSafeForSecondsAction',
@@ -817,7 +814,6 @@ const PILOT_ACTOR = JSON.stringify({
         type: 'world_on_Jetpack_RunsOutOfFuelEvent',
         x: 20,
         y: 520,
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_print',
@@ -844,7 +840,6 @@ const PILOT_ACTOR = JSON.stringify({
         x: 20,
         y: 1360,
         fields: {FILTER0: 'actors/coin'},
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_do_Scoring_AddToTheScoreAction',
@@ -859,7 +854,6 @@ const PILOT_ACTOR = JSON.stringify({
         type: 'world_on_Health_RunsOutOfHealthEvent',
         x: 20,
         y: 1600,
-        inputs: {ACTOR: me()},
         next: {block: {type: 'world_do_Goals_LoseTheGameAction'}},
       },
       // …and walking into the way out ends the level, if there is nothing
@@ -870,7 +864,6 @@ const PILOT_ACTOR = JSON.stringify({
         x: 20,
         y: 1480,
         fields: {FILTER0: 'actors/door'},
-        inputs: {ACTOR: me()},
         next: {
           block: onlyIf(noneLeft('actors/gem'), {
             type: 'world_do_Goals_WinTheGameAction',
@@ -963,7 +956,6 @@ const diggableLedgeActor = (name: string, sprite: string) =>
           type: 'world_on_Digging_IsDugEvent',
           x: 320,
           y: 380,
-          inputs: {ACTOR: me()},
           next: {
             block: {
               type: 'world_play_tween',
@@ -976,7 +968,6 @@ const diggableLedgeActor = (name: string, sprite: string) =>
           type: 'world_on_Digging_FillsInEvent',
           x: 20,
           y: 220,
-          inputs: {ACTOR: me()},
           next: {
             block: stack([
               {
@@ -1444,7 +1435,6 @@ const padActor = (seconds: number) =>
           type: 'world_on_Teleport_SendsEvent',
           x: 320,
           y: 380,
-          inputs: {ACTOR: me()},
           next: {
             block: {
               type: 'world_play_tween',
@@ -1457,7 +1447,6 @@ const padActor = (seconds: number) =>
           type: 'world_on_Teleport_ReceivesEvent',
           x: 320,
           y: 500,
-          inputs: {ACTOR: me()},
           next: {
             block: {
               type: 'world_play_tween',
@@ -1548,7 +1537,6 @@ const BAT_ACTOR = JSON.stringify({
         type: 'world_on_Space_CreatedEvent',
         x: 20,
         y: 220,
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_set_Flapping_ActorToHuntProperty',
@@ -1732,7 +1720,6 @@ const eyeballActor = () =>
           type: 'world_on_Space_CreatedEvent',
           x: 20,
           y: 220,
-          inputs: {ACTOR: me()},
           next: {
             block: {
               type: 'world_set_Steering_ActorToChaseProperty',
@@ -1793,7 +1780,6 @@ const blobActor = () =>
           type: 'world_on_Time_TimerFiresEvent',
           x: 20,
           y: 220,
-          inputs: {ACTOR: me()},
           next: {
             block: {
               type: 'world_set_Physics_VelocityProperty',
@@ -1900,7 +1886,6 @@ const ROBOT_ACTOR = JSON.stringify({
         type: 'world_on_Space_CreatedEvent',
         x: 20,
         y: 200,
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'world_set_Prowling_ActorToHuntProperty',
@@ -2020,7 +2005,6 @@ const SCOREBOARD_ACTOR = JSON.stringify({
         type: 'world_on_Scoring_SeesTheScoreChangeEvent',
         x: 20,
         y: 340,
-        inputs: {ACTOR: me()},
         next: {
           block: setText('TextProperty', {
             block: {
@@ -2044,7 +2028,6 @@ const SCOREBOARD_ACTOR = JSON.stringify({
         type: 'world_on_Goals_SeesTheGameWonEvent',
         x: 20,
         y: 460,
-        inputs: {ACTOR: me()},
         next: {
           block: setText('TextProperty', {
             block: {type: 'text', fields: {TEXT: 'YOU MADE IT OUT'}},
@@ -2055,7 +2038,6 @@ const SCOREBOARD_ACTOR = JSON.stringify({
         type: 'world_on_Goals_SeesTheGameLostEvent',
         x: 20,
         y: 580,
-        inputs: {ACTOR: me()},
         next: {
           block: setText('TextProperty', {
             block: {type: 'text', fields: {TEXT: 'CAUGHT'}},

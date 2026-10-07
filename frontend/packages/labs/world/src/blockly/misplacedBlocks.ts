@@ -16,10 +16,11 @@
 //   - Is it offered to this kind of file at all? The palette is built per
 //     kind, and its toolbox is the set of what may be placed here. A hat the
 //     world hears and an actor cannot is in no drawer of an actor file.
-//   - Is it a hat about `this actor` in a world? A world binds no `actor`, so
-//     the subject would compile to a name nothing declares and the module
-//     would throw as it loaded. The fix is the socket, not the tab: a world's
-//     hat is about `any ⟨kind⟩`.
+//   - Is its subject the other kind of file's? A world binds no `actor`, so
+//     a world's handler about `this actor` would compile to a name nothing
+//     declares and the module would throw as it loaded; a world's handler is
+//     about `any ⟨kind⟩`. Anywhere else a handler is about the actor the code
+//     is for, and only that. The fix is the dropdown, not the tab.
 //
 // The answer is disabled-with-a-reason and a warning saying where it belongs,
 // which is what a learner sees, and nothing generated, which is what the
@@ -35,6 +36,7 @@ import * as Blockly from 'blockly/core';
 
 import {createInjectPlugin} from '@code-dot-org/blockly';
 
+import {SUBJECT_FIELD, syncSubject} from './eventSubject';
 import {ROOT_HOMES, type FileKind} from './fileKind';
 
 /** The reason a block is disabled by, which is how it is enabled again. */
@@ -120,10 +122,16 @@ export const misplacementOf = (block: Blockly.Block): string | undefined => {
       c.toUpperCase(),
     );
   }
-  if (context.kind === 'world' && block.type.startsWith('world_on_')) {
-    const subject = block.getInputTargetBlock('ACTOR');
-    if (subject?.type === 'world_this_actor') {
-      return 'A world’s hat is about a kind: put “any ⟨kind⟩” in the socket.';
+  // WHOSE EVENT (`eventSubject`): a world's handler is about a kind, and
+  // anywhere else about this actor. Either arrives in the other kind of file
+  // by a paste, and the dropdown on the block is how it is put right.
+  if (block.type.startsWith('world_on_') && block.getField(SUBJECT_FIELD)) {
+    const kind = block.getFieldValue(SUBJECT_FIELD);
+    if (context.kind === 'world' && !kind) {
+      return 'A world’s handler is about a kind of actor: pick one after “any”.';
+    }
+    if (context.kind !== 'world' && kind) {
+      return 'This handler is about this actor: choose “this actor” instead of a kind.';
     }
   }
   return undefined;
@@ -132,6 +140,12 @@ export const misplacementOf = (block: Blockly.Block): string | undefined => {
 /** Mark or unmark one root, and everything chained under it. */
 export const review = (block: Blockly.Block): void => {
   const reason = misplacementOf(block);
+  // A handler's words follow its subject and the file it is in, and the file
+  // is only certain once the whole of it has loaded — which is when this
+  // runs (`eventSubject.syncSubject`).
+  if (block.getField(SUBJECT_FIELD)) {
+    syncSubject(block);
+  }
   const recording = Blockly.Events.getRecordUndo();
   try {
     Blockly.Events.setRecordUndo(false);

@@ -137,7 +137,6 @@ const moveTo = (to: () => object) =>
 const onKey = (key: string, by: number) => ({
   type: 'world_on_Input_PressesEvent',
   fields: {FILTER0: key},
-  inputs: {ACTOR: me()},
   next: {
     block: either(focused(), [
       moveTo(() => ({
@@ -202,7 +201,6 @@ export const sliderActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: chain([takeFocus(), moveTo(fractionAtPointer)]),
         },
@@ -212,7 +210,6 @@ export const sliderActor = actorFile(
       // and `mouse position` is where that lives.
       {
         type: 'world_on_Gestures_IsDraggedByEvent',
-        inputs: {ACTOR: me()},
         next: {block: chain([moveTo(fractionAtPointer)])},
       },
       onKey('left arrow', -STEP),

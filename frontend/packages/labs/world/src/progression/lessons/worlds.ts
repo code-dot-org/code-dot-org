@@ -38,12 +38,8 @@ export const addActor = (actor: string, body: object[]) => ({
 export const actorPath = (id: string): string => `actors/${id}`;
 
 /**
- * `any ⟨Kind⟩` — a hat's subject, and so the TEMPLATE rather than an instance.
- *
- * What `this actor` says in an `.actor` file, said from the world: a handler
- * written beside a definition is about that kind, and one written in a world
- * has to name the kind it is about. Inside the handler `this actor` still
- * means the actor the event fired for.
+ * `any ⟨Kind⟩` as a value: every actor of that kind there is. A handler
+ * about a kind says so in its own `SUBJECT` field, with `actorPath`.
  */
 export const anyKind = (id: string) => ({
   block: {type: 'world_actor_kind', fields: {ACTOR: actorPath(id)}},

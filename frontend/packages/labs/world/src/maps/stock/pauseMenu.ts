@@ -24,12 +24,7 @@
 // map editor — a map is a starting point to arrange, not a layout that
 // adapts (the anchoring UI_ACTORS.md defers is exactly this).
 
-import {
-  chain,
-  defineMap,
-  emitWorldEvent,
-  me,
-} from '../../actors/stock/workspace';
+import {chain, defineMap, emitWorldEvent} from '../../actors/stock/workspace';
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 
 const MIDDLE = (VIEWPORT_TILES * TILE_SIZE) / 2;
@@ -48,7 +43,6 @@ const script = (hat: object, ...then: object[]) => ({
 const whenClicked = () => ({
   type: 'world_on_Mouse_IsClickedWithEvent',
   fields: {FILTER0: ''},
-  inputs: {ACTOR: me()},
 });
 
 export const pauseMenuMap = JSON.stringify(
@@ -110,11 +104,9 @@ export const pauseMenuMap = JSON.stringify(
           positional: {parent: 'Pause', position: {x: 0, y: 40}},
           Label: {text: 'QUIT'},
         },
-        ...script(
-          whenClicked(),
-          emitWorldEvent('quit'),
-          {type: 'world_unload_this_map'},
-        ),
+        ...script(whenClicked(), emitWorldEvent('quit'), {
+          type: 'world_unload_this_map',
+        }),
       },
     ],
     // The map's own workspace: what it is called. What it RAISES is what the

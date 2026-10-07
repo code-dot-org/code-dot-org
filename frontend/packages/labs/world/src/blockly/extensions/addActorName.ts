@@ -29,6 +29,7 @@
 
 import {Blockly, defineExtension, defineMutator} from '@code-dot-org/blockly';
 
+import {SUBJECT_FIELD} from '../eventSubject';
 import {ActorVariable} from '../typedVariables';
 
 export const ADD_ACTOR_NAME_MUTATOR = 'add_actor_name_mutator';
@@ -100,10 +101,11 @@ export function hasEnclosingActor(block: Blockly.Block): boolean {
       }
       continue;
     }
-    // A hat. An actor-scoped event carries an ACTOR subject socket and binds
-    // it; a world event's hat binds only `world`. Either way the walk ends.
+    // A hat. An actor-scoped event says whose it is (`eventSubject`) and
+    // binds that actor; a world event's hat binds only `world`. Either way
+    // the walk ends.
     if (parent.type.startsWith('world_on_')) {
-      return parent.getInput('ACTOR') !== null;
+      return parent.getField(SUBJECT_FIELD) !== null;
     }
     // Roots that bind something that is not an actor.
     if (parent.type === 'world_world' || parent.type === 'world_rule') {

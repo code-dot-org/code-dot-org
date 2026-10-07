@@ -50,11 +50,7 @@ import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 import {actorPictureExtension, registerKindFilter} from './actorAbout';
 import {SHOW_AS} from './actorIconMeta';
 import {ACTOR_ICON_OPTIONS} from './actorIcons';
-import {
-  actorInputExtension,
-  actorSubjectExtension,
-  cameraInputExtension,
-} from './actorInput';
+import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
@@ -79,6 +75,15 @@ import {
   type EnumMeta,
   type ParamType,
 } from './enums';
+import {
+  ANY_FIELD,
+  ANY_INPUT,
+  eventSubjectExtension,
+  SUBJECT_FIELD,
+  subjectKindOf,
+  THIS_FIELD,
+  THIS_INPUT,
+} from './eventSubject';
 import {actorBlockReportsExtension} from './extensions/actorBlockReports';
 import {
   actorContextExtension,
@@ -1271,13 +1276,33 @@ const worldPlayAnimation = defineBlock({
 // by hand: each engine event becomes a `world_on_<id>` "when …" block, filed
 // under its rule's toolbox category. Like `when_run`, an event is a top-level
 // root: no previous connection, but a NEXT connection — the handler body
-// attaches below as the next statement, not nested in a `do` input. The ACTOR
-// socket is whose handler this is — the one socket in the language that names a
-// SUBJECT rather than a target, so it takes `actorSubjectExtension` and reads
-// `any <kind>` in a world file. A handler runs at RUNTIME, so its args
+// attaches below as the next statement, not nested in a `do` input. Whose
+// event it is, it says in words — `this actor`, or `any ⟨kind⟩` in a world —
+// from a stored field (`eventSubject`). A handler runs at RUNTIME, so its args
 // are the live `world` and `actor` (they shadow the outer `actor` builder) and
 // one name per value the event carries — `eventValue` for the first, which is
 // all an undesigned event has (`carriedName`).
+
+/**
+ * What a handler is registered on: the actor the file is about, or a kind's
+ * template — so that every actor of the kind hears it, the ones the map
+ * placed and the ones added later (`eventSubject`).
+ */
+const subjectTarget = (
+  block: Block,
+  generator: JavascriptGenerator,
+): string => {
+  const kind = subjectKindOf(block);
+  if (!kind) {
+    return 'actor';
+  }
+  addImport(
+    generator,
+    `mod:${kind}`,
+    `import ${importVar(kind)} from ${str(kind)};`,
+  );
+  return importVar(kind);
+};
 
 /** Wrap a handler body as the runtime `.on` registration on the target actor. */
 const onHandler = (
@@ -1370,12 +1395,25 @@ const defineEventBlock = (event: EventMeta) => {
   // anybody in it. So the hat reads `when ⟨space⟩ is pressed` rather than
   // `when ⟨actor⟩ …`, and registers on the world.
   const forActor = event.scope !== 'world';
+  // WHOSE EVENT, in words rather than a socket (`eventSubject`): `this
+  // actor`, or `any` and a kind, as the stored subject says. Each is an
+  // input of its own, so that one can be hidden whole: Blockly lays out a
+  // hidden FIELD's spacing as though it were there, and a hidden input not
+  // at all.
   const args0: BlockArgDefinition[] = forActor
-    ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}]
+    ? [
+        {type: 'input_dummy'},
+        {type: 'field_label', name: THIS_FIELD, text: 'this actor'},
+        {type: 'input_dummy', name: THIS_INPUT},
+        {type: 'field_label', name: ANY_FIELD, text: 'any'},
+        {type: 'field_dropdown', name: SUBJECT_FIELD, options: [['', '']]},
+        {type: 'input_dummy', name: ANY_INPUT},
+      ]
     : [];
-  const extensions: Extension[] = forActor ? [actorSubjectExtension] : [];
-  // `%1` is the actor, when there is one; the phrasing follows it.
-  let message0 = forActor ? 'when %1' : 'when';
+  const extensions: Extension[] = forActor ? [eventSubjectExtension] : [];
+  // `%1`…`%6` are `when` and the subject, when there is one; the phrasing
+  // follows them.
+  let message0 = forActor ? 'when %1 %2 %3 %4 %5 %6' : 'when';
   // A filter and the value it is a filter FOR. The value matters now that
   // there can be more than one: a guard comparing `eventValue` was right when
   // that was the only thing an event carried, and would compare the wrong one
@@ -1585,9 +1623,8 @@ const defineEventBlock = (event: EventMeta) => {
             parameters,
           );
         }
-        const target = actorTarget(block, generator, Order.MEMBER);
         return onHandler(
-          target.code,
+          subjectTarget(block, generator),
           refCode(event.ref, generator),
           body,
           parameters,
@@ -4525,30 +4562,19 @@ const worldThisCamera = defineBlock({
 });
 
 /**
- * A KIND of actor: every one of them, and every one there will be.
+ * A KIND of actor: every one of them there is.
  *
- * The counterpart to `this actor`, and the one a `.world` file needs. In an
- * `.actor` file the subject is obvious — the file is about one actor, and
- * `this actor` is it. A world names several, so a block there has to say which,
- * and what it usually means is "any of them": when ANY coin is collected, when
- * ANY enemy lands.
+ * The counterpart to `this actor` where a block has to say which actors and
+ * usually means "all of these": hide any Coin, for each actor in any Enemy.
+ * It reads the world — `world.actors.ofType(…)` — so it needs a `world`, and
+ * the context guard says so where there is none: `any ⟨Coin⟩` inside `define
+ * actor`, where the name is unbound entirely.
  *
- * It resolves to the actor's TEMPLATE, and templates take the same messages
- * their instances do (`ActorBuilder.on` and `Actor.on` agree on name, arguments
- * and meaning). So `when any Coin starts falling` generates the same
- * `X.on(event, handler)` that `when this actor starts falling` does, and the
- * handler reaches every coin the world places rather than one of them.
- *
- * Registration is copied into an instance when it is made (`ActorBuilder
- * .instantiate`), so a handler has to be registered before the actors are
- * placed — which is what `assembleWorldModule` orders (event hats above the
- * world block).
- *
- * The context guard is for the OTHER compilation, the one that reads the world:
- * `world.actors.ofType(…)` needs a `world` to read from. It does not fire on
- * the hat-subject case, which names the template and touches no world at all —
- * an event hat counts as binding `world`. What it catches is `any ⟨Coin⟩` read
- * as a value inside `define actor`, where the name is unbound entirely.
+ * A HANDLER'S `any ⟨kind⟩` is a different thing with the same words: whose
+ * event it hears, which is a field on the event block and registers on the
+ * kind's template, so that the coins placed later hear it too
+ * (`eventSubject`). This block was that once, plugged into a socket the
+ * event block no longer has.
  *
  * Under `define world` this is FINE, and used to warn. The builder now hands
  * back the actors of the world it is describing (`WorldBuilder.actors`), so
@@ -4571,43 +4597,27 @@ const worldActorKind = defineBlock({
   tooltip:
     'Every actor of this kind — the ones placed now and the ones placed later.',
   generator: {
-    javascript(block, generator) {
+    javascript(block) {
       const actor = block.getFieldValue('ACTOR');
-      // Two compilations of one idea (specs/ACTOR_LISTS.md). Plugged into a
-      // handler's subject socket this is the TEMPLATE, so registering on it
-      // reaches the coins placed later as well; anywhere else it is the coins
-      // there are, which is what a statement acts on and a value reads.
-      const parent = block.outputConnection?.targetConnection?.getSourceBlock();
-      const isSubject = Boolean(parent?.type.startsWith('world_on_'));
-      // Nothing chosen at all.
+      // Nothing chosen is NO ACTORS: `for each actor ⟨each⟩ in ⟨any ⟨…⟩⟩`
+      // falling back to `actor` would be a loop that runs its body exactly
+      // once, on the subject — a loop that looks like a loop and is not.
+      // Emitting none is the bargain every other unfinished dropdown here
+      // makes (`world_actors_with_trait`, `use trait`): nothing happens,
+      // visibly.
       //
-      // On a HAT the answer is the hat's own subject: `when ⟨any …⟩ is
-      // clicked` with the kind missing is a handler registered on the actor
-      // the file is about, which is what a `.actor` file's hats mean anyway.
-      //
-      // Anywhere ELSE it is NO ACTORS, and the difference matters now that
-      // this block is a list source: `for each actor ⟨each⟩ in ⟨any ⟨…⟩⟩`
-      // falling back to `actor` is a loop that runs its body exactly once, on
-      // the subject — a loop that looks like a loop and is not. Emitting none
-      // is the bargain every other unfinished dropdown here makes
-      // (`world_actors_with_trait`, `use trait`): nothing happens, visibly.
+      // A handler's own `any ⟨kind⟩` is not this block: it is the event
+      // block's subject field, and registers on the kind's template
+      // (`eventSubject`).
       if (!actor) {
-        return [isSubject ? 'actor' : '[]', Order.ATOMIC] as [string, number];
+        return ['[]', Order.ATOMIC] as [string, number];
       }
-      if (!isSubject) {
-        // The world stamps each placed actor with its type, the module path,
-        // so nothing has to be imported to ask for them.
-        return [`world.actors.ofType(${str(actor)})`, Order.MEMBER] as [
-          string,
-          number,
-        ];
-      }
-      addImport(
-        generator,
-        `mod:${actor}`,
-        `import ${importVar(actor)} from ${str(actor)};`,
-      );
-      return [importVar(actor), Order.ATOMIC] as [string, number];
+      // The world stamps each placed actor with its type, the module path,
+      // so nothing has to be imported to ask for them.
+      return [`world.actors.ofType(${str(actor)})`, Order.MEMBER] as [
+        string,
+        number,
+      ];
     },
   },
 });

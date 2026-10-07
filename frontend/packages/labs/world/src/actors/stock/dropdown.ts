@@ -330,7 +330,6 @@ export const dropdownActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: chain([
             {
@@ -346,7 +345,6 @@ export const dropdownActor = actorFile(
       {
         type: 'world_on_Mouse_PressesMouseButtonEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: either(both(open(), not(pointerInside())), closeUp()),
         },
@@ -355,7 +353,6 @@ export const dropdownActor = actorFile(
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'enter'},
-        inputs: {ACTOR: me()},
         next: {
           block: either(focused(), [
             either(open(), [choose(highlighted), ...closeUp()], openUp()),
@@ -366,7 +363,6 @@ export const dropdownActor = actorFile(
       ...(['up arrow', 'down arrow'] as const).map(key => ({
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: key},
-        inputs: {ACTOR: me()},
         next: {
           block: either(both(focused(), open()), [
             set(

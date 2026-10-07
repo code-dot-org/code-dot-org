@@ -81,9 +81,7 @@ const play = async () => {
     }),
   );
   world.tick(1 / 60);
-  const button = [...world.actors].find(
-    one => one.type === 'actors/button',
-  )!;
+  const button = [...world.actors].find(one => one.type === 'actors/button')!;
   // HOW BIG IT IS DRAWN is what the hit test measures (`rules/pointing`,
   // `halfSize`), and a headless world has rasterized nothing — so the size a
   // driver would have measured is said here instead. 120 by 32: wide enough

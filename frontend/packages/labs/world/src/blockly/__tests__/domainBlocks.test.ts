@@ -1061,17 +1061,18 @@ describe('domain block generators', () => {
     );
   });
 
-  it('event blocks register the handler on their ACTOR value', () => {
-    // Default (empty socket → `this actor` shadow) registers on `actor`; an
-    // empty next chain yields an empty handler body.
+  it('event blocks register the handler on whose event it is', () => {
+    // No kind named is this actor: registered on `actor`. An empty next
+    // chain yields an empty handler body.
     expect(emit('world_on_Appearance_AnimationEndedEvent', {}, {}, {})).toBe(
       'actor.on(WorldLab.AnimationEndedEvent, (world, actor, eventValue) => {\n});\n',
     );
-    // A plugged-in actor value registers on it instead.
+    // A kind named is the kind's TEMPLATE, so that the coins placed later
+    // hear it too (`eventSubject`).
     expect(
-      emit('world_on_Appearance_AnimationEndedEvent', {}, {}, {ACTOR: 'other'}),
+      emit('world_on_Appearance_AnimationEndedEvent', {SUBJECT: 'actors/coin'}),
     ).toBe(
-      'other.on(WorldLab.AnimationEndedEvent, (world, actor, eventValue) => {\n});\n',
+      'ActorsCoin.on(WorldLab.AnimationEndedEvent, (world, actor, eventValue) => {\n});\n',
     );
   });
 
@@ -1702,7 +1703,7 @@ describe('the map edges', () => {
     // raised into a registration that never happened looks exactly like an
     // event that is never raised.
     expect(
-      emit('world_on_Space_LeftMapEvent', {}, {}, {ACTOR: 'target'}, 'body;\n'),
+      emit('world_on_Space_LeftMapEvent', {}, {}, {}, 'body;\n'),
     ).toContain('.on(WorldLab.LeftMapEvent');
   });
 
@@ -1722,8 +1723,9 @@ describe('the map edges', () => {
     expect(message('world_query_Space_OutsideMapQuery')).toBe(
       '%1 is outside the map',
     );
+    // `%1`…`%6` are `when` and whose event it is (`eventSubject`).
     expect(message('world_on_Space_LeftMapEvent')).toBe(
-      'when %1 leaves the map',
+      'when %1 %2 %3 %4 %5 %6 leaves the map',
     );
   });
 });

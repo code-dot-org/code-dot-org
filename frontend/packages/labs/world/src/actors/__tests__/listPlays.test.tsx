@@ -11,8 +11,8 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
 import {RotationProperty, type Actor, type Property} from '../../engine';
+import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -130,7 +130,7 @@ const project = (
         // event carrying two named values (specs/EVENT_VALUES_PLAN.md).
         {
           type: 'world_on_ActorsList_IsChosenAtEvent',
-          inputs: {ACTOR: kind('actors/list')},
+          fields: {SUBJECT: 'actors/list'},
           next: {
             block: {
               type: 'world_set_ActorsLabel_TextProperty',

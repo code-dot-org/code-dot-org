@@ -849,7 +849,6 @@ describe('the camera strip', () => {
         {
           type: 'world_on_Space_CreatedEvent',
           inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
             DO: {
               block: {
                 type: 'world_define_camera',

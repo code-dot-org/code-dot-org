@@ -17,6 +17,7 @@ import {collisionsRule} from '../../rules/stock/collisions';
 import {inputRule} from '../../rules/stock/input';
 import BlocklyGenerator from '../BlocklyGenerator';
 import {buildDomainPalette} from '../domainBlocks';
+import {SUBJECT_FIELD} from '../eventSubject';
 import type {FileKind} from '../fileKind';
 import {
   MISPLACED,
@@ -123,35 +124,38 @@ describe('a root no drawer here offers', () => {
   });
 });
 
-describe('a hat about `this actor` in a world', () => {
-  const hatAbout = (world: Blockly.Workspace, subjectType: string) => {
-    const hat = world.newBlock(ACTOR_HAT);
-    const subject = world.newBlock(subjectType);
-    hat.getInput('ACTOR')!.connection!.connect(subject.outputConnection!);
+describe('whose event a handler is, by file', () => {
+  /** A handler about `subject`: a kind's path, or empty for this actor. */
+  const hatAbout = (file: Blockly.Workspace, subject: string) => {
+    const hat = file.newBlock(ACTOR_HAT);
+    hat.setFieldValue(subject, SUBJECT_FIELD);
     return hat;
   };
 
-  it('is an orphan until the socket says which kind', () => {
+  it('is an orphan in a world until it names a kind', () => {
     const world = fileOf('world');
-    const hat = hatAbout(world, 'world_this_actor');
+    const hat = hatAbout(world, '');
 
-    expect(misplacementOf(hat)).toMatch(/any/);
+    expect(misplacementOf(hat)).toMatch(/pick one/);
     review(hat);
     expect(hat.hasDisabledReason(MISPLACED)).toBe(true);
   });
 
-  it('is fine about a kind, which is what a world’s hat is', () => {
-    const world = fileOf('world');
-    const hat = hatAbout(world, 'world_actor_kind');
-
-    expect(misplacementOf(hat)).toBeUndefined();
+  it('is fine about a kind, which is what a world’s handler is', () => {
+    expect(
+      misplacementOf(hatAbout(fileOf('world'), 'actors/coin')),
+    ).toBeUndefined();
   });
 
-  it('is fine about `this actor` in an actor file', () => {
-    const file = fileOf('actor');
-    const hat = hatAbout(file, 'world_this_actor');
+  it('is fine about this actor in an actor file', () => {
+    expect(misplacementOf(hatAbout(fileOf('actor'), ''))).toBeUndefined();
+  });
 
-    expect(misplacementOf(hat)).toBeUndefined();
+  it('is an orphan in an actor file when it names a kind', () => {
+    // Pasted from a world: the actor's own handler is about this actor.
+    expect(misplacementOf(hatAbout(fileOf('actor'), 'actors/coin'))).toMatch(
+      /this actor/,
+    );
   });
 });
 
@@ -172,19 +176,16 @@ describe('the change handler', () => {
     expect(actor.hasDisabledReason(MISPLACED)).toBe(true);
   });
 
-  it('asks again when a child moves, which is how a socket gets fixed', () => {
+  it('asks again when the subject changes, which is how one gets fixed', () => {
     const hat = world.newBlock(ACTOR_HAT);
-    const me = world.newBlock('world_this_actor');
-    hat.getInput('ACTOR')!.connection!.connect(me.outputConnection!);
+    hat.setFieldValue('', SUBJECT_FIELD);
     review(hat);
     expect(hat.hasDisabledReason(MISPLACED)).toBe(true);
 
-    me.outputConnection!.disconnect();
-    const kind = world.newBlock('world_actor_kind');
-    hat.getInput('ACTOR')!.connection!.connect(kind.outputConnection!);
+    hat.setFieldValue('actors/coin', SUBJECT_FIELD);
     onMisplacedChange({
-      type: Blockly.Events.BLOCK_MOVE,
-      blockId: kind.id,
+      type: Blockly.Events.BLOCK_CHANGE,
+      blockId: hat.id,
       workspaceId: world.id,
     } as unknown as Blockly.Events.Abstract);
 

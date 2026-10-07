@@ -4,9 +4,8 @@
 // Attached as a block extension because the simplified toolbox lists blocks by
 // type only and can't carry per-input shadow specs.
 //
-// Three of them, because a socket asking WHOSE HANDLER THIS IS is a different
-// question from one asking WHICH ACTOR TO ACT ON, and a camera's members are
-// asking about neither:
+// Two of them, because a socket asking WHICH ACTOR TO ACT ON has a different
+// answer on a camera's members:
 //
 //   - `actorInputExtension` — the ordinary one. Actions, queries, properties:
 //     each operates on one live actor, and inside a handler that is the
@@ -14,17 +13,14 @@
 //     file.
 //   - `cameraInputExtension` — the same socket on a member a CAMERA elects,
 //     where the only sensible answer is `this camera`.
-//   - `actorSubjectExtension` — an event hat's socket, and only that. A
-//     `.world` file has no principal actor (`actor` is not bound at its top
-//     level at all), so a hat there defaults to `any <kind>`: registering on
-//     the template is what makes one handler reach every actor of that kind,
-//     the ones the map placed and the ones added later. An `.actor` file is
-//     about one actor, so there the subject is `this actor` like everything
-//     else.
 //
-// The split is the point. "when any Coin is touched → hide THIS ACTOR" is the
-// sentence a learner means; defaulting the inner block to the kind would read
-// as hiding every coin at once.
+// Whose event a handler is was a third socket, seeded `any <kind>` in a world
+// and `this actor` elsewhere. It is words on the event block now, from a
+// stored field (`eventSubject`).
+//
+// "when any Coin is touched → hide THIS ACTOR" is the sentence a learner
+// means: the handler is about a kind, and the row inside it about the one
+// coin the event happened to. So a row here still defaults to `this actor`.
 
 import type {Block, WorkspaceSvg} from 'blockly';
 
@@ -35,7 +31,6 @@ import {subjectOfTraitValue} from './traitOptions';
 import {definesWorld} from './workspaceRoots';
 
 export const ACTOR_INPUT_EXTENSION = 'world_actor_input';
-export const ACTOR_SUBJECT_EXTENSION = 'world_actor_subject_input';
 export const CAMERA_INPUT_EXTENSION = 'world_camera_input';
 
 /** Seed an empty `ACTOR` input with the shadow `choose` names. */
@@ -193,21 +188,6 @@ export const actorInputExtension: Extension = defineExtension(
           reseedShadow(this);
         }
       });
-    },
-  },
-);
-
-/**
- * The same for the socket that names an event handler's SUBJECT: `any <kind>`
- * in a world file, `this actor` in an actor file.
- */
-export const actorSubjectExtension: Extension = defineExtension(
-  ACTOR_SUBJECT_EXTENSION,
-  {
-    extension() {
-      seedShadow(this, workspace =>
-        definesWorld(workspace) ? 'world_actor_kind' : 'world_this_actor',
-      );
     },
   },
 );

@@ -32,6 +32,7 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {editingActorModule} from './editingRule';
+import {SUBJECT_FIELD} from './eventSubject';
 import {NAME_FIELD, NAMED} from './extensions/addActorName';
 import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {DEFINE_TWEEN, PLAY_TWEEN_HERE} from './tweens';
@@ -107,13 +108,9 @@ const kindOfValue = (
 ): ActorAbout | undefined =>
   value ? {type: value, name: value.split('/').pop() ?? value} : undefined;
 
-/** The kind a hat is about: its subject socket's `any ⟨Kind⟩`. */
-const subjectOf = (hat: Surroundings): ActorAbout | undefined => {
-  const kind = hat.getInputTargetBlock?.('ACTOR');
-  return kind?.type === 'world_actor_kind'
-    ? kindOfValue(kind.getFieldValue?.('ACTOR'))
-    : undefined;
-};
+/** The kind a handler is about: its subject, when that is `any ⟨Kind⟩`. */
+const subjectOf = (hat: Surroundings): ActorAbout | undefined =>
+  kindOfValue(hat.getFieldValue?.(SUBJECT_FIELD));
 
 /**
  * The kind of actor a block is about, or nothing when nothing says.
@@ -157,7 +154,7 @@ export function actorAbout(
     }
     if (type.startsWith('world_on_')) {
       if (which === 'this') {
-        // A world's hat names a kind; an actor file's names `this actor`, and
+        // A world's hat names a kind; an actor file's is `this actor`, and
         // then the answer is the file's own — so a subject that is not a kind
         // is not an answer of "nobody", it is no answer at all.
         return subjectOf(at) ?? fileActor(block);

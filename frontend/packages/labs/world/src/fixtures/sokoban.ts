@@ -252,7 +252,6 @@ const PLAYER_ACTOR = JSON.stringify({
         fields: {FILTER0: key},
         x: 20,
         y,
-        inputs: {ACTOR: me()},
         next: {
           block: {type: `world_do_Grid_${action}`, inputs: {ACTOR: me()}},
         },
@@ -351,7 +350,6 @@ const CRATE_ACTOR = JSON.stringify({
         type: 'world_on_Grid_FinishesAStepEvent',
         x: 20,
         y: 320,
-        inputs: {ACTOR: me()},
         next: {
           block: {
             type: 'controls_if',

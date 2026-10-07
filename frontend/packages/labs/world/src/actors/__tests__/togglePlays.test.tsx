@@ -77,12 +77,12 @@ const project = (): MultiFileSource => {
         },
         {
           type: 'world_on_ActorsToggle_TurnedOnEvent',
-          inputs: {ACTOR: kind('actors/toggle')},
+          fields: {SUBJECT: 'actors/toggle'},
           next: {block: says('ON')},
         },
         {
           type: 'world_on_ActorsToggle_TurnedOffEvent',
-          inputs: {ACTOR: kind('actors/toggle')},
+          fields: {SUBJECT: 'actors/toggle'},
           next: {block: says('OFF')},
         },
       ],

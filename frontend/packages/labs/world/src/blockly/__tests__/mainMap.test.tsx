@@ -19,7 +19,6 @@ const PAUSES_ON_CREATE = {
     blocks: [
       {
         type: 'world_on_Space_CreatedEvent',
-        inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
         next: {block: {type: 'world_pause_game'}},
       },
     ],

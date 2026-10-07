@@ -30,7 +30,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {fileIdAt} from '../../runtime/projectFiles';
 
-import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
+import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, hasRoot, type BlockJson} from './patch';
 
@@ -43,7 +43,6 @@ const WORTH = 10;
 /** `when ⟨this actor⟩ collects ⟨any⟩: add ten to the score`. */
 const handler = (): BlockJson => ({
   type: COLLECTS_HAT,
-  inputs: {ACTOR: me()},
   next: {
     block: {
       type: 'world_do_Scoring_AddToTheScoreAction',

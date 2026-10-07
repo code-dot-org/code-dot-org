@@ -64,7 +64,7 @@ import {fileIdAt} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
-import {edit, electTraits, fileOf, me, subjectOf, wears} from './actorPatch';
+import {edit, electTraits, fileOf, me, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {
   addRoot,
@@ -134,7 +134,6 @@ const handler = (target: EnhanceTarget): BlockJson => {
   const bar = named(variable);
   return {
     type: CREATED_HAT,
-    inputs: {ACTOR: subjectOf()},
     next: {
       block: {
         type: 'world_add_actor',

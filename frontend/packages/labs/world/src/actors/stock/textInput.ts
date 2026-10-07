@@ -522,7 +522,6 @@ const onKeyHeld = (key: string, body: () => object) =>
   ['world_on_Input_PressesEvent', 'world_on_Input_RepeatsEvent'].map(hat => ({
     type: hat,
     fields: {FILTER0: key},
-    inputs: {ACTOR: me()},
     next: {block: body()},
   }));
 
@@ -587,7 +586,6 @@ export const textInputActor = actorFile(
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
-        inputs: {ACTOR: me()},
         next: {
           block: chain([takeFocus(), ...placesTheCaret()]),
         },
@@ -597,7 +595,6 @@ export const textInputActor = actorFile(
       // typed, which is the first thing anybody does after a typo.
       {
         type: 'world_on_Input_TypesEvent',
-        inputs: {ACTOR: me()},
         next: {
           block: onlyIf(both(focused(), takes()), [
             setText(
@@ -645,7 +642,6 @@ export const textInputActor = actorFile(
       {
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: 'enter'},
-        inputs: {ACTOR: me()},
         next: {
           block: onlyIf(focused(), [
             {
