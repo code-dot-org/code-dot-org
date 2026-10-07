@@ -8,6 +8,8 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
 
 .card {
   @include mixins.card;
+
+  box-shadow: var(--shadow-sm);
 }
 
 // Two classes, to outrank the theme's Typography color.

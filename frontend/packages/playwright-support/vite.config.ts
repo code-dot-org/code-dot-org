@@ -30,6 +30,9 @@ export default defineConfig({
     alias: {'@': path.resolve(__dirname, './src')},
   },
   build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
     sourcemap: true,
     lib: {
       // One entry per public subpath. `preserveModules` keeps the src/ layout,

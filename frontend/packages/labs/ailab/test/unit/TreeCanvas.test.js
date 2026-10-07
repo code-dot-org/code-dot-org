@@ -46,6 +46,17 @@ function renderCanvas(props = {}) {
   );
 }
 
+function overlayRef(width, top = 0) {
+  const overlay = document.createElement('div');
+  overlay.getBoundingClientRect = () => ({
+    left: viewportSize.width - width,
+    right: viewportSize.width,
+    top,
+    bottom: top + 200,
+  });
+  return {current: overlay};
+}
+
 function button(name) {
   return screen.getByRole('button', {name});
 }
@@ -67,6 +78,14 @@ describe('TreeCanvas', () => {
     );
     vi.spyOn(Element.prototype, 'clientHeight', 'get').mockImplementation(
       () => viewportSize.height,
+    );
+    vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(
+      () => ({
+        left: 0,
+        right: viewportSize.width,
+        top: 0,
+        bottom: viewportSize.height,
+      }),
     );
     vi.spyOn(HTMLElement.prototype, 'offsetLeft', 'get').mockImplementation(
       function () {
@@ -95,6 +114,64 @@ describe('TreeCanvas', () => {
   it('refits when the viewport resizes', () => {
     renderCanvas();
     resizeViewport(472, 360);
+    resizeViewport(848, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 24px) scale(1)');
+  });
+
+  it('fits the content clear of an overlay on the right edge', () => {
+    renderCanvas({overlayRef: overlayRef(376)});
+    resizeViewport(848, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)');
+  });
+
+  it('ignores an overlay stacked below the canvas', () => {
+    renderCanvas({overlayRef: overlayRef(376, 360)});
+    resizeViewport(848, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 24px) scale(1)');
+  });
+
+  it('fits under the overlay when keeping it clear leaves no room', () => {
+    renderCanvas({overlayRef: overlayRef(376)});
+    resizeViewport(472, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)');
+  });
+
+  it('zooms to fit clear of the overlay', async () => {
+    renderCanvas({overlayRef: overlayRef(376)});
+    resizeViewport(848, 360);
+    fireEvent.click(button('Zoom in'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+
+    fireEvent.click(button('Zoom to fit'));
+
+    await vi.waitFor(() =>
+      expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)'),
+    );
+  });
+
+  it("keeps the student's zoom when the viewport resizes", async () => {
+    renderCanvas();
+    resizeViewport(472, 360);
+    fireEvent.click(button('Zoom in'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+
+    resizeViewport(848, 360);
+
+    expect(contentScale()).toBe(0.5 * 1.25);
+  });
+
+  it('refits on resize again after Zoom to fit', async () => {
+    renderCanvas();
+    resizeViewport(472, 360);
+    fireEvent.click(button('Zoom in'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+    fireEvent.click(button('Zoom to fit'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5));
+
     resizeViewport(848, 360);
 
     expect(contentTransform()).toBe('translate(72px, 24px) scale(1)');

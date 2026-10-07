@@ -260,6 +260,7 @@ gem 'aws-sdk-s3', '~> 1.113'
 gem 'aws-sdk-sagemaker'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
+gem 'aws-sdk-ssm'
 
 # Lint tools
 group :development, :staging, :levelbuilder, :test do

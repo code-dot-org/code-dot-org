@@ -4,6 +4,7 @@ import {generateText, type GenerateTextResult} from 'ai';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
+import {AichatContext} from '../aichat/types';
 
 import {
   CURRENT_SCHEMA_VERSION,
@@ -101,10 +102,14 @@ const generateTextThroughGateway = async <
 ): Promise<GatewayGenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const phase = extraOptions?.phase as GatewayPhase | undefined;
+  // A caller outside a chat passes its own context for the access token.
+  const aichatContext =
+    (extraOptions?.aichatContext as AichatContext | undefined) ??
+    AichatContextManager.getContext();
   const modelString = getModelString(model);
   const promptLength =
     typeof options.prompt === 'string' ? options.prompt.length : 0;
-  const clientType = AichatContextManager.getContext().clientType;
+  const clientType = aichatContext.clientType;
 
   let schemaErrorReported = false;
   const execute = async (): Promise<
@@ -123,7 +128,9 @@ const generateTextThroughGateway = async <
       // Turnstile mode that decides whether a challenge is needed at all. The
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const {token, turnstileEnforcementMode} = await fetchAccessToken(
+        aichatContext
+      );
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
       );

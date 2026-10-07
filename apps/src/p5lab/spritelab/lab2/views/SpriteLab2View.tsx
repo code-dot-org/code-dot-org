@@ -70,6 +70,7 @@ import {
   DEFAULT_IMAGE_STYLE,
   isFreeplayMode,
   isImageMode,
+  isImageUi,
   tabsForMode,
 } from '../levelMode';
 import {
@@ -124,12 +125,14 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
+import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
+import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
@@ -166,6 +169,13 @@ function getImageAdlibSetParam(): ImageAdlibSet | undefined {
 // levels, for internal testing.
 function getImageFreeTextParam(): boolean {
   return queryParams('image-free-text') === 'true';
+}
+
+// ?image-ui=explore tries the two-half image scene on any image level; a
+// level opts in with level_mode.imageUi.
+function getImageUiParam() {
+  const value = queryParams('image-ui');
+  return isImageUi(value) ? value : undefined;
 }
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
@@ -1807,6 +1817,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
+  const imageUi = getImageUiParam() ?? levelProperties.levelMode?.imageUi;
+
   // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
@@ -1866,13 +1878,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {isImageMode(levelProperties.levelMode) ? (
         // The image panel is the whole lab, with the floating guide over it.
         <div className={moduleStyles.imageLevelArea}>
-          <GenerateImagePane imageLevel {...imagePaneProps} />
-          <GenerateSpriteLab
-            levelMode={levelProperties.levelMode}
-            instructions={guide.text}
-            showContinue={guide.showContinue}
-            levelProperties={levelProperties}
-          />
+          {imageUi ? (
+            // The explore scene is its own Guide, instructions included.
+            <ImageExploreScene
+              imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
+              imageSubject={levelProperties.levelMode?.imageSubject}
+              sentenceId={levelProperties.levelMode?.sentence}
+              defaultStyle={DEFAULT_IMAGE_STYLE}
+              imageRole={levelProperties.levelMode?.imageRole}
+              uploadImage={uploadImage}
+              instructions={guide.text}
+              showTts={showTtsFor(levelProperties)}
+            />
+          ) : (
+            <>
+              <GenerateImagePane imageLevel {...imagePaneProps} />
+              <GenerateSpriteLab
+                levelMode={levelProperties.levelMode}
+                instructions={guide.text}
+                showContinue={guide.showContinue}
+                levelProperties={levelProperties}
+              />
+            </>
+          )}
         </div>
       ) : (
         <TabShell

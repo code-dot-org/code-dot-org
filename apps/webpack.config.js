@@ -595,6 +595,9 @@ function createWebpackConfig({
   return {
     ...WEBPACK_BASE_CONFIG,
     ...WEBPACK_CONFIG,
+    // Portal packages live behind symlinks under node_modules; without this the
+    // macOS recursive watcher never sees their files reappear after a rebuild.
+    watchOptions: {followSymlinks: true},
   };
 }
 

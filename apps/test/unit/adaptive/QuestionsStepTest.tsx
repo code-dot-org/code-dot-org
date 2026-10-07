@@ -9,11 +9,14 @@ import {
 } from '@cdo/apps/adaptive/types';
 import QuestionsStep from '@cdo/apps/adaptive/views/steps/QuestionsStep';
 
-const question = (id: number, stem: string): MultipleChoiceQuestion => ({
+const question = (
+  id: number,
+  questionTitle: string
+): MultipleChoiceQuestion => ({
   id,
   type: 'MultipleChoiceQuestion',
   questionName: `q${id}`,
-  stem,
+  questionTitle,
   choices: [
     {id: 'a', text: `Yes ${id}`},
     {id: 'b', text: `No ${id}`},

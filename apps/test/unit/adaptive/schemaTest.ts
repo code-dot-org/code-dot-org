@@ -75,7 +75,7 @@ const served = (): Raw => ({
             id: 1,
             type: 'MultipleChoiceQuestion',
             questionName: 'pick-one',
-            stem: 'Pick one',
+            questionTitle: 'Pick one',
             choices: [
               {id: 'a', text: 'A'},
               {id: 'b', text: 'B'},

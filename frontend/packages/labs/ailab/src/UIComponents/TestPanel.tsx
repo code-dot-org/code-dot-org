@@ -103,42 +103,38 @@ const TestPanel = () => {
 
   return (
     <div id="test-panel" className={styles.panel}>
-      <div className={styles.content}>
-        <section className={styles.card}>
-          <Typography
-            variant="label3"
-            component="h2"
-            className={styles.cardHeader}
+      <section className={styles.card}>
+        <Typography
+          variant="label3"
+          component="h2"
+          className={styles.cardHeader}
+        >
+          Make a prediction
+        </Typography>
+        <div className={styles.fields}>{selectedFeatures.map(renderField)}</div>
+        <div className={styles.actionRow}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            disabled={!predictAvailable}
+            onClick={train.onClickPredict}
           >
-            Make a prediction
-          </Typography>
-          <div className={styles.fields}>
-            {selectedFeatures.map(renderField)}
-          </div>
-          <div className={styles.actionRow}>
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
-              disabled={!predictAvailable}
-              onClick={train.onClickPredict}
-            >
-              Predict
-            </Button>
-            <Button
-              variant="outlined"
-              color="secondary"
-              size="small"
-              startIcon={<FontAwesomeV6Icon iconName="shuffle" />}
-              onClick={onClickRandom}
-            >
-              Random
-            </Button>
-          </div>
-        </section>
-        <div aria-live="polite">
-          <PredictionResult />
+            Predict
+          </Button>
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
+            startIcon={<FontAwesomeV6Icon iconName="shuffle" />}
+            onClick={onClickRandom}
+          >
+            Random
+          </Button>
         </div>
+      </section>
+      <div aria-live="polite">
+        <PredictionResult />
       </div>
     </div>
   );

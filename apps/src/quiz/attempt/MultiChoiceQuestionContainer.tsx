@@ -12,7 +12,7 @@ import AttemptCard from './AttemptCard';
 import styles from './multi-choice-question-container.module.scss';
 
 export interface MultiChoiceQuestionContainerProps {
-  question: Pick<QuizQuestionSummary, 'id' | 'stem' | 'choices'>;
+  question: Pick<QuizQuestionSummary, 'id' | 'questionTitle' | 'choices'>;
   // Omit for a quiz with only one question.
   questionLabel?: string;
   selectedChoiceId: string | null;
@@ -30,11 +30,11 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
   onSelectChoice,
   selectedChoiceStatus,
 }) => (
-  <AttemptCard label={questionLabel} title={question.stem}>
+  <AttemptCard label={questionLabel} title={question.questionTitle}>
     <div
       className={styles.choices}
       role="radiogroup"
-      aria-label={question.stem}
+      aria-label={question.questionTitle}
     >
       {(question.choices ?? []).map((choice, index) => {
         const isSelected = choice.id === selectedChoiceId;

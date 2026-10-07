@@ -13,7 +13,7 @@ export const multipleChoiceQuestionSchema = subsetOf<
     id: z.number().int().positive(),
     type: z.literal('MultipleChoiceQuestion'),
     questionName: z.string().min(1),
-    stem: z.string().min(1),
+    questionTitle: z.string().min(1),
     choices: z
       .array(z.strictObject({id: z.string().min(1), text: z.string().min(1)}))
       .min(2),
