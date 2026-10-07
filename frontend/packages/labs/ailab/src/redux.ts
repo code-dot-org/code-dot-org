@@ -395,6 +395,9 @@ const ailabSlice = createSlice({
         return {payload: {label, features, accuracy, correct, total}};
       },
     },
+    setHistoricResults(state, action: PayloadAction<HistoricResult[]>) {
+      state.historicResults = action.payload;
+    },
     setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
       state.hyperparameters = action.payload;
     },
@@ -443,6 +446,7 @@ export const {
   setTrainingModalStep,
   setSaveStatus,
   setHistoricResult,
+  setHistoricResults,
   setHyperparameters,
   setInstructionsDismissed,
   setInstructionsEnabled,
