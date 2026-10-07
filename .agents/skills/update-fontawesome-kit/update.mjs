@@ -64,7 +64,7 @@ function usagesByName(names) {
   return Object.fromEntries(
     names.map(n => {
       const one = new RegExp(`fa-${n}([^a-z0-9-]|$)|["'\`]${n}["'\`]`);
-      return [n, lines.filter(l => one.test(l))];
+      return [n, lines.filter(l => one.test(l.replace(/^[^:]*:\d+:/, '')))];
     }),
   );
 }
@@ -121,7 +121,7 @@ function main() {
       const usages = usagesByName(removed);
       for (const name of removed) {
         const hits = usages[name];
-        console.log(hits.length ? `USED: ${name} (${hits.length}):\n  ${hits.join('\n  ')}` : `unused: ${name}`);
+        console.log(hits.length ? `USED: ${name} (${hits.length}):\n  ${hits.map(l => (l.length > 160 ? `${l.slice(0, 160)}...` : l)).join('\n  ')}` : `unused: ${name}`);
       }
       console.log('NOTE: "unused" is not proof. The search misses class names built at runtime (fa-${x}).');
     }

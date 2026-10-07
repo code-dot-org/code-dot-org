@@ -55,12 +55,15 @@ match unrelated strings, so read each hit.
 1. Open each `USED` hit and classify it as a real usage or a false positive. Show the operator the real ones
    (file and line).
 2. Check for a rename: a removed icon next to a similarly named added one (`ai-head-regular` -> `ai-head`).
-3. A real usage blocks step 4 until the operator picks one of these in writing; any of them unblocks it: fix callers in the update PR
-   (new name or another icon); keep the icon (ask design to restore it in the kit and stop here); or defer
-   (apply anyway and open a follow-up; those spots render blank in production once the kit is live).
+3. A real usage blocks step 4 until the operator picks one of these in writing:
+   - fix callers in the update PR (new name or another icon): unblocks step 4;
+   - defer (apply anyway and open a follow-up; those spots render blank in production once the kit is live):
+     unblocks step 4;
+   - keep the icon (ask design to restore it in the kit): does not unblock; stop here.
 4. Say plainly that "unused" is not proof: class names built at runtime (`fa-${x}`) are not found.
 
-**GATE:** operator confirms the icon diff matches what design added (ask for names if unsure).
+**GATE:** operator confirms the icon diff matches what design added (ask for names if unsure). For a v7 kit the
+dry run prints `n/a`; the gate is the operator confirming they want an archive-only upload.
 
 ### 4. Apply (you)
 
@@ -83,7 +86,9 @@ timestamp folders; e.g. `apps/src/applab/Exporter.js` still pins one.
 
 ### 6. Verify the upload (you)
 
-For each `<ts>/css/*.min.css` the loader and `font.scss` reference and for `<ts>/webfonts/custom-icons.woff2`:
+For each `<ts>/css/*.min.css` the loader and `font.scss` reference and for `<ts>/webfonts/custom-icons.woff2`
+(for a v7 kit nothing references the prefix: check `<ts>/css/fontawesome.min.css` and
+`<ts>/webfonts/custom-icons.woff2`):
 `curl -sI -H 'Origin: https://studio.code.org' https://dsco.code.org/assets/font-awesome-pro/<ts>/<path>` must
 return 200 with `access-control-allow-origin` (S3 sends it only when an `Origin` header is present). A missing CORS header means the
 bucket CORS config needs fixing (see the README's Slack thread link); that is an operator/infra task.
@@ -111,6 +116,8 @@ The update PR must hold only the update, never skill edits (those go in their ow
 - Stage exactly: the three URL files and `constants/index.ts`; add the story file if you edited it and the
   caller files the operator approved in step 3.
 - End the commit message with the commit attribution line from the session's system reminder.
+- End the PR body with the PR attribution line from the same reminder, and delete the placeholder comment in
+  the template.
 - Title: `Update Font Awesome kit: <added icons, or "N new custom icons">`.
 - Body: fill in `.agents/skills/update-fontawesome-kit/pr-template.md` (summary, added/removed icons table,
   before/after story screenshots, testing checklist). It needs: S3 prefix (`cdo-dsco/assets/font-awesome-pro/<ts>`), added and removed icons, usages found for removed
