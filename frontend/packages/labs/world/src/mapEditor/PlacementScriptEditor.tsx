@@ -232,6 +232,7 @@ export const PlacementScriptEditor = ({
           />
         </BlocklyProvider>
         {sections.menu}
+        {sections.outlineButton}
       </div>
     </div>
   );

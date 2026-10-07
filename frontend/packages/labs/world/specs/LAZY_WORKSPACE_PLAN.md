@@ -123,6 +123,19 @@ above its first section. Half a gap above it was above the canvas's top
 edge, which the view does not scroll past; it is held at least half the
 margin down (`tidyLayout.gapCenters`).
 
+## Jumping to a section — BUILT
+
+Collapsed, a file reads as a list of headers; a long one still had to be
+scrolled to find the handler wanted. A Sections button over the workspace's
+top right corner lists them in the column's order, each named as its
+header reads (`sectionOutline`): its words, the shown text of its
+dropdowns, and what sits in its sockets, but not its body. Picking one
+opens it if it was collapsed and scrolls its header to the top of the view
+— as far as the content allows, so the last section comes up only until
+the column's end is at the bottom — and selects it. A menu, so it is
+reached and worked from the keyboard. Offered in a read-only file too; not
+on a body surface, which is not a list of sections.
+
 ## Order of work
 
 1. **The index.** `workspaceIndex` over live blocks and unbuilt bodies; the
@@ -143,6 +156,7 @@ margin down (`tidyLayout.gapCenters`).
 - `37e18e12103` — step 2, the layout and no free-floating blocks.
 - step 3, bodies built on demand.
 - the sections shared with one actor's code in the map editor.
+- jumping to a section from a list.
 
 ## Learned while building
 

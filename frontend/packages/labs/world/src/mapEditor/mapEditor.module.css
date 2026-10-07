@@ -414,8 +414,14 @@
   background: var(--background-neutral-primary);
 }
 
+/* The workspace's box, under the header: the list-of-sections button is
+   placed against it, so it sits over the blocks and not over the header. */
 .scriptBlocks {
-  display: contents;
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .scriptWorkspace {
@@ -482,8 +488,12 @@
   pointer-events: none;
 }
 
-/* One panel in that column: the layer strip, the camera list, the records. */
-.layers {
+/* One panel in that column: the layer strip, the camera list, the records.
+ * The records are a class of their own, beside the canvas because they are
+ * nowhere on it (specs/RECORDS_PLAN.md), and share this rule rather than
+ * `composes` it, which this package's stylelint does not know. */
+.layers,
+.records {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -554,18 +564,11 @@
   border: 0;
 }
 
-/* The records a map holds — beside the canvas, because they are nowhere on
- * it (specs/RECORDS_PLAN.md). The same strip the layers use. */
-.records {
-  composes: layers;
-}
-
 /* What kind a record is, beside its name and quieter than it. */
 .recordKind {
   margin-left: 0.5em;
   opacity: 0.6;
 }
-
 
 /* A vector or angle property: the block face's direction dial as the
    control, and the block field's own editor in a popover behind it

@@ -1773,6 +1773,7 @@ export const BlocklyFileEditor = ({
           />
         </BlocklyProvider>
         {sections.menu}
+        {!editing && sections.outlineButton}
       </div>
     </div>
   );

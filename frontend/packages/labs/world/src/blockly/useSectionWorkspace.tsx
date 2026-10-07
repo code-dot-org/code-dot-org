@@ -12,9 +12,10 @@
 // An editor hands its documents through `prepareFirst` (the one it opens on)
 // and `prepare` (every one it loads after), saves through `toFile`, binds
 // `onInject` and `handleEvent` to the workspace, calls `layOut` after every
-// load, and renders `menu`.
+// load, and renders `menu` and, where the sections are showing,
+// `outlineButton`.
 
-import {ListSubheader, Menu, MenuItem} from '@mui/material';
+import {Button, ListSubheader, Menu, MenuItem} from '@mui/material';
 import {
   useCallback,
   useMemo,
@@ -28,6 +29,7 @@ import {
   type BlocklySerialization,
   type Toolbox,
 } from '@code-dot-org/blockly';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {clearAddButtons, drawAddButtons} from './addSectionButtons';
 import {syncBodyToggles} from './bodyToggle';
@@ -48,6 +50,8 @@ import {
   type Document as LazyDocument,
 } from './lazyBodies';
 import {isPinnedRoot, pinRoots, withoutPins} from './pinnedRoots';
+import {sectionsOf, type SectionEntry} from './sectionOutline';
+import styles from './sectionWorkspace.module.css';
 import {
   arrangeTopBlocks,
   COLUMN_GAP,
@@ -92,6 +96,9 @@ const eventMenuItems = (
   }
   return rows;
 };
+
+/** How far below the view's top edge a section jumped to is put. */
+const JUMP_MARGIN = 12;
 
 /** Where the layout put each top block, and which the learner has moved. */
 interface LayoutMemory {
@@ -331,6 +338,16 @@ export function useSectionWorkspace({
   );
   /** A section just added, to bring into view once it is laid out. */
   const revealAfterLayout = useRef<string | null>(null);
+  /**
+   * A section jumped to from the list, to bring to the top of the view once
+   * it is laid out — its header first, and as much of its body as fits.
+   */
+  const jumpAfterLayout = useRef<string | null>(null);
+  /** The open list of sections: what it lists, and the button it hangs from. */
+  const [outline, setOutline] = useState<{
+    anchor: HTMLElement;
+    entries: SectionEntry[];
+  } | null>(null);
 
   /**
    * Show or hide one top block's body, and remember it for the session.
@@ -413,6 +430,21 @@ export function useSectionWorkspace({
           (y, left, top) => setAddMenu({left, top, y}),
         );
       }
+      const jumped = jumpAfterLayout.current;
+      const target = jumped ? workspace.getBlockById(jumped) : null;
+      if (target) {
+        jumpAfterLayout.current = null;
+        // The header a little below the top edge. `scroll` takes the canvas
+        // offset in pixels, which is minus the workspace y at the top of the
+        // view times the zoom; it stops at the content's bounds, so the last
+        // section comes up only as far as there is room below it.
+        const at = target.getRelativeToSurfaceXY();
+        workspace.scroll(
+          workspace.scrollX,
+          -(at.y - JUMP_MARGIN) * workspace.scale,
+        );
+        Blockly.common.setSelected(target);
+      }
       const added = revealAfterLayout.current;
       const block = added ? workspace.getBlockById(added) : null;
       if (block) {
@@ -488,6 +520,47 @@ export function useSectionWorkspace({
     rememberCollapsed();
     layOut(workspace);
   };
+
+  /** Open the section `id` and bring its header to the top of the view. */
+  const jumpTo = useCallback(
+    (id: string) => {
+      setOutline(null);
+      const workspace = workspaceRef.current;
+      const top = workspace?.getBlockById(id);
+      if (!workspace || !top) {
+        return;
+      }
+      if (bodies.has(id)) {
+        expandTop(workspace, top);
+        rememberCollapsed();
+      }
+      jumpAfterLayout.current = id;
+      layOut(workspace);
+    },
+    [bodies, layOut, rememberCollapsed, workspaceRef],
+  );
+
+  /** Open the list of sections, read off the workspace as it is now. */
+  const openOutline = useCallback(
+    (anchor: HTMLElement) => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      const placed = layoutMemory.current.placed;
+      setOutline({
+        anchor,
+        // The column's order: the definition first, then where the layout
+        // put each.
+        entries: sectionsOf(workspace, block =>
+          isPinnedRoot(block.type)
+            ? -Infinity
+            : (placed.get(block.id) ?? block.getRelativeToSurfaceXY().y),
+        ),
+      });
+    },
+    [workspaceRef],
+  );
 
   /**
    * What injecting the workspace does, before the file is loaded into it:
@@ -859,8 +932,50 @@ export function useSectionWorkspace({
     </Menu>
   );
 
+  // JUMPING TO A SECTION (specs/LAZY_WORKSPACE_PLAN.md): a button over the
+  // workspace's top right corner, listing the sections top to bottom.
+  // Picking one opens it and brings it to the top of the view. Offered in a
+  // read-only file too, where finding one's way is all there is to do.
+  const outlineButton = (
+    <>
+      <Button
+        className={styles.outlineButton}
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        startIcon={<FontAwesomeV6Icon iconName="list" iconStyle="solid" />}
+        aria-haspopup="menu"
+        aria-expanded={outline !== null}
+        onClick={event => openOutline(event.currentTarget)}
+      >
+        Sections
+      </Button>
+      <Menu
+        open={outline !== null}
+        anchorEl={outline?.anchor}
+        onClose={() => setOutline(null)}
+        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
+        transformOrigin={{vertical: 'top', horizontal: 'right'}}
+        slotProps={{paper: {style: {maxHeight: 420}}}}
+      >
+        {outline?.entries.length ? (
+          outline.entries.map(entry => (
+            <MenuItem key={entry.id} dense onClick={() => jumpTo(entry.id)}>
+              {entry.label}
+            </MenuItem>
+          ))
+        ) : (
+          <MenuItem dense disabled>
+            Nothing here yet
+          </MenuItem>
+        )}
+      </Menu>
+    </>
+  );
+
   return {
     bodies,
+    outlineButton,
     prepareFirst,
     prepare,
     save,
