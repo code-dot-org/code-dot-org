@@ -39,10 +39,10 @@ export function patternCells(
 
 /**
  * The layout a level's world_start_pattern gives a project: the one pattern
- * given, or one of several by `roll` (0 to 1). The pick persists in the
- * grid, since a later level seeds only kinds the grid lacks. `override`
- * names a layout by index (?layout=N). No project (a levelbuilder preview)
- * takes the first.
+ * given, or one of several picked by `roll`, a fraction from 0 up to 1 that
+ * is scaled to a layout index. The pick persists in the grid, since a later
+ * level seeds only kinds the grid lacks. `override` names a layout by index
+ * (?layout=N). No project (a levelbuilder preview) takes the first.
  */
 export function chooseStartPattern(
   pattern: string[] | string[][] | undefined,
