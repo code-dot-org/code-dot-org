@@ -19,27 +19,25 @@ const ResultsDetails = () => {
 
   return (
     <div className={styles.details}>
-      {currentResult && (
-        <div className={styles.modelRow}>
-          <PredictionSentence
-            label={currentResult.label}
-            features={currentResult.features}
-            size="m"
-            className={styles.sentence}
-          />
-          <div className={styles.summary}>
-            <span className={styles.accuracy}>
-              {formatAccuracy(currentResult.accuracy)} Accuracy
-            </span>
-            {hasPredictions && (
-              <>
-                <span className={styles.divider} />
-                <ResultsToggle />
-              </>
-            )}
-          </div>
+      <div className={styles.modelRow}>
+        <PredictionSentence
+          label={currentResult.label}
+          features={currentResult.features}
+          size="m"
+          className={styles.sentence}
+        />
+        <div className={styles.summary}>
+          <span className={styles.accuracy}>
+            {formatAccuracy(currentResult.accuracy)} Accuracy
+          </span>
+          {hasPredictions && (
+            <>
+              <span className={styles.divider} />
+              <ResultsToggle />
+            </>
+          )}
         </div>
-      )}
+      </div>
       <ResultsTable results={results} />
     </div>
   );
