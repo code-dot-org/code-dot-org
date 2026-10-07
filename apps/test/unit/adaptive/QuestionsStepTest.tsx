@@ -28,12 +28,20 @@ const step: Step = {
   title: 'Quick questions',
   description: 'Tell us about yourself.',
   kind: 'questions',
-  question: question(1, 'First question'),
+  questions: [question(1, 'First question')],
 };
 
 const gradedStep: Step = {
   ...step,
-  question: {...question(1, 'Graded question'), correctChoiceId: 'a'},
+  questions: [{...question(1, 'Graded question'), correctChoiceId: 'a'}],
+};
+
+const twoQuestionStep: Step = {
+  ...step,
+  questions: [
+    {...question(1, 'First question'), correctChoiceId: 'a'},
+    question(2, 'Second question'),
+  ],
 };
 
 // Holds answers as PathwayApp does, so selections feed back in.
@@ -66,6 +74,11 @@ describe('QuestionsStep', () => {
     expect(screen.getByText('First question')).toBeInTheDocument();
   });
 
+  it('shows no question count for a lone question', () => {
+    renderStep();
+    expect(screen.queryByText(/\d+\/\d+ questions/)).not.toBeInTheDocument();
+  });
+
   it('saves a survey answer on Submit, replacing the last one', () => {
     const {saved} = renderStep({1: [{answerId: 'a'}]});
     fireEvent.click(screen.getByRole('radio', {name: /No 1/}));
@@ -91,6 +104,30 @@ describe('QuestionsStep', () => {
     expect(submitButton).toBeEnabled();
     fireEvent.click(submitButton);
     expect(onComplete).toHaveBeenCalledTimes(1);
+  });
+
+  describe('with several questions', () => {
+    beforeEach(() => jest.useFakeTimers());
+    afterEach(() => jest.useRealTimers());
+
+    it('shows them one at a time with a count', () => {
+      const {onComplete} = renderStep({}, twoQuestionStep);
+      expect(screen.getByText('1/2 questions')).toBeInTheDocument();
+      expect(screen.queryByText('Second question')).not.toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      act(() => {
+        jest.runAllTimers();
+      });
+      expect(screen.getByText('2/2 questions')).toBeInTheDocument();
+      expect(screen.getByText('Second question')).toBeInTheDocument();
+      expect(onComplete).not.toHaveBeenCalled();
+
+      fireEvent.click(screen.getByRole('radio', {name: /No 2/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(onComplete).toHaveBeenCalledTimes(1);
+    });
   });
 
   describe('with a graded question', () => {

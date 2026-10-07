@@ -33,27 +33,28 @@ function findQuestionProblems(pathway: Pathway): string[] {
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
       if (step.kind !== 'questions') continue;
-      const {question} = step;
-      if (seen.has(question.id)) duplicates.add(question.id);
-      seen.add(question.id);
+      step.questions.forEach((question, index) => {
+        if (seen.has(question.id)) duplicates.add(question.id);
+        seen.add(question.id);
 
-      if (question.type !== 'MultipleChoiceQuestion') continue;
-      const where = `checkpoints.${checkpoint.id}.steps.${step.id}.question`;
-      const choiceIds = new Set<string>();
-      const repeated = new Set<string>();
-      for (const {id} of question.choices) {
-        if (choiceIds.has(id)) repeated.add(id);
-        choiceIds.add(id);
-      }
-      for (const id of repeated) {
-        problems.push(`${where}: choice id '${id}' is used more than once`);
-      }
-      const {correctChoiceId} = question;
-      if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
-        problems.push(
-          `${where}.correctChoiceId: '${correctChoiceId}' is not one of its choices`
-        );
-      }
+        if (question.type !== 'MultipleChoiceQuestion') return;
+        const where = `checkpoints.${checkpoint.id}.steps.${step.id}.questions.${index}`;
+        const choiceIds = new Set<string>();
+        const repeated = new Set<string>();
+        for (const {id} of question.choices) {
+          if (choiceIds.has(id)) repeated.add(id);
+          choiceIds.add(id);
+        }
+        for (const id of repeated) {
+          problems.push(`${where}: choice id '${id}' is used more than once`);
+        }
+        const {correctChoiceId} = question;
+        if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
+          problems.push(
+            `${where}.correctChoiceId: '${correctChoiceId}' is not one of its choices`
+          );
+        }
+      });
     }
   }
   return [

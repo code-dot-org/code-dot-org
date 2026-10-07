@@ -71,17 +71,19 @@ const served = (): Raw => ({
           id: 'quiz',
           title: 'Quiz',
           kind: 'questions',
-          question: {
-            id: 1,
-            type: 'MultipleChoiceQuestion',
-            questionName: 'pick-one',
-            questionTitle: 'Pick one',
-            choices: [
-              {id: 'a', text: 'A'},
-              {id: 'b', text: 'B'},
-            ],
-            correctChoiceId: 'a',
-          },
+          questions: [
+            {
+              id: 1,
+              type: 'MultipleChoiceQuestion',
+              questionName: 'pick-one',
+              questionTitle: 'Pick one',
+              choices: [
+                {id: 'a', text: 'A'},
+                {id: 'b', text: 'B'},
+              ],
+              correctChoiceId: 'a',
+            },
+          ],
         },
       ],
     },
@@ -158,7 +160,7 @@ const source = (): RawSource => {
 const questionOf = (raw: Raw) => {
   const quiz = raw.checkpoints[0].steps[1];
   if (quiz.kind !== 'questions') throw new Error('fixture has no quiz');
-  return quiz.question;
+  return quiz.questions[0];
 };
 
 function problemsOf(raw: unknown): string[] {
@@ -205,15 +207,15 @@ describe('parsePathway', () => {
   it('rejects a key the quiz question summary lacks', () => {
     const raw = served();
     Object.assign(raw.checkpoints[0].steps[1], {
-      question: {...questionOf(raw), multiSelect: true},
+      questions: [{...questionOf(raw), multiSelect: true}],
     });
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
-  it('rejects a question page, as a step is one screen', () => {
+  it('rejects a question page, as a step shows one question at a time', () => {
     const raw = served();
     Object.assign(raw.checkpoints[0].steps[1], {
-      question: {...questionOf(raw), page: 2},
+      questions: [{...questionOf(raw), page: 2}],
     });
     expect(problemsOf(raw)).toHaveLength(1);
   });
@@ -222,7 +224,7 @@ describe('parsePathway', () => {
     const raw = served();
     const question = {...questionOf(raw)} as {correctChoiceId?: string};
     delete question.correctChoiceId;
-    Object.assign(raw.checkpoints[0].steps[1], {question});
+    Object.assign(raw.checkpoints[0].steps[1], {questions: [question]});
     expect(problemsOf(raw)).toEqual([]);
   });
 
@@ -398,7 +400,7 @@ describe('findReferenceProblems', () => {
       ],
     });
     expect(problemsOf(raw)).toEqual([
-      "checkpoints.intro.steps.quiz.question: choice id 'b' is used more than once",
+      "checkpoints.intro.steps.quiz.questions.0: choice id 'b' is used more than once",
     ]);
   });
 
@@ -406,7 +408,7 @@ describe('findReferenceProblems', () => {
     const raw = served();
     Object.assign(questionOf(raw), {correctChoiceId: 'z'});
     expect(problemsOf(raw)).toEqual([
-      "checkpoints.intro.steps.quiz.question.correctChoiceId: 'z' is not one of its choices",
+      "checkpoints.intro.steps.quiz.questions.0.correctChoiceId: 'z' is not one of its choices",
     ]);
   });
 

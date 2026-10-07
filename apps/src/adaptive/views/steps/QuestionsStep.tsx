@@ -1,19 +1,24 @@
-// Plays a questions step with quiz's question card, so it looks like a quiz
-// level without quiz's attempt lifecycle. A graded question is checked on
-// Submit and must be answered correctly to move on.
+// Plays a questions step one question at a time with quiz's question card,
+// so it looks like a quiz level without quiz's attempt lifecycle. A graded
+// question is checked on Next or Submit and must be answered correctly to
+// move on.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
 
 import {Answer, StepAnswers} from '../../progress';
-import {QuestionsStep as QuestionsStepContent} from '../../types';
+import {
+  MultipleChoiceQuestion,
+  QuestionsStep as QuestionsStepContent,
+} from '../../types';
 
 import styles from './stepPlayer.module.scss';
 
 // Duration that "Correct" is shown on screen for students before
-// advancing to the next step.
+// advancing to the next question or step.
 const CORRECT_ADVANCE_DELAY_MS = 700;
 
 interface QuestionsStepProps {
@@ -29,33 +34,58 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   onSaveAnswers,
   onComplete,
 }) => {
-  const question =
-    step.question.type === 'MultipleChoiceQuestion' ? step.question : undefined;
-  const correctChoiceId = question?.correctChoiceId;
-  // The pick stays local until Submit; only submitted answers are saved.
-  const [selectedChoiceId, setSelectedChoiceId] = useState(
-    () => question && answers[question.id]?.slice(-1)[0]?.answerId
+  const questions = useMemo(
+    () =>
+      step.questions.filter(
+        (q): q is MultipleChoiceQuestion => q.type === 'MultipleChoiceQuestion'
+      ),
+    [step.questions]
   );
+  const [index, setIndex] = useState(0);
+  const question = questions[index] as MultipleChoiceQuestion | undefined;
+  const isLastQuestion = index >= questions.length - 1;
+  const correctChoiceId = question?.correctChoiceId;
+  // Picks stay local until submitted; only submitted answers are saved.
+  const [selectedChoiceIds, setSelectedChoiceIds] = useState(() => {
+    const restored: {[questionId: number]: string} = {};
+    for (const q of questions) {
+      const last = answers[q.id]?.slice(-1)[0];
+      if (last) restored[q.id] = last.answerId;
+    }
+    return restored;
+  });
+  const selectedChoiceId = question && selectedChoiceIds[question.id];
   const [feedback, setFeedback] = useState<'correct' | 'incorrect'>();
 
   const questionsRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    questionsRef.current?.querySelector<HTMLElement>('h2')?.focus();
-  }, []);
+    const headings = questionsRef.current?.querySelectorAll<HTMLElement>('h2');
+    // The step title first, then each later question's own heading.
+    headings?.[index === 0 ? 0 : headings.length - 1]?.focus();
+  }, [index]);
 
-  const onCompleteRef = useRef(onComplete);
-  onCompleteRef.current = onComplete;
+  const completedRef = useRef(false);
+  const advance = () => {
+    setFeedback(undefined);
+    if (isLastQuestion) {
+      completedRef.current = true;
+      onComplete();
+    } else {
+      setIndex(index + 1);
+    }
+  };
+  const advanceRef = useRef(advance);
+  advanceRef.current = advance;
 
   useEffect(() => {
     if (feedback !== 'correct') return;
     const timer = setTimeout(
-      () => onCompleteRef.current(),
+      () => advanceRef.current(),
       CORRECT_ADVANCE_DELAY_MS
     );
     return () => clearTimeout(timer);
   }, [feedback]);
 
-  const completedRef = useRef(false);
   const isAdvancing = feedback === 'correct';
   const handleSubmit = () => {
     if (isAdvancing || completedRef.current || !question || !selectedChoiceId) {
@@ -77,8 +107,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
       );
     }
     if (!correctChoiceId) {
-      completedRef.current = true;
-      onComplete();
+      advance();
     } else {
       setFeedback(
         selectedChoiceId === correctChoiceId ? 'correct' : 'incorrect'
@@ -98,11 +127,17 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
       </div>
       {question && (
         <MultiChoiceQuestionContainer
+          key={question.id}
           question={question}
+          questionLabel={
+            questions.length > 1
+              ? `${index + 1}/${questions.length} questions`
+              : undefined
+          }
           selectedChoiceId={selectedChoiceId ?? null}
           onSelectChoice={choiceId => {
             setFeedback(undefined);
-            setSelectedChoiceId(choiceId);
+            setSelectedChoiceIds(prev => ({...prev, [question.id]: choiceId}));
           }}
           selectedChoiceStatus={feedback}
         />
@@ -125,12 +160,15 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           color="primary"
           size="medium"
           type="button"
+          endIcon={
+            !isLastQuestion && <FontAwesomeV6Icon iconName="arrow-right" />
+          }
           disabled={!selectedChoiceId}
           // Not disabled while advancing: that would drop keyboard focus.
           aria-disabled={isAdvancing}
           onClick={handleSubmit}
         >
-          Submit
+          {isLastQuestion ? 'Submit' : 'Next'}
         </MuiButton>
       </div>
     </div>

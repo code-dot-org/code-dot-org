@@ -5,7 +5,7 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 import {stepBaseSchema} from './steps/base';
 import {subsetOf} from './subsetOf';
 
-/** Quiz's question summary less page: a questions step is one screen. */
+/** Quiz's question summary less page: a step shows one question at a time. */
 export const multipleChoiceQuestionSchema = subsetOf<
   Omit<QuizQuestionSummary, 'page'> & {correctChoiceId?: string}
 >()(
@@ -47,9 +47,9 @@ export const questionSchema = z.discriminatedUnion('type', [
   }),
 ]);
 
-/** A questions step. */
+/** A questions step, played one question at a time in order. */
 export const questionsStepSchema = stepBaseSchema.extend({
   kind: z.literal('questions'),
   description: z.string().optional(),
-  question: questionSchema,
+  questions: z.array(questionSchema).min(1),
 });
