@@ -17,7 +17,7 @@
 
 ## Authorship
 <!-- 
-- Writing: who wrote the code, and who wrote this description
+- Writing: who wrote the code, and who wrote this description?
 - Direction: decisions you made or overrode (architecture, design, tradeoffs), and AI-made decisions you weren't sure about
 - Context: specs, MCP servers, skills, or other inputs you gave the AI
 -->
