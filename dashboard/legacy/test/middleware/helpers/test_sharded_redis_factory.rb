@@ -22,7 +22,7 @@ TEST_NEW_REDIS_PROC = proc do |url|
   end
 end
 
-class ShardedRedisFactoryTest < MiniTest::Test
+class ShardedRedisFactoryTest < Minitest::Test
   include SetupTest
 
   def test_raises_if_constructed_with_empty_shards

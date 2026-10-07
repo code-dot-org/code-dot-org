@@ -2,13 +2,14 @@ import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
-  navigateToNextLevel,
   sendStartedReportIfNotStarted,
   sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {navigateToNextLevelOrFinish} from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {AppName} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {QuizQuestionSummary} from '../types';
 import {groupByPage, toBool} from '../utils';
@@ -78,6 +79,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     userId: viewAsUserId,
   });
   const isViewingStudent = viewAsUserId !== undefined;
+  const hasNextLevel = useAppSelector(
+    state => nextLevelId(state) !== undefined
+  );
 
   // currentPageNumber is a 1-based position into this list, not a raw page value.
   const pageNumbers = Array.from(new Set(quizQuestions.map(q => q.page))).sort(
@@ -212,7 +216,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   const handleNextLevel = async () => {
     await pendingReportRef.current;
-    dispatch(navigateToNextLevel());
+    dispatch(navigateToNextLevelOrFinish());
   };
 
   // A quiz with no intro screen has no click-through step - start the
@@ -413,6 +417,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               canRetake={!isViewingStudent && attempt.canRetake}
               submittedAt={attempt.submittedAt}
               onTryAgain={handleRetake}
+              hasNextLevel={hasNextLevel}
               onNextLevel={handleNextLevel}
             />
             {(isViewingStudent || toBool(showQuestionsAfterSubmit)) &&

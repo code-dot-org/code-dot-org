@@ -4,7 +4,7 @@ require 'dynamic_config/dynamic_config_base'
 
 class DynamicConfigBaseTest < Minitest::Test
   def setup
-    @mock_datastore = MiniTest::Mock.new
+    @mock_datastore = Minitest::Mock.new
     @dynamic_config = DynamicConfigBase.new(@mock_datastore)
   end
 

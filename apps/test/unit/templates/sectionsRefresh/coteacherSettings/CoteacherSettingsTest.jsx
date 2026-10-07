@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';

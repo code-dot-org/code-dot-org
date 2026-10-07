@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "clean": "rimraf dist",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
@@ -34,6 +35,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "rimraf": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
