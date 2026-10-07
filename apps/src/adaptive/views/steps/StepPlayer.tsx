@@ -71,7 +71,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
           />
         );
       default:
-        // A step kind added to the schema but not yet playable here.
+        // Other step kinds arrive in later changes.
         return (
           <div className={styles.stepFallback}>
             <MuiTypography variant="body3" className={shared.muted}>
