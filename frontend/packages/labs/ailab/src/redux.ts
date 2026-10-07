@@ -78,6 +78,30 @@ export interface RootState {
   mode?: Mode;
 }
 
+// Everything a training run writes, so a cancelled run can be put back.
+const TRAINING_RESULT_KEYS = [
+  'featureNumberKey',
+  'trainingExamples',
+  'trainingLabels',
+  'accuracyCheckExamples',
+  'accuracyCheckLabels',
+  'accuracyCheckPredictedLabels',
+  'hyperparameters',
+  'trainedModel',
+  'historicResults',
+] as const;
+
+export type TrainingResults = Pick<
+  RootState,
+  (typeof TRAINING_RESULT_KEYS)[number]
+>;
+
+export function getTrainingResults(state: RootState): TrainingResults {
+  return Object.fromEntries(
+    TRAINING_RESULT_KEYS.map(key => [key, state[key]]),
+  ) as TrainingResults;
+}
+
 export const initialState: RootState = {
   name: undefined,
   csvfile: undefined,
@@ -401,6 +425,9 @@ const ailabSlice = createSlice({
     setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
       state.hyperparameters = action.payload;
     },
+    restoreTrainingResults(state, action: PayloadAction<TrainingResults>) {
+      Object.assign(state, action.payload);
+    },
     setInstructionsDismissed(state) {
       state.instructionsOverlayActive = false;
     },
@@ -448,6 +475,7 @@ export const {
   setHistoricResult,
   setHistoricResults,
   setHyperparameters,
+  restoreTrainingResults,
   setInstructionsDismissed,
   setInstructionsEnabled,
   setResultsTab,
