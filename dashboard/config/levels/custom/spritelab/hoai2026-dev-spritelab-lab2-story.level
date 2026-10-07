@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Set the scene.** Drag **set background** onto the dotted outline. Click **Play** to watch your story."
+        "text": "**Set the scene.** Drag **set background** onto the dotted outline under **when run**. Click **Play** to watch your story."
       },
       {
         "text": "**That's your story!** Click **Continue**.",
@@ -48,7 +48,7 @@
       "title": "**Set the scene.**",
       "items": [
         {
-          "text": "Drag **set background** onto the dotted outline.",
+          "text": "Drag **set background** onto the dotted outline under **when run**.",
           "check": {
             "kind": "block",
             "type": "gamelab_setBackgroundImageAs",
@@ -63,7 +63,7 @@
         }
       ]
     },
-    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline.",
+    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline under **when run**.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

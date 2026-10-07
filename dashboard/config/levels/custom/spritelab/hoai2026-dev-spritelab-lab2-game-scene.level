@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Add the background to your game.** Drag **set background** onto the dotted outline. Click **Play**."
+        "text": "**Add the background to your game.** Drag **set background** onto the dotted outline under **when run**. Click **Play**."
       },
       {
         "text": "**Now that's a game!** Click **Continue**.",
@@ -48,7 +48,7 @@
       "title": "**Add the background to your game.**",
       "items": [
         {
-          "text": "Drag **set background** onto the dotted outline.",
+          "text": "Drag **set background** onto the dotted outline under **when run**.",
           "check": {
             "kind": "block",
             "type": "gamelab_setBackgroundImageAs",
@@ -63,7 +63,7 @@
         }
       ]
     },
-    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline.",
+    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline under **when run**.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
