@@ -28,12 +28,7 @@ Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/
 - Reports Enzyme string selectors and import shapes it cannot rewrite
 - Idempotent; parses `.ts` files with the `ts` parser
 
-Build the package first via `yarn build`
-
-```bash
-TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/dialog-to-mui-dialog.ts \
-  --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register [--dry --print] <path>
-```
+Build the package first with `yarn build`, then run it as shown under Usage.
 
 ## Usage
 
@@ -42,7 +37,7 @@ Codemods are one-off migration scripts. Run `jscodeshift` from the `component-li
 ```bash
 cd frontend/packages/component-library
 TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift \
-  -t ./codemods/button-to-mui-button.ts \
+  -t ./codemods/<codemod>.ts \
   --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register \
   <path-to-files-or-directory>...
 ```

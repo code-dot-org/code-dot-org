@@ -442,8 +442,7 @@ Execute departed from the plan as follows. None changes a twin's render.
 - The codemod parses `.ts` files with the `ts` parser, whatever `--parser`
   says. `tsx` rejects `<T>x` casts, and jscodeshift skips a file that fails
   to parse and moves on.
-- The codemod has no `package.json` script; the one-off `codemod:buttons`
-  and `codemod:dialog` scripts were removed after review. It runs through
+- The codemod has no `package.json` script. It runs through
   `yarn jscodeshift`, not `npx`, per `frontend/AGENTS.md`.
 - The CSS-only fixes are verified in Storybook, not in Vitest. The
   `DialogInNarrowViewport` story opens the dialog at 320px, and its play
