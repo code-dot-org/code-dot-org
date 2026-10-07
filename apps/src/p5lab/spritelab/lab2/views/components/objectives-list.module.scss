@@ -1,19 +1,34 @@
 @use '../explore/sr-only' as *;
 
 $mark-size: 22px;
+$text-size: 16px;
+$line-height: 1.4;
 
 .objectives {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+// The read-aloud button sits in the top corner; the first line leaves it
+// room, as the platform's instructions panel does.
+.tts {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+}
+
+.withTts > :first-child {
+  margin-inline-end: 1.5rem;
 }
 
 // Sizes sit on the paragraphs: dashboard's scaffolds style `p` at 13px.
 .title p,
 .text p {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: $text-size;
+  line-height: $line-height;
 }
 
 .title p {
@@ -33,7 +48,6 @@ $mark-size: 22px;
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  line-height: 1.4;
 }
 
 .mark {
@@ -45,8 +59,8 @@ $mark-size: 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  // The row's line-height centers text at 11px; the circle sits on that.
-  margin-top: calc((1.4em - #{$mark-size}) / 2);
+  // Centered on the text's first line; later lines wrap below.
+  margin-top: calc(($text-size * $line-height - $mark-size) / 2);
   color: var(--neutral-base-white);
   font-size: 12px;
   transition:

@@ -8,6 +8,7 @@ import {
   EMPTY_RUNTIME,
   ObjectiveInputs,
   Objectives,
+  RuntimeNeeds,
   RuntimeProgress,
   WorkspaceSource,
 } from '../objectives';
@@ -40,12 +41,17 @@ export interface PlayerProgressReport {
 /**
  * The running game's progress for the checklist: touches and height from
  * the engine, scene landings, and the longest run so far. Each only grows
- * while the level stays open.
+ * while the level stays open. Reports the level never reads are not kept,
+ * since each one re-renders the view; the engine's callback is null when
+ * nothing wants it.
  */
-export function usePlayProgress(playing: boolean): {
+export function usePlayProgress(
+  playing: boolean,
+  needs: RuntimeNeeds
+): {
   runtime: RuntimeProgress;
   everPlayed: boolean;
-  onPlayerProgress: (report: PlayerProgressReport) => void;
+  onPlayerProgress: ((report: PlayerProgressReport) => void) | null;
   onSceneLanded: (sceneId: string) => void;
 } {
   const [touched, setTouched] = useState<ReadonlySet<string>>(new Set());
@@ -61,6 +67,9 @@ export function usePlayProgress(playing: boolean): {
       return;
     }
     setEverPlayed(true);
+    if (!needs.seconds) {
+      return;
+    }
     const startedAt = Date.now();
     const tick = () =>
       setLongestRunSeconds(longest =>
@@ -71,19 +80,25 @@ export function usePlayProgress(playing: boolean): {
       window.clearInterval(timer);
       tick();
     };
-  }, [playing]);
+  }, [playing, needs.seconds]);
 
-  const onPlayerProgress = useCallback((report: PlayerProgressReport) => {
-    if (report.touching.length) {
-      setTouched(current => {
-        if (report.touching.every(name => current.has(name))) {
-          return current;
-        }
-        return new Set([...current, ...report.touching]);
-      });
-    }
-    setHighest(current => Math.max(current, report.height));
-  }, []);
+  const wantsPlayer = needs.touch || needs.height;
+  const onPlayerProgress = useCallback(
+    (report: PlayerProgressReport) => {
+      if (needs.touch && report.touching.length) {
+        setTouched(current => {
+          if (report.touching.every(name => current.has(name))) {
+            return current;
+          }
+          return new Set([...current, ...report.touching]);
+        });
+      }
+      if (needs.height) {
+        setHighest(current => Math.max(current, report.height));
+      }
+    },
+    [needs.touch, needs.height]
+  );
 
   const onSceneLanded = useCallback((sceneId: string) => {
     setScenesLanded(current =>
@@ -95,7 +110,12 @@ export function usePlayProgress(playing: boolean): {
     () => ({longestRunSeconds, touched, highest, scenesLanded}),
     [longestRunSeconds, touched, highest, scenesLanded]
   );
-  return {runtime, everPlayed, onPlayerProgress, onSceneLanded};
+  return {
+    runtime,
+    everPlayed,
+    onPlayerProgress: wantsPlayer ? onPlayerProgress : null,
+    onSceneLanded,
+  };
 }
 
 /**

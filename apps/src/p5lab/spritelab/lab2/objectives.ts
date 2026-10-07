@@ -80,6 +80,26 @@ export interface RuntimeProgress {
   scenesLanded: ReadonlySet<string>;
 }
 
+/** Which of the running game's reports the checklist reads. */
+export interface RuntimeNeeds {
+  seconds: boolean;
+  touch: boolean;
+  height: boolean;
+}
+
+export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
+  const needs = {seconds: false, touch: false, height: false};
+  objectives?.items?.forEach(({check}) => {
+    if (check.kind === 'play' && check.seconds !== undefined) {
+      needs.seconds = true;
+    } else if (check.kind === 'reach') {
+      needs.touch ||= check.role !== undefined;
+      needs.height ||= check.height !== undefined;
+    }
+  });
+  return needs;
+}
+
 export const EMPTY_RUNTIME: RuntimeProgress = {
   longestRunSeconds: 0,
   touched: new Set(),

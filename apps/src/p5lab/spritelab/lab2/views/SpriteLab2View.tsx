@@ -86,7 +86,7 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
-import {WorkspaceSource} from '../objectives';
+import {runtimeNeeds, WorkspaceSource} from '../objectives';
 import {countImagesByType, imageCountsDelta} from '../projectCounts';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
@@ -573,7 +573,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // The level's checklist.
   const playing = activeTab === 'Play' && isRunning;
-  const playProgress = usePlayProgress(playing);
+  const needs = useMemo(
+    () => runtimeNeeds(levelProperties.objectives),
+    [levelProperties.objectives]
+  );
+  const playProgress = usePlayProgress(playing, needs);
   const {onPlayerProgress, onSceneLanded} = playProgress;
   const objectiveImages = useMemo(
     () => imageCountsDelta(countImagesByType(animationList), baselineImages),

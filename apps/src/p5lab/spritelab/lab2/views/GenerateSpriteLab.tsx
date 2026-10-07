@@ -113,7 +113,11 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
 
   const showTts = showTtsFor(levelProperties);
   const instructionsBlock = checklist ? (
-    <ObjectivesList title={checklist.title} items={checklist.items} />
+    <ObjectivesList
+      title={checklist.title}
+      items={checklist.items}
+      showTts={showTts}
+    />
   ) : (
     instructions && (
       <MainInstructionsContent

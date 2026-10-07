@@ -6,6 +6,7 @@ import {
   ObjectiveCheck,
   ObjectiveInputs,
   realBlocks,
+  runtimeNeeds,
 } from '@cdo/apps/p5lab/spritelab/lab2/objectives';
 import {WorldCell} from '@cdo/apps/p5lab/spritelab/lab2/world';
 
@@ -235,5 +236,31 @@ describe('checkObjective', () => {
     const none = inputs({imageForRole: {}, grid: grid([[7, 4, hero]])});
     expect(checkObjective({kind: 'world', role: 'hero'}, none)).toBe(false);
     expect(checkObjective({kind: 'reach', role: 'hero'}, none)).toBe(false);
+  });
+});
+
+describe('runtimeNeeds', () => {
+  it('names the reports the checklist reads', () => {
+    expect(runtimeNeeds(undefined)).toEqual({
+      seconds: false,
+      touch: false,
+      height: false,
+    });
+    expect(
+      runtimeNeeds({
+        items: [
+          {text: '', check: {kind: 'play'}},
+          {text: '', check: {kind: 'reach', role: 'treasure'}},
+        ],
+      })
+    ).toEqual({seconds: false, touch: true, height: false});
+    expect(
+      runtimeNeeds({
+        items: [
+          {text: '', check: {kind: 'play', seconds: 5}},
+          {text: '', check: {kind: 'reach', height: 0.7}},
+        ],
+      })
+    ).toEqual({seconds: true, touch: false, height: true});
   });
 });

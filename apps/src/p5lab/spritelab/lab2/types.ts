@@ -92,11 +92,6 @@ export interface Sources extends ProjectSources {
   scenes?: Scene[];
 }
 
-/**
- * One stage of a level's floating-guide instructions. `text` is markdown;
- * `after` is what must hold to reach this step from the one before it, every
- * listed clause of it (the first step needs none).
- */
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
@@ -109,7 +104,6 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     type?: SceneType;
   };
-  /** Staged text for the floating guide, in order. */
   /** The level's objectives (objectives.ts): the Guide's text, checklist
       and Continue gate. */
   objectives?: Objectives;
