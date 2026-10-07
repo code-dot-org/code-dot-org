@@ -1,6 +1,6 @@
 # Plan: a workspace of top blocks, their bodies built on demand
 
-STATUS: BUILDING. Step 1 in progress.
+STATUS: BUILDING. Steps 1 and 2 built; step 3 next.
 
 ## What is being built
 
@@ -64,4 +64,20 @@ Not moved, and why:
 
 ## Commits
 
+- `20af30a3f87` — step 1, the workspace index.
+- step 2, the layout and no free-floating blocks.
+
 ## Learned while building
+
+- **The layout's moves are silent, and that is enough to keep the order.**
+  A move is an edit, an undo step and a restart of the running world, so the
+  layout makes its moves with events off. The file keeps its old positions
+  until the learner's next edit saves the workspace as it stands — and the
+  layout reads ORDER off positions, column by column, so the positions a
+  file holds still read in the order the layout made. A dropped handler is
+  saved where it was dropped, between the ones it went between.
+- **A free-floating block goes in the drag's own event group.** Deleting it
+  as a separate step would make undo bring back a block alone on the
+  canvas; in the drag's group, one undo puts it back where it was taken
+  from. Seen in the browser: a row dragged out of `define world` onto empty
+  canvas is gone, and Ctrl+Z puts it back in the stack.

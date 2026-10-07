@@ -115,7 +115,7 @@ import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
-import {anyOverlap, arrangeTopBlocks} from './tidyLayout';
+import {arrangeTopBlocks, isFreeFloating} from './tidyLayout';
 import {
   withoutBlocks,
   withoutCategories,
@@ -255,23 +255,26 @@ function parseWorkspace(contents: string): BlocklySerialization {
 }
 
 /**
- * Move overlapping top blocks apart, using sizes only the renderer knows.
+ * Put every top block where the column layout says, using sizes only the
+ * renderer knows (`blockly/tidyLayout`, specs/LAZY_WORKSPACE_PLAN.md).
  *
- * A generated actor gives its handlers an order and not a layout
- * (`blockly/tidyLayout`), so opening one lands here and this is where it gets
- * its columns. A learner's own file is touched only if its blocks have come to
- * sit on top of each other, which is a state nobody arranges on purpose.
+ * ALWAYS, and after every edit. The workspace is its top blocks in columns,
+ * and where a block sits is the layout's to say: a handler dropped between two
+ * others is put between them and the rest move down, and a stack that grows
+ * pushes down what is below it. Only the ORDER is the learner's, read off
+ * where they put things.
  *
- * WITH EVENTS OFF, and that is the whole reason this can run at all. A
- * `BLOCK_MOVE` is an edit: it dirties the project, rewrites the file and
- * restarts the running world. Opening a file is not editing it, so the moves
- * are made silently and the file keeps whatever it said until the learner
- * changes something — at which point the workspace it is saved from is the
- * tidy one.
+ * WITH EVENTS OFF. A `BLOCK_MOVE` is an edit: it dirties the project, rewrites
+ * the file and restarts the running world, and it is an undo step. Opening a
+ * file is not editing it, and neither is the layout catching up with an edit
+ * — so the moves are silent, and the file keeps its positions until the
+ * learner's next edit saves the workspace as it stands. The order those
+ * positions read in is the order the layout made, so a file reopens as it
+ * was left.
  */
 const tidyTopBlocks = (workspace: Blockly.WorkspaceSvg): void => {
   const tops = workspace.getTopBlocks(false);
-  if (tops.length < 2) {
+  if (tops.length === 0) {
     return;
   }
   const boxes = tops.map(block => {
@@ -281,10 +284,15 @@ const tidyTopBlocks = (workspace: Blockly.WorkspaceSvg): void => {
     const size = block.getHeightWidth();
     return {x: corner.x, y: corner.y, width: size.width, height: size.height};
   });
-  if (!anyOverlap(boxes)) {
+  const places = arrangeTopBlocks(boxes);
+  if (
+    places.every(
+      (place, index) =>
+        place.x === boxes[index].x && place.y === boxes[index].y,
+    )
+  ) {
     return;
   }
-  const places = arrangeTopBlocks(boxes);
   Blockly.Events.disable();
   try {
     tops.forEach((block, index) => {
@@ -1146,6 +1154,27 @@ export const BlocklyFileEditor = ({
       .then(() => tidyTopBlocks(workspace));
   }, []);
 
+  /**
+   * Lay the top blocks out again once what is waiting to render has.
+   *
+   * Not mid-drag: the dragged block is wherever the pointer is, and the rest
+   * stay put until it lands. And once per frame however many events an edit
+   * fires — a paste is dozens.
+   */
+  const reflowPending = useRef(false);
+  const reflow = useCallback((workspace: Blockly.WorkspaceSvg): void => {
+    if (reflowPending.current || workspace.isDragging()) {
+      return;
+    }
+    reflowPending.current = true;
+    void Blockly.renderManagement.finishQueuedRenders().then(() => {
+      reflowPending.current = false;
+      if (!workspace.isDragging()) {
+        tidyTopBlocks(workspace);
+      }
+    });
+  }, []);
+
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
       const workspace = workspaceRef.current;
@@ -1169,6 +1198,32 @@ export const BlocklyFileEditor = ({
           layOut(workspace);
         }
         return;
+      }
+      // NO FREE-FLOATING BLOCKS (specs/LAZY_WORKSPACE_PLAN.md). A block that
+      // ends a drag on its own, attached to nothing, means nothing — the
+      // generator skips it and the orphan plugin disables it — so it goes, as
+      // one dropped on the toolbox does. In the drag's own event group, so a
+      // single undo puts it back where it was taken from.
+      if (
+        event.type === Blockly.Events.BLOCK_DRAG &&
+        !(event as Blockly.Events.BlockDrag).isStart
+      ) {
+        const dropped = workspace.getBlockById(
+          (event as Blockly.Events.BlockDrag).blockId ?? '',
+        );
+        if (dropped && !dropped.getParent() && isFreeFloating(dropped)) {
+          Blockly.Events.setGroup(event.group || true);
+          try {
+            dropped.dispose(true);
+          } finally {
+            Blockly.Events.setGroup(false);
+          }
+        }
+        reflow(workspace);
+      } else if (!event.isUiEvent) {
+        // …and the layout catches up with whatever the edit did to a stack's
+        // size or to the order of the top blocks.
+        reflow(workspace);
       }
       // A BODY's edits are not the file's. The workspace holds one member's
       // implementation, so what it saves is that body — put back in the seam,
@@ -1303,6 +1358,7 @@ export const BlocklyFileEditor = ({
       readFile,
       syncFlyoutMetrics,
       layOut,
+      reflow,
     ],
   );
 

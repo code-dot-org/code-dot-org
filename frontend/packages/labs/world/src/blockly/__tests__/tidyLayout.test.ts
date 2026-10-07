@@ -8,7 +8,21 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {anyOverlap, arrangeTopBlocks, type Box} from '../tidyLayout';
+import {arrangeTopBlocks, isFreeFloating, type Box} from '../tidyLayout';
+
+/** Whether any box shares area with another; touching edges do not count. */
+const anyOverlap = (boxes: readonly Box[]): boolean =>
+  boxes.some((a, index) =>
+    boxes
+      .slice(index + 1)
+      .some(
+        b =>
+          a.x < b.x + b.width &&
+          b.x < a.x + a.width &&
+          a.y < b.y + b.height &&
+          b.y < a.y + a.height,
+      ),
+  );
 
 /** The boxes as the arrangement leaves them. */
 const arranged = (boxes: readonly Box[]): Box[] => {
@@ -29,30 +43,31 @@ const piled = (heights: readonly number[], step = 40): Box[] =>
     height,
   }));
 
-describe('spotting a workspace that needs arranging', () => {
-  it('says nothing is wrong with blocks that merely sit close together', () => {
-    // The strict reading, on purpose: a learner who parks two stacks near each
-    // other has arranged them, and an editor that spreads them out again on
-    // every open is an editor arguing with its user.
-    expect(
-      anyOverlap([
-        {x: 0, y: 0, width: 100, height: 100},
-        {x: 0, y: 100, width: 100, height: 100},
-      ]),
-    ).toBe(false);
+describe('a block left on its own', () => {
+  // The workspace is its top blocks; anything else alone at the top means
+  // nothing and is deleted when dropped there (specs/LAZY_WORKSPACE_PLAN.md).
+  const block = (
+    shape: {previous?: boolean; output?: boolean},
+    own: {shadow?: boolean; marker?: boolean} = {},
+  ) => ({
+    previousConnection: shape.previous ? {} : null,
+    outputConnection: shape.output ? {} : null,
+    isShadow: () => Boolean(own.shadow),
+    isInsertionMarker: () => Boolean(own.marker),
   });
 
-  it('says so when one block sits on another', () => {
-    expect(
-      anyOverlap([
-        {x: 0, y: 0, width: 100, height: 100},
-        {x: 0, y: 99, width: 100, height: 100},
-      ]),
-    ).toBe(true);
+  it('is free-floating when it plugs into something', () => {
+    expect(isFreeFloating(block({previous: true}))).toBe(true);
+    expect(isFreeFloating(block({output: true}))).toBe(true);
   });
 
-  it('says so for a generated actor, which is what asks for the tidy', () => {
-    expect(anyOverlap(piled([300, 300, 300]))).toBe(true);
+  it('is not, when it is a definition or a hat', () => {
+    expect(isFreeFloating(block({}))).toBe(false);
+  });
+
+  it('is never a shadow or an insertion marker, which are Blockly’s', () => {
+    expect(isFreeFloating(block({output: true}, {shadow: true}))).toBe(false);
+    expect(isFreeFloating(block({previous: true}, {marker: true}))).toBe(false);
   });
 });
 

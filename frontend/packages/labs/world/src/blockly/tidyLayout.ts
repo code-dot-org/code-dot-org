@@ -1,17 +1,21 @@
-// Arranging the top blocks of a workspace so they do not sit on top of one
-// another.
+// Where the top blocks of a workspace go (specs/LAZY_WORKSPACE_PLAN.md).
+//
+// A workspace is its top blocks — the definitions and the event hats — in
+// columns, and where each one sits is the layout's to say. Only the ORDER is
+// the learner's, read off where they put things: a handler dropped between
+// two others goes between them, and the rest move down to make room.
 //
 // A FILE CANNOT LAY ITSELF OUT. The height of a stack is the renderer's answer
 // and nobody else's: it depends on the theme, the font that turned up, how deep
 // the values nest inside each row, and which of them a learner has collapsed.
-// So the generated actors (`actors/stock/workspace`) no longer try. They give
-// their handlers an ORDER — distinct, deliberately overlapping positions — and
-// the editor, which is the only place a renderer exists, measures what it has
-// loaded and puts it somewhere legible.
+// So the generated actors (`actors/stock/workspace`) give their handlers an
+// order — distinct, deliberately overlapping positions — and the editor, which
+// is the only place a renderer exists, measures what it has and puts it where
+// this says, on load and after every edit.
 //
 // The arithmetic is here, apart from Blockly, so it can be read and tested as
-// arithmetic. `tidyTopBlocks` in the editor is the ten lines that ask the
-// renderer for the boxes and hand back the moves.
+// arithmetic. `tidyTopBlocks` in the editor asks the renderer for the boxes
+// and makes the moves.
 
 /** A top block's bounding box, in workspace units. */
 export interface Box {
@@ -51,25 +55,24 @@ const GUTTER = 48;
  */
 const COLUMN_HEIGHT = 1600;
 
-/** Do two boxes share any area? Touching edges do not count. */
-const overlap = (a: Box, b: Box): boolean =>
-  a.x < b.x + b.width &&
-  b.x < a.x + a.width &&
-  a.y < b.y + b.height &&
-  b.y < a.y + a.height;
-
 /**
- * Is any block sitting on any other?
+ * Whether a block left at the top of a workspace means nothing there.
  *
- * The whole trigger, and deliberately the strict reading. Blocks that merely
- * sit close together are a layout somebody chose; blocks that overlap are a
- * layout nobody chose, because the one underneath cannot be read at all. A
- * learner's own arrangement is left alone unless it has got into that state.
+ * A block that plugs into something — a row with a notch on top, a value with
+ * a plug on its left — only does anything attached: the generator skips it on
+ * its own, and the orphan plugin greys it out. A definition or an event hat
+ * has neither, and is what a workspace is made of. A shadow or an insertion
+ * marker is Blockly's own and is never the learner's to drop.
  */
-export const anyOverlap = (boxes: readonly Box[]): boolean =>
-  boxes.some((box, index) =>
-    boxes.slice(index + 1).some(other => overlap(box, other)),
-  );
+export const isFreeFloating = (block: {
+  previousConnection: unknown;
+  outputConnection: unknown;
+  isShadow(): boolean;
+  isInsertionMarker(): boolean;
+}): boolean =>
+  !block.isShadow() &&
+  !block.isInsertionMarker() &&
+  Boolean(block.previousConnection || block.outputConnection);
 
 /**
  * Place every box in columns, in the order the workspace already reads in.
