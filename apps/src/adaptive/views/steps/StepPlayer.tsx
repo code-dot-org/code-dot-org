@@ -70,6 +70,18 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
+      default:
+        // A step kind added to the schema but not yet playable here.
+        return (
+          <div className={styles.stepFallback}>
+            <MuiTypography variant="body3" className={shared.muted}>
+              This step type ({(step as Step).kind}) is not available yet.
+            </MuiTypography>
+            <MuiButton variant="contained" onClick={advance}>
+              {continueLabel}
+            </MuiButton>
+          </div>
+        );
     }
   };
 
