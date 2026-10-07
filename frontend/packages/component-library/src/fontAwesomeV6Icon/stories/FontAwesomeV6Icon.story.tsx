@@ -24,9 +24,7 @@ const MultipleTemplate: StoryFn<{
       margins, and are only added to improve storybook view *
     </p>
     <p>Multiple Icons:</p>
-    <div
-      style={{display: 'flex', flexWrap: 'wrap', gap: '20px', fontSize: '25px'}}
-    >
+    <div style={{display: 'flex', gap: '20px', fontSize: '25px'}}>
       {args.components?.map(componentArg => (
         <FontAwesomeV6Icon
           key={componentArg.iconName + componentArg.iconStyle}

@@ -36,7 +36,7 @@ Tell the operator: sign in to fontawesome.com with the shared dev account, open 
 
 ### 2. Check AWS access (you, then operator if it fails)
 
-Run `aws --version` and `aws sts get-caller-identity`. Use `AWS_PROFILE=codeorg-contributor` (role `Engineering_Contributor`). The role needs `s3:PutObject` and `s3:ListBucket` on
+Run `aws --version` and `aws sts get-caller-identity`. Timestamps are unix seconds (10 digits); the script refuses an S3 prefix that already has files. Use `AWS_PROFILE=codeorg-contributor` (role `Engineering_Contributor`). The role needs `s3:PutObject` and `s3:ListBucket` on
 `cdo-dsco/assets/font-awesome-pro/*`. If this fails, tell the operator what is missing (CLI install,
 credentials, `AWS_PROFILE`).
 
@@ -86,5 +86,12 @@ name or the font URL is wrong).
 
 ### 8. PR (you)
 
-Commit, push, open a draft PR into `staging`. Body: timestamp, added/removed icons, and a screenshot of the
-story if the operator provides one. Do not stage unrelated files.
+The update PR must hold only the update, never skill edits (those go in their own PR). From a branch off
+`origin/staging` named like `<user>/fontawesome-kit-update-<yyyy-mm>`:
+
+- Stage exactly: the three URL files, `constants/index.ts`, and the story file if it changed.
+- Title: `Update Font Awesome kit: <added icons, or "N new custom icons">`.
+- Body: S3 prefix (`cdo-dsco/assets/font-awesome-pro/<ts>`), added and removed icons, usages found for removed
+  icons, the step 6 check results, and before/after screenshots of the Custom Icons story (take them yourself
+  with Storybook plus Playwright; "before" is `origin/staging`, "after" is the branch).
+- Open as a draft into `staging`, then tell the operator the link.

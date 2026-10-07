@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Usage: node update.mjs <kit.zip> [--dry-run] [--skip-upload]
 // --skip-upload edits the repo files but does not touch S3 (the upload step is untested).
-import {execFileSync} from 'node:child_process';
+import {execFileSync, spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -27,7 +27,7 @@ const CONSTANTS = path.join(
   'frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts',
 );
 
-const ts = Date.now().toString();
+const ts = Math.floor(Date.now() / 1000).toString();
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'fa-kit-'));
 execFileSync('unzip', ['-q', zip, '-d', tmp]);
 
@@ -71,6 +71,11 @@ if (!archiveOnly && newIcons.size === 0) throw new Error('parsed no icons from c
 if (dry) {
   console.log(`dry run: would sync to ${BUCKET}/${ts}/` + (archiveOnly ? '' : ' and edit'), archiveOnly ? '' : [...URL_FILES, CONSTANTS]);
   process.exit(0);
+}
+
+if (!skipUpload) {
+  const taken = spawnSync('aws', ['s3', 'ls', `${BUCKET}/${ts}/`]).stdout?.toString().trim();
+  if (taken) throw new Error(`${BUCKET}/${ts}/ already has files; rerun in a second`);
 }
 
 if (skipUpload) {
