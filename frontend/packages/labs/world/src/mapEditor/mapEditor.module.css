@@ -1,3 +1,14 @@
+/* THE DESIGN SYSTEM'S FONT, set at each root this editor has: the map, a
+   world around it, and one actor's code. Nothing above them in the lab sets
+   one, so text here fell to the browser's default — Times for a bare label,
+   Arial for a button, which does not inherit a font unless told to. Every
+   control styled below says `font: inherit` for that reason. */
+.editor,
+.worldEditor,
+.script {
+  font-family: var(--font-family-main, sans-serif);
+}
+
 .editor {
   display: flex;
   flex-direction: column;
@@ -28,6 +39,7 @@
 }
 
 .sizeField input {
+  font: inherit;
   width: 4.5rem;
   box-sizing: border-box;
   padding: 0.2rem 0.3rem;
@@ -54,6 +66,7 @@
 }
 
 .actor {
+  font: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,6 +221,7 @@
 }
 
 .resetButton {
+  font: inherit;
   font-size: 0.75rem;
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
@@ -454,6 +468,7 @@
 }
 
 .viewButton {
+  font: inherit;
   font-size: 0.8rem;
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
@@ -521,6 +536,7 @@
 }
 
 .layerRow {
+  font: inherit;
   width: 100%;
   text-align: left;
   font-size: 0.8rem;
@@ -579,6 +595,7 @@
 }
 
 .inspectorDial {
+  font: inherit;
   display: inline-flex;
   align-items: center;
   padding: 0;
@@ -605,6 +622,7 @@
    in pixels, so it follows a pan, a zoom and a drag; sized to the constant the
    stage clamps with (`SCRIPT_BUTTON`). */
 .scriptFloat {
+  font: inherit;
   position: absolute;
   height: 26px;
   min-width: 64px;
