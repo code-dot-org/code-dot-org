@@ -64,7 +64,9 @@ const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
           variant="outlined"
           color="secondary"
           size="extraSmall"
-          startIcon={<FontAwesomeV6Icon iconName="rotate-left" />}
+          startIcon={
+            <FontAwesomeV6Icon iconName="rotate-left" aria-hidden="true" />
+          }
           onClick={onStartOver}
           className={styles.startOver}
         >
