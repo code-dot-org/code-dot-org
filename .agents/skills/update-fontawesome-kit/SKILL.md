@@ -16,12 +16,7 @@ What a finished update must contain (all of it, or the icons are not usable):
    `frontend/packages/fonts/src/loader/index.ts`, `shared/css/font.scss`.
 3. `kitIcons` in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` matching the
    kit exactly. This is the only list of custom icon names; there is no separate TS type.
-4. The custom icons storybook (`.../fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx`, story "Group of
-   Custom Icons") showing every icon in `kitIcons`, new ones included.
-
-## Note
-
-The icon regex matches `.fa-kit.fa-NAME` in `custom-icons.css`; if the added/removed lists look absurd, check it first.
+4. The custom icons storybook (`.../fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx`, story "Group Of Custom Icons Of Font Awesome V6 Icon") showing every icon in `kitIcons`, new ones included.
 
 ## Steps
 
@@ -47,7 +42,8 @@ If this fails, tell the operator what is missing (CLI install, credentials, `AWS
 
 `node .agents/skills/update-fontawesome-kit/update.mjs <kit.zip> --dry-run` prints the timestamp and the
 added/removed icon names; it changes nothing (the real run picks its own, later timestamp). Show the operator
-the added and removed lists.
+the added and removed lists. The icon names come from `.fa-kit.fa-NAME` in `custom-icons.css`; if the lists look
+absurd, check that regex first. The usage search can take a minute or more, so run it in the background.
 
 For every removed icon the dry run also prints `USED:` (with up to 10 matching lines) or `unused:`. It
 matches the class `fa-<name>` and the bare quoted `'<name>'`, `"<name>"` or backticked name (as in
@@ -70,13 +66,17 @@ match unrelated strings, so read each hit.
 
 Do not run this until the operator has explicitly confirmed the step 3 gate. A dry run alone is not consent.
 
-Run the same command without `--dry-run` (add `--skip-upload` if step 2 chose it). It rewrites `../webfonts`
+Run the same command without `--dry-run` (add `--skip-upload` if step 2 chose it). For a v7 kit, stop after the
+upload and the step 6 check: no repo edits, no PR; report the printed URL prefix to the operator.
+
+For a v6 kit it rewrites `../webfonts`
 to the timestamped URL, syncs to S3, bumps the three URL files and rewrites `kitIcons`.
 
 ### 5. Manual upload, only if `--skip-upload` (operator)
 
-The script prints the temp dir and the target prefix. Tell the operator to upload that dir's `css/` and
-`webfonts/` to the printed `s3://cdo-dsco/assets/font-awesome-pro/<ts>/` prefix. Never delete older
+The script prints the two source directories and their target prefixes. Tell the operator to confirm the
+`s3://cdo-dsco/assets/font-awesome-pro/<ts>/` prefix is empty (`aws s3 ls`), then upload each directory to its
+printed target. Never delete older
 timestamp folders; e.g. `apps/src/applab/Exporter.js` still pins one.
 
 **GATE:** operator confirms the upload is done.
@@ -97,7 +97,7 @@ bucket CORS config needs fixing (see the README's Slack thread link); that is an
   `frontend/AGENTS.md`), and `./tools/hooks/pre-commit`.
 - Storybook must show the new icons. Run `yarn build` in `frontend/packages/fonts` (Storybook reads the built
   package, so its URLs are stale until then), then `yarn storybook` in `frontend/apps/design-system-storybook`
-  and look at "Group of Custom Icons".
+  and open `DesignSystem/FontAwesomeV6Icon`, story "Group Of Custom Icons Of Font Awesome V6 Icon".
 
 **GATE:** operator looks at the story and confirms every new icon renders (a blank square means the icon
 name or the font URL is wrong).

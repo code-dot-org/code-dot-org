@@ -5,6 +5,7 @@ import {execFileSync, spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 const [zip, ...flags] = process.argv.slice(2);
 const dry = flags.includes('--dry-run');
@@ -16,7 +17,8 @@ if (!zip || zip.startsWith('--') || unknown.length) {
   process.exit(2);
 }
 
-const root = execFileSync('git', ['rev-parse', '--show-toplevel']).toString().trim();
+const here = path.dirname(fileURLToPath(import.meta.url));
+const root = execFileSync('git', ['rev-parse', '--show-toplevel'], {cwd: here}).toString().trim();
 const BASE = 'https://dsco.code.org/assets/font-awesome-pro';
 const BUCKET = 's3://cdo-dsco/assets/font-awesome-pro';
 const URL_FILES = [
@@ -28,7 +30,9 @@ const CONSTANTS_REL =
   'frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts';
 const CONSTANTS = path.join(root, CONSTANTS_REL);
 const URL_RE = /(font-awesome-pro\/)\d+(\/css)/g;
-const SET_RE = /(new Set\(\[\n)[\s\S]*?(\n\]\);)/;
+const SET_RE = /(new Set\(\[\n)([\s\S]*?)(\n\]\);)/;
+// Any url() target that is not absolute https, data: or a fragment would ship broken.
+const RELATIVE_URL_RE = /url\((?!\s*["']?(?:https:\/\/|data:|#))/;
 
 // Each real run needs its own S3 prefix; the dry run prints a timestamp the real run will not reuse.
 const ts = Math.floor(Date.now() / 1000).toString();
@@ -44,23 +48,28 @@ function findDir(dir, name) {
   }
 }
 
+// One git grep for all names (one per name is minutes on this repo), then bucket by name.
 // git grep exits 0 for hits, 1 for none; anything else is a failed search, not "unused".
-function usagesOf(name) {
-  const re = `fa-${name}([^a-z0-9-]|$)|["'\`]${name}["'\`]`;
+function usagesByName(names) {
+  const alt = names.join('|');
+  const re = `fa-(${alt})([^a-z0-9-]|$)|["'\`](${alt})["'\`]`;
   const r = spawnSync(
     'git',
-    ['grep', '-n', '-I', '-E', re, '--', '.', `:!${CONSTANTS_REL}`, ':!dashboard/config/locales', ':!*.lock', ':!*lock.json'],
-    {cwd: root},
+    ['grep', '-n', '-I', '-E', re, '--', '.', `:!${CONSTANTS_REL}`, ':!.agents/skills/update-fontawesome-kit', ':!dashboard/config/locales', ':!*.lock', ':!*lock.json'],
+    {cwd: root, maxBuffer: 256 * 1024 * 1024},
   );
-  if (r.status !== 0 && r.status !== 1) {
-    throw new Error(`git grep failed for ${name}: ${r.stderr}`);
-  }
-  const out = r.stdout.toString().trim();
-  return out ? out.split('\n') : [];
+  if (r.status !== 0 && r.status !== 1) throw new Error(`git grep failed: ${r.stderr}`);
+  const lines = r.stdout.toString().trim().split('\n').filter(Boolean);
+  return Object.fromEntries(
+    names.map(n => {
+      const one = new RegExp(`fa-${n}([^a-z0-9-]|$)|["'\`]${n}["'\`]`);
+      return [n, lines.filter(l => one.test(l))];
+    }),
+  );
 }
 
 function main() {
-  execFileSync('unzip', ['-q', zip, '-x', '__MACOSX/*', '-d', tmp]);
+  execFileSync('unzip', ['-q', zip, '-d', tmp]);
   const css = findDir(tmp, 'css');
   const webfonts = findDir(tmp, 'webfonts');
   if (!css || !webfonts) throw new Error('zip lacks css/ or webfonts/');
@@ -70,8 +79,8 @@ function main() {
     const p = path.join(css, f);
     fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replaceAll('../webfonts', `${BASE}/${ts}/webfonts`));
   }
-  const relative = cssFiles.filter(f => /url\(["']?\.{1,2}\//.test(fs.readFileSync(path.join(css, f), 'utf8')));
-  if (relative.length) throw new Error(`relative url() left in ${relative.join(', ')}`);
+  const relative = cssFiles.filter(f => RELATIVE_URL_RE.test(fs.readFileSync(path.join(css, f), 'utf8')));
+  if (relative.length) throw new Error(`non-absolute url() left in ${relative.join(', ')}`);
 
   const faCss = fs.readFileSync(path.join(css, 'fontawesome.css'), 'utf8');
   const major = faCss.includes('Font Awesome 6 Pro') ? 6 : faCss.includes('Font Awesome 7 Pro') ? 7 : 0;
@@ -82,7 +91,8 @@ function main() {
 
   let newIcons = new Set();
   const customPath = path.join(css, 'custom-icons.css');
-  if (!archiveOnly || fs.existsSync(customPath)) {
+  if (!archiveOnly && !fs.existsSync(customPath)) throw new Error('kit has no css/custom-icons.css');
+  if (fs.existsSync(customPath)) {
     const customCss = fs.readFileSync(customPath, 'utf8');
     newIcons = new Set([...customCss.matchAll(/\.fa-kit\.fa-([a-z0-9-]+)\s*[,{]/g)].map(m => m[1]));
     if (!customCss.includes(`${BASE}/${ts}/webfonts`)) {
@@ -96,21 +106,23 @@ function main() {
   let constSrc = '';
   if (!archiveOnly) {
     constSrc = fs.readFileSync(CONSTANTS, 'utf8');
-    if (!SET_RE.test(constSrc)) throw new Error('kitIcons set not found in constants/index.ts');
+    const setMatch = SET_RE.exec(constSrc);
+    if (!setMatch) throw new Error('kitIcons set not found in constants/index.ts');
     for (const f of URL_FILES) {
       if (!URL_RE.test(fs.readFileSync(f, 'utf8'))) throw new Error(`no font-awesome-pro URL in ${f}`);
       URL_RE.lastIndex = 0;
     }
-    const oldIcons = new Set([...constSrc.matchAll(/^\s+'([^']+)',$/gm)].map(m => m[1]));
+    const oldIcons = new Set([...setMatch[2].matchAll(/'([^']+)'/g)].map(m => m[1]));
     const added = [...newIcons].filter(i => !oldIcons.has(i)).sort();
     const removed = [...oldIcons].filter(i => !newIcons.has(i)).sort();
     console.log(`added: ${added.join(', ') || '-'}\nremoved: ${removed.join(', ') || '-'}`);
-    for (const name of removed) {
-      const hits = usagesOf(name);
-      console.log(hits.length ? `USED: ${name} (${hits.length}):\n  ${hits.slice(0, 10).join('\n  ')}` : `unused: ${name}`);
-    }
     if (removed.length) {
-      console.log('NOTE: "unused" is not proof. The search covers tracked files (minus locales and lockfiles) and misses class names built at runtime (fa-${x}).');
+      const usages = usagesByName(removed);
+      for (const name of removed) {
+        const hits = usages[name];
+        console.log(hits.length ? `USED: ${name} (${hits.length}):\n  ${hits.slice(0, 10).join('\n  ')}` : `unused: ${name}`);
+      }
+      console.log('NOTE: "unused" is not proof. The search misses class names built at runtime (fa-${x}).');
     }
   } else {
     console.log('added/removed: n/a (archive only)');
@@ -135,7 +147,7 @@ function main() {
       execFileSync('aws', ['s3', 'sync', d, `${BUCKET}/${ts}/${path.basename(d)}/`], {stdio: 'inherit'});
     }
   } else {
-    console.log(`--skip-upload: files are in ${tmp}; upload css/ and webfonts/ to ${BUCKET}/${ts}/ by hand`);
+    console.log(`--skip-upload: upload these two directories by hand (check the target prefix is empty first):\n  ${css} -> ${BUCKET}/${ts}/css/\n  ${webfonts} -> ${BUCKET}/${ts}/webfonts/`);
   }
 
   if (archiveOnly) {
@@ -147,12 +159,15 @@ function main() {
     fs.writeFileSync(f, fs.readFileSync(f, 'utf8').replace(URL_RE, `$1${ts}$2`));
   }
   const body = [...newIcons].sort().map(i => `  '${i}',`).join('\n');
-  fs.writeFileSync(CONSTANTS, constSrc.replace(SET_RE, `$1${body}$2`));
+  fs.writeFileSync(CONSTANTS, constSrc.replace(SET_RE, `$1${body}$3`));
   console.log('done; now verify per SKILL.md step 6');
 }
 
 try {
   main();
+} catch (err) {
+  console.error(`error: ${err.message}`);
+  process.exitCode = 1;
 } finally {
   if (!skipUpload || dry) fs.rmSync(tmp, {recursive: true, force: true});
 }

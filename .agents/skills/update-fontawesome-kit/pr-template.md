@@ -15,7 +15,7 @@
 
 Usages of removed icons: <!-- result of the grep in SKILL.md step 3, or "none found" -->
 
-## Storybook: Design System / FontAwesomeV6Icon / Group of Custom Icons
+## Storybook: DesignSystem/FontAwesomeV6Icon / Group Of Custom Icons Of Font Awesome V6 Icon
 
 | Before (`staging`) | After (this PR) |
 | --- | --- |
