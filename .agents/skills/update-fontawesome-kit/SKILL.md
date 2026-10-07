@@ -92,8 +92,9 @@ bucket CORS config needs fixing (see the README's Slack thread link); that is an
 
 ### 7. Verify code and storybook (you, then operator)
 
-- Confirm `git diff` touches exactly the three URL files and `constants/index.ts`.
-- Run `yarn typecheck` in `apps/` and `./tools/hooks/pre-commit`.
+- Confirm `git diff` touches only the three URL files and `constants/index.ts` (plus the story file, if you edited it).
+- Run `yarn typecheck` in `apps/`, `yarn lint:fix` then `yarn release:dryrun` in `frontend/` (see
+  `frontend/AGENTS.md`), and `./tools/hooks/pre-commit`.
 - Storybook must show the new icons. Run `yarn build` in `frontend/packages/fonts` (Storybook reads the built
   package, so its URLs are stale until then), then `yarn storybook` in `frontend/apps/design-system-storybook`
   and look at "Group of Custom Icons".

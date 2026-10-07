@@ -9,8 +9,10 @@ import path from 'node:path';
 const [zip, ...flags] = process.argv.slice(2);
 const dry = flags.includes('--dry-run');
 const skipUpload = flags.includes('--skip-upload');
-if (!zip) {
-  console.error('usage: update.mjs <kit.zip> [--dry-run] [--skip-upload]');
+const KNOWN_FLAGS = ['--dry-run', '--skip-upload'];
+const unknown = [...(zip?.startsWith('--') ? [zip] : []), ...flags.filter(f => !KNOWN_FLAGS.includes(f))];
+if (!zip || zip.startsWith('--') || unknown.length) {
+  console.error(`usage: update.mjs <kit.zip> [--dry-run] [--skip-upload]${unknown.length ? `\nunknown argument: ${unknown.join(' ')}` : ''}`);
   process.exit(2);
 }
 
