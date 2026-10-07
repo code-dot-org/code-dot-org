@@ -814,7 +814,6 @@ export const MapEditor = ({
         onEnhanceKind={enhanceKind}
         onOpenKind={openKind}
         mapScriptLabel={document.hasMapScript ? 'Map code' : 'World code'}
-        mapScriptIcon={document.hasMapScript ? 'file-code' : 'globe'}
         world={worldInspector}
         worldCameras={worldCameraList}
         mapChoices={mapChoices}

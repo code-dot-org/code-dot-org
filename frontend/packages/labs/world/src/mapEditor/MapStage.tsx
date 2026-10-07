@@ -147,11 +147,11 @@ const TURN_STEP = 15;
 /** How big a grip is drawn and grabbed, in SCREEN pixels at any zoom. */
 const HANDLE_SIZE = 9;
 /**
- * The floating Script button's size, for keeping it inside the stage, and how
+ * The floating Code button's size, for keeping it inside the stage, and how
  * far it stands off the selection's corner — clear of the corner grip, which
  * reaches half a `HANDLE_SIZE` out from it.
  */
-const SCRIPT_BUTTON = {w: 64, h: 26};
+const SCRIPT_BUTTON = {w: 24, h: 24};
 const SCRIPT_BUTTON_GAP = 10;
 /** How far beyond the top edge the turn grip sits, in screen pixels. */
 const TURN_REACH = 22;
@@ -243,8 +243,6 @@ export interface MapStageProps {
   eventsFor?: (kind: string) => readonly EventChoice[];
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
-  /** …and the icon it is drawn as. */
-  mapScriptIcon?: string;
   /**
    * What a gated lab WITHHOLDS here (specs/CURRICULUM_PLAN.md,
    * specs/KINDS_FROM_THE_MAP_PLAN.md). A withheld control is drawn, disabled,
@@ -371,7 +369,8 @@ const eventRows = (
  * A SWITCH — the code marks, the Layers list, the Cameras list — is coloured
  * as a tab is: the brand's primary while on, neutral while off, with no box
  * either way, and `aria-pressed` says which. An action — Reset view, the
- * way into the map's own code — is the neutral one, with no state to show.
+ * way into the map's own code — is the neutral one, with no state to show;
+ * that way into code wears the blocks icon every way into code does.
  */
 const ToolbarIcon = ({
   label,
@@ -415,7 +414,6 @@ export const MapStage = ({
   onEnhanceKind,
   onOpenKind,
   mapScriptLabel = 'Map code',
-  mapScriptIcon = 'file-code',
   world,
   mapChoices,
   heldMaps,
@@ -2690,18 +2688,21 @@ export const MapStage = ({
       {scriptButton && selectedActor && (
         // HTML rather than drawn, so it can be focused, read and pointed at
         // by a lesson, none of which a picture on a canvas can be. White and
-        // raised, since it sits on whatever the map is painted with.
-        <Button
-          className={styles.scriptFloat}
-          variant="contained"
-          color="white"
-          size="extraSmall"
-          style={{left: scriptButton.x, top: scriptButton.y}}
-          aria-label={`Open the code of ${selectedActor.id}`}
-          onClick={() => onEditScript?.(selectedActor.id)}
-        >
-          Code
-        </Button>
+        // raised, since it sits on whatever the map is painted with; the
+        // blocks icon every way into code wears, as the inspector's has.
+        <Tooltip title={`Open the code of ${selectedActor.id}`}>
+          <IconButton
+            className={styles.scriptFloat}
+            variant="contained"
+            color="white"
+            size="extraSmall"
+            style={{left: scriptButton.x, top: scriptButton.y}}
+            aria-label={`Open the code of ${selectedActor.id}`}
+            onClick={() => onEditScript?.(selectedActor.id)}
+          >
+            <FontAwesomeV6Icon iconName="puzzle-piece" iconStyle="solid" />
+          </IconButton>
+        </Tooltip>
       )}
       <div className={styles.toolbar}>
         <Typography variant="body4" component="span" className={styles.zoom}>
@@ -2739,7 +2740,7 @@ export const MapStage = ({
           <>
             <ToolbarIcon
               label={mapScriptLabel}
-              icon={mapScriptIcon}
+              icon="puzzle-piece"
               className={withheldClass('map-scripts')}
               {...orWithheld('map-scripts', 'toolbar', () =>
                 onEditScript(undefined),
