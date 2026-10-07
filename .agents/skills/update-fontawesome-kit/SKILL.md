@@ -48,8 +48,10 @@ credentials, `AWS_PROFILE`).
 `node .agents/skills/update-fontawesome-kit/update.mjs <kit.zip> --dry-run` prints the timestamp and the
 added/removed icon names; it changes nothing. Show the operator the added and removed lists.
 
-If icons are removed, `grep -rn "fa-<name>" apps frontend dashboard/app shared pegasus` for each and report
-usages: removing a used icon is a regression.
+For every removed icon the dry run also prints `USED:` (with up to 10 matching lines) or `unused:`. It
+matches the class `fa-<name>` and the bare quoted `'<name>'` (as in `iconName="<name>"`) in `apps/src`,
+`frontend`, `dashboard/app`, `shared`, `pegasus`. Short or common names (`move`, `clever`) match unrelated
+strings, so read each hit; a `USED` hit that is a real icon usage is a regression to fix or flag before the gate.
 
 **GATE:** operator confirms the icon diff matches what design added (ask for names if unsure).
 

@@ -22,10 +22,9 @@ const URL_FILES = [
   'frontend/packages/fonts/src/loader/index.ts',
   'shared/css/font.scss',
 ].map(f => path.join(root, f));
-const CONSTANTS = path.join(
-  root,
-  'frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts',
-);
+const CONSTANTS_REL =
+  'frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts';
+const CONSTANTS = path.join(root, CONSTANTS_REL);
 
 const ts = Math.floor(Date.now() / 1000).toString();
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'fa-kit-'));
@@ -66,6 +65,28 @@ const oldIcons = new Set([...constSrc.matchAll(/^\s+'([^']+)',$/gm)].map(m => m[
 const added = [...newIcons].filter(i => !oldIcons.has(i)).sort();
 const removed = [...oldIcons].filter(i => !newIcons.has(i)).sort();
 console.log(`kit: Font Awesome ${major}${archiveOnly ? ' (archive only, repo files untouched)' : ''}\ntimestamp: ${ts}\nadded: ${added.join(', ') || '-'}\nremoved: ${removed.join(', ') || '-'}`);
+// Matches the CSS class (fa-NAME) and the bare quoted name (iconName="NAME").
+const SEARCH_DIRS = ['apps/src', 'frontend', 'dashboard/app', 'shared', 'pegasus'];
+function usagesOf(name) {
+  const re = `fa-${name}([^a-z0-9-]|$)|["']${name}["']`;
+  const out = spawnSync(
+    'git',
+    ['grep', '-n', '-I', '-E', re, '--', ...SEARCH_DIRS, `:!${CONSTANTS_REL}`],
+    {cwd: root},
+  ).stdout.toString().trim();
+  return out ? out.split('\n') : [];
+}
+if (!archiveOnly) {
+  for (const name of removed) {
+    const hits = usagesOf(name);
+    console.log(
+      hits.length
+        ? `USED: ${name} (${hits.length}):\n  ${hits.slice(0, 10).join('\n  ')}`
+        : `unused: ${name}`,
+    );
+  }
+}
+
 if (!archiveOnly && newIcons.size === 0) throw new Error('parsed no icons from custom-icons.css; refusing to continue');
 
 if (dry) {
