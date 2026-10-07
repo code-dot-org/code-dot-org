@@ -6,7 +6,7 @@ import {stepBaseSchema} from './steps/base';
 import {subsetOf} from './subsetOf';
 
 /** Quiz's question summary less page: a step shows one question at a time. */
-export const multipleChoiceQuestionSchema = subsetOf<
+export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
   Omit<QuizQuestionSummary, 'page'> & {correctChoiceId?: string}
 >()(
   z.strictObject({
@@ -25,9 +25,9 @@ export const multipleChoiceQuestionSchema = subsetOf<
   })
 );
 
-/** Represents a single question in a Question step. */
+/** One of a questions step's questions. */
 export const questionSchema = z.discriminatedUnion('type', [
-  multipleChoiceQuestionSchema,
+  multipleChoiceDiagnosticQuestionSchema,
   z.strictObject({
     id: z.string().min(1),
     type: z.literal('freeResponse'),

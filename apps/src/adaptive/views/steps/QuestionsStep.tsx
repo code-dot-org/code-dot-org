@@ -11,7 +11,7 @@ import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQues
 
 import {Answer, StepAnswers} from '../../progress';
 import {
-  MultipleChoiceQuestion,
+  MultipleChoiceDiagnosticQuestion,
   QuestionsStep as QuestionsStepContent,
 } from '../../types';
 
@@ -37,12 +37,15 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   const questions = useMemo(
     () =>
       step.questions.filter(
-        (q): q is MultipleChoiceQuestion => q.type === 'MultipleChoiceQuestion'
+        (q): q is MultipleChoiceDiagnosticQuestion =>
+          q.type === 'MultipleChoiceQuestion'
       ),
     [step.questions]
   );
   const [index, setIndex] = useState(0);
-  const question = questions[index] as MultipleChoiceQuestion | undefined;
+  const question = questions[index] as
+    | MultipleChoiceDiagnosticQuestion
+    | undefined;
   const isLastQuestion = index >= questions.length - 1;
   const correctChoiceId = question?.correctChoiceId;
   // Picks stay local until submitted; only submitted answers are saved.

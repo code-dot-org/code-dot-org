@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 import {Answer, StepAnswers} from '@cdo/apps/adaptive/progress';
 import {
-  MultipleChoiceQuestion,
+  MultipleChoiceDiagnosticQuestion,
   QuestionsStep as Step,
 } from '@cdo/apps/adaptive/types';
 import QuestionsStep from '@cdo/apps/adaptive/views/steps/QuestionsStep';
@@ -12,7 +12,7 @@ import QuestionsStep from '@cdo/apps/adaptive/views/steps/QuestionsStep';
 const question = (
   id: number,
   questionTitle: string
-): MultipleChoiceQuestion => ({
+): MultipleChoiceDiagnosticQuestion => ({
   id,
   type: 'MultipleChoiceQuestion',
   questionName: `q${id}`,
