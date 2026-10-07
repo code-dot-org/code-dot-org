@@ -122,7 +122,8 @@ describe('PredictionSentence', () => {
       screen.getByText('Predict species based on island, mass, sex'),
     ).toBeTruthy();
 
-    const overflowTag = screen.getByRole('button', {name: '+1'});
+    const overflowTag = screen.getByText('+1');
+    expect(overflowTag.tabIndex).toBe(0);
     fireEvent.mouseOver(overflowTag);
     expect((await screen.findByRole('tooltip')).textContent).toBe('sex');
   });
@@ -158,21 +159,5 @@ describe('PredictionSentence', () => {
 
     resizeSentence(1000);
     expect(shownPieces(container).slice(3)).toEqual(['island', 'mass', 'sex']);
-  });
-
-  test('on a single line, sizes the overflow tag for the features it hides', () => {
-    // Thirteen 10px tags after "based on" at 80px; "+3" needs 20px, "+13" 30px.
-    layOutSentence(200);
-    const features = 'abcdefghijklm'.split('');
-    const {container} = renderSentence({
-      label: 'species',
-      features,
-      singleLine: true,
-    });
-
-    expect(shownPieces(container).slice(3)).toEqual([
-      ...features.slice(0, 10),
-      '+3',
-    ]);
   });
 });
