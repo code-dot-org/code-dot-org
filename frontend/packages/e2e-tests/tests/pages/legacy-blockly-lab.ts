@@ -166,7 +166,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Hook for lab-specific modals that must clear before the instructions overlay; see CraftLab. */
   protected async dismissLabInterstitials(): Promise<void> {}
 
-  /** Wait for the lab to be interactive: run button, header, overlays dismissed unless `dismissOverlays` is false, instructions and header settled. */
+  /** Wait for the lab to be interactive and settled visually. */
   async waitForReady({
     dismissOverlays = true,
   }: WaitForReadyOptions = {}): Promise<void> {
