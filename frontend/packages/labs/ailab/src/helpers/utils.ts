@@ -24,8 +24,29 @@ export function arrayIntersection<T>(array1: T[], array2: T[]): T[] {
   return array1.filter(value => array2.includes(value));
 }
 
-export function getRandomInt(max: number): number {
-  return Math.floor(Math.random() * Math.floor(max));
+export function getRandomInt(
+  max: number,
+  random: () => number = Math.random,
+): number {
+  return Math.floor(random() * Math.floor(max));
+}
+
+const MAX_SEED = 2 ** 32;
+
+export function newSeed(): number {
+  return getRandomInt(MAX_SEED);
+}
+
+// mulberry32: a small 32-bit PRNG; the same seed always yields the same sequence.
+export function seededRandom(seed: number): () => number {
+  let state = seed >>> 0;
+  return () => {
+    state = (state + 0x6d2b79f5) >>> 0;
+    let mixed = state;
+    mixed = Math.imul(mixed ^ (mixed >>> 15), mixed | 1);
+    mixed ^= mixed + Math.imul(mixed ^ (mixed >>> 7), mixed | 61);
+    return ((mixed ^ (mixed >>> 14)) >>> 0) / MAX_SEED;
+  };
 }
 
 const NICE_STEP_MULTIPLIERS = [1, 2, 5, 10];

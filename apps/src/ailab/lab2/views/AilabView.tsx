@@ -1,10 +1,11 @@
 import ailab, {
+  type AilabSnapshot,
   type InitAllOptions,
   type Mode,
   type SaveResponse,
   type InstructionsKey,
 } from '@code-dot-org/ailab';
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
@@ -21,10 +22,22 @@ import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
 
-const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
+interface AilabViewProps extends LabProps<AilabLevelProperties> {
+  /** The student's saved work on this level, if any. */
+  initialSnapshot?: AilabSnapshot;
+  /** Saves the student's work; omitted when the level keeps none. */
+  onStateChange?: (snapshot: AilabSnapshot) => void;
+}
+
+const AilabView: React.FC<AilabViewProps> = ({
   levelProperties,
+  initialSnapshot,
+  onStateChange,
 }) => {
   const dispatch = useAppDispatch();
+  // The lab is mounted once, so it calls through a ref to reach the latest callback.
+  const onStateChangeRef = useRef(onStateChange);
+  onStateChangeRef.current = onStateChange;
   const {showDialog} = useDialogControl();
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
@@ -100,6 +113,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       saveTrainedModel,
       logMetric,
       onStartOver,
+      onStateChange: snapshot => onStateChangeRef.current?.(snapshot),
     });
 
     return () => ailab.unmount();
@@ -107,8 +121,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
 
   // Reload whenever the level changes regardless of if the mode has changed.
   useEffect(() => {
-    ailab.loadLevel(mode);
-  }, [levelProperties.id, mode]);
+    ailab.loadLevel(mode, initialSnapshot);
+  }, [levelProperties.id, mode, initialSnapshot]);
 
   const dynamicInstructionsContent = useMemo(() => {
     if (!dynamicInstructionsKey) {

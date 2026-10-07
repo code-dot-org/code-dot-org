@@ -37,6 +37,7 @@ import type {
 } from './types';
 
 export interface RootState {
+  datasetId: string | undefined;
   name: string | undefined;
   csvfile: string | undefined;
   jsonfile: string | undefined;
@@ -53,6 +54,7 @@ export interface RootState {
   trainingExamples: number[][];
   trainingLabels: (number | string)[];
   reserveLocation: string;
+  splitSeed: number | undefined;
   accuracyCheckExamples: number[][];
   accuracyCheckLabels: (number | string)[];
   accuracyCheckPredictedLabels: (number | string)[];
@@ -79,6 +81,7 @@ export interface RootState {
 }
 
 export const initialState: RootState = {
+  datasetId: undefined,
   name: undefined,
   csvfile: undefined,
   jsonfile: undefined,
@@ -98,6 +101,7 @@ export const initialState: RootState = {
   trainingExamples: [],
   trainingLabels: [],
   reserveLocation: TestDataLocations.END,
+  splitSeed: undefined,
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
@@ -132,6 +136,9 @@ const ailabSlice = createSlice({
   reducers: {
     setMode(state, action: PayloadAction<Mode | undefined>) {
       state.mode = action.payload;
+    },
+    setDatasetId(state, action: PayloadAction<string>) {
+      state.datasetId = action.payload;
     },
     setSelectedName(state, action: PayloadAction<string>) {
       state.name = action.payload;
@@ -225,6 +232,9 @@ const ailabSlice = createSlice({
     setReserveLocation(state, action: PayloadAction<string>) {
       state.reserveLocation = action.payload;
     },
+    setSplitSeed(state, action: PayloadAction<number>) {
+      state.splitSeed = action.payload;
+    },
     setAccuracyCheckExamples(state, action: PayloadAction<number[][]>) {
       state.accuracyCheckExamples = action.payload;
     },
@@ -311,6 +321,12 @@ const ailabSlice = createSlice({
       prepare(field: string, value: string, isColumn: boolean) {
         return {payload: {field, value, isColumn}};
       },
+    },
+    setTrainedModelDetails(
+      state,
+      action: PayloadAction<TrainedModelDetailsSave>,
+    ) {
+      state.trainedModelDetails = action.payload;
     },
     setCurrentPanel(state, action: PayloadAction<Panel>) {
       const currentPanel = action.payload;
@@ -415,6 +431,7 @@ const ailabSlice = createSlice({
 
 export const {
   setMode,
+  setDatasetId,
   setSelectedName,
   setSelectedCSV,
   setSelectedJSON,
@@ -428,6 +445,7 @@ export const {
   setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,
+  setSplitSeed,
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
   setAccuracyCheckPredictedLabels,
@@ -439,6 +457,7 @@ export const {
   resetState,
   setTrainedModel,
   setTrainedModelDetail,
+  setTrainedModelDetails,
   setCurrentPanel,
   setCurrentColumn,
   setHighlightColumn,

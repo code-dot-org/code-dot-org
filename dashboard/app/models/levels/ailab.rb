@@ -148,6 +148,15 @@ class Ailab < Level
     JSONValue.value(uses_lab2) == true
   end
 
+  def channel_backed?
+    super || uses_lab2?
+  end
+
+  # There is no standalone AI Lab project to share or remix into.
+  def student_properties
+    uses_lab2? ? super.merge('hide_share_and_remix' => true) : super
+  end
+
   def get_validations
     return nil unless uses_lab2?
 

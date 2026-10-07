@@ -93,6 +93,21 @@ class AilabTest < ActiveSupport::TestCase
     assert_nil level.get_validations
   end
 
+  test 'lab2 level is channel backed' do
+    level = build(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"]}')
+    assert level.channel_backed?
+  end
+
+  test 'lab2 level hides share and remix even when the level allows them' do
+    level = create(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"]}', hide_share_and_remix: 'false')
+    assert_equal true, level.summarize_for_lab2_properties(nil)['hideShareAndRemix']
+  end
+
+  test 'legacy level is not channel backed' do
+    level = build(:ailab, mode: '{"hideSave": true}')
+    refute level.channel_backed?
+  end
+
   test 'legacy level does not require a dataset' do
     [nil, 'false'].each do |uses_lab2|
       level = build(:ailab, uses_lab2: uses_lab2, mode: '{"hideSave": true}')

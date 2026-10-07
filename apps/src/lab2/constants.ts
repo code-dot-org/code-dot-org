@@ -6,7 +6,7 @@ export const SOURCE_FILE = 'main.json';
 
 export const BLOCKLY_LABS: AppName[] = ['dance', 'music'];
 
-export const LABS_WITH_JSON_SOURCES: AppName[] = ['aichat'];
+export const LABS_WITH_JSON_SOURCES: AppName[] = ['aichat', 'ailab'];
 
 export const MAIN_PYTHON_FILE = 'main.py';
 

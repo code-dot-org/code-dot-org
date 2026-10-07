@@ -68,6 +68,13 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     this.storeHistoricResult(trainedState);
   }
 
+  restoreTraining(): void {
+    const optimalModel = this.getOptimalModelDetails(this.store.getState());
+    if (optimalModel) {
+      this.storeTrainedModel(optimalModel);
+    }
+  }
+
   getOptimalModelDetails(
     state: RootState,
   ): OptimalModelDetails<Candidate> | undefined {

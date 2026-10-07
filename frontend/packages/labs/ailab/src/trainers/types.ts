@@ -27,6 +27,8 @@ export type TrainerId =
 
 export interface Trainer {
   startTraining(): void;
+  /** Rebuild the model of a run already in historicResults, without logging it again. */
+  restoreTraining(): void;
   predict(testValues: number[]): void;
   batchPredict(examples: number[][]): (number | string)[];
 }
