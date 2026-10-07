@@ -3,8 +3,6 @@
   "navigateBack": "Back",
   "navigateDone": "Finish",
   "saveProgress": "Save",
-  "correctAnswer": "Correct",
-  "incorrectAnswer": "Incorrect",
   "potentialUsesLabel": "Intended Use",
   "potentialUsesDescription": "Describe the problem you think this model could help solve, or one potential app someone could make with this model.",
   "potentialUsesPlaceholder": "Write a brief description.",
@@ -54,10 +52,6 @@
   "animationDescriptionsHeader": "Animation Description",
   "animationDescriptionsTraining": "Labeled rows from the training dataset go into A.I. bot's open head.",
   "animationDescriptionsTesting": "A.I. bot scans incoming rows of unlabeled data from the test dataset. As each row moves under A.I. bot's beam, A.I. makes a prediction by adding a value to the label column.",
-  "resultsTableFeatureHeader": "Features",
-  "resultsTableActualValueHeader": "Actual",
-  "resultsTablePredictedValueHeader": "A.I. Prediction",
-  "resultsTablePredictionRange": "Predictions are +/- {percentage}% of range",
   "uniqueOptionsWarningMessage": "Categorical columns with more than {valueCount} unique values cannot be selected as the label or a feature.",
   "predictionStatement": "Predict {output} based on {inputs}"
 }

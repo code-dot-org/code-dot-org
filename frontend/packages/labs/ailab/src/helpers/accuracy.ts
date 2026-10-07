@@ -78,6 +78,17 @@ export function getAccuracyGrades(state: RootState): string[] {
   return grades;
 }
 
+export function getCorrectCount(state: RootState): {
+  correct: number;
+  total: number;
+} {
+  const grades = getAccuracyGrades(state);
+  return {
+    correct: grades.filter(grade => grade === ResultsGrades.CORRECT).length,
+    total: grades.length,
+  };
+}
+
 export function getSummaryStat(state: RootState): {type: string; stat: string} {
   return {
     type: isRegression(state) ? MLTypes.REGRESSION : MLTypes.CLASSIFICATION,

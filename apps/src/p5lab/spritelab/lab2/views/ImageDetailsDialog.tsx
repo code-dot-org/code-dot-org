@@ -1,5 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
