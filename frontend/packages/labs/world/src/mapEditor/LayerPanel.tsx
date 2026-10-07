@@ -9,6 +9,7 @@
 
 import {Typography} from '@mui/material';
 
+import {IconAction} from './IconAction';
 import styles from './mapEditor.module.css';
 import {DEFAULT_LAYER, layerName, type MapLayerDoc} from './mapModel';
 
@@ -57,42 +58,34 @@ export const LayerPanel = ({
           </li>
         ))}
       </ul>
+      {/* Icons, named in words for a reader and a pointer's tooltip, as
+          the inspector's actions are (`IconAction`). */}
       <div className={styles.layerActions}>
-        <button
-          type="button"
-          className={styles.resetButton}
+        <IconAction
+          label="Add layer"
+          icon="plus"
           onClick={onAdd}
           disabled={isReadOnly}
-        >
-          Add
-        </button>
-        <button
-          type="button"
-          className={styles.resetButton}
-          aria-label="Move layer forward"
+        />
+        <IconAction
+          label="Move layer forward"
+          icon="arrow-up"
           onClick={() => onMove(selected, 1)}
           disabled={isReadOnly || at < 0 || at === layers.length - 1}
-        >
-          ↑
-        </button>
-        <button
-          type="button"
-          className={styles.resetButton}
-          aria-label="Move layer back"
+        />
+        <IconAction
+          label="Move layer back"
+          icon="arrow-down"
           onClick={() => onMove(selected, -1)}
           disabled={isReadOnly || at <= 0}
-        >
-          ↓
-        </button>
-        <button
-          type="button"
-          className={styles.resetButton}
+        />
+        <IconAction
+          label="Remove layer"
+          icon="trash"
           onClick={() => onRemove(selected)}
           // The default cannot go: an actor with no layer is on it.
           disabled={isReadOnly || selected === DEFAULT_LAYER}
-        >
-          Remove
-        </button>
+        />
       </div>
     </div>
   );

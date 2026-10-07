@@ -1452,7 +1452,7 @@ describe('the map’s layers', () => {
       ].map(button => button.textContent);
     expect(rows()).toEqual(['Main', 'Sky']);
 
-    fireEvent.click(view.getByRole('button', {name: 'Add'}));
+    fireEvent.click(view.getByRole('button', {name: 'Add layer'}));
 
     expect(written().layers!.map(layer => layer.id)).toEqual([
       'layer1',
@@ -1495,10 +1495,10 @@ describe('the map’s layers', () => {
 
   it('removes the selected one, and never the default', () => {
     const {written, ...view} = mountOpen(layered());
-    expect(view.getByRole('button', {name: 'Remove'})).toBeDisabled();
+    expect(view.getByRole('button', {name: 'Remove layer'})).toBeDisabled();
 
     fireEvent.click(view.getByRole('button', {name: 'Sky'}));
-    fireEvent.click(view.getByRole('button', {name: 'Remove'}));
+    fireEvent.click(view.getByRole('button', {name: 'Remove layer'}));
 
     expect(written().layers!.map(layer => layer.id)).toEqual(['main']);
     expect(written().actors[1].layer).toBeUndefined();

@@ -21,9 +21,10 @@
 // INSIDE a view — a toolbox drawer, the Script button, the Layers list —
 // never the view (specs/CURRICULUM_PLAN.md, "Decided since").
 
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useId, useRef, useState} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import Tabs from '@code-dot-org/component-library/tabs';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
@@ -61,6 +62,20 @@ export const WorldEditor = (props: CustomEditorProps) => {
     return () => setRevealer('view', null);
   }, []);
 
+  // The tabs' ids are made from their group's name, so the name is this
+  // editor's own: two worlds open at once must not share one.
+  const tabsName = `world-view-${useId().replace(/:/g, '')}`;
+  // "Show me" finds a tab by its mark (`callouts/pointAt`), and the design
+  // system's tab takes no attributes of ours, so the mark is put on the
+  // button it draws.
+  useEffect(() => {
+    for (const value of ['map', 'world']) {
+      document
+        .getElementById(`${tabsName}-tab-${value}`)
+        ?.setAttribute('data-callout', `view.${value}`);
+    }
+  }, [tabsName]);
+
   const write = (next: string) => {
     setContents(next);
     props.onChange(next);
@@ -68,45 +83,46 @@ export const WorldEditor = (props: CustomEditorProps) => {
 
   return (
     <div className={styles.worldEditor}>
-      <div className={styles.viewBar} role="tablist" aria-label="World view">
-        <button
-          type="button"
-          role="tab"
-          className={styles.viewButton}
-          aria-selected={view === 'map'}
-          data-callout="view.map"
-          onClick={() => setView('map')}
-        >
-          Map
-        </button>
-        <button
-          type="button"
-          role="tab"
-          className={styles.viewButton}
-          aria-selected={view === 'world'}
-          data-callout="view.world"
-          onClick={() => setView('world')}
-        >
-          World
-        </button>
+      {/* The design system's tabs, with their panels left to this: one
+          view mounted at a time, so the panel below is the one tab's. */}
+      <div className={styles.viewBar}>
+        <Tabs
+          name={tabsName}
+          type="secondary"
+          size="s"
+          hidePanels
+          defaultSelectedTabValue={view}
+          onChange={value => setView(value as typeof view)}
+          tabs={[
+            {value: 'map', text: 'Map', tabContent: null},
+            {value: 'world', text: 'World', tabContent: null},
+          ]}
+        />
       </div>
-      {view === 'map' ? (
-        <MapEditor
-          key="map"
-          {...props}
-          initialContents={contents}
-          onChange={write}
-          document={worldFileDocument}
-          onOpenMapScript={() => setView('world')}
-        />
-      ) : (
-        <BlocklyFileEditor
-          key="world"
-          {...props}
-          initialContents={contents}
-          onChange={write}
-        />
-      )}
+      <div
+        className={styles.viewPanel}
+        role="tabpanel"
+        id={`${tabsName}-panel-${view}`}
+        aria-labelledby={`${tabsName}-tab-${view}`}
+      >
+        {view === 'map' ? (
+          <MapEditor
+            key="map"
+            {...props}
+            initialContents={contents}
+            onChange={write}
+            document={worldFileDocument}
+            onOpenMapScript={() => setView('world')}
+          />
+        ) : (
+          <BlocklyFileEditor
+            key="world"
+            {...props}
+            initialContents={contents}
+            onChange={write}
+          />
+        )}
+      </div>
     </div>
   );
 };

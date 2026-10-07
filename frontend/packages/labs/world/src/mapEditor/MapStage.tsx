@@ -352,6 +352,31 @@ const eventRows = (
   return rows;
 };
 
+/**
+ * A toolbar button that is on or off: the Icons, Layers and Cameras
+ * switches. Filled while on, outlined while off — the design system's two
+ * secondary buttons — and `aria-pressed` says which to a reader.
+ */
+const ToolbarToggle = ({
+  pressed,
+  onClick,
+  children,
+}: {
+  pressed: boolean;
+  onClick: () => void;
+  children: string;
+}) => (
+  <Button
+    variant={pressed ? 'contained' : 'outlined'}
+    color="secondary"
+    size="extraSmall"
+    aria-pressed={pressed}
+    onClick={onClick}
+  >
+    {children}
+  </Button>
+);
+
 export const MapStage = ({
   doc,
   onDocChange,
@@ -2638,74 +2663,72 @@ export const MapStage = ({
       </div>
       {scriptButton && selectedActor && (
         // HTML rather than drawn, so it can be focused, read and pointed at
-        // by a lesson, none of which a picture on a canvas can be.
-        <button
-          type="button"
+        // by a lesson, none of which a picture on a canvas can be. White and
+        // raised, since it sits on whatever the map is painted with.
+        <Button
           className={styles.scriptFloat}
+          variant="contained"
+          color="white"
+          size="extraSmall"
           style={{left: scriptButton.x, top: scriptButton.y}}
           aria-label={`Open the code of ${selectedActor.id}`}
           onClick={() => onEditScript?.(selectedActor.id)}
         >
           Code
-        </button>
+        </Button>
       )}
       <div className={styles.toolbar}>
-        <span className={styles.zoom}>
+        <Typography variant="body4" component="span" className={styles.zoom}>
           {view ? `${Math.round(view.scale * 100)}%` : '—'}
-        </span>
-        <button
-          type="button"
-          className={styles.resetButton}
+        </Typography>
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
           onClick={resetView}
         >
           Reset view
-        </button>
+        </Button>
         {onEditScript && (
           // Only with scripts to show or hide: the marks are about them. It
           // works whether or not scripts are withheld, since the marks are
           // drawn either way: they say what the file holds.
-          <button
-            type="button"
-            className={`${styles.resetButton} ${styles.toggleButton}`}
-            aria-pressed={showIcons}
+          <ToolbarToggle
+            pressed={showIcons}
             onClick={() => setShowIcons(shown => !shown)}
           >
             Icons
-          </button>
+          </ToolbarToggle>
         )}
         {!appBuilder && (
-          <button
-            type="button"
-            className={`${styles.resetButton} ${styles.toggleButton}`}
-            aria-pressed={panels.layers}
+          <ToolbarToggle
+            pressed={panels.layers}
             onClick={() => togglePanel('layers')}
           >
             Layers
-          </button>
+          </ToolbarToggle>
         )}
         {cameras && (
-          <button
-            type="button"
-            className={`${styles.resetButton} ${styles.toggleButton}`}
-            aria-pressed={panels.cameras}
+          <ToolbarToggle
+            pressed={panels.cameras}
             onClick={() => togglePanel('cameras')}
           >
             Cameras
-          </button>
+          </ToolbarToggle>
         )}
         {onEditScript && (
           <>
-            <button
-              type="button"
-              className={[styles.resetButton, withheldClass('map-scripts')]
-                .filter(Boolean)
-                .join(' ')}
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              className={withheldClass('map-scripts')}
               {...orWithheld('map-scripts', 'toolbar', () =>
                 onEditScript(undefined),
               )}
             >
               {mapScriptLabel}
-            </button>
+            </Button>
             {note('map-scripts', 'toolbar')}
           </>
         )}

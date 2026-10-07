@@ -16,8 +16,11 @@
 // group — which is the same fact said in the one place the editor can see it
 // (`MapStage`, `isRecordKind`).
 
-import {Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
+import {IconAction} from './IconAction';
 import styles from './mapEditor.module.css';
 import type {Placement} from './mapModel';
 
@@ -73,29 +76,27 @@ export const RecordPanel = ({
       </ul>
       <div className={styles.layerActions}>
         {kinds.map(kind => (
-          <button
+          <Button
             key={kind}
-            type="button"
-            className={styles.resetButton}
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
+            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
             onClick={() => onAdd(kind)}
             disabled={isReadOnly}
           >
             {`Add ${nameOf(kind)}`}
-          </button>
+          </Button>
         ))}
-        <button
-          type="button"
-          className={styles.resetButton}
-          // NAMED, because the layer strip beside this one also says Remove
-          // and a reader hearing two of them cannot tell which is which. The
-          // visible word is inside the spoken one, which is what keeps a
-          // voice command working (WCAG 2.5.3, label in name).
-          aria-label="Remove record"
+        {/* NAMED for what it removes, because the layer strip beside this
+            one has a remove too and a reader hearing two of them cannot tell
+            which is which. */}
+        <IconAction
+          label="Remove record"
+          icon="trash"
           onClick={() => selected && onRemove(selected)}
           disabled={isReadOnly || !selected}
-        >
-          Remove
-        </button>
+        />
       </div>
     </div>
   );

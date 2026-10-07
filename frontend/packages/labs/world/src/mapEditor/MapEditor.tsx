@@ -9,9 +9,18 @@
 // The canvas and the inspector live in `MapStage`. What this adds is the
 // palette and the file.
 
-import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {Typography} from '@mui/material';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+} from 'react';
 
 import {activateFile, type CustomEditorProps} from '@code-dot-org/codebridge';
+import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
@@ -44,6 +53,7 @@ import {
 } from '../blockly/projectModules';
 import {setRevealer} from '../callouts/reveal';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
+import fields from '../formFields.module.css';
 import {useMaybeProgression} from '../progression/progressionContext';
 import type {Affordance} from '../progression/types';
 import {agreedViewSize} from '../runtime/declaredSizes';
@@ -643,31 +653,45 @@ export const MapEditor = ({
   return (
     <div className={styles.editor}>
       <div className={styles.picker} data-callout="map.palette">
-        <label className={styles.sizeField}>
-          <span className={styles.sizeLabel}>Width</span>
-          <input
-            type="number"
+        <div className={`${styles.sizeField} ${fields.narrow}`}>
+          <TextField
+            name="map-width"
+            label="Width"
+            inputType="number"
+            size="s"
             min={MIN_MAP_TILES}
             max={MAX_MAP_TILES}
             step={1}
             value={map.size.width}
             disabled={isReadOnly}
-            onChange={event => resize('width', event.target.value)}
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              resize('width', event.target.value)
+            }
           />
-        </label>
-        <label className={styles.sizeField}>
-          <span className={styles.sizeLabel}>Height</span>
-          <input
-            type="number"
+        </div>
+        <div className={`${styles.sizeField} ${fields.narrow}`}>
+          <TextField
+            name="map-height"
+            label="Height"
+            inputType="number"
+            size="s"
             min={MIN_MAP_TILES}
             max={MAX_MAP_TILES}
             step={1}
             value={map.size.height}
             disabled={isReadOnly}
-            onChange={event => resize('height', event.target.value)}
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              resize('height', event.target.value)
+            }
           />
-        </label>
-        <span className={styles.sizeUnit}>tiles</span>
+        </div>
+        <Typography
+          variant="body4"
+          component="span"
+          className={styles.sizeUnit}
+        >
+          tiles
+        </Typography>
         {/*
           WHAT IS NOT HERE: whether the map covers what is under it, and what it
           is painted out of. Both were, beside the sizes — and neither is about
