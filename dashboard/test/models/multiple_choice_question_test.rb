@@ -31,11 +31,11 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     assert_equal 'b', question.editor_content_json[:correctChoiceId]
   end
 
-  test "requires a non-blank stem" do
+  test "requires a non-blank question title" do
     question = build(
       :multiple_choice_question,
       content: {
-        stem: '',
+        question_title: '',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correct_choice_id: 'b'
       }
@@ -47,7 +47,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     question = build(
       :multiple_choice_question,
       content: {
-        stem: 'What is 2 + 2?',
+        question_title: 'What is 2 + 2?',
         choices: [{id: 'a', text: '4'}],
         correct_choice_id: 'a'
       }
@@ -59,7 +59,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     question = build(
       :multiple_choice_question,
       content: {
-        stem: 'What is 2 + 2?',
+        question_title: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'a', text: '4'}],
         correct_choice_id: 'a'
       }
@@ -71,7 +71,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     question = build(
       :multiple_choice_question,
       content: {
-        stem: 'What is 2 + 2?',
+        question_title: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correct_choice_id: 'not_a_real_id'
       }
@@ -87,7 +87,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     question = build(
       :multiple_choice_question,
       content: {
-        stem: 'What is 2 + 2?',
+        question_title: 'What is 2 + 2?',
         choices: [{id: '', text: '3'}, {id: 'b', text: '4'}],
         correct_choice_id: 'b'
       }
@@ -101,7 +101,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     question = build(
       :multiple_choice_question,
       content: {
-        stem: 'What is 2 + 2?',
+        question_title: 'What is 2 + 2?',
         choices: [{id: 'a', text: ''}, {id: 'b', text: '4'}],
         correct_choice_id: 'b'
       }

@@ -26,9 +26,6 @@
 .header,
 .indexCell,
 .bodyCell {
-  font-family: var(--font-family-main);
-  font-size: 12px;
-  line-height: 18px;
   height: 28px;
   box-sizing: border-box;
   padding: 0 10px;
@@ -42,6 +39,12 @@
 
 .clickable {
   cursor: pointer;
+}
+
+// Headers, selection and hover set the text color and weight on the cell.
+.table .cellText {
+  font-weight: inherit;
+  color: inherit;
 }
 
 .header {

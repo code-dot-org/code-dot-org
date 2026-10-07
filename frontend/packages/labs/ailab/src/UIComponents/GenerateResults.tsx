@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import {useState, useEffect, useRef, useCallback} from 'react';
 
 import {imageUrl} from '../assetPath';
-import {getFadeOpacity} from '../constants';
+import {ANIMATION_TABLE_ROW_LIMIT, getFadeOpacity} from '../constants';
 import {deepEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getTableData} from '../redux';
@@ -148,6 +148,7 @@ const GenerateResults = ({onFinished}: GenerateResultsProps) => {
             reducedColumns={true}
             startingRow={startingRow}
             noLabel={true}
+            maxRows={ANIMATION_TABLE_ROW_LIMIT}
           />
         </div>
 

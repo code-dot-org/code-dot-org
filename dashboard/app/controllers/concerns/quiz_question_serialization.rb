@@ -6,11 +6,10 @@ module QuizQuestionSerialization
   # Distinguishes "not given, compute it" from a real false/nil value.
   UNSET = Object.new.freeze
 
-  # TODO: remove stem.
   private def quiz_question_params
     params.permit(
       :type, :questionName, :explanation, :page, :editMode,
-      :stem, :correctChoiceId, :questionTitle, :description,
+      :questionTitle, :description, :correctChoiceId,
       choices: [:id, :text],
       standards: [:frameworkShortcode, :shortcode]
     )

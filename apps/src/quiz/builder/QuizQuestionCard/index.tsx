@@ -34,7 +34,7 @@ function toEditableFields(
 ): QuizQuestionEditableFields {
   return {
     questionName: question.questionName,
-    stem: question.stem,
+    questionTitle: question.questionTitle,
     choices: question.choices,
     correctChoiceId: question.correctChoiceId,
     explanation: question.explanation,
@@ -103,9 +103,9 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
           <Typography
             variant="body3"
             component="span"
-            className={styles.stemPreview}
+            className={styles.questionTitlePreview}
           >
-            {draft.stem}
+            {draft.questionTitle}
           </Typography>
         </div>
         {isDirty && (

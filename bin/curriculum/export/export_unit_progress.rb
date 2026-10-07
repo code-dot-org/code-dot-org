@@ -37,13 +37,18 @@ require_relative '../../../deployment'
 
 raise "Unsupported environment: #{rack_env}" unless rack_env?(:production)
 
-require_relative '../../../lib/cdo/redshift'
+require_relative '../../../lib/cdo/aws/redshift/client'
 require_relative '../../../lib/cdo/aws/ec2'
 
 start_time = Time.now
 puts "Loading Rails environment..."
 require_relative '../../../dashboard/config/environment'
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
+
+# Redshift database holding the `dashboard_production*` and `analysis` schemas these queries read.
+REDSHIFT_DATABASE = 'dashboard'
+# An UNLOAD over a full unit's progress takes longer than the client's five-minute default.
+UNLOAD_TIMEOUT = 30.minutes
 
 def unload_progress(query_params:)
   # fetch the data from redshift, because:
@@ -73,7 +78,9 @@ def unload_from_redshift(query_filename:, query_params:)
   pathname = File.expand_path(query_filename, __dir__)
   query_template = File.read(pathname)
   query = ERB.new(query_template).result_with_hash(query_params)
-  client = RedshiftClient.instance
+  # These queries read the `dashboard_production*` schemas, which are in the `dashboard` Redshift
+  # database rather than the client's `dev` default.
+  client = Cdo::Aws::Redshift::Client.new(database: REDSHIFT_DATABASE)
   start_time = Time.now
   puts "Querying redshift using #{query_filename} with #{query_params}..."
   execute_redshift_query(client, query)
@@ -81,7 +88,7 @@ def unload_from_redshift(query_filename:, query_params:)
 end
 
 def execute_redshift_query(client, query)
-  client.exec(query)
+  client.execute(query, timeout: UNLOAD_TIMEOUT.to_i)
 rescue => exception
   puts "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
   raise

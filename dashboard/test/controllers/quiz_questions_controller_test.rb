@@ -213,7 +213,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
   test "update edits the question in place when it's not used in a published unit" do
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
 
@@ -233,7 +233,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id,
-        questionName: 'Forked name', stem: 'Forked stem',
+        questionName: 'Forked name', questionTitle: 'Forked title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
     end
@@ -256,7 +256,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id, editMode: 'fork',
-        questionName: 'Forked by request', stem: 'stem',
+        questionName: 'Forked by request', questionTitle: 'Title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
     end
@@ -273,7 +273,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_no_difference 'QuizQuestion.count' do
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id,
-        questionName: 'Forked name', stem: 'Forked stem',
+        questionName: 'Forked name', questionTitle: 'Forked title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
       }
@@ -291,7 +291,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
 
@@ -306,7 +306,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
       standards: [{frameworkShortcode: new_standard.framework.shortcode, shortcode: new_standard.shortcode}]
     }
@@ -321,7 +321,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
       standards: []
     }, as: :json
@@ -338,7 +338,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     put :update, params: {
       id: unattached.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
 
@@ -358,7 +358,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal 'FreeResponseQuestion', body['type']
     assert_equal question.content['questionTitle'], body['questionTitle']
     assert_equal question.content['description'], body['description']
-    refute body.key?('stem')
+    refute body.key?('choices')
   end
 
   test "index includes FreeResponseQuestions" do

@@ -92,8 +92,6 @@ $bar-gap: 12px;
 // Two classes, to outrank the theme's dark tooltip surface.
 .tooltip.tooltip {
   padding: 6px 12px 6px 9px;
-  font-size: 12px;
-  line-height: 18px;
   color: var(--text-neutral-primary);
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-primary);
@@ -105,7 +103,7 @@ $bar-gap: 12px;
   gap: 6px;
 }
 
-.tooltipCount {
+.tooltip .tooltipCount {
   font-weight: 600;
 }
 
