@@ -82,6 +82,7 @@ import {
   documentSize,
   expandHolding,
   expandTop,
+  hasBuiltBody,
   putBody,
   spliceBodies,
   statementInputsOf,
@@ -132,6 +133,10 @@ import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
 import {
   arrangeTopBlocks,
+  COLUMN_GAP,
+  COLUMN_X,
+  gapIndexFor,
+  headerPlaces,
   isFreeFloating,
   orderKeys,
   placesOfDocument,
@@ -1425,6 +1430,171 @@ export const BlocklyFileEditor = ({
     [bodies, fileId],
   );
 
+  /**
+   * A top block being dragged to a new place among the others
+   * (specs/LAZY_WORKSPACE_PLAN.md, "Reordering").
+   *
+   * While it is dragged every section is collapsed to its header — the
+   * dragged one too — so the file is a short list and the choice is between
+   * two headers. A gap opens where letting go would put it. On letting go the
+   * order is the one shown, the sections that were open are built again, and
+   * the view goes to the one that moved.
+   */
+  const reorderRef = useRef<{
+    id: string;
+    /** The sections that were open when the drag began. */
+    expanded: string[];
+    /** The other top blocks, in their order. */
+    others: string[];
+    /** The gap it is over, among `others`. */
+    gap: number;
+    /** How far the column is shifted to stay beside the dragged header. */
+    offset: number | null;
+    frame: number;
+  } | null>(null);
+  /** The top block just dropped, whose own move is the drop and not a move. */
+  const droppedRef = useRef<string | null>(null);
+  /**
+   * Sections deleted by being dragged off while open: undoing the delete
+   * brings one back open, as it was picked up, not collapsed as the drag
+   * left it.
+   */
+  const reopenOnRestore = useRef(new Set<string>());
+
+  const reorderStart = useCallback(
+    (workspace: Blockly.WorkspaceSvg, dragged: Blockly.BlockSvg) => {
+      const tops = workspace
+        .getTopBlocks(false)
+        .filter(top => !top.isInsertionMarker());
+      const placed = layoutMemory.current.placed;
+      const placeOf = (block: Blockly.BlockSvg) =>
+        placed.get(block.id) ?? block.getRelativeToSurfaceXY().y;
+      const expanded = tops.filter(top => hasBuiltBody(top)).map(top => top.id);
+      for (const top of tops) {
+        if (hasBuiltBody(top)) {
+          collapseTop(workspace, top);
+        }
+      }
+      const others = tops
+        .filter(top => top.id !== dragged.id)
+        .sort((a, b) => placeOf(a) - placeOf(b));
+      const startIndex = others.filter(
+        top => placeOf(top) < placeOf(dragged),
+      ).length;
+      const held = {
+        id: dragged.id,
+        expanded,
+        others: others.map(top => top.id),
+        gap: startIndex,
+        offset: null as number | null,
+        frame: 0,
+      };
+      reorderRef.current = held;
+      const step = () => {
+        if (reorderRef.current !== held) {
+          return;
+        }
+        const block = workspace.getBlockById(held.id);
+        const headers = held.others
+          .map(id => workspace.getBlockById(id))
+          .filter((one): one is Blockly.BlockSvg => Boolean(one));
+        if (block && headers.length === held.others.length) {
+          const heights = headers.map(one => one.getHeightWidth().height);
+          const draggedHeight = block.getHeightWidth().height;
+          const at = block.getRelativeToSurfaceXY();
+          // The column is shifted so that it opens around the dragged header
+          // where it was picked up: a section dragged from far down a long
+          // file still has its neighbours in view, not scrolled off above.
+          if (held.offset === null) {
+            const places = headerPlaces(heights, held.gap, draggedHeight);
+            const gapY =
+              held.gap < places.length
+                ? places[held.gap] - draggedHeight - COLUMN_GAP
+                : (places.at(-1) ?? 0) + (heights.at(-1) ?? 0) + COLUMN_GAP;
+            held.offset = at.y - gapY;
+            held.gap = -1;
+          }
+          const resting = headerPlaces(heights, -1, 0).map((y, index) => ({
+            y: y + held.offset!,
+            height: heights[index],
+          }));
+          const gap = gapIndexFor(resting, {y: at.y, height: draggedHeight});
+          if (gap !== held.gap) {
+            held.gap = gap;
+            const places = headerPlaces(heights, gap, draggedHeight);
+            Blockly.Events.disable();
+            try {
+              headers.forEach((header, index) => {
+                const now = header.getRelativeToSurfaceXY();
+                header.moveBy(
+                  COLUMN_X - now.x,
+                  places[index] + held.offset! - now.y,
+                );
+              });
+            } finally {
+              Blockly.Events.enable();
+            }
+          }
+        }
+        held.frame = requestAnimationFrame(step);
+      };
+      // Once the headers have been drawn at their collapsed size.
+      void Blockly.renderManagement.finishQueuedRenders().then(() => {
+        if (reorderRef.current === held) {
+          held.frame = requestAnimationFrame(step);
+        }
+      });
+    },
+    [],
+  );
+
+  const reorderEnd = useCallback(
+    (workspace: Blockly.WorkspaceSvg) => {
+      const held = reorderRef.current;
+      if (!held) {
+        return;
+      }
+      reorderRef.current = null;
+      cancelAnimationFrame(held.frame);
+      // Dropped on the toolbox or the bin, it is gone; the rest close up.
+      const block = workspace.getBlockById(held.id);
+      if (!block && held.expanded.includes(held.id)) {
+        reopenOnRestore.current.add(held.id);
+      }
+      const order = [...held.others];
+      if (block) {
+        order.splice(
+          held.gap < 0 ? order.length : Math.min(held.gap, order.length),
+          0,
+          held.id,
+        );
+      }
+      layoutMemory.current.placed = new Map(
+        order.map((id, rank) => [id, rank]),
+      );
+      layoutMemory.current.moved.clear();
+      droppedRef.current = held.id;
+      for (const id of held.expanded) {
+        const top = workspace.getBlockById(id);
+        if (top) {
+          expandTop(workspace, top);
+        }
+      }
+      collapsedByFile.set(fileId, new Set(bodies.keys()));
+      syncToggles(workspace);
+      void Blockly.renderManagement.finishQueuedRenders().then(() => {
+        tidyTopBlocks(workspace, layoutMemory.current);
+        droppedRef.current = null;
+        // …and the view goes to the section that moved, its header in sight.
+        if (block && !block.isDisposed()) {
+          const bounds = block.getBoundingRectangleWithoutChildren();
+          workspace.scrollBoundsIntoView(bounds, 48);
+        }
+      });
+    },
+    [bodies, fileId, syncToggles],
+  );
+
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
       const workspace = workspaceRef.current;
@@ -1467,6 +1637,11 @@ export const BlocklyFileEditor = ({
         if (body) {
           bodies.set(id, body);
           deletedBodies.current.delete(id);
+          const top = workspace.getBlockById(id);
+          if (reopenOnRestore.current.delete(id) && top) {
+            expandTop(workspace, top);
+            collapsedByFile.set(fileId, new Set(bodies.keys()));
+          }
         }
       } else if (event.type === Blockly.Events.VAR_DELETE) {
         const varId = (event as Blockly.Events.VarDelete).varId ?? '';
@@ -1480,8 +1655,28 @@ export const BlocklyFileEditor = ({
       // order the learner wants (`tidyLayout.orderKeys`).
       if (event.type === Blockly.Events.BLOCK_MOVE) {
         const move = event as Blockly.Events.BlockMove;
-        if (!move.newParentId && !(move.reason ?? []).includes('bump')) {
+        if (
+          !move.newParentId &&
+          !(move.reason ?? []).includes('bump') &&
+          // The drop of a reorder is placed by the gap it was shown in.
+          move.blockId !== droppedRef.current &&
+          move.blockId !== reorderRef.current?.id
+        ) {
           layoutMemory.current.moved.add(move.blockId ?? '');
+        }
+      }
+      // REORDERING: a top block picked up on the file collapses every section
+      // to its header and parts them where it would land (`reorderStart`).
+      if (
+        event.type === Blockly.Events.BLOCK_DRAG &&
+        (event as Blockly.Events.BlockDrag).isStart &&
+        surfaceRef.current === null
+      ) {
+        const picked = workspace.getBlockById(
+          (event as Blockly.Events.BlockDrag).blockId ?? '',
+        );
+        if (picked && !picked.getParent() && !isFreeFloating(picked)) {
+          reorderStart(workspace, picked);
         }
       }
       // NO FREE-FLOATING BLOCKS (specs/LAZY_WORKSPACE_PLAN.md). A block that
@@ -1504,7 +1699,11 @@ export const BlocklyFileEditor = ({
             Blockly.Events.setGroup(false);
           }
         }
-        reflow(workspace);
+        if (reorderRef.current) {
+          reorderEnd(workspace);
+        } else {
+          reflow(workspace);
+        }
       } else if (!event.isUiEvent) {
         // …and the layout catches up with whatever the edit did to a stack's
         // size or to the order of the top blocks.
@@ -1644,6 +1843,10 @@ export const BlocklyFileEditor = ({
       syncFlyoutMetrics,
       layOut,
       reflow,
+      reorderStart,
+      reorderEnd,
+      fileId,
+      bodies,
     ],
   );
 

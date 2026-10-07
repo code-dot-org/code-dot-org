@@ -51,6 +51,27 @@ Not moved, and why:
   runs its extensions as it is built.
 - Top-block queries: top blocks are always built.
 
+## Reordering — BUILT
+
+Picking up a top block on the file collapses every section to its header —
+the one picked up too — so the file is a short list and the choice is
+between two headers. The headers part where letting go would put it: each
+frame the dragged header's middle is compared with theirs
+(`tidyLayout.gapIndexFor`) and the ones below it move down by its height
+(`headerPlaces`), silently. The column is shifted so it opens around the
+dragged header where it was picked up, so a section dragged from far down a
+long file still has its neighbours in view.
+
+Letting go on the file puts it in the gap shown: that order becomes the
+remembered one, the sections that were open are built again, the column is
+laid out, and the view goes to the section that moved. Letting go on the
+toolbox or the bin deletes it, as before; its body goes aside with it, and
+undoing brings it back where it was and open, as it was picked up.
+
+All of it is silent except the drop itself, which is the one undo step a
+move always was. A section dragged in fresh from the toolbox is handled the
+same way, since a hat dragged out is a top block being placed.
+
 ## Order of work
 
 1. **The index.** `workspaceIndex` over live blocks and unbuilt bodies; the

@@ -121,7 +121,10 @@ export function orderKeys(
 ): number[] {
   return ids.map((id, index) => {
     const held = placed.get(id);
-    return held === undefined || moved.has(id) ? boxes[index].y : held;
+    // A block placed by where it is goes BEFORE a block placed at that same
+    // spot: an undone delete comes back at its old position, which is now
+    // exactly where the block that closed up behind it sits.
+    return held === undefined || moved.has(id) ? boxes[index].y - 0.5 : held;
   });
 }
 
@@ -152,3 +155,48 @@ export function placesOfDocument(
   });
   return places;
 }
+
+/**
+ * Which gap a dragged header is over, among the headers it is being dragged
+ * past: the number of them whose middle is above its middle.
+ *
+ * While a top block is dragged every section is collapsed to its header
+ * (`reorderStart` in the editor), so the choice is between headers, and the
+ * middle is what a person aims with — a header half over another has not yet
+ * passed it.
+ */
+export function gapIndexFor(
+  headers: ReadonlyArray<{y: number; height: number}>,
+  dragged: {y: number; height: number},
+): number {
+  const middle = dragged.y + dragged.height / 2;
+  return headers.filter(header => header.y + header.height / 2 < middle).length;
+}
+
+/**
+ * Where each header goes while a dragged one is held over gap `gap`: down
+ * one column from the origin, with room left at that gap for the dragged
+ * header — its height and a gap of its own — so the learner sees where
+ * letting go will put it.
+ */
+export function headerPlaces(
+  heights: readonly number[],
+  gap: number,
+  draggedHeight: number,
+): number[] {
+  const places: number[] = [];
+  let y = ORIGIN.y;
+  heights.forEach((height, index) => {
+    if (index === gap) {
+      y += draggedHeight + GAP;
+    }
+    places.push(y);
+    y += height + GAP;
+  });
+  return places;
+}
+
+/** The column's left edge, for moving headers while a block is dragged. */
+export const COLUMN_X = ORIGIN.x;
+/** …and the gap between one section and the next down it. */
+export const COLUMN_GAP = GAP;

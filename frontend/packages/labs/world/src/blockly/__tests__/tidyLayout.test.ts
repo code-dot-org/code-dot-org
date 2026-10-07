@@ -11,6 +11,8 @@ import {describe, expect, it} from 'vitest';
 import {
   arrangeTopBlocks,
   isFreeFloating,
+  gapIndexFor,
+  headerPlaces,
   orderKeys,
   placesOfDocument,
   type Box,
@@ -176,6 +178,22 @@ describe('the order the editor keeps', () => {
     expect(places[0]).toEqual({x: 20, y: 20});
   });
 
+  it('puts a block back before the one that closed up into its place', () => {
+    // An undone delete returns at its old position, which the next block
+    // moved up into.
+    const ids = ['define', 'next', 'restored'];
+    const boxes = [box(20, 20), box(20, 152), box(20, 152)];
+    const placed = new Map([
+      ['define', 20],
+      ['next', 152],
+    ]);
+    const places = arrangeTopBlocks(
+      boxes,
+      orderKeys(ids, boxes, placed, new Set()),
+    );
+    expect(places[2].y).toBeLessThan(places[1].y);
+  });
+
   it('reads a saved file’s order off its positions, before anything moves', () => {
     const places = placesOfDocument([
       {id: 'handler', x: 500, y: 20},
@@ -192,5 +210,32 @@ describe('the order the editor keeps', () => {
   it('takes the file’s own order when it gives no positions', () => {
     const places = placesOfDocument([{id: 'b'}, {id: 'a'}]);
     expect(places.get('b')).toBeLessThan(places.get('a')!);
+  });
+});
+
+describe('dragging a top block between the others', () => {
+  // Every section is collapsed to its header while one is dragged; these say
+  // which gap it is over and how the headers part to show it.
+  const headers = [
+    {y: 20, height: 40},
+    {y: 92, height: 40},
+    {y: 164, height: 40},
+  ];
+
+  it('is over the gap above the first header whose middle it has not passed', () => {
+    expect(gapIndexFor(headers, {y: 0, height: 40})).toBe(0);
+    expect(gapIndexFor(headers, {y: 60, height: 40})).toBe(1);
+    expect(gapIndexFor(headers, {y: 500, height: 40})).toBe(3);
+  });
+
+  it('opens the gap it is over by the dragged header’s height', () => {
+    // 40-high headers, 32 apart; a 50-high header held over gap 1.
+    expect(headerPlaces([40, 40, 40], 1, 50)).toEqual([
+      20,
+      20 + 40 + 32 + 50 + 32,
+      20 + 40 + 32 + 50 + 32 + 40 + 32,
+    ]);
+    // Over the end, nothing moves.
+    expect(headerPlaces([40, 40], 2, 50)).toEqual([20, 92]);
   });
 });
