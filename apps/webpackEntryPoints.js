@@ -28,6 +28,7 @@ const CODE_STUDIO_ENTRIES = {
   'admin_users/mass_delete_student_progress': './src/sites/studio/pages/admin_users/mass_delete_student_progress.js',
   'aidiff_exit_tickets/show': './src/sites/studio/pages/aidiff_exit_tickets/show.js',
   'aidiff_lesson_hooks/show': './src/sites/studio/pages/aidiff_lesson_hooks/show.js',
+  'ai_tutorial_demo/show': './src/sites/studio/pages/ai_tutorial_demo/show.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
