@@ -1,4 +1,4 @@
-import {fitToView} from '../../src/helpers/fitToView';
+import {fitToView, panIntoView} from '../../src/helpers/fitToView';
 
 describe('fitToView', () => {
   const frame = {x: 20, y: 20, width: 360, height: 260};
@@ -39,5 +39,34 @@ describe('fitToView', () => {
 
     expect(fitToView(rect, {...frame, width: -8}, 1)).toBeUndefined();
     expect(fitToView(rect, {...frame, height: 0}, 1)).toBeUndefined();
+  });
+});
+
+describe('panIntoView', () => {
+  const frame = {x: 20, y: 20, width: 360, height: 260};
+
+  test('leaves a rect inside the frame where it is', () => {
+    expect(panIntoView({x: 20, y: 240, width: 100, height: 40}, frame)).toEqual(
+      {x: 0, y: 0},
+    );
+  });
+
+  test('pans just far enough to bring an edge inside', () => {
+    expect(
+      panIntoView({x: -50, y: 300, width: 100, height: 40}, frame),
+    ).toEqual({x: 70, y: -60});
+  });
+
+  test('aligns the start of a rect larger than the frame', () => {
+    expect(panIntoView({x: 100, y: 0, width: 400, height: 40}, frame)).toEqual({
+      x: -80,
+      y: 20,
+    });
+  });
+
+  test('pans nowhere in a frame with no room', () => {
+    const rect = {x: 0, y: 0, width: 100, height: 40};
+
+    expect(panIntoView(rect, {...frame, width: 0})).toBeUndefined();
   });
 });
