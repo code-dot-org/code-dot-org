@@ -17,10 +17,8 @@ export function isPlayerAction(value: unknown): value is PlayerAction {
   );
 }
 
-// A walk fires on its first frame, then each time the walk animation
-// changes frame; a character with one frame falls back to this beat. The
-// pose switches to walking one frame after the first step, so the first
-// frame change after a beat only arms the next one.
+// The walk beat for a character whose animation has one frame; the others
+// beat on each frame change.
 export const WALK_PERIOD_MS = 333;
 
 export interface PlayerFrame extends ObservedFrame {
@@ -84,6 +82,8 @@ export function createPlayerActionTracker(): PlayerActionTracker {
           actions.add('walk');
           walking = {at: nowMs, frame: undefined};
         } else if (animated) {
+          // The pose turns to walking a frame after the first step: that
+          // first change only arms the next beat.
           if (walking.frame === undefined) {
             walking.frame = animationFrame;
           } else if (animationFrame !== walking.frame) {
