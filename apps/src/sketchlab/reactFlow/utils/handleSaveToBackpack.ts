@@ -23,7 +23,6 @@ import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
 import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
-import {SketchCaptureError} from './SketchCaptureError';
 
 export const SAVE_BLOCKED_TITLE = "This sketch can't be saved to your Backpack";
 
@@ -154,11 +153,7 @@ export const handleSaveToBackpack = async (
     notify('danger', saveErrorMessage);
     Lab2Registry.getInstance()
       .getMetricsReporter()
-      .logError(
-        'Sketch snapshot error',
-        error as Error,
-        error instanceof SketchCaptureError ? error.details : undefined
-      );
+      .logError('Sketch snapshot error', error as Error);
     return;
   }
   if (snapshot.error) {

@@ -1,29 +1,14 @@
 import {type ReactFlowInstance} from '@xyflow/react';
 
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
-import {SketchCaptureError} from './SketchCaptureError';
 
 export const handleDownloadSketch = async (
   reactFlow: ReactFlowInstance | null,
   dialogControl: DialogControlInterface
 ) => {
-  let snapshot: {blob?: Blob; error?: string};
-  try {
-    snapshot = await createSketchSnapshotBlob(reactFlow);
-  } catch (caught) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError(
-        'Sketch snapshot error',
-        caught as Error,
-        caught instanceof SketchCaptureError ? caught.details : undefined
-      );
-    snapshot = {error: 'Could not capture your sketch. Please try again.'};
-  }
-  const {blob, error} = snapshot;
+  const {blob, error} = await createSketchSnapshotBlob(reactFlow);
   if (error || !blob) {
     await dialogControl.showDialog({
       type: DialogType.GenericAlert,

@@ -1,4 +1,5 @@
-// Safari's error stack omits the message, so the context travels as log fields.
+// Format sketch lab errors in a consistent structure for logging and reporting.
+// Specifically helps with Safari.
 
 const SOURCE_PREVIEW_LENGTH = 64;
 

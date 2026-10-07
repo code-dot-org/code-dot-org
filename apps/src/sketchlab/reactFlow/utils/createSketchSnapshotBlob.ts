@@ -1,6 +1,8 @@
 import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
@@ -12,6 +14,7 @@ const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
+const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
 
 export const createSketchSnapshotBlob = async (
   reactFlow: ReactFlowInstance | null
@@ -24,7 +27,7 @@ export const createSketchSnapshotBlob = async (
     `.${SKETCHLAB_CONTAINER_CLASS} ${REACT_FLOW_SELECTOR.viewport}`
   );
   if (!viewport) {
-    return {error: 'Could not capture your sketch. Please try again.'};
+    return {error: CAPTURE_ERROR};
   }
 
   // Read the themed canvas background so the PNG matches light/dark mode.
@@ -68,17 +71,21 @@ export const createSketchSnapshotBlob = async (
         transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
       },
     });
-  } catch (error) {
-    throw new SketchCaptureError(error, {
+  } catch (cause) {
+    const captureError = new SketchCaptureError(cause, {
       elements: contentRects.length,
       images: viewport.querySelectorAll('img').length,
       imageWidth,
       imageHeight,
     });
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Sketch snapshot error', captureError, captureError.details);
+    return {error: CAPTURE_ERROR};
   }
 
   if (!blob) {
-    return {error: 'Could not capture your sketch. Please try again.'};
+    return {error: CAPTURE_ERROR};
   }
 
   return {blob};
