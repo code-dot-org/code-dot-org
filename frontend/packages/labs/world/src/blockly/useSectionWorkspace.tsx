@@ -922,7 +922,7 @@ export function useSectionWorkspace({
     >
       {eventMenuChoices.length === 0 ? (
         <MenuItem dense disabled>
-          Nothing to start a section with here
+          No events to handle here
         </MenuItem>
       ) : (
         eventMenuItems(eventMenuChoices, type =>

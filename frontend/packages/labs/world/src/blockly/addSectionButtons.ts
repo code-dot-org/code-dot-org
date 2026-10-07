@@ -40,7 +40,7 @@ export function drawAddButtons(
     group.setAttribute('class', CLASS);
     group.setAttribute('transform', `translate(${COLUMN_X - 4}, ${y})`);
     group.setAttribute('role', 'button');
-    group.setAttribute('aria-label', 'Add a section here');
+    group.setAttribute('aria-label', 'Handle a new event here');
     group.style.cursor = 'pointer';
     const circle = document.createElementNS(SVG_NS, 'circle');
     circle.setAttribute('r', String(RADIUS));
@@ -53,7 +53,7 @@ export function drawAddButtons(
     plus.setAttribute('stroke-width', '1.8');
     plus.setAttribute('stroke-linecap', 'round');
     const title = document.createElementNS(SVG_NS, 'title');
-    title.textContent = 'Add a section here';
+    title.textContent = 'Handle a new event here';
     group.append(title, circle, plus);
     // Off Blockly's gesture handling: a press here is not the start of a
     // pan, and not a click on the workspace that would close the menu.
