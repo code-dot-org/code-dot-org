@@ -16,24 +16,30 @@ What a finished update must contain (all of it, or the icons are not usable):
    `frontend/packages/fonts/src/loader/index.ts`, `shared/css/font.scss`.
 3. `kitIcons` in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` matching the
    kit exactly. This is the only list of custom icon names; there is no separate TS type.
-4. The custom icons storybook (`.../fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx`, story "Group Of Custom Icons Of Font Awesome V6 Icon") showing every icon in `kitIcons`, new ones included.
+4. The custom icons storybook (`.../fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx`, story
+   "Group Of Custom Icons Of Font Awesome V6 Icon") showing every icon in `kitIcons`, new ones included.
 
 ## Steps
 
 ### 1. Operator downloads the kit (human only)
 
 Tell the operator: sign in to fontawesome.com with the shared dev account, open "Code.org FontAwesome Kit v6
-(Current)" (the repo is on v6; a v7 kit is uploaded archive-only: `update.mjs` detects it, uploads, and leaves repo files alone), Self-Host on the Web, "Download Web Files", and give you the zip path.
+(Current)", choose Self-Host on the Web, then "Download Web Files", and give you the zip path. The repo is on
+v6. A v7 kit is uploaded archive-only: `update.mjs` detects it, uploads, and leaves repo files alone.
 
 **GATE:** wait for the zip path. Check the file exists.
 
 ### 2. Check AWS access (you, then operator if it fails)
 
 Run `aws --version` and `aws sts get-caller-identity`. Any AWS identity works if it has `s3:PutObject` and
-`s3:ListBucket` on `cdo-dsco/assets/font-awesome-pro/*`; the script uses whatever credentials the CLI finds and
-prints the active identity before it uploads. `AWS_PROFILE=codeorg-contributor` (role `Engineering_Contributor`)
-is known to work. If another role gets AccessDenied, it needs those two permissions or should use that profile.
-If this fails, tell the operator what is missing (CLI install, credentials, `AWS_PROFILE`).
+`s3:ListBucket` on `cdo-dsco/assets/font-awesome-pro/*`. The script uses whatever credentials the CLI finds and
+prints the active identity before it uploads. The IAM role `Engineering_Contributor` is known to work; AWS
+profile names differ between workstations, so identify the role from the `get-caller-identity` ARN, not from a
+profile name. If another role gets AccessDenied, it needs those two permissions or should assume that role.
+
+Do not test for `s3:PutObject` by writing a test object to the bucket. The real upload is the test, and the
+script's `aws s3 ls` already proves `s3:ListBucket`. If the upload fails with AccessDenied, report it.
+If the checks above fail, tell the operator what is missing (CLI install, credentials, role).
 
 **GATE:** if it fails, ask whether to fix access now or continue with `--skip-upload` and upload by hand
 (step 5).
@@ -79,8 +85,8 @@ to the timestamped URL, syncs to S3, bumps the three URL files and rewrites `kit
 
 The script prints the two source directories and their target prefixes. Tell the operator to confirm the
 `s3://cdo-dsco/assets/font-awesome-pro/<ts>/` prefix is empty (`aws s3 ls`), then upload each directory to its
-printed target. Never delete older
-timestamp folders; e.g. `apps/src/applab/Exporter.js` still pins one.
+printed target. Never delete or overwrite older timestamp folders; e.g. `apps/src/applab/Exporter.js` still
+pins one.
 
 **GATE:** operator confirms the upload is done.
 
@@ -90,8 +96,9 @@ For each `<ts>/css/*.min.css` the loader and `font.scss` reference and for `<ts>
 (for a v7 kit nothing references the prefix: check `<ts>/css/fontawesome.min.css` and
 `<ts>/webfonts/custom-icons.woff2`):
 `curl -sI -H 'Origin: https://studio.code.org' https://dsco.code.org/assets/font-awesome-pro/<ts>/<path>` must
-return 200 with `access-control-allow-origin` (S3 sends it only when an `Origin` header is present). A missing CORS header means the
-bucket CORS config needs fixing (see the README's Slack thread link); that is an operator/infra task.
+return 200 with `access-control-allow-origin` (S3 sends it only when an `Origin` header is present). A missing
+CORS header means the bucket CORS config needs fixing (see the README's Slack thread link); that is an
+operator/infra task.
 
 **GATE:** if anything fails, stop and report; do not commit URLs that do not resolve.
 
@@ -120,7 +127,8 @@ The update PR must hold only the update, never skill edits (those go in their ow
   the template.
 - Title: `Update Font Awesome kit: <added icons, or "N new custom icons">`.
 - Body: fill in `.agents/skills/update-fontawesome-kit/pr-template.md` (summary, added/removed icons table,
-  before/after story screenshots, testing checklist). It needs: S3 prefix (`cdo-dsco/assets/font-awesome-pro/<ts>`), added and removed icons, usages found for removed
-  icons, the step 6 check results, and before/after screenshots of the Custom Icons story (take them yourself
-  with Storybook plus Playwright; "before" is `origin/staging`, "after" is the branch).
+  before/after story screenshots, testing checklist). It needs the S3 prefix
+  (`cdo-dsco/assets/font-awesome-pro/<ts>`), the added and removed icons, usages found for removed icons, the
+  step 6 check results, and before/after screenshots of the Custom Icons story. Take the screenshots yourself
+  with Storybook plus Playwright: "before" is `origin/staging`, "after" is the branch.
 - Open as a draft into `staging`, then tell the operator the link.
