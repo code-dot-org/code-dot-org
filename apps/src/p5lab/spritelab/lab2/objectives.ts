@@ -63,8 +63,6 @@ export interface Objectives {
   /** Markdown, shown above the list. */
   title?: string;
   items: Objective[];
-  /** Markdown, shown with the Continue button once every item is done. */
-  done?: string;
 }
 
 /** What the running game has done so far on this level. */

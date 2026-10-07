@@ -66,8 +66,7 @@
             "role": "treasure"
           }
         }
-      ],
-      "done": "**Treasure found!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Find the treasure\nDrag a **say** block onto the dotted outline under **when touches** so your character says something when they reach the treasure.",
     "toolbox_definition": {

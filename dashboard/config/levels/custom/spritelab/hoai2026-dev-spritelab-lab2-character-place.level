@@ -61,8 +61,7 @@
             "kind": "play"
           }
         }
-      ],
-      "done": "**There they are.** Click **Continue**."
+      ]
     },
     "long_instructions": "# Add your character\nDrag **make new sprite** onto the dotted outline under **when run** to put your character on the left.",
     "toolbox_definition": {

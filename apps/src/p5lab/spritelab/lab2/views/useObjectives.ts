@@ -26,7 +26,6 @@ export interface ObjectivesState {
   title?: string;
   items: ObjectiveItemState[];
   allDone: boolean;
-  doneText?: string;
 }
 
 /** What the engine reports about the running player. */
@@ -175,6 +174,5 @@ export function useObjectives({
     title: objectives?.title,
     items: states,
     allDone: states.every(item => item.done),
-    doneText: objectives?.done,
   };
 }

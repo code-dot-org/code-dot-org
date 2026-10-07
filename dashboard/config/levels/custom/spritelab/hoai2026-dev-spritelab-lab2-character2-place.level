@@ -64,8 +64,7 @@
             "kind": "play"
           }
         }
-      ],
-      "done": "**Now there are two.** Click **Continue**."
+      ]
     },
     "long_instructions": "# Add your second character\nDrag **make new sprite** with position **right** onto the dotted outline to put your new character on the right.",
     "toolbox_definition": {

@@ -61,8 +61,7 @@
             "kind": "play"
           }
         }
-      ],
-      "done": "**That's your story!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline and pick your background.",
     "toolbox_definition": {

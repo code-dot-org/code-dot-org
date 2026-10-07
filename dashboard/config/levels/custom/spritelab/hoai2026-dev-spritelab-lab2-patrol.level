@@ -62,8 +62,7 @@
             "kind": "play"
           }
         }
-      ],
-      "done": "**They're on the move.** Click **Continue**."
+      ]
     },
     "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline and pick your second character. Click **Play**.",
     "toolbox_definition": {

@@ -101,8 +101,7 @@
             "seconds": 3
           }
         }
-      ],
-      "done": "**Perfect timing!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Say something later\nDrag a **say** block onto the dotted outline under **at [3] seconds**. Your character speaks 3 seconds in.",
     "toolbox_definition": {

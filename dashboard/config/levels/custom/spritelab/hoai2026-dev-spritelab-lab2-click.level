@@ -62,8 +62,7 @@
             "seconds": 6
           }
         }
-      ],
-      "done": "**Right on time!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Talk later\nDrag a **say** block onto the dotted outline under **at [6] seconds**. Your new character speaks 6 seconds in.",
     "toolbox_definition": {

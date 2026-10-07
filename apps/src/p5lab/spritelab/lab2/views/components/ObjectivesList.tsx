@@ -11,9 +11,6 @@ import styles from './objectives-list.module.scss';
 interface ObjectivesListProps {
   title?: string;
   items: ObjectiveItemState[];
-  /** Shown under the list once every item is done. */
-  doneText?: string;
-  allDone: boolean;
 }
 
 /** The level's checklist: each item with a circle that fills with a check
@@ -21,8 +18,6 @@ interface ObjectivesListProps {
 const ObjectivesList: React.FunctionComponent<ObjectivesListProps> = ({
   title,
   items,
-  doneText,
-  allDone,
 }) => (
   <div className={styles.objectives}>
     {title && (
@@ -54,13 +49,6 @@ const ObjectivesList: React.FunctionComponent<ObjectivesListProps> = ({
         </li>
       ))}
     </ul>
-    {allDone && doneText && (
-      <EnhancedSafeMarkdown
-        markdown={doneText}
-        className={styles.done}
-        openExternalLinksInNewTab
-      />
-    )}
   </div>
 );
 

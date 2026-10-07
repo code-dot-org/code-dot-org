@@ -107,8 +107,7 @@
             "height": 0.7
           }
         }
-      ],
-      "done": "**You made it to the top!** Click **Continue**."
+      ]
     },
     "long_instructions": "# A ready-made world\nWe built some platforms with your block. Run and jump. Can you reach the top?",
     "header_label": "Make a platformer"

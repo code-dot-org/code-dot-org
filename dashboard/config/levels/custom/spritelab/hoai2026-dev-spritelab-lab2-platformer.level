@@ -123,8 +123,7 @@
             "kind": "play"
           }
         }
-      ],
-      "done": "**You built a platformer!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Make this world yours\nPaint platforms on the grid: add blocks, erase blocks, build paths and towers. Click **Play** to try it.",
     "header_label": "Make a platformer"

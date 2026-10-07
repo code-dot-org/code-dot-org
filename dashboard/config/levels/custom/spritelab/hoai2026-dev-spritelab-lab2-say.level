@@ -61,8 +61,7 @@
             "kind": "play"
           }
         }
-      ],
-      "done": "**They're alive!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Make them talk\nDrag a **say** block onto the dotted outline under **make new sprite** so your character talks.",
     "toolbox_definition": {

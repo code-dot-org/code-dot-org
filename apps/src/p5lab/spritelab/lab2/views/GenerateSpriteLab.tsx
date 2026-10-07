@@ -126,12 +126,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
 
   const showTts = showTtsFor(levelProperties);
   const instructionsBlock = checklist ? (
-    <ObjectivesList
-      title={checklist.title}
-      items={checklist.items}
-      doneText={checklist.doneText}
-      allDone={checklist.allDone}
-    />
+    <ObjectivesList title={checklist.title} items={checklist.items} />
   ) : (
     instructions && (
       <MainInstructionsContent

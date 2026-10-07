@@ -123,8 +123,7 @@
             "kind": "play"
           }
         }
-      ],
-      "done": "**You're in control!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Make your character the player\nDrag **set as player** onto the dotted outline and pick your character. Arrow keys: left and right to run, up to jump.",
     "toolbox_definition": {

@@ -63,8 +63,7 @@
             "role": "friend"
           }
         }
-      ],
-      "done": "**They're in your world.** Click **Play** and go find them. Then click **Continue**."
+      ]
     },
     "long_instructions": "# Bring back your second character\nClick a square on top of some blocks to put them there. Click another square to move them.",
     "header_label": "Make a platformer"

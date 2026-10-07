@@ -57,8 +57,7 @@
             "id": "platform-scene"
           }
         }
-      ],
-      "done": "**Your scenes are connected!** Click **Continue**."
+      ]
     },
     "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **at [9] seconds**. After 9 seconds, your story jumps to your platformer.",
     "toolbox_definition": {
