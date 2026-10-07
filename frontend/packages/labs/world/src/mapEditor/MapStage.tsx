@@ -243,6 +243,8 @@ export interface MapStageProps {
   eventsFor?: (kind: string) => readonly EventChoice[];
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
+  /** …and the icon it is drawn as. */
+  mapScriptIcon?: string;
   /**
    * What a gated lab WITHHOLDS here (specs/CURRICULUM_PLAN.md,
    * specs/KINDS_FROM_THE_MAP_PLAN.md). A withheld control is drawn, disabled,
@@ -362,24 +364,29 @@ const eventRows = (
 };
 
 /**
- * A toolbar switch: the code marks, the Layers list, the Cameras list.
+ * A button on the map's toolbar: an icon, with its words as its accessible
+ * name and the tooltip a pointer finds, as the inspector's icon actions'
+ * are (`IconAction`).
  *
- * AN ICON, coloured as a tab is: the brand's primary while on, neutral while
- * off, with no box either way — the design system's text icon buttons in
- * those two colours. Its words are its accessible name and the tooltip a
- * pointer finds, as the inspector's icon actions' are (`IconAction`), and
- * `aria-pressed` says which state it is in.
+ * A SWITCH — the code marks, the Layers list, the Cameras list — is coloured
+ * as a tab is: the brand's primary while on, neutral while off, with no box
+ * either way, and `aria-pressed` says which. An action — Reset view, the
+ * way into the map's own code — is the neutral one, with no state to show.
  */
-const ToolbarToggle = ({
+const ToolbarIcon = ({
   label,
   icon,
   pressed,
-  onClick,
+  ...rest
 }: {
   label: string;
   icon: string;
-  pressed: boolean;
-  onClick: () => void;
+  /** On or off, for a switch; absent for an action. */
+  pressed?: boolean;
+  className?: string;
+  onClick?: () => void;
+  'aria-disabled'?: true;
+  'aria-describedby'?: string;
 }) => (
   <Tooltip title={label}>
     <IconButton
@@ -388,7 +395,7 @@ const ToolbarToggle = ({
       variant="text"
       color={pressed ? 'primary' : 'secondary'}
       size="extraSmall"
-      onClick={onClick}
+      {...rest}
     >
       <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
     </IconButton>
@@ -408,6 +415,7 @@ export const MapStage = ({
   onEnhanceKind,
   onOpenKind,
   mapScriptLabel = 'Map code',
+  mapScriptIcon = 'file-code',
   world,
   mapChoices,
   heldMaps,
@@ -2699,19 +2707,12 @@ export const MapStage = ({
         <Typography variant="body4" component="span" className={styles.zoom}>
           {view ? `${Math.round(view.scale * 100)}%` : '—'}
         </Typography>
-        <Button
-          variant="outlined"
-          color="secondary"
-          size="extraSmall"
-          onClick={resetView}
-        >
-          Reset view
-        </Button>
+        <ToolbarIcon label="Reset view" icon="expand" onClick={resetView} />
         {onEditScript && (
           // Only with scripts to show or hide: the marks are about them. It
           // works whether or not scripts are withheld, since the marks are
           // drawn either way: they say what the file holds.
-          <ToolbarToggle
+          <ToolbarIcon
             label="Code marks"
             icon="code"
             pressed={showIcons}
@@ -2719,7 +2720,7 @@ export const MapStage = ({
           />
         )}
         {!appBuilder && (
-          <ToolbarToggle
+          <ToolbarIcon
             label="Layers"
             icon="layer-group"
             pressed={panels.layers}
@@ -2727,7 +2728,7 @@ export const MapStage = ({
           />
         )}
         {cameras && (
-          <ToolbarToggle
+          <ToolbarIcon
             label="Cameras"
             icon="video"
             pressed={panels.cameras}
@@ -2736,17 +2737,14 @@ export const MapStage = ({
         )}
         {onEditScript && (
           <>
-            <Button
-              variant="outlined"
-              color="secondary"
-              size="extraSmall"
+            <ToolbarIcon
+              label={mapScriptLabel}
+              icon={mapScriptIcon}
               className={withheldClass('map-scripts')}
               {...orWithheld('map-scripts', 'toolbar', () =>
                 onEditScript(undefined),
               )}
-            >
-              {mapScriptLabel}
-            </Button>
+            />
             {note('map-scripts', 'toolbar')}
           </>
         )}
