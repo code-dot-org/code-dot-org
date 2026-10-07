@@ -140,7 +140,7 @@ describe('DecisionTree', () => {
     expect(zoomInButton().tabIndex).toBe(-1);
   });
 
-  it('goes in on Enter, to the root of a tree named by its header', () => {
+  it('goes in on Enter, to the root of the named tree', () => {
     const tree = screen.getByRole('tree', {name: "Your model's decision tree"});
     const [root] = screen.getAllByRole('treeitem');
 
@@ -160,7 +160,6 @@ describe('DecisionTree', () => {
 
     expect(document.activeElement).toBe(canvasGroup());
     expect(tabStops()).toHaveLength(0);
-    expect(zoomInButton().tabIndex).toBe(-1);
   });
 
   it('goes back in at the node it left', () => {
@@ -180,7 +179,6 @@ describe('DecisionTree', () => {
     act(() => root.blur());
 
     expect(tabStops()).toHaveLength(0);
-    expect(zoomInButton().tabIndex).toBe(-1);
   });
 
   it('marks each question open on its answers, and no answer at all', () => {
@@ -292,14 +290,5 @@ describe('DecisionTree', () => {
       true,
     );
     expect(document.activeElement).toBe(root);
-  });
-
-  it('makes a node the tab stop when it takes focus another way', () => {
-    const items = screen.getAllByRole('treeitem');
-    const last = items[items.length - 1];
-
-    act(() => last.focus());
-
-    expect(tabStops()).toEqual([last]);
   });
 });

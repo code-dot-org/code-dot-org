@@ -74,12 +74,12 @@ function mockBoxes(boxes) {
 }
 
 // Fitted, the content's origin sits at (72, 102) at scale 0.5, in a frame from x = 72 to 448.
-function renderNodesAt(xs) {
+function renderNodesAt(xs, props = {}, viewportWidth = 472) {
   renderCanvas(
-    {},
+    props,
     xs.map(x => createElement('button', {key: x}, `node at ${x}`)),
   );
-  resizeViewport(472, 360);
+  resizeViewport(viewportWidth, 360);
   const nodes = xs.map(x => screen.getByText(`node at ${x}`));
   const boxes = new Map(
     nodes.map((node, index) => [
@@ -87,7 +87,14 @@ function renderNodesAt(xs) {
       {left: 72 + xs[index] / 2, top: 202, width: 80, height: 20},
     ]),
   );
-  boxes.set(nodes[0].parentElement, {left: 72, top: 102});
+  const content = nodes[0].parentElement;
+  boxes.set(content, {left: 72, top: 102});
+  boxes.set(content.parentElement, {
+    left: 0,
+    top: 0,
+    width: viewportWidth,
+    height: 360,
+  });
   mockBoxes(boxes);
   return nodes;
 }
@@ -262,6 +269,34 @@ describe('TreeCanvas', () => {
       expect(node.parentElement.style.transform).toBe(
         'translate(-512px, 2px) scale(1)',
       ),
+    );
+  });
+
+  it('pans a node that takes keyboard focus clear of an overlay', async () => {
+    const [node] = renderNodesAt([800], {overlayRef: overlayRef(376)}, 848);
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)',
+      ),
+    );
+  });
+
+  it('keeps the view on a node it panned to when the viewport resizes', async () => {
+    const [node] = renderNodesAt([800]);
+    act(() => node.focus());
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)',
+      ),
+    );
+
+    resizeViewport(848, 360);
+
+    expect(node.parentElement.style.transform).toBe(
+      'translate(-512px, 2px) scale(1)',
     );
   });
 
