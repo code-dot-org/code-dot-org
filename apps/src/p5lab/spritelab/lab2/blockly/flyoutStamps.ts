@@ -7,7 +7,7 @@ const STAMP_PADDING_PX = 6;
 // Width per character of the stamp's bold 11px text.
 const CHAR_PX = 7;
 // Gap between a block's right edge and its stamp.
-const GAP_PX = 6;
+const GAP_PX = 12;
 // The stamp centers on the block's first row, whatever the block's height.
 const FIRST_ROW_PX = 36;
 const STAMP_CLASS = 'spritelab2FlyoutStamp';
