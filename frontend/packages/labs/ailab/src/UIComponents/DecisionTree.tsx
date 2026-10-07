@@ -93,7 +93,6 @@ const KeyHint = ({id, shown, children}: KeyHintProps) => (
     variant="body4"
     component="span"
     className={classNames(styles.hint, {[styles.shownHint]: shown})}
-    sx={{color: 'var(--text-neutral-secondary)'}}
   >
     {children}
   </Typography>

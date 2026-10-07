@@ -346,6 +346,40 @@ describe('TreeCanvas', () => {
     );
   });
 
+  it('pans a node that takes keyboard focus clear of the hints', async () => {
+    renderCanvas(
+      {hints: createElement('span', {}, 'hint')},
+      createElement('button', {}, 'node'),
+    );
+    resizeViewport(472, 360);
+    const node = screen.getByText('node');
+    const hints = screen.getByText('hint').parentElement;
+    mockBoxes(
+      new Map([
+        [node, {left: 122, top: 12, width: 80, height: 20}],
+        [node.parentElement, {left: 72, top: 102}],
+      ]),
+    );
+    vi.spyOn(HTMLElement.prototype, 'offsetTop', 'get').mockImplementation(
+      function () {
+        return this === hints ? 8 : 0;
+      },
+    );
+    vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockImplementation(
+      function () {
+        return this === hints ? 28 : 0;
+      },
+    );
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(22px, 240px) scale(1)',
+      ),
+    );
+  });
+
   it('pans a label hanging off a node into view with it', async () => {
     renderCanvas(
       {},

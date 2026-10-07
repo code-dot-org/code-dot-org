@@ -54,14 +54,15 @@ function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {
 function viewFrame(
   viewport: HTMLElement,
   toolbar: HTMLElement,
-  insetRight = 0,
+  {top = 0, right = 0} = {},
 ): Rect {
   const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FRAME_PADDING;
+  const frameTop = top + FRAME_PADDING;
   return {
     x: frameLeft,
-    y: FRAME_PADDING,
-    width: viewport.clientWidth - insetRight - frameLeft - FRAME_PADDING,
-    height: viewport.clientHeight - 2 * FRAME_PADDING,
+    y: frameTop,
+    width: viewport.clientWidth - right - frameLeft - FRAME_PADDING,
+    height: viewport.clientHeight - frameTop - FRAME_PADDING,
   };
 }
 
@@ -73,8 +74,11 @@ function fitTransform(
 ) {
   const insetRight = overlayInset(viewport, overlay);
   const fitted =
-    fitToView(rect, viewFrame(viewport, toolbar, insetRight), FIT_MAX_SCALE) ??
-    fitToView(rect, viewFrame(viewport, toolbar), FIT_MAX_SCALE);
+    fitToView(
+      rect,
+      viewFrame(viewport, toolbar, {right: insetRight}),
+      FIT_MAX_SCALE,
+    ) ?? fitToView(rect, viewFrame(viewport, toolbar), FIT_MAX_SCALE);
   return (
     fitted && zoomIdentity.translate(fitted.x, fitted.y).scale(fitted.scale)
   );
@@ -124,6 +128,7 @@ const TreeCanvas = ({
   const viewportRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const toolbarRef = useRef<HTMLDivElement>(null);
+  const hintsRef = useRef<HTMLDivElement>(null);
   const zoomRef = useRef<ZoomBehavior<HTMLDivElement, unknown>>();
   const scaleTargetRef = useRef<number>();
   const panTargetRef = useRef<ZoomTransform>();
@@ -246,9 +251,13 @@ const TreeCanvas = ({
       width: node.width * k,
       height: node.height * k,
     };
-    const insetRight = overlayInset(viewport, overlayRef?.current ?? null);
+    const hintBox = hintsRef.current;
+    const insets = {
+      top: hintBox ? hintBox.offsetTop + hintBox.offsetHeight : 0,
+      right: overlayInset(viewport, overlayRef?.current ?? null),
+    };
     const pan =
-      panIntoView(zoomedNode, viewFrame(viewport, toolbar, insetRight)) ??
+      panIntoView(zoomedNode, viewFrame(viewport, toolbar, insets)) ??
       panIntoView(zoomedNode, viewFrame(viewport, toolbar));
     if (pan && (pan.x || pan.y || k !== from.k)) {
       autoFitRef.current = false;
@@ -302,7 +311,11 @@ const TreeCanvas = ({
           disabledHint="Make a prediction to see your path"
         />
       </div>
-      {hints}
+      {hints && (
+        <div ref={hintsRef} className={styles.hints}>
+          {hints}
+        </div>
+      )}
     </div>
   );
 };

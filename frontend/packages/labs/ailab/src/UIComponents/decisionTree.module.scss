@@ -48,29 +48,22 @@ $overlay-float-min-width: 600px;
 }
 
 .hints {
-  position: absolute;
-  top: 8px;
-  left: 8px;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   // The 300px Test panel floats only in a canvas at least twice its width.
-  max-width: calc(50% - 16px);
-}
+  max-width: calc(50cqi - 16px);
 
-.hint {
-  grid-area: 1 / 1;
-  justify-self: start;
-  box-sizing: border-box;
-  max-width: 100%;
-  padding: 4px 8px;
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-sm);
-  background-color: var(--background-neutral-primary);
-  box-shadow: var(--shadow-sm);
-  visibility: hidden;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  .hint {
+    grid-area: 1 / 1;
+    justify-self: start;
+    padding: 4px 8px;
+    border: 1px solid var(--border-neutral-primary);
+    border-radius: var(--shape-sm);
+    background-color: var(--background-neutral-primary);
+    box-shadow: var(--shadow-sm);
+    color: var(--text-neutral-secondary);
+    visibility: hidden;
+  }
 }
 
 .canvasGroup:focus-visible .shownHint,
@@ -92,7 +85,7 @@ $overlay-float-min-width: 600px;
   }
 
   .hints {
-    max-width: calc(100% - 16px);
+    max-width: calc(100cqi - 16px);
   }
 }
 
