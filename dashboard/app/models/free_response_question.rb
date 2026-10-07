@@ -24,7 +24,7 @@ class FreeResponseQuestion < QuizQuestion
   #
   # `content` shape:
   #   {
-  #     "questionTitle" => "Give one specific example of an abstraction you used during this lesson.",
+  #     "question_title" => "Give one specific example of an abstraction you used during this lesson.",
   #     "description" => "An example of an abstraction is a function or class that encapsulates a concept or behavior."
   #   }
   #
@@ -32,7 +32,7 @@ class FreeResponseQuestion < QuizQuestion
   validate :validate_question_shape
 
   def self.content_from_params(params)
-    {questionTitle: params[:questionTitle], description: params[:description]}
+    {question_title: params[:questionTitle], description: params[:description]}
   end
 
   def editor_content_json
@@ -40,15 +40,15 @@ class FreeResponseQuestion < QuizQuestion
   end
 
   def student_content_json
-    {questionTitle: content['questionTitle'], description: content['description']}
+    {questionTitle: content['question_title'], description: content['description']}
   end
 
   private def validate_question_shape
     return if content.blank?
     q = content.deep_stringify_keys
 
-    unless q['questionTitle'].is_a?(String) && q['questionTitle'].present?
-      errors.add(:content, 'must have a non-blank "questionTitle"')
+    unless q['question_title'].is_a?(String) && q['question_title'].present?
+      errors.add(:content, 'must have a non-blank "question_title"')
     end
 
     unless q['description'].nil? || q['description'].is_a?(String)

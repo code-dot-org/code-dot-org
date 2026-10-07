@@ -100,7 +100,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_response :created
     body = JSON.parse(response.body)
     question = FreeResponseQuestion.find(body['id'])
-    assert_equal 'Give one example of an abstraction.', question.content['questionTitle']
+    assert_equal 'Give one example of an abstraction.', question.content['question_title']
     assert_equal 'A function counts.', body['description']
     assert @quiz.placements.exists?(quiz_question_id: question.id)
   end

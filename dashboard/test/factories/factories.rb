@@ -2534,7 +2534,7 @@ FactoryBot.define do
     sequence(:name) {|n| "Free response question #{n}"}
     content do
       {
-        questionTitle: 'Give one specific example of an abstraction you used during this lesson.',
+        question_title: 'Give one specific example of an abstraction you used during this lesson.',
         description: 'An example of an abstraction is a function or class that encapsulates a concept or behavior.'
       }
     end

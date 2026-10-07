@@ -356,7 +356,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal 'FreeResponseQuestion', body['type']
-    assert_equal question.content['questionTitle'], body['questionTitle']
+    assert_equal question.content['question_title'], body['questionTitle']
     assert_equal question.content['description'], body['description']
     refute body.key?('choices')
   end
@@ -388,7 +388,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_response :success
     question.reload
-    assert_equal 'Edited title', question.content['questionTitle']
+    assert_equal 'Edited title', question.content['question_title']
     assert_equal 'Edited description', question.content['description']
   end
 
