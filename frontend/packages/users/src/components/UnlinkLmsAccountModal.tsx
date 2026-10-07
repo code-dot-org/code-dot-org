@@ -7,8 +7,8 @@ import FormDialog from './FormDialog';
 import {useModalForm} from './useModalForm';
 
 /**
- * Legacy's warning before unlinking an LMS login. On success it lands on the
- * legacy account page, whose flash confirms the unlink.
+ * Warning before unlinking an LMS login. On success it lands on the Rails
+ * account page, whose flash confirms the unlink.
  */
 export default function UnlinkLmsAccountModal({
   open,
