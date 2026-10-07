@@ -60,7 +60,6 @@ export interface RootState {
   prediction: number | string | undefined;
   predictionTestData: Record<string, string | number>;
   predictionInputs: number[];
-  // TODO: move out of redux, as this is not serializable.
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
