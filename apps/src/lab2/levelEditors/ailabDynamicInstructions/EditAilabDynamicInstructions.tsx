@@ -5,11 +5,10 @@ import React, {useEffect, useRef, useState} from 'react';
 import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
 
 import {
-  ACTION_FIELDS,
   cleanDynamicInstructions,
   DynamicInstructions,
   DynamicInstructionsField,
-  SCREEN_FIELDS,
+  FIELDS,
   setInstructionsText,
 } from './ailabDynamicInstructions';
 
@@ -130,7 +129,10 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
       <Typography variant="body4" className={moduleStyles.descriptionText}>
         Markdown shown in the instructions panel as students work. Leave a field
         blank to show the default text (the grayed out text if no text is
-        provided here).
+        provided here). The long instructions for this level (shown in the
+        lesson plan, etc.) will be generated from the dynamic instructions (they
+        will list the instructions for each screen or the default text, labeled
+        with the screen where they appear).
       </Typography>
       {state.removed.length > 0 && (
         <Typography
@@ -142,22 +144,7 @@ const EditAilabDynamicInstructions: React.FunctionComponent<
           when you save: {state.removed.join('; ')}
         </Typography>
       )}
-      <Typography
-        component="h2"
-        variant="h5"
-        className={moduleStyles.sectionHeading}
-      >
-        Screens
-      </Typography>
-      {SCREEN_FIELDS.map(renderField)}
-      <Typography
-        component="h2"
-        variant="h5"
-        className={moduleStyles.sectionHeading}
-      >
-        Student actions
-      </Typography>
-      {ACTION_FIELDS.map(renderField)}
+      {FIELDS.map(renderField)}
     </div>
   );
 };

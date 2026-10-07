@@ -2,8 +2,9 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography} from '@mui/material';
 import React from 'react';
 
+import {formatSubmittedAt} from '../utils';
+
 import AttemptCard from './AttemptCard';
-import {formatSubmittedAt} from './types';
 
 import styles from './results-card.module.scss';
 
@@ -16,6 +17,8 @@ export interface ResultsCardProps {
   allowMultipleAttempts: boolean;
   canRetake: boolean;
   submittedAt: string;
+  // False on the last level of the lesson, where the button finishes instead.
+  hasNextLevel: boolean;
   onTryAgain: () => void;
   onNextLevel: () => void;
 }
@@ -31,6 +34,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
   allowMultipleAttempts,
   canRetake,
   submittedAt,
+  hasNextLevel,
   onTryAgain,
   onNextLevel,
 }) => {
@@ -105,10 +109,14 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
               color="primary"
               size="medium"
               type="button"
-              endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+              endIcon={
+                hasNextLevel ? (
+                  <FontAwesomeV6Icon iconName="arrow-right" />
+                ) : undefined
+              }
               onClick={onNextLevel}
             >
-              Next level
+              {hasNextLevel ? 'Next level' : 'Finish level'}
             </MuiButton>
           </div>
         </>

@@ -260,6 +260,7 @@ gem 'aws-sdk-s3', '~> 1.113'
 gem 'aws-sdk-sagemaker'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
+gem 'aws-sdk-ssm'
 
 # Lint tools
 group :development, :staging, :levelbuilder, :test do
@@ -330,17 +331,6 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', '~> 2.21'
-
-# Install pg gem only on specific production hosts.
-require_pg = lambda do
-  require 'socket'
-  %w[production-daemon production-console].include?(Socket.gethostname)
-end
-
-install_if require_pg do
-  # v1.3.0 required to support Postgres 14
-  gem 'pg', '~> 1.3.0', require: false
-end
 
 gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'

@@ -53,6 +53,20 @@ export function getChildNodeId(parentId: string, branchIndex: number): string {
   return `${parentId}.${branchIndex}`;
 }
 
+export function formatNumber(value: number): string {
+  return String(Number(value.toFixed(2)));
+}
+
+const THRESHOLD_SIGNS = {lessThan: '<', atLeast: '≥'};
+
+// Unrounded, so the threshold stays on the correct side of the student's input.
+export function thresholdText(
+  branch: Extract<DisplayTreeBranch, {threshold: number}>,
+): string {
+  const threshold = Number(branch.threshold.toPrecision(12));
+  return `${THRESHOLD_SIGNS[branch.kind]} ${threshold}`;
+}
+
 // The `name` in ml-cart's toJSON().
 const TREE_MODEL_NAMES = ['DTClassifier', 'DTRegression'];
 

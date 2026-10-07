@@ -1,0 +1,353 @@
+@use "sass:math";
+@use "sr-only";
+@use "../checkerboard";
+
+// Between the frame and the Guide.
+$scene-gap: 24px;
+// The page above and below the frame: the header and the gap to each edge.
+$window-allowance: 150px;
+
+// Two halves across the level, each free to shrink; the image keeps square.
+.scene {
+  display: flex;
+  gap: $scene-gap;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+  align-items: stretch;
+}
+
+// The frame takes the width the window's height allows, up to half; the
+// Guide takes the rest.
+.imagePane {
+  flex: 0 0 auto;
+  width: min(
+    calc(50% - #{math.div($scene-gap, 2)}),
+    calc(100vh - #{$window-allowance})
+  );
+  min-width: 240px;
+}
+
+// Raised by the Guide's own top offset, so the panel's top meets the
+// frame's.
+.guideHost {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+  margin-top: calc(-1 * var(--guide-top-position));
+
+  // The Guide mounts again entering and leaving drawing, and its measured
+  // width must not slide in from the default.
+  > div > div {
+    animation: none;
+    transition: none;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  // Focus lands here on a mode change; the panel's edge is not the cue.
+  &:focus {
+    outline: none;
+  }
+}
+
+.srOnly {
+  @include sr-only.sr-only;
+}
+
+// A short window (a Chromebook, a small laptop) packs the rows closer.
+@media (max-height: 800px) {
+  .panel {
+    gap: 10px;
+  }
+
+  .resultActions {
+    gap: 14px;
+  }
+}
+
+.instructions {
+  line-height: 1.5;
+
+  p {
+    margin: 0;
+  }
+}
+
+.imageColumn {
+  width: 100%;
+}
+
+.imageFrame {
+  // The sheet preview and its pose pill position against the frame.
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border-neutral-secondary);
+  border-radius: 12px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+// The sheet preview's canvas holds one full-resolution frame scaled to the
+// frame; hard edges keep crisp frames crisp on the way down.
+.imageFrame canvas {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: pixelated;
+}
+
+// Fills what the fact at the bottom leaves, with the label in its middle.
+.generatingSpace {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generatingLabel {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-neutral-primary);
+}
+
+// The style dropdown at the left, Generate at the right.
+.generateRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+// Doubled to outrank the button's own padding and radius.
+.generateButton.generateButton {
+  margin-left: auto;
+  min-height: 48px;
+  padding: 8px 28px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 4px 0 var(--neutral-black-alpha-40);
+  transition:
+    transform 0.1s ease-out,
+    box-shadow 0.1s ease-out;
+
+  &:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 var(--neutral-black-alpha-40);
+  }
+
+  &:disabled {
+    box-shadow: none;
+  }
+}
+
+// Pressing stops the rock, whose transform would hide the press.
+.generateReady {
+  animation: ready-rock 2.4s ease-in-out infinite;
+
+  &:active {
+    animation: none;
+  }
+}
+
+@keyframes ready-rock {
+  0%,
+  70%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+  78% {
+    transform: scale(1.06) rotate(-2deg);
+  }
+  86% {
+    transform: scale(1.06) rotate(2deg);
+  }
+  94% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .generateReady {
+    animation: none;
+  }
+
+  .generateButton.generateButton {
+    transition: none;
+  }
+}
+
+// Held at the panel's bottom.
+.bottomRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.factBox.bottomRow {
+  flex-direction: row;
+}
+
+// The quieter neutral: Generate is the main call to action.
+.drawButton.drawButton {
+  width: 100%;
+  border-color: var(--border-neutral-secondary);
+  color: var(--text-neutral-secondary);
+
+  &:hover {
+    border-color: var(--text-neutral-primary);
+    color: var(--text-neutral-primary);
+  }
+}
+
+// The editor's canvas paints its own checkerboard.
+.paintFrame {
+  border-style: solid;
+  overflow: hidden;
+}
+
+.paintCanvas {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.paintActions {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+// The checkerboard shows a made picture's transparency.
+.imageFrameFilled {
+  border-style: solid;
+  overflow: hidden;
+
+  @include checkerboard.checkerboard(
+    24px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
+}
+
+// Fills the frame even when the stored image is smaller than it (small
+// crisp-scaled pixel art, a 256px block).
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.generating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+// A thin rule between the sentence and what to do about the picture.
+.resultDivider {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--border-neutral-secondary);
+  opacity: 0.5;
+}
+
+.resultActions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--text-neutral-primary);
+}
+
+.resultQuestionRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.resultQuestion {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.verdictButton {
+  color: var(--text-neutral-primary);
+}
+
+// Doubled to outrank the button's own hover background.
+.verdictButton.verdictChosen {
+  background-color: var(--text-neutral-primary);
+  color: var(--background-neutral-primary);
+  animation: thumb-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes thumb-pop {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verdictButton.verdictChosen {
+    animation: none;
+  }
+}
+
+// Each button grows from its label's width, so no label wraps.
+.resultButtons {
+  display: flex;
+  gap: 12px;
+
+  > * {
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
+}
+
+.error {
+  color: var(--text-error-primary);
+}
+
+.factBox {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: var(--background-neutral-primary);
+}
+
+.factIcon {
+  flex: none;
+  font-size: 32px;
+  color: var(--text-brand-primary);
+}

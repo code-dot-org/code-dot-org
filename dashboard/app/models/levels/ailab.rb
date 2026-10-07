@@ -36,13 +36,21 @@ class Ailab < Level
   )
 
   DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'datasets-manifest.json')
+  LAB2_INSTRUCTIONS_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'lab2-instructions.json')
 
   REQUIRE_ACCURACY_RANGE = (0..100)
 
   validate :validate_lab2_mode
 
+  # Lab 2 levels generate their long instructions, so a stored value would only go stale.
+  before_save {properties.delete('long_instructions') if uses_lab2?}
+
   def self.dataset_ids
     @dataset_ids ||= JSON.parse(File.read(DATASETS_MANIFEST_PATH))['datasets'].pluck('id')
+  end
+
+  def self.lab2_instructions
+    @lab2_instructions ||= JSON.parse(File.read(LAB2_INSTRUCTIONS_PATH))
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -71,6 +79,33 @@ class Ailab < Level
     end
 
     JSON.dump(parsed_default_value)
+  end
+
+  # Markdown of every screen's instructions, for readers who never see the screens.
+  # Always use this method for lab2 AI Lab levels rather than calling properties['long_instructions'] directly.
+  def generated_long_instructions
+    return nil unless uses_lab2?
+
+    authored = authored_dynamic_instructions
+    items = self.class.lab2_instructions.map do |screen|
+      text = authored[screen['key']]
+      text = screen['defaultText'] unless text.is_a?(String) && text.present?
+      # Indenting continuation lines keeps multi-line text inside its list item.
+      "- _The instructions for the **#{screen['name']}** screen say:_ #{text.gsub("\n", "\n  ")}"
+    end
+    "This level has dynamic instructions that change as you interact with AI Lab.\n\n#{items.join("\n\n")}"
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    summary = super
+    summary[:longInstructions] = generated_long_instructions if uses_lab2?
+    summary
+  end
+
+  def summary_for_lesson_plans(unit_group_unit: nil)
+    summary = super
+    summary['long_instructions'] = generated_long_instructions if uses_lab2?
+    summary
   end
 
   def get_localized_property(property_name)
@@ -110,7 +145,7 @@ class Ailab < Level
   end
 
   def uses_lab2?
-    uses_lab2
+    JSONValue.value(uses_lab2) == true
   end
 
   # Attributes that are stored as JSON strings but should be passed through to the app as
@@ -121,6 +156,18 @@ class Ailab < Level
       mode
       dynamic_instructions
     ).map {|x| x.camelize(:lower)}
+  end
+
+  # Checks the raw value first, since localized_dynamic_instructions raises on anything but a JSON object.
+  private def authored_dynamic_instructions
+    parsed = begin
+      JSON.parse(dynamic_instructions.presence || '{}')
+    rescue JSON::ParserError
+      nil
+    end
+    return {} unless parsed.is_a?(Hash)
+
+    JSON.parse(localized_dynamic_instructions || '{}')
   end
 
   private def validate_lab2_mode

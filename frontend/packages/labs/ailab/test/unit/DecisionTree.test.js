@@ -14,18 +14,10 @@ import {levelStore} from './levelStore';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    observe() {}
-    disconnect() {}
-  },
-);
-
 function predictSnake(store) {
   act(() => {
     store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict(store);
+    train.onClickPredict();
   });
 }
 
@@ -88,6 +80,9 @@ describe('DecisionTree', () => {
     expect(document.getElementsByClassName(moduleStyles.pathEdge)).toHaveLength(
       0,
     );
+    expect(
+      document.getElementsByClassName(moduleStyles.pathBranch),
+    ).toHaveLength(0);
   });
 
   it('offers zooming to the path only once there is a prediction', () => {
@@ -106,11 +101,18 @@ describe('DecisionTree', () => {
     const pathEdges = [
       ...document.getElementsByClassName(moduleStyles.pathEdge),
     ];
+    const pathBranches = [
+      ...document.getElementsByClassName(moduleStyles.pathBranch),
+    ];
 
     expect(marked.length).toBeGreaterThan(1);
     expect(slotPosition(marked[0])[1]).toBe(0);
     expect(marked[marked.length - 1].textContent).toBe('snake');
     expect(pathEdges).toHaveLength(marked.length - 1);
     expect(edges.slice(-pathEdges.length)).toEqual(pathEdges);
+    expect(pathBranches).toHaveLength(marked.length - 1);
+    expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
+      marked.slice(1),
+    );
   });
 });

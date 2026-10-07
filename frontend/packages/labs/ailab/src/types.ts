@@ -144,6 +144,8 @@ export interface HistoricResult {
   label: string;
   features: string[];
   accuracy: string;
+  correct: number;
+  total: number;
 }
 
 export interface ModelDataToSave {
@@ -178,10 +180,7 @@ export interface PrevNextButtons {
 
 export const CONTENT_PANELS = [
   'selectDataset',
-  'dataDisplayLabel',
-  'dataDisplayFeatures',
-  'trainModel',
-  'generateResults',
+  'datasetView',
   'results',
   'saveModel',
   'modelSummary',
@@ -198,9 +197,6 @@ export const INSTRUCTIONS_KEYS = [
   ...CONTENT_PANELS,
   'uploadedDataset',
   'selectedDataset',
-  'selectedFeatureNumerical',
-  'selectedFeatureCategorical',
-  'resultsDetails',
 ] as const;
 
 export type InstructionsKey = (typeof INSTRUCTIONS_KEYS)[number];

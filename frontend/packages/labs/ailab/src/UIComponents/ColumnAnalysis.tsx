@@ -1,5 +1,5 @@
 /* Panel describing the column selected in the data table. */
-import {IconButton} from '@mui/material';
+import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 
 import Alert from '@code-dot-org/component-library/alert';
@@ -88,9 +88,14 @@ const ColumnAnalysis = () => {
     >
       <div className={styles.header}>
         <span className={styles.headerSpacer} />
-        <h2 id="column-analysis-heading" className={styles.headerTitle}>
+        <Typography
+          id="column-analysis-heading"
+          component="h3"
+          variant="overline2"
+          className={styles.headerTitle}
+        >
           Column Analysis
-        </h2>
+        </Typography>
         <IconButton
           variant="text"
           color="tertiary"
@@ -104,9 +109,13 @@ const ColumnAnalysis = () => {
       </div>
       <div className={styles.body}>
         <div className={styles.summary}>
-          <h3 className={styles.columnName}>{columnName}</h3>
+          <Typography component="h4" variant="h6">
+            {columnName}
+          </Typography>
           {columnDetails.description && (
-            <p className={styles.description}>{columnDetails.description}</p>
+            <Typography variant="body4" className={styles.description}>
+              {columnDetails.description}
+            </Typography>
           )}
           <div className={styles.stats}>
             {stats.map(stat => (
@@ -133,14 +142,26 @@ const ColumnAnalysis = () => {
               <span className={styles.emptyGraphIcon} aria-hidden="true">
                 <FontAwesomeV6Icon iconName="chart-simple" iconStyle="solid" />
               </span>
-              <h3 className={styles.emptyGraphTitle}>Too many values</h3>
-              <p className={styles.emptyGraphMessage}>
+              <Typography
+                component="h4"
+                variant="label1"
+                className={styles.emptyGraphTitle}
+              >
+                Too many values
+              </Typography>
+              <Typography variant="body4" className={styles.emptyGraphMessage}>
                 {`A graph is shown when there are ${MAX_DISTRIBUTION_BARS} or fewer values.`}
-              </p>
+              </Typography>
             </div>
           ) : (
             <div className={styles.distribution}>
-              <h3 className={styles.distributionTitle}>Distribution</h3>
+              <Typography
+                component="h4"
+                variant="body4"
+                className={styles.distributionTitle}
+              >
+                Distribution
+              </Typography>
               {bars.length > 0 && (
                 <DistributionChart columnName={columnName} bars={bars} />
               )}

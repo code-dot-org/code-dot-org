@@ -1,4 +1,6 @@
 /* React component to handle displaying imported data. */
+import {Typography} from '@mui/material';
+
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppSelector} from '../hooks';
 
@@ -23,9 +25,17 @@ const DataDisplay = () => {
   return (
     <div id="data-display" className={styles.panel}>
       <div className={styles.header}>
-        <h2 className={styles.title}>{datasetName || 'Dataset'}</h2>
+        <Typography component="h3" variant="label2" className={styles.title}>
+          {datasetName || 'Dataset'}
+        </Typography>
         <span className={styles.separator} aria-hidden="true" />
-        <span className={styles.rowCount}>{rowCountMessage}</span>
+        <Typography
+          component="span"
+          variant="body4"
+          className={styles.rowCount}
+        >
+          {rowCountMessage}
+        </Typography>
       </div>
       <div className={styles.tableContainer}>
         <DataTable />

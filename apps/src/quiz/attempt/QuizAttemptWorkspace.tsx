@@ -2,18 +2,22 @@ import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
-  navigateToNextLevel,
   sendStartedReportIfNotStarted,
   sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {navigateToNextLevelOrFinish} from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {AppName} from '@cdo/apps/lab2/types';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {QuizQuestionSummary, toBool} from '../types';
+import {QuizQuestionSummary} from '../types';
+import {groupByPage, toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
 import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
+import PageDivider from './PageDivider';
+import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
 import useQuizAttempt from './useQuizAttempt';
@@ -34,6 +38,8 @@ export interface QuizAttemptWorkspaceProps {
   timeLimitMinutes?: number;
   showIntroScreen?: boolean;
   showCorrectness?: boolean;
+  revealAnswerExplanation?: boolean;
+  showQuestionsAfterSubmit?: boolean;
 }
 
 const QuizAttemptWorkspace: React.FunctionComponent<
@@ -50,6 +56,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   timeLimitMinutes,
   showIntroScreen,
   showCorrectness,
+  revealAnswerExplanation,
+  showQuestionsAfterSubmit,
 }) => {
   const dispatch = useAppDispatch();
   const {
@@ -63,12 +71,30 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     levelId,
     unitId,
   });
+  const hasNextLevel = useAppSelector(
+    state => nextLevelId(state) !== undefined
+  );
 
   // currentPageNumber is a 1-based position into this list, not a raw page value.
   const pageNumbers = Array.from(new Set(quizQuestions.map(q => q.page))).sort(
     (a, b) => a - b
   );
   const totalPages = pageNumbers.length || 1;
+  // TODO: Add support for other question types.
+  const mcQuestions = quizQuestions.filter(
+    question => question.type === 'MultipleChoiceQuestion'
+  );
+  let resultQuestionNumber = 0;
+  const resultPages = groupByPage(mcQuestions).map(({page, questions}) => {
+    const firstQuestionNumber = resultQuestionNumber + 1;
+    resultQuestionNumber += questions.length;
+    return {
+      page,
+      questions,
+      firstQuestionNumber,
+      lastQuestionNumber: resultQuestionNumber,
+    };
+  });
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
     useState<Record<number, string>>({});
@@ -182,7 +208,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   const handleNextLevel = async () => {
     await pendingReportRef.current;
-    dispatch(navigateToNextLevel());
+    dispatch(navigateToNextLevelOrFinish());
   };
 
   // A quiz with no intro screen has no click-through step - start the
@@ -298,8 +324,51 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               canRetake={attempt.canRetake}
               submittedAt={attempt.submittedAt}
               onTryAgain={handleRetake}
+              hasNextLevel={hasNextLevel}
               onNextLevel={handleNextLevel}
             />
+            {toBool(showQuestionsAfterSubmit) &&
+              resultPages.map(
+                (
+                  {page, questions, firstQuestionNumber, lastQuestionNumber},
+                  pageIndex
+                ) => (
+                  <React.Fragment key={page}>
+                    {resultPages.length > 1 && (
+                      <PageDivider
+                        pageNumber={pageIndex + 1}
+                        totalPages={resultPages.length}
+                        firstQuestionNumber={firstQuestionNumber}
+                        lastQuestionNumber={lastQuestionNumber}
+                      />
+                    )}
+                    {questions.map((question, indexInPage) => {
+                      const result = attempt.questionResults?.find(
+                        r => r.quizQuestionId === question.id
+                      );
+                      return (
+                        result && (
+                          <QuestionResultCard
+                            key={question.id}
+                            question={question}
+                            questionLabel={
+                              mcQuestions.length > 1
+                                ? `Question ${
+                                    firstQuestionNumber + indexInPage
+                                  } of ${mcQuestions.length}`
+                                : undefined
+                            }
+                            result={result}
+                            revealAnswerExplanation={toBool(
+                              revealAnswerExplanation
+                            )}
+                          />
+                        )
+                      );
+                    })}
+                  </React.Fragment>
+                )
+              )}
           </div>
         ) : (
           <div className={styles.questions} ref={questionsRef}>

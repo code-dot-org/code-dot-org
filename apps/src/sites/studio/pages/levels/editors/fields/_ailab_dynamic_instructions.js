@@ -2,7 +2,7 @@ import {INSTRUCTIONS_KEYS} from '@code-dot-org/ailab';
 import $ from 'jquery';
 import React from 'react';
 
-import ailabI18n from '@cdo/apps/ailab/locale';
+import {getDefaultInstructions} from '@cdo/apps/ailab/lab2/defaultInstructions';
 import EditAilabDynamicInstructions from '@cdo/apps/lab2/levelEditors/ailabDynamicInstructions/EditAilabDynamicInstructions';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -18,10 +18,7 @@ $(document).ready(function () {
   };
 
   const defaults = Object.fromEntries(
-    INSTRUCTIONS_KEYS.filter(key => ailabI18n[key]).map(key => [
-      key,
-      ailabI18n[key](),
-    ])
+    INSTRUCTIONS_KEYS.map(key => [key, getDefaultInstructions(key)])
   );
 
   createReactRoot(

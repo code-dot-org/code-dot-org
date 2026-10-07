@@ -17,7 +17,7 @@ export interface QuizQuestion {
   id: number;
   type: string;
   questionName: string;
-  stem: string;
+  questionTitle: string;
   choices: QuizQuestionChoice[];
   correctChoiceId: string | null;
   explanation: string | null;
@@ -44,7 +44,7 @@ export function isPendingQuestionId(id: number): boolean {
 // The fields a per-question editor can change.
 export interface QuizQuestionEditableFields {
   questionName: string;
-  stem: string;
+  questionTitle: string;
   choices: QuizQuestionChoice[];
   correctChoiceId: string | null;
   explanation: string | null;

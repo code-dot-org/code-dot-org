@@ -4,11 +4,7 @@
   keeps only keys Lab 2 AI Lab can show; anything else is dropped when the
   level is next saved.
 */
-import {
-  CONTENT_PANELS,
-  INSTRUCTIONS_KEYS,
-  type InstructionsKey,
-} from '@code-dot-org/ailab';
+import {LAB2_INSTRUCTIONS, type InstructionsKey} from '@code-dot-org/ailab';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
@@ -19,43 +15,13 @@ export interface DynamicInstructionsField {
   label: string;
 }
 
-// Lab 2 levels load their one dataset directly, so these never show.
-const UNREACHABLE_KEYS = [
-  'selectDataset',
-  'uploadedDataset',
-  'selectedDataset',
-] as const;
-
-type Lab2Key = Exclude<InstructionsKey, (typeof UNREACHABLE_KEYS)[number]>;
-
-const FIELD_LABELS: Record<Lab2Key, string> = {
-  dataDisplayLabel: 'Choose label screen',
-  dataDisplayFeatures: 'Choose features screen',
-  trainModel: 'Train model screen',
-  generateResults: 'Test model screen',
-  results: 'Results screen',
-  saveModel: 'Save model screen',
-  modelSummary: 'Model summary screen',
-  selectedFeatureNumerical: 'After selecting a numerical column',
-  selectedFeatureCategorical: 'After selecting a categorical column',
-  resultsDetails: 'While viewing result details',
-};
-
-function isLab2Key(key: string): key is Lab2Key {
-  return Object.hasOwn(FIELD_LABELS, key);
-}
-
-function toFields(keys: readonly string[]): DynamicInstructionsField[] {
-  return keys.filter(isLab2Key).map(key => ({key, label: FIELD_LABELS[key]}));
-}
-
-const CONTENT_PANEL_KEYS: readonly string[] = CONTENT_PANELS;
-
-export const SCREEN_FIELDS = toFields(CONTENT_PANELS);
-
-export const ACTION_FIELDS = toFields(
-  INSTRUCTIONS_KEYS.filter(key => !CONTENT_PANEL_KEYS.includes(key))
+export const FIELDS: DynamicInstructionsField[] = LAB2_INSTRUCTIONS.map(
+  ({key, name}) => ({key, label: `${name} screen`})
 );
+
+function isLab2Key(key: string): key is InstructionsKey {
+  return FIELDS.some(field => field.key === key);
+}
 
 // An empty value removes the key, so Lab 2 falls back to the default text.
 export function setInstructionsText(

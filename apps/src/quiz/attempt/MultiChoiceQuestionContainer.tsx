@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
+import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
 
@@ -17,16 +18,14 @@ export interface MultiChoiceQuestionContainerProps {
   onSelectChoice: (choiceId: string) => void;
 }
 
-const CHOICE_LETTERS = 'ABCDEFGHIJ';
-
 const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
 > = ({question, questionLabel, selectedChoiceId, onSelectChoice}) => (
-  <AttemptCard label={questionLabel} title={question.stem}>
+  <AttemptCard label={questionLabel} title={question.questionTitle}>
     <div
       className={styles.choices}
       role="radiogroup"
-      aria-label={question.stem}
+      aria-label={question.questionTitle}
     >
       {(question.choices ?? []).map((choice, index) => {
         const isSelected = choice.id === selectedChoiceId;
@@ -44,7 +43,7 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
           >
             <Typography variant="body2" component="span">
               <span className={styles.optionLetter}>
-                {CHOICE_LETTERS[index]}.
+                {formatChoiceLetter(index)}.
               </span>{' '}
               {choice.text}
             </Typography>

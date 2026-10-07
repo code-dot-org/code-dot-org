@@ -3,8 +3,13 @@ require 'test_helper'
 class QuizQuestionPlacementsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    FileUtils.stubs(:mkdir_p)
+    File.stubs(:write)
     @levelbuilder = create(:levelbuilder)
     @teacher = create(:teacher)
     @quiz = create(:quiz)
@@ -42,7 +47,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
       post :create, params: {
         level_id: @quiz.id,
         questionName: 'New question',
-        stem: 'What is 2 + 2?',
+        questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correctChoiceId: 'b',
         page: 1
@@ -60,7 +65,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
   test "create returns bad_request when required fields are missing" do
     assert_no_difference 'QuizQuestion.count' do
-      post :create, params: {level_id: @quiz.id, questionName: '', stem: '', choices: [], correctChoiceId: ''}
+      post :create, params: {level_id: @quiz.id, questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
     end
 
     assert_response :bad_request
@@ -72,7 +77,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
       post :create, params: {
         level_id: @quiz.id,
         questionName: 'Orphan risk',
-        stem: 'What is 2 + 2?',
+        questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correctChoiceId: 'b',
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]

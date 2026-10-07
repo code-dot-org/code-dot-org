@@ -1,6 +1,7 @@
 .treeCanvas {
   position: relative;
-  height: 360px;
+  flex: 1;
+  min-height: 240px;
   overflow: hidden;
   background-color: var(--background-neutral-secondary, #f1f2f4);
 }

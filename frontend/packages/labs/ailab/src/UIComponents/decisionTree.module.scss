@@ -1,19 +1,40 @@
-$path-ring-width: 3px;
-$path-color: var(--border-selected-primary, #2b1e9f);
+@use '../sharedMixins' as mixins;
+
+$path-color: var(--border-selected-primary);
+$off-path-color: var(--background-neutral-septenary);
+$overlay-float-min-width: 600px;
 
 .decisionTree {
-  clear: both;
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.header {
-  font-size: 14px;
-  margin-bottom: 8px;
+.canvasArea {
+  container-type: inline-size;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.overlay {
+  @include mixins.canvas-overlay;
+}
+
+@container (width < #{$overlay-float-min-width}) {
+  .overlay {
+    position: static;
+    align-self: flex-end;
+    max-height: none;
+  }
 }
 
 .canvas {
   position: relative;
-  color: var(--text-neutral-black-fixed, black);
+  color: var(--text-neutral-primary);
+  font-family: var(--font-family-main);
 }
 
 .edges {
@@ -21,13 +42,13 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   top: 0;
   left: 0;
   fill: none;
-  stroke: var(--neutral-gray-70, grey);
+  stroke: $off-path-color;
   stroke-width: 1.5;
 }
 
 .pathEdge {
   stroke: $path-color;
-  stroke-width: 3;
+  stroke-width: 2;
 }
 
 .nodeSlot {
@@ -44,7 +65,7 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  border-width: 2px;
+  border-width: 1.5px;
   border-style: solid;
   border-radius: 6px;
   font-size: 13px;
@@ -52,20 +73,16 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   text-align: center;
 }
 
-.question {
-  background-color: var(--background-neutral-white-fixed, white);
-  border-color: var(--ailab-feature);
-}
-
+.question,
 .answer {
-  background-color: var(--ailab-label);
-  border-color: var(--ailab-label);
+  background-color: var(--background-neutral-primary);
+  border-color: $off-path-color;
+  box-shadow: var(--shadow-sm);
 }
 
-// An outline, unlike a box-shadow, still shows in forced-colors mode.
 .pathNode {
   border-color: $path-color;
-  outline: $path-ring-width solid $path-color;
+  border-width: 2px;
 }
 
 .nodeText {
@@ -83,14 +100,25 @@ $path-color: var(--border-selected-primary, #2b1e9f);
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   max-width: 100%;
-  height: 18px;
-  line-height: 16px;
-  padding: 0 6px;
-  border: 1px solid var(--neutral-gray-70, grey);
-  border-radius: 9px;
-  background-color: var(--background-neutral-white-fixed, white);
+  line-height: 18px;
+  padding: 2px 10px;
+  border-radius: var(--shape-round);
+  background-color: var(--background-neutral-secondary);
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.pathBranch {
+  background-color: var(--background-selected-primary);
+  color: var(--text-selected-primary);
+  font-weight: 600;
+}
+
+@media (forced-colors: active) {
+  .pathNode,
+  .pathBranch {
+    outline: 3px solid;
+  }
 }

@@ -67,7 +67,7 @@ class Level < ApplicationRecord
   end)
 
   # scope for levels that require ai chat tools to reasonably function.
-  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
+  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2 Adaptive])}
 
   scope :with_any_ai_chat_tools, -> {with_essential_ai_chat_tools.or(with_ai_tutor_available)}
 
@@ -146,6 +146,7 @@ class Level < ApplicationRecord
     use_secondary_finish_button
     skip_url
     stay_on_level_after_submit
+    header_label
     additional_ai_evaluation_instructions
     product_tours
     generate_outline

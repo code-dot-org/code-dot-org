@@ -71,12 +71,16 @@ class ProjectUpdatedAt extends React.Component {
   }
 }
 
+/** The badge's size; a header that reserves its room reads it from here. */
+export const PROJECT_UPDATED_AT_MIN_WIDTH = 160;
+export const PROJECT_UPDATED_AT_HEIGHT = 14;
+
 const styles = {
   container: {
     display: 'block',
-    // A floor, not a cap: in some locales the badge is wider than 160px.
-    minWidth: 160,
-    height: 14,
+    // A floor, not a cap: in some locales the badge is wider.
+    minWidth: PROJECT_UPDATED_AT_MIN_WIDTH,
+    height: PROJECT_UPDATED_AT_HEIGHT,
     overflow: 'visible',
   },
 };

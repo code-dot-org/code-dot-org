@@ -5,14 +5,15 @@ import ailab, {
 } from '@code-dot-org/ailab';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import ailabI18n from '@cdo/apps/ailab/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import {getDefaultInstructions} from '../defaultInstructions';
 import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
@@ -21,6 +22,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   levelProperties,
 }) => {
   const dispatch = useAppDispatch();
+  const {showDialog} = useDialogControl();
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
     useState<InstructionsKey>();
   const dynamicInstructionsMap: {[key: string]: string} = useMemo(
@@ -66,6 +68,10 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       analyticsReporter.sendEvent(eventName, {details});
     };
 
+    const onStartOver = () => {
+      showDialog({type: DialogType.StartOver, handleConfirm: ailab.startOver});
+    };
+
     ailab.mount({
       assetPath: '/blockly/media/skins/ailab/',
       onContinue,
@@ -73,10 +79,11 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       i18n: {}, // TODO: Pass through localization map if necessary
       saveTrainedModel,
       logMetric,
+      onStartOver,
     });
 
     return () => ailab.unmount();
-  }, [dispatch]);
+  }, [dispatch, showDialog]);
 
   // Reload whenever the level changes regardless of if the mode has changed.
   useEffect(() => {
@@ -90,16 +97,15 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     if (!dynamicInstructionsKey) {
       return undefined;
     }
-    if (dynamicInstructionsMap[dynamicInstructionsKey]) {
-      return dynamicInstructionsMap[dynamicInstructionsKey];
-    } else if (ailabI18n[dynamicInstructionsKey]) {
-      return ailabI18n[dynamicInstructionsKey]();
-    } else {
+    const instructions =
+      dynamicInstructionsMap[dynamicInstructionsKey] ||
+      getDefaultInstructions(dynamicInstructionsKey);
+    if (!instructions) {
       console.warn(
         `No dynamic instructions available for key ${dynamicInstructionsKey}`
       );
-      return undefined;
     }
+    return instructions;
   }, [dynamicInstructionsKey, dynamicInstructionsMap]);
 
   return (
