@@ -43,11 +43,17 @@ class AzureImageCaptionTest < Minitest::Test
     end
   end
 
-  def test_raises_request_failed_on_unparseable_success
+  def test_raises_request_failed_on_an_unparseable_response
     stub_azure('<html>a proxy said no</html>')
     assert_raises AzureImageCaption::RequestFailed do
       @captioner.caption_image(@image_data)
     end
+
+    stub_azure_error(503, 'Service Unavailable')
+    error = assert_raises AzureImageCaption::RequestFailed do
+      @captioner.caption_image(@image_data)
+    end
+    assert_includes error.message, '503'
   end
 
   def test_wraps_transport_failures_so_the_caller_can_rescue_them
@@ -67,14 +73,6 @@ class AzureImageCaptionTest < Minitest::Test
     end
   end
 
-  def test_error_message_survives_an_unparseable_error_body
-    stub_azure_error(503, 'Service Unavailable')
-    error = assert_raises AzureImageCaption::RequestFailed do
-      @captioner.caption_image(@image_data)
-    end
-    assert_includes error.message, '503'
-  end
-
   # --- what goes out ---
 
   def test_sends_raw_image_bytes_with_the_subscription_key
@@ -85,16 +83,13 @@ class AzureImageCaptionTest < Minitest::Test
     assert_equal @image_data, request.body
   end
 
-  def test_asks_the_image_analysis_endpoint_for_a_caption
+  def test_uses_correct_api_path
     path = captured_request.path
     assert_includes path, '/computervision/imageanalysis:analyze'
     assert_includes path, 'api-version=2024-02-01'
     assert_includes path, 'features=caption'
-  end
-
-  def test_requests_a_gender_neutral_caption
     # A drawing has no gender to read off it, so the model is told not to guess.
-    assert_includes captured_request.path, 'gender-neutral-caption=true'
+    assert_includes path, 'gender-neutral-caption=true'
   end
 
   def test_bounds_how_long_it_waits_on_azure
