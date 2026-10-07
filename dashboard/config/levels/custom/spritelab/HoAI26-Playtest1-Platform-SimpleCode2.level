@@ -237,9 +237,12 @@
     "display_name": "Code the background",
     "bubble_choice_description": "Code the background of your game",
     "thumbnail_url": "https://images.code.org/8bdaa44204726a7eb393727d82610174-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
-    "objectives": {
-      "title": "# Create a background for your game\n\n1. Add a set background block.\n- Then, press make an image.\n- Write a prompt that describes your background, and press **Generate**.\n- Press the Play or Code button to see how it looks on your game!"
-    },
+    "guide_steps": [
+      {
+        "text": "# Create a background for your game\n\n1. Add a set background block.\n- Then, press make an image.\n- Write a prompt that describes your background, and press **Generate**.\n- Press the Play or Code button to see how it looks on your game!",
+        "showContinue": true
+      }
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

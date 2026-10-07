@@ -54,9 +54,12 @@
     "enable_big_playspace": "false",
     "display_name": "Create a player",
     "bubble_choice_description": "##Get started creating a game!",
-    "objectives": {
-      "title": "# Create the player for your game\n\n1. Press **New Image**\n\n- To use AI, write a prompt that describes your character, then press **Generate**.\n- You can always make adjustments and draw your own!"
-    },
+    "guide_steps": [
+      {
+        "text": "# Create the player for your game\n\n1. Press **New Image**\n\n- To use AI, write a prompt that describes your character, then press **Generate**.\n- You can always make adjustments and draw your own!",
+        "showContinue": true
+      }
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

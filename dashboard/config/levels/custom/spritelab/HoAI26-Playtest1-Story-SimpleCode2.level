@@ -266,9 +266,12 @@
     "display_name": "Code the background",
     "bubble_choice_description": "Code the background of your story.",
     "thumbnail_url": "https://images.code.org/96a81108b5a572380882d186b52ed6c3-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
-    "objectives": {
-      "title": "# Add your Background\n\n- Add the set background block to your program\n\n- Click Create image\n\n- Describe the background you want and click **Generate**"
-    },
+    "guide_steps": [
+      {
+        "text": "# Add your Background\n\n- Add the set background block to your program\n\n- Click Create image\n\n- Describe the background you want and click **Generate**",
+        "showContinue": true
+      }
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

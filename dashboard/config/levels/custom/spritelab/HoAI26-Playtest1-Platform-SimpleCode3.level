@@ -385,9 +385,12 @@
         }
       ]
     },
-    "objectives": {
-      "title": "# Add an event\n\n1. Add a **when sprite touches sprite** block\n- Change the costumes on the block.\n- Then, add a fun celebration under the event.\n- Press the Play button to test it out! \n- **HINT:** The event block does not connect to the When Run program. Put it anywhere on the workspace!"
-    },
+    "guide_steps": [
+      {
+        "text": "# Add an event\n\n1. Add a **when sprite touches sprite** block\n- Change the costumes on the block.\n- Then, add a fun celebration under the event.\n- Press the Play button to test it out! \n- **HINT:** The event block does not connect to the When Run program. Put it anywhere on the workspace!",
+        "showContinue": true
+      }
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

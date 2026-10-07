@@ -104,9 +104,12 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
-    "objectives": {
-      "title": "# Code the main character for your story\n\n1. Add new new sprite to your story.\n\n- Add a block so they say something!"
-    },
+    "guide_steps": [
+      {
+        "text": "# Code the main character for your story\n\n1. Add new new sprite to your story.\n\n- Add a block so they say something!",
+        "showContinue": true
+      }
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

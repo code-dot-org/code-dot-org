@@ -258,9 +258,12 @@
     "bubble_choice_description": "Make something happen at a specific time",
     "thumbnail_url": "https://images.code.org/d87a1c81d9e637d47936bde88c20cca3-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": null,\r\n    \"at\": null,\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "objectives": {
-      "title": "# Add an event\n\n1. Bring the at 5 seconds event block to your workspace.\n\n- Then, add a new sprite say block under the event\n- **Hint:** The event doesn't connect to the When Run program. It can go anywhere.\n- Press play to see the event in action."
-    },
+    "guide_steps": [
+      {
+        "text": "# Add an event\n\n1. Bring the at 5 seconds event block to your workspace.\n\n- Then, add a new sprite say block under the event\n- **Hint:** The event doesn't connect to the When Run program. It can go anywhere.\n- Press play to see the event in action.",
+        "showContinue": true
+      }
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 
