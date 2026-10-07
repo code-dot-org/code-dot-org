@@ -33,13 +33,15 @@ v6. A v7 kit is uploaded archive-only: `update.mjs` detects it, uploads, and lea
 
 Run `aws --version` and `aws sts get-caller-identity`. Any AWS identity works if it has `s3:PutObject` and
 `s3:ListBucket` on `cdo-dsco/assets/font-awesome-pro/*`. The script uses whatever credentials the CLI finds and
-prints the active identity before it uploads. The IAM role `Engineering_Contributor` is known to work; AWS
-profile names differ between workstations, so identify the role from the `get-caller-identity` ARN, not from a
-profile name. If another role gets AccessDenied, it needs those two permissions or should assume that role.
+prints the active identity before it uploads. Other engineering roles may well work, but they are untested:
+`Engineering_Contributor` is the only role confirmed so far. Use the operator's own role first, and identify it
+from the `get-caller-identity` ARN, since AWS profile names differ between workstations.
+If the upload fails with AccessDenied, the role lacks those permissions: ask in `#infrastructure` to grant them,
+or have the operator use a role known to work.
 
 Do not test for `s3:PutObject` by writing a test object to the bucket. The real upload is the test, and the
-script's `aws s3 ls` already proves `s3:ListBucket`. If the upload fails with AccessDenied, report it.
-If the checks above fail, tell the operator what is missing (CLI install, credentials, role).
+script's `aws s3 ls` already proves `s3:ListBucket`. If the checks above fail, tell the operator what is
+missing (CLI install, credentials, role).
 
 **GATE:** if it fails, ask whether to fix access now or continue with `--skip-upload` and upload by hand
 (step 5).
