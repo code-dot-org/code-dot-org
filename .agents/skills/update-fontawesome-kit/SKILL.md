@@ -21,22 +21,22 @@ What a finished update must contain (all of it, or the icons are not usable):
 
 ## Status
 
-The S3 upload and the post-upload checks (CORS, `curl` of the new URL) have never been run: the author had
-no bucket access. Everything else works with `--skip-upload`. After the first real run, delete this section
-and fix whatever broke.
+First real run (2026-10-07, v6 kit, `AWS_PROFILE=codeorg-contributor`) worked end to end: S3 upload, CORS
+headers, URL bumps and `kitIcons` rewrite. The icon regex needed fixing against the real `custom-icons.css`
+(`.fa-kit.fa-NAME`); if the added/removed lists look absurd, check it first.
 
 ## Steps
 
 ### 1. Operator downloads the kit (human only)
 
 Tell the operator: sign in to fontawesome.com with the shared dev account, open "Code.org FontAwesome Kit v6
-(Current)", Self-Host on the Web, "Download Web Files", and give you the zip path.
+(Current)" (the repo is on v6; a v7 kit is uploaded archive-only: `update.mjs` detects it, uploads, and leaves repo files alone), Self-Host on the Web, "Download Web Files", and give you the zip path.
 
 **GATE:** wait for the zip path. Check the file exists.
 
 ### 2. Check AWS access (you, then operator if it fails)
 
-Run `aws --version` and `aws sts get-caller-identity`. The role needs `s3:PutObject` and `s3:ListBucket` on
+Run `aws --version` and `aws sts get-caller-identity`. Use `AWS_PROFILE=codeorg-contributor` (role `Engineering_Contributor`). The role needs `s3:PutObject` and `s3:ListBucket` on
 `cdo-dsco/assets/font-awesome-pro/*`. If this fails, tell the operator what is missing (CLI install,
 credentials, `AWS_PROFILE`).
 

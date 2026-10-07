@@ -51,19 +51,25 @@ for (const f of fs.readdirSync(css)) {
   fs.writeFileSync(p, s);
 }
 
+const faCss = fs.readFileSync(path.join(css, 'fontawesome.css'), 'utf8');
+const major = faCss.includes('Font Awesome 6 Pro') ? 6 : faCss.includes('Font Awesome 7 Pro') ? 7 : 0;
+if (!major) throw new Error('fontawesome.css names neither Font Awesome 6 Pro nor 7 Pro');
+// The repo is on v6. A v7 kit is only archived in S3; no repo file points at it.
+const archiveOnly = major === 7;
+
 const customCss = fs.readFileSync(path.join(css, 'custom-icons.css'), 'utf8');
 const newIcons = new Set(
-  [...customCss.matchAll(/\.fa-([a-z0-9-]+)::?before/g)].map(m => m[1]),
+  [...customCss.matchAll(/\.fa-kit\.fa-([a-z0-9-]+)\s*[,{]/g)].map(m => m[1]),
 );
 const constSrc = fs.readFileSync(CONSTANTS, 'utf8');
 const oldIcons = new Set([...constSrc.matchAll(/^\s+'([^']+)',$/gm)].map(m => m[1]));
 const added = [...newIcons].filter(i => !oldIcons.has(i)).sort();
 const removed = [...oldIcons].filter(i => !newIcons.has(i)).sort();
-console.log(`timestamp: ${ts}\nadded: ${added.join(', ') || '-'}\nremoved: ${removed.join(', ') || '-'}`);
-if (newIcons.size === 0) throw new Error('parsed no icons from custom-icons.css; refusing to continue');
+console.log(`kit: Font Awesome ${major}${archiveOnly ? ' (archive only, repo files untouched)' : ''}\ntimestamp: ${ts}\nadded: ${added.join(', ') || '-'}\nremoved: ${removed.join(', ') || '-'}`);
+if (!archiveOnly && newIcons.size === 0) throw new Error('parsed no icons from custom-icons.css; refusing to continue');
 
 if (dry) {
-  console.log(`dry run: would sync to ${BUCKET}/${ts}/ and edit`, [...URL_FILES, CONSTANTS]);
+  console.log(`dry run: would sync to ${BUCKET}/${ts}/` + (archiveOnly ? '' : ' and edit'), archiveOnly ? '' : [...URL_FILES, CONSTANTS]);
   process.exit(0);
 }
 
@@ -73,6 +79,11 @@ if (skipUpload) {
   for (const d of [css, webfonts]) {
     execFileSync('aws', ['s3', 'sync', d, `${BUCKET}/${ts}/${path.basename(d)}/`], {stdio: 'inherit'});
   }
+}
+
+if (archiveOnly) {
+  console.log(`uploaded; v7 URL prefix: ${BASE}/${ts}/`);
+  process.exit(0);
 }
 
 for (const f of URL_FILES) {
