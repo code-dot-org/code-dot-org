@@ -96,7 +96,7 @@
     ],
     "guide_steps": [
       {
-        "text": "**Make your character the player.** Drag **set as player** onto the dotted outline under **when run** and pick your character. Click **Play**. Arrow keys: **left** and **right** to run, **up** to jump."
+        "text": "**Make your character the player.** Drag **set as player** onto the dotted outline under **when run**. Click **Play**. Arrow keys: **left** and **right** to run, **up** to jump."
       },
       {
         "text": "**You're in control!** Click **Continue**.",
