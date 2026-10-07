@@ -229,6 +229,16 @@ class QuizTest < ActiveSupport::TestCase
     assert_empty quiz.placements
   end
 
+  test "import_question_placements! leaves existing placements alone when question_placements is nil" do
+    quiz = create(:quiz)
+    placement = create(:quiz_question_placement, level: quiz)
+    quiz.question_placements = nil
+
+    quiz.import_question_placements!
+
+    assert_equal placement.id, quiz.placements.first.id
+  end
+
   test "import_question_placements! raises on an unresolvable question_key" do
     quiz = create(:quiz)
     quiz.question_placements = [{'question_key' => 'not-a-real-key', 'page' => 1, 'position' => 1}]

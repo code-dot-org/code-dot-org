@@ -68,9 +68,13 @@ class Quiz < Level
   # imported into QuizQuestionPlacement rows (what's actually
   # persisted). This deletes and recreates rather than updating in place.
   def import_question_placements!
-    questions_by_key = QuizQuestion.where(key: (question_placements || []).map {|entry| entry['question_key']}).index_by(&:key)
+    # We leave existing placements alone if serialized question_placements is nil
+    # in order to avoid accidentally deleting all existing placements.
+    return if question_placements.nil?
 
-    desired = (question_placements || []).map do |entry|
+    questions_by_key = QuizQuestion.where(key: question_placements.map {|entry| entry['question_key']}).index_by(&:key)
+
+    desired = question_placements.map do |entry|
       question = questions_by_key[entry['question_key']]
       raise "quiz #{name.dump}: unknown question_key #{entry['question_key'].dump}" unless question
       {quiz_question_id: question.id, page: entry['page'], position: entry['position']}
