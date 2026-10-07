@@ -10,7 +10,7 @@ describe('SketchCaptureError', () => {
     expect(error.details).toEqual({reason: 'tainted canvas', imageWidth: 100});
   });
 
-  it('describes an image load Event with a truncated source', () => {
+  it('logs the MIME type of a failing data URL image', () => {
     const image = document.createElement('img');
     const source = `data:image/svg+xml;charset=utf-8,${'a'.repeat(200)}`;
     image.src = source;
@@ -21,8 +21,33 @@ describe('SketchCaptureError', () => {
 
     expect(error.details).toEqual({
       reason: 'error loading IMG',
-      source: source.slice(0, 64),
+      sourceScheme: 'data',
+      sourceMimeType: 'image/svg+xml',
       sourceLength: source.length,
+    });
+  });
+
+  it('logs only the scheme of a failing remote image', () => {
+    const image = document.createElement('img');
+    const source = 'https://example.com/v3/assets/private/cat.png?sig=secret';
+    image.src = source;
+    const event = new Event('error');
+    image.dispatchEvent(event);
+
+    expect(new SketchCaptureError(event, {}).details).toEqual({
+      reason: 'error loading IMG',
+      sourceScheme: 'https',
+      sourceLength: source.length,
+    });
+  });
+
+  it('names a target that is not an element', () => {
+    const reader = new FileReader();
+    const event = new Event('error');
+    reader.dispatchEvent(event);
+
+    expect(new SketchCaptureError(event, {}).details).toEqual({
+      reason: 'error loading FileReader',
     });
   });
 

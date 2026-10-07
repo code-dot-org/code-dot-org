@@ -14,7 +14,7 @@ const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
-const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
+export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
 
 export const createSketchSnapshotBlob = async (
   reactFlow: ReactFlowInstance | null

@@ -1,7 +1,26 @@
 // Format sketch lab errors in a consistent structure for logging and reporting.
 // Specifically helps with Safari.
 
-const SOURCE_PREVIEW_LENGTH = 64;
+// Only the scheme and MIME type are logged: a full src can hold user asset paths.
+const describeSource = (source: string): Record<string, unknown> => {
+  const dataMimeType = /^data:([^;,]*)/.exec(source)?.[1];
+  if (dataMimeType !== undefined) {
+    return {
+      sourceScheme: 'data',
+      sourceMimeType: dataMimeType || 'unknown',
+      sourceLength: source.length,
+    };
+  }
+  const scheme = /^([a-z][a-z0-9+.-]*):/i.exec(source)?.[1];
+  return {sourceScheme: scheme ?? 'relative', sourceLength: source.length};
+};
+
+const describeTarget = (target: EventTarget | null): string => {
+  if (target instanceof Element) {
+    return target.tagName;
+  }
+  return target?.constructor?.name ?? 'unknown target';
+};
 
 // html-to-image rejects with a bare Event when an image fails to load.
 const describeCause = (cause: unknown): Record<string, unknown> => {
@@ -9,15 +28,11 @@ const describeCause = (cause: unknown): Record<string, unknown> => {
     return {reason: cause.message};
   }
   if (cause instanceof Event) {
-    const target = cause.target as HTMLImageElement | null;
-    const source = target?.src;
+    const {target} = cause;
     return {
-      reason: `${cause.type} loading ${target?.tagName ?? 'element'}`,
-      ...(source
-        ? {
-            source: source.slice(0, SOURCE_PREVIEW_LENGTH),
-            sourceLength: source.length,
-          }
+      reason: `${cause.type} loading ${describeTarget(target)}`,
+      ...(target instanceof HTMLImageElement && target.src
+        ? describeSource(target.src)
         : {}),
     };
   }
