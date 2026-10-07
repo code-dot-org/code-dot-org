@@ -72,6 +72,18 @@ All of it is silent except the drop itself, which is the one undo step a
 move always was. A section dragged in fresh from the toolbox is handled the
 same way, since a hat dragged out is a top block being placed.
 
+## The definition stays first — BUILT
+
+`define actor`, `define world`, `define rule` and `define map` are what
+their file is, so the block is held first and in place: it cannot be
+dragged or deleted, the layout puts it at the top whatever else says, and
+while another section is dragged no gap opens above it (`pinnedRoots`). A
+rule's traits and an actor's handlers move freely below it.
+
+Imperative, as a body surface's head is: Blockly writes `movable: false`
+and `deletable: false` into what it saves for such a block, and every save
+takes them back out (`withoutPins`), so the file says what it did before.
+
 ## Order of work
 
 1. **The index.** `workspaceIndex` over live blocks and unbuilt bodies; the

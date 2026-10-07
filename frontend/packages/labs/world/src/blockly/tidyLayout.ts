@@ -118,8 +118,14 @@ export function orderKeys(
   boxes: readonly Box[],
   placed: ReadonlyMap<string, number>,
   moved: ReadonlySet<string>,
+  pinned: ReadonlySet<string> = new Set(),
 ): number[] {
   return ids.map((id, index) => {
+    // The definition the file is about is first, whatever else says
+    // (`pinnedRoots`).
+    if (pinned.has(id)) {
+      return -Infinity;
+    }
     const held = placed.get(id);
     // A block placed by where it is goes BEFORE a block placed at that same
     // spot: an undone delete comes back at its old position, which is now

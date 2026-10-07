@@ -103,6 +103,7 @@ import {
   setModuleOpeningOffered,
 } from './openModule';
 import {PasteAcrossTabsPlugin} from './pasteShortcut';
+import {isPinnedRoot, pinRoots, withoutPins} from './pinnedRoots';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {setProjectImages} from './projectImages';
 import {
@@ -332,6 +333,9 @@ const tidyTopBlocks = (
       boxes,
       memory.placed,
       memory.moved,
+      new Set(
+        tops.filter(block => isPinnedRoot(block.type)).map(block => block.id),
+      ),
     ),
   );
   memory.placed = new Map(
@@ -879,9 +883,11 @@ export const BlocklyFileEditor = ({
     (workspace: Blockly.Workspace) => {
       // …with every collapsed body put back where it was taken from: the file
       // a collapsed workspace writes is the file a built one would.
-      const saved = spliceBodies(
-        Blockly.serialization.workspaces.save(workspace) as LazyDocument,
-        bodies,
+      const saved = withoutPins(
+        spliceBodies(
+          Blockly.serialization.workspaces.save(workspace) as LazyDocument,
+          bodies,
+        ) as never,
       ) as unknown as BlocklySerialization;
       return withDocumentExtras(
         HIDE_BODIES ? seam.read(saved) : saved,
@@ -920,9 +926,11 @@ export const BlocklyFileEditor = ({
     // property since, and going back should show what they left.
     // With the collapsed bodies put back: going Back strips them out again,
     // and a save made from the body surface writes the interface whole.
-    interfaceRef.current = spliceBodies(
-      Blockly.serialization.workspaces.save(workspace) as LazyDocument,
-      bodies,
+    interfaceRef.current = withoutPins(
+      spliceBodies(
+        Blockly.serialization.workspaces.save(workspace) as LazyDocument,
+        bodies,
+      ) as never,
     ) as unknown as BlocklySerialization;
     // `define block` has no NAME field — what it is called is the signature
     // the learner designed, which is where every other reader of the file gets
@@ -1301,6 +1309,8 @@ export const BlocklyFileEditor = ({
         return;
       }
       const tops = workspace.getTopBlocks(false);
+      // The file's own definition stays first and in place (`pinnedRoots`).
+      pinRoots(tops);
       syncBodyToggles(
         tops as never,
         id => bodies.has(id),
@@ -1451,6 +1461,8 @@ export const BlocklyFileEditor = ({
     /** How far the column is shifted to stay beside the dragged header. */
     offset: number | null;
     frame: number;
+    /** How many headers at the top nothing may go above. */
+    pinned: number;
   } | null>(null);
   /** The top block just dropped, whose own move is the drop and not a move. */
   const droppedRef = useRef<string | null>(null);
@@ -1477,7 +1489,11 @@ export const BlocklyFileEditor = ({
       }
       const others = tops
         .filter(top => top.id !== dragged.id)
-        .sort((a, b) => placeOf(a) - placeOf(b));
+        .sort(
+          (a, b) =>
+            Number(isPinnedRoot(b.type)) - Number(isPinnedRoot(a.type)) ||
+            placeOf(a) - placeOf(b),
+        );
       const startIndex = others.filter(
         top => placeOf(top) < placeOf(dragged),
       ).length;
@@ -1488,6 +1504,7 @@ export const BlocklyFileEditor = ({
         gap: startIndex,
         offset: null as number | null,
         frame: 0,
+        pinned: others.filter(top => isPinnedRoot(top.type)).length,
       };
       reorderRef.current = held;
       const step = () => {
@@ -1518,7 +1535,11 @@ export const BlocklyFileEditor = ({
             y: y + held.offset!,
             height: heights[index],
           }));
-          const gap = gapIndexFor(resting, {y: at.y, height: draggedHeight});
+          // Never above the file's own definition, which stays first.
+          const gap = Math.max(
+            held.pinned,
+            gapIndexFor(resting, {y: at.y, height: draggedHeight}),
+          );
           if (gap !== held.gap) {
             held.gap = gap;
             const places = headerPlaces(heights, gap, draggedHeight);
@@ -1564,7 +1585,9 @@ export const BlocklyFileEditor = ({
       const order = [...held.others];
       if (block) {
         order.splice(
-          held.gap < 0 ? order.length : Math.min(held.gap, order.length),
+          held.gap < 0
+            ? order.length
+            : Math.min(Math.max(held.gap, held.pinned), order.length),
           0,
           held.id,
         );
