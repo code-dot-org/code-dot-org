@@ -24,9 +24,9 @@ class QuizQuestionPlacement < ApplicationRecord
 
   validates :position, presence: true
 
-  after_commit :save_to_quiz!
+  after_commit :write_quiz_level_file
 
-  private def save_to_quiz!
-    level.save_question_placements! if level.is_a?(Quiz) && !level.destroyed?
+  private def write_quiz_level_file
+    Services::LevelFiles.write_custom_level_file(level) if level.is_a?(Quiz) && !level.destroyed?
   end
 end

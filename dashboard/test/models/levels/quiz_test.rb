@@ -172,20 +172,34 @@ class QuizTest < ActiveSupport::TestCase
     assert_equal 1, first.placements.count
   end
 
-  test "save_question_placements! reflects current placements, ordered by page then position" do
+  test "to_xml writes question_placements from placement rows, ordered by page then position" do
     quiz = create(:quiz)
     second = create(:quiz_question_placement, level: quiz, page: 1, position: 2)
     first = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
 
-    quiz.save_question_placements!
+    config = JSON.parse(Nokogiri::XML(quiz.reload.to_xml).at('config').text)
 
     assert_equal(
       [
         {'question_key' => first.quiz_question.key, 'page' => 1, 'position' => 1},
         {'question_key' => second.quiz_question.key, 'page' => 1, 'position' => 2},
       ],
-      quiz.reload.question_placements
+      config['question_placements']
     )
+    refute config['properties'].key?('question_placements')
+  end
+
+  test "placements round-trip through the .level file" do
+    quiz = create(:quiz)
+    placement = create(:quiz_question_placement, level: quiz, page: 2, position: 1)
+    xml = quiz.reload.to_xml
+    quiz.placements.delete_all
+
+    loaded = Services::LevelFiles.load_custom_level_xml(xml, Level.find(quiz.id))
+    loaded.import_question_placements!
+
+    assert_equal [[placement.quiz_question_id, 2, 1]], (loaded.reload.placements.map {|p| [p.quiz_question_id, p.page, p.position]})
+    refute loaded.properties.key?('question_placements')
   end
 
   test "import_question_placements! creates placements from question_placements" do

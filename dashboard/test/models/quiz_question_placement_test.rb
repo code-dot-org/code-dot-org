@@ -20,32 +20,29 @@ class QuizQuestionPlacementTest < ActiveSupport::TestCase
     end
   end
 
-  test "creating a placement refreshes the quiz's question_placements property" do
+  test "creating a placement rewrites the quiz's .level file" do
     quiz = create(:quiz)
     question = create(:quiz_question)
+    Services::LevelFiles.expects(:write_custom_level_file).with(quiz)
 
     create(:quiz_question_placement, level: quiz, quiz_question: question, page: 1, position: 1)
-
-    assert_equal [{'question_key' => question.key, 'page' => 1, 'position' => 1}], quiz.reload.question_placements
   end
 
-  test "destroying a placement refreshes the quiz's question_placements property" do
+  test "destroying a placement rewrites the quiz's .level file" do
     quiz = create(:quiz)
     placement = create(:quiz_question_placement, level: quiz)
+    Services::LevelFiles.expects(:write_custom_level_file).with(quiz)
 
     placement.destroy!
-
-    # nil, not [] - SerializedProperties strips blank values before save, and
-    # an empty array is blank.
-    assert_nil quiz.reload.question_placements
   end
 
-  test "does nothing when the placement's level isn't a Quiz" do
+  test "does not write a level file when the placement's level isn't a Quiz" do
     level = create(:level)
     # Built directly - the factory's `level factory: :quiz` default would
     # defeat the point of this test.
     placement = QuizQuestionPlacement.new(level: level, quiz_question: create(:quiz_question), page: 1, position: 1)
+    Services::LevelFiles.expects(:write_custom_level_file).never
 
-    assert_nothing_raised {placement.save!}
+    placement.save!
   end
 end

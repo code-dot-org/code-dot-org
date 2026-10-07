@@ -38,9 +38,12 @@ class Quiz < Level
     show_intro_screen
     allow_multiple_attempts
     max_attempts
-    question_placements
     show_questions_after_submit
   )
+
+  # Placements read from a .level file, pending import_question_placements!.
+  # Never persisted: QuizQuestionPlacement rows are the only stored copy.
+  attr_accessor :question_placements
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
   validates :purpose, inclusion: {in: PURPOSES}, allow_nil: true
@@ -63,11 +66,10 @@ class Quiz < Level
     levels.each {|level| level.import_question_placements! if level.is_a?(Quiz)}
   end
 
-  # Replace this Quiz's QuizQuestionPlacement database rows with the list from its question_placements serialized attribute.
-  # This method is called when importing question placements from the .level file.
+  # Replaces this Quiz's QuizQuestionPlacement rows with the question_placements
+  # list loaded from its .level file.
   def import_question_placements!
-    # We leave existing placements alone if serialized question_placements is nil
-    # in order to avoid accidentally deleting all existing placements.
+    # nil means the file had no list, not an empty one; leave existing rows alone.
     return if question_placements.nil?
 
     questions_by_key = QuizQuestion.where(key: question_placements.map {|entry| entry['question_key']}).index_by(&:key)
@@ -81,24 +83,23 @@ class Quiz < Level
     existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
     return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
 
-    # Using insert_all bypasses QuizQuestionPlacement callbacks,
-    # which would circularly trigger the after commit callback that writes question_placements back to the quiz.
+    # insert_all skips QuizQuestionPlacement's after_commit, which would
+    # rewrite this quiz's .level file once per row.
     placements.delete_all
     QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
     placements.reset
   end
 
-  def save_question_placements!
-    with_lock do
-      self.question_placements = placements.includes(:quiz_question).map do |placement|
-        {
-          'question_key' => placement.quiz_question.key,
-          'page' => placement.page,
-          'position' => placement.position,
-        }
-      end
-      save!
+  # The .level file carries the placements, built from the rows on each write.
+  def filter_level_attributes(level_hash)
+    level_hash['question_placements'] = placements.includes(:quiz_question).map do |placement|
+      {
+        'question_key' => placement.quiz_question.key,
+        'page' => placement.page,
+        'position' => placement.position,
+      }
     end
+    super
   end
 
   def self.create_from_level_builder(params, level_params)
