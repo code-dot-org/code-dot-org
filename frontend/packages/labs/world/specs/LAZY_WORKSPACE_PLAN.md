@@ -126,7 +126,7 @@ margin down (`tidyLayout.gapCenters`).
 ## Jumping to a section — BUILT
 
 Collapsed, a file reads as a list of headers; a long one still had to be
-scrolled to find the handler wanted. A Sections button over the workspace's
+scrolled to find the handler wanted. A "Jump to…" button over the workspace's
 top right corner lists them in the column's order, each named as its
 header reads (`sectionOutline`): its words, the shown text of its
 dropdowns, and what sits in its sockets, but not its body. Picking one

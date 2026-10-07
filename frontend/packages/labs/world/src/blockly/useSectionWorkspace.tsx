@@ -948,7 +948,7 @@ export function useSectionWorkspace({
         aria-expanded={outline !== null}
         onClick={event => openOutline(event.currentTarget)}
       >
-        Sections
+        Jump to…
       </Button>
       <Menu
         open={outline !== null}
