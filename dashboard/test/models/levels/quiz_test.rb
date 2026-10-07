@@ -246,6 +246,17 @@ class QuizTest < ActiveSupport::TestCase
     assert_raises(RuntimeError) {quiz.import_question_placements!}
   end
 
+  test "import_question_placements! raises rather than silently dropping a duplicate question_key" do
+    quiz = create(:quiz)
+    question = create(:quiz_question)
+    quiz.question_placements = [
+      {'question_key' => question.key, 'page' => 1, 'position' => 1},
+      {'question_key' => question.key, 'page' => 1, 'position' => 2},
+    ]
+
+    assert_raises(ActiveRecord::RecordNotUnique) {quiz.import_question_placements!}
+  end
+
   test "import_question_placements_for calls import_question_placements! on each quiz" do
     quiz = create(:quiz)
     question = create(:quiz_question)

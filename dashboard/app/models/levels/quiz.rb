@@ -86,7 +86,7 @@ class Quiz < Level
     # Using insert_all bypasses QuizQuestionPlacement callbacks,
     # which would circularly trigger the after commit callback that writes question_placements back to the quiz.
     placements.delete_all
-    QuizQuestionPlacement.insert_all(desired.map {|d| d.merge(level_id: id)}) if desired.any?
+    QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
     placements.reset
   end
 
