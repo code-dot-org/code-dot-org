@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
@@ -6,6 +6,24 @@ import {createStore} from 'redux';
 import I18n from '../../src/i18n';
 import rootReducer from '../../src/redux';
 import PredictionSentence from '../../src/UIComponents/PredictionSentence';
+
+let sentenceWidth;
+const resizeCallbacks = new Set();
+
+vi.stubGlobal(
+  'ResizeObserver',
+  class {
+    constructor(callback) {
+      this.callback = callback;
+    }
+    observe() {
+      resizeCallbacks.add(this.callback);
+    }
+    disconnect() {
+      resizeCallbacks.delete(this.callback);
+    }
+  },
+);
 
 function renderSentence(props) {
   return render(
@@ -18,13 +36,21 @@ function renderSentence(props) {
 }
 
 function layOutSentence(width) {
+  sentenceWidth = width;
   vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(
     function () {
       const right = this.textContent.length * 10;
       return {left: 0, top: 0, right, bottom: 0, width: right, height: 0};
     },
   );
-  vi.spyOn(HTMLElement.prototype, 'clientWidth', 'get').mockReturnValue(width);
+  vi.spyOn(HTMLElement.prototype, 'clientWidth', 'get').mockImplementation(
+    () => sentenceWidth,
+  );
+}
+
+function resizeSentence(width) {
+  sentenceWidth = width;
+  act(() => resizeCallbacks.forEach(callback => callback([])));
 }
 
 // Everything after the readable sentence, up to the measuring ruler.
@@ -96,8 +122,7 @@ describe('PredictionSentence', () => {
       screen.getByText('Predict species based on island, mass, sex'),
     ).toBeTruthy();
 
-    const overflowTag = screen.getByText('+1');
-    expect(overflowTag.tabIndex).toBe(0);
+    const overflowTag = screen.getByRole('button', {name: '+1'});
     fireEvent.mouseOver(overflowTag);
     expect((await screen.findByRole('tooltip')).textContent).toBe('sex');
   });
@@ -117,6 +142,37 @@ describe('PredictionSentence', () => {
       'island',
       'mass',
       'sex',
+    ]);
+  });
+
+  test('on a single line, refits as the sentence shrinks and grows', () => {
+    layOutSentence(200);
+    const {container} = renderSentence({
+      label: 'species',
+      features: ['island', 'mass', 'sex'],
+      singleLine: true,
+    });
+
+    resizeSentence(160);
+    expect(shownPieces(container).slice(3)).toEqual(['island', '+2']);
+
+    resizeSentence(1000);
+    expect(shownPieces(container).slice(3)).toEqual(['island', 'mass', 'sex']);
+  });
+
+  test('on a single line, sizes the overflow tag for the features it hides', () => {
+    // Thirteen 10px tags after "based on" at 80px; "+3" needs 20px, "+13" 30px.
+    layOutSentence(200);
+    const features = 'abcdefghijklm'.split('');
+    const {container} = renderSentence({
+      label: 'species',
+      features,
+      singleLine: true,
+    });
+
+    expect(shownPieces(container).slice(3)).toEqual([
+      ...features.slice(0, 10),
+      '+3',
     ]);
   });
 });

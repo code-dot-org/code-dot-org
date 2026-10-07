@@ -20,11 +20,13 @@ interface PredictionSentenceProps {
   className?: string;
 }
 
-// The ruler holds every feature tag, then the overflow tag at its widest.
+// The ruler holds every feature tag, then the overflow tags "+1" through
+// "+featureCount".
 function countFittingTags(
   row: HTMLElement,
   lead: HTMLElement,
   ruler: HTMLElement,
+  featureCount: number,
 ) {
   const rowStyle = getComputedStyle(row);
   const gap = parseFloat(rowStyle.columnGap) || 0;
@@ -32,19 +34,26 @@ function countFittingTags(
     ruler.children,
     tag => tag.getBoundingClientRect().width,
   );
-  const overflowTagWidth = widths.pop()!;
+  const tagWidths = widths.slice(0, featureCount);
+  const overflowTagWidths = widths.slice(featureCount);
   const rowBox = row.getBoundingClientRect();
   const leadBox = lead.getBoundingClientRect();
   let end =
     rowStyle.direction === 'rtl'
       ? rowBox.right - leadBox.left
       : leadBox.right - rowBox.left;
-  const tagEnds = widths.map(width => (end += gap + width));
+  const shownEnds = [end, ...tagWidths.map(width => (end += gap + width))];
   if (end <= row.clientWidth) {
-    return widths.length;
+    return featureCount;
   }
-  const lastTagLimit = row.clientWidth - gap - overflowTagWidth;
-  return tagEnds.filter(tagEnd => tagEnd <= lastTagLimit).length;
+  const fitsWithOverflowTag = (shown: number) =>
+    shownEnds[shown] + gap + overflowTagWidths[featureCount - shown - 1] <=
+    row.clientWidth;
+  let shown = featureCount - 1;
+  while (shown > 0 && !fitsWithOverflowTag(shown)) {
+    shown--;
+  }
+  return shown;
 }
 
 const PredictionSentence = ({
@@ -78,7 +87,12 @@ const PredictionSentence = ({
     const row = rowRef.current!;
     const fit = () =>
       setFittingCount(
-        countFittingTags(row, leadRef.current!, rulerRef.current!),
+        countFittingTags(
+          row,
+          leadRef.current!,
+          rulerRef.current!,
+          features.length,
+        ),
       );
     fit();
     // Flushed, so a resize or a newly shown tab never paints a stale fit.
@@ -153,12 +167,15 @@ const PredictionSentence = ({
       {singleLine && (
         <span ref={rulerRef} aria-hidden="true" className={styles.ruler}>
           {features.map(featureTag)}
-          <SentenceTag
-            text={`+${features.length}`}
-            placeholder="feature"
-            variant="feature"
-            size={size}
-          />
+          {features.map((_, index) => (
+            <SentenceTag
+              key={index}
+              text={`+${index + 1}`}
+              placeholder="feature"
+              variant="feature"
+              size={size}
+            />
+          ))}
         </span>
       )}
     </div>
