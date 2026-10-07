@@ -132,12 +132,12 @@ class QuizQuestion < ApplicationRecord
 
   # Subtype-specific fields for the quiz builder, answer key included.
   def builder_content_json
-    {}
+    raise NotImplementedError, "#{self.class.name} must implement builder_content_json"
   end
 
   # Subtype-specific fields for a student attempt; must never include the answer key.
   def attempt_content_json
-    {}
+    raise NotImplementedError, "#{self.class.name} must implement attempt_content_json"
   end
 
   # Shared by subtypes whose `content` includes a "choices" array. Returns
