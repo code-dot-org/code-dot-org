@@ -974,6 +974,59 @@ class FilesTest < FilesApiTestBase
     assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
   end
 
+  # --- POST /v3/images/caption ---
+
+  def test_caption_image_success
+    ImageCaption.expects(:caption_image).with('fake-png-bytes').returns('a red circle')
+
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/caption', 'fake-png-bytes'
+
+    assert successful?
+    assert_equal({'caption' => 'a red circle'}, JSON.parse(last_response.body))
+  end
+
+  def test_caption_image_answers_null_when_there_is_no_caption
+    # Captioning off, a low-confidence guess, or Azure unreachable all land
+    # here. None of them is an error: the student still has the description
+    # theater built from their own code.
+    ImageCaption.expects(:caption_image).returns(nil)
+
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/caption', 'fake-png-bytes'
+
+    assert successful?
+    assert_nil JSON.parse(last_response.body)['caption']
+  end
+
+  def test_caption_image_empty_body_returns_400
+    ImageCaption.expects(:caption_image).never
+
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/caption', ''
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
+  end
+
+  # --- GET /v3/images/caption/enabled ---
+
+  def test_caption_enabled_reports_the_flag
+    ImageCaption.expects(:enabled?).returns(true)
+    get '/v3/images/caption/enabled'
+    assert successful?
+    assert_equal({'enabled' => true}, JSON.parse(last_response.body))
+  end
+
+  def test_caption_enabled_reports_the_flag_when_off
+    # The page asks before it sends anything, so a false here is what keeps a
+    # student's rendered work inside the browser.
+    ImageCaption.expects(:enabled?).returns(false)
+    get '/v3/images/caption/enabled'
+    assert successful?
+    assert_equal({'enabled' => false}, JSON.parse(last_response.body))
+  end
+
   def test_moderate_image_url_success
     url = 'https://images.example.com/safe.png'
     moderation_result = {

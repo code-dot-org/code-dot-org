@@ -4,6 +4,7 @@ require 'cdo/web_purify'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
+require 'cdo/image_caption'
 require 'cdo/image_moderation'
 require 'cdo/safe_http'
 require 'net/http'
@@ -1207,6 +1208,38 @@ class FilesApi < Sinatra::Base
     status 400
     allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  end
+
+  #
+  # GET /v3/images/caption/enabled
+  #
+  # Whether captioning is on. The page asks before it posts, so with captioning
+  # off a student's rendered work never leaves the browser.
+  #
+  get %r{/v3/images/caption/enabled$} do
+    content_type :json
+    dont_cache
+    {enabled: ImageCaption.enabled?}.to_json
+  end
+
+  #
+  # POST /v3/images/caption
+  #
+  # Caption an image with Azure AI Vision, for Python Lab's theater.
+  # A caption the service cannot produce comes back as null, and theater reads
+  # its own description of the scene instead.
+  #
+  post %r{/v3/images/caption$} do
+    content_type :json
+    dont_cache
+
+    raw = request.body.read
+    if raw.empty?
+      status 400
+      return {error: 'No image data provided.'}.to_json
+    end
+
+    {caption: ImageCaption.caption_image(raw)}.to_json
   end
 
   def fetch_image_for_moderation(location, redirect_limit = 5)
