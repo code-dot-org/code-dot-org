@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
-import {setTestData} from '../../src/redux';
+import {setPredictionStep, setTestData} from '../../src/redux';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 
@@ -62,6 +62,16 @@ function focusRoot() {
   const [root] = screen.getAllByRole('treeitem');
   act(() => root.focus());
   return root;
+}
+
+function showStep(store, step) {
+  act(() => {
+    store.dispatch(setPredictionStep(step));
+  });
+}
+
+function marked(className) {
+  return [...document.getElementsByClassName(className)];
 }
 
 function slotPosition(node) {
@@ -132,6 +142,27 @@ describe('DecisionTree', () => {
     expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
       marked.slice(1),
     );
+  });
+
+  it('marks the path only up to the chosen step, and dashes the way on', () => {
+    predictSnake(store);
+    showStep(store, 0);
+
+    const edges = [...document.getElementsByTagName('path')];
+    const nextEdges = marked(moduleStyles.nextEdge);
+
+    expect(marked(moduleStyles.pathNode)).toHaveLength(1);
+    expect(slotPosition(marked(moduleStyles.pathNode)[0])[1]).toBe(0);
+    expect(marked(moduleStyles.pathEdge)).toHaveLength(0);
+    expect(nextEdges).toHaveLength(1);
+    expect(edges[edges.length - 1]).toBe(nextEdges[0]);
+    expect(marked(moduleStyles.nextBranch)).toHaveLength(1);
+
+    showStep(store, 1);
+
+    expect(marked(moduleStyles.pathNode)).toHaveLength(2);
+    expect(marked(moduleStyles.pathEdge)).toHaveLength(1);
+    expect(marked(moduleStyles.pathBranch)).toHaveLength(1);
   });
 
   it('is one tab stop, around the tree and its zoom buttons', () => {

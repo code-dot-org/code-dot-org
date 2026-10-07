@@ -1,5 +1,6 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
 import {Typography} from '@mui/material';
+import classNames from 'classnames';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {formatNumber, thresholdText} from '../helpers/displayTree';
@@ -7,7 +8,12 @@ import type {DisplayTreeStep} from '../helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
-import {getPredictionTrace} from '../selectors/visualizationSelectors';
+import {
+  getPredictionStep,
+  getPredictionTrace,
+} from '../selectors/visualizationSelectors';
+
+import TraceStepper from './TraceStepper';
 
 import styles from './predictionResult.module.scss';
 
@@ -16,6 +22,7 @@ const PredictionResult = () => {
   const labelColumn = useAppSelector(state => state.labelColumn || '');
   const predictedLabel = useAppSelector(getConvertedPredictedLabel);
   const trace = useAppSelector(getPredictionTrace);
+  const currentStep = useAppSelector(getPredictionStep);
 
   if (predictedLabel === undefined) {
     return null;
@@ -50,23 +57,36 @@ const PredictionResult = () => {
         AI predicts <strong>{predictionText}</strong>
       </Typography>
       {steps.length > 0 && (
-        // eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics
-        <ol role="list" className={styles.steps}>
-          {steps.map(({subject, condition}, index) => (
-            <li key={index} className={styles.step}>
-              <Typography
-                variant="label4"
-                aria-hidden="true"
-                className={styles.stepNumber}
+        <>
+          {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics */}
+          <ol role="list" className={styles.steps}>
+            {steps.map(({subject, condition}, index) => (
+              <li
+                key={index}
+                aria-current={index === currentStep ? 'step' : undefined}
+                className={classNames(styles.step, {
+                  [styles.currentStep]: index === currentStep,
+                })}
               >
-                {index + 1}
-              </Typography>
-              <Typography variant="body3" component="span">
-                {subject} is <strong>{condition}</strong>
-              </Typography>
-            </li>
-          ))}
-        </ol>
+                <Typography
+                  variant="label4"
+                  aria-hidden="true"
+                  className={styles.stepNumber}
+                >
+                  {index + 1}
+                </Typography>
+                <Typography variant="body3" component="span">
+                  {subject} is <strong>{condition}</strong>
+                </Typography>
+              </li>
+            ))}
+          </ol>
+          <TraceStepper
+            stepLabels={steps.map(
+              ({subject, condition}) => `${subject} is ${condition}`,
+            )}
+          />
+        </>
       )}
     </section>
   );

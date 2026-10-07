@@ -35,6 +35,7 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {
   getDisplayTree,
+  getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
 
@@ -87,12 +88,18 @@ interface DecisionTreeProps {
 const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const tree = useAppSelector(getDisplayTree);
   const trace = useAppSelector(getPredictionTrace);
+  const step = useAppSelector(getPredictionStep);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
     () => (tree ? layoutDisplayTree(tree) : undefined),
     [tree],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
+  const reachedIds = useMemo(
+    () => new Set(trace?.path.slice(0, step + 1)),
+    [trace, step],
+  );
+  const nextId = trace?.path[step + 1];
   const overlayRef = useRef<HTMLDivElement>(null);
   const enterHintId = useId();
   const keysHintId = useId();
@@ -182,9 +189,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     trace &&
     getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
 
-  // Path edges go last so a sibling edge cannot paint over the stub they share.
+  const isMarkedEdge = (id: string) => reachedIds.has(id) || id === nextId;
+
+  // Marked edges go last so a sibling edge cannot paint over the stub they share.
   const edgeOrder = [...layout.nodes].sort(
-    (a, b) => Number(pathIds.has(a.id)) - Number(pathIds.has(b.id)),
+    (a, b) => Number(isMarkedEdge(a.id)) - Number(isMarkedEdge(b.id)),
   );
 
   return (
@@ -244,7 +253,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                       key={placed.id}
                       d={edgePath(placed.parent, placed)}
                       className={classNames({
-                        [styles.pathEdge]: pathIds.has(placed.id),
+                        [styles.pathEdge]: reachedIds.has(placed.id),
+                        [styles.nextEdge]: placed.id === nextId,
                       })}
                     />
                   ),
@@ -301,7 +311,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     <div
                       title={branch}
                       className={classNames(styles.branch, {
-                        [styles.pathBranch]: pathIds.has(placed.id),
+                        [styles.pathBranch]: reachedIds.has(placed.id),
+                        [styles.nextBranch]: placed.id === nextId,
                       })}
                     >
                       {label.sign && `${label.sign} `}
@@ -311,7 +322,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   <div
                     title={text}
                     className={classNames(styles.node, kind, {
-                      [styles.pathNode]: pathIds.has(placed.id),
+                      [styles.pathNode]: reachedIds.has(placed.id),
                     })}
                   >
                     <span id={textId(placed.id)} className={styles.nodeText}>

@@ -66,4 +66,19 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
   border-radius: var(--shape-round);
   background-color: var(--background-neutral-tertiary);
   color: var(--text-neutral-secondary);
+  transition:
+    background-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.currentStep .stepNumber {
+  background-color: var(--background-neutral-primary);
+  box-shadow: 0 0 0 1.5px var(--border-selected-primary);
+  color: var(--text-neutral-primary);
+}
+
+@media (forced-colors: active) {
+  .currentStep .stepNumber {
+    outline: 2px solid;
+  }
 }
