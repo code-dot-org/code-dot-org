@@ -8,6 +8,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setCurrentPanel, setTrainingModalStep} from '../redux';
+import train from '../train';
 
 import GenerateResults from './GenerateResults';
 import TrainModel from './TrainModel';
@@ -20,6 +21,7 @@ const TITLE_ID = 'training-modal-title';
 const TrainingModal = () => {
   const dispatch = useAppDispatch();
   const step = useAppSelector(state => state.trainingModalStep);
+  const isReplay = useAppSelector(state => state.isTrainingReplay);
   const [testingFinished, setTestingFinished] = useState(false);
 
   // This component stays mounted between runs, so each run starts over.
@@ -34,7 +36,13 @@ const TrainingModal = () => {
   }
 
   const isTraining = step === 'training';
-  const closeModal = () => dispatch(setTrainingModalStep(undefined));
+  const isInProgress = !isReplay && (isTraining || !testingFinished);
+  const closeModal = () => {
+    if (isInProgress) {
+      train.cancel();
+    }
+    dispatch(setTrainingModalStep(undefined));
+  };
   const showTesting = () => dispatch(setTrainingModalStep('testing'));
   const showResults = () => dispatch(setCurrentPanel('results'));
 
@@ -43,7 +51,7 @@ const TrainingModal = () => {
       className={styles.dialog}
       aria-labelledby={TITLE_ID}
       onClose={closeModal}
-      closeLabel="Close"
+      closeLabel={isInProgress ? 'Cancel' : 'Close'}
     >
       <div className={styles.titleRow}>
         <Typography
@@ -72,7 +80,7 @@ const TrainingModal = () => {
       </div>
       <div className={styles.actionRow}>
         <Button variant="outlined" color="secondary" onClick={closeModal}>
-          Back to dataset
+          {isInProgress ? 'Cancel' : 'Back to dataset'}
         </Button>
         <Button
           variant="contained"
