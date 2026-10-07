@@ -86,6 +86,19 @@ describe('TrainingResultCard', () => {
     expect(accuracy()).not.toBeNull();
   });
 
+  test('takes focus when the training modal closes and focus was lost', () => {
+    const store = renderCard();
+    act(() => {
+      store.dispatch(setTrainingModalStep('training'));
+    });
+    act(() => {
+      store.dispatch(setTrainingModalStep(undefined));
+    });
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'Test model'}),
+    );
+  });
+
   test('stays hidden while the training modal is open', () => {
     const store = renderCard();
     act(() => {
