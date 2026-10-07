@@ -26,13 +26,13 @@ $button-clearance: 40px;
 .edge {
   vector-effect: non-scaling-stroke;
   fill: none;
-  stroke: var(--border-neutral-secondary);
+  stroke: var(--background-neutral-septenary);
 }
 
 .question {
   vector-effect: non-scaling-stroke;
   fill: var(--background-neutral-primary);
-  stroke: var(--border-neutral-secondary);
+  stroke: var(--background-neutral-septenary);
 }
 
 @for $index from 1 through list.length($leaf-colors) {
