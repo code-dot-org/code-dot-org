@@ -225,7 +225,10 @@ export function gapCenters(
   }
   const centers: number[] = [];
   if (!firstIsPinned) {
-    centers.push(ordered[0].y - GAP / 2);
+    // Half the gap above the first, but never closer to the canvas's top
+    // edge than half the margin: the view scrolls no higher than the edge,
+    // and a "+" at the top of the column was drawn cut in half.
+    centers.push(Math.max(ordered[0].y - GAP / 2, ORIGIN.y / 2));
   }
   ordered.forEach((section, index) => {
     const bottom = section.y + section.height;

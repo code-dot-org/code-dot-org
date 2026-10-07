@@ -1,4 +1,4 @@
-import {Button, ListSubheader, Menu, MenuItem, Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
@@ -10,6 +10,7 @@ import {
   TopLeftMetricsManager,
   TriangleInputPlugin,
   type BlocklySerialization,
+  type Toolbox,
 } from '@code-dot-org/blockly';
 import DisableOrphansPlugin from '@code-dot-org/blockly/plugins/disableOrphans';
 import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
@@ -59,15 +60,12 @@ import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 import {refreshActorPictures} from './actorAbout';
 import {projectActorIcons} from './actorIconMeta';
 import {addActorThumbnails, setActorIcons} from './actorThumbnails';
-import {clearAddButtons, drawAddButtons} from './addSectionButtons';
 import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
-import {syncBodyToggles} from './bodyToggle';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {movedItself} from './editorEvents';
-import {eventChoicesIn, type EventChoice} from './eventChoices';
 import {refreshBlockDesigns} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
@@ -76,21 +74,6 @@ import {setSimpleColors} from './fields/FieldColorPicker';
 import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
 import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
-import {
-  bodyWithoutVariable,
-  collapsedByFile,
-  collapseTop,
-  COLLAPSE_ABOVE,
-  documentSize,
-  expandHolding,
-  expandTop,
-  hasBuiltBody,
-  putBody,
-  spliceBodies,
-  statementInputsOf,
-  stripBodies,
-  type Document as LazyDocument,
-} from './lazyBodies';
 import {registerLessonButtons} from './lessonFlyoutButton';
 import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
 import {
@@ -105,7 +88,6 @@ import {
   setModuleOpeningOffered,
 } from './openModule';
 import {PasteAcrossTabsPlugin} from './pasteShortcut';
-import {isPinnedRoot, pinRoots, withoutPins} from './pinnedRoots';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {setProjectImages} from './projectImages';
 import {
@@ -135,27 +117,12 @@ import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
 import {
-  arrangeTopBlocks,
-  COLUMN_GAP,
-  COLUMN_X,
-  gapCenters,
-  gapIndexFor,
-  headerPlaces,
-  isFreeFloating,
-  orderKeys,
-  placesOfDocument,
-} from './tidyLayout';
-import {
   withoutBlocks,
   withoutCategories,
   withoutEmptyHeadings,
 } from './toolboxFilter';
 import {DesignSystemToolboxPlugin} from './toolboxStyle';
-import {
-  bindUnbuiltBodies,
-  type SerializedBlock,
-  type UnbuiltBodies,
-} from './workspaceIndex';
+import {useSectionWorkspace} from './useSectionWorkspace';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -287,112 +254,6 @@ function parseWorkspace(contents: string): BlocklySerialization {
     return {};
   }
 }
-
-/**
- * Put every top block where the column layout says, using sizes only the
- * renderer knows (`blockly/tidyLayout`, specs/LAZY_WORKSPACE_PLAN.md).
- *
- * ALWAYS, and after every edit. The workspace is its top blocks in columns,
- * and where a block sits is the layout's to say: a handler dropped between two
- * others is put between them and the rest move down, and a stack that grows
- * pushes down what is below it. Only the ORDER is the learner's, read off
- * where they put things.
- *
- * WITH EVENTS OFF. A `BLOCK_MOVE` is an edit: it dirties the project, rewrites
- * the file and restarts the running world, and it is an undo step. Opening a
- * file is not editing it, and neither is the layout catching up with an edit
- * — so the moves are silent, and the file keeps its positions until the
- * learner's next edit saves the workspace as it stands. The order those
- * positions read in is the order the layout made, so a file reopens as it
- * was left.
- */
-/**
- * The add-a-section menu's rows: each event under the drawer it is in.
- *
- * Flat, headings and items side by side, because a menu's children have to
- * be its rows — a fragment around a group is one child to it.
- */
-const eventMenuItems = (
-  choices: readonly EventChoice[],
-  onPick: (type: string) => void,
-) => {
-  const rows: JSX.Element[] = [];
-  let drawer = '';
-  for (const choice of choices) {
-    if (choice.drawer !== drawer) {
-      drawer = choice.drawer;
-      rows.push(
-        <ListSubheader key={`drawer:${drawer}`}>{drawer}</ListSubheader>,
-      );
-    }
-    rows.push(
-      <MenuItem key={choice.type} dense onClick={() => onPick(choice.type)}>
-        {choice.label}
-      </MenuItem>,
-    );
-  }
-  return rows;
-};
-
-/** Where the layout put each top block, and which the learner has moved. */
-interface LayoutMemory {
-  placed: Map<string, number>;
-  moved: Set<string>;
-}
-
-const tidyTopBlocks = (
-  workspace: Blockly.WorkspaceSvg,
-  memory: LayoutMemory,
-): void => {
-  const tops = workspace.getTopBlocks(false);
-  if (tops.length === 0) {
-    return;
-  }
-  const boxes = tops.map(block => {
-    const corner = block.getRelativeToSurfaceXY();
-    // The block AND the stack under it: a handler is one top block and a dozen
-    // rows, and it is the dozen rows that decide where the next one goes.
-    const size = block.getHeightWidth();
-    return {x: corner.x, y: corner.y, width: size.width, height: size.height};
-  });
-  // Each block keeps its place; only one the learner moved is placed by where
-  // it now is (`tidyLayout.orderKeys`).
-  const places = arrangeTopBlocks(
-    boxes,
-    orderKeys(
-      tops.map(block => block.id),
-      boxes,
-      memory.placed,
-      memory.moved,
-      new Set(
-        tops.filter(block => isPinnedRoot(block.type)).map(block => block.id),
-      ),
-    ),
-  );
-  memory.placed = new Map(
-    tops.map((block, index) => [block.id, places[index].y]),
-  );
-  memory.moved.clear();
-  if (
-    places.every(
-      (place, index) =>
-        place.x === boxes[index].x && place.y === boxes[index].y,
-    )
-  ) {
-    return;
-  }
-  Blockly.Events.disable();
-  try {
-    tops.forEach((block, index) => {
-      block.moveBy(
-        places[index].x - boxes[index].x,
-        places[index].y - boxes[index].y,
-      );
-    });
-  } finally {
-    Blockly.Events.enable();
-  }
-};
 
 export const BlocklyFileEditor = ({
   fileId,
@@ -824,84 +685,36 @@ export const BlocklyFileEditor = ({
   // argument is evaluated on every render and only the first result kept, so
   // the split would re-run and remint the ids its bodies are keyed by while
   // the workspace kept the first set.
-  /**
-   * Where the layout put each top block, and which the learner has moved
-   * since (`tidyLayout.orderKeys`). Seeded from the file as it was saved, and
-   * kept across this editor's reloads — a font arriving or the way Back from
-   * a body surface reloads the blocks, and the order must not come from
-   * positions Blockly has had its hands on in between.
-   */
-  const layoutMemory = useRef<LayoutMemory>({
-    placed: new Map(),
-    moved: new Set(),
+  /** Which surface the workspace is actually showing. */
+  const surfaceRef = useRef<string | null>(null);
+  /** The toolbox of the surface shown, for the add-a-section menu. */
+  const surfaceToolboxRef = useRef<Toolbox>([]);
+  // THE FILE AS SECTIONS (`useSectionWorkspace`, specs/LAZY_WORKSPACE_PLAN.md):
+  // its top blocks in a column, collapsible, reordered by dragging, added
+  // from the "+" between them. Not on a body surface, which is one member's
+  // implementation.
+  const sections = useSectionWorkspace({
+    memoryKey: fileId,
+    definitions: blocks,
+    getToolbox: () => surfaceToolboxRef.current,
+    isReadOnly,
+    workspaceRef,
+    isShowingSections: () => surfaceRef.current === null,
   });
-  /** Remember a document's order, unless every top block in it is known. */
-  const rememberOrder = useCallback((document: BlocklySerialization) => {
-    const tops = ((document as unknown as LazyDocument).blocks?.blocks ??
-      []) as Array<{id?: string; x?: number; y?: number}>;
-    const memory = layoutMemory.current;
-    if (tops.every(top => top.id && memory.placed.has(top.id))) {
-      return;
-    }
-    memory.placed = placesOfDocument(tops);
-    memory.moved.clear();
-  }, []);
-
-  // THE BODIES HELD UNBUILT, by top block id (`lazyBodies`,
-  // specs/LAZY_WORKSPACE_PLAN.md). The editor's own store, bound to the
-  // workspace as it is injected — before the file is loaded, since loading
-  // builds dropdowns that ask the index what the file declares.
-  const [bodies] = useState<UnbuiltBodies>(() => new Map());
-  /** Bodies of top blocks deleted while collapsed, so undo can return them. */
-  const deletedBodies = useRef<UnbuiltBodies>(new Map());
-  /** Which inputs of each type are mouths: what a body is, besides `next`. */
-  const statementInputs = useMemo(() => statementInputsOf(blocks), [blocks]);
-
-  /**
-   * A document as the workspace should show it: the bodies of the top blocks
-   * held collapsed taken out, and the store brought up to date with what the
-   * document says they hold. A collapsed block whose body the document does
-   * not carry — one already taken out — keeps the body the store has.
-   */
-  const stripCollapsed = useCallback(
-    (document: BlocklySerialization): BlocklySerialization => {
-      const {document: stripped, bodies: taken} = stripBodies(
-        document as unknown as LazyDocument,
-        top => bodies.has(top.id ?? ''),
-        statementInputs,
-      );
-      taken.forEach((body, id) => bodies.set(id, body));
-      // …and nothing held for a top block this document does not have: its
-      // body's declarations would otherwise still answer the index.
-      const tops = new Set(
-        (stripped.blocks?.blocks ?? []).map(top => top.id ?? ''),
-      );
-      for (const id of [...bodies.keys()]) {
-        if (!tops.has(id)) {
-          bodies.delete(id);
-        }
-      }
-      rememberOrder(stripped as unknown as BlocklySerialization);
-      return stripped as unknown as BlocklySerialization;
-    },
-    [bodies, statementInputs, rememberOrder],
-  );
+  const {
+    prepare: stripCollapsed,
+    save: saveSections,
+    layOut,
+    layOutRef,
+    onInject: injectSections,
+    handleEvent: sectionEvent,
+  } = sections;
 
   const [startBlocks] = useState(() => {
     const document = parseWorkspace(initialContents);
-    const shown = HIDE_BODIES ? seam.show(document) : document;
     // As this file was left this session, or — for one not yet opened —
     // collapsed when it is too big to read at once.
-    const remembered = collapsedByFile.get(fileId);
-    const big = documentSize(shown as unknown as LazyDocument) > COLLAPSE_ABOVE;
-    const {document: stripped, bodies: taken} = stripBodies(
-      shown as unknown as LazyDocument,
-      top => (remembered ? remembered.has(top.id ?? '') : big),
-      statementInputs,
-    );
-    taken.forEach((body, id) => bodies.set(id, body));
-    rememberOrder(stripped as unknown as BlocklySerialization);
-    return stripped as unknown as BlocklySerialization;
+    return sections.prepareFirst(HIDE_BODIES ? seam.show(document) : document);
   });
 
   // What the file holds beside its workspace — a world's main map — kept
@@ -914,18 +727,13 @@ export const BlocklyFileEditor = ({
     (workspace: Blockly.Workspace) => {
       // …with every collapsed body put back where it was taken from: the file
       // a collapsed workspace writes is the file a built one would.
-      const saved = withoutPins(
-        spliceBodies(
-          Blockly.serialization.workspaces.save(workspace) as LazyDocument,
-          bodies,
-        ) as never,
-      ) as unknown as BlocklySerialization;
+      const saved = saveSections(workspace);
       return withDocumentExtras(
         HIDE_BODIES ? seam.read(saved) : saved,
         extras.current,
       );
     },
-    [seam, bodies],
+    [seam, saveSections],
   );
 
   /**
@@ -944,8 +752,6 @@ export const BlocklyFileEditor = ({
   } | null>(null);
   /** The interface, held while a body has its place. */
   const interfaceRef = useRef<BlocklySerialization | null>(null);
-  /** Which surface the workspace is actually showing. */
-  const surfaceRef = useRef<string | null>(null);
 
   /** What the pencil on a `define …` block does. */
   const openBody = useCallback((blockId: string) => {
@@ -957,12 +763,7 @@ export const BlocklyFileEditor = ({
     // property since, and going back should show what they left.
     // With the collapsed bodies put back: going Back strips them out again,
     // and a save made from the body surface writes the interface whole.
-    interfaceRef.current = withoutPins(
-      spliceBodies(
-        Blockly.serialization.workspaces.save(workspace) as LazyDocument,
-        bodies,
-      ) as never,
-    ) as unknown as BlocklySerialization;
+    interfaceRef.current = saveSections(workspace);
     // `define block` has no NAME field — what it is called is the signature
     // the learner designed, which is where every other reader of the file gets
     // it from too (`ruleMeta.addDesignedBlock`).
@@ -1052,21 +853,7 @@ export const BlocklyFileEditor = ({
     () => toolboxForSurface(toolbox, editing?.kind ?? 'interface'),
     [toolbox, editing],
   );
-
-  // ADDING A SECTION (specs/LAZY_WORKSPACE_PLAN.md): the events this file's
-  // toolbox offers, for the "+" in each gap down the column.
-  const eventMenuChoices = useMemo(
-    () => eventChoicesIn(surfaceToolbox, blocks),
-    [surfaceToolbox, blocks],
-  );
-  /** The open add-a-section menu: where it is, and which gap it is for. */
-  const [addMenu, setAddMenu] = useState<{
-    left: number;
-    top: number;
-    y: number;
-  } | null>(null);
-  /** A section just added, to bring into view once it is laid out. */
-  const revealAfterLayout = useRef<string | null>(null);
+  surfaceToolboxRef.current = surfaceToolbox;
 
   // The words on the blocks, in the reader's language.
   //
@@ -1331,407 +1118,14 @@ export const BlocklyFileEditor = ({
    * where it was noticed, since which blocks get missed is not something this
    * code decides.
    */
-  /**
-   * Show or hide one top block's body (`lazyBodies`), and remember it for
-   * this file. Held in a ref because the toggles are drawn by the layout,
-   * which this calls.
-   */
-  const toggleBodyRef = useRef<(id: string) => void>(() => {});
-  /** Top blocks whose copy carries their held body; see `syncToggles`. */
-  const copyCarriesBody = useRef(new WeakSet<Blockly.Block>());
-
-  /**
-   * Put the show/hide control on every top block with a body — on the file,
-   * not on a body surface, which is one member's implementation.
-   *
-   * …and make a collapsed block's COPY carry its body. Blockly copies what is
-   * built, and a collapsed block's body is not, so a copy of one would paste
-   * as a header with nothing under it. The block's own `toCopyData` is wrapped
-   * once to put the held body back into what it hands the clipboard.
-   */
-  const syncToggles = useCallback(
-    (workspace: Blockly.WorkspaceSvg): void => {
-      if (surfaceRef.current !== null) {
-        return;
-      }
-      const tops = workspace.getTopBlocks(false);
-      // The file's own definition stays first and in place (`pinnedRoots`).
-      pinRoots(tops);
-      syncBodyToggles(
-        tops as never,
-        id => bodies.has(id),
-        id => toggleBodyRef.current(id),
-      );
-      for (const top of tops) {
-        if (copyCarriesBody.current.has(top)) {
-          continue;
-        }
-        copyCarriesBody.current.add(top);
-        const own = top.toCopyData.bind(top);
-        top.toCopyData = (addNextBlocks?: boolean) => {
-          const data = own(addNextBlocks);
-          const body = bodies.get(top.id);
-          return data && body
-            ? {
-                ...data,
-                blockState: putBody(
-                  data.blockState as unknown as SerializedBlock,
-                  body,
-                ) as unknown as typeof data.blockState,
-              }
-            : data;
-        };
-      }
-    },
-    [bodies],
-  );
-
-  /**
-   * What follows every layout pass: the "+" in each gap, redrawn where the
-   * sections now are, and a section just added brought into view.
-   *
-   * No "+" on a body surface, which is one member's implementation, nor in a
-   * read-only file, nor while a section is being dragged.
-   */
-  const afterLayout = useCallback(
-    (workspace: Blockly.WorkspaceSvg): void => {
-      if (surfaceRef.current !== null || isReadOnly || workspace.isDragging()) {
-        clearAddButtons(workspace);
-      } else {
-        const sections = workspace
-          .getTopBlocks(false)
-          .filter(top => !top.isInsertionMarker())
-          .map(top => ({
-            y: top.getRelativeToSurfaceXY().y,
-            height: top.getHeightWidth().height,
-            pinned: isPinnedRoot(top.type),
-          }));
-        const first = [...sections].sort((a, b) => a.y - b.y)[0];
-        drawAddButtons(
-          workspace,
-          gapCenters(sections, Boolean(first?.pinned)),
-          (y, left, top) => setAddMenu({left, top, y}),
-        );
-      }
-      const added = revealAfterLayout.current;
-      const block = added ? workspace.getBlockById(added) : null;
-      if (block) {
-        revealAfterLayout.current = null;
-        workspace.scrollBoundsIntoView(
-          block.getBoundingRectangleWithoutChildren(),
-          48,
-        );
-      }
-    },
-    [isReadOnly],
-  );
-
-  const layOut = useCallback(
-    (workspace: Blockly.WorkspaceSvg): void => {
-      syncToggles(workspace);
-      for (const block of workspace.getAllBlocks(false)) {
-        block.queueRender();
-      }
-      // …and only once they have all reported their size is there anything to
-      // arrange, which is why the tidy hangs off the promise rather than
-      // following the loop. Asking a block how tall it is before it has rendered
-      // is what this function exists to work around.
-      void Blockly.renderManagement.finishQueuedRenders().then(() => {
-        tidyTopBlocks(workspace, layoutMemory.current);
-        afterLayout(workspace);
-      });
-    },
-    [syncToggles, afterLayout],
-  );
-  /** The current `layOut`, for the effect that listens for fonts only once. */
-  const layOutRef = useRef(layOut);
-  layOutRef.current = layOut;
-
-  /**
-   * Lay the top blocks out again once what is waiting to render has.
-   *
-   * Not mid-drag: the dragged block is wherever the pointer is, and the rest
-   * stay put until it lands. And once per frame however many events an edit
-   * fires — a paste is dozens.
-   */
-  const reflowPending = useRef(false);
-  const reflow = useCallback(
-    (workspace: Blockly.WorkspaceSvg): void => {
-      if (reflowPending.current || workspace.isDragging()) {
-        return;
-      }
-      reflowPending.current = true;
-      syncToggles(workspace);
-      void Blockly.renderManagement.finishQueuedRenders().then(() => {
-        reflowPending.current = false;
-        if (!workspace.isDragging()) {
-          tidyTopBlocks(workspace, layoutMemory.current);
-          afterLayout(workspace);
-        }
-      });
-    },
-    [syncToggles, afterLayout],
-  );
-
-  toggleBodyRef.current = (id: string) => {
-    const workspace = workspaceRef.current;
-    const top = workspace?.getBlockById(id);
-    if (!workspace || !top) {
-      return;
-    }
-    if (bodies.has(id)) {
-      expandTop(workspace, top);
-    } else {
-      collapseTop(workspace, top);
-    }
-    collapsedByFile.set(fileId, new Set(bodies.keys()));
-    layOut(workspace);
-  };
-
-  /**
-   * What injecting the workspace does, before the file is loaded into it:
-   * bind the store of unbuilt bodies, and teach undo about them.
-   *
-   * UNDO EXPANDS WHAT IT IS ABOUT TO CHANGE. A change to a row inside a body
-   * that has since been collapsed names a block that is not built, and Blockly
-   * passes over an event whose block it cannot find — the undo would do
-   * nothing, silently. So the group about to be undone is looked at first and
-   * any collapsed body holding one of its blocks is built, which also shows
-   * the learner where the change happened.
-   */
+  /** Sections, and the "How this works" button in a rule's drawer. */
   const onInject = useCallback(
     (workspace: Blockly.WorkspaceSvg) => {
-      bindUnbuiltBodies(workspace, bodies);
-      const undo = workspace.undo.bind(workspace);
-      workspace.undo = (redo?: boolean) => {
-        const stack = redo
-          ? workspace.getRedoStack()
-          : workspace.getUndoStack();
-        const last = stack[stack.length - 1];
-        const group = last?.group
-          ? stack.filter(event => event.group === last.group)
-          : last
-            ? [last]
-            : [];
-        const ids = new Set(
-          group
-            .map(event => (event as {blockId?: string}).blockId)
-            .filter((id): id is string => Boolean(id)),
-        );
-        if (ids.size && expandHolding(workspace, bodies, ids)) {
-          collapsedByFile.set(fileId, new Set(bodies.keys()));
-        }
-        undo(redo);
-      };
+      injectSections(workspace);
       registerLessonButtons(workspace);
     },
-    [bodies, fileId],
+    [injectSections],
   );
-
-  /**
-   * A top block being dragged to a new place among the others
-   * (specs/LAZY_WORKSPACE_PLAN.md, "Reordering").
-   *
-   * While it is dragged every section is collapsed to its header — the
-   * dragged one too — so the file is a short list and the choice is between
-   * two headers. A gap opens where letting go would put it. On letting go the
-   * order is the one shown, the sections that were open are built again, and
-   * the view goes to the one that moved.
-   */
-  const reorderRef = useRef<{
-    id: string;
-    /** The sections that were open when the drag began. */
-    expanded: string[];
-    /** The other top blocks, in their order. */
-    others: string[];
-    /** The gap it is over, among `others`. */
-    gap: number;
-    /** How far the column is shifted to stay beside the dragged header. */
-    offset: number | null;
-    frame: number;
-    /** How many headers at the top nothing may go above. */
-    pinned: number;
-  } | null>(null);
-  /** The top block just dropped, whose own move is the drop and not a move. */
-  const droppedRef = useRef<string | null>(null);
-  /**
-   * Sections deleted by being dragged off while open: undoing the delete
-   * brings one back open, as it was picked up, not collapsed as the drag
-   * left it.
-   */
-  const reopenOnRestore = useRef(new Set<string>());
-
-  const reorderStart = useCallback(
-    (workspace: Blockly.WorkspaceSvg, dragged: Blockly.BlockSvg) => {
-      const tops = workspace
-        .getTopBlocks(false)
-        .filter(top => !top.isInsertionMarker());
-      const placed = layoutMemory.current.placed;
-      const placeOf = (block: Blockly.BlockSvg) =>
-        placed.get(block.id) ?? block.getRelativeToSurfaceXY().y;
-      clearAddButtons(workspace);
-      const expanded = tops.filter(top => hasBuiltBody(top)).map(top => top.id);
-      for (const top of tops) {
-        if (hasBuiltBody(top)) {
-          collapseTop(workspace, top);
-        }
-      }
-      const others = tops
-        .filter(top => top.id !== dragged.id)
-        .sort(
-          (a, b) =>
-            Number(isPinnedRoot(b.type)) - Number(isPinnedRoot(a.type)) ||
-            placeOf(a) - placeOf(b),
-        );
-      const startIndex = others.filter(
-        top => placeOf(top) < placeOf(dragged),
-      ).length;
-      const held = {
-        id: dragged.id,
-        expanded,
-        others: others.map(top => top.id),
-        gap: startIndex,
-        offset: null as number | null,
-        frame: 0,
-        pinned: others.filter(top => isPinnedRoot(top.type)).length,
-      };
-      reorderRef.current = held;
-      const step = () => {
-        if (reorderRef.current !== held) {
-          return;
-        }
-        const block = workspace.getBlockById(held.id);
-        const headers = held.others
-          .map(id => workspace.getBlockById(id))
-          .filter((one): one is Blockly.BlockSvg => Boolean(one));
-        if (block && headers.length === held.others.length) {
-          const heights = headers.map(one => one.getHeightWidth().height);
-          const draggedHeight = block.getHeightWidth().height;
-          const at = block.getRelativeToSurfaceXY();
-          // The column is shifted so that it opens around the dragged header
-          // where it was picked up: a section dragged from far down a long
-          // file still has its neighbours in view, not scrolled off above.
-          if (held.offset === null) {
-            const places = headerPlaces(heights, held.gap, draggedHeight);
-            const gapY =
-              held.gap < places.length
-                ? places[held.gap] - draggedHeight - COLUMN_GAP
-                : (places.at(-1) ?? 0) + (heights.at(-1) ?? 0) + COLUMN_GAP;
-            held.offset = at.y - gapY;
-            held.gap = -1;
-          }
-          const resting = headerPlaces(heights, -1, 0).map((y, index) => ({
-            y: y + held.offset!,
-            height: heights[index],
-          }));
-          // Never above the file's own definition, which stays first.
-          const gap = Math.max(
-            held.pinned,
-            gapIndexFor(resting, {y: at.y, height: draggedHeight}),
-          );
-          if (gap !== held.gap) {
-            held.gap = gap;
-            const places = headerPlaces(heights, gap, draggedHeight);
-            Blockly.Events.disable();
-            try {
-              headers.forEach((header, index) => {
-                const now = header.getRelativeToSurfaceXY();
-                header.moveBy(
-                  COLUMN_X - now.x,
-                  places[index] + held.offset! - now.y,
-                );
-              });
-            } finally {
-              Blockly.Events.enable();
-            }
-          }
-        }
-        held.frame = requestAnimationFrame(step);
-      };
-      // Once the headers have been drawn at their collapsed size.
-      void Blockly.renderManagement.finishQueuedRenders().then(() => {
-        if (reorderRef.current === held) {
-          held.frame = requestAnimationFrame(step);
-        }
-      });
-    },
-    [],
-  );
-
-  const reorderEnd = useCallback(
-    (workspace: Blockly.WorkspaceSvg) => {
-      const held = reorderRef.current;
-      if (!held) {
-        return;
-      }
-      reorderRef.current = null;
-      cancelAnimationFrame(held.frame);
-      // Dropped on the toolbox or the bin, it is gone; the rest close up.
-      const block = workspace.getBlockById(held.id);
-      if (!block && held.expanded.includes(held.id)) {
-        reopenOnRestore.current.add(held.id);
-      }
-      const order = [...held.others];
-      if (block) {
-        order.splice(
-          held.gap < 0
-            ? order.length
-            : Math.min(Math.max(held.gap, held.pinned), order.length),
-          0,
-          held.id,
-        );
-      }
-      layoutMemory.current.placed = new Map(
-        order.map((id, rank) => [id, rank]),
-      );
-      layoutMemory.current.moved.clear();
-      droppedRef.current = held.id;
-      for (const id of held.expanded) {
-        const top = workspace.getBlockById(id);
-        if (top) {
-          expandTop(workspace, top);
-        }
-      }
-      collapsedByFile.set(fileId, new Set(bodies.keys()));
-      syncToggles(workspace);
-      void Blockly.renderManagement.finishQueuedRenders().then(() => {
-        tidyTopBlocks(workspace, layoutMemory.current);
-        droppedRef.current = null;
-        // …and the view goes to the section that moved, its header in sight.
-        if (block && !block.isDisposed()) {
-          const bounds = block.getBoundingRectangleWithoutChildren();
-          workspace.scrollBoundsIntoView(bounds, 48);
-        }
-        afterLayout(workspace);
-      });
-    },
-    [bodies, fileId, syncToggles, afterLayout],
-  );
-
-  /**
-   * Add a section starting with `type`, in the gap at `y`.
-   *
-   * An edit like dragging one out of a drawer — one undo step — placed at the
-   * gap so the layout files it there: a top block it has not placed yet goes
-   * where it is (`tidyLayout.orderKeys`). Then brought into view.
-   */
-  const addSection = useCallback((type: string, y: number) => {
-    const workspace = workspaceRef.current;
-    setAddMenu(null);
-    if (!workspace) {
-      return;
-    }
-    Blockly.Events.setGroup(true);
-    try {
-      const block = Blockly.serialization.blocks.append(
-        {type, x: COLUMN_X, y} as never,
-        workspace,
-      );
-      revealAfterLayout.current = block.id;
-    } finally {
-      Blockly.Events.setGroup(false);
-    }
-  }, []);
 
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
@@ -1757,96 +1151,7 @@ export const BlocklyFileEditor = ({
         }
         return;
       }
-      // THE STORE OF UNBUILT BODIES FOLLOWS ITS TOP BLOCKS (`lazyBodies`).
-      // A collapsed top block deleted takes its body with it — kept aside, so
-      // undoing the delete brings the body back too; a variable deleted takes
-      // its uses out of every held body, as Blockly takes them out of the
-      // built ones.
-      if (event.type === Blockly.Events.BLOCK_DELETE) {
-        const id = (event as Blockly.Events.BlockDelete).blockId ?? '';
-        const body = bodies.get(id);
-        if (body) {
-          deletedBodies.current.set(id, body);
-          bodies.delete(id);
-        }
-      } else if (event.type === Blockly.Events.BLOCK_CREATE) {
-        const id = (event as Blockly.Events.BlockCreate).blockId ?? '';
-        const body = deletedBodies.current.get(id);
-        if (body) {
-          bodies.set(id, body);
-          deletedBodies.current.delete(id);
-          const top = workspace.getBlockById(id);
-          if (reopenOnRestore.current.delete(id) && top) {
-            expandTop(workspace, top);
-            collapsedByFile.set(fileId, new Set(bodies.keys()));
-          }
-        }
-      } else if (event.type === Blockly.Events.VAR_DELETE) {
-        const varId = (event as Blockly.Events.VarDelete).varId ?? '';
-        for (const [id, body] of [...bodies]) {
-          bodies.set(id, bodyWithoutVariable(body, varId));
-        }
-      }
-      // A TOP BLOCK THE LEARNER MOVED is placed by where it now is; every
-      // other keeps its place. A drag, a paste, an undo — but not Blockly's
-      // own nudge apart of blocks that overlap, which says nothing about the
-      // order the learner wants (`tidyLayout.orderKeys`).
-      if (event.type === Blockly.Events.BLOCK_MOVE) {
-        const move = event as Blockly.Events.BlockMove;
-        if (
-          !move.newParentId &&
-          !(move.reason ?? []).includes('bump') &&
-          // The drop of a reorder is placed by the gap it was shown in.
-          move.blockId !== droppedRef.current &&
-          move.blockId !== reorderRef.current?.id
-        ) {
-          layoutMemory.current.moved.add(move.blockId ?? '');
-        }
-      }
-      // REORDERING: a top block picked up on the file collapses every section
-      // to its header and parts them where it would land (`reorderStart`).
-      if (
-        event.type === Blockly.Events.BLOCK_DRAG &&
-        (event as Blockly.Events.BlockDrag).isStart &&
-        surfaceRef.current === null
-      ) {
-        const picked = workspace.getBlockById(
-          (event as Blockly.Events.BlockDrag).blockId ?? '',
-        );
-        if (picked && !picked.getParent() && !isFreeFloating(picked)) {
-          reorderStart(workspace, picked);
-        }
-      }
-      // NO FREE-FLOATING BLOCKS (specs/LAZY_WORKSPACE_PLAN.md). A block that
-      // ends a drag on its own, attached to nothing, means nothing — the
-      // generator skips it and the orphan plugin disables it — so it goes, as
-      // one dropped on the toolbox does. In the drag's own event group, so a
-      // single undo puts it back where it was taken from.
-      if (
-        event.type === Blockly.Events.BLOCK_DRAG &&
-        !(event as Blockly.Events.BlockDrag).isStart
-      ) {
-        const dropped = workspace.getBlockById(
-          (event as Blockly.Events.BlockDrag).blockId ?? '',
-        );
-        if (dropped && !dropped.getParent() && isFreeFloating(dropped)) {
-          Blockly.Events.setGroup(event.group || true);
-          try {
-            dropped.dispose(true);
-          } finally {
-            Blockly.Events.setGroup(false);
-          }
-        }
-        if (reorderRef.current) {
-          reorderEnd(workspace);
-        } else {
-          reflow(workspace);
-        }
-      } else if (!event.isUiEvent) {
-        // …and the layout catches up with whatever the edit did to a stack's
-        // size or to the order of the top blocks.
-        reflow(workspace);
-      }
+      sectionEvent(event, workspace);
       // A BODY's edits are not the file's. The workspace holds one member's
       // implementation, so what it saves is that body — put back in the seam,
       // and the file is the interface this editor set aside, merged with it.
@@ -1980,11 +1285,7 @@ export const BlocklyFileEditor = ({
       readFile,
       syncFlyoutMetrics,
       layOut,
-      reflow,
-      reorderStart,
-      reorderEnd,
-      fileId,
-      bodies,
+      sectionEvent,
     ],
   );
 
@@ -2471,25 +1772,7 @@ export const BlocklyFileEditor = ({
             onChange={handleChange}
           />
         </BlocklyProvider>
-        <Menu
-          open={addMenu !== null}
-          onClose={() => setAddMenu(null)}
-          anchorReference="anchorPosition"
-          anchorPosition={
-            addMenu ? {top: addMenu.top, left: addMenu.left} : undefined
-          }
-          slotProps={{paper: {style: {maxHeight: 420}}}}
-        >
-          {eventMenuChoices.length === 0 ? (
-            <MenuItem dense disabled>
-              Nothing to start a section with here
-            </MenuItem>
-          ) : (
-            eventMenuItems(eventMenuChoices, type =>
-              addSection(type, addMenu?.y ?? 0),
-            )
-          )}
-        </Menu>
+        {sections.menu}
       </div>
     </div>
   );

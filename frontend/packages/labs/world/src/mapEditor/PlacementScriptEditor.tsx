@@ -14,10 +14,12 @@
 // its body surfaces, the singletons it installs — and a placement is a
 // subtree of a document that is not a workspace at all. What is shared is
 // what can be: the block definitions, the palette builder, the theme, the
-// localization, the stand-ins for block types nothing defines.
+// localization, the stand-ins for block types nothing defines — and the
+// workspace as sections (`blockly/useSectionWorkspace`): collapsible, reordered
+// by dragging, a "+" between them, the map's own definition first.
 
 import {Button, Typography} from '@mui/material';
-import {useEffect, useMemo, useRef} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   Blockly,
@@ -43,9 +45,9 @@ import {localizeBlocks, localizeToolbox} from '../blockly/localizeBlocks';
 import {setCurrentPlacements} from '../blockly/moduleOptions';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {standInBlocks} from '../blockly/standInBlocks';
-import {arrangeTopBlocks} from '../blockly/tidyLayout';
 import {withoutEmptyHeadings} from '../blockly/toolboxFilter';
 import {DesignSystemToolboxPlugin} from '../blockly/toolboxStyle';
+import {useSectionWorkspace} from '../blockly/useSectionWorkspace';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {refreshFor} from '../library/refreshRegistries';
 import {projectFiles} from '../runtime/projectFiles';
@@ -66,6 +68,11 @@ export interface PlacementScriptEditorProps {
   title: string;
   /** `placement` for a placed actor's workspace, `map` for the map's own. */
   kind: Extract<FileKind, 'placement' | 'map'>;
+  /**
+   * What the session remembers this workspace's collapsed sections under:
+   * the map file and the placement, or the map's own.
+   */
+  memoryKey: string;
   /** The map's module path — `maps/pauseMenu` — whose events are at home here. */
   mapModule: string;
   /** Every placement id in the map, for `the ⟨placement⟩`. */
@@ -80,6 +87,7 @@ export interface PlacementScriptEditorProps {
 export const PlacementScriptEditor = ({
   title,
   kind,
+  memoryKey,
   mapModule,
   placements,
   contents,
@@ -141,10 +149,19 @@ export const PlacementScriptEditor = ({
     [isReadOnly],
   );
 
+  const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
+  const sections = useSectionWorkspace({
+    memoryKey,
+    definitions: blocks,
+    getToolbox: () => toolbox,
+    isReadOnly,
+    workspaceRef,
+  });
   // Loaded once, from what the placement held when this opened; what it holds
   // after is what this writes.
-  const startBlocks = useRef(contents ?? {}).current;
-  const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
+  const [startBlocks] = useState(() =>
+    sections.prepareFirst((contents ?? {}) as BlocklySerialization),
+  );
   // Opening is not editing: Blockly reports what it creates while loading as
   // ordinary change events, and saving those would write the placement the
   // moment its workspace opened (`BlocklyFileEditor.loadedWorkspace`).
@@ -165,39 +182,18 @@ export const PlacementScriptEditor = ({
     if (loadedWorkspace.current !== workspace) {
       if (event.type === Blockly.Events.FINISHED_LOADING) {
         loadedWorkspace.current = workspace;
-        // One column, in the order the saved positions read — the file
-        // editor's layout (`blockly/tidyLayout`), so a section the quick add
-        // put first is first and in view. Silent: laying out is not editing.
-        void Blockly.renderManagement.finishQueuedRenders().then(() => {
-          const tops = workspace.getTopBlocks(false);
-          const boxes = tops.map(block => {
-            const at = block.getRelativeToSurfaceXY();
-            const size = block.getHeightWidth();
-            return {x: at.x, y: at.y, width: size.width, height: size.height};
-          });
-          const places = arrangeTopBlocks(boxes);
-          Blockly.Events.disable();
-          try {
-            tops.forEach((block, index) =>
-              block.moveBy(
-                places[index].x - boxes[index].x,
-                places[index].y - boxes[index].y,
-              ),
-            );
-          } finally {
-            Blockly.Events.enable();
-          }
-          workspace.scroll(0, 0);
-        });
+        // One column, in the order the saved positions read, so a section
+        // the quick add put first is first — and in view.
+        sections.layOut(workspace);
+        workspace.scroll(0, 0);
       }
       return;
     }
+    sections.handleEvent(event, workspace);
     if (event.isUiEvent) {
       return;
     }
-    onChangeRef.current(
-      Blockly.serialization.workspaces.save(workspace) as BlocklySerialization,
-    );
+    onChangeRef.current(sections.save(workspace));
   };
 
   return (
@@ -226,6 +222,7 @@ export const PlacementScriptEditor = ({
           <BlocklyWorkspace
             key={isReadOnly ? 'read-only' : 'editable'}
             className={styles.scriptWorkspace}
+            onInject={sections.onInject}
             startBlocks={startBlocks}
             toolbox={localizedToolbox}
             options={options}
@@ -234,6 +231,7 @@ export const PlacementScriptEditor = ({
             onChange={handleChange}
           />
         </BlocklyProvider>
+        {sections.menu}
       </div>
     </div>
   );

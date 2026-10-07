@@ -101,8 +101,27 @@ Code opens the events an actor of that kind can actually hear — its own,
 its parents', and those of the traits it holds, the built-in rules'
 reaching through their one trait (`eventChoicesForKind`). An event of a
 trait the kind does not hold is not offered: its handler would never run.
-Picking one puts the hat first in that placement's own code and opens it;
-the placement's editor lays out its column on opening, as the file's does.
+Picking one puts the hat first in that placement's own code and opens it.
+
+## One actor's code is sections too — BUILT
+
+The map editor's view of one placement's code, or the map's own
+(`mapEditor/PlacementScriptEditor`), is a workspace of its own and not the
+file editor: a placement is a subtree of a map document, not a file. What
+makes a workspace sections is shared between the two
+(`blockly/useSectionWorkspace`): the column layout and its memory of the
+order, bodies held unbuilt behind each header's chevron, dragging a header
+to reorder, the "+" in every gap, deleting a block let go of on its own,
+and the undo and copy that know about held bodies. Each editor hands its
+documents through the hook on the way in and saves through it on the way
+out; what the file is, and what else the editor shows, stays with the
+editor. Which sections a placement's code had collapsed is remembered for
+the session under the map file and the placement.
+
+A placement's code has no definition at its head, so the first "+" sits
+above its first section. Half a gap above it was above the canvas's top
+edge, which the view does not scroll past; it is held at least half the
+margin down (`tidyLayout.gapCenters`).
 
 ## Order of work
 
@@ -123,6 +142,7 @@ the placement's editor lays out its column on opening, as the file's does.
 - `20af30a3f87` — step 1, the workspace index.
 - `37e18e12103` — step 2, the layout and no free-floating blocks.
 - step 3, bodies built on demand.
+- the sections shared with one actor's code in the map editor.
 
 ## Learned while building
 
@@ -200,4 +220,3 @@ the placement's editor lays out its column on opening, as the file's does.
   at is inside a body today (they ring toolbox drawers and map controls),
   so nothing expands for one. A reveal that pointed into a body would have
   to call `expandHolding` first.
-

@@ -610,6 +610,7 @@ export const MapEditor = ({
       <PlacementScriptEditor
         // A workspace per placement: opening another is a new one.
         key={script.kind === 'map' ? 'map' : `placement:${script.id}`}
+        memoryKey={`${fileId}#${script.kind === 'map' ? 'map' : script.id}`}
         title={scripted ? `${scripted.id} (${kindName(scripted.type)})` : 'Map'}
         kind={scripted ? 'placement' : 'map'}
         mapModule={mapModule}

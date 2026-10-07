@@ -252,7 +252,12 @@ describe('where the “+” between sections goes', () => {
   });
 
   it('is above the first too, unless the first is the file’s definition', () => {
-    expect(gapCenters(sections, false)).toEqual([4, 136, 208]);
+    expect(gapCenters(sections, false)).toEqual([10, 136, 208]);
+  });
+
+  it('is half a gap above a first further down', () => {
+    const lower = sections.map(section => ({...section, y: section.y + 100}));
+    expect(gapCenters(lower, false)[0]).toBe(104);
   });
 
   it('is at the top of an empty file', () => {
