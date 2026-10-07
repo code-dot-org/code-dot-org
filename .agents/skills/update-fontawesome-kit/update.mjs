@@ -100,6 +100,9 @@ if (dry) {
 }
 
 if (!skipUpload) {
+  const who = spawnSync('aws', ['sts', 'get-caller-identity', '--query', 'Arn', '--output', 'text']);
+  if (who.status !== 0) throw new Error(`aws sts get-caller-identity failed: ${who.stderr}`);
+  console.log(`uploading as ${who.stdout.toString().trim()}`);
   const taken = spawnSync('aws', ['s3', 'ls', `${BUCKET}/${ts}/`]).stdout?.toString().trim();
   if (taken) throw new Error(`${BUCKET}/${ts}/ already has files; rerun in a second`);
 }

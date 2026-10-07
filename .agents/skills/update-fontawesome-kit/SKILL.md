@@ -36,9 +36,11 @@ Tell the operator: sign in to fontawesome.com with the shared dev account, open 
 
 ### 2. Check AWS access (you, then operator if it fails)
 
-Run `aws --version` and `aws sts get-caller-identity`. Timestamps are unix seconds (10 digits); the script refuses an S3 prefix that already has files. Use `AWS_PROFILE=codeorg-contributor` (role `Engineering_Contributor`). The role needs `s3:PutObject` and `s3:ListBucket` on
-`cdo-dsco/assets/font-awesome-pro/*`. If this fails, tell the operator what is missing (CLI install,
-credentials, `AWS_PROFILE`).
+Run `aws --version` and `aws sts get-caller-identity`. Any AWS identity works if it has `s3:PutObject` and
+`s3:ListBucket` on `cdo-dsco/assets/font-awesome-pro/*`; the script uses whatever credentials the CLI finds and
+prints the active identity before it uploads. `AWS_PROFILE=codeorg-contributor` (role `Engineering_Contributor`)
+is known to work. If another role gets AccessDenied, it needs those two permissions or should use that profile.
+If this fails, tell the operator what is missing (CLI install, credentials, `AWS_PROFILE`).
 
 **GATE:** if it fails, ask whether to fix access now or continue with `--skip-upload` and upload by hand
 (step 5).
