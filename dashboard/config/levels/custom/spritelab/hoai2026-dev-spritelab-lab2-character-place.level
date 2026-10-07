@@ -34,7 +34,7 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline under **when run**. It puts your character on the **left**. Click **Play** to see them."
+        "text": "**Add your character.** Drag **make new sprite** onto the dotted outline. It puts your character on the **left**. Click **Play** to see them."
       },
       {
         "text": "**There they are.** Click **Continue**.",
@@ -48,7 +48,7 @@
       "title": "**Add your character.**",
       "items": [
         {
-          "text": "Drag **make new sprite** onto the dotted outline under **when run**.",
+          "text": "Drag **make new sprite** onto the dotted outline.",
           "check": {
             "kind": "block",
             "type": "spritelab2_makeSpriteAtPosition",
