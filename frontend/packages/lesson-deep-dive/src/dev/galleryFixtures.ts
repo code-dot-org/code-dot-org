@@ -9,6 +9,7 @@ import type {
 
 export const TUTOR_GALLERY_DATA: TutorGalleryData = {
   currentUnitId: 1,
+  is_teacher: false,
   units: [
     {id: 1, name: 'Talking to Machines', position: 1, link: '/s/aif1-v2-2025'},
     {id: 2, name: 'Bias and Fairness', position: 2, link: '/s/aif2-v2-2025'},

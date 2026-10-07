@@ -4,7 +4,12 @@ import {setApproved} from '../api';
 
 const makeTransport = () => {
   const request: Mock = vi.fn();
-  return {transport: {request}, request};
+  const transport = {
+    request,
+    requestBlob: vi.fn(),
+    requestWithMeta: vi.fn(),
+  };
+  return {transport, request};
 };
 
 describe('setApproved', () => {
