@@ -25,6 +25,8 @@ const LEAF_COLOR_CLASSES = [
   styles.leafColor2,
   styles.leafColor3,
   styles.leafColor4,
+  styles.leafColor5,
+  styles.leafColor6,
 ];
 
 interface TreeMiniMapProps {
