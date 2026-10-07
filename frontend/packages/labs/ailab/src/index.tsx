@@ -23,6 +23,7 @@ import {
   setInstructionsDismissed,
   setInstructionsEnabled,
   resetState,
+  setHistoricResults,
 } from './redux';
 import {store} from './store';
 import train from './train';
@@ -94,6 +95,12 @@ export const loadLevel = function (mode?: Mode): void {
   processMode(mode);
 };
 
+export const startOver = function (): void {
+  const {mode, historicResults} = store.getState();
+  loadLevel(mode);
+  store.dispatch(setHistoricResults(historicResults));
+};
+
 /**
  * Mount the lab and load its initial level data in one call.
  */
@@ -148,6 +155,8 @@ export type {
   SaveResponse,
 } from './types';
 export {INSTRUCTIONS_KEYS} from './types';
+export type {Lab2Instructions} from './lab2Instructions';
+export {LAB2_INSTRUCTIONS} from './lab2Instructions';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,

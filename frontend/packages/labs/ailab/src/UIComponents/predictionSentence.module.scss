@@ -6,6 +6,24 @@
   gap: 4px 6px;
 }
 
+.singleLine {
+  flex-wrap: nowrap;
+
+  .text {
+    white-space: nowrap;
+  }
+}
+
+.ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 .mediumSentence {
   gap: 4px 8px;
 
@@ -15,9 +33,6 @@
   }
 }
 
-.text {
-  font-size: 12px;
+.sentence .text {
   font-weight: 600;
-  line-height: 18px;
-  color: var(--text-neutral-primary);
 }

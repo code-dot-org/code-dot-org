@@ -54,3 +54,10 @@
   overflow-wrap: anywhere;
   color: var(--text-neutral-tertiary);
 }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}

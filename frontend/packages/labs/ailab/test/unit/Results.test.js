@@ -11,14 +11,6 @@ import Results from '../../src/UIComponents/Results';
 
 import {levelStore} from './levelStore';
 
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    observe() {}
-    disconnect() {}
-  },
-);
-
 function renderTrainedResults(mode) {
   const store = levelStore(mode);
   train.reset();
@@ -53,7 +45,7 @@ describe('Results', () => {
     ).toBe(true);
     expect(
       screen
-        .getByRole('img', {name: "Diagram of your model's decision tree"})
+        .getByRole('tree', {name: "Your model's decision tree"})
         .contains(testPanel()),
     ).toBe(false);
   });

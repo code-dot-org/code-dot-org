@@ -1,5 +1,5 @@
 /* Visible label for a Train panel field, with an info tooltip. */
-import {IconButton, Tooltip} from '@mui/material';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
@@ -12,7 +12,14 @@ interface FieldLabelProps {
 
 const FieldLabel = ({text, tooltip}: FieldLabelProps) => (
   <div className={styles.fieldLabel}>
-    <span aria-hidden="true">{text}</span>
+    <Typography
+      component="span"
+      variant="body4"
+      className={styles.text}
+      aria-hidden="true"
+    >
+      {text}
+    </Typography>
     <Tooltip title={tooltip}>
       <IconButton
         variant="text"

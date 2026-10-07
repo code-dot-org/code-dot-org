@@ -18,7 +18,7 @@ const question = (
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'JavaScript variable fundamentals',
-  stem: 'What is a variable in JavaScript?',
+  questionTitle: 'What is a variable in JavaScript?',
   choices: [],
   correctChoiceId: null,
   explanation: null,
@@ -78,14 +78,14 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('0 questions')).toBeInTheDocument();
   });
 
-  it('lists each placed question with its name and stem', () => {
+  it('lists each placed question with its name and question title', () => {
     renderWorkspace({
       questions: [
         question(),
         question({
           id: 2,
           questionName: 'MVC frameworks',
-          stem: 'Which MVC framework is most popular?',
+          questionTitle: 'Which MVC framework is most popular?',
         }),
       ],
     });
@@ -218,7 +218,7 @@ describe('QuizBuilderWorkspace', () => {
   it("shows a question-specific error on that question's card, not the banner", () => {
     renderWorkspace({
       questions: [question()],
-      error: 'stem cannot be blank',
+      error: 'question title cannot be blank',
       errorQuestionId: 1,
     });
 
@@ -227,7 +227,9 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.queryByRole('alert')).toBeNull();
 
     fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
-    expect(screen.getByRole('alert')).toHaveTextContent('stem cannot be blank');
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'question title cannot be blank'
+    );
   });
 
   it('does not show a question-specific error on a different card', () => {
@@ -236,7 +238,7 @@ describe('QuizBuilderWorkspace', () => {
         question(),
         question({id: 2, questionName: 'MVC frameworks'}),
       ],
-      error: 'stem cannot be blank',
+      error: 'question title cannot be blank',
       errorQuestionId: 1,
     });
 

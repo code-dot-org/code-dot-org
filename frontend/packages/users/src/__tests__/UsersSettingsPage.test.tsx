@@ -859,7 +859,7 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
       }),
     ).toBeInTheDocument();
     expect(
-      screen.getAllByRole('heading', {level: 4, name: 'ClassLink'}),
-    ).toHaveLength(2);
+      screen.getByRole('heading', {level: 4, name: 'ClassLink'}),
+    ).toBeInTheDocument();
   });
 });

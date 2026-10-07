@@ -24,6 +24,11 @@ jest.mock(
   () => ({__esModule: true, default: () => <div>reflection</div>})
 );
 
+jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/NextStepPicker', () => ({
+  __esModule: true,
+  default: () => <div>next-step</div>,
+}));
+
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',
   () => ({__esModule: true, default: () => <div>intervention</div>})
@@ -145,6 +150,11 @@ describe('LessonDeepDiveContainer story card sequence', () => {
     expect(screen.getByText('time-spent')).toBeInTheDocument();
   });
 
+  it('does not show a Continue button on the next-step screen', () => {
+    renderContainer('next-step');
+    expect(screen.queryByText('Continue')).not.toBeInTheDocument();
+  });
+
   it('does not show a Continue button on the reflection screen', () => {
     renderContainer();
     // advance through the five story screens: welcome → levels-attempted →
@@ -167,6 +177,7 @@ describe('LessonDeepDiveContainer URL param routing', () => {
 
   it.each([
     ['reflection', 'reflection'],
+    ['next-step', 'next-step'],
     ['intervention', 'intervention'],
     ['pre-skills-check', 'pre-skills-check'],
     ['skills-check', 'skills-check'],

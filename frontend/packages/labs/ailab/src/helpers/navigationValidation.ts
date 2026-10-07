@@ -103,6 +103,10 @@ function isTrainedOnCurrentColumns(state: RootState): boolean {
   );
 }
 
+export function hasCurrentTrainingResult(state: RootState): boolean {
+  return isTrainedOnCurrentColumns(state) && state.historicResults[0].total > 0;
+}
+
 function resultsAvailable(state: RootState): boolean {
   return (
     state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(state)
@@ -129,20 +133,6 @@ function isModelNamed(state: RootState): boolean {
   return ![undefined, ''].includes(state.trainedModelDetails.name);
 }
 
-function isAccuracyAcceptable(state: RootState): boolean {
-  const mode = state.mode;
-
-  if (
-    mode &&
-    mode.requireAccuracy &&
-    mode.requireAccuracy > Number(state.historicResults[0].accuracy)
-  ) {
-    return false;
-  }
-
-  return true;
-}
-
 // Given the current panel, return the appropriate previous & next buttons.
 export function prevNextButtons(state: RootState): PrevNextButtons {
   let prev: NavButton | undefined, next: NavButton | undefined;
@@ -156,13 +146,6 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
       ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
       : undefined;
     next = undefined;
-  } else if (state.currentPanel === 'results') {
-    prev = undefined;
-    next = !isAccuracyAcceptable(state)
-      ? undefined
-      : isPanelAvailable(state, 'saveModel')
-        ? {panel: 'saveModel', text: I18n.t('navigateForward')}
-        : {panel: 'continue', text: I18n.t('navigateDone')};
   } else if (state.currentPanel === 'saveModel') {
     prev = {panel: 'results', text: I18n.t('navigateBack')};
     next = isPanelAvailable(state, 'modelSummary')

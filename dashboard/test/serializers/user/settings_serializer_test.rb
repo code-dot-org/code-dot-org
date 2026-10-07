@@ -120,6 +120,16 @@ class User::SettingsSerializerTest < ActiveSupport::TestCase
         {id: option.id, credential_type: option.credential_type, email: option.email},
       ]
     end
+
+    it 'lists one ClassLink option when the user holds both versions' do
+      create(:authentication_option, user: user, credential_type: AuthenticationOption::CLASSLINK, authentication_id: '12345678', version: nil)
+      v2_option = create(:authentication_option, user: user, credential_type: AuthenticationOption::CLASSLINK, authentication_id: 'tenant|sourced', version: AuthenticationOption::Classlink::VERSION[:v2])
+
+      classlink_ids = payload[:authentication_options].
+        select {|option| option[:credential_type] == AuthenticationOption::CLASSLINK}.
+        pluck(:id)
+      _(classlink_ids).must_equal [v2_option.id]
+    end
   end
 
   describe 'integrations' do

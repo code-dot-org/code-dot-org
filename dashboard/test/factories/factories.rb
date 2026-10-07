@@ -2514,7 +2514,7 @@ FactoryBot.define do
   factory :quiz_question do
     sequence(:key) {SecureRandom.uuid}
     sequence(:name) {|n| "Question #{n}"}
-    content {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
+    content {{question_title: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
   end
 
   factory :multiple_choice_question, class: MultipleChoiceQuestion do
@@ -2522,9 +2522,20 @@ FactoryBot.define do
     sequence(:name) {|n| "Multiple choice question #{n}"}
     content do
       {
-        stem: 'What is 2 + 2?',
+        question_title: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],
         correct_choice_id: 'b'
+      }
+    end
+  end
+
+  factory :free_response_question, class: FreeResponseQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Free response question #{n}"}
+    content do
+      {
+        question_title: 'Give one specific example of an abstraction you used during this lesson.',
+        description: 'An example of an abstraction is a function or class that encapsulates a concept or behavior.'
       }
     end
   end

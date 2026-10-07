@@ -6,32 +6,43 @@
   box-sizing: border-box;
   border: 1px solid;
   border-radius: var(--shape-sm);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
   white-space: nowrap;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-brand-primary);
+    outline-offset: 2px;
+  }
 }
 
-.mediumTag {
+// Rules below use two classes to outrank the Typography variant's own weight,
+// line height and color.
+
+// The variant's line height is taller than the tag.
+.tag.tag {
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.tag.mediumTag {
   height: 24px;
   padding: 0 8px;
   font-size: 14px;
   line-height: 20px;
 }
 
-.placeholderTag {
+.tag.placeholderTag {
   color: var(--text-neutral-quaternary);
   border-style: dashed;
   border-color: var(--border-neutral-secondary);
 }
 
-.labelTag {
+.tag.labelTag {
   color: var(--text-accent-pink-secondary);
   background-color: var(--background-accent-pink-light);
   border-color: var(--border-accent-pink-mid);
 }
 
-.featureTag {
+.tag.featureTag {
   color: var(--text-info-secondary);
   background-color: var(--background-info-light);
   border-color: var(--border-info-mid);

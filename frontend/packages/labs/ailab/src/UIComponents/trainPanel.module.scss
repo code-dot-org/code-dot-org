@@ -16,6 +16,10 @@
 
 .content {
   @include mixins.panel-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 $features-menu-max-height: 240px;

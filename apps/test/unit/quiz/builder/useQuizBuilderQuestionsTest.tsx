@@ -7,7 +7,7 @@ const QUESTION = {
   id: 7,
   type: 'MultipleChoiceQuestion',
   questionName: 'Existing question',
-  stem: 'What is 2 + 2?',
+  questionTitle: 'What is 2 + 2?',
   choices: [
     {id: 'a', text: '3'},
     {id: 'b', text: '4'},
@@ -64,7 +64,7 @@ describe('useQuizBuilderQuestions', () => {
     expect(result.current.questions.map(q => q.id)).toEqual([7, id]);
     expect(result.current.questions[1]).toMatchObject({
       questionName: 'New question',
-      stem: 'New question',
+      questionTitle: 'New question',
       choices: [
         {id: '0', text: 'Option A'},
         {id: '1', text: 'Option B'},
@@ -118,7 +118,7 @@ describe('useQuizBuilderQuestions', () => {
   describe('saveQuestion', () => {
     const PAYLOAD = {
       questionName: 'Updated question',
-      stem: 'What is 2 + 3?',
+      questionTitle: 'What is 2 + 3?',
       choices: QUESTION.choices,
       correctChoiceId: 'b',
       explanation: null,
@@ -169,7 +169,7 @@ describe('useQuizBuilderQuestions', () => {
     it('surfaces the server error message and leaves questions untouched on failure', async () => {
       putSpy.mockRejectedValue(
         new NetworkError('400 Bad Request', {
-          json: async () => ({error: 'stem cannot be blank'}),
+          json: async () => ({error: 'question title cannot be blank'}),
         } as Response)
       );
 
@@ -184,7 +184,7 @@ describe('useQuizBuilderQuestions', () => {
       });
 
       expect(updatedId).toBeUndefined();
-      expect(result.current.error).toBe('stem cannot be blank');
+      expect(result.current.error).toBe('question title cannot be blank');
       expect(result.current.questions).toEqual([QUESTION]);
       expect(result.current.errorQuestionId).toBe(7);
     });
@@ -211,7 +211,11 @@ describe('useQuizBuilderQuestions', () => {
       expect(putSpy).not.toHaveBeenCalled();
       expect(postSpy).toHaveBeenCalledWith(
         '/levels/42/quiz_question_placements',
-        JSON.stringify({...PAYLOAD, page: 1}),
+        JSON.stringify({
+          ...PAYLOAD,
+          type: 'MultipleChoiceQuestion',
+          page: 1,
+        }),
         true,
         {'Content-Type': 'application/json'}
       );
@@ -239,7 +243,11 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         '/levels/42/quiz_question_placements',
-        JSON.stringify({...PAYLOAD, page: 2}),
+        JSON.stringify({
+          ...PAYLOAD,
+          type: 'MultipleChoiceQuestion',
+          page: 2,
+        }),
         true,
         {'Content-Type': 'application/json'}
       );

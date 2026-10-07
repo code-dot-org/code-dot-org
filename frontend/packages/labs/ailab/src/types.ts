@@ -144,6 +144,8 @@ export interface HistoricResult {
   label: string;
   features: string[];
   accuracy: string;
+  correct: number;
+  total: number;
 }
 
 export interface ModelDataToSave {

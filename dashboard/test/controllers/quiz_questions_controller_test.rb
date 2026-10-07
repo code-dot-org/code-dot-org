@@ -34,16 +34,8 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   # --- index ---
 
-  # index's default (blank search) mode browses the N most recent
-  # MultipleChoiceQuestion rows system-wide, not scoped to this test's own
-  # data - so asserting on specific rows this way is only reliable if
-  # nothing else in the table can outrank them within the limit. Tagging
-  # this test's own questions with a Standard created fresh here, then
-  # filtering by it (same mechanism "index narrows by standard..." already
-  # relies on, via a real JOIN/WHERE - not fulltext, so it isn't subject to
-  # MySQL's separate "fulltext can't see same-transaction inserts"
-  # limitation) guarantees the result set is only ever this test's own
-  # rows, regardless of what else exists.
+  # A blank search returns the newest questions table-wide; filtering by a
+  # fresh Standard limits the results to this test's own rows.
   test "index marks bank questions attached: true/false relative to this quiz" do
     standard = create(:standard)
     @question.standards << standard
@@ -118,13 +110,8 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       count
     end
 
-    # Warms up the session before either measurement - the very first
-    # request in a signed-in test does one-time auth/session queries
-    # (users, experiments, lti_user_identities, user_permissions) that a
-    # later request in the same session doesn't repeat. Without this, the
-    # "small" measurement below would include that overhead and the "large"
-    # one wouldn't, comparing cold-request cost against the index
-    # optimization itself.
+    # The first signed-in request runs one-time session queries; warm up so
+    # neither measurement below includes them.
     count_queries.call
 
     build_questions.call(2)
@@ -153,17 +140,13 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     refute_includes ids, @question.id
   end
 
-  # quizLevelId missing falls into the same "no results" bucket as an
-  # unresolvable course/unit id below, rather than a hard error - nothing
-  # yet browses the bank outside a specific quiz's builder, so there's no
-  # meaningful result set to return either way.
   test "index returns [] when quizLevelId is missing - nothing yet browses the bank outside a specific quiz's builder" do
     get :index, params: {}
     assert_response :success
     assert_equal [], JSON.parse(response.body)
   end
 
-  # --- course_unit_search (level-independent - top-level route, no :level_id) ---
+  # --- course_unit_search ---
 
   test "course_unit_search returns [] for a query shorter than MIN_WORD_LENGTH" do
     get :course_unit_search, params: {query: 'ab'}
@@ -194,11 +177,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
   # --- show ---
 
-  # Regression test for a review finding on the level-nested predecessor of
-  # this controller: show used to be @level.questions.find(params[:id]),
-  # 404ing for a real question that just wasn't attached to whichever quiz
-  # happened to be in the URL. show is level-independent now - any bank
-  # question is reachable by its own id, attached anywhere or not.
+  # show once 404'd for a question not placed on the quiz in the URL.
   test "show works for a bank question not attached to any quiz" do
     unattached = create(:multiple_choice_question)
 
@@ -213,7 +192,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
   test "update edits the question in place when it's not used in a published unit" do
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
 
@@ -233,7 +212,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id,
-        questionName: 'Forked name', stem: 'Forked stem',
+        questionName: 'Forked name', questionTitle: 'Forked title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
     end
@@ -256,7 +235,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_difference 'QuizQuestion.count', 1 do
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id, editMode: 'fork',
-        questionName: 'Forked by request', stem: 'stem',
+        questionName: 'Forked by request', questionTitle: 'Title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
       }
     end
@@ -273,7 +252,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_no_difference 'QuizQuestion.count' do
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id,
-        questionName: 'Forked name', stem: 'Forked stem',
+        questionName: 'Forked name', questionTitle: 'Forked title',
         choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
       }
@@ -281,6 +260,16 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     assert_response :bad_request
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
+  end
+
+  test "update cannot change a question's type" do
+    put :update, params: {
+      id: @question.id, quizLevelId: @quiz.id, type: 'FreeResponseQuestion',
+      questionName: 'Still MC', questionTitle: 'ignored'
+    }
+
+    assert_response :bad_request
+    assert_instance_of MultipleChoiceQuestion, @question.reload
   end
 
   # --- update: standards ---
@@ -291,7 +280,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
 
@@ -306,7 +295,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
       standards: [{frameworkShortcode: new_standard.framework.shortcode, shortcode: new_standard.shortcode}]
     }
@@ -321,7 +310,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
 
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
       standards: []
     }, as: :json
@@ -330,19 +319,79 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal [], @question.reload.standards
   end
 
-  # quizLevelId is optional - editing a question with no particular quiz
-  # in view (e.g. a future standalone bank-management screen) still works,
-  # touching no placement.
   test "update edits the question in place when no quizLevelId is given" do
     unattached = create(:multiple_choice_question)
 
     put :update, params: {
       id: unattached.id,
-      questionName: 'Edited name', stem: 'Edited stem',
+      questionName: 'Edited name', questionTitle: 'Edited title',
       choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
     }
 
     assert_response :success
     assert_equal 'Edited name', unattached.reload.name
+  end
+
+  # --- free response ---
+
+  test "show renders FreeResponseQuestion content fields" do
+    question = create(:free_response_question)
+
+    get :show, params: {id: question.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 'FreeResponseQuestion', body['type']
+    assert_equal question.content['question_title'], body['questionTitle']
+    assert_equal question.content['description'], body['description']
+    refute body.key?('choices')
+  end
+
+  test "index includes FreeResponseQuestions" do
+    standard = create(:standard)
+    question = create(:free_response_question)
+    question.standards << standard
+
+    get :index, params: {
+      quizLevelId: @quiz.id,
+      standardFrameworkShortcode: standard.framework.shortcode,
+      standardShortcode: standard.shortcode,
+      limit: 10
+    }
+
+    assert_response :success
+    assert_equal [question.id], (JSON.parse(response.body).map {|q| q['id']})
+  end
+
+  test "update edits a FreeResponseQuestion in place" do
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
+
+    put :update, params: {
+      id: question.id, quizLevelId: @quiz.id,
+      questionName: 'Edited name', questionTitle: 'Edited title', description: 'Edited description'
+    }
+
+    assert_response :success
+    question.reload
+    assert_equal 'Edited title', question.content['question_title']
+    assert_equal 'Edited description', question.content['description']
+  end
+
+  test "update forks a FreeResponseQuestion as a FreeResponseQuestion" do
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
+
+    assert_difference 'QuizQuestion.count', 1 do
+      put :update, params: {
+        id: question.id, quizLevelId: @quiz.id, editMode: 'fork',
+        questionName: 'Forked', questionTitle: 'Forked title'
+      }
+    end
+
+    assert_response :success
+    forked = QuizQuestion.find(JSON.parse(response.body)['id'])
+    assert_instance_of FreeResponseQuestion, forked
+    assert_equal question, forked.fork_parent
   end
 end

@@ -29,7 +29,13 @@ const DataDisplay = () => {
           {datasetName || 'Dataset'}
         </Typography>
         <span className={styles.separator} aria-hidden="true" />
-        <span className={styles.rowCount}>{rowCountMessage}</span>
+        <Typography
+          component="span"
+          variant="body4"
+          className={styles.rowCount}
+        >
+          {rowCountMessage}
+        </Typography>
       </div>
       <div className={styles.tableContainer}>
         <DataTable />
