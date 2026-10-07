@@ -45,12 +45,7 @@ export function chooseStartPattern(
     hasProject,
     roll,
     override,
-  }: {
-    hasProject: boolean;
-    /** A fraction from 0 up to 1, not an index. */
-    roll: number;
-    override?: number;
-  }
+  }: {hasProject: boolean; roll: number; override?: number}
 ): string[] | undefined {
   if (!pattern?.length) {
     return undefined;
