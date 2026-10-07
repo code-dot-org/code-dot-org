@@ -83,57 +83,41 @@ describe('arranging the top blocks', () => {
     }
   });
 
-  it('gives the definition a column and starts the handlers beside it', () => {
-    // The first block is the thing the file is about and usually the tallest
-    // in it. The second starts a column however short the first turned out —
-    // which is the case no fixed gap could get right, because a `define actor`
-    // runs from one row to a couple of thousand pixels.
-    const [root, first] = arrangeTopBlocks(piled([2400, 180]));
-    expect(first.x).toBeGreaterThan(root.x);
-    expect(first.y).toBe(root.y);
-  });
-
-  it('stacks the handlers in the order the file listed them', () => {
-    const places = arrangeTopBlocks(piled([300, 180, 240, 200]));
-    for (let index = 2; index < places.length; index += 1) {
+  it('puts everything in one column, the definition first', () => {
+    // One list, read top to bottom: the handlers under the definition, not
+    // beside it.
+    const places = arrangeTopBlocks(piled([2400, 180, 240, 200]));
+    expect(new Set(places.map(place => place.x)).size).toBe(1);
+    for (let index = 1; index < places.length; index += 1) {
       expect(places[index].y).toBeGreaterThan(places[index - 1].y);
-      expect(places[index].x).toBe(places[index - 1].x);
     }
   });
 
   it('reads the order off the positions, not off the array', () => {
-    // The generated file writes the definition first and the handlers in order,
-    // but nothing guarantees a saved workspace does: Blockly hands back top
-    // blocks in whatever order it holds them. What a file means by "first" is
-    // what is highest on the page.
+    // Blockly hands back top blocks in whatever order it holds them. What a
+    // file means by "first" is what is highest on the page.
     const boxes: Box[] = [
       {x: 20, y: 300, width: 400, height: 100},
       {x: 20, y: 20, width: 400, height: 100},
       {x: 20, y: 160, width: 400, height: 100},
     ];
     const places = arrangeTopBlocks(boxes);
-    // The one that was highest keeps its own column; the other two follow in
-    // the order they read in, not the order they were given in.
     expect(places[1]).toEqual({x: 20, y: 20});
     expect(places[2].y).toBeLessThan(places[0].y);
-    expect(places[2].x).toBe(places[0].x);
   });
 
-  it('wraps into a further column rather than running off the page', () => {
-    // Fifteen handlers at 300 each is four and a half thousand pixels of
-    // scrolling past a definition a quarter of that. The wrap is what keeps
-    // the file roughly as tall as the thing it is about.
-    const places = arrangeTopBlocks(piled(new Array<number>(15).fill(300)));
-    const columns = new Set(places.map(place => place.x));
-    expect(columns.size).toBeGreaterThan(2);
-  });
-
-  it('never cuts a stack in half to make a column fit', () => {
-    // A stack taller than the column budget still goes somewhere whole: there
-    // is no such thing as half a handler.
-    const places = arrangeTopBlocks(piled([100, 9000, 100]));
-    expect(places).toHaveLength(3);
-    expect(anyOverlap(arranged(piled([100, 9000, 100])))).toBe(false);
+  it('keeps the order of a file saved in two columns, definition first', () => {
+    // The layout made columns before; a file saved then reads left column
+    // first, top to bottom, then the next.
+    const boxes: Box[] = [
+      {x: 500, y: 20, width: 300, height: 100}, // first handler
+      {x: 20, y: 20, width: 400, height: 900}, // the definition
+      {x: 500, y: 160, width: 300, height: 100}, // second handler
+    ];
+    const places = arrangeTopBlocks(boxes);
+    expect(places[1]).toEqual({x: 20, y: 20});
+    expect(places[0].y).toBeLessThan(places[2].y);
+    expect(places[0].y).toBeGreaterThan(900);
   });
 
   it('is settled after one pass: arranging again changes nothing', () => {

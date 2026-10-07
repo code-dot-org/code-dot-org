@@ -33,27 +33,8 @@ export interface Place {
 
 /** The top-left corner everything is laid out from. */
 const ORIGIN: Place = {x: 20, y: 20};
-
-/** Between one stack and the next down a column. */
+/** Between one stack and the next down the column. */
 const GAP = 32;
-
-/** Between one column and the next across. */
-const GUTTER = 48;
-
-/**
- * How long a column of handlers may get before the next one starts.
- *
- * A FLOOR IN TWO WAYS. A column always takes the first block offered it, so a
- * stack taller than this is not cut in half — nothing can cut a stack in half.
- * And the definition's own height raises it, so the handlers beside a tall
- * `define actor` do not wrap into a third column while the second is still
- * shorter than the thing it stands next to.
- *
- * What it is for: fifteen handlers are four thousand pixels of scrolling, and
- * a workspace no taller than the definition it is about is one a reader can
- * take in.
- */
-const COLUMN_HEIGHT = 1600;
 
 /**
  * Whether a block left at the top of a workspace means nothing there.
@@ -75,22 +56,21 @@ export const isFreeFloating = (block: {
   Boolean(block.previousConnection || block.outputConnection);
 
 /**
- * Place every box in columns, in the order the workspace already reads in.
+ * Place every box in ONE column, in the order the workspace already reads in.
  *
- * The first block — whichever is highest, and in an actor file that is the
- * `define actor` stack — takes a column to itself, because it is the thing the
- * file is about and it is usually the tallest thing in it. The rest follow down
- * a column beside it and wrap into another when that column has had enough.
+ * One column, the definition first and the handlers under it, so a file reads
+ * top to bottom as one list. It was columns once — the definition alone and
+ * the handlers beside it, wrapping when a column ran long — and a file you
+ * had to read in two directions was harder to follow than a long one, now
+ * that a long one collapses to its headers (`lazyBodies`).
  *
  * Order is taken from the boxes as they arrive, BY COLUMN: left to right, and
- * top to bottom within a column. That is the only thing the incoming positions
- * are used for, and it has to be the column-wise reading rather than the
- * row-wise one or the arrangement would not survive being run on its own
- * output — sorting by y alone walks across the columns it just made, and the
- * second pass deals them out in a different order than the first.
+ * top to bottom within a column. Inside one column that is plain top to
+ * bottom; a file saved when the layout made columns still reads in the order
+ * it did, definition first.
  *
- * A generated actor stacks everything at one x, where this degenerates to
- * plain top-to-bottom, which is the order such a file is written in.
+ * A generated actor stacks everything at one x, where this is plain
+ * top-to-bottom, which is the order such a file is written in.
  *
  * Returns one place per box, in the order the boxes were given.
  */
@@ -99,30 +79,11 @@ export function arrangeTopBlocks(boxes: readonly Box[]): Place[] {
     .map((box, index) => ({box, index}))
     .sort((a, b) => a.box.x - b.box.x || a.box.y - b.box.y);
 
-  /** How far down a column may run before the next one starts. */
-  const budget = Math.max(COLUMN_HEIGHT, order[0]?.box.height ?? 0);
-
   const places: Place[] = new Array<Place>(boxes.length);
-  let columnX = ORIGIN.x;
-  let columnWidth = 0;
   let y = ORIGIN.y;
-  /** Whether the column has anything in it, which decides if it may wrap. */
-  let started = false;
-
-  for (const [rank, {box, index}] of order.entries()) {
-    // The first block keeps a column of its own: the next one starts beside it
-    // however short it turned out to be.
-    const wrap = started && (rank === 1 || y + box.height > ORIGIN.y + budget);
-    if (wrap) {
-      columnX += columnWidth + GUTTER;
-      columnWidth = 0;
-      y = ORIGIN.y;
-    }
-    places[index] = {x: columnX, y};
-    columnWidth = Math.max(columnWidth, box.width);
+  for (const {box, index} of order) {
+    places[index] = {x: ORIGIN.x, y};
     y += box.height + GAP;
-    started = true;
   }
-
   return places;
 }

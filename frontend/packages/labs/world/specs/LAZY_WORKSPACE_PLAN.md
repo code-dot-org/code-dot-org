@@ -14,10 +14,13 @@ only when the learner expands it.
   the generator ignores it and an orphan plugin disables it. A block dropped
   on empty canvas is deleted, as one dropped on the toolbox is, and undo
   brings it back.
-- **A column layout instead of tidying.** The editor places every top block,
-  in file order, definitions first, in columns as wide as the editor allows.
-  Expanding, collapsing or editing one moves only the blocks below it in its
-  column. This replaces `tidyLayout`, which measured what had loaded and
+- **One column instead of tidying.** The editor places every top block,
+  in file order, definitions first, in a single column, so a file reads top
+  to bottom as one list. (Built as columns first — the definition alone and
+  the handlers beside it — and made one column in Oct 2026: a file read in
+  two directions was harder to follow than a long one, now that a long one
+  collapses to its headers.) Expanding, collapsing or editing one moves only
+  the blocks below it. This replaces `tidyLayout`, which measured what had loaded and
   rearranged it only when something overlapped.
 - **Bodies on demand.** A large file opens collapsed, and only its top
   blocks are built. A small one (under about forty blocks) opens expanded.
