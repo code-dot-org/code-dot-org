@@ -85,6 +85,11 @@ if (!archiveOnly) {
         : `unused: ${name}`,
     );
   }
+  if (removed.length) {
+    console.log(
+      `NOTE: "unused" is not proof. The search misses class names built at runtime (fa-\${x}) and usages in dashboard/config curriculum data, and covers only ${SEARCH_DIRS.join(', ')}.`,
+    );
+  }
 }
 
 if (!archiveOnly && newIcons.size === 0) throw new Error('parsed no icons from custom-icons.css; refusing to continue');

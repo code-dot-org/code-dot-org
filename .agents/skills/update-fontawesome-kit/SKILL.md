@@ -53,6 +53,17 @@ matches the class `fa-<name>` and the bare quoted `'<name>'` (as in `iconName="<
 `frontend`, `dashboard/app`, `shared`, `pegasus`. Short or common names (`move`, `clever`) match unrelated
 strings, so read each hit; a `USED` hit that is a real icon usage is a regression to fix or flag before the gate.
 
+**If any removed icon has hits:**
+
+1. Open each `USED` hit and classify it as a real usage or a false positive. Show the operator the real ones
+   (file and line).
+2. Check for a rename: a removed icon next to a similarly named added one (`ai-head-regular` -> `ai-head`).
+3. A real usage blocks step 4, even if the operator says go. Ask them to pick: fix callers in the update PR
+   (new name or another icon); keep the icon (ask design to restore it in the kit and stop here); or defer
+   (apply anyway and open a follow-up; those spots render blank in production once the kit is live).
+4. Say plainly that "unused" is not proof. Known gaps: class names built at runtime (`fa-${x}`) and usages in
+   `dashboard/config` curriculum data are not searched, and only the five directories above are.
+
 **GATE:** operator confirms the icon diff matches what design added (ask for names if unsure).
 
 ### 4. Apply (you)
