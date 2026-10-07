@@ -23,6 +23,7 @@
 import type {Block, Workspace} from 'blockly';
 
 import {BODY_OWNER_ID} from './bodySurfaces';
+import {indexedBlocks, type IndexedBlock} from './workspaceIndex';
 
 /**
  * A block that gives a name to something, and where that name reaches.
@@ -129,7 +130,9 @@ export function registerEventLocals(
  * out of the hat's `+`, and a handler that never reads what it was handed
  * never makes one. A hat that is not an event hat has no locals and no ids.
  */
-export function eventLocalIds(block: Block): Array<string | undefined> {
+export function eventLocalIds(
+  block: Block | IndexedBlock,
+): Array<string | undefined> {
   const locals = eventLocals.get(block.type);
   if (!locals) {
     return [];
@@ -159,7 +162,7 @@ export function eventLocalIds(block: Block): Array<string | undefined> {
 const PARAMS_OVER = 'DO';
 
 /** The variable ids a `define block` names as its parameters. */
-function paramIds(block: Block): string[] {
+function paramIds(block: Block | IndexedBlock): string[] {
   const state = (
     block as unknown as {
       saveExtraState?: () => {parts?: Array<{kind?: string; var?: string}>};
@@ -171,7 +174,10 @@ function paramIds(block: Block): string[] {
 }
 
 /** Every id `block` binds, and the inputs each binding reaches. */
-function bindingsOf(block: Block): {ids: string[]; over: readonly string[]} {
+function bindingsOf(block: Block | IndexedBlock): {
+  ids: string[];
+  over: readonly string[];
+} {
   if (block.type === PARAMS_BLOCK) {
     return {
       ids: paramIds(block),
@@ -198,10 +204,13 @@ function bindingsOf(block: Block): {ids: string[]; over: readonly string[]} {
   return {ids, over: binder.over};
 }
 
-/** Every id bound by some binder anywhere on the workspace. */
+/**
+ * Every id bound by some binder anywhere in the file — in a body held unbuilt
+ * too, since a name it binds is still not a free one (`workspaceIndex`).
+ */
 export function boundIds(workspace: Workspace): Set<string> {
   const bound = new Set<string>();
-  for (const block of workspace.getAllBlocks(false)) {
+  for (const block of indexedBlocks(workspace)) {
     for (const id of bindingsOf(block).ids) {
       bound.add(id);
     }
@@ -226,7 +235,9 @@ export function boundIds(workspace: Workspace): Set<string> {
  */
 export function writtenIds(workspace: Workspace): Set<string> {
   const written = new Set<string>();
-  for (const block of workspace.getAllBlocks(false)) {
+  // The whole file, built or not: a local written only in a collapsed body is
+  // still one of the file's names (`workspaceIndex`).
+  for (const block of indexedBlocks(workspace)) {
     const binds = bindingsOf(block).ids;
     // A setter is the other way a name comes to exist. Recognised by the
     // shape of its type rather than by a list, so a new flavour needs no

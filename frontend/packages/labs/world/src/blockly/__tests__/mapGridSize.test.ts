@@ -19,7 +19,8 @@ const workspaceWith = (declarations: Array<Record<string, unknown>>) => {
     getInputTargetBlock: (name: string) => inputs[name] ?? null,
   }));
   return {
-    workspace: {getBlocksByType: () => blocks},
+    // What the workspace index asks of a live workspace (`workspaceIndex`).
+    workspace: {getAllBlocks: () => blocks},
   } as unknown as Parameters<typeof mapGridSize>[0];
 };
 

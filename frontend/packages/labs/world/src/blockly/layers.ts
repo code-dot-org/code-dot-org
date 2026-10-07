@@ -20,6 +20,7 @@ import type {Blockly} from '@code-dot-org/blockly';
 import {DEFAULT_LAYER_ID} from '../engine/core/Layer';
 
 import {liveDropdown} from './moduleOptions';
+import {hasIndexedBlock, indexedBlocksOfType} from './workspaceIndex';
 
 /** Marks a dropdown value as naming a layer defined in this workspace. */
 const PREFIX = 'layer:';
@@ -58,16 +59,21 @@ const workspaceOf = (field?: Blockly.Field): Blockly.Workspace | undefined => {
   return workspace?.isFlyout ? workspace.targetWorkspace : workspace;
 };
 
-/** Every layer defined in this workspace, in the order the blocks are in. */
+/**
+ * Every layer defined in this file, in the order the blocks are in.
+ *
+ * Asked of the INDEX, not of the live blocks: a `define layer` is a row inside
+ * a world's body, and a body held unbuilt still declares its layers — a
+ * dropdown that could not see them would drop the value of every block naming
+ * one (`workspaceIndex`).
+ */
 export const layersIn = (
   workspace: Blockly.Workspace | undefined,
 ): Array<{blockId: string; name: string}> =>
-  (workspace?.getAllBlocks(true) ?? [])
-    .filter(block => block.type === DEFINE_LAYER)
-    .map(block => ({
-      blockId: block.id,
-      name: String(block.getFieldValue('NAME') ?? ''),
-    }));
+  indexedBlocksOfType(workspace, DEFINE_LAYER, true).map(block => ({
+    blockId: block.id,
+    name: String(block.getFieldValue('NAME') ?? ''),
+  }));
 
 /** The `[label, value]` rows a LAYER dropdown offers. */
 export const layerOptions = (
@@ -117,7 +123,7 @@ export const layerOf = (block: Blockly.Block): string => {
       const blockId = layerBlockId(value);
       // A `within layer` naming a definition that has since been deleted places
       // into the default rather than into nothing.
-      return blockId && parent.workspace.getBlockById(blockId)
+      return blockId && hasIndexedBlock(parent.workspace, blockId)
         ? layerId(blockId)
         : DEFAULT_LAYER_ID;
     }
@@ -145,7 +151,7 @@ export const layerIdFromValue = (
   if (blockId === undefined) {
     return value || DEFAULT_LAYER_ID;
   }
-  return blockId && block.workspace?.getBlockById?.(blockId)
+  return blockId && hasIndexedBlock(block.workspace, blockId)
     ? layerId(blockId)
     : DEFAULT_LAYER_ID;
 };

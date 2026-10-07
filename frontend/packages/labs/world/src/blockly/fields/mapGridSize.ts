@@ -15,6 +15,7 @@
 import type {Blockly} from '@code-dot-org/blockly';
 
 import {VIEWPORT_TILES} from '../../runtime/viewport';
+import {indexedBlocksOfType, type IndexedBlock} from '../workspaceIndex';
 
 /** The block that says how big the world is. */
 export const SET_MAP_SIZE = 'world_set_map_size';
@@ -35,7 +36,7 @@ export interface MapGrid {
 const MAX_TILES = 64;
 
 /** A value socket's number, when it is one that was typed rather than worked out. */
-const literal = (block: Blockly.Block, name: string): number | undefined => {
+const literal = (block: IndexedBlock, name: string): number | undefined => {
   const target = block.getInputTargetBlock?.(name);
   if (!target || target.type !== 'math_number') {
     return undefined;
@@ -61,9 +62,13 @@ const tiles = (declared: number | undefined): number =>
  * can show anyway.
  */
 export function mapGridSize(block: Blockly.Block | null | undefined): MapGrid {
-  const declaration = block?.workspace
-    ?.getBlocksByType?.(SET_MAP_SIZE, true)
-    ?.find(candidate => !candidate.isInsertionMarker?.());
+  // Asked of the index: `set map size` is a row in a world's body, which may be
+  // held unbuilt (`workspaceIndex`).
+  const declaration = indexedBlocksOfType(
+    block?.workspace,
+    SET_MAP_SIZE,
+    true,
+  ).find(candidate => !candidate.isInsertionMarker?.());
   if (!declaration) {
     return {columns: VIEWPORT_TILES, rows: VIEWPORT_TILES};
   }

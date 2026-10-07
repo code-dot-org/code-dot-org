@@ -17,6 +17,7 @@ import type {Blockly} from '@code-dot-org/blockly';
 import {DEFAULT_CAMERA_ID} from '../engine/core/Camera';
 
 import {liveDropdown} from './moduleOptions';
+import {hasIndexedBlock, indexedBlocksOfType} from './workspaceIndex';
 
 /** Marks a dropdown value as naming a camera defined in this workspace. */
 const PREFIX = 'camera:';
@@ -46,16 +47,18 @@ const workspaceOf = (field?: Blockly.Field): Blockly.Workspace | undefined => {
   return workspace?.isFlyout ? workspace.targetWorkspace : workspace;
 };
 
-/** Every camera defined in this workspace, in the order the blocks are in. */
+/**
+ * Every camera defined in this file, in the order the blocks are in — asked
+ * of the index, since a `define camera` may sit in a body held unbuilt
+ * (`workspaceIndex`, and `layers.layersIn` on why that matters).
+ */
 export const camerasIn = (
   workspace: Blockly.Workspace | undefined,
 ): Array<{blockId: string; name: string}> =>
-  (workspace?.getAllBlocks(true) ?? [])
-    .filter(block => block.type === DEFINE_CAMERA)
-    .map(block => ({
-      blockId: block.id,
-      name: String(block.getFieldValue('NAME') ?? ''),
-    }));
+  indexedBlocksOfType(workspace, DEFINE_CAMERA, true).map(block => ({
+    blockId: block.id,
+    name: String(block.getFieldValue('NAME') ?? ''),
+  }));
 
 /** The `[label, value]` rows a CAMERA dropdown offers. */
 export const cameraOptions = (
@@ -89,7 +92,7 @@ export const cameraIdFromValue = (
   if (blockId === undefined) {
     return value || DEFAULT_CAMERA_ID;
   }
-  return blockId && block.workspace?.getBlockById?.(blockId)
+  return blockId && hasIndexedBlock(block.workspace, blockId)
     ? cameraId(blockId)
     : DEFAULT_CAMERA_ID;
 };
