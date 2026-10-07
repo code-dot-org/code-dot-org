@@ -7,39 +7,30 @@
     "android:build:debug": "yarn android:sync && cd android && ./gradlew assembleDebug",
     "android:build:release": "yarn android:sync && cd android && ./gradlew assembleRelease",
     "android:sync": "yarn build && cap sync android",
-    "build": "tsc -b && vite build",
-    "dev": "vite",
+    "build": "yarn run -T turbo build:launchpad --filter @code-dot-org/studio",
+    "dev": "yarn workspace @code-dot-org/studio dev:launchpad",
+    "ios:open": "cap open ios",
+    "ios:sync": "yarn build && cap sync ios",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "preview": "vite preview",
-    "stylelint": "stylelint 'src/**/*.scss'",
-    "stylelint:fix": "stylelint --fix 'src/**/*.scss'",
-    "test": "vitest run",
+    "preview": "yarn workspace @code-dot-org/studio exec vite preview --config vite.launchpad.config.ts",
+    "test": "yarn workspace @code-dot-org/studio exec vitest run src/modules/launchpad",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
-  "stylelint": {
-    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
-  },
   "dependencies": {
     "@capacitor/android": "8.5.2",
     "@capacitor/core": "8.5.2",
-    "@capacitor/inappbrowser": "4.0.3",
-    "@code-dot-org/component-library-styles": "workspace:*"
+    "@capacitor/ios": "8.5.2"
   },
   "devDependencies": {
     "@capacitor/cli": "8.5.2",
     "@code-dot-org/lint-config": "workspace:*",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "globals": "catalog:",
     "prettier": "catalog:",
-    "sass": "catalog:",
-    "stylelint": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:",
-    "vitest": "catalog:"
+    "typescript": "catalog:"
   }
 }

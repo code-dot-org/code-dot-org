@@ -3,5 +3,5 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "vite.launchpad.config.ts"]
 }

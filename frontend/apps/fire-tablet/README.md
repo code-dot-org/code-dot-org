@@ -1,87 +1,78 @@
-# Fire Tablet Studio wrapper
+# Studio activity app prototype
 
-This private frontend workspace packages a small TypeScript launcher in an Android
-APK. On startup, the official Capacitor InAppBrowser plugin opens
-`https://studio.code.org/` in an embedded WebView inside the installed app. The
-website supplies the existing Rails and `apps/` experience and deploys normally.
+This workspace packages **`frontend/apps/studio` as the React/TypeScript home screen** of an installed Android/iOS application. A separate Studio entry builds only the launchpad and design system. Hosted activities provide the existing `apps/` experience. There are no local accounts, progress features, analytics, activity patches, bundled labs, or offline curriculum.
 
-The launcher offers retry after a local launch failure and **Open Studio** after
-the embedded view closes. Android Back traverses browser history, then closes
-the view. Returning from Home does not request another browser. Remote page
-loading, sign-in, and navigation remain website/plugin behavior.
+The five demo selections come from the [Exhibit A testing tracker](https://docs.google.com/document/d/1m_J9RVHiTadipL2_XcYBrzQcdVa8KCnKV4nxaHMswYE/edit?tab=t.0), which marks them **untested**:
 
-There is no React runtime, bundled Studio, local account flow, native lab
-optimization, or wrapper telemetry. A semantic HTML button and status region fit
-this non-React bootstrap; shared design-system color tokens supply the styling.
-The local Capacitor bridge stays separate from the remote page. No remote
-`server.url`, injected scripts, custom user agent, headers, or cookie transfer
-are configured. The fixed initial URL does not restrict subsequent navigation.
+| Entry | Activity                | Ages  | Variation                 |
+| ----- | ----------------------- | ----- | ------------------------- |
+| 1     | Pre-Reader Express      | 4–7   | Course for young learners |
+| 7     | AI for Oceans           | 7–11  | Guided AI activity        |
+| 8     | Dance Party: AI Edition | 11–14 | AI, animation, and audio  |
+| 15    | Minecraft Adventurer    | 7–14  | Guided block programming  |
+| 22    | Music Lab               | 7–14  | Open-ended music creation |
+
+They sample all three tracker groups; this prototype does not certify Fire Kids compatibility or establish an approved launch slate.
 
 ## Web development
 
-Run from `frontend/` with the repository's Node 20 setup:
+From `frontend/`, using the repository Node 20 setup:
 
 ```bash
 yarn install --immutable
-yarn workspace @code-dot-org/fire-tablet dev
 yarn workspace @code-dot-org/fire-tablet build
+yarn workspace @code-dot-org/fire-tablet dev
+```
+
+Visit `http://127.0.0.1:5173/`. Browser preview renders the same launchpad and opens ordinary website tabs, as its visible notice explains. It does not emulate native containment. Pass `--port 5174` if 5173 is occupied.
+
+`build` runs Studio's dedicated Turbo `build:launchpad` task and its theme/font dependencies. Capacitor's `webDir` points directly to `apps/studio/dist-launchpad/`. Studio is not imported as a library. Its normal Rails entry is unchanged; the launchpad entry does not initialize Rails authentication, CSRF, observability, a router, or curriculum labs. No PWA service worker is registered in the packaged app.
+
+## Native activity boundary
+
+The catalog and UI live in `apps/studio/src/modules/launchpad/`. Its `openActivity` calls the same local plugin interface on Android and iOS:
+
+```ts
+CuratedActivities.open({url, title, allowedPaths});
+```
+
+The promise resolves when the native view closes; the launchpad restores focus to the selected card. The UI suppresses parallel openings and allows retry after failure. There is no automatic activity launch.
+
+Android registers the plugin in `MainActivity`. A non-exported `CuratedActivity` runs a plain WebView in a separate process/data directory, without a Capacitor bridge. iOS registers the same plugin from `StudioBridgeViewController` and presents a plain WKWebView with a non-persistent data store. Both provide Home, Back, loading feedback, and Retry. HTTPS validation retains platform defaults.
+
+Only the selected course's `/s/<course>` and `/courses/<course>` families are permitted, or `/projects/music` for generated Music Lab projects. Matching checks exact HTTPS/host/port and path-segment boundaries; encoded/ambiguous paths are rejected. About, Donate, account pages, other activities, external schemes, popups, and downloads are blocked rather than opened in another app. Known YouTube embed paths are permitted only in media frames. Asset/API requests remain website behavior. Android also checks main-document requests and page starts because its navigation callback does not cover POSTs or app-initiated loads. This is a prototype navigation boundary, not a complete kiosk or network/content filter; embedded media and course transitions need actual-device testing.
+
+A future local Studio lab can replace a hosted destination without replacing the launchpad. This prototype supplies only the hosted pathway.
+
+## Android
+
+Use Node 22+, JDK 21, and Android SDK platform 36/build tools 36.0.0/platform-tools. Set `JAVA_HOME` and `ANDROID_HOME`. From `frontend/`:
+
+```bash
+yarn workspace @code-dot-org/fire-tablet android:build:debug
+cd apps/fire-tablet/android
+./gradlew testDebugUnitTest
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+```
+
+Build scripts sync current launchpad assets before assembling. The temporary identity remains `org.code.firetablet.debug` / **Studio (internal test)**, API 28 minimum, with placeholder icon/splash. A physical Fire Tablet and Amazon Kids profile are required for compatibility claims.
+
+## iOS portability
+
+On a Mac with the Capacitor 8-supported Xcode version, using Node 22+:
+
+```bash
+yarn workspace @code-dot-org/fire-tablet ios:sync
+yarn workspace @code-dot-org/fire-tablet ios:open
+```
+
+Choose an iPad simulator in Xcode and run the `App` target. The checked-in project uses Swift Package Manager, the same temporary bundle identity, and the same Studio assets/catalog/interface. Native plugin source and storyboard registration are included. Linux can sync and inspect the project but cannot compile or run its UIKit/WebKit application; iOS runtime validation remains pending.
+
+## Validation and release
+
+```bash
+yarn workspace @code-dot-org/studio exec vitest run src/modules/launchpad
 yarn release:dryrun --filter @code-dot-org/fire-tablet
 ```
 
-The browser preview displays the fallback screen. It does not launch Studio or
-exercise Android. Generic frontend commands never run native tooling. The local
-JavaScript target is Chrome 71 as an initial Android 9 baseline; actual Fire
-WebView versions and hosted-site compatibility still require device validation.
-
-## Android development
-
-Use Node 22+, JDK 21, and an Android SDK containing platform API 36, build tools
-36.0.0, and platform tools. The app pins Capacitor core/Android/CLI 8.5.2 and
-InAppBrowser 4.0.3; the checked-in wrapper selects Gradle 8.14.3 with its archive
-checksum. Set `JAVA_HOME` to the JDK and `ANDROID_HOME` to the SDK; put platform
-tools on `PATH`. Android Studio can install these SDK components, or use:
-
-```bash
-sdkmanager 'platforms;android-36' 'build-tools;36.0.0' 'platform-tools'
-```
-
-Then run from `frontend/`:
-
-```bash
-yarn install --immutable
-yarn workspace @code-dot-org/fire-tablet android:build:debug
-adb install -r apps/fire-tablet/android/app/build/outputs/apk/debug/app-debug.apk
-adb shell am start -n org.code.firetablet.debug/.MainActivity
-```
-
-Each `android:build:*` command builds current web assets, runs the pinned local
-`cap sync android`, then assembles with Gradle. `android:sync` performs just the
-first two steps. Native tools are required only for these explicit commands.
-An Android phone/emulator is useful supplementary testing; it cannot establish
-Fire compatibility.
-
-The debug identity is **Studio (internal test)** / `org.code.firetablet.debug`,
-version code 1. The standard generated icon/splash are temporary. The initial
-device candidate is Fire 7 (2022, 12th generation), following the requested
-oldest model still sold new criterion; see the availability caveat in validation.
-Minimum API 28 is a packaging boundary, not verified support for every device or
-Amazon Kids profile. Older Fire OS versions are excluded by this build.
-
-Debug APKs are for internal validation. Camera, microphone, and location
-permissions inherited from the browser library are removed; flows requiring
-them are outside this phase's supported claims. HTTPS validation stays enabled,
-cleartext traffic and WebView debugging are disabled, and browser cookies/cache
-are not cleared on open. Verify session persistence and logout on actual tablets.
-
-## CI and release
-
-Frontend CI selects this app when its source, shared lint/styles, frontend root
-inputs, or relevant workflow/setup inputs change. Web checks use Node 20; a
-separate Node 22/JDK 21 job builds and uploads `fire-tablet-debug-<commit>` without
-production secrets. Ordinary Studio/Rails builds continue to select Studio;
-their existing broad frontend asset hashing may invalidate caches when files in
-this workspace change.
-
-See [validation.md](docs/validation.md) for evidence and pending device checks,
-and [release.md](docs/release.md) for identity, signing, and distribution gates.
-No publishing or store submission is part of the build.
+CI rebuilds the APK when the wrapper, Studio, or shared theme/fonts change and runs Android navigation-policy unit tests. Ordinary Rails builds invoke no native tools. See [validation.md](docs/validation.md) for evidence and [release.md](docs/release.md) for the separate release process. No app is published or submitted by these commands.

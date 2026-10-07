@@ -13,3 +13,10 @@ android/capacitor-cordova-android-plugins/
 *.jks
 *.keystore
 .env*
+
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+ios/App/App/config.xml
+ios/App/Pods/
+ios/App/build/
+ios/**/xcuserdata/

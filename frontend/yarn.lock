@@ -1733,12 +1733,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@capacitor/inappbrowser@npm:4.0.3":
-  version: 4.0.3
-  resolution: "@capacitor/inappbrowser@npm:4.0.3"
+"@capacitor/ios@npm:8.5.2":
+  version: 8.5.2
+  resolution: "@capacitor/ios@npm:8.5.2"
   peerDependencies:
-    "@capacitor/core": ">=8.0.0"
-  checksum: 10c0/5a8cf6d0ffaf134111d6f14f369f7863b6bbb7b476b2e3d17daaba437aa14e37c9ee641307d77fb3f755325960adf2b76c9151843be9bdd386cf92df7ef0f134
+    "@capacitor/core": ^8.5.0
+  checksum: 10c0/aca7d49d3b9cdc16155df0c8c0a8057210ce5f2d2c0e400303ee86baff1f03668c19e8af59fb283223ee4dc49c90efc391366e46d7067814f4e86200b5a4b4ad
   languageName: node
   linkType: hard
 
@@ -2042,18 +2042,12 @@ __metadata:
     "@capacitor/android": "npm:8.5.2"
     "@capacitor/cli": "npm:8.5.2"
     "@capacitor/core": "npm:8.5.2"
-    "@capacitor/inappbrowser": "npm:4.0.3"
-    "@code-dot-org/component-library-styles": "workspace:*"
+    "@capacitor/ios": "npm:8.5.2"
     "@code-dot-org/lint-config": "workspace:*"
     "@types/node": "catalog:"
     eslint: "catalog:"
-    globals: "catalog:"
     prettier: "catalog:"
-    sass: "catalog:"
-    stylelint: "catalog:"
     typescript: "catalog:"
-    vite: "catalog:"
-    vitest: "catalog:"
   languageName: unknown
   linkType: soft
 
@@ -2399,6 +2393,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:
+    "@capacitor/core": "npm:8.5.2"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
@@ -2413,6 +2408,7 @@ __metadata:
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
     "@sentry/browser": "catalog:"
+    "@storybook/react-vite": "npm:^10.1.7"
     "@tanstack/react-query": "catalog:"
     "@tanstack/react-router": "npm:^1.139.14"
     "@tanstack/react-router-devtools": "npm:^1.139.14"
@@ -2434,6 +2430,8 @@ __metadata:
     prettier: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"
+    sass: "catalog:"
+    stylelint: "catalog:"
     typescript: "npm:~5.9.3"
     typescript-eslint: "catalog:"
     vite: "catalog:"

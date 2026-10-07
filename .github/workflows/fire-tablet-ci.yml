@@ -22,7 +22,7 @@ jobs:
             .github
       - name: Setup frontend (Node 20)
         uses: ./.github/actions/frontend/setup
-      - name: Check launcher
+      - name: Check Studio launchpad
         run: yarn release:dryrun --filter @code-dot-org/fire-tablet
 
   android:
@@ -51,6 +51,9 @@ jobs:
           packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
       - name: Build internal debug APK
         run: yarn workspace @code-dot-org/fire-tablet android:build:debug
+      - name: Test activity navigation policy
+        working-directory: ./frontend/apps/fire-tablet/android
+        run: ./gradlew testDebugUnitTest
       - name: Upload internal debug APK
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:

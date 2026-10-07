@@ -1,11 +1,16 @@
 # Release record
 
+The current launchpad prototype runs signed out; account/sign-in acceptance is
+not required for this prototype. This guide concerns a future Android release.
+The iOS project demonstrates portability and has no release pipeline or verified
+runtime support yet.
+
 The internal debug APK can be built without release inputs. A signed production
 candidate and public readiness remain open: no owner-confirmed identity/artwork,
 signing key, device evidence, audience, distribution route, or release owners
 were supplied. The temporary debug identity/icon are not production branding.
 
-The last assembled APK and final-source rebuild limitation are recorded in
+The current assembled APK and validation limitations are recorded in
 [validation.md](validation.md). Rebuild the current source before device testing
 or preparing any candidate.
 
@@ -75,8 +80,8 @@ not authorize redesigning hosted flows or publishing/submitting the APK.
 
 ## Operations
 
-Studio continues its normal website deployments; the APK contains only the
-launcher. The designated native owner reruns relevant device smoke checks after
+Studio continues its normal website deployments; the APK contains the packaged
+React launchpad, and its selected activities stay hosted. The designated native owner reruns relevant device smoke checks after
 website changes to authentication, navigation, browser support or required labs.
 Pin native dependencies and repeat session/Back/network tests on upgrades.
 Signing-key custody belongs to the release owner and remains outside source

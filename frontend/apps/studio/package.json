@@ -5,12 +5,16 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
+    "build:launchpad": "tsc -p tsconfig.launchpad.json && vite build --config vite.launchpad.config.ts",
     "dev": "vite dev",
+    "dev:launchpad": "vite --config vite.launchpad.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
+    "stylelint": "stylelint 'src/modules/launchpad/**/*.scss'",
+    "stylelint:fix": "stylelint --fix 'src/modules/launchpad/**/*.scss'",
     "test": "vitest --run --passWithNoTests",
     "typecheck": "tsc -b --noEmit"
   },
@@ -19,6 +23,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@capacitor/core": "8.5.2",
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/core": "workspace:*",
@@ -41,6 +46,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
+    "@storybook/react-vite": "^10.1.7",
     "@tanstack/router-plugin": "^1.139.14",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
@@ -56,6 +62,8 @@
     "jsdom": "catalog:",
     "msw": "catalog:",
     "prettier": "catalog:",
+    "sass": "catalog:",
+    "stylelint": "catalog:",
     "typescript": "~5.9.3",
     "typescript-eslint": "catalog:",
     "vite": "catalog:",
