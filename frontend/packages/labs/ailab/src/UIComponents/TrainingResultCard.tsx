@@ -1,11 +1,15 @@
 import {Button, Typography} from '@mui/material';
+import {useEffect, useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {formatAccuracy} from '../helpers/accuracy';
 import {isTrainedOnCurrentColumns} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setCurrentPanel} from '../redux';
+import {setCurrentPanel, setTrainingModalStep} from '../redux';
+import {getDisplayTree} from '../selectors/visualizationSelectors';
+
+import TreeMiniMap from './TreeMiniMap';
 
 import styles from './trainingResultCard.module.scss';
 
@@ -14,21 +18,36 @@ const TrainingResultCard = () => {
   const isTrained = useAppSelector(isTrainedOnCurrentColumns);
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = useAppSelector(state => state.historicResults[0]);
+  const tree = useAppSelector(getDisplayTree);
+  // A replay keeps the card mounted, so the dialog can return focus to it.
+  const [isReplaying, setIsReplaying] = useState(false);
 
-  if (!isTrained || isModalOpen || latestResult.total === 0) {
+  useEffect(() => {
+    if (!isModalOpen) {
+      setIsReplaying(false);
+    }
+  }, [isModalOpen]);
+
+  if (!isTrained || (isModalOpen && !isReplaying) || latestResult.total === 0) {
     return null;
   }
 
   const {accuracy, correct, total} = latestResult;
 
+  const replayTraining = () => {
+    setIsReplaying(true);
+    dispatch(setTrainingModalStep('training'));
+  };
+
   return (
     <div className={styles.card}>
+      {tree && <TreeMiniMap tree={tree} onReplay={replayTraining} />}
       <div className={styles.results}>
         <div className={styles.result}>
           <Typography variant="body4" className={styles.label}>
             Accuracy
           </Typography>
-          <Typography variant="body2" className={styles.accuracyValue}>
+          <Typography variant="body2" className={styles.value}>
             {formatAccuracy(accuracy)}
           </Typography>
         </div>

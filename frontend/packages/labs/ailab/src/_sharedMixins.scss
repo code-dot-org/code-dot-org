@@ -1,3 +1,7 @@
+// Color names for charts, used in this fixed order. Neighbors were checked for
+// colorblind separation.
+$dataviz-colors: brand, accent-orange, info, accent-pink, success;
+
 // Shared by side-by-side panels so their layout and header rows line up.
 @mixin panel {
   display: flex;

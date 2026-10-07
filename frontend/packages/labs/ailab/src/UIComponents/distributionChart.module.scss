@@ -1,3 +1,6 @@
+@use 'sass:list';
+@use '../sharedMixins' as mixins;
+
 $axis-label-width: 40px;
 $plot-end-padding: 16px;
 $bar-gap: 12px;
@@ -113,23 +116,8 @@ $bar-gap: 12px;
   border-radius: 2px;
 }
 
-// Fixed order, checked for colorblind separation between neighbors.
-.barColor0 {
-  background-color: var(--background-brand-primary);
-}
-
-.barColor1 {
-  background-color: var(--background-accent-orange-primary);
-}
-
-.barColor2 {
-  background-color: var(--background-info-primary);
-}
-
-.barColor3 {
-  background-color: var(--background-accent-pink-primary);
-}
-
-.barColor4 {
-  background-color: var(--background-success-primary);
+@each $color in mixins.$dataviz-colors {
+  .barColor#{list.index(mixins.$dataviz-colors, $color) - 1} {
+    background-color: var(--background-#{$color}-primary);
+  }
 }
