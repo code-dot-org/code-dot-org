@@ -23,8 +23,10 @@ Usages of removed icons: <!-- result of the grep in SKILL.md step 3, or "none fo
 
 ## Testing
 
-- [ ] `custom-icons.min.css` and one woff2 under the new prefix return 200 with `Access-Control-Allow-Origin`
+- [ ] Every stylesheet the loader and `font.scss` reference, and `webfonts/custom-icons.woff2`, under the new prefix return 200 with `Access-Control-Allow-Origin` (checked with an `Origin: https://studio.code.org` header)
 - [ ] Every added icon renders in the story above (no blank squares)
-- [ ] `yarn typecheck` in `apps/` and `./tools/hooks/pre-commit`
+- [ ] `yarn typecheck` in `apps/`
+- [ ] `yarn lint:fix` and `yarn release:dryrun` in `frontend/`
+- [ ] `./tools/hooks/pre-commit`
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
+<!-- Add your agent's attribution line here, if it has one. -->

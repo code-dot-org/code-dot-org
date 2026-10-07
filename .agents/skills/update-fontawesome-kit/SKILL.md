@@ -92,7 +92,8 @@ bucket CORS config needs fixing (see the README's Slack thread link); that is an
 
 ### 7. Verify code and storybook (you, then operator)
 
-- Confirm `git diff` touches only the three URL files and `constants/index.ts` (plus the story file, if you edited it).
+- Confirm `git diff` touches only the three URL files and `constants/index.ts`, plus the story file if you edited it
+  and any caller files the operator approved in step 3.
 - Run `yarn typecheck` in `apps/`, `yarn lint:fix` then `yarn release:dryrun` in `frontend/` (see
   `frontend/AGENTS.md`), and `./tools/hooks/pre-commit`.
 - Storybook must show the new icons. Run `yarn build` in `frontend/packages/fonts` (Storybook reads the built
@@ -107,7 +108,8 @@ name or the font URL is wrong).
 The update PR must hold only the update, never skill edits (those go in their own PR). From a branch off
 `origin/staging` named like `<user>/fontawesome-kit-update-<yyyy-mm>`:
 
-- Stage exactly: the three URL files and `constants/index.ts`; add the story file only if you edited it.
+- Stage exactly: the three URL files and `constants/index.ts`; add the story file if you edited it and the
+  caller files the operator approved in step 3.
 - End the commit message with the commit attribution line from the session's system reminder.
 - Title: `Update Font Awesome kit: <added icons, or "N new custom icons">`.
 - Body: fill in `.agents/skills/update-fontawesome-kit/pr-template.md` (summary, added/removed icons table,
