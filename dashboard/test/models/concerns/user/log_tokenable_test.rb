@@ -5,11 +5,11 @@ class UserLogTokenableTest < ActiveSupport::TestCase
 
   setup do
     @user = create(:student)
-    Rails.cache.clear
+    CDO.shared_cache.clear
   end
 
   teardown do
-    Rails.cache.clear
+    CDO.shared_cache.clear
   end
 
   it 'derives a token for a user' do

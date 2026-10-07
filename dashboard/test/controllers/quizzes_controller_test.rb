@@ -56,7 +56,7 @@ class QuizzesControllerTest < ActionController::TestCase
       :multiple_choice_question,
       name: 'Page 1, position 1',
       content: {
-        stem: 'Pick B',
+        question_title: 'Pick B',
         choices: [{id: 'a', text: 'A'}, {id: 'b', text: 'B'}],
         correct_choice_id: 'b'
       },
@@ -137,7 +137,8 @@ class QuizzesControllerTest < ActionController::TestCase
       revealAnswerExplanation: true,
       showIntroScreen: true,
       purpose: 'check_for_understanding',
-      allowMultipleAttempts: false
+      allowMultipleAttempts: false,
+      showQuestionsAfterSubmit: true
     }, as: :json
 
     assert_response :success
@@ -150,6 +151,7 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal true, body['showIntroScreen']
     assert_equal 'check_for_understanding', body['purpose']
     assert_equal false, body['allowMultipleAttempts']
+    assert_equal true, body['showQuestionsAfterSubmit']
 
     @quiz.reload
     assert_equal 'Unit 3 Check for Understanding', @quiz.display_name

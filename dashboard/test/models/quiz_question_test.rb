@@ -102,7 +102,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
     file_contents = question.formatted_for_file
 
     assert_includes file_contents, question.name
-    refute_includes file_contents, question.content['stem']
+    refute_includes file_contents, question.content['question_title']
     refute_includes file_contents, 'because'
   end
 
@@ -168,7 +168,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
           'type' => 'MultipleChoiceQuestion',
           'name' => 'seeded_question',
           'encrypted_content' => Encryption.encrypt_object(
-            'content' => {'stem' => 'stem', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
+            'content' => {'question_title' => 'Title', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
             'explanation' => 'an explanation'
           )
         )
@@ -179,7 +179,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
       question = MultipleChoiceQuestion.find_by!(key: key)
       assert_equal 'seeded_question', question.name
       assert_equal 'an explanation', question.explanation
-      assert_equal 'stem', question.content['stem']
+      assert_equal 'Title', question.content['question_title']
     end
   end
 
@@ -196,7 +196,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
             'type' => 'MultipleChoiceQuestion',
             'name' => name,
             'encrypted_content' => Encryption.encrypt_object(
-              'content' => {'stem' => 'stem', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
+              'content' => {'question_title' => 'Title', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
               'explanation' => ''
             )
           )

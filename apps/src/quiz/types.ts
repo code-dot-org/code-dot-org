@@ -15,7 +15,7 @@ export interface QuizQuestionSummary {
   id: number;
   type: string;
   questionName: string;
-  stem: string;
+  questionTitle: string;
   choices?: {id: string; text: string}[];
   page: number;
 }
@@ -34,5 +34,6 @@ export interface QuizLevelProperties extends LevelProperties {
   showIntroScreen?: boolean;
   purpose?: string;
   allowMultipleAttempts?: boolean;
+  showQuestionsAfterSubmit?: boolean;
   quizQuestions?: QuizQuestionSummary[];
 }
