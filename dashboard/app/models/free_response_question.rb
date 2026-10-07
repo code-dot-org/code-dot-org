@@ -32,7 +32,7 @@ class FreeResponseQuestion < QuizQuestion
   validate :validate_question_shape
 
   def self.content_from_builder_params(params)
-    {question_title: params[:questionTitle], description: params[:description]}
+    {question_title: params[:questionTitle]}.merge(description_content(params))
   end
 
   def builder_content_json

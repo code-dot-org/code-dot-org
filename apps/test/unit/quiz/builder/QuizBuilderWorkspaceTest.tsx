@@ -21,6 +21,7 @@ const question = (
   questionTitle: 'What is a variable in JavaScript?',
   choices: [],
   correctChoiceId: null,
+  description: null,
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,

@@ -43,6 +43,16 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     refute question.valid?
   end
 
+  test "accepts a string description and rejects a non-string one" do
+    content = {
+      question_title: 'What is 2 + 2?',
+      choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
+      correct_choice_id: 'b'
+    }
+    assert build(:multiple_choice_question, content: content.merge(description: 'Add them.')).valid?
+    refute build(:multiple_choice_question, content: content.merge(description: ['Add them.'])).valid?
+  end
+
   test "requires at least 2 choices" do
     question = build(
       :multiple_choice_question,

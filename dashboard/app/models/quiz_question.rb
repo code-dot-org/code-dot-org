@@ -130,6 +130,12 @@ class QuizQuestion < ApplicationRecord
     raise ArgumentError, "#{name} does not accept editor params"
   end
 
+  # A blank description is omitted from `content`, not stored as null.
+  def self.description_content(builder_params)
+    description = builder_params[:description]
+    description.present? ? {description: description} : {}
+  end
+
   # Subtype-specific fields for the quiz builder, answer key included.
   def builder_content_json
     raise NotImplementedError, "#{self.class.name} must implement builder_content_json"

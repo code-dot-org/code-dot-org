@@ -24,6 +24,7 @@ class MultipleChoiceQuestion < QuizQuestion
   # `content` shape:
   #   {
   #     "question_title" => "What is 2 + 2?",
+  #     "description" => "Markdown shown under the title. Optional.",
   #     "choices" => [{"id" => "0", "text" => "Option A"}, {"id" => "1", "text" => "Option B"}, ...],
   #     "correct_choice_id" => "0"
   #   }
@@ -48,11 +49,11 @@ class MultipleChoiceQuestion < QuizQuestion
       question_title: params[:questionTitle],
       choices: (params[:choices] || []).map(&:to_h),
       correct_choice_id: params[:correctChoiceId],
-    }
+    }.merge(description_content(params))
   end
 
   def builder_content_json
-    attempt_content_json.merge(correctChoiceId: content['correct_choice_id'])
+    attempt_content_json.merge(description: content['description'], correctChoiceId: content['correct_choice_id'])
   end
 
   def attempt_content_json
@@ -65,6 +66,11 @@ class MultipleChoiceQuestion < QuizQuestion
 
     unless q['question_title'].is_a?(String) && q['question_title'].present?
       errors.add(:content, 'must have a non-blank "question_title"')
+      return
+    end
+
+    unless q['description'].nil? || q['description'].is_a?(String)
+      errors.add(:content, '"description" must be a String if given')
       return
     end
 
