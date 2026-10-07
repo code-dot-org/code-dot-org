@@ -45,7 +45,7 @@ added/removed icon names; it changes nothing (the real run picks its own, later 
 the added and removed lists. The icon names come from `.fa-kit.fa-NAME` in `custom-icons.css`; if the lists look
 absurd, check that regex first. The usage search can take a minute or more, so run it in the background.
 
-For every removed icon the dry run also prints `USED:` (with up to 10 matching lines) or `unused:`. It
+For every removed icon the dry run also prints `USED:` (with every matching line) or `unused:`. It
 matches the class `fa-<name>` and the bare quoted `'<name>'`, `"<name>"` or backticked name (as in
 `iconName="<name>"`) in all tracked files except locales and lockfiles. Short or common names (`move`, `clever`)
 match unrelated strings, so read each hit.

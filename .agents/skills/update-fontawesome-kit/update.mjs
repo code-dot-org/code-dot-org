@@ -37,6 +37,7 @@ const RELATIVE_URL_RE = /url\((?!\s*["']?(?:https:\/\/|data:|#))/;
 // Each real run needs its own S3 prefix; the dry run prints a timestamp the real run will not reuse.
 const ts = Math.floor(Date.now() / 1000).toString();
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'fa-kit-'));
+let keepTmp = false;
 
 function findDir(dir, name) {
   for (const e of fs.readdirSync(dir, {withFileTypes: true})) {
@@ -120,7 +121,7 @@ function main() {
       const usages = usagesByName(removed);
       for (const name of removed) {
         const hits = usages[name];
-        console.log(hits.length ? `USED: ${name} (${hits.length}):\n  ${hits.slice(0, 10).join('\n  ')}` : `unused: ${name}`);
+        console.log(hits.length ? `USED: ${name} (${hits.length}):\n  ${hits.join('\n  ')}` : `unused: ${name}`);
       }
       console.log('NOTE: "unused" is not proof. The search misses class names built at runtime (fa-${x}).');
     }
@@ -147,6 +148,7 @@ function main() {
       execFileSync('aws', ['s3', 'sync', d, `${BUCKET}/${ts}/${path.basename(d)}/`], {stdio: 'inherit'});
     }
   } else {
+    keepTmp = true;
     console.log(`--skip-upload: upload these two directories by hand (check the target prefix is empty first):\n  ${css} -> ${BUCKET}/${ts}/css/\n  ${webfonts} -> ${BUCKET}/${ts}/webfonts/`);
   }
 
@@ -169,5 +171,5 @@ try {
   console.error(`error: ${err.message}`);
   process.exitCode = 1;
 } finally {
-  if (!skipUpload || dry) fs.rmSync(tmp, {recursive: true, force: true});
+  if (!keepTmp) fs.rmSync(tmp, {recursive: true, force: true});
 }
