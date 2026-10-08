@@ -10,6 +10,7 @@ import {
   CheckpointStatus,
   EMPTY_PROGRESS,
   Progress,
+  StepContext,
   getStatusMap,
 } from './model';
 import {
@@ -24,8 +25,6 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   inProgress: 'In progress',
   complete: 'Complete',
 };
-
-const NO_ANSWERS: NonNullable<Progress['questionAnswers']> = {};
 
 export function useProgress(
   pathway: Pathway,
@@ -71,12 +70,37 @@ export function useProgress(
     );
   }, []);
 
+  /** Merges into a step's context, so one concern's write keeps the others. */
+  const updateStepContext = useCallback((id: string, patch: StepContext) => {
+    setProgress(
+      p =>
+        p && {
+          ...p,
+          stepContext: {
+            ...p.stepContext,
+            [id]: {...p.stepContext[id], ...patch},
+          },
+        }
+    );
+  }, []);
+
+  // Not a call to updateStepContext: the patch must read the latest answers,
+  // or two saves in one tick would drop the first.
   const saveAnswers = useCallback(
     (stepId: string, questionId: number, answers: Answer[]) => {
       setProgress(p => {
         if (!p) return p;
-        const step = {...p.questionAnswers?.[stepId], [questionId]: answers};
-        return {...p, questionAnswers: {...p.questionAnswers, [stepId]: step}};
+        const step = p.stepContext[stepId];
+        return {
+          ...p,
+          stepContext: {
+            ...p.stepContext,
+            [stepId]: {
+              ...step,
+              answers: {...step?.answers, [questionId]: answers},
+            },
+          },
+        };
       });
     },
     []
@@ -88,9 +112,9 @@ export function useProgress(
     progress,
     isLoading: progress === undefined,
     statusMap,
-    answers: progress?.questionAnswers ?? NO_ANSWERS,
     markStarted,
     markComplete,
+    updateStepContext,
     saveAnswers,
     reset,
   };

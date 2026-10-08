@@ -2,6 +2,8 @@
 // and the status each checkpoint takes from that. Nothing here touches React
 // or storage; useProgress and progressStore build on it.
 
+import {hashString} from '@cdo/apps/utils';
+
 import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =
@@ -22,13 +24,33 @@ export interface Answer {
 /** Submitted answers per question, oldest first; the last is current. */
 export type StepAnswers = {[questionId: number]: Answer[]};
 
+/** What a step has accumulated for a student, by concern. */
+export interface StepContext {
+  /** Any content that was dynamically generated for this step, keyed by generateInputsHash. */
+  generated?: {instructions: string; inputsHash: string};
+  answers?: StepAnswers;
+}
+
+/**
+ * Keys generated content to the full prompt it was made from, so a change
+ * to any input, the brief, the project, the authored text or our wording,
+ * regenerates it.
+ */
+export function generateInputsHash(prompt: string): string {
+  return hashString(prompt);
+}
+
 export interface Progress {
   completed: string[];
   started: string[];
-  questionAnswers?: {[stepId: string]: StepAnswers};
+  stepContext: {[stepId: string]: StepContext};
 }
 
-export const EMPTY_PROGRESS: Progress = {completed: [], started: []};
+export const EMPTY_PROGRESS: Progress = {
+  completed: [],
+  started: [],
+  stepContext: {},
+};
 
 /** A checkpoint unlocks once every checkpoint it requires is complete. */
 export function checkpointStatus(

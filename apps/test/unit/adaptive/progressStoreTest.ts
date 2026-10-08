@@ -10,7 +10,11 @@ const key: ProgressKey = {
   levelId: 98263,
   pathwayId: 'sample',
 };
-const progress: Progress = {completed: ['intro'], started: ['basics']};
+const progress: Progress = {
+  completed: ['intro'],
+  started: ['basics'],
+  stepContext: {s1: {generated: {instructions: 'Hi', inputsHash: 'ab'}}},
+};
 
 describe('localStorageProgressStore', () => {
   beforeEach(() => window.localStorage.clear());
@@ -23,25 +27,20 @@ describe('localStorageProgressStore', () => {
   it('reads back answers saved with the progress', async () => {
     const withAnswers: Progress = {
       ...progress,
-      questionAnswers: {
+      stepContext: {
+        ...progress.stepContext,
         quiz: {
-          1: [
-            {answerId: 'a', isCorrect: false},
-            {answerId: 'b', isCorrect: true},
-          ],
+          answers: {
+            1: [
+              {answerId: 'a', isCorrect: false},
+              {answerId: 'b', isCorrect: true},
+            ],
+          },
         },
       },
     };
     await store.save(key, withAnswers);
     expect(await store.load(key)).toEqual(withAnswers);
-  });
-
-  it('loads a record saved before answers existed', async () => {
-    window.localStorage.setItem(
-      'adaptive-progress:7:11:98263',
-      JSON.stringify({pathwayId: 'sample', progress})
-    );
-    expect(await store.load(key)).toEqual(progress);
   });
 
   it('has no progress for an unsaved key', async () => {
@@ -54,6 +53,20 @@ describe('localStorageProgressStore', () => {
     expect(await store.load({...key, userId: null})).toBeUndefined();
     expect(await store.load({...key, scriptId: null})).toBeUndefined();
     expect(await store.load({...key, levelId: 1})).toBeUndefined();
+  });
+
+  it('loads a record saved before step context existed with an empty cache', async () => {
+    await store.save(key, progress);
+    const raw = window.localStorage.getItem(
+      `adaptive-progress:${key.userId}:${key.scriptId}:${key.levelId}`
+    );
+    const stored = JSON.parse(raw!);
+    delete stored.progress.stepContext;
+    window.localStorage.setItem(
+      `adaptive-progress:${key.userId}:${key.scriptId}:${key.levelId}`,
+      JSON.stringify(stored)
+    );
+    expect(await store.load(key)).toEqual({...progress, stepContext: {}});
   });
 
   it('does not resume progress saved for different content', async () => {
@@ -74,7 +87,7 @@ describe('localStorageProgressStore', () => {
       storageKey,
       JSON.stringify({
         pathwayId: 'sample',
-        progress: {...progress, questionAnswers: 1},
+        progress: {...progress, stepContext: null},
       })
     );
     expect(await store.load(key)).toBeUndefined();

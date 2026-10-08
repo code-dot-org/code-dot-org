@@ -102,8 +102,7 @@ class Quiz < Level
         id: question.id,
         type: question.type,
         questionName: question.name,
-        questionTitle: question.content['question_title'],
-        choices: question.content['choices'],
+        **question.attempt_content_json,
         page: placement.page,
       }
     end

@@ -28,7 +28,6 @@
 class Ailab < Level
   serialized_attrs %w(
     start_sources
-    hide_share_and_remix
     is_project_level
     mode
     dynamic_instructions
@@ -148,6 +147,32 @@ class Ailab < Level
     JSONValue.value(uses_lab2) == true
   end
 
+  def channel_backed?
+    super || uses_lab2?
+  end
+
+  def get_validations
+    return nil unless uses_lab2?
+
+    minimum = lab2_mode['requireAccuracy']
+    return nil unless minimum.is_a?(Numeric) && minimum.positive?
+
+    [
+      {
+        'key' => 'accuracy_met',
+        'conditions' => [{'name' => 'ACCURACY_AT_LEAST', 'value' => minimum}],
+        'message' => '',
+        'next' => true,
+      },
+      {
+        'key' => 'accuracy_unmet',
+        'conditions' => [],
+        'message' => "Train a model with at least #{minimum}% accuracy to continue.",
+        'next' => false,
+      },
+    ]
+  end
+
   # Attributes that are stored as JSON strings but should be passed through to the app as
   # actual JSON objects.  You can list attributes in snake_case here for consistency, but this method
   # returns camelCase properties because of where it's used in the pipeline.
@@ -170,15 +195,19 @@ class Ailab < Level
     JSON.parse(localized_dynamic_instructions || '{}')
   end
 
-  private def validate_lab2_mode
-    return unless JSONValue.value(uses_lab2) == true
-
+  private def lab2_mode
     parsed_mode = begin
       JSON.parse(mode.presence || '{}')
     rescue JSON::ParserError
       nil
     end
-    parsed_mode = {} unless parsed_mode.is_a?(Hash)
+    parsed_mode.is_a?(Hash) ? parsed_mode : {}
+  end
+
+  private def validate_lab2_mode
+    return unless JSONValue.value(uses_lab2) == true
+
+    parsed_mode = lab2_mode
 
     # The Lab 2 AI Lab currently requires exactly 1 dataset.
     datasets = parsed_mode['datasets']

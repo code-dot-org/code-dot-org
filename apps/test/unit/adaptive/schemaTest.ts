@@ -468,6 +468,24 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  it('flags an instructions prompt on a sandbox step', () => {
+    const raw = served();
+    const practice = raw.checkpoints[1].steps[1];
+    if (practice.kind !== 'level') throw new Error('fixture changed');
+    practice.instructionsPrompt = 'Make it personal.';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.practice: instructionsPrompt needs the student's project, so the step must be marked project",
+    ]);
+  });
+
+  it('accepts an instructions prompt on a project step', () => {
+    const raw = served();
+    const build = raw.checkpoints[1].steps[0];
+    if (build.kind !== 'level') throw new Error('fixture changed');
+    build.instructionsPrompt = 'Make it personal.';
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
   it('does not check the flag on a level the server could not resolve', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];

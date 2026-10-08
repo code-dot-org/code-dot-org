@@ -26,6 +26,12 @@ export type MultipleChoiceDiagnosticQuestion = z.infer<
   typeof multipleChoiceDiagnosticQuestionSchema
 >;
 
+/** What a student has said about their project, as every adaptive surface reads it. */
+export interface PathwayProjectInfo {
+  name?: string;
+  description?: string;
+}
+
 export interface AdaptiveLevelProperties extends LevelProperties {
   adaptiveId?: string;
   /** Adaptive pathway content. */

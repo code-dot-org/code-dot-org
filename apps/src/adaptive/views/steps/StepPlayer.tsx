@@ -5,6 +5,7 @@ import React, {useState} from 'react';
 
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
+import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
@@ -19,7 +20,6 @@ interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
-  answers: {[stepId: string]: StepAnswers};
   onSaveAnswers: (
     stepId: string,
     questionId: number,
@@ -33,11 +33,11 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
-  answers,
   onSaveAnswers,
   onExit,
   onFinish,
 }) => {
+  const {stepContextMap} = usePathwayContext();
   const [index, setIndex] = useState(0);
   const steps = checkpoint.steps;
   const step = steps[index];
@@ -63,7 +63,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
           <QuestionsStep
             key={step.id}
             step={step}
-            answers={answers[step.id] ?? NO_ANSWERS}
+            answers={stepContextMap[step.id]?.answers ?? NO_ANSWERS}
             onSaveAnswers={(questionId, list) =>
               onSaveAnswers(step.id, questionId, list)
             }

@@ -94,7 +94,7 @@ describe('useProgress', () => {
   };
 
   it('hydrates from the store before reporting statuses', async () => {
-    const store = fakeStore({completed: ['intro'], started: []});
+    const store = fakeStore(progressOf(['intro'], []));
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
     );
@@ -122,14 +122,28 @@ describe('useProgress', () => {
     act(() => result.current.markStarted('intro'));
     act(() => result.current.markComplete('intro'));
     expect(store.saved.slice(savesAfterLoad)).toEqual([
-      {completed: [], started: ['intro']},
-      {completed: ['intro'], started: ['intro']},
+      progressOf([], ['intro']),
+      progressOf(['intro'], ['intro']),
     ]);
     act(() => result.current.reset());
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
 
-  it('stores the answers it is given per step and clears them on reset', async () => {
+  it('merges step context by step id and saves it', async () => {
+    const store = fakeStore(undefined);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useProgress(pathway, key, store)
+    );
+    await waitForNextUpdate();
+    const generated = {instructions: 'Hi', inputsHash: 'ab'};
+    act(() => result.current.updateStepContext('s1', {generated}));
+    expect(result.current.progress?.stepContext).toEqual({s1: {generated}});
+    expect(store.saved[store.saved.length - 1].stepContext).toEqual({
+      s1: {generated},
+    });
+  });
+
+  it('stores answers per step beside other step context and clears them on reset', async () => {
     const store = fakeStore(undefined);
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
@@ -137,18 +151,22 @@ describe('useProgress', () => {
     await waitForNextUpdate();
     const wrong = {answerId: 'a', isCorrect: false};
     const right = {answerId: 'b', isCorrect: true};
-    act(() => result.current.saveAnswers('quiz', 1, [wrong]));
-    act(() => result.current.saveAnswers('other', 3, [right]));
-    act(() => result.current.saveAnswers('quiz', 2, [right]));
-    act(() => result.current.saveAnswers('quiz', 1, [wrong, right]));
-    expect(result.current.answers).toEqual({
-      quiz: {1: [wrong, right], 2: [right]},
-      other: {3: [right]},
+    const generated = {instructions: 'Hi', inputsHash: 'ab'};
+    act(() => result.current.updateStepContext('quiz', {generated}));
+    act(() => {
+      result.current.saveAnswers('quiz', 1, [wrong]);
+      result.current.saveAnswers('other', 3, [right]);
+      result.current.saveAnswers('quiz', 2, [right]);
     });
-    expect(store.saved[store.saved.length - 1].questionAnswers).toEqual(
-      result.current.answers
+    act(() => result.current.saveAnswers('quiz', 1, [wrong, right]));
+    expect(result.current.progress?.stepContext).toEqual({
+      quiz: {generated, answers: {1: [wrong, right], 2: [right]}},
+      other: {answers: {3: [right]}},
+    });
+    expect(store.saved[store.saved.length - 1].stepContext).toEqual(
+      result.current.progress?.stepContext
     );
     act(() => result.current.reset());
-    expect(result.current.answers).toEqual({});
+    expect(result.current.progress?.stepContext).toEqual({});
   });
 });

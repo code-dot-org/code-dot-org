@@ -1,12 +1,12 @@
 import {Button, Typography} from '@mui/material';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {formatAccuracy} from '../helpers/accuracy';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setCurrentPanel, setTrainingModalStep} from '../redux';
+import {replayTraining, setCurrentPanel} from '../redux';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 
 import TreeMiniMap from './TreeMiniMap';
@@ -19,15 +19,9 @@ const TrainingResultCard = () => {
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = useAppSelector(state => state.historicResults[0]);
   const tree = useAppSelector(getDisplayTree);
-  const [isReplaying, setIsReplaying] = useState(false);
+  const isReplaying = useAppSelector(state => state.isTrainingReplay);
   const testButton = useRef<HTMLButtonElement>(null);
   const isVisible = hasResult && (!isModalOpen || isReplaying);
-
-  useEffect(() => {
-    if (!isModalOpen) {
-      setIsReplaying(false);
-    }
-  }, [isModalOpen]);
 
   // The card replaces the Train model button, which previously received focus.
   useEffect(() => {
@@ -42,14 +36,11 @@ const TrainingResultCard = () => {
 
   const {accuracy, correct, total} = latestResult;
 
-  const replayTraining = () => {
-    setIsReplaying(true);
-    dispatch(setTrainingModalStep('training'));
-  };
-
   return (
     <div className={styles.card}>
-      {tree && <TreeMiniMap tree={tree} onReplay={replayTraining} />}
+      {tree && (
+        <TreeMiniMap tree={tree} onReplay={() => dispatch(replayTraining())} />
+      )}
       <div className={styles.results}>
         <div className={styles.result}>
           <Typography variant="body4" className={styles.label}>
