@@ -18,6 +18,12 @@ export type Step = z.infer<typeof stepSchema>;
 export type PanelsStep = z.infer<typeof panelsStepSchema>;
 export type LevelStep = z.infer<typeof levelStepSchema>;
 
+/** What a student has said about their project, as every adaptive surface reads it. */
+export interface PathwayProjectInfo {
+  name?: string;
+  description?: string;
+}
+
 export interface AdaptiveLevelProperties extends LevelProperties {
   adaptiveId?: string;
   /** Adaptive pathway content. */

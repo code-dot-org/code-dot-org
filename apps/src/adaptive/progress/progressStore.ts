@@ -2,7 +2,7 @@
 // browser's local storage, behind an interface a server-backed store can
 // replace once the progress shape settles.
 
-import type {Progress} from './model';
+import {EMPTY_PROGRESS, type Progress} from './model';
 
 export interface ProgressKey {
   /** Null for a signed-out student, who shares one record per browser. */
@@ -52,7 +52,8 @@ export const localStorageProgressStore: ProgressStore = {
       if (stored.pathwayId !== key.pathwayId || !isProgress(stored.progress)) {
         return undefined;
       }
-      return stored.progress;
+      // Records written before stepContext existed load with an empty cache.
+      return {...EMPTY_PROGRESS, ...stored.progress};
     } catch {
       return undefined;
     }
