@@ -1,0 +1,75 @@
+// Badges beside toolbox blocks. They live in the flyout's SVG, so they
+// scroll with the block they belong to.
+
+// The hollow help icon: on its own, or forming a pill's left end.
+%help-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none;
+  color: var(--text-neutral-secondary);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.helpButton {
+  @extend %help-button;
+}
+
+// The stamp pill. The pill itself takes no pointer events, so a press on
+// it reaches the flyout as usual; only a help button inside it does.
+.stamp {
+  pointer-events: none;
+
+  text {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+}
+
+// A quiet pill: the panel's own gray with a hairline, so it reads as a
+// label rather than a call-out.
+.stampQuiet {
+  rect {
+    fill: var(--background-neutral-tertiary);
+    stroke: var(--borders-neutral-primary);
+    stroke-width: 1;
+  }
+
+  text {
+    fill: var(--text-neutral-primary);
+  }
+}
+
+.stampBright {
+  rect {
+    fill: var(--background-accent-pink-primary);
+  }
+
+  text {
+    fill: var(--neutral-base-white);
+  }
+}
+
+.pillHelp {
+  pointer-events: auto;
+}
+
+// The same icon as on its own; the pill is sized to its circle.
+.pillHelpButton {
+  @extend %help-button;
+}

@@ -52,7 +52,6 @@ import useGameAudio from '../audioFeedback/useGameAudio';
 import {BLOCK_HELP} from '../blockHelp/blockHelpContent';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
-import {installBlockHelpIcons} from '../blockly/blockHelpIcons';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
@@ -137,7 +136,7 @@ import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
-import {useNewBlockStamps} from './useNewBlockStamps';
+import {useFlyoutBadges} from './useFlyoutBadges';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -416,6 +415,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     anchor: DOMRect;
   } | null>(null);
   const closeBlockHelp = useCallback(() => setBlockHelp(null), []);
+  const openHelpFor = useCallback(
+    (blockType: string, anchor: DOMRect) => setBlockHelp({blockType, anchor}),
+    []
+  );
   const openBlockHelp = blockHelp && BLOCK_HELP[blockHelp.blockType];
 
   // Idle pre-mount (see imagesMounted above).
@@ -1252,16 +1255,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const blockHelpEnabled =
     !isToolboxMode &&
     (!levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode));
-  useEffect(() => {
-    if (!workspaceVersion || !blockHelpEnabled) {
-      return;
-    }
-    return installBlockHelpIcons(Blockly.getMainWorkspace(), {
-      helpTitle: type => BLOCK_HELP[type]?.title,
-      onOpen: (blockType, anchor) => setBlockHelp({blockType, anchor}),
-      onInvalidate: closeBlockHelp,
-    });
-  }, [workspaceVersion, blockHelpEnabled, closeBlockHelp]);
 
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
@@ -1790,16 +1783,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
-  // Free play stamps "New" on the toolbox blocks the project has not used.
+  // Toolbox badges: "New" on blocks the project has not used in free play,
+  // and a help button on blocks that have help.
   const getMainWorkspace = useCallback(
     () => Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg | null,
     []
   );
-  useNewBlockStamps({
-    enabled: isFreeplayMode(levelProperties.levelMode),
+  useFlyoutBadges({
+    stamps: isFreeplayMode(levelProperties.levelMode),
+    help: blockHelpEnabled,
     scenes,
     workspaceVersion,
     getWorkspace: getMainWorkspace,
+    onOpenHelp: openHelpFor,
+    onInvalidate: closeBlockHelp,
   });
 
   // Only freeplay adds, renames, reorders or deletes scenes; a level with no

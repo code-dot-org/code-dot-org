@@ -18,6 +18,9 @@ export interface BlockHelp {
   summary: string;
   body?: React.ReactNode;
   animation?: {src: string; alt: string};
+  /** A block worth drawing the eye to: its "New" stamp is bright where
+      the others are quiet. */
+  standout?: boolean;
 }
 
 const para = (...text: React.ReactNode[]) => <p>{text}</p>;
@@ -27,6 +30,7 @@ const bold = (text: string) => <strong key={text}>{text}</strong>;
 export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
+    standout: true,
     animation: {
       src: setZoomAnimation,
       alt: 'The view closes in on the player and follows it along.',
@@ -53,6 +57,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_setPlatformGravity: {
     title: 'Set gravity',
+    standout: true,
     animation: {
       src: setGravityAnimation,
       alt: 'A character jumps, floats, and drops as gravity changes.',
