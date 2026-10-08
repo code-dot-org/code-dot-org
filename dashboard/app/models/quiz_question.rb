@@ -130,10 +130,12 @@ class QuizQuestion < ApplicationRecord
     raise ArgumentError, "#{name} does not accept editor params"
   end
 
-  # A blank description is omitted from `content`, not stored as null.
-  def self.description_content(builder_params)
-    description = builder_params[:description]
-    description.present? ? {description: description} : {}
+  # The `content` fields every subtype has. A blank description is omitted,
+  # not stored as null.
+  def self.shared_content(params)
+    content = {question_title: params[:questionTitle]}
+    content[:description] = params[:description] if params[:description].present?
+    content
   end
 
   # Subtype-specific fields for the quiz builder, answer key included.

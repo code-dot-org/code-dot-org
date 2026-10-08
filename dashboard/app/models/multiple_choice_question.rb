@@ -45,11 +45,10 @@ class MultipleChoiceQuestion < QuizQuestion
   end
 
   def self.content_from_builder_params(params)
-    {
-      question_title: params[:questionTitle],
+    shared_content(params).merge(
       choices: (params[:choices] || []).map(&:to_h),
       correct_choice_id: params[:correctChoiceId],
-    }.merge(description_content(params))
+    )
   end
 
   def builder_content_json
