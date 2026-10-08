@@ -6,7 +6,11 @@ import {Provider} from 'react-redux';
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
-import {setPredictionStep, setTestData} from '../../src/redux';
+import {
+  playPredictionStep,
+  setPredictionPlaying,
+  setTestData,
+} from '../../src/redux';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
@@ -67,7 +71,7 @@ function focusRoot() {
 
 function showStep(store, step) {
   act(() => {
-    store.dispatch(setPredictionStep(step));
+    store.dispatch(playPredictionStep(step));
   });
 }
 
@@ -359,5 +363,34 @@ describe('DecisionTree', () => {
       true,
     );
     expect(document.activeElement).toBe(root);
+  });
+
+  describe('while a prediction plays', () => {
+    const playing = () => store.getState().predictionPlaying;
+
+    beforeEach(() => {
+      predictSnake(store);
+      act(() => {
+        store.dispatch(setPredictionPlaying(true));
+      });
+    });
+
+    it('stops it when the student goes into the tree', () => {
+      act(() => canvasGroup().focus());
+
+      expect(playing()).toBe(false);
+    });
+
+    it('stops it when the student presses on the tree', () => {
+      fireEvent.pointerDown(screen.getByRole('tree'));
+
+      expect(playing()).toBe(false);
+    });
+
+    it('stops it when the student zooms with the wheel', () => {
+      fireEvent.wheel(screen.getByRole('tree'), {deltaY: -100});
+
+      expect(playing()).toBe(false);
+    });
   });
 });

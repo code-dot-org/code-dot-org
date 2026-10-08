@@ -32,7 +32,8 @@ import {
 } from '../helpers/displayTreeLayout';
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {useAppSelector} from '../hooks';
+import {useAppDispatch, useAppSelector} from '../hooks';
+import {setPredictionPlaying} from '../redux';
 import {
   getDisplayTree,
   getPredictionStep,
@@ -87,6 +88,7 @@ interface DecisionTreeProps {
 }
 
 const DecisionTree = ({overlay}: DecisionTreeProps) => {
+  const dispatch = useAppDispatch();
   const tree = useAppSelector(getDisplayTree);
   const trace = useAppSelector(getPredictionTrace);
   const step = useAppSelector(getPredictionStep);
@@ -145,6 +147,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
       nodeElements.current.get(to.id)?.focus({preventScroll: true});
     }
   };
+
+  const stopPlayback = () => dispatch(setPredictionPlaying(false));
 
   const trackEntered = (event: FocusEvent<HTMLElement>) =>
     setEntered(event.target !== event.currentTarget);
@@ -229,7 +233,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           aria-label={TREE_NAME}
           aria-describedby={enterHintId}
           tabIndex={0}
-          onFocus={trackEntered}
+          onFocus={event => {
+            stopPlayback();
+            trackEntered(event);
+          }}
+          onPointerDown={stopPlayback}
+          // d3-zoom stops the wheel from bubbling.
+          onWheelCapture={stopPlayback}
           onBlur={leaveWhenFocusLeaves}
           onKeyDown={enterOrLeave}
           className={styles.canvasGroup}

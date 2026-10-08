@@ -7,7 +7,7 @@ import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {useAppSelector} from '../../src/hooks';
 import I18n from '../../src/i18n';
-import {setTestData} from '../../src/redux';
+import {setPredictionPlaying, setTestData} from '../../src/redux';
 import {
   getPredictionStep,
   getPredictionTrace,
@@ -27,13 +27,15 @@ function predictBird(store) {
   });
 }
 
-const StoreStepper = () =>
+const StoreStepper = ({onReplay}) =>
   createElement(TraceStepper, {
+    key: useAppSelector(state => state.predictionCount),
     step: useAppSelector(getPredictionStep),
     stepCount: useAppSelector(state => getPredictionTrace(state).path.length),
+    onReplay,
   });
 
-function renderStepper() {
+function renderStepper(onReplay = () => {}) {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
   train.reset();
@@ -47,7 +49,7 @@ function renderStepper() {
       createElement(
         ThemeProvider,
         {theme: getMuiThemeForBrand(undefined)},
-        createElement(StoreStepper),
+        createElement(StoreStepper, {onReplay}),
       ),
     ),
   );
@@ -144,6 +146,31 @@ describe('TraceStepper', () => {
 
     expect(step(store)).toBe(0);
     expect(unavailable('Previous step')).toBe(true);
+  });
+
+  it('stops where it is when playback is stopped from outside', () => {
+    const store = renderStepper();
+    advanceOneStep();
+
+    act(() => {
+      store.dispatch(setPredictionPlaying(false));
+    });
+    advanceOneStep();
+
+    expect(step(store)).toBe(1);
+    expect(button('Replay from the start')).toBeTruthy();
+  });
+
+  it('tells its owner each time the student replays', () => {
+    const onReplay = vi.fn();
+    renderStepper(onReplay);
+    fireEvent.click(button('Skip to the answer'));
+
+    fireEvent.click(button('Replay from the start'));
+    fireEvent.click(button('Skip to the answer'));
+    fireEvent.click(button('Replay from the start'));
+
+    expect(onReplay).toHaveBeenCalledTimes(2);
   });
 
   it('keeps focus on a button at an end, where pressing it does nothing', () => {

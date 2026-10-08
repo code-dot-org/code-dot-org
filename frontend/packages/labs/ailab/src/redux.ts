@@ -63,6 +63,8 @@ export interface RootState {
   // Undefined shows the whole path; a number shows it up to that step.
   predictionStep: number | undefined;
   predictionStepByHand: boolean;
+  predictionPlaying: boolean;
+  predictionCount: number;
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
@@ -135,6 +137,8 @@ export const initialState: RootState = {
   predictionInputs: [],
   predictionStep: undefined,
   predictionStepByHand: false,
+  predictionPlaying: false,
+  predictionCount: 0,
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: 'datasetView',
@@ -300,18 +304,24 @@ const ailabSlice = createSlice({
         state.predictionInputs = action.payload.inputs;
         state.predictionStep = undefined;
         state.predictionStepByHand = false;
+        state.predictionPlaying = false;
+        state.predictionCount += 1;
       },
       prepare(prediction: number | string, inputs: number[]) {
         return {payload: {prediction, inputs}};
       },
     },
-    setPredictionStep(state, action: PayloadAction<number>) {
+    playPredictionStep(state, action: PayloadAction<number>) {
       state.predictionStep = action.payload;
       state.predictionStepByHand = false;
+    },
+    setPredictionPlaying(state, action: PayloadAction<boolean>) {
+      state.predictionPlaying = action.payload;
     },
     stepPredictionByHand(state, action: PayloadAction<number>) {
       state.predictionStep = action.payload;
       state.predictionStepByHand = true;
+      state.predictionPlaying = false;
     },
     resetState(state) {
       return {
@@ -488,7 +498,8 @@ export const {
   setTestData,
   setTestDataValues,
   setPrediction,
-  setPredictionStep,
+  playPredictionStep,
+  setPredictionPlaying,
   stepPredictionByHand,
   resetState,
   setTrainedModel,

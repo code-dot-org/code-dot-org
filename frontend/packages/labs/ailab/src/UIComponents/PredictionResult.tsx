@@ -1,7 +1,7 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {Fragment} from 'react';
+import {Fragment, useState} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {formatNumber, thresholdText} from '../helpers/displayTree';
@@ -26,6 +26,8 @@ const PredictionResult = () => {
   const trace = useAppSelector(getPredictionTrace);
   const currentStep = useAppSelector(getPredictionStep);
   const steppedByHand = useAppSelector(state => state.predictionStepByHand);
+  const predictionCount = useAppSelector(state => state.predictionCount);
+  const [replays, setReplays] = useState(0);
 
   const valueText = (value: string | number): string =>
     typeof value === 'number'
@@ -82,7 +84,8 @@ const PredictionResult = () => {
     <>
       {/* Always mounted: a live region speaks only changes made after it appears. */}
       <span role="status" className={appStyles.visuallyHidden}>
-        {announcement()}
+        {/* A new key replaces the text, so a screen reader reads it again even when unchanged. */}
+        <span key={`${predictionCount}-${replays}`}>{announcement()}</span>
       </span>
       {hasPrediction && (
         <section className={styles.card}>
@@ -114,7 +117,12 @@ const PredictionResult = () => {
                   </li>
                 ))}
               </ol>
-              <TraceStepper step={currentStep} stepCount={steps.length} />
+              <TraceStepper
+                key={predictionCount}
+                step={currentStep}
+                stepCount={steps.length}
+                onReplay={() => setReplays(count => count + 1)}
+              />
             </>
           )}
         </section>

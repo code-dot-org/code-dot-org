@@ -7,9 +7,10 @@ import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {ColumnTypes} from '../../src/constants';
 import I18n from '../../src/i18n';
-import {setPrediction, setPredictionStep} from '../../src/redux';
+import {setPrediction} from '../../src/redux';
 import train from '../../src/train';
 import TestPanel from '../../src/UIComponents/TestPanel';
+import {STEP_INTERVAL_MS} from '../../src/UIComponents/TraceStepper';
 
 import {levelStore} from './levelStore';
 
@@ -53,12 +54,29 @@ function predictSnake() {
   fireEvent.click(predictButton());
 }
 
+// A bird sits two questions deep, so its path has a step between the root and the answer.
+function predictBird() {
+  fireEvent.change(screen.getByLabelText('legs'), {target: {value: '2'}});
+  fireEvent.click(predictButton());
+}
+
 function predictButton() {
   return screen.getByRole('button', {name: 'Predict'});
 }
 
 function status() {
   return screen.getByRole('status').textContent;
+}
+
+// Counts the changes to the live region since the last count; a screen reader reads each one.
+function watchStatus() {
+  const observer = new MutationObserver(() => {});
+  observer.observe(screen.getByRole('status'), {
+    childList: true,
+    subtree: true,
+    characterData: true,
+  });
+  return () => observer.takeRecords().length;
 }
 
 function stepAnnouncement(index) {
@@ -182,24 +200,69 @@ describe('TestPanel', () => {
     expect(status()).toBe(stepAnnouncement(1));
   });
 
-  test('a decision tree keeps announcing its whole path while it plays, skips, and replays', () => {
-    const store = trainedAnimalStore({trainer: 'decisionTree'});
-    renderTestPanel(store);
-    predictSnake();
+  describe('a decision tree, as its path plays', () => {
+    const replay = () =>
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Replay from the start'}),
+      );
+    const skip = () =>
+      fireEvent.click(screen.getByRole('button', {name: 'Skip to the answer'}));
 
-    act(() => store.dispatch(setPredictionStep(1)));
-    expect(status()).toBe(pathAnnouncement('snake'));
+    beforeEach(() => {
+      vi.useFakeTimers();
+      renderTestPanel(trainedAnimalStore({trainer: 'decisionTree'}));
+    });
+    afterEach(() => {
+      vi.useRealTimers();
+      vi.unstubAllGlobals();
+    });
 
-    fireEvent.click(screen.getByRole('button', {name: 'Skip to the answer'}));
-    expect(status()).toBe(pathAnnouncement('snake'));
+    test('says nothing more while it plays or skips', () => {
+      predictBird();
+      const changes = watchStatus();
 
-    fireEvent.click(screen.getByRole('button', {name: 'Previous step'}));
-    expect(status()).toBe(stepAnnouncement(0));
+      act(() => {
+        vi.advanceTimersByTime(STEP_INTERVAL_MS);
+      });
+      skip();
 
-    fireEvent.click(
-      screen.getByRole('button', {name: 'Replay from the start'}),
-    );
-    expect(status()).toBe(pathAnnouncement('snake'));
+      expect(changes()).toBe(0);
+      expect(status()).toBe(pathAnnouncement('bird'));
+    });
+
+    test('reads the whole path again on Replay, and on the same prediction made again', () => {
+      predictBird();
+      skip();
+      const changes = watchStatus();
+
+      replay();
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(pathAnnouncement('bird'));
+
+      fireEvent.click(predictButton());
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(pathAnnouncement('bird'));
+    });
+
+    test('reads the first step on each Replay under reduced motion', () => {
+      vi.stubGlobal('matchMedia', query => ({
+        matches: query.includes('reduce'),
+      }));
+      predictBird();
+      const changes = watchStatus();
+
+      replay();
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(stepAnnouncement(0));
+
+      replay();
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(stepAnnouncement(0));
+    });
   });
 
   test('a KNN model shows its prediction without steps', () => {

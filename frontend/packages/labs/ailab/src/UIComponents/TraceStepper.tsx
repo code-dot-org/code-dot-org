@@ -1,13 +1,16 @@
 import {Button, IconButton, iconButtonClasses} from '@mui/material';
 import classNames from 'classnames';
-import {useCallback, useLayoutEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useLayoutEffect} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {prefersReducedMotion} from '../helpers/utils';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setPredictionStep, stepPredictionByHand} from '../redux';
-import {getPredictionTrace} from '../selectors/visualizationSelectors';
+import {
+  playPredictionStep,
+  setPredictionPlaying,
+  stepPredictionByHand,
+} from '../redux';
 
 import styles from './traceStepper.module.scss';
 
@@ -16,57 +19,59 @@ export const STEP_INTERVAL_MS = 1000;
 interface TraceStepperProps {
   step: number;
   stepCount: number;
+  onReplay: () => void;
 }
 
-const TraceStepper = ({step, stepCount}: TraceStepperProps) => {
+const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
   const dispatch = useAppDispatch();
-  const trace = useAppSelector(getPredictionTrace);
-  const [playing, setPlaying] = useState(false);
-  const timerRef = useRef<number>();
+  const playing = useAppSelector(state => state.predictionPlaying);
   const lastStep = stepCount - 1;
   // aria-disabled, not disabled, so a button that reaches an end keeps focus.
   const atStart = step <= 0;
   const atEnd = step >= lastStep;
 
-  const stop = useCallback(() => {
-    window.clearInterval(timerRef.current);
-    timerRef.current = undefined;
-    setPlaying(false);
-  }, []);
+  const play = useCallback(() => {
+    dispatch(playPredictionStep(0));
+    dispatch(setPredictionPlaying(true));
+  }, [dispatch]);
 
-  const playFromStart = useCallback(() => {
-    stop();
-    dispatch(setPredictionStep(0));
-    if (prefersReducedMotion()) {
-      return;
-    }
-    setPlaying(true);
-    let next = 0;
-    timerRef.current = window.setInterval(() => {
-      next++;
-      dispatch(setPredictionStep(next));
-      if (next >= lastStep) {
-        stop();
-      }
-    }, STEP_INTERVAL_MS);
-  }, [dispatch, lastStep, stop]);
-
-  // Each new prediction plays its path; under reduced motion it shows the path whole.
   useLayoutEffect(() => {
     if (!prefersReducedMotion()) {
-      playFromStart();
+      play();
     }
-    return stop;
-  }, [trace, playFromStart, stop]);
+  }, [play]);
+
+  useEffect(() => {
+    if (!playing) {
+      return;
+    }
+    let next = 0;
+    const timer = window.setInterval(() => {
+      next++;
+      dispatch(playPredictionStep(next));
+      if (next >= lastStep) {
+        dispatch(setPredictionPlaying(false));
+      }
+    }, STEP_INTERVAL_MS);
+    return () => window.clearInterval(timer);
+  }, [dispatch, lastStep, playing]);
+
+  const replay = () => {
+    onReplay();
+    if (prefersReducedMotion()) {
+      dispatch(stepPredictionByHand(0));
+    } else {
+      play();
+    }
+  };
 
   const skip = () => {
-    stop();
-    dispatch(setPredictionStep(lastStep));
+    dispatch(setPredictionPlaying(false));
+    dispatch(playPredictionStep(lastStep));
   };
 
   const goTo = (index: number) => {
     if (index >= 0 && index < stepCount) {
-      stop();
       dispatch(stepPredictionByHand(index));
     }
   };
@@ -91,7 +96,7 @@ const TraceStepper = ({step, stepCount}: TraceStepperProps) => {
           size="extraSmall"
           startIcon={<FontAwesomeV6Icon iconName="play" />}
           aria-label="Replay from the start"
-          onClick={playFromStart}
+          onClick={replay}
         >
           Replay
         </Button>
