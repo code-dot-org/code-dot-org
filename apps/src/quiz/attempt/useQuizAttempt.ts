@@ -44,7 +44,7 @@ export default function useQuizAttempt({
 
   // Quiz views stay mounted across same-lab navigation, so a late
   // beginAttempt/finishAttempt response can land after level/unit have changed.
-  // Guard againt that by keying on the pair (and the viewed user).
+  // Guard against that by keying on the pair and the viewed user if teacher viewing a student's work.
   const currentAttemptKeyRef = useRef(`${levelId}:${unitId}:${userId}`);
 
   useEffect(() => {
