@@ -44,6 +44,13 @@ export const LayerPanel = ({
       <Typography variant="subtitle2" component="span">
         Layers
       </Typography>
+      <Typography
+        variant="body4"
+        component="span"
+        className={styles.inspectorNote}
+      >
+        Click a layer to give it a background.
+      </Typography>
       <ul className={styles.layerList} aria-label="Layers, front first">
         {[...layers].reverse().map(layer => (
           <li key={layer.id}>

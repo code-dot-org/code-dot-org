@@ -5,6 +5,7 @@ import {describe, expect, it} from 'vitest';
 
 import {
   readWorldHeader,
+  writeWorldBackgroundColor,
   writeWorldName,
   writeWorldRuleValue,
   writeWorldPropertyDefault,
@@ -51,6 +52,8 @@ describe('readWorldHeader', () => {
         {name: 'score', type: 'number', value: '0'},
         {name: 'hard', type: 'boolean', value: 'false'},
       ],
+      // No `set background color` row: the engine's own.
+      backgroundColor: {color: undefined, inCode: false},
     });
   });
 
@@ -314,5 +317,41 @@ describe('the world’s own vectors and points', () => {
   it('leave the file alone for text that is not two numbers', () => {
     expect(writeWorldPropertyDefault(WORLD, 'wind', 'north')).toBe(WORLD);
     expect(writeWorldPropertyDefault(WORLD, 'spawn', '1,2,3')).toBe(WORLD);
+  });
+});
+
+describe('the world’s background color', () => {
+  it('is added as a row at the top of the world, and read back', () => {
+    const written = writeWorldBackgroundColor(WORLD, '#7ec8e3');
+    expect(readWorldHeader(written)!.backgroundColor).toEqual({
+      color: '#7ec8e3',
+      inCode: false,
+    });
+    const world = JSON.parse(written).blocks.blocks[0];
+    expect(world.next.block.type).toBe('world_set_background_color');
+  });
+
+  it('changes the row that sets it, rather than adding another', () => {
+    const twice = writeWorldBackgroundColor(
+      writeWorldBackgroundColor(WORLD, '#7ec8e3'),
+      '#000000',
+    );
+    expect(readWorldHeader(twice)!.backgroundColor!.color).toBe('#000000');
+    expect(twice.match(/world_set_background_color/g)).toHaveLength(1);
+  });
+
+  it('leaves alone a color the code works out', () => {
+    // A blend, not a swatch: a field cannot show it, and writing over it
+    // would throw it away.
+    const parsed = JSON.parse(writeWorldBackgroundColor(WORLD, '#7ec8e3'));
+    parsed.blocks.blocks[0].next.block.inputs.COLOR = {
+      block: {type: 'colour_blend'},
+    };
+    const worked = JSON.stringify(parsed);
+    expect(readWorldHeader(worked)!.backgroundColor).toEqual({
+      color: undefined,
+      inCode: true,
+    });
+    expect(writeWorldBackgroundColor(worked, '#000000')).toBe(worked);
   });
 });

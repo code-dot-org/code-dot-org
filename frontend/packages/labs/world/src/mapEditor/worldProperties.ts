@@ -52,7 +52,26 @@ export interface WorldRuleProperty {
 export interface WorldHeader {
   name: string;
   properties: WorldProperty[];
+  /** The color behind the background image (`readBackgroundColor`). */
+  backgroundColor?: BackgroundColor;
 }
+
+/**
+ * The world's background color, as its `set background color` row says it.
+ *
+ * `color` is the `#rrggbb` a swatch holds, or nothing when no row sets one
+ * — the engine's own then (`DEFAULT_BACKDROP_COLOR`). `inCode` says a row
+ * sets it to something a field cannot show, a blend or an `r g b a`, which
+ * a field would throw away by writing over it.
+ */
+export interface BackgroundColor {
+  color: string | undefined;
+  inCode: boolean;
+}
+
+/** The block that sets the world's background color, and its swatch. */
+const SET_BACKGROUND_COLOR = 'world_set_background_color';
+const SWATCH = 'colour_picker';
 
 interface Block {
   type?: string;
@@ -222,7 +241,62 @@ export function readWorldHeader(
       rule: property.rule,
     });
   }
-  return {name: asText(root.fields?.NAME), properties};
+  return {
+    name: asText(root.fields?.NAME),
+    properties,
+    backgroundColor: readBackgroundColor(root),
+  };
+}
+
+/**
+ * What the FIRST `set background color` row under `define world` says: a
+ * world may set it twice and the last would win, but a field that showed the
+ * last and wrote the first would agree with neither — the same choice the
+ * rules' rows make above.
+ */
+function readBackgroundColor(root: Block): BackgroundColor {
+  const row = [...rows(root)].find(each => each.type === SET_BACKGROUND_COLOR);
+  if (!row) {
+    return {color: undefined, inCode: false};
+  }
+  const value = row.inputs?.COLOR;
+  const held = value?.block ?? value?.shadow;
+  const color = held?.type === SWATCH ? asText(held.fields?.COLOUR) : '';
+  return color ? {color, inCode: false} : {color: undefined, inCode: true};
+}
+
+/**
+ * The file with the world's background color set to `color`, a `#rrggbb`.
+ *
+ * The first row that sets it is given the swatch, or one is added at the top
+ * of the world's rows — at the top because this is a STARTING value. Nothing
+ * is written over a row that sets it to more than a swatch (`inCode`).
+ */
+export function writeWorldBackgroundColor(
+  contents: string,
+  color: string,
+): string {
+  const swatch = {type: SWATCH, fields: {COLOUR: color}};
+  return rewrite(contents, root => {
+    const row = [...rows(root)].find(
+      each => each.type === SET_BACKGROUND_COLOR,
+    );
+    if (row) {
+      if (readBackgroundColor(root).inCode) {
+        return false;
+      }
+      row.inputs = {...row.inputs, COLOR: {shadow: swatch}};
+      return true;
+    }
+    root.next = {
+      block: {
+        type: SET_BACKGROUND_COLOR,
+        inputs: {COLOR: {shadow: swatch}},
+        ...(root.next ? {next: root.next} : {}),
+      },
+    };
+    return true;
+  });
 }
 
 /** The file with the world renamed, or as it was when it has no world. */

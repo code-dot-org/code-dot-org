@@ -272,13 +272,20 @@ export interface MapStageProps {
    * The world this map is the main map of, shown in the inspector with
    * nothing selected (`WorldInspector`); absent for a `.map`.
    *
-   * Without the theme, which the stage supplies itself: it is a property of the
-   * MAP this stage is showing, written the way every other map-level change is,
-   * so a caller has nothing to say about it.
+   * Without the theme and the background image, which the stage supplies
+   * itself: they are properties of the MAP this stage is showing, written the
+   * way every other map-level change is, so a caller has nothing to say about
+   * them.
    */
   world?: Omit<
     WorldInspectorProps,
-    'isReadOnly' | 'theme' | 'themeOptions' | 'onTheme'
+    | 'isReadOnly'
+    | 'theme'
+    | 'themeOptions'
+    | 'onTheme'
+    | 'background'
+    | 'backgrounds'
+    | 'onBackground'
   >;
   /**
    * The cameras the world's own workspace declares, for the camera strip on a
@@ -2151,6 +2158,8 @@ export const MapStage = ({
 
   // Draw the scene through the camera transform: the outside fill, then (in world
   // space) the map region, grid, its border, the placed actors, and the ghost.
+  /** What the map region is painted with, under its layers' images. */
+  const skyColor = world?.header.backgroundColor?.color ?? MAP_BG;
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas || !view || size.w === 0 || size.h === 0) {
@@ -2178,7 +2187,9 @@ export const MapStage = ({
     const s = view.scale * dpr;
     ctx.setTransform(s, 0, 0, s, view.x * dpr, view.y * dpr);
 
-    ctx.fillStyle = MAP_BG;
+    // The world's background color where it sets one, as the game paints
+    // behind everything; the editor's own dark otherwise.
+    ctx.fillStyle = skyColor;
     ctx.fillRect(0, 0, extent.w, extent.h);
 
     ctx.strokeStyle = GRID;
@@ -2588,6 +2599,8 @@ export const MapStage = ({
     heldMaps,
     // …and a slot's image, which arrives decoded after the first paint.
     backgroundImages,
+    // …and the world's background color.
+    skyColor,
   ]);
 
   const canvasClass = [
@@ -2605,6 +2618,17 @@ export const MapStage = ({
   ]
     .filter(Boolean)
     .join(' ');
+
+  // THE MAP'S BACKGROUND is its back layer's — the one `set background to`
+  // sets — offered in the inspector with nothing selected, so that a map has
+  // a background without the Layers panel having to be found first.
+  const backLayer = layersOf(map)[0];
+  const backgroundProps = {
+    background: backLayer.background,
+    backgrounds: backgroundChoices ?? [],
+    onBackground: (change: Partial<MapSlotDoc>) =>
+      commit(withBackground(mapRef.current, backLayer.id, change)),
+  };
 
   // The selection's Script button, floated just outside its top-right corner
   // (`stageGeometry.scriptButtonAt`). Around the box the grips are drawn on,
@@ -2840,6 +2864,7 @@ export const MapStage = ({
           theme={map.theme}
           themeOptions={themeOptions}
           onTheme={path => commit({...mapRef.current, theme: path})}
+          {...backgroundProps}
           isReadOnly={isReadOnly}
         />
       )}
@@ -2856,6 +2881,7 @@ export const MapStage = ({
           theme={map.theme}
           themeOptions={themeOptions}
           onTheme={path => commit({...mapRef.current, theme: path})}
+          {...backgroundProps}
           isReadOnly={isReadOnly}
         />
       )}

@@ -121,6 +121,25 @@ are retired; see "Foregrounds retired" at the end.)
   draw-order test picks out the stand-in sprites by the green they are
   filled with.
 
+## The map's own background — BUILT
+
+A map's background is its back layer's: the one `set background to` sets.
+It was only reachable through the Layers panel, by clicking the Main row,
+which nothing pointed at — and in App Builder, which hides the panel, not at
+all. The inspector with nothing selected now has the same background fields
+the layer inspector has (`BackgroundField`), writing the back layer's slot,
+for a world's main map and for a `.map` alike. The Layers panel says that a
+layer's background is set by clicking it.
+
+A world's main map also shows the world's BACKGROUND COLOR, the color behind
+the image and behind everything where there is none. It is not the map's: it
+is the world's `set background color` row, which the field reads and writes
+in the world's code, adding the row at the top of `define world` when there
+is none (`worldProperties.writeWorldBackgroundColor`). A row that works its
+color out — a blend, an `r g b a` — is left to the code, and the inspector
+says so rather than writing over it. The canvas paints the map region in
+that color, as the game paints behind everything.
+
 ## Not built, and known
 
 - The look-through mode: panning the editor's camera to see each layer move
@@ -166,4 +185,3 @@ document, the engine's `setForeground*` and foreground effect methods and
 `foregroundSnapshot`, the driver's second slot list, and the inspector's
 second slot. What remains of the slot is named for what it is: the map
 editor writes `withBackground`, and the inspector calls `onBackground`.
-

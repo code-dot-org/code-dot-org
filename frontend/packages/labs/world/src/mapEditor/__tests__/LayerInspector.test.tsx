@@ -13,7 +13,8 @@ vi.mock('../../appearance/appearanceImport', () => ({
   requestAppearanceImport: (kind: string) => requestAppearanceImport(kind),
 }));
 
-const {LayerInspector, IMPORT_SLOT} = await import('../LayerInspector');
+const {LayerInspector} = await import('../LayerInspector');
+const {IMPORT_SLOT} = await import('../BackgroundField');
 
 const mount = (backgrounds: string[] = ['sky.png']) => {
   const onBackground = vi.fn();

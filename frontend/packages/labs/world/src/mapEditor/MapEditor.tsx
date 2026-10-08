@@ -551,6 +551,11 @@ export const MapEditor = ({
                   ),
             );
           },
+          // …and the color behind the background, a row in the world's code.
+          onBackgroundColor: (color: string) =>
+            writeFile(
+              document.world!.writeBackgroundColor(contentsRef.current, color),
+            ),
         }
       : undefined;
 

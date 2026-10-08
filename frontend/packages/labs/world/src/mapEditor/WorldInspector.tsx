@@ -1,7 +1,7 @@
 // The inspector with nothing selected, on a world's map: the world itself.
 //
-// Its name, and the starting value of each property its `define property`
-// rows declare — a field per row, as a placement's own properties are fields
+// Its name, its background image and color, and the starting value of each
+// property its `define property` rows declare — a field per row, as a placement's own properties are fields
 // in its inspector (specs/MAP_FIRST.md, "Where the world's properties are
 // set"). What is written is the row's DEFAULT (`worldProperties`); the `set`
 // block remains for a value that changes while the game runs.
@@ -14,8 +14,13 @@ import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 
+import {DEFAULT_BACKDROP_COLOR} from '../engine';
+import fields from '../formFields.module.css';
+
 import {AngleInput} from './AngleInput';
+import {BackgroundColorField, BackgroundField} from './BackgroundField';
 import styles from './mapEditor.module.css';
+import type {MapSlotDoc} from './mapModel';
 import {ThemeField} from './ThemeField';
 import {VectorInput} from './VectorInput';
 import {
@@ -49,6 +54,16 @@ export interface WorldInspectorProps {
   /** The project's themes, as `[label, path]`. */
   themeOptions: ReadonlyArray<readonly [string, string]>;
   onTheme: (path: string | undefined) => void;
+  /**
+   * The background image of the main map's back layer, the one `set
+   * background to` sets — on the MAP, like the theme, and written there.
+   */
+  background?: MapSlotDoc;
+  /** The project's backgrounds, by file name. */
+  backgrounds?: readonly string[];
+  onBackground?: (change: Partial<MapSlotDoc>) => void;
+  /** …and the world's background color, a row in its code. */
+  onBackgroundColor?: (color: string) => void;
   isReadOnly: boolean;
 }
 
@@ -68,6 +83,10 @@ export const WorldInspector = ({
   theme,
   themeOptions,
   onTheme,
+  background,
+  backgrounds = [],
+  onBackground,
+  onBackgroundColor,
   isReadOnly,
 }: WorldInspectorProps) => {
   // What is being typed, committed on blur or Enter as a placement's fields
@@ -252,7 +271,7 @@ export const WorldInspector = ({
 
   return (
     <div
-      className={styles.inspector}
+      className={`${styles.inspector} ${fields.narrow}`}
       data-testid="world-inspector"
       data-callout="world.properties"
     >
@@ -288,6 +307,28 @@ export const WorldInspector = ({
               </div>
             ),
           }))}
+        />
+      )}
+      {onBackground && (
+        <BackgroundField
+          // Re-keyed on what the map says, so a change from outside — the
+          // Layers panel, a `set background` edit — is what it shows.
+          key={JSON.stringify(background ?? null)}
+          name="map-background"
+          slot={background}
+          backgrounds={backgrounds}
+          onChange={onBackground}
+          isReadOnly={isReadOnly}
+        />
+      )}
+      {onBackgroundColor && (
+        <BackgroundColorField
+          key={header.backgroundColor?.color ?? ''}
+          color={header.backgroundColor?.color}
+          fallback={DEFAULT_BACKDROP_COLOR}
+          inCode={Boolean(header.backgroundColor?.inCode)}
+          onChange={onBackgroundColor}
+          isReadOnly={isReadOnly}
         />
       )}
       <ThemeField

@@ -1,7 +1,8 @@
 // The inspector with nothing selected, on a `.map`: the map itself.
 //
 // WHAT BELONGS HERE is a fact about the map that is not about where things are:
-// whether it covers what is under it, and what it is painted out of. Both were
+// whether it covers what is under it, what it is painted out of, and what is
+// behind it. Both were
 // in the palette strip along the top, beside the width and the height, which is
 // where the tools for arranging a map are and not where its properties are.
 //
@@ -19,7 +20,11 @@ import type {ChangeEvent} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 
+import fields from '../formFields.module.css';
+
+import {BackgroundField} from './BackgroundField';
 import styles from './mapEditor.module.css';
+import type {MapSlotDoc} from './mapModel';
 import {ThemeField} from './ThemeField';
 
 export interface MapInspectorProps {
@@ -31,6 +36,14 @@ export interface MapInspectorProps {
   /** The project's themes, as `[label, path]`. */
   themeOptions: ReadonlyArray<readonly [string, string]>;
   onTheme: (path: string | undefined) => void;
+  /**
+   * The background image of the map's back layer, the one `set background
+   * to` sets. A map has no background COLOR of its own: that is the world's.
+   */
+  background?: MapSlotDoc;
+  /** The project's backgrounds, by file name. */
+  backgrounds?: readonly string[];
+  onBackground?: (change: Partial<MapSlotDoc>) => void;
   isReadOnly: boolean;
 }
 
@@ -40,9 +53,15 @@ export const MapInspector = ({
   theme,
   themeOptions,
   onTheme,
+  background,
+  backgrounds = [],
+  onBackground,
   isReadOnly,
 }: MapInspectorProps) => (
-  <div className={styles.inspector} data-testid="map-inspector">
+  <div
+    className={`${styles.inspector} ${fields.narrow}`}
+    data-testid="map-inspector"
+  >
     <div className={styles.inspectorHead}>
       <Typography variant="subtitle2" component="span">
         Map
@@ -75,6 +94,16 @@ export const MapInspector = ({
     >
       A screen, not a HUD: a clock or a score bar should leave this off.
     </Typography>
+    {onBackground && (
+      <BackgroundField
+        key={JSON.stringify(background ?? null)}
+        name="map-background"
+        slot={background}
+        backgrounds={backgrounds}
+        onChange={onBackground}
+        isReadOnly={isReadOnly}
+      />
+    )}
     <ThemeField
       value={theme}
       options={themeOptions}

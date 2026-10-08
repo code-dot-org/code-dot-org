@@ -9,6 +9,7 @@
 import {mapFromRaw, parseMap, type MapDoc} from './mapModel';
 import {
   readWorldHeader,
+  writeWorldBackgroundColor,
   writeWorldRuleValue,
   writeWorldName,
   writeWorldPropertyDefault,
@@ -45,6 +46,8 @@ export interface MapDocumentAdapter {
       property: WorldRuleProperty,
       value: string,
     ): string;
+    /** …and the color behind the background, a `set background color` row. */
+    writeBackgroundColor(contents: string, color: string): string;
   };
 }
 
@@ -89,5 +92,6 @@ export const worldFileDocument: MapDocumentAdapter = {
     writeName: writeWorldName,
     writeDefault: writeWorldPropertyDefault,
     writeRuleValue: writeWorldRuleValue,
+    writeBackgroundColor: writeWorldBackgroundColor,
   },
 };

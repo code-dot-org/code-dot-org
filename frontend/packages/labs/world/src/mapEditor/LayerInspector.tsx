@@ -15,11 +15,11 @@ import type {ChangeEvent, KeyboardEvent} from 'react';
 import {useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
-import {requestAppearanceImport} from '../appearance/appearanceImport';
+import fields from '../formFields.module.css';
 
+import {BackgroundField} from './BackgroundField';
 import styles from './mapEditor.module.css';
 import {layerName, type MapLayerDoc, type MapSlotDoc} from './mapModel';
 
@@ -32,12 +32,6 @@ export interface LayerInspectorProps {
   onClose: () => void;
   isReadOnly: boolean;
 }
-
-/**
- * The dropdown row that opens the backdrop library. A value no file name
- * would be, since a file name is what every other row holds.
- */
-export const IMPORT_SLOT = '__import__';
 
 const asNumber = (text: string, fallback: number): number => {
   const value = Number(text);
@@ -58,8 +52,6 @@ export const LayerInspector = ({
     name: layer.name ?? '',
     px: String(layer.parallax?.x ?? 1),
     py: String(layer.parallax?.y ?? 1),
-    'background.x': String(layer.background?.offset?.x ?? 0),
-    'background.y': String(layer.background?.offset?.y ?? 0),
   });
   const type = (key: string) => (event: ChangeEvent<HTMLInputElement>) =>
     setDraft(held => ({...held, [key]: event.target.value}));
@@ -72,81 +64,23 @@ export const LayerInspector = ({
     onChange({
       parallax: {x: asNumber(draft.px, 1), y: asNumber(draft.py, 1)},
     });
-  const commitOffset = () =>
-    onBackground({
-      offset: {
-        x: asNumber(draft['background.x'], 0),
-        y: asNumber(draft['background.y'], 0),
-      },
-    });
-
   // The one slot, named so its fields keep the names they had beside a
   // second one (`layer-background`, `layer-background-tiled`, …).
-  const which = 'background';
   const background = (
-    <div className={styles.inspectorGroup}>
-      <SimpleDropdown
-        name={`layer-${which}`}
-        labelText="Background"
-        size="s"
-        className={styles.inspectorDropdown}
-        disabled={isReadOnly}
-        selectedValue={layer[which]?.sprite ?? ''}
-        items={[
-          {value: '', text: '(none)'},
-          ...backgrounds.map(name => ({value: name, text: name})),
-          // …and the way to one the project has not got. Without it the map
-          // editor could set a layer's background to any backdrop already in
-          // the project and never bring one in, where the block that does the
-          // same has offered it all along (specs/LOOK_PLAN.md).
-          {value: IMPORT_SLOT, text: '(import…)'},
-        ]}
-        onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-          const chosen = event.target.value;
-          if (chosen !== IMPORT_SLOT) {
-            onBackground({sprite: chosen});
-            return;
-          }
-          // Asked of the lab, as every other import is; the dropdown goes
-          // back to what the layer says until something comes back
-          // (`appearance/appearanceImport`).
-          void requestAppearanceImport('background').then(name => {
-            if (name) {
-              onBackground({sprite: name});
-            }
-          });
-        }}
-      />
-      <Checkbox
-        name={`layer-${which}-tiled`}
-        label="Tiled"
-        checked={Boolean(layer[which]?.repeat)}
-        disabled={isReadOnly}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onBackground({repeat: event.target.checked})
-        }
-      />
-      <div className={styles.inspectorGrid}>
-        {(['x', 'y'] as const).map(axis => (
-          <TextField
-            key={axis}
-            name={`layer-${which}-${axis}`}
-            label={`Slide ${axis.toUpperCase()}`}
-            inputType="number"
-            size="s"
-            value={draft[`${which}.${axis}`]}
-            disabled={isReadOnly}
-            onChange={type(`${which}.${axis}`)}
-            onBlur={commitOffset}
-            onKeyDown={blurOnEnter}
-          />
-        ))}
-      </div>
-    </div>
+    <BackgroundField
+      name="layer-background"
+      slot={layer.background}
+      backgrounds={backgrounds}
+      onChange={onBackground}
+      isReadOnly={isReadOnly}
+    />
   );
 
   return (
-    <div className={styles.inspector} data-testid="layer-inspector">
+    <div
+      className={`${styles.inspector} ${fields.narrow}`}
+      data-testid="layer-inspector"
+    >
       <div className={styles.inspectorHead}>
         <Typography variant="subtitle2" component="span">
           Layer: {layerName(layer)}

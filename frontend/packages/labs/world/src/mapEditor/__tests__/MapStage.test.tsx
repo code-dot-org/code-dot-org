@@ -969,6 +969,45 @@ describe('a level, with nothing selected', () => {
     expect(JSON.stringify(written())).not.toContain('modal');
   });
 
+  it('sets the background of the layer at the back', () => {
+    // The map's background is its back layer's, the one `set background to`
+    // sets — offered here so a map has one without the Layers panel.
+    const {written, ...view} = mount(doc(), {
+      backgroundChoices: ['sky.png', 'hills.png'],
+    });
+    const select = view.container.querySelector(
+      'select[name="map-background"]',
+    ) as HTMLSelectElement;
+    fireEvent.change(select, {target: {value: 'sky.png'}});
+    expect(written().layers?.[0]).toEqual({
+      id: 'main',
+      background: {sprite: 'sky.png'},
+    });
+  });
+
+  it('sets a world’s background color, beside its main map’s image', () => {
+    const onBackgroundColor = vi.fn();
+    const main = mount(doc(), {
+      world: {
+        header: {
+          name: 'W',
+          properties: [],
+          backgroundColor: {color: '#101020', inCode: false},
+        },
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+        onBackgroundColor,
+      },
+    });
+    expect(
+      main.container.querySelector('select[name="map-background"]'),
+    ).not.toBeNull();
+    const field = main.getByLabelText('Background color');
+    fireEvent.change(field, {target: {value: '#7ec8e3'}});
+    fireEvent.blur(field);
+    expect(onBackgroundColor).toHaveBeenCalledWith('#7ec8e3');
+  });
+
   it('never offers that on a world’s main map, which has nothing under it', () => {
     // A main map lives inside the `.world` file, so `load map` cannot name it
     // and nothing can ever be loaded over it — the flag could only ever be a
