@@ -1,6 +1,5 @@
 /* Thumbnail of the trained decision tree, drawn without text. */
 import {IconButton, Tooltip} from '@mui/material';
-import classNames from 'classnames';
 import {useMemo} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -13,7 +12,7 @@ import {
   TREE_NODE_WIDTH,
 } from '../helpers/displayTreeLayout';
 
-import {leafColorClass} from './leafColors';
+import {leafColorStyle} from './leafColors';
 
 import styles from './treeMiniMap.module.scss';
 
@@ -61,11 +60,12 @@ const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
             width={TREE_NODE_WIDTH}
             height={TREE_NODE_HEIGHT}
             rx={NODE_CORNER_RADIUS}
-            className={
-              placed.answerIndex === undefined
-                ? styles.question
-                : classNames(styles.answer, leafColorClass(placed.answerIndex))
-            }
+            {...(placed.answerIndex === undefined
+              ? {className: styles.question}
+              : {
+                  className: styles.answer,
+                  style: leafColorStyle(placed.answerIndex),
+                })}
           />
         ))}
       </svg>

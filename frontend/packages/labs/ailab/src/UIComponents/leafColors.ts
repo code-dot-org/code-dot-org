@@ -1,15 +1,21 @@
-import styles from './leafColors.module.scss';
+import type {CSSProperties} from 'react';
 
-const LEAF_COLOR_CLASSES = [
-  styles.leafColor0,
-  styles.leafColor1,
-  styles.leafColor2,
-  styles.leafColor3,
-  styles.leafColor4,
-  styles.leafColor5,
-  styles.leafColor6,
+// Leaves cycle through this order, chosen so neighbors have good contrast for
+// colorblindness, including across the wrap from last to first.
+const LEAF_COLORS = [
+  'brand',
+  'accent-orange',
+  'info',
+  'error',
+  'warning',
+  'accent-pink',
+  'success',
 ];
 
-export function leafColorClass(answerIndex: number): string {
-  return LEAF_COLOR_CLASSES[answerIndex % LEAF_COLOR_CLASSES.length];
+export function leafColorStyle(answerIndex: number): CSSProperties {
+  const color = LEAF_COLORS[answerIndex % LEAF_COLORS.length];
+  return {
+    '--leaf-color': `var(--border-${color}-primary)`,
+    '--leaf-color-light': `var(--background-${color}-light)`,
+  } as CSSProperties;
 }

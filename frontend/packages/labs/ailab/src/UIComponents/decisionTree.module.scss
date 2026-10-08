@@ -181,6 +181,7 @@ $overlay-float-min-width: 600px;
   height: $answer-dot-size;
   border-radius: 50%;
   background-color: var(--leaf-color);
+  forced-color-adjust: none;
 }
 
 .nodeText {
