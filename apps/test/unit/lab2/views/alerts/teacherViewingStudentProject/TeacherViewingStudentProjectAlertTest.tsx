@@ -24,7 +24,6 @@ describe('TeacherViewingStudentProjectAlert', () => {
       teacherSections: {selectedStudents: [{id: 99, name: 'Aisha Khan'}]},
     };
     mockedUseAppSelector.mockImplementation(selector => selector(state));
-    // Level progress says not started; attemptStatus must win over it.
     mockedGetCurrentLevel.mockReturnValue({status: LevelStatus.not_tried});
   });
 
@@ -32,33 +31,23 @@ describe('TeacherViewingStudentProjectAlert', () => {
     jest.clearAllMocks();
   });
 
-  it('says the student has not started, as info', () => {
-    render(<TeacherViewingStudentProjectAlert attemptStatus="notStarted" />);
-
-    const alert = screen.getByText(/hasn't started this level/);
-    expect(alert).toHaveTextContent("Aisha Khan hasn't started this level.");
-  });
-
-  it('says the student is still working, as a warning', () => {
-    render(<TeacherViewingStudentProjectAlert attemptStatus="inProgress" />);
+  it("passes the viewed student's name to getAlertText and shows its result", () => {
+    render(
+      <TeacherViewingStudentProjectAlert
+        getAlertText={name => <>Custom message for {name}</>}
+      />
+    );
 
     expect(
-      screen.getByText(/is still working on this assessment/)
-    ).toHaveTextContent('Aisha Khan is still working on this assessment.');
+      screen.getByText('Custom message for Aisha Khan')
+    ).toBeInTheDocument();
   });
 
-  it('says the teacher is viewing submitted work in read only mode', () => {
-    render(<TeacherViewingStudentProjectAlert attemptStatus="submitted" />);
-
-    expect(screen.getByText(/work in read only mode/)).toHaveTextContent(
-      "You are viewing Aisha Khan's work in read only mode."
-    );
-  });
-
-  it('keeps the level-progress wording for labs that pass no attemptStatus', () => {
+  it('shows the level-progress wording when getAlertText is not given', () => {
     render(<TeacherViewingStudentProjectAlert />);
 
-    expect(screen.queryByText(/this level/)).not.toBeInTheDocument();
-    expect(screen.queryByText(/assessment/)).not.toBeInTheDocument();
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'Aisha Khan has not started the level.'
+    );
   });
 });

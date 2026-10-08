@@ -18,8 +18,16 @@ jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
 // The real alert reads teacher-section and progress state this test has no store for.
 jest.mock('@cdo/apps/lab2/views/alerts/teacherViewingStudentProject', () => ({
   __esModule: true,
-  default: ({attemptStatus}: {attemptStatus: string}) => (
-    <div>viewing-student-alert:{attemptStatus}</div>
+  default: ({
+    getAlertText,
+    type,
+  }: {
+    getAlertText?: (studentName: string | undefined) => React.ReactElement;
+    type?: string;
+  }) => (
+    <div role="note" data-type={type}>
+      {getAlertText?.('Aisha Khan')}
+    </div>
   ),
 }));
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
@@ -1002,7 +1010,7 @@ describe('QuizAttemptWorkspace', () => {
 
   it('shows no viewing-student alert to a student taking their own quiz', () => {
     renderWorkspace({hookState: {attempt: null}, showIntroScreen: true});
-    expect(screen.queryByText(/viewing-student-alert/)).not.toBeInTheDocument();
+    expect(screen.queryByRole('note')).not.toBeInTheDocument();
   });
 
   describe('when a teacher is viewing a student', () => {
@@ -1039,9 +1047,9 @@ describe('QuizAttemptWorkspace', () => {
       });
 
       expect(beginAttempt).not.toHaveBeenCalled();
-      expect(
-        screen.getByText('viewing-student-alert:notStarted')
-      ).toBeInTheDocument();
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent("Aisha Khan hasn't started this level.");
+      expect(alert).toHaveAttribute('data-type', 'info');
     });
 
     it("shows the student's saved answers, ungraded and read-only, while in progress", () => {
@@ -1058,9 +1066,11 @@ describe('QuizAttemptWorkspace', () => {
         viewAsUserId: 99,
       });
 
-      expect(
-        screen.getByText('viewing-student-alert:inProgress')
-      ).toBeInTheDocument();
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent(
+        'Aisha Khan is still working on this assessment.'
+      );
+      expect(alert).toHaveAttribute('data-type', 'warning');
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: /Next|Submit|Finish/})
@@ -1076,9 +1086,11 @@ describe('QuizAttemptWorkspace', () => {
         viewAsUserId: 99,
       });
 
-      expect(
-        screen.getByText('viewing-student-alert:submitted')
-      ).toBeInTheDocument();
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent(
+        "You are viewing Aisha Khan's work in read only mode."
+      );
+      expect(alert).toHaveAttribute('data-type', 'info');
       expect(screen.getByText('100%')).toBeInTheDocument();
       expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
       expect(

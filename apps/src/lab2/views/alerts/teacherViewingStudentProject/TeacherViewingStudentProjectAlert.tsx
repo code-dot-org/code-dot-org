@@ -13,16 +13,14 @@ type TeacherViewingStudentProjectAlertProps = {
   inWorkspaceContainer?: boolean;
   /** Optional custom className */
   className?: string;
-  /**
-   * For a quiz level, the state of the student's attempt. Takes
-   * the place of level progress, which can't tell in progress from submitted.
-   */
-  attemptStatus?: 'notStarted' | 'inProgress' | 'submitted';
+  /** Replaces the default message which is based on the student's progress status for the level. */
+  getAlertText?: (studentName: string | undefined) => React.ReactElement;
+  type?: 'info' | 'warning';
 };
 
 const TeacherViewingStudentProjectAlert: React.FC<
   TeacherViewingStudentProjectAlertProps
-> = ({inWorkspaceContainer, className, attemptStatus}) => {
+> = ({inWorkspaceContainer, className, getAlertText, type = 'info'}) => {
   // Get the user ID of the student whose project is being viewed.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
@@ -69,28 +67,9 @@ const TeacherViewingStudentProjectAlert: React.FC<
     return student?.name;
   }, [viewAsUserId, studentsInSection]);
 
-  const attemptAlertText =
-    attemptStatus === 'notStarted' ? (
-      <>
-        <strong>{selectedStudentName ?? 'This student'}</strong> hasn't started
-        this level.
-      </>
-    ) : attemptStatus === 'inProgress' ? (
-      <>
-        <strong>{selectedStudentName ?? 'This student'}</strong> is still
-        working on this assessment.
-      </>
-    ) : (
-      <>
-        You are viewing{' '}
-        <strong>{selectedStudentName ?? 'this student'}'s</strong> work in read
-        only mode.
-      </>
-    );
-
   // Show a generic message while loading to avoid toggling stale status.
-  const alertText = attemptStatus ? (
-    attemptAlertText
+  const alertText = getAlertText ? (
+    getAlertText(selectedStudentName)
   ) : isLoadingLevelProgress ? (
     <>
       Loading <strong>{selectedStudentName ?? 'student'}'s</strong> project...
@@ -111,11 +90,11 @@ const TeacherViewingStudentProjectAlert: React.FC<
     <Alert
       className={classNames(
         inWorkspaceContainer && moduleStyles.inWorkspaceContainer,
-        attemptStatus === 'inProgress' && moduleStyles.warningBorder,
+        type === 'warning' && moduleStyles.warningBorder,
         className
       )}
       text={alertText}
-      type={attemptStatus === 'inProgress' ? 'warning' : 'info'}
+      type={type}
       size="xs"
     />
   );

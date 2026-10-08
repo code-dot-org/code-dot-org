@@ -21,7 +21,7 @@ import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
-import {QuizQuestionResult} from './types';
+import {QuizAttemptData, QuizQuestionResult} from './types';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
@@ -340,13 +340,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
       {isViewingStudent && attempt !== undefined && (
         <TeacherViewingStudentProjectAlert
           inWorkspaceContainer
-          attemptStatus={
-            attempt === null
-              ? 'notStarted'
-              : attempt.submittedAt
-              ? 'submitted'
-              : 'inProgress'
+          getAlertText={studentName =>
+            getTeacherViewAlertText(attempt, studentName)
           }
+          type={attempt && !attempt.submittedAt ? 'warning' : 'info'}
         />
       )}
       <div className={styles.attemptBody}>
@@ -468,5 +465,33 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     </div>
   );
 };
+
+function getTeacherViewAlertText(
+  attempt: QuizAttemptData | null,
+  studentName: string | undefined
+): React.ReactElement {
+  if (attempt === null) {
+    return (
+      <>
+        <strong>{studentName ?? 'This student'}</strong> hasn't started this
+        level.
+      </>
+    );
+  }
+  if (!attempt.submittedAt) {
+    return (
+      <>
+        <strong>{studentName ?? 'This student'}</strong> is still working on
+        this assessment.
+      </>
+    );
+  }
+  return (
+    <>
+      You are viewing <strong>{studentName ?? 'this student'}'s</strong> work in
+      read only mode.
+    </>
+  );
+}
 
 export default QuizAttemptWorkspace;
