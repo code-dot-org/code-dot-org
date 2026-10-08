@@ -1,5 +1,7 @@
 <!--
-  Summarize the changes in this pull request. What is the background, motivation, and context for this update? What functionality is changing from an end user perspective? Include links to any design documents, specs, tickets, or other external sources that give context for the change along with screenshots, videos, or before/after comparisons for UI changes.
+- Background and Intent: What is the background, motivation, and context for this update? Include links to any design documents, specs, tickets, or other external sources that give context for the change.
+- Design Overview: What conceptually is changing in the code? What design decisions were made and why? Don't explain how it works when that's already clear.
+- Visible Changes: What functionality is changing from an end user perspective? Include screenshots, videos, or before/after comparisons for UI changes. 
 -->
 
 ## Validation
