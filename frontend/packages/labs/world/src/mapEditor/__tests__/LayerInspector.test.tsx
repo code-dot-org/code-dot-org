@@ -16,23 +16,28 @@ vi.mock('../../appearance/appearanceImport', () => ({
 const {LayerInspector} = await import('../LayerInspector');
 const {IMPORT_SLOT} = await import('../BackgroundField');
 
+const inspector = (
+  backgrounds: string[],
+  onBackground: (change: object) => void,
+) => (
+  <LayerInspector
+    layer={{id: 'main'}}
+    backgrounds={backgrounds}
+    onChange={vi.fn()}
+    onBackground={onBackground}
+    onClose={vi.fn()}
+    isReadOnly={false}
+  />
+);
+
 const mount = (backgrounds: string[] = ['sky.png']) => {
   const onBackground = vi.fn();
-  render(
-    <LayerInspector
-      layer={{id: 'main'}}
-      backgrounds={backgrounds}
-      onChange={vi.fn()}
-      onBackground={onBackground}
-      onClose={vi.fn()}
-      isReadOnly={false}
-    />,
-  );
+  const {rerender} = render(inspector(backgrounds, onBackground));
   const pick = (value: string) =>
     fireEvent.change(screen.getByRole('combobox', {name: 'Background'}), {
       target: {value},
     });
-  return {onBackground, pick};
+  return {onBackground, pick, rerender};
 };
 
 describe('a layer’s background', () => {
@@ -51,14 +56,25 @@ describe('a layer’s background', () => {
     expect(requestAppearanceImport).not.toHaveBeenCalled();
   });
 
-  it('asks the lab for one it has not, and takes what comes back', async () => {
+  it('asks the lab for one it has not, and takes it once the project has it', async () => {
+    // The import answers before any editor has rendered with the new file,
+    // and a save made then is built on the project without it — which undid
+    // the import (`useAfterImport`). So the choice waits for the render whose
+    // options hold the file, and goes through THAT render's callback.
     imported = 'cave.png';
-    const {onBackground, pick} = mount();
+    const {onBackground, pick, rerender} = mount();
     pick(IMPORT_SLOT);
     expect(requestAppearanceImport).toHaveBeenCalledWith('background');
+    await Promise.resolve();
+    await Promise.resolve();
+    expect(onBackground).not.toHaveBeenCalled();
+
+    const current = vi.fn();
+    rerender(inspector(['cave.png', 'sky.png'], current));
     await vi.waitFor(() =>
-      expect(onBackground).toHaveBeenCalledWith({sprite: 'cave.png'}),
+      expect(current).toHaveBeenCalledWith({sprite: 'cave.png'}),
     );
+    expect(onBackground).not.toHaveBeenCalled();
   });
 
   it('changes nothing when the learner backs out of the library', async () => {

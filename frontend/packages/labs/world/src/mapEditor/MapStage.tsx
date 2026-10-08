@@ -123,6 +123,7 @@ import {
   steppedBy,
   zoomToward,
 } from './stageGeometry';
+import {useAfterImport} from './useAfterImport';
 import {VectorInput} from './VectorInput';
 import {WithheldNote} from './WithheldNote';
 import {placementCameras, type DeclaredCamera} from './worldCameras';
@@ -1101,6 +1102,11 @@ export const MapStage = ({
     mapRef.current = next;
     commit(next);
   };
+  /** A theme imported from a placement's Theme field (`useAfterImport`). */
+  const importThemeThen = useAfterImport<PropertySchema>(
+    themeOptions.map(([, path]) => path),
+    (path, prop) => selectOption(prop, path),
+  );
 
   /** The ids a set-valued property currently names, in order. */
   const chosenIds = (actor: Placement, prop: PropertySchema): string[] =>
@@ -1429,11 +1435,10 @@ export const MapStage = ({
           onChange={(event: ChangeEvent<HTMLSelectElement>) => {
             if (event.target.value === IMPORT_STYLE_VALUE) {
               // The import writes the file and answers its path, and the
-              // placement takes it — so picking a theme and fetching one are
-              // one gesture.
-              void requestStyleImport().then(
-                path => path && selectOption(prop, path),
-              );
+              // placement takes it once the file is in the project — so
+              // picking a theme and fetching one are one gesture
+              // (`useAfterImport`).
+              importThemeThen(requestStyleImport, prop);
               return;
             }
             selectOption(prop, event.target.value);

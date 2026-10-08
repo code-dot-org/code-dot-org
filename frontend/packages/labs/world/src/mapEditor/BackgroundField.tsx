@@ -20,6 +20,7 @@ import fields from '../formFields.module.css';
 
 import styles from './mapEditor.module.css';
 import type {MapSlotDoc} from './mapModel';
+import {useAfterImport} from './useAfterImport';
 
 /**
  * The dropdown row that opens the backdrop library. A value no file name
@@ -59,6 +60,9 @@ export const BackgroundField = ({
     x: String(slot?.offset?.x ?? 0),
     y: String(slot?.offset?.y ?? 0),
   });
+  const importThen = useAfterImport(backgrounds, file =>
+    onChange({sprite: file}),
+  );
   const blurOnEnter = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       (event.target as HTMLInputElement).blur();
@@ -93,13 +97,9 @@ export const BackgroundField = ({
             return;
           }
           // Asked of the lab, as every other import is; the dropdown goes
-          // back to what the map says until something comes back
-          // (`appearance/appearanceImport`).
-          void requestAppearanceImport('background').then(file => {
-            if (file) {
-              onChange({sprite: file});
-            }
-          });
+          // back to what the map says until the file is in the project
+          // (`appearance/appearanceImport`, `useAfterImport`).
+          importThen(() => requestAppearanceImport('background'), undefined);
         }}
       />
       <Checkbox

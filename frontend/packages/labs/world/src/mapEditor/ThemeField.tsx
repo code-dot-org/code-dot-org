@@ -16,6 +16,7 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import styles from './mapEditor.module.css';
+import {useAfterImport} from './useAfterImport';
 
 export interface ThemeFieldProps {
   /** The theme's module path; empty or absent inherits. */
@@ -32,35 +33,43 @@ export const ThemeField = ({
   options,
   onChange,
   isReadOnly,
-}: ThemeFieldProps) => (
-  <SimpleDropdown
-    name="map-theme"
-    labelText="Theme"
-    size="s"
-    className={styles.inspectorDropdown}
-    disabled={isReadOnly}
-    selectedValue={value ?? ''}
-    items={[
-      // Empty is INHERIT, not "none": a map that says nothing takes the
-      // world's, as a placement that says nothing takes its map's.
-      {value: '', text: '(the world’s)'},
-      ...options.map(([label, path]) => ({value: path, text: label})),
-      // …and a way in, because a project starts with no themes and a menu
-      // whose only row is "the world's" is a dead end that says nothing about
-      // where a theme comes from. The same seam the `use theme` block's
-      // `(import…)` uses, and the one a placement's Theme field uses.
-      {value: IMPORT_STYLE_VALUE, text: '(import…)'},
-    ]}
-    onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-      if (event.target.value === IMPORT_STYLE_VALUE) {
-        // The import writes the file and answers its path, and the map takes
-        // it — so picking a theme and fetching one are one gesture.
-        void requestStyleImport().then(path => path && onChange(path));
-        return;
-      }
-      onChange(event.target.value || undefined);
-    }}
-  />
-);
+}: ThemeFieldProps) => {
+  const importThen = useAfterImport(
+    options.map(([, path]) => path),
+    path => onChange(path),
+  );
+  return (
+    <SimpleDropdown
+      name="map-theme"
+      labelText="Theme"
+      size="s"
+      className={styles.inspectorDropdown}
+      disabled={isReadOnly}
+      selectedValue={value ?? ''}
+      items={[
+        // Empty is INHERIT, not "none": a map that says nothing takes the
+        // world's, as a placement that says nothing takes its map's.
+        {value: '', text: '(the world’s)'},
+        ...options.map(([label, path]) => ({value: path, text: label})),
+        // …and a way in, because a project starts with no themes and a menu
+        // whose only row is "the world's" is a dead end that says nothing
+        // about where a theme comes from. The same seam the `use theme`
+        // block's `(import…)` uses, and the one a placement's Theme field
+        // uses.
+        {value: IMPORT_STYLE_VALUE, text: '(import…)'},
+      ]}
+      onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+        if (event.target.value === IMPORT_STYLE_VALUE) {
+          // The import writes the file and answers its path, and the map
+          // takes it once the file is in the project — so picking a theme
+          // and fetching one are one gesture (`useAfterImport`).
+          importThen(requestStyleImport, undefined);
+          return;
+        }
+        onChange(event.target.value || undefined);
+      }}
+    />
+  );
+};
 
 export default ThemeField;
