@@ -12,12 +12,14 @@ import AttemptCard from './AttemptCard';
 import styles from './multi-choice-question-container.module.scss';
 
 export interface MultiChoiceQuestionContainerProps {
-  question: Pick<QuizQuestionSummary, 'id' | 'questionTitle' | 'choices'>;
+  question: Omit<QuizQuestionSummary, 'page'>;
   // Omit for a quiz with only one question.
   questionLabel?: string;
   selectedChoiceId: string | null;
   onSelectChoice: (choiceId: string) => void;
   // Grades the selected choice in place, for a student retrying a question.
+  // This is used for FE grading, while Quiz backed levels will handle grading on the server.
+  // Therefore quiz backed levels should be used for most evaluation scenarios.
   selectedChoiceStatus?: 'correct' | 'incorrect';
 }
 

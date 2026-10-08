@@ -5,7 +5,10 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 import {stepBaseSchema} from './steps/base';
 import {subsetOf} from './subsetOf';
 
-/** Quiz's question summary less page: a step shows one question at a time. */
+/** A multiple choice question that does not rely on Quiz BE (but looks like a Quiz).
+ * This should be used for diagnostics and surveys and Quiz backed levels (when implemented)
+ * should be used for evaluation.
+ */
 export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
   Omit<QuizQuestionSummary, 'page'> & {correctChoiceId?: string}
 >()(
