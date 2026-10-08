@@ -9,6 +9,7 @@ export const WAVES = [
   'triangle',
   'square',
   'sawtooth',
+  'double',
   'noise',
 ] as const;
 export const PITCHES = ['low', 'middle', 'high'] as const;
@@ -53,7 +54,7 @@ export interface Note {
       second, the way a C64 plays a chord on one voice. */
   arpeggio?: readonly number[];
   /** Oscillators sounding the note, spread a few cents apart; 1 or
-      absent is one. Noise ignores it. */
+      absent is one. Noise ignores it. The "double" wave is two. */
   unison?: number;
 }
 
@@ -67,8 +68,11 @@ const VOLUME: Record<Wave, number> = {
   triangle: 0.16,
   square: 0.07,
   sawtooth: 0.08,
+  double: 0.08,
   noise: 0.3,
 };
+// "double" is this many sawtooths in unison.
+const DOUBLE_VOICES = 2;
 // How narrow the band of noise is; higher rings closer to a pitch.
 const NOISE_Q = 1.5;
 const NOISE_SECONDS = 1;
@@ -115,7 +119,10 @@ export function asSoundEffect(
 export function notesFor(effect: SoundEffect): Note[] {
   const hz = BASE_HZ[effect.pitch];
   const seconds = SECONDS[effect.length];
-  const voice = {type: effect.wave, volume: VOLUME[effect.wave]};
+  const voice: Pick<Note, 'type' | 'volume' | 'unison'> =
+    effect.wave === 'double'
+      ? {type: 'sawtooth', volume: VOLUME.double, unison: DOUBLE_VOICES}
+      : {type: effect.wave, volume: VOLUME[effect.wave]};
   switch (effect.pattern) {
     case 'steady':
       return [{...voice, hz, at: 0, seconds}];
@@ -194,17 +201,17 @@ export const PRESETS = {
     pattern: 'run up',
   }),
   laser: notesFor({
-    wave: 'sawtooth',
+    wave: 'double',
     pitch: 'high',
     length: 'short',
     pattern: 'slide down',
-  }).map(note => ({...note, unison: 2})),
+  }),
   fail: notesFor({
     wave: 'triangle',
     pitch: 'low',
     length: 'long',
     pattern: 'run down',
-  }).map(note => ({...note, unison: 2})),
+  }),
   alarm: notesFor({
     wave: 'square',
     pitch: 'middle',

@@ -48,7 +48,7 @@ describe('notesFor', () => {
             const notes = notesFor({wave, pitch, length, pattern});
             expect(notes.length).toBeGreaterThan(0);
             notes.forEach(note => {
-              expect(note.type).toBe(wave);
+              expect(note.type).toBe(wave === 'double' ? 'sawtooth' : wave);
               expect(note.hz).toBeGreaterThan(0);
               expect(note.seconds).toBeGreaterThan(0);
               expect(note.volume).toBeGreaterThan(0);
@@ -80,6 +80,13 @@ describe('notesFor', () => {
     const notes = notesFor({...jump, pattern: 'wobble'});
     expect(notes).toHaveLength(1);
     expect(notes[0].wobble).toBe(true);
+  });
+
+  it('plays the double wave as two sawtooths in unison', () => {
+    const [note] = notesFor({...jump, wave: 'double'});
+    expect(note.type).toBe('sawtooth');
+    expect(note.unison).toBe(2);
+    expect(notesFor({...jump, wave: 'sawtooth'})[0].unison).toBeUndefined();
   });
 
   it('cycles a chord on one note, major or minor', () => {
