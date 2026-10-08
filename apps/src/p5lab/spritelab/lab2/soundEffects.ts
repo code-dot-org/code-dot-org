@@ -187,10 +187,12 @@ export const PRESETS = {
     length: 'short',
     pattern: 'slide up',
   }),
-  coin: [
-    {...CUE, type: 'square', volume: 0.06, hz: 988, at: 0, seconds: 0.08},
-    {...CUE, type: 'square', volume: 0.06, hz: 1319, at: 0.07, seconds: 0.3},
-  ],
+  coin: notesFor({
+    wave: 'square',
+    pitch: 'high',
+    length: 'short',
+    pattern: 'run up',
+  }),
   laser: notesFor({
     wave: 'sawtooth',
     pitch: 'high',
