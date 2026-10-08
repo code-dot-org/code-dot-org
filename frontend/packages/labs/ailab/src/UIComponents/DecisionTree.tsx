@@ -38,6 +38,7 @@ import {
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
 
+import {leafColorClass} from './leafColors';
 import TreeCanvas from './TreeCanvas';
 
 import styles from './decisionTree.module.scss';
@@ -314,6 +315,15 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                       [styles.pathNode]: pathIds.has(placed.id),
                     })}
                   >
+                    {placed.answerIndex !== undefined && (
+                      <span
+                        aria-hidden="true"
+                        className={classNames(
+                          styles.answerDot,
+                          leafColorClass(placed.answerIndex),
+                        )}
+                      />
+                    )}
                     <span id={textId(placed.id)} className={styles.nodeText}>
                       {placed.node.type === 'question' ? (
                         <>
