@@ -386,10 +386,30 @@ $block-help-tail: 12px;
   visibility: visible;
 }
 
+// Room for the animation beside the text.
+.blockHelpCalloutWide {
+  width: 480px;
+}
+
+.blockHelpColumns {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+// The animation keeps its own aspect and never scrolls with the text.
+.blockHelpAnimation {
+  flex: none;
+  width: 160px;
+  height: auto;
+  align-self: flex-start;
+  border-radius: 4px;
+}
+
 // Everything below the title scrolls as one.
 .blockHelpBody {
+  min-width: 0;
   max-height: 40vh;
-  margin-top: 4px;
   overflow-y: auto;
   // Plain paragraphs, so they take the popover's text color rather than
   // the page's.

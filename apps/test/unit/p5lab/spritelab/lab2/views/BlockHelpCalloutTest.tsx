@@ -28,6 +28,26 @@ describe('BlockHelpCallout', () => {
     expect(dialog.textContent).toContain('0 turns gravity off.');
   });
 
+  it('shows an animation beside the text only when the help has one', () => {
+    const {rerender} = render(
+      <BlockHelpCallout help={help} anchor={anchor} onClose={jest.fn()} />
+    );
+    expect(screen.queryByRole('img')).toBeNull();
+    const animated = {
+      ...help,
+      animation: {src: 'set-gravity.gif', alt: 'A character floats.'},
+    };
+    rerender(
+      <BlockHelpCallout help={animated} anchor={anchor} onClose={jest.fn()} />
+    );
+    const img = screen.getByRole('img', {name: 'A character floats.'});
+    expect(img.getAttribute('src')).toBe('set-gravity.gif');
+    // The animation comes first in the row, so it reads and sits on the left.
+    expect(img.compareDocumentPosition(screen.getByText(help.summary))).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+  });
+
   it('opens to the right of the icon', () => {
     render(
       <BlockHelpCallout help={help} anchor={anchor} onClose={jest.fn()} />

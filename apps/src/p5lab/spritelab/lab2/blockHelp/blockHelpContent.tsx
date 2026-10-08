@@ -1,19 +1,23 @@
 import React from 'react';
 
+import setGravityAnimation from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
+import setZoomAnimation from '@cdo/static/spritelab_lab2/block-help/set-zoom.gif';
+
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
 import {PLATFORM_GRAVITY} from '../platformPhysics';
 
 /**
  * What the help callout beside a toolbox block says: a `summary` sentence,
- * then the `body`, scrolled together if long; an `image` renders above the
- * text. Content lives here rather than in the level so it can carry
- * pictures and code; a level-authored source can replace this table later.
+ * then the `body`, scrolled together if long. An `animation` (a looping
+ * GIF of the block in action) sits to the left of the text. Content lives
+ * here rather than in the level so it can carry pictures and code; a
+ * level-authored source can replace this table later.
  */
 export interface BlockHelp {
   title: string;
   summary: string;
   body?: React.ReactNode;
-  image?: {src: string; alt: string};
+  animation?: {src: string; alt: string};
 }
 
 const para = (...text: React.ReactNode[]) => <p>{text}</p>;
@@ -23,6 +27,10 @@ const bold = (text: string) => <strong key={text}>{text}</strong>;
 export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
+    animation: {
+      src: setZoomAnimation,
+      alt: 'The view closes in on the player and follows it along.',
+    },
     summary:
       'Zooms the camera in on the player in a platformer scene, so the ' +
       'world scrolls as the player moves.',
@@ -45,6 +53,10 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_setPlatformGravity: {
     title: 'Set gravity',
+    animation: {
+      src: setGravityAnimation,
+      alt: 'A character jumps, floats, and drops as gravity changes.',
+    },
     summary:
       'Changes how hard the platformer pulls everything down: the player, ' +
       'and every other character that stands on blocks.',

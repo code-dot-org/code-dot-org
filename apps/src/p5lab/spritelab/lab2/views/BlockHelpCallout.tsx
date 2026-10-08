@@ -69,13 +69,13 @@ const BlockHelpCallout: React.FunctionComponent<BlockHelpCalloutProps> = ({
         aria-label={help.title}
         className={classNames(moduleStyles.blockHelpCallout, {
           [moduleStyles.blockHelpCalloutPlaced]: !!layout,
+          [moduleStyles.blockHelpCalloutWide]: !!help.animation,
         })}
         direction="onRight"
         title={help.title}
         // The popover pins `content` above the children; ours scrolls with
         // the rest, so the summary goes in the body and this stays empty.
         content=""
-        image={help.image}
         onClose={onClose}
         style={
           {
@@ -85,9 +85,18 @@ const BlockHelpCallout: React.FunctionComponent<BlockHelpCalloutProps> = ({
           } as React.CSSProperties
         }
       >
-        <div className={moduleStyles.blockHelpBody}>
-          <p>{help.summary}</p>
-          {help.body}
+        <div className={moduleStyles.blockHelpColumns}>
+          {help.animation && (
+            <img
+              className={moduleStyles.blockHelpAnimation}
+              src={help.animation.src}
+              alt={help.animation.alt}
+            />
+          )}
+          <div className={moduleStyles.blockHelpBody}>
+            <p>{help.summary}</p>
+            {help.body}
+          </div>
         </div>
       </Popover>
     </div>
