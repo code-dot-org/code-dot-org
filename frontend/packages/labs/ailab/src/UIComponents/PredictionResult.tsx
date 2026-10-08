@@ -82,9 +82,8 @@ const PredictionResult = () => {
 
   return (
     <>
-      {/* Always mounted: a live region speaks only changes made after it appears. */}
+      {/* Always mounted, and rekeyed to repeat itself: a live region speaks only what changes after it appears. */}
       <span role="status" className={appStyles.visuallyHidden}>
-        {/* A new key replaces the text, so a screen reader reads it again even when unchanged. */}
         <span key={`${predictionCount}-${replays}`}>{announcement()}</span>
       </span>
       {hasPrediction && (

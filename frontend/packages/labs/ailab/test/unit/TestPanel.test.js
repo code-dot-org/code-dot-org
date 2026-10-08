@@ -54,7 +54,6 @@ function predictSnake() {
   fireEvent.click(predictButton());
 }
 
-// A bird sits two questions deep, so its path has a step between the root and the answer.
 function predictBird() {
   fireEvent.change(screen.getByLabelText('legs'), {target: {value: '2'}});
   fireEvent.click(predictButton());
@@ -68,7 +67,6 @@ function status() {
   return screen.getByRole('status').textContent;
 }
 
-// Counts the changes to the live region since the last count; a screen reader reads each one.
 function watchStatus() {
   const observer = new MutationObserver(() => {});
   observer.observe(screen.getByRole('status'), {
