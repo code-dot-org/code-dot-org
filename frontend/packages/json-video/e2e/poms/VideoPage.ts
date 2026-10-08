@@ -11,6 +11,8 @@ export interface VideoPageOptions {
   video?: string;
   /** Player width in CSS pixels. */
   width?: number;
+  /** The element's own controls, or the demo's custom bar. */
+  controls?: 'builtin' | 'custom';
 }
 
 /** The parts of the element's media interface the tests read. */
@@ -20,6 +22,7 @@ interface MediaState {
   duration: number;
   volume: number;
   muted?: boolean;
+  textTracks: {0: {mode: string}};
   error: {code: number} | null;
 }
 
@@ -53,6 +56,7 @@ export class VideoPage {
     const params = new URLSearchParams();
     if (options.video) params.set('video', options.video);
     if (options.width) params.set('width', String(options.width));
+    if (options.controls) params.set('controls', options.controls);
     await page.goto(`/?${params}`);
     const videoPage = new VideoPage(page);
     await expect
@@ -92,6 +96,13 @@ export class VideoPage {
       const media = el as unknown as MediaState;
       return media.muted === true || media.volume === 0;
     });
+  }
+
+  /** The captions track's mode: disabled, hidden or showing. */
+  captionMode(): Promise<string> {
+    return this.video.evaluate(
+      el => (el as unknown as MediaState).textTracks[0].mode,
+    );
   }
 
   errorCode(): Promise<number | null> {
