@@ -1079,6 +1079,48 @@ describe('a level, with nothing selected', () => {
     expect(editor.add).toHaveBeenCalled();
   });
 
+  it('edits a selected Viewport’s cameras as map data, not code', () => {
+    const map = doc();
+    map.actors[0] = {...map.actors[0], type: 'actors/viewport'};
+    const schemas: Record<string, ActorSchema> = {
+      'actors/viewport': [
+        {
+          trait: 'showsMap',
+          traitName: 'Shows a Map',
+          props: [
+            {
+              ownerId: 'showsMap',
+              propId: 'showsThrough',
+              name: 'shows through',
+              type: 'string',
+              default: '',
+            },
+          ],
+        },
+      ],
+    };
+    const {canvas, written, ...view} = mount(map, {
+      schemas,
+      cameraChoices: [],
+      onEditScript: vi.fn(),
+    });
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    fireEvent.click(view.getByRole('button', {name: 'Cameras'}));
+    fireEvent.click(view.getByRole('button', {name: 'Add camera'}));
+    // Stored on the placement, and nothing written into its code.
+    expect(written().actors[0].cameras).toEqual([
+      {id: expect.any(String), name: 'Camera 2', traits: [], values: []},
+    ]);
+    expect(written().actors[0].blocks).toBeUndefined();
+    expect(view.getByTestId('camera-inspector')).toBeInTheDocument();
+    fireEvent.click(
+      view.getByLabelText('This Viewport starts looking through this camera'),
+    );
+    expect(written().actors[0].properties?.showsMap?.showsThrough).toBe(
+      'Camera 2',
+    );
+  });
+
   it('never offers that on a world’s main map, which has nothing under it', () => {
     // A main map lives inside the `.world` file, so `load map` cannot name it
     // and nothing can ever be loaded over it — the flag could only ever be a

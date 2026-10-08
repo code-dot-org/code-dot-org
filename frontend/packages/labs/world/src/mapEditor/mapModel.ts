@@ -12,6 +12,7 @@
 
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 
+import type {CameraValue, PlacementCamera} from '../blockly/placementCameras';
 import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
 
 /** The grid a placement snaps to, in world pixels. */
@@ -77,6 +78,11 @@ export interface Placement {
    * (specs/ANCHORS_PLAN.md).
    */
   anchor?: string;
+  /**
+   * A Viewport's own cameras, made in the map editor and nowhere else — data
+   * the compiler turns into their declarations (`blockly/placementCameras`).
+   */
+  cameras?: PlacementCamera[];
 }
 
 /** The id of the layer every map has, and an unlayered placement is on. */
@@ -779,3 +785,158 @@ export function withEventHandler(actor: Placement, type: string): Placement {
     },
   };
 }
+
+// ── A Viewport's cameras (`blockly/placementCameras`) ─────────────────────
+
+/** The Viewport property that names the camera it looks through. */
+const SHOWS_THROUGH = {owner: 'showsMap', prop: 'showsThrough'} as const;
+
+/** Which camera a Viewport looks through, by name; empty is its main one. */
+export const showsThroughOf = (actor: Placement): string => {
+  const held = actor.properties?.[SHOWS_THROUGH.owner]?.[SHOWS_THROUGH.prop];
+  return typeof held === 'string' ? held : '';
+};
+
+/** The map with one placement changed by `change`. */
+const withPlacement = (
+  doc: MapDoc,
+  id: string,
+  change: (actor: Placement) => Placement,
+): MapDoc => ({
+  ...doc,
+  actors: doc.actors.map(actor => (actor.id === id ? change(actor) : actor)),
+});
+
+/** The map with one of a placement's cameras changed by `change`. */
+const withCamera = (
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  change: (camera: PlacementCamera) => PlacementCamera,
+): MapDoc =>
+  withPlacement(doc, actorId, actor => ({
+    ...actor,
+    cameras: (actor.cameras ?? []).map(camera =>
+      camera.id === cameraId ? change(camera) : camera,
+    ),
+  }));
+
+/** The map with the Viewport looking through `name`, or its main camera. */
+export const withShowsThrough = (
+  doc: MapDoc,
+  actorId: string,
+  name: string,
+): MapDoc =>
+  withPlacement(doc, actorId, actor =>
+    withProperty(actor, SHOWS_THROUGH.owner, SHOWS_THROUGH.prop, name),
+  );
+
+/**
+ * The map with a camera added to a Viewport, and its id: named after the
+ * cameras it already has, with an id none of them uses.
+ */
+export function addPlacementCamera(
+  doc: MapDoc,
+  actorId: string,
+): {doc: MapDoc; id: string} {
+  const held = doc.actors.find(actor => actor.id === actorId)?.cameras ?? [];
+  let n = held.length + 2;
+  while (held.some(camera => camera.name === `Camera ${n}`)) {
+    n++;
+  }
+  let id = `camera${n}`;
+  for (let k = 2; held.some(camera => camera.id === id); k++) {
+    id = `camera${n}_${k}`;
+  }
+  const camera: PlacementCamera = {
+    id,
+    name: `Camera ${n}`,
+    traits: [],
+    values: [],
+  };
+  return {
+    doc: withPlacement(doc, actorId, actor => ({
+      ...actor,
+      cameras: [...(actor.cameras ?? []), camera],
+    })),
+    id,
+  };
+}
+
+/**
+ * The map without one of a Viewport's cameras — looking through its main
+ * one again if it was looking through this.
+ */
+export function removePlacementCamera(
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+): MapDoc {
+  return withPlacement(doc, actorId, actor => {
+    const gone = actor.cameras?.find(camera => camera.id === cameraId);
+    const cameras = (actor.cameras ?? []).filter(
+      camera => camera.id !== cameraId,
+    );
+    const next: Placement = {...actor, cameras};
+    if (!cameras.length) {
+      delete next.cameras;
+    }
+    return gone && showsThroughOf(actor) === gone.name
+      ? withProperty(next, SHOWS_THROUGH.owner, SHOWS_THROUGH.prop, '')
+      : next;
+  });
+}
+
+/**
+ * The map with a Viewport's camera renamed — and the Viewport still looking
+ * through it, if it was: `shows through` names a camera by its name.
+ */
+export function renamePlacementCamera(
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  name: string,
+): MapDoc {
+  const actor = doc.actors.find(each => each.id === actorId);
+  const was = actor?.cameras?.find(camera => camera.id === cameraId)?.name;
+  const renamed = withCamera(doc, actorId, cameraId, camera => ({
+    ...camera,
+    name,
+  }));
+  return actor && was !== undefined && showsThroughOf(actor) === was
+    ? withShowsThrough(renamed, actorId, name)
+    : renamed;
+}
+
+/** The map with a Viewport's camera electing a trait, or no longer. */
+export const withPlacementCameraTrait = (
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  trait: string,
+  elected: boolean,
+): MapDoc =>
+  withCamera(doc, actorId, cameraId, camera => ({
+    ...camera,
+    traits: elected
+      ? [...camera.traits.filter(each => each !== trait), trait]
+      : camera.traits.filter(each => each !== trait),
+  }));
+
+/**
+ * The map with a Viewport's camera setting one property; an empty actor
+ * value takes it away, which leaves the camera following nobody.
+ */
+export const withPlacementCameraValue = (
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  value: CameraValue,
+): MapDoc =>
+  withCamera(doc, actorId, cameraId, camera => ({
+    ...camera,
+    values: [
+      ...camera.values.filter(each => each.setter !== value.setter),
+      ...(value.type === 'actor' && !value.value ? [] : [value]),
+    ],
+  }));

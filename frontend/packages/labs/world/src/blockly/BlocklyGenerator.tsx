@@ -34,6 +34,7 @@ import {
   parseActorOwnMeta,
   type OwnMeta,
 } from './ownProperties';
+import {withCameraHandler, type PlacementCamera} from './placementCameras';
 import {
   extractRuleBodies,
   parseRuleMeta,
@@ -61,7 +62,13 @@ import {standInBlocks} from './standInBlocks';
 
 /** What a `.map` file holds that the generator reads (specs/MAP_FIRST.md). */
 interface MapSource {
-  actors?: Array<{id?: string; type?: string; blocks?: object}>;
+  actors?: Array<{
+    id?: string;
+    type?: string;
+    blocks?: object;
+    /** A Viewport's own cameras, made in the map editor (`placementCameras`). */
+    cameras?: PlacementCamera[];
+  }>;
   blocks?: object;
 }
 
@@ -73,12 +80,17 @@ type GeneratedWorkspaces = {
   definitions: Record<string, string>;
 };
 
-/** What the file is when its workspaces are taken out of it. */
+/**
+ * What the file is when its workspaces are taken out of it — and, for a
+ * placement, its stored cameras, which are generated as code beside its
+ * workspace and are nothing the running map reads as data.
+ */
 const withoutBlocks = <T extends {blocks?: object}>(
   held: T,
 ): Omit<T, 'blocks'> => {
-  const copy: Partial<T> = {...held};
+  const copy: Partial<T> & {cameras?: unknown} = {...held};
   delete copy.blocks;
+  delete copy.cameras;
   return copy as Omit<T, 'blocks'>;
 };
 
@@ -136,11 +148,15 @@ function generateWorkspaces(
     return generated;
   };
   const mapLevel = generateOne(source.blocks, 'map');
-  const placements = (source.actors ?? []).flatMap(entry =>
-    entry.id && entry.blocks
-      ? [{id: entry.id, blocks: generateOne(entry.blocks, entry.id)}]
-      : [],
-  );
+  // A placement's code, and its stored cameras declared beside it: the
+  // map editor keeps a Viewport's cameras as data, and they become blocks
+  // only here, where no editor sees them (`placementCameras`).
+  const placements = (source.actors ?? []).flatMap(entry => {
+    const state = withCameraHandler(entry.blocks, entry.cameras);
+    return entry.id && state
+      ? [{id: entry.id, blocks: generateOne(state, entry.id)}]
+      : [];
+  });
   (generator as {__mapModule?: string}).__mapModule = undefined;
   (generator as {__ruleModule?: string}).__ruleModule = undefined;
   return {placements, mapLevel, definitions};

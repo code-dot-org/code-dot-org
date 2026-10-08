@@ -868,6 +868,7 @@ export const MapEditor = ({
         world={worldInspector}
         worldCameras={worldCameraList}
         worldCameraEditor={worldCameraEditor}
+        cameraChoices={cameraChoices}
         mapChoices={mapChoices}
         heldMaps={heldMaps}
         backgroundChoices={backgroundChoices}

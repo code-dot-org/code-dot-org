@@ -73,6 +73,8 @@ export interface CompiledProject {
   world: World;
   /** Every module by path, for reaching a rule's traits and properties. */
   modules: Record<string, RuleModule>;
+  /** The generated code of every Blockly file, by module path. */
+  code: Record<string, string>;
 }
 
 /**
@@ -164,5 +166,6 @@ export async function compileProject(
   return {
     world: (built[1].default as WorldBuilder).getWorld(),
     modules,
+    code,
   };
 }

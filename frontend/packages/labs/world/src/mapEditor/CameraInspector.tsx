@@ -47,6 +47,10 @@ export interface CameraInspectorProps {
   onTrait: (trait: string, elected: boolean) => void;
   onValue: (property: CameraProperty, value: string) => void;
   onClose: () => void;
+  /** What is said of the main camera, which takes no traits here. */
+  mainNote?: string;
+  /** Whose view it starts: "The world", "This Viewport". */
+  looker?: string;
   isReadOnly: boolean;
 }
 
@@ -66,6 +70,9 @@ export const CameraInspector = ({
   onTrait,
   onValue,
   onClose,
+  mainNote = 'Every world has this camera. It shows the map from its top left. ' +
+    'To follow something, add a camera and give it a trait.',
+  looker = 'The world',
   isReadOnly,
 }: CameraInspectorProps) => {
   const main = id === MAIN_CAMERA;
@@ -211,7 +218,7 @@ export const CameraInspector = ({
       )}
       <Checkbox
         name="camera-starting"
-        label="The world starts looking through this camera"
+        label={`${looker} starts looking through this camera`}
         checked={starting}
         // Unticking means another camera, and which one is said by ticking
         // that one: the box only ever turns ON.
@@ -224,8 +231,7 @@ export const CameraInspector = ({
           component="span"
           className={styles.inspectorNote}
         >
-          Every world has this camera. It shows the map from its top left. To
-          follow something, add a camera and give it a trait.
+          {mainNote}
         </Typography>
       ) : choices.length === 0 ? (
         <>

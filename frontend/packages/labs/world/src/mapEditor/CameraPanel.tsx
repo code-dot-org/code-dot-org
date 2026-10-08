@@ -39,8 +39,13 @@ export interface CameraPanelProps {
   owner: string;
   /** Open the script they are declared in, where they are written. */
   onOpen?: () => void;
-  /** Present for the world's, which are edited here. */
+  /** Present for the cameras edited here: the world's, a Viewport's. */
   edits?: CameraStripEdits;
+  /**
+   * Cameras declared in code beside the ones edited here — a Viewport's
+   * written in its placement's code — listed, and changed only there.
+   */
+  inCode?: readonly DeclaredCamera[];
 }
 
 /** `Camera Follow#Follows` → `Follows`: the trait's own name, for a chip. */
@@ -52,6 +57,7 @@ export const CameraPanel = ({
   owner,
   onOpen,
   edits,
+  inCode = [],
 }: CameraPanelProps) => {
   const rows = edits
     ? [{id: MAIN_CAMERA, name: 'Main camera', traits: []}, ...cameras]
@@ -100,6 +106,15 @@ export const CameraPanel = ({
               )}
             </li>
           ))}
+          {edits &&
+            inCode.map(camera => (
+              <li key={camera.id}>
+                <span className={styles.layerRow}>
+                  {camera.name}
+                  <span className={styles.recordKind}>in code</span>
+                </span>
+              </li>
+            ))}
         </ul>
       )}
       <div className={styles.layerActions}>
@@ -124,7 +139,7 @@ export const CameraPanel = ({
             />
           </>
         )}
-        {onOpen && !edits && (
+        {onOpen && (!edits || inCode.length > 0) && (
           // "Open code" and not "Code": the placement inspector beside this
           // already has a button called Code, and two buttons with one name
           // is one a screen reader cannot tell apart.

@@ -14,8 +14,9 @@
 // code and stay read-only here.
 
 import {cameraBlockId, cameraValue} from '../blockly/cameras';
+import {cameraValueInputs} from '../blockly/placementCameras';
 
-import {parseVectorText, vectorText} from './worldProperties';
+import {vectorText} from './worldProperties';
 
 /** A serialized block, as much of one as these edits touch. */
 interface Block {
@@ -333,47 +334,6 @@ export function setCameraTrait(
   });
 }
 
-/** The inputs a property's `set` row holds `value` in, or nothing. */
-const valueInputs = (
-  type: string,
-  value: string,
-): Block['inputs'] | undefined => {
-  if (type === 'actor') {
-    return value
-      ? {VALUE: {block: {type: 'world_actor_kind', fields: {ACTOR: value}}}}
-      : undefined;
-  }
-  if (type === 'point' || type === 'vector') {
-    const held = parseVectorText(value);
-    if (!held) {
-      return undefined;
-    }
-    return type === 'point'
-      ? {
-          X: {shadow: {type: 'math_number', fields: {NUM: held.x}}},
-          Y: {shadow: {type: 'math_number', fields: {NUM: held.y}}},
-        }
-      : {VALUE: {shadow: {type: 'world_vector', fields: {VECTOR: held}}}};
-  }
-  if (type === 'boolean') {
-    return {
-      VALUE: {
-        shadow: {
-          type: 'logic_boolean',
-          fields: {BOOL: value === 'true' ? 'TRUE' : 'FALSE'},
-        },
-      },
-    };
-  }
-  if (type === 'number') {
-    const number = Number(value);
-    return value.trim() !== '' && Number.isFinite(number)
-      ? {VALUE: {shadow: {type: 'math_number', fields: {NUM: number}}}}
-      : undefined;
-  }
-  return undefined;
-};
-
 /**
  * The file with a camera setting one property to `value`, in the text
  * `cameraPropertyValue` reads. The row that sets it is rewritten, or added
@@ -391,7 +351,7 @@ export function setCameraProperty(
     if (!camera) {
       return false;
     }
-    const inputs = valueInputs(property.type, value);
+    const inputs = cameraValueInputs(property.type, value);
     const head: Block = {next: {block: camera.inputs?.DO?.block}};
     const found = [...links(head)].find(
       ({row}) => row.type === property.setter,

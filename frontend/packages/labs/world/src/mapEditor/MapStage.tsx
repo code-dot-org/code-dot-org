@@ -44,6 +44,7 @@ import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
 import {STYLED} from '../engine/rules/styled';
+import {VIEWPORT} from '../engine/rules/viewport';
 import fields from '../formFields.module.css';
 import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
@@ -59,6 +60,13 @@ import {LayerPanel} from './LayerPanel';
 import styles from './mapEditor.module.css';
 import {MapInspector} from './MapInspector';
 import {
+  addPlacementCamera,
+  removePlacementCamera,
+  renamePlacementCamera,
+  showsThroughOf,
+  withPlacementCameraTrait,
+  withPlacementCameraValue,
+  withShowsThrough,
   asVec,
   extentOf,
   positionOf,
@@ -306,6 +314,11 @@ export interface MapStageProps {
    */
   worldCameraEditor?: WorldCameraEditor;
   /**
+   * The traits the project's rules offer a camera, for a selected
+   * Viewport's cameras; absent, a Viewport's are listed and not edited.
+   */
+  cameraChoices?: readonly CameraTraitChoice[];
+  /**
    * The project's maps as `[name, path]`, for a Viewport's `map` property
    * (specs/VIEWPORT_PLAN.md) — the one string the inspector offers a list
    * for that the sandbox cannot supply, since which maps a project holds is
@@ -445,6 +458,7 @@ export const MapStage = ({
   eventsFor,
   worldCameras = [],
   worldCameraEditor,
+  cameraChoices,
   withheld,
   appBuilder = false,
   kinds,
@@ -1442,6 +1456,43 @@ export const MapStage = ({
     // quietly. So this one is special-cased into a dropdown of the project's
     // themes, and an enum property type is what would replace it the day a
     // second property wants one (specs/STYLES_PLAN.md).
+    // WHICH CAMERA A VIEWPORT LOOKS THROUGH, by name: a dropdown of its own
+    // cameras rather than a box to type one into, where a name no camera
+    // has quietly fell back to the main one (`ViewportShowsThroughProperty`).
+    if (
+      selectedActor &&
+      prop.ownerId === VIEWPORT.trait &&
+      prop.propId === VIEWPORT.showsThrough
+    ) {
+      const names = [
+        ...(selectedActor.cameras ?? []),
+        ...placementCameras(selectedActor.blocks),
+      ].map(camera => camera.name);
+      const chosen = draft[fieldKey(prop)] ?? '';
+      return (
+        <SimpleDropdown
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          labelText={capitalize(prop.name)}
+          size="s"
+          className={styles.inspectorDropdown}
+          disabled={isReadOnly}
+          selectedValue={chosen}
+          items={[
+            {value: '', text: 'Main camera'},
+            ...[...new Set(names)].map(name => ({value: name, text: name})),
+            // …and a name no camera has any more, shown as itself rather
+            // than as the main camera it now falls back to.
+            ...(chosen && !names.includes(chosen)
+              ? [{value: chosen, text: `${chosen} (missing)`}]
+              : []),
+          ]}
+          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+            selectOption(prop, event.target.value)
+          }
+        />
+      );
+    }
     if (prop.ownerId === STYLED.trait && prop.propId === STYLED.theme) {
       return (
         <SimpleDropdown
@@ -2697,29 +2748,108 @@ export const MapStage = ({
   // …except the world's own, which are EDITED in the strip and need no
   // script to be offered (`worldCameraEdits`).
   const scripts = !appBuilder && onEditScript && !locked('map-scripts');
+  // A SELECTED VIEWPORT'S cameras are edited as the world's are, through the
+  // same strip and inspector — but they are data on the placement, made here
+  // and nowhere else, which the compiler turns into their declarations
+  // (`blockly/placementCameras`). Its `shows through` says which it looks
+  // through, by name.
+  const isViewport = selectedSchema.some(
+    group => group.trait === VIEWPORT.trait,
+  );
+  const viewportCameraEditor: WorldCameraEditor | undefined =
+    selectedActor && isViewport && cameraChoices
+      ? (() => {
+          const actor = selectedActor;
+          const stored = actor.cameras ?? [];
+          const named = (id: string) => stored.find(camera => camera.id === id);
+          return {
+            starting:
+              stored.find(camera => camera.name === showsThroughOf(actor))
+                ?.id ?? MAIN_CAMERA,
+            choices: cameraChoices,
+            traitsOf: id => named(id)?.traits ?? [],
+            valueOf: (id, property) =>
+              named(id)?.values.find(each => each.setter === property.setter)
+                ?.value,
+            add: () => {
+              const made = addPlacementCamera(mapRef.current, actor.id);
+              commit(made.doc);
+              return made.id;
+            },
+            remove: id =>
+              commit(removePlacementCamera(mapRef.current, actor.id, id)),
+            rename: (id, name) =>
+              commit(renamePlacementCamera(mapRef.current, actor.id, id, name)),
+            setStarting: id =>
+              commit(
+                withShowsThrough(
+                  mapRef.current,
+                  actor.id,
+                  id === MAIN_CAMERA ? '' : (named(id)?.name ?? ''),
+                ),
+              ),
+            setTrait: (id, trait, elected) =>
+              commit(
+                withPlacementCameraTrait(
+                  mapRef.current,
+                  actor.id,
+                  id,
+                  trait,
+                  elected,
+                ),
+              ),
+            setValue: (id, property, value) =>
+              commit(
+                withPlacementCameraValue(mapRef.current, actor.id, id, {
+                  setter: property.setter,
+                  type: property.type,
+                  value,
+                }),
+              ),
+          };
+        })()
+      : undefined;
+  /** Whose cameras the strip and inspector edit: a Viewport's, or the world's. */
+  const cameraEditor = selectedActor ? viewportCameraEditor : worldCameraEditor;
+  const editableCameras: readonly DeclaredCamera[] = selectedActor
+    ? (selectedActor.cameras ?? []).map(({id, name, traits}) => ({
+        id,
+        name,
+        traits,
+      }))
+    : (worldCameras ?? []);
   const cameras = appBuilder
     ? undefined
     : selectedActor
-      ? scripts
+      ? viewportCameraEditor
         ? {
-            list: placementCameras(selectedActor.blocks),
+            list: editableCameras,
+            inCode: placementCameras(selectedActor.blocks),
             owner: selectedActor.id,
-            open: () => onEditScript?.(selectedActor.id),
+            open: scripts ? () => onEditScript?.(selectedActor.id) : undefined,
           }
-        : undefined
+        : scripts
+          ? {
+              list: placementCameras(selectedActor.blocks),
+              inCode: [],
+              owner: selectedActor.id,
+              open: () => onEditScript?.(selectedActor.id),
+            }
+          : undefined
       : world && (worldCameraEditor || scripts)
         ? {
-            list: worldCameras ?? [],
+            list: editableCameras,
+            inCode: [],
             owner: 'the world',
             open: scripts ? () => onEditScript?.(undefined) : undefined,
           }
         : undefined;
-  /** The world's camera open in the inspector, while it still exists. */
+  /** The camera open in the inspector, while it still exists. */
   const inspectedCamera =
-    worldCameraEditor && inspectingCamera && !selectedActor
+    cameraEditor && inspectingCamera
       ? inspectingCamera === MAIN_CAMERA
         ? {id: MAIN_CAMERA, name: 'Main camera'}
-        : worldCameras?.find(each => each.id === inspectingCamera)
+        : editableCameras.find(each => each.id === inspectingCamera)
       : undefined;
 
   return (
@@ -2870,25 +3000,25 @@ export const MapStage = ({
             cameras={cameras.list}
             owner={cameras.owner}
             onOpen={cameras.open}
+            inCode={cameras.inCode}
             edits={
-              !selectedActor && worldCameraEditor
+              cameraEditor
                 ? {
                     selected: inspectedCamera?.id ?? null,
-                    starting: worldCameraEditor.starting,
+                    starting: cameraEditor.starting,
                     onSelect: id => {
                       setInspectingCamera(id);
                       setInspectingLayer(false);
-                      setSelectedId(null);
                     },
                     onAdd: () => {
-                      const id = worldCameraEditor.add();
+                      const id = cameraEditor.add();
                       if (id) {
                         setInspectingCamera(id);
                         setInspectingLayer(false);
                       }
                     },
                     onRemove: id => {
-                      worldCameraEditor.remove(id);
+                      cameraEditor.remove(id);
                       setInspectingCamera(null);
                     },
                     isReadOnly,
@@ -2911,31 +3041,38 @@ export const MapStage = ({
           nameOf={kindName}
         />
       </div>
-      {inspectedCamera && worldCameraEditor && (
+      {inspectedCamera && cameraEditor && (
         <CameraInspector
           // Re-keyed on what the code says of it, so a change from outside —
           // and a different camera — is what the fields show.
-          key={`${inspectedCamera.id}:${inspectedCamera.name}:${worldCameraEditor.starting}`}
+          key={`${inspectedCamera.id}:${inspectedCamera.name}:${cameraEditor.starting}`}
           id={inspectedCamera.id}
           name={inspectedCamera.name}
-          starting={worldCameraEditor.starting === inspectedCamera.id}
-          traits={worldCameraEditor.traitsOf(inspectedCamera.id)}
-          choices={worldCameraEditor.choices}
+          starting={cameraEditor.starting === inspectedCamera.id}
+          traits={cameraEditor.traitsOf(inspectedCamera.id)}
+          choices={cameraEditor.choices}
           valueOf={property =>
-            worldCameraEditor.valueOf(inspectedCamera.id, property)
+            cameraEditor.valueOf(inspectedCamera.id, property)
           }
           kinds={Object.entries(kinds ?? {})
             .map(([path, kind]) => [kind.name, path] as const)
             .sort(([a], [b]) => a.localeCompare(b))}
-          onRename={name => worldCameraEditor.rename(inspectedCamera.id, name)}
-          onStarting={() => worldCameraEditor.setStarting(inspectedCamera.id)}
+          onRename={name => cameraEditor.rename(inspectedCamera.id, name)}
+          onStarting={() => cameraEditor.setStarting(inspectedCamera.id)}
           onTrait={(trait, elected) =>
-            worldCameraEditor.setTrait(inspectedCamera.id, trait, elected)
+            cameraEditor.setTrait(inspectedCamera.id, trait, elected)
           }
           onValue={(property, value) =>
-            worldCameraEditor.setValue(inspectedCamera.id, property, value)
+            cameraEditor.setValue(inspectedCamera.id, property, value)
           }
           onClose={() => setInspectingCamera(null)}
+          looker={selectedActor ? 'This Viewport' : 'The world'}
+          mainNote={
+            selectedActor
+              ? 'This Viewport’s own camera. What it follows is set in the ' +
+                'Viewport’s properties; add a camera for another view.'
+              : undefined
+          }
           isReadOnly={isReadOnly}
         />
       )}
@@ -2998,7 +3135,7 @@ export const MapStage = ({
       {/* `fields.narrow` below is what makes the design system's form widths
           fit a panel this size — see `formFields.module.css`, which says what
           the overrides are for and what each one was found by. */}
-      {selectedActor && (
+      {selectedActor && !inspectedCamera && (
         <div className={`${styles.inspector} ${fields.narrow}`}>
           <div className={styles.inspectorHead}>
             <Typography variant="subtitle2" component="span">

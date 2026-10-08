@@ -360,8 +360,18 @@ world` after it, marks the one the world starts looking through, and adds
      and removes them (`mapEditor/worldCameraEdits`, the new surgery: a row
      spliced onto the end of the world's rows, where what a camera follows has
      already been placed, and unlinked with any `look through camera` that
-     named it). A Viewport's cameras stay read-only, declared in its
-     placement's code.
+     named it).
+     **A VIEWPORT'S TOO, AND AS DATA.** With a Viewport selected the strip
+     lists its main camera and its own, and edits them with the same
+     inspector — but they are stored on the placement in the map
+     (`placement.cameras`), never as blocks in its code: a camera is made in
+     one place, the visual one. The compiler declares them, in a `when this
+     actor is created` handler only it ever sees, placed FIRST so a learner's
+     own `when created` runs after its cameras exist
+     (`blockly/placementCameras`). Which one the Viewport looks through is its
+     `shows through` property, now a dropdown of its own cameras rather than a
+     name to type. Cameras a Viewport's code declares itself are listed as
+     "in code" and changed there.
    - **9c. The inspector's traits. BUILT, without the Enhance machinery.**
      Enhance is keyed to actor kinds and a camera is not one, so a camera's
      inspector offers the project's camera traits as checkboxes instead —
