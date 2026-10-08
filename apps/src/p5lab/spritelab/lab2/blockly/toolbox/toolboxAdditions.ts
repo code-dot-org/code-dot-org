@@ -78,6 +78,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     // reacting to the player reaching something.
     name: 'Platform',
     types: [
+      'spritelab2_setPlatformGravity',
+      'spritelab2_setCameraZoom',
       'gamelab_setBackgroundImageAs',
       PLAY_SOUND_BLOCK_TYPE,
       PLAY_MUSIC_BLOCK_TYPE,
@@ -85,8 +87,6 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
       THE_PLAYER_BLOCK_TYPE,
-      'spritelab2_setPlatformGravity',
-      'spritelab2_setCameraZoom',
       RESTART_SCENE_BLOCK_TYPE,
       'spritelab2_makeSpriteAtGrid',
       'gamelab_checkTouching',
