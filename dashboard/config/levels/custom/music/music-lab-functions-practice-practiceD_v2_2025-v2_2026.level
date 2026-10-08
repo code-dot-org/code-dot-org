@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2026-05-06T17:05:01.000Z",
   "level_num": "custom",
@@ -1039,42 +1040,36 @@
     "validations": [
       {
         "key": "music-lab-functions-practice-practiceD_253cff24-420d-44cc-b4f0-4f5a63981347",
-        "message": "exemplar validation",
+        "message": "",
         "next": false,
         "conditions": [
           {
             "name": "played_sounds_in_different_functions",
-            "value": 9
+            "value": 8
           }
         ]
       },
       {
         "key": "music-lab-functions-practice-practiceD_4cd7b321-7aef-4e16-9d45-cf9a5f26cad6",
         "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and checking that **each function plays a sound**",
-        "next": false,
+        "next": true,
         "conditions": [
           {
             "name": "block_count_by_type",
             "value": "procedures_callnoreturn:8"
           }
         ]
-      },
-      {
-        "key": "music-lab-functions-practice-practiceD_904bff7a-7daf-4064-8073-c9716bdf2ff2",
-        "message": "You need to call your functions!",
-        "next": false,
-        "conditions": [
-
-        ]
       }
     ],
     "name_suffix": "_2026",
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
     "ai_tutor_available": "true",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-06T17:05:01.850+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD_v2_2025-v2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD_v2_2025-v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-06T17:05:01.850+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD_v2_2025-v2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD_v2_2025-v2\"},{\"changed_at\":\"2026-10-08 01:32:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-08 01:37:36 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-08 01:43:46 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-08 01:45:27 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

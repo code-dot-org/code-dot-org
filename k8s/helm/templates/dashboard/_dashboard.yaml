@@ -208,6 +208,10 @@ spec:
       restartPolicy: {{ .restartPolicy | default "Never" }}
       {{- end }}
 
+      {{- with .terminationGracePeriodSeconds }}
+      terminationGracePeriodSeconds: {{ . }}
+      {{- end }}
+
       {{- with .Values.scheduling }}
       {{- with .nodeSelector }}
       nodeSelector:

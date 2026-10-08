@@ -7,6 +7,10 @@ import {settle, waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
 
+interface WaitForReadyOptions {
+  dismissOverlays?: boolean;
+}
+
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
 export class LegacyBlocklyLab extends LessonLevelPage {
   /** Instructions tab; its text localizes with the lab locale. */
@@ -138,9 +142,12 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    * params (show_callouts). Same wait strategy as gotoLevel; prefer gotoLevel
    * when labLevelUrl can build the URL.
    */
-  async gotoLevelUrl(url: string): Promise<void> {
+  async gotoLevelUrl(
+    url: string,
+    options?: WaitForReadyOptions,
+  ): Promise<void> {
     await this.page.goto(url, {waitUntil: 'domcontentloaded'});
-    await this.waitForReady();
+    await this.waitForReady(options);
   }
 
   /**
@@ -159,8 +166,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Hook for lab-specific modals that must clear before the instructions overlay; see CraftLab. */
   protected async dismissLabInterstitials(): Promise<void> {}
 
-  /** Wait for the lab to be interactive: run button, header, overlay dismissed, header settled. */
-  async waitForReady(): Promise<void> {
+  /** Wait for the lab to be interactive and settled visually. */
+  async waitForReady({
+    dismissOverlays = true,
+  }: WaitForReadyOptions = {}): Promise<void> {
     // #runButton mounts on window 'load'; a cold or contended boot can exceed 15s.
     const LAB_LOAD_TIMEOUT_MS = 45_000;
     await expect(this.loadingSpinner).toBeHidden({
@@ -172,8 +181,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     await this.header.waitForUserChrome();
     // Both of these stack above the instructions overlay handled below, whose
     // OK-dialog click they would otherwise intercept.
-    await this.introVideoModal.dismissIfShown();
-    await this.dismissLabInterstitials();
+    if (dismissOverlays) {
+      await this.introVideoModal.dismissIfShown();
+      await this.dismissLabInterstitials();
+    }
     // Dismiss the instructions overlay if shown (anonymous sessions). Its
     // backdrop (#overlay) fills the viewport and a plain .click() lands on
     // the default center point, which the instructions dialog itself can
@@ -183,7 +194,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     // InstructionsCsfMiddleCol.jsx). Click the dialog's own OK button
     // instead: same dismissal (closeOverlay), no coordinate guessing.
     const overlay = this.page.locator('#overlay');
-    if (await overlay.isVisible()) {
+    if (dismissOverlays && (await overlay.isVisible())) {
       // Not by name: i18n.dialogOK() localizes it, so 'OK' misses on ar-sa.
       // The <hr> is in the same overlayVisible-gated block as the button.
       const dialogOk = this.instructionsPanel.locator('hr + button');
@@ -201,8 +212,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         }
         await expect(overlay).toBeHidden({timeout: 2_000});
       }).toPass({timeout: LAB_LOAD_TIMEOUT_MS});
-      // InstructionsCSF resizes the pane on a 300ms debounce after OK closes the overlay.
-      await waitUntilStable(this.page.locator('#scroll-container'), 400);
+    }
+    const instructionsScrollContainer = this.page.locator('#scroll-container');
+    if (await instructionsScrollContainer.isVisible()) {
+      await waitUntilStable(instructionsScrollContainer, 400);
     }
     await this.header.waitForFadeIn();
   }

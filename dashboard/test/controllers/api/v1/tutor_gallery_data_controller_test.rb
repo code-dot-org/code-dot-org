@@ -49,6 +49,7 @@ class Api::V1::TutorGalleryDataControllerTest < ActionController::TestCase
     assert_equal(
       {
         'currentUnitId' => @ai_script.id,
+        'is_teacher' => true,
         'units' => [
           {'id' => @ai_script.id, 'name' => @ai_script.localized_title, 'position' => 1, 'link' => @ai_script.link},
         ],
