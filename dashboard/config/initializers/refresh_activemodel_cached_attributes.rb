@@ -28,11 +28,11 @@ module Cdo
         count_and_remember_database_migrations
 
         # Attempt to refresh model as a whole, if it is refreshable.
-        # @see https://github.com/rails/rails/blob/v6.1.7.7/activerecord/lib/active_record/model_schema.rb#L510-L517
+        # see https://github.com/rails/rails/blob/v7.1.6/activerecord/lib/active_record/model_schema.rb#L553-L560
         self.class.try(:reset_column_information)
 
         # Refresh this instance of the model.
-        # @see https://github.com/rails/rails/blob/v6.1.7.7/activemodel/lib/active_model/attributes.rb#L76
+        # @see https://github.com/rails/rails/blob/v7.1.6/activemodel/lib/active_model/attributes.rb#L94
         @attributes = self.class._default_attributes.deep_dup
 
         # Try again now that our attributes cache is accurately mirroring the database.
@@ -55,12 +55,12 @@ module Cdo
     # rather than the length, at a small performance cost.
     private def new_database_migration_since_initialization?
       return false unless defined?(@@latest_count_of_database_migrations)
-      current_migrations_count = ActiveRecord::SchemaMigration.all.count
+      current_migrations_count = ActiveRecord::Base.connection.schema_migration.count
       return current_migrations_count != @@latest_count_of_database_migrations
     end
 
     private def count_and_remember_database_migrations
-      @@latest_count_of_database_migrations = ActiveRecord::SchemaMigration.all.count
+      @@latest_count_of_database_migrations = ActiveRecord::Base.connection.schema_migration.count
     end
   end
 end
