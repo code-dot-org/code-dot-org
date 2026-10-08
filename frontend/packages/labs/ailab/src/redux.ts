@@ -60,7 +60,7 @@ export interface RootState {
   prediction: number | string | undefined;
   predictionTestData: Record<string, string | number>;
   predictionInputs: number[];
-  // Unset shows the whole path; a student stepping through it sets an index into it.
+  // Undefined shows the whole path; a number shows it up to that step.
   predictionStep: number | undefined;
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;

@@ -194,7 +194,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     trace &&
     getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
 
-  // Marks draw as a layer over every edge, so a sibling edge cannot paint over the stub they share.
+  // Marks draw over every edge, so an unmarked sibling cannot cover the stub they share.
   const edges = layout.nodes.flatMap(placed =>
     placed.parent ? [{id: placed.id, d: edgePath(placed.parent, placed)}] : [],
   );
