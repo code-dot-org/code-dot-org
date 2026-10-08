@@ -1,5 +1,4 @@
-// parseCSV and parseJSON resolve asynchronously; each captures the load id at
-// call time and drops its result if a newer load has started since.
+// Manages the current dataset load ID to ensure that any outdated loads are discarded.
 let currentLoadId = 0;
 
 export const getDatasetLoadId = (): number => currentLoadId;
