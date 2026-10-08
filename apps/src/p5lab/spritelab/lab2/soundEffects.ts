@@ -57,6 +57,9 @@ export interface Note {
   /** Oscillators sounding the note, spread a few cents apart; 1 or
       absent is one. Noise ignores it. The "double" wave is two. */
   unison?: number;
+  /** Played at exactly its pitch, without the humanize nudge: a UI cue
+      heard many times in a row must not wander. */
+  exact?: boolean;
 }
 
 // C4, C5, C6.
@@ -155,7 +158,7 @@ export function notesFor(effect: SoundEffect): Note[] {
 }
 
 // Presets: the explore level's cues, then game sounds.
-const CUE = {type: 'triangle', volume: 0.12} as const;
+const CUE = {type: 'triangle', volume: 0.12, exact: true} as const;
 const cue = (
   hz: number,
   at: number,
@@ -403,8 +406,9 @@ function schedule(ctx: AudioContext, notes: Note[]): void {
     return;
   }
   const now = ctx.currentTime;
-  const nudge = 1 + (Math.random() * 2 - 1) * HUMANIZE;
+  const humanize = 1 + (Math.random() * 2 - 1) * HUMANIZE;
   for (const note of notes) {
+    const nudge = note.exact ? 1 : humanize;
     const hz = note.hz * nudge;
     const start = now + note.at;
     const end = start + note.seconds;

@@ -405,6 +405,13 @@ describe('playNotes', () => {
     expect(rampTime(band.frequency)).toBe(10 + note.seconds);
   });
 
+  it('plays a UI cue at exactly its pitch, never nudged', () => {
+    for (let i = 0; i < 5; i++) {
+      playPreset('pick');
+    }
+    expect(noteOscillators().every(o => o.frequency.value === 740)).toBe(true);
+  });
+
   it('plays a preset', () => {
     playPreset('reveal');
     expect(noteOscillators()).toHaveLength(PRESETS.reveal.length);
