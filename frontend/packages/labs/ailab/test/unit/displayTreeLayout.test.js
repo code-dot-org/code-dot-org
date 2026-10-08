@@ -50,6 +50,22 @@ describe('layoutDisplayTree', () => {
     });
   });
 
+  test('a row gap spaces the rows by that much', () => {
+    const rowGap = 10;
+    const layout = layoutDisplayTree(
+      question(question(answer(1), answer(2)), answer(3)),
+      rowGap,
+    );
+    const [root, inner, first] = layout.nodes;
+
+    expect([root.y, inner.y, first.y]).toEqual([
+      0,
+      TREE_NODE_HEIGHT + rowGap,
+      2 * (TREE_NODE_HEIGHT + rowGap),
+    ]);
+    expect(layout.height).toBe(3 * TREE_NODE_HEIGHT + 2 * rowGap);
+  });
+
   test('the bounds of every node are the size of the layout', () => {
     const layout = layoutDisplayTree(
       question(question(answer(1), answer(2)), answer(3)),

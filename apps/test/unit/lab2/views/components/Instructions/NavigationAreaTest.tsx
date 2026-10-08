@@ -254,6 +254,19 @@ describe('NavigationArea', () => {
       expect(btn.dataset.tooltip).toBe('To continue, validate your code');
     });
 
+    it('shows validationTooltip in place of toContinueValidate', () => {
+      store.dispatch(
+        setValidationState({
+          hasConditions: true,
+          satisfied: false,
+          message: null,
+          index: 0,
+        })
+      );
+      renderDefault({validationTooltip: 'Train a model'});
+      expect(getContinueButton().dataset.tooltip).toBe('Train a model');
+    });
+
     it('is enabled when validation is satisfied', () => {
       store.dispatch(
         setValidationState({

@@ -8,6 +8,7 @@ import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxD
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {
   addSelectedFeature,
@@ -22,6 +23,7 @@ import train from '../train';
 
 import FieldLabel from './FieldLabel';
 import PredictionSentence from './PredictionSentence';
+import TrainingResultCard from './TrainingResultCard';
 
 import styles from './trainPanel.module.scss';
 
@@ -33,6 +35,7 @@ const TrainPanel = () => {
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const canTrain = useAppSelector(readyToTrain);
+  const hasTrainingResult = useAppSelector(hasCurrentTrainingResult);
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -125,19 +128,22 @@ const TrainPanel = () => {
             features={selectedFeatures}
             className={styles.sentence}
           />
-          <div className={styles.actionRow}>
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
-              fullWidth
-              disabled={!canTrain}
-              onClick={onTrain}
-            >
-              Train model
-            </Button>
-          </div>
+          {!hasTrainingResult && (
+            <div className={styles.actionRow}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="small"
+                fullWidth
+                disabled={!canTrain}
+                onClick={onTrain}
+              >
+                Train model
+              </Button>
+            </div>
+          )}
         </div>
+        <TrainingResultCard />
       </div>
     </div>
   );

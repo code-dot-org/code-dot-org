@@ -459,11 +459,10 @@ const multiSsoTeacher: UsersScenario = {
         email: 'ada@example.org',
       },
       {id: 1504, credential_type: 'classlink', email: 'ada@example.net'},
-      {id: 1505, credential_type: 'classlink', email: 'ada.v2@example.net'},
     ],
   },
   description:
-    'Educator with Google, Microsoft and two ClassLink logins — every row disconnectable.',
+    'Educator with Google, Microsoft and ClassLink logins — every row disconnectable.',
 };
 
 const ltiIntegrations = {

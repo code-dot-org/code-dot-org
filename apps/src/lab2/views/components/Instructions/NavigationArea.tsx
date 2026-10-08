@@ -34,6 +34,7 @@ interface NavigationAreaProps {
   hasRun: boolean;
   hasEdited: boolean;
   requireRun?: boolean;
+  validationTooltip?: string;
   hideContinueIfDisabled?: boolean;
   className?: string;
   markdownClassName?: string;
@@ -59,6 +60,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   hasRun,
   hasEdited,
   requireRun,
+  validationTooltip,
   handleInstructionsTextClick,
   hideContinueIfDisabled,
   className,
@@ -246,6 +248,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         canContinue = hasEdited;
       }
     }
+    if (action === 'Validate' && validationTooltip) {
+      return [canContinue, validationTooltip];
+    }
     const key = action
       ? (`to${hasNextLevel ? 'Continue' : 'Finish'}${action}` as const)
       : undefined;
@@ -254,6 +259,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     submittable,
     isPredictLevel,
     hasValidationConditions,
+    validationTooltip,
     isAiTutorVersion,
     hasContinued,
     hasNextLevel,
