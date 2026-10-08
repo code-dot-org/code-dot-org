@@ -359,12 +359,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           </Typography>
         ) : isViewingStudent && !attempt?.submittedAt ? (
           <div className={styles.questions}>
-            {attempt &&
+            {/* A student who hasn't started (attempt is null) shows teacher every question unanswered. */}
+            {attempt !== undefined &&
               renderQuestionResults(
                 mcQuestions.map(question => ({
                   quizQuestionId: question.id,
                   selectedChoiceId:
-                    attempt.questionResultsInProgress?.find(
+                    attempt?.questionResultsInProgress?.find(
                       r => r.quizQuestionId === question.id
                     )?.selectedChoiceId ?? null,
                   correct: null,

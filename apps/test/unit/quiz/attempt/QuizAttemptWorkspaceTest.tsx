@@ -1074,6 +1074,24 @@ describe('QuizAttemptWorkspace', () => {
       expect(alert).toHaveAttribute('data-type', 'info');
     });
 
+    it("shows every question, unanswered and read-only, when the student hasn't started", () => {
+      renderWorkspace({
+        hookState: {attempt: null},
+        quizQuestions: [
+          question({id: 1, questionTitle: 'What is the value of x?'}),
+          question({id: 2, questionTitle: 'What is the value of y?', page: 2}),
+        ],
+        viewAsUserId: 99,
+      });
+
+      expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
+      expect(screen.getByText('What is the value of y?')).toBeInTheDocument();
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
+      ).not.toBeInTheDocument();
+    });
+
     it("shows the student's saved answers, ungraded and read-only, while in progress", () => {
       renderWorkspace({
         hookState: {
