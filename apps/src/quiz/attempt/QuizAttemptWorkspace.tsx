@@ -324,6 +324,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   revealAnswerExplanation={
                     isViewingStudent || toBool(revealAnswerExplanation)
                   }
+                  isViewingStudent={isViewingStudent}
                 />
               )
             );
