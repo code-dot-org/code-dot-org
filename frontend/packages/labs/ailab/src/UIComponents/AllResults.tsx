@@ -29,6 +29,7 @@ const ModelTable = ({heading, results}: ModelTableProps) => (
               label={result.label}
               features={result.features}
               size="m"
+              singleLine
             />
           </td>
           <td className={styles.accuracy}>{formatAccuracy(result.accuracy)}</td>

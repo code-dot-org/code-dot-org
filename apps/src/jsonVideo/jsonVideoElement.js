@@ -180,9 +180,13 @@ export class JsonVideo extends HTMLElement {
 
     this.addEventListener('play', () => {
       this.classList.add('playing');
+      this.ui.playBtn.setAttribute('aria-label', 'Pause');
       this.posterImg.classList.add('hidden'); // Hide poster on play
     });
-    this.addEventListener('pause', () => this.classList.remove('playing'));
+    this.addEventListener('pause', () => {
+      this.classList.remove('playing');
+      this.ui.playBtn.setAttribute('aria-label', 'Play');
+    });
     this.addEventListener('timeupdate', () => this._updateUI());
   }
 
@@ -289,16 +293,26 @@ export class JsonVideo extends HTMLElement {
   _processLoadedData(data) {
     this._videoData = data;
     this._calculateDurations();
-    if (data.audio) {
-      this._mainAudio.src = data.audio;
-      this._mainAudio.load();
-    }
+    // Even when the new video has no main track, the old one must not survive.
+    this._resetAudio(this._mainAudio, data.audio);
+    this._resetAudio(this._sceneAudio, null);
+    this._mainAudioPausedByScene = false;
+    this._mainAudioResumeTime = 0;
+    this._currentSceneIndex = -1;
     this.seekTo(0);
     this.ui.totTime.textContent = this._formatTime(this._totalDurationMs);
 
     // Dispatch success events similar to native <video>
     this.dispatchEvent(new Event('loadedmetadata'));
     this.dispatchEvent(new Event('loadeddata'));
+  }
+
+  _resetAudio(el, src) {
+    el.pause();
+    if (src) el.src = src;
+    // src = '' is a real URL (the page's own); only removal clears the track.
+    else el.removeAttribute('src');
+    el.load();
   }
 
   play() {
@@ -452,6 +466,31 @@ export class JsonVideo extends HTMLElement {
         this._mainAudioPausedByScene = false;
       }
     }
+    this._syncSceneAudio();
+  }
+
+  _syncSceneAudio() {
+    const scene = this._processedScenes[this._currentSceneIndex];
+    if (!scene?.audio) {
+      this._sceneAudio.pause();
+      return;
+    }
+
+    if (this._sceneAudio.getAttribute('src') !== scene.audio) {
+      this._sceneAudio.src = scene.audio;
+      this._sceneAudio.load();
+    }
+
+    const sceneTime = (this._currentTimeMs - scene.startTimeMs) / 1000;
+    try {
+      if (Math.abs(this._sceneAudio.currentTime - sceneTime) > 0.2) {
+        this._sceneAudio.currentTime = Math.max(0, sceneTime);
+      }
+    } catch (e) {}
+
+    if (this._isPlaying) {
+      this._sceneAudio.play().catch(() => {});
+    }
   }
 
   _renderCurrentScene() {
@@ -495,25 +534,7 @@ export class JsonVideo extends HTMLElement {
       !(this._showCaptions && scene.speech)
     );
 
-    const sceneTime = (this._currentTimeMs - scene.startTimeMs) / 1000;
-    if (scene.audio) {
-      if (this._sceneAudio.getAttribute('src') !== scene.audio) {
-        this._sceneAudio.src = scene.audio;
-        this._sceneAudio.load();
-      }
-
-      try {
-        if (Math.abs(this._sceneAudio.currentTime - sceneTime) > 0.2) {
-          this._sceneAudio.currentTime = Math.max(0, sceneTime);
-        }
-      } catch (e) {}
-
-      if (this._isPlaying) {
-        this._sceneAudio.play().catch(() => {});
-      }
-    } else {
-      this._sceneAudio.pause();
-    }
+    this._syncSceneAudio();
   }
 }
 customElements.define('json-video', JsonVideo);
