@@ -71,6 +71,17 @@
   background: var(--background-neutral-primary);
 }
 
+// DSCO TextField sizes to its content by default.
+.fullWidthField {
+  width: 100%;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
 .optionsList {
   display: flex;
   flex-direction: column;
