@@ -24,6 +24,25 @@ describe('localStorageProgressStore', () => {
     expect(await store.load(key)).toEqual(progress);
   });
 
+  it('reads back answers saved with the progress', async () => {
+    const withAnswers: Progress = {
+      ...progress,
+      stepContext: {
+        ...progress.stepContext,
+        quiz: {
+          answers: {
+            1: [
+              {answerId: 'a', isCorrect: false},
+              {answerId: 'b', isCorrect: true},
+            ],
+          },
+        },
+      },
+    };
+    await store.save(key, withAnswers);
+    expect(await store.load(key)).toEqual(withAnswers);
+  });
+
   it('has no progress for an unsaved key', async () => {
     expect(await store.load(key)).toBeUndefined();
   });
@@ -62,6 +81,14 @@ describe('localStorageProgressStore', () => {
     window.localStorage.setItem(
       storageKey,
       JSON.stringify({pathwayId: 'sample', progress: {completed: 'intro'}})
+    );
+    expect(await store.load(key)).toBeUndefined();
+    window.localStorage.setItem(
+      storageKey,
+      JSON.stringify({
+        pathwayId: 'sample',
+        progress: {...progress, stepContext: null},
+      })
     );
     expect(await store.load(key)).toBeUndefined();
   });
