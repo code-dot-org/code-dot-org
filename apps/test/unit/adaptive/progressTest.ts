@@ -94,7 +94,7 @@ describe('useProgress', () => {
   };
 
   it('hydrates from the store before reporting statuses', async () => {
-    const store = fakeStore({completed: ['intro'], started: []});
+    const store = fakeStore(progressOf(['intro'], []));
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
     );
@@ -122,10 +122,24 @@ describe('useProgress', () => {
     act(() => result.current.markStarted('intro'));
     act(() => result.current.markComplete('intro'));
     expect(store.saved.slice(savesAfterLoad)).toEqual([
-      {completed: [], started: ['intro']},
-      {completed: ['intro'], started: ['intro']},
+      progressOf([], ['intro']),
+      progressOf(['intro'], ['intro']),
     ]);
     act(() => result.current.reset());
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
+  });
+
+  it('merges step context by step id and saves it', async () => {
+    const store = fakeStore(undefined);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useProgress(pathway, key, store)
+    );
+    await waitForNextUpdate();
+    const generated = {instructions: 'Hi', inputsHash: 'ab'};
+    act(() => result.current.updateStepContext('s1', {generated}));
+    expect(result.current.progress?.stepContext).toEqual({s1: {generated}});
+    expect(store.saved[store.saved.length - 1].stepContext).toEqual({
+      s1: {generated},
+    });
   });
 });

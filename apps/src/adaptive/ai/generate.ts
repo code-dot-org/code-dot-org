@@ -16,7 +16,7 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 export const ADAPTIVE_AI_ENABLED_FLAG = 'adaptive-ai-enabled';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
-const TIMEOUT_MS = 20_000;
+const TIMEOUT_MS = 30_000;
 
 export const isAdaptiveAiEnabled = (): boolean =>
   !!DCDO.get(ADAPTIVE_AI_ENABLED_FLAG, false);
