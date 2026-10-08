@@ -54,6 +54,19 @@ interface AiDiffFloatingActionButtonProps {
    * the rubrics-drawer experiment's Rubrics screen.
    */
   openToNav?: string;
+  /**
+   * Mounts the drawer (and all of its supporting data-fetching/websocket
+   * effects) without rendering the round AI-bot FAB icon itself. Used when
+   * some other UI element (e.g. TeacherPanelHandle's arrow tab) is meant to
+   * be the only visible entry point to the drawer.
+   */
+  hideButton?: boolean;
+  /**
+   * Lays the drawer out in the surrounding flow rather than over the page.
+   * Set by Lab2Wrapper, which hosts this component inside the lab's own
+   * component tree so the lab's layout accounts for the drawer directly.
+   */
+  inline?: boolean;
 }
 
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
@@ -74,6 +87,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
    */
   canDefaultOpen = true,
   openToNav,
+  hideButton = false,
+  inline = false,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -311,11 +326,33 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     updateUnreadNotificationCount();
   };
 
+  // Unlike handleClick, always closes rather than toggling/re-opening to
+  // openToNav — used by the drawer's own close (X) button, which must be
+  // able to close the drawer even when this FAB is configured with
+  // openToNav (where handleClick would otherwise just re-open it).
+  const closeDrawer = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_CLOSED, {
+      aiDiffChatContext: context,
+      scriptName,
+    });
+    trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    dispatch(setChatIsOpen(false));
+    trySetSessionStorage(SESSION_STORAGE_KEY, false.toString());
+    updateUnreadNotificationCount();
+  };
+
   const brand = document.documentElement.dataset.brand;
 
   return (
-    <div id="fab-contained">
-      {!chatIsOpen && (
+    <div
+      id="fab-contained"
+      // Hosted inside a dark Lab2 lab, the button would otherwise pick up that
+      // lab's theme; the drawer resets this for itself too. Light is the
+      // default theme, so this changes nothing on pages without one.
+      data-theme={inline ? 'Light' : undefined}
+      className={inline ? style.fabContainedInline : undefined}
+    >
+      {!hideButton && !chatIsOpen && (
         <button
           ref={buttonRef}
           id="ui-floatingActionButton"
@@ -390,12 +427,13 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       <React.Suspense fallback={<div />}>
         <LazyAiDiffDrawer
           context={context}
-          closeTutor={handleClick}
+          closeTutor={closeDrawer}
           curriculumCourses={curriculumCourses || ([] as string[])}
           scriptName={scriptName}
           unreadNotificationCount={
             unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
           }
+          inline={inline}
         />
       </React.Suspense>
     </div>

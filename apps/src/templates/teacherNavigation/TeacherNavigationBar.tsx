@@ -35,6 +35,14 @@ import styles from './teacher-navigation.module.scss';
 const sectionDropdownText = (section: Section) =>
   section.demoType ? `${section.name} (demo)` : section.name;
 
+// The three keys the "Course" sidebar option resolves to, depending on
+// whether a course, a unit, or a unit nested in a course is assigned.
+const COURSE_OVERVIEW_PATH_KEYS = [
+  TEACHER_NAVIGATION_PATH_NAMES.courseOverview,
+  TEACHER_NAVIGATION_PATH_NAMES.unitOverview,
+  TEACHER_NAVIGATION_PATH_NAMES.nestedUnitOverview,
+];
+
 const TeacherNavigationBar: React.FC<{
   showAiChatSettings: boolean;
 }> = ({showAiChatSettings}) => {
@@ -50,10 +58,6 @@ const TeacherNavigationBar: React.FC<{
 
   const isLoadingSectionData = useAppSelector(
     state => state.teacherSections.isLoadingSectionData
-  );
-
-  const aiDifferentiationEnabled = useAppSelector(
-    state => state.currentUser.aiDifferentiationEnabled
   );
 
   const teacherAiChatAccessLevel = useAppSelector(
@@ -220,16 +224,23 @@ const TeacherNavigationBar: React.FC<{
 
   const shouldShowErrorIcon = React.useCallback(
     (key: string) => {
-      return (
-        key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
-        !!selectedSection &&
-        shouldShowAiChatEssentialAlert({
+      if (!selectedSection) {
+        return false;
+      }
+      // Error icon pairs with RequiresAiChatToolsAlert on the AI chat settings page
+      if (key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings) {
+        return shouldShowAiChatEssentialAlert({
           assignedAiChatToolsDependency:
             selectedSection.assignedAiChatToolsDependency,
           sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
           teacherAiChatAccessLevel,
-        })
-      );
+        });
+      }
+      // Error icon pairs with RequiresInaccessibleAiModelsAlert on the course page
+      if (COURSE_OVERVIEW_PATH_KEYS.includes(key)) {
+        return !!selectedSection.assignedRequiredInaccessibleAiModels;
+      }
+      return false;
     },
     [selectedSection, teacherAiChatAccessLevel]
   );
@@ -322,13 +333,12 @@ const TeacherNavigationBar: React.FC<{
         />
         {navbarComponents.map(component => component)}
       </div>
-      {aiDifferentiationEnabled &&
-        experiments.isEnabled('ai-differentiation') && (
-          <AiDiffFloatingActionButton
-            context={aiContext()}
-            scriptName={selectedSection?.courseVersionName}
-          />
-        )}
+      {experiments.isEnabled('ai-differentiation') && (
+        <AiDiffFloatingActionButton
+          context={aiContext()}
+          scriptName={selectedSection?.courseVersionName}
+        />
+      )}
     </nav>
   );
 };

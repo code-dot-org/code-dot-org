@@ -5,7 +5,8 @@ class QuizAttemptsControllerTest < ActionController::TestCase
 
   setup do
     @student = create(:student)
-    @quiz = create(:quiz)
+    # show_correctness: true - these tests are about grading, not that gate.
+    @quiz = create(:quiz, show_correctness: true)
     @question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: @quiz, quiz_question: @question)
     @attempt = create(:quiz_attempt, user: @student, level: @quiz)
@@ -32,6 +33,23 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal @attempt.id, JSON.parse(response.body)['id']
   end
 
+  test "index returns question results in progress without correctness data while in progress" do
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'}
+    )
+    sign_in @student
+
+    get :index, params: {levelId: @quiz.id, unitId: @attempt.unit_id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['questionResults']
+    assert_equal [{'quizQuestionId' => @question.id, 'selectedChoiceId' => 'b'}], body['questionResultsInProgress']
+  end
+
   test "index is forbidden when viewing another user's attempt without a teacher relationship" do
     other_student = create(:student)
     sign_in other_student
@@ -52,12 +70,89 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal @attempt.id, JSON.parse(response.body)['id']
   end
 
-  test "update scores only auto-graded responses for questions on the quiz" do
+  test "index omits score and maxScore for a submitted attempt when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    sign_in @student
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['score']
+    assert_nil body['maxScore']
+  end
+
+  test "index still shows a verified teacher the score, correctness, and explanation even when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+    teacher = create(:authorized_teacher)
+    create(:follower, student_user: @student, user: teacher)
+    sign_in teacher
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id, userId: @student.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    result = body['questionResults'].first
+    assert result['correct']
+    assert_equal 'because math', result['explanation']
+    assert_equal 'b', result['correctChoiceId']
+  end
+
+  test "index shows an unverified teacher correctness but not the correctanswer nor explanation, even for their own student" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+    # Plain :teacher is self-declared at signup, with no verification.
+    teacher = create(:teacher)
+    create(:follower, student_user: @student, user: teacher)
+    sign_in teacher
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id, userId: @student.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    result = body['questionResults'].first
+    assert result['correct']
+    assert_nil result['explanation']
+    assert_nil result['correctChoiceId']
+  end
+
+  test "update re-grades stored responses when none are submitted, and only scores questions on the quiz" do
+    # response_data ('b') is correct, but score starts stale at 0 - only
+    # re-grading (not just backfilling missing responses) fixes it to 1.
     create(
       :quiz_question_response,
       quiz_attempt: @attempt,
       quiz_question: @question,
-      score: 1,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 0,
       max_score: 1,
       grading_status: 'auto_graded'
     )
@@ -81,6 +176,78 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 1, body['maxScore']
     assert_equal 1, @attempt.reload.score
     assert_equal 1, @attempt.max_score
+  end
+
+  test "update grades from the submitted responses, overriding whatever was already stored" do
+    # Autosave stored an old, wrong pick - the client's submitted answer is
+    # what the student actually sees on screen, so that's what should grade.
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'a'},
+      score: 0,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, params: {id: @attempt.id, responses: {@question.id => {selectedChoiceId: 'b'}}}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: @question.id)
+    assert_equal 'b', response.response_data['selectedChoiceId']
+  end
+
+  test "update falls back to stored data for a question missing from the submitted responses" do
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    # responses is present but doesn't mention @question - shouldn't erase it.
+    put :update, params: {id: @attempt.id, responses: {}}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+  end
+
+  test "update omits score and maxScore from the response when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, params: {id: attempt.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['score']
+    assert_nil body['maxScore']
+    # Grading still happens for real - only the response withholds it.
+    assert_equal 1, attempt.reload.score
+    assert_equal 1, attempt.max_score
   end
 
   test "create redirects to sign in when not signed in" do

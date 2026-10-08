@@ -3,10 +3,8 @@ import {AnyAction} from 'redux';
 
 import {dataURIToSourceSize, toImage} from '@cdo/apps/imageUtils';
 import {
-  addAnimation,
   deleteAnimation,
   isNameUnique,
-  setAnimationName,
   SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
@@ -18,18 +16,14 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
-import {bytesToDataURI} from '../ai/images/encoding';
+import {bytesToDataURI, dataURIToBytes} from '../ai/images/encoding';
 import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
-import {
-  ImageGenerationMetadata,
-  ImageStyle,
-  ImageType,
-} from '../ai/images/types';
+import {ImageStyle, ImageSubject, ImageType} from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
 import {
   categoriesForType,
@@ -47,6 +41,12 @@ import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
 import {
+  AnimationPatch,
+  createNamedAnimation,
+  framesPatch,
+  uploadOrEmbed,
+} from './imageSave';
+import {
   alternativeFromAnimation,
   framesFromAnimation,
   useImageSession,
@@ -55,26 +55,6 @@ import {
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 type Dispatch = ReturnType<typeof useAppDispatch>;
-
-// The animation fields the dialog's persist paths write. An explicit
-// `undefined` clears the field (the spread keeps the key).
-interface AnimationPatch {
-  sourceUrl?: string;
-  dataURI?: string;
-  frameSize?: {x: number; y: number};
-  sourceSize?: {x: number; y: number};
-  frameCount?: number;
-  frameDelay?: number;
-  looping?: boolean;
-  poses?: AnimationPoses;
-  categories?: string[];
-  pixelGridSize?: number;
-  /** Set wherever an animation's pixels are replaced — a stale true would
-   * skip a needed trim. */
-  trimmed?: boolean;
-  generation?: ImageGenerationMetadata;
-  recentColors?: PixelEditorSaveMeta['recentColors'];
-}
 
 /** Where a strip's standing frame sits — the base picture the set was drawn
     from (the last frame of the stand range; see CHARACTER_STRIP_POSES). */
@@ -147,56 +127,6 @@ async function alternativeThumb(
   }
 }
 
-// A plain single-frame picture's playback fields; also what a brand-new
-// animation starts as.
-const SINGLE_FRAME_PROPS = {frameCount: 1, frameDelay: 2, looping: true};
-
-/**
- * The patch a result's frame grid dictates: a character strip's layout, or a
- * plain picture's single frame — which must overwrite any strip the image
- * used to be (explicit undefined clears poses).
- */
-function framesPatch(frames: GeneratedImageResult['frames']): AnimationPatch {
-  return frames
-    ? {
-        frameSize: frames.frameSize,
-        sourceSize: {
-          x: frames.frameSize.x * frames.frameCount,
-          y: frames.frameSize.y,
-        },
-        frameCount: frames.frameCount,
-        frameDelay: frames.frameDelay,
-        looping: frames.looping,
-        poses: frames.poses,
-      }
-    : {...SINGLE_FRAME_PROPS, poses: undefined};
-}
-
-/**
- * Create an animation under a name callers have already validated as free,
- * and return its key. The classic addAnimation thunk always renames to
- * name_N; the plain name is set back afterwards.
- */
-function createNamedAnimation(
-  dispatch: Dispatch,
-  name: string,
-  props: AnimationPatch
-): string {
-  const key = createUuid();
-  dispatch(
-    // addAnimation is an untyped JS thunk; cast for dispatch.
-    addAnimation(key, {
-      name,
-      ...SINGLE_FRAME_PROPS,
-      ...props,
-    }) as unknown as AnyAction
-  );
-  if (isNameUnique(name, getStore().getState().animationList.propsByKey)) {
-    dispatch(setAnimationName(key, name) as unknown as AnyAction);
-  }
-  return key;
-}
-
 /**
  * Point an existing animation at new pixels and refresh its thumbnails.
  * Uses the raw list-replace action because the classic edit action clears
@@ -267,6 +197,8 @@ interface GenerateImagePaneProps {
   onDeleteImage: (name: string) => void;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** Level-imposed subject for new sprites. */
+  lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
   /** Show the full internal dialog and gallery names; the default is the
@@ -322,6 +254,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onRenameImage,
   onDeleteImage,
   lockedImageType,
+  lockedImageSubject,
   imageRole,
   advanced,
   adlibSet,
@@ -626,18 +559,13 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         return;
       }
       const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
-      let sourceUrl = dataURI;
-      if (uploadImage) {
-        try {
-          sourceUrl = await uploadImage(
-            result.filename,
-            result.uint8Array,
-            result.mediaType
-          );
-        } catch {
-          // Keep the embedded data URI.
-        }
-      }
+      const sourceUrl = await uploadOrEmbed(
+        uploadImage,
+        result.filename,
+        result.uint8Array,
+        result.mediaType,
+        dataURI
+      );
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
       if (persistIsStale(epoch, sourceUrl)) {
@@ -744,26 +672,17 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
   // asset (new filename, so nothing caches the old pixels).
   const uploadEdited = useCallback(
-    async (name: string, dataURI: string): Promise<string> => {
-      if (!uploadImage) {
-        // With nowhere to upload, the dataURI itself is stored as the
-        // source, which persists in project sources.
-        return dataURI;
-      }
-      try {
-        const base64 = dataURI.split(',')[1];
-        const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
-        const safeName = (name || 'image')
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '_');
-        return await uploadImage(
-          `${safeName}_${Date.now()}.png`,
-          bytes,
-          'image/png'
-        );
-      } catch {
-        return dataURI;
-      }
+    (name: string, dataURI: string): Promise<string> => {
+      const safeName = (name || 'image')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '_');
+      return uploadOrEmbed(
+        uploadImage,
+        `${safeName}_${Date.now()}.png`,
+        dataURIToBytes(dataURI),
+        'image/png',
+        dataURI
+      );
     },
     [uploadImage]
   );
@@ -968,6 +887,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
+          lockedImageSubject={lockedImageSubject}
           // No seed means the session started from nothing; any image
           // differs from that.
           imageChanged={

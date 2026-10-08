@@ -1,5 +1,6 @@
 import {CookieBannerComponent} from '../components/cookie-banner';
 import {expect, test} from '../fixtures';
+import {ArtistLab} from '../pages/artist-lab';
 import {analyze, WCAG_AA_TAGS} from '../shared/axe';
 import {labLevelUrl} from '../shared/routes';
 import {waitForVisualStability} from '../shared/stability';
@@ -36,21 +37,16 @@ test.describe('Cookie banner', () => {
     page,
   }) => {
     const cookieBanner = new CookieBannerComponent(page);
+    const artist = new ArtistLab(page);
 
-    // Deliberately not LegacyBlocklyLab.gotoLevelUrl/waitForReady: those
-    // auto-dismiss the level's own instructions overlay, which the legacy
-    // Cucumber sequence for this scenario never does. The banner's script tag
-    // has no async/defer attribute, so it blocks parsing and
-    // 'domcontentloaded' alone already guarantees it ran; the assertion below
-    // is the real (semantic) readiness signal regardless.
-    await page.goto(url, {waitUntil: 'domcontentloaded'});
+    await artist.gotoLevelUrl(url, {dismissOverlays: false});
     await expect(cookieBanner.acceptButton).toBeVisible();
 
     await cookieBanner.accept();
     await expect(cookieBanner.acceptButton).not.toBeVisible();
 
     await page.reload({waitUntil: 'domcontentloaded'});
-    await page.goto(url, {waitUntil: 'domcontentloaded'});
+    await artist.gotoLevelUrl(url, {dismissOverlays: false});
     await expect(cookieBanner.acceptButton).not.toBeVisible();
   });
 
@@ -59,7 +55,7 @@ test.describe('Cookie banner', () => {
     {tag: '@visual'},
     async ({page, visualCheck}) => {
       const cookieBanner = new CookieBannerComponent(page);
-      await page.goto(url, {waitUntil: 'domcontentloaded'});
+      await new ArtistLab(page).gotoLevelUrl(url, {dismissOverlays: false});
       await expect(cookieBanner.acceptButton).toBeVisible();
 
       // The level's intro video (apps/src/code-studio/videos.js
@@ -83,7 +79,7 @@ test.describe('Cookie banner', () => {
    */
   test('The cookie banner passes a WCAG AA scan', async ({page}) => {
     const cookieBanner = new CookieBannerComponent(page);
-    await page.goto(url, {waitUntil: 'domcontentloaded'});
+    await new ArtistLab(page).gotoLevelUrl(url, {dismissOverlays: false});
     await expect(cookieBanner.acceptButton).toBeVisible();
 
     expect(

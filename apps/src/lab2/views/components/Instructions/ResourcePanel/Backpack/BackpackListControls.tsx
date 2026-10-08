@@ -3,10 +3,10 @@ import {IconDropdownOption} from '@code-dot-org/component-library/dropdown/iconD
 import React, {useMemo} from 'react';
 
 import {
-  ALL_FILES_CATEGORY_ID,
+  ALL_FILES_ID,
   BackpackSortOrder,
-  FileCategoryId,
-  getPopulatedCategories,
+  FileExtension,
+  PopulatedFileTypes,
 } from './backpackFileFilters';
 
 import moduleStyles from './backpack-list-controls.module.scss';
@@ -42,40 +42,40 @@ function closeOpenDropdownMenu(dropdownName: string) {
 
 interface BackpackListControlsProps {
   fileNames: string[];
-  selectedCategoryId: FileCategoryId | typeof ALL_FILES_CATEGORY_ID;
-  onCategoryChange: (
-    categoryId: FileCategoryId | typeof ALL_FILES_CATEGORY_ID
-  ) => void;
+  selectedExtension: FileExtension | typeof ALL_FILES_ID;
+  onExtensionChange: (categoryId: FileExtension | typeof ALL_FILES_ID) => void;
   sortOrder: BackpackSortOrder;
   onSortOrderChange: (sortOrder: BackpackSortOrder) => void;
+  populatedFileTypeConfigs: PopulatedFileTypes;
 }
 
 /** File type filter and sort order pickers for the unified backpack file list. */
 const BackpackListControls: React.FC<BackpackListControlsProps> = ({
   fileNames,
-  selectedCategoryId,
-  onCategoryChange,
+  selectedExtension,
+  onExtensionChange,
   sortOrder,
   onSortOrderChange,
+  populatedFileTypeConfigs,
 }) => {
   const categoryOptions: IconDropdownOption[] = useMemo(
     () => [
       {
-        value: ALL_FILES_CATEGORY_ID,
+        value: ALL_FILES_ID,
         label: `All (${fileNames.length})`,
         icon: {iconName: 'backpack', iconStyle: 'solid'},
       },
-      ...getPopulatedCategories(fileNames).map(({id, label, icon, count}) => ({
-        value: id,
-        label: `${label} (${count})`,
-        icon,
+      ...populatedFileTypeConfigs.map(({config, count}) => ({
+        value: config.id,
+        label: `${config.label} (${count})`,
+        icon: config.icon,
       })),
     ],
-    [fileNames]
+    [fileNames.length, populatedFileTypeConfigs]
   );
 
   const selectedCategoryOption =
-    categoryOptions.find(option => option.value === selectedCategoryId) ||
+    categoryOptions.find(option => option.value === selectedExtension) ||
     categoryOptions[0];
   const selectedSortOption =
     SORT_OPTIONS.find(option => option.value === sortOrder) || SORT_OPTIONS[0];
@@ -92,8 +92,8 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         color="gray"
         selectedOption={selectedCategoryOption}
         onChange={option => {
-          onCategoryChange(
-            option.value as FileCategoryId | typeof ALL_FILES_CATEGORY_ID
+          onExtensionChange(
+            option.value as FileExtension | typeof ALL_FILES_ID
           );
           closeOpenDropdownMenu(FILE_TYPE_FILTER_NAME);
         }}

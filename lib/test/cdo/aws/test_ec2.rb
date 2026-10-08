@@ -14,8 +14,8 @@ describe AWS::EC2 do
   describe '.instance_id' do
     it 'returns current AWS EC2 instance id using IMDSv2' do
       # Setup mock response objects
-      mock_token_resp = mock {stubs(code: '200', body: 'test_token')}
-      mock_id_resp = mock {stubs(code: '200', body: 'i-0123456789f987654')}
+      mock_token_resp = mock(code: '200', body: 'test_token')
+      mock_id_resp = mock(code: '200', body: 'i-0123456789f987654')
 
       # Stub token request (PUT)
       # We use a block with .with to safely check the URI's path as a string
@@ -44,8 +44,8 @@ describe AWS::EC2 do
 
   describe '.region' do
     it 'returns current AWS EC2 region' do
-      mock_token_resp = mock {stubs(code: '200', body: 'test_token')}
-      mock_region_resp = mock {stubs(code: '200', body: 'us-west-2')}
+      mock_token_resp = mock(code: '200', body: 'test_token')
+      mock_region_resp = mock(code: '200', body: 'us-west-2')
 
       described_class.stubs(:http_request).
         with {|method, uri, _| method == Net::HTTP::Put && uri.path.include?('token')}.
@@ -61,8 +61,8 @@ describe AWS::EC2 do
 
   describe '.local_ipv4' do
     it 'returns the private IPv4 address of the current EC2 instance' do
-      mock_token_resp = mock {stubs(code: '200', body: 'test_token')}
-      mock_ip_resp = mock {stubs(code: '200', body: '10.0.1.23')}
+      mock_token_resp = mock(code: '200', body: 'test_token')
+      mock_ip_resp = mock(code: '200', body: '10.0.1.23')
 
       described_class.stubs(:http_request).
         with {|method, uri, _| method == Net::HTTP::Put && uri.path.include?('token')}.
@@ -136,7 +136,7 @@ describe AWS::EC2 do
   end
 
   describe '.account_id' do
-    let(:mock_token_resp) {mock {stubs(code: '200', body: 'test_token')}}
+    let(:mock_token_resp) {mock(code: '200', body: 'test_token')}
 
     before do
       # Common stub for the token request needed by all metadata calls
@@ -152,7 +152,7 @@ describe AWS::EC2 do
         'AccountId' => '123456789012'
       }.to_json
 
-      mock_info_resp = mock {stubs(code: '200', body: json_body)}
+      mock_info_resp = mock(code: '200', body: json_body)
 
       described_class.stubs(:http_request).
         with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('identity-credentials/ec2/info')}.
@@ -162,7 +162,7 @@ describe AWS::EC2 do
     end
 
     it 'returns nil if the metadata response is invalid JSON' do
-      mock_bad_resp = mock {stubs(code: '200', body: 'not-json-content')}
+      mock_bad_resp = mock(code: '200', body: 'not-json-content')
 
       described_class.stubs(:http_request).
         with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('identity-credentials')}.
@@ -172,7 +172,7 @@ describe AWS::EC2 do
     end
 
     it 'returns nil if the metadata service returns a 404' do
-      mock_404_resp = mock {stubs(code: '404', body: 'Not Found')}
+      mock_404_resp = mock(code: '404')
 
       described_class.stubs(:http_request).
         with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('identity-credentials')}.

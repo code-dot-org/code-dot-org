@@ -4,8 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "content_area": "skills_focused_self_paced_pl",
-      "curriculum_umbrella": "Self-paced PL - AI for teachers",
+      "content_area": "self_paced_pl_k_5",
+      "curriculum_umbrella": "Self-paced PL - CSF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
@@ -43,12 +43,13 @@
         "uk-UA"
       ],
       "topic_tags": [
-        "ai"
+        "ai",
+        "data_science"
       ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 23:48:38 UTC",
+    "serialized_at": "2026-10-01 19:55:30 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

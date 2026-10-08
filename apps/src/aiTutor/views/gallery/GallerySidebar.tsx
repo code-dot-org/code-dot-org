@@ -1,8 +1,11 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {
+  GallerySection,
+  GallerySort,
+  GalleryUnit,
+} from '@code-dot-org/lesson-deep-dive';
 import classNames from 'classnames';
 import React, {FC} from 'react';
-
-import {GallerySection, GallerySort, GalleryUnit} from './types';
 
 import styles from './challenge-gallery.module.scss';
 

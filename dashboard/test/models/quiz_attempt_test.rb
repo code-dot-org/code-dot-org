@@ -118,8 +118,33 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:explanation]
     assert_nil result[:correct_choice_id]
 
-    quiz.update!(show_correctness: true, reveal_answer_explanation: true)
+    quiz.update!(show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
     result = attempt.reload.question_results.first
+    assert result[:correct]
+    assert_equal 'because math', result[:explanation]
+    assert_equal 'b', result[:correct_choice_id]
+  end
+
+  test "question_results overrides can reveal correctness/explanation regardless of the quiz's own settings" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+
+    result = attempt.question_results(
+      show_correctness: true,
+      reveal_answer_explanation: true
+    ).first
+
     assert result[:correct]
     assert_equal 'because math', result[:explanation]
     assert_equal 'b', result[:correct_choice_id]
@@ -144,8 +169,59 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:correct]
   end
 
+  test "question_results_in_progress is nil once the attempt is submitted" do
+    attempt = create(:quiz_attempt, submitted_at: Time.now)
+    assert_nil attempt.question_results_in_progress
+  end
+
+  test "question_results_in_progress returns the selected choice id per answered question, with no correctness data" do
+    quiz = create(:quiz)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'}
+    )
+
+    result = attempt.question_results_in_progress.first
+    assert_equal question.id, result[:quiz_question_id]
+    assert_equal 'b', result[:selected_choice_id]
+    refute result.key?(:correct)
+    refute result.key?(:explanation)
+  end
+
+  test "question_results_in_progress omits a response with no answer recorded yet" do
+    quiz = create(:quiz)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: {})
+
+    assert_empty attempt.question_results_in_progress
+  end
+
+  test "question_results_in_progress excludes a response for a question no longer on the quiz" do
+    quiz = create(:quiz)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'}
+    )
+
+    QuizQuestionPlacement.find_by!(level: quiz, quiz_question: question).destroy!
+
+    assert_empty attempt.question_results_in_progress
+  end
+
   test "disconnected (nil) level does not raise on expires_at/expired?/response_deadline_passed?/retakeable?/question_results" do
-    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true)
+    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
     question = create(:multiple_choice_question, explanation: 'because math')
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
@@ -173,5 +249,26 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:correct]
     assert_nil result[:explanation]
     assert_nil result[:correct_choice_id]
+  end
+
+  test "disconnected (nil) level does not raise on question_results_in_progress" do
+    quiz = create(:quiz)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'}
+    )
+
+    quiz.destroy!
+    attempt.reload
+
+    assert_nil attempt.level
+    result = attempt.question_results_in_progress.first
+    assert_equal question.id, result[:quiz_question_id]
+    assert_equal 'b', result[:selected_choice_id]
   end
 end

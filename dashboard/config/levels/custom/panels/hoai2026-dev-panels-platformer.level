@@ -10,18 +10,19 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##What is a platformer?\nA platformer is a game where a character runs and jumps across platforms - like the classic games you may know.\n\nThe player falls until they land on something!",
+        "text": "##What is a platformer?\nIn a platformer, a character runs and jumps across platforms.\n\nThe player falls until they land on something!",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-platformer-133b13bb-27cd-485c-9905-941bb6ffb678"
       },
       {
-        "text": "##Build your own\nFirst you'll make your character the player and try the controls. Then you'll create a block image and build a whole world out of it.",
+        "text": "##Build your own\nFirst, make your character the player and try the controls. Then make a block and build a world out of it.",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-platformer-59c242fb-42d3-4e05-bbb7-ab05cebb1220",
         "fadeInOverPrevious": true
       }
     ],
-    "use_links": "false"
+    "use_links": "false",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </Panels>

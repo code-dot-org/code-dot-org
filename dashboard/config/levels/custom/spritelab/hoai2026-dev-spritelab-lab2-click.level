@@ -34,43 +34,25 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your new character on the right.** Use **make new sprite** with position **right** - they'll turn to face your hero. Then add **when clicked** with a **say** block inside, so clicking them makes them speak. Press **Play** and try it."
+        "text": "**Talk later.** The **at [6] seconds** event is ready for your new character. Drag a **say** block onto the dotted outline under it. Click **Play** and wait for it."
       },
       {
-        "text": "**It's interactive!** Click your new character to hear from them, then continue when you're ready.",
+        "text": "**Right on time!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Click to talk\nAdd your new character on the **right** of the scene. Then add **when clicked** with a **say** block inside, so clicking them makes them speak.",
+    "long_instructions": "# Talk later\nDrag a **say** block onto the dotted outline under **at [6] seconds**. Your new character speaks 6 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition",
-          "fields": {
-            "POSITION": "right"
-          }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "You clicked me!"
+            "SPEECH": "Let's go!"
           },
           "inputs": {
             "SPRITE": {
@@ -81,7 +63,47 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_atTime",
+        "data": "at-6",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 6
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Let's go!"
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

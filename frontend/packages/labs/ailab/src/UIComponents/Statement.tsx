@@ -2,16 +2,18 @@
 import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setLabelColumn, removeSelectedFeature} from '../redux';
 
+import shared from '../shared.module.scss';
+import styles from './statement.module.scss';
+
 interface StatementProps {
   shouldShow?: boolean;
-  smallFont?: boolean;
   currentPanel?: string;
+  labelIsPreset?: boolean;
   labelColumn?: string;
   selectedFeatures?: string[];
   setLabelColumn?: (column: string | null) => void;
@@ -21,8 +23,8 @@ interface StatementProps {
 
 const Statement = ({
   shouldShow,
-  smallFont,
   currentPanel,
+  labelIsPreset,
   labelColumn,
   selectedFeatures,
   setLabelColumn,
@@ -40,19 +42,19 @@ const Statement = ({
   const labelHTML = (label: string, currentPanel: string) => {
     const localizedLabel = getLocalizedColumnName(datasetId!, label);
     return (
-      <div style={styles.statementLabel}>
+      <div className={styles.label}>
         {localizedLabel || '____'}
-        {localizedLabel && currentPanel === 'dataDisplayLabel' && (
+        {localizedLabel && currentPanel === 'datasetView' && !labelIsPreset && (
           <div
             id="uitest-remove-statement-label"
             onClick={() => removeLabel()}
             onKeyDown={() => removeLabel()}
-            style={styles.statementDeleteIcon}
+            className={styles.deleteIcon}
             role="button"
             tabIndex={0}
           >
-            <div style={styles.statementDeleteCircle} />
-            <div style={styles.statementDeleteX}>
+            <div className={styles.deleteCircle} />
+            <div className={styles.deleteX}>
               <FontAwesomeIcon icon={faTimesCircle} />
             </div>
           </div>
@@ -74,19 +76,19 @@ const Statement = ({
           );
           return (
             <span key={index}>
-              <div style={styles.statementFeature}>
+              <div className={styles.feature}>
                 {localizedName}
-                {currentPanel === 'dataDisplayFeatures' && (
+                {currentPanel === 'datasetView' && (
                   <div
                     id="uitest-remove-statement-feature"
                     onClick={() => removeFeature(selectedFeature)}
                     onKeyDown={() => removeFeature(selectedFeature)}
-                    style={styles.statementDeleteIcon}
+                    className={styles.deleteIcon}
                     role="button"
                     tabIndex={0}
                   >
-                    <div style={styles.statementDeleteCircle} />
-                    <div style={styles.statementDeleteX}>
+                    <div className={styles.deleteCircle} />
+                    <div className={styles.deleteX}>
                       <FontAwesomeIcon icon={faTimesCircle} />
                     </div>
                   </div>
@@ -97,7 +99,7 @@ const Statement = ({
           );
         })}
         {selectedFeatures.length === 0 && (
-          <span style={styles.statementFeature}>____</span>
+          <span className={styles.feature}>____</span>
         )}
       </span>
     );
@@ -143,24 +145,18 @@ const Statement = ({
     });
 
   return (
-    <div
-      style={smallFont ? styles.statementSmall : styles.statement}
-      id="statement"
-    >
+    <div className={shared.largeText} id="statement">
       {predictionStatementComponents}
     </div>
   );
 };
-
-// The presentational component, for callers that supply props directly (e.g.
-// the historic-results list in Results).
-export const UnconnectedStatement = Statement;
 
 // Store-connected container: the default export used in the live panels.
 const ConnectedStatement = () => {
   const dispatch = useAppDispatch();
   const shouldShow = useAppSelector(state => state.data.length !== 0);
   const currentPanel = useAppSelector(state => state.currentPanel);
+  const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const labelColumn = useAppSelector(state => state.labelColumn);
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const datasetId = useAppSelector(
@@ -171,6 +167,7 @@ const ConnectedStatement = () => {
     <Statement
       shouldShow={shouldShow}
       currentPanel={currentPanel}
+      labelIsPreset={labelIsPreset}
       labelColumn={labelColumn}
       selectedFeatures={selectedFeatures}
       datasetId={datasetId}

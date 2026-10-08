@@ -3,6 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import AiDiffDrawer from '@cdo/apps/aiTeacherDrawer/AiDiffDrawer';
+import {DRAWER_WIDTH} from '@cdo/apps/aiTeacherDrawer/constants';
 import {
   setChatIsOpen,
   setPendingArtifactMessage,
@@ -114,42 +115,47 @@ describe('AiDiffDrawer', () => {
     });
   });
 
-  it('adjusts main_content margin when chat opens', () => {
-    const mainContent = document.createElement('div');
-    mainContent.id = 'main_content';
-    document.body.appendChild(mainContent);
+  const drawerInset = () =>
+    document.documentElement.style.getPropertyValue('--ta-drawer-width');
 
+  it('publishes its width as an inset when chat opens', async () => {
     const store = renderDefault();
     store.dispatch(setChatIsOpen(true));
 
-    return waitFor(() => {
-      expect(mainContent.style.marginRight).not.toBe('');
-    }).finally(() => {
-      document.body.removeChild(mainContent);
+    await waitFor(() => {
+      expect(drawerInset()).toBe(`${DRAWER_WIDTH}px`);
     });
   });
 
-  it('resets main_content margin when chat closes', async () => {
-    const mainContent = document.createElement('div');
-    mainContent.id = 'main_content';
-    document.body.appendChild(mainContent);
+  it('takes real layout space instead of an inset when inline', async () => {
+    // Lab2 hosts the drawer inside the lab's own flex row, so the space it
+    // takes is its own width. A page that also left room for it would give up
+    // the width twice.
+    const before = drawerInset();
+    const store = renderDefault({inline: true});
+    store.dispatch(setChatIsOpen(true));
 
-    try {
-      const store = renderDefault();
-      store.dispatch(setChatIsOpen(true));
+    await waitFor(() => {
+      screen.getByText(/AI Teaching Assistant/);
+    });
 
-      await waitFor(() => {
-        expect(mainContent.style.marginRight).not.toBe('');
-      });
+    expect(drawerInset()).toBe(before);
+    expect(drawerInset()).not.toBe(`${DRAWER_WIDTH}px`);
+  });
 
-      store.dispatch(setChatIsOpen(false));
+  it('publishes a zero inset when chat closes', async () => {
+    const store = renderDefault();
+    store.dispatch(setChatIsOpen(true));
 
-      await waitFor(() => {
-        expect(mainContent.style.marginRight).toBe('0px');
-      });
-    } finally {
-      document.body.removeChild(mainContent);
-    }
+    await waitFor(() => {
+      expect(drawerInset()).toBe(`${DRAWER_WIDTH}px`);
+    });
+
+    store.dispatch(setChatIsOpen(false));
+
+    await waitFor(() => {
+      expect(drawerInset()).toBe('0px');
+    });
   });
 
   it('shows artifact save page when there is a pending artifact message', async () => {

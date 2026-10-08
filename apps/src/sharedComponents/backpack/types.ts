@@ -9,8 +9,6 @@ export interface FileMetadata {
 export enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
-  UploadStarted = 'uploadStarted',
-  UploadFailed = 'uploadFailed',
 }
 
 // appType names the backpack the event came from. The unified backpack shows

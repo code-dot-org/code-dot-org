@@ -72,13 +72,16 @@ const SAMPLE_VERSION_LIST_WITH_AUTOSAVES: ProjectVersion[] = [
   },
 ];
 
+// A time carrying seconds, as in "3:30:45PM".
+const SECONDS_PATTERN = /\d{1,2}:\d{2}:\d{2}/;
+
 const ownedChannel: Channel = {
   id: '1',
   name: '1',
   isOwner: true,
   projectType: 'pythonlab',
   publishedAt: null,
-  createdAt: '',
+  createdAt: '2024-10-25T18:11:10.000Z',
   updatedAt: '',
 };
 
@@ -143,7 +146,7 @@ describe('VersionHistoryPanel', () => {
 
     // Initial version should always be the bottom option in the list.
     // We look for initial version rather than one of the dated versions to avoid issues with time zones.
-    expect(screen.getByText('Initial version')).toBeInTheDocument();
+    expect(screen.getByText(/^Initial version/)).toBeInTheDocument();
   });
 
   it('renders alert if getVersionList fails', async () => {
@@ -570,5 +573,39 @@ describe('VersionHistoryPanel', () => {
     expect(screen.queryByDisplayValue('2')).not.toBeInTheDocument();
     expect(screen.queryByDisplayValue('3')).not.toBeInTheDocument();
     expect(screen.queryByDisplayValue('4')).not.toBeInTheDocument();
+  });
+
+  it('labels every version with a timestamp, seconds included', async () => {
+    renderDefault({alwaysShowAutoSaves: true});
+
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+
+    // Four sample versions plus the initial one, all dated.
+    expect(screen.getAllByText(SECONDS_PATTERN)).toHaveLength(5);
+    expect(
+      screen.getByRole('radio', {
+        name: new RegExp(`^Current Version.*${SECONDS_PATTERN.source}`),
+      })
+    ).toBeInTheDocument();
+  });
+
+  it('labels the initial version as current when there are no versions yet', async () => {
+    mockedProjectManager.getVersionList.mockResolvedValue([]);
+
+    renderDefault({selectedVersion: INITIAL_VERSION_ID});
+
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
+    );
+
+    expect(
+      screen.getByRole('radio', {
+        name: new RegExp(`^Current Version.*${SECONDS_PATTERN.source}`),
+      })
+    ).toBeInTheDocument();
   });
 });

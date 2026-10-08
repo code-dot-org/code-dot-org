@@ -9,6 +9,7 @@ import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
+import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
 import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
 import {
   BubbleChoiceLevelData,
@@ -141,14 +142,17 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
         projectManager = ProjectManagerFactory.getProjectManager(
           channelId,
           // isStandaloneProjectLevel can always be false for subprojects, as it is only relevant for setting the page title.
-          false
+          false,
+          false,
+          getSourcesStoreForApp(appName)
         );
       } else {
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
           false, // isStandaloneProjectLevel is always false here.
           userId || undefined,
-          scriptId || undefined
+          scriptId || undefined,
+          getSourcesStoreForApp(appName)
         );
       }
 

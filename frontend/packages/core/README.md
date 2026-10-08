@@ -127,6 +127,20 @@ known.
 See [`src/plugins/consent/README.md`](src/plugins/consent/README.md) for full
 usage details.
 
+## Experiments
+
+`getEnabledExperiments` is available via the `./plugins/experiments` sub-path
+export. It needs no registration — there is nothing to configure at boot:
+
+```ts
+import {getEnabledExperiments} from '@code-dot-org/core/plugins/experiments';
+
+const experiments = getEnabledExperiments();
+```
+
+See [`src/plugins/experiments/README.md`](src/plugins/experiments/README.md)
+for the stores it reads.
+
 ## Plugin vs. new package
 
 When adding a new code.org-specific integration, use this table to decide where it belongs:
@@ -142,8 +156,8 @@ When adding a new code.org-specific integration, use this table to decide where 
 
 **Default rule:** Start as a plugin in core. Graduate to a new package only if the npm dependency weight or architectural independence makes the package boundary genuinely necessary.
 
-Current count: four plugins (localization, observability, consent, with
-analytics pending). This is the top of the "≤ ~3–4" guidance above;
+Current count: five plugins (localization, observability, consent,
+experiments, with analytics pending). This is the top of the "≤ ~3–4" guidance above;
 extraction trigger for consent specifically is a consumer that wants it
 without the rest of core.
 

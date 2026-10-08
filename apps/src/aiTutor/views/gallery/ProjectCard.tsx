@@ -1,12 +1,11 @@
-import classNames from 'classnames';
-import React, {FC} from 'react';
-
+import Toggle from '@code-dot-org/component-library/toggle';
 import {
   ChallengeResponse,
   ChallengeResponseAsset,
-} from '../lessonDeepDive/types';
-
-import ReactionChips from './ReactionChips';
+  ReactionChips,
+} from '@code-dot-org/lesson-deep-dive';
+import classNames from 'classnames';
+import React, {FC} from 'react';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -19,6 +18,8 @@ interface ProjectCardProps {
   // Opens the project's page. The card links to ?project=<id> and lets
   // this handler do the in-page navigation.
   onOpen?: () => void;
+  isTeacher?: boolean;
+  onApprovalChange?: (id: number, approved: boolean) => void;
 }
 
 interface CardTag {
@@ -71,6 +72,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
   variant,
   unitPosition,
   onOpen,
+  isTeacher,
+  onApprovalChange,
 }) => {
   const projectHref = `?project=${response.id}`;
   const handleOpen = (event: React.MouseEvent) => {
@@ -154,6 +157,17 @@ const ProjectCard: FC<ProjectCardProps> = ({
           reactions={response.reactions}
           readOnly
         />
+        {isTeacher && (
+          <div className={styles.toggleWrapper}>
+            <Toggle
+              name={`approved-${response.id}`}
+              checked={response.approved}
+              label="Visible for students"
+              onChange={e => onApprovalChange?.(response.id, e.target.checked)}
+              size="xs"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

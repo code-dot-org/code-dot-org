@@ -18,6 +18,7 @@ export interface QuizConfigurationData {
   showIntroScreen: boolean;
   purpose?: string;
   allowMultipleAttempts: boolean;
+  showQuestionsAfterSubmit: boolean;
 }
 
 const PURPOSE_OPTIONS = [
@@ -49,6 +50,7 @@ interface QuizConfigurableFields {
   allowMultipleAttempts: boolean;
   showCorrectness: boolean;
   revealAnswerExplanation: boolean;
+  showQuestionsAfterSubmit: boolean;
 }
 
 // Applied once, only when a purpose is chosen for the first time.
@@ -59,6 +61,7 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     allowMultipleAttempts: true,
     showCorrectness: true,
     revealAnswerExplanation: true,
+    showQuestionsAfterSubmit: true,
   },
   practice: {
     showIntroScreen: false,
@@ -66,6 +69,7 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     allowMultipleAttempts: true,
     showCorrectness: true,
     revealAnswerExplanation: true,
+    showQuestionsAfterSubmit: true,
   },
   exam: {
     showIntroScreen: true,
@@ -73,13 +77,15 @@ const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
     allowMultipleAttempts: false,
     showCorrectness: false,
     revealAnswerExplanation: false,
+    showQuestionsAfterSubmit: false,
   },
   exam_simulation: {
     showIntroScreen: true,
     timeLimitMinutes: null,
     allowMultipleAttempts: true,
     showCorrectness: true,
-    revealAnswerExplanation: true,
+    revealAnswerExplanation: false,
+    showQuestionsAfterSubmit: false,
   },
 };
 
@@ -124,9 +130,16 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
     initialValues.allowMultipleAttempts
   );
+  const [showQuestionsAfterSubmit, setShowQuestionsAfterSubmit] = useState(
+    initialValues.showQuestionsAfterSubmit
+  );
   const [savingField, setSavingField] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [timeLimitError, setTimeLimitError] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState(
+    initialValues.displayName ?? ''
+  );
+  const [displayNameAtFocus, setDisplayNameAtFocus] = useState(displayName);
 
   const panelRef = useRef<HTMLDivElement>(null);
   const previousSavingFieldRef = useRef<string | null>(null);
@@ -145,6 +158,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const handleSave = async (
     updatedConfigValues: Partial<QuizConfigurableFields> & {
       purpose?: string | null;
+      displayName?: string | null;
     } = {},
     savingFieldName: string | null = null
   ): Promise<boolean> => {
@@ -207,6 +221,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
     setAllowMultipleAttempts(defaults.allowMultipleAttempts);
     setShowCorrectness(defaults.showCorrectness);
     setRevealAnswerExplanation(defaults.revealAnswerExplanation);
+    setShowQuestionsAfterSubmit(defaults.showQuestionsAfterSubmit);
     void handleSave(
       {
         purpose: purposeValue,
@@ -298,6 +313,49 @@ const QuizConfigurationPanel: React.FunctionComponent<
     });
   };
 
+  const handleShowQuestionsAfterSubmitChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    const previousReveal = revealAnswerExplanation;
+    setShowQuestionsAfterSubmit(checked);
+    if (!checked) {
+      setRevealAnswerExplanation(false);
+    }
+    void handleSave(
+      {
+        showQuestionsAfterSubmit: checked,
+        ...(!checked && {revealAnswerExplanation: false}),
+      },
+      'showQuestionsAfterSubmit'
+    ).then(ok => {
+      if (!ok) {
+        setShowQuestionsAfterSubmit(!checked);
+        if (!checked) {
+          setRevealAnswerExplanation(previousReveal);
+        }
+      }
+    });
+  };
+
+  const handleDisplayNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDisplayName(e.target.value);
+  };
+
+  const handleDisplayNameFocus = () => {
+    setDisplayNameAtFocus(displayName);
+  };
+
+  const handleDisplayNameBlur = () => {
+    if (displayName === displayNameAtFocus) {
+      return;
+    }
+    const previous = displayNameAtFocus;
+    void handleSave({displayName}, 'displayName').then(ok => {
+      if (!ok) setDisplayName(previous);
+    });
+  };
+
   return (
     <div className={styles.panel} ref={panelRef}>
       {error && (
@@ -349,6 +407,21 @@ const QuizConfigurationPanel: React.FunctionComponent<
             />
           </div>
           <ConfigCard label="content">
+            <div className={styles.cardRow}>
+              <TextField
+                label="Quiz display name"
+                name="displayName"
+                size="s"
+                inputType="text"
+                color="gray"
+                className={styles.fullWidthField}
+                helperMessage="Leave unset to use level name as quiz title"
+                value={displayName}
+                onChange={handleDisplayNameChange}
+                onFocus={handleDisplayNameFocus}
+                onBlur={handleDisplayNameBlur}
+              />
+            </div>
             <div className={styles.cardRow}>
               <div className={styles.toggleRow}>
                 <span className={styles.toggleLabel}>Show intro screen</span>
@@ -406,6 +479,21 @@ const QuizConfigurationPanel: React.FunctionComponent<
           <ConfigCard label="feedback">
             <div className={styles.cardRow}>
               <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>
+                  Show questions after submit
+                </span>
+                <Toggle
+                  name="showQuestionsAfterSubmit"
+                  aria-label="Show questions after submit"
+                  size="s"
+                  disabled={savingField === 'showQuestionsAfterSubmit'}
+                  checked={showQuestionsAfterSubmit}
+                  onChange={handleShowQuestionsAfterSubmitChange}
+                />
+              </div>
+            </div>
+            <div className={styles.cardRow}>
+              <div className={styles.toggleRow}>
                 <span className={styles.toggleLabel}>Show correctness</span>
                 <Toggle
                   name="showCorrectness"
@@ -416,7 +504,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   onChange={handleShowCorrectnessChange}
                 />
               </div>
-              {showCorrectness && (
+              {showCorrectness && showQuestionsAfterSubmit && (
                 <div className={styles.conditionalWrap}>
                   <div className={styles.toggleRow}>
                     <span className={styles.toggleLabel}>
@@ -431,9 +519,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
                       onChange={handleRevealAnswerExplanationChange}
                     />
                   </div>
-                  <p className={styles.cardHelperText}>
-                    Reveal the correct answer and the explanation.
-                  </p>
                 </div>
               )}
             </div>

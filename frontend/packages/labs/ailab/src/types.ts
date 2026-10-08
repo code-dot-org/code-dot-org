@@ -1,7 +1,12 @@
 export type DataRow = Record<string, string | number>;
 
+export type TrainerFamily = 'knn' | 'decisionTree';
+
+export type Hyperparameters = {k: number} | {maxDepth: number};
+
 export interface Mode {
   datasets?: string[];
+  trainer?: TrainerFamily;
   hideSelectLabel?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
@@ -139,6 +144,8 @@ export interface HistoricResult {
   label: string;
   features: string[];
   accuracy: string;
+  correct: number;
+  total: number;
 }
 
 export interface ModelDataToSave {
@@ -152,7 +159,7 @@ export interface ModelDataToSave {
   features: ModelCardColumn[];
   summaryStat: {type: string; stat: string};
   trainedModel: object | null;
-  kValue: number | null;
+  hyperparameters: Hyperparameters | null;
 }
 
 export type SaveTrainedModel = (
@@ -173,10 +180,7 @@ export interface PrevNextButtons {
 
 export const CONTENT_PANELS = [
   'selectDataset',
-  'dataDisplayLabel',
-  'dataDisplayFeatures',
-  'trainModel',
-  'generateResults',
+  'datasetView',
   'results',
   'saveModel',
   'modelSummary',
@@ -187,13 +191,12 @@ type ContentPanel = (typeof CONTENT_PANELS)[number];
 // Valid panels are content panels + Continue/Finish targets.
 export type Panel = ContentPanel | 'continue' | 'finish';
 
+export type TrainingModalStep = 'training' | 'testing';
+
 export const INSTRUCTIONS_KEYS = [
   ...CONTENT_PANELS,
   'uploadedDataset',
   'selectedDataset',
-  'selectedFeatureNumerical',
-  'selectedFeatureCategorical',
-  'resultsDetails',
 ] as const;
 
 export type InstructionsKey = (typeof INSTRUCTIONS_KEYS)[number];
