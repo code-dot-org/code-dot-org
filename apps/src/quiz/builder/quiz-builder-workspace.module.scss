@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+// The card clips its overflow, so in this scrolling column it would
+// otherwise shrink to nothing once the outline overflows.
+.introScreen {
+  flex-shrink: 0;
+}
+
 .header {
   display: flex;
   flex-direction: column;

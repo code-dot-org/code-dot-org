@@ -126,6 +126,10 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [showIntroScreen, setShowIntroScreen] = useState(
     initialValues.showIntroScreen
   );
+  // The workspace's intro screen card can also turn this off.
+  useEffect(() => {
+    setShowIntroScreen(initialValues.showIntroScreen);
+  }, [initialValues.showIntroScreen]);
   const [purpose, setPurpose] = useState(initialValues.purpose || '');
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
     initialValues.allowMultipleAttempts

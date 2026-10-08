@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizLevelProperties, QuizViewContent} from '../types';
 import {toBool} from '../utils';
@@ -26,6 +27,17 @@ export default function useQuizBuilderView({
     showQuestionsAfterSubmit: toBool(props.showQuestionsAfterSubmit),
   });
 
+  // Rejects on failure, so the caller can show the error where it happened.
+  const saveQuizConfig = async (fields: Partial<QuizConfigurationData>) => {
+    const response = await HttpClient.put(
+      `/levels/${levelId}/quiz_configuration`,
+      JSON.stringify(fields),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+    setQuizConfig(await response.json());
+  };
+
   return {
     resourcePanelProps: {
       extraTabs: [
@@ -47,6 +59,10 @@ export default function useQuizBuilderView({
       <QuizBuilderWorkspace
         levelId={levelId}
         quizTitle={quizConfig.displayName || levelProperties.name}
+        showIntroScreen={quizConfig.showIntroScreen}
+        customIntroText={quizConfig.customIntroText ?? ''}
+        hasTimeLimit={!!quizConfig.timeLimitMinutes}
+        onSaveQuizConfig={saveQuizConfig}
       />
     ),
   };

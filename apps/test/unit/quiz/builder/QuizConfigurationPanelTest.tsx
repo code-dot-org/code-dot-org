@@ -58,6 +58,26 @@ describe('QuizConfigurationPanel', () => {
     put.mockReset();
   });
 
+  it('turns the intro screen toggle off when the workspace removes the intro screen', () => {
+    const {rerender} = render(
+      <QuizConfigurationPanel
+        quizId={42}
+        initialValues={INITIAL_VALUES}
+        onSaved={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Show intro screen')).toBeChecked();
+
+    rerender(
+      <QuizConfigurationPanel
+        quizId={42}
+        initialValues={{...INITIAL_VALUES, showIntroScreen: false}}
+        onSaved={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Show intro screen')).not.toBeChecked();
+  });
+
   it('shows the chooser when no purpose is set yet, and saves the chosen purpose', async () => {
     put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
     const {onSaved} = renderPanel({

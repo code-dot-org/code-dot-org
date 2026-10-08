@@ -13,6 +13,11 @@
   gap: 12px;
   padding: 10px;
   background: var(--background-neutral-primary);
+}
+
+// Collapsed, the header is the card's last child and the card's own border
+// closes it; a second border there doubles into what looks like a shadow.
+.header:not(:last-child) {
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
@@ -63,6 +68,7 @@
   flex-direction: column;
   gap: 8px;
   padding: 8px 10px 10px;
+  background: var(--background-neutral-primary);
 }
 
 .optionsList {
