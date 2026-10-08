@@ -64,7 +64,7 @@ function predictButton() {
 }
 
 function status() {
-  return screen.getByRole('status').textContent;
+  return screen.getByRole('status').textContent.replaceAll('\u200B', '');
 }
 
 function watchStatus() {
@@ -185,17 +185,20 @@ describe('TestPanel', () => {
     const store = trainedAnimalStore({trainer: 'decisionTree'});
     renderTestPanel(store);
     const nextStep = () => screen.getByRole('button', {name: 'Next step'});
+    const textNodes = () => [...screen.getByRole('status').childNodes];
 
     expect(status()).toBe('');
 
     predictSnake();
 
     expect(status()).toBe(pathAnnouncement('snake'));
+    expect(textNodes().map(node => node.nodeType)).toEqual([Node.TEXT_NODE]);
     expect(nextStep().closest('[aria-live], [role="status"]')).toBeNull();
 
     fireEvent.click(nextStep());
 
     expect(status()).toBe(stepAnnouncement(1));
+    expect(textNodes().map(node => node.nodeType)).toEqual([Node.TEXT_NODE]);
   });
 
   describe('a decision tree, as its path plays', () => {
@@ -273,7 +276,7 @@ describe('TestPanel', () => {
       screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/}),
     ).toBeTruthy();
     expect(screen.queryByRole('list')).toBeNull();
-    expect(screen.getByRole('status').textContent).toBe(
+    expect(status()).toBe(
       screen.getByRole('heading', {name: /^AI predicts/}).textContent,
     );
   });

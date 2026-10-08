@@ -1,7 +1,8 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {Fragment, useState} from 'react';
+import {useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {formatNumber, thresholdText} from '../helpers/displayTree';
@@ -37,55 +38,46 @@ const PredictionResult = () => {
   const conditionText = ({branch, value}: DisplayTreeStep): string =>
     branch.kind === 'values' ? valueText(value ?? '') : thresholdText(branch);
 
-  const stepText = (column: string, condition: string) => (
-    <>
-      {getLocalizedColumnName(datasetId, column)} is{' '}
-      <strong>{condition}</strong>
-    </>
-  );
-
   const hasPrediction = predictedLabel !== undefined;
   const predictionText = hasPrediction ? valueText(predictedLabel) : '';
   const steps =
     trace && trace.steps.length > 0
       ? [
-          ...trace.steps.map(step =>
-            stepText(step.column, conditionText(step)),
-          ),
-          stepText(labelColumn, predictionText),
+          ...trace.steps.map(step => ({
+            column: getLocalizedColumnName(datasetId, step.column),
+            condition: conditionText(step),
+          })),
+          {
+            column: getLocalizedColumnName(datasetId, labelColumn),
+            condition: predictionText,
+          },
         ]
       : [];
 
-  const stepAnnouncement = (index: number) => (
-    <>
-      Step {index + 1} of {steps.length}: {steps[index]}
-    </>
-  );
+  const stepAnnouncement = (index: number): string => {
+    const {column, condition} = steps[index];
+    return `Step ${index + 1} of ${steps.length}: ${column} is ${condition}`;
+  };
+
+  // VoiceOver reads only the text node that changed and skips a repeat, so this is one string with a flipping invisible tail.
+  const repeatMark = '\u200B'.repeat(((predictionCount + replays) % 2) + 1);
 
   // Read the path whole: a screen reader cuts off each step if playback announces it.
-  const announcement = () => {
+  const announcement = (): string => {
     if (!hasPrediction) {
-      return null;
+      return '';
     }
-    if (steppedByHand) {
-      return stepAnnouncement(currentStep);
-    }
-    return (
-      <>
-        AI predicts {predictionText}
-        {steps.map((_, index) => (
-          <Fragment key={index}>. {stepAnnouncement(index)}</Fragment>
-        ))}
-      </>
-    );
+    const text = steppedByHand
+      ? stepAnnouncement(currentStep)
+      : [
+          `AI predicts ${predictionText}`,
+          ...steps.map((_, index) => stepAnnouncement(index)),
+        ].join('. ');
+    return text + repeatMark;
   };
 
   return (
     <>
-      {/* Always mounted, and rekeyed to repeat itself: a live region speaks only what changes after it appears. */}
-      <span role="status" className={appStyles.visuallyHidden}>
-        <span key={`${predictionCount}-${replays}`}>{announcement()}</span>
-      </span>
       {hasPrediction && (
         <section className={styles.card}>
           <Typography variant="body1" component="h2" className={styles.header}>
@@ -95,7 +87,7 @@ const PredictionResult = () => {
             <>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics */}
               <ol role="list" className={styles.steps}>
-                {steps.map((text, index) => (
+                {steps.map(({column, condition}, index) => (
                   <li
                     key={index}
                     aria-current={index === currentStep ? 'step' : undefined}
@@ -111,7 +103,7 @@ const PredictionResult = () => {
                       {index + 1}
                     </Typography>
                     <Typography variant="body3" component="span">
-                      {text}
+                      {column} is <strong>{condition}</strong>
                     </Typography>
                   </li>
                 ))}
@@ -125,6 +117,13 @@ const PredictionResult = () => {
             </>
           )}
         </section>
+      )}
+      {/* Always mounted, and last on the page so arrowing never crosses it: a live region speaks only changes made after it appears. */}
+      {createPortal(
+        <span role="status" className={appStyles.visuallyHidden}>
+          {announcement()}
+        </span>,
+        document.body,
       )}
     </>
   );
