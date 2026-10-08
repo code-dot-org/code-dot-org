@@ -9,7 +9,7 @@ import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
 import {parseCSV} from './csvReaderWrapper';
 import type {Dataset} from './datasetManifest';
-import {getDatasets} from './datasetManifest';
+import {getAvailableDatasets, getDatasets} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
 import {parseJSON} from './jsonReaderWrapper';
@@ -23,6 +23,7 @@ import {
   setInstructionsDismissed,
   setInstructionsEnabled,
   resetState,
+  setHistoricResults,
 } from './redux';
 import {store} from './store';
 import train from './train';
@@ -94,6 +95,12 @@ export const loadLevel = function (mode?: Mode): void {
   processMode(mode);
 };
 
+export const startOver = function (): void {
+  const {mode, historicResults} = store.getState();
+  loadLevel(mode);
+  store.dispatch(setHistoricResults(historicResults));
+};
+
 /**
  * Mount the lab and load its initial level data in one call.
  */
@@ -109,42 +116,35 @@ export const instructionsDismissed = function (): void {
 // Process an optional mode.
 const processMode = (mode: Mode | undefined): void => {
   const assetPath = getAssetPath();
-  let panelSet = false;
-
-  if (mode) {
-    // Load a single dataset immediately.
-    if (mode.datasets && mode.datasets.length === 1) {
-      const item = getDatasets().filter((item: Dataset) => {
-        return item.id === mode.datasets![0];
-      })[0];
-      store.dispatch(setSelectedName(item.name));
-      store.dispatch(setSelectedCSV(assetPath + item.path));
-      store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-      // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
-      // directly and are fire-and-forget, so an in-flight load from a prior
-      // level/dataset can resolve after a newer loadLevel and clobber state.
-      parseCSV(assetPath + item.path, true, false);
-
-      // Also retrieve model metadata and set column data types.
-      parseJSON(assetPath + item.metadataPath);
-
-      if (mode.hideSelectLabel) {
-        store.dispatch(setCurrentPanel('dataDisplayFeatures'));
-      } else {
-        store.dispatch(setCurrentPanel('dataDisplayLabel'));
-      }
-      panelSet = true;
-    }
-  }
 
   const reserveLocation = mode?.randomizeTestData
     ? TestDataLocations.RANDOM
     : TestDataLocations.END;
   store.dispatch(setReserveLocation(reserveLocation));
 
-  if (!panelSet) {
-    store.dispatch(setCurrentPanel('selectDataset'));
+  // The dataset picker is hidden for now, so a mode without exactly one
+  // dataset loads the first one the picker would have listed.
+  const item =
+    mode?.datasets?.length === 1
+      ? getDatasets().find((item: Dataset) => item.id === mode.datasets![0])
+      : getAvailableDatasets(mode?.datasets)[0];
+  if (!item) {
+    console.error('AI Lab could not find a dataset to load.');
+    return;
   }
+
+  store.dispatch(setSelectedName(item.name));
+  store.dispatch(setSelectedCSV(assetPath + item.path));
+  store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
+  // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
+  // directly and are fire-and-forget, so an in-flight load from a prior
+  // level/dataset can resolve after a newer loadLevel and clobber state.
+  parseCSV(assetPath + item.path, true, false);
+
+  // Also retrieve model metadata and set column data types.
+  parseJSON(assetPath + item.metadataPath);
+
+  store.dispatch(setCurrentPanel('datasetView'));
 };
 
 // Export a few types.
@@ -154,7 +154,9 @@ export type {
   ModelDataToSave,
   SaveResponse,
 } from './types';
-export {CONTENT_PANELS, INSTRUCTIONS_KEYS} from './types';
+export {INSTRUCTIONS_KEYS} from './types';
+export type {Lab2Instructions} from './lab2Instructions';
+export {LAB2_INSTRUCTIONS} from './lab2Instructions';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,

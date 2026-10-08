@@ -33,6 +33,7 @@
     "RAILS_ENV" .Values.activeJobWorker.RAILS_ENV
     "extraEnv" .Values.activeJobWorker.extraEnv
     "resources" .Values.activeJobWorker.resources
+    "terminationGracePeriodSeconds" .Values.activeJobWorker.terminationGracePeriodSeconds
     "localDevMountsEnabled" false
     "healthChecksEnabled" false
     "portsEnabled" false

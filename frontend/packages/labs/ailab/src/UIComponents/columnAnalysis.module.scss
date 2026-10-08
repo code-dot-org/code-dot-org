@@ -15,16 +15,10 @@
   width: 24px;
 }
 
-.headerTitle {
+.header .headerTitle {
+  @include mixins.panel-header-title;
+
   flex: 1;
-  margin: 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  letter-spacing: 0.72px;
-  text-transform: uppercase;
-  color: var(--text-neutral-quaternary);
 }
 
 .body {
@@ -37,18 +31,8 @@
   padding: 10px 10px 12px;
 }
 
-.columnName {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  color: var(--text-neutral-primary);
-}
-
-.description {
-  margin: 2px 0 0;
-  font-size: 12px;
-  line-height: 18px;
+.summary .description {
+  margin-top: 2px;
   color: var(--text-neutral-secondary);
 }
 
@@ -66,14 +50,6 @@
   min-width: 0;
   padding: 10px 10px 12px;
   border-left: 1px solid var(--border-neutral-primary);
-}
-
-.distributionTitle {
-  margin: 0;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  color: var(--text-neutral-primary);
 }
 
 .alert {
@@ -100,17 +76,14 @@
   background-color: var(--background-neutral-septenary);
 }
 
-.emptyGraphTitle {
-  margin: 0 0 2px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  color: var(--text-neutral-primary);
+.emptyGraph .emptyGraphTitle {
+  margin-bottom: 2px;
 }
 
-.emptyGraphMessage {
-  margin: 0;
-  font-size: 12px;
-  line-height: 18px;
+.emptyGraph .emptyGraphMessage {
   color: var(--text-neutral-secondary);
+}
+
+.distribution .distributionTitle {
+  font-weight: 600;
 }

@@ -1,6 +1,7 @@
 import {
   isPanelEnabled,
   prevNextButtons,
+  uniqLabelFeaturesSelected,
 } from '../../src/helpers/navigationValidation';
 import I18n from '../../src/i18n';
 
@@ -57,6 +58,7 @@ const sameFeatureLabelState = {
 const resultsState = {
   ...selectedFeaturesState,
   accuracyCheckExamples: [0, 0],
+  historicResults: [{label: 'isEvil', features: ['house'], accuracy: '100'}],
 };
 
 const savingModelState = {
@@ -73,23 +75,13 @@ const savedModelState = {
 };
 
 describe('isPanelEnabled', () => {
-  test('dataDisplayLabel - disabled', async () => {
-    const result = isPanelEnabled(initialState, 'dataDisplayLabel');
+  test('datasetView - disabled', async () => {
+    const result = isPanelEnabled(initialState, 'datasetView');
     expect(result).toBe(false);
   });
 
-  test('dataDisplayLabel - enabled', async () => {
-    const result = isPanelEnabled(dataUploadedState, 'dataDisplayLabel');
-    expect(result).toBe(true);
-  });
-
-  test('dataDisplayFeatures - disabled', async () => {
-    const result = isPanelEnabled(dataUploadedState, 'dataDisplayFeatures');
-    expect(result).toBe(false);
-  });
-
-  test('dataDisplayFeatures - enabled', async () => {
-    const result = isPanelEnabled(selectedLabelState, 'dataDisplayFeatures');
+  test('datasetView - enabled', async () => {
+    const result = isPanelEnabled(dataUploadedState, 'datasetView');
     expect(result).toBe(true);
   });
 
@@ -100,16 +92,6 @@ describe('isPanelEnabled', () => {
 
   test('selectFeatures - enabled', async () => {
     const result = isPanelEnabled(selectedFeaturesState, 'selectFeatures');
-    expect(result).toBe(true);
-  });
-
-  test('trainModel - disabled', async () => {
-    const result = isPanelEnabled(sameFeatureLabelState, 'trainModel');
-    expect(result).toBe(false);
-  });
-
-  test('trainModel - enabled', async () => {
-    const result = isPanelEnabled(selectedFeaturesState, 'trainModel');
     expect(result).toBe(true);
   });
 
@@ -139,29 +121,82 @@ describe('isPanelEnabled', () => {
   });
 });
 
+describe('uniqLabelFeaturesSelected', () => {
+  test('false when a feature is also the label', () => {
+    expect(uniqLabelFeaturesSelected(sameFeatureLabelState)).toBe(false);
+  });
+
+  test('true when the label and features differ', () => {
+    expect(uniqLabelFeaturesSelected(selectedFeaturesState)).toBe(true);
+  });
+});
+
+describe('isPanelEnabled for results after training', () => {
+  const trainedState = {
+    ...resultsState,
+    selectedFeatures: ['house', 'name'],
+    historicResults: [
+      {label: 'isEvil', features: ['house', 'name'], accuracy: '100'},
+    ],
+  };
+
+  test('disabled before any training', () => {
+    expect(
+      isPanelEnabled({...resultsState, historicResults: []}, 'results'),
+    ).toBe(false);
+  });
+
+  test('enabled when the columns match the latest training', () => {
+    expect(isPanelEnabled(trainedState, 'results')).toBe(true);
+  });
+
+  test.each([
+    ['label', {labelColumn: 'wand'}],
+    ['features', {selectedFeatures: ['house']}],
+    ['feature order', {selectedFeatures: ['name', 'house']}],
+  ])('disabled when the %s changed since training', (_, changes) => {
+    expect(isPanelEnabled({...trainedState, ...changes}, 'results')).toBe(
+      false,
+    );
+  });
+});
+
 describe('prevNextButtons on the data panels', () => {
   beforeAll(() => {
     I18n.initI18n();
   });
 
-  test.each(['dataDisplayLabel', 'dataDisplayFeatures'])(
-    '%s goes back to dataset selection and has no next button',
-    currentPanel => {
+  test.each([undefined, {datasets: ['a', 'b']}])(
+    'datasetView never goes back to the hidden dataset picker with mode %o',
+    mode => {
       const {prev, next} = prevNextButtons({
         ...selectedFeaturesState,
-        currentPanel,
+        currentPanel: 'datasetView',
+        mode,
       });
-      expect(prev.panel).toBe('selectDataset');
+      expect(prev).toBeUndefined();
       expect(next).toBeUndefined();
     },
   );
 
-  test('has no back button when the mode fixes the dataset', () => {
-    const {prev} = prevNextButtons({
-      ...selectedFeaturesState,
-      currentPanel: 'dataDisplayFeatures',
-      mode: {datasets: ['tacos_toy']},
+  test.each([{}, {hideSelectLabel: true}])(
+    'selectDataset moves on to datasetView with mode %o',
+    mode => {
+      const {next} = prevNextButtons({
+        ...dataUploadedState,
+        currentPanel: 'selectDataset',
+        mode,
+      });
+      expect(next.panel).toBe('datasetView');
+    },
+  );
+
+  test('results has neither button; the Dataset tab goes back', () => {
+    const {prev, next} = prevNextButtons({
+      ...resultsState,
+      currentPanel: 'results',
     });
     expect(prev).toBeUndefined();
+    expect(next).toBeUndefined();
   });
 });

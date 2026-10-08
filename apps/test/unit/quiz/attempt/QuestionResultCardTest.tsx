@@ -12,7 +12,7 @@ const QUESTION: QuizQuestionSummary = {
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'Addition',
-  stem: 'What is 2 + 2?',
+  questionTitle: 'What is 2 + 2?',
   choices: [
     {id: '0', text: 'Three'},
     {id: '1', text: 'Four'},

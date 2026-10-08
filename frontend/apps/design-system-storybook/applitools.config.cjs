@@ -12,10 +12,7 @@ module.exports = {
   appName: 'Component Library',
   batchName: 'Frontend Eyes Tests',
   dontCloseBatches: true,
-  browser: [
-    {width: 1200, height: 800, name: 'chrome'},
-    {width: 1200, height: 800, name: 'firefox'},
-  ],
+  browser: [{width: 1200, height: 800, name: 'chrome'}],
   // Viewport the SDK renders and snapshots each story at (SDK default is 1024x768).
   viewportSize: {width: 1280, height: 800},
   showStorybookOutput: true,

@@ -8,6 +8,7 @@
       "outputs": ["dist/**"]
     },
     "clean": {
+      "cache": false,
       "dependsOn": ["^clean"]
     },
     "//#format": {},

@@ -1,7 +1,5 @@
 <%
-require 'active_support/core_ext/numeric/time'
 require 'active_support/inflector'
-require 'cdo/redshift'
 self.tags.push key: 'environment', value: rack_env
 -%>
 ---
@@ -34,7 +32,7 @@ Resources:
     UpdateReplacePolicy: Retain
     Properties:
       ParameterGroupName: production
-      Description: Parameter Group for production Redshift cluster.
+      Description: Parameter Group for production Redshift cluster
       ParameterGroupFamily: redshift-1.0
       Parameters:
         - ParameterName: require_ssl
@@ -62,7 +60,7 @@ Resources:
       KmsKeyId: alias/aws/redshift
       MasterUsername: {Ref: RedshiftAdminUsername}
       MasterUserPassword: {Ref: RedshiftAdminPassword}
-      NodeType: ra3.4xlarge
+      NodeType: rg.4xlarge
       NumberOfNodes: 3
       # This maintenance can interfere with analytics batch routines that execute a sequence of long duration SQL
       # statements over an extended period, such as the dbt model runs. This is scheduled to avoid conflicting.

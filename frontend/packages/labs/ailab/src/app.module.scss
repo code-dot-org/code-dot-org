@@ -1,13 +1,15 @@
 .app {
+  display: flex;
+  flex-direction: column;
   user-select: none;
   height: 100%;
   box-sizing: border-box;
-  padding-bottom: 10px;
   font-family: 'Gotham 4r', sans-serif;
 }
 
 .body {
-  height: calc(100% - 50px);
+  flex: 1;
+  min-height: 0;
   box-sizing: border-box;
   padding: 10px 10px 0;
 }
@@ -45,9 +47,12 @@
   width: 100%;
 }
 
+// The buttons inside are absolutely positioned, so this reserves their space.
 .navigation {
   position: relative;
-  margin: 0 10px;
+  flex-shrink: 0;
+  height: 50px;
+  margin: 0 10px 10px;
 }
 
 .previous,

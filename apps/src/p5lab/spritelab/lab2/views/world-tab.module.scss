@@ -146,6 +146,15 @@
   }
 }
 
+// A cell that refuses the chosen item: no hover color, not-allowed cursor.
+.worldCellBlocked {
+  cursor: not-allowed;
+
+  &:hover {
+    background: var(--background-neutral-primary);
+  }
+}
+
 // The roving tab stops need a ring that reads inside the tight grid.
 .worldCell:focus-visible,
 .worldPaletteItem:focus-visible {

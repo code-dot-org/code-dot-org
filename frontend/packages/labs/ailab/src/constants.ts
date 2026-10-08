@@ -34,6 +34,11 @@ export const UNIQUE_OPTIONS_MAX = 50;
 
 export const DATA_TABLE_ROW_LIMIT = 100;
 
+// A few more rows than the training modal can show; the rest would be clipped.
+export const ANIMATION_TABLE_ROW_LIMIT = 20;
+
+export const TEST_PANEL_WIDTH = 300;
+
 export function getFadeOpacity(animationProgress: number): number {
   return animationProgress > 0.95
     ? 1 - (animationProgress - 0.95) / 0.05

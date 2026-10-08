@@ -3,8 +3,13 @@ require 'test_helper'
 class QuizQuestionPlacementsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    FileUtils.stubs(:mkdir_p)
+    File.stubs(:write)
     @levelbuilder = create(:levelbuilder)
     @teacher = create(:teacher)
     @quiz = create(:quiz)
@@ -41,8 +46,9 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_difference '@quiz.placements.count', 1 do
       post :create, params: {
         level_id: @quiz.id,
+        type: 'MultipleChoiceQuestion',
         questionName: 'New question',
-        stem: 'What is 2 + 2?',
+        questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correctChoiceId: 'b',
         page: 1
@@ -60,7 +66,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
   test "create returns bad_request when required fields are missing" do
     assert_no_difference 'QuizQuestion.count' do
-      post :create, params: {level_id: @quiz.id, questionName: '', stem: '', choices: [], correctChoiceId: ''}
+      post :create, params: {level_id: @quiz.id, type: 'MultipleChoiceQuestion', questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
     end
 
     assert_response :bad_request
@@ -71,8 +77,9 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_no_difference 'QuizQuestion.count' do
       post :create, params: {
         level_id: @quiz.id,
+        type: 'MultipleChoiceQuestion',
         questionName: 'Orphan risk',
-        stem: 'What is 2 + 2?',
+        questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
         correctChoiceId: 'b',
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
@@ -81,6 +88,45 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
     assert_response :bad_request
     refute QuizQuestion.exists?(name: 'Orphan risk')
+  end
+
+  test "create makes a FreeResponseQuestion" do
+    post :create, params: {
+      level_id: @quiz.id,
+      type: 'FreeResponseQuestion',
+      questionName: 'Reflection',
+      questionTitle: 'Give one example of an abstraction.',
+      description: 'A function counts.'
+    }
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    question = FreeResponseQuestion.find(body['id'])
+    assert_equal 'Give one example of an abstraction.', question.content['question_title']
+    assert_equal 'A function counts.', body['description']
+    assert @quiz.placements.exists?(quiz_question_id: question.id)
+  end
+
+  test "create returns bad_request when type is missing" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, params: {
+        level_id: @quiz.id,
+        questionName: 'No type',
+        questionTitle: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
+        correctChoiceId: 'b'
+      }
+    end
+
+    assert_response :bad_request
+  end
+
+  test "create returns bad_request for a type not in QuizQuestion::TYPES" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, params: {level_id: @quiz.id, type: 'QuizQuestion', questionName: 'x', questionTitle: 'x'}
+    end
+
+    assert_response :bad_request
   end
 
   # --- attach / detach / destroy: three different removal semantics ---
@@ -101,6 +147,25 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
     assert_response :created
     assert @quiz.placements.exists?(quiz_question_id: other_question.id)
+  end
+
+  test "attach accepts a FreeResponseQuestion" do
+    other_question = create(:free_response_question)
+
+    post :attach, params: {level_id: @quiz.id, id: other_question.id}
+
+    assert_response :created
+    assert @quiz.placements.exists?(quiz_question_id: other_question.id)
+  end
+
+  test "attach returns bad_request for a question type outside QuizQuestion::TYPES" do
+    base_question = create(:quiz_question)
+
+    assert_no_difference 'QuizQuestionPlacement.count' do
+      post :attach, params: {level_id: @quiz.id, id: base_question.id}
+    end
+
+    assert_response :bad_request
   end
 
   test "detach removes the placement but leaves the question itself intact" do

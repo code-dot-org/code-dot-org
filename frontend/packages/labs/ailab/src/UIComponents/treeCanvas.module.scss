@@ -1,6 +1,7 @@
 .treeCanvas {
   position: relative;
-  height: 360px;
+  flex: 1;
+  min-height: 240px;
   overflow: hidden;
   background-color: var(--background-neutral-secondary, #f1f2f4);
 }
@@ -36,4 +37,11 @@
   border-radius: var(--shape-sm, 6px);
   background-color: var(--background-neutral-primary, white);
   box-shadow: var(--shadow-sm);
+}
+
+.hints {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  pointer-events: none;
 }

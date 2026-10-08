@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit';
 
-import rootReducer, {setTrainedModel} from './redux';
+import rootReducer, {restoreTrainingResults, setTrainedModel} from './redux';
 
 // The Redux store singleton. It lives in its own module — rather than in the
 // package entry (`index.tsx`) — so the modules that need it can import it
@@ -11,12 +11,12 @@ export const store = configureStore({
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       // state.trainedModel is a live trainer-built model used for predictions,
-      // so it (and the action that sets it) are intentionally non-serializable.
+      // so it (and the actions that set it) are intentionally non-serializable.
       // TODO: hoist the model out of Redux into a module singleton, as was done
       // for the metrics/instructions callbacks, then drop this exception.
       serializableCheck: {
         ignoredPaths: ['trainedModel'],
-        ignoredActions: [setTrainedModel.type],
+        ignoredActions: [setTrainedModel.type, restoreTrainingResults.type],
       },
     }),
 });

@@ -33,6 +33,7 @@
   },
   "scripts": {
     "build": "vite build && tsc --noEmit",
+    "clean": "rimraf dist",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -62,6 +63,7 @@
     "jsdom": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
+    "rimraf": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",

@@ -1,6 +1,6 @@
 /* Bar chart of how many rows have each value of a categorical column.
 It uses a list behind the scenes to make the data accessible to screen readers. */
-import {Tooltip} from '@mui/material';
+import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
 
 import {getNiceAxisStep} from '../helpers/utils';
@@ -67,13 +67,23 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
               slotProps={{tooltip: {className: styles.tooltip}}}
               title={
                 <>
-                  <span className={styles.tooltipLabel}>
+                  <Typography
+                    component="span"
+                    variant="body4"
+                    className={styles.tooltipLabel}
+                  >
                     <span
                       className={classNames(styles.swatch, colorClass(index))}
                     />
                     {bar.label}
-                  </span>
-                  <strong className={styles.tooltipCount}>{bar.count}</strong>
+                  </Typography>
+                  <Typography
+                    component="strong"
+                    variant="body4"
+                    className={styles.tooltipCount}
+                  >
+                    {bar.count}
+                  </Typography>
                 </>
               }
             >

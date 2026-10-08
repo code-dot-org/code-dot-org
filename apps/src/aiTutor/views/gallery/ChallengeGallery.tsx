@@ -4,6 +4,7 @@ import {
   GallerySort,
   getUnitCounts,
   listChallengeResponses,
+  ProjectView,
   Reaction,
   TutorGalleryData,
 } from '@code-dot-org/lesson-deep-dive';
@@ -13,7 +14,6 @@ import experiments from '@cdo/apps/util/experiments';
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
-import ProjectView from './ProjectView';
 
 import styles from './challenge-gallery.module.scss';
 

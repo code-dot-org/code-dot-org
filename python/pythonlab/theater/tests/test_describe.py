@@ -1,5 +1,6 @@
 import wave
 
+import pytest
 from PIL import Image as PILImage
 
 from theater import Image, Instrument, Scene
@@ -59,7 +60,7 @@ def test_only_a_leading_clear_is_folded_into_the_summary():
   scene.clear("red")
   scene.clear("blue")
   scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == "Cleared the stage to blue.\nShapes: black rectangle."
+  assert _transcript(scene) == "Cleared the stage to blue.\nShapes: black rectangle in the top left."
 
 
 def test_a_clear_drops_what_the_same_frame_drew_before_it():
@@ -70,7 +71,7 @@ def test_a_clear_drops_what_the_same_frame_drew_before_it():
   scene.draw_ellipse(0, 0, 10, 10)
   assert _transcript(scene) == (
     "Frame 1 of 2, 0.25 seconds\nCleared the stage to blue.\n\n"
-    "Frame 2 of 2, until the end\nShapes: black ellipse."
+    "Frame 2 of 2, until the end\nShapes: black ellipse in the top left."
   )
 
 
@@ -88,7 +89,7 @@ def test_a_later_frame_says_added_for_drawing_but_not_for_sound():
   scene.draw_ellipse(0, 0, 10, 10)
   scene.play_note(60, 0.25)
   assert _transcript(scene).splitlines()[-2:] == [
-    "Added shapes: black ellipse.",
+    "Added shapes: black ellipse in the top left.",
     "Sound: piano note C4.",
   ]
 
@@ -99,7 +100,7 @@ def test_a_frame_that_clears_starts_over_rather_than_adding():
   scene.pause(0.25)
   scene.clear("red")
   scene.draw_ellipse(0, 0, 10, 10)
-  assert _transcript(scene).splitlines()[-1] == "Shapes: black ellipse."
+  assert _transcript(scene).splitlines()[-1] == "Shapes: black ellipse in the top left."
 
 
 def test_drawings_are_grouped_by_kind(tmp_path):
@@ -112,7 +113,10 @@ def test_drawings_are_grouped_by_kind(tmp_path):
   scene.draw_image(str(path), 0, 0, size=50)
   scene.play_note(60, 0.25)
   assert _transcript(scene) == (
-    'Shapes: red ellipse.\nImages: cat.png.\nText: "Hi".\nSound: piano note C4.'
+    'Shapes: red ellipse in the top left.\n'
+    'Images: cat.png in the top left.\n'
+    'Text: "Hi" in the top left.\n'
+    'Sound: piano note C4.'
   )
 
 
@@ -121,21 +125,21 @@ def test_only_text_that_is_not_the_default_black_is_named_by_its_color():
   scene.draw_text("Hi", 0, 0)
   scene.set_text_color("red")
   scene.draw_text("Bye", 0, 0)
-  assert _transcript(scene) == 'Text: "Hi", red "Bye".'
+  assert _transcript(scene) == 'Text, all in the top left: "Hi", red "Bye".'
 
 
 def test_repeated_text_puts_the_count_after_the_label():
   scene = Scene()
   for _ in range(3):
     scene.draw_text("Hi", 0, 0)
-  assert _transcript(scene) == 'Text: "Hi" 3 times.'
+  assert _transcript(scene) == 'Text, all in the top left: "Hi" 3 times.'
 
 
 def test_a_line_is_named_by_its_stroke_color():
   scene = Scene()
   scene.set_stroke_color("red")
   scene.draw_line(0, 0, 10, 10)
-  assert _transcript(scene) == "Shapes: red line."
+  assert _transcript(scene) == "Shapes: red line in the top left."
 
 
 def test_a_wide_outline_in_another_color_is_named():
@@ -144,7 +148,7 @@ def test_a_wide_outline_in_another_color_is_named():
   scene.set_stroke_color("blue")
   scene.set_stroke_width(4)
   scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == "Shapes: blue-outlined red rectangle."
+  assert _transcript(scene) == "Shapes: blue-outlined red rectangle in the top left."
 
 
 def test_a_hairline_outline_is_left_unsaid():
@@ -152,7 +156,7 @@ def test_a_hairline_outline_is_left_unsaid():
   scene.set_fill_color("red")
   scene.set_stroke_color("blue")
   scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == "Shapes: red rectangle."
+  assert _transcript(scene) == "Shapes: red rectangle in the top left."
 
 
 def test_a_wide_outline_matching_the_fill_is_left_unsaid():
@@ -161,7 +165,7 @@ def test_a_wide_outline_matching_the_fill_is_left_unsaid():
   scene.set_stroke_color("red")
   scene.set_stroke_width(4)
   scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == "Shapes: red rectangle."
+  assert _transcript(scene) == "Shapes: red rectangle in the top left."
 
 
 def test_repeated_outlined_shapes_pluralize_the_shape_name():
@@ -171,14 +175,14 @@ def test_repeated_outlined_shapes_pluralize_the_shape_name():
   scene.set_stroke_width(4)
   for offset in range(3):
     scene.draw_rectangle(offset, 0, 10, 10)
-  assert _transcript(scene) == "Shapes: 3 blue-outlined red rectangles."
+  assert _transcript(scene) == "Shapes, all in the top left: 3 blue-outlined red rectangles."
 
 
 def test_a_shape_is_named_by_its_fill_color():
   scene = Scene()
   scene.set_fill_color("red")
   scene.draw_rectangle(40, 100, 320, 200)
-  assert _transcript(scene) == "Shapes: red rectangle."
+  assert _transcript(scene) == "Shapes: red rectangle in the center."
 
 
 def test_a_shape_without_fill_is_named_by_its_outline():
@@ -186,7 +190,7 @@ def test_a_shape_without_fill_is_named_by_its_outline():
   scene.remove_fill_color()
   scene.set_stroke_color("blue")
   scene.draw_ellipse(0, 0, 10, 20)
-  assert _transcript(scene) == "Shapes: blue ellipse."
+  assert _transcript(scene) == "Shapes: blue ellipse in the top left."
 
 
 def test_an_open_shape_is_named_by_its_outline():
@@ -194,14 +198,14 @@ def test_an_open_shape_is_named_by_its_outline():
   scene.set_fill_color("red")
   scene.set_stroke_color("blue")
   scene.draw_shape([0, 0, 10, 10, 20, 0], False)
-  assert _transcript(scene) == "Shapes: blue open shape."
+  assert _transcript(scene) == "Shapes: blue open shape in the top left."
 
 
 def test_an_off_palette_color_takes_the_nearest_name():
   scene = Scene()
   scene.set_fill_color("#4c42cf")
   scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == "Shapes: indigo rectangle."
+  assert _transcript(scene) == "Shapes: indigo rectangle in the top left."
 
 
 def test_a_line_with_no_color_is_left_out():
@@ -223,7 +227,7 @@ def test_a_polygon_reports_its_number_of_sides():
   scene = Scene()
   scene.set_fill_color("lime")
   scene.draw_regular_polygon(1, 1, 6, 40)
-  assert _transcript(scene) == "Shapes: lime 6-sided polygon."
+  assert _transcript(scene) == "Shapes: lime 6-sided polygon in the top left."
 
 
 def test_a_note_names_the_instrument_and_pitch():
@@ -253,14 +257,14 @@ def test_a_sound_built_from_samples_reports_its_length():
 def test_an_image_drawn_in_code_has_no_name():
   scene = Scene()
   scene.draw_image(Image(8, 8), 0, 0, width=10, height=20)
-  assert _transcript(scene) == "Images: a picture made in code."
+  assert _transcript(scene) == "Images: a picture made with code in the top left."
 
 
 def test_repeated_shapes_are_counted_rather_than_listed():
   scene = Scene()
   for _ in range(12):
     scene.draw_rectangle(0, 0, 10, 10)
-  assert _transcript(scene) == "Shapes: 12 black rectangles."
+  assert _transcript(scene) == "Shapes, all black in the top left: 12 rectangles."
 
 
 def test_repeated_sounds_put_the_count_after_the_name():
@@ -289,3 +293,73 @@ def test_a_long_animation_is_cut_off():
   for _ in range(60):
     scene.pause(0.1)
   assert _transcript(scene).endswith("and 11 more frames.")
+
+
+# --- where a drawing sits ---------------------------------------------------
+
+
+@pytest.mark.parametrize("x, y, place", [
+  (10, 10, "in the top left"), (200, 10, "at the top"), (380, 10, "in the top right"),
+  (10, 200, "on the left"), (200, 200, "in the center"), (380, 200, "on the right"),
+  (10, 380, "in the bottom left"), (200, 380, "at the bottom"),
+  (380, 380, "in the bottom right"), (-500, -500, "off the stage"),
+  (400, 0, "off the stage"),
+])
+def test_a_drawing_is_named_by_its_third_of_the_stage(x, y, place):
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.draw_rectangle(x, y, 2, 2)
+  assert _transcript(scene) == f"Shapes: red rectangle {place}."
+
+
+def test_a_drawing_partly_off_the_stage_is_placed_by_what_shows():
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.draw_rectangle(-300, 150, 400, 100)
+  assert _transcript(scene) == "Shapes: red rectangle on the left."
+
+
+def test_text_is_placed_by_the_middle_of_its_words():
+  scene = Scene()
+  scene.draw_text("A long sentence that runs across the stage", 5, 200)
+  assert _transcript(scene).endswith(" in the center.")
+
+
+def test_a_line_is_placed_by_its_midpoint():
+  scene = Scene()
+  scene.set_stroke_color("red")
+  scene.draw_line(0, 0, 400, 400)
+  assert _transcript(scene) == "Shapes: red line in the center."
+
+
+# --- saying a shared thing once ---------------------------------------------
+
+
+# Each case follows a red ellipse in the top left with one more drawing.
+@pytest.mark.parametrize("color, method, corner, expected", [
+  ("blue", "draw_rectangle", 20,
+   "Shapes, all in the top left: red ellipse, blue rectangle."),
+  ("red", "draw_rectangle", 380,
+   "Shapes, all red: ellipse in the top left, rectangle in the bottom right."),
+  ("blue", "draw_rectangle", 380,
+   "Shapes: red ellipse in the top left, blue rectangle in the bottom right."),
+  # Circles stacked in one corner and circles spread apart are different pictures.
+  ("red", "draw_ellipse", 380,
+   "Shapes, all red: ellipse in the top left, ellipse in the bottom right."),
+])
+def test_only_what_every_drawing_shares_is_said_once(color, method, corner, expected):
+  scene = Scene()
+  scene.set_fill_color("red")
+  scene.draw_ellipse(0, 0, 10, 10)
+  scene.set_fill_color(color)
+  getattr(scene, method)(corner, corner, 10, 10)
+  assert _transcript(scene) == expected
+
+
+def test_the_same_image_in_one_place_is_counted():
+  scene = Scene()
+  for _ in range(3):
+    scene.draw_image(Image(8, 8), 0, 0, width=10, height=10)
+  assert _transcript(scene) == (
+    "Images, all in the top left: a picture made with code 3 times."
+  )

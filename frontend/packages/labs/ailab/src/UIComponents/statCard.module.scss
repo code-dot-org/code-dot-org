@@ -9,10 +9,8 @@
   background-color: var(--background-neutral-secondary);
 }
 
-.statLabel {
-  font-size: 12px;
+.statCard .statLabel {
   font-weight: 600;
-  line-height: 18px;
   white-space: nowrap;
   color: var(--text-neutral-quaternary);
 }
