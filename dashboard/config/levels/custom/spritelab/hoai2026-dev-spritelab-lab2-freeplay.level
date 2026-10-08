@@ -60,7 +60,31 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_setAsPlatformPlayer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_thePlayer"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_checkTouching",
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -77,14 +101,6 @@
             {
               "kind": "block",
               "type": "spritelab2_burst"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_setAsPlatformPlayer"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_thePlayer"
             },
             {
               "kind": "block",
@@ -105,22 +121,6 @@
             {
               "kind": "block",
               "type": "spritelab2_restartScene"
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_checkTouching",
-              "inputs": {
-                "SPRITE1": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "SPRITE2": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
             },
             {
               "kind": "block",

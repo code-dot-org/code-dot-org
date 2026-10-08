@@ -74,22 +74,23 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
 // default lineup appears only when the level doesn't mention the name.
 const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   {
-    // Building and playing a platformer: the composites, the world's feel, and
-    // reacting to the player reaching something.
+    // Building and playing a platformer. Gravity and zoom lead; the rest
+    // group by color: sprite blocks, the background, the event, then the
+    // light blue ones.
     name: 'Platform',
     types: [
       'spritelab2_setPlatformGravity',
       'spritelab2_setCameraZoom',
-      'gamelab_setBackgroundImageAs',
-      PLAY_SOUND_BLOCK_TYPE,
-      PLAY_MUSIC_BLOCK_TYPE,
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
       THE_PLAYER_BLOCK_TYPE,
-      RESTART_SCENE_BLOCK_TYPE,
       'spritelab2_makeSpriteAtGrid',
+      'gamelab_setBackgroundImageAs',
       'gamelab_checkTouching',
+      PLAY_SOUND_BLOCK_TYPE,
+      PLAY_MUSIC_BLOCK_TYPE,
+      RESTART_SCENE_BLOCK_TYPE,
       'gamelab_spriteSay',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
