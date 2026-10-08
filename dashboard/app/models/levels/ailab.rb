@@ -28,7 +28,6 @@
 class Ailab < Level
   serialized_attrs %w(
     start_sources
-    hide_share_and_remix
     is_project_level
     mode
     dynamic_instructions
@@ -146,6 +145,10 @@ class Ailab < Level
 
   def uses_lab2?
     JSONValue.value(uses_lab2) == true
+  end
+
+  def channel_backed?
+    super || uses_lab2?
   end
 
   def get_validations

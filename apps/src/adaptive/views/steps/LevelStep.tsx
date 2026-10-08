@@ -17,8 +17,11 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {buildTutorContext} from '../../ai/tutorContext';
+import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
+
+import {useStepInstructions} from './useStepInstructions';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
@@ -86,12 +89,31 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     defaultSources: EMPTY_SOURCES,
   });
 
-  const {pathway, checkpoint, statusMap} = usePathwayContext();
+  const {
+    pathway,
+    checkpoint,
+    statusMap,
+    stepContextMap,
+    updateStepContext,
+    aiContext,
+  } = usePathwayContext();
   // Keyed on the project's strings, not the channel, which changes on every save.
-  const projectName = step.project ? channel?.name : undefined;
-  const projectDescription = step.project
-    ? channel?.labConfig?.adaptive?.description
-    : undefined;
+  const {name: projectName, description: projectDescription} =
+    projectInfoFromChannel(step.project ? channel : undefined);
+  // Instructions: the step's own or the level's, or for a project step with
+  // a prompt, generated around the student's project. The lab waits until
+  // they are resolved, so it never mounts with text that is about to change.
+  const {instructions, isResolved} = useStepInstructions({
+    pathway,
+    checkpoint,
+    step,
+    projectInfo: {name: projectName, description: projectDescription},
+    sources: currentSources,
+    authoredInstructions: step.instructions ?? levelProperties.longInstructions,
+    stepContext: stepContextMap[step.id],
+    updateStepContext,
+    aichatContext: aiContext,
+  });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
   // and remix, and pathway-specific tutor context that gets appendd to the level
@@ -110,7 +132,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     return {
       ...levelProperties,
       hideShareAndRemix: true,
-      longInstructions: step.instructions ?? levelProperties.longInstructions,
+      longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
     };
   }, [
@@ -121,6 +143,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     levelProperties,
     projectName,
     projectDescription,
+    instructions,
   ]);
 
   // The lab saves through the registry, so the manager must be registered
@@ -151,7 +174,15 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   const initialSources =
     currentSources === EMPTY_SOURCES ? undefined : currentSources;
 
-  const ready = currentSources !== undefined && (!projectManager || registered);
+  const ready =
+    currentSources !== undefined &&
+    (!projectManager || registered) &&
+    isResolved;
+  // Resolving instructions can take a model call; say so instead of "slow".
+  const loadingText =
+    currentSources !== undefined && !isResolved
+      ? 'Preparing your workspace...'
+      : undefined;
   return (
     <div className={styles.levelHost}>
       {ready ? (
@@ -163,7 +194,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
           />
         </Suspense>
       ) : (
-        <Loading isLoading />
+        <Loading isLoading loadingText={loadingText} />
       )}
     </div>
   );

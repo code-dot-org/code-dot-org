@@ -46,6 +46,18 @@ export async function getChallengeResponse(
   return challengeResponseDetailValidator(raw as Record<string, unknown>);
 }
 
+export async function setApproved(
+  transport: Transport,
+  responseId: number,
+  approved: boolean,
+): Promise<void> {
+  await transport.request<unknown>({
+    method: 'PATCH',
+    url: `/challenge_responses/${responseId}/approve`,
+    body: {approved},
+  });
+}
+
 // Both reaction endpoints return the response's full, updated tallies.
 const reactionsFromBody = (body: unknown): Reaction[] =>
   parseReactions((body as {reactions?: unknown} | null)?.reactions);

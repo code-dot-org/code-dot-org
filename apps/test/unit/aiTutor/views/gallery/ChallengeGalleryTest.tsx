@@ -6,6 +6,7 @@ import {
   TutorGalleryData,
 } from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -42,6 +43,7 @@ const stubRequests = (responses: Record<string, unknown>) =>
 
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
+  is_teacher: false,
   units: [
     {id: 100, name: 'Problem Solving with AI', position: 1, link: '/s/ai-1'},
     {
@@ -57,6 +59,11 @@ const galleryData: TutorGalleryData = {
   ],
 };
 
+const teacherGalleryData: TutorGalleryData = {
+  ...galleryData,
+  is_teacher: true,
+};
+
 const baseResponse: Omit<ChallengeResponse, 'id' | 'user_name' | 'assets'> = {
   challenge_id: 1,
   user_id: 99,
@@ -67,6 +74,7 @@ const baseResponse: Omit<ChallengeResponse, 'id' | 'user_name' | 'assets'> = {
   student_feedback: null,
   evaluation_status: null,
   is_final: true,
+  approved: false,
   created_at: '2026-08-10T12:00:00Z',
   reactions: [],
 };
@@ -278,6 +286,70 @@ describe('ChallengeGallery', () => {
     expect(window.location.search).toBe('');
     await waitFor(() =>
       expect(screen.getByText('Extension Activities')).toBeInTheDocument()
+    );
+  });
+
+  it('shows the teacher callout for teachers and hides it from students', async () => {
+    stubFetches([]);
+
+    const {rerender} = render(
+      <ChallengeGallery tutorGalleryData={teacherGalleryData} />
+    );
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(/By default, students can't see each other's projects/)
+      ).toBeInTheDocument()
+    );
+
+    rerender(<ChallengeGallery tutorGalleryData={galleryData} />);
+
+    expect(
+      screen.queryByText(/By default, students can't see each other's projects/)
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows the approval toggle for teachers and hides it from students', async () => {
+    stubFetches([videoResponse]);
+
+    const {rerender} = render(
+      <ChallengeGallery tutorGalleryData={teacherGalleryData} />
+    );
+
+    await waitFor(() =>
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+    );
+    expect(
+      screen.getByRole('checkbox', {name: /Visible for students/})
+    ).toBeInTheDocument();
+
+    rerender(<ChallengeGallery tutorGalleryData={galleryData} />);
+
+    expect(
+      screen.queryByRole('checkbox', {name: /Visible for students/})
+    ).not.toBeInTheDocument();
+  });
+
+  it('calls the approve endpoint when a teacher toggles a card', async () => {
+    mockRequest.mockResolvedValue({});
+    stubFetches([videoResponse]);
+
+    render(<ChallengeGallery tutorGalleryData={teacherGalleryData} />);
+
+    await waitFor(() =>
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+    );
+
+    await userEvent.click(
+      screen.getByRole('checkbox', {name: /Visible for students/})
+    );
+
+    await waitFor(() =>
+      expect(mockRequest).toHaveBeenCalledWith({
+        method: 'PATCH',
+        url: '/challenge_responses/7/approve',
+        body: {approved: true},
+      })
     );
   });
 

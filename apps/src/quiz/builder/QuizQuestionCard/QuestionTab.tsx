@@ -21,6 +21,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
       name="questionName"
       label="Internal name"
       size="m"
+      className={styles.fullWidthField}
       value={draft.questionName}
       onChange={e => onChange({...draft, questionName: e.target.value})}
       disabled={disabled}
@@ -29,6 +30,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
       name="questionTitle"
       label="Question title"
       size="m"
+      className={styles.fullWidthField}
       value={draft.questionTitle}
       onChange={e => onChange({...draft, questionTitle: e.target.value})}
       disabled={disabled}

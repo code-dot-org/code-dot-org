@@ -98,7 +98,8 @@
           "title": "Prompt for your project",
           "kind": "level",
           "level": "adaptive-web-project-prompting",
-          "project": true
+          "project": true,
+          "instructionsPrompt": "Have the student prompt the AI to describe one specific change to their website, such as the overall basic layout or adding/updating one specific component, based on their project title and description. Pick a change that builds on what the page already has rather than redoing it, and name the actual element or text it builds on."
         }
       ]
     },
@@ -132,7 +133,7 @@
           "kind": "level",
           "level": "adaptive-web-project-structure",
           "project": true,
-          "instructions": "Ask for a header with your site's name and a footer with a way to contact you. Point the AI at the `<header>` and `<footer>` elements already on the page."
+          "instructionsPrompt": "Have the student prompt the AI to add or update one specific HTML element on the page (e.g. `<header>`, `<main>`, `<footer>`). Instruct them to refer to the specific element by name. Pick a change that builds on what the page already has rather than redoing it."
         }
       ]
     }
