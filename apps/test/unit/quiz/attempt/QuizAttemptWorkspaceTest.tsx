@@ -1031,6 +1031,28 @@ describe('QuizAttemptWorkspace', () => {
       ],
     };
 
+    it("says the student's quiz is loading while the attempt loads", () => {
+      renderWorkspace({
+        hookState: {attempt: undefined, isLoading: true},
+        viewAsUserId: 99,
+      });
+
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent("Loading Aisha Khan's quiz...");
+      expect(alert).toHaveAttribute('data-type', 'info');
+    });
+
+    it('still shows the read-only alert when the attempt failed to load', () => {
+      renderWorkspace({
+        hookState: {attempt: undefined, isLoading: false, error: 'Oops'},
+        viewAsUserId: 99,
+      });
+
+      expect(screen.getByRole('note')).toHaveTextContent(
+        "You are viewing Aisha Khan's work in read only mode."
+      );
+    });
+
     it("fetches the student's attempt rather than the teacher's own", () => {
       renderWorkspace({viewAsUserId: 99});
       expect(mockUseQuizAttempt).toHaveBeenCalledWith(

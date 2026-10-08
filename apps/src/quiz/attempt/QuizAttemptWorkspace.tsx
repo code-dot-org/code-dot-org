@@ -33,8 +33,7 @@ export interface QuizAttemptWorkspaceProps {
   levelName: string;
   // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
-  // Set when a teacher picks a student in the teacher panel; the view is
-  // then a read-only look at that student's latest attempt.
+  // Set when a teacher picks a student in the teacher panel to view their work.
   viewAsUserId?: number;
   quizQuestions: QuizQuestionSummary[];
   allowMultipleAttempts?: boolean;
@@ -292,8 +291,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
-  // A teacher's view relies on the server to withhold the answer key from
-  // unverified teachers, so it doesn't apply the quiz's own setting.
   const renderQuestionResults = (results: QuizQuestionResult[]) =>
     resultPages.map(
       (
@@ -337,11 +334,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   return (
     <div className={styles.attemptWorkspace}>
-      {isViewingStudent && attempt !== undefined && (
+      {isViewingStudent && (
         <TeacherViewingStudentProjectAlert
           inWorkspaceContainer
           getAlertText={studentName =>
-            getTeacherViewAlertText(attempt, studentName)
+            getTeacherViewAlertText(attempt, isLoading, studentName)
           }
           type={attempt && !attempt.submittedAt ? 'warning' : 'info'}
         />
@@ -466,10 +463,20 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   );
 };
 
+// attempt is undefined while loading, after a failed load, and on a
+// standalone level; only the first is reported as loading.
 function getTeacherViewAlertText(
-  attempt: QuizAttemptData | null,
+  attempt: QuizAttemptData | null | undefined,
+  isLoading: boolean,
   studentName: string | undefined
 ): React.ReactElement {
+  if (attempt === undefined && isLoading) {
+    return (
+      <>
+        Loading <strong>{studentName ?? 'student'}'s</strong> quiz...
+      </>
+    );
+  }
   if (attempt === null) {
     return (
       <>
@@ -478,7 +485,7 @@ function getTeacherViewAlertText(
       </>
     );
   }
-  if (!attempt.submittedAt) {
+  if (attempt && !attempt.submittedAt) {
     return (
       <>
         <strong>{studentName ?? 'This student'}</strong> is still working on
