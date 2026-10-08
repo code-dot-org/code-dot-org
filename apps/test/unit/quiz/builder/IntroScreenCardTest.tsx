@@ -49,6 +49,9 @@ describe('IntroScreenCard', () => {
     await waitFor(() =>
       expect(screen.queryByRole('textbox')).not.toBeInTheDocument()
     );
+    expect(
+      screen.getByRole('button', {name: 'Edit intro screen'})
+    ).toHaveFocus();
   });
 
   it('discards unsaved changes', () => {

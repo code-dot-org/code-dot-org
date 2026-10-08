@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import {Button, IconButton, Tooltip, Typography} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 
@@ -31,6 +31,7 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
   const [error, setError] = useState<string | null>(null);
   const isBusy = isSaving || isRemoving;
   const isDirty = draft !== customIntroText;
+  const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setDraft(customIntroText);
@@ -53,6 +54,8 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
     setIsSaving(false);
     if (ok) {
       setIsExpanded(false);
+      // Collapsing unmounts the focused Save button.
+      toggleButtonRef.current?.focus();
     }
   };
 
@@ -95,9 +98,11 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
           </Tooltip>
         )}
         <IconButton
+          ref={toggleButtonRef}
           aria-label={
             isExpanded ? 'Collapse intro screen' : 'Edit intro screen'
           }
+          aria-expanded={isExpanded}
           size="extraSmall"
           variant="outlined"
           color="secondary"
