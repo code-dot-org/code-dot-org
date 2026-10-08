@@ -154,7 +154,7 @@ export class JsonVideo extends HTMLElement {
     document.addEventListener('fullscreenchange', this._onFullscreenChange);
     document.addEventListener(
       'webkitfullscreenchange',
-      this._onFullscreenChange
+      this._onFullscreenChange,
     );
 
     this.shadowRoot.querySelector('#video-container').onclick = e => {
@@ -163,7 +163,8 @@ export class JsonVideo extends HTMLElement {
         e.target.id === 'scene-renderer' ||
         e.target.id === 'poster'
       ) {
-        this.paused ? this.play() : this.pause();
+        if (this.paused) this.play();
+        else this.pause();
       }
     };
 
@@ -257,7 +258,7 @@ export class JsonVideo extends HTMLElement {
           // Throw so we catch it below and simulate a network error
           throw new SimulatedMediaError(
             2,
-            `Network response was not ok: ${response.status}`
+            `Network response was not ok: ${response.status}`,
           );
         }
         data = await response.json();
@@ -326,7 +327,7 @@ export class JsonVideo extends HTMLElement {
     let idx = this._processedScenes.findIndex(
       s =>
         this._currentTimeMs >= s.startTimeMs &&
-        this._currentTimeMs < s.endTimeMs
+        this._currentTimeMs < s.endTimeMs,
     );
     if (idx === -1 && this._currentTimeMs >= this._totalDurationMs)
       idx = this._processedScenes.length - 1;
@@ -342,7 +343,9 @@ export class JsonVideo extends HTMLElement {
       } else {
         try {
           this._mainAudio.currentTime = seekSec;
-        } catch (e) {}
+        } catch {
+          // Some browsers throw until the audio has metadata.
+        }
         if (this._isPlaying) this._mainAudio.play().catch(() => {});
         this._mainAudioPausedByScene = false;
       }
@@ -363,7 +366,7 @@ export class JsonVideo extends HTMLElement {
       return;
     }
     const newIdx = this._processedScenes.findIndex(
-      s => this._currentTimeMs < s.endTimeMs
+      s => this._currentTimeMs < s.endTimeMs,
     );
     if (newIdx !== this._currentSceneIndex) this._handleSceneTransition(newIdx);
     this.dispatchEvent(new Event('timeupdate'));
@@ -376,7 +379,7 @@ export class JsonVideo extends HTMLElement {
     this.ui.curTime.textContent = this._formatTime(this._currentTimeMs);
     this.ui.progress.style.setProperty(
       '--progress-value',
-      this.ui.progress.value + '%'
+      this.ui.progress.value + '%',
     );
   }
 
@@ -402,7 +405,7 @@ export class JsonVideo extends HTMLElement {
     document.removeEventListener('fullscreenchange', this._onFullscreenChange);
     document.removeEventListener(
       'webkitfullscreenchange',
-      this._onFullscreenChange
+      this._onFullscreenChange,
     );
   }
 
@@ -414,7 +417,7 @@ export class JsonVideo extends HTMLElement {
           ? scene.speech
             ? Math.max(
                 2000,
-                scene.speech.split(/\s+/).filter(w => w.length).length * 350
+                scene.speech.split(/\s+/).filter(w => w.length).length * 350,
               )
             : 2000
           : parseFloat(scene.duration) * 1000;
@@ -475,7 +478,9 @@ export class JsonVideo extends HTMLElement {
       if (Math.abs(this._sceneAudio.currentTime - sceneTime) > 0.2) {
         this._sceneAudio.currentTime = Math.max(0, sceneTime);
       }
-    } catch (e) {}
+    } catch {
+      // Some browsers throw until the audio has metadata.
+    }
 
     if (this._isPlaying) {
       this._sceneAudio.play().catch(() => {});
@@ -508,7 +513,7 @@ export class JsonVideo extends HTMLElement {
             </html>
         `,
         ],
-        {type: 'text/html'}
+        {type: 'text/html'},
       );
 
       this._currentBlobUrl = URL.createObjectURL(blob);
@@ -520,7 +525,7 @@ export class JsonVideo extends HTMLElement {
     this.ccText.textContent = scene.speech || '';
     this.ccOverlay.classList.toggle(
       'hidden',
-      !(this._showCaptions && scene.speech)
+      !(this._showCaptions && scene.speech),
     );
 
     this._syncSceneAudio();

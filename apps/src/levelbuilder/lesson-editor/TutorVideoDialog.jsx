@@ -7,7 +7,7 @@ import React, {useEffect, useState} from 'react';
 
 // Importing the element registers the <json-video> custom element used by the
 // preview player below.
-import '@cdo/apps/jsonVideo/jsonVideoElement';
+import '@code-dot-org/json-video';
 import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 
 import LessonEditorDialog from './LessonEditorDialog';
