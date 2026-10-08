@@ -1,11 +1,5 @@
-## Background and Intent
 <!--
-  What is the background, motivation, and context for this update? Include links to any design documents, specs, tickets, or other external sources that give context for the change. What was the impetus behind this change? How was the decision made to move forward? What is the intended outcome?
--->
-
-## Overview of Changes
-<!--
-  What functionality is changing from an end user perspective? What conceptually is changing in this PR, and why? Include relevant portions of the technical design needed to understand the changes along with screenshots, videos, or before/after comparisons for UI changes. Don't explain how it works when that's already clear.
+  Summarize the changes in this pull request. What is the background, motivation, and context for this update? What functionality is changing from an end user perspective? Include links to any design documents, specs, tickets, or other external sources that give context for the change along with screenshots, videos, or before/after comparisons for UI changes.
 -->
 
 ## Validation
