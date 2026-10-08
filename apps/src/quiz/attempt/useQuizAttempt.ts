@@ -41,6 +41,13 @@ export default function useQuizAttempt({
   );
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // Which level/unit/user the attempt state above was loaded for. On a switch, the
+  // first render runs before effect below clears state so if stateKey doesn't match
+  // current args, report loading instead.
+  const argsKey = `${levelId}:${unitId}:${userId}`;
+  const [stateKey, setStateKey] = useState<string | null>(null);
+  const isStateCurrent = stateKey === argsKey;
+  const currentAttempt = isStateCurrent ? attempt : undefined;
 
   // Quiz views stay mounted across same-lab navigation, so a late
   // beginAttempt/finishAttempt response can land after level/unit have changed.
@@ -49,6 +56,7 @@ export default function useQuizAttempt({
 
   useEffect(() => {
     currentAttemptKeyRef.current = `${levelId}:${unitId}:${userId}`;
+    setStateKey(`${levelId}:${unitId}:${userId}`);
     setAttempt(undefined);
     setError(null);
     if (!unitId) {
@@ -112,7 +120,7 @@ export default function useQuizAttempt({
 
   const submitQuestionResponse = useCallback(
     async (quizQuestionId: number, responseData: Record<string, unknown>) => {
-      if (!attempt) {
+      if (!currentAttempt) {
         return;
       }
       setError(null);
@@ -120,7 +128,7 @@ export default function useQuizAttempt({
         await HttpClient.post(
           '/quiz_question_responses',
           JSON.stringify({
-            quizAttemptId: attempt.id,
+            quizAttemptId: currentAttempt.id,
             quizQuestionId,
             responseData,
           }),
@@ -132,19 +140,19 @@ export default function useQuizAttempt({
         throw postError;
       }
     },
-    [attempt]
+    [currentAttempt]
   );
 
   const finishAttempt = useCallback(
     async (responsesByQuestionId: Record<number, Record<string, unknown>>) => {
-      if (!attempt) {
+      if (!currentAttempt) {
         throw new Error('No attempt to finalize.');
       }
       const requestKey = `${levelId}:${unitId}:${userId}`;
       setError(null);
       try {
         const response = await HttpClient.put(
-          `/quiz_attempts/${attempt.id}`,
+          `/quiz_attempts/${currentAttempt.id}`,
           JSON.stringify({responses: responsesByQuestionId}),
           true,
           {'Content-Type': 'application/json'}
@@ -162,13 +170,13 @@ export default function useQuizAttempt({
         throw putError;
       }
     },
-    [attempt, levelId, unitId, userId]
+    [currentAttempt, levelId, unitId, userId]
   );
 
   return {
-    attempt,
-    isLoading,
-    error,
+    attempt: currentAttempt,
+    isLoading: isStateCurrent ? isLoading : !!unitId,
+    error: isStateCurrent ? error : null,
     beginAttempt,
     submitQuestionResponse,
     finishAttempt,
