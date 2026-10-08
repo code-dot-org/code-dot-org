@@ -39,12 +39,9 @@ import {
   usesSimpleColors,
   type WorldLevelProperties,
 } from '../levelData';
-import {refreshFor} from '../library/refreshRegistries';
 import {useMaybeProgression} from '../progression/progressionContext';
 import {shelvedToolbox} from '../progression/toolboxShelf';
-import {removeRule, type HeldRule} from '../rules/removeRule';
 import {resolveRuleContents} from '../rules/ruleReference';
-import {RulesInPlayDialog} from '../rules/RulesInPlayDialog';
 import {projectImageSizes} from '../runtime/imageSize';
 import {
   filePath,
@@ -109,10 +106,8 @@ import {
   type MemberKey,
 } from './renameRule';
 import {revealInToolbox, type ToolboxHost} from './revealInToolbox';
-import {requestRuleImport} from './ruleImport';
 import {designedName, parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
-import {setRulesConfigHandler} from './rulesConfig';
 import {blockOwners, rulesOutOfScope} from './rulesInScope';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
@@ -372,61 +367,6 @@ export const BlocklyFileEditor = ({
   // and then vanished, undone by the very edit that named it.
   const onChangeRef = useRef(onChange);
   onChangeRef.current = onChange;
-
-  // The rules panel: what a world holds, opened from the world block. Not an
-  // importer — it is not choosing a value for anything — which is why it is
-  // the one dialog still owned here now that the shelves are the lab's
-  // (`library/LibraryImports`).
-  const [configuringRules, setConfiguringRules] = useState(false);
-  const resolveRulesConfig = useRef<(() => void) | null>(null);
-
-  useEffect(() => {
-    // The rules panel, from the world block. It resolves with nothing — what it
-    // changes it changes in the project, and the block only wants to know when
-    // it closed so it can count again (blockly/rulesConfig).
-    //
-    // The only seam left here. The five IMPORT shelves are the lab's now
-    // (`library/LibraryImports`): they are offered from the file menus as well,
-    // which are on screen whatever is open, and a dialog owned by one editor
-    // can only be opened while that editor is mounted.
-    setRulesConfigHandler(
-      () =>
-        new Promise<void>(resolve => {
-          resolveRulesConfig.current = resolve;
-          setConfiguringRules(true);
-        }),
-    );
-    // Cleared on unmount so a field on a disposed workspace cannot open a
-    // dialog this editor no longer owns.
-    return () => {
-      setRulesConfigHandler(null);
-    };
-  }, []);
-
-  /** Close the panel, and let the block that opened it count again. */
-  const finishRulesConfig = useCallback(() => {
-    setConfiguringRules(false);
-    resolveRulesConfig.current?.();
-    resolveRulesConfig.current = null;
-  }, []);
-
-  /**
-   * Delete a rule's file, which is how a world stops having that mechanic.
-   *
-   * The registries are refreshed in the same breath as the write, exactly as an
-   * import does: every dropdown in the workspace is built from them, and a
-   * `use trait` still offering a deleted rule's traits would be offering
-   * something nothing can provide.
-   */
-  const handleRuleRemove = useCallback(
-    (rule: HeldRule) => {
-      const sources = sourcesRef.current;
-      const source = removeRule(sources.source, rule);
-      updateSources({...sources, source});
-      refreshFor(source);
-    },
-    [updateSources],
-  );
 
   /**
    * The `set sprite` picker: one palette of everything the project can draw.
@@ -1681,29 +1621,6 @@ export const BlocklyFileEditor = ({
 
   return (
     <div className={styles.editor}>
-      {configuringRules && (
-        <RulesInPlayDialog
-          source={currentSources.source}
-          editable={!isReadOnly}
-          onAdd={async () => {
-            // Hand over to the shelf and come back — one dialog on screen at a
-            // time. The panel's promise stays unresolved across the handover,
-            // so the block that opened it still counts once at the end of the
-            // whole errand.
-            //
-            // AWAITED, where this used to set a flag and let the shelf's own
-            // finisher put the panel back. The shelf is the lab's now
-            // (`library/LibraryImports`) and answers with a promise, so
-            // "come back afterwards" is the line after the await rather than a
-            // ref two components share.
-            setConfiguringRules(false);
-            await requestRuleImport();
-            setConfiguringRules(true);
-          }}
-          onRemove={handleRuleRemove}
-          onClose={finishRulesConfig}
-        />
-      )}
       {pickingSprite && (
         <SpritePickerDialog
           sprites={images}

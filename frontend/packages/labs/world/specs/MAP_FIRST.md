@@ -533,6 +533,15 @@ value back takes the row away. specs/WORLD_RULE_FIELDS_PLAN.md.) Every other
 map's window shows the same on empty selection, minus the laws: a level has
 a camera, layers and a background of its own.
 
+THE WORLD BLOCK'S JOBS, moving out of the code view one at a time. The aim
+is that a world is made in this window and `define world` need not be
+opened for anything it holds. Built so far: the name; a rule's property as
+a field; the background image (the back layer's) and the background color
+(the `set background color` row), specs/LAYERS_PLAN.md; and the rules in
+play — a button counting them as the block does, opening the same panel,
+which is the lab's now rather than the code editor's so that it can be
+opened while no code is (`library/LibraryImports`, `blockly/rulesConfig`).
+
 BUILT for the name and the properties (`mapEditor/WorldInspector`): a
 number, string or boolean is a field, a point is two, and a vector or an
 angle is the block's own dial with the block field's editor behind it —

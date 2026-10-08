@@ -43,6 +43,7 @@ import {
   projectMapActorTypes,
   projectOwnMetas,
   projectRuleMetas,
+  projectRuleOptions,
   projectStyleFileOptions,
   projectWorldOptions,
 } from '../blockly/projectModules';
@@ -551,6 +552,8 @@ export const MapEditor = ({
                   ),
             );
           },
+          // …and how many rules it holds, for the button that opens them.
+          ruleCount: projectRuleOptions(files).length,
           // …and the color behind the background, a row in the world's code.
           onBackgroundColor: (color: string) =>
             writeFile(

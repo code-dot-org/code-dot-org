@@ -19,13 +19,15 @@
 // changed — this is the same registration, one level up, where it is always
 // registered.
 //
-// WHAT DID NOT MOVE, and why: the sprite PICKER and the rules panel. Neither
-// is an import. The picker chooses a value for a field and can only be opened
-// from a block; the panel lists what a world holds and is opened from the
-// world block. Both still live in the editor, and both reach these shelves the
-// way anything else does — by asking, and awaiting what comes back. That
-// replaced a pair of shared refs with a promise, which is what the seam was
-// for.
+// WHAT DID NOT MOVE, and why: the sprite PICKER. It is not an import: it
+// chooses a value for a field and can only be opened from a block, so it
+// still lives in the editor, and reaches these shelves the way anything else
+// does — by asking, and awaiting what comes back.
+//
+// THE RULES PANEL MOVED HERE TOO, later and for the same reason the shelves
+// did: it stopped having one caller. The `define world` block opens it, and
+// so does the map editor's World inspector, which is on screen while no
+// Blockly editor is mounted at all (`blockly/rulesConfig`).
 
 import {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -58,6 +60,10 @@ import type {
 } from '../appearance/stock';
 import {setEffectImportHandler} from '../blockly/effectImport';
 import {setRuleImportHandler} from '../blockly/ruleImport';
+import {
+  setRulesConfigHandler,
+  type RulesConfigRequest,
+} from '../blockly/rulesConfig';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
@@ -67,6 +73,8 @@ import {setMapImportHandler} from '../maps/mapImport';
 import type {StockMap} from '../maps/stock';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
+import {removeRule, type HeldRule} from '../rules/removeRule';
+import {RulesInPlayDialog} from '../rules/RulesInPlayDialog';
 import type {StockRule} from '../rules/stock';
 import {fetchStockSound} from '../sound/fetchStockSound';
 import {importStockSound} from '../sound/importStockSound';
@@ -222,8 +230,64 @@ export const LibraryImports = () => {
     finish(undefined);
   }, [finish]);
 
+  // THE RULES PANEL: what a world holds. Not a shelf — it chooses no value,
+  // and resolves with nothing when it closes, so that the block that opened
+  // it can count again (`blockly/rulesConfig`).
+  const [rules, setRules] = useState<RulesConfigRequest | null>(null);
+  const resolveRules = useRef<(() => void) | null>(null);
+  useEffect(() => {
+    setRulesConfigHandler(
+      request =>
+        new Promise<void>(settle => {
+          resolveRules.current = settle;
+          setRules(request);
+        }),
+    );
+    return () => setRulesConfigHandler(null);
+  }, []);
+  const finishRules = useCallback(() => {
+    setRules(null);
+    resolveRules.current?.();
+    resolveRules.current = null;
+  }, []);
+  /**
+   * Delete a rule's file, which is how a world stops having that mechanic.
+   *
+   * The registries are refreshed in the same breath as the write, exactly as
+   * an import does: every dropdown is built from them, and a `use trait`
+   * still offering a deleted rule's traits would be offering something
+   * nothing can provide.
+   */
+  const removeHeld = useCallback(
+    (rule: HeldRule) => {
+      const sources = sourcesRef.current;
+      const source = removeRule(sources.source, rule);
+      updateSources({...sources, source});
+      refreshFor(source);
+    },
+    [updateSources],
+  );
+
   return (
     <>
+      {rules && (
+        <RulesInPlayDialog
+          source={sourcesRef.current.source}
+          editable={rules.editable}
+          onAdd={async () => {
+            // Hand over to the shelf and come back — one dialog on screen
+            // at a time. The panel's promise stays unresolved across the
+            // handover, so whatever opened it counts once, at the end of the
+            // whole errand.
+            const held = rules;
+            setRules(null);
+            await open('rule');
+            setRules(held);
+          }}
+          onRemove={removeHeld}
+          onClose={finishRules}
+        />
+      )}
       {shelf === 'effect' && (
         <ImportEffectDialog
           onImport={(effect: StockEffect) => {

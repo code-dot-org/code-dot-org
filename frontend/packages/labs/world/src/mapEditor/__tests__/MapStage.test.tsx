@@ -26,6 +26,7 @@ import {
   vi,
 } from 'vitest';
 
+import {setRulesConfigHandler} from '../../blockly/rulesConfig';
 import {reveal} from '../../callouts/reveal';
 import type {ActorSchema} from '../../runtime/messages';
 import type {MapDoc, Vec} from '../mapModel';
@@ -1006,6 +1007,22 @@ describe('a level, with nothing selected', () => {
     fireEvent.change(field, {target: {value: '#7ec8e3'}});
     fireEvent.blur(field);
     expect(onBackgroundColor).toHaveBeenCalledWith('#7ec8e3');
+  });
+
+  it('opens the rules a world holds, as its block’s button does', () => {
+    const asked = vi.fn(() => Promise.resolve());
+    setRulesConfigHandler(asked);
+    const main = mount(doc(), {
+      world: {
+        header: {name: 'W', properties: []},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+        ruleCount: 11,
+      },
+    });
+    fireEvent.click(main.getByRole('button', {name: /Rules: 11 rules/}));
+    expect(asked).toHaveBeenCalledWith({editable: true});
+    setRulesConfigHandler(null);
   });
 
   it('never offers that on a world’s main map, which has nothing under it', () => {

@@ -1,4 +1,6 @@
-// The seam between the world block's rules button and the dialog behind it.
+// The seam between a world's rules buttons and the dialog behind them: the
+// one on the `define world` block, and the one in the map editor's World
+// inspector.
 //
 // `ruleImport`'s shape exactly, and for the same reason: a Blockly field cannot
 // open a React dialog or write a file, so the React layer registers a handler
@@ -11,15 +13,19 @@
 // PROJECT, not to the block that opened it. The block only wants to know when
 // the panel closed, so it can count again.
 
+/** What the panel is opened for: whether it may change anything. */
+export interface RulesConfigRequest {
+  editable: boolean;
+}
+
 /** Opens the rules panel; resolves when it is dismissed. */
-export type RulesConfigHandler = () => Promise<void>;
+export type RulesConfigHandler = (request: RulesConfigRequest) => Promise<void>;
 
 let handler: RulesConfigHandler | null = null;
 
 /**
- * Register the panel opener. Called by the Blockly editor while it is mounted,
- * and with `null` on unmount so a field on a disposed workspace cannot open a
- * panel this editor no longer owns.
+ * Register the panel opener. Called by the lab's dialog host while it is
+ * mounted (`library/LibraryImports`), and with `null` on unmount.
  */
 export function setRulesConfigHandler(next: RulesConfigHandler | null): void {
   handler = next;
@@ -29,6 +35,8 @@ export function setRulesConfigHandler(next: RulesConfigHandler | null): void {
  * Ask for the panel. Resolves immediately when no handler is registered, which
  * is the case in the headless code generator and in tests.
  */
-export function requestRulesConfig(): Promise<void> {
-  return handler ? handler() : Promise.resolve();
+export function requestRulesConfig(
+  request: RulesConfigRequest = {editable: true},
+): Promise<void> {
+  return handler ? handler(request) : Promise.resolve();
 }

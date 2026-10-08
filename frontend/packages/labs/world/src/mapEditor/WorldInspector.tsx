@@ -1,19 +1,22 @@
 // The inspector with nothing selected, on a world's map: the world itself.
 //
-// Its name, its background image and color, and the starting value of each
-// property its `define property` rows declare — a field per row, as a placement's own properties are fields
+// Its name, the rules it holds, its background image and color, and the
+// starting value of each property its `define property` rows declare — a field per row, as a placement's own properties are fields
 // in its inspector (specs/MAP_FIRST.md, "Where the world's properties are
 // set"). What is written is the row's DEFAULT (`worldProperties`); the `set`
 // block remains for a value that changes while the game runs.
 
-import {Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
 import {useEffect, useRef, useState} from 'react';
 
 import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
 
+import {countText} from '../blockly/extensions/rulesButton';
+import {requestRulesConfig} from '../blockly/rulesConfig';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import fields from '../formFields.module.css';
 
@@ -64,6 +67,11 @@ export interface WorldInspectorProps {
   onBackground?: (change: Partial<MapSlotDoc>) => void;
   /** …and the world's background color, a row in its code. */
   onBackgroundColor?: (color: string) => void;
+  /**
+   * How many rules the project holds — what the `define world` block's
+   * button counts — for the button here that opens the same panel.
+   */
+  ruleCount?: number;
   isReadOnly: boolean;
 }
 
@@ -87,6 +95,7 @@ export const WorldInspector = ({
   backgrounds = [],
   onBackground,
   onBackgroundColor,
+  ruleCount,
   isReadOnly,
 }: WorldInspectorProps) => {
   // What is being typed, committed on blur or Enter as a placement's fields
@@ -292,6 +301,24 @@ export const WorldInspector = ({
         onBlur={commitName}
         onKeyDown={blurOnEnter}
       />
+      {ruleCount !== undefined && (
+        // THE RULES IN PLAY, as the `define world` block's button shows them
+        // and opening the same panel (`blockly/rulesConfig`): adding a rule
+        // and taking one away are things a world is made of, and should not
+        // need its code open.
+        <FormFieldWrapper label="Rules" size="s">
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
+            data-callout="world.rules"
+            aria-label={`Rules: ${countText(ruleCount)}. Add or remove rules.`}
+            onClick={() => void requestRulesConfig({editable: !isReadOnly})}
+          >
+            {`${countText(ruleCount)}…`}
+          </Button>
+        </FormFieldWrapper>
+      )}
       {own.length > 0 && (
         <div className={styles.inspectorGroup}>{own.map(renderField)}</div>
       )}

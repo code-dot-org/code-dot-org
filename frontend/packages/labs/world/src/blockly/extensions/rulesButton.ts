@@ -70,7 +70,10 @@ function addFields(block: Block): void {
         // React dialog and Blockly is still inside its own gesture and focus
         // handling for the press (the same care the open button takes).
         setTimeout(() => {
-          void requestRulesConfig().then(() => syncCount(block));
+          void requestRulesConfig({
+            editable: !(block.workspace as {options?: {readOnly?: boolean}})
+              .options?.readOnly,
+          }).then(() => syncCount(block));
         }, 0);
       },
       // Reading which rules are in play is reading, and a read-only workspace
