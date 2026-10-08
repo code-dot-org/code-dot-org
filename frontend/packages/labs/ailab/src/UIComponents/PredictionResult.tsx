@@ -15,6 +15,7 @@ import {
 
 import TraceStepper from './TraceStepper';
 
+import appStyles from '../app.module.scss';
 import styles from './predictionResult.module.scss';
 
 const PredictionResult = () => {
@@ -23,10 +24,7 @@ const PredictionResult = () => {
   const predictedLabel = useAppSelector(getConvertedPredictedLabel);
   const trace = useAppSelector(getPredictionTrace);
   const currentStep = useAppSelector(getPredictionStep);
-
-  if (predictedLabel === undefined) {
-    return null;
-  }
+  const chosenStep = useAppSelector(state => state.predictionStep);
 
   const valueText = (value: string | number): string =>
     typeof value === 'number'
@@ -43,7 +41,8 @@ const PredictionResult = () => {
     </>
   );
 
-  const predictionText = valueText(predictedLabel);
+  const hasPrediction = predictedLabel !== undefined;
+  const predictionText = hasPrediction ? valueText(predictedLabel) : '';
   const steps =
     trace && trace.steps.length > 0
       ? [
@@ -54,40 +53,62 @@ const PredictionResult = () => {
         ]
       : [];
 
+  const announcement = () => {
+    if (!hasPrediction) {
+      return null;
+    }
+    if (chosenStep === undefined) {
+      return `AI predicts ${predictionText}`;
+    }
+    return (
+      <>
+        Step {chosenStep + 1} of {steps.length}: {steps[chosenStep]}
+      </>
+    );
+  };
+
   return (
-    <section className={styles.card}>
-      <Typography variant="body1" component="h2" className={styles.header}>
-        AI predicts <strong>{predictionText}</strong>
-      </Typography>
-      {steps.length > 0 && (
-        <>
-          {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics */}
-          <ol role="list" className={styles.steps}>
-            {steps.map((text, index) => (
-              <li
-                key={index}
-                aria-current={index === currentStep ? 'step' : undefined}
-                className={classNames(styles.step, {
-                  [styles.currentStep]: index === currentStep,
-                })}
-              >
-                <Typography
-                  variant="label4"
-                  aria-hidden="true"
-                  className={styles.stepNumber}
-                >
-                  {index + 1}
-                </Typography>
-                <Typography variant="body3" component="span">
-                  {text}
-                </Typography>
-              </li>
-            ))}
-          </ol>
-          <TraceStepper step={currentStep} stepLabels={steps} />
-        </>
+    <>
+      {/* Always mounted: a live region speaks only changes made after it appears. */}
+      <span role="status" className={appStyles.visuallyHidden}>
+        {announcement()}
+      </span>
+      {hasPrediction && (
+        <section className={styles.card}>
+          <Typography variant="body1" component="h2" className={styles.header}>
+            AI predicts <strong>{predictionText}</strong>
+          </Typography>
+          {steps.length > 0 && (
+            <>
+              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics */}
+              <ol role="list" className={styles.steps}>
+                {steps.map((text, index) => (
+                  <li
+                    key={index}
+                    aria-current={index === currentStep ? 'step' : undefined}
+                    className={classNames(styles.step, {
+                      [styles.currentStep]: index === currentStep,
+                    })}
+                  >
+                    <Typography
+                      variant="label4"
+                      aria-hidden="true"
+                      className={styles.stepNumber}
+                    >
+                      {index + 1}
+                    </Typography>
+                    <Typography variant="body3" component="span">
+                      {text}
+                    </Typography>
+                  </li>
+                ))}
+              </ol>
+              <TraceStepper step={currentStep} stepCount={steps.length} />
+            </>
+          )}
+        </section>
       )}
-    </section>
+    </>
   );
 };
 

@@ -75,12 +75,15 @@ function mockBoxes(boxes) {
   );
 }
 
+let followNode;
+
 // Fitted, the content's origin sits at (72, 102) at scale 0.5, in a frame from x = 72 to 448.
 function renderNodesAt(xs, props = {}, viewportWidth = 472) {
-  renderCanvas(
-    props,
-    xs.map(x => createElement('button', {key: x}, `node at ${x}`)),
+  const children = xs.map(x =>
+    createElement('button', {key: x, id: `node-${x}`}, `node at ${x}`),
   );
+  const {rerender} = renderCanvas(props, children);
+  followNode = id => rerender(canvas({...props, followId: id}, children));
   resizeViewport(viewportWidth, 360);
   const nodes = xs.map(x => screen.getByText(`node at ${x}`));
   const boxes = new Map(
@@ -111,13 +114,6 @@ function contentTransform() {
 
 function contentScale() {
   return parseFloat(contentTransform().match(/scale\((.*)\)/)[1]);
-}
-
-function contentTranslate() {
-  return contentTransform()
-    .match(/translate\((.*)px, (.*)px\)/)
-    .slice(1)
-    .map(parseFloat);
 }
 
 describe('TreeCanvas', () => {
@@ -249,32 +245,6 @@ describe('TreeCanvas', () => {
     );
   });
 
-  // Zoomed in, the content's origin sits at (31, 82.5) at scale 0.625, in a frame from x = 72 to 448.
-  it('pans the step the student is on into view', async () => {
-    const {rerender} = renderCanvas();
-    resizeViewport(472, 360);
-    fireEvent.click(button('Zoom in'));
-    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
-
-    rerender(canvas({stepBounds: {x: 672, y: 0, width: 80, height: 40}}));
-
-    await vi.waitFor(() => {
-      const [x, y] = contentTranslate();
-      expect(x).toBeCloseTo(-22);
-      expect(y).toBeCloseTo(82.5);
-    });
-  });
-
-  it('leaves a fitted view alone when the step is already in it', () => {
-    const {rerender} = renderCanvas();
-    resizeViewport(472, 360);
-
-    rerender(canvas({stepBounds: {x: 0, y: 0, width: 160, height: 104}}));
-    resizeViewport(848, 360);
-
-    expect(contentTransform()).toBe('translate(72px, 24px) scale(1)');
-  });
-
   it('lets keyboard users reach why zooming to the path is unavailable', () => {
     renderCanvas();
 
@@ -373,6 +343,31 @@ describe('TreeCanvas', () => {
 
     act(() => far.focus());
     act(() => near.focus());
+
+    await vi.waitFor(() =>
+      expect(near.parentElement.style.transform).toBe(
+        'translate(-28px, 2px) scale(1)',
+      ),
+    );
+  });
+
+  it('zooms to a readable scale and pans the node it follows into view', async () => {
+    const [node] = renderNodesAt([800]);
+
+    followNode('node-800');
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)',
+      ),
+    );
+  });
+
+  it('follows from where the view is heading when the node it follows changes', async () => {
+    const [, near] = renderNodesAt([800, 100]);
+
+    followNode('node-800');
+    followNode('node-100');
 
     await vi.waitFor(() =>
       expect(near.parentElement.style.transform).toBe(

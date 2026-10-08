@@ -109,7 +109,7 @@ interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
-  stepBounds?: Rect;
+  followId?: string;
   overlayRef?: RefObject<HTMLElement>;
   toolbarTabbable?: boolean;
   hints?: ReactNode;
@@ -120,7 +120,7 @@ const TreeCanvas = ({
   contentWidth,
   contentHeight,
   pathBounds,
-  stepBounds,
+  followId,
   overlayRef,
   toolbarTabbable = true,
   hints,
@@ -189,32 +189,6 @@ const TreeCanvas = ({
     return () => observer.disconnect();
   }, [contentRect, overlayRef]);
 
-  useEffect(() => {
-    if (!stepBounds) {
-      return;
-    }
-    const viewport = viewportRef.current!;
-    const toolbar = toolbarRef.current!;
-    const current = zoomTransform(viewport);
-    const shown = {
-      x: current.applyX(stepBounds.x),
-      y: current.applyY(stepBounds.y),
-      width: stepBounds.width * current.k,
-      height: stepBounds.height * current.k,
-    };
-    const right = overlayInset(viewport, overlayRef?.current ?? null);
-    const pan =
-      panIntoView(shown, viewFrame(viewport, toolbar, {right})) ??
-      panIntoView(shown, viewFrame(viewport, toolbar));
-    if (pan && (pan.x || pan.y)) {
-      autoFitRef.current = false;
-      zoomRef.current!.transform(
-        select(viewport).transition().duration(zoomDuration()),
-        current.translate(pan.x / current.k, pan.y / current.k),
-      );
-    }
-  }, [stepBounds, overlayRef]);
-
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
 
@@ -253,16 +227,12 @@ const TreeCanvas = ({
     }
   };
 
-  const followFocus = ({target}: FocusEvent<HTMLElement>) => {
+  const showReadably = (element: HTMLElement) => {
     const viewport = viewportRef.current!;
     const toolbar = toolbarRef.current!;
     const current = zoomTransform(viewport);
-    target.style.setProperty(SCALE_PROPERTY, String(current.k));
-    if (!target.matches(':focus-visible')) {
-      return;
-    }
     const from = panTargetRef.current ?? current;
-    const box = boundingBox(target);
+    const box = boundingBox(element);
     const origin = contentRef.current!.getBoundingClientRect();
     const node = {
       x: (box.x - origin.left) / current.k,
@@ -294,6 +264,20 @@ const TreeCanvas = ({
       zoomRef.current!.transform(animateToward(panTargetRef, to), to);
     }
   };
+
+  const followFocus = ({target}: FocusEvent<HTMLElement>) => {
+    const scale = zoomTransform(viewportRef.current!).k;
+    target.style.setProperty(SCALE_PROPERTY, String(scale));
+    if (target.matches(':focus-visible')) {
+      showReadably(target);
+    }
+  };
+
+  useEffect(() => {
+    if (followId) {
+      showReadably(document.getElementById(followId)!);
+    }
+  }, [followId]);
 
   return (
     <div

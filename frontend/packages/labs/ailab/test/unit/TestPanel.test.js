@@ -142,10 +142,28 @@ describe('TestPanel', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Previous step'}));
 
-    const [previous] = current();
-    expect(previous).toBe(steps[steps.length - 2]);
+    expect(current()).toEqual([steps[steps.length - 2]]);
+  });
+
+  test('a decision tree announces its prediction, then each step, but never its controls', () => {
+    const store = trainedAnimalStore({trainer: 'decisionTree'});
+    renderTestPanel(store);
+    const previousStep = () =>
+      screen.getByRole('button', {name: 'Previous step'});
+
+    expect(screen.getByRole('status').textContent).toBe('');
+
+    predictSnake();
+
+    expect(screen.getByRole('status').textContent).toBe('AI predicts snake');
+    expect(previousStep().closest('[aria-live], [role="status"]')).toBeNull();
+
+    fireEvent.click(previousStep());
+    const steps = within(screen.getByRole('list')).getAllByRole('listitem');
+    const [, text] = steps[steps.length - 2].children;
+
     expect(screen.getByRole('status').textContent).toBe(
-      `Step ${steps.length - 1} of ${steps.length}: ${previous.lastElementChild.textContent}`,
+      `Step ${steps.length - 1} of ${steps.length}: ${text.textContent}`,
     );
   });
 
@@ -159,5 +177,8 @@ describe('TestPanel', () => {
       screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/}),
     ).toBeTruthy();
     expect(screen.queryByRole('list')).toBeNull();
+    expect(screen.getByRole('status').textContent).toBe(
+      screen.getByRole('heading', {name: /^AI predicts/}).textContent,
+    );
   });
 });

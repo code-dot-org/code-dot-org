@@ -25,10 +25,10 @@ function predictBird(store) {
   });
 }
 
-const StoreStepper = ({stepLabels}) =>
+const StoreStepper = () =>
   createElement(TraceStepper, {
     step: useAppSelector(getPredictionStep),
-    stepLabels,
+    stepCount: useAppSelector(state => getPredictionTrace(state).path.length),
   });
 
 function renderStepper() {
@@ -38,9 +38,6 @@ function renderStepper() {
   train.init(store);
   train.onClickTrain();
   predictBird(store);
-  const stepLabels = getPredictionTrace(store.getState()).path.map(
-    (_, index) => `label ${index + 1}`,
-  );
   render(
     createElement(
       Provider,
@@ -48,7 +45,7 @@ function renderStepper() {
       createElement(
         ThemeProvider,
         {theme: getMuiThemeForBrand(undefined)},
-        createElement(StoreStepper, {stepLabels}),
+        createElement(StoreStepper),
       ),
     ),
   );
@@ -63,6 +60,10 @@ function button(name) {
   return screen.getByRole('button', {name});
 }
 
+function unavailable(name) {
+  return button(name).getAttribute('aria-disabled') === 'true';
+}
+
 describe('TraceStepper', () => {
   afterEach(() => I18n.reset());
 
@@ -70,8 +71,8 @@ describe('TraceStepper', () => {
     const store = renderStepper();
 
     expect(step(store)).toBe(2);
-    expect(button('Next step').disabled).toBe(true);
-    expect(button('Previous step').disabled).toBe(false);
+    expect(unavailable('Next step')).toBe(true);
+    expect(unavailable('Previous step')).toBe(false);
   });
 
   it('steps back to the root and forward again', () => {
@@ -81,35 +82,23 @@ describe('TraceStepper', () => {
     fireEvent.click(button('Previous step'));
 
     expect(step(store)).toBe(0);
-    expect(button('Previous step').disabled).toBe(true);
+    expect(unavailable('Previous step')).toBe(true);
 
     fireEvent.click(button('Next step'));
 
     expect(step(store)).toBe(1);
   });
 
-  it('hands focus to the other button when one reaches an end', () => {
-    renderStepper();
+  it('keeps focus on a button at an end, where pressing it does nothing', () => {
+    const store = renderStepper();
     act(() => button('Previous step').focus());
 
     fireEvent.click(button('Previous step'));
     fireEvent.click(button('Previous step'));
-
-    expect(document.activeElement).toBe(button('Next step'));
-
-    fireEvent.click(button('Next step'));
-    fireEvent.click(button('Next step'));
-
-    expect(document.activeElement).toBe(button('Previous step'));
-  });
-
-  it('announces a step only once the student steps', () => {
-    renderStepper();
-
-    expect(screen.getByRole('status').textContent).toBe('');
-
     fireEvent.click(button('Previous step'));
 
-    expect(screen.getByRole('status').textContent).toBe('Step 2 of 3: label 2');
+    expect(step(store)).toBe(0);
+    expect(button('Previous step').disabled).toBe(false);
+    expect(document.activeElement).toBe(button('Previous step'));
   });
 });

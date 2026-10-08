@@ -89,6 +89,9 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const tree = useAppSelector(getDisplayTree);
   const trace = useAppSelector(getPredictionTrace);
   const step = useAppSelector(getPredictionStep);
+  const isStepping = useAppSelector(
+    state => state.predictionStep !== undefined,
+  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
     () => (tree ? layoutDisplayTree(tree) : undefined),
@@ -101,15 +104,6 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   );
   const currentId = trace?.path[step];
   const nextId = trace?.path[step + 1];
-  const stepBounds = useMemo(() => {
-    if (!layout || !trace) {
-      return undefined;
-    }
-    const shown = trace.path.slice(step, step + 2);
-    return getNodesBounds(
-      layout.nodes.filter(placed => shown.includes(placed.id)),
-    );
-  }, [layout, trace, step]);
   const overlayRef = useRef<HTMLDivElement>(null);
   const enterHintId = useId();
   const keysHintId = useId();
@@ -126,6 +120,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     ? focusedId
     : DISPLAY_TREE_ROOT_ID;
 
+  const itemId = (id: string) => `${nameId}-item-${id}`;
   const textId = (id: string) => `${nameId}-text-${id}`;
   const columnId = (id: string) => `${nameId}-column-${id}`;
   const branchId = (id: string) => `${nameId}-branch-${id}`;
@@ -216,7 +211,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           contentWidth={layout.width}
           contentHeight={layout.height}
           pathBounds={pathBounds}
-          stepBounds={stepBounds}
+          followId={isStepping && currentId ? itemId(currentId) : undefined}
           overlayRef={overlayRef}
           toolbarTabbable={entered}
           hints={
@@ -296,6 +291,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               return (
                 <div
                   key={placed.id}
+                  id={itemId(placed.id)}
                   ref={element => trackNodeElement(placed.id, element)}
                   // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
                   role="treeitem"
