@@ -23,6 +23,7 @@ import {registerGalleryMocks} from './galleryMocks';
 
 const TutorGalleryDataSchema = z.object({
   currentUnitId: z.number(),
+  is_teacher: z.boolean(),
   units: z.array(
     z.object({
       id: z.number(),
