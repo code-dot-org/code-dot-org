@@ -5,7 +5,7 @@
 // actor's traits.
 //
 // Every field is a row of the camera's `define camera` in the world's code,
-// read and written by `worldCameraEdits`, so what this shows and what the
+// read and written by `worldCameraCode`, so what this shows and what the
 // blocks say are one thing.
 //
 // The main camera has no traits of its own here: every world has it, and it
@@ -24,7 +24,7 @@ import {requestRulesConfig} from '../blockly/rulesConfig';
 import fields from '../formFields.module.css';
 
 import styles from './mapEditor.module.css';
-import {MAIN_CAMERA, type CameraProperty} from './worldCameraEdits';
+import {MAIN_CAMERA, type CameraProperty} from './worldCameraCode';
 import {parseVectorText, vectorText} from './worldProperties';
 import type {CameraTraitChoice} from './worldRuleProperties';
 
@@ -38,7 +38,7 @@ export interface CameraInspectorProps {
   traits: readonly string[];
   /** The traits the project's rules offer a camera. */
   choices: readonly CameraTraitChoice[];
-  /** What it sets a property to, as `worldCameraEdits` reads it. */
+  /** What it sets a property to, as `worldCameraCode` reads it. */
   valueOf: (property: CameraProperty) => string | undefined;
   /** The project's actor kinds, as `[name, module path]`. */
   kinds: ReadonlyArray<readonly [string, string]>;

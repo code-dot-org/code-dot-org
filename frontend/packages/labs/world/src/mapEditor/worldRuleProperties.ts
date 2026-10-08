@@ -13,7 +13,7 @@
 import {projectRuleMetas} from '../blockly/projectModules';
 import {memberLocalName, memberValue} from '../blockly/ruleRegistry';
 
-import type {CameraProperty} from './worldCameraEdits';
+import type {CameraProperty} from './worldCameraCode';
 import {vectorText, type WorldRuleProperty} from './worldProperties';
 
 /**

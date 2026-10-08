@@ -135,7 +135,7 @@ import {
 import {useAfterImport} from './useAfterImport';
 import {VectorInput} from './VectorInput';
 import {WithheldNote} from './WithheldNote';
-import {MAIN_CAMERA, type CameraProperty} from './worldCameraEdits';
+import {MAIN_CAMERA, type CameraProperty} from './worldCameraCode';
 import {placementCameras, type DeclaredCamera} from './worldCameras';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 import type {CameraTraitChoice} from './worldRuleProperties';
@@ -310,7 +310,7 @@ export interface MapStageProps {
   worldCameras?: readonly DeclaredCamera[];
   /**
    * The edits the world's cameras take, made in the world's code by the
-   * editor, which has the file (`worldCameraEdits`); absent for a `.map`.
+   * editor, which has the file (`worldCameraCode`); absent for a `.map`.
    */
   worldCameraEditor?: WorldCameraEditor;
   /**
@@ -2746,7 +2746,7 @@ export const MapStage = ({
   // list that says less than nothing.
   //
   // …except the world's own, which are EDITED in the strip and need no
-  // script to be offered (`worldCameraEdits`).
+  // script to be offered (`worldCameraCode`).
   const scripts = !appBuilder && onEditScript && !locked('map-scripts');
   // A SELECTED VIEWPORT'S cameras are edited as the world's are, through the
   // same strip and inspector — but they are data on the placement, made here
@@ -2811,13 +2811,11 @@ export const MapStage = ({
       : undefined;
   /** Whose cameras the strip and inspector edit: a Viewport's, or the world's. */
   const cameraEditor = selectedActor ? viewportCameraEditor : worldCameraEditor;
-  const editableCameras: readonly DeclaredCamera[] = selectedActor
-    ? (selectedActor.cameras ?? []).map(({id, name, traits}) => ({
-        id,
-        name,
-        traits,
-      }))
-    : (worldCameras ?? []);
+  // Made here and kept as data: a Viewport's on its placement, the world's on
+  // its main map. Cameras declared in code beside them are listed, not edited.
+  const editableCameras: readonly DeclaredCamera[] = (
+    (selectedActor ? selectedActor.cameras : map.cameras) ?? []
+  ).map(({id, name, traits}) => ({id, name, traits}));
   const cameras = appBuilder
     ? undefined
     : selectedActor
@@ -2838,8 +2836,10 @@ export const MapStage = ({
           : undefined
       : world && (worldCameraEditor || scripts)
         ? {
-            list: editableCameras,
-            inCode: [],
+            // Edited here, the stored ones with the code's beside them;
+            // otherwise only what the code declares, to open.
+            list: worldCameraEditor ? editableCameras : (worldCameras ?? []),
+            inCode: worldCameraEditor ? (worldCameras ?? []) : [],
             owner: 'the world',
             open: scripts ? () => onEditScript?.(undefined) : undefined,
           }

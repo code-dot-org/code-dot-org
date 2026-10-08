@@ -99,8 +99,14 @@ const chain = (blocks: Block[]): Block | undefined =>
     undefined,
   );
 
-/** The `define camera … for ⟨this actor⟩` a stored camera stands for. */
-const definitionOf = (camera: PlacementCamera): Block => {
+/**
+ * The `define camera` a stored camera stands for: `for ⟨this actor⟩` for a
+ * Viewport's, and for nobody — the world — for the world's own.
+ */
+const definitionOf = (
+  camera: PlacementCamera,
+  owner: 'this actor' | 'world' = 'this actor',
+): Block => {
   const mouth = chain([
     ...camera.traits.map(trait => ({
       type: 'world_use_trait',
@@ -123,7 +129,9 @@ const definitionOf = (camera: PlacementCamera): Block => {
     id: camera.id,
     fields: {NAME: camera.name},
     inputs: {
-      OWNER: {block: {type: 'world_this_actor'}},
+      ...(owner === 'this actor'
+        ? {OWNER: {block: {type: 'world_this_actor'}}}
+        : {}),
       ...(mouth ? {DO: {block: mouth}} : {}),
     },
   };
@@ -158,7 +166,7 @@ export function withCameraHandler(
   const handler: Block & typeof FIRST = {
     type: 'world_on_Space_CreatedEvent',
     ...FIRST,
-    next: {block: chain(cameras.map(definitionOf))},
+    next: {block: chain(cameras.map(camera => definitionOf(camera)))},
   };
   return {
     ...document,
@@ -166,6 +174,58 @@ export function withCameraHandler(
       languageVersion: 0,
       ...document.blocks,
       blocks: [handler, ...(document.blocks?.blocks ?? [])],
+    },
+  };
+}
+
+/** A world's main map, as far as its cameras are stored on it. */
+interface StoredWorldCameras {
+  cameras?: PlacementCamera[];
+  /** `main` or `camera:<block id>`, as `look through camera` names one. */
+  startingCamera?: string;
+}
+
+/**
+ * A world's file with its stored cameras declared, for the compiler only:
+ * the world's own cameras live on its main map (`mapModel`), and become
+ * `define camera` rows at the END of `define world`'s rows here, followed by
+ * a `look through camera` for the one it starts with.
+ *
+ * AT THE END, because a camera is usually told to follow something, and
+ * `any ⟨Bird⟩` is read when its row runs: after a `load map` row, the birds
+ * are there. The main map is placed before any row runs, so its placements
+ * are there either way. Identity when the map stores nothing.
+ */
+export function withWorldCameras(state: object): object {
+  const document = state as {
+    blocks?: {blocks?: Block[]};
+    map?: StoredWorldCameras;
+  };
+  const cameras = document.map?.cameras ?? [];
+  const starting = document.map?.startingCamera;
+  const root = document.blocks?.blocks?.find(
+    block => block.type === 'world_world',
+  );
+  if (!root || (!cameras.length && !starting)) {
+    return state;
+  }
+  const rows = chain([
+    ...cameras.map(camera => definitionOf(camera, 'world')),
+    ...(starting
+      ? [{type: 'world_use_camera', fields: {CAMERA: starting}}]
+      : []),
+  ]);
+  const appended = (block: Block): Block =>
+    block.next?.block
+      ? {...block, next: {block: appended(block.next.block)}}
+      : {...block, next: {block: rows!}};
+  return {
+    ...document,
+    blocks: {
+      ...document.blocks,
+      blocks: document.blocks!.blocks!.map(block =>
+        block === root ? appended(root) : block,
+      ),
     },
   };
 }

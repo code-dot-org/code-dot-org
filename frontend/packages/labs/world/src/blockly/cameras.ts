@@ -60,11 +60,30 @@ export const camerasIn = (
     name: String(block.getFieldValue('NAME') ?? ''),
   }));
 
+/**
+ * The world's cameras made in the map editor: data on its main map, not
+ * blocks in its code (`placementCameras`), but cameras the code may still
+ * look through. Refreshed from the project with the other registries.
+ */
+let storedCameras: Array<{blockId: string; name: string}> = [];
+
+export function setStoredCameras(
+  cameras: ReadonlyArray<{blockId: string; name: string}>,
+): void {
+  storedCameras = [...cameras];
+}
+
 /** The `[label, value]` rows a CAMERA dropdown offers. */
 export const cameraOptions = (
   field?: Blockly.FieldDropdown,
 ): Array<[string, string]> => {
-  const rows = camerasIn(workspaceOf(field)).map(
+  const declared = camerasIn(workspaceOf(field));
+  const rows = [
+    ...declared,
+    ...storedCameras.filter(
+      stored => !declared.some(each => each.blockId === stored.blockId),
+    ),
+  ].map(
     ({blockId, name}) =>
       [name || 'Camera', cameraValue(blockId)] as [string, string],
   );
@@ -92,7 +111,9 @@ export const cameraIdFromValue = (
   if (blockId === undefined) {
     return value || DEFAULT_CAMERA_ID;
   }
-  return blockId && hasIndexedBlock(block.workspace, blockId)
+  return blockId &&
+    (hasIndexedBlock(block.workspace, blockId) ||
+      storedCameras.some(stored => stored.blockId === blockId))
     ? cameraId(blockId)
     : DEFAULT_CAMERA_ID;
 };

@@ -1,6 +1,6 @@
-// A Viewport's cameras made in the map editor: data on the placement, never
-// blocks in its code, compiled into a `when created` the compiler alone sees
-// (`blockly/placementCameras`, specs/SPACE_CAMERAS_PLAN.md).
+// Cameras made in the map editor: data on a Viewport's placement, or on the
+// world's main map, never blocks in anybody's code — declared by the compiler
+// alone (`blockly/placementCameras`, specs/SPACE_CAMERAS_PLAN.md).
 
 import {describe, expect, it} from 'vitest';
 
@@ -89,5 +89,37 @@ describe('a Viewport’s cameras made in the map editor', () => {
     const wide = space.cameraNamed('Wide');
     expect(wide).toBeDefined();
     expect(space.camera?.name).toBe('Wide');
+  }, 60000);
+});
+
+/** Flappy with a camera its map editor made, which the world starts with. */
+const withOverview = () => {
+  const source = WORLD_SCENARIOS.flappy.source;
+  const [worldId, file] = Object.entries(source.files).find(([, each]) =>
+    each.name.endsWith('.world'),
+  )!;
+  const parsed = JSON.parse(file.contents);
+  parsed.map = {
+    ...parsed.map,
+    actors: parsed.map?.actors ?? [],
+    cameras: [{id: 'overview', name: 'Overview', traits: [], values: []}],
+    startingCamera: 'camera:overview',
+  };
+  return projectFiles({
+    ...source,
+    files: {
+      ...source.files,
+      [worldId]: {...file, contents: JSON.stringify(parsed)},
+    },
+  });
+};
+
+describe('a world’s cameras made in the map editor', () => {
+  it('are declared, and the world starts through the one its map says', async () => {
+    // Over the code's own `look through camera ⟨Chase⟩`: what the map editor
+    // was last told is what the world does.
+    const {world, code} = await compileProject(withOverview());
+    expect(code['worlds/main']).toContain('"Overview"');
+    expect(world.activeCamera().name).toBe('Overview');
   }, 60000);
 });

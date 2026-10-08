@@ -354,19 +354,23 @@ for ⟨actor⟩`, a socket.**
      view", since every space has a main camera regardless. It starts
      closed behind a Cameras button in the stage's toolbar, which appears
      only where there would be a list to show.
-   - **9b. Add, remove, rename. BUILT for the world's own cameras.** The
-     strip lists the main camera first and every `define camera` under `define
-world` after it, marks the one the world starts looking through, and adds
-     and removes them (`mapEditor/worldCameraEdits`, the new surgery: a row
-     spliced onto the end of the world's rows, where what a camera follows has
-     already been placed, and unlinked with any `look through camera` that
-     named it).
+   - **9b. Add, remove, rename. BUILT, and as MAP DATA.** A camera is made
+     in one place, the visual one. The world's are stored on its main map
+     (`map.cameras`, with `map.startingCamera` saying which one it starts
+     through), and the strip lists the main camera first, then those, and
+     adds, removes and renames them. The compiler declares them as `define
+camera` rows at the end of `define world`, after any `load map` has
+     placed what they follow, and a `look through camera` after them — rows
+     that exist only while the world is compiled (`blockly/placementCameras`).
+     The world's code may still look through one: the `look through camera`
+     dropdown offers them beside the cameras the code declares. Cameras a
+     world's code declares itself are listed as "in code", and changed there.
      **A VIEWPORT'S TOO, AND AS DATA.** With a Viewport selected the strip
      lists its main camera and its own, and edits them with the same
      inspector — but they are stored on the placement in the map
      (`placement.cameras`), never as blocks in its code: a camera is made in
      one place, the visual one. The compiler declares them, in a `when this
-     actor is created` handler only it ever sees, placed FIRST so a learner's
+actor is created` handler only it ever sees, placed FIRST so a learner's
      own `when created` runs after its cameras exist
      (`blockly/placementCameras`). Which one the Viewport looks through is its
      `shows through` property, now a dropdown of its own cameras rather than a
@@ -374,12 +378,12 @@ world` after it, marks the one the world starts looking through, and adds
      "in code" and changed there.
    - **9c. The inspector's traits. BUILT, without the Enhance machinery.**
      Enhance is keyed to actor kinds and a camera is not one, so a camera's
-     inspector offers the project's camera traits as checkboxes instead —
-     each a `use trait` at the top of its mouth — with a field per writable
-     property of each elected trait, a `set … of ⟨this camera⟩` row:
-     `actor to follow` as `any ⟨kind⟩`, a point as two numbers. Its name, and
-     whether the world starts looking through it — one `look through camera`
-     row, at the end — are fields too. A project holding no camera rules is
+     inspector offers the project's camera traits as checkboxes instead,
+     with a field per writable property of each elected trait: `actor to
+follow` as `any ⟨kind⟩`, a point as two numbers. Its name, and whether
+     the world (or the Viewport) starts looking through it, are fields too.
+     All of it is stored with the camera; the compiler writes the `use
+trait` and `set … of ⟨this camera⟩` rows its declaration needs. A project holding no camera rules is
      pointed at the world's Rules. The main camera has no traits here: it is
      the world's own, and following something is what an added camera is for.
 

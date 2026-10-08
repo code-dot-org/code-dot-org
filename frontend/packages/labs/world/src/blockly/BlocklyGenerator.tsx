@@ -34,7 +34,11 @@ import {
   parseActorOwnMeta,
   type OwnMeta,
 } from './ownProperties';
-import {withCameraHandler, type PlacementCamera} from './placementCameras';
+import {
+  withCameraHandler,
+  withWorldCameras,
+  type PlacementCamera,
+} from './placementCameras';
 import {
   extractRuleBodies,
   parseRuleMeta,
@@ -418,7 +422,12 @@ export const BlocklyGenerator = forwardRef<
               )
             : undefined;
         workspace.clear();
-        const state = contents.trim() ? JSON.parse(contents) : {};
+        const parsed = contents.trim() ? JSON.parse(contents) : {};
+        // …with the world's own cameras declared, which the map editor
+        // keeps on its main map and no editor shows as blocks
+        // (`placementCameras`).
+        const state =
+          fileKindOf(path) === 'world' ? withWorldCameras(parsed) : parsed;
         Blockly.serialization.workspaces.load(state, workspace);
 
         // Events are their own top-level blocks, so we can't rely on

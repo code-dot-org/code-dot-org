@@ -16,6 +16,7 @@ import {projectSheets} from '../appearance/sheetFile';
 import type {ImageSize} from '../runtime/imageSize';
 
 import {setProjectAnimations} from './animationOptions';
+import {setStoredCameras} from './cameras';
 import {duplicateEnumNames, registerProjectEnums} from './enums';
 import {
   setActorParents,
@@ -144,6 +145,27 @@ export function refreshProjectDropdowns(
   setProjectEffectParameters(effectParameters);
   const maps = projectMapActorTypes(files);
   setProjectMaps(maps);
+  // …and the world's cameras made in the map editor, which its code may
+  // look through though no block declares them (`cameras.setStoredCameras`).
+  setStoredCameras(
+    Object.entries(files)
+      .filter(([path]) => path.endsWith('.world'))
+      .flatMap(([, contents]) => {
+        try {
+          const map = (JSON.parse(contents) as {map?: {cameras?: unknown}}).map;
+          return Array.isArray(map?.cameras)
+            ? (map.cameras as Array<{id?: unknown; name?: unknown}>).flatMap(
+                camera =>
+                  typeof camera.id === 'string'
+                    ? [{blockId: camera.id, name: String(camera.name ?? '')}]
+                    : [],
+              )
+            : [];
+        } catch {
+          return [];
+        }
+      }),
+  );
   // The `use rule` dropdown offers the project's own rule modules (under
   // `rules/`) alongside the built-ins.
   const ruleModules = projectRuleOptions(files);

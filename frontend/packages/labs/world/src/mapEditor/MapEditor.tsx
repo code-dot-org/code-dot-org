@@ -32,6 +32,7 @@ import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
+import {cameraBlockId, cameraValue} from '../blockly/cameras';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {eventChoicesIn, type EventChoice} from '../blockly/eventChoices';
 import {eventsNarrowerFor, type NarrowEvents} from '../blockly/kindEvents';
@@ -70,7 +71,13 @@ import {
 } from './localPictures';
 import styles from './mapEditor.module.css';
 import {
+  addMapCamera,
   clampTiles,
+  removeMapCamera,
+  renameMapCamera,
+  withMapCameraTrait,
+  withMapCameraValue,
+  withStartingCamera,
   MAX_MAP_TILES,
   MIN_MAP_TILES,
   parseMap,
@@ -80,17 +87,7 @@ import {
 import {MapStage, type WorldCameraEditor} from './MapStage';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {WithheldNote} from './WithheldNote';
-import {
-  addWorldCamera,
-  cameraPropertyValue,
-  cameraTraitValues,
-  removeWorldCamera,
-  renameWorldCamera,
-  setCameraProperty,
-  setCameraTrait,
-  setStartingCamera,
-  startingCamera,
-} from './worldCameraEdits';
+import {MAIN_CAMERA, startingCamera} from './worldCameraCode';
 import {worldCameras} from './worldCameras';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
 import type {WorldProperty} from './worldProperties';
@@ -537,34 +534,50 @@ export const MapEditor = ({
     () => (document.world ? worldCameras(fileText) : []),
     [document.world, fileText],
   );
-  // …and what they can be told: edits to the world's code, as the World
-  // inspector's are (`worldCameraEdits`). The traits a camera may elect are
-  // the project's rules' camera traits.
+  // …and what they can be told. The world's cameras are made HERE and kept
+  // on its main map, never as blocks in its code (`placementCameras`); the
+  // traits a camera may elect are the project's rules' camera traits. Which
+  // one it starts through is the map's to say once it says it, and the
+  // code's — a `look through camera` row — until then.
   const cameraChoices = useMemo(() => cameraTraitChoices(files), [files]);
+  const storedCamera = (id: string) =>
+    map.cameras?.find(camera => camera.id === id);
   const worldCameraEditor: WorldCameraEditor | undefined = document.world
     ? {
-        starting: startingCamera(fileText),
+        starting: map.startingCamera
+          ? (cameraBlockId(map.startingCamera) ?? MAIN_CAMERA)
+          : startingCamera(fileText),
         choices: cameraChoices,
-        traitsOf: id => cameraTraitValues(fileText, id),
-        valueOf: (id, property) => cameraPropertyValue(fileText, id, property),
+        traitsOf: id => storedCamera(id)?.traits ?? [],
+        valueOf: (id, property) =>
+          storedCamera(id)?.values.find(each => each.setter === property.setter)
+            ?.value,
         add: () => {
-          const name = `Camera ${worldCameraList.length + 2}`;
-          const made = addWorldCamera(contentsRef.current, name);
-          if (made.id) {
-            writeFile(made.contents);
-          }
+          const made = addMapCamera(
+            map,
+            worldCameraList.map(camera => camera.name),
+          );
+          commit(made.doc);
           return made.id;
         },
-        remove: id => writeFile(removeWorldCamera(contentsRef.current, id)),
-        rename: (id, name) =>
-          writeFile(renameWorldCamera(contentsRef.current, id, name)),
+        remove: id => commit(removeMapCamera(map, id)),
+        rename: (id, name) => commit(renameMapCamera(map, id, name)),
         setStarting: id =>
-          writeFile(setStartingCamera(contentsRef.current, id)),
+          commit(
+            withStartingCamera(
+              map,
+              id === MAIN_CAMERA ? MAIN_CAMERA : cameraValue(id),
+            ),
+          ),
         setTrait: (id, trait, elected) =>
-          writeFile(setCameraTrait(contentsRef.current, id, trait, elected)),
+          commit(withMapCameraTrait(map, id, trait, elected)),
         setValue: (id, property, value) =>
-          writeFile(
-            setCameraProperty(contentsRef.current, id, property, value),
+          commit(
+            withMapCameraValue(map, id, {
+              setter: property.setter,
+              type: property.type,
+              value,
+            }),
           ),
       }
     : undefined;

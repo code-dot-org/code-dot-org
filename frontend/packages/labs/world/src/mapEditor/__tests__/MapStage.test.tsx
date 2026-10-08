@@ -1051,16 +1051,21 @@ describe('a level, with nothing selected', () => {
       setTrait: vi.fn(),
       setValue: vi.fn(),
     };
-    const main = mount(doc(), {
-      world: {
-        header: {name: 'W', properties: []},
-        onRename: vi.fn(),
-        onSetDefault: vi.fn(),
+    const main = mount(
+      {
+        ...doc(),
+        cameras: [{id: 'chase', name: 'Chase', traits: [], values: []}],
       },
-      worldCameras: [{id: 'chase', name: 'Chase', traits: []}],
-      worldCameraEditor: editor,
-      kinds: {'actors/bird': {name: 'Bird'}},
-    });
+      {
+        world: {
+          header: {name: 'W', properties: []},
+          onRename: vi.fn(),
+          onSetDefault: vi.fn(),
+        },
+        worldCameraEditor: editor,
+        kinds: {'actors/bird': {name: 'Bird'}},
+      },
+    );
     fireEvent.click(main.getByRole('button', {name: 'Cameras'}));
     fireEvent.click(main.getByRole('button', {name: /^Chase/}));
     expect(main.getByTestId('camera-inspector')).toBeInTheDocument();

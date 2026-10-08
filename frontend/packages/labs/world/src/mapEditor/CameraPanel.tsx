@@ -7,7 +7,7 @@
 //
 // THE WORLD'S ARE EDITED HERE (9b): added, removed, and opened in a camera's
 // inspector by clicking one, which is where it is named, given traits and
-// told what to follow (`CameraInspector`, `worldCameraEdits`). Its main
+// told what to follow (`CameraInspector`, `worldCameraCode`). Its main
 // camera is listed first, because every world has one and it is the one the
 // world looks through unless told otherwise. A Viewport's stay read-only,
 // declared in its placement's code, and the strip says so with one button.
@@ -18,7 +18,7 @@ import {Button, Typography} from '@mui/material';
 
 import {IconAction} from './IconAction';
 import styles from './mapEditor.module.css';
-import {MAIN_CAMERA} from './worldCameraEdits';
+import {MAIN_CAMERA} from './worldCameraCode';
 import type {DeclaredCamera} from './worldCameras';
 
 /** What makes the strip an editor, for the world's own cameras. */

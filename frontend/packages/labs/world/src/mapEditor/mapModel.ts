@@ -339,12 +339,24 @@ export interface MapDoc {
   blocks?: WorkspaceState;
   /** The map's layers, back to front; absent, the one default. */
   layers?: MapLayerDoc[];
-  // NO CAMERA. A map is data: it says where things are and nothing about how
-  // the view onto it behaves. A Viewport decides that, and the world is the
-  // main Viewport (specs/SPACE_CAMERAS_PLAN.md) — which is the same argument
-  // that took a map's own events off it (specs/MAP_EVENTS_PLAN.md), since a
-  // hundred level maps should no more each configure a camera than each mint a
-  // `complete`.
+  // NO CAMERA ON A LEVEL. A map is data: it says where things are and nothing
+  // about how the view onto it behaves. A Viewport decides that, and the
+  // world is the main Viewport (specs/SPACE_CAMERAS_PLAN.md) — which is the
+  // same argument that took a map's own events off it
+  // (specs/MAP_EVENTS_PLAN.md), since a hundred level maps should no more
+  // each configure a camera than each mint a `complete`.
+  //
+  // A WORLD'S MAIN MAP is the one exception, and for that same reason: it is
+  // where the main Viewport is edited, so the world's cameras live on it, as
+  // a Viewport's live on its placement (`blockly/placementCameras`).
+  /** The world's own cameras, on its main map only. */
+  cameras?: PlacementCamera[];
+  /**
+   * Which camera the world starts looking through, as `look through camera`
+   * names one — `main`, or `camera:<block id>` — on its main map only.
+   * Absent, the world's code decides.
+   */
+  startingCamera?: string;
 }
 /** The camera: screen_px = world * scale + offset (offset in CSS pixels). */
 export interface View {
@@ -411,6 +423,18 @@ export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
             layer => layer && typeof layer.id === 'string',
           ),
         }
+      : {}),
+    // …and the facts about the map as a whole, which were left behind here
+    // once: the editor read a map without them, and its next save wrote the
+    // map back without them, so a screen stopped covering what was under it
+    // and a theme went back to the world's.
+    ...(raw.modal === true ? {modal: true} : {}),
+    ...(typeof raw.theme === 'string' && raw.theme ? {theme: raw.theme} : {}),
+    ...(Array.isArray(raw.cameras) && raw.cameras.length
+      ? {cameras: raw.cameras}
+      : {}),
+    ...(typeof raw.startingCamera === 'string' && raw.startingCamera
+      ? {startingCamera: raw.startingCamera}
       : {}),
   };
 }
@@ -940,3 +964,98 @@ export const withPlacementCameraValue = (
       ...(value.type === 'actor' && !value.value ? [] : [value]),
     ],
   }));
+
+// ── A world's cameras, on its main map ───────────────────────────────────
+
+/** The map with its cameras changed by `change`; none left drops the key. */
+const withMapCameras = (
+  doc: MapDoc,
+  change: (cameras: PlacementCamera[]) => PlacementCamera[],
+): MapDoc => {
+  const cameras = change(doc.cameras ?? []);
+  const next: MapDoc = {...doc, cameras};
+  if (!cameras.length) {
+    delete next.cameras;
+  }
+  return next;
+};
+
+/** A camera added to the world, named after the ones it has, and its id. */
+export function addMapCamera(
+  doc: MapDoc,
+  taken: readonly string[] = [],
+): {doc: MapDoc; id: string} {
+  const held = doc.cameras ?? [];
+  const names = new Set([...held.map(camera => camera.name), ...taken]);
+  let n = held.length + taken.length + 2;
+  while (names.has(`Camera ${n}`)) {
+    n++;
+  }
+  let id = `worldCamera${n}`;
+  for (let k = 2; held.some(camera => camera.id === id); k++) {
+    id = `worldCamera${n}_${k}`;
+  }
+  return {
+    doc: withMapCameras(doc, cameras => [
+      ...cameras,
+      {id, name: `Camera ${n}`, traits: [], values: []},
+    ]),
+    id,
+  };
+}
+
+/** The world without a camera — starting through its main one again if so. */
+export function removeMapCamera(doc: MapDoc, id: string): MapDoc {
+  const next = withMapCameras(doc, cameras =>
+    cameras.filter(camera => camera.id !== id),
+  );
+  if (doc.startingCamera === `camera:${id}`) {
+    delete next.startingCamera;
+  }
+  return next;
+}
+
+/** The world with one of its cameras changed by `change`. */
+const withMapCamera = (
+  doc: MapDoc,
+  id: string,
+  change: (camera: PlacementCamera) => PlacementCamera,
+): MapDoc =>
+  withMapCameras(doc, cameras =>
+    cameras.map(camera => (camera.id === id ? change(camera) : camera)),
+  );
+
+export const renameMapCamera = (doc: MapDoc, id: string, name: string) =>
+  withMapCamera(doc, id, camera => ({...camera, name}));
+
+export const withMapCameraTrait = (
+  doc: MapDoc,
+  id: string,
+  trait: string,
+  elected: boolean,
+): MapDoc =>
+  withMapCamera(doc, id, camera => ({
+    ...camera,
+    traits: elected
+      ? [...camera.traits.filter(each => each !== trait), trait]
+      : camera.traits.filter(each => each !== trait),
+  }));
+
+export const withMapCameraValue = (
+  doc: MapDoc,
+  id: string,
+  value: CameraValue,
+): MapDoc =>
+  withMapCamera(doc, id, camera => ({
+    ...camera,
+    values: [
+      ...camera.values.filter(each => each.setter !== value.setter),
+      ...(value.type === 'actor' && !value.value ? [] : [value]),
+    ],
+  }));
+
+/** The world starting through a camera: `main` or `camera:<block id>`. */
+export const withStartingCamera = (doc: MapDoc, camera: string): MapDoc => ({
+  ...doc,
+  startingCamera: camera,
+});
