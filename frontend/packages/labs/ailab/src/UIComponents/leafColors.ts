@@ -15,7 +15,7 @@ const LEAF_COLORS = [
 export function leafColorStyle(answerIndex: number): CSSProperties {
   const color = LEAF_COLORS[answerIndex % LEAF_COLORS.length];
   return {
-    '--leaf-color': `var(--border-${color}-primary)`,
+    '--leaf-color': `var(--background-${color}-primary)`,
     '--leaf-color-light': `var(--background-${color}-light)`,
   } as CSSProperties;
 }
