@@ -15,10 +15,12 @@ export const TREE_ROW_GAP = 64;
 export interface PlacedTreeNode {
   id: string;
   node: DisplayTreeNode;
+  depth: number;
   // Top-left corner.
   x: number;
   y: number;
   parent?: PlacedTreeNode;
+  children: PlacedTreeNode[];
   branch?: DisplayTreeBranch;
 }
 
@@ -28,7 +30,34 @@ export interface DisplayTreeLayout {
   height: number;
 }
 
-export function layoutDisplayTree(root: DisplayTreeNode): DisplayTreeLayout {
+const EDGE_BEND_DROP = 20;
+const EDGE_CORNER_RADIUS = 8;
+
+export function edgePath(
+  parent: PlacedTreeNode,
+  child: PlacedTreeNode,
+  bendDrop = EDGE_BEND_DROP,
+): string {
+  const startX = parent.x + TREE_NODE_WIDTH / 2;
+  const startY = parent.y + TREE_NODE_HEIGHT;
+  const endX = child.x + TREE_NODE_WIDTH / 2;
+  const bendY = startY + bendDrop;
+  const radius = Math.min(EDGE_CORNER_RADIUS, Math.abs(endX - startX) / 2);
+  const turn = Math.sign(endX - startX) * radius;
+  return [
+    `M ${startX} ${startY}`,
+    `V ${bendY - radius}`,
+    `Q ${startX} ${bendY} ${startX + turn} ${bendY}`,
+    `H ${endX - turn}`,
+    `Q ${endX} ${bendY} ${endX} ${bendY + radius}`,
+    `V ${child.y}`,
+  ].join(' ');
+}
+
+export function layoutDisplayTree(
+  root: DisplayTreeNode,
+  rowGap = TREE_ROW_GAP,
+): DisplayTreeLayout {
   const nodes: PlacedTreeNode[] = [];
   let answerCount = 0;
   let maxDepth = 0;
@@ -43,9 +72,11 @@ export function layoutDisplayTree(root: DisplayTreeNode): DisplayTreeLayout {
     const placed: PlacedTreeNode = {
       id,
       node,
+      depth,
       x: 0,
-      y: depth * (TREE_NODE_HEIGHT + TREE_ROW_GAP),
+      y: depth * (TREE_NODE_HEIGHT + rowGap),
       parent,
+      children: [],
       branch,
     };
     nodes.push(placed);
@@ -64,6 +95,7 @@ export function layoutDisplayTree(root: DisplayTreeNode): DisplayTreeLayout {
           childBranch,
         ),
       );
+      placed.children = children;
       placed.x = (children[0].x + children[children.length - 1].x) / 2;
     }
     return placed;
@@ -74,7 +106,7 @@ export function layoutDisplayTree(root: DisplayTreeNode): DisplayTreeLayout {
   return {
     nodes,
     width: answerCount * (TREE_NODE_WIDTH + TREE_COLUMN_GAP) - TREE_COLUMN_GAP,
-    height: (maxDepth + 1) * (TREE_NODE_HEIGHT + TREE_ROW_GAP) - TREE_ROW_GAP,
+    height: (maxDepth + 1) * (TREE_NODE_HEIGHT + rowGap) - rowGap,
   };
 }
 
