@@ -1,4 +1,4 @@
-import {createContext} from 'react';
+import React, {createContext} from 'react';
 
 /**
  * Navigation supplied from outside the lab, in place of continuing to the
@@ -12,6 +12,8 @@ export interface ExternalNavigation {
   enabled: boolean;
   /** Shown on the disabled button. */
   tooltip?: string;
+  /** Icon after the label; defaults to the lesson's own, an arrow when a level follows. */
+  endIcon?: React.ReactNode;
   onContinue: () => void;
 }
 

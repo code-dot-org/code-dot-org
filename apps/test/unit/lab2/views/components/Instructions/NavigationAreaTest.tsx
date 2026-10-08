@@ -34,6 +34,7 @@ interface ContinueButtonMockProps {
   disabled?: boolean;
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
+  endIcon?: React.ReactNode;
   onContinue: () => void;
 }
 interface SubmitButtonMockProps {
@@ -51,6 +52,7 @@ jest.mock(
       children,
       disabled,
       tooltipMessage,
+      endIcon,
       onContinue,
     }: ContinueButtonMockProps) => (
       <button
@@ -59,6 +61,7 @@ jest.mock(
         data-tooltip={tooltipMessage}
         onClick={onContinue}
       >
+        {endIcon}
         {children}
       </button>
     ),
@@ -240,6 +243,20 @@ describe('NavigationArea', () => {
       const button = screen.getByRole('button');
       expect(button).toHaveAttribute('data-disabled', 'true');
       expect(button).toHaveAttribute('data-tooltip', 'Check your work first');
+    });
+
+    it("shows the host's end icon, or the lesson's own without one", () => {
+      const {unmount} = renderWithHost({
+        enabled: true,
+        endIcon: <span role="img" aria-label="host icon" />,
+        onContinue: jest.fn(),
+      });
+      expect(screen.getByRole('img', {name: 'host icon'})).toBeInTheDocument();
+      unmount();
+
+      // The lesson's own icon is the arrow it shows when a level follows.
+      renderWithHost({enabled: true, onContinue: jest.fn()});
+      expect(screen.queryByRole('img', {name: 'host icon'})).toBeNull();
     });
 
     it("runs the host's action instead of continuing the lesson", () => {

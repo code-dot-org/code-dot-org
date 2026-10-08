@@ -3,6 +3,7 @@
 // shares among levels naming the same project template, so a sandbox level
 // and a project level differ only in what levelbuilder says about them.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {Suspense, useEffect, useMemo, useState} from 'react';
 
@@ -155,7 +156,12 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
 
   // The lab's own Continue button advances the step.
   const navigation = useMemo(
-    () => ({label: continueLabel, enabled: true, onContinue: onComplete}),
+    () => ({
+      label: continueLabel,
+      enabled: true,
+      endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
+      onContinue: onComplete,
+    }),
     [continueLabel, onComplete]
   );
 
