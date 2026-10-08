@@ -383,8 +383,12 @@ actor is created` handler only it ever sees, placed FIRST so a learner's
 follow` as `any ⟨kind⟩`, a point as two numbers. Its name, and whether
      the world (or the Viewport) starts looking through it, are fields too.
      All of it is stored with the camera; the compiler writes the `use
-trait` and `set … of ⟨this camera⟩` rows its declaration needs. A project holding no camera rules is
-     pointed at the world's Rules. The main camera has no traits here: it is
+trait` and `set … of ⟨this camera⟩` rows its declaration needs. Its "Add a camera rule…" opens the camera
+     rules' own shelf of the rule library — Follows an Actor, Catches Up
+     Smoothly, Ignores Small Moves, Keeps the View Inside — which the
+     world's Rules no longer show among an actor's, where they read as
+     specialist machinery; the rule brought is ticked on the camera that
+     asked. The main camera has no traits here: it is
      the world's own, and following something is what an added camera is for.
 
 10. **`actor to follow` by kind.** A property type the inspector can offer as a

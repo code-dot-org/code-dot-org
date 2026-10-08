@@ -59,7 +59,10 @@ import type {
   StockSprite,
 } from '../appearance/stock';
 import {setEffectImportHandler} from '../blockly/effectImport';
-import {setRuleImportHandler} from '../blockly/ruleImport';
+import {
+  setCameraRuleImportHandler,
+  setRuleImportHandler,
+} from '../blockly/ruleImport';
 import {
   setRulesConfigHandler,
   type RulesConfigRequest,
@@ -95,6 +98,7 @@ type Shelf =
   | 'actor'
   | 'map'
   | 'style'
+  | 'cameraRule'
   | AppearanceKind
   | 'sound'
   // …and the one that is not a shelf: enhancing carries the actor it is being
@@ -139,6 +143,7 @@ export const LibraryImports = () => {
   useEffect(() => {
     setEffectImportHandler(() => open('effect'));
     setRuleImportHandler(() => open('rule'));
+    setCameraRuleImportHandler(() => open('cameraRule'));
     setActorImportHandler(() => open('actor'));
     setMapImportHandler(() => open('map'));
     setStyleImportHandler(() => open('style'));
@@ -151,6 +156,7 @@ export const LibraryImports = () => {
     return () => {
       setEffectImportHandler(null);
       setRuleImportHandler(null);
+      setCameraRuleImportHandler(null);
       setActorImportHandler(null);
       setMapImportHandler(null);
       setStyleImportHandler(null);
@@ -305,6 +311,21 @@ export const LibraryImports = () => {
           onImport={(rule: StockRule) => {
             // The value is the rule's NAME — a rule field says which rule,
             // never which file (`useRuleOptions`).
+            const {source, name} = importStockRule(
+              sourcesRef.current.source,
+              rule,
+            );
+            took(source, name);
+          }}
+          onCancel={cancel}
+        />
+      )}
+      {shelf === 'cameraRule' && (
+        <ImportRuleDialog
+          subject="camera"
+          onImport={(rule: StockRule) => {
+            // The rule's NAME, which the camera inspector that asked finds
+            // the rule's camera trait by, to tick it (`CameraInspector`).
             const {source, name} = importStockRule(
               sourcesRef.current.source,
               rule,

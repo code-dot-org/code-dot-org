@@ -18,12 +18,14 @@ import {useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
-import {requestRulesConfig} from '../blockly/rulesConfig';
+import {requestCameraRuleImport} from '../blockly/ruleImport';
 import fields from '../formFields.module.css';
 
 import styles from './mapEditor.module.css';
+import {useAfterImport} from './useAfterImport';
 import {MAIN_CAMERA, type CameraProperty} from './worldCameraCode';
 import {parseVectorText, vectorText} from './worldProperties';
 import type {CameraTraitChoice} from './worldRuleProperties';
@@ -85,6 +87,17 @@ export const CameraInspector = ({
     }
   };
   const elected = choices.filter(choice => traits.includes(choice.value));
+  // An imported rule is ticked once its traits are among the choices — the
+  // render that has the new project (`useAfterImport`).
+  const importRuleThen = useAfterImport(
+    choices.map(choice => choice.rule),
+    rule => {
+      const brought = choices.find(choice => choice.rule === rule);
+      if (brought && !traits.includes(brought.value)) {
+        onTrait(brought.value, true);
+      }
+    },
+  );
 
   const renderField = (property: CameraProperty) => {
     const key = property.setter;
@@ -233,40 +246,48 @@ export const CameraInspector = ({
         >
           {mainNote}
         </Typography>
-      ) : choices.length === 0 ? (
+      ) : (
         <>
-          <Typography
-            variant="body3"
-            component="span"
-            className={styles.inspectorNote}
-          >
-            A camera does more with a camera rule, like Camera Follow. Add one
-            to the world's rules.
-          </Typography>
+          {choices.length === 0 ? (
+            <Typography
+              variant="body3"
+              component="span"
+              className={styles.inspectorNote}
+            >
+              A camera does more with a camera rule: following something, easing
+              after it, staying inside the map.
+            </Typography>
+          ) : (
+            <div className={styles.inspectorGroup}>
+              {choices.map(choice => (
+                <Checkbox
+                  key={choice.value}
+                  name={`camera-trait-${choice.value}`}
+                  label={choice.name}
+                  checked={traits.includes(choice.value)}
+                  disabled={isReadOnly}
+                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                    onTrait(choice.value, event.target.checked)
+                  }
+                />
+              ))}
+            </div>
+          )}
+          {/* The camera rules' own shelf (`ImportRuleDialog`, subject
+              camera): what a camera can be taught, and nothing an actor is.
+              The rule it brings is ticked on THIS camera, so "make it
+              follow" is one errand and not two. */}
           <Button
             variant="outlined"
             color="secondary"
             size="small"
-            onClick={() => void requestRulesConfig({editable: !isReadOnly})}
+            disabled={isReadOnly}
+            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+            onClick={() => importRuleThen(requestCameraRuleImport, undefined)}
           >
-            Rules…
+            Add a camera rule…
           </Button>
         </>
-      ) : (
-        <div className={styles.inspectorGroup}>
-          {choices.map(choice => (
-            <Checkbox
-              key={choice.value}
-              name={`camera-trait-${choice.value}`}
-              label={choice.name}
-              checked={traits.includes(choice.value)}
-              disabled={isReadOnly}
-              onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                onTrait(choice.value, event.target.checked)
-              }
-            />
-          ))}
-        </div>
       )}
       {!main && elected.flatMap(choice => choice.properties).map(renderField)}
     </div>

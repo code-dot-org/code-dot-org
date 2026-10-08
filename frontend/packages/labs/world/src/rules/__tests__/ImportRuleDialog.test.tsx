@@ -29,11 +29,27 @@ describe('ImportRuleDialog', () => {
     // One tile each, named by the ability it adds: the dialog answers "what
     // should this world have?", and a rule's own name is what turns up on its
     // toolbox category once it is in.
+    //
+    // An ACTOR's rules: a camera's are a shelf of their own, opened from a
+    // camera's inspector (`subject`).
     for (const rule of STOCK_RULES) {
       expect(
         screen.queryAllByRole('button', {name: rule.ability}).length,
         rule.ability,
-      ).toBe(BASE_RULES.includes(rule.id) ? 0 : 1);
+      ).toBe(BASE_RULES.includes(rule.id) || rule.subject === 'camera' ? 0 : 1);
+    }
+  });
+
+  it('shows a camera only the camera rules', {timeout: 20000}, () => {
+    open({subject: 'camera'});
+    expect(screen.getByText('Add a camera rule')).toBeInTheDocument();
+    for (const rule of STOCK_RULES) {
+      expect(
+        screen.queryAllByRole('button', {name: rule.ability}).length,
+        rule.ability,
+      ).toBe(
+        rule.subject === 'camera' && !BASE_RULES.includes(rule.id) ? 1 : 0,
+      );
     }
   });
 

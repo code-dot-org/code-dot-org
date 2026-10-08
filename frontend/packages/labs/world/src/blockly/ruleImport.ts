@@ -21,3 +21,12 @@ const seam = importSeam();
 
 export const setRuleImportHandler = seam.register;
 export const requestRuleImport = seam.request;
+
+/**
+ * The same, for the CAMERA rules: their own shelf, opened from a camera's
+ * inspector, resolving with the name of the rule imported.
+ */
+const cameraSeam = importSeam();
+
+export const setCameraRuleImportHandler = cameraSeam.register;
+export const requestCameraRuleImport = cameraSeam.request;

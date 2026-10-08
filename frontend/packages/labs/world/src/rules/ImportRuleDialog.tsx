@@ -47,6 +47,13 @@ export interface ImportRuleDialogProps {
   onImport: (rule: StockRule) => void;
   /** Dismissed without choosing. */
   onCancel: () => void;
+  /**
+   * Which rules: an actor's, from the world's Rules, or a CAMERA's, from a
+   * camera's inspector. The camera rules are a shelf of their own — they
+   * only mean anything to a camera, and among the actor rules they read as
+   * specialist machinery nobody had asked for.
+   */
+  subject?: 'actor' | 'camera';
 }
 
 /**
@@ -73,6 +80,7 @@ const TILE_SIZE = {
 export const ImportRuleDialog = ({
   onImport,
   onCancel,
+  subject = 'actor',
 }: ImportRuleDialogProps) => {
   // Picking a tile selects it; `Import` is what commits. A rule brings the
   // rules it needs with it, so the tile a learner lands on first is rarely the
@@ -91,7 +99,11 @@ export const ImportRuleDialog = ({
   const groups = stockRuleGroups()
     .map(group => ({
       ...group,
-      rules: group.rules.filter(rule => offersRule(rule.id, app)),
+      rules: group.rules.filter(
+        rule =>
+          offersRule(rule.id, app) &&
+          (rule.subject === 'camera') === (subject === 'camera'),
+      ),
     }))
     .filter(group => group.rules.length > 0);
 
@@ -101,8 +113,12 @@ export const ImportRuleDialog = ({
       // announces something that needs answering now. The prop spread lands
       // after it, so this is the role that reaches the DOM.
       role="dialog"
-      title="Add a rule"
-      description="Pick one to copy into your project. You can open it afterwards and change anything you like."
+      title={subject === 'camera' ? 'Add a camera rule' : 'Add a rule'}
+      description={
+        subject === 'camera'
+          ? 'What a camera can do: follow something, ease after it, stay in the map. Pick one to copy into your project.'
+          : 'Pick one to copy into your project. You can open it afterwards and change anything you like.'
+      }
       onClose={onCancel}
       closeLabel="Close"
       primaryButtonProps={{
