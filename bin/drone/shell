@@ -1,35 +1,44 @@
 #!/bin/bash
 
 USAGE="
-SSH-es you into a live drone build, for interactive debugging.
+Opens a shell in a live drone build container via AWS SSM Session Manager, for
+interactive debugging. No gateway or SSH key required.
 
-Usage: bin/drone/shell ec2-34-201-165-204.us-west-2.compute.amazonaws.com
+Usage: bin/drone/shell i-0123456789abcdef0 us-west-2
 
 Notes:
-  1. Hostname is printed by the 'bin/drone/shell' step of the drone build.
-  2. Run only when drone is in either the unit->\`unit-tests\` or ui->\`ui-tests\` step,
-     depending on which you want to debug. Running too early will not work.
-  3. You must have configured an ~/.ssh/config Host entry for gateway.code.org, and it
-     must have gateway as an alias.
+  1. The instance id and region are printed by the 'bin/drone/shell' step of the
+     drone build.
+  2. Run only when drone is in either the unit->\`unit-tests\` or ui->\`ui-tests\`
+     step, depending on which you want to debug. Running too early will not work.
+  3. The drone workers run in a separate AWS account; this uses the 'codeorg-dev'
+     profile (override with DRONE_AWS_PROFILE) which must authenticate to it and
+     allow ssm:StartSession.
 "
 
+PROFILE="${DRONE_AWS_PROFILE:-codeorg-dev}"
+
+# Opens an interactive shell in the live build container on INSTANCE_ID via SSM.
+# 'docker ps -lq' is the most-recently-created container, i.e. the running build.
+# The command substitution is escaped so it runs on the worker, not locally.
+# stdin is inherited, so bin/drone/vscode can pipe a heredoc into the container.
 drone-shell () {
-  # Print USAGE if --help or ARGC != 1
-  if [ "$1" = "--help" ] || [ "$#" -ne 1 ]; then
+  if [ "$1" = "--help" ] || [ "$#" -lt 1 ]; then
     cat <<< "$USAGE"
     exit 1
   fi
-  hostname=$1
+  local instance_id=$1
+  local region=$2
 
-  if ! ssh -G gateway | grep 'hostname gateway.code.org' >/dev/null; then
-    echo "WARNING: no gateway alias found in ~/.ssh/config. Please setup a Host entry for gateway.code.org per:"
-    echo "https://docs.google.com/document/d/17oR9KxLu34mnFuB3DAFVQb4XaLS7-7_MJoVcDT4ZgBk/edit?tab=t.0#heading=h.p17oru8r6vpw"
-    echo
-    echo "Trying anyway..."
-    set -x
-  fi
+  local -a region_args=()
+  [ -n "$region" ] && region_args=(--region "$region")
 
-  ssh -tt gateway.code.org "ssh -o StrictHostKeyChecking=no -tti ~/.ssh/drone_access_key ubuntu@$hostname sudo docker exec -it \\\`sudo docker ps -lq\\\` bash"
+  aws ssm start-session \
+    --profile "$PROFILE" \
+    "${region_args[@]}" \
+    --target "$instance_id" \
+    --document-name AWS-StartInteractiveCommand \
+    --parameters command="sudo docker exec -it \$(sudo docker ps -lq) bash"
 }
 
 # We're being called from the command-line (vs sourced), run drone-shell()
