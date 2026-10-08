@@ -1,11 +1,12 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import lab, {setValidationState} from '@cdo/apps/lab2/lab2Redux';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import lab2Project, {
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -13,6 +14,10 @@ import predictLevel, {
   setHasSubmittedResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  ExternalNavigation,
+  ExternalNavigationContext,
+} from '@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {
   getStore,
@@ -21,6 +26,7 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import commonI18n from '@cdo/locale';
 
 // Minimal prop shapes for mock child components.
 interface ContinueButtonMockProps {
@@ -28,6 +34,7 @@ interface ContinueButtonMockProps {
   disabled?: boolean;
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
+  onContinue: () => void;
 }
 interface SubmitButtonMockProps {
   enabled: boolean;
@@ -44,17 +51,24 @@ jest.mock(
       children,
       disabled,
       tooltipMessage,
+      onContinue,
     }: ContinueButtonMockProps) => (
       <button
         type="button"
         data-disabled={String(disabled)}
         data-tooltip={tooltipMessage}
+        onClick={onContinue}
       >
         {children}
       </button>
     ),
   })
 );
+
+jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({type: 'test/continueOrFinishLesson'})),
+}));
 
 jest.mock('@cdo/apps/lab2/views/components/Instructions/SubmitButton', () => ({
   __esModule: true,
@@ -161,6 +175,101 @@ describe('NavigationArea', () => {
       </ThemeProvider>
     );
   }
+
+  describe('with external navigation', () => {
+    function renderWithHost(
+      navigation: ExternalNavigation,
+      props: Partial<Parameters<typeof NavigationArea>[0]> = {}
+    ) {
+      const defaultProps = {
+        levelProperties: makeLevelProperties(),
+        isRunning: false,
+        hasRun: false,
+        hasEdited: false,
+      };
+      return render(
+        <ThemeProvider>
+          <Provider store={store}>
+            <ExternalNavigationContext.Provider value={navigation}>
+              <NavigationArea {...defaultProps} {...props} />
+            </ExternalNavigationContext.Provider>
+          </Provider>
+        </ThemeProvider>
+      );
+    }
+
+    it("shows the host's label, or the lesson's own Continue or Finish without one", () => {
+      const {unmount} = renderWithHost({
+        label: 'Complete checkpoint',
+        enabled: true,
+        onContinue: jest.fn(),
+      });
+      expect(screen.getByRole('button')).toHaveTextContent(
+        'Complete checkpoint'
+      );
+      unmount();
+
+      renderWithHost({enabled: true, onContinue: jest.fn()});
+      expect(screen.getByRole('button')).toHaveTextContent(
+        commonI18n.continue()
+      );
+    });
+
+    it("follows the host's gate instead of the level's rules", () => {
+      // Validation unsatisfied would disable Continue without a host.
+      store.dispatch(
+        setValidationState({
+          hasConditions: true,
+          satisfied: false,
+          message: null,
+          index: 0,
+        })
+      );
+      const {unmount} = renderWithHost({enabled: true, onContinue: jest.fn()});
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'data-disabled',
+        'false'
+      );
+      unmount();
+
+      renderWithHost({
+        enabled: false,
+        tooltip: 'Check your work first',
+        onContinue: jest.fn(),
+      });
+      const button = screen.getByRole('button');
+      expect(button).toHaveAttribute('data-disabled', 'true');
+      expect(button).toHaveAttribute('data-tooltip', 'Check your work first');
+    });
+
+    it("runs the host's action instead of continuing the lesson", () => {
+      const hostContinue = jest.fn();
+      renderWithHost({enabled: true, onContinue: hostContinue});
+
+      fireEvent.click(screen.getByRole('button'));
+
+      expect(hostContinue).toHaveBeenCalledTimes(1);
+      expect(continueOrFinishLesson).not.toHaveBeenCalled();
+    });
+
+    it('leaves a submittable level to its Submit button', () => {
+      renderWithHost(
+        {enabled: true, onContinue: jest.fn()},
+        {levelProperties: makeLevelProperties({submittable: true})}
+      );
+      expect(screen.getByRole('button')).toHaveTextContent('Submit');
+    });
+  });
+
+  describe('continuing without external navigation', () => {
+    it('continues the lesson', () => {
+      renderDefault();
+
+      fireEvent.click(screen.getByRole('button'));
+
+      expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+  });
 
   describe('null rendering', () => {
     it('returns null when hideContinueIfDisabled=true, continue disabled, no feedback', () => {

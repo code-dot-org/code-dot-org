@@ -1,7 +1,13 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+} from 'react';
 
 import {
   getCurrentLevel,
@@ -12,16 +18,18 @@ import {
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
-import commonI18n from '@cdo/locale';
 
 import TextToSpeech from '../TextToSpeech';
 
 import ContinueButton from './ContinueButton';
+import {ExternalNavigationContext} from './ExternalNavigationContext';
 import {resourcePanelNavigationButtonElementId} from './ResourcePanel/constants';
 import SubmitButton from './SubmitButton';
 
@@ -40,8 +48,6 @@ interface NavigationAreaProps {
   markdownClassName?: string;
   overrideTheme?: Theme;
   styleAsBubble?: boolean;
-  /** Optional on continue/finish callback. */
-  onContinue?: () => void;
   /**
    * How to render the text of this navigation area. By default we render it
    * with the 'full' text. So, 'Continue to Level 3', etc.
@@ -67,7 +73,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   markdownClassName,
   overrideTheme,
   styleAsBubble = false,
-  onContinue,
   textVariant,
 }) => {
   const {
@@ -79,6 +84,17 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     disableEditRunForSubmission,
     offerBrowserTts,
   } = levelProperties;
+  // Navigation from outside the lab takes over Continue: its label, whether
+  // it is enabled, and what it does. Submit is untouched.
+  const externalNavigation = useContext(ExternalNavigationContext);
+  const dispatch = useAppDispatch();
+  const handleContinue = useCallback(() => {
+    if (externalNavigation) {
+      externalNavigation.onContinue();
+    } else {
+      dispatch(continueOrFinishLesson());
+    }
+  }, [externalNavigation, dispatch]);
   const hasValidationConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions
   );
@@ -134,6 +150,11 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
 
   // This supplies "simpler" text for the 'simple' text variant of the buttons
   const simpleText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
+  const buttonText = externalNavigation
+    ? externalNavigation.label ?? simpleText
+    : textVariant === 'simple'
+    ? simpleText
+    : text;
 
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
@@ -220,6 +241,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     if (submittable) {
       return [false, undefined] as const;
     }
+    if (externalNavigation) {
+      return [externalNavigation.enabled, externalNavigation.tooltip] as const;
+    }
     let action:
       | 'Validate'
       | 'SubmitPrediction'
@@ -257,6 +281,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     return [canContinue, key ? lab2I18n[key]() : undefined];
   }, [
     submittable,
+    externalNavigation,
     isPredictLevel,
     hasValidationConditions,
     validationTooltip,
@@ -324,9 +349,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               endIcon={endIcon}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
-              onContinue={onContinue}
+              onContinue={handleContinue}
             >
-              {textVariant === 'simple' ? simpleText : text}
+              {buttonText}
             </ContinueButton>
           )}
         </div>
