@@ -2,11 +2,14 @@
 
 $path-ring-width: 3px;
 $path-color: var(--border-selected-primary);
+$path-node-background: var(--background-brand-light);
+$path-node-text-color: var(--text-selected-primary-inverse);
 $off-path-color: var(--background-neutral-septenary);
 $focus-ring-width: 2px;
 $focus-ring-gap: 2px;
 $focus-color: var(--border-focused-primary);
 $node-radius: 6px;
+$answer-dot-size: 12px;
 $branch-height: 22px;
 $canvas-scale: var(--tree-canvas-scale, 1);
 $overlay-float-min-width: 600px;
@@ -148,14 +151,14 @@ $overlay-float-min-width: 600px;
   min-height: var(--tree-node-height);
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
   padding: 0 8px;
   border-width: 1.5px;
   border-style: solid;
   border-radius: $node-radius;
   font-size: 13px;
+  font-weight: 600;
   line-height: 1.2;
-  text-align: center;
 }
 
 .question,
@@ -168,6 +171,18 @@ $overlay-float-min-width: 600px;
 .pathNode {
   border-color: $path-color;
   border-width: 2px;
+  background-color: $path-node-background;
+  color: $path-node-text-color;
+}
+
+.answerDot {
+  flex-shrink: 0;
+  width: $answer-dot-size;
+  height: $answer-dot-size;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  background-color: var(--leaf-color);
 }
 
 .nodeText {
