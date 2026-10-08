@@ -134,6 +134,7 @@ import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import {useNewBlockStamps} from './useNewBlockStamps';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -1763,6 +1764,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
+  // Free play stamps "New" on the toolbox blocks the project has not used.
+  const getMainWorkspace = useCallback(
+    () => Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg | null,
+    []
+  );
+  useNewBlockStamps({
+    enabled: isFreeplayMode(levelProperties.levelMode),
+    scenes,
+    workspaceVersion,
+    getWorkspace: getMainWorkspace,
+  });
+
   // Only freeplay adds, renames, reorders or deletes scenes; a level with no
   // mode is unconstrained.
   const scenesEditable =
