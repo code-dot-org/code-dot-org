@@ -97,11 +97,11 @@ iframe {
     pointer-events: none; /* Prevents clicking play/volume/scrubber */
     filter: grayscale(100%);
 }
-    
+
 .controls-row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     color: white;
     height: 40px;
 }
@@ -126,48 +126,43 @@ iframe {
 }
 
 
-/* Control Buttons (Data URIs) */
+/* Control Buttons */
 .control-btn {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 26px;
     border: none;
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.2s;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
 }
 
 .control-btn:hover {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-#play-btn {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+/* State-based icon swaps via CSS content override (FA Pro Unicode code points) */
+:host(.playing) #play-btn i::before {
+    content: "\\f04c"; /* fa-pause */
 }
 
-:host(.playing) #play-btn {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/%3E%3C/svg%3E");
+#mute-btn.muted i::before {
+    content: "\\f2e2"; /* fa-volume-slash (Pro) */
 }
 
-#mute-btn {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='2' d='M11 5L6 9H2v6h4l5 4V5z'/%3E%3Cpath fill='none' stroke='white' stroke-width='2' d='M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14'/%3E%3C/svg%3E");
+#cc-btn.disabled i::before {
+    content: "\\e135"; /* fa-closed-captioning-slash (Pro) */
 }
 
-#mute-btn.muted {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='2' d='M11 5L6 9H2v6h4l5 4V5z'/%3E%3Cline x1='23' y1='9' x2='17' y2='15' stroke='white' stroke-width='2'/%3E%3Cline x1='17' y1='9' x2='23' y2='15' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
-}
-
-/* CC Icons with Physical Gapped Border */
-#cc-btn {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='5' width='18' height='14' rx='2' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath fill='white' d='M7 15h3c.55 0 1-.45 1-1v-1H9.5v.5h-2v-3h2v.5H11v-1c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm7 0h3c.55 0 1-.45 1-1v-1h-1.5v.5h-2v-3h2v.5H18v-1c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1z'/%3E%3C/svg%3E");
-}
-
-#cc-btn.disabled {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-width='2' d='M16 5h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h8'/%3E%3Cpath fill='white' d='M7 15h3c.55 0 1-.45 1-1v-1H9.5v.5h-2v-3h2v.5H11v-1c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm7 0h3c.55 0 1-.45 1-1v-1h-1.5v.5h-2v-3h2v.5H18v-1c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1z'/%3E%3Cline x1='19' y1='3' x2='5' y2='21' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+#fullscreen-btn.fullscreen-active i::before {
+    content: "\\f066"; /* fa-compress */
 }
 
 /* Volume Slider */
@@ -202,16 +197,6 @@ iframe {
 
 .hidden {
     display: none !important;
-}
-
-
-/* Fullscreen Button */
-#fullscreen-btn {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z'/%3E%3C/svg%3E");
-}
-
-#fullscreen-btn.fullscreen-active {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z'/%3E%3C/svg%3E");
 }
 
 /* Fullscreen layout */
