@@ -53,11 +53,41 @@
           "id": "intro-questions",
           "title": "Quick questions",
           "kind": "questions",
+          "description": "Tell us a little about yourself before you start.",
           "questions": [
             {
-              "id": "intro-placeholder",
-              "type": "freeResponse",
-              "text": "Placeholder until question steps render."
+              "id": 1,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-coding-experience",
+              "questionTitle": "How much have you coded before?",
+              "choices": [
+                {"id": "none", "text": "Never"},
+                {"id": "some", "text": "A little"},
+                {"id": "lots", "text": "A lot"}
+              ]
+            },
+            {
+              "id": 2,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-ai-experience",
+              "questionTitle": "How often do you use AI tools?",
+              "choices": [
+                {"id": "never", "text": "Never"},
+                {"id": "sometimes", "text": "Sometimes"},
+                {"id": "often", "text": "Often"}
+              ]
+            },
+            {
+              "id": 3,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-what-is-prompt",
+              "questionTitle": "What is a prompt?",
+              "choices": [
+                {"id": "instructions", "text": "Instructions you give an AI"},
+                {"id": "website", "text": "A finished website"},
+                {"id": "error", "text": "An error message from the browser"}
+              ],
+              "correctChoiceId": "instructions"
             }
           ]
         }
