@@ -113,7 +113,10 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
       {isExpanded && (
         <>
           <div className={styles.tabContent}>
-            <FormFieldWrapper label="Content">
+            <FormFieldWrapper
+              label="Content"
+              helperMessage="Supports markdown."
+            >
               <textarea
                 className={styles.textarea}
                 name="customIntroText"
@@ -123,7 +126,6 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
                 disabled={isBusy}
               />
             </FormFieldWrapper>
-            <Typography variant="body4">Supports markdown.</Typography>
           </div>
 
           {error && (
