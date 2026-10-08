@@ -77,13 +77,24 @@ import {
   type MapDoc,
   type WorkspaceState,
 } from './mapModel';
-import {MapStage} from './MapStage';
+import {MapStage, type WorldCameraEditor} from './MapStage';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {WithheldNote} from './WithheldNote';
+import {
+  addWorldCamera,
+  cameraPropertyValue,
+  cameraTraitValues,
+  removeWorldCamera,
+  renameWorldCamera,
+  setCameraProperty,
+  setCameraTrait,
+  setStartingCamera,
+  startingCamera,
+} from './worldCameraEdits';
 import {worldCameras} from './worldCameras';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
 import type {WorldProperty} from './worldProperties';
-import {worldRuleProperties} from './worldRuleProperties';
+import {cameraTraitChoices, worldRuleProperties} from './worldRuleProperties';
 
 /** How long after the last keystroke a placement's picture is asked for. */
 const PICTURE_DEBOUNCE_MS = 150;
@@ -526,6 +537,37 @@ export const MapEditor = ({
     () => (document.world ? worldCameras(fileText) : []),
     [document.world, fileText],
   );
+  // …and what they can be told: edits to the world's code, as the World
+  // inspector's are (`worldCameraEdits`). The traits a camera may elect are
+  // the project's rules' camera traits.
+  const cameraChoices = useMemo(() => cameraTraitChoices(files), [files]);
+  const worldCameraEditor: WorldCameraEditor | undefined = document.world
+    ? {
+        starting: startingCamera(fileText),
+        choices: cameraChoices,
+        traitsOf: id => cameraTraitValues(fileText, id),
+        valueOf: (id, property) => cameraPropertyValue(fileText, id, property),
+        add: () => {
+          const name = `Camera ${worldCameraList.length + 2}`;
+          const made = addWorldCamera(contentsRef.current, name);
+          if (made.id) {
+            writeFile(made.contents);
+          }
+          return made.id;
+        },
+        remove: id => writeFile(removeWorldCamera(contentsRef.current, id)),
+        rename: (id, name) =>
+          writeFile(renameWorldCamera(contentsRef.current, id, name)),
+        setStarting: id =>
+          writeFile(setStartingCamera(contentsRef.current, id)),
+        setTrait: (id, trait, elected) =>
+          writeFile(setCameraTrait(contentsRef.current, id, trait, elected)),
+        setValue: (id, property, value) =>
+          writeFile(
+            setCameraProperty(contentsRef.current, id, property, value),
+          ),
+      }
+    : undefined;
   const worldInspector =
     document.world && worldHeader
       ? {
@@ -825,6 +867,7 @@ export const MapEditor = ({
         mapScriptLabel={document.hasMapScript ? 'Map code' : 'World code'}
         world={worldInspector}
         worldCameras={worldCameraList}
+        worldCameraEditor={worldCameraEditor}
         mapChoices={mapChoices}
         heldMaps={heldMaps}
         backgroundChoices={backgroundChoices}

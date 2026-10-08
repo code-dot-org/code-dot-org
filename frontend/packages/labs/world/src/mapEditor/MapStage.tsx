@@ -51,6 +51,7 @@ import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {AngleInput} from './AngleInput';
+import {CameraInspector} from './CameraInspector';
 import {CameraPanel} from './CameraPanel';
 import {IconAction} from './IconAction';
 import {LayerInspector} from './LayerInspector';
@@ -126,8 +127,10 @@ import {
 import {useAfterImport} from './useAfterImport';
 import {VectorInput} from './VectorInput';
 import {WithheldNote} from './WithheldNote';
+import {MAIN_CAMERA, type CameraProperty} from './worldCameraEdits';
 import {placementCameras, type DeclaredCamera} from './worldCameras';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
+import type {CameraTraitChoice} from './worldRuleProperties';
 
 /** What the stage can blit: a decoded thumbnail, or a canvas painted here. */
 type Picture = HTMLImageElement | HTMLCanvasElement;
@@ -298,6 +301,11 @@ export interface MapStageProps {
    */
   worldCameras?: readonly DeclaredCamera[];
   /**
+   * The edits the world's cameras take, made in the world's code by the
+   * editor, which has the file (`worldCameraEdits`); absent for a `.map`.
+   */
+  worldCameraEditor?: WorldCameraEditor;
+  /**
    * The project's maps as `[name, path]`, for a Viewport's `map` property
    * (specs/VIEWPORT_PLAN.md) — the one string the inspector offers a list
    * for that the sandbox cannot supply, since which maps a project holds is
@@ -412,6 +420,23 @@ const ToolbarIcon = ({
   </Tooltip>
 );
 
+/** What the world's cameras can be told, from the strip and the inspector. */
+export interface WorldCameraEditor {
+  /** The camera the world starts looking through (`MAIN_CAMERA` default). */
+  starting: string;
+  /** The traits the project's rules offer a camera. */
+  choices: readonly CameraTraitChoice[];
+  traitsOf: (id: string) => string[];
+  valueOf: (id: string, property: CameraProperty) => string | undefined;
+  /** Add one, answering its id. */
+  add: () => string | undefined;
+  remove: (id: string) => void;
+  rename: (id: string, name: string) => void;
+  setStarting: (id: string) => void;
+  setTrait: (id: string, trait: string, elected: boolean) => void;
+  setValue: (id: string, property: CameraProperty, value: string) => void;
+}
+
 export const MapStage = ({
   doc,
   onDocChange,
@@ -419,6 +444,7 @@ export const MapStage = ({
   onEditScript,
   eventsFor,
   worldCameras = [],
+  worldCameraEditor,
   withheld,
   appBuilder = false,
   kinds,
@@ -497,11 +523,15 @@ export const MapStage = ({
    */
   const [selectedLayer, setSelectedLayer] = useState(DEFAULT_LAYER);
   const [inspectingLayer, setInspectingLayer] = useState(false);
-  // A placement selected closes the layer's inspector, so deselecting it
-  // goes back to the world's rather than to a layer nobody asked for again.
+  /** The world's camera open in its inspector, if one is. */
+  const [inspectingCamera, setInspectingCamera] = useState<string | null>(null);
+  // A placement selected closes the layer's and the camera's inspectors, so
+  // deselecting it goes back to the world's rather than to one nobody asked
+  // for again.
   useEffect(() => {
     if (selectedId) {
       setInspectingLayer(false);
+      setInspectingCamera(null);
     }
   }, [selectedId]);
   /**
@@ -2663,22 +2693,34 @@ export const MapStage = ({
   // the camera list offers — and not at all while scripts are withheld from
   // this lesson: a list whose one button opens a script nobody may open is a
   // list that says less than nothing.
-  const cameras =
-    appBuilder || !onEditScript || locked('map-scripts')
-      ? undefined
-      : selectedActor
+  //
+  // …except the world's own, which are EDITED in the strip and need no
+  // script to be offered (`worldCameraEdits`).
+  const scripts = !appBuilder && onEditScript && !locked('map-scripts');
+  const cameras = appBuilder
+    ? undefined
+    : selectedActor
+      ? scripts
         ? {
             list: placementCameras(selectedActor.blocks),
             owner: selectedActor.id,
-            open: () => onEditScript(selectedActor.id),
+            open: () => onEditScript?.(selectedActor.id),
           }
-        : world
-          ? {
-              list: worldCameras,
-              owner: 'the world',
-              open: () => onEditScript(undefined),
-            }
-          : undefined;
+        : undefined
+      : world && (worldCameraEditor || scripts)
+        ? {
+            list: worldCameras ?? [],
+            owner: 'the world',
+            open: scripts ? () => onEditScript?.(undefined) : undefined,
+          }
+        : undefined;
+  /** The world's camera open in the inspector, while it still exists. */
+  const inspectedCamera =
+    worldCameraEditor && inspectingCamera && !selectedActor
+      ? inspectingCamera === MAIN_CAMERA
+        ? {id: MAIN_CAMERA, name: 'Main camera'}
+        : worldCameras?.find(each => each.id === inspectingCamera)
+      : undefined;
 
   return (
     <div className={styles.stage} ref={stageRef}>
@@ -2801,6 +2843,7 @@ export const MapStage = ({
               onSelect={id => {
                 setSelectedLayer(id);
                 setInspectingLayer(true);
+                setInspectingCamera(null);
                 setSelectedId(null);
               }}
               onAdd={() => {
@@ -2827,6 +2870,31 @@ export const MapStage = ({
             cameras={cameras.list}
             owner={cameras.owner}
             onOpen={cameras.open}
+            edits={
+              !selectedActor && worldCameraEditor
+                ? {
+                    selected: inspectedCamera?.id ?? null,
+                    starting: worldCameraEditor.starting,
+                    onSelect: id => {
+                      setInspectingCamera(id);
+                      setInspectingLayer(false);
+                      setSelectedId(null);
+                    },
+                    onAdd: () => {
+                      const id = worldCameraEditor.add();
+                      if (id) {
+                        setInspectingCamera(id);
+                        setInspectingLayer(false);
+                      }
+                    },
+                    onRemove: id => {
+                      worldCameraEditor.remove(id);
+                      setInspectingCamera(null);
+                    },
+                    isReadOnly,
+                  }
+                : undefined
+            }
           />
         )}
         <RecordPanel
@@ -2843,6 +2911,34 @@ export const MapStage = ({
           nameOf={kindName}
         />
       </div>
+      {inspectedCamera && worldCameraEditor && (
+        <CameraInspector
+          // Re-keyed on what the code says of it, so a change from outside —
+          // and a different camera — is what the fields show.
+          key={`${inspectedCamera.id}:${inspectedCamera.name}:${worldCameraEditor.starting}`}
+          id={inspectedCamera.id}
+          name={inspectedCamera.name}
+          starting={worldCameraEditor.starting === inspectedCamera.id}
+          traits={worldCameraEditor.traitsOf(inspectedCamera.id)}
+          choices={worldCameraEditor.choices}
+          valueOf={property =>
+            worldCameraEditor.valueOf(inspectedCamera.id, property)
+          }
+          kinds={Object.entries(kinds ?? {})
+            .map(([path, kind]) => [kind.name, path] as const)
+            .sort(([a], [b]) => a.localeCompare(b))}
+          onRename={name => worldCameraEditor.rename(inspectedCamera.id, name)}
+          onStarting={() => worldCameraEditor.setStarting(inspectedCamera.id)}
+          onTrait={(trait, elected) =>
+            worldCameraEditor.setTrait(inspectedCamera.id, trait, elected)
+          }
+          onValue={(property, value) =>
+            worldCameraEditor.setValue(inspectedCamera.id, property, value)
+          }
+          onClose={() => setInspectingCamera(null)}
+          isReadOnly={isReadOnly}
+        />
+      )}
       {!selectedActor && inspectingLayer && inspectedLayer && (
         <LayerInspector
           // Re-keyed on what the document says, so a change from outside —
@@ -2860,39 +2956,45 @@ export const MapStage = ({
           isReadOnly={isReadOnly}
         />
       )}
-      {!selectedActor && !(inspectingLayer && inspectedLayer) && world && (
-        <WorldInspector
-          // NOT re-keyed on the header, though that is the obvious way to
-          // make a change from outside show: a remount closes the rule
-          // groups and the vector popover, and a drag on the grid commits
-          // on every move. The inspector follows the header itself.
-          {...world}
-          // …and the theme, which is the WORLD's — its `use theme` row — and
-          // so its main map's: there is no difference to keep between them.
-          theme={world.header.theme}
-          themeOptions={themeOptions}
-          onTheme={path => world.onTheme?.(path)}
-          {...backgroundProps}
-          isReadOnly={isReadOnly}
-        />
-      )}
-      {!selectedActor && !(inspectingLayer && inspectedLayer) && !world && (
-        <MapInspector
-          modal={map.modal === true}
-          // `undefined` and not `false` for the off state: every map written
-          // before modality existed says nothing, and writing `false` into all
-          // of them would be a diff per map for no change in meaning
-          // (specs/MODALITY_PLAN.md).
-          onModal={modal =>
-            commit({...mapRef.current, modal: modal || undefined})
-          }
-          theme={map.theme}
-          themeOptions={themeOptions}
-          onTheme={path => commit({...mapRef.current, theme: path})}
-          {...backgroundProps}
-          isReadOnly={isReadOnly}
-        />
-      )}
+      {!selectedActor &&
+        !(inspectingLayer && inspectedLayer) &&
+        !inspectedCamera &&
+        world && (
+          <WorldInspector
+            // NOT re-keyed on the header, though that is the obvious way to
+            // make a change from outside show: a remount closes the rule
+            // groups and the vector popover, and a drag on the grid commits
+            // on every move. The inspector follows the header itself.
+            {...world}
+            // …and the theme, which is the WORLD's — its `use theme` row — and
+            // so its main map's: there is no difference to keep between them.
+            theme={world.header.theme}
+            themeOptions={themeOptions}
+            onTheme={path => world.onTheme?.(path)}
+            {...backgroundProps}
+            isReadOnly={isReadOnly}
+          />
+        )}
+      {!selectedActor &&
+        !(inspectingLayer && inspectedLayer) &&
+        !inspectedCamera &&
+        !world && (
+          <MapInspector
+            modal={map.modal === true}
+            // `undefined` and not `false` for the off state: every map written
+            // before modality existed says nothing, and writing `false` into all
+            // of them would be a diff per map for no change in meaning
+            // (specs/MODALITY_PLAN.md).
+            onModal={modal =>
+              commit({...mapRef.current, modal: modal || undefined})
+            }
+            theme={map.theme}
+            themeOptions={themeOptions}
+            onTheme={path => commit({...mapRef.current, theme: path})}
+            {...backgroundProps}
+            isReadOnly={isReadOnly}
+          />
+        )}
       {/* `fields.narrow` below is what makes the design system's form widths
           fit a panel this size — see `formFields.module.css`, which says what
           the overrides are for and what each one was found by. */}

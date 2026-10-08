@@ -1025,6 +1025,60 @@ describe('a level, with nothing selected', () => {
     setRulesConfigHandler(null);
   });
 
+  it('lists the world’s cameras, opens one, and adds another', () => {
+    const editor = {
+      starting: 'chase',
+      choices: [
+        {
+          value: 'Camera Follow#FollowsTrait',
+          name: 'Follows',
+          rule: 'Camera Follow',
+          properties: [
+            {
+              setter: 'world_set_CameraFollow_ActorToFollowProperty',
+              name: 'actor to follow',
+              type: 'actor',
+            },
+          ],
+        },
+      ],
+      traitsOf: () => ['Camera Follow#FollowsTrait'],
+      valueOf: () => 'actors/bird',
+      add: vi.fn(() => 'wide'),
+      remove: vi.fn(),
+      rename: vi.fn(),
+      setStarting: vi.fn(),
+      setTrait: vi.fn(),
+      setValue: vi.fn(),
+    };
+    const main = mount(doc(), {
+      world: {
+        header: {name: 'W', properties: []},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+      },
+      worldCameras: [{id: 'chase', name: 'Chase', traits: []}],
+      worldCameraEditor: editor,
+      kinds: {'actors/bird': {name: 'Bird'}},
+    });
+    fireEvent.click(main.getByRole('button', {name: 'Cameras'}));
+    fireEvent.click(main.getByRole('button', {name: /^Chase/}));
+    expect(main.getByTestId('camera-inspector')).toBeInTheDocument();
+    expect(main.getByLabelText('Follows')).toBeChecked();
+    const follow = main.container.querySelector(
+      'select[name="camera-world_set_CameraFollow_ActorToFollowProperty"]',
+    ) as HTMLSelectElement;
+    expect(follow.value).toBe('actors/bird');
+    fireEvent.click(main.getByLabelText('Follows'));
+    expect(editor.setTrait).toHaveBeenCalledWith(
+      'chase',
+      'Camera Follow#FollowsTrait',
+      false,
+    );
+    fireEvent.click(main.getByRole('button', {name: 'Add camera'}));
+    expect(editor.add).toHaveBeenCalled();
+  });
+
   it('never offers that on a world’s main map, which has nothing under it', () => {
     // A main map lives inside the `.world` file, so `load map` cannot name it
     // and nothing can ever be loaded over it — the flag could only ever be a

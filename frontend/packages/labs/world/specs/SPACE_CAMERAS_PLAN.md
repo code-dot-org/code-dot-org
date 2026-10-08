@@ -354,14 +354,24 @@ for ⟨actor⟩`, a socket.**
      view", since every space has a main camera regardless. It starts
      closed behind a Cameras button in the stage's toolbar, which appears
      only where there would be a list to show.
-   - **9b. Add, remove, rename.** Renaming is a field rewrite, which
-     `worldProperties` already does. Adding and removing are NOT: they splice a
-     row into a chain and unlink one, and no writer in that module changes
-     structure. This is the new surgery.
-   - **9c. The inspector's traits.** "The Enhance row and a field per trait
-     property" is doing a lot of work in one sentence: the Enhance machinery
-     (`actors/enhance`) is keyed to actor KINDS, and a camera is not one. This is
-     the piece to design rather than estimate.
+   - **9b. Add, remove, rename. BUILT for the world's own cameras.** The
+     strip lists the main camera first and every `define camera` under `define
+world` after it, marks the one the world starts looking through, and adds
+     and removes them (`mapEditor/worldCameraEdits`, the new surgery: a row
+     spliced onto the end of the world's rows, where what a camera follows has
+     already been placed, and unlinked with any `look through camera` that
+     named it). A Viewport's cameras stay read-only, declared in its
+     placement's code.
+   - **9c. The inspector's traits. BUILT, without the Enhance machinery.**
+     Enhance is keyed to actor kinds and a camera is not one, so a camera's
+     inspector offers the project's camera traits as checkboxes instead —
+     each a `use trait` at the top of its mouth — with a field per writable
+     property of each elected trait, a `set … of ⟨this camera⟩` row:
+     `actor to follow` as `any ⟨kind⟩`, a point as two numbers. Its name, and
+     whether the world starts looking through it — one `look through camera`
+     row, at the end — are fields too. A project holding no camera rules is
+     pointed at the world's Rules. The main camera has no traits here: it is
+     the world's own, and following something is what an added camera is for.
 
 10. **`actor to follow` by kind.** A property type the inspector can offer as a
     dropdown of the project's actor kinds, so a Viewport's camera can be aimed at

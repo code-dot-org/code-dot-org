@@ -11,8 +11,9 @@
 // them, so that what the fields offer can be tested against the real rules.
 
 import {projectRuleMetas} from '../blockly/projectModules';
-import {memberLocalName} from '../blockly/ruleRegistry';
+import {memberLocalName, memberValue} from '../blockly/ruleRegistry';
 
+import type {CameraProperty} from './worldCameraEdits';
 import {vectorText, type WorldRuleProperty} from './worldProperties';
 
 /**
@@ -51,6 +52,46 @@ export function worldRuleProperties(
         type: property.type,
         rule: rule.name,
         default: defaultText(property.default),
+      })),
+  );
+}
+
+/** A trait a camera may elect, with the properties its inspector edits. */
+export interface CameraTraitChoice {
+  /** What a `use trait` row stores: `Camera Follow#FollowsTrait`. */
+  value: string;
+  name: string;
+  /** The rule it comes from, which is where a learner adds or removes it. */
+  rule: string;
+  properties: CameraProperty[];
+}
+
+/**
+ * The traits the project's rules offer a CAMERA, for a camera's inspector:
+ * every trait whose subject is a camera, with its properties that a starting
+ * value means something for (`readonly` ones are the trait's own working
+ * state, as for the world's).
+ */
+export function cameraTraitChoices(
+  files: Record<string, string>,
+): CameraTraitChoice[] {
+  return projectRuleMetas(files).flatMap(rule =>
+    rule.traits
+      .filter(trait => trait.subject === 'camera')
+      .map(trait => ({
+        value: memberValue(trait.ref),
+        name: trait.name,
+        rule: rule.name,
+        properties: rule.properties
+          .filter(
+            property =>
+              property.ownerTraitId === trait.id && !property.readonly,
+          )
+          .map(property => ({
+            setter: `world_set_${memberLocalName(property.ref)}`,
+            name: property.name,
+            type: property.type,
+          })),
       })),
   );
 }
