@@ -75,7 +75,7 @@ import {setSimpleColors} from './fields/FieldColorPicker';
 import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
 import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
-import {eventsNarrowerFor} from './kindEvents';
+import {eventsNarrowerFor, eventsUnheardBy} from './kindEvents';
 import {registerLessonButtons} from './lessonFlyoutButton';
 import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
 import {
@@ -616,7 +616,7 @@ export const BlocklyFileEditor = ({
     return path ? files[path] : undefined;
   }, [currentSources.source, fileId, files]);
 
-  const {blocks, toolbox} = useMemo(() => {
+  const {blocks, toolbox, unheard} = useMemo(() => {
     const rules = projectRuleMetas(files);
     const palette = buildDomainPalette(rules, {
       ownRuleModule,
@@ -643,9 +643,19 @@ export const BlocklyFileEditor = ({
       rules,
       blockOwners(palette.toolbox, rules),
     );
+    // …and in an actor's own file, no hat for an event that actor cannot
+    // hear: its handlers are about it and nobody else (`kindEvents`).
+    const unheard = ownActorModule
+      ? eventsUnheardBy(
+          palette.toolbox,
+          palette.blocks,
+          eventsNarrowerFor(files),
+          ownActorModule,
+        )
+      : new Set<string>();
     const offered = withoutBlocks(
       withoutCategories(palette.toolbox, [...hiddenCategories, ...narrowed]),
-      app ? APP_HIDDEN_BLOCKS : new Set<string>(),
+      new Set([...(app ? APP_HIDDEN_BLOCKS : []), ...unheard]),
     );
     const shelved = shelf ? shelvedToolbox(offered, shelf) : offered;
     return {
@@ -657,6 +667,7 @@ export const BlocklyFileEditor = ({
       // decided while the toolbox was built, and any of the three filters
       // above can leave one standing over nothing (`toolboxFilter`).
       toolbox: withoutEmptyHeadings(shelved),
+      unheard,
     };
   }, [
     files,
@@ -1393,7 +1404,15 @@ export const BlocklyFileEditor = ({
       // block pasted here from another tab cannot be here (`misplacedBlocks`).
       setFileContext(
         workspaceRef.current,
-        fileKind ? {kind: fileKind, offered: typesOffered(toolbox)} : undefined,
+        // The hats left out because this actor cannot hear them still count
+        // as offered: leaving them out is the toolbox's advice, and a file
+        // that holds one is not wrong to (`kindEvents.eventsUnheardBy`).
+        fileKind
+          ? {
+              kind: fileKind,
+              offered: new Set([...typesOffered(toolbox), ...unheard]),
+            }
+          : undefined,
       );
       // …and now that the workspace knows which file it is, the blocks that
       // draw the actor they are about can say so. HERE rather than only on
@@ -1409,6 +1428,7 @@ export const BlocklyFileEditor = ({
     fileId,
     fileKind,
     toolbox,
+    unheard,
   ]);
 
   // Reload after a rename, once `blocks` carries the renamed member types —

@@ -42,12 +42,12 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {type EventChoice} from '../blockly/eventChoices';
 import type {FileKind} from '../blockly/fileKind';
-import {eventsNarrowerFor} from '../blockly/kindEvents';
+import {eventsNarrowerFor, eventsUnheardBy} from '../blockly/kindEvents';
 import {localizeBlocks, localizeToolbox} from '../blockly/localizeBlocks';
 import {setCurrentPlacements} from '../blockly/moduleOptions';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {standInBlocks} from '../blockly/standInBlocks';
-import {withoutEmptyHeadings} from '../blockly/toolboxFilter';
+import {withoutBlocks, withoutEmptyHeadings} from '../blockly/toolboxFilter';
 import {DesignSystemToolboxPlugin} from '../blockly/toolboxStyle';
 import {useSectionWorkspace} from '../blockly/useSectionWorkspace';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
@@ -124,14 +124,24 @@ export const PlacementScriptEditor = ({
       ownMapModule: mapModule,
     });
     const known = new Set(palette.blocks.map(block => block.type));
+    // No hat for an event the placed actor cannot hear: its handlers are
+    // about it and nobody else (`kindEvents`).
+    const unheard = actorKind
+      ? eventsUnheardBy(
+          palette.toolbox,
+          palette.blocks,
+          eventsNarrowerFor(files),
+          actorKind,
+        )
+      : new Set<string>();
     return {
       blocks: [
         ...palette.blocks,
         ...standInBlocks(Object.values(files), known),
       ],
-      toolbox: withoutEmptyHeadings(palette.toolbox),
+      toolbox: withoutEmptyHeadings(withoutBlocks(palette.toolbox, unheard)),
     };
-  }, [files, kind, mapModule]);
+  }, [files, kind, mapModule, actorKind]);
   const localizedBlocks = useMemo(
     () => localizeBlocks(blocks),
     [blocks, locale],

@@ -15,7 +15,7 @@ import {
   traitValuesIn,
 } from '../eventChoices';
 import {FOUNDATION_TRAIT_VALUES} from '../foundation';
-import {eventsNarrowerFor} from '../kindEvents';
+import {eventsNarrowerFor, eventsUnheardBy} from '../kindEvents';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 
 const files = projectFiles(WORLD_SCENARIOS.simple.source);
@@ -110,5 +110,34 @@ describe('the events other kinds declare for themselves', () => {
 
   it('are offered to the kind that declares them', () => {
     expect(drawersOf('actors/slider')).toContain('Slider: when … changed');
+  });
+});
+
+describe('the toolbox of one actor’s code', () => {
+  const kit = projectFiles(WORLD_SCENARIOS.interface.source);
+  const kitPalette = buildDomainPalette(projectRuleMetas(kit), {
+    fileKind: 'actor',
+    ownProperties: projectOwnMetas(kit),
+  });
+  const unheard = (kind: string) =>
+    eventsUnheardBy(
+      kitPalette.toolbox,
+      kitPalette.blocks,
+      eventsNarrowerFor(kit),
+      kind,
+    );
+
+  it('leaves out the events a Button cannot hear', () => {
+    const left = unheard('actors/button');
+    expect([...left].some(type => type.includes('ActorsList_'))).toBe(true);
+    expect([...left].some(type => type.includes('ActorsSlider_'))).toBe(true);
+    // …and keeps the click, which it hears.
+    expect(left.has('world_on_Mouse_IsClickedWithEvent')).toBe(false);
+  });
+
+  it('keeps a List’s own events in a List’s', () => {
+    expect(
+      [...unheard('actors/list')].some(t => t.includes('ActorsList_')),
+    ).toBe(false);
   });
 });

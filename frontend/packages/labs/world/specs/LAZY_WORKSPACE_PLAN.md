@@ -103,8 +103,13 @@ reaching through their one trait (`eventChoicesForKind`). An event of a
 trait the kind does not hold is not offered: its handler would never run.
 Picking one puts the hat first in that placement's own code and opens it.
 
-THE "+" NARROWS THE SAME WAY where the code is about one kind: in an
-actor's own file, and in a placed actor's code. Both ask `kindEvents`,
+THE "+" AND THE TOOLBOX NARROW THE SAME WAY where the code is about one
+kind: in an actor's own file, and in a placed actor's code. A handler's
+subject is that actor and nothing else (specs/EVENTS.md, "Whose event"),
+so an event it cannot hear is left out of the toolbox too — a Button's
+List drawer keeps the List's properties and loses its events. Only left
+out: the blocks stay defined, and the misplaced-block check still counts
+them as offered, so a file that holds one loads and compiles as before. Both ask `kindEvents`,
 which the quick add asks too, so the three lists cannot drift apart. A
 world's "+" offers every event: its handler names a kind after it is
 added. Nor is a kind offered another kind's OWN events, declared in that
