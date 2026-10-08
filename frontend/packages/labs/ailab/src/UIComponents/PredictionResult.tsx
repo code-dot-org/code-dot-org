@@ -1,6 +1,7 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
+import {Fragment} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {formatNumber, thresholdText} from '../helpers/displayTree';
@@ -24,7 +25,7 @@ const PredictionResult = () => {
   const predictedLabel = useAppSelector(getConvertedPredictedLabel);
   const trace = useAppSelector(getPredictionTrace);
   const currentStep = useAppSelector(getPredictionStep);
-  const chosenStep = useAppSelector(state => state.predictionStep);
+  const steppedByHand = useAppSelector(state => state.predictionStepByHand);
 
   const valueText = (value: string | number): string =>
     typeof value === 'number'
@@ -53,16 +54,26 @@ const PredictionResult = () => {
         ]
       : [];
 
+  const stepAnnouncement = (index: number) => (
+    <>
+      Step {index + 1} of {steps.length}: {steps[index]}
+    </>
+  );
+
+  // Read the path whole: a screen reader cuts off each step if playback announces it.
   const announcement = () => {
     if (!hasPrediction) {
       return null;
     }
-    if (chosenStep === undefined) {
-      return `AI predicts ${predictionText}`;
+    if (steppedByHand) {
+      return stepAnnouncement(currentStep);
     }
     return (
       <>
-        Step {chosenStep + 1} of {steps.length}: {steps[chosenStep]}
+        AI predicts {predictionText}
+        {steps.map((_, index) => (
+          <Fragment key={index}>. {stepAnnouncement(index)}</Fragment>
+        ))}
       </>
     );
   };

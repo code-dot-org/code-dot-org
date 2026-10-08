@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 
@@ -7,7 +7,7 @@ import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {ColumnTypes} from '../../src/constants';
 import I18n from '../../src/i18n';
-import {setPrediction} from '../../src/redux';
+import {setPrediction, setPredictionStep} from '../../src/redux';
 import train from '../../src/train';
 import TestPanel from '../../src/UIComponents/TestPanel';
 
@@ -55,6 +55,26 @@ function predictSnake() {
 
 function predictButton() {
   return screen.getByRole('button', {name: 'Predict'});
+}
+
+function status() {
+  return screen.getByRole('status').textContent;
+}
+
+function stepAnnouncement(index) {
+  const steps = within(screen.getByRole('list')).getAllByRole('listitem');
+  const [, text] = steps[index].children;
+  return `Step ${index + 1} of ${steps.length}: ${text.textContent}`;
+}
+
+function pathAnnouncement(prediction) {
+  const stepCount = within(screen.getByRole('list')).getAllByRole(
+    'listitem',
+  ).length;
+  return [
+    `AI predicts ${prediction}`,
+    ...Array.from({length: stepCount}, (_, index) => stepAnnouncement(index)),
+  ].join('. ');
 }
 
 describe('TestPanel', () => {
@@ -145,26 +165,41 @@ describe('TestPanel', () => {
     expect(current()).toEqual([steps[1]]);
   });
 
-  test('a decision tree announces each step, but never its controls', () => {
+  test('a decision tree announces its whole path, then each step taken by hand, but never its controls', () => {
     const store = trainedAnimalStore({trainer: 'decisionTree'});
     renderTestPanel(store);
     const nextStep = () => screen.getByRole('button', {name: 'Next step'});
-    const stepText = index => {
-      const steps = within(screen.getByRole('list')).getAllByRole('listitem');
-      const [, text] = steps[index].children;
-      return `Step ${index + 1} of ${steps.length}: ${text.textContent}`;
-    };
 
-    expect(screen.getByRole('status').textContent).toBe('');
+    expect(status()).toBe('');
 
     predictSnake();
 
-    expect(screen.getByRole('status').textContent).toBe(stepText(0));
+    expect(status()).toBe(pathAnnouncement('snake'));
     expect(nextStep().closest('[aria-live], [role="status"]')).toBeNull();
 
     fireEvent.click(nextStep());
 
-    expect(screen.getByRole('status').textContent).toBe(stepText(1));
+    expect(status()).toBe(stepAnnouncement(1));
+  });
+
+  test('a decision tree keeps announcing its whole path while it plays, skips, and replays', () => {
+    const store = trainedAnimalStore({trainer: 'decisionTree'});
+    renderTestPanel(store);
+    predictSnake();
+
+    act(() => store.dispatch(setPredictionStep(1)));
+    expect(status()).toBe(pathAnnouncement('snake'));
+
+    fireEvent.click(screen.getByRole('button', {name: 'Skip to the answer'}));
+    expect(status()).toBe(pathAnnouncement('snake'));
+
+    fireEvent.click(screen.getByRole('button', {name: 'Previous step'}));
+    expect(status()).toBe(stepAnnouncement(0));
+
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Replay from the start'}),
+    );
+    expect(status()).toBe(pathAnnouncement('snake'));
   });
 
   test('a KNN model shows its prediction without steps', () => {

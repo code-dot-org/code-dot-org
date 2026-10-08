@@ -10,6 +10,7 @@ import reducer, {
   setTestData,
   setPrediction,
   setPredictionStep,
+  stepPredictionByHand,
   setMode,
   setReserveLocation,
   setImportedData,
@@ -163,6 +164,27 @@ describe('ailab reducer', () => {
       const stepped = reducer(initialState, setPredictionStep(2));
       const next = reducer(stepped, setPrediction(1, [0]));
       expect(next.predictionStep).toBeUndefined();
+    });
+
+    test('forgets that the student stepped the last path by hand', () => {
+      const stepped = reducer(initialState, stepPredictionByHand(1));
+      const next = reducer(stepped, setPrediction(1, [0]));
+      expect(next.predictionStepByHand).toBe(false);
+    });
+  });
+
+  describe('stepping a prediction', () => {
+    test('marks a step taken by hand', () => {
+      const next = reducer(initialState, stepPredictionByHand(1));
+      expect(next.predictionStep).toBe(1);
+      expect(next.predictionStepByHand).toBe(true);
+    });
+
+    test('clears the mark when playback sets the step', () => {
+      const stepped = reducer(initialState, stepPredictionByHand(1));
+      const next = reducer(stepped, setPredictionStep(0));
+      expect(next.predictionStep).toBe(0);
+      expect(next.predictionStepByHand).toBe(false);
     });
   });
 

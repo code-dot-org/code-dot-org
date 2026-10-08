@@ -6,7 +6,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 
 import {prefersReducedMotion} from '../helpers/utils';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setPredictionStep} from '../redux';
+import {setPredictionStep, stepPredictionByHand} from '../redux';
 import {getPredictionTrace} from '../selectors/visualizationSelectors';
 
 import styles from './traceStepper.module.scss';
@@ -59,10 +59,15 @@ const TraceStepper = ({step, stepCount}: TraceStepperProps) => {
     return stop;
   }, [trace, playFromStart, stop]);
 
+  const skip = () => {
+    stop();
+    dispatch(setPredictionStep(lastStep));
+  };
+
   const goTo = (index: number) => {
     if (index >= 0 && index < stepCount) {
       stop();
-      dispatch(setPredictionStep(index));
+      dispatch(stepPredictionByHand(index));
     }
   };
 
@@ -75,7 +80,7 @@ const TraceStepper = ({step, stepCount}: TraceStepperProps) => {
           size="extraSmall"
           startIcon={<FontAwesomeV6Icon iconName="forward-step" />}
           aria-label="Skip to the answer"
-          onClick={() => goTo(lastStep)}
+          onClick={skip}
         >
           Skip
         </Button>
