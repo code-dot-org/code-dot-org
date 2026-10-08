@@ -415,8 +415,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     anchor: DOMRect;
   } | null>(null);
   const closeBlockHelp = useCallback(() => setBlockHelp(null), []);
+  // A press on the badge whose help is open closes it.
   const openHelpFor = useCallback(
-    (blockType: string, anchor: DOMRect) => setBlockHelp({blockType, anchor}),
+    (blockType: string, anchor: DOMRect) =>
+      setBlockHelp(current =>
+        current?.blockType === blockType ? null : {blockType, anchor}
+      ),
     []
   );
   const openBlockHelp = blockHelp && BLOCK_HELP[blockHelp.blockType];
@@ -1252,10 +1256,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // Help icons beside the toolbox's blocks, for the freeplay level (and a
   // level with no mode); the guided levels teach their blocks themselves.
-  const blockHelpEnabled =
-    !isToolboxMode &&
-    (!levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode));
-
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
     musicProjects
@@ -1783,15 +1783,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
-  // Toolbox badges: "New" on blocks the project has not used in free play,
-  // and a help button on blocks that have help.
+  // Toolbox badges on the level's new blocks the project has not used.
   const getMainWorkspace = useCallback(
     () => Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg | null,
     []
   );
   useFlyoutBadges({
-    stamps: isFreeplayMode(levelProperties.levelMode),
-    help: blockHelpEnabled,
+    enabled: !isToolboxMode,
+    newBlocks: levelProperties.newBlocks,
     scenes,
     workspaceVersion,
     getWorkspace: getMainWorkspace,

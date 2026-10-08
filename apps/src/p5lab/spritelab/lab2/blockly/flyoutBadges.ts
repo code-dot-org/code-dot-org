@@ -3,7 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import moduleStyles from './flyout-badges.module.scss';
 
 const XHTML_NS = 'http://www.w3.org/1999/xhtml';
-const BADGE_CLASS = 'spritelab2FlyoutBadge';
+export const BADGE_CLASS = 'spritelab2FlyoutBadge';
 // Gap between a block's right edge and its badge.
 const GAP_PX = 12;
 // A badge centers on the block's first row, whatever the block's height.

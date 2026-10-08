@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 import {BlockHelp} from '../blockHelp/blockHelpContent';
+import {BADGE_CLASS} from '../blockly/flyoutBadges';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -47,8 +48,14 @@ const BlockHelpCallout: React.FunctionComponent<BlockHelpCalloutProps> = ({
         onClose();
       }
     };
+    // A press on a badge is the badge's to handle: it opens, or closes,
+    // its own help.
     const onPointerDown = (e: PointerEvent) => {
-      if (!ref.current?.contains(e.target as Node)) {
+      const target = e.target as Element;
+      if (
+        !ref.current?.contains(target) &&
+        !target.closest?.(`.${BADGE_CLASS}`)
+      ) {
         onClose();
       }
     };

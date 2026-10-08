@@ -51,6 +51,50 @@ class GamelabJr < Gamelab
     Block.for(*block_pools.presence || type)
   end
 
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    level_properties = super
+    level_properties[:newBlocks] = new_block_types(script, script_level) if script && script_level
+    level_properties
+  end
+
+  # The block types this level's toolbox offers that no earlier level of the
+  # unit offered: the ones a student meets here first.
+  def new_block_types(script, script_level)
+    # Keyed on this level and the unit, as the localized options are: an
+    # earlier level's toolbox edit reaches it when the unit is republished.
+    Rails.cache.fetch("#{cache_key}/#{script.cache_key}/new_block_types", force: !Unit.should_cache?) do
+      earlier = script.script_levels.take_while {|sl| sl.id != script_level.id}
+      seen = earlier.flat_map(&:levels).select {|level| level.is_a?(GamelabJr)}.flat_map(&:offered_block_types)
+      offered_block_types - seen
+    end
+  end
+
+  # Types of the blocks this level hands a student: its toolbox, and the
+  # blocks add_blocks places in the workspace ahead of them. Shadows are
+  # not offers: a block's own inputs, or a dashed placeholder for a block
+  # the toolbox already offers.
+  def offered_block_types
+    %w(toolbox_definition add_blocks).flat_map do |key|
+      value = properties[key]
+      value = JSON.parse(value) if value.is_a?(String)
+      GamelabJr.block_types_in(value)
+    rescue JSON::ParserError
+      []
+    end.uniq
+  end
+
+  def self.block_types_in(node, shadow: false)
+    case node
+    when Hash
+      own = node['type'].is_a?(String) && !shadow && node['kind'] != 'category' ? [node['type']] : []
+      own + node.flat_map {|key, value| block_types_in(value, shadow: shadow || key == 'shadow')}
+    when Array
+      node.flat_map {|value| block_types_in(value, shadow: shadow)}
+    else
+      []
+    end
+  end
+
   # Lab2 Sprite Lab starter assets are always uploaded by UUID.
   def add_starter_asset!(_, _)
     true

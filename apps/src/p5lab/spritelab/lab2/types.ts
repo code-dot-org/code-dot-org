@@ -148,6 +148,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** Rows of a premade world (worldStartPattern.ts), or several such
       layouts, one of which the project draws by its channel id. */
   worldStartPattern?: string[] | string[][];
+  /** Block types no earlier level of the unit offered in its toolbox,
+      computed by the server. The toolbox stamps them "New", with help,
+      until the project uses them. */
+  newBlocks?: string[];
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

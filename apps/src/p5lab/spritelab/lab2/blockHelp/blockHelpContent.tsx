@@ -357,11 +357,12 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       src: animWhenTouching,
       alt: 'The when touching block in action.',
     },
-    summary: 'Runs the blocks below while two sprites overlap.',
+    summary: 'Runs the blocks below when two sprites touch.',
     body: para(
-      'It keeps running every frame they touch, so a sound or burst under it ' +
-        'repeats until they part. Use restart scene or go to scene under it ' +
-        'to end the touch.'
+      bold('when'),
+      ' runs them once, as the sprites start touching. ',
+      bold('while'),
+      ' keeps running them as long as they stay touching.'
     ),
   },
   gamelab_spriteSay: {

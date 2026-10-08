@@ -1,7 +1,8 @@
-// Badges on the toolbox's blocks the student's project has never used: a
-// "New" stamp, a help button when the block has help, or one pill holding
-// both. A block the student has used wears nothing, and stays bare for the
-// visit even if the student deletes it again.
+// Badges on the toolbox blocks no earlier level of the unit offered (the
+// server's newBlocks) that the student's project has not used: a "New"
+// stamp, with the help button when the block has help, in one pill. A used
+// block wears nothing, and stays bare for the visit even if the student
+// deletes it again.
 
 import * as BlocklyCore from 'blockly/core';
 import {useEffect, useMemo, useState} from 'react';
@@ -14,18 +15,17 @@ import {Scene} from '../types';
 const STAMP_TEXT = 'New';
 
 export function useFlyoutBadges({
-  stamps,
-  help,
+  enabled,
+  newBlocks,
   scenes,
   workspaceVersion,
   getWorkspace,
   onOpenHelp,
   onInvalidate,
 }: {
-  /** Stamp unused blocks. */
-  stamps: boolean;
-  /** Offer help buttons. */
-  help: boolean;
+  enabled: boolean;
+  /** Block types no earlier level of the unit offered. */
+  newBlocks: readonly string[] | undefined;
   scenes: Scene[];
   /** Bumps when the workspace is re-injected. */
   workspaceVersion: number;
@@ -44,21 +44,21 @@ export function useFlyoutBadges({
     });
   }, [used]);
 
+  const fresh = useMemo(() => new Set(newBlocks ?? []), [newBlocks]);
   useEffect(() => {
-    if (!workspaceVersion || (!stamps && !help)) {
+    if (!workspaceVersion || !enabled || fresh.size === 0) {
       return;
     }
     const badgeFor = (type: string): FlyoutBadge | undefined => {
-      if (seen.has(type)) {
+      if (!fresh.has(type) || seen.has(type)) {
         return undefined;
       }
-      const entry = help ? BLOCK_HELP[type] : undefined;
-      const badge: FlyoutBadge = {
-        text: stamps ? STAMP_TEXT : undefined,
-        bright: !!BLOCK_HELP[type]?.standout,
+      const entry = BLOCK_HELP[type];
+      return {
+        text: STAMP_TEXT,
+        bright: !!entry?.standout,
         help: entry ? {title: entry.title} : undefined,
       };
-      return badge.text || badge.help ? badge : undefined;
     };
     const dispose = installFlyoutBadges(getWorkspace(), {
       badgeFor,
@@ -71,8 +71,8 @@ export function useFlyoutBadges({
       onInvalidate();
     };
   }, [
-    stamps,
-    help,
+    enabled,
+    fresh,
     workspaceVersion,
     seen,
     getWorkspace,
