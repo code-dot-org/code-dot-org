@@ -22,6 +22,7 @@ import {
 } from 'react';
 
 import {fitToView, panIntoView, type Rect} from '../helpers/fitToView';
+import {prefersReducedMotion} from '../helpers/utils';
 
 import ZoomButton from './ZoomButton';
 
@@ -37,9 +38,7 @@ const READABLE_SCALE = 1;
 const SCALE_PROPERTY = '--tree-canvas-scale';
 
 function zoomDuration(): number {
-  return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
-    ? 0
-    : ZOOM_DURATION_MS;
+  return prefersReducedMotion() ? 0 : ZOOM_DURATION_MS;
 }
 
 function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {

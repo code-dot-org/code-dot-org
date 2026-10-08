@@ -138,33 +138,33 @@ describe('TestPanel', () => {
     const current = () =>
       steps.filter(step => step.getAttribute('aria-current') === 'step');
 
-    expect(current()).toEqual([steps[steps.length - 1]]);
+    expect(current()).toEqual([steps[0]]);
 
-    fireEvent.click(screen.getByRole('button', {name: 'Previous step'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Next step'}));
 
-    expect(current()).toEqual([steps[steps.length - 2]]);
+    expect(current()).toEqual([steps[1]]);
   });
 
-  test('a decision tree announces its prediction, then each step, but never its controls', () => {
+  test('a decision tree announces each step, but never its controls', () => {
     const store = trainedAnimalStore({trainer: 'decisionTree'});
     renderTestPanel(store);
-    const previousStep = () =>
-      screen.getByRole('button', {name: 'Previous step'});
+    const nextStep = () => screen.getByRole('button', {name: 'Next step'});
+    const stepText = index => {
+      const steps = within(screen.getByRole('list')).getAllByRole('listitem');
+      const [, text] = steps[index].children;
+      return `Step ${index + 1} of ${steps.length}: ${text.textContent}`;
+    };
 
     expect(screen.getByRole('status').textContent).toBe('');
 
     predictSnake();
 
-    expect(screen.getByRole('status').textContent).toBe('AI predicts snake');
-    expect(previousStep().closest('[aria-live], [role="status"]')).toBeNull();
+    expect(screen.getByRole('status').textContent).toBe(stepText(0));
+    expect(nextStep().closest('[aria-live], [role="status"]')).toBeNull();
 
-    fireEvent.click(previousStep());
-    const steps = within(screen.getByRole('list')).getAllByRole('listitem');
-    const [, text] = steps[steps.length - 2].children;
+    fireEvent.click(nextStep());
 
-    expect(screen.getByRole('status').textContent).toBe(
-      `Step ${steps.length - 1} of ${steps.length}: ${text.textContent}`,
-    );
+    expect(screen.getByRole('status').textContent).toBe(stepText(1));
   });
 
   test('a KNN model shows its prediction without steps', () => {

@@ -5,7 +5,7 @@ $dot-size: 8px;
 .stepper {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 8px;
   padding: 8px;
   border-top: 1px solid var(--border-neutral-primary);
