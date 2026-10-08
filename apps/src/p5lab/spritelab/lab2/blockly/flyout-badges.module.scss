@@ -41,13 +41,10 @@
   }
 }
 
-// A quiet pill: the panel's own gray with a hairline, so it reads as a
-// label rather than a call-out.
+// A quiet pill: a mid gray that stands off the panel without calling out.
 .stampQuiet {
   rect {
-    fill: var(--background-neutral-tertiary);
-    stroke: var(--borders-neutral-primary);
-    stroke-width: 1;
+    fill: var(--borders-neutral-strong);
   }
 
   text {
