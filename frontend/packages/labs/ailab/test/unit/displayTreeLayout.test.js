@@ -30,6 +30,20 @@ describe('layoutDisplayTree', () => {
     expect(layout.width).toBe(3 * column - TREE_COLUMN_GAP);
   });
 
+  test('answers are numbered from left to right', () => {
+    const layout = layoutDisplayTree(
+      question(question(answer(1), answer(2)), answer(3)),
+    );
+
+    expect(layout.nodes.map(placed => placed.answerIndex)).toEqual([
+      undefined,
+      undefined,
+      0,
+      1,
+      2,
+    ]);
+  });
+
   test('nodes on one row do not overlap', () => {
     const layout = layoutDisplayTree(
       question(
