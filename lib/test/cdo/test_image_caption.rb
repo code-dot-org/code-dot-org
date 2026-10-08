@@ -92,7 +92,7 @@ class ImageCaptionTest < Minitest::Test
 
   def test_rejects_an_image_over_the_size_ceiling
     AzureImageCaption.expects(:new).never
-    oversized = png_blob + ('x' * ImageCaption::MAX_CAPTION_SIZE)
+    oversized = png_blob + ('x' * ImageCaption::MAX_IMAGE_SIZE)
     assert_nil ImageCaption.caption_image(oversized)
   end
 

@@ -21,7 +21,7 @@ module ImageCaption
   CONFIDENCE_FLOOR = 0.4
 
   # Azure AI Vision rejects anything larger.
-  MAX_CAPTION_SIZE = 20 * 1024 * 1024
+  MAX_IMAGE_SIZE = 20 * 1024 * 1024
 
   CACHE_KEY_PREFIX = 'image_caption'
   CACHE_EXPIRY = 30.days
@@ -32,7 +32,7 @@ module ImageCaption
   def self.caption_image(image_data)
     return nil unless enabled?
     return nil unless supported_image?(image_data)
-    return nil if image_data.bytesize > MAX_CAPTION_SIZE
+    return nil if image_data.bytesize > MAX_IMAGE_SIZE
 
     unless CDO.azure_computer_vision_key
       Observability::Errors.report(

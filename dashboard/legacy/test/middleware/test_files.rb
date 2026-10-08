@@ -1016,7 +1016,7 @@ class FilesTest < FilesApiTestBase
     # Read one byte past the ceiling and no further, so nothing oversized is
     # buffered whole.
     Cdo::Throttle.stubs(:throttle).returns(false)
-    ImageCaption.stub_const(:MAX_CAPTION_SIZE, 10) do
+    ImageCaption.stub_const(:MAX_IMAGE_SIZE, 10) do
       ImageCaption.expects(:caption_image).never
 
       header 'CONTENT_TYPE', 'image/png'

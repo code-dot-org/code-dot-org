@@ -1250,12 +1250,12 @@ class FilesApi < Sinatra::Base
 
     # nginx accepts bodies up to 4G, so reading it all would let one request fill
     # a worker. One byte past our ceiling is enough to know it is too big.
-    raw = request.body.read(ImageCaption::MAX_CAPTION_SIZE + 1)
+    raw = request.body.read(ImageCaption::MAX_IMAGE_SIZE + 1)
     if raw.nil? || raw.empty?
       status 400
       return {error: 'No image data provided.'}.to_json
     end
-    if raw.bytesize > ImageCaption::MAX_CAPTION_SIZE
+    if raw.bytesize > ImageCaption::MAX_IMAGE_SIZE
       status 413
       return {error: 'Image too large to caption.'}.to_json
     end

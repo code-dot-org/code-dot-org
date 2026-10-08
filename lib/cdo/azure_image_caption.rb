@@ -36,7 +36,7 @@ class AzureImageCaption
     uri = URI(@endpoint + API_PATH)
 
     request = Net::HTTP::Post.new(uri.request_uri)
-    # Raw bytes here; Content Safety, next door, takes base64 in a JSON envelope.
+    # Raw bytes, unlike Content Safety, which takes base64 in a JSON envelope.
     request['Content-Type'] = 'application/octet-stream'
     request['Ocp-Apim-Subscription-Key'] = @api_key
     request.body = image_data
