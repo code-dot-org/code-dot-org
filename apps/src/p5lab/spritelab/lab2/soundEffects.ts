@@ -51,8 +51,8 @@ export interface Note {
   /** Vibrato. */
   wobble?: boolean;
   /** Frequency ratios the note cycles through, ARPEGGIO_RATE_HZ steps a
-      second, the way a C64 plays a chord on one voice. Not combined with
-      slideTo: both drive the same frequency. */
+      second, the way old home computers played a chord on one voice. Not
+      combined with slideTo: both drive the same frequency. */
   arpeggio?: readonly number[];
   /** Oscillators sounding the note, spread a few cents apart; 1 or
       absent is one. Noise ignores it. The "double" wave is two. */
@@ -91,8 +91,8 @@ const WOBBLE_DEPTH = 0.06;
 // The wobble deepens from nothing over this long, so the note settles on
 // its pitch before it shakes; a short note gets half its length.
 const WOBBLE_ONSET_S = 0.12;
-// A chord's notes cycle on one voice at this rate: the PAL frame rate a
-// C64 game changed its notes at.
+// A chord's notes cycle on one voice at this rate, the frame rate the old
+// home computer games changed their notes at.
 const ARPEGGIO_RATE_HZ = 50;
 const CHORD_RATIOS = [1, 5 / 4, 3 / 2] as const;
 const MINOR_CHORD_RATIOS = [1, 6 / 5, 3 / 2] as const;
