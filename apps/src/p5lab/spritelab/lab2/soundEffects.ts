@@ -51,7 +51,8 @@ export interface Note {
   /** Vibrato. */
   wobble?: boolean;
   /** Frequency ratios the note cycles through, ARPEGGIO_RATE_HZ steps a
-      second, the way a C64 plays a chord on one voice. */
+      second, the way a C64 plays a chord on one voice. Not combined with
+      slideTo: both drive the same frequency. */
   arpeggio?: readonly number[];
   /** Oscillators sounding the note, spread a few cents apart; 1 or
       absent is one. Noise ignores it. The "double" wave is two. */
@@ -71,7 +72,6 @@ const VOLUME: Record<Wave, number> = {
   double: 0.08,
   noise: 0.3,
 };
-// "double" is this many sawtooths in unison.
 const DOUBLE_VOICES = 2;
 // How narrow the band of noise is; higher rings closer to a pitch.
 const NOISE_Q = 1.5;
@@ -88,8 +88,8 @@ const WOBBLE_DEPTH = 0.06;
 // The wobble deepens from nothing over this long, so the note settles on
 // its pitch before it shakes; a short note gets half its length.
 const WOBBLE_ONSET_S = 0.12;
-// A chord's notes, cycled on one voice at the frame rate of the machines
-// that made the sound famous.
+// A chord's notes cycle on one voice at this rate: the PAL frame rate a
+// C64 game changed its notes at.
 const ARPEGGIO_RATE_HZ = 50;
 const CHORD_RATIOS = [1, 5 / 4, 3 / 2] as const;
 const MINOR_CHORD_RATIOS = [1, 6 / 5, 3 / 2] as const;
@@ -432,9 +432,10 @@ function schedule(ctx: AudioContext, notes: Note[]): void {
     gain.gain.linearRampToValueAtTime(note.volume, start + ATTACK_S);
     gain.gain.exponentialRampToValueAtTime(SILENCE, end);
     if (note.slideTo) {
+      const slideTo = note.slideTo * nudge;
       frequencies.forEach(frequency => {
         frequency.setValueAtTime(hz, start);
-        frequency.exponentialRampToValueAtTime(note.slideTo! * nudge, end);
+        frequency.exponentialRampToValueAtTime(slideTo, end);
       });
     }
     if (note.arpeggio?.length) {
