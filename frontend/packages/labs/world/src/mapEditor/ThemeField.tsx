@@ -25,6 +25,11 @@ export interface ThemeFieldProps {
   options: ReadonlyArray<readonly [string, string]>;
   /** Called with the chosen path, or undefined for "inherit". */
   onChange: (path: string | undefined) => void;
+  /**
+   * What the empty choice is called: a map's inherits the world's, and the
+   * world's is no theme at all, there being nothing above it.
+   */
+  emptyLabel?: string;
   isReadOnly: boolean;
 }
 
@@ -32,6 +37,7 @@ export const ThemeField = ({
   value,
   options,
   onChange,
+  emptyLabel = '(the world’s)',
   isReadOnly,
 }: ThemeFieldProps) => {
   const importThen = useAfterImport(
@@ -49,7 +55,7 @@ export const ThemeField = ({
       items={[
         // Empty is INHERIT, not "none": a map that says nothing takes the
         // world's, as a placement that says nothing takes its map's.
-        {value: '', text: '(the world’s)'},
+        {value: '', text: emptyLabel},
         ...options.map(([label, path]) => ({value: path, text: label})),
         // …and a way in, because a project starts with no themes and a menu
         // whose only row is "the world's" is a dead end that says nothing

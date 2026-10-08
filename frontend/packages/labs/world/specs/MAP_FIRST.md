@@ -541,6 +541,10 @@ a field; the background image (the back layer's) and the background color
 play — a button counting them as the block does, opening the same panel,
 which is the lab's now rather than the code editor's so that it can be
 opened while no code is (`library/LibraryImports`, `blockly/rulesConfig`).
+And the theme: a world's main map has no theme apart from the world's, so
+the Theme field here is the world's `use theme` row, and choosing one takes
+away any theme the main map held of its own — it overrode the world's
+silently, which made two answers to one question.
 
 BUILT for the name and the properties (`mapEditor/WorldInspector`): a
 number, string or boolean is a field, a point is two, and a vector or an

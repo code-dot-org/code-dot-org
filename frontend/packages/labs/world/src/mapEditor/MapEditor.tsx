@@ -552,6 +552,22 @@ export const MapEditor = ({
                   ),
             );
           },
+          // …and its theme, which is its main map's too: the world's `use
+          // theme` row is written, and a theme the main map held of its own
+          // goes, so that there is one answer and not two.
+          onTheme: (path: string | undefined) => {
+            const written = document.world!.writeTheme(
+              contentsRef.current,
+              path,
+            );
+            if (map.theme === undefined) {
+              writeFile(written);
+              return;
+            }
+            const next = {...map, theme: undefined};
+            setMap(next);
+            writeFile(document.write(written, next));
+          },
           // …and how many rules it holds, for the button that opens them.
           ruleCount: projectRuleOptions(files).length,
           // …and the color behind the background, a row in the world's code.

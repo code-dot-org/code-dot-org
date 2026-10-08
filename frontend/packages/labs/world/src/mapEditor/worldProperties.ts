@@ -54,6 +54,11 @@ export interface WorldHeader {
   properties: WorldProperty[];
   /** The color behind the background image (`readBackgroundColor`). */
   backgroundColor?: BackgroundColor;
+  /**
+   * The theme the world is painted in: its first `use theme` row's, or
+   * nothing. A main map has no theme of its own — the world's is its.
+   */
+  theme?: string;
 }
 
 /**
@@ -245,7 +250,54 @@ export function readWorldHeader(
     name: asText(root.fields?.NAME),
     properties,
     backgroundColor: readBackgroundColor(root),
+    theme: readWorldTheme(root),
   };
+}
+
+/** The block that says which theme a world is painted in. */
+const USE_THEME = 'world_use_theme';
+
+/** What the first `use theme` row under `define world` names, or nothing. */
+function readWorldTheme(root: Block): string | undefined {
+  const row = [...rows(root)].find(each => each.type === USE_THEME);
+  return asText(row?.fields?.THEME) || undefined;
+}
+
+/**
+ * The file with the world painted in `theme`, a `.style` module path; nothing
+ * takes the `use theme` row away. The first row is rewritten, or one added at
+ * the top of the world's rows — at the top because it decides how everything
+ * after it is drawn.
+ */
+export function writeWorldTheme(
+  contents: string,
+  theme: string | undefined,
+): string {
+  return rewrite(contents, root => {
+    let previous: Block = root;
+    for (const row of rows(root)) {
+      if (row.type === USE_THEME) {
+        if (theme) {
+          row.fields = {...row.fields, THEME: theme};
+        } else {
+          previous.next = row.next;
+        }
+        return true;
+      }
+      previous = row;
+    }
+    if (!theme) {
+      return false;
+    }
+    root.next = {
+      block: {
+        type: USE_THEME,
+        fields: {THEME: theme},
+        ...(root.next ? {next: root.next} : {}),
+      },
+    };
+    return true;
+  });
 }
 
 /**

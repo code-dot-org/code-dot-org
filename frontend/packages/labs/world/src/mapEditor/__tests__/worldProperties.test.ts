@@ -8,6 +8,7 @@ import {
   writeWorldBackgroundColor,
   writeWorldName,
   writeWorldRuleValue,
+  writeWorldTheme,
   writeWorldPropertyDefault,
 } from '../worldProperties';
 
@@ -353,5 +354,27 @@ describe('the world’s background color', () => {
       inCode: true,
     });
     expect(writeWorldBackgroundColor(worked, '#000000')).toBe(worked);
+  });
+});
+
+describe('the world’s theme', () => {
+  it('is a `use theme` row at the top of the world, read back', () => {
+    const written = writeWorldTheme(WORLD, 'styles/modern');
+    expect(readWorldHeader(written)!.theme).toBe('styles/modern');
+    const world = JSON.parse(written).blocks.blocks[0];
+    expect(world.next.block).toMatchObject({
+      type: 'world_use_theme',
+      fields: {THEME: 'styles/modern'},
+    });
+  });
+
+  it('changes the row it has, and takes it away for none', () => {
+    const modern = writeWorldTheme(WORLD, 'styles/modern');
+    const classic = writeWorldTheme(modern, 'styles/classic');
+    expect(readWorldHeader(classic)!.theme).toBe('styles/classic');
+    expect(classic.match(/world_use_theme/g)).toHaveLength(1);
+    const none = writeWorldTheme(classic, undefined);
+    expect(readWorldHeader(none)!.theme).toBeUndefined();
+    expect(none).not.toContain('world_use_theme');
   });
 });

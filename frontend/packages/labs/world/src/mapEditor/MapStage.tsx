@@ -273,10 +273,10 @@ export interface MapStageProps {
    * The world this map is the main map of, shown in the inspector with
    * nothing selected (`WorldInspector`); absent for a `.map`.
    *
-   * Without the theme and the background image, which the stage supplies
-   * itself: they are properties of the MAP this stage is showing, written the
-   * way every other map-level change is, so a caller has nothing to say about
-   * them.
+   * Without the background image, which the stage supplies itself: it is a
+   * property of the MAP this stage is showing, written the way every other
+   * map-level change is. The theme is the world's, so the caller says how it
+   * is written.
    */
   world?: Omit<
     WorldInspectorProps,
@@ -287,7 +287,10 @@ export interface MapStageProps {
     | 'background'
     | 'backgrounds'
     | 'onBackground'
-  >;
+  > & {
+    /** The world's theme changed: its `use theme` row (`worldProperties`). */
+    onTheme?: (path: string | undefined) => void;
+  };
   /**
    * The cameras the world's own workspace declares, for the camera strip on a
    * main map with nothing selected. Read by the editor, which has the file's
@@ -2864,11 +2867,11 @@ export const MapStage = ({
           // groups and the vector popover, and a drag on the grid commits
           // on every move. The inspector follows the header itself.
           {...world}
-          // …and the theme, which is the map's and not the world header's, so
-          // it is written the way every other map-level change is.
-          theme={map.theme}
+          // …and the theme, which is the WORLD's — its `use theme` row — and
+          // so its main map's: there is no difference to keep between them.
+          theme={world.header.theme}
           themeOptions={themeOptions}
-          onTheme={path => commit({...mapRef.current, theme: path})}
+          onTheme={path => world.onTheme?.(path)}
           {...backgroundProps}
           isReadOnly={isReadOnly}
         />

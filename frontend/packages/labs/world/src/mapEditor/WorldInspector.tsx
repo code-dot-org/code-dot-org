@@ -44,14 +44,8 @@ export interface WorldInspectorProps {
    */
   onSetDefault: (property: WorldProperty, value: string) => void;
   /**
-   * What the world's main map is painted out of; absent takes the world's own.
-   *
-   * On the MAP and not on the world header, which is why it is its own pair of
-   * props rather than another `WorldProperty`: it is written to the map
-   * document beside the placements (`mapEditor/MapStage`). What is NOT here is
-   * "covers what is under it" — a main map lives inside the `.world` file, so
-   * `load map` cannot name it and nothing can ever be under it
-   * (specs/MODALITY_PLAN.md).
+   * The theme the world is painted in — its `use theme` row — which is its
+   * main map's too: a main map has no theme of its own (`worldProperties`).
    */
   theme: string | undefined;
   /** The project's themes, as `[label, path]`. */
@@ -362,6 +356,7 @@ export const WorldInspector = ({
         value={theme}
         options={themeOptions}
         onChange={onTheme}
+        emptyLabel="(none)"
         isReadOnly={isReadOnly}
       />
     </div>
