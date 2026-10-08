@@ -130,6 +130,25 @@ describe('TestPanel', () => {
     );
   });
 
+  test('a decision tree marks the step the stepper is on', () => {
+    const store = trainedAnimalStore({trainer: 'decisionTree'});
+    renderTestPanel(store);
+    predictSnake();
+    const steps = within(screen.getByRole('list')).getAllByRole('listitem');
+    const current = () =>
+      steps.filter(step => step.getAttribute('aria-current') === 'step');
+
+    expect(current()).toEqual([steps[steps.length - 1]]);
+
+    fireEvent.click(screen.getByRole('button', {name: 'Previous step'}));
+
+    const [previous] = current();
+    expect(previous).toBe(steps[steps.length - 2]);
+    expect(screen.getByRole('status').textContent).toBe(
+      `Step ${steps.length - 1} of ${steps.length}: ${previous.lastElementChild.textContent}`,
+    );
+  });
+
   test('a KNN model shows its prediction without steps', () => {
     const store = trainedAnimalStore(undefined);
     renderTestPanel(store);

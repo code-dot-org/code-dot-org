@@ -1,3 +1,5 @@
+@use '../sharedMixins' as mixins;
+
 $dot-size: 8px;
 
 .stepper {
@@ -29,8 +31,8 @@ $dot-size: 8px;
   border: 1.5px solid var(--border-neutral-secondary);
   border-radius: var(--shape-round);
   transition:
-    background-color 0.16s ease,
-    transform 0.16s ease;
+    background-color mixins.$mark-transition,
+    transform mixins.$mark-transition;
 }
 
 .reachedDot,
@@ -50,5 +52,17 @@ $dot-size: 8px;
 @media (prefers-reduced-motion: reduce) {
   .dot {
     transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .dot {
+    forced-color-adjust: none;
+    border-color: CanvasText;
+  }
+
+  .reachedDot,
+  .currentDot {
+    background-color: CanvasText;
   }
 }

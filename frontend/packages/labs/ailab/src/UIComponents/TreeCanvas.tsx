@@ -15,6 +15,7 @@ import {
   type ReactNode,
   type RefObject,
   type UIEvent,
+  useEffect,
   useLayoutEffect,
   useMemo,
   useRef,
@@ -108,6 +109,7 @@ interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
+  stepBounds?: Rect;
   overlayRef?: RefObject<HTMLElement>;
   toolbarTabbable?: boolean;
   hints?: ReactNode;
@@ -118,6 +120,7 @@ const TreeCanvas = ({
   contentWidth,
   contentHeight,
   pathBounds,
+  stepBounds,
   overlayRef,
   toolbarTabbable = true,
   hints,
@@ -185,6 +188,32 @@ const TreeCanvas = ({
     observer.observe(viewport);
     return () => observer.disconnect();
   }, [contentRect, overlayRef]);
+
+  useEffect(() => {
+    if (!stepBounds) {
+      return;
+    }
+    const viewport = viewportRef.current!;
+    const toolbar = toolbarRef.current!;
+    const current = zoomTransform(viewport);
+    const shown = {
+      x: current.applyX(stepBounds.x),
+      y: current.applyY(stepBounds.y),
+      width: stepBounds.width * current.k,
+      height: stepBounds.height * current.k,
+    };
+    const right = overlayInset(viewport, overlayRef?.current ?? null);
+    const pan =
+      panIntoView(shown, viewFrame(viewport, toolbar, {right})) ??
+      panIntoView(shown, viewFrame(viewport, toolbar));
+    if (pan && (pan.x || pan.y)) {
+      autoFitRef.current = false;
+      zoomRef.current!.transform(
+        select(viewport).transition().duration(zoomDuration()),
+        current.translate(pan.x / current.k, pan.y / current.k),
+      );
+    }
+  }, [stepBounds, overlayRef]);
 
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());

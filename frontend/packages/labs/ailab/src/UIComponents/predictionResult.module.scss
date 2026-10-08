@@ -67,8 +67,8 @@ $step-number-top: calc(($step-line-height - $step-number-size) / 2);
   background-color: var(--background-neutral-tertiary);
   color: var(--text-neutral-secondary);
   transition:
-    background-color 0.16s ease,
-    box-shadow 0.16s ease;
+    background-color mixins.$mark-transition,
+    box-shadow mixins.$mark-transition;
 }
 
 .currentStep .stepNumber {

@@ -36,18 +36,21 @@ const PredictionResult = () => {
   const conditionText = ({branch, value}: DisplayTreeStep): string =>
     branch.kind === 'values' ? valueText(value ?? '') : thresholdText(branch);
 
+  const stepText = (column: string, condition: string) => (
+    <>
+      {getLocalizedColumnName(datasetId, column)} is{' '}
+      <strong>{condition}</strong>
+    </>
+  );
+
   const predictionText = valueText(predictedLabel);
   const steps =
     trace && trace.steps.length > 0
       ? [
-          ...trace.steps.map(step => ({
-            subject: getLocalizedColumnName(datasetId, step.column),
-            condition: conditionText(step),
-          })),
-          {
-            subject: getLocalizedColumnName(datasetId, labelColumn),
-            condition: predictionText,
-          },
+          ...trace.steps.map(step =>
+            stepText(step.column, conditionText(step)),
+          ),
+          stepText(labelColumn, predictionText),
         ]
       : [];
 
@@ -60,7 +63,7 @@ const PredictionResult = () => {
         <>
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics */}
           <ol role="list" className={styles.steps}>
-            {steps.map(({subject, condition}, index) => (
+            {steps.map((text, index) => (
               <li
                 key={index}
                 aria-current={index === currentStep ? 'step' : undefined}
@@ -76,16 +79,12 @@ const PredictionResult = () => {
                   {index + 1}
                 </Typography>
                 <Typography variant="body3" component="span">
-                  {subject} is <strong>{condition}</strong>
+                  {text}
                 </Typography>
               </li>
             ))}
           </ol>
-          <TraceStepper
-            stepLabels={steps.map(
-              ({subject, condition}) => `${subject} is ${condition}`,
-            )}
-          />
+          <TraceStepper step={currentStep} stepLabels={steps} />
         </>
       )}
     </section>

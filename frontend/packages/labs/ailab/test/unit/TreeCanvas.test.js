@@ -32,18 +32,20 @@ function resizeViewport(width, height) {
   act(() => resizeCallbacks.forEach(callback => callback([])));
 }
 
-function renderCanvas(props = {}, children = 'tree') {
-  render(
+function canvas(props = {}, children = 'tree') {
+  return createElement(
+    ThemeProvider,
+    {theme: getMuiThemeForBrand(undefined)},
     createElement(
-      ThemeProvider,
-      {theme: getMuiThemeForBrand(undefined)},
-      createElement(
-        TreeCanvas,
-        {contentWidth: 752, contentHeight: 312, ...props},
-        children,
-      ),
+      TreeCanvas,
+      {contentWidth: 752, contentHeight: 312, ...props},
+      children,
     ),
   );
+}
+
+function renderCanvas(props, children) {
+  return render(canvas(props, children));
 }
 
 function overlayRef(width, top = 0) {
@@ -109,6 +111,13 @@ function contentTransform() {
 
 function contentScale() {
   return parseFloat(contentTransform().match(/scale\((.*)\)/)[1]);
+}
+
+function contentTranslate() {
+  return contentTransform()
+    .match(/translate\((.*)px, (.*)px\)/)
+    .slice(1)
+    .map(parseFloat);
 }
 
 describe('TreeCanvas', () => {
@@ -238,6 +247,32 @@ describe('TreeCanvas', () => {
     await vi.waitFor(() =>
       expect(contentTransform()).toBe('translate(180px, -80px) scale(1)'),
     );
+  });
+
+  // Zoomed in, the content's origin sits at (31, 82.5) at scale 0.625, in a frame from x = 72 to 448.
+  it('pans the step the student is on into view', async () => {
+    const {rerender} = renderCanvas();
+    resizeViewport(472, 360);
+    fireEvent.click(button('Zoom in'));
+    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+
+    rerender(canvas({stepBounds: {x: 672, y: 0, width: 80, height: 40}}));
+
+    await vi.waitFor(() => {
+      const [x, y] = contentTranslate();
+      expect(x).toBeCloseTo(-22);
+      expect(y).toBeCloseTo(82.5);
+    });
+  });
+
+  it('leaves a fitted view alone when the step is already in it', () => {
+    const {rerender} = renderCanvas();
+    resizeViewport(472, 360);
+
+    rerender(canvas({stepBounds: {x: 0, y: 0, width: 160, height: 104}}));
+    resizeViewport(848, 360);
+
+    expect(contentTransform()).toBe('translate(72px, 24px) scale(1)');
   });
 
   it('lets keyboard users reach why zooming to the path is unavailable', () => {

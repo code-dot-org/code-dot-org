@@ -125,7 +125,7 @@ describe('DecisionTree', () => {
     predictSnake(store);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
-    const edges = [...document.getElementsByTagName('path')];
+    const [marks] = document.getElementsByClassName(moduleStyles.marks);
     const pathEdges = [
       ...document.getElementsByClassName(moduleStyles.pathEdge),
     ];
@@ -137,7 +137,8 @@ describe('DecisionTree', () => {
     expect(slotPosition(marked[0])[1]).toBe(0);
     expect(marked[marked.length - 1].textContent).toBe('snake');
     expect(pathEdges).toHaveLength(marked.length - 1);
-    expect(edges.slice(-pathEdges.length)).toEqual(pathEdges);
+    expect(marks.parentElement.lastElementChild).toBe(marks);
+    expect(pathEdges.every(edge => edge.parentElement === marks)).toBe(true);
     expect(pathBranches).toHaveLength(marked.length - 1);
     expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
       marked.slice(1),
@@ -148,14 +149,14 @@ describe('DecisionTree', () => {
     predictSnake(store);
     showStep(store, 0);
 
-    const edges = [...document.getElementsByTagName('path')];
+    const [marks] = marked(moduleStyles.marks);
     const nextEdges = marked(moduleStyles.nextEdge);
 
     expect(marked(moduleStyles.pathNode)).toHaveLength(1);
     expect(slotPosition(marked(moduleStyles.pathNode)[0])[1]).toBe(0);
     expect(marked(moduleStyles.pathEdge)).toHaveLength(0);
     expect(nextEdges).toHaveLength(1);
-    expect(edges[edges.length - 1]).toBe(nextEdges[0]);
+    expect(nextEdges[0].parentElement).toBe(marks);
     expect(marked(moduleStyles.nextBranch)).toHaveLength(1);
 
     showStep(store, 1);
@@ -290,6 +291,22 @@ describe('DecisionTree', () => {
     });
 
     expect(described).toEqual(marked.map(node => node.parentElement));
+  });
+
+  it('tells screen readers how far the path goes at the chosen step', () => {
+    predictSnake(store);
+    showStep(store, 0);
+
+    const [root] = screen.getAllByRole('treeitem');
+    const described = screen.getAllByRole('treeitem', {
+      description: /On your path/,
+    });
+    const current = screen
+      .getAllByRole('treeitem')
+      .filter(item => item.getAttribute('aria-current') === 'step');
+
+    expect(described).toEqual([root]);
+    expect(current).toEqual([root]);
   });
 
   it('moves focus and the tab stop down to a child and back up', () => {

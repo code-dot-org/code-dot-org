@@ -1,33 +1,45 @@
-/* Steps through a prediction's path through the decision tree. */
 import {IconButton} from '@mui/material';
 import classNames from 'classnames';
+import {type ReactNode, useRef} from 'react';
+import {flushSync} from 'react-dom';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setPredictionStep} from '../redux';
-import {getPredictionStep} from '../selectors/visualizationSelectors';
 
 import appStyles from '../app.module.scss';
 import styles from './traceStepper.module.scss';
 
 interface TraceStepperProps {
-  stepLabels: string[];
+  step: number;
+  stepLabels: ReactNode[];
 }
 
-const TraceStepper = ({stepLabels}: TraceStepperProps) => {
+const TraceStepper = ({step, stepLabels}: TraceStepperProps) => {
   const dispatch = useAppDispatch();
-  const step = useAppSelector(getPredictionStep);
+  const isStepping = useAppSelector(
+    state => state.predictionStep !== undefined,
+  );
+  const previousRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
   const lastStep = stepLabels.length - 1;
 
+  // A button disabled while focused drops focus to the page, so hand it to the other one.
   const goTo = (index: number) => {
-    dispatch(setPredictionStep(index));
+    flushSync(() => dispatch(setPredictionStep(index)));
+    if (index === 0) {
+      nextRef.current!.focus();
+    } else if (index === lastStep) {
+      previousRef.current!.focus();
+    }
   };
 
   return (
     <div className={styles.stepper}>
       <div role="group" aria-label="Steps" className={styles.controls}>
         <IconButton
+          ref={previousRef}
           variant="outlined"
           color="secondary"
           size="extraSmall"
@@ -49,6 +61,7 @@ const TraceStepper = ({stepLabels}: TraceStepperProps) => {
           ))}
         </span>
         <IconButton
+          ref={nextRef}
           variant="outlined"
           color="secondary"
           size="extraSmall"
@@ -59,8 +72,12 @@ const TraceStepper = ({stepLabels}: TraceStepperProps) => {
           <FontAwesomeV6Icon iconName="chevron-right" aria-hidden="true" />
         </IconButton>
       </div>
-      <span className={appStyles.visuallyHidden}>
-        {`Step ${step + 1} of ${stepLabels.length}: ${stepLabels[step]}`}
+      <span role="status" className={appStyles.visuallyHidden}>
+        {isStepping && (
+          <>
+            Step {step + 1} of {stepLabels.length}: {stepLabels[step]}
+          </>
+        )}
       </span>
     </div>
   );

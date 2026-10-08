@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
+import {useAppSelector} from '../../src/hooks';
 import I18n from '../../src/i18n';
 import {setTestData} from '../../src/redux';
 import {
@@ -24,6 +25,12 @@ function predictBird(store) {
   });
 }
 
+const StoreStepper = ({stepLabels}) =>
+  createElement(TraceStepper, {
+    step: useAppSelector(getPredictionStep),
+    stepLabels,
+  });
+
 function renderStepper() {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
@@ -41,7 +48,7 @@ function renderStepper() {
       createElement(
         ThemeProvider,
         {theme: getMuiThemeForBrand(undefined)},
-        createElement(TraceStepper, {stepLabels}),
+        createElement(StoreStepper, {stepLabels}),
       ),
     ),
   );
@@ -81,13 +88,28 @@ describe('TraceStepper', () => {
     expect(step(store)).toBe(1);
   });
 
-  it('tells screen readers which step is showing', () => {
+  it('hands focus to the other button when one reaches an end', () => {
+    renderStepper();
+    act(() => button('Previous step').focus());
+
+    fireEvent.click(button('Previous step'));
+    fireEvent.click(button('Previous step'));
+
+    expect(document.activeElement).toBe(button('Next step'));
+
+    fireEvent.click(button('Next step'));
+    fireEvent.click(button('Next step'));
+
+    expect(document.activeElement).toBe(button('Previous step'));
+  });
+
+  it('announces a step only once the student steps', () => {
     renderStepper();
 
-    expect(screen.getByText('Step 3 of 3: label 3')).toBeTruthy();
+    expect(screen.getByRole('status').textContent).toBe('');
 
     fireEvent.click(button('Previous step'));
 
-    expect(screen.getByText('Step 2 of 3: label 2')).toBeTruthy();
+    expect(screen.getByRole('status').textContent).toBe('Step 2 of 3: label 2');
   });
 });

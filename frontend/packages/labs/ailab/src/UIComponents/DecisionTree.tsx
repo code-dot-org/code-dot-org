@@ -99,7 +99,17 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     () => new Set(trace?.path.slice(0, step + 1)),
     [trace, step],
   );
+  const currentId = trace?.path[step];
   const nextId = trace?.path[step + 1];
+  const stepBounds = useMemo(() => {
+    if (!layout || !trace) {
+      return undefined;
+    }
+    const shown = trace.path.slice(step, step + 2);
+    return getNodesBounds(
+      layout.nodes.filter(placed => shown.includes(placed.id)),
+    );
+  }, [layout, trace, step]);
   const overlayRef = useRef<HTMLDivElement>(null);
   const enterHintId = useId();
   const keysHintId = useId();
@@ -189,11 +199,9 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     trace &&
     getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
 
-  const isMarkedEdge = (id: string) => reachedIds.has(id) || id === nextId;
-
-  // Marked edges go last so a sibling edge cannot paint over the stub they share.
-  const edgeOrder = [...layout.nodes].sort(
-    (a, b) => Number(isMarkedEdge(a.id)) - Number(isMarkedEdge(b.id)),
+  // Marks draw as a layer over every edge, so a sibling edge cannot paint over the stub they share.
+  const edges = layout.nodes.flatMap(placed =>
+    placed.parent ? [{id: placed.id, d: edgePath(placed.parent, placed)}] : [],
   );
 
   return (
@@ -208,6 +216,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           contentWidth={layout.width}
           contentHeight={layout.height}
           pathBounds={pathBounds}
+          stepBounds={stepBounds}
           overlayRef={overlayRef}
           toolbarTabbable={entered}
           hints={
@@ -246,19 +255,21 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               aria-hidden="true"
               className={styles.edges}
             >
-              {edgeOrder.map(
-                placed =>
-                  placed.parent && (
-                    <path
-                      key={placed.id}
-                      d={edgePath(placed.parent, placed)}
-                      className={classNames({
-                        [styles.pathEdge]: reachedIds.has(placed.id),
-                        [styles.nextEdge]: placed.id === nextId,
-                      })}
-                    />
-                  ),
-              )}
+              {edges.map(({id, d}) => (
+                <path key={id} d={d} />
+              ))}
+              <g className={styles.marks}>
+                {edges.map(({id, d}) => (
+                  <path
+                    key={id}
+                    d={d}
+                    className={classNames({
+                      [styles.pathEdge]: reachedIds.has(id),
+                      [styles.nextEdge]: id === nextId,
+                    })}
+                  />
+                ))}
+              </g>
             </svg>
             {layout.nodes.map(placed => {
               const text = nodeText(placed.node);
@@ -292,11 +303,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   aria-describedby={
                     [
                       placed.id === DISPLAY_TREE_ROOT_ID && keysHintId,
-                      pathIds.has(placed.id) && wordId('onPath'),
+                      reachedIds.has(placed.id) && wordId('onPath'),
                     ]
                       .filter(Boolean)
                       .join(' ') || undefined
                   }
+                  aria-current={placed.id === currentId ? 'step' : undefined}
                   aria-expanded={placed.node.type === 'question' || undefined}
                   aria-level={placed.depth + 1}
                   aria-setsize={siblings.length}

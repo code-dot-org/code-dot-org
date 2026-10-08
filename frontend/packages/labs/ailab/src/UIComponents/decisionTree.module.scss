@@ -10,7 +10,6 @@ $node-radius: 6px;
 $branch-height: 22px;
 $canvas-scale: var(--tree-canvas-scale, 1);
 $overlay-float-min-width: 600px;
-$mark-transition: 0.16s ease;
 
 .decisionTree {
   display: flex;
@@ -103,16 +102,21 @@ $mark-transition: 0.16s ease;
   fill: none;
   stroke: $off-path-color;
   stroke-width: 1.5;
+}
+
+.marks {
+  stroke: $path-color;
+  stroke-width: 2;
+  stroke-opacity: 0;
 
   path {
-    transition: stroke $mark-transition;
+    transition: stroke-opacity mixins.$mark-transition;
   }
 }
 
 .pathEdge,
 .nextEdge {
-  stroke: $path-color;
-  stroke-width: 2;
+  stroke-opacity: 1;
 }
 
 .nextEdge {
@@ -166,7 +170,7 @@ $mark-transition: 0.16s ease;
   font-size: 13px;
   line-height: 1.2;
   text-align: center;
-  transition: border-color $mark-transition;
+  transition: border-color mixins.$mark-transition;
 }
 
 .question,
@@ -205,7 +209,7 @@ $mark-transition: 0.16s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: background-color $mark-transition;
+  transition: background-color mixins.$mark-transition;
 }
 
 .pathBranch {
