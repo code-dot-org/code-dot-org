@@ -117,7 +117,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "disableExternalIntegrations": {"type": "boolean"},
+        "stubSecrets": {"type": "boolean"},
         "mounts": {
           "type": "object",
           "additionalProperties": false,

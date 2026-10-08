@@ -1,5 +1,5 @@
 localDev:
-  disableExternalIntegrations: true
+  stubSecrets: true
 
 RAILS_ENV: development
 dashboard_workers: 0

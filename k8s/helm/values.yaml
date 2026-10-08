@@ -115,7 +115,7 @@ user:
 
 localDev:
   # Local-only credentials and boot defaults; live deployments use external secrets.
-  disableExternalIntegrations: false
+  stubSecrets: false
 
   # Reserved for a future local dashboard profile with frontend assets.
   mounts:

@@ -16,7 +16,7 @@ data:
   build_apps: "true"
   use_my_apps: "true"
 
-  {{- if .Values.localDev.disableExternalIntegrations }}
+  {{- if .Values.localDev.stubSecrets }}
   # Local boot must not resolve these credentials through Secrets Manager.
   cloudfront_key_pair_id: ""
   cloudfront_private_key: ""
