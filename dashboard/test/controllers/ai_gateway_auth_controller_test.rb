@@ -12,6 +12,8 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
+    # create(:levelbuilder) below goes through User#migrate_to_multi_auth, which reads this key.
+    DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
     @params = {
       aichatContext: {
