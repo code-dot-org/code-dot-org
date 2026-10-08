@@ -180,8 +180,9 @@ $overlay-float-min-width: 600px;
   width: $answer-dot-size;
   height: $answer-dot-size;
   border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid transparent;
   background-color: var(--leaf-color);
-  forced-color-adjust: none;
 }
 
 .nodeText {
