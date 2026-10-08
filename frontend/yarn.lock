@@ -2054,6 +2054,7 @@ __metadata:
     "@vitejs/plugin-react": "catalog:"
     eslint: "catalog:"
     jsdom: "catalog:"
+    playwright: "catalog:"
     prettier: "catalog:"
     rimraf: "catalog:"
     stylelint: "catalog:"

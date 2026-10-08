@@ -23,7 +23,7 @@
   "scripts": {
     "build": "vite build",
     "clean": "rimraf dist",
-    "dev": "vite",
+    "dev": "vite --config vite.demo.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
@@ -31,6 +31,8 @@
     "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
     "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
+    "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -43,6 +45,7 @@
     "@vitejs/plugin-react": "catalog:",
     "eslint": "catalog:",
     "jsdom": "catalog:",
+    "playwright": "catalog:",
     "prettier": "catalog:",
     "rimraf": "catalog:",
     "stylelint": "catalog:",

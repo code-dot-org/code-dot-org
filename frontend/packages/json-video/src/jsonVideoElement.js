@@ -58,25 +58,25 @@ export class JsonVideo extends HTMLElement {
     container.id = 'video-container';
 
     container.innerHTML = `
-            <img id="poster" class="hidden" alt="">
-            <iframe id="scene-renderer" src="about:blank" scrolling="no" sandbox="allow-scripts"></iframe>
-            <div id="closed-caption-overlay" class="hidden"><span class="cc-text"></span></div>
-            <div id="controls-bar">
+            <img id="poster" part="poster" class="hidden" alt="">
+            <iframe id="scene-renderer" part="scene" src="about:blank" scrolling="no" sandbox="allow-scripts"></iframe>
+            <div id="closed-caption-overlay" part="captions" class="hidden"><span class="cc-text" part="caption-text"></span></div>
+            <div id="controls-bar" part="controls-bar">
                 <div class="controls-row">
-                    <button id="play-btn" class="control-btn" aria-label="Play"></button>
+                    <button id="play-btn" part="play-button" class="control-btn" aria-label="Play"></button>
                     <div class="volume-control">
-                        <button id="mute-btn" class="control-btn"></button>
-                        <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
+                        <button id="mute-btn" part="mute-button" class="control-btn" aria-label="Mute"></button>
+                        <input type="range" id="volume-slider" part="volume-slider" aria-label="Volume" min="0" max="1" step="0.05" value="1">
                     </div>
-                    <div class="time-display">
-                        <span id="cur-time">0:00</span> / <span id="tot-time">0:00</span>
+                    <div class="time-display" part="time-display">
+                        <span id="cur-time" part="current-time">0:00</span> / <span id="tot-time" part="duration">0:00</span>
                     </div>
                     <div style="flex-grow: 1;"></div>
-                    <button id="cc-btn" class="control-btn"></button>
-                    <button id="fullscreen-btn" class="control-btn"></button>
+                    <button id="cc-btn" part="captions-button" class="control-btn disabled" aria-label="Captions" aria-pressed="false"></button>
+                    <button id="fullscreen-btn" part="fullscreen-button" class="control-btn" aria-label="Enter full screen"></button>
                 </div>
                 <div id="progress-container">
-                    <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
+                    <input type="range" id="progress-bar" part="progress-bar" aria-label="Seek" min="0" max="100" value="0" step="0.1">
                 </div>
             </div>
         `;
@@ -140,6 +140,7 @@ export class JsonVideo extends HTMLElement {
     this.ui.ccBtn.onclick = () => {
       this._showCaptions = !this._showCaptions;
       this.ui.ccBtn.classList.toggle('disabled', !this._showCaptions);
+      this.ui.ccBtn.setAttribute('aria-pressed', String(this._showCaptions));
       this._renderCurrentScene();
     };
 
@@ -150,6 +151,10 @@ export class JsonVideo extends HTMLElement {
         document.fullscreenElement === this ||
         document.webkitFullscreenElement === this;
       this.ui.fullscreenBtn.classList.toggle('fullscreen-active', isFs);
+      this.ui.fullscreenBtn.setAttribute(
+        'aria-label',
+        isFs ? 'Exit full screen' : 'Enter full screen',
+      );
     };
     document.addEventListener('fullscreenchange', this._onFullscreenChange);
     document.addEventListener(
@@ -189,6 +194,10 @@ export class JsonVideo extends HTMLElement {
     this._sceneAudio.volume = this._volume;
     this.ui.volume.value = this._volume;
     this.ui.muteBtn.classList.toggle('muted', this.volume === 0);
+    this.ui.muteBtn.setAttribute(
+      'aria-label',
+      this.volume === 0 ? 'Unmute' : 'Mute',
+    );
   }
 
   get src() {

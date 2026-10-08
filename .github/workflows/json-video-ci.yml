@@ -1,10 +1,16 @@
 # Common workflow for execution of continuous integration for the json-video package.
-# One job: `release:dryrun` fans out to build, lint, test, and — via the shared
-# `lint` task's dependsOn — prettier, stylelint, and typecheck.
+# Two jobs: build (`release:dryrun` fans out to build, lint, test, and — via the
+# shared `lint` task's dependsOn — prettier, stylelint, and typecheck) and e2e
+# (Playwright against the demo page).
 name: Json-Video-CI
 
 on:
   workflow_call:
+    inputs:
+      playwright-image-tag:
+        required: true
+        type: string
+        description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
 
 jobs:
   build:
@@ -23,3 +29,39 @@ jobs:
       - name: Build, Lint, Typecheck, Test
         run: yarn turbo run release:dryrun --filter=@code-dot-org/json-video
         working-directory: ./frontend
+
+  e2e:
+    # Sequence after build so the turbo cache is warm.
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: E2E tests
+        # HOME=/root is Playwright's Firefox-in-container fix.
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          HOME: /root
+        run: yarn workspace @code-dot-org/json-video test:ui:ci
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        # Upload on flakes too (passing-on-retry leaves the job green).
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: json-video-playwright-report
+          path: |
+            frontend/packages/json-video/playwright-report/
+            frontend/packages/json-video/test-results/
+          retention-days: 7
