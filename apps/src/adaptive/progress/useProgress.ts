@@ -9,6 +9,7 @@ import {
   CheckpointStatus,
   EMPTY_PROGRESS,
   Progress,
+  StepContext,
   getStatusMap,
 } from './model';
 import {
@@ -68,6 +69,20 @@ export function useProgress(
     );
   }, []);
 
+  /** Merges into a step's context, so one concern's write keeps the others. */
+  const updateStepContext = useCallback((id: string, patch: StepContext) => {
+    setProgress(
+      p =>
+        p && {
+          ...p,
+          stepContext: {
+            ...p.stepContext,
+            [id]: {...p.stepContext[id], ...patch},
+          },
+        }
+    );
+  }, []);
+
   const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
 
   return {
@@ -76,6 +91,7 @@ export function useProgress(
     statusMap,
     markStarted,
     markComplete,
+    updateStepContext,
     reset,
   };
 }
