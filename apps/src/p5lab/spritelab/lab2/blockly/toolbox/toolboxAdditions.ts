@@ -97,19 +97,20 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     ],
   },
   {
-    // Scene-driven storytelling: place and size characters, speech, click and
-    // timer events, scene jumps, and the simple movement behaviors.
+    // Scene-driven storytelling, grouped by color like Platform: the sprite
+    // block, the background, the events, then the light blue ones and the
+    // behaviors.
     name: 'Story',
     types: [
+      'gamelab_makeNewSpriteAnon',
       'gamelab_setBackgroundImageAs',
+      'gamelab_spriteClicked',
+      'gamelab_atTime',
       PLAY_SOUND_BLOCK_TYPE,
       PLAY_MUSIC_BLOCK_TYPE,
-      'gamelab_makeNewSpriteAnon',
       'gamelab_setProp',
       'gamelab_spriteSay',
       'gamelab_spriteSayTime',
-      'gamelab_spriteClicked',
-      'gamelab_atTime',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
       'gamelab_addBehaviorSimple',

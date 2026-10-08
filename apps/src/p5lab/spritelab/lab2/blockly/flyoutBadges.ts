@@ -13,8 +13,6 @@ const FIRST_ROW_PX = 36;
 const ICON_PX = 20;
 const PILL_HEIGHT_PX = ICON_PX;
 const PILL_PADDING_PX = 7;
-// Between the icon's circle and the text.
-const PILL_ICON_GAP_PX = 3;
 
 /** What a flyout block wears: a stamp, a help button, or both in one pill. */
 export interface FlyoutBadge {
@@ -62,7 +60,8 @@ export function installFlyoutBadges(
 function helpButton(
   title: string,
   className: string,
-  onPress: (button: HTMLButtonElement) => void
+  onPress: (button: HTMLButtonElement) => void,
+  text?: string
 ): HTMLButtonElement {
   const button = document.createElementNS(
     XHTML_NS,
@@ -78,6 +77,11 @@ function helpButton(
   icon.className = 'fa-regular fa-circle-question';
   icon.setAttribute('aria-hidden', 'true');
   button.appendChild(icon);
+  if (text) {
+    const label = document.createElementNS(XHTML_NS, 'span');
+    label.textContent = text;
+    button.appendChild(label);
+  }
   // The flyout starts a block drag on any pointerdown that reaches its
   // root; the button is not a block. Default prevented so the press does
   // not focus the button (see above).
@@ -142,19 +146,45 @@ function decorateFlyout(
         return;
       }
 
+      const tone = bright ? moduleStyles.bright : moduleStyles.quiet;
+      if (help) {
+        // A stamp with help is one button: the whole pill opens the callout.
+        const group = BlocklyCore.utils.dom.createSvgElement(
+          BlocklyCore.utils.Svg.G,
+          {
+            class: BADGE_CLASS,
+            transform: `translate(${x}, ${rowMiddle - PILL_HEIGHT_PX / 2})`,
+          },
+          canvas
+        );
+        const container = BlocklyCore.utils.dom.createSvgElement(
+          BlocklyCore.utils.Svg.FOREIGNOBJECT,
+          {width: 1, height: PILL_HEIGHT_PX},
+          group
+        );
+        const button = helpButton(
+          help.title,
+          `${moduleStyles.pillButton} ${tone}`,
+          open,
+          text
+        );
+        container.appendChild(button);
+        // Sized by its own text; the foreignObject must be told.
+        const pillWidth = Math.ceil(button.getBoundingClientRect().width);
+        container.setAttribute('width', String(pillWidth));
+        badgesRight = Math.max(badgesRight, x + pillWidth);
+        return;
+      }
+
       const group = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.G,
         {
-          class: `${BADGE_CLASS} ${moduleStyles.stamp} ${
-            bright ? moduleStyles.stampBright : moduleStyles.stampQuiet
-          }`,
+          class: `${BADGE_CLASS} ${moduleStyles.stamp} ${tone}`,
           transform: `translate(${x}, ${rowMiddle - PILL_HEIGHT_PX / 2})`,
         },
         canvas
       );
-      if (!help) {
-        group.setAttribute('aria-hidden', 'true');
-      }
+      group.setAttribute('aria-hidden', 'true');
       const rect = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.RECT,
         {
@@ -164,34 +194,20 @@ function decorateFlyout(
         },
         group
       );
-      // The help icon forms the pill's left end, then the text.
-      const textX = help ? ICON_PX + PILL_ICON_GAP_PX : PILL_PADDING_PX;
       const label = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.TEXT,
-        {x: textX, y: PILL_HEIGHT_PX / 2, 'dominant-baseline': 'central'},
+        {
+          x: PILL_PADDING_PX,
+          y: PILL_HEIGHT_PX / 2,
+          'dominant-baseline': 'central',
+        },
         group
       );
       label.textContent = text ?? '';
       const pillWidth =
-        textX + Math.ceil(label.getComputedTextLength()) + PILL_PADDING_PX;
+        PILL_PADDING_PX * 2 + Math.ceil(label.getComputedTextLength());
       rect.setAttribute('width', String(pillWidth));
       badgesRight = Math.max(badgesRight, x + pillWidth);
-      if (help) {
-        const container = BlocklyCore.utils.dom.createSvgElement(
-          BlocklyCore.utils.Svg.FOREIGNOBJECT,
-          {
-            x: 0,
-            y: 0,
-            width: ICON_PX,
-            height: ICON_PX,
-            class: moduleStyles.pillHelp,
-          },
-          group
-        );
-        container.appendChild(
-          helpButton(help.title, moduleStyles.pillHelpButton, open)
-        );
-      }
     });
     fitFlyout(badgesRight);
   };

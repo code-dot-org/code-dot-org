@@ -144,7 +144,36 @@
           "contents": [
             {
               "kind": "block",
+              "type": "spritelab2_makeSpriteAtPosition"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_atTime",
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 3
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -161,10 +190,6 @@
             {
               "kind": "block",
               "type": "spritelab2_burst"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_makeSpriteAtPosition"
             },
             {
               "kind": "block",
@@ -195,31 +220,6 @@
                 "SPRITE": {
                   "shadow": {
                     "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_spriteClicked",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_atTime",
-              "inputs": {
-                "N": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 3
-                    }
                   }
                 }
               }

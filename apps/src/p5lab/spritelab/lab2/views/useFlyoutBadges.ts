@@ -1,8 +1,7 @@
-// Badges on the toolbox's blocks: a "New" stamp on each block the student's
-// project has never used, and a help button on each block that has help.
-// A block with both gets one pill holding the help button and the stamp.
-// Once a block is used during the visit it stays unstamped, even if the
-// student deletes it again.
+// Badges on the toolbox's blocks the student's project has never used: a
+// "New" stamp, a help button when the block has help, or one pill holding
+// both. A block the student has used wears nothing, and stays bare for the
+// visit even if the student deletes it again.
 
 import * as BlocklyCore from 'blockly/core';
 import {useEffect, useMemo, useState} from 'react';
@@ -50,9 +49,12 @@ export function useFlyoutBadges({
       return;
     }
     const badgeFor = (type: string): FlyoutBadge | undefined => {
+      if (seen.has(type)) {
+        return undefined;
+      }
       const entry = help ? BLOCK_HELP[type] : undefined;
       const badge: FlyoutBadge = {
-        text: stamps && !seen.has(type) ? STAMP_TEXT : undefined,
+        text: stamps ? STAMP_TEXT : undefined,
         bright: !!BLOCK_HELP[type]?.standout,
         help: entry ? {title: entry.title} : undefined,
       };

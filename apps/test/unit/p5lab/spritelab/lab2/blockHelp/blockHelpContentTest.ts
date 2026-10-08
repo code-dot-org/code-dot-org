@@ -6,9 +6,16 @@ describe('BLOCK_HELP', () => {
     Object.values(blockDefinitions).map(entry => entry.definition.type)
   );
 
-  it('names only blocks this lab defines', () => {
+  it('names blocks this lab defines, or classic sprite blocks', () => {
     Object.keys(BLOCK_HELP).forEach(type => {
-      expect(defined.has(type)).toBe(true);
+      expect(defined.has(type) || type.startsWith('gamelab_')).toBe(true);
+    });
+  });
+
+  it('gives every entry an animation', () => {
+    Object.values(BLOCK_HELP).forEach(help => {
+      expect(help.animation?.src).toBeTruthy();
+      expect(help.animation?.alt.trim()).not.toBe('');
     });
   });
 
