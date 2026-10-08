@@ -91,15 +91,17 @@ describe('IntroScreenCard', () => {
     );
   });
 
-  it('refuses to remove the intro screen while a time limit is set', () => {
+  it('blocks removing the intro screen while a time limit is set, and says why', () => {
     const {onSave} = renderCard({hasTimeLimit: true});
     expand();
 
-    fireEvent.click(screen.getByRole('button', {name: 'Remove from quiz'}));
+    const remove = screen.getByRole('button', {name: 'Remove from quiz'});
+    expect(remove).toHaveAttribute('aria-disabled', 'true');
+    expect(remove).toHaveAccessibleDescription(
+      'Remove the time limit in Configuration before removing the intro screen.'
+    );
 
+    fireEvent.click(remove);
     expect(onSave).not.toHaveBeenCalled();
-    expect(
-      screen.getByText(/Remove the time limit in Configuration/)
-    ).toBeInTheDocument();
   });
 });

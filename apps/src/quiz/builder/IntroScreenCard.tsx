@@ -61,9 +61,6 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
 
   const handleRemove = async () => {
     if (hasTimeLimit) {
-      setError(
-        'Remove the time limit in Configuration before removing the intro screen.'
-      );
       return;
     }
     setIsRemoving(true);
@@ -143,17 +140,28 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
           )}
 
           <div className={styles.footer}>
-            <Button
-              variant="outlined"
-              color="error"
-              size="extraSmall"
-              type="button"
-              disabled={isBusy}
-              loading={isRemoving}
-              onClick={handleRemove}
+            <Tooltip
+              describeChild
+              title={
+                hasTimeLimit
+                  ? 'Remove the time limit in Configuration before removing the intro screen.'
+                  : ''
+              }
             >
-              Remove from quiz
-            </Button>
+              <Button
+                variant="outlined"
+                color="error"
+                size="extraSmall"
+                type="button"
+                className={styles.ariaDisabled}
+                disabled={isBusy}
+                aria-disabled={hasTimeLimit}
+                loading={isRemoving}
+                onClick={handleRemove}
+              >
+                Remove from quiz
+              </Button>
+            </Tooltip>
             <div className={styles.footerActions}>
               <Button
                 variant="outlined"

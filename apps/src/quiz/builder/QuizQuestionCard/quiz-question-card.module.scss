@@ -15,8 +15,6 @@
   background: var(--background-neutral-primary);
 }
 
-// Collapsed, the header is the card's last child and the card's own border
-// closes it; a second border there doubles into what looks like a shadow.
 .header:not(:last-child) {
   border-bottom: 1px solid var(--border-neutral-primary);
 }
@@ -141,6 +139,13 @@
   padding: 10px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--border-neutral-primary);
+}
+
+// aria-disabled rather than disabled, so the button keeps focus and its tooltip.
+.footer .ariaDisabled[aria-disabled='true'] {
+  border-color: var(--borders-neutral-disabled);
+  color: var(--text-neutral-disabled);
+  background-color: var(--background-neutral-primary);
 }
 
 .footerActions {
