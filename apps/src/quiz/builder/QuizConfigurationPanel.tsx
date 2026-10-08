@@ -3,7 +3,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Alert} from '@mui/material';
 import pick from 'lodash/pick';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useId, useRef, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -131,6 +131,10 @@ const QuizConfigurationPanel: React.FunctionComponent<
   useEffect(() => {
     setShowIntroScreen(initialValues.showIntroScreen);
   }, [initialValues.showIntroScreen]);
+  // The backend requires the intro screen while a time limit is saved.
+  const isIntroScreenLocked =
+    !!initialValues.timeLimitMinutes && showIntroScreen;
+  const introScreenLockedMessageId = useId();
   const [purpose, setPurpose] = useState(initialValues.purpose || '');
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
     initialValues.allowMultipleAttempts
@@ -434,11 +438,24 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   name="showIntroScreen"
                   aria-label="Show intro screen"
                   size="s"
-                  disabled={savingField === 'showIntroScreen'}
+                  disabled={
+                    savingField === 'showIntroScreen' || isIntroScreenLocked
+                  }
+                  aria-describedby={
+                    isIntroScreenLocked ? introScreenLockedMessageId : undefined
+                  }
                   checked={showIntroScreen}
                   onChange={handleShowIntroScreenChange}
                 />
               </div>
+              {isIntroScreenLocked && (
+                <p
+                  id={introScreenLockedMessageId}
+                  className={styles.cardHelperText}
+                >
+                  Required while a time limit is set.
+                </p>
+              )}
               <p className={styles.cardHelperText}>
                 Edit intro screen contents in the workspace
               </p>
