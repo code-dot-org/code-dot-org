@@ -172,104 +172,86 @@ class QuizTest < ActiveSupport::TestCase
     assert_equal 1, first.placements.count
   end
 
-  test "save_question_placements! reflects current placements, ordered by page then position" do
+  test "serializable_hash reflects current placements live, ordered by page then position" do
     quiz = create(:quiz)
     second = create(:quiz_question_placement, level: quiz, page: 1, position: 2)
     first = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
-
-    quiz.save_question_placements!
 
     assert_equal(
       [
         {'question_key' => first.quiz_question.key, 'page' => 1, 'position' => 1},
         {'question_key' => second.quiz_question.key, 'page' => 1, 'position' => 2},
       ],
-      quiz.reload.question_placements
+      quiz.serializable_hash['serialized_placements']
     )
   end
 
-  test "import_question_placements! creates placements from question_placements" do
+  test "import_serialized_placements! creates placements from serialized_placements" do
     quiz = create(:quiz)
     question = create(:quiz_question)
-    quiz.question_placements = [{'question_key' => question.key, 'page' => 1, 'position' => 1}]
+    quiz.serialized_placements = [{'question_key' => question.key, 'page' => 1, 'position' => 1}]
 
-    quiz.import_question_placements!
+    quiz.import_serialized_placements!
 
     assert_equal [question], quiz.reload.questions
   end
 
-  test "import_question_placements! does nothing when placements already match" do
+  test "import_serialized_placements! does nothing when placements already match" do
     quiz = create(:quiz)
     placement = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
-    quiz.question_placements = [{'question_key' => placement.quiz_question.key, 'page' => 1, 'position' => 1}]
+    quiz.serialized_placements = [{'question_key' => placement.quiz_question.key, 'page' => 1, 'position' => 1}]
 
-    quiz.import_question_placements!
+    quiz.import_serialized_placements!
 
     assert_equal placement.id, quiz.reload.placements.first.id
   end
 
-  test "import_question_placements! updates page/position on an existing placement" do
+  test "import_serialized_placements! updates page/position on an existing placement" do
     quiz = create(:quiz)
     placement = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
-    quiz.question_placements = [{'question_key' => placement.quiz_question.key, 'page' => 2, 'position' => 1}]
+    quiz.serialized_placements = [{'question_key' => placement.quiz_question.key, 'page' => 2, 'position' => 1}]
 
-    quiz.import_question_placements!
+    quiz.import_serialized_placements!
 
     assert_equal 1, quiz.placements.count
     assert_equal 2, quiz.placements.first.page
   end
 
-  test "import_question_placements! removes placements no longer listed" do
+  test "import_serialized_placements! removes placements no longer listed" do
     quiz = create(:quiz)
     create(:quiz_question_placement, level: quiz)
-    quiz.question_placements = []
+    quiz.serialized_placements = []
 
-    quiz.import_question_placements!
+    quiz.import_serialized_placements!
 
     assert_empty quiz.placements
   end
 
-  test "import_question_placements! leaves existing placements alone when question_placements is nil" do
+  test "import_serialized_placements! leaves existing placements alone when serialized_placements is nil" do
     quiz = create(:quiz)
     placement = create(:quiz_question_placement, level: quiz)
-    quiz.question_placements = nil
+    # serialized_placements left at its default, unset nil.
 
-    quiz.import_question_placements!
+    quiz.import_serialized_placements!
 
     assert_equal placement.id, quiz.placements.first.id
   end
 
-  test "import_question_placements! raises on an unresolvable question_key" do
+  test "import_serialized_placements! raises on an unresolvable question_key" do
     quiz = create(:quiz)
-    quiz.question_placements = [{'question_key' => 'not-a-real-key', 'page' => 1, 'position' => 1}]
+    quiz.serialized_placements = [{'question_key' => 'not-a-real-key', 'page' => 1, 'position' => 1}]
 
-    assert_raises(RuntimeError) {quiz.import_question_placements!}
+    assert_raises(RuntimeError) {quiz.import_serialized_placements!}
   end
 
-  test "import_question_placements! raises rather than silently dropping a duplicate question_key" do
+  test "import_serialized_placements! raises rather than silently dropping a duplicate question_key" do
     quiz = create(:quiz)
     question = create(:quiz_question)
-    quiz.question_placements = [
+    quiz.serialized_placements = [
       {'question_key' => question.key, 'page' => 1, 'position' => 1},
       {'question_key' => question.key, 'page' => 1, 'position' => 2},
     ]
 
-    assert_raises(ActiveRecord::RecordNotUnique) {quiz.import_question_placements!}
-  end
-
-  test "import_question_placements_for calls import_question_placements! on each quiz" do
-    quiz = create(:quiz)
-    question = create(:quiz_question)
-    quiz.question_placements = [{'question_key' => question.key, 'page' => 1, 'position' => 1}]
-
-    Quiz.import_question_placements_for([quiz])
-
-    assert_equal [question], quiz.reload.questions
-  end
-
-  test "import_question_placements_for ignores non-Quiz levels" do
-    level = create(:level)
-
-    assert_nothing_raised {Quiz.import_question_placements_for([level])}
+    assert_raises(ActiveRecord::RecordNotUnique) {quiz.import_serialized_placements!}
   end
 end

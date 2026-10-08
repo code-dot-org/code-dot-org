@@ -38,9 +38,10 @@ class Quiz < Level
     show_intro_screen
     allow_multiple_attempts
     max_attempts
-    question_placements
     show_questions_after_submit
   )
+
+  attr_accessor :serialized_placements
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
   validates :purpose, inclusion: {in: PURPOSES}, allow_nil: true
@@ -59,20 +60,16 @@ class Quiz < Level
   # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
 
-  def self.import_question_placements_for(levels)
-    levels.each {|level| level.import_question_placements! if level.is_a?(Quiz)}
+  def serializable_hash(options = nil)
+    super.merge('serialized_placements' => placements.includes(:quiz_question).map(&:serializable_hash))
   end
 
-  # Replace this Quiz's QuizQuestionPlacement database rows with the list from its question_placements serialized attribute.
-  # This method is called when importing question placements from the .level file.
-  def import_question_placements!
-    # We leave existing placements alone if serialized question_placements is nil
-    # in order to avoid accidentally deleting all existing placements.
-    return if question_placements.nil?
+  def import_serialized_placements!
+    return if serialized_placements.nil?
 
-    questions_by_key = QuizQuestion.where(key: question_placements.map {|entry| entry['question_key']}).index_by(&:key)
+    questions_by_key = QuizQuestion.where(key: serialized_placements.map {|entry| entry['question_key']}).index_by(&:key)
 
-    desired = question_placements.map do |entry|
+    desired = serialized_placements.map do |entry|
       question = questions_by_key[entry['question_key']]
       raise "quiz #{name.dump}: unknown question_key #{entry['question_key'].dump}" unless question
       {quiz_question_id: question.id, page: entry['page'], position: entry['position']}
@@ -81,24 +78,9 @@ class Quiz < Level
     existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
     return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
 
-    # Using insert_all bypasses QuizQuestionPlacement callbacks,
-    # which would circularly trigger the after commit callback that writes question_placements back to the quiz.
     placements.delete_all
     QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
     placements.reset
-  end
-
-  def save_question_placements!
-    with_lock do
-      self.question_placements = placements.includes(:quiz_question).map do |placement|
-        {
-          'question_key' => placement.quiz_question.key,
-          'page' => placement.page,
-          'position' => placement.position,
-        }
-      end
-      save!
-    end
   end
 
   def self.create_from_level_builder(params, level_params)

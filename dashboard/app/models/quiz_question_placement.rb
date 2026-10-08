@@ -24,9 +24,14 @@ class QuizQuestionPlacement < ApplicationRecord
 
   validates :position, presence: true
 
-  after_commit :save_to_quiz!
+  after_commit :write_to_quiz_file!
 
-  private def save_to_quiz!
-    level.save_question_placements! if level.is_a?(Quiz) && !level.destroyed?
+  def serializable_hash(options = nil)
+    super.except('id', 'level_id', 'quiz_question_id', 'created_at', 'updated_at').
+      merge('question_key' => quiz_question.key)
+  end
+
+  private def write_to_quiz_file!
+    level.save! if level.is_a?(Quiz) && !level.destroyed?
   end
 end

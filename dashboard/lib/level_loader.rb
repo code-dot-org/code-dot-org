@@ -125,7 +125,7 @@ class LevelLoader
       Level.setup_child_levels_for(changed_levels, [ParentLevelsChildLevel::CONTAINED, ParentLevelsChildLevel::PROJECT_TEMPLATE])
 
       # Load question placements for quizzes, which are serialized as part of the level's content.
-      Quiz.import_question_placements_for(changed_levels)
+      changed_levels.select {|level| level.is_a?(Quiz)}.each(&:import_serialized_placements!)
     end
   end
 
