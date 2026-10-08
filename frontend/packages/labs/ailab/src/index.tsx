@@ -90,6 +90,7 @@ export const unmount = function (): void {
  * Prepare the lab for a level. Call this once per level after mount().
  */
 export const loadLevel = function (mode?: Mode): void {
+  invalidatePendingDatasetLoads();
   store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
@@ -137,7 +138,6 @@ const processMode = (mode: Mode | undefined): void => {
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
   store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-  invalidatePendingDatasetLoads();
   parseCSV(assetPath + item.path, true, false);
 
   // Also retrieve model metadata and set column data types.
