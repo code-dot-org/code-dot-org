@@ -57,37 +57,20 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       src: setGravityAnimation,
       alt: 'A character jumps, floats, and drops as gravity changes.',
     },
-    summary:
-      'Changes how hard the platformer pulls everything down: the player, ' +
-      'and every other character that stands on blocks.',
+    summary: 'Changes how hard everything falls.',
     body: (
       <>
         {para(
           bold(`${PLATFORM_GRAVITY}`),
-          ' is normal. Smaller numbers make jumps float and falls drift; ' +
-            'bigger numbers snap everything to the ground and cut jumps short.'
+          ' is normal. Smaller numbers float; bigger numbers drop fast.'
         )}
         {para(
           bold('0'),
-          ' turns gravity off. Nothing falls, so a jump keeps going until ' +
-            'it hits something, and a patrolling character walks straight ' +
-            'off the end of its blocks into the air.'
+          ' turns gravity off. A ',
+          bold('negative number'),
+          ' flips the world: you fall up and land on the ceiling.'
         )}
-        {para(
-          bold('A negative number'),
-          ' flips the world. The player falls up, lands on the undersides ' +
-            'of blocks and the top of the screen, and jumps downward. ' +
-            'Patrollers flip with it: they land on the blocks above them ' +
-            'and patrol along those instead.'
-        )}
-        {para(
-          bold('Try a gravity-switching game.'),
-          ' Put this block inside an event, such as a key press or a click, ' +
-            'and switch gravity at the right moments: each flip drops the ' +
-            'patrollers onto different blocks, so the same level rearranges ' +
-            'itself, and the trick is to end with everyone where you want ' +
-            'them.'
-        )}
+        {para('Change it inside an event to make a gravity-flipping game.')}
       </>
     ),
   },
