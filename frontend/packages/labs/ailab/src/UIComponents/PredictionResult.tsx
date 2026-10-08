@@ -8,6 +8,7 @@ import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {getPredictionTrace} from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import styles from './predictionResult.module.scss';
 
@@ -15,7 +16,10 @@ const PredictionResult = () => {
   const datasetId = useAppSelector(state => state.metadata?.name || '');
   const labelColumn = useAppSelector(state => state.labelColumn || '');
   const predictedLabel = useAppSelector(getConvertedPredictedLabel);
-  const trace = useAppSelector(getPredictionTrace);
+  const {trainedModel} = useTrainingData();
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, trainedModel),
+  );
 
   if (predictedLabel === undefined) {
     return null;

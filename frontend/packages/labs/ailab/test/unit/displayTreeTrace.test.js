@@ -19,9 +19,9 @@ const zooOptions = {
 
 describe('traceDisplayTree on a shipped dataset', () => {
   test('each step names the column, the row value and the branch taken', () => {
-    const state = trainDataset('zoo', zooOptions);
+    const {state, trainedModel} = trainDataset('zoo', zooOptions);
 
-    rowTraces(state).forEach(({path, steps}, rowIndex) => {
+    rowTraces(state, trainedModel).forEach(({path, steps}, rowIndex) => {
       const row = state.data[rowIndex];
 
       expect(steps.length).toBeGreaterThan(0);
@@ -38,15 +38,14 @@ describe('traceDisplayTree on a shipped dataset', () => {
   });
 
   test('the path names the placed nodes of the layout', () => {
-    const state = trainDataset('zoo', zooOptions);
+    const {state, trainedModel} = trainDataset('zoo', zooOptions);
     const placedById = Object.fromEntries(
-      layoutDisplayTree(getDisplayTree(state)).nodes.map(placed => [
-        placed.id,
-        placed,
-      ]),
+      layoutDisplayTree(getDisplayTree(state, trainedModel)).nodes.map(
+        placed => [placed.id, placed],
+      ),
     );
 
-    rowTraces(state).forEach(({path, prediction}) => {
+    rowTraces(state, trainedModel).forEach(({path, prediction}) => {
       const placedNodes = path.map(id => placedById[id]);
 
       expect(placedNodes.every(Boolean)).toBe(true);
@@ -162,56 +161,61 @@ describe('traceDisplayTree', () => {
 describe('getPredictionTrace', () => {
   const fish = {Legs: '0', Feathers: 'No', Milk: 'No', Fins: 'Yes'};
   const mammal = {Legs: '4', Feathers: 'No', Milk: 'Yes', Fins: 'No'};
-  const predictWith = values => {
+  const predictWith = (values, trainedModel) => {
     Object.entries(values).forEach(([feature, value]) =>
       store.dispatch(setTestData(feature, value)),
     );
-    train.onClickPredict();
+    train.onClickPredict(trainedModel);
     return store.getState();
   };
 
   test('is the trace of the values the student predicted with', () => {
-    const state = trainDataset('zoo', zooOptions);
+    const {state, trainedModel} = trainDataset('zoo', zooOptions);
     const row = state.data[0];
-    expect(getPredictionTrace(state)).toBeUndefined();
+    expect(getPredictionTrace(state, trainedModel)).toBeUndefined();
 
     const predicted = predictWith(
       Object.fromEntries(
         zooOptions.features.map(feature => [feature, String(row[feature])]),
       ),
+      trainedModel,
     );
 
-    expect(getPredictionTrace(predicted)).toEqual(rowTraces(state)[0]);
+    expect(getPredictionTrace(predicted, trainedModel)).toEqual(
+      rowTraces(state, trainedModel)[0],
+    );
   });
 
   test('clears when a value changes, until the next prediction', () => {
-    trainDataset('zoo', zooOptions);
-    predictWith(fish);
-    expect(getPredictionTrace(store.getState())).toBeDefined();
+    const {trainedModel} = trainDataset('zoo', zooOptions);
+    predictWith(fish, trainedModel);
+    expect(getPredictionTrace(store.getState(), trainedModel)).toBeDefined();
 
     store.dispatch(setTestData('Legs', '4'));
-    expect(getPredictionTrace(store.getState())).toBeUndefined();
+    expect(getPredictionTrace(store.getState(), trainedModel)).toBeUndefined();
 
-    train.onClickPredict();
+    train.onClickPredict(trainedModel);
     const state = store.getState();
-    expect(getPredictionTrace(state).prediction).toBe(
+    expect(getPredictionTrace(state, trainedModel).prediction).toBe(
       getConvertedPredictedLabel(state),
     );
   });
 
   test('keeps the values predicted with when the test data changes', () => {
-    trainDataset('zoo', zooOptions);
-    const predicted = predictWith(fish);
-    const trace = getPredictionTrace(predicted);
+    const {trainedModel} = trainDataset('zoo', zooOptions);
+    const predicted = predictWith(fish, trainedModel);
+    const trace = getPredictionTrace(predicted, trainedModel);
 
-    expect(getPredictionTrace({...predicted, testData: mammal})).toEqual(trace);
+    expect(
+      getPredictionTrace({...predicted, testData: mammal}, trainedModel),
+    ).toEqual(trace);
   });
 
   test('a KNN model has no trace', () => {
-    trainDataset('zoo', {...zooOptions, mode: {}});
-    const state = predictWith(fish);
+    const {trainedModel} = trainDataset('zoo', {...zooOptions, mode: {}});
+    const state = predictWith(fish, trainedModel);
 
     expect(state.prediction).toBeDefined();
-    expect(getPredictionTrace(state)).toBeUndefined();
+    expect(getPredictionTrace(state, trainedModel)).toBeUndefined();
   });
 });

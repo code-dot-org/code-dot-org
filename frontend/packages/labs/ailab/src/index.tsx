@@ -27,6 +27,7 @@ import {
 } from './redux';
 import {store} from './store';
 import train from './train';
+import {TrainingDataProvider} from './TrainingDataContext';
 import type {Mode} from './types';
 
 let root: Root | undefined;
@@ -68,11 +69,13 @@ export const mount = function (options: MountOptions): void {
   // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
     <Provider store={store}>
-      <ThemeProvider
-        theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
-      >
-        <App {...options} />
-      </ThemeProvider>
+      <TrainingDataProvider>
+        <ThemeProvider
+          theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
+        >
+          <App {...options} />
+        </ThemeProvider>
+      </TrainingDataProvider>
     </Provider>,
   );
 };

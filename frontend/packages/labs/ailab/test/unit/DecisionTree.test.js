@@ -1,9 +1,5 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
 import {setTestData} from '../../src/redux';
@@ -12,35 +8,23 @@ import DecisionTree from '../../src/UIComponents/DecisionTree';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
 
 import {levelStore} from './levelStore';
+import {renderWithProviders, trainModel} from './renderWithProviders';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-function predictSnake(store) {
+function predictSnake({store, trainedModel}) {
   act(() => {
     store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict();
+    train.onClickPredict(trainedModel);
   });
 }
 
 function renderTrainedTree() {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
-  train.reset();
-  train.init(store);
-  train.onClickTrain();
-  render(createElement(DecisionTree), {
-    wrapper: ({children}) =>
-      createElement(
-        Provider,
-        {store},
-        createElement(
-          ThemeProvider,
-          {theme: getMuiThemeForBrand(undefined)},
-          children,
-        ),
-      ),
-  });
-  return store;
+  const trainedModel = trainModel(store);
+  renderWithProviders(createElement(DecisionTree), {store, trainedModel});
+  return {store, trainedModel};
 }
 
 function zoomToPathButton() {
@@ -71,9 +55,9 @@ function slotPosition(node) {
 }
 
 describe('DecisionTree', () => {
-  let store;
+  let trained;
   beforeEach(() => {
-    store = renderTrainedTree();
+    trained = renderTrainedTree();
   });
   afterEach(() => I18n.reset());
 
@@ -127,13 +111,13 @@ describe('DecisionTree', () => {
   it('offers zooming to the path only once there is a prediction', () => {
     expect(zoomToPathButton().disabled).toBe(true);
 
-    predictSnake(store);
+    predictSnake(trained);
 
     expect(zoomToPathButton().disabled).toBe(false);
   });
 
   it('marks the path from the root to the answer the model predicts', () => {
-    predictSnake(store);
+    predictSnake(trained);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
     const edges = [...document.getElementsByTagName('path')];
@@ -272,7 +256,7 @@ describe('DecisionTree', () => {
   });
 
   it('describes each node on the path as on it', () => {
-    predictSnake(store);
+    predictSnake(trained);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
     const described = screen.getAllByRole('treeitem', {

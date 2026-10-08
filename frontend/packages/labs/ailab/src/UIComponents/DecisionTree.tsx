@@ -37,6 +37,7 @@ import {
   getDisplayTree,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
@@ -86,8 +87,11 @@ interface DecisionTreeProps {
 }
 
 const DecisionTree = ({overlay}: DecisionTreeProps) => {
-  const tree = useAppSelector(getDisplayTree);
-  const trace = useAppSelector(getPredictionTrace);
+  const {trainedModel} = useTrainingData();
+  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, trainedModel),
+  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
     () => (tree ? layoutDisplayTree(tree) : undefined),
