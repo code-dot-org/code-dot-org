@@ -32,15 +32,9 @@ import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
-import {BUILTIN_RULE_META} from '../blockly/builtinMeta';
 import {buildDomainPalette} from '../blockly/domainBlocks';
-import {
-  eventChoicesForKind,
-  eventChoicesIn,
-  kindFactsFrom,
-  type EventChoice,
-} from '../blockly/eventChoices';
-import {FOUNDATION_TRAIT_VALUES} from '../blockly/foundation';
+import {eventChoicesIn, type EventChoice} from '../blockly/eventChoices';
+import {eventsNarrowerFor, type NarrowEvents} from '../blockly/kindEvents';
 import {label} from '../blockly/label';
 import {placementKey} from '../blockly/mapPlacements';
 import {fileIdForModule} from '../blockly/openModule';
@@ -165,33 +159,23 @@ export const MapEditor = ({
   const eventsCache = useRef<{
     files: Record<string, string>;
     choices: EventChoice[];
-    facts: ReturnType<typeof kindFactsFrom>;
-    rules: ReturnType<typeof projectRuleMetas>;
+    narrow: NarrowEvents;
   } | null>(null);
   const eventsFor = useCallback(
     (kind: string): EventChoice[] => {
       if (eventsCache.current?.files !== files) {
-        const rules = projectRuleMetas(files);
-        const owns = projectOwnMetas(files);
-        const palette = buildDomainPalette(rules, {
+        const palette = buildDomainPalette(projectRuleMetas(files), {
           fileKind: 'placement',
-          ownProperties: owns,
+          ownProperties: projectOwnMetas(files),
         });
         eventsCache.current = {
           files,
           choices: eventChoicesIn(palette.toolbox, palette.blocks),
-          facts: kindFactsFrom(files, owns as never),
-          rules: [...BUILTIN_RULE_META, ...rules],
+          narrow: eventsNarrowerFor(files),
         };
       }
       const held = eventsCache.current;
-      return eventChoicesForKind(
-        held.choices,
-        kind,
-        held.facts,
-        held.rules,
-        FOUNDATION_TRAIT_VALUES,
-      );
+      return held.narrow(held.choices, kind);
     },
     [files],
   );
@@ -624,6 +608,7 @@ export const MapEditor = ({
         memoryKey={`${fileId}#${script.kind === 'map' ? 'map' : script.id}`}
         title={scripted ? `${scripted.id} (${kindName(scripted.type)})` : 'Map'}
         kind={scripted ? 'placement' : 'map'}
+        actorKind={scripted?.type}
         mapModule={mapModule}
         placements={map.actors.map(actor => actor.id)}
         contents={scripted ? scripted.blocks : map.blocks}

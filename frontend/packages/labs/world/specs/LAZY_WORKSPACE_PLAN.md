@@ -103,6 +103,15 @@ reaching through their one trait (`eventChoicesForKind`). An event of a
 trait the kind does not hold is not offered: its handler would never run.
 Picking one puts the hat first in that placement's own code and opens it.
 
+THE "+" NARROWS THE SAME WAY where the code is about one kind: in an
+actor's own file, and in a placed actor's code. Both ask `kindEvents`,
+which the quick add asks too, so the three lists cannot drift apart. A
+world's "+" offers every event: its handler names a kind after it is
+added. Nor is a kind offered another kind's OWN events, declared in that
+kind's file: they belong to no rule, and were once let through as though
+they were the language's own — a Button was offered the Slider's
+`changed`.
+
 ## One actor's code is sections too — BUILT
 
 The map editor's view of one placement's code, or the map's own

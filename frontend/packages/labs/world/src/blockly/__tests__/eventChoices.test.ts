@@ -15,6 +15,7 @@ import {
   traitValuesIn,
 } from '../eventChoices';
 import {FOUNDATION_TRAIT_VALUES} from '../foundation';
+import {eventsNarrowerFor} from '../kindEvents';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 
 const files = projectFiles(WORLD_SCENARIOS.simple.source);
@@ -83,5 +84,31 @@ describe('the events that can reach a kind', () => {
       ),
     );
     expect(coin).not.toContain('when … starts falling');
+  });
+});
+
+describe('the events other kinds declare for themselves', () => {
+  // An event an actor declares in its own file belongs to no rule, and was
+  // once let through to every kind as though it were the language's own.
+  const kit = projectFiles(WORLD_SCENARIOS.interface.source);
+  const kitPalette = buildDomainPalette(projectRuleMetas(kit), {
+    fileKind: 'placement',
+    ownProperties: projectOwnMetas(kit),
+  });
+  const kitChoices = eventChoicesIn(kitPalette.toolbox, kitPalette.blocks);
+  const narrow = eventsNarrowerFor(kit);
+  const drawersOf = (kind: string) =>
+    narrow(kitChoices, kind).map(choice => `${choice.drawer}: ${choice.label}`);
+
+  it('are not offered to a Button', () => {
+    const button = drawersOf('actors/button');
+    expect(button).not.toContain('Slider: when … changed');
+    expect(button.some(row => row.startsWith('Toggle:'))).toBe(false);
+    // …which still hears its own traits'.
+    expect(button).toContain('Mouse: when … is clicked with …');
+  });
+
+  it('are offered to the kind that declares them', () => {
+    expect(drawersOf('actors/slider')).toContain('Slider: when … changed');
   });
 });

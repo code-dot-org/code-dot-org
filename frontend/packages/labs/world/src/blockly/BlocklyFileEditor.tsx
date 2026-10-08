@@ -66,6 +66,7 @@ import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {movedItself} from './editorEvents';
+import {type EventChoice} from './eventChoices';
 import {refreshBlockDesigns} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
@@ -74,6 +75,7 @@ import {setSimpleColors} from './fields/FieldColorPicker';
 import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
 import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
+import {eventsNarrowerFor} from './kindEvents';
 import {registerLessonButtons} from './lessonFlyoutButton';
 import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
 import {
@@ -693,10 +695,20 @@ export const BlocklyFileEditor = ({
   // its top blocks in a column, collapsible, reordered by dragging, added
   // from the "+" between them. Not on a body surface, which is one member's
   // implementation.
+  // In an actor's own file the "+" offers what that actor can hear, as the
+  // map's quick add does for a placed one (`kindEvents`).
+  const narrowEvents = useMemo(() => {
+    if (!ownActorModule) {
+      return undefined;
+    }
+    const narrow = eventsNarrowerFor(files);
+    return (choices: EventChoice[]) => narrow(choices, ownActorModule);
+  }, [files, ownActorModule]);
   const sections = useSectionWorkspace({
     memoryKey: fileId,
     definitions: blocks,
     getToolbox: () => surfaceToolboxRef.current,
+    narrowEvents,
     isReadOnly,
     workspaceRef,
     isShowingSections: () => surfaceRef.current === null,

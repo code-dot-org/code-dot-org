@@ -40,7 +40,9 @@ import {useLocalization} from '@code-dot-org/core/plugins/localization';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {buildDomainPalette} from '../blockly/domainBlocks';
+import {type EventChoice} from '../blockly/eventChoices';
 import type {FileKind} from '../blockly/fileKind';
+import {eventsNarrowerFor} from '../blockly/kindEvents';
 import {localizeBlocks, localizeToolbox} from '../blockly/localizeBlocks';
 import {setCurrentPlacements} from '../blockly/moduleOptions';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
@@ -68,6 +70,8 @@ export interface PlacementScriptEditorProps {
   title: string;
   /** `placement` for a placed actor's workspace, `map` for the map's own. */
   kind: Extract<FileKind, 'placement' | 'map'>;
+  /** The placed actor's kind, `actors/button`; nothing for the map's own. */
+  actorKind?: string;
   /**
    * What the session remembers this workspace's collapsed sections under:
    * the map file and the placement, or the map's own.
@@ -87,6 +91,7 @@ export interface PlacementScriptEditorProps {
 export const PlacementScriptEditor = ({
   title,
   kind,
+  actorKind,
   memoryKey,
   mapModule,
   placements,
@@ -150,10 +155,20 @@ export const PlacementScriptEditor = ({
   );
 
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
+  // A placed actor's "+" offers what its kind can hear, as the quick add
+  // does (`kindEvents`).
+  const narrowEvents = useMemo(() => {
+    if (!actorKind) {
+      return undefined;
+    }
+    const narrow = eventsNarrowerFor(files);
+    return (choices: EventChoice[]) => narrow(choices, actorKind);
+  }, [files, actorKind]);
   const sections = useSectionWorkspace({
     memoryKey,
     definitions: blocks,
     getToolbox: () => toolbox,
+    narrowEvents,
     isReadOnly,
     workspaceRef,
   });

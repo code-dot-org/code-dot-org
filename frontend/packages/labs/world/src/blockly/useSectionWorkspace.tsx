@@ -191,6 +191,13 @@ export interface SectionWorkspaceOptions {
    * menu opens: the file editor's changes with the surface it shows.
    */
   getToolbox: () => Toolbox;
+  /**
+   * What the menu offers, of the toolbox's events, when the workspace is
+   * about one kind of actor: only what that kind can hear (`kindEvents`).
+   * A world's handler names its kind after it is added, so a world offers
+   * every event and passes nothing.
+   */
+  narrowEvents?: (choices: EventChoice[]) => EventChoice[];
   isReadOnly: boolean;
   workspaceRef: MutableRefObject<Blockly.WorkspaceSvg | null>;
   /**
@@ -205,6 +212,7 @@ export function useSectionWorkspace({
   memoryKey,
   definitions,
   getToolbox,
+  narrowEvents,
   isReadOnly,
   workspaceRef,
   isShowingSections = () => true,
@@ -213,6 +221,8 @@ export function useSectionWorkspace({
   showingRef.current = isShowingSections;
   const toolboxRef = useRef(getToolbox);
   toolboxRef.current = getToolbox;
+  const narrowRef = useRef(narrowEvents);
+  narrowRef.current = narrowEvents;
 
   /**
    * Where the layout put each top block, and which the learner has moved
@@ -332,10 +342,13 @@ export function useSectionWorkspace({
     y: number;
   } | null>(null);
   // ADDING A SECTION: the events the toolbox offers, for the "+" in each gap.
-  const eventMenuChoices = useMemo(
-    () => (addMenu ? eventChoicesIn(toolboxRef.current(), definitions) : []),
-    [addMenu, definitions],
-  );
+  const eventMenuChoices = useMemo(() => {
+    if (!addMenu) {
+      return [];
+    }
+    const all = eventChoicesIn(toolboxRef.current(), definitions);
+    return narrowRef.current ? narrowRef.current(all) : all;
+  }, [addMenu, definitions]);
   /** A section just added, to bring into view once it is laid out. */
   const revealAfterLayout = useRef<string | null>(null);
   /**

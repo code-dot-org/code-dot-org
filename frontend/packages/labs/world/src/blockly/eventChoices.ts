@@ -165,9 +165,10 @@ export function traitIdsOfKind(
 /**
  * The choices that can reach an actor of this kind: the world's own events,
  * which fire whoever is listening, its own and its parents' events, and those
- * of the traits it holds. A hat for any other trait's event would be a
- * handler that never runs, which is the silent failure this list is meant to
- * keep a learner out of.
+ * of the traits it holds. A hat for any other trait's event, or for an event
+ * another kind declares for itself (`declaredByKinds`), would be a handler
+ * that never runs, which is the silent failure this list is meant to keep a
+ * learner out of.
  */
 export function eventChoicesForKind(
   choices: readonly EventChoice[],
@@ -175,6 +176,7 @@ export function eventChoicesForKind(
   facts: (module: string) => KindFacts | undefined,
   rules: readonly RuleMeta[],
   everyActor: ReadonlySet<string> = new Set(),
+  declaredByKinds: ReadonlySet<string> = new Set(),
 ): EventChoice[] {
   const traits = traitIdsOfKind(kind, facts, rules, everyActor);
   // Each event with the traits it reaches through. An actor's event names
@@ -212,9 +214,17 @@ export function eventChoicesForKind(
     if (own.has(choice.type)) {
       return true;
     }
+    // ANOTHER KIND'S OWN EVENT. An event an actor declares in its own file
+    // belongs to no rule, so it is not in `events` below, and was let
+    // through as though it were the language's: a Button was offered the
+    // Slider's `changed`, a handler that would never run.
+    if (declaredByKinds.has(choice.type)) {
+      return false;
+    }
     const held = events.get(choice.type);
     if (!held) {
-      // A hat no rule declares — the language's own, like a map loading.
+      // A hat no rule and no kind declares — the language's own, like a map
+      // loading.
       return true;
     }
     return (
@@ -257,6 +267,22 @@ export function traitValuesIn(contents: string): string[] {
   };
   (document.blocks?.blocks ?? []).forEach(walk);
   return values;
+}
+
+/**
+ * Every event an actor kind declares in its own file, as hat types: the
+ * events no other kind can hear (`eventChoicesForKind`).
+ */
+export function kindDeclaredEvents(
+  owns: ReadonlyArray<{modulePath: string; events: readonly EventMeta[]}>,
+): Set<string> {
+  return new Set(
+    owns
+      .filter(meta => meta.modulePath.startsWith('actors/'))
+      .flatMap(meta =>
+        meta.events.filter(event => event.scope !== 'world').map(hatTypeOf),
+      ),
+  );
 }
 
 /**
