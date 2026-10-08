@@ -31,6 +31,7 @@ class QuizQuestionPlacementTest < ActiveSupport::TestCase
 
   test "creating a placement writes the quiz's .level file with the new placement" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    CDO.stubs(:properties_encryption_key).returns(SecureRandom.base64(Encryption::KEY_LENGTH / 8))
     FileUtils.stubs(:mkdir_p)
     File.stubs(:write)
     quiz = create(:quiz, published: true)
@@ -46,6 +47,7 @@ class QuizQuestionPlacementTest < ActiveSupport::TestCase
 
   test "destroying a placement writes the quiz's .level file with the placement removed" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    CDO.stubs(:properties_encryption_key).returns(SecureRandom.base64(Encryption::KEY_LENGTH / 8))
     FileUtils.stubs(:mkdir_p)
     File.stubs(:write)
     quiz = create(:quiz, published: true)
