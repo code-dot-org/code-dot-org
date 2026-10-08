@@ -6,8 +6,10 @@ import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
 import {getRandomInt, newSeed, seededRandom} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
-import type {RootState} from './redux';
+import type {RootState, TrainingResults} from './redux';
 import {
+  getTrainingResults,
+  restoreTrainingResults,
   setFeatureNumberKey,
   setTrainingExamples,
   setTrainingLabels,
@@ -136,9 +138,14 @@ const prepareTestData = (store: Store<RootState>): number[] => {
   return testValues;
 };
 
-const trainingState: {trainer?: Trainer; store?: Store<RootState>} = {};
+const trainingState: {
+  trainer?: Trainer;
+  store?: Store<RootState>;
+  previousResults?: TrainingResults;
+} = {};
 // Pass the seed of an earlier run to reproduce its random test split.
 const init = (store: Store<RootState>, seed: number = newSeed()): void => {
+  trainingState.previousResults = getTrainingResults(store.getState());
   trainingState.store = store;
   trainingState.trainer = buildTrainer(store);
   buildOptionNumberKeysByFeature(store);
@@ -160,10 +167,20 @@ const onClickPredict = (): void => {
   }
 };
 
+// Put back what the store held before the latest init().
+const cancel = (): void => {
+  const {store, previousResults} = trainingState;
+  if (store && previousResults) {
+    store.dispatch(restoreTrainingResults(previousResults));
+  }
+  trainingState.previousResults = undefined;
+};
+
 // Discard the trainer held from a prior level/model.
 const reset = (): void => {
   trainingState.trainer = undefined;
   trainingState.store = undefined;
+  trainingState.previousResults = undefined;
 };
 
 export default {
@@ -171,5 +188,6 @@ export default {
   onClickTrain,
   restoreTraining,
   onClickPredict,
+  cancel,
   reset,
 };
