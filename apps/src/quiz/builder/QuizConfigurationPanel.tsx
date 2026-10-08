@@ -2,6 +2,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Alert} from '@mui/material';
+import pick from 'lodash/pick';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
@@ -102,9 +103,9 @@ const ConfigCard: React.FunctionComponent<{
 interface QuizConfigurationPanelProps {
   quizId: number;
   initialValues: QuizConfigurationData;
-  // Called with the server's saved values on success, so a caller can sync
-  // its own copy of the configuration without a page reload.
-  onSaved: (updated: QuizConfigurationData) => void;
+  // Called on success with the server's values for the fields this save sent,
+  // so a caller can sync its own copy of the configuration without a reload.
+  onSaved: (updated: Partial<QuizConfigurationData>) => void;
 }
 
 const QuizConfigurationPanel: React.FunctionComponent<
@@ -207,7 +208,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
         {'Content-Type': 'application/json'}
       );
       const saved: QuizConfigurationData = await response.json();
-      onSaved(saved);
+      onSaved(pick(saved, Object.keys(body)));
       return true;
     } catch (error) {
       setError(await networkErrorMessage(error));

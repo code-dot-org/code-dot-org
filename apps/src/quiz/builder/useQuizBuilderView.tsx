@@ -1,3 +1,4 @@
+import pick from 'lodash/pick';
 import React, {useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';
@@ -27,6 +28,11 @@ export default function useQuizBuilderView({
     showQuestionsAfterSubmit: toBool(props.showQuestionsAfterSubmit),
   });
 
+  // Saves may overlap and resolve out of order; each applies only the fields
+  // it sent, since the response's other fields can be stale.
+  const applySaved = (updated: Partial<QuizConfigurationData>) =>
+    setQuizConfig(prev => ({...prev, ...updated}));
+
   // Rejects on failure, so the caller can show the error where it happened.
   const saveQuizConfig = async (fields: Partial<QuizConfigurationData>) => {
     const response = await HttpClient.put(
@@ -35,7 +41,7 @@ export default function useQuizBuilderView({
       true,
       {'Content-Type': 'application/json'}
     );
-    setQuizConfig(await response.json());
+    applySaved(pick(await response.json(), Object.keys(fields)));
   };
 
   return {
@@ -49,7 +55,7 @@ export default function useQuizBuilderView({
             <QuizConfigurationPanel
               quizId={levelId}
               initialValues={quizConfig}
-              onSaved={setQuizConfig}
+              onSaved={applySaved}
             />
           ),
         },
