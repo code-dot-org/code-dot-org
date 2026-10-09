@@ -242,8 +242,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       try {
         result = await draw(cached);
       } catch (e) {
-        // The manifest promised a file the tree lacks: the model covers it
-        // where the level allows.
+        // The sidecar names a file the tree lacks: the model covers it where
+        // the level allows.
         if (
           cached &&
           e instanceof ImageCacheMissError &&

@@ -7,7 +7,6 @@
 //
 // Layout, one folder per filled sentence, one per style inside it:
 //
-//   <base>/<version>/manifest.json
 //   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>.json      sidecar
 //   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>.png       single
 //   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>-base.png  set frames
@@ -15,10 +14,12 @@
 //
 // <word-ids> are the chosen word ids in the order the sentence reads its
 // slots, joined by '-', with EMPTY_WORD_ID for an optional slot left
-// empty. A generator writes this tree offline; the manifest names what
-// exists and which variants review rejected.
+// empty. A generator writes this tree offline, VARIANT_COUNT variants per
+// filling; there is no index of what exists. A filling the tree lacks, or
+// a variant review deleted, is found by its sidecar being missing.
 
 import type {GeneratedFile} from 'ai';
+import {shuffle} from 'lodash';
 
 import {bytesToBase64} from './encoding';
 import {ImageStyle, ImageType} from './types';
@@ -39,35 +40,19 @@ export const IMAGE_CACHE_BASE_URL =
   'https://curriculum.code.org/media/spritelab/generate/images/';
 
 // Bumped with the word lists or the prompts: a version's files were made
-// from its own manifest, and a browser may still hold the old one.
+// from its own words, and a browser may still hold the old ones.
 export const IMAGE_CACHE_VERSION = 'v1';
 
 /** Stands in a path for an optional slot the student left empty. Word ids
     are kebab-case, so it cannot be one. */
 export const EMPTY_WORD_ID = '_';
 
+/** How many variants the generator draws per filling, numbered from 00. */
+export const VARIANT_COUNT = 3;
+
 /** A character set's frames by pose label, 'base' first (the sidecar lists
     them); a single image is 'single'. */
 export type CachedFrame = 'single' | 'base' | string;
-
-/** One sentence as the published manifest describes it. */
-export interface CachedSentenceEntry {
-  /** Slot ids in the order the sentence reads them: the order word ids
-      join in a path. */
-  slots: string[];
-  /** Sprites cached as five-frame character sets, not single pictures. */
-  characterSet: boolean;
-  /** Variants drawn per filled sentence, keyed `<word-ids>/<style>`:
-      numbered from 00 without gaps. A filling not listed has none. */
-  variants: Record<string, number>;
-}
-
-export interface ImageCacheManifest {
-  version: string;
-  sentences: Record<string, CachedSentenceEntry>;
-  /** Variants review rejected, as `<word-ids>/<style>/<NN>` per sentence. */
-  blockList: Record<string, string[]>;
-}
 
 /** What the generator recorded beside one variant's files. */
 export interface CachedSidecar {
@@ -91,7 +76,7 @@ export interface CachedSidecar {
   frames: Record<string, {mediaType: string; prompt: string}>;
 }
 
-/** Thrown when a file the manifest promised is not there. */
+/** Thrown when a file the sidecar names is not there. */
 export class ImageCacheMissError extends Error {
   constructor(url: string, status?: number) {
     super(`Cached image missing: ${url}${status ? ` (${status})` : ''}`);
@@ -138,38 +123,34 @@ export function sentencePath(
   return `${sentenceId}/${wordIds.join('-')}/${style}`;
 }
 
-// One manifest fetch per page per base URL; a failure is remembered as
-// "no cache" rather than retried on every Generate.
-const manifests = new Map<string, Promise<ImageCacheManifest | undefined>>();
+// One sidecar fetch per page per URL, hit or miss: Generate again asks
+// about the same variants, and a filling the tree lacks stays absent.
+const sidecars = new Map<string, Promise<CachedSidecar | undefined>>();
 
-async function fetchManifest(
-  versionUrl: string
-): Promise<ImageCacheManifest | undefined> {
+async function fetchSidecar(url: string): Promise<CachedSidecar | undefined> {
   try {
-    const response = await fetch(`${versionUrl}/manifest.json`);
+    const response = await fetch(url);
     if (!response.ok) {
       return undefined;
     }
-    return (await response.json()) as ImageCacheManifest;
+    return (await response.json()) as CachedSidecar;
   } catch {
     return undefined;
   }
 }
 
-export function loadManifest(
-  versionUrl: string
-): Promise<ImageCacheManifest | undefined> {
-  let pending = manifests.get(versionUrl);
+function loadSidecar(url: string): Promise<CachedSidecar | undefined> {
+  let pending = sidecars.get(url);
   if (!pending) {
-    pending = fetchManifest(versionUrl);
-    manifests.set(versionUrl, pending);
+    pending = fetchSidecar(url);
+    sidecars.set(url, pending);
   }
   return pending;
 }
 
-/** Tests: drop remembered manifests. */
-export function resetManifestCache() {
-  manifests.clear();
+/** Tests: drop remembered sidecars. */
+export function resetSidecarCache() {
+  sidecars.clear();
 }
 
 async function fetchRaw(url: string): Promise<GeneratedFile> {
@@ -203,9 +184,9 @@ export interface FindCachedImageParams {
 
 /**
  * A variant of the filled sentence the cache holds, chosen at random among
- * those review kept, or undefined when the cache has nothing for it: no
- * manifest, the sentence not drawn with those words in that style, or
- * every variant blocked.
+ * the ones whose sidecar is there, or undefined when none is: the sentence
+ * was not drawn with those words in that style, or review deleted every
+ * variant. The variant shown last is passed over while another exists.
  */
 export async function findCachedImage(
   params: FindCachedImageParams
@@ -218,63 +199,41 @@ export async function findCachedImage(
     baseUrl = IMAGE_CACHE_BASE_URL,
     version = IMAGE_CACHE_VERSION,
   } = params;
-  const versionUrl = `${baseUrl}${version}`;
-  const manifest = await loadManifest(versionUrl);
-  const entry = manifest?.sentences[sentenceId];
-  if (!manifest || !entry) {
-    return undefined;
-  }
   const path = sentencePath(sentenceId, wordIds, style);
-  // The manifest keys fillings and blocked variants within their sentence:
-  // the path minus its head.
-  const relative = path.slice(sentenceId.length + 1);
-  const variantCount = entry.variants[relative] ?? 0;
-  const blocked = new Set(manifest.blockList[sentenceId] || []);
-  let candidates = [...Array(variantCount).keys()].filter(
-    v => !blocked.has(`${relative}/${variantName(v)}`)
-  );
-  if (candidates.length === 0) {
-    return undefined;
-  }
-  if (candidates.length > 1 && avoidVariant !== undefined) {
-    candidates = candidates.filter(v => v !== avoidVariant);
-  }
-  const variant = candidates[Math.floor(Math.random() * candidates.length)];
-  const folder = `${versionUrl}/${path}`;
-  let sidecar: Promise<CachedSidecar> | undefined;
-  const loadSidecar = () => {
+  const folder = `${baseUrl}${version}/${path}`;
+  const variants = [...Array(VARIANT_COUNT).keys()];
+  // Random order, the last shown at the end: the first sidecar found wins.
+  const order = [
+    ...shuffle(variants.filter(v => v !== avoidVariant)),
+    ...variants.filter(v => v === avoidVariant),
+  ];
+  for (const variant of order) {
+    const sidecar = await loadSidecar(`${folder}/${variantName(variant)}.json`);
     if (!sidecar) {
-      sidecar = fetch(`${folder}/${variantName(variant)}.json`).then(
-        response => {
-          if (!response.ok) {
-            throw new ImageCacheMissError(response.url, response.status);
-          }
-          return response.json() as Promise<CachedSidecar>;
-        }
-      );
+      continue;
     }
-    return sidecar;
-  };
-  return {
-    key: `${path}/${variantName(variant)}`,
-    variant,
-    characterSet: entry.characterSet,
-    sidecar: loadSidecar,
-    async raw(frame) {
-      const frames = (await loadSidecar()).frames;
-      const wanted = entry.characterSet && frame === 'single' ? 'base' : frame;
-      const recorded = frames[wanted];
-      if (!recorded) {
-        throw new ImageCacheMissError(`${folder}/<${wanted}>`);
-      }
-      return fetchRaw(
-        `${folder}/${frameFileName(
-          variant,
-          wanted,
-          recorded.mediaType,
-          entry.characterSet
-        )}`
-      );
-    },
-  };
+    const {characterSet} = sidecar;
+    return {
+      key: `${path}/${variantName(variant)}`,
+      variant,
+      characterSet,
+      sidecar: async () => sidecar,
+      async raw(frame) {
+        const wanted = characterSet && frame === 'single' ? 'base' : frame;
+        const recorded = sidecar.frames[wanted];
+        if (!recorded) {
+          throw new ImageCacheMissError(`${folder}/<${wanted}>`);
+        }
+        return fetchRaw(
+          `${folder}/${frameFileName(
+            variant,
+            wanted,
+            recorded.mediaType,
+            characterSet
+          )}`
+        );
+      },
+    };
+  }
+  return undefined;
 }
