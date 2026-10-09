@@ -2,7 +2,11 @@ import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '../../src/i18n';
-import {setTestData} from '../../src/redux';
+import {
+  playPredictionStep,
+  setPredictionPlaying,
+  setTestData,
+} from '../../src/redux';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
@@ -47,6 +51,16 @@ function focusRoot() {
   const [root] = screen.getAllByRole('treeitem');
   act(() => root.focus());
   return root;
+}
+
+function showStep(store, step) {
+  act(() => {
+    store.dispatch(playPredictionStep(step));
+  });
+}
+
+function marked(className) {
+  return [...document.getElementsByClassName(className)];
 }
 
 function slotPosition(node) {
@@ -120,7 +134,7 @@ describe('DecisionTree', () => {
     predictSnake(trained);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
-    const edges = [...document.getElementsByTagName('path')];
+    const [marks] = document.getElementsByClassName(moduleStyles.marks);
     const pathEdges = [
       ...document.getElementsByClassName(moduleStyles.pathEdge),
     ];
@@ -132,11 +146,33 @@ describe('DecisionTree', () => {
     expect(slotPosition(marked[0])[1]).toBe(0);
     expect(marked[marked.length - 1].textContent).toBe('snake');
     expect(pathEdges).toHaveLength(marked.length - 1);
-    expect(edges.slice(-pathEdges.length)).toEqual(pathEdges);
+    expect(marks.parentElement.lastElementChild).toBe(marks);
+    expect(pathEdges.every(edge => edge.parentElement === marks)).toBe(true);
     expect(pathBranches).toHaveLength(marked.length - 1);
     expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
       marked.slice(1),
     );
+  });
+
+  it('marks the path only up to the chosen step, and dashes the way on', () => {
+    predictSnake(trained);
+    showStep(trained.store, 0);
+
+    const [marks] = marked(moduleStyles.marks);
+    const nextEdges = marked(moduleStyles.nextEdge);
+
+    expect(marked(moduleStyles.pathNode)).toHaveLength(1);
+    expect(slotPosition(marked(moduleStyles.pathNode)[0])[1]).toBe(0);
+    expect(marked(moduleStyles.pathEdge)).toHaveLength(0);
+    expect(nextEdges).toHaveLength(1);
+    expect(nextEdges[0].parentElement).toBe(marks);
+    expect(marked(moduleStyles.nextBranch)).toHaveLength(1);
+
+    showStep(trained.store, 1);
+
+    expect(marked(moduleStyles.pathNode)).toHaveLength(2);
+    expect(marked(moduleStyles.pathEdge)).toHaveLength(1);
+    expect(marked(moduleStyles.pathBranch)).toHaveLength(1);
   });
 
   it('is one tab stop, around the tree and its zoom buttons', () => {
@@ -266,6 +302,22 @@ describe('DecisionTree', () => {
     expect(described).toEqual(marked.map(node => node.parentElement));
   });
 
+  it('tells screen readers how far the path goes at the chosen step', () => {
+    predictSnake(trained);
+    showStep(trained.store, 0);
+
+    const [root] = screen.getAllByRole('treeitem');
+    const described = screen.getAllByRole('treeitem', {
+      description: /On your path/,
+    });
+    const current = screen
+      .getAllByRole('treeitem')
+      .filter(item => item.getAttribute('aria-current') === 'step');
+
+    expect(described).toEqual([root]);
+    expect(current).toEqual([root]);
+  });
+
   it('moves focus and the tab stop down to a child and back up', () => {
     const root = focusRoot();
 
@@ -295,5 +347,34 @@ describe('DecisionTree', () => {
       true,
     );
     expect(document.activeElement).toBe(root);
+  });
+
+  describe('while a prediction plays', () => {
+    const playing = () => trained.store.getState().predictionPlaying;
+
+    beforeEach(() => {
+      predictSnake(trained);
+      act(() => {
+        trained.store.dispatch(setPredictionPlaying(true));
+      });
+    });
+
+    it('stops it when the student goes into the tree', () => {
+      act(() => canvasGroup().focus());
+
+      expect(playing()).toBe(false);
+    });
+
+    it('stops it when the student presses on the tree', () => {
+      fireEvent.pointerDown(screen.getByRole('tree'));
+
+      expect(playing()).toBe(false);
+    });
+
+    it('stops it when the student zooms with the wheel', () => {
+      fireEvent.wheel(screen.getByRole('tree'), {deltaY: -100});
+
+      expect(playing()).toBe(false);
+    });
   });
 });

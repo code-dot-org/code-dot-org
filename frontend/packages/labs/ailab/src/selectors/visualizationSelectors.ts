@@ -290,3 +290,11 @@ export const getPredictionTrace = createSelector(
     return traceDisplayTree(tree, root!, inputs, testData);
   },
 );
+
+export function getPredictionStep(
+  state: RootState,
+  trainedModel?: TrainedModel,
+): number {
+  const pathLength = getPredictionTrace(state, trainedModel)?.path.length ?? 0;
+  return state.predictionStep ?? pathLength - 1;
+}

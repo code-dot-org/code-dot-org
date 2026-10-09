@@ -8,6 +8,7 @@ import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
 import {parseCSV} from './csvReaderWrapper';
+import {invalidatePendingDatasetLoads} from './datasetLoad';
 import type {Dataset} from './datasetManifest';
 import {getAvailableDatasets, getDatasets} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
@@ -92,6 +93,7 @@ export const unmount = function (): void {
  * Prepare the lab for a level. Call this once per level after mount().
  */
 export const loadLevel = function (mode?: Mode): void {
+  invalidatePendingDatasetLoads();
   store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
@@ -139,9 +141,6 @@ const processMode = (mode: Mode | undefined): void => {
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
   store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-  // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
-  // directly and are fire-and-forget, so an in-flight load from a prior
-  // level/dataset can resolve after a newer loadLevel and clobber state.
   parseCSV(assetPath + item.path, true, false);
 
   // Also retrieve model metadata and set column data types.

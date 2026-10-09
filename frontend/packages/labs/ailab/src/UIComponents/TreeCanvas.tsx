@@ -15,12 +15,14 @@ import {
   type ReactNode,
   type RefObject,
   type UIEvent,
+  useEffect,
   useLayoutEffect,
   useMemo,
   useRef,
 } from 'react';
 
 import {fitToView, panIntoView, type Rect} from '../helpers/fitToView';
+import {prefersReducedMotion} from '../helpers/utils';
 
 import ZoomButton from './ZoomButton';
 
@@ -36,9 +38,7 @@ const READABLE_SCALE = 1;
 const SCALE_PROPERTY = '--tree-canvas-scale';
 
 function zoomDuration(): number {
-  return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
-    ? 0
-    : ZOOM_DURATION_MS;
+  return prefersReducedMotion() ? 0 : ZOOM_DURATION_MS;
 }
 
 function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {
@@ -108,6 +108,7 @@ interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
+  followId?: string;
   overlayRef?: RefObject<HTMLElement>;
   toolbarTabbable?: boolean;
   hints?: ReactNode;
@@ -118,6 +119,7 @@ const TreeCanvas = ({
   contentWidth,
   contentHeight,
   pathBounds,
+  followId,
   overlayRef,
   toolbarTabbable = true,
   hints,
@@ -224,16 +226,12 @@ const TreeCanvas = ({
     }
   };
 
-  const followFocus = ({target}: FocusEvent<HTMLElement>) => {
+  const showReadably = (element: HTMLElement) => {
     const viewport = viewportRef.current!;
     const toolbar = toolbarRef.current!;
     const current = zoomTransform(viewport);
-    target.style.setProperty(SCALE_PROPERTY, String(current.k));
-    if (!target.matches(':focus-visible')) {
-      return;
-    }
     const from = panTargetRef.current ?? current;
-    const box = boundingBox(target);
+    const box = boundingBox(element);
     const origin = contentRef.current!.getBoundingClientRect();
     const node = {
       x: (box.x - origin.left) / current.k,
@@ -265,6 +263,20 @@ const TreeCanvas = ({
       zoomRef.current!.transform(animateToward(panTargetRef, to), to);
     }
   };
+
+  const followFocus = ({target}: FocusEvent<HTMLElement>) => {
+    const scale = zoomTransform(viewportRef.current!).k;
+    target.style.setProperty(SCALE_PROPERTY, String(scale));
+    if (target.matches(':focus-visible')) {
+      showReadably(target);
+    }
+  };
+
+  useEffect(() => {
+    if (followId) {
+      showReadably(document.getElementById(followId)!);
+    }
+  }, [followId]);
 
   return (
     <div

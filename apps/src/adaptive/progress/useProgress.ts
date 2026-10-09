@@ -6,6 +6,7 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {Pathway} from '../types';
 
 import {
+  Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
   Progress,
@@ -83,6 +84,28 @@ export function useProgress(
     );
   }, []);
 
+  // Not a call to updateStepContext: the patch must read the latest answers,
+  // or two saves in one tick would drop the first.
+  const saveAnswers = useCallback(
+    (stepId: string, questionId: number, answers: Answer[]) => {
+      setProgress(p => {
+        if (!p) return p;
+        const step = p.stepContext[stepId];
+        return {
+          ...p,
+          stepContext: {
+            ...p.stepContext,
+            [stepId]: {
+              ...step,
+              answers: {...step?.answers, [questionId]: answers},
+            },
+          },
+        };
+      });
+    },
+    []
+  );
+
   const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
 
   return {
@@ -92,6 +115,7 @@ export function useProgress(
     markStarted,
     markComplete,
     updateStepContext,
+    saveAnswers,
     reset,
   };
 }
