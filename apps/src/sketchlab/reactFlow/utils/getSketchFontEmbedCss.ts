@@ -35,6 +35,7 @@ interface CodePointRange {
 interface FontFaceCandidate {
   rule: CSSFontFaceRule;
   style: string;
+  weights: {low: number; high: number};
   ranges?: CodePointRange[];
 }
 
@@ -45,20 +46,19 @@ const unquote = (value: string) => value.trim().replace(/^["']|["']$/g, '');
 const toWeightNumber = (token: string): number =>
   WEIGHT_KEYWORDS.get(token) ?? Number(token);
 
-// Whether the rule's font file provides the weight in use. The declaration is
-// one weight ("500"), a variable range ("100 900"), or absent, meaning normal.
-const ruleSupportsWeight = (
-  rule: CSSFontFaceRule,
-  usedWeight: number
-): boolean => {
+// The weights the rule's font file provides. The declaration is one weight
+// ("500"), a variable range ("100 900"), or absent, meaning normal.
+const parseWeightRange = (
+  rule: CSSFontFaceRule
+): FontFaceCandidate['weights'] | undefined => {
   const declared =
     rule.style.getPropertyValue('font-weight').trim() || 'normal';
   const bounds = declared.split(/\s+/).map(toWeightNumber);
   if (bounds.some(Number.isNaN)) {
-    return false;
+    return undefined;
   }
   const [low, high = low] = bounds;
-  return usedWeight >= low && usedWeight <= high;
+  return {low, high};
 };
 
 const normalizeStyle = (declared: string): string => {
@@ -100,56 +100,37 @@ const coversCodePoint = (
 const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
   const byFamily = new Map<string, FontFaceCandidate[]>();
   Array.from(document.styleSheets).forEach(sheet => {
-    let sheetRules: CSSRuleList | null = null;
+    let sheetRules: CSSRule[];
     try {
-      sheetRules = sheet.cssRules;
-    } catch (error) {
+      sheetRules = Array.from(sheet.cssRules);
+    } catch {
       return;
     }
-    Array.from(sheetRules || []).forEach(rule => {
+    sheetRules.forEach(rule => {
       if (!(rule instanceof CSSFontFaceRule)) {
+        return;
+      }
+      const weights = parseWeightRange(rule);
+      if (!weights) {
         return;
       }
       const declared = rule.style.getPropertyValue('unicode-range').trim();
       const family = unquote(
         rule.style.getPropertyValue('font-family')
       ).toLowerCase();
-      const candidate: FontFaceCandidate = {
+      const candidates = byFamily.get(family) ?? [];
+      candidates.push({
         rule,
         style: normalizeStyle(rule.style.getPropertyValue('font-style')),
+        weights,
         // A rule we cannot parse is treated as covering everything: embedding
         // a file we do not need beats dropping one we do.
         ranges: declared ? parseUnicodeRange(declared) : undefined,
-      };
-      byFamily.set(family, [...(byFamily.get(family) ?? []), candidate]);
+      });
+      byFamily.set(family, candidates);
     });
   });
   return byFamily;
-};
-
-// The browser draws each character with the first family in the stack that can
-// supply it, so later families in the stack are not worth embedding for it.
-const findFaceForCodePoint = (
-  byFamily: Map<string, FontFaceCandidate[]>,
-  stack: string[],
-  weight: number,
-  style: string,
-  codePoint: number
-): CSSFontFaceRule | undefined => {
-  for (const family of stack) {
-    const match = byFamily
-      .get(family)
-      ?.find(
-        candidate =>
-          candidate.style === style &&
-          ruleSupportsWeight(candidate.rule, weight) &&
-          coversCodePoint(candidate, codePoint)
-      );
-    if (match) {
-      return match.rule;
-    }
-  }
-  return undefined;
 };
 
 const collectUsedRules = (
@@ -169,26 +150,35 @@ const collectUsedRules = (
     const stack = computed.fontFamily
       .split(',')
       .map(family => unquote(family).toLowerCase());
-    const codePoints = new Set<number>();
-    for (const character of text) {
-      // Whitespace needs no glyph, and resolving it would pull in the Latin
-      // subset of a family even for a sketch written in another script.
-      if (!/\s/.test(character)) {
-        codePoints.add(character.codePointAt(0) as number);
+
+    // The browser draws each character with the first family in the stack that
+    // can supply it, so later families in the stack are not worth embedding for it.
+    const faceFor = (codePoint: number): CSSFontFaceRule | undefined => {
+      for (const family of stack) {
+        const match = byFamily
+          .get(family)
+          ?.find(
+            candidate =>
+              candidate.style === style &&
+              weight >= candidate.weights.low &&
+              weight <= candidate.weights.high &&
+              coversCodePoint(candidate, codePoint)
+          );
+        if (match) {
+          return match.rule;
+        }
       }
-    }
-    codePoints.forEach(codePoint => {
-      const rule = findFaceForCodePoint(
-        byFamily,
-        stack,
-        weight,
-        style,
-        codePoint
-      );
+      return undefined;
+    };
+
+    // Whitespace needs no glyph, and resolving it would pull in the Latin
+    // subset of a family even for a sketch written in another script.
+    for (const character of new Set(text.replace(/\s/g, ''))) {
+      const rule = faceFor(character.codePointAt(0) as number);
       if (rule) {
         used.add(rule);
       }
-    });
+    }
   });
   return Array.from(used);
 };
