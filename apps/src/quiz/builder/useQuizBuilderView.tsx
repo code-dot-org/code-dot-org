@@ -1,4 +1,4 @@
-import pick from 'lodash/pick';
+import {pick} from 'lodash';
 import React, {useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';

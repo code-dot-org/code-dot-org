@@ -12,7 +12,7 @@ import styles from './QuizQuestionCard/quiz-question-card.module.scss';
 
 interface IntroScreenCardProps {
   customIntroText: string;
-  // The backend requires the intro screen while a time limit is set.
+  // Intro screen must be shown when a time limit is set.
   hasTimeLimit: boolean;
   onSave: (fields: Partial<QuizConfigurationData>) => Promise<void>;
 }
