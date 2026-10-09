@@ -173,7 +173,10 @@ $overlay-float-min-width: 600px;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.2;
-  transition: border-color mixins.$mark-transition;
+  transition:
+    border-color mixins.$mark-transition,
+    background-color mixins.$mark-transition,
+    color mixins.$mark-transition;
 }
 
 .question,
