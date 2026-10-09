@@ -27,7 +27,7 @@ and for when the AI service is down or costly.
 
 The general flow is to:
 
-1. Check the size of what you are about to generate with `--list-ids`.
+1. See the words on offer with `--list-words`, and the size of what you are about to generate with `--list-ids`.
 2. Generate the content, narrowed with `--source`, `--id`, `--filter`, `--style`, and `--variants`.
 3. Check the output in the `image_output` path relative to the script.
 4. Upload it via the `--no-dry-run` flag and then carefully, with appropriate AWS credentials, the `--production` flag.
@@ -74,6 +74,18 @@ The `generate_images` script calls the OpenAI image API using the
 `openai_student_learning_api_key` config key. The model defaults to the
 `MODEL` constant in `constants.rb`; override it with `--model`.
 
+To see every sentence and the words each slot offers:
+
+```
+./bin/oneoff/hoai_2026/imagegen/generate_images --list-words
+./bin/oneoff/hoai_2026/imagegen/generate_images --list-words -S explore -i character
+```
+
+It prints each slot's id, the label the student sees when it differs, and
+every word id, with the word's text when that differs too. An optional slot
+lists `none` first: that is the empty choice, and it is a combination like
+any other.
+
 To see how many jobs and images each sentence would produce:
 
 ```
@@ -89,6 +101,15 @@ images at one variant:
 ```
 ./bin/oneoff/hoai_2026/imagegen/generate_images -v 1 -S explore --produce-animations \
   -i character -i friend -i place-time -i place-detail -i block -i treasure
+```
+
+For a first look at character variety, sweep one slot and pin the rest. One
+character per creature, pixel style, is 8 sets of 5 pictures:
+
+```
+./bin/oneoff/hoai_2026/imagegen/generate_images -S explore -i character \
+  --produce-animations --no-produce-singles -s pixel -v 1 \
+  -c adjective=brave -c clothing=none
 ```
 
 To try the pipeline on a handful of jobs first:
@@ -115,6 +136,7 @@ rate limits, and server errors are retried in place.
 ### Filtering
 
 - `-S`/`--source SOURCE` restricts to one UI's choices, `explore` or `adlib` (repeatable).
+- `-c`/`--choice SLOT=WORD` pins a slot to one word, `none` for an empty optional slot (repeatable). Pin every slot but one to sweep that one; `--limit` alone takes whole combinations in enumeration order, which varies the last slot and repeats the first.
 - `-i`/`--id ID` restricts to the given sentence or adlib ids (repeatable).
 - `-f`/`--filter TEXT` keeps ids containing the text, e.g. `--filter=-simple`.
 - `-s`/`--style STYLE` restricts to `pixel` or `smooth` (repeatable).
