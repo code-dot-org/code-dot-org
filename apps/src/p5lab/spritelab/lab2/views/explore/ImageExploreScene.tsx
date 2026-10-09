@@ -17,7 +17,6 @@ import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding'
 import {
   CachedImage,
   findCachedImage,
-  ImageCacheMissError,
   ImageSource,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
@@ -177,11 +176,11 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     const run = ++runRef.current;
     const prompt = promptText(sentence, choices);
     // A live level never waits here: the generating state shows at once.
-    const cached = imageSource === 'live' ? undefined : await findCached();
+    const cached = imageSource === 'cached' ? await findCached() : undefined;
     if (run !== runRef.current) {
       return;
     }
-    if (!cached && imageSource === 'cached') {
+    if (imageSource === 'cached' && !cached) {
       setError("This picture isn't ready yet. Try different words.");
       return;
     }
@@ -228,33 +227,15 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         canAnimate,
         bodyPlan
       );
-      const draw = (source?: CachedImage) =>
-        canAnimate
-          ? generateCharacterSet(prompt, {
-              style,
-              temperature: TEMPERATURE,
-              pixelGrid: options.pixelGrid,
-              bodyPlan,
-              cached: source,
-            })
-          : generateImage(prompt, {...options, cached: source});
-      let result: GeneratedImageResult;
-      try {
-        result = await draw(cached);
-      } catch (e) {
-        // The sidecar names a file the tree lacks: the model covers it where
-        // the level allows.
-        if (
-          cached &&
-          e instanceof ImageCacheMissError &&
-          imageSource === 'cached-then-live'
-        ) {
-          console.warn(e.message);
-          result = await draw();
-        } else {
-          throw e;
-        }
-      }
+      const result: GeneratedImageResult = canAnimate
+        ? await generateCharacterSet(prompt, {
+            style,
+            temperature: TEMPERATURE,
+            pixelGrid: options.pixelGrid,
+            bodyPlan,
+            cached,
+          })
+        : await generateImage(prompt, {...options, cached});
       if (run !== runRef.current) {
         return;
       }

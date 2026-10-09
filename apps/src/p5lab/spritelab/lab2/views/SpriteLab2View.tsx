@@ -173,7 +173,7 @@ function getImageFreeTextParam(): boolean {
   return queryParams('image-free-text') === 'true';
 }
 
-// ?image-source=cached|live|cached-then-live overrides the level's, and
+// ?image-source=cached|live overrides the level's, and
 // ?image-cache-url= reads another tree (a local one, or a version under
 // review), for internal testing.
 function getImageSourceParam(): ImageSource | undefined {

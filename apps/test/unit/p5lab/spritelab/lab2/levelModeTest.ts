@@ -53,8 +53,8 @@ describe('imageSourceForMode', () => {
   it('is live unless the level names a source', () => {
     expect(imageSourceForMode({kind: 'image'})).toBe('live');
     expect(imageSourceForMode(undefined)).toBe('live');
-    expect(
-      imageSourceForMode({kind: 'image', imageSource: 'cached-then-live'})
-    ).toBe('cached-then-live');
+    expect(imageSourceForMode({kind: 'image', imageSource: 'cached'})).toBe(
+      'cached'
+    );
   });
 });

@@ -28,9 +28,9 @@ import {shuffle} from 'lodash';
 import {bytesToBase64} from './encoding';
 import {ImageStyle} from './types';
 
-/** Where a level's pictures come from. cached-then-live falls back to the
-    model when the cache has no picture for the sentence. */
-export const IMAGE_SOURCES = ['live', 'cached', 'cached-then-live'] as const;
+/** Where a level's pictures come from: the model, or the tree, which is
+    assumed complete. A picture the tree lacks is an error, not a fallback. */
+export const IMAGE_SOURCES = ['live', 'cached'] as const;
 export type ImageSource = (typeof IMAGE_SOURCES)[number];
 
 export function isImageSource(value: unknown): value is ImageSource {
