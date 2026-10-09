@@ -42,3 +42,7 @@ export function getNiceAxisStep(max: number, intervals: number): number {
     NICE_STEP_MULTIPLIERS.find(m => m * magnitude >= rawStep) ?? 10;
   return Math.max(1, multiplier * magnitude);
 }
+
+export function prefersReducedMotion(): boolean {
+  return !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+}
