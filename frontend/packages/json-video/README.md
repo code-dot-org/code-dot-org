@@ -16,13 +16,6 @@ import '@code-dot-org/json-video';
 ></json-video>
 ```
 
-Importing the package defines the element; it exports nothing else. The
-element mirrors part of the `<video>` interface: `src`, `poster`, `controls`,
-`play()`, `pause()`, `currentTime`, `duration`, `paused`, `volume`, `error`,
-and the `play`, `pause`, `timeupdate`, `ended`, `loadedmetadata`,
-`loadeddata` and `error` events. `src` also accepts a
-`data:application/json,` URI.
-
 ## Video JSON
 
 ```json
