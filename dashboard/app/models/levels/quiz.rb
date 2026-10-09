@@ -78,6 +78,8 @@ class Quiz < Level
     existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
     return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
 
+    # insert_all!/delete_all bypass QuizQuestionPlacement's callbacks, avoiding
+    # the after commit hook that would otherwise circularly resave the quiz.
     placements.delete_all
     QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
     placements.reset
