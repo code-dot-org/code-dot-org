@@ -6,6 +6,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {formatAccuracy} from '../helpers/accuracy';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {replayTraining, setCurrentPanel} from '../redux';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
@@ -16,9 +17,12 @@ import styles from './trainingResultCard.module.scss';
 
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
-  const hasResult = useAppSelector(hasCurrentTrainingResult);
+  const {project} = useProject();
+  const hasResult = useAppSelector(state =>
+    hasCurrentTrainingResult(state, project),
+  );
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
-  const latestResult = useAppSelector(state => state.historicResults[0]);
+  const latestResult = project.historicResults[0];
   const {trainedModel} = useTrainingData();
   const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
   const isReplaying = useAppSelector(state => state.isTrainingReplay);

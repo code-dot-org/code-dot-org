@@ -5,7 +5,6 @@ import {initAll, loadLevel, startOver, unmount} from '../../src/index';
 import {
   setAccuracyCheckExamples,
   setCurrentPanel,
-  setHistoricResult,
   setLabelColumn,
 } from '../../src/redux';
 import {store} from '../../src/store';
@@ -22,15 +21,13 @@ describe('startOver', () => {
     store.dispatch(setLabelColumn('animal'));
     store.dispatch(setCurrentPanel('results'));
     store.dispatch(setAccuracyCheckExamples([[4]]));
-    store.dispatch(setHistoricResult('animal', ['legs'], '80.00'));
   });
 
-  test('keeps the results of models already trained', () => {
+  // ProjectContext acts on this flag; see ProjectContext.test.js.
+  test('asks the reset to keep the results already earned', () => {
     startOver();
 
-    expect(store.getState().historicResults).toEqual([
-      {label: 'animal', features: ['legs'], accuracy: '80.00'},
-    ]);
+    expect(store.getState().resetKeepsHistoricResults).toBe(true);
   });
 
   test('resets everything else to the start of the level', () => {
@@ -59,12 +56,12 @@ describe('startOver', () => {
 });
 
 describe('loadLevel', () => {
-  test('clears the results of the previous level', () => {
-    store.dispatch(setHistoricResult('animal', ['legs'], '80.00'));
+  test('asks the reset to drop the previous level’s results', () => {
+    startOver();
 
     loadLevel(undefined);
 
-    expect(store.getState().historicResults).toEqual([]);
+    expect(store.getState().resetKeepsHistoricResults).toBe(false);
   });
 });
 

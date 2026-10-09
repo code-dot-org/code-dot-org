@@ -1,4 +1,5 @@
 import {ColumnTypes} from '../../src/constants';
+import {initialProject} from '../../src/ProjectContext';
 import reducer, {
   initialState,
   setCurrentPanel,
@@ -309,7 +310,11 @@ describe('ailab reducer', () => {
         saved.push(dataToSave);
         callback(saveResponse);
       };
-      saveModel(save, trainedModel)(
+      saveModel(
+        save,
+        initialProject,
+        trainedModel,
+      )(
         action => actions.push(action),
         () => state,
       );

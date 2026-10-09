@@ -35,7 +35,7 @@ describe('train functions', () => {
     store.dispatch(addSelectedFeature('rain'));
 
     train.init(store);
-    const trainedModel = train.onClickTrain();
+    const {trainedModel} = train.onClickTrain();
 
     store.dispatch(setTestData('temperature', 10));
     store.dispatch(setTestData('rain', 1010));
@@ -67,7 +67,7 @@ describe('train functions', () => {
     store.dispatch(addSelectedFeature('texture'));
 
     train.init(store);
-    const trainedModel = train.onClickTrain();
+    const {trainedModel} = train.onClickTrain();
 
     store.dispatch(setTestData('flavor', 'sweet'));
     store.dispatch(setTestData('texture', 'crunchy'));
@@ -86,6 +86,8 @@ describe('train.cancel', () => {
     train.onClickTrain();
   };
 
+  // Cancel undoes only the Redux half of a run; ProjectContext and
+  // TrainingDataContext undo theirs, and useTrainingRun drives all three.
   test('puts back the results from before the cancelled run', () => {
     const store = levelStore({});
     trainOnce(store);
@@ -94,7 +96,6 @@ describe('train.cancel', () => {
     store.dispatch(removeSelectedFeature('legs'));
     store.dispatch(addSelectedFeature('legs'));
     trainOnce(store);
-    expect(store.getState().historicResults).toHaveLength(2);
 
     train.cancel();
     expect(getTrainingResults(store.getState())).toEqual(before);
@@ -108,6 +109,5 @@ describe('train.cancel', () => {
     const state = store.getState();
     expect(state.labelColumn).toBe('animal');
     expect(state.selectedFeatures).toEqual(['legs']);
-    expect(state.historicResults).toEqual([]);
   });
 });

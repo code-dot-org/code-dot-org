@@ -36,6 +36,8 @@ import {getTrainedModelDataToSave} from '../../src/selectors/saveSelectors';
 import {store} from '../../src/store';
 import train from '../../src/train';
 
+import {projectFromRun} from './renderWithProviders';
+
 // vitest runs with the package root as cwd; see vitest.config.ts.
 const DIR = path.join(process.cwd(), 'public', 'datasets');
 
@@ -89,8 +91,12 @@ function load(id, features) {
   chosen.forEach(column => store.dispatch(addSelectedFeature(column)));
 
   train.init(store);
-  const trainedModel = train.onClickTrain();
-  return {state: store.getState(), trainedModel};
+  const run = train.onClickTrain();
+  return {
+    state: store.getState(),
+    trainedModel: run?.trainedModel,
+    project: projectFromRun(run),
+  };
 }
 
 /*
@@ -139,10 +145,10 @@ describe('shipped dataset fingerprints', () => {
 
 describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
   test('records every feature selected', () => {
-    const {state, trainedModel} = load('shapes_v1_toy');
-    const saved = getTrainedModelDataToSave(state, trainedModel);
+    const {state, trainedModel, project} = load('shapes_v1_toy');
+    const saved = getTrainedModelDataToSave(state, project, trainedModel);
 
-    expect(state.hyperparameters).toEqual({k: 1});
+    expect(project.hyperparameters).toEqual({k: 1});
     expect(getPercentCorrect(state)).toBe('90.00');
     expect(saved.selectedTrainer).toBe('knnClassify');
     expect(saved.hyperparameters).toEqual({k: 1});
@@ -161,34 +167,34 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
     // `sides` fixes `shape` in this dataset: 0 circle, 3 triangle, 4 square.
     // The curriculum level that loads it sets requireAccuracy to 100, and lab2
     // keeps Continue disabled until the latest trained model reaches it.
-    const {state} = load('shapes_v1_toy', ['sides']);
+    const {state, project} = load('shapes_v1_toy', ['sides']);
 
     expect(getPercentCorrect(state)).toBe('100.00');
-    expect(state.hyperparameters).toEqual({k: 1});
+    expect(project.hyperparameters).toEqual({k: 1});
   });
 
   test('records a sweep that does not choose the smallest k', () => {
-    const {state, trainedModel} = load('shapes_v1_toy', [
+    const {state, trainedModel, project} = load('shapes_v1_toy', [
       'sides',
       'border color',
       'fill color',
     ]);
 
-    expect(state.hyperparameters).toEqual({k: 7});
+    expect(project.hyperparameters).toEqual({k: 7});
     expect(getPercentCorrect(state)).toBe('100.00');
 
-    const saved = getTrainedModelDataToSave(state, trainedModel);
+    const saved = getTrainedModelDataToSave(state, project, trainedModel);
     expect(saved.hyperparameters).toEqual({k: 7});
   });
 });
 
 describe('KNN characterization: jeans, a numerical label', () => {
   test('records the chosen k, the accuracy, and the predictions', () => {
-    const {state, trainedModel} = load('jeans');
-    const saved = getTrainedModelDataToSave(state, trainedModel);
+    const {state, trainedModel, project} = load('jeans');
+    const saved = getTrainedModelDataToSave(state, project, trainedModel);
 
     // A numerical label under 100 rows takes the minimal k, without a sweep.
-    expect(state.hyperparameters).toEqual({k: 1});
+    expect(project.hyperparameters).toEqual({k: 1});
     expect(saved.selectedTrainer).toBe('knnRegress');
     expect(saved.hyperparameters).toEqual({k: 1});
     expect(getPercentCorrect(state)).toBe('62.50');

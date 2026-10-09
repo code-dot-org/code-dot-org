@@ -17,15 +17,10 @@ import {
 } from '../helpers/accuracy';
 import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
-import {
-  setHyperparameters,
-  setPrediction,
-  setAccuracyCheckPredictedLabels,
-  setHistoricResult,
-} from '../redux';
-import type {Hyperparameters, TrainedModel} from '../types';
+import {setPrediction, setAccuracyCheckPredictedLabels} from '../redux';
+import type {HistoricResult, Hyperparameters, TrainedModel} from '../types';
 
-import type {Trainer} from './types';
+import type {Trainer, TrainingRun} from './types';
 
 export interface OptimalModelDetails<Candidate> {
   model: TrainedModel;
@@ -49,7 +44,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  startTraining(): TrainedModel | undefined {
+  startTraining(): TrainingRun | undefined {
     const state = this.store.getState();
 
     const optimalModel = this.getOptimalModelDetails(state);
@@ -58,15 +53,20 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
       return undefined;
     }
 
-    this.storeTrainingResults(optimalModel);
+    // Grading the run reads these back out of the store, so dispatch first.
+    this.store.dispatch(
+      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
+    );
 
     const trainedState = this.store.getState();
 
     logMetric('train-model', trainedState);
 
-    this.storeHistoricResult(trainedState);
-
-    return optimalModel.model;
+    return {
+      trainedModel: optimalModel.model,
+      hyperparameters: this.hyperparameters(optimalModel.candidate),
+      historicResult: this.buildHistoricResult(trainedState),
+    };
   }
 
   getOptimalModelDetails(
@@ -132,26 +132,14 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     }
   }
 
-  storeTrainingResults(optimalModel: OptimalModelDetails<Candidate>): void {
-    this.store.dispatch(
-      setHyperparameters(this.hyperparameters(optimalModel.candidate)),
-    );
-    this.store.dispatch(
-      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
-    );
-  }
-
-  storeHistoricResult(state: RootState): void {
-    const accuracy = getPercentCorrect(state);
+  buildHistoricResult(state: RootState): HistoricResult {
     const {correct, total} = getCorrectCount(state);
-    this.store.dispatch(
-      setHistoricResult(
-        state.labelColumn!,
-        state.selectedFeatures,
-        accuracy,
-        correct,
-        total,
-      ),
-    );
+    return {
+      label: state.labelColumn!,
+      features: state.selectedFeatures,
+      accuracy: getPercentCorrect(state),
+      correct,
+      total,
+    };
   }
 }

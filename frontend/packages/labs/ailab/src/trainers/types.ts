@@ -7,7 +7,7 @@ import type {
   TreeRegressionTrainer,
 } from '../constants';
 import type {RootState} from '../redux';
-import type {TrainedModel} from '../types';
+import type {HistoricResult, Hyperparameters, TrainedModel} from '../types';
 
 /*
   A level selects a trainer family. The label column type then decides
@@ -26,8 +26,15 @@ export type TrainerId =
   | typeof TreeClassificationTrainer
   | typeof TreeRegressionTrainer;
 
+/* What one training run produces, for its caller to put where each piece goes. */
+export interface TrainingRun {
+  trainedModel: TrainedModel;
+  hyperparameters: Hyperparameters;
+  historicResult: HistoricResult;
+}
+
 export interface Trainer {
-  startTraining(): TrainedModel | undefined;
+  startTraining(): TrainingRun | undefined;
   predict(trainedModel: TrainedModel | undefined, testValues: number[]): void;
   batchPredict(
     trainedModel: TrainedModel | undefined,

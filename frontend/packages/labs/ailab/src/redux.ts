@@ -11,15 +11,14 @@ import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
+import type {AilabProject} from './ProjectContext';
 import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
   DataRow,
-  Hyperparameters,
   Metadata,
   Mode,
   TrainedModelDetailsSave,
   SaveResponseData,
-  HistoricResult,
   PrevNextButtons,
   InstructionsKey,
   SaveResponse,
@@ -65,8 +64,6 @@ export interface RootState {
   currentColumn: string | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
-  historicResults: HistoricResult[];
-  hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
@@ -74,11 +71,14 @@ export interface RootState {
   showOverlay: boolean;
   resultsTab: string;
   resetCount: number;
+  // Start Over keeps the results already earned; a level load does not.
+  resetKeepsHistoricResults: boolean;
   mode?: Mode;
 }
 
 // What a training run writes to Redux, so a cancelled run can be undone. The
-// model it also produces is undone by TrainingDataContext.
+// model and the project data it also produces are undone by their own
+// contexts; useTrainingRun() drives all three together.
 const TRAINING_RESULT_KEYS = [
   'featureNumberKey',
   'trainingExamples',
@@ -86,8 +86,6 @@ const TRAINING_RESULT_KEYS = [
   'accuracyCheckExamples',
   'accuracyCheckLabels',
   'accuracyCheckPredictedLabels',
-  'hyperparameters',
-  'historicResults',
 ] as const;
 
 export type TrainingResults = Pick<
@@ -143,8 +141,6 @@ export const initialState: RootState = {
   // Additional data for a failed save response.  Currently contains
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
-  historicResults: [],
-  hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
@@ -152,6 +148,7 @@ export const initialState: RootState = {
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
   resetCount: 0,
+  resetKeepsHistoricResults: false,
 };
 
 const ailabSlice = createSlice({
@@ -322,14 +319,20 @@ const ailabSlice = createSlice({
       state.predictionStepByHand = true;
       state.predictionPlaying = false;
     },
-    resetState(state) {
-      return {
-        ...initialState,
-        mode: state.mode,
-        reserveLocation: state.reserveLocation,
-        instructionsEnabled: state.instructionsEnabled,
-        resetCount: state.resetCount + 1,
-      };
+    resetState: {
+      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
+        return {
+          ...initialState,
+          mode: state.mode,
+          reserveLocation: state.reserveLocation,
+          instructionsEnabled: state.instructionsEnabled,
+          resetCount: state.resetCount + 1,
+          resetKeepsHistoricResults: action.payload.keepHistoricResults,
+        };
+      },
+      prepare(keepHistoricResults = false) {
+        return {payload: {keepHistoricResults}};
+      },
     },
     setTrainedModelDetail: {
       reducer(
@@ -437,26 +440,6 @@ const ailabSlice = createSlice({
         return {payload: {status, data}};
       },
     },
-    setHistoricResult: {
-      reducer(state, action: PayloadAction<HistoricResult>) {
-        state.historicResults.unshift(action.payload);
-      },
-      prepare(
-        label: string,
-        features: string[],
-        accuracy: string,
-        correct: number,
-        total: number,
-      ) {
-        return {payload: {label, features, accuracy, correct, total}};
-      },
-    },
-    setHistoricResults(state, action: PayloadAction<HistoricResult[]>) {
-      state.historicResults = action.payload;
-    },
-    setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
-      state.hyperparameters = action.payload;
-    },
     restoreTrainingResults(state, action: PayloadAction<TrainingResults>) {
       Object.assign(state, action.payload);
     },
@@ -508,9 +491,6 @@ export const {
   setTrainingModalStep,
   replayTraining,
   setSaveStatus,
-  setHistoricResult,
-  setHistoricResults,
-  setHyperparameters,
   restoreTrainingResults,
   setInstructionsDismissed,
   setInstructionsEnabled,
@@ -526,10 +506,15 @@ export default ailabSlice.reducer;
 export const saveModel =
   (
     saveTrainedModel: SaveTrainedModel,
+    project: AilabProject,
     trainedModel?: TrainedModel,
   ): ThunkAction<void, RootState, unknown, AnyAction> =>
   (dispatch, getState) => {
-    const dataToSave = getTrainedModelDataToSave(getState(), trainedModel);
+    const dataToSave = getTrainedModelDataToSave(
+      getState(),
+      project,
+      trainedModel,
+    );
     dispatch(setSaveStatus('started'));
     saveTrainedModel(dataToSave, (response: SaveResponse) => {
       dispatch(setSaveStatus(response.status, response.data));
@@ -562,8 +547,11 @@ export function getPredictAvailable(state: RootState): boolean {
 // Builds {prev, next} and reads the I18n global for button text, so it is not
 // memoized on Redux state. App selects it with a prev/next-aware equality fn so
 // the new object reference doesn't trigger unnecessary rerenders.
-export function getPanelButtons(state: RootState): PrevNextButtons {
-  return prevNextButtons(state);
+export function getPanelButtons(
+  state: RootState,
+  project: AilabProject,
+): PrevNextButtons {
+  return prevNextButtons(state, project);
 }
 
 export function readyToTrain(state: RootState): boolean {

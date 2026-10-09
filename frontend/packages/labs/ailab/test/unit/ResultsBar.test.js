@@ -1,32 +1,18 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {fireEvent, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
-import {setHistoricResult} from '../../src/redux';
 import ResultsBar from '../../src/UIComponents/ResultsBar';
 
 import {levelStore} from './levelStore';
+import {renderWithProviders} from './renderWithProviders';
 
+// Results arrive oldest first, the order a student would train them in.
 function renderBar(results) {
-  const store = levelStore();
-  results.forEach(({label, features, accuracy}) =>
-    store.dispatch(setHistoricResult(label, features, accuracy)),
-  );
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(ResultsBar),
-      ),
-    ),
-  );
+  renderWithProviders(createElement(ResultsBar), {
+    store: levelStore(),
+    project: {historicResults: [...results].reverse()},
+  });
 }
 
 function allResultsButton() {

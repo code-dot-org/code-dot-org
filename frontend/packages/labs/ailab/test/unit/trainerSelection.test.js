@@ -3,6 +3,7 @@
   whatever JSON an author typed into the level editor, so misspellings count.
 */
 import {ColumnTypes} from '../../src/constants';
+import {initialProject} from '../../src/ProjectContext';
 import {getTrainedModelDataToSave} from '../../src/selectors/saveSelectors';
 import {buildTrainer} from '../../src/trainers';
 import DecisionTreeTrainer from '../../src/trainers/DecisionTreeTrainer';
@@ -24,7 +25,9 @@ const JEANS_COLUMNS = {
 };
 
 function savedTrainerId(store) {
-  return getTrainedModelDataToSave(store.getState()).selectedTrainer;
+  // The trainer id comes off the label column, so an untrained project is fine.
+  return getTrainedModelDataToSave(store.getState(), initialProject)
+    .selectedTrainer;
 }
 
 describe('trainer selection from mode', () => {
