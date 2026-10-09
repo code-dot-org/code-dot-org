@@ -66,6 +66,8 @@ import {
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
+// Stands in for this project's own animation list in preloadedByProject_.
+const OWN_PROJECT = {};
 
 // How long a run waits for the project's images before going ahead without
 // the stragglers.
@@ -190,8 +192,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
     // When set, re-runs preload from this list instead of the project's own
-    // (external scenes carry their own images).
+    // (external scenes carry their own images). The view keeps one list per
+    // fetched project, so its identity says which project is running.
     this.preloadAnimationsOverride = null;
+    // Decoded images per project (the override list, or OWN_PROJECT for
+    // this project's), each the p5 wrapper's cache while that project runs.
+    this.preloadedByProject_ = new WeakMap();
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -1062,12 +1068,28 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
+    // Decoded images are reused by name across re-runs, and another
+    // project's names collide with this one's, so each project runs from
+    // its own cache; this one's stays decoded through a visit elsewhere.
+    const from =
+      animationList === this.preloadAnimationsOverride
+        ? animationList
+        : OWN_PROJECT;
+    let cache = this.preloadedByProject_.get(from);
+    if (!cache) {
+      cache = {};
+      this.preloadedByProject_.set(from, cache);
+    }
+    this.p5Wrapper.preloadedSprites = cache;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(scoped, animationNames(animationList))
+        await trimAnimationListImages(scoped, {
+          keepNames: animationNames(animationList),
+          thumbnails: from === OWN_PROJECT,
+        })
       ),
       {multiFrame: true}
     );
@@ -1108,7 +1130,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(single, animationNames(list))
+        await trimAnimationListImages(single, {
+          keepNames: animationNames(list),
+          thumbnails: !this.preloadAnimationsOverride,
+        })
       ),
       {multiFrame: true}
     );
