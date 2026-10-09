@@ -257,6 +257,14 @@ belonging to one rule.
 The rule it belongs to is the one defined in the same file. A `.rule` declares
 exactly one rule, so there is nothing to disambiguate and nothing to wire up.
 
+A trait says what it is FOR on a `description` row of its own — one line, the
+way `define block`'s description is the tooltip of the block it defines
+(`TraitMeta.description`). It is the tooltip wherever the trait is chosen; the
+map editor's camera checkboxes are the first to read it, and a trait that says
+nothing there falls back to its rule's sentence in the library. The stock
+rules' sources give it with `rule.trait(…).describe(…)` (`scripts/rules/dsl`);
+the five camera traits have theirs, and the rest are still to write.
+
 `parseRuleMeta` and `extractRuleBodies` both changed to match: the first looks
 for trait roots among the workspace's top blocks, the second takes the top
 blocks rather than the rule root. Scope-by-nesting became scope-by-which-root.

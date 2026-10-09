@@ -12,6 +12,7 @@
 
 import {projectRuleMetas} from '../blockly/projectModules';
 import {memberLocalName, memberValue} from '../blockly/ruleRegistry';
+import {STOCK_RULES} from '../rules/stock';
 
 import type {CameraProperty} from './worldCameraCode';
 import {vectorText, type WorldRuleProperty} from './worldProperties';
@@ -56,6 +57,10 @@ export function worldRuleProperties(
   );
 }
 
+/** The library's sentence about a stock rule, by the rule's name. */
+const libraryDescription = (rule: string): string | undefined =>
+  STOCK_RULES.find(stock => stock.name === rule)?.description;
+
 /** A trait a camera may elect, with the properties its inspector edits. */
 export interface CameraTraitChoice {
   /** What a `use trait` row stores: `Camera Follow#FollowsTrait`. */
@@ -63,6 +68,12 @@ export interface CameraTraitChoice {
   name: string;
   /** The rule it comes from, which is where a learner adds or removes it. */
   rule: string;
+  /**
+   * What it is for, in a sentence: the trait's own description, or — for a
+   * trait that says nothing — its rule's in the library, since each camera
+   * rule offers one camera trait and its description is that trait's.
+   */
+  description?: string;
   properties: CameraProperty[];
 }
 
@@ -82,6 +93,11 @@ export function cameraTraitChoices(
         value: memberValue(trait.ref),
         name: trait.name,
         rule: rule.name,
+        ...((trait.description ?? libraryDescription(rule.name))
+          ? {
+              description: trait.description ?? libraryDescription(rule.name),
+            }
+          : {}),
         properties: rule.properties
           .filter(
             property =>

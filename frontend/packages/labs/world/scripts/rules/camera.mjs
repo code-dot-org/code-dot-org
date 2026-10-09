@@ -25,7 +25,11 @@ Give a camera **Aimed** and then add whichever of those you want.`,
 // view" moves it nowhere. There is nothing to initialise.`,
 });
 
-const aimed = rule.trait('Aimed', 'camera');
+const aimed = rule
+  .trait('Aimed', 'camera')
+  .describe(
+    'Has somewhere it wants to look, and moves the view there every frame.',
+  );
 export const goal = aimed.point('goal', {x: 0, y: 0});
 export const Aimed = rule.traitRef('Aimed');
 

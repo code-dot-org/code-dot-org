@@ -8142,6 +8142,15 @@ const worldRuleTrait = defineBlock({
       ],
     },
   ],
+  // What it is FOR, in one line: the tooltip wherever the trait is chosen —
+  // a camera's checkbox, an actor's `use trait` — as `define block`'s
+  // description is the tooltip of the block it defines. A row of its own,
+  // because it is a sentence.
+  message1: 'description %1',
+  args1: [
+    {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
+  ],
+  extensions: [wideTextExtension('DESCRIPTION')],
   // A definition root: no previous connection; its declarations chain below.
   nextStatement: true,
   style: 'setup_blocks',
@@ -8808,8 +8817,8 @@ const signatureText = defineBlock({
 // enough for a name, not for a sentence. The value was always whole; only the
 // reading was cut off, mid-word, with an ellipsis. Any field holding PROSE (a
 // note, a block's help) asks for more.
-const wideTextExtension = (fieldName: string): Extension =>
-  defineExtension(`world_wide_text_${fieldName.toLowerCase()}`, {
+function wideTextExtension(fieldName: string): Extension {
+  return defineExtension(`world_wide_text_${fieldName.toLowerCase()}`, {
     extension() {
       const field = (
         this as unknown as {
@@ -8821,6 +8830,7 @@ const wideTextExtension = (fieldName: string): Extension =>
       }
     },
   });
+}
 
 // The generalized member: one block that defines any block a rule adds.
 //

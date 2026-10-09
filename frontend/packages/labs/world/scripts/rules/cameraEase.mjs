@@ -66,7 +66,11 @@ const caughtUp = rule.block({
   ],
 });
 
-const eases = rule.trait('Eases', 'camera');
+const eases = rule
+  .trait('Eases', 'camera')
+  .describe(
+    'Catches up with what it is aiming at over a few frames, instead of snapping to it.',
+  );
 eases.uses(Aimed);
 const smoothness = eases.number('smoothness', 0.2);
 

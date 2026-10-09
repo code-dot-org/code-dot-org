@@ -102,6 +102,11 @@ export interface TraitMeta {
    * the behavior those files already had.
    */
   readonly subject: 'actor' | 'camera';
+  /**
+   * The author's one-line explanation, from `define trait`'s description —
+   * the tooltip wherever the trait is chosen. Absent when it says nothing.
+   */
+  readonly description?: string;
 }
 
 export interface PropertyMeta {
@@ -1041,6 +1046,9 @@ export function parseRuleMeta(
       ref: ref(`${pascal(name)}Trait`),
       requires: traitRequires,
       subject,
+      ...(field(traitBlock, 'DESCRIPTION')
+        ? {description: field(traitBlock, 'DESCRIPTION')}
+        : {}),
     });
   }
 

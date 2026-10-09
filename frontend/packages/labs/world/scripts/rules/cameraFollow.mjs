@@ -51,7 +51,9 @@ It needs **Has a Camera**, which is what actually moves the view.`,
 });
 rule.uses('Camera');
 
-const follows = rule.trait('Follows', 'camera');
+const follows = rule
+  .trait('Follows', 'camera')
+  .describe('Keeps an actor in view as it moves about.');
 follows.uses(Aimed);
 /**
  * ONE actor, and the type says so.

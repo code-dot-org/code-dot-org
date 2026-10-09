@@ -9,9 +9,10 @@
 import {describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT} from '../../constants';
+import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {readWorldHeader, writeWorldRuleValue} from '../worldProperties';
-import {worldRuleProperties} from '../worldRuleProperties';
+import {cameraTraitChoices, worldRuleProperties} from '../worldRuleProperties';
 
 const files = projectFiles(DEFAULT_PROJECT.source);
 const offered = worldRuleProperties(files);
@@ -107,5 +108,36 @@ describe('the starter’s world, through the window', () => {
     const written = writeWorldRuleValue(world, gravity, '3');
     expect(written).toContain(gravity.setter);
     expect(named(written, 'amount of gravity')!.value).toBe('3');
+  });
+});
+
+describe('the traits a camera may elect', () => {
+  const flappy = projectFiles(WORLD_SCENARIOS.flappy.source);
+  const choices = cameraTraitChoices(flappy);
+  const choice = (name: string) => choices.find(each => each.name === name)!;
+
+  it('say what each is for, from its own `define trait`', () => {
+    // The tooltip on a camera's checkbox: a name like "Aimed" says little.
+    expect(choice('Follows').description).toBe(
+      'Keeps an actor in view as it moves about.',
+    );
+    expect(choice('Confined to the Map').description).toBe(
+      'Never shows past the edge of the map.',
+    );
+  });
+
+  it('fall back to the rule’s sentence in the library for one that says nothing', () => {
+    // A project's copy of a rule written before traits had descriptions.
+    const ruleFile = Object.keys(flappy).find(path =>
+      path.endsWith('cameraFollow.rule'),
+    )!;
+    const old = {
+      ...flappy,
+      [ruleFile]: flappy[ruleFile].replace(/,\s*"DESCRIPTION": "[^"]*"/, ''),
+    };
+    expect(
+      cameraTraitChoices(old).find(each => each.name === 'Follows')
+        ?.description,
+    ).toMatch(/^Points a camera at an actor/);
   });
 });

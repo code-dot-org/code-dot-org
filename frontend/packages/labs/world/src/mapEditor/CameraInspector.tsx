@@ -12,7 +12,7 @@
 // shows the map from its top left. Following something is what an added
 // camera is for, looked through from the start.
 
-import {Button, Typography} from '@mui/material';
+import {Button, Tooltip, Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
 import {useState} from 'react';
 
@@ -267,16 +267,26 @@ export const CameraInspector = ({
           ) : (
             <div className={styles.inspectorGroup}>
               {choices.map(choice => (
-                <Checkbox
+                // What the trait is FOR, on hover, and read with the box
+                // by a screen reader: a name like "Aimed" says little.
+                <Tooltip
                   key={choice.value}
-                  name={`camera-trait-${choice.value}`}
-                  label={choice.name}
-                  checked={traits.includes(choice.value)}
-                  disabled={isReadOnly}
-                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                    onTrait(choice.value, event.target.checked)
-                  }
-                />
+                  title={choice.description ?? ''}
+                  placement="right"
+                >
+                  <span>
+                    <Checkbox
+                      name={`camera-trait-${choice.value}`}
+                      label={choice.name}
+                      checked={traits.includes(choice.value)}
+                      disabled={isReadOnly}
+                      aria-description={choice.description}
+                      onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                        onTrait(choice.value, event.target.checked)
+                      }
+                    />
+                  </span>
+                </Tooltip>
               ))}
             </div>
           )}

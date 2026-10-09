@@ -78,7 +78,11 @@ const drag = rule.block({
   ],
 });
 
-const deadzone = rule.trait('Has a Deadzone', 'camera');
+const deadzone = rule
+  .trait('Has a Deadzone', 'camera')
+  .describe(
+    'Stays put until what it follows leaves a box in the middle of the view.',
+  );
 deadzone.uses(Aimed);
 const slack = deadzone.point('slack', {x: 48, y: 32});
 

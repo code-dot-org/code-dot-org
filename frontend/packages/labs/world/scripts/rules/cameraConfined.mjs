@@ -45,7 +45,9 @@ Give a camera **Confined to the Map**. It needs **Has a Camera** too.`,
 });
 rule.uses('Camera');
 
-const confinedTrait = rule.trait('Confined to the Map', 'camera');
+const confinedTrait = rule
+  .trait('Confined to the Map', 'camera')
+  .describe('Never shows past the edge of the map.');
 confinedTrait.uses(Aimed);
 
 /** Half the view, so the EDGE of the view stops at the edge of the map. */

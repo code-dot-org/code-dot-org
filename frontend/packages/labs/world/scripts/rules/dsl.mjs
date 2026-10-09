@@ -1106,7 +1106,14 @@ export function defineRule({name, ability, header, purpose}) {
     trait(traitName, subject = 'actor') {
       const traitId = SLUG(traitName);
       const members = [];
+      /** What it is for, in one line: the tooltip wherever it is chosen. */
+      let description = '';
       const self = {
+        /** Say what this trait is for — `define trait`'s description. */
+        describe(text) {
+          description = text;
+          return self;
+        },
         /** A page of prose among this trait's members — see `rule.doc`. */
         doc(markdown) {
           members.push(doc(markdown));
@@ -1222,6 +1229,7 @@ export function defineRule({name, ability, header, purpose}) {
           fields: {
             NAME: traitName,
             ...(subject === 'actor' ? {} : {SUBJECT: subject}),
+            ...(description ? {DESCRIPTION: description} : {}),
           },
           ...(members.length ? {next: {block: chain(members)}} : {}),
         }),
