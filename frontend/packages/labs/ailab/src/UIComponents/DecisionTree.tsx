@@ -106,10 +106,10 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     state => state.predictionStep !== undefined,
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const nodeWidth = useMemo(() => nodeWidthMeasurer(datasetId), [datasetId]);
   const layout = useMemo(
-    () => (tree ? layoutDisplayTree(tree, nodeWidth) : undefined),
-    [tree, nodeWidth],
+    () =>
+      tree ? layoutDisplayTree(tree, nodeWidthMeasurer(datasetId)) : undefined,
+    [tree, datasetId],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const reachedIds = useMemo(
