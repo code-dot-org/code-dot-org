@@ -135,11 +135,30 @@ $footer-height: 56px;
   }
 }
 
-// Which scenes the block is for, under its title.
-.sceneNote {
-  margin: -8px 0 12px;
-  font-size: 13px;
+// The block's title with, level with it on the right, a pill naming the
+// scenes the block is for.
+.infoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.scenePill {
+  flex: none;
+  padding: 3px 10px;
+  border: 1px solid var(--dialog-control-border);
+  border-radius: 999px;
+  background: var(--dialog-control-bg);
+  font-size: 12px;
+  font-weight: 600;
   color: var(--dialog-text-secondary);
+  white-space: nowrap;
 }
 
 .infoRow {

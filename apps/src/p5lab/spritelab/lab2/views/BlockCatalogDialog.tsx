@@ -93,12 +93,14 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
           <div className={moduleStyles.info}>
             {selected && (
               <>
-                <h3>{selected.help.title}</h3>
-                <p className={moduleStyles.sceneNote}>
-                  {selected.sceneType
-                    ? SCENE_TYPE_NOTES[selected.sceneType]
-                    : ANY_SCENE_NOTE}
-                </p>
+                <div className={moduleStyles.infoHeader}>
+                  <h3>{selected.help.title}</h3>
+                  <span className={moduleStyles.scenePill}>
+                    {selected.sceneType
+                      ? SCENE_TYPE_NOTES[selected.sceneType]
+                      : ANY_SCENE_NOTE}
+                  </span>
+                </div>
                 <div className={moduleStyles.infoRow}>
                   {selected.help.animation && (
                     <img
