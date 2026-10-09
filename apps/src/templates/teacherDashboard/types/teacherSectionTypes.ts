@@ -51,6 +51,7 @@ export interface Section {
   avatar_color?: number | null;
   avatar_emoji?: number | null;
   assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
+  assignedRequiredInaccessibleAiModels?: boolean;
   aiChatAccessLevel?: AiChatAccessLevel;
 }
 
@@ -210,7 +211,6 @@ export interface AssignmentCourseOffering {
 export interface CourseOffering {
   id: number;
   display_name: string;
-  is_featured: boolean;
   participant_audience: string;
   course_versions: {
     [courseVersionId: number]: CourseVersion;

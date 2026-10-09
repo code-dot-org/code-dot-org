@@ -1,15 +1,16 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import {
+  fullPromptFor,
   generateImage,
   GenerateImageOptions,
   pixelBlockFor,
   requestImage,
+  styleClause,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {
   checkImageSafety,
   checkPromptSafety,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
-import {styleClause} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/prompts';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),
@@ -65,6 +66,21 @@ describe('generateImage', () => {
       temperature: 1.5,
     });
     expect(generation.editedPrevious).toBeUndefined();
+  });
+
+  it('records the subject it is given, and nothing when none is', async () => {
+    mockGenerateText.mockResolvedValue({
+      files: [{mediaType: 'image/jpeg', uint8Array: new Uint8Array([1])}],
+    });
+    const plain = await generateImage('a beach', OPTIONS);
+    expect(plain.generation.subject).toBeUndefined();
+    // The form passes a subject for sprites only; generateImage itself
+    // records whatever it is handed.
+    const withSubject = await generateImage('a beach', {
+      ...OPTIONS,
+      subject: 'object',
+    });
+    expect(withSubject.generation.subject).toBe('object');
   });
 
   it('keeps the last image file: a thinking model sends its drafts first', async () => {
@@ -160,6 +176,26 @@ describe('generateImage', () => {
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;
     expect(typeof content).toBe('string');
     expect(content).toContain('a beach');
+  });
+
+  it('asks a character to face right, and an object nothing of the kind', () => {
+    const character = fullPromptFor('a knight', {
+      imageType: 'sprite',
+      subject: 'character',
+    });
+    expect(character).toContain('faces to the right');
+    const object = fullPromptFor('a chest', {
+      imageType: 'sprite',
+      subject: 'object',
+    });
+    expect(object).not.toContain('faces to the right');
+    expect(object).toContain('plain solid background');
+  });
+
+  it('asks every kind of image for no writing', () => {
+    for (const imageType of ['sprite', 'block', 'background'] as const) {
+      expect(fullPromptFor('a thing', {imageType})).toContain('No writing');
+    }
   });
 
   it('asks backgrounds to fill the whole image (no painted frame)', async () => {

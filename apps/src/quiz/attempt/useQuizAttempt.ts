@@ -9,6 +9,8 @@ interface UseQuizAttemptArgs {
   levelId: number;
   // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
+  // Set when a teacher is viewing a student's attempt instead of their own.
+  userId?: number;
 }
 
 interface UseQuizAttemptState {
@@ -22,26 +24,39 @@ interface UseQuizAttemptState {
     quizQuestionId: number,
     responseData: Record<string, unknown>
   ) => Promise<void>;
-  finishAttempt: () => Promise<QuizAttemptData>;
+  // responsesByQuestionId is the student's current answer for every
+  // question they've answered.
+  finishAttempt: (
+    responsesByQuestionId: Record<number, Record<string, unknown>>
+  ) => Promise<QuizAttemptData>;
 }
 
 export default function useQuizAttempt({
   levelId,
   unitId,
+  userId,
 }: UseQuizAttemptArgs): UseQuizAttemptState {
   const [attempt, setAttempt] = useState<QuizAttemptData | null | undefined>(
     undefined
   );
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // Which level/unit/user the attempt state above was loaded for. On a switch, the
+  // first render runs before effect below clears state so if stateKey doesn't match
+  // current args, report loading instead.
+  const argsKey = `${levelId}:${unitId}:${userId}`;
+  const [stateKey, setStateKey] = useState<string | null>(null);
+  const isStateCurrent = stateKey === argsKey;
+  const currentAttempt = isStateCurrent ? attempt : undefined;
 
   // Quiz views stay mounted across same-lab navigation, so a late
   // beginAttempt/finishAttempt response can land after level/unit have changed.
-  // Guard againt that by keying on the pair.
-  const currentAttemptKeyRef = useRef(`${levelId}:${unitId}`);
+  // Guard against that by keying on the pair and the viewed user if teacher viewing a student's work.
+  const currentAttemptKeyRef = useRef(`${levelId}:${unitId}:${userId}`);
 
   useEffect(() => {
-    currentAttemptKeyRef.current = `${levelId}:${unitId}`;
+    currentAttemptKeyRef.current = `${levelId}:${unitId}:${userId}`;
+    setStateKey(`${levelId}:${unitId}:${userId}`);
     setAttempt(undefined);
     setError(null);
     if (!unitId) {
@@ -50,7 +65,10 @@ export default function useQuizAttempt({
     }
     setIsLoading(true);
     let cancelled = false;
-    HttpClient.get(`/quiz_attempts?levelId=${levelId}&unitId=${unitId}`)
+    const userParam = userId === undefined ? '' : `&userId=${userId}`;
+    HttpClient.get(
+      `/quiz_attempts?levelId=${levelId}&unitId=${unitId}${userParam}`
+    )
       .then(response => response.json())
       .then((data: QuizAttemptData | null) => {
         if (!cancelled) {
@@ -71,13 +89,13 @@ export default function useQuizAttempt({
     return () => {
       cancelled = true;
     };
-  }, [levelId, unitId]);
+  }, [levelId, unitId, userId]);
 
   const beginAttempt = useCallback(async () => {
     if (!unitId) {
       throw new Error('No unit - attempt tracking does not apply here.');
     }
-    const requestKey = `${levelId}:${unitId}`;
+    const requestKey = `${levelId}:${unitId}:${userId}`;
     setError(null);
     try {
       const response = await HttpClient.post(
@@ -98,11 +116,11 @@ export default function useQuizAttempt({
       }
       throw postError;
     }
-  }, [levelId, unitId]);
+  }, [levelId, unitId, userId]);
 
   const submitQuestionResponse = useCallback(
     async (quizQuestionId: number, responseData: Record<string, unknown>) => {
-      if (!attempt) {
+      if (!currentAttempt) {
         return;
       }
       setError(null);
@@ -110,7 +128,7 @@ export default function useQuizAttempt({
         await HttpClient.post(
           '/quiz_question_responses',
           JSON.stringify({
-            quizAttemptId: attempt.id,
+            quizAttemptId: currentAttempt.id,
             quizQuestionId,
             responseData,
           }),
@@ -122,40 +140,43 @@ export default function useQuizAttempt({
         throw postError;
       }
     },
-    [attempt]
+    [currentAttempt]
   );
 
-  const finishAttempt = useCallback(async () => {
-    if (!attempt) {
-      throw new Error('No attempt to finalize.');
-    }
-    const requestKey = `${levelId}:${unitId}`;
-    setError(null);
-    try {
-      const response = await HttpClient.put(
-        `/quiz_attempts/${attempt.id}`,
-        JSON.stringify({}),
-        true,
-        {'Content-Type': 'application/json'}
-      );
-      const data: QuizAttemptData = await response.json();
-      // Same race as beginAttempt - see currentAttemptKeyRef above.
-      if (currentAttemptKeyRef.current === requestKey) {
-        setAttempt(data);
+  const finishAttempt = useCallback(
+    async (responsesByQuestionId: Record<number, Record<string, unknown>>) => {
+      if (!currentAttempt) {
+        throw new Error('No attempt to finalize.');
       }
-      return data;
-    } catch (putError) {
-      if (currentAttemptKeyRef.current === requestKey) {
-        setError(await networkErrorMessage(putError));
+      const requestKey = `${levelId}:${unitId}:${userId}`;
+      setError(null);
+      try {
+        const response = await HttpClient.put(
+          `/quiz_attempts/${currentAttempt.id}`,
+          JSON.stringify({responses: responsesByQuestionId}),
+          true,
+          {'Content-Type': 'application/json'}
+        );
+        const data: QuizAttemptData = await response.json();
+        // Same race as beginAttempt - see currentAttemptKeyRef above.
+        if (currentAttemptKeyRef.current === requestKey) {
+          setAttempt(data);
+        }
+        return data;
+      } catch (putError) {
+        if (currentAttemptKeyRef.current === requestKey) {
+          setError(await networkErrorMessage(putError));
+        }
+        throw putError;
       }
-      throw putError;
-    }
-  }, [attempt, levelId, unitId]);
+    },
+    [currentAttempt, levelId, unitId, userId]
+  );
 
   return {
-    attempt,
-    isLoading,
-    error,
+    attempt: currentAttempt,
+    isLoading: isStateCurrent ? isLoading : !!unitId,
+    error: isStateCurrent ? error : null,
     beginAttempt,
     submitQuestionResponse,
     finishAttempt,

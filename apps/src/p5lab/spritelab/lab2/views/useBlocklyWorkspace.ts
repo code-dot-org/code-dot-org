@@ -17,9 +17,11 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
+import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
@@ -137,6 +139,11 @@ export default function useBlocklyWorkspace({
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
 
+    // Drags onto a placeholder keep the placeholder showing, not a marker.
+    workspaceRef.current.options.plugins[
+      BlocklyCore.registry.Type.CONNECTION_PREVIEWER.toString()
+    ] = PlaceholderPreviewer;
+
     // CDO Blockly shrinks the container by the workspace-header height to
     // leave room for a header bar we don't render, leaving a gap at the
     // bottom. Reclaim the full height and resize the workspace SVG to fill.
@@ -149,6 +156,11 @@ export default function useBlocklyWorkspace({
           // This load's event stream is over.
           pendingLoadsRef.current--;
         }
+        return;
+      }
+      // The stack-room pass tidies positions; it is not an edit to save or
+      // run.
+      if (e.group === STACK_ROOM_EVENT_GROUP) {
         return;
       }
       // Toolbox editing: flag blocks that won't serialize into a category.
@@ -185,9 +197,15 @@ export default function useBlocklyWorkspace({
     };
 
     workspaceRef.current.addChangeListener(onChange);
+    // Levelbuilder lays a toolbox and start sources out by hand.
+    const stopStackRoom =
+      isToolboxMode || isStartMode
+        ? undefined
+        : watchStackRoom(workspaceRef.current);
     setWorkspaceVersion(version => version + 1);
 
     return () => {
+      stopStackRoom?.();
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
       currentBlocksRef.current = null;

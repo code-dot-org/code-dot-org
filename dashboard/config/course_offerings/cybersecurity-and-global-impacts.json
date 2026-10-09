@@ -1,7 +1,7 @@
 {
   "key": "cybersecurity-and-global-impacts",
   "display_name": "Cybersecurity and Global Impacts",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AIF",

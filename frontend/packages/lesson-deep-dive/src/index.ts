@@ -3,7 +3,6 @@
 export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
-export {default as PreReviewBox} from './PreReviewBox';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';
@@ -12,3 +11,43 @@ export {default as VideoRecorder} from './ChallengeActivities/VideoRecorder';
 export {default as VocabularyFlashcards} from './ReviewModalities/VocabularyFlashcards';
 export type {VocabularyItem} from './ReviewModalities/VocabularyFlashcards';
 export {default as WelcomeBox} from './WelcomeBox';
+export {
+  challengeResponseListValidator,
+  challengeResponseValidator,
+  challengeValidator,
+  EvaluationStatus,
+  ExplanationTypes,
+  parseReactions,
+} from './types';
+export type {
+  Challenge,
+  ChallengeResponse,
+  ChallengeResponseAsset,
+  Reaction,
+} from './types';
+export {assetWithUrl} from './gallery/assetUtils';
+export {
+  challengeResponseDetailValidator,
+  unitCountsValidator,
+} from './gallery/types';
+export type {
+  ChallengeResponseDetail,
+  EvaluationResult,
+  GallerySection,
+  GallerySort,
+  GalleryUnit,
+  RubricEntry,
+  TutorGalleryData,
+  ViewerRole,
+} from './gallery/types';
+export {
+  addReaction,
+  getChallengeResponse,
+  getUnitCounts,
+  listChallengeResponses,
+  removeReaction,
+  setApproved,
+} from './gallery/api';
+export {default as ProjectDetailsCard} from './gallery/ProjectDetailsCard';
+export {default as ProjectView} from './gallery/ProjectView';
+export {default as ReactionChips} from './gallery/ReactionChips';

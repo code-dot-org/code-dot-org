@@ -24,22 +24,24 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "adlibs": "friend",
-      "imageRole": "friend"
+      "imageRole": "friend",
+      "imageUi": "explore",
+      "sentence": "friend"
     },
     "guide_steps": [
       {
-        "text": "**Make another character.** Every story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**."
+        "text": "**Make another character.** A friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**, or draw your own."
       },
       {
-        "text": "**What a pair!** Continue when you're ready.",
+        "text": "**Your new character is ready.** Click **Continue**.",
         "showContinue": true,
         "after": {
           "spriteImages": 1
         }
       }
     ],
-    "long_instructions": "# Make another character\nEvery story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**."
+    "long_instructions": "# Make another character\nA friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**, or draw your own.",
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

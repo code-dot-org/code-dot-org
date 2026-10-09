@@ -145,6 +145,20 @@ describe('useSources', () => {
       expect(dispatchSpy).toHaveBeenCalledWith(setChannel(OWNED_CHANNEL));
     });
 
+    it('refreshes the channel when a save changes it', async () => {
+      const {result} = renderUseSources();
+      await flush();
+      expect(result.current.channel).toBe(OWNED_CHANNEL);
+
+      const renamed = {...OWNED_CHANNEL, name: 'Renamed'} as Channel;
+      const listeners = (
+        fakeManager.addSaveSuccessListener as jest.Mock
+      ).mock.calls.map(([listener]) => listener);
+      act(() => listeners.forEach(listener => listener(renamed)));
+
+      expect(result.current.channel).toEqual(renamed);
+    });
+
     it('falls back to defaultSources when the project has none', async () => {
       (fakeManager.load as jest.Mock).mockResolvedValue({sources: undefined});
       const {result} = renderUseSources();
@@ -451,6 +465,20 @@ describe('useSources', () => {
   });
 
   describe('startOver', () => {
+    it('saves the start sources as ProjectSources even when the level stores them bare', async () => {
+      const bare = {folders: {}, files: {}};
+      const {result} = renderUseSources({
+        ...LEVEL_ONE,
+        startSources: bare,
+      } as LevelProperties);
+      await flush();
+
+      act(() => result.current.startOver());
+
+      expect(fakeManager.save).toHaveBeenCalledWith({source: bare}, true);
+      expect(result.current.currentSources).toEqual({source: bare});
+    });
+
     it('resets to start sources and force-saves', async () => {
       const startSources = {source: 'start'};
       const {result} = renderUseSources({...LEVEL_ONE, startSources});

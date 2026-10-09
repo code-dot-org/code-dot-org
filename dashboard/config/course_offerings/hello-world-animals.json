@@ -1,7 +1,7 @@
 {
   "key": "hello-world-animals",
   "display_name": "Hello World: Animals",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",

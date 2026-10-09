@@ -13,20 +13,25 @@ async function gotoLoaded(page: Page, scenario = 'teacher') {
 const expectFocusInside = (dialog: Locator) =>
   expect(dialog.locator(':focus')).toHaveCount(1);
 
-test('the live tabs are keyboard-focusable; placeholder tabs are disabled', async ({
-  page,
-}) => {
+test('the tabs are keyboard-focusable', async ({page}) => {
   await gotoLoaded(page);
 
   const tabs = page.getByRole('tab');
-  await expect(tabs).toHaveCount(4);
+  await expect(tabs).toHaveCount(3);
 
   await tabs.first().focus();
   await expect(tabs.first()).toBeFocused();
 
   await expect(tabs.nth(1)).toBeEnabled();
-  await expect(tabs.nth(2)).toBeDisabled();
-  await expect(tabs.last()).toBeDisabled();
+  await expect(tabs.last()).toBeEnabled();
+});
+
+test('the Integrations tab is hidden from an account that cannot manage linked accounts', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'unmigrated-teacher');
+
+  await expect(page.getByRole('tab', {name: 'Integrations'})).toHaveCount(0);
 });
 
 test('Save button submits on Enter when focused', async ({page}) => {

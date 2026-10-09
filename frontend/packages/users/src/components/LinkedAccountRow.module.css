@@ -1,0 +1,63 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 8px 9px 8px 12px;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: var(--shape-md);
+}
+
+.icon {
+  flex: none;
+  width: 24px;
+  font-size: 24px;
+  text-align: center;
+  color: var(--text-neutral-primary);
+}
+
+.logo {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.identity {
+  display: flex;
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  line-height: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 8px;
+  min-width: 0;
+}
+
+.name.name,
+.email.email {
+  line-height: inherit;
+}
+
+.bullet {
+  color: var(--text-neutral-placeholder);
+}
+
+.email.email {
+  overflow-wrap: anywhere;
+  color: var(--text-neutral-tertiary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}

@@ -13,19 +13,32 @@
 
 .item {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-brand-purple-primary);
+}
+
+// Sized to its icon + label content (not the full-width .item button) so the
+// active pill hugs the content instead of stretching across the nav column.
+.itemContent {
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  flex: 1;
-  padding: 0.625rem 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--text-neutral-placeholder);
+  margin: 6px 0;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+  color: inherit;
 
   &.active {
-    color: var(--text-neutral-primary);
+    background: var(--background-selected-primary);
+    color: var(--text-selected-primary);
 
     .label {
       font-weight: 700;

@@ -343,8 +343,13 @@ class UnitGroup < ApplicationRecord
     [Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
+  def sunsetting?
+    published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting
+  end
+
   def summarize(user = nil, for_edit: false, locale_code: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
+      ai_chat_tools_dep = ai_chat_tools_dependency
       {
         name: name,
         id: id,
@@ -378,7 +383,10 @@ class UnitGroup < ApplicationRecord
         course_version_id: course_version&.id,
         course_path: link,
         course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil,
-        ai_chat_tools_dependency: ai_chat_tools_dependency,
+        ai_chat_tools_dependency: ai_chat_tools_dep,
+        requires_inaccessible_ai_models:
+          ai_chat_tools_dep == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] &&
+            requires_inaccessible_ai_models?(user),
       }
     end
   end
@@ -713,6 +721,11 @@ class UnitGroup < ApplicationRecord
 
   def requires_ai_chat_tools?
     default_units.with_essential_ai_chat_tools.exists?
+  end
+
+  def requires_inaccessible_ai_models?(user)
+    return false unless user&.us_only_aichat_models_disabled?
+    default_units.with_essential_us_only_ai_models.exists?
   end
 
   def ai_chat_tools_dependency

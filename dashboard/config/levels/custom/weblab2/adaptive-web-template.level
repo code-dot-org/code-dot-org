@@ -1,0 +1,36 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-24T21:28:26.000Z",
+  "level_num": "custom",
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>My Website</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <header>\n      <!-- Your site's name goes here -->\n    </header>\n    <main>\n      <!-- Your content goes here -->\n    </main>\n    <footer>\n      <!-- A way to contact you goes here -->\n    </footer>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  font-family: sans-serif;\n  margin: 0;\n}\n\nheader,\nfooter {\n  padding: 16px;\n  background: #f2f2f2;\n}\n\nmain {\n  padding: 16px;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "hide_share_and_remix": true,
+    "long_instructions": "Project template for the adaptive web pathway. Levels that name it as their project template share the student's project."
+  },
+  "published": true
+}]]></config>
+</Weblab2>

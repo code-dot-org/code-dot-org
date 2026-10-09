@@ -5,7 +5,7 @@ wrong '-2'
 right '4'
 wrong '-4'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A machine learning model predicts an output of 4, but the actual correct output is 8. What is the absolute error of this prediction?

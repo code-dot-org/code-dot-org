@@ -10,6 +10,21 @@ export interface QuizViewContent {
   workspaceContent: React.ReactNode;
 }
 
+// Answer fields (correctChoiceId, explanation) are deliberately excluded.
+export interface QuizQuestionSummary {
+  id: number;
+  type: string;
+  questionName: string;
+  questionTitle: string;
+  choices?: {id: string; text: string}[];
+  page: number;
+}
+
+export interface QuizPage<T> {
+  page: number;
+  questions: T[];
+}
+
 export interface QuizLevelProperties extends LevelProperties {
   displayName?: string;
   customIntroText?: string;
@@ -19,6 +34,6 @@ export interface QuizLevelProperties extends LevelProperties {
   showIntroScreen?: boolean;
   purpose?: string;
   allowMultipleAttempts?: boolean;
+  showQuestionsAfterSubmit?: boolean;
+  quizQuestions?: QuizQuestionSummary[];
 }
-
-export const toBool = (value: boolean | undefined) => value ?? false;

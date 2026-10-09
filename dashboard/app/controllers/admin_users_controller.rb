@@ -152,7 +152,7 @@ class AdminUsersController < ApplicationController
       if @target_user.teacher?
         @sections = @target_user.sections_instructed.includes(:students).order(:name)
         all_student_ids = @sections.flat_map {|s| s.students.map(&:id)}.uniq
-        script_ids = UserScript.where(user_id: all_student_ids).distinct.pluck(:script_id)
+        script_ids = UserScript.where(user_id: all_student_ids + [@target_user.id]).distinct.pluck(:script_id)
         @all_scripts = Unit.where(id: script_ids).order(:name).sort.uniq
       else
         @user_scripts = UserScript.
@@ -505,6 +505,46 @@ class AdminUsersController < ApplicationController
         opts.map(&:credential_type)
       end
     end
+  end
+
+  # GET /admin/log_token
+  def log_token_form
+    @input = params[:user_id].to_s.strip
+    return if @input.blank?
+
+    unless @input.match?(/\A[1-9]\d{0,9}\z/)
+      @invalid_input = true
+      return
+    end
+
+    user_id = @input.to_i
+    @tokens = begin
+      User::LogToken.for_user(user_id).to_a
+    rescue ActiveModel::RangeError
+      []
+    end
+    log_admin_action('log_token_lookup', user_id)
+  end
+
+  # POST /admin/log_token/resolve
+  def resolve_log_token
+    token = params[:log_token].to_s.strip
+    reason = params[:reason].to_s.strip
+
+    if token.blank? || reason.blank?
+      flash.now[:alert] = 'A token and a reason are both required.'
+      return render :log_token_form
+    end
+
+    @resolved = User.resolve_log_token(
+      token,
+      actor_id: current_user.id,
+      reason: reason,
+      request_id: request.request_id,
+    )
+    @resolve_attempted = true
+    flash.now[:alert] = 'That token could not be read.' if @resolved.nil?
+    render :log_token_form
   end
 
   # GET /admin/mass_delete_student_progress

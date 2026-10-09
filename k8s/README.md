@@ -85,9 +85,8 @@ Useful commands:
 - `k8s/bin/bundle_exec irb` runs a command through the locked bundle.
 - `k8s/bin/rake TASK` runs the locked Rake executable.
 
-The root [`skaffold.yaml`](../skaffold.yaml) deploys the Helm chart. The sibling
-[`k8s/kustomize/skaffold.yaml`](kustomize/skaffold.yaml) exists while Helm and
-Kustomize parity is under evaluation; keep their build graphs equal.
+The root [`skaffold.yaml`](../skaffold.yaml) deploys the Helm chart in
+[`k8s/helm`](helm/).
 
 ### Select job priorities
 
@@ -113,24 +112,19 @@ Changing the mode rolls the Deployment's pods. Running jobs are not reclassified
 or interrupted by the filter. Custom `activeJobWorker.command` and `args` are
 supported only in `both` mode; filtered modes require the generated command.
 
-For Kustomize, add one priority component after the backend component in the
-environment overlay:
-
-```yaml
-components:
-  - ../../components/backend
-  - ../../components/active-job-worker-low
-```
-
-Use `active-job-worker-high` for high priorities. Include neither priority
-component for both; do not include both priority components in one overlay.
+`activeJobWorker.terminationGracePeriodSeconds` sets how long a pod being
+replaced or drained waits for its current job before Kubernetes kills the
+worker. A killed job's row stays locked for `Delayed::Worker.max_run_time`
+(4 hours). The chart default is 60; production and staging set 2100 to cover
+the 30 minute `AnonymousGeoBackfillingJob` cap. An idle worker exits within
+seconds regardless.
 
 During migration, Kubernetes can start with `low` while existing workers
 continue consuming both priorities. To move all low-priority work to Kubernetes,
 the existing workers must also be configured to consume only high priorities.
 
 Run `bundle exec ruby k8s/bin/verify-worker-priorities` to check Helm modes,
-invalid values, and Kustomize command parity without a cluster or database.
+generated worker commands, and invalid values without a cluster or database.
 
 ## Non-local clusters
 

@@ -3,6 +3,7 @@ import {
   compileWorldPrelude,
   createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
+  moveWorldCell,
   paintWorldCell,
   resizeWorld,
   sceneGridSize,
@@ -135,6 +136,26 @@ describe('world', () => {
     expect(second.grid[1][1]).toEqual({image: 'b', kind: 'sprite'});
     expect(first.grid[1][1]).toBeNull();
     expect(paintWorldCell(second, 0, 0, null).grid[0][0]).toBeNull();
+  });
+
+  it('keeps the identity of every row a paint does not touch', () => {
+    const first = paintWorldCell(undefined, 0, 0, {image: 'a', kind: 'block'});
+    const second = paintWorldCell(first, 1, 1, {image: 'b', kind: 'sprite'});
+    expect(second.grid[0]).toBe(first.grid[0]);
+    expect(second.grid[1]).not.toBe(first.grid[1]);
+    expect(second.grid[2]).toBe(first.grid[2]);
+  });
+
+  it('moves an image to one place, clearing it from wherever it was', () => {
+    const treasure = {image: 't', kind: 'sprite' as const};
+    const block = {image: 'b', kind: 'block' as const};
+    let world = paintWorldCell(undefined, 0, 0, treasure);
+    world = paintWorldCell(world, 5, 5, block);
+    const moved = moveWorldCell(world, 2, 3, treasure);
+    expect(moved.grid[0][0]).toBeNull();
+    expect(moved.grid[2][3]).toEqual(treasure);
+    expect(moved.grid[5][5]).toEqual(block);
+    expect(moved.grid.flat().filter(c => c?.image === 't')).toHaveLength(1);
   });
 
   it('paints over a gridless world saved by an older experiment', () => {

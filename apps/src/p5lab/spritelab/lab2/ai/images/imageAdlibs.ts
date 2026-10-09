@@ -1,7 +1,7 @@
 // Adlib prompt combos for the image dialog: a sentence template with word
 // choices per image type, an alternative to typing a prompt. The manifest is
-// bundled from apps/static; the image cache (imageCache.ts) publishes its own
-// copy beside the images it holds, built from this one.
+// bundled from apps/static today; an S3-hosted copy is the plan, slotting in
+// behind imageAdlibFor with the bundled file as the fetch-failure fallback.
 
 import type {
   AdlibChoices,
@@ -10,48 +10,68 @@ import type {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import manifest from '@cdo/static/spritelab_lab2/imageAdlibManifest.json';
 
-import {ImageType} from './types';
-
-/** Which combo set a level offers. simple and expanded are the defaults
-    for image levels and freeplay; the rest are named by the hoai2026-dev
-    image levels, one per image role, so each role gets its own words and
-    its own cached images. */
-export const IMAGE_ADLIB_SETS = [
-  'simple',
-  'expanded',
-  'treasure',
-  'hero',
-  'friend',
-  'story',
-  'platform',
-] as const;
-
-export type ImageAdlibSet = (typeof IMAGE_ADLIB_SETS)[number];
-
-export function isImageAdlibSet(value: unknown): value is ImageAdlibSet {
-  return IMAGE_ADLIB_SETS.includes(value as ImageAdlibSet);
-}
+import {BODY_PLANS, BodyPlan, ImageSubject, ImageType} from './types';
 
 const adlibs = (manifest as {adlibs: AdlibsType}).adlibs;
 
-export function imageAdlibId(imageType: ImageType, set: ImageAdlibSet): string {
-  return `${imageType}-${set}`;
+/** Which combo set a level offers, the part of a manifest key after the
+    image kind: simple, expanded (free play), treasure (the treasure level's
+    object words), and whatever the manifest adds. */
+export type ImageAdlibSet = string;
+
+export const IMAGE_ADLIB_SETS: readonly ImageAdlibSet[] = [
+  ...new Set(Object.keys(adlibs).map(key => key.replace(/^[^-]+-/, ''))),
+];
+
+export function isImageAdlibSet(value: unknown): value is ImageAdlibSet {
+  return typeof value === 'string' && IMAGE_ADLIB_SETS.includes(value);
+}
+
+/** The manifest key for a combo: an object sprite has its own words. */
+export function imageAdlibId(
+  imageType: ImageType,
+  set: ImageAdlibSet,
+  subject?: ImageSubject
+): string {
+  const kind =
+    imageType === 'sprite' && subject === 'object' ? 'object' : imageType;
+  return `${kind}-${set}`;
 }
 
 export function imageAdlibFor(
   imageType: ImageType,
-  set: ImageAdlibSet
+  set: ImageAdlibSet,
+  subject?: ImageSubject
 ): AdlibType | undefined {
-  return adlibs[imageAdlibId(imageType, set)];
+  return adlibs[imageAdlibId(imageType, set, subject)];
 }
 
-/** Every combo id the bundled manifest knows. */
-export function imageAdlibIds(): string[] {
-  return Object.keys(adlibs);
+// A creature option's bodyPlan in the manifest names the stance the
+// character-set prompts are written for (characterSet.ts); a creature
+// without one, and any typed prompt, is drawn upright.
+const CREATURE_BODY_PLANS = new Map<string, BodyPlan>();
+Object.values(adlibs).forEach(adlib => {
+  (adlib.options.creature ?? []).forEach(option => {
+    const plan = (option as {bodyPlan?: string}).bodyPlan;
+    if (plan && BODY_PLANS.includes(plan as BodyPlan)) {
+      CREATURE_BODY_PLANS.set(option.id, plan as BodyPlan);
+    }
+  });
+});
+
+/** The body plan of a character combo's creature choice. */
+export function bodyPlanFor(creatureId: string | undefined): BodyPlan {
+  return (creatureId && CREATURE_BODY_PLANS.get(creatureId)) || 'upright';
 }
 
-export function imageAdlibById(adlibId: string): AdlibType | undefined {
-  return adlibs[adlibId];
+/** The manifest's bodyPlan values, for the test that they are all known. */
+export function manifestBodyPlans(): string[] {
+  return Object.values(adlibs).flatMap(adlib =>
+    (adlib.options.creature ?? []).flatMap(option => {
+      const plan = (option as {bodyPlan?: string}).bodyPlan;
+      return plan ? [plan] : [];
+    })
+  );
 }
 
 /** The template's slot names in the order the sentence reads them. */
@@ -70,17 +90,4 @@ export function adlibChoiceIds(
 ): string[] | undefined {
   const ids = adlibSlots(adlib).map(slot => choices[slot]);
   return ids.every(Boolean) ? ids : undefined;
-}
-
-/**
- * The sentence the choices spell, as the Adlib component fills it in:
- * each slot replaced by its chosen option's text. The cache generator
- * prompts with this so a cached image was asked for in the student's
- * words.
- */
-export function adlibText(adlib: AdlibType, choices: AdlibChoices): string {
-  return adlibSlots(adlib).reduce((text, slot) => {
-    const chosen = adlib.options[slot]?.find(o => o.id === choices[slot]);
-    return chosen ? text.replace(`{${slot}}`, chosen.text) : text;
-  }, adlib.template);
 }

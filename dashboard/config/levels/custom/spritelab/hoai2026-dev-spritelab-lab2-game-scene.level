@@ -34,17 +34,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Add your background to the game.** Use the **set background** block and pick the one you just made. Then press **Play** to see your world dressed up."
+        "text": "**Add the background to your game.** Drag **set background** onto the dotted outline and pick your new background. Click **Play**."
       },
       {
-        "text": "**Now that's a game!** Take it for a spin, then continue when you're ready.",
+        "text": "**Now that's a game!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Add your background to the game\nUse the **set background** block and pick the one you just made. Then press **Play** to see your world dressed up.",
+    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline and pick your new background.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -53,7 +53,21 @@
           "type": "gamelab_setBackgroundImageAs"
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_setBackgroundImageAs"
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

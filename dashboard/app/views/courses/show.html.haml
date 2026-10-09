@@ -32,5 +32,5 @@
         %li= link_to "View on levelbuilder", lb_path
 
 / Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
-- if Policies::Ai.ai_differentiation_enabled?(current_user) && Policies::Ai.ai_differentiation_enabled_for_unit?(unit_group)
+- if Policies::Ai.ai_differentiation_eligible?(current_user) && Policies::Ai.ai_differentiation_enabled_for_unit?(unit_group)
   %div#ai-differentiation-fab-mount-point

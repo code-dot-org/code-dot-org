@@ -549,6 +549,13 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
   end
 
+  test 'widget_options skips instructions popup in readonly view' do
+    @level = Widget.create!(name: 'Readonly Widget', level_num: 'custom')
+    readonly_view_options
+
+    assert widget_options[:level]['skipInstructionsPopup']
+  end
+
   test 'submittable level is submittable for teacher enrolled in plc' do
     @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(true)

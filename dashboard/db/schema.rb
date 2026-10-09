@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
+ActiveRecord::Schema[7.0].define(version: 2026_10_06_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -400,6 +400,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.string "asset_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "ai_alt_text"
     t.index ["challenge_response_id"], name: "index_challenge_response_assets_on_challenge_response_id"
   end
 
@@ -426,6 +427,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "evaluation_status"
+    t.boolean "approved", default: false, null: false
     t.index ["challenge_id", "user_id", "created_at"], name: "index_challenge_responses_on_challenge_user_created"
     t.index ["user_id"], name: "index_challenge_responses_on_user_id"
   end
@@ -1237,13 +1239,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.integer "script_level_id", null: false
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
-  end
-
-  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.bigint "level_id", null: false
-    t.bigint "skill_id", null: false
-    t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
-    t.index ["skill_id", "level_id"], name: "index_levels_skills_on_skill_id_and_level_id"
   end
 
   create_table "libraries", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2534,16 +2529,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
 
-  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "description", null: false
-    t.text "evaluation_criteria"
-    t.string "concept"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "key", null: false
-    t.index ["key"], name: "index_skills_on_key", unique: true
-  end
-
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.integer "absolute_position"
@@ -2606,7 +2591,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.integer "requester_id"
     t.integer "level_id"
     t.integer "unit_id"
-    t.integer "skill_id"
     t.integer "section_id"
     t.string "school_year"
     t.string "evaluator"
@@ -2830,6 +2814,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.text "properties"
     t.integer "unit_group_id"
     t.index ["user_id", "script_id", "level_id", "deleted_at"], name: "index_user_levels_unique", unique: true
+  end
+
+  create_table "user_log_tokens", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "destination", null: false
+    t.integer "period", null: false
+    t.string "uuid", limit: 36, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "destination", "period"], name: "index_user_log_tokens_on_user_destination_period", unique: true
+    t.index ["uuid"], name: "index_user_log_tokens_on_uuid", unique: true
   end
 
   create_table "user_ml_models", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -3148,5 +3143,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
   add_foreign_key "user_data_retention_statuses", "users"
   add_foreign_key "user_facilitator_infos", "users"
   add_foreign_key "user_geos", "users"
+  add_foreign_key "user_log_tokens", "users"
   add_foreign_key "user_proficiencies", "users"
 end

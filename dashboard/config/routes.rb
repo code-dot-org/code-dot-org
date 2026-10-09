@@ -533,6 +533,7 @@ Dashboard::Application.routes.draw do
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
         get 'tutor/gallery', to: 'lessons#tutor_gallery', format: false
+        get 'tutor/*path', to: 'lessons#tutor', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -826,6 +827,8 @@ Dashboard::Application.routes.draw do
         post :delete_progress
         post :mass_progress_reset
         get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
+        get :log_token, action: 'log_token_form', as: 'log_token_form'
+        post 'log_token/resolve', action: 'resolve_log_token', as: 'resolve_log_token'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
         post :delete_user_progress
@@ -1196,6 +1199,7 @@ Dashboard::Application.routes.draw do
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
+        post 'users/teacher_panel_v2_seen', to: 'users#post_teacher_panel_v2_seen'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
@@ -1229,6 +1233,12 @@ Dashboard::Application.routes.draw do
         get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
+
+        resources :scripts, only: [] do
+          resources :lessons, only: [], param: 'position' do
+            resource :tutor_gallery_data, only: :show, defaults: {format: 'json'}
+          end
+        end
 
         get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
@@ -1535,6 +1545,7 @@ Dashboard::Application.routes.draw do
       end
       member do
         post :evaluate
+        patch :approve
       end
       # The signed-in viewer's emoji reactions on this response. The emoji
       # name (e.g. "heart") is the member id, so removing a reaction is a

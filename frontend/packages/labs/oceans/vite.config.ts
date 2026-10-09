@@ -76,6 +76,9 @@ export default defineConfig({
     allowedHosts: ['localhost-studio.code.org'],
   },
   build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
     lib: {
       entry: ['src/index.ts'],
       name: 'oceans-lab',

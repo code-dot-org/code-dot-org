@@ -4,6 +4,7 @@ import path from 'path';
 import {defineConfig, type Plugin} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 const PUBLIC_DIR = path.resolve(__dirname, 'public');
 
@@ -88,9 +89,12 @@ export default defineConfig({
     // Emit `.d.ts` from the library entry.
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
     // Externalize peerDependencies only (react, react-dom, redux,
-    // react-redux) so the consumer's single instances are used at runtime;
-    // bundle everything else (chart.js, ml-knn, papaparse, messageformat, …).
+    // react-redux, MUI, emotion, component-library) so the consumer's single
+    // instances are used at runtime; bundle everything else (chart.js, d3,
+    // ml-knn, papaparse, messageformat, …).
     externalizeDeps({deps: false}),
+    // The built JS imports its own CSS, so apps gets the styles with the module.
+    libInjectCss(),
   ],
   resolve: {
     alias: {
@@ -98,6 +102,9 @@ export default defineConfig({
     },
   },
   build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
     lib: {
       entry: ['src/index.tsx'],
       name: 'ailab',
@@ -117,6 +124,8 @@ export default defineConfig({
           entryFileNames: '[name].cjs',
           preserveModules: false,
           exports: 'named',
+          // apps loads this build; component-library default imports need the `__esModule` check.
+          interop: 'auto',
           dir: 'dist',
         },
       ],

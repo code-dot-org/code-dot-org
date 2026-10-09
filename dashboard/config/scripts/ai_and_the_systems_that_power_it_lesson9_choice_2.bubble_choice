@@ -1,0 +1,13 @@
+name 'ai-and-the-systems-that-power-it-lesson9-choice-2'
+display_name 'Hardware in AI Models'
+description 'Select the career you are interested in to design a computing system'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson9-build-amara'
+level 'ai-and-the-systems-that-power-it-lesson9-build-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson9-build-denise'
+level 'ai-and-the-systems-that-power-it-lesson9-build-marcus'
+level 'ai-and-the-systems-that-power-it-lesson9-build-layla'
+
+uses_lab2
+navigation_type 'next_level'

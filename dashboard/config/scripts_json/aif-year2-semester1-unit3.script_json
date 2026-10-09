@@ -9,8 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-16 03:37:46 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-10-07 04:57:13 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -544,6 +544,18 @@
       }
     },
     {
+      "key": "8a2813f4-273a-4c92-846a-8dcff7cc9ce3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8a2813f4-273a-4c92-846a-8dcff7cc9ce3",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
       "key": "068d9d43-31bb-4630-a10f-13d948decdb6",
       "position": 1,
       "properties": {
@@ -566,6 +578,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "df06d61e-5f3e-41e5-b5ae-71ff5318f042",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "5e7ee8ed-8c20-43d0-997f-f682e42d7af8",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e7ee8ed-8c20-43d0-997f-f682e42d7af8",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3"
@@ -698,6 +722,18 @@
       }
     },
     {
+      "key": "640637c6-024d-4986-9ad6-ceda8dc758af",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "640637c6-024d-4986-9ad6-ceda8dc758af",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
       "key": "e67c919f-5d1a-4cb4-b8c2-beac162469d7",
       "position": 1,
       "properties": {
@@ -794,6 +830,18 @@
       }
     },
     {
+      "key": "26f42011-3a82-4a4e-987f-371be71d649d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26f42011-3a82-4a4e-987f-371be71d649d",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
       "key": "00cc85ed-1ebe-46df-ad66-c6194dc3d0d1",
       "position": 1,
       "properties": {
@@ -830,6 +878,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "782ea6a5-2a3a-439d-93a1-50c97282cab4",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3"
+      }
+    },
+    {
+      "key": "d303b5a7-de34-4d4d-b5dd-7d5485b1a03b",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d303b5a7-de34-4d4d-b5dd-7d5485b1a03b",
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3"
@@ -1295,6 +1355,17 @@
       }
     },
     {
+      "key": "5817539f-7fbb-4b9c-9eef-86a571cd03ce",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "5817539f-7fbb-4b9c-9eef-86a571cd03ce",
+        "lesson_activity.key": "5a98eb46-28c3-487a-a811-eff6d70ee779"
+      }
+    },
+    {
       "key": "0cbfc344-96ce-405a-bf06-8933e5032536",
       "position": 1,
       "properties": {
@@ -1561,6 +1632,17 @@
       }
     },
     {
+      "key": "7baa93c3-a429-436e-9804-c46b7d38a322",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7baa93c3-a429-436e-9804-c46b7d38a322",
+        "lesson_activity.key": "320433c9-e9f7-424f-93dd-a51e7798f2f0"
+      }
+    },
+    {
       "key": "b8479cc8-508f-4f96-bf7e-a96d5054f1aa",
       "position": 1,
       "properties": {
@@ -1612,7 +1694,13 @@
       "position": 2,
       "properties": {
         "description": "Python has a CSV module that makes it easier for us to read CSV files into our programs and work with them.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson also includes a [supplementary CSV Files video](https://youtube.com/watch?v=e9QNnkIZCxc) that you can use in place of this section of the slides or as an additional resource for students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5dff81a6-ec6d-416b-910d-199dac849d35",
@@ -1794,6 +1882,17 @@
       }
     },
     {
+      "key": "62706473-91d5-4c2f-a301-41df6c3994e3",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "62706473-91d5-4c2f-a301-41df6c3994e3",
+        "lesson_activity.key": "a796a784-2bc0-47f4-92aa-90d2fb3be5e9"
+      }
+    },
+    {
       "key": "6dc52792-3e94-4b3a-81cb-696da40c968e",
       "position": 1,
       "properties": {
@@ -1971,6 +2070,17 @@
       },
       "seeding_key": {
         "activity_section.key": "5ad35442-07b5-40e6-90cd-d007eb2daf4d",
+        "lesson_activity.key": "4e6d14b5-566e-4ae3-86d7-7b3282024b99"
+      }
+    },
+    {
+      "key": "6d913e2c-3ab0-4dce-aa30-676d35b4ae1c",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d913e2c-3ab0-4dce-aa30-676d35b4ae1c",
         "lesson_activity.key": "4e6d14b5-566e-4ae3-86d7-7b3282024b99"
       }
     },
@@ -2259,6 +2369,17 @@
       }
     },
     {
+      "key": "75a87f13-483d-4b38-9c46-ab5d9edde287",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "75a87f13-483d-4b38-9c46-ab5d9edde287",
+        "lesson_activity.key": "8a2813f4-273a-4c92-846a-8dcff7cc9ce3"
+      }
+    },
+    {
       "key": "60b7dba2-c059-40f0-b04d-7c8109112b7c",
       "position": 1,
       "properties": {
@@ -2462,6 +2583,17 @@
       "seeding_key": {
         "activity_section.key": "910f5983-f57d-489f-bbbb-1f72b81ab491",
         "lesson_activity.key": "df06d61e-5f3e-41e5-b5ae-71ff5318f042"
+      }
+    },
+    {
+      "key": "71295ca4-238c-427d-9055-4dca3ef46e2d",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "71295ca4-238c-427d-9055-4dca3ef46e2d",
+        "lesson_activity.key": "5e7ee8ed-8c20-43d0-997f-f682e42d7af8"
       }
     },
     {
@@ -2797,6 +2929,17 @@
       },
       "seeding_key": {
         "activity_section.key": "3ff523d5-cc32-4fc9-89fd-edcb03878082",
+        "lesson_activity.key": "9151b230-58ac-4b64-bfc6-6a916ec8c8e4"
+      }
+    },
+    {
+      "key": "0b4d6448-5f01-48a5-968f-d3b3327e081a",
+      "position": 4,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b4d6448-5f01-48a5-968f-d3b3327e081a",
         "lesson_activity.key": "9151b230-58ac-4b64-bfc6-6a916ec8c8e4"
       }
     },
@@ -3145,6 +3288,17 @@
       }
     },
     {
+      "key": "7c761e0c-ea94-4dec-896b-8f3a6f19dc07",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c761e0c-ea94-4dec-896b-8f3a6f19dc07",
+        "lesson_activity.key": "307b6284-1554-45c0-9db3-aaf231b08526"
+      }
+    },
+    {
       "key": "939c735e-8438-424b-a1e8-16ee52a351f4",
       "position": 1,
       "properties": {
@@ -3316,6 +3470,17 @@
       "seeding_key": {
         "activity_section.key": "79ae9a5e-b9e9-44c1-ab0f-ed00ae267d4d",
         "lesson_activity.key": "12a9d73c-b307-4bae-8abc-e0ce8da21e8b"
+      }
+    },
+    {
+      "key": "bef12820-23b4-4da4-ab69-a4b323ca13c3",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "bef12820-23b4-4da4-ab69-a4b323ca13c3",
+        "lesson_activity.key": "640637c6-024d-4986-9ad6-ceda8dc758af"
       }
     },
     {
@@ -3512,6 +3677,17 @@
       },
       "seeding_key": {
         "activity_section.key": "f777c538-c282-4227-959c-e376ba158c6c",
+        "lesson_activity.key": "97bb280e-0ec8-457c-9b52-c062c95e4afa"
+      }
+    },
+    {
+      "key": "68162767-1c05-460d-8592-ceb1663f1239",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "68162767-1c05-460d-8592-ceb1663f1239",
         "lesson_activity.key": "97bb280e-0ec8-457c-9b52-c062c95e4afa"
       }
     },
@@ -3768,6 +3944,17 @@
       "seeding_key": {
         "activity_section.key": "3ccc9add-f389-472b-a6cd-0bca3bcf32d0",
         "lesson_activity.key": "dcc3053e-54e3-4e04-bf4e-decc69a4a9df"
+      }
+    },
+    {
+      "key": "b267e08d-4a98-4aa0-94f2-c8b4a0e81277",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b267e08d-4a98-4aa0-94f2-c8b4a0e81277",
+        "lesson_activity.key": "26f42011-3a82-4a4e-987f-371be71d649d"
       }
     },
     {
@@ -4200,6 +4387,17 @@
       }
     },
     {
+      "key": "d8350969-e7f5-455d-bf53-e7a59be259cf",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8350969-e7f5-455d-bf53-e7a59be259cf",
+        "lesson_activity.key": "d303b5a7-de34-4d4d-b5dd-7d5485b1a03b"
+      }
+    },
+    {
       "key": "457e1369-adbd-408a-9791-fdefb0156a1d",
       "position": 1,
       "properties": {
@@ -4258,6 +4456,28 @@
     },
     {
       "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson1-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "5817539f-7fbb-4b9c-9eef-86a571cd03ce"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson1-survey-2026"
+      ]
+    },
+    {
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4279,7 +4499,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4301,7 +4521,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4323,7 +4543,29 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson2-survey-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "7baa93c3-a429-436e-9804-c46b7d38a322"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson2-survey-2026"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4345,7 +4587,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4367,7 +4609,29 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson3-survey-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "62706473-91d5-4c2f-a301-41df6c3994e3"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson3-survey-2026"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4389,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4411,7 +4675,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4433,7 +4697,29 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson4-survey-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "6d913e2c-3ab0-4dce-aa30-676d35b4ae1c"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson4-survey-2026"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4455,7 +4741,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4477,7 +4763,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4499,7 +4785,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
@@ -4521,7 +4807,29 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson5-survey-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "75a87f13-483d-4b38-9c46-ab5d9edde287"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson5-survey-2026"
+      ]
+    },
+    {
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4543,7 +4851,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4565,7 +4873,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4587,7 +4895,29 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson6-survey-2026"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "71295ca4-238c-427d-9055-4dca3ef46e2d"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson6-survey-2026"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4609,7 +4939,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4631,7 +4961,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4983,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4675,7 +5005,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4697,7 +5027,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4719,7 +5049,29 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson7-survey-2026"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "0b4d6448-5f01-48a5-968f-d3b3327e081a"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson7-survey-2026"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4741,7 +5093,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4763,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4785,7 +5137,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4807,7 +5159,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 2,
       "assessment": true,
@@ -4829,7 +5181,29 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson8-survey-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "7c761e0c-ea94-4dec-896b-8f3a6f19dc07"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson8-survey-2026"
+      ]
+    },
+    {
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4851,7 +5225,29 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson9-survey-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "bef12820-23b4-4da4-ab69-a4b323ca13c3"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson9-survey-2026"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4873,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4895,7 +5291,29 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson10-survey-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "68162767-1c05-460d-8592-ceb1663f1239"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson10-survey-2026"
+      ]
+    },
+    {
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4917,7 +5335,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4939,7 +5357,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4961,7 +5379,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4983,7 +5401,29 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson11-survey-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "b267e08d-4a98-4aa0-94f2-c8b4a0e81277"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson11-survey-2026"
+      ]
+    },
+    {
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5005,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5027,7 +5467,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5049,7 +5489,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5071,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5093,7 +5533,29 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 52,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson12-survey-2026"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "d8350969-e7f5-455d-bf53-e7a59be259cf"
+      },
+      "level_keys": [
+        "aif-y2-working-with-data-lesson12-survey-2026"
+      ]
+    },
+    {
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5142,6 +5604,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson1-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson1-survey-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "5817539f-7fbb-4b9c-9eef-86a571cd03ce"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-working-with-data-level1-2026",
         "script_level.level_keys": [
           "aif-y2-working-with-data-level1-2026"
@@ -5178,6 +5652,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson2-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson2-survey-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "7baa93c3-a429-436e-9804-c46b7d38a322"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-working-with-data-lesson3-level1-2026",
         "script_level.level_keys": [
           "aif-y2-working-with-data-lesson3-level1-2026"
@@ -5198,6 +5684,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3",
         "activity_section.key": "91c9d756-acd4-4007-a507-efab0c40f707"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson3-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson3-survey-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "62706473-91d5-4c2f-a301-41df6c3994e3"
       }
     },
     {
@@ -5234,6 +5732,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3",
         "activity_section.key": "d3494219-e46c-4056-9b50-63c207f70f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson4-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson4-survey-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "6d913e2c-3ab0-4dce-aa30-676d35b4ae1c"
       }
     },
     {
@@ -5286,6 +5796,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson5-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson5-survey-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "75a87f13-483d-4b38-9c46-ab5d9edde287"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-working-with-data-lesson6-level1-2026",
         "script_level.level_keys": [
           "aif-y2-working-with-data-lesson6-level1-2026"
@@ -5318,6 +5840,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3",
         "activity_section.key": "694d1b7b-e7c1-48bc-b40c-4a36f6da358e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson6-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson6-survey-2026"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "71295ca4-238c-427d-9055-4dca3ef46e2d"
       }
     },
     {
@@ -5394,6 +5928,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson7-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson7-survey-2026"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "0b4d6448-5f01-48a5-968f-d3b3327e081a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-working-with-data-lesson8-level1-2026",
         "script_level.level_keys": [
           "aif-y2-working-with-data-lesson8-level1-2026"
@@ -5454,6 +6000,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson8-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson8-survey-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "7c761e0c-ea94-4dec-896b-8f3a6f19dc07"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-working-with-data-lesson9-level1-2026",
         "script_level.level_keys": [
           "aif-y2-working-with-data-lesson9-level1-2026"
@@ -5462,6 +6020,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3",
         "activity_section.key": "5b2bae88-1d54-4f1b-ab70-89990b542fb8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson9-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson9-survey-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "bef12820-23b4-4da4-ab69-a4b323ca13c3"
       }
     },
     {
@@ -5486,6 +6056,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3",
         "activity_section.key": "9b00c5be-c346-4f22-bef4-747bcb07c3fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson10-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson10-survey-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "68162767-1c05-460d-8592-ceb1663f1239"
       }
     },
     {
@@ -5534,6 +6116,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3",
         "activity_section.key": "46ec90de-bd81-4d3c-99b2-70c7091759b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson11-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson11-survey-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "b267e08d-4a98-4aa0-94f2-c8b4a0e81277"
       }
     },
     {
@@ -5594,6 +6188,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit3",
         "activity_section.key": "40d8b681-0404-4c96-ab87-9de3d5181848"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-working-with-data-lesson12-survey-2026",
+        "script_level.level_keys": [
+          "aif-y2-working-with-data-lesson12-survey-2026"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit3",
+        "activity_section.key": "d8350969-e7f5-455d-bf53-e7a59be259cf"
       }
     },
     {
@@ -5826,6 +6432,33 @@
       }
     },
     {
+      "name": "CSV Files",
+      "url": "https://youtube.com/watch?v=e9QNnkIZCxc",
+      "key": "csv_files",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "csv_files"
+      }
+    },
+    {
+      "name": "Customizing Plots",
+      "url": "https://www.youtube.com/watch?v=U_33q2m6IY4",
+      "key": "customizing_plots",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "customizing_plots"
+      }
+    },
+    {
       "name": "Data Journalism",
       "url": "https://docs.google.com/document/d/1q34pZ8TiOE-QteIBO-fL4Fe_eXEo-sQyVw_gfwNPkZ8/edit?usp=sharing",
       "key": "data_journalism",
@@ -5922,7 +6555,7 @@
       }
     },
     {
-      "name": "matplotlib Documentatin",
+      "name": "matplotlib Documentation",
       "url": "https://docs.google.com/document/d/1fCLA7koa4gnc_CgM5dtWizylK8edbny6oFVjwe3O4-Q/edit?usp=sharing",
       "key": "matplotlib_documentatin",
       "properties": {
@@ -5947,6 +6580,20 @@
       },
       "seeding_key": {
         "resource.key": "matplotlib_documentation"
+      }
+    },
+    {
+      "name": "Plotting Data",
+      "url": "https://www.youtube.com/watch?v=8QFlikCoBPw",
+      "key": "plotting_data",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "plotting_data"
       }
     },
     {
@@ -6198,6 +6845,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "csv_files"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "working_with_data_files"
       }
     },
@@ -6264,7 +6917,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "plotting_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "visualizing_data_part_1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "customizing_plots"
       }
     },
     {

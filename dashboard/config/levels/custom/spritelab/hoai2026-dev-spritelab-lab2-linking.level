@@ -29,59 +29,67 @@
     },
     "guide_steps": [
       {
-        "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."
+        "text": "**Link your scenes.** The **at [9] seconds** event is ready. Drag **go to scene** onto the dotted outline under it. Click **Play** and wait for it."
       },
       {
-        "text": "**Your scenes are connected!** Try jumping between them, then continue when you're ready.",
+        "text": "**Your scenes are connected!** Click **Continue**.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked.",
+    "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **at [9] seconds**. After 9 seconds, your story jumps to your platformer.",
     "toolbox_definition": {
-      "kind": "categoryToolbox",
+      "kind": "flyoutToolbox",
       "contents": [
         {
-          "kind": "category",
-          "name": "Story",
-          "contents": [
-            {
-              "kind": "block",
-              "type": "gamelab_spriteClicked",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_goToScene",
-              "fields": {
-                "SCENE": "platform-scene"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "category",
-          "name": "Platform",
-          "contents": [
-            {
-              "kind": "block",
-              "type": "spritelab2_goToScene",
-              "fields": {
-                "SCENE": "story-scene"
-              }
-            }
-          ]
+          "kind": "block",
+          "type": "spritelab2_goToScene",
+          "fields": {
+            "SCENE": "platform-scene"
+          }
         }
       ]
-    }
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_atTime",
+        "data": "at-9",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 9
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "spritelab2_goToScene",
+                "fields": {
+                  "SCENE": "platform-scene"
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Conclusion"
   }
 }]]></config>
 </GamelabJr>

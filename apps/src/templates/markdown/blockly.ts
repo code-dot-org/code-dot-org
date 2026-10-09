@@ -16,6 +16,9 @@ const BLOCKLY_TAGS = [
 
 const BLOCKLY_ATTRS = ['block_text', 'id', 'inline', 'name', 'type'];
 
+// Keeps the translator out of block markup inside a data-isolate paragraph.
+export const IGNORE_ATTRS = {'data-ignore': 'true'};
+
 /*
  * Render each Blockly tag as its own custom element. The `is` attribute mirrors
  * the legacy SafeMarkdown wrappers and keeps React from warning about the
@@ -33,7 +36,12 @@ const passthrough = (tag: string) => {
   }: {
     children?: ReactNode;
     node?: unknown;
-  }) => createElement(tag, {is: tag, ...rest}, children);
+  }) =>
+    createElement(
+      tag,
+      {is: tag, ...(tag === 'xml' ? IGNORE_ATTRS : {}), ...rest},
+      children
+    );
   Wrapper.displayName = `Blockly(${tag})`;
   return Wrapper;
 };

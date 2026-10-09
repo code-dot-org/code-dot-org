@@ -25,7 +25,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
   describe '#call' do
     subject(:scrub_pii) {described_instance.call}
 
-    let(:delete_accounts_helper_stub) {stub(:delete_accounts_helper)}
+    let(:delete_accounts_helper_stub) {stub(delete_accounts_helper: nil)}
     let(:soft_deleted_user) {true}
 
     before do

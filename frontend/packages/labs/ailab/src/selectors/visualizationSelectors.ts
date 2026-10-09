@@ -5,6 +5,15 @@ import {
   getUniqueOptions,
   getLocalizedColumnName,
 } from '../helpers/columnDetails';
+import {
+  buildDisplayTree,
+  type DisplayTreeNode,
+  type SerializedTree,
+} from '../helpers/displayTree';
+import {
+  traceDisplayTree,
+  type DisplayTreeTrace,
+} from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -13,6 +22,7 @@ import {
   getColumnsByDataType,
   getDatasetId,
 } from '../selectors';
+import {getTrainerFamily} from '../trainers/ids';
 import type {
   Coordinate,
   ScatterPlotData,
@@ -230,3 +240,57 @@ export const getUniqueOptionsLabelColumn = createSelector(
     return getUniqueOptions(data, labelColumn!).map(String).sort();
   },
 );
+
+export const getDisplayTree = createSelector(
+  [
+    (state: RootState) => state.trainedModel,
+    getTrainerFamily,
+    (state: RootState) => state.selectedFeatures,
+    (state: RootState) => state.featureNumberKey,
+    getLabelColumn,
+  ],
+  (
+    trainedModel,
+    trainerFamily,
+    features: string[],
+    featureNumberKey: Record<string, Record<string, number>>,
+    labelColumn: string | undefined,
+  ): DisplayTreeNode | undefined => {
+    if (!trainedModel || !labelColumn || trainerFamily !== 'decisionTree') {
+      return undefined;
+    }
+    return buildDisplayTree(trainedModel.toJSON() as SerializedTree, {
+      features,
+      featureNumberKey,
+      labelColumn,
+    });
+  },
+);
+
+export const getPredictionTrace = createSelector(
+  [
+    getDisplayTree,
+    (state: RootState) => state.trainedModel,
+    (state: RootState) => state.prediction,
+    (state: RootState) => state.predictionInputs,
+    (state: RootState) => state.predictionTestData,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    prediction: number | string | undefined,
+    inputs: number[],
+    testData: DataRow,
+  ): DisplayTreeTrace | undefined => {
+    if (!tree || !trainedModel || prediction === undefined) {
+      return undefined;
+    }
+    const {root} = trainedModel.toJSON() as SerializedTree;
+    return traceDisplayTree(tree, root!, inputs, testData);
+  },
+);
+
+export function getPredictionStep(state: RootState): number {
+  const pathLength = getPredictionTrace(state)?.path.length ?? 0;
+  return state.predictionStep ?? pathLength - 1;
+}

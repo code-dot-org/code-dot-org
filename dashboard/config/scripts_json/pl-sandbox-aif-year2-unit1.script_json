@@ -1,0 +1,1511 @@
+{
+  "script": {
+    "name": "pl-sandbox-aif-year2-unit1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-10-02 16:30:13 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pl-sandbox-aif-year2-unit1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "What is AI, Really?",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Python Basics",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Optimization in Action",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Loop Basics",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Reasoning and It's Limits",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Conversational AI Project",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "46836efd-e059-4fbb-b367-90c6b94ebe96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46836efd-e059-4fbb-b367-90c6b94ebe96",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "01b0b0a6-2af8-4761-8f66-4175662aec16",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01b0b0a6-2af8-4761-8f66-4175662aec16",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "a0d6f0da-7b3f-40a7-9155-aff8cde5b794",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0d6f0da-7b3f-40a7-9155-aff8cde5b794",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "e153f06d-4088-4ec8-8ca1-9f30f0bb95ef",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro to Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "e153f06d-4088-4ec8-8ca1-9f30f0bb95ef",
+        "lesson_activity.key": "46836efd-e059-4fbb-b367-90c6b94ebe96"
+      }
+    },
+    {
+      "key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI Foundations Course Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0",
+        "lesson_activity.key": "46836efd-e059-4fbb-b367-90c6b94ebe96"
+      }
+    },
+    {
+      "key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7",
+      "position": 1,
+      "properties": {
+        "progression_name": "What is Intelligence?"
+      },
+      "seeding_key": {
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7",
+        "lesson_activity.key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67"
+      }
+    },
+    {
+      "key": "8f57faa1-120d-47f2-9674-1c1333a8b86a",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI's Past, Present, and Future"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a",
+        "lesson_activity.key": "d5daacc3-f6a9-4ecd-8149-1b592fb48f67"
+      }
+    },
+    {
+      "key": "95610e95-2209-4c82-8205-7082623cbd17",
+      "position": 1,
+      "properties": {
+        "progression_name": "Algorithms"
+      },
+      "seeding_key": {
+        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17",
+        "lesson_activity.key": "01b0b0a6-2af8-4761-8f66-4175662aec16"
+      }
+    },
+    {
+      "key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Hello, AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2",
+        "lesson_activity.key": "01b0b0a6-2af8-4761-8f66-4175662aec16"
+      }
+    },
+    {
+      "key": "240628d9-0098-430a-adde-387c5d10b4d1",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1",
+        "lesson_activity.key": "01b0b0a6-2af8-4761-8f66-4175662aec16"
+      }
+    },
+    {
+      "key": "14ad689c-583f-413a-a2c8-d4f516e31e7b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Optimization in Action"
+      },
+      "seeding_key": {
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b",
+        "lesson_activity.key": "a0d6f0da-7b3f-40a7-9155-aff8cde5b794"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "e153f06d-4088-4ec8-8ca1-9f30f0bb95ef"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l1-welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-pl-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "e153f06d-4088-4ec8-8ca1-9f30f0bb95ef"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l1-pl-overview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Foundations Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-course-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l1-course-overview"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Foundations Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-meet-ai-901"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l1-meet-ai-901"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Foundations Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-unit-1-alignment"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l1-unit-1-alignment"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Foundations Course Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-pl-format"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l1-pl-format"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intro"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-intro"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-what-is-intelligence"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-what-is-intelligence"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-turing-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-turing-test"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Intelligence?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intelligence-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-intelligence-facilitation"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Past, Present, and Future"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-ai-history"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Past, Present, and Future"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-ai-history-facilitation"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI's Past, Present, and Future"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-lesson-reflection"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l2-ai-lesson-reflection"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Algorithms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-intro"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Algorithms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-algorithms-panel"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-algorithms-panel"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Algorithms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-algorithms-facilitation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-algorithms-facilitation"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello, AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-variables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-variables"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello, AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-hello-ai"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-hello-ai"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello, AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-f-strings"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-f-strings"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello, AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-python-lab-variables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-python-lab-variables"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Hello, AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-hello-ai-facilitation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-hello-ai-facilitation"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-defining-functions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-defining-functions"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-python-lab-functions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-python-lab-functions"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-return-values"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-return-values"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-defining-functions-identify"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-defining-functions-identify"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 13,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-functions-facilitate"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-functions-facilitate"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 14,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-ai-lesson-reflection"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l3-ai-lesson-reflection"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-intro"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l4-intro"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-hill-climbing"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l4-hill-climbing"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-hill-climbing-simulation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l4-hill-climbing-simulation"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-thermostat-panel"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l4-thermostat-panel"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-u2-u1-l4-temp-web-lab"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-u2-u1-l4-temp-web-lab"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-facilitation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l4-facilitation"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-career-context"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l4-career-context"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimization in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-optimization-padlet"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l4-optimization-padlet"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l1-welcome",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "e153f06d-4088-4ec8-8ca1-9f30f0bb95ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l1-pl-overview",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-pl-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "e153f06d-4088-4ec8-8ca1-9f30f0bb95ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l1-course-overview",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-course-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l1-meet-ai-901",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-meet-ai-901"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l1-unit-1-alignment",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-unit-1-alignment"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l1-pl-format",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l1-pl-format"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7fc01195-1a43-45a1-9e18-dc6c95131cc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-intro",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intro"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-what-is-intelligence",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-what-is-intelligence"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-turing-test",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-turing-test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-intelligence-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-intelligence-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "7aeedd38-306e-42d3-94ff-6f032e0c1fe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-ai-history",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-ai-history-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-history-facilitation"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l2-ai-lesson-reflection",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l2-ai-lesson-reflection"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "8f57faa1-120d-47f2-9674-1c1333a8b86a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-intro",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-algorithms-panel",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-algorithms-panel"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-algorithms-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-algorithms-facilitation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "95610e95-2209-4c82-8205-7082623cbd17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-variables",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-variables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-hello-ai",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-hello-ai"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-f-strings",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-f-strings"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-python-lab-variables",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-python-lab-variables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-hello-ai-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-hello-ai-facilitation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "ffbf2cfb-84cf-49df-8011-605fcba5dbe2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-defining-functions",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-defining-functions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-python-lab-functions",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-python-lab-functions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-return-values",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-return-values"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-defining-functions-identify",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-defining-functions-identify"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-functions-facilitate",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-functions-facilitate"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l3-ai-lesson-reflection",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l3-ai-lesson-reflection"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "240628d9-0098-430a-adde-387c5d10b4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l4-intro",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-intro"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l4-hill-climbing",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-hill-climbing"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l4-hill-climbing-simulation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-hill-climbing-simulation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l4-thermostat-panel",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-thermostat-panel"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-u2-u1-l4-temp-web-lab",
+        "script_level.level_keys": [
+          "pl-aif-u2-u1-l4-temp-web-lab"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l4-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-facilitation"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l4-career-context",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-career-context"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l4-optimization-padlet",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l4-optimization-padlet"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "14ad689c-583f-413a-a2c8-d4f516e31e7b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

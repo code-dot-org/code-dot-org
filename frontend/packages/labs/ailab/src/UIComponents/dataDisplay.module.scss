@@ -1,0 +1,38 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.panel;
+
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+}
+
+.header {
+  @include mixins.panel-header;
+
+  gap: 8px;
+  padding-left: 10px;
+}
+
+.title {
+  white-space: nowrap;
+}
+
+.separator {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--background-neutral-quinary);
+}
+
+.header .rowCount {
+  white-space: nowrap;
+  color: var(--text-neutral-quaternary);
+}
+
+.tableContainer {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}

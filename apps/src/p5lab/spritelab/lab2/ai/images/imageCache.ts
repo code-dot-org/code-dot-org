@@ -12,13 +12,12 @@
 //   <base>/<version>/<adlibId>/<choice-ids>/<style>/<NN>-base.png  set frames
 //   <base>/<version>/<adlibId>/<choice-ids>/<style>/<NN>-walking.png ...
 //
-// The generator (apps/script/spritelabCachedImages) writes this tree; the
-// manifest names what exists and which variants review rejected.
+// A generator writes this tree offline; the manifest names what exists and
+// which variants review rejected.
 
 import type {GeneratedFile} from 'ai';
 
 import {bytesToBase64} from './encoding';
-import {POSED_FRAMES} from './prompts';
 import {ImageStyle, ImageType} from './types';
 
 /** Where a level's combo images come from. cached-then-live falls back to
@@ -39,12 +38,9 @@ export const IMAGE_CACHE_BASE_URL =
 // from its own manifest, and a browser may still hold the old one.
 export const IMAGE_CACHE_VERSION = 'v1';
 
-/** A character set's frames, the base first; a single image is 'single'. */
+/** A character set's frames by pose label, 'base' first (the sidecar lists
+    them); a single image is 'single'. */
 export type CachedFrame = 'single' | 'base' | string;
-export const CHARACTER_SET_FRAMES: string[] = [
-  'base',
-  ...POSED_FRAMES.map(f => f.label),
-];
 
 /** One combo set as the published manifest describes it. */
 export interface CachedAdlibEntry {

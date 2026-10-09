@@ -5,7 +5,7 @@ wrong 'The training data needs features, but not labels'
 wrong 'The training data needs labels, but not features'
 wrong 'The training data does not need either features or labels'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 When training a classifier, which of the following is true?

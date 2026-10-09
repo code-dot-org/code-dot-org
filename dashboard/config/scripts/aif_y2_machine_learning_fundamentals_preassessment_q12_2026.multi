@@ -5,7 +5,7 @@ wrong "The model's accuracy"
 wrong "The model's efficiency"
 right "The model's recall for spoiled food"
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A grocery store builds a classifier that checks if food has become spoiled. Which metric is the most important to prioritize for customer safety?

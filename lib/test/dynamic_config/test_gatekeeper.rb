@@ -15,7 +15,7 @@ class DynamicConfigGatekeeperTest < Minitest::Test
   }.freeze
 
   def setup
-    @mock_datastore = MiniTest::Mock.new
+    @mock_datastore = Minitest::Mock.new
     @gatekeeper = GatekeeperBase.new(@mock_datastore)
   end
 
