@@ -65,7 +65,7 @@ const TrainPanel = () => {
   };
 
   const onSelectAllFeatures = () => {
-    dispatch(setSelectedFeatures(selectableColumns.filter(column => column !== labelColumn)));
+    dispatch(setSelectedFeatures(featureOptions.map(option => option.value)));
   };
 
   const onRemoveAllFeatures = () => {

@@ -239,9 +239,8 @@ const ailabSlice = createSlice({
       );
     },
     setSelectedFeatures(state, action: PayloadAction<string[]>) {
-      state.selectedFeatures = action.payload;
       const columns = Object.keys(state.data[0] ?? {});
-      state.selectedFeatures.sort(
+      state.selectedFeatures = [...action.payload].sort(
         (a, b) => columns.indexOf(a) - columns.indexOf(b),
       );
     },
