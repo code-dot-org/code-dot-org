@@ -1,5 +1,6 @@
-// Room at the foot of the flyout for a bar pinned over its bottom edge, and
-// the flyout's width for sizing that bar.
+// Room the catalog asks of the flyout: a wider margin for the dots beside
+// its blocks, space at its foot for the bar pinned over its bottom edge,
+// and the flyout's width for sizing that bar.
 
 import * as BlocklyCore from 'blockly/core';
 
@@ -52,4 +53,26 @@ export function observeFlyoutWidth(
   const observer = new MutationObserver(report);
   observer.observe(svg, {attributes: true, attributeFilter: ['width']});
   return () => observer.disconnect();
+}
+
+/**
+ * Widen the flyout's margin, which sets how far its blocks sit from its
+ * left edge. The next show() lays the blocks out at the new margin.
+ * Returns an undo.
+ */
+export function installFlyoutMargin(
+  workspace: BlocklyCore.WorkspaceSvg | null | undefined,
+  px: number
+): () => void {
+  // Typed read-only; Blockly reads it per layout, so an instance value
+  // takes effect.
+  const flyout = flyoutOf(workspace) as unknown as {MARGIN: number} | null;
+  if (!flyout) {
+    return () => {};
+  }
+  const base = flyout.MARGIN;
+  flyout.MARGIN = px;
+  return () => {
+    flyout.MARGIN = base;
+  };
 }

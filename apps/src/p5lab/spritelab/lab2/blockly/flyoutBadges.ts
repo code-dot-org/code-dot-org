@@ -10,13 +10,16 @@ const GAP_PX = 12;
 // down it.
 const FIRST_ROW_PX = 36;
 const BADGE_PX = 20;
+const DOT_RADIUS_PX = 3.5;
 
-/** A new block's badge: a filled circle with a question mark that opens
-    the block's help. Bright for a standout, quiet otherwise. */
-export interface FlyoutBadge {
-  title: string;
-  bright?: boolean;
-}
+/**
+ * A block's badge: `help` is a filled circle with a question mark to the
+ * block's right that opens its help, bright for a standout and quiet
+ * otherwise; `dot` is a small plain circle in the margin to its left.
+ */
+export type FlyoutBadge =
+  | {kind: 'help'; title: string; bright?: boolean}
+  | {kind: 'dot'};
 
 export interface FlyoutBadgeOptions {
   badgeFor: (blockType: string) => FlyoutBadge | undefined;
@@ -51,7 +54,7 @@ export function installFlyoutBadges(
 }
 
 function badgeButton(
-  badge: FlyoutBadge,
+  badge: {title: string; bright?: boolean},
   onPress: (button: HTMLButtonElement) => void
 ): HTMLButtonElement {
   const button = document.createElementNS(
@@ -121,8 +124,23 @@ function decorateFlyout(
       }
       const xy = block.getRelativeToSurfaceXY();
       const {height, width} = block.getHeightWidth();
+      const rowMiddle = xy.y + firstRowMiddle(block, height);
+      if (badge.kind === 'dot') {
+        // Centered in the margin between the flyout's edge and the block.
+        BlocklyCore.utils.dom.createSvgElement(
+          BlocklyCore.utils.Svg.CIRCLE,
+          {
+            class: `${BADGE_CLASS} ${moduleStyles.dot}`,
+            cx: xy.x / 2,
+            cy: rowMiddle,
+            r: DOT_RADIUS_PX,
+          },
+          canvas
+        );
+        return;
+      }
       const x = xy.x + width + GAP_PX;
-      const y = xy.y + firstRowMiddle(block, height) - BADGE_PX / 2;
+      const y = rowMiddle - BADGE_PX / 2;
       const group = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.G,
         {class: BADGE_CLASS, transform: `translate(${x}, ${y})`},

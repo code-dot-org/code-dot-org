@@ -1,5 +1,8 @@
-// The badge beside a new toolbox block: a filled circle with a question
-// mark, in the flyout's SVG so it scrolls with its block.
+// The badges beside a toolbox block, in the flyout's SVG so they scroll
+// with it: a filled circle with a question mark to its right, or a small
+// dot in the margin to its left.
+
+@use '../views/catalog-dot' as catalog;
 
 .badge {
   display: flex;
@@ -33,4 +36,10 @@
 .bright {
   background: var(--background-accent-pink-primary);
   color: var(--neutral-base-white);
+}
+
+// The dot beside a block added from the catalog and not yet placed; the
+// catalog's list marks added blocks with the same dot.
+.dot {
+  fill: catalog.$catalog-dot;
 }

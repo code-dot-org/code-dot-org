@@ -1290,6 +1290,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     refreshToolbox,
   ]);
 
+  // ?new-blocks=reset puts the catalog back to nothing added, for trying
+  // the first landing again.
+  const resetCatalogRef = useRef(queryParams('new-blocks') === 'reset');
+  useEffect(() => {
+    if (resetCatalogRef.current && catalog.length && isEditable) {
+      resetCatalogRef.current = false;
+      patchSources({chosenBlocks: [], blockCatalogSeen: false});
+    }
+  }, [catalog.length, isEditable, patchSources]);
+
   // The catalog opens itself the first time the student lands here.
   useEffect(() => {
     if (
@@ -1844,8 +1854,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
   useFlyoutBadges({
-    enabled: !isToolboxMode && !catalogOn,
+    enabled: !isToolboxMode,
     newBlocks: levelProperties.newBlocks,
+    dotsFor: catalogOn ? chosenBlockSet : undefined,
     scenes,
     workspaceVersion,
     getWorkspace: getMainWorkspace,

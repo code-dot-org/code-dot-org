@@ -10,7 +10,7 @@ import {CatalogEntry} from '../blockCatalog';
 
 import moduleStyles from './block-catalog.module.scss';
 
-const TITLE = 'New blocks';
+const TITLE = 'Add new blocks';
 
 interface BlockCatalogDialogProps {
   entries: readonly CatalogEntry[];
@@ -48,8 +48,13 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
         className={moduleStyles.dialog}
       >
         <div className={moduleStyles.header}>
-          <h2>{TITLE}</h2>
-          <p>Pick a block to read about it, then add it to your toolbox.</p>
+          <div className={moduleStyles.headerIcon} aria-hidden="true">
+            <FontAwesomeV6Icon iconName="plus" />
+          </div>
+          <div>
+            <h2>{TITLE}</h2>
+            <p>Pick a block to read about it, then add it to your toolbox.</p>
+          </div>
         </div>
         <div className={moduleStyles.columns}>
           <ul className={moduleStyles.list}>
@@ -67,9 +72,9 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                     {entry.help.title}
                   </span>
                   {chosen.has(entry.type) && (
-                    <FontAwesomeV6Icon
-                      iconName="check"
+                    <span
                       className={moduleStyles.added}
+                      role="img"
                       aria-label="Added"
                     />
                   )}
@@ -97,18 +102,22 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                   </div>
                 </div>
                 <div className={moduleStyles.addRow}>
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    sx={getRunButtonSx(null)}
-                    disabled={added}
-                    startIcon={
-                      <FontAwesomeV6Icon iconName={added ? 'check' : 'plus'} />
-                    }
-                    onClick={() => onAdd(selected.type)}
-                  >
-                    {added ? 'Added' : 'Add block'}
-                  </MuiButton>
+                  {added ? (
+                    <p className={moduleStyles.addedNote}>
+                      <span className={moduleStyles.added} aria-hidden="true" />
+                      Added to your toolbox
+                    </p>
+                  ) : (
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      sx={getRunButtonSx(null)}
+                      startIcon={<FontAwesomeV6Icon iconName="plus" />}
+                      onClick={() => onAdd(selected.type)}
+                    >
+                      Add block
+                    </MuiButton>
+                  )}
                 </div>
               </>
             )}

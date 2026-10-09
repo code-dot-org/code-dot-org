@@ -1,8 +1,9 @@
-// A badge beside each toolbox block no earlier level of the unit offered
-// (the server's newBlocks) that the student's project has not used and that
-// has help: a filled circle with a question mark that opens the help. A
-// used block wears nothing, and stays bare for the visit even if the
-// student deletes it again.
+// A badge beside each toolbox block the student's project has not used:
+// on a level with the new-block catalog, a dot beside each block added from
+// it; otherwise, beside each block no earlier level of the unit offered (the
+// server's newBlocks) that has help, a filled circle with a question mark
+// that opens the help. A used block wears nothing, and stays bare for the
+// visit even if the student deletes it again.
 
 import * as BlocklyCore from 'blockly/core';
 import {useEffect, useMemo, useState} from 'react';
@@ -15,6 +16,7 @@ import {Scene} from '../types';
 export function useFlyoutBadges({
   enabled,
   newBlocks,
+  dotsFor,
   scenes,
   workspaceVersion,
   getWorkspace,
@@ -24,6 +26,9 @@ export function useFlyoutBadges({
   enabled: boolean;
   /** Block types no earlier level of the unit offered. */
   newBlocks: readonly string[] | undefined;
+  /** Set on a catalog level: the blocks added from the catalog, which get
+      dots instead of help badges. */
+  dotsFor?: ReadonlySet<string>;
   scenes: Scene[];
   /** Bumps when the workspace is re-injected. */
   workspaceVersion: number;
@@ -43,15 +48,21 @@ export function useFlyoutBadges({
 
   const fresh = useMemo(() => new Set(newBlocks ?? []), [newBlocks]);
   useEffect(() => {
-    if (!workspaceVersion || !enabled || fresh.size === 0) {
+    const marked = dotsFor ?? fresh;
+    if (!workspaceVersion || !enabled || marked.size === 0) {
       return;
     }
     const badgeFor = (type: string): FlyoutBadge | undefined => {
-      const entry = BLOCK_HELP[type];
-      if (!entry || !fresh.has(type) || seen.has(type)) {
+      if (!marked.has(type) || seen.has(type)) {
         return undefined;
       }
-      return {title: entry.title, bright: !!entry.standout};
+      if (dotsFor) {
+        return {kind: 'dot'};
+      }
+      const entry = BLOCK_HELP[type];
+      return entry
+        ? {kind: 'help', title: entry.title, bright: !!entry.standout}
+        : undefined;
     };
     const dispose = installFlyoutBadges(getWorkspace(), {
       badgeFor,
@@ -66,6 +77,7 @@ export function useFlyoutBadges({
   }, [
     enabled,
     fresh,
+    dotsFor,
     workspaceVersion,
     seen,
     getWorkspace,

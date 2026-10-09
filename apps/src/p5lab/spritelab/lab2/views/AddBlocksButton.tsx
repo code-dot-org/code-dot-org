@@ -5,13 +5,16 @@ import React, {useEffect, useState} from 'react';
 
 import {
   installFlyoutFooterRoom,
+  installFlyoutMargin,
   observeFlyoutWidth,
-} from '../blockly/flyoutFooter';
+} from '../blockly/flyoutRoom';
 
 import moduleStyles from './block-catalog.module.scss';
 
 // Matches .toolboxFooter's height in the stylesheet.
 const FOOTER_PX = 56;
+// Twice Blockly's own, so the dots beside added blocks have room.
+const MARGIN_PX = 16;
 
 interface AddBlocksButtonProps {
   /** Bumps when the workspace is re-injected. */
@@ -25,7 +28,7 @@ interface AddBlocksButtonProps {
 /**
  * The bar pinned over the bottom of the toolbox that opens the new-block
  * catalog. It takes the flyout's width, and the flyout gains room to scroll
- * its last block clear of it.
+ * its last block clear of it and a wider margin for the dots.
  */
 const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
   workspaceVersion,
@@ -40,9 +43,11 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
       return;
     }
     const workspace = getWorkspace();
+    const undoMargin = installFlyoutMargin(workspace, MARGIN_PX);
     const undoRoom = installFlyoutFooterRoom(workspace, FOOTER_PX);
     const undoWidth = observeFlyoutWidth(workspace, setWidth);
     return () => {
+      undoMargin();
       undoRoom();
       undoWidth();
     };

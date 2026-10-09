@@ -2,6 +2,7 @@
 // help on the right, and the bar pinned over the toolbox that opens it.
 
 @use '../../../../pixelEditor/dialogChrome' as chrome;
+@use 'catalog-dot' as catalog;
 
 $list-width: 220px;
 $footer-height: 56px;
@@ -23,7 +24,10 @@ $footer-height: 56px;
 }
 
 .header {
-  padding: 20px 24px 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px 14px;
 
   h2 {
     margin: 0 0 4px;
@@ -35,6 +39,21 @@ $footer-height: 56px;
     font-size: 14px;
     color: var(--dialog-text-secondary);
   }
+}
+
+// The same purple tile and plus as the toolbox's Add new blocks button,
+// tall enough to span the title and its line.
+.headerIcon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--background-brand-primary);
+  color: var(--neutral-base-white);
+  font-size: 28px;
 }
 
 .columns {
@@ -89,10 +108,13 @@ $footer-height: 56px;
   min-width: 0;
 }
 
-// The check beside an added block.
+// The dot beside an added block: the one its toolbox block wears.
 .added {
   flex: none;
-  color: var(--background-accent-orange-primary);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: catalog.$catalog-dot;
 }
 
 .info {
@@ -137,6 +159,15 @@ $footer-height: 56px;
 
 .addRow {
   margin-top: 16px;
+}
+
+// Takes the Add button's place once the block is in the toolbox.
+.addedNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-weight: 600;
 }
 
 .footer {
