@@ -16,9 +16,7 @@
 #  index_user_adaptive_steps_on_user_level_id_and_step_id  (user_level_id,step_id) UNIQUE
 #
 
-# A student's state on one step of an adaptive pathway, kept under the
-# adaptive level's UserLevel. A level step never has `progress`: its
-# progress is the UserLevel of the level behind it.
+# A student's state on one adaptive step; a level step's progress is its level's UserLevel.
 class UserAdaptiveStep < ApplicationRecord
   data_classification(
     id: :confidential,

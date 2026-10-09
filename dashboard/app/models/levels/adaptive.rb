@@ -31,8 +31,7 @@ class Adaptive < Level
     adaptive_id
   )
 
-  # Id of the project screen's step, which the client builds from the
-  # pathway's project rather than reading from a checkpoint.
+  # The project screen's step, which the client builds from the pathway's project.
   PROJECT_STEP_ID = 'project'.freeze
 
   validates :adaptive_id, presence: true
@@ -61,8 +60,7 @@ class Adaptive < Level
     AdaptiveContent.load(adaptive_id)
   end
 
-  # The step with `step_id`, or nil. The project screen's step is found as a
-  # level step for its template level.
+  # The step with `step_id`, or nil; `project` finds the project screen's step.
   def find_step(step_id)
     pathway = content
     return nil unless pathway
@@ -72,8 +70,7 @@ class Adaptive < Level
     {'id' => PROJECT_STEP_ID, 'kind' => 'level', 'level' => pathway.dig('project', 'templateLevel')}
   end
 
-  # Each level step's Level, by step id. The project screen's step is not a
-  # level step; a step whose level does not exist is left out.
+  # Level step id => Level, leaving out steps whose level does not exist.
   def step_levels
     pathway = content
     return {} unless pathway

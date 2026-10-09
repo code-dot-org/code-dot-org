@@ -122,8 +122,7 @@ class DeleteAccountsHelper
     @log.puts "Cleaned #{updated_rows} AuthoredHintViewRequest" if updated_rows > 0
   end
 
-  # Adaptive step rows hold student answers and generated text, so they are
-  # deleted rather than cleaned.
+  # The rows hold answers and generated text, so they are deleted, not cleaned.
   def delete_user_adaptive_steps(user_id)
     @log.puts "Deleting UserAdaptiveStep"
     user_level_ids = UserLevel.with_deleted.where(user_id: user_id).select(:id)
