@@ -148,7 +148,7 @@ const DISCOVER_SCHEMA = {
     legacyExports: {type: 'array', items: {type: 'string'}, description: 'Entry-point exports that still resolve to the legacy implementation ("default" included); a plain name re-pointed at the MUI version is not one'},
     legacyImports: {type: 'array', items: {type: 'string'}, description: 'Files outside the component directory that still import a legacy export'},
     eslintBanPresent: {type: 'boolean'},
-    codemod: {type: 'string', description: 'The component codemod path and its yarn script, or ""'},
+    codemod: {type: 'string', description: 'The component codemod path, or ""'},
     rows: {type: 'array', items: ROW_SCHEMA, description: 'The Deferred changes table, in table order'},
     reference: {type: 'string', description: 'A reference implementation the plan names (PR number, branch), or ""'},
     consumerFiles: {type: 'array', items: {type: 'string'}, description: 'Every file outside the component directory that imports from its entry point, sources and tests'},
@@ -198,7 +198,7 @@ ${TREE_RULES}
   Read each import's specifiers: a MuiX export aliased to a legacy name
   (import {MuiDialog as Dialog}) is the migrated form the codemod writes, not a legacy
   import. eslintBanPresent: ${ESLINT_APPS} has a no-restricted-imports entry for that path.
-  codemod: under ${CODEMODS_DIR} and ${LIB}/package.json. consumerFiles: every file
+  codemod: the component's file under ${CODEMODS_DIR}. consumerFiles: every file
   outside ${COMPONENT_DIR} that imports from the component entry point (git grep -l).
   consumerTestFiles: the tests of those files.
 
@@ -303,6 +303,12 @@ const TOUCHED_SCHEMA = {
   },
 }
 
+// The codemod outlives step 4 only so branches cut before it can still move their imports.
+const codemodGoes = remainingAfter.length
+  ? ''
+  : `\n6. Last step: delete ${discover.codemod || 'the component codemod'}, its entry in
+   ${CODEMODS_DIR}/README.md, and every mention of it in ${STATUS_DOC}, the component
+   README, ${SKILL_DOC} and ${ESLINT_APPS}. Nothing is left for it to rewrite.`
 const deleteLegacyBrief = `STEP 4: delete the legacy DSCO source. Behavior must not change: leave every disable*
 flag, slot override and legacy hook the MUI version still uses exactly as it is.
 
@@ -325,7 +331,7 @@ CODEMOD: ${discover.codemod || 'none'}
    bans no longer exist.
 5. Docs: ${STATUS_DOC} row notes step 4 is done; ${remainingAfter.length ? `keep its state, since ${remainingAfter.length} deferred row(s) remain` : 'the table is empty, so set it to **Migrated**'}; the component README
    loses its legacy section; ${SKILL_DOC} names the plain import; ${PLAN_DOC} gains a
-   "Legacy source deleted" paragraph under its Outcome.`
+   "Legacy source deleted" paragraph under its Outcome.${codemodGoes}`
 
 const rowBrief = row && `STEP 5, one deferred behavior: ${JSON.stringify(row)}
 OTHER ROWS (leave them alone; their legacy behavior stays): ${JSON.stringify(remainingAfter.map(r => r.behavior))}
@@ -346,7 +352,7 @@ REFERENCE IMPLEMENTATION: ${discover.reference || 'none named'}
    data-testid first). Report each edit in uiTestEdits. Do not run Cucumber or Playwright.
 5. Docs: delete the row from ${PLAN_DOC}'s Deferred changes table, and add one line under
    its Outcome saying what changed. ${remainingAfter.length ? `${STATUS_DOC}: keep the state, and drop this behavior from the row's note.` : `${STATUS_DOC}: the table is now empty, so set the row to **Migrated** and say so in the note.`}
-   Update the component README where it describes this behavior.`
+   Update the component README where it describes this behavior.${codemodGoes}`
 
 const exec = await agent(
   `You EXECUTE one finishing step of the MUI "${component}" migration. Edit files only;
