@@ -6,7 +6,6 @@
 //
 // Word ids are single words: a filled sentence is named by its ids joined
 // with '-' (imageCache.ts), so an id with a dash in it would blur the join.
-// The test pins the ids that still have one.
 
 import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {

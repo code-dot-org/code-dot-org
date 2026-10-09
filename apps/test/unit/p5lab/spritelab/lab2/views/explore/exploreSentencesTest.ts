@@ -8,26 +8,6 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
 import manifest from '@cdo/static/spritelab_lab2/exploreSentences.json';
 
-// Ids still carrying a dash, to be renamed in a content pass; none may be
-// added. The cache names a filled sentence by its ids joined with '-'.
-const DASHED_IDS = [
-  'a-crack',
-  'a-glow',
-  'a-ribbon',
-  'carved-patterns',
-  'distant-mountains',
-  'drifting-fog',
-  'falling-leaves',
-  'floating-lanterns',
-  'glowing-cracks',
-  'glowing-mushrooms',
-  'metal-bolts',
-  'moss-on-top',
-  'tiny-gems',
-  'tiny-sparkles',
-  'twinkling-lights',
-];
-
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
 describe('exploreSentences', () => {
@@ -124,19 +104,19 @@ describe('exploreSentences', () => {
     expect(
       full('place-time', {adjective: 'spooky', place: 'castle', time: 'night'})
     ).toBe('A spooky castle at night');
-    expect(
-      full('place-detail', {place: 'forest', detail: 'glowing-mushrooms'})
-    ).toBe('A forest with glowing mushrooms');
+    expect(full('place-detail', {place: 'forest', detail: 'mushrooms'})).toBe(
+      'A forest with glowing mushrooms'
+    );
     expect(full('block', {material: 'ice'})).toBe('A block of ice');
-    expect(full('block', {material: 'stone', detail: 'tiny-gems'})).toBe(
+    expect(full('block', {material: 'stone', detail: 'gems'})).toBe(
       'A block of stone with tiny gems'
     );
     expect(
-      full('treasure', {look: 'golden', treasure: 'key', detail: 'a-ribbon'})
+      full('treasure', {look: 'golden', treasure: 'key', detail: 'ribbon'})
     ).toBe('A golden key with a ribbon');
   });
 
-  it('word ids are single words, apart from the ones awaiting renames', () => {
+  it('word ids are single words: the cache joins them with dashes', () => {
     const words = [
       ...Object.values(manifest.wordSets).flat(),
       ...Object.values(manifest.sentences).flatMap(sentence =>
@@ -146,10 +126,7 @@ describe('exploreSentences', () => {
       ),
     ];
     expect(words.length).toBeGreaterThan(0);
-    const dashed = words
-      .map(word => word.id)
-      .filter(id => /[^a-z0-9]/.test(id));
-    expect([...new Set(dashed)].sort()).toEqual(DASHED_IDS);
+    words.forEach(word => expect(word.id).toMatch(/^[a-z0-9]+$/));
   });
 
   it("every sentence's optional slots are the ones inside phrases", () => {
