@@ -784,11 +784,10 @@ Do, in order:
    gets its own MUI story with that viewport and a play function asserting the rendered
    geometry. That story has no DSCO twin: leave it out of muiStories, which holds twins
    only; test-storybook in step 7 runs it.
-5. Codemod, if the plan requires it: ${CODEMODS_DIR}/${component}-to-mui.ts modeled on
-   button-to-mui-button.ts implementing exactly the planned transforms, and an entry in
-   ${CODEMODS_DIR}/README.md shaped like the button entry: one or two sentences, at most
-   four one-line bullets, and the command with a <path> placeholder, never hard-coded
-   paths. Import-shape rules and caveats go in the codemod's header comment and the
+5. Codemod, if the plan requires it: ${CODEMODS_DIR}/${component}-to-mui.ts implementing
+   exactly the planned transforms, and an entry in ${CODEMODS_DIR}/README.md: one or two
+   sentences, at most four one-line bullets, and the command with a <path> placeholder,
+   never hard-coded paths. Import-shape rules and caveats go in the codemod's header comment and the
    plan doc, not the README. No ${LIB}/package.json
    script: a codemod runs once per migration. Run it as TS_NODE_TRANSPILE_ONLY=true yarn
    jscodeshift -t <file> --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register,
@@ -1460,7 +1459,7 @@ STATE
   The note also names the deferred behaviors (${plan.deferredChanges.map(d => d.behavior).join(', ')}),
   links the "Deferred changes" section of ${PLAN_DOC}, and says they are lifecycle step 5.` : ''}
   ${SKILL_DOC}: ${fullyMigrated ? `move ${componentTitle} into the "Use MUI" list with the import to use and out of "Use DSCO".` : `leave ${componentTitle} under "Use DSCO"; consumers remain.`}
-  ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' next to the button entry, message naming the replacement${exec.codemodCommand ? ` and the codemod file under ${CODEMODS_DIR}` : ''}. If any non-legacy export still lives at that path, ban only the legacy names with importNames: ${JSON.stringify(legacyExports)}.` : 'No eslint rule: consumers remain on the legacy component.'}
+  ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' to its paths list, message naming the replacement${exec.codemodCommand ? ` and the codemod file under ${CODEMODS_DIR}` : ''}. If any non-legacy export still lives at that path, ban only the legacy names with importNames: ${JSON.stringify(legacyExports)}.` : 'No eslint rule: consumers remain on the legacy component.'}
   ${PLAN_DOC}: append an "Outcome" section: consumers migrated/left, verify result, parity
   result, apps parity result, codemod files rewritten/untouched.
   Run prettier from ${LIB} on the markdown you changed.
