@@ -39,14 +39,16 @@ export interface ParticleImage {
   canvas: CanvasImageSource;
 }
 
+/** An offscreen image the layer paints a tint into. */
+export interface TintedImage {
+  drawingContext: CanvasRenderingContext2D;
+}
+
 /** The p5 calls the layer needs beyond drawing. */
 export interface ParticleCanvas extends BurstCanvas, WeatherCanvas {
   frameCount: number;
   loadImage(url: string, done: (image: ParticleImage) => void): void;
-  createImage(
-    width: number,
-    height: number
-  ): {drawingContext: CanvasRenderingContext2D};
+  createImage(width: number, height: number): TintedImage;
 }
 
 type Color = [number, number, number];
@@ -59,7 +61,7 @@ export class ParticleLayer {
   private weather: Weather | null = null;
   // Loaded on the first burst, with a copy per palette colour.
   private images: Record<BurstShape, ParticleImage | null> | null = null;
-  private tinted = new Map<string, unknown>();
+  private tinted = new Map<string, TintedImage>();
   // The frame the particles last stepped in: a thumbnail capture paints
   // twice in one frame, and the particles must move once.
   private steppedFrame = -1;
@@ -161,7 +163,7 @@ export class ParticleLayer {
     p5: ParticleCanvas,
     shape: BurstShape,
     color: Color
-  ): unknown {
+  ): TintedImage | undefined {
     const image = this.images?.[shape];
     if (!image) {
       return undefined;
@@ -170,8 +172,7 @@ export class ParticleLayer {
     let tinted = this.tinted.get(key);
     if (!tinted) {
       tinted = p5.createImage(image.width, image.height);
-      const context = (tinted as {drawingContext: CanvasRenderingContext2D})
-        .drawingContext;
+      const context = tinted.drawingContext;
       // The image is white, so the colour is the whole tint; it keeps only
       // its own alpha.
       context.fillStyle = `rgb(${color.join(',')})`;

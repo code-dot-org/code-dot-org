@@ -55,7 +55,7 @@ interface Look {
       side. */
   fan?: number;
   /** Start positions scattered this far either side of the origin, so a
-      low burst reads as a cloud rather than one point. */
+      slow burst does not all leave from one point. */
   spread: number;
   speed: [number, number];
   /** Launch push against gravity. */
