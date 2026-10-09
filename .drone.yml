@@ -98,7 +98,7 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.23
+    image: codedotorg/cdo-ci:ruby-3.3
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -224,7 +224,7 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.24
+    image: codedotorg/cdo-ci:ruby-3.3
     pull: always
     # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
     # on the worker's primary ENI, reachable from Device Farm's Chrome via
@@ -322,7 +322,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.23
+    image: codedotorg/cdo-ci:ruby-3.3
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
