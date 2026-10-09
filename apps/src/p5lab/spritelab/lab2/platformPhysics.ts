@@ -50,6 +50,12 @@ export const LEDGE_FALL_SPEED = MIN_SOLID_OVERLAP;
 // line) measure.
 export const PLAYER_BODY_SCALE = 0.8;
 
+// How far (px/frame) a climbing player slides toward the ladder's column
+// when no sideways key is held: a ladder between two tiles then lines the
+// player up with the gap, instead of asking for an exact approach. Under
+// the walk speed, so a held sideways key still wins.
+export const LADDER_CENTERING_PX = 4;
+
 // The sprite fields the resolver reads; p5.play sprites satisfy these
 // structurally. Walls are read-only boxes; players also get their velocity
 // and position written.
@@ -246,6 +252,31 @@ export function resolvePlatformPhysics(
         x = Math.max(x, wall.x + wall.halfW + halfW);
       }
     });
+    // Climbing with no sideways movement centres the player on its ladder
+    // (see LADDER_CENTERING_PX), before the vertical pass decides whether
+    // a tile edge beside the ladder is under the body.
+    if (
+      !sprite.__slab2OffLadder &&
+      Math.abs(dx) <= CONTACT_EPSILON &&
+      Math.abs(dy) > CONTACT_EPSILON &&
+      onLadderAt(prev.x, prev.y, halfW, halfH, rungs)
+    ) {
+      const column = rungs
+        .filter(ladder => halfW + ladder.halfW - Math.abs(x - ladder.x) > 0)
+        .reduce<Box | null>(
+          (best, ladder) =>
+            !best || Math.abs(ladder.x - x) < Math.abs(best.x - x)
+              ? ladder
+              : best,
+          null
+        );
+      if (column) {
+        const toCenter = column.x - x;
+        x +=
+          Math.sign(toCenter) *
+          Math.min(Math.abs(toCenter), LADDER_CENTERING_PX);
+      }
+    }
     // Side containment uses the image box so the art stays on screen; the
     // top is open on purpose — a jump may carry above the screen, gravity
     // brings the player back.

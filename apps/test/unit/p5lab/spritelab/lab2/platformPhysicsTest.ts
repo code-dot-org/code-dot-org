@@ -646,6 +646,29 @@ describe('platformPhysics ladders', () => {
     expect(isSupported(player, walls, VIEW)).toBe(true);
   });
 
+  it('lines a climber up with a ladder that runs down between two tiles', () => {
+    // Tiles either side of the ladder's lower cells: the gap is one cell.
+    const gapWalls = [
+      ...walls,
+      wallAt(2, 5),
+      wallAt(4, 5),
+      wallAt(2, 6),
+      wallAt(4, 6),
+    ];
+    const player = makeSprite(187, 225);
+    for (let i = 0; i < 40; i++) {
+      climbStep(player, gapWalls, ladders, {vy: 5});
+    }
+    expect(player.position.x).toBe(175);
+    expect(feet(player)).toBe(350);
+  });
+
+  it('does not pull a player sideways while a sideways key is held', () => {
+    const player = makeSprite(187, 275);
+    climbStep(player, walls, ladders, {vx: 5, vy: -5});
+    expect(player.position.x).toBe(192);
+  });
+
   it('a jump lets go of the ladder until the player comes back to it', () => {
     const player = makeSprite(175, 275);
     climbStep(player, walls, ladders);
