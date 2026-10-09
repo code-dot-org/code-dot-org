@@ -5,8 +5,9 @@ import moduleStyles from './flyout-badges.module.scss';
 const XHTML_NS = 'http://www.w3.org/1999/xhtml';
 export const BADGE_CLASS = 'spritelab2FlyoutBadge';
 // Gap between a block's right edge and its badge.
-const GAP_PX = 6;
-// The badge centers on the block's first row, whatever the block's height.
+const GAP_PX = 12;
+// When a block's first row cannot be measured, the badge centers this far
+// down it.
 const FIRST_ROW_PX = 36;
 const BADGE_PX = 20;
 
@@ -83,6 +84,20 @@ function badgeButton(
   return button;
 }
 
+// How far down a block its first row's middle sits, in the block's own
+// units: measured from its first field, since a hat or a notch above the
+// row makes the block's top a poor guide.
+function firstRowMiddle(block: BlocklyCore.BlockSvg, height: number): number {
+  const field = block.inputList[0]?.fieldRow[0];
+  const fieldRect = field?.getSvgRoot()?.getBoundingClientRect();
+  const blockRect = block.getSvgRoot().getBoundingClientRect();
+  if (!fieldRect || !fieldRect.height || !blockRect.height) {
+    return Math.min(height, FIRST_ROW_PX) / 2;
+  }
+  const scale = blockRect.height / height;
+  return (fieldRect.top + fieldRect.height / 2 - blockRect.top) / scale;
+}
+
 function decorateFlyout(
   flyout: BlocklyCore.IFlyout,
   {badgeFor, onOpenHelp, onInvalidate}: FlyoutBadgeOptions
@@ -107,7 +122,7 @@ function decorateFlyout(
       const xy = block.getRelativeToSurfaceXY();
       const {height, width} = block.getHeightWidth();
       const x = xy.x + width + GAP_PX;
-      const y = xy.y + Math.min(height, FIRST_ROW_PX) / 2 - BADGE_PX / 2;
+      const y = xy.y + firstRowMiddle(block, height) - BADGE_PX / 2;
       const group = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.G,
         {class: BADGE_CLASS, transform: `translate(${x}, ${y})`},

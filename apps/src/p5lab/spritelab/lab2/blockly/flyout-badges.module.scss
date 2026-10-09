@@ -22,10 +22,12 @@
   }
 }
 
-// A quiet badge: a mid gray that stands off the panel without calling out.
+// A quiet badge: a darker pink than the standouts' bright one. The brand
+// pink primitives are the same in both themes; the semantic "strong" pink
+// lightens in the dark theme, where it would outshine the bright badge.
 .quiet {
-  background: var(--borders-neutral-strong);
-  color: var(--text-neutral-primary);
+  background: var(--brand-pink-70);
+  color: var(--neutral-base-white);
 }
 
 .bright {
