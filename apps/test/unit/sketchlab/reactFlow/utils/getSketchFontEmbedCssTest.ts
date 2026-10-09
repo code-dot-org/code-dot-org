@@ -32,6 +32,17 @@ const MAIN_FONT_STACK = "Geist, 'Noto Sans', 'Noto Sans JP', sans-serif";
 describe('getSketchFontEmbedCss', () => {
   let fetchMock: jest.Mock;
 
+  beforeAll(() => {
+    // jsdom parses @font-face rules but does not expose their constructor.
+    if (!('CSSFontFaceRule' in window)) {
+      addStyleSheet(geistFace('constructor-probe'));
+      const sheet = document.head.querySelector('style')?.sheet;
+      Object.assign(window, {
+        CSSFontFaceRule: sheet?.cssRules[0].constructor,
+      });
+    }
+  });
+
   beforeEach(() => {
     document.head.innerHTML = '';
     document.body.innerHTML = '';

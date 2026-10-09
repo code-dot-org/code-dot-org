@@ -1,8 +1,6 @@
 // Builds the `fontEmbedCSS` we hand to html-to-image when exporting a sketch.
 // By default, html-to-image inlines every font it finds on the page as base64,
-// which can get very large. Safari and iPadOS refuse to decode an SVG that large,
-// so exporting a sketch with any meaningful amount of content fails.
-//
+// which can get very large.
 // Instead we inline only the faces the sketch actually draws with, from
 // stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
 
@@ -91,8 +89,8 @@ const readFontFaceRules = (): CSSFontFaceRule[] => {
       return;
     }
     Array.from(sheetRules || []).forEach(rule => {
-      if (rule.type === CSSRule.FONT_FACE_RULE) {
-        rules.push(rule as CSSFontFaceRule);
+      if (rule instanceof CSSFontFaceRule) {
+        rules.push(rule);
       }
     });
   });
