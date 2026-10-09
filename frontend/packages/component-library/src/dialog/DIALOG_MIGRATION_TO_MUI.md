@@ -548,15 +548,17 @@ for the tests and stories). `index.ts` exports `Dialog`, `CustomDialog`,
 The plan kept the `Mui` names as aliases until consumers dropped them. They
 dropped them in the same change, so the aliases went too; `default` stays, as
 the policy says. The codemod now moves `Mui` names to the plain ones. One run
-over the tracked `apps/` and `frontend/` files rewrote the 49 consumers, and a
-second run rewrote none. `PixelEditorModal.tsx` needed the parentheses recast
-added around two JSX branches removed by hand, and `eslint --fix` joined
-`SignInOrAgeDialog.js`'s shortened import onto one line. `apps/.eslintrc.js`
-no longer restricts imports from the entry point. Behavior is unchanged: the
-`disable*` flags, the detached `container`, the paper slot and the DSCO hooks
-are as they were. The story ids are the legacy ones again
-(`designsystem-dialog-dialog--*`, `designsystem-dialog-customdialog--*`). The
-generated class names did not change (`_customDialogOverlay_1gbhd_1` before
-and after). The tests that opened a legacy dialog beside the wrapper now open
-two wrappers, and `DialogInNarrowViewport` moves with its stories to
-`stories/Dialog.story.tsx`.
+over the tracked `apps/` and `frontend/` files rewrote 49 files, the 48 `apps/`
+consumers and AI Lab's `TrainingModal.tsx`, and a second run rewrote none.
+`Modal.tsx` imports by file path and followed the rename by hand, as did AI
+Lab's `ResultsModal.tsx`, which reached staging after the run.
+`PixelEditorModal.tsx` needed the parentheses recast added around two JSX
+branches removed by hand, and `eslint --fix` joined `SignInOrAgeDialog.js`'s
+shortened import onto one line. `apps/.eslintrc.js` no longer restricts imports
+from the entry point. Behavior is unchanged: the `disable*` flags, the detached
+`container`, the paper slot and the DSCO hooks are as they were. The story ids
+are the legacy ones again (`designsystem-dialog-dialog--*`,
+`designsystem-dialog-customdialog--*`). The generated class names did not change
+(`_customDialogOverlay_1gbhd_1` before and after). The tests that opened a
+legacy dialog beside the wrapper now open two wrappers, and
+`DialogInNarrowViewport` moves with its stories to `stories/Dialog.story.tsx`.
