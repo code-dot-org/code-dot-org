@@ -1,6 +1,6 @@
-// The progress model: which checkpoints a student has started and completed,
-// and the status each checkpoint takes from that. Nothing here touches React
-// or storage; useProgress and progressStore build on it.
+// The progress model: each step's state for a student, and the status each
+// checkpoint takes from its steps. Nothing here touches React or storage;
+// useProgress and progressStore build on it.
 
 import {hashString} from '@cdo/apps/utils';
 
@@ -45,29 +45,53 @@ export function generateInputsHash(prompt: string): string {
   return hashString(prompt);
 }
 
-export interface Progress {
-  completed: string[];
-  started: string[];
-  stepContext: {[stepId: string]: StepContext};
+/** Id of the project screen's step, which records no progress. */
+export const PROJECT_STEP_ID = 'project';
+
+/**
+ * A step's state, as the server reports it. A level step carries only
+ * status and timeSpent, taken from its level's own progress.
+ */
+export interface StepProgress {
+  status: 'started' | 'complete';
+  /** Seconds on screen, summed across visits. */
+  timeSpent: number;
+  startedAt?: string;
+  completedAt?: string;
+  submitted?: boolean;
+  answers?: StepAnswers;
 }
 
-export const EMPTY_PROGRESS: Progress = {
-  completed: [],
-  started: [],
-  stepContext: {},
+/** Every started step's state, by step id. */
+export interface Progress {
+  steps: {[stepId: string]: StepProgress};
+}
+
+export const EMPTY_PROGRESS: Progress = {steps: {}};
+
+const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
+  const last = checkpoint.steps[checkpoint.steps.length - 1];
+  return !!last && progress.steps[last.id]?.status === 'complete';
 };
 
-/** A checkpoint unlocks once every checkpoint it requires is complete. */
+/**
+ * A checkpoint is started by any of its steps and complete with its last
+ * step. It unlocks once every checkpoint it requires is complete.
+ */
 export function checkpointStatus(
   checkpoint: Checkpoint,
+  pathway: Pathway,
   progress: Progress
 ): CheckpointStatus {
-  if (progress.completed.includes(checkpoint.id)) return 'complete';
-  const unlocked = (checkpoint.requires || []).every(r =>
-    progress.completed.includes(r)
-  );
+  if (isComplete(checkpoint, progress)) return 'complete';
+  const unlocked = (checkpoint.requires || []).every(r => {
+    const required = pathway.checkpoints.find(c => c.id === r);
+    return !!required && isComplete(required, progress);
+  });
   if (!unlocked) return 'locked';
-  return progress.started.includes(checkpoint.id) ? 'inProgress' : 'available';
+  return checkpoint.steps.some(s => progress.steps[s.id]?.status)
+    ? 'inProgress'
+    : 'available';
 }
 
 export function getStatusMap(
@@ -75,6 +99,6 @@ export function getStatusMap(
   progress: Progress
 ): CheckpointStatusMap {
   return Object.fromEntries(
-    pathway.checkpoints.map(c => [c.id, checkpointStatus(c, progress)])
+    pathway.checkpoints.map(c => [c.id, checkpointStatus(c, pathway, progress)])
   );
 }
