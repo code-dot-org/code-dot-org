@@ -497,10 +497,7 @@ export function sendSuccessReportForLevel(
   };
 }
 
-// Records progress on one of an adaptive pathway's step levels. The step's
-// level is not in the lesson, so it reports under the adaptive level's script
-// level, and its result is not merged into lesson progress. timeMs is the
-// step's own time on screen since its last report.
+// Reports a step level, absent from the lesson, under the adaptive script level.
 export function sendAdaptiveStepReport(
   levelId: number,
   result: number,

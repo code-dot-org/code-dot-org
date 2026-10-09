@@ -91,8 +91,7 @@ class AdaptiveProgressController < ApplicationController
     UserLevel.where(user_id: current_user.id, level_id: @level.id, script_id: @unit.id).first
   end
 
-  # Goes through the milestone path, so a concurrent Start milestone and this
-  # request find the same record.
+  # Through the milestone path, so a racing Start milestone finds the same row.
   private def start_adaptive_user_level
     user_level, _ = User.track_level_progress(
       user_id: current_user.id,
@@ -143,8 +142,7 @@ class AdaptiveProgressController < ApplicationController
     (value.is_a?(Hash) || value.is_a?(Array)) && value.to_json.bytesize <= MAX_JSON_BYTES
   end
 
-  # The question id and the answers to store for it, with correctness taken
-  # from the content, or nil when the answers do not fit the question.
+  # [question id, answers graded from the content], or nil if they do not fit.
   private def graded_answers(step, answers)
     return nil unless answers.is_a?(Hash) && answers['list'].is_a?(Array)
     question_id = answers['questionId'].to_s

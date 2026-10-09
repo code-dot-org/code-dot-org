@@ -254,8 +254,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  # Under an adaptive level's script level, the only other levels that may
-  # report progress are that pathway's step levels.
+  # Under an adaptive script level, only the pathway's step levels may also report.
   private def outside_adaptive_pathway?
     return false unless @script_level && @level
     return false if @script_level.levels.include?(@level)
