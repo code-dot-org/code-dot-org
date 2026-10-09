@@ -22,20 +22,8 @@ Importing the package defines the element and exports its class,
 ## The media interface
 
 `<json-video>` implements the parts of `HTMLMediaElement` that controls need,
-so code written for `<video>` drives it unchanged:
-
-- Attributes, reflected as properties: `src`, `poster`, `controls`,
-  `autoplay`, `loop`, `muted` (the initial state, as `defaultMuted`).
-- Properties: `currentTime`, `duration` (NaN until loaded), `paused`, `ended`,
-  `seeking`, `volume`, `muted`, `playbackRate`, `defaultPlaybackRate`,
-  `readyState`, `networkState`, `currentSrc`, `error`, `buffered`, `seekable`,
-  `played`, `textTracks`.
-- Methods: `play()` (returns a promise), `pause()`, `load()`, `fastSeek()`,
-  `canPlayType()`.
-- Events: the native loading sequence (`loadstart` through `canplaythrough`),
-  `play`, `playing`, `pause`, `waiting`, `seeking`, `seeked`, `timeupdate`
-  (every 250 ms while playing), `ended`, `volumechange`, `ratechange`,
-  `emptied`, `abort`, `error`.
+so code written for `<video>` drives it unchanged. `src/jsonVideoElement.d.ts`
+declares exactly which.
 
 Captions: each scene's `speech` is a cue on the one captions track in
 `textTracks`. Setting its `mode` to `showing` draws them in the built-in
