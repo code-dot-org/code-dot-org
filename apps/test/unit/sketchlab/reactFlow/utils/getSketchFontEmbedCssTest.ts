@@ -1,4 +1,15 @@
 import {getSketchFontEmbedCss} from '@cdo/apps/sketchlab/reactFlow/utils/getSketchFontEmbedCss';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+
+jest.mock('@cdo/apps/util/HttpClient');
+
+const mockGet = HttpClient.get as jest.MockedFunction<typeof HttpClient.get>;
+
+const fontResponse = (bytes: number[]) =>
+  ({
+    blob: () =>
+      Promise.resolve(new Blob([new Uint8Array(bytes)], {type: 'font/woff2'})),
+  } as unknown as Response);
 
 // Each test uses its own font file names: the module caches downloads by URL
 // for the lifetime of the page, and that cache outlives a single test.
@@ -58,8 +69,6 @@ const MAIN_FONT_STACK =
   "Geist, 'Noto Sans', 'Noto Sans Hebrew', 'Noto Sans JP', sans-serif";
 
 describe('getSketchFontEmbedCss', () => {
-  let fetchMock: jest.Mock;
-
   beforeAll(() => {
     // jsdom parses @font-face rules but does not expose their constructor.
     if (!('CSSFontFaceRule' in window)) {
@@ -74,16 +83,7 @@ describe('getSketchFontEmbedCss', () => {
   beforeEach(() => {
     document.head.innerHTML = '';
     document.body.innerHTML = '';
-    fetchMock = jest.fn(() =>
-      Promise.resolve({
-        ok: true,
-        blob: () =>
-          Promise.resolve(
-            new Blob([new Uint8Array([1, 2, 3])], {type: 'font/woff2'})
-          ),
-      })
-    );
-    (globalThis as unknown as {fetch?: jest.Mock}).fetch = fetchMock;
+    mockGet.mockResolvedValue(fontResponse([1, 2, 3]));
   });
 
   // jest.config.js clears mocks between tests but does not restore them, and
@@ -101,8 +101,8 @@ describe('getSketchFontEmbedCss', () => {
     expect(css).toContain('font-family: ');
     expect(css).toContain('url(data:font/woff2;base64,AQID)');
     expect(css).not.toContain('regular-inline.woff2');
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock).toHaveBeenCalledWith(
+    expect(mockGet).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledWith(
       'http://localhost-studio.code.org/fonts/regular-inline.woff2'
     );
   });
@@ -117,8 +117,8 @@ describe('getSketchFontEmbedCss', () => {
 
     await getSketchFontEmbedCss(document.body);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock).toHaveBeenCalledWith(
+    expect(mockGet).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledWith(
       'http://localhost-studio.code.org/fonts/bold-unused.woff2'
     );
   });
@@ -129,7 +129,7 @@ describe('getSketchFontEmbedCss', () => {
 
     await getSketchFontEmbedCss(document.body);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledTimes(1);
   });
 
   it('embeds nothing when the sketch only uses OS fonts', async () => {
@@ -139,7 +139,7 @@ describe('getSketchFontEmbedCss', () => {
     const css = await getSketchFontEmbedCss(document.body);
 
     expect(css).toBe('');
-    expect(fetchMock).not.toHaveBeenCalled();
+    expect(mockGet).not.toHaveBeenCalled();
   });
 
   it('embeds nothing when the sketch has no text', async () => {
@@ -151,7 +151,7 @@ describe('getSketchFontEmbedCss', () => {
     const css = await getSketchFontEmbedCss(document.body);
 
     expect(css).toBe('');
-    expect(fetchMock).not.toHaveBeenCalled();
+    expect(mockGet).not.toHaveBeenCalled();
   });
 
   it('drops a face whose file fails to download and keeps the rest', async () => {
@@ -160,13 +160,12 @@ describe('getSketchFontEmbedCss', () => {
     );
     addTextElement(MAIN_FONT_STACK);
     addTextElement(MAIN_FONT_STACK, 'font-weight: 700;');
-    fetchMock.mockImplementation((url: string) =>
+    mockGet.mockImplementation((url: string) =>
       url.includes('missing-file')
-        ? Promise.resolve({ok: false, status: 404})
-        : Promise.resolve({
-            ok: true,
-            blob: () => Promise.resolve(new Blob([new Uint8Array([4])])),
-          })
+        ? Promise.reject(
+            new NetworkError('404 Not Found', {status: 404} as Response)
+          )
+        : Promise.resolve(fontResponse([4]))
     );
 
     const css = await getSketchFontEmbedCss(document.body);
@@ -182,7 +181,7 @@ describe('getSketchFontEmbedCss', () => {
     await getSketchFontEmbedCss(document.body);
     await getSketchFontEmbedCss(document.body);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledTimes(1);
   });
 
   it('inlines a bundled fallback font, not just the primary one', async () => {
@@ -199,8 +198,8 @@ describe('getSketchFontEmbedCss', () => {
 
     await getSketchFontEmbedCss(document.body);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock).toHaveBeenCalledWith(
+    expect(mockGet).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledWith(
       'http://localhost-studio.code.org/fonts/hebrew-used.woff2'
     );
   });
@@ -217,8 +216,8 @@ describe('getSketchFontEmbedCss', () => {
 
     await getSketchFontEmbedCss(document.body);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock).toHaveBeenCalledWith(
+    expect(mockGet).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledWith(
       'http://localhost-studio.code.org/fonts/latin-subset.woff2'
     );
   });
@@ -235,8 +234,8 @@ describe('getSketchFontEmbedCss', () => {
 
     await getSketchFontEmbedCss(document.body);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock).toHaveBeenCalledWith(
+    expect(mockGet).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledWith(
       'http://localhost-studio.code.org/fonts/first-geist.woff2'
     );
   });
@@ -259,7 +258,7 @@ describe('getSketchFontEmbedCss', () => {
 
     // Geist for the Latin, Noto Sans Hebrew for the Hebrew, and nothing from
     // Noto Sans: Geist already covers every Latin character.
-    expect(fetchMock.mock.calls.map(([url]: [string]) => url).sort()).toEqual([
+    expect(mockGet.mock.calls.map(([url]) => url).sort()).toEqual([
       'http://localhost-studio.code.org/fonts/mixed-geist.woff2',
       'http://localhost-studio.code.org/fonts/mixed-hebrew.woff2',
     ]);
@@ -289,8 +288,8 @@ describe('getSketchFontEmbedCss', () => {
 
     const css = await getSketchFontEmbedCss(document.body);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock).toHaveBeenCalledWith(
+    expect(mockGet).toHaveBeenCalledTimes(1);
+    expect(mockGet).toHaveBeenCalledWith(
       'http://localhost-studio.code.org/fonts/two-source.woff2'
     );
     // The surviving url would point at a server the exported image cannot reach.

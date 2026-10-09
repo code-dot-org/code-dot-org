@@ -1,3 +1,5 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 // Builds the `fontEmbedCSS` we hand to html-to-image when exporting a sketch.
 // By default, html-to-image inlines every font it finds on the page as base64,
 // which can get very large.
@@ -204,13 +206,8 @@ const fetchFontAsDataUrl = (url: string): Promise<string> => {
   if (cached) {
     return cached;
   }
-  const pending = fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Font request failed with status ${response.status}`);
-      }
-      return response.blob();
-    })
+  const pending = HttpClient.get(url)
+    .then(response => response.blob())
     .then(blobToDataUrl);
   // Cache the download across exports, but not a failure.
   fontFileCache.set(url, pending);
