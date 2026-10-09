@@ -4,10 +4,12 @@ import moduleStyles from './flyout-badges.module.scss';
 
 const XHTML_NS = 'http://www.w3.org/1999/xhtml';
 export const BADGE_CLASS = 'spritelab2FlyoutBadge';
-// Gap between a block's right edge and its badge.
-const GAP_PX = 12;
-// A badge centers on the block's first row, whatever the block's height.
-const FIRST_ROW_PX = 36;
+// A badge sits on the block's top-right corner, this much of it past the
+// right edge and this much of it down over the block; the rest lies in the
+// gap above, so the flyout need not widen for it and the block's own
+// fields stay readable. The first row's badge is clamped into the canvas.
+const OVERHANG_PX = 10;
+const OVERLAP_PX = 6;
 // The hollow help icon: on its own, or forming the left end of a pill, its
 // circle sitting in the pill's curve.
 const ICON_PX = 20;
@@ -119,9 +121,10 @@ function decorateFlyout(
       }
       const {help, text, bright} = badge;
       const xy = block.getRelativeToSurfaceXY();
-      const {height, width} = block.getHeightWidth();
-      const x = xy.x + width + GAP_PX;
-      const rowMiddle = xy.y + Math.min(height, FIRST_ROW_PX) / 2;
+      const {width} = block.getHeightWidth();
+      const right = xy.x + width + OVERHANG_PX;
+      const top = (badgeHeight: number) =>
+        Math.max(0, xy.y - badgeHeight + OVERLAP_PX);
       const open = (button: HTMLButtonElement) =>
         onOpenHelp(block.type, button.getBoundingClientRect());
 
@@ -130,7 +133,7 @@ function decorateFlyout(
           BlocklyCore.utils.Svg.G,
           {
             class: BADGE_CLASS,
-            transform: `translate(${x}, ${rowMiddle - ICON_PX / 2})`,
+            transform: `translate(${right - ICON_PX}, ${top(ICON_PX)})`,
           },
           canvas
         );
@@ -142,7 +145,7 @@ function decorateFlyout(
         container.appendChild(
           helpButton(help.title, moduleStyles.helpButton, open)
         );
-        badgesRight = Math.max(badgesRight, x + ICON_PX);
+        badgesRight = Math.max(badgesRight, right);
         return;
       }
 
@@ -151,10 +154,7 @@ function decorateFlyout(
         // A stamp with help is one button: the whole pill opens the callout.
         const group = BlocklyCore.utils.dom.createSvgElement(
           BlocklyCore.utils.Svg.G,
-          {
-            class: BADGE_CLASS,
-            transform: `translate(${x}, ${rowMiddle - PILL_HEIGHT_PX / 2})`,
-          },
+          {class: BADGE_CLASS},
           canvas
         );
         const container = BlocklyCore.utils.dom.createSvgElement(
@@ -169,19 +169,21 @@ function decorateFlyout(
           text
         );
         container.appendChild(button);
-        // Sized by its own text; the foreignObject must be told.
+        // Sized by its own text; the foreignObject must be told, and the
+        // pill placed once its width is known.
         const pillWidth = Math.ceil(button.getBoundingClientRect().width);
         container.setAttribute('width', String(pillWidth));
-        badgesRight = Math.max(badgesRight, x + pillWidth);
+        group.setAttribute(
+          'transform',
+          `translate(${right - pillWidth}, ${top(PILL_HEIGHT_PX)})`
+        );
+        badgesRight = Math.max(badgesRight, right);
         return;
       }
 
       const group = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.G,
-        {
-          class: `${BADGE_CLASS} ${moduleStyles.stamp} ${tone}`,
-          transform: `translate(${x}, ${rowMiddle - PILL_HEIGHT_PX / 2})`,
-        },
+        {class: `${BADGE_CLASS} ${moduleStyles.stamp} ${tone}`},
         canvas
       );
       group.setAttribute('aria-hidden', 'true');
@@ -207,14 +209,18 @@ function decorateFlyout(
       const pillWidth =
         PILL_PADDING_PX * 2 + Math.ceil(label.getComputedTextLength());
       rect.setAttribute('width', String(pillWidth));
-      badgesRight = Math.max(badgesRight, x + pillWidth);
+      group.setAttribute(
+        'transform',
+        `translate(${right - pillWidth}, ${top(PILL_HEIGHT_PX)})`
+      );
+      badgesRight = Math.max(badgesRight, right);
     });
     fitFlyout(badgesRight);
   };
 
-  // Blockly sizes the flyout to its blocks; a badge past the widest block
-  // would be clipped. Widen it the way reflowInternal_ does, under the same
-  // cap CdoVerticalFlyout applies (40% of the workspace).
+  // Blockly sizes the flyout to its blocks; a badge's overhang past the
+  // widest block would be clipped. Widen it the way reflowInternal_ does,
+  // under the same cap CdoVerticalFlyout applies (40% of the workspace).
   const fitFlyout = (badgesRight: number) => {
     const base = flyout as BlocklyCore.Flyout;
     const scale = flyoutWorkspace.scale;
