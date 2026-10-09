@@ -22,7 +22,7 @@ This guide documents how to migrate the custom Button component to MUI Button wh
 
 ### Component Structure
 
-The current Button system consists of:
+The DSCO Button system consisted of:
 
 - **`GenericButton`** - Base component that handles both `<button>` and `<a>` tags
 - **`Button`** - Wrapper for `<button>` elements
