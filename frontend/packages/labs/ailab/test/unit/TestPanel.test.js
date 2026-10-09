@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@mui/material/styles';
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
 
@@ -10,6 +10,7 @@ import I18n from '../../src/i18n';
 import {setPrediction} from '../../src/redux';
 import train from '../../src/train';
 import TestPanel from '../../src/UIComponents/TestPanel';
+import {STEP_INTERVAL_MS} from '../../src/UIComponents/TraceStepper';
 
 import {levelStore} from './levelStore';
 
@@ -53,8 +54,43 @@ function predictSnake() {
   fireEvent.click(predictButton());
 }
 
+function predictBird() {
+  fireEvent.change(screen.getByLabelText('legs'), {target: {value: '2'}});
+  fireEvent.click(predictButton());
+}
+
 function predictButton() {
   return screen.getByRole('button', {name: 'Predict'});
+}
+
+function status() {
+  return screen.getByRole('status').textContent.replaceAll('\u200B', '');
+}
+
+function watchStatus() {
+  const observer = new MutationObserver(() => {});
+  observer.observe(screen.getByRole('status'), {
+    childList: true,
+    subtree: true,
+    characterData: true,
+  });
+  return () => observer.takeRecords().length;
+}
+
+function stepAnnouncement(index) {
+  const steps = within(screen.getByRole('list')).getAllByRole('listitem');
+  const [, text] = steps[index].children;
+  return `Step ${index + 1} of ${steps.length}: ${text.textContent}`;
+}
+
+function pathAnnouncement(prediction) {
+  const stepCount = within(screen.getByRole('list')).getAllByRole(
+    'listitem',
+  ).length;
+  return [
+    `AI predicts ${prediction}`,
+    ...Array.from({length: stepCount}, (_, index) => stepAnnouncement(index)),
+  ].join('. ');
 }
 
 describe('TestPanel', () => {
@@ -138,33 +174,96 @@ describe('TestPanel', () => {
     const current = () =>
       steps.filter(step => step.getAttribute('aria-current') === 'step');
 
-    expect(current()).toEqual([steps[steps.length - 1]]);
+    expect(current()).toEqual([steps[0]]);
 
-    fireEvent.click(screen.getByRole('button', {name: 'Previous step'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Next step'}));
 
-    expect(current()).toEqual([steps[steps.length - 2]]);
+    expect(current()).toEqual([steps[1]]);
   });
 
-  test('a decision tree announces its prediction, then each step, but never its controls', () => {
+  test('a decision tree announces its whole path, then each step taken by hand, but never its controls', () => {
     const store = trainedAnimalStore({trainer: 'decisionTree'});
     renderTestPanel(store);
-    const previousStep = () =>
-      screen.getByRole('button', {name: 'Previous step'});
+    const nextStep = () => screen.getByRole('button', {name: 'Next step'});
+    const textNodes = () => [...screen.getByRole('status').childNodes];
 
-    expect(screen.getByRole('status').textContent).toBe('');
+    expect(status()).toBe('');
 
     predictSnake();
 
-    expect(screen.getByRole('status').textContent).toBe('AI predicts snake');
-    expect(previousStep().closest('[aria-live], [role="status"]')).toBeNull();
+    expect(status()).toBe(pathAnnouncement('snake'));
+    expect(textNodes().map(node => node.nodeType)).toEqual([Node.TEXT_NODE]);
+    expect(nextStep().closest('[aria-live], [role="status"]')).toBeNull();
 
-    fireEvent.click(previousStep());
-    const steps = within(screen.getByRole('list')).getAllByRole('listitem');
-    const [, text] = steps[steps.length - 2].children;
+    fireEvent.click(nextStep());
 
-    expect(screen.getByRole('status').textContent).toBe(
-      `Step ${steps.length - 1} of ${steps.length}: ${text.textContent}`,
-    );
+    expect(status()).toBe(stepAnnouncement(1));
+    expect(textNodes().map(node => node.nodeType)).toEqual([Node.TEXT_NODE]);
+  });
+
+  describe('a decision tree, as its path plays', () => {
+    const replay = () =>
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Replay from the start'}),
+      );
+    const skip = () =>
+      fireEvent.click(screen.getByRole('button', {name: 'Skip to the answer'}));
+
+    beforeEach(() => {
+      vi.useFakeTimers();
+      renderTestPanel(trainedAnimalStore({trainer: 'decisionTree'}));
+    });
+    afterEach(() => {
+      vi.useRealTimers();
+      vi.unstubAllGlobals();
+    });
+
+    test('says nothing more while it plays or skips', () => {
+      predictBird();
+      const changes = watchStatus();
+
+      act(() => {
+        vi.advanceTimersByTime(STEP_INTERVAL_MS);
+      });
+      skip();
+
+      expect(changes()).toBe(0);
+      expect(status()).toBe(pathAnnouncement('bird'));
+    });
+
+    test('reads the whole path again on Replay, and on the same prediction made again', () => {
+      predictBird();
+      skip();
+      const changes = watchStatus();
+
+      replay();
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(pathAnnouncement('bird'));
+
+      fireEvent.click(predictButton());
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(pathAnnouncement('bird'));
+    });
+
+    test('reads the first step on each Replay under reduced motion', () => {
+      vi.stubGlobal('matchMedia', query => ({
+        matches: query.includes('reduce'),
+      }));
+      predictBird();
+      const changes = watchStatus();
+
+      replay();
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(stepAnnouncement(0));
+
+      replay();
+
+      expect(changes()).toBeGreaterThan(0);
+      expect(status()).toBe(stepAnnouncement(0));
+    });
   });
 
   test('a KNN model shows its prediction without steps', () => {
@@ -177,7 +276,7 @@ describe('TestPanel', () => {
       screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/}),
     ).toBeTruthy();
     expect(screen.queryByRole('list')).toBeNull();
-    expect(screen.getByRole('status').textContent).toBe(
+    expect(status()).toBe(
       screen.getByRole('heading', {name: /^AI predicts/}).textContent,
     );
   });

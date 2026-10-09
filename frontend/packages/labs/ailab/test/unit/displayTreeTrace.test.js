@@ -2,7 +2,7 @@ import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
 import {traceDisplayTree} from '../../src/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
-import {setPredictionStep, setTestData} from '../../src/redux';
+import {playPredictionStep, setTestData} from '../../src/redux';
 import {
   getDisplayTree,
   getPredictionStep,
@@ -229,7 +229,7 @@ describe('getPredictionStep', () => {
 
     expect(getPredictionStep(store.getState())).toBe(path.length - 1);
 
-    store.dispatch(setPredictionStep(0));
+    store.dispatch(playPredictionStep(0));
 
     expect(getPredictionStep(store.getState())).toBe(0);
   });

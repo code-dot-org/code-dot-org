@@ -1,32 +1,106 @@
-import {IconButton, iconButtonClasses} from '@mui/material';
+import {Button, IconButton, iconButtonClasses} from '@mui/material';
 import classNames from 'classnames';
+import {useCallback, useEffect, useLayoutEffect} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {useAppDispatch} from '../hooks';
-import {setPredictionStep} from '../redux';
+import {prefersReducedMotion} from '../helpers/utils';
+import {useAppDispatch, useAppSelector} from '../hooks';
+import {
+  playPredictionStep,
+  setPredictionPlaying,
+  stepPredictionByHand,
+} from '../redux';
 
 import styles from './traceStepper.module.scss';
+
+export const STEP_INTERVAL_MS = 1000;
 
 interface TraceStepperProps {
   step: number;
   stepCount: number;
+  onReplay: () => void;
 }
 
-const TraceStepper = ({step, stepCount}: TraceStepperProps) => {
+const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
   const dispatch = useAppDispatch();
+  const playing = useAppSelector(state => state.predictionPlaying);
+  const lastStep = stepCount - 1;
   // aria-disabled, not disabled, so a button that reaches an end keeps focus.
   const atStart = step <= 0;
-  const atEnd = step >= stepCount - 1;
+  const atEnd = step >= lastStep;
+
+  const play = useCallback(() => {
+    dispatch(playPredictionStep(0));
+    dispatch(setPredictionPlaying(true));
+  }, [dispatch]);
+
+  useLayoutEffect(() => {
+    if (!prefersReducedMotion()) {
+      play();
+    }
+  }, [play]);
+
+  useEffect(() => {
+    if (!playing) {
+      return;
+    }
+    let next = 0;
+    const timer = window.setInterval(() => {
+      next++;
+      dispatch(playPredictionStep(next));
+      if (next >= lastStep) {
+        dispatch(setPredictionPlaying(false));
+      }
+    }, STEP_INTERVAL_MS);
+    return () => window.clearInterval(timer);
+  }, [dispatch, lastStep, playing]);
+
+  const replay = () => {
+    onReplay();
+    if (prefersReducedMotion()) {
+      dispatch(stepPredictionByHand(0));
+    } else {
+      play();
+    }
+  };
+
+  const skip = () => {
+    dispatch(setPredictionPlaying(false));
+    dispatch(playPredictionStep(lastStep));
+  };
 
   const goTo = (index: number) => {
     if (index >= 0 && index < stepCount) {
-      dispatch(setPredictionStep(index));
+      dispatch(stepPredictionByHand(index));
     }
   };
 
   return (
     <div className={styles.stepper}>
+      {playing ? (
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
+          startIcon={<FontAwesomeV6Icon iconName="forward-step" aria-hidden="true" />}
+          aria-label="Skip to the answer"
+          onClick={skip}
+        >
+          Skip
+        </Button>
+      ) : (
+        <Button
+          variant="contained"
+          color="primary"
+          size="extraSmall"
+          startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden="true" />}
+          aria-label="Replay from the start"
+          onClick={replay}
+        >
+          Replay
+        </Button>
+      )}
       <div role="group" aria-label="Steps" className={styles.controls}>
         <IconButton
           variant="outlined"
