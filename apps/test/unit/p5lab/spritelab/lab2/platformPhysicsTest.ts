@@ -4,6 +4,7 @@ import {
   hasSupportAhead,
   hasSupportAt,
   isAtEdge,
+  isOnLadder,
   isSupported,
   resolvePlatformPhysics,
   PhysicsBox,
@@ -34,6 +35,26 @@ const wallAt = (col: number, row: number): PhysicsBox => ({
 
 const feet = (sprite: PhysicsSprite) =>
   sprite.position.y + (sprite.height * sprite.scale) / 2;
+
+// One frame on a ladder level: an optional climb (the up or down arrow's
+// move), then the resolver with the ladders.
+const climbStep = (
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[],
+  ladders: PhysicsBox[],
+  {vx = 0, vy = 0} = {}
+) => {
+  sprite.position.y += sprite.velocity.y;
+  sprite.position.x += vx;
+  sprite.position.y += vy;
+  resolvePlatformPhysics(
+    [{sprite, x: sprite.position.x, y: sprite.position.y}],
+    walls,
+    VIEW,
+    PLATFORM_GRAVITY,
+    ladders
+  );
+};
 
 // One frame: p5's pre-phase velocity integration, held-key movement (the
 // interpreted blocks move sprites imperatively), then the resolver.
@@ -558,5 +579,85 @@ describe('platformPhysics hazard distances', () => {
     expect(
       distanceToEdgeAhead(makeSprite(175, 180), 1, [wallAt(2, 5)], VIEW)
     ).toBe(Infinity);
+  });
+});
+
+// A ladder up column 3, rows 4-6 (y 200-350), its foot on the block at
+// (3, 7); a block at (2, 7) to walk on from, and one at (4, 4), its top
+// level with the ladder's, to step off onto.
+describe('platformPhysics ladders', () => {
+  const walls = [wallAt(2, 7), wallAt(3, 7), wallAt(4, 4)];
+  const ladders = [wallAt(3, 4), wallAt(3, 5), wallAt(3, 6)];
+
+  it('reads a player with its feet in a ladder as on it, a toe over it not', () => {
+    expect(isOnLadder(makeSprite(175, 275), ladders, VIEW)).toBe(true);
+    expect(isOnLadder(makeSprite(175, 150), ladders, VIEW)).toBe(false);
+    expect(isOnLadder(makeSprite(206, 275), ladders, VIEW)).toBe(false);
+  });
+
+  it('climbs up through stacked ladders and stops with its feet on the top', () => {
+    const player = makeSprite(175, 325);
+    for (let i = 0; i < 60; i++) {
+      climbStep(player, walls, ladders, {vy: -5});
+    }
+    expect(feet(player)).toBe(200);
+    expect(player.velocity.y).toBe(0);
+    expect(player.__slab2Climbing).toBe(true);
+  });
+
+  it('holds a player that stops part way up, and lets it climb back down', () => {
+    const player = makeSprite(175, 325);
+    for (let i = 0; i < 10; i++) {
+      climbStep(player, walls, ladders, {vy: -5});
+    }
+    const held = feet(player);
+    for (let i = 0; i < 20; i++) {
+      climbStep(player, walls, ladders);
+    }
+    expect(feet(player)).toBe(held);
+    for (let i = 0; i < 20; i++) {
+      climbStep(player, walls, ladders, {vy: 5});
+    }
+    expect(feet(player)).toBe(350);
+  });
+
+  it('carries a player walking across it, and drops one that walks off', () => {
+    const player = makeSprite(175, 275);
+    for (let i = 0; i < 4; i++) {
+      climbStep(player, walls, ladders, {vx: 5});
+    }
+    expect(feet(player)).toBe(300);
+    for (let i = 0; i < 20; i++) {
+      climbStep(player, walls, ladders, {vx: 5});
+    }
+    expect(feet(player)).toBeGreaterThan(300);
+    expect(player.__slab2Climbing).toBe(false);
+  });
+
+  it('steps off the top of a ladder onto a block beside it', () => {
+    const player = makeSprite(175, 325);
+    for (let i = 0; i < 40; i++) {
+      climbStep(player, walls, ladders, {vy: -5});
+    }
+    for (let i = 0; i < 12; i++) {
+      climbStep(player, walls, ladders, {vx: 5});
+    }
+    expect(feet(player)).toBe(200);
+    expect(isSupported(player, walls, VIEW)).toBe(true);
+  });
+
+  it('a jump lets go of the ladder until the player comes back to it', () => {
+    const player = makeSprite(175, 275);
+    climbStep(player, walls, ladders);
+    player.velocity.y = -13;
+    player.__slab2OffLadder = true;
+    climbStep(player, walls, ladders);
+    expect(player.__slab2Climbing).toBe(false);
+    expect(player.velocity.y).toBeLessThan(0);
+    for (let i = 0; i < 60; i++) {
+      climbStep(player, walls, ladders);
+    }
+    expect(player.__slab2OffLadder).toBe(false);
+    expect(player.__slab2Climbing).toBe(true);
   });
 });

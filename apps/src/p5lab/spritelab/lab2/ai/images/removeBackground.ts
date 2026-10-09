@@ -17,6 +17,9 @@ export interface MatteOptions {
   // Chroma distance (max per-channel, 0-255) at/below which a pixel counts as
   // pure background and is made fully transparent.
   lowThreshold?: number;
+  // Key the corner's colour out everywhere, enclosed gaps included (a
+  // ladder's spaces between rungs), not only where the flood reaches.
+  everywhere?: boolean;
   // Soft matte only: distance up to which a background-connected pixel is still
   // part of the edge ramp and gets partial alpha. Ignored when sharp.
   highThreshold?: number;
@@ -329,7 +332,12 @@ export async function removeBackground(
   ctx.drawImage(img, 0, 0);
 
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  keyOutBackground(imageData.data, imageData.width, imageData.height, options);
+  const {data, width, height} = imageData;
+  if (options.everywhere) {
+    keyOutColor(data, width, height, [data[0], data[1], data[2]], options);
+  } else {
+    keyOutBackground(data, width, height, options);
+  }
   ctx.putImageData(imageData, 0, 0);
 
   return canvasToBlob(canvas);

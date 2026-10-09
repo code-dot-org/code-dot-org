@@ -44,14 +44,14 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(steps, 0, {
         counts: none,
         activeTab: 'World',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(0);
     expect(
       nextGuideStepIndex(steps, 0, {
         counts: {blocks: 2, sprites: 0},
         activeTab: 'World',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(0);
   });
@@ -61,7 +61,7 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(steps, 0, {
         counts: {blocks: 3, sprites: 0},
         activeTab: 'World',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(1);
   });
@@ -71,7 +71,7 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(steps, 0, {
         counts: {blocks: 5, sprites: 1},
         activeTab: 'Code',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(3);
   });
@@ -83,21 +83,21 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(steps, 1, {
         counts: {blocks: 2, sprites: 1},
         activeTab: 'World',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(1);
     expect(
       nextGuideStepIndex(steps, 2, {
         counts: {blocks: 3, sprites: 1},
         activeTab: 'World',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(2);
     expect(
       nextGuideStepIndex(steps, 2, {
         counts: {blocks: 3, sprites: 1},
         activeTab: 'Code',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(3);
   });
@@ -107,7 +107,7 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(steps, 3, {
         counts: {blocks: 9, sprites: 9},
         activeTab: 'Code',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(3);
     const gap: GuideStep[] = [{text: 'a'}, {text: 'b'}];
@@ -115,7 +115,7 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(gap, 0, {
         counts: {blocks: 9, sprites: 9},
         activeTab: 'Code',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(0);
   });
@@ -130,14 +130,14 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(imageSteps, 0, {
         counts: none,
         activeTab: 'Images',
-        images: {sprite: 3, background: 0, block: 0},
+        images: {sprite: 3, background: 0, block: 0, ladder: 0},
       })
     ).toBe(0);
     expect(
       nextGuideStepIndex(imageSteps, 0, {
         counts: none,
         activeTab: 'Images',
-        images: {sprite: 4, background: 0, block: 0},
+        images: {sprite: 4, background: 0, block: 0, ladder: 0},
       })
     ).toBe(1);
     // The player is already placed, so one sprite is not the new one.
@@ -145,14 +145,14 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(imageSteps, 1, {
         counts: {blocks: 7, sprites: 1},
         activeTab: 'World',
-        images: {sprite: 4, background: 0, block: 0},
+        images: {sprite: 4, background: 0, block: 0, ladder: 0},
       })
     ).toBe(1);
     expect(
       nextGuideStepIndex(imageSteps, 1, {
         counts: {blocks: 7, sprites: 2},
         activeTab: 'World',
-        images: {sprite: 4, background: 0, block: 0},
+        images: {sprite: 4, background: 0, block: 0, ladder: 0},
       })
     ).toBe(2);
   });
@@ -167,14 +167,14 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(typedSteps, 0, {
         counts: none,
         activeTab: 'Images',
-        images: {sprite: 5, background: 0, block: 0},
+        images: {sprite: 5, background: 0, block: 0, ladder: 0},
       })
     ).toBe(0);
     expect(
       nextGuideStepIndex(typedSteps, 0, {
         counts: none,
         activeTab: 'Images',
-        images: {sprite: 5, background: 1, block: 0},
+        images: {sprite: 5, background: 1, block: 0, ladder: 0},
       })
     ).toBe(1);
   });
@@ -184,14 +184,14 @@ describe('nextGuideStepIndex', () => {
       nextGuideStepIndex(undefined, 0, {
         counts: none,
         activeTab: 'Code',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(0);
     expect(
       nextGuideStepIndex([], 0, {
         counts: none,
         activeTab: 'Code',
-        images: {sprite: 0, background: 0, block: 0},
+        images: {sprite: 0, background: 0, block: 0, ladder: 0},
       })
     ).toBe(0);
   });
@@ -201,37 +201,39 @@ describe('imageCountsDelta', () => {
   it('counts only images added since the baseline', () => {
     expect(
       imageCountsDelta(
-        {sprite: 2, background: 1, block: 0},
-        {sprite: 1, background: 1, block: 0}
+        {sprite: 2, background: 1, block: 0, ladder: 0},
+        {sprite: 1, background: 1, block: 0, ladder: 0}
       )
-    ).toEqual({sprite: 1, background: 0, block: 0});
+    ).toEqual({sprite: 1, background: 0, block: 0, ladder: 0});
   });
 
   it('clamps at zero when images were deleted below the baseline', () => {
     expect(
       imageCountsDelta(
-        {sprite: 0, background: 0, block: 0},
-        {sprite: 2, background: 1, block: 0}
+        {sprite: 0, background: 0, block: 0, ladder: 0},
+        {sprite: 2, background: 1, block: 0, ladder: 0}
       )
-    ).toEqual({sprite: 0, background: 0, block: 0});
+    ).toEqual({sprite: 0, background: 0, block: 0, ladder: 0});
   });
 });
 
 describe('countImagesByType', () => {
   it('sorts images into kinds by their categories', () => {
     const list = {
-      orderedKeys: ['a', 'b', 'c', 'd'],
+      orderedKeys: ['a', 'b', 'c', 'd', 'e'],
       propsByKey: {
         a: {name: 'hero'},
         b: {name: 'forest', categories: ['backgrounds']},
         c: {name: 'brick', categories: ['blocks']},
         d: {name: 'witch', categories: ['category_animals']},
+        e: {name: 'rope', categories: ['ladders']},
       },
     } as unknown as RuntimeAnimationList;
     expect(countImagesByType(list)).toEqual({
       sprite: 2,
       background: 1,
       block: 1,
+      ladder: 1,
     });
   });
 });

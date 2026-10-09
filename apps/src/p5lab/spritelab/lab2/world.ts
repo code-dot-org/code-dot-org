@@ -14,8 +14,9 @@ export const WORLD_MULTIPLE = 3;
 export interface WorldCell {
   // Animation name to draw and spawn.
   image: string;
-  // Blocks join the 'walls' group (solid environment); sprites are plain.
-  kind: 'block' | 'sprite';
+  // Blocks join the 'walls' group (solid environment), ladders the
+  // 'ladders' group (climbable, not solid); sprites are plain.
+  kind: 'block' | 'sprite' | 'ladder';
 }
 
 export interface World {
@@ -137,6 +138,7 @@ export function compileWorldPrelude(world?: World): string {
   const sceneSize = sceneGridSize(world);
   const cell = cellSize(sceneSize);
   const blocks: string[] = [];
+  const ladders: string[] = [];
   const sprites: string[] = [];
   for (let row = 0; row < sceneSize; row++) {
     for (let col = 0; col < sceneSize; col++) {
@@ -153,15 +155,21 @@ export function compileWorldPrelude(world?: World): string {
       const image = JSON.stringify(placement.image);
       if (placement.kind === 'block') {
         blocks.push(`makeNewGroupSprite(${image}, 'walls', ${location});`);
+      } else if (placement.kind === 'ladder') {
+        ladders.push(`makeNewGroupSprite(${image}, 'ladders', ${location});`);
       } else {
         sprites.push(`makeNewSpriteAnon(${image}, ${location});`);
       }
     }
   }
-  if (!blocks.length && !sprites.length) {
+  if (!blocks.length && !ladders.length && !sprites.length) {
     return '';
   }
-  return [`setDefaultSpriteSize(${cell});`, ...blocks, ...sprites, ''].join(
-    '\n'
-  );
+  return [
+    `setDefaultSpriteSize(${cell});`,
+    ...blocks,
+    ...ladders,
+    ...sprites,
+    '',
+  ].join('\n');
 }

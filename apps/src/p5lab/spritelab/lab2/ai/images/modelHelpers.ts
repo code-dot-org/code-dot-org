@@ -61,6 +61,7 @@ export const MODEL_OUTPUT_PX = 1024;
 export const ASSUMED_BLOCK: Record<ImageType, number> = {
   sprite: 16,
   block: 16,
+  ladder: 16,
   background: 8,
 };
 
@@ -74,6 +75,7 @@ export const ASSUMED_BLOCK: Record<ImageType, number> = {
 export const STORED_MAX_PX: {[type in ImageType]?: number} = {
   sprite: 512,
   block: 256,
+  ladder: 256,
 };
 
 /** The logical grid the type's default block yields (64 or 128). */

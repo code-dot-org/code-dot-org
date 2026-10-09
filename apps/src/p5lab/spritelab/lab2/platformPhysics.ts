@@ -63,6 +63,11 @@ export interface PhysicsBox {
 export interface PhysicsSprite extends PhysicsBox {
   velocity: {x: number; y: number};
   __slab2Prev?: {x: number; y: number};
+  /** Set by the resolver: on a ladder this frame, so not falling. */
+  __slab2Climbing?: boolean;
+  /** A jump off a ladder: ladders are ignored until the player lands or
+      leaves the ladder's column. */
+  __slab2OffLadder?: boolean;
 }
 
 // A player with its position snapshotted before any stock collide pass
@@ -135,11 +140,53 @@ function flipSpriteY(sprite: PhysicsSprite, view: View): void {
   }
 }
 
+interface Box {
+  x: number;
+  y: number;
+  halfW: number;
+  halfH: number;
+}
+
+function toBox(sprite: PhysicsBox): Box {
+  return {
+    x: sprite.position.x,
+    y: sprite.position.y,
+    halfW: wallHalf(sprite),
+    halfH: wallHalf(sprite),
+  };
+}
+
+// A ladder holds a body whose feet are within its span and whose column
+// overlap is more than the thin-contact allowance: a toe over a ladder is
+// not a grip.
+function onLadderAt(
+  x: number,
+  y: number,
+  halfW: number,
+  halfH: number,
+  ladders: Box[]
+): boolean {
+  const feet = y + halfH;
+  return ladders.some(
+    ladder =>
+      halfW + ladder.halfW - Math.abs(x - ladder.x) > MIN_SOLID_OVERLAP &&
+      feet >= ladder.y - ladder.halfH - CONTACT_EPSILON &&
+      feet <= ladder.y + ladder.halfH + CONTACT_EPSILON
+  );
+}
+
+/**
+ * Resolve the frame's movement for each player against the walls, under
+ * gravity, with `ladders` as climbable columns: a player on one does not
+ * fall, climbs up through stacked ladders until its feet reach the top of
+ * the highest, and drops once it walks off the side.
+ */
 export function resolvePlatformPhysics(
   moved: MovedPlayer[],
   walls: PhysicsBox[],
   view: View,
-  gravity: number = PLATFORM_GRAVITY
+  gravity: number = PLATFORM_GRAVITY,
+  ladders: PhysicsBox[] = []
 ) {
   // Negative gravity (the "set gravity" block flipping the world): mirror
   // everything vertically, resolve with the ordinary downward rules, and
@@ -151,7 +198,13 @@ export function resolvePlatformPhysics(
       flipSpriteY(m.sprite, view);
       m.y = view.height - m.y;
     });
-    resolvePlatformPhysics(moved, flipWallsY(walls, view), view, -gravity);
+    resolvePlatformPhysics(
+      moved,
+      flipWallsY(walls, view),
+      view,
+      -gravity,
+      flipWallsY(ladders, view)
+    );
     moved.forEach(m => {
       flipSpriteY(m.sprite, view);
       m.y = view.height - m.y;
@@ -161,12 +214,8 @@ export function resolvePlatformPhysics(
   // Zero gravity: steered, not falling — the wall rules with the falling
   // rules off.
   const weightless = gravity === 0;
-  const boxes = walls.map(wall => ({
-    x: wall.position.x,
-    y: wall.position.y,
-    halfW: wallHalf(wall),
-    halfH: wallHalf(wall),
-  }));
+  const boxes = walls.map(toBox);
+  const rungs = ladders.map(toBox);
   moved.forEach(({sprite, x: curX, y: curY}) => {
     // Resolution runs on the feet-anchored body box: y below is the BODY
     // center, `drop` below the sprite's image center.
@@ -293,9 +342,39 @@ export function resolvePlatformPhysics(
         x += x < wall.x ? -penX : penX;
       }
     });
-    if (weightless) {
+    // Climbing up out of the highest ladder stops with the feet on its top,
+    // where the player can step sideways onto a block.
+    const grabbing = !sprite.__slab2OffLadder;
+    let climbing = grabbing && onLadderAt(x, y, halfW, halfH, rungs);
+    if (
+      grabbing &&
+      !climbing &&
+      dy < 0 &&
+      onLadderAt(prev.x, prev.y, halfW, halfH, rungs)
+    ) {
+      const tops = rungs
+        .filter(
+          ladder =>
+            halfW + ladder.halfW - Math.abs(x - ladder.x) > MIN_SOLID_OVERLAP &&
+            ladder.y - ladder.halfH <= prev.y + halfH + CONTACT_EPSILON
+        )
+        .map(ladder => ladder.y - ladder.halfH);
+      if (tops.length) {
+        y = Math.max(y, Math.min(...tops) - halfH);
+        climbing = true;
+      }
+    }
+    if (
+      sprite.__slab2OffLadder &&
+      (landed || !onLadderAt(x, y, halfW, halfH, rungs))
+    ) {
+      sprite.__slab2OffLadder = false;
+    }
+    sprite.__slab2Climbing = climbing;
+    if (weightless || climbing) {
       // Steered, not falling: no ledge drop, and no vertical speed carried
-      // from before gravity went to zero (a jump in flight, a fall).
+      // from before gravity went to zero (a jump in flight, a fall) or from
+      // before the ladder caught the player.
       sprite.velocity.y = 0;
     } else {
       // Footing lost this frame with nothing catching the fall: drop at
@@ -323,6 +402,25 @@ export function resolvePlatformPhysics(
     sprite.position.x = x;
     sprite.position.y = y - drop;
     sprite.__slab2Prev = {x, y: y - drop};
+  });
+}
+
+/** Whether a player's feet are on a ladder, in the gravity direction. */
+export function isOnLadder(
+  sprite: PhysicsSprite,
+  ladders: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  return inDownwardTerms(sprite, ladders, view, gravity, (s, l) => {
+    const {halfW, halfH, drop} = playerBody(s);
+    return onLadderAt(
+      s.position.x,
+      s.position.y + drop,
+      halfW,
+      halfH,
+      l.map(toBox)
+    );
   });
 }
 

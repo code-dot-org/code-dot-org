@@ -3,7 +3,7 @@
 
 import {useEffect, useMemo, useState} from 'react';
 
-import {ImageType} from './ai/images/types';
+import {IMAGE_TYPES, ImageType} from './ai/images/types';
 import {imageTypeFromCategories} from './imageGallery';
 import {Tab} from './redux/spriteLab2Redux';
 import {GuideStep, RuntimeAnimationList} from './types';
@@ -17,8 +17,11 @@ export interface WorldCounts {
 /** Project images tallied by kind. */
 export type ImageCounts = Record<ImageType, number>;
 
+const zeroCounts = (): ImageCounts =>
+  Object.fromEntries(IMAGE_TYPES.map(type => [type, 0])) as ImageCounts;
+
 export function countImagesByType(list: RuntimeAnimationList): ImageCounts {
-  const counts: ImageCounts = {sprite: 0, background: 0, block: 0};
+  const counts = zeroCounts();
   list.orderedKeys.forEach(key => {
     counts[imageTypeFromCategories(list.propsByKey[key]?.categories)]++;
   });
@@ -31,11 +34,11 @@ export function imageCountsDelta(
   now: ImageCounts,
   baseline: ImageCounts
 ): ImageCounts {
-  return {
-    sprite: Math.max(0, now.sprite - baseline.sprite),
-    background: Math.max(0, now.background - baseline.background),
-    block: Math.max(0, now.block - baseline.block),
-  };
+  const delta = zeroCounts();
+  IMAGE_TYPES.forEach(type => {
+    delta[type] = Math.max(0, now[type] - baseline[type]);
+  });
+  return delta;
 }
 
 // Placed World cells, tallied by kind.
