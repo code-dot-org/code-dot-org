@@ -7,6 +7,7 @@ import {QuizQuestionSummary} from '../types';
 import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import QuestionDescription from './QuestionDescription';
 
 import styles from './multi-choice-question-container.module.scss';
 
@@ -21,7 +22,11 @@ export interface MultiChoiceQuestionContainerProps {
 const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
 > = ({question, questionLabel, selectedChoiceId, onSelectChoice}) => (
-  <AttemptCard label={questionLabel} title={question.questionTitle}>
+  <AttemptCard
+    label={questionLabel}
+    title={question.questionTitle}
+    description={<QuestionDescription markdown={question.description} />}
+  >
     <div
       className={styles.choices}
       role="radiogroup"

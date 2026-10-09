@@ -52,11 +52,11 @@ class MultipleChoiceQuestion < QuizQuestion
   end
 
   def builder_content_json
-    attempt_content_json.merge(description: content['description'], correctChoiceId: content['correct_choice_id'])
+    attempt_content_json.merge(correctChoiceId: content['correct_choice_id'])
   end
 
   def attempt_content_json
-    {questionTitle: content['question_title'], choices: content['choices']}
+    {questionTitle: content['question_title'], description: content['description'], choices: content['choices']}
   end
 
   private def validate_question_shape

@@ -7,6 +7,7 @@ import {QuizQuestionSummary} from '../types';
 import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import QuestionDescription from './QuestionDescription';
 import {QuizQuestionResult} from './types';
 
 import styles from './question-result-card.module.scss';
@@ -48,7 +49,11 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   result,
   revealAnswerExplanation,
 }) => (
-  <AttemptCard label={questionLabel} title={question.questionTitle}>
+  <AttemptCard
+    label={questionLabel}
+    title={question.questionTitle}
+    description={<QuestionDescription markdown={question.description} />}
+  >
     <ul className={styles.choices}>
       {(question.choices ?? []).map((choice, index) => {
         const status = getChoiceStatus(choice.id, result);

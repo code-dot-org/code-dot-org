@@ -31,6 +31,13 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     assert_equal 'b', question.builder_content_json[:correctChoiceId]
   end
 
+  test "attempt and builder json both carry the description" do
+    question = create(:multiple_choice_question)
+    question.update!(content: question.content.merge('description' => 'Add them.'))
+    assert_equal 'Add them.', question.attempt_content_json[:description]
+    assert_equal 'Add them.', question.builder_content_json[:description]
+  end
+
   test "requires a non-blank question title" do
     question = build(
       :multiple_choice_question,
