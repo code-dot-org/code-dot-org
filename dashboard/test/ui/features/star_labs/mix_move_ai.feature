@@ -31,6 +31,7 @@ Scenario: Dancer, music, dance
   # Continue.
   Then I wait until element "#instructions-continue-button" is visible
   And I press "instructions-continue-button"
+  And I wait until I am on "http://studio.code.org/courses/ui-test-mix-move-ai/units/1/lessons/1/levels/4"
 
   ###
   ### Create music
