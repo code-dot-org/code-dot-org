@@ -6,7 +6,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
@@ -14,7 +14,9 @@ import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
 import MapView from './MapView';
+import {ZoomLevel, nextUpCheckpointId, stepZoom} from './mapZoom';
 import ProjectCard from './ProjectCard';
+import UiVariantsCard from './UiVariantsCard';
 
 import styles from './mapScreen.module.scss';
 import shared from './shared.module.scss';
@@ -50,9 +52,25 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   const projectState = usePathwayProject(pathway);
   const focused = focusId && pathway.checkpoints.find(c => c.id === focusId);
 
+  // Focusing a checkpoint zooms onto it; clearing focus shows the whole map.
+  // Between those, wheel and buttons step one level at a time.
+  const [level, setLevel] = useState<ZoomLevel>(focusId ? 'focus' : 'overview');
+  useEffect(() => setLevel(focusId ? 'focus' : 'overview'), [focusId]);
+  const anchorId = focusId ?? nextUpCheckpointId(pathway, statusMap);
+  const onZoomStep = useCallback(
+    (direction: 1 | -1) => {
+      const next = stepZoom(level, direction);
+      if (next === level) return;
+      if (next === 'focus') onFocus(anchorId);
+      else if (next === 'overview') onFocus(undefined);
+      setLevel(next);
+    },
+    [level, anchorId, onFocus]
+  );
+
   // A click on the map background while zoomed returns to the full map.
   const onMapClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (focusId && !(e.target as HTMLElement).closest('button')) {
+    if (level !== 'overview' && !(e.target as HTMLElement).closest('button')) {
       onFocus(undefined);
     }
   };
@@ -87,9 +105,32 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         <MapView
           pathway={pathway}
           statusMap={statusMap}
+          level={level}
+          anchorId={anchorId}
           focusId={focusId}
           onSelect={id => onFocus(id === focusId ? undefined : id)}
+          onZoomStep={onZoomStep}
         />
+        <div className={styles.zoomControls}>
+          <MuiButton
+            variant="outlined"
+            size="small"
+            aria-label="Zoom in"
+            disabled={level === 'focus'}
+            onClick={() => onZoomStep(1)}
+          >
+            <FontAwesomeV6Icon iconName="plus" />
+          </MuiButton>
+          <MuiButton
+            variant="outlined"
+            size="small"
+            aria-label="Zoom out"
+            disabled={level === 'overview'}
+            onClick={() => onZoomStep(-1)}
+          >
+            <FontAwesomeV6Icon iconName="minus" />
+          </MuiButton>
+        </div>
       </div>
       <aside className={styles.side}>
         {focused ? (
@@ -108,6 +149,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             onWorkOnProject={onWorkOnProject}
           />
         )}
+        <UiVariantsCard />
         <div className={styles.sideFooter}>
           <SimpleDropdown
             name="adaptive-theme"

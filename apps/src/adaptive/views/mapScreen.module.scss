@@ -6,11 +6,28 @@
 
 .mapArea {
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  // No scrolling: the map is sized to fit, and a scrollbar appearing while
-  // zooming would shift the board.
+  min-width: 0;
+  // The board moves by transform inside its viewport, never by scrolling.
   overflow: hidden;
-  padding: 24px 24px 48px;
+  padding: 24px;
+}
+
+.zoomControls {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  button {
+    min-width: 0;
+    padding: 6px 10px;
+  }
 }
 
 .mapBack {

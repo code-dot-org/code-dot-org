@@ -1,8 +1,21 @@
-.board {
+.viewport {
   position: relative;
-  margin: 0 auto;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+
+// No transition until the viewport is measured, so the first placement
+// does not animate in from the corner.
+.boardSettled {
   transition: transform 450ms ease;
-  transform-origin: center top;
 }
 
 .edges {
@@ -10,6 +23,13 @@
   inset: 0;
   z-index: 0;
   overflow: visible;
+}
+
+.ring {
+  fill: none;
+  stroke: var(--borders-neutral-primary);
+  stroke-width: 1;
+  opacity: 0.5;
 }
 
 .edge {
@@ -23,6 +43,25 @@
 .edgeActive {
   stroke: var(--borders-success-primary);
   stroke-dasharray: none;
+}
+
+// Feeds the selected checkpoint: heavier, dashes flowing toward it, in the
+// brand color, or the completion color once its parent is done.
+.edgeIncoming {
+  stroke: var(--borders-brand-purple-primary);
+  stroke-width: 5;
+  stroke-dasharray: 10 8;
+  animation: flow 900ms linear infinite;
+}
+
+.edgeActive.edgeIncoming {
+  stroke: var(--borders-success-primary);
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -18;
+  }
 }
 
 .node {
@@ -53,7 +92,13 @@
   white-space: nowrap;
 }
 
-.circle {
+.shapeWrap {
+  position: relative;
+}
+
+// The clickable node. A circle by default; .square and .hexagon on the
+// node restyle it and put the title inside.
+.shape {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,23 +123,163 @@
   }
 }
 
-.locked .circle {
+.shapeInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.shapeTitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  padding: 0 6px;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.circleTitled .shape {
+  width: 116px;
+  height: 116px;
+  font-size: 14px;
+}
+
+// Inset to the circle's upper right, not the bounding box's corner.
+.circleTitled .badge {
+  top: 4px;
+  right: 4px;
+}
+
+.square .shape {
+  width: 120px;
+  height: 80px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+// A hexagon cannot carry a CSS border: the outer, clipped button is the
+// border color and an inset, clipped inner span is the fill.
+// Pointy-topped: corners at the top and bottom, flat sides left and right.
+$hex: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+.hexagon .shape {
+  width: 108px;
+  height: 124px;
+  padding: 7px 4px;
+  border: none;
+  border-radius: 0;
+  clip-path: $hex;
+  background: var(--borders-neutral-primary);
+  font-size: 14px;
+  animation: none;
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: none;
+  }
+}
+
+.hexagon .shapeInner {
+  clip-path: $hex;
+  background: var(--background-neutral-primary);
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--borders-neutral-primary);
+  border-radius: 50%;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-disabled);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+// On the top corner, where three cells of a honeycomb meet.
+.hexagon .badge {
+  top: -10px;
+  right: calc(50% - 13px);
+}
+
+.locked .shape {
   background: var(--background-neutral-secondary);
 }
 
-.available .circle {
+.available .shape {
   border-color: var(--background-brand-purple-primary);
   color: var(--text-brand-purple-primary);
   animation: pulse 1.8s ease-out infinite;
 }
 
-.inProgress .circle {
+.inProgress .shape {
   border-color: var(--borders-warning-primary);
   border-style: dashed;
   color: var(--text-warning-primary);
 }
 
-.complete .circle {
+.complete .shape {
+  border-color: var(--borders-success-primary);
+  background: var(--background-success-primary);
+  color: var(--text-neutral-white-fixed);
+}
+
+.complete .shapeTitle {
+  color: inherit;
+}
+
+// Hexagon status colors: the button is the border, the inner span the fill.
+.hexagon.locked .shape {
+  background: var(--borders-neutral-primary);
+}
+
+.hexagon.locked .shapeInner {
+  background: var(--background-neutral-secondary);
+}
+
+.hexagon.available .shape {
+  background: var(--background-brand-purple-primary);
+  animation: none;
+}
+
+.hexagon.inProgress .shape {
+  background: var(--borders-warning-primary);
+}
+
+.hexagon.complete .shape {
+  background: var(--borders-success-primary);
+}
+
+.hexagon.complete .shapeInner {
+  background: var(--background-success-primary);
+}
+
+// Badge status colors.
+.available .badge {
+  border-color: var(--background-brand-purple-primary);
+  color: var(--text-brand-purple-primary);
+}
+
+.inProgress .badge {
+  border-color: var(--borders-warning-primary);
+  color: var(--text-warning-primary);
+}
+
+.complete .badge {
   border-color: var(--borders-success-primary);
   background: var(--background-success-primary);
   color: var(--text-neutral-white-fixed);
@@ -104,9 +289,38 @@
   opacity: 0.2;
 }
 
-.focused .circle {
+// An immediate requirement of the selected checkpoint: ringed in the brand
+// color, or the completion color once done.
+.required .shape {
+  box-shadow: 0 0 0 6px var(--background-brand-purple-light);
+  animation: none;
+}
+
+.required.complete .shape {
+  box-shadow: 0 0 0 6px var(--background-success-light);
+}
+
+.required .nodeLabel {
+  border-color: var(--borders-brand-purple-primary);
+}
+
+.focused .shape {
   box-shadow: 0 0 0 10px var(--background-brand-purple-light);
   animation: none;
+}
+
+// A clipped hexagon shows no box-shadow, so its rings are a glow on the
+// whole node instead.
+.hexagon.required {
+  filter: drop-shadow(0 0 6px var(--background-brand-purple-light));
+}
+
+.hexagon.required.complete {
+  filter: drop-shadow(0 0 6px var(--background-success-light));
+}
+
+.hexagon.focused {
+  filter: drop-shadow(0 0 10px var(--background-brand-purple-primary));
 }
 
 @keyframes pulse {

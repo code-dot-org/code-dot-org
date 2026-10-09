@@ -1,0 +1,522 @@
+{
+  "formatVersion": 4,
+  "id": "web-skills",
+  "title": "Build a website with AI",
+  "objective": "Build a multi-page website with an AI build partner. Learn to prompt with structure, to break a site into its parts and plan it, and to read and fix errors, then bring all three together in a capstone.",
+  "project": {
+    "templateLevel": "adaptive-web-template",
+    "description": "A website about something you care about: a team, your art, a cause, a business idea. You will build it up piece by piece as you unlock new checkpoints, and finish with a second page."
+  },
+  "skills": {
+    "prompting": {
+      "id": "prompting",
+      "title": "Prompting",
+      "description": "Write purposeful, structured prompts that name a goal, a constraint and an edge case; check what the AI made against what you meant; and revise with specifics when it misses.",
+      "standards": [
+        {
+          "framework": "csta2026",
+          "shortcode": "HS-PRO-RD-18"
+        },
+        {
+          "framework": "csta2026",
+          "shortcode": "HS-ALG-PS-05"
+        }
+      ]
+    },
+    "deconstruct": {
+      "id": "deconstruct",
+      "title": "Deconstruct",
+      "description": "Break a multi-page site into pages and components, plan its organization and navigation before building, and apply structural patterns consistently.",
+      "standards": [
+        {
+          "framework": "csta",
+          "shortcode": "3A-AP-17"
+        },
+        {
+          "framework": "csta",
+          "shortcode": "3A-AP-21"
+        },
+        {
+          "framework": "csta2026",
+          "shortcode": "HS-PRO-PD-12"
+        },
+        {
+          "framework": "csta2026",
+          "shortcode": "HS-ALG-IM-09"
+        }
+      ]
+    },
+    "debug": {
+      "id": "debug",
+      "title": "Debug",
+      "description": "Treat an error as a clue: find what matters in the message, connect it to the code, and give the AI the context it needs for a useful diagnosis.",
+      "standards": [
+        {
+          "framework": "csta2026",
+          "shortcode": "HS-PRO-RD-18"
+        },
+        {
+          "framework": "csta2026",
+          "shortcode": "HS-PRO-RD-17"
+        }
+      ]
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "description": "Meet your AI build partner, decide what your site is about, and make your first build.",
+      "steps": [
+        {
+          "id": "introduction-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "introduction-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Welcome. In this pathway you build a website of your own with an AI build partner that writes the code from your instructions."
+            },
+            {
+              "key": "introduction-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "You will learn three skills along the way: prompting the AI well, breaking a site into its parts, and fixing things when they go wrong. Finish this introduction to unlock all three."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompting-basics",
+      "title": "Basics of Prompting",
+      "description": "A prompt names a goal. See the difference between a vague wish and a specific instruction in your own header.",
+      "skillIds": [
+        "prompting"
+      ],
+      "requires": [
+        "introduction"
+      ],
+      "steps": [
+        {
+          "id": "prompting-basics-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "prompting-basics-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "A prompt is an instruction to the AI. \"Make it better\" gives it nothing to work with. \"Change the header title to Cat Corner\" tells it exactly what to do."
+            },
+            {
+              "key": "prompting-basics-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you write prompts that each state one clear goal, and watch how the AI's output changes when the goal is specific."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parts-of-a-page",
+      "title": "Parts of a Page",
+      "description": "Name the header, hero, cards and footer on real sites. Recognize the parts before you ask for them.",
+      "skillIds": [
+        "deconstruct"
+      ],
+      "requires": [
+        "introduction"
+      ],
+      "steps": [
+        {
+          "id": "parts-of-a-page-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "parts-of-a-page-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Most web pages are built from the same handful of parts: a header with navigation, a hero that introduces the page, cards or sections for content, and a footer."
+            },
+            {
+              "key": "parts-of-a-page-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you look at three real sites and name those parts. Once you can see the structure, you can ask the AI for it by name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading-errors",
+      "title": "Reading Errors",
+      "description": "An error is a clue, not a stop sign. Find the line number, the type and the message in a broken build.",
+      "skillIds": [
+        "debug"
+      ],
+      "requires": [
+        "introduction"
+      ],
+      "steps": [
+        {
+          "id": "reading-errors-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "reading-errors-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Sooner or later a build will break. The error message that appears is not a dead end: it tells you where, what kind, and what went wrong."
+            },
+            {
+              "key": "reading-errors-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you read a real error message and pick out its three parts: the line number, the error type, and the message text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompt-for-style",
+      "title": "Prompting for Style",
+      "description": "A goal plus one constraint. Name fonts, colors and spacing precisely instead of asking for \"nicer\".",
+      "skillIds": [
+        "prompting"
+      ],
+      "requires": [
+        "prompting-basics"
+      ],
+      "steps": [
+        {
+          "id": "prompt-for-style-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "prompt-for-style-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "\"Make it look nicer\" could mean anything. \"Use a thin serif font for the title and leave more space above it\" is a goal with a constraint the AI can follow."
+            },
+            {
+              "key": "prompt-for-style-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you style your page by naming the exact element, the change, and the result you want."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompt-for-structure",
+      "title": "Prompting for Structure",
+      "description": "Ask for a section by its structural name and its place on the page. Prompting meets Deconstruct.",
+      "skillIds": [
+        "prompting",
+        "deconstruct"
+      ],
+      "requires": [
+        "prompting-basics",
+        "parts-of-a-page"
+      ],
+      "steps": [
+        {
+          "id": "prompt-for-structure-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "prompt-for-structure-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Now that you can name the parts of a page, you can ask for them. \"Add a hero section under the header with the site name and one sentence about it\" names the part, the place, and the content."
+            },
+            {
+              "key": "prompt-for-structure-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you add two new sections to your page by prompting for structure, and compare what you asked for against what appeared."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "site-map",
+      "title": "Site Map",
+      "description": "Break your own site idea into pages and sections as a nested list, with a reason for each placement.",
+      "skillIds": [
+        "deconstruct"
+      ],
+      "requires": [
+        "parts-of-a-page"
+      ],
+      "steps": [
+        {
+          "id": "site-map-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "site-map-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Before building more, plan. A site map is a list of the pages your site will have and the sections on each one, written so you can see the hierarchy."
+            },
+            {
+              "key": "site-map-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you write a site map for your own site idea as a nested list, and give one reason for where each section sits."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-went-wrong",
+      "title": "What Went Wrong",
+      "description": "Connect the error message to the element causing it, and restate what it means in your own words.",
+      "skillIds": [
+        "debug"
+      ],
+      "requires": [
+        "reading-errors"
+      ],
+      "steps": [
+        {
+          "id": "what-went-wrong-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "what-went-wrong-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Reading an error is step one. Step two is connecting it to the code: \"syntax error on line 12\" usually means something is missing or extra right there."
+            },
+            {
+              "key": "what-went-wrong-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you take an error, find the line or element it points to, and explain in your own words what is wrong before trying to fix it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompt-for-motion",
+      "title": "Prompting for Motion",
+      "description": "Goal, constraint and an edge case. Say what happens on hover, on a small screen, or when the text is long.",
+      "skillIds": [
+        "prompting"
+      ],
+      "requires": [
+        "prompt-for-style"
+      ],
+      "steps": [
+        {
+          "id": "prompt-for-motion-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "prompt-for-motion-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "A complete prompt covers the edge cases: what happens when someone hovers a button, when the screen is narrow, or when a title is longer than you expected."
+            },
+            {
+              "key": "prompt-for-motion-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you add motion and responsiveness to your page with prompts that name a goal, a constraint, and at least one edge case."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compare-to-intent",
+      "title": "Compare to Intent",
+      "description": "Write your intent down first, then check the output against it line by line. Explain why the AI did what it did.",
+      "skillIds": [
+        "prompting"
+      ],
+      "requires": [
+        "prompt-for-structure"
+      ],
+      "steps": [
+        {
+          "id": "compare-to-intent-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "compare-to-intent-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The AI did exactly what you said, which is not always what you meant. The only way to tell is to write down what you meant before you look at the result."
+            },
+            {
+              "key": "compare-to-intent-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you write your intent, prompt, then go through the output and mark each match and mismatch. For each mismatch, say what in your prompt caused it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build-the-plan",
+      "title": "Build the Plan",
+      "description": "Turn your site map into sections on the page, applying one structural pattern consistently across them.",
+      "skillIds": [
+        "deconstruct"
+      ],
+      "requires": [
+        "site-map",
+        "prompt-for-structure"
+      ],
+      "steps": [
+        {
+          "id": "build-the-plan-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "build-the-plan-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Your site map is a plan. Now build it: one section per item, in the order you planned, using the same pattern for sections of the same kind."
+            },
+            {
+              "key": "build-the-plan-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you prompt for each section from your site map and check that repeated parts, like cards, look and behave the same way everywhere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ask-for-a-diagnosis",
+      "title": "Ask for a Diagnosis",
+      "description": "Give the AI the error, what the code was supposed to do, and what changed. Debug meets Prompting.",
+      "skillIds": [
+        "debug",
+        "prompting"
+      ],
+      "requires": [
+        "what-went-wrong",
+        "prompting-basics"
+      ],
+      "steps": [
+        {
+          "id": "ask-for-a-diagnosis-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "ask-for-a-diagnosis-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Pasting an error into the AI with no context gets a guess. Pasting the error plus what the code was supposed to do plus what you just changed gets a diagnosis."
+            },
+            {
+              "key": "ask-for-a-diagnosis-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you write a debugging prompt with all three parts and compare the AI's answer to what you worked out yourself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gray-box-first",
+      "title": "Gray Boxes First",
+      "description": "Prompt for an unstyled layout first, then style it. Strip the detail to see the structure, and say why.",
+      "skillIds": [
+        "deconstruct",
+        "prompting"
+      ],
+      "requires": [
+        "build-the-plan",
+        "prompt-for-style"
+      ],
+      "steps": [
+        {
+          "id": "gray-box-first-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "gray-box-first-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Designers sketch in gray boxes before choosing colors, because structure is easier to judge without decoration. You can do the same with a prompt."
+            },
+            {
+              "key": "gray-box-first-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you ask the AI for a new page as plain gray boxes, fix the layout while it is simple, then style it. Then explain why working this way helped."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fix-it-yourself",
+      "title": "Fix It Yourself",
+      "description": "Use the AI's explanation to fix the bug by hand, then ask the AI to check your fix.",
+      "skillIds": [
+        "debug"
+      ],
+      "requires": [
+        "ask-for-a-diagnosis"
+      ],
+      "steps": [
+        {
+          "id": "fix-it-yourself-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "fix-it-yourself-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Once the AI has explained a bug, you know enough to fix it. Doing it yourself is how you learn the pattern for next time."
+            },
+            {
+              "key": "fix-it-yourself-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you make the fix from the explanation alone, then ask the AI to review your change rather than make it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capstone-second-page",
+      "title": "Capstone: A Second Page",
+      "description": "Add a second page with navigation between the two. Plan it, prompt it with structure, and check it against your intent.",
+      "skillIds": [
+        "prompting",
+        "deconstruct",
+        "debug"
+      ],
+      "requires": [
+        "prompt-for-motion",
+        "compare-to-intent",
+        "build-the-plan"
+      ],
+      "steps": [
+        {
+          "id": "capstone-second-page-overview",
+          "title": "Overview",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "capstone-second-page-overview-1",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Everything comes together: plan a second page, prompt for its structure and style, link it from the first, and check the result against what you meant."
+            },
+            {
+              "key": "capstone-second-page-overview-2",
+              "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png",
+              "text": "In this checkpoint you add a second page to your site with working navigation both ways, and fix anything that breaks along the way."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

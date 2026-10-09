@@ -1,7 +1,7 @@
 // Chooses which screen to show: the checkpoint map, one checkpoint's steps,
 // or the project on its own. Owns the progress they share.
 
-import React, {useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
 import {AichatContext} from '@cdo/apps/aichat/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
@@ -14,6 +14,12 @@ import {Checkpoint, Pathway} from '../types';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
+import {
+  DEFAULT_UI_VARIANTS,
+  UiVariants,
+  UiVariantsContext,
+  UiVariantsState,
+} from './uiVariants';
 
 import styles from './shared.module.scss';
 
@@ -97,6 +103,16 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     [pathway, playing, statusMap, progress, updateStepContext, aiContext]
   );
 
+  const [variants, setVariants] = useState<UiVariants>(DEFAULT_UI_VARIANTS);
+  const setVariant = useCallback<UiVariantsState['setVariant']>(
+    (key, value) => setVariants(v => ({...v, [key]: value})),
+    []
+  );
+  const uiVariants = useMemo(
+    () => ({variants, setVariant}),
+    [variants, setVariant]
+  );
+
   if (isLoading) {
     return (
       <div className={styles.app}>
@@ -133,21 +149,23 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
 
   return (
     <div className={styles.app}>
-      <MapScreen
-        pathway={pathway}
-        statusMap={statusMap}
-        focusId={view.kind === 'map' ? view.focusId : undefined}
-        onFocus={focusId => setView({kind: 'map', focusId})}
-        onStart={id => {
-          markStarted(id);
-          setView({kind: 'step', checkpointId: id});
-        }}
-        onWorkOnProject={() => setView({kind: 'project'})}
-        onReset={() => {
-          reset();
-          setView({kind: 'map'});
-        }}
-      />
+      <UiVariantsContext.Provider value={uiVariants}>
+        <MapScreen
+          pathway={pathway}
+          statusMap={statusMap}
+          focusId={view.kind === 'map' ? view.focusId : undefined}
+          onFocus={focusId => setView({kind: 'map', focusId})}
+          onStart={id => {
+            markStarted(id);
+            setView({kind: 'step', checkpointId: id});
+          }}
+          onWorkOnProject={() => setView({kind: 'project'})}
+          onReset={() => {
+            reset();
+            setView({kind: 'map'});
+          }}
+        />
+      </UiVariantsContext.Provider>
     </div>
   );
 };
