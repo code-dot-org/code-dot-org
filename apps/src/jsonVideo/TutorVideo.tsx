@@ -1,3 +1,4 @@
+import type {JsonVideo} from '@code-dot-org/json-video';
 import React, {useEffect, useRef, useState} from 'react';
 
 import errorPosterImg from '@cdo/static/tutorVideo/tutor-video-did-not-load-2x.png';
@@ -9,7 +10,7 @@ interface TutorVideoProps {
 }
 
 const TutorVideo: React.FC<TutorVideoProps> = ({href}) => {
-  const videoRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<JsonVideo>(null);
 
   const [hasError, setHasError] = useState<boolean>(false);
 
