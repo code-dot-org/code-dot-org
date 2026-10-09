@@ -1,5 +1,6 @@
 import {InputMessageType} from '@cdo/apps/javalab/constants';
 import {
+  AFTER_RUN_ANNOUNCEMENT_MS,
   InputMessage,
   TheaterSignalType,
 } from '@cdo/apps/miniApps/theater/constants';
@@ -603,5 +604,74 @@ describe('Theater', () => {
       InputMessageType.THEATER,
       InputMessage.UPLOAD_ERROR
     );
+  });
+
+  describe('description', () => {
+    let description: HTMLDivElement;
+    const lines = () =>
+      Array.from(description.querySelectorAll('p')).map(p => p.textContent);
+    const publishDescription = () =>
+      theater.handleSignal({
+        value: TheaterSignalType.DESCRIPTION,
+        detail: {summary: 'Still picture.', transcript: 'Shapes: red ellipse.'},
+      });
+    const caption = (generation: number) =>
+      theater.handleSignal({
+        value: TheaterSignalType.CAPTION,
+        detail: {caption: 'a red circle', generation},
+      });
+
+    beforeEach(() => {
+      jest.useFakeTimers();
+      description = document.createElement('div');
+      theater.getDescriptionElement = () => description;
+      theater.reset();
+    });
+
+    it('reads the caption only after the run has ended', () => {
+      publishDescription();
+      jest.runOnlyPendingTimers();
+      caption(theater.getDescriptionGeneration());
+      expect(lines()).toEqual(['Still picture.']);
+
+      theater.onRunEnded();
+      expect(lines()).toEqual(['Still picture.']);
+      jest.advanceTimersByTime(AFTER_RUN_ANNOUNCEMENT_MS);
+      expect(lines()).toEqual([
+        'Still picture.',
+        'Automatic description: a red circle',
+      ]);
+    });
+
+    it('reads the transcript after the summary even when no caption is coming', () => {
+      publishDescription();
+      theater.handleSignal({
+        value: TheaterSignalType.NO_CAPTION,
+        detail: {generation: theater.getDescriptionGeneration()},
+      });
+      theater.onRunEnded();
+      jest.runAllTimers();
+      expect(lines()).toEqual(['Still picture.', 'Shapes: red ellipse.']);
+    });
+
+    it('reads a caption that arrives after the run at once', () => {
+      publishDescription();
+      theater.onRunEnded();
+      jest.runAllTimers();
+      caption(theater.getDescriptionGeneration());
+      expect(lines()).toEqual([
+        'Still picture.',
+        'Automatic description: a red circle',
+      ]);
+    });
+
+    it('drops a held caption when the stage is reset', () => {
+      publishDescription();
+      caption(theater.getDescriptionGeneration());
+      theater.reset();
+      theater.onRunEnded();
+      jest.runAllTimers();
+      expect(lines()).toEqual([]);
+    });
   });
 });

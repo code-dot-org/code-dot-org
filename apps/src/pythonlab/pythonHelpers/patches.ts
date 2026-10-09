@@ -52,22 +52,30 @@ export const pythonlabInputModule = {
 // The theater package's only way to reach the page: student code renders a gif
 // and an audio track in Python, and this hands the bytes to the theater mini
 // app to play, along with how long the gif runs. A silent program publishes no
-// audio track, so wav is optional.
+// audio track, so wav is optional. The summary and transcript describe the
+// scene for screenreaders; `still` is the last frame as a png, for captioning.
 export const theaterBridgeModule = {
   publish: (
     gif: PyBuffer,
     wav: PyBuffer | undefined,
-    gifDurationMs: number
+    gifDurationMs: number,
+    summary: string,
+    transcript: string,
+    still: PyBuffer | undefined
   ) => {
     // Copy before the suppression check: the proxy has to be released either
     // way, or its WASM memory stays pinned for the life of the worker.
     const gifBytes = copyProxyBytes(gif);
     const wavBytes = wav ? copyProxyBytes(wav) : undefined;
+    const stillBytes = still ? copyProxyBytes(still) : undefined;
     postMessage({
       type: 'theater_media',
       gif: gifBytes,
       wav: wavBytes,
       gifDurationMs,
+      summary,
+      transcript,
+      still: stillBytes,
       id: 'none', // id is not used here, so none is safe
     });
   },

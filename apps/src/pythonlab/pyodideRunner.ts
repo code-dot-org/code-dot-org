@@ -46,7 +46,10 @@ export async function handleRunClick(
   }
   // Set before the run's first write, and left set past the end of the run:
   // restoring announcements there would talk over the closing summary.
-  consoleManager?.setNarrating(isNeighborhoodLevel() && !runTests);
+  // Theater narrates into its own live region; console focus cuts it off.
+  consoleManager?.setNarrating(
+    (isNeighborhoodLevel() || isTheaterLevel()) && !runTests
+  );
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {

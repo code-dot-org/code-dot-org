@@ -16,3 +16,13 @@
   max-height: 100%;
   object-fit: contain;
 }
+
+// Hidden from sight but read by screenreaders.
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -37,11 +37,11 @@ class AudioTooLongError(Exception):
 
 
 def render(actions):
-  """Execute a scene's action list into (gif_bytes, wav_bytes).
+  """Execute a scene's action list into (gif_bytes, wav_bytes, still_bytes).
 
   Drawing accumulates on a single canvas, each pause snapshots a gif frame, and
   audio is blended onto one timeline. wav_bytes is None when the program
-  produced no audio.
+  produced no audio. still_bytes is the final frame as a png, for captioning.
   """
   durations = _frame_durations(actions)
   if len(durations) > MAX_FRAMES:
@@ -52,8 +52,10 @@ def render(actions):
     raise AudioTooLongError(
       f"The audio is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
     )
-  gif_bytes = _encode_gif(_iter_frames(actions), durations)
-  return gif_bytes, _render_audio(actions)
+  # Keep the final frame without a second render pass.
+  frames = _RetainLast(_iter_frames(actions))
+  gif_bytes = _encode_gif(iter(frames), durations)
+  return gif_bytes, _render_audio(actions), _encode_png(frames.last)
 
 
 def gif_duration_ms(actions):
@@ -282,6 +284,28 @@ def _draw_shape(draw, action):
     )
   elif action.stroke_color is not None:
     draw.line(pairs, fill=_rgba(action.stroke_color), width=_stroke(action.stroke_width))
+
+
+class _RetainLast:
+  """Remembers the last frame, which _encode_gif keeps only as a palette copy."""
+
+  def __init__(self, frames):
+    self._frames = frames
+    self.last = None
+
+  def __iter__(self):
+    for frame in self._frames:
+      self.last = frame
+      yield frame
+
+
+def _encode_png(frame):
+  """Encode one frame as a png, for captioning."""
+  if frame is None:
+    return None
+  buffer = io.BytesIO()
+  frame.save(buffer, format="PNG", optimize=True)
+  return buffer.getvalue()
 
 
 def _encode_gif(frames, durations):

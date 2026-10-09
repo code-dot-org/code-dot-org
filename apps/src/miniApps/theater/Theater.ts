@@ -6,13 +6,16 @@ import javalabMsg from '@cdo/apps/javalab/locale';
 import MiniApp from '@cdo/apps/miniApps/MiniApp';
 
 import {
+  AFTER_RUN_ANNOUNCEMENT_MS,
+  CAPTION_PREFIX,
   InputMessage,
   THEATER_AUDIO_ID,
+  THEATER_DESCRIPTION_ID,
   THEATER_IMAGE_ID,
   TheaterSignalType,
 } from './constants';
 
-interface TheaterSignal {
+export interface TheaterSignal {
   value: string;
   detail: {
     url?: string;
@@ -20,6 +23,14 @@ interface TheaterSignal {
     prompt?: string;
     // Only provided with VISUAL_URL, and only from a host that knows how long its gif runs (python).
     durationMs?: number;
+    // Only provided with DESCRIPTION: one line naming what the scene is.
+    summary?: string;
+    // Only provided with DESCRIPTION: the frame-by-frame account.
+    transcript?: string;
+    // Only provided with CAPTION: an automatic caption for the still.
+    caption?: string;
+    // Only provided with CAPTION and NO_CAPTION: the run it was requested for.
+    generation?: number;
   };
 }
 
@@ -112,6 +123,17 @@ export default class Theater extends MiniApp {
   private hasAudio: boolean;
   private hasMedia: boolean;
   private visualDurationMs: number | null;
+  // Empty when no scene is on the stage.
+  private currentSummary: string;
+  // Bumped on every new or reset scene, so a late caption can be discarded.
+  private descriptionGeneration: number;
+  private announcementTimer: number | null;
+  // Read out only if no caption arrives.
+  private heldTranscript: string;
+  // Held until the run button has announced its change back to Run.
+  private linesAfterRun: string[];
+  private isRunOver: boolean;
+  private afterRunTimer: number | null;
   private playbackTimer: number | null;
   private isPlaybackPending: boolean;
   private isAudioPlaying: boolean;
@@ -144,6 +166,13 @@ export default class Theater extends MiniApp {
     this.hasAudio = false;
     this.hasMedia = false;
     this.visualDurationMs = null;
+    this.currentSummary = '';
+    this.descriptionGeneration = 0;
+    this.announcementTimer = null;
+    this.heldTranscript = '';
+    this.linesAfterRun = [];
+    this.isRunOver = false;
+    this.afterRunTimer = null;
     this.playbackTimer = null;
     this.isPlaybackPending = false;
     this.isAudioPlaying = false;
@@ -194,6 +223,29 @@ export default class Theater extends MiniApp {
         // Open the photo prompter
         this.prompterUploadUrl = data.detail.uploadUrl || null;
         this.openPhotoPrompter(data.detail.prompt);
+        break;
+      }
+      case TheaterSignalType.DESCRIPTION: {
+        // The transcript waits: a caption replaces it, NO_CAPTION reads it.
+        this.descriptionGeneration += 1;
+        this.currentSummary = data.detail.summary ?? '';
+        this.heldTranscript = data.detail.transcript ?? '';
+        this.setAltText(this.currentSummary);
+        this.announceSummary(this.currentSummary);
+        break;
+      }
+      case TheaterSignalType.CAPTION: {
+        const caption = data.detail.caption?.trim();
+        if (caption && this.describesCurrentScene(data.detail.generation)) {
+          this.heldTranscript = '';
+          this.announceAfterRun(`${CAPTION_PREFIX} ${caption}`);
+        }
+        break;
+      }
+      case TheaterSignalType.NO_CAPTION: {
+        if (this.describesCurrentScene(data.detail.generation)) {
+          this.releaseTranscript();
+        }
         break;
       }
       case TheaterSignalType.NO_AUDIO: {
@@ -331,6 +383,15 @@ export default class Theater extends MiniApp {
     this.getAudioElement()?.pause();
     this.audioSource.clear();
     this.imageSource.clear();
+    this.descriptionGeneration += 1;
+    this.currentSummary = '';
+    this.setAltText('');
+    this.clearPendingAnnouncement();
+    this.heldTranscript = '';
+    this.linesAfterRun = [];
+    this.isRunOver = false;
+    this.clearAfterRunTimer();
+    this.clearDescription();
     this.hasAudio = false;
     this.hasMedia = false;
     this.isVisualLoaded = false;
@@ -356,6 +417,111 @@ export default class Theater extends MiniApp {
 
   getImgElement() {
     return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement | null;
+  }
+
+  getDescriptionElement() {
+    return document.getElementById(THEATER_DESCRIPTION_ID);
+  }
+
+  getDescriptionGeneration() {
+    return this.descriptionGeneration;
+  }
+
+  private describesCurrentScene(generation?: number) {
+    return (
+      generation === this.descriptionGeneration && this.currentSummary !== ''
+    );
+  }
+
+  private setAltText(summary: string) {
+    const imageElement = this.getImgElement();
+    if (imageElement) {
+      imageElement.alt = summary;
+    }
+  }
+
+  private clearDescription() {
+    const element = this.getDescriptionElement();
+    if (element) {
+      element.textContent = '';
+    }
+  }
+
+  // Empty, then refill next tick, or a rerun with the same words is silent.
+  private announceSummary(summary: string) {
+    const element = this.getDescriptionElement();
+    if (!element) {
+      return;
+    }
+    this.clearPendingAnnouncement();
+    element.textContent = '';
+    this.announcementTimer = window.setTimeout(() => {
+      this.announcementTimer = null;
+      this.appendLines(summary);
+    }, 0);
+  }
+
+  // Appended, not refilled, so the summary is not read twice.
+  private releaseTranscript() {
+    const transcript = this.heldTranscript;
+    this.heldTranscript = '';
+    this.announceAfterRun(transcript);
+  }
+
+  // Called when the run button goes back to Run.
+  onRunEnded() {
+    this.isRunOver = true;
+    this.clearAfterRunTimer();
+    this.afterRunTimer = window.setTimeout(() => {
+      this.afterRunTimer = null;
+      this.flushLinesAfterRun();
+    }, AFTER_RUN_ANNOUNCEMENT_MS);
+  }
+
+  private announceAfterRun(text: string) {
+    this.linesAfterRun.push(text);
+    if (this.isRunOver && this.afterRunTimer === null) {
+      this.flushLinesAfterRun();
+    }
+  }
+
+  private flushLinesAfterRun() {
+    const lines = this.linesAfterRun;
+    this.linesAfterRun = [];
+    lines.forEach(text => this.appendLines(text));
+  }
+
+  private clearAfterRunTimer() {
+    if (this.afterRunTimer !== null) {
+      window.clearTimeout(this.afterRunTimer);
+      this.afterRunTimer = null;
+    }
+  }
+
+  // One paragraph per line; newlines in a text node collapse to spaces.
+  private appendLines(text: string) {
+    for (const line of text.split('\n')) {
+      if (line.trim()) {
+        this.appendToDescription(line);
+      }
+    }
+  }
+
+  private clearPendingAnnouncement() {
+    if (this.announcementTimer !== null) {
+      window.clearTimeout(this.announcementTimer);
+      this.announcementTimer = null;
+    }
+  }
+
+  private appendToDescription(line: string) {
+    const element = this.getDescriptionElement();
+    if (!element) {
+      return;
+    }
+    const paragraph = document.createElement('p');
+    paragraph.textContent = line;
+    element.appendChild(paragraph);
   }
 
   getAudioElement() {

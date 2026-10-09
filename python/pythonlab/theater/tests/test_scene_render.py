@@ -47,7 +47,7 @@ def _explode_on_drawing(monkeypatch):
 
 def _render_gif(actions):
   """The gif half of render(), for the tests that ignore audio."""
-  gif_bytes, _wav = render(actions)
+  gif_bytes, _wav, _still = render(actions)
   return gif_bytes
 
 
@@ -71,7 +71,7 @@ def test_pause_produces_multiframe_gif():
   # A final draw with no trailing pause is captured by the closing frame.
   scene.set_fill_color("green")
   scene.draw_rectangle(100, 100, 50, 50)
-  gif_bytes, wav_bytes = render(scene.get_actions())
+  gif_bytes, wav_bytes, _still = render(scene.get_actions())
 
   assert wav_bytes is None
   gif = PILImage.open(io.BytesIO(gif_bytes))
@@ -83,7 +83,7 @@ def test_pause_produces_multiframe_gif():
 def test_gif_only_when_no_pause_is_single_frame():
   scene = Scene()
   scene.draw_ellipse(10, 10, 50, 50)
-  gif_bytes, wav_bytes = render(scene.get_actions())
+  gif_bytes, wav_bytes, _still = render(scene.get_actions())
   gif = PILImage.open(io.BytesIO(gif_bytes))
   assert gif.n_frames == 1
   assert wav_bytes is None
@@ -92,7 +92,7 @@ def test_gif_only_when_no_pause_is_single_frame():
 def test_play_note_produces_wav():
   scene = Scene()
   scene.play_note(60, 0.5, instrument=Instrument.PIANO)
-  gif_bytes, wav_bytes = render(scene.get_actions())
+  gif_bytes, wav_bytes, _still = render(scene.get_actions())
   assert wav_bytes is not None
   with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
     assert reader.getnchannels() == 1
@@ -106,7 +106,7 @@ def test_play_note_produces_wav():
 def test_play_sound_samples():
   scene = Scene()
   scene.play_sound([0.1, 0.2, 0.3])
-  _gif, wav_bytes = render(scene.get_actions())
+  _gif, wav_bytes, _still = render(scene.get_actions())
   samples = read_samples_from_wav_bytes(wav_bytes)
   assert len(samples) == 3
 
@@ -121,7 +121,7 @@ def test_play_sound_does_not_follow_the_callers_list():
   samples[0] = -1.0
   samples.clear()
 
-  _gif, wav_bytes = render(scene.get_actions())
+  _gif, wav_bytes, _still = render(scene.get_actions())
   rendered = read_samples_from_wav_bytes(wav_bytes)
   assert len(rendered) == 3
   assert rendered[0] > 0.99
@@ -131,7 +131,7 @@ def test_draw_text_renders():
   scene = Scene()
   scene.set_text_color("black")
   scene.draw_text("Hi", 50, 50)
-  gif_bytes, _wav = render(scene.get_actions())
+  gif_bytes, _wav, _still = render(scene.get_actions())
   assert len(gif_bytes) > 0
 
 
@@ -321,7 +321,7 @@ def test_audio_keeps_step_with_the_video(seconds_each):
     scene.pause(seconds_each)
   # A single sample at the end, so the audio's length is the cursor itself.
   scene.play_sound([1.0])
-  gif_bytes, wav = render(scene.get_actions())
+  gif_bytes, wav, _still = render(scene.get_actions())
   cursor_samples = len(read_samples_from_wav_bytes(wav)) - 1
   video_ms = _gif_total_milliseconds(gif_bytes)
   assert cursor_samples == video_ms * SAMPLE_RATE // 1000
@@ -352,7 +352,7 @@ def test_audio_ceiling_is_checked_before_drawing(monkeypatch):
 
 
 def test_audio_ceiling_allows_a_full_length_track():
-  _gif, wav = render(_scene_sounding_after(MAX_AUDIO_SECONDS - 1).get_actions())
+  _gif, wav, _still = render(_scene_sounding_after(MAX_AUDIO_SECONDS - 1).get_actions())
   samples = read_samples_from_wav_bytes(wav)
   assert len(samples) / SAMPLE_RATE == pytest.approx(MAX_AUDIO_SECONDS - 0.5, abs=0.01)
 
@@ -365,7 +365,7 @@ def test_pauses_after_the_last_sound_do_not_count():
   scene.play_note(60, 0.5)
   scene.pause(MAX_AUDIO_SECONDS)
   scene.pause(MAX_AUDIO_SECONDS)
-  _gif, wav = render(scene.get_actions())
+  _gif, wav, _still = render(scene.get_actions())
   assert len(read_samples_from_wav_bytes(wav)) / SAMPLE_RATE == pytest.approx(0.5, abs=0.01)
 
 

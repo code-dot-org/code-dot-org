@@ -5,6 +5,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 import TheaterVisualization from '@cdo/apps/miniApps/theater/TheaterVisualization';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import MiniAppEmptyState from './MiniAppEmptyState';
 import PhotoPrompterButton from './PhotoPrompterButton';
@@ -25,6 +26,7 @@ const TheaterPreview: React.FunctionComponent<TheaterPreviewProps> = ({
   const appName = levelProperties?.appName;
   const [isPrompterOpen, setIsPrompterOpen] = useState(false);
   const [promptText, setPromptText] = useState('');
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   const onMediaLoadError = useCallback(
     (type: 'video' | 'audio') => {
@@ -72,6 +74,13 @@ const TheaterPreview: React.FunctionComponent<TheaterPreviewProps> = ({
       CodebridgeRegistry.getInstance().setTheater(null);
     };
   }, [sendTypedInputMessage, onMediaLoadError, setIsOutputVisible]);
+
+  // Runs after the run button has re-rendered with its new label.
+  useEffect(() => {
+    if (!isRunning) {
+      CodebridgeRegistry.getInstance().getTheater()?.onRunEnded();
+    }
+  }, [isRunning]);
 
   const onPhotoSelected = (file: File) => {
     CodebridgeRegistry.getInstance()
