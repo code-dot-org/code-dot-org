@@ -238,6 +238,13 @@ const ailabSlice = createSlice({
         item => item !== action.payload,
       );
     },
+    setSelectedFeatures(state, action: PayloadAction<string[]>) {
+      state.selectedFeatures = action.payload;
+      const columns = Object.keys(state.data[0] ?? {});
+      state.selectedFeatures.sort(
+        (a, b) => columns.indexOf(a) - columns.indexOf(b),
+      );
+    },
     setLabelColumn(state, action: PayloadAction<string>) {
       state.labelColumn = action.payload;
       state.selectedFeatures = state.selectedFeatures.filter(
@@ -487,6 +494,7 @@ export const {
   setColumnsByDataType,
   addSelectedFeature,
   removeSelectedFeature,
+  setSelectedFeatures,
   setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,

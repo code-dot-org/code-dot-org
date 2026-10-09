@@ -15,6 +15,7 @@ import {
   readyToTrain,
   removeSelectedFeature,
   setLabelColumn,
+  setSelectedFeatures,
   setTrainingModalStep,
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
@@ -61,6 +62,14 @@ const TrainPanel = () => {
     dispatch(
       checked ? addSelectedFeature(value) : removeSelectedFeature(value),
     );
+  };
+
+  const onSelectAllFeatures = () => {
+    dispatch(setSelectedFeatures(selectableColumns.filter(column => column !== labelColumn)));
+  };
+
+  const onRemoveAllFeatures = () => {
+    dispatch(setSelectedFeatures([]));
   };
 
   const onTrain = () => {
@@ -118,7 +127,11 @@ const TrainPanel = () => {
                   allOptions={featureOptions}
                   checkedOptions={selectedFeatures}
                   onChange={onFeatureChange}
-                  hideControls
+                  doneText="Done"
+                  selectAllText="Select All"
+                  clearAllText="Clear"
+                  onClearAll={onRemoveAllFeatures}
+                  onSelectAll={onSelectAllFeatures}
                 />
               </DropdownProviderWrapper>
             </div>
