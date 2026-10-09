@@ -33,7 +33,6 @@ export default function useQuizBuilderView({
   const applySaved = (updated: Partial<QuizConfigurationData>) =>
     setQuizConfig(prev => ({...prev, ...updated}));
 
-  // Rejects on failure, so the caller can show the error where it happened.
   const saveQuizConfig = async (fields: Partial<QuizConfigurationData>) => {
     const response = await HttpClient.put(
       `/levels/${levelId}/quiz_configuration`,
