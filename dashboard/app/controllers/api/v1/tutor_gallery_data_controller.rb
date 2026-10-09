@@ -1,6 +1,5 @@
 class Api::V1::TutorGalleryDataController < Api::V1::JSONApiController
   before_action :authenticate_user!
-  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
 
   # GET /api/v1/scripts/:script_id/lessons/:lesson_position/tutor_gallery_data
   def show

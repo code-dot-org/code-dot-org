@@ -9,7 +9,6 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/templates/progress/SummaryProgressRow';
 import experiments from '@cdo/apps/util/experiments';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 const baseProps = {
   dark: false,
@@ -90,7 +89,6 @@ describe('SummaryProgressRow', () => {
       lesson: tutorLesson,
       viewAs: ViewType.Participant,
       userId: 1,
-      aiChatAccessLevel: AiChatAccessLevels.ENABLED,
     };
 
     let realIsEnabled;
@@ -117,15 +115,6 @@ describe('SummaryProgressRow', () => {
       experiments.isEnabled = jest.fn(() => true);
       const wrapper = setUp({...tutorProps, viewAs: ViewType.Instructor});
       expect(wrapper.text()).toContain('Lesson Tutor');
-    });
-
-    it('does not show with essential-only AI chat access', () => {
-      experiments.isEnabled = jest.fn(() => true);
-      const wrapper = setUp({
-        ...tutorProps,
-        aiChatAccessLevel: AiChatAccessLevels.ESSENTIAL_ONLY,
-      });
-      expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
     it('does not show when signed out', () => {
