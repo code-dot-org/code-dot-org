@@ -5,6 +5,7 @@ import {
   createBurst,
   drawBursts,
   isBurstLook,
+  shareOut,
   stepBurst,
 } from '@cdo/apps/p5lab/spritelab/lab2/bursts';
 import {PLATFORM_GRAVITY} from '@cdo/apps/p5lab/spritelab/lab2/platformPhysics';
@@ -168,6 +169,12 @@ describe('bursts', () => {
     Object.assign(p, {vx: 0, vy: 0, life: 1000});
     for (let i = 0; i < 30; i++) stepBurst(burst, scene());
     expect(p.vy).toBe(0);
+  });
+
+  it('shares a count out exactly, the first parts taking the extra', () => {
+    expect(shareOut(7, 3)).toEqual([3, 2, 2]);
+    expect(shareOut(2, 3)).toEqual([1, 1, 0]);
+    expect(shareOut(0, 2)).toEqual([0, 0]);
   });
 
   it('knows its looks', () => {

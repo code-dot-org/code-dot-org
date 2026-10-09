@@ -144,6 +144,13 @@ const LOOKS: Record<BurstLook, Look> = {
 const between = (random: Random, [min, max]: [number, number]) =>
   min + random() * (max - min);
 
+/** `total` shared exactly among `parts`: the first parts take the extra. */
+export function shareOut(total: number, parts: number): number[] {
+  const base = Math.floor(total / parts);
+  const extra = total % parts;
+  return Array.from({length: parts}, (_, i) => base + (i < extra ? 1 : 0));
+}
+
 /** Where a look's burst starts on a sprite: its centre, or its feet, the
     edge the scene's gravity presses it against. */
 export function burstOrigin(
@@ -251,7 +258,7 @@ export interface BurstCanvas {
   rectMode(mode: unknown): void;
   image(img: unknown, x: number, y: number, w: number, h: number): void;
   noStroke(): void;
-  fill(r: number, g: number, b: number): void;
+  fill(r: number, g: number, b: number, a?: number): void;
   rect(x: number, y: number, w: number, h: number): void;
   ellipse(x: number, y: number, w: number, h?: number): void;
   drawingContext: {globalAlpha: number};
