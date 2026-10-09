@@ -100,7 +100,7 @@ const Example = () => {
 - `onChange` — Handles the checkbox change event.
 - `label` — Text label displayed next to the checkbox.
 
-> **Note:** Some components like `Button`, `LinkButton`, `Typography`, and `Breadcrumbs` have been migrated to MUI.
+> **Note:** Some components like `Button`, `Typography`, and `Breadcrumbs` have been migrated to MUI.
 > Use their MUI equivalents from `@mui/material` instead. See [MIGRATION_STATUS.md](MIGRATION_STATUS.md) for details.
 
 ### Example with `Alert`

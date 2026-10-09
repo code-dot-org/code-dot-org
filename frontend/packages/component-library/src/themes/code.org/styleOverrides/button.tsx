@@ -9,7 +9,7 @@ import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
  * - Colors: purple, black, gray, white, destructive (in addition to primary, secondary, error)
  */
 
-// Size specifications matching genericButton.module.scss
+// Size specifications of the DSCO button
 const SIZE_SPECS = {
   xs: {
     padding: '0.125rem 0.5rem',

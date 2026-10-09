@@ -15,7 +15,6 @@ import {
   memo,
 } from 'react';
 
-import {sizeMap as buttonSizeToMuiSizeMap} from '@/button/buttonPropsToMuiCore';
 import {dropdownColors} from '@/common/constants';
 import {
   DropdownProviderWrapper,
@@ -26,6 +25,16 @@ import {ComponentSizeXSToL, DropdownColor} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './customDropdown.module.scss';
+
+export const buttonSizeToMuiSizeMap: Record<
+  ComponentSizeXSToL,
+  MuiButtonProps['size']
+> = {
+  xs: 'extraSmall',
+  s: 'small',
+  m: 'medium',
+  l: 'large',
+};
 
 export interface TriggerComponentProps extends AriaAttributes {
   id: string;

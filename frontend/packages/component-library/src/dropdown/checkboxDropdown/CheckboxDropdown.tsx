@@ -1,7 +1,6 @@
 import {Button as MuiButton} from '@mui/material';
 import {AriaAttributes} from 'react';
 
-import {sizeMap as buttonSizeToMuiSizeMap} from '@/button/buttonPropsToMuiCore';
 import Checkbox from '@/checkbox';
 import {dropdownColors} from '@/common/constants';
 import {
@@ -11,6 +10,7 @@ import {
 } from '@/common/types';
 
 import CustomDropdown, {
+  buttonSizeToMuiSizeMap,
   CustomDropdownMenuPlacement,
   CustomDropdownMenuVerticalPlacement,
   CustomDropdownOption,

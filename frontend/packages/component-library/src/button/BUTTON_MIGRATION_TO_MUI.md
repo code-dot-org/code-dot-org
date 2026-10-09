@@ -1,5 +1,10 @@
 # Button Component Migration Guide: Custom to MUI
 
+> The migration is finished: the DSCO `Button`, `LinkButton` and
+> `GenericButton` sources and their codemod are deleted. This guide records how
+> their props map onto MUI's; the sections on the DSCO API describe code that no
+> longer exists. See [README.md](README.md) for current usage.
+
 This guide documents how to migrate the custom Button component to MUI Button while maintaining the same API and visual design.
 
 ## Table of Contents
