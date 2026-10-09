@@ -128,6 +128,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const keysHintId = useId();
   const nameId = useId();
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
+  const [focusVisibleId, setFocusVisibleId] = useState<string>();
   const [entered, setEntered] = useState(false);
   const nodeElements = useRef(new Map<string, HTMLElement>());
 
@@ -289,6 +290,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             {layout.nodes.map(placed => {
               const text = displayNodeLabel(placed.node, datasetId);
               const label = placed.branch && branchLabel(placed.branch);
+              const focusVisible = placed.id === focusVisibleId;
               const kind =
                 placed.answerIndex === undefined
                   ? styles.question
@@ -329,13 +331,23 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   aria-setsize={siblings.length}
                   aria-posinset={siblings.indexOf(placed) + 1}
                   tabIndex={entered && placed.id === tabStopId ? 0 : -1}
-                  onFocus={() => setFocusedId(placed.id)}
+                  onFocus={event => {
+                    setFocusedId(placed.id);
+                    setFocusVisibleId(
+                      event.currentTarget.matches(':focus-visible')
+                        ? placed.id
+                        : undefined,
+                    );
+                  }}
+                  onBlur={() => setFocusVisibleId(undefined)}
                   onKeyDown={event => moveFocus(event, placed)}
                   className={styles.nodeSlot}
                   style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
                   {label?.text && (
                     <TruncatedTextTooltip
+                      focused={focusVisible}
+                      placement="top"
                       title={
                         label.sign ? `${label.sign} ${label.text}` : label.text
                       }
@@ -363,7 +375,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         style={leafColorStyle(placed.answerIndex)}
                       />
                     )}
-                    <TruncatedTextTooltip title={text}>
+                    <TruncatedTextTooltip
+                      title={text}
+                      focused={focusVisible}
+                      placement="bottom"
+                    >
                       <Typography
                         id={textId(placed.id)}
                         variant="body3"

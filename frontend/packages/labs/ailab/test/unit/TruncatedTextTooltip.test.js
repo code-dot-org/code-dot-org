@@ -1,55 +1,107 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
+import {CanvasMoveContext} from '../../src/UIComponents/TreeCanvas';
 import TruncatedTextTooltip from '../../src/UIComponents/TruncatedTextTooltip';
 
 const TEXT = 'Sunny or Overcast';
 
-// jsdom lays nothing out, so the label reports the widths it is given.
-function renderLabel({scrollWidth, clientWidth}) {
-  render(
+function label({focused = false, subscribeToMoves = () => () => {}} = {}) {
+  return createElement(
+    CanvasMoveContext.Provider,
+    {value: subscribeToMoves},
     createElement(
       TruncatedTextTooltip,
-      {title: TEXT},
+      {title: TEXT, focused, placement: 'top'},
       createElement('span', null, TEXT),
     ),
   );
-  const label = screen.getByText(TEXT);
-  Object.defineProperties(label, {
-    scrollWidth: {value: scrollWidth},
-    clientWidth: {value: clientWidth},
-  });
-  return label;
 }
 
-function hover(label) {
-  fireEvent.mouseOver(label);
+// jsdom lays nothing out, so every element reports these widths.
+function textWidth(scrollWidth) {
+  vi.spyOn(Element.prototype, 'scrollWidth', 'get').mockReturnValue(
+    scrollWidth,
+  );
+  vi.spyOn(Element.prototype, 'clientWidth', 'get').mockReturnValue(60);
+}
+
+function settle() {
   act(() => vi.advanceTimersByTime(1000));
 }
 
+const tooltip = () => screen.queryByRole('tooltip');
+
 describe('TruncatedTextTooltip', () => {
   beforeEach(() => vi.useFakeTimers());
-  afterEach(() => vi.useRealTimers());
+  afterEach(() => {
+    vi.useRealTimers();
+    vi.restoreAllMocks();
+  });
 
   test('shows the whole text on hover when it is cut off', () => {
-    hover(renderLabel({scrollWidth: 120, clientWidth: 60}));
+    textWidth(120);
+    render(label());
 
-    expect(screen.getByRole('tooltip').textContent).toBe(TEXT);
+    fireEvent.mouseOver(screen.getByText(TEXT));
+    settle();
+
+    expect(tooltip().textContent).toBe(TEXT);
   });
 
-  test('stays closed when the text fits', () => {
-    hover(renderLabel({scrollWidth: 60, clientWidth: 60}));
+  test('stays closed on hover when the text fits', () => {
+    textWidth(60);
+    render(label());
 
-    expect(screen.queryByRole('tooltip')).toBeNull();
+    fireEvent.mouseOver(screen.getByText(TEXT));
+    settle();
+
+    expect(tooltip()).toBeNull();
   });
 
-  test.each(['pointerDown', 'wheel'])('closes on %s', event => {
-    const label = renderLabel({scrollWidth: 120, clientWidth: 60});
-    hover(label);
+  test('shows the whole text while its node has focus, until it leaves', () => {
+    textWidth(120);
+    const {rerender} = render(label());
 
-    fireEvent[event](label);
-    act(() => vi.advanceTimersByTime(1000));
+    rerender(label({focused: true}));
+    expect(tooltip().textContent).toBe(TEXT);
 
-    expect(screen.queryByRole('tooltip')).toBeNull();
+    rerender(label({focused: false}));
+    settle();
+    expect(tooltip()).toBeNull();
+  });
+
+  test('stays open while focused after the pointer leaves', () => {
+    textWidth(120);
+    const {container} = render(label({focused: true}));
+
+    fireEvent.mouseLeave(container.querySelector('span'));
+    settle();
+
+    expect(tooltip().textContent).toBe(TEXT);
+  });
+
+  test('stays closed while focused when the text fits', () => {
+    textWidth(60);
+    render(label({focused: true}));
+
+    expect(tooltip()).toBeNull();
+  });
+
+  test('follows the canvas only while open', () => {
+    textWidth(120);
+    const unsubscribe = vi.fn();
+    const subscribeToMoves = vi.fn(() => unsubscribe);
+    const {rerender} = render(label({subscribeToMoves}));
+    expect(subscribeToMoves).not.toHaveBeenCalled();
+
+    rerender(label({focused: true, subscribeToMoves}));
+    const [[onMove]] = subscribeToMoves.mock.calls;
+    act(() => {
+      onMove();
+    });
+
+    rerender(label({focused: false, subscribeToMoves}));
+    expect(unsubscribe).toHaveBeenCalledTimes(1);
   });
 });

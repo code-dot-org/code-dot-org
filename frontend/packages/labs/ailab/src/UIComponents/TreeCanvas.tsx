@@ -9,12 +9,14 @@ import {
   type ZoomTransform,
 } from 'd3-zoom';
 import {
+  createContext,
   type FocusEvent,
   type HTMLAttributes,
   type MutableRefObject,
   type ReactNode,
   type RefObject,
   type UIEvent,
+  useCallback,
   useEffect,
   useLayoutEffect,
   useMemo,
@@ -104,6 +106,13 @@ function undoScroll({currentTarget}: UIEvent<HTMLElement>) {
   currentTarget.scrollLeft = 0;
 }
 
+// Subscribes to every pan and zoom of the content; returns the unsubscribe.
+type SubscribeToMoves = (onMove: () => void) => () => void;
+
+export const CanvasMoveContext = createContext<SubscribeToMoves>(
+  () => () => {},
+);
+
 interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
   contentWidth: number;
   contentHeight: number;
@@ -135,6 +144,7 @@ const TreeCanvas = ({
   const scaleTargetRef = useRef<number>();
   const panTargetRef = useRef<ZoomTransform>();
   const autoFitRef = useRef(true);
+  const moveListenersRef = useRef(new Set<() => void>());
   const contentRect = useMemo(
     () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),
     [contentWidth, contentHeight],
@@ -150,6 +160,7 @@ const TreeCanvas = ({
           autoFitRef.current = false;
         }
         content.style.transform = `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`;
+        moveListenersRef.current.forEach(onMove => onMove());
         const focused = document.activeElement;
         if (focused instanceof HTMLElement && content.contains(focused)) {
           focused.style.setProperty(SCALE_PROPERTY, String(transform.k));
@@ -187,6 +198,13 @@ const TreeCanvas = ({
     observer.observe(viewport);
     return () => observer.disconnect();
   }, [contentRect, overlayRef]);
+
+  const subscribeToMoves = useCallback((onMove: () => void) => {
+    moveListenersRef.current.add(onMove);
+    return () => {
+      moveListenersRef.current.delete(onMove);
+    };
+  }, []);
 
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
@@ -287,7 +305,9 @@ const TreeCanvas = ({
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- it only watches focus rising from the tree's nodes */}
       <div ref={viewportRef} className={styles.viewport} onFocus={followFocus}>
         <div ref={contentRef} className={styles.content}>
-          {children}
+          <CanvasMoveContext.Provider value={subscribeToMoves}>
+            {children}
+          </CanvasMoveContext.Provider>
         </div>
       </div>
       <div
