@@ -540,6 +540,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.user_adaptive_steps
+  #
+
+  test "deletes user_adaptive_steps, including under soft-deleted user_levels" do
+    user = create(:student)
+    live = create(:user_level, user: user)
+    deleted = create(:user_level, user: user)
+    UserAdaptiveStep.create!(user_level: live, step_id: 'intro', progress: {'answers' => {}})
+    UserAdaptiveStep.create!(user_level: deleted, step_id: 'intro')
+    deleted.destroy
+    other = UserAdaptiveStep.create!(user_level: create(:user_level), step_id: 'intro')
+
+    purge_user user
+
+    assert_empty UserAdaptiveStep.where(user_level_id: [live.id, deleted.id])
+    assert UserAdaptiveStep.exists?(other.id)
+    assert_logged "Deleted 2 UserAdaptiveStep"
+  end
+
+  #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
   #

@@ -31,6 +31,9 @@ class Adaptive < Level
     adaptive_id
   )
 
+  # The project screen's step, which the client builds from the pathway's project.
+  PROJECT_STEP_ID = 'project'.freeze
+
   validates :adaptive_id, presence: true
   validate :adaptive_content_exists
 
@@ -55,6 +58,29 @@ class Adaptive < Level
   # The served pathway for this level, or nil when its file is missing.
   def content
     AdaptiveContent.load(adaptive_id)
+  end
+
+  # The step with `step_id`, or nil; `project` finds the project screen's step.
+  def find_step(step_id)
+    pathway = content
+    return nil unless pathway
+    step = steps(pathway).find {|s| s['id'] == step_id}
+    return step if step
+    return nil unless step_id == PROJECT_STEP_ID
+    {'id' => PROJECT_STEP_ID, 'kind' => 'level', 'level' => pathway.dig('project', 'templateLevel')}
+  end
+
+  # Level step id => Level, leaving out steps whose level does not exist.
+  def step_levels
+    pathway = content
+    return {} unless pathway
+    steps = level_steps(pathway)
+    levels = Level.where(name: steps.map {|step| step['level']}.uniq).index_by(&:name)
+    steps.filter_map {|step| [step['id'], levels[step['level']]] if levels[step['level']]}.to_h
+  end
+
+  def step_level?(level)
+    step_levels.values.any? {|step_level| step_level.id == level.id}
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
@@ -96,13 +122,17 @@ class Adaptive < Level
     resolved
   end
 
-  private def level_steps(pathway)
+  private def steps(pathway)
     checkpoints = pathway['checkpoints']
     return [] unless checkpoints.is_a?(Array)
     checkpoints.flat_map do |checkpoint|
       steps = checkpoint.is_a?(Hash) ? checkpoint['steps'] : nil
-      steps.is_a?(Array) ? steps.select {|step| level_step?(step)} : []
+      steps.is_a?(Array) ? steps.select {|step| step.is_a?(Hash)} : []
     end
+  end
+
+  private def level_steps(pathway)
+    steps(pathway).select {|step| level_step?(step)}
   end
 
   private def level_step?(step)
