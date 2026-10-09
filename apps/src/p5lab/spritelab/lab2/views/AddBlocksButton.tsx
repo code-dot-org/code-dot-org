@@ -11,8 +11,9 @@ import {
 
 import moduleStyles from './block-catalog.module.scss';
 
-// Matches .toolboxFooter's height in the stylesheet.
-const FOOTER_PX = 56;
+// The button's height plus its inset from the toolbox's bottom edge, which
+// the flyout scrolls its last block clear of.
+const FOOTER_PX = 44;
 // Room in the flyout's margin for the dots beside added blocks.
 const MARGIN_FACTOR = 2;
 
@@ -26,9 +27,10 @@ interface AddBlocksButtonProps {
 }
 
 /**
- * The bar pinned over the bottom of the toolbox that opens the new-block
- * catalog. It takes the toolbox column's width, and the flyout gains room
- * to scroll its last block clear of it and a wider margin for the dots.
+ * The button pinned in the toolbox's lower-right corner that opens the
+ * new-block catalog. It sits inside the toolbox column, which is why its
+ * position follows the column's width; the flyout gains room to scroll its
+ * last block clear of it and a wider margin for the dots.
  */
 const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
   workspaceVersion,
@@ -57,12 +59,11 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
     return null;
   }
   return (
-    <div className={moduleStyles.toolboxFooter} style={{width}}>
+    <div className={moduleStyles.toolboxCorner} style={{left: width}}>
       <MuiButton
         variant="contained"
         color="primary"
         size="small"
-        className={moduleStyles.toolboxFooterButton}
         startIcon={<FontAwesomeV6Icon iconName="plus" />}
         onClick={onClick}
       >

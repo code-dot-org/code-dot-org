@@ -5,7 +5,7 @@
 @use 'catalog-dot' as catalog;
 
 $list-width: 220px;
-$footer-height: 56px;
+$corner-inset: 8px;
 
 .dialogHost {
   display: contents;
@@ -202,24 +202,13 @@ $footer-height: 56px;
   padding: 12px 24px;
 }
 
-// Pinned over the flyout's bottom edge; its width follows the flyout's.
+// Pinned inside the toolbox's lower-right corner: `left` is the toolbox
+// column's width, and the button hangs back from it by its own width.
 // Above Blockly's flyout (z 20), below its drag layer, so a block dragged
-// out still passes over the bar.
-.toolboxFooter {
+// out still passes over the button.
+.toolboxCorner {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: $footer-height;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  background: var(--background-neutral-primary);
-  border-top: 1px solid var(--borders-neutral-primary);
+  bottom: $corner-inset;
+  transform: translateX(calc(-100% - #{$corner-inset}));
   z-index: 21;
-}
-
-.toolboxFooterButton {
-  width: 100%;
 }
