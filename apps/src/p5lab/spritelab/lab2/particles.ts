@@ -2,7 +2,6 @@
 // images they are drawn from. The engine owns one, hands it the world the
 // particles fly through, and asks it to step and draw inside the paint.
 
-import puffUrl from '@cdo/static/spritelab_lab2/particles/puff.png';
 import sparkUrl from '@cdo/static/spritelab_lab2/particles/spark.png';
 
 import {
@@ -31,7 +30,7 @@ import {
   WeatherScene,
 } from './weather';
 
-const IMAGE_URLS: Record<BurstShape, string> = {spark: sparkUrl, puff: puffUrl};
+const IMAGE_URLS: Record<BurstShape, string> = {spark: sparkUrl};
 
 /** A loaded image: its size and the canvas holding its pixels. */
 export interface ParticleImage {
@@ -147,10 +146,7 @@ export class ParticleLayer {
     if (this.images) {
       return;
     }
-    const images: Record<BurstShape, ParticleImage | null> = {
-      spark: null,
-      puff: null,
-    };
+    const images: Record<BurstShape, ParticleImage | null> = {spark: null};
     this.images = images;
     for (const shape of Object.keys(IMAGE_URLS) as BurstShape[]) {
       p5.loadImage(IMAGE_URLS[shape], image => (images[shape] = image));

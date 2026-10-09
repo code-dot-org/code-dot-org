@@ -82,7 +82,7 @@ describe('ParticleLayer', () => {
     const layer = new ParticleLayer();
     layer.burst(canvas, 'sparks', 7, [sprite(10, 10), sprite(90, 90)], VIEW);
     // One image per shape, loaded once.
-    expect(calls.filter(c => c === 'load')).toHaveLength(2);
+    expect(calls.filter(c => c === 'load')).toHaveLength(1);
     layer.stepAndDraw(canvas, VIEW, sceneFor);
     expect(calls.filter(c => c === 'image')).toHaveLength(7);
     calls.length = 0;

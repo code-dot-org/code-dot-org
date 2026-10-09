@@ -144,7 +144,7 @@ describe('bursts', () => {
     });
   });
 
-  it('dust puffs out to either side near level, slowly, and does not fall', () => {
+  it('dust flies out to either side near level, slowly, and settles back gently', () => {
     const burst = createBurst(
       'dust',
       20,
@@ -157,18 +157,19 @@ describe('bursts', () => {
     // Scattered along the feet, not from one point; never off them.
     expect(new Set(burst.particles.map(p => p.x)).size).toBeGreaterThan(1);
     burst.particles.forEach(p => {
-      expect(Math.abs(p.x - 100)).toBeLessThanOrEqual(8);
+      expect(Math.abs(p.x - 100)).toBeLessThanOrEqual(10);
       expect(p.y).toBe(200);
     });
     burst.particles.forEach(p => {
       // Within the fan of level, before the small lift.
-      expect(Math.abs(p.vy + 0.4)).toBeLessThan(Math.abs(p.vx) * 0.6);
-      expect(Math.hypot(p.vx, p.vy + 0.4)).toBeLessThanOrEqual(2.2);
+      expect(Math.abs(p.vy + 0.8)).toBeLessThan(Math.abs(p.vx) * 0.7);
+      expect(Math.hypot(p.vx, p.vy + 0.8)).toBeLessThanOrEqual(3);
     });
     const p = burst.particles[0];
     Object.assign(p, {vx: 0, vy: 0, life: 1000});
-    for (let i = 0; i < 30; i++) stepBurst(burst, scene());
-    expect(p.vy).toBe(0);
+    for (let i = 0; i < 60; i++) stepBurst(burst, scene());
+    expect(p.vy).toBeGreaterThan(0);
+    expect(p.vy).toBeLessThan(1);
   });
 
   it('shares a count out exactly, the first parts taking the extra', () => {
@@ -183,7 +184,7 @@ describe('bursts', () => {
     expect(isBurstLook('rain')).toBe(false);
   });
 
-  it('draws sparks as the tinted image, a dot until it loads, confetti as paper, and dust as a puff that swells', () => {
+  it('draws sparks as the tinted image, a dot until it loads, confetti as paper, and dust as specks that grow', () => {
     const calls: string[] = [];
     const context = {globalAlpha: 1};
     const alphas: number[] = [];
@@ -199,7 +200,7 @@ describe('bursts', () => {
             if (name === 'image' || name === 'ellipse' || name === 'rect') {
               alphas.push(context.globalAlpha);
             }
-            if (name === 'image') {
+            if (name === 'image' || name === 'ellipse') {
               sizes.push(args[3] as number);
             }
             calls.push(name);
@@ -244,9 +245,10 @@ describe('bursts', () => {
       shapes.push(shape);
       return {};
     });
-    expect(shapes).toEqual(['puff', 'puff']);
-    expect(calls.filter(c => c === 'image')).toHaveLength(2);
-    // The old puff is drawn bigger than the new one.
-    expect(sizes[1]).toBeGreaterThan(sizes[0] * 2);
+    // No image: a speck is a plain shape, the old one a little bigger.
+    expect(shapes).toEqual([]);
+    expect(calls.filter(c => c === 'ellipse')).toHaveLength(2);
+    expect(sizes[1]).toBeGreaterThan(sizes[0]);
+    expect(sizes[1]).toBeLessThan(sizes[0] * 1.5);
   });
 });

@@ -45,7 +45,7 @@ export const MAX_BURST_COUNT = 100;
 const FADE_SHARE = 0.5;
 
 /** The particle images, white, tinted per particle when drawn. */
-export type BurstShape = 'spark' | 'puff';
+export type BurstShape = 'spark';
 
 /** How a look moves and shows. */
 interface Look {
@@ -69,8 +69,8 @@ interface Look {
   /** Drawn size at the end of life, as a multiple of the start. */
   grow: number;
   spin: [number, number];
-  /** An image, or a tumbling scrap of paper. */
-  shape: BurstShape | 'paper';
+  /** An image, a tumbling scrap of paper, or a plain speck. */
+  shape: BurstShape | 'paper' | 'speck';
   palette: [number, number, number][];
 }
 
@@ -117,26 +117,26 @@ const LOOKS: Record<BurstLook, Look> = {
       [255, 120, 200],
     ],
   },
-  // Puffs kicked up at the feet: out to the sides, a little lift, and they
-  // swell as they thin out.
+  // Specks kicked up at the feet: out to the sides and up a little, then
+  // settling back down, each on its own.
   dust: {
     origin: 'feet',
-    fan: 0.5,
-    spread: 8,
-    speed: [0.6, 2.2],
-    lift: 0.4,
-    drag: 0.9,
-    fall: 0,
-    life: [22, 36],
-    size: [8, 14],
-    grow: 2.2,
-    spin: [-0.05, 0.05],
-    shape: 'puff',
+    fan: 0.6,
+    spread: 10,
+    speed: [1, 3],
+    lift: 0.8,
+    drag: 0.93,
+    fall: 0.05,
+    life: [20, 34],
+    size: [2, 4],
+    grow: 1.3,
+    spin: [0, 0],
+    shape: 'speck',
     palette: [
-      [214, 205, 190],
-      [228, 222, 210],
-      [196, 188, 174],
-      [205, 196, 180],
+      [176, 160, 138],
+      [196, 182, 160],
+      [158, 142, 120],
+      [186, 170, 148],
     ],
   },
 };
@@ -273,9 +273,9 @@ export type ImageFor = (
 ) => unknown;
 
 /** Draw every burst's particles: sparks as the spark image in their colour,
-    shrinking as they fade; dust as the puff image, swelling as it fades (a
-    dot until an image has loaded); confetti as scraps of paper that tumble
-    by narrowing and widening. */
+    shrinking as they fade (a dot until the image has loaded); confetti as
+    scraps of paper that tumble by narrowing and widening; dust as specks
+    that grow a little over their life. */
 export function drawBursts(
   p5: BurstCanvas,
   bursts: Burst[],
@@ -304,11 +304,12 @@ export function drawBursts(
         p5.scale(Math.max(0.15, Math.abs(Math.cos(p.age * 0.18 + p.phase))), 1);
         p5.fill(r, g, b);
         p5.rect(0, 0, p.size, p.size * 0.6);
+      } else if (shape === 'speck') {
+        const size = p.size * (1 + ((grow - 1) * p.age) / p.life);
+        p5.fill(r, g, b);
+        p5.ellipse(0, 0, size, size);
       } else {
-        const size =
-          shape === 'spark'
-            ? p.size * (0.4 + 0.6 * alpha)
-            : p.size * (1 + ((grow - 1) * p.age) / p.life);
+        const size = p.size * (0.4 + 0.6 * alpha);
         const image = imageFor(shape, p.color);
         if (image) {
           p5.image(image, 0, 0, size, size);
