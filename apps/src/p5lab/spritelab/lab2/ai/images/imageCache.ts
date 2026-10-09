@@ -32,10 +32,11 @@ export function isImageSource(value: unknown): value is ImageSource {
   return IMAGE_SOURCES.includes(value as ImageSource);
 }
 
-// A new peer of media/musiclab; the bucket is cdo-curriculum. curriculum.
-// code.org needs no media proxy (assetPrefix.js exempts it).
+// The path the hoai2026 image-gen script publishes to, in the cdo-curriculum
+// bucket beside media/musiclab. curriculum.code.org needs no media proxy
+// (assetPrefix.js exempts it).
 export const IMAGE_CACHE_BASE_URL =
-  'https://curriculum.code.org/media/spritelab2/generate/';
+  'https://curriculum.code.org/media/spritelab/generate/images/';
 
 // Bumped with the word lists or the prompts: a version's files were made
 // from its own manifest, and a browser may still hold the old one.
