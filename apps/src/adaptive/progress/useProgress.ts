@@ -9,6 +9,7 @@ import {
   Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
+  GeneratedContent,
   Progress,
   StepContext,
   getStatusMap,
@@ -70,22 +71,30 @@ export function useProgress(
     );
   }, []);
 
-  /** Merges into a step's context, so one concern's write keeps the others. */
-  const updateStepContext = useCallback((id: string, patch: StepContext) => {
-    setProgress(
-      p =>
-        p && {
-          ...p,
-          stepContext: {
-            ...p.stepContext,
-            [id]: {...p.stepContext[id], ...patch},
-          },
-        }
-    );
-  }, []);
+  // Generated instructions live for the page only; they are not progress.
+  const [generated, setGenerated] = useState<{
+    [stepId: string]: GeneratedContent;
+  }>({});
 
-  // Not a call to updateStepContext: the patch must read the latest answers,
-  // or two saves in one tick would drop the first.
+  const updateStepContext = useCallback(
+    (id: string, patch: Pick<StepContext, 'generated'>) => {
+      const content = patch.generated;
+      if (content) setGenerated(g => ({...g, [id]: content}));
+    },
+    []
+  );
+
+  const stepContextMap = useMemo(() => {
+    const map: {[stepId: string]: StepContext} = {};
+    for (const [id, context] of Object.entries(progress?.stepContext ?? {})) {
+      map[id] = {answers: context.answers};
+    }
+    for (const [id, content] of Object.entries(generated)) {
+      map[id] = {...map[id], generated: content};
+    }
+    return map;
+  }, [progress, generated]);
+
   const saveAnswers = useCallback(
     (stepId: string, questionId: number, answers: Answer[]) => {
       setProgress(p => {
@@ -106,12 +115,16 @@ export function useProgress(
     []
   );
 
-  const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
+  const reset = useCallback(() => {
+    setProgress(EMPTY_PROGRESS);
+    setGenerated({});
+  }, []);
 
   return {
     progress,
     isLoading: progress === undefined,
     statusMap,
+    stepContextMap,
     markStarted,
     markComplete,
     updateStepContext,

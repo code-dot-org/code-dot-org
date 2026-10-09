@@ -37,6 +37,8 @@ class ActivitiesController < ApplicationController
       @level = Unit.cache_find_level(params[:level_id].to_i)
     end
 
+    return head :forbidden if outside_adaptive_pathway?
+
     # Immediately return with a "Service Unavailable" status if milestone posts are
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
@@ -250,6 +252,15 @@ class ActivitiesController < ApplicationController
         )
       end
     end
+  end
+
+  # Under an adaptive level's script level, the only other levels that may
+  # report progress are that pathway's step levels.
+  private def outside_adaptive_pathway?
+    return false unless @script_level && @level
+    return false if @script_level.levels.include?(@level)
+    adaptive = @script_level.levels.find {|level| level.is_a?(Adaptive)}
+    adaptive.present? && !adaptive.step_level?(@level)
   end
 
   private def track_progress_in_session
