@@ -3,7 +3,9 @@
 
 import React, {useMemo, useState} from 'react';
 
+import {AichatContext} from '@cdo/apps/aichat/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {useProgress} from '../progress';
 import {ProgressKey} from '../progress/progressStore';
@@ -53,10 +55,16 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
 }) => {
-  const {statusMap, isLoading, markStarted, markComplete, reset} = useProgress(
-    pathway,
-    progressKey
-  );
+  const {
+    progress,
+    statusMap,
+    isLoading,
+    markStarted,
+    markComplete,
+    updateStepContext,
+    saveAnswers,
+    reset,
+  } = useProgress(pathway, progressKey);
   const [view, setView] = useState<View>({kind: 'map'});
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
 
@@ -65,9 +73,28 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       ? pathway.checkpoints.find(c => c.id === view.checkpointId)
       : undefined;
   const playing = view.kind === 'project' ? project : checkpoint;
+  // The shell's AI calls run as the adaptive level, not the step's level.
+  const aiContext = useMemo<AichatContext>(
+    () => ({
+      clientType: AiChatClientTypes.ADAPTIVE,
+      currentLevelId: progressKey.levelId,
+      scriptId: progressKey.scriptId,
+      channelId: undefined,
+    }),
+    [progressKey.levelId, progressKey.scriptId]
+  );
   const pathwayContext = useMemo(
-    () => playing && {pathway, checkpoint: playing, statusMap},
-    [pathway, playing, statusMap]
+    () =>
+      playing &&
+      progress && {
+        pathway,
+        checkpoint: playing,
+        statusMap,
+        stepContextMap: progress.stepContext,
+        updateStepContext,
+        aiContext,
+      },
+    [pathway, playing, statusMap, progress, updateStepContext, aiContext]
   );
 
   if (isLoading) {
@@ -87,6 +114,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
+            onSaveAnswers={saveAnswers}
             onExit={() =>
               setView({
                 kind: 'map',

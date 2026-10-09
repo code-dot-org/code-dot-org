@@ -7,8 +7,10 @@
   padding: 20px 24px 24px;
 }
 
+// Fixed, so a cell's width never grows to fit an uncollapsed sentence.
 .table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
 
   // Code Studio's global th rule fills headers and borders them in white.

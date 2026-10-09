@@ -1,11 +1,13 @@
 import ailab, {
   type InitAllOptions,
+  type Mode,
   type SaveResponse,
   type InstructionsKey,
 } from '@code-dot-org/ailab';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -13,6 +15,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
 import {AilabLevelProperties} from '../types';
 
@@ -23,12 +26,22 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
 }) => {
   const dispatch = useAppDispatch();
   const {showDialog} = useDialogControl();
+  const progressManager = useContext(ProgressManagerContext);
+  const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
     useState<InstructionsKey>();
+  const mode: Mode | undefined = useMemo(
+    () => (levelProperties.mode ? JSON.parse(levelProperties.mode) : undefined),
+    [levelProperties.mode]
+  );
   const dynamicInstructionsMap: {[key: string]: string} = useMemo(
     () => JSON.parse(levelProperties.dynamicInstructions || '{}'),
     [levelProperties.dynamicInstructions]
   );
+
+  useEffect(() => {
+    progressManager?.setValidator(validator);
+  }, [progressManager, validator]);
 
   useEffect(() => {
     const onContinue = () => {
@@ -72,10 +85,17 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       showDialog({type: DialogType.StartOver, handleConfirm: ailab.startOver});
     };
 
+    const onTrained = (accuracy: number) => {
+      validator.latestAccuracy = accuracy;
+      progressManager?.resetValidation();
+      progressManager?.updateProgress();
+    };
+
     ailab.mount({
       assetPath: '/blockly/media/skins/ailab/',
       onContinue,
       setInstructionsKey,
+      onTrained,
       i18n: {}, // TODO: Pass through localization map if necessary
       saveTrainedModel,
       logMetric,
@@ -83,15 +103,12 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     });
 
     return () => ailab.unmount();
-  }, [dispatch, showDialog]);
+  }, [dispatch, showDialog, progressManager, validator]);
 
   // Reload whenever the level changes regardless of if the mode has changed.
   useEffect(() => {
-    const mode = levelProperties.mode
-      ? JSON.parse(levelProperties.mode)
-      : undefined;
     ailab.loadLevel(mode);
-  }, [levelProperties.id, levelProperties.mode]);
+  }, [levelProperties.id, mode]);
 
   const dynamicInstructionsContent = useMemo(() => {
     if (!dynamicInstructionsKey) {
@@ -116,6 +133,11 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
         isRunning={false}
         hasRun={false}
         hasEdited={false}
+        validationTooltip={
+          mode?.requireAccuracy
+            ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
+            : undefined
+        }
         dynamicInstructions={dynamicInstructionsContent}
       />
       <div className={styles.divider} />

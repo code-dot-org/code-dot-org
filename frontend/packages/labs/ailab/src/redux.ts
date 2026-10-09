@@ -66,6 +66,7 @@ export interface RootState {
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
   trainingModalStep: TrainingModalStep | undefined;
+  isTrainingReplay: boolean;
   currentColumn: string | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
@@ -78,6 +79,30 @@ export interface RootState {
   showOverlay: boolean;
   resultsTab: string;
   mode?: Mode;
+}
+
+// Everything a training run writes, so a cancelled run can be undone.
+const TRAINING_RESULT_KEYS = [
+  'featureNumberKey',
+  'trainingExamples',
+  'trainingLabels',
+  'accuracyCheckExamples',
+  'accuracyCheckLabels',
+  'accuracyCheckPredictedLabels',
+  'hyperparameters',
+  'trainedModel',
+  'historicResults',
+] as const;
+
+export type TrainingResults = Pick<
+  RootState,
+  (typeof TRAINING_RESULT_KEYS)[number]
+>;
+
+export function getTrainingResults(state: RootState): TrainingResults {
+  return Object.fromEntries(
+    TRAINING_RESULT_KEYS.map(key => [key, state[key]]),
+  ) as TrainingResults;
 }
 
 export const initialState: RootState = {
@@ -112,6 +137,7 @@ export const initialState: RootState = {
   trainedModelDetails: {},
   currentPanel: 'datasetView',
   trainingModalStep: undefined,
+  isTrainingReplay: false,
   currentColumn: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
@@ -334,6 +360,7 @@ const ailabSlice = createSlice({
       }
       state.currentPanel = currentPanel;
       state.trainingModalStep = undefined;
+      state.isTrainingReplay = false;
       state.instructionsOverlayActive = showedOverlay;
       state.instructionsKey = currentPanel as InstructionsKey;
       state.showOverlay = showedOverlay;
@@ -375,6 +402,13 @@ const ailabSlice = createSlice({
       action: PayloadAction<TrainingModalStep | undefined>,
     ) {
       state.trainingModalStep = action.payload;
+      if (action.payload !== 'testing') {
+        state.isTrainingReplay = false;
+      }
+    },
+    replayTraining(state) {
+      state.trainingModalStep = 'training';
+      state.isTrainingReplay = true;
     },
     setSaveStatus: {
       reducer(
@@ -407,6 +441,9 @@ const ailabSlice = createSlice({
     },
     setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
       state.hyperparameters = action.payload;
+    },
+    restoreTrainingResults(state, action: PayloadAction<TrainingResults>) {
+      Object.assign(state, action.payload);
     },
     setInstructionsDismissed(state) {
       state.instructionsOverlayActive = false;
@@ -452,10 +489,12 @@ export const {
   setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
+  replayTraining,
   setSaveStatus,
   setHistoricResult,
   setHistoricResults,
   setHyperparameters,
+  restoreTrainingResults,
   setInstructionsDismissed,
   setInstructionsEnabled,
   setResultsTab,

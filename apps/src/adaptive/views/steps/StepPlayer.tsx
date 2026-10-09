@@ -3,18 +3,28 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
+import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
+import QuestionsStep from './QuestionsStep';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
+
+const NO_ANSWERS: StepAnswers = {};
 
 interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  onSaveAnswers: (
+    stepId: string,
+    questionId: number,
+    answers: Answer[]
+  ) => void;
   onExit: () => void;
   onFinish: () => void;
 }
@@ -23,9 +33,11 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  onSaveAnswers,
   onExit,
   onFinish,
 }) => {
+  const {stepContextMap} = usePathwayContext();
   const [index, setIndex] = useState(0);
   const steps = checkpoint.steps;
   const step = steps[index];
@@ -46,12 +58,24 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onComplete={advance}
           />
         );
+      case 'questions':
+        return (
+          <QuestionsStep
+            key={step.id}
+            step={step}
+            answers={stepContextMap[step.id]?.answers ?? NO_ANSWERS}
+            onSaveAnswers={(questionId, list) =>
+              onSaveAnswers(step.id, questionId, list)
+            }
+            onComplete={advance}
+          />
+        );
       default:
         // Other step kinds arrive in later changes.
         return (
           <div className={styles.stepFallback}>
             <MuiTypography variant="body3" className={shared.muted}>
-              This step type ({step.kind}) is not available yet.
+              This step type ({(step as Step).kind}) is not available yet.
             </MuiTypography>
             <MuiButton variant="contained" onClick={advance}>
               {continueLabel}

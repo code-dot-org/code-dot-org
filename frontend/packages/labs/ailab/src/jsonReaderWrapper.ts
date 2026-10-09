@@ -1,4 +1,5 @@
 import {ColumnTypes} from './constants';
+import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
 import {
   setImportedMetadata,
   setColumnsByDataType,
@@ -8,11 +9,16 @@ import {store} from './store';
 import type {Metadata} from './types';
 
 export const parseJSON = (jsonfile: string): void => {
+  const loadId = getDatasetLoadId();
   const rawFile = new XMLHttpRequest();
   rawFile.overrideMimeType('application/json');
   rawFile.open('GET', jsonfile, true);
   rawFile.onreadystatechange = function () {
-    if (rawFile.readyState === 4 && rawFile.status === 200) {
+    if (
+      rawFile.readyState === 4 &&
+      rawFile.status === 200 &&
+      isCurrentDatasetLoad(loadId)
+    ) {
       updateData(rawFile.responseText);
     }
   };

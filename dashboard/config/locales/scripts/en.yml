@@ -10663,6 +10663,8 @@ en:
               name: HoAI26 Testing w T&L
             lesson-21:
               name: HoAI26 Playtest 1
+            lesson-22:
+              name: WebLab Adaptive
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -25160,6 +25162,8 @@ en:
               name: Other
             lesson-3:
               name: Theater Playground
+            lesson-4:
+              name: CSP Unit 2 Project Examples
           lesson_groups: {}
           name: joi-playground
           title: Joi's Playground Script
@@ -29707,7 +29711,7 @@ en:
               display_name: End of Unit Project
             lessonGroup-2:
               display_name: End of Unit Assessment and Survey
-          title: Problem Solving with AI
+          title: Problem Solving with AI (India)
           description: |-
             As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. This unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
 
@@ -30372,6 +30376,8 @@ en:
               name: 'Lesson 10: Color Images'
             lesson-26:
               name: 'Lesson 11: Machine Learning'
+            lesson-27:
+              name: 'Lesson 15: Algorithmic Bias'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs

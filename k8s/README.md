@@ -112,6 +112,13 @@ Changing the mode rolls the Deployment's pods. Running jobs are not reclassified
 or interrupted by the filter. Custom `activeJobWorker.command` and `args` are
 supported only in `both` mode; filtered modes require the generated command.
 
+`activeJobWorker.terminationGracePeriodSeconds` sets how long a pod being
+replaced or drained waits for its current job before Kubernetes kills the
+worker. A killed job's row stays locked for `Delayed::Worker.max_run_time`
+(4 hours). The chart default is 60; production and staging set 2100 to cover
+the 30 minute `AnonymousGeoBackfillingJob` cap. An idle worker exits within
+seconds regardless.
+
 During migration, Kubernetes can start with `low` while existing workers
 continue consuming both priorities. To move all low-priority work to Kubernetes,
 the existing workers must also be configured to consume only high priorities.
