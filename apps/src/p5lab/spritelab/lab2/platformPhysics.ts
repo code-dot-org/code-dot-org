@@ -51,9 +51,8 @@ export const LEDGE_FALL_SPEED = MIN_SOLID_OVERLAP;
 export const PLAYER_BODY_SCALE = 0.8;
 
 // How far (px/frame) a climbing player slides toward the ladder's column
-// when no sideways key is held: a ladder between two tiles then lines the
-// player up with the gap, instead of asking for an exact approach. Under
-// the walk speed, so a held sideways key still wins.
+// when no sideways key is held, so a ladder between two tiles lines the
+// player up with the gap. Under the walk speed, so a held sideways key wins.
 export const LADDER_CENTERING_PX = 4;
 
 // The sprite fields the resolver reads; p5.play sprites satisfy these
@@ -373,8 +372,8 @@ export function resolvePlatformPhysics(
         x += x < wall.x ? -penX : penX;
       }
     });
-    // Climbing up out of the highest ladder stops with the feet on its top,
-    // where the player can step sideways onto a block.
+    // Climbing up out of a ladder with none above it stops with the feet on
+    // its top, where the player can step sideways onto a block.
     const grabbing = !sprite.__slab2OffLadder;
     let climbing = grabbing && onLadderAt(x, y, halfW, halfH, rungs);
     if (
@@ -383,11 +382,13 @@ export function resolvePlatformPhysics(
       dy < 0 &&
       onLadderAt(prev.x, prev.y, halfW, halfH, rungs)
     ) {
+      const prevFeet = prev.y + halfH;
       const tops = rungs
         .filter(
           ladder =>
             halfW + ladder.halfW - Math.abs(x - ladder.x) > MIN_SOLID_OVERLAP &&
-            ladder.y - ladder.halfH <= prev.y + halfH + CONTACT_EPSILON
+            prevFeet >= ladder.y - ladder.halfH - CONTACT_EPSILON &&
+            prevFeet <= ladder.y + ladder.halfH + CONTACT_EPSILON
         )
         .map(ladder => ladder.y - ladder.halfH);
       if (tops.length) {

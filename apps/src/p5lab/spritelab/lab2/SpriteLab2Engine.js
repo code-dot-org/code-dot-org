@@ -318,10 +318,16 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   // What the weather lands on this frame, on top of the view: the tiles,
-  // and every other sprite as a body.
+  // and every other sprite as a body. Ladders are open between their
+  // rungs, so nothing lands on them.
   weatherScene_(view) {
     const bodies = Object.values(this.library.nativeSpriteMap)
-      .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
+      .filter(
+        sprite =>
+          sprite.group !== 'walls' &&
+          sprite.group !== 'ladders' &&
+          !sprite.removed
+      )
       .map(bodyBox);
     return {
       ...view,

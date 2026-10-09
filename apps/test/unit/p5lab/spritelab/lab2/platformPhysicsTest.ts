@@ -605,6 +605,16 @@ describe('platformPhysics ladders', () => {
     expect(player.__slab2Climbing).toBe(true);
   });
 
+  it('stops at the top of a ladder with a gap above it, not the next one up', () => {
+    const gapped = [wallAt(3, 4), wallAt(3, 6)];
+    const player = makeSprite(175, 325);
+    for (let i = 0; i < 20; i++) {
+      climbStep(player, walls, gapped, {vy: -5});
+    }
+    expect(feet(player)).toBe(300);
+    expect(player.__slab2Climbing).toBe(true);
+  });
+
   it('holds a player that stops part way up, and lets it climb back down', () => {
     const player = makeSprite(175, 325);
     for (let i = 0; i < 10; i++) {
