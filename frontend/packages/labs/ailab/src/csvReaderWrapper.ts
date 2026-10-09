@@ -2,6 +2,7 @@ import type {ParseResult} from 'papaparse';
 import Papa from 'papaparse';
 
 import {ColumnTypes} from './constants';
+import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
 import {containsOnlyNumbers} from './helpers/columnDetails';
 import {
   setImportedData,
@@ -22,7 +23,11 @@ export const parseCSV = (
   // config, a plain string selects the local config — so the runtime branch
   // is also what lets each call type-check (a single config carrying a
   // non-literal `download` matches neither overload).
+  const loadId = getDatasetLoadId();
   const complete = (result: ParseResult<Record<string, string>>) => {
+    if (!isCurrentDatasetLoad(loadId)) {
+      return;
+    }
     updateData(result, useDefaultColumnDataType, !download);
   };
   if (download) {

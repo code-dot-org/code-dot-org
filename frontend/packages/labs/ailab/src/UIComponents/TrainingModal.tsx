@@ -45,13 +45,14 @@ const TrainingModal = () => {
   };
   const showTesting = () => dispatch(setTrainingModalStep('testing'));
   const showResults = () => dispatch(setCurrentPanel('results'));
+  const cancelLabel = isTraining ? 'Cancel Training' : 'Cancel Testing';
 
   return (
     <MuiCustomDialog
       className={styles.dialog}
       aria-labelledby={TITLE_ID}
       onClose={closeModal}
-      closeLabel={isInProgress ? 'Cancel' : 'Close'}
+      closeLabel={isInProgress ? cancelLabel : 'Close'}
     >
       <div className={styles.titleRow}>
         <Typography

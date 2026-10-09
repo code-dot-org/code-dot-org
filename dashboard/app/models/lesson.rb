@@ -436,6 +436,7 @@ class Lesson < ApplicationRecord
 
     {
       currentUnitId: script.id,
+      is_teacher: user.sections_instructed.any?,
       units: units.map.with_index(1) do |unit, position|
         {id: unit.id, name: unit.localized_title, position: position, link: unit.link}
       end,

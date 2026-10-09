@@ -50,6 +50,7 @@ const LESSON_DATA: LessonDeepDiveData = {
 
 const GALLERY_DATA: TutorGalleryData = {
   currentUnitId: 1,
+  is_teacher: false,
   units: [],
   sections: [],
 };
