@@ -12,17 +12,21 @@
 //   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>-base.png  set frames
 //   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>-walking.png ...
 //
-// <word-ids> are the chosen word ids in the order the sentence reads its
-// slots, joined by '-', with EMPTY_WORD_ID for an optional slot left
-// empty. A generator writes this tree offline, VARIANT_COUNT variants per
+// <word-ids> are the chosen word ids (single words, see exploreSentences.ts)
+// in the order the sentence reads its slots, joined by '-', with
+// EMPTY_WORD_ID for an optional slot left empty. A generator writes this tree offline, VARIANT_COUNT variants per
 // filling; there is no index of what exists. A filling the tree lacks, or
 // a variant review deleted, is found by its sidecar being missing.
+//
+// The sidecar does not record the prompt: a version of the tree is drawn
+// with the prompt builders of its day, and the two move together, so the
+// lab's own builders describe a cached picture.
 
 import type {GeneratedFile} from 'ai';
 import {shuffle} from 'lodash';
 
 import {bytesToBase64} from './encoding';
-import {ImageStyle, ImageType} from './types';
+import {ImageStyle} from './types';
 
 /** Where a level's pictures come from. cached-then-live falls back to the
     model when the cache has no picture for the sentence. */
@@ -50,33 +54,25 @@ export const EMPTY_WORD_ID = '_';
 /** How many variants the generator draws per filling, numbered from 00. */
 export const VARIANT_COUNT = 3;
 
-/** A character set's frames by pose label, 'base' first (the sidecar lists
-    them); a single image is 'single'. */
+/** A character set's frames by pose label, 'base' first; a single image is
+    'single'. */
 export type CachedFrame = 'single' | 'base' | string;
 
-/** What the generator recorded beside one variant's files. */
+/** What the generator recorded beside one variant's files: only what the
+    lab's pipeline needs to finish them. Other keys are ignored. */
 export interface CachedSidecar {
-  sentenceId: string;
-  /** The chosen word id per slot id; an empty optional slot is absent. */
-  choices: Record<string, string>;
-  /** The student's sentence, as the explore layout sends it. */
-  prompt: string;
-  imageType: ImageType;
-  style: ImageStyle;
-  characterSet: boolean;
-  seed: number;
-  temperature?: number;
+  /** The five pose files are there; absent on a single picture. */
+  characterSet?: boolean;
+  /** The files already carry alpha: nothing is keyed out. */
+  transparent?: boolean;
+  /** The flat colour a set was drawn on, a KEY_COLORS name or its hex.
+      A single picture is keyed from its corner and names none. */
+  keyColor?: string | null;
+  /** The logical grid a pixel-style picture was asked for. */
   pixelGrid?: number;
-  /** The key colour the set was drawn on (keyColor.ts KEY_COLORS name). */
-  keyColor?: string;
-  model: string;
-  generatedAt: string;
-  /** Per frame: the model's media type (which fixes the file's extension,
-      see frameFileName) and the full prompt it was sent. */
-  frames: Record<string, {mediaType: string; prompt: string}>;
 }
 
-/** Thrown when a file the sidecar names is not there. */
+/** Thrown when a file the variant should have is not there. */
 export class ImageCacheMissError extends Error {
   constructor(url: string, status?: number) {
     super(`Cached image missing: ${url}${status ? ` (${status})` : ''}`);
@@ -100,19 +96,13 @@ export function variantName(variant: number): string {
 }
 
 /** The file a frame's bytes live in: `<NN>.png` for a single picture,
-    `<NN>-<frame>.png` for a set's frame, the extension following what the
-    model returned. */
+    `<NN>-<frame>.png` for a set's frame. */
 export function frameFileName(
   variant: number,
   frame: string,
-  mediaType: string,
   characterSet: boolean
 ): string {
-  const extension =
-    mediaType === 'image/jpeg' ? 'jpg' : mediaType.split('/')[1] || 'bin';
-  return `${variantName(variant)}${
-    characterSet ? `-${frame}` : ''
-  }.${extension}`;
+  return `${variantName(variant)}${characterSet ? `-${frame}` : ''}.png`;
 }
 
 export function sentencePath(
@@ -212,7 +202,7 @@ export async function findCachedImage(
     if (!sidecar) {
       continue;
     }
-    const {characterSet} = sidecar;
+    const characterSet = !!sidecar.characterSet;
     return {
       key: `${path}/${variantName(variant)}`,
       variant,
@@ -220,17 +210,8 @@ export async function findCachedImage(
       sidecar: async () => sidecar,
       async raw(frame) {
         const wanted = characterSet && frame === 'single' ? 'base' : frame;
-        const recorded = sidecar.frames[wanted];
-        if (!recorded) {
-          throw new ImageCacheMissError(`${folder}/<${wanted}>`);
-        }
         return fetchRaw(
-          `${folder}/${frameFileName(
-            variant,
-            wanted,
-            recorded.mediaType,
-            characterSet
-          )}`
+          `${folder}/${frameFileName(variant, wanted, characterSet)}`
         );
       },
     };

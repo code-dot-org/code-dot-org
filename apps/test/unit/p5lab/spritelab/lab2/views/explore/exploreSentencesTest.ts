@@ -6,6 +6,27 @@ import {
   sentenceFor,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
+import manifest from '@cdo/static/spritelab_lab2/exploreSentences.json';
+
+// Ids still carrying a dash, to be renamed in a content pass; none may be
+// added. The cache names a filled sentence by its ids joined with '-'.
+const DASHED_IDS = [
+  'a-crack',
+  'a-glow',
+  'a-ribbon',
+  'carved-patterns',
+  'distant-mountains',
+  'drifting-fog',
+  'falling-leaves',
+  'floating-lanterns',
+  'glowing-cracks',
+  'glowing-mushrooms',
+  'metal-bolts',
+  'moss-on-top',
+  'tiny-gems',
+  'tiny-sparkles',
+  'twinkling-lights',
+];
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
@@ -113,6 +134,22 @@ describe('exploreSentences', () => {
     expect(
       full('treasure', {look: 'golden', treasure: 'key', detail: 'a-ribbon'})
     ).toBe('A golden key with a ribbon');
+  });
+
+  it('word ids are single words, apart from the ones awaiting renames', () => {
+    const words = [
+      ...Object.values(manifest.wordSets).flat(),
+      ...Object.values(manifest.sentences).flatMap(sentence =>
+        Object.values(sentence.slots).flatMap(slot =>
+          typeof slot.words === 'string' ? [] : slot.words
+        )
+      ),
+    ];
+    expect(words.length).toBeGreaterThan(0);
+    const dashed = words
+      .map(word => word.id)
+      .filter(id => /[^a-z0-9]/.test(id));
+    expect([...new Set(dashed)].sort()).toEqual(DASHED_IDS);
   });
 
   it("every sentence's optional slots are the ones inside phrases", () => {

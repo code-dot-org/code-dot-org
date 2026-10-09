@@ -142,8 +142,9 @@ export type GenerateImageOptions = Partial<
    */
   inputImageDataURI?: string;
   /** Take the model's output from the cache instead of asking it. The
-      sidecar's seed, temperature and grid replace the ones given, so the
-      record matches the picture. Reviewed before upload: no judges run. */
+      sidecar's grid replaces the one given, and the record names the
+      cached picture in place of a seed. Reviewed before upload: no judges
+      run. */
   cached?: CachedImage;
 };
 
@@ -313,9 +314,8 @@ export async function generateImage(
   const sidecar = cached ? await cached.sidecar() : undefined;
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.
-  const seed =
-    sidecar?.seed ?? options.seed ?? Math.floor(Math.random() * 2 ** 31);
-  const temperature = sidecar ? sidecar.temperature : options.temperature;
+  const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
+  const {temperature} = options;
   const pixelBlock = pixelBlockFor(
     imageType,
     sidecar?.pixelGrid ?? options.pixelGrid
@@ -362,8 +362,9 @@ export async function generateImage(
     imageType,
     ...(options.subject && {subject: options.subject}),
     style,
-    seed,
-    ...(temperature !== undefined && {temperature}),
+    ...(cached
+      ? {cached: cached.key}
+      : {seed, ...(temperature !== undefined && {temperature})}),
     // Recorded even at the default: the point is comparing what was asked
     // for against what came back.
     ...(style === 'pixel' && {pixelGrid: logicalGridFor(pixelBlock)}),
@@ -392,7 +393,10 @@ export async function generateImage(
   // content so grid-placed copies tile seamlessly. Backgrounds are flattened
   // opaque; pixel style gets grid-normalized.
   let blob = rawImageToBlob(raw);
-  if (imageType === 'sprite' || imageType === 'block') {
+  if (
+    (imageType === 'sprite' || imageType === 'block') &&
+    !sidecar?.transparent
+  ) {
     blob = await removeBackground(blob, {soft: style === 'smooth'});
   }
   // Smooth sprites are cropped like blocks always were, so the stored image

@@ -107,7 +107,7 @@ describe('generateImage', () => {
       key: 'place-time/sunny-forest-_/smooth/01',
       variant: 1,
       characterSet: false,
-      sidecar: async () => ({seed: 4242, temperature: 0.8}),
+      sidecar: async () => ({pixelGrid: 32}),
       raw: jest.fn(async () => ({
         mediaType: 'image/jpeg',
         uint8Array: new Uint8Array([5, 6]),
@@ -127,9 +127,10 @@ describe('generateImage', () => {
     expect(Array.from(result.uint8Array)).toEqual([5, 6]);
     expect(result.generation).toMatchObject({
       prompt: 'a beach',
-      seed: 4242,
-      temperature: 0.8,
+      cached: 'place-time/sunny-forest-_/smooth/01',
     });
+    expect(result.generation.seed).toBeUndefined();
+    expect(result.generation.temperature).toBeUndefined();
   });
 
   it('lets a request choose its output size', async () => {

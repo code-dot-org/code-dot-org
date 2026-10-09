@@ -3,6 +3,10 @@
 // row of segments: fixed text, a slot that takes one word, or a phrase
 // whose words show only when its slot is filled. A required slot must be
 // filled before the sentence can generate.
+//
+// Word ids are single words: a filled sentence is named by its ids joined
+// with '-' (imageCache.ts), so an id with a dash in it would blur the join.
+// The test pins the ids that still have one.
 
 import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {

@@ -18,14 +18,7 @@ const BASE = 'https://cache.test/generate/';
 const VERSION = 'v9';
 const FOLDER = `${BASE}${VERSION}/character/brave-dragon/pixel`;
 
-const SIDECAR = {
-  characterSet: true,
-  frames: {
-    base: {mediaType: 'image/png', prompt: 'p'},
-    walking: {mediaType: 'image/png', prompt: 'p'},
-  },
-  seed: 7,
-};
+const SIDECAR = {characterSet: true, keyColor: 'magenta', pixelGrid: 64};
 
 // A tiny tree: the sidecars named, one set's base frame; anything else is
 // a 404.
@@ -77,9 +70,9 @@ describe('imageCache', () => {
     expect(variantName(12)).toBe('12');
   });
 
-  it("names a frame's file by variant, frame and what the model returned", () => {
-    expect(frameFileName(0, 'base', 'image/png', true)).toBe('00-base.png');
-    expect(frameFileName(3, 'single', 'image/jpeg', false)).toBe('03.jpg');
+  it("names a frame's file by variant and, for a set, its frame", () => {
+    expect(frameFileName(0, 'base', true)).toBe('00-base.png');
+    expect(frameFileName(3, 'single', false)).toBe('03.png');
   });
 
   it('takes the first variant whose sidecar is there', async () => {
@@ -114,7 +107,7 @@ describe('imageCache', () => {
     expect(await find({style: 'smooth'})).toBeUndefined();
   });
 
-  it('reads a frame from the folder the sidecar names', async () => {
+  it("reads a frame from the variant's folder", async () => {
     const calls = installFetch();
     const found = (await find())!;
     const raw = await found.raw('base');
@@ -122,7 +115,7 @@ describe('imageCache', () => {
     expect(raw.mediaType).toBe('image/png');
     expect(raw.base64).toBe('CQgH');
     expect(calls).toContain(`${FOLDER}/00-base.png`);
-    expect((await found.sidecar()).seed).toBe(7);
+    expect(await found.sidecar()).toEqual(SIDECAR);
   });
 
   it("serves a set's base as its single picture", async () => {
@@ -131,13 +124,10 @@ describe('imageCache', () => {
     expect(Array.from(raw.uint8Array)).toEqual([9, 8, 7]);
   });
 
-  it('reports a file the sidecar names that is not there', async () => {
+  it('reports a frame file that is not there', async () => {
     installFetch();
     const found = (await find())!;
     await expect(found.raw('walking')).rejects.toBeInstanceOf(
-      ImageCacheMissError
-    );
-    await expect(found.raw('jumping')).rejects.toBeInstanceOf(
       ImageCacheMissError
     );
   });
