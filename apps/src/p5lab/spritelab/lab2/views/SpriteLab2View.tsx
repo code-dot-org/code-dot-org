@@ -1318,8 +1318,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     currentSources.blockCatalogSeen,
   ]);
 
-  // Help icons beside the toolbox's blocks, for the freeplay level (and a
-  // level with no mode); the guided levels teach their blocks themselves.
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
     musicProjects
