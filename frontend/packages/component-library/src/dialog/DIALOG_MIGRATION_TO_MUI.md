@@ -1,5 +1,10 @@
 # Dialog Migration: DSCO to MUI
 
+> Steps 1 to 4 are done. The sections before the closing notes are the plan as
+> written: they still name the interim `Mui` exports, the codemod's original
+> direction (legacy names to `Mui`) and the story ids of the time. The notes at
+> the end record what each step changed.
+
 ## Summary
 
 `Dialog` and `CustomDialog` move onto MUI's `Dialog` as a wrapper in
@@ -16,7 +21,7 @@ staged migration, and two managers would release each other's state out of
 order. MUI's own managers take over only after the last legacy dialog is
 deleted, which is outside this run.
 
-The target is what DSCO renders today, within 0.005 mismatch per story. Four
+The target is what DSCO renders today, within 0.005 mismatch per story. Five
 legacy defects are fixed on purpose. Figma is out of scope.
 
 ## Approach and exports
