@@ -193,6 +193,9 @@ class ProjectsController < ApplicationController
     music_dance_ai: {
       name: "New Music Dance AI Project"
     },
+    spritely_stories: {
+      name: 'New Spritely Stories Project'
+    },
     sketchlab: {
       name: 'New Sketch Lab Project'
     }
@@ -734,7 +737,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab javalab weblab2).include? project_type
+    %w(applab makerlab gamelab spritelab spritely_stories javalab weblab2).include? project_type
   end
 
   private def uses_animation_bucket?(project_type)
