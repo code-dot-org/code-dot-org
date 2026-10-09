@@ -393,10 +393,7 @@ export async function generateImage(
   // content so grid-placed copies tile seamlessly. Backgrounds are flattened
   // opaque; pixel style gets grid-normalized.
   let blob = rawImageToBlob(raw);
-  if (
-    (imageType === 'sprite' || imageType === 'block') &&
-    !sidecar?.transparent
-  ) {
+  if (imageType === 'sprite' || imageType === 'block') {
     blob = await removeBackground(blob, {soft: style === 'smooth'});
   }
   // Smooth sprites are cropped like blocks always were, so the stored image

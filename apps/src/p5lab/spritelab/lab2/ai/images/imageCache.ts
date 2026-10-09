@@ -63,11 +63,9 @@ export type CachedFrame = 'single' | 'base' | string;
 export interface CachedSidecar {
   /** The five pose files are there; absent on a single picture. */
   characterSet?: boolean;
-  /** The files already carry alpha: nothing is keyed out. */
-  transparent?: boolean;
-  /** The flat colour a set was drawn on, a KEY_COLORS name or its hex.
-      A single picture is keyed from its corner and names none. */
-  keyColor?: string | null;
+  /** The flat colour a set was drawn on (a KEY_COLORS name). A single
+      picture is keyed from its corner and names none. */
+  keyColor?: string;
   /** The logical grid a pixel-style picture was asked for. */
   pixelGrid?: number;
 }

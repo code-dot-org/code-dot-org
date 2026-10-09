@@ -30,17 +30,6 @@ const MAGENTA_WORDS =
 const GREEN_WORDS =
   /\b(green|frog|toad|lizard|turtle|tortoise|dragon|dinosaur|dino|crocodile|alligator|snake|zombie|alien|goblin|orc|ogre|troll|cactus|leaf|leaves|grass|emerald|jade|lime|olive|mint|slime|plant|tree|broccoli|peas?|caterpillar|grasshopper|chameleon|iguana|gecko|elf|elves|pickle|kiwi|moss|swamp|forest)\b/gi;
 
-/** The key colour a generator recorded, by KEY_COLORS name or hex;
-    undefined for anything else. */
-export function keyColorNamed(value: string): KeyColor | undefined {
-  return (
-    KEY_COLORS[value as keyof typeof KEY_COLORS] ??
-    Object.values(KEY_COLORS).find(
-      color => color.hex.toLowerCase() === value.toLowerCase()
-    )
-  );
-}
-
 /**
  * The key colour least likely to appear on the character the prompt
  * describes: whichever candidate the prompt mentions fewer of; magenta when

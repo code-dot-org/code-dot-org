@@ -29,7 +29,7 @@ import {
   styleClause,
 } from './imageGeneration';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
-import {chooseKeyColor, keyColorNamed, KeyColor} from './keyColor';
+import {chooseKeyColor, KEY_COLORS, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   getCharacterSetImageModel,
@@ -372,11 +372,11 @@ export async function generateCharacterSet(
   const {cached} = options;
   const sidecar = cached ? await cached.sidecar() : undefined;
   // A cached set was drawn on the colour its generator chose from the
-  // words of its day, or on none; the sidecar says which.
+  // words of its day; the sidecar says which, in case the words changed.
   const key =
-    (sidecar?.keyColor && keyColorNamed(sidecar.keyColor)) ||
+    (sidecar?.keyColor &&
+      KEY_COLORS[sidecar.keyColor as keyof typeof KEY_COLORS]) ||
     chooseKeyColor(prompt);
-  const keyed = !sidecar?.transparent;
   // One seed for the whole set; parallel frames offset it so alike prompts
   // don't collapse into alike drawings.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
@@ -391,12 +391,10 @@ export async function generateCharacterSet(
     request: Parameters<typeof requestFrameWithRetry>[1]
   ) => (cached ? cached.raw(frame) : requestFrameWithRetry(text, request));
   const total = CHARACTER_SET_PICTURE_COUNT;
-  const keyFrame = async (raw: RawImage) =>
-    keyed
-      ? removeKeyColor(rawImageToBlob(raw), key.rgb, {
-          soft: options.style === 'smooth',
-        })
-      : rawImageToBlob(raw);
+  const keyFrame = (raw: RawImage) =>
+    removeKeyColor(rawImageToBlob(raw), key.rgb, {
+      soft: options.style === 'smooth',
+    });
   const previewURI = async (blob: Blob) =>
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
