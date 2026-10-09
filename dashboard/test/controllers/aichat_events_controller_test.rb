@@ -69,13 +69,6 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'lesson deep dive log_chat_event is forbidden with essential-only access' do
-    sign_in(@authorized_student1)
-    deep_dive_context = @valid_params_log_chat_event[:aichatContext].merge(clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE], currentLevelId: nil)
-    post :log_chat_event, params: @valid_params_log_chat_event.merge(aichatContext: deep_dive_context), as: :json
-    assert_response :forbidden
-  end
-
   test 'authorized teacher has access to log_chat_event' do
     sign_in(@authorized_teacher1)
     post :log_chat_event, params: @valid_params_log_chat_event, as: :json

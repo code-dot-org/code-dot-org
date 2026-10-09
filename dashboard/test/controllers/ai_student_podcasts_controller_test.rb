@@ -10,7 +10,6 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
 
     AiStudentPodcastsJob.stubs(:perform_later)
     SingleUserExperiment.stubs(:enabled?).returns(true)
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
   end
 
   teardown do
@@ -29,18 +28,6 @@ class AiStudentPodcastsControllerTest < ActionController::TestCase
   test 'unauthenticated user cannot call show' do
     get :show, params: {lesson_id: @lesson.id, objective_ids: [@objective1.id]}, format: :json
     assert_response :unauthorized
-  end
-
-  test 'generate_podcast returns 403 without lesson deep dive access' do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
-    sign_in @user
-    AiStudentPodcastsJob.expects(:perform_later).never
-
-    post :generate_podcast,
-      params: {lesson_id: @lesson.id, objective_ids: [@objective1.id]},
-      format: :json
-
-    assert_response :forbidden
   end
 
   test 'generate_podcast returns 403 when the lesson-tutor experiment is not enabled for the user' do

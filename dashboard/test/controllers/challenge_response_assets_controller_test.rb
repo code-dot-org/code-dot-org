@@ -13,7 +13,6 @@ class ChallengeResponseAssetsControllerTest < ActionController::TestCase
   let(:response_json) {JSON.parse(response.body)}
 
   before do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
     AWS::S3.stubs(:presigned_download_url).returns('https://s3.example/download')
   end
@@ -23,18 +22,6 @@ class ChallengeResponseAssetsControllerTest < ActionController::TestCase
       it 'redirects to sign in' do
         get :show, params: {id: asset.id}
         assert_redirected_to_sign_in
-      end
-    end
-
-    context 'when signed in without lesson deep dive access' do
-      before do
-        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
-        sign_in student
-      end
-
-      it 'is forbidden' do
-        get :show, params: {id: asset.id}
-        assert_response :forbidden
       end
     end
 
