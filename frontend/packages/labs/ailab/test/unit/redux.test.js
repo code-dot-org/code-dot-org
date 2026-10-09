@@ -7,6 +7,7 @@ import reducer, {
   setColumnsByDataType,
   setInstructionsEnabled,
   addSelectedFeature,
+  setSelectedFeatures,
   setTestData,
   setPrediction,
   playPredictionStep,
@@ -120,6 +121,30 @@ describe('ailab reducer', () => {
       state = reducer(state, addSelectedFeature('c'));
       state = reducer(state, addSelectedFeature('a'));
       expect(state.selectedFeatures).toEqual(['a', 'c']);
+    });
+  });
+
+  describe('setSelectedFeatures', () => {
+    const imported = reducer(
+      initialState,
+      setImportedData([{a: '1', b: '2', c: '3'}], false),
+    );
+
+    test('replaces the selection, in table order', () => {
+      const state = reducer(imported, setSelectedFeatures(['c', 'a']));
+      expect(state.selectedFeatures).toEqual(['a', 'c']);
+    });
+
+    test('clears the selection', () => {
+      let state = reducer(imported, setSelectedFeatures(['a', 'b']));
+      state = reducer(state, setSelectedFeatures([]));
+      expect(state.selectedFeatures).toEqual([]);
+    });
+
+    test('leaves the dispatched array untouched', () => {
+      const features = ['c', 'a'];
+      reducer(imported, setSelectedFeatures(features));
+      expect(features).toEqual(['c', 'a']);
     });
   });
 
