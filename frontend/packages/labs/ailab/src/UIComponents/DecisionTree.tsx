@@ -48,6 +48,7 @@ import {
 
 import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
+import TruncatedTextTooltip from './TruncatedTextTooltip';
 
 import styles from './decisionTree.module.scss';
 
@@ -284,9 +285,6 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             {layout.nodes.map(placed => {
               const text = displayNodeLabel(placed.node, datasetId);
               const label = placed.branch && branchLabel(placed.branch);
-              const branch = label?.sign
-                ? `${label.sign} ${label.text}`
-                : label?.text;
               const kind =
                 placed.answerIndex === undefined
                   ? styles.question
@@ -333,19 +331,23 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
                   {label?.text && (
-                    <div
-                      title={branch}
-                      className={classNames(styles.branch, {
-                        [styles.pathBranch]: reachedIds.has(placed.id),
-                        [styles.nextBranch]: placed.id === nextId,
-                      })}
+                    <TruncatedTextTooltip
+                      title={
+                        label.sign ? `${label.sign} ${label.text}` : label.text
+                      }
                     >
-                      {label.sign && `${label.sign} `}
-                      <span id={branchId(placed.id)}>{label.text}</span>
-                    </div>
+                      <div
+                        className={classNames(styles.branch, {
+                          [styles.pathBranch]: reachedIds.has(placed.id),
+                          [styles.nextBranch]: placed.id === nextId,
+                        })}
+                      >
+                        {label.sign && `${label.sign} `}
+                        <span id={branchId(placed.id)}>{label.text}</span>
+                      </div>
+                    </TruncatedTextTooltip>
                   )}
                   <div
-                    title={text}
                     className={classNames(styles.node, kind, {
                       [styles.pathNode]: reachedIds.has(placed.id),
                     })}
@@ -357,23 +359,25 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         style={leafColorStyle(placed.answerIndex)}
                       />
                     )}
-                    <Typography
-                      id={textId(placed.id)}
-                      variant="body3"
-                      component="span"
-                      className={styles.nodeText}
-                    >
-                      {placed.node.type === 'question' ? (
-                        <>
-                          <span id={columnId(placed.id)}>
-                            {columnText(placed.node)}
-                          </span>
-                          ?
-                        </>
-                      ) : (
-                        text
-                      )}
-                    </Typography>
+                    <TruncatedTextTooltip title={text}>
+                      <Typography
+                        id={textId(placed.id)}
+                        variant="body3"
+                        component="span"
+                        className={styles.nodeText}
+                      >
+                        {placed.node.type === 'question' ? (
+                          <>
+                            <span id={columnId(placed.id)}>
+                              {columnText(placed.node)}
+                            </span>
+                            ?
+                          </>
+                        ) : (
+                          text
+                        )}
+                      </Typography>
+                    </TruncatedTextTooltip>
                   </div>
                 </div>
               );
