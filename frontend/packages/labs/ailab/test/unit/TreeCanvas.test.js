@@ -32,18 +32,20 @@ function resizeViewport(width, height) {
   act(() => resizeCallbacks.forEach(callback => callback([])));
 }
 
-function renderCanvas(props = {}, children = 'tree') {
-  render(
+function canvas(props = {}, children = 'tree') {
+  return createElement(
+    ThemeProvider,
+    {theme: getMuiThemeForBrand(undefined)},
     createElement(
-      ThemeProvider,
-      {theme: getMuiThemeForBrand(undefined)},
-      createElement(
-        TreeCanvas,
-        {contentWidth: 752, contentHeight: 312, ...props},
-        children,
-      ),
+      TreeCanvas,
+      {contentWidth: 752, contentHeight: 312, ...props},
+      children,
     ),
   );
+}
+
+function renderCanvas(props, children) {
+  return render(canvas(props, children));
 }
 
 function overlayRef(width, top = 0) {
@@ -73,12 +75,15 @@ function mockBoxes(boxes) {
   );
 }
 
+let followNode;
+
 // Fitted, the content's origin sits at (72, 102) at scale 0.5, in a frame from x = 72 to 448.
 function renderNodesAt(xs, props = {}, viewportWidth = 472) {
-  renderCanvas(
-    props,
-    xs.map(x => createElement('button', {key: x}, `node at ${x}`)),
+  const children = xs.map(x =>
+    createElement('button', {key: x, id: `node-${x}`}, `node at ${x}`),
   );
+  const {rerender} = renderCanvas(props, children);
+  followNode = id => rerender(canvas({...props, followId: id}, children));
   resizeViewport(viewportWidth, 360);
   const nodes = xs.map(x => screen.getByText(`node at ${x}`));
   const boxes = new Map(
@@ -338,6 +343,31 @@ describe('TreeCanvas', () => {
 
     act(() => far.focus());
     act(() => near.focus());
+
+    await vi.waitFor(() =>
+      expect(near.parentElement.style.transform).toBe(
+        'translate(-28px, 2px) scale(1)',
+      ),
+    );
+  });
+
+  it('zooms to a readable scale and pans the node it follows into view', async () => {
+    const [node] = renderNodesAt([800]);
+
+    followNode('node-800');
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)',
+      ),
+    );
+  });
+
+  it('follows from where the view is heading when the node it follows changes', async () => {
+    const [, near] = renderNodesAt([800, 100]);
+
+    followNode('node-800');
+    followNode('node-100');
 
     await vi.waitFor(() =>
       expect(near.parentElement.style.transform).toBe(

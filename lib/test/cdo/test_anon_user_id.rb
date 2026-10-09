@@ -62,6 +62,14 @@ describe Cdo::AnonUserId do
       end
     end
 
+    context 'when value has surrounding whitespace' do
+      ["\n%s", "%s\n", "%s\r\n", ' %s '].each do |format|
+        it "rejects #{format.inspect}" do
+          _(Cdo::AnonUserId.valid?(format % SecureRandom.uuid)).must_equal false
+        end
+      end
+    end
+
     context 'when value is not a string' do
       let(:input) {123}
 
