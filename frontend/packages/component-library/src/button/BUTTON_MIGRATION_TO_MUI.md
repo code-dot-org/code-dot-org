@@ -1,15 +1,15 @@
 # Button Component Migration Guide: Custom to MUI
 
 > The migration is finished: the DSCO `Button`, `LinkButton` and
-> `GenericButton` sources and their codemod are deleted. This guide records how
-> their props map onto MUI's; the sections on the DSCO API describe code that no
-> longer exists. See [README.md](README.md) for current usage.
+> `GenericButton` sources, `buttonPropsToMui.tsx` and the codemod are deleted.
+> The sections that name them record how the DSCO props mapped onto MUI's. See
+> [README.md](README.md) for current usage.
 
 This guide documents how to migrate the custom Button component to MUI Button while maintaining the same API and visual design.
 
 ## Table of Contents
 
-1. [Current Button API](#current-button-api)
+1. [DSCO Button API (deleted)](#dsco-button-api-deleted)
 2. [MUI Button API](#mui-button-api)
 3. [Props Mapping](#props-mapping)
 4. [Style Overrides](#style-overrides)
@@ -18,7 +18,7 @@ This guide documents how to migrate the custom Button component to MUI Button wh
 
 ---
 
-## Current Button API
+## DSCO Button API (deleted)
 
 ### Component Structure
 
@@ -212,22 +212,22 @@ interface MuiIconButtonProps {
 
 ### Direct Mappings
 
-| Current Prop | MUI Prop    | Notes                                   |
-| ------------ | ----------- | --------------------------------------- |
-| `disabled`   | `disabled`  | ✅ Direct match                         |
-| `className`  | `className` | ✅ Direct match                         |
-| `id`         | `id`        | ✅ Direct match                         |
-| `onClick`    | `onClick`   | ✅ Direct match                         |
-| `href`       | `href`      | ✅ Direct match (when `useAsLink=true`) |
-| `target`     | `target`    | ✅ Direct match (when `useAsLink=true`) |
+| DSCO Prop   | MUI Prop    | Notes                                   |
+| ----------- | ----------- | --------------------------------------- |
+| `disabled`  | `disabled`  | ✅ Direct match                         |
+| `className` | `className` | ✅ Direct match                         |
+| `id`        | `id`        | ✅ Direct match                         |
+| `onClick`   | `onClick`   | ✅ Direct match                         |
+| `href`      | `href`      | ✅ Direct match (when `useAsLink=true`) |
+| `target`    | `target`    | ✅ Direct match (when `useAsLink=true`) |
 
 ### Type → Variant Mapping
 
-| Current `type` | MUI `variant` | Notes                              |
-| -------------- | ------------- | ---------------------------------- |
-| `primary`      | `contained`   | Solid background                   |
-| `secondary`    | `outlined`    | Border with transparent background |
-| `tertiary`     | `text`        | Text only, no border/background    |
+| DSCO `type` | MUI `variant` | Notes                              |
+| ----------- | ------------- | ---------------------------------- |
+| `primary`   | `contained`   | Solid background                   |
+| `secondary` | `outlined`    | Border with transparent background |
+| `tertiary`  | `text`        | Text only, no border/background    |
 
 ### Size Mapping
 
@@ -255,7 +255,7 @@ interface MuiIconButtonProps {
 
 ### Icon Mapping
 
-| Current Prop       | MUI Prop         | Implementation                    |
+| DSCO Prop          | MUI Prop         | Implementation                    |
 | ------------------ | ---------------- | --------------------------------- |
 | `iconLeft`         | `startIcon`      | ✅ Direct match                   |
 | `iconRight`        | `endIcon`        | ✅ Direct match                   |
@@ -265,7 +265,7 @@ interface MuiIconButtonProps {
 
 ### Special Props That Need Custom Implementation
 
-| Current Prop             | MUI Equivalent | Implementation Strategy                                                                                                                                                                                                                    |
+| DSCO Prop                | MUI Equivalent | Implementation Strategy                                                                                                                                                                                                                    |
 | ------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `isPending`              | Custom         | ✅ Custom implementation with `FontAwesomeV6Icon` spinner. MUI Button has a `loading` prop, but it's styled differently from DSCO designs. If a solution to customize MUI Button's native loading state styles is found, we can update it. |
 | `forceHover`             | ❌ None        | Custom className + style override                                                                                                                                                                                                          |
@@ -547,7 +547,7 @@ Create `ButtonMui.tsx` that:
 
 ### Example 1: Simple Primary Button
 
-**Current (DSCO Button component):**
+**DSCO Button (deleted):**
 
 ```tsx
 <Button
@@ -574,7 +574,7 @@ Create `ButtonMui.tsx` that:
 
 ### Example 2: Button with Icons
 
-**Current (DSCO Button component):**
+**DSCO Button (deleted):**
 
 ```tsx
 <Button
@@ -605,7 +605,7 @@ Create `ButtonMui.tsx` that:
 
 ### Example 3: Icon-Only Button
 
-**Current (DSCO Button component):**
+**DSCO Button (deleted):**
 
 ```tsx
 <Button
@@ -634,7 +634,7 @@ Create `ButtonMui.tsx` that:
 
 ### Example 4: Pending/Loading State
 
-**Current (DSCO Button component):**
+**DSCO Button (deleted):**
 
 ```tsx
 <Button
@@ -674,7 +674,7 @@ Create `ButtonMui.tsx` that:
 
 ### Example 5: Link Button
 
-**Current (DSCO Button component):**
+**DSCO Button (deleted):**
 
 ```tsx
 <LinkButton
@@ -733,7 +733,7 @@ Create `ButtonMui.tsx` that:
 - [x] Configure loading spinner appearance (custom implementation)
 - [x] Remove all data attribute selectors (using native MUI props only)
 
-### Prop Mapping Function (`buttonPropsToMui.tsx`)
+### Prop Mapping Function (`buttonPropsToMui.tsx`, deleted)
 
 - [x] Map `type` → `variant` (primary→contained, secondary→outlined, tertiary→text)
 - [x] Map `size` → custom size (xs→extraSmall, s→small, m→medium, l→large)
@@ -788,5 +788,3 @@ Create `ButtonMui.tsx` that:
 
 - [MUI Button Documentation](https://mui.com/material-ui/react-button/)
 - [MUI Theming Documentation](https://mui.com/material-ui/customization/theming/)
-- Current Button Implementation: `src/button/GenericButton.tsx`
-- Current Button Styles: `src/button/genericButton.module.scss`
