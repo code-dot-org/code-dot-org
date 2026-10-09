@@ -9,6 +9,7 @@ import reducer, {
   addSelectedFeature,
   setTestData,
   setPrediction,
+  setPredictionStep,
   setMode,
   setReserveLocation,
   setImportedData,
@@ -154,6 +155,14 @@ describe('ailab reducer', () => {
       const state = reducer(initialState, setMode({hideColumnClicking: true}));
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBeUndefined();
+    });
+  });
+
+  describe('setPrediction', () => {
+    test('shows the whole of the new path, not the step of the last one', () => {
+      const stepped = reducer(initialState, setPredictionStep(2));
+      const next = reducer(stepped, setPrediction(1, [0]));
+      expect(next.predictionStep).toBeUndefined();
     });
   });
 

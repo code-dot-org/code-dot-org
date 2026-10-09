@@ -60,6 +60,8 @@ export interface RootState {
   prediction: number | string | undefined;
   predictionTestData: Record<string, string | number>;
   predictionInputs: number[];
+  // Undefined shows the whole path; a number shows it up to that step.
+  predictionStep: number | undefined;
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
@@ -130,6 +132,7 @@ export const initialState: RootState = {
   prediction: undefined,
   predictionTestData: {},
   predictionInputs: [],
+  predictionStep: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: 'datasetView',
@@ -293,10 +296,14 @@ const ailabSlice = createSlice({
         state.prediction = action.payload.prediction;
         state.predictionTestData = {...state.testData};
         state.predictionInputs = action.payload.inputs;
+        state.predictionStep = undefined;
       },
       prepare(prediction: number | string, inputs: number[]) {
         return {payload: {prediction, inputs}};
       },
+    },
+    setPredictionStep(state, action: PayloadAction<number>) {
+      state.predictionStep = action.payload;
     },
     resetState(state) {
       return {
@@ -473,6 +480,7 @@ export const {
   setTestData,
   setTestDataValues,
   setPrediction,
+  setPredictionStep,
   resetState,
   setTrainedModel,
   setTrainedModelDetail,

@@ -1,5 +1,6 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
 import {Typography} from '@mui/material';
+import classNames from 'classnames';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {formatNumber, thresholdText} from '../helpers/displayTree';
@@ -7,8 +8,14 @@ import type {DisplayTreeStep} from '../helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
-import {getPredictionTrace} from '../selectors/visualizationSelectors';
+import {
+  getPredictionStep,
+  getPredictionTrace,
+} from '../selectors/visualizationSelectors';
 
+import TraceStepper from './TraceStepper';
+
+import appStyles from '../app.module.scss';
 import styles from './predictionResult.module.scss';
 
 const PredictionResult = () => {
@@ -16,10 +23,8 @@ const PredictionResult = () => {
   const labelColumn = useAppSelector(state => state.labelColumn || '');
   const predictedLabel = useAppSelector(getConvertedPredictedLabel);
   const trace = useAppSelector(getPredictionTrace);
-
-  if (predictedLabel === undefined) {
-    return null;
-  }
+  const currentStep = useAppSelector(getPredictionStep);
+  const chosenStep = useAppSelector(state => state.predictionStep);
 
   const valueText = (value: string | number): string =>
     typeof value === 'number'
@@ -29,46 +34,81 @@ const PredictionResult = () => {
   const conditionText = ({branch, value}: DisplayTreeStep): string =>
     branch.kind === 'values' ? valueText(value ?? '') : thresholdText(branch);
 
-  const predictionText = valueText(predictedLabel);
+  const stepText = (column: string, condition: string) => (
+    <>
+      {getLocalizedColumnName(datasetId, column)} is{' '}
+      <strong>{condition}</strong>
+    </>
+  );
+
+  const hasPrediction = predictedLabel !== undefined;
+  const predictionText = hasPrediction ? valueText(predictedLabel) : '';
   const steps =
     trace && trace.steps.length > 0
       ? [
-          ...trace.steps.map(step => ({
-            subject: getLocalizedColumnName(datasetId, step.column),
-            condition: conditionText(step),
-          })),
-          {
-            subject: getLocalizedColumnName(datasetId, labelColumn),
-            condition: predictionText,
-          },
+          ...trace.steps.map(step =>
+            stepText(step.column, conditionText(step)),
+          ),
+          stepText(labelColumn, predictionText),
         ]
       : [];
 
+  const announcement = () => {
+    if (!hasPrediction) {
+      return null;
+    }
+    if (chosenStep === undefined) {
+      return `AI predicts ${predictionText}`;
+    }
+    return (
+      <>
+        Step {chosenStep + 1} of {steps.length}: {steps[chosenStep]}
+      </>
+    );
+  };
+
   return (
-    <section className={styles.card}>
-      <Typography variant="body1" component="h2" className={styles.header}>
-        AI predicts <strong>{predictionText}</strong>
-      </Typography>
-      {steps.length > 0 && (
-        // eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics
-        <ol role="list" className={styles.steps}>
-          {steps.map(({subject, condition}, index) => (
-            <li key={index} className={styles.step}>
-              <Typography
-                variant="label4"
-                aria-hidden="true"
-                className={styles.stepNumber}
-              >
-                {index + 1}
-              </Typography>
-              <Typography variant="body3" component="span">
-                {subject} is <strong>{condition}</strong>
-              </Typography>
-            </li>
-          ))}
-        </ol>
+    <>
+      {/* Always mounted: a live region speaks only changes made after it appears. */}
+      <span role="status" className={appStyles.visuallyHidden}>
+        {announcement()}
+      </span>
+      {hasPrediction && (
+        <section className={styles.card}>
+          <Typography variant="body1" component="h2" className={styles.header}>
+            AI predicts <strong>{predictionText}</strong>
+          </Typography>
+          {steps.length > 0 && (
+            <>
+              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips VoiceOver's list semantics */}
+              <ol role="list" className={styles.steps}>
+                {steps.map((text, index) => (
+                  <li
+                    key={index}
+                    aria-current={index === currentStep ? 'step' : undefined}
+                    className={classNames(styles.step, {
+                      [styles.currentStep]: index === currentStep,
+                    })}
+                  >
+                    <Typography
+                      variant="label4"
+                      aria-hidden="true"
+                      className={styles.stepNumber}
+                    >
+                      {index + 1}
+                    </Typography>
+                    <Typography variant="body3" component="span">
+                      {text}
+                    </Typography>
+                  </li>
+                ))}
+              </ol>
+              <TraceStepper step={currentStep} stepCount={steps.length} />
+            </>
+          )}
+        </section>
       )}
-    </section>
+    </>
   );
 };
 
