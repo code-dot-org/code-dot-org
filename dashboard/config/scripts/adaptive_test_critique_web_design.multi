@@ -1,0 +1,14 @@
+name 'adaptive-test-critique-web-design'
+title 'TODO: title'
+description ''
+question 'Why does the specific web component in question effectively achieve its goal?'
+right 'It uses clear design and placement to guide user interaction.'
+wrong 'It is located in the center of the page.'
+wrong 'It has many different colors.'
+wrong 'It was created with a specific AI prompt.'
+
+markdown <<MARKDOWN
+Why does the specific web component in question effectively achieve its goal?
+MARKDOWN
+
+allow_multiple_attempts true
