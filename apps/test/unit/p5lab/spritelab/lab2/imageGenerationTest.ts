@@ -104,7 +104,6 @@ describe('generateImage', () => {
 
   it('takes a cached picture in place of the model, with its own record', async () => {
     const cached = {
-      key: 'place-time/sunny-forest-_/smooth/01',
       variant: 1,
       characterSet: false,
       sidecar: async () => ({pixelGrid: 32}),
@@ -125,10 +124,7 @@ describe('generateImage', () => {
     expect(checkImageSafety).not.toHaveBeenCalled();
     expect(cached.raw).toHaveBeenCalledWith('single');
     expect(Array.from(result.uint8Array)).toEqual([5, 6]);
-    expect(result.generation).toMatchObject({
-      prompt: 'a beach',
-      cached: 'place-time/sunny-forest-_/smooth/01',
-    });
+    expect(result.generation).toMatchObject({prompt: 'a beach'});
     expect(result.generation.seed).toBeUndefined();
     expect(result.generation.temperature).toBeUndefined();
   });

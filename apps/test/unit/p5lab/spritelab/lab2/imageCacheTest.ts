@@ -80,7 +80,6 @@ describe('imageCache', () => {
     const found = await find();
     expect(found?.variant).toBe(0);
     expect(found?.characterSet).toBe(true);
-    expect(found?.key).toBe('character/brave-dragon/pixel/00');
   });
 
   it('passes over a missing variant, and the one shown last', async () => {

@@ -142,9 +142,8 @@ export type GenerateImageOptions = Partial<
    */
   inputImageDataURI?: string;
   /** Take the model's output from the cache instead of asking it. The
-      sidecar's grid replaces the one given, and the record names the
-      cached picture in place of a seed. Reviewed before upload: no judges
-      run. */
+      sidecar's grid replaces the one given, and the record carries no
+      seed. Reviewed before upload: no judges run. */
   cached?: CachedImage;
 };
 
@@ -362,9 +361,7 @@ export async function generateImage(
     imageType,
     ...(options.subject && {subject: options.subject}),
     style,
-    ...(cached
-      ? {cached: cached.key}
-      : {seed, ...(temperature !== undefined && {temperature})}),
+    ...(!cached && {seed, ...(temperature !== undefined && {temperature})}),
     // Recorded even at the default: the point is comparing what was asked
     // for against what came back.
     ...(style === 'pixel' && {pixelGrid: logicalGridFor(pixelBlock)}),

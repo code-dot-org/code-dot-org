@@ -80,8 +80,6 @@ export class ImageCacheMissError extends Error {
 
 /** One variant of one filled sentence, ready to stand in for the model. */
 export interface CachedImage {
-  /** `<sentenceId>/<word-ids>/<style>/<NN>`, for logs and analytics. */
-  key: string;
   variant: number;
   characterSet: boolean;
   sidecar(): Promise<CachedSidecar>;
@@ -202,7 +200,6 @@ export async function findCachedImage(
     }
     const characterSet = !!sidecar.characterSet;
     return {
-      key: `${path}/${variantName(variant)}`,
       variant,
       characterSet,
       sidecar: async () => sidecar,
