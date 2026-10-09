@@ -9,12 +9,9 @@ module User::AiAccessible
   # This allows us the flexibility to do things like experiment with new
   # lab types with low friction.
   def trust_chat_client?(client_type)
-    client_type == AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
-  end
-
-  # Lesson deep dive is not tied to a level, so essential-only access does not unlock it.
-  def can_use_lesson_deep_dive?
-    ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
+    return true if client_type == AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
+    return true if client_type == AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE]
+    false
   end
 
   def can_use_ai_iteration_tools?
