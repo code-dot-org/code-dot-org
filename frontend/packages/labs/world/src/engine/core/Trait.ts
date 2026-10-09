@@ -20,6 +20,8 @@ function frozenError(id: string): never {
 export class Trait {
   readonly id: string;
   readonly name: string;
+  /** What it does, in its author's words — the map editor's note on it. */
+  readonly description?: string;
   /** The Rule that declared this trait (property/action ownership). */
   readonly ruleId: string;
   readonly properties: Record<string, Property> = {};
@@ -28,9 +30,15 @@ export class Trait {
   requiredTraits: Trait[] = [];
   private frozen = false;
 
-  constructor(opts: {id: string; name: string}, ruleId: string) {
+  constructor(
+    opts: {id: string; name: string; description?: string},
+    ruleId: string,
+  ) {
     this.id = opts.id;
     this.name = opts.name;
+    if (opts.description) {
+      this.description = opts.description;
+    }
     this.ruleId = ruleId;
   }
 

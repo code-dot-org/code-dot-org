@@ -116,7 +116,7 @@ export class RuleBuilder {
   }
 
   /** Create a trait this rule maintains; describe it further on the return. */
-  addTrait(opts: {id: string; name: string}): Trait {
+  addTrait(opts: {id: string; name: string; description?: string}): Trait {
     this.assertMutable();
     const trait = new Trait(opts, this.id);
     this.traitMap[opts.id] = trait;

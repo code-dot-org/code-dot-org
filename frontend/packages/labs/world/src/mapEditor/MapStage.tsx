@@ -3306,6 +3306,17 @@ export const MapStage = ({
                 label: group.traitName,
                 content: (
                   <div className={styles.inspectorGroup}>
+                    {/* What the trait is FOR: a name like "Slows" says
+                        little, and this is where its settings are. */}
+                    {group.traitDescription && (
+                      <Typography
+                        variant="body3"
+                        component="p"
+                        className={styles.inspectorNote}
+                      >
+                        {group.traitDescription}
+                      </Typography>
+                    )}
                     {group.props.map(prop => renderProp(selectedActor, prop))}
                   </div>
                 ),

@@ -398,6 +398,7 @@ describe('what it draws', () => {
         {
           trait: 'patrol',
           traitName: 'Patrols',
+          traitDescription: 'Walks between the places it is given.',
           props: [
             {
               ownerId: 'patrol',
@@ -452,6 +453,17 @@ describe('what it draws', () => {
       written().actors.find(actor => actor.id === 'g')!.properties?.patrol
         ?.targets,
     ).toEqual(['b']);
+  });
+
+  it('says what each trait is for, above its settings', () => {
+    const {map, schemas} = withTargets();
+    const {canvas, getByText} = mount(map, {schemas});
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 144}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 144}));
+
+    expect(
+      getByText('Walks between the places it is given.'),
+    ).toBeInTheDocument();
   });
 
   it('edits a list of words in the inspector: add, type, remove', () => {
@@ -1033,6 +1045,7 @@ describe('a level, with nothing selected', () => {
           value: 'Camera Follow#FollowsTrait',
           name: 'Follows',
           rule: 'Camera Follow',
+          description: 'Keeps an actor in view as it moves about.',
           properties: [
             {
               setter: 'world_set_CameraFollow_ActorToFollowProperty',
@@ -1070,6 +1083,13 @@ describe('a level, with nothing selected', () => {
     fireEvent.click(main.getByRole('button', {name: /^Chase/}));
     expect(main.getByTestId('camera-inspector')).toBeInTheDocument();
     expect(main.getByLabelText('Follows')).toBeChecked();
+    // Picked from one closed list; what a ticked one does is said below it.
+    expect(
+      main.container.querySelector('#camera-traits-dropdown'),
+    ).not.toBeNull();
+    expect(
+      main.getByText('Keeps an actor in view as it moves about.'),
+    ).toBeInTheDocument();
     const follow = main.container.querySelector(
       'select[name="camera-world_set_CameraFollow_ActorToFollowProperty"]',
     ) as HTMLSelectElement;

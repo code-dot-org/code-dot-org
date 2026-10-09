@@ -53,6 +53,8 @@ const rule = new RuleBuilder({
 export const HasABoxTrait = rule.addTrait({
   id: BOXED.trait,
   name: 'Has a Box',
+  description:
+    'Has a width and a height, which its picture and its click box both use.',
 });
 
 /** How wide the project asked for this to be, in pixels. */

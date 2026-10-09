@@ -400,6 +400,7 @@ export function builtinRuleMeta(
         // Every built-in trait is an actor's; nothing in the engine declares a
         // camera trait, and a rule that wants one authors it.
         subject: 'actor',
+        ...(trait.description ? {description: trait.description} : {}),
       });
       for (const p of Object.values(trait.properties)) {
         properties.push(prop(p, trait.id));
@@ -1383,7 +1384,7 @@ export function ruleMetaToModule(
   meta.traits.forEach((trait, i) => {
     traitExportById.set(trait.id, trait.ref.exportName);
     body.push(
-      `export const ${trait.ref.exportName} = rule.addTrait({id: ${q(trait.id)}, name: ${q(trait.name)}});`,
+      `export const ${trait.ref.exportName} = rule.addTrait({id: ${q(trait.id)}, name: ${q(trait.name)}${trait.description ? `, description: ${q(trait.description)}` : ''}});`,
     );
     if (traitRequires[i].length > 0) {
       body.push(

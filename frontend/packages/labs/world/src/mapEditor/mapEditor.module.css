@@ -295,6 +295,22 @@
   width: 100%;
 }
 
+/* A camera's traits, as one closed list of checkboxes. It fills the panel,
+   and its menu opens IN the panel's flow rather than over it: the panel
+   scrolls, so a menu positioned absolutely inside it is clipped at its foot.
+   Under `.inspector` to outrank the design system's fixed width without
+   leaning on load order. The menu has no class of its own to name, so it is
+   found by the one its module gives it. */
+.inspector .traitPicker,
+.inspector .traitPicker > button {
+  width: 100%;
+}
+
+.inspector .traitPicker [class*='dropdownMenuContainer'] {
+  position: static;
+  float: none;
+}
+
 /* The trait accordion fills the panel width; each collapsible section is a
    native <details> the DSCO Accordion styles. */
 .inspectorAccordion {

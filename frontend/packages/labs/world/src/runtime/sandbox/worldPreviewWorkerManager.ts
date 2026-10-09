@@ -133,7 +133,12 @@ function describeActor(
   for (const trait of actor.traits()) {
     const props = configurable(Object.values(trait.properties) as Property[]);
     if (props.length) {
-      groups.push({trait: trait.id, traitName: trait.name, props});
+      groups.push({
+        trait: trait.id,
+        traitName: trait.name,
+        ...(trait.description ? {traitDescription: trait.description} : {}),
+        props,
+      });
     }
   }
   // …and the ones this KIND declared for itself, which belong to no trait and

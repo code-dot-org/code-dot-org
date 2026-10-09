@@ -43,6 +43,7 @@ const rule = new RuleBuilder({
 export const HasAStyleTrait = rule.addTrait({
   id: STYLED.trait,
   name: 'Has a Style',
+  description: 'Is painted out of a theme: its colors and its fonts.',
 });
 
 /**

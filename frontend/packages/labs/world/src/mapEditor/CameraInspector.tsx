@@ -12,11 +12,12 @@
 // shows the map from its top left. Following something is what an added
 // camera is for, looked through from the start.
 
-import {Button, Tooltip, Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
 import {useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {CheckboxDropdown} from '@code-dot-org/component-library/dropdown';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
@@ -265,30 +266,25 @@ export const CameraInspector = ({
               after it, staying inside the map.
             </Typography>
           ) : (
-            <div className={styles.inspectorGroup}>
-              {choices.map(choice => (
-                // What the trait is FOR, on hover, and read with the box
-                // by a screen reader: a name like "Aimed" says little.
-                <Tooltip
-                  key={choice.value}
-                  title={choice.description ?? ''}
-                  placement="right"
-                >
-                  <span>
-                    <Checkbox
-                      name={`camera-trait-${choice.value}`}
-                      label={choice.name}
-                      checked={traits.includes(choice.value)}
-                      disabled={isReadOnly}
-                      aria-description={choice.description}
-                      onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                        onTrait(choice.value, event.target.checked)
-                      }
-                    />
-                  </span>
-                </Tooltip>
-              ))}
-            </div>
+            // One closed control however many rules the project holds; what
+            // each ticked trait is FOR is said below it, beside its fields.
+            <CheckboxDropdown
+              name="camera-traits"
+              labelText="Camera traits"
+              size="s"
+              className={styles.traitPicker}
+              styleAsFormField
+              hideControls
+              disabled={isReadOnly}
+              allOptions={choices.map(choice => ({
+                value: choice.value,
+                label: choice.name,
+              }))}
+              checkedOptions={elected.map(choice => choice.value)}
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                onTrait(event.target.value, event.target.checked)
+              }
+            />
           )}
           {/* The camera rules' own shelf (`ImportRuleDialog`, subject
               camera): what a camera can be taught, and nothing an actor is.
@@ -307,7 +303,25 @@ export const CameraInspector = ({
         </>
       )}
       {(!main || mainTakesTraits) &&
-        elected.flatMap(choice => choice.properties).map(renderField)}
+        elected.map(choice => (
+          // A ticked trait: its name, what it does — a name like "Aimed"
+          // says little — and then what can be set on it.
+          <section key={choice.value} className={styles.inspectorGroup}>
+            <Typography variant="body2" component="h3">
+              {choice.name}
+            </Typography>
+            {choice.description && (
+              <Typography
+                variant="body3"
+                component="p"
+                className={styles.inspectorNote}
+              >
+                {choice.description}
+              </Typography>
+            )}
+            {choice.properties.map(renderField)}
+          </section>
+        ))}
     </div>
   );
 };

@@ -42,6 +42,7 @@ const rule = new RuleBuilder({
 export const ViewportTrait = rule.addTrait({
   id: VIEWPORT.trait,
   name: 'Shows a Map',
+  description: 'Shows a map inside it, through a camera of its own.',
 });
 
 /** The map the viewport holds, by module path — `maps/level1`. */

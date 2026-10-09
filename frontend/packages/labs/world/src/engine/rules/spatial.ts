@@ -27,6 +27,7 @@ const rule = new RuleBuilder({
 export const PositionalTrait = rule.addTrait({
   id: SPATIAL.trait,
   name: 'Can Be Positioned',
+  description: 'Has a place in the world, a scale and a turn.',
 });
 
 export const PositionProperty = PositionalTrait.addProperty(

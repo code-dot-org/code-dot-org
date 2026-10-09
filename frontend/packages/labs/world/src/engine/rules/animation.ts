@@ -31,6 +31,7 @@ rule.requires([SpatialRule]);
 export const AppearanceTrait = rule.addTrait({
   id: APPEARANCE.trait,
   name: 'Has Appearance',
+  description: 'Is drawn with a sprite, and can play its animations.',
 });
 // Drawing needs a place to draw.
 AppearanceTrait.requires([PositionalTrait]);

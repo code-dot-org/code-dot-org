@@ -301,6 +301,8 @@ export interface PropertySchema {
 export interface TraitSchema {
   trait: string;
   traitName: string;
+  /** What the trait does, when its rule says (`define trait`'s description). */
+  traitDescription?: string;
   props: PropertySchema[];
 }
 /** An actor type's editable schema — its trait groups, in application order. */

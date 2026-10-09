@@ -259,11 +259,22 @@ exactly one rule, so there is nothing to disambiguate and nothing to wire up.
 
 A trait says what it is FOR on a `description` row of its own — one line, the
 way `define block`'s description is the tooltip of the block it defines
-(`TraitMeta.description`). It is the tooltip wherever the trait is chosen; the
-map editor's camera checkboxes are the first to read it, and a trait that says
-nothing there falls back to its rule's sentence in the library. The stock
-rules' sources give it with `rule.trait(…).describe(…)` (`scripts/rules/dsl`),
-and every stock trait has one; `stockRuleSubjects.test` keeps it so.
+(`TraitMeta.description`). Three places read it:
+
+- every block with a trait dropdown — `use trait`, `add trait`, `has trait`,
+  `all actors with trait` — adds it to its own tooltip, after what the block
+  does, for whichever trait it holds (`extensions/traitTooltip`);
+- the map editor's camera inspector, under each trait ticked in its "Camera
+  traits" list, above that trait's fields; a camera trait that says nothing
+  falls back to its rule's sentence in the library;
+- a placement's inspector, at the top of each trait's section. That one reads
+  the RUNNING trait, since the sections come from the sandbox's live actors,
+  so the module a rule compiles to hands the description to `addTrait`.
+
+The stock rules' sources give it with `rule.trait(…).describe(…)`
+(`scripts/rules/dsl`), and every stock trait has one; `stockRuleSubjects.test`
+keeps it so. The engine's own traits — Can Be Positioned, Has Appearance and
+the rest — give it to `addTrait` directly.
 
 `parseRuleMeta` and `extractRuleBodies` both changed to match: the first looks
 for trait roots among the workspace's top blocks, the second takes the top
