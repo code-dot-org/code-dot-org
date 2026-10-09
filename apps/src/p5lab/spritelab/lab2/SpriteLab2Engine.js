@@ -66,8 +66,6 @@ import {
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
-// Stands in for this project's own animation list in preloadedByProject_.
-const OWN_PROJECT = {};
 
 // How long a run waits for the project's images before going ahead without
 // the stragglers.
@@ -195,9 +193,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // (external scenes carry their own images). The view keeps one list per
     // fetched project, so its identity says which project is running.
     this.preloadAnimationsOverride = null;
-    // Decoded images per project (the override list, or OWN_PROJECT for
-    // this project's), each the p5 wrapper's cache while that project runs.
-    this.preloadedByProject_ = new WeakMap();
+    // Decoded images for this project, and for the one external project
+    // most recently visited; whichever is running is the p5 wrapper's cache.
+    this.ownPreloads_ = {};
+    this.externalPreloads_ = null;
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -1070,17 +1069,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
     // Decoded images are reused by name across re-runs, and another
     // project's names collide with this one's, so each project runs from
-    // its own cache; this one's stays decoded through a visit elsewhere.
-    const from =
-      animationList === this.preloadAnimationsOverride
-        ? animationList
-        : OWN_PROJECT;
-    let cache = this.preloadedByProject_.get(from);
-    if (!cache) {
-      cache = {};
-      this.preloadedByProject_.set(from, cache);
+    // its own cache. This project's stays decoded through a visit
+    // elsewhere; a visit to a different project releases the last one's.
+    const external = animationList === this.preloadAnimationsOverride;
+    if (external && this.externalPreloads_?.list !== animationList) {
+      this.externalPreloads_ = {list: animationList, cache: {}};
     }
-    this.p5Wrapper.preloadedSprites = cache;
+    this.p5Wrapper.preloadedSprites = external
+      ? this.externalPreloads_.cache
+      : this.ownPreloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
@@ -1088,7 +1085,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       loadedAnimations(
         await trimAnimationListImages(scoped, {
           keepNames: animationNames(animationList),
-          thumbnails: from === OWN_PROJECT,
+          thumbnails: !external,
         })
       ),
       {multiFrame: true}
