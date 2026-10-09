@@ -32,12 +32,15 @@ import {
 } from '../helpers/displayTreeLayout';
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {useAppSelector} from '../hooks';
+import {useAppDispatch, useAppSelector} from '../hooks';
+import {setPredictionPlaying} from '../redux';
 import {
   getDisplayTree,
+  getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
 
+import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
 
 import styles from './decisionTree.module.scss';
@@ -85,14 +88,25 @@ interface DecisionTreeProps {
 }
 
 const DecisionTree = ({overlay}: DecisionTreeProps) => {
+  const dispatch = useAppDispatch();
   const tree = useAppSelector(getDisplayTree);
   const trace = useAppSelector(getPredictionTrace);
+  const step = useAppSelector(getPredictionStep);
+  const isStepping = useAppSelector(
+    state => state.predictionStep !== undefined,
+  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
     () => (tree ? layoutDisplayTree(tree) : undefined),
     [tree],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
+  const reachedIds = useMemo(
+    () => new Set(trace?.path.slice(0, step + 1)),
+    [trace, step],
+  );
+  const currentId = trace?.path[step];
+  const nextId = trace?.path[step + 1];
   const overlayRef = useRef<HTMLDivElement>(null);
   const enterHintId = useId();
   const keysHintId = useId();
@@ -109,6 +123,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     ? focusedId
     : DISPLAY_TREE_ROOT_ID;
 
+  const itemId = (id: string) => `${nameId}-item-${id}`;
   const textId = (id: string) => `${nameId}-text-${id}`;
   const columnId = (id: string) => `${nameId}-column-${id}`;
   const branchId = (id: string) => `${nameId}-branch-${id}`;
@@ -132,6 +147,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
       nodeElements.current.get(to.id)?.focus({preventScroll: true});
     }
   };
+
+  const stopPlayback = () => dispatch(setPredictionPlaying(false));
 
   const trackEntered = (event: FocusEvent<HTMLElement>) =>
     setEntered(event.target !== event.currentTarget);
@@ -182,9 +199,9 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     trace &&
     getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
 
-  // Path edges go last so a sibling edge cannot paint over the stub they share.
-  const edgeOrder = [...layout.nodes].sort(
-    (a, b) => Number(pathIds.has(a.id)) - Number(pathIds.has(b.id)),
+  // Marks draw over every edge, so an unmarked sibling cannot cover the stub they share.
+  const edges = layout.nodes.flatMap(placed =>
+    placed.parent ? [{id: placed.id, d: edgePath(placed.parent, placed)}] : [],
   );
 
   return (
@@ -199,6 +216,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           contentWidth={layout.width}
           contentHeight={layout.height}
           pathBounds={pathBounds}
+          followId={isStepping && currentId ? itemId(currentId) : undefined}
           overlayRef={overlayRef}
           toolbarTabbable={entered}
           hints={
@@ -215,7 +233,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           aria-label={TREE_NAME}
           aria-describedby={enterHintId}
           tabIndex={0}
-          onFocus={trackEntered}
+          onFocus={event => {
+            stopPlayback();
+            trackEntered(event);
+          }}
+          onPointerDown={stopPlayback}
+          // d3-zoom stops the wheel from bubbling.
+          onWheelCapture={stopPlayback}
           onBlur={leaveWhenFocusLeaves}
           onKeyDown={enterOrLeave}
           className={styles.canvasGroup}
@@ -237,18 +261,21 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               aria-hidden="true"
               className={styles.edges}
             >
-              {edgeOrder.map(
-                placed =>
-                  placed.parent && (
-                    <path
-                      key={placed.id}
-                      d={edgePath(placed.parent, placed)}
-                      className={classNames({
-                        [styles.pathEdge]: pathIds.has(placed.id),
-                      })}
-                    />
-                  ),
-              )}
+              {edges.map(({id, d}) => (
+                <path key={id} d={d} />
+              ))}
+              <g className={styles.marks}>
+                {edges.map(({id, d}) => (
+                  <path
+                    key={id}
+                    d={d}
+                    className={classNames({
+                      [styles.pathEdge]: reachedIds.has(id),
+                      [styles.nextEdge]: id === nextId,
+                    })}
+                  />
+                ))}
+              </g>
             </svg>
             {layout.nodes.map(placed => {
               const text = nodeText(placed.node);
@@ -257,7 +284,9 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                 ? `${label.sign} ${label.text}`
                 : label?.text;
               const kind =
-                placed.node.type === 'answer' ? styles.answer : styles.question;
+                placed.answerIndex === undefined
+                  ? styles.question
+                  : styles.answer;
               const siblings = placed.parent?.children ?? [placed];
               const nameParts = [
                 placed.parent && columnId(placed.parent.id),
@@ -275,6 +304,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               return (
                 <div
                   key={placed.id}
+                  id={itemId(placed.id)}
                   ref={element => trackNodeElement(placed.id, element)}
                   // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
                   role="treeitem"
@@ -282,11 +312,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   aria-describedby={
                     [
                       placed.id === DISPLAY_TREE_ROOT_ID && keysHintId,
-                      pathIds.has(placed.id) && wordId('onPath'),
+                      reachedIds.has(placed.id) && wordId('onPath'),
                     ]
                       .filter(Boolean)
                       .join(' ') || undefined
                   }
+                  aria-current={placed.id === currentId ? 'step' : undefined}
                   aria-expanded={placed.node.type === 'question' || undefined}
                   aria-level={placed.depth + 1}
                   aria-setsize={siblings.length}
@@ -301,7 +332,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     <div
                       title={branch}
                       className={classNames(styles.branch, {
-                        [styles.pathBranch]: pathIds.has(placed.id),
+                        [styles.pathBranch]: reachedIds.has(placed.id),
+                        [styles.nextBranch]: placed.id === nextId,
                       })}
                     >
                       {label.sign && `${label.sign} `}
@@ -311,9 +343,16 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   <div
                     title={text}
                     className={classNames(styles.node, kind, {
-                      [styles.pathNode]: pathIds.has(placed.id),
+                      [styles.pathNode]: reachedIds.has(placed.id),
                     })}
                   >
+                    {placed.answerIndex !== undefined && (
+                      <span
+                        aria-hidden="true"
+                        className={styles.answerDot}
+                        style={leafColorStyle(placed.answerIndex)}
+                      />
+                    )}
                     <span id={textId(placed.id)} className={styles.nodeText}>
                       {placed.node.type === 'question' ? (
                         <>
