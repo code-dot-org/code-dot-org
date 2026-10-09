@@ -99,7 +99,9 @@ rule.uses('Collisions');
 
 // ── The pad ──────────────────────────────────────────────────────────────────
 
-const pad = rule.trait('Is a Teleport Pad');
+const pad = rule
+  .trait('Is a Teleport Pad')
+  .describe('Sends whatever uses it out of another pad of the same color.');
 pad.uses(CanCollide);
 
 /**
@@ -138,7 +140,9 @@ export const IsATeleportPad = rule.traitRef('Is a Teleport Pad');
 
 // ── The traveler ────────────────────────────────────────────────────────────
 
-const travels = rule.trait('Uses Teleport Pads');
+const travels = rule
+  .trait('Uses Teleport Pads')
+  .describe('Can travel from one teleport pad to another.');
 travels.uses(CanMove);
 travels.uses(CanCollide);
 

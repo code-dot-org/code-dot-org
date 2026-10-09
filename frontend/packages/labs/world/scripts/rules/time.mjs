@@ -68,8 +68,12 @@ Both raise events, so what happens on the beat is yours.`,
 // answer is always \`start the cooldown\`.`,
 });
 
-const timed = rule.trait('Has a Timer');
-const cooling = rule.trait('Has a Cooldown');
+const timed = rule
+  .trait('Has a Timer')
+  .describe('Raises an event on a beat of its own.');
+const cooling = rule
+  .trait('Has a Cooldown')
+  .describe('Has to wait a while after doing something before it can again.');
 
 export const HasATimer = rule.traitRef('Has a Timer');
 export const HasACooldown = rule.traitRef('Has a Cooldown');

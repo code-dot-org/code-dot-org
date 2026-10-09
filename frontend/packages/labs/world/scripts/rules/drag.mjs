@@ -64,7 +64,9 @@ Give anything **Slows Down** and set how strongly.`,
 });
 rule.uses('Physics');
 
-const slowed = rule.trait('Slows Down');
+const slowed = rule
+  .trait('Slows Down')
+  .describe('Coasts to a stop when nothing is pushing it.');
 slowed.uses(CanMove);
 // Half of whatever it has got, every second — a car that coasts to a stop over
 // a few seconds. Zero is a ship, which is what the rule is for the absence of.

@@ -64,9 +64,17 @@ Give an actor whichever directions it should wrap in.`,
 });
 rule.uses('Space');
 
-const across = rule.trait('Wraps Across');
+const across = rule
+  .trait('Wraps Across')
+  .describe(
+    'Comes back on the other side when it walks off the left or right.',
+  );
 across.uses(Positional);
-const down = rule.trait('Wraps Down');
+const down = rule
+  .trait('Wraps Down')
+  .describe(
+    'Comes back on the other side when it walks off the top or bottom.',
+  );
 down.uses(Positional);
 
 export const WrapsAcross = rule.traitRef('Wraps Across');

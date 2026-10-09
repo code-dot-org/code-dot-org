@@ -81,7 +81,9 @@ Give the carrier **Carries** and anything pocketable **Can Be Carried**.`,
 // looks like is the project's: \`uses a ⟨key⟩\` is where the door opens.`,
 });
 
-const carries = rule.trait('Carries');
+const carries = rule
+  .trait('Carries')
+  .describe('Holds things in a bag, and can spend one of a kind.');
 
 /**
  * What this actor is holding, oldest first.
@@ -99,7 +101,9 @@ const things = carries.actors('things', {readonly: true});
  * which is what Collection's `Can Be Collected` is too. What sort of thing it
  * is, is its kind.
  */
-rule.trait('Can Be Carried');
+rule
+  .trait('Can Be Carried')
+  .describe('Can be put in the bag of something that carries.');
 
 export const Carries = rule.traitRef('Carries');
 export const CanBeCarried = rule.traitRef('Can Be Carried');

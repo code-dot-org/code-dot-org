@@ -77,9 +77,13 @@ sound, a game over — is yours.`,
 });
 rule.uses('Collisions');
 
-const hurtable = rule.trait('Has Health');
+const hurtable = rule
+  .trait('Has Health')
+  .describe('Can be hurt, and says when its health runs out.');
 hurtable.uses(CanCollide);
-const dangerous = rule.trait('Deals Damage');
+const dangerous = rule
+  .trait('Deals Damage')
+  .describe('Hurts anything with health that touches it.');
 dangerous.uses(CanCollide);
 
 export const HasHealth = rule.traitRef('Has Health');

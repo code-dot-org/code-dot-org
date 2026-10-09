@@ -94,7 +94,9 @@ export const gameRestarted = rule.event(['the game starts again']);
  * It carries no properties. What an actor gets by electing it is the right to
  * be told, which is the whole of a display's job (Scoring's is the same).
  */
-const watches = rule.trait('Watches the Ending');
+const watches = rule
+  .trait('Watches the Ending')
+  .describe('Hears when the game is won, lost, or started again.');
 export const WatchesTheEnding = rule.traitRef('Watches the Ending');
 const seesWon = watches.event(['sees the game won']);
 const seesLost = watches.event(['sees the game lost']);

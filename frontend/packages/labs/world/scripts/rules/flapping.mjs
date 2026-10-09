@@ -87,7 +87,9 @@ Give an actor **Flaps and Glides**, and set how hard and how often it beats.`,
 rule.uses('Physics');
 rule.uses('Collisions');
 
-const flaps = rule.trait('Flaps and Glides');
+const flaps = rule
+  .trait('Flaps and Glides')
+  .describe('Flutters toward an actor, then glides at where it was.');
 flaps.uses(CanMove);
 flaps.uses(CanCollide);
 

@@ -75,7 +75,9 @@ rule.uses('Physics');
 
 // ── The switch ───────────────────────────────────────────────────────────────
 
-const switches = rule.trait('Is a Switch');
+const switches = rule
+  .trait('Is a Switch')
+  .describe('Flips every wall of its color when something steps on it.');
 switches.uses(CanCollide);
 
 /** Which walls it flips. Matched exactly, like a teleport pad's. */
@@ -96,7 +98,9 @@ const flipped = switches.event(['is pressed']);
 
 // ── The wall ─────────────────────────────────────────────────────────────────
 
-const walls = rule.trait('Is a Switched Wall');
+const walls = rule
+  .trait('Is a Switched Wall')
+  .describe('Opens or closes when a switch of its color is pressed.');
 walls.uses(CanCollide);
 
 /**

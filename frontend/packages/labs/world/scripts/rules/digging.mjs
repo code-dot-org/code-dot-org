@@ -81,7 +81,9 @@ rule.uses('Collisions');
 
 // ── The ground ───────────────────────────────────────────────────────────────
 
-const diggable = rule.trait('Can Be Dug');
+const diggable = rule
+  .trait('Can Be Dug')
+  .describe('Can have a hole dug in it, which fills back in after a while.');
 diggable.uses(CanCollide);
 
 /**
@@ -111,7 +113,9 @@ const filled = diggable.event(['fills in']);
 
 // ── The digger ───────────────────────────────────────────────────────────────
 
-const digger = rule.trait('Digs');
+const digger = rule
+  .trait('Digs')
+  .describe('Can dig a hole in the ground beside it.');
 digger.uses(CanCollide);
 
 /**

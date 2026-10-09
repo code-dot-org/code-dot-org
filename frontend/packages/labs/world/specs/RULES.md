@@ -262,8 +262,8 @@ way `define block`'s description is the tooltip of the block it defines
 (`TraitMeta.description`). It is the tooltip wherever the trait is chosen; the
 map editor's camera checkboxes are the first to read it, and a trait that says
 nothing there falls back to its rule's sentence in the library. The stock
-rules' sources give it with `rule.trait(…).describe(…)` (`scripts/rules/dsl`);
-the five camera traits have theirs, and the rest are still to write.
+rules' sources give it with `rule.trait(…).describe(…)` (`scripts/rules/dsl`),
+and every stock trait has one; `stockRuleSubjects.test` keeps it so.
 
 `parseRuleMeta` and `extractRuleBodies` both changed to match: the first looks
 for trait roots among the workspace's top blocks, the second takes the top

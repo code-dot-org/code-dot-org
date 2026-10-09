@@ -114,7 +114,9 @@ rule.uses('Gravity');
 rule.uses('Climbing');
 rule.uses('Physics');
 
-const prowls = rule.trait('Prowls');
+const prowls = rule
+  .trait('Prowls')
+  .describe('Hunts an actor, choosing a way at each landing and ladder.');
 prowls.uses(AffectedByGravity);
 prowls.uses(Climbs);
 

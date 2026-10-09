@@ -59,7 +59,9 @@ const released = rule.event([param('released key', KEY), 'is released']);
  */
 const typed = rule.event([param('character', 'string'), 'is typed']);
 
-const takesInput = rule.trait('Takes Keyboard Input');
+const takesInput = rule
+  .trait('Takes Keyboard Input')
+  .describe('Hears keys being pressed, held and let go.');
 const presses = takesInput.event(['presses', param('pressed key', KEY)]);
 /**
  * `repeats ⟨down arrow⟩` — held long enough to start firing again.

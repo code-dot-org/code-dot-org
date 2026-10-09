@@ -86,9 +86,13 @@ you back where you were.`,
 });
 rule.uses('Space');
 
-const across = rule.trait('Stays Across');
+const across = rule
+  .trait('Stays Across')
+  .describe('Stops at the left and right edges of the map.');
 across.uses(Positional);
-const down = rule.trait('Stays Down');
+const down = rule
+  .trait('Stays Down')
+  .describe('Stops at the top and bottom edges of the map.');
 down.uses(Positional);
 
 export const StaysAcross = rule.traitRef('Stays Across');

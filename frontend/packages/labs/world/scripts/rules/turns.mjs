@@ -87,7 +87,9 @@ const taken = rule.number('turns taken', 0, {readonly: true});
 /** Raised once per turn, after everybody who acts has been told to. */
 export const turnPasses = rule.event(['a turn passes']);
 
-const takes = rule.trait('Takes a Turn');
+const takes = rule
+  .trait('Takes a Turn')
+  .describe('Acts each time a turn passes, or every so many turns.');
 
 /**
  * One move every this many turns. One is every turn; zero is never.

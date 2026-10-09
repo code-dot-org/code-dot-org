@@ -98,7 +98,9 @@ export const scoreChanged = rule.event(['the score changes']);
  * It carries no properties, and does not need any: what an actor gets by
  * electing it is the right to be TOLD, which is the whole of a display's job.
  */
-const watches = rule.trait('Watches the Score');
+const watches = rule
+  .trait('Watches the Score')
+  .describe('Hears when the score changes and when the game is won.');
 export const WatchesTheScore = rule.traitRef('Watches the Score');
 const seesChange = watches.event(['sees the score change']);
 const seesWin = watches.event(['sees the game won']);

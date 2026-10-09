@@ -54,3 +54,16 @@ describe('every stock rule', () => {
     }
   });
 });
+
+describe('every stock trait', () => {
+  it('says what it does, in a sentence', () => {
+    // The tooltip wherever a trait is chosen: a name like "Slows" or
+    // "Carries" says little on its own, and less beside its neighbors.
+    const silent = STOCK_RULES.flatMap(rule =>
+      (parseRuleMeta(`rules/${rule.id}`, rule.contents)?.traits ?? [])
+        .filter(trait => !trait.description?.trim())
+        .map(trait => `${rule.id}: ${trait.name}`),
+    );
+    expect(silent).toEqual([]);
+  });
+});

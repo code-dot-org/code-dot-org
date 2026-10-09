@@ -94,7 +94,9 @@ you set, so it suits a tiled level and a room of scattered crates alike.`,
 
 rule.uses('Physics');
 
-const finder = rule.trait('Finds a Way');
+const finder = rule
+  .trait('Finds a Way')
+  .describe('Works out a way around walls to where it is going.');
 // It sets a SPEED, which is what makes it compose with everything else that
 // does: solid bodies still stop it, drag still slows it. See the header.
 finder.uses(CanMove);

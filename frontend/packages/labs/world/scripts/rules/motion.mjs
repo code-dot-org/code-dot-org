@@ -37,7 +37,9 @@ it.`,
 });
 rule.uses('Space');
 
-const canMove = rule.trait('Can Move');
+const canMove = rule
+  .trait('Can Move')
+  .describe('Moves by its own speed every frame, and can be pushed.');
 canMove.uses(Positional);
 const velocity = canMove.vector('velocity', {x: 0, y: 0});
 

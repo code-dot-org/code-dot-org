@@ -102,7 +102,9 @@ const remembered = rule.number('moves remembered', 0, {readonly: true});
 /** Raised once each time a move is taken back, after everything has moved. */
 export const takenBack = rule.event(['a move is taken back']);
 
-const remembers = rule.trait('Remembers Where It Was');
+const remembers = rule
+  .trait('Remembers Where It Was')
+  .describe('Goes back to where it was when a move is taken back.');
 remembers.uses(Positional);
 
 /**

@@ -63,7 +63,9 @@ Give an actor **Sends Things**, and set the gap between waves.`,
 // as on a 120Hz one.`,
 });
 
-const sends = rule.trait('Sends Things');
+const sends = rule
+  .trait('Sends Things')
+  .describe('Sends something on a beat that quickens as the game goes on.');
 
 export const SendsThings = rule.traitRef('Sends Things');
 

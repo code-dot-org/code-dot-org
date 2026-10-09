@@ -104,7 +104,9 @@ Give an actor **Turns When It Hits Something**.`,
 rule.uses('Physics');
 rule.uses('Collisions');
 
-const turns = rule.trait('Turns When It Hits Something');
+const turns = rule
+  .trait('Turns When It Hits Something')
+  .describe('Goes the way it is facing, and turns when something stops it.');
 turns.uses(CanMove);
 turns.uses(CanCollide);
 

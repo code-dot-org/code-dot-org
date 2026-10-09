@@ -114,7 +114,9 @@ rule.uses('Collisions');
 
 // ── The three floors ─────────────────────────────────────────────────────────
 
-const conveys = rule.trait('Conveys');
+const conveys = rule
+  .trait('Conveys')
+  .describe('Is a belt that carries along whatever stands on it.');
 conveys.uses(CanCollide);
 /**
  * Units a second, signed: positive carries to the right.
@@ -135,10 +137,14 @@ const beltSpeed = conveys.number('belt speed', 2);
  * tile to carry, and a `slipperiness` number would be a dial with no
  * behavior behind it.
  */
-const slippery = rule.trait('Slippery');
+const slippery = rule
+  .trait('Slippery')
+  .describe('Is ice: whatever stands on it cannot stop or turn.');
 slippery.uses(CanCollide);
 
-const slows = rule.trait('Slows');
+const slows = rule
+  .trait('Slows')
+  .describe('Is sludge: whatever walks over it is slowed down.');
 slows.uses(CanCollide);
 /**
  * The fraction of the walker's own speed that survives, per frame.
@@ -156,7 +162,9 @@ export const Slows = rule.traitRef('Slows');
 
 // ── The walker ───────────────────────────────────────────────────────────────
 
-const stands = rule.trait('Stands on Surfaces');
+const stands = rule
+  .trait('Stands on Surfaces')
+  .describe('Is carried by belts, slides on ice and wades through sludge.');
 stands.uses(CanMove);
 stands.uses(CanCollide);
 

@@ -100,7 +100,9 @@ carries.`,
 });
 rule.uses('Gravity');
 
-const flies = rule.trait('Flies with a Jetpack');
+const flies = rule
+  .trait('Flies with a Jetpack')
+  .describe('Flies upward while a key is held, until the fuel runs out.');
 flies.uses(AffectedByGravity);
 
 // Units a second squared, against gravity. Twice the default gravity of 9, so

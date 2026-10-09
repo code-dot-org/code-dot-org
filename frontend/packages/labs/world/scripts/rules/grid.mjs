@@ -103,10 +103,14 @@ Tile**, and anything shovable **Can Be Pushed**.`,
  * is an actor that has this and nothing else, which is as small as a wall
  * should be.
  */
-rule.trait('Fills a Tile');
+rule
+  .trait('Fills a Tile')
+  .describe('Takes up a whole square, so nothing can step into it.');
 export const FillsATile = rule.traitRef('Fills a Tile');
 
-const mover = rule.trait('Steps on the Grid');
+const mover = rule
+  .trait('Steps on the Grid')
+  .describe('Moves a whole square at a time, and only where it fits.');
 
 /**
  * How big a square is, in pixels.
@@ -148,7 +152,9 @@ const arriveAt = mover.number('step ends at', 0, {readonly: true});
  * stepping into it would not push it) and must move (or it could not go
  * anywhere).
  */
-const pushable = rule.trait('Can Be Pushed');
+const pushable = rule
+  .trait('Can Be Pushed')
+  .describe('Slides a square along when something steps into it.');
 pushable.uses(FillsATile);
 pushable.uses(rule.traitRef('Steps on the Grid'));
 export const CanBePushed = rule.traitRef('Can Be Pushed');

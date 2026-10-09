@@ -61,11 +61,15 @@ anywhere.`,
 });
 rule.uses('Physics');
 
-const across = rule.trait('Moves Across');
+const across = rule
+  .trait('Moves Across')
+  .describe('Walks left and right while the arrow keys are held.');
 across.uses(CanMove);
 const acrossSpeed = across.number('across speed', 1.5);
 
-const down = rule.trait('Moves Down');
+const down = rule
+  .trait('Moves Down')
+  .describe('Walks up and down while the arrow keys are held.');
 down.uses(CanMove);
 const downSpeed = down.number('down speed', 1.5);
 

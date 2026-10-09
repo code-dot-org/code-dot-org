@@ -140,11 +140,13 @@ rule.uses('Physics');
  * opinion about who climbs it. Elect this beside `Acts as Ground` for a ladder
  * you can stand on top of, and alone for one you cannot.
  */
-const climbable = rule.trait('Can Be Climbed');
+const climbable = rule
+  .trait('Can Be Climbed')
+  .describe('Is a ladder: something that climbs can go up and down it.');
 climbable.uses('Collisions#CanCollideTrait');
 export const CanBeClimbed = rule.traitRef('Can Be Climbed');
 
-const climbs = rule.trait('Climbs');
+const climbs = rule.trait('Climbs').describe('Goes up and down ladders.');
 climbs.uses(AffectedByGravity);
 
 // Units a second — a hundred pixels each, so 2 is a little over six tiles a

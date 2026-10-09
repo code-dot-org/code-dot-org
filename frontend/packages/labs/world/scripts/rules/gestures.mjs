@@ -88,11 +88,7 @@ drag stays yours once it has started, even when the finger has moved off.`,
 // rule writes them and a project reads them, which is what read-only means
 // here.
 
-const pressPlace = rule.vector(
-  'press place',
-  {x: 0, y: 0},
-  {readonly: true},
-);
+const pressPlace = rule.vector('press place', {x: 0, y: 0}, {readonly: true});
 const lastPlace = rule.vector('last place', {x: 0, y: 0}, {readonly: true});
 const pressStarted = rule.number('press started', 0, {readonly: true});
 const pressing = rule.boolean('pressing', false, {readonly: true});
@@ -126,7 +122,9 @@ const screenSwiped = rule.event([
 ]);
 const screenHeld = rule.event(['the screen is held']);
 
-const takesGestures = rule.trait('Takes Gestures');
+const takesGestures = rule
+  .trait('Takes Gestures')
+  .describe('Hears when it is dragged, dropped, swiped or held.');
 const beingPressed = takesGestures.boolean('being pressed', false, {
   readonly: true,
 });
@@ -135,7 +133,10 @@ const dragged = takesGestures.event([
   param('movement', 'vector'),
 ]);
 const dropped = takesGestures.event(['is dropped']);
-const swiped = takesGestures.event(['is swiped', param('direction', DIRECTION)]);
+const swiped = takesGestures.event([
+  'is swiped',
+  param('direction', DIRECTION),
+]);
 const held = takesGestures.event(['is held']);
 
 const each = rule.local('each', 'Actor');
@@ -199,8 +200,16 @@ const directionOfTravel = () => {
   const dy = axisOf('y', delta);
   return pick(
     atLeast(absolute(dx), absolute(dy)),
-    pick(lessThan(dx, 0), choice(DIRECTION_SET, 'left'), choice(DIRECTION_SET, 'right')),
-    pick(lessThan(dy, 0), choice(DIRECTION_SET, 'up'), choice(DIRECTION_SET, 'down')),
+    pick(
+      lessThan(dx, 0),
+      choice(DIRECTION_SET, 'left'),
+      choice(DIRECTION_SET, 'right'),
+    ),
+    pick(
+      lessThan(dy, 0),
+      choice(DIRECTION_SET, 'up'),
+      choice(DIRECTION_SET, 'down'),
+    ),
   );
 };
 
@@ -297,7 +306,10 @@ rule.step('gestures', 'sense', [
         lasted.let(minus(time(), pressStarted.of())),
         when([
           [
-            both(not(dragging.of()), moreThan(travelled.get(), dragDistance.of())),
+            both(
+              not(dragging.of()),
+              moreThan(travelled.get(), dragDistance.of()),
+            ),
             [dragging.set(yes())],
           ],
         ]),
@@ -332,7 +344,6 @@ rule.step('gestures', 'sense', [
       ],
     ],
   ]),
-
 ]);
 
 export default () => moduleFor(rule, 'gestures');

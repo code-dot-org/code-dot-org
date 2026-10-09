@@ -82,7 +82,9 @@ order you placed them in.`,
 // (specs/UI_ACTORS.md).`,
 });
 
-const focusable = rule.trait('Can Be Focused');
+const focusable = rule
+  .trait('Can Be Focused')
+  .describe('Can hold the keyboard, and takes its turn when Tab moves along.');
 
 focusable.doc(
   'Whatever elects this can hold the keyboard. Only one actor in a world holds it at a time, and this rule is the only thing that moves it.',

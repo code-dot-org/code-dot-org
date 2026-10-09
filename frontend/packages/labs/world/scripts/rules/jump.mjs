@@ -81,7 +81,9 @@ It needs Gravity, which is what brings it back down.`,
 });
 rule.uses('Gravity');
 
-const jumps = rule.trait('Jumps');
+const jumps = rule
+  .trait('Jumps')
+  .describe('Leaps off the ground when asked, once or more before it lands.');
 jumps.uses(AffectedByGravity);
 
 // Units a second, upward. Against the default gravity of 9 that is a rise of

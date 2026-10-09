@@ -56,7 +56,9 @@ need it.`,
 });
 rule.uses('Physics');
 
-const canCollide = rule.trait('Can Collide');
+const canCollide = rule
+  .trait('Can Collide')
+  .describe('Notices what it touches, and when it stops touching.');
 canCollide.uses(Positional);
 
 /** Set it yourself, or leave it at zero and let the picture decide. */

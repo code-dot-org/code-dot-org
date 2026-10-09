@@ -55,7 +55,9 @@ Give anything short-lived **Expires** and say how many seconds it gets.`,
 });
 rule.uses('Space');
 
-const expires = rule.trait('Expires');
+const expires = rule
+  .trait('Expires')
+  .describe('Leaves the world once it is older than its lifetime.');
 // Seconds. Two is a bullet that crosses a screen and a bit; short enough that
 // misses do not pile up, long enough that a shot across the map still arrives.
 const lifetime = expires.number('lifetime', 2);

@@ -73,9 +73,13 @@ a room with walls, Path is the smarter cousin.`,
 });
 rule.uses('Physics');
 
-const chases = rule.trait('Chases');
+const chases = rule
+  .trait('Chases')
+  .describe('Goes after another actor until it is close enough.');
 chases.uses(CanMove);
-const flees = rule.trait('Flees');
+const flees = rule
+  .trait('Flees')
+  .describe('Runs from another actor when it comes too near.');
 flees.uses(CanMove);
 
 export const Chases = rule.traitRef('Chases');

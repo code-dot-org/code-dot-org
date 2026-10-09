@@ -71,7 +71,9 @@ rule.uses('Collisions');
 /** How hard friction can hold, in speed per second — the world's own dial. */
 const gripStrength = rule.number('grip strength', 9);
 
-const solidTrait = rule.trait('Solid');
+const solidTrait = rule
+  .trait('Solid')
+  .describe('Cannot pass through another solid thing, nor be passed through.');
 solidTrait.uses(CanCollide);
 const bounciness = solidTrait.number('bounciness', 0);
 const friction = solidTrait.number('friction', 0);

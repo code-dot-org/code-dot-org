@@ -57,7 +57,9 @@ itself.`,
 const pressed = rule.event([param('pressed button', BUTTON), 'is pressed']);
 const released = rule.event([param('released button', BUTTON), 'is released']);
 
-const takesMouse = rule.trait('Takes Mouse Input');
+const takesMouse = rule
+  .trait('Takes Mouse Input')
+  .describe('Hears mouse buttons being pressed and let go.');
 const presses = takesMouse.event([
   'presses mouse button',
   param('pressed button', BUTTON),
@@ -67,7 +69,9 @@ const releases = takesMouse.event([
   param('released button', BUTTON),
 ]);
 
-const clickable = rule.trait('Can Be Clicked');
+const clickable = rule
+  .trait('Can Be Clicked')
+  .describe('Hears when it is clicked.');
 const clicked = clickable.event([
   'is clicked with',
   param('pressed button', BUTTON),
@@ -87,7 +91,9 @@ const clicked = clickable.event([
  * moves: a list adds it to the offset it already keeps in pixels, so the
  * handler is one addition and no unit to think about.
  */
-const scrollable = rule.trait('Can Be Scrolled');
+const scrollable = rule
+  .trait('Can Be Scrolled')
+  .describe('Hears when the mouse wheel scrolls over it.');
 const scrolled = scrollable.event(['is scrolled by', param('by', 'number')]);
 
 const each = rule.local('each', 'Actor');

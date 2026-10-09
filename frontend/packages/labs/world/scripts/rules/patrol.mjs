@@ -90,8 +90,8 @@ rule.uses('Physics');
  * different axis in it — and the alternative is the same six blocks copied,
  * which is somewhere for the two to disagree.
  */
-const beat = (traitName, which, other) => {
-  const trait = rule.trait(traitName);
+const beat = (traitName, description, which, other) => {
+  const trait = rule.trait(traitName).describe(description);
   trait.uses(CanMove);
   const speed = trait.number(`${which} speed`, 0.6);
   // Seconds one way before turning round. With the speed above that is about
@@ -136,8 +136,18 @@ const beat = (traitName, which, other) => {
   return trait;
 };
 
-beat('Patrols Across', 'across', 'down');
-beat('Patrols Down', 'down', 'across');
+beat(
+  'Patrols Across',
+  'Walks left and right, turning back on a beat.',
+  'across',
+  'down',
+);
+beat(
+  'Patrols Down',
+  'Walks up and down, turning back on a beat.',
+  'down',
+  'across',
+);
 
 export const PatrolsAcross = rule.traitRef('Patrols Across');
 export const PatrolsDown = rule.traitRef('Patrols Down');

@@ -49,7 +49,7 @@ Give a shooter **Zaps**, and set how often.`,
 // 30Hz screen as on a 120Hz one.`,
 });
 
-const zaps = rule.trait('Zaps');
+const zaps = rule.trait('Zaps').describe('Can zap, but only so often.');
 // Seconds between zaps. A quarter second is about six a second, which is fast
 // enough to feel responsive and slow enough that a held key is not a wall.
 const recharge = zaps.number('recharge time', 0.25);

@@ -66,9 +66,13 @@ What a collector has taken is a list you can count, test and empty.`,
 });
 rule.uses('Collisions');
 
-const collects = rule.trait('Collects');
+const collects = rule
+  .trait('Collects')
+  .describe('Picks up the things it walks into.');
 collects.uses(CanCollide);
-const collectible = rule.trait('Can Be Collected');
+const collectible = rule
+  .trait('Can Be Collected')
+  .describe('Can be picked up by something that collects.');
 collectible.uses(CanCollide);
 
 export const Collects = rule.traitRef('Collects');

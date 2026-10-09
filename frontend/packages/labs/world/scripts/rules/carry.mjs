@@ -79,7 +79,9 @@ rule.uses('Collisions');
 
 // ── The platform ─────────────────────────────────────────────────────────────
 
-const carries = rule.trait('Carries');
+const carries = rule
+  .trait('Carries')
+  .describe('Takes whatever stands on it along when it moves.');
 carries.uses(Positional);
 // Collidable, because "standing on it" is answered from the rider's contacts,
 // and a platform nothing can touch is a platform nobody can stand on.
@@ -138,7 +140,9 @@ carries.step('measure the carry', 'decide', [
 
 // ── The rider ────────────────────────────────────────────────────────────────
 
-const rides = rule.trait('Rides');
+const rides = rule
+  .trait('Rides')
+  .describe('Moves along with whatever it is standing on.');
 rides.uses(Positional);
 // The contacts this reads are Collisions' own, so a rider has to be the sort of
 // thing that has them.

@@ -60,7 +60,11 @@ line is.`,
 // needs no more machinery than that.`,
 });
 
-const talks = rule.trait('Has a Conversation');
+const talks = rule
+  .trait('Has a Conversation')
+  .describe(
+    'Keeps its place in a conversation and moves through it line by line.',
+  );
 
 /**
  * Where in the script this conversation is: 1 is the first line, 0 is nobody

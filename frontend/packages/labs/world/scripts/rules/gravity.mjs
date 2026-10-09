@@ -232,7 +232,9 @@ rule.block({
 
 export const AffectedByGravity = rule.traitRef('Affected by Gravity');
 
-const affected = rule.trait('Affected by Gravity');
+const affected = rule
+  .trait('Affected by Gravity')
+  .describe('Falls, and lands on whatever acts as ground.');
 affected.uses(CanMove);
 affected.uses(CanCollide);
 const gravityScale = affected.number('gravity scale', 1);
@@ -293,7 +295,10 @@ const stopsFalling = affected.event(['stops falling']);
  *     Acts as Ground            → land on it, pass up through it
  *     Acts as Ground + Solid    → land on it, and it stops you either way
  */
-rule.trait('Acts as Ground').uses(CanCollide);
+rule
+  .trait('Acts as Ground')
+  .describe('Can be stood on by things that fall.')
+  .uses(CanCollide);
 
 const each = rule.local('each', 'Actor');
 const resting = rule.local('resting', 'Boolean');

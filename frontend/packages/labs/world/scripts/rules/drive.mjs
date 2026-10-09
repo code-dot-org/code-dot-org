@@ -65,7 +65,9 @@ slow down.`,
 });
 rule.uses('Physics');
 
-const driven = rule.trait('Driven by Arrow Keys');
+const driven = rule
+  .trait('Driven by Arrow Keys')
+  .describe('Turns with left and right, and pushes forward with up.');
 driven.uses(CanMove);
 const turnSpeed = driven.number('turn speed', 180);
 const thrust = driven.number('thrust', 6);
