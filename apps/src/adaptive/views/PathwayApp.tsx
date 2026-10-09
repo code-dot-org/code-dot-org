@@ -4,7 +4,9 @@
 import React, {useMemo, useState} from 'react';
 
 import {AichatContext} from '@cdo/apps/aichat/types';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {useProgress} from '../progress';
@@ -58,6 +60,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   const {
     progress,
     statusMap,
+    stepContextMap,
     isLoading,
     markStarted,
     markComplete,
@@ -65,6 +68,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     saveAnswers,
     reset,
   } = useProgress(pathway, progressKey);
+  const dispatch = useAppDispatch();
   const [view, setView] = useState<View>({kind: 'map'});
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
 
@@ -90,11 +94,19 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
         pathway,
         checkpoint: playing,
         statusMap,
-        stepContextMap: progress.stepContext,
+        stepContextMap,
         updateStepContext,
         aiContext,
       },
-    [pathway, playing, statusMap, progress, updateStepContext, aiContext]
+    [
+      pathway,
+      playing,
+      statusMap,
+      progress,
+      stepContextMap,
+      updateStepContext,
+      aiContext,
+    ]
   );
 
   if (isLoading) {
@@ -140,6 +152,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
         onFocus={focusId => setView({kind: 'map', focusId})}
         onStart={id => {
           markStarted(id);
+          dispatch(sendStartedReportIfNotStarted('adaptive'));
           setView({kind: 'step', checkpointId: id});
         }}
         onWorkOnProject={() => setView({kind: 'project'})}

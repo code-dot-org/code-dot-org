@@ -45,6 +45,7 @@ import {
 import {authorizeLockable} from './lessonLockRedux';
 import {
   getCurrentLevel,
+  getCurrentScriptLevelId,
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
@@ -493,6 +494,39 @@ export function sendSuccessReportForLevel(
       dispatch,
       getState
     );
+  };
+}
+
+// Reports a step level, absent from the lesson, under the adaptive script level.
+export function sendAdaptiveStepReport(
+  levelId: number,
+  result: number,
+  timeMs: number
+): AsyncProgressThunkAction {
+  return async (_dispatch, getState) => {
+    const state = getState();
+    const scriptLevelId = getCurrentScriptLevelId(state);
+    if (!scriptLevelId) {
+      return;
+    }
+    const data: MilestoneReport = {
+      app: 'adaptive',
+      result: true,
+      testResult: result,
+      timeSinceLastMilestone: timeMs,
+    };
+    const courseId = state.progress.courseId;
+    const url = courseId
+      ? `/milestone/0/${scriptLevelId}/${levelId}?course_id=${courseId}`
+      : `/milestone/0/${scriptLevelId}/${levelId}`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) {
+      throw new Error(`Milestone for level ${levelId}: ${response.status}`);
+    }
   };
 }
 

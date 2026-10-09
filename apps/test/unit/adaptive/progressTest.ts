@@ -129,7 +129,7 @@ describe('useProgress', () => {
     expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
 
-  it('merges step context by step id and saves it', async () => {
+  it('keeps generated instructions for the page without saving them', async () => {
     const store = fakeStore(undefined);
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
@@ -137,10 +137,9 @@ describe('useProgress', () => {
     await waitForNextUpdate();
     const generated = {instructions: 'Hi', inputsHash: 'ab'};
     act(() => result.current.updateStepContext('s1', {generated}));
-    expect(result.current.progress?.stepContext).toEqual({s1: {generated}});
-    expect(store.saved[store.saved.length - 1].stepContext).toEqual({
-      s1: {generated},
-    });
+    expect(result.current.stepContextMap).toEqual({s1: {generated}});
+    expect(result.current.progress?.stepContext).toEqual({});
+    expect(store.saved[store.saved.length - 1].stepContext).toEqual({});
   });
 
   it('stores answers per step beside other step context and clears them on reset', async () => {
@@ -159,14 +158,15 @@ describe('useProgress', () => {
       result.current.saveAnswers('quiz', 2, [right]);
     });
     act(() => result.current.saveAnswers('quiz', 1, [wrong, right]));
-    expect(result.current.progress?.stepContext).toEqual({
+    expect(result.current.stepContextMap).toEqual({
       quiz: {generated, answers: {1: [wrong, right], 2: [right]}},
       other: {answers: {3: [right]}},
     });
-    expect(store.saved[store.saved.length - 1].stepContext).toEqual(
-      result.current.progress?.stepContext
-    );
+    expect(store.saved[store.saved.length - 1].stepContext).toEqual({
+      quiz: {answers: {1: [wrong, right], 2: [right]}},
+      other: {answers: {3: [right]}},
+    });
     act(() => result.current.reset());
-    expect(result.current.progress?.stepContext).toEqual({});
+    expect(result.current.stepContextMap).toEqual({});
   });
 });
