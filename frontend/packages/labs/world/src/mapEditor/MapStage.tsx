@@ -3067,6 +3067,9 @@ export const MapStage = ({
           }
           onClose={() => setInspectingCamera(null)}
           looker={selectedActor ? 'This Viewport' : 'The world'}
+          // The world's main camera takes traits, stored on its main map; a
+          // Viewport's has its kind's.
+          mainTakesTraits={!selectedActor}
           mainNote={
             selectedActor
               ? 'This Viewport’s own camera. What it follows is set in the ' +

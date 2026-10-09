@@ -388,8 +388,12 @@ trait` and `set … of ⟨this camera⟩` rows its declaration needs. Its "Add a
      Smoothly, Ignores Small Moves, Keeps the View Inside — which the
      world's Rules no longer show among an actor's, where they read as
      specialist machinery; the rule brought is ticked on the camera that
-     asked. The main camera has no traits here: it is
-     the world's own, and following something is what an added camera is for.
+     asked. The WORLD's main camera takes traits here too,
+     stored on its main map apart from the cameras it adds (`mainCamera`),
+     and compiled into `add trait ⟨…⟩ to ⟨camera main⟩` and `set` rows — so
+     following the player needs no second camera. A Viewport's main camera
+     does not: its traits are its kind's, and their values are already the
+     Viewport's own properties.
 
 10. **`actor to follow` by kind.** A property type the inspector can offer as a
     dropdown of the project's actor kinds, so a Viewport's camera can be aimed at

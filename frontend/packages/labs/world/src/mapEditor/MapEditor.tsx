@@ -540,8 +540,11 @@ export const MapEditor = ({
   // one it starts through is the map's to say once it says it, and the
   // code's — a `look through camera` row — until then.
   const cameraChoices = useMemo(() => cameraTraitChoices(files), [files]);
+  // …the main camera's too, whose traits and values are stored apart.
   const storedCamera = (id: string) =>
-    map.cameras?.find(camera => camera.id === id);
+    id === MAIN_CAMERA
+      ? map.mainCamera
+      : map.cameras?.find(camera => camera.id === id);
   const worldCameraEditor: WorldCameraEditor | undefined = document.world
     ? {
         starting: map.startingCamera

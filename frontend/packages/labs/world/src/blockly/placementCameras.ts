@@ -99,6 +99,15 @@ const chain = (blocks: Block[]): Block | undefined =>
     undefined,
   );
 
+/** A `set` row for each value, about `subject`: `this camera`, or the main one. */
+const settingRows = (values: readonly CameraValue[], subject: Block): Block[] =>
+  values.flatMap(({setter, type, value}) => {
+    const inputs = cameraValueInputs(type, value);
+    return inputs
+      ? [{type: setter, inputs: {ACTOR: {block: subject}, ...inputs}}]
+      : [];
+  });
+
 /**
  * The `define camera` a stored camera stands for: `for ⟨this actor⟩` for a
  * Viewport's, and for nobody — the world — for the world's own.
@@ -112,17 +121,7 @@ const definitionOf = (
       type: 'world_use_trait',
       fields: {TRAIT: trait},
     })),
-    ...camera.values.flatMap(({setter, type, value}) => {
-      const inputs = cameraValueInputs(type, value);
-      return inputs
-        ? [
-            {
-              type: setter,
-              inputs: {ACTOR: {block: {type: 'world_this_camera'}}, ...inputs},
-            },
-          ]
-        : [];
-    }),
+    ...settingRows(camera.values, {type: 'world_this_camera'}),
   ]);
   return {
     type: 'world_define_camera',
@@ -178,8 +177,19 @@ export function withCameraHandler(
   };
 }
 
+/** What the world's MAIN camera is given: traits, and their values. */
+export interface MainCameraSettings {
+  traits: string[];
+  values: CameraValue[];
+}
+
 /** A world's main map, as far as its cameras are stored on it. */
 interface StoredWorldCameras {
+  /**
+   * The camera every world has, which no `define camera` declares: given
+   * its traits with `add trait ⟨…⟩ to ⟨camera main⟩` once the world exists.
+   */
+  mainCamera?: MainCameraSettings;
   cameras?: PlacementCamera[];
   /** `main` or `camera:<block id>`, as `look through camera` names one. */
   startingCamera?: string;
@@ -187,9 +197,10 @@ interface StoredWorldCameras {
 
 /**
  * A world's file with its stored cameras declared, for the compiler only:
- * the world's own cameras live on its main map (`mapModel`), and become
- * `define camera` rows at the END of `define world`'s rows here, followed by
- * a `look through camera` for the one it starts with.
+ * the world's own cameras live on its main map (`mapModel`), and become rows
+ * at the END of `define world`'s rows here — the main camera's traits and
+ * values first, then a `define camera` for each other one, then a `look
+ * through camera` for the one it starts with.
  *
  * AT THE END, because a camera is usually told to follow something, and
  * `any ⟨Bird⟩` is read when its row runs: after a `load map` row, the birds
@@ -203,13 +214,31 @@ export function withWorldCameras(state: object): object {
   };
   const cameras = document.map?.cameras ?? [];
   const starting = document.map?.startingCamera;
+  const main = document.map?.mainCamera;
   const root = document.blocks?.blocks?.find(
     block => block.type === 'world_world',
   );
-  if (!root || (!cameras.length && !starting)) {
+  if (
+    !root ||
+    (!cameras.length &&
+      !starting &&
+      !main?.traits.length &&
+      !main?.values.length)
+  ) {
     return state;
   }
+  // The main camera as `camera ⟨main⟩` names it.
+  const mainCamera = (): Block => ({
+    type: 'world_camera',
+    fields: {CAMERA: 'main'},
+  });
   const rows = chain([
+    ...(main?.traits ?? []).map(trait => ({
+      type: 'world_add_camera_trait',
+      fields: {TRAIT: trait},
+      inputs: {ACTOR: {block: mainCamera()}},
+    })),
+    ...settingRows(main?.values ?? [], mainCamera()),
     ...cameras.map(camera => definitionOf(camera, 'world')),
     ...(starting
       ? [{type: 'world_use_camera', fields: {CAMERA: starting}}]

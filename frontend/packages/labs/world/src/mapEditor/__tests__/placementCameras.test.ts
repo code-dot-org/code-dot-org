@@ -9,6 +9,8 @@ import {
   removePlacementCamera,
   renamePlacementCamera,
   showsThroughOf,
+  withMapCameraTrait,
+  withMapCameraValue,
   withPlacementCameraTrait,
   withPlacementCameraValue,
   withShowsThrough,
@@ -103,5 +105,33 @@ describe('the declarations the compiler makes of them', () => {
     const state = {blocks: {blocks: []}};
     expect(withCameraHandler(state, undefined)).toBe(state);
     expect(withCameraHandler(undefined, [])).toBeUndefined();
+  });
+});
+
+describe('the world’s main camera, on its main map', () => {
+  it('takes traits and values apart from the cameras the world adds', () => {
+    const follows = withMapCameraTrait(
+      MAP,
+      'main',
+      'Camera Follow#FollowsTrait',
+      true,
+    );
+    const aimed = withMapCameraValue(follows, 'main', {
+      setter: FOLLOW,
+      type: 'actor',
+      value: 'actors/pilot',
+    });
+    expect(aimed.mainCamera).toEqual({
+      traits: ['Camera Follow#FollowsTrait'],
+      values: [{setter: FOLLOW, type: 'actor', value: 'actors/pilot'}],
+    });
+    expect(aimed.cameras).toBeUndefined();
+    // …and nothing left takes the key away.
+    const plain = withMapCameraValue(
+      withMapCameraTrait(aimed, 'main', 'Camera Follow#FollowsTrait', false),
+      'main',
+      {setter: FOLLOW, type: 'actor', value: ''},
+    );
+    expect(plain.mainCamera).toBeUndefined();
   });
 });

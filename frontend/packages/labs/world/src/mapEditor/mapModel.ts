@@ -12,7 +12,11 @@
 
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 
-import type {CameraValue, PlacementCamera} from '../blockly/placementCameras';
+import type {
+  CameraValue,
+  MainCameraSettings,
+  PlacementCamera,
+} from '../blockly/placementCameras';
 import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
 
 /** The grid a placement snaps to, in world pixels. */
@@ -349,6 +353,8 @@ export interface MapDoc {
   // A WORLD'S MAIN MAP is the one exception, and for that same reason: it is
   // where the main Viewport is edited, so the world's cameras live on it, as
   // a Viewport's live on its placement (`blockly/placementCameras`).
+  /** The world's main camera's traits and values, on its main map only. */
+  mainCamera?: MainCameraSettings;
   /** The world's own cameras, on its main map only. */
   cameras?: PlacementCamera[];
   /**
@@ -430,6 +436,9 @@ export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
     // and a theme went back to the world's.
     ...(raw.modal === true ? {modal: true} : {}),
     ...(typeof raw.theme === 'string' && raw.theme ? {theme: raw.theme} : {}),
+    ...(raw.mainCamera && Array.isArray(raw.mainCamera.traits)
+      ? {mainCamera: raw.mainCamera}
+      : {}),
     ...(Array.isArray(raw.cameras) && raw.cameras.length
       ? {cameras: raw.cameras}
       : {}),
@@ -1015,15 +1024,32 @@ export function removeMapCamera(doc: MapDoc, id: string): MapDoc {
   return next;
 }
 
-/** The world with one of its cameras changed by `change`. */
+/**
+ * The world with one of its cameras changed by `change` — its MAIN camera
+ * too, whose traits and values are stored apart from the cameras it adds,
+ * since nothing declares it (`blockly/placementCameras`).
+ */
 const withMapCamera = (
   doc: MapDoc,
   id: string,
   change: (camera: PlacementCamera) => PlacementCamera,
-): MapDoc =>
-  withMapCameras(doc, cameras =>
+): MapDoc => {
+  if (id === MAIN_CAMERA_ID) {
+    const held = doc.mainCamera ?? {traits: [], values: []};
+    const {traits, values} = change({id, name: '', ...held});
+    const next: MapDoc = {...doc, mainCamera: {traits, values}};
+    if (!traits.length && !values.length) {
+      delete next.mainCamera;
+    }
+    return next;
+  }
+  return withMapCameras(doc, cameras =>
     cameras.map(camera => (camera.id === id ? change(camera) : camera)),
   );
+};
+
+/** The id the main camera goes by, as `look through camera` names it. */
+const MAIN_CAMERA_ID = 'main';
 
 export const renameMapCamera = (doc: MapDoc, id: string, name: string) =>
   withMapCamera(doc, id, camera => ({...camera, name}));

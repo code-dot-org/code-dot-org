@@ -123,3 +123,43 @@ describe('a world’s cameras made in the map editor', () => {
     expect(world.activeCamera().name).toBe('Overview');
   }, 60000);
 });
+
+/** Flappy with its MAIN camera told to follow the Bird, and started through. */
+const withMainFollowing = () => {
+  const source = WORLD_SCENARIOS.flappy.source;
+  const [worldId, file] = Object.entries(source.files).find(([, each]) =>
+    each.name.endsWith('.world'),
+  )!;
+  const parsed = JSON.parse(file.contents);
+  parsed.map = {
+    ...parsed.map,
+    actors: parsed.map?.actors ?? [],
+    mainCamera: {
+      traits: ['Camera Follow#FollowsTrait'],
+      values: [
+        {
+          setter: 'world_set_CameraFollow_ActorToFollowProperty',
+          type: 'actor',
+          value: 'actors/bird',
+        },
+      ],
+    },
+    startingCamera: 'main',
+  };
+  return projectFiles({
+    ...source,
+    files: {
+      ...source.files,
+      [worldId]: {...file, contents: JSON.stringify(parsed)},
+    },
+  });
+};
+
+describe('the world’s main camera, given traits in the map editor', () => {
+  it('is given them, and the world looks through it', async () => {
+    const {world, code} = await compileProject(withMainFollowing());
+    expect(code['worlds/main']).toMatch(/world\.camera\("main"\)/);
+    expect(code['worlds/main']).toContain('addTrait');
+    expect(world.activeCamera().id).toBe('main');
+  }, 60000);
+});

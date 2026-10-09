@@ -49,8 +49,13 @@ export interface CameraInspectorProps {
   onTrait: (trait: string, elected: boolean) => void;
   onValue: (property: CameraProperty, value: string) => void;
   onClose: () => void;
-  /** What is said of the main camera, which takes no traits here. */
+  /** What is said of the main camera. */
   mainNote?: string;
+  /**
+   * Whether the main camera takes traits here: the WORLD's does, stored on
+   * its main map; a Viewport's has its kind's, set where the kind is.
+   */
+  mainTakesTraits?: boolean;
   /** Whose view it starts: "The world", "This Viewport". */
   looker?: string;
   isReadOnly: boolean;
@@ -72,9 +77,10 @@ export const CameraInspector = ({
   onTrait,
   onValue,
   onClose,
-  mainNote = 'Every world has this camera. It shows the map from its top left. ' +
-    'To follow something, add a camera and give it a trait.',
+  mainNote = 'Every world has this camera. It shows the map from its top ' +
+    'left until a camera rule moves it.',
   looker = 'The world',
+  mainTakesTraits = false,
   isReadOnly,
 }: CameraInspectorProps) => {
   const main = id === MAIN_CAMERA;
@@ -238,7 +244,7 @@ export const CameraInspector = ({
         disabled={isReadOnly || starting}
         onChange={() => onStarting()}
       />
-      {main ? (
+      {main && (
         <Typography
           variant="body3"
           component="span"
@@ -246,7 +252,8 @@ export const CameraInspector = ({
         >
           {mainNote}
         </Typography>
-      ) : (
+      )}
+      {main && !mainTakesTraits ? null : (
         <>
           {choices.length === 0 ? (
             <Typography
@@ -289,7 +296,8 @@ export const CameraInspector = ({
           </Button>
         </>
       )}
-      {!main && elected.flatMap(choice => choice.properties).map(renderField)}
+      {(!main || mainTakesTraits) &&
+        elected.flatMap(choice => choice.properties).map(renderField)}
     </div>
   );
 };
