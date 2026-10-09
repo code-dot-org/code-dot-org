@@ -6,9 +6,9 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 // Instead we inline only the faces the sketch actually draws with, from
 // stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
 //
-// Our bundled fonts are split into unicode-range subsets. We resolve each
-// character the way the browser does: first family in the stack that declares
-// a face covering it is embedded.
+// For each piece of text we embed the first family in its font stack that has a
+// readable face at the weight and style in use. Later families are fallbacks for
+// glyphs the first one lacks.
 
 const DEFAULT_FONT_WEIGHT = 400;
 const WEIGHT_KEYWORDS = new Map([
@@ -20,23 +20,11 @@ const FONT_SRC_DESCRIPTOR_PATTERN = /src\s*:\s*[^;}]+/;
 // One entry of a `src` list: the url, plus the format() that usually follows.
 const FONT_SOURCE_PATTERN = /url\((["']?)([^"')]+)\1\)(\s*format\([^)]*\))?/;
 
-// The three forms a unicode-range takes: "U+4??", "U+0100-02BA", "U+0131".
-const UNICODE_RANGE_PATTERN = /^u\+([0-9a-f?]{1,6})(?:-([0-9a-f]{1,6}))?$/;
-
-// A code point is the number Unicode assigns a character: "A" is 65, "ש" is
-// 1488. A @font-face names the ones its file covers as ranges of those numbers.
-interface CodePointRange {
-  low: number;
-  high: number;
-}
-
-// A readable @font-face, with the parts we match on pulled out once. Absent
-// `ranges` means the rule declared no unicode-range, so it covers everything.
+// A readable @font-face, with the parts we match on pulled out once.
 interface FontFaceCandidate {
   rule: CSSFontFaceRule;
   style: string;
   weights: {low: number; high: number};
-  ranges?: CodePointRange[];
 }
 
 const fontFileCache = new Map<string, Promise<string>>();
@@ -66,34 +54,10 @@ const normalizeStyle = (declared: string): string => {
   return keyword === 'oblique' ? 'italic' : keyword;
 };
 
-const ownText = (element: Element): string =>
-  Array.from(element.childNodes)
-    .filter(node => node.nodeType === Node.TEXT_NODE)
-    .map(node => node.textContent)
-    .join('');
-
-const parseUnicodeRange = (declared: string): CodePointRange[] | undefined => {
-  const ranges: CodePointRange[] = [];
-  for (const token of declared.split(',')) {
-    const match = UNICODE_RANGE_PATTERN.exec(token.trim().toLowerCase());
-    if (!match) {
-      return undefined;
-    }
-    const [, start, end] = match;
-    ranges.push({
-      low: parseInt(start.replace(/\?/g, '0'), 16),
-      high: parseInt(end ?? start.replace(/\?/g, 'f'), 16),
-    });
-  }
-  return ranges.length > 0 ? ranges : undefined;
-};
-
-const coversCodePoint = (
-  candidate: FontFaceCandidate,
-  codePoint: number
-): boolean =>
-  !candidate.ranges ||
-  candidate.ranges.some(({low, high}) => codePoint >= low && codePoint <= high);
+const hasOwnText = (element: Element): boolean =>
+  Array.from(element.childNodes).some(
+    node => node.nodeType === Node.TEXT_NODE && node.textContent?.trim()
+  );
 
 // Readable @font-face rules, grouped by the family they declare. A cross-origin
 // stylesheet throws when read; its fonts stay unembedded.
@@ -114,7 +78,6 @@ const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
       if (!weights) {
         return;
       }
-      const declared = rule.style.getPropertyValue('unicode-range').trim();
       const family = unquote(
         rule.style.getPropertyValue('font-family')
       ).toLowerCase();
@@ -123,9 +86,6 @@ const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
         rule,
         style: normalizeStyle(rule.style.getPropertyValue('font-style')),
         weights,
-        // A rule we cannot parse is treated as covering everything: embedding
-        // a file we do not need beats dropping one we do.
-        ranges: declared ? parseUnicodeRange(declared) : undefined,
       });
       byFamily.set(family, candidates);
     });
@@ -140,8 +100,7 @@ const collectUsedRules = (
   const used = new Set<CSSFontFaceRule>();
   const elements = [root, ...Array.from(root.querySelectorAll('*'))];
   elements.forEach(element => {
-    const text = ownText(element);
-    if (!text.trim()) {
+    if (!hasOwnText(element)) {
       return;
     }
     const computed = window.getComputedStyle(element);
@@ -151,32 +110,18 @@ const collectUsedRules = (
       .split(',')
       .map(family => unquote(family).toLowerCase());
 
-    // The browser draws each character with the first family in the stack that
-    // can supply it, so later families in the stack are not worth embedding for it.
-    const faceFor = (codePoint: number): CSSFontFaceRule | undefined => {
-      for (const family of stack) {
-        const match = byFamily
-          .get(family)
-          ?.find(
-            candidate =>
-              candidate.style === style &&
-              weight >= candidate.weights.low &&
-              weight <= candidate.weights.high &&
-              coversCodePoint(candidate, codePoint)
-          );
-        if (match) {
-          return match.rule;
-        }
-      }
-      return undefined;
-    };
-
-    // Whitespace needs no glyph, and resolving it would pull in the Latin
-    // subset of a family even for a sketch written in another script.
-    for (const character of new Set(text.replace(/\s/g, ''))) {
-      const rule = faceFor(character.codePointAt(0) as number);
-      if (rule) {
-        used.add(rule);
+    for (const family of stack) {
+      // Every match, not just the first: a family split into unicode-range
+      // subsets has one face per subset, and we cannot tell which the text needs.
+      const matches = (byFamily.get(family) ?? []).filter(
+        candidate =>
+          candidate.style === style &&
+          weight >= candidate.weights.low &&
+          weight <= candidate.weights.high
+      );
+      if (matches.length > 0) {
+        matches.forEach(match => used.add(match.rule));
+        return;
       }
     }
   });
