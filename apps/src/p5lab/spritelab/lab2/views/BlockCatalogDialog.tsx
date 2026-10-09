@@ -57,7 +57,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
           </div>
         </div>
         <div className={moduleStyles.columns}>
-          <ul className={moduleStyles.list}>
+          <ul className={moduleStyles.list} aria-label="New blocks">
             {entries.map(entry => (
               <li key={entry.type}>
                 <button

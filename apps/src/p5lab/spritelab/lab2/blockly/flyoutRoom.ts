@@ -56,13 +56,13 @@ export function observeFlyoutWidth(
 }
 
 /**
- * Widen the flyout's margin, which sets how far its blocks sit from its
+ * Multiply the flyout's margin, which sets how far its blocks sit from its
  * left edge. The next show() lays the blocks out at the new margin.
  * Returns an undo.
  */
-export function installFlyoutMargin(
+export function widenFlyoutMargin(
   workspace: BlocklyCore.WorkspaceSvg | null | undefined,
-  px: number
+  factor: number
 ): () => void {
   // Typed read-only; Blockly reads it per layout, so an instance value
   // takes effect.
@@ -71,7 +71,7 @@ export function installFlyoutMargin(
     return () => {};
   }
   const base = flyout.MARGIN;
-  flyout.MARGIN = px;
+  flyout.MARGIN = base * factor;
   return () => {
     flyout.MARGIN = base;
   };

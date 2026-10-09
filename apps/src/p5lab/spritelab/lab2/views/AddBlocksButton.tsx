@@ -5,16 +5,16 @@ import React, {useEffect, useState} from 'react';
 
 import {
   installFlyoutFooterRoom,
-  installFlyoutMargin,
   observeFlyoutWidth,
+  widenFlyoutMargin,
 } from '../blockly/flyoutRoom';
 
 import moduleStyles from './block-catalog.module.scss';
 
 // Matches .toolboxFooter's height in the stylesheet.
 const FOOTER_PX = 56;
-// Twice Blockly's own, so the dots beside added blocks have room.
-const MARGIN_PX = 16;
+// Room in the flyout's margin for the dots beside added blocks.
+const MARGIN_FACTOR = 2;
 
 interface AddBlocksButtonProps {
   /** Bumps when the workspace is re-injected. */
@@ -43,7 +43,7 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
       return;
     }
     const workspace = getWorkspace();
-    const undoMargin = installFlyoutMargin(workspace, MARGIN_PX);
+    const undoMargin = widenFlyoutMargin(workspace, MARGIN_FACTOR);
     const undoRoom = installFlyoutFooterRoom(workspace, FOOTER_PX);
     const undoWidth = observeFlyoutWidth(workspace, setWidth);
     return () => {
@@ -66,7 +66,7 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
         startIcon={<FontAwesomeV6Icon iconName="plus" />}
         onClick={onClick}
       >
-        {remaining > 0 ? `Add new blocks (${remaining})` : 'New blocks'}
+        {remaining > 0 ? `Add new blocks (${remaining})` : 'Add new blocks'}
       </MuiButton>
     </div>
   );

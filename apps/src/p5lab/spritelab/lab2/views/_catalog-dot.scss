@@ -1,5 +1,4 @@
 // The mark on a block added from the new-block catalog, in the flyout and
-// in the catalog's list. A literal: this brand has no cyan token (its aqua
-// and teal families alias to purple), and purple does not read on the
-// flyout's dark grey. A lighter tint of the toolbox's light-blue blocks.
+// in the catalog's list. A literal: this brand aliases its aqua and teal
+// tokens to purple, which does not read on the flyout's dark grey.
 $catalog-dot: #5fdde6;
