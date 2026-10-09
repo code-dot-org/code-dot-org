@@ -54,6 +54,16 @@ export class JsonVideo extends HTMLElement {
   _setupDOM() {
     const styleElement = document.createElement('style');
     styleElement.textContent = styles;
+
+    const FA_BASE =
+      'https://dsco.code.org/assets/font-awesome-pro/1791385446/css/';
+    const faLinks = ['fontawesome.min.css', 'solid.min.css'].map(sheet => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = FA_BASE + sheet;
+      return link;
+    });
+
     const container = document.createElement('div');
     container.id = 'video-container';
 
@@ -63,17 +73,17 @@ export class JsonVideo extends HTMLElement {
             <div id="closed-caption-overlay" class="hidden"><span class="cc-text"></span></div>
             <div id="controls-bar">
                 <div class="controls-row">
-                    <button id="play-btn" class="control-btn" aria-label="Play"></button>
+                    <button id="play-btn" class="control-btn" aria-label="Play"><i class="fa-solid fa-play"></i></button>
                     <div class="volume-control">
-                        <button id="mute-btn" class="control-btn"></button>
+                        <button id="mute-btn" class="control-btn" aria-label="Mute"><i class="fa-solid fa-volume-high"></i></button>
                         <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1">
                     </div>
                     <div class="time-display">
                         <span id="cur-time">0:00</span> / <span id="tot-time">0:00</span>
                     </div>
                     <div style="flex-grow: 1;"></div>
-                    <button id="cc-btn" class="control-btn"></button>
-                    <button id="fullscreen-btn" class="control-btn"></button>
+                    <button id="cc-btn" class="control-btn disabled" aria-label="Closed Captions"><i class="fa-solid fa-closed-captioning"></i></button>
+                    <button id="fullscreen-btn" class="control-btn" aria-label="Fullscreen"><i class="fa-solid fa-expand"></i></button>
                 </div>
                 <div id="progress-container">
                     <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
@@ -82,6 +92,7 @@ export class JsonVideo extends HTMLElement {
         `;
 
     this.shadowRoot.appendChild(styleElement);
+    faLinks.forEach(link => this.shadowRoot.appendChild(link));
     this.shadowRoot.appendChild(container);
 
     this.renderer = this.shadowRoot.querySelector('#scene-renderer');
