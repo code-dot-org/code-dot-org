@@ -15,7 +15,9 @@ const WEIGHT_KEYWORDS = new Map([
   ['bold', 700],
 ]);
 
-const FONT_SOURCE_URL_PATTERN = /url\((["']?)([^"')]+)\1\)/;
+const FONT_SRC_DESCRIPTOR_PATTERN = /src\s*:\s*[^;}]+/;
+// One entry of a `src` list: the url, plus the format() that usually follows.
+const FONT_SOURCE_PATTERN = /url\((["']?)([^"')]+)\1\)(\s*format\([^)]*\))?/;
 
 // The three forms a unicode-range takes: "U+4??", "U+0100-02BA", "U+0131".
 const UNICODE_RANGE_PATTERN = /^u\+([0-9a-f?]{1,6})(?:-([0-9a-f]{1,6}))?$/;
@@ -191,17 +193,24 @@ const fetchFontAsDataUrl = (url: string): Promise<string> => {
   return pending;
 };
 
+// A face usually lists two files, woff2 and a woff fallback. We inline the
+// first and drop the rest: a second copy of the same face is wasted bytes, and
+// left alone its url would point at a server the exported image cannot reach.
 const inlineFontFaceRule = async (
   rule: CSSFontFaceRule
 ): Promise<string | undefined> => {
-  const match = FONT_SOURCE_URL_PATTERN.exec(rule.cssText);
-  if (!match) {
+  const descriptor = FONT_SRC_DESCRIPTOR_PATTERN.exec(rule.cssText);
+  const source = descriptor && FONT_SOURCE_PATTERN.exec(descriptor[0]);
+  if (!source) {
     return undefined;
   }
-  const [source, , path] = match;
+  const [, , path, format = ''] = source;
   const base = rule.parentStyleSheet?.href || document.baseURI;
   const dataUrl = await fetchFontAsDataUrl(new URL(path, base).href);
-  return rule.cssText.replace(source, `url(${dataUrl})`);
+  return rule.cssText.replace(
+    descriptor[0],
+    () => `src: url(${dataUrl})${format}`
+  );
 };
 
 // Resolves to CSS declaring the sketch's web font faces with their files

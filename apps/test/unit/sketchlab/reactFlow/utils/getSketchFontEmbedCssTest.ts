@@ -9,11 +9,13 @@ const fontFace = (
     weight = '400',
     style = 'normal',
     unicodeRange,
+    woffFallback,
   }: {
     family?: string;
     weight?: string;
     style?: string;
     unicodeRange?: string;
+    woffFallback?: string;
   } = {}
 ) => `
   @font-face {
@@ -21,7 +23,9 @@ const fontFace = (
     font-style: ${style};
     font-weight: ${weight};
     ${unicodeRange ? `unicode-range: ${unicodeRange};` : ''}
-    src: url('/fonts/${file}.woff2') format('woff2');
+    src: url('/fonts/${file}.woff2') format('woff2')${
+  woffFallback ? `, url('/fonts/${woffFallback}.woff') format('woff')` : ''
+};
   }
 `;
 
@@ -34,6 +38,7 @@ const addStyleSheet = (css: string) => {
   const style = document.createElement('style');
   style.textContent = css;
   document.head.appendChild(style);
+  return style;
 };
 
 const addTextElement = (
@@ -58,11 +63,11 @@ describe('getSketchFontEmbedCss', () => {
   beforeAll(() => {
     // jsdom parses @font-face rules but does not expose their constructor.
     if (!('CSSFontFaceRule' in window)) {
-      addStyleSheet(fontFace('constructor-probe'));
-      const sheet = document.head.querySelector('style')?.sheet;
+      const probe = addStyleSheet(fontFace('constructor-probe'));
       Object.assign(window, {
-        CSSFontFaceRule: sheet?.cssRules[0].constructor,
+        CSSFontFaceRule: probe.sheet?.cssRules[0].constructor,
       });
+      probe.remove();
     }
   });
 
@@ -79,6 +84,12 @@ describe('getSketchFontEmbedCss', () => {
       })
     );
     (globalThis as unknown as {fetch?: jest.Mock}).fetch = fetchMock;
+  });
+
+  // jest.config.js clears mocks between tests but does not restore them, and
+  // a surviving document.styleSheets spy would hide every later stylesheet.
+  afterEach(() => {
+    jest.restoreAllMocks();
   });
 
   it('inlines the font file of a face the sketch draws with', async () => {
@@ -224,5 +235,24 @@ describe('getSketchFontEmbedCss', () => {
       .mockReturnValue([crossOrigin] as unknown as StyleSheetList);
 
     await expect(getSketchFontEmbedCss(document.body)).resolves.toBe('');
+  });
+
+  // Deliberately after the spy above: it would see no stylesheets at all if
+  // that spy outlived its test.
+  it('inlines one file of a face that lists a woff fallback', async () => {
+    addStyleSheet(
+      fontFace('two-source', {woffFallback: 'two-source-fallback'})
+    );
+    addTextElement(MAIN_FONT_STACK);
+
+    const css = await getSketchFontEmbedCss(document.body);
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(
+      'http://localhost-studio.code.org/fonts/two-source.woff2'
+    );
+    // The surviving url would point at a server the exported image cannot reach.
+    expect(css).not.toContain('two-source-fallback.woff');
+    expect(css).toContain("format('woff2')");
   });
 });
