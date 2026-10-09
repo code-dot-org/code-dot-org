@@ -97,6 +97,15 @@
   }
 }
 
+// FormFieldWrapper aligns its children to flex-start, so the input needs its own width.
+.fullWidthField {
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
+}
+
 .optionText {
   flex: 1 0 0;
   min-width: 0;

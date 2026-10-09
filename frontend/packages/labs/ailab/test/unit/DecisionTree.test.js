@@ -9,6 +9,7 @@ import I18n from '../../src/i18n';
 import {setTestData} from '../../src/redux';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
+import {leafColorStyle} from '../../src/UIComponents/leafColors';
 
 import {levelStore} from './levelStore';
 
@@ -89,6 +90,26 @@ describe('DecisionTree', () => {
     expect(kinds).toContain('question');
     expect(kinds).toContain('answer');
     expect(kinds).not.toContain('neither');
+  });
+
+  it('dots each answer in its leaf color, left to right', () => {
+    const nodes = [...document.getElementsByClassName(moduleStyles.node)];
+    const answers = nodes.filter(node =>
+      node.classList.contains(moduleStyles.answer),
+    );
+    const dotColor = node =>
+      node
+        .getElementsByClassName(moduleStyles.answerDot)[0]
+        ?.style.getPropertyValue('--leaf-color');
+
+    expect(answers.map(dotColor)).toEqual(
+      answers.map((_, index) => leafColorStyle(index)['--leaf-color']),
+    );
+    expect(
+      document.querySelectorAll(
+        `.${moduleStyles.question} .${moduleStyles.answerDot}`,
+      ),
+    ).toHaveLength(0);
   });
 
   it('marks no path before a prediction', () => {

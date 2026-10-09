@@ -14,6 +14,22 @@ import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
+
+// The real alert reads teacher-section and progress state this test has no store for.
+jest.mock('@cdo/apps/lab2/views/alerts/teacherViewingStudentProject', () => ({
+  __esModule: true,
+  default: ({
+    getAlertText,
+    type,
+  }: {
+    getAlertText?: (studentName: string | undefined) => React.ReactElement;
+    type?: string;
+  }) => (
+    <div role="note" data-type={type}>
+      {getAlertText?.('Aisha Khan')}
+    </div>
+  ),
+}));
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
 
 const mockDispatch = jest.fn();
@@ -118,6 +134,7 @@ function renderWorkspace({
   // per-question results list - only tests for the hidden-questions path
   // opt out.
   showQuestionsAfterSubmit = true,
+  viewAsUserId,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -128,6 +145,7 @@ function renderWorkspace({
   showCorrectness?: boolean;
   customIntroText?: string;
   showQuestionsAfterSubmit?: boolean;
+  viewAsUserId?: number;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -143,6 +161,7 @@ function renderWorkspace({
       showCorrectness={showCorrectness}
       customIntroText={customIntroText}
       showQuestionsAfterSubmit={showQuestionsAfterSubmit}
+      viewAsUserId={viewAsUserId}
     />
   );
 }
@@ -987,5 +1006,136 @@ describe('QuizAttemptWorkspace', () => {
     expect(
       screen.queryByRole('button', {name: /Next|Submit|Finish/})
     ).not.toBeInTheDocument();
+  });
+
+  it('shows no viewing-student alert to a student taking their own quiz', () => {
+    renderWorkspace({hookState: {attempt: null}, showIntroScreen: true});
+    expect(screen.queryByRole('note')).not.toBeInTheDocument();
+  });
+
+  describe('when a teacher is viewing a student', () => {
+    const SUBMITTED = {
+      ...ATTEMPT,
+      submittedAt: '2026-01-01T00:00:00Z',
+      score: 1,
+      maxScore: 1,
+      canRetake: true,
+      questionResults: [
+        {
+          quizQuestionId: 1,
+          selectedChoiceId: 'b',
+          correct: true,
+          explanation: 'Because 3 + 5 = 8.',
+          correctChoiceId: 'b',
+        },
+      ],
+    };
+
+    it("says the student's quiz is loading while the attempt loads", () => {
+      renderWorkspace({
+        hookState: {attempt: undefined, isLoading: true},
+        viewAsUserId: 99,
+      });
+
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent("Loading Aisha Khan's quiz...");
+      expect(alert).toHaveAttribute('data-type', 'info');
+    });
+
+    it('still shows the read-only alert when the attempt failed to load', () => {
+      renderWorkspace({
+        hookState: {attempt: undefined, isLoading: false, error: 'Oops'},
+        viewAsUserId: 99,
+      });
+
+      expect(screen.getByRole('note')).toHaveTextContent(
+        "You are viewing Aisha Khan's work in read only mode."
+      );
+    });
+
+    it("fetches the student's attempt rather than the teacher's own", () => {
+      renderWorkspace({viewAsUserId: 99});
+      expect(mockUseQuizAttempt).toHaveBeenCalledWith(
+        expect.objectContaining({userId: 99})
+      );
+    });
+
+    it('never starts an attempt, even for a quiz with no intro screen', () => {
+      const beginAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: null, beginAttempt},
+        showIntroScreen: false,
+        viewAsUserId: 99,
+      });
+
+      expect(beginAttempt).not.toHaveBeenCalled();
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent("Aisha Khan hasn't started this level.");
+      expect(alert).toHaveAttribute('data-type', 'info');
+    });
+
+    it("shows every question, unanswered and read-only, when the student hasn't started", () => {
+      renderWorkspace({
+        hookState: {attempt: null},
+        quizQuestions: [
+          question({id: 1, questionTitle: 'What is the value of x?'}),
+          question({id: 2, questionTitle: 'What is the value of y?', page: 2}),
+        ],
+        viewAsUserId: 99,
+      });
+
+      expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
+      expect(screen.getByText('What is the value of y?')).toBeInTheDocument();
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
+      ).not.toBeInTheDocument();
+    });
+
+    it("shows the student's saved answers, ungraded and read-only, while in progress", () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {quizQuestionId: 1, selectedChoiceId: 'b'},
+            ],
+          },
+        },
+        quizQuestions: [question({id: 1})],
+        viewAsUserId: 99,
+      });
+
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent(
+        'Aisha Khan is still working on this assessment.'
+      );
+      expect(alert).toHaveAttribute('data-type', 'warning');
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish/})
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows score, question results, and the explanation even when the quiz hides them, without Try again', () => {
+      renderWorkspace({
+        hookState: {attempt: SUBMITTED},
+        quizQuestions: [question({id: 1})],
+        showCorrectness: false,
+        showQuestionsAfterSubmit: false,
+        viewAsUserId: 99,
+      });
+
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent(
+        "You are viewing Aisha Khan's work in read only mode."
+      );
+      expect(alert).toHaveAttribute('data-type', 'info');
+      expect(screen.getByText('100%')).toBeInTheDocument();
+      expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Try again'})
+      ).not.toBeInTheDocument();
+    });
   });
 });

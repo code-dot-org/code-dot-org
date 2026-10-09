@@ -4,8 +4,6 @@ require 'cdo/web_purify'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
-require 'cdo/image_caption'
-require 'cdo/throttle'
 require 'cdo/image_moderation'
 require 'cdo/safe_http'
 require 'net/http'
@@ -1209,58 +1207,6 @@ class FilesApi < Sinatra::Base
     status 400
     allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
-  end
-
-  #
-  # GET /v3/images/caption/enabled
-  #
-  # The page asks before it posts, so with captioning off a student's work
-  # never leaves the browser.
-  #
-  get %r{/v3/images/caption/enabled$} do
-    content_type :json
-    dont_cache
-    {enabled: ImageCaption.enabled?}.to_json
-  end
-
-  #
-  # POST /v3/images/caption
-  #
-  # Caption an image with Azure AI Vision. A caption the service cannot produce
-  # comes back as null, and theater reads its own description instead.
-  #
-  # Caption requests allowed per minute before a client is throttled. Schools put
-  # many students behind one address, so the per-IP number is far larger.
-  CAPTION_LIMIT_PER_MIN_USER = 20
-  CAPTION_LIMIT_PER_MIN_IP = 1000
-
-  post %r{/v3/images/caption$} do
-    content_type :json
-    dont_cache
-
-    # Anyone can reach this route and every miss costs an Azure call. Signed-in
-    # students count per user; everyone else per IP, which cannot be discarded
-    # the way a cookie can.
-    throttle_id = current_user_id
-    limit = throttle_id ? CAPTION_LIMIT_PER_MIN_USER : CAPTION_LIMIT_PER_MIN_IP
-    if Cdo::Throttle.throttle("image_caption/#{throttle_id || request.ip}", limit, 60)
-      status 429
-      return {error: 'Too many caption requests.'}.to_json
-    end
-
-    # nginx accepts bodies up to 4G, so reading it all would let one request fill
-    # a worker. One byte past our ceiling is enough to know it is too big.
-    raw = request.body.read(ImageCaption::MAX_IMAGE_SIZE + 1)
-    if raw.nil? || raw.empty?
-      status 400
-      return {error: 'No image data provided.'}.to_json
-    end
-    if raw.bytesize > ImageCaption::MAX_IMAGE_SIZE
-      status 413
-      return {error: 'Image too large to caption.'}.to_json
-    end
-
-    {caption: ImageCaption.caption_image(raw)}.to_json
   end
 
   def fetch_image_for_moderation(location, redirect_limit = 5)

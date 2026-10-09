@@ -28,6 +28,8 @@ const ResultsBar = () => {
           label={currentResult.label}
           features={currentResult.features}
           size="m"
+          singleLine
+          className={styles.sentence}
         />
         <div className={styles.buttons}>
           <Button
