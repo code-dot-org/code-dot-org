@@ -386,7 +386,7 @@ describe('CustomDialog Component', () => {
     expect(document.activeElement).toHaveAttribute('tabindex', '-1');
   });
 
-  it('should pull focus back into the dialog when it moves outside', async () => {
+  it('should let focus move to a control outside the dialog', async () => {
     render(
       <>
         <button type="button">Outside</button>
@@ -401,9 +401,9 @@ describe('CustomDialog Component', () => {
     );
 
     screen.getByRole('button', {name: 'Outside'}).focus();
+    await settle();
 
-    expect(screen.getByRole('button', {name: 'Outside'})).not.toHaveFocus();
-    expect(document.activeElement).toBe(getFocusContainer(getPanel()));
+    expect(screen.getByRole('button', {name: 'Outside'})).toHaveFocus();
   });
 
   it('should wrap Tab and Shift+Tab inside the panel', async () => {
@@ -485,7 +485,8 @@ describe('CustomDialog Component', () => {
       },
     );
 
-    it('should trap focus in the dialog opened last', async () => {
+    it('should focus the dialog opened last and wrap Tab inside it', async () => {
+      const user = userEvent.setup();
       render(
         <>
           <CustomDialog aria-label="First">
@@ -502,11 +503,11 @@ describe('CustomDialog Component', () => {
         expect(screen.getByRole('button', {name: 'In second'})).toHaveFocus(),
       );
 
-      screen.getByRole('button', {name: 'In first'}).focus();
+      await user.tab();
+      expect(screen.getByRole('button', {name: 'In second'})).toHaveFocus();
 
-      expect(document.activeElement).toBe(
-        getFocusContainer(screen.getByRole('dialog', {name: 'Second'})),
-      );
+      await user.tab({shift: true});
+      expect(screen.getByRole('button', {name: 'In second'})).toHaveFocus();
     });
 
     it('should call both onClose handlers on Escape', () => {

@@ -125,6 +125,8 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
       container={getDetachedContainer}
       disableScrollLock
       disableEscapeKeyDown
+      // Overlays MUI does not track (BaseDialog, persistent drawers, Bootstrap modals) open over the dialog and must keep focus; Tab still wraps.
+      disableEnforceFocus
       transitionDuration={0}
       className={moduleStyles.customDialogOverlay}
       sx={zIndex === undefined ? undefined : {'--cdo-dialog-z-index': zIndex}}
