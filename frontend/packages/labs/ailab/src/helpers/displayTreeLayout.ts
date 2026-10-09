@@ -93,7 +93,7 @@ function extentOver(width: number, children: SubtreeExtent[]): SubtreeExtent {
 
 export function layoutDisplayTree(
   root: DisplayTreeNode,
-  nodeWidth: (id: string) => number = () => TREE_NODE_MAX_WIDTH,
+  nodeWidth: (node: DisplayTreeNode) => number = () => TREE_NODE_MAX_WIDTH,
   rowGap = TREE_ROW_GAP,
 ): DisplayTreeLayout {
   const extents = new Map<string, SubtreeExtent>();
@@ -105,7 +105,7 @@ export function layoutDisplayTree(
             measure(branch.child, getChildNodeId(id, index)),
           )
         : [];
-    const extent = extentOver(nodeWidth(id), children);
+    const extent = extentOver(nodeWidth(node), children);
     extents.set(id, extent);
     return extent;
   };

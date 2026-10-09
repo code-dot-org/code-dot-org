@@ -1,16 +1,14 @@
 import {Button, Typography} from '@mui/material';
-import {useEffect, useRef} from 'react';
+import {useEffect, useMemo, useRef} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {formatAccuracy} from '../helpers/accuracy';
+import {nodeWidthMeasurer} from '../helpers/displayTreeNodeContent';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {replayTraining, setCurrentPanel} from '../redux';
-import {
-  getDisplayTree,
-  getDisplayTreeNodeWidth,
-} from '../selectors/visualizationSelectors';
+import {getDisplayTree} from '../selectors/visualizationSelectors';
 
 import TreeMiniMap from './TreeMiniMap';
 
@@ -22,7 +20,8 @@ const TrainingResultCard = () => {
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = useAppSelector(state => state.historicResults[0]);
   const tree = useAppSelector(getDisplayTree);
-  const nodeWidth = useAppSelector(getDisplayTreeNodeWidth);
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const nodeWidth = useMemo(() => nodeWidthMeasurer(datasetId), [datasetId]);
   const isReplaying = useAppSelector(state => state.isTrainingReplay);
   const testButton = useRef<HTMLButtonElement>(null);
   const isVisible = hasResult && (!isModalOpen || isReplaying);

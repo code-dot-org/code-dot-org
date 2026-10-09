@@ -23,7 +23,7 @@ const VIEW_MARGIN = 8;
 
 interface TreeMiniMapProps {
   tree: DisplayTreeNode;
-  nodeWidth: (id: string) => number;
+  nodeWidth: (node: DisplayTreeNode) => number;
   onReplay: () => void;
 }
 

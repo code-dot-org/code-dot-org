@@ -34,6 +34,7 @@ import {
   ANSWER_DOT_SIZE,
   displayNodeLabel,
   NODE_PADDING_INLINE,
+  nodeWidthMeasurer,
   PATH_NODE_BORDER,
 } from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
@@ -41,7 +42,6 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import {setPredictionPlaying} from '../redux';
 import {
   getDisplayTree,
-  getDisplayTreeNodeWidth,
   getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
@@ -105,8 +105,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const isStepping = useAppSelector(
     state => state.predictionStep !== undefined,
   );
-  const nodeWidth = useAppSelector(getDisplayTreeNodeWidth);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const nodeWidth = useMemo(() => nodeWidthMeasurer(datasetId), [datasetId]);
   const layout = useMemo(
     () => (tree ? layoutDisplayTree(tree, nodeWidth) : undefined),
     [tree, nodeWidth],
