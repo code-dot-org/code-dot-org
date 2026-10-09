@@ -2,7 +2,7 @@
 
 $path-ring-width: 3px;
 $path-color: var(--border-selected-primary);
-$path-hover-background: var(--background-brand-light);
+$path-node-background: var(--background-brand-light);
 $path-node-text-color: var(--text-selected-primary-inverse);
 $off-path-color: var(--background-neutral-septenary);
 $hover-background: color-mix(
@@ -186,16 +186,13 @@ $overlay-float-min-width: 600px;
 .pathNode {
   border-color: $path-color;
   border-width: var(--tree-path-node-border);
+  background-color: $path-node-background;
   color: $path-node-text-color;
 }
 
 .nodeSlot:hover .node {
   background-color: $hover-background;
   box-shadow: var(--shadow-md);
-}
-
-.nodeSlot:hover .pathNode {
-  background-color: $path-hover-background;
 }
 
 .nodeSlot:active .node {
@@ -206,6 +203,11 @@ $overlay-float-min-width: 600px;
 .nodeSlot:focus-visible .node {
   background-color: var(--background-neutral-primary);
   box-shadow: none;
+}
+
+.nodeSlot:hover .pathNode,
+.nodeSlot:focus-visible .pathNode {
+  background-color: $path-node-background;
 }
 
 .answerDot {
