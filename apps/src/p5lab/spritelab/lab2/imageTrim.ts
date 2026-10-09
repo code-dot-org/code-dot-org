@@ -301,8 +301,8 @@ export function filterAnimationsToNames(
  *
  * thumbnails: false leaves the thumbnail cache alone. The cache is keyed
  * by name and shows this project's images in the editor; a classmate's
- * list (an external scene) names its images the same way, "Sprite 1",
- * and would overwrite them.
+ * list (an external scene) can use the same names and would overwrite
+ * them.
  */
 export async function trimAnimationListImages(
   list: RuntimeAnimationList,
