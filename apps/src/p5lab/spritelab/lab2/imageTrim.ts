@@ -316,14 +316,16 @@ export async function trimAnimationListImages(
   // Drop cached trims for names absent from the list: a deleted image's
   // thumbnail must not resurface when a new image takes the same name.
   const currentNames = keepNames || animationNames(list);
-  for (const name of thumbnails ? thumbByName.keys() : []) {
-    if (!currentNames.has(name)) {
-      thumbByName.delete(name);
-      newTrims = true;
+  if (thumbnails) {
+    for (const name of thumbByName.keys()) {
+      if (!currentNames.has(name)) {
+        thumbByName.delete(name);
+        newTrims = true;
+      }
     }
   }
   const noteThumb = (name: string | undefined, thumb: string) => {
-    if (thumbnails && name && thumbByName.get(name) !== thumb) {
+    if (name && thumbByName.get(name) !== thumb) {
       thumbByName.set(name, thumb);
       newTrims = true;
     }
