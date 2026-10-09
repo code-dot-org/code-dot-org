@@ -132,7 +132,7 @@ Make sure everything works locally using the instructions above.
 cd docker/ci
 ```
 
-Sign in to Docker Hub through the command line; when prompted, enter the password found under "access token for docker cli authentication" in the lastpass docker hub notes field
+Sign in to Docker Hub through the command line; when prompted, enter the docker.com "Admin API Token" from 1password
 
 ```
 docker login -u codedotorg
