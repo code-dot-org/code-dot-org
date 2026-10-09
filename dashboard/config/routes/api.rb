@@ -3,7 +3,7 @@ Dashboard::Application.routes.draw do
     draw 'api/v1'
 
     # Avoid "statsig" in the URL to reduce the risk of school content filtering.
-    scope as: :statsig, defaults: {format: :json} do
+    scope as: :statsig, controller: :statsig, defaults: {format: :json} do
       get :stable_id
     end
   end
