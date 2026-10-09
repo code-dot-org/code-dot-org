@@ -4,7 +4,7 @@
 // is left to pick up. Several can be in flight. Particles are plain
 // records, not sprites.
 
-import {PLATFORM_GRAVITY} from './platformPhysics';
+import {PhysicsBox, PLATFORM_GRAVITY} from './platformPhysics';
 import {Random, weatherGravity} from './weather';
 
 export const BURST_LOOKS = ['sparks', 'confetti', 'dust'] as const;
@@ -144,19 +144,11 @@ const LOOKS: Record<BurstLook, Look> = {
 const between = (random: Random, [min, max]: [number, number]) =>
   min + random() * (max - min);
 
-/** A sprite as the origin needs it: centre and drawn size. */
-export interface BurstSprite {
-  position: {x: number; y: number};
-  width: number;
-  height: number;
-  scale: number;
-}
-
 /** Where a look's burst starts on a sprite: its centre, or its feet, the
     edge the scene's gravity presses it against. */
 export function burstOrigin(
   look: BurstLook,
-  sprite: BurstSprite,
+  sprite: PhysicsBox,
   gravity: number
 ): {x: number; y: number} {
   const {x, y} = sprite.position;
@@ -306,7 +298,6 @@ export function drawBursts(
         p5.fill(r, g, b);
         p5.rect(0, 0, p.size, p.size * 0.6);
       } else {
-        // A spark shrinks as it fades; a puff grows over its life.
         const size =
           shape === 'spark'
             ? p.size * (0.4 + 0.6 * alpha)
