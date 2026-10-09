@@ -4,14 +4,13 @@
 // whose words show only when its slot is filled. A required slot must be
 // filled before the sentence can generate.
 
+import {EMPTY_WORD_ID} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   BodyPlan,
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import manifestJson from '@cdo/static/spritelab_lab2/exploreSentences.json';
-
-import {EMPTY_WORD_ID} from '../../ai/images/imageCache';
 
 export interface Word {
   id: string;

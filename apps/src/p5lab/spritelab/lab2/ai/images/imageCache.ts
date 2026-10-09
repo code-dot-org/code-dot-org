@@ -220,14 +220,14 @@ export async function findCachedImage(
   const versionUrl = `${baseUrl}${version}`;
   const manifest = await loadManifest(versionUrl);
   const entry = manifest?.sentences[sentenceId];
+  if (!manifest || !entry) {
+    return undefined;
+  }
   const path = sentencePath(sentenceId, wordIds, style);
   // The manifest keys fillings and blocked variants within their sentence:
   // the path minus its head.
   const relative = path.slice(sentenceId.length + 1);
-  const variantCount = entry?.variants[relative] ?? 0;
-  if (!manifest || !entry) {
-    return undefined;
-  }
+  const variantCount = entry.variants[relative] ?? 0;
   const blocked = new Set(manifest.blockList[sentenceId] || []);
   let candidates = [...Array(variantCount).keys()].filter(
     v => !blocked.has(`${relative}/${variantName(v)}`)

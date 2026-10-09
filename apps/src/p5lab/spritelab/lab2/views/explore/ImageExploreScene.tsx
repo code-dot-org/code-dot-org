@@ -219,8 +219,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
-      // What the lab would send; a cached picture was made from the same
-      // words by the same prompt builders, so these stand for its too.
+      // What the lab would send. A cached picture was made from the same
+      // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
         prompt,
         options,

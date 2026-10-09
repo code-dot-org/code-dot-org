@@ -23,7 +23,8 @@ export interface LevelMode {
   imageRole?: string;
   /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
-  /** Where a combo's image comes from (imageCache.ts); live when unset. */
+  /** Where the level's pictures come from (imageCache.ts); the model when
+      unset. */
   imageSource?: ImageSource;
   /** A world level that places one thing: no Erase, the image goes on an
       empty cell, and choosing another cell moves it. */
@@ -82,7 +83,7 @@ export function adlibSetForMode(
   return mode ? mode.adlibs ?? ADLIBS[mode.kind] : undefined;
 }
 
-/** The source a mode's combos draw from: live generation unless named. */
+/** The source a mode's pictures come from: the model unless named. */
 export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
   return mode?.imageSource ?? 'live';
 }
