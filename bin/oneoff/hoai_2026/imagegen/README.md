@@ -52,7 +52,7 @@ upright when absent), as the lab's do.
 Those modules must stay free of `@cdo/...` imports and browser APIs, or
 `dump_prompts.ts` stops working.
 
-## Transparency
+## Providers and transparency
 
 The lab generates with Gemini, which cannot emit an alpha channel, so its
 prompts ask sprites and blocks for a flat key color that the lab erases
@@ -64,15 +64,28 @@ line from `dump_prompts.ts` carries both versions of each prompt
 (`prompt` and `transparentPrompt`). Backgrounds fill their frame and are
 always opaque.
 
-`--no-transparent` sends the lab's key-color prompts instead. A job made
-with the other setting, per its metadata file, is regenerated rather than
-skipped.
+`--no-transparent` sends the lab's key-color prompts instead, and
+`--provider gemini` forces that, saying so, since Gemini cannot return an
+alpha channel. A job made with the other setting, per its metadata file, is
+regenerated rather than skipped, so switching provider regenerates rather
+than mixing the two.
 
 ## Usage
 
-The `generate_images` script calls the OpenAI image API using the
-`openai_student_learning_api_key` config key. The model defaults to the
-`MODEL` constant in `constants.rb`; override it with `--model`.
+`generate_images` asks one of two image services, chosen with
+`--provider`:
+
+| | `openai` (default) | `gemini` |
+|---|---|---|
+| model | `gpt-image-1` | `gemini-3.1-flash-image`, from `AI_CHAT_MODEL_IDS` in `lib/cdo/shared_constants.rb`, so it tracks the lab's |
+| config key | `openai_student_learning_api_key` | `google_gemini_ai_tutor_api_key` |
+| transparent background | yes, asked for directly | no; gets the key-color prompts instead |
+| seed | not accepted, so none is recorded | recorded, and a set offsets it per frame as the lab does |
+| temperature | not accepted | `--temperature`, default 1.0, as the explore layout sends |
+
+Gemini is what the lab itself generates with, through the AI Gateway, so it
+is the closer match to a live image; OpenAI's transparency saves the
+background removal. Override either default with `--model` and `--key`.
 
 To see every sentence and the words each slot offers:
 
@@ -163,9 +176,9 @@ contain dots; an empty optional slot is `none`:
 For example, `adlib/sprite-simple/pixel/brave.robot.00.png` and
 `explore/character/pixel/animated/none.blob.cape.00.base.png`. The `.json` file
 records the prompts sent, the model, whether the images are transparent,
-and the frame files. The OpenAI image API takes no
-seed, so none is recorded, and a cached image cannot be replayed by seed as
-a live one can.
+and the frame files. A Gemini image also records its
+seed, per job and per frame, so it can be asked for again; the OpenAI image
+API takes no seed, so an OpenAI image records none.
 
 ### Uploading to S3
 
