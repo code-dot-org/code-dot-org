@@ -68,12 +68,6 @@ module Cdo
       result
     end
 
-    # The full flow the `db:provision_sql_users` rake task runs: read the current
-    # db_* connection settings, connect to the cluster writer as the admin user,
-    # and provision the writer and reader users. Returns the provision! result.
-    #
-    # This is the only method that touches CDO and the mysql2 driver; the methods
-    # above stay database- and configuration-free so they can be unit tested.
     def self.provision_from_config!
       require 'mysql2'
 
