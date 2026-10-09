@@ -223,6 +223,48 @@ describe('getSketchFontEmbedCss', () => {
     );
   });
 
+  it('embeds only the first family in the stack that covers the text', async () => {
+    addStyleSheet(
+      fontFace('first-geist', {unicodeRange: LATIN_RANGE}) +
+        fontFace('later-noto', {
+          family: 'Noto Sans',
+          unicodeRange: LATIN_RANGE,
+        })
+    );
+    addTextElement(MAIN_FONT_STACK, '', 'latin label');
+
+    await getSketchFontEmbedCss(document.body);
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(
+      'http://localhost-studio.code.org/fonts/first-geist.woff2'
+    );
+  });
+
+  it('embeds one face per script when the text mixes them', async () => {
+    addStyleSheet(
+      fontFace('mixed-geist', {unicodeRange: LATIN_RANGE}) +
+        fontFace('mixed-noto', {
+          family: 'Noto Sans',
+          unicodeRange: LATIN_RANGE,
+        }) +
+        fontFace('mixed-hebrew', {
+          family: 'Noto Sans Hebrew',
+          unicodeRange: HEBREW_RANGE,
+        })
+    );
+    addTextElement(MAIN_FONT_STACK, '', 'shalom שלום');
+
+    await getSketchFontEmbedCss(document.body);
+
+    // Geist for the Latin, Noto Sans Hebrew for the Hebrew, and nothing from
+    // Noto Sans: Geist already covers every Latin character.
+    expect(fetchMock.mock.calls.map(([url]: [string]) => url).sort()).toEqual([
+      'http://localhost-studio.code.org/fonts/mixed-geist.woff2',
+      'http://localhost-studio.code.org/fonts/mixed-hebrew.woff2',
+    ]);
+  });
+
   it('ignores stylesheets it is not allowed to read', async () => {
     addTextElement(MAIN_FONT_STACK);
     const crossOrigin = {

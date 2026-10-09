@@ -4,10 +4,9 @@
 // Instead we inline only the faces the sketch actually draws with, from
 // stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
 //
-// Our bundled fonts are split into unicode-range subsets -- Geist ships 90
-// faces and a CJK locale's Noto font ships about 100 -- so matching on family,
-// weight and style alone would still drag in megabytes. We also require the
-// face's unicode-range to cover a character the sketch actually draws.
+// Our bundled fonts are split into unicode-range subsets. We resolve each
+// character the way the browser does: first family in the stack that declares
+// a face covering it is embedded.
 
 const DEFAULT_FONT_WEIGHT = 400;
 const WEIGHT_KEYWORDS = new Map([
@@ -29,11 +28,12 @@ interface CodePointRange {
   high: number;
 }
 
-interface UsedFontFace {
-  family: string;
-  weight: number;
+// A readable @font-face, with the parts we match on pulled out once. Absent
+// `ranges` means the rule declared no unicode-range, so it covers everything.
+interface FontFaceCandidate {
+  rule: CSSFontFaceRule;
   style: string;
-  codePoints: Set<number>;
+  ranges?: CodePointRange[];
 }
 
 const fontFileCache = new Map<string, Promise<string>>();
@@ -86,27 +86,75 @@ const parseUnicodeRange = (declared: string): CodePointRange[] | undefined => {
   return ranges.length > 0 ? ranges : undefined;
 };
 
-// A face with no unicode-range covers everything; so does one we cannot parse,
-// since embedding a file we do not need beats dropping one we do.
-const ruleCoversAnyCodePoint = (
-  rule: CSSFontFaceRule,
-  codePoints: Set<number>
-): boolean => {
-  const declared = rule.style.getPropertyValue('unicode-range').trim();
-  if (!declared) {
-    return true;
-  }
-  const ranges = parseUnicodeRange(declared);
-  if (!ranges) {
-    return true;
-  }
-  return Array.from(codePoints).some(codePoint =>
-    ranges.some(({low, high}) => codePoint >= low && codePoint <= high)
-  );
+const coversCodePoint = (
+  candidate: FontFaceCandidate,
+  codePoint: number
+): boolean =>
+  !candidate.ranges ||
+  candidate.ranges.some(({low, high}) => codePoint >= low && codePoint <= high);
+
+// Readable @font-face rules, grouped by the family they declare. A cross-origin
+// stylesheet throws when read; its fonts stay unembedded.
+const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
+  const byFamily = new Map<string, FontFaceCandidate[]>();
+  Array.from(document.styleSheets).forEach(sheet => {
+    let sheetRules: CSSRuleList | null = null;
+    try {
+      sheetRules = sheet.cssRules;
+    } catch (error) {
+      return;
+    }
+    Array.from(sheetRules || []).forEach(rule => {
+      if (!(rule instanceof CSSFontFaceRule)) {
+        return;
+      }
+      const declared = rule.style.getPropertyValue('unicode-range').trim();
+      const family = unquote(
+        rule.style.getPropertyValue('font-family')
+      ).toLowerCase();
+      const candidate: FontFaceCandidate = {
+        rule,
+        style: normalizeStyle(rule.style.getPropertyValue('font-style')),
+        // A rule we cannot parse is treated as covering everything: embedding
+        // a file we do not need beats dropping one we do.
+        ranges: declared ? parseUnicodeRange(declared) : undefined,
+      };
+      byFamily.set(family, [...(byFamily.get(family) ?? []), candidate]);
+    });
+  });
+  return byFamily;
 };
 
-const collectUsedFaces = (root: HTMLElement): UsedFontFace[] => {
-  const faces = new Map<string, UsedFontFace>();
+// The browser draws each character with the first family in the stack that can
+// supply it, so later families in the stack are not worth embedding for it.
+const findFaceForCodePoint = (
+  byFamily: Map<string, FontFaceCandidate[]>,
+  stack: string[],
+  weight: number,
+  style: string,
+  codePoint: number
+): CSSFontFaceRule | undefined => {
+  for (const family of stack) {
+    const match = byFamily
+      .get(family)
+      ?.find(
+        candidate =>
+          candidate.style === style &&
+          ruleSupportsWeight(candidate.rule, weight) &&
+          coversCodePoint(candidate, codePoint)
+      );
+    if (match) {
+      return match.rule;
+    }
+  }
+  return undefined;
+};
+
+const collectUsedRules = (
+  root: HTMLElement,
+  byFamily: Map<string, FontFaceCandidate[]>
+): CSSFontFaceRule[] => {
+  const used = new Set<CSSFontFaceRule>();
   const elements = [root, ...Array.from(root.querySelectorAll('*'))];
   elements.forEach(element => {
     const text = ownText(element);
@@ -116,55 +164,32 @@ const collectUsedFaces = (root: HTMLElement): UsedFontFace[] => {
     const computed = window.getComputedStyle(element);
     const weight = Number(computed.fontWeight) || DEFAULT_FONT_WEIGHT;
     const style = normalizeStyle(computed.fontStyle);
-    computed.fontFamily
+    const stack = computed.fontFamily
       .split(',')
-      .map(family => unquote(family).toLowerCase())
-      .forEach(family => {
-        const key = `${family}|${weight}|${style}`;
-        const face = faces.get(key) ?? {
-          family,
-          weight,
-          style,
-          codePoints: new Set<number>(),
-        };
-        for (const character of text) {
-          // Whitespace needs no glyph, and counting it would match the Latin
-          // subset of every family even for a sketch written in another script.
-          if (!/\s/.test(character)) {
-            face.codePoints.add(character.codePointAt(0) as number);
-          }
-        }
-        faces.set(key, face);
-      });
-  });
-  return Array.from(faces.values());
-};
-
-const readFontFaceRules = (): CSSFontFaceRule[] => {
-  const rules: CSSFontFaceRule[] = [];
-  Array.from(document.styleSheets).forEach(sheet => {
-    let sheetRules: CSSRuleList | null = null;
-    try {
-      // Reading a cross-origin stylesheet throws; its fonts stay unembedded.
-      sheetRules = sheet.cssRules;
-    } catch (error) {
-      return;
+      .map(family => unquote(family).toLowerCase());
+    const codePoints = new Set<number>();
+    for (const character of text) {
+      // Whitespace needs no glyph, and resolving it would pull in the Latin
+      // subset of a family even for a sketch written in another script.
+      if (!/\s/.test(character)) {
+        codePoints.add(character.codePointAt(0) as number);
+      }
     }
-    Array.from(sheetRules || []).forEach(rule => {
-      if (rule instanceof CSSFontFaceRule) {
-        rules.push(rule);
+    codePoints.forEach(codePoint => {
+      const rule = findFaceForCodePoint(
+        byFamily,
+        stack,
+        weight,
+        style,
+        codePoint
+      );
+      if (rule) {
+        used.add(rule);
       }
     });
   });
-  return rules;
+  return Array.from(used);
 };
-
-const ruleMatchesFace = (rule: CSSFontFaceRule, face: UsedFontFace): boolean =>
-  unquote(rule.style.getPropertyValue('font-family')).toLowerCase() ===
-    face.family &&
-  normalizeStyle(rule.style.getPropertyValue('font-style')) === face.style &&
-  ruleSupportsWeight(rule, face.weight) &&
-  ruleCoversAnyCodePoint(rule, face.codePoints);
 
 const blobToDataUrl = (blob: Blob): Promise<string> =>
   new Promise((resolve, reject) => {
@@ -219,15 +244,13 @@ const inlineFontFaceRule = async (
 export const getSketchFontEmbedCss = async (
   root: HTMLElement
 ): Promise<string> => {
-  const usedFaces = collectUsedFaces(root);
-  if (usedFaces.length === 0) {
+  const byFamily = readCandidatesByFamily();
+  if (byFamily.size === 0) {
     return '';
   }
-  const matchingRules = readFontFaceRules().filter(rule =>
-    usedFaces.some(face => ruleMatchesFace(rule, face))
-  );
+  const usedRules = collectUsedRules(root, byFamily);
   const inlined = await Promise.all(
-    matchingRules.map(rule => inlineFontFaceRule(rule).catch(() => undefined))
+    usedRules.map(rule => inlineFontFaceRule(rule).catch(() => undefined))
   );
   return inlined.filter(Boolean).join('\n');
 };
