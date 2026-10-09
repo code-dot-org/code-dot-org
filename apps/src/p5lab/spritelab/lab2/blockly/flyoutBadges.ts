@@ -4,16 +4,17 @@ import moduleStyles from './flyout-badges.module.scss';
 
 const XHTML_NS = 'http://www.w3.org/1999/xhtml';
 export const BADGE_CLASS = 'spritelab2FlyoutBadge';
-// A badge sits on the block's top-right corner, this much of it past the
-// right edge and this much of it down over the block; the rest lies in the
-// gap above, so the flyout need not widen for it and the block's own
-// fields stay readable. The first row's badge is clamped into the canvas.
+// A badge hangs just below the block's bottom-right corner: this much of
+// it past the right edge, and this far under the bottom edge, in the gap
+// between blocks, so the flyout need not widen for it and the block's own
+// fields stay clear.
 const OVERHANG_PX = 10;
-const OVERLAP_PX = 6;
+const DROP_PX = 2;
 // The hollow help icon: on its own, or forming the left end of a pill, its
 // circle sitting in the pill's curve.
 const ICON_PX = 20;
-const PILL_HEIGHT_PX = ICON_PX;
+// Shorter than the lone icon, to fit the gap between blocks.
+const PILL_HEIGHT_PX = 18;
 const PILL_PADDING_PX = 7;
 
 /** What a flyout block wears: a stamp, a help button, or both in one pill. */
@@ -121,10 +122,11 @@ function decorateFlyout(
       }
       const {help, text, bright} = badge;
       const xy = block.getRelativeToSurfaceXY();
-      const {width} = block.getHeightWidth();
-      const right = xy.x + width + OVERHANG_PX;
-      const top = (badgeHeight: number) =>
-        Math.max(0, xy.y - badgeHeight + OVERLAP_PX);
+      const {height, width} = block.getHeightWidth();
+      const place = (badgeWidth: number) => ({
+        x: xy.x + width + OVERHANG_PX - badgeWidth,
+        y: xy.y + height + DROP_PX,
+      });
       const open = (button: HTMLButtonElement) =>
         onOpenHelp(block.type, button.getBoundingClientRect());
 
@@ -133,7 +135,7 @@ function decorateFlyout(
           BlocklyCore.utils.Svg.G,
           {
             class: BADGE_CLASS,
-            transform: `translate(${right - ICON_PX}, ${top(ICON_PX)})`,
+            transform: (({x, y}) => `translate(${x}, ${y})`)(place(ICON_PX)),
           },
           canvas
         );
@@ -145,7 +147,7 @@ function decorateFlyout(
         container.appendChild(
           helpButton(help.title, moduleStyles.helpButton, open)
         );
-        badgesRight = Math.max(badgesRight, right);
+        badgesRight = Math.max(badgesRight, place(ICON_PX).x + ICON_PX);
         return;
       }
 
@@ -173,11 +175,9 @@ function decorateFlyout(
         // pill placed once its width is known.
         const pillWidth = Math.ceil(button.getBoundingClientRect().width);
         container.setAttribute('width', String(pillWidth));
-        group.setAttribute(
-          'transform',
-          `translate(${right - pillWidth}, ${top(PILL_HEIGHT_PX)})`
-        );
-        badgesRight = Math.max(badgesRight, right);
+        const at = place(pillWidth);
+        group.setAttribute('transform', `translate(${at.x}, ${at.y})`);
+        badgesRight = Math.max(badgesRight, at.x + pillWidth);
         return;
       }
 
@@ -209,11 +209,9 @@ function decorateFlyout(
       const pillWidth =
         PILL_PADDING_PX * 2 + Math.ceil(label.getComputedTextLength());
       rect.setAttribute('width', String(pillWidth));
-      group.setAttribute(
-        'transform',
-        `translate(${right - pillWidth}, ${top(PILL_HEIGHT_PX)})`
-      );
-      badgesRight = Math.max(badgesRight, right);
+      const at = place(pillWidth);
+      group.setAttribute('transform', `translate(${at.x}, ${at.y})`);
+      badgesRight = Math.max(badgesRight, at.x + pillWidth);
     });
     fitFlyout(badgesRight);
   };
