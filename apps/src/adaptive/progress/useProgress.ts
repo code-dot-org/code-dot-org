@@ -1,23 +1,30 @@
-// Progress as the views use it: the hook that loads, updates and saves a
-// student's progress, and the labels the map shows for each status.
+// Progress as the views use it: the hook that loads a student's progress,
+// applies each change at once and sends it on, and the labels the map shows
+// for each status.
 
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
-import {Pathway} from '../types';
+import {TestResults} from '@cdo/apps/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {Pathway, Step} from '../types';
 
 import {
   Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
   GeneratedContent,
+  PROJECT_STEP_ID,
   Progress,
   StepContext,
+  StepProgress,
   getStatusMap,
 } from './model';
 import {
   ProgressKey,
   ProgressStore,
-  localStorageProgressStore,
+  StepWrite,
+  serverProgressStore,
 } from './progressStore';
 
 export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
@@ -27,54 +34,144 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   complete: 'Complete',
 };
 
+/** Records a result on a level step's level; see sendAdaptiveStepReport. */
+export type LevelStepReporter = (
+  levelId: number,
+  result: number,
+  timeMs: number
+) => Promise<void>;
+
+interface ProgressOptions {
+  store?: ProgressStore;
+  reportLevelStep?: LevelStepReporter;
+}
+
+// The server rounds each save up to whole seconds; match it.
+const toSeconds = (ms: number) => Math.ceil(ms / 1000);
+
+const logFailure = (what: string, error: unknown) =>
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .logError(`Adaptive progress: ${what} failed`, error as Error);
+
 export function useProgress(
   pathway: Pathway,
   key: ProgressKey,
-  store: ProgressStore = localStorageProgressStore
+  {store = serverProgressStore, reportLevelStep}: ProgressOptions = {}
 ) {
   // Undefined until the stored progress has been loaded.
   const [progress, setProgress] = useState<Progress>();
+  // Generated instructions live for the page only; they are not progress.
+  const [generated, setGenerated] = useState<{
+    [stepId: string]: GeneratedContent;
+  }>({});
   // Destructure key so its members can be used as primitive deps.
-  const {userId, scriptId, levelId, pathwayId} = key;
+  const {scriptId, levelId} = key;
 
   useEffect(() => {
     let cancelled = false;
     setProgress(undefined);
-    store.load({userId, scriptId, levelId, pathwayId}).then(loaded => {
-      if (!cancelled) setProgress(loaded ?? EMPTY_PROGRESS);
-    });
+    store.load({scriptId, levelId}).then(
+      loaded => {
+        if (!cancelled) setProgress(loaded);
+      },
+      error => {
+        logFailure('load', error);
+        if (!cancelled) setProgress(EMPTY_PROGRESS);
+      }
+    );
     return () => {
       cancelled = true;
     };
-  }, [store, userId, scriptId, levelId, pathwayId]);
-
-  useEffect(() => {
-    if (progress) store.save({userId, scriptId, levelId, pathwayId}, progress);
-  }, [store, userId, scriptId, levelId, pathwayId, progress]);
+  }, [store, scriptId, levelId]);
 
   const statusMap = useMemo(
     () => getStatusMap(pathway, progress ?? EMPTY_PROGRESS),
     [pathway, progress]
   );
 
-  const markStarted = useCallback((id: string) => {
-    setProgress(p =>
-      !p || p.started.includes(id) ? p : {...p, started: [...p.started, id]}
-    );
-  }, []);
+  const updateStep = useCallback(
+    (stepId: string, change: (entry?: StepProgress) => StepProgress) =>
+      setProgress(
+        p => p && {...p, steps: {...p.steps, [stepId]: change(p.steps[stepId])}}
+      ),
+    []
+  );
 
-  const markComplete = useCallback((id: string) => {
-    setProgress(p =>
-      !p || p.completed.includes(id)
-        ? p
-        : {...p, completed: [...p.completed, id]}
-    );
-  }, []);
+  // A level step's progress is its level's own, so it goes to a milestone.
+  const send = useCallback(
+    (step: Step, write: StepWrite, levelResult: number) => {
+      if (step.kind !== 'level') {
+        store.saveStep({scriptId, levelId}, step.id, write);
+        return;
+      }
+      const stepLevelId = step.levelProperties?.id;
+      if (stepLevelId === undefined || !reportLevelStep) return;
+      reportLevelStep(
+        stepLevelId,
+        levelResult,
+        write.timeSinceLastSave ?? 0
+      ).catch(error => logFailure(`report ${step.id}`, error));
+    },
+    [store, scriptId, levelId, reportLevelStep]
+  );
 
-  // Generated instructions live for the page only; they are not progress.
-  const [generated, setGenerated] = useState<{
-    [stepId: string]: GeneratedContent;
-  }>({});
+  const startStep = useCallback(
+    (step: Step) => {
+      if (step.id === PROJECT_STEP_ID) return;
+      updateStep(step.id, entry => entry ?? {status: 'started', timeSpent: 0});
+      send(step, {started: true}, TestResults.LEVEL_STARTED);
+    },
+    [updateStep, send]
+  );
+
+  const completeStep = useCallback(
+    (step: Step, timeMs: number) => {
+      if (step.id === PROJECT_STEP_ID) return;
+      updateStep(step.id, entry => ({
+        ...entry,
+        status: 'complete',
+        timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+      }));
+      send(
+        step,
+        {completed: true, timeSinceLastSave: timeMs},
+        TestResults.FREE_PLAY
+      );
+    },
+    [updateStep, send]
+  );
+
+  /** Records the time on a step the student leaves without finishing it. */
+  const leaveStep = useCallback(
+    (step: Step, timeMs: number) => {
+      if (step.id === PROJECT_STEP_ID) return;
+      updateStep(step.id, entry => ({
+        status: 'started',
+        ...entry,
+        timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+      }));
+      send(step, {timeSinceLastSave: timeMs}, TestResults.LEVEL_STARTED);
+    },
+    [updateStep, send]
+  );
+
+  const saveAnswers = useCallback(
+    (step: Step, questionId: number, answers: Answer[], timeMs: number) => {
+      updateStep(step.id, entry => ({
+        status: 'started',
+        ...entry,
+        submitted: true,
+        timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+        answers: {...entry?.answers, [questionId]: answers},
+      }));
+      store.saveStep({scriptId, levelId}, step.id, {
+        answers: {questionId, list: answers},
+        timeSinceLastSave: timeMs,
+      });
+    },
+    [updateStep, store, scriptId, levelId]
+  );
 
   const updateStepContext = useCallback(
     (id: string, patch: Pick<StepContext, 'generated'>) => {
@@ -86,8 +183,8 @@ export function useProgress(
 
   const stepContextMap = useMemo(() => {
     const map: {[stepId: string]: StepContext} = {};
-    for (const [id, context] of Object.entries(progress?.stepContext ?? {})) {
-      map[id] = {answers: context.answers};
+    for (const [id, entry] of Object.entries(progress?.steps ?? {})) {
+      if (entry.answers) map[id] = {answers: entry.answers};
     }
     for (const [id, content] of Object.entries(generated)) {
       map[id] = {...map[id], generated: content};
@@ -95,40 +192,22 @@ export function useProgress(
     return map;
   }, [progress, generated]);
 
-  const saveAnswers = useCallback(
-    (stepId: string, questionId: number, answers: Answer[]) => {
-      setProgress(p => {
-        if (!p) return p;
-        const step = p.stepContext[stepId];
-        return {
-          ...p,
-          stepContext: {
-            ...p.stepContext,
-            [stepId]: {
-              ...step,
-              answers: {...step?.answers, [questionId]: answers},
-            },
-          },
-        };
-      });
-    },
-    []
-  );
-
   const reset = useCallback(() => {
     setProgress(EMPTY_PROGRESS);
     setGenerated({});
-  }, []);
+    store.reset({scriptId, levelId});
+  }, [store, scriptId, levelId]);
 
   return {
     progress,
     isLoading: progress === undefined,
     statusMap,
     stepContextMap,
-    markStarted,
-    markComplete,
-    updateStepContext,
+    startStep,
+    completeStep,
+    leaveStep,
     saveAnswers,
+    updateStepContext,
     reset,
   };
 }
