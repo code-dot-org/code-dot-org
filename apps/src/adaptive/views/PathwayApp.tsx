@@ -62,6 +62,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     markStarted,
     markComplete,
     updateStepContext,
+    saveAnswers,
     reset,
   } = useProgress(pathway, progressKey);
   const [view, setView] = useState<View>({kind: 'map'});
@@ -113,6 +114,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
+            onSaveAnswers={saveAnswers}
             onExit={() =>
               setView({
                 kind: 'map',

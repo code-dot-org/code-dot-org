@@ -116,7 +116,7 @@ class RequestTest
       session = {}
       stable_id = MockRequest.new(session).statsig_stable_id
 
-      assert Cdo::AnonUserId.valid?(stable_id)
+      assert_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io, stable_id
       assert_equal stable_id, MockRequest.new(session).statsig_stable_id
     end
 
@@ -153,14 +153,52 @@ class RequestTest
 
       stable_id = MockRequest.new(session).statsig_stable_id
 
-      assert Cdo::AnonUserId.valid?(stable_id)
+      assert_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io, stable_id
       assert_equal stable_id, session[SharedConstants::STATSIG_STABLE_ID_KEY]
     end
 
-    def test_anon_user_id_rejects_invalid_statsig_stable_id
+    def test_statsig_stable_id_uses_valid_session_for_invalid_cookie
+      session_id = SecureRandom.uuid
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => session_id}
+      request = MockRequest.new(session)
+      request.stubs(:cookies).returns(SharedConstants::STATSIG_STABLE_ID_KEY => '<html>blocked</html>')
+      session.expects(:[]=).never
+
+      assert_equal session_id, request.statsig_stable_id
+    end
+
+    def test_statsig_stable_id_replaces_invalid_cookie_and_session
+      storage_key = SharedConstants::STATSIG_STABLE_ID_KEY
+      [nil, '', '<html>blocked</html>', '0b26deae-cf8e-1af3-8b03-4534de3b781f', "#{SecureRandom.uuid}\n"].each do |invalid_id|
+        session = {storage_key => invalid_id}
+        request = MockRequest.new(session)
+        request.stubs(:cookies).returns(storage_key => invalid_id)
+
+        stable_id = request.statsig_stable_id
+
+        assert_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io, stable_id
+        assert_equal stable_id, session[storage_key]
+        assert_equal stable_id, request.anon_user_id
+        assert_equal stable_id, MockRequest.new(session).statsig_stable_id
+      end
+    end
+
+    def test_statsig_stable_id_replaces_invalid_session_with_valid_cookie
+      cookie_id = SecureRandom.uuid
+      storage_key = SharedConstants::STATSIG_STABLE_ID_KEY
+      session = {storage_key => '<html>blocked</html>'}
+      request = MockRequest.new(session)
+      request.stubs(:cookies).returns(storage_key => cookie_id)
+
+      assert_equal cookie_id, request.statsig_stable_id
+      assert_equal cookie_id, session[storage_key]
+    end
+
+    def test_anon_user_id_replaces_invalid_session_value
       request = MockRequest.new(SharedConstants::STATSIG_STABLE_ID_KEY => 'invalid')
 
-      assert_nil request.anon_user_id
+      assert Cdo::AnonUserId.valid?(request.anon_user_id)
+      assert_equal request.statsig_stable_id, request.anon_user_id
     end
   end
 end

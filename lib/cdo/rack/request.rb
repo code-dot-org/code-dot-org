@@ -10,6 +10,8 @@ require 'cdo/shared_constants'
 
 module Cdo
   module RequestExtension
+    STATSIG_STABLE_ID_FORMAT = /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/i
+
     TRUSTED_PROXIES = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
       IPAddr.new(proxy)
     end
@@ -107,9 +109,9 @@ module Cdo
         stable_id =
           # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
           # See: apps/src/metrics/statsigHelpers.js
-          if cookies[storage_key] && !cookies[storage_key].empty?
+          if cookies[storage_key].is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(cookies[storage_key])
             cookies[storage_key]
-          elsif session[storage_key] && !session[storage_key].empty?
+          elsif session[storage_key].is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(session[storage_key])
             session[storage_key]
           else
             Cdo::AnonUserId.generate
