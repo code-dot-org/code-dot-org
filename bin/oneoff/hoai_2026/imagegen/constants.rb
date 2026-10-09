@@ -27,6 +27,10 @@ QUALITY = nil
 # Styles the student form offers (see IMAGE_STYLE_LABELS in types.ts)
 STYLES = %w[pixel smooth]
 
+# What --list-words calls an optional slot's empty choice, matching
+# NO_CHOICE in dump_prompts.ts.
+NO_CHOICE = 'none'
+
 # The image UIs whose choices dump_prompts.ts enumerates: the image
 # dialog's adlib dropdowns, and the explore layout's word chips.
 SOURCES = %w[adlib explore]

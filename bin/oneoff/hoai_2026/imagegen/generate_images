@@ -92,6 +92,8 @@ options = {
   just_upload: false,
   limit: nil,
   list_ids: false,
+  list_words: false,
+  choices: {},
   model: MODEL,
   produce_animations: false,
   produce_singles: true,
@@ -175,10 +177,24 @@ OptionParser.new do |opts|
            options[:transparent] = transparent
          end
 
+  opts.on('--list-words',
+          'Just lists every sentence (after filtering) with the words each slot offers, and exits.'
+         ) do |list_words|
+           options[:list_words] = list_words
+         end
+
   opts.on('-i', '--id ID',
           'Adds the given adlib id (e.g. sprite-simple) or explore sentence id (e.g. character) to the list. If none are specified, uses all of them.'
          ) do |id|
            options[:ids] << id
+         end
+
+  opts.on('-c', '--choice SLOT=WORD',
+          "Pins one slot to one word, e.g. --choice adjective=brave (#{NO_CHOICE} for an empty optional slot). Repeatable; see --list-words."
+         ) do |choice|
+           slot, word = choice.split('=', 2)
+           raise "Error: --choice needs SLOT=WORD, got '#{choice}'" if word.nil? || word.empty?
+           options[:choices][slot] = word
          end
 
   opts.on('-S', '--source SOURCE',
@@ -257,16 +273,58 @@ if node_version < 18
   raise "Error: dump_prompts.ts needs Node 18 or newer (found #{node_version.zero? ? 'none' : node_version}). Try `nvm use 22`."
 end
 
+def run_dumper(script_path, repo_path, *args)
+  stdout, stderr, status = Open3.capture3(
+    'npx', '--yes', 'tsx', File.join(script_path, 'dump_prompts.ts'), *args,
+    chdir: repo_path
+  )
+  unless status.success?
+    warn stderr
+    raise 'Error: dump_prompts.ts failed'
+  end
+  stdout
+end
+
+# Keeps --source, --id and --filter meaning the same thing everywhere.
+def wanted?(options, entry)
+  return false unless options[:sources].include?(entry['source'])
+  return false unless options[:ids].empty? || options[:ids].include?(entry['jobId'])
+  options[:filter].empty? || entry['jobId'].include?(options[:filter])
+end
+
+# --choice pins a slot, so a small batch can vary one slot and hold the
+# rest: --limit alone takes whole combinations in order, which varies the
+# last slot and repeats the first.
+def chosen?(options, job)
+  picked = job['slots'].zip(job['choiceIds']).to_h
+  options[:choices].all? {|slot, word| picked[slot] == word}
+end
+
+if options[:list_words]
+  run_dumper(script_path, repo_path, '--catalog').lines.each do |line|
+    entry = JSON.parse(line)
+    next unless wanted?(options, entry)
+
+    kind = [entry['imageType'], entry['subject']].compact.join('/')
+    puts
+    puts "#{entry['source']}/#{entry['jobId']} (#{kind}#{entry['animated'] ? ', animated' : ''}): #{entry['example']}"
+    entry['slots'].each do |slot|
+      # The id is what a path and a --list-ids line carry; the label is what
+      # the student sees, and a word's text can differ from its id.
+      words = slot['words'].map do |word|
+        word['id'] == word['text'] ? word['id'] : "#{word['id']} (#{word['text']})"
+      end
+      words.unshift(NO_CHOICE) unless slot['required']
+      shown = slot['label'] == slot['id'] ? '' : " (shown as \"#{slot['label']}\")"
+      puts "  #{slot['id']}#{shown}, #{words.length} choices: #{words.join(', ')}"
+    end
+  end
+  exit
+end
+
 puts
 puts "Building prompts with dump_prompts.ts..."
-stdout, stderr, status = Open3.capture3(
-  'npx', '--yes', 'tsx', File.join(script_path, 'dump_prompts.ts'),
-  chdir: repo_path
-)
-unless status.success?
-  warn stderr
-  raise 'Error: dump_prompts.ts failed'
-end
+stdout = run_dumper(script_path, repo_path)
 
 prompts_path = File.join(script_path, PROMPTS_FILE)
 puts
@@ -279,9 +337,21 @@ known_ids = jobs.map {|job| job['jobId']}.uniq
 unknown_ids = options[:ids] - known_ids
 raise "Error: unknown id(s): #{unknown_ids.join(', ')}" if unknown_ids.any?
 
-jobs = jobs.filter {|job| options[:sources].include?(job['source'])}
-jobs = jobs.filter {|job| options[:ids].include?(job['jobId'])} unless options[:ids].empty?
-jobs = jobs.filter {|job| job['jobId'].include?(options[:filter])} unless options[:filter].empty?
+jobs = jobs.filter {|job| wanted?(options, job)}
+
+# A slot or word nobody offers is a typo, not an empty batch.
+unless options[:choices].empty?
+  offered = jobs.flat_map {|job| job['slots'].zip(job['choiceIds'])}.group_by(&:first)
+  options[:choices].each do |slot, word|
+    pairs = offered[slot]
+    raise "Error: no slot '#{slot}' in the chosen sentences. See --list-words." if pairs.nil?
+    words = pairs.map(&:last).uniq
+    unless words.include?(word)
+      raise "Error: slot '#{slot}' has no '#{word}'. Choices: #{words.sort.join(', ')}"
+    end
+  end
+  jobs = jobs.filter {|job| chosen?(options, job)}
+end
 jobs = jobs.filter {|job| options[:styles].include?(job['style'])}
 # An explore character has no single-picture form (the layout animates
 # every character), so the default of singles only drops those ids

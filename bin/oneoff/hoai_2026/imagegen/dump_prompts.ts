@@ -10,6 +10,9 @@
 //   explore  the explore layout's word chips, from exploreSentences.json.
 //            The hoai2026-dev image levels, which set imageUi 'explore'.
 //
+// With --catalog it prints one line per sentence describing its slots and
+// words instead, which is what generate_images --list-words shows.
+//
 // Only pure modules may be imported from apps/ (no @cdo aliases, no DOM).
 
 import adlibManifest from '../../../../apps/static/spritelab_lab2/imageAdlibManifest.json';
@@ -96,6 +99,25 @@ function bodyPlanOf(creature: Option | undefined): BodyPlan {
   return BODY_PLANS.includes(plan as BodyPlan) ? (plan as BodyPlan) : 'upright';
 }
 
+/** One slot a student fills, and the words it offers. */
+interface SlotSpec {
+  id: string;
+  label: string;
+  /** An optional slot can be left empty; see NO_CHOICE. */
+  required: boolean;
+  words: Option[];
+}
+
+/** One sentence a student can build, from either UI. */
+interface Spec {
+  source: 'adlib' | 'explore';
+  jobId: string;
+  kind: Kind;
+  slots: SlotSpec[];
+  /** The student-visible prompt for one set of choices. */
+  prompt: (chosen: {[slot: string]: Option | undefined}) => string;
+}
+
 /** The frames one job asks for: one picture, or a set's base and poses. */
 function framesFor(
   prompt: string,
@@ -153,8 +175,7 @@ function framesFor(
 }
 
 function emit(
-  source: 'adlib' | 'explore',
-  jobId: string,
+  {source, jobId}: Spec,
   kind: Kind,
   slots: string[],
   choiceIds: string[],
@@ -211,34 +232,30 @@ function fillTemplate(
   );
 }
 
-function dumpAdlibs(): void {
+/** Every adlib set in the manifest. Each slot is a dropdown the student
+    must pick from, so none is optional. */
+function adlibSpecs(): Spec[] {
   const adlibs = (adlibManifest as {adlibs: {[id: string]: Adlib}}).adlibs;
-  for (const [adlibId, adlib] of Object.entries(adlibs)) {
-    const kind = adlibKind(adlibId);
-    const slots = Object.keys(adlib.options);
-    for (const combo of product(slots.map(slot => adlib.options[slot]))) {
-      const prompt = fillTemplate(adlib.template, slots, combo);
-      const bodyPlan = bodyPlanOf(combo[slots.indexOf('creature')]);
-      // The dialog's animation checkbox: a character is offered both ways.
-      const kinds = canAnimate(kind)
-        ? [kind, {...kind, animated: true}]
-        : [kind];
-      for (const style of STYLES) {
-        for (const each of kinds) {
-          emit(
-            'adlib',
-            adlibId,
-            each,
-            slots,
-            combo.map(option => option.id),
-            prompt,
-            style,
-            bodyPlan,
-          );
-        }
-      }
-    }
-  }
+  return Object.entries(adlibs).map(([adlibId, adlib]) => {
+    const slotIds = Object.keys(adlib.options);
+    return {
+      source: 'adlib',
+      jobId: adlibId,
+      kind: adlibKind(adlibId),
+      slots: slotIds.map(id => ({
+        id,
+        label: id,
+        required: true,
+        words: adlib.options[id],
+      })),
+      prompt: chosen =>
+        fillTemplate(
+          adlib.template,
+          slotIds,
+          slotIds.map(id => chosen[id] as Option),
+        ),
+    };
+  });
 }
 
 // ---- explore: the word-chip sentence ---------------------------------
@@ -300,42 +317,63 @@ function sentencePrompt(
     .trim();
 }
 
-function dumpExploreSentences(): void {
+/** Every sentence in the explore manifest. */
+function exploreSpecs(): Spec[] {
   const manifest = exploreManifest as ExploreManifest;
-  for (const [sentenceId, sentence] of Object.entries(manifest.sentences)) {
+  return Object.entries(manifest.sentences).map(([sentenceId, sentence]) => {
     const kind = SENTENCE_KINDS[sentenceId];
     if (!kind) {
       throw new Error(
         `exploreSentences.json has a "${sentenceId}" sentence this script has no kind for`,
       );
     }
-    const slots = Object.keys(sentence.slots);
-    // Every slot's words, and for an optional slot the empty choice too: a
-    // student can generate without filling it.
-    const choices = slots.map(id => {
-      const slot = sentence.slots[id];
-      const words =
-        typeof slot.words === 'string'
-          ? manifest.wordSets[slot.words]
-          : slot.words;
-      if (!words) {
-        throw new Error(
-          `exploreSentences.json: sentence "${sentenceId}" slot "${id}" names an unknown word set "${slot.words}"`,
-        );
-      }
-      return slot.required ? words : [undefined, ...words];
-    });
-    for (const combo of product(choices)) {
-      const chosen: {[slot: string]: Option | undefined} = {};
-      slots.forEach((id, i) => (chosen[id] = combo[i]));
-      const prompt = sentencePrompt(sentence.segments, chosen);
-      const bodyPlan = bodyPlanOf(chosen.creature);
-      for (const style of STYLES) {
+    return {
+      source: 'explore',
+      jobId: sentenceId,
+      kind,
+      slots: Object.entries(sentence.slots).map(([id, slot]) => {
+        const words =
+          typeof slot.words === 'string'
+            ? manifest.wordSets[slot.words]
+            : slot.words;
+        if (!words) {
+          throw new Error(
+            `exploreSentences.json: sentence "${sentenceId}" slot "${id}" names an unknown word set "${slot.words}"`,
+          );
+        }
+        return {id, label: slot.label, required: !!slot.required, words};
+      }),
+      prompt: chosen => sentencePrompt(sentence.segments, chosen),
+    };
+  });
+}
+
+// ---- output ----------------------------------------------------------
+
+function dumpJobs(spec: Spec): void {
+  const slotIds = spec.slots.map(slot => slot.id);
+  // An optional slot's words, and the empty choice too: a student can
+  // generate without filling it.
+  const choices = spec.slots.map(slot =>
+    slot.required ? slot.words : [undefined, ...slot.words],
+  );
+  for (const combo of product(choices)) {
+    const chosen: {[slot: string]: Option | undefined} = {};
+    slotIds.forEach((id, i) => (chosen[id] = combo[i]));
+    const prompt = spec.prompt(chosen);
+    const bodyPlan = bodyPlanOf(chosen.creature);
+    // The dialog's animation checkbox: a character is offered both ways.
+    // An explore character is already animated, so this adds nothing.
+    const kinds =
+      canAnimate(spec.kind) && !spec.kind.animated
+        ? [spec.kind, {...spec.kind, animated: true}]
+        : [spec.kind];
+    for (const style of STYLES) {
+      for (const kind of kinds) {
         emit(
-          'explore',
-          sentenceId,
+          spec,
           kind,
-          slots,
+          slotIds,
           combo.map(option => option?.id ?? NO_CHOICE),
           prompt,
           style,
@@ -346,5 +384,28 @@ function dumpExploreSentences(): void {
   }
 }
 
-dumpAdlibs();
-dumpExploreSentences();
+/** One line per sentence: its slots and the words each offers. */
+function dumpCatalog(spec: Spec): void {
+  console.log(
+    JSON.stringify({
+      source: spec.source,
+      jobId: spec.jobId,
+      imageType: spec.kind.imageType,
+      subject: spec.kind.subject ?? null,
+      animated: spec.kind.animated,
+      example: spec.prompt(
+        Object.fromEntries(spec.slots.map(slot => [slot.id, slot.words[0]])),
+      ),
+      slots: spec.slots.map(slot => ({
+        id: slot.id,
+        label: slot.label,
+        required: slot.required,
+        words: slot.words.map(word => ({id: word.id, text: word.text})),
+      })),
+    }),
+  );
+}
+
+const specs = [...adlibSpecs(), ...exploreSpecs()];
+const dump = process.argv.includes('--catalog') ? dumpCatalog : dumpJobs;
+specs.forEach(dump);
