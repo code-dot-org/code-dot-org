@@ -122,6 +122,15 @@ class DeleteAccountsHelper
     @log.puts "Cleaned #{updated_rows} AuthoredHintViewRequest" if updated_rows > 0
   end
 
+  # Adaptive step rows hold student answers and generated text, so they are
+  # deleted rather than cleaned.
+  def delete_user_adaptive_steps(user_id)
+    @log.puts "Deleting UserAdaptiveStep"
+    user_level_ids = UserLevel.with_deleted.where(user_id: user_id).select(:id)
+    deleted_rows = UserAdaptiveStep.where(user_level_id: user_level_ids).delete_all
+    @log.puts "Deleted #{deleted_rows} UserAdaptiveStep" if deleted_rows > 0
+  end
+
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
@@ -491,6 +500,7 @@ class DeleteAccountsHelper
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
     clean_level_source_backed_progress(user.id)
+    delete_user_adaptive_steps(user.id)
     clean_pegasus_forms_for_user(user)
     remove_pii_from_projects(user)
     delete_rubric_ai_evaluations(user.id)
