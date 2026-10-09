@@ -153,8 +153,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       layouts, one of which the project draws by its channel id. */
   worldStartPattern?: string[] | string[][];
   /** Block types no earlier level of the unit offered in its toolbox,
-      computed by the server. The toolbox stamps them "New", with help,
-      until the project uses them. */
+      computed by the server: what the new-block catalog offers. */
   newBlocks?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */

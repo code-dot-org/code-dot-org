@@ -16,20 +16,16 @@ import {MAX_ZOOM, MIN_ZOOM} from '../camera';
 import {PLATFORM_GRAVITY} from '../platformPhysics';
 
 /**
- * What the help callout beside a toolbox block says: a `summary` sentence,
- * then the `body`, scrolled together if long. An `animation` (a looping
- * GIF of the block in action) sits to the left of the text. Content lives
- * here rather than in the level so it can carry pictures and code; a
- * level-authored source can replace this table later.
+ * What the new-block catalog says about a block: a `summary` sentence,
+ * then the `body`, beside an `animation` (a looping GIF of the block in
+ * action). Content lives here rather than in the level so it can carry
+ * pictures and code; a level-authored source can replace this table later.
  */
 export interface BlockHelp {
   title: string;
   summary: string;
   body?: React.ReactNode;
   animation?: {src: string; alt: string};
-  /** A block worth drawing the eye to: its "New" stamp is bright where
-      the others are quiet. */
-  standout?: boolean;
 }
 
 const para = (...text: React.ReactNode[]) => <p>{text}</p>;
@@ -40,7 +36,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setPlatformGravity: {
     title: 'Set gravity',
     animation: {src: animSetGravity, alt: 'The set gravity block in action.'},
-    standout: true,
     summary: 'Changes how hard everything falls.',
     body: (
       <>
@@ -61,7 +56,6 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   spritelab2_setCameraZoom: {
     title: 'Set zoom',
     animation: {src: animSetZoom, alt: 'The set zoom block in action.'},
-    standout: true,
     summary:
       'Zooms the camera in on the player in a platformer scene, so the ' +
       'world scrolls as the player moves.',

@@ -50,7 +50,6 @@ import {
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {catalogEntries, heldBackBlockTypes} from '../blockCatalog';
-import {BLOCK_HELP} from '../blockHelp/blockHelpContent';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
@@ -124,7 +123,6 @@ import {useWorldStartPattern} from '../worldStartPattern';
 
 import AddBlocksButton from './AddBlocksButton';
 import BlockCatalogDialog from './BlockCatalogDialog';
-import BlockHelpCallout from './BlockHelpCallout';
 import {isPointerClick} from './blurAfterPointerClick';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
@@ -139,7 +137,7 @@ import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
-import {useFlyoutBadges} from './useFlyoutBadges';
+import {useFlyoutDots} from './useFlyoutDots';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -412,22 +410,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
-  // The toolbox help callout: which block, and where its icon is on screen.
-  const [blockHelp, setBlockHelp] = useState<{
-    blockType: string;
-    anchor: DOMRect;
-  } | null>(null);
-  const closeBlockHelp = useCallback(() => setBlockHelp(null), []);
-  // A press on the badge whose help is open closes it.
-  const openHelpFor = useCallback(
-    (blockType: string, anchor: DOMRect) =>
-      setBlockHelp(current =>
-        current?.blockType === blockType ? null : {blockType, anchor}
-      ),
-    []
-  );
-  const openBlockHelp = blockHelp && BLOCK_HELP[blockHelp.blockType];
-
   // The new-block catalog: the unit's new blocks stay out of the toolbox
   // until the student adds them from the dialog. Off in the levelbuilder's
   // edit modes, whose saves would carry its flags into every student's
@@ -1865,20 +1847,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
-  // Toolbox badges on the level's new blocks the project has not used.
+  // Dots beside the catalog blocks the project has not used yet.
   const getMainWorkspace = useCallback(
     () => Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg | null,
     []
   );
-  useFlyoutBadges({
-    enabled: !isToolboxMode,
-    newBlocks: levelProperties.newBlocks,
-    dotsFor: catalogOn ? chosenBlockSet : undefined,
+  useFlyoutDots({
+    enabled: catalogOn,
+    added: chosenBlockSet,
     scenes,
     workspaceVersion,
     getWorkspace: getMainWorkspace,
-    onOpenHelp: openHelpFor,
-    onInvalidate: closeBlockHelp,
   });
 
   // Only freeplay adds, renames, reorders or deletes scenes; a level with no
@@ -2064,13 +2043,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         >
           {WorkspaceAlert}
-          {openBlockHelp && blockHelp && (
-            <BlockHelpCallout
-              help={openBlockHelp}
-              anchor={blockHelp.anchor}
-              onClose={closeBlockHelp}
-            />
-          )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
           <div

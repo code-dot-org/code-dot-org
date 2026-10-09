@@ -1,0 +1,9 @@
+// The dot beside a toolbox block added from the new-block catalog and not
+// yet placed, in the flyout's SVG so it scrolls with its block; the
+// catalog's list marks added blocks with the same dot.
+
+@use '../views/catalog-dot' as catalog;
+
+.dot {
+  fill: catalog.$catalog-dot;
+}
