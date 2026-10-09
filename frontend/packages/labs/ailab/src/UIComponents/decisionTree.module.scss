@@ -14,7 +14,6 @@ $focus-ring-width: 2px;
 $focus-ring-gap: 2px;
 $focus-color: var(--border-focused-primary);
 $node-radius: 6px;
-$answer-dot-size: 12px;
 $branch-height: 22px;
 $canvas-scale: var(--tree-canvas-scale, 1);
 $overlay-float-min-width: 600px;
@@ -166,8 +165,8 @@ $overlay-float-min-width: 600px;
   min-height: var(--tree-node-height);
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: var(--tree-answer-dot-gap);
+  padding: 8px var(--tree-node-padding-inline);
   border-width: 1.5px;
   border-style: solid;
   border-radius: $node-radius;
@@ -186,7 +185,7 @@ $overlay-float-min-width: 600px;
 
 .pathNode {
   border-color: $path-color;
-  border-width: 2px;
+  border-width: var(--tree-path-node-border);
   color: $path-node-text-color;
 }
 
@@ -211,8 +210,8 @@ $overlay-float-min-width: 600px;
 
 .answerDot {
   flex-shrink: 0;
-  width: $answer-dot-size;
-  height: $answer-dot-size;
+  width: var(--tree-answer-dot-size);
+  height: var(--tree-answer-dot-size);
   border-radius: 50%;
   box-sizing: border-box;
   border: 2px solid transparent;
@@ -262,6 +261,12 @@ $overlay-float-min-width: 600px;
 }
 
 @media (forced-colors: active) {
+  .nodeSlot:focus-visible {
+    outline-offset: calc(
+      #{$path-ring-width} + #{$focus-ring-gap} / #{$canvas-scale}
+    );
+  }
+
   .pathNode,
   .pathBranch {
     outline: $path-ring-width solid;

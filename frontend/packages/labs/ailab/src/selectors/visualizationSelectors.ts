@@ -303,7 +303,7 @@ export const getDisplayTreeNodeWidth = createSelector(
     datasetId: string | undefined,
   ): ((id: string) => number) => {
     const widths = tree
-      ? measureDisplayTreeNodes(tree, datasetId ?? '')
+      ? measureDisplayTreeNodes(tree, datasetId || 'unknown')
       : new Map<string, number>();
     return id => widths.get(id)!;
   },

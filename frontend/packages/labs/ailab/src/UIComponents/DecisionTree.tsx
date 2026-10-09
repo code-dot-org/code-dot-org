@@ -29,7 +29,13 @@ import {
   TREE_NODE_MAX_WIDTH,
 } from '../helpers/displayTreeLayout';
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
-import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
+import {
+  ANSWER_DOT_GAP,
+  ANSWER_DOT_SIZE,
+  displayNodeLabel,
+  NODE_PADDING_INLINE,
+  PATH_NODE_BORDER,
+} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setPredictionPlaying} from '../redux';
@@ -63,6 +69,10 @@ const BRANCH_LABEL_RISE = 19;
 const canvasVariables = {
   '--tree-node-max-width': `${TREE_NODE_MAX_WIDTH}px`,
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
+  '--tree-node-padding-inline': `${NODE_PADDING_INLINE}px`,
+  '--tree-path-node-border': `${PATH_NODE_BORDER}px`,
+  '--tree-answer-dot-size': `${ANSWER_DOT_SIZE}px`,
+  '--tree-answer-dot-gap': `${ANSWER_DOT_GAP}px`,
   '--tree-branch-offset': `${BRANCH_LABEL_RISE}px`,
 } as CSSProperties;
 
