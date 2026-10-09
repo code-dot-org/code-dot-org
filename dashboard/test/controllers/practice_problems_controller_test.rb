@@ -4,6 +4,7 @@ class PracticeProblemsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     @user = create(:student)
 
     @objective1 = create(:objective)
@@ -27,6 +28,13 @@ class PracticeProblemsControllerTest < ActionController::TestCase
   test 'show redirects to sign in when not signed in' do
     get :show, params: {id: @problem_with_obj1.id}
     assert_redirected_to_sign_in
+  end
+
+  test 'index is forbidden without lesson deep dive access' do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+    sign_in @user
+    get :index
+    assert_response :forbidden
   end
 
   # --- index ---

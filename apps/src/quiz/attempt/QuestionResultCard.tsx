@@ -18,6 +18,12 @@ export interface QuestionResultCardProps {
   questionLabel?: string;
   result: QuizQuestionResult;
   revealAnswerExplanation?: boolean;
+  // A teacher viewing a student's attempt; the selected answer is the student's.
+  isViewingStudent?: boolean;
+}
+
+function selectedAnswerLabel(isViewingStudent?: boolean): string {
+  return isViewingStudent ? "Student's answer" : 'Your answer';
 }
 
 type ChoiceStatus = 'correct' | 'incorrect' | 'selected_ungraded' | 'neutral';
@@ -48,6 +54,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   questionLabel,
   result,
   revealAnswerExplanation,
+  isViewingStudent,
 }) => (
   <AttemptCard
     label={questionLabel}
@@ -104,11 +111,15 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
                   iconStyle="solid"
                   className={styles.incorrectIcon}
                 />
-                <span className={styles.srOnly}>Your answer, incorrect</span>
+                <span className={styles.srOnly}>
+                  {selectedAnswerLabel(isViewingStudent)}, incorrect
+                </span>
               </>
             )}
             {status === 'selected_ungraded' && (
-              <span className={styles.srOnly}>Your answer</span>
+              <span className={styles.srOnly}>
+                {selectedAnswerLabel(isViewingStudent)}
+              </span>
             )}
           </li>
         );

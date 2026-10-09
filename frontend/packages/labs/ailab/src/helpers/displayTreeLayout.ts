@@ -22,6 +22,7 @@ export interface PlacedTreeNode {
   parent?: PlacedTreeNode;
   children: PlacedTreeNode[];
   branch?: DisplayTreeBranch;
+  answerIndex?: number;
 }
 
 export interface DisplayTreeLayout {
@@ -83,6 +84,7 @@ export function layoutDisplayTree(
     maxDepth = Math.max(maxDepth, depth);
 
     if (node.type === 'answer') {
+      placed.answerIndex = answerCount;
       placed.x = answerCount * (TREE_NODE_WIDTH + TREE_COLUMN_GAP);
       answerCount++;
     } else {
