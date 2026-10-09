@@ -695,7 +695,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           textDecoration: 'none',
         },
 
-        // Remove margins from startIcon and endIcon - use gap instead (matching genericButton.module.scss)
+        // Remove margins from startIcon and endIcon - use gap instead, as the DSCO button did
         '& .MuiButton-startIcon': {
           marginLeft: 0,
           marginRight: 0,

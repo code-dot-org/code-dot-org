@@ -31,7 +31,7 @@ const SingleTemplate: StoryFn<CustomDropdownProps> = args => {
         </li>
         <li key="2">
           <button onClick={() => console.log('Item 2 clicked')}>
-            non-DSCO Button
+            Native button
           </button>
         </li>
         <li key="button-3">
