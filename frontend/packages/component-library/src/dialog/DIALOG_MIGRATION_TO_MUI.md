@@ -575,6 +575,6 @@ focuses its container on open, wraps Tab and Shift+Tab through its sentinels,
 and restores focus to the opener. `disableEnforceFocus` stays: with enforcement
 on, MUI pulls focus back from any overlay it does not track, and several open
 over a mounted dialog (see the Focus enforcement row). The transition's
-`onEntered` then moves focus to the first enabled control, a tick later than the
-hook did, unless focus is already in the panel; with nothing focusable it stays
-on the container.
+`onEntered` then moves focus to the first control that takes focus, a tick later
+than the hook did, unless focus is already in the panel; with nothing focusable
+it stays on the container.
