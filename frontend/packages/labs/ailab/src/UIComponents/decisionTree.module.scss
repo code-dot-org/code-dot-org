@@ -15,6 +15,10 @@ $focus-ring-gap: 2px;
 $focus-color: var(--border-focused-primary);
 $node-radius: 6px;
 $answer-dot-size: 12px;
+$count-color: var(--text-neutral-tertiary);
+$path-count-color: var(--text-brand-secondary);
+$correct-color: var(--text-success-primary-fixed);
+$incorrect-color: var(--text-error-primary-fixed);
 $branch-height: 22px;
 $canvas-scale: var(--tree-canvas-scale, 1);
 $overlay-float-min-width: 600px;
@@ -229,6 +233,41 @@ $overlay-float-min-width: 600px;
 .node .nodeText {
   font-weight: var(--font-weight-semi-bold);
   color: inherit;
+}
+
+.counts {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+  margin-left: 6px;
+}
+
+.node .counts {
+  color: $count-color;
+}
+
+.pathNode .counts {
+  color: $path-count-color;
+}
+
+.correct,
+.incorrect {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.gradeIcon {
+  font-size: 11px;
+}
+
+.correct {
+  color: $correct-color;
+}
+
+.incorrect {
+  color: $incorrect-color;
 }
 
 .branch {

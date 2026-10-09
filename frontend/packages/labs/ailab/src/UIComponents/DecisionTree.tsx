@@ -11,6 +11,8 @@ import {
   useState,
 } from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
 import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
@@ -18,6 +20,7 @@ import {
   THRESHOLD_SIGNS,
   thresholdValue,
   type DisplayTreeBranch,
+  type DisplayTreeNode,
   type DisplayTreeQuestion,
 } from '../helpers/displayTree';
 import {
@@ -29,12 +32,19 @@ import {
   TREE_NODE_MAX_WIDTH,
 } from '../helpers/displayTreeLayout';
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
-import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
+import {
+  displayNodeLabel,
+  rowCount,
+  rowCountText,
+  showsGrades,
+} from '../helpers/displayTreeNodeContent';
+import {NO_ROWS, type DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setPredictionPlaying} from '../redux';
 import {
   getDisplayTree,
+  getDisplayTreeCounts,
   getDisplayTreeNodeWidth,
   getPredictionStep,
   getPredictionTrace,
@@ -43,6 +53,7 @@ import {
 import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
 
+import appStyles from '../app.module.scss';
 import styles from './decisionTree.module.scss';
 
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});
@@ -83,6 +94,50 @@ const KeyHint = ({id, shown, children}: KeyHintProps) => (
   </Typography>
 );
 
+const GRADE_ICONS = {correct: 'circle-check', incorrect: 'circle-xmark'};
+
+interface GradeCountProps {
+  grade: 'correct' | 'incorrect';
+  count: number;
+}
+
+const GradeCount = ({grade, count}: GradeCountProps) =>
+  count > 0 && (
+    <span className={styles[grade]}>
+      <FontAwesomeV6Icon
+        iconName={GRADE_ICONS[grade]}
+        iconStyle="solid"
+        className={styles.gradeIcon}
+      />
+      {count}
+      <span className={appStyles.visuallyHidden}> {grade} </span>
+    </span>
+  );
+
+interface NodeCountsProps {
+  id: string;
+  node: DisplayTreeNode;
+  counts: DisplayTreeNodeCounts;
+}
+
+const NodeCounts = ({id, node, counts}: NodeCountsProps) => (
+  <Typography
+    id={id}
+    variant="body4"
+    component="span"
+    className={styles.counts}
+  >
+    {showsGrades(node, counts) ? (
+      <>
+        <GradeCount grade="correct" count={counts.correct} />
+        <GradeCount grade="incorrect" count={counts.incorrect} />
+      </>
+    ) : (
+      rowCountText(rowCount(counts))
+    )}
+  </Typography>
+);
+
 interface DecisionTreeProps {
   overlay?: ReactNode;
 }
@@ -95,6 +150,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const isStepping = useAppSelector(
     state => state.predictionStep !== undefined,
   );
+  const counts = useAppSelector(getDisplayTreeCounts);
   const nodeWidth = useAppSelector(getDisplayTreeNodeWidth);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
@@ -128,6 +184,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const textId = (id: string) => `${nameId}-text-${id}`;
   const columnId = (id: string) => `${nameId}-column-${id}`;
   const branchId = (id: string) => `${nameId}-branch-${id}`;
+  const countsId = (id: string) => `${nameId}-counts-${id}`;
   const wordId = (word: string) => `${nameId}-${word}`;
 
   const trackNodeElement = (id: string, element: HTMLElement | null) => {
@@ -301,14 +358,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   // eslint-disable-next-line jsx-a11y/role-has-required-aria-props -- ARIA 1.2 requires no aria-selected, and nodes are not selectable
                   role="treeitem"
                   aria-labelledby={nameParts.filter(Boolean).join(' ')}
-                  aria-describedby={
-                    [
-                      placed.id === DISPLAY_TREE_ROOT_ID && keysHintId,
-                      reachedIds.has(placed.id) && wordId('onPath'),
-                    ]
-                      .filter(Boolean)
-                      .join(' ') || undefined
-                  }
+                  aria-describedby={[
+                    placed.id === DISPLAY_TREE_ROOT_ID && keysHintId,
+                    countsId(placed.id),
+                    reachedIds.has(placed.id) && wordId('onPath'),
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
                   aria-current={placed.id === currentId ? 'step' : undefined}
                   aria-expanded={placed.node.type === 'question' || undefined}
                   aria-level={placed.depth + 1}
@@ -362,6 +418,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         text
                       )}
                     </Typography>
+                    <NodeCounts
+                      id={countsId(placed.id)}
+                      node={placed.node}
+                      counts={counts.get(placed.id) ?? NO_ROWS}
+                    />
                   </div>
                 </div>
               );

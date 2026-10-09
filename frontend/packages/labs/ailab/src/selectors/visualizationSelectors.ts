@@ -1,6 +1,7 @@
 import {createSelector} from 'reselect';
 
 import {ColumnTypes} from '../constants';
+import {getGradeOptions, gradeAccuracy} from '../helpers/accuracy';
 import {
   getUniqueOptions,
   getLocalizedColumnName,
@@ -12,7 +13,9 @@ import {
 } from '../helpers/displayTree';
 import {measureDisplayTreeNodes} from '../helpers/displayTreeNodeContent';
 import {
+  countDisplayTreeRows,
   traceDisplayTree,
+  type DisplayTreeNodeCounts,
   type DisplayTreeTrace,
 } from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
@@ -296,14 +299,42 @@ export function getPredictionStep(state: RootState): number {
   return state.predictionStep ?? pathLength - 1;
 }
 
-export const getDisplayTreeNodeWidth = createSelector(
-  [getDisplayTree, getDatasetId],
+// Counts the held-out rows, so the correct counts sum to the accuracy score's.
+export const getDisplayTreeCounts = createSelector(
+  [
+    getDisplayTree,
+    (state: RootState) => state.trainedModel,
+    (state: RootState) => state.accuracyCheckExamples,
+    (state: RootState) => state.accuracyCheckLabels,
+    (state: RootState) => state.accuracyCheckPredictedLabels,
+    (state: RootState) => getGradeOptions(state).tolerance,
+  ],
   (
     tree: DisplayTreeNode | undefined,
+    trainedModel,
+    examples: number[][],
+    labels: (number | string)[],
+    predictedLabels: (number | string)[],
+    tolerance: number | undefined,
+  ): Map<string, DisplayTreeNodeCounts> => {
+    if (!tree) {
+      return new Map();
+    }
+    const {grades} = gradeAccuracy(predictedLabels, labels, {tolerance});
+    const {root} = trainedModel!.toJSON() as SerializedTree;
+    return countDisplayTreeRows(tree, root!, examples, grades);
+  },
+);
+
+export const getDisplayTreeNodeWidth = createSelector(
+  [getDisplayTree, getDisplayTreeCounts, getDatasetId],
+  (
+    tree: DisplayTreeNode | undefined,
+    counts: Map<string, DisplayTreeNodeCounts>,
     datasetId: string | undefined,
   ): ((id: string) => number) => {
     const widths = tree
-      ? measureDisplayTreeNodes(tree, datasetId ?? '')
+      ? measureDisplayTreeNodes(tree, counts, datasetId ?? '')
       : new Map<string, number>();
     return id => widths.get(id)!;
   },

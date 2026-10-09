@@ -1,10 +1,16 @@
+import {getCorrectCount} from '../../src/helpers/accuracy';
 import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
-import {traceDisplayTree} from '../../src/helpers/displayTreeTrace';
+import {
+  countDisplayTreeRows,
+  NO_ROWS,
+  traceDisplayTree,
+} from '../../src/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import {playPredictionStep, setTestData} from '../../src/redux';
 import {
   getDisplayTree,
+  getDisplayTreeCounts,
   getPredictionStep,
   getPredictionTrace,
 } from '../../src/selectors/visualizationSelectors';
@@ -156,6 +162,87 @@ describe('traceDisplayTree', () => {
       path: ['0'],
       steps: [],
       prediction: 'Mammal',
+    });
+  });
+});
+
+describe('countDisplayTreeRows', () => {
+  const leaf = {distribution: [[1]]};
+  const model = {
+    splitColumn: 0,
+    splitValue: 0.5,
+    left: leaf,
+    right: {splitColumn: 0, splitValue: 1.5, left: leaf, right: leaf},
+  };
+  const tree = buildDisplayTree(
+    {name: 'DTClassifier', root: model},
+    {features: ['x'], featureNumberKey: {}, labelColumn: 'y'},
+  );
+
+  test('counts each row at every node on its path, by its grade', () => {
+    const counts = countDisplayTreeRows(
+      tree,
+      model,
+      [[0], [1], [2], [3]],
+      ['correct', 'incorrect', 'correct', 'correct'],
+    );
+
+    expect(Object.fromEntries(counts)).toEqual({
+      0: {correct: 3, incorrect: 1},
+      '0.0': {correct: 1, incorrect: 0},
+      0.1: {correct: 2, incorrect: 1},
+      '0.1.0': {correct: 0, incorrect: 1},
+      '0.1.1': {correct: 2, incorrect: 0},
+    });
+  });
+
+  test('leaves out a node no row reaches', () => {
+    const counts = countDisplayTreeRows(tree, model, [[0]], ['correct']);
+
+    expect([...counts.keys()]).toEqual(['0', '0.0']);
+  });
+});
+
+describe('getDisplayTreeCounts', () => {
+  const rows = (counts, id) => {
+    const {correct, incorrect} = counts.get(id) ?? NO_ROWS;
+    return correct + incorrect;
+  };
+
+  test.each([
+    ['a classification', 'zoo', zooOptions],
+    ['a regression', 'jeans', {}],
+  ])(
+    "counts %s tree's held-out rows, so the answers' correct counts sum to the score's",
+    (_kind, id, options) => {
+      const state = trainDataset(id, options);
+      const counts = getDisplayTreeCounts(state);
+      const answerIds = layoutDisplayTree(getDisplayTree(state))
+        .nodes.filter(placed => placed.answerIndex !== undefined)
+        .map(placed => placed.id);
+      const answerCorrect = answerIds.reduce(
+        (sum, answerId) => sum + (counts.get(answerId) ?? NO_ROWS).correct,
+        0,
+      );
+
+      expect(rows(counts, '0')).toBe(state.accuracyCheckExamples.length);
+      expect(answerCorrect).toBe(getCorrectCount(state).correct);
+    },
+  );
+
+  test("gives each question's rows to its children", () => {
+    const state = trainDataset('zoo', zooOptions);
+    const counts = getDisplayTreeCounts(state);
+
+    layoutDisplayTree(getDisplayTree(state)).nodes.forEach(placed => {
+      if (placed.children.length > 0) {
+        expect(
+          placed.children.reduce(
+            (sum, child) => sum + rows(counts, child.id),
+            0,
+          ),
+        ).toBe(rows(counts, placed.id));
+      }
     });
   });
 });
