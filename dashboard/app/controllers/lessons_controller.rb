@@ -5,6 +5,7 @@ class LessonsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :tutor_gallery]
   before_action :authenticate_user!, only: [:tutor, :tutor_gallery]
+  before_action(only: [:tutor, :tutor_gallery]) {head :forbidden unless current_user.can_use_lesson_deep_dive?}
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
