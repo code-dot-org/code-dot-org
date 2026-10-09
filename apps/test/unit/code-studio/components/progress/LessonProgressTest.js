@@ -4,10 +4,7 @@ import React from 'react';
 
 import {UnconnectedLessonProgress as LessonProgress} from '@cdo/apps/code-studio/components/progress/LessonProgress';
 import experiments from '@cdo/apps/util/experiments';
-import {
-  AiChatAccessLevels,
-  LevelStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 describe('LessonProgress', () => {
   const defaultProps = {
@@ -73,23 +70,9 @@ describe('LessonProgress', () => {
           {...defaultProps}
           hasLessonPlan={true}
           lessonTutorPath={'/tutor'}
-          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
         />
       );
       assert.equal(wrapper.find('LessonTutorProgressBubble').length, 1);
-    });
-
-    it('does not include tutor bubble with essential-only AI chat access', () => {
-      experiments.isEnabled = jest.fn(() => true);
-      const wrapper = shallow(
-        <LessonProgress
-          {...defaultProps}
-          hasLessonPlan={true}
-          lessonTutorPath={'/tutor'}
-          aiChatAccessLevel={AiChatAccessLevels.ESSENTIAL_ONLY}
-        />
-      );
-      assert.equal(wrapper.find('LessonTutorProgressBubble').length, 0);
     });
 
     it('passes lessonTutorPath to the bubble', () => {
@@ -99,7 +82,6 @@ describe('LessonProgress', () => {
           {...defaultProps}
           hasLessonPlan={true}
           lessonTutorPath={'/tutor'}
-          aiChatAccessLevel={AiChatAccessLevels.ENABLED}
         />
       );
       assert.equal(

@@ -1,7 +1,6 @@
 import {
   shouldShowAiTutor,
   areAiChatToolsEnabled,
-  canUseLessonDeepDive,
   APPS_WITH_ESSENTIAL_AI_CHAT,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 
@@ -106,23 +105,5 @@ describe('areAiChatToolsEnabled', () => {
         })
       ).toBe(false);
     });
-  });
-});
-
-describe('canUseLessonDeepDive', () => {
-  it('returns true when access level is enabled', () => {
-    expect(canUseLessonDeepDive('enabled')).toBe(true);
-  });
-
-  it('returns false when access level is essential_only', () => {
-    expect(canUseLessonDeepDive('essential_only')).toBe(false);
-  });
-
-  it('returns false when access level is disabled', () => {
-    expect(canUseLessonDeepDive('disabled')).toBe(false);
-  });
-
-  it('returns false when access level is unknown', () => {
-    expect(canUseLessonDeepDive(undefined)).toBe(false);
   });
 });

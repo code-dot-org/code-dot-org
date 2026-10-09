@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   lessonExtrasUrl,
@@ -35,7 +34,6 @@ class LessonProgress extends Component {
     lessonId: PropTypes.number,
     userId: PropTypes.number,
     userType: PropTypes.string,
-    aiChatAccessLevel: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
@@ -170,7 +168,6 @@ class LessonProgress extends Component {
       lessonId,
       userId,
       userType,
-      aiChatAccessLevel,
       navigateToLevelId,
       currentLevel,
       currentLevelId,
@@ -179,7 +176,6 @@ class LessonProgress extends Component {
     const showLessonTutorBubble =
       lessonTutorPath &&
       hasLessonPlan &&
-      canUseLessonDeepDive(aiChatAccessLevel) &&
       experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR);
 
     let levels = this.props.levels;
@@ -358,7 +354,6 @@ export default connect(
     lessonId: state.progress.currentLessonId,
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
-    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,

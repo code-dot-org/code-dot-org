@@ -386,27 +386,4 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _has_essential_aichat_access?.must_equal false
     end
   end
-
-  describe '#can_use_lesson_deep_dive?' do
-    subject(:can_use_lesson_deep_dive?) {user.can_use_lesson_deep_dive?}
-
-    it 'returns true for a student in an enabled section with a verified teacher' do
-      enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
-      allow(user).to receive(:teachers).and_return([qualified_teacher])
-      allow(user).to receive(:sections_as_student).and_return([enabled_section])
-      _can_use_lesson_deep_dive?.must_equal true
-    end
-
-    it 'returns false for a student in an essential-only section with a verified teacher' do
-      essential_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
-      allow(user).to receive(:teachers).and_return([qualified_teacher])
-      allow(user).to receive(:sections_as_student).and_return([essential_section])
-      _can_use_lesson_deep_dive?.must_equal false
-    end
-
-    it 'returns false for a student in a disabled section with a verified teacher' do
-      allow(user).to receive(:teachers).and_return([qualified_teacher])
-      _can_use_lesson_deep_dive?.must_equal false
-    end
-  end
 end
