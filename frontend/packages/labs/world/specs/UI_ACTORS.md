@@ -1340,24 +1340,27 @@ measured on the screen's axes too. A Slider stood on end — which is the
 ordinary reason to turn one, a volume fader runs up and down — could only be
 dragged sideways, along an axis it no longer had.
 
-Two fixes, on one principle: **an event about an actor carries the actor's
-frame.**
+The fix is in the Slider: it reads where the pointer is ALONG it rather than
+along x (`actors/stock/slider`). Upside down falls out for free: a half turn
+makes the cosine negative and the fraction runs the other way, which is what
+the thing on screen looks like it should do.
 
-- `is dragged by ⟨movement⟩` now carries the movement in the subject's own
-  axes (`rules/gestures`). `the screen is dragged by` keeps the screen's, and
-  that is the line — it is about nobody, so there is no frame to be relative
-  to.
-- The Slider reads where the pointer is ALONG it rather than along x
-  (`actors/stock/slider`). Upside down falls out for free: a half turn makes
-  the cosine negative and the fraction runs the other way, which is what the
-  thing on screen looks like it should do.
+`is dragged by ⟨movement⟩` was meant to change with it, carrying the movement
+in the subject's own axes, on the principle that an event about an actor
+carries the actor's frame. The helper was written and never called, and when
+it was found it was deleted rather than wired in (`rules/gestures`). The
+commonest drag handler adds `movement` to the actor's position, which is in
+screen axes, and a turned card moved by its own axes slides off sideways from
+the finger. Dragging to move is the ordinary case and a turned List or Scroll
+View the rare one, so the movement stays the screen's and a control that wants
+it along itself turns the vector in its own handler. The Slider needs neither,
+which is why nothing noticed.
 
-The general lesson is worth keeping: rotation is not just how a thing is
-DRAWN. Every question of the form "where is the pointer relative to this" has
-to be asked in that thing's frame, and there were three such questions —
-what was pressed, how far a drag moved, and where along a control the pointer
-is. All three were wrong in the same way and none of them was noticed until
-the map editor could turn something.
+The general lesson is worth keeping, with that exception: rotation is not just
+how a thing is DRAWN. Every question of the form "where is the pointer
+relative to this" has to be asked in that thing's frame — what was pressed,
+and where along a control the pointer is. "How far did it move" is a question
+about the screen, because the answer is usually spent moving something on it.
 
 ### What a phone-shaped kit does not yet answer
 
