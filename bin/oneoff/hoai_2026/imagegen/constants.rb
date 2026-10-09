@@ -27,6 +27,10 @@ QUALITY = nil
 # Styles the student form offers (see IMAGE_STYLE_LABELS in types.ts)
 STYLES = %w[pixel smooth]
 
+# The image UIs whose choices dump_prompts.ts enumerates: the image
+# dialog's adlib dropdowns, and the explore layout's word chips.
+SOURCES = %w[adlib explore]
+
 # The number of different images to produce per combo. Each live generation
 # rolls a fresh seed, so one per combo understates the variety.
 VARIANTS = 3

@@ -5,15 +5,21 @@ levels (the `hoai2026-dev` progression).
 
 ## Quick overview
 
-The image levels let a student describe an image with an "Adlib"-style
-prompt: a sentence template with a dropdown per slot, drawn from a small set
-of choices. The templates and choices live in
-`apps/static/spritelab_lab2/imageAdlibManifest.json`, one entry per
-`<kind>-<set>`:
+An image level lets a student describe an image by choosing words, never by
+typing a prompt. The lab has two UIs for that, and this script covers both:
 
-- the kind is `background`, `sprite`, `block`, or `object` (an object sprite)
-- `simple` is used by the image levels, `expanded` by freeplay, and
-  `treasure` by the jewel level (`level_mode.adlibs`)
+- **explore** (`source` `explore`) is the word-chip sentence of the
+  hoai2026-dev image levels, the ones with `level_mode.imageUi` set to
+  `explore`. Its sentences and words live in
+  `apps/static/spritelab_lab2/exploreSentences.json`, and a level picks one
+  by id with `level_mode.sentence`. A slot that is not `required` can be
+  left empty, and the phrase around it then drops out of the prompt, so an
+  empty choice is one of its combinations.
+- **adlib** (`source` `adlib`) is the image dialog's sentence with a
+  dropdown per slot, from
+  `apps/static/spritelab_lab2/imageAdlibManifest.json`, one entry per
+  `<kind>-<set>`. Free play uses the `expanded` sets; any level whose
+  `imageUi` is not `explore` uses the rest. Every slot is filled.
 
 The script generates an image for every combination of choices, in each
 style, so the variety can be reviewed and the results cached for playtests
@@ -21,8 +27,8 @@ and for when the AI service is down or costly.
 
 The general flow is to:
 
-1. Check the size of what you are about to generate with `--list-adlibs`.
-2. Generate the content, narrowed with `--adlib`, `--filter`, `--style`, and `--variants`.
+1. Check the size of what you are about to generate with `--list-ids`.
+2. Generate the content, narrowed with `--source`, `--id`, `--filter`, `--style`, and `--variants`.
 3. Check the output in the `image_output` path relative to the script.
 4. Upload it via the `--no-dry-run` flag and then carefully, with appropriate AWS credentials, the `--production` flag.
 
@@ -36,10 +42,12 @@ in `apps/src/p5lab/spritelab/lab2/ai/images/`) and prints one job per line.
 
 A job is one image, or, for a character sprite, one animated set: a base
 image, then four poses (idling, walking, jumping, landing) that each send
-the base image back as a reference, just as the lab's "Generate animation"
-does. A set costs five requests. The stance and poses follow the creature
-choice's `bodyPlan` in the manifest (upright, quadruped or bird; upright
-when absent), as the lab's do.
+the base image back as a reference, just as the lab does. A set costs five
+requests. The explore layout animates every character, so an explore
+character job is always a set; the image dialog offers it as a checkbox, so
+an adlib character is dumped both ways. The stance and poses follow the
+creature choice's `bodyPlan` in the manifest (upright, quadruped or bird;
+upright when absent), as the lab's do.
 
 Those modules must stay free of `@cdo/...` imports and browser APIs, or
 `dump_prompts.ts` stops working.
@@ -66,18 +74,21 @@ The `generate_images` script calls the OpenAI image API using the
 `openai_student_learning_api_key` config key. The model defaults to the
 `MODEL` constant in `constants.rb`; override it with `--model`.
 
-To see how many jobs and images each adlib would produce:
+To see how many jobs and images each sentence would produce:
 
 ```
-./bin/oneoff/hoai_2026/imagegen/generate_images --list-adlibs
-./bin/oneoff/hoai_2026/imagegen/generate_images --list-adlibs --produce-animations
+./bin/oneoff/hoai_2026/imagegen/generate_images --list-ids
+./bin/oneoff/hoai_2026/imagegen/generate_images --list-ids --produce-animations
 ```
 
-The full set, at three variants each, is about 27,000 single images, or about
-95,000 with animations. Start with the adlibs the non-freeplay levels use:
+One image per combination of everything is 42,488 images, animated sets
+included; at the default of three variants, three times that. Start with
+what the hoai2026-dev levels actually show, which is 3,148 jobs and 10,316
+images at one variant:
 
 ```
-./bin/oneoff/hoai_2026/imagegen/generate_images -a sprite-simple -a background-simple -a block-simple -a object-treasure
+./bin/oneoff/hoai_2026/imagegen/generate_images -v 1 -S explore --produce-animations \
+  -i character -i friend -i place-time -i place-detail -i block -i treasure
 ```
 
 To try the pipeline on a handful of jobs first:
@@ -103,10 +114,11 @@ rate limits, and server errors are retried in place.
 
 ### Filtering
 
-- `-a`/`--adlib ID` restricts to the given adlib ids (repeatable).
-- `-f`/`--filter TEXT` keeps adlibs whose id contains the text, e.g. `--filter=-simple`.
+- `-S`/`--source SOURCE` restricts to one UI's choices, `explore` or `adlib` (repeatable).
+- `-i`/`--id ID` restricts to the given sentence or adlib ids (repeatable).
+- `-f`/`--filter TEXT` keeps ids containing the text, e.g. `--filter=-simple`.
 - `-s`/`--style STYLE` restricts to `pixel` or `smooth` (repeatable).
-- `--produce-animations` adds animated character sets; `--no-produce-singles` leaves only those.
+- `--produce-animations` adds animated character sets; `--no-produce-singles` leaves only those. An explore character is animated only, so it needs this flag; the script says so when it skips one.
 - `-v`/`--variants N` sets how many images to make per combo. Each live generation is a fresh roll, so one per combo understates the variety.
 
 ## Output
@@ -116,17 +128,18 @@ cropping, and pixel-grid normalization. The lab is meant to fetch a cached
 image and run that same pipeline on it, so a cached image ends up like a
 live one.
 
-Paths are built from the choice ids in template slot order, which never
-contain dots:
+Paths are built from the choice ids in sentence slot order, which never
+contain dots; an empty optional slot is `none`:
 
 ```
-<adlibId>/<style>/<choice ids>.<variant>.png
-<adlibId>/<style>/<choice ids>.<variant>.json
-<adlibId>/<style>/animated/<choice ids>.<variant>.<pose>.png
-<adlibId>/<style>/animated/<choice ids>.<variant>.json
+<source>/<id>/<style>/<choice ids>.<variant>.png
+<source>/<id>/<style>/<choice ids>.<variant>.json
+<source>/<id>/<style>/animated/<choice ids>.<variant>.<pose>.png
+<source>/<id>/<style>/animated/<choice ids>.<variant>.json
 ```
 
-For example, `sprite-simple/pixel/brave.robot.00.png`. The `.json` file
+For example, `adlib/sprite-simple/pixel/brave.robot.00.png` and
+`explore/character/pixel/animated/none.blob.cape.00.base.png`. The `.json` file
 records the prompts sent, the model, whether the images are transparent,
 and the frame files. The OpenAI image API takes no
 seed, so none is recorded, and a cached image cannot be replayed by seed as
