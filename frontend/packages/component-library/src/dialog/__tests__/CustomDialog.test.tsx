@@ -344,6 +344,20 @@ describe('CustomDialog Component', () => {
     );
   });
 
+  it('should pass over a match that cannot take focus, such as a hidden input', async () => {
+    render(
+      <CustomDialog {...defaultProps}>
+        <p id="dsco-dialog-description">Description</p>
+        <input type="hidden" name="token" value="t" />
+        <button type="button">Visible</button>
+      </CustomDialog>,
+    );
+
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: 'Visible'})).toHaveFocus(),
+    );
+  });
+
   it('should keep focus that a mount effect moved into the panel', async () => {
     const Host = () => {
       const inputRef = useRef<HTMLInputElement>(null);

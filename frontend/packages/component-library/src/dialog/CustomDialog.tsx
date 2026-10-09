@@ -88,8 +88,11 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   // Runs after MUI's trap has focused its container and after mount effects; focus already inside the panel stays put.
   const focusFirstControl = useCallback(() => {
     const panel = panelRef.current;
-    if (panel && !panel.contains(document.activeElement)) {
-      panel.querySelector<HTMLElement>(FOCUSABLE_SELECTOR)?.focus();
+    if (!panel || panel.contains(document.activeElement)) return;
+    // A match can refuse focus (a hidden input, an invisible control), so stop at the first that takes it.
+    for (const el of panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)) {
+      el.focus();
+      if (document.activeElement === el) return;
     }
   }, []);
 
