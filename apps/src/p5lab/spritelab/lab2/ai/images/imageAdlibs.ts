@@ -3,8 +3,7 @@
 // bundled from apps/static today; an S3-hosted copy is the plan, slotting in
 // behind imageAdlibFor with the bundled file as the fetch-failure fallback.
 
-import type {
-  AdlibChoices,
+import {
   AdlibsType,
   AdlibType,
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
@@ -72,22 +71,4 @@ export function manifestBodyPlans(): string[] {
       return plan ? [plan] : [];
     })
   );
-}
-
-/** The template's slot names in the order the sentence reads them. */
-export function adlibSlots(adlib: AdlibType): string[] {
-  return [...adlib.template.matchAll(/\{(\w+)\}/g)].map(m => m[1]);
-}
-
-/**
- * The chosen option ids in slot order, which is how a combo is named
- * everywhere outside the dialog (analytics, the cache's paths). Undefined
- * when a slot has no choice yet.
- */
-export function adlibChoiceIds(
-  adlib: AdlibType,
-  choices: AdlibChoices
-): string[] | undefined {
-  const ids = adlibSlots(adlib).map(slot => choices[slot]);
-  return ids.every(Boolean) ? ids : undefined;
 }

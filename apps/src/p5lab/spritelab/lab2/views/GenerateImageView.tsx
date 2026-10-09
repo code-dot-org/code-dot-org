@@ -26,18 +26,11 @@ import {
   generateCharacterSet,
 } from '../ai/images/characterSet';
 import {
-  adlibChoiceIds,
   ImageAdlibSet,
   bodyPlanFor,
   imageAdlibFor,
   imageAdlibId,
 } from '../ai/images/imageAdlibs';
-import {
-  CachedImage,
-  findCachedImage,
-  ImageCacheMissError,
-  ImageSource,
-} from '../ai/images/imageCache';
 import {
   GeneratedImageResult,
   generateImage,
@@ -134,10 +127,6 @@ export interface ImageFormOptions {
   adlibSet?: ImageAdlibSet;
   /** The adlib is the only prompt input: hide the free-text box. */
   adlibOnly?: boolean;
-  /** Where a combo's picture comes from; the model when unset. */
-  imageSource?: ImageSource;
-  /** Another tree to read cached pictures from (QA). */
-  imageCacheUrl?: string;
   /** Style the form starts on for new images (default smooth). */
   defaultStyle?: ImageStyle;
   /** A generation request is leaving; fires before the model call, so the
@@ -211,8 +200,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   advanced,
   adlibSet,
   adlibOnly,
-  imageSource = 'live',
-  imageCacheUrl,
   defaultStyle,
   onPaintManually,
   onGenerateStart,
@@ -272,8 +259,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   // Counts generate runs; progress callbacks from older runs are dropped.
   const progressEpochRef = useRef(0);
-  // The cached variant shown last, so Generate again shows another.
-  const lastCachedVariantRef = useRef<number>();
   // Adlib prompt combos (student form): a sentence with word choices, an
   // alternative to typing. Typed text wins while present.
   const adlib =
@@ -342,52 +327,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUseSeed = existing?.generation?.seed !== undefined;
   const canUsePrevious = !!existing;
 
-  // The cached picture for the combo as chosen, when the level reads from
-  // the cache and it has one of the right style and form.
-  const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
-    if (imageSource === 'live' || !usingAdlib || !adlib || !adlibSet) {
-      return undefined;
-    }
-    const choiceIds = adlibChoiceIds(adlib, adlibChoices);
-    if (!choiceIds) {
-      return undefined;
-    }
-    const cached = await findCachedImage({
-      adlibId: imageAdlibId(imageType, adlibSet),
-      choiceIds,
-      style,
-      avoidVariant: lastCachedVariantRef.current,
-      baseUrl: imageCacheUrl,
-    });
-    // A set's base frame serves as a single sprite; single pictures
-    // cannot become a set.
-    return makingSet && cached && !cached.characterSet ? undefined : cached;
-  }, [
-    imageSource,
-    usingAdlib,
-    adlib,
-    adlibSet,
-    adlibChoices,
-    imageType,
-    style,
-    imageCacheUrl,
-    makingSet,
-  ]);
-
   const generate = useCallback(async () => {
-    onGenerateStart?.();
-    setMode('generating');
-    setError(null);
-    // Progress from a superseded run must not paint over this one's: a set
-    // abandoned to its error handler can still call back.
-    const epoch = ++progressEpochRef.current;
-    setProgress(null);
-    const cached = await findCached();
-    if (!cached && imageSource === 'cached') {
-      setError("This picture isn't ready yet. Try different words.");
-      setMode('prompt');
-      return;
-    }
     // true attaches the project context (level path, app) for per-level
     // breakdowns.
     analyticsReporter.sendEvent(
@@ -399,11 +339,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         ...(usingAdlib && adlibSet
           ? {adlibId: imageAdlibId(imageType, adlibSet, subject)}
           : {}),
-        imageSource,
-        cached: !!cached,
       },
       true
     );
+    onGenerateStart?.();
+    setMode('generating');
+    setError(null);
+    // Progress from a superseded run must not paint over this one's: a set
+    // abandoned to its error handler can still call back.
+    const epoch = ++progressEpochRef.current;
+    setProgress(null);
     try {
       const options: GenerateImageOptions = {
         imageType,
@@ -424,48 +369,29 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         }
         options.inputImageDataURI = dataURI;
       }
-      const run = (source?: CachedImage) =>
-        makingSet
-          ? generateCharacterSet(
-              promptText,
-              {
-                style,
-                temperature: options.temperature,
-                pixelGrid: options.pixelGrid,
-                // The combo's creature word says how the character is
-                // built; a typed prompt is drawn upright.
-                bodyPlan: usingAdlib
-                  ? bodyPlanFor(adlibChoices.creature)
-                  : undefined,
-                cached: source,
-              },
-              p => {
-                if (epoch === progressEpochRef.current) {
-                  setProgress(p);
-                }
-              }
-            )
-          : generateImage(promptText, {...options, cached: source});
-      let result: GeneratedImageResult;
-      try {
-        result = await run(cached);
-      } catch (e) {
-        // The manifest promised a file the tree lacks: the model covers it
-        // where the level allows.
-        if (
-          cached &&
-          e instanceof ImageCacheMissError &&
-          imageSource === 'cached-then-live'
-        ) {
-          console.warn(e.message);
-          result = await run();
-        } else {
-          throw e;
-        }
+      if (makingSet) {
+        const result = await generateCharacterSet(
+          promptText,
+          {
+            style,
+            temperature: options.temperature,
+            pixelGrid: options.pixelGrid,
+            // The combo's creature word says how the character is built; a
+            // typed prompt is drawn upright.
+            bodyPlan: usingAdlib
+              ? bodyPlanFor(adlibChoices.creature)
+              : undefined,
+          },
+          p => {
+            if (epoch === progressEpochRef.current) {
+              setProgress(p);
+            }
+          }
+        );
+        await onAccept(result, create ? newImageName() : undefined);
+        return;
       }
-      if (cached) {
-        lastCachedVariantRef.current = cached.variant;
-      }
+      const result = await generateImage(promptText, options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? newImageName() : undefined);
     } catch (e) {
@@ -506,8 +432,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     onGenerateStart,
     onAccept,
     makingSet,
-    findCached,
-    imageSource,
   ]);
 
   const botImage =

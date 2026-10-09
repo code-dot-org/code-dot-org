@@ -1,27 +1,30 @@
-// Pre-generated images for adlib combos, served from S3 beside the music and
-// dancer files Mix and Move used. A cached image is the model's raw output,
-// not a finished asset: the same local pipeline (background removal, crop,
-// pixel normalization, strip assembly) runs on it as on a live result, so
-// improvements to that pipeline reach cached images on their next use.
+// Pre-generated images for the explore layout's sentences, served from S3
+// beside the music and dancer files Mix and Move used. A cached image is
+// the model's raw output, not a finished asset: the same local pipeline
+// (background removal, crop, pixel normalization, strip assembly) runs on
+// it as on a live result, so improvements to that pipeline reach cached
+// images on their next use.
 //
-// Layout, one folder per combo, one per style inside it:
+// Layout, one folder per filled sentence, one per style inside it:
 //
 //   <base>/<version>/manifest.json
-//   <base>/<version>/<adlibId>/<choice-ids>/<style>/<NN>.json      sidecar
-//   <base>/<version>/<adlibId>/<choice-ids>/<style>/<NN>.png       single
-//   <base>/<version>/<adlibId>/<choice-ids>/<style>/<NN>-base.png  set frames
-//   <base>/<version>/<adlibId>/<choice-ids>/<style>/<NN>-walking.png ...
+//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>.json      sidecar
+//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>.png       single
+//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>-base.png  set frames
+//   <base>/<version>/<sentenceId>/<word-ids>/<style>/<NN>-walking.png ...
 //
-// A generator writes this tree offline; the manifest names what exists and
-// which variants review rejected.
+// <word-ids> are the chosen word ids in the order the sentence reads its
+// slots, joined by '-', with EMPTY_WORD_ID for an optional slot left
+// empty. A generator writes this tree offline; the manifest names what
+// exists and which variants review rejected.
 
 import type {GeneratedFile} from 'ai';
 
 import {bytesToBase64} from './encoding';
 import {ImageStyle, ImageType} from './types';
 
-/** Where a level's combo images come from. cached-then-live falls back to
-    the model when the cache has no image for the combo. */
+/** Where a level's pictures come from. cached-then-live falls back to the
+    model when the cache has no picture for the sentence. */
 export const IMAGE_SOURCES = ['live', 'cached', 'cached-then-live'] as const;
 export type ImageSource = (typeof IMAGE_SOURCES)[number];
 
@@ -38,33 +41,39 @@ export const IMAGE_CACHE_BASE_URL =
 // from its own manifest, and a browser may still hold the old one.
 export const IMAGE_CACHE_VERSION = 'v1';
 
+/** Stands in a path for an optional slot the student left empty. Word ids
+    are kebab-case, so it cannot be one. */
+export const EMPTY_WORD_ID = '_';
+
 /** A character set's frames by pose label, 'base' first (the sidecar lists
     them); a single image is 'single'. */
 export type CachedFrame = 'single' | 'base' | string;
 
-/** One combo set as the published manifest describes it. */
-export interface CachedAdlibEntry {
-  /** Slot names in template order: the order choice ids join in a path. */
+/** One sentence as the published manifest describes it. */
+export interface CachedSentenceEntry {
+  /** Slot ids in the order the sentence reads them: the order word ids
+      join in a path. */
   slots: string[];
   /** Sprites cached as five-frame character sets, not single pictures. */
   characterSet: boolean;
-  /** Variants drawn per combo, keyed `<choice-ids>/<style>`: numbered from
-      00 without gaps. A combo not listed has none. */
+  /** Variants drawn per filled sentence, keyed `<word-ids>/<style>`:
+      numbered from 00 without gaps. A filling not listed has none. */
   variants: Record<string, number>;
 }
 
 export interface ImageCacheManifest {
   version: string;
-  adlibs: Record<string, CachedAdlibEntry>;
-  /** Variants review rejected, as `<choice-ids>/<style>/<NN>` per combo set. */
+  sentences: Record<string, CachedSentenceEntry>;
+  /** Variants review rejected, as `<word-ids>/<style>/<NN>` per sentence. */
   blockList: Record<string, string[]>;
 }
 
 /** What the generator recorded beside one variant's files. */
 export interface CachedSidecar {
-  adlibId: string;
+  sentenceId: string;
+  /** The chosen word id per slot id; an empty optional slot is absent. */
   choices: Record<string, string>;
-  /** The student sentence, as the dialog would have sent it. */
+  /** The student's sentence, as the explore layout sends it. */
   prompt: string;
   imageType: ImageType;
   style: ImageStyle;
@@ -89,9 +98,9 @@ export class ImageCacheMissError extends Error {
   }
 }
 
-/** One variant of one combo, ready to stand in for the model. */
+/** One variant of one filled sentence, ready to stand in for the model. */
 export interface CachedImage {
-  /** `<adlibId>/<choice-ids>/<style>/<NN>`, for logs and analytics. */
+  /** `<sentenceId>/<word-ids>/<style>/<NN>`, for logs and analytics. */
   key: string;
   variant: number;
   characterSet: boolean;
@@ -120,12 +129,12 @@ export function frameFileName(
   }.${extension}`;
 }
 
-export function comboPath(
-  adlibId: string,
-  choiceIds: string[],
+export function sentencePath(
+  sentenceId: string,
+  wordIds: string[],
   style: ImageStyle
 ): string {
-  return `${adlibId}/${choiceIds.join('-')}/${style}`;
+  return `${sentenceId}/${wordIds.join('-')}/${style}`;
 }
 
 // One manifest fetch per page per base URL; a failure is remembered as
@@ -180,9 +189,9 @@ async function fetchRaw(url: string): Promise<GeneratedFile> {
 }
 
 export interface FindCachedImageParams {
-  adlibId: string;
-  /** Option ids in slot order (adlibChoiceIds). */
-  choiceIds: string[];
+  sentenceId: string;
+  /** Word ids in the sentence's slot order (sentenceWordIds). */
+  wordIds: string[];
   style: ImageStyle;
   /** The variant shown last time; another is preferred when one exists. */
   avoidVariant?: number;
@@ -192,16 +201,17 @@ export interface FindCachedImageParams {
 }
 
 /**
- * A variant of the combo the cache holds, chosen at random among those
- * review kept, or undefined when the cache has nothing for it: no manifest,
- * the combo not drawn in that style, or every variant blocked.
+ * A variant of the filled sentence the cache holds, chosen at random among
+ * those review kept, or undefined when the cache has nothing for it: no
+ * manifest, the sentence not drawn with those words in that style, or
+ * every variant blocked.
  */
 export async function findCachedImage(
   params: FindCachedImageParams
 ): Promise<CachedImage | undefined> {
   const {
-    adlibId,
-    choiceIds,
+    sentenceId,
+    wordIds,
     style,
     avoidVariant,
     baseUrl = IMAGE_CACHE_BASE_URL,
@@ -209,16 +219,16 @@ export async function findCachedImage(
   } = params;
   const versionUrl = `${baseUrl}${version}`;
   const manifest = await loadManifest(versionUrl);
-  const entry = manifest?.adlibs[adlibId];
-  const path = comboPath(adlibId, choiceIds, style);
-  // The manifest keys combos and blocked variants within their set: the
-  // path minus its head.
-  const relative = path.slice(adlibId.length + 1);
+  const entry = manifest?.sentences[sentenceId];
+  const path = sentencePath(sentenceId, wordIds, style);
+  // The manifest keys fillings and blocked variants within their sentence:
+  // the path minus its head.
+  const relative = path.slice(sentenceId.length + 1);
   const variantCount = entry?.variants[relative] ?? 0;
   if (!manifest || !entry) {
     return undefined;
   }
-  const blocked = new Set(manifest.blockList[adlibId] || []);
+  const blocked = new Set(manifest.blockList[sentenceId] || []);
   let candidates = [...Array(variantCount).keys()].filter(
     v => !blocked.has(`${relative}/${variantName(v)}`)
   );

@@ -104,7 +104,7 @@ describe('generateImage', () => {
 
   it('takes a cached picture in place of the model, with its own record', async () => {
     const cached = {
-      key: 'background-story/sunny-forest/smooth/01',
+      key: 'place-time/sunny-forest-_/smooth/01',
       variant: 1,
       characterSet: false,
       sidecar: async () => ({seed: 4242, temperature: 0.8}),

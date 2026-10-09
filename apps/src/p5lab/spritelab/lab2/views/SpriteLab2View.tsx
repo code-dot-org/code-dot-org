@@ -1850,9 +1850,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // shows only behind ?image-free-text=true. Freeplay hands back the
     // paint tools.
     adlibOnly: !imageFreeTextParam,
-    imageSource:
-      imageSourceParam || imageSourceForMode(levelProperties.levelMode),
-    imageCacheUrl: imageCacheUrlParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
   };
@@ -1909,6 +1906,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               uploadImage={uploadImage}
               instructions={guide.text}
               showTts={showTtsFor(levelProperties)}
+              imageSource={
+                imageSourceParam ||
+                imageSourceForMode(levelProperties.levelMode)
+              }
+              imageCacheUrl={imageCacheUrlParam}
             />
           ) : (
             <>

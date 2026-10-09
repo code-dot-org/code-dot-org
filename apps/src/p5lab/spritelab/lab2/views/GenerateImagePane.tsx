@@ -18,7 +18,6 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI, dataURIToBytes} from '../ai/images/encoding';
 import {ImageAdlibSet} from '../ai/images/imageAdlibs';
-import {ImageSource} from '../ai/images/imageCache';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -209,11 +208,6 @@ interface GenerateImagePaneProps {
   adlibSet?: ImageAdlibSet;
   /** The adlib is the only prompt input: no free-text box. */
   adlibOnly?: boolean;
-  /** Where a combo's picture comes from: the model, the cache, or the
-      cache with the model behind it (imageCache.ts). */
-  imageSource?: ImageSource;
-  /** Another tree to read cached pictures from (QA). */
-  imageCacheUrl?: string;
   /** Style the generate form starts on for new images. */
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
@@ -265,8 +259,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   advanced,
   adlibSet,
   adlibOnly,
-  imageSource,
-  imageCacheUrl,
   defaultStyle,
   paintDisabled,
   imageLevel,
@@ -904,8 +896,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           advanced={advanced}
           adlibSet={adlibSet}
           adlibOnly={adlibOnly}
-          imageSource={imageSource}
-          imageCacheUrl={imageCacheUrl}
           defaultStyle={defaultStyle}
           paintDisabled={paintDisabled}
           imageLevel={imageLevel}

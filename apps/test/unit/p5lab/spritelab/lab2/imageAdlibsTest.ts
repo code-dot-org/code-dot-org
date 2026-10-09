@@ -1,6 +1,4 @@
 import {
-  adlibChoiceIds,
-  adlibSlots,
   bodyPlanFor,
   IMAGE_ADLIB_SETS,
   imageAdlibFor,
@@ -20,11 +18,7 @@ describe('imageAdlibs manifest', () => {
   it('names its sets from its keys', () => {
     expect([...IMAGE_ADLIB_SETS].sort()).toEqual([
       'expanded',
-      'friend',
-      'hero',
-      'platform',
       'simple',
-      'story',
       'treasure',
     ]);
     expect(isImageAdlibSet('treasure')).toBe(true);
@@ -104,45 +98,5 @@ describe('creature body plans', () => {
     plans.forEach(plan => {
       expect(BODY_PLANS).toContain(plan);
     });
-  });
-});
-
-describe('imageAdlibs role sets', () => {
-  it('carries the sets the hoai2026-dev image levels can name, by type', () => {
-    expect(imageAdlibFor('sprite', 'hero')).toBeDefined();
-    expect(imageAdlibFor('sprite', 'friend')).toBeDefined();
-    expect(imageAdlibFor('background', 'story')).toBeDefined();
-    expect(imageAdlibFor('background', 'platform')).toBeDefined();
-  });
-
-  it('gives the hero and the friend different creatures', () => {
-    const creatures = (set: ImageAdlibSet) =>
-      imageAdlibFor('sprite', set)!.options.creature.map(o => o.id);
-    expect(creatures('hero')).not.toEqual(
-      expect.arrayContaining(creatures('friend'))
-    );
-  });
-});
-
-describe('adlib helpers', () => {
-  const adlib = {
-    template: 'A {look} {treasure}',
-    options: {
-      treasure: [{id: 'gem', text: 'gem'}],
-      look: [{id: 'shiny', text: 'shiny'}],
-    },
-    variantCount: 1,
-  };
-
-  it('orders slots as the sentence reads them, not as the options list', () => {
-    expect(adlibSlots(adlib)).toEqual(['look', 'treasure']);
-    expect(adlibChoiceIds(adlib, {treasure: 'gem', look: 'shiny'})).toEqual([
-      'shiny',
-      'gem',
-    ]);
-  });
-
-  it('has no ids while a slot is unchosen', () => {
-    expect(adlibChoiceIds(adlib, {look: 'shiny'})).toBeUndefined();
   });
 });
