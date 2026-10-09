@@ -1,7 +1,5 @@
 /*
-  Training data: what a training run produces. The model is a live class
-  instance, and the arrays that will join it here are rebuilt from the dataset
-  rather than saved with the project, so none of it belongs in Redux.
+  Training data: what a training run produces.
 */
 
 import {
@@ -18,11 +16,8 @@ import {
 import {useAppSelector} from './hooks';
 import type {TrainedModel} from './types';
 
-export interface TrainingData {
+export interface TrainingDataContextValue {
   trainedModel?: TrainedModel;
-}
-
-export interface TrainingDataContextValue extends TrainingData {
   setTrainedModel: (model?: TrainedModel) => void;
   // Taken before a training run so cancelling it can put back what was there.
   snapshotTrainedModel: () => void;
@@ -43,7 +38,7 @@ export const TrainingDataProvider = ({children}: TrainingDataProviderProps) => {
   const levelLoadCount = useAppSelector(state => state.levelLoadCount);
   const loadedLevel = useRef(levelLoadCount);
 
-  // loadLevel() runs outside React and so can't clear the model itself. The
+  // loadLevel() runs outside the module and so can't clear the model itself. The
   // guard skips the first run, where there is nothing to clear yet.
   useEffect(() => {
     if (loadedLevel.current === levelLoadCount) {
