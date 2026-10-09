@@ -36,9 +36,11 @@ export function installFlyoutFooterRoom(
 }
 
 /**
- * Report the flyout's width now and whenever it changes. Returns an undo.
+ * Report the toolbox column's width now and whenever it changes: the
+ * category list when there is one (its flyout comes and goes beside it),
+ * otherwise the always-open flyout. Returns an undo.
  */
-export function observeFlyoutWidth(
+export function observeToolboxWidth(
   workspace: BlocklyCore.WorkspaceSvg | null | undefined,
   onWidth: (px: number) => void
 ): () => void {
@@ -46,12 +48,20 @@ export function observeFlyoutWidth(
   if (!flyout) {
     return () => {};
   }
-  const report = () => onWidth(flyout.getWidth());
+  const toolbox = workspace?.getToolbox();
+  const report = () =>
+    onWidth(toolbox ? toolbox.getWidth() : flyout.getWidth());
   report();
-  // The flyout svg's width attribute is what position() writes.
-  const svg = flyout.getWorkspace().getParentSvg();
-  const observer = new MutationObserver(report);
-  observer.observe(svg, {attributes: true, attributeFilter: ['width']});
+  // The flyout svg's width attribute is what position() writes; the
+  // category list is a div, sized by its contents.
+  const observed = toolbox
+    ? (toolbox as BlocklyCore.Toolbox).HtmlDiv
+    : flyout.getWorkspace().getParentSvg();
+  if (!observed) {
+    return () => {};
+  }
+  const observer = new ResizeObserver(report);
+  observer.observe(observed);
   return () => observer.disconnect();
 }
 

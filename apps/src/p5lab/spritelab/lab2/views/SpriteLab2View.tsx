@@ -429,8 +429,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const openBlockHelp = blockHelp && BLOCK_HELP[blockHelp.blockType];
 
   // The new-block catalog: the unit's new blocks stay out of the toolbox
-  // until the student adds them from the dialog.
-  const catalogOn = !!levelProperties.blockCatalog && !isToolboxMode;
+  // until the student adds them from the dialog. Off in the levelbuilder's
+  // edit modes, whose saves would carry its flags into every student's
+  // start sources.
+  const catalogOn = !!levelProperties.blockCatalog && !isLevelEditMode;
   const catalog = useMemo(
     () =>
       catalogOn
@@ -451,6 +453,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [catalog, chosenBlocks]
   );
   const [showBlockCatalog, setShowBlockCatalog] = useState(false);
+  // Dismissing the catalog, not opening it, is what counts as seen: an
+  // opening cut short (a Start Over that leaves the level, a reload) comes
+  // back next time.
+  const closeBlockCatalog = useCallback(() => {
+    setShowBlockCatalog(false);
+    if (!currentSources.blockCatalogSeen) {
+      patchSources({blockCatalogSeen: true});
+    }
+  }, [currentSources.blockCatalogSeen, patchSources]);
   const addCatalogBlock = useCallback(
     (type: string) => {
       if (!chosenBlockSet.has(type)) {
@@ -1306,23 +1317,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [catalog.length, isEditable, patchSources]);
 
-  // The catalog opens itself the first time the student lands here.
+  // The catalog opens itself the first time the student lands here, and
+  // closes if the level changes under it.
   useEffect(() => {
-    if (
-      catalog.length &&
+    if (!catalog.length) {
+      setShowBlockCatalog(false);
+    } else if (
       isEditable &&
       animationsSeeded &&
       !currentSources.blockCatalogSeen
     ) {
       setShowBlockCatalog(true);
-      patchSources({blockCatalogSeen: true});
     }
   }, [
     catalog.length,
     isEditable,
     animationsSeeded,
     currentSources.blockCatalogSeen,
-    patchSources,
   ]);
 
   // Help icons beside the toolbox's blocks, for the freeplay level (and a
@@ -1974,7 +1985,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           entries={catalog}
           chosen={chosenBlockSet}
           onAdd={addCatalogBlock}
-          onClose={() => setShowBlockCatalog(false)}
+          onClose={closeBlockCatalog}
         />
       )}
       <ResourcePanel

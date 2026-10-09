@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react';
 
 import {
   installFlyoutFooterRoom,
-  observeFlyoutWidth,
+  observeToolboxWidth,
   widenFlyoutMargin,
 } from '../blockly/flyoutRoom';
 
@@ -27,8 +27,8 @@ interface AddBlocksButtonProps {
 
 /**
  * The bar pinned over the bottom of the toolbox that opens the new-block
- * catalog. It takes the flyout's width, and the flyout gains room to scroll
- * its last block clear of it and a wider margin for the dots.
+ * catalog. It takes the toolbox column's width, and the flyout gains room
+ * to scroll its last block clear of it and a wider margin for the dots.
  */
 const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
   workspaceVersion,
@@ -45,7 +45,7 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
     const workspace = getWorkspace();
     const undoMargin = widenFlyoutMargin(workspace, MARGIN_FACTOR);
     const undoRoom = installFlyoutFooterRoom(workspace, FOOTER_PX);
-    const undoWidth = observeFlyoutWidth(workspace, setWidth);
+    const undoWidth = observeToolboxWidth(workspace, setWidth);
     return () => {
       undoMargin();
       undoRoom();
