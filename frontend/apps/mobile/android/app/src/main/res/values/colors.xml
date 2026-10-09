@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CodeAI brand-purple-50 -->
+    <color name="codeai_purple">#4C42CF</color>
+    <color name="splash_background">#FFFFFF</color>
+</resources>

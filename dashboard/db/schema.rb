@@ -2722,7 +2722,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_06_120000) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at", precision: nil
     t.datetime "anonymized_at", precision: nil

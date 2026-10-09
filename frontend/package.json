@@ -19,7 +19,7 @@
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
-    "dev": "turbo clean --filter '@code-dot-org/studio...' && turbo watch dev --filter @code-dot-org/studio",
+    "dev": "turbo clean --filter '@code-dot-org/mobile...' && turbo watch dev --filter @code-dot-org/mobile",
     "format": "prettier --check *",
     "format:fix": "prettier --write .",
     "lint": "turbo lint",

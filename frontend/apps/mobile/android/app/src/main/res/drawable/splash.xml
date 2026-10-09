@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch screen before Android 12: the wordmark centered on white. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_background" />
+    <item
+        android:width="280dp"
+        android:height="47.37dp"
+        android:drawable="@drawable/logo_codeai"
+        android:gravity="center" />
+</layer-list>
