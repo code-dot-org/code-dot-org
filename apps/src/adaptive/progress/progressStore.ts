@@ -1,23 +1,24 @@
 // Where a student's pathway progress lives: the server, keyed by the unit and
-// the adaptive level. Level steps are not written here; their progress is
-// their level's own, reported through milestones.
+// the adaptive level. A level step's progress is not written here; it is its
+// level's own, reported through milestones.
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Answer, EMPTY_PROGRESS, Progress} from './model';
+import {Answer, EMPTY_PROGRESS, GeneratedContent, Progress} from './model';
 
 export interface ProgressKey {
   scriptId: number;
   levelId: number;
 }
 
-/** One save of a non-level step; the server sets times only once. */
+/** One save of a step; a level step may carry only generatedInstructions. */
 export interface StepWrite {
   started?: true;
   completed?: true;
   timeSinceLastSave?: number;
   answers?: {questionId: number | string; list: Answer[]};
+  generatedInstructions?: GeneratedContent;
 }
 
 export interface ProgressStore {

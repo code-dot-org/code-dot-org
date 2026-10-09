@@ -68,6 +68,23 @@ describe('createServerProgressStore', () => {
     ]);
   });
 
+  it('sends generated instructions on the same chain', async () => {
+    const store = createServerProgressStore(http);
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+
+    store.saveStep(key, 'read', {started: true});
+    await store.saveStep(key, 'project', {generatedInstructions});
+
+    expect(http.put.mock.calls.map(call => call[0])).toEqual([
+      '/adaptive_progress/steps/read',
+      '/adaptive_progress/steps/project',
+    ]);
+    expect(JSON.parse(http.put.mock.calls[1][1])).toEqual({
+      ...key,
+      generatedInstructions,
+    });
+  });
+
   it('logs a failed write and still sends the next', async () => {
     http.put.mockRejectedValueOnce(new Error('500'));
     const store = createServerProgressStore(http);

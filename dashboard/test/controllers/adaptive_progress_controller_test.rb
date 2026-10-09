@@ -157,14 +157,18 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_equal [{'passed' => false}], rows['try'].validation_history
     assert_nil rows['try'].progress
     assert_equal generated, rows['project'].generated_instructions
-    assert_empty steps, 'a row without progress is not a started step'
+    assert_equal({'timeSpent' => 0, 'generatedInstructions' => generated}, steps['project'])
+    refute steps['try'].key?('status'), 'a row without progress is not a started step'
   end
 
   test "level steps take their state from the step level's user level" do
     put_step 'try', generatedInstructions: {'instructions' => 'Do this.'}
     user_level = create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: -150, time_spent: 12)
 
-    assert_equal({'status' => 'started', 'timeSpent' => 12}, steps['try'])
+    assert_equal(
+      {'status' => 'started', 'timeSpent' => 12, 'generatedInstructions' => {'instructions' => 'Do this.'}},
+      steps['try']
+    )
 
     user_level.update!(best_result: ActivityConstants::FREE_PLAY_RESULT)
     assert_equal 'complete', steps['try']['status']

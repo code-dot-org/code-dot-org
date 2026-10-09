@@ -119,21 +119,25 @@ class AdaptiveProgressController < ApplicationController
     steps = {}
     user_level = adaptive_user_level
     if user_level
-      UserAdaptiveStep.where(user_level_id: user_level.id).where.not(progress: nil).find_each do |row|
-        progress = row.progress
-        steps[row.step_id] = {
-          'status' => progress['completedAt'] ? 'complete' : 'started',
-          'timeSpent' => progress['timeSpent'] || 0,
-        }.merge(progress.slice('startedAt', 'completedAt', 'submitted', 'answers'))
+      UserAdaptiveStep.where(user_level_id: user_level.id).find_each do |row|
+        entry = {'timeSpent' => 0}
+        if (progress = row.progress)
+          entry['status'] = progress['completedAt'] ? 'complete' : 'started'
+          entry['timeSpent'] = progress['timeSpent'] || 0
+          entry.merge!(progress.slice('startedAt', 'completedAt', 'submitted', 'answers'))
+        end
+        entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
+        steps[row.step_id] = entry if entry.key?('status') || entry.key?('generatedInstructions')
       end
     end
 
     step_ids_by_level_id = @level.step_levels.to_h {|step_id, level| [level.id, step_id]}
     step_user_levels.each do |step_user_level|
-      steps[step_ids_by_level_id[step_user_level.level_id]] = {
+      step_id = step_ids_by_level_id[step_user_level.level_id]
+      steps[step_id] = (steps[step_id] || {}).merge(
         'status' => step_user_level.passing? ? 'complete' : 'started',
         'timeSpent' => step_user_level.time_spent || 0,
-      }
+      )
     end
     steps
   end

@@ -88,6 +88,16 @@ describe('checkpointStatus', () => {
       'complete'
     );
   });
+
+  it('is not started by a step that holds only generated instructions', () => {
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+    const progress = {
+      steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
+    };
+    expect(checkpointStatus(pathway.checkpoints[0], pathway, progress)).toBe(
+      'available'
+    );
+  });
 });
 
 describe('getStatusMap', () => {
@@ -244,15 +254,30 @@ describe('useProgress', () => {
     });
   });
 
-  it('keeps generated instructions for the page without saving them', async () => {
+  it('saves generated instructions with the step without starting it', async () => {
     const store = fakeStore();
     const {result} = await renderProgress(store);
     const generated = {instructions: 'Hi', inputsHash: 'ab'};
 
     act(() => result.current.updateStepContext('try', {generated}));
 
-    expect(result.current.stepContextMap).toEqual({try: {generated}});
-    expect(store.saveStep).not.toHaveBeenCalled();
+    expect(result.current.stepContextMap.try.generated).toEqual(generated);
+    expect(result.current.statusMap.intro).toBe('available');
+    expect(store.saveStep).toHaveBeenCalledWith(key, 'try', {
+      generatedInstructions: generated,
+    });
+  });
+
+  it('restores loaded generated instructions', async () => {
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+    const store = fakeStore({
+      steps: {project: {timeSpent: 0, generatedInstructions}},
+    });
+    const {result} = await renderProgress(store);
+
+    expect(result.current.stepContextMap.project.generated).toEqual(
+      generatedInstructions
+    );
   });
 
   it('resets locally and on the server', async () => {
