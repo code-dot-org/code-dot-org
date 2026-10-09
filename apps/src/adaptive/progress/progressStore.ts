@@ -12,7 +12,7 @@ export interface ProgressKey {
   levelId: number;
 }
 
-/** One save of a non-level step. The server sets times once. */
+/** One save of a non-level step; the server sets times only once. */
 export interface StepWrite {
   started?: true;
   completed?: true;
@@ -29,10 +29,7 @@ export interface ProgressStore {
 const query = ({scriptId, levelId}: ProgressKey) =>
   `scriptId=${scriptId}&levelId=${levelId}`;
 
-/**
- * A store whose writes reach the server one at a time, in the order they
- * were made. A failed write is logged and dropped; the next still runs.
- */
+/** Sends writes one at a time, in order; a failed one is logged and skipped. */
 export function createServerProgressStore(
   http: Pick<typeof HttpClient, 'get' | 'put' | 'delete'> = HttpClient
 ): ProgressStore {

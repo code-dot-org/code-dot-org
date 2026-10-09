@@ -48,10 +48,7 @@ export function generateInputsHash(prompt: string): string {
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
 
-/**
- * A step's state, as the server reports it. A level step carries only
- * status and timeSpent, taken from its level's own progress.
- */
+/** A step's state; a level step's comes from its level's own progress. */
 export interface StepProgress {
   status: 'started' | 'complete';
   /** Seconds on screen, summed across visits. */
@@ -62,7 +59,6 @@ export interface StepProgress {
   answers?: StepAnswers;
 }
 
-/** Every started step's state, by step id. */
 export interface Progress {
   steps: {[stepId: string]: StepProgress};
 }
@@ -74,10 +70,7 @@ const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
   return !!last && progress.steps[last.id]?.status === 'complete';
 };
 
-/**
- * A checkpoint is started by any of its steps and complete with its last
- * step. It unlocks once every checkpoint it requires is complete.
- */
+/** Started by any step, complete with its last, unlocked by its requires. */
 export function checkpointStatus(
   checkpoint: Checkpoint,
   pathway: Pathway,
