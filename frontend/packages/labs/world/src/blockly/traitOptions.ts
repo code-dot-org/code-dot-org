@@ -14,7 +14,7 @@ import type {Blockly} from '@code-dot-org/blockly';
 import './builtinMeta';
 import {FOUNDATION_TRAIT_VALUES} from './foundation';
 import {liveDropdown, orNone} from './moduleOptions';
-import {pascal, type RuleMeta} from './ruleMeta';
+import {pascal, type RuleMeta, type TraitMeta} from './ruleMeta';
 import {memberValue, ruleByName} from './ruleRegistry';
 
 // The project's declarative `.rule` rules, indexed by module path (what a world's
@@ -349,6 +349,21 @@ export function traitSubjectOfValue(
     for (const trait of rule.traits) {
       if (trait.ref.exportName && memberValue(trait.ref) === value) {
         return trait.subject ?? 'actor';
+      }
+    }
+  }
+  return undefined;
+}
+
+/**
+ * The trait a field value names, from the rules in play — its name as its
+ * author wrote it, and its description. Undefined for a value nothing declares.
+ */
+export function traitOfValue(value: string): TraitMeta | undefined {
+  for (const rule of rulesInPlay(projectRuleRefs)) {
+    for (const trait of rule.traits) {
+      if (trait.ref.exportName && memberValue(trait.ref) === value) {
+        return trait;
       }
     }
   }

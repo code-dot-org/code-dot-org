@@ -143,6 +143,7 @@ import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {styleImportFieldExtension} from './extensions/styleImportField';
+import {traitTooltipExtension} from './extensions/traitTooltip';
 import {worldContextExtension} from './extensions/worldContext';
 import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
 import {
@@ -619,6 +620,8 @@ const worldUseTrait = defineBlock({
     // …and, when the rule that declares this trait has been deleted, a warning
     // saying so — since the generator's answer to that is to write nothing.
     missingRuleExtension,
+    // …and what the chosen trait is for, after what the block does.
+    traitTooltipExtension,
   ],
   style: 'behavior_blocks',
   tooltip: 'Give the actor a trait (its properties and behavior).',
@@ -5991,6 +5994,7 @@ const worldNearPlaceWithTrait = defineBlock({
     worldContextExtension,
     anyTraitOptionsExtension,
     valueShadowExtension,
+    traitTooltipExtension,
   ],
   style: 'sprite_blocks',
   tooltip:
@@ -6193,7 +6197,11 @@ const worldActorsWithTrait = defineBlock({
   message0: 'all actors with trait %1',
   args0: [{type: 'field_dropdown', name: 'TRAIT', options: anyTraitOptions}],
   output: 'Actor',
-  extensions: [worldContextExtension, anyTraitOptionsExtension],
+  extensions: [
+    worldContextExtension,
+    anyTraitOptionsExtension,
+    traitTooltipExtension,
+  ],
   style: 'sprite_blocks',
   tooltip: 'Every actor in the world that has a given trait.',
   generator: {
@@ -10749,7 +10757,11 @@ const worldHasTrait = defineBlock({
   ],
   inputsInline: true,
   output: 'Boolean',
-  extensions: [actorInputExtension, anyTraitOptionsExtension],
+  extensions: [
+    actorInputExtension,
+    anyTraitOptionsExtension,
+    traitTooltipExtension,
+  ],
   style: 'logic_blocks',
   tooltip:
     'Whether an actor — or a camera — has a given trait. Every trait in play ' +
@@ -10816,8 +10828,16 @@ const traitMutation = (opts: {
     nextStatement: true,
     extensions:
       opts.subject === 'camera'
-        ? [cameraInputExtension, cameraTraitOptionsExtension]
-        : [actorInputExtension, actorTraitOptionsExtension],
+        ? [
+            cameraInputExtension,
+            cameraTraitOptionsExtension,
+            traitTooltipExtension,
+          ]
+        : [
+            actorInputExtension,
+            actorTraitOptionsExtension,
+            traitTooltipExtension,
+          ],
     style: 'setup_blocks',
     tooltip: opts.tooltip,
     generator: {
