@@ -23,6 +23,10 @@ module Cdo
     # Match the Lambda: users may connect from any host.
     CLIENT_HOST = '%'.freeze
 
+    # MySQL "Access denied for user", which is how a user that was never created presents.
+    # https://dev.mysql.com/doc/mysql-errors/8.0/en/server-error-reference.html
+    ACCESS_DENIED = 1045
+
     # The ordered SQL statements that create/update one user and grant its
     # privileges, mirroring the Lambda. The block escapes a string for use inside
     # SQL single quotes (e.g. Mysql2::Client#escape) and must not add the
@@ -93,6 +97,36 @@ module Cdo
       ensure
         admin_client.close
       end
+    end
+
+    # The configured application users that MySQL refuses to authenticate, for callers that want to
+    # point a developer at `db:provision_sql_users` before an access-denied error surfaces somewhere
+    # far from its cause. Empty when every user can log in, and also when the check cannot run at
+    # all: an unreachable database is a different failure, reported by whatever needed it.
+    def self.unauthenticated_users
+      require 'mysql2'
+
+      {'writer' => CDO.db_credential_writer, 'reader' => CDO.db_credential_reader}.
+        reject {|_name, credential| authenticates?(credential)}.keys
+    rescue StandardError
+      []
+    end
+
+    # Check whether a SQL user `credential` can open a connection. Re-raises anything that is not an authentication
+    # failure, so a caller can distinguish "no such user" from "no such server".
+    def self.authenticates?(credential)
+      client = Mysql2::Client.new(
+        host: CDO.db_endpoint_writer,
+        port: CDO.db_endpoint_writer_port,
+        username: credential['username'],
+        password: credential['password'],
+        connect_timeout: 2
+      )
+      client.close
+      true
+    rescue Mysql2::Error => exception
+      raise unless exception.error_number == ACCESS_DENIED
+      false
     end
   end
 end
