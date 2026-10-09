@@ -1,6 +1,5 @@
 class UserLessonObjectiveReflectionsController < ApplicationController
   before_action :authenticate_user!
-  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
 
   def create
     reflection = UserLessonObjectiveReflection.new(
