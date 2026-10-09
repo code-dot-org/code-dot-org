@@ -12,7 +12,7 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
-    "widget_view": "false",
+    "widget_view": "true",
     "require_edit_to_continue": "true",
     "initial_view_mode": "split",
     "predict_settings": {
@@ -34,6 +34,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-07 13:24:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-07 13:25:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-07 13:24:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-07 13:25:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-08 18:02:33 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

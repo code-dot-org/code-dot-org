@@ -60,6 +60,11 @@ export interface RootState {
   prediction: number | string | undefined;
   predictionTestData: Record<string, string | number>;
   predictionInputs: number[];
+  // Undefined shows the whole path; a number shows it up to that step.
+  predictionStep: number | undefined;
+  predictionStepByHand: boolean;
+  predictionPlaying: boolean;
+  predictionCount: number;
   trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
@@ -130,6 +135,10 @@ export const initialState: RootState = {
   prediction: undefined,
   predictionTestData: {},
   predictionInputs: [],
+  predictionStep: undefined,
+  predictionStepByHand: false,
+  predictionPlaying: false,
+  predictionCount: 0,
   trainedModel: undefined,
   trainedModelDetails: {},
   currentPanel: 'datasetView',
@@ -293,10 +302,26 @@ const ailabSlice = createSlice({
         state.prediction = action.payload.prediction;
         state.predictionTestData = {...state.testData};
         state.predictionInputs = action.payload.inputs;
+        state.predictionStep = undefined;
+        state.predictionStepByHand = false;
+        state.predictionPlaying = false;
+        state.predictionCount += 1;
       },
       prepare(prediction: number | string, inputs: number[]) {
         return {payload: {prediction, inputs}};
       },
+    },
+    playPredictionStep(state, action: PayloadAction<number>) {
+      state.predictionStep = action.payload;
+      state.predictionStepByHand = false;
+    },
+    setPredictionPlaying(state, action: PayloadAction<boolean>) {
+      state.predictionPlaying = action.payload;
+    },
+    stepPredictionByHand(state, action: PayloadAction<number>) {
+      state.predictionStep = action.payload;
+      state.predictionStepByHand = true;
+      state.predictionPlaying = false;
     },
     resetState(state) {
       return {
@@ -473,6 +498,9 @@ export const {
   setTestData,
   setTestDataValues,
   setPrediction,
+  playPredictionStep,
+  setPredictionPlaying,
+  stepPredictionByHand,
   resetState,
   setTrainedModel,
   setTrainedModelDetail,

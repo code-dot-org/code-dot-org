@@ -10663,6 +10663,8 @@ en:
               name: HoAI26 Testing w T&L
             lesson-21:
               name: HoAI26 Playtest 1
+            lesson-22:
+              name: WebLab Adaptive
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -25160,6 +25162,8 @@ en:
               name: Other
             lesson-3:
               name: Theater Playground
+            lesson-4:
+              name: CSP Unit 2 Project Examples
           lesson_groups: {}
           name: joi-playground
           title: Joi's Playground Script
@@ -30372,6 +30376,8 @@ en:
               name: 'Lesson 10: Color Images'
             lesson-26:
               name: 'Lesson 11: Machine Learning'
+            lesson-27:
+              name: 'Lesson 15: Algorithmic Bias'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
