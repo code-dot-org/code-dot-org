@@ -60,11 +60,10 @@ export const createSketchSnapshotBlob = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  // Supplying this stops html-to-image from inlining every font the page declares.
-  const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
-
   let blob: Blob | null;
   try {
+    // Supplying this stops html-to-image from inlining every font the page declares.
+    const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
     blob = await toBlob(viewport, {
       backgroundColor,
       fontEmbedCSS,

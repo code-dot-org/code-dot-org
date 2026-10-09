@@ -2,17 +2,33 @@ import {getSketchFontEmbedCss} from '@cdo/apps/sketchlab/reactFlow/utils/getSket
 
 // Each test uses its own font file names: the module caches downloads by URL
 // for the lifetime of the page, and that cache outlives a single test.
-const geistFace = (
+const fontFace = (
   file: string,
-  {weight = '400', style = 'normal'}: {weight?: string; style?: string} = {}
+  {
+    family = 'Geist',
+    weight = '400',
+    style = 'normal',
+    unicodeRange,
+  }: {
+    family?: string;
+    weight?: string;
+    style?: string;
+    unicodeRange?: string;
+  } = {}
 ) => `
   @font-face {
-    font-family: 'Geist';
+    font-family: '${family}';
     font-style: ${style};
     font-weight: ${weight};
+    ${unicodeRange ? `unicode-range: ${unicodeRange};` : ''}
     src: url('/fonts/${file}.woff2') format('woff2');
   }
 `;
+
+// Our bundled Latin and per-locale fonts carry these ranges; a sketch that
+// draws only Latin text must not pull the Hebrew file, or vice versa.
+const LATIN_RANGE = 'U+0000-00FF, U+0131, U+2000-206F';
+const HEBREW_RANGE = 'U+0590-05FF, U+FB1D-FB4F';
 
 const addStyleSheet = (css: string) => {
   const style = document.createElement('style');
@@ -20,14 +36,21 @@ const addStyleSheet = (css: string) => {
   document.head.appendChild(style);
 };
 
-const addTextElement = (fontFamily: string, inlineStyle = '') => {
+const addTextElement = (
+  fontFamily: string,
+  inlineStyle = '',
+  text = 'a sketch label'
+) => {
   const element = document.createElement('div');
   element.setAttribute('style', `font-family: ${fontFamily}; ${inlineStyle}`);
-  element.textContent = 'a sketch label';
+  element.textContent = text;
   document.body.appendChild(element);
 };
 
-const MAIN_FONT_STACK = "Geist, 'Noto Sans', 'Noto Sans JP', sans-serif";
+// The real --font-family-main stack: Geist first, then the per-locale Noto
+// fallbacks that cover scripts Geist has no glyphs for.
+const MAIN_FONT_STACK =
+  "Geist, 'Noto Sans', 'Noto Sans Hebrew', 'Noto Sans JP', sans-serif";
 
 describe('getSketchFontEmbedCss', () => {
   let fetchMock: jest.Mock;
@@ -35,7 +58,7 @@ describe('getSketchFontEmbedCss', () => {
   beforeAll(() => {
     // jsdom parses @font-face rules but does not expose their constructor.
     if (!('CSSFontFaceRule' in window)) {
-      addStyleSheet(geistFace('constructor-probe'));
+      addStyleSheet(fontFace('constructor-probe'));
       const sheet = document.head.querySelector('style')?.sheet;
       Object.assign(window, {
         CSSFontFaceRule: sheet?.cssRules[0].constructor,
@@ -59,7 +82,7 @@ describe('getSketchFontEmbedCss', () => {
   });
 
   it('inlines the font file of a face the sketch draws with', async () => {
-    addStyleSheet(geistFace('regular-inline'));
+    addStyleSheet(fontFace('regular-inline'));
     addTextElement(MAIN_FONT_STACK);
 
     const css = await getSketchFontEmbedCss(document.body);
@@ -75,9 +98,9 @@ describe('getSketchFontEmbedCss', () => {
 
   it('leaves out faces at a weight or style the sketch does not use', async () => {
     addStyleSheet(
-      geistFace('regular-unused') +
-        geistFace('bold-unused', {weight: '700'}) +
-        geistFace('italic-unused', {style: 'italic'})
+      fontFace('regular-unused') +
+        fontFace('bold-unused', {weight: '700'}) +
+        fontFace('italic-unused', {style: 'italic'})
     );
     addTextElement(MAIN_FONT_STACK, 'font-weight: 700;');
 
@@ -90,7 +113,7 @@ describe('getSketchFontEmbedCss', () => {
   });
 
   it('matches a variable face whose weight range covers the weight in use', async () => {
-    addStyleSheet(geistFace('variable-range', {weight: '100 900'}));
+    addStyleSheet(fontFace('variable-range', {weight: '100 900'}));
     addTextElement(MAIN_FONT_STACK, 'font-weight: 500;');
 
     await getSketchFontEmbedCss(document.body);
@@ -99,7 +122,7 @@ describe('getSketchFontEmbedCss', () => {
   });
 
   it('embeds nothing when the sketch only uses OS fonts', async () => {
-    addStyleSheet(geistFace('regular-os-fonts'));
+    addStyleSheet(fontFace('regular-os-fonts'));
     addTextElement("Georgia, 'Times New Roman', serif");
 
     const css = await getSketchFontEmbedCss(document.body);
@@ -109,7 +132,7 @@ describe('getSketchFontEmbedCss', () => {
   });
 
   it('embeds nothing when the sketch has no text', async () => {
-    addStyleSheet(geistFace('regular-no-text'));
+    addStyleSheet(fontFace('regular-no-text'));
     const shape = document.createElement('div');
     shape.setAttribute('style', `font-family: ${MAIN_FONT_STACK}`);
     document.body.appendChild(shape);
@@ -122,7 +145,7 @@ describe('getSketchFontEmbedCss', () => {
 
   it('drops a face whose file fails to download and keeps the rest', async () => {
     addStyleSheet(
-      geistFace('missing-file') + geistFace('present-file', {weight: '700'})
+      fontFace('missing-file') + fontFace('present-file', {weight: '700'})
     );
     addTextElement(MAIN_FONT_STACK);
     addTextElement(MAIN_FONT_STACK, 'font-weight: 700;');
@@ -142,13 +165,51 @@ describe('getSketchFontEmbedCss', () => {
   });
 
   it('downloads a font file once across exports', async () => {
-    addStyleSheet(geistFace('cached-file'));
+    addStyleSheet(fontFace('cached-file'));
     addTextElement(MAIN_FONT_STACK);
 
     await getSketchFontEmbedCss(document.body);
     await getSketchFontEmbedCss(document.body);
 
     expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('inlines a bundled fallback font, not just the primary one', async () => {
+    addStyleSheet(
+      fontFace('latin-unused', {unicodeRange: LATIN_RANGE}) +
+        fontFace('hebrew-used', {
+          family: 'Noto Sans Hebrew',
+          unicodeRange: HEBREW_RANGE,
+        })
+    );
+    // The space is the only character Geist's Latin subset covers; it needs no
+    // glyph, so it must not be what pulls that subset in.
+    addTextElement(MAIN_FONT_STACK, '', 'שלום עולם');
+
+    await getSketchFontEmbedCss(document.body);
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(
+      'http://localhost-studio.code.org/fonts/hebrew-used.woff2'
+    );
+  });
+
+  it('leaves out a subset whose unicode-range the text does not reach', async () => {
+    addStyleSheet(
+      fontFace('latin-subset', {unicodeRange: LATIN_RANGE}) +
+        fontFace('hebrew-subset', {
+          family: 'Noto Sans Hebrew',
+          unicodeRange: HEBREW_RANGE,
+        })
+    );
+    addTextElement(MAIN_FONT_STACK, '', 'latin only');
+
+    await getSketchFontEmbedCss(document.body);
+
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(
+      'http://localhost-studio.code.org/fonts/latin-subset.woff2'
+    );
   });
 
   it('ignores stylesheets it is not allowed to read', async () => {

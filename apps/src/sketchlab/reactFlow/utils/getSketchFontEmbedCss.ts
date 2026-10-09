@@ -3,9 +3,11 @@
 // which can get very large.
 // Instead we inline only the faces the sketch actually draws with, from
 // stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
-
-// Geist is the only web font we rely on.
-const EMBEDDABLE_FONT_FAMILIES = new Set(['geist']);
+//
+// Our bundled fonts are split into unicode-range subsets -- Geist ships 90
+// faces and a CJK locale's Noto font ships about 100 -- so matching on family,
+// weight and style alone would still drag in megabytes. We also require the
+// face's unicode-range to cover a character the sketch actually draws.
 
 const DEFAULT_FONT_WEIGHT = 400;
 const WEIGHT_KEYWORDS = new Map([
@@ -15,10 +17,21 @@ const WEIGHT_KEYWORDS = new Map([
 
 const FONT_SOURCE_URL_PATTERN = /url\((["']?)([^"')]+)\1\)/;
 
+// The three forms a unicode-range takes: "U+4??", "U+0100-02BA", "U+0131".
+const UNICODE_RANGE_PATTERN = /^u\+([0-9a-f?]{1,6})(?:-([0-9a-f]{1,6}))?$/;
+
+// A code point is the number Unicode assigns a character: "A" is 65, "ש" is
+// 1488. A @font-face names the ones its file covers as ranges of those numbers.
+interface CodePointRange {
+  low: number;
+  high: number;
+}
+
 interface UsedFontFace {
   family: string;
   weight: number;
   style: string;
+  codePoints: Set<number>;
 }
 
 const fontFileCache = new Map<string, Promise<string>>();
@@ -49,30 +62,77 @@ const normalizeStyle = (declared: string): string => {
   return keyword === 'oblique' ? 'italic' : keyword;
 };
 
-const hasOwnText = (element: Element): boolean =>
-  Array.from(element.childNodes).some(
-    node => node.nodeType === Node.TEXT_NODE && node.textContent?.trim()
+const ownText = (element: Element): string =>
+  Array.from(element.childNodes)
+    .filter(node => node.nodeType === Node.TEXT_NODE)
+    .map(node => node.textContent)
+    .join('');
+
+const parseUnicodeRange = (declared: string): CodePointRange[] | undefined => {
+  const ranges: CodePointRange[] = [];
+  for (const token of declared.split(',')) {
+    const match = UNICODE_RANGE_PATTERN.exec(token.trim().toLowerCase());
+    if (!match) {
+      return undefined;
+    }
+    const [, start, end] = match;
+    ranges.push({
+      low: parseInt(start.replace(/\?/g, '0'), 16),
+      high: parseInt(end ?? start.replace(/\?/g, 'f'), 16),
+    });
+  }
+  return ranges.length > 0 ? ranges : undefined;
+};
+
+// A face with no unicode-range covers everything; so does one we cannot parse,
+// since embedding a file we do not need beats dropping one we do.
+const ruleCoversAnyCodePoint = (
+  rule: CSSFontFaceRule,
+  codePoints: Set<number>
+): boolean => {
+  const declared = rule.style.getPropertyValue('unicode-range').trim();
+  if (!declared) {
+    return true;
+  }
+  const ranges = parseUnicodeRange(declared);
+  if (!ranges) {
+    return true;
+  }
+  return Array.from(codePoints).some(codePoint =>
+    ranges.some(({low, high}) => codePoint >= low && codePoint <= high)
   );
+};
 
 const collectUsedFaces = (root: HTMLElement): UsedFontFace[] => {
   const faces = new Map<string, UsedFontFace>();
   const elements = [root, ...Array.from(root.querySelectorAll('*'))];
   elements.forEach(element => {
-    if (!hasOwnText(element)) {
+    const text = ownText(element);
+    if (!text.trim()) {
       return;
     }
     const computed = window.getComputedStyle(element);
+    const weight = Number(computed.fontWeight) || DEFAULT_FONT_WEIGHT;
+    const style = normalizeStyle(computed.fontStyle);
     computed.fontFamily
       .split(',')
       .map(family => unquote(family).toLowerCase())
-      .filter(family => EMBEDDABLE_FONT_FAMILIES.has(family))
       .forEach(family => {
-        const face: UsedFontFace = {
+        const key = `${family}|${weight}|${style}`;
+        const face = faces.get(key) ?? {
           family,
-          weight: Number(computed.fontWeight) || DEFAULT_FONT_WEIGHT,
-          style: normalizeStyle(computed.fontStyle),
+          weight,
+          style,
+          codePoints: new Set<number>(),
         };
-        faces.set(`${face.family}|${face.weight}|${face.style}`, face);
+        for (const character of text) {
+          // Whitespace needs no glyph, and counting it would match the Latin
+          // subset of every family even for a sketch written in another script.
+          if (!/\s/.test(character)) {
+            face.codePoints.add(character.codePointAt(0) as number);
+          }
+        }
+        faces.set(key, face);
       });
   });
   return Array.from(faces.values());
@@ -101,7 +161,8 @@ const ruleMatchesFace = (rule: CSSFontFaceRule, face: UsedFontFace): boolean =>
   unquote(rule.style.getPropertyValue('font-family')).toLowerCase() ===
     face.family &&
   normalizeStyle(rule.style.getPropertyValue('font-style')) === face.style &&
-  ruleSupportsWeight(rule, face.weight);
+  ruleSupportsWeight(rule, face.weight) &&
+  ruleCoversAnyCodePoint(rule, face.codePoints);
 
 const blobToDataUrl = (blob: Blob): Promise<string> =>
   new Promise((resolve, reject) => {
