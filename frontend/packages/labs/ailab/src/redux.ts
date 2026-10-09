@@ -68,8 +68,7 @@ export interface RootState {
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
-  // Bumped by every loadLevel(), so React state outside Redux can clear itself.
-  levelLoadCount: number;
+  resetCount: number;
   mode?: Mode;
 }
 
@@ -143,7 +142,7 @@ export const initialState: RootState = {
   instructionsKey: null,
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
-  levelLoadCount: 0,
+  resetCount: 0,
 };
 
 const ailabSlice = createSlice({
@@ -298,7 +297,7 @@ const ailabSlice = createSlice({
         mode: state.mode,
         reserveLocation: state.reserveLocation,
         instructionsEnabled: state.instructionsEnabled,
-        levelLoadCount: state.levelLoadCount + 1,
+        resetCount: state.resetCount + 1,
       };
     },
     setTrainedModelDetail: {

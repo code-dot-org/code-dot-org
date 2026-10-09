@@ -35,19 +35,17 @@ interface TrainingDataProviderProps {
 export const TrainingDataProvider = ({children}: TrainingDataProviderProps) => {
   const [trainedModel, setTrainedModel] = useState<TrainedModel | undefined>();
   const previousTrainedModel = useRef<TrainedModel | undefined>(undefined);
-  const levelLoadCount = useAppSelector(state => state.levelLoadCount);
-  const loadedLevel = useRef(levelLoadCount);
+  const resetCount = useAppSelector(state => state.resetCount);
+  const appliedReset = useRef(resetCount);
 
-  // loadLevel() runs outside the module and so can't clear the model itself. The
-  // guard skips the first run, where there is nothing to clear yet.
   useEffect(() => {
-    if (loadedLevel.current === levelLoadCount) {
+    if (appliedReset.current === resetCount) {
       return;
     }
-    loadedLevel.current = levelLoadCount;
+    appliedReset.current = resetCount;
     setTrainedModel(undefined);
     previousTrainedModel.current = undefined;
-  }, [levelLoadCount]);
+  }, [resetCount]);
 
   const snapshotTrainedModel = useCallback(() => {
     previousTrainedModel.current = trainedModel;

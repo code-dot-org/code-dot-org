@@ -67,7 +67,8 @@ describe('TrainingDataContext', () => {
     expect(trainingData().trainedModel).toBeUndefined();
   });
 
-  test('loading a level clears the model and the snapshot', () => {
+  // Dispatched by loadLevel(), and by choosing or uploading a dataset.
+  test('a state reset clears the model and the snapshot', () => {
     const {store, trainingData} = renderContext();
     act(() => trainingData().snapshotTrainedModel());
     act(() => trainingData().setTrainedModel(MODEL));

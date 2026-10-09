@@ -41,12 +41,12 @@ describe('startOver', () => {
     expect(store.getState().accuracyCheckExamples).toEqual([]);
   });
 
-  test('counts the level load, so the training data context clears', () => {
-    const before = store.getState().levelLoadCount;
+  test('counts the reset, so the training data context clears', () => {
+    const before = store.getState().resetCount;
 
     startOver();
 
-    expect(store.getState().levelLoadCount).toBe(before + 1);
+    expect(store.getState().resetCount).toBe(before + 1);
   });
 
   test("reloads the level's mode", () => {
