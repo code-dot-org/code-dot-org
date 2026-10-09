@@ -50,13 +50,15 @@ export const PROJECT_STEP_ID = 'project';
 
 /** A step's state; a level step's comes from its level's own progress. */
 export interface StepProgress {
-  status: 'started' | 'complete';
+  /** Absent until started; the entry may hold only generated instructions. */
+  status?: 'started' | 'complete';
   /** Seconds on screen, summed across visits. */
   timeSpent: number;
   startedAt?: string;
   completedAt?: string;
   submitted?: boolean;
   answers?: StepAnswers;
+  generatedInstructions?: GeneratedContent;
 }
 
 export interface Progress {

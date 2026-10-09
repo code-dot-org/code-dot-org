@@ -13,7 +13,6 @@ import {
   Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
-  GeneratedContent,
   PROJECT_STEP_ID,
   Progress,
   StepContext,
@@ -61,10 +60,6 @@ export function useProgress(
 ) {
   // Undefined until the stored progress has been loaded.
   const [progress, setProgress] = useState<Progress>();
-  // Generated instructions live for the page only; they are not progress.
-  const [generated, setGenerated] = useState<{
-    [stepId: string]: GeneratedContent;
-  }>({});
   // Destructure key so its members can be used as primitive deps.
   const {scriptId, levelId} = key;
 
@@ -119,7 +114,11 @@ export function useProgress(
   const startStep = useCallback(
     (step: Step) => {
       if (step.id === PROJECT_STEP_ID) return;
-      updateStep(step.id, entry => entry ?? {status: 'started', timeSpent: 0});
+      updateStep(step.id, entry => ({
+        timeSpent: 0,
+        ...entry,
+        status: entry?.status ?? 'started',
+      }));
       send(step, {started: true}, TestResults.LEVEL_STARTED);
     },
     [updateStep, send]
@@ -147,8 +146,8 @@ export function useProgress(
     (step: Step, timeMs: number) => {
       if (step.id === PROJECT_STEP_ID) return;
       updateStep(step.id, entry => ({
-        status: 'started',
         ...entry,
+        status: entry?.status ?? 'started',
         timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
       }));
       send(step, {timeSinceLastSave: timeMs}, TestResults.LEVEL_STARTED);
@@ -159,8 +158,8 @@ export function useProgress(
   const saveAnswers = useCallback(
     (step: Step, questionId: number, answers: Answer[], timeMs: number) => {
       updateStep(step.id, entry => ({
-        status: 'started',
         ...entry,
+        status: entry?.status ?? 'started',
         submitted: true,
         timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
         answers: {...entry?.answers, [questionId]: answers},
@@ -176,25 +175,30 @@ export function useProgress(
   const updateStepContext = useCallback(
     (id: string, patch: Pick<StepContext, 'generated'>) => {
       const content = patch.generated;
-      if (content) setGenerated(g => ({...g, [id]: content}));
+      if (!content) return;
+      updateStep(id, entry => ({
+        timeSpent: 0,
+        ...entry,
+        generatedInstructions: content,
+      }));
+      store.saveStep({scriptId, levelId}, id, {generatedInstructions: content});
     },
-    []
+    [updateStep, store, scriptId, levelId]
   );
 
   const stepContextMap = useMemo(() => {
     const map: {[stepId: string]: StepContext} = {};
     for (const [id, entry] of Object.entries(progress?.steps ?? {})) {
-      if (entry.answers) map[id] = {answers: entry.answers};
-    }
-    for (const [id, content] of Object.entries(generated)) {
-      map[id] = {...map[id], generated: content};
+      map[id] = {
+        answers: entry.answers,
+        generated: entry.generatedInstructions,
+      };
     }
     return map;
-  }, [progress, generated]);
+  }, [progress]);
 
   const reset = useCallback(() => {
     setProgress(EMPTY_PROGRESS);
-    setGenerated({});
     store.reset({scriptId, levelId});
   }, [store, scriptId, levelId]);
 
