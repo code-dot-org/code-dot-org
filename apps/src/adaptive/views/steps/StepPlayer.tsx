@@ -7,6 +7,7 @@ import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
 
+import FreeResponseStep from './FreeResponseStep';
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
 import QuestionsStep from './QuestionsStep';
@@ -67,6 +68,15 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onSaveAnswers={(questionId, list) =>
               onSaveAnswers(step.id, questionId, list)
             }
+            onComplete={advance}
+          />
+        );
+      case 'freeResponse':
+        return (
+          <FreeResponseStep
+            key={step.id}
+            step={step}
+            continueLabel={continueLabel}
             onComplete={advance}
           />
         );

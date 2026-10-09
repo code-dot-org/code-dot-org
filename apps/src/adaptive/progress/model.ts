@@ -29,6 +29,8 @@ export interface StepContext {
   /** Any content that was dynamically generated for this step, keyed by generateInputsHash. */
   generated?: {instructions: string; inputsHash: string};
   answers?: StepAnswers;
+  /** Student's free-text response for a freeResponse step. */
+  freeResponse?: string;
 }
 
 /**
