@@ -7,7 +7,10 @@ import {formatAccuracy} from '../helpers/accuracy';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {replayTraining, setCurrentPanel} from '../redux';
-import {getDisplayTree} from '../selectors/visualizationSelectors';
+import {
+  getDisplayTree,
+  getDisplayTreeCounts,
+} from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
 import TreeMiniMap from './TreeMiniMap';
@@ -21,6 +24,9 @@ const TrainingResultCard = () => {
   const latestResult = useAppSelector(state => state.historicResults[0]);
   const {trainedModel} = useTrainingData();
   const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const counts = useAppSelector(state =>
+    getDisplayTreeCounts(state, trainedModel),
+  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);
   const testButton = useRef<HTMLButtonElement>(null);
@@ -45,6 +51,7 @@ const TrainingResultCard = () => {
         <TreeMiniMap
           tree={tree}
           datasetId={datasetId}
+          counts={counts}
           onReplay={() => dispatch(replayTraining())}
         />
       )}

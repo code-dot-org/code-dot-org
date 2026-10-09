@@ -1,3 +1,4 @@
+import {ResultsGrades} from '../constants';
 import type {DataRow} from '../types';
 
 import {
@@ -21,6 +22,13 @@ export interface DisplayTreeTrace {
   steps: DisplayTreeStep[];
   prediction: string | number;
 }
+
+export interface DisplayTreeNodeCounts {
+  correct: number;
+  incorrect: number;
+}
+
+export const NO_ROWS: DisplayTreeNodeCounts = {correct: 0, incorrect: 0};
 
 export function traceDisplayTree(
   root: DisplayTreeNode,
@@ -52,4 +60,24 @@ export function traceDisplayTree(
   }
 
   return {path, steps, prediction: node.prediction};
+}
+
+export function countDisplayTreeRows(
+  root: DisplayTreeNode,
+  modelRoot: SerializedTreeNode,
+  examples: number[][],
+  grades: string[],
+): Map<string, DisplayTreeNodeCounts> {
+  const counts = new Map<string, DisplayTreeNodeCounts>();
+
+  examples.forEach((inputs, index) => {
+    const grade =
+      grades[index] === ResultsGrades.CORRECT ? 'correct' : 'incorrect';
+    traceDisplayTree(root, modelRoot, inputs, {}).path.forEach(nodeId => {
+      const nodeCounts = counts.get(nodeId) ?? NO_ROWS;
+      counts.set(nodeId, {...nodeCounts, [grade]: nodeCounts[grade] + 1});
+    });
+  });
+
+  return counts;
 }
