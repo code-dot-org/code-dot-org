@@ -25,6 +25,7 @@
     "level_mode": {
       "kind": "freeplay"
     },
+    "block_catalog": true,
     "image_role_defaults": {
       "sprite": "hero",
       "gamelab_addBehaviorSimple": [

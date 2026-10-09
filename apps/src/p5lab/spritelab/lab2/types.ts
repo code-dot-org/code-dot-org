@@ -90,6 +90,10 @@ export interface Sources extends ProjectSources {
   animations?: SerializedAnimationList;
   /** Per-scene code workspaces. */
   scenes?: Scene[];
+  /** Catalog blocks the student added to the toolbox (blockCatalog.ts). */
+  chosenBlocks?: string[];
+  /** The catalog has opened itself once on the free play level. */
+  blockCatalogSeen?: boolean;
 }
 
 /**
@@ -152,6 +156,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       computed by the server. The toolbox stamps them "New", with help,
       until the project uses them. */
   newBlocks?: string[];
+  /** The new blocks start out of the toolbox, offered through the new-block
+      catalog instead (blockCatalog.ts). */
+  blockCatalog?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

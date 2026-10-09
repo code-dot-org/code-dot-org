@@ -17,6 +17,7 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import {withoutBlockTypes} from '../blockCatalog';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
@@ -24,6 +25,8 @@ import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
 import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
+
+const NO_BLOCK_TYPES: ReadonlySet<string> = new Set();
 
 // In toolbox edit mode the roles swap: the toolbox offers every available block
 // (so any of them can be added to the level's toolbox), and the workspace holds
@@ -35,6 +38,8 @@ const isStartMode = editBlocksMode === START_SOURCES;
 interface UseBlocklyWorkspaceOptions {
   enabled: boolean;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
+  /** Block types kept out of the toolbox; read at inject and on refresh. */
+  hiddenBlockTypes?: ReadonlySet<string>;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
 }
@@ -73,10 +78,23 @@ interface UseBlocklyWorkspaceResult {
 export default function useBlocklyWorkspace({
   enabled,
   toolboxDefinition,
+  hiddenBlockTypes,
   sharedBlocks,
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
+  const hiddenRef = useRef(hiddenBlockTypes);
+  hiddenRef.current = hiddenBlockTypes;
+  // A level's authored definition with the lab's additions, filtered to
+  // registered blocks and less the hidden ones.
+  const prepareToolbox = useCallback(
+    (definition: BlocklyCore.utils.toolbox.ToolboxInfo) =>
+      withoutBlockTypes(
+        filterToolboxToRegisteredBlocks(applyToolboxAdditions(definition)),
+        hiddenRef.current ?? NO_BLOCK_TYPES
+      ),
+    []
+  );
   const toolboxRef = useRef<
     BlocklyCore.utils.toolbox.ToolboxDefinition | undefined
   >(undefined);
@@ -104,16 +122,12 @@ export default function useBlocklyWorkspace({
       return;
     }
 
-    // Levelbuilder edit modes get the complete toolbox; otherwise the
-    // level's authored definition gets the lab additions, filtered to
-    // registered blocks.
+    // Levelbuilder edit modes get the complete toolbox.
     let toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition | undefined;
     if (isToolboxMode || isStartMode) {
       toolbox = getCompleteToolboxDefinition(blocksByCategory, isToolboxMode);
     } else if (toolboxDefinition && toolboxDefinition.contents?.length !== 0) {
-      toolbox = filterToolboxToRegisteredBlocks(
-        applyToolboxAdditions(toolboxDefinition)
-      );
+      toolbox = prepareToolbox(toolboxDefinition);
     }
 
     // Variable/behavior naming goes through Blockly.customSimpleDialog —
@@ -217,7 +231,7 @@ export default function useBlocklyWorkspace({
       workspaceRef.current = null;
       currentBlocksRef.current = null;
     };
-  }, [enabled, sharedBlocks, toolboxDefinition]);
+  }, [enabled, sharedBlocks, toolboxDefinition, prepareToolbox]);
 
   // Update workspace theme on display-theme change. Resolve through
   // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
@@ -299,15 +313,13 @@ export default function useBlocklyWorkspace({
           : undefined;
       const kindMatches = definition?.kind === installedKind;
       if (definition && kindMatches && !isToolboxMode && !isStartMode) {
-        toolboxRef.current = filterToolboxToRegisteredBlocks(
-          applyToolboxAdditions(definition)
-        );
+        toolboxRef.current = prepareToolbox(definition);
       }
       if (workspaceRef.current?.rendered && toolboxRef.current) {
         workspaceRef.current.updateToolbox(toolboxRef.current);
       }
     },
-    []
+    [prepareToolbox]
   );
 
   return {
