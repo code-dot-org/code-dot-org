@@ -4,34 +4,23 @@ import moduleStyles from './flyout-badges.module.scss';
 
 const XHTML_NS = 'http://www.w3.org/1999/xhtml';
 export const BADGE_CLASS = 'spritelab2FlyoutBadge';
-// A badge hangs just below the block's bottom-right corner: this much of
-// it past the right edge, and this far under the bottom edge, in the gap
-// between blocks, so the flyout need not widen for it and the block's own
-// fields stay clear.
-const OVERHANG_PX = 10;
-const DROP_PX = 2;
-// The hollow help icon: on its own, or forming the left end of a pill, its
-// circle sitting in the pill's curve.
-const ICON_PX = 20;
-// Shorter than the lone icon, to fit the gap between blocks.
-const PILL_HEIGHT_PX = 18;
-const PILL_PADDING_PX = 7;
+// Gap between a block's right edge and its badge.
+const GAP_PX = 6;
+// The badge centers on the block's first row, whatever the block's height.
+const FIRST_ROW_PX = 36;
+const BADGE_PX = 20;
 
-/** What a flyout block wears: a stamp, a help button, or both in one pill. */
+/** A new block's badge: a filled circle with a question mark that opens
+    the block's help. Bright for a standout, quiet otherwise. */
 export interface FlyoutBadge {
-  /** Short stamp text, such as "New". */
-  text?: string;
-  /** A bright stamp, for a block worth drawing the eye to; the rest are
-      quiet. */
+  title: string;
   bright?: boolean;
-  /** A help button; the title names it for assistive technology. */
-  help?: {title: string};
 }
 
 export interface FlyoutBadgeOptions {
   badgeFor: (blockType: string) => FlyoutBadge | undefined;
-  /** A help button was pressed; its screen rectangle comes along, for
-      placing the callout. */
+  /** A badge was pressed; its screen rectangle comes along, for placing
+      the callout. */
   onOpenHelp: (blockType: string, anchor: DOMRect) => void;
   /** The flyout changed under an open callout (scrolled, re-laid out,
       closed). */
@@ -60,33 +49,28 @@ export function installFlyoutBadges(
   return () => disposers.forEach(dispose => dispose());
 }
 
-function helpButton(
-  title: string,
-  className: string,
-  onPress: (button: HTMLButtonElement) => void,
-  text?: string
+function badgeButton(
+  badge: FlyoutBadge,
+  onPress: (button: HTMLButtonElement) => void
 ): HTMLButtonElement {
   const button = document.createElementNS(
     XHTML_NS,
     'button'
   ) as HTMLButtonElement;
   button.type = 'button';
-  button.className = className;
-  button.setAttribute('aria-label', `Help: ${title}`);
+  button.className = `${moduleStyles.badge} ${
+    badge.bright ? moduleStyles.bright : moduleStyles.quiet
+  }`;
+  button.setAttribute('aria-label', `New block. Help: ${badge.title}`);
   // Focus leaving the toolbox tree auto-hides the flyout, badge and all, so
   // the button never takes focus: pointer only, for now.
   button.tabIndex = -1;
   const icon = document.createElementNS(XHTML_NS, 'i');
-  icon.className = 'fa-regular fa-circle-question';
+  icon.className = 'fa-solid fa-question';
   icon.setAttribute('aria-hidden', 'true');
   button.appendChild(icon);
-  if (text) {
-    const label = document.createElementNS(XHTML_NS, 'span');
-    label.textContent = text;
-    button.appendChild(label);
-  }
   // The flyout starts a block drag on any pointerdown that reaches its
-  // root; the button is not a block. Default prevented so the press does
+  // root; the badge is not a block. Default prevented so the press does
   // not focus the button (see above).
   button.addEventListener('pointerdown', e => {
     e.stopPropagation();
@@ -117,101 +101,29 @@ function decorateFlyout(
     let badgesRight = 0;
     flyoutWorkspace.getTopBlocks(false).forEach(block => {
       const badge = badgeFor(block.type);
-      if (!badge || (!badge.text && !badge.help)) {
+      if (!badge) {
         return;
       }
-      const {help, text, bright} = badge;
       const xy = block.getRelativeToSurfaceXY();
       const {height, width} = block.getHeightWidth();
-      const place = (badgeWidth: number) => ({
-        x: xy.x + width + OVERHANG_PX - badgeWidth,
-        y: xy.y + height + DROP_PX,
-      });
-      const open = (button: HTMLButtonElement) =>
-        onOpenHelp(block.type, button.getBoundingClientRect());
-
-      if (!text && help) {
-        const group = BlocklyCore.utils.dom.createSvgElement(
-          BlocklyCore.utils.Svg.G,
-          {
-            class: BADGE_CLASS,
-            transform: (({x, y}) => `translate(${x}, ${y})`)(place(ICON_PX)),
-          },
-          canvas
-        );
-        const container = BlocklyCore.utils.dom.createSvgElement(
-          BlocklyCore.utils.Svg.FOREIGNOBJECT,
-          {width: ICON_PX, height: ICON_PX},
-          group
-        );
-        container.appendChild(
-          helpButton(help.title, moduleStyles.helpButton, open)
-        );
-        badgesRight = Math.max(badgesRight, place(ICON_PX).x + ICON_PX);
-        return;
-      }
-
-      const tone = bright ? moduleStyles.bright : moduleStyles.quiet;
-      if (help) {
-        // A stamp with help is one button: the whole pill opens the callout.
-        const group = BlocklyCore.utils.dom.createSvgElement(
-          BlocklyCore.utils.Svg.G,
-          {class: BADGE_CLASS},
-          canvas
-        );
-        const container = BlocklyCore.utils.dom.createSvgElement(
-          BlocklyCore.utils.Svg.FOREIGNOBJECT,
-          {width: 1, height: PILL_HEIGHT_PX},
-          group
-        );
-        const button = helpButton(
-          help.title,
-          `${moduleStyles.pillButton} ${tone}`,
-          open,
-          text
-        );
-        container.appendChild(button);
-        // Sized by its own text; the foreignObject must be told, and the
-        // pill placed once its width is known.
-        const pillWidth = Math.ceil(button.getBoundingClientRect().width);
-        container.setAttribute('width', String(pillWidth));
-        const at = place(pillWidth);
-        group.setAttribute('transform', `translate(${at.x}, ${at.y})`);
-        badgesRight = Math.max(badgesRight, at.x + pillWidth);
-        return;
-      }
-
+      const x = xy.x + width + GAP_PX;
+      const y = xy.y + Math.min(height, FIRST_ROW_PX) / 2 - BADGE_PX / 2;
       const group = BlocklyCore.utils.dom.createSvgElement(
         BlocklyCore.utils.Svg.G,
-        {class: `${BADGE_CLASS} ${moduleStyles.stamp} ${tone}`},
+        {class: BADGE_CLASS, transform: `translate(${x}, ${y})`},
         canvas
       );
-      group.setAttribute('aria-hidden', 'true');
-      const rect = BlocklyCore.utils.dom.createSvgElement(
-        BlocklyCore.utils.Svg.RECT,
-        {
-          height: PILL_HEIGHT_PX,
-          rx: PILL_HEIGHT_PX / 2,
-          ry: PILL_HEIGHT_PX / 2,
-        },
+      const container = BlocklyCore.utils.dom.createSvgElement(
+        BlocklyCore.utils.Svg.FOREIGNOBJECT,
+        {width: BADGE_PX, height: BADGE_PX},
         group
       );
-      const label = BlocklyCore.utils.dom.createSvgElement(
-        BlocklyCore.utils.Svg.TEXT,
-        {
-          x: PILL_PADDING_PX,
-          y: PILL_HEIGHT_PX / 2,
-          'dominant-baseline': 'central',
-        },
-        group
+      container.appendChild(
+        badgeButton(badge, button =>
+          onOpenHelp(block.type, button.getBoundingClientRect())
+        )
       );
-      label.textContent = text ?? '';
-      const pillWidth =
-        PILL_PADDING_PX * 2 + Math.ceil(label.getComputedTextLength());
-      rect.setAttribute('width', String(pillWidth));
-      const at = place(pillWidth);
-      group.setAttribute('transform', `translate(${at.x}, ${at.y})`);
-      badgesRight = Math.max(badgesRight, at.x + pillWidth);
+      badgesRight = Math.max(badgesRight, x + BADGE_PX);
     });
     fitFlyout(badgesRight);
   };

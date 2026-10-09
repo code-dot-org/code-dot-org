@@ -1,9 +1,8 @@
-// Badges on the toolbox blocks no earlier level of the unit offered (the
-// server's newBlocks) that the student's project has not used and that
-// have help: one pill holding the help button and a "New" stamp. A block
-// with no help entry wears nothing, so a stamp never appears without its
-// question mark. A used block wears nothing, and stays bare for the visit
-// even if the student deletes it again.
+// A badge beside each toolbox block no earlier level of the unit offered
+// (the server's newBlocks) that the student's project has not used and that
+// has help: a filled circle with a question mark that opens the help. A
+// used block wears nothing, and stays bare for the visit even if the
+// student deletes it again.
 
 import * as BlocklyCore from 'blockly/core';
 import {useEffect, useMemo, useState} from 'react';
@@ -12,8 +11,6 @@ import {BLOCK_HELP} from '../blockHelp/blockHelpContent';
 import {FlyoutBadge, installFlyoutBadges} from '../blockly/flyoutBadges';
 import {usedBlockTypes} from '../newBlocks';
 import {Scene} from '../types';
-
-const STAMP_TEXT = 'New';
 
 export function useFlyoutBadges({
   enabled,
@@ -55,11 +52,7 @@ export function useFlyoutBadges({
       if (!entry || !fresh.has(type) || seen.has(type)) {
         return undefined;
       }
-      return {
-        text: STAMP_TEXT,
-        bright: !!entry.standout,
-        help: {title: entry.title},
-      };
+      return {title: entry.title, bright: !!entry.standout};
     };
     const dispose = installFlyoutBadges(getWorkspace(), {
       badgeFor,

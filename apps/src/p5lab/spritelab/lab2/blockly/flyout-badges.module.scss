@@ -1,8 +1,7 @@
-// Badges beside toolbox blocks. They live in the flyout's SVG, so they
-// scroll with the block they belong to.
+// The badge beside a new toolbox block: a filled circle with a question
+// mark, in the flyout's SVG so it scrolls with its block.
 
-// The hollow help icon: on its own, or forming a pill's left end.
-%help-button {
+.badge {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,94 +12,23 @@
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: none;
   box-shadow: none;
-  color: var(--text-neutral-secondary);
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1;
   cursor: pointer;
-
-  &:hover {
-    color: var(--text-neutral-primary);
-  }
-}
-
-.helpButton {
-  @extend %help-button;
-}
-
-// The stamp pill, with no help: an SVG rect and text that take no pointer
-// events, so a press on it reaches the flyout as usual.
-.stamp {
-  pointer-events: none;
-
-  text {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-  }
-}
-
-// The stamp pill with help: one HTML button, the help icon's circle
-// forming its left end. The icon keeps the standalone icon's color.
-.pillButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  box-sizing: border-box;
-  height: 18px;
-  margin: 0;
-  padding: 0 7px 0 0;
-  border: none;
-  border-radius: 9px;
-  box-shadow: none;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
-
-  i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    color: var(--text-neutral-secondary);
-    font-size: 16px;
-  }
 
   &:hover {
     opacity: 0.85;
   }
 }
 
-// A quiet pill: a mid gray that stands off the panel without calling out.
+// A quiet badge: a mid gray that stands off the panel without calling out.
 .quiet {
-  rect,
-  &.pillButton {
-    fill: var(--borders-neutral-strong);
-    background: var(--borders-neutral-strong);
-  }
-
-  text,
-  &.pillButton {
-    fill: var(--text-neutral-primary);
-    color: var(--text-neutral-primary);
-  }
+  background: var(--borders-neutral-strong);
+  color: var(--text-neutral-primary);
 }
 
 .bright {
-  rect,
-  &.pillButton {
-    fill: var(--background-accent-pink-primary);
-    background: var(--background-accent-pink-primary);
-  }
-
-  text,
-  &.pillButton {
-    fill: var(--neutral-base-white);
-    color: var(--neutral-base-white);
-  }
+  background: var(--background-accent-pink-primary);
+  color: var(--neutral-base-white);
 }
