@@ -1,8 +1,8 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Alert} from '@mui/material';
-import pick from 'lodash/pick';
+import {Alert, Tooltip} from '@mui/material';
+import {pick} from 'lodash';
 import React, {useEffect, useId, useRef, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
@@ -21,6 +21,9 @@ export interface QuizConfigurationData {
   allowMultipleAttempts: boolean;
   showQuestionsAfterSubmit: boolean;
 }
+
+const INTRO_SCREEN_LOCKED_MESSAGE =
+  'A timed quiz must have an intro screen, remove the time limit first.';
 
 const PURPOSE_OPTIONS = [
   {
@@ -432,33 +435,45 @@ const QuizConfigurationPanel: React.FunctionComponent<
               />
             </div>
             <div className={styles.cardRow}>
-              <div className={styles.toggleRow}>
-                <span className={styles.toggleLabel}>Show intro screen</span>
-                <Toggle
-                  name="showIntroScreen"
-                  aria-label="Show intro screen"
-                  size="s"
-                  disabled={
-                    savingField === 'showIntroScreen' || isIntroScreenLocked
-                  }
-                  aria-describedby={
-                    isIntroScreenLocked ? introScreenLockedMessageId : undefined
-                  }
-                  checked={showIntroScreen}
-                  onChange={handleShowIntroScreenChange}
-                />
-              </div>
-              {isIntroScreenLocked && (
-                <p
-                  id={introScreenLockedMessageId}
-                  className={styles.cardHelperText}
+              <div className={styles.toggleWithHelper}>
+                <Tooltip
+                  title={isIntroScreenLocked ? INTRO_SCREEN_LOCKED_MESSAGE : ''}
+                  placement="top-end"
                 >
-                  Required while a time limit is set.
+                  <div className={styles.toggleRow}>
+                    <span className={styles.toggleLabel}>
+                      Show intro screen
+                    </span>
+                    <Toggle
+                      name="showIntroScreen"
+                      aria-label="Show intro screen"
+                      size="s"
+                      disabled={
+                        savingField === 'showIntroScreen' || isIntroScreenLocked
+                      }
+                      aria-describedby={
+                        isIntroScreenLocked
+                          ? introScreenLockedMessageId
+                          : undefined
+                      }
+                      checked={showIntroScreen}
+                      onChange={handleShowIntroScreenChange}
+                    />
+                  </div>
+                </Tooltip>
+                {/* A disabled toggle can't take focus, so the tooltip is mouse-only. */}
+                {isIntroScreenLocked && (
+                  <span
+                    id={introScreenLockedMessageId}
+                    className={styles.visuallyHidden}
+                  >
+                    {INTRO_SCREEN_LOCKED_MESSAGE}
+                  </span>
+                )}
+                <p className={styles.cardHelperText}>
+                  Edit intro screen contents in the workspace
                 </p>
-              )}
-              <p className={styles.cardHelperText}>
-                Edit intro screen contents in the workspace
-              </p>
+              </div>
             </div>
           </ConfigCard>
           <ConfigCard label="rules">

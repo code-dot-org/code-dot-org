@@ -261,7 +261,7 @@ describe('QuizConfigurationPanel', () => {
     expect(toggle).toBeChecked();
     expect(toggle).toBeDisabled();
     expect(toggle).toHaveAccessibleDescription(
-      'Required while a time limit is set.'
+      'A timed quiz must have an intro screen, remove the time limit first.'
     );
   });
 
